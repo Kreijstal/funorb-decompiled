@@ -310,7 +310,7 @@ final class DerelictVictoryChecker extends VictoryChecker {
             var5Lifetime1 = var5Lifetime1 + var8_int;
           }
           if (var5Lifetime1 > 0) {
-            lh.a((byte) 35, var4, (int[]) ((Object) this.field_o.clone()));
+            VerticalMenuSlider.a((byte) 35, var4, (int[]) ((Object) this.field_o.clone()));
           }
           var23 = new MenuLabel[]{new MenuLabel(0, 0, 182, rs.field_Cb.field_J, QuickChatCategoryRegistry.a(ShatteredPlansClient.field_J, 4371, new String[]{Integer.toString(50)}))};
           var7 = new Player[this.field_i.length];

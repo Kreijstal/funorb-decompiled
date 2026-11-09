@@ -167,8 +167,8 @@ final class MenuWindow extends MenuComponent {
           SoftwareRasterizer.setPixel(this.field_k + 3, var6Lifetime3 + var7Lifetime2 + (15 + this.field_t + 10), var8);
           SoftwareRasterizer.setPixel(-1 + (this.field_k + this.field_m - 3), 25 + this.field_t - (-var7Lifetime2 - var6Lifetime3), var8);
         }
-        jl.field_W.drawAdditive(4 + this.field_k, this.field_t + 3, 256);
-        var7Lifetime3 = jl.field_W.field_z + 1 + (this.field_k + 3);
+        ResizingDialog.field_W.drawAdditive(4 + this.field_k, this.field_t + 3, 256);
+        var7Lifetime3 = ResizingDialog.field_W.field_z + 1 + (this.field_k + 3);
         var8Lifetime1 = -DerelictMapReader.field_g.field_z - 3 + (this.field_m + this.field_k);
         DerelictMapReader.field_g.drawAdditive(var8Lifetime1, 3 + this.field_t, 64);
         for (var10 = var7Lifetime3; var10 < var8Lifetime1; var10++) {
@@ -216,14 +216,14 @@ final class MenuWindow extends MenuComponent {
     }
 
     final static void g(int param0) {
-        if (!(pg.field_J <= 0)) {
-          pg.field_J = pg.field_J - 1;
+        if (!(LabeledChildWidget.field_J <= 0)) {
+          LabeledChildWidget.field_J = LabeledChildWidget.field_J - 1;
         }
         if (DerelictMapGenerator.field_m != so.field_q.field_d) {
           NodeHashTableIterator.field_f = NodeHashTableIterator.field_f + (-DerelictMapGenerator.field_m + so.field_q.field_d);
           DerelictMapGenerator.field_m = so.field_q.field_d;
         }
-        if (!(pg.field_J <= 0)) {
+        if (!(LabeledChildWidget.field_J <= 0)) {
           IndexedSpriteState.a(125);
         }
         if (param0 < 57) {
@@ -249,8 +249,8 @@ final class MenuWindow extends MenuComponent {
     }
 
     final void b(int param0, int param1, int param2) {
-        int var4 = param0 + lh.field_w;
-        int var5 = ir.field_D + param1;
+        int var4 = param0 + VerticalMenuSlider.field_w;
+        int var5 = DisplayNameForm.field_D + param1;
         if (param2 != -498) {
           this.a(-47);
         }

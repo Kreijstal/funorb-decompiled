@@ -156,7 +156,7 @@ final class np {
           if (~this.field_n != param0 &&
             0 != AllianceExpiredEvent.field_n) {
             if (0 >= this.field_k) {
-              this.field_k = eo.field_Y;
+              this.field_k = ProgressDialog.field_Y;
               this.field_h = this.field_n;
               this.field_k = this.field_k - 1;
               if (je.field_d == 0 &&
@@ -347,7 +347,7 @@ final class np {
           return;
         }
         if (0 >= this.field_k) {
-          this.field_k = eo.field_Y;
+          this.field_k = ProgressDialog.field_Y;
           this.field_h = this.field_n;
           this.field_k = this.field_k - 1;
           if (je.field_d != 0) {

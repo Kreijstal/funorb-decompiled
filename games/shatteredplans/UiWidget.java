@@ -127,15 +127,15 @@ class UiWidget extends IntrusiveNode {
             this.handleRelease(TertiaryListSequence.field_k, param2, param0, bb.field_b, -600269855, this);
             var6 = oa.field_b;
             if (var6 != null) {
-              if (var6.field_u instanceof lf) {
-                ((lf) (var6.field_u)).a(-27619, (vj) null, var6);
+              if (var6.field_u instanceof WidgetDropListener) {
+                ((WidgetDropListener) (var6.field_u)).onWidgetDropped(-27619, (DropTargetWidget) null, var6);
               }
               oa.field_b = null;
             }
           }
         }
         so.field_m = AllianceExpiredEvent.field_n;
-        vj.a(this.getTooltip(true), 0);
+        DropTargetWidget.a(this.getTooltip(true), 0);
         if (param3 != 0) {
           this.reapplyBounds((byte) 58);
         }

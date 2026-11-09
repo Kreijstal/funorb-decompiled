@@ -164,9 +164,9 @@ class MenuComponent extends IntrusiveNode {
               !(GameState.field_c.length >= param1)) {
               GameState.field_c = new int[param1 * 2];
             }
-            if (lg.field_d == null ||
-              !(param1 + param0 <= lg.field_d.length)) {
-              lg.field_d = new int[2 * (param0 + param1)];
+            if (ProxyAuthenticationRequiredException.field_d == null ||
+              !(param1 + param0 <= ProxyAuthenticationRequiredException.field_d.length)) {
+              ProxyAuthenticationRequiredException.field_d = new int[2 * (param0 + param1)];
             }
             if (null == aq.field_p ||
               !(aq.field_p.length >= param1)) {
@@ -194,20 +194,20 @@ class MenuComponent extends IntrusiveNode {
               !(GameState.field_c.length >= param1)) {
               GameState.field_c = new int[param1 * 2];
             }
-            if (lg.field_d == null) {
-              lg.field_d = new int[2 * (param0 + param1)];
+            if (ProxyAuthenticationRequiredException.field_d == null) {
+              ProxyAuthenticationRequiredException.field_d = new int[2 * (param0 + param1)];
               if (null == aq.field_p ||
                 !(aq.field_p.length >= param1)) {
                 aq.field_p = new boolean[2 * param1];
               }
             } else {
-              if (param1 + param0 <= lg.field_d.length) {
+              if (param1 + param0 <= ProxyAuthenticationRequiredException.field_d.length) {
                 if (null == aq.field_p ||
                   !(aq.field_p.length >= param1)) {
                   aq.field_p = new boolean[2 * param1];
                 }
               } else {
-                lg.field_d = new int[2 * (param0 + param1)];
+                ProxyAuthenticationRequiredException.field_d = new int[2 * (param0 + param1)];
                 if (null == aq.field_p ||
                   !(aq.field_p.length >= param1)) {
                   aq.field_p = new boolean[2 * param1];
@@ -235,9 +235,9 @@ class MenuComponent extends IntrusiveNode {
               !(GameState.field_c.length >= param1)) {
               GameState.field_c = new int[param1 * 2];
             }
-            if (lg.field_d == null ||
-              !(param1 + param0 <= lg.field_d.length)) {
-              lg.field_d = new int[2 * (param0 + param1)];
+            if (ProxyAuthenticationRequiredException.field_d == null ||
+              !(param1 + param0 <= ProxyAuthenticationRequiredException.field_d.length)) {
+              ProxyAuthenticationRequiredException.field_d = new int[2 * (param0 + param1)];
             }
             if (null == aq.field_p ||
               !(aq.field_p.length >= param1)) {
@@ -262,9 +262,9 @@ class MenuComponent extends IntrusiveNode {
                 !(GameState.field_c.length >= param1)) {
                 GameState.field_c = new int[param1 * 2];
               }
-              if (lg.field_d == null ||
-                !(param1 + param0 <= lg.field_d.length)) {
-                lg.field_d = new int[2 * (param0 + param1)];
+              if (ProxyAuthenticationRequiredException.field_d == null ||
+                !(param1 + param0 <= ProxyAuthenticationRequiredException.field_d.length)) {
+                ProxyAuthenticationRequiredException.field_d = new int[2 * (param0 + param1)];
               }
               if (null == aq.field_p ||
                 !(aq.field_p.length >= param1)) {
@@ -287,20 +287,20 @@ class MenuComponent extends IntrusiveNode {
                 !(GameState.field_c.length >= param1)) {
                 GameState.field_c = new int[param1 * 2];
               }
-              if (lg.field_d == null) {
-                lg.field_d = new int[2 * (param0 + param1)];
+              if (ProxyAuthenticationRequiredException.field_d == null) {
+                ProxyAuthenticationRequiredException.field_d = new int[2 * (param0 + param1)];
                 if (null == aq.field_p ||
                   !(aq.field_p.length >= param1)) {
                   aq.field_p = new boolean[2 * param1];
                 }
               } else {
-                if (param1 + param0 <= lg.field_d.length) {
+                if (param1 + param0 <= ProxyAuthenticationRequiredException.field_d.length) {
                   if (null == aq.field_p ||
                     !(aq.field_p.length >= param1)) {
                     aq.field_p = new boolean[2 * param1];
                   }
                 } else {
-                  lg.field_d = new int[2 * (param0 + param1)];
+                  ProxyAuthenticationRequiredException.field_d = new int[2 * (param0 + param1)];
                   if (null == aq.field_p ||
                     !(aq.field_p.length >= param1)) {
                     aq.field_p = new boolean[2 * param1];

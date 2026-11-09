@@ -19,7 +19,7 @@ abstract class SpriteState extends DualLinkNode {
         sf.field_d = MusicTrack.load(param0, "", "shattered_plans_intro");
         wp.field_a = MusicTrack.load(param0, "", "shattered_plans_ingame_two");
         js.field_i = MusicTrack.load(param0, "", "shattered_plans_ingame");
-        hk.field_nb = wp.field_a;
+        PaddedContentDialog.field_nb = wp.field_a;
         PlacementEvent.field_n = MusicTrack.load(param0, "", "shattered_plans_win");
         wh.field_b = MusicTrack.load(param0, "", "shattered_plans_lose");
         ValidationState.field_b.field_u.preparePatches(param1, sf.field_d, 50, 0, mj.field_Sb);

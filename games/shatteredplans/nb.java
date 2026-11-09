@@ -74,20 +74,20 @@ final class nb {
         if (!TertiaryNodeList.field_b) {
           throw new IllegalStateException();
         }
-        if (null == ji.field_G) {
+        if (null == DateInputWidget.field_G) {
           var1 = Dialog.l(param0 ^ param0);
-          no.field_e = new ri(var1, (String) null, true, false, false);
+          no.field_e = new LoginForm(var1, (String) null, true, false, false);
           ByteArrayStorage.field_e.addDialog(true, ae.field_f);
-          ae.field_f.b(no.field_e, param0 - 18);
-          ae.field_f.n(param0 + 7363);
+          ae.field_f.setContent(no.field_e, param0 - 18);
+          ae.field_f.finishAnimations(param0 + 7363);
           return;
         }
-        ji.field_G.i((byte) -104);
+        DateInputWidget.field_G.closeStatusDialog((byte) -104);
         var1Lifetime1 = Dialog.l(param0 ^ param0);
-        no.field_e = new ri(var1Lifetime1, (String) null, true, false, false);
+        no.field_e = new LoginForm(var1Lifetime1, (String) null, true, false, false);
         ByteArrayStorage.field_e.addDialog(true, ae.field_f);
-        ae.field_f.b(no.field_e, param0 - 18);
-        ae.field_f.n(param0 + 7363);
+        ae.field_f.setContent(no.field_e, param0 - 18);
+        ae.field_f.finishAnimations(param0 + 7363);
     }
 
     final static byte[] a(String param0, int param1) {

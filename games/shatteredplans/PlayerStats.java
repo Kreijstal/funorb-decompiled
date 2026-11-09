@@ -183,13 +183,13 @@ final class PlayerStats {
           var2[14] = SocketArchiveNetworkClient.field_t;
           var2[12] = SocketArchiveNetworkClient.field_t;
           var2[13] = SocketArchiveNetworkClient.field_t;
-          var2[15] = QuickChatCategoryRegistry.a(jl.field_O, 4371, new String[]{Integer.toString(this.field_a == 0 ? 100 : (this.field_y * 201 + this.field_a) / (2 * (this.field_a + this.field_y)))});
+          var2[15] = QuickChatCategoryRegistry.a(ResizingDialog.field_O, 4371, new String[]{Integer.toString(this.field_a == 0 ? 100 : (this.field_y * 201 + this.field_a) / (2 * (this.field_a + this.field_y)))});
           return var2;
         }
-        var2[12] = QuickChatCategoryRegistry.a(jl.field_O, 4371, new String[]{Integer.toString((this.field_l + this.field_u * 2) / (this.field_l * 2))});
-        var2[13] = QuickChatCategoryRegistry.a(jl.field_O, 4371, new String[]{Integer.toString((2 * this.field_w + this.field_l) / (2 * this.field_l))});
-        var2[14] = QuickChatCategoryRegistry.a(jl.field_O, 4371, new String[]{Integer.toString((this.field_l + 2 * this.field_z) / (this.field_l * 2))});
-        var2[15] = QuickChatCategoryRegistry.a(jl.field_O, 4371, new String[]{Integer.toString(this.field_a == 0 ? 100 : (this.field_y * 201 + this.field_a) / (2 * (this.field_a + this.field_y)))});
+        var2[12] = QuickChatCategoryRegistry.a(ResizingDialog.field_O, 4371, new String[]{Integer.toString((this.field_l + this.field_u * 2) / (this.field_l * 2))});
+        var2[13] = QuickChatCategoryRegistry.a(ResizingDialog.field_O, 4371, new String[]{Integer.toString((2 * this.field_w + this.field_l) / (2 * this.field_l))});
+        var2[14] = QuickChatCategoryRegistry.a(ResizingDialog.field_O, 4371, new String[]{Integer.toString((this.field_l + 2 * this.field_z) / (this.field_l * 2))});
+        var2[15] = QuickChatCategoryRegistry.a(ResizingDialog.field_O, 4371, new String[]{Integer.toString(this.field_a == 0 ? 100 : (this.field_y * 201 + this.field_a) / (2 * (this.field_a + this.field_y)))});
         return var2;
     }
 

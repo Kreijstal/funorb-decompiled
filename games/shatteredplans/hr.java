@@ -104,12 +104,12 @@ final class hr {
           StatusContent.field_c.setTarget(var6_int - 6, -6 + tg.field_c.field_mb, (byte) 82, 3, 3);
           var7 = StatusContent.field_c.field_mb - 5;
           TaskAi.field_o.setTarget(487 + (param2 + param4), param1, (byte) 69, -param1 + var7, 5);
-          uq.field_j.setTarget(-cg.field_C.field_K - param2 + TaskAi.field_o.field_K, param1, (byte) 116, 0, param2);
+          uq.field_j.setTarget(-OpacityWidget.field_C.field_K - param2 + TaskAi.field_o.field_K, param1, (byte) 116, 0, param2);
           var7 = var7 - (param1 + 2);
-          cg.field_C.setTarget(cg.field_C.field_K, param1, (byte) 95, 0, param2 + uq.field_j.field_K);
-          ji.field_I.a(485 + param2 - (-2 - param4), 5, 5, 2, -123, -5 + var7, param4);
+          OpacityWidget.field_C.setTarget(OpacityWidget.field_C.field_K, param1, (byte) 95, 0, param2 + uq.field_j.field_K);
+          DateInputWidget.field_I.a(485 + param2 - (-2 - param4), 5, 5, 2, -123, -5 + var7, param4);
           if (wi.field_c != null) {
-            wi.field_c.setBounds(ji.field_I.field_db, ji.field_I.field_mb, (byte) 117, ji.field_I.field_hb, ji.field_I.field_K);
+            wi.field_c.setBounds(DateInputWidget.field_I.field_db, DateInputWidget.field_I.field_mb, (byte) 117, DateInputWidget.field_I.field_hb, DateInputWidget.field_I.field_K);
           }
           var8 = -var6_int - param2 + tg.field_c.field_K;
           var9 = var8 / 2;

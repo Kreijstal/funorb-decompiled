@@ -133,7 +133,7 @@ final class DefendTask extends AiTask {
         if (param0 < 15) {
           return true;
         }
-        stackIn_6_0 = (lg.field_e != null) && (lg.field_e.f((byte) -99));
+        stackIn_6_0 = (ProxyAuthenticationRequiredException.field_e != null) && (ProxyAuthenticationRequiredException.field_e.f((byte) -99));
         return stackIn_6_0;
     }
 

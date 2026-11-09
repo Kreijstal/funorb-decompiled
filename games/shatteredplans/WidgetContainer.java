@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class WidgetContainer extends UiWidget implements ni {
+class WidgetContainer extends UiWidget implements CompositeWidgetMarker {
     static String field_z;
     static boolean field_C;
     static int[] field_y;
@@ -174,7 +174,7 @@ class WidgetContainer extends UiWidget implements ni {
         if (param2 < 99) {
           this.findFocusedChild(-8);
         }
-        this.h(-87);
+        this.layoutChildren(-87);
     }
 
     private final void a(StringBuilder param0, Hashtable param1, byte param2, int param3) {
@@ -492,7 +492,7 @@ class WidgetContainer extends UiWidget implements ni {
         field_B = null;
     }
 
-    private final void h(int param0) {
+    private final void layoutChildren(int param0) {
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 >= -58) {
           UiWidget var5 = (UiWidget) null;
@@ -506,7 +506,7 @@ class WidgetContainer extends UiWidget implements ni {
         }
     }
 
-    final void b(byte param0, UiWidget param1) {
+    final void addChild(byte param0, UiWidget param1) {
         try {
           if (param0 >= -41) {
             field_z = (String) null;

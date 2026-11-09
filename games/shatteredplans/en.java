@@ -50,8 +50,8 @@ final class en {
           DefendTask.field_x.setTarget(so.field_t.field_K, cr.field_c, (byte) 107, 0, 0);
           stackIn_6_0 = lr.field_a;
           stackIn_6_1 = so.field_t.field_K;
-          if (ns.field_pb) {
-            stackIn_7_2 = 4 + (pe.field_K + 40);
+          if (AccountStatusDialog.field_pb) {
+            stackIn_7_2 = 4 + (UnderageAccountInfoPanel.field_K + 40);
           } else {
             stackIn_7_2 = 0;
           }
@@ -59,8 +59,8 @@ final class en {
           if (param0 != 15471) {
             return;
           }
-          MenuComponent.field_q.setTarget(42 + pe.field_K, 18, (byte) 84, cr.field_c + 2, -40 + (so.field_t.field_K - pe.field_K) - 2);
-          ro.field_a.a(so.field_t.field_K, 22 + cr.field_c, 0, 2, -128, -cr.field_c + (so.field_t.field_mb - 2) - 20, pe.field_K);
+          MenuComponent.field_q.setTarget(42 + UnderageAccountInfoPanel.field_K, 18, (byte) 84, cr.field_c + 2, -40 + (so.field_t.field_K - UnderageAccountInfoPanel.field_K) - 2);
+          ro.field_a.a(so.field_t.field_K, 22 + cr.field_c, 0, 2, -128, -cr.field_c + (so.field_t.field_mb - 2) - 20, UnderageAccountInfoPanel.field_K);
           DialPainter.field_g.setTarget(am.field_xb.field_K, 40, (byte) 107, -40 + am.field_xb.field_mb, 0);
           ArchiveSourceManager.field_f.setTarget(IntrusiveDeque.field_g.field_K, 30, (byte) 44, 0, 0);
           NameSuggestionsPanel.field_D.setTarget(IntrusiveDeque.field_g.field_K, -42 + (IntrusiveDeque.field_g.field_mb - 30), (byte) 125, 30, 0);

@@ -61,7 +61,7 @@ class StandardAi implements Ai {
                     if (var10_int > param2) {
                       var10_int = param2;
                     }
-                    this.c(param2, cq.field_E, -1);
+                    this.c(param2, GuestPlayForm.field_E, -1);
                     var11 = this.a(0, true, var10_int, this.field_g.field_g.field_e[var9_int]);
                     if (var10_int < var11) {
                       throw new RuntimeException();
@@ -72,7 +72,7 @@ class StandardAi implements Ai {
                     var5_int = var5_int + var10_int;
                     param2 = param2 - var10_int;
                     ig.field_c[var9_int] = ig.field_c[var9_int] + var11;
-                    this.c(param2, cq.field_E, -1);
+                    this.c(param2, GuestPlayForm.field_E, -1);
                   }
                 }
                 continue;
@@ -154,10 +154,10 @@ class StandardAi implements Ai {
           for (var5 = 0; var5 < var4.length; var5++) {
             var6 = var4[var5];
             if (var6.field_y != this.field_n) {
-              var7 = (FleetMove) (lh.field_v.startForward(0));
+              var7 = (FleetMove) (VerticalMenuSlider.field_v.startForward(0));
               while (var7 != null) {
                 if (var7.field_B != var6) {
-                  var7 = (FleetMove) (lh.field_v.nextForward((byte) -71));
+                  var7 = (FleetMove) (VerticalMenuSlider.field_v.nextForward((byte) -71));
                   continue;
                 }
                 break;
@@ -275,11 +275,11 @@ class StandardAi implements Ai {
             if (var6_ref_ln__.length <= var7_int) {
               if (var5_int != 0 &&
                 param1 &&
-                cq.field_E > 0) {
-                if (var5_int < cq.field_E) {
+                GuestPlayForm.field_E > 0) {
+                if (var5_int < GuestPlayForm.field_E) {
                   stackIn_30_0 = var5_int;
                 } else {
-                  stackIn_30_0 = cq.field_E;
+                  stackIn_30_0 = GuestPlayForm.field_E;
                 }
                 var6 = stackIn_30_0;
                 var5_int = var5_int - var6;
@@ -299,16 +299,16 @@ class StandardAi implements Ai {
             } else {
               var8_ref_ln = var6_ref_ln__[var7_int];
               var9_int = var8_ref_ln.field_p;
-              if (ja.field_i[var9_int] >= var5_int) {
+              if (BirthDateValidator.field_i[var9_int] >= var5_int) {
                 this.a(param3, var8_ref_ln, var5_int, ~param0);
-                ja.field_i[var9_int] = ja.field_i[var9_int] - var5_int;
+                BirthDateValidator.field_i[var9_int] = BirthDateValidator.field_i[var9_int] - var5_int;
                 stackIn_5_0 = param2;
                 return stackIn_5_0;
               }
-              if (ja.field_i[var9_int] != 0) {
-                this.a(param3, var8_ref_ln, ja.field_i[var9_int], -1);
-                var5_int = var5_int - ja.field_i[var9_int];
-                ja.field_i[var9_int] = 0;
+              if (BirthDateValidator.field_i[var9_int] != 0) {
+                this.a(param3, var8_ref_ln, BirthDateValidator.field_i[var9_int], -1);
+                var5_int = var5_int - BirthDateValidator.field_i[var9_int];
+                BirthDateValidator.field_i[var9_int] = 0;
               }
               if (var5_int != 0) {
                 var7_int++;
@@ -316,11 +316,11 @@ class StandardAi implements Ai {
               }
               if (var5_int != 0 &&
                 param1 &&
-                cq.field_E > 0) {
-                if (var5_int < cq.field_E) {
+                GuestPlayForm.field_E > 0) {
+                if (var5_int < GuestPlayForm.field_E) {
                   stackIn_16_0 = var5_int;
                 } else {
-                  stackIn_16_0 = cq.field_E;
+                  stackIn_16_0 = GuestPlayForm.field_E;
                 }
                 var6 = stackIn_16_0;
                 var5_int = var5_int - var6;
@@ -396,7 +396,7 @@ class StandardAi implements Ai {
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           for (var3_int = param0; var3_int < 4; var3_int++) {
-            lh.field_y[var3_int] = param1.field_u[param1.field_w[0]] + (-param1.field_u[var3_int] + 1);
+            VerticalMenuSlider.field_y[var3_int] = param1.field_u[param1.field_w[0]] + (-param1.field_u[var3_int] + 1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -570,9 +570,9 @@ class StandardAi implements Ai {
           return;
         }
         this.d(-1);
-        lh.field_D.clear(0);
-        lh.field_G.clear(0);
-        lh.field_v.clear(0);
+        VerticalMenuSlider.field_D.clear(0);
+        VerticalMenuSlider.field_G.clear(0);
+        VerticalMenuSlider.field_v.clear(0);
         if (param0 >= -3) {
           discarded$0 = this.a(-67, 25, -122);
         }
@@ -609,9 +609,9 @@ class StandardAi implements Ai {
             this.deployTannhauser((byte) 101);
           }
         }
-        if (!this.field_g.validatePlayerOrders(lh.field_v, this.field_n, -6, lh.field_D, lh.field_G)) {
+        if (!this.field_g.validatePlayerOrders(VerticalMenuSlider.field_v, this.field_n, -6, VerticalMenuSlider.field_D, VerticalMenuSlider.field_G)) {
         }
-        this.field_g.restorePendingOrders(lh.field_v, 0, lh.field_D, lh.field_G);
+        this.field_g.restorePendingOrders(VerticalMenuSlider.field_v, 0, VerticalMenuSlider.field_D, VerticalMenuSlider.field_G);
         return;
     }
 
@@ -706,7 +706,7 @@ class StandardAi implements Ai {
         if (param1 != -1814) {
           return 86;
         }
-        this.c(param0, cq.field_E, -1);
+        this.c(param0, GuestPlayForm.field_E, -1);
         return var5;
     }
 
@@ -724,7 +724,7 @@ class StandardAi implements Ai {
         try {
           var3_int = DirectByteArrayStorage.field_o[param0.field_p];
           for (var4 = 0; var4 < 4; var4++) {
-            var3_int = var3_int + param0.field_G[var4] * lh.field_y[var4];
+            var3_int = var3_int + param0.field_G[var4] * VerticalMenuSlider.field_y[var4];
           }
           if (param1 != -5) {
             this.field_h = 120;
@@ -777,7 +777,7 @@ class StandardAi implements Ai {
         }
         if (var2 != null) {
           var4 = new ProjectUse(0, this.field_n, (Star) (var2));
-          lh.field_G.addLast((byte) -113, var4);
+          VerticalMenuSlider.field_G.addLast((byte) -113, var4);
         }
     }
 
@@ -796,10 +796,10 @@ class StandardAi implements Ai {
         var4 = param1;
         for (var5 = 0; var5 < this.field_o; var5++) {
           var6 = this.field_g.field_g.field_e[var5];
-          var4 = var4 + ja.field_i[var5];
+          var4 = var4 + BirthDateValidator.field_i[var5];
           var4 = var4 - QuaternaryNodeList.field_b[var5];
           var4 = var4 - ValidationState.field_c[var5];
-          if (ja.field_i[var5] > var6.field_J) {
+          if (BirthDateValidator.field_i[var5] > var6.field_J) {
             throw new RuntimeException();
           }
         }
@@ -916,7 +916,7 @@ class StandardAi implements Ai {
         int var8Lifetime2;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          cq.field_E = param0;
+          GuestPlayForm.field_E = param0;
           mj.field_yb = param1;
           this.c(-17286);
           if (!this.field_g.field_o.field_i) {
@@ -927,7 +927,7 @@ class StandardAi implements Ai {
           var13 = this.b(127, param1);
           var4 = var13;
           this.a(param1, var13, 0);
-          this.c(param0, cq.field_E, -1);
+          this.c(param0, GuestPlayForm.field_E, -1);
           param0 = param0 - this.a((byte) -106, param0);
           if (param0 < 0) {
             var5 = param1.firstStar(18229);
@@ -956,12 +956,12 @@ class StandardAi implements Ai {
             this.a(118, param1);
             return;
           }
-          this.c(param0, cq.field_E, -1);
+          this.c(param0, GuestPlayForm.field_E, -1);
           if (!this.field_g.field_o.field_l &&
             !this.field_g.field_o.field_k) {
             param0 = param0 - this.b(param0, param2 - 1745);
           }
-          this.c(param0, cq.field_E, param2 + 53);
+          this.c(param0, GuestPlayForm.field_E, param2 + 53);
           if (param0 == 0) {
             this.a(param2 ^ 30, param1);
             return;
@@ -978,15 +978,15 @@ class StandardAi implements Ai {
             if (var9Lifetime1 > var6) {
               var9Lifetime1 = var6;
             }
-            this.c(param0, cq.field_E, -1);
+            this.c(param0, GuestPlayForm.field_E, -1);
             param0 = param0 - var9Lifetime1;
             var8Lifetime1 = this.a(var9Lifetime1, param0, var13, (int[]) (var7), -1);
             param0 = param0 - var8Lifetime1;
             param0 = param0 + var9Lifetime1;
-            this.c(param0, cq.field_E, -1);
+            this.c(param0, GuestPlayForm.field_E, -1);
           }
           param0 = param0 - this.a(param0, -1814, var6);
-          this.c(param0, cq.field_E, param2 + 53);
+          this.c(param0, GuestPlayForm.field_E, param2 + 53);
           if (this.field_l &&
             param0 > 0) {
             param0 = param0 - this.a((byte) 92, var8Lifetime1, param0, (int[]) (var7));
@@ -1023,7 +1023,7 @@ class StandardAi implements Ai {
           WeightedLruCache.field_a[var2] = 0;
           ue.field_e[var2] = 0;
           QuaternaryNodeList.field_b[var2] = 0;
-          ja.field_i[var2] = 0;
+          BirthDateValidator.field_i[var2] = 0;
           ValidationState.field_c[var2] = 0;
           rl.field_b[var2] = false;
         }
@@ -1088,7 +1088,7 @@ class StandardAi implements Ai {
           } else {
             var6 = 1;
           }
-          ja.field_i[var5] = ja.field_i[var5] + var4.field_x;
+          BirthDateValidator.field_i[var5] = BirthDateValidator.field_i[var5] + var4.field_x;
           QuaternaryNodeList.field_b[var5] = var6;
           var7 = -var4.field_x + var6;
           var4 = mj.field_yb.nextStar(-23410);
@@ -1166,12 +1166,12 @@ class StandardAi implements Ai {
               throw new RuntimeException();
             }
             param1.field_J = param1.field_J - param2;
-            var5Lifetime1 = (FleetMove) (lh.field_v.startForward(0));
+            var5Lifetime1 = (FleetMove) (VerticalMenuSlider.field_v.startForward(0));
             while (var5Lifetime1 != null) {
               if (var5Lifetime1.field_G != this.field_n ||
                 param1 != var5Lifetime1.field_y ||
                 param0 != var5Lifetime1.field_B) {
-                var5Lifetime1 = (FleetMove) (lh.field_v.nextForward((byte) -71));
+                var5Lifetime1 = (FleetMove) (VerticalMenuSlider.field_v.nextForward((byte) -71));
                 continue;
               }
               break;
@@ -1181,7 +1181,7 @@ class StandardAi implements Ai {
               return;
             }
             var5Lifetime2 = new FleetMove(param1, param0, param2);
-            lh.field_v.addLast((byte) -113, var5Lifetime2);
+            VerticalMenuSlider.field_v.addLast((byte) -113, var5Lifetime2);
             return;
           }
           throw new RuntimeException();
@@ -1224,7 +1224,7 @@ class StandardAi implements Ai {
         int var4Lifetime1;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          this.c(0, cq.field_E, -1);
+          this.c(0, GuestPlayForm.field_E, -1);
           var3_int = 0;
           var4 = -58 % ((param0 - 53) / 47);
           while (this.field_o > var3_int) {
@@ -1241,7 +1241,7 @@ class StandardAi implements Ai {
               }
               this.a(ValidationState.field_c[var3_int], 86, (Star) (var6));
               ValidationState.field_c[var3_int] = 0;
-              this.c(0, cq.field_E, -1);
+              this.c(0, GuestPlayForm.field_E, -1);
             }
             var3_int++;
           }
@@ -1253,7 +1253,7 @@ class StandardAi implements Ai {
               this.a(var5, 94, var3);
             }
             QuaternaryNodeList.field_b[var4Lifetime1] = 0;
-            this.c(0, cq.field_E, -1);
+            this.c(0, GuestPlayForm.field_E, -1);
             var3 = param1.nextStar(-23410);
           }
           return;
@@ -1275,7 +1275,7 @@ class StandardAi implements Ai {
         Object var2;
         int var3;
         int var4;
-        lo var5;
+        CombinedTerritory var5;
         Territory var5_ref;
         ProjectUse var5_ref2;
         Star var6;
@@ -1352,7 +1352,7 @@ class StandardAi implements Ai {
         }
         if (var2 != null) {
           var5_ref2 = new ProjectUse(1, this.field_n, (Star) (var2));
-          lh.field_G.addLast((byte) -113, var5_ref2);
+          VerticalMenuSlider.field_G.addLast((byte) -113, var5_ref2);
         }
     }
 
@@ -1387,7 +1387,7 @@ class StandardAi implements Ai {
                 break;
               }
               if (var10 != param2.length) {
-                this.c(param0 + param1, cq.field_E, -1);
+                this.c(param0 + param1, GuestPlayForm.field_E, -1);
                 if (0 == ValidationState.field_d[var8]) {
                   break scanLoop1;
                 }
@@ -1395,7 +1395,7 @@ class StandardAi implements Ai {
                   var11 = this.a(var9, param1, (byte) 30);
                   param1 = param1 - var11;
                   var6_int = var6_int + var11;
-                  this.c(param0 + param1, cq.field_E, -1);
+                  this.c(param0 + param1, GuestPlayForm.field_E, -1);
                   if (param1 == 0) {
                     break scanLoop1;
                   }
@@ -1682,7 +1682,7 @@ class StandardAi implements Ai {
         }
         if (var2 != null) {
           var4 = new ProjectUse(2, this.field_n, (Star) (var2));
-          lh.field_G.addLast((byte) -113, var4);
+          VerticalMenuSlider.field_G.addLast((byte) -113, var4);
         }
     }
 
@@ -1782,7 +1782,7 @@ class StandardAi implements Ai {
         }
         if (var5Lifetime1 != null) {
           var7 = new ProjectUse(3, this.field_n, (Star) (var2), (Star) (var5Lifetime1));
-          lh.field_G.addLast((byte) -113, var7);
+          VerticalMenuSlider.field_G.addLast((byte) -113, var7);
         }
         return;
     }
@@ -1848,7 +1848,7 @@ class StandardAi implements Ai {
           var4 = param0.field_D;
           for (var5 = 0; var4.length > var5; var5++) {
             var6 = var4[var5];
-            var3_int = var3_int + ja.field_i[var6.field_p];
+            var3_int = var3_int + BirthDateValidator.field_i[var6.field_p];
           }
           if (param1 != -5942) {
             field_a = true;
@@ -1898,12 +1898,12 @@ class StandardAi implements Ai {
             if (var6[var7] != -1) {
               var8 = var6[var7];
               var9 = this.field_g.field_g.field_e[var8];
-              var10 = ja.field_i[var8];
+              var10 = BirthDateValidator.field_i[var8];
               if (param0 <= var10) {
                 if (param2 != var9) {
                   this.a(param2, var9, param0, -1);
                 }
-                ja.field_i[var8] = var10 - param0;
+                BirthDateValidator.field_i[var8] = var10 - param0;
                 return;
               }
               if (0 != var10) {
@@ -1911,12 +1911,12 @@ class StandardAi implements Ai {
                   this.a(param2, var9, var10, -1);
                 }
                 param0 = param0 - var10;
-                ja.field_i[var8] = 0;
+                BirthDateValidator.field_i[var8] = 0;
               }
             }
           }
           if (param0 != 0) {
-            if (cq.field_E < param0) {
+            if (GuestPlayForm.field_E < param0) {
               throw new RuntimeException();
             }
             this.a((byte) -113, param0, param2);
@@ -2207,9 +2207,9 @@ class StandardAi implements Ai {
           var7 = var5[-var6 - 1 + this.field_o];
           var8 = ValidationState.field_c[var7];
           if (0 != param0 &&
-            0 != cq.field_E &&
+            0 != GuestPlayForm.field_E &&
             var8 != 0) {
-            if (cq.field_E >= var8 &&
+            if (GuestPlayForm.field_E >= var8 &&
               var8 <= param0 &&
               WeightedLruCache.field_a[var7] != 0) {
               var9 = this.field_g.field_g.field_e[var7];
@@ -2234,7 +2234,7 @@ class StandardAi implements Ai {
           }
           break;
         }
-        this.c(param2 + param0, cq.field_E, -1);
+        this.c(param2 + param0, GuestPlayForm.field_E, -1);
         return var4;
     }
 
@@ -2320,16 +2320,16 @@ class StandardAi implements Ai {
             return;
           }
           param2.field_J = param2.field_J + param1;
-          cq.field_E = cq.field_E - param1;
-          var4 = (PlacementOrder) (lh.field_D.startForward(0));
+          GuestPlayForm.field_E = GuestPlayForm.field_E - param1;
+          var4 = (PlacementOrder) (VerticalMenuSlider.field_D.startForward(0));
           while (true) {
             if (var4 == null) {
               var4 = new PlacementOrder(param2, param1);
-              lh.field_D.addLast((byte) -113, var4);
+              VerticalMenuSlider.field_D.addLast((byte) -113, var4);
               return;
             }
             if (var4.field_u != param2) {
-              var4 = (PlacementOrder) (lh.field_D.nextForward((byte) -71));
+              var4 = (PlacementOrder) (VerticalMenuSlider.field_D.nextForward((byte) -71));
               continue;
             }
             break;

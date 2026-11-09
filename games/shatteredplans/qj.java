@@ -37,7 +37,7 @@ final class qj {
           te.field_c = 0;
           if (param0 == null) {
             WidgetStyle.field_m = (Sprite[][]) null;
-            eh.field_L = null;
+            BirthDateConfirmationForm.field_L = null;
             oi.field_i = (Sprite[][]) null;
             ClientException.field_f = null;
             return;
@@ -49,17 +49,17 @@ final class qj {
           var6 = var12.length;
           RandomAccessCacheFile.a(-106);
           if (0 < var6) {
-            eh.field_L = new Sprite[var6];
-            eh.field_L[0] = new Sprite(var3, var2_int);
-            eh.field_L[0].bindAsRenderTarget();
+            BirthDateConfirmationForm.field_L = new Sprite[var6];
+            BirthDateConfirmationForm.field_L[0] = new Sprite(var3, var2_int);
+            BirthDateConfirmationForm.field_L[0].bindAsRenderTarget();
             rs.field_Cb.drawString(var12[0], 0, rs.field_Cb.field_J, 16777215, -1);
             for (var7 = 1; var7 < var6; var7++) {
-              eh.field_L[var7] = new Sprite(var3, var2_int);
-              eh.field_L[var7].bindAsRenderTarget();
+              BirthDateConfirmationForm.field_L[var7] = new Sprite(var3, var2_int);
+              BirthDateConfirmationForm.field_L[var7].bindAsRenderTarget();
               rs.field_Cb.drawString(var12[var7], 0, rs.field_Cb.field_J, 16777215, -1);
             }
           } else {
-            eh.field_L = null;
+            BirthDateConfirmationForm.field_L = null;
           }
           if (param1 != -1) {
             return;
@@ -92,7 +92,7 @@ final class qj {
             oi.field_i = (Sprite[][]) null;
             WidgetStyle.field_m = (Sprite[][]) null;
           }
-          cg.i(0);
+          OpacityWidget.popLegacyRasterState(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

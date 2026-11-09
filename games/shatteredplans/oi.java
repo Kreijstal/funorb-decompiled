@@ -35,7 +35,7 @@ final class oi {
           for (var2_int = 0; var2_int < 6; var2_int++) {
             mp.field_e[var2_int] = GameRules.a(param1, var2_int + 1, 1);
           }
-          ce.field_v = EmailValidator.a(param1, "", "win", false);
+          PasswordInputPainter.field_v = EmailValidator.a(param1, "", "win", false);
           QuickChatCategoryDefinition.field_s = EmailValidator.a(param1, "", "lose", false);
           if (param0 != -126) {
             var4 = (Archive) null;
@@ -71,15 +71,15 @@ final class oi {
     final static Sprite a(int param0, byte param1) {
         Sprite dupTemp$0 = null;
         Sprite var3 = null;
-        Sprite var2 = bd.field_C[param0];
+        Sprite var2 = AlignedMenuLabel.field_C[param0];
         if (var2 == null) {
           dupTemp$0 = new Sprite(32, 32);
           var3 = dupTemp$0;
           var2 = var3;
-          bd.field_C[param0] = dupTemp$0;
+          AlignedMenuLabel.field_C[param0] = dupTemp$0;
           bs.a(var3, 77);
           CellVertex.field_j[param0].drawQuarterSize(0, 0);
-          cg.i(0);
+          OpacityWidget.popLegacyRasterState(0);
         }
         if (param1 != 66) {
           oi.clearStatics(-57);

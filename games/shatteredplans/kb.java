@@ -19,7 +19,7 @@ final class kb extends MenuComponent {
           return;
         }
         CharSequence var2 = (CharSequence) ((Object) Star.field_o);
-        ArchiveIndex.field_d = ji.a(var2, true);
+        ArchiveIndex.field_d = DateInputWidget.a(var2, true);
     }
 
     kb(int param0, int param1, int param2, int param3, String param4, int param5, boolean param6) {
@@ -59,7 +59,7 @@ final class kb extends MenuComponent {
           SoftwareRasterizer.setPixel(this.field_C.field_z - 2, this.field_C.field_w - 2, SolVictoryChecker.blendColours(0, this.field_C.field_B[-2 + this.field_C.field_z * (this.field_C.field_w - 1)], -88, 128));
           SoftwareRasterizer.setPixel(-3 + this.field_C.field_z, -2 + this.field_C.field_w, SolVictoryChecker.blendColours(0, this.field_C.field_B[-3 + (this.field_C.field_w - 1) * this.field_C.field_z], -83, 192));
           SoftwareRasterizer.setPixel(-2 + this.field_C.field_z, this.field_C.field_w - 3, SolVictoryChecker.blendColours(0, this.field_C.field_B[-2 + (this.field_C.field_w - 2) * this.field_C.field_z], -94, 192));
-          cg.i(0);
+          OpacityWidget.popLegacyRasterState(0);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "kb.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
@@ -135,7 +135,7 @@ final class kb extends MenuComponent {
             pr.field_d[-1 + var8] = 0;
             Player.field_y[0] = 2;
           }
-          ns.field_nb.field_b = Player.field_y.length;
+          AccountStatusDialog.field_nb.field_b = Player.field_y.length;
           var7Lifetime1 = 0;
           for (var8Lifetime1 = 0; StarLinkPlanner.field_c.length > var8Lifetime1; var8Lifetime1++) {
             stackIn_29_0 = !(pr.field_d[var8Lifetime1] < 0);
@@ -149,7 +149,7 @@ final class kb extends MenuComponent {
           }
           ValidationMessageWidget.field_R = -(var7Lifetime1 >> 1) + var7Lifetime1 + WeightedLruCache.field_e;
           ld.field_j = -(var7Lifetime1 >> 1) + WeightedLruCache.field_e;
-          DiskCacheWorker.field_b = (js.field_e + uo.field_g << 1) * ns.field_nb.field_b;
+          DiskCacheWorker.field_b = (js.field_e + uo.field_g << 1) * AccountStatusDialog.field_nb.field_b;
           for (var8Lifetime2 = 0; var8Lifetime2 < StarLinkPlanner.field_c.length; var8Lifetime2++) {
             stackIn_40_0 = DiskCacheWorker.field_b;
             if (pr.field_d[var8Lifetime2] >= 0) {
@@ -159,8 +159,8 @@ final class kb extends MenuComponent {
             }
             DiskCacheWorker.field_b = stackIn_40_0 + stackIn_41_1;
           }
-          vo.field_b = ri.field_O - (DiskCacheWorker.field_b >> 1);
-          ns.field_nb.a(ch.a(-15073, bb.field_b, TertiaryListSequence.field_k), 0, param0, 123);
+          vo.field_b = LoginForm.field_O - (DiskCacheWorker.field_b >> 1);
+          AccountStatusDialog.field_nb.a(RoundedFrameSupport.a(-15073, bb.field_b, TertiaryListSequence.field_k), 0, param0, 123);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

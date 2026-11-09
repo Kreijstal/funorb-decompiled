@@ -5,7 +5,7 @@ final class StatusContent implements MenuContent {
     static String field_d;
     static AnimatedPanel field_c;
     SpriteButton field_e;
-    bd field_f;
+    AlignedMenuLabel field_f;
     static String field_a;
     static String field_g;
     static String field_b;

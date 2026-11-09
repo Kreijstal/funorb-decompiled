@@ -172,7 +172,7 @@ final class bk {
             var2 = FleetTrailPoint.field_k;
           }
           if (ProductionContent.field_h == 2 &&
-            !lh.e((byte) 75)) {
+            !VerticalMenuSlider.e((byte) 75)) {
             if (!DebouncedValidator.a(-30106, nd.field_k)) {
               var2 = QuickChatCategoryRegistry.a(of.field_g, 4371, new String[]{gi.field_a});
               if (var11 != 0) {
@@ -182,17 +182,17 @@ final class bk {
               var2 = QuickChatCategoryRegistry.a(oi.field_g, 4371, new String[]{gi.field_a});
             }
             if (QuickChatCategoryDefinition.field_t) {
-              md.a(2, (String) (var2), 0, (String) null, (String) null, -16169);
-              eo.f(false);
+              StripedProgressWidget.a(2, (String) (var2), 0, (String) null, (String) null, -16169);
+              ProgressDialog.f(false);
             }
           }
           if (null == var2 &&
             !ShatteredPlansClient.field_K &&
             ValidatedTextInputWidget.field_X == null) {
-            var2 = ce.field_u;
+            var2 = PasswordInputPainter.field_u;
           }
           if (var2 != null) {
-            cq.a(-73, ho.field_c, (String) null, (String) (var2), 0);
+            GuestPlayForm.a(-73, ho.field_c, (String) null, (String) (var2), 0);
           } else {
             var4 = Star.field_o;
             var4 = v.a(var4, (byte) 19);
@@ -202,8 +202,8 @@ final class bk {
             var8 = 0;
             if (var7 == 2) {
               var5 = QuickChatCategoryRegistry.a(MatchingTextValidator.field_q, 4371, new String[]{gi.field_a});
-              var9 = QuickChatCategoryRegistry.a(cf.field_M, 4371, new String[]{var4});
-              var8 = -485 + uq.field_j.field_K - (-cg.field_C.field_K - ho.field_f.stringWidth(var9) + ho.field_f.stringWidth(var5));
+              var9 = QuickChatCategoryRegistry.a(StatusMessagePanel.field_M, 4371, new String[]{var4});
+              var8 = -485 + uq.field_j.field_K - (-OpacityWidget.field_C.field_K - ho.field_f.stringWidth(var9) + ho.field_f.stringWidth(var5));
               if (var8 < 0) {
                 var8 = 0;
               }
@@ -261,11 +261,11 @@ final class bk {
                 }
               }
             }
-            cq.a(-110, BufferedSocket.field_q[var7], var6, var5 + BitmapFont.escapeMarkup(cg.field_E.toString()), var8);
+            GuestPlayForm.a(-110, BufferedSocket.field_q[var7], var6, var5 + BitmapFont.escapeMarkup(OpacityWidget.field_E.toString()), var8);
             if (!sr.field_h) {
-              cg.field_C.field_L = false;
+              OpacityWidget.field_C.field_L = false;
             }
-            if (cg.field_C.field_L) {
+            if (OpacityWidget.field_C.field_L) {
               var1 = QuickChatCategoryRegistry.a(StarLink.field_m, 4371, new String[]{var4, gi.field_a});
             }
           }

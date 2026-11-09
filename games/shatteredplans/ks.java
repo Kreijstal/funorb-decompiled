@@ -189,7 +189,7 @@ final class ks {
     final static WidgetStyle c(int param0) {
         if (GameRules.field_a == null) {
           GameRules.field_a = new WidgetStyle();
-          GameRules.field_a.a(gn.field_u, true);
+          GameRules.field_a.a(StatefulWidgetTheme.field_u, true);
           GameRules.field_a.field_h = EmailValidator.field_x;
           GameRules.field_a.field_l = 14;
           GameRules.field_a.field_i = 7697781;
@@ -395,7 +395,7 @@ final class ks {
 
     final static void a(int param0, wj param1, int param2) {
         try {
-          wd.field_P.addLast((byte) -113, param1);
+          NumericDateInputWidget.field_P.addLast((byte) -113, param1);
           if (param0 != 20) {
             field_i = -24;
           }

@@ -171,7 +171,7 @@ final class IsolationistAi extends StandardAi {
                 param1.field_e == 0) {
                 var3 = QuickChatCategoryRegistry.a(MatchingTextValidator.field_q, 4371, new String[]{(String) (var2)});
               } else {
-                var3 = QuickChatCategoryRegistry.a(cf.field_M, 4371, new String[]{(String) (var2)});
+                var3 = QuickChatCategoryRegistry.a(StatusMessagePanel.field_M, 4371, new String[]{(String) (var2)});
               }
             }
           } else {

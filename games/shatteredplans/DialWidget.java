@@ -339,7 +339,7 @@ final class DialWidget extends FocusableWidget {
                     var7 = ik.a(-121, var3_longLifetime2);
                     if (var7 == null) {
                       var7 = new mj(var26, var27, var3_longLifetime2);
-                      qp.field_w.put(var3_longLifetime2, var7, true);
+                      SpriteStripButtonPainter.field_w.put(var3_longLifetime2, var7, true);
                       np.field_a.field_Lb = np.field_a.field_Lb + 1;
                     }
                     var7.field_Qb = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-20976);

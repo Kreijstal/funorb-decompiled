@@ -235,14 +235,14 @@ final class kd {
           }
           var1_int = uq.field_k;
           var2 = 0;
-          if (2 == eh.field_C) {
+          if (2 == BirthDateConfirmationForm.field_C) {
             var3_long = pr.currentTimeMillis(14274) - MusicPatch.field_p;
             var2 = (int)((10999L - var3_long) / 1000L);
             if (var2 < 0) {
               var2 = 0;
             }
           }
-          for (var3 = 0; var3 < kr.field_f.length; var3++) {
+          for (var3 = 0; var3 < InvalidMapConnectionException.field_f.length; var3++) {
             var4 = ss.field_a[var3];
             if (0 <= var4) {
               if (GameState.field_l.field_c == var4) {
@@ -253,8 +253,8 @@ final class kd {
             } else {
               var5 = IterableNodeHashTable.field_b;
             }
-            var6 = kr.field_f[var3];
-            if (eh.field_C == 2 &&
+            var6 = InvalidMapConnectionException.field_f[var3];
+            if (BirthDateConfirmationForm.field_C == 2 &&
               var2 == 1) {
               if (TargetedChatMessage.field_o.length >= TertiaryNodeList.field_d.length) {
                 stackIn_20_0 = TargetedChatMessage.field_o.length;
@@ -300,7 +300,7 @@ final class kd {
               if (GameState.field_l.field_c == var4) {
                 stackIn_45_0 = Wormhole.field_l;
               } else {
-                stackIn_45_0 = kr.field_a;
+                stackIn_45_0 = InvalidMapConnectionException.field_a;
               }
               var9 = stackIn_45_0;
               if (var9 != null) {
@@ -351,7 +351,7 @@ final class kd {
         ei.field_d = new int[param1];
         ig.field_c = new int[param1];
         ue.field_e = new int[param1];
-        ja.field_i = new int[param1];
+        BirthDateValidator.field_i = new int[param1];
     }
 
     static {

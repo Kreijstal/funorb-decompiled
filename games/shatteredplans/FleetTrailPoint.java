@@ -38,9 +38,9 @@ final class FleetTrailPoint extends IntrusiveNode {
             if (var4_ref_sk != null &&
               var4_ref_sk.field_l < var2_long) {
               var4_ref_sk.unlink((byte) -61);
-              rr.field_t = var4_ref_sk.field_h.length;
+              TextInputPainter.field_t = var4_ref_sk.field_h.length;
               sa.field_a.position = 0;
-              for (var5_int = 0; rr.field_t > var5_int; var5_int++) {
+              for (var5_int = 0; TextInputPainter.field_t > var5_int; var5_int++) {
                 sa.field_a.payload[var5_int] = var4_ref_sk.field_h[var5_int];
               }
               IterableNodeHashTable.field_e = SliderPainter.field_g;
@@ -61,7 +61,7 @@ final class FleetTrailPoint extends IntrusiveNode {
               }
               ArchiveNetworkClient.field_b = sa.field_a.h((byte) 126);
               sa.field_a.position = 0;
-              rr.field_t = param0[ArchiveNetworkClient.field_b];
+              TextInputPainter.field_t = param0[ArchiveNetworkClient.field_b];
             }
             if (!uc.d((byte) -50)) {
               return false;
@@ -81,8 +81,8 @@ final class FleetTrailPoint extends IntrusiveNode {
                 var4 = 0;
               }
             }
-            var5 = new sk(var2_long + (long)var4, ArchiveNetworkClient.field_b, new byte[rr.field_t]);
-            for (var6 = 0; var6 < rr.field_t; var6++) {
+            var5 = new sk(var2_long + (long)var4, ArchiveNetworkClient.field_b, new byte[TextInputPainter.field_t]);
+            for (var6 = 0; var6 < TextInputPainter.field_t; var6++) {
               var5.field_h[var6] = sa.field_a.payload[var6];
             }
             oe.field_h.addLast((byte) -113, var5);
@@ -121,7 +121,7 @@ final class FleetTrailPoint extends IntrusiveNode {
             return null;
           }
           var6 = (CharSequence) ((Object) param0);
-          var2 = ji.a(var6, true);
+          var2 = DateInputWidget.a(var6, true);
           if (param1 <= 115) {
             FleetTrailPoint.clearStatics(false);
           }
@@ -131,7 +131,7 @@ final class FleetTrailPoint extends IntrusiveNode {
           var3 = (ve) (CipherPacketBuffer.field_m.get(65280, (long)var2.hashCode()));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_Ab);
-            var4 = ji.a(var7, true);
+            var4 = DateInputWidget.a(var7, true);
             if (var4 == null) {
               var4 = var3.field_Ab;
             }
@@ -220,8 +220,8 @@ final class FleetTrailPoint extends IntrusiveNode {
         boolean stackIn_29_1 = false;
         BufferedSocket.a(-6187, SoftwareRasterizer.field_b + 640 >> 1, SoftwareRasterizer.field_k, 0, -640 + SoftwareRasterizer.field_b >> 1);
         if (PlacementOrder.field_t > 0) {
-          if (gn.field_y != null) {
-            gn.field_y.drawOpaque(MapViewState.field_j.field_hb, 0);
+          if (StatefulWidgetTheme.field_y != null) {
+            StatefulWidgetTheme.field_y.drawOpaque(MapViewState.field_j.field_hb, 0);
           }
           stackIn_7_0 = MapViewState.field_j;
           stackIn_8_1 = (param1) && (!IntrusiveDequeCursor.field_b);
@@ -235,8 +235,8 @@ final class FleetTrailPoint extends IntrusiveNode {
         }
         if (!(Archive.field_b <= 0) ||
           !(PrivateChatMessage.field_k <= 0)) {
-          if (null != gn.field_y) {
-            gn.field_y.drawOpaque(am.field_xb.field_hb, 0);
+          if (null != StatefulWidgetTheme.field_y) {
+            StatefulWidgetTheme.field_y.drawOpaque(am.field_xb.field_hb, 0);
           }
           stackIn_24_0 = am.field_xb;
           stackIn_25_1 = (param1) && (!IntrusiveNodeHashTable.field_e);
@@ -363,13 +363,13 @@ final class FleetTrailPoint extends IntrusiveNode {
             var6 = (ve) (var4.nextForward((byte) -71));
           }
           if (wg.field_a.field_Fb.field_rb != 0) {
-            lg.field_e = new jp(wg.field_a.field_Fb.field_B, wg.field_a.field_Fb.field_N, wg.field_a.field_Fb.field_K, wg.field_a.field_Fb.field_mb, PacketBuffer.field_l, MusicCrossfadeStream.field_v, SpriteState.field_u, SpriteState.field_u);
+            ProxyAuthenticationRequiredException.field_e = new jp(wg.field_a.field_Fb.field_B, wg.field_a.field_Fb.field_N, wg.field_a.field_Fb.field_K, wg.field_a.field_Fb.field_mb, PacketBuffer.field_l, MusicCrossfadeStream.field_v, SpriteState.field_u, SpriteState.field_u);
             MapViewState.field_b = 2;
           }
           if (wg.field_a.field_yb.field_rb == 0) {
             return;
           }
-          lg.field_e = new jp(wg.field_a.field_yb.field_B, wg.field_a.field_yb.field_N, wg.field_a.field_yb.field_K, wg.field_a.field_yb.field_mb, Star.field_E, MusicCrossfadeStream.field_v, SpriteState.field_u, SpriteState.field_u);
+          ProxyAuthenticationRequiredException.field_e = new jp(wg.field_a.field_yb.field_B, wg.field_a.field_yb.field_N, wg.field_a.field_yb.field_K, wg.field_a.field_yb.field_mb, Star.field_E, MusicCrossfadeStream.field_v, SpriteState.field_u, SpriteState.field_u);
           MapViewState.field_b = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

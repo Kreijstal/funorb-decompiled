@@ -279,14 +279,14 @@ final class TurnEventLog {
           SectorCacheStore.field_h = new boolean[en.field_c];
           hd.field_q = new byte[en.field_c][];
           WeightedCacheEntry.field_s = new int[en.field_c];
-          cf.field_H = new int[en.field_c];
+          StatusMessagePanel.field_H = new int[en.field_c];
           sj.field_a = new int[en.field_c];
           var17.position = param0.length + (-7 - en.field_c * 8);
           NetworkArchiveRequest.field_y = var17.readUnsignedShort(-20976);
           BattleEvent.field_t = var17.readUnsignedShort(-20976);
           var3 = (var17.readUnsignedByte(-70) & 255) + 1;
           for (var4 = 0; en.field_c > var4; var4++) {
-            cf.field_H[var4] = var16.readUnsignedShort(-20976);
+            StatusMessagePanel.field_H[var4] = var16.readUnsignedShort(-20976);
           }
           for (var4Lifetime1 = 0; var4Lifetime1 < en.field_c; var4Lifetime1++) {
             sj.field_a[var4Lifetime1] = var17.readUnsignedShort(-20976);
@@ -299,11 +299,11 @@ final class TurnEventLog {
             IntHashIndex.field_g[var4Lifetime3] = var17.readUnsignedShort(-20976);
           }
           var17.position = -(3 * (var3 - 1)) - en.field_c * 8 + (param0.length - 7);
-          eo.field_fb = new int[var3];
+          ProgressDialog.field_fb = new int[var3];
           for (var4Lifetime4 = 1; var4Lifetime4 < var3; var4Lifetime4++) {
-            eo.field_fb[var4Lifetime4] = var17.readMedium(255);
-            if (eo.field_fb[var4Lifetime4] == 0) {
-              eo.field_fb[var4Lifetime4] = 1;
+            ProgressDialog.field_fb[var4Lifetime4] = var17.readMedium(255);
+            if (ProgressDialog.field_fb[var4Lifetime4] == 0) {
+              ProgressDialog.field_fb[var4Lifetime4] = 1;
             }
           }
           var17.position = 0;

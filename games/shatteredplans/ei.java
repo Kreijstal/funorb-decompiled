@@ -195,8 +195,8 @@ final class ei {
               SoftwareRasterizer.setPixel(param2 + (param5 - 1), var8 + (10 + param4), var9);
             }
             if (param0) {
-              jl.field_W.drawAdditive(param5 + 4, param4 + 3, 256);
-              var8Lifetime1 = param5 + 4 + jl.field_W.field_z;
+              ResizingDialog.field_W.drawAdditive(param5 + 4, param4 + 3, 256);
+              var8Lifetime1 = param5 + 4 + ResizingDialog.field_W.field_z;
               var9Lifetime1 = param5 + param2 - 3 - DerelictMapReader.field_g.field_z;
               DerelictMapReader.field_g.drawAdditive(var9Lifetime1, 3 + param4, 64);
               for (var11 = var8Lifetime1; var11 < var9Lifetime1; var11++) {

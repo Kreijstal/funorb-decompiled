@@ -22,14 +22,14 @@ final class js {
           if (param1 != 197126152) {
             js.b((byte) -92);
           }
-          var2 = (SoundPlayback) (eo.field_ab.startForward(0));
+          var2 = (SoundPlayback) (ProgressDialog.field_ab.startForward(0));
           while (var2 != null) {
             if (var2.field_n.isLinked(param1 - 197124104)) {
               var2.field_p.setVolume(var2.field_h * CheckboxPainter.field_p + 128 >> 8);
             } else {
               var2.unlink((byte) -75);
             }
-            var2 = (SoundPlayback) (eo.field_ab.nextForward((byte) -71));
+            var2 = (SoundPlayback) (ProgressDialog.field_ab.nextForward((byte) -71));
           }
           if (CandidateLink.field_v != null) {
             var2Lifetime1 = (SoundPlayback) (CandidateLink.field_v.startForward(0));
@@ -203,14 +203,14 @@ final class js {
             var8_int = 1;
             var9 = 0;
             while (true) {
-              if (pe.field_D.length <= var9) {
+              if (UnderageAccountInfoPanel.field_D.length <= var9) {
                 if (var8_int == 0) {
                   return;
                 }
                 wg.field_d = true;
                 return;
               }
-              var19 = pe.field_D[var9];
+              var19 = UnderageAccountInfoPanel.field_D[var9];
               var18 = var19;
               var10 = var18;
               var11 = 0;
@@ -397,7 +397,7 @@ final class js {
           if (param0 != -10) {
             js.a((byte) 43);
           }
-          tl.field_u = false;
+          GameClientShell.field_u = false;
           BufferedCacheFile.field_m = 0;
           if (null != WeightedLruCache.field_g.field_m) {
             var5 = WeightedLruCache.field_g.field_m;

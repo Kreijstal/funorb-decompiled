@@ -60,100 +60,100 @@ final class SoundPlayback extends IntrusiveNode {
         int var7Lifetime1Lifetime1;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          eh.field_C = param2;
+          BirthDateConfirmationForm.field_C = param2;
           BoundsRect.field_j = true;
-          if (eh.field_C == 0) {
+          if (BirthDateConfirmationForm.field_C == 0) {
             var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, ValidationIndicator.field_D, TextHotspotWidget.field_K, 3);
             var4 = 3 + var3_int;
-            kr.field_f = new String[var4];
+            InvalidMapConnectionException.field_f = new String[var4];
             ss.field_a = new int[var4];
             for (var5 = 0; var5 < var4; var5++) {
               ss.field_a[var5] = -1;
             }
             ShatteredPlansClient.field_E = new int[2];
             for (var5 = 0; var3_int > var5; var5++) {
-              kr.field_f[var5] = TextHotspotWidget.field_K[var5];
+              InvalidMapConnectionException.field_f[var5] = TextHotspotWidget.field_K[var5];
             }
-            kr.field_f[-3 + var4] = "";
-            kr.field_f[-2 + var4] = jm.field_s;
+            InvalidMapConnectionException.field_f[-3 + var4] = "";
+            InvalidMapConnectionException.field_f[-2 + var4] = jm.field_s;
             ss.field_a[var4 - 2] = 0;
             ShatteredPlansClient.field_E[0] = 4;
-            kr.field_f[var4 - 1] = nf.field_i;
+            InvalidMapConnectionException.field_f[var4 - 1] = nf.field_i;
             ss.field_a[var4 - 1] = 1;
             ShatteredPlansClient.field_E[1] = 5;
-          } else if (eh.field_C == 1) {
+          } else if (BirthDateConfirmationForm.field_C == 1) {
             var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, ValidationIndicator.field_D, TextHotspotWidget.field_K, 3);
             var4 = 2 + var3_int;
-            kr.field_f = new String[var4];
+            InvalidMapConnectionException.field_f = new String[var4];
             ss.field_a = new int[var4];
             for (var5 = 0; var4 > var5; var5++) {
               ss.field_a[var5] = -1;
             }
             ShatteredPlansClient.field_E = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
-              kr.field_f[var5] = TextHotspotWidget.field_K[var5];
+              InvalidMapConnectionException.field_f[var5] = TextHotspotWidget.field_K[var5];
             }
-            kr.field_f[var4 - 2] = "";
-            kr.field_f[-1 + var4] = nf.field_i;
+            InvalidMapConnectionException.field_f[var4 - 2] = "";
+            InvalidMapConnectionException.field_f[-1 + var4] = nf.field_i;
             ss.field_a[var4 - 1] = 0;
             ShatteredPlansClient.field_E[0] = 5;
-          } else if (eh.field_C != 2) {
-            if (eh.field_C == 3) {
+          } else if (BirthDateConfirmationForm.field_C != 2) {
+            if (BirthDateConfirmationForm.field_C == 3) {
               if (ValidatedTextInputWidget.field_W.field_w) {
-                var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, ja.field_k, TextHotspotWidget.field_K, 3);
+                var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, BirthDateValidator.field_k, TextHotspotWidget.field_K, 3);
               } else {
                 var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, BattleContribution.field_n, TextHotspotWidget.field_K, 3);
               }
               var4 = 2 + var3_int;
-              kr.field_f = new String[var4];
+              InvalidMapConnectionException.field_f = new String[var4];
               ss.field_a = new int[var4];
               for (var5 = 0; var5 < var4; var5++) {
                 ss.field_a[var5] = -1;
               }
               ShatteredPlansClient.field_E = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
-                kr.field_f[var5] = TextHotspotWidget.field_K[var5];
+                InvalidMapConnectionException.field_f[var5] = TextHotspotWidget.field_K[var5];
               }
-              kr.field_f[-2 + var4] = "";
-              kr.field_f[-1 + var4] = nf.field_i;
+              InvalidMapConnectionException.field_f[-2 + var4] = "";
+              InvalidMapConnectionException.field_f[-1 + var4] = nf.field_i;
               ss.field_a[-1 + var4] = 0;
               ShatteredPlansClient.field_E[0] = 5;
-            } else if (4 == eh.field_C) {
+            } else if (4 == BirthDateConfirmationForm.field_C) {
               var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, MenuList.field_z, TextHotspotWidget.field_K, 3);
               var4 = var3_int + 2;
-              kr.field_f = new String[var4];
+              InvalidMapConnectionException.field_f = new String[var4];
               ss.field_a = new int[var4];
               for (var5 = 0; var4 > var5; var5++) {
                 ss.field_a[var5] = -1;
               }
               ShatteredPlansClient.field_E = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
-                kr.field_f[var5] = TextHotspotWidget.field_K[var5];
+                InvalidMapConnectionException.field_f[var5] = TextHotspotWidget.field_K[var5];
               }
-              kr.field_f[var4 - 2] = "";
-              kr.field_f[-1 + var4] = nf.field_i;
+              InvalidMapConnectionException.field_f[var4 - 2] = "";
+              InvalidMapConnectionException.field_f[-1 + var4] = nf.field_i;
               ss.field_a[-1 + var4] = 0;
               ShatteredPlansClient.field_E[0] = 5;
             } else {
-              if (eh.field_C != 5) {
+              if (BirthDateConfirmationForm.field_C != 5) {
                 throw new IllegalArgumentException();
               }
               var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, AggressiveAi.field_p, TextHotspotWidget.field_K, 3);
               var4 = 3 + var3_int;
-              kr.field_f = new String[var4];
+              InvalidMapConnectionException.field_f = new String[var4];
               ss.field_a = new int[var4];
               for (var5 = 0; var4 > var5; var5++) {
                 ss.field_a[var5] = -1;
               }
               ShatteredPlansClient.field_E = new int[2];
               for (var5 = 0; var3_int > var5; var5++) {
-                kr.field_f[var5] = TextHotspotWidget.field_K[var5];
+                InvalidMapConnectionException.field_f[var5] = TextHotspotWidget.field_K[var5];
               }
-              kr.field_f[-3 + var4] = "";
-              kr.field_f[-2 + var4] = MusicVoice.field_t;
+              InvalidMapConnectionException.field_f[-3 + var4] = "";
+              InvalidMapConnectionException.field_f[-2 + var4] = MusicVoice.field_t;
               ss.field_a[var4 - 2] = 0;
               ShatteredPlansClient.field_E[0] = 3;
-              kr.field_f[-1 + var4] = nf.field_i;
+              InvalidMapConnectionException.field_f[-1 + var4] = nf.field_i;
               ss.field_a[-1 + var4] = 1;
               ShatteredPlansClient.field_E[1] = 5;
             }
@@ -203,24 +203,24 @@ final class SoundPlayback extends IntrusiveNode {
             }
             var6 = stackIn_40_0;
             var7 = var6 + var5 + 7;
-            kr.field_f = new String[var7];
+            InvalidMapConnectionException.field_f = new String[var7];
             ss.field_a = new int[var7];
             for (var8 = 0; var8 < var7; var8++) {
               ss.field_a[var8] = -1;
             }
             ShatteredPlansClient.field_E = new int[2];
-            kr.field_f[0] = wp.field_b;
+            InvalidMapConnectionException.field_f[0] = wp.field_b;
             ss.field_a[1] = 0;
-            kr.field_f[1] = ProxySocketConnector.field_h;
-            kr.field_f[2] = ld.field_i;
+            InvalidMapConnectionException.field_f[1] = ProxySocketConnector.field_h;
+            InvalidMapConnectionException.field_f[2] = ld.field_i;
             ss.field_a[3] = 1;
-            kr.field_f[5] = "";
+            InvalidMapConnectionException.field_f[5] = "";
             ShatteredPlansClient.field_E[1] = 2;
             ShatteredPlansClient.field_E[0] = 5;
-            kr.field_f[3] = dd.field_a;
-            kr.field_f[4] = ImageProducerRasterBuffer.field_m;
+            InvalidMapConnectionException.field_f[3] = dd.field_a;
+            InvalidMapConnectionException.field_f[4] = ImageProducerRasterBuffer.field_m;
             for (var8Lifetime2 = 0; var8Lifetime2 < var5; var8Lifetime2++) {
-              stackIn_47_0 = kr.field_f;
+              stackIn_47_0 = InvalidMapConnectionException.field_f;
               stackIn_47_1 = var8Lifetime2 + 6;
               if (0 > TertiaryNodeList.field_d.length + var8Lifetime2 - var5) {
                 stackIn_48_2 = "";
@@ -229,10 +229,10 @@ final class SoundPlayback extends IntrusiveNode {
               }
               stackIn_47_0[stackIn_47_1] = stackIn_48_2;
             }
-            kr.field_f[var5 + 6] = null;
+            InvalidMapConnectionException.field_f[var5 + 6] = null;
             ss.field_a[6 + var5] = -2;
             for (var8Lifetime3 = 0; var6 > var8Lifetime3; var8Lifetime3++) {
-              stackIn_52_0 = kr.field_f;
+              stackIn_52_0 = InvalidMapConnectionException.field_f;
               stackIn_52_1 = 7 - (-var5 - var8Lifetime3);
               stackIn_52_2 = ~var8Lifetime3;
               stackIn_52_3 = ~PanelNode.field_p.length;
@@ -247,8 +247,8 @@ final class SoundPlayback extends IntrusiveNode {
           }
           GameState.field_l.field_b = ShatteredPlansClient.field_E.length;
           var3_intLifetime1 = 0;
-          for (var4Lifetime1 = 0; kr.field_f.length > var4Lifetime1; var4Lifetime1++) {
-            stackIn_89_0 = kr.field_f[var4Lifetime1];
+          for (var4Lifetime1 = 0; InvalidMapConnectionException.field_f.length > var4Lifetime1; var4Lifetime1++) {
+            stackIn_89_0 = InvalidMapConnectionException.field_f[var4Lifetime1];
             stackIn_89_1 = 0;
             stackIn_90_2 = !(ss.field_a[var4Lifetime1] < 0);
             var5Lifetime1 = QuickChatMenu.a(stackIn_89_0, stackIn_89_1, stackIn_90_2);
@@ -256,7 +256,7 @@ final class SoundPlayback extends IntrusiveNode {
               var3_intLifetime1 = var5Lifetime1;
             }
           }
-          if (eh.field_C == 2) {
+          if (BirthDateConfirmationForm.field_C == 2) {
             var11 = TargetedChatMessage.field_o;
             var4_ref_String__ = var11;
             for (var5Lifetime2 = 0; var11.length > var5Lifetime2; var5Lifetime2++) {
@@ -278,7 +278,7 @@ final class SoundPlayback extends IntrusiveNode {
           DerelictMapReader.field_a = (sm.field_b + ArchiveNetworkClient.field_i << 1) * GameState.field_l.field_b;
           DualLinkDeque.field_f = QuaternaryLinkNode.field_w - (var3_intLifetime1 >> 1);
           ho.field_a = -(var3_intLifetime1 >> 1) + (var3_intLifetime1 + QuaternaryLinkNode.field_w);
-          for (var4Lifetime2 = 0; var4Lifetime2 < kr.field_f.length; var4Lifetime2++) {
+          for (var4Lifetime2 = 0; var4Lifetime2 < InvalidMapConnectionException.field_f.length; var4Lifetime2++) {
             stackIn_115_0 = DerelictMapReader.field_a;
             if (0 > ss.field_a[var4Lifetime2]) {
               stackIn_116_1 = AccountFieldValue.field_d;
@@ -288,14 +288,14 @@ final class SoundPlayback extends IntrusiveNode {
             DerelictMapReader.field_a = stackIn_115_0 + stackIn_116_1;
           }
           uq.field_k = ObjectList.field_i - (DerelictMapReader.field_a >> 1);
-          StrongCacheEntry.field_w = new int[kr.field_f.length][];
+          StrongCacheEntry.field_w = new int[InvalidMapConnectionException.field_f.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = -123 / ((-15 - param1) / 55);
           var6Lifetime1 = uq.field_k;
-          while (var4Lifetime3 < kr.field_f.length) {
+          while (var4Lifetime3 < InvalidMapConnectionException.field_f.length) {
             var7Lifetime2 = ss.field_a[var4Lifetime3];
             if (var7Lifetime2 >= 0) {
-              var8Lifetime1 = QuickChatMenu.a(kr.field_f[var4Lifetime3], 0, true);
+              var8Lifetime1 = QuickChatMenu.a(InvalidMapConnectionException.field_f[var4Lifetime3], 0, true);
               var9 = QuaternaryLinkNode.field_w - (var8Lifetime1 >> 1);
               var6Lifetime1 = var6Lifetime1 + sm.field_b;
               StrongCacheEntry.field_w[var4Lifetime3] = new int[4];
@@ -309,7 +309,7 @@ final class SoundPlayback extends IntrusiveNode {
             }
             var4Lifetime3++;
           }
-          if (2 == eh.field_C) {
+          if (2 == BirthDateConfirmationForm.field_C) {
             GameState.field_l.a(-1, -1, param0, 99);
           } else {
             GameState.field_l.a(GameScreen.a(TertiaryListSequence.field_k, bb.field_b, 16777215), 0, param0, -58);
@@ -323,7 +323,7 @@ final class SoundPlayback extends IntrusiveNode {
     }
 
     final static void a(int param0, String param1) {
-        cg.field_F = param1;
+        OpacityWidget.field_F = param1;
         if (param0 <= 48) {
           return;
         }

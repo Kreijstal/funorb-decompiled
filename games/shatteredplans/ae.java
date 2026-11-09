@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ae {
-    static hk field_f;
+    static PaddedContentDialog field_f;
     static String field_g;
     static String field_d;
     static int[] field_a;
@@ -151,10 +151,10 @@ final class ae {
             if (1 == var2) {
               var3 = var27.readUnsignedShort(-20976);
               var27.readLong(56);
-              var4_ref = (wj) (wd.field_P.startForward(0));
+              var4_ref = (wj) (NumericDateInputWidget.field_P.startForward(0));
               while (var4_ref != null) {
                 if (var4_ref.field_h != var3) {
-                  var4_ref = (wj) (wd.field_P.nextForward((byte) -71));
+                  var4_ref = (wj) (NumericDateInputWidget.field_P.nextForward((byte) -71));
                   continue;
                 }
                 break;
@@ -252,7 +252,7 @@ final class ae {
           var4_int = param2.getGroupIdByName(122, param1);
           var5 = param2.getFileIdByName(var4_int, (byte) 106, param3);
           var6 = -106 / ((-22 - param0) / 53);
-          stackIn_1_0 = ch.a(var5, (byte) 87, param2, var4_int);
+          stackIn_1_0 = RoundedFrameSupport.a(var5, (byte) 87, param2, var4_int);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

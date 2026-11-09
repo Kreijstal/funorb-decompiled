@@ -561,7 +561,7 @@ final class MapView extends MapViewState {
             }
           }
           if (!(var9 <= 1.0 + (this.field_Jb * 300.0 + 0.5 - this.field_wb * 150.0))) {
-            eo.a(false, var16Lifetime1, var6, (byte) 69, 200, var5, var15Lifetime1);
+            ProgressDialog.a(false, var16Lifetime1, var6, (byte) 69, 200, var5, var15Lifetime1);
           } else {
             if (0 != var17Lifetime1) {
               if (var17Lifetime1 == 32768) {
@@ -737,7 +737,7 @@ final class MapView extends MapViewState {
         var4 = DerelictMapReader.field_h.f(param2) ? 1 : 0;
         if (je.field_d != 0 &&
           var4 == 0) {
-          eo.f(false);
+          ProgressDialog.f(false);
           param1 = false;
         }
         if (param1) {
@@ -1245,7 +1245,7 @@ final class MapView extends MapViewState {
                       }
                     }
                   } else {
-                    eo.a(false, var19, var21Lifetime1, (byte) 74, 200, var20Lifetime1, var18Lifetime1);
+                    ProgressDialog.a(false, var19, var21Lifetime1, (byte) 74, 200, var20Lifetime1, var18Lifetime1);
                   }
                 }
               } else {
@@ -1469,7 +1469,7 @@ final class MapView extends MapViewState {
               SoftwareRasterizer.fillCircleAlpha(var34 >> 4, var35 >> 4, 9, 0, 92);
               rs.field_Cb.drawCentred(Integer.toString(var5.field_x), var34 >> 4, (var35 >> 4) + 4, 16777215, -1);
             } else {
-              eo.a(false, var17, var19, (byte) 99, this.field_t, var18, var16);
+              ProgressDialog.a(false, var17, var19, (byte) 99, this.field_t, var18, var16);
             }
             var5 = (FleetVisual) (param0.nextForward((byte) -71));
           }
@@ -1502,11 +1502,11 @@ final class MapView extends MapViewState {
         RandomAccessCacheFile.a(-120);
         for (var2 = param0; this.field_ib.length > var2; var2++) {
           var3 = this.field_ib[var2].field_k;
-          this.field_ib[var2].field_v = (Sprite) ((Object) new ArgbSprite(cf.field_F.field_o, cf.field_F.field_p));
+          this.field_ib[var2].field_v = (Sprite) ((Object) new ArgbSprite(StatusMessagePanel.field_F.field_o, StatusMessagePanel.field_F.field_p));
           this.field_ib[var2].field_v.bindAsRenderTarget();
-          cf.field_F.drawColourised(0, 0, var3);
-          for (var4 = 0; var4 < cf.field_F.field_B.length; var4++) {
-            this.field_ib[var2].field_v.field_B[var4] = we.intAnd(-16777216, cf.field_F.field_B[var4]) + we.intAnd(16777215, this.field_ib[var2].field_v.field_B[var4]);
+          StatusMessagePanel.field_F.drawColourised(0, 0, var3);
+          for (var4 = 0; var4 < StatusMessagePanel.field_F.field_B.length; var4++) {
+            this.field_ib[var2].field_v.field_B[var4] = we.intAnd(-16777216, StatusMessagePanel.field_F.field_B[var4]) + we.intAnd(16777215, this.field_ib[var2].field_v.field_B[var4]);
           }
           this.field_ib[var2].field_n = (Sprite) ((Object) new ArgbSprite(MatchingTextValidator.field_p.field_o, MatchingTextValidator.field_p.field_p));
           this.field_ib[var2].field_n.bindAsRenderTarget();
@@ -1540,10 +1540,10 @@ final class MapView extends MapViewState {
           }
           this.field_ib[var2].field_c = new Sprite(18, 12);
           this.field_ib[var2].field_c.bindAsRenderTarget();
-          bd.field_G.drawColourised(1, 1, var3);
+          AlignedMenuLabel.field_G.drawColourised(1, 1, var3);
           this.field_ib[var2].field_d = new Sprite(16, 10);
           this.field_ib[var2].field_d.bindAsRenderTarget();
-          bd.field_G.drawColourised(0, 0, var3);
+          AlignedMenuLabel.field_G.drawColourised(0, 0, var3);
           this.field_ib[var2].field_o.addOutline(16777215);
           this.field_ib[var2].field_p.addOutline(16777215);
           this.field_ib[var2].field_r.addOutline(16777215);
@@ -1559,7 +1559,7 @@ final class MapView extends MapViewState {
             this.field_cb[var2][var4Lifetime4] = PrivateChatMessage.intOr(var6, var5) >>> 8;
           }
         }
-        cg.i(0);
+        OpacityWidget.popLegacyRasterState(0);
     }
 
     private final void a(boolean param0, Star param1) {
@@ -1582,7 +1582,7 @@ final class MapView extends MapViewState {
             if (param1 != this.field_p) {
               this.field_ob.drawColourised((int)((double)(this.field_i[var3_int] + 1) - 345.0 * this.field_wb / 2.0), (int)(-(this.field_wb * 400.0 / 2.0) + (double)(this.field_J[var3_int] + 1)), var4.field_s);
               if (this.field_X) {
-                if (!tl.field_u) {
+                if (!GameClientShell.field_u) {
                   return;
                 }
                 this.field_Ib.drawAlpha((int)((double)(this.field_i[var3_int] + 1) - 345.0 * this.field_wb / 2.0), (int)((double)(this.field_J[var3_int] + 1) - 400.0 * this.field_wb / 2.0), RasterBuffer.field_f);
@@ -2081,7 +2081,7 @@ final class MapView extends MapViewState {
             MapView.a((byte) 73, (DualLinkDeque) null);
           }
           stackIn_26_0 = !param1;
-          var11 = qp.a(stackIn_26_0, this.field_Qb[param0.field_p]);
+          var11 = SpriteStripButtonPainter.a(stackIn_26_0, this.field_Qb[param0.field_p]);
           var10 = var11;
           var6 = var10;
           if (var6 != null) {
@@ -2599,7 +2599,7 @@ final class MapView extends MapViewState {
             var8_ref_om.a(param3 - 12099, var10Lifetime2 - ((int)(0.5 + 0.5 * (this.field_wb * 100.0)) + 7), 4096, -5 - (int)(ProjectsContent.field_e * (100.0 * this.field_wb)) + var9Lifetime2, 21845);
             var8_ref_om.a(15, (int)(0.5 * (this.field_wb * 100.0)) + 6, 4096, -5 + var9Lifetime2 - (int)(ProjectsContent.field_e * (this.field_wb * 100.0)), 43691);
             var8_ref_om.a(15, (int)(0.5 * (this.field_wb * 100.0)) + 6, 4096, (int)(ProjectsContent.field_e * (this.field_wb * 100.0)) + 3, 54613);
-            cg.i(0);
+            OpacityWidget.popLegacyRasterState(0);
             for (var11 = 0; var10Lifetime2 * var9Lifetime2 > var11; var11++) {
               this.field_ob.field_B[var11] = PrivateChatMessage.intOr(16777215, this.field_ob.field_B[var11] << 8);
               this.field_Ib.field_B[var11] = PrivateChatMessage.intOr(16777215, this.field_Ib.field_B[var11] << 8);
@@ -2610,12 +2610,12 @@ final class MapView extends MapViewState {
             this.field_Ob = new ArgbSprite((int)(4.0 + (double)var11Lifetime1 * 0.5), (int)(4.0 + ProjectsContent.field_e * (double)var11Lifetime1));
             RandomAccessCacheFile.a(-113);
             this.field_Cb.bindAsRenderTarget();
-            eo.a(true, 4, 4, (byte) 115, 200, var11Lifetime1, 0);
+            ProgressDialog.a(true, 4, 4, (byte) 115, 200, var11Lifetime1, 0);
             this.field_K.bindAsRenderTarget();
-            eo.a(true, this.field_K.field_w - 1, 4, (byte) 77, 200, var11Lifetime1 / 2, 0);
+            ProgressDialog.a(true, this.field_K.field_w - 1, 4, (byte) 77, 200, var11Lifetime1 / 2, 0);
             this.field_Ob.bindAsRenderTarget();
-            eo.a(true, this.field_K.field_w - 1, 4, (byte) -35, 200, 4, -1 + this.field_Ob.field_z);
-            cg.i(0);
+            ProgressDialog.a(true, this.field_K.field_w - 1, 4, (byte) -35, 200, 4, -1 + this.field_Ob.field_z);
+            OpacityWidget.popLegacyRasterState(0);
             if (this.field_xb == null) {
               this.field_xb = new Sprite[13];
               this.field_Mb = new Sprite[13];
@@ -2657,7 +2657,7 @@ final class MapView extends MapViewState {
               this.field_Mb[var12].bindAsRenderTarget();
               MenuLabel.field_y[var12].drawScaled(0, 0, var13Lifetime2, var13Lifetime2);
             }
-            cg.i(0);
+            OpacityWidget.popLegacyRasterState(0);
           }
           this.scrollBackground(-94);
           if (param3 != 12114) {
@@ -2676,7 +2676,7 @@ final class MapView extends MapViewState {
           }
           if (sm.field_e) {
             this.field_L = RasterStateFrame.field_n;
-            cg.i(param3 - 12114);
+            OpacityWidget.popLegacyRasterState(param3 - 12114);
             this.field_gb.drawOpaque(0, 0);
           }
           this.field_o.l(123);
@@ -2872,7 +2872,7 @@ final class MapView extends MapViewState {
               GarrisonTask.field_p[var4Lifetime1.field_o].drawScaled(-var8Lifetime1 + this.field_i[var7Lifetime1], this.field_J[var7Lifetime1] + var9 - var8Lifetime1, var8Lifetime1 * 2, var8Lifetime1 * 2);
             } else {
               if (var4Lifetime1.field_i != null) {
-                var4Lifetime1.field_i.field_d.a(15, var9 + this.field_J[var7Lifetime1], 4096 * var8Lifetime1 / bd.field_G.field_z, this.field_i[var7Lifetime1], this.field_t % 25 * 200);
+                var4Lifetime1.field_i.field_d.a(15, var9 + this.field_J[var7Lifetime1], 4096 * var8Lifetime1 / AlignedMenuLabel.field_G.field_z, this.field_i[var7Lifetime1], this.field_t % 25 * 200);
               }
             }
           }
@@ -2922,7 +2922,7 @@ final class MapView extends MapViewState {
           var7 = var5.field_h.field_p;
           var3 = (var5.field_p * this.field_n >> 10) + (this.field_i[var7] << 4);
           var4 = (var5.field_n * this.field_n >> 10) + (this.field_J[var7] << 4);
-          SoftwareRasterizer.addRadialGlowQ4(var3, var4, this.field_n + 4 << 1, var6_int, vj.field_F);
+          SoftwareRasterizer.addRadialGlowQ4(var3, var4, this.field_n + 4 << 1, var6_int, DropTargetWidget.field_F);
           var5 = (so) (this.field_Y.nextForward((byte) -71));
         }
         var6 = (FleetTrailPoint) (this.field_V.startForward(0));
@@ -2939,7 +2939,7 @@ final class MapView extends MapViewState {
           var9 = (int)(300.0f / ((float)var6.field_o + this.field_I) * (float)var4Lifetime1) + (var2 << 4);
           var10 = (int)(32000.0f / (this.field_I + (float)var6.field_o)) + 64;
           if (var10 < 400) {
-            SoftwareRasterizer.addRadialGlowQ4(var8, var9, var10, var7Lifetime1, vj.field_F);
+            SoftwareRasterizer.addRadialGlowQ4(var8, var9, var10, var7Lifetime1, DropTargetWidget.field_F);
           }
           var6 = (FleetTrailPoint) (this.field_V.nextForward((byte) -71));
         }
@@ -3090,7 +3090,7 @@ final class MapView extends MapViewState {
                       break;
                     }
                     if (MatchingTextValidator.field_t.field_f) {
-                      kr.a(70, var26 << 4, var27 << 4, var25 << 4, var24, var28 << 4);
+                      InvalidMapConnectionException.a(70, var26 << 4, var27 << 4, var25 << 4, var24, var28 << 4);
                       break;
                     }
                     ValidationState.a(var26 << 4, -40, var27 << 4, var25 << 4, var28 << 4, var24);

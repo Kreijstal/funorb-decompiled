@@ -56,7 +56,7 @@ final class an {
         RuntimeException var3 = null;
         String var4 = null;
         kb var5 = null;
-        b var6 = null;
+        FilledMenuPanel var6 = null;
         int var7 = 0;
         SpriteButton var7_ref_ff = null;
         MenuLabel var8 = null;
@@ -99,7 +99,7 @@ final class an {
             var11.field_o = dupTemp$0;
             var7_ref_ff.field_o = dupTemp$0;
           }
-          var6 = new b(TurnEventLog.field_d.field_z / 2 + (Player.field_a[0].field_z + 5) * 4 + 40, 6 + var5.field_i, TurnEventLog.field_d.field_z * 2, -2 + TurnEventLog.field_d.field_w, 2, 534312);
+          var6 = new FilledMenuPanel(TurnEventLog.field_d.field_z / 2 + (Player.field_a[0].field_z + 5) * 4 + 40, 6 + var5.field_i, TurnEventLog.field_d.field_z * 2, -2 + TurnEventLog.field_d.field_w, 2, 534312);
           var13.addChild(var6, param0 ^ -68);
           var7 = param2.field_r;
           if (var7 < 0) {

@@ -133,21 +133,21 @@ final class RandomAccessCacheFile {
           ih.field_c.writeBytes(param2, param6, param5, 22186);
           ih.field_c.padZerosTo(var7_int, (byte) -103);
           ih.field_c.xteaEncryptAll(var13, param3 ^ 107);
-          if (il.field_kb == null ||
-            !(il.field_kb.payload.length >= 100)) {
-            il.field_kb = new PacketBuffer(100);
+          if (ContentDialog.field_kb == null ||
+            !(ContentDialog.field_kb.payload.length >= 100)) {
+            ContentDialog.field_kb = new PacketBuffer(100);
           }
-          il.field_kb.position = 0;
-          il.field_kb.writeByte(10, (byte) -81);
+          ContentDialog.field_kb.position = 0;
+          ContentDialog.field_kb.writeByte(10, (byte) -81);
           var11 = 0;
           var9Lifetime1 = var11;
           while (var11 < 4) {
-            il.field_kb.writeInt(11135, var13[var11]);
+            ContentDialog.field_kb.writeInt(11135, var13[var11]);
             var11++;
           }
-          il.field_kb.writeShort(param6, 255);
-          il.field_kb.rsaEncrypt(param4, param0, (byte) -86);
-          param1.writeBytes(0, il.field_kb.position, il.field_kb.payload, 22186);
+          ContentDialog.field_kb.writeShort(param6, 255);
+          ContentDialog.field_kb.rsaEncrypt(param4, param0, (byte) -86);
+          param1.writeBytes(0, ContentDialog.field_kb.position, ContentDialog.field_kb.payload, 22186);
           param1.writeBytes(0, ih.field_c.position, ih.field_c.payload, param3 ^ 22186);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -242,7 +242,7 @@ final class RandomAccessCacheFile {
         }
         bf.field_c[field_k] = SoftwareRasterizer.field_a;
         DebouncedValidator.field_d[field_k] = SoftwareRasterizer.field_f;
-        oj.field_Cb[field_k] = SoftwareRasterizer.field_b;
+        AccountCreationDialog.field_Cb[field_k] = SoftwareRasterizer.field_b;
         TertiaryLinkNode.field_s[field_k] = SoftwareRasterizer.field_k;
         field_k = field_k + 1;
     }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ToggleButton extends MenuComponent implements ok {
+final class ToggleButton extends MenuComponent implements ToggleButtonMarker {
     private boolean field_y;
     static String field_v;
     private int field_x;
@@ -118,17 +118,17 @@ final class ToggleButton extends MenuComponent implements ok {
             var5 = uh.field_d;
           } else {
             if (ae.field_b) {
-              var5 = pg.field_E;
+              var5 = LabeledChildWidget.field_E;
             } else {
               var5 = CipherPacketBuffer.field_q;
             }
           }
           var7 = (String) null;
-          cq.a(-114, ho.field_c, (String) null, var5, 0);
+          GuestPlayForm.a(-114, ho.field_c, (String) null, var5, 0);
           ck.field_a = uq.field_j;
           uq.field_j.field_ab = -(8355711 & ho.field_c >> 1) + (ho.field_c + ((16711422 & BoundsRect.field_k.field_ab) >> 1));
           uq.field_j.field_jb = -(8355711 & ho.field_c >> 1) + ho.field_c + ((BoundsRect.field_k.field_jb & 16711422) >> 1);
-          WhirlpoolHasher.field_j = cg.field_C;
+          WhirlpoolHasher.field_j = OpacityWidget.field_C;
           uq.field_j.field_qb = -(ho.field_c >> 1 & 8355711) + ho.field_c + (BoundsRect.field_k.field_qb >> 1 & 8355711);
           ValidatedTextInputWidget.field_X = new AnimatedPanel(0L, param1);
           AgeValidator.field_n = new AnimatedPanel(0L, param2);
@@ -137,8 +137,8 @@ final class ToggleButton extends MenuComponent implements ok {
           uq.field_j = new AnimatedPanel((long)param4, param0);
           uq.field_j.field_nb = ho.field_f;
           sg.field_Ab.addChild(4, uq.field_j);
-          cg.field_C = new AnimatedPanel(0L, WhirlpoolHasher.field_j);
-          sg.field_Ab.addChild(4, cg.field_C);
+          OpacityWidget.field_C = new AnimatedPanel(0L, WhirlpoolHasher.field_j);
+          sg.field_Ab.addChild(4, OpacityWidget.field_C);
           hd.field_m = new AnimatedPanel(0L, BoundsRect.field_k, ld.field_n);
           DirectByteArrayStorage.field_l = new AnimatedPanel(0L, BoundsRect.field_k);
           ValidatedTextInputWidget.field_X.addChild(4, AgeValidator.field_n);

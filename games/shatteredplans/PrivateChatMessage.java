@@ -153,15 +153,15 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("text_benefits,0", 104);
                 if (null != var2) {
-                  cg.field_B[0] = IterableNodeHashTable.a(var2, 17746);
+                  OpacityWidget.field_B[0] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_benefits,1", 100);
                 if (null != var2) {
-                  cg.field_B[1] = IterableNodeHashTable.a(var2, 17746);
+                  OpacityWidget.field_B[1] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_benefits,2", 115);
                 if (var2 != null) {
-                  cg.field_B[2] = IterableNodeHashTable.a(var2, 17746);
+                  OpacityWidget.field_B[2] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("achievement_names,0", 95);
                 if (var2 != null) {
@@ -549,47 +549,47 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("instructions_tabnames,0", 124);
                 if (null != var2) {
-                  pe.field_J[0] = IterableNodeHashTable.a(var2, 17746);
+                  UnderageAccountInfoPanel.field_J[0] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("instructions_tabnames,1", 99);
                 if (var2 != null) {
-                  pe.field_J[1] = IterableNodeHashTable.a(var2, 17746);
+                  UnderageAccountInfoPanel.field_J[1] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("instructions_tabnames,2", 119);
                 if (null != var2) {
-                  pe.field_J[2] = IterableNodeHashTable.a(var2, 17746);
+                  UnderageAccountInfoPanel.field_J[2] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("instructions_tabnames,3", 105);
                 if (var2 != null) {
-                  pe.field_J[3] = IterableNodeHashTable.a(var2, 17746);
+                  UnderageAccountInfoPanel.field_J[3] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("instructions_tabnames,4", 122);
                 if (var2 != null) {
-                  pe.field_J[4] = IterableNodeHashTable.a(var2, 17746);
+                  UnderageAccountInfoPanel.field_J[4] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("instructions_tabnames,5", 114);
                 if (null != var2) {
-                  pe.field_J[5] = IterableNodeHashTable.a(var2, 17746);
+                  UnderageAccountInfoPanel.field_J[5] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("instructions_tabnames,6", 112);
                 if (var2 != null) {
-                  pe.field_J[6] = IterableNodeHashTable.a(var2, 17746);
+                  UnderageAccountInfoPanel.field_J[6] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("instructions_tabnames,7", 103);
                 if (var2 != null) {
-                  pe.field_J[7] = IterableNodeHashTable.a(var2, 17746);
+                  UnderageAccountInfoPanel.field_J[7] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("instructions_tabnames,8", 105);
                 if (var2 != null) {
-                  pe.field_J[8] = IterableNodeHashTable.a(var2, 17746);
+                  UnderageAccountInfoPanel.field_J[8] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("instructions_tabnames,9", 116);
                 if (null != var2) {
-                  pe.field_J[9] = IterableNodeHashTable.a(var2, 17746);
+                  UnderageAccountInfoPanel.field_J[9] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("instructions_tabnames,10", 122);
                 if (var2 != null) {
-                  pe.field_J[10] = IterableNodeHashTable.a(var2, 17746);
+                  UnderageAccountInfoPanel.field_J[10] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("TEXT_INTRO0,0", 95);
                 if (null != var2) {
@@ -665,7 +665,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("pact_accept", 114);
                 if (var2 != null) {
-                  il.field_hb = IterableNodeHashTable.a(var2, 17746);
+                  ContentDialog.field_hb = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("pact_awaiting", 123);
                 if (null != var2) {
@@ -725,7 +725,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("text_waitingforplayer", 126);
                 if (var2 != null) {
-                  il.field_Y = IterableNodeHashTable.a(var2, 17746);
+                  ContentDialog.field_Y = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_waitingforplayers", 126);
                 if (null != var2) {
@@ -797,7 +797,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("turn_ordinal", 104);
                 if (null != var2) {
-                  eo.field_hb = IterableNodeHashTable.a(var2, 17746);
+                  ProgressDialog.field_hb = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("turn_name", 112);
                 if (null != var2) {
@@ -1013,7 +1013,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("text_instructions_mv_wormhole", 95);
                 if (var2 != null) {
-                  lh.field_u = IterableNodeHashTable.a(var2, 17746);
+                  VerticalMenuSlider.field_u = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_instructions_mv_tooltip", 126);
                 if (var2 != null) {
@@ -1033,11 +1033,11 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("text_instructions_mv_order", 121);
                 if (null != var2) {
-                  eo.field_kb = IterableNodeHashTable.a(var2, 17746);
+                  ProgressDialog.field_kb = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_instructions_sf_outgoing", 96);
                 if (null != var2) {
-                  md.field_K = IterableNodeHashTable.a(var2, 17746);
+                  StripedProgressWidget.field_K = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_instructions_sf_garrison", 100);
                 if (var2 != null) {
@@ -1067,7 +1067,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("text_instructions_icon_neutral", 111);
                 if (null != var2) {
-                  pg.field_F = IterableNodeHashTable.a(var2, 17746);
+                  LabeledChildWidget.field_F = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_instructions_icon_homeworld", 126);
                 if (var2 != null) {
@@ -1079,7 +1079,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("text_instructions_movement", 112);
                 if (null != var2) {
-                  ri.field_N = IterableNodeHashTable.a(var2, 17746);
+                  LoginForm.field_N = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_instructions_projects", 105);
                 if (var2 != null) {
@@ -1119,7 +1119,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("text_instructions_animation", 120);
                 if (var2 != null) {
-                  jl.field_N = IterableNodeHashTable.a(var2, 17746);
+                  ResizingDialog.field_N = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_instructions_animation_fleetmove", 106);
                 if (null != var2) {
@@ -1183,7 +1183,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("text_animating_collapse", 96);
                 if (var2 != null) {
-                  md.field_G = IterableNodeHashTable.a(var2, 17746);
+                  StripedProgressWidget.field_G = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("msg_offeredpactto", 97);
                 if (var2 != null) {
@@ -1203,7 +1203,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("msg_xy_signed", 110);
                 if (var2 != null) {
-                  lh.field_A = IterableNodeHashTable.a(var2, 17746);
+                  VerticalMenuSlider.field_A = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("msg_yourpactexpired", 122);
                 if (var2 != null) {
@@ -1403,7 +1403,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("tutorial_continue3", 110);
                 if (var2 != null) {
-                  gn.field_v = IterableNodeHashTable.a(var2, 17746);
+                  StatefulWidgetTheme.field_v = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("tutorial_continuekey", 108);
                 if (null != var2) {
@@ -1427,7 +1427,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("tutorial_retreating_single", 109);
                 if (null != var2) {
-                  lh.field_H = IterableNodeHashTable.a(var2, 17746);
+                  VerticalMenuSlider.field_H = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("tutorial_retreating_multiple", 100);
                 if (null != var2) {
@@ -1467,7 +1467,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("tabname_diplomacy", 109);
                 if (var2 != null) {
-                  vj.field_B = IterableNodeHashTable.a(var2, 17746);
+                  DropTargetWidget.field_B = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("tabname_projects", 110);
                 if (null != var2) {
@@ -1547,7 +1547,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("text_ships", 110);
                 if (null != var2) {
-                  ja.field_n = IterableNodeHashTable.a(var2, 17746);
+                  BirthDateValidator.field_n = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_production", 105);
                 if (var2 != null) {
@@ -1575,32 +1575,32 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("text_percentage", 122);
                 if (null != var2) {
-                  jl.field_O = IterableNodeHashTable.a(var2, 17746);
+                  ResizingDialog.field_O = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_ordinals,0", 113);
                 if (var2 != null) {
-                  eh.field_I[0] = IterableNodeHashTable.a(var2, 17746);
+                  BirthDateConfirmationForm.field_I[0] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_ordinals,1", 105);
                 if (null != var2) {
-                  eh.field_I[1] = IterableNodeHashTable.a(var2, 17746);
+                  BirthDateConfirmationForm.field_I[1] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var3 = -15 % ((42 - param0) / 35);
                 var2 = nb.a("text_ordinals,2", 123);
                 if (null != var2) {
-                  eh.field_I[2] = IterableNodeHashTable.a(var2, 17746);
+                  BirthDateConfirmationForm.field_I[2] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_ordinals,3", 120);
                 if (null != var2) {
-                  eh.field_I[3] = IterableNodeHashTable.a(var2, 17746);
+                  BirthDateConfirmationForm.field_I[3] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_ordinals,4", 98);
                 if (null != var2) {
-                  eh.field_I[4] = IterableNodeHashTable.a(var2, 17746);
+                  BirthDateConfirmationForm.field_I[4] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_ordinals,5", 125);
                 if (var2 != null) {
-                  eh.field_I[5] = IterableNodeHashTable.a(var2, 17746);
+                  BirthDateConfirmationForm.field_I[5] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_error", 111);
                 if (var2 != null) {
@@ -1728,7 +1728,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("text_stat_desc_aggressiveness", 121);
                 if (null != var2) {
-                  ch.field_b = IterableNodeHashTable.a(var2, 17746);
+                  RoundedFrameSupport.field_b = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_stat_desc_solidity", 104);
                 if (var2 != null) {
@@ -1764,7 +1764,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("text_map_derelicts", 101);
                 if (null != var2) {
-                  cf.field_I = IterableNodeHashTable.a(var2, 17746);
+                  StatusMessagePanel.field_I = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_garrison_yes", 114);
                 if (var2 != null) {
@@ -1916,39 +1916,39 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("aitypes,0", 100);
                 if (null != var2) {
-                  wk.field_a[0] = IterableNodeHashTable.a(var2, 17746);
+                  WidgetStateStyle.field_a[0] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("aitypes,1", 117);
                 if (null != var2) {
-                  wk.field_a[1] = IterableNodeHashTable.a(var2, 17746);
+                  WidgetStateStyle.field_a[1] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("aitypes,2", 100);
                 if (null != var2) {
-                  wk.field_a[2] = IterableNodeHashTable.a(var2, 17746);
+                  WidgetStateStyle.field_a[2] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("aitypes,3", 120);
                 if (var2 != null) {
-                  wk.field_a[3] = IterableNodeHashTable.a(var2, 17746);
+                  WidgetStateStyle.field_a[3] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("aitypes,4", 116);
                 if (var2 != null) {
-                  wk.field_a[4] = IterableNodeHashTable.a(var2, 17746);
+                  WidgetStateStyle.field_a[4] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("aitypes,5", 123);
                 if (var2 != null) {
-                  wk.field_a[5] = IterableNodeHashTable.a(var2, 17746);
+                  WidgetStateStyle.field_a[5] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("aitypes,6", 109);
                 if (null != var2) {
-                  wk.field_a[6] = IterableNodeHashTable.a(var2, 17746);
+                  WidgetStateStyle.field_a[6] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("aitypes,7", 123);
                 if (null != var2) {
-                  wk.field_a[7] = IterableNodeHashTable.a(var2, 17746);
+                  WidgetStateStyle.field_a[7] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("aitypes,8", 95);
                 if (null != var2) {
-                  wk.field_a[8] = IterableNodeHashTable.a(var2, 17746);
+                  WidgetStateStyle.field_a[8] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("tooltipIncome,0", 121);
                 if (null != var2) {
@@ -1980,7 +1980,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("tooltipPlaceFleetsStop", 127);
                 if (null != var2) {
-                  il.field_lb = IterableNodeHashTable.a(var2, 17746);
+                  ContentDialog.field_lb = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("tooltipFleetsRemaining", 109);
                 if (null != var2) {
@@ -1994,7 +1994,7 @@ final class PrivateChatMessage extends ChatMessage {
             void loadDiplomacyAndVictoryText() throws java.lang.RuntimeException {
                 var2 = nb.a("tooltipAllFleetsPlaced", 96);
                 if (var2 != null) {
-                  pe.field_F = IterableNodeHashTable.a(var2, 17746);
+                  UnderageAccountInfoPanel.field_F = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("tooltipOfferTreaty", 110);
                 if (null != var2) {
@@ -2002,7 +2002,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("tooltipAcceptTreaty", 113);
                 if (null != var2) {
-                  gn.field_x = IterableNodeHashTable.a(var2, 17746);
+                  StatefulWidgetTheme.field_x = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("tooltipWaitTreaty", 106);
                 if (var2 != null) {
@@ -2014,7 +2014,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("tooltipProjectComplete", 118);
                 if (var2 != null) {
-                  mm.field_q = IterableNodeHashTable.a(var2, 17746);
+                  EmailSyntaxValidator.field_q = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("tooltipProjectPending", 120);
                 if (var2 != null) {
@@ -2062,7 +2062,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("tooltipEndTurn", 101);
                 if (null != var2) {
-                  oj.field_Bb = IterableNodeHashTable.a(var2, 17746);
+                  AccountCreationDialog.field_Bb = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("tooltipVictoryPaneManyMany", 105);
                 if (var2 != null) {

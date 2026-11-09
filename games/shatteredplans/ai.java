@@ -40,7 +40,7 @@ final class ai {
             var9 = param6;
             var10 = param5;
             for (var11 = param2; param3 > var11; var11++) {
-              var12 = lg.field_d[var11];
+              var12 = ProxyAuthenticationRequiredException.field_d[var11];
               if (!param1) {
                 stackIn_25_0 = GameState.field_c[var12];
               } else {
@@ -52,13 +52,13 @@ final class ai {
                   var10 = var13;
                 }
               } else {
-                lg.field_d[var11] = lg.field_d[var8];
+                ProxyAuthenticationRequiredException.field_d[var11] = ProxyAuthenticationRequiredException.field_d[var8];
                 if (var13 < var9) {
                   var9 = var13;
                 }
                 incrementValue$0 = var8;
                 var8++;
-                lg.field_d[incrementValue$0] = var12;
+                ProxyAuthenticationRequiredException.field_d[incrementValue$0] = var12;
               }
             }
             ai.a(param0, param1, param2, var8, param4, var9, param6);
@@ -67,11 +67,11 @@ final class ai {
           }
           for (var7_intLifetime1 = param3 - 1; param2 < var7_intLifetime1; var7_intLifetime1--) {
             for (var8Lifetime1 = param2; var7_intLifetime1 > var8Lifetime1; var8Lifetime1++) {
-              var9Lifetime1 = lg.field_d[var8Lifetime1];
-              var10Lifetime1 = lg.field_d[var8Lifetime1 + 1];
+              var9Lifetime1 = ProxyAuthenticationRequiredException.field_d[var8Lifetime1];
+              var10Lifetime1 = ProxyAuthenticationRequiredException.field_d[var8Lifetime1 + 1];
               if (aq.a(var10Lifetime1, true, var9Lifetime1, param1)) {
-                lg.field_d[var8Lifetime1] = var10Lifetime1;
-                lg.field_d[var8Lifetime1 + 1] = var9Lifetime1;
+                ProxyAuthenticationRequiredException.field_d[var8Lifetime1] = var10Lifetime1;
+                ProxyAuthenticationRequiredException.field_d[var8Lifetime1 + 1] = var9Lifetime1;
               }
             }
           }
@@ -115,7 +115,7 @@ final class ai {
           if (param1 != -1) {
             ai.clearStatics((byte) -80);
           }
-          oj.field_Ib = param3;
+          AccountCreationDialog.field_Ib = param3;
           MenuWindow.field_B = param2;
           ByteArrayNode.a(ClientException.field_c, param1 ^ -80, param0);
         } catch (RuntimeException runtimeException) {

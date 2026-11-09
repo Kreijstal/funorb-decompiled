@@ -114,8 +114,8 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextFiel
     }
 
     final static void a(byte param0, boolean param1) {
-        eh var2 = null;
-        eh var2Lifetime1;
+        BirthDateConfirmationForm var2 = null;
+        BirthDateConfirmationForm var2Lifetime1;
         if (param0 < 96) {
           field_l = (AnimatedPanel) null;
           tg.field_c.drawFullRaster(param1, -43);

@@ -124,7 +124,7 @@ final class hd extends IntrusiveNode {
               SoftwareRasterizer.field_h[var7] = SoftwareRasterizer.field_h[var7] << 1;
             }
           }
-          cg.i(0);
+          OpacityWidget.popLegacyRasterState(0);
           this.field_h = -param2;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

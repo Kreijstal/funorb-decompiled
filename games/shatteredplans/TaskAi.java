@@ -315,7 +315,7 @@ final class TaskAi implements Ai {
         }
         bk.field_a.clear(0);
         MouseInputHandler.field_g.clear(0);
-        vj.field_E.clear(0);
+        DropTargetWidget.field_E.clear(0);
         GameSession.field_u = null;
         no.field_b = false;
         DerelictMapReader.field_f = false;
@@ -350,9 +350,9 @@ final class TaskAi implements Ai {
               this.planTurn((byte) 56);
             }
             this.deployTannhauser((byte) -44);
-            if (this.field_m.validatePlayerOrders(MouseInputHandler.field_g, this.field_w, -6, bk.field_a, vj.field_E)) {
+            if (this.field_m.validatePlayerOrders(MouseInputHandler.field_g, this.field_w, -6, bk.field_a, DropTargetWidget.field_E)) {
             }
-            this.field_m.restorePendingOrders(MouseInputHandler.field_g, 0, bk.field_a, vj.field_E);
+            this.field_m.restorePendingOrders(MouseInputHandler.field_g, 0, bk.field_a, DropTargetWidget.field_E);
             return;
           }
           this.executeTasks(false, 0);
@@ -1254,7 +1254,7 @@ final class TaskAi implements Ai {
             if (param0.field_u) {
               throw new RuntimeException(this.field_w.name + " is trying to deploy a Defensive Net in a system that already has one: " + param0.name);
             }
-            vj.field_E.addLast((byte) -113, new ProjectUse(0, this.field_w, param0));
+            DropTargetWidget.field_E.addLast((byte) -113, new ProjectUse(0, this.field_w, param0));
             no.field_b = true;
             TextLayout.field_e = param0;
             if (param1 != 31308) {
@@ -1263,10 +1263,10 @@ final class TaskAi implements Ai {
             return;
           }
           var3 = null;
-          var4 = (ProjectUse) (vj.field_E.startForward(0));
+          var4 = (ProjectUse) (DropTargetWidget.field_E.startForward(0));
           while (var4 != null) {
             if (var4.field_o != 0) {
-              var4 = (ProjectUse) (vj.field_E.nextForward((byte) -71));
+              var4 = (ProjectUse) (DropTargetWidget.field_E.nextForward((byte) -71));
               continue;
             }
             var3 = var4;
@@ -1646,7 +1646,7 @@ final class TaskAi implements Ai {
           if (param0 <= 0) {
             throw new IllegalArgumentException();
           }
-          if (eo.isPowerOfTwo(param0, 7433)) {
+          if (ProgressDialog.isPowerOfTwo(param0, 7433)) {
             stackIn_5_0 = (int)((long)param0 * ((long)param1.nextInt() & 4294967295L) >> 32);
             return stackIn_5_0;
           }
@@ -1798,7 +1798,7 @@ final class TaskAi implements Ai {
         int var11;
         int var12;
         Star var13;
-        lo var14;
+        CombinedTerritory var14;
         Star var15;
         Star[] var16;
         Star var17;
@@ -1917,7 +1917,7 @@ final class TaskAi implements Ai {
         }
         if (var2 != null) {
           var6_ref2 = new ProjectUse(1, this.field_w, (Star) (var2));
-          vj.field_E.addLast((byte) -113, var6_ref2);
+          DropTargetWidget.field_E.addLast((byte) -113, var6_ref2);
         }
         return;
     }
@@ -2353,7 +2353,7 @@ final class TaskAi implements Ai {
           }
           if (var5_ref != null &&
             var6 != null) {
-            vj.field_E.addLast((byte) -113, new ProjectUse(3, this.field_w, (Star) (var5_ref), (Star) (var6)));
+            DropTargetWidget.field_E.addLast((byte) -113, new ProjectUse(3, this.field_w, (Star) (var5_ref), (Star) (var6)));
             return;
           }
           throw new RuntimeException("TaskAI has more than one territory but can't find a star in each to link with a Tannhauser");
@@ -2462,7 +2462,7 @@ final class TaskAi implements Ai {
           }
         }
         if (var7Lifetime2 != null) {
-          vj.field_E.addLast((byte) -113, new ProjectUse(3, this.field_w, (Star) (var6Lifetime1), (Star) (var7Lifetime2)));
+          DropTargetWidget.field_E.addLast((byte) -113, new ProjectUse(3, this.field_w, (Star) (var6Lifetime1), (Star) (var7Lifetime2)));
         }
         return;
     }
@@ -2485,16 +2485,16 @@ final class TaskAi implements Ai {
             if (param0 != -82) {
               return;
             }
-            vj.field_E.addLast((byte) -113, new ProjectUse(2, this.field_w, param1));
+            DropTargetWidget.field_E.addLast((byte) -113, new ProjectUse(2, this.field_w, param1));
             DerelictMapReader.field_f = true;
             GameSession.field_u = param1;
             return;
           }
           var3 = null;
-          var4 = (ProjectUse) (vj.field_E.startForward(param0 ^ -82));
+          var4 = (ProjectUse) (DropTargetWidget.field_E.startForward(param0 ^ -82));
           while (var4 != null) {
             if (2 != var4.field_o) {
-              var4 = (ProjectUse) (vj.field_E.nextForward((byte) -71));
+              var4 = (ProjectUse) (DropTargetWidget.field_E.nextForward((byte) -71));
               continue;
             }
             var3 = var4;

@@ -28,7 +28,7 @@ final class sm {
         if (0 == var3) {
           return;
         }
-        if (null != ce.field_x ||
+        if (null != PasswordInputPainter.field_x ||
           null != SecondaryNodeHashTable.field_g) {
           sn.a(640, -46, 480, 192 + (param1 >> 1), 0, 0);
         }
@@ -50,7 +50,7 @@ final class sm {
           bs.a(bs.field_a, 107);
           SoftwareRasterizer.b(3, 3, 0, 0, var8, var10);
           bs.field_a.drawAlpha(var7, var9, 128 - param1 << 1);
-          cg.i(0);
+          OpacityWidget.popLegacyRasterState(0);
         } else {
           if (MatchingTextValidator.field_t.field_a == 1) {
             sn.a(var8, -29, var10, 128 + param1, var7, var9);
@@ -151,7 +151,7 @@ final class sm {
         if (GameRules.field_c != gr.field_o &&
           PointsVictoryChecker.a((byte) -76, GameRules.field_c) &&
           PointsVictoryChecker.a((byte) -76, gr.field_o)) {
-          var2 = wm.smoothStep(eh.field_Q, (byte) 121, 32);
+          var2 = wm.smoothStep(BirthDateConfirmationForm.field_Q, (byte) 121, 32);
           var4 = (int)((double)(80 + TutorialVictoryChecker.field_r[GameRules.field_c]) * var2);
           var5 = -(((int)(var2 * (double)(-TutorialVictoryChecker.field_r[GameRules.field_c] + TutorialVictoryChecker.field_r[gr.field_o])) + TutorialVictoryChecker.field_r[GameRules.field_c]) / 2) + 320;
           if (GameRules.field_c == this.field_a) {
@@ -183,7 +183,7 @@ final class sm {
         }
         if (gr.field_o != GameRules.field_c && PointsVictoryChecker.a((byte) -82, GameRules.field_c) &&
           PointsVictoryChecker.a((byte) -126, gr.field_o)) {
-          var2 = wm.smoothStep(eh.field_Q, (byte) 118, 32);
+          var2 = wm.smoothStep(BirthDateConfirmationForm.field_Q, (byte) 118, 32);
           var4 = (int)((-var2 + 1.0) * (double)(80 + TutorialVictoryChecker.field_r[GameRules.field_c]));
           var5 = -(((int)(var2 * (double)(TutorialVictoryChecker.field_r[gr.field_o] - TutorialVictoryChecker.field_r[GameRules.field_c])) + TutorialVictoryChecker.field_r[GameRules.field_c]) / 2) + 320;
           var5 = var5 + var4;
@@ -233,13 +233,13 @@ final class sm {
         int var19Lifetime1;
         int var14_intLifetime1;
         var21 = ShatteredPlansClient.field_F ? 1 : 0;
-        if (jn.field_b != 0) {
-          stackIn_3_0 = QuickChatCategoryRegistry.a(pr.field_g, 32, jn.field_b, DefendTask.field_w, 0);
+        if (MapGenerationException.field_b != 0) {
+          stackIn_3_0 = QuickChatCategoryRegistry.a(pr.field_g, 32, MapGenerationException.field_b, DefendTask.field_w, 0);
         } else {
           stackIn_3_0 = DefendTask.field_w;
         }
         var4 = stackIn_3_0;
-        var5 = pe.field_J.length;
+        var5 = UnderageAccountInfoPanel.field_J.length;
         if (0 > var4) {
           var4 = 0;
         }
@@ -258,7 +258,7 @@ final class sm {
           if (var9 > 0) {
             SoftwareRasterizer.drawHorizontalLine(param0 + 30, -20 + (3 + (param1 + var8)), -param0 + var6 - 80, 16777215);
             SoftwareRasterizer.drawHorizontalLine(param0 + 30, -40 + (var8 + (param1 + 3)), -80 + (-param0 + var6), 16777215);
-            rs.field_Cb.drawString(pe.field_J[var9], param0 + 50, rs.field_Cb.field_J / 2 + (3 + param1) + var8 - 30, 16777215, -1);
+            rs.field_Cb.drawString(UnderageAccountInfoPanel.field_J[var9], param0 + 50, rs.field_Cb.field_J / 2 + (3 + param1) + var8 - 30, 16777215, -1);
           }
           if (294 >= var8 &&
             var8 >= -294) {
@@ -306,7 +306,7 @@ final class sm {
           IsaacRandom.a(var13, -16 + var6, 16 + param1, 2458760, false);
           var14_intLifetime1 = -12 + Star.field_H[var11];
           if (var14_intLifetime1 > 0) {
-            var15_ref_String = pe.field_J[var11];
+            var15_ref_String = UnderageAccountInfoPanel.field_J[var11];
             var16 = rs.field_Cb.stringWidth(var15_ref_String);
             var17_int = rs.field_Cb.field_q + rs.field_Cb.field_J;
             var18 = var6 - 15;
@@ -314,7 +314,7 @@ final class sm {
             var20 = new Sprite(var17_int, var16);
             bs.a(var20, 125);
             rs.field_Cb.a(var15_ref_String, 1 + rs.field_Cb.field_J * 3 / 4, -1 + var16, 16777215, -1);
-            cg.i(0);
+            OpacityWidget.popLegacyRasterState(0);
             var20.drawAdditive(var18, var19, 256 * var14_intLifetime1 / 12);
           }
           param1 = param1 + var13;
@@ -330,13 +330,13 @@ final class sm {
         ks.a(-18166, var12Lifetime2, 2458760, 1, var6 - 16, var11Lifetime1 + 15 + param1);
         var13Lifetime1 = Star.field_H[var5 - 1] << 2;
         if (0 != var13Lifetime1) {
-          var14 = pe.field_J[var5 - 1];
+          var14 = UnderageAccountInfoPanel.field_J[var5 - 1];
           var15 = rs.field_Cb.stringWidth(var14);
           var16Lifetime1 = rs.field_Cb.field_q + rs.field_Cb.field_J;
           var17 = new Sprite(var16Lifetime1, var15);
           bs.a(var17, 82);
           rs.field_Cb.a(var14, rs.field_Cb.field_J * 3 / 4 + 1, -1 + var15, 16777215, -1);
-          cg.i(param2 ^ 7552);
+          OpacityWidget.popLegacyRasterState(param2 ^ 7552);
           var18Lifetime1 = var6 - 14;
           var19Lifetime1 = (-var15 + var11Lifetime1 >> 1) + 16 + param1;
           var17.drawAdditive(var18Lifetime1, var19Lifetime1, (int)(2.67 * (double)var13Lifetime1));
@@ -430,11 +430,11 @@ final class sm {
           }
           CandidateLink.field_t = CandidateLink.field_t + var6;
         }
-        if (jn.field_b != 0) {
-          fieldTemp$0 = jn.field_b + 1;
-          jn.field_b = jn.field_b + 1;
+        if (MapGenerationException.field_b != 0) {
+          fieldTemp$0 = MapGenerationException.field_b + 1;
+          MapGenerationException.field_b = MapGenerationException.field_b + 1;
           if (fieldTemp$0 == 32) {
-            jn.field_b = 0;
+            MapGenerationException.field_b = 0;
             pr.field_g = DefendTask.field_w;
           }
         }
@@ -637,7 +637,7 @@ final class sm {
           } else {
             SoftwareRasterizer.drawVerticalLine(var12, param3, var11_int - param3, param9);
           }
-          var13 = wk.a(-9615, param1, rs.field_Cb, new int[]{param6});
+          var13 = WidgetStateStyle.a(-9615, param1, rs.field_Cb, new int[]{param6});
           if (param7 != 62) {
             return;
           }
@@ -716,7 +716,7 @@ final class sm {
         int stackIn_8_0 = 0;
         int stackIn_8_1 = 0;
         int stackIn_9_2 = 0;
-        if (ce.field_x != null ||
+        if (PasswordInputPainter.field_x != null ||
           null != SecondaryNodeHashTable.field_g) {
           oa.a(480, 0, 640, (byte) -126, 0);
         }
@@ -775,8 +775,8 @@ final class sm {
           this.d(param0 ^ -21);
           return;
         }
-        if (ri.field_I == null) {
-          ri.field_I = GameApplet.a((byte) 85, 0, 7, 10);
+        if (LoginForm.field_I == null) {
+          LoginForm.field_I = GameApplet.a((byte) 85, 0, 7, 10);
         }
         var2 = QuickChatCategoryRegistry.a(0, 32, nb.field_a, 560, param0 ^ -23);
         var3 = 200;
@@ -793,15 +793,15 @@ final class sm {
           rs.field_Cb.drawCentred(IntrusiveDequeSequence.field_j, BattleSnapshot.field_r[2] + var4, var7, var6, -1);
           rs.field_Cb.drawCentred(ld.field_q, var4 + BattleSnapshot.field_r[3], var7, var6, -1);
           rs.field_Cb.drawCentred(hc.field_c, BattleSnapshot.field_r[4] + var4, var7, var6, -1);
-          rs.field_Cb.drawCentred(eo.field_X, BattleSnapshot.field_r[5] + var4, var7, var6, -1);
+          rs.field_Cb.drawCentred(ProgressDialog.field_X, BattleSnapshot.field_r[5] + var4, var7, var6, -1);
           var7 += 24;
-          if (!ri.field_I.field_q) {
+          if (!LoginForm.field_I.field_q) {
             var8 = IsaacBackedRandom.field_d;
           } else {
-            if (null != ri.field_I.field_n) {
+            if (null != LoginForm.field_I.field_n) {
               var8 = BattleContribution.field_q;
-              var9 = ri.field_I.field_n[SpriteButton.field_y];
-              var10 = ri.field_I.field_m[SpriteButton.field_y];
+              var9 = LoginForm.field_I.field_n[SpriteButton.field_y];
+              var10 = LoginForm.field_I.field_m[SpriteButton.field_y];
               var11 = 0;
               for (var12 = 0; var12 < 10; var12++) {
                 if (null != var9[var12]) {
@@ -817,9 +817,9 @@ final class sm {
                 var7 += 15;
               }
               if (((var11 == 0)) &&
-                (!(ri.field_I.field_h + ri.field_I.field_i + ri.field_I.field_r <= 0))) {
+                (!(LoginForm.field_I.field_h + LoginForm.field_I.field_i + LoginForm.field_I.field_r <= 0))) {
                 var6Lifetime1Lifetime1 = 2805974;
-                this.a(Star.field_o, ri.field_I.field_i, (byte) -120, ri.field_I.field_l, var4, ri.field_I.field_r, var7, -1, var6Lifetime1Lifetime1, ri.field_I.field_h);
+                this.a(Star.field_o, LoginForm.field_I.field_i, (byte) -120, LoginForm.field_I.field_l, var4, LoginForm.field_I.field_r, var7, -1, var6Lifetime1Lifetime1, LoginForm.field_I.field_h);
               }
               break regionExit1;
             }
@@ -1129,8 +1129,8 @@ final class sm {
                 var10 = 120;
                 this.a(0, gp.field_a, 5 + (param3 + 315), 8 + param0, param0 + 8, var9, var10, (byte) 62, 315 + (param3 + 5), 16711680);
                 this.a(16711680, 25 + param0, var9, 25 + param0, lr.field_f, 5, var10, param0 + 25, (byte) 110, 315 + param3 + 5);
-                this.a(16711680, 78 + (5 + param0), var9, 69 + param0, lh.field_u, 0, var10, 78 + param0 + 5, (byte) 110, param3 + 205);
-                this.a(16711680, 95 + (5 + param0), var9, 5 + param0 + 110, eo.field_kb, 0, var10, param0 + 115, (byte) 110, 5 + (param3 + 195));
+                this.a(16711680, 78 + (5 + param0), var9, 69 + param0, VerticalMenuSlider.field_u, 0, var10, 78 + param0 + 5, (byte) 110, param3 + 205);
+                this.a(16711680, 95 + (5 + param0), var9, 5 + param0 + 110, ProgressDialog.field_kb, 0, var10, param0 + 115, (byte) 110, 5 + (param3 + 195));
                 this.a(16711680, param0 + 5 + 120, var9, param0 + 5 + 160, StarLink.field_h, 5, var10, 5 + (param0 + 200), (byte) 110, 5 + param3 + 86);
                 return;
               }
@@ -1142,7 +1142,7 @@ final class sm {
                 var10Lifetime1 = 220;
                 var11 = 16711680;
                 NodeSequence.field_d.drawOpaque(param3 + 5, param0 + 5);
-                this.a(var11, param0 + 5, var9Lifetime1, 5 + param0 + 14, md.field_K, 5, var10Lifetime1, 32 + param0 + 5, (byte) 110, 250 + param3);
+                this.a(var11, param0 + 5, var9Lifetime1, 5 + param0 + 14, StripedProgressWidget.field_K, 5, var10Lifetime1, 32 + param0 + 5, (byte) 110, 250 + param3);
                 this.a(-5, nn.field_a, 139 + (5 + param3), 40 + param0 + 5, param0 + 85, var9Lifetime1, var10Lifetime1, (byte) 62, 5 + param3 + 139, var11);
                 this.a(var11, 5 + (param0 + 130), var9Lifetime1, 70 + param0 + 5, ProxySocketConnector.field_i, 5, var10Lifetime1, 100 + (5 + param0), (byte) 110, 188 + (5 + param3));
                 this.a(var11, param0 + 130, var9Lifetime1, 95 + param0, kj.field_e, 10, var10Lifetime1, 5 + (param0 + 260), (byte) 110, param3 + 235);
@@ -1158,7 +1158,7 @@ final class sm {
                 param0 += 40;
                 SoftwareRasterizer.addRadialGlowQ4(16 * var12 + ProductionContent.field_c[0], ul.field_Db[0] + 16 * param0, 50, 7, MusicCrossfadeStream.field_s);
                 SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[1] + 16 * var12, 16 * param0 + ul.field_Db[1], 50, 7, MusicCrossfadeStream.field_s);
-                rs.field_Cb.drawString(pg.field_F, var12 + 22, rs.field_Cb.field_J / 4 + param0, 16777215, -1);
+                rs.field_Cb.drawString(LabeledChildWidget.field_F, var12 + 22, rs.field_Cb.field_J / 4 + param0, 16777215, -1);
                 param0 += 40;
                 SoftwareRasterizer.addRadialGlowQ4(16 * var12 + ProductionContent.field_c[0], param0 * 16 + ul.field_Db[0], 50, 7, MusicCrossfadeStream.field_s);
                 SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[2] + var12 * 16, ul.field_Db[2] + 16 * param0, 50, 7, MusicCrossfadeStream.field_s);
@@ -1179,16 +1179,16 @@ final class sm {
               if (param2 == 5) {
                 var9_ref_bi = new Sprite(80, 80);
                 bs.a(var9_ref_bi, 90);
-                bd.field_G.drawRotated(40, 40, RasterStateFrame.field_n % 25 * 200, 16384);
-                cg.i(0);
+                AlignedMenuLabel.field_G.drawRotated(40, 40, RasterStateFrame.field_n % 25 * 200, 16384);
+                OpacityWidget.popLegacyRasterState(0);
                 var9_ref_bi.drawHalfSize(param3 + 15, 8 + param0);
                 var42 = WhirlpoolHasher.field_n;
                 var10Lifetime2 = rs.field_Cb.a(wg.field_e.a(5607, var42), param3 + 80, param0, -80 + var6, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + ((3 + var10Lifetime2 * 4) * var8 >> 2);
                 var11Lifetime1 = RasterStateFrame.field_n % 200;
-                eo.a(false, 68 + param0, param0 + 40, (byte) -51, var11Lifetime1, 55 + param3, param3);
+                ProgressDialog.a(false, 68 + param0, param0 + 40, (byte) -51, var11Lifetime1, 55 + param3, param3);
                 this.a(param0 + 40, var11Lifetime1, param3 + 55, false, 92, param3, param0 + 68, 0, false);
-                var43 = ri.field_N;
+                var43 = LoginForm.field_N;
                 var10Lifetime2Lifetime1 = rs.field_Cb.a(wg.field_e.a(5607, var43), param3 + 80, param0, var6 - 80, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + ((4 * var10Lifetime2Lifetime1 + 3) * var8 >> 2);
                 kj.field_f[RasterStateFrame.field_n % kj.field_f.length].draw(5 + param3, 42 + param0);
@@ -1259,7 +1259,7 @@ final class sm {
                   var17_int = (-var15 + var16_int * 8192) / 6;
                   var18_int = (20 * je.sine(var17_int, (byte) -104) >> 12) + (param3 + 35 << 4);
                   var19 = (20 * IntrusiveNode.cosine(var17_int, -122) >> 12) + (40 + param0 << 4);
-                  SoftwareRasterizer.addRadialGlowQ4(var18_int, var19, 64, 255, vj.field_F);
+                  SoftwareRasterizer.addRadialGlowQ4(var18_int, var19, 64, 255, DropTargetWidget.field_F);
                 }
                 for (var16_intLifetime1 = 0; var16_intLifetime1 < 10; var16_intLifetime1++) {
                   SoftwareRasterizer.drawHorizontalLine(-(var16_intLifetime1 >> 1) + (param3 + 36), var16_intLifetime1 + param0 + 30, -2 & var16_intLifetime1, 16777215);
@@ -1298,7 +1298,7 @@ final class sm {
                       var10_ref_om.draw(var20, 0);
                       var20 += 5;
                     }
-                    cg.i(0);
+                    OpacityWidget.popLegacyRasterState(0);
                     var34.drawAdditive(param3 + 7, param0 + 15, var17_intLifetime2);
                     var34.drawAdditive(param3 + 7, 15 + param0, var18_intLifetime1);
                   } else {
@@ -1313,7 +1313,7 @@ final class sm {
                         var21++;
                         var20 += 5;
                       }
-                      cg.i(0);
+                      OpacityWidget.popLegacyRasterState(0);
                       var35.drawAdditive(param3 + 3, 15 + param0, var17_intLifetime2);
                       var35.drawAdditive(param3 + 3, param0 + 15, var18_intLifetime1);
                     }
@@ -1351,7 +1351,7 @@ final class sm {
               }
               if (param2 == 7) {
                 var9Lifetime2 = RasterStateFrame.field_n % 200;
-                var10Lifetime3 = rs.field_Cb.a(wg.field_e.a(5607, jl.field_N), param3, param0, var6, var7, 16777215, -1, 3, 0, var8);
+                var10Lifetime3 = rs.field_Cb.a(wg.field_e.a(5607, ResizingDialog.field_N), param3, param0, var6, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + ((2 * var10Lifetime3 + 3) * var8 >> 1);
                 var11Lifetime3 = param0;
                 var12Lifetime2 = param3 + 125;
@@ -1369,7 +1369,7 @@ final class sm {
                 var21Lifetime1 = var8 + var8 * var10Lifetime3Lifetime2;
                 rs.field_Cb.a(var17, var12Lifetime2, var11Lifetime3, var14, var21Lifetime1, 16777215, -1, 0, 1, var8);
                 rs.field_Cb.a(var18, var13Lifetime2, var11Lifetime3, var15, var21Lifetime1, 16777215, -1, 0, 1, var8);
-                eo.a(false, param0 + 25, 25 + param0, (byte) 120, var9Lifetime2, param3 + 100, param3);
+                ProgressDialog.a(false, param0 + 25, 25 + param0, (byte) 120, var9Lifetime2, param3 + 100, param3);
                 this.a(param0 + 25, var9Lifetime2, param3 + 100, false, 92, param3, 25 + param0, 8, true);
                 var22Lifetime1 = (50 + RasterStateFrame.field_n) % 800 / 200;
                 this.a(param3 + 295, 16, var22Lifetime1, (var21Lifetime1 >> 1) + var11Lifetime3, (byte) -70, (RasterStateFrame.field_n + 50) % 200);
@@ -1383,7 +1383,7 @@ final class sm {
                 var21Lifetime1Lifetime1 = var8 * var10Lifetime3Lifetime3 + var8;
                 rs.field_Cb.a(var17Lifetime1, var12Lifetime2, var11Lifetime3, var14, var21Lifetime1Lifetime1, 16777215, -1, 0, 1, var8);
                 rs.field_Cb.a(var18Lifetime1, var13Lifetime2, var11Lifetime3, var15, var21Lifetime1Lifetime1, 16777215, -1, 0, 1, var8);
-                eo.a(false, 90 + param0, 90 + param0, (byte) 73, var9Lifetime2, param3 + 10, param3 + 110);
+                ProgressDialog.a(false, 90 + param0, 90 + param0, (byte) 73, var9Lifetime2, param3 + 10, param3 + 110);
                 this.a(90 + param0, var9Lifetime2, param3 + 10, true, 92, 110 + param3, 90 + param0, 4, true);
                 this.a(param3 + 295, 16, -1, var11Lifetime3 + (var21Lifetime1Lifetime1 >> 1), (byte) -21, (100 + RasterStateFrame.field_n) % 200);
                 var11Lifetime3 = var11Lifetime3 + (var8 + var21Lifetime1Lifetime1);
@@ -1505,13 +1505,13 @@ final class sm {
         if (param2 != -1) {
           GarrisonTask.field_p[param2].drawScaled(-param1 + param0, var8 + param3 - param1, 2 * param1, 2 * param1);
         } else {
-          bd.field_G.a(15, var8 + param3, 8192 * param1 / bd.field_G.field_z, param0, 200 * (RasterStateFrame.field_n % 25));
+          AlignedMenuLabel.field_G.a(15, var8 + param3, 8192 * param1 / AlignedMenuLabel.field_G.field_z, param0, 200 * (RasterStateFrame.field_n % 25));
         }
     }
 
     final void g(byte param0) {
         if (this.field_a == 5) {
-          ri.field_I = null;
+          LoginForm.field_I = null;
         }
         if (param0 <= 52) {
           sm.clearStatics(1);
@@ -1595,7 +1595,7 @@ final class sm {
         int var2;
         int var3;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
-        if (!md.field_Q &&
+        if (!StripedProgressWidget.field_Q &&
           !is.field_a) {
           while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(55)) {
             if (oq.field_j != 13) {
@@ -1690,7 +1690,7 @@ final class sm {
           GameRules.field_c != gr.field_o) {
           var2 = TutorialVictoryChecker.field_p[GameRules.field_c].length * TutorialVictoryChecker.field_l[GameRules.field_c] + (TutorialVictoryChecker.field_t[GameRules.field_c] + 10);
           var3 = TutorialVictoryChecker.field_t[gr.field_o] + TutorialVictoryChecker.field_l[gr.field_o] * TutorialVictoryChecker.field_p[gr.field_o].length + 10;
-          return QuickChatCategoryRegistry.a(var2, 32, eh.field_Q, var3, 0);
+          return QuickChatCategoryRegistry.a(var2, 32, BirthDateConfirmationForm.field_Q, var3, 0);
         }
         if (param0 != -98) {
           this.field_h = -2;
@@ -1702,7 +1702,7 @@ final class sm {
         int var3 = 0;
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
         WidgetTheme.field_s = param1;
-        pr.field_g = 0 != jn.field_b ? QuickChatCategoryRegistry.a(pr.field_g, 32, jn.field_b, DefendTask.field_w, 0) : DefendTask.field_w;
+        pr.field_g = 0 != MapGenerationException.field_b ? QuickChatCategoryRegistry.a(pr.field_g, 32, MapGenerationException.field_b, DefendTask.field_w, 0) : DefendTask.field_w;
         DefendTask.field_w = 0;
         if (param0 != 4) {
           this.a((String) null, -102, (byte) 82, -77, 35, 32, 13, -31, 45, 70);
@@ -1710,7 +1710,7 @@ final class sm {
         for (var3 = 0; var3 < param1; var3++) {
           DefendTask.field_w = DefendTask.field_w + DirectByteArrayStorage.field_i[var3];
         }
-        jn.field_b = 1;
+        MapGenerationException.field_b = 1;
     }
 
     public static void clearStatics(int param0) {
@@ -1721,7 +1721,7 @@ final class sm {
     }
 
     final void g(int param0) {
-        if (null != ce.field_x ||
+        if (null != PasswordInputPainter.field_x ||
           SecondaryNodeHashTable.field_g != null) {
           oa.a(480, 0, 640, (byte) -116, 0);
         }
@@ -1848,7 +1848,7 @@ final class sm {
                 SingleChildWidget.d(!param2);
               }
               if (this.field_d.f(-77)) {
-                jn.a(11615);
+                MapGenerationException.a(11615);
               }
             }
           }
@@ -1950,7 +1950,7 @@ final class sm {
               var10_ref_bi = new Sprite(48, 48);
               bs.a(var10_ref_bi, 112);
               var30.c(0, 0, 48, 48);
-              cg.i(0);
+              OpacityWidget.popLegacyRasterState(0);
               var8Lifetime2.drawScaledAdditive(var4 - 32, var3 - 32, 96, 96, var7_int << 1);
               var10_ref_bi.drawAdditive(var4 - 8, -8 + var3, 256);
             } else {
@@ -1986,8 +1986,8 @@ final class sm {
         if (DisplayModeInfo.field_h == null) {
           DisplayModeInfo.field_h = new Sprite(256, 256);
         }
-        if (il.field_gb == null) {
-          il.field_gb = new Sprite(256, 256);
+        if (ContentDialog.field_gb == null) {
+          ContentDialog.field_gb = new Sprite(256, 256);
         }
         if (an.field_c == -1) {
           stackIn_42_0 = RasterBuffer.field_e;
@@ -2012,9 +2012,9 @@ final class sm {
         DisplayModeInfo.field_h.bindAsRenderTarget();
         SoftwareRasterizer.clear();
         var7.drawScaled(0, 0, 256, 256);
-        il.field_gb.bindAsRenderTarget();
+        ContentDialog.field_gb.bindAsRenderTarget();
         var8Lifetime1.drawOpaque(0, 0);
-        cg.i(0);
+        OpacityWidget.popLegacyRasterState(0);
         var9 = 64 + (int)(64.0 * Math.cos(3.141592653589793 * (double)(RasterStateFrame.field_n * 2) / 150.0));
         var10 = QuickChatCategoryRegistry.a(0, 32, ByteArrayStorage.field_b, 600, 0);
         var11 = 155;
@@ -2030,7 +2030,7 @@ final class sm {
         var17 = 113 / ((87 - param0) / 34);
         SoftwareRasterizer.fillRoundedRectAlpha(-(var16 >> 5) - (var16 >> 1) + var14, var15 + 6, var16 + (var16 >> 4), 136, 10, 0, 128);
         SoftwareRasterizer.drawRoundedRect(-(var16 >> 1) + (var14 - (var16 >> 5)), 6 + var15, (var16 >> 4) + var16, 136, 10, SolVictoryChecker.blendColours(3974311, 0, -95, 128));
-        il.field_gb.drawScaledAdditive(-var16 + var14, -54 + var15, var16 << 1, 256, var9);
+        ContentDialog.field_gb.drawScaledAdditive(-var16 + var14, -54 + var15, var16 << 1, 256, var9);
         DisplayModeInfo.field_h.drawScaledAdditive(var14 - (var16 >> 1), 10 + var15, var16, 128, 256);
         var18 = 350;
         var2Lifetime1 = 24 + this.b(false) + (this.c(32) + 16) - var18;
@@ -2115,8 +2115,8 @@ final class sm {
         boolean stackIn_4_0 = false;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         if (oq.field_j == 1) {
-          stackIn_4_0 = !(mm.field_n);
-          mm.field_n = stackIn_4_0;
+          stackIn_4_0 = !(EmailSyntaxValidator.field_n);
+          EmailSyntaxValidator.field_n = stackIn_4_0;
         }
         var2 = 85 / ((-27 - param0) / 45);
         if (2 == oq.field_j) {
@@ -2240,7 +2240,7 @@ final class sm {
     sm(int param0) {
         this.field_a = param0;
         this.field_d = new np(TutorialVictoryChecker.field_p[this.field_a].length);
-        Star.field_H = new int[pe.field_J.length];
+        Star.field_H = new int[UnderageAccountInfoPanel.field_J.length];
         this.a(0, (byte) 28, false);
     }
 
@@ -2326,25 +2326,25 @@ final class sm {
                                     }
                                     if (var5 == 10) {
                                       this.field_g = param0;
-                                      ce.field_x.a(false, param1);
-                                      lg.field_b = true;
+                                      PasswordInputPainter.field_x.a(false, param1);
+                                      ProxyAuthenticationRequiredException.field_b = true;
                                       Wormhole.field_i = false;
                                     } else {
                                       if (11 == var5) {
                                         this.field_g = param0;
-                                        ce.field_x.c(false);
+                                        PasswordInputPainter.field_x.c(false);
                                         var5 = param1 ? 1 : 0;
                                         ta.a(0, -1, (byte) 96, var5 != 0);
                                       } else {
                                         if (var5 == 12) {
                                           this.field_g = param0;
-                                          ce.field_x.d(-7970);
+                                          PasswordInputPainter.field_x.d(-7970);
                                           var5 = param1 ? 1 : 0;
                                           ta.a(0, -1, (byte) 96, var5 != 0);
                                         } else {
                                           if (13 == var5) {
                                             this.field_g = param0;
-                                            ce.field_x.sendReady(-123);
+                                            PasswordInputPainter.field_x.sendReady(-123);
                                             var5 = param1 ? 1 : 0;
                                             ta.a(0, -1, (byte) 96, var5 != 0);
                                           } else {
@@ -2404,7 +2404,7 @@ final class sm {
                                                               default:
                                                                 break regionExit1;
                                                               case 3:
-                                                                oq.field_i[28] = cf.field_I;
+                                                                oq.field_i[28] = StatusMessagePanel.field_I;
                                                                 break regionExit1;
                                                             }
                                                           }
@@ -2420,13 +2420,13 @@ final class sm {
                                                           }
                                                           if (32 == var5) {
                                                             if (oq.field_i[32] == MidiPcmStream.field_L) {
-                                                              hk.field_nb = js.field_i;
+                                                              PaddedContentDialog.field_nb = js.field_i;
                                                               oq.field_i[32] = RecklessAi.field_r;
-                                                              QuickChatPhraseRegistry.a(32767, hk.field_nb, true, 50);
+                                                              QuickChatPhraseRegistry.a(32767, PaddedContentDialog.field_nb, true, 50);
                                                             } else {
                                                               oq.field_i[32] = MidiPcmStream.field_L;
-                                                              hk.field_nb = wp.field_a;
-                                                              QuickChatPhraseRegistry.a(32767, hk.field_nb, true, 50);
+                                                              PaddedContentDialog.field_nb = wp.field_a;
+                                                              QuickChatPhraseRegistry.a(32767, PaddedContentDialog.field_nb, true, 50);
                                                             }
                                                           }
                                                         }
@@ -2513,7 +2513,7 @@ final class sm {
         if (gr.field_o != GameRules.field_c &&
           PointsVictoryChecker.a((byte) -119, GameRules.field_c) &&
           PointsVictoryChecker.a((byte) -88, gr.field_o)) {
-          return QuickChatCategoryRegistry.a(TutorialVictoryChecker.field_m[GameRules.field_c], 32, eh.field_Q, TutorialVictoryChecker.field_m[gr.field_o], 0);
+          return QuickChatCategoryRegistry.a(TutorialVictoryChecker.field_m[GameRules.field_c], 32, BirthDateConfirmationForm.field_Q, TutorialVictoryChecker.field_m[gr.field_o], 0);
         }
         return TutorialVictoryChecker.field_m[this.field_a];
     }
@@ -2561,8 +2561,8 @@ final class sm {
           }
         }
         if (param1 == 10 &&
-          null != ce.field_x &&
-          ce.field_x.field_W) {
+          null != PasswordInputPainter.field_x &&
+          PasswordInputPainter.field_x.field_W) {
           var3Lifetime2 = SectorCacheStore.field_g;
         }
         if (param0 != -22609) {
@@ -2662,7 +2662,7 @@ final class sm {
           if (param8 != 110) {
             return;
           }
-          var13Lifetime1 = wk.a(-9615, param4, rs.field_Cb, new int[]{param6});
+          var13Lifetime1 = WidgetStateStyle.a(-9615, param4, rs.field_Cb, new int[]{param6});
           param1 = -(var13Lifetime1 * rs.field_Cb.field_J >> 1) + param3;
           rs.field_Cb.a(param4, param2 + 5, param1, param6, var13Lifetime1 * rs.field_Cb.field_J + rs.field_Cb.field_q, param0, -1, 0, 0, rs.field_Cb.field_J);
           return;
@@ -2818,9 +2818,9 @@ final class sm {
         }
         if (PointsVictoryChecker.a((byte) -103, GameRules.field_c) &&
           PointsVictoryChecker.a((byte) -125, gr.field_o)) {
-          return QuickChatCategoryRegistry.a(TutorialVictoryChecker.field_r[GameRules.field_c], 32, eh.field_Q, TutorialVictoryChecker.field_r[gr.field_o], 0);
+          return QuickChatCategoryRegistry.a(TutorialVictoryChecker.field_r[GameRules.field_c], 32, BirthDateConfirmationForm.field_Q, TutorialVictoryChecker.field_r[gr.field_o], 0);
         }
-        double var2 = wm.smoothStep(eh.field_Q, (byte) 109, param0);
+        double var2 = wm.smoothStep(BirthDateConfirmationForm.field_Q, (byte) 109, param0);
         if (this.field_a == GameRules.field_c) {
           var2 = -var2 + 1.0;
         }

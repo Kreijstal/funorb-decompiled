@@ -20,17 +20,17 @@ abstract class IndexedSpriteState {
           BufferedSocket.field_i = id.a(2, param1, "basic", "display_name_changed");
           d.field_a = new am(0L, ih.field_g, ld.field_k, SocketArchiveNetworkClient.field_u);
           wg.field_a = new am(0L, ih.field_g, QuaternaryListSequence.field_f, TutorialVictoryChecker.field_o);
-          cg.field_A = new AnimatedPanel(0L, (AnimatedPanel) null);
+          OpacityWidget.field_A = new AnimatedPanel(0L, (AnimatedPanel) null);
           RecklessAi.field_p = new AnimatedPanel(0L, SpriteState.field_u);
           RecklessAi.field_p.field_y = 1;
           BattleSnapshot.field_t = new AnimatedPanel(0L, SliderWidget.field_N, gd.field_c);
           FleetMove.field_F = new AnimatedPanel(0L, QuickChatMenu.field_Cb, GalaxyMap.field_i);
-          kh.field_Ib = new AnimatedPanel(0L, gn.field_w);
-          cg.field_A.addChild(4, RecklessAi.field_p);
-          cg.field_A.addChild(4, BattleSnapshot.field_t);
-          cg.field_A.addChild(4, FleetMove.field_F);
-          cg.field_A.addChild(param0 ^ 27774, d.field_a);
-          cg.field_A.addChild(4, kh.field_Ib);
+          kh.field_Ib = new AnimatedPanel(0L, StatefulWidgetTheme.field_w);
+          OpacityWidget.field_A.addChild(4, RecklessAi.field_p);
+          OpacityWidget.field_A.addChild(4, BattleSnapshot.field_t);
+          OpacityWidget.field_A.addChild(4, FleetMove.field_F);
+          OpacityWidget.field_A.addChild(param0 ^ 27774, d.field_a);
+          OpacityWidget.field_A.addChild(4, kh.field_Ib);
           if (param0 != 27770) {
             field_h = (dg) null;
           }
@@ -51,7 +51,7 @@ abstract class IndexedSpriteState {
     final static void a(int param0) {
         int var1 = MouseInputHandler.field_f * MouseInputHandler.field_f;
         int var3 = 30 / ((param0 - 69) / 54);
-        int var2 = var1 - pg.field_J * pg.field_J;
+        int var2 = var1 - LabeledChildWidget.field_J * LabeledChildWidget.field_J;
         int var4 = NodeHashTableIterator.field_f + var2 * (-NodeHashTableIterator.field_f + DerelictMapGenerator.field_m) / var1;
         tg.field_c.setTarget(640, 120, (byte) 121, var4, tm.field_h);
         SocketArchiveNetworkClient.a(-24 + DerelictMapGenerator.field_m, 0, tg.field_a, 3, 640, 5, TextLayout.field_b);

@@ -97,7 +97,7 @@ final class ta {
     }
 
     final static IndexedSprite c(byte param0) {
-        IndexedSprite var1 = new IndexedSprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], IntHashIndex.field_g[0], hd.field_q[0], eo.field_fb);
+        IndexedSprite var1 = new IndexedSprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, StatusMessagePanel.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], IntHashIndex.field_g[0], hd.field_q[0], ProgressDialog.field_fb);
         TertiaryListSequence.a(0);
         if (param0 > 82) {
           return var1;
@@ -185,7 +185,7 @@ final class ta {
             }
             mj.field_Hb[gr.field_o].a(var4, (byte) 27, param3);
           }
-          eh.field_Q = 0;
+          BirthDateConfirmationForm.field_Q = 0;
           if (param2 != 96) {
             ta.b((byte) 9);
             return;
@@ -199,7 +199,7 @@ final class ta {
           }
           mj.field_Hb[gr.field_o].a(var4Lifetime1, (byte) 27, param3);
         }
-        eh.field_Q = 0;
+        BirthDateConfirmationForm.field_Q = 0;
         if (param2 == 96) {
           return;
         }

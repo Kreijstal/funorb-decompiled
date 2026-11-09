@@ -329,19 +329,19 @@ final class QuaternaryListSequence extends NodeSequence {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        eo.field_cb.position = 0;
-        eo.field_cb.writeByte(12, (byte) -128);
-        eo.field_cb.writeInt(11135, Bzip2State.field_u.nextInt());
-        eo.field_cb.writeInt(11135, Bzip2State.field_u.nextInt());
-        eo.field_cb.writeByte(param3, (byte) -85);
-        eo.field_cb.writeByte(param1, (byte) -123);
-        eo.field_cb.writeShort(param0, 255);
-        eo.field_cb.rsaEncrypt(jl.field_V, hr.field_a, (byte) -56);
+        ProgressDialog.field_cb.position = 0;
+        ProgressDialog.field_cb.writeByte(12, (byte) -128);
+        ProgressDialog.field_cb.writeInt(11135, Bzip2State.field_u.nextInt());
+        ProgressDialog.field_cb.writeInt(11135, Bzip2State.field_u.nextInt());
+        ProgressDialog.field_cb.writeByte(param3, (byte) -85);
+        ProgressDialog.field_cb.writeByte(param1, (byte) -123);
+        ProgressDialog.field_cb.writeShort(param0, 255);
+        ProgressDialog.field_cb.rsaEncrypt(ResizingDialog.field_V, hr.field_a, (byte) -56);
         js.field_f.h(18, param2 + 251);
         int fieldTemp$0 = js.field_f.position + 1;
         js.field_f.position = js.field_f.position + 1;
         int var4 = fieldTemp$0;
-        js.field_f.writeBytes(0, eo.field_cb.position, eo.field_cb.payload, 22186);
+        js.field_f.writeBytes(0, ProgressDialog.field_cb.position, ProgressDialog.field_cb.payload, 22186);
         if (param2 != 4) {
           return;
         }

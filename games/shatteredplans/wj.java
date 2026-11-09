@@ -46,15 +46,15 @@ final class wj extends IntrusiveNode {
             if (5 < jb.field_b &&
               25 < var2_int &&
               wl.field_f != null) {
-              lh.field_w = wl.field_f.field_k - am.field_Gb;
+              VerticalMenuSlider.field_w = wl.field_f.field_k - am.field_Gb;
               rs.field_Db = wl.field_f;
-              ir.field_D = wl.field_f.field_t - DialogRoot.field_C;
+              DisplayNameForm.field_D = wl.field_f.field_t - DialogRoot.field_C;
             }
             return false;
           }
           if ((rs.field_Db == null ||
             !(jb.field_b >= 5)) &&
-            rr.a(wl.field_f, param0, (byte) 64)) {
+            TextInputPainter.a(wl.field_f, param0, (byte) 64)) {
             DualLinkDequeSequence.field_h = wl.field_f;
             if (null != DualLinkDequeSequence.field_h) {
               DualLinkDequeSequence.field_h.a(bb.field_b - DualLinkDequeSequence.field_h.field_t, 0, -DualLinkDequeSequence.field_h.field_k + TertiaryListSequence.field_k);
@@ -128,7 +128,7 @@ final class wj extends IntrusiveNode {
           var1_intLifetime1 = -5;
           var2Lifetime1 = -80 + 100 * FleetTrailPoint.field_m / 1000;
           so.a(0, 0, var2Lifetime1 - var4 + DefendTask.field_s.field_x, DefensiveAi.field_r);
-          cg.i(0);
+          OpacityWidget.popLegacyRasterState(0);
           var6 = 256;
           if (512 > FleetTrailPoint.field_m) {
             var6 = FleetTrailPoint.field_m >> 1;

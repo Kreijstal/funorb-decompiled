@@ -123,7 +123,7 @@ final class uc extends MenuComponent {
             stackIn_2_0 = null;
             return (BinaryBitmapFont) (stackIn_2_0);
           }
-          var2 = new BinaryBitmapFont(param0, cf.field_H, sj.field_a, WeightedCacheEntry.field_s, IntHashIndex.field_g, hd.field_q);
+          var2 = new BinaryBitmapFont(param0, StatusMessagePanel.field_H, sj.field_a, WeightedCacheEntry.field_s, IntHashIndex.field_g, hd.field_q);
           TertiaryListSequence.a(param1 ^ param1);
           stackIn_4_0 = var2;
           return stackIn_4_0;
@@ -164,25 +164,25 @@ final class uc extends MenuComponent {
     }
 
     final static boolean d(byte param0) {
-        if (-1 == rr.field_t) {
+        if (-1 == TextInputPainter.field_t) {
           if (!StarAnnotation.a(-57, 1)) {
             return false;
           }
-          rr.field_t = sa.field_a.readUnsignedByte(-54);
+          TextInputPainter.field_t = sa.field_a.readUnsignedByte(-54);
           sa.field_a.position = 0;
         }
-        if (-2 == rr.field_t) {
+        if (-2 == TextInputPainter.field_t) {
           if (!StarAnnotation.a(118, 2)) {
             return false;
           }
-          rr.field_t = sa.field_a.readUnsignedShort(-20976);
+          TextInputPainter.field_t = sa.field_a.readUnsignedShort(-20976);
           sa.field_a.position = 0;
         }
         if (param0 > -25) {
           BitmapFont var2 = (BitmapFont) null;
           uc.a(-68, -91, -81, 82, -51, (String) null, true, (Sprite[]) null, (byte) -67, 2, (Sprite[]) null, (BitmapFont) null, true, 22, -30);
         }
-        return StarAnnotation.a(-78, rr.field_t);
+        return StarAnnotation.a(-78, TextInputPainter.field_t);
     }
 
     uc(int param0, int param1, int param2, int param3, int param4, int param5) {

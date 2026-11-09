@@ -25,7 +25,7 @@ final class QuickChatCategoryRegistry {
           return;
         }
         try {
-          wk.attachMouseListeners((byte) -58, (java.awt.Component) ((Object) param0));
+          WidgetStateStyle.attachMouseListeners((byte) -58, (java.awt.Component) ((Object) param0));
           if (aj.field_b != null) {
             aj.field_b.attachTo((java.awt.Component) ((Object) param0), !param1 ? true : false);
           }
@@ -179,7 +179,7 @@ final class QuickChatCategoryRegistry {
         field_h = null;
     }
 
-    QuickChatCategoryRegistry(int param0, Archive param1, Archive param2, wr param3) {
+    QuickChatCategoryRegistry(int param0, Archive param1, Archive param2, RoundedFrameMarker param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

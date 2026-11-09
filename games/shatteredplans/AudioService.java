@@ -84,11 +84,11 @@ final class AudioService implements Runnable {
           StringBuilder stackIn_14_1 = null;
           String stackIn_15_2 = null;
           Throwable decompiledCaughtException = null;
-          jn var6_ref = null;
+          MapGenerationException var6_ref = null;
           try {
             var5 = new GameState(param2, param0, -1, param1);
             try {
-              if (false) throw (jn) null;
+              if (false) throw (MapGenerationException) null;
               var6 = new TutorialMapGenerator();
               var5.field_g = var6.generate((byte) -116);
               if (param3 != -22379) {
@@ -100,9 +100,9 @@ final class AudioService implements Runnable {
               var5.recomputePlayerTotals(-124);
               stackIn_8_0 = var5;
               return stackIn_8_0;
-            } catch (jn decompiledCaughtParameter0) {
+            } catch (MapGenerationException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var6_ref = (jn) (Object) decompiledCaughtException;
+              var6_ref = (MapGenerationException) (Object) decompiledCaughtException;
               throw new RuntimeException();
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

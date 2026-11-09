@@ -72,7 +72,7 @@ final class ik extends IntrusiveNode {
         if (param0 > -87) {
           return (mj) null;
         }
-        return (mj) (qp.field_w.get(65280, param1));
+        return (mj) (SpriteStripButtonPainter.field_w.get(65280, param1));
     }
 
     final static int a(int param0) {

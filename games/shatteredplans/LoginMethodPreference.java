@@ -20,7 +20,7 @@ final class LoginMethodPreference {
 
     final void saveBrowserPreference(java.applet.Applet param0, boolean param1) {
         try {
-          lg.a(31536000L, param0, 52, "jagex-last-login-method", this.value);
+          ProxyAuthenticationRequiredException.a(31536000L, param0, 52, "jagex-last-login-method", this.value);
           if (!param1) {
             this.value = (String) null;
           }
@@ -93,7 +93,7 @@ final class LoginMethodPreference {
         IntrusiveDeque.field_d.bindAsRenderTarget();
         SoftwareRasterizer.drawHorizontalLine(0, 0, IntrusiveDeque.field_d.field_z, 10790052);
         SoftwareRasterizer.drawHorizontalLine(0, 1, IntrusiveDeque.field_d.field_z, 16777215);
-        cg.i(0);
+        OpacityWidget.popLegacyRasterState(0);
         if (param0 == -2612) {
           return;
         }

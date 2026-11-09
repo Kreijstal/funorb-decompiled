@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-abstract class ArrayWidgetGroup extends UiWidget implements ni {
+abstract class ArrayWidgetGroup extends UiWidget implements CompositeWidgetMarker {
     static String field_H;
     static String field_y;
     static Sprite field_z;
@@ -260,7 +260,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ni {
         if (param4 != -92) {
           field_E = (AnimatedPanel) null;
         }
-        return pg.a(param2, 1, 1, (byte) -41, param3, param0, 3, 1, param1);
+        return LabeledChildWidget.a(param2, 1, 1, (byte) -41, param3, param0, 3, 1, param1);
     }
 
     final static boolean rectContains(int param0, int param1, int param2, byte param3, int param4, int param5, int param6) {

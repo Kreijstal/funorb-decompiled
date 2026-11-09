@@ -64,7 +64,7 @@ final class GzipInflater {
             }
             var6 = FleetTrailPoint.a(var4_ref_String, 124);
             var7 = var1.readString(-1);
-            var8 = ji.a((CharSequence) ((Object) var4_ref_String), true);
+            var8 = DateInputWidget.a((CharSequence) ((Object) var4_ref_String), true);
             if (var8 == null) {
               var8 = var4_ref_String;
             }
@@ -129,12 +129,12 @@ final class GzipInflater {
           if (var6Lifetime1 == null) {
             var6Lifetime1 = NodeSequence.a((byte) -90, var5Lifetime1);
             if (null != var6Lifetime1) {
-              BattleEvent.field_q.put((long)ji.a((CharSequence) ((Object) var4_ref_StringLifetime1), param0).hashCode(), var6Lifetime1, true);
+              BattleEvent.field_q.put((long)DateInputWidget.a((CharSequence) ((Object) var4_ref_StringLifetime1), param0).hashCode(), var6Lifetime1, true);
             }
           }
           if (null == var6Lifetime1) {
             var6Lifetime1 = new ve();
-            BattleEvent.field_q.put((long)ji.a((CharSequence) ((Object) var4_ref_StringLifetime1), true).hashCode(), var6Lifetime1, true);
+            BattleEvent.field_q.put((long)DateInputWidget.a((CharSequence) ((Object) var4_ref_StringLifetime1), true).hashCode(), var6Lifetime1, true);
             fieldTemp$1 = UrlLoader.field_c;
             UrlLoader.field_c = UrlLoader.field_c + 1;
             var6Lifetime1.field_zb = fieldTemp$1;

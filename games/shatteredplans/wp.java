@@ -9,14 +9,14 @@ final class wp {
     final static void a(int param0) {
         int var2;
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
-        if (ce.field_x.field_M) {
-          if ((1 << ce.field_x.field_h & ce.field_x.field_P.field_e) != 0) {
+        if (PasswordInputPainter.field_x.field_M) {
+          if ((1 << PasswordInputPainter.field_x.field_h & PasswordInputPainter.field_x.field_P.field_e) != 0) {
             oq.field_i[13] = ReflectionCheck.field_i;
           } else {
-            if (ce.field_x.field_P.field_e != 0) {
+            if (PasswordInputPainter.field_x.field_P.field_e != 0) {
               oq.field_i[13] = MusicVoice.field_s;
             } else {
-              if ((1 << ce.field_x.field_P.field_r) - 1 != (1 << ce.field_x.field_h | ce.field_x.field_i)) {
+              if ((1 << PasswordInputPainter.field_x.field_P.field_r) - 1 != (1 << PasswordInputPainter.field_x.field_h | PasswordInputPainter.field_x.field_i)) {
                 oq.field_i[13] = uo.field_b;
               } else {
                 oq.field_i[13] = mq.field_a;
@@ -24,13 +24,13 @@ final class wp {
             }
           }
         } else {
-          if (0 != (ce.field_x.field_P.field_e & 1 << ce.field_x.field_h)) {
+          if (0 != (PasswordInputPainter.field_x.field_P.field_e & 1 << PasswordInputPainter.field_x.field_h)) {
             oq.field_i[13] = SocketArchiveNetworkClient.field_s;
           } else {
-            if (ce.field_x.field_P.field_e != 0) {
+            if (PasswordInputPainter.field_x.field_P.field_e != 0) {
               oq.field_i[13] = en.field_d;
             } else {
-              if (-1 + (1 << ce.field_x.field_P.field_r) == (ce.field_x.field_i | 1 << ce.field_x.field_h)) {
+              if (-1 + (1 << PasswordInputPainter.field_x.field_P.field_r) == (PasswordInputPainter.field_x.field_i | 1 << PasswordInputPainter.field_x.field_h)) {
                 oq.field_i[13] = SecondaryNodeDequeIterator.field_d;
               } else {
                 oq.field_i[13] = IntList.field_a;
@@ -124,7 +124,7 @@ final class wp {
           var3_int = param1.length();
           if (var3_int >= 1 &&
             12 >= var3_int) {
-            var4 = ji.a(param1, true);
+            var4 = DateInputWidget.a(param1, true);
             if (var4 != null &&
               var4.length() >= 1) {
               if (param0 > -46) {

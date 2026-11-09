@@ -123,7 +123,7 @@ final class nf {
                 if (var4.field_r != 1) {
                   var7 = QuickChatCategoryRegistry.a(wl.field_c, 4371, new String[]{ProxySocketConnector.a(var4.field_k, -97), Integer.toString(var4.field_r)});
                 } else {
-                  var7 = QuickChatCategoryRegistry.a(lh.field_H, 4371, new String[]{ProxySocketConnector.a(var4.field_k, -110)});
+                  var7 = QuickChatCategoryRegistry.a(VerticalMenuSlider.field_H, 4371, new String[]{ProxySocketConnector.a(var4.field_k, -110)});
                 }
                 incrementValue$0 = var3;
                 var3++;
@@ -245,7 +245,7 @@ final class nf {
         this.field_b = ProductionContent.field_a;
         this.field_k = BufferedSocket.field_h;
         this.field_c = nj.field_a;
-        this.field_h = kr.field_b;
+        this.field_h = InvalidMapConnectionException.field_b;
         this.field_o = WeightedCacheEntry.field_q;
         this.field_p = WidgetStyle.field_j;
         this.field_l = TertiaryNodeList.field_f;

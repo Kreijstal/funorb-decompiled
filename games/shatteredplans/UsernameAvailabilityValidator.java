@@ -43,7 +43,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
             return stackIn_3_0;
           }
           if (!param1.equals(this.field_n)) {
-            var3 = ji.a(param0 + 3780, param1);
+            var3 = DateInputWidget.a(param0 + 3780, param1);
             if (var3 != null &&
               var3.field_g == null) {
               this.field_o = var3.field_h;
@@ -101,7 +101,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
             uo.field_a.clear(0);
             uo.field_a = null;
           }
-          qp.field_w = null;
+          SpriteStripButtonPainter.field_w = null;
           if (ShatteredPlansClient.field_H != null) {
             var3 = (mj) (ShatteredPlansClient.field_H.startTraversal((byte) -102));
             while (var3 != null) {
@@ -149,7 +149,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
           var4.field_B[var4.field_z - 1 + var5Lifetime2 * var4.field_z] = SolVictoryChecker.blendColours(0, var4.field_B[var5Lifetime2 * var4.field_z + (-1 + var4.field_z)], -86, 128);
         }
         var4.field_B[var4.field_z * var4.field_w - 1] = SolVictoryChecker.blendColours(0, var4.field_B[-1 + var4.field_w * var4.field_z], -85, 190);
-        cg.i(0);
+        OpacityWidget.popLegacyRasterState(0);
         if (!param2) {
           field_r = (boolean[]) null;
         }
@@ -356,7 +356,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
             return stackIn_5_0;
           }
           if (!param1.equals(this.field_n)) {
-            var4 = ji.a(-7416, param1);
+            var4 = DateInputWidget.a(-7416, param1);
             if (var4 == null) {
               return null;
             }

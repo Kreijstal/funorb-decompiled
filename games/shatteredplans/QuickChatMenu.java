@@ -190,7 +190,7 @@ final class QuickChatMenu extends AnimatedPanel {
               jp.g((byte) 119);
               GameState.a(-5883);
             } else {
-              mm.d(param0 ^ -16705);
+              EmailSyntaxValidator.d(param0 ^ -16705);
               jp.g((byte) 119);
             }
           }

@@ -56,7 +56,7 @@ final class AgeValidator extends TextFieldValidator {
           BattleEvent.b(param2, param8, param3);
           te.a(-4440, param19, param13, param14, param9, param12);
           StatusContent.a(param4, param15, param1, (byte) 106);
-          gn.a(param0, param18, false, param6);
+          StatefulWidgetTheme.a(param0, param18, false, param6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

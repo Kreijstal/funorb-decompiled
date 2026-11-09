@@ -30,7 +30,7 @@ final class FleetMove extends QuaternaryLinkNode {
     }
 
     final static MenuWindow d(int param0, int param1) {
-        gb.field_n = new MenuWindow(420, 60, 200, param0 + ClientException.field_a * param1, vj.field_B.toUpperCase());
+        gb.field_n = new MenuWindow(420, 60, 200, param0 + ClientException.field_a * param1, DropTargetWidget.field_B.toUpperCase());
         MenuButton var2 = new MenuButton(-16 + (gb.field_n.field_k + 200), 2 + gb.field_n.field_t, 11, 11, -1, (Sprite) null, "X", 16711680);
         var2.field_h = gb.field_n;
         gb.field_n.addChild(var2, param0 ^ 20);

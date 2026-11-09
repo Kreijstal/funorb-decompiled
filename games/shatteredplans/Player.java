@@ -9,7 +9,7 @@ final class Player {
     Sprite field_e;
     Sprite field_b;
     IntrusiveDeque field_i;
-    lo field_m;
+    CombinedTerritory field_m;
     int field_g;
     Sprite field_r;
     Sprite field_p;
@@ -45,7 +45,7 @@ final class Player {
           if (ProductionContent.field_h == 2 &&
             null != nd.field_k) {
             var3 = (CharSequence) ((Object) param1);
-            if (nd.field_k.equals(ji.a(var3, true))) {
+            if (nd.field_k.equals(DateInputWidget.a(var3, true))) {
               var2_int = -10 % ((param0 + 1) / 38);
               return true;
             }
@@ -90,7 +90,7 @@ final class Player {
 
     final static void a(int param0, int param1, boolean param2) {
         WeightedLruCache.field_e = param0;
-        ri.field_O = param1;
+        LoginForm.field_O = param1;
         if (param2) {
           field_z = -11;
         }

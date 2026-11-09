@@ -80,7 +80,7 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
         RuntimeException var8 = null;
         ValidationMessageWidget var9 = null;
         String var10 = null;
-        pg var11 = null;
+        LabeledChildWidget var11 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -95,11 +95,11 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
             var10 = (String) null;
             discarded$1 = this.a(-107, 92, -35, (UiWidget) null, (String) null, (String) null, 123);
           }
-          var11 = new pg(20, param2, 120 + param1, 25, param3, false, 120, 3, gn.field_u, 16777215, param5);
-          this.b((byte) -120, var11);
+          var11 = new LabeledChildWidget(20, param2, 120 + param1, 25, param3, false, 120, 3, StatefulWidgetTheme.field_u, 16777215, param5);
+          this.addChild((byte) -120, var11);
           var9 = new ValidationMessageWidget(((ValidatableWidget) ((Object) param3)).getValidationSource((byte) 96), param4, 126, param2 + var11.field_n, 50 + param1, param6);
           var9.field_u = (WidgetListener) (this);
-          this.b((byte) -52, var9);
+          this.addChild((byte) -52, var9);
           stackIn_3_0 = var9.field_n + var11.field_n;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -170,7 +170,7 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
     }
 
     private final int a(String param0, int param1, UiWidget param2, int param3, int param4) {
-        pg var6 = null;
+        LabeledChildWidget var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -180,11 +180,11 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new pg(20, param3, 120 + param4, 25, param2, false, 120, 3, gn.field_u, 16777215, param0);
+          var6 = new LabeledChildWidget(20, param3, 120 + param4, 25, param2, false, 120, 3, StatefulWidgetTheme.field_u, 16777215, param0);
           if (param1 != 21760) {
             AccountCreationForm.a(-24, (byte) 20);
           }
-          this.b((byte) -126, var6);
+          this.addChild((byte) -126, var6);
           stackIn_3_0 = var6.field_n;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -271,24 +271,24 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
         this.field_L.field_v = DerelictMapGenerator.field_p;
         this.field_K.field_v = PlayerEliminatedEvent.field_i;
         this.field_Q.setValidationSource(new UsernameAvailabilityValidator(this.field_Q), 8945);
-        this.field_F.setValidationSource(new mm(this.field_F), 8945);
+        this.field_F.setValidationSource(new EmailSyntaxValidator(this.field_F), 8945);
         this.field_M.setValidationSource(new EmailValidator(this.field_M, this.field_F), 8945);
         this.field_J.setValidationSource(new PasswordValidator(this.field_J, this.field_Q, this.field_F), 8945);
         this.field_H.setValidationSource(new MatchingTextValidator(this.field_H, this.field_J), 8945);
         this.field_L.setValidationSource(new AgeValidator(this.field_L), 8945);
         this.field_E.field_y = false;
-        this.field_E.field_p = (WidgetPainter) ((Object) new qp());
+        this.field_E.field_p = (WidgetPainter) ((Object) new SpriteStripButtonPainter());
         this.field_O.field_p = (WidgetPainter) ((Object) new LinkPainter());
-        this.field_Q.field_p = (WidgetPainter) ((Object) new rr(10000536));
-        rr dupTemp$0 = new rr(10000536);
+        this.field_Q.field_p = (WidgetPainter) ((Object) new TextInputPainter(10000536));
+        TextInputPainter dupTemp$0 = new TextInputPainter(10000536);
         this.field_M.field_p = (WidgetPainter) ((Object) dupTemp$0);
         this.field_F.field_p = (WidgetPainter) ((Object) dupTemp$0);
-        this.field_L.field_p = (WidgetPainter) ((Object) new rr(10000536));
+        this.field_L.field_p = (WidgetPainter) ((Object) new TextInputPainter(10000536));
         this.field_K.field_p = (WidgetPainter) ((Object) new og());
-        ce dupTemp$1 = new ce(10000536);
+        PasswordInputPainter dupTemp$1 = new PasswordInputPainter(10000536);
         this.field_H.field_p = (WidgetPainter) ((Object) dupTemp$1);
         this.field_J.field_p = (WidgetPainter) ((Object) dupTemp$1);
-        String var2 = QuickChatCategoryRegistry.a(bo.field_Y, 4371, new String[]{this.linkStartTag(-63), this.linkEndTag(15)});
+        String var2 = QuickChatCategoryRegistry.a(AccountNoticeDialog.field_Y, 4371, new String[]{this.linkStartTag(-63), this.linkEndTag(15)});
         int var3 = 20;
         var3 = var3 + this.a(IntrusiveDequeCursor.field_i, 21760, this.field_F, var3, 170);
         var3 = var3 + (5 + this.a(127, 170, var3, this.field_M, "", UsernameAvailabilityValidator.field_u, 20));
@@ -296,10 +296,10 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
         var3 = var3 + (5 + this.a(170, AccountValidationText.field_a, var3, (byte) -127, this.field_H, MusicVoice.field_l));
         var3 = var3 + (this.a(170, AllianceExpiredEvent.field_m, var3, (byte) -128, this.field_Q, MapView.field_zb) + 5);
         var3 = var3 + this.a(SolMapGenerator.field_m, this.field_L, var3, (byte) -123, 170);
-        pg var4 = new pg(46, var3, -90 + this.field_x, 25, this.field_K, true, -120 + this.field_x, 5, EmailValidator.field_x, 11579568, MenuButton.field_E);
-        this.b((byte) -71, var4);
+        LabeledChildWidget var4 = new LabeledChildWidget(46, var3, -90 + this.field_x, 25, this.field_K, true, -120 + this.field_x, 5, EmailValidator.field_x, 11579568, MenuButton.field_E);
+        this.addChild((byte) -71, var4);
         var3 = var3 + var4.field_n;
-        WidgetTheme var5 = new WidgetTheme(gn.field_u, 0, 0, 0, 0, 16777215, -1, 0, 0, gn.field_u.field_J, -1, 2147483647, true);
+        WidgetTheme var5 = new WidgetTheme(StatefulWidgetTheme.field_u, 0, 0, 0, 0, 16777215, -1, 0, 0, StatefulWidgetTheme.field_u.field_J, -1, 2147483647, true);
         this.field_I = new TextHotspotWidget(var2, var5);
         this.field_I.field_v = "";
         this.field_I.a(0, true, bk.field_c);
@@ -307,18 +307,18 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
         this.field_I.field_u = (WidgetListener) (this);
         this.field_I.a(46, var3, (byte) 57, -90 + this.field_x);
         var3 = var3 + (15 + this.field_I.field_n);
-        this.b((byte) -66, this.field_I);
+        this.addChild((byte) -66, this.field_I);
         int var6 = 4;
         int var7 = 200;
         this.field_E.setBounds(var3, 40, (byte) 102, 496 - var7 >> 1, var7);
         this.field_O.setBounds(15 + var3, 40, (byte) 100, var6 + 3, 60);
         this.field_O.field_u = (WidgetListener) (this);
         this.field_E.field_u = (WidgetListener) (this);
-        this.b((byte) -115, this.field_E);
-        this.b((byte) -119, this.field_O);
+        this.addChild((byte) -115, this.field_E);
+        this.addChild((byte) -119, this.field_O);
         this.field_D = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_D.setBounds(this.field_Q.field_q + 20, 150, (byte) 115, 60 + (this.field_Q.field_m + this.field_Q.field_x), -60 + (-this.field_Q.field_m + this.field_x) - this.field_Q.field_x);
-        this.b((byte) -120, this.field_D);
+        this.addChild((byte) -120, this.field_D);
         this.setBounds(0, var3 + 55 + var6, (byte) 122, 0, 496);
     }
 
@@ -379,7 +379,7 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
           var2 = Integer.parseInt(this.field_L.field_s);
         } catch (NumberFormatException numberFormatException) {
         }
-        return cg.a(this.field_F.field_s, this.field_K.field_z, this.field_Q.field_s, var2, this.field_J.field_s, this, -13037);
+        return OpacityWidget.a(this.field_F.field_s, this.field_K.field_z, this.field_Q.field_s, var2, this.field_J.field_s, this, -13037);
     }
 
     public final void onMoreSuggestionsRequested(int param0) {
@@ -446,7 +446,7 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
         var4 = -60 + TutorialVictoryChecker.field_r[6];
         var5 = 40;
         if (0 == param0) {
-          var6 = wk.a(-9615, wg.field_e.a(5607, vc.field_e), rs.field_Cb, new int[]{var4});
+          var6 = WidgetStateStyle.a(-9615, wg.field_e.a(5607, vc.field_e), rs.field_Cb, new int[]{var4});
           var5 = var5 + var6 * var3;
           if (param1 != -71) {
             return -98;
@@ -455,7 +455,7 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
           return stackIn_5_0;
         }
         if (param0 == 1) {
-          var6Lifetime1 = wk.a(-9615, wg.field_e.a(5607, ck.field_g), rs.field_Cb, new int[]{var4});
+          var6Lifetime1 = WidgetStateStyle.a(-9615, wg.field_e.a(5607, ck.field_g), rs.field_Cb, new int[]{var4});
           var5 = var5 + var3 * var6Lifetime1;
           if (param1 != -71) {
             return -98;
@@ -464,7 +464,7 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
           return stackIn_13_0;
         }
         if (param0 == 2) {
-          var6Lifetime2 = wk.a(param1 ^ 9672, wg.field_e.a(5607, CellVertex.field_a), rs.field_Cb, new int[]{var4});
+          var6Lifetime2 = WidgetStateStyle.a(param1 ^ 9672, wg.field_e.a(5607, CellVertex.field_a), rs.field_Cb, new int[]{var4});
           var5 = var5 + var3 * var6Lifetime2;
           if (param1 != -71) {
             return -98;
@@ -480,13 +480,13 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
         }
         if (param0 == 5) {
           var8 = WhirlpoolHasher.field_n;
-          var6Lifetime3 = wk.a(-9615, wg.field_e.a(5607, var8), rs.field_Cb, new int[]{var4 - 80});
+          var6Lifetime3 = WidgetStateStyle.a(-9615, wg.field_e.a(5607, var8), rs.field_Cb, new int[]{var4 - 80});
           var5 = var5 + (var3 * (3 + 4 * var6Lifetime3) >> 2);
-          var9 = ri.field_N;
-          var6Lifetime3Lifetime1 = wk.a(-9615, wg.field_e.a(5607, var9), rs.field_Cb, new int[]{-80 + var4});
+          var9 = LoginForm.field_N;
+          var6Lifetime3Lifetime1 = WidgetStateStyle.a(-9615, wg.field_e.a(5607, var9), rs.field_Cb, new int[]{-80 + var4});
           var10 = rk.field_n;
           var5 = var5 + ((var6Lifetime3Lifetime1 * 4 + 3) * var3 >> 2);
-          var6Lifetime3Lifetime2 = wk.a(-9615, wg.field_e.a(5607, var10), rs.field_Cb, new int[]{-80 + var4});
+          var6Lifetime3Lifetime2 = WidgetStateStyle.a(-9615, wg.field_e.a(5607, var10), rs.field_Cb, new int[]{-80 + var4});
           var5 = var5 + var6Lifetime3Lifetime2 * var3;
           if (param1 != -71) {
             return -98;
@@ -496,16 +496,16 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
         }
         if (param0 == 6) {
           var16 = DebouncedValidator.field_a;
-          var6Lifetime4 = wk.a(-9615, wg.field_e.a(5607, var16), rs.field_Cb, new int[]{-80 + var4});
+          var6Lifetime4 = WidgetStateStyle.a(-9615, wg.field_e.a(5607, var16), rs.field_Cb, new int[]{-80 + var4});
           var17 = WhirlpoolHasher.field_l;
           var5 = var5 + (var3 * (3 + 4 * var6Lifetime4) >> 2);
-          var6Lifetime4Lifetime1 = wk.a(param1 ^ 9672, wg.field_e.a(param1 ^ -5538, var17), rs.field_Cb, new int[]{var4 - 80});
+          var6Lifetime4Lifetime1 = WidgetStateStyle.a(param1 ^ 9672, wg.field_e.a(param1 ^ -5538, var17), rs.field_Cb, new int[]{var4 - 80});
           var18 = DraggableWidget.field_F;
           var5 = var5 + ((var6Lifetime4Lifetime1 * 4 + 3) * var3 >> 2);
-          var6Lifetime4Lifetime2 = wk.a(-9615, wg.field_e.a(5607, var18), rs.field_Cb, new int[]{var4 - 80});
+          var6Lifetime4Lifetime2 = WidgetStateStyle.a(-9615, wg.field_e.a(5607, var18), rs.field_Cb, new int[]{var4 - 80});
           var19 = ScrollPane.field_Cb;
           var5 = var5 + ((4 * var6Lifetime4Lifetime2 + 3) * var3 >> 2);
-          var6Lifetime4Lifetime3 = wk.a(-9615, wg.field_e.a(5607, var19), rs.field_Cb, new int[]{-80 + var4});
+          var6Lifetime4Lifetime3 = WidgetStateStyle.a(-9615, wg.field_e.a(5607, var19), rs.field_Cb, new int[]{-80 + var4});
           var5 = var5 + var6Lifetime4Lifetime3 * var3;
           if (param1 != -71) {
             return -98;
@@ -514,8 +514,8 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
           return stackIn_68_0;
         }
         if (param0 == 7) {
-          var15 = jl.field_N;
-          var6Lifetime5 = wk.a(-9615, wg.field_e.a(5607, var15), rs.field_Cb, new int[]{-80 + var4});
+          var15 = ResizingDialog.field_N;
+          var6Lifetime5 = WidgetStateStyle.a(-9615, wg.field_e.a(5607, var15), rs.field_Cb, new int[]{-80 + var4});
           var5 = 294;
           var5 = var5 + var3 * (-3 + var6Lifetime5);
           if (param1 != -71) {
@@ -526,16 +526,16 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
         }
         if (8 == param0) {
           var11 = StandardMapGenerator.field_g;
-          var6Lifetime6 = wk.a(-9615, wg.field_e.a(5607, var11), rs.field_Cb, new int[]{var4 - 40});
+          var6Lifetime6 = WidgetStateStyle.a(-9615, wg.field_e.a(5607, var11), rs.field_Cb, new int[]{var4 - 40});
           var12 = WidgetStyle.field_b;
           var5 = var5 + ((3 + var6Lifetime6 * 4) * var3 >> 2);
-          var6Lifetime6Lifetime1 = wk.a(-9615, wg.field_e.a(5607, var12), rs.field_Cb, new int[]{var4 - 40});
+          var6Lifetime6Lifetime1 = WidgetStateStyle.a(-9615, wg.field_e.a(5607, var12), rs.field_Cb, new int[]{var4 - 40});
           var5 = var5 + ((4 * var6Lifetime6Lifetime1 + 3) * var3 >> 2);
           var13 = jb.field_f;
-          var6Lifetime6Lifetime2 = wk.a(-9615, wg.field_e.a(5607, var13), rs.field_Cb, new int[]{var4 - 40});
+          var6Lifetime6Lifetime2 = WidgetStateStyle.a(-9615, wg.field_e.a(5607, var13), rs.field_Cb, new int[]{var4 - 40});
           var14 = ArchiveNetworkClient.field_o;
           var5 = var5 + ((4 * var6Lifetime6Lifetime2 + 3) * var3 >> 2);
-          var6Lifetime6Lifetime3 = wk.a(param1 ^ 9672, wg.field_e.a(5607, var14), rs.field_Cb, new int[]{-40 + var4});
+          var6Lifetime6Lifetime3 = WidgetStateStyle.a(param1 ^ 9672, wg.field_e.a(5607, var14), rs.field_Cb, new int[]{-40 + var4});
           var5 = var5 + var6Lifetime6Lifetime3 * var3;
           var5 = var5 + var3;
           if (param1 != -71) {
@@ -545,7 +545,7 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
           return stackIn_53_0;
         }
         if (param0 == 9) {
-          var6Lifetime7 = wk.a(-9615, wg.field_e.a(5607, ObjectList.field_a), rs.field_Cb, new int[]{var4});
+          var6Lifetime7 = WidgetStateStyle.a(-9615, wg.field_e.a(5607, ObjectList.field_a), rs.field_Cb, new int[]{var4});
           var5 = var5 + var3 * var6Lifetime7;
           if (param1 != -71) {
             return -98;
@@ -556,7 +556,7 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
         if (param0 != 10) {
           throw new RuntimeException();
         }
-        var6Lifetime8 = wk.a(param1 - 9544, wg.field_e.a(5607, DualLinkNode.field_m), rs.field_Cb, new int[]{var4});
+        var6Lifetime8 = WidgetStateStyle.a(param1 - 9544, wg.field_e.a(5607, DualLinkNode.field_m), rs.field_Cb, new int[]{var4});
         var5 = var5 + var6Lifetime8 * var3;
         if (param1 != -71) {
           return -98;
@@ -607,7 +607,7 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
         RuntimeException var6 = null;
         ValidationIndicator var7 = null;
         int var8 = 0;
-        pg var9 = null;
+        LabeledChildWidget var9 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -616,11 +616,11 @@ final class AccountCreationForm extends WidgetContainer implements HyperlinkList
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var9 = new pg(20, param2, 120 + param4, 25, param1, false, 120, 3, gn.field_u, 16777215, param0);
-          this.b((byte) -51, var9);
+          var9 = new LabeledChildWidget(20, param2, 120 + param4, 25, param1, false, 120, 3, StatefulWidgetTheme.field_u, 16777215, param0);
+          this.addChild((byte) -51, var9);
           var7 = new ValidationIndicator(((ValidatableWidget) ((Object) param1)).getValidationSource((byte) 106));
           var8 = -33 / ((param3 + 88) / 35);
-          this.b((byte) -116, var7);
+          this.addChild((byte) -116, var7);
           var7.setBounds(var9.field_q + (-15 + var9.field_n >> 1), 15, (byte) 118, var9.field_x + (var9.field_m + 3), 15);
           stackIn_1_0 = var9.field_n;
           return stackIn_1_0;

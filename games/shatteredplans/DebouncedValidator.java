@@ -65,7 +65,7 @@ abstract class DebouncedValidator implements ValidationSource {
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = new SoundPlayback(param1, param1);
-          eo.field_ab.addLast((byte) -113, var2);
+          ProgressDialog.field_ab.addLast((byte) -113, var2);
           if (param0 > -121) {
             stackIn_2_0 = (SoundPlayback) null;
             return stackIn_2_0;

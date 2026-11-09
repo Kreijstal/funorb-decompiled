@@ -55,7 +55,7 @@ abstract class ArchiveNetworkClient {
         }
         int var6 = -104 % ((-50 - param3) / 36);
         if (Math.abs(param0 - param1) >= Math.abs(param2 - param4)) {
-          kr.a(param2, (byte) -55, param1, param0, param5, param4);
+          InvalidMapConnectionException.a(param2, (byte) -55, param1, param0, param5, param4);
           return;
         }
         SecondaryNodeHashTable.a(param5, param4, 80, param2, param1, param0);
@@ -144,7 +144,7 @@ abstract class ArchiveNetworkClient {
         }
         int var6 = -104 % ((-50 - param3) / 36);
         if (Math.abs(param0 - param1) >= Math.abs(param2 - param4)) {
-          kr.a(param2, (byte) -55, param1, param0, param5, param4);
+          InvalidMapConnectionException.a(param2, (byte) -55, param1, param0, param5, param4);
           return;
         }
         SecondaryNodeHashTable.a(param5, param4, 80, param2, param1, param0);

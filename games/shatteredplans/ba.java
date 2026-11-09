@@ -92,17 +92,17 @@ final class ba {
           tg.field_c.addChild(4, StatusContent.field_c);
           var17 = new AnimatedPanel(0L, (AnimatedPanel) null);
           var17.field_M = new IntrusiveDeque();
-          ji.field_I = new ScrollPane(0L, var17, param1, param4);
-          StatusContent.field_c.addChild(4, ji.field_I);
+          DateInputWidget.field_I = new ScrollPane(0L, var17, param1, param4);
+          StatusContent.field_c.addChild(4, DateInputWidget.field_I);
           TaskAi.field_o = new AnimatedPanel(0L, param3);
           StatusContent.field_c.addChild(4, TaskAi.field_o);
           uq.field_j = new AnimatedPanel(0L, param10);
           uq.field_j.field_nb = ho.field_f;
           TaskAi.field_o.addChild(4, uq.field_j);
           TaskAi.field_o.markDirty((byte) -128);
-          cg.field_C = new AnimatedPanel(0L, (AnimatedPanel) null);
-          cg.field_C.field_F = var16;
-          TaskAi.field_o.addChild(4, cg.field_C);
+          OpacityWidget.field_C = new AnimatedPanel(0L, (AnimatedPanel) null);
+          OpacityWidget.field_C.field_F = var16;
+          TaskAi.field_o.addChild(4, OpacityWidget.field_C);
           DerelictMapReader.field_d = new AnimatedPanel[5];
           tb.field_a = new AnimatedPanel[5];
           n.field_n = new AnimatedPanel[5];
@@ -158,7 +158,7 @@ final class ba {
             !LoginMethodPreference.field_g) {
             return;
           }
-          wi.field_c = new eh(0, 0, 0, 0);
+          wi.field_c = new BirthDateConfirmationForm(0, 0, 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

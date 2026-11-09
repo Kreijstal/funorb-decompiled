@@ -82,7 +82,7 @@ final class fb extends AnimatedPanel {
         int var10 = 0;
         Player[] var11_ref_fs__ = null;
         int var11 = 0;
-        b var12 = null;
+        FilledMenuPanel var12 = null;
         Player var13 = null;
         SpriteButton var13_ref = null;
         MenuLabel var13_ref2 = null;
@@ -108,7 +108,7 @@ final class fb extends AnimatedPanel {
           }
           stackIn_9_0 = (var10 != 0) ? 8421504 : 2105376;
           var11 = stackIn_9_0;
-          var12 = new b(IntrusiveDeque.field_a[param4.field_x].field_z / 2, -(rs.field_Cb.field_J / 2) + (var17.field_i / 2 - 4), -(IntrusiveDeque.field_a[param4.field_x].field_z / 2) + var17.field_m, rs.field_Cb.field_J + 8, 2, var11);
+          var12 = new FilledMenuPanel(IntrusiveDeque.field_a[param4.field_x].field_z / 2, -(rs.field_Cb.field_J / 2) + (var17.field_i / 2 - 4), -(IntrusiveDeque.field_a[param4.field_x].field_z / 2) + var17.field_m, rs.field_Cb.field_J + 8, 2, var11);
           var17.addChild(var12, 8);
           if ((param7.field_w & 1 << param4.field_x) == 0) {
             var13_ref = new SpriteButton(IntrusiveDeque.field_a[param4.field_x].field_z / 2, -1 + (var17.field_i / 2 - rs.field_Cb.field_J / 2), WhirlpoolHasher.a(param5, (byte) -127, param1, param4, param3));
@@ -204,7 +204,7 @@ final class fb extends AnimatedPanel {
         if (!param5) {
           tm.field_h = (kh.field_Mb - 640) / 2;
         } else {
-          tm.field_h = gn.field_t;
+          tm.field_h = StatefulWidgetTheme.field_t;
         }
         EmailValidator.a(true, param5);
         if (PlacementOrder.field_t > param9) {

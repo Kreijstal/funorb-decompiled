@@ -140,11 +140,11 @@ final class ProxySocketConnector extends SocketConnector {
                   if (var11 != -1) {
                     var8 = var15.substring(0, var11);
                   }
-                  throw new lg(var8);
+                  throw new ProxyAuthenticationRequiredException(var8);
                 }
                 break;
               }
-              throw new lg("");
+              throw new ProxyAuthenticationRequiredException("");
             }
             if (decompiledFrameRemainder0) {
               stackIn_13_0 = var13;
@@ -178,13 +178,13 @@ final class ProxySocketConnector extends SocketConnector {
 
     final static void a(int param0, java.awt.Canvas param1) {
         if (SoundPlayback.field_i == 11) {
-          lg.a(param0 - 9242);
+          ProxyAuthenticationRequiredException.a(param0 - 9242);
         }
         if (param0 != 9242) {
           return;
         }
         try {
-          jp.a(DerelictMapGenerator.field_r, il.field_cb, (byte) 121, oi.field_f);
+          jp.a(DerelictMapGenerator.field_r, ContentDialog.field_cb, (byte) 121, oi.field_f);
           WeightedCacheEntry.a(47, 0, param1, 0);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "pa.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -396,7 +396,7 @@ final class ProxySocketConnector extends SocketConnector {
         Object var10 = null;
         java.net.Proxy var11 = null;
         java.net.Socket var12 = null;
-        lg var12_ref = null;
+        ProxyAuthenticationRequiredException var12_ref = null;
         IOException var12_ref2 = null;
         int var13 = 0;
         var13 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -451,15 +451,15 @@ final class ProxySocketConnector extends SocketConnector {
           var10 = var8[var9];
           var11 = (java.net.Proxy) (var10);
           try {
-            if (false) throw (lg) null;
+            if (false) throw (ProxyAuthenticationRequiredException) null;
             var12 = this.connectThroughProxy(-73, var11);
             if (var12 != null) {
               stackIn_23_0 = var12;
               return stackIn_23_0;
             }
-          } catch (lg decompiledCaughtParameter1) {
+          } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var12_ref = (lg) (Object) decompiledCaughtException;
+            var12_ref = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
             var7 = var12_ref;
           } catch (java.io.IOException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
@@ -489,11 +489,11 @@ final class ProxySocketConnector extends SocketConnector {
         q.field_Cb.draw(var1, var2);
         var1 = -120;
         var2 = -(FleetTrailPoint.field_m * 150 / 800) + 300;
-        mm.field_o.draw(var1, var2);
+        EmailSyntaxValidator.field_o.draw(var1, var2);
         var2 = FleetTrailPoint.field_m * 240 / 800 + 20;
         var1 = 0;
-        ch.field_c.draw(var1, var2);
-        SoftwareRasterizer.fillRect(0, ch.field_c.field_p + var2, 640, 480, 0);
+        RoundedFrameSupport.field_c.draw(var1, var2);
+        SoftwareRasterizer.fillRect(0, RoundedFrameSupport.field_c.field_p + var2, 640, 480, 0);
         if (param0 != 8421504) {
           Star var4 = (Star) null;
           ProxySocketConnector.a((Star) null, 30);

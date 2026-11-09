@@ -46,22 +46,22 @@ final class pr {
         if (param0 != 14274) {
           pr.currentTimeMillis(81);
           var1 = System.currentTimeMillis();
-          if (lh.field_z > var1) {
-            wd.field_N = wd.field_N + (-var1 + lh.field_z);
-            lh.field_z = var1;
-            return var1 + wd.field_N;
+          if (VerticalMenuSlider.field_z > var1) {
+            NumericDateInputWidget.field_N = NumericDateInputWidget.field_N + (-var1 + VerticalMenuSlider.field_z);
+            VerticalMenuSlider.field_z = var1;
+            return var1 + NumericDateInputWidget.field_N;
           }
-          lh.field_z = var1;
-          return var1 + wd.field_N;
+          VerticalMenuSlider.field_z = var1;
+          return var1 + NumericDateInputWidget.field_N;
         }
         var1Lifetime1 = System.currentTimeMillis();
-        if (lh.field_z <= var1Lifetime1) {
-          lh.field_z = var1Lifetime1;
-          return var1Lifetime1 + wd.field_N;
+        if (VerticalMenuSlider.field_z <= var1Lifetime1) {
+          VerticalMenuSlider.field_z = var1Lifetime1;
+          return var1Lifetime1 + NumericDateInputWidget.field_N;
         }
-        wd.field_N = wd.field_N + (-var1Lifetime1 + lh.field_z);
-        lh.field_z = var1Lifetime1;
-        return var1Lifetime1 + wd.field_N;
+        NumericDateInputWidget.field_N = NumericDateInputWidget.field_N + (-var1Lifetime1 + VerticalMenuSlider.field_z);
+        VerticalMenuSlider.field_z = var1Lifetime1;
+        return var1Lifetime1 + NumericDateInputWidget.field_N;
     }
 
     static {

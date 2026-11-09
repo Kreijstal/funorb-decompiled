@@ -122,7 +122,7 @@ final class SolVictoryChecker extends VictoryChecker {
         if (param0) {
           field_p = 84;
         }
-        return cg.field_F;
+        return OpacityWidget.field_F;
     }
 
     final void writeScores(int param0, PacketBuffer param1) {
@@ -283,7 +283,7 @@ final class SolVictoryChecker extends VictoryChecker {
             return;
           }
           if (var6Lifetime1 > 0) {
-            lh.a((byte) 84, var5, (int[]) ((Object) this.field_n.clone()));
+            VerticalMenuSlider.a((byte) 84, var5, (int[]) ((Object) this.field_n.clone()));
           }
           var19 = new MenuLabel[3];
           var7_array = var19;
@@ -408,7 +408,7 @@ final class SolVictoryChecker extends VictoryChecker {
               if (var6_int != 0) {
                 BufferedCacheFile.field_e = var6_int;
                 Wormhole.field_j = Player.field_l;
-                rr.field_t = -1;
+                TextInputPainter.field_t = -1;
               } else {
                 Wormhole.field_j = MusicVoice.field_m;
               }
@@ -430,7 +430,7 @@ final class SolVictoryChecker extends VictoryChecker {
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
-                  rr.field_t = -1;
+                  TextInputPainter.field_t = -1;
                   Wormhole.field_j = Player.field_l;
                   decompiledFrameRemainder0 = false;
                 }
@@ -443,7 +443,7 @@ final class SolVictoryChecker extends VictoryChecker {
               }
               if (decompiledFrameRemainder0) {
                 Wormhole.field_j = SolMapReader.field_c;
-                rr.field_t = -1;
+                TextInputPainter.field_t = -1;
               }
             }
             if (SolMapReader.field_c == Wormhole.field_j &&
@@ -475,15 +475,15 @@ final class SolVictoryChecker extends VictoryChecker {
                 sa.field_a.readUnsignedByte(-66);
                 sa.field_a.readUnsignedByte(-102);
                 sa.field_a.readInt(16711680);
-                ir.field_E = sa.field_a.readUnsignedShort(-20976);
-                TurnEventLog.field_c = new byte[ir.field_E];
-                for (var8 = 0; ir.field_E > var8; var8++) {
+                DisplayNameForm.field_E = sa.field_a.readUnsignedShort(-20976);
+                TurnEventLog.field_c = new byte[DisplayNameForm.field_E];
+                for (var8 = 0; DisplayNameForm.field_E > var8; var8++) {
                   TurnEventLog.field_c[var8] = sa.field_a.readSignedByte(-2852);
                 }
               }
               Star.field_o = sa.field_a.readString(-1);
               var11 = (CharSequence) ((Object) Star.field_o);
-              ArchiveIndex.field_d = ji.a(var11, true);
+              ArchiveIndex.field_d = DateInputWidget.a(var11, true);
               CheckboxPainter.field_n = sa.field_a.readUnsignedByte(-112);
               Wormhole.field_j = ih.field_f;
               if (mq.field_c.getKind((byte) 115) != IsolationistAi.field_u) {

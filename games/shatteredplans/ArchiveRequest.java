@@ -98,7 +98,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           if (SoundPlayback.field_i < 10) {
             return false;
           }
-          if (!eh.field_P) {
+          if (!BirthDateConfirmationForm.field_P) {
             return !DirectByteArrayStorage.b((byte) -119) ? true : false;
           }
           return false;
@@ -106,7 +106,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         if (SoundPlayback.field_i < 10) {
           return false;
         }
-        if (!eh.field_P) {
+        if (!BirthDateConfirmationForm.field_P) {
           return !DirectByteArrayStorage.b((byte) -119) ? true : false;
         }
         return false;
@@ -136,7 +136,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           MouseInputHandler.field_b.bindAsRenderTarget();
           lq.field_o.draw(16, 16);
           SoftwareRasterizer.b(3, 3, 0, 0, 64, 64);
-          cg.i(0);
+          OpacityWidget.popLegacyRasterState(0);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "jc.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

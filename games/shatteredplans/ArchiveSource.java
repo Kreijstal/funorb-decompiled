@@ -61,11 +61,11 @@ abstract class ArchiveSource {
             return stackIn_15_0;
           }
           if (param0 == 5) {
-            stackIn_18_0 = QuickChatCategoryRegistry.a(eh.field_N, 4371, new String[]{param2});
+            stackIn_18_0 = QuickChatCategoryRegistry.a(BirthDateConfirmationForm.field_N, 4371, new String[]{param2});
             return stackIn_18_0;
           }
           if (6 == param0) {
-            stackIn_22_0 = QuickChatCategoryRegistry.a(lh.field_E, 4371, new String[]{param2});
+            stackIn_22_0 = QuickChatCategoryRegistry.a(VerticalMenuSlider.field_E, 4371, new String[]{param2});
             return stackIn_22_0;
           }
           if (7 == param0) {
@@ -73,7 +73,7 @@ abstract class ArchiveSource {
             return stackIn_26_0;
           }
           if (param0 == 8) {
-            stackIn_30_0 = QuickChatCategoryRegistry.a(cq.field_F, 4371, new String[]{param2});
+            stackIn_30_0 = QuickChatCategoryRegistry.a(GuestPlayForm.field_F, 4371, new String[]{param2});
             return stackIn_30_0;
           }
           if (11 == param0) {
@@ -81,7 +81,7 @@ abstract class ArchiveSource {
             return stackIn_34_0;
           }
           if (param0 == 12) {
-            stackIn_38_0 = QuickChatCategoryRegistry.a(ja.field_l, 4371, new String[]{param2});
+            stackIn_38_0 = QuickChatCategoryRegistry.a(BirthDateValidator.field_l, 4371, new String[]{param2});
             return stackIn_38_0;
           }
           if (param0 != 13) {

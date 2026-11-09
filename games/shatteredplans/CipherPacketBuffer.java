@@ -104,7 +104,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         if (param0 != 64) {
           return (AccountFieldValue) null;
         }
-        return new AccountFieldValue(of.a((byte) 42), bo.q(-108));
+        return new AccountFieldValue(of.a((byte) 42), AccountNoticeDialog.q(-108));
     }
 
     public static void clearStatics(int param0) {

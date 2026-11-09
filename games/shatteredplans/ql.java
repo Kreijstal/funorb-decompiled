@@ -95,12 +95,12 @@ final class ql extends IntrusiveNode {
           QuickChatCategoryDefinition.field_u = QuickChatCategoryDefinition.field_u - 1;
           if (QuickChatCategoryDefinition.field_u == 0) {
             QuickChatCategoryDefinition.field_u = 200;
-            var1 = (SoundPlayback) (eo.field_ab.startForward(param0 ^ -26848));
+            var1 = (SoundPlayback) (ProgressDialog.field_ab.startForward(param0 ^ -26848));
             while (var1 != null) {
               if (!var1.field_n.isLinked(2048)) {
                 var1.unlink((byte) -108);
               }
-              var1 = (SoundPlayback) (eo.field_ab.nextForward((byte) -71));
+              var1 = (SoundPlayback) (ProgressDialog.field_ab.nextForward((byte) -71));
             }
             if (CandidateLink.field_v != null) {
               var1Lifetime1 = (SoundPlayback) (CandidateLink.field_v.startForward(0));

@@ -316,7 +316,7 @@ final class AggressiveAi extends StandardAi {
               stackIn_23_0 = ByteArrayNode.field_p[0][1 + var7];
               stackIn_24_1 = (var4_int != 0);
               stackIn_23_0.field_s = stackIn_24_1;
-              if (!ns.field_pb &&
+              if (!AccountStatusDialog.field_pb &&
                 var7 == 3) {
                 ByteArrayNode.field_p[0][var7 + 1].field_s = false;
               }
@@ -547,11 +547,11 @@ final class AggressiveAi extends StandardAi {
               var16 = 0;
               if (var4_int != 0 &&
                 var10 >= 0) {
-                if (ji.field_D != null &&
-                  null != ji.field_D[var8] &&
-                  (~GameRules.field_m & ji.field_D[var8][var10]) > 0) {
+                if (DateInputWidget.field_D != null &&
+                  null != DateInputWidget.field_D[var8] &&
+                  (~GameRules.field_m & DateInputWidget.field_D[var8][var10]) > 0) {
                   var15 = 1;
-                  var16 = DualLinkDeque.highestOneBit(107, ji.field_D[var8][var10] & ~GameRules.field_m);
+                  var16 = DualLinkDeque.highestOneBit(107, DateInputWidget.field_D[var8][var10] & ~GameRules.field_m);
                 }
                 if (SliderWidget.field_E != null &&
                   SliderWidget.field_E[var8] != null &&
@@ -572,9 +572,9 @@ final class AggressiveAi extends StandardAi {
                     var13 = 1;
                   }
                 }
-                if (pg.field_A != null &&
-                  null != pg.field_A[var8]) {
-                  var17Lifetime2 = pg.field_A[var8][var10];
+                if (LabeledChildWidget.field_A != null &&
+                  null != LabeledChildWidget.field_A[var8]) {
+                  var17Lifetime2 = LabeledChildWidget.field_A[var8][var10];
                   if (var17Lifetime2 > 0 &&
                     var17Lifetime2 > BoundsRect.field_h) {
                     var12 = 1;
@@ -624,7 +624,7 @@ final class AggressiveAi extends StandardAi {
               wg.field_d = true;
               if (var17Lifetime1 == 0 &&
                 var10 >= 0 &&
-                null != pe.field_D && (!param1 ||
+                null != UnderageAccountInfoPanel.field_D && (!param1 ||
                 !TurnEventLog.field_i)) {
                 wg.field_d = false;
                 if (lr.field_c == null) {
@@ -708,7 +708,7 @@ final class AggressiveAi extends StandardAi {
                     var23 = var26;
                   } else {
                     if (var12 != 0) {
-                      var23_int = -BoundsRect.field_h + pg.field_A[var8][var10];
+                      var23_int = -BoundsRect.field_h + LabeledChildWidget.field_A[var8][var10];
                       if (var23_int != 1) {
                         var22 = QuickChatCategoryRegistry.a(CandidateLink.field_n, 4371, new String[]{Integer.toString(var23_int)});
                       } else {
@@ -951,7 +951,7 @@ final class AggressiveAi extends StandardAi {
         }
         if (null != var5Lifetime1) {
           var7_ref = new ProjectUse(3, this.field_n, (Star) (var2), (Star) (var5Lifetime1));
-          lh.field_G.addLast((byte) -113, var7_ref);
+          VerticalMenuSlider.field_G.addLast((byte) -113, var7_ref);
         }
         return;
     }
@@ -1011,7 +1011,7 @@ final class AggressiveAi extends StandardAi {
         }
         if (var2 != null) {
           var4 = new ProjectUse(2, this.field_n, (Star) (var2));
-          lh.field_G.addLast((byte) -113, var4);
+          VerticalMenuSlider.field_G.addLast((byte) -113, var4);
         }
     }
 

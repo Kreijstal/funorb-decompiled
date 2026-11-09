@@ -117,7 +117,7 @@ final class mj extends AnimatedPanel {
         try {
           this.field_Cb = param0;
           var5 = (CharSequence) ((Object) this.field_Db);
-          ji.a(var5, true);
+          DateInputWidget.a(var5, true);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "mj.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -198,7 +198,7 @@ final class mj extends AnimatedPanel {
           this.field_Cb = param1;
           this.field_Ib = param2;
           var6 = (CharSequence) ((Object) this.field_Db);
-          ji.a(var6, true);
+          DateInputWidget.a(var6, true);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "mj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

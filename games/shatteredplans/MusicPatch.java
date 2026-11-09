@@ -101,11 +101,11 @@ final class MusicPatch extends IntrusiveNode {
     }
 
     final static kj a(int param0) {
-        if (oj.field_Fb == PrivateChatMessage.field_l) {
+        if (AccountCreationDialog.field_Fb == PrivateChatMessage.field_l) {
           throw new IllegalStateException();
         }
         if (PrivateChatMessage.field_l == ProjectsContent.field_g) {
-          PrivateChatMessage.field_l = oj.field_Fb;
+          PrivateChatMessage.field_l = AccountCreationDialog.field_Fb;
           return wh.field_c;
         }
         if (param0 == 65536) {

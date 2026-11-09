@@ -82,7 +82,7 @@ final class GameSession implements AiHost {
             return;
           }
           var4 = param0.name + ": ";
-          var5 = ji.field_I.field_K;
+          var5 = DateInputWidget.field_I.field_K;
           if (this.field_f) {
             var5 = var5 - ho.field_f.stringWidth("[" + QuickChatCategoryRegistry.a(IntNode.field_q, 4371, new String[]{this.field_P.field_v[0].name}) + "] ");
           }
@@ -99,7 +99,7 @@ final class GameSession implements AiHost {
             var10 = 0;
             while (var9.length > var10) {
               var11 = var9[var10];
-              md.a(1, var4 + var11, var6, Star.field_o, this.field_P.field_v[0].name, -16169);
+              StripedProgressWidget.a(1, var4 + var11, var6, Star.field_o, this.field_P.field_v[0].name, -16169);
               var10++;
               if (var12 != 0) {
                 return;
@@ -109,7 +109,7 @@ final class GameSession implements AiHost {
               return;
             }
           }
-          md.a(1, var4 + param1, var6, Star.field_o, this.field_P.field_v[0].name, -16169);
+          StripedProgressWidget.a(1, var4 + param1, var6, Star.field_o, this.field_P.field_v[0].name, -16169);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -618,7 +618,7 @@ final class GameSession implements AiHost {
           while (var7 < var6.length) {
             var9 = var6[var7];
             NodeHashTableIterator.a(var9, (byte) 49);
-            kr.a((byte) -127, var9);
+            InvalidMapConnectionException.a((byte) -127, var9);
             var7++;
             if (var10 != 0) {
               return;
@@ -907,27 +907,27 @@ final class GameSession implements AiHost {
             return true;
           }
           if (BufferedCacheFile.field_e == 67) {
-            this.a(1, sa.field_a, rr.field_t);
+            this.a(1, sa.field_a, TextInputPainter.field_t);
             return true;
           }
           if (70 == BufferedCacheFile.field_e) {
-            this.b(rr.field_t, sa.field_a, -123);
+            this.b(TextInputPainter.field_t, sa.field_a, -123);
             return true;
           }
           if (68 == BufferedCacheFile.field_e) {
-            this.a(sa.field_a, rr.field_t, -80);
+            this.a(sa.field_a, TextInputPainter.field_t, -80);
             return true;
           }
           if (BufferedCacheFile.field_e == 62) {
             this.field_P.field_y = sa.field_a.readUnsignedByte(param0 ^ -14832);
-            if (this == ce.field_x) {
-              ri.k(8);
+            if (this == PasswordInputPainter.field_x) {
+              LoginForm.k(8);
             }
             return true;
           }
           if (BufferedCacheFile.field_e == 64) {
             this.field_P.field_e = sa.field_a.readUnsignedByte(param0 ^ -14814);
-            if (this == ce.field_x) {
+            if (this == PasswordInputPainter.field_x) {
               wp.a(-2);
             }
             return true;
@@ -996,7 +996,7 @@ final class GameSession implements AiHost {
           }
           if (BufferedCacheFile.field_e == 74 &&
             AchievementProgress.field_g) {
-            var2_intLifetime4 = rr.field_t / 4;
+            var2_intLifetime4 = TextInputPainter.field_t / 4;
             var3Lifetime2 = 0;
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (var2_intLifetime4 <= var3Lifetime2))) {
@@ -1005,7 +1005,7 @@ final class GameSession implements AiHost {
               stackIn_128_0 = sa.field_a.readUnsignedShort(param0 ^ -26697);
               if (var11 == 0) {
                 var6Lifetime1 = stackIn_128_0;
-                var7 = "My personality type is " + wk.field_a[var5Lifetime1] + " and my rating is " + var6Lifetime1;
+                var7 = "My personality type is " + WidgetStateStyle.field_a[var5Lifetime1] + " and my rating is " + var6Lifetime1;
                 this.addChatLine(this.field_P.field_v[var4Lifetime2], var7, (byte) 51);
                 var3Lifetime2++;
                 continue;
@@ -1539,7 +1539,7 @@ final class GameSession implements AiHost {
           }
           stackIn_18_0.field_J = stackIn_18_1.field_J - param1;
           this.field_C[param3.field_p] = this.field_C[param3.field_p] - param1;
-          kr.a((byte) 83, param3);
+          InvalidMapConnectionException.a((byte) 83, param3);
           NodeHashTableIterator.a(param2, (byte) 75);
           this.a(this.field_n, -95);
           if (this.field_f) {
@@ -2788,7 +2788,7 @@ final class GameSession implements AiHost {
               }
               var7 = var5[var6];
               NodeHashTableIterator.a(var7, (byte) 96);
-              kr.a((byte) -99, var7);
+              InvalidMapConnectionException.a((byte) -99, var7);
               var6++;
             } while (var8 == 0);
             do {
@@ -3393,10 +3393,10 @@ final class GameSession implements AiHost {
               if (param2 == this.field_n) {
                 var4 = QuickChatCategoryRegistry.a(AchievementProgress.field_c, 4371, new String[]{param0.name});
                 this.field_H.addFirst(new n(param2, param0, var4), 0);
-                var4 = QuickChatCategoryRegistry.a(lh.field_A, 4371, new String[]{param0.name, param2.name});
+                var4 = QuickChatCategoryRegistry.a(VerticalMenuSlider.field_A, 4371, new String[]{param0.name, param2.name});
                 this.field_H.addFirst(new n(param2, param0, var4), 0);
               } else {
-                var4 = QuickChatCategoryRegistry.a(lh.field_A, 4371, new String[]{param0.name, param2.name});
+                var4 = QuickChatCategoryRegistry.a(VerticalMenuSlider.field_A, 4371, new String[]{param0.name, param2.name});
                 this.field_H.addFirst(new n(param2, param0, var4), 0);
               }
             }
@@ -3408,7 +3408,7 @@ final class GameSession implements AiHost {
               decompiledSharedTail0 = (var5 != 0);
             }
             if (decompiledSharedTail0) {
-              var4 = QuickChatCategoryRegistry.a(lh.field_A, 4371, new String[]{param0.name, param2.name});
+              var4 = QuickChatCategoryRegistry.a(VerticalMenuSlider.field_A, 4371, new String[]{param0.name, param2.name});
               this.field_H.addFirst(new n(param2, param0, var4), 0);
             }
           }
@@ -3546,7 +3546,7 @@ final class GameSession implements AiHost {
               if (var6 != 0) {
                 while (true) {
                   NodeHashTableIterator.a(stackIn_46_0, (byte) 73);
-                  kr.a((byte) 65, var4);
+                  InvalidMapConnectionException.a((byte) 65, var4);
                   var3_int++;
                   break scanLoop1;
                 }
@@ -3617,7 +3617,7 @@ final class GameSession implements AiHost {
                 var4 = var2[var3_int];
                 stackIn_46_0Lifetime1 = var4;
                 NodeHashTableIterator.a(stackIn_46_0Lifetime1, (byte) 73);
-                kr.a((byte) 65, var4);
+                InvalidMapConnectionException.a((byte) 65, var4);
                 var3_int++;
                 if (var6 != 0) {
                   break scanLoop1;
@@ -3783,7 +3783,7 @@ final class GameSession implements AiHost {
               if (null != this.field_s[var2_int]) {
                 this.field_s[var2_int].broadcastChat(param0 + 7);
                 if (AchievementProgress.field_g) {
-                  var3_ref_String = "My personality is " + wk.field_a[this.field_s[var2_int].getPersonality(false)];
+                  var3_ref_String = "My personality is " + WidgetStateStyle.field_a[this.field_s[var2_int].getPersonality(false)];
                   this.addChatLine(this.field_P.field_v[var2_int], var3_ref_String, (byte) 51);
                 }
               }
@@ -3884,7 +3884,7 @@ final class GameSession implements AiHost {
           if (param0 >= -114) {
             this.field_Q = (TurnEventLog) null;
           }
-          AchievementProgress.a(FrameTimer.a(this.field_P.field_q, -71), -256, FrameTimer.a(this.field_P.field_i, -88), eh.a(25, this.field_P.field_p), var2);
+          AchievementProgress.a(FrameTimer.a(this.field_P.field_q, -71), -256, FrameTimer.a(this.field_P.field_i, -88), BirthDateConfirmationForm.a(25, this.field_P.field_p), var2);
           this.field_ab.clear((byte) 108);
           this.field_o.clear((byte) 127);
           this.field_v.clear((byte) 112);

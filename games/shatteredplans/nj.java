@@ -90,7 +90,7 @@ final class nj {
 
     final static void a(float param0, int param1, String param2) {
         try {
-          il.field_cb = param0;
+          ContentDialog.field_cb = param0;
           DerelictMapGenerator.field_r = param2;
           if (param1 != 2) {
             field_a = 17;
@@ -111,7 +111,7 @@ final class nj {
           sr.field_h = true;
           return;
         }
-        cg.field_C = WhirlpoolHasher.field_j;
+        OpacityWidget.field_C = WhirlpoolHasher.field_j;
         uq.field_j = ck.field_a;
         uq.field_j.field_jb = -1;
         WhirlpoolHasher.field_j = null;

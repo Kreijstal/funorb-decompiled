@@ -38,7 +38,7 @@ final class StellarBombEvent extends IntrusiveNode {
             if (var7 != 0) {
               if (var7 >= 128 &&
                 160 > var7) {
-                var8 = tl.field_p[var7 - 128];
+                var8 = GameClientShell.field_p[var7 - 128];
                 if (var8 == 0) {
                   var8 = 63;
                 }

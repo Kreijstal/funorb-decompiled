@@ -30,8 +30,8 @@ final class PlayerEliminatedEvent extends IntrusiveNode {
           var9_int = 495;
           var10 = 5;
           sg.field_Ab.setTarget(var9_int + param6, param2, (byte) 88, var10, 5);
-          uq.field_j.setTarget(-cg.field_C.field_K + sg.field_Ab.field_K, param2, (byte) 66, 0, 0);
-          cg.field_C.setTarget(cg.field_C.field_K, param2, (byte) 112, 0, uq.field_j.field_K);
+          uq.field_j.setTarget(-OpacityWidget.field_C.field_K + sg.field_Ab.field_K, param2, (byte) 66, 0, 0);
+          OpacityWidget.field_C.setTarget(OpacityWidget.field_C.field_K, param2, (byte) 112, 0, uq.field_j.field_K);
           var10 = var10 + (param2 + param4);
           hd.field_m.setTarget(hd.field_m.measureWidthUnbounded(false), param1, (byte) 77, var10, 5);
           var11 = DirectByteArrayStorage.field_l.measureWidthUnbounded(false);
@@ -78,13 +78,13 @@ final class PlayerEliminatedEvent extends IntrusiveNode {
             }
           }
           wl.field_b = ValidationMessageWidget.field_Q;
-          AnimatedPanel.a(IntList.field_j, pg.field_C, MidiPcmStream.field_w, ScrollPane.field_Db, CellVertex.field_d, 5, Dialog.field_J, param1, param3, 6, param2, var10, -117, param4, var10);
-          gn.field_y = id.a(2, param5, "", "lobbyicon");
+          AnimatedPanel.a(IntList.field_j, LabeledChildWidget.field_C, MidiPcmStream.field_w, ScrollPane.field_Db, CellVertex.field_d, 5, Dialog.field_J, param1, param3, 6, param2, var10, -117, param4, var10);
+          StatefulWidgetTheme.field_y = id.a(2, param5, "", "lobbyicon");
           PanelNode.field_o = false;
-          pe.field_D = ChatMessage.field_c;
+          UnderageAccountInfoPanel.field_D = ChatMessage.field_c;
           RandomAccessCacheFile.a(115, 200);
           RecklessAi.a(-94, param2, param1);
-          PointsVictoryChecker.a(param0, 0, 0, (byte) -3, cg.field_B, 16777215);
+          PointsVictoryChecker.a(param0, 0, 0, (byte) -3, OpacityWidget.field_B, 16777215);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

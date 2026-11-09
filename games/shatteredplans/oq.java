@@ -83,11 +83,11 @@ final class oq {
     }
 
     final static void a(boolean param0) {
-        if (!eh.field_P) {
+        if (!BirthDateConfirmationForm.field_P) {
           throw new IllegalStateException();
         }
         or.field_a = true;
-        wk.a(param0, false);
+        WidgetStateStyle.a(param0, false);
         SoundPlayback.field_i = 0;
     }
 

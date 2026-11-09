@@ -50,8 +50,8 @@ final class ck {
         int var15_intLifetime1;
         int var15_intLifetime2;
         try {
-          mp.field_b = ri.a("font", "", param0, param4, (byte) 89);
-          rs.field_Cb = ri.a("smallfont", "", param0, param4, (byte) 111);
+          mp.field_b = LoginForm.a("font", "", param0, param4, (byte) 89);
+          rs.field_Cb = LoginForm.a("smallfont", "", param0, param4, (byte) 111);
           SecondaryNodeHashTable.field_f = MessageKind.a(true, param0, "", "logo");
           var7_int = 3 * SecondaryNodeHashTable.field_f.field_o / 4;
           var8 = SecondaryNodeHashTable.field_f.field_p * 3 / 4;
@@ -62,7 +62,7 @@ final class ck {
           SecondaryNodeHashTable.field_f.drawSilhouette(0, 0, 0);
           SoftwareRasterizer.b(3, 3, 0, 0, var7_int, var8);
           SecondaryNodeHashTable.field_f.drawSilhouette(0, 0, 255);
-          cg.i(param6 + 8);
+          OpacityWidget.popLegacyRasterState(param6 + 8);
           HuffmanCodec.field_d = ae.a(101, "", param0, "edge_orbs");
           IsaacRandom.field_b = new Sprite[4];
           RandomAccessCacheFile.a(param6 ^ 108);
@@ -75,7 +75,7 @@ final class ck {
             var19.drawSilhouette(16 - var19.field_t, 16 - var19.field_x, 0);
             IsaacRandom.field_b[var9_int] = var20;
           }
-          cg.i(0);
+          OpacityWidget.popLegacyRasterState(0);
           IntList.field_c = MessageKind.a(true, param0, "", "menu_hex");
           jm.field_r = id.a(2, param0, "", "instr_mainview");
           NodeSequence.field_d = id.a(param6 ^ -6, param0, "", "instr_starframe");
@@ -87,7 +87,7 @@ final class ck {
           wl.field_d = var9[4];
           tm.field_r = var9[1];
           var21 = va.a("hud_icons_red", param6 + 8, "", param0);
-          bd.field_D = var21[0];
+          AlignedMenuLabel.field_D = var21[0];
           Wormhole.field_h = var21[3];
           DiskArchiveRequest.field_x = var21[2];
           je.field_b = var21[1];
@@ -119,21 +119,21 @@ final class ck {
           NodeSequence.field_b[4] = var26_ref;
           rk.field_j = MessageKind.a(true, param0, "", "ready_button");
           ei.field_a = MessageKind.a(true, param0, "", "ready_button_down");
-          jl.field_W = MessageKind.a(true, param0, "", "shine_left");
+          ResizingDialog.field_W = MessageKind.a(true, param0, "", "shine_left");
           DerelictMapReader.field_g = MessageKind.a(true, param0, "", "shine_right");
           VictoryChecker.field_h = MessageKind.a(true, param0, "", "shine_mid");
           SpriteState.field_q = MessageKind.a(true, param0, "", "combat_hex_white");
           RandomAccessCacheFile.a(-116);
           SpriteState.field_q.bindAsRenderTarget();
           SpriteState.field_q.drawColourised(0, 0, 2105376);
-          cg.i(0);
+          OpacityWidget.popLegacyRasterState(0);
           NameSuggestionsPanel.field_H = MessageKind.a(true, param0, "", "planet_burnt");
           qe.field_j = MessageKind.a(true, param0, "", "planet_scorchedearth");
           NetworkArchiveRequest.field_x = MessageKind.a(true, param0, "", "planet_earthlike");
           ta.field_a = MessageKind.a(true, param0, "", "planet_exotic");
           BytePayloadNode.field_k = MessageKind.a(true, param0, "", "planet_gas");
           rl.field_c = MessageKind.a(true, param0, "", "planet_ringed");
-          kr.field_d = MessageKind.a(true, param0, "", "planet_rock");
+          InvalidMapConnectionException.field_d = MessageKind.a(true, param0, "", "planet_rock");
           rk.field_k = MessageKind.a(true, param0, "", "alien_miner");
           IntrusiveNodeHashTable.field_h = MessageKind.a(true, param0, "", "alien_ship");
           CanvasResizeController.field_t = MessageKind.a(true, param0, "", "alien_base");
@@ -142,14 +142,14 @@ final class ck {
           oo.field_a = id.a(param6 ^ -6, param0, "", "defensegrid");
           AccountValidationText.field_e = id.a(2, param0, "", "chevron");
           TextFieldWidget.field_L = MessageKind.a(true, param0, "", "warning");
-          bd.field_G = id.a(2, param0, "", "hammer");
+          AlignedMenuLabel.field_G = id.a(2, param0, "", "hammer");
           AccountFieldValue.field_e = id.a(param6 ^ -6, param0, "", "beaker");
           UiWidget.field_t = MessageKind.a(true, param0, "", "factionring");
           SpriteState.field_y = MessageKind.a(true, param0, "", "factionringtag");
           ArrayWidgetGroup.field_z = MessageKind.a(true, param0, "", "factionringcentre");
           MatchingTextValidator.field_p = MessageKind.a(true, param0, "", "arrowship");
           ReflectionCheck.field_o = MessageKind.a(true, param0, "", "arrowshipdamaged");
-          cf.field_F = MessageKind.a(true, param0, "", "fleetsarrowship");
+          StatusMessagePanel.field_F = MessageKind.a(true, param0, "", "fleetsarrowship");
           FleetTrailPoint.field_i = va.a("fleetbuttons", 0, "", param0);
           StarAbandonedEvent.field_r = va.a("anim_icons", 0, "", param0);
           GarrisonTask.field_s = new ArgbSprite(6, 6);
@@ -265,8 +265,8 @@ final class ck {
           }
           fb.field_Vb = new Sprite(18, 12);
           fb.field_Vb.bindAsRenderTarget();
-          bd.field_G.drawColourised(1, 1, 8421504);
-          cg.i(0);
+          AlignedMenuLabel.field_G.drawColourised(1, 1, 8421504);
+          OpacityWidget.popLegacyRasterState(0);
           pr.field_a.addOutline(16777215);
           HuffmanCodec.field_b.addOutline(16777215);
           if (param6 != -8) {
@@ -286,7 +286,7 @@ final class ck {
           ql.field_o = new Sprite[var14];
           MapView.field_sb = new Sprite[var14];
           vh.field_a = new Sprite[var14];
-          bd.field_C = new Sprite[var14];
+          AlignedMenuLabel.field_C = new Sprite[var14];
           GarrisonTask.field_p = va.a("system_icons", 0, "", param0);
           PlayerEliminatedEvent.a(param1, param2, param3, param5, true, param0);
           GameScreen.field_R = new Sprite(15, 15);
@@ -308,7 +308,7 @@ final class ck {
             var17 = var16 > 10 ? 20 - var16 : 3;
             SoftwareRasterizer.drawHorizontalLine(11 - var17, 1 + var16, 2 * var17, 65793);
           }
-          cg.i(0);
+          OpacityWidget.popLegacyRasterState(0);
           GameKeyHandler.field_e.addOutline(2458760);
           LoginMethodPreference.field_a.addOutline(2458760);
           WidgetTheme.field_k = LoginMethodPreference.field_a.copy();

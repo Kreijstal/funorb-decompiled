@@ -53,7 +53,7 @@ final class hc {
         RandomAccessCacheFile.a(-107);
         vc.field_b.bindAsRenderTarget();
         SoftwareRasterizer.fillRect(0, 0, var4, 2, 16777215);
-        cg.i(0);
+        OpacityWidget.popLegacyRasterState(0);
         SpriteButton var6 = new SpriteButton(5 + param0, var9.field_i / 2 + param2, vc.field_b);
         SpriteButton var7 = new SpriteButton(-vc.field_b.field_z + (var9.field_m + (param0 - 5)), var9.field_i / 2 + param2, vc.field_b);
         MenuLabel var8 = new MenuLabel(param0, param2, var9.field_m, var9.field_i, ho.field_g);

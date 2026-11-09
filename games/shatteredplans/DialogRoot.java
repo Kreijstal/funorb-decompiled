@@ -511,7 +511,7 @@ final class DialogRoot extends SingleChildWidget {
         Archive.field_g.a(0, MapViewState.field_j.field_mb - 42, (byte) 95, MapViewState.field_j.field_K, 0);
         nm.field_c.setTarget(CanvasResizeController.field_a.field_K, cr.field_c, (byte) 76, 0, 0);
         int var1 = cr.field_c + 2;
-        MenuList.field_v.setTarget(CanvasResizeController.field_a.field_K, CanvasResizeController.field_a.field_mb - (!ns.field_pb ? 0 : var1), (byte) 105, !ns.field_pb ? 0 : var1, 0);
+        MenuList.field_v.setTarget(CanvasResizeController.field_a.field_K, CanvasResizeController.field_a.field_mb - (!AccountStatusDialog.field_pb ? 0 : var1), (byte) 105, !AccountStatusDialog.field_pb ? 0 : var1, 0);
         CachedArchiveSource.d(18);
         QuickChatMenu.field_Ab.setTarget(MapViewState.field_j.field_K, 40, (byte) 41, -40 + MapViewState.field_j.field_mb, 0);
         sg.field_zb.setTarget(AchievementProgress.field_i.field_K, 30, (byte) 72, 0, 0);
@@ -520,16 +520,16 @@ final class DialogRoot extends SingleChildWidget {
         GameSession.field_e.setTarget(78, 30, (byte) 42, 5, 75);
         WeightedCacheEntry.field_t.setTarget(48, 30, (byte) 61, 5, 155);
         ta.field_d.setTarget(48, 30, (byte) 39, 5, 205);
-        int var2 = !ns.field_pb ? 200 : 250;
+        int var2 = !AccountStatusDialog.field_pb ? 200 : 250;
         IsaacBackedRandom.field_c.setTarget(363 - var2, 30, (byte) 95, 5, var2 + 5);
         hq.field_b.setTarget(-5 + AchievementProgress.field_i.field_K - 370, 30, (byte) 53, 5, 370);
-        SingleChildWidget.field_y.a(-5 + qf.field_e.field_K - 5, 37, 5, 2, -125, -5 + (qf.field_e.field_mb - 32) - 5, pe.field_K);
+        SingleChildWidget.field_y.a(-5 + qf.field_e.field_K - 5, 37, 5, 2, -125, -5 + (qf.field_e.field_mb - 32) - 5, UnderageAccountInfoPanel.field_K);
         if (param0 < 93) {
           field_C = -10;
         }
         int var3 = (2 + AchievementProgress.field_i.field_K) / 2;
         gb.field_m.setTarget(-2 + var3, 40, (byte) 114, -40 + AchievementProgress.field_i.field_mb, 0);
-        if (!ns.field_pb) {
+        if (!AccountStatusDialog.field_pb) {
           var3 = 0;
         }
         LinkPainter.field_b.setTarget(AchievementProgress.field_i.field_K - var3, 40, (byte) 85, -40 + AchievementProgress.field_i.field_mb, var3);

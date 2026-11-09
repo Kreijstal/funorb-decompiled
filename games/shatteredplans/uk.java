@@ -53,7 +53,7 @@ final class uk {
             return rl.field_c;
           }
           if (5 == var2_int) {
-            stackIn_28_0 = kr.field_d;
+            stackIn_28_0 = InvalidMapConnectionException.field_d;
             return stackIn_28_0;
           }
           if (var2_int == 6) {
@@ -81,7 +81,7 @@ final class uk {
         }
     }
 
-    final static GalaxyMap a(int param0, GameState param1, PacketBuffer param2, IntrusiveDeque param3, Player[] param4, Player param5, byte param6, GameRules param7) throws jn, kr {
+    final static GalaxyMap a(int param0, GameState param1, PacketBuffer param2, IntrusiveDeque param3, Player[] param4, Player param5, byte param6, GameRules param7) throws MapGenerationException, InvalidMapConnectionException {
         int var17_int = 0;
         GalaxyMap stackIn_81_0 = null;
         RuntimeException stackIn_84_0 = null;
@@ -113,7 +113,7 @@ final class uk {
         Territory[] var17 = null;
         int var18 = 0;
         Star var18_ref_ln = null;
-        lo[] var19 = null;
+        CombinedTerritory[] var19 = null;
         Player var19_ref = null;
         int var20 = 0;
         Star var20_ref_ln = null;
@@ -134,7 +134,7 @@ final class uk {
         Star var29 = null;
         Player var30 = null;
         Star var31 = null;
-        lo[] var32 = null;
+        CombinedTerritory[] var32 = null;
         Star var33 = null;
         Star var34 = null;
         Star var35 = null;
@@ -212,13 +212,13 @@ final class uk {
             }
           }
           var18Lifetime1 = param2.readUnsignedByte(param6 ^ 71);
-          var32 = new lo[var18Lifetime1];
+          var32 = new CombinedTerritory[var18Lifetime1];
           var19 = var32;
           for (var20 = 0; var18Lifetime1 > var20; var20++) {
             var30 = param4[param2.readUnsignedByte(-69)];
             var21_ref_fs = var30;
             var31 = var15.field_e[param2.readUnsignedByte(-64)];
-            var19[var20] = new lo(var30, var31);
+            var19[var20] = new CombinedTerritory(var30, var31);
             var21_ref_fs.field_m = var32[var20];
             var32[var20].addStar(-21771, var31);
             var23 = param2.readUnsignedByte(-61) - 1;
@@ -291,7 +291,7 @@ final class uk {
               var21Lifetime4++;
               continue;
             }
-            throw new kr("Tannhauser Gate is unconnected at at least one end.");
+            throw new InvalidMapConnectionException("Tannhauser Gate is unconnected at at least one end.");
           }
           param1.field_x.readScores(param2, (byte) -109);
           var21Lifetime5 = param2.readUnsignedByte(param6 - 63);
@@ -302,7 +302,7 @@ final class uk {
             var37 = var36[var24Lifetime2];
             var25 = var37;
             if (var37.field_m == null) {
-              var25.field_m = new lo(var37, (Star) null);
+              var25.field_m = new CombinedTerritory(var37, (Star) null);
             }
           }
           stackIn_81_0 = var15;

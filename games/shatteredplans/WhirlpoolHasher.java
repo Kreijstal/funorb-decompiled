@@ -237,7 +237,7 @@ final class WhirlpoolHasher {
           var64 = new int[param5.field_e];
           var61 = HuffmanCodec.field_c;
           var62 = RandomAccessCacheFile.field_f;
-          var63 = hk.field_ob;
+          var63 = PaddedContentDialog.field_ob;
           for (var13 = 0; param5.field_e > var13; var13++) {
             var14 = var61[var13] * param0 + var62[var13] * param3 + var63[var13] * param7 >> 8;
             if (var14 < 0) {
@@ -269,7 +269,7 @@ final class WhirlpoolHasher {
             return;
           }
           for (var13Lifetime1 = 0; var13Lifetime1 < qj.field_e; var13Lifetime1++) {
-            var14Lifetime1 = jl.field_M[var13Lifetime1];
+            var14Lifetime1 = ResizingDialog.field_M[var13Lifetime1];
             var15Lifetime1 = param5.field_s[var14Lifetime1];
             var16 = param5.field_i[var14Lifetime1];
             var17 = param5.field_B[var14Lifetime1];
@@ -512,7 +512,7 @@ final class WhirlpoolHasher {
             var8.field_B[var8.field_z - 1 + var9Lifetime2 * var8.field_z] = SolVictoryChecker.blendColours(0, var8.field_B[var9Lifetime2 * var8.field_z - 1 + var8.field_z], -109, 128);
           }
           var8.field_B[var8.field_w * var8.field_z - 1] = SolVictoryChecker.blendColours(0, var8.field_B[var8.field_w * var8.field_z - 1], -92, 190);
-          cg.i(0);
+          OpacityWidget.popLegacyRasterState(0);
           stackIn_29_0 = var8;
           return stackIn_29_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

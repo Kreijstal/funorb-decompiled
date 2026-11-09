@@ -12,7 +12,7 @@ final class DerelictMapGenerator extends StandardMapGenerator {
     static int field_m;
 
     final static void c(int param0) {
-        lg.field_e = null;
+        ProxyAuthenticationRequiredException.field_e = null;
         int var1 = 119 % ((param0 + 40) / 34);
     }
 
@@ -21,7 +21,7 @@ final class DerelictMapGenerator extends StandardMapGenerator {
         this.field_e = this.field_a;
     }
 
-    public final GalaxyMap generate(byte param0) throws jn {
+    public final GalaxyMap generate(byte param0) throws MapGenerationException {
         int var7_int = 0;
         int var9 = 0;
         int var11 = 0;
@@ -252,7 +252,7 @@ final class DerelictMapGenerator extends StandardMapGenerator {
         return sa.field_a.readString(-1);
     }
 
-    final void placeStars(boolean param0, GalaxyMap param1) throws jn {
+    final void placeStars(boolean param0, GalaxyMap param1) throws MapGenerationException {
         int stackIn_5_0 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;

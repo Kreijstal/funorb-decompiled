@@ -43,7 +43,7 @@ class TertiaryLinkNode extends DualLinkNode {
             dupTemp$0 = CheckboxPainter.a((byte) -92);
             var4 = dupTemp$0;
             if (dupTemp$0 == null) {
-              if (bd.field_A) {
+              if (AlignedMenuLabel.field_A) {
                 System.out.println(ChatMessage.field_a);
               }
               return;

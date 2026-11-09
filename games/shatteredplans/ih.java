@@ -82,7 +82,7 @@ final class ih {
 
     final static boolean b(int param0) {
         int var1 = 1 % ((-61 - param0) / 56);
-        return lg.field_e != null ? true : false;
+        return ProxyAuthenticationRequiredException.field_e != null ? true : false;
     }
 
     static {

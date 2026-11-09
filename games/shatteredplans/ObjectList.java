@@ -101,8 +101,8 @@ final class ObjectList {
           var8 = 0;
           if (null != np.field_a && (null != SliderWidget.field_E ||
             ArchiveIndex.field_h != null ||
-            null != pg.field_A ||
-            null != ji.field_D)) {
+            null != LabeledChildWidget.field_A ||
+            null != DateInputWidget.field_D)) {
             for (var9 = 0; var9 < ProductionContent.field_k; var9++) {
               var10_int = np.field_a.field_dc[var9] & 255;
               if (SliderWidget.field_E != null &&
@@ -121,13 +121,13 @@ final class ObjectList {
                   var5_int = 1;
                 }
               }
-              if (ji.field_D != null &&
-                null != ji.field_D[var9]) {
-                var8 = var8 | ji.field_D[var9][var10_int];
+              if (DateInputWidget.field_D != null &&
+                null != DateInputWidget.field_D[var9]) {
+                var8 = var8 | DateInputWidget.field_D[var9][var10_int];
               }
-              if (pg.field_A != null &&
-                null != pg.field_A[var9]) {
-                var11_intLifetime1 = pg.field_A[var9][var10_int];
+              if (LabeledChildWidget.field_A != null &&
+                null != LabeledChildWidget.field_A[var9]) {
+                var11_intLifetime1 = LabeledChildWidget.field_A[var9][var10_int];
                 if (var11_intLifetime1 > var7) {
                   var7 = var11_intLifetime1;
                 }
@@ -152,8 +152,8 @@ final class ObjectList {
             if (null == var12.field_M) {
               var12.field_Ab = new AnimatedPanel(0L, ArrayWidgetGroup.field_E);
               var12.addChild(4, var12.field_Ab);
-              var12.field_Ob = new AnimatedPanel(0L, oj.field_zb);
-              if (ns.field_pb) {
+              var12.field_Ob = new AnimatedPanel(0L, AccountCreationDialog.field_zb);
+              if (AccountStatusDialog.field_pb) {
                 var12.addChild(param1 ^ 4, var12.field_Ob);
               }
               var12.field_Ob.field_y = 2;
@@ -272,7 +272,7 @@ final class ObjectList {
               stackIn_96_0 = var12.field_Ab;
               stackIn_96_1 = -var25_int;
               stackIn_96_2 = var12.field_K;
-              if (ns.field_pb) {
+              if (AccountStatusDialog.field_pb) {
                 stackIn_97_3 = 42;
               } else {
                 stackIn_97_3 = 0;
@@ -425,9 +425,9 @@ final class ObjectList {
                       var29 = 1;
                     }
                   }
-                  if (null != pg.field_A &&
-                    null != pg.field_A[var27_int]) {
-                    var30_intLifetime1 = pg.field_A[var27_int][var28];
+                  if (null != LabeledChildWidget.field_A &&
+                    null != LabeledChildWidget.field_A[var27_int]) {
+                    var30_intLifetime1 = LabeledChildWidget.field_A[var27_int][var28];
                     if (var30_intLifetime1 != 0 &&
                       !PanelNode.field_o &&
                       !var12.field_Ub) {
@@ -437,9 +437,9 @@ final class ObjectList {
                       var29 = 1;
                     }
                   }
-                  if (ji.field_D != null &&
-                    null != ji.field_D[var27_int] &&
-                    (~var12.field_Wb & ji.field_D[var27_int][var28]) != 0) {
+                  if (DateInputWidget.field_D != null &&
+                    null != DateInputWidget.field_D[var27_int] &&
+                    (~var12.field_Wb & DateInputWidget.field_D[var27_int][var28]) != 0) {
                     var29 = 1;
                   }
                   if (var29 != 0) {
@@ -504,7 +504,7 @@ final class ObjectList {
           ScrollPane var3 = (ScrollPane) null;
           ObjectList.a(-32, 115, (ScrollPane) null, false, 125);
         }
-        ns.field_xb = ae.field_c[param1];
+        AccountStatusDialog.field_xb = ae.field_c[param1];
     }
 
     final void copyTo(Object[] param0, int param1) {

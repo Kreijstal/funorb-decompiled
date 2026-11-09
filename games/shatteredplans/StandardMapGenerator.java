@@ -394,10 +394,10 @@ class StandardMapGenerator implements MapGenerator {
         }
     }
 
-    public GalaxyMap generate(byte param0) throws jn {
+    public GalaxyMap generate(byte param0) throws MapGenerationException {
         int var6 = 0;
         int var7 = ShatteredPlansClient.field_F ? 1 : 0;
-        GalaxyMap var8 = new GalaxyMap(pe.a((byte) 34, this.field_c), ls.a(this.field_b, 2), this.field_h, this.field_d);
+        GalaxyMap var8 = new GalaxyMap(UnderageAccountInfoPanel.a((byte) 34, this.field_c), ls.a(this.field_b, 2), this.field_h, this.field_d);
         int var6Lifetime1;
         this.placeStars(false, var8);
         this.finishMap(var8, 0);
@@ -418,7 +418,7 @@ class StandardMapGenerator implements MapGenerator {
         return var8;
     }
 
-    private final void a(byte param0, int[] param1, int[] param2, GalaxyMap param3) throws jn {
+    private final void a(byte param0, int[] param1, int[] param2, GalaxyMap param3) throws MapGenerationException {
         try {
           if (param0 != 95) {
             Random var6 = (Random) null;
@@ -459,7 +459,7 @@ class StandardMapGenerator implements MapGenerator {
         }
     }
 
-    void placeStars(boolean param0, GalaxyMap param1) throws jn {
+    void placeStars(boolean param0, GalaxyMap param1) throws MapGenerationException {
         Star stackIn_39_0 = null;
         Object stackIn_49_0 = null;
         StringBuilder stackIn_49_1 = null;
@@ -684,7 +684,7 @@ class StandardMapGenerator implements MapGenerator {
         }
     }
 
-    private final void a(int[] param0, GalaxyMap param1, int param2) throws jn {
+    private final void a(int[] param0, GalaxyMap param1, int param2) throws MapGenerationException {
         int var4_int = 0;
         int var5 = 0;
         Star var6 = null;
@@ -702,7 +702,7 @@ class StandardMapGenerator implements MapGenerator {
         }
     }
 
-    private final void a(int param0, int param1, int[] param2, GalaxyMap param3, int param4, byte param5, int param6) throws jn {
+    private final void a(int param0, int param1, int[] param2, GalaxyMap param3, int param4, byte param5, int param6) throws MapGenerationException {
         int dupTemp$1 = 0;
         int var11_int = 0;
         int var14_int = 0;
@@ -780,7 +780,7 @@ class StandardMapGenerator implements MapGenerator {
                 }
                 if (decompiledNaturalLoopExit0) {
                   if (0 == var10) {
-                    throw new jn("Insufficient resources to give production to each star. Close: " + param1 + ", Far: " + param6 + ", Minimum: " + param0 + ", Extra: " + param4 + ".");
+                    throw new MapGenerationException("Insufficient resources to give production to each star. Close: " + param1 + ", Far: " + param6 + ", Minimum: " + param0 + ", Extra: " + param4 + ".");
                   }
                   do {
                     var13 = qf.a((byte) 55, 4, param3.field_j);
@@ -1009,7 +1009,7 @@ class StandardMapGenerator implements MapGenerator {
         return new Star(param4, var9, var10, var11);
     }
 
-    int[] a(Random param0, Star[] param1, int[][] param2, int param3, byte param4, int param5, int param6, int[] param7, int param8) throws jn {
+    int[] a(Random param0, Star[] param1, int[][] param2, int param3, byte param4, int param5, int param6, int[] param7, int param8) throws MapGenerationException {
         int var12_int = 0;
         int incrementValue$0 = 0;
         int var20 = 0;
@@ -1085,7 +1085,7 @@ class StandardMapGenerator implements MapGenerator {
             var26++;
           }
           if (var11Lifetime1 < param8) {
-            throw new jn("Not enough highly-connected systems!");
+            throw new MapGenerationException("Not enough highly-connected systems!");
           }
           var29 = new int[param8];
           var27 = var29;
@@ -1150,7 +1150,7 @@ class StandardMapGenerator implements MapGenerator {
             }
           }
           if (var15Lifetime3 < param3) {
-            throw new jn("Start locations cannot be placed far enough apart!");
+            throw new MapGenerationException("Start locations cannot be placed far enough apart!");
           }
           stackIn_71_0 = var13;
           return stackIn_71_0;

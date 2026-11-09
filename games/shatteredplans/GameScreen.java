@@ -109,7 +109,7 @@ final class GameScreen {
               if (stackIn_10_0) {
                 var5.toggle((byte) 37);
                 if (0 == var7.field_x) {
-                  var8 = pe.field_F;
+                  var8 = UnderageAccountInfoPanel.field_F;
                 } else {
                   stackIn_22_0 = new StringBuilder().append(hd.field_j).append(" ");
                   if (var7.field_x != 1) {
@@ -519,7 +519,7 @@ final class GameScreen {
               return;
             }
             if (var2_refLifetime4.equalsIgnoreCase("borders")) {
-              tl.field_u = true;
+              GameClientShell.field_u = true;
               return;
             }
             if (var2_refLifetime4.equalsIgnoreCase("garrison")) {
@@ -649,11 +649,11 @@ final class GameScreen {
                   }
                   if ((decompiledFrameRemainder0) &&
                     (decompiledFrameCompleted4)) {
-                    var5.setLabel((byte) -54, 3375155, il.field_hb);
-                    var7.field_o = QuickChatCategoryRegistry.a(gn.field_x, 4371, new String[]{param1.name});
+                    var5.setLabel((byte) -54, 3375155, ContentDialog.field_hb);
+                    var7.field_o = QuickChatCategoryRegistry.a(StatefulWidgetTheme.field_x, 4371, new String[]{param1.name});
                     var9 = (MenuComponent) (var7.field_l.startForward(0));
                     while (null != var9) {
-                      var9.field_o = QuickChatCategoryRegistry.a(gn.field_x, 4371, new String[]{param1.name});
+                      var9.field_o = QuickChatCategoryRegistry.a(StatefulWidgetTheme.field_x, 4371, new String[]{param1.name});
                       var9 = (MenuComponent) (var7.field_l.nextForward((byte) -71));
                       if (var11 != 0) {
                         decompiledFrameCompleted3 = false;
@@ -966,7 +966,7 @@ final class GameScreen {
             var8 = MenuWindow.a((Sprite) null, var6, var4, var5, -1, var7);
             bs.a(var8, 93);
             SoftwareRasterizer.b(3, 3, 0, 0, var4, var7);
-            cg.i(0);
+            OpacityWidget.popLegacyRasterState(0);
             var8.drawAlpha(var5, var6, (var3_int << 7) / 32);
             decompiledFrameRemainder1 = (var40 != 0);
           }
@@ -1019,7 +1019,7 @@ final class GameScreen {
           if (var10 != 0) {
             stackIn_48_0 = QuickChatCategoryDefinition.field_s;
           } else {
-            stackIn_48_0 = ce.field_v;
+            stackIn_48_0 = PasswordInputPainter.field_v;
           }
           boolean decompiledFrameCompleted4 = true;
           boolean decompiledFrameCompleted3 = true;
@@ -1462,7 +1462,7 @@ final class GameScreen {
           var7 = this.field_s.field_P.field_v[param2];
           var8 = var7.field_s;
           rs.field_Cb.drawRightAlignedAlpha(this.field_l[param0][param2], param5 + 27, param1, var8, -1, param3);
-          rs.field_Cb.drawStringAlpha(eh.field_I[this.field_q[param0][param2]], 37 + param5, param1, var8, -1, param3);
+          rs.field_Cb.drawStringAlpha(BirthDateConfirmationForm.field_I[this.field_q[param0][param2]], 37 + param5, param1, var8, -1, param3);
           rs.field_Cb.drawStringAlpha(var7.name, param5 + 67, param1, var8, -1, param3);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "kq.FB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
@@ -1584,7 +1584,7 @@ final class GameScreen {
         try {
           var7 = var6.field_s;
           rs.field_Cb.drawRightAligned(this.field_l[param2][param0], param3 + 27, param4, var7, -1);
-          rs.field_Cb.drawString(eh.field_I[this.field_q[param2][param0]], param3 + 37, param4, var7, -1);
+          rs.field_Cb.drawString(BirthDateConfirmationForm.field_I[this.field_q[param2][param0]], param3 + 37, param4, var7, -1);
           rs.field_Cb.drawString(var6.name, 67 + param3, param4, var7, -1);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "kq.CB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
@@ -2047,14 +2047,14 @@ final class GameScreen {
             this.buildProjectButtons(-90);
           }
           var4 = var3.field_c[param0];
-          var4.field_o = mm.field_q;
+          var4.field_o = EmailSyntaxValidator.field_q;
           var5 = (MenuComponent) (var4.field_l.startForward(0));
           while (var5 != null) {
             if (var6 != 0) {
               return;
             }
             if (var5.field_o != null) {
-              var5.field_o = mm.field_q;
+              var5.field_o = EmailSyntaxValidator.field_q;
             }
             var5 = (MenuComponent) (var4.field_l.nextForward((byte) -71));
           }
@@ -2526,9 +2526,9 @@ final class GameScreen {
               return;
             }
             if (var4.field_x == 0) {
-              var5 = pe.field_F;
+              var5 = UnderageAccountInfoPanel.field_F;
             } else {
-              stackIn_15_0 = new StringBuilder().append(il.field_lb).append(" ");
+              stackIn_15_0 = new StringBuilder().append(ContentDialog.field_lb).append(" ");
               if (var4.field_x != 1) {
                 stackIn_16_1 = QuickChatCategoryRegistry.a(d.field_c, 4371, new String[]{Integer.toString(var4.field_x)});
               } else {
@@ -2874,19 +2874,19 @@ final class GameScreen {
               if (var16 != 0) {
                 if (!(var9 instanceof DerelictVictoryChecker)) {
                   var8 = lm.field_a;
-                  var8 = cf.field_I;
+                  var8 = StatusMessagePanel.field_I;
                 } else {
-                  var8 = cf.field_I;
+                  var8 = StatusMessagePanel.field_I;
                 }
               }
             } else {
               if (!(var9 instanceof DerelictVictoryChecker)) {
                 var8 = lm.field_a;
                 if (var16 != 0) {
-                  var8 = cf.field_I;
+                  var8 = StatusMessagePanel.field_I;
                 }
               } else {
-                var8 = cf.field_I;
+                var8 = StatusMessagePanel.field_I;
               }
             }
           }
@@ -2909,7 +2909,7 @@ final class GameScreen {
           RandomAccessCacheFile.a(param0 ^ -5630);
           var11.bindAsRenderTarget();
           SoftwareRasterizer.fillRectGradient(0, 0, var11.field_z, var11.field_w, this.field_s.field_P.field_v[var10].field_k, 0);
-          cg.i(param0 ^ param0);
+          OpacityWidget.popLegacyRasterState(param0 ^ param0);
           var11.rotate90();
           var11.drawAlpha(5 + (rs.field_Cb.field_J / 2 + var4), rs.field_Cb.field_J + var5 + 10, 64);
           var12 = new ArgbSprite(NodeSequence.field_b[0].field_z, NodeSequence.field_b[0].field_w);
@@ -2931,7 +2931,7 @@ final class GameScreen {
             var12.draw(5 + (var4 + rs.field_Cb.field_J / 2) + (var11.field_z - NodeSequence.field_b[0].field_z / 2), 10 + var5 + rs.field_Cb.field_J);
             NodeSequence.field_b[var10].drawAlpha(-(NodeSequence.field_b[0].field_z / 2) + (var11.field_z + rs.field_Cb.field_J / 2) + (var4 + 5), rs.field_Cb.field_J + (var5 + 10), 64);
           }
-          var13 = QuickChatCategoryRegistry.a(eo.field_hb, 4371, new String[]{Integer.toString(1 + this.field_s.field_P.field_O)});
+          var13 = QuickChatCategoryRegistry.a(ProgressDialog.field_hb, 4371, new String[]{Integer.toString(1 + this.field_s.field_P.field_O)});
           var14 = 10 + NodeSequence.field_b[0].field_w + (var5 + (20 + mp.field_b.field_J));
           mp.field_b.drawCentred(var13, 320, var14, 16777215, -1);
           var15 = -32 + this.field_u;
@@ -3163,7 +3163,7 @@ final class GameScreen {
             this.a(0, (byte) 1);
           }
           if (this.field_s.field_W) {
-            pe.k(112);
+            UnderageAccountInfoPanel.k(112);
             this.a((byte) -109);
             if (var5 == 0) {
               return;
@@ -3762,7 +3762,7 @@ final class GameScreen {
             var2.field_e.a(-2948, (Sprite) null);
             boolean decompiledSharedTail1 = (this.field_s.field_N != 1);
             if (!decompiledSharedTail1) {
-              this.showStatusText(10, 0, il.field_Y);
+              this.showStatusText(10, 0, ContentDialog.field_Y);
               decompiledSharedTail1 = (var7 != 0);
             }
             if (decompiledSharedTail1) {
@@ -3829,7 +3829,7 @@ final class GameScreen {
                       }
                     } else {
                       if ((var3.field_f & 1 << var5) != 0) {
-                        var6_ref = QuickChatCategoryRegistry.a(lg.field_f, 4371, new String[]{(String) (var6_ref)});
+                        var6_ref = QuickChatCategoryRegistry.a(ProxyAuthenticationRequiredException.field_f, 4371, new String[]{(String) (var6_ref)});
                       } else {
                         var6_ref = QuickChatCategoryRegistry.a(NameSuggestionsPanel.field_M, 4371, new String[]{(String) (var6_ref)});
                       }
@@ -3923,7 +3923,7 @@ final class GameScreen {
                   SoftwareRasterizer.clear();
                   rs.field_Cb.drawRightAligned(this.field_o, this.field_T.field_z, rs.field_Cb.field_J, 16777215, -1);
                   SoftwareRasterizer.b(1, 1, 0, 0, this.field_eb.field_z, this.field_eb.field_w);
-                  cg.i(0);
+                  OpacityWidget.popLegacyRasterState(0);
                 }
               }
               if (var4 == 0 ||
@@ -3994,7 +3994,7 @@ final class GameScreen {
                 }
               }
             }
-            cg.i(0);
+            OpacityWidget.popLegacyRasterState(0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4242,12 +4242,12 @@ final class GameScreen {
               } else {
                 if (null == var8_ref_nf.field_j) {
                   var10 = var8_ref_nf.field_g;
-                  var8_ref_nf.field_j = new AnimatedPanel(0L, gn.field_w, var8_ref_nf.field_k);
-                  var8_ref_nf.field_j.field_jb = ((16711422 & gn.field_w.field_jb) >> 1) + var10 - (var10 >> 1 & 8355711);
+                  var8_ref_nf.field_j = new AnimatedPanel(0L, StatefulWidgetTheme.field_w, var8_ref_nf.field_k);
+                  var8_ref_nf.field_j.field_jb = ((16711422 & StatefulWidgetTheme.field_w.field_jb) >> 1) + var10 - (var10 >> 1 & 8355711);
                   var6 += 15;
                   var8_ref_nf.field_j.field_nb = ho.field_f;
                   var8_ref_nf.field_j.field_x = var10;
-                  var8_ref_nf.field_j.field_qb = (8355711 & gn.field_w.field_qb >> 1) + (-((var10 & 16711422) >> 1) + var10);
+                  var8_ref_nf.field_j.field_qb = (8355711 & StatefulWidgetTheme.field_w.field_qb >> 1) + (-((var10 & 16711422) >> 1) + var10);
                 }
                 var5++;
               }
@@ -4316,13 +4316,13 @@ final class GameScreen {
           var3_int = 0;
           var4 = uq.field_k;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(kr.field_f.length > var3_int)))) {
+          while (!(decompiledNaturalLoopExit0 = (!(InvalidMapConnectionException.field_f.length > var3_int)))) {
             var5 = ss.field_a[var3_int];
             stackIn_16_0 = -1;
             stackIn_16_1 = ~var5;
             if (var8 == 0) {
               if (stackIn_16_0 >= stackIn_16_1) {
-                var6 = QuickChatMenu.a(kr.field_f[var3_int], 0, true);
+                var6 = QuickChatMenu.a(InvalidMapConnectionException.field_f[var3_int], 0, true);
                 var7 = QuaternaryLinkNode.field_w - (var6 >> 1);
                 var4 = var4 + sm.field_b;
                 if (ArrayWidgetGroup.rectContains(id.field_b + (ArchiveNetworkClient.field_i << 1), param0, var7 - MapView.field_Lb, (byte) -99, var4, (MapView.field_Lb << 1) + var6, param1)) {
@@ -4804,7 +4804,7 @@ final class GameScreen {
               return;
             }
           }
-          this.showStatusText(10, 0, il.field_Y);
+          this.showStatusText(10, 0, ContentDialog.field_Y);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4983,7 +4983,7 @@ final class GameScreen {
                   }
                   var9 = ((StringBuilder) (Object) stackIn_17_0).append(stackIn_18_1).toString();
                 } else {
-                  var9 = pe.field_F;
+                  var9 = UnderageAccountInfoPanel.field_F;
                 }
                 var7.field_o = var9;
                 var6.field_o = var9;
@@ -4991,7 +4991,7 @@ final class GameScreen {
               if (param1 == var6.field_h) {
                 var6.toggle((byte) 26);
                 if (var8.field_x != 0) {
-                  stackIn_30_0 = new StringBuilder().append(il.field_lb).append(" ");
+                  stackIn_30_0 = new StringBuilder().append(ContentDialog.field_lb).append(" ");
                   if (var8.field_x != 1) {
                     stackIn_31_1 = QuickChatCategoryRegistry.a(d.field_c, 4371, new String[]{Integer.toString(var8.field_x)});
                   } else {
@@ -4999,7 +4999,7 @@ final class GameScreen {
                   }
                   var9Lifetime1 = ((StringBuilder) (Object) stackIn_30_0).append(stackIn_31_1).toString();
                 } else {
-                  var9Lifetime1 = pe.field_F;
+                  var9Lifetime1 = UnderageAccountInfoPanel.field_F;
                 }
                 var7.field_o = var9Lifetime1;
                 var6.field_o = var9Lifetime1;
@@ -5068,7 +5068,7 @@ final class GameScreen {
           this.field_I = true;
           this.field_s = param0;
           this.field_y = new IntrusiveDeque();
-          this.field_e = ch.a((byte) 112);
+          this.field_e = RoundedFrameSupport.a((byte) 112);
           this.field_y.addLast((byte) -113, this.field_e);
           if (this.field_s.field_n != null) {
             this.field_j = ij.b((byte) 127);
@@ -5091,7 +5091,7 @@ final class GameScreen {
             this.field_S.field_o = n.field_j;
             this.field_y.addLast((byte) -113, this.field_S);
           }
-          this.field_n = new ToggleButton(MusicCrossfadeStream.field_F.field_z / 2 + 512, 5, HuffmanCodec.field_e.field_z, HuffmanCodec.field_e.field_w, -1, HuffmanCodec.field_e, (String) null, 0, -1, bd.field_D, (String) null, 0);
+          this.field_n = new ToggleButton(MusicCrossfadeStream.field_F.field_z / 2 + 512, 5, HuffmanCodec.field_e.field_z, HuffmanCodec.field_e.field_w, -1, HuffmanCodec.field_e, (String) null, 0, -1, AlignedMenuLabel.field_D, (String) null, 0);
           this.field_n.field_o = rk.field_o;
           this.field_y.addLast((byte) -113, this.field_n);
           this.field_W = new ToggleButton(513 + MusicCrossfadeStream.field_F.field_z, 25, TurnEventLog.field_d.field_z, TurnEventLog.field_d.field_w, -1, TurnEventLog.field_d, (String) null, 0, -1, Wormhole.field_h, (String) null, 0);
@@ -5107,7 +5107,7 @@ final class GameScreen {
           }
           if (this.field_s.field_n != null) {
             this.field_bb = new ToggleButton(521 + MusicCrossfadeStream.field_F.field_z * 3, 20, rk.field_j.field_z, rk.field_j.field_w, -1, rk.field_j, (String) null, 0, -1, ei.field_a, (String) null, 0);
-            this.field_bb.field_o = oj.field_Bb;
+            this.field_bb.field_o = AccountCreationDialog.field_Bb;
             this.field_y.addLast((byte) -113, this.field_bb);
           }
           this.field_K = new os(590, 480 - rs.field_Cb.field_J, 60, 2 * rs.field_Cb.field_J);
@@ -5169,7 +5169,7 @@ final class GameScreen {
               var3++;
               continue;
             }
-            cg.i(0);
+            OpacityWidget.popLegacyRasterState(0);
             if (!this.field_s.field_f &&
               !this.field_s.field_W) {
               qn.b(116);
@@ -5186,7 +5186,7 @@ final class GameScreen {
               this.field_E.a(624, 5, 5, 2, -125, -5 + var5, 15);
               ImageProducerRasterBuffer.field_n = false;
             }
-            cq.a(rs.field_Cb, true);
+            GuestPlayForm.a(rs.field_Cb, true);
             this.field_ob = new int[]{82, 52, 52, 52};
             this.field_Q = 0;
             this.field_ab = new String[1 + this.field_s.field_P.field_r];
@@ -5202,7 +5202,7 @@ final class GameScreen {
             this.field_B.addLast((byte) -113, this.field_lb);
             this.field_B.addLast((byte) -113, this.field_m);
             this.field_B.addLast((byte) -113, this.field_M);
-            this.field_hb = new ToggleButton(0, 410, 128, 21, -1, (Sprite) null, ja.field_n.toUpperCase(), 16777215, -1, (Sprite) null, ja.field_n.toUpperCase(), 2805974);
+            this.field_hb = new ToggleButton(0, 410, 128, 21, -1, (Sprite) null, BirthDateValidator.field_n.toUpperCase(), 16777215, -1, (Sprite) null, BirthDateValidator.field_n.toUpperCase(), 2805974);
             this.field_F.addChild(this.field_hb, 8);
             this.field_gb = new ToggleButton(0, 410, 128, 21, -1, (Sprite) null, Bzip2State.field_s.toUpperCase(), 16777215, -1, (Sprite) null, Bzip2State.field_s.toUpperCase(), 2805974);
             this.field_lb.addChild(this.field_gb, 8);
@@ -5228,7 +5228,7 @@ final class GameScreen {
             this.field_V.field_s = false;
             jr.a("continue", 1904, wm.field_e);
             jr.a("continue2", 1904, aq.field_k);
-            jr.a("continue3", 1904, gn.field_v);
+            jr.a("continue3", 1904, StatefulWidgetTheme.field_v);
             jr.a("continuekey", 1904, ul.field_Ob);
             jr.a("captureAll", 1904, SecondaryNodeHashTable.field_e);
             jr.a("exit", 1904, sa.field_b);

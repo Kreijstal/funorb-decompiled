@@ -45,8 +45,8 @@ final class bf {
         }
         try {
           FleetMove.field_C = false;
-          if (ji.field_G != null &&
-            ji.field_G.field_E) {
+          if (DateInputWidget.field_G != null &&
+            DateInputWidget.field_G.field_E) {
             if (8 == param1) {
               param1 = 2;
               if (TertiaryNodeList.field_b) {
@@ -59,16 +59,16 @@ final class bf {
             var3_int = 1;
             if (10 == param1) {
               var3_int = 0;
-              mm.f(-26049);
+              EmailSyntaxValidator.showDisplayNameForm(-26049);
             }
             if (var3_int != 0) {
               if (oe.field_f) {
                 param2 = QuickChatCategoryRegistry.a(SecondaryNodeHashTable.field_l, 4371, new String[]{param2});
               }
               if (ToggleButton.field_D) {
-                param2 = eo.field_ib;
+                param2 = ProgressDialog.field_ib;
               }
-              ji.field_G.a(param2, param1, -86);
+              DateInputWidget.field_G.a(param2, param1, -86);
             }
             if (param1 != 256 &&
               param1 != 10 &&

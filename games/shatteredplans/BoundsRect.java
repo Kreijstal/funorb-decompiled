@@ -151,7 +151,7 @@ final class BoundsRect extends IntrusiveNode {
           }
           ai.a(param0, true, 0, wm.field_c, (byte) -60, ef.field_a, us.field_b);
           for (var2_int = 0; wm.field_c > var2_int; var2_int++) {
-            lg.field_d[var2_int + param0] = var2_int;
+            ProxyAuthenticationRequiredException.field_d[var2_int + param0] = var2_int;
           }
           ai.a(param0 + param0, false, param0, wm.field_c + param0, (byte) -60, SpriteButton.field_u, GzipInflater.field_e);
           if (wm.field_c <= param0) {

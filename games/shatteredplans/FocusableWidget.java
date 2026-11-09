@@ -187,7 +187,7 @@ class FocusableWidget extends UiWidget {
           gi.field_a = param2;
           ProductionContent.field_h = 2;
           var5 = (CharSequence) ((Object) param2);
-          nd.field_k = ji.a(var5, true);
+          nd.field_k = DateInputWidget.a(var5, true);
           hd.field_k = param1;
           sr.field_h = true;
         } catch (RuntimeException runtimeException) {

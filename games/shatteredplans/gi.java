@@ -20,7 +20,7 @@ final class gi {
           if (IntrusiveDeque.a(param0, (byte) 24)) {
             return false;
           }
-          if (cg.a(-92, param0)) {
+          if (OpacityWidget.a(-92, param0)) {
             return false;
           }
           if (param2.length() == 0) {
@@ -181,19 +181,19 @@ final class gi {
         try {
           qn.field_b[0] = Bzip2State.field_u.nextInt();
           qn.field_b[1] = Bzip2State.field_u.nextInt();
-          eo.field_cb.position = 0;
+          ProgressDialog.field_cb.position = 0;
           qn.field_b[3] = (int)Dialog.field_I;
           qn.field_b[2] = (int)(Dialog.field_I >> 32);
-          eo.field_cb.writeInt(11135, qn.field_b[0]);
-          eo.field_cb.writeInt(11135, qn.field_b[1]);
-          eo.field_cb.writeInt(11135, qn.field_b[2]);
-          eo.field_cb.writeInt(11135, qn.field_b[3]);
-          QuickChatPhraseRegistry.a(24, eo.field_cb);
+          ProgressDialog.field_cb.writeInt(11135, qn.field_b[0]);
+          ProgressDialog.field_cb.writeInt(11135, qn.field_b[1]);
+          ProgressDialog.field_cb.writeInt(11135, qn.field_b[2]);
+          ProgressDialog.field_cb.writeInt(11135, qn.field_b[3]);
+          QuickChatPhraseRegistry.a(24, ProgressDialog.field_cb);
           if (param3 > -36) {
             return;
           }
-          eo.field_cb.writeShort(param0, 255);
-          param4.write(eo.field_cb, (byte) 118);
+          ProgressDialog.field_cb.writeShort(param0, 255);
+          param4.write(ProgressDialog.field_cb, (byte) 118);
           js.field_f.position = 0;
           if (param1) {
             js.field_f.writeByte(18, (byte) -106);
@@ -226,7 +226,7 @@ final class gi {
           if (DraggableWidget.field_H != null) {
             js.field_f.writeMarkedString((byte) 95, DraggableWidget.field_H);
           }
-          GarrisonTask.a(25050, js.field_f, hr.field_a, eo.field_cb, jl.field_V);
+          GarrisonTask.a(25050, js.field_f, hr.field_a, ProgressDialog.field_cb, ResizingDialog.field_V);
           js.field_f.patchLengthShort(-549342136, js.field_f.position - var5_int);
           d.$cfr$intArgs$a$a6964d7afeb1(-1, 82);
           return;

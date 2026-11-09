@@ -89,17 +89,17 @@ final class TertiaryListSequence extends NodeSequence {
         hd.field_q = (byte[][]) null;
         IntHashIndex.field_g = null;
         if (param0 == 0) {
-          cf.field_H = null;
+          StatusMessagePanel.field_H = null;
           WeightedCacheEntry.field_s = null;
           sj.field_a = null;
-          eo.field_fb = null;
+          ProgressDialog.field_fb = null;
           return;
         }
         TertiaryListSequence.clearStatics(-53);
-        cf.field_H = null;
+        StatusMessagePanel.field_H = null;
         WeightedCacheEntry.field_s = null;
         sj.field_a = null;
-        eo.field_fb = null;
+        ProgressDialog.field_fb = null;
     }
 
     public static void clearStatics(int param0) {

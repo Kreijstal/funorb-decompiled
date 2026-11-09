@@ -187,7 +187,7 @@ final class bb {
             } else {
               stackIn_25_0 = aq.field_j;
               if (var8 != 0) {
-                stackIn_26_1 = lo.field_A;
+                stackIn_26_1 = CombinedTerritory.field_A;
               } else {
                 stackIn_26_1 = dk.field_a;
               }
@@ -196,13 +196,13 @@ final class bb {
               if (var8 != 0) {
                 stackIn_29_1 = DualLinkNode.field_i;
               } else {
-                stackIn_29_1 = qp.field_v;
+                stackIn_29_1 = SpriteStripButtonPainter.field_v;
               }
               stackIn_28_0.field_z = QuickChatCategoryRegistry.a(stackIn_29_1, 4371, new String[]{aq.field_j.field_z});
               DualLinkDequeSequence.field_f.field_z = wg.field_b;
               DialPainter.field_g.field_s = true;
               wg.field_d = true;
-              if (null != pe.field_D) {
+              if (null != UnderageAccountInfoPanel.field_D) {
                 wg.field_d = false;
                 RasterBuffer.field_h = false;
                 if (lr.field_c == null) {
@@ -244,7 +244,7 @@ final class bb {
                       }
                     }
                   }
-                  DualLinkDequeSequence.field_k = "<col=A00000>" + gg.field_c + "<br>" + ji.field_F + (String) (var9);
+                  DualLinkDequeSequence.field_k = "<col=A00000>" + gg.field_c + "<br>" + DateInputWidget.field_F + (String) (var9);
                 }
               }
             }

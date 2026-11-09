@@ -341,7 +341,7 @@ final class jp extends AnimatedPanel {
             field_Cb = (v) null;
           }
           var3 = (CharSequence) ((Object) param0);
-          stackIn_3_0 = ArchiveIndex.field_d.equals(ji.a(var3, true));
+          stackIn_3_0 = ArchiveIndex.field_d.equals(DateInputWidget.a(var3, true));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -514,10 +514,10 @@ final class jp extends AnimatedPanel {
     final static void a(String param0, float param1, byte param2, boolean param3) {
         try {
           if (MouseInputHandler.field_h == null) {
-            MouseInputHandler.field_h = new eo(ByteArrayStorage.field_e, tl.field_z);
+            MouseInputHandler.field_h = new ProgressDialog(ByteArrayStorage.field_e, GameClientShell.field_z);
             ByteArrayStorage.field_e.addDialog(true, MouseInputHandler.field_h);
           }
-          MouseInputHandler.field_h.a(param3, param0, 65536, param1);
+          MouseInputHandler.field_h.updateProgress(param3, param0, 65536, param1);
           if (param2 <= 118) {
             jp.g(-100);
           }

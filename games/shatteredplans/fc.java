@@ -55,7 +55,7 @@ final class fc {
         if (var4 != null) {
           if (!np.field_a.field_Ab ||
             !(np.field_a.field_lc < 0)) {
-            this.field_j.a(1, 1, QuickChatCategoryRegistry.a(il.field_fb, 4371, new String[]{var5}));
+            this.field_j.a(1, 1, QuickChatCategoryRegistry.a(ContentDialog.field_fb, 4371, new String[]{var5}));
           }
         } else {
           if (var7 != null &&
@@ -134,7 +134,7 @@ final class fc {
         if (param1 != 17) {
           return false;
         }
-        DialogRoot.field_G = new kh(this.field_e.field_B, this.field_e.field_N, this.field_e.field_K, this.field_e.field_mb, param0, ho.field_j, IntrusiveDequeSequence.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, gn.field_w, this.field_k, this.field_b);
+        DialogRoot.field_G = new kh(this.field_e.field_B, this.field_e.field_N, this.field_e.field_K, this.field_e.field_mb, param0, ho.field_j, IntrusiveDequeSequence.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, StatefulWidgetTheme.field_w, this.field_k, this.field_b);
         return true;
     }
 
@@ -197,7 +197,7 @@ final class fc {
           var9 = nj.a(this.field_k, param1, (byte) -119);
           if (var9 != null) {
             var5 = (String) null;
-            md.a(2, var9, 0, this.field_k, (String) null, -16169);
+            StripedProgressWidget.a(2, var9, 0, this.field_k, (String) null, -16169);
           }
           return true;
         }
@@ -207,14 +207,14 @@ final class fc {
             return true;
           }
           var5Lifetime1 = (String) null;
-          md.a(2, var6, 0, this.field_k, (String) null, -16169);
+          StripedProgressWidget.a(2, var6, 0, this.field_k, (String) null, -16169);
           return true;
         }
         if (6 == param0) {
           var8 = vq.a(2, this.field_k, param1);
           if (var8 != null) {
             var5Lifetime2 = (String) null;
-            md.a(2, var8, 0, this.field_k, (String) null, -16169);
+            StripedProgressWidget.a(2, var8, 0, this.field_k, (String) null, -16169);
           }
           return true;
         }
@@ -224,7 +224,7 @@ final class fc {
         var7 = os.a((byte) 117, param1, this.field_h, this.field_k);
         if (var7 != null) {
           var5Lifetime3 = (String) null;
-          md.a(2, var7, 0, this.field_k, (String) null, -16169);
+          StripedProgressWidget.a(2, var7, 0, this.field_k, (String) null, -16169);
         }
         return true;
     }
@@ -254,7 +254,7 @@ final class fc {
                 param1 != 2 &&
                 !LoginMethodPreference.field_g) {
                 this.field_i = param0;
-                this.field_j.a(1, 19, QuickChatCategoryRegistry.a(ri.field_G, 4371, new String[]{var7}));
+                this.field_j.a(1, 19, QuickChatCategoryRegistry.a(LoginForm.field_G, 4371, new String[]{var7}));
               }
             }
             if (var5 != null) {
@@ -266,7 +266,7 @@ final class fc {
                 this.field_j.a(1, 18, QuickChatCategoryRegistry.a(AchievementProgress.field_e, 4371, new String[]{var7}));
                 if (param0 != null) {
                   this.field_i = param0;
-                  this.field_j.a(1, 19, QuickChatCategoryRegistry.a(ri.field_G, 4371, new String[]{var7}));
+                  this.field_j.a(1, 19, QuickChatCategoryRegistry.a(LoginForm.field_G, 4371, new String[]{var7}));
                 }
               }
               this.field_j.a(1, 5, QuickChatCategoryRegistry.a(FocusableWidget.field_C, 4371, new String[]{var7}));
@@ -445,7 +445,7 @@ final class fc {
             if (sq.field_a == 0) {
               this.field_j.a(1, 12, IntNode.field_m);
             }
-            this.field_j.a(1, 13, gn.field_A);
+            this.field_j.a(1, 13, StatefulWidgetTheme.field_A);
           }
           if (param1 >= -67) {
             this.b(-9);

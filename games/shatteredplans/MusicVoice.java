@@ -106,7 +106,7 @@ final class MusicVoice extends IntrusiveNode {
         if (param0) {
           return;
         }
-        cg.field_E.setLength(0);
+        OpacityWidget.field_E.setLength(0);
         ProductionContent.field_h = 0;
     }
 

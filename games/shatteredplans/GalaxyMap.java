@@ -44,7 +44,7 @@ final class GalaxyMap {
 
     private final void assignHomeStar(Player param0, GameRules param1, int param2, Star param3) {
         Territory var5 = null;
-        lo var6 = null;
+        CombinedTerritory var6 = null;
         try {
           if (param2 != 32447) {
             this.field_e = (Star[]) null;
@@ -54,7 +54,7 @@ final class GalaxyMap {
           var5 = new Territory(param0, param3);
           var5.addStar(param2 ^ -11190, param3);
           param3.field_R = var5;
-          var6 = new lo(param0, param3);
+          var6 = new CombinedTerritory(param0, param3);
           var6.addStar(-21771, param3);
           param0.field_i.addLast((byte) -113, var5);
           param0.field_m = var6;
@@ -263,7 +263,7 @@ final class GalaxyMap {
           var5 = this.field_e;
           for (var6 = 0; var6 < var5.length; var6++) {
             var7 = var5[var6];
-            b.a(2232, param2, var7.name);
+            FilledMenuPanel.a(2232, param2, var7.name);
             param2.writeShort(var7.field_A, param0 ^ -170);
             param2.writeShort(var7.field_S, 255);
             param2.writeByte(var7.field_z, (byte) -92);

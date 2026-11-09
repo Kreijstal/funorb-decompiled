@@ -289,7 +289,7 @@ final class TutorialAi extends LegacyAi {
             var21Lifetime1 = BoundsRect.field_m[0];
             var30Lifetime1 = var21Lifetime1;
             var30Lifetime1Lifetime1 = var21Lifetime1;
-            var22 = hk.field_pb;
+            var22 = PaddedContentDialog.field_pb;
             var20.field_j.a(false, var21Lifetime1, var22, 11);
             var23 = DerelictVictoryChecker.field_m;
             var24 = BoundsRect.field_m[1];
@@ -301,7 +301,7 @@ final class TutorialAi extends LegacyAi {
             var27 = BoundsRect.field_m[2];
             var30Lifetime1Lifetime4 = var27;
             var30Lifetime1Lifetime5 = var27;
-            var28 = gn.field_A;
+            var28 = StatefulWidgetTheme.field_A;
             var26.field_j.a(false, var27, var28, 13);
           }
           if (2 == param0) {
@@ -358,7 +358,7 @@ final class TutorialAi extends LegacyAi {
               var6++;
             }
           }
-          ja.field_i[var5] = ja.field_i[var5] + var4.field_x;
+          BirthDateValidator.field_i[var5] = BirthDateValidator.field_i[var5] + var4.field_x;
           QuaternaryNodeList.field_b[var5] = var6;
           var7 = var6 - var4.field_x;
           var4 = mj.field_yb.nextStar(-23410);

@@ -126,7 +126,7 @@ final class WeightedLruCache {
     }
 
     final static void b(byte param0) {
-        ae.field_f.b(new cq(), 127);
+        ae.field_f.setContent(new GuestPlayForm(), 127);
         if (param0 >= -76) {
           WeightedLruCache.a(false);
         }
@@ -134,8 +134,8 @@ final class WeightedLruCache {
 
     final static os a(byte param0) {
         SpriteButton var2 = null;
-        bd var3 = null;
-        bd var4 = null;
+        AlignedMenuLabel var3 = null;
+        AlignedMenuLabel var4 = null;
         TextFieldWidget.field_E = new os(5, 5, 500, 45);
         StatusContent var1 = new StatusContent();
         TextFieldWidget.field_E.field_v = (MenuContent) ((Object) var1);
@@ -143,8 +143,8 @@ final class WeightedLruCache {
           var2 = new SpriteButton(15, 10, 36, 36, (Sprite) null);
           TextFieldWidget.field_E.addChild(var2, 8);
           var1.field_e = var2;
-          var3 = new bd(15, 5 - (-(TextFieldWidget.field_E.field_i / 2) + rs.field_Cb.field_J / 2), 450, rs.field_Cb.field_J, (String) null, 0);
-          var4 = new bd(15, TextFieldWidget.field_E.field_i - rs.field_Cb.field_J, 450, rs.field_Cb.field_J, (String) null, 2);
+          var3 = new AlignedMenuLabel(15, 5 - (-(TextFieldWidget.field_E.field_i / 2) + rs.field_Cb.field_J / 2), 450, rs.field_Cb.field_J, (String) null, 0);
+          var4 = new AlignedMenuLabel(15, TextFieldWidget.field_E.field_i - rs.field_Cb.field_J, 450, rs.field_Cb.field_J, (String) null, 2);
           var1.field_f = var3;
           TextFieldWidget.field_E.addChild(var3, 8);
           TextFieldWidget.field_E.addChild(var4, param0 ^ 77);

@@ -35,7 +35,7 @@ final class v {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = wd.a(CellVertex.field_i, (byte) 123, bs.field_b);
+          var2_int = NumericDateInputWidget.a(CellVertex.field_i, (byte) 123, bs.field_b);
           if (var2_int == 1) {
             param0 = "<img=0>" + param0;
           }
@@ -63,7 +63,7 @@ final class v {
     }
 
     final static void a(byte param0) {
-        cf.a(TertiaryListSequence.field_f, (byte) 39);
+        StatusMessagePanel.a(TertiaryListSequence.field_f, (byte) 39);
         int var1 = -68 % ((param0 + 66) / 40);
     }
 

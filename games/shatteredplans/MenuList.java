@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class MenuList extends MenuComponent implements gj {
+final class MenuList extends MenuComponent implements MenuSliderListener {
     static Sprite[] field_w;
     static AnimatedPanel field_v;
     static String field_A;
@@ -16,7 +16,7 @@ final class MenuList extends MenuComponent implements gj {
         this.field_y = 0;
     }
 
-    public final void a(int param0, int param1) {
+    public final void onSliderValueChanged(int param0, int param1) {
         int var7 = ShatteredPlansClient.field_F ? 1 : 0;
         if (this.field_x == param1) {
           return;
@@ -112,15 +112,15 @@ final class MenuList extends MenuComponent implements gj {
           }
           if (param1.field_q == -1) {
             var6 = uq.field_m.a(5607, param1.field_c);
-            var7 = wk.a(-9615, var6, rs.field_Cb, new int[]{-6 + var4 - 20});
+            var7 = WidgetStateStyle.a(-9615, var6, rs.field_Cb, new int[]{-6 + var4 - 20});
             var5 = 34 + (rs.field_Cb.field_q + var7 * 13);
-            eh.field_L = new Sprite[var7];
+            BirthDateConfirmationForm.field_L = new Sprite[var7];
             if (param1.field_f != null) {
               var8 = param1.field_f;
               for (var9 = 0; var8.length > var9; var9++) {
                 var10 = var8[var9];
                 var6Lifetime1 = uq.field_m.a(5607, var10.field_b);
-                var7Lifetime1 = wk.a(-9615, var6Lifetime1, rs.field_Cb, new int[]{-20 + (-6 + var4)});
+                var7Lifetime1 = WidgetStateStyle.a(-9615, var6Lifetime1, rs.field_Cb, new int[]{-20 + (-6 + var4)});
                 var5 = var5 + (13 * var7Lifetime1 + rs.field_Cb.field_q);
               }
             }

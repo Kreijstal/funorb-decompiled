@@ -83,11 +83,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               }
             }
             if (var2_int >= 0) {
-              var3 = cg.field_I + 1 & 127;
+              var3 = OpacityWidget.field_I + 1 & 127;
               if (var3 != DialogRoot.field_B) {
-                ng.field_a[cg.field_I] = var2_int;
-                fb.field_yb[cg.field_I] = (char)0;
-                cg.field_I = var3;
+                ng.field_a[OpacityWidget.field_I] = var2_int;
+                fb.field_yb[OpacityWidget.field_I] = (char)0;
+                OpacityWidget.field_I = var3;
               }
             }
             var3Lifetime1 = param0.getModifiers();
@@ -127,12 +127,12 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             var2_int = param0.getKeyChar();
             if (var2_int != 0 &&
               var2_int != 65535 &&
-              pg.a(28654, (char) var2_int)) {
-              var3 = 1 + cg.field_I & 127;
+              LabeledChildWidget.a(28654, (char) var2_int)) {
+              var3 = 1 + OpacityWidget.field_I & 127;
               if (var3 != DialogRoot.field_B) {
-                ng.field_a[cg.field_I] = -1;
-                fb.field_yb[cg.field_I] = (char)var2_int;
-                cg.field_I = var3;
+                ng.field_a[OpacityWidget.field_I] = -1;
+                fb.field_yb[OpacityWidget.field_I] = (char)var2_int;
+                OpacityWidget.field_I = var3;
               }
             }
           }
@@ -158,11 +158,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
 
     final static void a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
         if (param5 < -125) {
-          ch.a(20, param1, param0, param2, param4, param3, 0, param6);
+          RoundedFrameSupport.a(20, param1, param0, param2, param4, param3, 0, param6);
           return;
         }
         GameKeyHandler.a(-32, 98, 121, 31, -39, (byte) -98, 83);
-        ch.a(20, param1, param0, param2, param4, param3, 0, param6);
+        RoundedFrameSupport.a(20, param1, param0, param2, param4, param3, 0, param6);
     }
 
     final static void a(int param0, Throwable param1, String param2) {
@@ -205,7 +205,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             if (null == ei.field_c) {
               return;
             }
-            stackIn_13_0 = jl.field_S;
+            stackIn_13_0 = ResizingDialog.field_S;
             stackIn_13_1 = null;
             stackIn_13_2 = null;
             stackIn_13_3 = ei.field_c.getCodeBase();

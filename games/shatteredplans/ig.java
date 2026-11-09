@@ -80,7 +80,7 @@ final class ig {
           ByteArrayStorage.field_e.addDialog(true, MouseInputHandler.field_h);
           return;
         }
-        MouseInputHandler.field_h = new eo(ByteArrayStorage.field_e, tl.field_z);
+        MouseInputHandler.field_h = new ProgressDialog(ByteArrayStorage.field_e, GameClientShell.field_z);
         ByteArrayStorage.field_e.addDialog(true, MouseInputHandler.field_h);
     }
 

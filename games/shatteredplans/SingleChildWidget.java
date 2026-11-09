@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-abstract class SingleChildWidget extends UiWidget implements ni {
+abstract class SingleChildWidget extends UiWidget implements CompositeWidgetMarker {
     UiWidget field_z;
     static ScrollPane field_y;
 

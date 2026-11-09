@@ -163,7 +163,7 @@ final class BytePayloadNode extends IntrusiveNode {
           }
           uo.field_a = param2.field_M;
           uo.field_a.clear(0);
-          qp.field_w = new SecondaryNodeHashTable(param4);
+          SpriteStripButtonPainter.field_w = new SecondaryNodeHashTable(param4);
           sf.field_e = 0L;
           ks.field_i = param9;
           return;

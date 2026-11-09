@@ -18,7 +18,7 @@ final class ValidationIndicator extends FocusableWidget {
         return (param1 - 100) / 200;
     }
 
-    final static void a(IntrusiveDeque param0, boolean param1) throws jn {
+    final static void a(IntrusiveDeque param0, boolean param1) throws MapGenerationException {
         RuntimeException runtimeException = null;
         CandidateLink var3 = null;
         CandidateLink var4 = null;
@@ -60,13 +60,13 @@ final class ValidationIndicator extends FocusableWidget {
                 }
                 if ((decompiledFrameRemainder0) &&
                   (decompiledFrameRemainder0 = (var4.field_r != null))) {
-                  throw new jn("Border linkage incorrect: Can't find an unclipped edge.");
+                  throw new MapGenerationException("Border linkage incorrect: Can't find an unclipped edge.");
                 }
               }
             }
             if (decompiledFrameRemainder0) {
               if (var4.field_k.field_r != var4) {
-                throw new jn("Border linkage incorrect: v2.v1 != v");
+                throw new MapGenerationException("Border linkage incorrect: v2.v1 != v");
               }
               var4 = var4.field_k;
             }
@@ -181,7 +181,7 @@ final class ValidationIndicator extends FocusableWidget {
           var3.drawQuarterSize(0, 0);
           var4++;
         }
-        cg.i(0);
+        OpacityWidget.popLegacyRasterState(0);
         return var2;
     }
 

@@ -511,7 +511,7 @@ class TextFieldWidget extends FocusableWidget {
           if (param0 != 0) {
             field_E = (os) null;
           }
-          stackIn_3_0 = wk.parseInt(10, param1, param0 ^ 126, true);
+          stackIn_3_0 = WidgetStateStyle.parseInt(10, param1, param0 ^ 126, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -571,7 +571,7 @@ class TextFieldWidget extends FocusableWidget {
           var5_int = param2.getGroupIdByName(126, param4);
           var6 = param2.getFileIdByName(var5_int, (byte) 106, param1);
           if (param0 >= 94) {
-            stackIn_4_0 = cf.a(param3, 1, param2, var5_int, var6);
+            stackIn_4_0 = StatusMessagePanel.a(param3, 1, param2, var5_int, var6);
             return stackIn_4_0;
           }
           stackIn_2_0 = (BinaryBitmapFont) null;

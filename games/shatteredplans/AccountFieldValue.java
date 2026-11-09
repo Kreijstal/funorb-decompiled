@@ -13,7 +13,7 @@ final class AccountFieldValue {
         String dupTemp$1 = null;
         RuntimeException var4 = null;
         MenuLabel var5 = null;
-        b var6 = null;
+        FilledMenuPanel var6 = null;
         SpriteButton var7 = null;
         SpriteButton var8 = null;
         MenuLabel var9 = null;
@@ -35,7 +35,7 @@ final class AccountFieldValue {
           param3.field_c[param2] = var11;
           var5 = new MenuLabel(132 - rs.field_Cb.stringWidth(or.field_d[param2]), 0, or.field_d[param2]);
           var12.addChild(var5, 8);
-          var6 = new b(d.field_b[param2].field_z / 2, rs.field_Cb.field_J + 2, 132 - d.field_b[param2].field_z / 2, d.field_b[param2].field_w, 2, 2105376);
+          var6 = new FilledMenuPanel(d.field_b[param2].field_z / 2, rs.field_Cb.field_J + 2, 132 - d.field_b[param2].field_z / 2, d.field_b[param2].field_w, 2, 2105376);
           var12.addChild(var6, 8);
           var7 = new SpriteButton(3 * d.field_b[param2].field_z / 4, rs.field_Cb.field_J + 5, UsernameAvailabilityValidator.a(param2, param0, true));
           var12.addChild(var7, 8);
@@ -52,12 +52,12 @@ final class AccountFieldValue {
             var9 = new MenuLabel(d.field_b[param2].field_z, 1 + (rs.field_Cb.field_J + 2 + d.field_b[param2].field_w / 8), 130 - d.field_b[param2].field_z, d.field_b[param2].field_w, EmailValidator.field_v);
             var12.addChild(var9, 8);
             param3.field_b[param2] = var9;
-            var9.field_o = mm.field_q;
-            var8.field_o = mm.field_q;
-            var7.field_o = mm.field_q;
-            var6.field_o = mm.field_q;
-            var5.field_o = mm.field_q;
-            var12.field_o = mm.field_q;
+            var9.field_o = EmailSyntaxValidator.field_q;
+            var8.field_o = EmailSyntaxValidator.field_q;
+            var7.field_o = EmailSyntaxValidator.field_q;
+            var6.field_o = EmailSyntaxValidator.field_q;
+            var5.field_o = EmailSyntaxValidator.field_q;
+            var12.field_o = EmailSyntaxValidator.field_q;
           }
           stackIn_6_0 = var12;
           return stackIn_6_0;

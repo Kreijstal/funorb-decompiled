@@ -58,7 +58,7 @@ abstract class ByteArrayStorage {
           var3 = 0;
         }
         if (2 == ProductionContent.field_h &&
-          !lh.e((byte) 53)) {
+          !VerticalMenuSlider.e((byte) 53)) {
           var3 = 0;
         }
         if (oq.field_j == 84) {
@@ -69,17 +69,17 @@ abstract class ByteArrayStorage {
             MusicVoice.c(false);
             return true;
           }
-          if (cg.field_E.length() <= 0) {
+          if (OpacityWidget.field_E.length() <= 0) {
             MusicVoice.c(param2);
           } else {
-            var4_ref_String = cg.field_E.toString();
+            var4_ref_String = OpacityWidget.field_E.toString();
             if (DelegatingCanvas.a(var4_ref_String, 0)) {
               var13 = (String) null;
               var12 = (String) null;
-              md.a(2, pr.field_e, 0, (String) null, (String) null, -16169);
+              StripedProgressWidget.a(2, pr.field_e, 0, (String) null, (String) null, -16169);
               var15 = (String) null;
               var14 = (String) null;
-              md.a(2, TextFieldWidget.field_K, 0, (String) null, (String) null, -16169);
+              StripedProgressWidget.a(2, TextFieldWidget.field_K, 0, (String) null, (String) null, -16169);
               MusicVoice.c(param2);
               return true;
             }
@@ -103,10 +103,10 @@ abstract class ByteArrayStorage {
           if (var3 == 0) {
             return true;
           }
-          if (cg.field_E.length() <= 0) {
+          if (OpacityWidget.field_E.length() <= 0) {
             return true;
           }
-          aj.padWithChar(cg.field_E, cg.field_E.length() - 1, 83, ' ');
+          aj.padWithChar(OpacityWidget.field_E, OpacityWidget.field_E.length() - 1, 83, ' ');
           return true;
         }
         var4 = ho.field_h;
@@ -120,10 +120,10 @@ abstract class ByteArrayStorage {
         if (var3 == 0) {
           return true;
         }
-        if (cg.field_E.length() >= 80) {
+        if (OpacityWidget.field_E.length() >= 80) {
           return true;
         }
-        discarded$0 = cg.field_E.append((char) var4);
+        discarded$0 = OpacityWidget.field_E.append((char) var4);
         var5Lifetime1 = 485;
         var17 = Star.field_o;
         var16 = v.a(var17, (byte) 17);
@@ -131,13 +131,13 @@ abstract class ByteArrayStorage {
         if (ProductionContent.field_h == 2) {
           var61 = (CharSequence) ((Object) gi.field_a);
           var20 = QuickChatCategoryRegistry.a(MatchingTextValidator.field_q, 4371, new String[]{ih.a(var61, -117)});
-          var8 = QuickChatCategoryRegistry.a(cf.field_M, 4371, new String[]{var16});
+          var8 = QuickChatCategoryRegistry.a(StatusMessagePanel.field_M, 4371, new String[]{var16});
           var9 = ho.field_f.stringWidth(var20);
           var10 = ho.field_f.stringWidth(var8);
           if (var9 <= var10) {
             var5Lifetime1 = var5Lifetime1 - var10;
-            if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
-              aj.padWithChar(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
+            if (var5Lifetime1 < ho.field_f.stringWidth(OpacityWidget.field_E.toString())) {
+              aj.padWithChar(OpacityWidget.field_E, -1 + OpacityWidget.field_E.length(), 87, ' ');
             }
             return true;
           }
@@ -147,8 +147,8 @@ abstract class ByteArrayStorage {
           if (0 != ProductionContent.field_h) {
             var59 = var7 + var18 + ": ";
             var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var59);
-            if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
-              aj.padWithChar(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
+            if (var5Lifetime1 < ho.field_f.stringWidth(OpacityWidget.field_E.toString())) {
+              aj.padWithChar(OpacityWidget.field_E, -1 + OpacityWidget.field_E.length(), 87, ' ');
             }
             return true;
           }
@@ -157,18 +157,18 @@ abstract class ByteArrayStorage {
               if (null == np.field_a) {
                 var47 = var7 + var18 + ": ";
                 var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var47);
-                if (var5Lifetime1 >= ho.field_f.stringWidth(cg.field_E.toString())) {
+                if (var5Lifetime1 >= ho.field_f.stringWidth(OpacityWidget.field_E.toString())) {
                   return true;
                 }
-                aj.padWithChar(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
+                aj.padWithChar(OpacityWidget.field_E, -1 + OpacityWidget.field_E.length(), 87, ' ');
                 return true;
               }
               if (!DialPainter.field_c) {
                 var50 = "[" + QuickChatCategoryRegistry.a(IntNode.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
                 var51 = var50 + var18 + ": ";
                 var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var51);
-                if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
-                  aj.padWithChar(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
+                if (var5Lifetime1 < ho.field_f.stringWidth(OpacityWidget.field_E.toString())) {
+                  aj.padWithChar(OpacityWidget.field_E, -1 + OpacityWidget.field_E.length(), 87, ' ');
                 }
                 return true;
               }
@@ -176,16 +176,16 @@ abstract class ByteArrayStorage {
                 var48 = "[" + QuickChatCategoryRegistry.a(IntNode.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
                 var49 = var48 + var18 + ": ";
                 var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var49);
-                if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
-                  aj.padWithChar(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
+                if (var5Lifetime1 < ho.field_f.stringWidth(OpacityWidget.field_E.toString())) {
+                  aj.padWithChar(OpacityWidget.field_E, -1 + OpacityWidget.field_E.length(), 87, ' ');
                 }
                 return true;
               }
               var52 = "[" + AiTask.field_m + "] ";
               var53 = var52 + var18 + ": ";
               var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var53);
-              if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
-                aj.padWithChar(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
+              if (var5Lifetime1 < ho.field_f.stringWidth(OpacityWidget.field_E.toString())) {
+                aj.padWithChar(OpacityWidget.field_E, -1 + OpacityWidget.field_E.length(), 87, ' ');
               }
               return true;
             }
@@ -196,8 +196,8 @@ abstract class ByteArrayStorage {
               var57 = "[" + QuickChatCategoryRegistry.a(IntNode.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
               var58 = var57 + var18 + ": ";
               var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var58);
-              if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
-                aj.padWithChar(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
+              if (var5Lifetime1 < ho.field_f.stringWidth(OpacityWidget.field_E.toString())) {
+                aj.padWithChar(OpacityWidget.field_E, -1 + OpacityWidget.field_E.length(), 87, ' ');
               }
               return true;
             }
@@ -205,26 +205,26 @@ abstract class ByteArrayStorage {
               var55 = "[" + QuickChatCategoryRegistry.a(IntNode.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
               var56 = var55 + var18 + ": ";
               var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var56);
-              if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
-                aj.padWithChar(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
+              if (var5Lifetime1 < ho.field_f.stringWidth(OpacityWidget.field_E.toString())) {
+                aj.padWithChar(OpacityWidget.field_E, -1 + OpacityWidget.field_E.length(), 87, ' ');
               }
               return true;
             }
             var7 = "[" + AiTask.field_m + "] ";
             var59Lifetime1 = var7 + var18 + ": ";
             var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var59Lifetime1);
-            if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
-              aj.padWithChar(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
+            if (var5Lifetime1 < ho.field_f.stringWidth(OpacityWidget.field_E.toString())) {
+              aj.padWithChar(OpacityWidget.field_E, -1 + OpacityWidget.field_E.length(), 87, ' ');
             }
             return true;
           }
           var54 = var7 + var18 + ": ";
           var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var54);
         }
-        if (var5Lifetime1 >= ho.field_f.stringWidth(cg.field_E.toString())) {
+        if (var5Lifetime1 >= ho.field_f.stringWidth(OpacityWidget.field_E.toString())) {
           return true;
         }
-        aj.padWithChar(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
+        aj.padWithChar(OpacityWidget.field_E, -1 + OpacityWidget.field_E.length(), 87, ' ');
         return true;
     }
 

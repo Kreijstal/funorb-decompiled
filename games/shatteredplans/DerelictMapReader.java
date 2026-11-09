@@ -16,7 +16,7 @@ final class DerelictMapReader implements MapGenerator {
     private int field_e;
     private int field_j;
 
-    public final GalaxyMap generate(byte param0) throws jn {
+    public final GalaxyMap generate(byte param0) throws MapGenerationException {
         int var6 = 0;
         GalaxyMap var3;
         Star[] var4;
@@ -100,7 +100,7 @@ final class DerelictMapReader implements MapGenerator {
           bs.a(var3, 100);
           CellVertex.field_j[param0].draw(64, 64);
           SoftwareRasterizer.b(12, 12, 0, 0, 256, 256);
-          cg.i(0);
+          OpacityWidget.popLegacyRasterState(0);
         }
         if (param1 >= -28) {
           field_a = 123;

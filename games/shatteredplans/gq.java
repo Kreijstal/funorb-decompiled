@@ -41,7 +41,7 @@ final class gq {
           if (12 < var3_int) {
             return false;
           }
-          var4 = ji.a(param0, true);
+          var4 = DateInputWidget.a(param0, true);
           if (var4 != null &&
             var4.length() >= 1) {
             if (!DialogRoot.isNameSeparator(var4.charAt(0), param2 + 6) &&
@@ -243,7 +243,7 @@ final class gq {
             for (var18 = 0; var18 < 3; var18++) {
               MouseWheelInput.field_a[var18] = MouseWheelInput.field_a[var18] + ValidatedTextInputWidget.field_Z[var15][var18];
             }
-            pe.a(true, CandidateLink.field_p, false, 80, MouseWheelInput.field_a, false, var17);
+            UnderageAccountInfoPanel.a(true, CandidateLink.field_p, false, 80, MouseWheelInput.field_a, false, var17);
             WhirlpoolHasher.a(var7Lifetime1, var13Lifetime1, false, var8Lifetime1, var14, var17, var12Lifetime1, var9Lifetime1);
           }
           var16Lifetime1 = -47 / ((47 - param0) / 46);
@@ -263,9 +263,9 @@ final class gq {
         byte[] var2 = hd.field_q[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var1 > var4_int; var4_int++) {
-          var3[var4_int] = eo.field_fb[we.intAnd((int) var2[var4_int], 255)];
+          var3[var4_int] = ProgressDialog.field_fb[we.intAnd((int) var2[var4_int], 255)];
         }
-        Sprite var4 = new Sprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], IntHashIndex.field_g[param0], var3);
+        Sprite var4 = new Sprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, StatusMessagePanel.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], IntHashIndex.field_g[param0], var3);
         TertiaryListSequence.a(0);
         return var4;
     }

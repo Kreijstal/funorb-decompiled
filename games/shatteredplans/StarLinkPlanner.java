@@ -9,7 +9,7 @@ final class StarLinkPlanner {
     static String[] field_c;
     static String field_a;
 
-    final void buildLinks(boolean param0, int param1) throws jn {
+    final void buildLinks(boolean param0, int param1) throws MapGenerationException {
         int var4 = 0;
         int var10_int = 0;
         int var11 = 0;
@@ -86,7 +86,7 @@ final class StarLinkPlanner {
           for (var11 = 0; var9 > var11; var11++) {
             var12_int = var11 + 1;
             for (var13_int = var12_int; var13_int < var9; var13_int++) {
-              eo.a(var24[var11], param0, -10000, var24[var13_int]);
+              ProgressDialog.a(var24[var11], param0, -10000, var24[var13_int]);
             }
           }
           StatusContent.a(var6, param1 ^ -24926);
@@ -134,7 +134,7 @@ final class StarLinkPlanner {
               var21 = var9Lifetime1;
               var16_intLifetime1 = var21;
               while (var21 < var14Lifetime1) {
-                eo.a(var26[var15_intLifetime1], param0, -10000, var26[var21]);
+                ProgressDialog.a(var26[var15_intLifetime1], param0, -10000, var26[var21]);
                 var21++;
               }
             }

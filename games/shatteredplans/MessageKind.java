@@ -37,7 +37,7 @@ final class MessageKind {
           }
           var4_int = param1.getGroupIdByName(127, param2);
           var5 = param1.getFileIdByName(var4_int, (byte) 106, param3);
-          stackIn_3_0 = ch.a(param1, -114, var5, var4_int);
+          stackIn_3_0 = RoundedFrameSupport.a(param1, -114, var5, var4_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

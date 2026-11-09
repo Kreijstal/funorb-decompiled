@@ -21,7 +21,7 @@ final class DraggableWidget extends SingleChildWidget {
           return;
         }
         if (MatchingTextValidator.field_t.field_k) {
-          il.a(var1, 0, var2, Star.field_K);
+          ContentDialog.a(var1, 0, var2, Star.field_K);
           SoftwareRasterizer.drawHorizontalLine(0, 0, 640, 0);
           return;
         }

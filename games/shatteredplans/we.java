@@ -88,7 +88,7 @@ final class we {
                 FleetTrailPoint.field_p[var2] = true;
               }
             }
-            MenuButton.field_J = cg.field_I;
+            MenuButton.field_J = OpacityWidget.field_I;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

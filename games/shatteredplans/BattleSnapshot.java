@@ -72,10 +72,10 @@ final class BattleSnapshot extends IntrusiveNode {
         int var2Lifetime1;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (eh.field_L == null) {
+          if (BirthDateConfirmationForm.field_L == null) {
             stackIn_4_0 = 0;
           } else {
-            stackIn_4_0 = eh.field_L.length;
+            stackIn_4_0 = BirthDateConfirmationForm.field_L.length;
           }
           var1_int = stackIn_4_0;
           if (null != oi.field_i) {

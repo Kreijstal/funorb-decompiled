@@ -129,7 +129,7 @@ class DualLinkNode extends IntrusiveNode {
           bs.a(var2, param1 ^ 93);
           oi.a(param0, (byte) 66).draw(16, 16);
           SoftwareRasterizer.b(3, 3, 0, 0, 64, 64);
-          cg.i(0);
+          OpacityWidget.popLegacyRasterState(0);
         }
         return var2;
     }

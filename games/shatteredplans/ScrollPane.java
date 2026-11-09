@@ -238,7 +238,7 @@ final class ScrollPane extends AnimatedPanel {
               EmailValidator.field_r = true;
             }
           } else {
-            if (!jn.field_a) {
+            if (!MapGenerationException.field_a) {
               DiskCacheWorker.b((byte) 50);
             }
           }
@@ -256,7 +256,7 @@ final class ScrollPane extends AnimatedPanel {
             if (CachedArchiveSource.field_n) {
               continue;
             }
-            if (!jn.field_a) {
+            if (!MapGenerationException.field_a) {
               continue;
             }
             if (NameSuggestionsPanel.field_L <= 0) {
@@ -353,7 +353,7 @@ final class ScrollPane extends AnimatedPanel {
               }
             }
           } else {
-            lh.d((byte) 44);
+            VerticalMenuSlider.d((byte) 44);
           }
           if (TertiaryListSequence.field_k < 540) {
             ArchiveIndex.field_o = false;
@@ -381,7 +381,7 @@ final class ScrollPane extends AnimatedPanel {
               return;
             }
             if (!CachedArchiveSource.field_n &&
-              jn.field_a) {
+              MapGenerationException.field_a) {
               if (NameSuggestionsPanel.field_L <= 0) {
                 return;
               }

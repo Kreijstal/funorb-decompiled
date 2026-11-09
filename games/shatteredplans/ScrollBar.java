@@ -220,7 +220,7 @@ final class ScrollBar extends AnimatedPanel {
           return;
         }
         String var2 = (String) null;
-        ce.a(ae.field_g, (String) null, (byte) 3);
+        PasswordInputPainter.showLoginForm(ae.field_g, (String) null, (byte) 3);
     }
 
     final boolean f(boolean param0) {

@@ -12,7 +12,7 @@ final class vs {
     final static gb a(byte param0, int param1) {
         gb var2 = new gb();
         SolMapGenerator.field_o.addLast((byte) -113, var2);
-        bo.a(param1, 2);
+        AccountNoticeDialog.a(param1, 2);
         if (param0 == 88) {
           return var2;
         }
@@ -46,7 +46,7 @@ final class vs {
           }
           var2 = SolMapGenerator.field_o.startForward(0);
           while (var2 != null) {
-            bo.a(param0, 2);
+            AccountNoticeDialog.a(param0, 2);
             var2 = SolMapGenerator.field_o.nextForward((byte) -71);
           }
           return;

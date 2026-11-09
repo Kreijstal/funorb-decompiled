@@ -26,9 +26,9 @@ final class PointsVictoryChecker extends VictoryChecker {
           if (IntList.field_d == null) {
             IntList.field_d = "0";
           }
-          ja.field_j = param0.getParameter("overxachievements");
-          if (null == ja.field_j) {
-            ja.field_j = "0";
+          BirthDateValidator.field_j = param0.getParameter("overxachievements");
+          if (null == BirthDateValidator.field_j) {
+            BirthDateValidator.field_j = "0";
           }
           var6 = param0.getParameter("currency");
           if (var6 != null &&
@@ -171,7 +171,7 @@ final class PointsVictoryChecker extends VictoryChecker {
             param1.drawCentred(param6, (param0 >> 1) - 1, param1.field_J + param9 >> 1, 16777215, -1);
             param1.drawCentred(param6, param0 >> 1, (param9 + param1.field_J >> 1) + 1, 16777215, -1);
             param1.drawCentred(param6, param0 >> 1, -1 + (param1.field_J + param9 >> 1), 16777215, -1);
-            cg.i(0);
+            OpacityWidget.popLegacyRasterState(0);
             var13.drawAdditive(param5, param3, 64);
           }
           return;
@@ -268,7 +268,7 @@ final class PointsVictoryChecker extends VictoryChecker {
           if (this.field_k == 0) {
             var3_int = param0.field_g.field_e.length / this.field_i.length;
             for (var4 = 0; DerelictVictoryChecker.field_k.length > var4; var4++) {
-              if (~md.field_J[var4] != ~var3_int) {
+              if (~StripedProgressWidget.field_J[var4] != ~var3_int) {
                 continue;
               }
               this.field_k = DerelictVictoryChecker.field_k[var4];
@@ -414,7 +414,7 @@ final class PointsVictoryChecker extends VictoryChecker {
           if (0 == this.field_k) {
             var4_int = param1.field_g.field_e.length / this.field_i.length;
             for (var5 = 0; var5 < DerelictVictoryChecker.field_k.length; var5++) {
-              if (md.field_J[var5] != var4_int) {
+              if (StripedProgressWidget.field_J[var5] != var4_int) {
                 continue;
               }
               this.field_k = DerelictVictoryChecker.field_k[var5];
@@ -446,7 +446,7 @@ final class PointsVictoryChecker extends VictoryChecker {
             var5Lifetime2 = var5Lifetime2 + var8_int;
           }
           if (var5Lifetime2 > 0) {
-            lh.a((byte) -93, var4, (int[]) ((Object) this.field_o.clone()));
+            VerticalMenuSlider.a((byte) -93, var4, (int[]) ((Object) this.field_o.clone()));
           }
           var23 = new MenuLabel[]{new MenuLabel(0, 0, 182, rs.field_Cb.field_J, QuickChatCategoryRegistry.a(ShatteredPlansClient.field_J, 4371, new String[]{Integer.toString(this.field_k)}))};
           var7 = new Player[this.field_i.length];

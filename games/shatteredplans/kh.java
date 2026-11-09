@@ -102,7 +102,7 @@ final class kh extends AnimatedPanel {
         this.field_yb = -2;
         try {
           this.field_Gb = param12;
-          this.field_Jb = new AnimatedPanel(0L, param6, bd.field_F.toUpperCase());
+          this.field_Jb = new AnimatedPanel(0L, param6, AlignedMenuLabel.field_F.toUpperCase());
           this.field_Jb.field_y = 1;
           this.addChild(4, this.field_Jb);
           this.field_Ob = new AnimatedPanel(0L, param7);
@@ -173,7 +173,7 @@ final class kh extends AnimatedPanel {
               discarded$0 = this.field_xb.append(param11);
             }
             var16Lifetime2 = 0;
-            var17 = param6.field_nb.stringWidth(md.field_D);
+            var17 = param6.field_nb.stringWidth(StripedProgressWidget.field_D);
             if (var17 > var16Lifetime2) {
               var16Lifetime2 = var17;
             }
@@ -199,7 +199,7 @@ final class kh extends AnimatedPanel {
             var17Lifetime5 = 0;
             var18Lifetime2 = 0;
             var18Lifetime3 = 0;
-            var18Lifetime3 = this.a(param6, var28[0], md.field_D, var16Lifetime2, 119, var18Lifetime3);
+            var18Lifetime3 = this.a(param6, var28[0], StripedProgressWidget.field_D, var16Lifetime2, 119, var18Lifetime3);
             var18Lifetime3 = this.a((byte) 96, var28[0], this.field_Hb[6], var18Lifetime3, var16Lifetime2);
             var18Lifetime3 = this.a((byte) 10, var28[0], this.field_Hb[9], var18Lifetime3, var16Lifetime2);
             var18Lifetime3 = this.a((byte) -124, var28[0], this.field_Hb[5], var18Lifetime3, var16Lifetime2);

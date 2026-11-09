@@ -73,7 +73,7 @@ abstract class NodeSequence {
             return (ve) (stackIn_7_0);
           }
           var6 = (CharSequence) ((Object) param1);
-          var2 = ji.a(var6, true);
+          var2 = DateInputWidget.a(var6, true);
           if (var2 == null) {
             stackIn_10_0 = null;
             return (ve) (stackIn_10_0);
@@ -85,7 +85,7 @@ abstract class NodeSequence {
           var3 = (ve) (BattleEvent.field_q.get(65280, (long)var2.hashCode()));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_Ab);
-            var4 = ji.a(var7, true);
+            var4 = DateInputWidget.a(var7, true);
             if (var4.equals(var2)) {
               stackIn_20_0 = var3;
               return stackIn_20_0;

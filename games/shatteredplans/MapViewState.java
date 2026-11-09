@@ -740,7 +740,7 @@ abstract class MapViewState {
                       var4 = param1.nextForward((byte) -71);
                     }
                   }
-                  this.field_o.showStatusText(10, 0, md.field_G);
+                  this.field_o.showStatusText(10, 0, StripedProgressWidget.field_G);
                 }
               } else {
                 if (this.field_C) {

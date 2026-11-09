@@ -89,7 +89,7 @@ final class UrlLoader implements Runnable {
             var10 = 0;
             var11 = 0;
             while (var9 > var10) {
-              var12 = lg.field_d[var10];
+              var12 = ProxyAuthenticationRequiredException.field_d[var10];
               var7[0][var11] = QuaternaryNodeList.field_a[var12];
               var8[0][4 * var11] = GameApplet.field_f[var12];
               var8[0][var11 * 4 + 1] = fb.field_zb[var12];
@@ -107,7 +107,7 @@ final class UrlLoader implements Runnable {
             var14 = 0;
             var11Lifetime1 = var14;
             while (var9 > var10Lifetime1) {
-              var12Lifetime1 = lg.field_d[var10Lifetime1 + var6];
+              var12Lifetime1 = ProxyAuthenticationRequiredException.field_d[var10Lifetime1 + var6];
               var7[1][var14] = QuaternaryNodeList.field_a[var12Lifetime1];
               var8[1][4 * var14] = GameApplet.field_f[var12Lifetime1];
               var8[1][4 * var14 + 1] = fb.field_zb[var12Lifetime1];
@@ -188,8 +188,8 @@ final class UrlLoader implements Runnable {
     }
 
     final static void clearStatics(byte param0, boolean param1) {
-        if (null != lg.field_e) {
-          lg.field_e.drawFullRaster(param1, 125);
+        if (null != ProxyAuthenticationRequiredException.field_e) {
+          ProxyAuthenticationRequiredException.field_e.drawFullRaster(param1, 125);
           if (param0 > -81) {
             field_j = (int[]) null;
             return;

@@ -14,7 +14,7 @@ final class ClientException extends RuntimeException {
 
     final static void a(boolean param0) {
         ProductionContent.field_h = 0;
-        bo.r(0);
+        AccountNoticeDialog.r(0);
         if (!param0) {
           int[] var2 = (int[]) null;
           ClientException.a(-36, -67, -120, (int[]) null, (int[]) null);
@@ -83,7 +83,7 @@ final class ClientException extends RuntimeException {
         try {
           var1_int = ValidationMessageWidget.field_R - ld.field_j;
           ld.field_j = -(var1_int >> 1) + WeightedLruCache.field_e;
-          vo.field_b = -(DiskCacheWorker.field_b >> 1) + ri.field_O;
+          vo.field_b = -(DiskCacheWorker.field_b >> 1) + LoginForm.field_O;
           ValidationMessageWidget.field_R = ld.field_j + var1_int;
           var2 = vo.field_b;
           if (param0 <= 32) {
@@ -94,7 +94,7 @@ final class ClientException extends RuntimeException {
             if (0 > var4) {
               var5 = ProductionContent.field_j;
             } else {
-              if (var4 == ns.field_nb.field_c) {
+              if (var4 == AccountStatusDialog.field_nb.field_c) {
                 var5 = wo.field_a;
               } else {
                 var5 = ih.field_b;
@@ -106,7 +106,7 @@ final class ClientException extends RuntimeException {
             var8 = WeightedLruCache.field_e - (var7 >> 1);
             if (var4 >= 0) {
               var2 = var2 + js.field_e;
-              if (ns.field_nb.field_c != var4) {
+              if (AccountStatusDialog.field_nb.field_c != var4) {
                 stackIn_17_0 = cr.field_e;
               } else {
                 stackIn_17_0 = jp.field_Cb;

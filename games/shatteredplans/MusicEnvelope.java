@@ -45,7 +45,7 @@ final class MusicEnvelope {
           var1_int = gd.field_b[0];
           for (var2 = 1; var2 < gd.field_b.length; var2++) {
             var3 = gd.field_b[var2];
-            ArrayOperations.copyInts(jl.field_M, var2 << 4, jl.field_M, var1_int, var3);
+            ArrayOperations.copyInts(ResizingDialog.field_M, var2 << 4, ResizingDialog.field_M, var1_int, var3);
             var1_int = var1_int + var3;
           }
           return;

@@ -107,7 +107,7 @@ final class oa {
         }
         if (var2 >= 128 &&
           var2 < 160) {
-          var3 = tl.field_p[-128 + var2];
+          var3 = GameClientShell.field_p[-128 + var2];
           if (var3 == 0) {
             var3 = 63;
           }

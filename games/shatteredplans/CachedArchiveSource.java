@@ -250,9 +250,9 @@ final class CachedArchiveSource extends ArchiveSource {
     }
 
     final static void d(int param0) {
-        SoundPlayback.field_m.setTarget(MenuList.field_v.field_K - (ns.field_pb ? 42 + (pe.field_K + 2) : 0), 18, (byte) 39, 0, 0);
-        sf.field_f.setTarget(42 + pe.field_K, param0, (byte) 42, 0, -40 + (MenuList.field_v.field_K - (pe.field_K + 2)));
-        ls.field_a.a(MenuList.field_v.field_K, 20, 0, 2, -122, MenuList.field_v.field_mb - 20, pe.field_K);
+        SoundPlayback.field_m.setTarget(MenuList.field_v.field_K - (AccountStatusDialog.field_pb ? 42 + (UnderageAccountInfoPanel.field_K + 2) : 0), 18, (byte) 39, 0, 0);
+        sf.field_f.setTarget(42 + UnderageAccountInfoPanel.field_K, param0, (byte) 42, 0, -40 + (MenuList.field_v.field_K - (UnderageAccountInfoPanel.field_K + 2)));
+        ls.field_a.a(MenuList.field_v.field_K, 20, 0, 2, -122, MenuList.field_v.field_mb - 20, UnderageAccountInfoPanel.field_K);
     }
 
     final ArchiveIndex a(int param0) {

@@ -119,10 +119,10 @@ final class MusicVoiceMixer extends PcmStream {
         kb var7 = null;
         int var8 = 0;
         SpriteButton var9 = null;
-        b var10 = null;
-        b var11 = null;
+        FilledMenuPanel var10 = null;
+        FilledMenuPanel var11 = null;
         int var12 = 0;
-        b var12_ref_b = null;
+        FilledMenuPanel var12_ref_b = null;
         MenuLabel var13 = null;
         int var13_int = 0;
         SpriteButton var14 = null;
@@ -159,10 +159,10 @@ final class MusicVoiceMixer extends PcmStream {
           var8 = 7;
           var9 = new SpriteButton(0, var8 + var7.field_i, 35, 35, uk.a(false, param1.field_q));
           var21.addChild(var9, 8);
-          var10 = new b(40, var8 + (var7.field_i + ObjectList.field_d[0].field_w), 4 * ObjectList.field_d[0].field_z + 15, 35 - ObjectList.field_d[0].field_w, 2, 2105376);
+          var10 = new FilledMenuPanel(40, var8 + (var7.field_i + ObjectList.field_d[0].field_w), 4 * ObjectList.field_d[0].field_z + 15, 35 - ObjectList.field_d[0].field_w, 2, 2105376);
           var21.addChild(var10, 8);
           for (var11_int = 0; 4 > var11_int; var11_int++) {
-            var12_ref_b = new b(var11_int * (5 + ObjectList.field_d[var11_int].field_z) + 40, var7.field_i + var8 + ObjectList.field_d[var11_int].field_w / 2, ObjectList.field_d[var11_int].field_z, 35 - ObjectList.field_d[var11_int].field_w / 2, 2, 2105376);
+            var12_ref_b = new FilledMenuPanel(var11_int * (5 + ObjectList.field_d[var11_int].field_z) + 40, var7.field_i + var8 + ObjectList.field_d[var11_int].field_w / 2, ObjectList.field_d[var11_int].field_z, 35 - ObjectList.field_d[var11_int].field_w / 2, 2, 2105376);
             var21.addChild(var12_ref_b, 8);
             var13_int = param1.field_r + param1.field_u[var11_int];
             if (var13_int < 0) {
@@ -181,7 +181,7 @@ final class MusicVoiceMixer extends PcmStream {
             var14_ref.field_o = var16;
             var12_ref_b.field_o = var16;
           }
-          var11 = new b(ObjectList.field_d[0].field_z * 4 + 60, var8 + (var7.field_i + ObjectList.field_d[0].field_w / 2), TurnEventLog.field_d.field_z, -(ObjectList.field_d[0].field_w / 2) + 35, 2, 534312);
+          var11 = new FilledMenuPanel(ObjectList.field_d[0].field_z * 4 + 60, var8 + (var7.field_i + ObjectList.field_d[0].field_w / 2), TurnEventLog.field_d.field_z, -(ObjectList.field_d[0].field_w / 2) + 35, 2, 534312);
           var21.addChild(var11, 8);
           var12 = param1.field_r;
           if (var12 < 0) {

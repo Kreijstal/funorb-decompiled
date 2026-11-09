@@ -7,7 +7,7 @@ final class SolMapReader implements MapGenerator {
     static int field_b;
     private int field_d;
 
-    public final GalaxyMap generate(byte param0) throws jn {
+    public final GalaxyMap generate(byte param0) throws MapGenerationException {
         int var8 = 0;
         int var2;
         int var3;
@@ -24,7 +24,7 @@ final class SolMapReader implements MapGenerator {
         int var11Lifetime1;
         int var12Lifetime1;
         var14 = ShatteredPlansClient.field_F ? 1 : 0;
-        var2 = pe.a((byte) 34, 11);
+        var2 = UnderageAccountInfoPanel.a((byte) 34, 11);
         var3 = ls.a(11, 2);
         var5 = -65 / ((-67 - param0) / 44);
         var4 = new GalaxyMap(var2, var3, this.field_d, 73);
@@ -126,16 +126,16 @@ final class SolMapReader implements MapGenerator {
         var2 = pr.currentTimeMillis(14274);
         var4 = var2 - NetworkArchiveRequest.field_z;
         if (var4 > 30000L) {
-          vj.field_C = 0;
+          DropTargetWidget.field_C = 0;
         } else {
           var6 = 3000;
-          if (vj.field_C >= 7) {
+          if (DropTargetWidget.field_C >= 7) {
             var6 = 12000;
           } else {
-            if (vj.field_C >= 5) {
+            if (DropTargetWidget.field_C >= 5) {
               var6 = 9000;
             } else {
-              if (vj.field_C >= 3) {
+              if (DropTargetWidget.field_C >= 3) {
                 var6 = 6000;
               }
             }
@@ -143,7 +143,7 @@ final class SolMapReader implements MapGenerator {
           if (var4 <= (long)var6) {
             return false;
           }
-          vj.field_C = vj.field_C + 1;
+          DropTargetWidget.field_C = DropTargetWidget.field_C + 1;
         }
         NetworkArchiveRequest.field_z = var2;
         return true;
@@ -190,7 +190,7 @@ final class SolMapReader implements MapGenerator {
         int var9Lifetime1;
         var13 = ShatteredPlansClient.field_F ? 1 : 0;
         var4 = null;
-        ji.field_I.field_xb.field_M.clear(0);
+        DateInputWidget.field_I.field_xb.field_M.clear(0);
         var5 = 0;
         var6 = 0;
         if (param0) {
@@ -218,7 +218,7 @@ final class SolMapReader implements MapGenerator {
               }
               var10 = IsolationistAi.a(param0, var8_ref_nf);
               var11 = var10 + BitmapFont.escapeMarkup(var8_ref_nf.field_k);
-              var12 = jl.a(var8_ref_nf, (byte) -73);
+              var12 = ResizingDialog.a(var8_ref_nf, (byte) -73);
               var8_ref_nf.field_j = new AnimatedPanel(0L, BoundsRect.field_k, var11);
               var8_ref_nf.field_j.field_nb = ho.field_f;
               var8_ref_nf.field_j.field_jb = -(var12 >> 1 & 8355711) + var12 + (8355711 & BoundsRect.field_k.field_jb >> 1);
@@ -233,7 +233,7 @@ final class SolMapReader implements MapGenerator {
         for (var8 = 0; DebouncedValidator.field_g > var8; var8++) {
           var9_ref_nf = wm.field_d[var8];
           if (null != var9_ref_nf.field_j) {
-            ji.field_I.field_xb.addChild(4, var9_ref_nf.field_j);
+            DateInputWidget.field_I.field_xb.addChild(4, var9_ref_nf.field_j);
             var9_ref_nf.field_j.setTarget(var9_ref_nf.field_j.measureWidthUnbounded(false), param3, (byte) 111, var7Lifetime1, param2);
             if (0 != var9_ref_nf.field_j.field_rb) {
               var4 = var9_ref_nf;
@@ -241,29 +241,29 @@ final class SolMapReader implements MapGenerator {
             var7Lifetime1 = var7Lifetime1 + param3;
           }
         }
-        var8Lifetime1 = -var7Lifetime1 + var6 + (ji.field_I.field_xb.field_mb + ji.field_I.field_xb.field_gb);
-        ji.field_I.field_xb.field_mb = ji.field_I.field_xb.field_mb - var8Lifetime1;
-        ji.field_I.field_xb.field_db = ji.field_I.field_xb.field_db + var8Lifetime1;
+        var8Lifetime1 = -var7Lifetime1 + var6 + (DateInputWidget.field_I.field_xb.field_mb + DateInputWidget.field_I.field_xb.field_gb);
+        DateInputWidget.field_I.field_xb.field_mb = DateInputWidget.field_I.field_xb.field_mb - var8Lifetime1;
+        DateInputWidget.field_I.field_xb.field_db = DateInputWidget.field_I.field_xb.field_db + var8Lifetime1;
         if (MenuWindow.field_v) {
-          ji.field_I.field_xb.field_mb = var7Lifetime1;
+          DateInputWidget.field_I.field_xb.field_mb = var7Lifetime1;
         }
-        ji.field_I.field_xb.field_gb = -ji.field_I.field_xb.field_mb + var7Lifetime1;
+        DateInputWidget.field_I.field_xb.field_gb = -DateInputWidget.field_I.field_xb.field_mb + var7Lifetime1;
         if (MenuWindow.field_v) {
           MenuWindow.field_v = false;
-          ji.field_I.field_xb.field_w = 0;
+          DateInputWidget.field_I.field_xb.field_w = 0;
           ShatteredPlansClient.field_K = true;
-          ji.field_I.field_xb.field_db = -ji.field_I.field_xb.field_mb + ji.field_I.field_zb.field_mb;
+          DateInputWidget.field_I.field_xb.field_db = -DateInputWidget.field_I.field_xb.field_mb + DateInputWidget.field_I.field_zb.field_mb;
         }
         if (sr.field_h &&
           null != ValidatedTextInputWidget.field_X) {
           ShatteredPlansClient.field_K = true;
         }
-        var9Lifetime1 = ji.field_I.field_zb.field_mb - ji.field_I.field_xb.field_mb - ji.field_I.field_xb.field_gb;
+        var9Lifetime1 = DateInputWidget.field_I.field_zb.field_mb - DateInputWidget.field_I.field_xb.field_mb - DateInputWidget.field_I.field_xb.field_gb;
         if (ShatteredPlansClient.field_K) {
-          ji.field_I.field_xb.field_w = var9Lifetime1 - ji.field_I.field_xb.field_db;
+          DateInputWidget.field_I.field_xb.field_w = var9Lifetime1 - DateInputWidget.field_I.field_xb.field_db;
         }
-        ji.field_I.a(param1 * 2 * param3, true, (byte) -114, param3);
-        stackIn_46_0 = (var9Lifetime1 == ji.field_I.field_xb.field_w + ji.field_I.field_xb.field_db);
+        DateInputWidget.field_I.a(param1 * 2 * param3, true, (byte) -114, param3);
+        stackIn_46_0 = (var9Lifetime1 == DateInputWidget.field_I.field_xb.field_w + DateInputWidget.field_I.field_xb.field_db);
         ShatteredPlansClient.field_K = stackIn_46_0;
         return (nf) (var4);
     }

@@ -54,8 +54,8 @@ final class MenuButton extends MenuComponent {
         FleetMove.field_C = false;
         TertiaryNodeList.field_b = false;
         qj.a((byte) -127, param0);
-        PrivateChatMessage.field_l = oj.field_Fb;
-        MatchingTextValidator.field_s = oj.field_Fb;
+        PrivateChatMessage.field_l = AccountCreationDialog.field_Fb;
+        MatchingTextValidator.field_s = AccountCreationDialog.field_Fb;
     }
 
     final void setLabel(byte param0, int param1, String param2) {
@@ -110,7 +110,7 @@ final class MenuButton extends MenuComponent {
           }
           tb.a(param6, param4, param9, param14, param8, param18, param12, param11, param19, param13, param3, param5, param1, -7966, param2);
           DiskArchiveRequest.a(param7, (byte) -81, param0, param8);
-          ir.l(1062);
+          DisplayNameForm.l(1062);
           SecondaryNodeHashTable.a((byte) -83);
           te.a(true);
           return;

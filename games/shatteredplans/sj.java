@@ -5,7 +5,7 @@ final class sj {
     static AnimatedPanel field_c;
     static int[] field_a;
     static String field_d;
-    static ir field_b;
+    static DisplayNameForm field_b;
 
     final static void a(byte param0, AnimatedPanel param1, AnimatedPanel param2) {
         try {
@@ -47,7 +47,7 @@ final class sj {
         int stackIn_18_1 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        lo var2 = null;
+        CombinedTerritory var2 = null;
         boolean[] var3 = null;
         int var4 = 0;
         int var5_int = 0;

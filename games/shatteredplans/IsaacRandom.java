@@ -39,20 +39,20 @@ final class IsaacRandom {
           }
           try {
             if (gb.field_i == 0) {
-              oj.field_Gb = dh.field_a.requestSocket(65535, IntList.field_i, StandardMapReader.field_d);
+              AccountCreationDialog.field_Gb = dh.field_a.requestSocket(65535, IntList.field_i, StandardMapReader.field_d);
               gb.field_i = gb.field_i + 1;
             }
             if (gb.field_i == 1) {
-              if (2 == oj.field_Gb.field_d) {
+              if (2 == AccountCreationDialog.field_Gb.field_d) {
                 stackIn_14_0 = is.a((byte) -94, -1);
                 return stackIn_14_0;
               }
-              if (oj.field_Gb.field_d == 1) {
+              if (AccountCreationDialog.field_Gb.field_d == 1) {
                 gb.field_i = gb.field_i + 1;
               }
             }
             if (gb.field_i == 2) {
-              js.field_a = new BufferedSocket((java.net.Socket) (oj.field_Gb.field_e), dh.field_a);
+              js.field_a = new BufferedSocket((java.net.Socket) (AccountCreationDialog.field_Gb.field_e), dh.field_a);
               var2 = new PacketBuffer(13);
               hq.a(ae.field_h, QuickChatPhraseDefinition.field_u, var2, (byte) 20, sr.field_q);
               var2.writeByte(15, (byte) -69);
@@ -82,7 +82,7 @@ final class IsaacRandom {
             TertiaryLinkNode.field_o.a((byte) 90, hq.field_c, js.field_a);
             js.field_a = null;
             gb.field_i = 0;
-            oj.field_Gb = null;
+            AccountCreationDialog.field_Gb = null;
             stackIn_35_0 = 0;
             return stackIn_35_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {

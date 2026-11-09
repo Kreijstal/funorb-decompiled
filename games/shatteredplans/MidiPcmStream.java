@@ -263,7 +263,7 @@ final class MidiPcmStream extends PcmStream {
             var9 = (int)var8.key;
             var12 = (MusicPatch) (this.field_Q.get((long)var9, -25064));
             if (var12 == null) {
-              var13 = lo.a(param0, (byte) 125, var9);
+              var13 = CombinedTerritory.a(param0, (byte) 125, var9);
               if (var13 != null) {
                 this.field_Q.put(var13, 87, (long)var9);
                 if (!var13.loadSamples(param4, var8.field_j, (int[]) (var7), 1)) {
@@ -467,15 +467,15 @@ final class MidiPcmStream extends PcmStream {
             var13 = 0;
             if (null == var12.field_M) {
               var14 = param2 | param3;
-              var12.field_Ub = new AnimatedPanel(0L, oj.field_zb);
+              var12.field_Ub = new AnimatedPanel(0L, AccountCreationDialog.field_zb);
               var12.addChild(4, var12.field_Ub);
               var12.field_Ub.field_y = 1;
               var12.field_Pb = new AnimatedPanel(0L, ArrayWidgetGroup.field_E);
               var12.addChild(4, var12.field_Pb);
-              var12.field_Rb = new AnimatedPanel(0L, oj.field_zb);
+              var12.field_Rb = new AnimatedPanel(0L, AccountCreationDialog.field_zb);
               var12.addChild(4, var12.field_Rb);
               var12.field_Rb.field_kb = 0;
-              var12.field_Wb = new AnimatedPanel(0L, oj.field_zb);
+              var12.field_Wb = new AnimatedPanel(0L, AccountCreationDialog.field_zb);
               var12.addChild(4, var12.field_Wb);
               var12.field_Wb.field_kb = 0;
               var12.field_Ib = new AnimatedPanel(0L, ArrayWidgetGroup.field_E);
@@ -485,10 +485,10 @@ final class MidiPcmStream extends PcmStream {
               stackIn_12_1 = null;
               stackIn_12_2 = null;
               stackIn_12_3 = 0L;
-              if (ns.field_pb) {
+              if (AccountStatusDialog.field_pb) {
                 stackIn_13_1 = null;
                 stackIn_13_2 = null;
-                stackIn_13_4 = oj.field_zb;
+                stackIn_13_4 = AccountCreationDialog.field_zb;
               } else {
                 stackIn_13_1 = null;
                 stackIn_13_2 = null;
@@ -531,23 +531,23 @@ final class MidiPcmStream extends PcmStream {
               stackIn_31_1 = null;
               stackIn_31_2 = null;
               stackIn_31_3 = 0L;
-              if (ns.field_pb) {
+              if (AccountStatusDialog.field_pb) {
                 stackIn_32_1 = null;
                 stackIn_32_2 = null;
                 stackIn_32_4 = ArrayWidgetGroup.field_E;
               } else {
                 stackIn_32_1 = null;
                 stackIn_32_2 = null;
-                stackIn_32_4 = oj.field_zb;
+                stackIn_32_4 = AccountCreationDialog.field_zb;
               }
               stackIn_31_0.field_Ob = new AnimatedPanel(stackIn_31_3, stackIn_32_4);
               var12.addChild(4, var12.field_Ob);
               var12.field_Ob.field_y = 2;
               var12.field_Tb = new AnimatedPanel(0L, ArrayWidgetGroup.field_E);
               var12.addChild(4, var12.field_Tb);
-              var12.field_Sb = new AnimatedPanel(0L, gn.field_w);
+              var12.field_Sb = new AnimatedPanel(0L, StatefulWidgetTheme.field_w);
               var12.addChild(4, var12.field_Sb);
-              var12.field_Hb = new AnimatedPanel(0L, gn.field_w);
+              var12.field_Hb = new AnimatedPanel(0L, StatefulWidgetTheme.field_w);
               var12.addChild(4, var12.field_Hb);
               var12.field_ic = new AnimatedPanel(0L, SpriteState.field_u);
               var12.addChild(4, var12.field_ic);
@@ -688,7 +688,7 @@ final class MidiPcmStream extends PcmStream {
               }
               var12.field_Ib.field_z = Integer.toString(var12.field_Zb);
               var12.field_Ib.setTarget(48, cr.field_c, (byte) 47, var31, 200);
-              stackIn_71_0 = (!ns.field_pb) ? 200 : 250;
+              stackIn_71_0 = (!AccountStatusDialog.field_pb) ? 200 : 250;
               var33_intLifetime1 = stackIn_71_0;
               var12.field_Mb.setTarget(-2 + (365 - var33_intLifetime1), cr.field_c, (byte) 46, var31, var33_intLifetime1);
               var34_int = TextLayout.field_b;
@@ -705,7 +705,7 @@ final class MidiPcmStream extends PcmStream {
                   stackIn_80_0 = 1;
                 }
                 var36 = stackIn_80_0;
-                stackIn_82_0 = ji.field_E;
+                stackIn_82_0 = DateInputWidget.field_E;
                 if (var36 == 0) {
                   stackIn_83_1 = 0;
                 } else {
@@ -858,7 +858,7 @@ final class MidiPcmStream extends PcmStream {
                   stackIn_165_0 = ls.field_d;
                 }
               } else {
-                stackIn_165_0 = ns.field_qb;
+                stackIn_165_0 = AccountStatusDialog.field_qb;
               }
               DualLinkDequeSequence.field_k = stackIn_165_0;
             }
@@ -866,7 +866,7 @@ final class MidiPcmStream extends PcmStream {
               if (var12.field_Fb == 2) {
                 stackIn_170_0 = we.field_d;
               } else {
-                stackIn_170_0 = wd.field_K;
+                stackIn_170_0 = NumericDateInputWidget.field_K;
               }
               DualLinkDequeSequence.field_k = stackIn_170_0;
             }

@@ -9,16 +9,16 @@ final class is {
     final static int a(byte param0, int param1) {
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         gb.field_i = 0;
-        oj.field_Gb = null;
+        AccountCreationDialog.field_Gb = null;
         js.field_a = null;
         if (param0 != -94) {
           is.a((byte) -54, 83);
         }
         int var2 = IntList.field_i;
-        IntList.field_i = cf.field_D;
+        IntList.field_i = StatusMessagePanel.field_D;
         if (param1 == 51) {
           TertiaryLinkNode.field_o.field_p = 2;
-          cf.field_D = var2;
+          StatusMessagePanel.field_D = var2;
           TertiaryLinkNode.field_o.field_a = TertiaryLinkNode.field_o.field_a + 1;
           if (TertiaryLinkNode.field_o.field_a < 2) {
             if (2 <= TertiaryLinkNode.field_o.field_a &&
@@ -44,7 +44,7 @@ final class is {
         }
         if (50 == param1) {
           TertiaryLinkNode.field_o.field_p = 5;
-          cf.field_D = var2;
+          StatusMessagePanel.field_D = var2;
           TertiaryLinkNode.field_o.field_a = TertiaryLinkNode.field_o.field_a + 1;
           if (TertiaryLinkNode.field_o.field_a < 2) {
             if (2 <= TertiaryLinkNode.field_o.field_a &&
@@ -69,7 +69,7 @@ final class is {
           return 1;
         }
         TertiaryLinkNode.field_o.field_p = 1;
-        cf.field_D = var2;
+        StatusMessagePanel.field_D = var2;
         TertiaryLinkNode.field_o.field_a = TertiaryLinkNode.field_o.field_a + 1;
         if (TertiaryLinkNode.field_o.field_a < 2) {
           if (2 <= TertiaryLinkNode.field_o.field_a &&

@@ -58,7 +58,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
         if (param0 != 0) {
           return;
         }
-        BitmapFont var5 = gn.field_u;
+        BitmapFont var5 = StatefulWidgetTheme.field_u;
         if (this.field_G != null) {
           var5.a(DebouncedValidator.field_c, param3 + this.field_m, this.field_q + param2, this.field_x, 20, 16777215, -1, 0, 0, var5.field_q + var5.field_J);
         }
@@ -130,19 +130,19 @@ final class NameSuggestionsPanel extends WidgetContainer implements ButtonListen
             for (var4_int = param1; var3_int > var4_int; var4_int++) {
               this.field_G[var4_int] = ih.a((CharSequence) ((Object) param0[var4_int]), 68).replace(' ', ' ');
             }
-            var4 = new LinkPainter(gn.field_u, 0, 1);
+            var4 = new LinkPainter(StatefulWidgetTheme.field_u, 0, 1);
             this.field_I = new FocusableWidget[var3_int + 1];
             for (var5 = 0; var3_int > var5; var5++) {
               this.field_I[var5] = new FocusableWidget(this.field_G[var5], (WidgetListener) (this));
               this.field_I[var5].field_p = (WidgetPainter) ((Object) var4);
               this.field_I[var5].field_v = SecondaryNodeDequeIterator.field_f;
               this.field_I[var5].setBounds(20 + var5 * 16, 15, (byte) 112, 0, 80);
-              this.b((byte) -107, this.field_I[var5]);
+              this.addChild((byte) -107, this.field_I[var5]);
             }
             this.field_I[var3_int] = new FocusableWidget(SolMapGenerator.field_p, (WidgetListener) (this));
             this.field_I[var3_int].field_p = (WidgetPainter) ((Object) var4);
             this.field_I[var3_int].setBounds(16 + (var3_int * 16 + 20), 15, (byte) 102, 0, 100);
-            this.b((byte) -65, this.field_I[var3_int]);
+            this.addChild((byte) -65, this.field_I[var3_int]);
             return;
           }
           this.field_G = null;

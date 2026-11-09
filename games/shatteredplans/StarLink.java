@@ -55,7 +55,7 @@ final class StarLink extends IntrusiveNode implements Orderable {
           if (param0 != 14) {
             return null;
           }
-          stackIn_28_0 = QuickChatCategoryRegistry.a(tl.field_o, 4371, new String[]{param2});
+          stackIn_28_0 = QuickChatCategoryRegistry.a(GameClientShell.field_o, 4371, new String[]{param2});
           return stackIn_28_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

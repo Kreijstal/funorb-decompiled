@@ -44,7 +44,7 @@ final class ul extends AnimatedPanel {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         QuickChatCategoryRegistry.field_d[wm.field_c] = param4;
-        lg.field_d[wm.field_c] = wm.field_c;
+        ProxyAuthenticationRequiredException.field_d[wm.field_c] = wm.field_c;
         GameApplet.field_f[wm.field_c] = param1;
         if (!(us.field_b >= param1)) {
           GzipInflater.field_e = param1;

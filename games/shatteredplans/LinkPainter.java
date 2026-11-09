@@ -122,10 +122,10 @@ final class LinkPainter implements WidgetPainter {
               }
               var6 = stackIn_13_0;
               while (var6 < var3) {
-                var5[var6] = eo.field_fb[we.intAnd(255, (int) var4[var6])];
+                var5[var6] = ProgressDialog.field_fb[we.intAnd(255, (int) var4[var6])];
                 var6++;
               }
-              var1[var2] = new Sprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[var2], sj.field_a[var2], WeightedCacheEntry.field_s[var2], IntHashIndex.field_g[var2], var5);
+              var1[var2] = new Sprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, StatusMessagePanel.field_H[var2], sj.field_a[var2], WeightedCacheEntry.field_s[var2], IntHashIndex.field_g[var2], var5);
               var2++;
               continue scanLoop1;
             }
@@ -188,7 +188,7 @@ final class LinkPainter implements WidgetPainter {
           boolean decompiledFrameRemainder0 = true;
           var5 = null;
           if (2 != po.field_b) {
-            cg.field_A.field_s = false;
+            OpacityWidget.field_A.field_s = false;
             RecklessAi.field_p.field_z = IsaacBackedRandom.field_d;
             if (po.field_b == 1) {
               d.field_a.field_Db.field_zb.field_z = GameSession.field_X;
@@ -202,7 +202,7 @@ final class LinkPainter implements WidgetPainter {
             decompiledFrameRemainder0 = (var19 != 0);
           }
           if (decompiledFrameRemainder0) {
-            cg.field_A.field_s = true;
+            OpacityWidget.field_A.field_s = true;
             RecklessAi.field_p.field_z = QuickChatCategoryRegistry.a(DelegatingCanvas.field_b, 4371, new String[]{QuickChatPhraseRegistry.field_d});
             d.field_a.field_Db.field_zb.field_z = null;
             var6 = null;
@@ -214,7 +214,7 @@ final class LinkPainter implements WidgetPainter {
                   if (null == var7.field_M) {
                     var7.field_Cb = new AnimatedPanel(0L, ArrayWidgetGroup.field_E);
                     var7.addChild(4, var7.field_Cb);
-                    var7.field_Fb = new AnimatedPanel(0L, oj.field_zb);
+                    var7.field_Fb = new AnimatedPanel(0L, AccountCreationDialog.field_zb);
                     var7.addChild(4, var7.field_Fb);
                     var7.field_Db = new AnimatedPanel(0L, ArrayWidgetGroup.field_E);
                     var7.addChild(4, var7.field_Db);
@@ -312,14 +312,14 @@ final class LinkPainter implements WidgetPainter {
                 }
               } else {
                 if (d.field_a.field_Fb.field_rb != 0) {
-                  lg.field_e = new jp(d.field_a.field_Fb.field_B, d.field_a.field_Fb.field_N, d.field_a.field_Fb.field_K, d.field_a.field_Fb.field_mb, GameSession.field_A, MusicCrossfadeStream.field_v, SpriteState.field_u, SpriteState.field_u);
+                  ProxyAuthenticationRequiredException.field_e = new jp(d.field_a.field_Fb.field_B, d.field_a.field_Fb.field_N, d.field_a.field_Fb.field_K, d.field_a.field_Fb.field_mb, GameSession.field_A, MusicCrossfadeStream.field_v, SpriteState.field_u, SpriteState.field_u);
                   MapViewState.field_b = 0;
                 }
               }
               if (0 == d.field_a.field_yb.field_rb) {
                 break;
               }
-              lg.field_e = new jp(d.field_a.field_yb.field_B, d.field_a.field_yb.field_N, d.field_a.field_yb.field_K, d.field_a.field_yb.field_mb, IntrusiveDequeCursor.field_f, MusicCrossfadeStream.field_v, SpriteState.field_u, SpriteState.field_u);
+              ProxyAuthenticationRequiredException.field_e = new jp(d.field_a.field_yb.field_B, d.field_a.field_yb.field_N, d.field_a.field_yb.field_K, d.field_a.field_yb.field_mb, IntrusiveDequeCursor.field_f, MusicCrossfadeStream.field_v, SpriteState.field_u, SpriteState.field_u);
               MapViewState.field_b = 1;
               break;
             }
@@ -335,7 +335,7 @@ final class LinkPainter implements WidgetPainter {
 
     public LinkPainter() {
         try {
-          this.field_f = gn.field_u;
+          this.field_f = StatefulWidgetTheme.field_u;
           this.field_a = 1;
           this.field_d = 1;
         } catch (RuntimeException runtimeException) {
@@ -378,9 +378,9 @@ final class LinkPainter implements WidgetPainter {
         try {
           FleetMove.field_C = false;
           var1_int = -1 / ((-28 - param0) / 57);
-          tl.field_z = null;
+          GameClientShell.field_z = null;
           if (TertiaryNodeList.field_b) {
-            ji.field_G.p(-7011);
+            DateInputWidget.field_G.showDismissibleMessage(-7011);
             if (var3 == 0) {
               return;
             }
@@ -388,15 +388,15 @@ final class LinkPainter implements WidgetPainter {
           var2 = CheckboxPainter.field_n;
           if (var2 > 0) {
             if (1 != var2) {
-              tl.field_z = QuickChatCategoryRegistry.a(MapViewState.field_M, 4371, new String[]{Integer.toString(var2)});
+              GameClientShell.field_z = QuickChatCategoryRegistry.a(MapViewState.field_M, 4371, new String[]{Integer.toString(var2)});
             }
             if (1 == var2 ||
               var3 != 0) {
-              tl.field_z = GameApplet.field_h;
+              GameClientShell.field_z = GameApplet.field_h;
             }
-            tl.field_z = lr.a(88, new CharSequence[]{(CharSequence) ((Object) tl.field_z), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) pr.field_b)});
+            GameClientShell.field_z = lr.a(88, new CharSequence[]{(CharSequence) ((Object) GameClientShell.field_z), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) pr.field_b)});
           }
-          ji.field_G.i((byte) -104);
+          DateInputWidget.field_G.closeStatusDialog((byte) -104);
           ig.a(7655);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

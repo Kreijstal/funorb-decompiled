@@ -32,7 +32,7 @@ final class sk extends IntrusiveNode {
         var8 = sa.field_a;
         var3 = var8.readUnsignedByte(param1 ^ 113);
         stackIn_3_0 = (param1 != ~(128 & var3));
-        kr.field_b = stackIn_3_0;
+        InvalidMapConnectionException.field_b = stackIn_3_0;
         PacketBuffer.field_k = var3 & 127;
         nj.field_a = var8.readUnsignedByte(-77);
         WidgetStyle.field_j = var8.readLong(param1 ^ -31);
@@ -60,7 +60,7 @@ final class sk extends IntrusiveNode {
           WeightedCacheEntry.field_q = var8.readString(param1 + 0);
         }
         if (!param0) {
-          BufferedSocket.field_h = pe.a(var8, param1 + 1, 80);
+          BufferedSocket.field_h = UnderageAccountInfoPanel.a(var8, param1 + 1, 80);
           AgeValidator.field_p = null;
           return new nf(param0);
         }

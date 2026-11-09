@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class no {
-    static ri field_e;
+    static LoginForm field_e;
     static boolean field_b;
     static String field_a;
     static int[] field_c;
@@ -32,7 +32,7 @@ final class no {
           Star var26 = null;
           Throwable decompiledCaughtException = null;
           RuntimeException var2 = null;
-          jn var4 = null;
+          MapGenerationException var4 = null;
           Object var5 = null;
           Star var8 = null;
           int var9 = 0;
@@ -72,9 +72,9 @@ final class no {
             try {
               kb.field_x = param1;
               var3 = wl.field_a.a(117, kb.field_x, true);
-            } catch (jn decompiledCaughtParameter0) {
+            } catch (MapGenerationException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var4 = (jn) (Object) decompiledCaughtException;
+              var4 = (MapGenerationException) (Object) decompiledCaughtException;
               throw new RuntimeException("Failed to advance Tutorial to stage " + kb.field_x + ". ");
             }
             var15 = oq.field_a.field_P.field_g.field_e;
@@ -168,7 +168,7 @@ final class no {
               var3.field_e[6].field_y = var23;
               var3.field_e[7].field_t = var23;
               var3.field_e[7].field_y = var23;
-              var23.field_m = new lo(var23, var3.field_e[7]);
+              var23.field_m = new CombinedTerritory(var23, var3.field_e[7]);
               var23.field_m.addStar(-21771, var3.field_e[7]);
               var23.field_m.addStar(-21771, var3.field_e[6]);
               var24 = new Territory(var23, var3.field_e[7]);
@@ -187,7 +187,7 @@ final class no {
               var29Lifetime1Lifetime1 = var26Lifetime2;
               var26Lifetime2.field_y = var25;
               var26Lifetime2.field_t = var25;
-              var25.field_m = new lo(var25, var26Lifetime2);
+              var25.field_m = new CombinedTerritory(var25, var26Lifetime2);
               var25.field_m.addStar(-21771, var26Lifetime2);
               var27 = new Territory(var25, var26Lifetime2);
               var27.addStar(-21771, var26Lifetime2);
@@ -213,7 +213,7 @@ final class no {
               var31.field_t = var28;
               var10.field_t = var28;
               var10.field_y = var28;
-              var28.field_m = new lo(var28, var29Lifetime2);
+              var28.field_m = new CombinedTerritory(var28, var29Lifetime2);
               var28.field_m.addStar(-21771, var29Lifetime2);
               var28.field_m.addStar(-21771, var30);
               var28.field_m.addStar(-21771, var8);
@@ -269,7 +269,7 @@ final class no {
               oq.field_e = false;
               var3_int = 1;
             }
-            ImageProducerRasterBuffer.a(vj.g((byte) 120), ei.a(82), var3_int != 0, 0, po.field_h);
+            ImageProducerRasterBuffer.a(DropTargetWidget.g((byte) 120), ei.a(82), var3_int != 0, 0, po.field_h);
           } else {
             if (!or.a(250)) {
               SoftwareRasterizer.clear();
@@ -320,7 +320,7 @@ final class no {
             break;
           }
           if (param1 != 1) {
-            field_e = (ri) null;
+            field_e = (LoginForm) null;
           }
           for (var3Lifetime1 = var2_int; var3Lifetime1 < DebouncedValidator.field_g; var3Lifetime1++) {
             if (null != wm.field_d[var3Lifetime1].field_j) {

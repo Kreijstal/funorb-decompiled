@@ -78,14 +78,14 @@ final class PasswordValidator extends TextFieldValidator {
         nf var9 = null;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (MouseInputHandler.field_f > pg.field_J) {
-            pg.field_J = pg.field_J + 1;
+          if (MouseInputHandler.field_f > LabeledChildWidget.field_J) {
+            LabeledChildWidget.field_J = LabeledChildWidget.field_J + 1;
           }
           if (DerelictMapGenerator.field_m != so.field_q.field_d) {
             NodeHashTableIterator.field_f = NodeHashTableIterator.field_f + (so.field_q.field_d - DerelictMapGenerator.field_m);
             DerelictMapGenerator.field_m = so.field_q.field_d;
           }
-          if (pg.field_J <= 0) {
+          if (LabeledChildWidget.field_J <= 0) {
             return;
           }
           IndexedSpriteState.a(127);
@@ -109,7 +109,7 @@ final class PasswordValidator extends TextFieldValidator {
             }
           }
           if (pr.field_c.field_rb != 0) {
-            DialogRoot.field_G = new kh(pr.field_c.field_B, pr.field_c.field_N, pr.field_c.field_K, pr.field_c.field_mb, param1, ho.field_j, IntrusiveDequeSequence.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, gn.field_w, (String) null, 0L);
+            DialogRoot.field_G = new kh(pr.field_c.field_B, pr.field_c.field_N, pr.field_c.field_K, pr.field_c.field_mb, param1, ho.field_j, IntrusiveDequeSequence.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, StatefulWidgetTheme.field_w, (String) null, 0L);
           }
           var9 = SolMapReader.a(false, param2, tg.field_a, cr.field_c);
           if (var9 != null) {
@@ -159,7 +159,7 @@ final class PasswordValidator extends TextFieldValidator {
               }
               var7 = new SectorCacheStore(param2, oq.field_g, MapView.field_Eb[param2], 2097152);
             }
-            var8 = lg.field_c.a(false, param2, (SectorCacheStore) (var6), (SectorCacheStore) (var7), param1);
+            var8 = ProxyAuthenticationRequiredException.field_c.a(false, param2, (SectorCacheStore) (var6), (SectorCacheStore) (var7), param1);
             if (param5) {
               var8.c(255);
             }
@@ -288,7 +288,7 @@ final class PasswordValidator extends TextFieldValidator {
             return null;
           }
           var5 = var4;
-          if (cg.a(-76, var5)) {
+          if (OpacityWidget.a(-76, var5)) {
             stackIn_6_0 = AccountValidationText.field_b;
             return stackIn_6_0;
           }

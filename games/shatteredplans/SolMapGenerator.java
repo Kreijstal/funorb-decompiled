@@ -23,7 +23,7 @@ final class SolMapGenerator extends StandardMapGenerator {
         field_q = null;
     }
 
-    final int[] a(Random param0, Star[] param1, int[][] param2, int param3, byte param4, int param5, int param6, int[] param7, int param8) throws jn {
+    final int[] a(Random param0, Star[] param1, int[][] param2, int param3, byte param4, int param5, int param6, int[] param7, int param8) throws MapGenerationException {
         int[] stackIn_8_0 = null;
         int[] stackIn_30_0 = null;
         RuntimeException stackIn_33_0 = null;
@@ -73,7 +73,7 @@ final class SolMapGenerator extends StandardMapGenerator {
               if (var13 != 4) {
                 if (var13 != 5) {
                   if (6 != var13) {
-                    throw new jn("Sol Map does not support " + param8 + " players.");
+                    throw new MapGenerationException("Sol Map does not support " + param8 + " players.");
                   }
                   for (var13 = 0; var13 < param8; var13++) {
                     var10[var13] = ProjectsContent.field_f[var13];
@@ -148,9 +148,9 @@ final class SolMapGenerator extends StandardMapGenerator {
         kb.field_v = id.a(2, param1, "commonui", "jagex_logo_grey");
         AttackTask.field_q = ae.a(-80, "commonui", param1, "button");
         MenuList.field_w = va.a("validation", 0, "commonui", param1);
-        EmailValidator.field_x = (BitmapFont) ((Object) ri.a("arezzo12", "commonui", param1, param2, (byte) -17));
-        gn.field_u = (BitmapFont) ((Object) ri.a("arezzo14", "commonui", param1, param2, (byte) 90));
-        CipherPacketBuffer.field_p = (BitmapFont) ((Object) ri.a("arezzo14bold", "commonui", param1, param2, (byte) 111));
+        EmailValidator.field_x = (BitmapFont) ((Object) LoginForm.a("arezzo12", "commonui", param1, param2, (byte) -17));
+        StatefulWidgetTheme.field_u = (BitmapFont) ((Object) LoginForm.a("arezzo14", "commonui", param1, param2, (byte) 90));
+        CipherPacketBuffer.field_p = (BitmapFont) ((Object) LoginForm.a("arezzo14bold", "commonui", param1, param2, (byte) 111));
         Sprite var17 = new Sprite(param3.getFileByName(true, "", "button.gif"), (java.awt.Component) ((Object) tm.field_i));
         GameApplet.a("commonui", -108, param1, "dropdown");
         IndexedSprite[] var5 = SliderPainter.a("commonui", param1, "screen_options", (byte) -118);
@@ -201,7 +201,7 @@ final class SolMapGenerator extends StandardMapGenerator {
         }
     }
 
-    final void placeStars(boolean param0, GalaxyMap param1) throws jn {
+    final void placeStars(boolean param0, GalaxyMap param1) throws MapGenerationException {
         Object stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;

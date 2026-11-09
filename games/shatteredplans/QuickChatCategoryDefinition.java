@@ -15,7 +15,7 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
     static int field_r;
 
     final static void e(int param0) {
-        cq.a(-50);
+        GuestPlayForm.a(-50);
         if (param0 != -23771) {
           byte[] var2 = (byte[]) null;
           QuickChatCategoryDefinition.a((byte[]) null, -8, -126, -100);
@@ -216,7 +216,7 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
           QuickChatCategoryDefinition.e(2);
         }
         if (13 == oq.field_j) {
-          eo.f(false);
+          ProgressDialog.f(false);
           return true;
         }
         if (oq.field_j == 102) {

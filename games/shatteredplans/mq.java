@@ -59,18 +59,18 @@ final class mq {
             var1_int = AccountFieldValue.field_f + 13;
             var2 = 6 + ByteArrayNode.field_k;
             var3 = te.field_c;
-            if (eh.field_L != null) {
+            if (BirthDateConfirmationForm.field_L != null) {
               if (te.field_c <= 0) {
                 return;
               }
-              sa.a(te.field_c, var1_int, (byte) 101, 16, eh.field_L[0], var2);
-              for (var4 = 1; eh.field_L.length > var4; var4++) {
+              sa.a(te.field_c, var1_int, (byte) 101, 16, BirthDateConfirmationForm.field_L[0], var2);
+              for (var4 = 1; BirthDateConfirmationForm.field_L.length > var4; var4++) {
                 var3 = var3 - WeightedLruCache.field_g.field_j;
                 if (var3 <= 0) {
                   return;
                 }
                 var2 += 13;
-                sa.a(var3, var1_int, (byte) 98, 16, eh.field_L[var4], var2);
+                sa.a(var3, var1_int, (byte) 98, 16, BirthDateConfirmationForm.field_L[var4], var2);
               }
               var2 += 13;
             }

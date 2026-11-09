@@ -35,23 +35,23 @@ final class IsaacBackedRandom extends Random {
         var5[8] = new Sprite(param3, param3);
         RandomAccessCacheFile.a(-128);
         var5[0].bindAsRenderTarget();
-        ch.a(20, 3974311, var4, 10 + param3 * 2, 0, 0, 3974311, 10 + 2 * param3);
+        RoundedFrameSupport.a(20, 3974311, var4, 10 + param3 * 2, 0, 0, 3974311, 10 + 2 * param3);
         var5[1].bindAsRenderTarget();
-        ch.a(20, 3974311, var4, 10 + param3 * 2, -param3, 0, 3974311, 2 * param3 + 10);
+        RoundedFrameSupport.a(20, 3974311, var4, 10 + param3 * 2, -param3, 0, 3974311, 2 * param3 + 10);
         var5[2].bindAsRenderTarget();
-        ch.a(20, 3974311, var4, 10 + param3 * 2, -param3 - 10, 0, 3974311, 2 * param3 + 10);
+        RoundedFrameSupport.a(20, 3974311, var4, 10 + param3 * 2, -param3 - 10, 0, 3974311, 2 * param3 + 10);
         var5[3].bindAsRenderTarget();
-        ch.a(20, 3974311, var4, param3 * 2 + 10, 0, -param3, 3974311, 2 * param3 + 10);
+        RoundedFrameSupport.a(20, 3974311, var4, param3 * 2 + 10, 0, -param3, 3974311, 2 * param3 + 10);
         var5[5].bindAsRenderTarget();
-        ch.a(20, 3974311, var4, 10 + param3 * 2, -param3 - 10, -param3, 3974311, 10 + 2 * param3);
+        RoundedFrameSupport.a(20, 3974311, var4, 10 + param3 * 2, -param3 - 10, -param3, 3974311, 10 + 2 * param3);
         int var6 = -123 % ((-36 - param1) / 62);
         var5[6].bindAsRenderTarget();
-        ch.a(20, 3974311, var4, param3 * 2 + 10, 0, -param3 - 10 - 1, 3974311, 10 + param3 * 2);
+        RoundedFrameSupport.a(20, 3974311, var4, param3 * 2 + 10, 0, -param3 - 10 - 1, 3974311, 10 + param3 * 2);
         var5[7].bindAsRenderTarget();
-        ch.a(20, 3974311, var4, param3 * 2 + 10, -param3, -10 - param3 - 2, 3974311, 10 + 2 * param3);
+        RoundedFrameSupport.a(20, 3974311, var4, param3 * 2 + 10, -param3, -10 - param3 - 2, 3974311, 10 + 2 * param3);
         var5[8].bindAsRenderTarget();
-        ch.a(20, 3974311, var4, 10 + param3 * 2, -10 - param3, -11 - param3, 3974311, 10 + 2 * param3);
-        cg.i(0);
+        RoundedFrameSupport.a(20, 3974311, var4, 10 + param3 * 2, -10 - param3, -11 - param3, 3974311, 10 + 2 * param3);
+        OpacityWidget.popLegacyRasterState(0);
         return var5;
     }
 

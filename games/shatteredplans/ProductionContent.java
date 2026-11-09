@@ -10,7 +10,7 @@ final class ProductionContent implements MenuContent {
     static int field_k;
     static int field_h;
     static String field_g;
-    lh field_e;
+    VerticalMenuSlider field_e;
     ToggleButton[] field_d;
     MenuList[] field_f;
 

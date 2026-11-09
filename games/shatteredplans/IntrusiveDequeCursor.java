@@ -29,10 +29,10 @@ final class IntrusiveDequeCursor {
           if (AggressiveAi.field_q) {
             return null;
           }
-          if (ri.field_F > LinkPainter.field_e) {
+          if (LoginForm.field_F > LinkPainter.field_e) {
             return null;
           }
-          if (!((ri.field_F + de.field_i) <= LinkPainter.field_e)) {
+          if (!((LoginForm.field_F + de.field_i) <= LinkPainter.field_e)) {
             return GameKeyHandler.field_d;
           }
           return null;
@@ -40,10 +40,10 @@ final class IntrusiveDequeCursor {
         if (AggressiveAi.field_q) {
           return null;
         }
-        if (ri.field_F > LinkPainter.field_e) {
+        if (LoginForm.field_F > LinkPainter.field_e) {
           return null;
         }
-        if (!((ri.field_F + de.field_i) <= LinkPainter.field_e)) {
+        if (!((LoginForm.field_F + de.field_i) <= LinkPainter.field_e)) {
           return GameKeyHandler.field_d;
         }
         return null;
@@ -221,7 +221,7 @@ final class IntrusiveDequeCursor {
         int var2Lifetime2;
         int var2Lifetime3;
         int var2Lifetime4;
-        if (ce.field_x == null) {
+        if (PasswordInputPainter.field_x == null) {
           if (param0 != 1) {
             return;
           }
@@ -269,7 +269,7 @@ final class IntrusiveDequeCursor {
           }
           return;
         }
-        ce.field_x.a(param1, 81);
+        PasswordInputPainter.field_x.a(param1, 81);
         if (param0 != 1) {
           return;
         }

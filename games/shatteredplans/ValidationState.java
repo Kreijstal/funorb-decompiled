@@ -23,7 +23,7 @@ final class ValidationState {
           if (GameRules.field_c == -3) {
             TextHotspotWidget.a(6493);
           } else {
-            if (null != ce.field_x) {
+            if (null != PasswordInputPainter.field_x) {
               IntrusiveDequeCursor.a(1, param0);
               return;
             }
@@ -39,7 +39,7 @@ final class ValidationState {
         if (GameRules.field_c == -3) {
           TextHotspotWidget.a(6493);
         } else {
-          if (null != ce.field_x) {
+          if (null != PasswordInputPainter.field_x) {
             IntrusiveDequeCursor.a(1, param0);
             return;
           }
@@ -121,7 +121,7 @@ final class ValidationState {
     }
 
     final static int a(int param0) {
-        lg.field_c.c(123);
+        ProxyAuthenticationRequiredException.field_c.c(123);
         if (!TertiaryLinkNode.field_o.d(0)) {
           return IsaacRandom.b((byte) 115);
         }

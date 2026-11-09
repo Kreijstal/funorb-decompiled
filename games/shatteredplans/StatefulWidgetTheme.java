@@ -1,0 +1,474 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class StatefulWidgetTheme extends WidgetTheme {
+    static String field_v;
+    static String field_x;
+    static Sprite field_y;
+    static int field_t;
+    static int field_B;
+    static AnimatedPanel field_w;
+    private WidgetStateStyle baseStyle;
+    static String field_A;
+    static BitmapFont field_u;
+    private WidgetStateStyle[] stateStyles;
+
+    final static void a(int param0, int param1, boolean param2, int param3) {
+        StarAnnotation.field_n = param3;
+        ValidationMessageWidget.field_P = param1;
+        IterableNodeHashTable.field_b = param0;
+        if (param2) {
+          field_w = (AnimatedPanel) null;
+        }
+    }
+
+    final static boolean a(int param0, int param1, int param2, int param3) {
+        if (param1 != -9861) {
+          AnimatedPanel var5 = (AnimatedPanel) null;
+          StatefulWidgetTheme.a(122, (QuickChatPhraseDefinition) null, (AnimatedPanel) null, (AnimatedPanel) null, (AnimatedPanel) null);
+        }
+        if (IndexedSpriteState.field_h != null &&
+          13 == oq.field_j) {
+          IndexedSpriteState.field_h = null;
+          return true;
+        }
+        if (!sr.field_h) {
+          if (QuickChatCategoryDefinition.field_t ||
+            oq.field_j == 9 ||
+            oq.field_j == 10 ||
+            oq.field_j == 11) {
+            return QuickChatCategoryDefinition.a(param1 ^ 9952, param0, param3);
+          }
+          if (oq.field_j == 80 &&
+            FilledMenuPanel.d((byte) 108)) {
+            sr.field_h = true;
+            return true;
+          }
+          return false;
+        }
+        if (!FilledMenuPanel.d((byte) -97)) {
+          return false;
+        }
+        int var4 = ByteArrayStorage.a(param0, param2, false) ? 1 : 0;
+        if (80 == oq.field_j ||
+          oq.field_j == 84) {
+          var4 = 1;
+          sr.field_h = false;
+        }
+        if (oq.field_j == 13) {
+          MusicVoice.c(false);
+          var4 = 1;
+          sr.field_h = false;
+        }
+        return var4 != 0;
+    }
+
+    private final void copyTo(StatefulWidgetTheme param0, boolean param1, int param2) {
+        int var4_int = 0;
+        WidgetStateStyle dupTemp$0 = null;
+        WidgetStateStyle stackIn_11_0 = null;
+        int stackIn_11_1 = 0;
+        WidgetStateStyle stackIn_12_2 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var4 = null;
+        WidgetStateStyle var5 = null;
+        WidgetStateStyle var6 = null;
+        int var7 = 0;
+        var7 = ShatteredPlansClient.field_F ? 1 : 0;
+        try {
+          super.copyTo(param0, (byte) 42);
+          if (param2 != -21979) {
+            field_y = (Sprite) null;
+          }
+          if (param1) {
+            for (var4_int = 0; var4_int < 6; var4_int++) {
+              var5 = this.stateStyles[var4_int];
+              if (var5 != null) {
+                var6 = param0.stateStyles[var4_int];
+                stackIn_11_0 = var5;
+                stackIn_11_1 = 42;
+                if (var6 == null) {
+                  dupTemp$0 = new WidgetStateStyle();
+                  param0.stateStyles[var4_int] = dupTemp$0;
+                  stackIn_12_2 = dupTemp$0;
+                } else {
+                  stackIn_12_2 = var6;
+                }
+                ((WidgetStateStyle) (Object) stackIn_11_0).copyTo((byte) stackIn_11_1, stackIn_12_2);
+              } else {
+                param0.stateStyles[var4_int] = null;
+              }
+            }
+            return;
+          }
+          ArrayOperations.copyObjects(this.stateStyles, 0, param0.stateStyles, 0, 6);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_17_0 = var4;
+          stackIn_17_1 = new StringBuilder().append("gn.J(");
+          if (param0 == null) {
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_2 = "{...}";
+          }
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+        }
+    }
+
+    final void setAllStateOverlaySprite(int param0, Sprite param1) {
+        int var4 = 0;
+        WidgetStateStyle[] var3 = null;
+        WidgetStateStyle var5 = null;
+        int var6 = 0;
+        WidgetStateStyle[] var7 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3_ref = null;
+        var6 = ShatteredPlansClient.field_F ? 1 : 0;
+        try {
+          if (param0 != -12) {
+            StatefulWidgetTheme.clearStatics(true);
+          }
+          var7 = this.stateStyles;
+          var3 = var7;
+          for (var4 = 0; var4 < var7.length; var4++) {
+            var5 = var7[var4];
+            if (var5 != null) {
+              var5.overlaySprite = param1;
+            }
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3_ref = decompiledCaughtException;
+          stackIn_12_0 = var3_ref;
+          stackIn_12_1 = new StringBuilder().append("gn.F(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
+          }
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+        }
+    }
+
+    final WidgetStateStyle newStateStyle(int param0, int param1) {
+        int var3 = -79 % ((param0 + 42) / 59);
+        WidgetStateStyle dupTemp$0 = new WidgetStateStyle();
+        this.stateStyles[param1] = dupTemp$0;
+        return dupTemp$0;
+    }
+
+    public StatefulWidgetTheme() {
+        this.stateStyles = new WidgetStateStyle[6];
+        this.baseStyle = new WidgetStateStyle();
+        WidgetStateStyle dupTemp$0 = new WidgetStateStyle();
+        this.stateStyles[0] = dupTemp$0;
+        WidgetStateStyle var1 = dupTemp$0;
+        var1.reset(false);
+    }
+
+    StatefulWidgetTheme(StatefulWidgetTheme param0, boolean param1) {
+        this();
+        try {
+          param0.copyTo(this, param1, -21979);
+        } catch (RuntimeException runtimeException) {
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "gn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    public static void clearStatics(boolean param0) {
+        field_u = null;
+        field_v = null;
+        field_w = null;
+        field_A = null;
+        field_x = null;
+        if (!param0) {
+          AnimatedPanel var2 = (AnimatedPanel) null;
+          StatefulWidgetTheme.a(-46, (QuickChatPhraseDefinition) null, (AnimatedPanel) null, (AnimatedPanel) null, (AnimatedPanel) null);
+        }
+        field_y = null;
+    }
+
+    final static QuickChatMenu a(int param0, QuickChatPhraseDefinition param1, AnimatedPanel param2, AnimatedPanel param3, AnimatedPanel param4) {
+        int var14 = 0;
+        Object stackIn_3_0 = null;
+        int stackIn_7_0 = 0;
+        int stackIn_10_0 = 0;
+        QuickChatMenu stackIn_12_0 = null;
+        QuickChatMenu stackIn_28_0 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        String stackIn_32_2 = null;
+        StringBuilder stackIn_34_1 = null;
+        String stackIn_35_2 = null;
+        StringBuilder stackIn_37_1 = null;
+        String stackIn_38_2 = null;
+        StringBuilder stackIn_40_1 = null;
+        String stackIn_41_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        String[] var8 = null;
+        char[] var9 = null;
+        int[] var10 = null;
+        QuickChatMenu[] var11 = null;
+        int var12 = 0;
+        QuickChatPhraseDefinition var13_ref_si = null;
+        int var13 = 0;
+        int var15 = 0;
+        QuickChatCategoryDefinition var16 = null;
+        int var17 = 0;
+        int[] var18 = null;
+        char[] var19 = null;
+        int[] var20 = null;
+        char[] var21 = null;
+        int var12Lifetime1;
+        var17 = ShatteredPlansClient.field_F ? 1 : 0;
+        try {
+          if (param1 == null) {
+            stackIn_3_0 = null;
+            return (QuickChatMenu) (stackIn_3_0);
+          }
+          if (param1.field_r != null) {
+            stackIn_7_0 = param1.field_r.length;
+          } else {
+            stackIn_7_0 = 0;
+          }
+          var5_int = stackIn_7_0;
+          if (null == param1.field_x) {
+            stackIn_10_0 = 0;
+          } else {
+            stackIn_10_0 = param1.field_x.length;
+          }
+          var6 = stackIn_10_0;
+          var7 = var5_int + var6;
+          var8 = new String[var7];
+          if (param0 != 0) {
+            stackIn_12_0 = (QuickChatMenu) null;
+            return stackIn_12_0;
+          }
+          var21 = new char[var7];
+          var19 = var21;
+          var9 = var19;
+          var20 = new int[var7];
+          var18 = var20;
+          var10 = var18;
+          var11 = new QuickChatMenu[var7];
+          if (param1.field_r != null) {
+            for (var12 = 0; var12 < param1.field_r.length; var12++) {
+              var13_ref_si = GameScreen.field_A.a(param1.field_r[var12], (byte) 100);
+              var8[var12] = var13_ref_si.field_t;
+              var9[var12] = param1.field_p[var12];
+              var11[var12] = StatefulWidgetTheme.a(param0 + 0, var13_ref_si, param2, param3, param4);
+            }
+          }
+          if (null != param1.field_x) {
+            var12Lifetime1 = var5_int;
+            var13 = 49;
+            for (var14 = 0; var14 < param1.field_x.length; var14++) {
+              var15 = param1.field_x[var14];
+              if (-1 == var15) {
+                var8[var12Lifetime1 + var14] = MenuWindow.field_u;
+                var9[var12Lifetime1 + var14] = param1.field_s[var14];
+                var10[var14 + var12Lifetime1] = param1.field_x[var14];
+              } else {
+                var16 = dh.field_c.a((byte) 47, var15);
+                var8[var14 + var12Lifetime1] = var16.f(80);
+                var9[var12Lifetime1 + var14] = param1.field_s[var14];
+                if (0 >= var9[var12Lifetime1 + var14]) {
+                  var13 = (char)(var13 + 1);
+                  var9[var14 + var12Lifetime1] = (char)var13;
+                }
+                var10[var12Lifetime1 + var14] = param1.field_x[var14];
+              }
+            }
+          }
+          stackIn_28_0 = new QuickChatMenu(0L, param2, param4, param3, var11, var20, var8, var21);
+          return stackIn_28_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_31_0 = var5;
+          stackIn_31_1 = new StringBuilder().append("gn.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_32_2 = "null";
+          } else {
+            stackIn_32_2 = "{...}";
+          }
+          stackIn_34_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',');
+          if (param2 == null) {
+            stackIn_35_2 = "null";
+          } else {
+            stackIn_35_2 = "{...}";
+          }
+          stackIn_37_1 = ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',');
+          if (param3 == null) {
+            stackIn_38_2 = "null";
+          } else {
+            stackIn_38_2 = "{...}";
+          }
+          stackIn_40_1 = ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',');
+          if (param4 == null) {
+            stackIn_41_2 = "null";
+          } else {
+            stackIn_41_2 = "{...}";
+          }
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+        }
+    }
+
+    final void setAllStateSprites(byte param0, Sprite[] param1) {
+        int var4 = 0;
+        WidgetStateStyle[] var3 = null;
+        WidgetStateStyle var5 = null;
+        int var6 = 0;
+        WidgetStateStyle[] var7 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3_ref = null;
+        var6 = ShatteredPlansClient.field_F ? 1 : 0;
+        try {
+          var7 = this.stateStyles;
+          var3 = var7;
+          if (param0 != 8) {
+            field_u = (BitmapFont) null;
+          }
+          for (var4 = 0; var4 < var7.length; var4++) {
+            var5 = var7[var4];
+            if (var5 != null) {
+              var5.frameSprites = param1;
+            }
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3_ref = decompiledCaughtException;
+          stackIn_11_0 = var3_ref;
+          stackIn_11_1 = new StringBuilder().append("gn.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
+          }
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+        }
+    }
+
+    final void setStateSprites(Sprite[] param0, int param1, int param2) {
+        int var4_int = 0;
+        try {
+          var4_int = param1;
+          if (param2 != 3) {
+            field_x = (String) null;
+          }
+          if (this.stateStyles[var4_int] == null) {
+            this.stateStyles[var4_int] = new WidgetStateStyle();
+          }
+          this.stateStyles[param1].frameSprites = param0;
+        } catch (RuntimeException runtimeException) {
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "gn.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+        }
+    }
+
+    public final void paintWidget(UiWidget param0, int param1, boolean param2, int param3, byte param4) {
+        UiWidget stackIn_3_0 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        String stackIn_32_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var6 = null;
+        WidgetStateStyle var7 = null;
+        WidgetStateStyle var9 = null;
+        Sprite var10 = null;
+        FocusableWidget var11 = null;
+        WidgetStateStyle var12 = null;
+        WidgetStateStyle var13 = null;
+        WidgetStateStyle var14 = null;
+        WidgetStateStyle var15 = null;
+        try {
+          if (!(param0 instanceof FocusableWidget)) {
+            stackIn_3_0 = null;
+          } else {
+            stackIn_3_0 = (UiWidget) (param0);
+          }
+          var11 = (FocusableWidget) (stackIn_3_0);
+          BufferedSocket.a(-6187, param0.field_x + (param1 + param0.field_m), param0.field_n + param0.field_q + param3, param0.field_q + param3, param1 + param0.field_m);
+          if (var11 != null) {
+            param2 = param2 & var11.field_y;
+          }
+          var7 = this.stateStyles[0];
+          this.baseStyle.reset(false);
+          var7.applyTo(param0, this.baseStyle, this, param1, 0, param3);
+          if (var11 != null) {
+            if (var11.field_z) {
+              var12 = this.stateStyles[1];
+              if (var12 != null) {
+                var12.applyTo(param0, this.baseStyle, this, param1, param4 ^ 12, param3);
+              }
+            }
+            if (var11.field_k) {
+              var13 = this.stateStyles[3];
+              if (0 != var11.field_o &&
+                var13 != null) {
+                var13.applyTo(param0, this.baseStyle, this, param1, param4 - 12, param3);
+              } else {
+                var9 = this.stateStyles[2];
+                if (var9 != null) {
+                  var9.applyTo(param0, this.baseStyle, this, param1, param4 ^ 12, param3);
+                }
+              }
+            }
+          }
+          if (param0.isFocused(1)) {
+            var14 = this.stateStyles[5];
+            if (var14 != null) {
+              var14.applyTo(param0, this.baseStyle, this, param1, 0, param3);
+            }
+          }
+          if (!param2) {
+            var15 = this.stateStyles[4];
+            if (var15 != null) {
+              var15.applyTo(param0, this.baseStyle, this, param1, 0, param3);
+            }
+          }
+          this.baseStyle.paintStyle(param1, true, param0, param3, this);
+          Star.f((byte) 124);
+          if (param4 != 12) {
+            var10 = (Sprite) null;
+            this.setAllStateOverlaySprite(100, (Sprite) null);
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          stackIn_31_0 = var6;
+          stackIn_31_1 = new StringBuilder().append("gn.E(");
+          if (param0 == null) {
+            stackIn_32_2 = "null";
+          } else {
+            stackIn_32_2 = "{...}";
+          }
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+        }
+    }
+
+    static {
+        field_x = "Click to accept the Non-Agression Pact <%0> is offering.";
+        field_B = 0;
+        field_v = "Try this now, or press <col=2F5FBF>'ENTER'</col> to continue.";
+        field_A = "Hide game chat";
+        field_t = 0;
+    }
+}

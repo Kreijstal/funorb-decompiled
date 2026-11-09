@@ -162,7 +162,7 @@ class AnimatedPanel extends PanelNode {
           int var8 = 0;
           int var9 = 0;
           int var10_int = 0;
-          jn var10 = null;
+          MapGenerationException var10 = null;
           int var11 = 0;
           int var12 = 0;
           int var13 = 0;
@@ -175,7 +175,7 @@ class AnimatedPanel extends PanelNode {
           try {
             var15 = new GameState(param0, param3, param4, param2);
             var7 = param2.length;
-            var8 = var7 * md.field_J[param5];
+            var8 = var7 * StripedProgressWidget.field_J[param5];
             if (param1 != 50) {
               AnimatedPanel.a(false, (byte) 41);
             }
@@ -207,9 +207,9 @@ class AnimatedPanel extends PanelNode {
                 var15.recomputePlayerTotals(param1 - 151);
                 stackIn_17_0 = var15;
                 return stackIn_17_0;
-              } catch (jn decompiledCaughtParameter0) {
+              } catch (MapGenerationException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
-                var10 = (jn) (Object) decompiledCaughtException;
+                var10 = (MapGenerationException) (Object) decompiledCaughtException;
                 var9++;
               }
             }

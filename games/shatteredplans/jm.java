@@ -11,11 +11,11 @@ final class jm extends TargetedChatMessage {
         try {
           MenuButton.f(-1);
           ByteArrayStorage.field_e.deactivateAll(104);
-          no.field_e = new ri(MenuWindow.field_B, (String) null, TertiaryNodeList.field_b, param3, param1);
+          no.field_e = new LoginForm(MenuWindow.field_B, (String) null, TertiaryNodeList.field_b, param3, param1);
           if (param2 > -50) {
             field_s = (String) null;
           }
-          ae.field_f = new hk(ByteArrayStorage.field_e, no.field_e);
+          ae.field_f = new PaddedContentDialog(ByteArrayStorage.field_e, no.field_e);
           ByteArrayStorage.field_e.addDialog(true, ae.field_f);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "jm.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -50,11 +50,11 @@ final class jm extends TargetedChatMessage {
         try {
           MenuButton.f(-1);
           ByteArrayStorage.field_e.deactivateAll(104);
-          no.field_e = new ri(MenuWindow.field_B, (String) null, TertiaryNodeList.field_b, param3, param1);
+          no.field_e = new LoginForm(MenuWindow.field_B, (String) null, TertiaryNodeList.field_b, param3, param1);
           if (param2 > -50) {
             field_s = (String) null;
           }
-          ae.field_f = new hk(ByteArrayStorage.field_e, no.field_e);
+          ae.field_f = new PaddedContentDialog(ByteArrayStorage.field_e, no.field_e);
           ByteArrayStorage.field_e.addDialog(true, ae.field_f);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "jm.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');

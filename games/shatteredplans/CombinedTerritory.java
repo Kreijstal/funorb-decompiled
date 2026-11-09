@@ -1,0 +1,143 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class CombinedTerritory extends Territory {
+    private DualLinkDeque field_z;
+    static String field_A;
+    static int field_B;
+
+    final void k(int param0) {
+        this.field_u = new int[4];
+        this.field_r = param0;
+        this.field_x = 0;
+        this.field_q = null;
+        this.field_w = new int[4];
+    }
+
+    final static MusicPatch a(Archive param0, byte param1, int param2) {
+        byte[] var3 = null;
+        RuntimeException var3_ref = null;
+        int var4 = 0;
+        byte[] var5 = null;
+        Object stackIn_2_0 = null;
+        MusicPatch stackIn_4_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var4 = 34 / ((param1 + 77) / 39);
+          var5 = param0.getSingleFileBytes(false, param2);
+          var3 = var5;
+          if (var5 != null) {
+            stackIn_4_0 = new MusicPatch(var5);
+            return stackIn_4_0;
+          }
+          stackIn_2_0 = null;
+          return (MusicPatch) (stackIn_2_0);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3_ref = decompiledCaughtException;
+          stackIn_7_0 = var3_ref;
+          stackIn_7_1 = new StringBuilder().append("lo.I(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+        }
+    }
+
+    final Star firstStar(int param0) {
+        if (param0 == 18229) {
+          return (Star) (this.field_z.startForward(-127));
+        }
+        Archive var3 = (Archive) null;
+        CombinedTerritory.a((Archive) null, (byte) -92, -64);
+        return (Star) (this.field_z.startForward(-127));
+    }
+
+    final Star removeFirstStar(int param0) {
+        if (param0 > -16) {
+          return (Star) null;
+        }
+        return (Star) (this.field_z.pollFirst(-118));
+    }
+
+    final void addStar(int param0, Star param1) {
+        try {
+          this.field_z.addLast(param1, 32);
+          if (param0 != -21771) {
+            field_A = (String) null;
+          }
+        } catch (RuntimeException runtimeException) {
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "lo.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    CombinedTerritory(Player param0, Star param1) {
+        super(param0, param1);
+        try {
+          this.field_z = new DualLinkDeque();
+        } catch (RuntimeException runtimeException) {
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "lo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final int starCount(int param0) {
+        int var2 = -24 % ((5 - param0) / 51);
+        return this.field_z.size((byte) 67);
+    }
+
+    final void setStars(IntrusiveDeque param0, int param1) {
+        RuntimeException var3 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 != -9332) {
+            field_B = -68;
+          }
+          throw new RuntimeException();
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_5_0 = var3;
+          stackIn_5_1 = new StringBuilder().append("lo.C(");
+          if (param0 == null) {
+            stackIn_6_2 = "null";
+          } else {
+            stackIn_6_2 = "{...}";
+          }
+          throw UrlLoader.wrapThrowable((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final Star nextStar(int param0) {
+        if (param0 == -23410) {
+          return (Star) (this.field_z.nextForward(32));
+        }
+        this.field_z = (DualLinkDeque) null;
+        return (Star) (this.field_z.nextForward(32));
+    }
+
+    public static void clearStatics(int param0) {
+        if (param0 != 0) {
+          return;
+        }
+        field_A = null;
+    }
+
+    final boolean isEmpty(int param0) {
+        if (param0 != 27650) {
+          return false;
+        }
+        return this.field_z.isEmpty((byte) 25);
+    }
+
+    static {
+        field_A = "Find opponents";
+    }
+}

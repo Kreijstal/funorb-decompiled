@@ -36,8 +36,8 @@ final class DiskCacheWorker implements Runnable {
         id.a(2, DerelictVictoryChecker.field_n, "intro", "intro2_glow");
         DefendTask.field_s = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro2_earth");
         oe.field_c = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro2_clouds");
-        ja.a(-174137048, DefendTask.field_s.field_z / 2, DefendTask.field_s, DefendTask.field_s.field_w / 4);
-        ja.a(param0 ^ -174137062, oe.field_c.field_z / 2, oe.field_c, oe.field_c.field_w / 4);
+        BirthDateValidator.a(-174137048, DefendTask.field_s.field_z / 2, DefendTask.field_s, DefendTask.field_s.field_w / 4);
+        BirthDateValidator.a(param0 ^ -174137062, oe.field_c.field_z / 2, oe.field_c, oe.field_c.field_w / 4);
         MessageKind.field_b = new Sprite(640, 430);
         MessageKind.field_b.bindAsRenderTarget();
         for (var1_int = 1; var1_int < 64; var1_int++) {
@@ -53,28 +53,28 @@ final class DiskCacheWorker implements Runnable {
         }
         va.field_e = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro3_stars");
         q.field_Cb = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro3_citybg");
-        mm.field_o = id.a(param0 - 48, DerelictVictoryChecker.field_n, "intro", "intro3_cityfg");
-        ch.field_c = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro3_crater");
+        EmailSyntaxValidator.field_o = id.a(param0 - 48, DerelictVictoryChecker.field_n, "intro", "intro3_cityfg");
+        RoundedFrameSupport.field_c = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro3_crater");
         var1_int = q.field_Cb.field_z;
         var2 = q.field_Cb.field_w + 60;
         IntNode.field_h = new Sprite(var1_int, var2);
         for (var3 = 0; (var2 - 60) * var1_int > var3; var3++) {
           IntNode.field_h.field_B[var3 + var1_int * 60] = q.field_Cb.field_B[var3];
         }
-        var1_int = mm.field_o.field_z;
+        var1_int = EmailSyntaxValidator.field_o.field_z;
         IntNode.field_h.field_o = q.field_Cb.field_o;
         IntNode.field_h.field_t = q.field_Cb.field_t;
         IntNode.field_h.field_x = -60 + q.field_Cb.field_x;
-        var2 = 60 + mm.field_o.field_w;
+        var2 = 60 + EmailSyntaxValidator.field_o.field_w;
         IntNode.field_h.field_p = 60 + q.field_Cb.field_p;
         we.field_f = new Sprite(var1_int, var2);
         for (var3 = 0; (var2 - 60) * var1_int > var3; var3++) {
-          we.field_f.field_B[var1_int * 60 + var3] = mm.field_o.field_B[var3];
+          we.field_f.field_B[var1_int * 60 + var3] = EmailSyntaxValidator.field_o.field_B[var3];
         }
-        we.field_f.field_t = mm.field_o.field_t;
-        we.field_f.field_p = mm.field_o.field_p + 60;
-        we.field_f.field_x = -60 + mm.field_o.field_x;
-        we.field_f.field_o = mm.field_o.field_o;
+        we.field_f.field_t = EmailSyntaxValidator.field_o.field_t;
+        we.field_f.field_p = EmailSyntaxValidator.field_o.field_p + 60;
+        we.field_f.field_x = -60 + EmailSyntaxValidator.field_o.field_x;
+        we.field_f.field_o = EmailSyntaxValidator.field_o.field_o;
         IntNode.field_h.bindAsRenderTarget();
         if (param0 != 50) {
           return;
@@ -106,8 +106,8 @@ final class DiskCacheWorker implements Runnable {
           CheckboxPainter.field_b.bindAsRenderTarget();
           MusicVoice.field_n.drawSilhouette(0, 120, 4259648);
           SoftwareRasterizer.b(120, 120, 0, 0, var1_int, var2);
-          cg.i(0);
-          jn.field_a = true;
+          OpacityWidget.popLegacyRasterState(0);
+          MapGenerationException.field_a = true;
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "rn.C(" + param0 + ')');
         }
@@ -272,31 +272,31 @@ final class DiskCacheWorker implements Runnable {
           mj.field_Hb[GameRules.field_c].g((byte) 119);
         }
         TutorialAi.field_x = Wormhole.field_i;
-        eh.field_Q = 0;
+        BirthDateConfirmationForm.field_Q = 0;
         GameRules.field_c = gr.field_o;
         if (gr.field_o == -3) {
           qf.a((byte) -126);
         }
         if (0 == gr.field_o &&
-          !ValidationState.field_b.a(hk.field_nb, (byte) -23)) {
-          QuickChatPhraseRegistry.a(param0 - 1015809, hk.field_nb, true, 1048576);
+          !ValidationState.field_b.a(PaddedContentDialog.field_nb, (byte) -23)) {
+          QuickChatPhraseRegistry.a(param0 - 1015809, PaddedContentDialog.field_nb, true, 1048576);
         }
         if (gr.field_o == -6) {
           js.field_f.h(9, 255);
-          md.field_Q = true;
+          StripedProgressWidget.field_Q = true;
           gr.field_o = GameRules.field_c;
         }
-        if (lg.field_b) {
-          if (null != ce.field_x &&
-            ce.field_x.field_Y != null) {
-            ce.field_x.field_Y.disposeWidgets((byte) -47);
+        if (ProxyAuthenticationRequiredException.field_b) {
+          if (null != PasswordInputPainter.field_x &&
+            PasswordInputPainter.field_x.field_Y != null) {
+            PasswordInputPainter.field_x.field_Y.disposeWidgets((byte) -47);
           }
           if (null != SecondaryNodeHashTable.field_g &&
             SecondaryNodeHashTable.field_g.field_Y != null) {
             SecondaryNodeHashTable.field_g.field_Y.disposeWidgets((byte) -47);
           }
-          lg.field_b = false;
-          ce.field_x = null;
+          ProxyAuthenticationRequiredException.field_b = false;
+          PasswordInputPainter.field_x = null;
           SecondaryNodeHashTable.field_g = null;
         }
         if (uo.field_e) {
@@ -370,8 +370,8 @@ final class DiskCacheWorker implements Runnable {
           wh.field_a.a(false, 37);
           SolMapGenerator.a((byte) 87, param1, param4, param3);
           AudioService.a(0);
-          PrivateChatMessage.field_l = oj.field_Fb;
-          MatchingTextValidator.field_s = oj.field_Fb;
+          PrivateChatMessage.field_l = AccountCreationDialog.field_Fb;
+          MatchingTextValidator.field_s = AccountCreationDialog.field_Fb;
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "rn.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -436,7 +436,7 @@ final class DiskCacheWorker implements Runnable {
         try {
           aj.field_c = param1 * ArchiveSourceManager.getTargetFrameRate(param2 ^ param2) / 1000;
           ArchiveRequest.a(param2 - 1102, param3);
-          oj.a(param2 ^ 902, param3);
+          AccountCreationDialog.a(param2 ^ 902, param3);
           AnimatedPanel.a(param3, (byte) 56);
           ReflectionCheck.d((byte) -47);
           UrlLoader.b((byte) -112);

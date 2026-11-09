@@ -97,7 +97,7 @@ final class SliderPainter implements WidgetPainter {
             field_j = -121;
           }
           var5 = param1.getFileIdByName(var4_int, (byte) 106, param2);
-          stackIn_3_0 = lg.a(param3 ^ 20391, param1, var5, var4_int);
+          stackIn_3_0 = ProxyAuthenticationRequiredException.a(param3 ^ 20391, param1, var5, var4_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

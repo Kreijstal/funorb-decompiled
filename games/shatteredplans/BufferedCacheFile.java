@@ -585,7 +585,7 @@ final class BufferedCacheFile {
             q.g(-108);
             return;
           }
-          var5 = rr.field_t - var1.position;
+          var5 = TextInputPainter.field_t - var1.position;
           var6 = var4.field_i;
           if (var5 > var6.length << 2) {
             var5 = var6.length << 2;
@@ -793,7 +793,7 @@ final class BufferedCacheFile {
                         }
                         stackIn_32_0Lifetime1 = (var16 << 4) + var17;
                         var18 = stackIn_32_0Lifetime1;
-                        jl.field_M[var18] = var8;
+                        ResizingDialog.field_M[var18] = var8;
                         gd.field_b[var16] = var17 + 1;
                         if (param2.field_o > 0 &&
                           param2.field_p != null) {
@@ -945,7 +945,7 @@ final class BufferedCacheFile {
                         }
                         stackIn_32_0Lifetime1 = (var16 << 4) + var17;
                         var18 = stackIn_32_0Lifetime1;
-                        jl.field_M[var18] = var8;
+                        ResizingDialog.field_M[var18] = var8;
                         gd.field_b[var16] = var17 + 1;
                         if (param2.field_o > 0 &&
                           param2.field_p != null) {

@@ -676,13 +676,13 @@ class PacketBuffer extends IntrusiveNode {
           AccountFieldValue.field_f = -1;
           ByteArrayNode.field_k = -1;
           AttackTask.field_o = -1;
-          md.a((byte) 73, 16777215, 8);
-          md.a((byte) 112, 16777215, 11);
+          StripedProgressWidget.a((byte) 73, 16777215, 8);
+          StripedProgressWidget.a((byte) 112, 16777215, 11);
           uq.field_m = new rl(wg.field_e);
           aj.field_a = new IntrusiveDeque();
           StellarBombEvent.field_h = new IntrusiveDeque();
           is.field_b = false;
-          tl.field_u = false;
+          GameClientShell.field_u = false;
           SliderWidget.field_L = false;
           ImageProducerRasterBuffer.field_i = 0;
           WhirlpoolHasher.field_g = false;

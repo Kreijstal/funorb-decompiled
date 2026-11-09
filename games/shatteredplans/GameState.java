@@ -57,7 +57,7 @@ final class GameState {
         int var6 = 0;
         int var7 = 0;
         Territory var8 = null;
-        lo var8_ref = null;
+        CombinedTerritory var8_ref = null;
         int var9 = 0;
         Player var10 = null;
         int var11 = 0;
@@ -70,7 +70,7 @@ final class GameState {
         Player var17 = null;
         Player[] var18 = null;
         int[] var19 = null;
-        lo var20 = null;
+        CombinedTerritory var20 = null;
         int[] var21 = null;
         PlacementOrder var4Lifetime1;
         int[] var5Lifetime1;
@@ -79,10 +79,10 @@ final class GameState {
         Territory var11_ref_sdLifetime1;
         Player[] var18Lifetime1;
         int[] var19Lifetime1;
-        lo var20Lifetime1;
+        CombinedTerritory var20Lifetime1;
         int[] var21Lifetime1;
         Territory var11_ref_sdLifetime1Lifetime1;
-        lo var20Lifetime1Lifetime1;
+        CombinedTerritory var20Lifetime1Lifetime1;
         int var6Lifetime1;
         int var6Lifetime2;
         int var7Lifetime1;
@@ -572,7 +572,7 @@ final class GameState {
         return;
     }
 
-    final void readMap(PacketBuffer param0, Player param1, boolean param2) throws jn, kr {
+    final void readMap(PacketBuffer param0, Player param1, boolean param2) throws MapGenerationException, InvalidMapConnectionException {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -1196,7 +1196,7 @@ final class GameState {
 
     final static void a(int param0) {
         NetworkArchiveRequest.field_z = pr.currentTimeMillis(14274);
-        vj.field_C = 0;
+        DropTargetWidget.field_C = 0;
         if (param0 != -5883) {
           GameState.clearStatics((byte) 95);
         }

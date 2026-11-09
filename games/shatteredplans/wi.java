@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wi {
-    static eh field_c;
+    static BirthDateConfirmationForm field_c;
     static String field_a;
     static String field_b;
 

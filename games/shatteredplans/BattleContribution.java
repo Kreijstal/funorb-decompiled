@@ -98,13 +98,13 @@ final class BattleContribution extends IntrusiveNode {
         RandomAccessCacheFile.a(-127);
         var2.bindAsRenderTarget();
         IntrusiveDeque.field_d.drawColourised(0, 0, param0 >= 0 ? param0 : 2105376);
-        cg.i(0);
+        OpacityWidget.popLegacyRasterState(0);
         return var2;
     }
 
     final static void d(boolean param0) {
-        ch.field_c = null;
-        jn.field_a = false;
+        RoundedFrameSupport.field_c = null;
+        MapGenerationException.field_a = false;
         oi.field_d = null;
         we.field_f = null;
         DualLinkDeque.field_a = null;
@@ -123,7 +123,7 @@ final class BattleContribution extends IntrusiveNode {
         q.field_Cb = null;
         oe.field_c = null;
         MessageKind.field_b = null;
-        mm.field_o = null;
+        EmailSyntaxValidator.field_o = null;
         IntNode.field_h = null;
         QuickChatMenu.field_Jb = null;
     }
@@ -156,7 +156,7 @@ final class BattleContribution extends IntrusiveNode {
           param0.field_k = 0;
           param0.field_j = false;
           GameScreen.field_A = new QuickChatPhraseRegistry(var3_int, param0, param0);
-          dh.field_c = new QuickChatCategoryRegistry(var3_int, param0, param0, new ch());
+          dh.field_c = new QuickChatCategoryRegistry(var3_int, param0, param0, new RoundedFrameSupport());
           var4 = hc.a(false);
           if (var4 == null) {
             GameKeyHandler.a(-29901, (Throwable) null, "QC2");
@@ -178,7 +178,7 @@ final class BattleContribution extends IntrusiveNode {
             SoftwareRasterizer.drawVerticalLine(var8, var8 + 1, -(var8 << 1) + 14, 16777215);
           }
           SoftwareRasterizer.setTarget(var14, var5, var6);
-          of.field_b = gn.a(0, var4, ValidationIndicator.field_I, nl.field_d, kh.field_Nb);
+          of.field_b = StatefulWidgetTheme.a(0, var4, ValidationIndicator.field_I, nl.field_d, kh.field_Nb);
           SectorCacheStore.field_f.field_M = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -228,7 +228,7 @@ final class BattleContribution extends IntrusiveNode {
               return true;
             }
           }
-          var2Lifetime1 = wd.field_L;
+          var2Lifetime1 = NumericDateInputWidget.field_L;
           for (var3Lifetime1 = 0; var3Lifetime1 < var2Lifetime1.length; var3Lifetime1++) {
             var4Lifetime1 = var2Lifetime1[var3Lifetime1];
             if (param1 == var4Lifetime1) {

@@ -14,7 +14,7 @@ final class wm {
         RandomAccessCacheFile.a(param1 ^ -110);
         var2.bindAsRenderTarget();
         GameState.field_F.drawColourised(0, 0, param0 < param1 ? 2105376 : param0);
-        cg.i(0);
+        OpacityWidget.popLegacyRasterState(0);
         return var2;
     }
 

@@ -33,7 +33,7 @@ final class CellVertex {
               var4 = 36 % ((param0 - 44) / 46);
               return true;
             }
-            if (ce.a(param2.charAt(var3_int), (byte) 127)) {
+            if (PasswordInputPainter.a(param2.charAt(var3_int), (byte) 127)) {
               var3_int++;
               continue;
             }

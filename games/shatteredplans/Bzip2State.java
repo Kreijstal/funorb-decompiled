@@ -119,7 +119,7 @@ final class Bzip2State {
           oq.field_i[2] = StarLinkPlanner.field_a;
           oq.field_i[15] = bf.field_a[0];
           oq.field_i[27] = MenuButton.field_z;
-          oq.field_i[21] = wd.field_Q;
+          oq.field_i[21] = NumericDateInputWidget.field_Q;
           oq.field_i[32] = MidiPcmStream.field_L;
           oq.field_i[19] = ul.field_Fb[1];
           oq.field_i[17] = bf.field_a[2];
@@ -158,7 +158,7 @@ final class Bzip2State {
           bk.field_b[13] = oo.field_d;
           bk.field_b[4] = vs.field_c;
           bk.field_b[12] = vs.field_b;
-          bk.field_b[14] = ch.field_b;
+          bk.field_b[14] = RoundedFrameSupport.field_b;
           bk.field_b[1] = np.field_l;
           bk.field_b[5] = rk.field_m;
           bk.field_b[10] = nd.field_b;

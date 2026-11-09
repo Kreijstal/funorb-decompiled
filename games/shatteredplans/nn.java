@@ -66,7 +66,7 @@ final class nn {
             if (param1.length() <= var5) {
               return null;
             }
-            if (ce.a(param1.charAt(var5), (byte) 101)) {
+            if (PasswordInputPainter.a(param1.charAt(var5), (byte) 101)) {
               var5++;
               continue;
             }

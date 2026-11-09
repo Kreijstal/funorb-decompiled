@@ -293,7 +293,7 @@ final class RichTextLayout extends TextLayout {
 
     final static void a(boolean param0) {
         String var2 = (String) null;
-        ce.a("", (String) null, (byte) 3);
+        PasswordInputPainter.showLoginForm("", (String) null, (byte) 3);
         if (param0) {
           field_h = (String) null;
         }

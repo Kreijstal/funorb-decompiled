@@ -236,7 +236,7 @@ final class uo {
               stackIn_20_0.field_s = stackIn_21_1;
               var8 = aq.field_j;
               var10 = 2;
-              if (pe.field_D != null) {
+              if (UnderageAccountInfoPanel.field_D != null) {
                 if (lr.field_c == null) {
                   lr.field_c = new byte[ProductionContent.field_k];
                   ArrayWidgetGroup.field_F = new boolean[ProductionContent.field_k];
@@ -250,14 +250,14 @@ final class uo {
                     var11_intLifetime2 = 0;
                     var12 = 0;
                     while (true) {
-                      if (pe.field_D.length <= var12) {
+                      if (UnderageAccountInfoPanel.field_D.length <= var12) {
                         if (var11_intLifetime2 != 0) {
                           break scanLoop1;
                         }
                         var10++;
                         continue scanLoop1;
                       }
-                      var24 = pe.field_D[var12];
+                      var24 = UnderageAccountInfoPanel.field_D[var12];
                       var22 = var24;
                       var13 = var22;
                       var14_int = 0;
@@ -308,8 +308,8 @@ final class uo {
               if (var10 >= 2) {
                 if ((null != SliderWidget.field_E ||
                   null != ArchiveIndex.field_h ||
-                  null != pg.field_A ||
-                  null != ji.field_D)) {
+                  null != LabeledChildWidget.field_A ||
+                  null != DateInputWidget.field_D)) {
                   var11_intLifetime1 = 0;
                   var12Lifetime1 = 0;
                   var13_int = 0;
@@ -333,9 +333,9 @@ final class uo {
                         var13_int = var18_int;
                       }
                     }
-                    if (pg.field_A != null &&
-                      null != pg.field_A[var16Lifetime1]) {
-                      var18_intLifetime1 = pg.field_A[var16Lifetime1][var17_intLifetime1];
+                    if (LabeledChildWidget.field_A != null &&
+                      null != LabeledChildWidget.field_A[var16Lifetime1]) {
+                      var18_intLifetime1 = LabeledChildWidget.field_A[var16Lifetime1][var17_intLifetime1];
                       if (var14_intLifetime1 < var18_intLifetime1) {
                         var14_intLifetime1 = var18_intLifetime1;
                       }
@@ -344,9 +344,9 @@ final class uo {
                         var11_intLifetime1 = 1;
                       }
                     }
-                    if (null != ji.field_D &&
-                      ji.field_D[var16Lifetime1] != null) {
-                      var15Lifetime1 = var15Lifetime1 | ji.field_D[var16Lifetime1][var17_intLifetime1];
+                    if (null != DateInputWidget.field_D &&
+                      DateInputWidget.field_D[var16Lifetime1] != null) {
+                      var15Lifetime1 = var15Lifetime1 | DateInputWidget.field_D[var16Lifetime1][var17_intLifetime1];
                     }
                   }
                   var16Lifetime1Lifetime1 = 0;
@@ -416,7 +416,7 @@ final class uo {
                     }
                   }
                   if (var10 != 0) {
-                    var13_ref = md.field_I;
+                    var13_ref = StripedProgressWidget.field_I;
                     if (var12Lifetime2 == 0) {
                       var14 = QuickChatCategoryRegistry.a(UrlLoader.field_f, 4371, new String[]{(String) (var11)});
                     } else {

@@ -15,11 +15,11 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
     int[] field_r;
 
     final static void f(byte param0) {
-        if (!eh.field_P) {
+        if (!BirthDateConfirmationForm.field_P) {
           throw new IllegalStateException();
         }
         or.field_a = true;
-        wk.a(false, true);
+        WidgetStateStyle.a(false, true);
         SoundPlayback.field_i = 0;
         if (param0 != -91) {
           PlatformTaskDispatcher var2 = (PlatformTaskDispatcher) null;
@@ -81,10 +81,10 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
             js.field_f.position = 0;
             sa.field_d = null;
             if (param5 == null) {
-              eo.field_cb.position = 0;
-              eo.field_cb.writeInt(11135, Bzip2State.field_u.nextInt());
-              eo.field_cb.writeInt(11135, Bzip2State.field_u.nextInt());
-              stackIn_21_0 = eo.field_cb;
+              ProgressDialog.field_cb.position = 0;
+              ProgressDialog.field_cb.writeInt(11135, Bzip2State.field_u.nextInt());
+              ProgressDialog.field_cb.writeInt(11135, Bzip2State.field_u.nextInt());
+              stackIn_21_0 = ProgressDialog.field_cb;
               stackIn_21_1 = 95;
               if (!param3.shouldSubmitText(2)) {
                 stackIn_22_2 = "";
@@ -92,7 +92,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
                 stackIn_22_2 = var14;
               }
               ((PacketBuffer) (Object) stackIn_21_0).writeMarkedString((byte) stackIn_21_1, stackIn_22_2);
-              stackIn_24_0 = eo.field_cb;
+              stackIn_24_0 = ProgressDialog.field_cb;
               stackIn_24_1 = 95;
               if (!param2.shouldSubmitText(2)) {
                 stackIn_25_2 = "";
@@ -103,23 +103,23 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
               js.field_f.writeByte(16, (byte) -69);
               js.field_f.position = js.field_f.position + 1;
               var9 = js.field_f.position;
-              GarrisonTask.a(25050, js.field_f, hr.field_a, eo.field_cb, jl.field_V);
+              GarrisonTask.a(25050, js.field_f, hr.field_a, ProgressDialog.field_cb, ResizingDialog.field_V);
               js.field_f.patchLengthByte(js.field_f.position - var9, (byte) 119);
             } else {
               var9 = 0;
-              eo.field_cb.position = 0;
+              ProgressDialog.field_cb.position = 0;
               if (param6) {
                 var9 = var9 | 1;
               }
-              eo.field_cb.writeInt(11135, Bzip2State.field_u.nextInt());
-              eo.field_cb.writeInt(11135, Bzip2State.field_u.nextInt());
-              eo.field_cb.writeMarkedString((byte) 95, var14);
-              eo.field_cb.writeMarkedString((byte) 95, var8);
+              ProgressDialog.field_cb.writeInt(11135, Bzip2State.field_u.nextInt());
+              ProgressDialog.field_cb.writeInt(11135, Bzip2State.field_u.nextInt());
+              ProgressDialog.field_cb.writeMarkedString((byte) 95, var14);
+              ProgressDialog.field_cb.writeMarkedString((byte) 95, var8);
               var15 = (CharSequence) ((Object) param5);
-              eo.field_cb.writeMarkedString((byte) 95, QuaternaryLinkNode.a(var15, (byte) 53));
-              eo.field_cb.writeShort(param0, 255);
-              eo.field_cb.writeByte(param1, (byte) -108);
-              eo.field_cb.writeByte(var9, (byte) -60);
+              ProgressDialog.field_cb.writeMarkedString((byte) 95, QuaternaryLinkNode.a(var15, (byte) 53));
+              ProgressDialog.field_cb.writeShort(param0, 255);
+              ProgressDialog.field_cb.writeByte(param1, (byte) -108);
+              ProgressDialog.field_cb.writeByte(var9, (byte) -60);
               js.field_f.writeByte(18, (byte) -76);
               js.field_f.position = js.field_f.position + 2;
               var10 = js.field_f.position;
@@ -128,7 +128,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
                 var11_ref_String = "";
               }
               js.field_f.writeString(var11_ref_String, (byte) 0);
-              GarrisonTask.a(25050, js.field_f, hr.field_a, eo.field_cb, jl.field_V);
+              GarrisonTask.a(25050, js.field_f, hr.field_a, ProgressDialog.field_cb, ResizingDialog.field_V);
               js.field_f.patchLengthShort(-549342136, -var10 + js.field_f.position);
             }
             d.$cfr$intArgs$a$a6964d7afeb1(-1, 82);
@@ -144,7 +144,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
               ae.field_e = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
-                ce.a(GameScreen.getHostApplet((byte) 125), true);
+                PasswordInputPainter.setLegacyStatusFlag(GameScreen.getHostApplet((byte) 125), true);
                 nl.field_c = dh.field_b;
                 q.g(-125);
                 BufferedSocket.field_j = false;
@@ -154,7 +154,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
               if (99 != var9Lifetime1) {
                 Wormhole.field_j = StarAbandonedEvent.field_m;
                 BufferedCacheFile.field_e = var9Lifetime1;
-                rr.field_t = -1;
+                TextInputPainter.field_t = -1;
               } else {
                 StarAnnotation.a(119, CandidateLink.a(-85));
                 sa.field_d = new Boolean(ro.a((byte) -24, sa.field_a));
@@ -356,7 +356,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var9 = tl.a(true, param1, param4, param2, param5, param0);
+          var9 = GameClientShell.a(true, param1, param4, param2, param5, param0);
           var6 = var9;
           if (var9 == null) {
             return null;

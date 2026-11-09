@@ -37,10 +37,10 @@ abstract class Dialog extends WidgetContainer {
         if (param0 != 16738) {
           return (String) null;
         }
-        if (0 >= rr.field_t) {
+        if (0 >= TextInputPainter.field_t) {
         } else {
           var1 = var6 + ":";
-          for (var2 = 0; rr.field_t > var2; var2++) {
+          for (var2 = 0; TextInputPainter.field_t > var2; var2++) {
             var7 = var1 + ' ';
             var3 = 255 & sa.field_a.payload[var2];
             var4 = var3 >> 4;
@@ -70,7 +70,7 @@ abstract class Dialog extends WidgetContainer {
           if (param0 != 0) {
             return;
           }
-          this.a(param3 + this.field_m, 103, this.field_q + param2);
+          this.drawFrame(param3 + this.field_m, 103, this.field_q + param2);
           super.drawLayer(param0, -11857, param2, param3);
           return;
         }
@@ -81,7 +81,7 @@ abstract class Dialog extends WidgetContainer {
         }
         aq.pushSpriteRaster((byte) 110, ArchiveIndex.field_r);
         SoftwareRasterizer.clear();
-        this.a(0, 103, 0);
+        this.drawFrame(0, 103, 0);
         super.drawLayer(param0, param1, -param2 - this.field_q, -param3 - this.field_m);
         Star.f((byte) -50);
         ArchiveIndex.field_r.drawAlpha(this.field_m + param3, this.field_q + param2, this.field_G);
@@ -232,7 +232,7 @@ abstract class Dialog extends WidgetContainer {
         return this.field_E ? this != this.field_F.getActiveDialog((byte) 119) ? 0 : 256 : 0;
     }
 
-    abstract void a(int param0, int param1, int param2);
+    abstract void drawFrame(int param0, int param1, int param2);
 
     final static String l(int param0) {
         String var1 = "";
@@ -252,7 +252,7 @@ abstract class Dialog extends WidgetContainer {
         if (!param0) {
           Dialog.clearStatics(-66);
         }
-        return eh.field_P;
+        return BirthDateConfirmationForm.field_P;
     }
 
     static {
