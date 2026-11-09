@@ -9,11 +9,11 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
 
     final void disable(boolean guard) {
         this.field_f.a(-103, (jagdx.IDirect3DVertexShader) null);
-        this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, 0);
+        this.toolkit.setColorCombineSource(LegacyVertexAttribute.TEXTURE, 0, 0);
         if (!guard) {
-          this.toolkit.a(NetworkResourceRequest.PRIMARY_COLOR, 1, 0);
-          this.toolkit.a(AccountRequestState.CONSTANT, 2, 0);
-          this.toolkit.b(0, true);
+          this.toolkit.setColorCombineSource(NetworkResourceRequest.PRIMARY_COLOR, 1, 0);
+          this.toolkit.setColorCombineSource(AccountRequestState.CONSTANT, 2, 0);
+          this.toolkit.setFogEnabled(0, true);
           return;
         }
     }
@@ -70,7 +70,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
         AffineTransform3D var3 = null;
         if (this.field_e != null) {
           var2 = this.field_f.field_Cc;
-          var3 = this.field_f.k((byte) 126);
+          var3 = this.field_f.modelViewTransform((byte) 126);
           var2.a(0, var3.writeRowMajor4x4(0, field_g));
         }
         if (guard > 0) {
@@ -87,7 +87,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
         if (guard < -47) {
           if (this.field_e != null) {
             var7 = this.field_f.field_Cc;
-            var6 = this.toolkit.H(26453);
+            var6 = this.toolkit.currentTextureTransform(26453);
             var6.writeFirstTwoRows(field_g, (byte) -37);
             field_g[2] = field_g[2] * 0.25f;
             field_g[3] = field_g[3] * 0.25f;
@@ -104,7 +104,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
         this.disable(false);
         if (this.field_e != null) {
           var5 = this.field_f.field_Cc;
-          var4 = this.toolkit.H(26453);
+          var4 = this.toolkit.currentTextureTransform(26453);
           var4.writeFirstTwoRows(field_g, (byte) -37);
           field_g[2] = field_g[2] * 0.25f;
           field_g[3] = field_g[3] * 0.25f;
@@ -154,17 +154,17 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
         AffineTransform3D var3 = null;
         if (this.field_e != null) {
           var2_ref_jagdx_IDirect3DDevice = this.field_f.field_Cc;
-          var3 = this.field_f.k((byte) 69);
+          var3 = this.field_f.modelViewTransform((byte) 69);
           var2_ref_jagdx_IDirect3DDevice.a(0, var3.writeRowMajor4x4(0, field_g));
         }
         int var2 = 67 % ((41 - guard) / 46);
     }
 
     final void enable(boolean lighting, int guard) {
-        this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, 0);
-        this.toolkit.a(AccountRequestState.CONSTANT, 1, 0);
+        this.toolkit.setColorCombineSource(LegacyVertexAttribute.TEXTURE, 0, 0);
+        this.toolkit.setColorCombineSource(AccountRequestState.CONSTANT, 1, 0);
         this.toolkit.setColorCombineSource((byte) -125, 2, false, true, NetworkResourceRequest.PRIMARY_COLOR);
-        this.toolkit.b(0, false);
+        this.toolkit.setFogEnabled(0, false);
         if (guard == 20186) {
           this.field_f.a(-51, this.field_e);
           this.updateViewUniforms((byte) 40);
@@ -196,7 +196,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
           } else {
             var2.b(10, 0.0f, 0.0f, 0.0f, 0.0f);
           }
-          this.toolkit.a(false, this.toolkit.field_C);
+          this.toolkit.setTextureConstantColor(false, this.toolkit.field_C);
         }
         if (guard == 260) {
           return;

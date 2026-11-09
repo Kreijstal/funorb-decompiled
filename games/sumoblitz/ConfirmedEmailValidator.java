@@ -76,7 +76,7 @@ final class ConfirmedEmailValidator extends TextInputValidator {
           if (!text.equals(this.lastCheckedEmail)) {
             var3 = RasterBuffer.pollEmailAvailability(guard ^ 27, text);
             if (!var3.isComplete(true)) {
-              stackIn_7_0 = kt.PENDING;
+              stackIn_7_0 = FullscreenPromptController.PENDING;
               return stackIn_7_0;
             }
             this.lastCheckedEmail = text;

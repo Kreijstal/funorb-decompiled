@@ -390,7 +390,7 @@ class MenuScreen {
           var11 = this.c(8, param1);
           if (param0) {
             if (ActiveCanvasProvider.field_c != 1 &&
-              !hw.field_b[84]) {
+              !AudioOutputBootstrap.field_b[84]) {
               DelegatingCanvas.a(IntrusiveDeque.field_c, var11 << 1, var7, param4 << 24, 1, param3, var10, var6_int - var11 + 10, 1, true);
               if (var21 != 0) {
                 DelegatingCanvas.a(IsaacCipher.field_j, var11 << 1, var7, param4 << 24, 1, param3, var10, -var11 + (var6_int + 10), 1, true);
@@ -413,7 +413,7 @@ class MenuScreen {
           if (this.screenId == 0 &&
             param1 < 2) {
             var14_ref = ForceFieldRingEffect.field_t;
-            var15_ref = ma.field_b;
+            var15_ref = LoginTextResources.field_b;
             var13_ref = hc.field_e;
           } else {
             var13_ref = uq.field_a;
@@ -469,7 +469,7 @@ class MenuScreen {
                 return;
               }
             }
-            var24 = ea.difficultyText + IntNode.difficultyNames[TextureCombineSource.field_a];
+            var24 = AccountUiBootstrap.difficultyText + IntNode.difficultyNames[TextureCombineSource.field_a];
             var18_ref_StringLifetime1 = var24.toUpperCase();
             var14_ref.a(var18_ref_StringLifetime1, param4 << 24 | 5023231, -1, var16 + (var17 + (var15_ref.field_i + var6_int)), (var10 >> 1) + (var7 - 4), 0);
             var13_ref.a(var18_ref_StringLifetime1, var12, -1, var17 + var6_int + (var15_ref.field_i + var16), -4 + (var7 + (var10 >> 1)), 0);
@@ -879,7 +879,7 @@ class MenuScreen {
                     if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
-                    ih.restoreBaselineUpgrades(-125);
+                    LoginDialogState.restoreBaselineUpgrades(-125);
                     StrongCacheReference.switchMenuScreen(-7753, param0, -1);
                     LegacyTurbulentWaterNoise.advanceToNextLevel(10);
                     ByteArrayCacheNode.initializeGameplaySession((byte) 104);
@@ -1471,8 +1471,8 @@ class MenuScreen {
           }
           boolean decompiledFrameCompleted0 = true;
           if (var5 == 0 ||
-            !hw.field_b[70] &&
-            !hw.field_b[69]) {
+            !AudioOutputBootstrap.field_b[70] &&
+            !AudioOutputBootstrap.field_b[69]) {
             var6Lifetime2 = 0;
             while (!(var6Lifetime2 >= this.field_g.itemCount)) {
               stackIn_83_0 = this.e(var6Lifetime2, 7746);
@@ -1927,7 +1927,7 @@ class MenuScreen {
           var5 = SpriteState.myHiscoresText;
         }
         if (2 == HardwareBufferSet.field_j) {
-          var5 = jm.bestHiscoresText;
+          var5 = MouseInputShutdown.bestHiscoresText;
         }
         regionExit1: {
           regionExit2: {
@@ -2037,7 +2037,7 @@ class MenuScreen {
 
     private final void a(String param0, int param1, int param2) {
         try {
-          ma.field_b.a(param0, 0);
+          LoginTextResources.field_b.a(param0, 0);
           if (param2 != 29228) {
             this.resetSelection(-7, true);
           }

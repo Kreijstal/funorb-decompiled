@@ -570,7 +570,7 @@ class PacketBuffer extends IntrusiveNode {
 
     PacketBuffer(int capacity) {
         this.position = 0;
-        this.payload = jo.a(-44, capacity);
+        this.payload = ByteArrayPool.allocate(-44, capacity);
     }
 
     final void writeSignedSmart(int value, byte guard) {

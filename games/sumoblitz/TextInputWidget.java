@@ -76,7 +76,7 @@ class TextInputWidget extends InteractiveWidget {
           this.maxLength = 55;
         }
         this.caret = position;
-        if (!hw.field_b[81]) {
+        if (!AudioOutputBootstrap.field_b[81]) {
           this.selectionAnchor = this.caret;
         }
     }
@@ -306,7 +306,7 @@ class TextInputWidget extends InteractiveWidget {
               if (96 == keyCode) {
                 if (this.caret > 0) {
                   stackIn_56_1 = 127;
-                  if (hw.field_b[82]) {
+                  if (AudioOutputBootstrap.field_b[82]) {
                     stackIn_57_2 = this.previousWordBoundary(14236);
                   } else {
                     stackIn_57_2 = -1 + this.caret;
@@ -328,17 +328,17 @@ class TextInputWidget extends InteractiveWidget {
                     this.notifySubmitted((byte) -106);
                     return true;
                   }
-                  if (hw.field_b[82] &&
+                  if (AudioOutputBootstrap.field_b[82] &&
                     keyCode == 65) {
                     this.cutSelection(96);
                     return true;
                   }
-                  if (hw.field_b[82] &&
+                  if (AudioOutputBootstrap.field_b[82] &&
                     keyCode == 66) {
                     this.copySelection(false);
                     return true;
                   }
-                  if (hw.field_b[82] &&
+                  if (AudioOutputBootstrap.field_b[82] &&
                     keyCode == 67) {
                     this.pasteClipboard(-1);
                     return true;
@@ -346,7 +346,7 @@ class TextInputWidget extends InteractiveWidget {
                 } else {
                   if (this.caret < this.text.length()) {
                     stackIn_26_1 = 111;
-                    if (!hw.field_b[82]) {
+                    if (!AudioOutputBootstrap.field_b[82]) {
                       stackIn_27_2 = this.caret + 1;
                     } else {
                       stackIn_27_2 = this.nextWordBoundary(true);

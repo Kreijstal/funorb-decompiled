@@ -165,8 +165,8 @@ final class HardwareUnlitEffect extends ShaderEffect {
         try {
           StatusMessagePanel.field_A = true;
           int var3_int = -70 % ((param2 + 39) / 44);
-          ih.field_c = param1 ? true : false;
-          hc.field_c = new MessageDialog(RenderPresentationException.field_a, LegacyOpenGlDisplayLists.field_a, param0, ReconnectState.reconnecting, ih.field_c);
+          LoginDialogState.field_c = param1 ? true : false;
+          hc.field_c = new MessageDialog(RenderPresentationException.field_a, LegacyOpenGlDisplayLists.field_a, param0, ReconnectState.reconnecting, LoginDialogState.field_c);
           RenderPresentationException.field_a.pushDialog((byte) 108, hc.field_c);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "oc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

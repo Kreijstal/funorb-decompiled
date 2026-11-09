@@ -631,30 +631,30 @@ final class HardwareReflectionEffect extends ShaderEffect {
 
     final void enable(boolean lighting, int guard) {
         AffineTransform3D var4 = null;
-        CubeTexture var3 = this.toolkit.d((byte) 122);
+        CubeTexture var3 = this.toolkit.environmentCubeTexture((byte) 122);
         if (guard != 20186) {
           return;
         }
         if (var3 == null) {
-          this.toolkit.a(NetworkResourceRequest.PRIMARY_COLOR, 0, true);
+          this.toolkit.setAlphaCombineSource(NetworkResourceRequest.PRIMARY_COLOR, 0, true);
           return;
         }
         if (lighting) {
-          this.toolkit.g(1, -122);
+          this.toolkit.setActiveTextureUnit(1, -122);
           this.toolkit.a(var3, 91);
           this.toolkit.applyTexCoordGeneration(guard - 6432, LabeledWidget.REFLECTION_MAP);
-          this.toolkit.g(1, -114);
+          this.toolkit.setActiveTextureUnit(1, -114);
           this.toolkit.a((byte) -83, lf.REPLACE, OpenGlBuffer.INTERPOLATE);
           this.toolkit.setColorCombineSource((byte) 101, 2, true, false, FontMetrics.PREVIOUS);
-          this.toolkit.a(NetworkResourceRequest.PRIMARY_COLOR, 0, true);
-          var4 = this.toolkit.B(0);
-          var4.copyLinearFrom(this.toolkit.c(true), true);
-          this.toolkit.a(LegacyRidgedWaterNoise.field_y, 28880);
-          this.toolkit.g(0, -124);
+          this.toolkit.setAlphaCombineSource(NetworkResourceRequest.PRIMARY_COLOR, 0, true);
+          var4 = this.toolkit.textureTransform(0);
+          var4.copyLinearFrom(this.toolkit.scratchTransform(true), true);
+          this.toolkit.setTextureTransformMode(LegacyRidgedWaterNoise.TEXTURE_COUNT3, 28880);
+          this.toolkit.setActiveTextureUnit(0, -124);
           this.active = true;
           return;
         }
-        this.toolkit.a(NetworkResourceRequest.PRIMARY_COLOR, 0, true);
+        this.toolkit.setAlphaCombineSource(NetworkResourceRequest.PRIMARY_COLOR, 0, true);
     }
 
     final boolean isSupported(byte guard) {
@@ -673,34 +673,34 @@ final class HardwareReflectionEffect extends ShaderEffect {
     final void disable(boolean guard) {
         if (!guard) {
           if (this.active) {
-            this.toolkit.g(1, -111);
+            this.toolkit.setActiveTextureUnit(1, -111);
             this.toolkit.applyTexCoordGeneration(13754, lf.DISABLED);
             this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
-            this.toolkit.a(AccountRequestState.CONSTANT, 2, 0);
-            this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, true);
-            this.toolkit.l(0);
+            this.toolkit.setColorCombineSource(AccountRequestState.CONSTANT, 2, 0);
+            this.toolkit.setAlphaCombineSource(LegacyVertexAttribute.TEXTURE, 0, true);
+            this.toolkit.resetTextureTransform(0);
             this.toolkit.a((GpuTexture) null, 98);
-            this.toolkit.g(0, -120);
+            this.toolkit.setActiveTextureUnit(0, -120);
             this.active = false;
           } else {
-            this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, !guard ? true : false);
+            this.toolkit.setAlphaCombineSource(LegacyVertexAttribute.TEXTURE, 0, !guard ? true : false);
           }
           this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
           return;
         }
         this.active = false;
         if (this.active) {
-          this.toolkit.g(1, -111);
+          this.toolkit.setActiveTextureUnit(1, -111);
           this.toolkit.applyTexCoordGeneration(13754, lf.DISABLED);
           this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
-          this.toolkit.a(AccountRequestState.CONSTANT, 2, 0);
-          this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, !guard ? true : false);
-          this.toolkit.l(0);
+          this.toolkit.setColorCombineSource(AccountRequestState.CONSTANT, 2, 0);
+          this.toolkit.setAlphaCombineSource(LegacyVertexAttribute.TEXTURE, 0, !guard ? true : false);
+          this.toolkit.resetTextureTransform(0);
           this.toolkit.a((GpuTexture) null, 98);
-          this.toolkit.g(0, -120);
+          this.toolkit.setActiveTextureUnit(0, -120);
           this.active = false;
         } else {
-          this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, !guard ? true : false);
+          this.toolkit.setAlphaCombineSource(LegacyVertexAttribute.TEXTURE, 0, !guard ? true : false);
         }
         this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
     }

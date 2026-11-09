@@ -11,10 +11,10 @@ final class ToolkitRasterStateCacheEntry extends IntrusiveNode {
     final static WidgetTheme c(boolean param0) {
         if (CacheReferenceNode.field_v == null) {
           CacheReferenceNode.field_v = new WidgetTheme();
-          CacheReferenceNode.field_v.initializeDefaultStyles(kw.field_b, (byte) -118);
+          CacheReferenceNode.field_v.initializeDefaultStyles(TextCaretLayout.field_b, (byte) -118);
           CacheReferenceNode.field_v.tooltipPaddingRight = 5;
           CacheReferenceNode.field_v.tooltipPaddingLeft = 6;
-          CacheReferenceNode.field_v.font = jm.field_a;
+          CacheReferenceNode.field_v.font = MouseInputShutdown.field_a;
           CacheReferenceNode.field_v.tooltipPaddingBottom = 4;
           CacheReferenceNode.field_v.tooltipBackgroundColor = 2763306;
           CacheReferenceNode.field_v.tooltipLineHeight = 14;
@@ -52,7 +52,7 @@ final class ToolkitRasterStateCacheEntry extends IntrusiveNode {
           java.lang.reflect.Method var8 = null;
           File var9 = null;
           try {
-            var3 = (Class) (jo.field_a.get(param2));
+            var3 = (Class) (ByteArrayPool.field_a.get(param2));
             if (var3 != null) {
               if (var3.getClassLoader() == param1.getClassLoader()) {
                 return true;
@@ -77,13 +77,13 @@ final class ToolkitRasterStateCacheEntry extends IntrusiveNode {
                 var7.invoke((Object) (var8), new Object[]{Boolean.TRUE});
                 var8.invoke((Object) (Runtime.getRuntime()), new Object[]{param1, var9.getPath()});
                 var7.invoke((Object) (var8), new Object[]{Boolean.FALSE});
-                jo.field_a.put(param2, param1);
+                ByteArrayPool.field_a.put(param2, param1);
                 return true;
               } catch (java.lang.NoSuchMethodException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var5_ref = (NoSuchMethodException) (Object) decompiledCaughtException;
                 System.load(((File) (var4)).getPath());
-                jo.field_a.put(param2, hc.class);
+                ByteArrayPool.field_a.put(param2, hc.class);
                 return true;
               } catch (java.lang.Throwable decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
@@ -134,7 +134,7 @@ final class ToolkitRasterStateCacheEntry extends IntrusiveNode {
 
     final static TextWidgetRenderer a(int param0) {
         if (null == AudioServiceThread.field_d) {
-          AudioServiceThread.field_d = new TextWidgetRenderer(jm.field_a, 20, 0, 0, 0, 11579568, -1, 0, 0, jm.field_a.ascent, -1, 2147483647, true);
+          AudioServiceThread.field_d = new TextWidgetRenderer(MouseInputShutdown.field_a, 20, 0, 0, 0, 11579568, -1, 0, 0, MouseInputShutdown.field_a.ascent, -1, 2147483647, true);
           if (param0 != 0) {
             ToolkitRasterStateCacheEntry.c(false);
             return AudioServiceThread.field_d;

@@ -141,10 +141,10 @@ abstract class OpenGlTexture implements GpuTexture {
           if (!LegacyOpenGlPostProcessManager.field_f.tryLoadNamedGroup("commonui", 100)) {
             return 60;
           }
-          if (!hw.field_a.loadIndex((byte) 127)) {
+          if (!AudioOutputBootstrap.field_a.loadIndex((byte) 127)) {
             return 70;
           }
-          if (!hw.field_a.tryLoadAllGroups(true)) {
+          if (!AudioOutputBootstrap.field_a.tryLoadAllGroups(true)) {
             return 80;
           }
         } else {
@@ -171,10 +171,10 @@ abstract class OpenGlTexture implements GpuTexture {
           if (!LegacyOpenGlPostProcessManager.field_f.tryLoadNamedGroup("commonui", 100)) {
             return 80;
           }
-          if (!hw.field_a.loadIndex((byte) 127)) {
+          if (!AudioOutputBootstrap.field_a.loadIndex((byte) 127)) {
             return 82;
           }
-          if (!hw.field_a.tryLoadAllGroups(true)) {
+          if (!AudioOutputBootstrap.field_a.tryLoadAllGroups(true)) {
             return 86;
           }
         }
@@ -511,7 +511,7 @@ abstract class OpenGlTexture implements GpuTexture {
     }
 
     public void bind(int guard) {
-        int var2 = this.toolkit.t(guard - 8983);
+        int var2 = this.toolkit.activeTextureUnit(guard - 8983);
         int var3 = this.toolkit.field_Hc[var2];
         if (this.target != var3) {
           if (var3 != 0) {

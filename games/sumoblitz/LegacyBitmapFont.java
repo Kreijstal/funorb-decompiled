@@ -604,7 +604,7 @@ abstract class LegacyBitmapFont extends DualLinkNode {
                                 }
                               } else {
                                 var7 = (CharSequence) ((Object) tag.substring(5));
-                                shadowColor = ea.parseInt((byte) -73, var7, 16);
+                                shadowColor = AccountUiBootstrap.parseInt((byte) -73, var7, 16);
                               }
                             } else {
                               underlineColor = -1;
@@ -614,7 +614,7 @@ abstract class LegacyBitmapFont extends DualLinkNode {
                           }
                         } else {
                           var6 = (CharSequence) ((Object) tag.substring(2));
-                          underlineColor = ea.parseInt((byte) -73, var6, 16);
+                          underlineColor = AccountUiBootstrap.parseInt((byte) -73, var6, 16);
                         }
                       } else {
                         strikethroughColor = -1;
@@ -624,7 +624,7 @@ abstract class LegacyBitmapFont extends DualLinkNode {
                     }
                   } else {
                     var5 = (CharSequence) ((Object) tag.substring(4));
-                    strikethroughColor = ea.parseInt((byte) -73, var5, 16);
+                    strikethroughColor = AccountUiBootstrap.parseInt((byte) -73, var5, 16);
                   }
                 } else {
                   alpha = defaultAlpha;
@@ -638,7 +638,7 @@ abstract class LegacyBitmapFont extends DualLinkNode {
             }
           } else {
             var3 = (CharSequence) ((Object) tag.substring(4));
-            textColor = ea.parseInt((byte) -73, var3, 16);
+            textColor = AccountUiBootstrap.parseInt((byte) -73, var3, 16);
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

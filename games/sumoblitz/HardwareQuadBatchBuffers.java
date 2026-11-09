@@ -43,7 +43,7 @@ final class HardwareQuadBatchBuffers {
         if (Character.isISOControl(character)) {
           return false;
         }
-        if (qw.a(57, character)) {
+        if (qw.isAsciiAlphanumeric(57, character)) {
           return true;
         }
         if (character != 45 &&

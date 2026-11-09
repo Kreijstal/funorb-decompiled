@@ -39,7 +39,7 @@ class TimedSceneEffect extends IntrusiveNode {
           if (null == DisplayModeConfirmationDialog.accountSocket) {
             return false;
           }
-          if (kw.accountPhase == LegacyOpenGlUnderwaterEffect.CONNECTED) {
+          if (TextCaretLayout.accountPhase == LegacyOpenGlUnderwaterEffect.CONNECTED) {
             return true;
           }
           return false;
@@ -47,7 +47,7 @@ class TimedSceneEffect extends IntrusiveNode {
         if (null == DisplayModeConfirmationDialog.accountSocket) {
           return false;
         }
-        if (kw.accountPhase == LegacyOpenGlUnderwaterEffect.CONNECTED) {
+        if (TextCaretLayout.accountPhase == LegacyOpenGlUnderwaterEffect.CONNECTED) {
           return true;
         }
         return false;

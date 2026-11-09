@@ -5,7 +5,7 @@ import java.io.*;
 
 final class StrongCacheReference extends CacheReferenceNode {
     private Object value;
-    static il field_B;
+    static BlendMode NO_BLEND;
     static int[] field_C;
 
     final static void a(PacketBuffer param0, boolean param1) {
@@ -101,7 +101,7 @@ final class StrongCacheReference extends CacheReferenceNode {
 
     public static void releaseStatics(int param0) {
         field_C = null;
-        field_B = null;
+        NO_BLEND = null;
         if (param0 != 24) {
           StrongCacheReference.releaseStatics(30);
         }
@@ -113,6 +113,6 @@ final class StrongCacheReference extends CacheReferenceNode {
     }
 
     static {
-        field_B = new il();
+        NO_BLEND = new BlendMode();
     }
 }

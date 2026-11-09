@@ -105,7 +105,7 @@ final class ValidationStatusWidget extends InteractiveWidget {
           }
           return;
         }
-        if (kt.PENDING == var8) {
+        if (FullscreenPromptController.PENDING == var8) {
           var17 = ToolkitRasterStateCacheEntry.field_m[0];
           var9Lifetime1 = var17.field_z << 1;
           var10Lifetime1 = var17.field_w << 1;

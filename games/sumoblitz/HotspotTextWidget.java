@@ -10,7 +10,7 @@ class HotspotTextWidget extends InteractiveWidget {
     private IntrusiveDeque hotspots;
     static String pointsRemainingText;
     static Sprite field_E;
-    static LegacyAlphaFontLoader field_L;
+    static TextureTransformMode TEXTURE_TRANSFORM_DISABLED;
 
     final void setBoundsToTextHeight(int y, boolean guard, int x, int width) {
         this.setBounds(-50, x, y, ((TextWidgetLayout) ((Object) this.renderer)).measuredTextHeight((UiWidget) (this), (byte) 116), width);
@@ -28,7 +28,7 @@ class HotspotTextWidget extends InteractiveWidget {
           field_E = (Sprite) null;
         }
         connectionTimedOutPleaseText = null;
-        field_L = null;
+        TEXTURE_TRANSFORM_DISABLED = null;
     }
 
     void update(int parentX, int guard, UiWidget root, int parentY) {
@@ -279,7 +279,7 @@ class HotspotTextWidget extends InteractiveWidget {
         }
         TextWidgetLayout var9 = (TextWidgetLayout) ((Object) this.renderer);
         if (guard >= -35) {
-          field_L = (LegacyAlphaFontLoader) null;
+          TEXTURE_TRANSFORM_DISABLED = (TextureTransformMode) null;
         }
         TextHotspot var6 = this.hoveredHotspot;
         if (var6 != null) {
@@ -368,6 +368,6 @@ class HotspotTextWidget extends InteractiveWidget {
         activePointerButton = 0;
         pointsRemainingText = "points remaining: <%0>";
         field_N = new IntrusiveNodeHashTable(8);
-        field_L = new LegacyAlphaFontLoader();
+        TEXTURE_TRANSFORM_DISABLED = new TextureTransformMode();
     }
 }

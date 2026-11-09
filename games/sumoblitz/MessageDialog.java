@@ -224,7 +224,7 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
           IOException iOException = null;
           Throwable decompiledCaughtException = null;
           if (DisplayModeConfirmationDialog.accountSocket != null && (0 > param1 ||
-            LegacyOpenGlUnderwaterEffect.CONNECTED == kw.accountPhase)) {
+            LegacyOpenGlUnderwaterEffect.CONNECTED == TextCaretLayout.accountPhase)) {
             if (InwardSparkParticle.field_v.position == 0 &&
               (ArchiveCatalog.field_a + 10000L) < wq.monotonicTimeMillis(param0 - 14)) {
               InwardSparkParticle.field_v.writeCipherByte(param1, 8);
@@ -256,7 +256,7 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
           CheckboxWidget.a(true, NineSlicePanel.field_f);
         }
         ShaderEffect.a(false);
-        jm.b(28679);
+        MouseInputShutdown.releaseMouseInput(28679);
         if (param0 != 0) {
           field_gb = (DraggableWidget) null;
         }

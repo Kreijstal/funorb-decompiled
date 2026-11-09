@@ -212,7 +212,7 @@ final class up {
             stackIn_71_0 = param2 ? 1 : 0;
             break;
           }
-          ih.a(stackIn_71_0 != 0, param4, -1, var8, var7_int);
+          LoginDialogState.a(stackIn_71_0 != 0, param4, -1, var8, var7_int);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

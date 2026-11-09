@@ -127,7 +127,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("create_ineligible", (byte) -23);
                 if (null != var2) {
-                  rn.unfortunatelyYouAreNotText = MusicVoice.a(param0 ^ 7, var2);
+                  HudMessageSupport.unfortunatelyYouAreNotText = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = OpenGlCubeTexture.a("usernameprompt", (byte) -23);
                 if (null != var2) {
@@ -1067,7 +1067,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("invaliduserorpass", (byte) -23);
                 if (null != var2) {
-                  ih.field_b = MusicVoice.a(param0 - 7, var2);
+                  LoginDialogState.field_b = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = OpenGlCubeTexture.a("pleasetryagain", (byte) -23);
                 if (null != var2) {
@@ -1113,7 +1113,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("login", (byte) -23);
                 if (var2 != null) {
-                  ma.logInText = MusicVoice.a(0, var2);
+                  LoginTextResources.logInText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("goback", (byte) -23);
                 if (var2 != null) {
@@ -1193,7 +1193,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("warning_ifyouquit", (byte) -23);
                 if (null != var2) {
-                  rv.warningIfYouQuitText = MusicVoice.a(0, var2);
+                  AccountCreationNavigation.warningIfYouQuitText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("warning_ifyouquitorleavepage", (byte) -23);
                 if (var2 != null) {
@@ -1448,7 +1448,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("create_displayname", (byte) -23);
                 if (var2 != null) {
-                  un.playerNameText = MusicVoice.a(0, var2);
+                  ScoreMultiplierTable.playerNameText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("create_password", (byte) -23);
                 if (var2 != null) {
@@ -1648,7 +1648,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("create_alert_doublespace", (byte) -23);
                 if (var2 != null) {
-                  ma.namesCannotContainConsecutiveText = MusicVoice.a(0, var2);
+                  LoginTextResources.namesCannotContainConsecutiveText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("create_alert_passchars", (byte) -23);
                 if (var2 != null) {
@@ -2074,7 +2074,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("ok", (byte) -23);
                 if (null != var2) {
-                  LegacyAlphaFontLoader.field_a = MusicVoice.a(0, var2);
+                  TextureTransformMode.field_a = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("on", (byte) -23);
                 if (var2 != null) {

@@ -76,7 +76,7 @@ class IntrusiveNode {
               }
               var3 = var3 + param0;
             }
-            il.printClientError((byte) 96, var3);
+            BlendMode.printClientError((byte) 96, var3);
             var7 = HardwareGraphicsToolkit.a(":", var3, "%3a", true);
             var8 = HardwareGraphicsToolkit.a("@", var7, "%40", true);
             var9 = HardwareGraphicsToolkit.a("&", var8, "%26", true);

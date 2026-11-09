@@ -219,14 +219,14 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
           var3_int = -other.insertionOrder + contact.insertionOrder;
-          if (jm.field_d != contact.worldName) {
+          if (MouseInputShutdown.field_d != contact.worldName) {
             if (null == contact.worldName) {
               var3_int += 200;
             }
           } else {
             var3_int -= 200;
           }
-          if (jm.field_d == other.worldName) {
+          if (MouseInputShutdown.field_d == other.worldName) {
             var3_int += 200;
           } else {
             if (null == other.worldName) {

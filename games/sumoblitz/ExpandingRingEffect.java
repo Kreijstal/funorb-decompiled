@@ -68,7 +68,7 @@ final class ExpandingRingEffect extends TimedSceneEffect {
             var3_int = (int)((double)(100 - this.remainingTicks) / 100.0 * 4096.0);
           }
           var3_int = var3_int * (-this.remainingTicks + 100);
-          kw.field_a.drawRotated((float)(this.x >> 8), (float)(this.y >> 8), var3_int, 0, 1, this.color, 2);
+          TextCaretLayout.field_a.drawRotated((float)(this.x >> 8), (float)(this.y >> 8), var3_int, 0, 1, this.color, 2);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "fi.C(" + (toolkit != null ? "{...}" : "null") + ',' + guard + ')');
         }

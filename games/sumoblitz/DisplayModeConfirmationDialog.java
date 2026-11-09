@@ -110,7 +110,7 @@ final class DisplayModeConfirmationDialog extends ResizingDialog implements Widg
           var3.y = 50;
           var3.width = this.width;
           var3.x = 0;
-          var3.renderer = (WidgetRenderer) ((Object) new TextWidgetRenderer(jm.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var3.renderer = (WidgetRenderer) ((Object) new TextWidgetRenderer(MouseInputShutdown.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(var3, 89);
           this.field_S = new UiWidget(GraphicsToolkit.field_d, (WidgetListener) null);
           this.field_S.y = var3.height + (var3.y + 20);

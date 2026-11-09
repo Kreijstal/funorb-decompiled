@@ -13,14 +13,14 @@ final class ProgressDialog extends ResizingDialog {
     private boolean field_S;
     static BufferedCacheFile[] field_O;
 
-    final static void a(String param0, String param1, int param2) {
-        if (param2 != -1807) {
+    final static void beginLogin(String password, String identifier, int guard) {
+        if (guard != -1807) {
           return;
         }
         try {
-          VertexBufferReference.a(false, param0, (byte) 127, param1);
+          VertexBufferReference.a(false, password, (byte) 127, identifier);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "m.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "m.C(" + (password != null ? "{...}" : "null") + ',' + (identifier != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 

@@ -385,7 +385,7 @@ final class DropDownWidget extends WidgetContainer implements WidgetActionListen
 
     DropDownWidget(Object[] param0, int param1, int param2) {
         super(0, 0, 0, 0, (WidgetRenderer) null);
-        this.font = kw.field_b;
+        this.font = TextCaretLayout.field_b;
         this.searchPrefix = "";
         try {
           this.optionList = new DropDownListWidget(this, this.font, param0, param1);

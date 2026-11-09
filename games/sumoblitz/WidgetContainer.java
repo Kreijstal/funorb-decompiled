@@ -564,7 +564,7 @@ class WidgetContainer extends UiWidget implements CompositeWidgetMarker {
           if (var6 != 80) {
             return false;
           }
-          if (!hw.field_b[81]) {
+          if (!AudioOutputBootstrap.field_b[81]) {
             stackIn_15_0 = this.focusNext(root, false);
           } else {
             stackIn_15_0 = this.focusPrevious((byte) -5, root);

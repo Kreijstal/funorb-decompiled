@@ -74,7 +74,7 @@ final class HardwareBufferSet extends ka {
             this.field_f = new VertexBufferReference(PerlinNoise2D.a(this.field_c, this.field_e, 30643));
           }
           if (!param3 &&
-            !LegacyAlphaFontLoader.a(this.field_c, -2626, this.field_e)) {
+            !TextureTransformMode.a(this.field_c, -2626, this.field_e)) {
             return;
           }
           this.field_g = new IndexBufferReference(ValidatedTextInputWidget.b(this.field_e, this.field_c, -126));

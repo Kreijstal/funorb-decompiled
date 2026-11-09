@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class il {
-    static int field_a;
+final class BlendMode {
+    static int lastLevelScore;
     static ToolkitSprite field_b;
 
     public final String toString() {
@@ -110,18 +110,18 @@ final class il {
     public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != 26238) {
-          field_a = 82;
+          lastLevelScore = 82;
         }
     }
 
     final static void printClientError(byte guard, String message) {
         System.out.println("Error: " + HardwareGraphicsToolkit.a("%0a", message, "\n", true));
         if (guard < 4) {
-          il.releaseStatics(81);
+          BlendMode.releaseStatics(81);
         }
     }
 
     static {
-        field_a = 0;
+        lastLevelScore = 0;
     }
 }

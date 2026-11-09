@@ -9,7 +9,7 @@ final class kh {
     static String field_d;
     static int[] field_b;
 
-    final static boolean a(IsaacPacketBuffer param0, boolean param1) {
+    final static boolean readBitFlag(IsaacPacketBuffer packet, boolean guard) {
         RuntimeException var2 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -17,26 +17,26 @@ final class kh {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1) {
+          if (guard) {
             field_b = (int[]) null;
           }
-          stackIn_5_0 = (param0.readBits(1, (byte) -116) == 1);
+          stackIn_5_0 = (packet.readBits(1, (byte) -116) == 1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_8_0 = var2;
           stackIn_8_1 = new StringBuilder().append("kh.A(");
-          if (param0 == null) {
+          if (packet == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    final static String a(CharSequence param0, int param1) {
+    final static String normalizeLoginIdentifier(CharSequence text, int guard) {
         int var4 = 0;
         int var2_int = 0;
         char[] var3 = null;
@@ -53,7 +53,7 @@ final class kh {
         RuntimeException var2 = null;
         var6 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var2_int = param0.length();
+          var2_int = text.length();
           if (var2_int > 20) {
             var2_int = 20;
           }
@@ -61,7 +61,7 @@ final class kh {
           var7 = var8;
           var3 = var7;
           for (var4 = 0; var4 < var2_int; var4++) {
-            var5 = param0.charAt(var4);
+            var5 = text.charAt(var4);
             if (65 <= var5 &&
               90 >= var5) {
               var3[var4] = (char)(97 + (-65 + var5));
@@ -74,7 +74,7 @@ final class kh {
               var3[var4] = (char)var5;
             }
           }
-          if (param1 == 1457) {
+          if (guard == 1457) {
             stackIn_24_0 = new String(var8);
             return stackIn_24_0;
           }
@@ -85,28 +85,28 @@ final class kh {
           var2 = decompiledCaughtException;
           stackIn_27_0 = var2;
           stackIn_27_1 = new StringBuilder().append("kh.C(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_28_2 = "null";
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    final static void a(boolean param0) {
+    final static void retryAccountCreationLogin(boolean guard) {
         VertexBufferReference.a(true, ArenaBackdropPalettes.field_d, (byte) 122, FadingWidget.field_C);
-        if (param0) {
+        if (guard) {
           field_c = (int[][]) null;
         }
-        ih.field_c = true;
+        LoginDialogState.field_c = true;
     }
 
     public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != 2) {
           IsaacPacketBuffer var2 = (IsaacPacketBuffer) null;
-          kh.a((IsaacPacketBuffer) null, true);
+          kh.readBitFlag((IsaacPacketBuffer) null, true);
         }
         field_c = (int[][]) null;
         field_a = null;

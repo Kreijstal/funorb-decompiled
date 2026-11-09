@@ -19,7 +19,7 @@ final class LinkWidgetRenderer implements WidgetRenderer {
     public LinkWidgetRenderer() {
         this.verticalAlignment = 1;
         this.horizontalAlignment = 1;
-        this.font = kw.field_b;
+        this.font = TextCaretLayout.field_b;
     }
 
     public final void renderWidget(UiWidget widget, int parentY, int guard, boolean isEnabled, int parentX) {

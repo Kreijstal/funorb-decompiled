@@ -40,7 +40,7 @@ final class LoginPacketWriter {
           InwardSparkParticle.field_v.position = InwardSparkParticle.field_v.position + 2;
           var5_int = InwardSparkParticle.field_v.position;
           InwardSparkParticle.field_v.writeInt(48, MidiNoteMixer.field_p);
-          InwardSparkParticle.field_v.writeLong(false, jm.field_b);
+          InwardSparkParticle.field_v.writeLong(false, MouseInputShutdown.field_b);
           var6 = 0;
           if (NineSlicePanel.field_a) {
             var6 = var6 | 1;

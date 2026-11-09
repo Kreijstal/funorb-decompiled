@@ -130,7 +130,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements CompositeWidgetM
           if (var5_int != 80) {
             return false;
           }
-          if (!hw.field_b[81]) {
+          if (!AudioOutputBootstrap.field_b[81]) {
             stackIn_19_0 = this.focusNext((byte) -17, root);
           } else {
             stackIn_19_0 = this.focusPrevious(root, (byte) 113);

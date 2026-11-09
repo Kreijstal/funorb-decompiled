@@ -75,14 +75,14 @@ final class vs {
         int var8 = 0;
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (kw.accountPhase != LegacyOpenGlUnderwaterEffect.CONNECTED) {
+          if (TextCaretLayout.accountPhase != LegacyOpenGlUnderwaterEffect.CONNECTED) {
             return false;
           }
           var4 = 96 / ((param1 + 72) / 53);
           var2_long = wq.monotonicTimeMillis(-45);
-          if (0 != jo.field_c &&
+          if (0 != ByteArrayPool.field_c &&
             lq.field_b < 0) {
-            var5_ref_ub = (DelayedInboundPacket) (un.field_b.first(-99));
+            var5_ref_ub = (DelayedInboundPacket) (ScoreMultiplierTable.field_b.first(-99));
             if (var5_ref_ub != null &&
               var2_long > var5_ref_ub.deliveryTimeMillis) {
               var5_ref_ub.unlink(false);
@@ -125,7 +125,7 @@ final class vs {
             if (!lt.a((byte) 119)) {
               return false;
             }
-            if (jo.field_c == 0) {
+            if (ByteArrayPool.field_c == 0) {
               ToolkitImageProducerBuffer.field_r = RotarySelectorWidget.field_I;
               RotarySelectorWidget.field_I = ContentTransitionDialog.field_Q;
               ContentTransitionDialog.field_Q = TextureFormat.field_a;
@@ -133,7 +133,7 @@ final class vs {
               lq.field_b = -1;
               return true;
             }
-            var5 = jo.field_c;
+            var5 = ByteArrayPool.field_c;
             if (0.0 != LegacyOpenGlReflectionEffect.field_k) {
               var5 = (int)((double)var5 + NanoTickClock.field_d.nextGaussian() * LegacyOpenGlReflectionEffect.field_k);
               if (var5 < 0) {
@@ -144,7 +144,7 @@ final class vs {
             for (var7 = 0; HardwareBufferSet.field_d > var7; var7++) {
               var6.payload[var7] = NativeLibraryExtractor.field_a.payload[var7];
             }
-            un.field_b.addLast((IntrusiveNode) (var6), (byte) 39);
+            ScoreMultiplierTable.field_b.addLast((IntrusiveNode) (var6), (byte) 39);
             lq.field_b = -1;
             stackIn_17_0 = lq.field_b;
           }

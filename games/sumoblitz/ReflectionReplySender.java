@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qi {
+final class ReflectionReplySender {
     static String[] loadingTextTranslations;
 
-    final static void a(int param0) {
+    final static void sendReflectionReplies(int opcode) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
         IsaacPacketBuffer var1 = null;
@@ -15,14 +15,14 @@ final class qi {
         try {
           var1 = InwardSparkParticle.field_v;
           while (Js5Client.nextReflectionCheckReady((byte) 125)) {
-            var1.writeCipherByte(8, param0 ^ 0);
+            var1.writeCipherByte(8, opcode ^ 0);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
-            SoftLruCache.writeReflectionReply(var1, param0 + 119);
+            SoftLruCache.writeReflectionReply(var1, opcode + 119);
             InwardSparkParticle.field_v.patchByteLength(var1.position - var2, -13745);
           }
-          if (param0 == 8) {
+          if (opcode == 8) {
             return;
           }
           loadingTextTranslations = (String[]) null;
@@ -30,7 +30,7 @@ final class qi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1_ref), "qi.B(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1_ref), "qi.B(" + opcode + ')');
         }
     }
 

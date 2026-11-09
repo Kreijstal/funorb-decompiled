@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class LegacyAlphaFontLoader {
+final class TextureTransformMode {
     static String field_a;
 
     final static boolean a(int param0, int param1, int param2) {
         if (param1 == -2626) {
           return 0 != (2048 & param2) ? true : false;
         }
-        LegacyAlphaFontLoader.releaseStatics((byte) -118);
+        TextureTransformMode.releaseStatics((byte) -118);
         return 0 != (2048 & param2) ? true : false;
     }
 
@@ -59,7 +59,7 @@ final class LegacyAlphaFontLoader {
     public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 != 17) {
-          LegacyAlphaFontLoader.a(-5, -49, 114);
+          TextureTransformMode.a(-5, -49, 114);
         }
     }
 

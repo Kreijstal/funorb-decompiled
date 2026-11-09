@@ -121,7 +121,7 @@ final class CachedTextLayout extends TextLayout {
               } else {
                 stackIn_40_2 = this.justificationSpaceQ8(-292767736, param7, var14, param2.stringWidth(var14));
               }
-              kw.$cfr$intArgs$a$62b8cf4125f9(stackIn_39_0, stackIn_39_1, stackIn_40_2, param2, var14);
+              TextCaretLayout.computeCaretPositions(stackIn_39_0, stackIn_39_1, stackIn_40_2, param2, var14);
             }
             var11 = var11 + param6;
             this.lines[var13Lifetime1] = var15;
@@ -169,7 +169,7 @@ final class CachedTextLayout extends TextLayout {
           var7 = param1.stringWidth(param3);
           var8.caretX[0] = -(var7 >> 1) + param4;
           var8.caretX[param3.length()] = param4 + (var7 >> 1);
-          kw.$cfr$intArgs$a$62b8cf4125f9(90, var8, 0, param1, param3);
+          TextCaretLayout.computeCaretPositions(90, var8, 0, param1, param3);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "jd.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -339,7 +339,7 @@ final class CachedTextLayout extends TextLayout {
             stackIn_8_0 = -1;
             return stackIn_8_0;
           }
-          if (kw.accountPhase == ByteArrayCacheNode.READY_TO_CONNECT) {
+          if (TextCaretLayout.accountPhase == ByteArrayCacheNode.READY_TO_CONNECT) {
             HardwareGraphicsToolkit.field_j = null;
             InwardSparkParticle.field_v.position = 0;
             if (param6 != null) {
@@ -353,7 +353,7 @@ final class CachedTextLayout extends TextLayout {
               SoftLruCache.field_e.writeCircumfixedString(var15, (byte) -108);
               SoftLruCache.field_e.writeCircumfixedString(var8, (byte) -121);
               var17 = (CharSequence) ((Object) param6);
-              SoftLruCache.field_e.writeCircumfixedString(kh.a(var17, 1457), (byte) -107);
+              SoftLruCache.field_e.writeCircumfixedString(kh.normalizeLoginIdentifier(var17, 1457), (byte) -107);
               SoftLruCache.field_e.writeShort(-69, param3);
               SoftLruCache.field_e.writeByte((byte) 50, param1);
               SoftLruCache.field_e.writeByte((byte) 50, var9);
@@ -392,15 +392,15 @@ final class CachedTextLayout extends TextLayout {
               InwardSparkParticle.field_v.patchByteLength(InwardSparkParticle.field_v.position - var9, -13745);
             }
             MessageDialog.a(0, -1);
-            kw.accountPhase = vf.WAIT_ACCOUNT_RESPONSE;
+            TextCaretLayout.accountPhase = vf.WAIT_ACCOUNT_RESPONSE;
           }
-          if (kw.accountPhase == vf.WAIT_ACCOUNT_RESPONSE &&
+          if (TextCaretLayout.accountPhase == vf.WAIT_ACCOUNT_RESPONSE &&
             OpenGlIndexBuffer.b(-1, 1)) {
             var9Lifetime1 = NativeLibraryExtractor.field_a.readUnsignedByte(-31302);
             NativeLibraryExtractor.field_a.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
-              kw.accountPhase = oi.WAIT_NAME_SUGGESTIONS;
+              TextCaretLayout.accountPhase = oi.WAIT_NAME_SUGGESTIONS;
               ArchiveLoadingStage.nameSuggestions = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
@@ -414,7 +414,7 @@ final class CachedTextLayout extends TextLayout {
               if (var9Lifetime1 != 99) {
                 HardwareBufferSet.field_d = -1;
                 TextureFormat.field_a = var9Lifetime1;
-                kw.accountPhase = DropDownArrowRenderer.WAIT_ACCOUNT_DETAILS;
+                TextCaretLayout.accountPhase = DropDownArrowRenderer.WAIT_ACCOUNT_DETAILS;
               } else {
                 OpenGlIndexBuffer.b(-1, ChatMessage.loginReplyHeaderLength(-105));
                 HardwareGraphicsToolkit.field_j = new Boolean(HiscoreRequest.readBooleanFlag(NativeLibraryExtractor.field_a, 115));
@@ -422,7 +422,7 @@ final class CachedTextLayout extends TextLayout {
               }
             }
           }
-          if (oi.WAIT_NAME_SUGGESTIONS == kw.accountPhase) {
+          if (oi.WAIT_NAME_SUGGESTIONS == TextCaretLayout.accountPhase) {
             var9Lifetime2 = 2;
             if (OpenGlIndexBuffer.b(-1, var9Lifetime2)) {
               var10Lifetime1 = NativeLibraryExtractor.field_a.readUnsignedShort(255);
@@ -439,7 +439,7 @@ final class CachedTextLayout extends TextLayout {
               }
             }
           }
-          if (DropDownArrowRenderer.WAIT_ACCOUNT_DETAILS == kw.accountPhase &&
+          if (DropDownArrowRenderer.WAIT_ACCOUNT_DETAILS == TextCaretLayout.accountPhase &&
             lt.a((byte) 119)) {
             if (TextureFormat.field_a != 255) {
               MouseWheelInput.field_c = NativeLibraryExtractor.field_a.readCp1252String(-1);
@@ -525,7 +525,7 @@ final class CachedTextLayout extends TextLayout {
         try {
           var8.caretX[0] = param2 - param0.stringWidth(param3);
           var7.caretX[param3.length()] = param2;
-          kw.$cfr$intArgs$a$62b8cf4125f9(90, var8, 0, param0, param3);
+          TextCaretLayout.computeCaretPositions(90, var8, 0, param0, param3);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "jd.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -554,7 +554,7 @@ final class CachedTextLayout extends TextLayout {
           var8 = var7;
           var7.caretX[0] = param3;
           var8.caretX[param2.length()] = param3 + param0.stringWidth(param2);
-          kw.$cfr$intArgs$a$62b8cf4125f9(90, var8, 0, param0, param2);
+          TextCaretLayout.computeCaretPositions(90, var8, 0, param0, param2);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "jd.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

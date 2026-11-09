@@ -31,8 +31,8 @@ final class ContentDialog extends ContentTransitionDialog {
         typeYourAgeInText = null;
     }
 
-    final static void l(int param0) {
-        if (param0 <= kr.field_c) {
+    final static void raiseSoundVolume(int threshold) {
+        if (threshold <= kr.field_c) {
           lf.setSoundVolume(256, (byte) -58);
           return;
         }

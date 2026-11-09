@@ -73,14 +73,14 @@ final class DroneChargeParticle extends TimedSceneEffect {
         GameClientShell.field_u[2] = MouseInputHandler.field_a;
         GameClientShell.field_u[13] = HardwareBufferSet.musicText;
         GameClientShell.field_u[21] = DropDownListWidget.regularText;
-        GameClientShell.field_u[25] = ea.difficultyText;
+        GameClientShell.field_u[25] = AccountUiBootstrap.difficultyText;
         GameClientShell.field_u[18] = CompactMeshGeometry.previousText;
         GameClientShell.field_u[10] = PlayingSound.scoreFilterLabels[2];
         GameClientShell.field_u[27] = FallbackShaderEffect.field_g;
         GameClientShell.field_u[23] = CubeMapSource.challengeText;
         GameClientShell.field_u[24] = MatchingTextValidator.optionsText;
         GameClientShell.field_u[17] = FadingWidget.nextText;
-        GameClientShell.field_u[28] = ss.restartLevelText;
+        GameClientShell.field_u[28] = IntroPreparation.restartLevelText;
         GameClientShell.field_u[19] = LoadingStatusText.arcadeGameText;
         GameClientShell.field_u[22] = MusicPatch.editorText;
         BufferedSocket.field_i = new String[]{ArchiveLoadingStage.highText, DiskCacheDataFile.lowText};

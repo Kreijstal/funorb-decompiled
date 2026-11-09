@@ -18,7 +18,7 @@ final class MenuSelectionController {
         MessageDialog.field_db = var2.createFont(VertexStreamLayout.field_c, ArchiveLoadingStage.field_b, true);
         uq.field_a = var2.createFont(AccountConnectionPhase.field_a, OpenGlTransparentWaterEffect.field_i, true);
         QueuedIntArrayRequest.field_k = var2.createFont(sv.field_a, LegacyOpenGlReflectionEffect.field_j, true);
-        hc.field_e = var2.createFont(ma.field_b, DropDownWidget.field_F, true);
+        hc.field_e = var2.createFont(LoginTextResources.field_b, DropDownWidget.field_F, true);
         ForceFieldRingEffect.field_t = var2.createFont(sq.field_b, ProxySocketConnector.field_f, true);
         up.field_c = DroneDebris.createToolkitSprites(NameSuggestionsPanel.field_F, var2, 28513);
         ResizingDialog.field_H = DroneDebris.createToolkitSprites(MidiNoteMixer.field_q, var2, 28513);
@@ -27,7 +27,7 @@ final class MenuSelectionController {
         uj.field_a = ResizingDialog.a(var2, MusicCrossfadeStream.field_p, (byte) -11);
         MouseWheelInput.field_b = ResizingDialog.a(var2, IntrusiveNode.field_d, (byte) -11);
         CacheReferenceNode.field_y = ResizingDialog.a(var2, OpenGlCubeTexture.field_i, (byte) -11);
-        il.field_b = ResizingDialog.a(var2, hc.field_b, (byte) -11);
+        BlendMode.field_b = ResizingDialog.a(var2, hc.field_b, (byte) -11);
         CacheIoWorker.field_b = ResizingDialog.a(var2, oi.field_d, (byte) -11);
         vm.field_a = DroneDebris.createToolkitSprites(TextLayoutLine.field_c, var2, 28513);
         HudMessage.field_s = DroneDebris.createToolkitSprites(LoginMethodPreference.field_c, var2, 28513);
@@ -71,7 +71,7 @@ final class MenuSelectionController {
           AccountServiceResult.field_f = ResizingDialog.a(var2, SceneryParticle.field_C, (byte) -11);
           TextureMetadata.field_a = ResizingDialog.a(var2, wf.field_a, (byte) -11);
           DirectByteArrayStorage.field_d = ResizingDialog.a(var2, RidgedNoise3D.field_p, (byte) -11);
-          kw.field_a = ResizingDialog.a(var2, UnderageAccountInfoPanel.field_C, (byte) -11);
+          TextCaretLayout.field_a = ResizingDialog.a(var2, UnderageAccountInfoPanel.field_C, (byte) -11);
           OpenGlIndexBuffer.field_p = DroneDebris.createToolkitSprites(MouseInputHandler.field_b, var2, 28513);
           RidgedNoise3D.field_w = DroneDebris.createToolkitSprites(SoftLruCache.field_a, var2, 28513);
           IsaacCipher.field_f = DroneDebris.createToolkitSprites(LegacyOpenGlCubeTexture.field_n, var2, 28513);
@@ -120,7 +120,7 @@ final class MenuSelectionController {
         AccountServiceResult.field_f = ResizingDialog.a(var2, SceneryParticle.field_C, (byte) -11);
         TextureMetadata.field_a = ResizingDialog.a(var2, wf.field_a, (byte) -11);
         DirectByteArrayStorage.field_d = ResizingDialog.a(var2, RidgedNoise3D.field_p, (byte) -11);
-        kw.field_a = ResizingDialog.a(var2, UnderageAccountInfoPanel.field_C, (byte) -11);
+        TextCaretLayout.field_a = ResizingDialog.a(var2, UnderageAccountInfoPanel.field_C, (byte) -11);
         OpenGlIndexBuffer.field_p = DroneDebris.createToolkitSprites(MouseInputHandler.field_b, var2, 28513);
         RidgedNoise3D.field_w = DroneDebris.createToolkitSprites(SoftLruCache.field_a, var2, 28513);
         IsaacCipher.field_f = DroneDebris.createToolkitSprites(LegacyOpenGlCubeTexture.field_n, var2, 28513);

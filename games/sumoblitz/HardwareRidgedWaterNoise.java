@@ -36,7 +36,7 @@ final class HardwareRidgedWaterNoise extends RidgedNoise3D {
               ArenaBackdropPalettes.uniqueDroneTypeStreak = 1;
               DisplayModeConfirmationDialog.droneTypeStreakMask = DisplayModeConfirmationDialog.droneTypeStreakMask | 1 << drone.droneType;
             }
-            rn.postHudMessage(Integer.toString((int)var2_double), drone.xQ8 >> 8, drone.yQ8 >> 8, 16777215, 28807);
+            HudMessageSupport.postHudMessage(Integer.toString((int)var2_double), drone.xQ8 >> 8, drone.yQ8 >> 8, 16777215, 28807);
             if (DisplayModeConfirmationDialog.droneTypeStreakMask != 0 &&
               ps.field_e[13] == ArenaBackdropPalettes.uniqueDroneTypeStreak) {
               UnderageAccountInfoPanel.b(24753, 242, 13);
@@ -114,7 +114,7 @@ final class HardwareRidgedWaterNoise extends RidgedNoise3D {
         TextureFormat.elapsedTicks = 0;
         MusicPatch.simulationPaused = false;
         if (initializeRound) {
-          ke.a(false);
+          ke.beginCurrentWave(false);
           HardwareUnlitEffect.field_e = 1000;
           TextLayout.a(0, 8);
           return;

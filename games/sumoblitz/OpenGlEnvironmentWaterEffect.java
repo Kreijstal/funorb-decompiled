@@ -142,16 +142,16 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
 
     final void enable(boolean lighting, int guard) {
         long var4 = 0L;
-        CubeTexture var3 = this.toolkit.d((byte) 122);
+        CubeTexture var3 = this.toolkit.environmentCubeTexture((byte) 122);
         if (guard != 20186) {
           String var6 = (String) null;
           OpenGlEnvironmentWaterEffect.a((java.net.URL) null, (String) null, -110, (String) null, 111);
         }
         if (this.field_e &&
           var3 != null) {
-          this.toolkit.g(1, guard ^ -20137);
+          this.toolkit.setActiveTextureUnit(1, guard ^ -20137);
           this.toolkit.a(var3, 122);
-          this.toolkit.g(0, -125);
+          this.toolkit.setActiveTextureUnit(0, -125);
           this.toolkit.a(this.field_f.normalMap, 127);
           var4 = this.field_j.programHandle;
           jaggl.OpenGL.glUseProgramObjectARB(var4);
@@ -169,9 +169,9 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
           this.field_j = (OpenGlShaderProgram) null;
         }
         if (this.field_h) {
-          this.toolkit.g(1, -124);
+          this.toolkit.setActiveTextureUnit(1, -124);
           this.toolkit.a((GpuTexture) null, 106);
-          this.toolkit.g(0, -109);
+          this.toolkit.setActiveTextureUnit(0, -109);
           this.toolkit.a((GpuTexture) null, 98);
           jaggl.OpenGL.glUseProgramObjectARB(0L);
           this.field_h = false;

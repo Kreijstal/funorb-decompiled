@@ -56,7 +56,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
             for (var4_int = 0; var3_int > var4_int; var4_int++) {
               this.field_B[var4_int] = LegacyOpenGlRenderbuffer.canonicalizeBase37Name((CharSequence) ((Object) param0[var4_int]), (byte) 38).replace(' ', ' ');
             }
-            var4 = new LinkWidgetRenderer(kw.field_b, 0, 1);
+            var4 = new LinkWidgetRenderer(TextCaretLayout.field_b, 0, 1);
             this.field_C = new InteractiveWidget[1 + var3_int];
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_C[var5] = new InteractiveWidget(this.field_B[var5], (WidgetListener) (this));
@@ -156,7 +156,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
         if (param0 >= -34) {
           field_E = (BufferedCacheFile) null;
         }
-        stackIn_6_0 = (null != DisplayModeConfirmationDialog.accountSocket) && (kw.accountPhase.isLoginSessionPhase(17704));
+        stackIn_6_0 = (null != DisplayModeConfirmationDialog.accountSocket) && (TextCaretLayout.accountPhase.isLoginSessionPhase(17704));
         return stackIn_6_0;
     }
 
@@ -208,9 +208,9 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
         LegacyOpenGlReflectionEffect.field_j = SpriteData.b(param3, "", "glowfontalpha");
         sv.field_a = AccountConnectionPhase.field_a;
         DropDownWidget.field_F = SpriteData.b(param3, "", "boldfontalpha");
-        ma.field_b = Js5Client.a(param1, (byte) -36, "boldfont", "");
+        LoginTextResources.field_b = Js5Client.a(param1, (byte) -36, "boldfont", "");
         ProxySocketConnector.field_f = SpriteData.b(param3, "", "boldglowfontalpha");
-        sq.field_b = ma.field_b;
+        sq.field_b = LoginTextResources.field_b;
         field_F = SpriteData.b(param3, "", "menu_frame");
         MidiNoteMixer.field_q = SpriteData.b(param3, "", "tooltip_kit");
         SoftwareRenderTarget.field_b = SpriteData.b(param3, "", "achievements");
@@ -295,7 +295,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
         if (0 != layer) {
           return;
         }
-        LegacyBitmapFont var5 = kw.field_b;
+        LegacyBitmapFont var5 = TextCaretLayout.field_b;
         if (this.field_B != null) {
           var5.drawParagraph(NodeHashTableIterator.suggestedNamesText, parentX + this.x, this.y + parentY, this.width, 20, 16777215, -1, 0, 0, var5.descent + var5.ascent);
         }

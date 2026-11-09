@@ -53,7 +53,7 @@ final class PasswordInputRenderer extends BeveledTextInputRenderer {
     }
 
     PasswordInputRenderer(int textColor) {
-        this(kw.field_b, textColor);
+        this(TextCaretLayout.field_b, textColor);
     }
 
     final static void pollKeyboardState(byte guard) {
@@ -76,7 +76,7 @@ final class PasswordInputRenderer extends BeveledTextInputRenderer {
               var5 = 0;
               var2 = var5;
               while (var5 < 112) {
-                hw.field_b[var5] = false;
+                AudioOutputBootstrap.field_b[var5] = false;
                 var5++;
               }
               LegacyOpenGlEnvironmentWaterEffect.field_i = HardwareTurbulentWaterNoise.field_v;
@@ -85,10 +85,10 @@ final class PasswordInputRenderer extends BeveledTextInputRenderer {
                 var2 = ContentTransitionPhase.field_d[HardwareTurbulentWaterNoise.field_v];
                 HardwareTurbulentWaterNoise.field_v = 127 & HardwareTurbulentWaterNoise.field_v + 1;
                 if (0 <= var2) {
-                  hw.field_b[var2] = true;
+                  AudioOutputBootstrap.field_b[var2] = true;
                   continue;
                 }
-                hw.field_b[~var2] = false;
+                AudioOutputBootstrap.field_b[~var2] = false;
               }
             }
             OpenGlBuffer.field_a = CacheReferenceNode.field_s;

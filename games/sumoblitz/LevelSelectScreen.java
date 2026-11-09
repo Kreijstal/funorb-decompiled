@@ -103,7 +103,7 @@ final class LevelSelectScreen extends MenuScreen {
                 var10++;
               }
               if (up.field_g[this.field_i]) {
-                stackIn_30_0 = il.field_b;
+                stackIn_30_0 = BlendMode.field_b;
                 stackIn_30_1 = 90 / var10 * var10 - 45;
                 stackIn_30_2 = var8Lifetime1;
                 if (var10 > 1) {
@@ -186,8 +186,8 @@ final class LevelSelectScreen extends MenuScreen {
           StrongCacheReference.switchMenuScreen(-7753, true, -1);
         }
         if (2 <= Bzip2State.field_j &&
-          hw.field_b[82] &&
-          hw.field_b[48]) {
+          AudioOutputBootstrap.field_b[82] &&
+          AudioOutputBootstrap.field_b[48]) {
           for (var5 = 0; var5 < 25; var5++) {
             TextureMetadata.field_f[var5] = true;
           }

@@ -39,7 +39,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         float var6 = 0.0f;
         int var2 = 0;
         int var7 = Sumoblitz.field_L ? 1 : 0;
-        this.k(1);
+        this.resetModelTransform(1);
         for (var2 = 0; this.field_ub > var2; var2++) {
           var3 = this.field_pb[var2];
           var4 = var3.c((byte) 50);
@@ -166,7 +166,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
     }
 
     final void applyAlphaCombineOperation(int guard) {
-        jaggl.OpenGL.glTexEnvi(8960, 34162, ShaderEffect.glTextureCombineOperation(-9267, this.field_B[this.field_mc]));
+        jaggl.OpenGL.glTexEnvi(8960, 34162, ShaderEffect.glTextureCombineOperation(-9267, this.field_B[this.activeTextureUnit]));
         if (guard >= -80) {
           this.b(true);
         }
@@ -183,8 +183,8 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
     }
 
     final void applyFogEnabled(byte guard) {
-        if (this.field_Rb &&
-          this.field_Bb &&
+        if (this.fogEnabled &&
+          this.fogAllowed &&
           this.field_Kb >= 0) {
           jaggl.OpenGL.glEnable(2912);
         } else {
@@ -316,7 +316,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
             var12 = (IntNode) (this.field_Kc.removeFirst(9));
             jaggl.OpenGL.glDeleteLists((int)var12.key, var12.value);
           }
-          if (!(this.h(64) <= 100663296) &&
+          if (!(this.estimatedResourceBytes(64) <= 100663296) &&
             !(wq.monotonicTimeMillis(-117) <= 60000L + this.field_Cc)) {
             System.gc();
             this.field_Cc = wq.monotonicTimeMillis(-39);
@@ -340,7 +340,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
             var12 = (IntNode) (this.field_Kc.removeFirst(9));
             jaggl.OpenGL.glDeleteLists((int)var12.key, var12.value);
           }
-          if (!(this.h(64) <= 100663296) &&
+          if (!(this.estimatedResourceBytes(64) <= 100663296) &&
             !(wq.monotonicTimeMillis(-117) <= 60000L + this.field_Cc)) {
             System.gc();
             this.field_Cc = wq.monotonicTimeMillis(-39);
@@ -649,7 +649,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         if (guard >= -74) {
           this.field_ad = 99;
         }
-        jaggl.OpenGL.glTexEnvi(8960, 34161, ShaderEffect.glTextureCombineOperation(-9267, this.field_K[this.field_mc]));
+        jaggl.OpenGL.glTexEnvi(8960, 34161, ShaderEffect.glTextureCombineOperation(-9267, this.field_K[this.activeTextureUnit]));
     }
 
     final void restoreCanvasTarget() {
@@ -659,8 +659,8 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         try {
           this.L(-25);
           this.a((GpuTexture) null, 126);
-          this.e(0, 13);
-          this.k(1);
+          this.setBlendMode(0, 13);
+          this.resetModelTransform(1);
           jaggl.OpenGL.glPixelZoom(1.0f, -1.0f);
           jaggl.OpenGL.glRasterPos2i(x, y);
           jaggl.OpenGL.glDrawPixelsi(width, height, 32993, this.field_Ec, pixels, offset);
@@ -680,8 +680,8 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         if (guard != 26803) {
           this.field_Zc = (IntrusiveDeque) null;
         }
-        if (HotspotTextWidget.field_L != this.field_wb[this.field_mc]) {
-          jaggl.OpenGL.glLoadMatrixf(this.field_V[this.field_mc].writeColumnMajor4x4(-107, StripedProgressWidget.field_y), 0);
+        if (HotspotTextWidget.TEXTURE_TRANSFORM_DISABLED != this.textureTransformModes[this.activeTextureUnit]) {
+          jaggl.OpenGL.glLoadMatrixf(this.textureTransforms[this.activeTextureUnit].writeColumnMajor4x4(-107, StripedProgressWidget.field_y), 0);
         } else {
           jaggl.OpenGL.glLoadIdentity();
         }
@@ -801,8 +801,8 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
               }
               var26 = new int[1];
               jaggl.OpenGL.glGetIntegerv(34018, var26, 0);
-              this.field_cc = var26[0];
-              if (2 > this.field_cc) {
+              this.textureUnitCount = var26[0];
+              if (2 > this.textureUnitCount) {
                 throw new RuntimeException("");
               }
               this.field_bc = 8;
@@ -816,7 +816,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
               this.field_Ac = this.field_Yc.a("GL_ARB_vertex_program");
               this.field_Mc = this.field_Yc.a("GL_ARB_fragment_shader");
               this.field_Yc.a("GL_ARB_fragment_program");
-              this.field_Hc = new int[this.field_cc];
+              this.field_Hc = new int[this.textureUnitCount];
               if (jaclib.memory.Stream.b()) {
                 stackIn_21_1 = 33639;
               } else {
@@ -943,7 +943,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
     }
 
     final void applyDepthTest(int guard) {
-        if (this.field_p) {
+        if (this.depthTestEnabled) {
           jaggl.OpenGL.glEnable(2929);
         } else {
           jaggl.OpenGL.glDisable(2929);
@@ -1069,7 +1069,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
     }
 
     final void applyScissorEnabled(int guard) {
-        if (this.field_wc) {
+        if (this.scissorEnabled) {
           jaggl.OpenGL.glEnable(3089);
         } else {
           jaggl.OpenGL.glDisable(3089);
@@ -1081,7 +1081,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         if (guard) {
           return;
         }
-        if (this.field_I &&
+        if (this.lightingEnabled &&
           !this.lightingSuppressed) {
           jaggl.OpenGL.glEnable(2896);
         } else {
@@ -1097,18 +1097,18 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
     }
 
     final void applyScissor(int guard) {
-        jaggl.OpenGL.glScissor(this.field_v + this.field_r, -this.field_yc + (this.field_y + this.field_Sb), this.field_F - this.field_v, this.field_yc - this.field_vb);
+        jaggl.OpenGL.glScissor(this.clipTop + this.field_r, -this.clipBottom + (this.field_y + this.field_Sb), this.clipRight - this.clipTop, this.clipBottom - this.clipLeft);
         if (guard != 4) {
           this.field_Oc = -14;
         }
     }
 
-    final void D(int param0) {
+    final void resetDriverState(int guard) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = Sumoblitz.field_L ? 1 : 0;
-        for (var2 = this.field_cc - 1; var2 >= 0; var2--) {
+        for (var2 = this.textureUnitCount - 1; var2 >= 0; var2--) {
           jaggl.OpenGL.glActiveTexture(33984 + var2);
           jaggl.OpenGL.glTexEnvi(8960, 8704, 34160);
           jaggl.OpenGL.glTexEnvi(8960, 34161, 8448);
@@ -1139,7 +1139,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         jaggl.OpenGL.glFogi(2917, 9729);
         jaggl.OpenGL.glHint(3156, 4353);
         this.field_Yc.setSwapInterval(0);
-        super.D(param0);
+        super.resetDriverState(guard);
     }
 
     final synchronized void a(int param0, byte param1) {
@@ -1175,7 +1175,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
             var6 = 2 * primitiveCount;
             var5_int = 1;
           } else {
-            if (rv.LINE_STRIP != type) {
+            if (AccountCreationNavigation.LINE_STRIP != type) {
               if (WhirlpoolDigest.TRIANGLES == type) {
                 var6 = 3 * primitiveCount;
                 var5_int = 4;
@@ -1257,9 +1257,9 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         this.field_Zc.addLast((IntrusiveNode) (var4), (byte) 39);
     }
 
-    final void x(int param0) {
+    final void applyModelMatrix(int guard) {
         this.t((byte) 68);
-        if (param0 != 0) {
+        if (guard != 0) {
           this.field_Gc = (IntrusiveDeque) null;
         }
     }
@@ -1272,10 +1272,10 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
     }
 
     final void applyTextureConstantColor(int greenIndex) {
-        NetworkResourceRequest.field_v[3] = (float)(this.field_Ub >>> 24) / 255.0f;
-        NetworkResourceRequest.field_v[2] = (float)LegacyOpenGlPostProcessManager.bitwiseAnd(255, this.field_Ub) / 255.0f;
-        NetworkResourceRequest.field_v[0] = (float)LegacyOpenGlPostProcessManager.bitwiseAnd(16711680, this.field_Ub) / 16711680.0f;
-        NetworkResourceRequest.field_v[greenIndex] = (float)LegacyOpenGlPostProcessManager.bitwiseAnd(this.field_Ub, 65280) / 65280.0f;
+        NetworkResourceRequest.field_v[3] = (float)(this.textureConstantColor >>> 24) / 255.0f;
+        NetworkResourceRequest.field_v[2] = (float)LegacyOpenGlPostProcessManager.bitwiseAnd(255, this.textureConstantColor) / 255.0f;
+        NetworkResourceRequest.field_v[0] = (float)LegacyOpenGlPostProcessManager.bitwiseAnd(16711680, this.textureConstantColor) / 16711680.0f;
+        NetworkResourceRequest.field_v[greenIndex] = (float)LegacyOpenGlPostProcessManager.bitwiseAnd(this.textureConstantColor, 65280) / 65280.0f;
         jaggl.OpenGL.glTexEnvfv(8960, 8705, NetworkResourceRequest.field_v, 0);
     }
 
@@ -1314,9 +1314,9 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
     }
 
     final void unbindTexture(byte guard) {
-        int var2 = this.field_Hc[this.field_mc];
+        int var2 = this.field_Hc[this.activeTextureUnit];
         if (0 != var2) {
-          this.field_Hc[this.field_mc] = 0;
+          this.field_Hc[this.activeTextureUnit] = 0;
           jaggl.OpenGL.glBindTexture(var2, 0);
           jaggl.OpenGL.glDisable(var2);
         }
@@ -1456,7 +1456,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         if (guard > -7) {
           this.field_zc = (OpenGlVertexBuffer[]) null;
         }
-        jaggl.OpenGL.glActiveTexture(this.field_mc + 33984);
+        jaggl.OpenGL.glActiveTexture(this.activeTextureUnit + 33984);
     }
 
     final void applyLightPositions(int guard) {
@@ -1505,9 +1505,9 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         return super.createShaderEffect(0, effectId);
     }
 
-    final void N(int param0) {
+    final void applyViewMatrix(int guard) {
         this.field_Uc = false;
-        if (param0 != -26911) {
+        if (guard != -26911) {
           this.field_Wc = (String) null;
         }
         this.t((byte) 68);
@@ -1515,7 +1515,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
 
     final void applyProjectionMatrix(int guard) {
         jaggl.OpenGL.glMatrixMode(5889);
-        jaggl.OpenGL.glLoadMatrixf(this.field_A, 0);
+        jaggl.OpenGL.glLoadMatrixf(this.projectionMatrix, 0);
         if (guard != -2) {
           this.field_Wc = (String) null;
         }
@@ -1524,13 +1524,13 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
 
     final void applyBlendFactors(int guard) {
         int var3 = Sumoblitz.field_L ? 1 : 0;
-        if (this.field_l == LimitedRandomAccessFile.field_a) {
+        if (this.blendFactors == LimitedRandomAccessFile.ALPHA_BLEND) {
           jaggl.OpenGL.glBlendFunc(770, 771);
         } else {
-          if (this.field_l == ServerDataReadRequest.field_n) {
+          if (this.blendFactors == ServerDataReadRequest.ADDITIVE_BLEND) {
             jaggl.OpenGL.glBlendFunc(1, 1);
           } else {
-            if (ShrinkingRingEffect.field_t == this.field_l) {
+            if (ShrinkingRingEffect.DESTINATION_COLOR_BLEND == this.blendFactors) {
               jaggl.OpenGL.glBlendFunc(774, 1);
             }
           }
@@ -1545,7 +1545,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         if (guard < 113) {
           this.field_Tc = true;
         }
-        stackIn_6_0 = (this.field_db) && (this.field_i);
+        stackIn_6_0 = (this.field_db) && (this.depthWriteEnabled);
         jaggl.OpenGL.glDepthMask(stackIn_6_0);
     }
 
@@ -1558,23 +1558,23 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         if (param0 != 68) {
           return;
         }
-        if (!this.field_s.usesViewTransform(-20011)) {
-          if (!this.field_Db) {
-            jaggl.OpenGL.glLoadMatrixf(this.field_Lb.writeColumnMajor4x4(-110, StripedProgressWidget.field_y), 0);
+        if (!this.projectionMode.usesViewTransform(-20011)) {
+          if (!this.modelIdentity) {
+            jaggl.OpenGL.glLoadMatrixf(this.modelTransform.writeColumnMajor4x4(-110, StripedProgressWidget.field_y), 0);
           } else {
             jaggl.OpenGL.glLoadIdentity();
           }
           this.field_Dc = false;
         } else {
           if (!this.field_Uc) {
-            jaggl.OpenGL.glLoadMatrixf(this.field_Gb.writeColumnMajor4x4(-63, StripedProgressWidget.field_y), 0);
+            jaggl.OpenGL.glLoadMatrixf(this.viewTransform.writeColumnMajor4x4(-63, StripedProgressWidget.field_y), 0);
             this.field_Uc = true;
             this.applyLightPositions(-114);
             this.Y(param0 ^ -25);
           }
-          if (!this.field_Db) {
+          if (!this.modelIdentity) {
             jaggl.OpenGL.glPushMatrix();
-            jaggl.OpenGL.glMultMatrixf(this.field_Lb.writeColumnMajor4x4(-79, StripedProgressWidget.field_y), 0);
+            jaggl.OpenGL.glMultMatrixf(this.modelTransform.writeColumnMajor4x4(-79, StripedProgressWidget.field_y), 0);
             this.field_Dc = true;
           } else {
             this.field_Dc = false;
@@ -1667,22 +1667,22 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           !(this.field_Sb > 0)) {
           return;
         }
-        int var1 = this.field_v;
-        int var2 = this.field_F;
-        int var3 = this.field_vb;
-        int var4 = this.field_yc;
-        this.m(-16088);
+        int var1 = this.clipTop;
+        int var2 = this.clipRight;
+        int var3 = this.clipLeft;
+        int var4 = this.clipBottom;
+        this.resetClip(-16088);
         jaggl.OpenGL.glReadBuffer(1028);
         jaggl.OpenGL.glDrawBuffer(1029);
         this.d(false);
-        this.c(false, -32);
-        this.d(101, false);
-        this.c(47, false);
-        this.b(false, 4);
+        this.setFogAllowed(false, -32);
+        this.setLightingEnabled(101, false);
+        this.setDepthTestEnabled(47, false);
+        this.setDepthWriteEnabled(false, 4);
         this.a((GpuTexture) null, 120);
         this.a(-2, false, 50, false);
         this.h(40, 1);
-        this.e(0, 13);
+        this.setBlendMode(0, 13);
         jaggl.OpenGL.glMatrixMode(5889);
         jaggl.OpenGL.glLoadIdentity();
         jaggl.OpenGL.glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);

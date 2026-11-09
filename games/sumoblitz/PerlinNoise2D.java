@@ -5,7 +5,7 @@ final class PerlinNoise2D extends TextureGeneratorNode {
     boolean normalizeOutput;
     int repeatX;
     private short[] amplitudesQ12;
-    static ProjectionMode field_w;
+    static ProjectionMode ORTHOGRAPHIC;
     private byte[] permutation;
     private int seed;
     int octaveCount;
@@ -328,7 +328,7 @@ final class PerlinNoise2D extends TextureGeneratorNode {
     }
 
     public static void releaseStatics(int param0) {
-        field_w = null;
+        ORTHOGRAPHIC = null;
         field_t = null;
         field_n = null;
         if (param0 != 2) {
@@ -364,7 +364,7 @@ final class PerlinNoise2D extends TextureGeneratorNode {
 
     static {
         membershipBenefitLines = new String[]{"All other member expansions", "Loads more Achievements", "Full community features"};
-        field_w = new ProjectionMode();
+        ORTHOGRAPHIC = new ProjectionMode();
         field_t = new int[4];
         field_n = new float[]{1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f};
     }

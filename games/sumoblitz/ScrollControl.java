@@ -691,7 +691,7 @@ final class ScrollControl extends ArrayWidgetContainer implements WidgetActionLi
             }
             if (keyCode == 102) {
               if (this.verticalEnabled &&
-                hw.field_b[82]) {
+                AudioOutputBootstrap.field_b[82]) {
                 this.setVerticalPositionAndNotify(0, (byte) -125);
                 return true;
               }
@@ -702,7 +702,7 @@ final class ScrollControl extends ArrayWidgetContainer implements WidgetActionLi
             } else {
               if (103 == keyCode) {
                 if (this.verticalEnabled &&
-                  hw.field_b[82]) {
+                  AudioOutputBootstrap.field_b[82]) {
                   this.setVerticalPositionAndNotify(65536, (byte) -125);
                   return true;
                 }

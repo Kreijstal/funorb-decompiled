@@ -186,7 +186,7 @@ final class SpriteStripButtonRenderer extends TextWidgetRenderer {
                     var12++;
                   }
                   if (var21 != null &&
-                    ea.isCurrentUserName(var21, (byte) -25)) {
+                    AccountUiBootstrap.isCurrentUserName(var21, (byte) -25)) {
                     var8[1][var13] = QueuedIntArrayRequest.field_o;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;

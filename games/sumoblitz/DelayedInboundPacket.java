@@ -23,27 +23,27 @@ final class DelayedInboundPacket extends IntrusiveNode {
           return;
         }
         if (HotspotTextWidget.activePointerButton != 1) {
-          if (!hw.field_b[99] &&
-            !hw.field_b[Sumoblitz.field_I]) {
+          if (!AudioOutputBootstrap.field_b[99] &&
+            !AudioOutputBootstrap.field_b[Sumoblitz.field_I]) {
             stackIn_9_0 = 0;
           } else {
             stackIn_9_0 = 256;
           }
-          if (!hw.field_b[98] &&
-            !hw.field_b[ComboState.field_c]) {
+          if (!AudioOutputBootstrap.field_b[98] &&
+            !AudioOutputBootstrap.field_b[ComboState.field_c]) {
             stackIn_13_1 = 0;
           } else {
             stackIn_13_1 = -256;
           }
           var3 = stackIn_9_0 + stackIn_13_1;
-          if (!hw.field_b[96] &&
-            !hw.field_b[SoftwareRenderContext.field_d]) {
+          if (!AudioOutputBootstrap.field_b[96] &&
+            !AudioOutputBootstrap.field_b[SoftwareRenderContext.field_d]) {
             stackIn_17_0 = 0;
           } else {
             stackIn_17_0 = -256;
           }
-          if (!hw.field_b[97] &&
-            !hw.field_b[LegacyOpenGlGraphicsHeap.field_o]) {
+          if (!AudioOutputBootstrap.field_b[97] &&
+            !AudioOutputBootstrap.field_b[LegacyOpenGlGraphicsHeap.field_o]) {
             stackIn_22_1 = 0;
           } else {
             stackIn_22_1 = 256;
@@ -53,7 +53,7 @@ final class DelayedInboundPacket extends IntrusiveNode {
             var3 != 0) {
             var5.steerNormalized(-109, var3 / 22, var2 / 22);
             kp.field_a = true;
-            if (!hw.field_b[83]) {
+            if (!AudioOutputBootstrap.field_b[83]) {
               var5.resetBlastButtonHold(-95);
               return;
             }
@@ -79,7 +79,7 @@ final class DelayedInboundPacket extends IntrusiveNode {
             if (var3 != 0) {
               var5.steerNormalized(-119, var3, var2);
               kp.field_a = true;
-              if (!hw.field_b[83]) {
+              if (!AudioOutputBootstrap.field_b[83]) {
                 var5.resetBlastButtonHold(-95);
                 return;
               }
@@ -103,7 +103,7 @@ final class DelayedInboundPacket extends IntrusiveNode {
           var5.steerTowardPoint(false, pi.field_e << 8, ko.field_p << 8);
           kp.field_a = true;
         }
-        if (!hw.field_b[83]) {
+        if (!AudioOutputBootstrap.field_b[83]) {
           var5.resetBlastButtonHold(-95);
           return;
         }

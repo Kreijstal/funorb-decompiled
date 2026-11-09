@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ma {
+final class LoginTextResources {
     static String logInText;
     static String namesCannotContainConsecutiveText;
     static FontMetrics field_b;

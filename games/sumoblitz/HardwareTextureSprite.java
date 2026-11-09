@@ -25,8 +25,8 @@ final class HardwareTextureSprite extends ToolkitSprite {
         AffineTransform3D var10;
         AffineTransform3D var11;
         Texture2D stackIn_4_0 = null;
-        var11 = this.toolkit.d(84);
-        var10 = this.toolkit.B(0);
+        var11 = this.toolkit.modelTransform(84);
+        var10 = this.toolkit.textureTransform(0);
         stackIn_4_0 = this.texture;
         if (this.textureWidthDiffers) {
           ((Texture2D) (Object) stackIn_4_0).setFilter(ServerDataReadRequest.NEAREST, 15149);
@@ -43,11 +43,11 @@ final class HardwareTextureSprite extends ToolkitSprite {
         }
         this.toolkit.w(10);
         this.toolkit.a(this.texture, 95);
-        this.toolkit.e(blendMode, 13);
+        this.toolkit.setBlendMode(blendMode, 13);
         this.toolkit.h(59, colorMode);
-        this.toolkit.a(AccountRequestState.CONSTANT, 1, 0);
-        this.toolkit.a(AccountRequestState.CONSTANT, 1, true);
-        this.toolkit.a(false, color);
+        this.toolkit.setColorCombineSource(AccountRequestState.CONSTANT, 1, 0);
+        this.toolkit.setAlphaCombineSource(AccountRequestState.CONSTANT, 1, true);
+        this.toolkit.setTextureConstantColor(false, color);
         var10.setScale(this.texture.textureV((float)this.height, -19230), this.texture.textureU((float)this.width, -74), 0, 1.0f);
         if (this.hasInsets) {
           width = this.width * width / this.paddedWidth();
@@ -57,12 +57,12 @@ final class HardwareTextureSprite extends ToolkitSprite {
         }
         var11.setScale((float)height, (float)width, 0, 0.0f);
         var11.translate(y, x, (byte) 103, 0);
-        this.toolkit.a(IntList.field_c, 28880);
-        this.toolkit.U(0);
-        this.toolkit.n(2);
-        this.toolkit.l(0);
-        this.toolkit.a(FontMetrics.PREVIOUS, 1, 0);
-        this.toolkit.a(FontMetrics.PREVIOUS, 1, true);
+        this.toolkit.setTextureTransformMode(IntList.TEXTURE_COUNT2, 28880);
+        this.toolkit.modelTransformChanged(0);
+        this.toolkit.drawTriangleFan(2);
+        this.toolkit.resetTextureTransform(0);
+        this.toolkit.setColorCombineSource(FontMetrics.PREVIOUS, 1, 0);
+        this.toolkit.setAlphaCombineSource(FontMetrics.PREVIOUS, 1, true);
     }
 
     final int width() {
@@ -88,8 +88,8 @@ final class HardwareTextureSprite extends ToolkitSprite {
         AffineTransform3D var27;
         Texture2D stackIn_4_0 = null;
         TextureFilter stackIn_5_1 = null;
-        var27 = this.toolkit.d(82);
-        var12 = this.toolkit.B(0);
+        var27 = this.toolkit.modelTransform(82);
+        var12 = this.toolkit.textureTransform(0);
         stackIn_4_0 = this.texture;
         if (!this.textureWidthDiffers &&
           !this.textureHeightDiffers &&
@@ -101,11 +101,11 @@ final class HardwareTextureSprite extends ToolkitSprite {
         ((Texture2D) (Object) stackIn_4_0).setFilter(stackIn_5_1, 15149);
         this.toolkit.w(10);
         this.toolkit.a(this.texture, 109);
-        this.toolkit.e(blendMode, 13);
+        this.toolkit.setBlendMode(blendMode, 13);
         this.toolkit.h(104, colorMode);
-        this.toolkit.a(AccountRequestState.CONSTANT, 1, 0);
-        this.toolkit.a(AccountRequestState.CONSTANT, 1, true);
-        this.toolkit.a(false, color);
+        this.toolkit.setColorCombineSource(AccountRequestState.CONSTANT, 1, 0);
+        this.toolkit.setAlphaCombineSource(AccountRequestState.CONSTANT, 1, true);
+        this.toolkit.setTextureConstantColor(false, color);
         if (this.hasInsets) {
           var13 = (float)this.paddedWidth();
           var14 = (float)this.paddedHeight();
@@ -131,12 +131,12 @@ final class HardwareTextureSprite extends ToolkitSprite {
         var27.setLinear(x2 - x0, -y0 + y2, -y0 + y1, -x0 + x1, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 18356);
         var27.translate((byte) 96, 0.0f, y0, x0);
         var12.setScale(this.texture.textureV((float)this.height, -19230), this.texture.textureU((float)this.width, -65), 0, 1.0f);
-        this.toolkit.a(IntList.field_c, 28880);
-        this.toolkit.U(0);
-        this.toolkit.n(2);
-        this.toolkit.l(0);
-        this.toolkit.a(FontMetrics.PREVIOUS, 1, 0);
-        this.toolkit.a(FontMetrics.PREVIOUS, 1, true);
+        this.toolkit.setTextureTransformMode(IntList.TEXTURE_COUNT2, 28880);
+        this.toolkit.modelTransformChanged(0);
+        this.toolkit.drawTriangleFan(2);
+        this.toolkit.resetTextureTransform(0);
+        this.toolkit.setColorCombineSource(FontMetrics.PREVIOUS, 1, 0);
+        this.toolkit.setAlphaCombineSource(FontMetrics.PREVIOUS, 1, true);
     }
 
     final void setInsets(int left, int top, int right, int bottom) {
@@ -244,27 +244,27 @@ final class HardwareTextureSprite extends ToolkitSprite {
     }
 
     final void draw(int x, int y, int colorMode, int color, int blendMode) {
-        AffineTransform3D var8 = this.toolkit.d(73);
-        AffineTransform3D var7 = this.toolkit.B(0);
+        AffineTransform3D var8 = this.toolkit.modelTransform(73);
+        AffineTransform3D var7 = this.toolkit.textureTransform(0);
         x = x + this.insetLeft;
         y = y + this.insetTop;
         this.texture.setFilter(ServerDataReadRequest.NEAREST, 15149);
         this.toolkit.w(10);
         this.toolkit.a(this.texture, 93);
-        this.toolkit.e(blendMode, 13);
+        this.toolkit.setBlendMode(blendMode, 13);
         this.toolkit.h(92, colorMode);
-        this.toolkit.a(AccountRequestState.CONSTANT, 1, 0);
-        this.toolkit.a(AccountRequestState.CONSTANT, 1, true);
-        this.toolkit.a(false, color);
+        this.toolkit.setColorCombineSource(AccountRequestState.CONSTANT, 1, 0);
+        this.toolkit.setAlphaCombineSource(AccountRequestState.CONSTANT, 1, true);
+        this.toolkit.setTextureConstantColor(false, color);
         var8.setScale((float)this.height, (float)this.width, 0, 0.0f);
         var8.translate(y, x, (byte) 120, 0);
         var7.setScale(this.texture.textureV((float)this.height, -19230), this.texture.textureU((float)this.width, -79), 0, 1.0f);
-        this.toolkit.a(IntList.field_c, 28880);
-        this.toolkit.U(0);
-        this.toolkit.n(2);
-        this.toolkit.l(0);
-        this.toolkit.a(FontMetrics.PREVIOUS, 1, 0);
-        this.toolkit.a(FontMetrics.PREVIOUS, 1, true);
+        this.toolkit.setTextureTransformMode(IntList.TEXTURE_COUNT2, 28880);
+        this.toolkit.modelTransformChanged(0);
+        this.toolkit.drawTriangleFan(2);
+        this.toolkit.resetTextureTransform(0);
+        this.toolkit.setColorCombineSource(FontMetrics.PREVIOUS, 1, 0);
+        this.toolkit.setAlphaCombineSource(FontMetrics.PREVIOUS, 1, true);
     }
 
     final int paddedWidth() {

@@ -72,7 +72,7 @@ final class QueuedIntArrayRequest extends IntrusiveNode {
                   }
                   if (var5 >= 2 &&
                     !allowRepeatedSeparators) {
-                    stackIn_28_0 = ma.namesCannotContainConsecutiveText;
+                    stackIn_28_0 = LoginTextResources.namesCannotContainConsecutiveText;
                     return stackIn_28_0;
                   }
                 }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class so {
+final class DisplayPromptState {
     final static void a(int param0, byte param1) {
         int var3;
         var3 = Sumoblitz.field_L ? 1 : 0;
@@ -31,11 +31,11 @@ final class so {
         if (param1 < -92) {
           return;
         }
-        so.a(-126, (byte) 36);
+        DisplayPromptState.a(-126, (byte) 36);
     }
 
-    final static boolean a(byte param0) {
-        int var1 = 59 / ((50 - param0) / 50);
+    final static boolean isDisplayPromptOpen(byte guard) {
+        int var1 = 59 / ((50 - guard) / 50);
         return LimitedRandomAccessFile.field_d;
     }
 

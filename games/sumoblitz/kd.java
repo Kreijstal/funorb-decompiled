@@ -188,13 +188,13 @@ final class kd {
         }
     }
 
-    final static void a(boolean param0, int param1) {
-        if (param1 >= -78) {
+    final static void completeEmailAvailability(boolean available, int guard) {
+        if (guard >= -78) {
           kd.a(-106, 83, -73);
-          AffineTransform3D.emailAvailabilityRequest.complete(120, param0);
+          AffineTransform3D.emailAvailabilityRequest.complete(120, available);
           return;
         }
-        AffineTransform3D.emailAvailabilityRequest.complete(120, param0);
+        AffineTransform3D.emailAvailabilityRequest.complete(120, available);
     }
 
     static {

@@ -45,7 +45,7 @@ final class AccountCreationProgressDialog extends MessageDialog implements Widge
                 if (!skipEligibilityReset) {
                   BufferedCacheFile.c(0);
                 }
-                var4 = rn.unfortunatelyYouAreNotText;
+                var4 = HudMessageSupport.unfortunatelyYouAreNotText;
                 this.ineligible = true;
               }
             } else {
@@ -103,7 +103,7 @@ final class AccountCreationProgressDialog extends MessageDialog implements Widge
     }
 
     final void showIneligibleResult(boolean skipEligibilityReset) {
-        this.showResult(skipEligibilityReset, (byte) 127, LegacyOpenGlReflectionEffect.accountError(-91, rn.unfortunatelyYouAreNotText, 248));
+        this.showResult(skipEligibilityReset, (byte) 127, LegacyOpenGlReflectionEffect.accountError(-91, HudMessageSupport.unfortunatelyYouAreNotText, 248));
     }
 
     public final void onAction(int action, int guard, InteractiveWidget source, int pointerX, int pointerY) {
@@ -111,11 +111,11 @@ final class AccountCreationProgressDialog extends MessageDialog implements Widge
           field_ob = true;
         }
         if (this.ineligible) {
-          WidgetStateStyle.a((byte) -40, false, true);
+          WidgetStateStyle.showLoginDialog((byte) -40, false, true);
           return;
         }
         try {
-          kh.a(false);
+          kh.retryAccountCreationLogin(false);
           this.n(-7);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "uk.C(" + action + ',' + guard + ',' + (source != null ? "{...}" : "null") + ',' + pointerX + ',' + pointerY + ')');

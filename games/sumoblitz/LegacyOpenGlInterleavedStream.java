@@ -120,7 +120,7 @@ final class LegacyOpenGlInterleavedStream {
             var6_int = template.indexOf("<%", var5);
             if (0 <= var6_int) {
               for (var5 = var6_int + 2; var3_int > var5; var5++) {
-                if (ea.isAsciiDigit((byte) -54, template.charAt(var5))) {
+                if (AccountUiBootstrap.isAsciiDigit((byte) -54, template.charAt(var5))) {
                   continue;
                 }
                 break;
@@ -153,7 +153,7 @@ final class LegacyOpenGlInterleavedStream {
               return stackIn_27_0;
             }
             for (var5Lifetime1 = var8Lifetime1 + 2; var3_int > var5Lifetime1; var5Lifetime1++) {
-              if (ea.isAsciiDigit((byte) -54, template.charAt(var5Lifetime1))) {
+              if (AccountUiBootstrap.isAsciiDigit((byte) -54, template.charAt(var5Lifetime1))) {
                 continue;
               }
               break;

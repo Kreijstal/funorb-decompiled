@@ -65,7 +65,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements TextHots
           this.continueButton.renderer = (WidgetRenderer) ((Object) new SpriteStripButtonRenderer());
           var7 = LegacyOpenGlInterleavedStream.formatIndexedTokens(QueuedIntArrayRequest.asYouAreUnderText, new String[]{this.linkStyleStart((byte) 43), this.linkStyleEnd(116)}, (byte) -128);
           var3 = 20;
-          var4 = new TextWidgetRenderer(kw.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, kw.field_b.ascent, -1, 2147483647, true);
+          var4 = new TextWidgetRenderer(TextCaretLayout.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, TextCaretLayout.field_b.ascent, -1, 2147483647, true);
           this.policyLinks = new HotspotTextWidget(var7, var4);
           this.policyLinks.tooltip = "";
           this.policyLinks.setHotspotTooltip(-57, sb.openInPopupWindowText, 0);
@@ -288,7 +288,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements TextHots
         RuntimeException decompiledCaughtException = null;
         try {
           if (source == this.continueButton) {
-            kh.a(false);
+            kh.retryAccountCreationLogin(false);
             this.dialog.n(-7);
           }
           if (guard == 710) {

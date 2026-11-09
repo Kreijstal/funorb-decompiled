@@ -36,7 +36,7 @@ final class OpenGlRectangleTexture extends OpenGlTexture implements Texture2D {
           if (Character.isISOControl(param1)) {
             return false;
           }
-          if (qw.a(57, param1)) {
+          if (qw.isAsciiAlphanumeric(57, param1)) {
             return true;
           }
           var6 = MidiPcmStream.field_o;

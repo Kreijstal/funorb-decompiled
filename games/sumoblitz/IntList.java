@@ -6,7 +6,7 @@ final class IntList {
     private int[] values;
     private int lastIndex;
     private int growth;
-    static LegacyAlphaFontLoader field_c;
+    static TextureTransformMode TEXTURE_COUNT2;
     static int field_g;
     static int field_h;
     static SpriteData field_e;
@@ -134,7 +134,7 @@ final class IntList {
           return;
         }
         field_e = null;
-        field_c = null;
+        TEXTURE_COUNT2 = null;
     }
 
     final void removeAt(byte guard, int index) {
@@ -233,7 +233,7 @@ final class IntList {
     }
 
     static {
-        field_c = new LegacyAlphaFontLoader();
+        TEXTURE_COUNT2 = new TextureTransformMode();
         field_g = 2;
         field_h = 4;
     }

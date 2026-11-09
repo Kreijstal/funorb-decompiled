@@ -8,75 +8,75 @@ final class qw {
     static String passwordsMustBeBetweenText;
     static ToolkitSprite[] field_a;
 
-    final static boolean a(int param0, char param1) {
+    final static boolean isAsciiAlphanumeric(int guard, char character) {
         boolean stackIn_28_0 = false;
         boolean stackIn_50_0 = false;
         boolean stackIn_64_0 = false;
-        if (param0 != 57) {
+        if (guard != 57) {
           passwordsMustBeBetweenText = (String) null;
-          if (param1 < 48) {
-            if (param1 >= 65 &&
-              param1 <= 90) {
+          if (character < 48) {
+            if (character >= 65 &&
+              character <= 90) {
               return true;
             }
-            if (param1 < 97) {
+            if (character < 97) {
               return false;
             }
-            if (122 < param1) {
+            if (122 < character) {
               return false;
             }
             return true;
           }
-          if (57 >= param1) {
+          if (57 >= character) {
             return true;
           }
-          if (param1 < 65) {
-            if (param1 < 97) {
+          if (character < 65) {
+            if (character < 97) {
               return false;
             }
-            if (122 >= param1) {
+            if (122 >= character) {
               return true;
             }
             return false;
           }
-          if (param1 <= 90) {
+          if (character <= 90) {
             return true;
           }
-          stackIn_28_0 = (param1 >= 97) && (122 >= param1);
+          stackIn_28_0 = (character >= 97) && (122 >= character);
           return stackIn_28_0;
         }
-        if (param1 < 48) {
-          if (param1 < 65) {
-            if (param1 < 97) {
+        if (character < 48) {
+          if (character < 65) {
+            if (character < 97) {
               return false;
             }
-            if (122 < param1) {
+            if (122 < character) {
               return false;
             }
             return true;
           }
-          if (param1 <= 90) {
+          if (character <= 90) {
             return true;
           }
-          stackIn_64_0 = (param1 >= 97) && (122 >= param1);
+          stackIn_64_0 = (character >= 97) && (122 >= character);
           return stackIn_64_0;
         }
-        if (57 >= param1) {
+        if (57 >= character) {
           return true;
         }
-        if (param1 < 65) {
-          if (param1 < 97) {
+        if (character < 65) {
+          if (character < 97) {
             return false;
           }
-          if (122 < param1) {
+          if (122 < character) {
             return false;
           }
           return true;
         }
-        if (param1 <= 90) {
+        if (character <= 90) {
           return true;
         }
-        stackIn_50_0 = (param1 >= 97) && (122 >= param1);
+        stackIn_50_0 = (character >= 97) && (122 >= character);
         return stackIn_50_0;
     }
 
@@ -88,16 +88,16 @@ final class qw {
         passwordsMustBeBetweenText = null;
     }
 
-    final static void a(byte param0) {
-        if (param0 != 35) {
+    final static void refreshDisplayPrompt(byte guard) {
+        if (guard != 35) {
           field_b = 62;
-          if (!so.a((byte) 101)) {
+          if (!DisplayPromptState.isDisplayPromptOpen((byte) 101)) {
             return;
           }
           ScreenNameValidator.a(false, 4, (byte) -24);
           return;
         }
-        if (!so.a((byte) 101)) {
+        if (!DisplayPromptState.isDisplayPromptOpen((byte) 101)) {
           return;
         }
         ScreenNameValidator.a(false, 4, (byte) -24);

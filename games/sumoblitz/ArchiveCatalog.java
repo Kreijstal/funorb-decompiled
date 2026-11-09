@@ -574,7 +574,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime5 = ke.fetchGameDataFile((byte) 121, "bsths");
           if (var2Lifetime5 != null) {
-            jm.bestHiscoresText = MusicVoice.a(param1 ^ -5, var2Lifetime5);
+            MouseInputShutdown.bestHiscoresText = MusicVoice.a(param1 ^ -5, var2Lifetime5);
           }
           var2Lifetime6 = ke.fetchGameDataFile((byte) 112, "myhs");
           if (var2Lifetime6 != null) {
@@ -646,7 +646,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime23 = ke.fetchGameDataFile((byte) 113, "difficultyTx");
           if (null != var2Lifetime23) {
-            ea.difficultyText = MusicVoice.a(param1 ^ -5, var2Lifetime23);
+            AccountUiBootstrap.difficultyText = MusicVoice.a(param1 ^ -5, var2Lifetime23);
           }
           var2Lifetime24 = ke.fetchGameDataFile((byte) 93, "difficultyLevelTx,0");
           if (var2Lifetime24 != null) {
@@ -678,11 +678,11 @@ final class ArchiveCatalog {
           }
           var2Lifetime31 = ke.fetchGameDataFile((byte) 93, "continueOptionsTx,0");
           if (var2Lifetime31 != null) {
-            vd.field_a[0] = MusicVoice.a(0, var2Lifetime31);
+            NextLevelChoiceLabels.choices[0] = MusicVoice.a(0, var2Lifetime31);
           }
           var2Lifetime32 = ke.fetchGameDataFile((byte) 122, "continueOptionsTx,1");
           if (null != var2Lifetime32) {
-            vd.field_a[1] = MusicVoice.a(0, var2Lifetime32);
+            NextLevelChoiceLabels.choices[1] = MusicVoice.a(0, var2Lifetime32);
           }
           var2Lifetime33 = ke.fetchGameDataFile((byte) 127, "continueOptTx");
           if (null != var2Lifetime33) {
@@ -690,7 +690,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime34 = ke.fetchGameDataFile((byte) 125, "restartLevel");
           if (var2Lifetime34 != null) {
-            ss.restartLevelText = MusicVoice.a(param1 ^ -5, var2Lifetime34);
+            IntroPreparation.restartLevelText = MusicVoice.a(param1 ^ -5, var2Lifetime34);
           }
           var2Lifetime35 = ke.fetchGameDataFile((byte) 98, "returnToLevelSelect");
           if (null != var2Lifetime35) {
@@ -1582,7 +1582,7 @@ final class ArchiveCatalog {
             if (8 == param1) {
               param1 = 2;
               if (!ReconnectState.reconnecting) {
-                param2 = ih.field_b;
+                param2 = LoginDialogState.field_b;
                 if (Sumoblitz.field_L) {
                   param2 = RasterBuffer.invalidPasswordText;
                 }
@@ -1600,7 +1600,7 @@ final class ArchiveCatalog {
               if (ScrollPane.field_E) {
                 param2 = LegacyOpenGlInterleavedStream.formatIndexedTokens(ProxyAuthenticationRequiredException.connectionLostText, new String[]{param2}, (byte) -128);
               }
-              if (ih.field_c) {
+              if (LoginDialogState.field_c) {
                 param2 = LoginCredentials.pleaseTryAgainInText;
               }
               hc.field_c.a(param2, param1, 21089);
@@ -1608,7 +1608,7 @@ final class ArchiveCatalog {
             if (param1 != 256 &&
               param1 != 10 &&
               !ReconnectState.reconnecting) {
-              no.field_a.h(-79);
+              no.field_a.clearCredentials(-79);
             }
           }
           return;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ServerDataReadRequest extends IntrusiveNode {
-    static il field_n;
+    static BlendMode ADDITIVE_BLEND;
     byte[] payload;
     static SpriteData field_k;
     boolean complete;
@@ -12,7 +12,7 @@ final class ServerDataReadRequest extends IntrusiveNode {
     public static void releaseStatics(int param0) {
         field_k = null;
         NEAREST = null;
-        field_n = null;
+        ADDITIVE_BLEND = null;
         resetStatsText = null;
         int var1 = -90 / ((param0 - 71) / 51);
     }
@@ -80,7 +80,7 @@ final class ServerDataReadRequest extends IntrusiveNode {
     }
 
     static {
-        field_n = new il();
+        ADDITIVE_BLEND = new BlendMode();
         NEAREST = new TextureFilter();
         resetStatsText = "reset stats";
     }

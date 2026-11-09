@@ -100,7 +100,7 @@ public final class Sumoblitz extends GameClientShell {
         var3 = field_L ? 1 : 0;
         try {
           if (2 <= Bzip2State.field_j &&
-            hw.field_b[41]) {
+            AudioOutputBootstrap.field_b[41]) {
             LegacyOpenGlSpriteTexture.field_w = true;
             kh.field_e = 16777215;
           }
@@ -119,7 +119,7 @@ public final class Sumoblitz extends GameClientShell {
               if (eh.field_a != 30) {
                 return;
               }
-              if (!so.a((byte) -58)) {
+              if (!DisplayPromptState.isDisplayPromptOpen((byte) -58)) {
                 IntIndexHashTable.a(0);
                 if (var3 != 0) {
                   wn.a(true);
@@ -291,7 +291,7 @@ public final class Sumoblitz extends GameClientShell {
                 LegacyOpenGlEffectManager.field_g[OpenGlCubeTexture.field_k].render(var4_int, var3, -2355);
               }
             }
-            if (so.a((byte) 103)) {
+            if (DisplayPromptState.isDisplayPromptOpen((byte) 103)) {
               SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
               OpenGlUnderwaterEffect.d((byte) -7);
             }
@@ -302,7 +302,7 @@ public final class Sumoblitz extends GameClientShell {
               }
             }
             if (sj.a(param0 - 85) &&
-              !so.a((byte) -75)) {
+              !DisplayPromptState.isDisplayPromptOpen((byte) -75)) {
               if (CompactMeshGeometry.field_o != null) {
                 stackIn_50_0 = true;
               } else {
@@ -481,7 +481,7 @@ public final class Sumoblitz extends GameClientShell {
           if (CompactMeshGeometry.field_o != null &&
             CompactMeshGeometry.field_o.field_a) {
             LegacyOpenGlNormalMapGenerator.c((byte) 49);
-            qw.a((byte) 35);
+            qw.refreshDisplayPrompt((byte) 35);
           }
           stackIn_11_1 = (null != CompactMeshGeometry.field_o);
           this.b(stackIn_11_1, -103);
@@ -512,7 +512,7 @@ public final class Sumoblitz extends GameClientShell {
                   RendererPreference.field_b = 2;
                   StrongCacheReference.switchMenuScreen(-7753, false, 2);
                 }
-                decompiledFrameRemainder0 = !(!so.a((byte) 119));
+                decompiledFrameRemainder0 = !(!DisplayPromptState.isDisplayPromptOpen((byte) 119));
                 if (decompiledFrameRemainder0) {
                   RotarySelectorWidget.a((byte) -111, true);
                   decompiledFrameRemainder0 = (var4 != 0);
@@ -520,9 +520,9 @@ public final class Sumoblitz extends GameClientShell {
               }
             }
             if (decompiledFrameRemainder0) {
-              if (so.a((byte) 107)) {
+              if (DisplayPromptState.isDisplayPromptOpen((byte) 107)) {
                 if (0 == LegacyOpenGlUnlitEffect.field_e) {
-                  var2_int = kt.a(-38);
+                  var2_int = FullscreenPromptController.pollPromptInput(-38);
                   switch (var2_int) {
                     case 2:
                       LegacyOpenGlNormalMapGenerator.c((byte) 71);
@@ -536,7 +536,7 @@ public final class Sumoblitz extends GameClientShell {
                     default:
                       break;
                   }
-                  if (!so.a((byte) 109)) {
+                  if (!DisplayPromptState.isDisplayPromptOpen((byte) 109)) {
                     LegacyOpenGlEffectManager.field_g[RendererPreference.field_b].resetSelection(-8628, true);
                   }
                   decompiledFrameRemainder0 = (var4 != 0);
@@ -751,7 +751,7 @@ public final class Sumoblitz extends GameClientShell {
                                               LegacyOpenGlEffectManager.field_g[OpenGlCubeTexture.field_k].render(var5_int, var4, -2355);
                                             }
                                           }
-                                          if (so.a((byte) 124)) {
+                                          if (DisplayPromptState.isDisplayPromptOpen((byte) 124)) {
                                             SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
                                             OpenGlUnderwaterEffect.d((byte) -7);
                                           }
@@ -762,7 +762,7 @@ public final class Sumoblitz extends GameClientShell {
                                             }
                                           }
                                           if (sj.a(-67) &&
-                                            !so.a((byte) 115)) {
+                                            !DisplayPromptState.isDisplayPromptOpen((byte) 115)) {
                                             if (null != CompactMeshGeometry.field_o) {
                                               stackIn_134_0 = true;
                                             } else {
@@ -952,7 +952,7 @@ public final class Sumoblitz extends GameClientShell {
                       (RendererPreference.field_b != -1)) {
                       LegacyOpenGlEffectManager.field_g[RendererPreference.field_b].render(255, var4, -2355);
                     }
-                    if (so.a((byte) 118)) {
+                    if (DisplayPromptState.isDisplayPromptOpen((byte) 118)) {
                       SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
                       OpenGlUnderwaterEffect.d((byte) -7);
                     }
@@ -963,7 +963,7 @@ public final class Sumoblitz extends GameClientShell {
                       }
                     }
                     if (sj.a(-126) &&
-                      !so.a((byte) 110)) {
+                      !DisplayPromptState.isDisplayPromptOpen((byte) 110)) {
                       if (CompactMeshGeometry.field_o != null) {
                         stackIn_249_0 = true;
                       } else {
@@ -1118,7 +1118,7 @@ public final class Sumoblitz extends GameClientShell {
                       (-1 != RendererPreference.field_b)) {
                       LegacyOpenGlEffectManager.field_g[RendererPreference.field_b].render(255, var4, -2355);
                     }
-                    if (so.a((byte) 109)) {
+                    if (DisplayPromptState.isDisplayPromptOpen((byte) 109)) {
                       SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
                       OpenGlUnderwaterEffect.d((byte) -7);
                     }
@@ -1129,7 +1129,7 @@ public final class Sumoblitz extends GameClientShell {
                       }
                     }
                     if (sj.a(-28) &&
-                      !so.a((byte) -55)) {
+                      !DisplayPromptState.isDisplayPromptOpen((byte) -55)) {
                       if (CompactMeshGeometry.field_o == null) {
                         stackIn_363_0 = AppletFocusState.focused;
                       } else {
@@ -1243,7 +1243,7 @@ public final class Sumoblitz extends GameClientShell {
               return false;
             }
             if (ByteArrayCacheNode.field_r != null) {
-              if (!il.prepareGameMusicPatches(false, ByteArrayCacheNode.field_r)) {
+              if (!BlendMode.prepareGameMusicPatches(false, ByteArrayCacheNode.field_r)) {
                 VertexAttribute.b(0);
                 return false;
               }
@@ -1295,7 +1295,7 @@ public final class Sumoblitz extends GameClientShell {
                         (RendererPreference.field_b != -1)) {
                         LegacyOpenGlEffectManager.field_g[RendererPreference.field_b].render(255, var4, -2355);
                       }
-                      if (so.a((byte) -36)) {
+                      if (DisplayPromptState.isDisplayPromptOpen((byte) -36)) {
                         SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
                         OpenGlUnderwaterEffect.d((byte) -7);
                       }
@@ -1306,7 +1306,7 @@ public final class Sumoblitz extends GameClientShell {
                         }
                       }
                       if (sj.a(-103) &&
-                        !so.a((byte) 127)) {
+                        !DisplayPromptState.isDisplayPromptOpen((byte) 127)) {
                         if (null != CompactMeshGeometry.field_o) {
                           stackIn_492_0 = true;
                         } else {
@@ -1494,7 +1494,7 @@ public final class Sumoblitz extends GameClientShell {
                     (RendererPreference.field_b != -1)) {
                     LegacyOpenGlEffectManager.field_g[RendererPreference.field_b].render(255, var4, -2355);
                   }
-                  if (so.a((byte) -50)) {
+                  if (DisplayPromptState.isDisplayPromptOpen((byte) -50)) {
                     SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
                     OpenGlUnderwaterEffect.d((byte) -7);
                   }
@@ -1505,7 +1505,7 @@ public final class Sumoblitz extends GameClientShell {
                     }
                   }
                   if (sj.a(-38) &&
-                    !so.a((byte) 110)) {
+                    !DisplayPromptState.isDisplayPromptOpen((byte) 110)) {
                     if (null == CompactMeshGeometry.field_o) {
                       stackIn_606_0 = AppletFocusState.focused;
                     } else {
@@ -1642,10 +1642,10 @@ public final class Sumoblitz extends GameClientShell {
           wq.releaseStatics(false);
           oi.releaseStatics(param0);
           GraphicsToolkitManager.releaseStatics(-1);
-          hw.releaseStatics(5460);
+          AudioOutputBootstrap.releaseStatics(5460);
           MusicCrossfadeStream.releaseStatics(-127);
-          rn.releaseStatics(13921);
-          ma.releaseStatics(20283);
+          HudMessageSupport.releaseStatics(13921);
+          LoginTextResources.releaseStatics(20283);
           ArenaBackdropPalettes.releaseStatics((byte) 84);
           GameKeyHandler.releaseStatics(-2851);
           AccountNameSupport.releaseStatics(true);
@@ -1660,7 +1660,7 @@ public final class Sumoblitz extends GameClientShell {
           ws.releaseStatics((byte) -71);
           ActiveCanvasProvider.releaseStatics(0);
           MouseInputRegistration.releaseStatics((byte) 14);
-          kt.releaseStatics((byte) -14);
+          FullscreenPromptController.releaseStatics((byte) -14);
           kd.releaseStatics((byte) 95);
           uq.releaseStatics((byte) -106);
           ChatMessage.releaseStatics(23050);
@@ -1698,7 +1698,7 @@ public final class Sumoblitz extends GameClientShell {
           RendererPreference.releaseStatics((byte) 115);
           NativeLibraryExtractor.releaseStatics(!param0);
           vp.releaseStatics((byte) -111);
-          vd.releaseStatics((byte) -89);
+          NextLevelChoiceLabels.releaseStatics((byte) -89);
           DialogLayer.releaseStatics(128);
           AccountCreationProgressDialog.releaseStatics(false);
           ProgressDialog.releaseStatics(true);
@@ -1736,11 +1736,11 @@ public final class Sumoblitz extends GameClientShell {
           pi.releaseStatics(20437);
           LoginCredentialFactory.releaseStatics((byte) -1);
           NineSlicePanel.releaseStatics(0);
-          ss.releaseStatics((byte) 102);
+          IntroPreparation.releaseStatics((byte) 102);
           LegacyBitmapFont.releaseStatics();
           AccountRequestDefaults.releaseStatics(-11418);
-          rv.releaseStatics(true);
-          qi.releaseStatics((byte) 16);
+          AccountCreationNavigation.releaseStatics(true);
+          ReflectionReplySender.releaseStatics((byte) 16);
           LoginCredentials.releaseStatics(8192);
           SpriteMask.releaseStatics(!param0);
           sb.releaseStatics(true);
@@ -1750,10 +1750,10 @@ public final class Sumoblitz extends GameClientShell {
           LimitedRandomAccessFile.releaseStatics(100);
           DelegatingCanvas.a(92);
           wn.releaseStatics(0);
-          kw.releaseStatics((byte) -88);
-          ea.releaseStatics(-123);
+          TextCaretLayout.releaseStatics((byte) -88);
+          AccountUiBootstrap.releaseStatics(-123);
           sj.releaseStatics(true);
-          jo.releaseStatics((byte) -115);
+          ByteArrayPool.releaseStatics((byte) -115);
           lw.releaseStatics(-1685);
           no.releaseStatics(10);
           CheckboxRenderer.releaseStatics(false);
@@ -1795,13 +1795,13 @@ public final class Sumoblitz extends GameClientShell {
           Bzip2State.releaseStatics(true);
           ReflectionCheck.releaseStatics(false);
           IndexedSprite.releaseStatics(3);
-          ih.releaseLoginState((byte) 122);
+          LoginDialogState.releaseLoginState((byte) 122);
           VorbisFloor1.releaseStatics();
           QuickChatPhrase.releaseStatics(-6811);
           qw.releaseStatics(-122);
           QuickChatPhraseProvider.releaseStatics(false);
           SoftLruCache.releaseStatics(1);
-          un.releaseStatics(true);
+          ScoreMultiplierTable.releaseStatics(true);
           HuffmanDecoder.releaseStatics((byte) 123);
           sv.releaseStatics(1284);
           SocketConnector.releaseStatics(85);
@@ -1856,11 +1856,11 @@ public final class Sumoblitz extends GameClientShell {
           AffineTransform3D.releaseStatics((byte) 49);
           ProjectionMode.releaseStatics(-7520);
           ko.d(0);
-          LegacyAlphaFontLoader.releaseStatics((byte) 17);
+          TextureTransformMode.releaseStatics((byte) 17);
           HardwareTextureCache.releaseStatics((byte) -109);
           ShaderEffect.releaseStatics(-119);
           HardwareCubeMapSource.releaseStatics(true);
-          il.releaseStatics(26238);
+          BlendMode.releaseStatics(26238);
           HardwareQuadBatchBuffers.releaseStatics(786336);
           VertexLayout.releaseStatics((byte) 101);
           HardwareBufferSet.releaseStatics(true);
@@ -1922,7 +1922,7 @@ public final class Sumoblitz extends GameClientShell {
           ei.releaseStatics(-124);
           TextureFilter.releaseStatics(0);
           HardwareGraphicsHeap.releaseStatics(124);
-          jm.a(-23787);
+          MouseInputShutdown.releaseStatics(-23787);
           PerlinNoiseSliceGenerator.releaseStatics((byte) -69);
           HardwareTextureSprite.releaseStatics(1);
           HardwareSpecularEffect.releaseStatics(0);

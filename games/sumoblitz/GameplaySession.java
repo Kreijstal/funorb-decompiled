@@ -439,7 +439,7 @@ final class GameplaySession {
 
     final void closePauseMenu(byte param0) {
         try {
-          po.pauseMenuOpen = false;
+          PauseMenuState.pauseMenuOpen = false;
           if (param0 != 112) {
             noiseGradients = (float[][]) null;
           }
@@ -722,23 +722,23 @@ final class GameplaySession {
                 ArchiveLoadRequirement.playSoundEffect(27, true);
                 if (2 == var3.effectIndex) {
                   LegacyOpenGlNormalMapGenerator.field_c = true;
-                  rn.postHudMessage(UpgradeStatNames.names[2] + "+", var2.xQ8 >> 8, var2.yQ8 >> 8, 16732416, 28807);
+                  HudMessageSupport.postHudMessage(UpgradeStatNames.names[2] + "+", var2.xQ8 >> 8, var2.yQ8 >> 8, 16732416, 28807);
                 } else if (var3.effectIndex != 0) {
                   if (var3.effectIndex == 1) {
                     DroneChargeParticle.field_w = true;
-                    rn.postHudMessage(UpgradeStatNames.names[1] + "+", var2.xQ8 >> 8, var2.yQ8 >> 8, 12714108, param0 + 43661);
+                    HudMessageSupport.postHudMessage(UpgradeStatNames.names[1] + "+", var2.xQ8 >> 8, var2.yQ8 >> 8, 12714108, param0 + 43661);
                   } else if (3 != var3.effectIndex) {
                     if (4 == var3.effectIndex) {
                       DroneChargeParticle.field_w = true;
-                      rn.postHudMessage(UpgradeStatNames.names[4], var2.xQ8 >> 8, var2.yQ8 >> 8, 44031, param0 + 43661);
+                      HudMessageSupport.postHudMessage(UpgradeStatNames.names[4], var2.xQ8 >> 8, var2.yQ8 >> 8, 44031, param0 + 43661);
                     }
                   } else {
                     DroneChargeParticle.field_w = true;
-                    rn.postHudMessage(UpgradeStatNames.names[3], var2.xQ8 >> 8, var2.yQ8 >> 8, 16711680, 28807);
+                    HudMessageSupport.postHudMessage(UpgradeStatNames.names[3], var2.xQ8 >> 8, var2.yQ8 >> 8, 16711680, 28807);
                   }
                 } else {
                   SecondaryNodeDeque.field_e = true;
-                  rn.postHudMessage(UpgradeStatNames.names[0] + "+", var2.xQ8 >> 8, var2.yQ8 >> 8, 32780, 28807);
+                  HudMessageSupport.postHudMessage(UpgradeStatNames.names[0] + "+", var2.xQ8 >> 8, var2.yQ8 >> 8, 32780, 28807);
                 }
                 RotarySelectorWidget.field_E = true;
                 var3.unlink(false);
@@ -768,7 +768,7 @@ final class GameplaySession {
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (TextureCombineOperation.field_a == 13) {
-            po.pauseMenuOpen = true;
+            PauseMenuState.pauseMenuOpen = true;
             StrongCacheReference.switchMenuScreen(-7753, false, 1);
           }
           if (!MusicPatch.simulationPaused) {
@@ -811,7 +811,7 @@ final class GameplaySession {
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    if (hw.field_b[81]) {
+                    if (AudioOutputBootstrap.field_b[81]) {
                       ByteArrayCacheNode.initializeGameplaySession((byte) 125);
                     }
                     LegacyOpenGlSpriteTexture.field_w = true;
@@ -1067,7 +1067,7 @@ final class GameplaySession {
             }
           }
           if (decompiledFrameCompleted2) {
-            stackIn_31_0 = po.pauseMenuOpen;
+            stackIn_31_0 = PauseMenuState.pauseMenuOpen;
           }
           if (stackIn_31_0) {
             return;
@@ -1204,12 +1204,12 @@ final class GameplaySession {
           if (stackIn_158_0 != -1) {
             boolean decompiledSharedTail0 = (-LimitedRandomAccessFile.field_b + TextureFormat.elapsedTicks != 5);
             if (!decompiledSharedTail0) {
-              rn.postHudMessage(TurbulenceNoise3D.warningText, 320, 240, 16755456, 28807);
+              HudMessageSupport.postHudMessage(TurbulenceNoise3D.warningText, 320, 240, 16755456, 28807);
               decompiledSharedTail0 = (var6 != 0);
             }
             if ((decompiledSharedTail0) &&
               (10 == -LimitedRandomAccessFile.field_b + TextureFormat.elapsedTicks)) {
-              rn.postHudMessage(TurbulenceNoise3D.warningText, 320, 255, 16776960, 28807);
+              HudMessageSupport.postHudMessage(TurbulenceNoise3D.warningText, 320, 255, 16776960, 28807);
             }
           }
           boolean decompiledFrameCompleted1 = true;
@@ -1297,11 +1297,11 @@ final class GameplaySession {
                   }
                   if (~AccountServiceResult.waveIndex != ~(-1 + Bzip2State.field_J.length)) {
                     LimitedRandomAccessFile.field_b = TextureFormat.elapsedTicks;
-                    rn.postHudMessage(TurbulenceNoise3D.warningText, 320, 225, 16711680, 28807);
+                    HudMessageSupport.postHudMessage(TurbulenceNoise3D.warningText, 320, 225, 16711680, 28807);
                   }
                   AccountServiceResult.waveIndex = AccountServiceResult.waveIndex + 1;
                   ArchiveLoadRequirement.playSoundEffect(14, true);
-                  ke.a(false);
+                  ke.beginCurrentWave(false);
                   break;
                 }
               }
@@ -1802,7 +1802,7 @@ final class GameplaySession {
             GameplaySession.renderLitMeshFaces(-125, (CompactMeshGeometry) null, -52, -77, 38, -62, (byte) 105, 54);
           }
           kp.field_a = true;
-          ke.a(false);
+          ke.beginCurrentWave(false);
           this.closePauseMenu((byte) 112);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

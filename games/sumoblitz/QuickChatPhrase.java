@@ -279,7 +279,7 @@ final class QuickChatPhrase extends DualLinkNode {
             var5Lifetime1 = 0;
             while (var4_intLifetime1 > var5Lifetime1) {
               var6 = packet.readUnsignedShort(255);
-              var7 = ij.quickChatCommand(10341, var6);
+              var7 = QuickChatCommandRegistry.quickChatCommand(10341, var6);
               if (var9 != 0) {
                 return;
               }

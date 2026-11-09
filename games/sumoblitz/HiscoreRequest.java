@@ -88,7 +88,7 @@ final class HiscoreRequest extends IntrusiveNode {
     }
 
     final static void openPauseMenu(byte guard) {
-        po.pauseMenuOpen = true;
+        PauseMenuState.pauseMenuOpen = true;
         if (guard > -102) {
           field_t = (int[]) null;
         }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ij {
+final class QuickChatCommandRegistry {
     private static String field_z;
 
     final static QuickChatCommand quickChatCommand(int guard, int id) {

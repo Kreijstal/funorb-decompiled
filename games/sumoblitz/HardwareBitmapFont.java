@@ -277,18 +277,18 @@ final class HardwareBitmapFont extends ToolkitFont {
           this.field_f.a((byte) -83, lf.REPLACE, lf.REPLACE);
         } else {
           this.field_f.a((byte) -83, SlowBurstParticle.MODULATE, lf.REPLACE);
-          this.field_f.a(AccountRequestState.CONSTANT, 0, 0);
-          this.field_f.a(false, param3);
+          this.field_f.setColorCombineSource(AccountRequestState.CONSTANT, 0, 0);
+          this.field_f.setTextureConstantColor(false, param3);
         }
-        var6 = this.field_f.d(77);
+        var6 = this.field_f.modelTransform(77);
         var6.setTranslation(param1, 0, false, param2);
-        this.field_f.U(0);
+        this.field_f.modelTransformChanged(0);
         this.field_f.bindVertexBuffer(0, 71, this.field_d);
         this.field_f.bindVertexLayout(126, this.field_f.field_jc);
         this.field_f.drawPrimitives(param0 * 4, 0, 2, AccountServiceResult.TRIANGLE_FAN);
         if (this.field_c ||
           param4) {
-          this.field_f.a(LegacyVertexAttribute.TEXTURE, 0, 0);
+          this.field_f.setColorCombineSource(LegacyVertexAttribute.TEXTURE, 0, 0);
         }
     }
 

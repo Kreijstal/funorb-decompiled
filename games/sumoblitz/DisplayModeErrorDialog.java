@@ -39,7 +39,7 @@ final class DisplayModeErrorDialog extends ResizingDialog implements WidgetActio
           var4.width = this.width;
           var4.y = 50;
           var4.x = 0;
-          var4.renderer = (WidgetRenderer) ((Object) new TextWidgetRenderer(jm.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.renderer = (WidgetRenderer) ((Object) new TextWidgetRenderer(MouseInputShutdown.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(var4, 96);
           this.field_O = this.a((byte) -105, (WidgetListener) (this), DraggableWidget.closeText);
           return;

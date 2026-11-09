@@ -160,9 +160,9 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
     public DisplayNameForm() {
         super(0, 0, 496, 0, (WidgetRenderer) null);
         this.nameInput = new ValidatedTextInputWidget("", (WidgetListener) null, 12);
-        TextWidgetRenderer var1 = new TextWidgetRenderer(jm.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, kw.field_b.ascent, -1, 2147483647, true);
+        TextWidgetRenderer var1 = new TextWidgetRenderer(MouseInputShutdown.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, TextCaretLayout.field_b.ascent, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(MouseInputRegistration.youNeedToChooseText, var1, (WidgetListener) null);
-        this.submitButton = new InteractiveWidget(LegacyAlphaFontLoader.field_a, (WidgetListener) null);
+        this.submitButton = new InteractiveWidget(TextureTransformMode.field_a, (WidgetListener) null);
         this.backButton = new InteractiveWidget(IntrusiveNodeHashTable.field_h, (WidgetListener) null);
         this.nameInput.tooltip = ShaderEffect.enterTheNameYouText;
         this.nameInput.setValidator((byte) 127, new ScreenNameValidator(this.nameInput));
@@ -176,7 +176,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         int var5 = 200;
         this.addChild(var2, 81);
         var3 += 50;
-        var3 = var3 + (5 + this.addDefaultValidatedField(var3, 7541, 170, this.nameInput, QuickChatPhrase.playerNamesCanBeText, un.playerNameText));
+        var3 = var3 + (5 + this.addDefaultValidatedField(var3, 7541, 170, this.nameInput, QuickChatPhrase.playerNamesCanBeText, ScoreMultiplierTable.playerNameText));
         this.submitButton.setBounds(126, 496 - var5 >> 1, var3, 40, var5);
         this.backButton.setBounds(-57, 3 + var4, var3 + 15, 40, 60);
         this.backButton.listener = (WidgetListener) (this);
@@ -204,7 +204,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var11 = new LabeledWidget(20, y, 120 + fieldWidth, 25, field, false, 120, 3, kw.field_b, 16777215, label);
+          var11 = new LabeledWidget(20, y, 120 + fieldWidth, 25, field, false, 120, 3, TextCaretLayout.field_b, 16777215, label);
           this.addChild(var11, 66);
           var9 = new ValidationMessageWidget(((ValidationProvider) ((Object) field)).getValidator(85), help, 126, var11.height + y, fieldWidth + 25, helpHeight);
           var10 = -54 % ((-13 - guard) / 61);

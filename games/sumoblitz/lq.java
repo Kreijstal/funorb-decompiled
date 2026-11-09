@@ -29,16 +29,16 @@ final class lq {
         }
     }
 
-    final static void a(ResourceArchive param0, int param1) {
+    final static void loadIntroFinalFrame(ResourceArchive archive, int guard) {
         Sprite var6 = null;
         int var3 = 0;
         int var4 = 0;
         try {
-          var6 = new Sprite(param0.fetchNamedFile("", "final_frame.jpg", -1), (java.awt.Component) ((Object) NineSlicePanel.field_f));
+          var6 = new Sprite(archive.fetchNamedFile("", "final_frame.jpg", -1), (java.awt.Component) ((Object) NineSlicePanel.field_f));
           var3 = var6.field_x;
           var4 = var6.field_u;
           GameApplet.pushRasterState(103);
-          if (param1 >= -62) {
+          if (guard >= -62) {
             ResourceArchive var5 = (ResourceArchive) null;
             lq.archiveLoadingMessage(-58, (String) null, (String) null, (ResourceArchive) null);
           }
@@ -51,7 +51,7 @@ final class lq {
           MusicPatchEnvelope.field_a.field_A = kh.field_a.field_u;
           ClientException.popRasterState((byte) 71);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "lq.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "lq.A(" + (archive != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 

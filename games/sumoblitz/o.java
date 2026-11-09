@@ -37,7 +37,7 @@ final class o {
           UnderageAccountInfoPanel.b(24753, 245, 10);
         }
         MatchingTextValidator.field_i = MatchingTextValidator.field_i + 1;
-        il.field_a = FadingWidget.score;
+        BlendMode.lastLevelScore = FadingWidget.score;
     }
 
     public static void b(int param0) {

@@ -441,7 +441,7 @@ final class ArenaPad extends IntrusiveNode {
             decompiledFrameRemainder7 = (this.exploding);
             if ((decompiledFrameRemainder7) &&
               (decompiledFrameRemainder7 = (DisplaySizeController.field_f == 0))) {
-              kw.field_a.drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)((double)this.radiusPixels / 28.0 * 3072.0), 0, 1, 0, 2);
+              TextCaretLayout.field_a.drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)((double)this.radiusPixels / 28.0 * 3072.0), 0, 1, 0, 2);
               decompiledFrameRemainder7 = (var4 != 0);
             }
           }

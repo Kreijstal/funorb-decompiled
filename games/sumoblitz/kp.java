@@ -35,7 +35,7 @@ final class kp {
             for (var6 = 0; var5 > var6; var6++) {
               boolean decompiledFrameCompleted0 = true;
               if (request.entryIds[list][var6] == submission.entryId &&
-                ea.isCurrentUserName(request.names[list][var6], (byte) -25)) {
+                AccountUiBootstrap.isCurrentUserName(request.names[list][var6], (byte) -25)) {
                 for (var7 = 0; var4_int > var7; var7++) {
                   if (submission.values[var7] != request.values[list][var6 * var4_int + var7]) {
                     decompiledFrameCompleted0 = false;

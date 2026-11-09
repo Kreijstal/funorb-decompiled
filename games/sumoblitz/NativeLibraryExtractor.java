@@ -169,7 +169,7 @@ final class NativeLibraryExtractor {
               stackIn_42_0 = -1;
               return stackIn_42_0;
             }
-            hw.registerNativeLibraryFile(var11, libraryName, 23295);
+            AudioOutputBootstrap.registerNativeLibraryFile(var11, libraryName, 23295);
             stackIn_44_0 = 100;
             return stackIn_44_0;
           }

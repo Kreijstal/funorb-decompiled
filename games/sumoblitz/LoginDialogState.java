@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ih {
+final class LoginDialogState {
     static boolean field_c;
     static ArchiveLoadingStage field_a;
     static String field_b;
@@ -11,7 +11,7 @@ final class ih {
           field_b = null;
           field_a = null;
           if (guard <= 11) {
-            ih.restoreBaselineUpgrades(-113);
+            LoginDialogState.restoreBaselineUpgrades(-113);
           }
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ih.B(" + guard + ')');

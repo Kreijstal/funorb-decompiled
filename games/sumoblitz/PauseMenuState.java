@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class po {
+final class PauseMenuState {
     static boolean pauseMenuOpen;
 
     static {

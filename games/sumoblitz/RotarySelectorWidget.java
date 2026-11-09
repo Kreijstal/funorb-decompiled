@@ -23,7 +23,7 @@ final class RotarySelectorWidget extends InteractiveWidget {
 
     final static void a(byte param0, boolean param1) {
         int var2 = 104 / ((param0 - 78) / 36);
-        kt.b((byte) 108);
+        FullscreenPromptController.initializeGraphicsOptions((byte) 108);
     }
 
     final boolean onPointerPressed(UiWidget root, int guard, int pointerY, int button, int parentX, int pointerX, int parentY) {

@@ -19,7 +19,7 @@ final class AsciiCharacterChecks {
           for (var2_int = 0; var2_int < text.length(); var2_int++) {
             var3 = text.charAt(var2_int);
             if (!ModalDialog.isAsciiLetter(98, (char) var3) &&
-              !ea.isAsciiDigit((byte) -54, (char) var3)) {
+              !AccountUiBootstrap.isAsciiDigit((byte) -54, (char) var3)) {
               return true;
             }
           }

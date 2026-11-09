@@ -206,7 +206,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
             jaggl.OpenGL.glBufferDataARBub(this.target, sizeBytes, (byte[]) null, 0, this.dynamic ? 35040 : 35044);
             this.toolkit.field_o = this.toolkit.field_o + (-this.capacityBytes + sizeBytes);
           } else {
-            this.clientBuffer = this.toolkit.a(false, false, sizeBytes);
+            this.clientBuffer = this.toolkit.allocateNativeBuffer(false, false, sizeBytes);
           }
           this.capacityBytes = sizeBytes;
         }

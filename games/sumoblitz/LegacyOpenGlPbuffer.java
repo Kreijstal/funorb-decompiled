@@ -32,7 +32,7 @@ final class LegacyOpenGlPbuffer extends DualLinkNode {
     final static String playerLabel(byte guard) {
         String var1 = "";
         if (no.field_a != null) {
-          var1 = no.field_a.a((byte) 48);
+          var1 = no.field_a.identifier((byte) 48);
         }
         if (guard <= -53) {
           if (0 == var1.length()) {

@@ -58,8 +58,8 @@ final class SlowBurstParticle extends TimedSceneEffect {
         DirectByteArrayStorage.a(370, 38, 200, 2, new int[]{31, 32}, 10, 440);
         DirectByteArrayStorage.a(240, 38, 200, 2, new int[]{28, 33}, 11, 440);
         DirectByteArrayStorage.a(370, 38, 200, 2, new int[]{33}, 12, 440);
-        SocketJs5Client.field_q = (int)((double)ma.field_b.a(GameClientShell.field_u[12], 0) * 1.5);
-        int var1 = (int)((double)ma.field_b.a(GameClientShell.field_u[13], 0) * 1.5);
+        SocketJs5Client.field_q = (int)((double)LoginTextResources.field_b.a(GameClientShell.field_u[12], 0) * 1.5);
+        int var1 = (int)((double)LoginTextResources.field_b.a(GameClientShell.field_u[13], 0) * 1.5);
         if (SocketJs5Client.field_q < var1) {
           SocketJs5Client.field_q = var1;
         }
@@ -185,7 +185,7 @@ final class SlowBurstParticle extends TimedSceneEffect {
               var19[0][var10 * 4 + 1] = ContentTransitionPhase.field_f[var11];
               var19[0][2 + 4 * var10] = LegacyOpenGlInterleavedStream.field_c[var11];
               var19[0][var10 * 4 + 3] = field_z[var11];
-              if (ea.isCurrentUserName(RenderPresentationException.field_b[var11], (byte) -25) &&
+              if (AccountUiBootstrap.isCurrentUserName(RenderPresentationException.field_b[var11], (byte) -25) &&
                 field_z[var11] + ContentTransitionPhase.field_f[var11] + LegacyOpenGlInterleavedStream.field_c[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
@@ -203,7 +203,7 @@ final class SlowBurstParticle extends TimedSceneEffect {
               var19[1][1 + 4 * var14] = ContentTransitionPhase.field_f[var11Lifetime1];
               var19[1][2 + 4 * var14] = LegacyOpenGlInterleavedStream.field_c[var11Lifetime1];
               var19[1][var14 * 4 + 3] = field_z[var11Lifetime1];
-              if (ea.isCurrentUserName(RenderPresentationException.field_b[var11Lifetime1], (byte) -25) &&
+              if (AccountUiBootstrap.isCurrentUserName(RenderPresentationException.field_b[var11Lifetime1], (byte) -25) &&
                 ContentTransitionPhase.field_f[var11Lifetime1] - (-LegacyOpenGlInterleavedStream.field_c[var11Lifetime1] - field_z[var11Lifetime1]) == 0) {
                 var6[1][var14] = null;
                 var14--;

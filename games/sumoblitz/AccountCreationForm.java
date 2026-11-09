@@ -102,7 +102,7 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new LabeledWidget(20, y, fieldWidth + 120, 25, control, false, 120, 3, kw.field_b, 16777215, label);
+          var6 = new LabeledWidget(20, y, fieldWidth + 120, 25, control, false, 120, 3, TextCaretLayout.field_b, 16777215, label);
           this.addChild(var6, 82);
           var7 = new ValidationStatusWidget(((ValidationProvider) ((Object) control)).getValidator(34));
           this.addChild(var7, 63);
@@ -254,7 +254,7 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
             }
             LegacyOpenGlPbuffer.field_s = 1;
             var3 = var1.readCp1252String(-1);
-            jm.field_d = ((String) (var3)).intern();
+            MouseInputShutdown.field_d = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(-31302);
             FixedPointPerlinNoise3D.a((byte) 38, var4);
             return;
@@ -385,7 +385,7 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
 
     final static void h(int param0) {
         try {
-          ContentDialog.l(param0 ^ 224);
+          ContentDialog.raiseSoundVolume(param0 ^ 224);
           if (param0 != 0) {
             AccountCreationForm.f((byte) -20);
           }
@@ -453,7 +453,7 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = new LabeledWidget(20, y, fieldWidth + 120, 25, control, false, 120, 3, kw.field_b, 16777215, label);
+          var8 = new LabeledWidget(20, y, fieldWidth + 120, 25, control, false, 120, 3, TextCaretLayout.field_b, 16777215, label);
           this.addChild(var8, 122);
           var9 = new ValidationMessageWidget(((ValidationProvider) ((Object) control)).getValidator(-128), helpText, 126, y + var8.height, fieldWidth + 50, messageHeight);
           var9.listener = (WidgetListener) (this);
@@ -572,7 +572,7 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new LabeledWidget(20, y, 120 + fieldWidth, 25, control, false, 120, 3, kw.field_b, 16777215, label);
+          var6 = new LabeledWidget(20, y, 120 + fieldWidth, 25, control, false, 120, 3, TextCaretLayout.field_b, 16777215, label);
           this.addChild(var6, 79);
           if (guard >= 32) {
             stackIn_4_0 = var6.height;
@@ -653,12 +653,12 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
           var3 = var3 + (5 + this.addFieldWithMessage(var3, 170, (byte) 125, 20, "", this.confirmEmailInput, StripedProgressWidget.confirmEmailText));
           var3 = var3 + this.addLabeledField(pi.passwordText, 170, var3, 55, this.passwordInput);
           var3 = var3 + (5 + this.addValidatedField(LegacyOpenGlTexture.confirmPasswordText, 170, 15632, var3, qw.passwordsMustBeBetweenText, this.confirmPasswordInput));
-          var3 = var3 + (this.addValidatedField(un.playerNameText, 170, 15632, var3, QuickChatPhrase.playerNamesCanBeText, this.screenNameInput) + 5);
+          var3 = var3 + (this.addValidatedField(ScoreMultiplierTable.playerNameText, 170, 15632, var3, QuickChatPhrase.playerNamesCanBeText, this.screenNameInput) + 5);
           var3 = var3 + this.addFieldWithStatus(170, DropDownArrowRenderer.ageText, var3, this.ageInput, 64);
-          var4 = new LabeledWidget(46, var3, -90 + this.width, 25, this.emailNewsCheckbox, true, -120 + this.width, 5, jm.field_a, 11579568, LegacyOpenGlEnvironmentWaterEffect.pleaseSendMeNewsText);
+          var4 = new LabeledWidget(46, var3, -90 + this.width, 25, this.emailNewsCheckbox, true, -120 + this.width, 5, MouseInputShutdown.field_a, 11579568, LegacyOpenGlEnvironmentWaterEffect.pleaseSendMeNewsText);
           this.addChild(var4, 100);
           var3 = var3 + var4.height;
-          var5 = new TextWidgetRenderer(kw.field_b, 0, 0, 0, 0, 16777215, -1, 0, 0, kw.field_b.ascent, -1, 2147483647, true);
+          var5 = new TextWidgetRenderer(TextCaretLayout.field_b, 0, 0, 0, 0, 16777215, -1, 0, 0, TextCaretLayout.field_b.ascent, -1, 2147483647, true);
           this.policyLinks = new HotspotTextWidget(var2, var5);
           this.policyLinks.tooltip = "";
           this.policyLinks.setHotspotTooltip(-90, sb.openInPopupWindowText, 0);

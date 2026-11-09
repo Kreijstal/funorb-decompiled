@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ss {
+final class IntroPreparation {
     static String restartLevelText;
 
     public static void releaseStatics(byte param0) {
@@ -11,20 +11,20 @@ final class ss {
         }
     }
 
-    final static void a(PcmStreamMixer param0, byte param1, ResourceArchive param2, int param3) {
+    final static void prepareIntro(PcmStreamMixer unusedMixer, byte guard, ResourceArchive archive, int durationMillis) {
         try {
-          LegacyOpenGlRidgedWaterEffect.field_i = vm.ticksPerSecond(-32) * param3 / 1000;
-          MenuScreen.initializeLogoAudio(param2, 100);
-          wq.a(false, param2);
-          lq.a(param2, -84);
+          LegacyOpenGlRidgedWaterEffect.field_i = vm.ticksPerSecond(-32) * durationMillis / 1000;
+          MenuScreen.initializeLogoAudio(archive, 100);
+          wq.a(false, archive);
+          lq.loadIntroFinalFrame(archive, -84);
           SelectionOverlay.b(true);
           ResourceRequest.a((byte) -90);
-          if (param1 < 125) {
+          if (guard < 125) {
             restartLevelText = (String) null;
           }
           MusicPatch.field_u = 0 - LegacyOpenGlRidgedWaterEffect.field_i;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ss.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ss.C(" + (unusedMixer != null ? "{...}" : "null") + ',' + guard + ',' + (archive != null ? "{...}" : "null") + ',' + durationMillis + ')');
         }
     }
 

@@ -45,8 +45,8 @@ final class ke {
         }
     }
 
-    final static void a(boolean param0) {
-        if (param0) {
+    final static void beginCurrentWave(boolean guard) {
+        if (guard) {
           field_d = -5;
         }
         if (null == Bzip2State.field_J) {

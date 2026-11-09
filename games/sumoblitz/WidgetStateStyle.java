@@ -368,10 +368,10 @@ final class WidgetStateStyle {
         }
     }
 
-    final static void a(byte param0, boolean param1, boolean param2) {
-        int var3 = -2 % ((param0 - 62) / 63);
+    final static void showLoginDialog(byte guard, boolean allowSignup, boolean allowGuestPlay) {
+        int var3 = -2 % ((guard - 62) / 63);
         String var4 = (String) null;
-        ea.a(1, param2, (String) null, param1);
+        AccountUiBootstrap.showLoginDialog(1, allowGuestPlay, (String) null, allowSignup);
     }
 
     static {

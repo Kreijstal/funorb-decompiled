@@ -327,15 +327,15 @@ class Drone {
           if (2 == this.destructionTicks) {
             QuickChatCommand.a(this.xQ8, this.effects, -16240, 20, VertexBufferReference.field_a[this.droneType], this.yQ8);
             var5 = new float[]{0.0f, -3.0f};
-            var9 = kt.a((byte) -99, var5, (float)this.facingRadians);
+            var9 = FullscreenPromptController.rotateVector((byte) -99, var5, (float)this.facingRadians);
             var6 = var9;
             var2 = var6;
             this.effects.addLast((IntrusiveNode) (new DroneDebris(100, this.xQ8, this.yQ8, this.powerupTint(0), this.facingRadians, Math.random() / 100.0, (int)var9[0] << 8, (int)var9[1] << 8, this.droneType, 0, this.baseRadiusQ8((byte) -5) >> 8)), (byte) 39);
-            var10 = kt.a((byte) -16, var2, (float)(this.facingRadians + 2.0943951023931953));
+            var10 = FullscreenPromptController.rotateVector((byte) -16, var2, (float)(this.facingRadians + 2.0943951023931953));
             var7 = var10;
             var2Lifetime1 = var7;
             this.effects.addLast((IntrusiveNode) (new DroneDebris(100, this.xQ8, this.yQ8, this.powerupTint(0), this.facingRadians, Math.random() / 100.0, (int)var10[0] << 8, (int)var10[1] << 8, this.droneType, 1, this.baseRadiusQ8((byte) -5) >> 8)), (byte) 39);
-            var13 = kt.a((byte) -43, var2Lifetime1, (float)(4.1887902047863905 + this.facingRadians));
+            var13 = FullscreenPromptController.rotateVector((byte) -43, var2Lifetime1, (float)(4.1887902047863905 + this.facingRadians));
             this.effects.addLast((IntrusiveNode) (new DroneDebris(100, this.xQ8, this.yQ8, this.powerupTint(0), this.facingRadians, Math.random() / 100.0, (int)var13[0] << 8, (int)var13[1] << 8, this.droneType, 2, this.baseRadiusQ8((byte) -5) >> 8)), (byte) 39);
           }
         }
@@ -912,7 +912,7 @@ class Drone {
             }
             if (this.isBlastActive(guard - 19310) &&
               DisplaySizeController.field_f == 0) {
-              kw.field_a.drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)((double)var5 / 28.0 * 3072.0), (int)(this.facingRadians * 32768.0 / 3.141592653589793), 1, 0, 2);
+              TextCaretLayout.field_a.drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)((double)var5 / 28.0 * 3072.0), (int)(this.facingRadians * 32768.0 / 3.141592653589793), 1, 0, 2);
             }
           }
           var8 = this.velocityXQ8;

@@ -9,7 +9,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     Object field_Ib;
     int field_Sb;
     jaclib.memory.heap.NativeHeapBuffer field_z;
-    static LegacyAlphaFontLoader field_t;
+    static TextureTransformMode TEXTURE_PROJECTED;
     ResourceArchive field_ab;
     private jagex3.graphics2.hw.NativeInterface field_nc;
     private IntrusiveDeque field_lb;
@@ -17,44 +17,44 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     long field_peer;
     private jaclib.memory.heap.NativeHeap field_gb;
     int field_pc;
-    AffineTransform3D field_Lb;
-    boolean field_Db;
+    AffineTransform3D modelTransform;
+    boolean modelIdentity;
     static Boolean field_j;
     int field_Cb;
     int field_o;
-    AffineTransform3D field_Gb;
-    private AffineTransform3D field_sb;
-    private AffineTransform3D field_vc;
+    AffineTransform3D viewTransform;
+    private AffineTransform3D scratchTransform;
+    private AffineTransform3D modelViewTransform;
     private boolean field_fb;
     boolean field_Z;
     private float field_qb;
     private int field_Pb;
-    int field_mc;
+    int activeTextureUnit;
     int field_bc;
     private int effectParameters1;
     int field_ub;
-    private boolean field_O;
+    private boolean orthographicValid;
     private boolean field_bb;
     float field_E;
     int field_oc;
-    int field_vb;
-    AffineTransform3D[] field_V;
+    int clipLeft;
+    AffineTransform3D[] textureTransforms;
     int field_Kb;
     boolean lightingSuppressed;
     private ShaderEffect[] effects;
     float[] field_G;
-    int field_F;
+    int clipRight;
     private int activeEffect;
     private int field_Vb;
     private int effectParameters0;
     int field_kc;
     private HardwareTextureCache field_lc;
     TextureCombineOperation[] field_K;
-    boolean field_Bb;
-    boolean field_I;
+    boolean fogAllowed;
+    boolean lightingEnabled;
     private int field_mb;
     int field_Y;
-    boolean field_Rb;
+    boolean fogEnabled;
     private ShaderEffect activeShaderEffect;
     private jaclib.memory.Stream field_cb;
     private int field_Hb;
@@ -62,10 +62,10 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     private int field_k;
     float field_T;
     float field_jb;
-    private float[] field_eb;
+    private float[] orthographicMatrix;
     float field_Tb;
     private int field_P;
-    int field_cc;
+    int textureUnitCount;
     int field_C;
     int field_Yb;
     private int field_Ob;
@@ -74,58 +74,58 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     int field_r;
     boolean field_db;
     private boolean field_zb;
-    int field_yc;
-    private boolean field_R;
-    boolean field_i;
+    int clipBottom;
+    private boolean modelViewValid;
+    boolean depthWriteEnabled;
     boolean field_Eb;
     private int field_sc;
-    boolean field_p;
-    int field_Ub;
+    boolean depthTestEnabled;
+    int textureConstantColor;
     int field_y;
-    il field_l;
+    BlendMode blendFactors;
     float field_S;
     private GpuTexture[] field_Zb;
     float field_Xb;
     boolean field_u;
-    private float[] field_ec;
+    private float[] perspectiveMatrix;
     float[] field_U;
     ko[] field_pb;
     private float field_q;
     float field_J;
     int field_tc;
     private HardwareQuadBatchBuffers field_yb;
-    private HardwareCubeMapSource field_uc;
-    private int field_N;
+    private HardwareCubeMapSource environmentSource;
+    private int blendMode;
     private int field_dc;
-    float[] field_A;
+    float[] projectionMatrix;
     boolean field_ob;
     int field_Nb;
-    private boolean field_Jb;
+    private boolean perspectiveValid;
     float field_hb;
-    ProjectionMode field_s;
+    ProjectionMode projectionMode;
     private int field_rc;
-    int field_v;
+    int clipTop;
     private int field_ic;
     int field_Ab;
     boolean field_W;
     private float field_kb;
     private boolean field_H;
     GpuTexture field_D;
-    LegacyAlphaFontLoader[] field_wb;
+    TextureTransformMode[] textureTransformModes;
     private HardwareBufferSet field_ib;
-    private VertexBuffer field_Wb;
+    private VertexBuffer lineVertices;
     private IndexBuffer field_M;
     private HardwareBufferSet field_Fb;
     VertexLayout field_jc;
     private HardwareBufferSet field_gc;
-    private VertexBuffer field_x;
-    private VertexLayout field_xc;
+    private VertexBuffer dynamicVertices;
+    private VertexLayout lineLayout;
     private HardwareBufferSet field_qc;
     private HardwareBufferSet field_hc;
-    private VertexLayout field_nb;
+    private VertexLayout dynamicLayout;
     private VertexBuffer field_Qb;
     private VertexLayout field_n;
-    boolean field_wc;
+    boolean scissorEnabled;
 
     abstract Texture2D a(TextureFormat param0, int param1, int param2, int param3, byte[] param4, byte param5, int param6, boolean param7);
 
@@ -182,18 +182,18 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final void c(int param0, boolean param1) {
-        if ((!this.field_p ? 1 : 0) != (!param1 ? 1 : 0)) {
-          this.field_p = param1 ? true : false;
+    final void setDepthTestEnabled(int guard, boolean enabled) {
+        if ((!this.depthTestEnabled ? 1 : 0) != (!enabled ? 1 : 0)) {
+          this.depthTestEnabled = enabled ? true : false;
           this.applyDepthTest(79);
           this.field_ic = this.field_ic & -32;
         }
-        if (param0 <= 32) {
+        if (guard <= 32) {
           this.field_K = (TextureCombineOperation[]) null;
         }
     }
 
-    abstract void N(int param0);
+    abstract void applyViewMatrix(int guard);
 
     final Texture2D a(byte[] param0, int param1, int param2, TextureFormat param3, int param4, boolean param5) {
         RuntimeException var7 = null;
@@ -206,7 +206,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 != 0) {
-            this.field_mc = 3;
+            this.activeTextureUnit = 3;
           }
           stackIn_3_0 = this.a(param3, param1, param2, 0, param0, (byte) 97, 0, param5);
           return stackIn_3_0;
@@ -230,11 +230,11 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final AffineTransform3D c(boolean param0) {
-        if (!param0) {
+    final AffineTransform3D scratchTransform(boolean guard) {
+        if (!guard) {
           return (AffineTransform3D) null;
         }
-        return this.field_sb;
+        return this.scratchTransform;
     }
 
     private final void h(byte param0) {
@@ -243,10 +243,10 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final void k(int param0) {
-        this.field_Lb.setIdentity(param0);
-        this.field_Db = true;
-        this.z(-29654);
+    final void resetModelTransform(int guard) {
+        this.modelTransform.setIdentity(guard);
+        this.modelIdentity = true;
+        this.syncModelTransform(-29654);
     }
 
     abstract void applyLighting(boolean guard);
@@ -263,7 +263,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     final static String a(String param0, String param1, String param2, boolean param3) {
         int var5 = Sumoblitz.field_L ? 1 : 0;
         if (!param3) {
-          field_t = (LegacyAlphaFontLoader) null;
+          TEXTURE_PROJECTED = (TextureTransformMode) null;
         }
         int var4 = param1.indexOf(param0);
         while (-1 != var4) {
@@ -273,49 +273,49 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         return param1;
     }
 
-    final AffineTransform3D H(int param0) {
-        if (param0 != 26453) {
+    final AffineTransform3D currentTextureTransform(int guard) {
+        if (guard != 26453) {
           return (AffineTransform3D) null;
         }
-        return this.field_V[this.field_mc];
+        return this.textureTransforms[this.activeTextureUnit];
     }
 
     final void d(boolean param0) {
         ProjectionMode var2 = null;
         if (param0) {
-          this.n((byte) 96);
+          this.fogChanged((byte) 96);
         }
-        if (GameInstructions.field_k != this.field_s) {
-          var2 = this.field_s;
-          this.field_s = GameInstructions.field_k;
+        if (GameInstructions.field_k != this.projectionMode) {
+          var2 = this.projectionMode;
+          this.projectionMode = GameInstructions.field_k;
           if (var2.usesViewTransform(-20011)) {
-            this.W(16);
+            this.viewTransformChanged(16);
           }
           this.field_ic = this.field_ic & -32;
-          this.field_A = this.field_w;
+          this.projectionMatrix = this.field_w;
         }
     }
 
-    final void U(int param0) {
-        this.field_Db = false;
-        if (param0 != 0) {
+    final void modelTransformChanged(int guard) {
+        this.modelIdentity = false;
+        if (guard != 0) {
           return;
         }
-        this.z(-29654);
+        this.syncModelTransform(-29654);
     }
 
     abstract void applyBlendFactors(int guard);
 
-    final void m(int param0) {
-        this.field_vb = 0;
-        this.field_v = 0;
-        if (param0 != -16088) {
+    final void resetClip(int guard) {
+        this.clipLeft = 0;
+        this.clipTop = 0;
+        if (guard != -16088) {
           this.field_Ob = -12;
         }
-        this.field_F = this.field_rb;
-        this.field_yc = this.field_Sb;
-        if (this.field_wc) {
-          this.field_wc = false;
+        this.clipRight = this.field_rb;
+        this.clipBottom = this.field_Sb;
+        if (this.scissorEnabled) {
+          this.scissorEnabled = false;
           this.applyScissorEnabled(-121);
         }
         this.h((byte) -128);
@@ -325,34 +325,34 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     abstract float b(byte param0);
 
-    private final void z(int param0) {
+    private final void syncModelTransform(int guard) {
         float var2 = 0.0f;
-        if (PerlinNoiseSliceGenerator.field_h == this.field_s) {
+        if (PerlinNoiseSliceGenerator.field_h == this.projectionMode) {
           var2 = this.b((byte) 127);
-          this.field_Lb.translate((byte) 96, 0.0f, var2, var2);
+          this.modelTransform.translate((byte) 96, 0.0f, var2, var2);
         }
-        if (param0 != -29654) {
+        if (guard != -29654) {
           this.field_Y = -4;
         }
-        this.field_R = false;
-        this.x(0);
+        this.modelViewValid = false;
+        this.applyModelMatrix(0);
         if (null != this.activeShaderEffect) {
           this.activeShaderEffect.updateViewUniforms((byte) 37);
         }
     }
 
-    final int t(int param0) {
-        int var2 = 39 % ((param0 + 20) / 54);
-        return this.field_mc;
+    final int activeTextureUnit(int guard) {
+        int var2 = 39 % ((guard + 20) / 54);
+        return this.activeTextureUnit;
     }
 
-    final void d(int param0, boolean param1) {
-        if (this.field_I != param1) {
-          this.field_I = param1 ? true : false;
+    final void setLightingEnabled(int guard, boolean enabled) {
+        if (this.lightingEnabled != enabled) {
+          this.lightingEnabled = enabled ? true : false;
           this.applyLighting(false);
           this.field_ic = this.field_ic & -8;
         }
-        int var3 = -80 % ((35 - param0) / 54);
+        int var3 = -80 % ((35 - guard) / 54);
     }
 
     abstract Texture3D a(boolean param0, TextureFormat param1, int param2, int param3, byte[] param4, int param5);
@@ -361,25 +361,25 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     final void intersectClip(int left, int top, int right, int bottom) {
         int var5 = 0;
-        if (left > this.field_v) {
+        if (left > this.clipTop) {
           var5 = 1;
-          this.field_v = left;
+          this.clipTop = left;
         }
-        if (right < this.field_F) {
+        if (right < this.clipRight) {
           var5 = 1;
-          this.field_F = right;
+          this.clipRight = right;
         }
-        if (this.field_vb < top) {
-          this.field_vb = top;
+        if (this.clipLeft < top) {
+          this.clipLeft = top;
           var5 = 1;
         }
-        if (bottom < this.field_yc) {
-          this.field_yc = bottom;
+        if (bottom < this.clipBottom) {
+          this.clipBottom = bottom;
           var5 = 1;
         }
         if (var5 != 0) {
-          if (!this.field_wc) {
-            this.field_wc = true;
+          if (!this.scissorEnabled) {
+            this.scissorEnabled = true;
             this.applyScissorEnabled(-57);
           }
           this.applyScissor(4);
@@ -390,9 +390,9 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     abstract void applyScissor(int guard);
 
     public static void releaseStatics(int param0) {
-        field_t = null;
+        TEXTURE_PROJECTED = null;
         if (param0 != 8) {
-          field_t = (LegacyAlphaFontLoader) null;
+          TEXTURE_PROJECTED = (TextureTransformMode) null;
         }
         field_j = null;
     }
@@ -484,12 +484,12 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    private final void g(boolean param0) {
-        if (param0) {
+    private final void drawLineBuffer(boolean guard) {
+        if (guard) {
           this.field_Hb = -20;
         }
-        this.bindVertexBuffer(0, 119, this.field_Wb);
-        this.bindVertexLayout(-77, this.field_xc);
+        this.bindVertexBuffer(0, 119, this.lineVertices);
+        this.bindVertexLayout(-77, this.lineLayout);
         this.drawPrimitives(0, 0, 1, PasswordValidator.LINES);
     }
 
@@ -558,54 +558,54 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final void a(TextureCombineSource param0, int param1, boolean param2) {
+    final void setAlphaCombineSource(TextureCombineSource source, int argument, boolean guard) {
         try {
-          if (!param2) {
+          if (!guard) {
             this.c((byte) -34);
           }
-          this.setAlphaCombineSource(param1, false, (byte) 54, param0);
+          this.setAlphaCombineSource(argument, false, (byte) 54, source);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "aw.ID(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "aw.ID(" + (source != null ? "{...}" : "null") + ',' + argument + ',' + guard + ')');
         }
     }
 
     abstract void applyBlendEnabled(byte guard);
 
-    private final void a(int param0, PrimitiveType param1, int param2) {
+    private final void drawDynamicPrimitives(int firstVertex, PrimitiveType primitive, int primitiveCount) {
         try {
-          this.bindVertexBuffer(0, 86, this.field_x);
-          this.bindVertexLayout(125, this.field_nb);
-          this.drawPrimitives(param0, param0 ^ 0, param2, param1);
+          this.bindVertexBuffer(0, 86, this.dynamicVertices);
+          this.bindVertexLayout(125, this.dynamicLayout);
+          this.drawPrimitives(firstVertex, firstVertex ^ 0, primitiveCount, primitive);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "aw.VE(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "aw.VE(" + firstVertex + ',' + (primitive != null ? "{...}" : "null") + ',' + primitiveCount + ')');
         }
     }
 
-    final void a(LegacyAlphaFontLoader param0, int param1) {
+    final void setTextureTransformMode(TextureTransformMode mode, int guard) {
         try {
-          if (param1 != 28880) {
-            this.N(-123);
+          if (guard != 28880) {
+            this.applyViewMatrix(-123);
           }
-          this.field_wb[this.field_mc] = param0;
-          this.j(param1 ^ 28752);
+          this.textureTransformModes[this.activeTextureUnit] = mode;
+          this.textureTransformChanged(guard ^ 28752);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "aw.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "aw.A(" + (mode != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
     final void e(boolean param0) {
         int var2 = 0;
         int var3 = Sumoblitz.field_L ? 1 : 0;
-        this.field_V = new AffineTransform3D[this.field_cc];
-        this.field_Zb = new GpuTexture[this.field_cc];
-        this.field_wb = new LegacyAlphaFontLoader[this.field_cc];
-        this.field_K = new TextureCombineOperation[this.field_cc];
-        this.field_B = new TextureCombineOperation[this.field_cc];
-        for (var2 = 0; this.field_cc > var2; var2++) {
+        this.textureTransforms = new AffineTransform3D[this.textureUnitCount];
+        this.field_Zb = new GpuTexture[this.textureUnitCount];
+        this.textureTransformModes = new TextureTransformMode[this.textureUnitCount];
+        this.field_K = new TextureCombineOperation[this.textureUnitCount];
+        this.field_B = new TextureCombineOperation[this.textureUnitCount];
+        for (var2 = 0; this.textureUnitCount > var2; var2++) {
           this.field_B[var2] = SlowBurstParticle.MODULATE;
           this.field_K[var2] = SlowBurstParticle.MODULATE;
-          this.field_wb[var2] = HotspotTextWidget.field_L;
-          this.field_V[var2] = new AffineTransform3D();
+          this.textureTransformModes[var2] = HotspotTextWidget.TEXTURE_TRANSFORM_DISABLED;
+          this.textureTransforms[var2] = new AffineTransform3D();
         }
         this.field_pb = new ko[-2 + this.field_bc];
         this.field_D = (GpuTexture) ((Object) this.a(GpuDataType.UNSIGNED_BYTE, BeveledTextInputRenderer.RGBA, 1, 1, (byte) -110));
@@ -649,39 +649,39 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         if (!this.effects[9].isSupported((byte) -43)) {
           this.effects[9] = this.effects[8];
         }
-        this.D(1);
-        this.m(-16088);
+        this.resetDriverState(1);
+        this.resetClip(-16088);
         this.copyFrontToBack();
     }
 
     abstract void releaseSurface(java.awt.Canvas canvas, Object surface, int guard);
 
-    private final void u(int param0) {
-        this.field_Jb = false;
-        if (param0 != 2) {
+    private final void invalidatePerspectiveProjection(int guard) {
+        this.perspectiveValid = false;
+        if (guard != 2) {
           return;
         }
-        this.R(param0 ^ -63);
-        if (pd.field_m == this.field_s) {
-          this.g(param0 ^ 3);
+        this.buildPerspectiveProjection(guard ^ -63);
+        if (pd.PERSPECTIVE == this.projectionMode) {
+          this.projectionChanged(guard ^ 3);
         }
     }
 
-    final void a(boolean param0, int param1) {
-        if (param0) {
+    final void setTextureConstantColor(boolean guard, int color) {
+        if (guard) {
           return;
         }
-        if (param1 != this.field_Ub) {
-          this.field_Ub = param1;
+        if (color != this.textureConstantColor) {
+          this.textureConstantColor = color;
           this.applyTextureConstantColor(1);
         }
     }
 
-    final AffineTransform3D B(int param0) {
-        if (param0 != 0) {
+    final AffineTransform3D textureTransform(int guard) {
+        if (guard != 0) {
           return (AffineTransform3D) null;
         }
-        return this.field_V[this.field_mc];
+        return this.textureTransforms[this.activeTextureUnit];
     }
 
     final static void C(int param0) {
@@ -718,24 +718,24 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    private final void W(int param0) {
-        this.field_R = false;
-        if (param0 != 16) {
+    private final void viewTransformChanged(int guard) {
+        this.modelViewValid = false;
+        if (guard != 16) {
           this.field_Kb = 40;
         }
         if (this.activeShaderEffect != null) {
-          this.activeShaderEffect.updateTransformUniforms(param0 ^ -90);
+          this.activeShaderEffect.updateTransformUniforms(guard ^ -90);
         }
-        this.N(-26911);
+        this.applyViewMatrix(-26911);
     }
 
     abstract void bindVertexLayout(int guard, VertexLayout layout);
 
     abstract boolean a(byte param0, GpuDataType param1, TextureFormat param2);
 
-    void D(int param0) {
+    void resetDriverState(int guard) {
         this.T(-1);
-        if (param0 != 1) {
+        if (guard != 1) {
           byte[] var3 = (byte[]) null;
           this.a(true, (TextureFormat) null, -62, 114, (byte[]) null, 71);
         }
@@ -780,10 +780,10 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     final void getClip(int[] bounds) {
         try {
-          bounds[0] = this.field_v;
-          bounds[3] = this.field_yc;
-          bounds[2] = this.field_F;
-          bounds[1] = this.field_vb;
+          bounds[0] = this.clipTop;
+          bounds[3] = this.clipBottom;
+          bounds[2] = this.clipRight;
+          bounds[1] = this.clipLeft;
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "aw.K(" + (bounds != null ? "{...}" : "null") + ')');
         }
@@ -793,20 +793,20 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     final void drawCircle(int centerX, int centerY, int radius, int color, int blendMode) {
         this.f((byte) 117);
-        this.a(false, color);
-        this.a(AccountRequestState.CONSTANT, 0, 0);
-        this.a(AccountRequestState.CONSTANT, 0, true);
-        this.e(blendMode, 13);
-        this.field_Lb.setScale((float)radius, (float)radius, 0, 1.0f);
-        this.field_Lb.translate(centerY, centerX, (byte) 103, 0);
-        this.U(0);
+        this.setTextureConstantColor(false, color);
+        this.setColorCombineSource(AccountRequestState.CONSTANT, 0, 0);
+        this.setAlphaCombineSource(AccountRequestState.CONSTANT, 0, true);
+        this.setBlendMode(blendMode, 13);
+        this.modelTransform.setScale((float)radius, (float)radius, 0, 1.0f);
+        this.modelTransform.translate(centerY, centerX, (byte) 103, 0);
+        this.modelTransformChanged(0);
         this.setMultisampling(1, false);
         this.bindVertexBuffer(0, 121, this.field_Qb);
         this.bindVertexLayout(-64, this.field_n);
-        this.drawPrimitives(1, 0, 256, rv.LINE_STRIP);
+        this.drawPrimitives(1, 0, 256, AccountCreationNavigation.LINE_STRIP);
         this.setMultisampling(1, true);
-        this.a(LegacyVertexAttribute.TEXTURE, 0, true);
-        this.a(LegacyVertexAttribute.TEXTURE, 0, 0);
+        this.setAlphaCombineSource(LegacyVertexAttribute.TEXTURE, 0, true);
+        this.setColorCombineSource(LegacyVertexAttribute.TEXTURE, 0, 0);
     }
 
     final static void j(byte param0) {
@@ -840,22 +840,22 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          param1[0] = this.field_A[0];
-          param1[8] = this.field_A[2];
-          param1[12] = this.field_A[3];
-          param1[4] = this.field_A[1];
-          param1[5] = this.field_A[5];
-          param1[1] = this.field_A[4];
-          param1[13] = this.field_A[7];
-          param1[9] = this.field_A[6];
-          param1[2] = this.field_A[8];
-          param1[14] = this.field_A[11];
-          param1[10] = this.field_A[10];
-          param1[6] = this.field_A[9];
-          param1[3] = this.field_A[12];
-          param1[7] = this.field_A[13];
-          param1[15] = this.field_A[15];
-          param1[11] = this.field_A[14];
+          param1[0] = this.projectionMatrix[0];
+          param1[8] = this.projectionMatrix[2];
+          param1[12] = this.projectionMatrix[3];
+          param1[4] = this.projectionMatrix[1];
+          param1[5] = this.projectionMatrix[5];
+          param1[1] = this.projectionMatrix[4];
+          param1[13] = this.projectionMatrix[7];
+          param1[9] = this.projectionMatrix[6];
+          param1[2] = this.projectionMatrix[8];
+          param1[14] = this.projectionMatrix[11];
+          param1[10] = this.projectionMatrix[10];
+          param1[6] = this.projectionMatrix[9];
+          param1[3] = this.projectionMatrix[12];
+          param1[7] = this.projectionMatrix[13];
+          param1[15] = this.projectionMatrix[15];
+          param1[11] = this.projectionMatrix[14];
           if (param0 > -44) {
             this.field_peer = -100L;
           }
@@ -881,23 +881,23 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         return true;
     }
 
-    private final void r(byte param0) {
-        this.field_Wb = this.createVertexBuffer((byte) 51, true);
-        this.field_Wb.allocate(12, (byte) -35, 24);
-        if (param0 < 102) {
+    private final void createLineBuffer(byte guard) {
+        this.lineVertices = this.createVertexBuffer((byte) 51, true);
+        this.lineVertices.allocate(12, (byte) -35, 24);
+        if (guard < 102) {
           this.field_db = false;
         }
-        this.field_xc = this.a(new VertexStreamLayout[]{new VertexStreamLayout(VertexAttribute.POSITION)}, (byte) 118);
+        this.lineLayout = this.a(new VertexStreamLayout[]{new VertexStreamLayout(VertexAttribute.POSITION)}, (byte) 118);
     }
 
     private final void f(byte param0) {
         int var2 = 90 / ((param0 - 40) / 56);
         if (this.field_ic != 1) {
           this.L(-25);
-          this.c(false, -32);
-          this.d(123, false);
-          this.c(90, false);
-          this.b(false, 4);
+          this.setFogAllowed(false, -32);
+          this.setLightingEnabled(123, false);
+          this.setDepthTestEnabled(90, false);
+          this.setDepthWriteEnabled(false, 4);
           this.a(-2, false, 50, false);
           this.h(57, 1);
           this.a(this.field_D, 117);
@@ -912,20 +912,20 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           farPlane != this.field_Yb) {
           this.field_Yb = farPlane;
           this.field_oc = nearPlane;
-          this.u(2);
-          this.Q(13);
-          this.n((byte) -78);
+          this.invalidatePerspectiveProjection(2);
+          this.invalidateOrthographicProjection(13);
+          this.fogChanged((byte) -78);
         }
     }
 
     abstract Texture2D a(GpuDataType param0, TextureFormat param1, int param2, int param3, byte param4);
 
-    final void b(int param0, boolean param1) {
-        if ((!param1 ? 1 : 0) != (!this.field_Rb ? 1 : 0)) {
-          this.field_Rb = param1 ? true : false;
+    final void setFogEnabled(int guard, boolean enabled) {
+        if ((!enabled ? 1 : 0) != (!this.fogEnabled ? 1 : 0)) {
+          this.fogEnabled = enabled ? true : false;
           this.applyFogEnabled((byte) -119);
         }
-        if (param0 != 0) {
+        if (guard != 0) {
           this.field_oc = -100;
         }
     }
@@ -948,16 +948,16 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           return;
         }
         this.f((byte) -57);
-        this.a(false, color);
-        this.a(AccountRequestState.CONSTANT, 0, 0);
-        this.a(AccountRequestState.CONSTANT, 0, true);
-        this.e(blendMode, 13);
-        this.k(1);
+        this.setTextureConstantColor(false, color);
+        this.setColorCombineSource(AccountRequestState.CONSTANT, 0, 0);
+        this.setAlphaCombineSource(AccountRequestState.CONSTANT, 0, true);
+        this.setBlendMode(blendMode, 13);
+        this.resetModelTransform(1);
         this.setMultisampling(1, false);
-        this.g(false);
+        this.drawLineBuffer(false);
         this.setMultisampling(1, true);
-        this.a(LegacyVertexAttribute.TEXTURE, 0, true);
-        this.a(LegacyVertexAttribute.TEXTURE, 0, 0);
+        this.setAlphaCombineSource(LegacyVertexAttribute.TEXTURE, 0, true);
+        this.setColorCombineSource(LegacyVertexAttribute.TEXTURE, 0, 0);
     }
 
     private final void O(int param0) {
@@ -966,12 +966,12 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         int var5;
         jaclib.memory.Stream var4;
         var5 = Sumoblitz.field_L ? 1 : 0;
-        this.field_x = this.createVertexBuffer((byte) 51, false);
-        this.field_x.allocate(28, (byte) -35, 140);
+        this.dynamicVertices = this.createVertexBuffer((byte) 51, false);
+        this.dynamicVertices.allocate(28, (byte) -35, 140);
         var2 = 0;
         scanLoop1: while (true) {
           if (4 > var2) {
-            var3 = this.field_x.map(7454, true);
+            var3 = this.dynamicVertices.map(7454, true);
             if (var3 != null) {
               var4 = this.a(true, var3);
               if (jaclib.memory.Stream.b()) {
@@ -1048,7 +1048,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
                 var4.b(0.0f);
               }
               var4.a();
-              if (this.field_x.unmap(22957)) {
+              if (this.dynamicVertices.unmap(22957)) {
                 break scanLoop1;
               }
             }
@@ -1057,9 +1057,9 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           }
           break;
         }
-        this.field_nb = this.a(new VertexStreamLayout[]{new VertexStreamLayout(new VertexAttribute[]{VertexAttribute.POSITION, VertexAttribute.TEXCOORD2, VertexAttribute.TEXCOORD2})}, (byte) 99);
+        this.dynamicLayout = this.a(new VertexStreamLayout[]{new VertexStreamLayout(new VertexAttribute[]{VertexAttribute.POSITION, VertexAttribute.TEXCOORD2, VertexAttribute.TEXCOORD2})}, (byte) 99);
         if (param0 != 5) {
-          this.j(-25);
+          this.textureTransformChanged(-25);
         }
         return;
     }
@@ -1075,8 +1075,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           if (param1 <= 89) {
             discarded$1 = this.a(-0.810268759727478f, 2.1692757606506348f, false, -2.797441005706787f, 1.3712314367294312f, 0.6615611910820007f, 0.5074755549430847f);
           }
-          if (this.field_Zb[this.field_mc] != param0) {
-            this.field_Zb[this.field_mc] = param0;
+          if (this.field_Zb[this.activeTextureUnit] != param0) {
+            this.field_Zb[this.activeTextureUnit] = param0;
             if (param0 != null) {
               param0.bind(8905);
             } else {
@@ -1188,18 +1188,18 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    private final void g(int param0) {
+    private final void projectionChanged(int guard) {
         this.applyProjectionMatrix(-2);
         if (null != this.activeShaderEffect) {
           this.activeShaderEffect.updateProjectionUniforms(false);
         }
-        if (param0 != 1) {
+        if (guard != 1) {
           this.effectParameters1 = 74;
         }
     }
 
-    final void e(int param0, int param1) {
-        il var3;
+    final void setBlendMode(int mode, int guard) {
+        BlendMode var3;
         int var4;
         int var5;
         int var6;
@@ -1209,30 +1209,30 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         int stackIn_25_0 = 0;
         boolean stackIn_29_1 = false;
         var6 = Sumoblitz.field_L ? 1 : 0;
-        if (param1 != 13) {
+        if (guard != 13) {
           this.field_cb = (jaclib.memory.Stream) null;
         }
-        if (param0 != this.field_N) {
-          if (param0 != 1) {
-            if (param0 == 2) {
+        if (mode != this.blendMode) {
+          if (mode != 1) {
+            if (mode == 2) {
               var5 = 0;
               var4 = 1;
-              var3 = ServerDataReadRequest.field_n;
+              var3 = ServerDataReadRequest.ADDITIVE_BLEND;
             } else {
-              if (param0 == 128) {
-                var3 = ShrinkingRingEffect.field_t;
+              if (mode == 128) {
+                var3 = ShrinkingRingEffect.DESTINATION_COLOR_BLEND;
                 var5 = 1;
                 var4 = 1;
               } else {
                 var5 = 0;
-                var3 = StrongCacheReference.field_B;
+                var3 = StrongCacheReference.NO_BLEND;
                 var4 = 0;
               }
             }
           } else {
             var5 = 1;
             var4 = 1;
-            var3 = LimitedRandomAccessFile.field_a;
+            var3 = LimitedRandomAccessFile.ALPHA_BLEND;
           }
           stackIn_14_0 = (this.field_u) ? 0 : 1;
           stackIn_17_1 = (var5 != 0) ? 0 : 1;
@@ -1247,17 +1247,17 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
             this.field_ob = stackIn_29_1;
             this.applyBlendEnabled((byte) -4);
           }
-          if (var3 != this.field_l) {
-            this.field_l = var3;
+          if (var3 != this.blendFactors) {
+            this.blendFactors = var3;
             this.applyBlendFactors(-19519);
           }
-          this.field_N = param0;
+          this.blendMode = mode;
           this.field_ic = this.field_ic & -29;
         }
     }
 
     private final boolean a(float param0, float param1, boolean param2, float param3, float param4, float param5, float param6) {
-        jaclib.memory.Buffer var10 = this.field_Wb.map(7454, param2);
+        jaclib.memory.Buffer var10 = this.lineVertices.map(7454, param2);
         if (var10 == null) {
           return false;
         }
@@ -1278,31 +1278,31 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           var9.a(param0);
         }
         var9.a();
-        return this.field_Wb.unmap(22957);
+        return this.lineVertices.unmap(22957);
     }
 
     final void fillRectangle(int x, int y, int width, int height, int color, int blendMode) {
         this.f((byte) -104);
-        this.a(false, color);
-        this.a(AccountRequestState.CONSTANT, 0, 0);
-        this.a(AccountRequestState.CONSTANT, 0, true);
-        this.e(blendMode, 13);
-        this.field_Lb.setScale((float)height, (float)width, 0, 1.0f);
-        this.field_Lb.translate(y, x, (byte) 107, 0);
-        this.U(0);
+        this.setTextureConstantColor(false, color);
+        this.setColorCombineSource(AccountRequestState.CONSTANT, 0, 0);
+        this.setAlphaCombineSource(AccountRequestState.CONSTANT, 0, true);
+        this.setBlendMode(blendMode, 13);
+        this.modelTransform.setScale((float)height, (float)width, 0, 1.0f);
+        this.modelTransform.translate(y, x, (byte) 107, 0);
+        this.modelTransformChanged(0);
         this.setMultisampling(1, false);
-        this.n(2);
+        this.drawTriangleFan(2);
         this.setMultisampling(1, true);
-        this.a(LegacyVertexAttribute.TEXTURE, 0, true);
-        this.a(LegacyVertexAttribute.TEXTURE, 0, 0);
+        this.setAlphaCombineSource(LegacyVertexAttribute.TEXTURE, 0, true);
+        this.setColorCombineSource(LegacyVertexAttribute.TEXTURE, 0, 0);
     }
 
-    final void b(boolean param0, int param1) {
-        if (param1 != 4) {
+    final void setDepthWriteEnabled(boolean enabled, int guard) {
+        if (guard != 4) {
           this.f((byte) -69);
         }
-        if ((!param0 ? 1 : 0) != (!this.field_i ? 1 : 0)) {
-          this.field_i = param0 ? true : false;
+        if ((!enabled ? 1 : 0) != (!this.depthWriteEnabled ? 1 : 0)) {
+          this.depthWriteEnabled = enabled ? true : false;
           this.applyDepthWrite(120);
           this.field_ic = this.field_ic & -32;
         }
@@ -1351,15 +1351,15 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     final void setClip(int left, int top, int right, int bottom) {
         if (left <= 0 && this.field_rb - 1 <= right && top <= 0 &&
           this.field_Sb - 1 <= bottom) {
-          this.m(-16088);
+          this.resetClip(-16088);
           return;
         }
-        this.field_vb = 0 > top ? 0 : top;
-        this.field_yc = this.field_rb < bottom ? 0 : bottom;
-        this.field_F = this.field_rb >= right ? right : 0;
-        this.field_v = left >= 0 ? left : 0;
-        if (!this.field_wc) {
-          this.field_wc = true;
+        this.clipLeft = 0 > top ? 0 : top;
+        this.clipBottom = this.field_rb < bottom ? 0 : bottom;
+        this.clipRight = this.field_rb >= right ? right : 0;
+        this.clipTop = left >= 0 ? left : 0;
+        if (!this.scissorEnabled) {
+          this.scissorEnabled = true;
           this.applyScissorEnabled(-87);
         }
         this.applyScissor(4);
@@ -1368,14 +1368,14 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     abstract void applyAlphaTest(int guard);
 
-    private final void Q(int param0) {
-        this.field_O = false;
-        if (param0 != 13) {
+    private final void invalidateOrthographicProjection(int guard) {
+        this.orthographicValid = false;
+        if (guard != 13) {
           this.O(109);
         }
-        this.Z(0);
-        if (PerlinNoise2D.field_w == this.field_s) {
-          this.g(1);
+        this.buildOrthographicProjection(0);
+        if (PerlinNoise2D.ORTHOGRAPHIC == this.projectionMode) {
+          this.projectionChanged(1);
         }
     }
 
@@ -1397,19 +1397,19 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.applyBlendFactors(param0 - 19518);
         this.applyAlphaTest(-92);
         if (param0 != -1) {
-          this.field_Lb = (AffineTransform3D) null;
+          this.modelTransform = (AffineTransform3D) null;
         }
-        for (var2 = this.field_cc - 1; var2 >= 0; var2--) {
-          this.g(var2, -114);
+        for (var2 = this.textureUnitCount - 1; var2 >= 0; var2--) {
+          this.setActiveTextureUnit(var2, -114);
           this.applyColorCombineOperation((byte) -128);
           this.applyAlphaCombineOperation(-86);
-          this.l(0);
+          this.resetTextureTransform(0);
         }
         this.applyTextureConstantColor(1);
         this.applyViewport(param0 + 1);
         this.applyProjectionMatrix(-2);
-        this.x(param0 + 1);
-        this.N(-26911);
+        this.applyModelMatrix(param0 + 1);
+        this.applyViewMatrix(-26911);
     }
 
     final void a(byte param0, TextureCombineOperation param1, TextureCombineOperation param2) {
@@ -1423,13 +1423,13 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         RuntimeException var4 = null;
         try {
           var4_int = 0;
-          if (param2 != this.field_K[this.field_mc]) {
-            this.field_K[this.field_mc] = param2;
+          if (param2 != this.field_K[this.activeTextureUnit]) {
+            this.field_K[this.activeTextureUnit] = param2;
             var4_int = 1;
             this.applyColorCombineOperation((byte) -93);
           }
-          if (param1 != this.field_B[this.field_mc]) {
-            this.field_B[this.field_mc] = param1;
+          if (param1 != this.field_B[this.activeTextureUnit]) {
+            this.field_B[this.activeTextureUnit] = param1;
             this.applyAlphaCombineOperation(-126);
             var4_int = 1;
           }
@@ -1480,16 +1480,16 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         Throwable var7 = null;
         RuntimeException var7_ref = null;
         this.field_lb = new IntrusiveDeque();
-        this.field_Db = true;
-        this.field_Lb = new AffineTransform3D();
+        this.modelIdentity = true;
+        this.modelTransform = new AffineTransform3D();
         AffineTransform3D discarded$3 = new AffineTransform3D();
         AffineTransform3D discarded$4 = new AffineTransform3D();
-        this.field_Gb = new AffineTransform3D();
-        this.field_sb = new AffineTransform3D();
-        this.field_vc = new AffineTransform3D();
-        this.field_mc = 0;
+        this.viewTransform = new AffineTransform3D();
+        this.scratchTransform = new AffineTransform3D();
+        this.modelViewTransform = new AffineTransform3D();
+        this.activeTextureUnit = 0;
         this.effectParameters1 = 0;
-        this.field_O = false;
+        this.orthographicValid = false;
         this.lightingSuppressed = false;
         this.field_qb = 1.0f;
         this.activeEffect = 0;
@@ -1497,49 +1497,49 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.field_oc = 50;
         this.field_mb = 0;
         this.field_Hb = 0;
-        this.field_vb = 0;
-        this.field_I = false;
+        this.clipLeft = 0;
+        this.lightingEnabled = false;
         this.field_Vb = -1;
-        this.field_Rb = true;
+        this.fogEnabled = true;
         this.field_bb = false;
         this.field_Yb = 3584;
         this.field_Ob = -1;
         this.field_jb = 1.0f;
         this.effectParameters0 = 0;
         this.field_C = -1;
-        this.field_F = 0;
-        this.field_yc = 0;
+        this.clipRight = 0;
+        this.clipBottom = 0;
         this.field_w = new float[]{1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f};
         this.field_sc = 512;
         this.field_fc = new float[16];
-        this.field_l = LimitedRandomAccessFile.field_a;
+        this.blendFactors = LimitedRandomAccessFile.ALPHA_BLEND;
         this.field_zb = false;
         this.field_Z = true;
         this.field_y = 0;
-        this.field_A = this.field_w;
+        this.projectionMatrix = this.field_w;
         this.field_S = -1.0f;
         this.field_Kb = -1;
-        this.field_N = 1;
+        this.blendMode = 1;
         this.field_u = true;
         this.effects = new ShaderEffect[10];
-        this.field_p = false;
+        this.depthTestEnabled = false;
         this.field_tc = 128;
-        this.field_i = false;
+        this.depthWriteEnabled = false;
         this.field_db = true;
         this.field_P = 0;
-        this.field_eb = new float[16];
-        this.field_ec = new float[16];
+        this.orthographicMatrix = new float[16];
+        this.perspectiveMatrix = new float[16];
         this.field_hb = -1.0f;
-        this.field_R = false;
-        this.field_Jb = false;
+        this.modelViewValid = false;
+        this.perspectiveValid = false;
         this.field_T = 1.0f;
         this.field_Xb = 1.0f;
         this.field_U = new float[]{0.0f, 0.0f, -1.0f, 0.0f};
         this.field_rc = 512;
-        this.field_v = 0;
+        this.clipTop = 0;
         this.field_ob = true;
         this.field_r = 0;
-        this.field_s = GameInstructions.field_k;
+        this.projectionMode = GameInstructions.field_k;
         this.field_H = false;
         this.field_k = -1;
         this.field_Nb = 0;
@@ -1645,22 +1645,22 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final void a(TextureCombineSource param0, int param1, int param2) {
-        if (param2 != 0) {
+    final void setColorCombineSource(TextureCombineSource source, int argument, int guard) {
+        if (guard != 0) {
           return;
         }
         try {
-          this.setColorCombineSource((byte) 72, param1, false, false, param0);
+          this.setColorCombineSource((byte) 72, argument, false, false, source);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "aw.PB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "aw.PB(" + (source != null ? "{...}" : "null") + ',' + argument + ',' + guard + ')');
         }
     }
 
     abstract VertexLayout a(VertexStreamLayout[] param0, byte param1);
 
-    private final void j(int param0) {
-        if (param0 != 128) {
-          this.field_vb = -58;
+    private final void textureTransformChanged(int guard) {
+        if (guard != 128) {
+          this.clipLeft = -58;
         }
         this.applyTextureMatrix(26803);
         if (this.activeShaderEffect != null) {
@@ -1673,17 +1673,17 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.field_Hb = centerY;
         this.field_sc = scaleX;
         this.field_rc = scaleY;
-        this.Q(13);
-        this.u(2);
+        this.invalidateOrthographicProjection(13);
+        this.invalidatePerspectiveProjection(2);
         this.d(false);
         this.h((byte) -128);
     }
 
-    private final void n(byte param0) {
+    private final void fogChanged(byte guard) {
         if (this.activeShaderEffect != null) {
           this.activeShaderEffect.updateFogUniforms(260);
         }
-        if (param0 > -25) {
+        if (guard > -25) {
           return;
         }
         this.b(true);
@@ -1692,27 +1692,27 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     void Y(int param0) {
         this.field_Ab = this.field_ub;
         if (param0 >= -83) {
-          this.field_vb = -113;
+          this.clipLeft = -113;
         }
         this.field_ub = 0;
     }
 
-    final jaclib.memory.heap.NativeHeapBuffer a(boolean param0, boolean param1, int param2) {
-        if (param0) {
+    final jaclib.memory.heap.NativeHeapBuffer allocateNativeBuffer(boolean guard, boolean allocationOption, int size) {
+        if (guard) {
           this.field_C = -95;
         }
-        return this.field_gb.a(param2, param1);
+        return this.field_gb.a(size, allocationOption);
     }
 
-    final AffineTransform3D k(byte param0) {
-        if (!this.field_R) {
-          this.field_vc.setProduct(this.field_Gb, (byte) 77, this.field_Lb);
-          this.field_R = true;
+    final AffineTransform3D modelViewTransform(byte guard) {
+        if (!this.modelViewValid) {
+          this.modelViewTransform.setProduct(this.viewTransform, (byte) 77, this.modelTransform);
+          this.modelViewValid = true;
         }
-        if (param0 < 58) {
+        if (guard < 58) {
           return (AffineTransform3D) null;
         }
-        return this.field_vc;
+        return this.modelViewTransform;
     }
 
     abstract void bindVertexBuffer(int stream, int guard, VertexBuffer buffer);
@@ -1720,12 +1720,12 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     final void K(int param0) {
         if (4 != this.field_ic) {
           this.L(-25);
-          this.c(false, -32);
-          this.d(111, false);
-          this.c(80, false);
-          this.b(false, 4);
+          this.setFogAllowed(false, -32);
+          this.setLightingEnabled(111, false);
+          this.setDepthTestEnabled(80, false);
+          this.setDepthWriteEnabled(false, 4);
           this.a(-2, false, 50, false);
-          this.e(1, 13);
+          this.setBlendMode(1, 13);
           this.h(96, 0);
           this.field_ic = 4;
         }
@@ -1750,34 +1750,34 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         if (param0 != -25) {
           this.createHeap(-125);
         }
-        if (this.field_s != PerlinNoiseSliceGenerator.field_h) {
-          var2 = this.field_s;
-          this.field_s = PerlinNoiseSliceGenerator.field_h;
+        if (this.projectionMode != PerlinNoiseSliceGenerator.field_h) {
+          var2 = this.projectionMode;
+          this.projectionMode = PerlinNoiseSliceGenerator.field_h;
           if (var2.usesViewTransform(-20011)) {
-            this.W(16);
+            this.viewTransformChanged(16);
           }
           this.c((byte) -88);
-          this.field_A = this.field_fc;
-          this.g(param0 ^ -26);
+          this.projectionMatrix = this.field_fc;
+          this.projectionChanged(param0 ^ -26);
           this.field_ic = this.field_ic & -25;
         }
     }
 
-    final AffineTransform3D d(int param0) {
-        if (param0 <= 57) {
+    final AffineTransform3D modelTransform(int guard) {
+        if (guard <= 57) {
           return (AffineTransform3D) null;
         }
-        return this.field_Lb;
+        return this.modelTransform;
     }
 
-    final void l(int param0) {
-        if (param0 != 0) {
-          this.a(true, -85);
+    final void resetTextureTransform(int guard) {
+        if (guard != 0) {
+          this.setTextureConstantColor(true, -85);
         }
-        if (HotspotTextWidget.field_L != this.field_wb[this.field_mc]) {
-          this.field_wb[this.field_mc] = HotspotTextWidget.field_L;
-          this.field_V[this.field_mc].setIdentity(1);
-          this.j(128);
+        if (HotspotTextWidget.TEXTURE_TRANSFORM_DISABLED != this.textureTransformModes[this.activeTextureUnit]) {
+          this.textureTransformModes[this.activeTextureUnit] = HotspotTextWidget.TEXTURE_TRANSFORM_DISABLED;
+          this.textureTransforms[this.activeTextureUnit].setIdentity(1);
+          this.textureTransformChanged(128);
         }
     }
 
@@ -1790,7 +1790,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 >= -88) {
-            this.field_Wb = (VertexBuffer) null;
+            this.lineVertices = (VertexBuffer) null;
           }
           stackIn_3_0 = this.a(param2, 0, param0, param4, -64, 0, param1);
           return stackIn_3_0;
@@ -1814,21 +1814,21 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     abstract VertexBuffer createVertexBuffer(byte guard, boolean dynamic);
 
-    final void n(int param0) {
-        this.a(0, AccountServiceResult.TRIANGLE_FAN, param0);
+    final void drawTriangleFan(int primitiveCount) {
+        this.drawDynamicPrimitives(0, AccountServiceResult.TRIANGLE_FAN, primitiveCount);
     }
 
-    final void g(int param0, int param1) {
-        if (param1 > -107) {
+    final void setActiveTextureUnit(int unit, int guard) {
+        if (guard > -107) {
           return;
         }
-        if (param0 != this.field_mc) {
-          this.field_mc = param0;
+        if (unit != this.activeTextureUnit) {
+          this.activeTextureUnit = unit;
           this.applyActiveTexture(-31);
         }
     }
 
-    abstract void x(int param0);
+    abstract void applyModelMatrix(int guard);
 
     private final void p(int param0) {
         if (param0 != 5) {
@@ -1918,10 +1918,10 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     final void w(int param0) {
         if (2 != this.field_ic) {
           this.L(-25);
-          this.c(false, -32);
-          this.d(param0 + 109, false);
-          this.c(83, false);
-          this.b(false, 4);
+          this.setFogAllowed(false, -32);
+          this.setLightingEnabled(param0 + 109, false);
+          this.setDepthTestEnabled(83, false);
+          this.setDepthWriteEnabled(false, 4);
           this.a(-2, false, param0 + 40, false);
           this.field_ic = 2;
         }
@@ -1942,7 +1942,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         int var4;
         var4 = Sumoblitz.field_L ? 1 : 0;
         if (param0 <= 28) {
-          this.field_R = true;
+          this.modelViewValid = true;
         }
         if (param1 == 1) {
           this.a((byte) -83, lf.REPLACE, lf.REPLACE);
@@ -1965,8 +1965,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final int h(int param0) {
-        int var2 = 21 % ((-37 - param0) / 47);
+    final int estimatedResourceBytes(int guard) {
+        int var2 = 21 % ((-37 - guard) / 47);
         return this.field_Cb + (this.field_o + this.field_pc);
     }
 
@@ -1987,7 +1987,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         int var14;
         var14 = Sumoblitz.field_L ? 1 : 0;
         if (param2 != 50) {
-          field_t = (LegacyAlphaFontLoader) null;
+          TEXTURE_PROJECTED = (TextureTransformMode) null;
         }
         boolean decompiledFrameRemainder0 = true;
         if (this.field_Vb == param0) {
@@ -2007,20 +2007,20 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           stackIn_14_0 = (!this.field_fb) ? 0 : 3;
           var9 = stackIn_14_0;
           if (0 > param0) {
-            this.l(0);
+            this.resetTextureTransform(0);
           } else {
             var5 = this.field_lc.getTexture(param2 + 37, param0);
             var10 = this.textureProvider.a(-29193, param0);
             if (var10.field_c == 0 &&
               var10.field_u == 0) {
-              this.l(0);
+              this.resetTextureTransform(0);
             } else {
               stackIn_21_0 = (var10.field_n) ? 64 : 128;
               var11 = stackIn_21_0;
               var12 = var11 * 50;
-              var13 = this.B(0);
+              var13 = this.textureTransform(0);
               var13.setTranslation((float)(this.field_kc % var12 * var10.field_u) / (float)var12, 0.0f, (float)(var10.field_c * (this.field_kc % var12)) / (float)var12, param2 - 50);
-              this.a(IntList.field_c, param2 + 28830);
+              this.setTextureTransformMode(IntList.TEXTURE_COUNT2, param2 + 28830);
             }
             var6 = var10.field_q;
             if (!this.field_fb) {
@@ -2044,11 +2044,11 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     abstract void b(boolean param0);
 
-    final AffineTransform3D g(byte param0) {
-        if (param0 != -28) {
+    final AffineTransform3D viewTransform(byte guard) {
+        if (guard != -28) {
           return (AffineTransform3D) null;
         }
-        return this.field_Gb;
+        return this.viewTransform;
     }
 
     abstract void setMultisampling(int guard, boolean enabled);
@@ -2062,8 +2062,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           this.releaseSurface(var3_ref_java_awt_Canvas, this.field_Q.get(var3_ref_java_awt_Canvas), 0);
         }
         int var3 = 82 % ((11 - param0) / 51);
-        this.field_x.close(12001);
-        this.field_Wb.close(12001);
+        this.dynamicVertices.close(12001);
+        this.lineVertices.close(12001);
         this.field_Qb.close(12001);
         this.field_gc.close((byte) 100);
         this.field_qc.close((byte) 20);
@@ -2074,12 +2074,12 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.field_M.close(12001);
     }
 
-    final void c(boolean param0, int param1) {
-        if (param1 != -32) {
-          this.g((byte) -79);
+    final void setFogAllowed(boolean allowed, int guard) {
+        if (guard != -32) {
+          this.viewTransform((byte) -79);
         }
-        if (param0 != this.field_Bb) {
-          this.field_Bb = param0 ? true : false;
+        if (allowed != this.fogAllowed) {
+          this.fogAllowed = allowed ? true : false;
           this.applyFogEnabled((byte) -119);
           this.field_ic = this.field_ic & -32;
         }
@@ -2087,10 +2087,10 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     abstract void applyTextureMatrix(int guard);
 
-    private final void m(byte param0) {
-        this.field_ec[10] = this.field_q;
-        this.field_ec[14] = this.field_kb;
-        if (param0 != -83) {
+    private final void updateProjectionDepthTerms(byte guard) {
+        this.perspectiveMatrix[10] = this.field_q;
+        this.perspectiveMatrix[14] = this.field_kb;
+        if (guard != -83) {
           this.field_Tb = 1.2932486534118652f;
         }
     }
@@ -2113,12 +2113,12 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
         this.field_Q = var2;
         this.O(5);
-        this.r((byte) 121);
+        this.createLineBuffer((byte) 121);
         this.y(-101);
         this.field_yb.allocateDynamicVertices(117, this);
     }
 
-    private final void Z(int param0) {
+    private final void buildOrthographicProjection(int guard) {
         float[] var2;
         float var3;
         float var4;
@@ -2127,8 +2127,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         float var7;
         float var8;
         float[] var9;
-        if (!this.field_O) {
-          var9 = this.field_eb;
+        if (!this.orthographicValid) {
+          var9 = this.orthographicMatrix;
           var2 = var9;
           var3 = (float)this.field_oc;
           var4 = (float)this.field_Yb;
@@ -2172,22 +2172,22 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
             var2[2] = 0.0f;
             var2[4] = 0.0f;
           }
-          this.p(param0 + 5);
-          this.field_O = true;
+          this.p(guard + 5);
+          this.orthographicValid = true;
         }
-        if (param0 != 0) {
+        if (guard != 0) {
           this.nearPlane();
         }
     }
 
-    final CubeTexture d(byte param0) {
-        if (param0 != 122) {
+    final CubeTexture environmentCubeTexture(byte guard) {
+        if (guard != 122) {
           HardwareGraphicsToolkit.j((byte) 73);
         }
-        if (this.field_uc == null) {
+        if (this.environmentSource == null) {
           return null;
         }
-        return this.field_uc.cubeTexture(param0 ^ 37);
+        return this.environmentSource.cubeTexture(guard ^ 37);
     }
 
     abstract Texture2D a(int param0, int param1, boolean param2, int param3, float[] param4, int param5, byte param6, TextureFormat param7);
@@ -2223,7 +2223,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     abstract Texture2D a(boolean param0, int param1, int[] param2, int param3, int param4, int param5, int param6);
 
-    private final void R(int param0) {
+    private final void buildPerspectiveProjection(int guard) {
         int var2;
         float[] var3;
         float var4;
@@ -2233,9 +2233,9 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         float[] var9;
         float[] var10;
         float var8;
-        var2 = 115 / ((39 - param0) / 47);
-        if (!this.field_Jb) {
-          var10 = this.field_ec;
+        var2 = 115 / ((39 - guard) / 47);
+        if (!this.perspectiveValid) {
+          var10 = this.perspectiveMatrix;
           var9 = var10;
           var3 = var9;
           var4 = (float)(this.field_oc * -this.field_P) / (float)this.field_sc;
@@ -2281,12 +2281,12 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
             var3[4] = 0.0f;
             var3[1] = 0.0f;
           }
-          this.m((byte) -83);
-          this.field_Jb = true;
+          this.updateProjectionDepthTerms((byte) -83);
+          this.perspectiveValid = true;
         }
     }
 
     static {
-        field_t = new LegacyAlphaFontLoader();
+        TEXTURE_PROJECTED = new TextureTransformMode();
     }
 }

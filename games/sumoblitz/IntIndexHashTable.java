@@ -23,7 +23,7 @@ final class IntIndexHashTable {
           throw new IllegalStateException();
         }
         HardwareTextureSprite.field_m = true;
-        jv.a(true, false);
+        jv.showLoginDialog(true, false);
         jv.field_a = param0;
     }
 

@@ -73,7 +73,7 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
         if (guard >= 0) {
           if (this.field_e) {
             var2 = this.field_h.field_Cc;
-            var3 = this.field_h.k((byte) 107);
+            var3 = this.field_h.modelViewTransform((byte) 107);
             var2.a(0, var3.writeRowMajor4x4(0, field_f));
           }
           return;
@@ -81,7 +81,7 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
         this.setParameters(-80, 91, -81);
         if (this.field_e) {
           var2Lifetime1 = this.field_h.field_Cc;
-          var3Lifetime1 = this.field_h.k((byte) 107);
+          var3Lifetime1 = this.field_h.modelViewTransform((byte) 107);
           var2Lifetime1.a(0, var3Lifetime1.writeRowMajor4x4(0, field_f));
         }
     }
@@ -98,9 +98,9 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
         if (this.field_e) {
           this.field_h.a(-54, (jagdx.IDirect3DVertexShader) null);
           this.field_h.a((byte) 10, (jagdx.IDirect3DPixelShader) null);
-          this.toolkit.g(1, -115);
+          this.toolkit.setActiveTextureUnit(1, -115);
           this.toolkit.a((GpuTexture) null, 97);
-          this.toolkit.g(0, -119);
+          this.toolkit.setActiveTextureUnit(0, -119);
           this.toolkit.a((GpuTexture) null, 98);
           this.field_e = false;
         }
@@ -112,16 +112,16 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
 
     final void enable(boolean lighting, int guard) {
         jagdx.IDirect3DDevice var4 = null;
-        CubeTexture var3 = this.toolkit.d((byte) 122);
+        CubeTexture var3 = this.toolkit.environmentCubeTexture((byte) 122);
         if (guard == 20186) {
           if (this.field_j &&
             var3 != null) {
             var4 = this.field_h.field_Cc;
             this.field_h.a(-73, this.field_g);
             this.field_h.a((byte) -101, this.field_i);
-            this.toolkit.g(1, guard - 20310);
+            this.toolkit.setActiveTextureUnit(1, guard - 20310);
             this.toolkit.a(var3, 99);
-            this.toolkit.g(0, -123);
+            this.toolkit.setActiveTextureUnit(0, -123);
             this.toolkit.a(this.field_k.normalMap, 108);
             this.field_e = true;
             this.updateTransformUniforms(guard ^ -20215);
@@ -148,8 +148,8 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
         AffineTransform3D var4 = null;
         if (this.field_e) {
           var2_ref_jagdx_IDirect3DDevice = this.field_h.field_Cc;
-          var3 = this.field_h.g((byte) -28);
-          var4 = this.field_h.k((byte) 106);
+          var3 = this.field_h.viewTransform((byte) -28);
+          var4 = this.field_h.modelViewTransform((byte) 106);
           var2_ref_jagdx_IDirect3DDevice.a(0, var4.writeRowMajor4x4(0, field_f));
           var2_ref_jagdx_IDirect3DDevice.a(4, var3.writeLinearRowMajor4x4(field_f, (byte) 86));
         }
@@ -162,7 +162,7 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
         if (guard < -47) {
           if (this.field_e) {
             var2 = this.field_h.field_Cc;
-            var3 = this.toolkit.H(26453);
+            var3 = this.toolkit.currentTextureTransform(26453);
             var2.SetVertexShaderConstantF(12, var3.writeFirstTwoRows(field_f, (byte) -37), 2);
           }
           return;

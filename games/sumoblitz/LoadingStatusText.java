@@ -38,11 +38,11 @@ final class LoadingStatusText {
         if (!LegacyOpenGlPostProcessManager.field_f.tryLoadNamedGroup("commonui", 100)) {
           return HuffmanDecoder.loadingFontsText + " - " + LegacyOpenGlPostProcessManager.field_f.namedGroupLoadPercent("commonui", (byte) 33) + "%";
         }
-        if (!hw.field_a.loadIndex((byte) 127)) {
+        if (!AudioOutputBootstrap.field_a.loadIndex((byte) 127)) {
           return StatefulWidgetRenderer.waitingForExtraDataText;
         }
-        if (!hw.field_a.tryLoadAllGroups(true)) {
-          return ReflectionCheck.loadingExtraDataText + " - " + hw.field_a.loadPercent(0) + "%";
+        if (!AudioOutputBootstrap.field_a.tryLoadAllGroups(true)) {
+          return ReflectionCheck.loadingExtraDataText + " - " + AudioOutputBootstrap.field_a.loadPercent(0) + "%";
         }
         return AccountRequestState.pleaseWaitText;
     }

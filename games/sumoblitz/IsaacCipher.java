@@ -233,7 +233,7 @@ final class IsaacCipher {
             field_k = 85;
           }
           while (var3 > var5) {
-            if (!kh.a(param1, false)) {
+            if (!kh.readBitFlag(param1, false)) {
               var6 = param1.readBits(DirectByteArrayStorage.c(-1 + var5, 1), (byte) -123);
               var4[var5] = var4[var6];
             } else {

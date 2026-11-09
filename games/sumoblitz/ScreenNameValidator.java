@@ -129,7 +129,7 @@ final class ScreenNameValidator extends TextInputValidator {
               this.available = var3.success;
               this.lastCheckedName = text;
             } else {
-              stackIn_11_0 = kt.PENDING;
+              stackIn_11_0 = FullscreenPromptController.PENDING;
               return stackIn_11_0;
             }
           }
@@ -216,17 +216,17 @@ final class ScreenNameValidator extends TextInputValidator {
             for (var5 = 0; var4 > var5; var5++) {
               LegacyOpenGlPostProcessManager.field_a[var5] = -1;
             }
-            jo.field_b = new int[2];
+            ByteArrayPool.field_b = new int[2];
             for (var5 = 0; var5 < var3_int; var5++) {
               IntIndexHashTable.field_c[var5] = GameInstructions.field_c[var5];
             }
             IntIndexHashTable.field_c[-3 + var4] = "";
             IntIndexHashTable.field_c[-2 + var4] = AudioServiceThread.membersText;
             LegacyOpenGlPostProcessManager.field_a[-2 + var4] = 0;
-            jo.field_b[0] = 4;
+            ByteArrayPool.field_b[0] = 4;
             IntIndexHashTable.field_c[-1 + var4] = DraggableWidget.closeText;
             LegacyOpenGlPostProcessManager.field_a[-1 + var4] = 1;
-            jo.field_b[1] = 5;
+            ByteArrayPool.field_b[1] = 5;
           } else if (DroneChargeParticle.field_s == 1) {
             var3_int = DelegatingCanvas.a(GameInstructions.field_c, ValidatedTextInputWidget.field_R, LegacyOpenGlVertexBuffer.field_j, false, IntrusiveNode.fullscreenPlayIsAnText);
             var4 = var3_int + 2;
@@ -235,14 +235,14 @@ final class ScreenNameValidator extends TextInputValidator {
             for (var5 = 0; var4 > var5; var5++) {
               LegacyOpenGlPostProcessManager.field_a[var5] = -1;
             }
-            jo.field_b = new int[1];
+            ByteArrayPool.field_b = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
               IntIndexHashTable.field_c[var5] = GameInstructions.field_c[var5];
             }
             IntIndexHashTable.field_c[-2 + var4] = "";
             IntIndexHashTable.field_c[-1 + var4] = DraggableWidget.closeText;
             LegacyOpenGlPostProcessManager.field_a[var4 - 1] = 0;
-            jo.field_b[0] = 5;
+            ByteArrayPool.field_b[0] = 5;
           } else if (DroneChargeParticle.field_s != 2) {
             if (DroneChargeParticle.field_s == 3) {
               if (!lt.field_m.field_f) {
@@ -256,14 +256,14 @@ final class ScreenNameValidator extends TextInputValidator {
               for (var5 = 0; var4 > var5; var5++) {
                 LegacyOpenGlPostProcessManager.field_a[var5] = -1;
               }
-              jo.field_b = new int[1];
+              ByteArrayPool.field_b = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
                 IntIndexHashTable.field_c[var5] = GameInstructions.field_c[var5];
               }
               IntIndexHashTable.field_c[-2 + var4] = "";
               IntIndexHashTable.field_c[-1 + var4] = DraggableWidget.closeText;
               LegacyOpenGlPostProcessManager.field_a[-1 + var4] = 0;
-              jo.field_b[0] = 5;
+              ByteArrayPool.field_b[0] = 5;
             } else if (4 == DroneChargeParticle.field_s) {
               var3_int = DelegatingCanvas.a(GameInstructions.field_c, ValidatedTextInputWidget.field_R, LegacyOpenGlVertexBuffer.field_j, false, LimitedRandomAccessFile.field_c);
               var4 = var3_int + 2;
@@ -272,14 +272,14 @@ final class ScreenNameValidator extends TextInputValidator {
               for (var5 = 0; var5 < var4; var5++) {
                 LegacyOpenGlPostProcessManager.field_a[var5] = -1;
               }
-              jo.field_b = new int[1];
+              ByteArrayPool.field_b = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
                 IntIndexHashTable.field_c[var5] = GameInstructions.field_c[var5];
               }
               IntIndexHashTable.field_c[-2 + var4] = "";
               IntIndexHashTable.field_c[var4 - 1] = DraggableWidget.closeText;
               LegacyOpenGlPostProcessManager.field_a[var4 - 1] = 0;
-              jo.field_b[0] = 5;
+              ByteArrayPool.field_b[0] = 5;
             } else {
               if (DroneChargeParticle.field_s != 5) {
                 throw new IllegalArgumentException();
@@ -291,17 +291,17 @@ final class ScreenNameValidator extends TextInputValidator {
               for (var5 = 0; var4 > var5; var5++) {
                 LegacyOpenGlPostProcessManager.field_a[var5] = -1;
               }
-              jo.field_b = new int[2];
+              ByteArrayPool.field_b = new int[2];
               for (var5 = 0; var5 < var3_int; var5++) {
                 IntIndexHashTable.field_c[var5] = GameInstructions.field_c[var5];
               }
               IntIndexHashTable.field_c[-3 + var4] = "";
               IntIndexHashTable.field_c[var4 - 2] = FullscreenMembershipDialog.tryAgainText;
               LegacyOpenGlPostProcessManager.field_a[-2 + var4] = 0;
-              jo.field_b[0] = 3;
+              ByteArrayPool.field_b[0] = 3;
               IntIndexHashTable.field_c[var4 - 1] = DraggableWidget.closeText;
               LegacyOpenGlPostProcessManager.field_a[var4 - 1] = 1;
-              jo.field_b[1] = 5;
+              ByteArrayPool.field_b[1] = 5;
             }
           } else {
             var3_int = DelegatingCanvas.a(GameInstructions.field_c, ValidatedTextInputWidget.field_R, LegacyOpenGlVertexBuffer.field_j, false, LegacyOpenGlInterleavedStream.formatIndexedTokens(ClientExceptionSupport.ifYouDoNothingText, new String[]{"<br><%0><br>"}, (byte) -128));
@@ -354,12 +354,12 @@ final class ScreenNameValidator extends TextInputValidator {
             for (var8 = 0; var8 < var7; var8++) {
               LegacyOpenGlPostProcessManager.field_a[var8] = -1;
             }
-            jo.field_b = new int[2];
+            ByteArrayPool.field_b = new int[2];
             IntIndexHashTable.field_c[0] = NanoTickClock.clickText;
             IntIndexHashTable.field_c[1] = km.acceptText;
             LegacyOpenGlPostProcessManager.field_a[1] = 0;
-            jo.field_b[1] = 2;
-            jo.field_b[0] = 5;
+            ByteArrayPool.field_b[1] = 2;
+            ByteArrayPool.field_b[0] = 5;
             LegacyOpenGlPostProcessManager.field_a[3] = 1;
             IntIndexHashTable.field_c[5] = "";
             IntIndexHashTable.field_c[3] = up.cancelText;
@@ -391,7 +391,7 @@ final class ScreenNameValidator extends TextInputValidator {
             }
             LegacyOpenGlEffectManager.field_f = wq.monotonicTimeMillis(-17);
           }
-          RendererPreference.field_a.itemCount = jo.field_b.length;
+          RendererPreference.field_a.itemCount = ByteArrayPool.field_b.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; var4Lifetime1 < IntIndexHashTable.field_c.length; var4Lifetime1++) {
             stackIn_90_0 = -27;

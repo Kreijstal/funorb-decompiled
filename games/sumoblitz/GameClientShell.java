@@ -177,7 +177,7 @@ abstract class GameClientShell extends GameApplet {
           }
           EmailCredentials.field_j = LegacyOpenGlPostProcessEffect.a(11880, true, OpenGlUnderwaterEffect.field_i, 1, false);
           LegacyOpenGlPostProcessManager.field_f = LegacyOpenGlPostProcessEffect.a(11880, true, AudioServiceThread.field_h, 1, false);
-          hw.field_a = LegacyOpenGlPostProcessEffect.a(11880, true, LegacyOpenGlUnlitEffect.field_f, 1, false);
+          AudioOutputBootstrap.field_a = LegacyOpenGlPostProcessEffect.a(11880, true, LegacyOpenGlUnlitEffect.field_f, 1, false);
           pi.field_c = EmailCredentials.field_j;
           TextureCoordinateGeneration.field_a = 2;
           RotarySelectorWidget.field_J = LegacyOpenGlPostProcessManager.field_f;
@@ -200,30 +200,30 @@ abstract class GameClientShell extends GameApplet {
           }
         }
         if (3 == TextureCoordinateGeneration.field_a &&
-          ReflectionCheck.commonUiResourcesReady(LegacyOpenGlPostProcessManager.field_f, (byte) 124, hw.field_a, EmailCredentials.field_j) &&
-          DroneWave.tryLoadArchive(hw.field_a, 40)) {
+          ReflectionCheck.commonUiResourcesReady(LegacyOpenGlPostProcessManager.field_f, (byte) 124, AudioOutputBootstrap.field_a, EmailCredentials.field_j) &&
+          DroneWave.tryLoadArchive(AudioOutputBootstrap.field_a, 40)) {
           LruNodeCache.releaseValidationIcons((byte) -93);
           UnderageAccountInfoPanel.e(true);
           HardwareTextureSprite.field_m = false;
           LegacyOpenGlVertexBuffer.field_k = ToolkitImageProducerBuffer.loadingText;
-          ea.a(hw.field_a, NineSlicePanel.field_a, (byte) 40, LegacyOpenGlPostProcessManager.field_f, EmailCredentials.field_j);
+          AccountUiBootstrap.initializeAccountUi(AudioOutputBootstrap.field_a, NineSlicePanel.field_a, (byte) 40, LegacyOpenGlPostProcessManager.field_f, EmailCredentials.field_j);
           if (ProjectionMode.field_c ||
             DropTargetWidget.field_B != null) {
             stackIn_106_0 = 1;
             stackIn_107_1 = !(ProjectionMode.field_c);
             stackIn_109_2 = DropTargetWidget.field_B;
             stackIn_110_3 = !(ProjectionMode.field_c);
-            ea.a(stackIn_106_0, stackIn_107_1, stackIn_109_2, stackIn_110_3);
+            AccountUiBootstrap.showLoginDialog(stackIn_106_0, stackIn_107_1, stackIn_109_2, stackIn_110_3);
           }
           if (ArchiveLoadRequirement.simpleMode) {
             SlowBurstParticle.e(4);
           }
           if (ProxyAuthenticationRequiredException.field_d == null) {
-            ProxyAuthenticationRequiredException.field_d = ea.gameSoundMixer(14263);
-            ContentTransitionDialog.field_O = LoginForm.e(false);
+            ProxyAuthenticationRequiredException.field_d = AccountUiBootstrap.gameSoundMixer(14263);
+            ContentTransitionDialog.field_O = LoginForm.soundOutputBufferSize(false);
           }
-          ss.a(ProxyAuthenticationRequiredException.field_d, (byte) 127, hw.field_a, ContentTransitionDialog.field_O);
-          hw.field_a = null;
+          IntroPreparation.prepareIntro(ProxyAuthenticationRequiredException.field_d, (byte) 127, AudioOutputBootstrap.field_a, ContentTransitionDialog.field_O);
+          AudioOutputBootstrap.field_a = null;
           LegacyOpenGlPostProcessManager.field_f = null;
           EmailCredentials.field_j = null;
           DirectByteArrayStorage.a((java.applet.Applet) (this), (byte) -96);
@@ -254,10 +254,10 @@ abstract class GameClientShell extends GameApplet {
         }
         if (TextureCoordinateGeneration.field_a == 13) {
           var3Lifetime2 = 1;
-          if (ih.field_a != null) {
-            stackIn_138_0 = (!ih.field_a.pollReady(100)) ? 0 : 1;
+          if (LoginDialogState.field_a != null) {
+            stackIn_138_0 = (!LoginDialogState.field_a.pollReady(100)) ? 0 : 1;
             var3Lifetime2 = stackIn_138_0;
-            NameSuggestionsPanel.a(20, ih.field_a.progress, ih.field_a.progressText);
+            NameSuggestionsPanel.a(20, LoginDialogState.field_a.progress, LoginDialogState.field_a.progressText);
           }
           if (var3Lifetime2 != 0) {
             TextureCoordinateGeneration.field_a = 20;
@@ -270,7 +270,7 @@ abstract class GameClientShell extends GameApplet {
           ServerDataWriteRequest.attachInputHandlers(false, NineSlicePanel.field_f);
         }
         if (InteractiveWidget.field_z[8]) {
-          qi.a(8);
+          ReflectionReplySender.sendReflectionReplies(8);
         }
     }
 
@@ -629,7 +629,7 @@ abstract class GameClientShell extends GameApplet {
             }
             var11 = ToolkitImageProducerBuffer.c(82);
             if (var11 != null) {
-              kd.a(var11.booleanValue(), -80);
+              kd.completeEmailAvailability(var11.booleanValue(), -80);
             }
           }
           if (var4 == 2) {

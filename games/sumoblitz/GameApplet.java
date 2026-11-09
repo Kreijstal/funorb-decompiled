@@ -820,7 +820,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     (var2.startsWith("1.6.0_"))) {
                     var3 = 6;
                     while (var3 < var2.length()) {
-                      stackIn_68_0 = ea.isAsciiDigit((byte) -54, var2.charAt(var3));
+                      stackIn_68_0 = AccountUiBootstrap.isAsciiDigit((byte) -54, var2.charAt(var3));
                       if (var5 != 0) {
                         decompiledFrameCompleted0 = false;
                         break;

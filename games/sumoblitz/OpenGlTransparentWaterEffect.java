@@ -13,7 +13,7 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
     final void enable(boolean lighting, int guard) {
         jaggl.OpenGL.glBindProgramARB(34336, this.field_g.programId);
         jaggl.OpenGL.glEnable(34336);
-        this.toolkit.a(FontMetrics.PREVIOUS, 0, guard - 20186);
+        this.toolkit.setColorCombineSource(FontMetrics.PREVIOUS, 0, guard - 20186);
         if (guard != 20186) {
           this.field_j = (OpenGlGraphicsToolkit) null;
         }
@@ -85,7 +85,7 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
     }
 
     final void disable(boolean guard) {
-        this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, 0);
+        this.toolkit.setColorCombineSource(LegacyVertexAttribute.TEXTURE, 0, 0);
         jaggl.OpenGL.glBindProgramARB(34336, 0);
         jaggl.OpenGL.glDisable(34820);
         jaggl.OpenGL.glDisable(34336);

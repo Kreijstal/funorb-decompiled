@@ -9,15 +9,15 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
     final void updateTextureUniforms(byte guard) {
         AffineTransform3D var2 = null;
         AffineTransform3D var3 = null;
-        if (this.toolkit.t(-80) == 0) {
-          var2 = this.toolkit.H(26453);
-          this.toolkit.g(1, -128);
-          var3 = this.toolkit.B(0);
+        if (this.toolkit.activeTextureUnit(-80) == 0) {
+          var2 = this.toolkit.currentTextureTransform(26453);
+          this.toolkit.setActiveTextureUnit(1, -128);
+          var3 = this.toolkit.textureTransform(0);
           var3.copyFrom(0, var2);
           var3.scale(0.125f, 0.125f, -126, 1.0f);
           var3.translate((byte) 96, this.volumeTime, 0.0f, 0.0f);
-          this.toolkit.a(LegacyRidgedWaterNoise.field_y, 28880);
-          this.toolkit.g(0, -122);
+          this.toolkit.setTextureTransformMode(LegacyRidgedWaterNoise.TEXTURE_COUNT3, 28880);
+          this.toolkit.setActiveTextureUnit(0, -122);
         }
         if (guard < -47) {
           return;
@@ -53,15 +53,15 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
     }
 
     final void disable(boolean guard) {
-        this.toolkit.g(1, -115);
+        this.toolkit.setActiveTextureUnit(1, -115);
         if (!guard) {
           this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
-          this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, 0);
-          this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, true);
+          this.toolkit.setColorCombineSource(LegacyVertexAttribute.TEXTURE, 0, 0);
+          this.toolkit.setAlphaCombineSource(LegacyVertexAttribute.TEXTURE, 0, true);
           this.toolkit.c(1, 110);
           this.toolkit.a((GpuTexture) null, 95);
-          this.toolkit.g(0, -111);
-          this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, true);
+          this.toolkit.setActiveTextureUnit(0, -111);
+          this.toolkit.setAlphaCombineSource(LegacyVertexAttribute.TEXTURE, 0, true);
           return;
         }
     }
@@ -78,21 +78,21 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
     }
 
     final void enable(boolean lighting, int guard) {
-        this.toolkit.g(1, -119);
+        this.toolkit.setActiveTextureUnit(1, -119);
         this.toolkit.a((byte) -83, lf.REPLACE, LoginForm.ADD);
         this.toolkit.setColorCombineSource((byte) 111, 0, true, false, LegacyVertexAttribute.TEXTURE);
-        this.toolkit.a(FontMetrics.PREVIOUS, 0, true);
+        this.toolkit.setAlphaCombineSource(FontMetrics.PREVIOUS, 0, true);
         this.toolkit.c(0, guard ^ 20151);
-        this.toolkit.g(0, -124);
+        this.toolkit.setActiveTextureUnit(0, -124);
         if (guard == 20186) {
-          this.toolkit.a(false, -16777216);
-          this.toolkit.a(AccountRequestState.CONSTANT, 0, true);
+          this.toolkit.setTextureConstantColor(false, -16777216);
+          this.toolkit.setAlphaCombineSource(AccountRequestState.CONSTANT, 0, true);
           this.updateTextureUniforms((byte) -107);
           return;
         }
         this.waterTextures = (WaterTextureResources) null;
-        this.toolkit.a(false, -16777216);
-        this.toolkit.a(AccountRequestState.CONSTANT, 0, true);
+        this.toolkit.setTextureConstantColor(false, -16777216);
+        this.toolkit.setAlphaCombineSource(AccountRequestState.CONSTANT, 0, true);
         this.updateTextureUniforms((byte) -107);
     }
 
@@ -118,7 +118,7 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
         int var5;
         int var4;
         var5 = Sumoblitz.field_L ? 1 : 0;
-        this.toolkit.g(1, -117);
+        this.toolkit.setActiveTextureUnit(1, -117);
         if (guard != 34023) {
           this.setParameters(43, 107, 112);
         }
@@ -135,14 +135,14 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
             if (!this.waterTextures.useVolumeTextures) {
               var4 = this.toolkit.field_kc % 4000 * 16 / 4000;
               this.toolkit.a(this.waterTextures.animatedSlices[var4], 93);
-              this.toolkit.g(0, -113);
+              this.toolkit.setActiveTextureUnit(0, -113);
               return;
             }
             this.volumeTime = (float)(this.toolkit.field_kc % 4000) / 4000.0f;
             this.toolkit.a(this.waterTextures.animatedVolume, 122);
           }
         }
-        this.toolkit.g(0, -113);
+        this.toolkit.setActiveTextureUnit(0, -113);
     }
 
     final void refreshState(boolean lighting, byte guard) {

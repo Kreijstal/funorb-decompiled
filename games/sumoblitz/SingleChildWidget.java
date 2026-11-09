@@ -226,7 +226,7 @@ abstract class SingleChildWidget extends UiWidget implements CompositeWidgetMark
             this.child = (UiWidget) null;
             return false;
           }
-          if (hw.field_b[81]) {
+          if (AudioOutputBootstrap.field_b[81]) {
             stackIn_9_0 = this.focusPrevious(false, root);
           } else {
             stackIn_9_0 = this.focusNext(root, false);

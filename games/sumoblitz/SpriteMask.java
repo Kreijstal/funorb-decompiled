@@ -26,7 +26,7 @@ abstract class SpriteMask {
           return;
         }
         try {
-          hw.a(param5, param4, param4, (byte) 123, param1, param2, param0, 1024);
+          AudioOutputBootstrap.initializeAudioOutputs(param5, param4, param4, (byte) 123, param1, param2, param0, 1024);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "aa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

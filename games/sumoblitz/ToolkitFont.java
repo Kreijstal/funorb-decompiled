@@ -106,7 +106,7 @@ abstract class ToolkitFont {
           try {
             if (param0.startsWith("col=")) {
               var6 = (CharSequence) ((Object) param0.substring(4));
-              ArchiveLoadingStage.field_i = ArchiveLoadingStage.field_i & -16777216 | 16777215 & ea.parseInt((byte) -73, var6, 16);
+              ArchiveLoadingStage.field_i = ArchiveLoadingStage.field_i & -16777216 | 16777215 & AccountUiBootstrap.parseInt((byte) -73, var6, 16);
             } else {
               if (param0.equals("/col")) {
                 ArchiveLoadingStage.field_i = 16777215 & PacketBuffer.field_l | -16777216 & ArchiveLoadingStage.field_i;
@@ -125,7 +125,7 @@ abstract class ToolkitFont {
                             } else {
                               if (param0.startsWith("shad=")) {
                                 var10 = (CharSequence) ((Object) param0.substring(5));
-                                LoginMethodPreference.field_b = ArchiveLoadingStage.field_i & -16777216 | ea.parseInt((byte) -73, var10, 16);
+                                LoginMethodPreference.field_b = ArchiveLoadingStage.field_i & -16777216 | AccountUiBootstrap.parseInt((byte) -73, var10, 16);
                               } else {
                                 if (!param0.equals("shad")) {
                                   if (!param0.equals("/shad")) {
@@ -148,7 +148,7 @@ abstract class ToolkitFont {
                         }
                       } else {
                         var9 = (CharSequence) ((Object) param0.substring(2));
-                        StatefulWidgetRenderer.field_p = -16777216 & ArchiveLoadingStage.field_i | ea.parseInt((byte) -73, var9, 16);
+                        StatefulWidgetRenderer.field_p = -16777216 & ArchiveLoadingStage.field_i | AccountUiBootstrap.parseInt((byte) -73, var9, 16);
                       }
                     } else {
                       ScrollControl.field_I = -1;
@@ -158,14 +158,14 @@ abstract class ToolkitFont {
                   }
                 } else {
                   var8 = (CharSequence) ((Object) param0.substring(4));
-                  ScrollControl.field_I = -16777216 & ArchiveLoadingStage.field_i | ea.parseInt((byte) -73, var8, 16);
+                  ScrollControl.field_I = -16777216 & ArchiveLoadingStage.field_i | AccountUiBootstrap.parseInt((byte) -73, var8, 16);
                 }
               } else {
                 ArchiveLoadingStage.field_i = PacketBuffer.field_l;
               }
             } else {
               var7 = (CharSequence) ((Object) param0.substring(5));
-              ArchiveLoadingStage.field_i = ea.parseInt((byte) -73, var7, 16);
+              ArchiveLoadingStage.field_i = AccountUiBootstrap.parseInt((byte) -73, var7, 16);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -508,8 +508,8 @@ abstract class ToolkitFont {
         HotspotTextWidget.field_E = UsernameCredentials.loadNamedSprite("commonui", "jagex_logo_grey", -104, param0);
         LevelCompleteUpgradeScreen.field_j = LegacyOpenGlBuffer.a("button", param0, true, "commonui");
         ToolkitRasterStateCacheEntry.field_m = DelayedInboundPacket.a(param0, "commonui", (byte) -56, "validation");
-        jm.field_a = (LegacyBitmapFont) ((Object) vf.a(param1, true, "commonui", "arezzo12", param0));
-        kw.field_b = (LegacyBitmapFont) ((Object) vf.a(param1, true, "commonui", "arezzo14", param0));
+        MouseInputShutdown.field_a = (LegacyBitmapFont) ((Object) vf.a(param1, true, "commonui", "arezzo12", param0));
+        TextCaretLayout.field_b = (LegacyBitmapFont) ((Object) vf.a(param1, true, "commonui", "arezzo14", param0));
         LegacyOpenGlDisplayLists.field_a = (LegacyBitmapFont) ((Object) vf.a(param1, true, "commonui", "arezzo14bold", param0));
         Sprite var17 = new Sprite(param3.fetchNamedFile("", "button.gif", -1), (java.awt.Component) ((Object) NineSlicePanel.field_f));
         ScrollPane.a((byte) 83, param0, "dropdown", "commonui");

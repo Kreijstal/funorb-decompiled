@@ -27,16 +27,16 @@ final class LegacyTurbulentWaterNoise extends TurbulenceNoise3D {
     }
 
     final static void advanceToNextLevel(int guard) {
-        il.field_a = FadingWidget.score;
+        BlendMode.lastLevelScore = FadingWidget.score;
         OpenGlShaderProgram.levelIndex = OpenGlShaderProgram.levelIndex + 1;
         kr.field_e = 3;
         AccountCreationProgressDialog.field_ob = true;
         if (!HardwareQuadBatchBuffers.hasActivePlayer(-89)) {
           return;
         }
-        ke.a(false);
+        ke.beginCurrentWave(false);
         ComboState.comboCount = 0;
-        pd.scoreMultiplier = un.field_a[0];
+        pd.scoreMultiplier = ScoreMultiplierTable.multipliers[0];
         FadingWidget.score = 0;
         CacheReferenceNode.field_u = 0;
         ArchiveLoadRequirement.playSoundEffect(guard, true);

@@ -112,7 +112,7 @@ final class ByteArrayCacheNode extends DualLinkNode {
           }
           TextureFormat.elapsedTicks = 0;
           MusicPatch.simulationPaused = false;
-          ke.a(false);
+          ke.beginCurrentWave(false);
           HardwareUnlitEffect.field_e = 1000;
           TextLayout.a(0, OpenGlShaderProgram.levelIndex % 5 + 1);
           return;

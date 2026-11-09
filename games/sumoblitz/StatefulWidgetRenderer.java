@@ -67,7 +67,7 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
             stackIn_3_0 = (UiWidget) (widget);
           }
           var11 = (InteractiveWidget) (stackIn_3_0);
-          kw.pushClip(parentY + widget.y + widget.height, parentY + widget.y, 1, parentX + widget.x, widget.x + (parentX + widget.width));
+          TextCaretLayout.pushClip(parentY + widget.y + widget.height, parentY + widget.y, 1, parentX + widget.x, widget.x + (parentX + widget.width));
           if (var11 != null) {
             isEnabled = isEnabled & var11.enabled;
           }

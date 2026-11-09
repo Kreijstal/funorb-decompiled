@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class hw {
+final class AudioOutputBootstrap {
     static boolean[] field_b;
     static ResourceArchive field_a;
 
@@ -18,23 +18,23 @@ final class hw {
         }
     }
 
-    final static void a(java.awt.Component param0, int param1, int param2, byte param3, boolean param4, MusicCrossfadeStream param5, PlatformTaskDispatcher param6, int param7) {
+    final static void initializeAudioOutputs(java.awt.Component component, int sampleRate, int musicBufferSize, byte guard, boolean stereo, MusicCrossfadeStream music, PlatformTaskDispatcher dispatcher, int effectsBufferSize) {
         try {
-          AudioOutput.configure(param1, param4, 10);
-          EmailCredentials.field_f = AudioOutput.create(param6, param0, 0, param2);
-          LegacyOpenGlEffectManager.field_a = AudioOutput.create(param6, param0, 1, param7);
+          AudioOutput.configure(sampleRate, stereo, 10);
+          EmailCredentials.field_f = AudioOutput.create(dispatcher, component, 0, musicBufferSize);
+          LegacyOpenGlEffectManager.field_a = AudioOutput.create(dispatcher, component, 1, effectsBufferSize);
           sj.field_c = new PcmStreamMixer();
-          IntrusiveDequeCursor.field_c = param7;
+          IntrusiveDequeCursor.field_c = effectsBufferSize;
           LegacyOpenGlEffectManager.field_a.setStream(sj.field_c);
-          AccountConnectionPhase.field_b = param5;
-          if (param3 <= 103) {
+          AccountConnectionPhase.field_b = music;
+          if (guard <= 103) {
             PlatformTaskDispatcher var9 = (PlatformTaskDispatcher) null;
-            hw.a((java.awt.Component) null, -65, -27, (byte) 49, true, (MusicCrossfadeStream) null, (PlatformTaskDispatcher) null, -58);
+            AudioOutputBootstrap.initializeAudioOutputs((java.awt.Component) null, -65, -27, (byte) 49, true, (MusicCrossfadeStream) null, (PlatformTaskDispatcher) null, -58);
           }
           AccountConnectionPhase.field_b.setVolume((byte) -43, TextureGeneratorNode.musicVolume);
           EmailCredentials.field_f.setStream(AccountConnectionPhase.field_b);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "hw.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "hw.A(" + (component != null ? "{...}" : "null") + ',' + sampleRate + ',' + musicBufferSize + ',' + guard + ',' + stereo + ',' + (music != null ? "{...}" : "null") + ',' + (dispatcher != null ? "{...}" : "null") + ',' + effectsBufferSize + ')');
         }
     }
 

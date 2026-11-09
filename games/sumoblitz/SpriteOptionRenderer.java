@@ -19,7 +19,7 @@ final class SpriteOptionRenderer extends TextWidgetRenderer {
 
     SpriteOptionRenderer(RasterIndexedSprite[] sprites) {
         try {
-          this.font = kw.field_b;
+          this.font = TextCaretLayout.field_b;
           this.stateSprites = sprites;
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "uv.<init>(" + (sprites != null ? "{...}" : "null") + ')');
@@ -54,7 +54,7 @@ final class SpriteOptionRenderer extends TextWidgetRenderer {
           }
           while (8 > var6_int) {
             var7 = new float[]{0.0f, (float)(-(ExpandingRingEffect.nextRandomInt(maxSpeed, HardwareGraphicsHeap.field_o, (byte) -96) + 1))};
-            var13 = kt.a((byte) -115, var7, (float)(0.0 + (double)(2048.0f / (float)var6_int) * 0.017453292519943295));
+            var13 = FullscreenPromptController.rotateVector((byte) -115, var7, (float)(0.0 + (double)(2048.0f / (float)var6_int) * 0.017453292519943295));
             var12 = var13;
             var10 = var12;
             var7Lifetime2 = var10;
@@ -64,7 +64,7 @@ final class SpriteOptionRenderer extends TextWidgetRenderer {
           }
           for (var6_intLifetime1 = 0; var6_intLifetime1 < 8; var6_intLifetime1++) {
             var7Lifetime1 = new float[]{0.0f, (float)(-(1 + ExpandingRingEffect.nextRandomInt(maxSpeed, HardwareGraphicsHeap.field_o, (byte) -96)))};
-            dupTemp$2 = kt.a((byte) -92, var7Lifetime1, (float)(0.0 + 0.017453292519943295 * (double)(2048.0f / (float)var6_intLifetime1)));
+            dupTemp$2 = FullscreenPromptController.rotateVector((byte) -92, var7Lifetime1, (float)(0.0 + 0.017453292519943295 * (double)(2048.0f / (float)var6_intLifetime1)));
             var11 = dupTemp$2;
             var7Lifetime1Lifetime1 = dupTemp$2;
             var8Lifetime1 = new BurstParticle(24, xQ8, yQ8, color, (int)var11[0] << 8, (int)var11[1] << 8, 1);

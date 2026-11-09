@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class jo {
+final class ByteArrayPool {
     static int[] field_b;
     static Hashtable field_a;
     static int field_c;
@@ -21,7 +21,7 @@ final class jo {
         return value & ~var2;
     }
 
-    final synchronized static byte[] a(int param0, int param1) {
+    final synchronized static byte[] allocate(int guard, int length) {
         int fieldTemp$3 = 0;
         int fieldTemp$4 = 0;
         int fieldTemp$5 = 0;
@@ -33,7 +33,7 @@ final class jo {
         int var2Lifetime1;
         byte[] var2_ref_byte__Lifetime1;
         byte[] var2_ref_byte__Lifetime2;
-        if (param1 == 100 &&
+        if (length == 100 &&
           0 < RotarySelectorRenderer.field_b) {
           fieldTemp$3 = RotarySelectorRenderer.field_b - 1;
           RotarySelectorRenderer.field_b = RotarySelectorRenderer.field_b - 1;
@@ -41,7 +41,7 @@ final class jo {
           kh.field_f[RotarySelectorRenderer.field_b] = null;
           return var2_ref_byte__;
         }
-        if (5000 == param1 &&
+        if (5000 == length &&
           ActiveCanvasProvider.field_a > 0) {
           fieldTemp$4 = ActiveCanvasProvider.field_a - 1;
           ActiveCanvasProvider.field_a = ActiveCanvasProvider.field_a - 1;
@@ -49,7 +49,7 @@ final class jo {
           HuffmanDecoder.field_d[ActiveCanvasProvider.field_a] = null;
           return var2_ref_byte__Lifetime1;
         }
-        if (30000 == param1 &&
+        if (30000 == length &&
           0 < ImageProducerRasterBuffer.field_k) {
           fieldTemp$5 = ImageProducerRasterBuffer.field_k - 1;
           ImageProducerRasterBuffer.field_k = ImageProducerRasterBuffer.field_k - 1;
@@ -59,7 +59,7 @@ final class jo {
         }
         if (null != CompactMeshGeometry.field_w) {
           for (var2 = 0; var2 < kr.field_d.length; var2++) {
-            if (param1 == kr.field_d[var2] &&
+            if (length == kr.field_d[var2] &&
               l.field_c[var2] > 0) {
               dupTemp$6 = l.field_c[var2] - 1;
               arrayValue$7 = CompactMeshGeometry.field_w[var2];
@@ -70,8 +70,8 @@ final class jo {
             }
           }
         }
-        var2Lifetime1 = 26 % ((42 - param0) / 51);
-        return new byte[param1];
+        var2Lifetime1 = 26 % ((42 - guard) / 51);
+        return new byte[length];
     }
 
     public static void releaseStatics(byte param0) {

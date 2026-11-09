@@ -5,8 +5,8 @@ final class jv {
     static int field_b;
     static int field_a;
 
-    final static void a(boolean param0, boolean param1) {
-        WidgetStateStyle.a((byte) 127, param0, param1);
+    final static void showLoginDialog(boolean allowSignup, boolean allowGuestPlay) {
+        WidgetStateStyle.showLoginDialog((byte) 127, allowSignup, allowGuestPlay);
     }
 
     final static void a(boolean param0, byte param1, boolean param2) {

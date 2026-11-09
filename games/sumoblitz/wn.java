@@ -22,7 +22,7 @@ final class wn {
           throw new IllegalStateException();
         }
         HardwareTextureSprite.field_m = param0;
-        jv.a(false, !param0 ? true : false);
+        jv.showLoginDialog(false, !param0 ? true : false);
         jv.field_a = 0;
     }
 

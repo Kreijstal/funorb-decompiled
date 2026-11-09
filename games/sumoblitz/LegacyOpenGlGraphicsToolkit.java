@@ -1965,7 +1965,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
               var8 = 512;
             }
           }
-          var8 = jo.highestOneBit(var8, false);
+          var8 = ByteArrayPool.highestOneBit(var8, false);
           jaggl.OpenGL.glVertex2f(var6 + (float)radius, var7);
           for (var9 = 16384 - var8; var9 > 0; var9 = var9 - var8) {
             jaggl.OpenGL.glVertex2f((float)radius * TextInputWidget.field_M[var9] + var6, TextInputWidget.field_N[var9] * (float)radius + var7);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ea {
+final class AccountUiBootstrap {
     static QuickChatCommand field_a;
     static String difficultyText;
 
@@ -46,18 +46,18 @@ final class ea {
         }
     }
 
-    final static void a(int param0, boolean param1, String param2, boolean param3) {
+    final static void showLoginDialog(int guard, boolean allowGuestPlay, String unused, boolean allowSignup) {
         MarkerTrackRenderer.resetAccountRequests((byte) -124);
-        if (param0 != 1) {
+        if (guard != 1) {
           return;
         }
         try {
           RenderPresentationException.field_a.closeAllDialogs((byte) -34);
-          no.field_a = new LoginForm(FocusProxyWidget.field_F, (String) null, ReconnectState.reconnecting, param3, param1);
+          no.field_a = new LoginForm(FocusProxyWidget.field_F, (String) null, ReconnectState.reconnecting, allowSignup, allowGuestPlay);
           SlowBurstParticle.field_y = new ContentDialog(RenderPresentationException.field_a, no.field_a);
           RenderPresentationException.field_a.pushDialog((byte) 104, SlowBurstParticle.field_y);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ea.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ea.F(" + guard + ',' + allowGuestPlay + ',' + (unused != null ? "{...}" : "null") + ',' + allowSignup + ')');
         }
     }
 
@@ -103,11 +103,11 @@ final class ea {
         }
     }
 
-    final static void a(ResourceArchive param0, boolean param1, byte param2, ResourceArchive param3, ResourceArchive param4) {
+    final static void initializeAccountUi(ResourceArchive extraArchive, boolean unused, byte guard, ResourceArchive fontArchive, ResourceArchive graphicsArchive) {
         AffineTransform3D.emailAvailabilityRequest = DroneDebris.createEmailAvailabilityRequest(false, "");
         AffineTransform3D.emailAvailabilityRequest.complete(113, false);
-        ToolkitFont.a(param4, param3, 17474, param0);
-        if (param2 < 20) {
+        ToolkitFont.a(graphicsArchive, fontArchive, 17474, extraArchive);
+        if (guard < 20) {
           return;
         }
         try {
@@ -115,7 +115,7 @@ final class ea {
           vm.nameAvailabilityState = AccountRequestDefaults.IDLE;
           ProxySocketConnector.accountCreationState = AccountRequestDefaults.IDLE;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ea.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ea.C(" + (extraArchive != null ? "{...}" : "null") + ',' + unused + ',' + guard + ',' + (fontArchive != null ? "{...}" : "null") + ',' + (graphicsArchive != null ? "{...}" : "null") + ')');
         }
     }
 

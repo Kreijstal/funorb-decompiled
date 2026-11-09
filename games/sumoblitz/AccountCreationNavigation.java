@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rv {
+final class AccountCreationNavigation {
     static PrimitiveType LINE_STRIP;
     static String warningIfYouQuitText;
 

@@ -89,7 +89,7 @@ final class DroneIntroductionOverlay {
     }
 
     final void update(int guard) {
-        if ((ActiveCanvasProvider.field_c == 1 || hw.field_b[83]) &&
+        if ((ActiveCanvasProvider.field_c == 1 || AudioOutputBootstrap.field_b[83]) &&
           this.dismissalDelay <= 0) {
           this.hide(-127);
         }

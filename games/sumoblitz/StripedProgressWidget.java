@@ -155,7 +155,7 @@ final class StripedProgressWidget extends UiWidget {
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
           var5_int = x + this.width;
-          kw.pushClip(this.height + y, y, 1, x + this.rightCapMask.field_x, -this.rightCapMask.field_x + var5_int);
+          TextCaretLayout.pushClip(this.height + y, y, 1, x + this.rightCapMask.field_x, -this.rightCapMask.field_x + var5_int);
           for (var6 = x - this.stripePhase; var6 < var5_int; var6 = var6 + tile.field_x) {
             tile.draw(var6, y);
           }
@@ -239,7 +239,7 @@ final class StripedProgressWidget extends UiWidget {
         int var6 = this.y + parentY;
         this.renderStripeLayer(this.stripeSprites[0], var6, 256, var5);
         if (this.progressQ16 < 65536) {
-          kw.pushClip(var6 + this.height, var6, 1, var5 + (this.progressQ16 * this.width >> 16), this.width + var5);
+          TextCaretLayout.pushClip(var6 + this.height, var6, 1, var5 + (this.progressQ16 * this.width >> 16), this.width + var5);
           this.renderStripeLayer(this.stripeSprites[1], var6, 256, var5);
           ClientException.popRasterState((byte) -110);
         }

@@ -105,7 +105,7 @@ final class WidgetTheme {
     }
 
     final void a(int param0, int param1, int param2, byte param3, int param4) {
-        kw.pushClip(param0, param2, 1, param1, param4);
+        TextCaretLayout.pushClip(param0, param2, 1, param1, param4);
         if (param3 > -57) {
           String var7 = (String) null;
           this.drawTooltip(-116, 1, -84, (String) null);

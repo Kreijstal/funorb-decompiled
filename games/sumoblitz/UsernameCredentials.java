@@ -153,7 +153,7 @@ class UsernameCredentials extends LoginCredentials {
               stackIn_8_0 = -1;
               return stackIn_8_0;
             }
-            if (kw.accountPhase == ByteArrayCacheNode.READY_TO_CONNECT) {
+            if (TextCaretLayout.accountPhase == ByteArrayCacheNode.READY_TO_CONNECT) {
               if (reconnect) {
                 var10 = (String) null;
                 LegacyOpenGlBuffer.field_d = LoginCredentialFactory.createCredentials(StringBuilderSupport.field_a, false, (String) null, password, false);
@@ -164,29 +164,29 @@ class UsernameCredentials extends LoginCredentials {
               InwardSparkParticle.field_v.writeByte((byte) 42, 14);
               InwardSparkParticle.field_v.writeByte((byte) 96, LegacyOpenGlBuffer.field_d.credentialType((byte) 126).wireId);
               MessageDialog.a(0, -1);
-              kw.accountPhase = LegacyOpenGlRidgedWaterEffect.WAIT_HANDSHAKE_REPLY;
+              TextCaretLayout.accountPhase = LegacyOpenGlRidgedWaterEffect.WAIT_HANDSHAKE_REPLY;
             }
-            if (kw.accountPhase == LegacyOpenGlRidgedWaterEffect.WAIT_HANDSHAKE_REPLY &&
+            if (TextCaretLayout.accountPhase == LegacyOpenGlRidgedWaterEffect.WAIT_HANDSHAKE_REPLY &&
               OpenGlIndexBuffer.b(-1, 1)) {
               var6_int = NativeLibraryExtractor.field_a.readUnsignedByte(-31302);
               if (var6_int != 0) {
                 TextureFormat.field_a = var6_int;
                 HardwareBufferSet.field_d = -1;
-                kw.accountPhase = WidgetContainer.WAIT_LOGIN_ERROR;
+                TextCaretLayout.accountPhase = WidgetContainer.WAIT_LOGIN_ERROR;
               } else {
-                kw.accountPhase = OpenGlVertexBuffer.WAIT_SERVER_SEED;
+                TextCaretLayout.accountPhase = OpenGlVertexBuffer.WAIT_SERVER_SEED;
               }
               NativeLibraryExtractor.field_a.position = 0;
             }
-            if (kw.accountPhase == OpenGlVertexBuffer.WAIT_SERVER_SEED &&
+            if (TextCaretLayout.accountPhase == OpenGlVertexBuffer.WAIT_SERVER_SEED &&
               OpenGlIndexBuffer.b(-1, 8)) {
               HardwareUnlitEffect.field_g = NativeLibraryExtractor.field_a.readLong((byte) 127);
               NativeLibraryExtractor.field_a.position = 0;
               LoginPacketWriter.sendLoginPacket(reconnect, jagexHosted, -12793, affiliateId, LegacyOpenGlBuffer.field_d);
-              kw.accountPhase = LoginMethodPreference.WAIT_LOGIN_REPLY;
+              TextCaretLayout.accountPhase = LoginMethodPreference.WAIT_LOGIN_REPLY;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (kw.accountPhase == LoginMethodPreference.WAIT_LOGIN_REPLY &&
+            if (TextCaretLayout.accountPhase == LoginMethodPreference.WAIT_LOGIN_REPLY &&
               OpenGlIndexBuffer.b(-1, 1)) {
               var6_intLifetime1 = NativeLibraryExtractor.field_a.readUnsignedByte(-31302);
               TextureFormat.field_a = var6_intLifetime1;
@@ -195,7 +195,7 @@ class UsernameCredentials extends LoginCredentials {
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
-                  kw.accountPhase = WidgetContainer.WAIT_LOGIN_ERROR;
+                  TextCaretLayout.accountPhase = WidgetContainer.WAIT_LOGIN_ERROR;
                   HardwareBufferSet.field_d = -1;
                   decompiledFrameRemainder0 = false;
                 }
@@ -207,11 +207,11 @@ class UsernameCredentials extends LoginCredentials {
                 }
               }
               if (decompiledFrameRemainder0) {
-                kw.accountPhase = MusicVoice.WAIT_LOGIN_DETAILS;
+                TextCaretLayout.accountPhase = MusicVoice.WAIT_LOGIN_DETAILS;
                 HardwareBufferSet.field_d = -1;
               }
             }
-            if (kw.accountPhase == MusicVoice.WAIT_LOGIN_DETAILS &&
+            if (TextCaretLayout.accountPhase == MusicVoice.WAIT_LOGIN_DETAILS &&
               lt.a((byte) 119)) {
               StringBuilderSupport.field_a = NativeLibraryExtractor.field_a.readLong((byte) 114);
               Bzip2State.field_j = NativeLibraryExtractor.field_a.readUnsignedByte(-31302);
@@ -244,7 +244,7 @@ class UsernameCredentials extends LoginCredentials {
               var11 = (CharSequence) ((Object) QueuedIntArrayRequest.field_o);
               PasswordValidator.field_f = AccountCreationProgressDialog.normalizeAccountName(-1, var11);
               Js5ClientState.field_c = NativeLibraryExtractor.field_a.readUnsignedByte(-31302);
-              kw.accountPhase = LegacyOpenGlUnderwaterEffect.CONNECTED;
+              TextCaretLayout.accountPhase = LegacyOpenGlUnderwaterEffect.CONNECTED;
               if (LegacyOpenGlBuffer.field_d.credentialType((byte) 113) != IndexedSprite.EMAIL_CREDENTIALS) {
                 if (LegacyOpenGlBuffer.field_d.credentialType((byte) 89) == ProxyAuthenticationRequiredException.USERNAME_CREDENTIALS) {
                   LevelSelectScreen.field_j.savePreference(true, LegacyOpenGlUnlitEffect.c(2));
@@ -283,7 +283,7 @@ class UsernameCredentials extends LoginCredentials {
               stackIn_73_0 = TextureFormat.field_a;
               return stackIn_73_0;
             }
-            if (kw.accountPhase == WidgetContainer.WAIT_LOGIN_ERROR &&
+            if (TextCaretLayout.accountPhase == WidgetContainer.WAIT_LOGIN_ERROR &&
               lt.a((byte) 119)) {
               LegacyOpenGlTextureCache.closeAccountSocket((byte) -115);
               if (TextureFormat.field_a == 7 &&

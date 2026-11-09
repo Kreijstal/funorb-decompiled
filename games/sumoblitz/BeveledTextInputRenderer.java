@@ -32,7 +32,7 @@ class BeveledTextInputRenderer extends TextWidgetRenderer {
     }
 
     BeveledTextInputRenderer(int textColor) {
-        this(kw.field_b, textColor);
+        this(TextCaretLayout.field_b, textColor);
     }
 
     static {

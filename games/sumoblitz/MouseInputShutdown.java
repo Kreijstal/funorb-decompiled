@@ -1,28 +1,28 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jm {
+final class MouseInputShutdown {
     static LegacyBitmapFont field_a;
     static long field_b;
     static String field_d;
     static String bestHiscoresText;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int guard) {
         field_d = null;
         bestHiscoresText = null;
-        if (param0 != -23787) {
-          jm.b(123);
+        if (guard != -23787) {
+          MouseInputShutdown.releaseMouseInput(123);
           field_a = null;
           return;
         }
         field_a = null;
     }
 
-    final static void b(int param0) {
+    final static void releaseMouseInput(int guard) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        if (param0 != 28679) {
+        if (guard != 28679) {
           return;
         }
         if (ConfirmedEmailValidator.field_h == null) {

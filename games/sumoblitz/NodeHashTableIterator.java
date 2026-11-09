@@ -98,10 +98,10 @@ final class NodeHashTableIterator implements Iterator {
         int var2 = ps.field_e[param0];
         if (param1 != -82) {
           suggestedNamesText = (String) null;
-          so.a(var2, (byte) -127);
+          DisplayPromptState.a(var2, (byte) -127);
           return;
         }
-        so.a(var2, (byte) -127);
+        DisplayPromptState.a(var2, (byte) -127);
     }
 
     static {

@@ -14,14 +14,14 @@ final class AccountSignupPrompt extends WidgetContainer implements WidgetActionL
         if (guard <= -35) {
           var5 = this.x + parentX;
           var6 = parentY + this.y;
-          kw.field_b.drawParagraph(NineSlicePanel.creatingAJagexAccountText, 20 + var5, var6 + 20, this.width - 40, -50 + this.height, 16777215, -1, 1, 0, kw.field_b.ascent);
+          TextCaretLayout.field_b.drawParagraph(NineSlicePanel.creatingAJagexAccountText, 20 + var5, var6 + 20, this.width - 40, -50 + this.height, 16777215, -1, 1, 0, TextCaretLayout.field_b.ascent);
           super.renderLayer(parentX, parentY, (byte) -96, layer);
           return;
         }
         this.field_B = (InteractiveWidget) null;
         var5Lifetime1 = this.x + parentX;
         var6Lifetime1 = parentY + this.y;
-        kw.field_b.drawParagraph(NineSlicePanel.creatingAJagexAccountText, 20 + var5Lifetime1, var6Lifetime1 + 20, this.width - 40, -50 + this.height, 16777215, -1, 1, 0, kw.field_b.ascent);
+        TextCaretLayout.field_b.drawParagraph(NineSlicePanel.creatingAJagexAccountText, 20 + var5Lifetime1, var6Lifetime1 + 20, this.width - 40, -50 + this.height, 16777215, -1, 1, 0, TextCaretLayout.field_b.ascent);
         super.renderLayer(parentX, parentY, (byte) -96, layer);
     }
 
@@ -42,7 +42,7 @@ final class AccountSignupPrompt extends WidgetContainer implements WidgetActionL
                 SlowBurstParticle.e(4);
               }
             } else {
-              rv.showAccountCreation((byte) 114);
+              AccountCreationNavigation.showAccountCreation((byte) 114);
             }
           }
           if (guard == 710) {

@@ -36,9 +36,9 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
             var4 = (float)var2 - (float)(-var3 + var2) * 0.125f;
             var5 = -(0.25f * (float)(var2 - var3)) + (float)var2;
             jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var5, var4, 1.0f / (float)this.toolkit.S(98), (float)this.toolkit.e((byte) 99) / 255.0f);
-            this.toolkit.g(1, -116);
-            this.toolkit.a(false, this.toolkit.v(15));
-            this.toolkit.g(0, -117);
+            this.toolkit.setActiveTextureUnit(1, -116);
+            this.toolkit.setTextureConstantColor(false, this.toolkit.v(15));
+            this.toolkit.setActiveTextureUnit(0, -117);
           }
           return;
         }
@@ -49,9 +49,9 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
           var4Lifetime1 = (float)var2Lifetime1 - (float)(-var3Lifetime1 + var2Lifetime1) * 0.125f;
           var5Lifetime1 = -(0.25f * (float)(var2Lifetime1 - var3Lifetime1)) + (float)var2Lifetime1;
           jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var5Lifetime1, var4Lifetime1, 1.0f / (float)this.toolkit.S(98), (float)this.toolkit.e((byte) 99) / 255.0f);
-          this.toolkit.g(1, -116);
-          this.toolkit.a(false, this.toolkit.v(15));
-          this.toolkit.g(0, -117);
+          this.toolkit.setActiveTextureUnit(1, -116);
+          this.toolkit.setTextureConstantColor(false, this.toolkit.v(15));
+          this.toolkit.setActiveTextureUnit(0, -117);
         }
     }
 
@@ -73,7 +73,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
 
     private final void e(byte param0) {
         int var2 = this.toolkit.M(-125);
-        AffineTransform3D var3 = this.toolkit.g((byte) -28);
+        AffineTransform3D var3 = this.toolkit.viewTransform((byte) -28);
         if (this.field_e) {
           jaggl.OpenGL.glBindProgramARB(34336, var2 != 2147483647 ? this.field_g.programId : this.field_j.programId);
         } else {
@@ -168,16 +168,16 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
     }
 
     final void disable(boolean guard) {
-        this.toolkit.g(1, -119);
+        this.toolkit.setActiveTextureUnit(1, -119);
         this.toolkit.a((GpuTexture) null, 113);
         this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
-        this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, 0);
-        this.toolkit.a(AccountRequestState.CONSTANT, 2, 0);
-        this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, true);
-        this.toolkit.g(0, -108);
+        this.toolkit.setColorCombineSource(LegacyVertexAttribute.TEXTURE, 0, 0);
+        this.toolkit.setColorCombineSource(AccountRequestState.CONSTANT, 2, 0);
+        this.toolkit.setAlphaCombineSource(LegacyVertexAttribute.TEXTURE, 0, true);
+        this.toolkit.setActiveTextureUnit(0, -108);
         if (this.field_h) {
-          this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, 0);
-          this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, true);
+          this.toolkit.setColorCombineSource(LegacyVertexAttribute.TEXTURE, 0, 0);
+          this.toolkit.setAlphaCombineSource(LegacyVertexAttribute.TEXTURE, 0, true);
           this.field_h = false;
         }
         if (this.field_l) {
@@ -222,8 +222,8 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
           }
           if (texture != null) {
             if (this.field_h) {
-              this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, 0);
-              this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, true);
+              this.toolkit.setColorCombineSource(LegacyVertexAttribute.TEXTURE, 0, 0);
+              this.toolkit.setAlphaCombineSource(LegacyVertexAttribute.TEXTURE, 0, true);
               this.field_h = false;
             }
             this.toolkit.a(texture, 121);
@@ -235,8 +235,8 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
           }
           this.toolkit.a(this.toolkit.field_D, 97);
           this.toolkit.h(113, 1);
-          this.toolkit.a(FontMetrics.PREVIOUS, 0, 0);
-          this.toolkit.a(FontMetrics.PREVIOUS, 0, true);
+          this.toolkit.setColorCombineSource(FontMetrics.PREVIOUS, 0, 0);
+          this.toolkit.setAlphaCombineSource(FontMetrics.PREVIOUS, 0, true);
           this.field_h = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -262,13 +262,13 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
     final void enable(boolean lighting, int guard) {
         if (guard == 20186) {
           this.field_e = lighting ? true : false;
-          this.toolkit.g(1, -112);
+          this.toolkit.setActiveTextureUnit(1, -112);
           this.toolkit.a(this.field_o, guard - 20070);
           this.toolkit.a((byte) -83, lf.REPLACE, OpenGlBuffer.INTERPOLATE);
-          this.toolkit.a(AccountRequestState.CONSTANT, 0, 0);
+          this.toolkit.setColorCombineSource(AccountRequestState.CONSTANT, 0, 0);
           this.toolkit.setColorCombineSource((byte) 85, 2, true, false, LegacyVertexAttribute.TEXTURE);
-          this.toolkit.a(FontMetrics.PREVIOUS, 0, true);
-          this.toolkit.g(0, -108);
+          this.toolkit.setAlphaCombineSource(FontMetrics.PREVIOUS, 0, true);
+          this.toolkit.setActiveTextureUnit(0, -108);
           this.e((byte) 14);
           return;
         }

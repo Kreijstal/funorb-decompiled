@@ -3,7 +3,7 @@
  */
 final class ShrinkingRingEffect extends TimedSceneEffect {
     private boolean expanding;
-    static il field_t;
+    static BlendMode DESTINATION_COLOR_BLEND;
     static long field_s;
 
     ShrinkingRingEffect(int xQ8, int yQ8, int color) {
@@ -15,7 +15,7 @@ final class ShrinkingRingEffect extends TimedSceneEffect {
         if (param0 != 0) {
           return;
         }
-        field_t = null;
+        DESTINATION_COLOR_BLEND = null;
     }
 
     final void render(GraphicsToolkit toolkit, int guard) {
@@ -38,6 +38,6 @@ final class ShrinkingRingEffect extends TimedSceneEffect {
     }
 
     static {
-        field_t = new il();
+        DESTINATION_COLOR_BLEND = new BlendMode();
     }
 }

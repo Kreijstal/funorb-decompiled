@@ -30,13 +30,13 @@ final class GameOverScreen extends MenuScreen {
             if (0 != CacheReferenceNode.field_u) {
               return;
             }
-            pd.scoreMultiplier = un.field_a[0];
+            pd.scoreMultiplier = ScoreMultiplierTable.multipliers[0];
             ComboState.comboCount = 0;
             return;
           }
           CacheReferenceNode.field_u = CacheReferenceNode.field_u - 1;
           if (0 == CacheReferenceNode.field_u) {
-            pd.scoreMultiplier = un.field_a[0];
+            pd.scoreMultiplier = ScoreMultiplierTable.multipliers[0];
             ComboState.comboCount = 0;
             return;
           }
@@ -47,14 +47,14 @@ final class GameOverScreen extends MenuScreen {
           if (0 != CacheReferenceNode.field_u) {
             return;
           }
-          pd.scoreMultiplier = un.field_a[0];
+          pd.scoreMultiplier = ScoreMultiplierTable.multipliers[0];
           ComboState.comboCount = 0;
           return;
         }
         if (0 != CacheReferenceNode.field_u) {
           return;
         }
-        pd.scoreMultiplier = un.field_a[0];
+        pd.scoreMultiplier = ScoreMultiplierTable.multipliers[0];
         ComboState.comboCount = 0;
     }
 

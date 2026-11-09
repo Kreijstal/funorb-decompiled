@@ -52,7 +52,7 @@ final class vf {
           }
           var5_int = param4.groupId(0, param2);
           var6 = param4.fileId(var5_int, param3, (byte) 126);
-          stackIn_3_0 = LegacyAlphaFontLoader.loadAlphaFont(param0, (byte) -71, var5_int, var6, param4);
+          stackIn_3_0 = TextureTransformMode.loadAlphaFont(param0, (byte) -71, var5_int, var6, param4);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

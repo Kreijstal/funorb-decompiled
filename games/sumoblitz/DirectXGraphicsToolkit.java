@@ -62,7 +62,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         if (guard != 4) {
           this.a();
         }
-        this.field_Cc.SetScissorRect(this.field_r + this.field_v, this.field_y + this.field_vb, this.field_F, this.field_yc);
+        this.field_Cc.SetScissorRect(this.field_r + this.clipTop, this.field_y + this.clipLeft, this.clipRight, this.clipBottom);
     }
 
     final void releaseSurface(java.awt.Canvas canvas, Object surface, int guard) {
@@ -82,9 +82,9 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         if (guard != 9) {
           this.field_Ac = (jagdx.D3DLIGHT) null;
         }
-        if (this.field_Ec[this.field_mc]) {
-          this.field_Ec[this.field_mc] = false;
-          this.field_Cc.SetTexture(this.field_mc, (jagdx.IDirect3DBaseTexture) null);
+        if (this.field_Ec[this.activeTextureUnit]) {
+          this.field_Ec[this.activeTextureUnit] = false;
+          this.field_Cc.SetTexture(this.activeTextureUnit, (jagdx.IDirect3DBaseTexture) null);
           this.applyAlphaCombineOperation(-109);
           this.applyColorCombineOperation((byte) -93);
         }
@@ -105,13 +105,13 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
 
     final void a(int param0, DirectXTexture3D param1) {
         this.a((DirectXTexture) (param1), 1);
-        if (!this.field_Uc[this.field_mc]) {
-          this.field_Cc.SetSamplerState(this.field_mc, 1, 1);
-          this.field_Uc[this.field_mc] = true;
+        if (!this.field_Uc[this.activeTextureUnit]) {
+          this.field_Cc.SetSamplerState(this.activeTextureUnit, 1, 1);
+          this.field_Uc[this.activeTextureUnit] = true;
         }
-        if (!this.field_Bc[this.field_mc]) {
-          this.field_Cc.SetSamplerState(this.field_mc, 2, 1);
-          this.field_Bc[this.field_mc] = true;
+        if (!this.field_Bc[this.activeTextureUnit]) {
+          this.field_Cc.SetSamplerState(this.activeTextureUnit, 2, 1);
+          this.field_Bc[this.activeTextureUnit] = true;
         }
         if (param0 != 2) {
           field_Zc = (int[]) null;
@@ -198,20 +198,20 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
           this.field_Rc = (jagdx.D3DLIGHT) null;
         }
         if (this.field_Vc == null &&
-          HotspotTextWidget.field_L != this.field_wb[this.field_mc]) {
-          if (this.field_wb[this.field_mc] != IntList.field_c) {
-            this.field_Cc.SetTransform(this.field_mc + 16, this.field_V[this.field_mc].writeColumnMajor4x4(-68, field_Mc));
+          HotspotTextWidget.TEXTURE_TRANSFORM_DISABLED != this.textureTransformModes[this.activeTextureUnit]) {
+          if (this.textureTransformModes[this.activeTextureUnit] != IntList.TEXTURE_COUNT2) {
+            this.field_Cc.SetTransform(this.activeTextureUnit + 16, this.textureTransforms[this.activeTextureUnit].writeColumnMajor4x4(-68, field_Mc));
           } else {
-            this.field_Cc.SetTransform(this.field_mc + 16, this.field_V[this.field_mc].writeTextureMatrix4x4(field_Mc, 111));
+            this.field_Cc.SetTransform(this.activeTextureUnit + 16, this.textureTransforms[this.activeTextureUnit].writeTextureMatrix4x4(field_Mc, 111));
           }
-          var2 = DirectXGraphicsToolkit.b(this.field_wb[this.field_mc], guard - 23700);
-          if (var2 != this.field_Gc[this.field_mc]) {
-            this.field_Cc.SetTextureStageState(this.field_mc, 24, var2);
-            this.field_Gc[this.field_mc] = var2;
+          var2 = DirectXGraphicsToolkit.textureTransformFlags(this.textureTransformModes[this.activeTextureUnit], guard - 23700);
+          if (var2 != this.field_Gc[this.activeTextureUnit]) {
+            this.field_Cc.SetTextureStageState(this.activeTextureUnit, 24, var2);
+            this.field_Gc[this.activeTextureUnit] = var2;
           }
         } else {
-          this.field_Cc.SetTextureStageState(this.field_mc, 24, 0);
-          this.field_Gc[this.field_mc] = 0;
+          this.field_Cc.SetTextureStageState(this.activeTextureUnit, 24, 0);
+          this.field_Gc[this.activeTextureUnit] = 0;
         }
     }
 
@@ -229,8 +229,8 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         if (guard > -74) {
           return;
         }
-        int var2 = !this.field_Ec[this.field_mc] ? 1 : DirectXGraphicsToolkit.a(this.field_K[this.field_mc], -124);
-        this.field_Cc.SetTextureStageState(this.field_mc, 1, var2);
+        int var2 = !this.field_Ec[this.activeTextureUnit] ? 1 : DirectXGraphicsToolkit.a(this.field_K[this.activeTextureUnit], -124);
+        this.field_Cc.SetTextureStageState(this.activeTextureUnit, 1, var2);
     }
 
     final void setMultisampling(int guard, boolean enabled) {
@@ -240,24 +240,24 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         this.field_Cc.a(161, enabled);
     }
 
-    private final static int b(LegacyAlphaFontLoader param0, int param1) {
+    private final static int textureTransformFlags(TextureTransformMode mode, int guard) {
         TextureFilter var3;
-        if (param0 == HardwareGraphicsHeap.field_m) {
+        if (mode == HardwareGraphicsHeap.TEXTURE_COUNT1) {
           return 1;
         }
-        if (IntList.field_c == param0) {
+        if (IntList.TEXTURE_COUNT2 == mode) {
           return 2;
         }
-        if (param0 == LegacyRidgedWaterNoise.field_y) {
+        if (mode == LegacyRidgedWaterNoise.TEXTURE_COUNT3) {
           return 3;
         }
-        if (param0 == kr.field_a) {
+        if (mode == kr.TEXTURE_COUNT4) {
           return 4;
         }
-        if (HardwareGraphicsToolkit.field_t == param0) {
+        if (HardwareGraphicsToolkit.TEXTURE_PROJECTED == mode) {
           return 256;
         }
-        if (param1 == 3103) {
+        if (guard == 3103) {
           return 0;
         }
         var3 = (TextureFilter) null;
@@ -294,7 +294,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
     }
 
     final void applyDepthTest(int guard) {
-        this.field_Cc.a(7, this.field_p);
+        this.field_Cc.a(7, this.depthTestEnabled);
         if (guard <= 19) {
           this.applyScissorEnabled(30);
         }
@@ -308,7 +308,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
     }
 
     final void applyTextureConstantColor(int greenIndex) {
-        this.field_Cc.SetRenderState(60, this.field_Ub);
+        this.field_Cc.SetRenderState(60, this.textureConstantColor);
         if (greenIndex != 1) {
           this.field_Dc = (TextureFilter[]) null;
         }
@@ -333,17 +333,17 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         int stackIn_15_2 = 0;
         int stackIn_16_3;
         int var3;
-        this.field_Cc.SetTexture(this.field_mc, param0.nativeTexture(-22689));
-        if (this.field_Dc[this.field_mc] != param0.filter) {
+        this.field_Cc.SetTexture(this.activeTextureUnit, param0.nativeTexture(-22689));
+        if (this.field_Dc[this.activeTextureUnit] != param0.filter) {
           var3 = DirectXGraphicsToolkit.a(param0.filter, false);
-          this.field_Cc.SetSamplerState(this.field_mc, 6, var3);
-          this.field_Cc.SetSamplerState(this.field_mc, 5, var3);
-          this.field_Dc[this.field_mc] = param0.filter;
-          stackIn_11_0 = this.field_ad[this.field_mc];
+          this.field_Cc.SetSamplerState(this.activeTextureUnit, 6, var3);
+          this.field_Cc.SetSamplerState(this.activeTextureUnit, 5, var3);
+          this.field_Dc[this.activeTextureUnit] = param0.filter;
+          stackIn_11_0 = this.field_ad[this.activeTextureUnit];
           stackIn_12_1 = (param0.mipmapped) ? 0 : 1;
           if ((stackIn_11_0 ? 1 : 0) == stackIn_12_1) {
             stackIn_15_0 = this.field_Cc;
-            stackIn_15_1 = this.field_mc;
+            stackIn_15_1 = this.activeTextureUnit;
             stackIn_15_2 = 7;
             if (!param0.mipmapped) {
               stackIn_16_3 = 0;
@@ -351,14 +351,14 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
               stackIn_16_3 = DirectXGraphicsToolkit.a(param0.filter, false);
             }
             ((jagdx.IDirect3DDevice) (Object) stackIn_15_0).SetSamplerState(stackIn_15_1, stackIn_15_2, stackIn_16_3);
-            this.field_ad[this.field_mc] = param0.mipmapped;
+            this.field_ad[this.activeTextureUnit] = param0.mipmapped;
           }
         } else {
-          stackIn_3_0 = this.field_ad[this.field_mc];
+          stackIn_3_0 = this.field_ad[this.activeTextureUnit];
           stackIn_4_1 = (param0.mipmapped) ? 0 : 1;
           if ((stackIn_3_0 ? 1 : 0) == stackIn_4_1) {
             stackIn_7_0 = this.field_Cc;
-            stackIn_7_1 = this.field_mc;
+            stackIn_7_1 = this.activeTextureUnit;
             stackIn_7_2 = 7;
             if (param0.mipmapped) {
               stackIn_8_3 = DirectXGraphicsToolkit.a(param0.filter, false);
@@ -366,11 +366,11 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
               stackIn_8_3 = 0;
             }
             ((jagdx.IDirect3DDevice) (Object) stackIn_7_0).SetSamplerState(stackIn_7_1, stackIn_7_2, stackIn_8_3);
-            this.field_ad[this.field_mc] = param0.mipmapped;
+            this.field_ad[this.activeTextureUnit] = param0.mipmapped;
           }
         }
-        if (!this.field_Ec[this.field_mc]) {
-          this.field_Ec[this.field_mc] = true;
+        if (!this.field_Ec[this.activeTextureUnit]) {
+          this.field_Ec[this.activeTextureUnit] = true;
           this.applyAlphaCombineOperation(-115);
           this.applyColorCombineOperation((byte) -113);
         }
@@ -399,7 +399,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
             if (jagdx.HResult.succeeded(var4, -72)) {
               var3.attach(false, this.field_Cc.b(), this.field_Cc.b(0));
               this.P(-100);
-              this.D(1);
+              this.resetDriverState(1);
               return true;
             }
           }
@@ -457,7 +457,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
           byte[] var4 = (byte[]) null;
           this.a(true, (TextureFormat) null, -117, -19, (byte[]) null, 96);
         }
-        this.field_Cc.SetTextureStageState(this.field_mc, 11, param0);
+        this.field_Cc.SetTextureStageState(this.activeTextureUnit, 11, param0);
     }
 
     final boolean a(GpuDataType param0, TextureFormat param1, int param2) {
@@ -513,7 +513,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         if (param0 == PasswordValidator.LINES) {
           return 2;
         }
-        if (param0 == rv.LINE_STRIP) {
+        if (param0 == AccountCreationNavigation.LINE_STRIP) {
           return 3;
         }
         if (JaggrabDownloader.POINTS == param0) {
@@ -531,11 +531,11 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         throw new IllegalArgumentException("");
     }
 
-    final void N(int param0) {
-        if (param0 != -26911) {
+    final void applyViewMatrix(int guard) {
+        if (guard != -26911) {
           this.field_Hc = (DirectXSwapChainSurface) null;
         }
-        if (!this.field_s.usesViewTransform(param0 ^ 10036)) {
+        if (!this.projectionMode.usesViewTransform(guard ^ 10036)) {
           field_Mc[10] = 1.0f;
           field_Mc[8] = 0.0f;
           field_Mc[1] = 0.0f;
@@ -553,7 +553,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
           field_Mc[6] = 0.0f;
           field_Mc[5] = 1.0f;
         } else {
-          this.field_Gb.writeColumnMajor4x4(-110, field_Mc);
+          this.viewTransform.writeColumnMajor4x4(-110, field_Mc);
         }
         this.field_Cc.SetTransform(2, field_Mc);
     }
@@ -567,7 +567,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         }
         stackIn_5_0 = this.field_Cc;
         stackIn_5_1 = 137;
-        stackIn_6_2 = (this.field_I) && (!this.lightingSuppressed);
+        stackIn_6_2 = (this.lightingEnabled) && (!this.lightingSuppressed);
         ((jagdx.IDirect3DDevice) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_6_2);
     }
 
@@ -577,13 +577,13 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
           this.applyTexCoordGeneration(94, (TextureCoordinateGeneration) null);
         }
         this.a((DirectXTexture) (param1), param0 ^ 0);
-        if (this.field_Uc[this.field_mc] != param1.repeatX) {
-          this.field_Cc.SetSamplerState(this.field_mc, 1, !param1.repeatX ? 3 : 1);
-          this.field_Uc[this.field_mc] = param1.repeatX;
+        if (this.field_Uc[this.activeTextureUnit] != param1.repeatX) {
+          this.field_Cc.SetSamplerState(this.activeTextureUnit, 1, !param1.repeatX ? 3 : 1);
+          this.field_Uc[this.activeTextureUnit] = param1.repeatX;
         }
-        if (param1.repeatY != this.field_Bc[this.field_mc]) {
-          this.field_Cc.SetSamplerState(this.field_mc, 2, !param1.repeatY ? 3 : 1);
-          this.field_Bc[this.field_mc] = param1.repeatY;
+        if (param1.repeatY != this.field_Bc[this.activeTextureUnit]) {
+          this.field_Cc.SetSamplerState(this.activeTextureUnit, 2, !param1.repeatY ? 3 : 1);
+          this.field_Bc[this.activeTextureUnit] = param1.repeatY;
         }
     }
 
@@ -612,7 +612,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         if (invert) {
           var7 = var7 | 16;
         }
-        this.field_Cc.SetTextureStageState(this.field_mc, var6, DirectXGraphicsToolkit.a(source, 21) | var7);
+        this.field_Cc.SetTextureStageState(this.activeTextureUnit, var6, DirectXGraphicsToolkit.a(source, 21) | var7);
     }
 
     final void b(boolean param0) {
@@ -630,12 +630,12 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
     }
 
     final void applyBlendFactors(int guard) {
-        if (LimitedRandomAccessFile.field_a == this.field_l) {
+        if (LimitedRandomAccessFile.ALPHA_BLEND == this.blendFactors) {
           this.field_Cc.SetRenderState(19, 5);
           this.field_Cc.SetRenderState(20, 6);
         } else {
-          if (ServerDataReadRequest.field_n != this.field_l) {
-            if (this.field_l == ShrinkingRingEffect.field_t) {
+          if (ServerDataReadRequest.ADDITIVE_BLEND != this.blendFactors) {
+            if (this.blendFactors == ShrinkingRingEffect.DESTINATION_COLOR_BLEND) {
               this.field_Cc.SetRenderState(19, 9);
               this.field_Cc.SetRenderState(20, 2);
             }
@@ -673,9 +673,9 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         throw new IllegalArgumentException();
     }
 
-    final void x(int param0) {
-        if (!this.field_Db) {
-          this.field_Lb.writeColumnMajor4x4(param0 - 79, field_Mc);
+    final void applyModelMatrix(int guard) {
+        if (!this.modelIdentity) {
+          this.modelTransform.writeColumnMajor4x4(guard - 79, field_Mc);
         } else {
           field_Mc[3] = 0.0f;
           field_Mc[10] = 1.0f;
@@ -694,7 +694,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
           field_Mc[12] = 0.0f;
           field_Mc[8] = 0.0f;
         }
-        if (param0 != 0) {
+        if (guard != 0) {
           TextureCombineSource var3 = (TextureCombineSource) null;
           this.setColorCombineSource((byte) -44, 8, true, false, (TextureCombineSource) null);
         }
@@ -705,8 +705,8 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         if (guard > -80) {
           this.field_Cc = (jagdx.IDirect3DDevice) null;
         }
-        int var2 = !this.field_Ec[this.field_mc] ? 1 : DirectXGraphicsToolkit.a(this.field_B[this.field_mc], -34);
-        this.field_Cc.SetTextureStageState(this.field_mc, 4, var2);
+        int var2 = !this.field_Ec[this.activeTextureUnit] ? 1 : DirectXGraphicsToolkit.a(this.field_B[this.activeTextureUnit], -34);
+        this.field_Cc.SetTextureStageState(this.activeTextureUnit, 4, var2);
     }
 
     final void applyDepthWrite(int guard) {
@@ -715,7 +715,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         boolean stackIn_4_2 = false;
         stackIn_3_0 = this.field_Cc;
         stackIn_3_1 = 14;
-        stackIn_4_2 = (this.field_db) && (this.field_i);
+        stackIn_4_2 = (this.field_db) && (this.depthWriteEnabled);
         ((jagdx.IDirect3DDevice) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2);
         if (guard < 113) {
           this.applyLighting(false);
@@ -786,11 +786,11 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         return (Texture2D) ((Object) new DirectXTexture2D(this, param0, param1, param2, param7, param4, param6, param3));
     }
 
-    final void D(int param0) {
+    final void resetDriverState(int guard) {
         int var2 = 0;
         boolean[] var3 = null;
         int var4 = 0;
-        for (var2 = 0; var2 < this.field_cc; var2++) {
+        for (var2 = 0; var2 < this.textureUnitCount; var2++) {
           this.field_Cc.SetSamplerState(var2, 7, 0);
           this.field_Cc.SetSamplerState(var2, 6, 2);
           this.field_Cc.SetSamplerState(var2, 5, 2);
@@ -804,7 +804,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
           this.field_ad[var2] = false;
           this.field_Gc[var2] = 0;
         }
-        this.field_Cc.SetTextureStageState(0, 6, param0);
+        this.field_Cc.SetTextureStageState(0, 6, guard);
         this.field_Cc.SetRenderState(9, 2);
         this.field_Cc.SetRenderState(23, 4);
         this.field_Cc.SetRenderState(25, 5);
@@ -818,7 +818,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         this.field_Rc.SetType(3);
         this.field_Ac.SetType(1);
         this.field_Tc = false;
-        super.D(1);
+        super.resetDriverState(1);
     }
 
     final Texture3D a(boolean param0, TextureFormat param1, int param2, int param3, byte[] param4, int param5) {
@@ -834,7 +834,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         boolean stackIn_5_2 = false;
         stackIn_4_0 = this.field_Cc;
         stackIn_4_1 = 28;
-        stackIn_5_2 = (this.field_Rb) && (this.field_Bb) && (0 <= this.field_Kb);
+        stackIn_5_2 = (this.fogEnabled) && (this.fogAllowed) && (0 <= this.field_Kb);
         ((jagdx.IDirect3DDevice) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_5_2);
         if (guard != -119) {
           this.field_Pc = (jagdx.D3DPRESENT_PARAMETERS) null;
@@ -903,7 +903,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         if (invert) {
           var7 = var7 | 16;
         }
-        this.field_Cc.SetTextureStageState(this.field_mc, var6, DirectXGraphicsToolkit.a(source, 21) | var7);
+        this.field_Cc.SetTextureStageState(this.activeTextureUnit, var6, DirectXGraphicsToolkit.a(source, 21) | var7);
     }
 
     final void a(byte param0, jagdx.IDirect3DPixelShader param1) {
@@ -921,14 +921,14 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
 
     final void applyScissorEnabled(int guard) {
         int var2 = -106 % ((guard - 0) / 55);
-        this.field_Cc.a(174, this.field_wc);
+        this.field_Cc.a(174, this.scissorEnabled);
     }
 
     final void bindSpriteTarget(ToolkitSprite sprite, boolean withBuffer) {
     }
 
     final void applyProjectionMatrix(int guard) {
-        this.field_Cc.SetTransform(3, this.field_A);
+        this.field_Cc.SetTransform(3, this.projectionMatrix);
         if (guard != -2) {
           field_Fc = (int[]) null;
         }
@@ -971,7 +971,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
           this.field_W = stackIn_4_1;
           stackIn_7_1 = (0 == (this.field_Kc.TextureCaps & 2));
           this.field_Oc = stackIn_7_1;
-          this.field_cc = this.field_Kc.MaxSimultaneousTextures;
+          this.textureUnitCount = this.field_Kc.MaxSimultaneousTextures;
           if (this.field_Kc.MaxActiveLights > 0) {
             stackIn_10_1 = this.field_Kc.MaxActiveLights;
           } else {
@@ -987,12 +987,12 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
           if (this.field_Y <= 0) {
             this.field_Xc.CheckDeviceMultiSampleType(this.field_zc, this.field_Ic, this.field_Pc.BackBufferFormat, true, 2);
           }
-          this.field_Uc = new boolean[this.field_cc];
-          this.field_Bc = new boolean[this.field_cc];
-          this.field_ad = new boolean[this.field_cc];
-          this.field_Ec = new boolean[this.field_cc];
-          this.field_Gc = new int[this.field_cc];
-          this.field_Dc = new TextureFilter[this.field_cc];
+          this.field_Uc = new boolean[this.textureUnitCount];
+          this.field_Bc = new boolean[this.textureUnitCount];
+          this.field_ad = new boolean[this.textureUnitCount];
+          this.field_Ec = new boolean[this.textureUnitCount];
+          this.field_Gc = new int[this.textureUnitCount];
+          this.field_Dc = new TextureFilter[this.textureUnitCount];
           this.field_Cc.BeginScene();
           return;
         } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -1039,7 +1039,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
             var3 = 131072;
           }
         }
-        this.field_Cc.SetTextureStageState(this.field_mc, 11, this.field_mc | var3);
+        this.field_Cc.SetTextureStageState(this.activeTextureUnit, 11, this.activeTextureUnit | var3);
     }
 
     final void present(int sourceX, int sourceY) throws RenderPresentationException {

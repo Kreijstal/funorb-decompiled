@@ -78,7 +78,7 @@ class TurbulenceNoise3D extends FixedPointPerlinNoise3D {
             stackIn_9_0 = (var6_int != 0) ? 20 : 40;
             if (stackIn_9_0 > var7) {
               var8 = new float[]{0.0f, (float)(-(1 + ExpandingRingEffect.nextRandomInt(param1, HardwareGraphicsHeap.field_o, (byte) -96)))};
-              var14 = kt.a((byte) -27, var8, (float)(0.0 + (double)(2048.0f / (float)var7) * 0.017453292519943295));
+              var14 = FullscreenPromptController.rotateVector((byte) -27, var8, (float)(0.0 + (double)(2048.0f / (float)var7) * 0.017453292519943295));
               var13 = var14;
               var11 = var13;
               var8Lifetime2 = var11;
@@ -95,7 +95,7 @@ class TurbulenceNoise3D extends FixedPointPerlinNoise3D {
               return;
             }
             var8Lifetime1 = new float[]{0.0f, (float)(-(ExpandingRingEffect.nextRandomInt(param1, HardwareGraphicsHeap.field_o, (byte) -96) + 1))};
-            dupTemp$0 = kt.a((byte) -126, var8Lifetime1, (float)(0.017453292519943295 * (double)(2048.0f / (float)var7Lifetime1) + 0.0));
+            dupTemp$0 = FullscreenPromptController.rotateVector((byte) -126, var8Lifetime1, (float)(0.017453292519943295 * (double)(2048.0f / (float)var7Lifetime1) + 0.0));
             var12 = dupTemp$0;
             var8Lifetime1Lifetime1 = dupTemp$0;
             param3.addLast((IntrusiveNode) (new SlowBurstParticle(128, param0, param2, param4, (int)var12[0] << 8, (int)var12[1] << 8, 1)), (byte) 39);

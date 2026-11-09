@@ -4,17 +4,17 @@
 final class kr {
     static String[] field_f;
     static SpriteData[] field_b;
-    static LegacyAlphaFontLoader field_a;
+    static TextureTransformMode TEXTURE_COUNT4;
     static int[] field_d;
     static int field_c;
     static int field_e;
 
     public static void releaseStatics(int param0) {
         field_f = null;
-        field_a = null;
+        TEXTURE_COUNT4 = null;
         field_d = null;
         if (param0 > -58) {
-          field_a = (LegacyAlphaFontLoader) null;
+          TEXTURE_COUNT4 = (TextureTransformMode) null;
           field_b = null;
           return;
         }
@@ -87,7 +87,7 @@ final class kr {
 
     static {
         field_f = new String[]{null, "to discard it and<nbsp>continue.", "to discard it and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue."};
-        field_a = new LegacyAlphaFontLoader();
+        TEXTURE_COUNT4 = new TextureTransformMode();
         field_e = 0;
         field_c = 256;
     }

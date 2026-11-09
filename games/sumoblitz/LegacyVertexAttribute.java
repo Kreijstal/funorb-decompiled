@@ -11,13 +11,13 @@ final class LegacyVertexAttribute {
         if (guard == 13586) {
           pi.field_b = LegacyOpenGlPbuffer.field_w[language];
           LegacyOpenGlTexture3D.field_k = ArenaPad.waitingForTextTranslations[language];
-          AccountRequestState.field_c = qi.loadingTextTranslations[language];
+          AccountRequestState.field_c = ReflectionReplySender.loadingTextTranslations[language];
           return;
         }
         TEXTURE = (TextureCombineSource) null;
         pi.field_b = LegacyOpenGlPbuffer.field_w[language];
         LegacyOpenGlTexture3D.field_k = ArenaPad.waitingForTextTranslations[language];
-        AccountRequestState.field_c = qi.loadingTextTranslations[language];
+        AccountRequestState.field_c = ReflectionReplySender.loadingTextTranslations[language];
     }
 
     final static void pushSpriteRaster(int guard, Sprite sprite) {

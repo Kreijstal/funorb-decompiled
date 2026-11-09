@@ -34,7 +34,7 @@ final class EmptyWidgetRenderer implements WidgetRenderer {
             InwardSparkParticle.field_v = new IsaacPacketBuffer(param8);
             CacheIoRequest.field_v = param5;
             vp.field_a = param7;
-            jm.field_b = param13;
+            MouseInputShutdown.field_b = param13;
             ScrollPane.field_C = param9;
             CacheReferenceNode.field_t = param2;
             NineSlicePanel.field_a = param10;

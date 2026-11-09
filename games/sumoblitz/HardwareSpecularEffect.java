@@ -46,27 +46,27 @@ final class HardwareSpecularEffect extends ShaderEffect {
           this.setParameters(114, 98, -46);
         }
         if (!this.active) {
-          this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, true);
+          this.toolkit.setAlphaCombineSource(LegacyVertexAttribute.TEXTURE, 0, true);
         } else {
-          this.toolkit.g(1, -109);
+          this.toolkit.setActiveTextureUnit(1, -109);
           this.toolkit.a((GpuTexture) null, 102);
           this.toolkit.applyTexCoordGeneration(13754, lf.DISABLED);
-          this.toolkit.l(0);
+          this.toolkit.resetTextureTransform(0);
           if (!this.useTwoUnits) {
             this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
-            this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, 0);
-            this.toolkit.g(2, -117);
+            this.toolkit.setColorCombineSource(LegacyVertexAttribute.TEXTURE, 0, 0);
+            this.toolkit.setActiveTextureUnit(2, -117);
             this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
-            this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, 0);
-            this.toolkit.a(FontMetrics.PREVIOUS, 1, 0);
-            this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, true);
+            this.toolkit.setColorCombineSource(LegacyVertexAttribute.TEXTURE, 0, 0);
+            this.toolkit.setColorCombineSource(FontMetrics.PREVIOUS, 1, 0);
+            this.toolkit.setAlphaCombineSource(LegacyVertexAttribute.TEXTURE, 0, true);
             this.toolkit.a((GpuTexture) null, 110);
           } else {
             this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
-            this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, 0);
-            this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, true);
+            this.toolkit.setColorCombineSource(LegacyVertexAttribute.TEXTURE, 0, 0);
+            this.toolkit.setAlphaCombineSource(LegacyVertexAttribute.TEXTURE, 0, true);
           }
-          this.toolkit.g(0, -126);
+          this.toolkit.setActiveTextureUnit(0, -126);
           this.active = false;
         }
         this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
@@ -77,9 +77,9 @@ final class HardwareSpecularEffect extends ShaderEffect {
           return;
         }
         if (this.active) {
-          this.toolkit.g(1, -122);
+          this.toolkit.setActiveTextureUnit(1, -122);
           this.toolkit.a(this.specularMaps[-1 + parameters0], 93);
-          this.toolkit.g(0, -119);
+          this.toolkit.setActiveTextureUnit(0, -119);
         }
     }
 
@@ -168,7 +168,7 @@ final class HardwareSpecularEffect extends ShaderEffect {
         this.active = false;
         try {
           if (owner.field_W) {
-            stackIn_5_1 = !(owner.field_cc >= 3);
+            stackIn_5_1 = !(owner.textureUnitCount >= 3);
             this.useTwoUnits = stackIn_5_1;
             stackIn_8_0 = (!this.useTwoUnits) ? 127 : 48;
             var2_int = stackIn_8_0;
@@ -248,31 +248,31 @@ final class HardwareSpecularEffect extends ShaderEffect {
         AffineTransform3D var6;
         var4 = Sumoblitz.field_L ? 1 : 0;
         if (this.specularMaps == null) {
-          this.toolkit.a(NetworkResourceRequest.PRIMARY_COLOR, 0, true);
+          this.toolkit.setAlphaCombineSource(NetworkResourceRequest.PRIMARY_COLOR, 0, true);
         } else {
           if (!lighting) {
-            this.toolkit.a(NetworkResourceRequest.PRIMARY_COLOR, 0, true);
+            this.toolkit.setAlphaCombineSource(NetworkResourceRequest.PRIMARY_COLOR, 0, true);
           } else {
-            this.toolkit.g(1, -118);
+            this.toolkit.setActiveTextureUnit(1, -118);
             this.toolkit.applyTexCoordGeneration(guard ^ 31584, BeveledTextInputRenderer.NORMAL_MAP);
-            var6 = this.toolkit.B(0);
+            var6 = this.toolkit.textureTransform(0);
             var6.setRotationX((byte) 79, 1024);
-            this.toolkit.a(LegacyRidgedWaterNoise.field_y, 28880);
+            this.toolkit.setTextureTransformMode(LegacyRidgedWaterNoise.TEXTURE_COUNT3, 28880);
             if (!this.useTwoUnits) {
               this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, lf.REPLACE);
-              this.toolkit.a(FontMetrics.PREVIOUS, 0, guard ^ 20186);
-              this.toolkit.g(2, guard - 20295);
+              this.toolkit.setColorCombineSource(FontMetrics.PREVIOUS, 0, guard ^ 20186);
+              this.toolkit.setActiveTextureUnit(2, guard - 20295);
               this.toolkit.a((byte) -83, lf.REPLACE, LoginForm.ADD);
-              this.toolkit.a(FontMetrics.PREVIOUS, 0, 0);
+              this.toolkit.setColorCombineSource(FontMetrics.PREVIOUS, 0, 0);
               this.toolkit.setColorCombineSource((byte) 102, 1, true, false, FontMetrics.PREVIOUS);
-              this.toolkit.a(NetworkResourceRequest.PRIMARY_COLOR, 0, true);
+              this.toolkit.setAlphaCombineSource(NetworkResourceRequest.PRIMARY_COLOR, 0, true);
               this.toolkit.a(this.toolkit.field_D, guard - 20079);
             } else {
               this.toolkit.a((byte) -83, lf.REPLACE, LoginForm.ADD);
               this.toolkit.setColorCombineSource((byte) -66, 0, true, false, LegacyVertexAttribute.TEXTURE);
-              this.toolkit.a(NetworkResourceRequest.PRIMARY_COLOR, 0, true);
+              this.toolkit.setAlphaCombineSource(NetworkResourceRequest.PRIMARY_COLOR, 0, true);
             }
-            this.toolkit.g(0, -113);
+            this.toolkit.setActiveTextureUnit(0, -113);
             this.active = true;
           }
         }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pd extends IntrusiveNode {
-    static ProjectionMode field_m;
+    static ProjectionMode PERSPECTIVE;
     int field_o;
     int field_k;
     static int field_l;
@@ -16,21 +16,21 @@ final class pd extends IntrusiveNode {
           field_q = null;
           nameText = null;
           hardwareRidgedWaterData = null;
-          field_m = null;
+          PERSPECTIVE = null;
           return;
         }
         pd.releaseStatics((byte) 113);
         field_q = null;
         nameText = null;
         hardwareRidgedWaterData = null;
-        field_m = null;
+        PERSPECTIVE = null;
     }
 
     final static void sendHiscoreRequest(byte guard, int opcode, HiscoreRequest request) {
         IsaacPacketBuffer var3 = null;
         try {
           if (guard != -65) {
-            field_m = (ProjectionMode) null;
+            PERSPECTIVE = (ProjectionMode) null;
           }
           var3 = InwardSparkParticle.field_v;
           var3.writeCipherByte(opcode, 8);
@@ -82,7 +82,7 @@ final class pd extends IntrusiveNode {
     }
 
     static {
-        field_m = new ProjectionMode();
+        PERSPECTIVE = new ProjectionMode();
         nameText = "Name";
     }
 }

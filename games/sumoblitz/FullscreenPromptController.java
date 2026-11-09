@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kt {
+final class FullscreenPromptController {
     static ValidationStatus PENDING;
 
-    final static float[] a(byte param0, float[] param1, float param2) {
+    final static float[] rotateVector(byte guard, float[] vector, float angle) {
         float[] var3 = null;
         RuntimeException var3_ref = null;
         float[] var4 = null;
@@ -17,36 +17,36 @@ final class kt {
         try {
           var4 = new float[2];
           var3 = var4;
-          if (param0 >= -6) {
+          if (guard >= -6) {
             stackIn_2_0 = (float[]) null;
             return stackIn_2_0;
           }
-          var4[0] = (float)(Math.cos((double)param2) * (double)param1[0] - Math.sin((double)param2) * (double)param1[1]);
-          var4[1] = (float)(Math.cos((double)param2) * (double)param1[1] + Math.sin((double)param2) * (double)param1[0]);
+          var4[0] = (float)(Math.cos((double)angle) * (double)vector[0] - Math.sin((double)angle) * (double)vector[1]);
+          var4[1] = (float)(Math.cos((double)angle) * (double)vector[1] + Math.sin((double)angle) * (double)vector[0]);
           stackIn_4_0 = var4;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_7_0 = var3_ref;
-          stackIn_7_1 = new StringBuilder().append("kt.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_7_1 = new StringBuilder().append("kt.C(").append(guard).append(',');
+          if (vector == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(angle).append(')').toString());
         }
     }
 
-    final static void b(byte param0) {
-        if (param0 < 99) {
+    final static void initializeGraphicsOptions(byte guard) {
+        if (guard < 99) {
           return;
         }
         AlternateUsernameCredentials.b((byte) -113);
     }
 
-    final static int a(int param0) {
+    final static int pollPromptInput(int guard) {
         int stackIn_30_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
@@ -75,11 +75,11 @@ final class kt {
           if (RendererPreference.field_a.isActivated(-31260)) {
             var1_int = 1;
           }
-          var4 = -89 / ((param0 - 67) / 48);
+          var4 = -89 / ((guard - 67) / 48);
           var3 = 0;
           if (var1_int != 0 &&
             RendererPreference.field_a.selectedIndex >= 0) {
-            var3 = jo.field_b[RendererPreference.field_a.selectedIndex];
+            var3 = ByteArrayPool.field_b[RendererPreference.field_a.selectedIndex];
             if (var3 == 2) {
               GraphicsToolkit.b(23639);
             } else if (var3 == 5) {
@@ -105,7 +105,7 @@ final class kt {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "kt.A(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "kt.A(" + guard + ')');
         }
     }
 

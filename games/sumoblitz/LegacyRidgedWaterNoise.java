@@ -3,7 +3,7 @@
  */
 final class LegacyRidgedWaterNoise extends RidgedNoise3D {
     private byte[] pixels;
-    static LegacyAlphaFontLoader field_y;
+    static TextureTransformMode TEXTURE_COUNT3;
 
     final void writeVoxel(byte value, int index, int guard) {
         int var4 = 0;
@@ -62,13 +62,13 @@ final class LegacyRidgedWaterNoise extends RidgedNoise3D {
     }
 
     public static void releaseStatics(byte param0) {
-        field_y = null;
+        TEXTURE_COUNT3 = null;
         if (param0 <= 53) {
           LegacyRidgedWaterNoise.releaseStatics((byte) -74);
         }
     }
 
     static {
-        field_y = new LegacyAlphaFontLoader();
+        TEXTURE_COUNT3 = new TextureTransformMode();
     }
 }

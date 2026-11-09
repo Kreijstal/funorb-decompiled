@@ -388,7 +388,7 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
               stackIn_5_3 = var14.lines[1 + var7].top;
             }
             var12 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
-            kw.pushClip(widget.height + (widget.y + parentY), parentY + widget.y, 1, widget.x + parentX, widget.x + parentX + widget.width);
+            TextCaretLayout.pushClip(widget.height + (widget.y + parentY), parentY + widget.y, 1, widget.x + parentX, widget.x + parentX + widget.width);
             HardwareTurbulentWaterNoise.widgetTheme.a(this.caretColor, var10, false, var10, var12, var11);
             ClientException.popRasterState((byte) 116);
           }
@@ -504,7 +504,7 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
             }
             var10 = var18.lineForCharacter(var8, guard ^ -17500);
             var11 = var18.lineForCharacter(var9, -17500);
-            kw.pushClip(widget.height + (widget.y + parentY), widget.y + parentY, 1, widget.x + parentX, widget.width + (parentX + widget.x));
+            TextCaretLayout.pushClip(widget.height + (widget.y + parentY), widget.y + parentY, 1, widget.x + parentX, widget.width + (parentX + widget.x));
             for (var12 = var10; var12 <= var11; var12++) {
               var13 = var17.lines[var12];
               if (var10 != var12) {
@@ -603,7 +603,7 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
             return;
           }
           boolean decompiledFrameRemainder0 = true;
-          kw.pushClip(widget.height + (parentY + widget.y), widget.y + parentY, 1, widget.x + parentX, widget.width + widget.x + parentX);
+          TextCaretLayout.pushClip(widget.height + (parentY + widget.y), widget.y + parentY, 1, widget.x + parentX, widget.width + widget.x + parentX);
           var9_int = this.contentWidth(95, widget);
           var10 = this.contentHeight(widget, true);
           if (!this.wrapText) {

@@ -137,7 +137,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         if (guard < -35) {
           var6 = this.validator.getStatus(-126);
           if (var6 != GameInstructions.DEBOUNCING &&
-            var6 != kt.PENDING) {
+            var6 != FullscreenPromptController.PENDING) {
             var5 = this.validator.getMessage(3690);
             if (var5 == null) {
               var5 = this.field_U;
@@ -155,7 +155,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           var9 = this.x + parentX;
           var10 = var50.textOriginY(parentY, (UiWidget) (this), 0) + (var50.layoutText(-3, (UiWidget) (this)).height(true) >> 1);
           if (var6Lifetime5 != GameInstructions.DEBOUNCING &&
-            kt.PENDING != var6Lifetime5) {
+            FullscreenPromptController.PENDING != var6Lifetime5) {
             if (AccountConnectionPhase.INVALID == var6Lifetime5) {
               var18 = ToolkitRasterStateCacheEntry.field_m[2];
               var18.d(var9, -(var18.field_u >> 1) + var10, 256);
@@ -207,7 +207,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           var9Lifetime1 = this.x + parentX;
           var10Lifetime1 = var51.textOriginY(parentY, (UiWidget) (this), 0) + (var51.layoutText(-3, (UiWidget) (this)).height(true) >> 1);
           if (var6Lifetime1 != GameInstructions.DEBOUNCING &&
-            kt.PENDING != var6Lifetime1) {
+            FullscreenPromptController.PENDING != var6Lifetime1) {
             if (AccountConnectionPhase.INVALID == var6Lifetime1) {
               var23 = ToolkitRasterStateCacheEntry.field_m[2];
               var23.d(var9Lifetime1, -(var23.field_u >> 1) + var10Lifetime1, 256);
@@ -245,7 +245,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           this.field_K.d(-(var25.field_z >> 1) + var9Lifetime1, -var25.field_w + var10Lifetime1, 256);
           return;
         }
-        if (var6Lifetime1 == kt.PENDING) {
+        if (var6Lifetime1 == FullscreenPromptController.PENDING) {
           var26 = SoftwareRenderTarget.checkingText;
           if (!var26.equals(this.text)) {
             this.text = var26;
@@ -257,7 +257,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           var9Lifetime2 = this.x + parentX;
           var10Lifetime2 = var52.textOriginY(parentY, (UiWidget) (this), 0) + (var52.layoutText(-3, (UiWidget) (this)).height(true) >> 1);
           if (var6Lifetime1 != GameInstructions.DEBOUNCING &&
-            kt.PENDING != var6Lifetime1) {
+            FullscreenPromptController.PENDING != var6Lifetime1) {
             if (AccountConnectionPhase.INVALID == var6Lifetime1) {
               var28 = ToolkitRasterStateCacheEntry.field_m[2];
               var28.d(var9Lifetime2, -(var28.field_u >> 1) + var10Lifetime2, 256);
@@ -307,7 +307,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           var9Lifetime3 = this.x + parentX;
           var10Lifetime3 = var53.textOriginY(parentY, (UiWidget) (this), 0) + (var53.layoutText(-3, (UiWidget) (this)).height(true) >> 1);
           if (var6Lifetime2 != GameInstructions.DEBOUNCING &&
-            kt.PENDING != var6Lifetime2) {
+            FullscreenPromptController.PENDING != var6Lifetime2) {
             if (AccountConnectionPhase.INVALID == var6Lifetime2) {
               var33 = ToolkitRasterStateCacheEntry.field_m[2];
               var33.d(var9Lifetime3, -(var33.field_u >> 1) + var10Lifetime3, 256);
@@ -353,7 +353,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           var9Lifetime4 = this.x + parentX;
           var10Lifetime4 = var55.textOriginY(parentY, (UiWidget) (this), 0) + (var55.layoutText(-3, (UiWidget) (this)).height(true) >> 1);
           if (var6Lifetime3 != GameInstructions.DEBOUNCING &&
-            kt.PENDING != var6Lifetime3) {
+            FullscreenPromptController.PENDING != var6Lifetime3) {
             if (AccountConnectionPhase.INVALID == var6Lifetime3) {
               var47 = ToolkitRasterStateCacheEntry.field_m[2];
               var47.d(var9Lifetime4, -(var47.field_u >> 1) + var10Lifetime4, 256);
@@ -416,7 +416,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           this.field_K.d(-(var38.field_z >> 1) + var9Lifetime5, -var38.field_w + var10Lifetime5, 256);
           return;
         }
-        if (kt.PENDING != var6Lifetime4) {
+        if (FullscreenPromptController.PENDING != var6Lifetime4) {
           if (AccountConnectionPhase.INVALID == var6Lifetime4) {
             var44 = ToolkitRasterStateCacheEntry.field_m[2];
             var44.d(var9Lifetime5, -(var44.field_u >> 1) + var10Lifetime5, 256);
@@ -456,26 +456,26 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         ComboState.comboCount = ComboState.comboCount + 1;
         CacheReferenceNode.field_u = 150;
         int var1 = ComboState.comboCount / param0;
-        if (un.field_a.length - 1 != var1) {
-          if (un.field_a.length <= var1) {
-            var1 = un.field_a.length - 1;
+        if (ScoreMultiplierTable.multipliers.length - 1 != var1) {
+          if (ScoreMultiplierTable.multipliers.length <= var1) {
+            var1 = ScoreMultiplierTable.multipliers.length - 1;
           }
-          pd.scoreMultiplier = un.field_a[var1];
+          pd.scoreMultiplier = ScoreMultiplierTable.multipliers[var1];
           return;
         }
         FontMetrics.field_b = FontMetrics.field_b + 1;
         if (ps.field_e[12] == FontMetrics.field_b) {
           UnderageAccountInfoPanel.b(24753, 243, 12);
-          if (un.field_a.length <= var1) {
-            var1 = un.field_a.length - 1;
+          if (ScoreMultiplierTable.multipliers.length <= var1) {
+            var1 = ScoreMultiplierTable.multipliers.length - 1;
           }
-          pd.scoreMultiplier = un.field_a[var1];
+          pd.scoreMultiplier = ScoreMultiplierTable.multipliers[var1];
           return;
         }
-        if (un.field_a.length <= var1) {
-          var1 = un.field_a.length - 1;
+        if (ScoreMultiplierTable.multipliers.length <= var1) {
+          var1 = ScoreMultiplierTable.multipliers.length - 1;
         }
-        pd.scoreMultiplier = un.field_a[var1];
+        pd.scoreMultiplier = ScoreMultiplierTable.multipliers[var1];
     }
 
     ValidationMessageWidget(InputValidator validation, String helpText, int x, int y, int width, int height) {
