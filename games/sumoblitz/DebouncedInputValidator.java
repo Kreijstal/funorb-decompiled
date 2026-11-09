@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class dw implements v {
-    private long field_a;
+abstract class DebouncedInputValidator implements InputValidator {
+    private long lastChangedAt;
     static int field_b;
 
-    public final void a(byte param0) {
-        this.field_a = wq.a(-100);
-        if (param0 > -14) {
-          this.a(31);
+    public final void markChanged(byte guard) {
+        this.lastChangedAt = wq.a(-100);
+        if (guard > -14) {
+          this.getMessage(31);
         }
     }
 
-    abstract String d(int param0);
+    abstract String evaluateMessage(int guard);
 
-    abstract gf b(byte param0);
+    abstract ValidationStatus evaluateStatus(byte guard);
 
     final static void a(ResourceArchive param0, int param1) {
         PcmSample[] var3 = null;
@@ -245,26 +245,26 @@ abstract class dw implements v {
         }
     }
 
-    public final gf c(int param0) {
-        if (this.b(-8003)) {
-          return LegacyOpenGlGraphicsHeap.field_n;
+    public final ValidationStatus getStatus(int guard) {
+        if (this.isEmpty(-8003)) {
+          return LegacyOpenGlGraphicsHeap.EMPTY;
         }
-        if (wq.a(-89) >= this.field_a + 350L) {
-          int var2 = -1 % ((param0 + 19) / 46);
-          return this.b((byte) 114);
+        if (wq.a(-89) >= this.lastChangedAt + 350L) {
+          int var2 = -1 % ((guard + 19) / 46);
+          return this.evaluateStatus((byte) 114);
         }
-        return GameInstructions.field_f;
+        return GameInstructions.DEBOUNCING;
     }
 
-    public final String a(int param0) {
-        if (param0 != 3690) {
+    public final String getMessage(int guard) {
+        if (guard != 3690) {
           return (String) null;
         }
-        if (this.b(-8003)) {
+        if (this.isEmpty(-8003)) {
           return null;
         }
-        if (wq.a(param0 - 3706) >= (350L + this.field_a)) {
-          return this.d(-98);
+        if (wq.a(guard - 3706) >= (350L + this.lastChangedAt)) {
+          return this.evaluateMessage(-98);
         }
         return null;
     }

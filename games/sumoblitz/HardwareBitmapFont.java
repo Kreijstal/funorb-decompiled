@@ -285,7 +285,7 @@ final class HardwareBitmapFont extends ToolkitFont {
         this.field_f.U(0);
         this.field_f.bindVertexBuffer(0, 71, this.field_d);
         this.field_f.bindVertexLayout(126, this.field_f.field_jc);
-        this.field_f.drawPrimitives(param0 * 4, 0, 2, an.TRIANGLE_FAN);
+        this.field_f.drawPrimitives(param0 * 4, 0, 2, AccountServiceResult.TRIANGLE_FAN);
         if (this.field_c ||
           param4) {
           this.field_f.a(jq.TEXTURE, 0, 0);

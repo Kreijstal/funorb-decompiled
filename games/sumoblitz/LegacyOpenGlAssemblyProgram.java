@@ -49,7 +49,7 @@ final class LegacyOpenGlAssemblyProgram {
               if (!param6) {
                 stackIn_23_0 = uc.field_c[var12];
               } else {
-                stackIn_23_0 = lj.field_a[var12];
+                stackIn_23_0 = LoginFieldValue.field_a[var12];
               }
               var13 = stackIn_23_0;
               if (var13 <= var7_int) {

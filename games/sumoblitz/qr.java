@@ -4,22 +4,22 @@
 final class qr {
     static IntrusiveDeque field_c;
     static FontMetrics field_a;
-    static gf field_e;
+    static ValidationStatus INVALID;
     static int[] field_d;
     static MusicCrossfadeStream field_b;
 
-    final static an a(String[] args, int param1) {
-        an var2 = null;
+    final static AccountServiceResult accountNameSuggestions(String[] suggestions, int guard) {
+        AccountServiceResult var2 = null;
         RuntimeException var2_ref = null;
-        an stackIn_3_0 = null;
+        AccountServiceResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new an(false);
-          var2.field_h = args;
-          if (param1 != 8192) {
+          var2 = new AccountServiceResult(false);
+          var2.nameSuggestions = suggestions;
+          if (guard != 8192) {
             qr.a(1, -118);
           }
           stackIn_3_0 = var2;
@@ -29,12 +29,12 @@ final class qr {
           var2_ref = decompiledCaughtException;
           stackIn_6_0 = var2_ref;
           stackIn_6_1 = new StringBuilder().append("qr.A(");
-          if (args == null) {
+          if (suggestions == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -78,19 +78,19 @@ final class qr {
     }
 
     public static void releaseStatics(byte param0) {
-        field_e = null;
+        INVALID = null;
         field_c = null;
         field_a = null;
         field_b = null;
         if (param0 != 119) {
-          field_e = (gf) null;
+          INVALID = (ValidationStatus) null;
         }
         field_d = null;
     }
 
     static {
         field_c = new IntrusiveDeque();
-        field_e = new gf();
+        INVALID = new ValidationStatus();
         field_d = new int[8192];
     }
 }

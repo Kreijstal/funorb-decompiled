@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class om extends IntrusiveNode {
-    private wc[] field_o;
+    private DroneWave[] field_o;
     static String unpackingLevelsText;
     static boolean field_l;
     static SpriteData[] field_m;
     static String[] droneNames;
 
-    om(wc[] param0) {
+    om(DroneWave[] param0) {
         try {
           this.field_o = param0;
         } catch (RuntimeException runtimeException) {
@@ -23,7 +23,7 @@ final class om extends IntrusiveNode {
         field_m = null;
     }
 
-    final wc[] a(int param0) {
+    final DroneWave[] a(int param0) {
         int var2 = 45 % ((param0 + 35) / 38);
         return this.field_o;
     }

@@ -116,7 +116,7 @@ abstract class NoiseSliceGenerator {
               stackIn_8_0 = var3;
               return stackIn_8_0;
             }
-            stackIn_6_0 = cp.a(var3, guard ^ 0);
+            stackIn_6_0 = WidgetTheme.copyBytes(var3, guard ^ 0);
             return stackIn_6_0;
           }
           if (guard != 0) {

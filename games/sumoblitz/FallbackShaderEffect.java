@@ -87,7 +87,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 ToolkitRasterBuffer.field_q = param1;
                 var2 = OpenGlCubeTexture.a("loginm3", (byte) -23);
                 if (var2 != null) {
-                  ar.connectionTimedOutPleaseText = MusicVoice.a(0, var2);
+                  HotspotTextWidget.connectionTimedOutPleaseText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("loginm2", (byte) -23);
                 if (var2 != null) {
@@ -111,7 +111,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("error_js5connect_full", (byte) -23);
                 if (var2 != null) {
-                  bn.dataServerFullOrText = MusicVoice.a(param0 - 7, var2);
+                  ValidationMessageWidget.dataServerFullOrText = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = OpenGlCubeTexture.a("error_js5connect", (byte) -23);
                 if (null != var2) {
@@ -119,7 +119,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("login_gameupdated", (byte) -23);
                 if (var2 != null) {
-                  s.thisGameHasBeenText = MusicVoice.a(0, var2);
+                  TextHotspot.thisGameHasBeenText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("create_unable", (byte) -23);
                 if (null != var2) {
@@ -1117,7 +1117,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("goback", (byte) -23);
                 if (var2 != null) {
-                  jc.goBackText = MusicVoice.a(0, var2);
+                  AgeValidator.goBackText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("otheroptions", (byte) -23);
                 if (null != var2) {
@@ -1636,7 +1636,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("create_alert_namelength", (byte) -23);
                 if (null != var2) {
-                  qq.namesShouldContainAText = MusicVoice.a(param0 ^ 7, var2);
+                  ValidatedTextInputWidget.namesShouldContainAText = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = OpenGlCubeTexture.a("create_alert_namechars", (byte) -23);
                 if (null != var2) {
@@ -1664,7 +1664,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("create_alert_passcontainsname", (byte) -23);
                 if (var2 != null) {
-                  vr.thisPasswordContainsYourText = MusicVoice.a(param0 ^ 7, var2);
+                  ValidationStatusWidget.thisPasswordContainsYourText = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = OpenGlCubeTexture.a("create_alert_passcontainsemail", (byte) -23);
                 if (var2 != null) {
@@ -1928,7 +1928,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("instructions", (byte) -23);
                 if (null != var2) {
-                  cp.instructionsText = MusicVoice.a(0, var2);
+                  WidgetTheme.instructionsText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("tutorial", (byte) -23);
                 if (null != var2) {

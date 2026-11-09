@@ -164,7 +164,7 @@ abstract class ResizingDialog extends ModalDialog {
           var7Lifetime1++;
           var8Lifetime1++;
         }
-        ar.field_E.draw(originX + (this.width - 90), 10 + originY);
+        HotspotTextWidget.field_E.draw(originX + (this.width - 90), 10 + originY);
         MusicCrossfadeStream.drawHorizontalSpriteStrip(35 + originY, this.width - 10, 2, originX + 5, ToolkitImageProducerBuffer.field_v);
         MusicCrossfadeStream.drawHorizontalSpriteStrip(-22 + this.height + originY, this.width, 2, originX, DropDownListWidget.field_O);
         var6Lifetime2 = 127;

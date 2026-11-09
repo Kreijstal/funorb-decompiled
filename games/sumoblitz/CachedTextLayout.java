@@ -186,7 +186,7 @@ final class CachedTextLayout extends TextLayout {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param2 = gf.a('_', param2, false, "");
+          param2 = ValidationStatus.a('_', param2, false, "");
           var3 = TextureFilter.a(param0, (byte) 117);
           if (param1 <= 29) {
             CachedTextLayout.e(58);
@@ -216,7 +216,7 @@ final class CachedTextLayout extends TextLayout {
     public static void d(int param0) {
         if (param0 != 0) {
           String var2 = (String) null;
-          CachedTextLayout.a((lj) null, -59, (lj) null, 54, false, 96, (String) null);
+          CachedTextLayout.a((LoginFieldValue) null, -59, (LoginFieldValue) null, 54, false, 96, (String) null);
         }
         field_h = null;
     }
@@ -224,7 +224,7 @@ final class CachedTextLayout extends TextLayout {
     final static String e(int param0) {
         if (param0 <= 71) {
           String var2 = (String) null;
-          CachedTextLayout.a((lj) null, 38, (lj) null, -17, false, -119, (String) null);
+          CachedTextLayout.a((LoginFieldValue) null, 38, (LoginFieldValue) null, -17, false, -119, (String) null);
         }
         if (up.field_d) {
           return null;
@@ -289,7 +289,7 @@ final class CachedTextLayout extends TextLayout {
         }
     }
 
-    final static int a(lj param0, int param1, lj param2, int param3, boolean param4, int param5, String param6) {
+    final static int a(LoginFieldValue param0, int param1, LoginFieldValue param2, int param3, boolean param4, int param5, String param6) {
         int var12 = 0;
         int stackIn_8_0 = 0;
         PacketBuffer stackIn_13_0 = null;
@@ -332,8 +332,8 @@ final class CachedTextLayout extends TextLayout {
             var14 = (MusicTrack) null;
             CachedTextLayout.playMusic((MusicTrack) null, (byte) 63, false);
           }
-          var15 = param0.a(true);
-          var8 = param2.a(true);
+          var15 = param0.text(true);
+          var8 = param2.text(true);
           if (null == DisplayModeConfirmationDialog.field_O &&
             !GridWidgetContainer.a((byte) -83, false)) {
             stackIn_8_0 = -1;
@@ -372,14 +372,14 @@ final class CachedTextLayout extends TextLayout {
               SoftLruCache.field_e.writeInt(48, fd.field_d.nextInt());
               SoftLruCache.field_e.writeInt(48, fd.field_d.nextInt());
               stackIn_13_0 = SoftLruCache.field_e;
-              if (!param0.a(110)) {
+              if (!param0.includeInRsaBlock(110)) {
                 stackIn_14_1 = "";
               } else {
                 stackIn_14_1 = var15;
               }
               ((PacketBuffer) (Object) stackIn_13_0).writeCircumfixedString(stackIn_14_1, (byte) 120);
               stackIn_16_0 = SoftLruCache.field_e;
-              if (!param2.a(91)) {
+              if (!param2.includeInRsaBlock(91)) {
                 stackIn_17_1 = "";
               } else {
                 stackIn_17_1 = var8;
@@ -457,7 +457,7 @@ final class CachedTextLayout extends TextLayout {
           if (DisplayModeConfirmationDialog.field_O == null) {
             if (LimitedRandomAccessFile.field_g) {
               if (30000L < uc.b(26560)) {
-                MouseWheelInput.field_c = ar.connectionTimedOutPleaseText;
+                MouseWheelInput.field_c = HotspotTextWidget.connectionTimedOutPleaseText;
               } else {
                 MouseWheelInput.field_c = GridWidgetContainer.errorConnectingToServerText;
               }

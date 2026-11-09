@@ -13,7 +13,7 @@ final class ig {
         int var3 = 0;
         int var4 = 0;
         int var11 = 0;
-        wc var12 = null;
+        DroneWave var12 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         Drone var6 = null;
@@ -26,14 +26,14 @@ final class ig {
           if (Bzip2State.field_J == null) {
             return false;
           }
-          if (an.waveIndex == -1) {
+          if (AccountServiceResult.waveIndex == -1) {
             return false;
           }
-          if (Bzip2State.field_J.length <= an.waveIndex) {
+          if (Bzip2State.field_J.length <= AccountServiceResult.waveIndex) {
             return false;
           }
-          var12 = Bzip2State.field_J[an.waveIndex];
-          var2 = var12.field_b;
+          var12 = Bzip2State.field_J[AccountServiceResult.waveIndex];
+          var2 = var12.drones;
           var3 = 0;
           var4 = 26 / ((67 - param0) / 42);
           for (var5 = 0; var5 < var2.length; var5++) {

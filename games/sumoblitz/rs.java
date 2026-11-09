@@ -12,9 +12,9 @@ final class rs {
     static SpriteData field_e;
 
     final static int a(boolean param0, String param1, int param2, String param3, int param4, int param5, String param6) {
-        lj var7 = null;
+        LoginFieldValue var7 = null;
         RuntimeException var7_ref = null;
-        lj var8 = null;
+        LoginFieldValue var8 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -26,12 +26,12 @@ final class rs {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var7 = new lj(param1);
+          var7 = new LoginFieldValue(param1);
           if (param5 < 115) {
             stackIn_2_0 = -95;
             return stackIn_2_0;
           }
-          var8 = new lj(param3);
+          var8 = new LoginFieldValue(param3);
           stackIn_4_0 = CachedTextLayout.a(var7, param2, var8, param4, param0, 21, param6);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

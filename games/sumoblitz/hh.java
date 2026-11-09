@@ -40,10 +40,10 @@ final class hh extends IOException {
               param2 = new java.awt.Color(140, 17, 17);
             }
             try {
-              if (null == gf.field_a) {
-                gf.field_a = qn.field_f.createImage(304, 34);
+              if (null == ValidationStatus.field_a) {
+                ValidationStatus.field_a = qn.field_f.createImage(304, 34);
               }
-              var11 = gf.field_a.getGraphics();
+              var11 = ValidationStatus.field_a.getGraphics();
               var11.setColor(param2);
               var11.drawRect(0, 0, 303, 33);
               var11.fillRect(2, 2, param1 * 3, 30);
@@ -57,7 +57,7 @@ final class hh extends IOException {
               }
               var11.setColor(java.awt.Color.white);
               var11.drawString(param4, (-(param4.length() * 6) + 304) / 2, 22);
-              var10.drawImage(gf.field_a, LegacyOpenGlRidgedWaterEffect.field_h / 2 - 152, -18 + wq.field_b / 2, (java.awt.image.ImageObserver) null);
+              var10.drawImage(ValidationStatus.field_a, LegacyOpenGlRidgedWaterEffect.field_h / 2 - 152, -18 + wq.field_b / 2, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;

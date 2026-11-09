@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ar extends InteractiveWidget {
+class HotspotTextWidget extends InteractiveWidget {
     static IntrusiveNodeHashTable field_N;
-    private s field_J;
+    private TextHotspot hoveredHotspot;
     static String connectionTimedOutPleaseText;
-    private String[] field_I;
-    static int field_G;
-    private IntrusiveDeque field_H;
+    private String[] hotspotTooltips;
+    static int activePointerButton;
+    private IntrusiveDeque hotspots;
     static String pointsRemainingText;
     static Sprite field_E;
     static tf field_L;
 
-    final void a(int param0, boolean param1, int param2, int param3) {
-        this.setBounds(-50, param2, param0, ((TextWidgetLayout) ((Object) this.renderer)).measuredTextHeight((UiWidget) (this), (byte) 116), param3);
-        if (param1) {
+    final void setBoundsToTextHeight(int y, boolean guard, int x, int width) {
+        this.setBounds(-50, x, y, ((TextWidgetLayout) ((Object) this.renderer)).measuredTextHeight((UiWidget) (this), (byte) 116), width);
+        if (guard) {
           UiWidget var6 = (UiWidget) null;
           this.update(-89, -87, (UiWidget) null, -5);
         }
@@ -43,11 +43,11 @@ class ar extends InteractiveWidget {
         try {
           super.update(parentX, -117, root, parentY);
           var5_int = 65 % ((guard + 25) / 45);
-          this.field_J = null;
+          this.hoveredHotspot = null;
           if (this.hovered) {
             var6 = -this.x + (-parentX + ko.field_p);
             var7 = -parentY + (pi.field_e - this.y);
-            this.field_J = this.b(-40, var6, var7);
+            this.hoveredHotspot = this.hotspotAt(-40, var6, var7);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -137,7 +137,7 @@ class ar extends InteractiveWidget {
         }
     }
 
-    final void a(int param0) {
+    final void rebuildHotspots(int guard) {
         int var11 = 0;
         int stackIn_8_0 = 0;
         int stackIn_13_0 = 0;
@@ -153,15 +153,15 @@ class ar extends InteractiveWidget {
         TextLayoutLine var12;
         int var13;
         int var14;
-        s var15;
+        TextHotspot var15;
         int var16;
         int var7Lifetime1;
         var16 = Sumoblitz.field_L ? 1 : 0;
-        this.field_H = new IntrusiveDeque();
+        this.hotspots = new IntrusiveDeque();
         var2 = 0;
         var3 = (TextWidgetLayout) ((Object) this.renderer);
         var4 = var3.layoutText(-3, (UiWidget) (this));
-        if (param0 != 9) {
+        if (guard != 9) {
           connectionTimedOutPleaseText = (String) null;
         }
         while (true) {
@@ -174,7 +174,7 @@ class ar extends InteractiveWidget {
           var7Lifetime1 = Integer.parseInt(var6);
           var2 = this.text.indexOf("</hotspot>", var5);
           var8 = var4.lineForCharacter(var5, -17500);
-          var9 = var4.lineForCharacter(var2, param0 - 17509);
+          var9 = var4.lineForCharacter(var2, guard - 17509);
           var10 = null;
           for (var11 = var8; var11 <= var9; var11++) {
             var12 = var4.lines[var11];
@@ -194,30 +194,30 @@ class ar extends InteractiveWidget {
               stackIn_13_0 = var4.caretX((byte) 126, var2);
             }
             var14 = stackIn_13_0;
-            var15 = new s(var7Lifetime1, var13, var12.top, -var13 + var14, Math.max(var3.lineHeight(14763), -var12.top + var12.bottom));
+            var15 = new TextHotspot(var7Lifetime1, var13, var12.top, -var13 + var14, Math.max(var3.lineHeight(14763), -var12.top + var12.bottom));
             if (var10 != null) {
-              ((s) (var10)).field_r = var15;
+              ((TextHotspot) (var10)).nextFragment = var15;
             }
-            this.field_H.addLast((IntrusiveNode) (var15), (byte) 39);
+            this.hotspots.addLast((IntrusiveNode) (var15), (byte) 39);
             var10 = var15;
           }
         }
     }
 
-    ar(String param0, WidgetRenderer param1) {
-        super(param0, (WidgetListener) null);
-        this.field_J = null;
+    HotspotTextWidget(String text, WidgetRenderer renderer) {
+        super(text, (WidgetListener) null);
+        this.hoveredHotspot = null;
         try {
-          this.renderer = param1;
+          this.renderer = renderer;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ar.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ar.<init>(" + (text != null ? "{...}" : "null") + ',' + (renderer != null ? "{...}" : "null") + ')');
         }
     }
 
     final void setBounds(int guard, int newX, int newY, int newHeight, int newWidth) {
         super.setBounds(-114, newX, newY, newHeight, newWidth);
         int var6 = -60 / ((guard - 28) / 63);
-        this.a(9);
+        this.rebuildHotspots(9);
     }
 
     boolean requestFocus(UiWidget root, byte guard) {
@@ -246,26 +246,26 @@ class ar extends InteractiveWidget {
         }
     }
 
-    private final s b(int param0, int param1, int param2) {
+    private final TextHotspot hotspotAt(int guard, int x, int y) {
         int var4;
-        s var5;
-        s var6;
+        TextHotspot var5;
+        TextHotspot var6;
         int var7;
         var7 = Sumoblitz.field_L ? 1 : 0;
-        var4 = 22 / ((88 - param0) / 35);
-        var5 = (s) (this.field_H.first(124));
+        var4 = 22 / ((88 - guard) / 35);
+        var5 = (TextHotspot) (this.hotspots.first(124));
         while (var5 != null) {
           var6 = var5;
           while (var6 != null) {
-            if (var6.field_s <= param1 &&
-              var6.field_l <= param2 &&
-              var6.field_t + var6.field_s > param1 &&
-              param2 <= var6.field_l + var6.field_p) {
+            if (var6.x <= x &&
+              var6.y <= y &&
+              var6.width + var6.x > x &&
+              y <= var6.y + var6.height) {
               return var5;
             }
-            var6 = var6.field_r;
+            var6 = var6.nextFragment;
           }
-          var5 = (s) (this.field_H.next((byte) 18));
+          var5 = (TextHotspot) (this.hotspots.next((byte) 18));
         }
         return null;
     }
@@ -281,18 +281,18 @@ class ar extends InteractiveWidget {
         if (guard >= -35) {
           field_L = (tf) null;
         }
-        s var6 = this.field_J;
+        TextHotspot var6 = this.hoveredHotspot;
         if (var6 != null) {
           var7 = var9.textOriginX(parentX, (UiWidget) (this), 16098);
           var8 = var9.textOriginY(parentY, (UiWidget) (this), 0);
           do {
-            AudioServiceThread.drawDottedRectangle(-2 + (var6.field_l + var8), var6.field_t + 2, -13181, -2 + (var7 + var6.field_s), 2 + var6.field_p);
-            var6 = var6.field_r;
+            AudioServiceThread.drawDottedRectangle(-2 + (var6.y + var8), var6.width + 2, -13181, -2 + (var7 + var6.x), 2 + var6.height);
+            var6 = var6.nextFragment;
           } while (var6 != null);
         }
     }
 
-    final void a(int param0, String param1, int param2) {
+    final void setHotspotTooltip(int guard, String tooltip, int hotspotId) {
         int var5 = 0;
         RuntimeException runtimeException = null;
         String[] var4 = null;
@@ -305,34 +305,34 @@ class ar extends InteractiveWidget {
         RuntimeException decompiledCaughtException = null;
         var6 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (param0 > -44) {
+          if (guard > -44) {
             connectionTimedOutPleaseText = (String) null;
           }
-          if (null == this.field_I ||
-            this.field_I.length <= param2) {
-            var7 = new String[1 + param2];
+          if (null == this.hotspotTooltips ||
+            this.hotspotTooltips.length <= hotspotId) {
+            var7 = new String[1 + hotspotId];
             var8 = var7;
             var4 = var8;
-            if (null != this.field_I) {
-              for (var5 = 0; var5 < this.field_I.length; var5++) {
-                var7[var5] = this.field_I[var5];
+            if (null != this.hotspotTooltips) {
+              for (var5 = 0; var5 < this.hotspotTooltips.length; var5++) {
+                var7[var5] = this.hotspotTooltips[var5];
               }
             }
-            this.field_I = var8;
+            this.hotspotTooltips = var8;
           }
-          this.field_I[param2] = param1;
+          this.hotspotTooltips[hotspotId] = tooltip;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_15_0 = runtimeException;
-          stackIn_15_1 = new StringBuilder().append("ar.H(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_15_1 = new StringBuilder().append("ar.H(").append(guard).append(',');
+          if (tooltip == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(hotspotId).append(')').toString());
         }
     }
 
@@ -340,32 +340,32 @@ class ar extends InteractiveWidget {
         super.notifyAction(action, pointerX, guard, pointerY);
         int var5 = -this.x + pointerX;
         int var6 = pointerY - this.y;
-        s var7 = this.b(126, var5, var6);
+        TextHotspot var7 = this.hotspotAt(126, var5, var6);
         if (var7 != null &&
           this.listener != null) {
-          ((ca) ((Object) this.listener)).a(var7.field_q, this, action, -20036);
+          ((TextHotspotListener) ((Object) this.listener)).onHotspotAction(var7.id, this, action, -20036);
         }
     }
 
     String hoveredTooltip(int guard) {
-        if (null == this.field_J) {
+        if (null == this.hoveredHotspot) {
           return null;
         }
-        if (this.field_I == null) {
+        if (this.hotspotTooltips == null) {
           return null;
         }
         if (guard != -6696) {
           connectionTimedOutPleaseText = (String) null;
         }
-        if (this.field_I.length <= this.field_J.field_q) {
+        if (this.hotspotTooltips.length <= this.hoveredHotspot.id) {
           return null;
         }
-        return this.field_I[this.field_J.field_q];
+        return this.hotspotTooltips[this.hoveredHotspot.id];
     }
 
     static {
         connectionTimedOutPleaseText = "Connection timed out. Please try using a different server.";
-        field_G = 0;
+        activePointerButton = 0;
         pointsRemainingText = "points remaining: <%0>";
         field_N = new IntrusiveNodeHashTable(8);
         field_L = new tf();

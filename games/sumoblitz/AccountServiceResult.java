@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class an {
-    boolean field_c;
+final class AccountServiceResult {
+    boolean showUnderageInfo;
     static ToolkitSprite field_f;
-    int field_e;
-    boolean field_b;
-    String[] field_h;
-    String field_g;
+    int errorCode;
+    boolean success;
+    String[] nameSuggestions;
+    String errorMessage;
     static int waveIndex;
     static PrimitiveType TRIANGLE_FAN;
 
@@ -43,8 +43,8 @@ final class an {
         }
     }
 
-    an(boolean param0) {
-        this.field_b = param0 ? true : false;
+    AccountServiceResult(boolean successful) {
+        this.success = successful ? true : false;
     }
 
     static {

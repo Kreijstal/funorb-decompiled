@@ -224,7 +224,7 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
           this.field_S = false;
           var6_ref = this.g((byte) -2);
           if (var6_ref != null) {
-            var6_ref.field_C = true;
+            var6_ref.selected = true;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -362,12 +362,12 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
                   var5 = this.field_P;
                 } else {
                   if (!this.field_Q.hasFocus(-1)) {
-                    if (!this.field_X.field_C) {
+                    if (!this.field_X.selected) {
                       if (null != this.field_Y &&
-                        this.field_Y.field_C) {
+                        this.field_Y.selected) {
                         var5 = this.field_Y;
                       } else {
-                        if (this.field_T.field_C) {
+                        if (this.field_T.selected) {
                           var5 = this.field_T;
                         }
                       }
@@ -527,7 +527,7 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
         InteractiveWidget[] var2 = var6;
         for (var3 = 0; var3 < var6.length; var3++) {
           var4 = var6[var3];
-          var4.field_C = var4 == this.field_O ? true : false;
+          var4.selected = var4 == this.field_O ? true : false;
         }
         if (!param0) {
           this.field_Y = (InteractiveWidget) null;

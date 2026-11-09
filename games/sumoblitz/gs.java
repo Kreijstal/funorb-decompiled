@@ -16,13 +16,13 @@ final class gs {
     }
 
     final static void a(java.awt.Component param0, boolean param1) {
-        param0.addMouseListener(wk.field_h);
+        param0.addMouseListener(ConfirmedEmailValidator.field_h);
         if (!param1) {
           return;
         }
         try {
-          param0.addMouseMotionListener(wk.field_h);
-          param0.addFocusListener(wk.field_h);
+          param0.addMouseMotionListener(ConfirmedEmailValidator.field_h);
+          param0.addFocusListener(ConfirmedEmailValidator.field_h);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "gs.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

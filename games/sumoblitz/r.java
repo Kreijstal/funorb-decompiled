@@ -38,9 +38,9 @@ abstract class r extends DualLinkNode {
         }
         stackIn_11_0 = (var8.readUnsignedByte(-31302) != 1) ? 0 : 1;
         var4 = stackIn_11_0;
-        wk.field_f = var8.readCp1252String(-1);
+        ConfirmedEmailValidator.field_f = var8.readCp1252String(-1);
         if (var4 == 0) {
-          fu.field_E = wk.field_f;
+          fu.field_E = ConfirmedEmailValidator.field_f;
         } else {
           fu.field_E = var8.readCp1252String(-1);
         }

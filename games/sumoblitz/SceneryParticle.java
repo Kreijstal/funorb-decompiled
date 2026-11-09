@@ -25,7 +25,7 @@ final class SceneryParticle extends TimedSceneEffect {
         try {
           if (0 != this.field_t) {
             if (this.field_t == 1) {
-              tc.field_j[this.field_z].drawRotated((float)(this.x >> 8), (float)(this.y >> 8), this.field_y << 1, 0, 3, this.field_D << 24, 1);
+              PasswordValidator.field_j[this.field_z].drawRotated((float)(this.x >> 8), (float)(this.y >> 8), this.field_y << 1, 0, 3, this.field_D << 24, 1);
             }
           } else {
             wo.field_b[this.field_z].drawRotated((float)(this.x >> 8), (float)(this.y >> 8), this.field_y, (int)(65535.0 * this.field_x), 3, 570425344, 1);

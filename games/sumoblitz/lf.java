@@ -28,8 +28,8 @@ final class lf extends ka {
             }
             var2 = (PlayingSound) (jf.field_c.next((byte) 18));
           }
-          if (null != s.field_u) {
-            var2Lifetime1 = (PlayingSound) (s.field_u.first(param1 ^ -123));
+          if (null != TextHotspot.field_u) {
+            var2Lifetime1 = (PlayingSound) (TextHotspot.field_u.first(param1 ^ -123));
             while (var2Lifetime1 != null) {
               stackIn_14_0 = var2Lifetime1.lifetimeNode.isLinked(false);
               if (stackIn_14_0) {
@@ -37,7 +37,7 @@ final class lf extends ka {
               } else {
                 var2Lifetime1.unlink(false);
               }
-              var2Lifetime1 = (PlayingSound) (s.field_u.next((byte) 18));
+              var2Lifetime1 = (PlayingSound) (TextHotspot.field_u.next((byte) 18));
             }
             return;
           }

@@ -6,7 +6,7 @@ final class rv {
     static String warningIfYouQuitText;
 
     final static void a(byte param0) {
-        ToolkitRasterBuffer.field_o = new js();
+        ToolkitRasterBuffer.field_o = new AccountCreationForm();
         if (param0 >= 35) {
           SlowBurstParticle.field_y.transitionToContent((byte) -119, ToolkitRasterBuffer.field_o);
           return;

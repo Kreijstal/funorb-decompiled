@@ -288,7 +288,7 @@ final class cm extends ToolkitSprite {
         this.field_i = 0;
         try {
           this.field_j = param0;
-          this.field_g = js.a(param2, param4, param5, false, param0, (byte) -119, param1, param3);
+          this.field_g = AccountCreationForm.a(param2, param4, param5, false, param0, (byte) -119, param1, param3);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "cm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }

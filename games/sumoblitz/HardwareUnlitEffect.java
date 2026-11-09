@@ -197,7 +197,7 @@ final class HardwareUnlitEffect extends ShaderEffect {
     final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
         OpenGlUnderwaterEffect.field_p[se.field_d] = param3;
         pd.field_q[se.field_d] = se.field_d;
-        lj.field_a[se.field_d] = param5;
+        LoginFieldValue.field_a[se.field_d] = param5;
         if (!(param5 >= GameplaySession.field_k)) {
           NoiseSliceGenerator.field_c = param5;
         }

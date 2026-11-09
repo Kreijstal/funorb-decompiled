@@ -72,7 +72,7 @@ final class wd extends se {
           if (OpenGlBuffer.field_a == bj.field_a) {
             return false;
           }
-          TextureCombineOperation.field_a = cp.field_c[bj.field_a];
+          TextureCombineOperation.field_a = WidgetTheme.field_c[bj.field_a];
           WhirlpoolDigest.field_c = SpriteMask.field_c[bj.field_a];
           bj.field_a = bj.field_a + 1 & 127;
           stackIn_7_0 = true;

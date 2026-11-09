@@ -13,7 +13,7 @@ final class er {
     int field_g;
 
     final static void a(boolean param0) {
-        GraphicsToolkit var2 = nq.field_h.a(-117);
+        GraphicsToolkit var2 = MatchingTextValidator.field_h.a(-117);
         LegacyOpenGlEffect.field_c = var2.createFont(SocketConnector.field_a, ci.field_g, true);
         MessageDialog.field_db = var2.createFont(VertexStreamLayout.field_c, mn.field_b, true);
         uq.field_a = var2.createFont(qr.field_a, OpenGlTransparentWaterEffect.field_i, true);
@@ -42,7 +42,7 @@ final class er {
         LegacyOpenGlTexture.field_e = DroneDebris.createToolkitSprites(rl.field_l, var2, 28513);
         ContentDialog.field_ab = DroneDebris.createToolkitSprites(kk.field_e, var2, 28513);
         hv.field_d = DroneDebris.createToolkitSprites(HardwareTurbulentWaterNoise.field_w, var2, 28513);
-        s.field_n = DroneDebris.createToolkitSprites(fl.field_r, var2, 28513);
+        TextHotspot.field_n = DroneDebris.createToolkitSprites(fl.field_r, var2, 28513);
         MenuScreen.field_a = DroneDebris.createToolkitSprites(kr.field_b, var2, 28513);
         HardwareTextureCache.field_e = DroneDebris.createToolkitSprites(DisplayModeConfirmationDialog.field_V, var2, 28513);
         if (param0) {
@@ -51,7 +51,7 @@ final class er {
           hh.field_e = DroneDebris.createToolkitSprites(CachedTextLayout.field_h, var2, 28513);
           HardwareRidgedWaterNoise.field_A = DroneDebris.createToolkitSprites(bk.field_b, var2, 28513);
           up.field_e = DroneDebris.createToolkitSprites(cd.field_c, var2, 28513);
-          th.field_B = ResizingDialog.a(var2, lh.field_k, (byte) -11);
+          UnderageAccountInfoPanel.field_B = ResizingDialog.a(var2, lh.field_k, (byte) -11);
           DroneDebris.createToolkitSprites(Transform3D.field_a, var2, 28513);
           IntrusiveDeque.field_d = ResizingDialog.a(var2, bl.field_a, (byte) -11);
           MusicCrossfadeStream.field_q = DroneDebris.createToolkitSprites(uj.field_c, var2, 28513);
@@ -68,10 +68,10 @@ final class er {
           PlayingSound.field_l = ResizingDialog.a(var2, no.field_c, (byte) -11);
           hv.field_b = ResizingDialog.a(var2, LabeledWidget.field_E, (byte) -11);
           OpenGlEnvironmentWaterEffect.field_i = ResizingDialog.a(var2, mn.field_c, (byte) -11);
-          an.field_f = ResizingDialog.a(var2, SceneryParticle.field_C, (byte) -11);
+          AccountServiceResult.field_f = ResizingDialog.a(var2, SceneryParticle.field_C, (byte) -11);
           TextureMetadata.field_a = ResizingDialog.a(var2, wf.field_a, (byte) -11);
           DirectByteArrayStorage.field_d = ResizingDialog.a(var2, RidgedNoise3D.field_p, (byte) -11);
-          kw.field_a = ResizingDialog.a(var2, th.field_C, (byte) -11);
+          kw.field_a = ResizingDialog.a(var2, UnderageAccountInfoPanel.field_C, (byte) -11);
           OpenGlIndexBuffer.field_p = DroneDebris.createToolkitSprites(MouseInputHandler.field_b, var2, 28513);
           RidgedNoise3D.field_w = DroneDebris.createToolkitSprites(SoftLruCache.field_a, var2, 28513);
           ok.field_f = DroneDebris.createToolkitSprites(LegacyOpenGlCubeTexture.field_n, var2, 28513);
@@ -88,11 +88,11 @@ final class er {
           uc.field_e = DroneDebris.createToolkitSprites(ScrollPane.field_F, var2, 28513);
           o.field_b = DroneDebris.createToolkitSprites(om.field_m, var2, 28513);
           HardwareSpecularEffect.field_f = DroneDebris.createToolkitSprites(ke.field_c, var2, 28513);
-          OpenGlUnderwaterEffect.field_t = ResizingDialog.a(var2, tc.field_i, (byte) -11);
+          OpenGlUnderwaterEffect.field_t = ResizingDialog.a(var2, PasswordValidator.field_i, (byte) -11);
           LegacyOpenGlSpriteTexture.field_r = DroneDebris.createToolkitSprites(hc.field_a, var2, 28513);
           vl.field_c = ResizingDialog.a(var2, rl.field_o, (byte) -11);
           wo.field_b = new ToolkitSprite[]{mn.field_j, PlayingSound.field_l, hv.field_b};
-          tc.field_j = new ToolkitSprite[]{an.field_f, TextureMetadata.field_a, DirectByteArrayStorage.field_d};
+          PasswordValidator.field_j = new ToolkitSprite[]{AccountServiceResult.field_f, TextureMetadata.field_a, DirectByteArrayStorage.field_d};
           Sumoblitz.field_J = DroneDebris.createToolkitSprites(pq.field_F, var2, 28513);
           return;
         }
@@ -100,7 +100,7 @@ final class er {
         hh.field_e = DroneDebris.createToolkitSprites(CachedTextLayout.field_h, var2, 28513);
         HardwareRidgedWaterNoise.field_A = DroneDebris.createToolkitSprites(bk.field_b, var2, 28513);
         up.field_e = DroneDebris.createToolkitSprites(cd.field_c, var2, 28513);
-        th.field_B = ResizingDialog.a(var2, lh.field_k, (byte) -11);
+        UnderageAccountInfoPanel.field_B = ResizingDialog.a(var2, lh.field_k, (byte) -11);
         DroneDebris.createToolkitSprites(Transform3D.field_a, var2, 28513);
         IntrusiveDeque.field_d = ResizingDialog.a(var2, bl.field_a, (byte) -11);
         MusicCrossfadeStream.field_q = DroneDebris.createToolkitSprites(uj.field_c, var2, 28513);
@@ -117,10 +117,10 @@ final class er {
         PlayingSound.field_l = ResizingDialog.a(var2, no.field_c, (byte) -11);
         hv.field_b = ResizingDialog.a(var2, LabeledWidget.field_E, (byte) -11);
         OpenGlEnvironmentWaterEffect.field_i = ResizingDialog.a(var2, mn.field_c, (byte) -11);
-        an.field_f = ResizingDialog.a(var2, SceneryParticle.field_C, (byte) -11);
+        AccountServiceResult.field_f = ResizingDialog.a(var2, SceneryParticle.field_C, (byte) -11);
         TextureMetadata.field_a = ResizingDialog.a(var2, wf.field_a, (byte) -11);
         DirectByteArrayStorage.field_d = ResizingDialog.a(var2, RidgedNoise3D.field_p, (byte) -11);
-        kw.field_a = ResizingDialog.a(var2, th.field_C, (byte) -11);
+        kw.field_a = ResizingDialog.a(var2, UnderageAccountInfoPanel.field_C, (byte) -11);
         OpenGlIndexBuffer.field_p = DroneDebris.createToolkitSprites(MouseInputHandler.field_b, var2, 28513);
         RidgedNoise3D.field_w = DroneDebris.createToolkitSprites(SoftLruCache.field_a, var2, 28513);
         ok.field_f = DroneDebris.createToolkitSprites(LegacyOpenGlCubeTexture.field_n, var2, 28513);
@@ -137,11 +137,11 @@ final class er {
         uc.field_e = DroneDebris.createToolkitSprites(ScrollPane.field_F, var2, 28513);
         o.field_b = DroneDebris.createToolkitSprites(om.field_m, var2, 28513);
         HardwareSpecularEffect.field_f = DroneDebris.createToolkitSprites(ke.field_c, var2, 28513);
-        OpenGlUnderwaterEffect.field_t = ResizingDialog.a(var2, tc.field_i, (byte) -11);
+        OpenGlUnderwaterEffect.field_t = ResizingDialog.a(var2, PasswordValidator.field_i, (byte) -11);
         LegacyOpenGlSpriteTexture.field_r = DroneDebris.createToolkitSprites(hc.field_a, var2, 28513);
         vl.field_c = ResizingDialog.a(var2, rl.field_o, (byte) -11);
         wo.field_b = new ToolkitSprite[]{mn.field_j, PlayingSound.field_l, hv.field_b};
-        tc.field_j = new ToolkitSprite[]{an.field_f, TextureMetadata.field_a, DirectByteArrayStorage.field_d};
+        PasswordValidator.field_j = new ToolkitSprite[]{AccountServiceResult.field_f, TextureMetadata.field_a, DirectByteArrayStorage.field_d};
         Sumoblitz.field_J = DroneDebris.createToolkitSprites(pq.field_F, var2, 28513);
     }
 
@@ -189,16 +189,16 @@ final class er {
                     SecondaryNodeQueue.a(var3, (byte) 113);
                   } else {
                     if (-var3.radiusQ8 + var3.xQ8 < 6656) {
-                      wr.a(-1, var3);
+                      CheckboxWidget.handleArenaBoundaryHit(-1, var3);
                     } else {
                       if (6656 > -var3.radiusQ8 + var3.yQ8) {
-                        wr.a(-1, var3);
+                        CheckboxWidget.handleArenaBoundaryHit(-1, var3);
                       } else {
                         if (157184 < var3.xQ8 + var3.radiusQ8) {
-                          wr.a(-1, var3);
+                          CheckboxWidget.handleArenaBoundaryHit(-1, var3);
                         } else {
                           if (var3.radiusQ8 + var3.yQ8 > 116224) {
-                            wr.a(-1, var3);
+                            CheckboxWidget.handleArenaBoundaryHit(-1, var3);
                           } else {
                             SecondaryNodeQueue.a(var3, (byte) 113);
                           }
@@ -399,7 +399,7 @@ final class er {
           if (!param0) {
             this.field_g = -114;
             if (hk.field_c == 0 &&
-              0 == ar.field_G) {
+              0 == HotspotTextWidget.activePointerButton) {
               this.field_d = 0;
             }
             if (this.field_d == 0) {
@@ -424,7 +424,7 @@ final class er {
             return;
           }
           if (hk.field_c == 0 &&
-            0 == ar.field_G) {
+            0 == HotspotTextWidget.activePointerButton) {
             this.field_d = 0;
             if (this.field_d == 0) {
               if (!this.field_f &&
@@ -479,7 +479,7 @@ final class er {
           }
           return;
         }
-        if (ar.field_G != 0) {
+        if (HotspotTextWidget.activePointerButton != 0) {
           if (this.field_i <= 0) {
             this.field_i = rs.field_h;
           }
@@ -509,7 +509,7 @@ final class er {
             }
             return;
           }
-          if (0 == ar.field_G) {
+          if (0 == HotspotTextWidget.activePointerButton) {
             this.field_d = 0;
           }
           if (this.field_d == 0) {
@@ -534,7 +534,7 @@ final class er {
           return;
         }
         if (hk.field_c == 0 &&
-          0 == ar.field_G) {
+          0 == HotspotTextWidget.activePointerButton) {
           this.field_d = 0;
           if (this.field_d != 0) {
             return;

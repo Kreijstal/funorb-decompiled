@@ -138,10 +138,10 @@ abstract class GameClientShell extends GameApplet {
                   ArchiveCatalog.a((byte) 61, 256, eg.field_n);
                 } else {
                   if (LegacyOpenGlShoreWaveWaterEffect.field_l == 2) {
-                    ArchiveCatalog.a((byte) 90, 256, bn.dataServerFullOrText);
+                    ArchiveCatalog.a((byte) 90, 256, ValidationMessageWidget.dataServerFullOrText);
                   } else {
                     if (LegacyOpenGlShoreWaveWaterEffect.field_l == 5) {
-                      ArchiveCatalog.a((byte) -113, 5, s.thisGameHasBeenText);
+                      ArchiveCatalog.a((byte) -113, 5, TextHotspot.thisGameHasBeenText);
                     } else {
                       ArchiveCatalog.a((byte) -97, 256, ArrayWidgetContainer.unableToConnectToText);
                     }
@@ -201,9 +201,9 @@ abstract class GameClientShell extends GameApplet {
         }
         if (3 == TextureCoordinateGeneration.field_a &&
           rd.a(LegacyOpenGlPostProcessManager.field_f, (byte) 124, hw.field_a, wd.field_j) &&
-          wc.a(hw.field_a, 40)) {
+          DroneWave.tryLoadArchive(hw.field_a, 40)) {
           ph.a((byte) -93);
-          th.e(true);
+          UnderageAccountInfoPanel.e(true);
           pu.field_m = false;
           hn.field_k = ToolkitImageProducerBuffer.loadingText;
           ea.a(hw.field_a, qn.field_a, (byte) 40, LegacyOpenGlPostProcessManager.field_f, wd.field_j);
@@ -265,7 +265,7 @@ abstract class GameClientShell extends GameApplet {
         }
         if (!param0 &&
           DroneDebris.field_A) {
-          wr.a(true, qn.field_f);
+          CheckboxWidget.a(true, qn.field_f);
           this.e(1000);
           db.a(false, qn.field_f);
         }
@@ -376,7 +376,7 @@ abstract class GameClientShell extends GameApplet {
                             if (11 != var2 &&
                               var2 != 12) {
                               if (var2 == 13) {
-                                js.f((byte) 117);
+                                AccountCreationForm.f((byte) 117);
                                 return;
                               }
                               if (var2 == 17) {
@@ -405,7 +405,7 @@ abstract class GameClientShell extends GameApplet {
                       SlowBurstParticle.c((byte) -77);
                     }
                   } else {
-                    ar.e((byte) -93);
+                    HotspotTextWidget.e((byte) -93);
                   }
                 } else {
                   pt.a(-22683);

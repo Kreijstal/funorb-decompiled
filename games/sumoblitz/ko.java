@@ -27,10 +27,10 @@ abstract class ko extends IntrusiveNode {
           if (param0 != 0) {
             field_m = (IntrusiveDeque) null;
           }
-          var2 = wr.field_E.first(-105);
+          var2 = CheckboxWidget.field_E.first(-105);
           while (var2 != null) {
-            ou.a(125, param1);
-            var2 = wr.field_E.next((byte) 18);
+            ScreenNameValidator.a(125, param1);
+            var2 = CheckboxWidget.field_E.next((byte) 18);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

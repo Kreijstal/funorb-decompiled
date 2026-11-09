@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class NameSuggestionsPanel extends WidgetContainer implements WidgetActionListener {
-    private oe field_A;
+    private NameSuggestionListener field_A;
     static SpriteData[] field_F;
     private InteractiveWidget[] field_C;
     static BufferedCacheFile field_E;
@@ -87,7 +87,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
         }
     }
 
-    NameSuggestionsPanel(oe param0) {
+    NameSuggestionsPanel(NameSuggestionListener param0) {
         super(0, 0, 0, 0, (WidgetRenderer) null);
         try {
           this.field_A = param0;
@@ -173,7 +173,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
         try {
           for (var6_int = 0; this.field_B.length > var6_int; var6_int++) {
             if (this.field_C[var6_int] == source) {
-              this.field_A.a(this.field_B[var6_int], 0);
+              this.field_A.setSuggestedName(this.field_B[var6_int], 0);
             }
           }
           if (guard != 710) {
@@ -181,7 +181,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
             NameSuggestionsPanel.a(117, 1.4675142765045166f, (String) null);
           }
           if (source == this.field_C[this.field_B.length]) {
-            this.field_A.a((byte) -86);
+            this.field_A.invalidateNameAvailability((byte) -86);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -264,7 +264,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
           SceneryParticle.field_C = SpriteData.a(param3, "", "driftinglight");
           wf.field_a = SpriteData.a(param3, "", "driftinglight_snow");
           RidgedNoise3D.field_p = SpriteData.a(param3, "", "driftinglight_rough");
-          th.field_C = SpriteData.a(param3, "", "shockwave");
+          UnderageAccountInfoPanel.field_C = SpriteData.a(param3, "", "shockwave");
           MouseInputHandler.field_b = SpriteData.b(param3, "", "lightningrod");
           SoftLruCache.field_a = SpriteData.b(param3, "", "lightningrod_lowgraphics");
           LegacyOpenGlCubeTexture.field_n = SpriteData.b(param3, "", "electricity");
@@ -281,7 +281,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
           ScrollPane.field_F = SpriteData.b(param3, "", "ice");
           om.field_m = SpriteData.b(param3, "", "zaptrap");
           ke.field_c = SpriteData.a(param3, "reticule");
-          tc.field_i = SpriteData.a(param3, "", "reticule_flat");
+          PasswordValidator.field_i = SpriteData.a(param3, "", "reticule_flat");
           hc.field_a = SpriteData.b(param3, "", "gravitywell");
           rl.field_o = SpriteData.a(param3, "", "gravitywell_field");
           pq.field_F = SpriteData.b(param3, "", "tutorial_images");

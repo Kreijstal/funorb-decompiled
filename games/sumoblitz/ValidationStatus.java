@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gf {
+final class ValidationStatus {
     static java.security.SecureRandom field_b;
     static java.awt.Image field_a;
 
@@ -39,7 +39,7 @@ final class gf {
           value = value + (value >>> 16);
           return 255 & value;
         }
-        gf.releaseStatics(-54);
+        ValidationStatus.releaseStatics(-54);
         value = value + (value >>> 4) & 252645135;
         value = value + (value >>> 8);
         value = value + (value >>> 16);

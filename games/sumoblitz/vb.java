@@ -47,7 +47,7 @@ final class vb extends InteractiveWidget {
           var8_int = pointerX + (-parentX + (-this.x - this.field_G));
           var9 = -this.field_K - this.y + (-parentY + pointerY);
           if (this.field_F * this.field_F > var9 * var9 + var8_int * var8_int) {
-            var10 = Math.atan2((double)var9, (double)var8_int) - s.field_m;
+            var10 = Math.atan2((double)var9, (double)var8_int) - TextHotspot.field_m;
             if (!(var10 < 0.0)) {
               if (0.0 < var10) {
                 var10 = var10 + 3.141592653589793 / (double)this.field_L;

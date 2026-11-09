@@ -490,7 +490,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
         this.bindVertexBuffer(0, 119, this.field_Wb);
         this.bindVertexLayout(-77, this.field_xc);
-        this.drawPrimitives(0, 0, 1, tc.LINES);
+        this.drawPrimitives(0, 0, 1, PasswordValidator.LINES);
     }
 
     final Texture2D a(int param0, TextureFormat param1, byte param2, boolean param3, int param4, float[] param5) {
@@ -604,7 +604,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         for (var2 = 0; this.field_cc > var2; var2++) {
           this.field_B[var2] = SlowBurstParticle.MODULATE;
           this.field_K[var2] = SlowBurstParticle.MODULATE;
-          this.field_wb[var2] = ar.field_L;
+          this.field_wb[var2] = HotspotTextWidget.field_L;
           this.field_V[var2] = new AffineTransform3D();
         }
         this.field_pb = new ko[-2 + this.field_bc];
@@ -1774,8 +1774,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         if (param0 != 0) {
           this.a(true, -85);
         }
-        if (ar.field_L != this.field_wb[this.field_mc]) {
-          this.field_wb[this.field_mc] = ar.field_L;
+        if (HotspotTextWidget.field_L != this.field_wb[this.field_mc]) {
+          this.field_wb[this.field_mc] = HotspotTextWidget.field_L;
           this.field_V[this.field_mc].setIdentity(1);
           this.j(128);
         }
@@ -1815,7 +1815,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     abstract VertexBuffer createVertexBuffer(byte guard, boolean dynamic);
 
     final void n(int param0) {
-        this.a(0, an.TRIANGLE_FAN, param0);
+        this.a(0, AccountServiceResult.TRIANGLE_FAN, param0);
     }
 
     final void g(int param0, int param1) {

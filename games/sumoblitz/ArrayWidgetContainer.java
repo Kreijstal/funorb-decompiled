@@ -489,7 +489,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements CompositeWidgetM
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != null &&
-            param0.length() >= bn.field_T) {
+            param0.length() >= ValidationMessageWidget.field_T) {
             if (param0.length() > OpenGlRectangleTexture.field_k) {
               return true;
             }

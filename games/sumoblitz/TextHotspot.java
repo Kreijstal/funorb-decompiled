@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class s extends IntrusiveNode {
+final class TextHotspot extends IntrusiveNode {
     static ToolkitSprite[] field_n;
     static int field_o;
-    int field_l;
-    int field_p;
+    int y;
+    int height;
     static double field_m;
-    s field_r;
-    int field_q;
-    int field_s;
-    int field_t;
+    TextHotspot nextFragment;
+    int id;
+    int x;
+    int width;
     static IntrusiveDeque field_u;
     static String thisGameHasBeenText;
 
@@ -27,12 +27,12 @@ final class s extends IntrusiveNode {
         field_u = null;
     }
 
-    s(int param0, int param1, int param2, int param3, int param4) {
-        this.field_l = param2;
-        this.field_p = param4;
-        this.field_t = param3;
-        this.field_q = param0;
-        this.field_s = param1;
+    TextHotspot(int hotspotId, int left, int top, int pixelWidth, int pixelHeight) {
+        this.y = top;
+        this.height = pixelHeight;
+        this.width = pixelWidth;
+        this.id = hotspotId;
+        this.x = left;
     }
 
     static {

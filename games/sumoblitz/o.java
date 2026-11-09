@@ -33,10 +33,10 @@ final class o {
           field_a = (String) null;
         }
         if (OpenGlShaderProgram.levelIndex == 12 &&
-          !bn.field_P) {
-          th.b(24753, 245, 10);
+          !ValidationMessageWidget.field_P) {
+          UnderageAccountInfoPanel.b(24753, 245, 10);
         }
-        nq.field_i = nq.field_i + 1;
+        MatchingTextValidator.field_i = MatchingTextValidator.field_i + 1;
         il.field_a = FadingWidget.score;
     }
 

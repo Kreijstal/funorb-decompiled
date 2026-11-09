@@ -160,12 +160,12 @@ final class LegacyOpenGlTexture3D extends LegacyOpenGlTexture {
         PcmSampleStream var2 = PcmSampleStream.createAtRatePercent(OpenGlCubeTexture.field_l[sampleId], 100, 96);
         if (guard) {
           var2.setLoopCount(-1);
-          qq.addPlayingSound(18416, var2);
+          ValidatedTextInputWidget.addPlayingSound(18416, var2);
           return;
         }
         LegacyOpenGlTexture3D.playLoopingSound(true, 27);
         var2.setLoopCount(-1);
-        qq.addPlayingSound(18416, var2);
+        ValidatedTextInputWidget.addPlayingSound(18416, var2);
     }
 
     static {

@@ -198,7 +198,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
           this.field_Rc = (jagdx.D3DLIGHT) null;
         }
         if (this.field_Vc == null &&
-          ar.field_L != this.field_wb[this.field_mc]) {
+          HotspotTextWidget.field_L != this.field_wb[this.field_mc]) {
           if (this.field_wb[this.field_mc] != rs.field_c) {
             this.field_Cc.SetTransform(this.field_mc + 16, this.field_V[this.field_mc].writeColumnMajor4x4(-68, field_Mc));
           } else {
@@ -510,7 +510,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
           var3 = (TextureFilter) null;
           DirectXGraphicsToolkit.a((TextureFilter) null, true);
         }
-        if (param0 == tc.LINES) {
+        if (param0 == PasswordValidator.LINES) {
           return 2;
         }
         if (param0 == rv.LINE_STRIP) {
@@ -522,7 +522,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         if (WhirlpoolDigest.TRIANGLES == param0) {
           return 4;
         }
-        if (param0 == an.TRIANGLE_FAN) {
+        if (param0 == AccountServiceResult.TRIANGLE_FAN) {
           return 6;
         }
         if (param0 == OpenGlVertexLayout.TRIANGLE_STRIP) {

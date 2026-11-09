@@ -113,14 +113,14 @@ final class LimitedRandomAccessFile {
         var10 = Sumoblitz.field_L ? 1 : 0;
         try {
           var7_int = pq.a(1, param1);
-          if (gf.field_b == null) {
-            gf.field_b = new java.security.SecureRandom();
+          if (ValidationStatus.field_b == null) {
+            ValidationStatus.field_b = new java.security.SecureRandom();
           }
           var13 = new int[4];
           var12 = var13;
           var8 = var12;
           for (var9 = 0; var9 < 4; var9++) {
-            var8[var9] = gf.field_b.nextInt();
+            var8[var9] = ValidationStatus.field_b.nextInt();
           }
           if (qc.field_c == null ||
             !(var7_int <= qc.field_c.payload.length)) {

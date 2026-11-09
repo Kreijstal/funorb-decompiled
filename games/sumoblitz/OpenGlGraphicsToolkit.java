@@ -680,7 +680,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         if (guard != 26803) {
           this.field_Zc = (IntrusiveDeque) null;
         }
-        if (ar.field_L != this.field_wb[this.field_mc]) {
+        if (HotspotTextWidget.field_L != this.field_wb[this.field_mc]) {
           jaggl.OpenGL.glLoadMatrixf(this.field_V[this.field_mc].writeColumnMajor4x4(-107, pq.field_y), 0);
         } else {
           jaggl.OpenGL.glLoadIdentity();
@@ -1171,7 +1171,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           if (guard != 0) {
             this.field_Pc = (IntrusiveDeque) null;
           }
-          if (type == tc.LINES) {
+          if (type == PasswordValidator.LINES) {
             var6 = 2 * primitiveCount;
             var5_int = 1;
           } else {
@@ -1180,7 +1180,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
                 var6 = 3 * primitiveCount;
                 var5_int = 4;
               } else {
-                if (an.TRIANGLE_FAN == type) {
+                if (AccountServiceResult.TRIANGLE_FAN == type) {
                   var5_int = 6;
                   var6 = primitiveCount + 2;
                 } else {

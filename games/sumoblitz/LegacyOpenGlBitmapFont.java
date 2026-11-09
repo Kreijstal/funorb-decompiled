@@ -169,7 +169,7 @@ final class LegacyOpenGlBitmapFont extends ToolkitFont {
               }
             }
           }
-          this.field_c = js.a(var6Lifetime1, 0, 0, false, param0, (byte) -125, var6Lifetime1, var33);
+          this.field_c = AccountCreationForm.a(var6Lifetime1, 0, 0, false, param0, (byte) -125, var6Lifetime1, var33);
           this.field_d = false;
         } else {
           var30 = new byte[var6Lifetime1 * var6Lifetime1];

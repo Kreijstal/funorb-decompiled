@@ -19,7 +19,7 @@ final class PlayerDrone extends Drone {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -12 % ((-31 - param0) / 63);
-          stackIn_1_0 = qq.addPlayingSound(18416, PcmSampleStream.createAtRatePercent(param1, 100, 96));
+          stackIn_1_0 = ValidatedTextInputWidget.addPlayingSound(18416, PcmSampleStream.createAtRatePercent(param1, 100, 96));
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

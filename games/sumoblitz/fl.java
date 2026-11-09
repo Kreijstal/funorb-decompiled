@@ -75,7 +75,7 @@ final class fl extends TextWidgetRenderer {
           this.field_t.a(true);
           var7.a(parentX, widget, -28, this, parentY, this.field_t);
           if (var11 != null) {
-            if (var11.field_C) {
+            if (var11.selected) {
               var12 = this.field_q[1];
               if (var12 != null) {
                 var12.a(parentX, widget, -75, this, parentY, this.field_t);

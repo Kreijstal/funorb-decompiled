@@ -343,7 +343,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 return;
               }
               ke.field_a = this;
-              th.field_H = 0;
+              UnderageAccountInfoPanel.field_H = 0;
               SpriteState.field_s = param4;
               LegacyOpenGlRidgedWaterEffect.field_h = param3;
               vs.field_b = param3;
@@ -460,12 +460,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             if (null != PrimitiveType.field_c &&
               null == of.field_n) {
               var6 = PrimitiveType.field_c.getInsets();
-              qn.field_f.setLocation(var6.left + th.field_H, var6.top + DirectByteArrayStorage.field_c);
+              qn.field_f.setLocation(var6.left + UnderageAccountInfoPanel.field_H, var6.top + DirectByteArrayStorage.field_c);
               if (Sumoblitz.field_L) {
-                qn.field_f.setLocation(th.field_H, DirectByteArrayStorage.field_c);
+                qn.field_f.setLocation(UnderageAccountInfoPanel.field_H, DirectByteArrayStorage.field_c);
               }
             } else {
-              qn.field_f.setLocation(th.field_H, DirectByteArrayStorage.field_c);
+              qn.field_f.setLocation(UnderageAccountInfoPanel.field_H, DirectByteArrayStorage.field_c);
             }
           }
           this.renderFrame(0);
@@ -615,12 +615,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           qn.field_f.setVisible(true);
           boolean decompiledSharedTail0 = (PrimitiveType.field_c == var2);
           if (!decompiledSharedTail0) {
-            qn.field_f.setLocation(th.field_H, DirectByteArrayStorage.field_c);
+            qn.field_f.setLocation(UnderageAccountInfoPanel.field_H, DirectByteArrayStorage.field_c);
             decompiledSharedTail0 = (var4 != 0);
           }
           if (decompiledSharedTail0) {
             var3 = PrimitiveType.field_c.getInsets();
-            qn.field_f.setLocation(var3.left + th.field_H, var3.top + DirectByteArrayStorage.field_c);
+            qn.field_f.setLocation(var3.left + UnderageAccountInfoPanel.field_H, var3.top + DirectByteArrayStorage.field_c);
           }
           qn.field_f.addFocusListener((java.awt.event.FocusListener) (this));
           qn.field_f.requestFocus();

@@ -48,7 +48,7 @@ final class wv {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param2 = gf.a('_', param2, param0, "");
+          param2 = ValidationStatus.a('_', param2, param0, "");
           if (param0) {
             var4 = (String) null;
             wv.a(true, (String) null, (String) null);

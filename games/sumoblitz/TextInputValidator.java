@@ -1,48 +1,48 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class na extends dw implements TextInputListener {
+abstract class TextInputValidator extends DebouncedInputValidator implements TextInputListener {
     static jj field_c;
-    private TextInputWidget field_d;
+    private TextInputWidget input;
 
-    abstract gf a(byte param0, String param1);
+    abstract ValidationStatus validateText(byte guard, String text);
 
     public final void onTextSubmitted(TextInputWidget source, int guard) {
         try {
           if (guard >= -41) {
-            this.field_d = (TextInputWidget) null;
+            this.input = (TextInputWidget) null;
           }
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "na.H(" + (source != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
-    public final boolean b(int param0) {
-        if (param0 != -8003) {
+    public final boolean isEmpty(int guard) {
+        if (guard != -8003) {
           return true;
         }
-        if (null == this.field_d.text) {
+        if (null == this.input.text) {
           return true;
         }
-        if (0 != this.field_d.text.length()) {
+        if (0 != this.input.text.length()) {
           return false;
         }
         return true;
     }
 
-    final String d(int param0) {
-        if (param0 > -93) {
+    final String evaluateMessage(int guard) {
+        if (guard > -93) {
           return (String) null;
         }
-        return this.a(0, this.field_d.text);
+        return this.messageForText(0, this.input.text);
     }
 
     public final void onTextChanged(TextInputWidget source, byte guard) {
         try {
-          this.a((byte) -101);
+          this.markChanged((byte) -101);
           if (guard > -127) {
             ResourceArchive var4 = (ResourceArchive) null;
-            na.a(-98, -50, (ResourceArchive) null, -100);
+            TextInputValidator.a(-98, -50, (ResourceArchive) null, -100);
           }
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "na.I(" + (source != null ? "{...}" : "null") + ',' + guard + ')');
@@ -81,12 +81,12 @@ abstract class na extends dw implements TextInputListener {
         }
     }
 
-    final gf b(byte param0) {
-        if (param0 == 114) {
-          return this.a((byte) 26, this.field_d.text);
+    final ValidationStatus evaluateStatus(byte guard) {
+        if (guard == 114) {
+          return this.validateText((byte) 26, this.input.text);
         }
         field_c = (jj) null;
-        return this.a((byte) 26, this.field_d.text);
+        return this.validateText((byte) 26, this.input.text);
     }
 
     public static void releaseStatics(boolean param0) {
@@ -96,13 +96,13 @@ abstract class na extends dw implements TextInputListener {
         field_c = null;
     }
 
-    abstract String a(int param0, String param1);
+    abstract String messageForText(int guard, String text);
 
-    na(TextInputWidget param0) {
+    TextInputValidator(TextInputWidget field) {
         try {
-          this.field_d = param0;
+          this.input = field;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "na.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "na.<init>(" + (field != null ? "{...}" : "null") + ')');
         }
     }
 

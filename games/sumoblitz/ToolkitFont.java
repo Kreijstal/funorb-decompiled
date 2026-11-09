@@ -505,7 +505,7 @@ abstract class ToolkitFont {
         int var8Lifetime1;
         ToolkitImageProducerBuffer.field_v = kb.a("frame_top", param0, true, "commonui");
         DropDownListWidget.field_O = kb.a("frame_bottom", param0, true, "commonui");
-        ar.field_E = jb.a("commonui", "jagex_logo_grey", -104, param0);
+        HotspotTextWidget.field_E = jb.a("commonui", "jagex_logo_grey", -104, param0);
         LevelCompleteUpgradeScreen.field_j = kb.a("button", param0, true, "commonui");
         fw.field_m = DelayedInboundPacket.a(param0, "commonui", (byte) -56, "validation");
         jm.field_a = (LegacyBitmapFont) ((Object) vf.a(param1, true, "commonui", "arezzo12", param0));

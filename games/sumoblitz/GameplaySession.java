@@ -40,7 +40,7 @@ final class GameplaySession {
         int var4_intLifetime1;
         var9 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var2 = nq.field_h.a(param0 ^ -80);
+          var2 = MatchingTextValidator.field_h.a(param0 ^ -80);
           if (param0 != 60) {
             return;
           }
@@ -56,7 +56,7 @@ final class GameplaySession {
             var6 = bi.field_a[var3_int][PowerupPickup.field_t];
             var7 = bi.field_a[var3_int][var4_int];
             var8 = bi.field_a[var3_int][var5];
-            if (uk.field_ob) {
+            if (AccountCreationProgressDialog.field_ob) {
               if (2 <= kr.field_e) {
                 stackIn_25_0 = bi.field_a;
                 if ((var3_int - 1) % 6 < 0) {
@@ -86,7 +86,7 @@ final class GameplaySession {
               }
               kr.field_e = kr.field_e - 1;
               if (kr.field_e <= 0) {
-                uk.field_ob = false;
+                AccountCreationProgressDialog.field_ob = false;
               }
             }
             this.firstGradientColors = nf.a(var6, (byte) -117, 501, var7);
@@ -884,7 +884,7 @@ final class GameplaySession {
           TextureFormat.elapsedTicks = 0;
           SoftwareTransform3D.field_b = 0;
           IntrusiveNodeHashTable.field_c = 0;
-          tc.e(101);
+          PasswordValidator.e(101);
           HardwareRidgedWaterNoise.resetArcadeGameplay(true);
           MessageDialog.arcadeMode = true;
           MusicPatch.simulationPaused = false;
@@ -916,16 +916,16 @@ final class GameplaySession {
         int var5Lifetime1;
         var6 = Sumoblitz.field_L ? 1 : 0;
         try {
-          an.field_f.drawRotated(26.0f, 26.0f, 4915, 0);
+          AccountServiceResult.field_f.drawRotated(26.0f, 26.0f, 4915, 0);
           OpenGlIndexBuffer.field_p[0].drawRotated(16.0f, 16.0f, 4096, -16384);
           OpenGlIndexBuffer.field_p[1].drawRotated(16.0f, 16.0f, 4096, -16384);
-          an.field_f.drawRotated(616.0f, 26.0f, 4915, 0);
+          AccountServiceResult.field_f.drawRotated(616.0f, 26.0f, 4915, 0);
           OpenGlIndexBuffer.field_p[0].drawRotated(624.0f, 16.0f, 4096, 32768);
           OpenGlIndexBuffer.field_p[1].drawRotated(624.0f, 16.0f, 4096, 32768);
-          an.field_f.drawRotated(26.0f, 454.0f, 4915, 0);
+          AccountServiceResult.field_f.drawRotated(26.0f, 454.0f, 4915, 0);
           OpenGlIndexBuffer.field_p[0].drawRotated(16.0f, 464.0f, 4096, 0);
           OpenGlIndexBuffer.field_p[1].drawRotated(16.0f, 464.0f, 4096, 0);
-          an.field_f.drawRotated(614.0f, 454.0f, 4915, 0);
+          AccountServiceResult.field_f.drawRotated(614.0f, 454.0f, 4915, 0);
           OpenGlIndexBuffer.field_p[0].drawRotated(624.0f, 464.0f, 4096, 16384);
           OpenGlIndexBuffer.field_p[1].drawRotated(624.0f, 464.0f, 4096, 16384);
           var3_int = 0;
@@ -1085,7 +1085,7 @@ final class GameplaySession {
           if (TextureFormat.elapsedTicks - uc.field_f == 100 &&
             !MusicPatch.simulationPaused &&
             !MessageDialog.arcadeMode) {
-            sj.a(-1, an.waveIndex, OpenGlShaderProgram.levelIndex);
+            sj.a(-1, AccountServiceResult.waveIndex, OpenGlShaderProgram.levelIndex);
           }
           boolean decompiledFrameRemainder2 = true;
           if (GridWidgetContainer.livesRemaining > 0) {
@@ -1143,7 +1143,7 @@ final class GameplaySession {
           if (decompiledSharedTail1) {
             MessageDialog.field_ab = MessageDialog.field_ab - 1;
             if (PowerupPickup.field_v >= ps.field_e[11]) {
-              th.b(24753, 244, 11);
+              UnderageAccountInfoPanel.b(24753, 244, 11);
             }
           }
           if (SpriteMask.drones[0] != null && (!(6 > OpenGlShaderProgram.levelIndex) ||
@@ -1199,7 +1199,7 @@ final class GameplaySession {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            stackIn_158_0 = ~an.waveIndex;
+            stackIn_158_0 = ~AccountServiceResult.waveIndex;
           }
           if (stackIn_158_0 != -1) {
             boolean decompiledSharedTail0 = (-LimitedRandomAccessFile.field_b + TextureFormat.elapsedTicks != 5);
@@ -1260,16 +1260,16 @@ final class GameplaySession {
             er.c((byte) 54);
             if ((MessageDialog.arcadeMode) &&
               (decompiledFrameRemainder0 = (0 == TextureFormat.elapsedTicks % 250)) &&
-              (decompiledFrameRemainder0 = !(jc.b(true) >= (SpriteMask.drones.length - 1)))) {
+              (decompiledFrameRemainder0 = !(AgeValidator.countEnemyDrones(true) >= (SpriteMask.drones.length - 1)))) {
               var4 = uj.createEnemyDrone(1, ExpandingRingEffect.nextRandomInt(588, ResourceArchive.field_b, (byte) -96) + 26 << 8, 4, (byte) 84, 26 + ExpandingRingEffect.nextRandomInt(428, ResourceArchive.field_b, (byte) -96) << 8);
               HardwareUnlitEffect.a(var4, false);
               decompiledFrameRemainder0 = (var6 != 0);
             }
             if (decompiledFrameRemainder0) {
               if (SpriteMask.drones[0] != null &&
-                Bzip2State.field_J.length > an.waveIndex &&
-                an.waveIndex != -1) {
-                var4_intLifetime1 = Bzip2State.field_J[an.waveIndex].a(0) + 3 >> 2;
+                Bzip2State.field_J.length > AccountServiceResult.waveIndex &&
+                AccountServiceResult.waveIndex != -1) {
+                var4_intLifetime1 = Bzip2State.field_J[AccountServiceResult.waveIndex].countDrones(0) + 3 >> 2;
                 var5Lifetime1 = 0;
                 while (true) {
                   if (db.droneSlotLimit > var5Lifetime1) {
@@ -1287,7 +1287,7 @@ final class GameplaySession {
                       continue;
                     }
                   } else {
-                    stackIn_233_0 = an.waveIndex;
+                    stackIn_233_0 = AccountServiceResult.waveIndex;
                   }
                   if (stackIn_233_0 == -1) {
                     break;
@@ -1295,74 +1295,74 @@ final class GameplaySession {
                   if (!DroneDebris.field_C) {
                     break;
                   }
-                  if (~an.waveIndex != ~(-1 + Bzip2State.field_J.length)) {
+                  if (~AccountServiceResult.waveIndex != ~(-1 + Bzip2State.field_J.length)) {
                     LimitedRandomAccessFile.field_b = TextureFormat.elapsedTicks;
                     rn.a(TurbulenceNoise3D.warningText, 320, 225, 16711680, 28807);
                   }
-                  an.waveIndex = an.waveIndex + 1;
+                  AccountServiceResult.waveIndex = AccountServiceResult.waveIndex + 1;
                   gn.a(14, true);
                   ke.a(false);
                   break;
                 }
               }
               if (null != Bzip2State.field_J &&
-                Bzip2State.field_J.length <= an.waveIndex &&
+                Bzip2State.field_J.length <= AccountServiceResult.waveIndex &&
                 jl.a(-62) &&
-                jc.b(true) == 0) {
+                AgeValidator.countEnemyDrones(true) == 0) {
                 o.a(0);
                 if (MusicPatchEnvelope.a(8230, 10)) {
-                  th.b(24753, 239, 16);
+                  UnderageAccountInfoPanel.b(24753, 239, 16);
                   if (sl.a((byte) 90, 10)) {
-                    th.b(24753, 238, 17);
+                    UnderageAccountInfoPanel.b(24753, 238, 17);
                   }
                 }
                 if (MusicPatchEnvelope.a(8230, 25)) {
-                  th.b(24753, 237, 18);
+                  UnderageAccountInfoPanel.b(24753, 237, 18);
                   if (sl.a((byte) 90, 25)) {
-                    th.b(24753, 236, 19);
+                    UnderageAccountInfoPanel.b(24753, 236, 19);
                   }
                   if (ByteArrayStorage.a(25, 115)) {
-                    th.b(24753, 234, 21);
+                    UnderageAccountInfoPanel.b(24753, 234, 21);
                   }
                 }
-                if (nq.field_i == 10 &&
+                if (MatchingTextValidator.field_i == 10 &&
                   !vb.field_E) {
-                  th.b(24753, 251, 4);
+                  UnderageAccountInfoPanel.b(24753, 251, 4);
                 }
-                if (nq.field_i == 5 &&
+                if (MatchingTextValidator.field_i == 5 &&
                   !SecondaryNodeDeque.field_e) {
-                  th.b(24753, 250, 5);
+                  UnderageAccountInfoPanel.b(24753, 250, 5);
                 }
-                if (nq.field_i == 5 &&
+                if (MatchingTextValidator.field_i == 5 &&
                   !DroneChargeParticle.field_w) {
-                  th.b(24753, 249, 6);
+                  UnderageAccountInfoPanel.b(24753, 249, 6);
                 }
-                if (nq.field_i == 5 &&
+                if (MatchingTextValidator.field_i == 5 &&
                   !LegacyOpenGlNormalMapGenerator.field_c) {
-                  th.b(24753, 248, 7);
+                  UnderageAccountInfoPanel.b(24753, 248, 7);
                 }
                 if (SoundCache.isLevelIndexTwentyFour(-102)) {
                   OpenGlShaderProgram.levelIndex = OpenGlShaderProgram.levelIndex + 1;
                 }
                 if (Bzip2State.field_J != null &&
-                  Bzip2State.field_J.length <= an.waveIndex &&
+                  Bzip2State.field_J.length <= AccountServiceResult.waveIndex &&
                   !jl.a(-36) &&
-                  jc.b(true) == 0) {
+                  AgeValidator.countEnemyDrones(true) == 0) {
                   if (Bzip2State.a((byte) -94) > ps.field_e[20]) {
-                    th.b(24753, 235, 20);
+                    UnderageAccountInfoPanel.b(24753, 235, 20);
                   }
                   if (DropDownWidget.field_C == 0) {
-                    th.b(24753, 252, 3);
+                    UnderageAccountInfoPanel.b(24753, 252, 3);
                   }
                   if (OpenGlShaderProgram.levelIndex == 25) {
                     if (ResourceArchive.field_f == 10) {
-                      th.b(24753, 255, 0);
+                      UnderageAccountInfoPanel.b(24753, 255, 0);
                     }
                     if (LegacyOpenGlEffectManager.field_i == 10) {
-                      th.b(24753, 254, 1);
+                      UnderageAccountInfoPanel.b(24753, 254, 1);
                     }
                     if (hc.field_f == 10) {
-                      th.b(24753, 253, 2);
+                      UnderageAccountInfoPanel.b(24753, 253, 2);
                     }
                   }
                   OpenGlBuffer.a(35040, new PlayerDrone(81920, 61440));
@@ -1421,23 +1421,23 @@ final class GameplaySession {
           if (MessageDialog.arcadeMode &&
             SpriteMask.drones[0] != null) {
             if (300 <= TextureFormat.elapsedTicks * 20 / 1000) {
-              th.b(24753, 231, 24);
+              UnderageAccountInfoPanel.b(24753, 231, 24);
             }
             if (180 <= 20 * TextureFormat.elapsedTicks / 1000) {
-              th.b(24753, 232, 23);
+              UnderageAccountInfoPanel.b(24753, 232, 23);
             }
             if (20 * TextureFormat.elapsedTicks / 1000 >= 60) {
-              th.b(24753, 233, 22);
+              UnderageAccountInfoPanel.b(24753, 233, 22);
             }
             if (RenderPresentationException.a(false)) {
               if (TextureFormat.elapsedTicks * 20 / 1000 >= 300) {
-                th.b(24753, 228, 27);
+                UnderageAccountInfoPanel.b(24753, 228, 27);
               }
               if (TextureFormat.elapsedTicks * 20 / 1000 >= 180) {
-                th.b(24753, 229, 26);
+                UnderageAccountInfoPanel.b(24753, 229, 26);
               }
               if (60 <= TextureFormat.elapsedTicks * 20 / 1000) {
-                th.b(24753, 230, 25);
+                UnderageAccountInfoPanel.b(24753, 230, 25);
               }
             }
           }
@@ -1795,7 +1795,7 @@ final class GameplaySession {
         RuntimeException var2 = null;
         try {
           ig.hudMessages.clear(117);
-          an.waveIndex = -1;
+          AccountServiceResult.waveIndex = -1;
           MusicPatch.simulationPaused = true;
           SpriteMask.drones = new Drone[100];
           if (param0 < 53) {
@@ -1829,7 +1829,7 @@ final class GameplaySession {
           ts.field_a = 0;
           TextureFormat.elapsedTicks = 0;
           fb.field_a = 0;
-          tc.e(104);
+          PasswordValidator.e(104);
           if (OpenGlShaderProgram.levelIndex == 0 &&
             !TextureMetadata.field_f[0]) {
             bw.field_d = true;

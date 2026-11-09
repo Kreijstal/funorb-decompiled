@@ -126,7 +126,7 @@ class PacketBuffer extends IntrusiveNode {
           rd.field_l = param7;
           SingleChildWidget.field_x = param1;
           CompactMeshGeometry.field_u = param0;
-          qq.field_P = param5;
+          ValidatedTextInputWidget.field_P = param5;
           ow.field_e = param8;
           bt.field_d = param6;
           jk.field_b = (Js5Client) ((Object) new SocketJs5Client());

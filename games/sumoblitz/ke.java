@@ -55,10 +55,10 @@ final class ke {
         if (-1 == OpenGlShaderProgram.levelIndex) {
           return;
         }
-        if (an.waveIndex == -1) {
+        if (AccountServiceResult.waveIndex == -1) {
           return;
         }
-        if (an.waveIndex < Bzip2State.field_J.length) {
+        if (AccountServiceResult.waveIndex < Bzip2State.field_J.length) {
           SocketConnector.field_c = 0;
           ig.b(120);
           uc.field_f = TextureFormat.elapsedTicks;

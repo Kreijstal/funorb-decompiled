@@ -70,8 +70,8 @@ final class ResourceArchive {
         }
     }
 
-    final static an c(byte param0) {
-        if (param0 <= 80) {
+    final static AccountServiceResult pollAccountCreationResult(byte guard) {
+        if (guard <= 80) {
           ResourceArchive.b(62);
         }
         if (ProxySocketConnector.field_e == hm.field_a) {
@@ -108,7 +108,7 @@ final class ResourceArchive {
             return stackIn_2_0;
           }
           if (guard != 0) {
-            ResourceArchive.c(((byte[]) (this.packedGroups[9]))[0]);
+            ResourceArchive.pollAccountCreationResult(((byte[]) (this.packedGroups[9]))[0]);
           }
           groupName = groupName.toLowerCase();
           var4 = (CharSequence) ((Object) groupName);
@@ -312,7 +312,7 @@ final class ResourceArchive {
 
     final static boolean b(int param0) {
         if (param0 != 6) {
-          ResourceArchive.c((byte) 84);
+          ResourceArchive.pollAccountCreationResult((byte) 84);
         }
         if (null == km.field_o) {
           km.field_o = Js5Client.a((byte) -82, 6);
@@ -788,7 +788,7 @@ final class ResourceArchive {
         }
         int[] var3 = this.index.fileIds[groupId];
         if (guard != -25915) {
-          ResourceArchive.c((byte) 102);
+          ResourceArchive.pollAccountCreationResult((byte) 102);
         }
         if (var3 == null) {
           var6 = new int[this.index.fileCounts[groupId]];

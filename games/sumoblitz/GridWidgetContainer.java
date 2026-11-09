@@ -143,8 +143,8 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
           var9 = new PacketBuffer(containerBytes);
           var3 = var9.readUnsignedByte(-31302);
           var4 = var9.readInt(true);
-          if (0 <= var4 && (bn.field_R == 0 ||
-            !(bn.field_R < var4))) {
+          if (0 <= var4 && (ValidationMessageWidget.field_R == 0 ||
+            !(ValidationMessageWidget.field_R < var4))) {
             if (~var3 == guard) {
               var12 = new byte[var4];
               var10 = var12;
@@ -154,8 +154,8 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
               return stackIn_7_0;
             }
             var5 = var9.readInt(true);
-            if (var5 >= 0 && (bn.field_R == 0 ||
-              !(bn.field_R < var5))) {
+            if (var5 >= 0 && (ValidationMessageWidget.field_R == 0 ||
+              !(ValidationMessageWidget.field_R < var5))) {
               var13 = new byte[var5];
               var11 = var13;
               var6 = var11;
@@ -235,7 +235,7 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
               vb.field_I = param1 ? -2 : -1;
               ContentTransitionDialog.field_Q = param1 ? -2 : -1;
               kw.field_c = gg.field_t;
-              sb.a(s.field_o, 81, CacheReferenceNode.field_r, CacheIoRequest.field_v, InwardSparkParticle.field_v);
+              sb.a(TextHotspot.field_o, 81, CacheReferenceNode.field_r, CacheIoRequest.field_v, InwardSparkParticle.field_v);
               MessageDialog.a(0, -1);
             } catch (IOException iOException) {
               kw.field_c = lr.field_b;

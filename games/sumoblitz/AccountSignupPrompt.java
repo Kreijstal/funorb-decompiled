@@ -67,7 +67,7 @@ final class AccountSignupPrompt extends WidgetContainer implements WidgetActionL
     public AccountSignupPrompt() {
         super(0, 0, 476, 225, (WidgetRenderer) null);
         this.field_B = new InteractiveWidget(IntrusiveNode.createAFreeAccountText, (WidgetListener) null);
-        this.field_A = new InteractiveWidget(jc.goBackText, (WidgetListener) null);
+        this.field_A = new InteractiveWidget(AgeValidator.goBackText, (WidgetListener) null);
         this.field_C = new InteractiveWidget(tm.field_b, (WidgetListener) null);
         ue var1 = new ue();
         this.field_B.renderer = (WidgetRenderer) ((Object) var1);

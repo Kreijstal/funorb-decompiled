@@ -1,47 +1,47 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nq extends na {
+final class MatchingTextValidator extends TextInputValidator {
     static GraphicsToolkitManager field_h;
-    private TextInputWidget field_e;
+    private TextInputWidget matchingInput;
     static int field_i;
     static eg field_g;
     static int[] field_j;
     static String optionsText;
 
-    final gf a(byte param0, String param1) {
-        v var3 = null;
+    final ValidationStatus validateText(byte guard, String text) {
+        InputValidator var3 = null;
         RuntimeException var3_ref = null;
-        gf stackIn_5_0 = null;
-        gf stackIn_11_0 = null;
+        ValidationStatus stackIn_5_0 = null;
+        ValidationStatus stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_e instanceof op) {
-            var3 = ((op) ((Object) this.field_e)).a(72);
+          if (this.matchingInput instanceof ValidationProvider) {
+            var3 = ((ValidationProvider) ((Object) this.matchingInput)).getValidator(72);
             if (var3 != null &&
-              var3.c(88) != qe.field_a) {
-              stackIn_5_0 = qr.field_e;
+              var3.getStatus(88) != qe.VALID) {
+              stackIn_5_0 = qr.INVALID;
               return stackIn_5_0;
             }
           }
-          if (param0 != 26) {
-            nq.a(-47, 52, 56);
+          if (guard != 26) {
+            MatchingTextValidator.intPower(-47, 52, 56);
           }
-          if (!param1.equals(this.field_e.text)) {
-            stackIn_11_0 = qr.field_e;
+          if (!text.equals(this.matchingInput.text)) {
+            stackIn_11_0 = qr.INVALID;
           } else {
-            stackIn_11_0 = qe.field_a;
+            stackIn_11_0 = qe.VALID;
           }
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_14_0 = var3_ref;
-          stackIn_14_1 = new StringBuilder().append("nq.E(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_14_1 = new StringBuilder().append("nq.E(").append(guard).append(',');
+          if (text == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
@@ -50,17 +50,17 @@ final class nq extends na {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte guard) {
         field_j = null;
         optionsText = null;
         field_h = null;
         field_g = null;
-        if (param0 != -31) {
-          nq.a(-90, -68, 30);
+        if (guard != -31) {
+          MatchingTextValidator.intPower(-90, -68, 30);
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int intPower(int base, int guard, int exponent) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -70,33 +70,33 @@ final class nq extends na {
         RuntimeException decompiledCaughtException = null;
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (param1 <= 72) {
+          if (guard <= 72) {
             stackIn_3_0 = 18;
             return stackIn_3_0;
           }
           var3_int = 1;
-          while (param2 > 1) {
-            if (0 != (1 & param2)) {
-              var3_int = var3_int * param0;
+          while (exponent > 1) {
+            if (0 != (1 & exponent)) {
+              var3_int = var3_int * base;
             }
-            param0 = param0 * param0;
-            param2 = param2 >> 1;
+            base = base * base;
+            exponent = exponent >> 1;
           }
-          if (param2 != 1) {
+          if (exponent != 1) {
             stackIn_15_0 = var3_int;
             return stackIn_15_0;
           }
-          stackIn_13_0 = param0 * var3_int;
+          stackIn_13_0 = base * var3_int;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var3), "nq.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var3), "nq.C(" + base + ',' + guard + ',' + exponent + ')');
         }
     }
 
-    final String a(int param0, String param1) {
-        v var3 = null;
+    final String messageForText(int guard, String text) {
+        InputValidator var3 = null;
         RuntimeException var3_ref = null;
         String stackIn_8_0 = null;
         String stackIn_10_0 = null;
@@ -107,34 +107,34 @@ final class nq extends na {
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_e instanceof op) {
-            var3 = ((op) ((Object) this.field_e)).a(-114);
+          if (this.matchingInput instanceof ValidationProvider) {
+            var3 = ((ValidationProvider) ((Object) this.matchingInput)).getValidator(-114);
             if (var3 != null) {
-              if (var3.c(param0 - 98) == qe.field_a &&
-                !param1.equals(this.field_e.text)) {
+              if (var3.getStatus(guard - 98) == qe.VALID &&
+                !text.equals(this.matchingInput.text)) {
                 stackIn_8_0 = LegacyOpenGlFloatPostProcessEffect.thisEntryDoesnTText;
                 return stackIn_8_0;
               }
-              stackIn_10_0 = var3.a(param0 + 3690);
+              stackIn_10_0 = var3.getMessage(guard + 3690);
               return stackIn_10_0;
             }
           }
-          if (!param1.equals(this.field_e.text)) {
+          if (!text.equals(this.matchingInput.text)) {
             stackIn_13_0 = LegacyOpenGlFloatPostProcessEffect.thisEntryDoesnTText;
             return stackIn_13_0;
           }
-          if (param0 == 0) {
+          if (guard == 0) {
             return null;
           }
-          nq.c((byte) 75);
+          MatchingTextValidator.releaseStatics((byte) 75);
           stackIn_17_0 = null;
           return (String) (stackIn_17_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_20_0 = var3_ref;
-          stackIn_20_1 = new StringBuilder().append("nq.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_20_1 = new StringBuilder().append("nq.B(").append(guard).append(',');
+          if (text == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
@@ -143,12 +143,12 @@ final class nq extends na {
         }
     }
 
-    nq(TextInputWidget param0, TextInputWidget param1) {
-        super(param0);
+    MatchingTextValidator(TextInputWidget field, TextInputWidget original) {
+        super(field);
         try {
-          this.field_e = param1;
+          this.matchingInput = original;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "nq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "nq.<init>(" + (field != null ? "{...}" : "null") + ',' + (original != null ? "{...}" : "null") + ')');
         }
     }
 

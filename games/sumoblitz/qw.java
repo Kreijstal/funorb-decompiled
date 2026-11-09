@@ -94,13 +94,13 @@ final class qw {
           if (!so.a((byte) 101)) {
             return;
           }
-          ou.a(false, 4, (byte) -24);
+          ScreenNameValidator.a(false, 4, (byte) -24);
           return;
         }
         if (!so.a((byte) 101)) {
           return;
         }
-        ou.a(false, 4, (byte) -24);
+        ScreenNameValidator.a(false, 4, (byte) -24);
     }
 
     final static void a(int param0, Drone param1) {
@@ -124,7 +124,7 @@ final class qw {
           if (param1.droneType == 0) {
             return;
           }
-          if (jc.b(true) > 20) {
+          if (AgeValidator.countEnemyDrones(true) > 20) {
             return;
           }
           var2_int = ExpandingRingEffect.nextRandomInt(2, HardwareGraphicsHeap.field_o, (byte) -96);

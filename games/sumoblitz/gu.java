@@ -77,7 +77,7 @@ final class gu extends ka {
             !tf.a(this.field_c, -2626, this.field_e)) {
             return;
           }
-          this.field_g = new lm(qq.b(this.field_e, this.field_c, -126));
+          this.field_g = new lm(ValidatedTextInputWidget.b(this.field_e, this.field_c, -126));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

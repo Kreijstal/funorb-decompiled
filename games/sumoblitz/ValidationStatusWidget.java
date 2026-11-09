@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vr extends InteractiveWidget {
+final class ValidationStatusWidget extends InteractiveWidget {
     static String field_G;
-    private int field_E;
-    private v field_H;
+    private int animationTicks;
+    private InputValidator validator;
     static String thisPasswordContainsYourText;
 
     final void update(int parentX, int guard, UiWidget root, int parentY) {
         try {
-          this.field_E = this.field_E + 1;
+          this.animationTicks = this.animationTicks + 1;
           int var5_int = 46 / ((guard + 25) / 45);
           super.update(parentX, 54, root, parentY);
         } catch (RuntimeException runtimeException) {
@@ -17,13 +17,13 @@ final class vr extends InteractiveWidget {
         }
     }
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void detachKeyboardInput(java.awt.Component component, int resetValue) {
         try {
-          param0.removeKeyListener(wd.field_e);
-          param0.removeFocusListener(wd.field_e);
-          LegacyOpenGlEnvironmentWaterEffect.field_i = param1;
+          component.removeKeyListener(wd.field_e);
+          component.removeFocusListener(wd.field_e);
+          LegacyOpenGlEnvironmentWaterEffect.field_i = resetValue;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "vr.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "vr.D(" + (component != null ? "{...}" : "null") + ',' + resetValue + ')');
         }
     }
 
@@ -53,15 +53,15 @@ final class vr extends InteractiveWidget {
         }
         int var5 = (this.width >> 1) + (this.x + parentX);
         int var6 = (this.height >> 1) + parentY + this.y;
-        gf var8 = this.field_H.c(-103);
-        if (GameInstructions.field_f == var8) {
+        ValidationStatus var8 = this.validator.getStatus(-103);
+        if (GameInstructions.DEBOUNCING == var8) {
           var16 = fw.field_m[0];
           var9 = var16.field_z << 1;
           var10 = var16.field_w << 1;
           if (kv.field_a == null) {
             kv.field_a = new Sprite(var9, var10);
             jq.a(7161, kv.field_a);
-            var16.a(112, 144, var16.field_z << 4, var16.field_w << 4, -this.field_E << 10, 4096);
+            var16.a(112, 144, var16.field_z << 4, var16.field_w << 4, -this.animationTicks << 10, 4096);
             ClientException.a((byte) 126);
             kv.field_a.d(var5 - var16.field_z, -var16.field_w + var6, 256);
             if (guard >= -35) {
@@ -73,7 +73,7 @@ final class vr extends InteractiveWidget {
           if (var9 > kv.field_a.field_x) {
             kv.field_a = new Sprite(var9, var10);
             jq.a(7161, kv.field_a);
-            var16.a(112, 144, var16.field_z << 4, var16.field_w << 4, -this.field_E << 10, 4096);
+            var16.a(112, 144, var16.field_z << 4, var16.field_w << 4, -this.animationTicks << 10, 4096);
             ClientException.a((byte) 126);
             kv.field_a.d(var5 - var16.field_z, -var16.field_w + var6, 256);
             if (guard >= -35) {
@@ -85,7 +85,7 @@ final class vr extends InteractiveWidget {
           if (var10 <= kv.field_a.field_u) {
             jq.a(7161, kv.field_a);
             SoftwareRasterizer.clear();
-            var16.a(112, 144, var16.field_z << 4, var16.field_w << 4, -this.field_E << 10, 4096);
+            var16.a(112, 144, var16.field_z << 4, var16.field_w << 4, -this.animationTicks << 10, 4096);
             ClientException.a((byte) 126);
             kv.field_a.d(var5 - var16.field_z, -var16.field_w + var6, 256);
             if (guard >= -35) {
@@ -96,7 +96,7 @@ final class vr extends InteractiveWidget {
           }
           kv.field_a = new Sprite(var9, var10);
           jq.a(7161, kv.field_a);
-          var16.a(112, 144, var16.field_z << 4, var16.field_w << 4, -this.field_E << 10, 4096);
+          var16.a(112, 144, var16.field_z << 4, var16.field_w << 4, -this.animationTicks << 10, 4096);
           ClientException.a((byte) 126);
           kv.field_a.d(var5 - var16.field_z, -var16.field_w + var6, 256);
           if (guard >= -35) {
@@ -105,14 +105,14 @@ final class vr extends InteractiveWidget {
           }
           return;
         }
-        if (kt.field_a == var8) {
+        if (kt.PENDING == var8) {
           var17 = fw.field_m[0];
           var9Lifetime1 = var17.field_z << 1;
           var10Lifetime1 = var17.field_w << 1;
           if (kv.field_a == null) {
             kv.field_a = new Sprite(var9Lifetime1, var10Lifetime1);
             jq.a(7161, kv.field_a);
-            var17.a(112, 144, var17.field_z << 4, var17.field_w << 4, -this.field_E << 10, 4096);
+            var17.a(112, 144, var17.field_z << 4, var17.field_w << 4, -this.animationTicks << 10, 4096);
             ClientException.a((byte) 126);
             kv.field_a.d(var5 - var17.field_z, -var17.field_w + var6, 256);
             if (guard >= -35) {
@@ -124,7 +124,7 @@ final class vr extends InteractiveWidget {
           if (var9Lifetime1 > kv.field_a.field_x) {
             kv.field_a = new Sprite(var9Lifetime1, var10Lifetime1);
             jq.a(7161, kv.field_a);
-            var17.a(112, 144, var17.field_z << 4, var17.field_w << 4, -this.field_E << 10, 4096);
+            var17.a(112, 144, var17.field_z << 4, var17.field_w << 4, -this.animationTicks << 10, 4096);
             ClientException.a((byte) 126);
             kv.field_a.d(var5 - var17.field_z, -var17.field_w + var6, 256);
             if (guard >= -35) {
@@ -136,7 +136,7 @@ final class vr extends InteractiveWidget {
           if (var10Lifetime1 > kv.field_a.field_u) {
             kv.field_a = new Sprite(var9Lifetime1, var10Lifetime1);
             jq.a(7161, kv.field_a);
-            var17.a(112, 144, var17.field_z << 4, var17.field_w << 4, -this.field_E << 10, 4096);
+            var17.a(112, 144, var17.field_z << 4, var17.field_w << 4, -this.animationTicks << 10, 4096);
             ClientException.a((byte) 126);
             kv.field_a.d(var5 - var17.field_z, -var17.field_w + var6, 256);
             if (guard < -35) {
@@ -148,7 +148,7 @@ final class vr extends InteractiveWidget {
           }
           jq.a(7161, kv.field_a);
           SoftwareRasterizer.clear();
-          var17.a(112, 144, var17.field_z << 4, var17.field_w << 4, -this.field_E << 10, 4096);
+          var17.a(112, 144, var17.field_z << 4, var17.field_w << 4, -this.animationTicks << 10, 4096);
           ClientException.a((byte) 126);
           kv.field_a.d(var5 - var17.field_z, -var17.field_w + var6, 256);
           if (guard < -35) {
@@ -158,7 +158,7 @@ final class vr extends InteractiveWidget {
           this.update(86, -51, (UiWidget) null, 16);
           return;
         }
-        if (qr.field_e == var8) {
+        if (qr.INVALID == var8) {
           var14 = fw.field_m[2];
           var14.d(-(var14.field_x >> 1) + var5, var6 - (var14.field_u >> 1), 256);
           if (guard < -35) {
@@ -168,7 +168,7 @@ final class vr extends InteractiveWidget {
           this.update(86, -51, (UiWidget) null, 16);
           return;
         }
-        if (var8 == qe.field_a) {
+        if (var8 == qe.VALID) {
           var15 = fw.field_m[1];
           var15.d(var5 - (var15.field_x >> 1), var6 - (var15.field_u >> 1), 256);
         }
@@ -181,7 +181,7 @@ final class vr extends InteractiveWidget {
 
     final String hoveredTooltip(int guard) {
         if (this.hovered) {
-          return this.field_H.a(3690);
+          return this.validator.getMessage(3690);
         }
         if (guard != -6696) {
           this.renderLayer(-102, 53, (byte) -40, -114);
@@ -200,7 +200,7 @@ final class vr extends InteractiveWidget {
           if (guard == 61) {
             return false;
           }
-          this.field_E = 103;
+          this.animationTicks = 103;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -221,15 +221,15 @@ final class vr extends InteractiveWidget {
         thisPasswordContainsYourText = null;
         if (param0 != -21433) {
           java.awt.Component var2 = (java.awt.Component) null;
-          vr.a((java.awt.Component) null, -80);
+          ValidationStatusWidget.detachKeyboardInput((java.awt.Component) null, -80);
         }
     }
 
-    vr(v param0) {
+    ValidationStatusWidget(InputValidator validation) {
         try {
-          this.field_H = param0;
+          this.validator = validation;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "vr.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "vr.<init>(" + (validation != null ? "{...}" : "null") + ')');
         }
     }
 

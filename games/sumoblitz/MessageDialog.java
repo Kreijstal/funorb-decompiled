@@ -82,7 +82,7 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
             return stackIn_2_0;
           }
           if (!param2) {
-            stackIn_7_0 = qq.field_R.a(param1);
+            stackIn_7_0 = ValidatedTextInputWidget.field_R.a(param1);
             return stackIn_7_0;
           }
           stackIn_5_0 = MouseWheelInput.field_a.a(param1);
@@ -253,7 +253,7 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
     final static void m(int param0) {
         HardwareAnimatedWaterEffect.d(1);
         if (qn.field_f != null) {
-          wr.a(true, qn.field_f);
+          CheckboxWidget.a(true, qn.field_f);
         }
         ShaderEffect.a(false);
         jm.b(28679);
@@ -378,7 +378,7 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
             return stackIn_2_0;
           }
           if (!param2) {
-            stackIn_7_0 = qq.field_R.a(param1);
+            stackIn_7_0 = ValidatedTextInputWidget.field_R.a(param1);
             return stackIn_7_0;
           }
           stackIn_5_0 = MouseWheelInput.field_a.a(param1);

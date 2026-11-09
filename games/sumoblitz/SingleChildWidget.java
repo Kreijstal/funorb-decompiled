@@ -36,11 +36,11 @@ abstract class SingleChildWidget extends UiWidget implements CompositeWidgetMark
 
     final static jj[] a(int param0) {
         if (param0 == 32) {
-          return new jj[]{OpenGlTexture3D.field_m, LevelSelectScreen.field_j, na.field_c};
+          return new jj[]{OpenGlTexture3D.field_m, LevelSelectScreen.field_j, TextInputValidator.field_c};
         }
         java.applet.Applet var2 = (java.applet.Applet) null;
         SingleChildWidget.setSessionCookie(-3, (String) null, (java.applet.Applet) null);
-        return new jj[]{OpenGlTexture3D.field_m, LevelSelectScreen.field_j, na.field_c};
+        return new jj[]{OpenGlTexture3D.field_m, LevelSelectScreen.field_j, TextInputValidator.field_c};
     }
 
     final void appendChildDebugTree(int indent, StringBuilder output, Hashtable visited, byte guard) {
@@ -290,7 +290,7 @@ abstract class SingleChildWidget extends UiWidget implements CompositeWidgetMark
           String var6 = null;
           try {
             int var3_int = -31 % ((-22 - guard) / 49);
-            js.field_J = sessionValue;
+            AccountCreationForm.field_J = sessionValue;
             try {
               var7 = applet.getParameter("cookieprefix");
               var5 = applet.getParameter("cookiehost");

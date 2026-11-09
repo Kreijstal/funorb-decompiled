@@ -25,7 +25,7 @@ final class qv extends IntrusiveNode {
           qv.a(false, -82, (CharSequence) null);
         }
         var2.setLoopCount(-1);
-        qq.addPlayingSound(18416, var2);
+        ValidatedTextInputWidget.addPlayingSound(18416, var2);
     }
 
     final static String a(boolean param0, int param1, CharSequence param2) {
@@ -51,13 +51,13 @@ final class qv extends IntrusiveNode {
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (param2 == null) {
-            stackIn_4_0 = qq.namesShouldContainAText;
+            stackIn_4_0 = ValidatedTextInputWidget.namesShouldContainAText;
             return stackIn_4_0;
           }
           var3_int = param2.length();
           if (var3_int >= 1 &&
             12 >= var3_int) {
-            var4 = uk.a(-1, param2);
+            var4 = AccountCreationProgressDialog.normalizeAccountName(-1, param2);
             if (var4 != null &&
               var4.length() >= 1) {
               if (!wv.a((byte) -88, var4.charAt(0)) &&
@@ -87,10 +87,10 @@ final class qv extends IntrusiveNode {
               stackIn_19_0 = ProgressDialog.namesCannotStartOrText;
               return stackIn_19_0;
             }
-            stackIn_14_0 = qq.namesShouldContainAText;
+            stackIn_14_0 = ValidatedTextInputWidget.namesShouldContainAText;
             return stackIn_14_0;
           }
-          stackIn_9_0 = qq.namesShouldContainAText;
+          stackIn_9_0 = ValidatedTextInputWidget.namesShouldContainAText;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

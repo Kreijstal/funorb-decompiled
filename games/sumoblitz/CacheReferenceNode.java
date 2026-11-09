@@ -7,7 +7,7 @@ abstract class CacheReferenceNode extends DualLinkNode {
     static int field_s;
     static ToolkitSprite field_y;
     static int field_u;
-    static cp field_v;
+    static WidgetTheme field_v;
     static PlatformTaskDispatcher field_t;
     static long field_x;
     int weight;

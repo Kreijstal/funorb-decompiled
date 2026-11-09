@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ew extends na {
+final class EmailSyntaxValidator extends TextInputValidator {
     static int field_e;
     static int field_f;
 
     final static eg a(byte param0, int param1) {
         int var3 = 115 % ((param0 - 30) / 47);
         eg var2 = new eg();
-        wr.field_E.addLast((IntrusiveNode) (var2), (byte) 39);
-        ou.a(127, param1);
+        CheckboxWidget.field_E.addLast((IntrusiveNode) (var2), (byte) 39);
+        ScreenNameValidator.a(127, param1);
         return var2;
     }
 
-    final String a(int param0, String param1) {
+    final String messageForText(int guard, String text) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_5_0 = null;
@@ -23,11 +23,11 @@ final class ew extends na {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a((byte) 26, param1) == qr.field_e) {
+          if (this.validateText((byte) 26, text) == qr.INVALID) {
             stackIn_2_0 = DroneDebris.pleaseCheckIfAddressText;
             return stackIn_2_0;
           }
-          if (param0 == 0) {
+          if (guard == 0) {
             stackIn_7_0 = ProxySocketConnector.emailIsValidText;
             return stackIn_7_0;
           }
@@ -37,8 +37,8 @@ final class ew extends na {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_10_0 = var3;
-          stackIn_10_1 = new StringBuilder().append("ew.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_10_1 = new StringBuilder().append("ew.B(").append(guard).append(',');
+          if (text == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
@@ -47,36 +47,36 @@ final class ew extends na {
         }
     }
 
-    ew(TextInputWidget param0) {
-        super(param0);
+    EmailSyntaxValidator(TextInputWidget field) {
+        super(field);
     }
 
-    final gf a(byte param0, String param1) {
+    final ValidationStatus validateText(byte guard, String text) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
-        gf stackIn_8_0 = null;
+        ValidationStatus stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != 26) {
+          if (guard != 26) {
             field_e = 68;
           }
-          stackIn_5_0 = (il.a(param1, (byte) 38) != null) ? 0 : 1;
+          stackIn_5_0 = (il.a(text, (byte) 38) != null) ? 0 : 1;
           var3_int = stackIn_5_0;
           if (var3_int != 0) {
-            return qe.field_a;
+            return qe.VALID;
           }
-          stackIn_8_0 = qr.field_e;
+          stackIn_8_0 = qr.INVALID;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_11_0 = var3;
-          stackIn_11_1 = new StringBuilder().append("ew.E(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_11_1 = new StringBuilder().append("ew.E(").append(guard).append(',');
+          if (text == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";

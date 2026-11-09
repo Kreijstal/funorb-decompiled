@@ -67,7 +67,7 @@ class MenuScreen {
         int var13Lifetime1Lifetime2;
         int var13Lifetime1Lifetime3;
         var21 = Sumoblitz.field_L ? 1 : 0;
-        var22 = nq.field_h.a(-106);
+        var22 = MatchingTextValidator.field_h.a(-106);
         var5 = 16777215 | param2 << 24;
         var6 = 16777215 | param2 << 23;
         var7 = param2 << 24;
@@ -715,8 +715,8 @@ class MenuScreen {
         MessageDialog.field_db.a(100, 5023231 | param1 << 24, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLines[2], (SpriteMask) null, 0, 0);
         LegacyOpenGlEffect.field_c.a(100, 16777215 | param1 << 24, 0, var4, var3 + 60, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLines[2], (SpriteMask) null, 0, 0);
         var5 += 70;
-        s.field_n[0].drawRotated((float)(var3 + 30), (float)(10 + var5), 4096, 0, 1, 0, 2);
-        s.field_n[1].drawRotated((float)(var3 + 30), (float)(10 + var5), 4096, 0, 1, 0, 2);
+        TextHotspot.field_n[0].drawRotated((float)(var3 + 30), (float)(10 + var5), 4096, 0, 1, 0, 2);
+        TextHotspot.field_n[1].drawRotated((float)(var3 + 30), (float)(10 + var5), 4096, 0, 1, 0, 2);
         MessageDialog.field_db.a(var5, var3 + 60, param1 << 24 | 5023231, GameInstructions.dronesHelpLines[3], (byte) -110, 0);
         LegacyOpenGlEffect.field_c.a(var5, 60 + var3, param1 << 24 | 5023231, GameInstructions.dronesHelpLines[3], (byte) -117, 0);
         MessageDialog.field_db.a(100, param1 << 24 | 5023231, 0, var4, 60 + var3, (int[]) null, (ToolkitSprite[]) null, var5, -1, 0, 0, -8787, GameInstructions.dronesHelpLines[4], (SpriteMask) null, 0, 0);
@@ -1078,7 +1078,7 @@ class MenuScreen {
                       gn.a(0, true);
                     }
                     if (this.field_g.g(116224)) {
-                      js.h(0);
+                      AccountCreationForm.h(0);
                       gn.a(0, true);
                     }
                     if (!this.field_g.b((byte) 52)) {
@@ -1547,7 +1547,7 @@ class MenuScreen {
         int var8;
         GraphicsToolkit var9;
         var8 = Sumoblitz.field_L ? 1 : 0;
-        var9 = nq.field_h.a(-125);
+        var9 = MatchingTextValidator.field_h.a(-125);
         var4 = param1 << 24 | 16777215;
         var5 = 664;
         wo.a(up.field_c, 380, -5, param1 << 24, 3, var9, 650, 55, 1, true);
@@ -1831,7 +1831,7 @@ class MenuScreen {
           break;
         }
         if (decompiledNaturalLoopExit0) {
-          this.field_g.a(true, this.a(nb.field_a, (byte) 97, jc.field_f), this.a(ko.field_p, (byte) 49, pi.field_e));
+          this.field_g.a(true, this.a(nb.field_a, (byte) 97, AgeValidator.field_f), this.a(ko.field_p, (byte) 49, pi.field_e));
         }
         if (-1 != this.field_g.field_g) {
           this.a(true, (byte) 105, this.field_g.field_g);
@@ -1915,7 +1915,7 @@ class MenuScreen {
         int var15Lifetime1;
         String var6Lifetime1;
         var19 = Sumoblitz.field_L ? 1 : 0;
-        var20 = nq.field_h.a(-124);
+        var20 = MatchingTextValidator.field_h.a(-124);
         wo.a(up.field_c, 424, -5, param0 << 24, 3, var20, 650, 45, param1, true);
         var4 = 0;
         if (dk.field_c == 2) {

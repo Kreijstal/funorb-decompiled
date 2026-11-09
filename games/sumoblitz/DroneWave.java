@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wc {
+final class DroneWave {
     int field_a;
-    Drone[] field_b;
+    Drone[] drones;
 
-    final int a(int param0) {
+    final int countDrones(int initialCount) {
         int var3 = 0;
         int var2;
         int var4;
         var4 = Sumoblitz.field_L ? 1 : 0;
-        var2 = param0;
-        for (var3 = 0; var3 < this.field_b.length; var3++) {
-          if (this.field_b[var3] != null) {
+        var2 = initialCount;
+        for (var3 = 0; var3 < this.drones.length; var3++) {
+          if (this.drones[var3] != null) {
             var2++;
           }
         }
         return var2;
     }
 
-    final static boolean a(ResourceArchive param0, int param1) {
+    final static boolean tryLoadArchive(ResourceArchive archive, int guard) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -27,8 +27,8 @@ final class wc {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 >= 25) {
-            stackIn_4_0 = param0.tryLoadAllGroups(true);
+          if (guard >= 25) {
+            stackIn_4_0 = archive.tryLoadAllGroups(true);
             return stackIn_4_0;
           }
           return false;
@@ -37,21 +37,21 @@ final class wc {
           var2 = decompiledCaughtException;
           stackIn_7_0 = var2;
           stackIn_7_1 = new StringBuilder().append("wc.B(");
-          if (param0 == null) {
+          if (archive == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    wc(Drone[] param0, int param1, boolean param2) {
+    DroneWave(Drone[] roster, int metadata, boolean flag) {
         try {
-          this.field_a = param1;
-          this.field_b = param0;
+          this.field_a = metadata;
+          this.drones = roster;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wc.<init>(" + (roster != null ? "{...}" : "null") + ',' + metadata + ',' + flag + ')');
         }
     }
 

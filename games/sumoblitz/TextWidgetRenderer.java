@@ -389,7 +389,7 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
             }
             var12 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
             kw.a(widget.height + (widget.y + parentY), parentY + widget.y, 1, widget.x + parentX, widget.x + parentX + widget.width);
-            HardwareTurbulentWaterNoise.field_x.a(this.caretColor, var10, false, var10, var12, var11);
+            HardwareTurbulentWaterNoise.widgetTheme.a(this.caretColor, var10, false, var10, var12, var11);
             ClientException.a((byte) 116);
           }
           if (guard != 1) {
@@ -523,7 +523,7 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
                 }
               }
               var15 = stackIn_19_0;
-              HardwareTurbulentWaterNoise.field_x.a(this.selectionColor >>> 24, guard + 3, var13.bottom, this.selectionColor, this.textXForOffset(-3, widget, var14, parentX), var15 - var14, widget.textOffsetY + (this.paddingTop + widget.y + parentY) + var13.top);
+              HardwareTurbulentWaterNoise.widgetTheme.a(this.selectionColor >>> 24, guard + 3, var13.bottom, this.selectionColor, this.textXForOffset(-3, widget, var14, parentX), var15 - var14, widget.textOffsetY + (this.paddingTop + widget.y + parentY) + var13.top);
             }
             ClientException.a((byte) 86);
             return;

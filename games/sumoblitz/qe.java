@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qe {
-    static gf field_a;
+    static ValidationStatus VALID;
     static String connectionLostAttemptingToText;
 
     final static int[][] a(boolean param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, float param8) {
@@ -28,14 +28,14 @@ final class qe {
 
     public static void releaseStatics(int param0) {
         if (param0 != 0) {
-          field_a = (gf) null;
+          VALID = (ValidationStatus) null;
         }
         connectionLostAttemptingToText = null;
-        field_a = null;
+        VALID = null;
     }
 
     static {
-        field_a = new gf();
+        VALID = new ValidationStatus();
         connectionLostAttemptingToText = "Connection lost - attempting to reconnect";
     }
 }

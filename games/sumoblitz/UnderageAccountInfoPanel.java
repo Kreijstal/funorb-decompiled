@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class th extends WidgetContainer implements ca, WidgetActionListener {
+final class UnderageAccountInfoPanel extends WidgetContainer implements TextHotspotListener, WidgetActionListener {
     static SpriteData field_C;
     static int field_H;
-    private uk field_G;
-    private InteractiveWidget field_D;
+    private AccountCreationProgressDialog dialog;
+    private InteractiveWidget continueButton;
     static ToolkitSprite field_B;
-    private ar field_F;
+    private HotspotTextWidget policyLinks;
 
     final boolean onKey(UiWidget root, char character, byte guard, int keyCode) {
         boolean stackIn_7_0 = false;
@@ -30,7 +30,7 @@ final class th extends WidgetContainer implements ca, WidgetActionListener {
             return stackIn_10_0;
           }
           if (guard < 9) {
-            th.e(false);
+            UnderageAccountInfoPanel.e(false);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -47,7 +47,7 @@ final class th extends WidgetContainer implements ca, WidgetActionListener {
         }
     }
 
-    th(uk param0) {
+    UnderageAccountInfoPanel(AccountCreationProgressDialog owner) {
         super(0, 0, 288, 0, (WidgetRenderer) null);
         RuntimeException runtimeException = null;
         int var3 = 0;
@@ -60,26 +60,26 @@ final class th extends WidgetContainer implements ca, WidgetActionListener {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_G = param0;
-          this.field_D = new InteractiveWidget(wd.continueText, (WidgetListener) null);
-          this.field_D.renderer = (WidgetRenderer) ((Object) new ue());
-          var7 = ic.a(qv.asYouAreUnderText, new String[]{this.a((byte) 43), this.g(116)}, (byte) -128);
+          this.dialog = owner;
+          this.continueButton = new InteractiveWidget(wd.continueText, (WidgetListener) null);
+          this.continueButton.renderer = (WidgetRenderer) ((Object) new ue());
+          var7 = ic.a(qv.asYouAreUnderText, new String[]{this.linkStyleStart((byte) 43), this.linkStyleEnd(116)}, (byte) -128);
           var3 = 20;
           var4 = new TextWidgetRenderer(kw.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, kw.field_b.field_s, -1, 2147483647, true);
-          this.field_F = new ar(var7, var4);
-          this.field_F.tooltip = "";
-          this.field_F.a(-57, sb.openInPopupWindowText, 0);
-          this.field_F.a(-66, sb.openInPopupWindowText, 1);
-          this.field_F.listener = (WidgetListener) (this);
-          this.field_F.width = -40 + this.width;
-          this.field_F.a(var3, false, 26, -40 + this.width);
-          var3 = var3 + (15 + this.field_F.height);
-          this.addChild(this.field_F, 99);
+          this.policyLinks = new HotspotTextWidget(var7, var4);
+          this.policyLinks.tooltip = "";
+          this.policyLinks.setHotspotTooltip(-57, sb.openInPopupWindowText, 0);
+          this.policyLinks.setHotspotTooltip(-66, sb.openInPopupWindowText, 1);
+          this.policyLinks.listener = (WidgetListener) (this);
+          this.policyLinks.width = -40 + this.width;
+          this.policyLinks.setBoundsToTextHeight(var3, false, 26, -40 + this.width);
+          var3 = var3 + (15 + this.policyLinks.height);
+          this.addChild(this.policyLinks, 99);
           var5 = 4;
           var6 = 200;
-          this.field_D.setBounds(-79, 300 - var6 >> 1, var3, 40, var6);
-          this.field_D.listener = (WidgetListener) (this);
-          this.addChild(this.field_D, 76);
+          this.continueButton.setBounds(-79, 300 - var6 >> 1, var3, 40, var6);
+          this.continueButton.listener = (WidgetListener) (this);
+          this.addChild(this.continueButton, 76);
           this.setBounds(-112, 0, 0, 55 + var3 + var5, 300);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -87,7 +87,7 @@ final class th extends WidgetContainer implements ca, WidgetActionListener {
           runtimeException = decompiledCaughtException;
           stackIn_6_0 = runtimeException;
           stackIn_6_1 = new StringBuilder().append("th.<init>(");
-          if (param0 == null) {
+          if (owner == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -128,7 +128,7 @@ final class th extends WidgetContainer implements ca, WidgetActionListener {
           if (3 == param2) {
             SoftwareTransform3D.field_b = SoftwareTransform3D.field_b - DropDownWidget.field_C;
             GraphicsToolkit.field_f = GraphicsToolkit.field_f + OpenGlShaderProgram.levelIndex;
-            ts.field_a = ts.field_a - nq.field_i;
+            ts.field_a = ts.field_a - MatchingTextValidator.field_i;
           } else {
             if (param2 != 4 &&
               param2 != 5 &&
@@ -146,7 +146,7 @@ final class th extends WidgetContainer implements ca, WidgetActionListener {
               decompiledFrameRemainder1 = false;
             }
             else {
-              ts.field_a = ts.field_a + nq.field_i;
+              ts.field_a = ts.field_a + MatchingTextValidator.field_i;
             }
           }
           if (!LegacyOpenGlSpriteTexture.field_w) {
@@ -170,12 +170,12 @@ final class th extends WidgetContainer implements ca, WidgetActionListener {
               decompiledFrameRemainder0 = false;
             }
             else {
-              ts.field_a = ts.field_a - nq.field_i;
+              ts.field_a = ts.field_a - MatchingTextValidator.field_i;
             }
           } else {
             SoftwareTransform3D.field_b = SoftwareTransform3D.field_b + DropDownWidget.field_C;
             GraphicsToolkit.field_f = GraphicsToolkit.field_f - OpenGlShaderProgram.levelIndex;
-            ts.field_a = ts.field_a + nq.field_i;
+            ts.field_a = ts.field_a + MatchingTextValidator.field_i;
           }
           if (5 > BufferedCacheFile.a((byte) -84, 10)) {
             GraphicsToolkit.field_f = GraphicsToolkit.field_f - TextureFormat.elapsedTicks;
@@ -195,7 +195,7 @@ final class th extends WidgetContainer implements ca, WidgetActionListener {
         }
     }
 
-    public final void a(int param0, ar param1, int param2, int param3) {
+    public final void onHotspotAction(int hotspotId, HotspotTextWidget source, int action, int guard) {
         int var6 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -204,52 +204,52 @@ final class th extends WidgetContainer implements ca, WidgetActionListener {
         RuntimeException var5 = null;
         var6 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (param0 == 0) {
+          if (hotspotId == 0) {
             hn.a((byte) 113, "terms.ws");
           } else {
-            if (1 == param0) {
+            if (1 == hotspotId) {
               hn.a((byte) 80, "privacy.ws");
             } else {
-              if (param0 == 2) {
+              if (hotspotId == 2) {
                 hn.a((byte) 98, "conduct.ws");
               }
             }
           }
-          if (param3 == -20036) {
+          if (guard == -20036) {
             return;
           }
-          this.field_G = (uk) null;
+          this.dialog = (AccountCreationProgressDialog) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_16_0 = var5;
-          stackIn_16_1 = new StringBuilder().append("th.D(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_16_1 = new StringBuilder().append("th.D(").append(hotspotId).append(',');
+          if (source == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(action).append(',').append(guard).append(')').toString());
         }
     }
 
-    private final String g(int param0) {
+    private final String linkStyleEnd(int guard) {
         RuntimeException var2 = null;
-        ar var3 = null;
+        HotspotTextWidget var3 = null;
         String stackIn_3_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 <= 2) {
-            var3 = (ar) null;
-            this.a(-104, (ar) null, -45, 28);
+          if (guard <= 2) {
+            var3 = (HotspotTextWidget) null;
+            this.onHotspotAction(-104, (HotspotTextWidget) null, -45, 28);
           }
           stackIn_3_0 = "</col></u>";
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "th.H(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "th.H(" + guard + ')');
         }
     }
 
@@ -257,26 +257,26 @@ final class th extends WidgetContainer implements ca, WidgetActionListener {
         try {
           GraphicsToolkit.field_d = fd.clickText + " <b>" + km.acceptText + "</b> " + ws.toKeepFullscreenOrText + " <b>" + up.cancelText + "</b> " + OpenGlShaderProgram.toReturnToTheText + "<br>" + "<br>" + c.ifYouDoNothingText;
           if (!param0) {
-            th.e(false);
+            UnderageAccountInfoPanel.e(false);
           }
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "th.I(" + param0 + ')');
         }
     }
 
-    private final String a(byte param0) {
+    private final String linkStyleStart(byte guard) {
         String stackIn_1_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         try {
-          var2_int = 75 / ((-65 - param0) / 44);
+          var2_int = 75 / ((-65 - guard) / 44);
           stackIn_1_0 = "<u=2164A2><col=2164A2>";
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "th.F(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "th.F(" + guard + ')');
         }
     }
 
@@ -287,14 +287,14 @@ final class th extends WidgetContainer implements ca, WidgetActionListener {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (source == this.field_D) {
+          if (source == this.continueButton) {
             kh.a(false);
-            this.field_G.n(-7);
+            this.dialog.n(-7);
           }
           if (guard == 710) {
             return;
           }
-          th.f(true);
+          UnderageAccountInfoPanel.f(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -313,7 +313,7 @@ final class th extends WidgetContainer implements ca, WidgetActionListener {
     public static void f(boolean param0) {
         try {
           if (param0) {
-            th.b(82, -23, -57);
+            UnderageAccountInfoPanel.b(82, -23, -57);
           }
           field_C = null;
           field_B = null;

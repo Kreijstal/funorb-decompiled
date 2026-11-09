@@ -58,7 +58,7 @@ final class DroneDebris extends TimedSceneEffect {
                     }
                   }
                 } else {
-                  s.field_n[2 + this.fragmentIndex].drawRotated((float)(this.x >> 8), (float)(this.y >> 8), (int)((double)this.radiusPixels / 14.0 * 3072.0), (int)(65535.0 * this.rotation), 1, 0, 2);
+                  TextHotspot.field_n[2 + this.fragmentIndex].drawRotated((float)(this.x >> 8), (float)(this.y >> 8), (int)((double)this.radiusPixels / 14.0 * 3072.0), (int)(65535.0 * this.rotation), 1, 0, 2);
                 }
               } else {
                 hv.field_d[2 + this.fragmentIndex].drawRotated((float)(this.x >> 8), (float)(this.y >> 8), (int)((double)this.radiusPixels / 14.0 * 3072.0), (int)(65535.0 * this.rotation), 1, 0, 2);
@@ -68,7 +68,7 @@ final class DroneDebris extends TimedSceneEffect {
           if (90 > this.remainingTicks) {
             return;
           }
-          th.field_B.drawRotated((float)(this.x >> 8), (float)(this.y >> 8), (int)((double)this.radiusPixels / 14.0 * 3072.0), (int)(65535.0 * this.rotation), 1, 0, 2);
+          UnderageAccountInfoPanel.field_B.drawRotated((float)(this.x >> 8), (float)(this.y >> 8), (int)((double)this.radiusPixels / 14.0 * 3072.0), (int)(65535.0 * this.rotation), 1, 0, 2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -144,7 +144,7 @@ final class DroneDebris extends TimedSceneEffect {
             stackIn_13_0 = (byte[]) (bytes);
             return stackIn_13_0;
           }
-          stackIn_11_0 = cp.a(bytes, 0);
+          stackIn_11_0 = WidgetTheme.copyBytes(bytes, 0);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

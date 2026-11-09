@@ -23,9 +23,9 @@ final class ScrollViewport extends SingleChildWidget {
               return;
             }
             if (this.height != 0) {
-              HardwareTurbulentWaterNoise.field_x.a(this.height + parentY + this.y, parentX + this.x, this.y + parentY, (byte) -106, parentX + this.x + this.width);
+              HardwareTurbulentWaterNoise.widgetTheme.a(this.height + parentY + this.y, parentX + this.x, this.y + parentY, (byte) -106, parentX + this.x + this.width);
               this.child.renderLayer(this.x + parentX, this.y + parentY, (byte) -95, layer);
-              HardwareTurbulentWaterNoise.field_x.b((byte) -84);
+              HardwareTurbulentWaterNoise.widgetTheme.b((byte) -84);
               return;
             }
             return;
@@ -35,9 +35,9 @@ final class ScrollViewport extends SingleChildWidget {
               return;
             }
             if (this.height != 0) {
-              HardwareTurbulentWaterNoise.field_x.a(this.height + parentY + this.y, parentX + this.x, this.y + parentY, (byte) -106, parentX + this.x + this.width);
+              HardwareTurbulentWaterNoise.widgetTheme.a(this.height + parentY + this.y, parentX + this.x, this.y + parentY, (byte) -106, parentX + this.x + this.width);
               this.child.renderLayer(this.x + parentX, this.y + parentY, (byte) -95, layer);
-              HardwareTurbulentWaterNoise.field_x.b((byte) -84);
+              HardwareTurbulentWaterNoise.widgetTheme.b((byte) -84);
               return;
             }
             return;
@@ -49,9 +49,9 @@ final class ScrollViewport extends SingleChildWidget {
           if (this.height == 0) {
             return;
           }
-          HardwareTurbulentWaterNoise.field_x.a(this.height + parentY + this.y, parentX + this.x, this.y + parentY, (byte) -106, parentX + this.x + this.width);
+          HardwareTurbulentWaterNoise.widgetTheme.a(this.height + parentY + this.y, parentX + this.x, this.y + parentY, (byte) -106, parentX + this.x + this.width);
           this.child.renderLayer(this.x + parentX, this.y + parentY, (byte) -95, layer);
-          HardwareTurbulentWaterNoise.field_x.b((byte) -84);
+          HardwareTurbulentWaterNoise.widgetTheme.b((byte) -84);
           return;
         }
         if (layer == 0 &&
@@ -63,9 +63,9 @@ final class ScrollViewport extends SingleChildWidget {
           if (this.height == 0) {
             return;
           }
-          HardwareTurbulentWaterNoise.field_x.a(this.height + parentY + this.y, parentX + this.x, this.y + parentY, (byte) -106, parentX + this.x + this.width);
+          HardwareTurbulentWaterNoise.widgetTheme.a(this.height + parentY + this.y, parentX + this.x, this.y + parentY, (byte) -106, parentX + this.x + this.width);
           this.child.renderLayer(this.x + parentX, this.y + parentY, (byte) -95, layer);
-          HardwareTurbulentWaterNoise.field_x.b((byte) -84);
+          HardwareTurbulentWaterNoise.widgetTheme.b((byte) -84);
           return;
         }
         if (this.width == 0) {
@@ -74,9 +74,9 @@ final class ScrollViewport extends SingleChildWidget {
         if (this.height == 0) {
           return;
         }
-        HardwareTurbulentWaterNoise.field_x.a(this.height + parentY + this.y, parentX + this.x, this.y + parentY, (byte) -106, parentX + this.x + this.width);
+        HardwareTurbulentWaterNoise.widgetTheme.a(this.height + parentY + this.y, parentX + this.x, this.y + parentY, (byte) -106, parentX + this.x + this.width);
         this.child.renderLayer(this.x + parentX, this.y + parentY, (byte) -95, layer);
-        HardwareTurbulentWaterNoise.field_x.b((byte) -84);
+        HardwareTurbulentWaterNoise.widgetTheme.b((byte) -84);
     }
 
     final boolean onPointerPressed(UiWidget root, int guard, int pointerY, int button, int parentX, int pointerX, int parentY) {
@@ -136,7 +136,7 @@ final class ScrollViewport extends SingleChildWidget {
         qv.field_o = ig.field_a.readCp1252String(-1);
         int var1 = 74 % ((60 - param0) / 52);
         CharSequence var2 = (CharSequence) ((Object) qv.field_o);
-        tc.field_f = uk.a(-1, var2);
+        PasswordValidator.field_f = AccountCreationProgressDialog.normalizeAccountName(-1, var2);
     }
 
     final static void a(byte param0) {

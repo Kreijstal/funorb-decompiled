@@ -14,7 +14,7 @@ final class DraggableWidget extends SingleChildWidget {
     private boolean field_C;
     static String[] achievementDescriptions;
     static String backText;
-    static an field_z;
+    static AccountServiceResult field_z;
 
     final StringBuilder appendDebugTree(int indent, Hashtable visited, StringBuilder output, int guard) {
         StringBuilder discarded$64 = null;
@@ -156,7 +156,7 @@ final class DraggableWidget extends SingleChildWidget {
           backText = null;
           return;
         }
-        field_z = (an) null;
+        field_z = (AccountServiceResult) null;
         field_z = null;
         closeText = null;
         achievementDescriptions = null;

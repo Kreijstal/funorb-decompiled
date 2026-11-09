@@ -4,7 +4,7 @@
 final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
     static int field_o;
     jaclib.memory.heap.NativeHeap heap;
-    static gf field_n;
+    static ValidationStatus EMPTY;
     static int[] field_q;
     static mm field_p;
 
@@ -101,7 +101,7 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
           var5 = new byte[param1];
           var4 = var5;
           if (param3 <= 48) {
-            field_n = (gf) null;
+            EMPTY = (ValidationStatus) null;
           }
           la.a(param0, param2, var5, 0, param1);
           stackIn_3_0 = var5;
@@ -124,19 +124,19 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
         if (param0 == -20388) {
           field_q = null;
           field_p = null;
-          field_n = null;
+          EMPTY = null;
           return;
         }
         field_q = (int[]) null;
         field_q = null;
         field_p = null;
-        field_n = null;
+        EMPTY = null;
     }
 
     final static ne e(int param0) {
         ne var1 = null;
         if (param0 == 12768) {
-          var1 = new ne(vf.field_d, ToolkitImageProducerBuffer.field_u, er.field_h[0], StrongCacheReference.field_C[0], vg.field_k[0], ScrollViewport.field_B[0], TextLayout.field_d[0], LegacyOpenGlEffectManager.field_l);
+          var1 = new ne(vf.field_d, ToolkitImageProducerBuffer.field_u, er.field_h[0], StrongCacheReference.field_C[0], CheckboxRenderer.field_k[0], ScrollViewport.field_B[0], TextLayout.field_d[0], LegacyOpenGlEffectManager.field_l);
           PowerupPickup.releaseSpriteDecoderArrays((byte) -20);
           return var1;
         }
@@ -205,7 +205,7 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
     static {
         field_o = 50;
         field_q = new int[8192];
-        field_n = new gf();
+        EMPTY = new ValidationStatus();
         field_p = new mm();
     }
 }

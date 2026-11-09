@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wk extends na {
-    private nq field_g;
-    private String field_e;
+final class ConfirmedEmailValidator extends TextInputValidator {
+    private MatchingTextValidator matchValidator;
+    private String lastCheckedEmail;
     static MouseInputHandler field_h;
     static String field_f;
-    private boolean field_i;
+    private boolean emailAvailable;
 
-    wk(TextInputWidget param0, TextInputWidget param1) {
-        super(param0);
-        this.field_e = "";
-        this.field_i = false;
+    ConfirmedEmailValidator(TextInputWidget confirmation, TextInputWidget original) {
+        super(confirmation);
+        this.lastCheckedEmail = "";
+        this.emailAvailable = false;
         try {
-          this.field_g = new nq(param0, param1);
+          this.matchValidator = new MatchingTextValidator(confirmation, original);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wk.<init>(" + (confirmation != null ? "{...}" : "null") + ',' + (original != null ? "{...}" : "null") + ')');
         }
     }
 
-    final String a(int param0, String param1) {
+    final String messageForText(int guard, String text) {
         RuntimeException var3 = null;
         String var4 = null;
         String stackIn_4_0 = null;
@@ -30,15 +30,15 @@ final class wk extends na {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != 0) {
+          if (guard != 0) {
             var4 = (String) null;
-            this.a(-5, (String) null);
+            this.messageForText(-5, (String) null);
           }
-          if (this.field_g.a((byte) 26, param1) == qr.field_e) {
-            stackIn_4_0 = this.field_g.a(0, param1);
+          if (this.matchValidator.validateText((byte) 26, text) == qr.INVALID) {
+            stackIn_4_0 = this.matchValidator.messageForText(0, text);
             return stackIn_4_0;
           }
-          if (this.a((byte) 26, param1) != qr.field_e) {
+          if (this.validateText((byte) 26, text) != qr.INVALID) {
             stackIn_9_0 = ProxySocketConnector.emailIsValidText;
             return stackIn_9_0;
           }
@@ -48,8 +48,8 @@ final class wk extends na {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_12_0 = var3;
-          stackIn_12_1 = new StringBuilder().append("wk.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_12_1 = new StringBuilder().append("wk.B(").append(guard).append(',');
+          if (text == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
@@ -58,42 +58,42 @@ final class wk extends na {
         }
     }
 
-    final gf a(byte param0, String param1) {
+    final ValidationStatus validateText(byte guard, String text) {
         bj var3 = null;
         RuntimeException var3_ref = null;
-        gf stackIn_3_0 = null;
-        gf stackIn_7_0 = null;
-        gf stackIn_12_0 = null;
+        ValidationStatus stackIn_3_0 = null;
+        ValidationStatus stackIn_7_0 = null;
+        ValidationStatus stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_g.a(param0, param1) == qr.field_e) {
-            stackIn_3_0 = qr.field_e;
+          if (this.matchValidator.validateText(guard, text) == qr.INVALID) {
+            stackIn_3_0 = qr.INVALID;
             return stackIn_3_0;
           }
-          if (!param1.equals(this.field_e)) {
-            var3 = RasterBuffer.a(param0 ^ 27, param1);
+          if (!text.equals(this.lastCheckedEmail)) {
+            var3 = RasterBuffer.a(guard ^ 27, text);
             if (!var3.a(true)) {
-              stackIn_7_0 = kt.field_a;
+              stackIn_7_0 = kt.PENDING;
               return stackIn_7_0;
             }
-            this.field_e = param1;
-            this.field_i = var3.c(-1);
+            this.lastCheckedEmail = text;
+            this.emailAvailable = var3.c(-1);
           }
-          if (this.field_i) {
-            stackIn_12_0 = qe.field_a;
+          if (this.emailAvailable) {
+            stackIn_12_0 = qe.VALID;
           } else {
-            stackIn_12_0 = qr.field_e;
+            stackIn_12_0 = qr.INVALID;
           }
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_15_0 = var3_ref;
-          stackIn_15_1 = new StringBuilder().append("wk.E(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_15_1 = new StringBuilder().append("wk.E(").append(guard).append(',');
+          if (text == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
@@ -106,7 +106,7 @@ final class wk extends na {
         field_f = null;
         field_h = null;
         if (param0) {
-          wk.releaseStatics(true);
+          ConfirmedEmailValidator.releaseStatics(true);
         }
     }
 

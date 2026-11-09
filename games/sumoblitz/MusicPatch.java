@@ -120,9 +120,9 @@ final class MusicPatch extends IntrusiveNode {
             var4 = var3;
             var4 = var3;
           }
-          if (js.field_J != null &&
-            !js.field_J.equals(param1.getParameter("session"))) {
-            var4 = js.field_J;
+          if (AccountCreationForm.field_J != null &&
+            !AccountCreationForm.field_J.equals(param1.getParameter("session"))) {
+            var4 = AccountCreationForm.field_J;
           }
           if (param0 >= 120) {
             stackIn_12_0 = OpenGlEnvironmentWaterEffect.a(param2, (String) (var4), -1, (String) (var3), -1);

@@ -41,7 +41,7 @@ final class tm implements WidgetRenderer {
             if (param1 != 84) {
               return;
             }
-            s.field_o = param12;
+            TextHotspot.field_o = param12;
             MidiNoteMixer.field_p = param6;
             gn.field_d = param0;
             nb.field_b = param4;

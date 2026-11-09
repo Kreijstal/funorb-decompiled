@@ -59,7 +59,7 @@ final class ArchiveCatalog {
           }
           if (SecondaryNodeDequeIterator.field_b == null &&
             BufferedSocket.field_f) {
-            ou.a(param0, var2_int, (byte) -28);
+            ScreenNameValidator.a(param0, var2_int, (byte) -28);
           }
           if (param1) {
             field_a = -94L;
@@ -642,7 +642,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime22 = ke.a((byte) 117, "optionsTx");
           if (null != var2Lifetime22) {
-            nq.optionsText = MusicVoice.a(0, var2Lifetime22);
+            MatchingTextValidator.optionsText = MusicVoice.a(0, var2Lifetime22);
           }
           var2Lifetime23 = ke.a((byte) 113, "difficultyTx");
           if (null != var2Lifetime23) {
@@ -718,7 +718,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime41 = ke.a((byte) 110, "pointsRemaining");
           if (null != var2Lifetime41) {
-            ar.pointsRemainingText = MusicVoice.a(0, var2Lifetime41);
+            HotspotTextWidget.pointsRemainingText = MusicVoice.a(0, var2Lifetime41);
           }
           var2Lifetime42 = ke.a((byte) 104, "cancelTx");
           if (var2Lifetime42 != null) {
@@ -726,7 +726,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime43 = ke.a((byte) 88, "saveTx");
           if (null != var2Lifetime43) {
-            ou.field_g = MusicVoice.a(0, var2Lifetime43);
+            ScreenNameValidator.field_g = MusicVoice.a(0, var2Lifetime43);
           }
           var2Lifetime44 = ke.a((byte) 105, "congratulations");
           if (null != var2Lifetime44) {

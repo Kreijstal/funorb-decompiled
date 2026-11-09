@@ -80,7 +80,7 @@ final class is {
             return (cn) (stackIn_3_0);
           }
           var6 = (CharSequence) ((Object) param1);
-          var2 = uk.a(-1, var6);
+          var2 = AccountCreationProgressDialog.normalizeAccountName(-1, var6);
           if (param0 < 89) {
             stackIn_6_0 = (cn) null;
             return stackIn_6_0;
@@ -91,7 +91,7 @@ final class is {
           var3 = (cn) (GpuDataType.field_b.a((long)var2.hashCode(), -45));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_jb);
-            var4 = uk.a(-1, var7);
+            var4 = AccountCreationProgressDialog.normalizeAccountName(-1, var7);
             if (var4 == null) {
               var4 = var3.field_jb;
             }

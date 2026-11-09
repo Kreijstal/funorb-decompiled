@@ -48,7 +48,7 @@ final class TextureFilter {
               var2 = new PacketBuffer(13);
               sb.a(ow.field_e, 127, bt.field_d, rd.field_l, var2);
               var2.writeByte((byte) 127, 15);
-              var2.writeInt(48, qq.field_P);
+              var2.writeInt(48, ValidatedTextInputWidget.field_P);
               InstrumentNoteMask.field_n.write(0, -2, var2.payload, 13);
               cd.field_d = cd.field_d + 1;
               ShrinkingRingEffect.field_s = wq.a(-109) + 30000L;

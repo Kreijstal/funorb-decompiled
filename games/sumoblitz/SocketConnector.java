@@ -38,7 +38,7 @@ abstract class SocketConnector {
           if (var3_int > 12) {
             return false;
           }
-          var4 = uk.a(-1, param2);
+          var4 = AccountCreationProgressDialog.normalizeAccountName(-1, param2);
           if (var4 != null &&
             1 <= var4.length()) {
             if (!wv.a((byte) -124, var4.charAt(0)) &&

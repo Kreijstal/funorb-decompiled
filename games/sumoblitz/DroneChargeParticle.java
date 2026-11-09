@@ -66,7 +66,7 @@ final class DroneChargeParticle extends TimedSceneEffect {
         GameClientShell.field_u[12] = TurbulenceNoise3D.soundText;
         GameClientShell.field_u[7] = nj.endGameText;
         GameClientShell.field_u[0] = k.startGameText;
-        GameClientShell.field_u[3] = cp.instructionsText;
+        GameClientShell.field_u[3] = WidgetTheme.instructionsText;
         int var1 = 56 % ((param0 + 26) / 42);
         GameClientShell.field_u[15] = OpenGlTexture3D.logInCreateAccountText;
         GameClientShell.field_u[4] = ResourceArchive.field_j;
@@ -78,7 +78,7 @@ final class DroneChargeParticle extends TimedSceneEffect {
         GameClientShell.field_u[10] = PlayingSound.scoreFilterLabels[2];
         GameClientShell.field_u[27] = FallbackShaderEffect.field_g;
         GameClientShell.field_u[23] = pt.challengeText;
-        GameClientShell.field_u[24] = nq.optionsText;
+        GameClientShell.field_u[24] = MatchingTextValidator.optionsText;
         GameClientShell.field_u[17] = FadingWidget.nextText;
         GameClientShell.field_u[28] = ss.restartLevelText;
         GameClientShell.field_u[19] = dn.arcadeGameText;
@@ -91,7 +91,7 @@ final class DroneChargeParticle extends TimedSceneEffect {
         GameClientShell.field_u[32] = mm.levelSelectText;
         GameClientShell.field_u[8] = PlayingSound.scoreFilterLabels[0];
         GameClientShell.field_u[29] = hv.reassignText;
-        GameClientShell.field_u[30] = ou.field_g;
+        GameClientShell.field_u[30] = ScreenNameValidator.field_g;
         GameClientShell.field_u[31] = VertexAttribute.continueText;
     }
 

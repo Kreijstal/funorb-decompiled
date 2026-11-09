@@ -49,22 +49,22 @@ final class jv {
           vm.field_c = DropTargetWidget.field_z;
           if (255 == param0) {
             stackIn_7_0 = !(lq.field_d >= 13);
-            DraggableWidget.field_z = LegacyOpenGlEffect.a(stackIn_7_0, 8192);
+            DraggableWidget.field_z = LegacyOpenGlEffect.accountSuccess(stackIn_7_0, 8192);
             var6 = (String[]) null;
             InwardSparkParticle.a(256, (String[]) null);
             return;
           }
           if (100 > param0) {
-            DraggableWidget.field_z = LegacyOpenGlReflectionEffect.a(48, param2, param0);
+            DraggableWidget.field_z = LegacyOpenGlReflectionEffect.accountError(48, param2, param0);
             return;
           }
           if (param0 > 105) {
-            DraggableWidget.field_z = LegacyOpenGlReflectionEffect.a(48, param2, param0);
+            DraggableWidget.field_z = LegacyOpenGlReflectionEffect.accountError(48, param2, param0);
             return;
           }
           var7 = param1;
           InwardSparkParticle.a(256, var7);
-          DraggableWidget.field_z = qr.a(param1, 8192);
+          DraggableWidget.field_z = qr.accountNameSuggestions(param1, 8192);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

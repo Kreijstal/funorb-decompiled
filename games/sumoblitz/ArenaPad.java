@@ -195,7 +195,7 @@ final class ArenaPad extends IntrusiveNode {
                   SecondaryNodeQueue.a(drone, (byte) 113);
                   this.triggerCooldownTicks = 200;
                   if (12 == OpenGlShaderProgram.levelIndex) {
-                    bn.field_P = true;
+                    ValidationMessageWidget.field_P = true;
                   }
                   ts.a(this.xQ8, this.effects, -16240, 25, 65535, this.yQ8);
                   decompiledFrameRemainder7 = (var17 != 0);
@@ -221,7 +221,7 @@ final class ArenaPad extends IntrusiveNode {
               if (decompiledFrameRemainder7) {
                 SecondaryNodeQueue.a(drone, (byte) 113);
                 if (OpenGlShaderProgram.levelIndex == 12) {
-                  bn.field_P = true;
+                  ValidationMessageWidget.field_P = true;
                 }
                 this.triggerCooldownTicks = 200;
                 ts.a(this.xQ8, this.effects, -16240, 25, 65535, this.yQ8);

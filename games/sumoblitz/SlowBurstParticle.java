@@ -181,7 +181,7 @@ final class SlowBurstParticle extends TimedSceneEffect {
             while (var9 < var8) {
               var11 = pd.field_q[var9];
               var6[0][var10] = RenderPresentationException.field_b[var11];
-              var19[0][var10 * 4] = lj.field_a[var11];
+              var19[0][var10 * 4] = LoginFieldValue.field_a[var11];
               var19[0][var10 * 4 + 1] = jf.field_f[var11];
               var19[0][2 + 4 * var10] = ic.field_c[var11];
               var19[0][var10 * 4 + 3] = field_z[var11];
@@ -199,7 +199,7 @@ final class SlowBurstParticle extends TimedSceneEffect {
             while (var9Lifetime1 < var8) {
               var11Lifetime1 = pd.field_q[var9Lifetime1 + var5];
               var6[1][var14] = RenderPresentationException.field_b[var11Lifetime1];
-              var19[1][4 * var14] = lj.field_a[var11Lifetime1];
+              var19[1][4 * var14] = LoginFieldValue.field_a[var11Lifetime1];
               var19[1][1 + 4 * var14] = jf.field_f[var11Lifetime1];
               var19[1][2 + 4 * var14] = ic.field_c[var11Lifetime1];
               var19[1][var14 * 4 + 3] = field_z[var11Lifetime1];

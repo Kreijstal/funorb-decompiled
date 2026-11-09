@@ -318,7 +318,7 @@ class Drone {
         this.field_d = this.field_d + 1;
         if (this.droneType == 0 &&
           this.field_d * 20 / 1000 >= 30) {
-          th.b(24753, 247, 8);
+          UnderageAccountInfoPanel.b(24753, 247, 8);
         }
         if (this.destructionTicks > 0) {
           this.velocityYQ8 = this.velocityYQ8 >> 1;
@@ -881,7 +881,7 @@ class Drone {
                       ((ToolkitSprite) (Object) stackIn_36_0).drawRotated(stackIn_36_1, stackIn_36_2, (int)((double)stackIn_37_3 / 14.0 * 3072.0), (int)(this.facingRadians * 32768.0 / 3.141592653589793), 1, 0, 2);
                     }
                   } else {
-                    stackIn_31_0 = s.field_n[0];
+                    stackIn_31_0 = TextHotspot.field_n[0];
                     stackIn_31_1 = (float)(this.xQ8 >> 8);
                     stackIn_31_2 = (float)(this.yQ8 >> 8);
                     if (this.isBlastActive(106)) {
@@ -985,7 +985,7 @@ class Drone {
                         ((ToolkitSprite) (Object) stackIn_78_0).drawRotated(stackIn_78_1, stackIn_78_2, (int)(stackIn_78_3 * ((double)stackIn_79_4 / 14.0)), (int)(this.facingRadians * 32768.0 / 3.141592653589793), 1, 0, 2);
                       }
                     } else {
-                      stackIn_73_0 = s.field_n[1];
+                      stackIn_73_0 = TextHotspot.field_n[1];
                       stackIn_73_1 = (float)(this.xQ8 + var8 >> 8);
                       stackIn_73_2 = (float)(var9 + this.yQ8 >> 8);
                       stackIn_73_3 = 4096.0;

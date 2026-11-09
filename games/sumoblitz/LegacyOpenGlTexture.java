@@ -234,11 +234,11 @@ abstract class LegacyOpenGlTexture implements LegacyOpenGlFramebufferAttachment 
         }
     }
 
-    final static lj c(boolean param0) {
+    final static LoginFieldValue c(boolean param0) {
         if (!param0) {
-          return (lj) null;
+          return (LoginFieldValue) null;
         }
-        return new lj(of.c(100), bt.b(77));
+        return new LoginFieldValue(of.c(100), bt.b(77));
     }
 
     LegacyOpenGlTexture(LegacyOpenGlGraphicsToolkit owner, int textureTarget, int storageFormat, int pixels, boolean mipmaps) {

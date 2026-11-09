@@ -183,7 +183,7 @@ final class SoftwareTransform3D extends Transform3D {
         if (param1 <= -29) {
           if (var2 >= 128 &&
             var2 < 160) {
-            var3 = uk.field_lb[var2 - 128];
+            var3 = AccountCreationProgressDialog.CP1252_EXTENSION[var2 - 128];
             if (0 == var3) {
               var3 = 63;
             }

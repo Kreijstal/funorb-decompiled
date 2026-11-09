@@ -39,16 +39,16 @@ abstract class qt {
         }
     }
 
-    final static lj a(byte param0) {
+    final static LoginFieldValue a(byte param0) {
         if (param0 != 21) {
-          return (lj) null;
+          return (LoginFieldValue) null;
         }
         String var1 = LegacyOpenGlRidgedWaterEffect.c((byte) -2);
         if (var1 != null &&
           var1.indexOf('@') >= 0) {
           var1 = "";
         }
-        return new lj(LegacyOpenGlRidgedWaterEffect.c((byte) -2), GameApplet.a(param0 - 3));
+        return new LoginFieldValue(LegacyOpenGlRidgedWaterEffect.c((byte) -2), GameApplet.a(param0 - 3));
     }
 
     final void b(byte param0) {

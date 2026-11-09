@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ou extends na {
+final class ScreenNameValidator extends TextInputValidator {
     static String field_g;
-    private boolean field_e;
-    private String field_f;
+    private boolean available;
+    private String lastCheckedName;
 
-    ou(TextInputWidget param0) {
-        super(param0);
-        this.field_e = false;
+    ScreenNameValidator(TextInputWidget field) {
+        super(field);
+        this.available = false;
     }
 
-    final void e(int param0) {
-        this.field_f = null;
-        if (param0 != -1) {
-          ou.a(false, -24, (byte) -79);
+    final void invalidateAvailability(int guard) {
+        this.lastCheckedName = null;
+        if (guard != -1) {
+          ScreenNameValidator.a(false, -24, (byte) -79);
         }
     }
 
@@ -24,14 +24,14 @@ final class ou extends na {
         }
         if (!vs.b((byte) 9) &&
           !TimedSceneEffect.field_r) {
-          if (nq.field_g == null) {
-            nq.field_g = ew.a((byte) -92, 4);
+          if (MatchingTextValidator.field_g == null) {
+            MatchingTextValidator.field_g = EmailSyntaxValidator.a((byte) -92, 4);
           }
-          if (nq.field_g.field_o) {
-            kh.field_e = kh.field_e | nq.field_g.field_k;
-            OpenGlTransparentWaterEffect.field_e = OpenGlTransparentWaterEffect.field_e & ~nq.field_g.field_k;
+          if (MatchingTextValidator.field_g.field_o) {
+            kh.field_e = kh.field_e | MatchingTextValidator.field_g.field_k;
+            OpenGlTransparentWaterEffect.field_e = OpenGlTransparentWaterEffect.field_e & ~MatchingTextValidator.field_g.field_k;
             TimedSceneEffect.field_r = true;
-            nq.field_g = null;
+            MatchingTextValidator.field_g = null;
           }
         }
         if (null == Drone.field_g) {
@@ -41,7 +41,7 @@ final class ou extends na {
 
     final static void a(int param0, int param1) {
         if (param0 < 107) {
-          ou.a(-41, -16);
+          ScreenNameValidator.a(-41, -16);
         }
         pl var2 = InwardSparkParticle.field_v;
         var2.g(param1, 8);
@@ -49,10 +49,10 @@ final class ou extends na {
         var2.writeByte((byte) 107, 2);
     }
 
-    final String a(int param0, String param1) {
+    final String messageForText(int guard, String text) {
         String var3 = null;
         RuntimeException var3_ref = null;
-        an var4 = null;
+        AccountServiceResult var4 = null;
         CharSequence var5 = null;
         String stackIn_4_0 = null;
         Object stackIn_11_0 = null;
@@ -62,28 +62,28 @@ final class ou extends na {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = (CharSequence) ((Object) param1);
+          var5 = (CharSequence) ((Object) text);
           var3 = CacheIoWorker.a(false, var5);
-          if (param0 != 0) {
-            ou.releaseStatics((byte) 14);
+          if (guard != 0) {
+            ScreenNameValidator.releaseStatics((byte) 14);
           }
           if (var3 != null) {
             stackIn_4_0 = var3;
             return stackIn_4_0;
           }
-          if (!param1.equals(this.field_f)) {
-            var4 = im.a((byte) -109, param1);
+          if (!text.equals(this.lastCheckedName)) {
+            var4 = im.pollNameAvailability((byte) -109, text);
             if (var4 == null) {
               return null;
             }
-            if (var4.field_g != null) {
+            if (var4.errorMessage != null) {
               stackIn_11_0 = null;
               return (String) (stackIn_11_0);
             }
-            this.field_e = var4.field_b;
-            this.field_f = param1;
+            this.available = var4.success;
+            this.lastCheckedName = text;
           }
-          if (this.field_e) {
+          if (this.available) {
             return PrimitiveType.nameIsAvailableText;
           }
           stackIn_16_0 = LegacyOpenGlReflectionEffect.field_e;
@@ -92,8 +92,8 @@ final class ou extends na {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_19_0 = var3_ref;
-          stackIn_19_1 = new StringBuilder().append("ou.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_19_1 = new StringBuilder().append("ou.B(").append(guard).append(',');
+          if (text == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
@@ -102,49 +102,49 @@ final class ou extends na {
         }
     }
 
-    final gf a(byte param0, String param1) {
-        an var3 = null;
+    final ValidationStatus validateText(byte guard, String text) {
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
-        gf stackIn_3_0 = null;
-        gf stackIn_11_0 = null;
-        gf stackIn_16_0 = null;
+        ValidationStatus stackIn_3_0 = null;
+        ValidationStatus stackIn_11_0 = null;
+        ValidationStatus stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = (CharSequence) ((Object) param1);
+          var4 = (CharSequence) ((Object) text);
           if (!LegacyOpenGlShoreWaveWaterEffect.a(var4, (byte) 53)) {
-            stackIn_3_0 = qr.field_e;
+            stackIn_3_0 = qr.INVALID;
             return stackIn_3_0;
           }
-          if (param0 != 26) {
-            this.e(-22);
+          if (guard != 26) {
+            this.invalidateAvailability(-22);
           }
-          if (!param1.equals(this.field_f)) {
-            var3 = im.a((byte) -71, param1);
+          if (!text.equals(this.lastCheckedName)) {
+            var3 = im.pollNameAvailability((byte) -71, text);
             if (var3 != null &&
-              var3.field_g == null) {
-              this.field_e = var3.field_b;
-              this.field_f = param1;
+              var3.errorMessage == null) {
+              this.available = var3.success;
+              this.lastCheckedName = text;
             } else {
-              stackIn_11_0 = kt.field_a;
+              stackIn_11_0 = kt.PENDING;
               return stackIn_11_0;
             }
           }
-          if (!this.field_e) {
-            stackIn_16_0 = qr.field_e;
+          if (!this.available) {
+            stackIn_16_0 = qr.INVALID;
           } else {
-            stackIn_16_0 = qe.field_a;
+            stackIn_16_0 = qe.VALID;
           }
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_19_0 = var3_ref;
-          stackIn_19_1 = new StringBuilder().append("ou.E(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_19_1 = new StringBuilder().append("ou.E(").append(guard).append(',');
+          if (text == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
@@ -209,7 +209,7 @@ final class ou extends na {
           LimitedRandomAccessFile.field_d = true;
           DroneChargeParticle.field_s = param1;
           if (0 == DroneChargeParticle.field_s) {
-            var3_int = wo.a(GameInstructions.field_c, qq.field_R, hn.field_j, false, IntrusiveNode.fullscreenPlayIsAnText);
+            var3_int = wo.a(GameInstructions.field_c, ValidatedTextInputWidget.field_R, hn.field_j, false, IntrusiveNode.fullscreenPlayIsAnText);
             var4 = 3 + var3_int;
             IntIndexHashTable.field_c = new String[var4];
             LegacyOpenGlPostProcessManager.field_a = new int[var4];
@@ -228,7 +228,7 @@ final class ou extends na {
             LegacyOpenGlPostProcessManager.field_a[-1 + var4] = 1;
             jo.field_b[1] = 5;
           } else if (DroneChargeParticle.field_s == 1) {
-            var3_int = wo.a(GameInstructions.field_c, qq.field_R, hn.field_j, false, IntrusiveNode.fullscreenPlayIsAnText);
+            var3_int = wo.a(GameInstructions.field_c, ValidatedTextInputWidget.field_R, hn.field_j, false, IntrusiveNode.fullscreenPlayIsAnText);
             var4 = var3_int + 2;
             LegacyOpenGlPostProcessManager.field_a = new int[var4];
             IntIndexHashTable.field_c = new String[var4];
@@ -246,9 +246,9 @@ final class ou extends na {
           } else if (DroneChargeParticle.field_s != 2) {
             if (DroneChargeParticle.field_s == 3) {
               if (!lt.field_m.field_f) {
-                var3_int = wo.a(GameInstructions.field_c, qq.field_R, hn.field_j, false, LegacyOpenGlGraphicsToolkit.unfortunatelyYourConfigurationDoesnText);
+                var3_int = wo.a(GameInstructions.field_c, ValidatedTextInputWidget.field_R, hn.field_j, false, LegacyOpenGlGraphicsToolkit.unfortunatelyYourConfigurationDoesnText);
               } else {
-                var3_int = wo.a(GameInstructions.field_c, qq.field_R, hn.field_j, false, FallbackShaderEffect.field_f);
+                var3_int = wo.a(GameInstructions.field_c, ValidatedTextInputWidget.field_R, hn.field_j, false, FallbackShaderEffect.field_f);
               }
               var4 = var3_int + 2;
               LegacyOpenGlPostProcessManager.field_a = new int[var4];
@@ -265,7 +265,7 @@ final class ou extends na {
               LegacyOpenGlPostProcessManager.field_a[-1 + var4] = 0;
               jo.field_b[0] = 5;
             } else if (4 == DroneChargeParticle.field_s) {
-              var3_int = wo.a(GameInstructions.field_c, qq.field_R, hn.field_j, false, LimitedRandomAccessFile.field_c);
+              var3_int = wo.a(GameInstructions.field_c, ValidatedTextInputWidget.field_R, hn.field_j, false, LimitedRandomAccessFile.field_c);
               var4 = var3_int + 2;
               IntIndexHashTable.field_c = new String[var4];
               LegacyOpenGlPostProcessManager.field_a = new int[var4];
@@ -284,7 +284,7 @@ final class ou extends na {
               if (DroneChargeParticle.field_s != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = wo.a(GameInstructions.field_c, qq.field_R, hn.field_j, false, OpenGlBuffer.fullscreenModeWasCancelledText);
+              var3_int = wo.a(GameInstructions.field_c, ValidatedTextInputWidget.field_R, hn.field_j, false, OpenGlBuffer.fullscreenModeWasCancelledText);
               var4 = 3 + var3_int;
               LegacyOpenGlPostProcessManager.field_a = new int[var4];
               IntIndexHashTable.field_c = new String[var4];
@@ -304,7 +304,7 @@ final class ou extends na {
               jo.field_b[1] = 5;
             }
           } else {
-            var3_int = wo.a(GameInstructions.field_c, qq.field_R, hn.field_j, false, ic.a(ClientExceptionSupport.ifYouDoNothingText, new String[]{"<br><%0><br>"}, (byte) -128));
+            var3_int = wo.a(GameInstructions.field_c, ValidatedTextInputWidget.field_R, hn.field_j, false, ic.a(ClientExceptionSupport.ifYouDoNothingText, new String[]{"<br><%0><br>"}, (byte) -128));
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(GameInstructions.field_c[var5])) {
@@ -321,7 +321,7 @@ final class ou extends na {
             uw.field_c = new String[-1 - var4 + var3_int];
             la.a(GameInstructions.field_c, var4 + 1, uw.field_c, 0, -var4 + (var3_int - 1));
             var4 = -1;
-            var3_int = wo.a(GameInstructions.field_c, qq.field_R, hn.field_j, false, ic.a(lq.field_a, new String[]{"<br><%0><br>"}, (byte) -128));
+            var3_int = wo.a(GameInstructions.field_c, ValidatedTextInputWidget.field_R, hn.field_j, false, ic.a(lq.field_a, new String[]{"<br><%0><br>"}, (byte) -128));
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(GameInstructions.field_c[var5])) {
                 continue;
@@ -447,9 +447,9 @@ final class ou extends na {
               var9 = -(var8Lifetime1 >> 1) + oj.field_a;
               var6Lifetime1 = var6Lifetime1 + qc.field_a;
               HardwareAnimatedWaterEffect.field_g[var5Lifetime3] = new int[4];
-              HardwareAnimatedWaterEffect.field_g[var5Lifetime3][0] = var9 - dw.field_b;
+              HardwareAnimatedWaterEffect.field_g[var5Lifetime3][0] = var9 - DebouncedInputValidator.field_b;
               HardwareAnimatedWaterEffect.field_g[var5Lifetime3][1] = var6Lifetime1;
-              HardwareAnimatedWaterEffect.field_g[var5Lifetime3][2] = (dw.field_b << 1) + var8Lifetime1;
+              HardwareAnimatedWaterEffect.field_g[var5Lifetime3][2] = (DebouncedInputValidator.field_b << 1) + var8Lifetime1;
               var6Lifetime1 = var6Lifetime1 + (qc.field_a + (TextLayout.field_b << 1) + LegacyOpenGlUnderwaterEffect.field_h);
               HardwareAnimatedWaterEffect.field_g[var5Lifetime3][3] = (TextLayout.field_b << 1) + LegacyOpenGlUnderwaterEffect.field_h;
             }

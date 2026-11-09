@@ -8,7 +8,7 @@ class InteractiveWidget extends UiWidget {
     static String returnToMainMenuText;
     private boolean focusable;
     private boolean focused;
-    boolean field_C;
+    boolean selected;
     static boolean[] field_z;
     boolean enabled;
 
@@ -152,7 +152,7 @@ class InteractiveWidget extends UiWidget {
     }
 
     InteractiveWidget(String param0, WidgetListener param1) {
-        this(param0, HardwareTurbulentWaterNoise.field_x.field_h, param1);
+        this(param0, HardwareTurbulentWaterNoise.widgetTheme.textInputRenderer, param1);
     }
 
     final void onPointerReleased(UiWidget root, boolean guard, int parentX, int pointerY, int pointerX, int parentY) {
@@ -223,7 +223,7 @@ class InteractiveWidget extends UiWidget {
         try {
           if (this.beginDebugDescription(indent, visited, -121, output)) {
             this.appendDebugDetails(indent, (byte) -128, output, visited);
-            if (this.field_C) {
+            if (this.selected) {
               discarded$2 = output.append(" active");
             }
             if (!this.enabled) {
@@ -261,11 +261,11 @@ class InteractiveWidget extends UiWidget {
           super.update(parentX, 49, root, parentY);
           this.actionCode = 0;
           if (this.pressedButton != 0) {
-            if (this.pressedButton == ar.field_G) {
+            if (this.pressedButton == HotspotTextWidget.activePointerButton) {
               return;
             }
             if (this.containsPoint(ko.field_p, -1, parentX, pi.field_e, parentY) &&
-              0 == ar.field_G) {
+              0 == HotspotTextWidget.activePointerButton) {
               this.notifyAction(this.pressedButton, ko.field_p - parentX, true, pi.field_e - parentY);
             }
             this.onPointerReleased(root, false, parentX, pi.field_e, ko.field_p, parentY);
@@ -320,7 +320,7 @@ class InteractiveWidget extends UiWidget {
         this.actionCode = 0;
         this.focusable = true;
         this.enabled = true;
-        this.renderer = HardwareTurbulentWaterNoise.field_x.field_n;
+        this.renderer = HardwareTurbulentWaterNoise.widgetTheme.field_n;
     }
 
     static {

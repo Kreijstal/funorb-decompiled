@@ -112,7 +112,7 @@ final class LegacyOpenGlReflectionEffect extends LegacyOpenGlEffect {
         this.toolkit.setTextureCombineOperations(20685, 7681, 8448);
         if (guard > -30) {
           String var4 = (String) null;
-          LegacyOpenGlReflectionEffect.a(-31, (String) null, -127);
+          LegacyOpenGlReflectionEffect.accountError(-31, (String) null, -127);
         }
     }
 
@@ -161,33 +161,33 @@ final class LegacyOpenGlReflectionEffect extends LegacyOpenGlEffect {
         }
     }
 
-    final static an a(int param0, String param1, int param2) {
-        an var3 = null;
+    final static AccountServiceResult accountError(int guard, String message, int code) {
+        AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        an stackIn_1_0 = null;
+        AccountServiceResult stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new an(false);
-          var4 = -107 % ((-23 - param0) / 61);
-          var3.field_e = param2;
-          var3.field_g = param1;
+          var3 = new AccountServiceResult(false);
+          var4 = -107 % ((-23 - guard) / 61);
+          var3.errorCode = code;
+          var3.errorMessage = message;
           stackIn_1_0 = var3;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_4_0 = var3_ref;
-          stackIn_4_1 = new StringBuilder().append("au.G(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_4_1 = new StringBuilder().append("au.G(").append(guard).append(',');
+          if (message == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(code).append(')').toString());
         }
     }
 
@@ -221,10 +221,10 @@ final class LegacyOpenGlReflectionEffect extends LegacyOpenGlEffect {
     final static void d(int param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        var1 = wk.field_h;
+        var1 = ConfirmedEmailValidator.field_h;
         synchronized (var1) {
           LegacyOpenGlTexture.field_h = LegacyOpenGlTexture.field_h + 1;
-          ar.field_G = LegacyOpenGlNormalMapGenerator.field_a;
+          HotspotTextWidget.activePointerButton = LegacyOpenGlNormalMapGenerator.field_a;
           ko.field_p = SoftCacheReference.field_C;
           pi.field_e = SecondaryNodeDeque.field_b;
           sl.field_d = ResourceArchive.field_i;
@@ -234,7 +234,7 @@ final class LegacyOpenGlReflectionEffect extends LegacyOpenGlEffect {
           if (param0 < 93) {
             LegacyOpenGlReflectionEffect.d(-50);
           }
-          jc.field_f = LegacyOpenGlTexture3D.field_l;
+          AgeValidator.field_f = LegacyOpenGlTexture3D.field_l;
           kb.field_i = 0;
         }
     }

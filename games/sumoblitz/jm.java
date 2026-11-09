@@ -25,12 +25,12 @@ final class jm {
         if (param0 != 28679) {
           return;
         }
-        if (wk.field_h == null) {
+        if (ConfirmedEmailValidator.field_h == null) {
           return;
         }
-        var1 = wk.field_h;
+        var1 = ConfirmedEmailValidator.field_h;
         synchronized (var1) {
-          wk.field_h = null;
+          ConfirmedEmailValidator.field_h = null;
         }
     }
 

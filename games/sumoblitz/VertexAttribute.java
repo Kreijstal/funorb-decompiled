@@ -42,7 +42,7 @@ final class VertexAttribute {
     }
 
     final static void a(int param0, int param1, int param2) {
-        wr.field_F = param2;
+        CheckboxWidget.field_F = param2;
         if (param1 > -42) {
           return;
         }

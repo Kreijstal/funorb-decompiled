@@ -85,8 +85,8 @@ abstract class kb {
           this.field_g = param0;
           this.field_e = param4 ? true : false;
           this.field_h = param3;
-          jaggl.OpenGL.glGenBuffersARB(1, nq.field_j, 0);
-          this.field_f = nq.field_j[0];
+          jaggl.OpenGL.glGenBuffersARB(1, MatchingTextValidator.field_j, 0);
+          this.field_f = MatchingTextValidator.field_j[0];
           this.b(1735490466);
           jaggl.OpenGL.glBufferDataARBub(param1, this.field_h, param2, 0, this.field_e ? 35040 : 35044);
           this.field_g.field_Xb = this.field_g.field_Xb + this.field_h;

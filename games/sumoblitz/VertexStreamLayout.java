@@ -42,7 +42,7 @@ final class VertexStreamLayout {
         RuntimeException var2_ref = null;
         var5 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (null == wr.field_G) {
+          if (null == CheckboxWidget.field_G) {
             return null;
           }
           if (param0 == null) {
@@ -53,22 +53,22 @@ final class VertexStreamLayout {
             return (cn) (stackIn_7_0);
           }
           var6 = (CharSequence) ((Object) param0);
-          var2 = uk.a(-1, var6);
+          var2 = AccountCreationProgressDialog.normalizeAccountName(-1, var6);
           if (param1 <= 8) {
             field_c = (FontMetrics) null;
           }
           if (var2 == null) {
             return null;
           }
-          var3 = (cn) (wr.field_G.a((long)var2.hashCode(), 121));
+          var3 = (cn) (CheckboxWidget.field_G.a((long)var2.hashCode(), 121));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_jb);
-            var4 = uk.a(-1, var7);
+            var4 = AccountCreationProgressDialog.normalizeAccountName(-1, var7);
             if (var4.equals(var2)) {
               stackIn_19_0 = var3;
               return stackIn_19_0;
             }
-            var3 = (cn) (wr.field_G.a(-126));
+            var3 = (cn) (CheckboxWidget.field_G.a(-126));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

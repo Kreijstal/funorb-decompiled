@@ -1,30 +1,30 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wr extends InteractiveWidget {
+final class CheckboxWidget extends InteractiveWidget {
     static IntrusiveDeque field_E;
     static ci field_G;
     static int field_F;
 
-    wr(String param0, WidgetListener param1, boolean param2) {
-        this(param0, param1);
+    CheckboxWidget(String text, WidgetListener listener, boolean checked) {
+        this(text, listener);
         try {
-          this.field_C = param2 ? true : false;
+          this.selected = checked ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wr.<init>(" + (text != null ? "{...}" : "null") + ',' + (listener != null ? "{...}" : "null") + ',' + checked + ')');
         }
     }
 
-    private wr(String param0, WidgetRenderer param1, WidgetListener param2) {
-        super(param0, param1, param2);
+    private CheckboxWidget(String text, WidgetRenderer renderer, WidgetListener listener) {
+        super(text, renderer, listener);
         try {
-          this.renderer = HardwareTurbulentWaterNoise.field_x.field_i;
+          this.renderer = HardwareTurbulentWaterNoise.widgetTheme.checkboxRenderer;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wr.<init>(" + (text != null ? "{...}" : "null") + ',' + (renderer != null ? "{...}" : "null") + ',' + (listener != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(int param0, Drone param1) {
+    final static void handleArenaBoundaryHit(int guard, Drone drone) {
         int stackIn_8_0 = 0;
         int stackIn_19_0 = 0;
         int stackIn_26_0 = 0;
@@ -51,16 +51,16 @@ final class wr extends InteractiveWidget {
         try {
           var2_int = 588;
           var3 = 428;
-          var4 = param1.xQ8 >> 8;
-          var5 = param1.yQ8 >> 8;
-          var6 = param1.radiusQ8 >> 8;
+          var4 = drone.xQ8 >> 8;
+          var5 = drone.yQ8 >> 8;
+          var6 = drone.radiusQ8 >> 8;
           var7 = 0;
           var8 = 0;
           var9 = 0;
           var10 = SecondaryNodeQueue.a(var4, var2_int, 26, 614, var5, false, 26, var6, 26);
           if (var10 != -1) {
-            if (-1.5707963267948966 < param1.facingRadians) {
-              stackIn_8_0 = (param1.facingRadians < 1.5707963267948966) ? 1 : 0;
+            if (-1.5707963267948966 < drone.facingRadians) {
+              stackIn_8_0 = (drone.facingRadians < 1.5707963267948966) ? 1 : 0;
             } else {
               stackIn_8_0 = 0;
             }
@@ -73,10 +73,10 @@ final class wr extends InteractiveWidget {
             if (-1 != var10) {
               var8 = var10;
               var9 = 454;
-              if (-1.5707963267948966 > param1.facingRadians) {
+              if (-1.5707963267948966 > drone.facingRadians) {
                 stackIn_19_0 = 1;
               } else {
-                stackIn_19_0 = (param1.facingRadians > 1.5707963267948966) ? 1 : 0;
+                stackIn_19_0 = (drone.facingRadians > 1.5707963267948966) ? 1 : 0;
               }
               var7 = stackIn_19_0;
             }
@@ -84,18 +84,18 @@ final class wr extends InteractiveWidget {
           if (var10 == -1) {
             var10 = SecondaryNodeQueue.a(var4, var3, 26, 26, var5, false, 454, var6, 26);
             if (var10 != -1) {
-              stackIn_26_0 = (!(param1.facingRadians > 0.0)) ? 0 : 1;
+              stackIn_26_0 = (!(drone.facingRadians > 0.0)) ? 0 : 1;
               var7 = stackIn_26_0;
               var8 = 26;
               var9 = var10;
             }
           }
-          if (param0 == var10) {
+          if (guard == var10) {
             var10 = SecondaryNodeQueue.a(var4, var3, 26, 614, var5, false, 454, var6, 614);
             if (var10 != -1) {
               var9 = var10;
               var8 = 614;
-              stackIn_32_0 = (!(param1.facingRadians < 0.0)) ? 0 : 1;
+              stackIn_32_0 = (!(drone.facingRadians < 0.0)) ? 0 : 1;
               var7 = stackIn_32_0;
             }
           }
@@ -103,47 +103,47 @@ final class wr extends InteractiveWidget {
           var12 = -var9 + var5;
           var13 = Math.sqrt((double)(var11 * var11 + var12 * var12));
           Math.asin((double)var11 / var13);
-          if (!param1.isPlayerProtected(true)) {
+          if (!drone.isPlayerProtected(true)) {
             if (var7 == 0) {
-              SecondaryNodeQueue.a(param1, (byte) 113);
+              SecondaryNodeQueue.a(drone, (byte) 113);
               return;
             }
-            if (param1.armourHitsRemaining == 0) {
-              SecondaryNodeQueue.a(param1, (byte) 113);
+            if (drone.armourHitsRemaining == 0) {
+              SecondaryNodeQueue.a(drone, (byte) 113);
               return;
             }
           }
           if (var4 <= 26 &&
-            0 > param1.velocityXQ8) {
-            param1.velocityXQ8 = -param1.velocityXQ8;
-            if (param1.velocityXQ8 == 0) {
-              param1.velocityXQ8 = 256;
+            0 > drone.velocityXQ8) {
+            drone.velocityXQ8 = -drone.velocityXQ8;
+            if (drone.velocityXQ8 == 0) {
+              drone.velocityXQ8 = 256;
             }
           } else {
             if (ArchiveCatalog.field_c - 52 < var4 &&
-              param1.velocityXQ8 > 0) {
-              param1.velocityXQ8 = -param1.velocityXQ8;
-              if (param1.velocityXQ8 == 0) {
-                param1.velocityXQ8 = -256;
+              drone.velocityXQ8 > 0) {
+              drone.velocityXQ8 = -drone.velocityXQ8;
+              if (drone.velocityXQ8 == 0) {
+                drone.velocityXQ8 = -256;
               }
             }
           }
           if (var5 <= 26 &&
-            param1.velocityYQ8 < 0) {
-            param1.velocityYQ8 = -param1.velocityYQ8;
-            if (param1.velocityYQ8 != 0) {
+            drone.velocityYQ8 < 0) {
+            drone.velocityYQ8 = -drone.velocityYQ8;
+            if (drone.velocityYQ8 != 0) {
               return;
             }
-            param1.velocityYQ8 = 256;
+            drone.velocityYQ8 = 256;
             return;
           }
           if (-52 + rl.field_k < var5) {
-            if (param1.velocityYQ8 <= 0) {
+            if (drone.velocityYQ8 <= 0) {
               return;
             }
-            param1.velocityYQ8 = -param1.velocityYQ8;
-            if (0 == param1.velocityYQ8) {
-              param1.velocityYQ8 = 256;
+            drone.velocityYQ8 = -drone.velocityYQ8;
+            if (0 == drone.velocityYQ8) {
+              drone.velocityYQ8 = 256;
               return;
             }
           }
@@ -152,8 +152,8 @@ final class wr extends InteractiveWidget {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_63_0 = var2;
-          stackIn_63_1 = new StringBuilder().append("wr.D(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_63_1 = new StringBuilder().append("wr.D(").append(guard).append(',');
+          if (drone == null) {
             stackIn_64_2 = "null";
           } else {
             stackIn_64_2 = "{...}";
@@ -170,12 +170,12 @@ final class wr extends InteractiveWidget {
         field_E = null;
     }
 
-    private wr(String param0, WidgetListener param1) {
-        this(param0, HardwareTurbulentWaterNoise.field_x.field_h, param1);
+    private CheckboxWidget(String text, WidgetListener listener) {
+        this(text, HardwareTurbulentWaterNoise.widgetTheme.textInputRenderer, listener);
         try {
-          this.renderer = HardwareTurbulentWaterNoise.field_x.field_i;
+          this.renderer = HardwareTurbulentWaterNoise.widgetTheme.checkboxRenderer;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wr.<init>(" + (text != null ? "{...}" : "null") + ',' + (listener != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -186,7 +186,7 @@ final class wr extends InteractiveWidget {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          vr.a((java.awt.Component) ((Object) param1), -1);
+          ValidationStatusWidget.detachKeyboardInput((java.awt.Component) ((Object) param1), -1);
           pl.a((java.awt.Component) ((Object) param1), 7);
           if (!param0) {
             field_F = -67;
@@ -210,11 +210,11 @@ final class wr extends InteractiveWidget {
     }
 
     final void notifyAction(int action, int pointerX, boolean guard, int pointerY) {
-        this.field_C = !this.field_C ? true : false;
+        this.selected = !this.selected ? true : false;
         super.notifyAction(action, pointerX, guard, pointerY);
     }
 
-    final static wc a(boolean param0, PacketBuffer param1, boolean param2) {
+    final static DroneWave decodeDroneWave(boolean keepPosition, PacketBuffer buffer, boolean defaultFlag) {
         int var9 = 0;
         int incrementValue$0 = 0;
         int stackIn_11_0 = 0;
@@ -222,7 +222,7 @@ final class wr extends InteractiveWidget {
         boolean stackIn_17_1 = false;
         PacketBuffer stackIn_19_0 = null;
         boolean stackIn_20_1 = false;
-        wc stackIn_37_0 = null;
+        DroneWave stackIn_37_0 = null;
         RuntimeException stackIn_40_0 = null;
         StringBuilder stackIn_40_1 = null;
         String stackIn_41_2 = null;
@@ -244,36 +244,36 @@ final class wr extends InteractiveWidget {
         Drone[] var17 = null;
         var16 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (!param0) {
-            param1.position = 0;
+          if (!keepPosition) {
+            buffer.position = 0;
           }
           var17 = new Drone[100];
           var3 = var17;
           var4 = 1;
-          var5 = param1.readUnsignedByte(-31302);
+          var5 = buffer.readUnsignedByte(-31302);
           var6 = 0;
           if (var5 > 1) {
-            var6 = param1.readUnsignedByte(-31302);
+            var6 = buffer.readUnsignedByte(-31302);
           }
-          var7 = param2 ? 1 : 0;
+          var7 = defaultFlag ? 1 : 0;
           if (var5 > 3) {
-            stackIn_11_0 = (param1.readUnsignedByte(-31302) == 1) ? 1 : 0;
+            stackIn_11_0 = (buffer.readUnsignedByte(-31302) == 1) ? 1 : 0;
             var7 = stackIn_11_0;
           }
-          var8 = param1.readUnsignedByte(-31302);
+          var8 = buffer.readUnsignedByte(-31302);
           for (var9 = 0; var9 < var8; var9++) {
-            var10 = param1.readUnsignedByte(-31302);
-            var11 = param1.readUnsignedByte(-31302);
-            stackIn_16_0 = (PacketBuffer) (param1);
-            stackIn_17_1 = !(param2);
+            var10 = buffer.readUnsignedByte(-31302);
+            var11 = buffer.readUnsignedByte(-31302);
+            stackIn_16_0 = (PacketBuffer) (buffer);
+            stackIn_17_1 = !(defaultFlag);
             var12 = ((PacketBuffer) (Object) stackIn_16_0).readInt(stackIn_17_1);
-            var13 = param1.readInt(true);
-            stackIn_19_0 = (PacketBuffer) (param1);
-            stackIn_20_1 = !(param2);
+            var13 = buffer.readInt(true);
+            stackIn_19_0 = (PacketBuffer) (buffer);
+            stackIn_20_1 = !(defaultFlag);
             ((PacketBuffer) (Object) stackIn_19_0).readByte(stackIn_20_1);
             var14 = 0;
             if (var5 > 4) {
-              var14 = param1.readUnsignedByte(-31302);
+              var14 = buffer.readUnsignedByte(-31302);
             }
             if (var10 >= 0 &&
               var10 < 8 &&
@@ -286,19 +286,19 @@ final class wr extends InteractiveWidget {
               var3[incrementValue$0] = var15;
             }
           }
-          stackIn_37_0 = new wc(var17, var6, var7 != 0);
+          stackIn_37_0 = new DroneWave(var17, var6, var7 != 0);
           return stackIn_37_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_40_0 = var3_ref;
-          stackIn_40_1 = new StringBuilder().append("wr.F(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_40_1 = new StringBuilder().append("wr.F(").append(keepPosition).append(',');
+          if (buffer == null) {
             stackIn_41_2 = "null";
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(defaultFlag).append(')').toString());
         }
     }
 

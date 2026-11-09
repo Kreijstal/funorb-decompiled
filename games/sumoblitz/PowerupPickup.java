@@ -253,7 +253,7 @@ final class PowerupPickup extends IntrusiveNode {
         er.field_h = null;
         TextLayout.field_d = (byte[][]) null;
         LegacyOpenGlEffectManager.field_l = null;
-        vg.field_k = null;
+        CheckboxRenderer.field_k = null;
         ScrollViewport.field_B = null;
     }
 

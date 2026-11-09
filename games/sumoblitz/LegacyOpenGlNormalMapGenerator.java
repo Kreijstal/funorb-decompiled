@@ -178,7 +178,7 @@ final class LegacyOpenGlNormalMapGenerator {
             for (var7 = 0; var7 < var6; var7++) {
               var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(true);
             }
-            var16_ref = (eg) (wr.field_E.first(-120));
+            var16_ref = (eg) (CheckboxWidget.field_E.first(-120));
             if (var16_ref == null) {
               kk.a((byte) -111);
               return;
@@ -191,7 +191,7 @@ final class LegacyOpenGlNormalMapGenerator {
           }
           if (var2 != 1) {
             if (var2 == 2) {
-              var14 = (eg) (wr.field_E.first(123));
+              var14 = (eg) (CheckboxWidget.field_E.first(123));
               if (var14 == null) {
                 kk.a((byte) -122);
                 return;

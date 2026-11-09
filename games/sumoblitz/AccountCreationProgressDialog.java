@@ -1,31 +1,31 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uk extends MessageDialog implements WidgetActionListener {
+final class AccountCreationProgressDialog extends MessageDialog implements WidgetActionListener {
     static boolean field_ob;
-    static char[] field_lb;
-    private boolean field_nb;
-    private boolean field_pb;
-    private js field_mb;
+    static char[] CP1252_EXTENSION;
+    private boolean resultShown;
+    private boolean ineligible;
+    private AccountCreationForm form;
 
-    uk(DialogLayer param0, js param1) {
-        super(param0, LegacyOpenGlDisplayLists.field_a, ClientException.creatingYourAccountText, false, false);
+    AccountCreationProgressDialog(DialogLayer layer, AccountCreationForm owner) {
+        super(layer, LegacyOpenGlDisplayLists.field_a, ClientException.creatingYourAccountText, false, false);
         try {
-          this.field_mb = param1;
+          this.form = owner;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "uk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "uk.<init>(" + (layer != null ? "{...}" : "null") + ',' + (owner != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void releaseStatics(boolean param0) {
-        field_lb = null;
+        CP1252_EXTENSION = null;
         if (!param0) {
           return;
         }
-        uk.releaseStatics(false);
+        AccountCreationProgressDialog.releaseStatics(false);
     }
 
-    private final void a(boolean param0, byte param1, an param2) {
+    private final void showResult(boolean skipEligibilityReset, byte guard, AccountServiceResult result) {
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
@@ -37,51 +37,51 @@ final class uk extends MessageDialog implements WidgetActionListener {
         int var7 = 0;
         var7 = Sumoblitz.field_L ? 1 : 0;
         try {
-          this.field_nb = true;
-          if (!param2.field_b) {
-            if (param2.field_h == null) {
-              var4 = param2.field_g;
-              if (param2.field_e == 248) {
-                if (!param0) {
+          this.resultShown = true;
+          if (!result.success) {
+            if (result.nameSuggestions == null) {
+              var4 = result.errorMessage;
+              if (result.errorCode == 248) {
+                if (!skipEligibilityReset) {
                   BufferedCacheFile.c(0);
                 }
                 var4 = rn.unfortunatelyYouAreNotText;
-                this.field_pb = true;
+                this.ineligible = true;
               }
             } else {
               var4 = LegacyOpenGlReflectionEffect.field_e;
-              if (null != this.field_mb) {
-                this.field_mb.a((byte) -119);
+              if (null != this.form) {
+                this.form.invalidateNameAvailability((byte) -119);
               }
             }
           } else {
             var4 = vl.accountCreatedSuccessfullyText;
           }
-          var5 = -1 / ((-1 - param1) / 45);
+          var5 = -1 / ((-1 - guard) / 45);
           var6 = new StatusMessagePanel((MessageDialog) (this), LegacyOpenGlDisplayLists.field_a, var4);
-          if (!param2.field_b) {
-            if (this.field_pb) {
+          if (!result.success) {
+            if (this.ineligible) {
               var6.a(wd.continueText, (byte) -123, (WidgetListener) (this));
             } else {
-              if (param2.field_e != 5) {
+              if (result.errorCode != 5) {
                 var6.a(FullscreenCanvas.backText, -1, true);
               } else {
                 var6.a(vf.reloadGameText, 11, true);
                 var6.a(of.quitToWebsiteText, 17, true);
               }
             }
-            if (param2.field_e == 3) {
+            if (result.errorCode == 3) {
               var6.a(lq.toServerListText, 7, true);
             } else {
-              if (param2.field_e != 6) {
+              if (result.errorCode != 6) {
                 this.transitionToContent((byte) -123, var6);
                 return;
               }
               var6.a(PowerupTrailParticle.toCustomerSupportText, 9, true);
             }
           } else {
-            if (param2.field_c) {
-              this.transitionToContent((byte) -95, new th(this));
+            if (result.showUnderageInfo) {
+              this.transitionToContent((byte) -95, new UnderageAccountInfoPanel(this));
               return;
             }
             var6.a(wd.continueText, (byte) -123, (WidgetListener) (this));
@@ -92,8 +92,8 @@ final class uk extends MessageDialog implements WidgetActionListener {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
           stackIn_30_0 = var4_ref;
-          stackIn_30_1 = new StringBuilder().append("uk.V(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_30_1 = new StringBuilder().append("uk.V(").append(skipEligibilityReset).append(',').append(guard).append(',');
+          if (result == null) {
             stackIn_31_2 = "null";
           } else {
             stackIn_31_2 = "{...}";
@@ -102,15 +102,15 @@ final class uk extends MessageDialog implements WidgetActionListener {
         }
     }
 
-    final void f(boolean param0) {
-        this.a(param0, (byte) 127, LegacyOpenGlReflectionEffect.a(-91, rn.unfortunatelyYouAreNotText, 248));
+    final void showIneligibleResult(boolean skipEligibilityReset) {
+        this.showResult(skipEligibilityReset, (byte) 127, LegacyOpenGlReflectionEffect.accountError(-91, rn.unfortunatelyYouAreNotText, 248));
     }
 
     public final void onAction(int action, int guard, InteractiveWidget source, int pointerX, int pointerY) {
         if (guard != 710) {
           field_ob = true;
         }
-        if (this.field_pb) {
+        if (this.ineligible) {
           sm.a((byte) -40, false, true);
           return;
         }
@@ -122,7 +122,7 @@ final class uk extends MessageDialog implements WidgetActionListener {
         }
     }
 
-    final static String a(int param0, CharSequence param1) {
+    final static String normalizeAccountName(int guard, CharSequence name) {
         int var6 = 0;
         StringBuilder discarded$0 = null;
         Object stackIn_27_0 = null;
@@ -141,20 +141,20 @@ final class uk extends MessageDialog implements WidgetActionListener {
         int var9 = 0;
         var9 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (param1 == null) {
+          if (name == null) {
             return null;
           }
           var2_int = 0;
-          var3 = param1.length();
+          var3 = name.length();
           while (var3 > var2_int) {
-            if (wv.a((byte) -98, param1.charAt(var2_int))) {
+            if (wv.a((byte) -98, name.charAt(var2_int))) {
               var2_int++;
               continue;
             }
             break;
           }
           while (var2_int < var3) {
-            if (wv.a((byte) -95, param1.charAt(var3 - 1))) {
+            if (wv.a((byte) -95, name.charAt(var3 - 1))) {
               var3--;
               continue;
             }
@@ -169,7 +169,7 @@ final class uk extends MessageDialog implements WidgetActionListener {
           }
           var5 = new StringBuilder(var4);
           for (var6 = var2_int; var3 > var6; var6++) {
-            var7 = param1.charAt(var6);
+            var7 = name.charAt(var6);
             if (OpenGlRectangleTexture.a((byte) 61, (char) var7)) {
               var8 = LegacyOpenGlEffectManager.normalizeNameCharacter(241, (char) var7);
               if (var8 != 0) {
@@ -177,7 +177,7 @@ final class uk extends MessageDialog implements WidgetActionListener {
               }
             }
           }
-          if (~var5.length() != param0) {
+          if (~var5.length() != guard) {
             stackIn_29_0 = var5.toString();
             return stackIn_29_0;
           }
@@ -187,8 +187,8 @@ final class uk extends MessageDialog implements WidgetActionListener {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_32_0 = var2;
-          stackIn_32_1 = new StringBuilder().append("uk.P(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_32_1 = new StringBuilder().append("uk.P(").append(guard).append(',');
+          if (name == null) {
             stackIn_33_2 = "null";
           } else {
             stackIn_33_2 = "{...}";
@@ -198,22 +198,22 @@ final class uk extends MessageDialog implements WidgetActionListener {
     }
 
     final boolean advanceAnimation(int guard) {
-        an var2 = null;
+        AccountServiceResult var2 = null;
         if (this.open) {
-          if (this.field_nb) {
+          if (this.resultShown) {
             if (guard == -28778) {
               return super.advanceAnimation(guard + 0);
             }
             return false;
           }
-          var2 = ResourceArchive.c((byte) 94);
+          var2 = ResourceArchive.pollAccountCreationResult((byte) 94);
           if (var2 == null) {
             if (guard == -28778) {
               return super.advanceAnimation(guard + 0);
             }
             return false;
           }
-          this.a(false, (byte) -128, var2);
+          this.showResult(false, (byte) -128, var2);
         }
         if (guard == -28778) {
           return super.advanceAnimation(guard + 0);
@@ -223,6 +223,6 @@ final class uk extends MessageDialog implements WidgetActionListener {
 
     static {
         field_ob = false;
-        field_lb = new char[]{(char)8364, (char)0, (char)8218, (char)402, (char)8222, (char)8230, (char)8224, (char)8225, (char)710, (char)8240, (char)352, (char)8249, (char)338, (char)0, (char)381, (char)0, (char)0, (char)8216, (char)8217, (char)8220, (char)8221, (char)8226, (char)8211, (char)8212, (char)732, (char)8482, (char)353, (char)8250, (char)339, (char)0, (char)382, (char)376};
+        CP1252_EXTENSION = new char[]{(char)8364, (char)0, (char)8218, (char)402, (char)8222, (char)8230, (char)8224, (char)8225, (char)710, (char)8240, (char)352, (char)8249, (char)338, (char)0, (char)381, (char)0, (char)0, (char)8216, (char)8217, (char)8220, (char)8221, (char)8226, (char)8211, (char)8212, (char)732, (char)8482, (char)353, (char)8250, (char)339, (char)0, (char)382, (char)376};
     }
 }

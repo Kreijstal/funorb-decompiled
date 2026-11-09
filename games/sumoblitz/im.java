@@ -15,40 +15,40 @@ final class im {
         field_c = null;
     }
 
-    final static an a(byte param0, String param1) {
+    final static AccountServiceResult pollNameAvailability(byte guard, String name) {
         RuntimeException var2 = null;
         Object stackIn_4_0 = null;
-        an stackIn_8_0 = null;
+        AccountServiceResult stackIn_8_0 = null;
         Object stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 > -23) {
+          if (guard > -23) {
             field_c = (GraphicsToolkit) null;
           }
           if (LegacyOpenGlGraphicsHeap.field_p == vm.field_c) {
             stackIn_4_0 = null;
-            return (an) (stackIn_4_0);
+            return (AccountServiceResult) (stackIn_4_0);
           }
           if (DropTargetWidget.field_z == vm.field_c &&
-            param1.equals(PowerupPickup.field_s)) {
+            name.equals(PowerupPickup.field_s)) {
             vm.field_c = hm.field_a;
             stackIn_8_0 = DraggableWidget.field_z;
             return stackIn_8_0;
           }
           DraggableWidget.field_z = null;
           vm.field_c = LegacyOpenGlGraphicsHeap.field_p;
-          PowerupPickup.field_s = param1;
+          PowerupPickup.field_s = name;
           stackIn_10_0 = null;
-          return (an) (stackIn_10_0);
+          return (AccountServiceResult) (stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_13_0 = var2;
-          stackIn_13_1 = new StringBuilder().append("im.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_13_1 = new StringBuilder().append("im.A(").append(guard).append(',');
+          if (name == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";

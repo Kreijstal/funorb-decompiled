@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tc extends na {
-    private TextInputWidget field_e;
+final class PasswordValidator extends TextInputValidator {
+    private TextInputWidget emailInput;
     static ToolkitSprite[] field_j;
     static SpriteData field_i;
     static PrimitiveType LINES;
-    private TextInputWidget field_h;
+    private TextInputWidget screenNameInput;
     static String field_f;
 
-    final String a(int param0, String param1) {
+    final String messageForText(int guard, String text) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -28,9 +28,9 @@ final class tc extends na {
         String stackIn_32_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.field_h.text.toLowerCase();
-          var4 = param1.toLowerCase();
-          if (param0 == var4.length()) {
+          var3 = this.screenNameInput.text.toLowerCase();
+          var4 = text.toLowerCase();
+          if (guard == var4.length()) {
             stackIn_2_0 = null;
             return (String) (stackIn_2_0);
           }
@@ -47,7 +47,7 @@ final class tc extends na {
             stackIn_11_0 = ScrollPane.thisPasswordContainsRepeatedText;
             return stackIn_11_0;
           }
-          if (this.b(-53, param1)) {
+          if (this.containsEmailParts(-53, text)) {
             stackIn_14_0 = pc.thisPasswordContainsYourText;
             return stackIn_14_0;
           }
@@ -56,7 +56,7 @@ final class tc extends na {
             return stackIn_28_0;
           }
           if (MessageDialog.a(var5, var3, 82)) {
-            stackIn_19_0 = vr.thisPasswordContainsYourText;
+            stackIn_19_0 = ValidationStatusWidget.thisPasswordContainsYourText;
             return stackIn_19_0;
           }
           if (CachedTextLayout.a(var5, (byte) 114, var3)) {
@@ -66,14 +66,14 @@ final class tc extends na {
           if (!wv.a(false, var5, var3)) {
             return ArchiveIndex.passwordsMustBeBetweenText;
           }
-          stackIn_26_0 = vr.thisPasswordContainsYourText;
+          stackIn_26_0 = ValidationStatusWidget.thisPasswordContainsYourText;
           return stackIn_26_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_31_0 = var3_ref;
-          stackIn_31_1 = new StringBuilder().append("tc.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_31_1 = new StringBuilder().append("tc.B(").append(guard).append(',');
+          if (text == null) {
             stackIn_32_2 = "null";
           } else {
             stackIn_32_2 = "{...}";
@@ -82,44 +82,44 @@ final class tc extends na {
         }
     }
 
-    final gf a(byte param0, String param1) {
+    final ValidationStatus validateText(byte guard, String text) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
-        gf stackIn_2_0 = null;
-        gf stackIn_6_0 = null;
-        gf stackIn_9_0 = null;
-        gf stackIn_13_0 = null;
+        ValidationStatus stackIn_2_0 = null;
+        ValidationStatus stackIn_6_0 = null;
+        ValidationStatus stackIn_9_0 = null;
+        ValidationStatus stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.field_h.text.toLowerCase();
-          var4 = param1.toLowerCase();
+          var3 = this.screenNameInput.text.toLowerCase();
+          var4 = text.toLowerCase();
           if (var4.length() == 0) {
-            stackIn_2_0 = qr.field_e;
+            stackIn_2_0 = qr.INVALID;
             return stackIn_2_0;
           }
           if (!gg.a(var4, var3, -83)) {
-            stackIn_6_0 = qr.field_e;
+            stackIn_6_0 = qr.INVALID;
             return stackIn_6_0;
           }
-          if (this.b(98, param1)) {
-            stackIn_9_0 = qr.field_e;
+          if (this.containsEmailParts(98, text)) {
+            stackIn_9_0 = qr.INVALID;
             return stackIn_9_0;
           }
-          if (param0 != 26) {
+          if (guard != 26) {
             field_j = (ToolkitSprite[]) null;
           }
-          stackIn_13_0 = qe.field_a;
+          stackIn_13_0 = qe.VALID;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_16_0 = var3_ref;
-          stackIn_16_1 = new StringBuilder().append("tc.E(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_16_1 = new StringBuilder().append("tc.E(").append(guard).append(',');
+          if (text == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
@@ -128,7 +128,7 @@ final class tc extends na {
         }
     }
 
-    private final boolean b(int param0, String param1) {
+    private final boolean containsEmailParts(int guard, String password) {
         RuntimeException var3 = null;
         String var4 = null;
         int var5 = 0;
@@ -141,9 +141,9 @@ final class tc extends na {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var9 = this.field_e.text.toLowerCase();
-          var4 = param1.toLowerCase();
-          var5 = -109 % ((10 - param0) / 60);
+          var9 = this.emailInput.text.toLowerCase();
+          var4 = password.toLowerCase();
+          var5 = -109 % ((10 - guard) / 60);
           if (0 < var9.length() &&
             var4.length() > 0) {
             var6 = var9.lastIndexOf("@");
@@ -165,8 +165,8 @@ final class tc extends na {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_15_0 = var3;
-          stackIn_15_1 = new StringBuilder().append("tc.D(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_15_1 = new StringBuilder().append("tc.D(").append(guard).append(',');
+          if (password == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
@@ -178,16 +178,16 @@ final class tc extends na {
     final static void e(int param0) {
         FontMetrics.field_b = 0;
         DisplayModeConfirmationDialog.droneTypeStreakMask = -1;
-        bn.field_P = false;
+        ValidationMessageWidget.field_P = false;
         ei.field_a = 0;
         if (param0 >= 85) {
           DroneChargeParticle.field_w = false;
           bi.uniqueDroneTypeStreak = 0;
-          ew.field_e = 0;
+          EmailSyntaxValidator.field_e = 0;
           LegacyOpenGlNormalMapGenerator.field_c = false;
           SecondaryNodeDeque.field_e = false;
           vb.field_E = false;
-          nq.field_i = 0;
+          MatchingTextValidator.field_i = 0;
           return;
         }
     }
@@ -202,13 +202,13 @@ final class tc extends na {
         field_f = null;
     }
 
-    tc(TextInputWidget param0, TextInputWidget param1, TextInputWidget param2) {
-        super(param0);
+    PasswordValidator(TextInputWidget field, TextInputWidget nameField, TextInputWidget mailField) {
+        super(field);
         try {
-          this.field_e = param2;
-          this.field_h = param1;
+          this.emailInput = mailField;
+          this.screenNameInput = nameField;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "tc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "tc.<init>(" + (field != null ? "{...}" : "null") + ',' + (nameField != null ? "{...}" : "null") + ',' + (mailField != null ? "{...}" : "null") + ')');
         }
     }
 

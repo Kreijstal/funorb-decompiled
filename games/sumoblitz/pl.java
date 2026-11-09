@@ -100,9 +100,9 @@ final class pl extends PacketBuffer {
             java.awt.Component var3 = (java.awt.Component) null;
             pl.a((java.awt.Component) null, 93);
           }
-          param0.removeMouseListener(wk.field_h);
-          param0.removeMouseMotionListener(wk.field_h);
-          param0.removeFocusListener(wk.field_h);
+          param0.removeMouseListener(ConfirmedEmailValidator.field_h);
+          param0.removeMouseMotionListener(ConfirmedEmailValidator.field_h);
+          param0.removeFocusListener(ConfirmedEmailValidator.field_h);
           LegacyOpenGlNormalMapGenerator.field_a = 0;
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "pl.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

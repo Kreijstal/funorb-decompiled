@@ -242,7 +242,7 @@ class jb extends se {
               }
               qv.field_o = ig.field_a.readCp1252String(-1);
               var11 = (CharSequence) ((Object) qv.field_o);
-              tc.field_f = uk.a(-1, var11);
+              PasswordValidator.field_f = AccountCreationProgressDialog.normalizeAccountName(-1, var11);
               jk.field_c = ig.field_a.readUnsignedByte(-31302);
               kw.field_c = LegacyOpenGlUnderwaterEffect.field_j;
               if (kb.field_d.a((byte) 113) != pb.field_b) {
@@ -305,7 +305,7 @@ class jb extends se {
                 if (uc.b(26560) <= 30000L) {
                   MouseWheelInput.field_c = GridWidgetContainer.errorConnectingToServerText;
                 } else {
-                  MouseWheelInput.field_c = ar.connectionTimedOutPleaseText;
+                  MouseWheelInput.field_c = HotspotTextWidget.connectionTimedOutPleaseText;
                 }
                 LimitedRandomAccessFile.field_g = false;
                 stackIn_94_0 = 3;
@@ -369,7 +369,7 @@ class jb extends se {
           var4_int = param3.groupId(0, param0);
           var5 = param3.fileId(var4_int, param1, (byte) 127);
           var6 = -88 % ((-10 - param2) / 46);
-          stackIn_1_0 = na.a(var5, -11481, param3, var4_int);
+          stackIn_1_0 = TextInputValidator.a(var5, -11481, param3, var4_int);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

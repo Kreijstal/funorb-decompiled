@@ -20,15 +20,15 @@ final class fd extends uw {
         }
         if (param0 != 105) {
           String var3 = (String) null;
-          fd.a((js) null, (String) null, true, (String) null, (String) null, -8, -120);
+          fd.a((AccountCreationForm) null, (String) null, true, (String) null, (String) null, -8, -120);
         }
         this.field_j = 0L;
     }
 
-    final static boolean a(js param0, String param1, boolean param2, String param3, String param4, int param5, int param6) {
-        uk var7 = null;
+    final static boolean a(AccountCreationForm param0, String param1, boolean param2, String param3, String param4, int param5, int param6) {
+        AccountCreationProgressDialog var7 = null;
         RuntimeException var7_ref = null;
-        uk var8 = null;
+        AccountCreationProgressDialog var8 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -46,15 +46,15 @@ final class fd extends uw {
           if (hm.field_a != ProxySocketConnector.field_e) {
             return false;
           }
-          var8 = new uk(RenderPresentationException.field_a, param0);
+          var8 = new AccountCreationProgressDialog(RenderPresentationException.field_a, param0);
           var7 = var8;
           RenderPresentationException.field_a.pushDialog((byte) 111, var8);
           if (ImageProducerRasterBuffer.c(param6 ^ -123)) {
-            var8.f(true);
+            var8.showIneligibleResult(true);
             return true;
           }
           dv.field_b = param2;
-          vr.field_G = param1;
+          ValidationStatusWidget.field_G = param1;
           FadingWidget.field_C = param3;
           eg.field_l = null;
           ProxySocketConnector.field_e = LegacyOpenGlGraphicsHeap.field_p;

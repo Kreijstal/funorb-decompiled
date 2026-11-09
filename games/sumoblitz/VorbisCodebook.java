@@ -123,7 +123,7 @@ final class VorbisCodebook {
 
     private final static int lookup1Values(int entries, int dimensions) {
         int var2 = 0;
-        for (var2 = (int)Math.pow((double)entries, 1.0 / (double)dimensions) + 1; nq.a(var2, 94, dimensions) > entries; var2--) {
+        for (var2 = (int)Math.pow((double)entries, 1.0 / (double)dimensions) + 1; MatchingTextValidator.intPower(var2, 94, dimensions) > entries; var2--) {
         }
         return var2;
     }

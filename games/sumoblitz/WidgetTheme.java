@@ -1,29 +1,29 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cp {
-    WidgetRenderer field_i;
-    int field_l;
-    int field_m;
+final class WidgetTheme {
+    WidgetRenderer checkboxRenderer;
+    int tooltipPaddingLeft;
+    int tooltipPaddingBottom;
     static String instructionsText;
     WidgetRenderer field_f;
-    int field_u;
-    int field_d;
-    private int field_t;
-    WidgetRenderer field_h;
-    int field_s;
+    int tooltipLineHeight;
+    int tooltipBackgroundColor;
+    private int tooltipTextColor;
+    WidgetRenderer textInputRenderer;
+    int tooltipPaddingTop;
     WidgetRenderer field_j;
     int field_g;
-    LegacyBitmapFont field_v;
+    LegacyBitmapFont font;
     static int[] field_c;
-    WidgetRenderer field_e;
+    WidgetRenderer labelRenderer;
     int field_a;
     WidgetRenderer field_p;
     int field_b;
-    private boolean field_o;
+    private boolean wrapTooltips;
     WidgetRenderer field_n;
-    int field_r;
-    int field_q;
+    int tooltipBorderColor;
+    int tooltipPaddingRight;
 
     final static dk a(int param0, String param1) {
         int var2_int = 0;
@@ -74,28 +74,28 @@ final class cp {
         }
     }
 
-    final void a(int param0, int param1, int param2, String param3) {
+    final void drawTooltip(int y, int guard, int x, String text) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          if (param1 != 13421772) {
+          if (guard != 13421772) {
             this.a(104, 13, -85, (byte) 98, -17);
           }
-          if (!this.field_o) {
-            this.a(param0, param3, param2, -22699);
+          if (!this.wrapTooltips) {
+            this.drawSingleLineTooltip(y, text, x, -22699);
           } else {
-            this.b(param2, param3, -84, param0);
+            this.drawWrappedTooltip(x, text, -84, y);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_8_0 = var5;
-          stackIn_8_1 = new StringBuilder().append("cp.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_8_1 = new StringBuilder().append("cp.F(").append(y).append(',').append(guard).append(',').append(x).append(',');
+          if (text == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
@@ -108,11 +108,11 @@ final class cp {
         kw.a(param0, param2, 1, param1, param4);
         if (param3 > -57) {
           String var7 = (String) null;
-          this.a(-116, 1, -84, (String) null);
+          this.drawTooltip(-116, 1, -84, (String) null);
         }
     }
 
-    private final void a(int param0, String param1, int param2, int param3) {
+    private final void drawSingleLineTooltip(int y, String text, int x, int guard) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -123,34 +123,34 @@ final class cp {
         int var7 = 0;
         int var8 = 0;
         try {
-          if (param3 != -22699) {
+          if (guard != -22699) {
             this.field_a = 76;
           }
-          var5_int = this.field_v.a(param1);
-          var6 = this.field_v.field_y + this.field_v.field_I;
-          var7 = param2;
+          var5_int = this.font.a(text);
+          var6 = this.font.field_y + this.font.field_I;
+          var7 = x;
           if (var7 + var5_int + 6 > SoftwareRasterizer.width) {
             var7 = SoftwareRasterizer.width - (var5_int + 6);
           }
-          var8 = 32 - this.field_v.field_y + param0;
+          var8 = 32 - this.font.field_y + y;
           if (SoftwareRasterizer.height < 6 + (var8 + var6)) {
             var8 = -6 + SoftwareRasterizer.height - var6;
           }
-          SoftwareRasterizer.drawRectangle(var7, var8, var5_int + 6, 6 + var6, this.field_t);
-          SoftwareRasterizer.fillRectangle(var7 + 1, var8 + 1, var5_int + 4, 4 + var6, this.field_d);
-          this.field_v.b(param1, var7 + 3, var8 + 3 + this.field_v.field_y, this.field_t, -1);
+          SoftwareRasterizer.drawRectangle(var7, var8, var5_int + 6, 6 + var6, this.tooltipTextColor);
+          SoftwareRasterizer.fillRectangle(var7 + 1, var8 + 1, var5_int + 4, 4 + var6, this.tooltipBackgroundColor);
+          this.font.b(text, var7 + 3, var8 + 3 + this.font.field_y, this.tooltipTextColor, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_10_0 = var5;
-          stackIn_10_1 = new StringBuilder().append("cp.H(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_10_1 = new StringBuilder().append("cp.H(").append(y).append(',');
+          if (text == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(x).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -161,7 +161,7 @@ final class cp {
         }
     }
 
-    final static byte[] a(byte[] param0, int param1) {
+    final static byte[] copyBytes(byte[] bytes, int sourceOffset) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -171,9 +171,9 @@ final class cp {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param0.length;
+          var2_int = bytes.length;
           var3 = new byte[var2_int];
-          la.a(param0, param1, var3, 0, var2_int);
+          la.a(bytes, sourceOffset, var3, 0, var2_int);
           stackIn_1_0 = var3;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -181,16 +181,16 @@ final class cp {
           var2 = decompiledCaughtException;
           stackIn_4_0 = var2;
           stackIn_4_1 = new StringBuilder().append("cp.C(");
-          if (param0 == null) {
+          if (bytes == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(sourceOffset).append(')').toString());
         }
     }
 
-    private final void b(int param0, String param1, int param2, int param3) {
+    private final void drawWrappedTooltip(int x, String text, int guard, int y) {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -213,18 +213,18 @@ final class cp {
         int var13Lifetime2;
         var15 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var5_int = this.field_l + this.field_q;
-          var6 = this.field_s + this.field_m;
-          var7 = this.field_u;
+          var5_int = this.tooltipPaddingLeft + this.tooltipPaddingRight;
+          var6 = this.tooltipPaddingTop + this.tooltipPaddingBottom;
+          var7 = this.tooltipLineHeight;
           if (var7 == -1) {
-            var7 = this.field_v.field_I + this.field_v.field_s;
+            var7 = this.font.field_I + this.font.field_s;
           }
           var8 = SoftwareRasterizer.width >> 2;
-          var9 = this.field_v.a(param1);
-          var10 = this.field_v.field_s + this.field_v.field_I;
+          var9 = this.font.a(text);
+          var10 = this.font.field_s + this.font.field_I;
           var11 = 1;
           if (var9 > var8 ||
-            param1.indexOf("<br>") != -1) {
+            text.indexOf("<br>") != -1) {
             if (var8 < var9) {
               var13 = var9 / var8;
               var12 = var8 + (var9 % var8 + var13 - 1) / var13 * 2;
@@ -234,44 +234,44 @@ final class cp {
             if (null == qn.field_b) {
               qn.field_b = new String[16];
             }
-            var11Lifetime1 = this.field_v.a(param1, new int[]{var12}, qn.field_b);
+            var11Lifetime1 = this.font.a(text, new int[]{var12}, qn.field_b);
             var9 = 0;
             var10 = var10 + var7 * (var11Lifetime1 - 1);
             for (var13Lifetime2 = 0; var13Lifetime2 < var11Lifetime1; var13Lifetime2++) {
-              var14 = this.field_v.a(qn.field_b[var13Lifetime2]);
+              var14 = this.font.a(qn.field_b[var13Lifetime2]);
               if (var9 < var14) {
                 var9 = var14;
               }
             }
           }
-          var12 = param0;
-          var13Lifetime1 = 70 / ((74 - param2) / 40);
+          var12 = x;
+          var13Lifetime1 = 70 / ((74 - guard) / 40);
           if (SoftwareRasterizer.width < var5_int + var12 + var9) {
             var12 = -var5_int + SoftwareRasterizer.width - var9;
           }
-          var14Lifetime1 = 32 + (-this.field_v.field_y + param3);
+          var14Lifetime1 = 32 + (-this.font.field_y + y);
           if (SoftwareRasterizer.height < var6 + var14Lifetime1 + var10) {
-            var14Lifetime1 = -var10 + param3 - var6;
+            var14Lifetime1 = -var10 + y - var6;
           }
-          SoftwareRasterizer.drawRectangle(var12, var14Lifetime1, var9 + var5_int, var10 + var6, this.field_r);
-          SoftwareRasterizer.fillRectangle(var12 + 1, 1 + var14Lifetime1, var5_int + var9 - 2, var6 + var10 - 2, this.field_d);
-          this.field_v.a(param1, var12 + this.field_l, var14Lifetime1 + this.field_s, var9, var10, this.field_t, -1, 0, 0, var7);
+          SoftwareRasterizer.drawRectangle(var12, var14Lifetime1, var9 + var5_int, var10 + var6, this.tooltipBorderColor);
+          SoftwareRasterizer.fillRectangle(var12 + 1, 1 + var14Lifetime1, var5_int + var9 - 2, var6 + var10 - 2, this.tooltipBackgroundColor);
+          this.font.a(text, var12 + this.tooltipPaddingLeft, var14Lifetime1 + this.tooltipPaddingTop, var9, var10, this.tooltipTextColor, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_28_0 = var5;
-          stackIn_28_1 = new StringBuilder().append("cp.E(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_28_1 = new StringBuilder().append("cp.E(").append(x).append(',');
+          if (text == null) {
             stackIn_29_2 = "null";
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(guard).append(',').append(y).append(')').toString());
         }
     }
 
-    final void a(LegacyBitmapFont param0, byte param1) {
+    final void initializeDefaultStyles(LegacyBitmapFont font, byte guard) {
         TextWidgetRenderer var17 = null;
         fl var4 = null;
         Sprite[] var5 = null;
@@ -295,21 +295,21 @@ final class cp {
         fl var14Lifetime1;
         fl var14Lifetime2;
         try {
-          var17 = new TextWidgetRenderer(param0, 2, 2, 2236962, 1, 1, 1, param0.field_I + (param0.field_s + 2));
-          this.field_e = (WidgetRenderer) ((Object) var17);
+          var17 = new TextWidgetRenderer(font, 2, 2, 2236962, 1, 1, 1, font.field_I + (font.field_s + 2));
+          this.labelRenderer = (WidgetRenderer) ((Object) var17);
           var17.textColor = 16777215;
           var4 = new fl();
           var17.copyStyleTo(var4, -102);
-          this.field_s = 3;
-          this.field_m = 3;
-          this.field_l = 3;
-          this.field_d = 5592405;
-          this.field_v = param0;
+          this.tooltipPaddingTop = 3;
+          this.tooltipPaddingBottom = 3;
+          this.tooltipPaddingLeft = 3;
+          this.tooltipBackgroundColor = 5592405;
+          this.font = font;
           var4.caretColor = 15658734;
-          this.field_r = 15658734;
-          this.field_q = 3;
-          this.field_t = 15658734;
-          this.field_u = -1;
+          this.tooltipBorderColor = 15658734;
+          this.tooltipPaddingRight = 3;
+          this.tooltipTextColor = 15658734;
+          this.tooltipLineHeight = -1;
           var4.selectionColor = 11711154;
           var4.a(false, 0).c(15658734, 17818).a(FontMetrics.a(8947848, 92, 10066329, 7829367), 2147483647);
           var4.a(false, 1).a(FontMetrics.a(11184810, 126, 10066329, 13421772), 2147483647);
@@ -320,22 +320,22 @@ final class cp {
           for (var7_int = 0; var18.pixels.length > var7_int; var7_int++) {
             var16.pixels[var7_int] = 1077952576;
           }
-          if (param1 >= -37) {
-            this.field_i = (WidgetRenderer) null;
+          if (guard >= -37) {
+            this.checkboxRenderer = (WidgetRenderer) null;
           }
           var5[4] = (Sprite) ((Object) var18);
           var4.a(false, 4).a(true, true).a(var5, 2147483647);
           var4.a(false, 5).a(HardwareTurbulentWaterNoise.a((byte) -71, 0, 65793, 0, 0), 2147483647).a(true, true).c(-1, 17818);
-          this.field_h = (WidgetRenderer) ((Object) var4);
+          this.textInputRenderer = (WidgetRenderer) ((Object) var4);
           var6 = new fl(var4, true);
           var6.horizontalAlignment = 0;
           var7 = new fl(var4, true);
           var7.horizontalAlignment = 0;
           var7.a(OpenGlBuffer.a(8947848, -115), 28715);
           var7.a(false, 1).a(OpenGlBuffer.a(11184810, -125), 2147483647).c(2236962, 17818);
-          this.field_i = (WidgetRenderer) ((Object) new vg(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
-          discarded$0 = new va(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
-          discarded$1 = new iu(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
+          this.checkboxRenderer = (WidgetRenderer) ((Object) new CheckboxRenderer(font, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          discarded$0 = new va(font, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
+          discarded$1 = new iu(font, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new fl();
           var17.copyStyleTo(var8, 107);
           var8.a(false, 0).a(FontMetrics.a(15658734, 102, 7829367, 10066329), 2147483647).c(1118481, 17818).d(-1, 30149);
@@ -369,7 +369,7 @@ final class cp {
           var19 = new fl(var4, true);
           var19.a(-29, var13);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "cp.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "cp.I(" + (font != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
@@ -385,7 +385,7 @@ final class cp {
         SoftwareRasterizer.fillRectangleAlpha(param4, param6, param5, param2, param3, param0);
         if (param1 != 3) {
           byte[] var9 = (byte[]) null;
-          cp.a((byte[]) null, -45);
+          WidgetTheme.copyBytes((byte[]) null, -45);
         }
     }
 
@@ -393,12 +393,12 @@ final class cp {
         ClientException.a((byte) -59);
         if (param0 >= -63) {
           byte[] var3 = (byte[]) null;
-          cp.a((byte[]) null, 126);
+          WidgetTheme.copyBytes((byte[]) null, 126);
         }
     }
 
-    public cp() {
-        this.field_o = true;
+    public WidgetTheme() {
+        this.wrapTooltips = true;
     }
 
     static {

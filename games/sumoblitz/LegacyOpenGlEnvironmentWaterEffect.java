@@ -92,7 +92,7 @@ final class LegacyOpenGlEnvironmentWaterEffect extends LegacyOpenGlEffect {
         try {
           var2 = TextureFilter.a(param0, (byte) -57, "jagex-last-login-method");
           if (var2 == null) {
-            stackIn_4_0 = na.field_c;
+            stackIn_4_0 = TextInputValidator.field_c;
             return stackIn_4_0;
           }
           if (param1 != 1) {
@@ -107,7 +107,7 @@ final class LegacyOpenGlEnvironmentWaterEffect extends LegacyOpenGlEffect {
               return stackIn_13_0;
             }
           }
-          stackIn_16_0 = na.field_c;
+          stackIn_16_0 = TextInputValidator.field_c;
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

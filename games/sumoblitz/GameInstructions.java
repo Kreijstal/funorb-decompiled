@@ -5,7 +5,7 @@ final class GameInstructions {
     static String[] field_c;
     static int field_b;
     static int[] field_h;
-    static gf field_f;
+    static ValidationStatus DEBOUNCING;
     static hv field_k;
     static String[] upgradesHelpLines;
     static String[] dronesHelpLines;
@@ -16,7 +16,7 @@ final class GameInstructions {
 
     public static void releaseStatics(boolean param0) {
         controlsHelpLines = null;
-        field_f = null;
+        DEBOUNCING = null;
         dronesHelpLinesPartTwo = null;
         field_c = null;
         field_h = null;
@@ -173,7 +173,7 @@ final class GameInstructions {
         field_c = new String[16];
         field_b = -1;
         field_h = new int[1];
-        field_f = new gf();
+        DEBOUNCING = new ValidationStatus();
         field_k = new hv();
         upgradesHelpLines = new String[]{"<b>Upgrades", "At the end of each level, GyojiBot will reward you with Powerup Points. Assign points to Speed, Traction and Bounce to upgrade your Sumo Drone.", "Soup-up your speed for superior swiftness.", "Top up your traction for terrific tenacity.", "Boost your bounce to better bump baddies.", "Occasionally, GyojiBot will drop temporary upgrades into the arena. He hopes you will accept his generous gifts."};
         dronesHelpLines = new String[]{"<b>Drones", "HyoujunBot", "He's eager to fight, but he has only normal eyesight. It is possible to hide from him.", "SuiminBot", "Wake him up with a bump. He's slower than HyoujunBot, but he has better traction.", "KosokuBot", "He's lighter than HyoujunBot, but faster, with very little traction."};

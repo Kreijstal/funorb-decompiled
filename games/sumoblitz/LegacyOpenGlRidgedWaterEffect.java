@@ -56,7 +56,7 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
 
     final static String c(byte param0) {
         if (ProxySocketConnector.field_e == LegacyOpenGlGraphicsHeap.field_p) {
-          return vr.field_G;
+          return ValidationStatusWidget.field_G;
         }
         if (vm.field_c == LegacyOpenGlGraphicsHeap.field_p) {
           return PowerupPickup.field_s;

@@ -318,8 +318,8 @@ final class LevelCompleteUpgradeScreen extends MenuScreen {
           uq.field_a.a(100, -1, 0, 200, 220, (int[]) null, (ToolkitSprite[]) null, 40, -1, 0, 0, -8787, ps.scoreText.toUpperCase() + " " + il.field_a + "<br>" + InstrumentNoteMask.timeText.toUpperCase() + " " + dp.b(jk.field_a, -23620), (SpriteMask) null, 1, 1);
           MessageDialog.field_db.a(200, 5023231 | opacity << 24, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 118, -1, 0, 0, -8787, wh.clickToAssignPointsText, (SpriteMask) null, 1, 0);
           LegacyOpenGlEffect.field_c.a(200, -1, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 118, -1, 0, 0, guard ^ 11104, wh.clickToAssignPointsText, (SpriteMask) null, 1, 0);
-          qv.field_k.a(ic.a(ar.pointsRemainingText, new String[]{Integer.toString(HardwareUnlitEffect.d(17079) - pl.field_u)}, (byte) -128).toUpperCase(), opacity << 24 | 5023231, -1, 180, 320, 0);
-          uq.field_a.a(ic.a(ar.pointsRemainingText, new String[]{Integer.toString(HardwareUnlitEffect.d(17079) - pl.field_u)}, (byte) -128).toUpperCase(), -1, -1, 180, 320, 0);
+          qv.field_k.a(ic.a(HotspotTextWidget.pointsRemainingText, new String[]{Integer.toString(HardwareUnlitEffect.d(17079) - pl.field_u)}, (byte) -128).toUpperCase(), opacity << 24 | 5023231, -1, 180, 320, 0);
+          uq.field_a.a(ic.a(HotspotTextWidget.pointsRemainingText, new String[]{Integer.toString(HardwareUnlitEffect.d(17079) - pl.field_u)}, (byte) -128).toUpperCase(), -1, -1, 180, 320, 0);
           var4_int = 140;
           var5 = 0;
           while (400 > var4_int) {

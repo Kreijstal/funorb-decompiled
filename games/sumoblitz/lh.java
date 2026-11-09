@@ -60,7 +60,7 @@ final class lh extends IntrusiveNode {
               return stackIn_17_0;
             }
           }
-          stackIn_20_0 = cp.a(param1 ^ -26, var3[var3.length - 1]);
+          stackIn_20_0 = WidgetTheme.a(param1 ^ -26, var3[var3.length - 1]);
           return stackIn_20_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

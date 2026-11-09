@@ -9,7 +9,7 @@ abstract class ModalDialog extends WidgetContainer {
     static int[] field_C;
 
     ModalDialog(DialogLayer layer, int initialWidth, int initialHeight) {
-        super(lj.field_b - initialWidth >> 1, LoginForm.field_O - initialHeight >> 1, initialWidth, initialHeight, (WidgetRenderer) null);
+        super(LoginFieldValue.field_b - initialWidth >> 1, LoginForm.field_O - initialHeight >> 1, initialWidth, initialHeight, (WidgetRenderer) null);
         try {
           this.open = false;
           this.opacity = 0;
@@ -204,11 +204,11 @@ abstract class ModalDialog extends WidgetContainer {
 
     final void resizeCentered(int newWidth, int newHeight, int guard) {
         if (guard >= 37) {
-          this.setBounds(106, lj.field_b - newWidth >> 1, -newHeight + LoginForm.field_O >> 1, newHeight, newWidth);
+          this.setBounds(106, LoginFieldValue.field_b - newWidth >> 1, -newHeight + LoginForm.field_O >> 1, newHeight, newWidth);
           return;
         }
         DEPTH_COMPONENT = (TextureFormat) null;
-        this.setBounds(106, lj.field_b - newWidth >> 1, -newHeight + LoginForm.field_O >> 1, newHeight, newWidth);
+        this.setBounds(106, LoginFieldValue.field_b - newWidth >> 1, -newHeight + LoginForm.field_O >> 1, newHeight, newWidth);
     }
 
     abstract void drawBackdrop(int guard, int originX, int originY);

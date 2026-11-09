@@ -5,7 +5,7 @@ final class HardwareTurbulentWaterNoise extends TurbulenceNoise3D {
     static int field_v;
     static SpriteData[] field_w;
     static String emailLoginText;
-    static cp field_x;
+    static WidgetTheme widgetTheme;
     static SpriteData field_t;
     private byte[] pixels;
 
@@ -28,14 +28,14 @@ final class HardwareTurbulentWaterNoise extends TurbulenceNoise3D {
         if (guard == -11701) {
           field_t = null;
           emailLoginText = null;
-          field_x = null;
+          widgetTheme = null;
           return;
         }
         PacketBuffer var2 = (PacketBuffer) null;
         HardwareTurbulentWaterNoise.a((java.math.BigInteger) null, (java.math.BigInteger) null, true, (PacketBuffer) null, (PacketBuffer) null);
         field_t = null;
         emailLoginText = null;
-        field_x = null;
+        widgetTheme = null;
     }
 
     final static void a(java.math.BigInteger param0, java.math.BigInteger param1, boolean param2, PacketBuffer param3, PacketBuffer param4) {
@@ -53,7 +53,7 @@ final class HardwareTurbulentWaterNoise extends TurbulenceNoise3D {
         if (param0 <= -5) {
           return oq.a(param4, param2, 1, 1, 1, param3, (byte) -113, param1, 3);
         }
-        field_x = (cp) null;
+        widgetTheme = (WidgetTheme) null;
         return oq.a(param4, param2, 1, 1, 1, param3, (byte) -113, param1, 3);
     }
 
@@ -80,7 +80,7 @@ final class HardwareTurbulentWaterNoise extends TurbulenceNoise3D {
             var7 = var8.height;
           }
           if (!guard) {
-            field_x = (cp) null;
+            widgetTheme = (WidgetTheme) null;
           }
           stackIn_5_0 = GraphicsToolkit.createToolkit(backend, canvas, -1, options, textures, var7, var6_int, shaders);
           return stackIn_5_0;

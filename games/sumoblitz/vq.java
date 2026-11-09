@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vq extends WidgetContainer implements oe, WidgetActionListener {
-    private qq field_B;
+final class vq extends WidgetContainer implements NameSuggestionListener, WidgetActionListener {
+    private ValidatedTextInputWidget field_B;
     private InteractiveWidget field_A;
     NameSuggestionsPanel field_E;
     static String areYouSureYouText;
@@ -12,16 +12,16 @@ final class vq extends WidgetContainer implements oe, WidgetActionListener {
         if (param0 != 91) {
           return false;
         }
-        if (this.a((op) (this.field_B), (byte) -116)) {
+        if (this.a((ValidationProvider) (this.field_B), (byte) -116)) {
           return true;
         }
         return false;
     }
 
-    private final boolean a(op param0, byte param1) {
-        v var3 = null;
+    private final boolean a(ValidationProvider param0, byte param1) {
+        InputValidator var3 = null;
         RuntimeException var3_ref = null;
-        gf var4 = null;
+        ValidationStatus var4 = null;
         int var5 = 0;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -29,13 +29,13 @@ final class vq extends WidgetContainer implements oe, WidgetActionListener {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = param0.a(-120);
+          var3 = param0.getValidator(-120);
           if (var3 == null) {
             return true;
           }
           var5 = 12 / ((-67 - param1) / 45);
-          var4 = var3.c(35);
-          stackIn_7_0 = (qe.field_a == var4);
+          var4 = var3.getStatus(35);
+          stackIn_7_0 = (qe.VALID == var4);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -159,13 +159,13 @@ final class vq extends WidgetContainer implements oe, WidgetActionListener {
 
     public vq() {
         super(0, 0, 496, 0, (WidgetRenderer) null);
-        this.field_B = new qq("", (WidgetListener) null, 12);
+        this.field_B = new ValidatedTextInputWidget("", (WidgetListener) null, 12);
         TextWidgetRenderer var1 = new TextWidgetRenderer(jm.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, kw.field_b.field_s, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(gs.youNeedToChooseText, var1, (WidgetListener) null);
         this.field_C = new InteractiveWidget(tf.field_a, (WidgetListener) null);
         this.field_A = new InteractiveWidget(IntrusiveNodeHashTable.field_h, (WidgetListener) null);
         this.field_B.tooltip = ShaderEffect.enterTheNameYouText;
-        this.field_B.a((byte) 127, new ou(this.field_B));
+        this.field_B.setValidator((byte) 127, new ScreenNameValidator(this.field_B));
         this.field_C.enabled = false;
         this.field_C.renderer = (WidgetRenderer) ((Object) new ue());
         this.field_A.renderer = (WidgetRenderer) ((Object) new bv());
@@ -183,7 +183,7 @@ final class vq extends WidgetContainer implements oe, WidgetActionListener {
         this.field_C.listener = (WidgetListener) (this);
         this.addChild(this.field_C, 123);
         this.addChild(this.field_A, 103);
-        this.field_E = new NameSuggestionsPanel((oe) (this));
+        this.field_E = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_E.setBounds(-64, 60 + this.field_B.x + this.field_B.width, 20, 150, -this.field_B.width + (-this.field_B.x + this.width - 60));
         this.addChild(this.field_E, 65);
         this.setBounds(116, 0, 0, 55 + (var3 + var4), 496);
@@ -191,7 +191,7 @@ final class vq extends WidgetContainer implements oe, WidgetActionListener {
 
     private final int a(byte param0, UiWidget param1, int param2, int param3, String param4, String param5, int param6) {
         RuntimeException var8 = null;
-        bn var9 = null;
+        ValidationMessageWidget var9 = null;
         int var10 = 0;
         LabeledWidget var11 = null;
         int stackIn_1_0 = 0;
@@ -206,7 +206,7 @@ final class vq extends WidgetContainer implements oe, WidgetActionListener {
         try {
           var11 = new LabeledWidget(20, param2, 120 + param3, 25, param1, false, 120, 3, kw.field_b, 16777215, param4);
           this.addChild(var11, 66);
-          var9 = new bn(((op) ((Object) param1)).a(85), param5, 126, var11.height + param2, param3 + 25, param6);
+          var9 = new ValidationMessageWidget(((ValidationProvider) ((Object) param1)).getValidator(85), param5, 126, var11.height + param2, param3 + 25, param6);
           var10 = -54 % ((-13 - param0) / 61);
           var9.listener = (WidgetListener) (this);
           this.addChild(var9, 92);
@@ -238,13 +238,13 @@ final class vq extends WidgetContainer implements oe, WidgetActionListener {
         }
     }
 
-    public final void a(byte param0) {
-        int var2 = -18 / ((param0 - 55) / 40);
-        ((ou) (this.field_B.a(24))).e(-1);
+    public final void invalidateNameAvailability(byte guard) {
+        int var2 = -18 / ((guard - 55) / 40);
+        ((ScreenNameValidator) (this.field_B.getValidator(24))).invalidateAvailability(-1);
     }
 
-    public final void a(String param0, int param1) {
-        qq var3 = null;
+    public final void setSuggestedName(String name, int guard) {
+        ValidatedTextInputWidget var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
         RuntimeException stackIn_5_0 = null;
@@ -253,9 +253,9 @@ final class vq extends WidgetContainer implements oe, WidgetActionListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = this.field_B;
-          var4 = param0;
+          var4 = name;
           ((TextInputWidget) ((Object) var3)).setText(false, var4, (byte) 13);
-          if (param1 == 0) {
+          if (guard == 0) {
             return;
           }
           this.field_A = (InteractiveWidget) null;
@@ -265,12 +265,12 @@ final class vq extends WidgetContainer implements oe, WidgetActionListener {
           var3_ref = decompiledCaughtException;
           stackIn_5_0 = var3_ref;
           stackIn_5_1 = new StringBuilder().append("vq.L(");
-          if (param0 == null) {
+          if (name == null) {
             stackIn_6_2 = "null";
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(guard).append(')').toString());
         }
     }
 

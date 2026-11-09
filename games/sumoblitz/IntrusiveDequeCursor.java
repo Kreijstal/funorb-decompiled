@@ -5,7 +5,7 @@ final class IntrusiveDequeCursor {
     static SpriteData field_e;
     private IntrusiveNode cursor;
     static boolean field_b;
-    static wc[] field_a;
+    static DroneWave[] field_a;
     private IntrusiveDeque deque;
     static int field_c;
 
@@ -361,7 +361,7 @@ final class IntrusiveDequeCursor {
               return;
             }
             if (!MessageDialog.arcadeMode) {
-              th.b(24753, 241, 14);
+              UnderageAccountInfoPanel.b(24753, 241, 14);
             }
             return;
           }
@@ -382,7 +382,7 @@ final class IntrusiveDequeCursor {
         if (MessageDialog.arcadeMode) {
           return;
         }
-        th.b(24753, 241, 14);
+        UnderageAccountInfoPanel.b(24753, 241, 14);
     }
 
     final static int b(int param0, int param1) {

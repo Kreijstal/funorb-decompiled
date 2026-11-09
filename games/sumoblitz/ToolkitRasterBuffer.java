@@ -3,7 +3,7 @@
  */
 abstract class ToolkitRasterBuffer extends IntrusiveNode {
     int width;
-    static js field_o;
+    static AccountCreationForm field_o;
     static ResourceArchive field_q;
     int[] pixels;
     int height;

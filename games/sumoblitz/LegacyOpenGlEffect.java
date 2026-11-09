@@ -7,10 +7,10 @@ abstract class LegacyOpenGlEffect {
     static ToolkitFont field_c;
     LegacyOpenGlGraphicsToolkit toolkit;
 
-    final static an a(boolean param0, int param1) {
-        an var2 = new an(true);
-        var2.field_c = param0 ? true : false;
-        if (param1 == 8192) {
+    final static AccountServiceResult accountSuccess(boolean showUnderageInfo, int guard) {
+        AccountServiceResult var2 = new AccountServiceResult(true);
+        var2.showUnderageInfo = showUnderageInfo ? true : false;
+        if (guard == 8192) {
           return var2;
         }
         field_d = (int[]) null;

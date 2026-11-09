@@ -3,7 +3,7 @@
  */
 final class eg extends IntrusiveNode {
     boolean field_o;
-    static an field_l;
+    static AccountServiceResult field_l;
     int field_k;
     static String field_n;
     int[] field_m;
@@ -69,7 +69,7 @@ final class eg extends IntrusiveNode {
           var17 = var16;
           var17.position = -2 + param1.length;
           rl.field_n = var17.readUnsignedShort(255);
-          vg.field_k = new int[rl.field_n];
+          CheckboxRenderer.field_k = new int[rl.field_n];
           ScrollViewport.field_B = new int[rl.field_n];
           SoundCache.field_d = new boolean[rl.field_n];
           TextLayout.field_d = new byte[rl.field_n][];
@@ -87,7 +87,7 @@ final class eg extends IntrusiveNode {
             StrongCacheReference.field_C[var4Lifetime1] = var17.readUnsignedShort(255);
           }
           for (var4Lifetime2 = 0; rl.field_n > var4Lifetime2; var4Lifetime2++) {
-            vg.field_k[var4Lifetime2] = var17.readUnsignedShort(255);
+            CheckboxRenderer.field_k[var4Lifetime2] = var17.readUnsignedShort(255);
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < rl.field_n; var4Lifetime3++) {
             ScrollViewport.field_B[var4Lifetime3] = var17.readUnsignedShort(GzipDecompressor.bitwiseXor(param0, 0));
@@ -103,7 +103,7 @@ final class eg extends IntrusiveNode {
           var17.position = 0;
           for (var4Lifetime5 = 0; var4Lifetime5 < rl.field_n; var4Lifetime5++) {
             regionExit1: {
-              var5 = vg.field_k[var4Lifetime5];
+              var5 = CheckboxRenderer.field_k[var4Lifetime5];
               var6 = ScrollViewport.field_B[var4Lifetime5];
               var7 = var6 * var5;
               var20 = new byte[var7];

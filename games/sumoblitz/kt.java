@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kt {
-    static gf field_a;
+    static ValidationStatus PENDING;
 
     final static float[] a(byte param0, float[] param1, float param2) {
         float[] var3 = null;
@@ -71,7 +71,7 @@ final class kt {
             }
             var2 = 1;
           }
-          nj.field_a.a(true, OpenGlAssemblyProgram.b(jc.field_f, 1882601153, nb.field_a), OpenGlAssemblyProgram.b(pi.field_e, 1882601153, ko.field_p));
+          nj.field_a.a(true, OpenGlAssemblyProgram.b(AgeValidator.field_f, 1882601153, nb.field_a), OpenGlAssemblyProgram.b(pi.field_e, 1882601153, ko.field_p));
           if (nj.field_a.d(-31260)) {
             var1_int = 1;
           }
@@ -97,7 +97,7 @@ final class kt {
             var7 = (int)((10999L - var5) / 1000L);
             if (var7 <= 0) {
               var3 = 2;
-              ou.a(true, 5, (byte) 118);
+              ScreenNameValidator.a(true, 5, (byte) 118);
             }
           }
           stackIn_30_0 = var3;
@@ -110,13 +110,13 @@ final class kt {
     }
 
     public static void releaseStatics(byte param0) {
-        field_a = null;
+        PENDING = null;
         if (param0 != -14) {
-          field_a = (gf) null;
+          PENDING = (ValidationStatus) null;
         }
     }
 
     static {
-        field_a = new gf();
+        PENDING = new ValidationStatus();
     }
 }

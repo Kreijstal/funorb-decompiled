@@ -102,17 +102,17 @@ final class sb {
         Throwable decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
-        wc[] var4 = null;
+        DroneWave[] var4 = null;
         vl[] var5 = null;
         int var6 = 0;
         PacketBuffer var6_ref_fs = null;
         Exception var7 = null;
-        wc[] var7_array = null;
-        wc[] var8 = null;
+        DroneWave[] var7_array = null;
+        DroneWave[] var8 = null;
         PacketBuffer var10 = null;
         int var11 = 0;
         PacketBuffer var14 = null;
-        wc[] var16 = null;
+        DroneWave[] var16 = null;
         int[] var23 = null;
         int[] var24 = null;
         int[] var25 = null;
@@ -120,12 +120,12 @@ final class sb {
         try {
           var2_int = param1.groupId(param0 + 9937, "waves/");
           var23 = param1.fileIds(var2_int, -25915);
-          IntrusiveDequeCursor.field_a = new wc[41];
-          var4 = new wc[41];
+          IntrusiveDequeCursor.field_a = new DroneWave[41];
+          var4 = new DroneWave[41];
           for (var5_int = 0; var23.length > var5_int; var5_int++) {
             var6_ref_fs = new PacketBuffer(param1.fetchFile((byte) 94, var23[var5_int], var2_int));
             var6_ref_fs.position = var6_ref_fs.position + 1;
-            var4[var5_int] = wr.a(true, var6_ref_fs, false);
+            var4[var5_int] = CheckboxWidget.decodeDroneWave(true, var6_ref_fs, false);
             IntrusiveDequeCursor.field_a[var4[var5_int].field_a] = var4[var5_int];
           }
           var2_int = param1.groupId(param0 ^ param0, "levels/");
@@ -153,13 +153,13 @@ final class sb {
             if (decompiledRegionSelector0 == 0 &&
               var2_int != -1) {
               var25 = param1.fileIds(var2_int, -25915);
-              var16 = new wc[var25.length];
+              var16 = new DroneWave[var25.length];
               var7_array = var16;
-              var8 = new wc[var25.length];
+              var8 = new DroneWave[var25.length];
               for (var9 = 0; var9 < var25.length; var9++) {
                 var10 = new PacketBuffer(param1.fetchFile((byte) 106, var25[var9], var2_int));
                 var10.position = var10.position + 1;
-                var7_array[var9] = wr.a(true, var10, false);
+                var7_array[var9] = CheckboxWidget.decodeDroneWave(true, var10, false);
                 var8[var16[var9].field_a] = var16[var9];
               }
               NoiseSliceGenerator.field_a.a(new om(var8), param0 ^ 9936, (long)WidgetContainer.field_x[var6]);

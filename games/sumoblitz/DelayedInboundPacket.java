@@ -22,7 +22,7 @@ final class DelayedInboundPacket extends IntrusiveNode {
         if (param0 < 18) {
           return;
         }
-        if (ar.field_G != 1) {
+        if (HotspotTextWidget.activePointerButton != 1) {
           if (!hw.field_b[99] &&
             !hw.field_b[Sumoblitz.field_I]) {
             stackIn_9_0 = 0;

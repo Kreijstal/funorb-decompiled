@@ -7,8 +7,8 @@ final class tn extends jb {
           !(param0 <= OpenGlUnderwaterEffect.field_p.length)) {
           OpenGlUnderwaterEffect.field_p = new int[param0 * 2];
         }
-        if (null == lj.field_a) {
-          lj.field_a = new int[param0 * 2];
+        if (null == LoginFieldValue.field_a) {
+          LoginFieldValue.field_a = new int[param0 * 2];
           if (jf.field_f == null) {
             jf.field_f = new int[2 * param0];
             if (ic.field_c == null ||
@@ -78,8 +78,8 @@ final class tn extends jb {
             }
           }
         } else {
-          if (lj.field_a.length < param0) {
-            lj.field_a = new int[param0 * 2];
+          if (LoginFieldValue.field_a.length < param0) {
+            LoginFieldValue.field_a = new int[param0 * 2];
             if (jf.field_f == null ||
               !(param0 <= jf.field_f.length)) {
               jf.field_f = new int[2 * param0];
@@ -254,7 +254,7 @@ final class tn extends jb {
         se.field_d = 0;
     }
 
-    final static int a(lj param0, int param1, lj param2) {
+    final static int a(LoginFieldValue param0, int param1, LoginFieldValue param2) {
         RuntimeException var3 = null;
         String var4 = null;
         int stackIn_3_0 = 0;
@@ -295,7 +295,7 @@ final class tn extends jb {
         if (param0 >= -87) {
           return;
         }
-        HardwareTurbulentWaterNoise.field_x = fw.c(false);
+        HardwareTurbulentWaterNoise.widgetTheme = fw.c(false);
         pu.field_e = new DialogLayer();
         is.a(40);
     }

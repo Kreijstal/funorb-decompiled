@@ -499,7 +499,7 @@ final class SoftLruCache {
             if (0 != var7) {
               if (var7 >= 128 &&
                 var7 < 160) {
-                var8 = uk.field_lb[var7 - 128];
+                var8 = AccountCreationProgressDialog.CP1252_EXTENSION[var7 - 128];
                 if (var8 == 0) {
                   var8 = 63;
                 }

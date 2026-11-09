@@ -91,8 +91,8 @@ final class gg extends DualLinkNode {
           HardwareGraphicsHeap.field_o = new Random();
           db.droneSlotLimit = 1;
           GridWidgetContainer.livesRemaining = 3;
-          an.waveIndex = 0;
-          Bzip2State.field_J = new wc[6];
+          AccountServiceResult.waveIndex = 0;
+          Bzip2State.field_J = new DroneWave[6];
           var1_int = 0;
           if (-1 != OpenGlShaderProgram.levelIndex) {
             if (!MidiNoteMixer.field_r[OpenGlShaderProgram.levelIndex]) {

@@ -87,7 +87,7 @@ final class ea {
             difficultyText = (String) null;
           }
           var3 = (CharSequence) ((Object) param0);
-          stackIn_3_0 = tc.field_f.equals(uk.a(param1 ^ 24, var3));
+          stackIn_3_0 = PasswordValidator.field_f.equals(AccountCreationProgressDialog.normalizeAccountName(param1 ^ 24, var3));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

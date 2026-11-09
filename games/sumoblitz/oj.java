@@ -40,7 +40,7 @@ final class oj implements WidgetRenderer {
           ByteArrayStorage.drawBeveledBorder(widget.height, var6_int, widget.width, (byte) -84, var7);
           var8 = fw.field_m[1];
           if (widget instanceof InteractiveWidget &&
-            ((InteractiveWidget) (widget)).field_C) {
+            ((InteractiveWidget) (widget)).selected) {
             var8.d((-var8.field_z + widget.width >> 1) + (var6_int + 1), (-var8.field_w + widget.height >> 1) + (var7 + 1), 256);
           }
           if (!widget.hasFocus(guard - 5592406)) {

@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qq extends TextInputWidget implements op {
-    private int field_T;
+final class ValidatedTextInputWidget extends TextInputWidget implements ValidationProvider {
+    private int pointerOffsetX;
     static int field_P;
-    private v field_S;
+    private InputValidator validator;
     static String namesShouldContainAText;
     static LegacyBitmapFont field_R;
 
@@ -19,12 +19,12 @@ final class qq extends TextInputWidget implements op {
         namesShouldContainAText = null;
     }
 
-    final void a(byte param0, v param1) {
+    final void setValidator(byte guard, InputValidator validator) {
         try {
-          int var3_int = 2 % ((param0 - 72) / 46);
-          this.field_S = param1;
+          int var3_int = 2 % ((guard - 72) / 46);
+          this.validator = validator;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "qq.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "qq.D(" + guard + ',' + (validator != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -35,25 +35,25 @@ final class qq extends TextInputWidget implements op {
         return wn.a(param0, param1, -107) & tf.a(param1, -2626, param0);
     }
 
-    public final v a(int param0) {
-        int var2 = 124 / ((-52 - param0) / 62);
-        return this.field_S;
+    public final InputValidator getValidator(int guard) {
+        int var2 = 124 / ((-52 - guard) / 62);
+        return this.validator;
     }
 
     final void notifyChanged(byte guard) {
         super.notifyChanged((byte) 127);
         if (guard <= 78) {
           namesShouldContainAText = (String) null;
-          if (null != this.field_S) {
-            this.field_S.a((byte) -117);
+          if (null != this.validator) {
+            this.validator.markChanged((byte) -117);
             return;
           }
           return;
         }
-        if (null == this.field_S) {
+        if (null == this.validator) {
           return;
         }
-        this.field_S.a((byte) -117);
+        this.validator.markChanged((byte) -117);
     }
 
     final static PlayingSound addPlayingSound(int param0, PcmSampleStream param1) {
@@ -66,7 +66,7 @@ final class qq extends TextInputWidget implements op {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 18416) {
-            qq.b(-31, 81, 66);
+            ValidatedTextInputWidget.b(-31, 81, 66);
           }
           var2 = new PlayingSound(param1, param1);
           jf.field_c.addLast((IntrusiveNode) (var2), (byte) 39);
@@ -87,8 +87,8 @@ final class qq extends TextInputWidget implements op {
         }
     }
 
-    qq(String param0, WidgetListener param1, int param2) {
-        super(param0, param1, param2);
+    ValidatedTextInputWidget(String text, WidgetListener listener, int maxLength) {
+        super(text, listener, maxLength);
     }
 
     final String hoveredTooltip(int guard) {
@@ -99,11 +99,11 @@ final class qq extends TextInputWidget implements op {
           return null;
         }
         if (guard == -6696) {
-          LegacyOpenGlRidgedWaterEffect.a(pi.field_e, this.width - (this.field_T - ko.field_p), -95);
+          LegacyOpenGlRidgedWaterEffect.a(pi.field_e, this.width - (this.pointerOffsetX - ko.field_p), -95);
           return this.tooltip;
         }
-        this.field_S = (v) null;
-        LegacyOpenGlRidgedWaterEffect.a(pi.field_e, this.width - (this.field_T - ko.field_p), -95);
+        this.validator = (InputValidator) null;
+        LegacyOpenGlRidgedWaterEffect.a(pi.field_e, this.width - (this.pointerOffsetX - ko.field_p), -95);
         return this.tooltip;
     }
 
@@ -111,7 +111,7 @@ final class qq extends TextInputWidget implements op {
         try {
           super.update(parentX, -86, root, parentY);
           int var5_int = 126 % ((guard + 25) / 45);
-          this.field_T = ko.field_p - (this.x + parentX);
+          this.pointerOffsetX = ko.field_p - (this.x + parentX);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "qq.U(" + parentX + ',' + guard + ',' + (root != null ? "{...}" : "null") + ',' + parentY + ')');
         }

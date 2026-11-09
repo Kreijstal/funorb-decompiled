@@ -134,17 +134,17 @@ final class jl {
           if (uc.field_c[param0] < uc.field_c[param1]) {
             return false;
           }
-          if (lj.field_a[param1] < lj.field_a[param0]) {
+          if (LoginFieldValue.field_a[param1] < LoginFieldValue.field_a[param0]) {
             return true;
           }
-          if (lj.field_a[param1] > lj.field_a[param0]) {
+          if (LoginFieldValue.field_a[param1] > LoginFieldValue.field_a[param0]) {
             return false;
           }
         } else {
-          if (lj.field_a[param0] > lj.field_a[param1]) {
+          if (LoginFieldValue.field_a[param0] > LoginFieldValue.field_a[param1]) {
             return true;
           }
-          if (lj.field_a[param1] > lj.field_a[param0]) {
+          if (LoginFieldValue.field_a[param1] > LoginFieldValue.field_a[param0]) {
             return false;
           }
           if (uc.field_c[param1] < uc.field_c[param0]) {

@@ -184,7 +184,7 @@ final class SecondaryNodeQueue {
     }
 
     final static void b(int param0) {
-        HardwareTurbulentWaterNoise.field_x = fw.c(false);
+        HardwareTurbulentWaterNoise.widgetTheme = fw.c(false);
         RenderPresentationException.field_a = new DialogLayer();
         sm.a((byte) 127, true, true);
         if (param0 != 246) {
@@ -330,7 +330,7 @@ final class SecondaryNodeQueue {
             return;
           }
           param0.beginDestruction((byte) 0);
-          bn.f(param1 - 111);
+          ValidationMessageWidget.f(param1 - 111);
           if (param1 != 113) {
             field_d = 68;
           }
@@ -338,11 +338,11 @@ final class SecondaryNodeQueue {
           LegacyOpenGlDisplayLists.a((byte) -106, param0);
           if (param0.field_P == 0 &&
             param0.field_R) {
-            ew.field_e = ew.field_e + 1;
-            if (ps.field_e[9] != ew.field_e) {
+            EmailSyntaxValidator.field_e = EmailSyntaxValidator.field_e + 1;
+            if (ps.field_e[9] != EmailSyntaxValidator.field_e) {
               return;
             }
-            th.b(24753, 246, 9);
+            UnderageAccountInfoPanel.b(24753, 246, 9);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

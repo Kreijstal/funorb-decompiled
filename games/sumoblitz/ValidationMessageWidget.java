@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bn extends ar {
+final class ValidationMessageWidget extends HotspotTextWidget {
     private Sprite field_K;
     static int field_R;
-    private v field_Q;
+    private InputValidator validator;
     static int field_T;
     private String field_U;
-    private int field_S;
+    private int animationTicks;
     static String dataServerFullOrText;
     static boolean field_P;
 
@@ -48,7 +48,7 @@ final class bn extends ar {
 
     final void update(int parentX, int guard, UiWidget root, int parentY) {
         try {
-          this.field_S = this.field_S + 1;
+          this.animationTicks = this.animationTicks + 1;
           super.update(parentX, 83, root, parentY);
           int var5_int = -76 / ((guard + 25) / 45);
         } catch (RuntimeException runtimeException) {
@@ -58,7 +58,7 @@ final class bn extends ar {
 
     final void renderLayer(int parentX, int parentY, byte guard, int layer) {
         String var5;
-        gf var6;
+        ValidationStatus var6;
         int var13;
         Object var17;
         Object var22;
@@ -122,11 +122,11 @@ final class bn extends ar {
         int var12Lifetime4;
         int var12Lifetime5;
         int var12Lifetime6;
-        gf var6Lifetime1;
-        gf var6Lifetime2;
-        gf var6Lifetime3;
-        gf var6Lifetime4;
-        gf var6Lifetime5;
+        ValidationStatus var6Lifetime1;
+        ValidationStatus var6Lifetime2;
+        ValidationStatus var6Lifetime3;
+        ValidationStatus var6Lifetime4;
+        ValidationStatus var6Lifetime5;
         var17 = null;
         var22 = null;
         var27 = null;
@@ -135,10 +135,10 @@ final class bn extends ar {
         var46 = null;
         var13 = Sumoblitz.field_L ? 1 : 0;
         if (guard < -35) {
-          var6 = this.field_Q.c(-126);
-          if (var6 != GameInstructions.field_f &&
-            var6 != kt.field_a) {
-            var5 = this.field_Q.a(3690);
+          var6 = this.validator.getStatus(-126);
+          if (var6 != GameInstructions.DEBOUNCING &&
+            var6 != kt.PENDING) {
+            var5 = this.validator.getMessage(3690);
             if (var5 == null) {
               var5 = this.field_U;
             }
@@ -147,21 +147,21 @@ final class bn extends ar {
           }
           if (!var5.equals(this.text)) {
             this.text = var5;
-            this.a(9);
+            this.rebuildHotspots(9);
           }
           super.renderLayer(parentX, parentY, (byte) -119, layer);
-          var6Lifetime5 = this.field_Q.c(-106);
+          var6Lifetime5 = this.validator.getStatus(-106);
           var50 = (TextWidgetLayout) ((Object) this.renderer);
           var9 = this.x + parentX;
           var10 = var50.textOriginY(parentY, (UiWidget) (this), 0) + (var50.layoutText(-3, (UiWidget) (this)).height(true) >> 1);
-          if (var6Lifetime5 != GameInstructions.field_f &&
-            kt.field_a != var6Lifetime5) {
-            if (qr.field_e == var6Lifetime5) {
+          if (var6Lifetime5 != GameInstructions.DEBOUNCING &&
+            kt.PENDING != var6Lifetime5) {
+            if (qr.INVALID == var6Lifetime5) {
               var18 = fw.field_m[2];
               var18.d(var9, -(var18.field_u >> 1) + var10, 256);
               return;
             }
-            if (qe.field_a != var6Lifetime5) {
+            if (qe.VALID != var6Lifetime5) {
               return;
             }
             var19 = fw.field_m[1];
@@ -188,32 +188,32 @@ final class bn extends ar {
               }
             }
           }
-          var20.a(112, 144, var20.field_z << 4, var20.field_w << 4, -this.field_S << 10, 4096);
+          var20.a(112, 144, var20.field_z << 4, var20.field_w << 4, -this.animationTicks << 10, 4096);
           ClientException.a((byte) -50);
           this.field_K.d(-(var20.field_z >> 1) + var9, -var20.field_w + var10, 256);
           return;
         }
         this.renderLayer(-71, -15, (byte) -42, -1);
-        var6Lifetime1 = this.field_Q.c(-126);
-        if (var6Lifetime1 == GameInstructions.field_f) {
+        var6Lifetime1 = this.validator.getStatus(-126);
+        if (var6Lifetime1 == GameInstructions.DEBOUNCING) {
           var21 = SoftwareRenderTarget.checkingText;
           if (!var21.equals(this.text)) {
             this.text = var21;
-            this.a(9);
+            this.rebuildHotspots(9);
           }
           super.renderLayer(parentX, parentY, (byte) -119, layer);
-          var6Lifetime1 = this.field_Q.c(-106);
+          var6Lifetime1 = this.validator.getStatus(-106);
           var51 = (TextWidgetLayout) ((Object) this.renderer);
           var9Lifetime1 = this.x + parentX;
           var10Lifetime1 = var51.textOriginY(parentY, (UiWidget) (this), 0) + (var51.layoutText(-3, (UiWidget) (this)).height(true) >> 1);
-          if (var6Lifetime1 != GameInstructions.field_f &&
-            kt.field_a != var6Lifetime1) {
-            if (qr.field_e == var6Lifetime1) {
+          if (var6Lifetime1 != GameInstructions.DEBOUNCING &&
+            kt.PENDING != var6Lifetime1) {
+            if (qr.INVALID == var6Lifetime1) {
               var23 = fw.field_m[2];
               var23.d(var9Lifetime1, -(var23.field_u >> 1) + var10Lifetime1, 256);
               return;
             }
-            if (qe.field_a != var6Lifetime1) {
+            if (qe.VALID != var6Lifetime1) {
               return;
             }
             var24 = fw.field_m[1];
@@ -240,30 +240,30 @@ final class bn extends ar {
               }
             }
           }
-          var25.a(112, 144, var25.field_z << 4, var25.field_w << 4, -this.field_S << 10, 4096);
+          var25.a(112, 144, var25.field_z << 4, var25.field_w << 4, -this.animationTicks << 10, 4096);
           ClientException.a((byte) -50);
           this.field_K.d(-(var25.field_z >> 1) + var9Lifetime1, -var25.field_w + var10Lifetime1, 256);
           return;
         }
-        if (var6Lifetime1 == kt.field_a) {
+        if (var6Lifetime1 == kt.PENDING) {
           var26 = SoftwareRenderTarget.checkingText;
           if (!var26.equals(this.text)) {
             this.text = var26;
-            this.a(9);
+            this.rebuildHotspots(9);
           }
           super.renderLayer(parentX, parentY, (byte) -119, layer);
-          var6Lifetime1 = this.field_Q.c(-106);
+          var6Lifetime1 = this.validator.getStatus(-106);
           var52 = (TextWidgetLayout) ((Object) this.renderer);
           var9Lifetime2 = this.x + parentX;
           var10Lifetime2 = var52.textOriginY(parentY, (UiWidget) (this), 0) + (var52.layoutText(-3, (UiWidget) (this)).height(true) >> 1);
-          if (var6Lifetime1 != GameInstructions.field_f &&
-            kt.field_a != var6Lifetime1) {
-            if (qr.field_e == var6Lifetime1) {
+          if (var6Lifetime1 != GameInstructions.DEBOUNCING &&
+            kt.PENDING != var6Lifetime1) {
+            if (qr.INVALID == var6Lifetime1) {
               var28 = fw.field_m[2];
               var28.d(var9Lifetime2, -(var28.field_u >> 1) + var10Lifetime2, 256);
               return;
             }
-            if (qe.field_a != var6Lifetime1) {
+            if (qe.VALID != var6Lifetime1) {
               return;
             }
             var29 = fw.field_m[1];
@@ -290,30 +290,30 @@ final class bn extends ar {
               }
             }
           }
-          var30.a(112, 144, var30.field_z << 4, var30.field_w << 4, -this.field_S << 10, 4096);
+          var30.a(112, 144, var30.field_z << 4, var30.field_w << 4, -this.animationTicks << 10, 4096);
           ClientException.a((byte) -50);
           this.field_K.d(-(var30.field_z >> 1) + var9Lifetime2, -var30.field_w + var10Lifetime2, 256);
           return;
         }
-        var31 = this.field_Q.a(3690);
+        var31 = this.validator.getMessage(3690);
         if (var31 != null) {
           if (!var31.equals(this.text)) {
             this.text = var31;
-            this.a(9);
+            this.rebuildHotspots(9);
           }
           super.renderLayer(parentX, parentY, (byte) -119, layer);
-          var6Lifetime2 = this.field_Q.c(-106);
+          var6Lifetime2 = this.validator.getStatus(-106);
           var53 = (TextWidgetLayout) ((Object) this.renderer);
           var9Lifetime3 = this.x + parentX;
           var10Lifetime3 = var53.textOriginY(parentY, (UiWidget) (this), 0) + (var53.layoutText(-3, (UiWidget) (this)).height(true) >> 1);
-          if (var6Lifetime2 != GameInstructions.field_f &&
-            kt.field_a != var6Lifetime2) {
-            if (qr.field_e == var6Lifetime2) {
+          if (var6Lifetime2 != GameInstructions.DEBOUNCING &&
+            kt.PENDING != var6Lifetime2) {
+            if (qr.INVALID == var6Lifetime2) {
               var33 = fw.field_m[2];
               var33.d(var9Lifetime3, -(var33.field_u >> 1) + var10Lifetime3, 256);
               return;
             }
-            if (qe.field_a != var6Lifetime2) {
+            if (qe.VALID != var6Lifetime2) {
               return;
             }
             var34 = fw.field_m[1];
@@ -340,7 +340,7 @@ final class bn extends ar {
               }
             }
           }
-          var35.a(112, 144, var35.field_z << 4, var35.field_w << 4, -this.field_S << 10, 4096);
+          var35.a(112, 144, var35.field_z << 4, var35.field_w << 4, -this.animationTicks << 10, 4096);
           ClientException.a((byte) -50);
           this.field_K.d(-(var35.field_z >> 1) + var9Lifetime3, -var35.field_w + var10Lifetime3, 256);
           return;
@@ -348,18 +348,18 @@ final class bn extends ar {
         var36 = this.field_U;
         if (var36.equals(this.text)) {
           super.renderLayer(parentX, parentY, (byte) -119, layer);
-          var6Lifetime3 = this.field_Q.c(-106);
+          var6Lifetime3 = this.validator.getStatus(-106);
           var55 = (TextWidgetLayout) ((Object) this.renderer);
           var9Lifetime4 = this.x + parentX;
           var10Lifetime4 = var55.textOriginY(parentY, (UiWidget) (this), 0) + (var55.layoutText(-3, (UiWidget) (this)).height(true) >> 1);
-          if (var6Lifetime3 != GameInstructions.field_f &&
-            kt.field_a != var6Lifetime3) {
-            if (qr.field_e == var6Lifetime3) {
+          if (var6Lifetime3 != GameInstructions.DEBOUNCING &&
+            kt.PENDING != var6Lifetime3) {
+            if (qr.INVALID == var6Lifetime3) {
               var47 = fw.field_m[2];
               var47.d(var9Lifetime4, -(var47.field_u >> 1) + var10Lifetime4, 256);
               return;
             }
-            if (qe.field_a != var6Lifetime3) {
+            if (qe.VALID != var6Lifetime3) {
               return;
             }
             var48 = fw.field_m[1];
@@ -382,19 +382,19 @@ final class bn extends ar {
             this.field_K = new Sprite(var11Lifetime4, var12Lifetime4);
             jq.a(7161, this.field_K);
           }
-          var49.a(112, 144, var49.field_z << 4, var49.field_w << 4, -this.field_S << 10, 4096);
+          var49.a(112, 144, var49.field_z << 4, var49.field_w << 4, -this.animationTicks << 10, 4096);
           ClientException.a((byte) -50);
           this.field_K.d(-(var49.field_z >> 1) + var9Lifetime4, -var49.field_w + var10Lifetime4, 256);
           return;
         }
         this.text = var36;
-        this.a(9);
+        this.rebuildHotspots(9);
         super.renderLayer(parentX, parentY, (byte) -119, layer);
-        var6Lifetime4 = this.field_Q.c(-106);
+        var6Lifetime4 = this.validator.getStatus(-106);
         var54 = (TextWidgetLayout) ((Object) this.renderer);
         var9Lifetime5 = this.x + parentX;
         var10Lifetime5 = var54.textOriginY(parentY, (UiWidget) (this), 0) + (var54.layoutText(-3, (UiWidget) (this)).height(true) >> 1);
-        if (var6Lifetime4 == GameInstructions.field_f) {
+        if (var6Lifetime4 == GameInstructions.DEBOUNCING) {
           var38 = fw.field_m[0];
           var11Lifetime5 = var38.field_z << 1;
           var12Lifetime5 = var38.field_w << 1;
@@ -411,18 +411,18 @@ final class bn extends ar {
             this.field_K = new Sprite(var11Lifetime5, var12Lifetime5);
             jq.a(7161, this.field_K);
           }
-          var38.a(112, 144, var38.field_z << 4, var38.field_w << 4, -this.field_S << 10, 4096);
+          var38.a(112, 144, var38.field_z << 4, var38.field_w << 4, -this.animationTicks << 10, 4096);
           ClientException.a((byte) -50);
           this.field_K.d(-(var38.field_z >> 1) + var9Lifetime5, -var38.field_w + var10Lifetime5, 256);
           return;
         }
-        if (kt.field_a != var6Lifetime4) {
-          if (qr.field_e == var6Lifetime4) {
+        if (kt.PENDING != var6Lifetime4) {
+          if (qr.INVALID == var6Lifetime4) {
             var44 = fw.field_m[2];
             var44.d(var9Lifetime5, -(var44.field_u >> 1) + var10Lifetime5, 256);
             return;
           }
-          if (qe.field_a != var6Lifetime4) {
+          if (qe.VALID != var6Lifetime4) {
             return;
           }
           var45 = fw.field_m[1];
@@ -446,7 +446,7 @@ final class bn extends ar {
           this.field_K = new Sprite(var11Lifetime6, var12Lifetime6);
           jq.a(7161, this.field_K);
         }
-        var39.a(112, 144, var39.field_z << 4, var39.field_w << 4, -this.field_S << 10, 4096);
+        var39.a(112, 144, var39.field_z << 4, var39.field_w << 4, -this.animationTicks << 10, 4096);
         ClientException.a((byte) -50);
         this.field_K.d(-(var39.field_z >> 1) + var9Lifetime5, -var39.field_w + var10Lifetime5, 256);
         return;
@@ -465,7 +465,7 @@ final class bn extends ar {
         }
         FontMetrics.field_b = FontMetrics.field_b + 1;
         if (ps.field_e[12] == FontMetrics.field_b) {
-          th.b(24753, 243, 12);
+          UnderageAccountInfoPanel.b(24753, 243, 12);
           if (un.field_a.length <= var1) {
             var1 = un.field_a.length - 1;
           }
@@ -478,14 +478,14 @@ final class bn extends ar {
         pd.scoreMultiplier = un.field_a[var1];
     }
 
-    bn(v param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, fw.a(0));
+    ValidationMessageWidget(InputValidator validation, String helpText, int x, int y, int width, int height) {
+        super(helpText, fw.a(0));
         try {
-          this.field_U = param1;
-          this.field_Q = param0;
-          this.setBounds(-60, param2, param3, param5, param4);
+          this.field_U = helpText;
+          this.validator = validation;
+          this.setBounds(-60, x, y, height, width);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "bn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "bn.<init>(" + (validation != null ? "{...}" : "null") + ',' + (helpText != null ? "{...}" : "null") + ',' + x + ',' + y + ',' + width + ',' + height + ')');
         }
     }
 

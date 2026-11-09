@@ -38,7 +38,7 @@ abstract class SpriteState extends DualLinkNode {
         myHiscoresText = "MY HISCORES";
         noiseFadeQ12 = new int[4096];
         for (var0 = 0; 4096 > var0; var0++) {
-          noiseFadeQ12[var0] = gf.quinticSmoothStepQ12(var0, -676121812);
+          noiseFadeQ12[var0] = ValidationStatus.quinticSmoothStepQ12(var0, -676121812);
         }
     }
 }

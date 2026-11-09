@@ -194,9 +194,9 @@ abstract class FixedPointPerlinNoise3D {
         if (param0 < 24) {
           FixedPointPerlinNoise3D.releaseStatics((byte) 45);
         }
-        ew.field_f = (param1 & 15) >> 2;
-        if (!(ew.field_f <= 2)) {
-          ew.field_f = 2;
+        EmailSyntaxValidator.field_f = (param1 & 15) >> 2;
+        if (!(EmailSyntaxValidator.field_f <= 2)) {
+          EmailSyntaxValidator.field_f = 2;
         }
         rs.field_g = param1 & 3;
         if (rs.field_g > 2) {

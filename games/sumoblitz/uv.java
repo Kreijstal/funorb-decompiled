@@ -105,7 +105,7 @@ final class uv extends TextWidgetRenderer {
         try {
           SoftwareRasterizer.drawRectangle(widget.x + parentX, widget.y + parentY, widget.width, widget.height, 10197915);
           if (isEnabled) {
-            stackIn_6_0 = (((InteractiveWidget) (widget)).field_C) ? 1 : 0;
+            stackIn_6_0 = (((InteractiveWidget) (widget)).selected) ? 1 : 0;
           } else {
             stackIn_6_0 = 0;
           }

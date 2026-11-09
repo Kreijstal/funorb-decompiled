@@ -17,7 +17,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               ScrollControl.isCp1252Character(-125, (char) var2_int)) {
               var3 = CacheReferenceNode.field_s + 1 & 127;
               if (var3 != bj.field_a) {
-                cp.field_c[CacheReferenceNode.field_s] = -1;
+                WidgetTheme.field_c[CacheReferenceNode.field_s] = -1;
                 SpriteMask.field_c[CacheReferenceNode.field_s] = (char)var2_int;
                 CacheReferenceNode.field_s = var3;
               }
@@ -64,7 +64,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           if (var2_int >= 0) {
             var3 = 1 + CacheReferenceNode.field_s & 127;
             if (var3 != bj.field_a) {
-              cp.field_c[CacheReferenceNode.field_s] = var2_int;
+              WidgetTheme.field_c[CacheReferenceNode.field_s] = var2_int;
               SpriteMask.field_c[CacheReferenceNode.field_s] = (char)0;
               CacheReferenceNode.field_s = var3;
             }
@@ -203,7 +203,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
 
     final static ScrollControl a(byte param0) {
         int var1 = -91 % ((79 - param0) / 41);
-        return new ScrollControl(0, 0, HardwareTurbulentWaterNoise.field_x.field_g, 0, (WidgetRenderer) null, HardwareTurbulentWaterNoise.field_x.field_f, HardwareTurbulentWaterNoise.field_x.field_p, HardwareTurbulentWaterNoise.field_x.field_g, HardwareTurbulentWaterNoise.field_x.field_g, HardwareTurbulentWaterNoise.field_x.field_a, HardwareTurbulentWaterNoise.field_x.field_b, false, true, 32768, 0);
+        return new ScrollControl(0, 0, HardwareTurbulentWaterNoise.widgetTheme.field_g, 0, (WidgetRenderer) null, HardwareTurbulentWaterNoise.widgetTheme.field_f, HardwareTurbulentWaterNoise.widgetTheme.field_p, HardwareTurbulentWaterNoise.widgetTheme.field_g, HardwareTurbulentWaterNoise.widgetTheme.field_g, HardwareTurbulentWaterNoise.widgetTheme.field_a, HardwareTurbulentWaterNoise.widgetTheme.field_b, false, true, 32768, 0);
     }
 
     final static boolean a(cn param0, int param1, cn param2) {

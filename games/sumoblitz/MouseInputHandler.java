@@ -13,7 +13,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (wk.field_h != null) {
+          if (ConfirmedEmailValidator.field_h != null) {
             LegacyOpenGlTexture.field_h = 0;
             GzipDecompressor.field_d = param0.getX();
             LegacyOpenGlTexture3D.field_l = param0.getY();
@@ -55,7 +55,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
         try {
-          if (null != wk.field_h) {
+          if (null != ConfirmedEmailValidator.field_h) {
             LegacyOpenGlTexture.field_h = 0;
             SoftCacheReference.field_C = -1;
             SecondaryNodeDeque.field_b = -1;
@@ -73,7 +73,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (wk.field_h == null) {
+          if (ConfirmedEmailValidator.field_h == null) {
             return;
           }
           LegacyOpenGlNormalMapGenerator.field_a = 0;
@@ -99,7 +99,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null == wk.field_h) {
+          if (null == ConfirmedEmailValidator.field_h) {
             return;
           }
           LegacyOpenGlTexture.field_h = 0;
@@ -139,7 +139,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (wk.field_h != null) {
+          if (ConfirmedEmailValidator.field_h != null) {
             LegacyOpenGlTexture.field_h = 0;
             LegacyOpenGlNormalMapGenerator.field_a = 0;
             ResourceArchive.field_i = true;
@@ -203,7 +203,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null == wk.field_h) {
+          if (null == ConfirmedEmailValidator.field_h) {
             return;
           }
           LegacyOpenGlTexture.field_h = 0;
@@ -232,7 +232,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (wk.field_h == null) {
+          if (ConfirmedEmailValidator.field_h == null) {
             return;
           }
           LegacyOpenGlTexture.field_h = 0;

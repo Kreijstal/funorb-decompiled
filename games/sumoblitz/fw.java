@@ -8,18 +8,18 @@ final class fw extends IntrusiveNode {
     static Sprite[] field_m;
     pm field_l;
 
-    final static cp c(boolean param0) {
+    final static WidgetTheme c(boolean param0) {
         if (CacheReferenceNode.field_v == null) {
-          CacheReferenceNode.field_v = new cp();
-          CacheReferenceNode.field_v.a(kw.field_b, (byte) -118);
-          CacheReferenceNode.field_v.field_q = 5;
-          CacheReferenceNode.field_v.field_l = 6;
-          CacheReferenceNode.field_v.field_v = jm.field_a;
-          CacheReferenceNode.field_v.field_m = 4;
-          CacheReferenceNode.field_v.field_d = 2763306;
-          CacheReferenceNode.field_v.field_u = 14;
-          CacheReferenceNode.field_v.field_r = 7697781;
-          CacheReferenceNode.field_v.field_s = 0;
+          CacheReferenceNode.field_v = new WidgetTheme();
+          CacheReferenceNode.field_v.initializeDefaultStyles(kw.field_b, (byte) -118);
+          CacheReferenceNode.field_v.tooltipPaddingRight = 5;
+          CacheReferenceNode.field_v.tooltipPaddingLeft = 6;
+          CacheReferenceNode.field_v.font = jm.field_a;
+          CacheReferenceNode.field_v.tooltipPaddingBottom = 4;
+          CacheReferenceNode.field_v.tooltipBackgroundColor = 2763306;
+          CacheReferenceNode.field_v.tooltipLineHeight = 14;
+          CacheReferenceNode.field_v.tooltipBorderColor = 7697781;
+          CacheReferenceNode.field_v.tooltipPaddingTop = 0;
           if (param0) {
             fw.a(-20);
             return CacheReferenceNode.field_v;

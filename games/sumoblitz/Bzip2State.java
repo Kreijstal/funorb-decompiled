@@ -25,7 +25,7 @@ final class Bzip2State {
     int[] field_q;
     byte[][] codeLengths;
     int field_s;
-    static wc[] field_J;
+    static DroneWave[] field_J;
     int field_g;
     byte[] input;
     int outputRemaining;
@@ -57,7 +57,7 @@ final class Bzip2State {
         try {
           var1_int = 0;
           if (param0 != -94) {
-            field_J = (wc[]) null;
+            field_J = (DroneWave[]) null;
           }
           for (var2 = 0; var2 < 25; var2++) {
             var1_int = var1_int + OpenGlTexture3D.field_j[var2];
