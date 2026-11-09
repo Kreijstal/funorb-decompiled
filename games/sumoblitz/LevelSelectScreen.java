@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class LevelSelectScreen extends MenuScreen {
-    static jj field_j;
+    static LoginMethodPreference field_j;
     private int field_i;
 
     final void render(int opacity, GraphicsToolkit toolkit, int guard) {
@@ -38,10 +38,10 @@ final class LevelSelectScreen extends MenuScreen {
         var14 = Sumoblitz.field_L ? 1 : 0;
         try {
           var4_int = opacity << 24;
-          wo.a(up.field_c, 410, -5, var4_int, 3, toolkit, 650, 35, 1, true);
+          DelegatingCanvas.a(up.field_c, 410, -5, var4_int, 3, toolkit, 650, 35, 1, true);
           ForceFieldRingEffect.field_t.a(AccountRequestState.field_g.toUpperCase(), var4_int | 5023231, -1, 90, 320, 0);
           hc.field_e.a(AccountRequestState.field_g.toUpperCase(), var4_int + 16777215, -1, 90, 320, 0);
-          wo.a(up.field_c, 60, 44, var4_int, 3, toolkit, 325, 370, 1, true);
+          DelegatingCanvas.a(up.field_c, 60, 44, var4_int, 3, toolkit, 325, 370, 1, true);
           MusicCrossfadeStream.field_q[0].drawRotated(80.0f, 402.0f, 1600, 0, 1, 0, 2);
           qv.field_k.a(407, 92, 5023231 | var4_int, Integer.toString(ResourceArchive.field_f), (byte) -110, -1);
           uq.field_a.a(407, 92, var4_int + 16777215, Integer.toString(ResourceArchive.field_f), (byte) -35, -1);
@@ -51,7 +51,7 @@ final class LevelSelectScreen extends MenuScreen {
           MusicCrossfadeStream.field_q[2].drawRotated(180.0f, 402.0f, 1600, 0, 1, 0, 2);
           qv.field_k.a(407, 192, var4_int | 5023231, Integer.toString(hc.field_f), (byte) -15, -1);
           uq.field_a.a(407, 192, 16777215 + var4_int, Integer.toString(hc.field_f), (byte) -51, -1);
-          var5 = lg.field_c << 2;
+          var5 = ResetStatsConfirmationOverlay.field_c << 2;
           if (128 >= var5 % 255) {
             stackIn_4_0 = var5 % 255;
           } else {
@@ -67,7 +67,7 @@ final class LevelSelectScreen extends MenuScreen {
                 !MusicPatchEnvelope.a(8230, 25)) {
                 toolkit.fillRectangle(var9, var8, 100, 42, var6 << 24 | 5023231, 1);
               }
-              wo.a(up.field_c, 42, var9, var4_int, 3, toolkit, 100, var8, 1, true);
+              DelegatingCanvas.a(up.field_c, 42, var9, var4_int, 3, toolkit, 100, var8, 1, true);
               if (var7 <= ToolkitRasterStateFrame.field_e + 1 &&
                 var7 < 25) {
                 qv.field_k.a(Integer.toString(var7 + 1), 5023231 | var4_int, -1, 28 + var8, var9 + 48, 0);
@@ -89,7 +89,7 @@ final class LevelSelectScreen extends MenuScreen {
             var11 = -25 + var8Lifetime1;
             var12 = -21 + var9Lifetime1;
             var13 = up.field_c;
-            wo.a(var13, 84, var11, 0, 1, var10_ref_ha, 142, var12, 1, true);
+            DelegatingCanvas.a(var13, 84, var11, 0, 1, var10_ref_ha, 142, var12, 1, true);
             if (TextureMetadata.field_f[this.field_i]) {
               MessageDialog.field_db.a(InstrumentNoteMask.timeText.toLowerCase() + UiStyleNode.formatGameTime(CacheIoRequest.field_z[this.field_i], -23620), var4_int | 5023231, -1, 5 + var9Lifetime1, 42 + var8Lifetime1, 0);
               LegacyOpenGlEffect.field_c.a(InstrumentNoteMask.timeText.toLowerCase() + UiStyleNode.formatGameTime(CacheIoRequest.field_z[this.field_i], -23620), 16777215 + var4_int, -1, var9Lifetime1 + 5, -8 + (var8Lifetime1 + 50), guard + 2355);
@@ -99,7 +99,7 @@ final class LevelSelectScreen extends MenuScreen {
               if (up.field_g[this.field_i]) {
                 var10++;
               }
-              if (qn.field_d[this.field_i]) {
+              if (NineSlicePanel.field_d[this.field_i]) {
                 var10++;
               }
               if (up.field_g[this.field_i]) {
@@ -113,7 +113,7 @@ final class LevelSelectScreen extends MenuScreen {
                 }
                 ((ToolkitSprite) (Object) stackIn_30_0).drawRotated((float)(stackIn_30_1 + (stackIn_30_2 + stackIn_31_3)), (float)(40 + var9Lifetime1), 4096, 0, 3, -65536, 1);
               }
-              if (!qn.field_d[this.field_i]) {
+              if (!NineSlicePanel.field_d[this.field_i]) {
                 return;
               }
               stackIn_36_0 = CacheIoWorker.field_b;
@@ -182,7 +182,7 @@ final class LevelSelectScreen extends MenuScreen {
           this.field_i != -1 &&
           this.field_i <= ToolkitRasterStateFrame.field_e + 1) {
           gn.a(16, true);
-          ph.gameplaySession.startLevel(this.field_i, false, false);
+          LruNodeCache.gameplaySession.startLevel(this.field_i, false, false);
           StrongCacheReference.switchMenuScreen(-7753, true, -1);
         }
         if (2 <= Bzip2State.field_j &&
@@ -208,6 +208,6 @@ final class LevelSelectScreen extends MenuScreen {
     }
 
     static {
-        field_j = new jj("usename");
+        field_j = new LoginMethodPreference("usename");
     }
 }

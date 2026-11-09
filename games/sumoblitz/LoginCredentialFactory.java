@@ -60,8 +60,8 @@ final class LoginCredentialFactory {
           SpriteMask.drones[0].tractionLevel = LegacyOpenGlEffectManager.field_i;
           SpriteMask.drones[0].recomputeUpgradeStats((byte) 35);
           fa.field_b = 250;
-          if (bw.field_d) {
-            bw.field_d = false;
+          if (NextLevelChoiceOverlay.field_d) {
+            NextLevelChoiceOverlay.field_d = false;
             fa.field_b = fa.field_b * 2;
             return;
           }
@@ -73,10 +73,10 @@ final class LoginCredentialFactory {
         SpriteMask.drones[0].tractionLevel = LegacyOpenGlEffectManager.field_i;
         SpriteMask.drones[0].recomputeUpgradeStats((byte) 35);
         fa.field_b = 250;
-        if (!bw.field_d) {
+        if (!NextLevelChoiceOverlay.field_d) {
           return;
         }
-        bw.field_d = false;
+        NextLevelChoiceOverlay.field_d = false;
         fa.field_b = fa.field_b * 2;
     }
 

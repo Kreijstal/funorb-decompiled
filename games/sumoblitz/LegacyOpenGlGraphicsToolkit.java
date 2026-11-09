@@ -15,7 +15,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
     private int field_Z;
     static String unfortunatelyYourConfigurationDoesnText;
     private ic field_O;
-    private kk field_Pb;
+    private LegacyOpenGlTextureCache field_Pb;
     int field_X;
     private LegacyOpenGlPostProcessManager postProcessManager;
     private LegacyOpenGlEffectManager effectManager;
@@ -734,7 +734,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
             }
             kr.a(true, -107, false);
             this.field_jc = true;
-            this.field_Pb = new kk(this, this.textureProvider);
+            this.field_Pb = new LegacyOpenGlTextureCache(this, this.textureProvider);
             this.i((byte) -93);
             this.normalMapGenerator = new LegacyOpenGlNormalMapGenerator(this);
             this.postProcessManager = new LegacyOpenGlPostProcessManager(this);
@@ -1721,7 +1721,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
           var12 = (IntNode) (this.field_fb.removeFirst(9));
           jaggl.OpenGL.glDeleteLists((int)var12.key, var12.value);
         }
-        this.field_Pb.a(122);
+        this.field_Pb.age(122);
         if (100663296 < this.e((byte) 7) &&
           wq.monotonicTimeMillis(-64) > this.field_vc + 60000L) {
           System.gc();
@@ -1733,7 +1733,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
     final LegacyVertexBuffer a(int param0, boolean param1, byte param2, int param3, byte[] param4) {
         RuntimeException var6 = null;
         LegacyOpenGlVertexBuffer stackIn_7_0 = null;
-        sl stackIn_9_0 = null;
+        LegacyOpenGlClientVertexBuffer stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -1747,7 +1747,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
             stackIn_7_0 = new LegacyOpenGlVertexBuffer(this, param0, param4, param3, param1);
             return (LegacyVertexBuffer) ((Object) stackIn_7_0);
           }
-          stackIn_9_0 = new sl(this, param0, param4, param3);
+          stackIn_9_0 = new LegacyOpenGlClientVertexBuffer(this, param0, param4, param3);
           return (LegacyVertexBuffer) ((Object) stackIn_9_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2375,7 +2375,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
           if (param0 < 0) {
             this.c(false);
           } else {
-            var5 = this.field_Pb.a(0, param0);
+            var5 = this.field_Pb.texture(0, param0);
             var10 = this.textureProvider.a(-29193, param0);
             if (var10.field_c == 0 &&
               var10.field_u == 0) {

@@ -162,7 +162,7 @@ final class sb {
                 var7_array[var9] = CheckboxWidget.decodeDroneWave(true, var10, false);
                 var8[var16[var9].field_a] = var16[var9];
               }
-              NoiseSliceGenerator.field_a.a(new om(var8), param0 ^ 9936, (long)WidgetContainer.field_x[var6]);
+              NoiseSliceGenerator.field_a.a(new DroneWaveDefinition(var8), param0 ^ 9936, (long)WidgetContainer.field_x[var6]);
             }
           }
           return;

@@ -334,12 +334,12 @@ final class CachedTextLayout extends TextLayout {
           }
           var15 = param0.text(true);
           var8 = param2.text(true);
-          if (null == DisplayModeConfirmationDialog.field_O &&
+          if (null == DisplayModeConfirmationDialog.accountSocket &&
             !GridWidgetContainer.a((byte) -83, false)) {
             stackIn_8_0 = -1;
             return stackIn_8_0;
           }
-          if (kw.accountPhase == gg.READY_TO_CONNECT) {
+          if (kw.accountPhase == ByteArrayCacheNode.READY_TO_CONNECT) {
             HardwareGraphicsToolkit.field_j = null;
             InwardSparkParticle.field_v.position = 0;
             if (param6 != null) {
@@ -404,9 +404,9 @@ final class CachedTextLayout extends TextLayout {
               mn.field_g = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
-                bw.a(false, LegacyOpenGlUnlitEffect.c(2));
+                NextLevelChoiceOverlay.a(false, LegacyOpenGlUnlitEffect.c(2));
                 MouseWheelInput.field_c = DisplayModeConfirmationDialog.unfortunatelyWeAreUnableText;
-                kk.a((byte) -116);
+                LegacyOpenGlTextureCache.closeAccountSocket((byte) -116);
                 LimitedRandomAccessFile.field_g = false;
                 stackIn_37_0 = var9Lifetime1;
                 return stackIn_37_0;
@@ -432,7 +432,7 @@ final class CachedTextLayout extends TextLayout {
                 for (var12 = 0; var11 > var12; var12++) {
                   mn.field_g[var12] = ig.field_a.readCircumfixedString(-105);
                 }
-                kk.a((byte) -110);
+                LegacyOpenGlTextureCache.closeAccountSocket((byte) -110);
                 LimitedRandomAccessFile.field_g = false;
                 stackIn_48_0 = var11 + 100;
                 return stackIn_48_0;
@@ -449,12 +449,12 @@ final class CachedTextLayout extends TextLayout {
                 UsernameCredentials.writeAppletSettings((byte) 97, var9_ref_String, LegacyOpenGlUnlitEffect.c(2));
               }
             }
-            kk.a((byte) -127);
+            LegacyOpenGlTextureCache.closeAccountSocket((byte) -127);
             LimitedRandomAccessFile.field_g = false;
             stackIn_57_0 = TextureFormat.field_a;
             return stackIn_57_0;
           }
-          if (DisplayModeConfirmationDialog.field_O == null) {
+          if (DisplayModeConfirmationDialog.accountSocket == null) {
             if (LimitedRandomAccessFile.field_g) {
               if (30000L < uc.b(26560)) {
                 MouseWheelInput.field_c = HotspotTextWidget.connectionTimedOutPleaseText;

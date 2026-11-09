@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qc {
-    private int field_d;
+final class DroneIntroductionOverlay {
+    private int droneType;
     static MidiPcmStream field_e;
     static PacketBuffer field_c;
-    private boolean field_f;
-    private int field_b;
+    private boolean visible;
+    private int dismissalDelay;
     static int field_a;
 
-    final static String a(CharSequence param0, int param1, boolean param2) {
+    final static String validateDisplayName(CharSequence text, int guard, boolean allowRepeatedSeparators) {
         int var5 = 0;
         String var3 = null;
         int var4 = 0;
@@ -23,14 +23,14 @@ final class qc {
         RuntimeException var3_ref = null;
         var6 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var4 = -114 % ((-29 - param1) / 39);
-          var3 = qv.a(param2, 97, param0);
+          var4 = -114 % ((-29 - guard) / 39);
+          var3 = qv.a(allowRepeatedSeparators, 97, text);
           if (var3 != null) {
             stackIn_4_0 = var3;
             return stackIn_4_0;
           }
-          for (var5 = 0; var5 < param0.length(); var5++) {
-            if (!jl.a((byte) 110, param0.charAt(var5))) {
+          for (var5 = 0; var5 < text.length(); var5++) {
+            if (!jl.a((byte) 110, text.charAt(var5))) {
               stackIn_11_0 = MarkerTrackWidget.namesCanOnlyContainText;
               return stackIn_11_0;
             }
@@ -41,82 +41,82 @@ final class qc {
           var3_ref = decompiledCaughtException;
           stackIn_16_0 = var3_ref;
           stackIn_16_1 = new StringBuilder().append("qc.D(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(guard).append(',').append(allowRepeatedSeparators).append(')').toString());
         }
     }
 
-    final void a(GraphicsToolkit param0, int param1) {
+    final void render(GraphicsToolkit toolkit, int guard) {
         String var10 = null;
         String var11 = null;
         int var7 = 0;
         int var8 = 0;
-        wo.a(ResizingDialog.field_H, 160, 140, -16777216, 3, param0, 360, 170, 1, true);
-        if (!(Sumoblitz.field_J.length <= this.field_d)) {
-          wo.a(up.field_c, Sumoblitz.field_J[this.field_d].height() + 6, 167, -16777216, 3, param0, Sumoblitz.field_J[this.field_d].width() + 6, 187, 1, true);
-          Sumoblitz.field_J[this.field_d].draw(170, 190);
+        DelegatingCanvas.a(ResizingDialog.field_H, 160, 140, -16777216, 3, toolkit, 360, 170, 1, true);
+        if (!(Sumoblitz.field_J.length <= this.droneType)) {
+          DelegatingCanvas.a(up.field_c, Sumoblitz.field_J[this.droneType].height() + 6, 167, -16777216, 3, toolkit, Sumoblitz.field_J[this.droneType].width() + 6, 187, 1, true);
+          Sumoblitz.field_J[this.droneType].draw(170, 190);
         }
-        int var3_int = Sumoblitz.field_J.length > this.field_d ? 380 : 320;
+        int var3_int = Sumoblitz.field_J.length > this.droneType ? 380 : 320;
         int var4 = 200;
         int var5 = 160;
-        String var9 = LimitedRandomAccessFile.droneDescriptions[this.field_d * 2];
+        String var9 = LimitedRandomAccessFile.droneDescriptions[this.droneType * 2];
         qv.field_k.a(var9, -11753985, -1, var4, var3_int, 0);
         uq.field_a.a(var9, -1, -1, var4, var3_int, 0);
-        if (param1 != -4475) {
+        if (guard != -4475) {
           return;
         }
         try {
-          var10 = LimitedRandomAccessFile.droneDescriptions[2 * this.field_d + 1];
+          var10 = LimitedRandomAccessFile.droneDescriptions[2 * this.droneType + 1];
           var3_int -= 10;
-          MessageDialog.field_db.a(480, -11753985, 0, 20 + var5, -(var5 / 2) + var3_int, (int[]) null, (ToolkitSprite[]) null, var4 + 8, -1, 0, SocketConnector.field_a.field_i, param1 - 4312, var10, (SpriteMask) null, 1, 0);
+          MessageDialog.field_db.a(480, -11753985, 0, 20 + var5, -(var5 / 2) + var3_int, (int[]) null, (ToolkitSprite[]) null, var4 + 8, -1, 0, SocketConnector.field_a.field_i, guard - 4312, var10, (SpriteMask) null, 1, 0);
           LegacyOpenGlEffect.field_c.a(480, -1, 0, var5 + 20, -(var5 / 2) + var3_int, (int[]) null, (ToolkitSprite[]) null, var4 + 8, -1, 0, SocketConnector.field_a.field_i, -8787, var10, (SpriteMask) null, 1, 0);
-          if (this.field_b <= 0) {
+          if (this.dismissalDelay <= 0) {
             var4 += 115;
             var3_int -= 50;
             var11 = IntNode.clickToContinueText;
-            var7 = -this.field_b << 3;
+            var7 = -this.dismissalDelay << 3;
             var8 = var7 % 510 <= 255 ? var7 % 255 : 510 - var7 % 255;
             qv.field_k.a(var11, 5023231 | var8 << 24, -1, var4, var3_int, 0);
             uq.field_a.a(var11, -1, -1, var4, var3_int, 0);
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "qc.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "qc.F(" + (toolkit != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
-    final void b(int param0) {
+    final void update(int guard) {
         if ((ActiveCanvasProvider.field_c == 1 || hw.field_b[83]) &&
-          this.field_b <= 0) {
-          this.a(-127);
+          this.dismissalDelay <= 0) {
+          this.hide(-127);
         }
-        if (param0 != 0) {
+        if (guard != 0) {
           field_a = -33;
         }
-        this.field_b = this.field_b - 1;
+        this.dismissalDelay = this.dismissalDelay - 1;
     }
 
-    final boolean a(byte param0) {
-        if (param0 != 91) {
-          this.a((byte) -1);
+    final boolean isVisible(byte guard) {
+        if (guard != 91) {
+          this.isVisible((byte) -1);
         }
-        return this.field_f;
+        return this.visible;
     }
 
-    private final void b(int param0, int param1) {
-        if (param1 > -11) {
+    private final void setDroneType(int type, int guard) {
+        if (guard > -11) {
           field_e = (MidiPcmStream) null;
         }
-        this.field_d = param0;
+        this.droneType = type;
     }
 
     final static void a(boolean param0, boolean param1, boolean param2) {
         int var4 = Sumoblitz.field_L ? 1 : 0;
         if (!vs.b((byte) 9)) {
-          ph.gameplaySession.submitSessionStatistics(-113);
+          LruNodeCache.gameplaySession.submitSessionStatistics(-113);
           HardwareTextureCache.field_f = null;
         } else {
           if (0 < IntrusiveNodeHashTable.field_c) {
@@ -126,11 +126,11 @@ final class qc {
           }
         }
         EnemyDrone.o(250);
-        ph.gameplaySession.resetSession(66);
+        LruNodeCache.gameplaySession.resetSession(66);
         if (!param1) {
           return;
         }
-        DropDownWidget.field_N.b((byte) -128);
+        DropDownWidget.field_N.hide((byte) -128);
         AffineTransform3D.field_j = 0;
     }
 
@@ -140,11 +140,11 @@ final class qc {
         int var1 = 85 / ((param0 - 13) / 43);
     }
 
-    final void a(int param0) {
-        if (param0 > -41) {
+    final void hide(int guard) {
+        if (guard > -41) {
           return;
         }
-        this.field_f = false;
+        this.visible = false;
     }
 
     final static GraphicsToolkit a(int param0, int param1, int param2, java.awt.Canvas param3, TextureProvider param4) {
@@ -158,7 +158,7 @@ final class qc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != -1) {
-            qc.releaseStatics((byte) 64);
+            DroneIntroductionOverlay.releaseStatics((byte) 64);
           }
           stackIn_3_0 = new NativeSoftwareGraphicsToolkit(param3, param4, param1, param0);
           return (GraphicsToolkit) ((Object) stackIn_3_0);
@@ -182,16 +182,16 @@ final class qc {
         }
     }
 
-    qc() {
-        this.field_b = 200;
+    DroneIntroductionOverlay() {
+        this.dismissalDelay = 200;
     }
 
-    final void a(int param0, int param1) {
-        this.field_f = true;
-        this.b(param1, -119);
-        this.field_b = 200;
-        if (param0 != -3388) {
-          qc.releaseStatics((byte) 117);
+    final void show(int guard, int type) {
+        this.visible = true;
+        this.setDroneType(type, -119);
+        this.dismissalDelay = 200;
+        if (guard != -3388) {
+          DroneIntroductionOverlay.releaseStatics((byte) 117);
         }
     }
 

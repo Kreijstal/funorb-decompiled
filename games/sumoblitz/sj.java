@@ -15,7 +15,7 @@ final class sj {
         int stackIn_42_0 = 0;
         String stackIn_42_1 = null;
         boolean stackIn_43_2 = false;
-        qn stackIn_48_0 = null;
+        NineSlicePanel stackIn_48_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -26,7 +26,7 @@ final class sj {
         String var6 = null;
         int var7 = 0;
         int var8 = 0;
-        qn var9 = null;
+        NineSlicePanel var9 = null;
         int var10 = 0;
         int var7Lifetime1;
         int var8Lifetime1;
@@ -98,7 +98,7 @@ final class sj {
             var7Lifetime1 = MessageDialog.$cfr$intArgs$a$590e95718a07(stackIn_42_0, stackIn_42_1, stackIn_43_2);
             var8Lifetime1 = -(var7Lifetime1 >> 1) + BeveledCheckboxRenderer.field_a;
             if (var4 >= 0) {
-              var1_int = var1_int + qc.field_a;
+              var1_int = var1_int + DroneIntroductionOverlay.field_a;
               if (var4 != RendererPreference.field_a.selectedIndex) {
                 stackIn_48_0 = vp.field_e;
               } else {
@@ -106,7 +106,7 @@ final class sj {
               }
               var9 = stackIn_48_0;
               if (var9 != null) {
-                var9.a((DebouncedInputValidator.field_b << 1) + var7Lifetime1, -DebouncedInputValidator.field_b + var8Lifetime1, (TextLayout.field_b << 1) + LegacyOpenGlUnderwaterEffect.field_h, 101, var1_int);
+                var9.draw((DebouncedInputValidator.field_b << 1) + var7Lifetime1, -DebouncedInputValidator.field_b + var8Lifetime1, (TextLayout.field_b << 1) + LegacyOpenGlUnderwaterEffect.field_h, 101, var1_int);
               }
               var1_int = var1_int + TextLayout.field_b;
             }
@@ -115,7 +115,7 @@ final class sj {
               var1_int = var1_int + GameClientShell.field_t;
             } else {
               MouseWheelInput.field_a.drawText(var6, var8Lifetime1, var1_int + LegacyOpenGlTransform3D.field_f, var5, -1);
-              var1_int = var1_int + (qc.field_a + (TextLayout.field_b + LegacyOpenGlUnderwaterEffect.field_h));
+              var1_int = var1_int + (DroneIntroductionOverlay.field_a + (TextLayout.field_b + LegacyOpenGlUnderwaterEffect.field_h));
             }
           }
           return;
@@ -157,20 +157,20 @@ final class sj {
             var3 = param2;
             if (0 == var3) {
               if (param1 == 0) {
-                OpenGlVertexLayout.field_f.a(param0 ^ 3387, 16);
+                OpenGlVertexLayout.field_f.show(param0 ^ 3387, 16);
               }
               if (param1 == 1) {
-                OpenGlVertexLayout.field_f.a(-3388, 0);
+                OpenGlVertexLayout.field_f.show(-3388, 0);
               }
               if (2 == param1) {
-                OpenGlVertexLayout.field_f.a(-3388, 1);
+                OpenGlVertexLayout.field_f.show(-3388, 1);
                 SocketJs5Client.field_p[param2] = true;
               }
               return;
             }
             if (1 == var3) {
               if (0 == param1) {
-                OpenGlVertexLayout.field_f.a(param0 ^ 3387, 2);
+                OpenGlVertexLayout.field_f.show(param0 ^ 3387, 2);
                 SocketJs5Client.field_p[param2] = true;
               }
               return;
@@ -180,22 +180,22 @@ final class sj {
                 if (param1 != 0) {
                   return;
                 }
-                OpenGlVertexLayout.field_f.a(-3388, 6);
+                OpenGlVertexLayout.field_f.show(-3388, 6);
               } else {
                 if (4 == var3) {
                   if (0 == param1) {
-                    OpenGlVertexLayout.field_f.a(-3388, 7);
+                    OpenGlVertexLayout.field_f.show(-3388, 7);
                   }
                   if (param1 == 1) {
-                    OpenGlVertexLayout.field_f.a(param0 ^ 3387, 4);
+                    OpenGlVertexLayout.field_f.show(param0 ^ 3387, 4);
                   }
                   if (param1 == 2) {
-                    OpenGlVertexLayout.field_f.a(-3388, 8);
+                    OpenGlVertexLayout.field_f.show(-3388, 8);
                   }
                   if (param1 != 3) {
                     return;
                   }
-                  OpenGlVertexLayout.field_f.a(param0 ^ 3387, 9);
+                  OpenGlVertexLayout.field_f.show(param0 ^ 3387, 9);
                 } else {
                   if (var3 != 5) {
                     if (6 != var3) {
@@ -203,19 +203,19 @@ final class sj {
                         if (param1 != 1) {
                           return;
                         }
-                        OpenGlVertexLayout.field_f.a(-3388, 11);
+                        OpenGlVertexLayout.field_f.show(-3388, 11);
                       } else {
                         if (var3 == 9) {
                           if (0 != param1) {
                             return;
                           }
-                          OpenGlVertexLayout.field_f.a(-3388, 12);
+                          OpenGlVertexLayout.field_f.show(-3388, 12);
                         } else {
                           if (var3 == 10) {
                             if (0 != param1) {
                               return;
                             }
-                            OpenGlVertexLayout.field_f.a(param0 ^ 3387, 13);
+                            OpenGlVertexLayout.field_f.show(param0 ^ 3387, 13);
                           } else {
                             if (11 != var3) {
                               return;
@@ -223,35 +223,35 @@ final class sj {
                             if (param1 != 0) {
                               return;
                             }
-                            OpenGlVertexLayout.field_f.a(-3388, 14);
+                            OpenGlVertexLayout.field_f.show(-3388, 14);
                           }
                         }
                       }
                     } else {
                       if (0 == param1) {
-                        OpenGlVertexLayout.field_f.a(-3388, 18);
+                        OpenGlVertexLayout.field_f.show(-3388, 18);
                       }
                       if (param1 != 4) {
                         return;
                       }
-                      OpenGlVertexLayout.field_f.a(param0 - 3387, 15);
+                      OpenGlVertexLayout.field_f.show(param0 - 3387, 15);
                     }
                   } else {
                     if (param1 != 0) {
                       return;
                     }
-                    OpenGlVertexLayout.field_f.a(-3388, 10);
+                    OpenGlVertexLayout.field_f.show(-3388, 10);
                   }
                 }
               }
             } else {
               if (param1 == 0) {
-                OpenGlVertexLayout.field_f.a(param0 ^ 3387, 5);
+                OpenGlVertexLayout.field_f.show(param0 ^ 3387, 5);
               }
               if (param1 != 5) {
                 return;
               }
-              OpenGlVertexLayout.field_f.a(-3388, 3);
+              OpenGlVertexLayout.field_f.show(-3388, 3);
             }
             SocketJs5Client.field_p[param2] = true;
             return;
@@ -268,43 +268,43 @@ final class sj {
         var3Lifetime1 = param2;
         if (0 == var3Lifetime1) {
           if (param1 == 0) {
-            OpenGlVertexLayout.field_f.a(param0 ^ 3387, 16);
+            OpenGlVertexLayout.field_f.show(param0 ^ 3387, 16);
           }
           if (param1 == 1) {
-            OpenGlVertexLayout.field_f.a(-3388, 0);
+            OpenGlVertexLayout.field_f.show(-3388, 0);
           }
           if (2 != param1) {
             return;
           }
-          OpenGlVertexLayout.field_f.a(-3388, 1);
+          OpenGlVertexLayout.field_f.show(-3388, 1);
         } else {
           if (1 == var3Lifetime1) {
             if (0 != param1) {
               return;
             }
-            OpenGlVertexLayout.field_f.a(param0 ^ 3387, 2);
+            OpenGlVertexLayout.field_f.show(param0 ^ 3387, 2);
           } else {
             if (var3Lifetime1 != 2) {
               if (var3Lifetime1 == 3) {
                 if (param1 != 0) {
                   return;
                 }
-                OpenGlVertexLayout.field_f.a(-3388, 6);
+                OpenGlVertexLayout.field_f.show(-3388, 6);
               } else {
                 if (4 == var3Lifetime1) {
                   if (0 == param1) {
-                    OpenGlVertexLayout.field_f.a(-3388, 7);
+                    OpenGlVertexLayout.field_f.show(-3388, 7);
                   }
                   if (param1 == 1) {
-                    OpenGlVertexLayout.field_f.a(param0 ^ 3387, 4);
+                    OpenGlVertexLayout.field_f.show(param0 ^ 3387, 4);
                   }
                   if (param1 == 2) {
-                    OpenGlVertexLayout.field_f.a(-3388, 8);
+                    OpenGlVertexLayout.field_f.show(-3388, 8);
                   }
                   if (param1 != 3) {
                     return;
                   }
-                  OpenGlVertexLayout.field_f.a(param0 ^ 3387, 9);
+                  OpenGlVertexLayout.field_f.show(param0 ^ 3387, 9);
                 } else {
                   if (var3Lifetime1 != 5) {
                     if (6 != var3Lifetime1) {
@@ -313,13 +313,13 @@ final class sj {
                           if (0 != param1) {
                             return;
                           }
-                          OpenGlVertexLayout.field_f.a(-3388, 12);
+                          OpenGlVertexLayout.field_f.show(-3388, 12);
                         } else {
                           if (var3Lifetime1 == 10) {
                             if (0 != param1) {
                               return;
                             }
-                            OpenGlVertexLayout.field_f.a(param0 ^ 3387, 13);
+                            OpenGlVertexLayout.field_f.show(param0 ^ 3387, 13);
                           } else {
                             if (11 != var3Lifetime1) {
                               return;
@@ -327,40 +327,40 @@ final class sj {
                             if (param1 != 0) {
                               return;
                             }
-                            OpenGlVertexLayout.field_f.a(-3388, 14);
+                            OpenGlVertexLayout.field_f.show(-3388, 14);
                           }
                         }
                       } else {
                         if (param1 != 1) {
                           return;
                         }
-                        OpenGlVertexLayout.field_f.a(-3388, 11);
+                        OpenGlVertexLayout.field_f.show(-3388, 11);
                       }
                     } else {
                       if (0 == param1) {
-                        OpenGlVertexLayout.field_f.a(-3388, 18);
+                        OpenGlVertexLayout.field_f.show(-3388, 18);
                       }
                       if (param1 != 4) {
                         return;
                       }
-                      OpenGlVertexLayout.field_f.a(param0 - 3387, 15);
+                      OpenGlVertexLayout.field_f.show(param0 - 3387, 15);
                     }
                   } else {
                     if (param1 != 0) {
                       return;
                     }
-                    OpenGlVertexLayout.field_f.a(-3388, 10);
+                    OpenGlVertexLayout.field_f.show(-3388, 10);
                   }
                 }
               }
             } else {
               if (param1 == 0) {
-                OpenGlVertexLayout.field_f.a(param0 ^ 3387, 5);
+                OpenGlVertexLayout.field_f.show(param0 ^ 3387, 5);
               }
               if (param1 != 5) {
                 return;
               }
-              OpenGlVertexLayout.field_f.a(-3388, 3);
+              OpenGlVertexLayout.field_f.show(-3388, 3);
             }
           }
         }

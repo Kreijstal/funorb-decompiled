@@ -80,7 +80,7 @@ final class FadingWidget extends SingleChildWidget {
           return;
         }
         Sprite var6 = new Sprite(this.child.width, this.child.height);
-        jq.a(7161, var6);
+        jq.pushSpriteRaster(7161, var6);
         if (guard < -35) {
           this.child.renderLayer(0, 0, (byte) -55, layer);
           ClientException.popRasterState((byte) 108);

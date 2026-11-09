@@ -215,13 +215,13 @@ final class IntrusiveDequeCursor {
         uc.field_b = ToolkitRasterStateStack.a(83, var2 * var5, var4 * var2);
     }
 
-    final static void a(cd[] param0, boolean param1) {
+    final static void a(FullscreenDisplayMode[] param0, boolean param1) {
         int var3 = 0;
         int var2_int = 0;
-        cd var4 = null;
+        FullscreenDisplayMode var4 = null;
         int var5 = 0;
         int var6 = 0;
-        cd[] var7 = null;
+        FullscreenDisplayMode[] var7 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -231,8 +231,8 @@ final class IntrusiveDequeCursor {
         try {
           var2_int = param0.length;
           if (!param1) {
-            var7 = (cd[]) null;
-            IntrusiveDequeCursor.a((cd[]) null, true);
+            var7 = (FullscreenDisplayMode[]) null;
+            IntrusiveDequeCursor.a((FullscreenDisplayMode[]) null, true);
           }
           for (var3 = 1; var2_int > var3; var3++) {
             var4 = param0[var3];

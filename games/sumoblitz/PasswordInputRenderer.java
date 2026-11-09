@@ -70,7 +70,7 @@ final class PasswordInputRenderer extends BeveledTextInputRenderer {
             if (guard < 108) {
               return;
             }
-            bj.field_a = OpenGlBuffer.field_a;
+            EmailAvailabilityRequest.field_a = OpenGlBuffer.field_a;
             LegacyOpenGlFlowingWaterEffect.field_e = LegacyOpenGlFlowingWaterEffect.field_e + 1;
             if (0 > LegacyOpenGlEnvironmentWaterEffect.field_i) {
               var5 = 0;

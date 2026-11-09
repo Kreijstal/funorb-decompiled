@@ -57,8 +57,8 @@ final class kd {
         if (MusicPatch.field_u > 200) {
           var5 = (250 - MusicPatch.field_u << 8) / 50;
         }
-        jq.a(7161, LegacyOpenGlShaderProgram.field_a);
-        nk.b();
+        jq.pushSpriteRaster(7161, LegacyOpenGlShaderProgram.field_a);
+        SoftwareRasterViewport.syncClip();
         SoftwareRasterizer.clear();
         IsaacCipher.b(param2 + 0);
         if (256 > var5) {
@@ -191,10 +191,10 @@ final class kd {
     final static void a(boolean param0, int param1) {
         if (param1 >= -78) {
           kd.a(-106, 83, -73);
-          AffineTransform3D.field_o.a(120, param0);
+          AffineTransform3D.emailAvailabilityRequest.complete(120, param0);
           return;
         }
-        AffineTransform3D.field_o.a(120, param0);
+        AffineTransform3D.emailAvailabilityRequest.complete(120, param0);
     }
 
     static {

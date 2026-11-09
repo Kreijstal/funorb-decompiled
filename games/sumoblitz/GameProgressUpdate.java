@@ -7,7 +7,7 @@ final class GameProgressUpdate extends IntrusiveNode {
     int field_n;
     static float[] field_l;
     int field_s;
-    static lg field_o;
+    static ResetStatsConfirmationOverlay field_o;
     static float[] field_k;
     int field_p;
     int field_r;

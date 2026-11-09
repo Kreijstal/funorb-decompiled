@@ -37,7 +37,7 @@ final class EmptyWidgetRenderer implements WidgetRenderer {
             jm.field_b = param13;
             ScrollPane.field_C = param9;
             CacheReferenceNode.field_t = param2;
-            qn.field_a = param10;
+            NineSlicePanel.field_a = param10;
             if (param1 != 84) {
               return;
             }
@@ -86,7 +86,7 @@ final class EmptyWidgetRenderer implements WidgetRenderer {
         int var3 = Sumoblitz.field_L ? 1 : 0;
         BufferedSocket.field_p = null;
         InstrumentNoteMask.field_n = null;
-        cd.field_d = 0;
+        FullscreenDisplayMode.field_d = 0;
         int var2 = SingleChildWidget.field_x;
         SingleChildWidget.field_x = RasterStateFrame.field_q;
         RasterStateFrame.field_q = var2;

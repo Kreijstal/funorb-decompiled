@@ -104,8 +104,8 @@ final class ea {
     }
 
     final static void a(ResourceArchive param0, boolean param1, byte param2, ResourceArchive param3, ResourceArchive param4) {
-        AffineTransform3D.field_o = DroneDebris.a(false, "");
-        AffineTransform3D.field_o.a(113, false);
+        AffineTransform3D.emailAvailabilityRequest = DroneDebris.createEmailAvailabilityRequest(false, "");
+        AffineTransform3D.emailAvailabilityRequest.complete(113, false);
         ToolkitFont.a(param4, param3, 17474, param0);
         if (param2 < 20) {
           return;

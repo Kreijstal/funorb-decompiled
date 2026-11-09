@@ -121,11 +121,11 @@ abstract class ToolkitFont {
                         if (!param0.equals("u")) {
                           if (!param0.equals("/u")) {
                             if (param0.equalsIgnoreCase("shad=-1")) {
-                              jj.field_b = 0;
+                              LoginMethodPreference.field_b = 0;
                             } else {
                               if (param0.startsWith("shad=")) {
                                 var10 = (CharSequence) ((Object) param0.substring(5));
-                                jj.field_b = mn.field_i & -16777216 | ea.a((byte) -73, var10, 16);
+                                LoginMethodPreference.field_b = mn.field_i & -16777216 | ea.a((byte) -73, var10, 16);
                               } else {
                                 if (!param0.equals("shad")) {
                                   if (!param0.equals("/shad")) {
@@ -133,10 +133,10 @@ abstract class ToolkitFont {
                                       this.a(PacketBuffer.field_l, jv.field_b, 60);
                                     }
                                   } else {
-                                    jj.field_b = jv.field_b;
+                                    LoginMethodPreference.field_b = jv.field_b;
                                   }
                                 } else {
-                                  jj.field_b = mn.field_i & -16777216;
+                                  LoginMethodPreference.field_b = mn.field_i & -16777216;
                                 }
                               }
                             }
@@ -428,13 +428,13 @@ abstract class ToolkitFont {
                 }
                 if (var14 != 32) {
                   if (param8 == null) {
-                    if ((-16777216 & jj.field_b) != 0) {
-                      this.drawGlyph((char) var14, param3 + 1, param1 + 1, jj.field_b, true);
+                    if ((-16777216 & LoginMethodPreference.field_b) != 0) {
+                      this.drawGlyph((char) var14, param3 + 1, param1 + 1, LoginMethodPreference.field_b, true);
                     }
                     this.drawGlyph((char) var14, param3, param1, mn.field_i, false);
                   } else {
-                    if ((-16777216 & jj.field_b) != 0) {
-                      this.drawMaskedGlyph((char) var14, param3 + 1, param1 + 1, jj.field_b, true, param8, param4, param5);
+                    if ((-16777216 & LoginMethodPreference.field_b) != 0) {
+                      this.drawMaskedGlyph((char) var14, param3 + 1, param1 + 1, LoginMethodPreference.field_b, true, param8, param4, param5);
                     }
                     this.drawMaskedGlyph((char) var14, param3, param1, mn.field_i, false, param8, param4, param5);
                   }
@@ -511,7 +511,7 @@ abstract class ToolkitFont {
         jm.field_a = (LegacyBitmapFont) ((Object) vf.a(param1, true, "commonui", "arezzo12", param0));
         kw.field_b = (LegacyBitmapFont) ((Object) vf.a(param1, true, "commonui", "arezzo14", param0));
         LegacyOpenGlDisplayLists.field_a = (LegacyBitmapFont) ((Object) vf.a(param1, true, "commonui", "arezzo14bold", param0));
-        Sprite var17 = new Sprite(param3.fetchNamedFile("", "button.gif", -1), (java.awt.Component) ((Object) qn.field_f));
+        Sprite var17 = new Sprite(param3.fetchNamedFile("", "button.gif", -1), (java.awt.Component) ((Object) NineSlicePanel.field_f));
         ScrollPane.a((byte) 83, param0, "dropdown", "commonui");
         RasterIndexedSprite[] var5 = ShaderEffect.a("screen_options", param0, 73, "commonui");
         sb.field_d = new RasterIndexedSprite[4];
@@ -542,17 +542,17 @@ abstract class ToolkitFont {
         }
         try {
           GameApplet.pushRasterState(70);
-          var17.d();
+          var17.bindRaster();
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
           var15 = new Sprite(var9, var9);
           var18 = var15;
-          var18.d();
+          var18.bindRaster();
           var17.c(0, 0);
           var11 = new Sprite(var9, var9);
-          var11.d();
+          var11.bindRaster();
           var17.c(var9 - var17.field_x, 0);
           var12 = new Sprite(-(2 * var9) + var17.field_x, var9);
-          var12.d();
+          var12.bindRaster();
           var17.c(-var9, 0);
           ClientException.popRasterState((byte) -73);
           LevelCompleteUpgradeScreen.field_j = new Sprite[]{var15, var12, var11};
@@ -589,7 +589,7 @@ abstract class ToolkitFont {
         }
         StatefulWidgetRenderer.field_p = -1;
         jv.field_b = param1;
-        jj.field_b = param1;
+        LoginMethodPreference.field_b = param1;
     }
 
     ToolkitFont(GraphicsToolkit param0, FontMetrics param1) {
@@ -601,7 +601,7 @@ abstract class ToolkitFont {
         }
     }
 
-    final static boolean a(cd param0, int param1, cd param2) {
+    final static boolean a(FullscreenDisplayMode param0, int param1, FullscreenDisplayMode param2) {
         RuntimeException var3 = null;
         ResourceArchive var4 = null;
         RuntimeException stackIn_15_0 = null;
@@ -611,17 +611,17 @@ abstract class ToolkitFont {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0.field_a > param2.field_a) {
+          if (param0.width > param2.width) {
             return true;
           }
           if (param1 > -11) {
             var4 = (ResourceArchive) null;
             ToolkitFont.a((ResourceArchive) null, (ResourceArchive) null, 47, (ResourceArchive) null);
           }
-          if (param0.field_a != param2.field_a) {
+          if (param0.width != param2.width) {
             return false;
           }
-          if (param2.field_g >= param0.field_g) {
+          if (param2.height >= param0.height) {
             return false;
           }
           return true;

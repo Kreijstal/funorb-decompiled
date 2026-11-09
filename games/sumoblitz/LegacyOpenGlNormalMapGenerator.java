@@ -167,7 +167,7 @@ final class LegacyOpenGlNormalMapGenerator {
           var13 = ig.field_a;
           var2 = var13.readUnsignedByte(-31302);
           if (var2 == 0) {
-            var11 = lr.a(-14808);
+            var11 = VertexBufferReference.a(-14808);
             var17 = var11;
             var15 = var17;
             var3 = var15;
@@ -180,7 +180,7 @@ final class LegacyOpenGlNormalMapGenerator {
             }
             var16_ref = (ServerIntArrayRequest) (CheckboxWidget.field_E.first(-120));
             if (var16_ref == null) {
-              kk.a((byte) -111);
+              LegacyOpenGlTextureCache.closeAccountSocket((byte) -111);
               return;
             }
             var16_ref.complete = true;
@@ -193,21 +193,21 @@ final class LegacyOpenGlNormalMapGenerator {
             if (var2 == 2) {
               var14 = (ServerIntArrayRequest) (CheckboxWidget.field_E.first(123));
               if (var14 == null) {
-                kk.a((byte) -122);
+                LegacyOpenGlTextureCache.closeAccountSocket((byte) -122);
                 return;
               }
-              var14.values = lr.a(-14808);
+              var14.values = VertexBufferReference.a(-14808);
               var14.complete = true;
               var14.firstValue = var14.values[0];
               var14.unlink(false);
             } else {
               IntrusiveNode.reportClientError("A1: " + VictoryScreen.b((byte) 110), (Throwable) null, 0);
-              kk.a((byte) -120);
+              LegacyOpenGlTextureCache.closeAccountSocket((byte) -120);
             }
           } else {
             var12 = (GameProgressUpdate) (SoftwareRenderTarget.field_f.first(param0 + 29968));
             if (var12 == null) {
-              kk.a((byte) -113);
+              LegacyOpenGlTextureCache.closeAccountSocket((byte) -113);
               return;
             }
             var12.unlink(false);

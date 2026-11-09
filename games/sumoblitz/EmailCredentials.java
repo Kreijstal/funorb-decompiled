@@ -32,7 +32,7 @@ final class EmailCredentials extends LoginCredentials {
 
     final static void a(byte param0, int param1) {
         int var2 = -16 / ((18 - param0) / 60);
-        OpenGlVertexLayout.field_f.a(-3388, param1);
+        OpenGlVertexLayout.field_f.show(-3388, param1);
     }
 
     final LoginCredentialType credentialType(byte guard) {
@@ -69,12 +69,12 @@ final class EmailCredentials extends LoginCredentials {
           if (param0 > -20) {
             continueText = (String) null;
           }
-          if (OpenGlBuffer.field_a == bj.field_a) {
+          if (OpenGlBuffer.field_a == EmailAvailabilityRequest.field_a) {
             return false;
           }
-          TextureCombineOperation.field_a = WidgetTheme.field_c[bj.field_a];
-          WhirlpoolDigest.field_c = SpriteMask.field_c[bj.field_a];
-          bj.field_a = bj.field_a + 1 & 127;
+          TextureCombineOperation.field_a = WidgetTheme.field_c[EmailAvailabilityRequest.field_a];
+          WhirlpoolDigest.field_c = SpriteMask.field_c[EmailAvailabilityRequest.field_a];
+          EmailAvailabilityRequest.field_a = EmailAvailabilityRequest.field_a + 1 & 127;
           stackIn_7_0 = true;
         }
         return stackIn_7_0;

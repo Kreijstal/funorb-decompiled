@@ -87,7 +87,7 @@ final class pq extends UiWidget {
         int var9 = Sumoblitz.field_L ? 1 : 0;
         int var2 = this.height >> 1;
         Sprite var3 = new Sprite(var2, this.height);
-        jq.a(7161, var3);
+        jq.pushSpriteRaster(7161, var3);
         if (param0 > -23) {
           this.field_M = (Sprite) null;
         }
@@ -120,7 +120,7 @@ final class pq extends UiWidget {
         int var9Lifetime1;
         int var12Lifetime1;
         int var6Lifetime1;
-        jq.a(7161, var14);
+        jq.pushSpriteRaster(7161, var14);
         int var5 = this.height >> 1;
         for (var6 = 0; this.height > var6; var6++) {
           var7 = (var6 >> 1) * (-1 + this.field_H * 2) % (2 * this.field_H);
@@ -164,7 +164,7 @@ final class pq extends UiWidget {
           }
           ClientException.popRasterState((byte) -51);
           if (param3 + this.field_M.field_x >= SoftwareRasterizer.clipLeft) {
-            jq.a(param2 + 6905, this.field_E);
+            jq.pushSpriteRaster(param2 + 6905, this.field_E);
             param0.draw(-this.field_A, 0);
             param0.draw(this.field_H * 2 - this.field_A, 0);
             this.field_G.drawMultiply(0, 0);
@@ -172,7 +172,7 @@ final class pq extends UiWidget {
             this.field_E.draw(param3, param1);
           }
           if (SoftwareRasterizer.clipRight >= -this.field_M.field_x + var5_int) {
-            jq.a(7161, this.field_E);
+            jq.pushSpriteRaster(7161, this.field_E);
             for (var7 = this.field_A + this.width - this.field_M.field_x; this.field_H * 2 < var7; var7 = var7 - this.field_H * 2) {
             }
             param0.draw(-var7, 0);

@@ -73,12 +73,12 @@ final class RotarySelectorRenderer implements WidgetRenderer {
               }
               var5 = applet.getCodeBase();
               var3 = MusicPatch.a((byte) 121, applet, var5).getFile();
-              tw.a(-105, applet, "updatelinks", new Object[]{"home", var3 + "home.ws"});
-              tw.a(-115, applet, "updatelinks", new Object[]{"gamelist", var3 + "togamelist.ws"});
-              tw.a(-111, applet, "updatelinks", new Object[]{"serverlist", var3 + "toserverlist.ws"});
-              tw.a(-106, applet, "updatelinks", new Object[]{"options", var3 + "options.ws"});
-              tw.a(-126, applet, "updatelinks", new Object[]{"terms", var3 + "terms.ws"});
-              tw.a(-101, applet, "updatelinks", new Object[]{"privacy", var3 + "privacy.ws"});
+              BrowserScriptBridge.call(-105, applet, "updatelinks", new Object[]{"home", var3 + "home.ws"});
+              BrowserScriptBridge.call(-115, applet, "updatelinks", new Object[]{"gamelist", var3 + "togamelist.ws"});
+              BrowserScriptBridge.call(-111, applet, "updatelinks", new Object[]{"serverlist", var3 + "toserverlist.ws"});
+              BrowserScriptBridge.call(-106, applet, "updatelinks", new Object[]{"options", var3 + "options.ws"});
+              BrowserScriptBridge.call(-126, applet, "updatelinks", new Object[]{"terms", var3 + "terms.ws"});
+              BrowserScriptBridge.call(-101, applet, "updatelinks", new Object[]{"privacy", var3 + "privacy.ws"});
               return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

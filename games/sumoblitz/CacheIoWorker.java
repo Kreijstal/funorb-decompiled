@@ -90,7 +90,7 @@ final class CacheIoWorker implements Runnable {
           if (param0) {
             CacheIoWorker.releaseStatics(27);
           }
-          stackIn_3_0 = qc.a(param1, 38, false);
+          stackIn_3_0 = DroneIntroductionOverlay.validateDisplayName(param1, 38, false);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

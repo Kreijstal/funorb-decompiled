@@ -7,7 +7,7 @@ final class DraggableWidget extends SingleChildWidget {
     private int field_D;
     private int field_F;
     private boolean field_G;
-    static df[] field_B;
+    static HiscorePlayerName[] field_B;
     private int field_H;
     static String closeText;
     private int field_J;
@@ -231,10 +231,10 @@ final class DraggableWidget extends SingleChildWidget {
 
     static {
         int var0 = 0;
-        field_B = new df[255];
+        field_B = new HiscorePlayerName[255];
         closeText = "Close";
         for (var0 = 0; field_B.length > var0; var0++) {
-          field_B[var0] = new df();
+          field_B[var0] = new HiscorePlayerName();
         }
         backText = "Back";
         achievementDescriptions = new String[]{"Complete the final level with the highest level of speed", "Complete the final level with the highest level of traction", "Complete the final level with the highest level of bounce", "Complete the game without restarting a level", "Complete 10 levels without using any temporary powerups", "Complete 5 levels without using any speed powerups", "Complete 5 levels without using any traction powerups", "Complete 5 levels without using any bounce powerups", "Last 30 seconds without bumping into anything", "Destroy at least 10 enemies by using the Energy Blast to knock them into a hazard", "On a level where there are Zap Traps, defeat all enemies by pushing them into a wall", "On a level where there are Pinball Bouncers, bounce over 15 times in 5 seconds", "Get to the maximum multiplier 5 times during the course of a game", "Kill 5 different enemies in a row", "Earn 50,000 points during one level", "On level 8, burst big enemies before little enemies", "Complete the first 10 levels", "Complete the first 10 levels without dying", "Complete the full game", "Complete the full game without dying", "Complete Easy mode with 1,000,000 points", "Complete the full game on hard mode", "Last for 1 minute in Challenge Mode", "Last for 3 minutes in Challenge Mode", "Last for 5 minutes in Challenge Mode", "Last for 1 minute in Hard Challenge Mode", "Last for 3 minutes in Hard Challenge Mode", "Last for 5 minutes in Hard Challenge Mode"};

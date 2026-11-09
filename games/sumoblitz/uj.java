@@ -38,18 +38,18 @@ final class uj {
           if (AccountConnectionPhase.field_b != null) {
             DisplayModeErrorDialog.a(param3, param1, (byte) -87, 1048576, param2);
           }
-          if (null != qc.field_e) {
+          if (null != DroneIntroductionOverlay.field_e) {
             var4_ref = EmailCredentials.field_f;
             synchronized (var4_ref) {
-              qc.field_e.setChannelVolumeScale((byte) -91, -1, param1);
+              DroneIntroductionOverlay.field_e.setChannelVolumeScale((byte) -91, -1, param1);
               if (GridWidgetContainer.field_B == param3) {
                 return;
               }
-              qc.field_e.stop(0);
+              DroneIntroductionOverlay.field_e.stop(0);
               EmailCredentials.field_f.flush();
               GridWidgetContainer.field_B = param3;
               if (null != GridWidgetContainer.field_B) {
-                qc.field_e.playTrack(param2, GridWidgetContainer.field_B, 91);
+                DroneIntroductionOverlay.field_e.playTrack(param2, GridWidgetContainer.field_B, 91);
               }
             }
           }

@@ -7,7 +7,7 @@ final class OpenGlTexture3D extends OpenGlTexture implements Texture3D {
     private int field_l;
     static QuickChatCommand field_n;
     static int[] field_j;
-    static jj field_m;
+    static LoginMethodPreference field_m;
     static String logInCreateAccountText;
     static ToolkitSprite[] field_p;
 
@@ -56,6 +56,6 @@ final class OpenGlTexture3D extends OpenGlTexture implements Texture3D {
         field_n = new QuickChatCommand(0, 2, 2, 1);
         field_j = new int[25];
         logInCreateAccountText = "Log in / Create account";
-        field_m = new jj("email");
+        field_m = new LoginMethodPreference("email");
     }
 }

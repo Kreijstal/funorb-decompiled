@@ -62,7 +62,7 @@ abstract class DebouncedInputValidator implements InputValidator {
           var2[3] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(64, "large red ball hit4");
           var2[4] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(-117, "large red ball hit5");
           var2[5] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(-119, "large red ball hit6");
-          lg.field_d[1][0] = var3;
+          ResetStatsConfirmationOverlay.field_d[1][0] = var3;
           var4 = new PcmSample[5];
           var2Lifetime1 = var4;
           var2Lifetime1[0] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(66, "medium red hit1");
@@ -70,7 +70,7 @@ abstract class DebouncedInputValidator implements InputValidator {
           var2Lifetime1[2] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(40, "medium red hit3");
           var2Lifetime1[3] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(73, "medium red hit4");
           var2Lifetime1[4] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(-102, "medium red hit5");
-          lg.field_d[1][1] = var4;
+          ResetStatsConfirmationOverlay.field_d[1][1] = var4;
           var5 = new PcmSample[7];
           var2Lifetime2 = var5;
           var2Lifetime2[0] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(29, "small red ball hit1");
@@ -80,7 +80,7 @@ abstract class DebouncedInputValidator implements InputValidator {
           var2Lifetime2[4] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(119, "small red ball hit5");
           var2Lifetime2[5] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(118, "small red ball hit6");
           var2Lifetime2[6] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(-101, "small red ball hit7");
-          lg.field_d[1][2] = var5;
+          ResetStatsConfirmationOverlay.field_d[1][2] = var5;
           var6 = new PcmSample[6];
           var2Lifetime3 = var6;
           var2Lifetime3[0] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(36, "large orange ball hit1");
@@ -89,7 +89,7 @@ abstract class DebouncedInputValidator implements InputValidator {
           var2Lifetime3[3] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(101, "large orange ball hit4");
           var2Lifetime3[4] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(-123, "large orange ball hit5");
           var2Lifetime3[5] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(-126, "large orange ball hit6");
-          lg.field_d[2][0] = var6;
+          ResetStatsConfirmationOverlay.field_d[2][0] = var6;
           var7 = new PcmSample[6];
           var2Lifetime4 = var7;
           var2Lifetime4[0] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(51, "medium orange ball hit1");
@@ -98,7 +98,7 @@ abstract class DebouncedInputValidator implements InputValidator {
           var2Lifetime4[3] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(-98, "medium orange ball hit4");
           var2Lifetime4[4] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(69, "medium orange ball hit5");
           var2Lifetime4[5] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(41, "medium orange ball hit6");
-          lg.field_d[2][1] = var7;
+          ResetStatsConfirmationOverlay.field_d[2][1] = var7;
           var8 = new PcmSample[7];
           var2Lifetime5 = var8;
           var2Lifetime5[0] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(111, "small orange ball hit1");
@@ -108,7 +108,7 @@ abstract class DebouncedInputValidator implements InputValidator {
           var2Lifetime5[4] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(96, "small orange ball hit5");
           var2Lifetime5[5] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(-124, "small orange ball hit6");
           var2Lifetime5[6] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(-103, "small orange ball hit7");
-          lg.field_d[2][2] = var8;
+          ResetStatsConfirmationOverlay.field_d[2][2] = var8;
           var9 = new PcmSample[7];
           var2Lifetime6 = var9;
           var2Lifetime6[0] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(-122, "large blue ball hit1");
@@ -118,7 +118,7 @@ abstract class DebouncedInputValidator implements InputValidator {
           var2Lifetime6[4] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(87, "large blue ball hit5");
           var2Lifetime6[5] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(73, "large blue ball hit6");
           var2Lifetime6[6] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(124, "large blue ball hit7");
-          lg.field_d[5][0] = var9;
+          ResetStatsConfirmationOverlay.field_d[5][0] = var9;
           var10 = new PcmSample[6];
           var2Lifetime7 = var10;
           var2Lifetime7[0] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(95, "medium blue ball hit1");
@@ -127,7 +127,7 @@ abstract class DebouncedInputValidator implements InputValidator {
           var2Lifetime7[3] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(-124, "medium blue ball hit4");
           var2Lifetime7[4] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(69, "medium blue ball hit5");
           var2Lifetime7[5] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(-111, "medium blue ball hit6");
-          lg.field_d[5][1] = var10;
+          ResetStatsConfirmationOverlay.field_d[5][1] = var10;
           var11 = new PcmSample[7];
           var2Lifetime8 = var11;
           var2Lifetime8[0] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(90, "small blue ball hit1");
@@ -137,7 +137,7 @@ abstract class DebouncedInputValidator implements InputValidator {
           var2Lifetime8[4] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(-120, "small blue ball hit5");
           var2Lifetime8[5] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(-98, "small blue ball hit6");
           var2Lifetime8[6] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(-97, "small blue ball hit7");
-          lg.field_d[5][2] = var11;
+          ResetStatsConfirmationOverlay.field_d[5][2] = var11;
           var12 = new PcmSample[7];
           var2Lifetime9 = var12;
           var2Lifetime9[0] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(-106, "large yellow ball hit1");
@@ -147,7 +147,7 @@ abstract class DebouncedInputValidator implements InputValidator {
           var2Lifetime9[4] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(78, "large yellow ball hit5");
           var2Lifetime9[5] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(80, "large yellow ball hit6");
           var2Lifetime9[6] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(-95, "large yellow ball hit7");
-          lg.field_d[3][0] = var12;
+          ResetStatsConfirmationOverlay.field_d[3][0] = var12;
           var13 = new PcmSample[6];
           var2Lifetime10 = var13;
           var2Lifetime10[0] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(86, "medium yellow ball hit1");
@@ -156,7 +156,7 @@ abstract class DebouncedInputValidator implements InputValidator {
           var2Lifetime10[3] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(89, "medium yellow ball hit4");
           var2Lifetime10[4] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(-121, "medium yellow ball hit5");
           var2Lifetime10[5] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(91, "medium yellow ball hit6");
-          lg.field_d[3][1] = var13;
+          ResetStatsConfirmationOverlay.field_d[3][1] = var13;
           var14 = new PcmSample[6];
           var2Lifetime11 = var14;
           var2Lifetime11[0] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(44, "small yellow ball hit1");
@@ -165,7 +165,7 @@ abstract class DebouncedInputValidator implements InputValidator {
           var2Lifetime11[3] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(98, "small yellow ball hit4");
           var2Lifetime11[4] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(-127, "small yellow ball hit5");
           var2Lifetime11[5] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(56, "small yellow ball hit6");
-          lg.field_d[3][2] = var14;
+          ResetStatsConfirmationOverlay.field_d[3][2] = var14;
           var15 = new PcmSample[7];
           var2Lifetime12 = var15;
           var2Lifetime12[0] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(63, "large purple ball hit1");
@@ -175,7 +175,7 @@ abstract class DebouncedInputValidator implements InputValidator {
           var2Lifetime12[4] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(54, "large purple ball hit5");
           var2Lifetime12[5] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(-91, "large purple ball hit6");
           var2Lifetime12[6] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(-111, "large purple ball hit7");
-          lg.field_d[4][0] = var15;
+          ResetStatsConfirmationOverlay.field_d[4][0] = var15;
           var16 = new PcmSample[6];
           var2Lifetime13 = var16;
           var2Lifetime13[0] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(-94, "medium purple ball hit1");
@@ -184,7 +184,7 @@ abstract class DebouncedInputValidator implements InputValidator {
           var2Lifetime13[3] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(46, "medium purple ball hit4");
           var2Lifetime13[4] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(-91, "medium purple ball hit5");
           var2Lifetime13[5] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(-111, "medium purple ball hit6");
-          lg.field_d[4][1] = var16;
+          ResetStatsConfirmationOverlay.field_d[4][1] = var16;
           var17 = new PcmSample[7];
           var2Lifetime14 = var17;
           var2Lifetime14[0] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(-126, "small purple ball hit1");
@@ -194,7 +194,7 @@ abstract class DebouncedInputValidator implements InputValidator {
           var2Lifetime14[4] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(-101, "small purple ball hit5");
           var2Lifetime14[5] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(98, "small purple ball hit6");
           var2Lifetime14[6] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(-127, "small purple ball hit7");
-          lg.field_d[4][2] = var17;
+          ResetStatsConfirmationOverlay.field_d[4][2] = var17;
           var18 = new PcmSample[8];
           var2Lifetime15 = var18;
           var2Lifetime15[0] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(37, "large explosion1");

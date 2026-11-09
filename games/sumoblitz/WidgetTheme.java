@@ -231,14 +231,14 @@ final class WidgetTheme {
             } else {
               var12 = var8;
             }
-            if (null == qn.field_b) {
-              qn.field_b = new String[16];
+            if (null == NineSlicePanel.field_b) {
+              NineSlicePanel.field_b = new String[16];
             }
-            var11Lifetime1 = this.font.breakLines(text, new int[]{var12}, qn.field_b);
+            var11Lifetime1 = this.font.breakLines(text, new int[]{var12}, NineSlicePanel.field_b);
             var9 = 0;
             var10 = var10 + var7 * (var11Lifetime1 - 1);
             for (var13Lifetime2 = 0; var13Lifetime2 < var11Lifetime1; var13Lifetime2++) {
-              var14 = this.font.stringWidth(qn.field_b[var13Lifetime2]);
+              var14 = this.font.stringWidth(NineSlicePanel.field_b[var13Lifetime2]);
               if (var9 < var14) {
                 var9 = var14;
               }
@@ -275,8 +275,8 @@ final class WidgetTheme {
         TextWidgetRenderer var17 = null;
         StatefulWidgetRenderer var4 = null;
         Sprite[] var5 = null;
-        mg var16 = null;
-        mg var18 = null;
+        ArgbSprite var16 = null;
+        ArgbSprite var18 = null;
         int var7_int = 0;
         StatefulWidgetRenderer var6 = null;
         StatefulWidgetRenderer var7 = null;
@@ -315,7 +315,7 @@ final class WidgetTheme {
           var4.createStateStyle(false, 1).withBackgroundSlices(FontMetrics.a(11184810, 126, 10066329, 13421772), 2147483647);
           var4.createStateStyle(false, 3).withBackgroundSlices(FontMetrics.a(8947848, 97, 7829367, 10066329), 2147483647).withOffsetX(1, -1).withOffsetY(1, 1);
           var5 = new Sprite[9];
-          var16 = new mg(32, 32);
+          var16 = new ArgbSprite(32, 32);
           var18 = var16;
           for (var7_int = 0; var18.pixels.length > var7_int; var7_int++) {
             var16.pixels[var7_int] = 1077952576;

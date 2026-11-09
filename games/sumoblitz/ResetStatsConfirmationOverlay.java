@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lg extends qt {
+final class ResetStatsConfirmationOverlay extends SelectionOverlay {
     static PcmSample[][][] field_d;
     static int field_c;
 
@@ -13,10 +13,10 @@ final class lg extends qt {
         return ((544 == (param0 & 544) ? 1 : 0) | ((param0 & 24) != 0 ? 1 : 0)) != 0;
     }
 
-    public lg() {
+    public ResetStatsConfirmationOverlay() {
     }
 
-    final void a(GraphicsToolkit param0, int param1) {
+    final void render(GraphicsToolkit toolkit, int guard) {
         int var3_int = 0;
         int var4 = 0;
         GraphicsToolkit var5 = null;
@@ -30,22 +30,22 @@ final class lg extends qt {
         RuntimeException var3 = null;
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
-          wo.a(up.field_c, 360, -5, -16777216, 3, param0, 650, 50, 1, true);
+          DelegatingCanvas.a(up.field_c, 360, -5, -16777216, 3, toolkit, 650, 50, 1, true);
           hc.field_e.a(DisplayNameForm.areYouSureYouText, -1, -16777216, 150, 320, 0);
-          if (param1 != 22707) {
-            lg.a(73, 17, -78);
+          if (guard != 22707) {
+            ResetStatsConfirmationOverlay.a(73, 17, -78);
           }
           var3_int = 70;
           var4 = 0;
           while (600 > var3_int) {
-            var5 = param0;
+            var5 = toolkit;
             var6 = var3_int;
             var7 = up.field_c;
-            wo.a(var7, 100, var6, 0, 1, var5, 200, 200, 1, true);
-            if (var4 != this.field_a) {
+            DelegatingCanvas.a(var7, 100, var6, 0, 1, var5, 200, 200, 1, true);
+            if (var4 != this.hoveredOption) {
               hc.field_e.a(StringBuilderSupport.yesNoLabels[var4], -1, -16777216, 260, 100 + var3_int, 0);
             } else {
-              ForceFieldRingEffect.field_t.a(StringBuilderSupport.yesNoLabels[var4], -1, -16777216, 258, -4 + (var3_int + 100), param1 ^ 22707);
+              ForceFieldRingEffect.field_t.a(StringBuilderSupport.yesNoLabels[var4], -1, -16777216, 258, -4 + (var3_int + 100), guard ^ 22707);
             }
             var3_int += 300;
             var4++;
@@ -56,12 +56,12 @@ final class lg extends qt {
           var3 = decompiledCaughtException;
           stackIn_12_0 = var3;
           stackIn_12_1 = new StringBuilder().append("lg.I(");
-          if (param0 == null) {
+          if (toolkit == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -74,26 +74,26 @@ final class lg extends qt {
         field_d = (PcmSample[][][]) null;
     }
 
-    final void c(int param0) {
+    final void update(int guard) {
         int var3 = 0;
         int var2 = (-70 + ko.field_p) / 300;
         int var3Lifetime1;
-        if (param0 <= 0) {
+        if (guard <= 0) {
           field_d = (PcmSample[][][]) null;
           var3 = (pi.field_e - 200) / 100;
-          this.field_a = var2 + var3 * 2;
+          this.hoveredOption = var2 + var3 * 2;
           if ((-70 + ko.field_p) % 300 <= 200) {
-            if (2 <= this.field_a) {
-              this.field_a = -1;
+            if (2 <= this.hoveredOption) {
+              this.hoveredOption = -1;
               if (ActiveCanvasProvider.field_c == 1) {
-                if (this.field_a == -1) {
+                if (this.hoveredOption == -1) {
                 } else {
-                  if (0 == this.field_a) {
+                  if (0 == this.hoveredOption) {
                     WhirlpoolTables.c(89);
                     UiWidget.d((byte) -83);
-                    this.b((byte) -127);
+                    this.hide((byte) -127);
                   } else {
-                    this.b((byte) -128);
+                    this.hide((byte) -128);
                   }
                 }
               }
@@ -102,115 +102,115 @@ final class lg extends qt {
             if (ActiveCanvasProvider.field_c != 1) {
               return;
             }
-            if (this.field_a == -1) {
+            if (this.hoveredOption == -1) {
               return;
             }
-            if (0 == this.field_a) {
+            if (0 == this.hoveredOption) {
               WhirlpoolTables.c(89);
               UiWidget.d((byte) -83);
-              this.b((byte) -127);
+              this.hide((byte) -127);
               return;
             }
-            this.b((byte) -128);
+            this.hide((byte) -128);
             return;
           }
-          this.field_a = -1;
-          if (2 > this.field_a) {
+          this.hoveredOption = -1;
+          if (2 > this.hoveredOption) {
             if (ActiveCanvasProvider.field_c != 1) {
               return;
             }
-            if (this.field_a != -1) {
-              if (0 == this.field_a) {
+            if (this.hoveredOption != -1) {
+              if (0 == this.hoveredOption) {
                 WhirlpoolTables.c(89);
                 UiWidget.d((byte) -83);
-                this.b((byte) -127);
+                this.hide((byte) -127);
                 return;
               }
-              this.b((byte) -128);
+              this.hide((byte) -128);
               return;
             }
             return;
           }
-          this.field_a = -1;
+          this.hoveredOption = -1;
           if (ActiveCanvasProvider.field_c == 1) {
-            if (this.field_a == -1) {
+            if (this.hoveredOption == -1) {
               return;
             }
-            if (0 == this.field_a) {
+            if (0 == this.hoveredOption) {
               WhirlpoolTables.c(89);
               UiWidget.d((byte) -83);
-              this.b((byte) -127);
+              this.hide((byte) -127);
               return;
             }
-            this.b((byte) -128);
+            this.hide((byte) -128);
             return;
           }
           return;
         }
         var3Lifetime1 = (pi.field_e - 200) / 100;
-        this.field_a = var2 + var3Lifetime1 * 2;
+        this.hoveredOption = var2 + var3Lifetime1 * 2;
         if ((-70 + ko.field_p) % 300 > 200) {
-          this.field_a = -1;
-          if (2 <= this.field_a) {
-            this.field_a = -1;
+          this.hoveredOption = -1;
+          if (2 <= this.hoveredOption) {
+            this.hoveredOption = -1;
             if (ActiveCanvasProvider.field_c == 1) {
-              if (this.field_a == -1) {
+              if (this.hoveredOption == -1) {
                 return;
               }
-              if (0 == this.field_a) {
+              if (0 == this.hoveredOption) {
                 WhirlpoolTables.c(89);
                 UiWidget.d((byte) -83);
-                this.b((byte) -127);
+                this.hide((byte) -127);
                 return;
               }
-              this.b((byte) -128);
+              this.hide((byte) -128);
               return;
             }
             return;
           }
           if (ActiveCanvasProvider.field_c == 1) {
-            if (this.field_a == -1) {
+            if (this.hoveredOption == -1) {
               return;
             }
-            if (0 == this.field_a) {
+            if (0 == this.hoveredOption) {
               WhirlpoolTables.c(89);
               UiWidget.d((byte) -83);
-              this.b((byte) -127);
+              this.hide((byte) -127);
               return;
             }
-            this.b((byte) -128);
+            this.hide((byte) -128);
             return;
           }
           return;
         }
-        if (2 <= this.field_a) {
-          this.field_a = -1;
+        if (2 <= this.hoveredOption) {
+          this.hoveredOption = -1;
           if (ActiveCanvasProvider.field_c == 1) {
-            if (this.field_a == -1) {
+            if (this.hoveredOption == -1) {
               return;
             }
-            if (0 == this.field_a) {
+            if (0 == this.hoveredOption) {
               WhirlpoolTables.c(89);
               UiWidget.d((byte) -83);
-              this.b((byte) -127);
+              this.hide((byte) -127);
               return;
             }
-            this.b((byte) -128);
+            this.hide((byte) -128);
             return;
           }
           return;
         }
         if (ActiveCanvasProvider.field_c == 1) {
-          if (this.field_a == -1) {
+          if (this.hoveredOption == -1) {
             return;
           }
-          if (0 == this.field_a) {
+          if (0 == this.hoveredOption) {
             WhirlpoolTables.c(89);
             UiWidget.d((byte) -83);
-            this.b((byte) -127);
+            this.hide((byte) -127);
             return;
           }
-          this.b((byte) -128);
+          this.hide((byte) -128);
           return;
         }
     }

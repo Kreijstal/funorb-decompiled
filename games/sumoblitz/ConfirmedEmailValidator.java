@@ -59,7 +59,7 @@ final class ConfirmedEmailValidator extends TextInputValidator {
     }
 
     final ValidationStatus validateText(byte guard, String text) {
-        bj var3 = null;
+        EmailAvailabilityRequest var3 = null;
         RuntimeException var3_ref = null;
         ValidationStatus stackIn_3_0 = null;
         ValidationStatus stackIn_7_0 = null;
@@ -74,13 +74,13 @@ final class ConfirmedEmailValidator extends TextInputValidator {
             return stackIn_3_0;
           }
           if (!text.equals(this.lastCheckedEmail)) {
-            var3 = RasterBuffer.a(guard ^ 27, text);
-            if (!var3.a(true)) {
+            var3 = RasterBuffer.pollEmailAvailability(guard ^ 27, text);
+            if (!var3.isComplete(true)) {
               stackIn_7_0 = kt.PENDING;
               return stackIn_7_0;
             }
             this.lastCheckedEmail = text;
-            this.emailAvailable = var3.c(-1);
+            this.emailAvailable = var3.isAvailable(-1);
           }
           if (this.emailAvailable) {
             stackIn_12_0 = qe.VALID;

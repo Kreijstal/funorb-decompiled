@@ -62,10 +62,10 @@ final class uc {
           if (param1) {
             field_d = (QuickChatCommand) null;
           }
-          if (!OpenGlVertexLayout.field_f.a((byte) 91)) {
+          if (!OpenGlVertexLayout.field_f.isVisible((byte) 91)) {
             return;
           }
-          OpenGlVertexLayout.field_f.a(param0, -4475);
+          OpenGlVertexLayout.field_f.render(param0, -4475);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

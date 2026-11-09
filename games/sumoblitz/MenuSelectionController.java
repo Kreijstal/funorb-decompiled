@@ -30,7 +30,7 @@ final class MenuSelectionController {
         il.field_b = ResizingDialog.a(var2, hc.field_b, (byte) -11);
         CacheIoWorker.field_b = ResizingDialog.a(var2, oi.field_d, (byte) -11);
         vm.field_a = DroneDebris.createToolkitSprites(TextLayoutLine.field_c, var2, 28513);
-        HudMessage.field_s = DroneDebris.createToolkitSprites(jj.field_c, var2, 28513);
+        HudMessage.field_s = DroneDebris.createToolkitSprites(LoginMethodPreference.field_c, var2, 28513);
         SpriteState.field_B = DroneDebris.createToolkitSprites(ResourceRequest.field_r, var2, 28513);
         SecondaryNodeDequeIterator.field_a = DroneDebris.createToolkitSprites(IsaacCipher.field_d, var2, 28513);
         IntrusiveDeque.field_c = DroneDebris.createToolkitSprites(ProxyAuthenticationRequiredException.field_a, var2, 28513);
@@ -40,27 +40,27 @@ final class MenuSelectionController {
         HudMessage.field_m = ResizingDialog.a(var2, LegacyOpenGlPostProcessEffect.field_k, (byte) -11);
         bt.field_e = ResizingDialog.a(var2, BufferedSocket.field_n, (byte) -11);
         LegacyOpenGlTexture.field_e = DroneDebris.createToolkitSprites(RasterStateFrame.field_l, var2, 28513);
-        ContentDialog.field_ab = DroneDebris.createToolkitSprites(kk.field_e, var2, 28513);
+        ContentDialog.field_ab = DroneDebris.createToolkitSprites(LegacyOpenGlTextureCache.field_e, var2, 28513);
         hv.field_d = DroneDebris.createToolkitSprites(HardwareTurbulentWaterNoise.field_w, var2, 28513);
         TextHotspot.field_n = DroneDebris.createToolkitSprites(StatefulWidgetRenderer.field_r, var2, 28513);
         MenuScreen.field_a = DroneDebris.createToolkitSprites(kr.field_b, var2, 28513);
         HardwareTextureCache.field_e = DroneDebris.createToolkitSprites(DisplayModeConfirmationDialog.field_V, var2, 28513);
         if (guard) {
           field_c = (ResourceArchive) null;
-          QuickChatCommand.field_e = DroneDebris.createToolkitSprites(ph.field_a, var2, 28513);
+          QuickChatCommand.field_e = DroneDebris.createToolkitSprites(LruNodeCache.field_a, var2, 28513);
           ProxyAuthenticationRequiredException.field_e = DroneDebris.createToolkitSprites(CachedTextLayout.field_h, var2, 28513);
           HardwareRidgedWaterNoise.field_A = DroneDebris.createToolkitSprites(RendererSession.field_b, var2, 28513);
-          up.field_e = DroneDebris.createToolkitSprites(cd.field_c, var2, 28513);
+          up.field_e = DroneDebris.createToolkitSprites(FullscreenDisplayMode.field_c, var2, 28513);
           UnderageAccountInfoPanel.field_B = ResizingDialog.a(var2, ServerDataReadRequest.field_k, (byte) -11);
           DroneDebris.createToolkitSprites(Transform3D.field_a, var2, 28513);
           IntrusiveDeque.field_d = ResizingDialog.a(var2, ToolkitRasterStateFrame.field_a, (byte) -11);
           MusicCrossfadeStream.field_q = DroneDebris.createToolkitSprites(uj.field_c, var2, 28513);
-          ResizingDialog.a(var2, df.field_d, (byte) -11);
+          ResizingDialog.a(var2, HiscorePlayerName.field_d, (byte) -11);
           DroneDebris.createToolkitSprites(DroneChargeParticle.field_v, var2, 28513);
           uc.field_a = ResizingDialog.a(var2, FullscreenMembershipDialog.field_T, (byte) -11);
           CachedArchiveProvider.field_j = DroneDebris.createToolkitSprites(UiStyle.field_v, var2, 28513);
           OpenGlBuffer.field_g = DroneDebris.createToolkitSprites(LegacyOpenGlRenderbuffer.field_w, var2, 28513);
-          ResizingDialog.a(var2, bj.field_g, (byte) -11);
+          ResizingDialog.a(var2, EmailAvailabilityRequest.field_g, (byte) -11);
           ResizingDialog.a(var2, HardwareTurbulentWaterNoise.field_t, (byte) -11);
           ResizingDialog.a(var2, ShaderEffect.field_c, (byte) -11);
           im.field_a = ResizingDialog.a(var2, SpriteStripButtonRenderer.field_p, (byte) -11);
@@ -78,38 +78,38 @@ final class MenuSelectionController {
           TurbulenceNoise3D.field_k = DroneDebris.createToolkitSprites(FallbackShaderEffect.field_h, var2, 28513);
           ResizingDialog.a(var2, ArchiveCatalog.field_f, (byte) -11);
           ResizingDialog.a(var2, MusicVoice.field_o, (byte) -11);
-          DirectByteArrayStorage.field_e = ResizingDialog.a(var2, lr.field_c, (byte) -11);
+          DirectByteArrayStorage.field_e = ResizingDialog.a(var2, VertexBufferReference.field_c, (byte) -11);
           DroneDebris.createToolkitSprites(ei.field_b, var2, 28513);
-          kk.field_f = ResizingDialog.a(var2, IntList.field_e, (byte) -11);
+          LegacyOpenGlTextureCache.field_f = ResizingDialog.a(var2, IntList.field_e, (byte) -11);
           OpenGlTexture3D.field_p = DroneDebris.createToolkitSprites(FullscreenMembershipDialog.field_S, var2, 28513);
           DroneDebris.createToolkitSprites(ByteArrayStorage.field_a, var2, 28513);
           ArchiveProvider.field_a = DroneDebris.createToolkitSprites(ScrollViewport.field_C, var2, 28513);
           uj.field_b = DroneDebris.createToolkitSprites(pc.field_b, var2, 28513);
           uc.field_e = DroneDebris.createToolkitSprites(ScrollPane.field_F, var2, 28513);
-          o.field_b = DroneDebris.createToolkitSprites(om.field_m, var2, 28513);
+          o.field_b = DroneDebris.createToolkitSprites(DroneWaveDefinition.field_m, var2, 28513);
           HardwareSpecularEffect.field_f = DroneDebris.createToolkitSprites(ke.field_c, var2, 28513);
           OpenGlUnderwaterEffect.field_t = ResizingDialog.a(var2, PasswordValidator.field_i, (byte) -11);
           LegacyOpenGlSpriteTexture.field_r = DroneDebris.createToolkitSprites(hc.field_a, var2, 28513);
           vl.field_c = ResizingDialog.a(var2, RasterStateFrame.field_o, (byte) -11);
-          wo.field_b = new ToolkitSprite[]{mn.field_j, PlayingSound.field_l, hv.field_b};
+          DelegatingCanvas.field_b = new ToolkitSprite[]{mn.field_j, PlayingSound.field_l, hv.field_b};
           PasswordValidator.field_j = new ToolkitSprite[]{AccountServiceResult.field_f, TextureMetadata.field_a, DirectByteArrayStorage.field_d};
           Sumoblitz.field_J = DroneDebris.createToolkitSprites(pq.field_F, var2, 28513);
           return;
         }
-        QuickChatCommand.field_e = DroneDebris.createToolkitSprites(ph.field_a, var2, 28513);
+        QuickChatCommand.field_e = DroneDebris.createToolkitSprites(LruNodeCache.field_a, var2, 28513);
         ProxyAuthenticationRequiredException.field_e = DroneDebris.createToolkitSprites(CachedTextLayout.field_h, var2, 28513);
         HardwareRidgedWaterNoise.field_A = DroneDebris.createToolkitSprites(RendererSession.field_b, var2, 28513);
-        up.field_e = DroneDebris.createToolkitSprites(cd.field_c, var2, 28513);
+        up.field_e = DroneDebris.createToolkitSprites(FullscreenDisplayMode.field_c, var2, 28513);
         UnderageAccountInfoPanel.field_B = ResizingDialog.a(var2, ServerDataReadRequest.field_k, (byte) -11);
         DroneDebris.createToolkitSprites(Transform3D.field_a, var2, 28513);
         IntrusiveDeque.field_d = ResizingDialog.a(var2, ToolkitRasterStateFrame.field_a, (byte) -11);
         MusicCrossfadeStream.field_q = DroneDebris.createToolkitSprites(uj.field_c, var2, 28513);
-        ResizingDialog.a(var2, df.field_d, (byte) -11);
+        ResizingDialog.a(var2, HiscorePlayerName.field_d, (byte) -11);
         DroneDebris.createToolkitSprites(DroneChargeParticle.field_v, var2, 28513);
         uc.field_a = ResizingDialog.a(var2, FullscreenMembershipDialog.field_T, (byte) -11);
         CachedArchiveProvider.field_j = DroneDebris.createToolkitSprites(UiStyle.field_v, var2, 28513);
         OpenGlBuffer.field_g = DroneDebris.createToolkitSprites(LegacyOpenGlRenderbuffer.field_w, var2, 28513);
-        ResizingDialog.a(var2, bj.field_g, (byte) -11);
+        ResizingDialog.a(var2, EmailAvailabilityRequest.field_g, (byte) -11);
         ResizingDialog.a(var2, HardwareTurbulentWaterNoise.field_t, (byte) -11);
         ResizingDialog.a(var2, ShaderEffect.field_c, (byte) -11);
         im.field_a = ResizingDialog.a(var2, SpriteStripButtonRenderer.field_p, (byte) -11);
@@ -127,20 +127,20 @@ final class MenuSelectionController {
         TurbulenceNoise3D.field_k = DroneDebris.createToolkitSprites(FallbackShaderEffect.field_h, var2, 28513);
         ResizingDialog.a(var2, ArchiveCatalog.field_f, (byte) -11);
         ResizingDialog.a(var2, MusicVoice.field_o, (byte) -11);
-        DirectByteArrayStorage.field_e = ResizingDialog.a(var2, lr.field_c, (byte) -11);
+        DirectByteArrayStorage.field_e = ResizingDialog.a(var2, VertexBufferReference.field_c, (byte) -11);
         DroneDebris.createToolkitSprites(ei.field_b, var2, 28513);
-        kk.field_f = ResizingDialog.a(var2, IntList.field_e, (byte) -11);
+        LegacyOpenGlTextureCache.field_f = ResizingDialog.a(var2, IntList.field_e, (byte) -11);
         OpenGlTexture3D.field_p = DroneDebris.createToolkitSprites(FullscreenMembershipDialog.field_S, var2, 28513);
         DroneDebris.createToolkitSprites(ByteArrayStorage.field_a, var2, 28513);
         ArchiveProvider.field_a = DroneDebris.createToolkitSprites(ScrollViewport.field_C, var2, 28513);
         uj.field_b = DroneDebris.createToolkitSprites(pc.field_b, var2, 28513);
         uc.field_e = DroneDebris.createToolkitSprites(ScrollPane.field_F, var2, 28513);
-        o.field_b = DroneDebris.createToolkitSprites(om.field_m, var2, 28513);
+        o.field_b = DroneDebris.createToolkitSprites(DroneWaveDefinition.field_m, var2, 28513);
         HardwareSpecularEffect.field_f = DroneDebris.createToolkitSprites(ke.field_c, var2, 28513);
         OpenGlUnderwaterEffect.field_t = ResizingDialog.a(var2, PasswordValidator.field_i, (byte) -11);
         LegacyOpenGlSpriteTexture.field_r = DroneDebris.createToolkitSprites(hc.field_a, var2, 28513);
         vl.field_c = ResizingDialog.a(var2, RasterStateFrame.field_o, (byte) -11);
-        wo.field_b = new ToolkitSprite[]{mn.field_j, PlayingSound.field_l, hv.field_b};
+        DelegatingCanvas.field_b = new ToolkitSprite[]{mn.field_j, PlayingSound.field_l, hv.field_b};
         PasswordValidator.field_j = new ToolkitSprite[]{AccountServiceResult.field_f, TextureMetadata.field_a, DirectByteArrayStorage.field_d};
         Sumoblitz.field_J = DroneDebris.createToolkitSprites(pq.field_F, var2, 28513);
     }
@@ -404,7 +404,7 @@ final class MenuSelectionController {
             }
             if (this.heldButton == 0) {
               if (!this.mouseMode &&
-                !sl.field_d) {
+                !LegacyOpenGlClientVertexBuffer.field_d) {
                 return;
               }
               if (hoveredIndex < 0) {
@@ -428,7 +428,7 @@ final class MenuSelectionController {
             this.heldButton = 0;
             if (this.heldButton == 0) {
               if (!this.mouseMode &&
-                !sl.field_d) {
+                !LegacyOpenGlClientVertexBuffer.field_d) {
                 return;
               }
               if (hoveredIndex < 0) {
@@ -464,7 +464,7 @@ final class MenuSelectionController {
             this.selectedIndex = hoveredIndex;
             return;
           }
-          if (!sl.field_d) {
+          if (!LegacyOpenGlClientVertexBuffer.field_d) {
             return;
           }
           if (hoveredIndex < 0) {
@@ -490,7 +490,7 @@ final class MenuSelectionController {
           if (ActiveCanvasProvider.field_c != 0) {
             if (this.heldButton == 0) {
               if (!this.mouseMode &&
-                !sl.field_d) {
+                !LegacyOpenGlClientVertexBuffer.field_d) {
                 return;
               }
               if (hoveredIndex < 0) {
@@ -514,7 +514,7 @@ final class MenuSelectionController {
           }
           if (this.heldButton == 0) {
             if (!this.mouseMode &&
-              !sl.field_d) {
+              !LegacyOpenGlClientVertexBuffer.field_d) {
               return;
             }
             if (hoveredIndex < 0) {
@@ -540,7 +540,7 @@ final class MenuSelectionController {
             return;
           }
           if (!this.mouseMode &&
-            !sl.field_d) {
+            !LegacyOpenGlClientVertexBuffer.field_d) {
             return;
           }
         } else {
@@ -548,7 +548,7 @@ final class MenuSelectionController {
             return;
           }
           if (!this.mouseMode &&
-            !sl.field_d) {
+            !LegacyOpenGlClientVertexBuffer.field_d) {
             return;
           }
         }

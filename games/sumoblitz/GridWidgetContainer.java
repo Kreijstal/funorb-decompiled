@@ -223,10 +223,10 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
           ArchiveCatalog.field_a = dupTemp$0;
           CacheReferenceNode.field_x = dupTemp$0;
           if (EmptyWidgetRenderer.field_a.status != 1) {
-            kw.accountPhase = lr.field_b;
+            kw.accountPhase = VertexBufferReference.field_b;
           } else {
             try {
-              DisplayModeConfirmationDialog.field_O = new BufferedSocket((java.net.Socket) (EmptyWidgetRenderer.field_a.result), CacheReferenceNode.field_t);
+              DisplayModeConfirmationDialog.accountSocket = new BufferedSocket((java.net.Socket) (EmptyWidgetRenderer.field_a.result), CacheReferenceNode.field_t);
               var4 = ig.field_a;
               var5 = var4;
               InwardSparkParticle.field_v.position = 0;
@@ -234,11 +234,11 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
               ToolkitImageProducerBuffer.field_r = param1 ? -2 : -1;
               RotarySelectorWidget.field_I = param1 ? -2 : -1;
               ContentTransitionDialog.field_Q = param1 ? -2 : -1;
-              kw.accountPhase = gg.READY_TO_CONNECT;
+              kw.accountPhase = ByteArrayCacheNode.READY_TO_CONNECT;
               sb.a(TextHotspot.field_o, 81, CacheReferenceNode.field_r, CacheIoRequest.field_v, InwardSparkParticle.field_v);
               MessageDialog.a(0, -1);
             } catch (IOException iOException) {
-              kw.accountPhase = lr.field_b;
+              kw.accountPhase = VertexBufferReference.field_b;
             }
           }
           EmptyWidgetRenderer.field_a = null;

@@ -198,12 +198,12 @@ abstract class ResizingDialog extends ModalDialog {
         StringBuilder stackIn_44_1 = null;
         String stackIn_45_2 = null;
         RuntimeException decompiledCaughtException = null;
-        cd[] var6 = null;
+        FullscreenDisplayMode[] var6 = null;
         RuntimeException var6_ref = null;
         int var7_int = 0;
         java.awt.Frame var7 = null;
         int var9 = 0;
-        cd[] var10 = null;
+        FullscreenDisplayMode[] var10 = null;
         PlatformTask var11 = null;
         var9 = Sumoblitz.field_L ? 1 : 0;
         try {
@@ -219,12 +219,12 @@ abstract class ResizingDialog extends ModalDialog {
             }
             var7_int = 0;
             for (var8 = 0; var8 < var10.length; var8++) {
-              if (param5 == var10[var8].field_a &&
-                var10[var8].field_g == param4 && ((param2 == 0 ||
-                var10[var8].field_b == param2) &&
+              if (param5 == var10[var8].width &&
+                var10[var8].height == param4 && ((param2 == 0 ||
+                var10[var8].refreshRate == param2) &&
                 (var7_int == 0 ||
-                !(param3 >= var10[var8].field_e)))) {
-                param3 = var10[var8].field_e;
+                !(param3 >= var10[var8].bitDepth)))) {
+                param3 = var10[var8].bitDepth;
                 var7_int = 1;
               }
             }

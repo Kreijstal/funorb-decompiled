@@ -34,7 +34,7 @@ final class lq {
         int var3 = 0;
         int var4 = 0;
         try {
-          var6 = new Sprite(param0.fetchNamedFile("", "final_frame.jpg", -1), (java.awt.Component) ((Object) qn.field_f));
+          var6 = new Sprite(param0.fetchNamedFile("", "final_frame.jpg", -1), (java.awt.Component) ((Object) NineSlicePanel.field_f));
           var3 = var6.field_x;
           var4 = var6.field_u;
           GameApplet.pushRasterState(103);
@@ -43,10 +43,10 @@ final class lq {
             lq.a(-58, (String) null, (String) null, (ResourceArchive) null);
           }
           kh.field_a = new Sprite(var3, var4 * 3 / 4);
-          kh.field_a.d();
+          kh.field_a.bindRaster();
           var6.c(0, 0);
           MusicPatchEnvelope.field_a = new Sprite(var3, var4 - kh.field_a.field_u);
-          MusicPatchEnvelope.field_a.d();
+          MusicPatchEnvelope.field_a.bindRaster();
           var6.c(0, -kh.field_a.field_u);
           MusicPatchEnvelope.field_a.field_A = kh.field_a.field_u;
           ClientException.popRasterState((byte) 71);

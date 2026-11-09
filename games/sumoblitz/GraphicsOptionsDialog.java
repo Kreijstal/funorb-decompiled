@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GraphicsOptionsDialog extends ResizingDialog implements WidgetActionListener {
-    private cd[] field_Z;
+    private FullscreenDisplayMode[] field_Z;
     private boolean field_S;
     private InteractiveWidget field_O;
     private InteractiveWidget field_Y;
@@ -66,7 +66,7 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        cd[] var3_ref_cd__ = null;
+        FullscreenDisplayMode[] var3_ref_cd__ = null;
         int var4 = 0;
         int var5 = 0;
         String[] var5_ref_String__ = null;
@@ -74,7 +74,7 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
         String var6 = null;
         InteractiveWidget var6_ref = null;
         UiWidget var7 = null;
-        cd var8 = null;
+        FullscreenDisplayMode var8 = null;
         String var10 = null;
         Object stackIn_50_0Lifetime1;
         GridWidgetContainer stackIn_52_1Lifetime1;
@@ -91,14 +91,14 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
               if (this.field_Z[var2_int] != null) {
                 for (var3 = var2_int + 1; this.field_Z.length > var3; var3++) {
                   if (this.field_Z[var3] != null &&
-                    this.field_Z[var2_int].field_a == this.field_Z[var3].field_a &&
-                    this.field_Z[var2_int].field_g == this.field_Z[var3].field_g) {
+                    this.field_Z[var2_int].width == this.field_Z[var3].width &&
+                    this.field_Z[var2_int].height == this.field_Z[var3].height) {
                     this.field_Z[var3] = null;
                   }
                 }
                 if (null != SecondaryNodeDequeIterator.field_b &&
                   this.field_Z[var2_int] != null &&
-                  !SecondaryNodeDequeIterator.field_b.a(this.field_Z[var2_int].field_g, (byte) -54, this.field_Z[var2_int].field_a)) {
+                  !SecondaryNodeDequeIterator.field_b.a(this.field_Z[var2_int].height, (byte) -54, this.field_Z[var2_int].width)) {
                   this.field_Z[var2_int] = null;
                 }
               }
@@ -110,7 +110,7 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
               }
             }
             var3_ref_cd__ = this.field_Z;
-            this.field_Z = new cd[var2_int];
+            this.field_Z = new FullscreenDisplayMode[var2_int];
             var4 = 0;
             for (var5 = 0; var5 < var3_ref_cd__.length; var5++) {
               if (null != var3_ref_cd__[var5]) {
@@ -186,11 +186,11 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
             for (var7_int = 0; var7_int < this.field_Z.length; var7_int++) {
               var8 = this.field_Z[var7_int];
               if (null != CompactMeshGeometry.field_o &&
-                var8.field_a == SecondaryNodeDequeIterator.field_b.field_s &&
-                var8.field_g == SecondaryNodeDequeIterator.field_b.field_c) {
+                var8.width == SecondaryNodeDequeIterator.field_b.field_s &&
+                var8.height == SecondaryNodeDequeIterator.field_b.field_c) {
                 var6_int = var7_int;
               }
-              var5_ref_String__[var7_int] = var8.field_a + "<times>" + var8.field_g;
+              var5_ref_String__[var7_int] = var8.width + "<times>" + var8.height;
             }
             this.field_ab = new DropDownWidget(var5_ref_String__, var6_int, 150);
             this.field_ab.setBounds(-103, this.field_T.x + this.field_U.x, -19 + (this.field_T.height + this.field_U.y + this.field_T.y), 18, 126);
@@ -209,7 +209,7 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
             if (var2_intLifetime1 == 0) {
               stackIn_74_0 = lw.moreMemoryIsRequiredText;
             } else {
-              stackIn_74_0 = sl.largeScreenSizesAndText;
+              stackIn_74_0 = LegacyOpenGlClientVertexBuffer.largeScreenSizesAndText;
             }
             var10 = stackIn_74_0;
             var6 = var10;
@@ -537,7 +537,7 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
     private final void a(InteractiveWidget param0, int param1) {
         InteractiveWidget var3 = null;
         int var4 = 0;
-        cd var5 = null;
+        FullscreenDisplayMode var5 = null;
         InteractiveWidget stackIn_4_0 = null;
         boolean stackIn_5_1 = false;
         RuntimeException stackIn_20_0 = null;
@@ -560,8 +560,8 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
               if (null != this.field_ab) {
                 var4 = this.field_ab.selectedIndex(param1 - 126);
                 var5 = this.field_Z[var4];
-                if (var5.field_a == SecondaryNodeDequeIterator.field_b.field_s &&
-                  SecondaryNodeDequeIterator.field_b.field_c == var5.field_g) {
+                if (var5.width == SecondaryNodeDequeIterator.field_b.field_s &&
+                  SecondaryNodeDequeIterator.field_b.field_c == var5.height) {
                   this.e(true);
                   return;
                 }
@@ -604,7 +604,7 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
               null != this.field_ab) {
               var2 = this.field_ab.selectedIndex(96);
               if (0 <= var2) {
-                SecondaryNodeDequeIterator.field_b.b(this.field_Z[var2].field_g, this.field_Z[var2].field_a, 67);
+                SecondaryNodeDequeIterator.field_b.b(this.field_Z[var2].height, this.field_Z[var2].width, 67);
               }
               ArchiveCatalog.a(true, false);
               this.dialogLayer.pushDialog((byte) 108, new DisplayModeConfirmationDialog(this.dialogLayer));
@@ -679,7 +679,7 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
           super.update(parentX, 124, root, parentY);
-          if (sl.field_d) {
+          if (LegacyOpenGlClientVertexBuffer.field_d) {
             root.clearFocus((byte) 120);
             var9 = this.field_V;
             var5 = var9;

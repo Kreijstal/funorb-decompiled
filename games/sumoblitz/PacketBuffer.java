@@ -7,7 +7,7 @@ class PacketBuffer extends IntrusiveNode {
     static boolean[] field_o;
     byte[] payload;
     int position;
-    static qn field_k;
+    static NineSlicePanel field_k;
 
     final void writeBase38Name(String name, int guard) {
         RuntimeException stackIn_31_0 = null;
@@ -225,7 +225,7 @@ class PacketBuffer extends IntrusiveNode {
         this.position = this.position + 1;
         this.payload[fieldTemp$4] = (byte)(int)value;
         if (guard != 1105594440) {
-          field_k = (qn) null;
+          field_k = (NineSlicePanel) null;
         }
     }
 

@@ -107,11 +107,11 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
         CompactMeshGeometry.field_o.a(false, lt.field_m);
         CompactMeshGeometry.field_o = null;
         if (SecondaryNodeDequeIterator.field_b == null) {
-          qn.field_f.requestFocus();
+          NineSlicePanel.field_f.requestFocus();
           return;
         }
         SecondaryNodeDequeIterator.field_b.e(2);
-        qn.field_f.requestFocus();
+        NineSlicePanel.field_f.requestFocus();
     }
 
     final void setParameters(int guard, int parameters1, int parameters0) {

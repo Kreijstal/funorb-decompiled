@@ -15,7 +15,7 @@ final class ActiveCanvasProvider {
 
     final static java.awt.Canvas currentCanvas(int guard) {
         int var1 = 30 / ((guard - 33) / 43);
-        return null == CompactMeshGeometry.field_o ? qn.field_f : (java.awt.Canvas) ((Object) CompactMeshGeometry.field_o);
+        return null == CompactMeshGeometry.field_o ? NineSlicePanel.field_f : (java.awt.Canvas) ((Object) CompactMeshGeometry.field_o);
     }
 
     static {

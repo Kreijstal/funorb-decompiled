@@ -104,7 +104,7 @@ abstract class ShaderEffect {
             stackIn_14_0 = 260;
             return stackIn_14_0;
           }
-          if (bj.SUBTRACT != operation) {
+          if (EmailAvailabilityRequest.SUBTRACT != operation) {
             throw new IllegalArgumentException();
           }
           stackIn_12_0 = 34023;
@@ -142,7 +142,7 @@ abstract class ShaderEffect {
           }
           var4_int = param1.groupId(0, param3);
           var5 = param1.fileId(var4_int, param0, (byte) 127);
-          stackIn_3_0 = kk.a(var4_int, -1, var5, param1);
+          stackIn_3_0 = LegacyOpenGlTextureCache.loadIndexedSprites(var4_int, -1, var5, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

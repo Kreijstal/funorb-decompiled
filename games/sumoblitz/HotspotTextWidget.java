@@ -87,7 +87,7 @@ class HotspotTextWidget extends InteractiveWidget {
           if (var2 == 0) {
             var10 = (ServerDataReadRequest) (no.field_d.first(-110));
             if (var10 == null) {
-              kk.a((byte) -109);
+              LegacyOpenGlTextureCache.closeAccountSocket((byte) -109);
               return;
             }
             var5 = var11.readUnsignedByte(-31302);
@@ -102,7 +102,7 @@ class HotspotTextWidget extends InteractiveWidget {
             }
             var11.position = var11.position + 4;
             if (!var11.verifyTrailingCrc32((byte) -9)) {
-              kk.a((byte) -127);
+              LegacyOpenGlTextureCache.closeAccountSocket((byte) -127);
               return;
             }
             var10.complete = true;
@@ -111,23 +111,23 @@ class HotspotTextWidget extends InteractiveWidget {
           } else {
             if (var2 == 1) {
               var4 = var11.readInt(true);
-              var5_ref_db = (ServerDataWriteRequest) (jj.field_a.first(83));
+              var5_ref_db = (ServerDataWriteRequest) (LoginMethodPreference.field_a.first(83));
               while (var5_ref_db != null) {
                 if (var4 != var5_ref_db.requestCrc) {
-                  var5_ref_db = (ServerDataWriteRequest) (jj.field_a.next((byte) 18));
+                  var5_ref_db = (ServerDataWriteRequest) (LoginMethodPreference.field_a.next((byte) 18));
                   continue;
                 }
                 break;
               }
               if (var5_ref_db == null) {
-                kk.a((byte) -123);
+                LegacyOpenGlTextureCache.closeAccountSocket((byte) -123);
                 return;
               }
               var5_ref_db.unlink(false);
               return;
             }
             IntrusiveNode.reportClientError("A1: " + VictoryScreen.b((byte) -9), (Throwable) null, 0);
-            kk.a((byte) -128);
+            LegacyOpenGlTextureCache.closeAccountSocket((byte) -128);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

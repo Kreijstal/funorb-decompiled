@@ -27,9 +27,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
               !(param2 + param0 <= pd.field_q.length)) {
               pd.field_q = new int[2 * (param0 + param2)];
             }
-            if (kk.field_b == null ||
-              !(kk.field_b.length >= param0)) {
-              kk.field_b = new boolean[2 * param0];
+            if (LegacyOpenGlTextureCache.field_b == null ||
+              !(LegacyOpenGlTextureCache.field_b.length >= param0)) {
+              LegacyOpenGlTextureCache.field_b = new boolean[2 * param0];
             }
           } else {
             if (param0 <= ContentTransitionPhase.field_f.length) {
@@ -49,9 +49,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                 !(param2 + param0 <= pd.field_q.length)) {
                 pd.field_q = new int[2 * (param0 + param2)];
               }
-              if (kk.field_b == null ||
-                !(kk.field_b.length >= param0)) {
-                kk.field_b = new boolean[2 * param0];
+              if (LegacyOpenGlTextureCache.field_b == null ||
+                !(LegacyOpenGlTextureCache.field_b.length >= param0)) {
+                LegacyOpenGlTextureCache.field_b = new boolean[2 * param0];
               }
             } else {
               ContentTransitionPhase.field_f = new int[2 * param0];
@@ -71,9 +71,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                 !(param2 + param0 <= pd.field_q.length)) {
                 pd.field_q = new int[2 * (param0 + param2)];
               }
-              if (kk.field_b == null ||
-                !(kk.field_b.length >= param0)) {
-                kk.field_b = new boolean[2 * param0];
+              if (LegacyOpenGlTextureCache.field_b == null ||
+                !(LegacyOpenGlTextureCache.field_b.length >= param0)) {
+                LegacyOpenGlTextureCache.field_b = new boolean[2 * param0];
               }
             }
           }
@@ -98,9 +98,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                 !(param2 + param0 <= pd.field_q.length)) {
                 pd.field_q = new int[2 * (param0 + param2)];
               }
-              if (kk.field_b == null ||
-                !(kk.field_b.length >= param0)) {
-                kk.field_b = new boolean[2 * param0];
+              if (LegacyOpenGlTextureCache.field_b == null ||
+                !(LegacyOpenGlTextureCache.field_b.length >= param0)) {
+                LegacyOpenGlTextureCache.field_b = new boolean[2 * param0];
               }
             } else {
               if (param0 <= uc.field_c.length) {
@@ -108,9 +108,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                   !(param2 + param0 <= pd.field_q.length)) {
                   pd.field_q = new int[2 * (param0 + param2)];
                 }
-                if (kk.field_b == null ||
-                  !(kk.field_b.length >= param0)) {
-                  kk.field_b = new boolean[2 * param0];
+                if (LegacyOpenGlTextureCache.field_b == null ||
+                  !(LegacyOpenGlTextureCache.field_b.length >= param0)) {
+                  LegacyOpenGlTextureCache.field_b = new boolean[2 * param0];
                 }
               } else {
                 uc.field_c = new int[2 * param0];
@@ -118,9 +118,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                   !(param2 + param0 <= pd.field_q.length)) {
                   pd.field_q = new int[2 * (param0 + param2)];
                 }
-                if (kk.field_b == null ||
-                  !(kk.field_b.length >= param0)) {
-                  kk.field_b = new boolean[2 * param0];
+                if (LegacyOpenGlTextureCache.field_b == null ||
+                  !(LegacyOpenGlTextureCache.field_b.length >= param0)) {
+                  LegacyOpenGlTextureCache.field_b = new boolean[2 * param0];
                 }
               }
             }
@@ -141,9 +141,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                   !(param2 + param0 <= pd.field_q.length)) {
                   pd.field_q = new int[2 * (param0 + param2)];
                 }
-                if (kk.field_b == null ||
-                  !(kk.field_b.length >= param0)) {
-                  kk.field_b = new boolean[2 * param0];
+                if (LegacyOpenGlTextureCache.field_b == null ||
+                  !(LegacyOpenGlTextureCache.field_b.length >= param0)) {
+                  LegacyOpenGlTextureCache.field_b = new boolean[2 * param0];
                 }
               } else {
                 if (param0 <= uc.field_c.length) {
@@ -151,9 +151,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                     !(param2 + param0 <= pd.field_q.length)) {
                     pd.field_q = new int[2 * (param0 + param2)];
                   }
-                  if (kk.field_b == null ||
-                    !(kk.field_b.length >= param0)) {
-                    kk.field_b = new boolean[2 * param0];
+                  if (LegacyOpenGlTextureCache.field_b == null ||
+                    !(LegacyOpenGlTextureCache.field_b.length >= param0)) {
+                    LegacyOpenGlTextureCache.field_b = new boolean[2 * param0];
                   }
                 } else {
                   uc.field_c = new int[2 * param0];
@@ -161,9 +161,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                     !(param2 + param0 <= pd.field_q.length)) {
                     pd.field_q = new int[2 * (param0 + param2)];
                   }
-                  if (kk.field_b == null ||
-                    !(kk.field_b.length >= param0)) {
-                    kk.field_b = new boolean[2 * param0];
+                  if (LegacyOpenGlTextureCache.field_b == null ||
+                    !(LegacyOpenGlTextureCache.field_b.length >= param0)) {
+                    LegacyOpenGlTextureCache.field_b = new boolean[2 * param0];
                   }
                 }
               }
@@ -179,9 +179,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                     !(param2 + param0 <= pd.field_q.length)) {
                     pd.field_q = new int[2 * (param0 + param2)];
                   }
-                  if (kk.field_b == null ||
-                    !(kk.field_b.length >= param0)) {
-                    kk.field_b = new boolean[2 * param0];
+                  if (LegacyOpenGlTextureCache.field_b == null ||
+                    !(LegacyOpenGlTextureCache.field_b.length >= param0)) {
+                    LegacyOpenGlTextureCache.field_b = new boolean[2 * param0];
                   }
                 } else {
                   if (param0 <= uc.field_c.length) {
@@ -189,9 +189,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                       !(param2 + param0 <= pd.field_q.length)) {
                       pd.field_q = new int[2 * (param0 + param2)];
                     }
-                    if (kk.field_b == null ||
-                      !(kk.field_b.length >= param0)) {
-                      kk.field_b = new boolean[2 * param0];
+                    if (LegacyOpenGlTextureCache.field_b == null ||
+                      !(LegacyOpenGlTextureCache.field_b.length >= param0)) {
+                      LegacyOpenGlTextureCache.field_b = new boolean[2 * param0];
                     }
                   } else {
                     uc.field_c = new int[2 * param0];
@@ -199,9 +199,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                       !(param2 + param0 <= pd.field_q.length)) {
                       pd.field_q = new int[2 * (param0 + param2)];
                     }
-                    if (kk.field_b == null ||
-                      !(kk.field_b.length >= param0)) {
-                      kk.field_b = new boolean[2 * param0];
+                    if (LegacyOpenGlTextureCache.field_b == null ||
+                      !(LegacyOpenGlTextureCache.field_b.length >= param0)) {
+                      LegacyOpenGlTextureCache.field_b = new boolean[2 * param0];
                     }
                   }
                 }
@@ -217,9 +217,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                     !(param2 + param0 <= pd.field_q.length)) {
                     pd.field_q = new int[2 * (param0 + param2)];
                   }
-                  if (kk.field_b == null ||
-                    !(kk.field_b.length >= param0)) {
-                    kk.field_b = new boolean[2 * param0];
+                  if (LegacyOpenGlTextureCache.field_b == null ||
+                    !(LegacyOpenGlTextureCache.field_b.length >= param0)) {
+                    LegacyOpenGlTextureCache.field_b = new boolean[2 * param0];
                   }
                 } else {
                   if (param0 <= uc.field_c.length) {
@@ -227,9 +227,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                       !(param2 + param0 <= pd.field_q.length)) {
                       pd.field_q = new int[2 * (param0 + param2)];
                     }
-                    if (kk.field_b == null ||
-                      !(kk.field_b.length >= param0)) {
-                      kk.field_b = new boolean[2 * param0];
+                    if (LegacyOpenGlTextureCache.field_b == null ||
+                      !(LegacyOpenGlTextureCache.field_b.length >= param0)) {
+                      LegacyOpenGlTextureCache.field_b = new boolean[2 * param0];
                     }
                   } else {
                     uc.field_c = new int[2 * param0];
@@ -237,9 +237,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                       !(param2 + param0 <= pd.field_q.length)) {
                       pd.field_q = new int[2 * (param0 + param2)];
                     }
-                    if (kk.field_b == null ||
-                      !(kk.field_b.length >= param0)) {
-                      kk.field_b = new boolean[2 * param0];
+                    if (LegacyOpenGlTextureCache.field_b == null ||
+                      !(LegacyOpenGlTextureCache.field_b.length >= param0)) {
+                      LegacyOpenGlTextureCache.field_b = new boolean[2 * param0];
                     }
                   }
                 }

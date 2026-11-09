@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sl extends LegacyOpenGlClientBuffer implements LegacyVertexBuffer {
+final class LegacyOpenGlClientVertexBuffer extends LegacyOpenGlClientBuffer implements LegacyVertexBuffer {
     static boolean field_d;
     static int[] field_c;
     static String largeScreenSizesAndText;
 
-    sl(LegacyOpenGlGraphicsToolkit param0, int param1, byte[] param2, int param3) {
+    LegacyOpenGlClientVertexBuffer(LegacyOpenGlGraphicsToolkit param0, int param1, byte[] param2, int param3) {
         super(param0, param2, param3);
     }
 
@@ -25,19 +25,19 @@ final class sl extends LegacyOpenGlClientBuffer implements LegacyVertexBuffer {
         }
     }
 
-    final static boolean a(byte param0, int param1) {
+    final static boolean areEarlierLevelsComplete(byte guard, int levelCount) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (param0 != 90) {
+          if (guard != 90) {
             return false;
           }
           var2_int = 0;
           while (true) {
-            if (var2_int >= param1) {
+            if (var2_int >= levelCount) {
               return true;
             }
             if (up.field_g[var2_int]) {
@@ -50,7 +50,7 @@ final class sl extends LegacyOpenGlClientBuffer implements LegacyVertexBuffer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "sl.C(" + param0 + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "sl.C(" + guard + ',' + levelCount + ')');
         }
     }
 

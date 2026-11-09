@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bj {
-    private String field_f;
+final class EmailAvailabilityRequest {
+    private String email;
     static TextureCombineOperation SUBTRACT;
     static IntrusiveDeque powerupPickups;
     static int field_a;
-    private boolean field_e;
+    private boolean available;
     static SpriteData field_g;
-    private boolean field_d;
+    private boolean complete;
 
-    final boolean c(int param0) {
-        if (param0 != -1) {
-          this.b(4);
-          return this.field_e;
+    final boolean isAvailable(int guard) {
+        if (guard != -1) {
+          this.email(4);
+          return this.available;
         }
-        return this.field_e;
+        return this.available;
     }
 
     public static void releaseStatics(int param0) {
@@ -27,31 +27,31 @@ final class bj {
         field_g = null;
     }
 
-    final boolean a(boolean param0) {
-        if (!param0) {
-          this.b(71);
-          return this.field_d;
+    final boolean isComplete(boolean guard) {
+        if (!guard) {
+          this.email(71);
+          return this.complete;
         }
-        return this.field_d;
+        return this.complete;
     }
 
-    final String b(int param0) {
-        if (param0 <= 16) {
+    final String email(int guard) {
+        if (guard <= 16) {
           powerupPickups = (IntrusiveDeque) null;
-          return this.field_f;
+          return this.email;
         }
-        return this.field_f;
+        return this.email;
     }
 
-    final void a(int param0, boolean param1) {
-        this.field_e = param1 ? true : false;
-        this.field_d = true;
-        int var3 = 18 % ((param0 - 38) / 60);
+    final void complete(int guard, boolean available) {
+        this.available = available ? true : false;
+        this.complete = true;
+        int var3 = 18 % ((guard - 38) / 60);
     }
 
     final static boolean a(int param0, byte param1, int param2) {
         if (param1 != -113) {
-          bj.a(-103, (byte) 12, 126);
+          EmailAvailabilityRequest.a(-103, (byte) 12, 126);
           if ((param0 & 2048) == 0) {
             return false;
           }
@@ -69,13 +69,13 @@ final class bj {
         return false;
     }
 
-    bj(String param0) {
-        this.field_e = false;
-        this.field_d = false;
+    EmailAvailabilityRequest(String email) {
+        this.available = false;
+        this.complete = false;
         try {
-          this.field_f = param0;
+          this.email = email;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "bj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "bj.<init>(" + (email != null ? "{...}" : "null") + ')');
         }
     }
 

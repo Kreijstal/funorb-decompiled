@@ -325,7 +325,7 @@ class Drone {
           this.destructionTicks = this.destructionTicks + 1;
           this.velocityXQ8 = this.velocityXQ8 >> 1;
           if (2 == this.destructionTicks) {
-            QuickChatCommand.a(this.xQ8, this.effects, -16240, 20, lr.field_a[this.droneType], this.yQ8);
+            QuickChatCommand.a(this.xQ8, this.effects, -16240, 20, VertexBufferReference.field_a[this.droneType], this.yQ8);
             var5 = new float[]{0.0f, -3.0f};
             var9 = kt.a((byte) -99, var5, (float)this.facingRadians);
             var6 = var9;
@@ -355,7 +355,7 @@ class Drone {
           if (!wn.a(this.targetYQ8, 2048, -128, this.xQ8, this.targetXQ8, this.yQ8)) {
             if ((!(!this.isBlastChargeParticleTick(-2))) &&
               ((0 == this.droneType))) {
-              NoiseSliceGenerator.a(lr.field_a[this.droneType], this.effects, this, 40, this.yQ8, this.xQ8, (byte) 121);
+              NoiseSliceGenerator.a(VertexBufferReference.field_a[this.droneType], this.effects, this, 40, this.yQ8, this.xQ8, (byte) 121);
             }
             decompiledFrameRemainder0 = false;
           }
@@ -371,7 +371,7 @@ class Drone {
         }
         if ((decompiledFrameRemainder0) && (this.isBlastChargeParticleTick(-2) &&
           0 == this.droneType)) {
-          NoiseSliceGenerator.a(lr.field_a[this.droneType], this.effects, this, 40, this.yQ8, this.xQ8, (byte) 121);
+          NoiseSliceGenerator.a(VertexBufferReference.field_a[this.droneType], this.effects, this, 40, this.yQ8, this.xQ8, (byte) 121);
         }
         if (this.temporaryPowerup != -1) {
           this.temporaryPowerupTicks = this.temporaryPowerupTicks - 1;
@@ -499,7 +499,7 @@ class Drone {
         this.blastTicksRemaining = 12;
         this.blastActive = true;
         this.effects = new IntrusiveDeque();
-        QuickChatCommand.a(this.xQ8, this.effects, -16240, 40, lr.field_a[this.droneType], this.yQ8);
+        QuickChatCommand.a(this.xQ8, this.effects, -16240, 40, VertexBufferReference.field_a[this.droneType], this.yQ8);
         int var2 = 111 % ((param0 - 57) / 38);
         gn.a(19 + ExpandingRingEffect.nextRandomInt(3, HardwareGraphicsHeap.field_o, (byte) -96), true);
     }
@@ -1082,7 +1082,7 @@ class Drone {
           }
           this.blastTicksRemaining = 12;
           this.effects = new IntrusiveDeque();
-          QuickChatCommand.a(this.xQ8, this.effects, -16240, 50, lr.field_a[this.droneType], this.yQ8);
+          QuickChatCommand.a(this.xQ8, this.effects, -16240, 50, VertexBufferReference.field_a[this.droneType], this.yQ8);
           this.resetBlastButtonHold(-82);
           return;
         }

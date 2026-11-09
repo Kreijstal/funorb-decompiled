@@ -49,26 +49,26 @@ final class OpenGlIndexBuffer extends OpenGlBuffer implements IndexBuffer {
           if (ig.field_a.position >= param1) {
             return true;
           }
-          if (null == DisplayModeConfirmationDialog.field_O) {
+          if (null == DisplayModeConfirmationDialog.accountSocket) {
             return false;
           }
           try {
-            var2_int = DisplayModeConfirmationDialog.field_O.available(param0 ^ 36);
+            var2_int = DisplayModeConfirmationDialog.accountSocket.available(param0 ^ 36);
             if (0 >= var2_int) {
               if (~var2_int > param0) {
-                kk.a((byte) -118);
+                LegacyOpenGlTextureCache.closeAccountSocket((byte) -118);
                 return false;
               }
               if (uc.b(26560) <= 30000L) {
                 return false;
               }
-              kk.a((byte) -118);
+              LegacyOpenGlTextureCache.closeAccountSocket((byte) -118);
               return false;
             }
             if (-ig.field_a.position + param1 < var2_int) {
               var2_int = -ig.field_a.position + param1;
             }
-            DisplayModeConfirmationDialog.field_O.readFully(param0 ^ 99, ig.field_a.position, var2_int, ig.field_a.payload);
+            DisplayModeConfirmationDialog.accountSocket.readFully(param0 ^ 99, ig.field_a.position, var2_int, ig.field_a.payload);
             CacheReferenceNode.field_x = wq.monotonicTimeMillis(-47);
             ig.field_a.position = ig.field_a.position + var2_int;
             if (ig.field_a.position < param1) {
@@ -79,7 +79,7 @@ final class OpenGlIndexBuffer extends OpenGlBuffer implements IndexBuffer {
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = (IOException) (Object) decompiledCaughtException;
-            kk.a((byte) -127);
+            LegacyOpenGlTextureCache.closeAccountSocket((byte) -127);
             return false;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {

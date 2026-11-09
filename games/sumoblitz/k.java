@@ -4,7 +4,7 @@
 final class k {
     static String startGameText;
 
-    final static boolean a(ResourceArchive param0, int param1, int param2, int param3) {
+    final static boolean decodeSpriteSheet(ResourceArchive archive, int groupId, int fileId, int guard) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -13,27 +13,27 @@ final class k {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = param0.fetchFile((byte) 126, param1, param2);
+          var5 = archive.fetchFile((byte) 126, groupId, fileId);
           var4 = var5;
-          if (param3 != -23046) {
+          if (guard != -23046) {
             startGameText = (String) null;
           }
           if (var5 == null) {
             return false;
           }
-          ServerIntArrayRequest.decodeSpriteSheet(param3 ^ -23291, var5);
+          ServerIntArrayRequest.decodeSpriteSheet(guard ^ -23291, var5);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
           stackIn_10_0 = var4_ref;
           stackIn_10_1 = new StringBuilder().append("k.B(");
-          if (param0 == null) {
+          if (archive == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(groupId).append(',').append(fileId).append(',').append(guard).append(')').toString());
         }
     }
 

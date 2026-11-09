@@ -22,7 +22,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
     private boolean[] field_Ec;
     private static int[] field_Fc;
     private int[] field_Gc;
-    private kg field_Hc;
+    private DirectXSwapChainSurface field_Hc;
     boolean field_Qc;
     private boolean[] field_Uc;
     jagdx.PixelBuffer field_Jc;
@@ -384,20 +384,20 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
     }
 
     private final boolean h(boolean param0) {
-        kg var3 = null;
+        DirectXSwapChainSurface var3 = null;
         int var4 = 0;
         int var2 = this.field_Cc.TestCooperativeLevel();
         if (var2 == 0 ||
           var2 == -2005530519) {
-          var3 = (kg) (this.field_Ib);
+          var3 = (DirectXSwapChainSurface) (this.field_Ib);
           this.s((byte) 81);
-          var3.a((byte) 71);
+          var3.close((byte) 71);
           this.field_Pc.BackBufferWidth = 0;
           this.field_Pc.BackBufferHeight = 0;
           if (DirectXGraphicsToolkit.a(this.field_Xc, this.field_Ic, this.field_zc, this.field_Y, 6, this.field_Pc)) {
             var4 = this.field_Cc.Reset(this.field_Pc);
             if (jagdx.HResult.succeeded(var4, -72)) {
-              var3.a(false, this.field_Cc.b(), this.field_Cc.b(0));
+              var3.attach(false, this.field_Cc.b(), this.field_Cc.b(0));
               this.P(-100);
               this.D(1);
               return true;
@@ -427,7 +427,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         if (param0 == LoginForm.ADD) {
           return 7;
         }
-        if (bj.SUBTRACT == param0) {
+        if (EmailAvailabilityRequest.SUBTRACT == param0) {
           return 10;
         }
         throw new IllegalArgumentException();
@@ -533,7 +533,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
 
     final void N(int param0) {
         if (param0 != -26911) {
-          this.field_Hc = (kg) null;
+          this.field_Hc = (DirectXSwapChainSurface) null;
         }
         if (!this.field_s.a(param0 ^ 10036)) {
           field_Mc[10] = 1.0f;
@@ -939,7 +939,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         super.dispose();
     }
 
-    private DirectXGraphicsToolkit(int param0, int param1, java.awt.Canvas param2, jaclib.peer.PeerReferenceManager param3, jagdx.IDirect3D param4, jagdx.IDirect3DDevice param5, kg param6, jagdx.D3DPRESENT_PARAMETERS param7, jagdx.D3DCAPS param8, TextureProvider param9, ResourceArchive param10, int param11) {
+    private DirectXGraphicsToolkit(int param0, int param1, java.awt.Canvas param2, jaclib.peer.PeerReferenceManager param3, jagdx.IDirect3D param4, jagdx.IDirect3DDevice param5, DirectXSwapChainSurface param6, jagdx.D3DPRESENT_PARAMETERS param7, jagdx.D3DCAPS param8, TextureProvider param9, ResourceArchive param10, int param11) {
         super(param2, param6, param9, param10, param11, 0);
         jagdx.GeometryBuffer discarded$0 = null;
         boolean stackIn_4_1 = false;
@@ -1047,7 +1047,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         boolean discarded$2 = false;
         boolean discarded$3 = false;
         this.field_Cc.EndScene();
-        if (!this.field_Hc.a(-22169)) {
+        if (!this.field_Hc.isValid(-22169)) {
           fieldTemp$1 = this.field_Lc + 1;
           this.field_Lc = this.field_Lc + 1;
           if (fieldTemp$1 > 50) {
@@ -1056,7 +1056,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
           discarded$2 = this.h(true);
         } else {
           this.field_Lc = 0;
-          if (jagdx.HResult.failed(this.field_Hc.a(0, -95), -1)) {
+          if (jagdx.HResult.failed(this.field_Hc.present(0, -95), -1)) {
             discarded$3 = this.h(true);
           }
         }
@@ -1077,7 +1077,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         int var11 = 0;
         Object var12 = null;
         jagdx.IDirect3DDevice var12_ref = null;
-        kg var13 = null;
+        DirectXSwapChainSurface var13 = null;
         jagdx.DirectXException var14 = null;
         DirectXGraphicsToolkit var15 = null;
         var4 = null;
@@ -1143,7 +1143,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
             var14 = (jagdx.DirectXException) (Object) decompiledCaughtException;
             var12_ref = var8.a(var5_int, var6, param0, 32 | var11, var10);
           }
-          var13 = new kg(var12_ref.b(0), var12_ref.b());
+          var13 = new DirectXSwapChainSurface(var12_ref.b(0), var12_ref.b());
           var15 = new DirectXGraphicsToolkit(var5_int, var6, param0, var7, var8, var12_ref, var13, var10, var9, param1, param2, param3.intValue());
           var4 = var15;
           var15.e(false);

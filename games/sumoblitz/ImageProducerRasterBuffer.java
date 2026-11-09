@@ -39,7 +39,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         if (param0 > -83) {
           field_n = (PcmSampleStream[]) null;
         }
-        return lm.a(59, LegacyOpenGlUnlitEffect.c(2));
+        return IndexBufferReference.a(59, LegacyOpenGlUnlitEffect.c(2));
     }
 
     public final void startProduction(java.awt.image.ImageConsumer param0) {
@@ -53,7 +53,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
     public final synchronized void addConsumer(java.awt.image.ImageConsumer param0) {
         try {
           this.field_l = param0;
-          param0.setDimensions(this.field_h, this.field_b);
+          param0.setDimensions(this.width, this.height);
           param0.setProperties((Hashtable) null);
           param0.setColorModel(this.field_m);
           param0.setHints(14);
@@ -70,7 +70,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         if (this.field_l == null) {
           return;
         }
-        this.field_l.setPixels(0, 0, this.field_h, this.field_b, this.field_m, this.field_c, 0, this.field_h);
+        this.field_l.setPixels(0, 0, this.width, this.height, this.field_m, this.pixels, 0, this.width);
         this.field_l.imageComplete(2);
         if (param0 < 31) {
           java.awt.image.ImageConsumer var3 = (java.awt.image.ImageConsumer) null;
@@ -247,37 +247,37 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    final void a(int param0, int param1, java.awt.Graphics param2, int param3) {
-        if (param0 >= -47) {
+    final void drawImage(int guard, int x, java.awt.Graphics graphics, int y) {
+        if (guard >= -47) {
           return;
         }
         try {
           this.b((byte) 55);
-          param2.drawImage(this.field_f, param1, param3, (java.awt.image.ImageObserver) (this));
+          graphics.drawImage(this.image, x, y, (java.awt.image.ImageObserver) (this));
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "fh.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "fh.B(" + guard + ',' + x + ',' + (graphics != null ? "{...}" : "null") + ',' + y + ')');
         }
     }
 
-    final void a(java.awt.Component param0, int param1, int param2, int param3) {
+    final void initializeRaster(java.awt.Component component, int height, int width, int guard) {
         try {
-          this.field_c = new int[param1 * param2 + 1];
-          this.field_b = param1;
-          this.field_h = param2;
-          if (param3 > -97) {
+          this.pixels = new int[height * width + 1];
+          this.height = height;
+          this.width = width;
+          if (guard > -97) {
             this.field_m = (java.awt.image.ColorModel) null;
           }
           this.field_m = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
-          this.field_f = param0.createImage((java.awt.image.ImageProducer) (this));
+          this.image = component.createImage((java.awt.image.ImageProducer) (this));
           this.b((byte) 117);
-          param0.prepareImage(this.field_f, (java.awt.image.ImageObserver) (this));
+          component.prepareImage(this.image, (java.awt.image.ImageObserver) (this));
           this.b((byte) 75);
-          param0.prepareImage(this.field_f, (java.awt.image.ImageObserver) (this));
+          component.prepareImage(this.image, (java.awt.image.ImageObserver) (this));
           this.b((byte) 45);
-          param0.prepareImage(this.field_f, (java.awt.image.ImageObserver) (this));
-          this.a(-1);
+          component.prepareImage(this.image, (java.awt.image.ImageObserver) (this));
+          this.bindRaster(-1);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "fh.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "fh.E(" + (component != null ? "{...}" : "null") + ',' + height + ',' + width + ',' + guard + ')');
         }
     }
 

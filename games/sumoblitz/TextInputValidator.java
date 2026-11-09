@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class TextInputValidator extends DebouncedInputValidator implements TextInputListener {
-    static jj field_c;
+    static LoginMethodPreference field_c;
     private TextInputWidget input;
 
     abstract ValidationStatus validateText(byte guard, String text);
@@ -58,7 +58,7 @@ abstract class TextInputValidator extends DebouncedInputValidator implements Tex
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!k.a(param2, param0, param3, param1 ^ 30429)) {
+          if (!k.decodeSpriteSheet(param2, param0, param3, param1 ^ 30429)) {
             return null;
           }
           if (param1 == -11481) {
@@ -85,7 +85,7 @@ abstract class TextInputValidator extends DebouncedInputValidator implements Tex
         if (guard == 114) {
           return this.validateText((byte) 26, this.input.text);
         }
-        field_c = (jj) null;
+        field_c = (LoginMethodPreference) null;
         return this.validateText((byte) 26, this.input.text);
     }
 
@@ -107,6 +107,6 @@ abstract class TextInputValidator extends DebouncedInputValidator implements Tex
     }
 
     static {
-        field_c = new jj("");
+        field_c = new LoginMethodPreference("");
     }
 }

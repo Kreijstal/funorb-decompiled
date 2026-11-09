@@ -15,7 +15,7 @@ final class DropDownWidget extends WidgetContainer implements WidgetActionListen
     String searchPrefix;
     LegacyBitmapFont font;
     static int field_C;
-    static bw field_N;
+    static NextLevelChoiceOverlay field_N;
 
     private final void openList(int guard) {
         int var2 = this.optionList.preferredHeight((byte) -128);
@@ -418,7 +418,7 @@ final class DropDownWidget extends WidgetContainer implements WidgetActionListen
         try {
           prefix = prefix.toLowerCase();
           if (guard != -2860) {
-            field_N = (bw) null;
+            field_N = (NextLevelChoiceOverlay) null;
           }
           for (var3_int = 0; var3_int < this.optionList.options.length; var3_int++) {
             var4 = this.optionList.options[var3_int].toString().toLowerCase();

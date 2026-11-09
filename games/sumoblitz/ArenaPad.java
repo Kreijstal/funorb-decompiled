@@ -476,7 +476,7 @@ final class ArenaPad extends IntrusiveNode {
           if ((decompiledFrameRemainder7) &&
             (decompiledFrameRemainder6) &&
             (decompiledFrameRemainder5)) {
-            kk.field_f.draw((this.xQ8 >> 8) - (kk.field_f.width() >> 1), (this.yQ8 >> 8) - (kk.field_f.height() >> 1), 1, 0, 2);
+            LegacyOpenGlTextureCache.field_f.draw((this.xQ8 >> 8) - (LegacyOpenGlTextureCache.field_f.width() >> 1), (this.yQ8 >> 8) - (LegacyOpenGlTextureCache.field_f.height() >> 1), 1, 0, 2);
             decompiledFrameRemainder7 = (var4 != 0);
           }
           if ((decompiledFrameRemainder7) &&

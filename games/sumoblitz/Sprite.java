@@ -4,7 +4,7 @@
 class Sprite extends SpriteState {
     int[] pixels;
 
-    final void d() {
+    final void bindRaster() {
         SoftwareRasterizer.setRaster(this.pixels, this.field_x, this.field_u);
     }
 

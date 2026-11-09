@@ -227,7 +227,7 @@ final class LegacyOpenGlReflectionEffect extends LegacyOpenGlEffect {
           HotspotTextWidget.activePointerButton = LegacyOpenGlNormalMapGenerator.field_a;
           ko.field_p = SoftCacheReference.field_C;
           pi.field_e = SecondaryNodeDeque.field_b;
-          sl.field_d = ResourceArchive.field_i;
+          LegacyOpenGlClientVertexBuffer.field_d = ResourceArchive.field_i;
           ResourceArchive.field_i = false;
           ActiveCanvasProvider.field_c = LegacyOpenGlBuffer.field_i;
           LoginCredentialType.field_a = GzipDecompressor.field_d;

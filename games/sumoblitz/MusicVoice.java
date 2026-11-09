@@ -88,7 +88,7 @@ final class MusicVoice extends IntrusiveNode {
           var1.unlink(param0);
           return;
         }
-        kk.a((byte) -110);
+        LegacyOpenGlTextureCache.closeAccountSocket((byte) -110);
     }
 
     MusicVoice() {

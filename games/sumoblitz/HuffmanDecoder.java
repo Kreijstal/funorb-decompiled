@@ -234,7 +234,7 @@ final class HuffmanDecoder {
           if (guard != -18527) {
             HuffmanDecoder.releaseStatics((byte) 19);
           }
-          qn.field_e = dispatcher;
+          NineSlicePanel.field_e = dispatcher;
           if (!FixedPointPerlinNoise3D.field_h.startsWith("win")) {
             if (FixedPointPerlinNoise3D.field_h.startsWith("linux")) {
               OpenGlUnderwaterEffect.field_n = OpenGlUnderwaterEffect.field_n + "linux/";
@@ -246,7 +246,7 @@ final class HuffmanDecoder {
           } else {
             OpenGlUnderwaterEffect.field_n = OpenGlUnderwaterEffect.field_n + "windows/";
           }
-          if (qn.field_e.field_t) {
+          if (NineSlicePanel.field_e.field_t) {
             OpenGlUnderwaterEffect.field_n = OpenGlUnderwaterEffect.field_n + "msjava/";
             return;
           }

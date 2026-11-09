@@ -102,7 +102,7 @@ final class LegacyOpenGlTexture3D extends LegacyOpenGlTexture {
           var2_intLifetime1 = -62 % ((-74 - param1) / 35);
           if (!up.field_d &&
             qf.field_a < GameClientShell.field_s &&
-            sl.field_d) {
+            LegacyOpenGlClientVertexBuffer.field_d) {
             qf.field_a = 0;
             GraphicsHeap.field_k = ScanlineSpriteMask.field_e;
             VertexLayout.field_b = EmptyWidgetRenderer.field_d;

@@ -7,35 +7,35 @@ final class jq {
     jq(LegacyVertexBuffer param0, int param1, int param2, int param3) {
     }
 
-    final static void a(int param0, int param1) {
-        if (param1 == 13586) {
-          pi.field_b = wh.field_w[param0];
-          LegacyOpenGlTexture3D.field_k = ArenaPad.waitingForTextTranslations[param0];
-          AccountRequestState.field_c = qi.loadingTextTranslations[param0];
+    final static void setLoadingLanguage(int language, int guard) {
+        if (guard == 13586) {
+          pi.field_b = wh.field_w[language];
+          LegacyOpenGlTexture3D.field_k = ArenaPad.waitingForTextTranslations[language];
+          AccountRequestState.field_c = qi.loadingTextTranslations[language];
           return;
         }
         TEXTURE = (TextureCombineSource) null;
-        pi.field_b = wh.field_w[param0];
-        LegacyOpenGlTexture3D.field_k = ArenaPad.waitingForTextTranslations[param0];
-        AccountRequestState.field_c = qi.loadingTextTranslations[param0];
+        pi.field_b = wh.field_w[language];
+        LegacyOpenGlTexture3D.field_k = ArenaPad.waitingForTextTranslations[language];
+        AccountRequestState.field_c = qi.loadingTextTranslations[language];
     }
 
-    final static void a(int param0, Sprite param1) {
+    final static void pushSpriteRaster(int guard, Sprite sprite) {
         try {
           GameApplet.pushRasterState(82);
-          SoftwareRasterizer.setRaster(param1.pixels, param1.field_z, param1.field_w);
-          if (param0 != 7161) {
-            jq.a(-84, -69);
+          SoftwareRasterizer.setRaster(sprite.pixels, sprite.field_z, sprite.field_w);
+          if (guard != 7161) {
+            jq.setLoadingLanguage(-84, -69);
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "jq.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "jq.C(" + guard + ',' + (sprite != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void releaseStatics(int param0) {
         if (param0 < 99) {
           Sprite var2 = (Sprite) null;
-          jq.a(87, (Sprite) null);
+          jq.pushSpriteRaster(87, (Sprite) null);
           TEXTURE = null;
           return;
         }

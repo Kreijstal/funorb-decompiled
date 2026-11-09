@@ -104,8 +104,8 @@ final class lf extends ka {
 
     final static void a(int param0, int param1) {
         tt.field_l = param1;
-        if (null != qc.field_e) {
-          qc.field_e.setMasterVolume(param1, true);
+        if (null != DroneIntroductionOverlay.field_e) {
+          DroneIntroductionOverlay.field_e.setMasterVolume(param1, true);
         }
         if (param0 != 0) {
           return;

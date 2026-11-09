@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class df {
-    boolean field_b;
-    String field_c;
-    String field_a;
+final class HiscorePlayerName {
+    boolean included;
+    String primaryName;
+    String secondaryName;
     static SpriteData field_d;
 
     final static int a(byte param0) {
         if (param0 <= 97) {
-          df.a((byte) 125);
+          HiscorePlayerName.a((byte) 125);
           return LegacyOpenGlFlowingWaterEffect.field_e;
         }
         return LegacyOpenGlFlowingWaterEffect.field_e;

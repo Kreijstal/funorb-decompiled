@@ -3,8 +3,8 @@
  */
 import java.util.*;
 
-final class gg extends DualLinkNode {
-    byte[] field_s;
+final class ByteArrayCacheNode extends DualLinkNode {
+    byte[] bytes;
     static ResourceArchive field_r;
     static AccountConnectionPhase READY_TO_CONNECT;
 
@@ -69,7 +69,7 @@ final class gg extends DualLinkNode {
         field_r = null;
     }
 
-    final static void a(byte param0) {
+    final static void initializeGameplaySession(byte guard) {
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
@@ -80,10 +80,10 @@ final class gg extends DualLinkNode {
           ig.hudMessages.clear(122);
           SpriteMask.drones = new Drone[100];
           LoginCredentialFactory.initializePlayerFromUpgradeSettings(85);
-          if (param0 <= 81) {
+          if (guard <= 81) {
             READY_TO_CONNECT = (AccountConnectionPhase) null;
           }
-          bj.powerupPickups = new IntrusiveDeque();
+          EmailAvailabilityRequest.powerupPickups = new IntrusiveDeque();
           QuickChatPhraseProvider.arenaPads = new IntrusiveDeque();
           if (OpenGlShaderProgram.levelIndex != -1) {
             QuickChatPhraseProvider.arenaPads = EnemyDrone.field_S[OpenGlShaderProgram.levelIndex].field_d;
@@ -101,7 +101,7 @@ final class gg extends DualLinkNode {
                 var1_int++;
               }
             } else {
-              Bzip2State.field_J = ((om) (NoiseSliceGenerator.field_a.a(107, (long)OpenGlShaderProgram.levelIndex))).a(-120);
+              Bzip2State.field_J = ((DroneWaveDefinition) (NoiseSliceGenerator.field_a.a(107, (long)OpenGlShaderProgram.levelIndex))).waves(-120);
             }
           }
           FadingWidget.score = 0;
@@ -119,15 +119,15 @@ final class gg extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "gg.B(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "gg.B(" + guard + ')');
         }
     }
 
-    gg(byte[] param0) {
+    ByteArrayCacheNode(byte[] bytes) {
         try {
-          this.field_s = param0;
+          this.bytes = bytes;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "gg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "gg.<init>(" + (bytes != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -265,7 +265,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         if (this.field_t) {
                           this.field_w.enterFullscreen(var8.intArgument & 65535, (byte) -123, var8.intArgument >>> 16, var8.secondIntArgument & 65535, var8.secondIntArgument >> 16, var17);
                         } else {
-                          Class.forName("cu").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_r, new Object[]{var17, new Integer(var8.intArgument >>> 16), new Integer(var8.intArgument & 65535), new Integer(var8.secondIntArgument >> 16), new Integer(65535 & var8.secondIntArgument)});
+                          Class.forName("AwtFullscreenController").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_r, new Object[]{var17, new Integer(var8.intArgument >>> 16), new Integer(var8.intArgument & 65535), new Integer(var8.secondIntArgument >> 16), new Integer(65535 & var8.secondIntArgument)});
                         }
                         break;
                       case 13:
@@ -336,7 +336,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         break;
                       case 7:
                         if (!this.field_t) {
-                          Class.forName("cu").getMethod("exit", new Class[]{}).invoke(this.field_r, new Object[]{});
+                          Class.forName("AwtFullscreenController").getMethod("exit", new Class[]{}).invoke(this.field_r, new Object[]{});
                         } else {
                           this.field_w.restoreDisplayMode((java.awt.Frame) (var8.objectArgument), 8);
                         }
@@ -345,7 +345,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         if (this.field_t) {
                           var8.result = this.field_w.displayModes((byte) -128);
                         } else {
-                          var8.result = Class.forName("cu").getMethod("listmodes", new Class[]{}).invoke(this.field_r, new Object[]{});
+                          var8.result = Class.forName("AwtFullscreenController").getMethod("listmodes", new Class[]{}).invoke(this.field_r, new Object[]{});
                         }
                         break;
                       case 21:
@@ -624,7 +624,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           try {
             if (!this.field_t) {
-              this.field_r = Class.forName("cu").newInstance();
+              this.field_r = Class.forName("AwtFullscreenController").newInstance();
             } else {
               var9 = new DirectDrawFullscreenController();
               this.field_w = var9;

@@ -45,15 +45,15 @@ abstract class TickClock {
         var19 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (0 <= param3 &&
-            param2 < nk.field_c) {
+            param2 < SoftwareRasterViewport.height) {
             if (param7 < 0 &&
               param5 < 0 &&
               param1 < 0) {
               return;
             }
-            if (param7 >= nk.field_i &&
-              nk.field_i <= param5 &&
-              nk.field_i <= param1) {
+            if (param7 >= SoftwareRasterViewport.width &&
+              SoftwareRasterViewport.width <= param5 &&
+              SoftwareRasterViewport.width <= param1) {
               return;
             }
             if (param6 != 1955582416) {
@@ -118,19 +118,19 @@ abstract class TickClock {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var16Lifetime2 = nk.field_d[param2];
+                var16Lifetime2 = SoftwareRasterViewport.rowOffsets[param2];
                 while (param2 < param8) {
                   var17 = var9_int >> 16;
-                  if (nk.field_i > var17) {
+                  if (SoftwareRasterViewport.width > var17) {
                     var18 = (var10 >> 16) - (var9_int >> 16);
                     if (0 == var18) {
                       if (var17 >= 0 &&
-                        nk.field_i > var17) {
+                        SoftwareRasterViewport.width > var17) {
                         TextureMetadata.a(-1, var17 + var16Lifetime2, param4, var18, param0);
                       }
                     } else {
-                      if (var18 + var17 >= nk.field_i) {
-                        var18 = nk.field_i - var17 - 1;
+                      if (var18 + var17 >= SoftwareRasterViewport.width) {
+                        var18 = SoftwareRasterViewport.width - var17 - 1;
                       }
                       if (0 > var17) {
                         TextureMetadata.a(-1, var16Lifetime2, param4, var18 + var17, param0);
@@ -140,7 +140,7 @@ abstract class TickClock {
                     }
                   }
                   param2++;
-                  if (nk.field_c <= param2) {
+                  if (SoftwareRasterViewport.height <= param2) {
                     return;
                   }
                   var9_int = var9_int + var11;
@@ -169,14 +169,14 @@ abstract class TickClock {
               var9_int = var9_int + param2 * var11;
               param2 = 0;
             }
-            var15Lifetime1 = nk.field_d[param2];
+            var15Lifetime1 = SoftwareRasterViewport.rowOffsets[param2];
             while (param3 > param2) {
               var16Lifetime1 = var9_int >> 16;
-              if (var16Lifetime1 < nk.field_i) {
+              if (var16Lifetime1 < SoftwareRasterViewport.width) {
                 var17Lifetime1 = (var10 >> 16) - (var9_int >> 16);
                 if (var17Lifetime1 != 0) {
-                  if (nk.field_i <= var17Lifetime1 + var16Lifetime1) {
-                    var17Lifetime1 = -1 + (nk.field_i - var16Lifetime1);
+                  if (SoftwareRasterViewport.width <= var17Lifetime1 + var16Lifetime1) {
+                    var17Lifetime1 = -1 + (SoftwareRasterViewport.width - var16Lifetime1);
                   }
                   if (0 <= var16Lifetime1) {
                     TextureMetadata.a(param6 ^ -1955582417, var15Lifetime1 + var16Lifetime1, param4, var17Lifetime1, param0);
@@ -185,13 +185,13 @@ abstract class TickClock {
                   }
                 } else {
                   if (0 <= var16Lifetime1 &&
-                    nk.field_i > var16Lifetime1) {
+                    SoftwareRasterViewport.width > var16Lifetime1) {
                     TextureMetadata.a(-1, var15Lifetime1 + var16Lifetime1, param4, var17Lifetime1, param0);
                   }
                 }
               }
               param2++;
-              if (nk.field_c <= param2) {
+              if (SoftwareRasterViewport.height <= param2) {
                 return;
               }
               var10 = var10 + var12;

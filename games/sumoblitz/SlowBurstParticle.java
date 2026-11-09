@@ -63,7 +63,7 @@ final class SlowBurstParticle extends TimedSceneEffect {
         if (SocketJs5Client.field_q < var1) {
           SocketJs5Client.field_q = var1;
         }
-        GameProgressUpdate.field_o = new lg();
+        GameProgressUpdate.field_o = new ResetStatsConfirmationOverlay();
         return true;
     }
 
@@ -153,7 +153,7 @@ final class SlowBurstParticle extends TimedSceneEffect {
             break;
           }
           if (var3 == null) {
-            kk.a((byte) -115);
+            LegacyOpenGlTextureCache.closeAccountSocket((byte) -115);
             return;
           }
           var4 = var15.readUnsignedByte(-31302);

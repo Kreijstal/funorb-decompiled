@@ -95,8 +95,8 @@ final class up {
           var9 = var21Lifetime1 * param0[3] + (param0[4] * var22Lifetime1 + param0[5] * var23Lifetime1) >> 16 - IntrusiveDeque.field_b;
           var11 = param0[11] * var23Lifetime1 + param0[10] * var22Lifetime1 + var21Lifetime1 * param0[9] >> 16;
           var10 = var21Lifetime1 * param0[6] + var22Lifetime1 * param0[7] + param0[8] * var23Lifetime1 >> 16 - IntrusiveDeque.field_b;
-          var21Lifetime2 = nk.field_e;
-          var22Lifetime2 = nk.field_b;
+          var21Lifetime2 = SoftwareRasterViewport.centerX;
+          var22Lifetime2 = SoftwareRasterViewport.centerY;
           var23Lifetime2 = 0;
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;

@@ -101,7 +101,7 @@ final class PasswordValidator extends TextInputValidator {
             stackIn_2_0 = AccountConnectionPhase.INVALID;
             return stackIn_2_0;
           }
-          if (!gg.a(var4, var3, -83)) {
+          if (!ByteArrayCacheNode.a(var4, var3, -83)) {
             stackIn_6_0 = AccountConnectionPhase.INVALID;
             return stackIn_6_0;
           }

@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class RasterBuffer {
-    int field_h;
+    int width;
     static String invalidPasswordText;
-    int[] field_c;
-    java.awt.Image field_f;
+    int[] pixels;
+    java.awt.Image image;
     static QuickChatCommand field_i;
     static int[] field_a;
     static int[] field_e;
     static String quitText;
-    int field_b;
+    int height;
 
     public static void releaseStatics(byte param0) {
         field_a = null;
@@ -36,9 +36,9 @@ abstract class RasterBuffer {
         return param1;
     }
 
-    abstract void a(java.awt.Component param0, int param1, int param2, int param3);
+    abstract void initializeRaster(java.awt.Component component, int height, int width, int guard);
 
-    abstract void a(int param0, int param1, java.awt.Graphics param2, int param3);
+    abstract void drawImage(int guard, int x, java.awt.Graphics graphics, int y);
 
     final static void b(int param0) {
         int var1;
@@ -57,7 +57,7 @@ abstract class RasterBuffer {
         var1 = jk.field_c;
         if (var1 > 0) {
           if (1 != var1) {
-            SocketJs5Client.field_s = ic.a(ph.youHaveUnreadMessagesText, new String[]{Integer.toString(var1)}, (byte) -128);
+            SocketJs5Client.field_s = ic.a(LruNodeCache.youHaveUnreadMessagesText, new String[]{Integer.toString(var1)}, (byte) -128);
           } else {
             SocketJs5Client.field_s = FullscreenMembershipDialog.youHave1UnreadText;
           }
@@ -72,29 +72,29 @@ abstract class RasterBuffer {
         return;
     }
 
-    final static bj a(int param0, String param1) {
+    final static EmailAvailabilityRequest pollEmailAvailability(int guard, String email) {
         RuntimeException var2 = null;
-        bj stackIn_7_0 = null;
+        EmailAvailabilityRequest stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (AffineTransform3D.field_o.a(true) &&
-            !param1.equals(AffineTransform3D.field_o.b(66))) {
-            AffineTransform3D.field_o = DroneDebris.a(false, param1);
+          if (AffineTransform3D.emailAvailabilityRequest.isComplete(true) &&
+            !email.equals(AffineTransform3D.emailAvailabilityRequest.email(66))) {
+            AffineTransform3D.emailAvailabilityRequest = DroneDebris.createEmailAvailabilityRequest(false, email);
           }
-          if (param0 != 1) {
+          if (guard != 1) {
             quitText = (String) null;
           }
-          stackIn_7_0 = AffineTransform3D.field_o;
+          stackIn_7_0 = AffineTransform3D.emailAvailabilityRequest;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_10_0 = var2;
-          stackIn_10_1 = new StringBuilder().append("ov.K(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_10_1 = new StringBuilder().append("ov.K(").append(guard).append(',');
+          if (email == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
@@ -103,11 +103,11 @@ abstract class RasterBuffer {
         }
     }
 
-    final void a(int param0) {
-        SoftwareRasterizer.setRaster(this.field_c, this.field_h, this.field_b);
-        if (param0 != -1) {
+    final void bindRaster(int guard) {
+        SoftwareRasterizer.setRaster(this.pixels, this.width, this.height);
+        if (guard != -1) {
           String var3 = (String) null;
-          RasterBuffer.a(111, (String) null);
+          RasterBuffer.pollEmailAvailability(111, (String) null);
         }
     }
 

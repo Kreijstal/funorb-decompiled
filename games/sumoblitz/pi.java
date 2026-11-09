@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pi {
-    static ph field_a;
+    static LruNodeCache field_a;
     static ToolkitSprite field_d;
     static String passwordText;
     static int field_e;
@@ -100,7 +100,7 @@ final class pi {
     }
 
     static {
-        field_a = new ph(16);
+        field_a = new LruNodeCache(16);
         passwordText = "Password: ";
         field_e = 0;
         yourEmailAddressIsText = "Your email address is used to identify this account";

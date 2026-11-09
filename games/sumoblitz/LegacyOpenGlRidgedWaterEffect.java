@@ -64,7 +64,7 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
         if (param0 != -2) {
           return (String) null;
         }
-        if (!AffineTransform3D.field_o.a(true)) {
+        if (!AffineTransform3D.emailAvailabilityRequest.isComplete(true)) {
           return PowerupPickup.field_s;
         }
         return FocusProxyWidget.field_F;

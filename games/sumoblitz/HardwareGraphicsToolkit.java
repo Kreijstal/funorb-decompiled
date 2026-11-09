@@ -1957,7 +1957,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
                 this.a((byte) -83, SlowBurstParticle.MODULATE, LoginForm.ADD);
               } else {
                 if (param1 == 4) {
-                  this.a((byte) -83, bj.SUBTRACT, bj.SUBTRACT);
+                  this.a((byte) -83, EmailAvailabilityRequest.SUBTRACT, EmailAvailabilityRequest.SUBTRACT);
                 }
               }
             }

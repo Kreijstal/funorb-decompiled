@@ -2,50 +2,50 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gu extends ka {
-    private lm field_g;
+    private IndexBufferReference field_g;
     private int field_e;
     static String musicText;
     static int field_d;
     private int field_c;
     static int field_j;
-    private lr field_i;
-    private lr field_k;
-    private lr field_f;
-    private lr field_l;
+    private VertexBufferReference field_i;
+    private VertexBufferReference field_k;
+    private VertexBufferReference field_f;
+    private VertexBufferReference field_l;
 
     final void b(byte param0) {
         int var2;
         int var2Lifetime1;
         if (null != this.field_i) {
-          this.field_i.b(16711680);
+          this.field_i.close(16711680);
         }
         if (this.field_k == null) {
           if (this.field_l == null) {
             var2 = -105 % ((-65 - param0) / 56);
             if (this.field_f != null) {
-              this.field_f.b(16711680);
+              this.field_f.close(16711680);
             }
             if (this.field_g == null) {
               return;
             }
-            this.field_g.a(-1);
+            this.field_g.close(-1);
             return;
           }
-          this.field_l.b(16711680);
+          this.field_l.close(16711680);
         } else {
-          this.field_k.b(16711680);
+          this.field_k.close(16711680);
           if (this.field_l != null) {
-            this.field_l.b(16711680);
+            this.field_l.close(16711680);
           }
         }
         var2Lifetime1 = -105 % ((-65 - param0) / 56);
         if (this.field_f != null) {
-          this.field_f.b(16711680);
+          this.field_f.close(16711680);
         }
         if (this.field_g == null) {
           return;
         }
-        this.field_g.a(-1);
+        this.field_g.close(-1);
     }
 
     gu(HardwareGraphicsToolkit param0, int param1, int param2, boolean param3, boolean param4) {
@@ -59,25 +59,25 @@ final class gu extends ka {
           this.field_e = param1;
           if (param3 ||
             ContentTransitionPhase.a(this.field_e, (byte) -97, this.field_c)) {
-            this.field_i = new lr(IntrusiveNodeHashTable.a(false, this.field_e, this.field_c));
+            this.field_i = new VertexBufferReference(IntrusiveNodeHashTable.a(false, this.field_e, this.field_c));
           }
           if (param3 ||
             ArchiveIndex.a(this.field_c, this.field_e, 37)) {
-            this.field_k = new lr(om.a(this.field_c, this.field_e, (byte) -50));
+            this.field_k = new VertexBufferReference(DroneWaveDefinition.a(this.field_c, this.field_e, (byte) -50));
           }
           if (param3 ||
             BeveledCheckboxRenderer.a(this.field_e, 13836, this.field_c)) {
-            this.field_l = new lr(LoginCredentials.a(31, this.field_e, this.field_c));
+            this.field_l = new VertexBufferReference(LoginCredentials.a(31, this.field_e, this.field_c));
           }
           if (param3 ||
-            bj.a(this.field_e, (byte) -113, this.field_c)) {
-            this.field_f = new lr(mo.a(this.field_c, this.field_e, 30643));
+            EmailAvailabilityRequest.a(this.field_e, (byte) -113, this.field_c)) {
+            this.field_f = new VertexBufferReference(mo.a(this.field_c, this.field_e, 30643));
           }
           if (!param3 &&
             !tf.a(this.field_c, -2626, this.field_e)) {
             return;
           }
-          this.field_g = new lm(ValidatedTextInputWidget.b(this.field_e, this.field_c, -126));
+          this.field_g = new IndexBufferReference(ValidatedTextInputWidget.b(this.field_e, this.field_c, -126));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

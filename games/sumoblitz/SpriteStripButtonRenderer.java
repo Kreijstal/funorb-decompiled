@@ -132,23 +132,23 @@ final class SpriteStripButtonRenderer extends TextWidgetRenderer {
               break;
             }
             if (var4_ref_of == null) {
-              kk.a((byte) -124);
+              LegacyOpenGlTextureCache.closeAccountSocket((byte) -124);
               return;
             }
             var5 = var28.readUnsignedByte(-31302);
             if (0 != var5) {
               var6_int = var4_ref_of.field_l;
               var7 = var4_ref_of.field_s;
-              DraggableWidget.field_B[0].field_a = null;
-              DraggableWidget.field_B[0].field_c = qv.field_o;
-              DraggableWidget.field_B[0].field_b = false;
+              DraggableWidget.field_B[0].secondaryName = null;
+              DraggableWidget.field_B[0].primaryName = qv.field_o;
+              DraggableWidget.field_B[0].included = false;
               for (var8_int = 1; var8_int < var5; var8_int++) {
-                DraggableWidget.field_B[var8_int].field_c = var28.readCp1252String(-1);
-                DraggableWidget.field_B[var8_int].field_b = false;
+                DraggableWidget.field_B[var8_int].primaryName = var28.readCp1252String(-1);
+                DraggableWidget.field_B[var8_int].included = false;
                 if (var28.readUnsignedByte(-31302) == 1) {
-                  DraggableWidget.field_B[var8_int].field_a = var28.readCp1252String(param0 + 69);
+                  DraggableWidget.field_B[var8_int].secondaryName = var28.readCp1252String(param0 + 69);
                 } else {
-                  DraggableWidget.field_B[var8_int].field_a = null;
+                  DraggableWidget.field_B[var8_int].secondaryName = null;
                 }
               }
               dupTemp$0 = new String[3][var6_int];
@@ -171,12 +171,12 @@ final class SpriteStripButtonRenderer extends TextWidgetRenderer {
               if (var18 > 0) {
                 for (var19 = 0; var19 < var18; var19++) {
                   var20 = var28.readUnsignedByte(-31302);
-                  var21 = DraggableWidget.field_B[var20].field_c;
+                  var21 = DraggableWidget.field_B[var20].primaryName;
                   var22 = var28.readLong((byte) 113);
                   var24 = var28.position;
                   if (var6_int > var19) {
                     var8[0][var12] = var21;
-                    var9[0][var12] = DraggableWidget.field_B[var20].field_a;
+                    var9[0][var12] = DraggableWidget.field_B[var20].secondaryName;
                     var10[0][var12] = var22;
                     for (var25 = 0; var25 < var7; var25++) {
                       incrementValue$3 = var15;
@@ -199,10 +199,10 @@ final class SpriteStripButtonRenderer extends TextWidgetRenderer {
                     }
                   }
                   if (var6_int > var14 &&
-                    !DraggableWidget.field_B[var20].field_b) {
-                    DraggableWidget.field_B[var20].field_b = true;
+                    !DraggableWidget.field_B[var20].included) {
+                    DraggableWidget.field_B[var20].included = true;
                     var8[2][var14] = var21;
-                    var9[2][var14] = DraggableWidget.field_B[var20].field_a;
+                    var9[2][var14] = DraggableWidget.field_B[var20].secondaryName;
                     var10[2][var14] = var22;
                     var28.position = var24;
                     var14++;
@@ -231,7 +231,7 @@ final class SpriteStripButtonRenderer extends TextWidgetRenderer {
               break;
             }
             if (var6 == null) {
-              kk.a((byte) -121);
+              LegacyOpenGlTextureCache.closeAccountSocket((byte) -121);
               return;
             }
             var6.field_s = var4;
@@ -239,7 +239,7 @@ final class SpriteStripButtonRenderer extends TextWidgetRenderer {
             return;
           }
           IntrusiveNode.reportClientError("HS1: " + VictoryScreen.b((byte) -124), (Throwable) null, 0);
-          kk.a((byte) -121);
+          LegacyOpenGlTextureCache.closeAccountSocket((byte) -121);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

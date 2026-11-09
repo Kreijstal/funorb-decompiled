@@ -70,8 +70,8 @@ final class NetworkResourceRequest extends ResourceRequest {
               }
             }
           }
-          if (qc.field_e != null) {
-            stackIn_18_0 = qc.field_e.isPlaying(-8192);
+          if (DroneIntroductionOverlay.field_e != null) {
+            stackIn_18_0 = DroneIntroductionOverlay.field_e.isPlaying(-8192);
             if (!stackIn_18_0) {
               GridWidgetContainer.field_B = null;
               return;

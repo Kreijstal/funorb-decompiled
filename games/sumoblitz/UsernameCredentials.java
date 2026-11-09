@@ -98,7 +98,7 @@ class UsernameCredentials extends LoginCredentials {
               } else {
                 var6Lifetime6 = var8 + "; Expires=" + ExpandingRingEffect.formatCookieDate(94608000000L + wq.monotonicTimeMillis(-6), true) + "; Max-Age=" + 94608000L;
               }
-              tw.a("document.cookie=\"" + var6Lifetime6 + "\"", -15428, applet);
+              BrowserScriptBridge.evaluateScript("document.cookie=\"" + var6Lifetime6 + "\"", -15428, applet);
             } catch (Throwable throwable) {
             }
             RotarySelectorRenderer.updateAppletNavigationLinks(false, applet);
@@ -148,12 +148,12 @@ class UsernameCredentials extends LoginCredentials {
               stackIn_3_0 = -61;
               return stackIn_3_0;
             }
-            if (DisplayModeConfirmationDialog.field_O == null &&
+            if (DisplayModeConfirmationDialog.accountSocket == null &&
               !GridWidgetContainer.a((byte) -34, reconnect)) {
               stackIn_8_0 = -1;
               return stackIn_8_0;
             }
-            if (kw.accountPhase == gg.READY_TO_CONNECT) {
+            if (kw.accountPhase == ByteArrayCacheNode.READY_TO_CONNECT) {
               if (reconnect) {
                 var10 = (String) null;
                 LegacyOpenGlBuffer.field_d = LoginCredentialFactory.createCredentials(StringBuilderSupport.field_a, false, (String) null, password, false);
@@ -183,10 +183,10 @@ class UsernameCredentials extends LoginCredentials {
               HardwareUnlitEffect.field_g = ig.field_a.readLong((byte) 127);
               ig.field_a.position = 0;
               LoginPacketWriter.sendLoginPacket(reconnect, jagexHosted, -12793, affiliateId, LegacyOpenGlBuffer.field_d);
-              kw.accountPhase = jj.WAIT_LOGIN_REPLY;
+              kw.accountPhase = LoginMethodPreference.WAIT_LOGIN_REPLY;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (kw.accountPhase == jj.WAIT_LOGIN_REPLY &&
+            if (kw.accountPhase == LoginMethodPreference.WAIT_LOGIN_REPLY &&
               OpenGlIndexBuffer.b(-1, 1)) {
               var6_intLifetime1 = ig.field_a.readUnsignedByte(-31302);
               TextureFormat.field_a = var6_intLifetime1;
@@ -200,7 +200,7 @@ class UsernameCredentials extends LoginCredentials {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  kk.a((byte) -128);
+                  LegacyOpenGlTextureCache.closeAccountSocket((byte) -128);
                   LimitedRandomAccessFile.field_g = false;
                   stackIn_33_0 = var6_intLifetime1;
                   return stackIn_33_0;
@@ -224,7 +224,7 @@ class UsernameCredentials extends LoginCredentials {
               }
               if (!reconnect) {
                 stackIn_43_0 = ((4 & var7) != 0);
-                wo.field_c = stackIn_43_0;
+                DelegatingCanvas.field_c = stackIn_43_0;
                 stackIn_46_0 = ((var7 & 8) != 0);
                 IntrusiveDequeCursor.field_b = stackIn_46_0;
                 if (IntrusiveDequeCursor.field_b) {
@@ -247,33 +247,33 @@ class UsernameCredentials extends LoginCredentials {
               kw.accountPhase = LegacyOpenGlUnderwaterEffect.CONNECTED;
               if (LegacyOpenGlBuffer.field_d.credentialType((byte) 113) != IndexedSprite.EMAIL_CREDENTIALS) {
                 if (LegacyOpenGlBuffer.field_d.credentialType((byte) 89) == ProxyAuthenticationRequiredException.USERNAME_CREDENTIALS) {
-                  LevelSelectScreen.field_j.a(true, LegacyOpenGlUnlitEffect.c(2));
+                  LevelSelectScreen.field_j.savePreference(true, LegacyOpenGlUnlitEffect.c(2));
                 }
               } else {
-                OpenGlTexture3D.field_m.a(true, LegacyOpenGlUnlitEffect.c(2));
+                OpenGlTexture3D.field_m.savePreference(true, LegacyOpenGlUnlitEffect.c(2));
               }
               LimitedRandomAccessFile.field_g = false;
               if (var6 != null) {
                 UsernameCredentials.writeAppletSettings((byte) -118, var6, LegacyOpenGlUnlitEffect.c(2));
               }
               if (HardwareRidgedWaterNoise.field_x <= 0 &&
-                !wo.field_c) {
+                !DelegatingCanvas.field_c) {
                 try {
-                  tw.a(LegacyOpenGlUnlitEffect.c(2), 93, "unzap");
+                  BrowserScriptBridge.call(LegacyOpenGlUnlitEffect.c(2), 93, "unzap");
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  tw.a(-111, LegacyOpenGlUnlitEffect.c(2), "zap", new Object[]{MusicPatch.a(-29275, StringBuilderSupport.field_a)});
+                  BrowserScriptBridge.call(-111, LegacyOpenGlUnlitEffect.c(2), "zap", new Object[]{MusicPatch.a(-29275, StringBuilderSupport.field_a)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               }
               if (HardwareRidgedWaterNoise.field_x > 0) {
-                qn.field_a = true;
+                NineSlicePanel.field_a = true;
               }
               InwardSparkParticle.field_v.initializeCipher((byte) 64, RendererSession.isaacSeed);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
@@ -285,7 +285,7 @@ class UsernameCredentials extends LoginCredentials {
             }
             if (kw.accountPhase == WidgetContainer.WAIT_LOGIN_ERROR &&
               lt.a((byte) 119)) {
-              kk.a((byte) -115);
+              LegacyOpenGlTextureCache.closeAccountSocket((byte) -115);
               if (TextureFormat.field_a == 7 &&
                 !LimitedRandomAccessFile.field_g) {
                 LimitedRandomAccessFile.field_g = true;
@@ -300,7 +300,7 @@ class UsernameCredentials extends LoginCredentials {
               stackIn_83_0 = TextureFormat.field_a;
               return stackIn_83_0;
             }
-            if (DisplayModeConfirmationDialog.field_O == null) {
+            if (DisplayModeConfirmationDialog.accountSocket == null) {
               if (LimitedRandomAccessFile.field_g) {
                 if (uc.b(26560) <= 30000L) {
                   MouseWheelInput.field_c = GridWidgetContainer.errorConnectingToServerText;

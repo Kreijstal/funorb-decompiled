@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lm {
-    private IndexBuffer field_b;
+final class IndexBufferReference {
+    private IndexBuffer buffer;
     static QuickChatCommand field_a;
 
-    final void a(int param0) {
-        if (null != this.field_b) {
-          this.field_b.close(param0 + 12002);
-          if (param0 != -1) {
+    final void close(int guard) {
+        if (null != this.buffer) {
+          this.buffer.close(guard + 12002);
+          if (guard != -1) {
             field_a = (QuickChatCommand) null;
             return;
           }
           return;
         }
-        if (param0 == -1) {
+        if (guard == -1) {
           return;
         }
         field_a = (QuickChatCommand) null;
@@ -49,7 +49,7 @@ final class lm {
             }
             try {
               var2 = "tuhstatbut";
-              var3 = (String) (tw.a(param1, 116, "getcookies"));
+              var3 = (String) (BrowserScriptBridge.call(param1, 116, "getcookies"));
               var4 = SocialContact.split((char)param0, var3, -27224);
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');
@@ -83,7 +83,7 @@ final class lm {
         }
     }
 
-    lm(boolean param0) {
+    IndexBufferReference(boolean unused) {
     }
 
     static {

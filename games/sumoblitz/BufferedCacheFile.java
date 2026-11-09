@@ -18,7 +18,7 @@ final class BufferedCacheFile {
     private long length;
 
     final static void c(int param0) {
-        bw.a(false, LegacyOpenGlUnlitEffect.c(param0 ^ 2));
+        NextLevelChoiceOverlay.a(false, LegacyOpenGlUnlitEffect.c(param0 ^ 2));
         if (param0 != 0) {
           String var2 = (String) null;
           BufferedCacheFile.a(42L, (java.applet.Applet) null, false, (String) null, (String) null);
@@ -60,7 +60,7 @@ final class BufferedCacheFile {
               } else {
                 var7Lifetime4 = var9 + "; Expires=" + ExpandingRingEffect.formatCookieDate(param0 * 1000L + wq.monotonicTimeMillis(-123), true) + "; Max-Age=" + param0;
               }
-              tw.a("document.cookie=\"" + var7Lifetime4 + "\"", -15428, param1);
+              BrowserScriptBridge.evaluateScript("document.cookie=\"" + var7Lifetime4 + "\"", -15428, param1);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = decompiledCaughtException;

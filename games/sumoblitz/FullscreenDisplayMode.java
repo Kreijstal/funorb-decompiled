@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cd {
-    int field_a;
-    int field_b;
+final class FullscreenDisplayMode {
+    int width;
+    int refreshRate;
     static int field_d;
-    int field_e;
+    int bitDepth;
     static SpriteData[] field_c;
     static int[] field_f;
-    int field_g;
+    int height;
 
-    final static boolean a(boolean param0) {
-        if (OpenGlVertexLayout.field_f.a((byte) 91)) {
-          OpenGlVertexLayout.field_f.b(0);
+    final static boolean updateDroneIntroduction(boolean guard) {
+        if (OpenGlVertexLayout.field_f.isVisible((byte) 91)) {
+          OpenGlVertexLayout.field_f.update(0);
           return true;
         }
-        if (param0) {
+        if (guard) {
           field_c = (SpriteData[]) null;
           return false;
         }

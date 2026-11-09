@@ -173,17 +173,17 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           var12 = var20.field_w << 1;
           if (this.field_K == null) {
             this.field_K = new Sprite(var11, var12);
-            jq.a(7161, this.field_K);
+            jq.pushSpriteRaster(7161, this.field_K);
           } else {
             if (var11 > this.field_K.field_x) {
               this.field_K = new Sprite(var11, var12);
-              jq.a(7161, this.field_K);
+              jq.pushSpriteRaster(7161, this.field_K);
             } else {
               if (this.field_K.field_u < var12) {
                 this.field_K = new Sprite(var11, var12);
-                jq.a(7161, this.field_K);
+                jq.pushSpriteRaster(7161, this.field_K);
               } else {
-                jq.a(7161, this.field_K);
+                jq.pushSpriteRaster(7161, this.field_K);
                 SoftwareRasterizer.clear();
               }
             }
@@ -225,17 +225,17 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           var12Lifetime1 = var25.field_w << 1;
           if (this.field_K == null) {
             this.field_K = new Sprite(var11Lifetime1, var12Lifetime1);
-            jq.a(7161, this.field_K);
+            jq.pushSpriteRaster(7161, this.field_K);
           } else {
             if (var11Lifetime1 > this.field_K.field_x) {
               this.field_K = new Sprite(var11Lifetime1, var12Lifetime1);
-              jq.a(7161, this.field_K);
+              jq.pushSpriteRaster(7161, this.field_K);
             } else {
               if (this.field_K.field_u < var12Lifetime1) {
                 this.field_K = new Sprite(var11Lifetime1, var12Lifetime1);
-                jq.a(7161, this.field_K);
+                jq.pushSpriteRaster(7161, this.field_K);
               } else {
-                jq.a(7161, this.field_K);
+                jq.pushSpriteRaster(7161, this.field_K);
                 SoftwareRasterizer.clear();
               }
             }
@@ -275,18 +275,18 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           var12Lifetime2 = var30.field_w << 1;
           if (this.field_K == null) {
             this.field_K = new Sprite(var11Lifetime2, var12Lifetime2);
-            jq.a(7161, this.field_K);
+            jq.pushSpriteRaster(7161, this.field_K);
           } else {
             if (var11Lifetime2 > this.field_K.field_x) {
               this.field_K = new Sprite(var11Lifetime2, var12Lifetime2);
-              jq.a(7161, this.field_K);
+              jq.pushSpriteRaster(7161, this.field_K);
             } else {
               if (this.field_K.field_u >= var12Lifetime2) {
-                jq.a(7161, this.field_K);
+                jq.pushSpriteRaster(7161, this.field_K);
                 SoftwareRasterizer.clear();
               } else {
                 this.field_K = new Sprite(var11Lifetime2, var12Lifetime2);
-                jq.a(7161, this.field_K);
+                jq.pushSpriteRaster(7161, this.field_K);
               }
             }
           }
@@ -325,18 +325,18 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           var12Lifetime3 = var35.field_w << 1;
           if (this.field_K == null) {
             this.field_K = new Sprite(var11Lifetime3, var12Lifetime3);
-            jq.a(7161, this.field_K);
+            jq.pushSpriteRaster(7161, this.field_K);
           } else {
             if (var11Lifetime3 > this.field_K.field_x) {
               this.field_K = new Sprite(var11Lifetime3, var12Lifetime3);
-              jq.a(7161, this.field_K);
+              jq.pushSpriteRaster(7161, this.field_K);
             } else {
               if (this.field_K.field_u >= var12Lifetime3) {
-                jq.a(7161, this.field_K);
+                jq.pushSpriteRaster(7161, this.field_K);
                 SoftwareRasterizer.clear();
               } else {
                 this.field_K = new Sprite(var11Lifetime3, var12Lifetime3);
-                jq.a(7161, this.field_K);
+                jq.pushSpriteRaster(7161, this.field_K);
               }
             }
           }
@@ -372,15 +372,15 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           if (this.field_K != null &&
             var11Lifetime4 <= this.field_K.field_x) {
             if (this.field_K.field_u >= var12Lifetime4) {
-              jq.a(7161, this.field_K);
+              jq.pushSpriteRaster(7161, this.field_K);
               SoftwareRasterizer.clear();
             } else {
               this.field_K = new Sprite(var11Lifetime4, var12Lifetime4);
-              jq.a(7161, this.field_K);
+              jq.pushSpriteRaster(7161, this.field_K);
             }
           } else {
             this.field_K = new Sprite(var11Lifetime4, var12Lifetime4);
-            jq.a(7161, this.field_K);
+            jq.pushSpriteRaster(7161, this.field_K);
           }
           var49.drawRotatedScaled(112, 144, var49.field_z << 4, var49.field_w << 4, -this.animationTicks << 10, 4096);
           ClientException.popRasterState((byte) -50);
@@ -401,15 +401,15 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           if (this.field_K != null &&
             var11Lifetime5 <= this.field_K.field_x) {
             if (this.field_K.field_u >= var12Lifetime5) {
-              jq.a(7161, this.field_K);
+              jq.pushSpriteRaster(7161, this.field_K);
               SoftwareRasterizer.clear();
             } else {
               this.field_K = new Sprite(var11Lifetime5, var12Lifetime5);
-              jq.a(7161, this.field_K);
+              jq.pushSpriteRaster(7161, this.field_K);
             }
           } else {
             this.field_K = new Sprite(var11Lifetime5, var12Lifetime5);
-            jq.a(7161, this.field_K);
+            jq.pushSpriteRaster(7161, this.field_K);
           }
           var38.drawRotatedScaled(112, 144, var38.field_z << 4, var38.field_w << 4, -this.animationTicks << 10, 4096);
           ClientException.popRasterState((byte) -50);
@@ -436,15 +436,15 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         if (this.field_K != null &&
           var11Lifetime6 <= this.field_K.field_x) {
           if (this.field_K.field_u >= var12Lifetime6) {
-            jq.a(7161, this.field_K);
+            jq.pushSpriteRaster(7161, this.field_K);
             SoftwareRasterizer.clear();
           } else {
             this.field_K = new Sprite(var11Lifetime6, var12Lifetime6);
-            jq.a(7161, this.field_K);
+            jq.pushSpriteRaster(7161, this.field_K);
           }
         } else {
           this.field_K = new Sprite(var11Lifetime6, var12Lifetime6);
-          jq.a(7161, this.field_K);
+          jq.pushSpriteRaster(7161, this.field_K);
         }
         var39.drawRotatedScaled(112, 144, var39.field_z << 4, var39.field_w << 4, -this.animationTicks << 10, 4096);
         ClientException.popRasterState((byte) -50);

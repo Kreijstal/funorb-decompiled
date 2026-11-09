@@ -42,7 +42,7 @@ abstract class LoginCredentials {
             stackIn_16_0 = 1;
             return stackIn_16_0;
           }
-          if (!AffineTransform3D.field_o.a(true)) {
+          if (!AffineTransform3D.emailAvailabilityRequest.isComplete(true)) {
             stackIn_19_0 = 1;
             return stackIn_19_0;
           }
@@ -147,7 +147,7 @@ abstract class LoginCredentials {
         if (((param1 & 36864) != 0 ? true : false) | EmailValidationError.a(param1, (byte) -107, param2) | LegacyOpenGlDisplayLists.a(param2, true, param1)) {
           return true;
         }
-        return (lg.a(param1, -22, param2) | ((8192 & param1) != 0 ? true : false) | GameInstructions.a(true, param2, param1)) & ((param2 & 55) == 0 ? true : false);
+        return (ResetStatsConfirmationOverlay.a(param1, -22, param2) | ((8192 & param1) != 0 ? true : false) | GameInstructions.a(true, param2, param1)) & ((param2 & 55) == 0 ? true : false);
     }
 
     public static void releaseStatics(int param0) {

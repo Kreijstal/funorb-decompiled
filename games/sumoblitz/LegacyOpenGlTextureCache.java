@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kk {
+final class LegacyOpenGlTextureCache {
     static SpriteData[] field_e;
-    private TextureProvider field_c;
+    private TextureProvider provider;
     static ToolkitSprite field_f;
-    private LegacyOpenGlGraphicsToolkit field_a;
+    private LegacyOpenGlGraphicsToolkit toolkit;
     static boolean[] field_b;
-    private SoftLruCache field_d;
+    private SoftLruCache textures;
 
-    final void a(int param0) {
-        this.field_d.age(5, 22663);
-        int var2 = 36 / ((param0 - 41) / 59);
+    final void age(int guard) {
+        this.textures.age(5, 22663);
+        int var2 = 36 / ((guard - 41) / 59);
     }
 
     public static void releaseStatics(byte param0) {
@@ -23,7 +23,7 @@ final class kk {
         field_b = null;
     }
 
-    final static RasterIndexedSprite[] a(int param0, int param1, int param2, ResourceArchive param3) {
+    final static RasterIndexedSprite[] loadIndexedSprites(int fileId, int guard, int groupId, ResourceArchive archive) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         RasterIndexedSprite[] stackIn_6_0 = null;
@@ -32,12 +32,12 @@ final class kk {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!k.a(param3, param2, param0, -23046)) {
+          if (!k.decodeSpriteSheet(archive, groupId, fileId, -23046)) {
             stackIn_2_0 = null;
             return (RasterIndexedSprite[]) (stackIn_2_0);
           }
-          if (param1 != -1) {
-            kk.a((byte) 98);
+          if (guard != -1) {
+            LegacyOpenGlTextureCache.closeAccountSocket((byte) 98);
           }
           stackIn_6_0 = DropDownLabelRenderer.takeDecodedIndexedSprites(true);
           return stackIn_6_0;
@@ -45,8 +45,8 @@ final class kk {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_9_0 = var4;
-          stackIn_9_1 = new StringBuilder().append("kk.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_9_1 = new StringBuilder().append("kk.D(").append(fileId).append(',').append(guard).append(',').append(groupId).append(',');
+          if (archive == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
@@ -55,27 +55,27 @@ final class kk {
         }
     }
 
-    final static void a(byte param0) {
+    final static void closeAccountSocket(byte guard) {
         ResourceArchive var2 = null;
         ResourceArchive var2Lifetime1;
-        if (DisplayModeConfirmationDialog.field_O != null) {
-          DisplayModeConfirmationDialog.field_O.close((byte) -102);
-          DisplayModeConfirmationDialog.field_O = null;
-          if (param0 > -108) {
+        if (DisplayModeConfirmationDialog.accountSocket != null) {
+          DisplayModeConfirmationDialog.accountSocket.close((byte) -102);
+          DisplayModeConfirmationDialog.accountSocket = null;
+          if (guard > -108) {
             var2 = (ResourceArchive) null;
-            kk.a(-15, -46, 72, (ResourceArchive) null);
+            LegacyOpenGlTextureCache.loadIndexedSprites(-15, -46, 72, (ResourceArchive) null);
             return;
           }
           return;
         }
-        if (param0 <= -108) {
+        if (guard <= -108) {
           return;
         }
         var2Lifetime1 = (ResourceArchive) null;
-        kk.a(-15, -46, 72, (ResourceArchive) null);
+        LegacyOpenGlTextureCache.loadIndexedSprites(-15, -46, 72, (ResourceArchive) null);
     }
 
-    final LegacyOpenGlTexture2D a(int param0, int param1) {
+    final LegacyOpenGlTexture2D texture(int guard, int textureId) {
         Object var3;
         TextureMetadata var5;
         int var6;
@@ -145,29 +145,29 @@ final class kk {
         int[] var24;
         int[] var7Lifetime1;
         var8 = Sumoblitz.field_L ? 1 : 0;
-        var3 = this.field_d.get((long)param1, 120);
+        var3 = this.textures.get((long)textureId, 120);
         if (var3 != null) {
           return (LegacyOpenGlTexture2D) (var3);
         }
-        if (!this.field_c.b(-29912, param1)) {
+        if (!this.provider.b(-29912, textureId)) {
           return null;
         }
-        var5 = this.field_c.a(-29193, param1);
+        var5 = this.provider.a(-29193, textureId);
         if (!var5.field_n) {
-          stackIn_7_0 = this.field_a.field_X;
+          stackIn_7_0 = this.toolkit.field_X;
         } else {
           stackIn_7_0 = 64;
         }
         var6 = stackIn_7_0;
         if (!var5.field_s) {
           if (2 == var5.field_p) {
-            var7 = this.field_c.a(param0 - 25069, var6, var6, false, 0.699999988079071f, param1);
+            var7 = this.provider.a(guard - 25069, var6, var6, false, 0.699999988079071f, textureId);
           } else {
             if (!PlayingSound.a(-83, (int) var5.field_d)) {
-              var23 = this.field_c.a(param0 - 25069, var6, var6, false, 0.699999988079071f, param1);
+              var23 = this.provider.a(guard - 25069, var6, var6, false, 0.699999988079071f, textureId);
               stackIn_12_0 = null;
               stackIn_12_1 = null;
-              stackIn_12_2 = this.field_a;
+              stackIn_12_2 = this.toolkit;
               stackIn_12_3 = 3553;
               stackIn_12_4 = 6408;
               stackIn_12_5 = var6;
@@ -182,18 +182,18 @@ final class kk {
                 stackIn_13_7 = true;
               }
               var18 = new LegacyOpenGlTexture2D(stackIn_12_2, stackIn_12_3, stackIn_12_4, stackIn_12_5, stackIn_12_6, stackIn_13_7, var23, 0, 0, false);
-              if (param0 != 0) {
+              if (guard != 0) {
                 return (LegacyOpenGlTexture2D) null;
               }
               var18.setWrap(var5.field_l, var5.field_i, -27365);
-              this.field_d.put((long)param1, var18, (byte) 19);
+              this.textures.put((long)textureId, var18, (byte) 19);
               return var18;
             }
-            var7 = this.field_c.a(true, var6, (byte) -81, var6, 0.699999988079071f, param1);
+            var7 = this.provider.a(true, var6, (byte) -81, var6, 0.699999988079071f, textureId);
           }
           stackIn_21_0 = null;
           stackIn_21_1 = null;
-          stackIn_21_2 = this.field_a;
+          stackIn_21_2 = this.toolkit;
           stackIn_21_3 = 3553;
           stackIn_21_4 = 6408;
           stackIn_21_5 = var6;
@@ -208,21 +208,21 @@ final class kk {
             stackIn_22_7 = true;
           }
           var19 = new LegacyOpenGlTexture2D(stackIn_21_2, stackIn_21_3, stackIn_21_4, stackIn_21_5, stackIn_21_6, stackIn_22_7, var7, 0, 0, false);
-          if (param0 != 0) {
+          if (guard != 0) {
             return (LegacyOpenGlTexture2D) null;
           }
           var19.setWrap(var5.field_l, var5.field_i, -27365);
-          this.field_d.put((long)param1, var19, (byte) 19);
+          this.textures.put((long)textureId, var19, (byte) 19);
           return var19;
         }
-        if (this.field_a.a()) {
-          var11 = this.field_c.a(var6, false, 0.699999988079071f, param1, var6, -101);
+        if (this.toolkit.a()) {
+          var11 = this.provider.a(var6, false, 0.699999988079071f, textureId, var6, -101);
           var10 = var11;
           var9 = var10;
           var7_array = var9;
           stackIn_47_0 = null;
           stackIn_47_1 = null;
-          stackIn_47_2 = this.field_a;
+          stackIn_47_2 = this.toolkit;
           stackIn_47_3 = 3553;
           stackIn_47_4 = 34842;
           stackIn_47_5 = var6;
@@ -237,21 +237,21 @@ final class kk {
             stackIn_48_7 = true;
           }
           var4 = new LegacyOpenGlTexture2D(stackIn_47_2, stackIn_47_3, stackIn_47_4, stackIn_47_5, stackIn_47_6, stackIn_48_7, var11, 6408);
-          if (param0 != 0) {
+          if (guard != 0) {
             return (LegacyOpenGlTexture2D) null;
           }
           var4.setWrap(var5.field_l, var5.field_i, -27365);
-          this.field_d.put((long)param1, var4, (byte) 19);
+          this.textures.put((long)textureId, var4, (byte) 19);
           return var4;
         }
         if (2 == var5.field_p) {
-          var7Lifetime1 = this.field_c.a(param0 - 25069, var6, var6, false, 0.699999988079071f, param1);
+          var7Lifetime1 = this.provider.a(guard - 25069, var6, var6, false, 0.699999988079071f, textureId);
         } else {
           if (!PlayingSound.a(-83, (int) var5.field_d)) {
-            var24 = this.field_c.a(param0 - 25069, var6, var6, false, 0.699999988079071f, param1);
+            var24 = this.provider.a(guard - 25069, var6, var6, false, 0.699999988079071f, textureId);
             stackIn_31_0 = null;
             stackIn_31_1 = null;
-            stackIn_31_2 = this.field_a;
+            stackIn_31_2 = this.toolkit;
             stackIn_31_3 = 3553;
             stackIn_31_4 = 6408;
             stackIn_31_5 = var6;
@@ -266,18 +266,18 @@ final class kk {
               stackIn_32_7 = true;
             }
             var21 = new LegacyOpenGlTexture2D(stackIn_31_2, stackIn_31_3, stackIn_31_4, stackIn_31_5, stackIn_31_6, stackIn_32_7, var24, 0, 0, false);
-            if (param0 != 0) {
+            if (guard != 0) {
               return (LegacyOpenGlTexture2D) null;
             }
             var21.setWrap(var5.field_l, var5.field_i, -27365);
-            this.field_d.put((long)param1, var21, (byte) 19);
+            this.textures.put((long)textureId, var21, (byte) 19);
             return var21;
           }
-          var7Lifetime1 = this.field_c.a(true, var6, (byte) -81, var6, 0.699999988079071f, param1);
+          var7Lifetime1 = this.provider.a(true, var6, (byte) -81, var6, 0.699999988079071f, textureId);
         }
         stackIn_40_0 = null;
         stackIn_40_1 = null;
-        stackIn_40_2 = this.field_a;
+        stackIn_40_2 = this.toolkit;
         stackIn_40_3 = 3553;
         stackIn_40_4 = 6408;
         stackIn_40_5 = var6;
@@ -292,19 +292,19 @@ final class kk {
           stackIn_41_7 = true;
         }
         var22 = new LegacyOpenGlTexture2D(stackIn_40_2, stackIn_40_3, stackIn_40_4, stackIn_40_5, stackIn_40_6, stackIn_41_7, var7Lifetime1, 0, 0, false);
-        if (param0 != 0) {
+        if (guard != 0) {
           return (LegacyOpenGlTexture2D) null;
         }
         var22.setWrap(var5.field_l, var5.field_i, -27365);
-        this.field_d.put((long)param1, var22, (byte) 19);
+        this.textures.put((long)textureId, var22, (byte) 19);
         return var22;
     }
 
-    kk(LegacyOpenGlGraphicsToolkit param0, TextureProvider param1) {
-        this.field_d = new SoftLruCache(256);
+    LegacyOpenGlTextureCache(LegacyOpenGlGraphicsToolkit param0, TextureProvider param1) {
+        this.textures = new SoftLruCache(256);
         try {
-          this.field_c = param1;
-          this.field_a = param0;
+          this.provider = param1;
+          this.toolkit = param0;
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "kk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -28,7 +28,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
         java.awt.Graphics var11 = null;
         try {
           try {
-            var10 = qn.field_f.getGraphics();
+            var10 = NineSlicePanel.field_f.getGraphics();
             if (null == LegacyOpenGlSpriteTexture.field_s) {
               LegacyOpenGlSpriteTexture.field_s = new java.awt.Font("Helvetica", 1, 13);
             }
@@ -41,7 +41,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
             }
             try {
               if (null == ValidationStatus.field_a) {
-                ValidationStatus.field_a = qn.field_f.createImage(304, 34);
+                ValidationStatus.field_a = NineSlicePanel.field_f.createImage(304, 34);
               }
               var11 = ValidationStatus.field_a.getGraphics();
               var11.setColor(barColor);
@@ -83,7 +83,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var5 = (Exception) (Object) decompiledCaughtException;
-            qn.field_f.repaint();
+            NineSlicePanel.field_f.repaint();
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {

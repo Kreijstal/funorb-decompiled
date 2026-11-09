@@ -16,7 +16,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               var2_int != 65535 &&
               ScrollControl.isCp1252Character(-125, (char) var2_int)) {
               var3 = CacheReferenceNode.field_s + 1 & 127;
-              if (var3 != bj.field_a) {
+              if (var3 != EmailAvailabilityRequest.field_a) {
                 WidgetTheme.field_c[CacheReferenceNode.field_s] = -1;
                 SpriteMask.field_c[CacheReferenceNode.field_s] = (char)var2_int;
                 CacheReferenceNode.field_s = var3;
@@ -63,7 +63,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           }
           if (var2_int >= 0) {
             var3 = 1 + CacheReferenceNode.field_s & 127;
-            if (var3 != bj.field_a) {
+            if (var3 != EmailAvailabilityRequest.field_a) {
               WidgetTheme.field_c[CacheReferenceNode.field_s] = var2_int;
               SpriteMask.field_c[CacheReferenceNode.field_s] = (char)0;
               CacheReferenceNode.field_s = var3;
@@ -117,7 +117,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           }
           var6 = 1;
           var7 = ExpandingRingEffect.nextRandomInt(5, HardwareGraphicsHeap.field_o, (byte) -96);
-          bj.powerupPickups.addLast((IntrusiveNode) (new PowerupPickup(var6, var7, var2_int, var3, var4, var5)), (byte) 39);
+          EmailAvailabilityRequest.powerupPickups.addLast((IntrusiveNode) (new PowerupPickup(var6, var7, var2_int, var3, var4, var5)), (byte) 39);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "hb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

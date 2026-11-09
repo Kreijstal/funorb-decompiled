@@ -155,7 +155,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("ticketing_xunread", (byte) -23);
                 if (var2 != null) {
-                  ph.youHaveUnreadMessagesText = MusicVoice.a(0, var2);
+                  LruNodeCache.youHaveUnreadMessagesText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("ticketing_gotowebsite", (byte) -23);
                 if (null != var2) {
@@ -1432,7 +1432,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("create_welcome", (byte) -23);
                 if (null != var2) {
-                  qn.creatingAJagexAccountText = MusicVoice.a(0, var2);
+                  NineSlicePanel.creatingAJagexAccountText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("create_u13_welcome", (byte) -23);
                 if (null != var2) {
@@ -1524,7 +1524,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("login_username", (byte) -23);
                 if (null != var2) {
-                  ph.usernameText = MusicVoice.a(0, var2);
+                  LruNodeCache.usernameText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("login_email", (byte) -23);
                 if (null != var2) {
@@ -1912,7 +1912,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("unpacking_levels", (byte) -23);
                 if (null != var2) {
-                  om.unpackingLevelsText = MusicVoice.a(0, var2);
+                  DroneWaveDefinition.unpackingLevelsText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("unpacking_languages", (byte) -23);
                 if (var2 != null) {
@@ -2182,7 +2182,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("graphics_quality_low", (byte) -23);
                 if (null != var2) {
-                  bc.lowText = MusicVoice.a(0, var2);
+                  DiskCacheDataFile.lowText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("graphics_mode", (byte) -23);
                 if (var2 != null) {
@@ -2858,7 +2858,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("graphics_config_instruction", (byte) -23);
                 if (var2 != null) {
-                  sl.largeScreenSizesAndText = MusicVoice.a(param0 ^ 7, var2);
+                  LegacyOpenGlClientVertexBuffer.largeScreenSizesAndText = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = OpenGlCubeTexture.a("graphics_config_need_memory", (byte) -23);
                 if (var2 != null) {

@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wo extends java.awt.Canvas {
+final class DelegatingCanvas extends java.awt.Canvas {
     static boolean field_c;
     static ToolkitSprite[] field_b;
-    private java.awt.Component field_a;
+    private java.awt.Component delegate;
 
     public static void a(int param0) {
         try {
@@ -137,7 +137,7 @@ final class wo extends java.awt.Canvas {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_a.paint(param0);
+          this.delegate.paint(param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -160,7 +160,7 @@ final class wo extends java.awt.Canvas {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_a.update(param0);
+          this.delegate.update(param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -250,7 +250,7 @@ final class wo extends java.awt.Canvas {
             var20 = -var14 + var16;
             var21 = var17;
             if (!param9) {
-              wo.a((ToolkitSprite[]) null, 78, -40, 98, -104, (GraphicsToolkit) null, -45, 54, 115, true);
+              DelegatingCanvas.a((ToolkitSprite[]) null, 78, -40, 98, -104, (GraphicsToolkit) null, -45, 54, 115, true);
             }
             var22 = var18;
             if (var21 > var22) {
@@ -393,14 +393,14 @@ final class wo extends java.awt.Canvas {
         }
     }
 
-    wo(java.awt.Component param0) {
+    DelegatingCanvas(java.awt.Component param0) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_a = param0;
+          this.delegate = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

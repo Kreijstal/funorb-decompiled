@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jj {
+final class LoginMethodPreference {
     static IntrusiveDeque field_a;
-    private String field_e;
+    private String cookieValue;
     static SpriteData[] field_c;
     static int field_b;
     static int field_d;
@@ -13,14 +13,14 @@ final class jj {
         field_c = null;
         WAIT_LOGIN_REPLY = null;
         if (param0 != 0) {
-          jj.releaseStatics(-108);
+          LoginMethodPreference.releaseStatics(-108);
           field_a = null;
           return;
         }
         field_a = null;
     }
 
-    final boolean a(String param0, int param1) {
+    final boolean matches(String value, int guard) {
         RuntimeException var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -28,22 +28,22 @@ final class jj {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != -2183) {
+          if (guard != -2183) {
             WAIT_LOGIN_REPLY = (AccountConnectionPhase) null;
           }
-          stackIn_3_0 = this.field_e.equals(param0);
+          stackIn_3_0 = this.cookieValue.equals(value);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
           stackIn_6_1 = new StringBuilder().append("jj.A(");
-          if (param0 == null) {
+          if (value == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -51,19 +51,19 @@ final class jj {
         throw new IllegalStateException();
     }
 
-    final void a(boolean param0, java.applet.Applet param1) {
+    final void savePreference(boolean guard, java.applet.Applet applet) {
         try {
-          BufferedCacheFile.a(31536000L, param1, param0, this.field_e, "jagex-last-login-method");
+          BufferedCacheFile.a(31536000L, applet, guard, this.cookieValue, "jagex-last-login-method");
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "jj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "jj.C(" + guard + ',' + (applet != null ? "{...}" : "null") + ')');
         }
     }
 
-    jj(String param0) {
+    LoginMethodPreference(String value) {
         try {
-          this.field_e = param0;
+          this.cookieValue = value;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "jj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "jj.<init>(" + (value != null ? "{...}" : "null") + ')');
         }
     }
 

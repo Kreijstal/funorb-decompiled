@@ -79,7 +79,7 @@ class MenuScreen {
         var10 = new boolean[]{false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false};
         var11 = new boolean[]{false, false, false, true, true, false, false, false, false, true, true, true, false, true, false, true, false, false, false, false, true, true, false, true, true, false, true, false};
         var12 = new boolean[]{false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, true, false, false, false, false, false, false, false, false, true, false, false, true};
-        wo.a(up.field_c, 380, -5, param2 << 24, 3, var22, 650, 55, 1, true);
+        DelegatingCanvas.a(up.field_c, 380, -5, param2 << 24, 3, var22, 650, 55, 1, true);
         var8Lifetime1 = 35;
         if (param1 >= -56) {
           return;
@@ -219,10 +219,10 @@ class MenuScreen {
             LegacyOpenGlEffect.field_c.a(InstrumentNoteMask.createAFreeAccountText, var5, -1, 32 + (SocketConnector.field_a.field_i * 3 + 200 + 32), 320, 0);
           }
         } else {
-          wo.a(ResizingDialog.field_H, 160, 140, param2 << 24, 3, var22, 360, 160, 1, true);
+          DelegatingCanvas.a(ResizingDialog.field_H, 160, 140, param2 << 24, 3, var22, 360, 160, 1, true);
           var8Lifetime2 = 390;
           var13Lifetime1 = 310;
-          var17_ref_String = Integer.toString(sl.field_c[var15] * 100);
+          var17_ref_String = Integer.toString(LegacyOpenGlClientVertexBuffer.field_c[var15] * 100);
           if (var11[var15] &&
             (1 << var15 & var14) == 0) {
             var17_ref_String = MusicVoice.field_s;
@@ -391,19 +391,19 @@ class MenuScreen {
           if (param0) {
             if (ActiveCanvasProvider.field_c != 1 &&
               !hw.field_b[84]) {
-              wo.a(IntrusiveDeque.field_c, var11 << 1, var7, param4 << 24, 1, param3, var10, var6_int - var11 + 10, 1, true);
+              DelegatingCanvas.a(IntrusiveDeque.field_c, var11 << 1, var7, param4 << 24, 1, param3, var10, var6_int - var11 + 10, 1, true);
               if (var21 != 0) {
-                wo.a(IsaacCipher.field_j, var11 << 1, var7, param4 << 24, 1, param3, var10, -var11 + (var6_int + 10), 1, true);
-                wo.a(SecondaryNodeDequeIterator.field_a, var11 << 1, var7, param4 << 24, 1, param3, var10, 10 + (var6_int - var11), 1, true);
+                DelegatingCanvas.a(IsaacCipher.field_j, var11 << 1, var7, param4 << 24, 1, param3, var10, -var11 + (var6_int + 10), 1, true);
+                DelegatingCanvas.a(SecondaryNodeDequeIterator.field_a, var11 << 1, var7, param4 << 24, 1, param3, var10, 10 + (var6_int - var11), 1, true);
               }
             } else {
-              wo.a(IsaacCipher.field_j, var11 << 1, var7, param4 << 24, 1, param3, var10, -var11 + (var6_int + 10), 1, true);
+              DelegatingCanvas.a(IsaacCipher.field_j, var11 << 1, var7, param4 << 24, 1, param3, var10, -var11 + (var6_int + 10), 1, true);
               if (var21 != 0) {
-                wo.a(SecondaryNodeDequeIterator.field_a, var11 << 1, var7, param4 << 24, 1, param3, var10, 10 + (var6_int - var11), 1, true);
+                DelegatingCanvas.a(SecondaryNodeDequeIterator.field_a, var11 << 1, var7, param4 << 24, 1, param3, var10, 10 + (var6_int - var11), 1, true);
               }
             }
           } else {
-            wo.a(SecondaryNodeDequeIterator.field_a, var11 << 1, var7, param4 << 24, 1, param3, var10, 10 + (var6_int - var11), 1, true);
+            DelegatingCanvas.a(SecondaryNodeDequeIterator.field_a, var11 << 1, var7, param4 << 24, 1, param3, var10, 10 + (var6_int - var11), 1, true);
           }
           var12 = 16777215 | param4 << 24;
           var13 = null;
@@ -456,7 +456,7 @@ class MenuScreen {
                 if (ToolkitRasterStateFrame.field_e != -1) {
                   return;
                 }
-                wo.a(ResizingDialog.field_H, var11 + 8, 9 + var7, param4, 1, param3, var10 - 18, 22 + var6_int - var11, 1, true);
+                DelegatingCanvas.a(ResizingDialog.field_H, var11 + 8, 9 + var7, param4, 1, param3, var10 - 18, 22 + var6_int - var11, 1, true);
                 if (var21 == 0) {
                   return;
                 }
@@ -835,7 +835,7 @@ class MenuScreen {
                     if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
-                    ph.gameplaySession.startArcadeGame((byte) -120);
+                    LruNodeCache.gameplaySession.startArcadeGame((byte) -120);
                     StrongCacheReference.switchMenuScreen(-7753, param0, -1);
                     AffineTransform3D.field_j = this.screenId;
                     if (var9 == 0) {
@@ -846,7 +846,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                     StrongCacheReference.switchMenuScreen(-7753, param0, -1);
-                    ph.gameplaySession.closePauseMenu((byte) 112);
+                    LruNodeCache.gameplaySession.closePauseMenu((byte) 112);
                     AffineTransform3D.field_j = 0;
                     if (var9 == 0) {
                       break regionExit2;
@@ -856,20 +856,20 @@ class MenuScreen {
                       break regionExit2;
                     }
                     {
-                      qc.a(param0, true, false);
+                      DroneIntroductionOverlay.a(param0, true, false);
                       StrongCacheReference.switchMenuScreen(-7753, param0, -1);
                       if (MessageDialog.arcadeMode) {
-                        ph.gameplaySession.startArcadeGame((byte) -120);
+                        LruNodeCache.gameplaySession.startArcadeGame((byte) -120);
                         if (var9 != 0) {
-                          ph.gameplaySession.startLevel(OpenGlShaderProgram.levelIndex, false, false);
+                          LruNodeCache.gameplaySession.startLevel(OpenGlShaderProgram.levelIndex, false, false);
                         }
                       } else {
-                        ph.gameplaySession.startLevel(OpenGlShaderProgram.levelIndex, false, false);
+                        LruNodeCache.gameplaySession.startLevel(OpenGlShaderProgram.levelIndex, false, false);
                       }
                     }
                     DropDownWidget.field_C = OpenGlShaderProgram.levelIndex;
                     IntrusiveNodeHashTable.field_c = 0;
-                    ph.gameplaySession.closePauseMenu((byte) 112);
+                    LruNodeCache.gameplaySession.closePauseMenu((byte) 112);
                     AffineTransform3D.field_j = 0;
                     UiWidget.d((byte) -60);
                     if (var9 == 0) {
@@ -882,8 +882,8 @@ class MenuScreen {
                     ih.a(-125);
                     StrongCacheReference.switchMenuScreen(-7753, param0, -1);
                     LegacyTurbulentWaterNoise.advanceToNextLevel(10);
-                    gg.a((byte) 104);
-                    ph.gameplaySession.closePauseMenu((byte) 112);
+                    ByteArrayCacheNode.initializeGameplaySession((byte) 104);
+                    LruNodeCache.gameplaySession.closePauseMenu((byte) 112);
                     UiWidget.d((byte) -117);
                     if (var9 == 0) {
                       break regionExit2;
@@ -893,8 +893,8 @@ class MenuScreen {
                       break regionExit2;
                     }
                     {
-                      ph.gameplaySession.resetSession(70);
-                      qc.a(param0, true, false);
+                      LruNodeCache.gameplaySession.resetSession(70);
+                      DroneIntroductionOverlay.a(param0, true, false);
                       if (vs.b((byte) 9)) {
                         if (0 < IntrusiveNodeHashTable.field_c) {
                           StrongCacheReference.switchMenuScreen(-7753, param0, 6);
@@ -923,7 +923,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                     regionExit3: {
-                      qc.a(param0, true, false);
+                      DroneIntroductionOverlay.a(param0, true, false);
                       if (!vs.b((byte) 9)) {
                         if (!MessageDialog.arcadeMode) {
                           StrongCacheReference.switchMenuScreen(-7753, true, 7);
@@ -961,7 +961,7 @@ class MenuScreen {
                     AffineTransform3D.field_j = 0;
                     TextLayout.a(0, 0);
                     UiWidget.d((byte) -52);
-                    ph.gameplaySession.resetSession(111);
+                    LruNodeCache.gameplaySession.resetSession(111);
                     if (var9 == 0) {
                       break regionExit2;
                     }
@@ -969,7 +969,7 @@ class MenuScreen {
                     if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
-                    GameProgressUpdate.field_o.a(5295);
+                    GameProgressUpdate.field_o.show(5295);
                     if (var9 == 0) {
                       break regionExit2;
                     }
@@ -1170,7 +1170,7 @@ class MenuScreen {
                     if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
-                    qc.a(param0, true, false);
+                    DroneIntroductionOverlay.a(param0, true, false);
                     if (OpenGlTransparentWaterEffect.field_e == 0) {
                       StrongCacheReference.switchMenuScreen(-7753, param0, 2);
                       if (var9 == 0) {
@@ -1392,7 +1392,7 @@ class MenuScreen {
           if (0 == this.screenId ||
             1 == this.screenId ||
             this.screenId == 8) {
-            wo.a(up.field_c, 490, 320 + (-(MouseWheelInput.field_b.width() / 2) - 20), opacity << 24, var4_int, toolkit, MouseWheelInput.field_b.width() + 40, -5, 1, true);
+            DelegatingCanvas.a(up.field_c, 490, 320 + (-(MouseWheelInput.field_b.width() / 2) - 20), opacity << 24, var4_int, toolkit, MouseWheelInput.field_b.width() + 40, -5, 1, true);
             if (ul.field_f == 0 &&
               !OpenGlTransparentWaterEffect.field_k) {
               stackIn_18_0 = 3;
@@ -1420,7 +1420,7 @@ class MenuScreen {
                 }
                 if ((decompiledFrameRemainder0) &&
                   (this.screenId == 6)) {
-                  wo.a(up.field_c, 380, -5, opacity << 24, var4_int, toolkit, 650, 55, 1, true);
+                  DelegatingCanvas.a(up.field_c, 380, -5, opacity << 24, var4_int, toolkit, 650, 55, 1, true);
                   DualLinkNode.field_k[this.screenId] = 200;
                   var6Lifetime1 = 200 - (-SocketConnector.field_a.field_i + 70);
                   var7 = 4 + SocketConnector.field_a.field_c + SocketConnector.field_a.field_h;
@@ -1488,10 +1488,10 @@ class MenuScreen {
             }
           }
           if (decompiledFrameCompleted0) {
-            stackIn_83_0 = GameProgressUpdate.field_o.a(false);
+            stackIn_83_0 = GameProgressUpdate.field_o.isVisible(false);
           }
           if (stackIn_83_0) {
-            GameProgressUpdate.field_o.a(toolkit, 22707);
+            GameProgressUpdate.field_o.render(toolkit, 22707);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1550,7 +1550,7 @@ class MenuScreen {
         var9 = MatchingTextValidator.field_h.getToolkit(-125);
         var4 = param1 << 24 | 16777215;
         var5 = 664;
-        wo.a(up.field_c, 380, -5, param1 << 24, 3, var9, 650, 55, 1, true);
+        DelegatingCanvas.a(up.field_c, 380, -5, param1 << 24, 3, var9, 650, 55, 1, true);
         if (param0 < 114) {
           return;
         }
@@ -1780,8 +1780,8 @@ class MenuScreen {
         if (BeveledCheckboxRenderer.hasOpenDialogs(false)) {
           return;
         }
-        if (GameProgressUpdate.field_o.a(false)) {
-          GameProgressUpdate.field_o.c(15);
+        if (GameProgressUpdate.field_o.isVisible(false)) {
+          GameProgressUpdate.field_o.update(15);
           return;
         }
         if (100 > ReflectionCheck.field_q) {
@@ -1795,7 +1795,7 @@ class MenuScreen {
           if (TextureCombineOperation.field_a == 13) {
             if (this.screenId == 1) {
               StrongCacheReference.switchMenuScreen(-7753, false, -1);
-              ph.gameplaySession.closePauseMenu((byte) 112);
+              LruNodeCache.gameplaySession.closePauseMenu((byte) 112);
               AffineTransform3D.field_j = 0;
               gn.a(15, true);
               if (var3 == 0) {
@@ -1916,7 +1916,7 @@ class MenuScreen {
         String var6Lifetime1;
         var19 = Sumoblitz.field_L ? 1 : 0;
         var20 = MatchingTextValidator.field_h.getToolkit(-124);
-        wo.a(up.field_c, 424, -5, param0 << 24, 3, var20, 650, 45, param1, true);
+        DelegatingCanvas.a(up.field_c, 424, -5, param0 << 24, 3, var20, 650, 45, param1, true);
         var4 = 0;
         if (EmailValidationError.field_c == 2) {
         }

@@ -74,10 +74,10 @@ final class TextureMetadata {
         RuntimeException decompiledCaughtException = null;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var5 = (ServerDataWriteRequest) (jj.field_a.first(72));
+          var5 = (ServerDataWriteRequest) (LoginMethodPreference.field_a.first(72));
           while (var5 != null) {
             mn.sendServerDataWrite(var5, -112, opcode);
-            var5 = (ServerDataWriteRequest) (jj.field_a.next((byte) 18));
+            var5 = (ServerDataWriteRequest) (LoginMethodPreference.field_a.next((byte) 18));
           }
           var2 = no.field_d.first(-87);
           while (var2 != null) {

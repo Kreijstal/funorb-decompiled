@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mg extends Sprite {
+final class ArgbSprite extends Sprite {
     final void d(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
@@ -43,7 +43,7 @@ final class mg extends Sprite {
           var6 <= 0) {
           return;
         }
-        mg.b(0, 0, 0, SoftwareRasterizer.pixels, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+        ArgbSprite.b(0, 0, 0, SoftwareRasterizer.pixels, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9, param2);
     }
 
     private final static void b(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
@@ -72,7 +72,7 @@ final class mg extends Sprite {
         }
     }
 
-    private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitArgb(int[] destination, int[] source, int pixel, int sourceOffset, int destinationOffset, int width, int height, int destinationSkip, int sourceSkip) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$12 = 0;
@@ -80,23 +80,23 @@ final class mg extends Sprite {
         int var12;
         int var13;
         int var14;
-        var9 = -param5;
-        for (var10 = -param6; var10 < 0; var10++) {
+        var9 = -width;
+        for (var10 = -height; var10 < 0; var10++) {
           for (var11 = var9; var11 < 0; var11++) {
-            param2 = param1[param3++];
-            var12 = param2 >>> 24;
+            pixel = source[sourceOffset++];
+            var12 = pixel >>> 24;
             if (var12 == 0) {
-              param4++;
+              destinationOffset++;
             } else {
               var13 = 256 - var12;
-              var14 = param0[param4];
-              incrementValue$12 = param4;
-              param4++;
-              param0[incrementValue$12] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
+              var14 = destination[destinationOffset];
+              incrementValue$12 = destinationOffset;
+              destinationOffset++;
+              destination[incrementValue$12] = ((pixel & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((pixel & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
             }
           }
-          param4 = param4 + param7;
-          param3 = param3 + param8;
+          destinationOffset = destinationOffset + destinationSkip;
+          sourceOffset = sourceOffset + sourceSkip;
         }
     }
 
@@ -240,7 +240,7 @@ final class mg extends Sprite {
           var5 <= 0) {
           return;
         }
-        mg.c(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+        ArgbSprite.blitArgb(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 
     final void c(int param0, int param1) {
@@ -284,7 +284,7 @@ final class mg extends Sprite {
           var5 <= 0) {
           return;
         }
-        mg.c(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+        ArgbSprite.blitArgb(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 
     final void b(int param0, int param1, int param2) {
@@ -328,7 +328,7 @@ final class mg extends Sprite {
           var6 <= 0) {
           return;
         }
-        mg.d(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
+        ArgbSprite.d(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
     private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -385,11 +385,11 @@ final class mg extends Sprite {
         }
     }
 
-    mg(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    ArgbSprite(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         super(param0, param1, param2, param3, param4, param5, param6);
     }
 
-    private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitArgbAlpha(int[] destination, int[] source, int pixel, int sourceOffset, int destinationOffset, int width, int height, int destinationSkip, int sourceSkip, int opacity) {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -397,22 +397,22 @@ final class mg extends Sprite {
         int var14 = 0;
         int var15 = 0;
         int incrementValue$1 = 0;
-        for (var10 = -param6; var10 < 0; var10++) {
-          for (var11 = -param5; var11 < 0; var11++) {
-            var12 = (param1[param3] >>> 24) * param9 >> 8;
+        for (var10 = -height; var10 < 0; var10++) {
+          for (var11 = -width; var11 < 0; var11++) {
+            var12 = (source[sourceOffset] >>> 24) * opacity >> 8;
             var13 = 256 - var12;
-            var14 = param1[param3++];
-            var15 = param0[param4];
-            incrementValue$1 = param4;
-            param4++;
-            param0[incrementValue$1] = ((var14 & 16711935) * var12 + (var15 & 16711935) * var13 & -16711936) + ((var14 & 65280) * var12 + (var15 & 65280) * var13 & 16711680) >>> 8;
+            var14 = source[sourceOffset++];
+            var15 = destination[destinationOffset];
+            incrementValue$1 = destinationOffset;
+            destinationOffset++;
+            destination[incrementValue$1] = ((var14 & 16711935) * var12 + (var15 & 16711935) * var13 & -16711936) + ((var14 & 65280) * var12 + (var15 & 65280) * var13 & 16711680) >>> 8;
           }
-          param4 = param4 + param7;
-          param3 = param3 + param8;
+          destinationOffset = destinationOffset + destinationSkip;
+          sourceOffset = sourceOffset + sourceSkip;
         }
     }
 
-    mg(int param0, int param1) {
+    ArgbSprite(int param0, int param1) {
         super(param0, param1);
     }
 
@@ -457,6 +457,6 @@ final class mg extends Sprite {
           var6 <= 0) {
           return;
         }
-        mg.c(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
+        ArgbSprite.blitArgbAlpha(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 }

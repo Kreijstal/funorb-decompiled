@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lr {
+final class VertexBufferReference {
     static SpriteData field_c;
     static int[] field_a;
-    private VertexBuffer field_d;
+    private VertexBuffer buffer;
     static AccountConnectionPhase field_b;
 
     final static int[] a(int param0) {
@@ -39,7 +39,7 @@ final class lr {
     final static void a(MusicTrack param0, byte param1) {
         try {
           if (param1 < 15) {
-            lr.a(-61);
+            VertexBufferReference.a(-61);
           }
           CachedTextLayout.playMusic(param0, (byte) 109, true);
         } catch (RuntimeException runtimeException) {
@@ -47,20 +47,20 @@ final class lr {
         }
     }
 
-    lr(boolean param0) {
+    VertexBufferReference(boolean unused) {
     }
 
-    final void b(int param0) {
-        if (param0 == 16711680) {
-          if (this.field_d != null) {
-            this.field_d.close(12001);
+    final void close(int guard) {
+        if (guard == 16711680) {
+          if (this.buffer != null) {
+            this.buffer.close(12001);
           }
           return;
         }
         String var3 = (String) null;
-        lr.a(false, (String) null, (byte) -120, (String) null);
-        if (this.field_d != null) {
-          this.field_d.close(12001);
+        VertexBufferReference.a(false, (String) null, (byte) -120, (String) null);
+        if (this.buffer != null) {
+          this.buffer.close(12001);
         }
     }
 

@@ -39,8 +39,8 @@ abstract class ResourceRequest extends DualLinkNode {
         int var4 = Sumoblitz.field_L ? 1 : 0;
         try {
           var1 = new Sprite(540, 140);
-          jq.a(7161, var1);
-          nk.b();
+          jq.pushSpriteRaster(7161, var1);
+          SoftwareRasterViewport.syncClip();
           if (param0 != -90) {
             field_r = (SpriteData[]) null;
           }
@@ -52,7 +52,7 @@ abstract class ResourceRequest extends DualLinkNode {
             var2.drawSilhouette(-2, -2, 16777215);
             SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
-          eh.field_b.d();
+          eh.field_b.bindRaster();
           var1.drawHalfSize(0, 0);
           ClientException.popRasterState((byte) 76);
         } catch (RuntimeException runtimeException) {

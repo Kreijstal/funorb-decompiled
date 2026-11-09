@@ -122,14 +122,14 @@ final class LimitedRandomAccessFile {
           for (var9 = 0; var9 < 4; var9++) {
             var8[var9] = ValidationStatus.field_b.nextInt();
           }
-          if (qc.field_c == null ||
-            !(var7_int <= qc.field_c.payload.length)) {
-            qc.field_c = new PacketBuffer(var7_int);
+          if (DroneIntroductionOverlay.field_c == null ||
+            !(var7_int <= DroneIntroductionOverlay.field_c.payload.length)) {
+            DroneIntroductionOverlay.field_c = new PacketBuffer(var7_int);
           }
-          qc.field_c.position = 0;
-          qc.field_c.writeBytes(param2, (byte) -123, param1, param6);
-          qc.field_c.padTo((byte) -3, var7_int);
-          qc.field_c.encryptXtea(var13, 104);
+          DroneIntroductionOverlay.field_c.position = 0;
+          DroneIntroductionOverlay.field_c.writeBytes(param2, (byte) -123, param1, param6);
+          DroneIntroductionOverlay.field_c.padTo((byte) -3, var7_int);
+          DroneIntroductionOverlay.field_c.encryptXtea(var13, 104);
           if (sv.field_c == null ||
             !(100 <= sv.field_c.payload.length)) {
             sv.field_c = new PacketBuffer(100);
@@ -148,7 +148,7 @@ final class LimitedRandomAccessFile {
           if (param4 > -6) {
             return;
           }
-          param5.writeBytes(qc.field_c.payload, (byte) -123, qc.field_c.position, 0);
+          param5.writeBytes(DroneIntroductionOverlay.field_c.payload, (byte) -123, DroneIntroductionOverlay.field_c.position, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

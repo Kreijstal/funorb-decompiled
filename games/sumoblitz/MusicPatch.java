@@ -156,7 +156,7 @@ final class MusicPatch extends IntrusiveNode {
     }
 
     final static byte[] a(int param0, int param1) {
-        gg var2;
+        ByteArrayCacheNode var2;
         byte[] var3_ref_byte__;
         int var3;
         Random var4;
@@ -169,7 +169,7 @@ final class MusicPatch extends IntrusiveNode {
         byte[] var11;
         int var5Lifetime1;
         var9 = Sumoblitz.field_L ? 1 : 0;
-        var2 = (gg) (pi.field_a.a((byte) -88, (long)param0));
+        var2 = (ByteArrayCacheNode) (pi.field_a.get((byte) -88, (long)param0));
         if (var2 == null) {
           var11 = new byte[512];
           var10 = var11;
@@ -186,11 +186,11 @@ final class MusicPatch extends IntrusiveNode {
             var3_ref_byte__[-var5Lifetime1 + 511] = (byte) var8;
             var3_ref_byte__[var6] = (byte) var8;
           }
-          var2 = new gg(var11);
-          pi.field_a.a((long)param0, var2, -128);
+          var2 = new ByteArrayCacheNode(var11);
+          pi.field_a.put((long)param0, var2, -128);
         }
         var3 = -104 / ((60 - param1) / 58);
-        return var2.field_s;
+        return var2.bytes;
     }
 
     final static String a(int param0, long param1) {

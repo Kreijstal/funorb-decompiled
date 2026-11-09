@@ -41,7 +41,7 @@ final class WhirlpoolTables {
           ResourceArchive.field_f = 1;
           up.field_g = new boolean[25];
           LegacyOpenGlEffectManager.field_i = 1;
-          qn.field_d = new boolean[25];
+          NineSlicePanel.field_d = new boolean[25];
           ArrayUtils.fill(CacheIoRequest.field_z, 0, 25, 2147483647);
           ArrayUtils.fill(CacheIoRequest.field_A, 0, 25, -1);
           return;
@@ -55,7 +55,7 @@ final class WhirlpoolTables {
         ResourceArchive.field_f = 1;
         up.field_g = new boolean[25];
         LegacyOpenGlEffectManager.field_i = 1;
-        qn.field_d = new boolean[25];
+        NineSlicePanel.field_d = new boolean[25];
         ArrayUtils.fill(CacheIoRequest.field_z, 0, 25, 2147483647);
         ArrayUtils.fill(CacheIoRequest.field_A, 0, 25, -1);
     }

@@ -14,7 +14,7 @@ abstract class tt extends IntrusiveNode {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!k.a(param2, param1, param3, -23046)) {
+          if (!k.decodeSpriteSheet(param2, param1, param3, -23046)) {
             return null;
           }
           if (param0 <= -79) {

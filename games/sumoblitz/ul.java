@@ -60,19 +60,19 @@ final class ul {
         }
     }
 
-    final static cd[] a(byte param0, PlatformTaskDispatcher param1) {
+    final static FullscreenDisplayMode[] a(byte param0, PlatformTaskDispatcher param1) {
         int var5 = 0;
-        cd[] stackIn_5_0 = null;
-        cd[] stackIn_12_0 = null;
-        cd[] stackIn_17_0 = null;
+        FullscreenDisplayMode[] stackIn_5_0 = null;
+        FullscreenDisplayMode[] stackIn_12_0 = null;
+        FullscreenDisplayMode[] stackIn_17_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int[] var3 = null;
-        cd[] var4 = null;
-        cd var6 = null;
+        FullscreenDisplayMode[] var4 = null;
+        FullscreenDisplayMode var6 = null;
         int var7 = 0;
         PlatformTask var8 = null;
         int[] var9 = null;
@@ -83,7 +83,7 @@ final class ul {
             ul.a(42, -110, 34);
           }
           if (!param1.a((byte) 112)) {
-            stackIn_5_0 = new cd[]{};
+            stackIn_5_0 = new FullscreenDisplayMode[]{};
             return stackIn_5_0;
           }
           var8 = param1.b((byte) 21);
@@ -91,20 +91,20 @@ final class ul {
             TextureCombineOperation.sleepMillis(10L, (byte) 80);
           }
           if (var8.status == 2) {
-            stackIn_12_0 = new cd[]{};
+            stackIn_12_0 = new FullscreenDisplayMode[]{};
             return stackIn_12_0;
           }
           var10 = (int[]) (var8.result);
           var9 = var10;
           var3 = var9;
-          var4 = new cd[var10.length >> 2];
+          var4 = new FullscreenDisplayMode[var10.length >> 2];
           for (var5 = 0; var4.length > var5; var5++) {
-            var6 = new cd();
+            var6 = new FullscreenDisplayMode();
             var4[var5] = var6;
-            var6.field_a = var3[var5 << 2];
-            var6.field_g = var3[1 + (var5 << 2)];
-            var6.field_e = var3[(var5 << 2) + 2];
-            var6.field_b = var3[(var5 << 2) + 3];
+            var6.width = var3[var5 << 2];
+            var6.height = var3[1 + (var5 << 2)];
+            var6.bitDepth = var3[(var5 << 2) + 2];
+            var6.refreshRate = var3[(var5 << 2) + 3];
           }
           stackIn_17_0 = var4;
           return stackIn_17_0;

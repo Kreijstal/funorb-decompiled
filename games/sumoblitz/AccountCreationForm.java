@@ -246,7 +246,7 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
             }
             if (var2 != 4) {
               IntrusiveNode.reportClientError("F1: " + VictoryScreen.b((byte) 104), (Throwable) null, 0);
-              kk.a((byte) -112);
+              LegacyOpenGlTextureCache.closeAccountSocket((byte) -112);
               if (param0 <= 71) {
                 field_G = (QuickChatCommand) null;
               }

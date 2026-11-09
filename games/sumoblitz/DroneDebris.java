@@ -84,27 +84,27 @@ final class DroneDebris extends TimedSceneEffect {
         }
     }
 
-    final static bj a(boolean param0, String param1) {
+    final static EmailAvailabilityRequest createEmailAvailabilityRequest(boolean guard, String email) {
         RuntimeException var2 = null;
         String var3 = null;
-        bj stackIn_3_0 = null;
+        EmailAvailabilityRequest stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0) {
+          if (guard) {
             var3 = (String) null;
-            DroneDebris.a(true, (String) null);
+            DroneDebris.createEmailAvailabilityRequest(true, (String) null);
           }
-          stackIn_3_0 = new bj(param1);
+          stackIn_3_0 = new EmailAvailabilityRequest(email);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("aj.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("aj.A(").append(guard).append(',');
+          if (email == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";

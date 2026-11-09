@@ -18,7 +18,7 @@ final class ProgressDialog extends ResizingDialog {
           return;
         }
         try {
-          lr.a(false, param0, (byte) 127, param1);
+          VertexBufferReference.a(false, param0, (byte) 127, param1);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "m.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

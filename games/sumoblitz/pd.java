@@ -59,7 +59,7 @@ final class pd extends IntrusiveNode {
             pd.writeServerData((byte[]) null, 48, 96);
           }
           var3 = new ServerDataWriteRequest(payload);
-          jj.field_a.addLast((IntrusiveNode) (var3), (byte) 39);
+          LoginMethodPreference.field_a.addLast((IntrusiveNode) (var3), (byte) 39);
           mn.sendServerDataWrite(var3, guard - 5530, opcode);
           stackIn_3_0 = var3;
           return stackIn_3_0;

@@ -97,7 +97,7 @@ final class LegacyOpenGlRenderbuffer extends DualLinkNode implements LegacyOpenG
                   stackIn_16_1 = var3;
                   stackIn_17_2 = (LegacyOpenGlPostProcessManager.bitwiseAnd(1, var4 >> 6) == 1);
                   stackIn_16_0[stackIn_16_1] = stackIn_17_2;
-                  stackIn_19_0 = qn.field_d;
+                  stackIn_19_0 = NineSlicePanel.field_d;
                   stackIn_19_1 = var3;
                   stackIn_20_2 = (LegacyOpenGlPostProcessManager.bitwiseAnd(1, var4 >> 7) == 1);
                   stackIn_19_0[stackIn_19_1] = stackIn_20_2;

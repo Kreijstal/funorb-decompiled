@@ -17,7 +17,7 @@ final class ss {
           MenuScreen.initializeLogoAudio(param2, 100);
           wq.a(false, param2);
           lq.a(param2, -84);
-          qt.b(true);
+          SelectionOverlay.b(true);
           ResourceRequest.a((byte) -90);
           if (param1 < 125) {
             restartLevelText = (String) null;

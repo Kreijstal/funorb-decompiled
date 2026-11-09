@@ -36,7 +36,7 @@ class TimedSceneEffect extends IntrusiveNode {
     final static boolean a(byte param0) {
         if (param0 <= 82) {
           TimedSceneEffect.a((byte) 13);
-          if (null == DisplayModeConfirmationDialog.field_O) {
+          if (null == DisplayModeConfirmationDialog.accountSocket) {
             return false;
           }
           if (kw.accountPhase == LegacyOpenGlUnderwaterEffect.CONNECTED) {
@@ -44,7 +44,7 @@ class TimedSceneEffect extends IntrusiveNode {
           }
           return false;
         }
-        if (null == DisplayModeConfirmationDialog.field_O) {
+        if (null == DisplayModeConfirmationDialog.accountSocket) {
           return false;
         }
         if (kw.accountPhase == LegacyOpenGlUnderwaterEffect.CONNECTED) {

@@ -96,12 +96,12 @@ final class HardwareSpecularEffect extends ShaderEffect {
             var6_int = 100 % ((param1 + 29) / 42);
             var7 = null;
             if (CompactMeshGeometry.field_u.field_l != null) {
-              bc.field_a = new BufferedCacheFile(CompactMeshGeometry.field_u.field_l, 5200, 0);
+              DiskCacheDataFile.dataFile = new BufferedCacheFile(CompactMeshGeometry.field_u.field_l, 5200, 0);
               CompactMeshGeometry.field_u.field_l = null;
-              var7 = new SectorCacheStore(255, bc.field_a, new BufferedCacheFile(CompactMeshGeometry.field_u.field_d, 12000, 0), 2097152);
+              var7 = new SectorCacheStore(255, DiskCacheDataFile.dataFile, new BufferedCacheFile(CompactMeshGeometry.field_u.field_d, 12000, 0), 2097152);
             }
             var8 = null;
-            if (null != bc.field_a) {
+            if (null != DiskCacheDataFile.dataFile) {
               if (null == ProgressDialog.field_O) {
                 ProgressDialog.field_O = new BufferedCacheFile[CompactMeshGeometry.field_u.field_i.length];
               }
@@ -109,7 +109,7 @@ final class HardwareSpecularEffect extends ShaderEffect {
                 ProgressDialog.field_O[param3] = new BufferedCacheFile(CompactMeshGeometry.field_u.field_i[param3], 12000, 0);
                 CompactMeshGeometry.field_u.field_i[param3] = null;
               }
-              var8 = new SectorCacheStore(param3, bc.field_a, ProgressDialog.field_O[param3], 2097152);
+              var8 = new SectorCacheStore(param3, DiskCacheDataFile.dataFile, ProgressDialog.field_O[param3], 2097152);
             }
             var9 = LegacyOpenGlSpecularEffect.field_i.archiveProvider(false, param3, (SectorCacheStore) (var7), param5, (SectorCacheStore) (var8));
             if (param4) {

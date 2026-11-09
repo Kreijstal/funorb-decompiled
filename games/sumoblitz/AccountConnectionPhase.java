@@ -73,7 +73,7 @@ final class AccountConnectionPhase {
         if (guard != 17704) {
           return false;
         }
-        stackIn_8_0 = (jj.WAIT_LOGIN_REPLY == this) || (MusicVoice.WAIT_LOGIN_DETAILS == this) || (this == LegacyOpenGlUnderwaterEffect.CONNECTED);
+        stackIn_8_0 = (LoginMethodPreference.WAIT_LOGIN_REPLY == this) || (MusicVoice.WAIT_LOGIN_DETAILS == this) || (this == LegacyOpenGlUnderwaterEffect.CONNECTED);
         return stackIn_8_0;
     }
 

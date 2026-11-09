@@ -19,7 +19,7 @@ final class CompactMeshGeometry {
     int field_P;
     int[] field_s;
     short[] field_z;
-    static qn field_v;
+    static NineSlicePanel field_v;
     short[] field_L;
     int[] field_M;
     short[] field_e;

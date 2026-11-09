@@ -102,7 +102,7 @@ abstract class ByteArrayStorage {
             if (param0 <= var2_int) {
               return true;
             }
-            if (qn.field_d[var2_int]) {
+            if (NineSlicePanel.field_d[var2_int]) {
               var2_int++;
               continue;
             }

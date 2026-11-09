@@ -27,7 +27,7 @@ final class tf {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!k.a(param4, param3, param2, -23046)) {
+          if (!k.decodeSpriteSheet(param4, param3, param2, -23046)) {
             return null;
           }
           if (param1 < -11) {

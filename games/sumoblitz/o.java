@@ -9,7 +9,7 @@ final class o {
         TextureMetadata.field_f[OpenGlShaderProgram.levelIndex] = true;
         jk.field_a = TextureFormat.elapsedTicks;
         if (RenderPresentationException.a(false)) {
-          qn.field_d[OpenGlShaderProgram.levelIndex] = true;
+          NineSlicePanel.field_d[OpenGlShaderProgram.levelIndex] = true;
         }
         if (GridWidgetContainer.livesRemaining == 3) {
           up.field_g[OpenGlShaderProgram.levelIndex] = true;

@@ -19,11 +19,11 @@ abstract class bt extends pt {
         throw new Error();
     }
 
-    final static boolean b(int param0) {
-        if (param0 <= 64) {
+    final static boolean isEmailAvailabilityPending(int guard) {
+        if (guard <= 64) {
           return false;
         }
-        return !AffineTransform3D.field_o.a(true) ? true : false;
+        return !AffineTransform3D.emailAvailabilityRequest.isComplete(true) ? true : false;
     }
 
     final static TickClock createTickClock(boolean guard) {

@@ -15,7 +15,7 @@ final class TextureFormat {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!k.a(param2, param0, param1, param3 ^ 3916)) {
+          if (!k.decodeSpriteSheet(param2, param0, param1, param3 ^ 3916)) {
             stackIn_2_0 = null;
             return (RasterIndexedSprite) (stackIn_2_0);
           }

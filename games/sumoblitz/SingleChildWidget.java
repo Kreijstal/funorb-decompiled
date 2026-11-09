@@ -34,13 +34,13 @@ abstract class SingleChildWidget extends UiWidget implements CompositeWidgetMark
         }
     }
 
-    final static jj[] a(int param0) {
+    final static LoginMethodPreference[] a(int param0) {
         if (param0 == 32) {
-          return new jj[]{OpenGlTexture3D.field_m, LevelSelectScreen.field_j, TextInputValidator.field_c};
+          return new LoginMethodPreference[]{OpenGlTexture3D.field_m, LevelSelectScreen.field_j, TextInputValidator.field_c};
         }
         java.applet.Applet var2 = (java.applet.Applet) null;
         SingleChildWidget.setSessionCookie(-3, (String) null, (java.applet.Applet) null);
-        return new jj[]{OpenGlTexture3D.field_m, LevelSelectScreen.field_j, TextInputValidator.field_c};
+        return new LoginMethodPreference[]{OpenGlTexture3D.field_m, LevelSelectScreen.field_j, TextInputValidator.field_c};
     }
 
     final void appendChildDebugTree(int indent, StringBuilder output, Hashtable visited, byte guard) {
@@ -299,7 +299,7 @@ abstract class SingleChildWidget extends UiWidget implements CompositeWidgetMark
               if (sessionValue.length() == 0) {
                 var6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              tw.a("document.cookie=\"" + var6 + "\"", -15428, applet);
+              BrowserScriptBridge.evaluateScript("document.cookie=\"" + var6 + "\"", -15428, applet);
             } catch (Throwable throwable) {
             }
             RotarySelectorRenderer.updateAppletNavigationLinks(false, applet);

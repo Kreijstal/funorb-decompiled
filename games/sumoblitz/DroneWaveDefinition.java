@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class om extends IntrusiveNode {
-    private DroneWave[] field_o;
+final class DroneWaveDefinition extends IntrusiveNode {
+    private DroneWave[] waves;
     static String unpackingLevelsText;
     static boolean field_l;
     static SpriteData[] field_m;
     static String[] droneNames;
 
-    om(DroneWave[] param0) {
+    DroneWaveDefinition(DroneWave[] waves) {
         try {
-          this.field_o = param0;
+          this.waves = waves;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "om.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "om.<init>(" + (waves != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -23,9 +23,9 @@ final class om extends IntrusiveNode {
         field_m = null;
     }
 
-    final DroneWave[] a(int param0) {
-        int var2 = 45 % ((param0 + 35) / 38);
-        return this.field_o;
+    final DroneWave[] waves(int guard) {
+        int var2 = 45 % ((guard + 35) / 38);
+        return this.waves;
     }
 
     final static boolean a(int param0, int param1, byte param2) {

@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qn {
+final class NineSlicePanel {
     static java.awt.Canvas field_f;
     static String[] field_b;
-    private Sprite[] field_c;
+    private Sprite[] sprites;
     static boolean[] field_d;
     static PlatformTaskDispatcher field_e;
     static String creatingAJagexAccountText;
     static boolean field_a;
     static int field_g;
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = -18 % ((-62 - param3) / 63);
-        SoftwareTransform3D.drawNineSlice(param1, this.field_c, (byte) -34, param4, param2, param0);
+    final void draw(int width, int x, int height, int guard, int y) {
+        int var6 = -18 % ((-62 - guard) / 63);
+        SoftwareTransform3D.drawNineSlice(x, this.sprites, (byte) -34, y, height, width);
     }
 
-    private qn() throws Throwable {
+    private NineSlicePanel() throws Throwable {
         throw new Error();
     }
 
@@ -29,7 +29,7 @@ final class qn {
           field_e = null;
           return;
         }
-        qn.releaseStatics(-30);
+        NineSlicePanel.releaseStatics(-30);
         creatingAJagexAccountText = null;
         field_e = null;
     }

@@ -27,9 +27,9 @@ final class MarkerTrackWidget extends InteractiveWidget {
             if (FadingWidget.field_D != null) {
               FadingWidget.field_D.shutdown(109);
             }
-            if (null != bc.field_a) {
+            if (null != DiskCacheDataFile.dataFile) {
               try {
-                bc.field_a.close(-1);
+                DiskCacheDataFile.dataFile.close(-1);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;

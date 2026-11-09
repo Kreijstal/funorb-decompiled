@@ -19,7 +19,7 @@ final class VictoryScreen extends MenuScreen {
           this.field_i = -126;
         }
         if (0 == this.field_i % 100) {
-          TurbulenceNoise3D.a(LegacyOpenGlRenderbuffer.field_u.xQ8, 40, LegacyOpenGlRenderbuffer.field_u.yQ8, im.field_b, lr.field_a[ExpandingRingEffect.nextRandomInt(6, HardwareGraphicsHeap.field_o, (byte) -96)], (byte) 94);
+          TurbulenceNoise3D.a(LegacyOpenGlRenderbuffer.field_u.xQ8, 40, LegacyOpenGlRenderbuffer.field_u.yQ8, im.field_b, VertexBufferReference.field_a[ExpandingRingEffect.nextRandomInt(6, HardwareGraphicsHeap.field_o, (byte) -96)], (byte) 94);
           gn.a(34 + ExpandingRingEffect.nextRandomInt(4, HardwareGraphicsHeap.field_o, (byte) -96), true);
         }
         if (this.field_i % 2 == 0) {
@@ -38,7 +38,7 @@ final class VictoryScreen extends MenuScreen {
             if (var2 instanceof SlowBurstParticle &&
               ExpandingRingEffect.nextRandomInt(3, HardwareGraphicsHeap.field_o, (byte) -96) == 1 &&
               !((SlowBurstParticle) (var2)).field_u) {
-              SpriteOptionRenderer.emitBurstParticles(lr.field_a[ExpandingRingEffect.nextRandomInt(6, HardwareGraphicsHeap.field_o, (byte) -96)], var2.y, param0 ^ 18547, var2.x, im.field_b, 20);
+              SpriteOptionRenderer.emitBurstParticles(VertexBufferReference.field_a[ExpandingRingEffect.nextRandomInt(6, HardwareGraphicsHeap.field_o, (byte) -96)], var2.y, param0 ^ 18547, var2.x, im.field_b, 20);
             }
           }
           var2 = (TimedSceneEffect) (im.field_b.next((byte) 18));
@@ -94,8 +94,8 @@ final class VictoryScreen extends MenuScreen {
         try {
           var8 = toolkit;
           var5 = ResizingDialog.field_H;
-          wo.a(var5, 60, 210, 0, 1, var8, 220, 350, 1, true);
-          wo.a(ResizingDialog.field_H, LegacyOpenGlSpriteMask.field_e.height() + 20, -10 + (-(LegacyOpenGlSpriteMask.field_e.width() >> 1) + 320), -1426063360, 3, toolkit, LegacyOpenGlSpriteMask.field_e.width() + 20, 190 - (LegacyOpenGlSpriteMask.field_e.height() >> 1), 1, true);
+          DelegatingCanvas.a(var5, 60, 210, 0, 1, var8, 220, 350, 1, true);
+          DelegatingCanvas.a(ResizingDialog.field_H, LegacyOpenGlSpriteMask.field_e.height() + 20, -10 + (-(LegacyOpenGlSpriteMask.field_e.width() >> 1) + 320), -1426063360, 3, toolkit, LegacyOpenGlSpriteMask.field_e.width() + 20, 190 - (LegacyOpenGlSpriteMask.field_e.height() >> 1), 1, true);
           LegacyOpenGlSpriteMask.field_e.draw(-(LegacyOpenGlSpriteMask.field_e.width() >> 1) + 320, 200 - (LegacyOpenGlSpriteMask.field_e.height() >> 1));
           var7 = (TimedSceneEffect) (im.field_b.first(-102));
           while (var7 != null) {

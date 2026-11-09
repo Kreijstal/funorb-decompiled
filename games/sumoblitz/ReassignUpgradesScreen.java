@@ -31,9 +31,9 @@ final class ReassignUpgradesScreen extends MenuScreen {
         RuntimeException decompiledCaughtException = null;
         var9 = Sumoblitz.field_L ? 1 : 0;
         try {
-          wo.a(up.field_c, 490, -20 - MouseWheelInput.field_b.width() / 2 + 290, opacity << 24, 3, toolkit, MouseWheelInput.field_b.width() + 100, -5, 1, true);
-          ForceFieldRingEffect.field_t.a(bw.reassignPowerupsText, 5023231 | opacity << 24, -1, 60, 320, 0);
-          hc.field_e.a(bw.reassignPowerupsText, -1, -1, 60, 320, 0);
+          DelegatingCanvas.a(up.field_c, 490, -20 - MouseWheelInput.field_b.width() / 2 + 290, opacity << 24, 3, toolkit, MouseWheelInput.field_b.width() + 100, -5, 1, true);
+          ForceFieldRingEffect.field_t.a(NextLevelChoiceOverlay.reassignPowerupsText, 5023231 | opacity << 24, -1, 60, 320, 0);
+          hc.field_e.a(NextLevelChoiceOverlay.reassignPowerupsText, -1, -1, 60, 320, 0);
           MessageDialog.field_db.a(200, 5023231 | opacity << 24, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 75, -1, 0, 0, guard - 6432, wh.clickToAssignPointsText, (SpriteMask) null, 1, 0);
           LegacyOpenGlEffect.field_c.a(200, -1, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 75, -1, 0, 0, guard ^ 11104, wh.clickToAssignPointsText, (SpriteMask) null, 1, 0);
           qv.field_k.a(ic.a(HotspotTextWidget.pointsRemainingText, new String[]{Integer.toString(HardwareUnlitEffect.d(guard ^ -19334) - IsaacCipher.field_k)}, (byte) -128).toUpperCase(), 5023231 | opacity << 24, -1, 180, 320, 0);
@@ -49,7 +49,7 @@ final class ReassignUpgradesScreen extends MenuScreen {
               stackIn_6_0 = SecondaryNodeDequeIterator.field_a;
             }
             var8 = stackIn_6_0;
-            wo.a(var8, 170, var7, 0, 1, var6_ref_ha, 131, 185, 1, true);
+            DelegatingCanvas.a(var8, 170, var7, 0, 1, var6_ref_ha, 131, 185, 1, true);
             if (PasswordInputRenderer.field_u[var5] == 1) {
               stackIn_12_0 = (HardwareUnlitEffect.d(17079) - IsaacCipher.field_k == 0) ? 1 : 0;
             } else {

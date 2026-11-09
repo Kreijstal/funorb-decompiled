@@ -73,17 +73,17 @@ final class LegacyOpenGlEnvironmentWaterEffect extends LegacyOpenGlEffect {
         pleaseSendMeNewsText = null;
     }
 
-    final static jj a(java.applet.Applet param0, int param1) {
+    final static LoginMethodPreference a(java.applet.Applet param0, int param1) {
         int var4 = 0;
         String var2 = null;
         RuntimeException var2_ref = null;
-        jj[] var3 = null;
-        jj var5 = null;
+        LoginMethodPreference[] var3 = null;
+        LoginMethodPreference var5 = null;
         int var6 = 0;
-        jj stackIn_4_0 = null;
-        jj stackIn_7_0 = null;
-        jj stackIn_13_0 = null;
-        jj stackIn_16_0 = null;
+        LoginMethodPreference stackIn_4_0 = null;
+        LoginMethodPreference stackIn_7_0 = null;
+        LoginMethodPreference stackIn_13_0 = null;
+        LoginMethodPreference stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -96,13 +96,13 @@ final class LegacyOpenGlEnvironmentWaterEffect extends LegacyOpenGlEffect {
             return stackIn_4_0;
           }
           if (param1 != 1) {
-            stackIn_7_0 = (jj) null;
+            stackIn_7_0 = (LoginMethodPreference) null;
             return stackIn_7_0;
           }
           var3 = SingleChildWidget.a(32);
           for (var4 = 0; var3.length > var4; var4++) {
             var5 = var3[var4];
-            if (var5.a(var2, param1 - 2184)) {
+            if (var5.matches(var2, param1 - 2184)) {
               stackIn_13_0 = var5;
               return stackIn_13_0;
             }

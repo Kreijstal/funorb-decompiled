@@ -308,7 +308,7 @@ final class LevelCompleteUpgradeScreen extends MenuScreen {
         RuntimeException decompiledCaughtException = null;
         var9 = Sumoblitz.field_L ? 1 : 0;
         try {
-          wo.a(up.field_c, 490, -20 + (-(MouseWheelInput.field_b.width() / 2) + 290), opacity << 24, 3, toolkit, 100 + MouseWheelInput.field_b.width(), -5, 1, true);
+          DelegatingCanvas.a(up.field_c, 490, -20 + (-(MouseWheelInput.field_b.width() / 2) + 290), opacity << 24, 3, toolkit, 100 + MouseWheelInput.field_b.width(), -5, 1, true);
           ForceFieldRingEffect.field_t.a(LegacyOpenGlSprite.levelCompleteText, 5023231 | opacity << 24, -1, 55, 320, 0);
           hc.field_e.a(LegacyOpenGlSprite.levelCompleteText, -1, -1, 55, 320, 0);
           if (guard != -2355) {
@@ -331,7 +331,7 @@ final class LevelCompleteUpgradeScreen extends MenuScreen {
               stackIn_8_0 = SecondaryNodeDequeIterator.field_a;
             }
             var8 = stackIn_8_0;
-            wo.a(var8, 170, var7, 0, 1, var6_ref_ha, 131, 185, 1, true);
+            DelegatingCanvas.a(var8, 170, var7, 0, 1, var6_ref_ha, 131, 185, 1, true);
             if (LegacyOpenGlSpecularEffect.field_h[var5] == 1) {
               stackIn_14_0 = (HardwareUnlitEffect.d(17079) - IsaacPacketBuffer.field_u == 0) ? 1 : 0;
             } else {

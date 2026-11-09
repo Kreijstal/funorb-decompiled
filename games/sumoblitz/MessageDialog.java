@@ -223,7 +223,7 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
         try {
           IOException iOException = null;
           Throwable decompiledCaughtException = null;
-          if (DisplayModeConfirmationDialog.field_O != null && (0 > param1 ||
+          if (DisplayModeConfirmationDialog.accountSocket != null && (0 > param1 ||
             LegacyOpenGlUnderwaterEffect.CONNECTED == kw.accountPhase)) {
             if (InwardSparkParticle.field_v.position == 0 &&
               (ArchiveCatalog.field_a + 10000L) < wq.monotonicTimeMillis(param0 - 14)) {
@@ -231,12 +231,12 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
             }
             if (InwardSparkParticle.field_v.position > param0) {
               try {
-                DisplayModeConfirmationDialog.field_O.write(0, -2, InwardSparkParticle.field_v.payload, InwardSparkParticle.field_v.position);
+                DisplayModeConfirmationDialog.accountSocket.write(0, -2, InwardSparkParticle.field_v.payload, InwardSparkParticle.field_v.position);
                 ArchiveCatalog.field_a = wq.monotonicTimeMillis(-21);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
-                kk.a((byte) -115);
+                LegacyOpenGlTextureCache.closeAccountSocket((byte) -115);
               }
               InwardSparkParticle.field_v.position = 0;
             }
@@ -252,8 +252,8 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
 
     final static void m(int param0) {
         HardwareAnimatedWaterEffect.d(1);
-        if (qn.field_f != null) {
-          CheckboxWidget.a(true, qn.field_f);
+        if (NineSlicePanel.field_f != null) {
+          CheckboxWidget.a(true, NineSlicePanel.field_f);
         }
         ShaderEffect.a(false);
         jm.b(28679);
@@ -265,7 +265,7 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
           InwardSparkParticle.field_v.writeCipherByte(1, 8);
           MessageDialog.a(0, 0);
         }
-        kk.a((byte) -127);
+        LegacyOpenGlTextureCache.closeAccountSocket((byte) -127);
     }
 
     final void a(String param0, int param1, int param2) {

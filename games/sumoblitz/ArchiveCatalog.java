@@ -710,7 +710,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime39 = ke.a((byte) 110, "respecTitle");
           if (var2Lifetime39 != null) {
-            bw.reassignPowerupsText = MusicVoice.a(0, var2Lifetime39);
+            NextLevelChoiceOverlay.reassignPowerupsText = MusicVoice.a(0, var2Lifetime39);
           }
           var2Lifetime40 = ke.a((byte) 127, "respecInstructions");
           if (var2Lifetime40 != null) {
@@ -1181,27 +1181,27 @@ final class ArchiveCatalog {
           }
           var2Lifetime156 = ke.a((byte) 118, "enemyTypes,0");
           if (null != var2Lifetime156) {
-            om.droneNames[0] = MusicVoice.a(param1 + 5, var2Lifetime156);
+            DroneWaveDefinition.droneNames[0] = MusicVoice.a(param1 + 5, var2Lifetime156);
           }
           var2Lifetime157 = ke.a((byte) 109, "enemyTypes,1");
           if (null != var2Lifetime157) {
-            om.droneNames[1] = MusicVoice.a(0, var2Lifetime157);
+            DroneWaveDefinition.droneNames[1] = MusicVoice.a(0, var2Lifetime157);
           }
           var2Lifetime158 = ke.a((byte) 89, "enemyTypes,2");
           if (null != var2Lifetime158) {
-            om.droneNames[2] = MusicVoice.a(0, var2Lifetime158);
+            DroneWaveDefinition.droneNames[2] = MusicVoice.a(0, var2Lifetime158);
           }
           var2Lifetime159 = ke.a((byte) 100, "enemyTypes,3");
           if (null != var2Lifetime159) {
-            om.droneNames[3] = MusicVoice.a(0, var2Lifetime159);
+            DroneWaveDefinition.droneNames[3] = MusicVoice.a(0, var2Lifetime159);
           }
           var2Lifetime160 = ke.a((byte) 122, "enemyTypes,4");
           if (null != var2Lifetime160) {
-            om.droneNames[4] = MusicVoice.a(0, var2Lifetime160);
+            DroneWaveDefinition.droneNames[4] = MusicVoice.a(0, var2Lifetime160);
           }
           var2Lifetime161 = ke.a((byte) 103, "enemyTypes,5");
           if (var2Lifetime161 != null) {
-            om.droneNames[5] = MusicVoice.a(0, var2Lifetime161);
+            DroneWaveDefinition.droneNames[5] = MusicVoice.a(0, var2Lifetime161);
           }
           var2Lifetime162 = ke.a((byte) 100, "enemyModifiers,0");
           if (var2Lifetime162 != null) {

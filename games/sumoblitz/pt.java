@@ -19,8 +19,8 @@ abstract class pt {
           return;
         }
         if (param1) {
-          jj.field_d = jj.field_d - 1;
-          if (jj.field_d == 0) {
+          LoginMethodPreference.field_d = LoginMethodPreference.field_d - 1;
+          if (LoginMethodPreference.field_d == 0) {
             ReassignUpgradesScreen.field_i = null;
           }
         }
@@ -77,7 +77,7 @@ abstract class pt {
           if (var2 == 0) {
             var4_ref_qv = (qv) (MenuScreen.field_b.first(-95));
             if (var4_ref_qv == null) {
-              kk.a((byte) -127);
+              LegacyOpenGlTextureCache.closeAccountSocket((byte) -127);
               return;
             }
             var5_int = gu.field_d - var10.position;
@@ -108,11 +108,11 @@ abstract class pt {
               var5.unlink(false);
               return;
             }
-            kk.a((byte) -114);
+            LegacyOpenGlTextureCache.closeAccountSocket((byte) -114);
             return;
           }
           IntrusiveNode.reportClientError("LR1: " + VictoryScreen.b((byte) 126), (Throwable) null, 0);
-          kk.a((byte) -119);
+          LegacyOpenGlTextureCache.closeAccountSocket((byte) -119);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

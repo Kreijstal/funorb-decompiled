@@ -27,40 +27,40 @@ final class TextureFilter {
             return 1;
           }
           try {
-            if (cd.field_d == 0) {
+            if (FullscreenDisplayMode.field_d == 0) {
               BufferedSocket.field_p = CompactMeshGeometry.field_u.a((byte) 51, Js5Client.field_a, SingleChildWidget.field_x);
-              cd.field_d = cd.field_d + 1;
+              FullscreenDisplayMode.field_d = FullscreenDisplayMode.field_d + 1;
             }
             if (!param0) {
               useThisAlternativeAsText = (String) null;
             }
-            if (cd.field_d == 1) {
+            if (FullscreenDisplayMode.field_d == 1) {
               if (BufferedSocket.field_p.status == 2) {
                 stackIn_16_0 = EmptyWidgetRenderer.a(-1, -84);
                 return stackIn_16_0;
               }
               if (BufferedSocket.field_p.status == 1) {
-                cd.field_d = cd.field_d + 1;
+                FullscreenDisplayMode.field_d = FullscreenDisplayMode.field_d + 1;
               }
             }
-            if (cd.field_d == 2) {
+            if (FullscreenDisplayMode.field_d == 2) {
               InstrumentNoteMask.field_n = new BufferedSocket((java.net.Socket) (BufferedSocket.field_p.result), CompactMeshGeometry.field_u);
               var2 = new PacketBuffer(13);
               sb.a(HuffmanDecoder.field_e, 127, bt.field_d, ReflectionCheck.field_l, var2);
               var2.writeByte((byte) 127, 15);
               var2.writeInt(48, ValidatedTextInputWidget.field_P);
               InstrumentNoteMask.field_n.write(0, -2, var2.payload, 13);
-              cd.field_d = cd.field_d + 1;
+              FullscreenDisplayMode.field_d = FullscreenDisplayMode.field_d + 1;
               ShrinkingRingEffect.field_s = wq.monotonicTimeMillis(-109) + 30000L;
             }
-            if (cd.field_d == 3) {
+            if (FullscreenDisplayMode.field_d == 3) {
               if (InstrumentNoteMask.field_n.available(-91) > 0) {
                 var1_int = InstrumentNoteMask.field_n.readByte(-106);
                 if (var1_int != 0) {
                   stackIn_30_0 = EmptyWidgetRenderer.a(var1_int, -93);
                   return stackIn_30_0;
                 }
-                cd.field_d = cd.field_d + 1;
+                FullscreenDisplayMode.field_d = FullscreenDisplayMode.field_d + 1;
               } else {
                 if (wq.monotonicTimeMillis(-52) > ShrinkingRingEffect.field_s) {
                   stackIn_27_0 = EmptyWidgetRenderer.a(-2, -89);
@@ -68,13 +68,13 @@ final class TextureFilter {
                 }
               }
             }
-            if (cd.field_d != 4) {
+            if (FullscreenDisplayMode.field_d != 4) {
               return -1;
             }
             jk.field_b.attachConnection(LegacyOpenGlAssemblyProgram.field_e, (byte) 114, InstrumentNoteMask.field_n);
             BufferedSocket.field_p = null;
             InstrumentNoteMask.field_n = null;
-            cd.field_d = 0;
+            FullscreenDisplayMode.field_d = 0;
             stackIn_35_0 = 0;
             return stackIn_35_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -113,7 +113,7 @@ final class TextureFilter {
           var7 = Sumoblitz.field_L ? 1 : 0;
           try {
             try {
-              var3 = (String) (tw.a(param0, -32, "getcookies"));
+              var3 = (String) (BrowserScriptBridge.call(param0, -32, "getcookies"));
               var4 = SocialContact.split(';', var3, -27224);
               if (param1 != -57) {
                 TextureFilter.releaseStatics(-92);

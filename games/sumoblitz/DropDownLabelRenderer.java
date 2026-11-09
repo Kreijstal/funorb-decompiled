@@ -107,7 +107,7 @@ final class DropDownLabelRenderer implements WidgetRenderer {
             try {
               var9 = applet.getParameter("cookieprefix");
               var3 = var9 + "settings";
-              var4 = (String) (tw.a(applet, 109, "getcookies"));
+              var4 = (String) (BrowserScriptBridge.call(applet, 109, "getcookies"));
               var5 = SocialContact.split(';', var4, -27224);
               for (var6 = 0; var5.length > var6; var6++) {
                 var7 = var5[var6].indexOf('=');

@@ -10,7 +10,7 @@ final class AffineTransform3D extends Transform3D {
     private float m21;
     private float m00;
     private float m03;
-    static bj field_o;
+    static EmailAvailabilityRequest emailAvailabilityRequest;
     private float m13;
     private float m23;
     private float m02;
@@ -278,10 +278,10 @@ final class AffineTransform3D extends Transform3D {
     public static void releaseStatics(byte param0) {
         if (param0 != 49) {
           field_j = 12;
-          field_o = null;
+          emailAvailabilityRequest = null;
           return;
         }
-        field_o = null;
+        emailAvailabilityRequest = null;
     }
 
     final void setProduct(Transform3D left, byte guard, Transform3D right) {
@@ -558,7 +558,7 @@ final class AffineTransform3D extends Transform3D {
           destination[6] = this.m12;
           destination[3] = 0.0f;
           if (guard != 86) {
-            field_o = (bj) null;
+            emailAvailabilityRequest = (EmailAvailabilityRequest) null;
           }
           destination[1] = this.m01;
           destination[15] = 0.0f;

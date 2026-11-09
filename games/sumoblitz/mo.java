@@ -176,7 +176,7 @@ final class mo extends tt {
     }
 
     final static void a(int param0, int param1) {
-        lr.a(TimedSceneEffect.field_m[param1], (byte) 56);
+        VertexBufferReference.a(TimedSceneEffect.field_m[param1], (byte) 56);
         int var2 = 29 % ((param0 + 73) / 48);
     }
 
@@ -218,7 +218,7 @@ final class mo extends tt {
         if (param2 != 30643) {
           return false;
         }
-        return bj.a(param1, (byte) -113, param0) & (((8192 & param1) != 0 ? true : false) | lg.a(param1, param2 ^ -30697, param0) | GameInstructions.a(true, param0, param1));
+        return EmailAvailabilityRequest.a(param1, (byte) -113, param0) & (((8192 & param1) != 0 ? true : false) | ResetStatsConfirmationOverlay.a(param1, param2 ^ -30697, param0) | GameInstructions.a(true, param0, param1));
     }
 
     private final int a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {

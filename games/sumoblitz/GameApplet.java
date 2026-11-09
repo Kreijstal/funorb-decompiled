@@ -146,10 +146,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             decompiledCaughtException = decompiledCaughtParameter0;
             exception = (Exception) (Object) decompiledCaughtException;
           }
-          if (null != qn.field_f) {
+          if (null != NineSlicePanel.field_f) {
             try {
-              qn.field_f.removeFocusListener((java.awt.event.FocusListener) (this));
-              qn.field_f.getParent().remove((java.awt.Component) ((Object) qn.field_f));
+              NineSlicePanel.field_f.removeFocusListener((java.awt.event.FocusListener) (this));
+              NineSlicePanel.field_f.getParent().remove((java.awt.Component) ((Object) NineSlicePanel.field_f));
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -217,7 +217,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (ke.field_a == this &&
             !LegacyOpenGlShoreWaveWaterEffect.field_e) {
             pt.field_a = true;
-            if (om.field_l &&
+            if (DroneWaveDefinition.field_l &&
               -bt.field_f + wq.monotonicTimeMillis(-97) > 1000L) {
               var2 = param0.getClipBounds();
               if (null != var2) {
@@ -455,17 +455,17 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (fieldTemp$1 > 50) {
             ArchiveProvider.field_b = ArchiveProvider.field_b - 50;
             pt.field_a = true;
-            qn.field_f.setSize(LegacyOpenGlRidgedWaterEffect.field_h, wq.field_b);
-            qn.field_f.setVisible(true);
+            NineSlicePanel.field_f.setSize(LegacyOpenGlRidgedWaterEffect.field_h, wq.field_b);
+            NineSlicePanel.field_f.setVisible(true);
             if (null != PrimitiveType.field_c &&
               null == of.field_n) {
               var6 = PrimitiveType.field_c.getInsets();
-              qn.field_f.setLocation(var6.left + UnderageAccountInfoPanel.field_H, var6.top + DirectByteArrayStorage.field_c);
+              NineSlicePanel.field_f.setLocation(var6.left + UnderageAccountInfoPanel.field_H, var6.top + DirectByteArrayStorage.field_c);
               if (Sumoblitz.field_L) {
-                qn.field_f.setLocation(UnderageAccountInfoPanel.field_H, DirectByteArrayStorage.field_c);
+                NineSlicePanel.field_f.setLocation(UnderageAccountInfoPanel.field_H, DirectByteArrayStorage.field_c);
               }
             } else {
-              qn.field_f.setLocation(UnderageAccountInfoPanel.field_H, DirectByteArrayStorage.field_c);
+              NineSlicePanel.field_f.setLocation(UnderageAccountInfoPanel.field_H, DirectByteArrayStorage.field_c);
             }
           }
           this.renderFrame(0);
@@ -578,10 +578,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (qn.field_f != null) {
-            qn.field_f.removeFocusListener((java.awt.event.FocusListener) (this));
-            qn.field_f.getParent().setBackground(java.awt.Color.black);
-            qn.field_f.getParent().remove((java.awt.Component) ((Object) qn.field_f));
+          if (NineSlicePanel.field_f != null) {
+            NineSlicePanel.field_f.removeFocusListener((java.awt.event.FocusListener) (this));
+            NineSlicePanel.field_f.getParent().setBackground(java.awt.Color.black);
+            NineSlicePanel.field_f.getParent().remove((java.awt.Component) ((Object) NineSlicePanel.field_f));
           }
           if (null == of.field_n) {
             if (PrimitiveType.field_c == null) {
@@ -609,21 +609,21 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             var2 = of.field_n;
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          qn.field_f = (java.awt.Canvas) ((Object) new wo((java.awt.Component) (this)));
-          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) qn.field_f));
-          qn.field_f.setSize(LegacyOpenGlRidgedWaterEffect.field_h, wq.field_b);
-          qn.field_f.setVisible(true);
+          NineSlicePanel.field_f = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
+          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) NineSlicePanel.field_f));
+          NineSlicePanel.field_f.setSize(LegacyOpenGlRidgedWaterEffect.field_h, wq.field_b);
+          NineSlicePanel.field_f.setVisible(true);
           boolean decompiledSharedTail0 = (PrimitiveType.field_c == var2);
           if (!decompiledSharedTail0) {
-            qn.field_f.setLocation(UnderageAccountInfoPanel.field_H, DirectByteArrayStorage.field_c);
+            NineSlicePanel.field_f.setLocation(UnderageAccountInfoPanel.field_H, DirectByteArrayStorage.field_c);
             decompiledSharedTail0 = (var4 != 0);
           }
           if (decompiledSharedTail0) {
             var3 = PrimitiveType.field_c.getInsets();
-            qn.field_f.setLocation(var3.left + UnderageAccountInfoPanel.field_H, var3.top + DirectByteArrayStorage.field_c);
+            NineSlicePanel.field_f.setLocation(var3.left + UnderageAccountInfoPanel.field_H, var3.top + DirectByteArrayStorage.field_c);
           }
-          qn.field_f.addFocusListener((java.awt.event.FocusListener) (this));
-          qn.field_f.requestFocus();
+          NineSlicePanel.field_f.addFocusListener((java.awt.event.FocusListener) (this));
+          NineSlicePanel.field_f.requestFocus();
           ii.field_a = true;
           SpriteStripButtonRenderer.field_o = true;
           pt.field_a = true;
@@ -690,7 +690,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               var1.writeMedium(OpenGlTexture3D.field_j[var2], 112);
               var1.writeShort(-58, CacheIoRequest.field_z[var2]);
               var3 = CacheIoRequest.field_A[var2] + 1;
-              if (qn.field_d[var2]) {
+              if (NineSlicePanel.field_d[var2]) {
                 var3 = var3 | 128;
               }
               if (up.field_g[var2]) {
@@ -734,7 +734,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             this.field_d = true;
             System.out.println("error_game_" + param0);
             try {
-              tw.a(LegacyOpenGlUnlitEffect.c(2), param1 ^ -21354, "loggedout");
+              BrowserScriptBridge.call(LegacyOpenGlUnlitEffect.c(2), param1 ^ -21354, "loggedout");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               throwable = decompiledCaughtException;
@@ -872,7 +872,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   if (stackIn_84_0 < stackIn_84_1) {
                     break;
                   }
-                  om.field_l = true;
+                  DroneWaveDefinition.field_l = true;
                   break;
                 }
               }
@@ -892,7 +892,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 CompactMeshGeometry.b(true);
                 this.e(1000);
-                ProgressDialog.field_R = SoftLruCache.a(wq.field_b, LegacyOpenGlRidgedWaterEffect.field_h, 0, (java.awt.Component) ((Object) qn.field_f));
+                ProgressDialog.field_R = SoftLruCache.a(wq.field_b, LegacyOpenGlRidgedWaterEffect.field_h, 0, (java.awt.Component) ((Object) NineSlicePanel.field_f));
                 this.initializeGame(28196);
                 jl.field_a = bt.createTickClock(false);
                 do {
@@ -913,7 +913,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   do {
                     if (!(BurstParticle.field_t > var3)) {
                       this.h(0);
-                      ReflectionCheck.postDummyEventAfterQueueWait(qn.field_f, lt.field_m, -11030);
+                      ReflectionCheck.postDummyEventAfterQueueWait(NineSlicePanel.field_f, lt.field_m, -11030);
                       break;
                     }
                     this.a((byte) 101);

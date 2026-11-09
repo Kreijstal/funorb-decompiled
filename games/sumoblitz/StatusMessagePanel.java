@@ -27,7 +27,7 @@ final class StatusMessagePanel extends WidgetContainer implements WidgetActionLi
             }
             GridWidgetContainer.field_B = param5;
             if (GridWidgetContainer.field_B != null) {
-              qc.field_e.queueTrackAtGrid(param2, param3, 7094, param4, GridWidgetContainer.field_B, param1);
+              DroneIntroductionOverlay.field_e.queueTrackAtGrid(param2, param3, 7094, param4, GridWidgetContainer.field_B, param1);
             }
             if (param0 < 98) {
               var8 = (MusicTrack) null;

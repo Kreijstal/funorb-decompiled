@@ -128,7 +128,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Widg
         RuntimeException var6_ref = null;
         LegacyBitmapFont var7 = null;
         String var8 = null;
-        jj var9 = null;
+        LoginMethodPreference var9 = null;
         LabeledWidget var12 = null;
         LabeledWidget var13 = null;
         try {
@@ -200,7 +200,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Widg
           var9 = LegacyOpenGlEnvironmentWaterEffect.a(LegacyOpenGlUnlitEffect.c(2), 1);
           if (OpenGlTexture3D.field_m != var9) {
             if (LevelSelectScreen.field_j == var9) {
-              var8 = ph.usernameText;
+              var8 = LruNodeCache.usernameText;
             }
           } else {
             var8 = HuffmanDecoder.emailText;

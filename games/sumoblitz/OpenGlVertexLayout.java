@@ -4,7 +4,7 @@
 final class OpenGlVertexLayout extends VertexLayout {
     static PrimitiveType TRIANGLE_STRIP;
     VertexStreamLayout[] streams;
-    static qc field_f;
+    static DroneIntroductionOverlay field_f;
     static String multiplierText;
 
     final static void a(int param0, int param1) {
@@ -29,7 +29,7 @@ final class OpenGlVertexLayout extends VertexLayout {
           multiplierText = null;
           return;
         }
-        field_f = (qc) null;
+        field_f = (DroneIntroductionOverlay) null;
         field_f = null;
         TRIANGLE_STRIP = null;
         multiplierText = null;
@@ -37,7 +37,7 @@ final class OpenGlVertexLayout extends VertexLayout {
 
     static {
         TRIANGLE_STRIP = new PrimitiveType();
-        field_f = new qc();
+        field_f = new DroneIntroductionOverlay();
         multiplierText = "multiplier: ";
     }
 }

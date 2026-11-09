@@ -3,7 +3,7 @@
  */
 final class vp {
     static String discardText;
-    static qn field_e;
+    static NineSlicePanel field_e;
     static double[] field_d;
     static int[] chatPriorityCounts;
     static int field_a;

@@ -7,7 +7,7 @@ final class DisplayModeConfirmationDialog extends ResizingDialog implements Widg
     private long field_W;
     private InteractiveWidget field_Q;
     private UiWidget field_S;
-    static BufferedSocket field_O;
+    static BufferedSocket accountSocket;
     static String unfortunatelyWeAreUnableText;
     static int field_U;
     static SpriteData[] field_V;
@@ -23,7 +23,7 @@ final class DisplayModeConfirmationDialog extends ResizingDialog implements Widg
         int var8 = 0;
         try {
           super.update(parentX, 74, root, parentY);
-          if (sl.field_d) {
+          if (LegacyOpenGlClientVertexBuffer.field_d) {
             root.clearFocus((byte) 116);
           }
           var7 = -26 / ((guard + 25) / 45);
@@ -192,11 +192,11 @@ final class DisplayModeConfirmationDialog extends ResizingDialog implements Widg
         if (param0 != -43) {
           DisplayModeConfirmationDialog.releaseStatics((byte) -2);
           field_V = null;
-          field_O = null;
+          accountSocket = null;
           return;
         }
         field_V = null;
-        field_O = null;
+        accountSocket = null;
     }
 
     public final void onAction(int action, int guard, InteractiveWidget source, int pointerX, int pointerY) {

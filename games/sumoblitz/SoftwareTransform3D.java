@@ -87,7 +87,7 @@ final class SoftwareTransform3D extends Transform3D {
               field_b = 71;
             }
             var19 = var15;
-            SoftwareRasterizer.saveClip(cd.field_f);
+            SoftwareRasterizer.saveClip(FullscreenDisplayMode.field_f);
             if (var19 < var18) {
               var19 = y + height * var8 / (var8 + var9);
               var18 = y + height * var8 / (var8 + var9);
@@ -95,22 +95,22 @@ final class SoftwareTransform3D extends Transform3D {
             if (sprites[0] != null) {
               SoftwareRasterizer.intersectClip(x, y, var16, var18);
               sprites[0].draw(x, y);
-              SoftwareRasterizer.restoreClip(cd.field_f);
+              SoftwareRasterizer.restoreClip(FullscreenDisplayMode.field_f);
             }
             if (null != sprites[2]) {
               SoftwareRasterizer.intersectClip(var17, y, var10, var18);
               sprites[2].draw(var13, y);
-              SoftwareRasterizer.restoreClip(cd.field_f);
+              SoftwareRasterizer.restoreClip(FullscreenDisplayMode.field_f);
             }
             if (sprites[6] != null) {
               SoftwareRasterizer.intersectClip(x, var19, var16, var11);
               sprites[6].draw(x, var15);
-              SoftwareRasterizer.restoreClip(cd.field_f);
+              SoftwareRasterizer.restoreClip(FullscreenDisplayMode.field_f);
             }
             if (null != sprites[8]) {
               SoftwareRasterizer.intersectClip(var17, var19, var10, var11);
               sprites[8].draw(var13, var15);
-              SoftwareRasterizer.restoreClip(cd.field_f);
+              SoftwareRasterizer.restoreClip(FullscreenDisplayMode.field_f);
             }
             if (sprites[1] != null &&
               0 != sprites[1].field_z) {
@@ -118,7 +118,7 @@ final class SoftwareTransform3D extends Transform3D {
               for (var20 = var12; var13 > var20; var20 = var20 + sprites[1].field_z) {
                 sprites[1].draw(var20, y);
               }
-              SoftwareRasterizer.restoreClip(cd.field_f);
+              SoftwareRasterizer.restoreClip(FullscreenDisplayMode.field_f);
             }
             if (sprites[7] != null &&
               sprites[7].field_z != 0) {
@@ -126,7 +126,7 @@ final class SoftwareTransform3D extends Transform3D {
               for (var20Lifetime1 = var12; var20Lifetime1 < var13; var20Lifetime1 = var20Lifetime1 + sprites[7].field_z) {
                 sprites[7].draw(var20Lifetime1, var15);
               }
-              SoftwareRasterizer.restoreClip(cd.field_f);
+              SoftwareRasterizer.restoreClip(FullscreenDisplayMode.field_f);
             }
             if (null != sprites[3] &&
               sprites[3].field_w != 0) {
@@ -134,7 +134,7 @@ final class SoftwareTransform3D extends Transform3D {
               for (var20Lifetime2 = var14; var15 > var20Lifetime2; var20Lifetime2 = var20Lifetime2 + sprites[3].field_w) {
                 sprites[3].draw(x, var20Lifetime2);
               }
-              SoftwareRasterizer.restoreClip(cd.field_f);
+              SoftwareRasterizer.restoreClip(FullscreenDisplayMode.field_f);
             }
             if (sprites[5] != null &&
               sprites[5].field_w != 0) {
@@ -142,7 +142,7 @@ final class SoftwareTransform3D extends Transform3D {
               for (var20Lifetime3 = var14; var15 > var20Lifetime3; var20Lifetime3 = var20Lifetime3 + sprites[5].field_w) {
                 sprites[5].draw(var13, var20Lifetime3);
               }
-              SoftwareRasterizer.restoreClip(cd.field_f);
+              SoftwareRasterizer.restoreClip(FullscreenDisplayMode.field_f);
             }
             if (sprites[4] != null &&
               sprites[4].field_z != 0) {
@@ -155,7 +155,7 @@ final class SoftwareTransform3D extends Transform3D {
                   sprites[4].draw(var21, var20Lifetime4);
                 }
               }
-              SoftwareRasterizer.restoreClip(cd.field_f);
+              SoftwareRasterizer.restoreClip(FullscreenDisplayMode.field_f);
             }
             return;
           }

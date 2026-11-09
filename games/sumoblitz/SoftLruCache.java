@@ -29,20 +29,20 @@ final class SoftLruCache {
           Throwable decompiledCaughtException = null;
           try {
             try {
-              var4 = Class.forName("rk");
+              var4 = Class.forName("BufferedImageRasterBuffer");
               var5 = (RasterBuffer) (var4.newInstance());
               if (param2 != 0) {
                 stackIn_2_0 = (RasterBuffer) null;
                 return stackIn_2_0;
               }
-              var5.a(param3, param0, param1, param2 - 119);
+              var5.initializeRaster(param3, param0, param1, param2 - 119);
               stackIn_4_0 = var5;
               return stackIn_4_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
               var5_ref = new ImageProducerRasterBuffer();
-              ((RasterBuffer) ((Object) var5_ref)).a(param3, param0, param1, -125);
+              ((RasterBuffer) ((Object) var5_ref)).initializeRaster(param3, param0, param1, -125);
               stackIn_6_0 = var5_ref;
               return (RasterBuffer) ((Object) stackIn_6_0);
             }

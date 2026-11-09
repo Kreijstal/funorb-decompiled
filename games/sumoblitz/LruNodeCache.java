@@ -1,28 +1,28 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ph {
+final class LruNodeCache {
     static SpriteData[] field_a;
     static GameplaySession gameplaySession;
     static String youHaveUnreadMessagesText;
-    private DualLinkNode field_e;
-    private SecondaryNodeQueue field_g;
-    private int field_f;
+    private DualLinkNode marker;
+    private SecondaryNodeQueue accessOrder;
+    private int remaining;
     static String usernameText;
-    private IntrusiveNodeHashTable field_c;
+    private IntrusiveNodeHashTable entries;
 
-    final DualLinkNode a(byte param0, long param1) {
-        DualLinkNode var4 = (DualLinkNode) (this.field_c.a(param0 ^ -60, param1));
-        if (param0 != -88) {
-          this.a((byte) -122, 80L);
+    final DualLinkNode get(byte guard, long key) {
+        DualLinkNode var4 = (DualLinkNode) (this.entries.a(guard ^ -60, key));
+        if (guard != -88) {
+          this.get((byte) -122, 80L);
         }
         if (var4 != null) {
-          this.field_g.addLast(var4, (byte) -114);
+          this.accessOrder.addLast(var4, (byte) -114);
         }
         return var4;
     }
 
-    final void a(long param0, DualLinkNode param1, int param2) {
+    final void put(long key, DualLinkNode node, int guard) {
         DualLinkNode var5 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -30,35 +30,35 @@ final class ph {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
         try {
-          if (this.field_f != 0) {
-            this.field_f = this.field_f - 1;
+          if (this.remaining != 0) {
+            this.remaining = this.remaining - 1;
           } else {
-            var5 = this.field_g.removeFirst((byte) 72);
+            var5 = this.accessOrder.removeFirst((byte) 72);
             var5.unlink(false);
             var5.unlinkSecondary(-5106);
-            if (this.field_e == var5) {
-              var5 = this.field_g.removeFirst((byte) 72);
+            if (this.marker == var5) {
+              var5 = this.accessOrder.removeFirst((byte) 72);
               var5.unlink(false);
               var5.unlinkSecondary(-5106);
             }
           }
-          this.field_c.a(param1, -1, param0);
-          if (param2 >= -114) {
-            this.field_g = (SecondaryNodeQueue) null;
+          this.entries.a(node, -1, key);
+          if (guard >= -114) {
+            this.accessOrder = (SecondaryNodeQueue) null;
           }
-          this.field_g.addLast(param1, (byte) -109);
+          this.accessOrder.addLast(node, (byte) -109);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = decompiledCaughtException;
           stackIn_11_0 = var5_ref;
-          stackIn_11_1 = new StringBuilder().append("ph.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_11_1 = new StringBuilder().append("ph.B(").append(key).append(',');
+          if (node == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -72,9 +72,9 @@ final class ph {
         field_a = null;
     }
 
-    final static void a(byte param0) {
+    final static void releaseValidationIcons(byte guard) {
         LegacyOpenGlSpriteTexture.field_s = null;
-        if (param0 > -77) {
+        if (guard > -77) {
           usernameText = (String) null;
         }
         ValidationStatus.field_a = null;
@@ -127,15 +127,15 @@ final class ph {
         var42 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (param12 >= 0 &&
-            param13 < nk.field_c) {
+            param13 < SoftwareRasterViewport.height) {
             if (param0 < 0 &&
               param9 < 0 &&
               param10 < 0) {
               return;
             }
-            if (nk.field_i <= param0 &&
-              nk.field_i <= param9 &&
-              param10 >= nk.field_i) {
+            if (SoftwareRasterViewport.width <= param0 &&
+              SoftwareRasterViewport.width <= param9 &&
+              param10 >= SoftwareRasterViewport.width) {
               return;
             }
             if (param14 != -48) {
@@ -272,22 +272,22 @@ final class ph {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var36Lifetime2 = nk.field_d[param13];
+                var36Lifetime2 = SoftwareRasterViewport.rowOffsets[param13];
                 while (param13 < param16) {
                   var37 = var17_int >> 16;
-                  if (var37 < nk.field_i) {
+                  if (var37 < SoftwareRasterViewport.width) {
                     var38 = -(var17_int >> 16) + (var18 >> 16);
                     if (var38 == 0) {
                       if (0 <= var37 &&
-                        nk.field_i > var37) {
+                        SoftwareRasterViewport.width > var37) {
                         mn.a(0, 0, param4, var38, 0, var25, var21, var37 + var36Lifetime2, true, var29);
                       }
                     } else {
                       var39 = (var22 - var21) / var38;
                       var40 = (var26 - var25) / var38;
                       var41 = (-var29 + var30) / var38;
-                      if (nk.field_i <= var38 + var37) {
-                        var38 = -var37 + (nk.field_i - 1);
+                      if (SoftwareRasterViewport.width <= var38 + var37) {
+                        var38 = -var37 + (SoftwareRasterViewport.width - 1);
                       }
                       if (0 > var37) {
                         mn.a(var40, var39, param4, var37 + var38, var41, var25 - var37 * var40, var21 - var39 * var37, var36Lifetime2, true, -(var37 * var41) + var29);
@@ -297,7 +297,7 @@ final class ph {
                     }
                   }
                   param13++;
-                  if (nk.field_c <= param13) {
+                  if (SoftwareRasterViewport.height <= param13) {
                     return;
                   }
                   var29 = var29 + var31;
@@ -359,22 +359,22 @@ final class ph {
               var22 = var22 + param13 * var24;
               param13 = 0;
             }
-            var35Lifetime1 = nk.field_d[param13];
+            var35Lifetime1 = SoftwareRasterViewport.rowOffsets[param13];
             while (param13 < param12) {
               var36Lifetime1 = var17_int >> 16;
-              if (var36Lifetime1 < nk.field_i) {
+              if (var36Lifetime1 < SoftwareRasterViewport.width) {
                 var37Lifetime1 = -(var17_int >> 16) + (var18 >> 16);
                 if (var37Lifetime1 == 0) {
                   if (var36Lifetime1 >= 0 &&
-                    nk.field_i > var36Lifetime1) {
+                    SoftwareRasterViewport.width > var36Lifetime1) {
                     mn.a(0, 0, param4, var37Lifetime1, 0, var25, var21, var35Lifetime1 + var36Lifetime1, true, var29);
                   }
                 } else {
                   var38Lifetime1 = (-var21 + var22) / var37Lifetime1;
                   var39Lifetime1 = (var26 - var25) / var37Lifetime1;
                   var40Lifetime1 = (-var29 + var30) / var37Lifetime1;
-                  if (nk.field_i <= var37Lifetime1 + var36Lifetime1) {
-                    var37Lifetime1 = -1 + (nk.field_i - var36Lifetime1);
+                  if (SoftwareRasterViewport.width <= var37Lifetime1 + var36Lifetime1) {
+                    var37Lifetime1 = -1 + (SoftwareRasterViewport.width - var36Lifetime1);
                   }
                   if (var36Lifetime1 >= 0) {
                     mn.a(var39Lifetime1, var38Lifetime1, param4, var37Lifetime1, var40Lifetime1, var25, var21, var35Lifetime1 + var36Lifetime1, true, var29);
@@ -384,7 +384,7 @@ final class ph {
                 }
               }
               param13++;
-              if (param13 >= nk.field_c) {
+              if (param13 >= SoftwareRasterViewport.height) {
                 return;
               }
               var29 = var29 + var31;
@@ -414,14 +414,14 @@ final class ph {
         }
     }
 
-    ph(int param0) {
+    LruNodeCache(int capacity) {
         int var2 = 0;
-        this.field_e = new DualLinkNode();
-        this.field_g = new SecondaryNodeQueue();
-        this.field_f = param0;
-        for (var2 = 1; param0 > var2 + var2; var2 = var2 + var2) {
+        this.marker = new DualLinkNode();
+        this.accessOrder = new SecondaryNodeQueue();
+        this.remaining = capacity;
+        for (var2 = 1; capacity > var2 + var2; var2 = var2 + var2) {
         }
-        this.field_c = new IntrusiveNodeHashTable(var2);
+        this.entries = new IntrusiveNodeHashTable(var2);
     }
 
     static {

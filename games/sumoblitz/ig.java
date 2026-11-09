@@ -102,7 +102,7 @@ final class ig {
           if (!param1) {
             hudMessages = (IntrusiveDeque) null;
           }
-          if (!qn.field_e.field_f) {
+          if (!NineSlicePanel.field_e.field_f) {
             stackIn_6_0 = -1;
             return stackIn_6_0;
           }
@@ -161,7 +161,7 @@ final class ig {
             }
             try {
               if (var6 == 0) {
-                qn.field_e.a(var15, -31357, var11);
+                NineSlicePanel.field_e.a(var15, -31357, var11);
               }
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;

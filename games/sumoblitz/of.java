@@ -131,11 +131,11 @@ final class of extends IntrusiveNode {
         if (ProxySocketConnector.accountCreationState == LegacyOpenGlGraphicsHeap.PENDING) {
           return FadingWidget.field_C;
         }
-        if (!AffineTransform3D.field_o.a(true)) {
-          return AffineTransform3D.field_o.b(32);
+        if (!AffineTransform3D.emailAvailabilityRequest.isComplete(true)) {
+          return AffineTransform3D.emailAvailabilityRequest.email(32);
         }
         if (LegacyOpenGlGraphicsHeap.PENDING == vm.nameAvailabilityState) {
-          return AffineTransform3D.field_o.b(107);
+          return AffineTransform3D.emailAvailabilityRequest.email(107);
         }
         return FocusProxyWidget.field_F;
     }

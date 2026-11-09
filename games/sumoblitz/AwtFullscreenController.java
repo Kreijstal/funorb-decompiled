@@ -1,24 +1,24 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cu {
-    private java.awt.GraphicsDevice field_b;
-    private java.awt.DisplayMode field_a;
+final class AwtFullscreenController {
+    private java.awt.GraphicsDevice device;
+    private java.awt.DisplayMode previousMode;
 
     public final void exit() {
-        if (this.field_a != null) {
-          this.field_b.setDisplayMode(this.field_a);
-          if (!this.field_b.getDisplayMode().equals(this.field_a)) {
+        if (this.previousMode != null) {
+          this.device.setDisplayMode(this.previousMode);
+          if (!this.device.getDisplayMode().equals(this.previousMode)) {
             throw new RuntimeException("");
           }
-          this.field_a = null;
+          this.previousMode = null;
         }
-        this.a(true, (java.awt.Frame) null);
+        this.setFullscreenWindow(true, (java.awt.Frame) null);
     }
 
     public final int[] listmodes() {
         int var3 = 0;
-        java.awt.DisplayMode[] var4 = this.field_b.getDisplayModes();
+        java.awt.DisplayMode[] var4 = this.device.getDisplayModes();
         java.awt.DisplayMode[] var1 = var4;
         int[] var2 = new int[var4.length << 2];
         for (var3 = 0; var4.length > var3; var3++) {
@@ -30,7 +30,7 @@ final class cu {
         return var2;
     }
 
-    private final void a(boolean param0, java.awt.Frame param1) {
+    private final void setFullscreenWindow(boolean accessible, java.awt.Frame frame) {
         try {
           int decompiledRegionSelector0 = 0;
           Throwable decompiledCaughtException = null;
@@ -43,17 +43,17 @@ final class cu {
           var3 = 0;
           try {
             var4 = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
-            var4.setAccessible(param0);
-            if (((Boolean) (var4.get(this.field_b))).booleanValue()) {
+            var4.setAccessible(accessible);
+            if (((Boolean) (var4.get(this.device))).booleanValue()) {
               var3 = 1;
-              var4.set(this.field_b, Boolean.FALSE);
+              var4.set(this.device, Boolean.FALSE);
             }
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var4_ref = decompiledCaughtException;
           }
           try {
-            this.field_b.setFullScreenWindow((java.awt.Window) ((Object) param1));
+            this.device.setFullScreenWindow((java.awt.Window) ((Object) frame));
             decompiledRegionSelector0 = 0;
           } catch (java.lang.Throwable decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -68,7 +68,7 @@ final class cu {
             if (var3 != 0) {
               try {
                 var4 = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
-                var4.set(this.field_b, Boolean.TRUE);
+                var4.set(this.device, Boolean.TRUE);
               } catch (java.lang.Throwable decompiledCaughtParameter2) {
                 decompiledCaughtException = decompiledCaughtParameter2;
                 var4_ref = decompiledCaughtException;
@@ -79,13 +79,13 @@ final class cu {
           if (decompiledRegionSelector0 == 1) {
             try {
               var7 = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
-              var7.set(this.field_b, Boolean.TRUE);
+              var7.set(this.device, Boolean.TRUE);
             } catch (java.lang.Throwable decompiledCaughtParameter3) {
               decompiledCaughtException = decompiledCaughtParameter3;
               var7_ref = decompiledCaughtException;
             }
           }
-          throw cu.<RuntimeException>$cfr$sneakyThrow(var6);
+          throw AwtFullscreenController.<RuntimeException>rethrowUnchecked(var6);
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -99,16 +99,16 @@ final class cu {
         java.awt.DisplayMode[] var7;
         int var8;
         int var10;
-        this.field_a = this.field_b.getDisplayMode();
-        if (null == this.field_a) {
+        this.previousMode = this.device.getDisplayMode();
+        if (null == this.previousMode) {
           throw new NullPointerException();
         }
         param0.setUndecorated(true);
         param0.enableInputMethods(false);
-        this.a(true, param0);
+        this.setFullscreenWindow(true, param0);
         if (param4 == 0) {
-          var6 = this.field_a.getRefreshRate();
-          var7 = this.field_b.getDisplayModes();
+          var6 = this.previousMode.getRefreshRate();
+          var7 = this.device.getDisplayModes();
           var8 = 0;
           for (var9 = 0; var9 < var7.length; var9++) {
             if (var7[var9].getWidth() == param1 &&
@@ -126,18 +126,18 @@ final class cu {
             param4 = var6;
           }
         }
-        this.field_b.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));
+        this.device.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));
     }
 
-    public cu() throws Exception {
+    public AwtFullscreenController() throws Exception {
         int var4 = 0;
         java.awt.GraphicsEnvironment var1;
         java.awt.GraphicsDevice[] var2;
         java.awt.GraphicsDevice[] var3;
         java.awt.GraphicsDevice var5;
         var1 = java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment();
-        this.field_b = var1.getDefaultScreenDevice();
-        if (this.field_b.isFullScreenSupported()) {
+        this.device = var1.getDefaultScreenDevice();
+        if (this.device.isFullScreenSupported()) {
           return;
         }
         var2 = var1.getScreenDevices();
@@ -146,18 +146,18 @@ final class cu {
           var5 = var3[var4];
           if (var5 != null &&
             var5.isFullScreenSupported()) {
-            this.field_b = var5;
+            this.device = var5;
             return;
           }
         }
-        throw cu.<RuntimeException>$cfr$sneakyThrow(new Exception());
+        throw AwtFullscreenController.<RuntimeException>rethrowUnchecked(new Exception());
     }
 
     static {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException rethrowUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

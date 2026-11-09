@@ -44,7 +44,7 @@ final class GameplaySession {
           if (param0 != 60) {
             return;
           }
-          if (0 == lg.field_c % 500 ||
+          if (0 == ResetStatsConfirmationOverlay.field_c % 500 ||
             null == this.firstGradientColors ||
             this.secondGradientColors == null) {
             var3_int = OpenGlShaderProgram.levelIndex % 6;
@@ -96,7 +96,7 @@ final class GameplaySession {
               PowerupPickup.field_t = 0;
             }
           }
-          var3 = nf.a(this.firstGradientColors[lg.field_c % 500], (byte) -118, 480, this.secondGradientColors[lg.field_c % 500]);
+          var3 = nf.a(this.firstGradientColors[ResetStatsConfirmationOverlay.field_c % 500], (byte) -118, 480, this.secondGradientColors[ResetStatsConfirmationOverlay.field_c % 500]);
           var4_intLifetime1 = 0;
           scanLoop1: while (true) {
             boolean decompiledFrameCompleted0 = true;
@@ -132,7 +132,7 @@ final class GameplaySession {
             this.renderAnimatedArenaBorder(-109, var2);
             break;
           }
-          lg.field_c = lg.field_c + 1;
+          ResetStatsConfirmationOverlay.field_c = ResetStatsConfirmationOverlay.field_c + 1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -164,7 +164,7 @@ final class GameplaySession {
           RidgedNoise3D.field_w[0].draw(0, 448);
           RidgedNoise3D.field_w[1].draw(608, 448);
           var3_int = 0;
-          var4 = (lg.field_c >> 1) % IsaacCipher.field_f.length;
+          var4 = (ResetStatsConfirmationOverlay.field_c >> 1) % IsaacCipher.field_f.length;
           var5 = 32;
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
@@ -294,11 +294,11 @@ final class GameplaySession {
           }
           boolean decompiledFrameRemainder1 = true;
           boolean decompiledFrameCompleted2 = true;
-          if (stackIn_20_0 != bj.powerupPickups) {
-            var4_ref = (PowerupPickup) (bj.powerupPickups.first(-90));
+          if (stackIn_20_0 != EmailAvailabilityRequest.powerupPickups) {
+            var4_ref = (PowerupPickup) (EmailAvailabilityRequest.powerupPickups.first(-90));
             while (var4_ref != null) {
               var4_ref.render(-62, toolkit);
-              var4_ref = (PowerupPickup) (bj.powerupPickups.next((byte) 18));
+              var4_ref = (PowerupPickup) (EmailAvailabilityRequest.powerupPickups.next((byte) 18));
               if (var6 != 0) {
                 decompiledFrameCompleted2 = false;
                 break;
@@ -708,7 +708,7 @@ final class GameplaySession {
         var5 = Sumoblitz.field_L ? 1 : 0;
         try {
           var2 = SpriteMask.drones[0];
-          var3 = (PowerupPickup) (bj.powerupPickups.first(param0 + 14762));
+          var3 = (PowerupPickup) (EmailAvailabilityRequest.powerupPickups.first(param0 + 14762));
           while (var3 != null) {
             var3.update(param0 - 16401);
             if (var5 != 0) {
@@ -747,7 +747,7 @@ final class GameplaySession {
             if (var3.remainingTicks <= 0) {
               var3.unlink(false);
             }
-            var3 = (PowerupPickup) (bj.powerupPickups.next((byte) 18));
+            var3 = (PowerupPickup) (EmailAvailabilityRequest.powerupPickups.next((byte) 18));
           }
           if (param0 != -14854) {
             field_k = -94;
@@ -812,7 +812,7 @@ final class GameplaySession {
                   }
                   if (decompiledFrameRemainder0) {
                     if (hw.field_b[81]) {
-                      gg.a((byte) 125);
+                      ByteArrayCacheNode.initializeGameplaySession((byte) 125);
                     }
                     LegacyOpenGlSpriteTexture.field_w = true;
                     if (var3 == 0) {
@@ -844,7 +844,7 @@ final class GameplaySession {
             }
           }
           o.a(0);
-          gg.a((byte) 87);
+          ByteArrayCacheNode.initializeGameplaySession((byte) 87);
           LegacyOpenGlSpriteTexture.field_w = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -929,17 +929,17 @@ final class GameplaySession {
           OpenGlIndexBuffer.field_p[0].drawRotated(624.0f, 464.0f, 4096, 16384);
           OpenGlIndexBuffer.field_p[1].drawRotated(624.0f, 464.0f, 4096, 16384);
           var3_int = 0;
-          var4 = (lg.field_c >> 1) % IsaacCipher.field_f.length;
+          var4 = (ResetStatsConfirmationOverlay.field_c >> 1) % IsaacCipher.field_f.length;
           var5 = 32;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var5 >= 608))) {
             stackIn_24_0 = -256;
-            stackIn_24_1 = ~(((var4 << 3) + (lg.field_c << 2)) % 512);
+            stackIn_24_1 = ~(((var4 << 3) + (ResetStatsConfirmationOverlay.field_c << 2)) % 512);
             if (var6 == 0) {
               if (stackIn_24_0 <= stackIn_24_1) {
-                stackIn_10_0 = ((var4 << 3) + (lg.field_c << 2)) % 512;
+                stackIn_10_0 = ((var4 << 3) + (ResetStatsConfirmationOverlay.field_c << 2)) % 512;
               } else {
-                stackIn_10_0 = 512 - ((var4 << 3) + (lg.field_c << 2)) % 512;
+                stackIn_10_0 = 512 - ((var4 << 3) + (ResetStatsConfirmationOverlay.field_c << 2)) % 512;
               }
               var3_intLifetime1 = stackIn_10_0;
               if (var3_intLifetime1 > 240) {
@@ -971,10 +971,10 @@ final class GameplaySession {
             if (var6 != 0) {
               return;
             }
-            if (255 < ((var4 << 3) + (lg.field_c << 2)) % 512) {
-              stackIn_36_0 = -(((var4 << 3) + (lg.field_c << 2)) % 512) + 512;
+            if (255 < ((var4 << 3) + (ResetStatsConfirmationOverlay.field_c << 2)) % 512) {
+              stackIn_36_0 = -(((var4 << 3) + (ResetStatsConfirmationOverlay.field_c << 2)) % 512) + 512;
             } else {
-              stackIn_36_0 = ((lg.field_c << 2) + (var4 << 3)) % 512;
+              stackIn_36_0 = ((ResetStatsConfirmationOverlay.field_c << 2) + (var4 << 3)) % 512;
             }
             var3_intLifetime2 = stackIn_36_0;
             if (240 < var3_intLifetime2) {
@@ -1072,11 +1072,11 @@ final class GameplaySession {
           if (stackIn_31_0) {
             return;
           }
-          if (DropDownWidget.field_N.a(false)) {
-            DropDownWidget.field_N.c(5008);
+          if (DropDownWidget.field_N.isVisible(false)) {
+            DropDownWidget.field_N.update(5008);
             return;
           }
-          if (cd.a(false)) {
+          if (FullscreenDisplayMode.updateDroneIntroduction(false)) {
             return;
           }
           if (guard >= -65) {
@@ -1312,13 +1312,13 @@ final class GameplaySession {
                 o.a(0);
                 if (MusicPatchEnvelope.a(8230, 10)) {
                   UnderageAccountInfoPanel.b(24753, 239, 16);
-                  if (sl.a((byte) 90, 10)) {
+                  if (LegacyOpenGlClientVertexBuffer.areEarlierLevelsComplete((byte) 90, 10)) {
                     UnderageAccountInfoPanel.b(24753, 238, 17);
                   }
                 }
                 if (MusicPatchEnvelope.a(8230, 25)) {
                   UnderageAccountInfoPanel.b(24753, 237, 18);
-                  if (sl.a((byte) 90, 25)) {
+                  if (LegacyOpenGlClientVertexBuffer.areEarlierLevelsComplete((byte) 90, 25)) {
                     UnderageAccountInfoPanel.b(24753, 236, 19);
                   }
                   if (ByteArrayStorage.a(25, 115)) {
@@ -1414,7 +1414,7 @@ final class GameplaySession {
               this.showBlastHint = false;
             }
           }
-          if (null != bj.powerupPickups) {
+          if (null != EmailAvailabilityRequest.powerupPickups) {
             this.updatePowerupPickups(-14854);
           }
           GameOverScreen.a(true);
@@ -1517,7 +1517,7 @@ final class GameplaySession {
         int var8Lifetime1;
         var10 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (lg.field_c % param0 == 0 ||
+          if (ResetStatsConfirmationOverlay.field_c % param0 == 0 ||
             this.field_h == this.backdropX &&
             this.field_m == this.backdropY) {
             var2_int = ExpandingRingEffect.nextRandomInt(640 + OpenGlEnvironmentWaterEffect.field_i.width(), ResourceArchive.field_b, (byte) -96) - OpenGlEnvironmentWaterEffect.field_i.width();
@@ -1525,7 +1525,7 @@ final class GameplaySession {
             this.backdropVelocityY = (-this.backdropY + (double)var3) / 2500.0;
             this.backdropVelocityX = (-this.backdropX + (double)var2_int) / 2500.0;
           }
-          if (lg.field_c % 100 == 0 &&
+          if (ResetStatsConfirmationOverlay.field_c % 100 == 0 &&
             FallbackShaderEffect.sceneryParticles != null) {
             var2_intLifetime1 = 0;
             var3Lifetime1 = 0;
@@ -1576,7 +1576,7 @@ final class GameplaySession {
             var9 = new SceneryParticle(stackIn_28_2, stackIn_28_3, stackIn_28_4, stackIn_28_5, stackIn_28_6, stackIn_29_7, (double)var4, var5, var7, var8);
             FallbackShaderEffect.sceneryParticles.addLast((IntrusiveNode) (var9), (byte) 39);
           }
-          if (lg.field_c % 200 == 0 &&
+          if (ResetStatsConfirmationOverlay.field_c % 200 == 0 &&
             FallbackShaderEffect.sceneryParticles != null) {
             var2_intLifetime2 = 0;
             var3Lifetime2 = 0;
@@ -1745,7 +1745,7 @@ final class GameplaySession {
               LegacyOpenGlTexture1D.field_k[1].draw(3, 42);
               var3.pop(29709);
               if (var4.isBlastReady(20)) {
-                var5Lifetime1 = lg.field_c << 2;
+                var5Lifetime1 = ResetStatsConfirmationOverlay.field_c << 2;
                 if (255 >= var5Lifetime1 % 510) {
                   stackIn_40_0 = var5Lifetime1 % 255;
                 } else {
@@ -1772,8 +1772,8 @@ final class GameplaySession {
               break;
             }
           }
-          if (DropDownWidget.field_N.a(false)) {
-            DropDownWidget.field_N.a(true, toolkit);
+          if (DropDownWidget.field_N.isVisible(false)) {
+            DropDownWidget.field_N.render(true, toolkit);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1832,14 +1832,14 @@ final class GameplaySession {
           PasswordValidator.e(104);
           if (OpenGlShaderProgram.levelIndex == 0 &&
             !TextureMetadata.field_f[0]) {
-            bw.field_d = true;
+            NextLevelChoiceOverlay.field_d = true;
             this.showBlastHint = true;
           }
-          gg.a((byte) 105);
+          ByteArrayCacheNode.initializeGameplaySession((byte) 105);
           MusicPatch.simulationPaused = false;
           MessageDialog.arcadeMode = arcadeMode;
           this.closePauseMenu((byte) 112);
-          lg.field_c = 0;
+          ResetStatsConfirmationOverlay.field_c = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1856,7 +1856,7 @@ final class GameplaySession {
           OpenGlCubeTexture.sceneEffects = new IntrusiveDeque();
           this.resetSession(127);
           discarded$0 = new LevelCompleteUpgradeScreen();
-          DropDownWidget.field_N = new bw();
+          DropDownWidget.field_N = new NextLevelChoiceOverlay();
           discarded$1 = new GameOverScreen();
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "qu.<init>()");

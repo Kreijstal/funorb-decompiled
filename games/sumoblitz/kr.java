@@ -33,8 +33,8 @@ final class kr {
           if (param0 != 19889) {
             field_d = (int[]) null;
           }
-          if (k.a(param1, param2, param3, param0 - 42935)) {
-            stackIn_6_0 = bw.b(-124);
+          if (k.decodeSpriteSheet(param1, param2, param3, param0 - 42935)) {
+            stackIn_6_0 = NextLevelChoiceOverlay.takeDecodedSprites(-124);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
@@ -60,27 +60,27 @@ final class kr {
           if (param1 > -16) {
             kr.releaseStatics(28);
             if (param0) {
-              jj.field_d = jj.field_d + 1;
+              LoginMethodPreference.field_d = LoginMethodPreference.field_d + 1;
               o.a((byte) -56);
             }
             return;
           }
           if (param0) {
-            jj.field_d = jj.field_d + 1;
+            LoginMethodPreference.field_d = LoginMethodPreference.field_d + 1;
             o.a((byte) -56);
           }
           return;
         }
         if (param1 <= -16) {
           if (param0) {
-            jj.field_d = jj.field_d + 1;
+            LoginMethodPreference.field_d = LoginMethodPreference.field_d + 1;
             o.a((byte) -56);
           }
           return;
         }
         kr.releaseStatics(28);
         if (param0) {
-          jj.field_d = jj.field_d + 1;
+          LoginMethodPreference.field_d = LoginMethodPreference.field_d + 1;
           o.a((byte) -56);
         }
     }
