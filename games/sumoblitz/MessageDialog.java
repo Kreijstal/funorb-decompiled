@@ -224,10 +224,10 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
           IOException iOException = null;
           Throwable decompiledCaughtException = null;
           if (DisplayModeConfirmationDialog.field_O != null && (0 > param1 ||
-            LegacyOpenGlUnderwaterEffect.field_j == kw.field_c)) {
+            LegacyOpenGlUnderwaterEffect.CONNECTED == kw.accountPhase)) {
             if (InwardSparkParticle.field_v.position == 0 &&
               (ArchiveCatalog.field_a + 10000L) < wq.monotonicTimeMillis(param0 - 14)) {
-              InwardSparkParticle.field_v.g(param1, 8);
+              InwardSparkParticle.field_v.writeCipherByte(param1, 8);
             }
             if (InwardSparkParticle.field_v.position > param0) {
               try {
@@ -262,7 +262,7 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
         }
         MarkerTrackWidget.closeCacheResources(-1);
         if (NameSuggestionsPanel.a((byte) -98)) {
-          InwardSparkParticle.field_v.g(1, 8);
+          InwardSparkParticle.field_v.writeCipherByte(1, 8);
           MessageDialog.a(0, 0);
         }
         kk.a((byte) -127);
@@ -317,7 +317,7 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
                   this.transitionToContent((byte) -97, var6);
                   return;
                 }
-                var6.a(pl.changeDisplayNameText, (byte) -123, (WidgetListener) (this));
+                var6.a(IsaacPacketBuffer.changeDisplayNameText, (byte) -123, (WidgetListener) (this));
               } else {
                 var6.a(PowerupTrailParticle.toCustomerSupportText, 9, true);
               }

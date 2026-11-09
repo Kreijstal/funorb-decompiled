@@ -29,13 +29,13 @@ final class ss {
     }
 
     final static void a(int param0, int param1, qv param2) {
-        pl var3 = null;
+        IsaacPacketBuffer var3 = null;
         try {
           var3 = InwardSparkParticle.field_v;
           if (param1 != 1000) {
             restartLevelText = (String) null;
           }
-          var3.g(param0, 8);
+          var3.writeCipherByte(param0, 8);
           var3.writeByte((byte) 16, 2);
           var3.writeByte((byte) 89, 0);
           var3.writeByte((byte) 82, param2.field_n);

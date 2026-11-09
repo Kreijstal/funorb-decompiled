@@ -156,7 +156,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           var10 = var50.textOriginY(parentY, (UiWidget) (this), 0) + (var50.layoutText(-3, (UiWidget) (this)).height(true) >> 1);
           if (var6Lifetime5 != GameInstructions.DEBOUNCING &&
             kt.PENDING != var6Lifetime5) {
-            if (qr.INVALID == var6Lifetime5) {
+            if (AccountConnectionPhase.INVALID == var6Lifetime5) {
               var18 = ToolkitRasterStateCacheEntry.field_m[2];
               var18.d(var9, -(var18.field_u >> 1) + var10, 256);
               return;
@@ -208,7 +208,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           var10Lifetime1 = var51.textOriginY(parentY, (UiWidget) (this), 0) + (var51.layoutText(-3, (UiWidget) (this)).height(true) >> 1);
           if (var6Lifetime1 != GameInstructions.DEBOUNCING &&
             kt.PENDING != var6Lifetime1) {
-            if (qr.INVALID == var6Lifetime1) {
+            if (AccountConnectionPhase.INVALID == var6Lifetime1) {
               var23 = ToolkitRasterStateCacheEntry.field_m[2];
               var23.d(var9Lifetime1, -(var23.field_u >> 1) + var10Lifetime1, 256);
               return;
@@ -258,7 +258,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           var10Lifetime2 = var52.textOriginY(parentY, (UiWidget) (this), 0) + (var52.layoutText(-3, (UiWidget) (this)).height(true) >> 1);
           if (var6Lifetime1 != GameInstructions.DEBOUNCING &&
             kt.PENDING != var6Lifetime1) {
-            if (qr.INVALID == var6Lifetime1) {
+            if (AccountConnectionPhase.INVALID == var6Lifetime1) {
               var28 = ToolkitRasterStateCacheEntry.field_m[2];
               var28.d(var9Lifetime2, -(var28.field_u >> 1) + var10Lifetime2, 256);
               return;
@@ -308,7 +308,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           var10Lifetime3 = var53.textOriginY(parentY, (UiWidget) (this), 0) + (var53.layoutText(-3, (UiWidget) (this)).height(true) >> 1);
           if (var6Lifetime2 != GameInstructions.DEBOUNCING &&
             kt.PENDING != var6Lifetime2) {
-            if (qr.INVALID == var6Lifetime2) {
+            if (AccountConnectionPhase.INVALID == var6Lifetime2) {
               var33 = ToolkitRasterStateCacheEntry.field_m[2];
               var33.d(var9Lifetime3, -(var33.field_u >> 1) + var10Lifetime3, 256);
               return;
@@ -354,7 +354,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           var10Lifetime4 = var55.textOriginY(parentY, (UiWidget) (this), 0) + (var55.layoutText(-3, (UiWidget) (this)).height(true) >> 1);
           if (var6Lifetime3 != GameInstructions.DEBOUNCING &&
             kt.PENDING != var6Lifetime3) {
-            if (qr.INVALID == var6Lifetime3) {
+            if (AccountConnectionPhase.INVALID == var6Lifetime3) {
               var47 = ToolkitRasterStateCacheEntry.field_m[2];
               var47.d(var9Lifetime4, -(var47.field_u >> 1) + var10Lifetime4, 256);
               return;
@@ -417,7 +417,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           return;
         }
         if (kt.PENDING != var6Lifetime4) {
-          if (qr.INVALID == var6Lifetime4) {
+          if (AccountConnectionPhase.INVALID == var6Lifetime4) {
             var44 = ToolkitRasterStateCacheEntry.field_m[2];
             var44.d(var9Lifetime5, -(var44.field_u >> 1) + var10Lifetime5, 256);
             return;

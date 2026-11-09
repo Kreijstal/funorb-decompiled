@@ -6,7 +6,7 @@ abstract class RasterBuffer {
     static String invalidPasswordText;
     int[] field_c;
     java.awt.Image field_f;
-    static ts field_i;
+    static QuickChatCommand field_i;
     static int[] field_a;
     static int[] field_e;
     static String quitText;
@@ -115,6 +115,6 @@ abstract class RasterBuffer {
         invalidPasswordText = "Invalid password.";
         quitText = "Quit";
         field_e = new int[256];
-        field_i = new ts(1, 2, 2, 0);
+        field_i = new QuickChatCommand(1, 2, 2, 0);
     }
 }

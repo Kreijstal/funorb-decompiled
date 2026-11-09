@@ -4,7 +4,7 @@
 package jagdx;
 
 public class IDirect3DBaseTexture extends jaclib.peer.IUnknown {
-    protected IDirect3DBaseTexture(jaclib.peer.pf param0) {
+    protected IDirect3DBaseTexture(jaclib.peer.PeerReferenceManager param0) {
         super(param0);
     }
 }

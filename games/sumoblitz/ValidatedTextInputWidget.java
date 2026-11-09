@@ -69,7 +69,7 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
             ValidatedTextInputWidget.b(-31, 81, 66);
           }
           var2 = new PlayingSound(param1, param1);
-          jf.field_c.addLast((IntrusiveNode) (var2), (byte) 39);
+          ContentTransitionPhase.field_c.addLast((IntrusiveNode) (var2), (byte) 39);
           sj.field_c.addSubstream(param1);
           stackIn_3_0 = var2;
           return stackIn_3_0;

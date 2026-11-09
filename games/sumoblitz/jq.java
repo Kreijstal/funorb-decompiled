@@ -11,13 +11,13 @@ final class jq {
         if (param1 == 13586) {
           pi.field_b = wh.field_w[param0];
           LegacyOpenGlTexture3D.field_k = ArenaPad.waitingForTextTranslations[param0];
-          mm.field_c = qi.loadingTextTranslations[param0];
+          AccountRequestState.field_c = qi.loadingTextTranslations[param0];
           return;
         }
         TEXTURE = (TextureCombineSource) null;
         pi.field_b = wh.field_w[param0];
         LegacyOpenGlTexture3D.field_k = ArenaPad.waitingForTextTranslations[param0];
-        mm.field_c = qi.loadingTextTranslations[param0];
+        AccountRequestState.field_c = qi.loadingTextTranslations[param0];
     }
 
     final static void a(int param0, Sprite param1) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DropTargetWidget extends SingleChildWidget {
-    static mm field_z;
+    static AccountRequestState COMPLETE;
     static String field_B;
 
     final void onPointerReleased(UiWidget root, boolean guard, int parentX, int pointerY, int pointerX, int parentY) {
@@ -40,7 +40,7 @@ final class DropTargetWidget extends SingleChildWidget {
     }
 
     public static void releaseStatics(byte param0) {
-        field_z = null;
+        COMPLETE = null;
         if (param0 < 111) {
           return;
         }
@@ -82,6 +82,6 @@ final class DropTargetWidget extends SingleChildWidget {
     }
 
     static {
-        field_z = new mm();
+        COMPLETE = new AccountRequestState();
     }
 }

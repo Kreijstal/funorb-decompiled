@@ -8,25 +8,25 @@ final class ToolkitRasterStateStack {
     private ToolkitSprite spriteTarget;
     private GraphicsToolkit toolkit;
 
-    final static void a(int param0, int param1, hg param2) {
-        pl var5 = null;
+    final static void sendProgressUpdate(int opcode, int subcommand, GameProgressUpdate update) {
+        IsaacPacketBuffer var5 = null;
         int var4 = 0;
         try {
           var5 = InwardSparkParticle.field_v;
-          var5.g(param0, 8);
+          var5.writeCipherByte(opcode, 8);
           var5.position = var5.position + 1;
           var4 = var5.position;
-          var5.writeByte((byte) 39, param1);
-          var5.writeByte((byte) 99, param2.field_u);
-          var5.writeByte((byte) 63, param2.field_q);
-          var5.writeInt(48, param2.field_r);
-          var5.writeInt(48, param2.field_s);
-          var5.writeInt(48, param2.field_n);
-          var5.writeInt(48, param2.field_p);
+          var5.writeByte((byte) 39, subcommand);
+          var5.writeByte((byte) 99, update.eventType);
+          var5.writeByte((byte) 63, update.eventValue);
+          var5.writeInt(48, update.field_r);
+          var5.writeInt(48, update.field_s);
+          var5.writeInt(48, update.field_n);
+          var5.writeInt(48, update.field_p);
           var5.appendCrc32(var4, false);
           var5.patchByteLength(var5.position - var4, -13745);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "pm.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "pm.C(" + opcode + ',' + subcommand + ',' + (update != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -147,8 +147,8 @@ final class ToolkitRasterStateStack {
           var10 = (int)((long)var4 * (long)var6 >> 16);
           return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
         }
-        hg var11 = (hg) null;
-        ToolkitRasterStateStack.a(-57, 125, (hg) null);
+        GameProgressUpdate var11 = (GameProgressUpdate) null;
+        ToolkitRasterStateStack.sendProgressUpdate(-57, 125, (GameProgressUpdate) null);
         var3 = ic.b(param2, -431);
         var4 = SocialContact.cosQ16(0, param2);
         var5 = ic.b(param1, -431);

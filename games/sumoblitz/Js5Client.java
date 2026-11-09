@@ -187,7 +187,7 @@ abstract class Js5Client {
           if (guard <= 118) {
             field_k = (long[]) null;
           }
-          var4 = (ReflectionCheck) (qr.reflectionChecks.first(100));
+          var4 = (ReflectionCheck) (AccountConnectionPhase.reflectionChecks.first(100));
           var1 = var4;
           if (var1 == null) {
             return false;

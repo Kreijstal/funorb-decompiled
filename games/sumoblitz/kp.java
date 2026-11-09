@@ -89,7 +89,7 @@ final class kp {
             id var4 = (id) null;
             kp.a((of) null, 14, (id) null, -12);
           }
-          ow.field_f.addLast((IntrusiveNode) (param1), (byte) 39);
+          HuffmanDecoder.field_f.addLast((IntrusiveNode) (param1), (byte) 39);
           km.a((byte) 69, param0, param1);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "kp.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

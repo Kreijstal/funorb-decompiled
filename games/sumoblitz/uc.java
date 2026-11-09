@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class uc {
-    static ts field_d;
+    static QuickChatCommand field_d;
     static int field_f;
     static int[] field_b;
     static ToolkitSprite[] field_e;
@@ -60,7 +60,7 @@ final class uc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            field_d = (ts) null;
+            field_d = (QuickChatCommand) null;
           }
           if (!OpenGlVertexLayout.field_f.a((byte) 91)) {
             return;
@@ -82,6 +82,6 @@ final class uc {
     }
 
     static {
-        field_d = new ts(15, 0, 1, 0);
+        field_d = new QuickChatCommand(15, 0, 1, 0);
     }
 }

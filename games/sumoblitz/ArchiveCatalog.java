@@ -586,7 +586,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime8 = ke.a((byte) 106, "thisishidden");
           if (null != var2Lifetime8) {
-            jf.thisIsAHiddenText = MusicVoice.a(0, var2Lifetime8);
+            ContentTransitionPhase.thisIsAHiddenText = MusicVoice.a(0, var2Lifetime8);
           }
           var2Lifetime9 = ke.a((byte) 99, "orbcoin");
           if (null != var2Lifetime9) {
@@ -662,15 +662,15 @@ final class ArchiveCatalog {
           }
           var2Lifetime27 = ke.a((byte) 105, "dialogOptionsTx,0");
           if (var2Lifetime27 != null) {
-            lb.yesNoLabels[0] = MusicVoice.a(0, var2Lifetime27);
+            StringBuilderSupport.yesNoLabels[0] = MusicVoice.a(0, var2Lifetime27);
           }
           var2Lifetime28 = ke.a((byte) 124, "dialogOptionsTx,1");
           if (null != var2Lifetime28) {
-            lb.yesNoLabels[1] = MusicVoice.a(0, var2Lifetime28);
+            StringBuilderSupport.yesNoLabels[1] = MusicVoice.a(0, var2Lifetime28);
           }
           var2Lifetime29 = ke.a((byte) 105, "areYouSure");
           if (var2Lifetime29 != null) {
-            vq.areYouSureYouText = MusicVoice.a(param1 ^ -5, var2Lifetime29);
+            DisplayNameForm.areYouSureYouText = MusicVoice.a(param1 ^ -5, var2Lifetime29);
           }
           var2Lifetime30 = ke.a((byte) 102, "continueTx");
           if (null != var2Lifetime30) {
@@ -694,7 +694,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime35 = ke.a((byte) 98, "returnToLevelSelect");
           if (null != var2Lifetime35) {
-            mm.levelSelectText = MusicVoice.a(0, var2Lifetime35);
+            AccountRequestState.levelSelectText = MusicVoice.a(0, var2Lifetime35);
           }
           var2Lifetime36 = ke.a((byte) 92, "restartChallenge");
           if (var2Lifetime36 != null) {
@@ -1129,7 +1129,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime143 = ke.a((byte) 93, "levelSelect");
           if (var2Lifetime143 != null) {
-            mm.field_g = MusicVoice.a(0, var2Lifetime143);
+            AccountRequestState.field_g = MusicVoice.a(0, var2Lifetime143);
           }
           var2Lifetime144 = ke.a((byte) 116, "deathMessages,0");
           if (null != var2Lifetime144) {
@@ -1381,7 +1381,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime206 = ke.a((byte) 126, "hudLevel");
           if (var2Lifetime206 != null) {
-            pl.levelText = MusicVoice.a(0, var2Lifetime206);
+            IsaacPacketBuffer.levelText = MusicVoice.a(0, var2Lifetime206);
           }
           var2Lifetime207 = ke.a((byte) 123, "hudCharge");
           if (null != var2Lifetime207) {

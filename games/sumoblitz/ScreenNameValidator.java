@@ -25,11 +25,11 @@ final class ScreenNameValidator extends TextInputValidator {
         if (!vs.b((byte) 9) &&
           !TimedSceneEffect.field_r) {
           if (MatchingTextValidator.field_g == null) {
-            MatchingTextValidator.field_g = EmailSyntaxValidator.a((byte) -92, 4);
+            MatchingTextValidator.field_g = EmailSyntaxValidator.requestServerIntArray((byte) -92, 4);
           }
-          if (MatchingTextValidator.field_g.field_o) {
-            kh.field_e = kh.field_e | MatchingTextValidator.field_g.field_k;
-            OpenGlTransparentWaterEffect.field_e = OpenGlTransparentWaterEffect.field_e & ~MatchingTextValidator.field_g.field_k;
+          if (MatchingTextValidator.field_g.complete) {
+            kh.field_e = kh.field_e | MatchingTextValidator.field_g.firstValue;
+            OpenGlTransparentWaterEffect.field_e = OpenGlTransparentWaterEffect.field_e & ~MatchingTextValidator.field_g.firstValue;
             TimedSceneEffect.field_r = true;
             MatchingTextValidator.field_g = null;
           }
@@ -39,12 +39,12 @@ final class ScreenNameValidator extends TextInputValidator {
         }
     }
 
-    final static void a(int param0, int param1) {
-        if (param0 < 107) {
-          ScreenNameValidator.a(-41, -16);
+    final static void sendServerIntArrayRead(int guard, int opcode) {
+        if (guard < 107) {
+          ScreenNameValidator.sendServerIntArrayRead(-41, -16);
         }
-        pl var2 = InwardSparkParticle.field_v;
-        var2.g(param1, 8);
+        IsaacPacketBuffer var2 = InwardSparkParticle.field_v;
+        var2.writeCipherByte(opcode, 8);
         var2.writeByte((byte) 116, 1);
         var2.writeByte((byte) 107, 2);
     }
@@ -116,7 +116,7 @@ final class ScreenNameValidator extends TextInputValidator {
         try {
           var4 = (CharSequence) ((Object) text);
           if (!LegacyOpenGlShoreWaveWaterEffect.a(var4, (byte) 53)) {
-            stackIn_3_0 = qr.INVALID;
+            stackIn_3_0 = AccountConnectionPhase.INVALID;
             return stackIn_3_0;
           }
           if (guard != 26) {
@@ -134,7 +134,7 @@ final class ScreenNameValidator extends TextInputValidator {
             }
           }
           if (!this.available) {
-            stackIn_16_0 = qr.INVALID;
+            stackIn_16_0 = AccountConnectionPhase.INVALID;
           } else {
             stackIn_16_0 = qe.VALID;
           }
@@ -317,9 +317,9 @@ final class ScreenNameValidator extends TextInputValidator {
               throw new IllegalStateException();
             }
             no.field_b = new String[var4];
-            la.a(GameInstructions.field_c, 0, no.field_b, 0, var4);
+            ArrayUtils.copy(GameInstructions.field_c, 0, no.field_b, 0, var4);
             TickClock.field_c = new String[-1 - var4 + var3_int];
-            la.a(GameInstructions.field_c, var4 + 1, TickClock.field_c, 0, -var4 + (var3_int - 1));
+            ArrayUtils.copy(GameInstructions.field_c, var4 + 1, TickClock.field_c, 0, -var4 + (var3_int - 1));
             var4 = -1;
             var3_int = wo.a(GameInstructions.field_c, ValidatedTextInputWidget.field_R, LegacyOpenGlVertexBuffer.field_j, false, ic.a(lq.field_a, new String[]{"<br><%0><br>"}, (byte) -128));
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -333,9 +333,9 @@ final class ScreenNameValidator extends TextInputValidator {
               throw new IllegalStateException();
             }
             ResizingDialog.field_F = new String[var4];
-            la.a(GameInstructions.field_c, 0, ResizingDialog.field_F, 0, var4);
+            ArrayUtils.copy(GameInstructions.field_c, 0, ResizingDialog.field_F, 0, var4);
             TickClock.field_b = new String[-1 + (-var4 + var3_int)];
-            la.a(GameInstructions.field_c, var4 + 1, TickClock.field_b, 0, -1 - var4 + var3_int);
+            ArrayUtils.copy(GameInstructions.field_c, var4 + 1, TickClock.field_b, 0, -1 - var4 + var3_int);
             if (no.field_b.length >= ResizingDialog.field_F.length) {
               stackIn_31_0 = no.field_b.length;
             } else {
@@ -391,7 +391,7 @@ final class ScreenNameValidator extends TextInputValidator {
             }
             LegacyOpenGlEffectManager.field_f = wq.monotonicTimeMillis(-17);
           }
-          RendererPreference.field_a.field_e = jo.field_b.length;
+          RendererPreference.field_a.itemCount = jo.field_b.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; var4Lifetime1 < IntIndexHashTable.field_c.length; var4Lifetime1++) {
             stackIn_90_0 = -27;
@@ -423,7 +423,7 @@ final class ScreenNameValidator extends TextInputValidator {
           }
           VertexStreamLayout.field_b = -(var3_intLifetime1 >> 1) + BeveledCheckboxRenderer.field_a;
           PlayingSound.field_n = var3_intLifetime1 + BeveledCheckboxRenderer.field_a - (var3_intLifetime1 >> 1);
-          RenderPresentationException.field_d = RendererPreference.field_a.field_e * (TextLayout.field_b + qc.field_a << 1);
+          RenderPresentationException.field_d = RendererPreference.field_a.itemCount * (TextLayout.field_b + qc.field_a << 1);
           for (var4Lifetime2 = 0; var4Lifetime2 < IntIndexHashTable.field_c.length; var4Lifetime2++) {
             stackIn_116_0 = RenderPresentationException.field_d;
             if (0 <= LegacyOpenGlPostProcessManager.field_a[var4Lifetime2]) {
@@ -456,9 +456,9 @@ final class ScreenNameValidator extends TextInputValidator {
             var5Lifetime3++;
           }
           if (DroneChargeParticle.field_s == 2) {
-            RendererPreference.field_a.a(param0, 84, -1, -1);
+            RendererPreference.field_a.resetSelection(param0, 84, -1, -1);
           } else {
-            RendererPreference.field_a.a(param0, -27, OpenGlAssemblyProgram.b(pi.field_e, 1882601153, ko.field_p), 0);
+            RendererPreference.field_a.resetSelection(param0, -27, OpenGlAssemblyProgram.b(pi.field_e, 1882601153, ko.field_p), 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

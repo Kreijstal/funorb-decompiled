@@ -9,13 +9,13 @@ abstract class r extends DualLinkNode {
         int stackIn_11_0 = 0;
         int[] stackIn_24_0 = null;
         Throwable decompiledCaughtException = null;
-        pl var2 = null;
+        IsaacPacketBuffer var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
-        pl var8 = null;
+        IsaacPacketBuffer var8 = null;
         QuickChatPhrase var9 = null;
         var7 = Sumoblitz.field_L ? 1 : 0;
         var8 = ig.field_a;

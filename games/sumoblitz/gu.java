@@ -58,7 +58,7 @@ final class gu extends ka {
           this.field_c = param2;
           this.field_e = param1;
           if (param3 ||
-            jf.a(this.field_e, (byte) -97, this.field_c)) {
+            ContentTransitionPhase.a(this.field_e, (byte) -97, this.field_c)) {
             this.field_i = new lr(IntrusiveNodeHashTable.a(false, this.field_e, this.field_c));
           }
           if (param3 ||

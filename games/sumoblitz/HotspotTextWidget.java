@@ -76,7 +76,7 @@ class HotspotTextWidget extends InteractiveWidget {
         int var7 = 0;
         byte[] var9 = null;
         ServerDataReadRequest var10 = null;
-        pl var11 = null;
+        IsaacPacketBuffer var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
         var7 = Sumoblitz.field_L ? 1 : 0;

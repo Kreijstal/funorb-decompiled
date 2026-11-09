@@ -162,7 +162,7 @@ final class ArenaPad extends IntrusiveNode {
               this.triggerCooldownTicks = 200;
               this.exploding = true;
               gn.a(3, true);
-              ts.a(this.xQ8, this.effects, -16240, 25, 65535, this.yQ8);
+              QuickChatCommand.a(this.xQ8, this.effects, -16240, 25, 65535, this.yQ8);
             }
             decompiledFrameRemainder7 = !(this.explosionTicksRemaining <= 0);
             if (decompiledFrameRemainder7) {
@@ -197,7 +197,7 @@ final class ArenaPad extends IntrusiveNode {
                   if (12 == OpenGlShaderProgram.levelIndex) {
                     ValidationMessageWidget.field_P = true;
                   }
-                  ts.a(this.xQ8, this.effects, -16240, 25, 65535, this.yQ8);
+                  QuickChatCommand.a(this.xQ8, this.effects, -16240, 25, 65535, this.yQ8);
                   decompiledFrameRemainder7 = (var17 != 0);
                 }
                 if (decompiledFrameRemainder7) {
@@ -224,7 +224,7 @@ final class ArenaPad extends IntrusiveNode {
                   ValidationMessageWidget.field_P = true;
                 }
                 this.triggerCooldownTicks = 200;
-                ts.a(this.xQ8, this.effects, -16240, 25, 65535, this.yQ8);
+                QuickChatCommand.a(this.xQ8, this.effects, -16240, 25, 65535, this.yQ8);
                 decompiledFrameRemainder7 = (var17 != 0);
               }
             }
@@ -290,7 +290,7 @@ final class ArenaPad extends IntrusiveNode {
             }
             if (decompiledFrameCompleted0) {
               gn.a(stackIn_145_0, stackIn_145_1 != 0);
-              ts.a(this.xQ8, this.effects, -16240, 10, 16776960, this.yQ8);
+              QuickChatCommand.a(this.xQ8, this.effects, -16240, 10, 16776960, this.yQ8);
               decompiledFrameRemainder7 = (var17 != 0);
             }
           }

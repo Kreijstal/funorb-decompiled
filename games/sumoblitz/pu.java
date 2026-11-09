@@ -45,8 +45,8 @@ final class pu extends ToolkitSprite {
         this.field_d.a(this.field_j, 95);
         this.field_d.e(blendMode, 13);
         this.field_d.h(59, colorMode);
-        this.field_d.a(mm.CONSTANT, 1, 0);
-        this.field_d.a(mm.CONSTANT, 1, true);
+        this.field_d.a(AccountRequestState.CONSTANT, 1, 0);
+        this.field_d.a(AccountRequestState.CONSTANT, 1, true);
         this.field_d.a(false, color);
         var10.setScale(this.field_j.textureV((float)this.field_l, -19230), this.field_j.textureU((float)this.field_n, -74), 0, 1.0f);
         if (this.field_k) {
@@ -103,8 +103,8 @@ final class pu extends ToolkitSprite {
         this.field_d.a(this.field_j, 109);
         this.field_d.e(blendMode, 13);
         this.field_d.h(104, colorMode);
-        this.field_d.a(mm.CONSTANT, 1, 0);
-        this.field_d.a(mm.CONSTANT, 1, true);
+        this.field_d.a(AccountRequestState.CONSTANT, 1, 0);
+        this.field_d.a(AccountRequestState.CONSTANT, 1, true);
         this.field_d.a(false, color);
         if (this.field_k) {
           var13 = (float)this.paddedWidth();
@@ -168,14 +168,14 @@ final class pu extends ToolkitSprite {
           PasswordInputRenderer.field_u[1] = LegacyOpenGlEffectManager.field_i;
           PasswordInputRenderer.field_u[0] = ResourceArchive.field_f;
           PasswordInputRenderer.field_u[2] = hc.field_f;
-          ok.field_k = -1 + (-1 + PasswordInputRenderer.field_u[1] - 1 + PasswordInputRenderer.field_u[0]) + PasswordInputRenderer.field_u[2];
+          IsaacCipher.field_k = -1 + (-1 + PasswordInputRenderer.field_u[1] - 1 + PasswordInputRenderer.field_u[0]) + PasswordInputRenderer.field_u[2];
           return;
         }
         blastReadyText = (String) null;
         PasswordInputRenderer.field_u[1] = LegacyOpenGlEffectManager.field_i;
         PasswordInputRenderer.field_u[0] = ResourceArchive.field_f;
         PasswordInputRenderer.field_u[2] = hc.field_f;
-        ok.field_k = -1 + (-1 + PasswordInputRenderer.field_u[1] - 1 + PasswordInputRenderer.field_u[0]) + PasswordInputRenderer.field_u[2];
+        IsaacCipher.field_k = -1 + (-1 + PasswordInputRenderer.field_u[1] - 1 + PasswordInputRenderer.field_u[0]) + PasswordInputRenderer.field_u[2];
     }
 
     public static void releaseStatics(int param0) {
@@ -253,8 +253,8 @@ final class pu extends ToolkitSprite {
         this.field_d.a(this.field_j, 93);
         this.field_d.e(blendMode, 13);
         this.field_d.h(92, colorMode);
-        this.field_d.a(mm.CONSTANT, 1, 0);
-        this.field_d.a(mm.CONSTANT, 1, true);
+        this.field_d.a(AccountRequestState.CONSTANT, 1, 0);
+        this.field_d.a(AccountRequestState.CONSTANT, 1, true);
         this.field_d.a(false, color);
         var8.setScale((float)this.field_l, (float)this.field_n, 0, 0.0f);
         var8.translate(y, x, (byte) 120, 0);

@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ok {
-    private int field_a;
-    private int[] field_e;
+final class IsaacCipher {
+    private int counter;
+    private int[] memory;
     static boolean field_b;
     static ToolkitSprite[] field_j;
-    private int[] field_c;
+    private int[] results;
     static int field_k;
     static ToolkitSprite[] field_f;
-    private int field_g;
-    private int field_h;
+    private int remaining;
+    private int lastResult;
     static SpriteData[] field_d;
-    private int field_i;
+    private int accumulator;
 
-    private final void c(byte param0) {
+    private final void initialize(byte guard) {
         int var2 = 0;
         int var11 = Sumoblitz.field_L ? 1 : 0;
         int var3 = -1640531527;
@@ -53,18 +53,18 @@ final class ok {
           var3 = var3 + var4;
           var5 = var5 + var10;
         }
-        if (param0 != -34) {
+        if (guard != -34) {
           return;
         }
         for (var2Lifetime1 = 0; var2Lifetime1 < 256; var2Lifetime1 += 8) {
-          var10 = var10 + this.field_c[7 + var2Lifetime1];
-          var9 = var9 + this.field_c[6 + var2Lifetime1];
-          var5 = var5 + this.field_c[var2Lifetime1 + 2];
-          var3 = var3 + this.field_c[var2Lifetime1];
-          var8 = var8 + this.field_c[var2Lifetime1 + 5];
-          var6 = var6 + this.field_c[var2Lifetime1 + 3];
-          var7 = var7 + this.field_c[var2Lifetime1 + 4];
-          var4 = var4 + this.field_c[var2Lifetime1 + 1];
+          var10 = var10 + this.results[7 + var2Lifetime1];
+          var9 = var9 + this.results[6 + var2Lifetime1];
+          var5 = var5 + this.results[var2Lifetime1 + 2];
+          var3 = var3 + this.results[var2Lifetime1];
+          var8 = var8 + this.results[var2Lifetime1 + 5];
+          var6 = var6 + this.results[var2Lifetime1 + 3];
+          var7 = var7 + this.results[var2Lifetime1 + 4];
+          var4 = var4 + this.results[var2Lifetime1 + 1];
           var3 = var3 ^ var4 << 11;
           var6 = var6 + var3;
           var4 = var4 + var5;
@@ -89,24 +89,24 @@ final class ok {
           var10 = var10 ^ var3 >>> 9;
           var3 = var3 + var4;
           var5 = var5 + var10;
-          this.field_e[var2Lifetime1] = var3;
-          this.field_e[1 + var2Lifetime1] = var4;
-          this.field_e[var2Lifetime1 + 2] = var5;
-          this.field_e[3 + var2Lifetime1] = var6;
-          this.field_e[var2Lifetime1 + 4] = var7;
-          this.field_e[5 + var2Lifetime1] = var8;
-          this.field_e[var2Lifetime1 + 6] = var9;
-          this.field_e[var2Lifetime1 + 7] = var10;
+          this.memory[var2Lifetime1] = var3;
+          this.memory[1 + var2Lifetime1] = var4;
+          this.memory[var2Lifetime1 + 2] = var5;
+          this.memory[3 + var2Lifetime1] = var6;
+          this.memory[var2Lifetime1 + 4] = var7;
+          this.memory[5 + var2Lifetime1] = var8;
+          this.memory[var2Lifetime1 + 6] = var9;
+          this.memory[var2Lifetime1 + 7] = var10;
         }
         for (var2Lifetime2 = 0; 256 > var2Lifetime2; var2Lifetime2 += 8) {
-          var4 = var4 + this.field_e[var2Lifetime2 + 1];
-          var9 = var9 + this.field_e[6 + var2Lifetime2];
-          var3 = var3 + this.field_e[var2Lifetime2];
-          var5 = var5 + this.field_e[2 + var2Lifetime2];
-          var6 = var6 + this.field_e[var2Lifetime2 + 3];
-          var7 = var7 + this.field_e[4 + var2Lifetime2];
-          var8 = var8 + this.field_e[var2Lifetime2 + 5];
-          var10 = var10 + this.field_e[7 + var2Lifetime2];
+          var4 = var4 + this.memory[var2Lifetime2 + 1];
+          var9 = var9 + this.memory[6 + var2Lifetime2];
+          var3 = var3 + this.memory[var2Lifetime2];
+          var5 = var5 + this.memory[2 + var2Lifetime2];
+          var6 = var6 + this.memory[var2Lifetime2 + 3];
+          var7 = var7 + this.memory[4 + var2Lifetime2];
+          var8 = var8 + this.memory[var2Lifetime2 + 5];
+          var10 = var10 + this.memory[7 + var2Lifetime2];
           var3 = var3 ^ var4 << 11;
           var4 = var4 + var5;
           var6 = var6 + var3;
@@ -131,30 +131,30 @@ final class ok {
           var10 = var10 ^ var3 >>> 9;
           var5 = var5 + var10;
           var3 = var3 + var4;
-          this.field_e[var2Lifetime2] = var3;
-          this.field_e[var2Lifetime2 + 1] = var4;
-          this.field_e[2 + var2Lifetime2] = var5;
-          this.field_e[3 + var2Lifetime2] = var6;
-          this.field_e[var2Lifetime2 + 4] = var7;
-          this.field_e[var2Lifetime2 + 5] = var8;
-          this.field_e[6 + var2Lifetime2] = var9;
-          this.field_e[var2Lifetime2 + 7] = var10;
+          this.memory[var2Lifetime2] = var3;
+          this.memory[var2Lifetime2 + 1] = var4;
+          this.memory[2 + var2Lifetime2] = var5;
+          this.memory[3 + var2Lifetime2] = var6;
+          this.memory[var2Lifetime2 + 4] = var7;
+          this.memory[var2Lifetime2 + 5] = var8;
+          this.memory[6 + var2Lifetime2] = var9;
+          this.memory[var2Lifetime2 + 7] = var10;
         }
-        this.a((byte) 87);
-        this.field_g = 256;
+        this.generateBlock((byte) 87);
+        this.remaining = 256;
     }
 
-    final int a(int param0) {
-        if (param0 != 256) {
-          this.c((byte) -25);
+    final int nextInt(int guard) {
+        if (guard != 256) {
+          this.initialize((byte) -25);
         }
-        if (this.field_g == 0) {
-          this.a((byte) -45);
-          this.field_g = 256;
+        if (this.remaining == 0) {
+          this.generateBlock((byte) -45);
+          this.remaining = 256;
         }
-        int fieldTemp$0 = this.field_g - 1;
-        this.field_g = this.field_g - 1;
-        return this.field_c[fieldTemp$0];
+        int fieldTemp$0 = this.remaining - 1;
+        this.remaining = this.remaining - 1;
+        return this.results[fieldTemp$0];
     }
 
     public static void releaseStatics(byte param0) {
@@ -166,7 +166,7 @@ final class ok {
         field_f = null;
     }
 
-    private final void a(byte param0) {
+    private final void generateBlock(byte guard) {
         int var2 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -175,36 +175,36 @@ final class ok {
         int var5;
         int var6;
         var6 = Sumoblitz.field_L ? 1 : 0;
-        var3 = 71 % ((param0 - 17) / 37);
-        int fieldTemp$0 = this.field_a + 1;
-        this.field_a = this.field_a + 1;
-        this.field_h = this.field_h + fieldTemp$0;
+        var3 = 71 % ((guard - 17) / 37);
+        int fieldTemp$0 = this.counter + 1;
+        this.counter = this.counter + 1;
+        this.lastResult = this.lastResult + fieldTemp$0;
         for (var2 = 0; var2 < 256; var2++) {
-          var4 = this.field_e[var2];
+          var4 = this.memory[var2];
           if (0 != (var2 & 2)) {
             if (0 == (1 & var2)) {
-              this.field_i = this.field_i ^ this.field_i << 2;
+              this.accumulator = this.accumulator ^ this.accumulator << 2;
             } else {
-              this.field_i = this.field_i ^ this.field_i >>> 16;
+              this.accumulator = this.accumulator ^ this.accumulator >>> 16;
             }
           } else {
             if ((1 & var2) != 0) {
-              this.field_i = this.field_i ^ this.field_i >>> 6;
+              this.accumulator = this.accumulator ^ this.accumulator >>> 6;
             } else {
-              this.field_i = this.field_i ^ this.field_i << 13;
+              this.accumulator = this.accumulator ^ this.accumulator << 13;
             }
           }
-          this.field_i = this.field_i + this.field_e[var2 + 128 & 255];
-          dupTemp$1 = this.field_i + this.field_e[LegacyOpenGlPostProcessManager.bitwiseAnd(1020, var4) >> 2] + this.field_h;
+          this.accumulator = this.accumulator + this.memory[var2 + 128 & 255];
+          dupTemp$1 = this.accumulator + this.memory[LegacyOpenGlPostProcessManager.bitwiseAnd(1020, var4) >> 2] + this.lastResult;
           var5 = dupTemp$1;
-          this.field_e[var2] = dupTemp$1;
-          dupTemp$2 = var4 + this.field_e[LegacyOpenGlPostProcessManager.bitwiseAnd(255, var5 >> 8 >> 2)];
-          this.field_h = dupTemp$2;
-          this.field_c[var2] = dupTemp$2;
+          this.memory[var2] = dupTemp$1;
+          dupTemp$2 = var4 + this.memory[LegacyOpenGlPostProcessManager.bitwiseAnd(255, var5 >> 8 >> 2)];
+          this.lastResult = dupTemp$2;
+          this.results[var2] = dupTemp$2;
         }
     }
 
-    final static l[] a(int param0, pl param1) {
+    final static l[] a(int param0, IsaacPacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -221,12 +221,12 @@ final class ok {
         RuntimeException decompiledCaughtException = null;
         var7 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var2_int = param1.b(8, (byte) -97);
+          var2_int = param1.readBits(8, (byte) -97);
           if (var2_int > 0) {
             stackIn_3_0 = null;
             return (l[]) (stackIn_3_0);
           }
-          var3 = param1.b(12, (byte) -115);
+          var3 = param1.readBits(12, (byte) -115);
           var4 = new l[var3];
           var5 = 0;
           if (param0 > -74) {
@@ -234,17 +234,17 @@ final class ok {
           }
           while (var3 > var5) {
             if (!kh.a(param1, false)) {
-              var6 = param1.b(DirectByteArrayStorage.c(-1 + var5, 1), (byte) -123);
+              var6 = param1.readBits(DirectByteArrayStorage.c(-1 + var5, 1), (byte) -123);
               var4[var5] = var4[var6];
             } else {
               var6_ref_l = new l();
-              param1.b(24, (byte) -89);
-              param1.b(24, (byte) -117);
-              var6_ref_l.field_b = param1.b(24, (byte) -119);
-              param1.b(9, (byte) -119);
-              param1.b(12, (byte) -101);
-              param1.b(12, (byte) -125);
-              param1.b(12, (byte) -93);
+              param1.readBits(24, (byte) -89);
+              param1.readBits(24, (byte) -117);
+              var6_ref_l.field_b = param1.readBits(24, (byte) -119);
+              param1.readBits(9, (byte) -119);
+              param1.readBits(12, (byte) -101);
+              param1.readBits(12, (byte) -125);
+              param1.readBits(12, (byte) -93);
               var4[var5] = var6_ref_l;
             }
             var5++;
@@ -371,17 +371,17 @@ final class ok {
         }
     }
 
-    ok(int[] param0) {
+    IsaacCipher(int[] seed) {
         int var2_int = 0;
         try {
-          this.field_c = new int[256];
-          this.field_e = new int[256];
-          for (var2_int = 0; param0.length > var2_int; var2_int++) {
-            this.field_c[var2_int] = param0[var2_int];
+          this.results = new int[256];
+          this.memory = new int[256];
+          for (var2_int = 0; seed.length > var2_int; var2_int++) {
+            this.results[var2_int] = seed[var2_int];
           }
-          this.c((byte) -34);
+          this.initialize((byte) -34);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ok.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ok.<init>(" + (seed != null ? "{...}" : "null") + ')');
         }
     }
 

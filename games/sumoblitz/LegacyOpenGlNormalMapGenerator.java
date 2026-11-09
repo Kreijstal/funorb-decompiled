@@ -146,17 +146,17 @@ final class LegacyOpenGlNormalMapGenerator {
         int var2 = 0;
         int[] var3 = null;
         int[] var4 = null;
-        pl var5 = null;
+        IsaacPacketBuffer var5 = null;
         int var6 = 0;
         int var8 = 0;
         int[] var10 = null;
         int[] var11 = null;
-        hg var12 = null;
-        pl var13 = null;
-        eg var14 = null;
+        GameProgressUpdate var12 = null;
+        IsaacPacketBuffer var13 = null;
+        ServerIntArrayRequest var14 = null;
         int[] var15 = null;
         Object var16 = null;
-        eg var16_ref = null;
+        ServerIntArrayRequest var16_ref = null;
         int[] var17 = null;
         var16 = null;
         var8 = Sumoblitz.field_L ? 1 : 0;
@@ -178,34 +178,34 @@ final class LegacyOpenGlNormalMapGenerator {
             for (var7 = 0; var7 < var6; var7++) {
               var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(true);
             }
-            var16_ref = (eg) (CheckboxWidget.field_E.first(-120));
+            var16_ref = (ServerIntArrayRequest) (CheckboxWidget.field_E.first(-120));
             if (var16_ref == null) {
               kk.a((byte) -111);
               return;
             }
-            var16_ref.field_o = true;
-            var16_ref.field_k = var17[0];
-            var16_ref.field_m = var3;
+            var16_ref.complete = true;
+            var16_ref.firstValue = var17[0];
+            var16_ref.values = var3;
             var16_ref.unlink(false);
             return;
           }
           if (var2 != 1) {
             if (var2 == 2) {
-              var14 = (eg) (CheckboxWidget.field_E.first(123));
+              var14 = (ServerIntArrayRequest) (CheckboxWidget.field_E.first(123));
               if (var14 == null) {
                 kk.a((byte) -122);
                 return;
               }
-              var14.field_m = lr.a(-14808);
-              var14.field_o = true;
-              var14.field_k = var14.field_m[0];
+              var14.values = lr.a(-14808);
+              var14.complete = true;
+              var14.firstValue = var14.values[0];
               var14.unlink(false);
             } else {
               IntrusiveNode.reportClientError("A1: " + VictoryScreen.b((byte) 110), (Throwable) null, 0);
               kk.a((byte) -120);
             }
           } else {
-            var12 = (hg) (SoftwareRenderTarget.field_f.first(param0 + 29968));
+            var12 = (GameProgressUpdate) (SoftwareRenderTarget.field_f.first(param0 + 29968));
             if (var12 == null) {
               kk.a((byte) -113);
               return;

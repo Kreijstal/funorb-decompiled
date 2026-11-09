@@ -39,7 +39,7 @@ class TimedSceneEffect extends IntrusiveNode {
           if (null == DisplayModeConfirmationDialog.field_O) {
             return false;
           }
-          if (kw.field_c == LegacyOpenGlUnderwaterEffect.field_j) {
+          if (kw.accountPhase == LegacyOpenGlUnderwaterEffect.CONNECTED) {
             return true;
           }
           return false;
@@ -47,7 +47,7 @@ class TimedSceneEffect extends IntrusiveNode {
         if (null == DisplayModeConfirmationDialog.field_O) {
           return false;
         }
-        if (kw.field_c == LegacyOpenGlUnderwaterEffect.field_j) {
+        if (kw.accountPhase == LegacyOpenGlUnderwaterEffect.CONNECTED) {
           return true;
         }
         return false;

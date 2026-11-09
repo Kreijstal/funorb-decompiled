@@ -17,15 +17,15 @@ final class km extends IntrusiveNode {
     }
 
     final static void a(byte param0, int param1, id param2) {
-        pl var8 = null;
-        pl var9 = null;
+        IsaacPacketBuffer var8 = null;
+        IsaacPacketBuffer var9 = null;
         int var4 = 0;
         int var6 = 0;
         int var7 = Sumoblitz.field_L ? 1 : 0;
         try {
           var8 = InwardSparkParticle.field_v;
           var9 = var8;
-          var9.g(param1, 8);
+          var9.writeCipherByte(param1, 8);
           var9.position = var9.position + 1;
           var4 = var9.position;
           var9.writeByte((byte) 55, 1);

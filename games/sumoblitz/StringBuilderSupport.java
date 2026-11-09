@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lb {
+final class StringBuilderSupport {
     static String[] yesNoLabels;
     static int field_b;
     static long field_a;
@@ -13,7 +13,7 @@ final class lb {
         }
     }
 
-    final static StringBuilder a(StringBuilder param0, int param1, char param2, int param3) {
+    final static StringBuilder setLength(StringBuilder builder, int guard, char fill, int length) {
         int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -25,27 +25,27 @@ final class lb {
         RuntimeException decompiledCaughtException = null;
         var6 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var4_int = param0.length();
-          param0.setLength(param3);
-          for (var5 = var4_int; var5 < param3; var5++) {
-            param0.setCharAt(var5, param2);
+          var4_int = builder.length();
+          builder.setLength(length);
+          for (var5 = var4_int; var5 < length; var5++) {
+            builder.setCharAt(var5, fill);
           }
-          if (param1 != 60) {
+          if (guard != 60) {
             field_b = 53;
           }
-          stackIn_7_0 = (StringBuilder) (param0);
+          stackIn_7_0 = (StringBuilder) (builder);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_10_0 = var4;
           stackIn_10_1 = new StringBuilder().append("lb.A(");
-          if (param0 == null) {
+          if (builder == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(guard).append(',').append(fill).append(',').append(length).append(')').toString());
         }
     }
 

@@ -4,7 +4,7 @@
 import java.util.*;
 
 class WidgetContainer extends UiWidget implements CompositeWidgetMarker {
-    static qr field_z;
+    static AccountConnectionPhase WAIT_LOGIN_ERROR;
     static int[] field_x;
     IntrusiveDeque children;
 
@@ -328,7 +328,7 @@ class WidgetContainer extends UiWidget implements CompositeWidgetMarker {
           if (guard < -42) {
             return false;
           }
-          field_z = (qr) null;
+          WAIT_LOGIN_ERROR = (AccountConnectionPhase) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -348,7 +348,7 @@ class WidgetContainer extends UiWidget implements CompositeWidgetMarker {
         if (!param0) {
           field_x = (int[]) null;
         }
-        field_z = null;
+        WAIT_LOGIN_ERROR = null;
         field_x = null;
     }
 
@@ -481,7 +481,7 @@ class WidgetContainer extends UiWidget implements CompositeWidgetMarker {
 
     boolean hasFocus(int guard) {
         if (guard != -1) {
-          field_z = (qr) null;
+          WAIT_LOGIN_ERROR = (AccountConnectionPhase) null;
         }
         return null != this.focusedChild(55) ? true : false;
     }
@@ -586,6 +586,6 @@ class WidgetContainer extends UiWidget implements CompositeWidgetMarker {
 
     static {
         field_x = new int[]{0, 4, 6, 8, 12, 16, 18, 20, 24};
-        field_z = new qr();
+        WAIT_LOGIN_ERROR = new AccountConnectionPhase();
     }
 }

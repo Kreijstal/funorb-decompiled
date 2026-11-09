@@ -60,9 +60,9 @@ final class DropDownLabelRenderer implements WidgetRenderer {
         if (!guard) {
           field_b = false;
         }
-        RasterIndexedSprite[] var1 = new RasterIndexedSprite[rl.field_n];
-        for (var2 = 0; var2 < rl.field_n; var2++) {
-          var1[var2] = new RasterIndexedSprite(vf.field_d, ToolkitImageProducerBuffer.field_u, er.field_h[var2], StrongCacheReference.field_C[var2], CheckboxRenderer.field_k[var2], ScrollViewport.field_B[var2], TextLayout.field_d[var2], LegacyOpenGlEffectManager.field_l);
+        RasterIndexedSprite[] var1 = new RasterIndexedSprite[RasterStateFrame.field_n];
+        for (var2 = 0; var2 < RasterStateFrame.field_n; var2++) {
+          var1[var2] = new RasterIndexedSprite(vf.field_d, ToolkitImageProducerBuffer.field_u, MenuSelectionController.field_h[var2], StrongCacheReference.field_C[var2], CheckboxRenderer.field_k[var2], ScrollViewport.field_B[var2], TextLayout.field_d[var2], LegacyOpenGlEffectManager.field_l);
         }
         PowerupPickup.releaseSpriteDecoderArrays((byte) -68);
         return var1;

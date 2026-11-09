@@ -53,7 +53,7 @@ final class DirectXVertexBuffer implements VertexBuffer {
 
     public final void close(int guard) {
         if (null != this.buffer) {
-          this.buffer.a(guard ^ -30320);
+          this.buffer.release(guard ^ -30320);
           this.buffer = null;
           this.sizeBytes = 0;
           this.capacityBytes = 0;
@@ -99,7 +99,7 @@ final class DirectXVertexBuffer implements VertexBuffer {
           stackIn_11_0 = (this.buffer != null);
           return stackIn_11_0;
         }
-        this.buffer.a(-22671);
+        this.buffer.release(-22671);
         this.buffer = this.toolkit.field_Cc.a(this.sizeBytes, var5, 0, var4, this.buffer);
         this.capacityBytes = this.sizeBytes;
         stackIn_15_0 = (this.buffer != null);

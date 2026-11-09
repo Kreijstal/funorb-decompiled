@@ -663,7 +663,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
                     if (var13.charAt(0) == 120 &&
                       3 <= var13.length()) {
                       var21 = (CharSequence) ((Object) var13.substring(1, 3));
-                      if (jf.a(-13181, var21)) {
+                      if (ContentTransitionPhase.a(-13181, var21)) {
                         var7 = 1;
                         var10 = var13.substring(1);
                       }
@@ -677,7 +677,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
                       }
                       if (4 <= var10.length()) {
                         var22 = (CharSequence) ((Object) var10.substring(0, 4));
-                        if (jf.a(-13181, var22)) {
+                        if (ContentTransitionPhase.a(-13181, var22)) {
                           var23 = (CharSequence) ((Object) var10.substring(0, 4));
                           var5_int = no.a((byte) -128, var23);
                           decompiledRegionSelector0 = 1;

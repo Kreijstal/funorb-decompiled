@@ -21,7 +21,7 @@ final class dn {
           if (!DropDownListWidget.field_H.loadIndex((byte) 127)) {
             return LegacyOpenGlTexture3D.field_k;
           }
-          return mm.field_c;
+          return AccountRequestState.field_c;
         }
         if (!EmailCredentials.field_j.loadIndex((byte) 127)) {
           return ProgressDialog.waitingForGraphicsText;
@@ -36,7 +36,7 @@ final class dn {
           return ToolkitRasterBuffer.waitingForFontsText;
         }
         if (!LegacyOpenGlPostProcessManager.field_f.tryLoadNamedGroup("commonui", 100)) {
-          return ow.loadingFontsText + " - " + LegacyOpenGlPostProcessManager.field_f.namedGroupLoadPercent("commonui", (byte) 33) + "%";
+          return HuffmanDecoder.loadingFontsText + " - " + LegacyOpenGlPostProcessManager.field_f.namedGroupLoadPercent("commonui", (byte) 33) + "%";
         }
         if (!hw.field_a.loadIndex((byte) 127)) {
           return StatefulWidgetRenderer.waitingForExtraDataText;
@@ -44,7 +44,7 @@ final class dn {
         if (!hw.field_a.tryLoadAllGroups(true)) {
           return ReflectionCheck.loadingExtraDataText + " - " + hw.field_a.loadPercent(0) + "%";
         }
-        return mm.pleaseWaitText;
+        return AccountRequestState.pleaseWaitText;
     }
 
     static {

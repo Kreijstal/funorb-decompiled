@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class RenderPresentationException extends Exception {
-    static ts field_e;
+    static QuickChatCommand field_e;
     static String[] field_b;
     static String menuText;
     static DialogLayer field_a;
@@ -66,7 +66,7 @@ final class RenderPresentationException extends Exception {
     }
 
     static {
-        field_e = new ts(8, 0, 4, 1);
+        field_e = new QuickChatCommand(8, 0, 4, 1);
         menuText = "Menu";
         field_b = new String[255];
     }

@@ -4,16 +4,16 @@
 package jaclib.peer;
 
 abstract class PeerReference extends java.lang.ref.WeakReference {
-    jaclib.peer.PeerReference a;
+    jaclib.peer.PeerReference previous;
     private long peer;
-    jaclib.peer.PeerReference b;
+    jaclib.peer.PeerReference next;
 
     protected abstract long releasePeer(long param0);
 
-    final long a(int param0) {
+    final long release(int guard) {
         long var2 = 0L;
         long var2Lifetime1;
-        if (param0 == 0) {
+        if (guard == 0) {
           if (this.peer != 0L) {
             var2 = this.releasePeer(this.peer);
             this.peer = 0L;
@@ -22,7 +22,7 @@ abstract class PeerReference extends java.lang.ref.WeakReference {
           }
           return var2;
         }
-        this.a(-109);
+        this.release(-109);
         if (this.peer != 0L) {
           var2Lifetime1 = this.releasePeer(this.peer);
           this.peer = 0L;
@@ -33,12 +33,12 @@ abstract class PeerReference extends java.lang.ref.WeakReference {
     }
 
     final void setPeer(long param0) {
-        this.a(0);
+        this.release(0);
         this.peer = param0;
     }
 
-    PeerReference(jaclib.peer.Peer param0, jaclib.peer.pf param1) {
-        super(param0, param1.a);
-        param1.a(this, -13587);
+    PeerReference(jaclib.peer.Peer owner, jaclib.peer.PeerReferenceManager manager) {
+        super(owner, manager.queue);
+        manager.add(this, -13587);
     }
 }

@@ -3,14 +3,14 @@
  */
 final class DropDownArrowRenderer implements WidgetRenderer {
     static String ageText;
-    static qr field_b;
+    static AccountConnectionPhase WAIT_ACCOUNT_DETAILS;
 
     public static void releaseStatics(byte param0) {
         if (param0 >= -100) {
           DropDownArrowRenderer.releaseStatics((byte) -19);
         }
         ageText = null;
-        field_b = null;
+        WAIT_ACCOUNT_DETAILS = null;
     }
 
     public final void renderWidget(UiWidget widget, int parentY, int guard, boolean isEnabled, int parentX) {
@@ -69,6 +69,6 @@ final class DropDownArrowRenderer implements WidgetRenderer {
 
     static {
         ageText = "Age:";
-        field_b = new qr();
+        WAIT_ACCOUNT_DETAILS = new AccountConnectionPhase();
     }
 }

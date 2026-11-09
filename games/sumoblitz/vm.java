@@ -3,7 +3,7 @@
  */
 final class vm {
     static char[] field_b;
-    static mm field_c;
+    static AccountRequestState nameAvailabilityState;
     static ToolkitSprite[] field_a;
 
     final static int a(int param0) {
@@ -15,7 +15,7 @@ final class vm {
     }
 
     public static void releaseStatics(byte param0) {
-        field_c = null;
+        nameAvailabilityState = null;
         if (param0 < 101) {
           field_b = (char[]) null;
           field_b = null;

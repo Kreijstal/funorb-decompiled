@@ -37,7 +37,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         this.toolkit.g(1, guard - 20312);
         this.toolkit.a(this.field_i, guard - 20076);
         this.toolkit.a((byte) -83, lf.REPLACE, OpenGlBuffer.INTERPOLATE);
-        this.toolkit.a(mm.CONSTANT, 0, guard ^ guard);
+        this.toolkit.a(AccountRequestState.CONSTANT, 0, guard ^ guard);
         this.toolkit.setColorCombineSource((byte) 89, 2, true, false, jq.TEXTURE);
         this.toolkit.a(FontMetrics.PREVIOUS, 0, true);
         this.toolkit.g(0, guard - 20311);
@@ -51,7 +51,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         this.toolkit.a(jq.TEXTURE, 0, 0);
         if (guard) {
           this.setParameters(-69, 14, -105);
-          this.toolkit.a(mm.CONSTANT, 2, 0);
+          this.toolkit.a(AccountRequestState.CONSTANT, 2, 0);
           this.toolkit.a(jq.TEXTURE, 0, true);
           this.toolkit.g(0, -109);
           if (!this.field_e) {
@@ -72,7 +72,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
           }
           return;
         }
-        this.toolkit.a(mm.CONSTANT, 2, 0);
+        this.toolkit.a(AccountRequestState.CONSTANT, 2, 0);
         this.toolkit.a(jq.TEXTURE, 0, true);
         this.toolkit.g(0, -109);
         if (this.field_e) {

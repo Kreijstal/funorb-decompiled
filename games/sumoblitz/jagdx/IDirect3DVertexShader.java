@@ -4,7 +4,7 @@
 package jagdx;
 
 public class IDirect3DVertexShader extends jaclib.peer.IUnknown {
-    IDirect3DVertexShader(jaclib.peer.pf param0) {
+    IDirect3DVertexShader(jaclib.peer.PeerReferenceManager param0) {
         super(param0);
     }
 }

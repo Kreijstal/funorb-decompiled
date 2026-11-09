@@ -33,7 +33,7 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
         if (progress) {
           var4++;
         }
-        return pl.field_r[var4];
+        return IsaacPacketBuffer.field_r[var4];
     }
 
     StatefulWidgetRenderer(StatefulWidgetRenderer source, boolean deepCopy) {
@@ -166,7 +166,7 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
             }
             return;
           }
-          la.a(this.stateStyles, 0, destination.stateStyles, 0, 6);
+          ArrayUtils.copy(this.stateStyles, 0, destination.stateStyles, 0, 6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

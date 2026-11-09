@@ -53,7 +53,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           if (param0 != -1203350004) {
             SecondaryNodeDequeIterator.releaseStatics(86);
           }
-          if (ts.field_c != param2) {
+          if (QuickChatCommand.field_c != param2) {
             if (ws.field_b != param2) {
               SpriteOptionRenderer.field_o = new int[param2];
               var5 = 0;
@@ -65,7 +65,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
             } else {
               SpriteOptionRenderer.field_o = MouseInputRegistration.field_b;
             }
-            ts.field_c = param2;
+            QuickChatCommand.field_c = param2;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

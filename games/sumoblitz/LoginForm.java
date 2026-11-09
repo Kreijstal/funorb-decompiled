@@ -187,7 +187,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Widg
             if (!this.field_J) {
               this.field_N.renderer = (WidgetRenderer) ((Object) new LinkWidgetRenderer());
             } else {
-              this.field_N.tooltip = hg.playTheGameWithoutText;
+              this.field_N.tooltip = GameProgressUpdate.playTheGameWithoutText;
               this.field_N.renderer = (WidgetRenderer) ((Object) new LinkWidgetRenderer());
             }
           }
@@ -203,7 +203,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Widg
               var8 = ph.usernameText;
             }
           } else {
-            var8 = ow.emailText;
+            var8 = HuffmanDecoder.emailText;
           }
           dupTemp$0 = new LabeledWidget(10, this.y, this.width - 20, 25, this.field_H, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;

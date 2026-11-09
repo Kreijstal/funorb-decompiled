@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class er {
+final class MenuSelectionController {
     static int[] field_h;
-    private int field_i;
-    private int field_d;
-    int field_e;
-    private boolean field_f;
+    private int repeatDelay;
+    private int heldButton;
+    int itemCount;
+    private boolean mouseMode;
     static ResourceArchive field_c;
-    private int field_a;
-    private int field_b;
-    int field_g;
+    private int pressedButton;
+    private int keyCode;
+    int selectedIndex;
 
     final static void createRendererAssets(boolean guard) {
         GraphicsToolkit var2 = MatchingTextValidator.field_h.getToolkit(-117);
         LegacyOpenGlEffect.field_c = var2.createFont(SocketConnector.field_a, SecondaryNodeHashTable.field_g, true);
         MessageDialog.field_db = var2.createFont(VertexStreamLayout.field_c, mn.field_b, true);
-        uq.field_a = var2.createFont(qr.field_a, OpenGlTransparentWaterEffect.field_i, true);
+        uq.field_a = var2.createFont(AccountConnectionPhase.field_a, OpenGlTransparentWaterEffect.field_i, true);
         qv.field_k = var2.createFont(sv.field_a, LegacyOpenGlReflectionEffect.field_j, true);
         hc.field_e = var2.createFont(ma.field_b, DropDownWidget.field_F, true);
         ForceFieldRingEffect.field_t = var2.createFont(sq.field_b, ProxySocketConnector.field_f, true);
@@ -32,14 +32,14 @@ final class er {
         vm.field_a = DroneDebris.createToolkitSprites(TextLayoutLine.field_c, var2, 28513);
         HudMessage.field_s = DroneDebris.createToolkitSprites(jj.field_c, var2, 28513);
         SpriteState.field_B = DroneDebris.createToolkitSprites(ResourceRequest.field_r, var2, 28513);
-        SecondaryNodeDequeIterator.field_a = DroneDebris.createToolkitSprites(ok.field_d, var2, 28513);
+        SecondaryNodeDequeIterator.field_a = DroneDebris.createToolkitSprites(IsaacCipher.field_d, var2, 28513);
         IntrusiveDeque.field_c = DroneDebris.createToolkitSprites(ProxyAuthenticationRequiredException.field_a, var2, 28513);
-        ok.field_j = DroneDebris.createToolkitSprites(WaterTextureResources.field_c, var2, 28513);
+        IsaacCipher.field_j = DroneDebris.createToolkitSprites(WaterTextureResources.field_c, var2, 28513);
         LegacyOpenGlTexture1D.field_k = DroneDebris.createToolkitSprites(LegacyOpenGlFloatPostProcessEffect.field_o, var2, 28513);
         LegacyOpenGlSpriteMask.field_e = ResizingDialog.a(var2, IntrusiveDequeCursor.field_e, (byte) -11);
         HudMessage.field_m = ResizingDialog.a(var2, LegacyOpenGlPostProcessEffect.field_k, (byte) -11);
         bt.field_e = ResizingDialog.a(var2, BufferedSocket.field_n, (byte) -11);
-        LegacyOpenGlTexture.field_e = DroneDebris.createToolkitSprites(rl.field_l, var2, 28513);
+        LegacyOpenGlTexture.field_e = DroneDebris.createToolkitSprites(RasterStateFrame.field_l, var2, 28513);
         ContentDialog.field_ab = DroneDebris.createToolkitSprites(kk.field_e, var2, 28513);
         hv.field_d = DroneDebris.createToolkitSprites(HardwareTurbulentWaterNoise.field_w, var2, 28513);
         TextHotspot.field_n = DroneDebris.createToolkitSprites(StatefulWidgetRenderer.field_r, var2, 28513);
@@ -47,7 +47,7 @@ final class er {
         HardwareTextureCache.field_e = DroneDebris.createToolkitSprites(DisplayModeConfirmationDialog.field_V, var2, 28513);
         if (guard) {
           field_c = (ResourceArchive) null;
-          ts.field_e = DroneDebris.createToolkitSprites(ph.field_a, var2, 28513);
+          QuickChatCommand.field_e = DroneDebris.createToolkitSprites(ph.field_a, var2, 28513);
           ProxyAuthenticationRequiredException.field_e = DroneDebris.createToolkitSprites(CachedTextLayout.field_h, var2, 28513);
           HardwareRidgedWaterNoise.field_A = DroneDebris.createToolkitSprites(RendererSession.field_b, var2, 28513);
           up.field_e = DroneDebris.createToolkitSprites(cd.field_c, var2, 28513);
@@ -74,7 +74,7 @@ final class er {
           kw.field_a = ResizingDialog.a(var2, UnderageAccountInfoPanel.field_C, (byte) -11);
           OpenGlIndexBuffer.field_p = DroneDebris.createToolkitSprites(MouseInputHandler.field_b, var2, 28513);
           RidgedNoise3D.field_w = DroneDebris.createToolkitSprites(SoftLruCache.field_a, var2, 28513);
-          ok.field_f = DroneDebris.createToolkitSprites(LegacyOpenGlCubeTexture.field_n, var2, 28513);
+          IsaacCipher.field_f = DroneDebris.createToolkitSprites(LegacyOpenGlCubeTexture.field_n, var2, 28513);
           TurbulenceNoise3D.field_k = DroneDebris.createToolkitSprites(FallbackShaderEffect.field_h, var2, 28513);
           ResizingDialog.a(var2, ArchiveCatalog.field_f, (byte) -11);
           ResizingDialog.a(var2, MusicVoice.field_o, (byte) -11);
@@ -90,13 +90,13 @@ final class er {
           HardwareSpecularEffect.field_f = DroneDebris.createToolkitSprites(ke.field_c, var2, 28513);
           OpenGlUnderwaterEffect.field_t = ResizingDialog.a(var2, PasswordValidator.field_i, (byte) -11);
           LegacyOpenGlSpriteTexture.field_r = DroneDebris.createToolkitSprites(hc.field_a, var2, 28513);
-          vl.field_c = ResizingDialog.a(var2, rl.field_o, (byte) -11);
+          vl.field_c = ResizingDialog.a(var2, RasterStateFrame.field_o, (byte) -11);
           wo.field_b = new ToolkitSprite[]{mn.field_j, PlayingSound.field_l, hv.field_b};
           PasswordValidator.field_j = new ToolkitSprite[]{AccountServiceResult.field_f, TextureMetadata.field_a, DirectByteArrayStorage.field_d};
           Sumoblitz.field_J = DroneDebris.createToolkitSprites(pq.field_F, var2, 28513);
           return;
         }
-        ts.field_e = DroneDebris.createToolkitSprites(ph.field_a, var2, 28513);
+        QuickChatCommand.field_e = DroneDebris.createToolkitSprites(ph.field_a, var2, 28513);
         ProxyAuthenticationRequiredException.field_e = DroneDebris.createToolkitSprites(CachedTextLayout.field_h, var2, 28513);
         HardwareRidgedWaterNoise.field_A = DroneDebris.createToolkitSprites(RendererSession.field_b, var2, 28513);
         up.field_e = DroneDebris.createToolkitSprites(cd.field_c, var2, 28513);
@@ -123,7 +123,7 @@ final class er {
         kw.field_a = ResizingDialog.a(var2, UnderageAccountInfoPanel.field_C, (byte) -11);
         OpenGlIndexBuffer.field_p = DroneDebris.createToolkitSprites(MouseInputHandler.field_b, var2, 28513);
         RidgedNoise3D.field_w = DroneDebris.createToolkitSprites(SoftLruCache.field_a, var2, 28513);
-        ok.field_f = DroneDebris.createToolkitSprites(LegacyOpenGlCubeTexture.field_n, var2, 28513);
+        IsaacCipher.field_f = DroneDebris.createToolkitSprites(LegacyOpenGlCubeTexture.field_n, var2, 28513);
         TurbulenceNoise3D.field_k = DroneDebris.createToolkitSprites(FallbackShaderEffect.field_h, var2, 28513);
         ResizingDialog.a(var2, ArchiveCatalog.field_f, (byte) -11);
         ResizingDialog.a(var2, MusicVoice.field_o, (byte) -11);
@@ -139,29 +139,29 @@ final class er {
         HardwareSpecularEffect.field_f = DroneDebris.createToolkitSprites(ke.field_c, var2, 28513);
         OpenGlUnderwaterEffect.field_t = ResizingDialog.a(var2, PasswordValidator.field_i, (byte) -11);
         LegacyOpenGlSpriteTexture.field_r = DroneDebris.createToolkitSprites(hc.field_a, var2, 28513);
-        vl.field_c = ResizingDialog.a(var2, rl.field_o, (byte) -11);
+        vl.field_c = ResizingDialog.a(var2, RasterStateFrame.field_o, (byte) -11);
         wo.field_b = new ToolkitSprite[]{mn.field_j, PlayingSound.field_l, hv.field_b};
         PasswordValidator.field_j = new ToolkitSprite[]{AccountServiceResult.field_f, TextureMetadata.field_a, DirectByteArrayStorage.field_d};
         Sumoblitz.field_J = DroneDebris.createToolkitSprites(pq.field_F, var2, 28513);
     }
 
-    final boolean d(int param0) {
-        if (param0 != -31260) {
+    final boolean isActivated(int guard) {
+        if (guard != -31260) {
           return false;
         }
-        if (this.field_a != 0) {
+        if (this.pressedButton != 0) {
           return true;
         }
-        if (this.field_b == 84) {
+        if (this.keyCode == 84) {
           return true;
         }
-        if (this.field_b != 83) {
+        if (this.keyCode != 83) {
           return false;
         }
         return true;
     }
 
-    final static void c(byte param0) {
+    final static void updateDroneBoundaryAndDestruction(byte guard) {
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
@@ -174,7 +174,7 @@ final class er {
         Drone var4Lifetime2;
         var6 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var1_int = -63 / ((-56 - param0) / 60);
+          var1_int = -63 / ((-56 - guard) / 60);
           if (null != SpriteMask.drones) {
             for (var2 = 0; ServerDataWriteRequest.droneSlotLimit > var2; var2++) {
               var3 = SpriteMask.drones[var2];
@@ -228,133 +228,133 @@ final class er {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "er.K(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "er.K(" + guard + ')');
         }
     }
 
-    final boolean b(int param0) {
-        if (param0 == 103) {
-          return this.field_b == 103 ? true : false;
+    final boolean isEndPressed(int guard) {
+        if (guard == 103) {
+          return this.keyCode == 103 ? true : false;
         }
-        this.field_g = -121;
-        return this.field_b == 103 ? true : false;
+        this.selectedIndex = -121;
+        return this.keyCode == 103 ? true : false;
     }
 
-    final void a(boolean param0, int param1, int param2, int param3) {
-        int var5 = 25 / ((12 - param1) / 34);
-        this.field_d = 0;
-        this.field_f = param0 ? true : false;
-        if (!this.field_f) {
-          this.field_g = param3;
+    final void resetSelection(boolean mouseMode, int guard, int mouseIndex, int keyboardIndex) {
+        int var5 = 25 / ((12 - guard) / 34);
+        this.heldButton = 0;
+        this.mouseMode = mouseMode ? true : false;
+        if (!this.mouseMode) {
+          this.selectedIndex = keyboardIndex;
           return;
         }
-        this.field_g = param2;
+        this.selectedIndex = mouseIndex;
     }
 
-    final boolean g(int param0) {
-        if (param0 == 116224) {
-          return this.field_b == 97 ? true : false;
+    final boolean isRightPressed(int guard) {
+        if (guard == 116224) {
+          return this.keyCode == 97 ? true : false;
         }
         field_h = (int[]) null;
-        return this.field_b == 97 ? true : false;
+        return this.keyCode == 97 ? true : false;
     }
 
-    final boolean b(byte param0) {
-        if (param0 == 52) {
-          return this.field_d != 0 ? true : false;
+    final boolean isPointerHeld(byte guard) {
+        if (guard == 52) {
+          return this.heldButton != 0 ? true : false;
         }
-        this.a((byte) 47);
-        return this.field_d != 0 ? true : false;
+        this.handleVerticalNavigation((byte) 47);
+        return this.heldButton != 0 ? true : false;
     }
 
-    final boolean e(int param0) {
-        if (param0 != 2542) {
+    final boolean isLeftPressed(int guard) {
+        if (guard != 2542) {
           return false;
         }
-        return this.field_b == 96 ? true : false;
+        return this.keyCode == 96 ? true : false;
     }
 
-    final void a(int param0, int param1) {
-        if (this.field_d == 0) {
-          this.field_g = param1;
-          this.field_f = false;
-          if (param0 != -31865) {
-            this.a(-89);
+    final void setKeyboardSelection(int guard, int index) {
+        if (this.heldButton == 0) {
+          this.selectedIndex = index;
+          this.mouseMode = false;
+          if (guard != -31865) {
+            this.handleHorizontalNavigation(-89);
             return;
           }
           return;
         }
-        if (param0 == -31865) {
+        if (guard == -31865) {
           return;
         }
-        this.a(-89);
+        this.handleHorizontalNavigation(-89);
     }
 
-    final void a(byte param0) {
-        this.field_b = 0;
-        if (param0 < 28) {
-          this.d(-107);
+    final void handleVerticalNavigation(byte guard) {
+        this.keyCode = 0;
+        if (guard < 28) {
+          this.isActivated(-107);
         }
-        this.field_a = 0;
-        if (this.field_d == 0 &&
+        this.pressedButton = 0;
+        if (this.heldButton == 0 &&
           TextureCombineOperation.field_a == 98) {
-          if (this.field_g <= 0) {
-            this.field_g = this.field_e;
+          if (this.selectedIndex <= 0) {
+            this.selectedIndex = this.itemCount;
           }
-          this.field_g = this.field_g - 1;
-          this.field_f = false;
+          this.selectedIndex = this.selectedIndex - 1;
+          this.mouseMode = false;
         }
-        if (0 == this.field_d) {
-          this.field_b = TextureCombineOperation.field_a;
+        if (0 == this.heldButton) {
+          this.keyCode = TextureCombineOperation.field_a;
         }
-        if (this.field_d != 0) {
+        if (this.heldButton != 0) {
           return;
         }
         if (99 != TextureCombineOperation.field_a) {
           return;
         }
-        this.field_g = this.field_g + 1;
-        if (this.field_g >= this.field_e) {
-          this.field_g = 0;
+        this.selectedIndex = this.selectedIndex + 1;
+        if (this.selectedIndex >= this.itemCount) {
+          this.selectedIndex = 0;
         }
-        this.field_f = false;
+        this.mouseMode = false;
     }
 
-    final void a(int param0) {
-        this.field_a = 0;
-        this.field_b = 0;
-        if (this.field_d == 0) {
-          this.field_b = TextureCombineOperation.field_a;
+    final void handleHorizontalNavigation(int guard) {
+        this.pressedButton = 0;
+        this.keyCode = 0;
+        if (this.heldButton == 0) {
+          this.keyCode = TextureCombineOperation.field_a;
         }
-        if (param0 > -18) {
-          this.a(-114, -72);
+        if (guard > -18) {
+          this.setKeyboardSelection(-114, -72);
         }
-        if (this.field_d == 0 &&
+        if (this.heldButton == 0 &&
           TextureCombineOperation.field_a == 96) {
-          if (this.field_g <= 0) {
-            this.field_g = this.field_e;
+          if (this.selectedIndex <= 0) {
+            this.selectedIndex = this.itemCount;
           }
-          this.field_g = this.field_g - 1;
-          this.field_f = false;
+          this.selectedIndex = this.selectedIndex - 1;
+          this.mouseMode = false;
         }
-        if (0 != this.field_d) {
+        if (0 != this.heldButton) {
           return;
         }
         if (TextureCombineOperation.field_a != 97) {
           return;
         }
-        this.field_g = this.field_g + 1;
-        if (this.field_g >= this.field_e) {
-          this.field_g = 0;
+        this.selectedIndex = this.selectedIndex + 1;
+        if (this.selectedIndex >= this.itemCount) {
+          this.selectedIndex = 0;
         }
-        this.field_f = false;
+        this.mouseMode = false;
     }
 
-    final boolean c(int param0) {
-        if (param0 != -103) {
+    final boolean isHomePressed(int guard) {
+        if (guard != -103) {
           return true;
         }
-        return this.field_b == 102 ? true : false;
+        return this.keyCode == 102 ? true : false;
     }
 
     public static void releaseStatics(boolean param0) {
@@ -368,56 +368,56 @@ final class er {
         field_h = null;
     }
 
-    final void f(int param0) {
-        this.field_a = 0;
-        this.field_b = 0;
-        if (param0 >= -12) {
+    final void captureKey(int guard) {
+        this.pressedButton = 0;
+        this.keyCode = 0;
+        if (guard >= -12) {
           return;
         }
-        if (0 == this.field_d) {
-          this.field_b = TextureCombineOperation.field_a;
+        if (0 == this.heldButton) {
+          this.keyCode = TextureCombineOperation.field_a;
         }
     }
 
-    final void a(boolean param0, int param1, int param2) {
-        if (this.field_e <= param2) {
+    final void updatePointerSelection(boolean guard, int pressedIndex, int hoveredIndex) {
+        if (this.itemCount <= hoveredIndex) {
           throw new IllegalArgumentException();
         }
-        if (this.field_e <= param1) {
+        if (this.itemCount <= pressedIndex) {
           throw new IllegalArgumentException();
         }
-        this.field_a = 0;
-        this.field_b = 0;
+        this.pressedButton = 0;
+        this.keyCode = 0;
         if (ActiveCanvasProvider.field_c != 0) {
-          this.field_f = true;
-          this.field_g = param1;
-          this.field_a = ActiveCanvasProvider.field_c;
-          this.field_i = mm.field_f;
-          this.field_d = ActiveCanvasProvider.field_c;
+          this.mouseMode = true;
+          this.selectedIndex = pressedIndex;
+          this.pressedButton = ActiveCanvasProvider.field_c;
+          this.repeatDelay = AccountRequestState.field_f;
+          this.heldButton = ActiveCanvasProvider.field_c;
         }
-        if (this.field_d == 0) {
-          if (!param0) {
-            this.field_g = -114;
+        if (this.heldButton == 0) {
+          if (!guard) {
+            this.selectedIndex = -114;
             if (ActiveCanvasProvider.field_c == 0 &&
               0 == HotspotTextWidget.activePointerButton) {
-              this.field_d = 0;
+              this.heldButton = 0;
             }
-            if (this.field_d == 0) {
-              if (!this.field_f &&
+            if (this.heldButton == 0) {
+              if (!this.mouseMode &&
                 !sl.field_d) {
                 return;
               }
-              if (param2 < 0) {
-                if (this.field_f) {
-                  this.field_g = -1;
+              if (hoveredIndex < 0) {
+                if (this.mouseMode) {
+                  this.selectedIndex = -1;
                 }
               } else {
-                if (this.field_g != param2) {
-                  this.field_f = true;
-                  this.field_g = param2;
+                if (this.selectedIndex != hoveredIndex) {
+                  this.mouseMode = true;
+                  this.selectedIndex = hoveredIndex;
                 } else {
-                  this.field_f = true;
-                  this.field_g = param2;
+                  this.mouseMode = true;
+                  this.selectedIndex = hoveredIndex;
                 }
               }
             }
@@ -425,109 +425,109 @@ final class er {
           }
           if (ActiveCanvasProvider.field_c == 0 &&
             0 == HotspotTextWidget.activePointerButton) {
-            this.field_d = 0;
-            if (this.field_d == 0) {
-              if (!this.field_f &&
+            this.heldButton = 0;
+            if (this.heldButton == 0) {
+              if (!this.mouseMode &&
                 !sl.field_d) {
                 return;
               }
-              if (param2 < 0) {
-                if (this.field_f) {
-                  this.field_g = -1;
+              if (hoveredIndex < 0) {
+                if (this.mouseMode) {
+                  this.selectedIndex = -1;
                 }
               } else {
-                if (this.field_g != param2) {
-                  this.field_f = true;
-                  this.field_g = param2;
+                if (this.selectedIndex != hoveredIndex) {
+                  this.mouseMode = true;
+                  this.selectedIndex = hoveredIndex;
                 } else {
-                  this.field_f = true;
-                  this.field_g = param2;
+                  this.mouseMode = true;
+                  this.selectedIndex = hoveredIndex;
                 }
               }
             }
             return;
           }
-          if (this.field_d != 0) {
+          if (this.heldButton != 0) {
             return;
           }
-          if (this.field_f) {
-            if (param2 < 0) {
-              if (!this.field_f) {
+          if (this.mouseMode) {
+            if (hoveredIndex < 0) {
+              if (!this.mouseMode) {
                 return;
               }
-              this.field_g = -1;
+              this.selectedIndex = -1;
               return;
             }
-            if (this.field_g != param2) {
+            if (this.selectedIndex != hoveredIndex) {
             }
-            this.field_f = true;
-            this.field_g = param2;
+            this.mouseMode = true;
+            this.selectedIndex = hoveredIndex;
             return;
           }
           if (!sl.field_d) {
             return;
           }
-          if (param2 < 0) {
-            if (this.field_f) {
-              this.field_g = -1;
+          if (hoveredIndex < 0) {
+            if (this.mouseMode) {
+              this.selectedIndex = -1;
             }
           } else {
-            if (this.field_g != param2) {
+            if (this.selectedIndex != hoveredIndex) {
             }
-            this.field_f = true;
-            this.field_g = param2;
+            this.mouseMode = true;
+            this.selectedIndex = hoveredIndex;
           }
           return;
         }
         if (HotspotTextWidget.activePointerButton != 0) {
-          if (this.field_i <= 0) {
-            this.field_i = IntList.field_h;
+          if (this.repeatDelay <= 0) {
+            this.repeatDelay = IntList.field_h;
           }
-          this.field_i = this.field_i - 1;
+          this.repeatDelay = this.repeatDelay - 1;
         }
-        if (!param0) {
-          this.field_g = -114;
+        if (!guard) {
+          this.selectedIndex = -114;
           if (ActiveCanvasProvider.field_c != 0) {
-            if (this.field_d == 0) {
-              if (!this.field_f &&
+            if (this.heldButton == 0) {
+              if (!this.mouseMode &&
                 !sl.field_d) {
                 return;
               }
-              if (param2 < 0) {
-                if (this.field_f) {
-                  this.field_g = -1;
+              if (hoveredIndex < 0) {
+                if (this.mouseMode) {
+                  this.selectedIndex = -1;
                 }
               } else {
-                if (this.field_g != param2) {
-                  this.field_f = true;
-                  this.field_g = param2;
+                if (this.selectedIndex != hoveredIndex) {
+                  this.mouseMode = true;
+                  this.selectedIndex = hoveredIndex;
                 } else {
-                  this.field_f = true;
-                  this.field_g = param2;
+                  this.mouseMode = true;
+                  this.selectedIndex = hoveredIndex;
                 }
               }
             }
             return;
           }
           if (0 == HotspotTextWidget.activePointerButton) {
-            this.field_d = 0;
+            this.heldButton = 0;
           }
-          if (this.field_d == 0) {
-            if (!this.field_f &&
+          if (this.heldButton == 0) {
+            if (!this.mouseMode &&
               !sl.field_d) {
               return;
             }
-            if (param2 < 0) {
-              if (this.field_f) {
-                this.field_g = -1;
+            if (hoveredIndex < 0) {
+              if (this.mouseMode) {
+                this.selectedIndex = -1;
               }
             } else {
-              if (this.field_g != param2) {
-                this.field_f = true;
-                this.field_g = param2;
+              if (this.selectedIndex != hoveredIndex) {
+                this.mouseMode = true;
+                this.selectedIndex = hoveredIndex;
               } else {
-                this.field_f = true;
-                this.field_g = param2;
+                this.mouseMode = true;
+                this.selectedIndex = hoveredIndex;
               }
             }
           }
@@ -535,40 +535,40 @@ final class er {
         }
         if (ActiveCanvasProvider.field_c == 0 &&
           0 == HotspotTextWidget.activePointerButton) {
-          this.field_d = 0;
-          if (this.field_d != 0) {
+          this.heldButton = 0;
+          if (this.heldButton != 0) {
             return;
           }
-          if (!this.field_f &&
+          if (!this.mouseMode &&
             !sl.field_d) {
             return;
           }
         } else {
-          if (this.field_d != 0) {
+          if (this.heldButton != 0) {
             return;
           }
-          if (!this.field_f &&
+          if (!this.mouseMode &&
             !sl.field_d) {
             return;
           }
         }
-        if (param2 < 0) {
-          if (!this.field_f) {
+        if (hoveredIndex < 0) {
+          if (!this.mouseMode) {
             return;
           }
-          this.field_g = -1;
+          this.selectedIndex = -1;
           return;
         }
-        if (this.field_g != param2) {
+        if (this.selectedIndex != hoveredIndex) {
         }
-        this.field_f = true;
-        this.field_g = param2;
+        this.mouseMode = true;
+        this.selectedIndex = hoveredIndex;
     }
 
-    er(int param0) {
-        this.field_f = false;
-        this.field_g = 0;
-        this.field_e = param0;
+    MenuSelectionController(int entryCount) {
+        this.mouseMode = false;
+        this.selectedIndex = 0;
+        this.itemCount = entryCount;
     }
 
     static {

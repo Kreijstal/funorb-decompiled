@@ -14,7 +14,7 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
     static String field_J;
     private ValidatedTextInputWidget passwordInput;
     private ValidatedTextInputWidget emailInput;
-    static ts field_G;
+    static QuickChatCommand field_G;
 
     final void update(int parentX, int guard, UiWidget root, int parentY) {
         RuntimeException runtimeException = null;
@@ -177,7 +177,7 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
         int stackIn_63_0 = 0;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_52_0;
-        pl var1 = null;
+        IsaacPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3_int = 0;
@@ -248,7 +248,7 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
               IntrusiveNode.reportClientError("F1: " + VictoryScreen.b((byte) 104), (Throwable) null, 0);
               kk.a((byte) -112);
               if (param0 <= 71) {
-                field_G = (ts) null;
+                field_G = (QuickChatCommand) null;
               }
               return;
             }
@@ -503,7 +503,7 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
             return true;
           }
           var4 = var3.getStatus(93);
-          if (qr.INVALID == var4) {
+          if (AccountConnectionPhase.INVALID == var4) {
             return false;
           }
           if (GameInstructions.DEBOUNCING == var4) {
@@ -543,7 +543,7 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
           var4 = name;
           ((TextInputWidget) ((Object) var3)).setText(false, var4, (byte) 124);
           if (guard != 0) {
-            field_G = (ts) null;
+            field_G = (QuickChatCommand) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -625,7 +625,7 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
           this.screenNameInput.tooltip = ShaderEffect.enterTheNameYouText;
           this.emailInput.tooltip = pi.yourEmailAddressIsText;
           this.confirmEmailInput.tooltip = SoftwareTransform3D.typeYourEmailAddressText;
-          this.passwordInput.tooltip = pl.enterAPasswordForText;
+          this.passwordInput.tooltip = IsaacPacketBuffer.enterAPasswordForText;
           this.confirmPasswordInput.tooltip = InstrumentNoteMask.typeYourPasswordAgainText;
           this.ageInput.tooltip = ContentDialog.typeYourAgeInText;
           this.emailNewsCheckbox.tooltip = LegacyOpenGlShoreWaveWaterEffect.updatesWillSentToText;
@@ -815,6 +815,6 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
     }
 
     static {
-        field_G = new ts(13, 0, 1, 0);
+        field_G = new QuickChatCommand(13, 0, 1, 0);
     }
 }

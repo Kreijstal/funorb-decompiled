@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hm {
-    static mm field_a;
+final class AccountRequestDefaults {
+    static AccountRequestState IDLE;
     private static String field_z;
 
     public static void releaseStatics(int param0) {
         if (param0 != -11418) {
           return;
         }
-        field_a = null;
+        IDLE = null;
     }
 
     static {
         field_z = "hm.A(";
-        field_a = new mm();
+        IDLE = new AccountRequestState();
     }
 }

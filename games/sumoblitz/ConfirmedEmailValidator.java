@@ -34,11 +34,11 @@ final class ConfirmedEmailValidator extends TextInputValidator {
             var4 = (String) null;
             this.messageForText(-5, (String) null);
           }
-          if (this.matchValidator.validateText((byte) 26, text) == qr.INVALID) {
+          if (this.matchValidator.validateText((byte) 26, text) == AccountConnectionPhase.INVALID) {
             stackIn_4_0 = this.matchValidator.messageForText(0, text);
             return stackIn_4_0;
           }
-          if (this.validateText((byte) 26, text) != qr.INVALID) {
+          if (this.validateText((byte) 26, text) != AccountConnectionPhase.INVALID) {
             stackIn_9_0 = ProxySocketConnector.emailIsValidText;
             return stackIn_9_0;
           }
@@ -69,8 +69,8 @@ final class ConfirmedEmailValidator extends TextInputValidator {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.matchValidator.validateText(guard, text) == qr.INVALID) {
-            stackIn_3_0 = qr.INVALID;
+          if (this.matchValidator.validateText(guard, text) == AccountConnectionPhase.INVALID) {
+            stackIn_3_0 = AccountConnectionPhase.INVALID;
             return stackIn_3_0;
           }
           if (!text.equals(this.lastCheckedEmail)) {
@@ -85,7 +85,7 @@ final class ConfirmedEmailValidator extends TextInputValidator {
           if (this.emailAvailable) {
             stackIn_12_0 = qe.VALID;
           } else {
-            stackIn_12_0 = qr.INVALID;
+            stackIn_12_0 = AccountConnectionPhase.INVALID;
           }
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

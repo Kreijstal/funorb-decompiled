@@ -5,7 +5,7 @@ final class LegacyOpenGlSpriteTexture extends LegacyOpenGlTexture2D {
     int spriteWidth;
     static ToolkitSprite[] field_r;
     float maxV;
-    static ts field_t;
+    static QuickChatCommand field_t;
     static java.awt.Font field_s;
     float maxU;
     int spriteHeight;
@@ -148,6 +148,6 @@ final class LegacyOpenGlSpriteTexture extends LegacyOpenGlTexture2D {
 
     static {
         field_w = false;
-        field_t = new ts(7, 0, 1, 1);
+        field_t = new QuickChatCommand(7, 0, 1, 1);
     }
 }

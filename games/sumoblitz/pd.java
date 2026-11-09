@@ -27,13 +27,13 @@ final class pd extends IntrusiveNode {
     }
 
     final static void a(byte param0, int param1, of param2) {
-        pl var3 = null;
+        IsaacPacketBuffer var3 = null;
         try {
           if (param0 != -65) {
             field_m = (hv) null;
           }
           var3 = InwardSparkParticle.field_v;
-          var3.g(param1, 8);
+          var3.writeCipherByte(param1, 8);
           var3.writeByte((byte) 103, 5);
           var3.writeByte((byte) 46, 0);
           var3.writeShort(117, param2.field_p);

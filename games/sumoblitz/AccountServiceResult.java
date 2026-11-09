@@ -31,10 +31,10 @@ final class AccountServiceResult {
         TRIANGLE_FAN = null;
     }
 
-    final static void a(int param0, byte param1, hg param2) {
+    final static void a(int param0, byte param1, GameProgressUpdate param2) {
         try {
           SoftwareRenderTarget.field_f.addLast((IntrusiveNode) (param2), (byte) 39);
-          ToolkitRasterStateStack.a(param0, 1, param2);
+          ToolkitRasterStateStack.sendProgressUpdate(param0, 1, param2);
           if (param1 <= 5) {
             field_f = (ToolkitSprite) null;
           }

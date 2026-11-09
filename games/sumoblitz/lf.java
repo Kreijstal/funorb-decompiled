@@ -19,14 +19,14 @@ final class lf extends ka {
           if (param1 != -58) {
             return;
           }
-          var2 = (PlayingSound) (jf.field_c.first(81));
+          var2 = (PlayingSound) (ContentTransitionPhase.field_c.first(81));
           while (var2 != null) {
             if (!var2.lifetimeNode.isLinked(false)) {
               var2.unlink(false);
             } else {
               var2.stream.setVolume(128 + var2.originalVolume * kr.field_c >> 8);
             }
-            var2 = (PlayingSound) (jf.field_c.next((byte) 18));
+            var2 = (PlayingSound) (ContentTransitionPhase.field_c.next((byte) 18));
           }
           if (null != TextHotspot.field_u) {
             var2Lifetime1 = (PlayingSound) (TextHotspot.field_u.first(param1 ^ -123));
@@ -110,8 +110,8 @@ final class lf extends ka {
         if (param0 != 0) {
           return;
         }
-        if (qr.field_b != null) {
-          qr.field_b.setVolume((byte) -43, param1);
+        if (AccountConnectionPhase.field_b != null) {
+          AccountConnectionPhase.field_b.setVolume((byte) -43, param1);
         }
     }
 

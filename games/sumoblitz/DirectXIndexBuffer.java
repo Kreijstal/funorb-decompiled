@@ -29,7 +29,7 @@ final class DirectXIndexBuffer implements IndexBuffer {
 
     public final void close(int guard) {
         if (this.buffer != null) {
-          this.buffer.a(-22671);
+          this.buffer.release(-22671);
           this.buffer = null;
           this.capacityBytes = 0;
           if (guard != 12001) {
@@ -62,7 +62,7 @@ final class DirectXIndexBuffer implements IndexBuffer {
             var3 = 0;
           }
           if (this.buffer != null) {
-            this.buffer.a(-22671);
+            this.buffer.release(-22671);
           }
           this.buffer = this.toolkit.field_Cc.a(this.sizeBytes, var4, GpuDataType.UNSIGNED_SHORT != this.indexType ? 102 : 101, var3, this.buffer);
           this.capacityBytes = this.sizeBytes;

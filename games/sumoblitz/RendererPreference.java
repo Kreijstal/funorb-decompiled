@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class RendererPreference {
-    static er field_a;
+    static MenuSelectionController field_a;
     boolean enabled;
     int backend;
     static int[] field_d;
@@ -79,7 +79,7 @@ final class RendererPreference {
     }
 
     static {
-        field_a = new er(1);
+        field_a = new MenuSelectionController(1);
         endGameText = "End Game";
         field_d = new int[13];
     }

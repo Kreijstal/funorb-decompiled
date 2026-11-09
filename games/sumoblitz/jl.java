@@ -154,11 +154,11 @@ final class jl {
             return false;
           }
         }
-        var4 = SlowBurstParticle.field_z[param1] + ic.field_c[param1] + jf.field_f[param1];
+        var4 = SlowBurstParticle.field_z[param1] + ic.field_c[param1] + ContentTransitionPhase.field_f[param1];
         if (param3 != 98) {
           return true;
         }
-        var5 = SlowBurstParticle.field_z[param0] + jf.field_f[param0] + ic.field_c[param0];
+        var5 = SlowBurstParticle.field_z[param0] + ContentTransitionPhase.field_f[param0] + ic.field_c[param0];
         if (var4 < var5) {
           return true;
         }

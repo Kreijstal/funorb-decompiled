@@ -6,7 +6,7 @@ import java.util.*;
 
 final class ProxySocketConnector extends SocketConnector {
     static String emailIsValidText;
-    static mm field_e;
+    static AccountRequestState accountCreationState;
     private java.net.ProxySelector field_g;
     static SpriteData[] field_f;
 
@@ -123,7 +123,7 @@ final class ProxySocketConnector extends SocketConnector {
 
     public static void b(int param0) {
         field_f = null;
-        field_e = null;
+        accountCreationState = null;
         emailIsValidText = null;
         if (param0 != 1183) {
           String var2 = (String) null;

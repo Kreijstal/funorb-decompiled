@@ -21,7 +21,7 @@ final class k {
           if (var5 == null) {
             return false;
           }
-          eg.a(param3 ^ -23291, var5);
+          ServerIntArrayRequest.decodeSpriteSheet(param3 ^ -23291, var5);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -38,13 +38,13 @@ final class k {
     }
 
     final static void a(pd param0, int param1, byte param2) {
-        pl var3 = null;
+        IsaacPacketBuffer var3 = null;
         try {
           if (param2 < 93) {
             startGameText = (String) null;
           }
           var3 = InwardSparkParticle.field_v;
-          var3.g(param1, 8);
+          var3.writeCipherByte(param1, 8);
           var3.writeByte((byte) 111, param0.field_k);
           var3.writeShort(-10, param0.field_o);
         } catch (RuntimeException runtimeException) {

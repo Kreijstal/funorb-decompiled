@@ -107,7 +107,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("error_js5io", (byte) -23);
                 if (null != var2) {
-                  eg.field_n = MusicVoice.a(0, var2);
+                  ServerIntArrayRequest.field_n = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("error_js5connect_full", (byte) -23);
                 if (var2 != null) {
@@ -1097,7 +1097,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("changedisplayname", (byte) -23);
                 if (null != var2) {
-                  pl.changeDisplayNameText = MusicVoice.a(param0 ^ 7, var2);
+                  IsaacPacketBuffer.changeDisplayNameText = MusicVoice.a(param0 ^ 7, var2);
                 }
                 var2 = OpenGlCubeTexture.a("returntohomepage", (byte) -23);
                 if (var2 != null) {
@@ -1528,7 +1528,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("login_email", (byte) -23);
                 if (null != var2) {
-                  ow.emailText = MusicVoice.a(0, var2);
+                  HuffmanDecoder.emailText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("login_username_tooltip", (byte) -23);
                 if (var2 != null) {
@@ -1548,7 +1548,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("login_justplay_tooltip", (byte) -23);
                 if (null != var2) {
-                  hg.playTheGameWithoutText = MusicVoice.a(0, var2);
+                  GameProgressUpdate.playTheGameWithoutText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("login_back_tooltip", (byte) -23);
                 if (var2 != null) {
@@ -1576,7 +1576,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("create_password_tooltip", (byte) -23);
                 if (null != var2) {
-                  pl.enterAPasswordForText = MusicVoice.a(0, var2);
+                  IsaacPacketBuffer.enterAPasswordForText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("create_password_hint", (byte) -23);
                 if (null != var2) {
@@ -1672,7 +1672,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("create_alert_passcontainsname_partial", (byte) -23);
                 if (var2 != null) {
-                  mm.thisPasswordIsPartText = MusicVoice.a(param0 - 7, var2);
+                  AccountRequestState.thisPasswordIsPartText = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = OpenGlCubeTexture.a("create_alert_checkname", (byte) -23);
                 if (null != var2) {
@@ -1828,7 +1828,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("waitingfor_instruments", (byte) -23);
                 if (var2 != null) {
-                  jf.waitingForInstrumentsText = MusicVoice.a(0, var2);
+                  ContentTransitionPhase.waitingForInstrumentsText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("waitingfor_levels", (byte) -23);
                 if (var2 != null) {
@@ -1860,7 +1860,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("loading_fonts", (byte) -23);
                 if (null != var2) {
-                  ow.loadingFontsText = MusicVoice.a(0, var2);
+                  HuffmanDecoder.loadingFontsText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("loading_soundeffects", (byte) -23);
                 if (var2 != null) {
@@ -2866,7 +2866,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("pleasewait_dotdotdot", (byte) -23);
                 if (null != var2) {
-                  mm.pleaseWaitText = MusicVoice.a(0, var2);
+                  AccountRequestState.pleaseWaitText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("serviceunavailable", (byte) -23);
                 if (null != var2) {
@@ -2894,31 +2894,31 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("mustlogin2,1", (byte) -23);
                 if (var2 != null) {
-                  pl.field_r[1] = MusicVoice.a(0, var2);
+                  IsaacPacketBuffer.field_r[1] = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("mustlogin2,2", (byte) -23);
                 if (null != var2) {
-                  pl.field_r[2] = MusicVoice.a(0, var2);
+                  IsaacPacketBuffer.field_r[2] = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("mustlogin2,3", (byte) -23);
                 if (var2 != null) {
-                  pl.field_r[3] = MusicVoice.a(GzipDecompressor.bitwiseXor(param0, 7), var2);
+                  IsaacPacketBuffer.field_r[3] = MusicVoice.a(GzipDecompressor.bitwiseXor(param0, 7), var2);
                 }
                 var2 = OpenGlCubeTexture.a("mustlogin2,4", (byte) -23);
                 if (var2 != null) {
-                  pl.field_r[4] = MusicVoice.a(0, var2);
+                  IsaacPacketBuffer.field_r[4] = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("mustlogin2,5", (byte) -23);
                 if (null != var2) {
-                  pl.field_r[5] = MusicVoice.a(0, var2);
+                  IsaacPacketBuffer.field_r[5] = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("mustlogin2,6", (byte) -23);
                 if (null != var2) {
-                  pl.field_r[6] = MusicVoice.a(GzipDecompressor.bitwiseXor(param0, 7), var2);
+                  IsaacPacketBuffer.field_r[6] = MusicVoice.a(GzipDecompressor.bitwiseXor(param0, 7), var2);
                 }
                 var2 = OpenGlCubeTexture.a("mustlogin2,7", (byte) -23);
                 if (var2 != null) {
-                  pl.field_r[7] = MusicVoice.a(0, var2);
+                  IsaacPacketBuffer.field_r[7] = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("mustlogin3,1", (byte) -23);
                 if (var2 != null) {

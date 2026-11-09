@@ -60,7 +60,7 @@ final class PasswordValidator extends TextInputValidator {
             return stackIn_19_0;
           }
           if (CachedTextLayout.a(var5, (byte) 114, var3)) {
-            stackIn_22_0 = mm.thisPasswordIsPartText;
+            stackIn_22_0 = AccountRequestState.thisPasswordIsPartText;
             return stackIn_22_0;
           }
           if (!wv.a(false, var5, var3)) {
@@ -98,15 +98,15 @@ final class PasswordValidator extends TextInputValidator {
           var3 = this.screenNameInput.text.toLowerCase();
           var4 = text.toLowerCase();
           if (var4.length() == 0) {
-            stackIn_2_0 = qr.INVALID;
+            stackIn_2_0 = AccountConnectionPhase.INVALID;
             return stackIn_2_0;
           }
           if (!gg.a(var4, var3, -83)) {
-            stackIn_6_0 = qr.INVALID;
+            stackIn_6_0 = AccountConnectionPhase.INVALID;
             return stackIn_6_0;
           }
           if (this.containsEmailParts(98, text)) {
-            stackIn_9_0 = qr.INVALID;
+            stackIn_9_0 = AccountConnectionPhase.INVALID;
             return stackIn_9_0;
           }
           if (guard != 26) {

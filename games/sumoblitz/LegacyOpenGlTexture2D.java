@@ -347,7 +347,7 @@ class LegacyOpenGlTexture2D extends LegacyOpenGlTexture {
           boolean decompiledSharedTail0 = (stackIn_13_0 == 0 ||
             34037 == this.target);
           if (!decompiledSharedTail0) {
-            vq.a(textureTarget, 23143, pixels, pixelWidth, storageFormat, pixelHeight, sourceFormat);
+            DisplayNameForm.uploadTextureMipmaps(textureTarget, 23143, pixels, pixelWidth, storageFormat, pixelHeight, sourceFormat);
             this.noteMipmaps(true, true);
             decompiledSharedTail0 = (var15 != 0);
           }

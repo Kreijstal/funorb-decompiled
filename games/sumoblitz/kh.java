@@ -9,7 +9,7 @@ final class kh {
     static String field_d;
     static int[] field_b;
 
-    final static boolean a(pl param0, boolean param1) {
+    final static boolean a(IsaacPacketBuffer param0, boolean param1) {
         RuntimeException var2 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -20,7 +20,7 @@ final class kh {
           if (param1) {
             field_b = (int[]) null;
           }
-          stackIn_5_0 = (param0.b(1, (byte) -116) == 1);
+          stackIn_5_0 = (param0.readBits(1, (byte) -116) == 1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -105,8 +105,8 @@ final class kh {
     public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != 2) {
-          pl var2 = (pl) null;
-          kh.a((pl) null, true);
+          IsaacPacketBuffer var2 = (IsaacPacketBuffer) null;
+          kh.a((IsaacPacketBuffer) null, true);
         }
         field_c = (int[][]) null;
         field_a = null;

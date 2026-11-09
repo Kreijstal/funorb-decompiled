@@ -84,11 +84,11 @@ final class DroneChargeParticle extends TimedSceneEffect {
         GameClientShell.field_u[19] = dn.arcadeGameText;
         GameClientShell.field_u[22] = MusicPatch.editorText;
         BufferedSocket.field_i = new String[]{mn.highText, bc.lowText};
-        GameClientShell.field_u[33] = mm.levelSelectText;
+        GameClientShell.field_u[33] = AccountRequestState.levelSelectText;
         GameClientShell.field_u[26] = ServerDataReadRequest.resetStatsText;
         GameClientShell.field_u[9] = PlayingSound.scoreFilterLabels[1];
         GameClientShell.field_u[20] = TimedSceneEffect.challengeText;
-        GameClientShell.field_u[32] = mm.levelSelectText;
+        GameClientShell.field_u[32] = AccountRequestState.levelSelectText;
         GameClientShell.field_u[8] = PlayingSound.scoreFilterLabels[0];
         GameClientShell.field_u[29] = hv.reassignText;
         GameClientShell.field_u[30] = ScreenNameValidator.field_g;
@@ -161,8 +161,8 @@ final class DroneChargeParticle extends TimedSceneEffect {
     }
 
     final static void a(byte param0, lt param1, int param2) {
-        pl var5 = InwardSparkParticle.field_v;
-        var5.g(param2, param0 ^ -105);
+        IsaacPacketBuffer var5 = InwardSparkParticle.field_v;
+        var5.writeCipherByte(param2, param0 ^ -105);
         var5.position = var5.position + 1;
         int var4 = var5.position;
         var5.writeByte((byte) 84, 1);

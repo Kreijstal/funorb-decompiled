@@ -6,7 +6,7 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
     jaclib.memory.heap.NativeHeap heap;
     static ValidationStatus EMPTY;
     static int[] field_q;
-    static mm field_p;
+    static AccountRequestState PENDING;
 
     final static void c(byte param0) {
         int[] var1 = null;
@@ -103,7 +103,7 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
           if (param3 <= 48) {
             EMPTY = (ValidationStatus) null;
           }
-          la.a(param0, param2, var5, 0, param1);
+          ArrayUtils.copy(param0, param2, var5, 0, param1);
           stackIn_3_0 = var5;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -123,20 +123,20 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
     public static void releaseStatics(int param0) {
         if (param0 == -20388) {
           field_q = null;
-          field_p = null;
+          PENDING = null;
           EMPTY = null;
           return;
         }
         field_q = (int[]) null;
         field_q = null;
-        field_p = null;
+        PENDING = null;
         EMPTY = null;
     }
 
     final static RasterIndexedSprite e(int param0) {
         RasterIndexedSprite var1 = null;
         if (param0 == 12768) {
-          var1 = new RasterIndexedSprite(vf.field_d, ToolkitImageProducerBuffer.field_u, er.field_h[0], StrongCacheReference.field_C[0], CheckboxRenderer.field_k[0], ScrollViewport.field_B[0], TextLayout.field_d[0], LegacyOpenGlEffectManager.field_l);
+          var1 = new RasterIndexedSprite(vf.field_d, ToolkitImageProducerBuffer.field_u, MenuSelectionController.field_h[0], StrongCacheReference.field_C[0], CheckboxRenderer.field_k[0], ScrollViewport.field_B[0], TextLayout.field_d[0], LegacyOpenGlEffectManager.field_l);
           PowerupPickup.releaseSpriteDecoderArrays((byte) -20);
           return var1;
         }
@@ -206,6 +206,6 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
         field_o = 50;
         field_q = new int[8192];
         EMPTY = new ValidationStatus();
-        field_p = new mm();
+        PENDING = new AccountRequestState();
     }
 }

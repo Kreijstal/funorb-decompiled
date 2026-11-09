@@ -138,7 +138,7 @@ class IntrusiveNode {
 
     final static RendererPreference[] b(int param0) {
         if (null == HardwareReflectionEffect.field_e) {
-          HardwareReflectionEffect.field_e = hg.a(110, new int[]{1, 0});
+          HardwareReflectionEffect.field_e = GameProgressUpdate.rendererPreferences(110, new int[]{1, 0});
         }
         if (param0 == -16754) {
           return HardwareReflectionEffect.field_e;

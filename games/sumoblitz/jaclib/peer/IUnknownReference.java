@@ -4,8 +4,8 @@
 package jaclib.peer;
 
 class IUnknownReference extends jaclib.peer.PeerReference {
-    IUnknownReference(jaclib.peer.IUnknown param0, jaclib.peer.pf param1) {
-        super(param0, param1);
+    IUnknownReference(jaclib.peer.IUnknown owner, jaclib.peer.PeerReferenceManager manager) {
+        super(owner, manager);
     }
 
     protected final native long releasePeer(long param0);

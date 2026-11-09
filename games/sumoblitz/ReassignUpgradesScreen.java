@@ -36,8 +36,8 @@ final class ReassignUpgradesScreen extends MenuScreen {
           hc.field_e.a(bw.reassignPowerupsText, -1, -1, 60, 320, 0);
           MessageDialog.field_db.a(200, 5023231 | opacity << 24, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 75, -1, 0, 0, guard - 6432, wh.clickToAssignPointsText, (SpriteMask) null, 1, 0);
           LegacyOpenGlEffect.field_c.a(200, -1, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 75, -1, 0, 0, guard ^ 11104, wh.clickToAssignPointsText, (SpriteMask) null, 1, 0);
-          qv.field_k.a(ic.a(HotspotTextWidget.pointsRemainingText, new String[]{Integer.toString(HardwareUnlitEffect.d(guard ^ -19334) - ok.field_k)}, (byte) -128).toUpperCase(), 5023231 | opacity << 24, -1, 180, 320, 0);
-          uq.field_a.a(ic.a(HotspotTextWidget.pointsRemainingText, new String[]{Integer.toString(HardwareUnlitEffect.d(guard + 19434) - ok.field_k)}, (byte) -128).toUpperCase(), -1, -1, 180, 320, 0);
+          qv.field_k.a(ic.a(HotspotTextWidget.pointsRemainingText, new String[]{Integer.toString(HardwareUnlitEffect.d(guard ^ -19334) - IsaacCipher.field_k)}, (byte) -128).toUpperCase(), 5023231 | opacity << 24, -1, 180, 320, 0);
+          uq.field_a.a(ic.a(HotspotTextWidget.pointsRemainingText, new String[]{Integer.toString(HardwareUnlitEffect.d(guard + 19434) - IsaacCipher.field_k)}, (byte) -128).toUpperCase(), -1, -1, 180, 320, 0);
           var4_int = 140;
           var5 = 0;
           while (392 >= var4_int) {
@@ -51,7 +51,7 @@ final class ReassignUpgradesScreen extends MenuScreen {
             var8 = stackIn_6_0;
             wo.a(var8, 170, var7, 0, 1, var6_ref_ha, 131, 185, 1, true);
             if (PasswordInputRenderer.field_u[var5] == 1) {
-              stackIn_12_0 = (HardwareUnlitEffect.d(17079) - ok.field_k == 0) ? 1 : 0;
+              stackIn_12_0 = (HardwareUnlitEffect.d(17079) - IsaacCipher.field_k == 0) ? 1 : 0;
             } else {
               stackIn_12_0 = 0;
             }
@@ -112,22 +112,22 @@ final class ReassignUpgradesScreen extends MenuScreen {
             }
             if (this.field_k > -1) {
               if (1 == ActiveCanvasProvider.field_c &&
-                0 < HardwareUnlitEffect.d(param0 ^ -2765) - ok.field_k) {
+                0 < HardwareUnlitEffect.d(param0 ^ -2765) - IsaacCipher.field_k) {
                 PasswordInputRenderer.field_u[this.field_k] = PasswordInputRenderer.field_u[this.field_k] + 1;
-                ok.field_k = ok.field_k + 1;
+                IsaacCipher.field_k = IsaacCipher.field_k + 1;
                 if (PasswordInputRenderer.field_u[this.field_k] <= 10) {
                   return;
                 }
                 PasswordInputRenderer.field_u[this.field_k] = 10;
-                ok.field_k = ok.field_k - 1;
+                IsaacCipher.field_k = IsaacCipher.field_k - 1;
                 return;
               }
               if (2 == ActiveCanvasProvider.field_c) {
                 PasswordInputRenderer.field_u[this.field_k] = PasswordInputRenderer.field_u[this.field_k] - 1;
-                ok.field_k = ok.field_k - 1;
+                IsaacCipher.field_k = IsaacCipher.field_k - 1;
                 if (PasswordInputRenderer.field_u[this.field_k] < 1) {
                   PasswordInputRenderer.field_u[this.field_k] = 1;
-                  ok.field_k = ok.field_k + 1;
+                  IsaacCipher.field_k = IsaacCipher.field_k + 1;
                 }
               }
             }
@@ -144,30 +144,30 @@ final class ReassignUpgradesScreen extends MenuScreen {
               return;
             }
             PasswordInputRenderer.field_u[this.field_k] = PasswordInputRenderer.field_u[this.field_k] - 1;
-            ok.field_k = ok.field_k - 1;
+            IsaacCipher.field_k = IsaacCipher.field_k - 1;
             if (PasswordInputRenderer.field_u[this.field_k] >= 1) {
               return;
             }
             PasswordInputRenderer.field_u[this.field_k] = 1;
-            ok.field_k = ok.field_k + 1;
+            IsaacCipher.field_k = IsaacCipher.field_k + 1;
             return;
           }
-          if (0 < HardwareUnlitEffect.d(param0 ^ -2765) - ok.field_k) {
+          if (0 < HardwareUnlitEffect.d(param0 ^ -2765) - IsaacCipher.field_k) {
             PasswordInputRenderer.field_u[this.field_k] = PasswordInputRenderer.field_u[this.field_k] + 1;
-            ok.field_k = ok.field_k + 1;
+            IsaacCipher.field_k = IsaacCipher.field_k + 1;
             if (PasswordInputRenderer.field_u[this.field_k] <= 10) {
               return;
             }
             PasswordInputRenderer.field_u[this.field_k] = 10;
-            ok.field_k = ok.field_k - 1;
+            IsaacCipher.field_k = IsaacCipher.field_k - 1;
             return;
           }
           if (2 == ActiveCanvasProvider.field_c) {
             PasswordInputRenderer.field_u[this.field_k] = PasswordInputRenderer.field_u[this.field_k] - 1;
-            ok.field_k = ok.field_k - 1;
+            IsaacCipher.field_k = IsaacCipher.field_k - 1;
             if (PasswordInputRenderer.field_u[this.field_k] < 1) {
               PasswordInputRenderer.field_u[this.field_k] = 1;
-              ok.field_k = ok.field_k + 1;
+              IsaacCipher.field_k = IsaacCipher.field_k + 1;
             }
           }
           return;
@@ -189,22 +189,22 @@ final class ReassignUpgradesScreen extends MenuScreen {
             }
             if (this.field_k > -1) {
               if (1 == ActiveCanvasProvider.field_c &&
-                0 < HardwareUnlitEffect.d(param0 ^ -2765) - ok.field_k) {
+                0 < HardwareUnlitEffect.d(param0 ^ -2765) - IsaacCipher.field_k) {
                 PasswordInputRenderer.field_u[this.field_k] = PasswordInputRenderer.field_u[this.field_k] + 1;
-                ok.field_k = ok.field_k + 1;
+                IsaacCipher.field_k = IsaacCipher.field_k + 1;
                 if (PasswordInputRenderer.field_u[this.field_k] <= 10) {
                   return;
                 }
                 PasswordInputRenderer.field_u[this.field_k] = 10;
-                ok.field_k = ok.field_k - 1;
+                IsaacCipher.field_k = IsaacCipher.field_k - 1;
                 return;
               }
               if (2 == ActiveCanvasProvider.field_c) {
                 PasswordInputRenderer.field_u[this.field_k] = PasswordInputRenderer.field_u[this.field_k] - 1;
-                ok.field_k = ok.field_k - 1;
+                IsaacCipher.field_k = IsaacCipher.field_k - 1;
                 if (PasswordInputRenderer.field_u[this.field_k] < 1) {
                   PasswordInputRenderer.field_u[this.field_k] = 1;
-                  ok.field_k = ok.field_k + 1;
+                  IsaacCipher.field_k = IsaacCipher.field_k + 1;
                 }
               }
             }
@@ -221,30 +221,30 @@ final class ReassignUpgradesScreen extends MenuScreen {
               return;
             }
             PasswordInputRenderer.field_u[this.field_k] = PasswordInputRenderer.field_u[this.field_k] - 1;
-            ok.field_k = ok.field_k - 1;
+            IsaacCipher.field_k = IsaacCipher.field_k - 1;
             if (PasswordInputRenderer.field_u[this.field_k] >= 1) {
               return;
             }
             PasswordInputRenderer.field_u[this.field_k] = 1;
-            ok.field_k = ok.field_k + 1;
+            IsaacCipher.field_k = IsaacCipher.field_k + 1;
             return;
           }
-          if (0 < HardwareUnlitEffect.d(param0 ^ -2765) - ok.field_k) {
+          if (0 < HardwareUnlitEffect.d(param0 ^ -2765) - IsaacCipher.field_k) {
             PasswordInputRenderer.field_u[this.field_k] = PasswordInputRenderer.field_u[this.field_k] + 1;
-            ok.field_k = ok.field_k + 1;
+            IsaacCipher.field_k = IsaacCipher.field_k + 1;
             if (PasswordInputRenderer.field_u[this.field_k] <= 10) {
               return;
             }
             PasswordInputRenderer.field_u[this.field_k] = 10;
-            ok.field_k = ok.field_k - 1;
+            IsaacCipher.field_k = IsaacCipher.field_k - 1;
             return;
           }
           if (2 == ActiveCanvasProvider.field_c) {
             PasswordInputRenderer.field_u[this.field_k] = PasswordInputRenderer.field_u[this.field_k] - 1;
-            ok.field_k = ok.field_k - 1;
+            IsaacCipher.field_k = IsaacCipher.field_k - 1;
             if (PasswordInputRenderer.field_u[this.field_k] < 1) {
               PasswordInputRenderer.field_u[this.field_k] = 1;
-              ok.field_k = ok.field_k + 1;
+              IsaacCipher.field_k = IsaacCipher.field_k + 1;
             }
           }
           return;
@@ -264,26 +264,26 @@ final class ReassignUpgradesScreen extends MenuScreen {
             return;
           }
           if (1 == ActiveCanvasProvider.field_c &&
-            0 < HardwareUnlitEffect.d(param0 ^ -2765) - ok.field_k) {
+            0 < HardwareUnlitEffect.d(param0 ^ -2765) - IsaacCipher.field_k) {
             PasswordInputRenderer.field_u[this.field_k] = PasswordInputRenderer.field_u[this.field_k] + 1;
-            ok.field_k = ok.field_k + 1;
+            IsaacCipher.field_k = IsaacCipher.field_k + 1;
             if (PasswordInputRenderer.field_u[this.field_k] <= 10) {
               return;
             }
             PasswordInputRenderer.field_u[this.field_k] = 10;
-            ok.field_k = ok.field_k - 1;
+            IsaacCipher.field_k = IsaacCipher.field_k - 1;
             return;
           }
           if (2 != ActiveCanvasProvider.field_c) {
             return;
           }
           PasswordInputRenderer.field_u[this.field_k] = PasswordInputRenderer.field_u[this.field_k] - 1;
-          ok.field_k = ok.field_k - 1;
+          IsaacCipher.field_k = IsaacCipher.field_k - 1;
           if (PasswordInputRenderer.field_u[this.field_k] >= 1) {
             return;
           }
           PasswordInputRenderer.field_u[this.field_k] = 1;
-          ok.field_k = ok.field_k + 1;
+          IsaacCipher.field_k = IsaacCipher.field_k + 1;
           return;
         }
         this.field_k = -1;
@@ -298,30 +298,30 @@ final class ReassignUpgradesScreen extends MenuScreen {
             return;
           }
           PasswordInputRenderer.field_u[this.field_k] = PasswordInputRenderer.field_u[this.field_k] - 1;
-          ok.field_k = ok.field_k - 1;
+          IsaacCipher.field_k = IsaacCipher.field_k - 1;
           if (PasswordInputRenderer.field_u[this.field_k] >= 1) {
             return;
           }
           PasswordInputRenderer.field_u[this.field_k] = 1;
-          ok.field_k = ok.field_k + 1;
+          IsaacCipher.field_k = IsaacCipher.field_k + 1;
           return;
         }
-        if (0 < HardwareUnlitEffect.d(param0 ^ -2765) - ok.field_k) {
+        if (0 < HardwareUnlitEffect.d(param0 ^ -2765) - IsaacCipher.field_k) {
           PasswordInputRenderer.field_u[this.field_k] = PasswordInputRenderer.field_u[this.field_k] + 1;
-          ok.field_k = ok.field_k + 1;
+          IsaacCipher.field_k = IsaacCipher.field_k + 1;
           if (PasswordInputRenderer.field_u[this.field_k] <= 10) {
             return;
           }
           PasswordInputRenderer.field_u[this.field_k] = 10;
-          ok.field_k = ok.field_k - 1;
+          IsaacCipher.field_k = IsaacCipher.field_k - 1;
           return;
         }
         if (2 == ActiveCanvasProvider.field_c) {
           PasswordInputRenderer.field_u[this.field_k] = PasswordInputRenderer.field_u[this.field_k] - 1;
-          ok.field_k = ok.field_k - 1;
+          IsaacCipher.field_k = IsaacCipher.field_k - 1;
           if (PasswordInputRenderer.field_u[this.field_k] < 1) {
             PasswordInputRenderer.field_u[this.field_k] = 1;
-            ok.field_k = ok.field_k + 1;
+            IsaacCipher.field_k = IsaacCipher.field_k + 1;
           }
         }
         return;

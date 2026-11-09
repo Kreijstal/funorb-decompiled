@@ -88,7 +88,7 @@ abstract class GameClientShell extends GameApplet {
             ScrollViewport.a((byte) 16);
             ArchiveCatalog.a((byte) 87, 2, NoiseSliceGenerator.weClosedTheConnectionText);
             GraphicsToolkit.a(-36);
-            ts.field_d = true;
+            QuickChatCommand.field_d = true;
             sj.field_a = 15000L + wq.monotonicTimeMillis(-96);
           }
         }
@@ -135,7 +135,7 @@ abstract class GameClientShell extends GameApplet {
                 ArchiveCatalog.a((byte) -97, 256, o.field_a);
               } else {
                 if (LegacyOpenGlShoreWaveWaterEffect.field_l == 4) {
-                  ArchiveCatalog.a((byte) 61, 256, eg.field_n);
+                  ArchiveCatalog.a((byte) 61, 256, ServerIntArrayRequest.field_n);
                 } else {
                   if (LegacyOpenGlShoreWaveWaterEffect.field_l == 2) {
                     ArchiveCatalog.a((byte) 90, 256, ValidationMessageWidget.dataServerFullOrText);
@@ -148,7 +148,7 @@ abstract class GameClientShell extends GameApplet {
                   }
                 }
               }
-              ts.field_d = true;
+              QuickChatCommand.field_d = true;
             }
           }
         }
@@ -156,7 +156,7 @@ abstract class GameClientShell extends GameApplet {
           LegacyOpenGlShoreWaveWaterEffect.field_l != 0 ||
           FixedPointPerlinNoise3D.a(-23517)) &&
           wq.monotonicTimeMillis(-87) >= sj.field_a) {
-          ts.field_d = false;
+          QuickChatCommand.field_d = false;
           if (-1 != LegacyOpenGlShoreWaveWaterEffect.field_l &&
             0 != LegacyOpenGlShoreWaveWaterEffect.field_l) {
             LegacyOpenGlShoreWaveWaterEffect.field_l = -1;
@@ -240,7 +240,7 @@ abstract class GameClientShell extends GameApplet {
         if (TextureCoordinateGeneration.field_a == 11) {
           if (vf.field_a != null && (!vf.field_a.loadIndex((byte) 127) ||
             !vf.field_a.tryLoadAllGroups(true))) {
-            NameSuggestionsPanel.a(20, 0.0f, lq.a(117, mm.field_c, LegacyOpenGlTexture3D.field_k, vf.field_a));
+            NameSuggestionsPanel.a(20, 0.0f, lq.a(117, AccountRequestState.field_c, LegacyOpenGlTexture3D.field_k, vf.field_a));
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -282,7 +282,7 @@ abstract class GameClientShell extends GameApplet {
         if (!FixedPointPerlinNoise3D.a(-23517)) {
           return -1;
         }
-        if (ts.field_d) {
+        if (QuickChatCommand.field_d) {
           return -1;
         }
         var2 = UsernameCredentials.pollLogin(LegacyOpenGlRidgedWaterEffect.c((byte) -2), this.field_z, (byte) 56, true, this.field_w, ResourceRequest.c((byte) -97));
@@ -299,7 +299,7 @@ abstract class GameClientShell extends GameApplet {
           }
           ScrollViewport.a((byte) 63);
           ArchiveCatalog.a((byte) 114, var2, MouseWheelInput.field_c);
-          ts.field_d = true;
+          QuickChatCommand.field_d = true;
           sj.field_a = 15000L + wq.monotonicTimeMillis(-50);
           return var2;
         }
@@ -466,7 +466,7 @@ abstract class GameClientShell extends GameApplet {
             SlowBurstParticle.a(3, (byte) -73);
           }
           if (InteractiveWidget.field_z[3]) {
-            ko.a(0, 4);
+            ko.resendProgressAndArrayRequests(0, 4);
           }
           if (InteractiveWidget.field_z[4]) {
             GraphicsOptionsDialog.a(28778, 5);
@@ -489,7 +489,7 @@ abstract class GameClientShell extends GameApplet {
         int var3 = (var2 & 1) != 0 ? 1 : 0;
         int var4 = -1 + gu.field_d;
         byte[] var5 = new byte[var4];
-        ig.field_a.a(var5, 0, 0, var4);
+        ig.field_a.readCipherBytes(var5, 0, 0, var4);
         if (param0 > -55) {
           this.field_w = -30;
         }
@@ -647,12 +647,12 @@ abstract class GameClientShell extends GameApplet {
               ic.a(4);
             }
             if (param2) {
-              ts.field_d = false;
+              QuickChatCommand.field_d = false;
             } else {
               var5_intLifetime2 = UsernameCredentials.pollLogin(LegacyOpenGlRidgedWaterEffect.c((byte) -2), this.field_z, (byte) 21, false, this.field_w, ResourceRequest.c((byte) -124));
               if (-1 != var5_intLifetime2) {
                 if (var5_intLifetime2 == 0) {
-                  km.field_k = lb.field_a;
+                  km.field_k = StringBuilderSupport.field_a;
                   RasterBuffer.b(2);
                   jv.field_a = 10;
                   IntrusiveNode.field_a = false;
@@ -688,7 +688,7 @@ abstract class GameClientShell extends GameApplet {
             LegacyOpenGlTexture2D.openSupportPage(LegacyOpenGlUnlitEffect.c(2), (byte) -124);
           }
           if (var4 == 10) {
-            InwardSparkParticle.field_v.g(17, param0 ^ 16989);
+            InwardSparkParticle.field_v.writeCipherByte(17, param0 ^ 16989);
           }
           if (var4 == 11) {
             of.a(8192, LegacyOpenGlUnlitEffect.c(2));

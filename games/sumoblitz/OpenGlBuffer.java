@@ -216,7 +216,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
         }
     }
 
-    final static byte[] a(int param0, int param1, byte[] param2, pl param3) {
+    final static byte[] a(int param0, int param1, byte[] param2, IsaacPacketBuffer param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -233,7 +233,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
         RuntimeException var4 = null;
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var4_int = param3.b(param0, (byte) -87);
+          var4_int = param3.readBits(param0, (byte) -87);
           if (var4_int == param1) {
             stackIn_3_0 = null;
             return (byte[]) (stackIn_3_0);
@@ -242,11 +242,11 @@ abstract class OpenGlBuffer implements GpuBuffer {
             var4_int != param2.length) {
             param2 = new byte[var4_int];
           }
-          var5 = param3.b(3, (byte) -94);
-          var6 = (byte)param3.b(8, (byte) -117);
+          var5 = param3.readBits(3, (byte) -94);
+          var6 = (byte)param3.readBits(8, (byte) -117);
           if (var5 > 0) {
             for (var7 = 0; var4_int > var7; var7++) {
-              param2[var7] = (byte)(var6 + param3.b(var5, (byte) -127));
+              param2[var7] = (byte)(var6 + param3.readBits(var5, (byte) -127));
             }
           } else {
             for (var7 = 0; var7 < var4_int; var7++) {

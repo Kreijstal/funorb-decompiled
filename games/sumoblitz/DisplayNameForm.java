@@ -1,24 +1,24 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vq extends WidgetContainer implements NameSuggestionListener, WidgetActionListener {
-    private ValidatedTextInputWidget field_B;
-    private InteractiveWidget field_A;
-    NameSuggestionsPanel field_E;
+final class DisplayNameForm extends WidgetContainer implements NameSuggestionListener, WidgetActionListener {
+    private ValidatedTextInputWidget nameInput;
+    private InteractiveWidget backButton;
+    NameSuggestionsPanel nameSuggestions;
     static String areYouSureYouText;
-    private InteractiveWidget field_C;
+    private InteractiveWidget submitButton;
 
-    private final boolean e(byte param0) {
-        if (param0 != 91) {
+    private final boolean canSubmit(byte guard) {
+        if (guard != 91) {
           return false;
         }
-        if (this.a((ValidationProvider) (this.field_B), (byte) -116)) {
+        if (this.isFieldValid((ValidationProvider) (this.nameInput), (byte) -116)) {
           return true;
         }
         return false;
     }
 
-    private final boolean a(ValidationProvider param0, byte param1) {
+    private final boolean isFieldValid(ValidationProvider provider, byte guard) {
         InputValidator var3 = null;
         RuntimeException var3_ref = null;
         ValidationStatus var4 = null;
@@ -29,11 +29,11 @@ final class vq extends WidgetContainer implements NameSuggestionListener, Widget
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = param0.getValidator(-120);
+          var3 = provider.getValidator(-120);
           if (var3 == null) {
             return true;
           }
-          var5 = 12 / ((-67 - param1) / 45);
+          var5 = 12 / ((-67 - guard) / 45);
           var4 = var3.getStatus(35);
           stackIn_7_0 = (qe.VALID == var4);
           return stackIn_7_0;
@@ -42,26 +42,26 @@ final class vq extends WidgetContainer implements NameSuggestionListener, Widget
           var3_ref = decompiledCaughtException;
           stackIn_10_0 = var3_ref;
           stackIn_10_1 = new StringBuilder().append("vq.F(");
-          if (param0 == null) {
+          if (provider == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    private final void e(boolean param0) {
-        if (!this.e((byte) 91)) {
+    private final void submitDisplayName(boolean guard) {
+        if (!this.canSubmit((byte) 91)) {
           return;
         }
-        if (!param0) {
+        if (!guard) {
           return;
         }
-        DropDownWidget.a(this.field_B.text, (byte) -47);
+        DropDownWidget.a(this.nameInput.text, (byte) -47);
     }
 
-    final static void a(int param0, int param1, byte[] param2, int param3, int param4, int param5, int param6) {
+    final static void uploadTextureMipmaps(int target, int guard, byte[] pixels, int width, int internalFormat, int height, int format) {
         int var17 = 0;
         int var21 = 0;
         int var22 = 0;
@@ -87,31 +87,31 @@ final class vq extends WidgetContainer implements NameSuggestionListener, Widget
         int var23 = 0;
         var23 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (param3 > 0 &&
-            !rm.a(param3, -111)) {
+          if (width > 0 &&
+            !rm.a(width, -111)) {
             throw new IllegalArgumentException("");
           }
-          if (param5 > 0 &&
-            !rm.a(param5, param1 - 23259)) {
+          if (height > 0 &&
+            !rm.a(height, guard - 23259)) {
             throw new IllegalArgumentException("");
           }
-          var7_int = pc.a(param6, (byte) -83);
+          var7_int = pc.a(format, (byte) -83);
           var8 = 0;
-          stackIn_11_0 = (param3 >= param5) ? param5 : param3;
+          stackIn_11_0 = (width >= height) ? height : width;
           var9 = stackIn_11_0;
-          if (param1 != 23143) {
+          if (guard != 23143) {
             areYouSureYouText = (String) null;
           }
-          var10 = param3 >> 1;
-          var11 = param5 >> 1;
-          var12 = param2;
+          var10 = width >> 1;
+          var11 = height >> 1;
+          var12 = pixels;
           var13 = new byte[var7_int * (var11 * var10)];
           while (true) {
-            jaggl.OpenGL.glTexImage2Dub(param0, var8, param4, param3, param5, 0, param6, 5121, var12, 0);
+            jaggl.OpenGL.glTexImage2Dub(target, var8, internalFormat, width, height, 0, format, 5121, var12, 0);
             if (var9 <= 1) {
               return;
             }
-            var16 = param3 * var7_int;
+            var16 = width * var7_int;
             for (var17 = 0; var7_int > var17; var17++) {
               var18 = var17;
               var19 = var17;
@@ -135,9 +135,9 @@ final class vq extends WidgetContainer implements NameSuggestionListener, Widget
             }
             var14 = var13;
             var13 = var12;
-            param3 = var10;
+            width = var10;
             var12 = var14;
-            param5 = var11;
+            height = var11;
             var8++;
             var10 = var10 >> 1;
             var11 = var11 >> 1;
@@ -147,49 +147,49 @@ final class vq extends WidgetContainer implements NameSuggestionListener, Widget
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
           stackIn_29_0 = var7;
-          stackIn_29_1 = new StringBuilder().append("vq.D(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_29_1 = new StringBuilder().append("vq.D(").append(target).append(',').append(guard).append(',');
+          if (pixels == null) {
             stackIn_30_2 = "null";
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(width).append(',').append(internalFormat).append(',').append(height).append(',').append(format).append(')').toString());
         }
     }
 
-    public vq() {
+    public DisplayNameForm() {
         super(0, 0, 496, 0, (WidgetRenderer) null);
-        this.field_B = new ValidatedTextInputWidget("", (WidgetListener) null, 12);
+        this.nameInput = new ValidatedTextInputWidget("", (WidgetListener) null, 12);
         TextWidgetRenderer var1 = new TextWidgetRenderer(jm.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, kw.field_b.ascent, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(MouseInputRegistration.youNeedToChooseText, var1, (WidgetListener) null);
-        this.field_C = new InteractiveWidget(tf.field_a, (WidgetListener) null);
-        this.field_A = new InteractiveWidget(IntrusiveNodeHashTable.field_h, (WidgetListener) null);
-        this.field_B.tooltip = ShaderEffect.enterTheNameYouText;
-        this.field_B.setValidator((byte) 127, new ScreenNameValidator(this.field_B));
-        this.field_C.enabled = false;
-        this.field_C.renderer = (WidgetRenderer) ((Object) new SpriteStripButtonRenderer());
-        this.field_A.renderer = (WidgetRenderer) ((Object) new LinkWidgetRenderer());
-        this.field_B.renderer = (WidgetRenderer) ((Object) new BeveledTextInputRenderer(10000536));
+        this.submitButton = new InteractiveWidget(tf.field_a, (WidgetListener) null);
+        this.backButton = new InteractiveWidget(IntrusiveNodeHashTable.field_h, (WidgetListener) null);
+        this.nameInput.tooltip = ShaderEffect.enterTheNameYouText;
+        this.nameInput.setValidator((byte) 127, new ScreenNameValidator(this.nameInput));
+        this.submitButton.enabled = false;
+        this.submitButton.renderer = (WidgetRenderer) ((Object) new SpriteStripButtonRenderer());
+        this.backButton.renderer = (WidgetRenderer) ((Object) new LinkWidgetRenderer());
+        this.nameInput.renderer = (WidgetRenderer) ((Object) new BeveledTextInputRenderer(10000536));
         int var3 = 20;
         int var4 = 4;
         var2.setBounds(92, 20, var3, 50, 270);
         int var5 = 200;
         this.addChild(var2, 81);
         var3 += 50;
-        var3 = var3 + (5 + this.a(var3, 7541, 170, this.field_B, QuickChatPhrase.playerNamesCanBeText, un.playerNameText));
-        this.field_C.setBounds(126, 496 - var5 >> 1, var3, 40, var5);
-        this.field_A.setBounds(-57, 3 + var4, var3 + 15, 40, 60);
-        this.field_A.listener = (WidgetListener) (this);
-        this.field_C.listener = (WidgetListener) (this);
-        this.addChild(this.field_C, 123);
-        this.addChild(this.field_A, 103);
-        this.field_E = new NameSuggestionsPanel((NameSuggestionListener) (this));
-        this.field_E.setBounds(-64, 60 + this.field_B.x + this.field_B.width, 20, 150, -this.field_B.width + (-this.field_B.x + this.width - 60));
-        this.addChild(this.field_E, 65);
+        var3 = var3 + (5 + this.addDefaultValidatedField(var3, 7541, 170, this.nameInput, QuickChatPhrase.playerNamesCanBeText, un.playerNameText));
+        this.submitButton.setBounds(126, 496 - var5 >> 1, var3, 40, var5);
+        this.backButton.setBounds(-57, 3 + var4, var3 + 15, 40, 60);
+        this.backButton.listener = (WidgetListener) (this);
+        this.submitButton.listener = (WidgetListener) (this);
+        this.addChild(this.submitButton, 123);
+        this.addChild(this.backButton, 103);
+        this.nameSuggestions = new NameSuggestionsPanel((NameSuggestionListener) (this));
+        this.nameSuggestions.setBounds(-64, 60 + this.nameInput.x + this.nameInput.width, 20, 150, -this.nameInput.width + (-this.nameInput.x + this.width - 60));
+        this.addChild(this.nameSuggestions, 65);
         this.setBounds(116, 0, 0, 55 + (var3 + var4), 496);
     }
 
-    private final int a(byte param0, UiWidget param1, int param2, int param3, String param4, String param5, int param6) {
+    private final int addValidatedField(byte guard, UiWidget field, int y, int fieldWidth, String label, String help, int helpHeight) {
         RuntimeException var8 = null;
         ValidationMessageWidget var9 = null;
         int var10 = 0;
@@ -204,10 +204,10 @@ final class vq extends WidgetContainer implements NameSuggestionListener, Widget
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var11 = new LabeledWidget(20, param2, 120 + param3, 25, param1, false, 120, 3, kw.field_b, 16777215, param4);
+          var11 = new LabeledWidget(20, y, 120 + fieldWidth, 25, field, false, 120, 3, kw.field_b, 16777215, label);
           this.addChild(var11, 66);
-          var9 = new ValidationMessageWidget(((ValidationProvider) ((Object) param1)).getValidator(85), param5, 126, var11.height + param2, param3 + 25, param6);
-          var10 = -54 % ((-13 - param0) / 61);
+          var9 = new ValidationMessageWidget(((ValidationProvider) ((Object) field)).getValidator(85), help, 126, var11.height + y, fieldWidth + 25, helpHeight);
+          var10 = -54 % ((-13 - guard) / 61);
           var9.listener = (WidgetListener) (this);
           this.addChild(var9, 92);
           stackIn_1_0 = var9.height + var11.height;
@@ -216,31 +216,31 @@ final class vq extends WidgetContainer implements NameSuggestionListener, Widget
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
           stackIn_4_0 = var8;
-          stackIn_4_1 = new StringBuilder().append("vq.E(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_4_1 = new StringBuilder().append("vq.E(").append(guard).append(',');
+          if (field == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
-          stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(y).append(',').append(fieldWidth).append(',');
+          if (label == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
           stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
-          if (param5 == null) {
+          if (help == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param6).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(helpHeight).append(')').toString());
         }
     }
 
     public final void invalidateNameAvailability(byte guard) {
         int var2 = -18 / ((guard - 55) / 40);
-        ((ScreenNameValidator) (this.field_B.getValidator(24))).invalidateAvailability(-1);
+        ((ScreenNameValidator) (this.nameInput.getValidator(24))).invalidateAvailability(-1);
     }
 
     public final void setSuggestedName(String name, int guard) {
@@ -252,13 +252,13 @@ final class vq extends WidgetContainer implements NameSuggestionListener, Widget
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.field_B;
+          var3 = this.nameInput;
           var4 = name;
           ((TextInputWidget) ((Object) var3)).setText(false, var4, (byte) 13);
           if (guard == 0) {
             return;
           }
-          this.field_A = (InteractiveWidget) null;
+          this.backButton = (InteractiveWidget) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -274,13 +274,13 @@ final class vq extends WidgetContainer implements NameSuggestionListener, Widget
         }
     }
 
-    public static void g(int param0) {
-        if (param0 >= 105) {
+    public static void releaseStatics(int guard) {
+        if (guard >= 105) {
           areYouSureYouText = null;
           return;
         }
         byte[] var2 = (byte[]) null;
-        vq.a(71, -40, (byte[]) null, -64, 111, 108, -111);
+        DisplayNameForm.uploadTextureMipmaps(71, -40, (byte[]) null, -64, 111, 108, -111);
         areYouSureYouText = null;
     }
 
@@ -322,7 +322,7 @@ final class vq extends WidgetContainer implements NameSuggestionListener, Widget
         }
     }
 
-    private final int a(int param0, int param1, int param2, UiWidget param3, String param4, String param5) {
+    private final int addDefaultValidatedField(int y, int guard, int fieldWidth, UiWidget field, String help, String label) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -334,29 +334,29 @@ final class vq extends WidgetContainer implements NameSuggestionListener, Widget
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != 7541) {
+          if (guard != 7541) {
             areYouSureYouText = (String) null;
           }
-          stackIn_3_0 = this.a((byte) 107, param3, param0, param2, param5, param4, 35);
+          stackIn_3_0 = this.addValidatedField((byte) 107, field, y, fieldWidth, label, help, 35);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
           stackIn_6_0 = var7;
-          stackIn_6_1 = new StringBuilder().append("vq.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_6_1 = new StringBuilder().append("vq.I(").append(y).append(',').append(guard).append(',').append(fieldWidth).append(',');
+          if (field == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
           stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
-          if (param4 == null) {
+          if (help == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
           stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
-          if (param5 == null) {
+          if (label == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
@@ -369,7 +369,7 @@ final class vq extends WidgetContainer implements NameSuggestionListener, Widget
         try {
           int var5_int = -111 / ((-25 - guard) / 45);
           super.update(parentX, -86, root, parentY);
-          this.field_C.enabled = this.e((byte) 91);
+          this.submitButton.enabled = this.canSubmit((byte) 91);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "vq.U(" + parentX + ',' + guard + ',' + (root != null ? "{...}" : "null") + ',' + parentY + ')');
         }
@@ -382,17 +382,17 @@ final class vq extends WidgetContainer implements NameSuggestionListener, Widget
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (source == this.field_A) {
+          if (source == this.backButton) {
             SpriteState.e(0);
           } else {
-            if (this.field_C == source) {
-              this.e(true);
+            if (this.submitButton == source) {
+              this.submitDisplayName(true);
             }
           }
           if (guard == 710) {
             return;
           }
-          this.field_C = (InteractiveWidget) null;
+          this.submitButton = (InteractiveWidget) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

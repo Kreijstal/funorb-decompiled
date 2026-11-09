@@ -3,7 +3,7 @@
  */
 final class kw {
     static LegacyBitmapFont field_b;
-    static qr field_c;
+    static AccountConnectionPhase accountPhase;
     static ToolkitSprite field_a;
 
     final static void pushClip(int bottom, int top, int guard, int left, int right) {
@@ -81,7 +81,7 @@ final class kw {
     }
 
     public static void releaseStatics(byte param0) {
-        field_c = null;
+        accountPhase = null;
         if (param0 >= -86) {
           field_b = (LegacyBitmapFont) null;
           field_b = null;

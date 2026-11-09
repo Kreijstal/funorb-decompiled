@@ -43,7 +43,7 @@ final class NanoTickClock extends TickClock {
           if (guard != 0) {
             NanoTickClock.releaseStatics(127);
           }
-          if (hm.field_a != ProxySocketConnector.field_e) {
+          if (AccountRequestDefaults.IDLE != ProxySocketConnector.accountCreationState) {
             return false;
           }
           var8 = new AccountCreationProgressDialog(RenderPresentationException.field_a, form);
@@ -56,8 +56,8 @@ final class NanoTickClock extends TickClock {
           DropDownLabelRenderer.field_b = emailNews;
           ValidationStatusWidget.field_G = screenName;
           FadingWidget.field_C = email;
-          eg.field_l = null;
-          ProxySocketConnector.field_e = LegacyOpenGlGraphicsHeap.field_p;
+          ServerIntArrayRequest.field_l = null;
+          ProxySocketConnector.accountCreationState = LegacyOpenGlGraphicsHeap.PENDING;
           bi.field_d = password;
           lq.field_d = age;
           return true;

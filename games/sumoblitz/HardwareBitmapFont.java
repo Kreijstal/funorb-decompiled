@@ -277,7 +277,7 @@ final class HardwareBitmapFont extends ToolkitFont {
           this.field_f.a((byte) -83, lf.REPLACE, lf.REPLACE);
         } else {
           this.field_f.a((byte) -83, SlowBurstParticle.MODULATE, lf.REPLACE);
-          this.field_f.a(mm.CONSTANT, 0, 0);
+          this.field_f.a(AccountRequestState.CONSTANT, 0, 0);
           this.field_f.a(false, param3);
         }
         var6 = this.field_f.d(77);

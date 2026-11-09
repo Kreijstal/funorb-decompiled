@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oi {
-    static qr field_a;
+    static AccountConnectionPhase WAIT_NAME_SUGGESTIONS;
     static IntrusiveDeque field_b;
     static String field_c;
     static SpriteData field_d;
@@ -18,14 +18,14 @@ final class oi {
         if (param0) {
           field_c = null;
           field_b = null;
-          field_a = null;
+          WAIT_NAME_SUGGESTIONS = null;
           field_d = null;
           return;
         }
         field_b = (IntrusiveDeque) null;
         field_c = null;
         field_b = null;
-        field_a = null;
+        WAIT_NAME_SUGGESTIONS = null;
         field_d = null;
     }
 
@@ -61,7 +61,7 @@ final class oi {
     }
 
     static {
-        field_a = new qr();
+        WAIT_NAME_SUGGESTIONS = new AccountConnectionPhase();
         field_b = new IntrusiveDeque();
     }
 }

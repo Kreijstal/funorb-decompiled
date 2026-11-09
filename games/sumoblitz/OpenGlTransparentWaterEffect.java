@@ -3,7 +3,7 @@
  */
 final class OpenGlTransparentWaterEffect extends ShaderEffect {
     private WaterTextureResources field_f;
-    static ts field_h;
+    static QuickChatCommand field_h;
     private OpenGlGraphicsToolkit field_j;
     private OpenGlAssemblyProgram field_g;
     static int field_e;
@@ -356,7 +356,7 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
     }
 
     static {
-        field_h = new ts(4, 1, 1, 1);
+        field_h = new QuickChatCommand(4, 1, 1, 1);
         field_k = false;
     }
 }

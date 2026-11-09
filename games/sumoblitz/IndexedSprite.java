@@ -55,12 +55,12 @@ abstract class IndexedSprite {
         }
     }
 
-    final static ts[] a(int param0) {
-        if (param0 >= 10) {
-          return new ts[]{OpenGlTexture3D.field_n, RasterBuffer.field_i, sj.field_b, OpenGlTransparentWaterEffect.field_h, lm.field_a, LegacyOpenGlSpriteTexture.field_t, RenderPresentationException.field_e, DualLinkNode.field_n, vd.field_b, ClientExceptionSupport.field_b, ea.field_a, AccountCreationForm.field_G, ic.field_a, uc.field_d};
+    final static QuickChatCommand[] quickChatCommands(int guard) {
+        if (guard >= 10) {
+          return new QuickChatCommand[]{OpenGlTexture3D.field_n, RasterBuffer.field_i, sj.field_b, OpenGlTransparentWaterEffect.field_h, lm.field_a, LegacyOpenGlSpriteTexture.field_t, RenderPresentationException.field_e, DualLinkNode.field_n, vd.field_b, ClientExceptionSupport.field_b, ea.field_a, AccountCreationForm.field_G, ic.field_a, uc.field_d};
         }
         EMAIL_CREDENTIALS = (LoginCredentialType) null;
-        return new ts[]{OpenGlTexture3D.field_n, RasterBuffer.field_i, sj.field_b, OpenGlTransparentWaterEffect.field_h, lm.field_a, LegacyOpenGlSpriteTexture.field_t, RenderPresentationException.field_e, DualLinkNode.field_n, vd.field_b, ClientExceptionSupport.field_b, ea.field_a, AccountCreationForm.field_G, ic.field_a, uc.field_d};
+        return new QuickChatCommand[]{OpenGlTexture3D.field_n, RasterBuffer.field_i, sj.field_b, OpenGlTransparentWaterEffect.field_h, lm.field_a, LegacyOpenGlSpriteTexture.field_t, RenderPresentationException.field_e, DualLinkNode.field_n, vd.field_b, ClientExceptionSupport.field_b, ea.field_a, AccountCreationForm.field_G, ic.field_a, uc.field_d};
     }
 
     public static void releaseStatics(int param0) {

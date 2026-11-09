@@ -3,13 +3,13 @@
  */
 import java.util.*;
 
-final class ts {
+final class QuickChatCommand {
     static int field_a;
     static ToolkitSprite[] field_e;
     static int field_c;
     static boolean field_d;
-    int field_b;
-    int field_f;
+    int id;
+    int parameterCount;
 
     public static void releaseStatics(int param0) {
         if (param0 != -13252) {
@@ -99,9 +99,9 @@ final class ts {
         throw new IllegalStateException();
     }
 
-    ts(int param0, int param1, int param2, int param3) {
-        this.field_f = param3;
-        this.field_b = param0;
+    QuickChatCommand(int commandId, int unusedFirst, int unusedSecond, int definitionParameterCount) {
+        this.parameterCount = definitionParameterCount;
+        this.id = commandId;
     }
 
     static {

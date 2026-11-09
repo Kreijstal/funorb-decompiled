@@ -55,7 +55,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           }
           if (LegacyOpenGlEnvironmentWaterEffect.field_i >= 0 &&
             var2_int >= 0) {
-            jf.field_d[LegacyOpenGlEnvironmentWaterEffect.field_i] = var2_int;
+            ContentTransitionPhase.field_d[LegacyOpenGlEnvironmentWaterEffect.field_i] = var2_int;
             LegacyOpenGlEnvironmentWaterEffect.field_i = LegacyOpenGlEnvironmentWaterEffect.field_i + 1 & 127;
             if (LegacyOpenGlEnvironmentWaterEffect.field_i == HardwareTurbulentWaterNoise.field_v) {
               LegacyOpenGlEnvironmentWaterEffect.field_i = -1;
@@ -142,7 +142,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             }
             if (LegacyOpenGlEnvironmentWaterEffect.field_i >= 0 &&
               var2_int >= 0) {
-              jf.field_d[LegacyOpenGlEnvironmentWaterEffect.field_i] = ~var2_int;
+              ContentTransitionPhase.field_d[LegacyOpenGlEnvironmentWaterEffect.field_i] = ~var2_int;
               LegacyOpenGlEnvironmentWaterEffect.field_i = LegacyOpenGlEnvironmentWaterEffect.field_i + 1 & 127;
               if (LegacyOpenGlEnvironmentWaterEffect.field_i == HardwareTurbulentWaterNoise.field_v) {
                 LegacyOpenGlEnvironmentWaterEffect.field_i = -1;

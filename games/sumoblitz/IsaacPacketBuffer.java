@@ -1,57 +1,57 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pl extends PacketBuffer {
+final class IsaacPacketBuffer extends PacketBuffer {
     static int field_u;
     static String changeDisplayNameText;
-    private int field_w;
+    private int bitPosition;
     static String[] field_r;
     static IntrusiveDeque field_v;
-    private ok field_t;
+    private IsaacCipher cipher;
     static int field_y;
     static String levelText;
     static String enterAPasswordForText;
 
-    final void g(int param0, int param1) {
+    final void writeCipherByte(int value, int guard) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$0] = (byte)(param0 + this.field_t.a(GzipDecompressor.bitwiseXor(param1, 264)));
-        if (param1 != 8) {
-          this.i((byte) 39);
+        this.payload[fieldTemp$0] = (byte)(value + this.cipher.nextInt(GzipDecompressor.bitwiseXor(guard, 264)));
+        if (guard != 8) {
+          this.beginBitAccess((byte) 39);
         }
     }
 
-    pl(byte[] param0) {
-        super(param0);
+    IsaacPacketBuffer(byte[] bytes) {
+        super(bytes);
     }
 
-    final int b(int param0, byte param1) {
+    final int readBits(int count, byte guard) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var6 = Sumoblitz.field_L ? 1 : 0;
-        int var3 = this.field_w >> 3;
-        int var4 = 8 - (7 & this.field_w);
-        if (param1 < -85) {
+        int var3 = this.bitPosition >> 3;
+        int var4 = 8 - (7 & this.bitPosition);
+        if (guard < -85) {
           var5 = 0;
-          this.field_w = this.field_w + param0;
-          while (var4 < param0) {
+          this.bitPosition = this.bitPosition + count;
+          while (var4 < count) {
             incrementValue$0 = var3;
             var3++;
-            var5 = var5 + ((this.payload[incrementValue$0] & CachedArchiveProvider.field_z[var4]) << param0 - var4);
-            param0 = param0 - var4;
+            var5 = var5 + ((this.payload[incrementValue$0] & CachedArchiveProvider.field_z[var4]) << count - var4);
+            count = count - var4;
             var4 = 8;
           }
-          if (var4 == param0) {
+          if (var4 == count) {
             var5 = var5 + (CachedArchiveProvider.field_z[var4] & this.payload[var3]);
           } else {
-            var5 = var5 + (this.payload[var3] >> var4 - param0 & CachedArchiveProvider.field_z[param0]);
+            var5 = var5 + (this.payload[var3] >> var4 - count & CachedArchiveProvider.field_z[count]);
           }
           return var5;
         }
         return 116;
     }
 
-    final void a(byte[] param0, int param1, int param2, int param3) {
+    final void readCipherBytes(byte[] destination, int start, int destinationOffset, int end) {
         int var5_int = 0;
         int fieldTemp$0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -62,10 +62,10 @@ final class pl extends PacketBuffer {
         int var6 = 0;
         var6 = Sumoblitz.field_L ? 1 : 0;
         try {
-          for (var5_int = param1; param3 > var5_int; var5_int++) {
+          for (var5_int = start; end > var5_int; var5_int++) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            param0[var5_int + param2] = (byte)(this.payload[fieldTemp$0] - this.field_t.a(256));
+            destination[var5_int + destinationOffset] = (byte)(this.payload[fieldTemp$0] - this.cipher.nextInt(256));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -73,48 +73,48 @@ final class pl extends PacketBuffer {
           var5 = decompiledCaughtException;
           stackIn_7_0 = var5;
           stackIn_7_1 = new StringBuilder().append("pl.I(");
-          if (param0 == null) {
+          if (destination == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(start).append(',').append(destinationOffset).append(',').append(end).append(')').toString());
         }
     }
 
-    final void i(byte param0) {
-        int var2 = -18 / ((-28 - param0) / 59);
-        this.field_w = 8 * this.position;
+    final void beginBitAccess(byte guard) {
+        int var2 = -18 / ((-28 - guard) / 59);
+        this.bitPosition = 8 * this.position;
     }
 
-    final void h(byte param0) {
-        if (param0 != -63) {
+    final void endBitAccess(byte guard) {
+        if (guard != -63) {
           return;
         }
-        this.position = (this.field_w + 7) / 8;
+        this.position = (this.bitPosition + 7) / 8;
     }
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void detachMouseInput(java.awt.Component component, int guard) {
         try {
-          if (param1 != 7) {
+          if (guard != 7) {
             java.awt.Component var3 = (java.awt.Component) null;
-            pl.a((java.awt.Component) null, 93);
+            IsaacPacketBuffer.detachMouseInput((java.awt.Component) null, 93);
           }
-          param0.removeMouseListener(ConfirmedEmailValidator.field_h);
-          param0.removeMouseMotionListener(ConfirmedEmailValidator.field_h);
-          param0.removeFocusListener(ConfirmedEmailValidator.field_h);
+          component.removeMouseListener(ConfirmedEmailValidator.field_h);
+          component.removeMouseMotionListener(ConfirmedEmailValidator.field_h);
+          component.removeFocusListener(ConfirmedEmailValidator.field_h);
           LegacyOpenGlNormalMapGenerator.field_a = 0;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "pl.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "pl.B(" + (component != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
-    final void a(byte param0, int[] param1) {
+    final void initializeCipher(byte guard, int[] seed) {
         try {
-          this.field_t = new ok(param1);
-          int var3_int = 41 % ((param0 - 21) / 39);
+          this.cipher = new IsaacCipher(seed);
+          int var3_int = 41 % ((guard - 21) / 39);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "pl.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "pl.C(" + guard + ',' + (seed != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -134,21 +134,21 @@ final class pl extends PacketBuffer {
         field_r = null;
     }
 
-    pl(int param0) {
-        super(param0);
+    IsaacPacketBuffer(int capacity) {
+        super(capacity);
     }
 
-    final int i(int param0) {
+    final int readCipherByte(int guard) {
         int fieldTemp$0 = 0;
-        if (param0 == 255) {
+        if (guard == 255) {
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
-          return this.payload[fieldTemp$0] - this.field_t.a(256) & 255;
+          return this.payload[fieldTemp$0] - this.cipher.nextInt(256) & 255;
         }
-        this.field_w = 51;
+        this.bitPosition = 51;
         int fieldTemp$1 = this.position;
         this.position = this.position + 1;
-        return this.payload[fieldTemp$1] - this.field_t.a(256) & 255;
+        return this.payload[fieldTemp$1] - this.cipher.nextInt(256) & 255;
     }
 
     static {

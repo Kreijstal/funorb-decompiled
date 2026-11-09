@@ -3,13 +3,13 @@
  */
 final class lm {
     private IndexBuffer field_b;
-    static ts field_a;
+    static QuickChatCommand field_a;
 
     final void a(int param0) {
         if (null != this.field_b) {
           this.field_b.close(param0 + 12002);
           if (param0 != -1) {
-            field_a = (ts) null;
+            field_a = (QuickChatCommand) null;
             return;
           }
           return;
@@ -17,13 +17,13 @@ final class lm {
         if (param0 == -1) {
           return;
         }
-        field_a = (ts) null;
+        field_a = (QuickChatCommand) null;
     }
 
     public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != 6) {
-          field_a = (ts) null;
+          field_a = (QuickChatCommand) null;
         }
     }
 
@@ -87,6 +87,6 @@ final class lm {
     }
 
     static {
-        field_a = new ts(6, 0, 4, 2);
+        field_a = new QuickChatCommand(6, 0, 4, 2);
     }
 }

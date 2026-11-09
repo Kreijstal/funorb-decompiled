@@ -249,8 +249,8 @@ abstract class LegacyOpenGlTexture implements LegacyOpenGlFramebufferAttachment 
           this.mipmapped = mipmaps ? true : false;
           this.toolkit = owner;
           this.target = textureTarget;
-          jaggl.OpenGL.glGenTextures(1, hg.field_m, 0);
-          this.textureId = hg.field_m[0];
+          jaggl.OpenGL.glGenTextures(1, GameProgressUpdate.field_m, 0);
+          this.textureId = GameProgressUpdate.field_m[0];
           this.updateMemoryAccounting((byte) 78, 0);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ht.<init>(" + (owner != null ? "{...}" : "null") + ',' + textureTarget + ',' + storageFormat + ',' + pixels + ',' + mipmaps + ')');

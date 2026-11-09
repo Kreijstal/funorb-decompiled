@@ -26,13 +26,13 @@ final class hw {
           sj.field_c = new PcmStreamMixer();
           IntrusiveDequeCursor.field_c = param7;
           LegacyOpenGlEffectManager.field_a.setStream(sj.field_c);
-          qr.field_b = param5;
+          AccountConnectionPhase.field_b = param5;
           if (param3 <= 103) {
             PlatformTaskDispatcher var9 = (PlatformTaskDispatcher) null;
             hw.a((java.awt.Component) null, -65, -27, (byte) 49, true, (MusicCrossfadeStream) null, (PlatformTaskDispatcher) null, -58);
           }
-          qr.field_b.setVolume((byte) -43, tt.field_l);
-          EmailCredentials.field_f.setStream(qr.field_b);
+          AccountConnectionPhase.field_b.setVolume((byte) -43, tt.field_l);
+          EmailCredentials.field_f.setStream(AccountConnectionPhase.field_b);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "hw.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }

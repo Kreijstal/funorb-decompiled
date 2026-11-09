@@ -5,7 +5,7 @@ package jagdx;
 
 public final class IDirect3DDevice extends jaclib.peer.IUnknown {
     private static float[] a;
-    private jaclib.peer.pf b;
+    private jaclib.peer.PeerReferenceManager b;
 
     public final int a(int param0, boolean param1) {
         return this.SetRenderStateb(param0, param1);
@@ -21,7 +21,7 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
 
     public final jagdx.IDirect3DVertexDeclaration a(jagdx.VertexElementCollection param0, jagdx.IDirect3DVertexDeclaration param1) {
         if (param1 != null) {
-          param1.a(-22671);
+          param1.release(-22671);
         } else {
           param1 = new jagdx.IDirect3DVertexDeclaration(this.b);
         }
@@ -29,7 +29,7 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
         if (!jagdx.HResult.failed(var3, -1)) {
           return param1;
         }
-        throw new jagdx.fg(String.valueOf(var3));
+        throw new jagdx.DirectXException(String.valueOf(var3));
     }
 
     public final int a(int param0, float param1, float param2, float param3, float param4) {
@@ -49,7 +49,7 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
         jagdx.IDirect3DVertexShader var2 = new jagdx.IDirect3DVertexShader(this.b);
         int var3 = this._CreateVertexShader(param0, var2);
         if (jagdx.HResult.failed(var3, -1)) {
-          throw new jagdx.fg(String.valueOf(var3));
+          throw new jagdx.DirectXException(String.valueOf(var3));
         }
         return var2;
     }
@@ -64,11 +64,11 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
         if (param4 == null) {
           param4 = new jagdx.IDirect3DVertexBuffer(this.b);
         } else {
-          param4.a(-22671);
+          param4.release(-22671);
         }
         int var6 = this._CreateVertexBuffer(param0, param1, param2, param3, param4);
         if (jagdx.HResult.failed(var6, -1)) {
-          throw new jagdx.fg(String.valueOf(var6));
+          throw new jagdx.DirectXException(String.valueOf(var6));
         }
         return param4;
     }
@@ -86,7 +86,7 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
         if (!jagdx.HResult.failed(var3, -1)) {
           return var2;
         }
-        throw new jagdx.fg(String.valueOf(var3));
+        throw new jagdx.DirectXException(String.valueOf(var3));
     }
 
     public final native int SetPixelShaderConstantF(int param0, float[] param1, int param2);
@@ -101,12 +101,12 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
         if (!jagdx.HResult.failed(var9, -1)) {
           return var8;
         }
-        throw new jagdx.fg(String.valueOf(var9));
+        throw new jagdx.DirectXException(String.valueOf(var9));
     }
 
     private final native int _CreateRenderTarget(int param0, int param1, int param2, int param3, int param4, boolean param5, jagdx.IDirect3DSurface param6);
 
-    IDirect3DDevice(jaclib.peer.pf param0) {
+    IDirect3DDevice(jaclib.peer.PeerReferenceManager param0) {
         super(param0);
         this.b = param0;
     }
@@ -117,7 +117,7 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
         if (!jagdx.HResult.failed(var8, -1)) {
           return var7;
         }
-        throw new jagdx.fg(String.valueOf(var8));
+        throw new jagdx.DirectXException(String.valueOf(var8));
     }
 
     private final native int _CreateVertexDeclaration(jagdx.VertexElementCollection param0, jagdx.IDirect3DVertexDeclaration param1);
@@ -162,14 +162,14 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
         if (!jagdx.HResult.failed(var2, -1)) {
           return var1;
         }
-        throw new jagdx.fg(String.valueOf(var2));
+        throw new jagdx.DirectXException(String.valueOf(var2));
     }
 
     public final jagdx.IDirect3DSwapChain b(int param0) {
         jagdx.IDirect3DSwapChain var2 = new jagdx.IDirect3DSwapChain(this.b);
         int var3 = this._GetSwapChain(param0, var2);
         if (jagdx.HResult.failed(var3, -1)) {
-          throw new jagdx.fg(String.valueOf(var3));
+          throw new jagdx.DirectXException(String.valueOf(var3));
         }
         return var2;
     }
@@ -196,7 +196,7 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
         if (!jagdx.HResult.failed(var7, -1)) {
           return var6;
         }
-        throw new jagdx.fg(String.valueOf(var7));
+        throw new jagdx.DirectXException(String.valueOf(var7));
     }
 
     public final native int SetStreamSource(int param0, jagdx.IDirect3DVertexBuffer param1, int param2, int param3);
@@ -217,7 +217,7 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
         if (!jagdx.HResult.failed(var3, -1)) {
           return var2;
         }
-        throw new jagdx.fg(String.valueOf(var3));
+        throw new jagdx.DirectXException(String.valueOf(var3));
     }
 
     private final native int _GetSwapChain(int param0, jagdx.IDirect3DSwapChain param1);
@@ -228,7 +228,7 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
         jagdx.IDirect3DTexture var7 = new jagdx.IDirect3DTexture(this.b);
         int var8 = this._CreateTexture(param0, param1, param2, param3, param4, param5, var7);
         if (jagdx.HResult.failed(var8, -1)) {
-          throw new jagdx.fg(String.valueOf(var8));
+          throw new jagdx.DirectXException(String.valueOf(var8));
         }
         return var7;
     }
@@ -239,13 +239,13 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
 
     public final jagdx.IDirect3DIndexBuffer a(int param0, int param1, int param2, int param3, jagdx.IDirect3DIndexBuffer param4) {
         if (param4 != null) {
-          param4.a(-22671);
+          param4.release(-22671);
         } else {
           param4 = new jagdx.IDirect3DIndexBuffer(this.b);
         }
         int var6 = this._CreateIndexBuffer(param0, param1, param2, param3, param4);
         if (jagdx.HResult.failed(var6, -1)) {
-          throw new jagdx.fg(String.valueOf(var6));
+          throw new jagdx.DirectXException(String.valueOf(var6));
         }
         return param4;
     }

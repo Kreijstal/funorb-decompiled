@@ -9,7 +9,7 @@ final class qv extends IntrusiveNode {
     static ToolkitFont field_k;
 
     final static void a(int param0) {
-        ts.field_a = ts.field_a + 13;
+        QuickChatCommand.field_a = QuickChatCommand.field_a + 13;
         if (param0 != 2) {
           asYouAreUnderText = (String) null;
         }

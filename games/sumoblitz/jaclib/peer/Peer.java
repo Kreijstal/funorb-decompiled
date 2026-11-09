@@ -6,8 +6,8 @@ package jaclib.peer;
 public abstract class Peer {
     protected jaclib.peer.PeerReference reference;
 
-    protected long a() {
-        return this.reference.a(0);
+    protected long releaseReference() {
+        return this.reference.release(0);
     }
 
     private final native static void init(Class param0);

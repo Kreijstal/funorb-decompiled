@@ -105,9 +105,9 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
         try {
           var10 = new int[param5];
           int[] var8 = var10;
-          la.a(var10, 0, param5, 1);
+          ArrayUtils.fill(var10, 0, param5, 1);
           var9 = new int[param6];
-          la.a(var9, 0, param6, 1);
+          ArrayUtils.fill(var9, 0, param6, 1);
           this.setColumnWeights((byte) 50, var10);
           this.setRowWeights(-7170, var9);
         } catch (RuntimeException runtimeException) {
@@ -193,7 +193,7 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
         int var6 = -78 % ((guard - 0) / 59);
         if (this.cellLayoutFlags != null && this.cellLayoutFlags.length > 0 && var5.length > 0 &&
           oldRows > 0) {
-          la.a(this.cellLayoutFlags, 0, var5, 0, Math.min(oldRows, newRows) * var4);
+          ArrayUtils.copy(this.cellLayoutFlags, 0, var5, 0, Math.min(oldRows, newRows) * var4);
         }
         this.cellLayoutFlags = var5;
     }
@@ -208,8 +208,8 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
 
     final static boolean a(byte param0, boolean param1) {
         try {
-          pl var4 = null;
-          pl var5 = null;
+          IsaacPacketBuffer var4 = null;
+          IsaacPacketBuffer var5 = null;
           if (EmptyWidgetRenderer.field_a == null) {
             EmptyWidgetRenderer.field_a = CacheReferenceNode.field_t.a((byte) 71, ScrollPane.field_C, vp.field_a);
           }
@@ -223,7 +223,7 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
           ArchiveCatalog.field_a = dupTemp$0;
           CacheReferenceNode.field_x = dupTemp$0;
           if (EmptyWidgetRenderer.field_a.status != 1) {
-            kw.field_c = lr.field_b;
+            kw.accountPhase = lr.field_b;
           } else {
             try {
               DisplayModeConfirmationDialog.field_O = new BufferedSocket((java.net.Socket) (EmptyWidgetRenderer.field_a.result), CacheReferenceNode.field_t);
@@ -234,11 +234,11 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
               ToolkitImageProducerBuffer.field_r = param1 ? -2 : -1;
               RotarySelectorWidget.field_I = param1 ? -2 : -1;
               ContentTransitionDialog.field_Q = param1 ? -2 : -1;
-              kw.field_c = gg.field_t;
+              kw.accountPhase = gg.READY_TO_CONNECT;
               sb.a(TextHotspot.field_o, 81, CacheReferenceNode.field_r, CacheIoRequest.field_v, InwardSparkParticle.field_v);
               MessageDialog.a(0, -1);
             } catch (IOException iOException) {
-              kw.field_c = lr.field_b;
+              kw.accountPhase = lr.field_b;
             }
           }
           EmptyWidgetRenderer.field_a = null;
@@ -266,7 +266,7 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
         if (null != this.cellLayoutFlags && 0 < this.cellLayoutFlags.length && var5.length > 0 &&
           0 < oldColumns) {
           for (var6 = 0; var6 < var4; var6++) {
-            la.a(this.cellLayoutFlags, var6 * oldColumns, var5, newColumns * var6, Math.min(oldColumns, newColumns));
+            ArrayUtils.copy(this.cellLayoutFlags, var6 * oldColumns, var5, newColumns * var6, Math.min(oldColumns, newColumns));
           }
         }
         this.cellLayoutFlags = var5;
@@ -321,7 +321,7 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
           var5.length > 0 &&
           0 < oldColumns) {
           for (var6 = 0; var6 < var4; var6++) {
-            la.a(this.children, oldColumns * var6, var5, newColumns * var6, Math.min(oldColumns, newColumns));
+            ArrayUtils.copy(this.children, oldColumns * var6, var5, newColumns * var6, Math.min(oldColumns, newColumns));
           }
         }
         this.children = var5;
@@ -415,7 +415,7 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
           this.children.length > 0 &&
           0 < var5.length &&
           oldRows > 0) {
-          la.a(this.children, 0, var5, 0, var4 * Math.min(oldRows, newRows));
+          ArrayUtils.copy(this.children, 0, var5, 0, var4 * Math.min(oldRows, newRows));
         }
         if (guard != 0) {
           this.resizeLayoutColumns(-38, 89, 107);

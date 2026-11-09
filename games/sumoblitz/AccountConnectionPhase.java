@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qr {
+final class AccountConnectionPhase {
     static IntrusiveDeque reflectionChecks;
     static FontMetrics field_a;
     static ValidationStatus INVALID;
@@ -20,7 +20,7 @@ final class qr {
           var2 = new AccountServiceResult(false);
           var2.nameSuggestions = suggestions;
           if (guard != 8192) {
-            qr.a(1, -118);
+            AccountConnectionPhase.a(1, -118);
           }
           stackIn_3_0 = var2;
           return stackIn_3_0;
@@ -68,12 +68,12 @@ final class qr {
         }
     }
 
-    final boolean a(int param0) {
+    final boolean isLoginSessionPhase(int guard) {
         boolean stackIn_8_0 = false;
-        if (param0 != 17704) {
+        if (guard != 17704) {
           return false;
         }
-        stackIn_8_0 = (jj.field_f == this) || (MusicVoice.field_l == this) || (this == LegacyOpenGlUnderwaterEffect.field_j);
+        stackIn_8_0 = (jj.WAIT_LOGIN_REPLY == this) || (MusicVoice.WAIT_LOGIN_DETAILS == this) || (this == LegacyOpenGlUnderwaterEffect.CONNECTED);
         return stackIn_8_0;
     }
 

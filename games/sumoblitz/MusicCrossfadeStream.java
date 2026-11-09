@@ -402,8 +402,8 @@ final class MusicCrossfadeStream extends PcmStream {
               if (256 != var5) {
                 if (this.field_s != null &&
                   var6 <= this.field_s.length) {
-                  la.a(this.field_s, 0, var6);
-                  la.a(this.field_A, 0, var6);
+                  ArrayUtils.clear(this.field_s, 0, var6);
+                  ArrayUtils.clear(this.field_A, 0, var6);
                 } else {
                   this.field_s = new int[var6];
                   this.field_A = new int[var6];
@@ -430,7 +430,7 @@ final class MusicCrossfadeStream extends PcmStream {
             this.field_z != 0) {
             if (this.field_s != null &&
               var6 <= this.field_s.length) {
-              la.a(this.field_s, 0, var6);
+              ArrayUtils.clear(this.field_s, 0, var6);
             } else {
               this.field_A = new int[var6];
               this.field_s = new int[var6];

@@ -4,8 +4,8 @@
 package jaclib.peer;
 
 class NativeHeapPeerReference extends jaclib.peer.PeerReference {
-    NativeHeapPeerReference(jaclib.peer.sw param0, jaclib.peer.pf param1) {
-        super(param0, param1);
+    NativeHeapPeerReference(jaclib.peer.NativeHeapPeer owner, jaclib.peer.PeerReferenceManager manager) {
+        super(owner, manager);
     }
 
     protected final native long releasePeer(long param0);

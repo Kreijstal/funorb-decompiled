@@ -10,7 +10,7 @@ abstract class ContentTransitionDialog extends ResizingDialog {
     private int contentResizeDuration;
     static float field_R;
     static int field_Q;
-    private jf field_Y;
+    private ContentTransitionPhase transitionPhase;
     private int headerHeight;
     private int fadeOutDuration;
     static int field_O;
@@ -32,8 +32,8 @@ abstract class ContentTransitionDialog extends ResizingDialog {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int var3 = Sumoblitz.field_L ? 1 : 0;
-        if (null != this.field_Y) {
-          if (this.field_Y == LimitedRandomAccessFile.field_i) {
+        if (null != this.transitionPhase) {
+          if (this.transitionPhase == LimitedRandomAccessFile.FADING_OUT) {
             fieldTemp$0 = this.transitionTicks + 1;
             this.transitionTicks = this.transitionTicks + 1;
             if (fieldTemp$0 != this.fadeOutDuration) {
@@ -44,7 +44,7 @@ abstract class ContentTransitionDialog extends ResizingDialog {
               }
               return super.advanceAnimation(-28778);
             }
-            this.field_Y = lw.field_a;
+            this.transitionPhase = lw.RESIZING;
             this.animateResize(false, this.headerHeight + (12 + this.pendingContent.height), this.contentResizeDuration, this.pendingContent.width + 12);
             this.transitionTicks = 0;
             this.contentWrapper.opacity = 0;
@@ -54,7 +54,7 @@ abstract class ContentTransitionDialog extends ResizingDialog {
             }
             return super.advanceAnimation(-28778);
           }
-          if (this.field_Y != mm.field_a) {
+          if (this.transitionPhase != AccountRequestState.FADING_IN) {
             if (guard == -28778) {
               return super.advanceAnimation(-28778);
             }
@@ -64,7 +64,7 @@ abstract class ContentTransitionDialog extends ResizingDialog {
           fieldTemp$1 = this.transitionTicks + 1;
           this.transitionTicks = this.transitionTicks + 1;
           if (this.fadeInDuration == fieldTemp$1) {
-            this.field_Y = null;
+            this.transitionPhase = null;
             this.contentWrapper.opacity = 256;
             if (guard == -28778) {
               return super.advanceAnimation(-28778);
@@ -87,13 +87,13 @@ abstract class ContentTransitionDialog extends ResizingDialog {
     }
 
     final void finishResize(byte guard) {
-        if (null != this.field_Y) {
-          if (mm.field_a != this.field_Y) {
+        if (null != this.transitionPhase) {
+          if (AccountRequestState.FADING_IN != this.transitionPhase) {
             this.resizeCentered(12 + this.pendingContent.width, this.pendingContent.height + (this.headerHeight + 12), 79);
             this.installContent(this.pendingContent, -124);
           }
           this.contentWrapper.opacity = 256;
-          this.field_Y = null;
+          this.transitionPhase = null;
         }
         super.finishResize(guard);
     }
@@ -175,15 +175,15 @@ abstract class ContentTransitionDialog extends ResizingDialog {
             this.installContent((UiWidget) null, 78);
           }
           this.pendingContent = newContent;
-          if (lw.field_a == this.field_Y) {
+          if (lw.RESIZING == this.transitionPhase) {
             this.animateResize(false, this.pendingContent.height + this.headerHeight + 12, this.contentResizeDuration, this.pendingContent.width + 12);
             this.transitionTicks = 0;
             return;
           }
-          if (this.field_Y == LimitedRandomAccessFile.field_i) {
+          if (this.transitionPhase == LimitedRandomAccessFile.FADING_OUT) {
             return;
           }
-          this.field_Y = LimitedRandomAccessFile.field_i;
+          this.transitionPhase = LimitedRandomAccessFile.FADING_OUT;
           this.transitionTicks = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -210,11 +210,11 @@ abstract class ContentTransitionDialog extends ResizingDialog {
     }
 
     final void onResizeFinished(int guard) {
-        if (this.field_Y == LimitedRandomAccessFile.field_i) {
+        if (this.transitionPhase == LimitedRandomAccessFile.FADING_OUT) {
           return;
         }
         this.transitionTicks = guard;
-        this.field_Y = mm.field_a;
+        this.transitionPhase = AccountRequestState.FADING_IN;
         this.installContent(this.pendingContent, -124);
         this.contentWrapper.opacity = 0;
         this.pendingContent = null;

@@ -12,7 +12,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
         this.toolkit.a(jq.TEXTURE, 0, 0);
         if (!guard) {
           this.toolkit.a(NetworkResourceRequest.PRIMARY_COLOR, 1, 0);
-          this.toolkit.a(mm.CONSTANT, 2, 0);
+          this.toolkit.a(AccountRequestState.CONSTANT, 2, 0);
           this.toolkit.b(0, true);
           return;
         }
@@ -162,7 +162,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
 
     final void enable(boolean lighting, int guard) {
         this.toolkit.a(jq.TEXTURE, 0, 0);
-        this.toolkit.a(mm.CONSTANT, 1, 0);
+        this.toolkit.a(AccountRequestState.CONSTANT, 1, 0);
         this.toolkit.setColorCombineSource((byte) -125, 2, false, true, NetworkResourceRequest.PRIMARY_COLOR);
         this.toolkit.b(0, false);
         if (guard == 20186) {

@@ -5,7 +5,7 @@ final class MatchingTextValidator extends TextInputValidator {
     static GraphicsToolkitManager field_h;
     private TextInputWidget matchingInput;
     static int field_i;
-    static eg field_g;
+    static ServerIntArrayRequest field_g;
     static int[] field_j;
     static String optionsText;
 
@@ -23,7 +23,7 @@ final class MatchingTextValidator extends TextInputValidator {
             var3 = ((ValidationProvider) ((Object) this.matchingInput)).getValidator(72);
             if (var3 != null &&
               var3.getStatus(88) != qe.VALID) {
-              stackIn_5_0 = qr.INVALID;
+              stackIn_5_0 = AccountConnectionPhase.INVALID;
               return stackIn_5_0;
             }
           }
@@ -31,7 +31,7 @@ final class MatchingTextValidator extends TextInputValidator {
             MatchingTextValidator.intPower(-47, 52, 56);
           }
           if (!text.equals(this.matchingInput.text)) {
-            stackIn_11_0 = qr.INVALID;
+            stackIn_11_0 = AccountConnectionPhase.INVALID;
           } else {
             stackIn_11_0 = qe.VALID;
           }

@@ -194,7 +194,7 @@ final class DisplayModeErrorDialog extends ResizingDialog implements WidgetActio
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_2_0 = qr.field_b;
+          stackIn_2_0 = AccountConnectionPhase.field_b;
           stackIn_2_1 = param2 + 88;
           stackIn_2_2 = 1000000;
           stackIn_2_3 = (MusicTrack) (param0);

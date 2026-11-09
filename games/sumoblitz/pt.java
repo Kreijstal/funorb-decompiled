@@ -63,7 +63,7 @@ abstract class pt {
         int var5_int = 0;
         int[] var6 = null;
         int var8 = 0;
-        pl var10 = null;
+        IsaacPacketBuffer var10 = null;
         int[] var11 = null;
         int[] var12 = null;
         var8 = Sumoblitz.field_L ? 1 : 0;

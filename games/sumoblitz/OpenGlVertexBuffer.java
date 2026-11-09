@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class OpenGlVertexBuffer extends OpenGlBuffer implements VertexBuffer {
-    static qr field_q;
+    static AccountConnectionPhase WAIT_SERVER_SEED;
     private byte stride;
     static int[] field_o;
 
@@ -31,14 +31,14 @@ final class OpenGlVertexBuffer extends OpenGlBuffer implements VertexBuffer {
           return;
         }
         field_o = null;
-        field_q = null;
+        WAIT_SERVER_SEED = null;
     }
 
     public final boolean unmap(int guard) {
         if (guard == 22957) {
           return super.unmap(this.toolkit.field_Bc, (byte) 92);
         }
-        field_q = (qr) null;
+        WAIT_SERVER_SEED = (AccountConnectionPhase) null;
         return super.unmap(this.toolkit.field_Bc, (byte) 92);
     }
 
@@ -58,7 +58,7 @@ final class OpenGlVertexBuffer extends OpenGlBuffer implements VertexBuffer {
     }
 
     static {
-        field_q = new qr();
+        WAIT_SERVER_SEED = new AccountConnectionPhase();
         field_o = new int[2];
     }
 }

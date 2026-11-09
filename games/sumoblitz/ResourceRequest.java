@@ -11,7 +11,7 @@ abstract class ResourceRequest extends DualLinkNode {
         if (param0 > -81) {
           return (String) null;
         }
-        if (ProxySocketConnector.field_e == LegacyOpenGlGraphicsHeap.field_p) {
+        if (ProxySocketConnector.accountCreationState == LegacyOpenGlGraphicsHeap.PENDING) {
           return bi.field_d;
         }
         return kh.field_d;
@@ -46,7 +46,7 @@ abstract class ResourceRequest extends DualLinkNode {
           }
           SoftwareRasterizer.clear();
           MusicPatch.field_u = 0;
-          ok.b(256);
+          IsaacCipher.b(256);
           var2 = var1.copy();
           for (var3 = 0; var3 < 15; var3++) {
             var2.drawSilhouette(-2, -2, 16777215);

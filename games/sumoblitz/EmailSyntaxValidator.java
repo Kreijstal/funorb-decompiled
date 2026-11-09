@@ -5,11 +5,11 @@ final class EmailSyntaxValidator extends TextInputValidator {
     static int field_e;
     static int field_f;
 
-    final static eg a(byte param0, int param1) {
-        int var3 = 115 % ((param0 - 30) / 47);
-        eg var2 = new eg();
+    final static ServerIntArrayRequest requestServerIntArray(byte guard, int opcode) {
+        int var3 = 115 % ((guard - 30) / 47);
+        ServerIntArrayRequest var2 = new ServerIntArrayRequest();
         CheckboxWidget.field_E.addLast((IntrusiveNode) (var2), (byte) 39);
-        ScreenNameValidator.a(127, param1);
+        ScreenNameValidator.sendServerIntArrayRead(127, opcode);
         return var2;
     }
 
@@ -23,7 +23,7 @@ final class EmailSyntaxValidator extends TextInputValidator {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.validateText((byte) 26, text) == qr.INVALID) {
+          if (this.validateText((byte) 26, text) == AccountConnectionPhase.INVALID) {
             stackIn_2_0 = DroneDebris.pleaseCheckIfAddressText;
             return stackIn_2_0;
           }
@@ -69,7 +69,7 @@ final class EmailSyntaxValidator extends TextInputValidator {
           if (var3_int != 0) {
             return qe.VALID;
           }
-          stackIn_8_0 = qr.INVALID;
+          stackIn_8_0 = AccountConnectionPhase.INVALID;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

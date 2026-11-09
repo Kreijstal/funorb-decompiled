@@ -19,8 +19,8 @@ final class AgeValidator extends TextInputValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) text);
-          if (!jf.a(guard ^ -13159, var4)) {
-            stackIn_2_0 = qr.INVALID;
+          if (!ContentTransitionPhase.a(guard ^ -13159, var4)) {
+            stackIn_2_0 = AccountConnectionPhase.INVALID;
             return stackIn_2_0;
           }
           var5 = (CharSequence) ((Object) text);
@@ -33,7 +33,7 @@ final class AgeValidator extends TextInputValidator {
             var3_int <= 130) {
             return qe.VALID;
           }
-          stackIn_10_0 = qr.INVALID;
+          stackIn_10_0 = AccountConnectionPhase.INVALID;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -67,7 +67,7 @@ final class AgeValidator extends TextInputValidator {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.validateText((byte) 26, text) == qr.INVALID) {
+          if (this.validateText((byte) 26, text) == AccountConnectionPhase.INVALID) {
             stackIn_3_0 = gn.pleaseEnterYourAgeText;
             return stackIn_3_0;
           }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vd {
-    static ts field_b;
+    static QuickChatCommand field_b;
     static String[] field_a;
     private static String field_z;
 
@@ -15,6 +15,6 @@ final class vd {
     static {
         field_z = "vd.A(";
         field_a = new String[]{"Yes", "Return to level select"};
-        field_b = new ts(10, 2, 2, 0);
+        field_b = new QuickChatCommand(10, 2, 2, 0);
     }
 }

@@ -53,12 +53,12 @@ final class NetworkResourceRequest extends ResourceRequest {
           vf.field_b = vf.field_b - 1;
           if (vf.field_b == 0) {
             vf.field_b = 200;
-            var2 = (PlayingSound) (jf.field_c.first(107));
+            var2 = (PlayingSound) (ContentTransitionPhase.field_c.first(107));
             while (var2 != null) {
               if (!var2.lifetimeNode.isLinked(false)) {
                 var2.unlink(false);
               }
-              var2 = (PlayingSound) (jf.field_c.next((byte) 18));
+              var2 = (PlayingSound) (ContentTransitionPhase.field_c.next((byte) 18));
             }
             if (TextHotspot.field_u != null) {
               var2Lifetime1 = (PlayingSound) (TextHotspot.field_u.first(-105));

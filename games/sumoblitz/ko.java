@@ -11,32 +11,32 @@ abstract class ko extends IntrusiveNode {
     private int field_q;
     static int field_p;
 
-    final static void a(int param0, int param1) {
+    final static void resendProgressAndArrayRequests(int guard, int opcode) {
         IntrusiveNode var2 = null;
         int var3 = 0;
-        hg var4 = null;
+        GameProgressUpdate var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var4 = (hg) (SoftwareRenderTarget.field_f.first(-101));
+          var4 = (GameProgressUpdate) (SoftwareRenderTarget.field_f.first(-101));
           while (var4 != null) {
-            ToolkitRasterStateStack.a(param1, 1, var4);
-            var4 = (hg) (SoftwareRenderTarget.field_f.next((byte) 18));
+            ToolkitRasterStateStack.sendProgressUpdate(opcode, 1, var4);
+            var4 = (GameProgressUpdate) (SoftwareRenderTarget.field_f.next((byte) 18));
           }
-          if (param0 != 0) {
+          if (guard != 0) {
             field_m = (IntrusiveDeque) null;
           }
           var2 = CheckboxWidget.field_E.first(-105);
           while (var2 != null) {
-            ScreenNameValidator.a(125, param1);
+            ScreenNameValidator.sendServerIntArrayRead(125, opcode);
             var2 = CheckboxWidget.field_E.next((byte) 18);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2_ref), "ko.A(" + param0 + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2_ref), "ko.A(" + guard + ',' + opcode + ')');
         }
     }
 
@@ -50,7 +50,7 @@ abstract class ko extends IntrusiveNode {
 
     final int d(byte param0) {
         if (param0 != 109) {
-          ko.a(39, 19);
+          ko.resendProgressAndArrayRequests(39, 19);
           return this.field_o;
         }
         return this.field_o;
@@ -73,7 +73,7 @@ abstract class ko extends IntrusiveNode {
 
     public static void d(int param0) {
         if (param0 != 0) {
-          ko.a(-33, -26);
+          ko.resendProgressAndArrayRequests(-33, -26);
           field_m = null;
           return;
         }

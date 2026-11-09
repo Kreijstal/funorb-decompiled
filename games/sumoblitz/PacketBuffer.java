@@ -117,7 +117,7 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     final static void a(PlatformTaskDispatcher param0, int param1, int param2, String param3, byte param4, int param5, int param6, int param7, int param8) {
-        rl.field_q = param2;
+        RasterStateFrame.field_q = param2;
         if (param4 != -56) {
           return;
         }
@@ -127,7 +127,7 @@ class PacketBuffer extends IntrusiveNode {
           SingleChildWidget.field_x = param1;
           CompactMeshGeometry.field_u = param0;
           ValidatedTextInputWidget.field_P = param5;
-          ow.field_e = param8;
+          HuffmanDecoder.field_e = param8;
           bt.field_d = param6;
           jk.field_b = (Js5Client) ((Object) new SocketJs5Client());
           FadingWidget.field_D = new CacheIoWorker(param0);

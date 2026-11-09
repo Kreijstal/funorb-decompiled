@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mm {
+final class AccountRequestState {
     static String field_c;
     static String thisPasswordIsPartText;
-    static jf field_a;
+    static ContentTransitionPhase FADING_IN;
     static String levelSelectText;
     static TextureCombineSource CONSTANT;
     static String field_g;
@@ -16,7 +16,7 @@ final class mm {
     }
 
     public static void releaseStatics(int param0) {
-        field_a = null;
+        FADING_IN = null;
         field_g = null;
         CONSTANT = null;
         field_c = null;
@@ -31,7 +31,7 @@ final class mm {
     static {
         thisPasswordIsPartText = "This password is part of your Player Name, and would be easy to guess";
         levelSelectText = "Level select";
-        field_a = new jf();
+        FADING_IN = new ContentTransitionPhase();
         CONSTANT = new TextureCombineSource();
         field_g = "Level Select";
         field_f = 20;

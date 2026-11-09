@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class MenuScreen {
-    private er field_g;
+    private MenuSelectionController field_g;
     private int field_c;
     static int field_f;
     private int screenId;
@@ -250,7 +250,7 @@ class MenuScreen {
           var17_ref_StringLifetime1 = DraggableWidget.achievementDescriptions[var15];
           if (var11[var15] &&
             (var14 & 1 << var15) == 0) {
-            var17_ref_StringLifetime1 = jf.thisIsAHiddenText;
+            var17_ref_StringLifetime1 = ContentTransitionPhase.thisIsAHiddenText;
           }
           MessageDialog.field_db.a(480, 5023231 | param2 << 24, 0, var19Lifetime1 + 20, -(var19Lifetime1 / 2) + var8Lifetime2Lifetime2, (int[]) null, (ToolkitSprite[]) null, 8 + var13Lifetime1Lifetime2, var7, 0, SocketConnector.field_a.field_i, -8787, var17_ref_StringLifetime1, (SpriteMask) null, 1, 0);
           LegacyOpenGlEffect.field_c.a(480, var5, 0, 20 + var19Lifetime1, -(var19Lifetime1 / 2) + var8Lifetime2Lifetime2, (int[]) null, (ToolkitSprite[]) null, var13Lifetime1Lifetime2 + 8, var7, 0, SocketConnector.field_a.field_i, -8787, var17_ref_StringLifetime1, (SpriteMask) null, 1, 0);
@@ -393,11 +393,11 @@ class MenuScreen {
               !hw.field_b[84]) {
               wo.a(IntrusiveDeque.field_c, var11 << 1, var7, param4 << 24, 1, param3, var10, var6_int - var11 + 10, 1, true);
               if (var21 != 0) {
-                wo.a(ok.field_j, var11 << 1, var7, param4 << 24, 1, param3, var10, -var11 + (var6_int + 10), 1, true);
+                wo.a(IsaacCipher.field_j, var11 << 1, var7, param4 << 24, 1, param3, var10, -var11 + (var6_int + 10), 1, true);
                 wo.a(SecondaryNodeDequeIterator.field_a, var11 << 1, var7, param4 << 24, 1, param3, var10, 10 + (var6_int - var11), 1, true);
               }
             } else {
-              wo.a(ok.field_j, var11 << 1, var7, param4 << 24, 1, param3, var10, -var11 + (var6_int + 10), 1, true);
+              wo.a(IsaacCipher.field_j, var11 << 1, var7, param4 << 24, 1, param3, var10, -var11 + (var6_int + 10), 1, true);
               if (var21 != 0) {
                 wo.a(SecondaryNodeDequeIterator.field_a, var11 << 1, var7, param4 << 24, 1, param3, var10, 10 + (var6_int - var11), 1, true);
               }
@@ -418,7 +418,7 @@ class MenuScreen {
           } else {
             var13_ref = uq.field_a;
             var14_ref = qv.field_k;
-            var15_ref = qr.field_a;
+            var15_ref = AccountConnectionPhase.field_a;
             var16 = 11;
           }
           if (param2 >= -85) {
@@ -431,7 +431,7 @@ class MenuScreen {
               if (var8 != 27) {
                 if (var8 == 33) {
                   if (!MessageDialog.arcadeMode) {
-                    stackIn_30_0 = mm.levelSelectText;
+                    stackIn_30_0 = AccountRequestState.levelSelectText;
                   } else {
                     stackIn_30_0 = InteractiveWidget.returnToMainMenuText;
                   }
@@ -570,61 +570,61 @@ class MenuScreen {
         if (this.screenId == 2 &&
           !vs.b((byte) 9)) {
           if (TextureCombineOperation.field_a == 96) {
-            if (0 < this.field_g.field_g) {
-              if (3 != this.field_g.field_g) {
-                this.field_g.a(-31865, this.field_g.field_g - 1);
+            if (0 < this.field_g.selectedIndex) {
+              if (3 != this.field_g.selectedIndex) {
+                this.field_g.setKeyboardSelection(-31865, this.field_g.selectedIndex - 1);
                 if (var3 != 0) {
-                  this.field_g.a(-31865, 2);
+                  this.field_g.setKeyboardSelection(-31865, 2);
                 }
               }
             } else {
-              this.field_g.a(-31865, 2);
+              this.field_g.setKeyboardSelection(-31865, 2);
             }
           }
           if (TextureCombineOperation.field_a == 97) {
-            if (this.field_g.field_g >= 2) {
-              if (this.field_g.field_g == 2) {
-                this.field_g.a(-31865, 0);
+            if (this.field_g.selectedIndex >= 2) {
+              if (this.field_g.selectedIndex == 2) {
+                this.field_g.setKeyboardSelection(-31865, 0);
                 if (var3 != 0) {
-                  this.field_g.a(-31865, 1 + this.field_g.field_g);
+                  this.field_g.setKeyboardSelection(-31865, 1 + this.field_g.selectedIndex);
                 }
               }
             } else {
-              this.field_g.a(-31865, 1 + this.field_g.field_g);
+              this.field_g.setKeyboardSelection(-31865, 1 + this.field_g.selectedIndex);
             }
           }
           if (TextureCombineOperation.field_a == 99) {
-            if (!(this.field_g.field_g >= 0) ||
-              !(this.field_g.field_g <= 2)) {
-              this.field_g.a(-31865, gu.field_j);
+            if (!(this.field_g.selectedIndex >= 0) ||
+              !(this.field_g.selectedIndex <= 2)) {
+              this.field_g.setKeyboardSelection(-31865, gu.field_j);
               if (var3 != 0) {
-                this.field_g.a(-31865, 3);
+                this.field_g.setKeyboardSelection(-31865, 3);
               }
             } else {
-              this.field_g.a(-31865, 3);
+              this.field_g.setKeyboardSelection(-31865, 3);
             }
           }
           if (TextureCombineOperation.field_a == 98) {
-            if (this.field_g.field_g == 3) {
-              this.field_g.a(-31865, gu.field_j);
+            if (this.field_g.selectedIndex == 3) {
+              this.field_g.setKeyboardSelection(-31865, gu.field_j);
               if (var3 != 0) {
-                this.field_g.a(-31865, 3);
+                this.field_g.setKeyboardSelection(-31865, 3);
               }
             } else {
-              this.field_g.a(-31865, 3);
+              this.field_g.setKeyboardSelection(-31865, 3);
             }
           }
-          this.field_g.f(-22);
+          this.field_g.captureKey(-22);
           return;
         }
         if (this.screenId == 3) {
-          this.field_g.a(-20);
+          this.field_g.handleHorizontalNavigation(-20);
           if (TextureCombineOperation.field_a != 96 &&
             97 != TextureCombineOperation.field_a) {
             return;
           }
-          while (!this.e(this.field_g.field_g, 7746)) {
-            this.field_g.a(-125);
+          while (!this.e(this.field_g.selectedIndex, 7746)) {
+            this.field_g.handleHorizontalNavigation(-125);
             if (var3 == 0) {
               continue;
             }
@@ -632,11 +632,11 @@ class MenuScreen {
           }
           return;
         }
-        this.field_g.a((byte) 95);
+        this.field_g.handleVerticalNavigation((byte) 95);
         if (TextureCombineOperation.field_a == 98 ||
           TextureCombineOperation.field_a == 99) {
-          while (!this.e(this.field_g.field_g, 7746)) {
-            this.field_g.a((byte) 38);
+          while (!this.e(this.field_g.selectedIndex, 7746)) {
+            this.field_g.handleVerticalNavigation((byte) 38);
             if (var3 != 0) {
               break;
             }
@@ -687,17 +687,17 @@ class MenuScreen {
         }
         int var3 = 0;
         if (this.screenId == 0 &&
-          this.field_g.field_g != -1) {
-          var3 = this.field_g.field_g;
+          this.field_g.selectedIndex != -1) {
+          var3 = this.field_g.selectedIndex;
         }
-        if (this.screenId == 1 && this.field_g.field_g != -1 &&
+        if (this.screenId == 1 && this.field_g.selectedIndex != -1 &&
           RendererPreference.field_b != -1) {
-          var3 = this.field_g.field_g;
+          var3 = this.field_g.selectedIndex;
         }
         if (this.screenId == 3) {
           var3 = 2;
         }
-        this.field_g.a(param1, -123, this.a(ko.field_p, (byte) 41, pi.field_e), var3);
+        this.field_g.resetSelection(param1, -123, this.a(ko.field_p, (byte) 41, pi.field_e), var3);
         this.field_c = -1;
     }
 
@@ -744,7 +744,7 @@ class MenuScreen {
         int var9;
         var9 = Sumoblitz.field_L ? 1 : 0;
         var4 = kd.field_a[this.screenId][param2];
-        if (this.field_g.d(-31260)) {
+        if (this.field_g.isActivated(-31260)) {
           if (var4 != 5) {
             gn.a(16, true);
             if (var9 != 0) {
@@ -775,7 +775,7 @@ class MenuScreen {
             var6 = var4;
             if (0 == var6 &&
               var9 == 0) {
-              if (!(!this.field_g.d(-31260))) {
+              if (!(!this.field_g.isActivated(-31260))) {
                 StrongCacheReference.switchMenuScreen(-7753, param0, 7);
                 AffineTransform3D.field_j = this.screenId;
               }
@@ -799,7 +799,7 @@ class MenuScreen {
                   || var6 == 29
                   ) ? var6 : -1) {
                   case 25:
-                    if (!this.field_g.d(-31260)) {
+                    if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
                     TextureCombineSource.field_a = TextureCombineSource.field_a + 1;
@@ -811,7 +811,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 27:
-                    if (!this.field_g.d(-31260)) {
+                    if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
                     ul.field_f = ul.field_f + 1;
@@ -823,7 +823,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 19:
-                    if (!this.field_g.d(-31260)) {
+                    if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
                     StrongCacheReference.switchMenuScreen(-7753, param0, -1);
@@ -832,7 +832,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 23:
-                    if (!this.field_g.d(-31260)) {
+                    if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
                     ph.gameplaySession.startArcadeGame((byte) -120);
@@ -842,7 +842,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 1:
-                    if (!this.field_g.d(-31260)) {
+                    if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
                     StrongCacheReference.switchMenuScreen(-7753, param0, -1);
@@ -852,7 +852,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 28:
-                    if (!this.field_g.d(-31260)) {
+                    if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
                     {
@@ -876,7 +876,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 31:
-                    if (!this.field_g.d(-31260)) {
+                    if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
                     ih.a(-125);
@@ -889,7 +889,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 32:
-                    if (!this.field_g.d(-31260)) {
+                    if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
                     {
@@ -919,7 +919,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 33:
-                    if (!this.field_g.d(-31260)) {
+                    if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
                     regionExit3: {
@@ -966,15 +966,15 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 26:
-                    if (!this.field_g.d(-31260)) {
+                    if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
-                    hg.field_o.a(5295);
+                    GameProgressUpdate.field_o.a(5295);
                     if (var9 == 0) {
                       break regionExit2;
                     }
                   case 29:
-                    if (!this.field_g.d(-31260)) {
+                    if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
                     if (ToolkitRasterStateFrame.field_e <= -1) {
@@ -987,7 +987,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 30:
-                    if (!this.field_g.d(-31260)) {
+                    if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
                     UiWidget.d((byte) -32);
@@ -1002,7 +1002,7 @@ class MenuScreen {
                       StatusMessagePanel.a((byte) 100, true, false, 4, 2, TimedSceneEffect.field_m[var5]);
                     }
                     vl.field_a = var5;
-                    if (!this.field_g.d(-31260)) {
+                    if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
                     StrongCacheReference.switchMenuScreen(-7753, param0, 0);
@@ -1010,7 +1010,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 16:
-                    if (!this.field_g.d(-31260)) {
+                    if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
                     StrongCacheReference.switchMenuScreen(-7753, param0, 0);
@@ -1022,7 +1022,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 14:
-                    if (!this.field_g.d(-31260)) {
+                    if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
                     StrongCacheReference.switchMenuScreen(-7753, param0, 4);
@@ -1031,7 +1031,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 3:
-                    if (!this.field_g.d(-31260)) {
+                    if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
                     StatefulWidgetRenderer.field_n = 0;
@@ -1041,7 +1041,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 6:
-                    if (!this.field_g.d(-31260)) {
+                    if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
                     StrongCacheReference.switchMenuScreen(-7753, param0, AffineTransform3D.field_j);
@@ -1049,7 +1049,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 24:
-                    if (!this.field_g.d(-31260)) {
+                    if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
                     StrongCacheReference.switchMenuScreen(-7753, param0, 8);
@@ -1057,7 +1057,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 2:
-                    if (!this.field_g.d(-31260)) {
+                    if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
                     StrongCacheReference.switchMenuScreen(-7753, param0, 2);
@@ -1065,23 +1065,23 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 12:
-                    if (this.field_g.c(-103)) {
+                    if (this.field_g.isHomePressed(-103)) {
                       lt.c((byte) 53);
                       gn.a(0, true);
                     }
-                    if (this.field_g.b(103)) {
+                    if (this.field_g.isEndPressed(103)) {
                       QuickChatPhraseProvider.b(80);
                       gn.a(0, true);
                     }
-                    if (this.field_g.e(2542)) {
+                    if (this.field_g.isLeftPressed(2542)) {
                       HardwareSpecularEffect.e(-124);
                       gn.a(0, true);
                     }
-                    if (this.field_g.g(116224)) {
+                    if (this.field_g.isRightPressed(116224)) {
                       AccountCreationForm.h(0);
                       gn.a(0, true);
                     }
-                    if (!this.field_g.b((byte) 52)) {
+                    if (!this.field_g.isPointerHeld((byte) 52)) {
                       break regionExit2;
                     }
                     {
@@ -1109,19 +1109,19 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 13:
-                    if (this.field_g.c(-103)) {
+                    if (this.field_g.isHomePressed(-103)) {
                       wv.a(24238);
                     }
-                    if (this.field_g.b(103)) {
+                    if (this.field_g.isEndPressed(103)) {
                       ig.a(22075);
                     }
-                    if (this.field_g.e(2542)) {
+                    if (this.field_g.isLeftPressed(2542)) {
                       FullscreenMembershipDialog.l(34168);
                     }
-                    if (this.field_g.g(116224)) {
+                    if (this.field_g.isRightPressed(116224)) {
                       ArchiveCatalog.a((byte) -6);
                     }
-                    if (!this.field_g.b((byte) 52)) {
+                    if (!this.field_g.isPointerHeld((byte) 52)) {
                       break regionExit2;
                     }
                     {
@@ -1153,7 +1153,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 4:
-                    if (!this.field_g.d(-31260)) {
+                    if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
                     if (null != CompactMeshGeometry.field_o) {
@@ -1167,7 +1167,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 7:
-                    if (!this.field_g.d(-31260)) {
+                    if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
                     qc.a(param0, true, false);
@@ -1182,7 +1182,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 8:
-                    if (!this.field_g.d(-31260)) {
+                    if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
                     gu.field_j = 0;
@@ -1190,7 +1190,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 9:
-                    if (!this.field_g.d(-31260)) {
+                    if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
                     gu.field_j = 1;
@@ -1198,7 +1198,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 10:
-                    if (!this.field_g.d(-31260)) {
+                    if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
                     gu.field_j = 2;
@@ -1206,7 +1206,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 15:
-                    if (!this.field_g.d(-31260)) {
+                    if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
                     if (this.screenId != 4 &&
@@ -1230,7 +1230,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 18:
-                    if (!this.field_g.d(-31260)) {
+                    if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
                     if (!this.e(param2, 7746)) {
@@ -1245,12 +1245,12 @@ class MenuScreen {
                     if (this.e(param2, 7746)) {
                       break regionExit2;
                     }
-                    this.field_g.field_g = 2;
+                    this.field_g.selectedIndex = 2;
                     if (var9 == 0) {
                       break regionExit2;
                     }
                   case 17:
-                    if (!this.field_g.d(-31260)) {
+                    if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
                     if (!this.e(param2, 7746)) {
@@ -1265,12 +1265,12 @@ class MenuScreen {
                     if (this.e(param2, 7746)) {
                       break regionExit2;
                     }
-                    this.field_g.field_g = 0;
+                    this.field_g.selectedIndex = 0;
                     if (var9 == 0) {
                       break regionExit2;
                     }
                   case 11:
-                    if (!this.field_g.d(-31260)) {
+                    if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
                     if (CompactMeshGeometry.field_o != null) {
@@ -1281,7 +1281,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                   case 20:
-                    if (!this.field_g.d(-31260)) {
+                    if (!this.field_g.isActivated(-31260)) {
                       var5 = 24 / ((-15 - param1) / 43);
                       break regionExit1;
                     }
@@ -1295,14 +1295,14 @@ class MenuScreen {
                   default:
                     break regionExit2;
                 }
-                if (!(!this.field_g.d(-31260))) {
+                if (!(!this.field_g.isActivated(-31260))) {
                   HardwareTextureCache.field_f = null;
                   LegacyOpenGlShader.field_a = 0;
                 }
                 break regionExit2;
               }
             }
-            if (!this.field_g.d(-31260)) {
+            if (!this.field_g.isActivated(-31260)) {
             }
           }
           var5 = 24 / ((-15 - param1) / 43);
@@ -1474,24 +1474,24 @@ class MenuScreen {
             !hw.field_b[70] &&
             !hw.field_b[69]) {
             var6Lifetime2 = 0;
-            while (!(var6Lifetime2 >= this.field_g.field_e)) {
+            while (!(var6Lifetime2 >= this.field_g.itemCount)) {
               stackIn_83_0 = this.e(var6Lifetime2, 7746);
               if (var8 != 0) {
                 decompiledFrameCompleted0 = false;
                 break;
               }
               if (stackIn_83_0) {
-                stackIn_80_1 = (var6Lifetime2 == this.field_g.field_g);
+                stackIn_80_1 = (var6Lifetime2 == this.field_g.selectedIndex);
                 this.a(stackIn_80_1, var6Lifetime2, -112, toolkit, opacity);
               }
               var6Lifetime2++;
             }
           }
           if (decompiledFrameCompleted0) {
-            stackIn_83_0 = hg.field_o.a(false);
+            stackIn_83_0 = GameProgressUpdate.field_o.a(false);
           }
           if (stackIn_83_0) {
-            hg.field_o.a(toolkit, 22707);
+            GameProgressUpdate.field_o.a(toolkit, 22707);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1780,8 +1780,8 @@ class MenuScreen {
         if (BeveledCheckboxRenderer.hasOpenDialogs(false)) {
           return;
         }
-        if (hg.field_o.a(false)) {
-          hg.field_o.c(15);
+        if (GameProgressUpdate.field_o.a(false)) {
+          GameProgressUpdate.field_o.c(15);
           return;
         }
         if (100 > ReflectionCheck.field_q) {
@@ -1821,20 +1821,20 @@ class MenuScreen {
             }
           }
           this.a((byte) 126);
-          if (this.field_g.field_g == -1) {
+          if (this.field_g.selectedIndex == -1) {
             continue;
           }
-          this.a(false, (byte) -75, this.field_g.field_g);
+          this.a(false, (byte) -75, this.field_g.selectedIndex);
           if (var3 == 0) {
             continue;
           }
           break;
         }
         if (decompiledNaturalLoopExit0) {
-          this.field_g.a(true, this.a(LoginCredentialType.field_a, (byte) 97, AgeValidator.field_f), this.a(ko.field_p, (byte) 49, pi.field_e));
+          this.field_g.updatePointerSelection(true, this.a(LoginCredentialType.field_a, (byte) 97, AgeValidator.field_f), this.a(ko.field_p, (byte) 49, pi.field_e));
         }
-        if (-1 != this.field_g.field_g) {
-          this.a(true, (byte) 105, this.field_g.field_g);
+        if (-1 != this.field_g.selectedIndex) {
+          this.a(true, (byte) 105, this.field_g.selectedIndex);
         }
         if (ActiveCanvasProvider.field_c == 0) {
         }
@@ -1954,11 +1954,11 @@ class MenuScreen {
               var9 = var7_ref_of.field_m[gu.field_j];
               var10 = kp.a(var7_ref_of, param1 - 2, GameKeyHandler.field_a, gu.field_j);
               SocketConnector.field_a.a("10. ", param1 - 1);
-              var11 = qr.field_a.field_i + 140;
+              var11 = AccountConnectionPhase.field_a.field_i + 140;
               var11 -= 20;
               var12 = 128;
               var13 = 512;
-              var14 = 28900 - (qr.field_a.field_i / 2 - var11 + 240) * (-var11 + (240 + qr.field_a.field_i / 2));
+              var14 = 28900 - (AccountConnectionPhase.field_a.field_i / 2 - var11 + 240) * (-var11 + (240 + AccountConnectionPhase.field_a.field_i / 2));
               if (var14 > 0) {
                 Math.sqrt((double)var14);
               }
@@ -1975,7 +1975,7 @@ class MenuScreen {
               while (10 > var4) {
                 var12Lifetime1 = 128;
                 var13Lifetime1 = 512;
-                var14Lifetime1 = 28900 - (240 - var11 + qr.field_a.field_i / 2) * (qr.field_a.field_i / 2 + (-var11 + 240));
+                var14Lifetime1 = 28900 - (240 - var11 + AccountConnectionPhase.field_a.field_i / 2) * (AccountConnectionPhase.field_a.field_i / 2 + (-var11 + 240));
                 stackIn_34_0 = var14Lifetime1;
                 if (var19 != 0) {
                   break regionExit1;
@@ -2014,10 +2014,10 @@ class MenuScreen {
                 var4++;
               }
               if (var19 != 0) {
-                var6 = mm.pleaseWaitText;
+                var6 = AccountRequestState.pleaseWaitText;
               }
             } else {
-              var6 = mm.pleaseWaitText;
+              var6 = AccountRequestState.pleaseWaitText;
             }
           }
           stackIn_34_0 = 100 + (140 + SocketConnector.field_a.field_i);
@@ -2051,7 +2051,7 @@ class MenuScreen {
     MenuScreen(int param0) {
         this.field_c = -1;
         this.screenId = param0;
-        this.field_g = new er(kd.field_a[param0].length);
+        this.field_g = new MenuSelectionController(kd.field_a[param0].length);
     }
 
     private final void d(int param0, int param1) {

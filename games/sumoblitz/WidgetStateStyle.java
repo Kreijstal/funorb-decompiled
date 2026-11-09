@@ -116,7 +116,7 @@ final class WidgetStateStyle {
         return this;
     }
 
-    final static short[] decodePackedShortArray(short[] existing, pl packet, int guard, int lengthBits) {
+    final static short[] decodePackedShortArray(short[] existing, IsaacPacketBuffer packet, int guard, int lengthBits) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -132,7 +132,7 @@ final class WidgetStateStyle {
         RuntimeException var4 = null;
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var4_int = packet.b(lengthBits, (byte) -109);
+          var4_int = packet.readBits(lengthBits, (byte) -109);
           if (var4_int == 0) {
             return null;
           }
@@ -143,11 +143,11 @@ final class WidgetStateStyle {
             existing.length != var4_int) {
             existing = new short[var4_int];
           }
-          var5 = packet.b(4, (byte) -94);
-          var6 = (short)packet.b(16, (byte) -119);
+          var5 = packet.readBits(4, (byte) -94);
+          var6 = (short)packet.readBits(16, (byte) -119);
           if (var5 > 0) {
             for (var7 = 0; var4_int > var7; var7++) {
-              existing[var7] = (short)(var6 + packet.b(var5, (byte) -123));
+              existing[var7] = (short)(var6 + packet.readBits(var5, (byte) -123));
             }
           } else {
             for (var7 = 0; var7 < var4_int; var7++) {

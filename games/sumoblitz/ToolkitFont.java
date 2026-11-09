@@ -271,7 +271,7 @@ abstract class ToolkitFont {
                   } else {
                     this.a(VertexStreamLayout.field_a[var21Lifetime1], param11, (byte) 5);
                     this.a(-274, var20, param1, param10, param2, param13, VertexStreamLayout.field_a[var21Lifetime1], param3, param0);
-                    lb.field_b = 0;
+                    StringBuilderSupport.field_b = 0;
                   }
                 } else {
                   this.a(-274, var20, param1, param11 + (param10 - this.field_b.a(VertexStreamLayout.field_a[var21Lifetime1], 0)), param2, param13, VertexStreamLayout.field_a[var21Lifetime1], param3, param0);
@@ -439,8 +439,8 @@ abstract class ToolkitFont {
                     this.drawMaskedGlyph((char) var14, param3, param1, mn.field_i, false, param8, param4, param5);
                   }
                 } else {
-                  if (lb.field_b > 0) {
-                    sb.field_a = sb.field_a + lb.field_b;
+                  if (StringBuilderSupport.field_b > 0) {
+                    sb.field_a = sb.field_a + StringBuilderSupport.field_b;
                     param3 = param3 + (sb.field_a >> 8);
                     sb.field_a = sb.field_a & 255;
                   }
@@ -576,7 +576,7 @@ abstract class ToolkitFont {
     }
 
     private final void a(int param0, int param1, int param2) {
-        lb.field_b = 0;
+        StringBuilderSupport.field_b = 0;
         PacketBuffer.field_l = param0;
         mn.field_i = param0;
         if (param1 == -1) {
@@ -679,7 +679,7 @@ abstract class ToolkitFont {
             }
           }
           if (var4_int > 0) {
-            lb.field_b = (param1 - this.field_b.a(param0, 0) << 8) / var4_int;
+            StringBuilderSupport.field_b = (param1 - this.field_b.a(param0, 0) << 8) / var4_int;
           }
           if (param2 != 5) {
             var9 = (String) null;

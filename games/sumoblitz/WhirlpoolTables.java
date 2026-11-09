@@ -22,12 +22,12 @@ final class WhirlpoolTables {
         hc.field_f = 1;
         if (param0 >= 40) {
           ResourceArchive.field_f = 1;
-          la.a(CacheIoRequest.field_A, 0, 25, -1);
+          ArrayUtils.fill(CacheIoRequest.field_A, 0, 25, -1);
           return;
         }
         roundTables = (long[][]) null;
         ResourceArchive.field_f = 1;
-        la.a(CacheIoRequest.field_A, 0, 25, -1);
+        ArrayUtils.fill(CacheIoRequest.field_A, 0, 25, -1);
     }
 
     final static void a(int param0) {
@@ -42,8 +42,8 @@ final class WhirlpoolTables {
           up.field_g = new boolean[25];
           LegacyOpenGlEffectManager.field_i = 1;
           qn.field_d = new boolean[25];
-          la.a(CacheIoRequest.field_z, 0, 25, 2147483647);
-          la.a(CacheIoRequest.field_A, 0, 25, -1);
+          ArrayUtils.fill(CacheIoRequest.field_z, 0, 25, 2147483647);
+          ArrayUtils.fill(CacheIoRequest.field_A, 0, 25, -1);
           return;
         }
         roundTables = (long[][]) null;
@@ -56,8 +56,8 @@ final class WhirlpoolTables {
         up.field_g = new boolean[25];
         LegacyOpenGlEffectManager.field_i = 1;
         qn.field_d = new boolean[25];
-        la.a(CacheIoRequest.field_z, 0, 25, 2147483647);
-        la.a(CacheIoRequest.field_A, 0, 25, -1);
+        ArrayUtils.fill(CacheIoRequest.field_z, 0, 25, 2147483647);
+        ArrayUtils.fill(CacheIoRequest.field_A, 0, 25, -1);
     }
 
     static {

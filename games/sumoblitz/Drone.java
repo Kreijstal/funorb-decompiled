@@ -325,7 +325,7 @@ class Drone {
           this.destructionTicks = this.destructionTicks + 1;
           this.velocityXQ8 = this.velocityXQ8 >> 1;
           if (2 == this.destructionTicks) {
-            ts.a(this.xQ8, this.effects, -16240, 20, lr.field_a[this.droneType], this.yQ8);
+            QuickChatCommand.a(this.xQ8, this.effects, -16240, 20, lr.field_a[this.droneType], this.yQ8);
             var5 = new float[]{0.0f, -3.0f};
             var9 = kt.a((byte) -99, var5, (float)this.facingRadians);
             var6 = var9;
@@ -499,7 +499,7 @@ class Drone {
         this.blastTicksRemaining = 12;
         this.blastActive = true;
         this.effects = new IntrusiveDeque();
-        ts.a(this.xQ8, this.effects, -16240, 40, lr.field_a[this.droneType], this.yQ8);
+        QuickChatCommand.a(this.xQ8, this.effects, -16240, 40, lr.field_a[this.droneType], this.yQ8);
         int var2 = 111 % ((param0 - 57) / 38);
         gn.a(19 + ExpandingRingEffect.nextRandomInt(3, HardwareGraphicsHeap.field_o, (byte) -96), true);
     }
@@ -514,7 +514,7 @@ class Drone {
           if (var2 == 2) {
             this.mass = 40;
             this.awakeTicksRemaining = -1;
-            this.field_a = -(rl.field_k << 2) + (rl.field_k << 7);
+            this.field_a = -(RasterStateFrame.field_k << 2) + (RasterStateFrame.field_k << 7);
             this.targetSpeedQ8 = 2800;
             this.bounceScale = 1.0;
           } else {
@@ -522,7 +522,7 @@ class Drone {
               if (var2 != 4) {
                 if (5 == var2) {
                   this.bounceScale = 0.5;
-                  this.field_a = rl.field_k << 7;
+                  this.field_a = RasterStateFrame.field_k << 7;
                   this.targetSpeedQ8 = 1600;
                   this.awakeTicksRemaining = -1;
                   this.mass = 160;
@@ -536,7 +536,7 @@ class Drone {
                 }
               } else {
                 this.targetSpeedQ8 = 700;
-                this.field_a = -(rl.field_k << 2) + (rl.field_k << 7);
+                this.field_a = -(RasterStateFrame.field_k << 2) + (RasterStateFrame.field_k << 7);
                 this.field_e = 4;
                 this.field_u = 4;
                 this.awakeTicksRemaining = -1;
@@ -545,12 +545,12 @@ class Drone {
             } else {
               this.mass = 80;
               this.awakeTicksRemaining = 0;
-              this.field_a = rl.field_k << 7;
+              this.field_a = RasterStateFrame.field_k << 7;
               this.targetSpeedQ8 = 700;
             }
           }
         } else {
-          this.field_a = (rl.field_k << 7) - (rl.field_k << 2);
+          this.field_a = (RasterStateFrame.field_k << 7) - (RasterStateFrame.field_k << 2);
           this.mass = 60;
           this.targetSpeedQ8 = 600;
           this.awakeTicksRemaining = -1;
@@ -817,7 +817,7 @@ class Drone {
             var7 = (TimedSceneEffect) (this.effects.next((byte) 18));
           }
           if (0 > this.spawnAgeTicks) {
-            ts.field_e[this.droneType].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)(3072.0 * ((double)(this.radiusQ8 >> 8) / 14.0)), (int)(this.facingRadians * 32768.0 / 3.141592653589793), 1, 0, 2);
+            QuickChatCommand.field_e[this.droneType].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)(3072.0 * ((double)(this.radiusQ8 >> 8) / 14.0)), (int)(this.facingRadians * 32768.0 / 3.141592653589793), 1, 0, 2);
           }
           if (this.destructionTicks == 0) {
             if (this.droneType != 0) {
@@ -1082,7 +1082,7 @@ class Drone {
           }
           this.blastTicksRemaining = 12;
           this.effects = new IntrusiveDeque();
-          ts.a(this.xQ8, this.effects, -16240, 50, lr.field_a[this.droneType], this.yQ8);
+          QuickChatCommand.a(this.xQ8, this.effects, -16240, 50, lr.field_a[this.droneType], this.yQ8);
           this.resetBlastButtonHold(-82);
           return;
         }

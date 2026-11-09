@@ -339,7 +339,7 @@ final class CachedTextLayout extends TextLayout {
             stackIn_8_0 = -1;
             return stackIn_8_0;
           }
-          if (kw.field_c == gg.field_t) {
+          if (kw.accountPhase == gg.READY_TO_CONNECT) {
             HardwareGraphicsToolkit.field_j = null;
             InwardSparkParticle.field_v.position = 0;
             if (param6 != null) {
@@ -392,15 +392,15 @@ final class CachedTextLayout extends TextLayout {
               InwardSparkParticle.field_v.patchByteLength(InwardSparkParticle.field_v.position - var9, -13745);
             }
             MessageDialog.a(0, -1);
-            kw.field_c = vf.field_c;
+            kw.accountPhase = vf.WAIT_ACCOUNT_RESPONSE;
           }
-          if (kw.field_c == vf.field_c &&
+          if (kw.accountPhase == vf.WAIT_ACCOUNT_RESPONSE &&
             OpenGlIndexBuffer.b(-1, 1)) {
             var9Lifetime1 = ig.field_a.readUnsignedByte(-31302);
             ig.field_a.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
-              kw.field_c = oi.field_a;
+              kw.accountPhase = oi.WAIT_NAME_SUGGESTIONS;
               mn.field_g = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
@@ -414,7 +414,7 @@ final class CachedTextLayout extends TextLayout {
               if (var9Lifetime1 != 99) {
                 gu.field_d = -1;
                 TextureFormat.field_a = var9Lifetime1;
-                kw.field_c = DropDownArrowRenderer.field_b;
+                kw.accountPhase = DropDownArrowRenderer.WAIT_ACCOUNT_DETAILS;
               } else {
                 OpenGlIndexBuffer.b(-1, ChatMessage.loginReplyHeaderLength(-105));
                 HardwareGraphicsToolkit.field_j = new Boolean(of.a(ig.field_a, 115));
@@ -422,7 +422,7 @@ final class CachedTextLayout extends TextLayout {
               }
             }
           }
-          if (oi.field_a == kw.field_c) {
+          if (oi.WAIT_NAME_SUGGESTIONS == kw.accountPhase) {
             var9Lifetime2 = 2;
             if (OpenGlIndexBuffer.b(-1, var9Lifetime2)) {
               var10Lifetime1 = ig.field_a.readUnsignedShort(255);
@@ -439,7 +439,7 @@ final class CachedTextLayout extends TextLayout {
               }
             }
           }
-          if (DropDownArrowRenderer.field_b == kw.field_c &&
+          if (DropDownArrowRenderer.WAIT_ACCOUNT_DETAILS == kw.accountPhase &&
             lt.a((byte) 119)) {
             if (TextureFormat.field_a != 255) {
               MouseWheelInput.field_c = ig.field_a.readCp1252String(-1);

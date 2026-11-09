@@ -75,7 +75,7 @@ final class vs {
         int var8 = 0;
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (kw.field_c != LegacyOpenGlUnderwaterEffect.field_j) {
+          if (kw.accountPhase != LegacyOpenGlUnderwaterEffect.CONNECTED) {
             return false;
           }
           var4 = 96 / ((param1 + 72) / 53);
@@ -118,7 +118,7 @@ final class vs {
               if (!OpenGlIndexBuffer.b(-1, 1)) {
                 return false;
               }
-              lq.field_b = ig.field_a.i(255);
+              lq.field_b = ig.field_a.readCipherByte(255);
               ig.field_a.position = 0;
               gu.field_d = param0[lq.field_b];
             }

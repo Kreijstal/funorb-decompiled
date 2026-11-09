@@ -109,14 +109,14 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements TextHots
           }
           kh.field_e = kh.field_e | var3_int;
           OpenGlTransparentWaterEffect.field_e = OpenGlTransparentWaterEffect.field_e | var3_int;
-          pl.field_v.addLast((IntrusiveNode) (new IntNode(param2)), (byte) 39);
+          IsaacPacketBuffer.field_v.addLast((IntrusiveNode) (new IntNode(param2)), (byte) 39);
           if (BufferedCacheFile.a((byte) -84, 10) >= 5) {
             LoginPacketWriter.field_a = LoginPacketWriter.field_a + TextureFormat.elapsedTicks;
           } else {
             GraphicsToolkit.field_f = GraphicsToolkit.field_f + TextureFormat.elapsedTicks;
           }
           if (BufferedCacheFile.a((byte) -84, 10) < 5) {
-            ts.field_a = ts.field_a - IntrusiveNodeHashTable.field_c;
+            QuickChatCommand.field_a = QuickChatCommand.field_a - IntrusiveNodeHashTable.field_c;
           } else {
             SoftwareTransform3D.field_b = SoftwareTransform3D.field_b - IntrusiveNodeHashTable.field_c;
           }
@@ -128,7 +128,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements TextHots
           if (3 == param2) {
             SoftwareTransform3D.field_b = SoftwareTransform3D.field_b - DropDownWidget.field_C;
             GraphicsToolkit.field_f = GraphicsToolkit.field_f + OpenGlShaderProgram.levelIndex;
-            ts.field_a = ts.field_a - MatchingTextValidator.field_i;
+            QuickChatCommand.field_a = QuickChatCommand.field_a - MatchingTextValidator.field_i;
           } else {
             if (param2 != 4 &&
               param2 != 5 &&
@@ -146,11 +146,11 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements TextHots
               decompiledFrameRemainder1 = false;
             }
             else {
-              ts.field_a = ts.field_a + MatchingTextValidator.field_i;
+              QuickChatCommand.field_a = QuickChatCommand.field_a + MatchingTextValidator.field_i;
             }
           }
           if (!LegacyOpenGlSpriteTexture.field_w) {
-            OpenGlUnderwaterEffect.field_q.addLast((IntrusiveNode) (new hg(param2, param1, GraphicsToolkit.field_f, LoginPacketWriter.field_a, ts.field_a, SoftwareTransform3D.field_b)), (byte) 39);
+            OpenGlUnderwaterEffect.field_q.addLast((IntrusiveNode) (new GameProgressUpdate(param2, param1, GraphicsToolkit.field_f, LoginPacketWriter.field_a, QuickChatCommand.field_a, SoftwareTransform3D.field_b)), (byte) 39);
           }
           boolean decompiledFrameRemainder0 = true;
           if (3 != param2) {
@@ -170,12 +170,12 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements TextHots
               decompiledFrameRemainder0 = false;
             }
             else {
-              ts.field_a = ts.field_a - MatchingTextValidator.field_i;
+              QuickChatCommand.field_a = QuickChatCommand.field_a - MatchingTextValidator.field_i;
             }
           } else {
             SoftwareTransform3D.field_b = SoftwareTransform3D.field_b + DropDownWidget.field_C;
             GraphicsToolkit.field_f = GraphicsToolkit.field_f - OpenGlShaderProgram.levelIndex;
-            ts.field_a = ts.field_a + MatchingTextValidator.field_i;
+            QuickChatCommand.field_a = QuickChatCommand.field_a + MatchingTextValidator.field_i;
           }
           if (5 > BufferedCacheFile.a((byte) -84, 10)) {
             GraphicsToolkit.field_f = GraphicsToolkit.field_f - TextureFormat.elapsedTicks;
@@ -186,7 +186,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements TextHots
             SoftwareTransform3D.field_b = SoftwareTransform3D.field_b + IntrusiveNodeHashTable.field_c;
             return;
           }
-          ts.field_a = ts.field_a + IntrusiveNodeHashTable.field_c;
+          QuickChatCommand.field_a = QuickChatCommand.field_a + IntrusiveNodeHashTable.field_c;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

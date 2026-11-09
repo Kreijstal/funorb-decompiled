@@ -46,7 +46,7 @@ final class jv {
           if (!param3) {
             field_a = -32;
           }
-          vm.field_c = DropTargetWidget.field_z;
+          vm.nameAvailabilityState = DropTargetWidget.COMPLETE;
           if (255 == param0) {
             stackIn_7_0 = !(lq.field_d >= 13);
             DraggableWidget.field_z = LegacyOpenGlEffect.accountSuccess(stackIn_7_0, 8192);
@@ -64,7 +64,7 @@ final class jv {
           }
           var7 = param1;
           InwardSparkParticle.a(256, var7);
-          DraggableWidget.field_z = qr.accountNameSuggestions(param1, 8192);
+          DraggableWidget.field_z = AccountConnectionPhase.accountNameSuggestions(param1, 8192);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jf {
+final class ContentTransitionPhase {
     static IntrusiveDeque field_c;
     static int[] field_d;
     static int[] field_f;
@@ -22,7 +22,7 @@ final class jf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -13181) {
-            jf.a(74, (byte) -66, -15);
+            ContentTransitionPhase.a(74, (byte) -66, -15);
           }
           stackIn_3_0 = LegacyOpenGlUnlitEffect.a(10, param1, -46, true);
           return stackIn_3_0;
@@ -57,7 +57,7 @@ final class jf {
           field_f = null;
           return;
         }
-        jf.releaseStatics((byte) 7);
+        ContentTransitionPhase.releaseStatics((byte) 7);
         field_e = null;
         thisIsAHiddenText = null;
         field_d = null;

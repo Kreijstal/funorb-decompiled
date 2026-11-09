@@ -6,7 +6,7 @@ import java.util.*;
 final class gg extends DualLinkNode {
     byte[] field_s;
     static ResourceArchive field_r;
-    static qr field_t;
+    static AccountConnectionPhase READY_TO_CONNECT;
 
     final static boolean a(String param0, String param1, int param2) {
         int var3_int = 0;
@@ -65,7 +65,7 @@ final class gg extends DualLinkNode {
         if (param0 != 0) {
           field_r = (ResourceArchive) null;
         }
-        field_t = null;
+        READY_TO_CONNECT = null;
         field_r = null;
     }
 
@@ -81,7 +81,7 @@ final class gg extends DualLinkNode {
           SpriteMask.drones = new Drone[100];
           LoginCredentialFactory.initializePlayerFromUpgradeSettings(85);
           if (param0 <= 81) {
-            field_t = (qr) null;
+            READY_TO_CONNECT = (AccountConnectionPhase) null;
           }
           bj.powerupPickups = new IntrusiveDeque();
           QuickChatPhraseProvider.arenaPads = new IntrusiveDeque();
@@ -132,6 +132,6 @@ final class gg extends DualLinkNode {
     }
 
     static {
-        field_t = new qr();
+        READY_TO_CONNECT = new AccountConnectionPhase();
     }
 }

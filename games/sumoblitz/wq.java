@@ -89,17 +89,17 @@ final class wq {
         CompactMeshGeometry var5 = null;
         int[] var6 = null;
         int var7 = 0;
-        pl var8 = null;
+        IsaacPacketBuffer var8 = null;
         int var9 = 0;
-        pl var10 = null;
+        IsaacPacketBuffer var10 = null;
         int var4Lifetime1;
         var7 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var8 = new pl(param1.fetchNamedFile("", "logo.fo3d", -1));
+          var8 = new IsaacPacketBuffer(param1.fetchNamedFile("", "logo.fo3d", -1));
           var10 = var8;
           var3 = var10.readUnsignedByte(-31302);
-          var10.i((byte) 54);
-          LegacyOpenGlReflectionEffect.field_i = ok.a(-126, var10);
+          var10.beginBitAccess((byte) 54);
+          LegacyOpenGlReflectionEffect.field_i = IsaacCipher.a(-126, var10);
           HardwareTextureCache.field_b = new CompactMeshGeometry[var3];
           kh.field_c = new int[var3][];
           for (var4 = 0; var3 > var4; var4++) {
@@ -108,7 +108,7 @@ final class wq {
           if (param0) {
             wq.monotonicTimeMillis(-93);
           }
-          var10.h((byte) -63);
+          var10.endBitAccess((byte) -63);
           var9 = 0;
           var4Lifetime1 = var9;
           while (var3 > var9) {

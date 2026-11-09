@@ -4,7 +4,7 @@
 package jagdx;
 
 public class IDirect3DSwapChain extends jaclib.peer.IUnknown {
-    private jaclib.peer.pf a;
+    private jaclib.peer.PeerReferenceManager a;
 
     public final native int Present(int param0);
 
@@ -14,12 +14,12 @@ public class IDirect3DSwapChain extends jaclib.peer.IUnknown {
         if (!jagdx.HResult.failed(var4, -1)) {
           return var3;
         }
-        throw new jagdx.fg(String.valueOf(var4));
+        throw new jagdx.DirectXException(String.valueOf(var4));
     }
 
     private final native int _GetBackBuffer(int param0, int param1, jagdx.IDirect3DSurface param2);
 
-    IDirect3DSwapChain(jaclib.peer.pf param0) {
+    IDirect3DSwapChain(jaclib.peer.PeerReferenceManager param0) {
         super(param0);
         this.a = param0;
     }

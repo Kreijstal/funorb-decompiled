@@ -139,7 +139,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    final static CompactMeshGeometry a(pl param0, int param1) {
+    final static CompactMeshGeometry a(IsaacPacketBuffer param0, int param1) {
         int var7 = 0;
         CompactMeshGeometry stackIn_3_0 = null;
         CompactMeshGeometry stackIn_25_0 = null;
@@ -156,7 +156,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         int var8 = 0;
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var2_int = param0.b(8, (byte) -92);
+          var2_int = param0.readBits(8, (byte) -92);
           if (param1 != -16736) {
             stackIn_3_0 = (CompactMeshGeometry) null;
             return stackIn_3_0;
@@ -167,16 +167,16 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           var3 = kh.a(param0, false) ? 1 : 0;
           var4 = kh.a(param0, false) ? 1 : 0;
           var5 = new CompactMeshGeometry();
-          var5.field_D = (short)param0.b(16, (byte) -119);
+          var5.field_D = (short)param0.readBits(16, (byte) -119);
           var5.field_Q = WidgetStateStyle.decodePackedShortArray(var5.field_Q, param0, -119, 16);
           var5.field_B = WidgetStateStyle.decodePackedShortArray(var5.field_B, param0, -120, 16);
           var5.field_r = WidgetStateStyle.decodePackedShortArray(var5.field_r, param0, -127, 16);
-          var5.field_n = (short)param0.b(16, (byte) -117);
+          var5.field_n = (short)param0.readBits(16, (byte) -117);
           var5.field_A = WidgetStateStyle.decodePackedShortArray(var5.field_A, param0, -128, 16);
           var5.field_b = WidgetStateStyle.decodePackedShortArray(var5.field_b, param0, -116, 16);
           var5.field_l = WidgetStateStyle.decodePackedShortArray(var5.field_l, param0, -126, 16);
           if (var3 != 0) {
-            var5.field_c = (short)param0.b(16, (byte) -94);
+            var5.field_c = (short)param0.readBits(16, (byte) -94);
             var5.field_x = WidgetStateStyle.decodePackedShortArray(var5.field_x, param0, param1 + 16608, 16);
             var5.field_g = WidgetStateStyle.decodePackedShortArray(var5.field_g, param0, -124, 16);
             var5.field_L = WidgetStateStyle.decodePackedShortArray(var5.field_L, param0, -113, 16);
@@ -185,7 +185,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             var5.field_h = WidgetStateStyle.decodePackedShortArray(var5.field_h, param0, param1 + 16615, 16);
           }
           if (var4 != 0) {
-            param0.b(16, (byte) -127);
+            param0.readBits(16, (byte) -127);
             var5.field_z = WidgetStateStyle.decodePackedShortArray(var5.field_z, param0, -121, 16);
             var5.field_C = WidgetStateStyle.decodePackedShortArray(var5.field_C, param0, param1 + 16619, 16);
             var5.field_G = WidgetStateStyle.decodePackedShortArray(var5.field_G, param0, -114, 16);

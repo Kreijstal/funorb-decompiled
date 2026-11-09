@@ -167,7 +167,7 @@ final class up {
                   var25Lifetime1Lifetime1 = param4.field_p[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param4.field_s[var23Lifetime2];
                   OpenGlBuffer.field_h[var23Lifetime2] = var9 + (var18 * var26Lifetime1Lifetime1 + (var25Lifetime1Lifetime1 * var15 + var24Lifetime1Lifetime1 * var12) >> 16);
-                  jf.field_e[var23Lifetime2] = var10 + (var24Lifetime1Lifetime1 * var13 + var16 * var25Lifetime1Lifetime1 + var19 * var26Lifetime1Lifetime1 >> 16);
+                  ContentTransitionPhase.field_e[var23Lifetime2] = var10 + (var24Lifetime1Lifetime1 * var13 + var16 * var25Lifetime1Lifetime1 + var19 * var26Lifetime1Lifetime1 >> 16);
                   PowerupPickup.field_k[var23Lifetime2] = var11 + (var17 * var25Lifetime1Lifetime1 + var14 * var24Lifetime1Lifetime1 + var20 * var26Lifetime1Lifetime1 >> 16);
                   var23Lifetime2++;
                   if (var30 != 0) {
@@ -204,7 +204,7 @@ final class up {
                   var21Lifetime2 = param4.field_L[var18];
                   of.field_t[var18] = var19 * var9 - (-(var12 * var20) - var15 * var21Lifetime2) >> 16;
                   r.field_r[var18] = var20 * var13 + var19 * var10 + var21Lifetime2 * var16 >> 16;
-                  qr.field_d[var18] = var17 * var21Lifetime2 + (var11 * var19 + var20 * var14) >> 16;
+                  AccountConnectionPhase.field_d[var18] = var17 * var21Lifetime2 + (var11 * var19 + var20 * var14) >> 16;
                   var18++;
                 }
               }

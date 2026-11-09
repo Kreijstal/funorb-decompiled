@@ -38,7 +38,7 @@ abstract class LoginCredentials {
           if (guard != 19886) {
             field_d = -49;
           }
-          if (vm.field_c == LegacyOpenGlGraphicsHeap.field_p) {
+          if (vm.nameAvailabilityState == LegacyOpenGlGraphicsHeap.PENDING) {
             stackIn_16_0 = 1;
             return stackIn_16_0;
           }
@@ -46,7 +46,7 @@ abstract class LoginCredentials {
             stackIn_19_0 = 1;
             return stackIn_19_0;
           }
-          if (ProxySocketConnector.field_e != LegacyOpenGlGraphicsHeap.field_p) {
+          if (ProxySocketConnector.accountCreationState != LegacyOpenGlGraphicsHeap.PENDING) {
             stackIn_24_0 = -1;
             return stackIn_24_0;
           }

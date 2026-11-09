@@ -9,8 +9,8 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
         }
         if (null == LoginFieldValue.field_a) {
           LoginFieldValue.field_a = new int[param0 * 2];
-          if (jf.field_f == null) {
-            jf.field_f = new int[2 * param0];
+          if (ContentTransitionPhase.field_f == null) {
+            ContentTransitionPhase.field_f = new int[2 * param0];
             if (ic.field_c == null ||
               !(param0 <= ic.field_c.length)) {
               ic.field_c = new int[2 * param0];
@@ -32,7 +32,7 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
               kk.field_b = new boolean[2 * param0];
             }
           } else {
-            if (param0 <= jf.field_f.length) {
+            if (param0 <= ContentTransitionPhase.field_f.length) {
               if (ic.field_c == null ||
                 !(param0 <= ic.field_c.length)) {
                 ic.field_c = new int[2 * param0];
@@ -54,7 +54,7 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                 kk.field_b = new boolean[2 * param0];
               }
             } else {
-              jf.field_f = new int[2 * param0];
+              ContentTransitionPhase.field_f = new int[2 * param0];
               if (ic.field_c == null ||
                 !(param0 <= ic.field_c.length)) {
                 ic.field_c = new int[2 * param0];
@@ -80,9 +80,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
         } else {
           if (LoginFieldValue.field_a.length < param0) {
             LoginFieldValue.field_a = new int[param0 * 2];
-            if (jf.field_f == null ||
-              !(param0 <= jf.field_f.length)) {
-              jf.field_f = new int[2 * param0];
+            if (ContentTransitionPhase.field_f == null ||
+              !(param0 <= ContentTransitionPhase.field_f.length)) {
+              ContentTransitionPhase.field_f = new int[2 * param0];
             }
             if (ic.field_c == null ||
               !(param0 <= ic.field_c.length)) {
@@ -125,9 +125,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
               }
             }
           } else {
-            if (jf.field_f == null ||
-              !(param0 <= jf.field_f.length)) {
-              jf.field_f = new int[2 * param0];
+            if (ContentTransitionPhase.field_f == null ||
+              !(param0 <= ContentTransitionPhase.field_f.length)) {
+              ContentTransitionPhase.field_f = new int[2 * param0];
             }
             if (ic.field_c == null) {
               ic.field_c = new int[2 * param0];

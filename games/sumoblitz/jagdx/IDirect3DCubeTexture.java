@@ -8,7 +8,7 @@ public class IDirect3DCubeTexture extends jagdx.IDirect3DBaseTexture {
 
     public final native int LockRect(int param0, int param1, int param2, int param3, int param4, int param5, int param6, jagdx.PixelBuffer param7);
 
-    IDirect3DCubeTexture(jaclib.peer.pf param0) {
+    IDirect3DCubeTexture(jaclib.peer.PeerReferenceManager param0) {
         super(param0);
     }
 }

@@ -6,7 +6,7 @@ package jagdx;
 public class IDirect3DSurface extends jaclib.peer.IUnknown {
     public final native boolean UnlockRect();
 
-    IDirect3DSurface(jaclib.peer.pf param0) {
+    IDirect3DSurface(jaclib.peer.PeerReferenceManager param0) {
         super(param0);
     }
 

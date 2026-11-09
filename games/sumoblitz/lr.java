@@ -5,7 +5,7 @@ final class lr {
     static SpriteData field_c;
     static int[] field_a;
     private VertexBuffer field_d;
-    static qr field_b;
+    static AccountConnectionPhase field_b;
 
     final static int[] a(int param0) {
         if (param0 != -14808) {
@@ -29,7 +29,7 @@ final class lr {
         field_b = null;
         field_a = null;
         if (param0 != 16766976) {
-          field_b = (qr) null;
+          field_b = (AccountConnectionPhase) null;
           field_c = null;
           return;
         }
@@ -66,6 +66,6 @@ final class lr {
 
     static {
         field_a = new int[]{10813242, 16711680, 16739328, 16766976, 13725607, 108799};
-        field_b = new qr();
+        field_b = new AccountConnectionPhase();
     }
 }

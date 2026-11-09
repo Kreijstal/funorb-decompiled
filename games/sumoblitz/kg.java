@@ -15,18 +15,18 @@ final class kg {
 
     final void a(byte param0) {
         if (this.field_a != null) {
-          this.field_a.a(-22671);
+          this.field_a.release(-22671);
           this.field_a = null;
         }
         if (null != this.field_c) {
-          this.field_c.a(-22671);
+          this.field_c.release(-22671);
           this.field_c = null;
         }
         if (param0 != 71) {
           this.a(40);
         }
         if (this.field_b != null) {
-          this.field_b.a(-22671);
+          this.field_b.release(-22671);
           this.field_b = null;
         }
     }

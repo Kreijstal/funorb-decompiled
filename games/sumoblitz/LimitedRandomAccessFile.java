@@ -7,7 +7,7 @@ final class LimitedRandomAccessFile {
     private RandomAccessFile file;
     private long position;
     private long maxLength;
-    static jf field_i;
+    static ContentTransitionPhase FADING_OUT;
     static boolean field_g;
     static il field_a;
     static int field_b;
@@ -61,7 +61,7 @@ final class LimitedRandomAccessFile {
         field_a = null;
         droneDescriptions = null;
         field_c = null;
-        field_i = null;
+        FADING_OUT = null;
         if (param0 != 100) {
           field_a = (il) null;
         }
@@ -233,7 +233,7 @@ final class LimitedRandomAccessFile {
     }
 
     static {
-        field_i = new jf();
+        FADING_OUT = new ContentTransitionPhase();
         field_d = false;
         field_c = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled.";
         field_a = new il();

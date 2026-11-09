@@ -74,12 +74,12 @@ final class ResourceArchive {
         if (guard <= 80) {
           ResourceArchive.b(62);
         }
-        if (ProxySocketConnector.field_e == hm.field_a) {
+        if (ProxySocketConnector.accountCreationState == AccountRequestDefaults.IDLE) {
           throw new IllegalStateException();
         }
-        if (DropTargetWidget.field_z == ProxySocketConnector.field_e) {
-          ProxySocketConnector.field_e = hm.field_a;
-          return eg.field_l;
+        if (DropTargetWidget.COMPLETE == ProxySocketConnector.accountCreationState) {
+          ProxySocketConnector.accountCreationState = AccountRequestDefaults.IDLE;
+          return ServerIntArrayRequest.field_l;
         }
         return null;
     }
@@ -575,7 +575,7 @@ final class ResourceArchive {
                     var21 = var20;
                   }
                   if (requestedFileId == var21) {
-                    la.a(var43, var17, var44, var14Lifetime1, var19);
+                    ArrayUtils.copy(var43, var17, var44, var14Lifetime1, var19);
                     var14Lifetime1 = var14Lifetime1 + var19;
                   }
                   var17 = var17 + var19;
@@ -613,7 +613,7 @@ final class ResourceArchive {
                 var18 = 0;
                 for (var19 = 0; var19 < var5_int; var19++) {
                   var18 = var18 + var29.readInt(true);
-                  la.a(var43, var16, var39[var19], var38[var19], var18);
+                  ArrayUtils.copy(var43, var16, var39[var19], var38[var19], var18);
                   var14_ref_int__[var19] = var14_ref_int__[var19] + var18;
                   var16 = var16 + var18;
                 }

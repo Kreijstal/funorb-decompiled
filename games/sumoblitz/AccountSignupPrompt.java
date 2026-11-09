@@ -83,7 +83,7 @@ final class AccountSignupPrompt extends WidgetContainer implements WidgetActionL
         this.field_B.listener = (WidgetListener) (this);
         this.field_B.tooltip = DroneDebris.createYourOwnFreeText;
         this.field_C.listener = (WidgetListener) (this);
-        this.field_C.tooltip = hg.playTheGameWithoutText;
+        this.field_C.tooltip = GameProgressUpdate.playTheGameWithoutText;
         this.addChild(this.field_A, 120);
         this.addChild(this.field_B, 70);
         this.addChild(this.field_C, 83);

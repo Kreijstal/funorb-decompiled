@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eg extends IntrusiveNode {
-    boolean field_o;
+final class ServerIntArrayRequest extends IntrusiveNode {
+    boolean complete;
     static AccountServiceResult field_l;
-    int field_k;
+    int firstValue;
     static String field_n;
-    int[] field_m;
+    int[] values;
 
     public static void releaseStatics(boolean param0) {
         field_n = null;
@@ -16,11 +16,11 @@ final class eg extends IntrusiveNode {
         }
     }
 
-    eg() {
-        this.field_o = false;
+    ServerIntArrayRequest() {
+        this.complete = false;
     }
 
-    final static void a(int param0, byte[] param1) {
+    final static void decodeSpriteSheet(int guard, byte[] data) {
         byte dupTemp$1 = 0;
         byte dupTemp$0 = 0;
         int stackIn_30_0 = 0;
@@ -65,34 +65,34 @@ final class eg extends IntrusiveNode {
         int var12Lifetime3;
         var15 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var16 = new PacketBuffer(param1);
+          var16 = new PacketBuffer(data);
           var17 = var16;
-          var17.position = -2 + param1.length;
-          rl.field_n = var17.readUnsignedShort(255);
-          CheckboxRenderer.field_k = new int[rl.field_n];
-          ScrollViewport.field_B = new int[rl.field_n];
-          SoundCache.field_d = new boolean[rl.field_n];
-          TextLayout.field_d = new byte[rl.field_n][];
-          StrongCacheReference.field_C = new int[rl.field_n];
-          er.field_h = new int[rl.field_n];
-          StatefulWidgetRenderer.field_o = new byte[rl.field_n][];
-          var17.position = -(rl.field_n * 8) - 7 + param1.length;
-          vf.field_d = var17.readUnsignedShort(param0);
+          var17.position = -2 + data.length;
+          RasterStateFrame.field_n = var17.readUnsignedShort(255);
+          CheckboxRenderer.field_k = new int[RasterStateFrame.field_n];
+          ScrollViewport.field_B = new int[RasterStateFrame.field_n];
+          SoundCache.field_d = new boolean[RasterStateFrame.field_n];
+          TextLayout.field_d = new byte[RasterStateFrame.field_n][];
+          StrongCacheReference.field_C = new int[RasterStateFrame.field_n];
+          MenuSelectionController.field_h = new int[RasterStateFrame.field_n];
+          StatefulWidgetRenderer.field_o = new byte[RasterStateFrame.field_n][];
+          var17.position = -(RasterStateFrame.field_n * 8) - 7 + data.length;
+          vf.field_d = var17.readUnsignedShort(guard);
           ToolkitImageProducerBuffer.field_u = var17.readUnsignedShort(255);
-          var3 = 1 + (var17.readUnsignedByte(param0 - 31557) & 255);
-          for (var4 = 0; var4 < rl.field_n; var4++) {
-            er.field_h[var4] = var16.readUnsignedShort(255);
+          var3 = 1 + (var17.readUnsignedByte(guard - 31557) & 255);
+          for (var4 = 0; var4 < RasterStateFrame.field_n; var4++) {
+            MenuSelectionController.field_h[var4] = var16.readUnsignedShort(255);
           }
-          for (var4Lifetime1 = 0; rl.field_n > var4Lifetime1; var4Lifetime1++) {
+          for (var4Lifetime1 = 0; RasterStateFrame.field_n > var4Lifetime1; var4Lifetime1++) {
             StrongCacheReference.field_C[var4Lifetime1] = var17.readUnsignedShort(255);
           }
-          for (var4Lifetime2 = 0; rl.field_n > var4Lifetime2; var4Lifetime2++) {
+          for (var4Lifetime2 = 0; RasterStateFrame.field_n > var4Lifetime2; var4Lifetime2++) {
             CheckboxRenderer.field_k[var4Lifetime2] = var17.readUnsignedShort(255);
           }
-          for (var4Lifetime3 = 0; var4Lifetime3 < rl.field_n; var4Lifetime3++) {
-            ScrollViewport.field_B[var4Lifetime3] = var17.readUnsignedShort(GzipDecompressor.bitwiseXor(param0, 0));
+          for (var4Lifetime3 = 0; var4Lifetime3 < RasterStateFrame.field_n; var4Lifetime3++) {
+            ScrollViewport.field_B[var4Lifetime3] = var17.readUnsignedShort(GzipDecompressor.bitwiseXor(guard, 0));
           }
-          var17.position = -(8 * rl.field_n) + (-7 + param1.length - (-1 + var3) * 3);
+          var17.position = -(8 * RasterStateFrame.field_n) + (-7 + data.length - (-1 + var3) * 3);
           LegacyOpenGlEffectManager.field_l = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
             LegacyOpenGlEffectManager.field_l[var4Lifetime4] = var17.readUnsignedMedium((byte) 121);
@@ -101,7 +101,7 @@ final class eg extends IntrusiveNode {
             }
           }
           var17.position = 0;
-          for (var4Lifetime5 = 0; var4Lifetime5 < rl.field_n; var4Lifetime5++) {
+          for (var4Lifetime5 = 0; var4Lifetime5 < RasterStateFrame.field_n; var4Lifetime5++) {
             regionExit1: {
               var5 = CheckboxRenderer.field_k[var4Lifetime5];
               var6 = ScrollViewport.field_B[var4Lifetime5];
@@ -115,7 +115,7 @@ final class eg extends IntrusiveNode {
               var9 = var19;
               StatefulWidgetRenderer.field_o[var4Lifetime5] = var21;
               var10 = 0;
-              var11 = var17.readUnsignedByte(param0 - 31557);
+              var11 = var17.readUnsignedByte(guard - 31557);
               if ((var11 & 1) == 0) {
                 for (var12 = 0; var7 > var12; var12++) {
                   var8[var12] = var17.readByte(true);
@@ -174,8 +174,8 @@ final class eg extends IntrusiveNode {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_55_0 = var2;
-          stackIn_55_1 = new StringBuilder().append("eg.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_55_1 = new StringBuilder().append("eg.B(").append(guard).append(',');
+          if (data == null) {
             stackIn_56_2 = "null";
           } else {
             stackIn_56_2 = "{...}";

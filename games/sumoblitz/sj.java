@@ -4,7 +4,7 @@
 final class sj {
     static PcmStreamMixer field_c;
     static long field_a;
-    static ts field_b;
+    static QuickChatCommand field_b;
 
     final static void a(byte param0) {
         int var3 = 0;
@@ -47,7 +47,7 @@ final class sj {
           for (var3 = 0; IntIndexHashTable.field_c.length > var3; var3++) {
             var4 = LegacyOpenGlPostProcessManager.field_a[var3];
             if (0 <= var4) {
-              if (RendererPreference.field_a.field_g != var4) {
+              if (RendererPreference.field_a.selectedIndex != var4) {
                 var5 = OpenGlCubeTexture.field_j;
               } else {
                 var5 = LoginCredentialFactory.field_a;
@@ -99,7 +99,7 @@ final class sj {
             var8Lifetime1 = -(var7Lifetime1 >> 1) + BeveledCheckboxRenderer.field_a;
             if (var4 >= 0) {
               var1_int = var1_int + qc.field_a;
-              if (var4 != RendererPreference.field_a.field_g) {
+              if (var4 != RendererPreference.field_a.selectedIndex) {
                 stackIn_48_0 = vp.field_e;
               } else {
                 stackIn_48_0 = PacketBuffer.field_k;
@@ -142,7 +142,7 @@ final class sj {
         if (param0 < -26) {
           return jv.field_a == 11 ? true : false;
         }
-        field_b = (ts) null;
+        field_b = (QuickChatCommand) null;
         return jv.field_a == 11 ? true : false;
     }
 
@@ -412,6 +412,6 @@ final class sj {
     }
 
     static {
-        field_b = new ts(2, 4, 4, 0);
+        field_b = new QuickChatCommand(2, 4, 4, 0);
     }
 }

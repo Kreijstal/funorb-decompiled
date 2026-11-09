@@ -8,7 +8,7 @@ public class IDirect3DTexture extends jagdx.IDirect3DBaseTexture {
 
     public final native boolean UnlockRect(int param0);
 
-    IDirect3DTexture(jaclib.peer.pf param0) {
+    IDirect3DTexture(jaclib.peer.PeerReferenceManager param0) {
         super(param0);
     }
 }

@@ -128,7 +128,7 @@ final class ScrollControl extends ArrayWidgetContainer implements WidgetActionLi
             var3 = (CharSequence) null;
             ScrollControl.encodeBase37Name((CharSequence) null, 104);
           }
-          var2 = new LegacyAlphaFont(param1, er.field_h, StrongCacheReference.field_C, CheckboxRenderer.field_k, ScrollViewport.field_B, LegacyOpenGlEffectManager.field_l, TextLayout.field_d);
+          var2 = new LegacyAlphaFont(param1, MenuSelectionController.field_h, StrongCacheReference.field_C, CheckboxRenderer.field_k, ScrollViewport.field_B, LegacyOpenGlEffectManager.field_l, TextLayout.field_d);
           PowerupPickup.releaseSpriteDecoderArrays((byte) -60);
           stackIn_6_0 = var2;
           return stackIn_6_0;

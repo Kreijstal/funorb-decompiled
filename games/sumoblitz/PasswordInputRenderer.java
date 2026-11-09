@@ -82,7 +82,7 @@ final class PasswordInputRenderer extends BeveledTextInputRenderer {
               LegacyOpenGlEnvironmentWaterEffect.field_i = HardwareTurbulentWaterNoise.field_v;
             } else {
               while (HardwareTurbulentWaterNoise.field_v != LegacyOpenGlEnvironmentWaterEffect.field_i) {
-                var2 = jf.field_d[HardwareTurbulentWaterNoise.field_v];
+                var2 = ContentTransitionPhase.field_d[HardwareTurbulentWaterNoise.field_v];
                 HardwareTurbulentWaterNoise.field_v = 127 & HardwareTurbulentWaterNoise.field_v + 1;
                 if (0 <= var2) {
                   hw.field_b[var2] = true;

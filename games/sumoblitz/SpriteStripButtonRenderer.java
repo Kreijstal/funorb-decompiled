@@ -110,7 +110,7 @@ final class SpriteStripButtonRenderer extends TextWidgetRenderer {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        pl var28 = null;
+        IsaacPacketBuffer var28 = null;
         int var3Lifetime1;
         int var25Lifetime1;
         int var25Lifetime2;
@@ -222,10 +222,10 @@ final class SpriteStripButtonRenderer extends TextWidgetRenderer {
           if (var2 == 1) {
             var3Lifetime1 = var28.readUnsignedShort(255);
             var4 = var28.readLong((byte) 111);
-            var6 = (id) (ow.field_f.first(127));
+            var6 = (id) (HuffmanDecoder.field_f.first(127));
             while (var6 != null) {
               if (var6.field_r != var3Lifetime1) {
-                var6 = (id) (ow.field_f.next((byte) 18));
+                var6 = (id) (HuffmanDecoder.field_f.next((byte) 18));
                 continue;
               }
               break;

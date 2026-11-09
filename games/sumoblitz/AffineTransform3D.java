@@ -32,10 +32,10 @@ final class AffineTransform3D extends Transform3D {
 
     final void setRotationX(byte guard, int angleQ14) {
         this.m00 = 1.0f;
-        float dupTemp$0 = hg.field_l[angleQ14 & 16383];
+        float dupTemp$0 = GameProgressUpdate.field_l[angleQ14 & 16383];
         this.m22 = dupTemp$0;
         this.m11 = dupTemp$0;
-        this.m21 = hg.field_k[16383 & angleQ14];
+        this.m21 = GameProgressUpdate.field_k[16383 & angleQ14];
         this.m01 = 0.0f;
         if (guard > 33) {
           this.m12 = -this.m21;
@@ -341,7 +341,7 @@ final class AffineTransform3D extends Transform3D {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_2_0 = qr.field_b;
+          stackIn_2_0 = AccountConnectionPhase.field_b;
           stackIn_2_1 = 1;
           stackIn_2_2 = 1000000;
           stackIn_2_3 = (MusicTrack) (track);

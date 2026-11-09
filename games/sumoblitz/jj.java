@@ -7,11 +7,11 @@ final class jj {
     static SpriteData[] field_c;
     static int field_b;
     static int field_d;
-    static qr field_f;
+    static AccountConnectionPhase WAIT_LOGIN_REPLY;
 
     public static void releaseStatics(int param0) {
         field_c = null;
-        field_f = null;
+        WAIT_LOGIN_REPLY = null;
         if (param0 != 0) {
           jj.releaseStatics(-108);
           field_a = null;
@@ -29,7 +29,7 @@ final class jj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -2183) {
-            field_f = (qr) null;
+            WAIT_LOGIN_REPLY = (AccountConnectionPhase) null;
           }
           stackIn_3_0 = this.field_e.equals(param0);
           return stackIn_3_0;
@@ -71,6 +71,6 @@ final class jj {
         field_a = new IntrusiveDeque();
         field_b = 0;
         field_d = 0;
-        field_f = new qr();
+        WAIT_LOGIN_REPLY = new AccountConnectionPhase();
     }
 }

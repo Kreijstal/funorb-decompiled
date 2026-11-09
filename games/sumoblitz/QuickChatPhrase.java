@@ -241,7 +241,7 @@ final class QuickChatPhrase extends DualLinkNode {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        ts var7 = null;
+        QuickChatCommand var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var5Lifetime1;
@@ -279,16 +279,16 @@ final class QuickChatPhrase extends DualLinkNode {
             var5Lifetime1 = 0;
             while (var4_intLifetime1 > var5Lifetime1) {
               var6 = packet.readUnsignedShort(255);
-              var7 = ij.a(10341, var6);
+              var7 = ij.quickChatCommand(10341, var6);
               if (var9 != 0) {
                 return;
               }
               if (var7 != null) {
                 this.commandIds[var5Lifetime1] = var6;
-                array$0 = new int[var7.field_f];
+                array$0 = new int[var7.parameterCount];
                 this.commandParameters[var5Lifetime1] = array$0;
                 var8 = 0;
-                while (!(var8 >= var7.field_f)) {
+                while (!(var8 >= var7.parameterCount)) {
                   this.commandParameters[var5Lifetime1][var8] = packet.readUnsignedShort(255);
                   var8++;
                 }

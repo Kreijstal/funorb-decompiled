@@ -158,7 +158,7 @@ final class ValidationStatusWidget extends InteractiveWidget {
           this.update(86, -51, (UiWidget) null, 16);
           return;
         }
-        if (qr.INVALID == var8) {
+        if (AccountConnectionPhase.INVALID == var8) {
           var14 = ToolkitRasterStateCacheEntry.field_m[2];
           var14.d(-(var14.field_x >> 1) + var5, var6 - (var14.field_u >> 1), 256);
           if (guard < -35) {

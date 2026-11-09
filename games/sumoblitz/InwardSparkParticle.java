@@ -7,7 +7,7 @@ final class InwardSparkParticle extends TimedSceneEffect {
     static String livesText;
     private int textureKind;
     static int[] field_y;
-    static pl field_v;
+    static IsaacPacketBuffer field_v;
     private int velocityXQ8;
     static MouseWheelInput field_w;
 
@@ -88,7 +88,7 @@ final class InwardSparkParticle extends TimedSceneEffect {
             ToolkitRasterBuffer.field_o.nameSuggestions.a(param1, false);
           }
           if (SecondaryNodeQueue.field_a != null) {
-            SecondaryNodeQueue.field_a.field_E.a(param1, false);
+            SecondaryNodeQueue.field_a.nameSuggestions.a(param1, false);
           }
           if (param0 != 256) {
             field_y = (int[]) null;

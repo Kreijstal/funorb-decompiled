@@ -794,8 +794,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     final void drawCircle(int centerX, int centerY, int radius, int color, int blendMode) {
         this.f((byte) 117);
         this.a(false, color);
-        this.a(mm.CONSTANT, 0, 0);
-        this.a(mm.CONSTANT, 0, true);
+        this.a(AccountRequestState.CONSTANT, 0, 0);
+        this.a(AccountRequestState.CONSTANT, 0, true);
         this.e(blendMode, 13);
         this.field_Lb.setScale((float)radius, (float)radius, 0, 1.0f);
         this.field_Lb.translate(centerY, centerX, (byte) 103, 0);
@@ -949,8 +949,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
         this.f((byte) -57);
         this.a(false, color);
-        this.a(mm.CONSTANT, 0, 0);
-        this.a(mm.CONSTANT, 0, true);
+        this.a(AccountRequestState.CONSTANT, 0, 0);
+        this.a(AccountRequestState.CONSTANT, 0, true);
         this.e(blendMode, 13);
         this.k(1);
         this.setMultisampling(1, false);
@@ -1284,8 +1284,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     final void fillRectangle(int x, int y, int width, int height, int color, int blendMode) {
         this.f((byte) -104);
         this.a(false, color);
-        this.a(mm.CONSTANT, 0, 0);
-        this.a(mm.CONSTANT, 0, true);
+        this.a(AccountRequestState.CONSTANT, 0, 0);
+        this.a(AccountRequestState.CONSTANT, 0, true);
         this.e(blendMode, 13);
         this.field_Lb.setScale((float)height, (float)width, 0, 1.0f);
         this.field_Lb.translate(y, x, (byte) 107, 0);

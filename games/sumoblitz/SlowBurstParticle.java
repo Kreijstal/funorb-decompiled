@@ -63,7 +63,7 @@ final class SlowBurstParticle extends TimedSceneEffect {
         if (SocketJs5Client.field_q < var1) {
           SocketJs5Client.field_q = var1;
         }
-        hg.field_o = new lg();
+        GameProgressUpdate.field_o = new lg();
         return true;
     }
 
@@ -128,9 +128,9 @@ final class SlowBurstParticle extends TimedSceneEffect {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        pl var13 = null;
+        IsaacPacketBuffer var13 = null;
         int var14 = 0;
-        pl var15 = null;
+        IsaacPacketBuffer var15 = null;
         int[][] var19 = null;
         int var6_intLifetime1;
         int var9Lifetime1;
@@ -172,7 +172,7 @@ final class SlowBurstParticle extends TimedSceneEffect {
                 HardwareUnlitEffect.a(ReassignUpgradesScreen.field_l, DisplayModeConfirmationDialog.field_U, true, var6_intLifetime1, SoftLruCache.field_f, LegacyWaterTextureResources.field_d);
               }
             }
-            qr.a(13136, var5);
+            AccountConnectionPhase.a(13136, var5);
             var6 = new String[2][var5];
             var19 = new int[2][var5 * 4];
             var8 = LoginCredentials.field_d;
@@ -182,11 +182,11 @@ final class SlowBurstParticle extends TimedSceneEffect {
               var11 = pd.field_q[var9];
               var6[0][var10] = RenderPresentationException.field_b[var11];
               var19[0][var10 * 4] = LoginFieldValue.field_a[var11];
-              var19[0][var10 * 4 + 1] = jf.field_f[var11];
+              var19[0][var10 * 4 + 1] = ContentTransitionPhase.field_f[var11];
               var19[0][2 + 4 * var10] = ic.field_c[var11];
               var19[0][var10 * 4 + 3] = field_z[var11];
               if (ea.a(RenderPresentationException.field_b[var11], (byte) -25) &&
-                field_z[var11] + jf.field_f[var11] + ic.field_c[var11] == 0) {
+                field_z[var11] + ContentTransitionPhase.field_f[var11] + ic.field_c[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -200,11 +200,11 @@ final class SlowBurstParticle extends TimedSceneEffect {
               var11Lifetime1 = pd.field_q[var9Lifetime1 + var5];
               var6[1][var14] = RenderPresentationException.field_b[var11Lifetime1];
               var19[1][4 * var14] = LoginFieldValue.field_a[var11Lifetime1];
-              var19[1][1 + 4 * var14] = jf.field_f[var11Lifetime1];
+              var19[1][1 + 4 * var14] = ContentTransitionPhase.field_f[var11Lifetime1];
               var19[1][2 + 4 * var14] = ic.field_c[var11Lifetime1];
               var19[1][var14 * 4 + 3] = field_z[var11Lifetime1];
               if (ea.a(RenderPresentationException.field_b[var11Lifetime1], (byte) -25) &&
-                jf.field_f[var11Lifetime1] - (-ic.field_c[var11Lifetime1] - field_z[var11Lifetime1]) == 0) {
+                ContentTransitionPhase.field_f[var11Lifetime1] - (-ic.field_c[var11Lifetime1] - field_z[var11Lifetime1]) == 0) {
                 var6[1][var14] = null;
                 var14--;
               }
@@ -231,10 +231,10 @@ final class SlowBurstParticle extends TimedSceneEffect {
         RuntimeException var2 = null;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var4 = (id) (ow.field_f.first(85));
+          var4 = (id) (HuffmanDecoder.field_f.first(85));
           while (var4 != null) {
             km.a((byte) -120, param0, var4);
-            var4 = (id) (ow.field_f.next((byte) 18));
+            var4 = (id) (HuffmanDecoder.field_f.next((byte) 18));
           }
           var5 = (of) (oi.field_b.first(109));
           while (var5 != null) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ClientExceptionSupport {
-    static ts field_b;
+    static QuickChatCommand field_b;
     static String ifYouDoNothingText;
     static EmailValidationError MISSING_EMAIL_COMPONENT;
     private static String field_z;
@@ -34,7 +34,7 @@ final class ClientExceptionSupport {
 
     static {
         field_z = "qo.B(";
-        field_b = new ts(11, 0, 1, 2);
+        field_b = new QuickChatCommand(11, 0, 1, 2);
         ifYouDoNothingText = "If you do nothing the game will revert to normal view in <%0> second.";
         MISSING_EMAIL_COMPONENT = new EmailValidationError();
     }

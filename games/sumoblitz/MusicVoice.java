@@ -5,7 +5,7 @@ final class MusicVoice extends IntrusiveNode {
     PcmSampleStream stream;
     int pan;
     int channel;
-    static qr field_l;
+    static AccountConnectionPhase WAIT_LOGIN_DETAILS;
     int exclusiveGroup;
     int vibratoPhase;
     MusicPatchEnvelope envelope;
@@ -56,7 +56,7 @@ final class MusicVoice extends IntrusiveNode {
 
     public static void releaseStatics(byte param0) {
         field_o = null;
-        field_l = null;
+        WAIT_LOGIN_DETAILS = null;
         field_s = null;
         if (param0 <= 70) {
           MusicVoice.releaseStatics((byte) 17);
@@ -74,7 +74,7 @@ final class MusicVoice extends IntrusiveNode {
     }
 
     final static void c(boolean param0) {
-        pl var2 = null;
+        IsaacPacketBuffer var2 = null;
         if (param0) {
           return;
         }
@@ -95,7 +95,7 @@ final class MusicVoice extends IntrusiveNode {
     }
 
     static {
-        field_l = new qr();
+        WAIT_LOGIN_DETAILS = new AccountConnectionPhase();
         field_s = "???";
     }
 }

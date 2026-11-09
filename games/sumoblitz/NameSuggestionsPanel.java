@@ -156,7 +156,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
         if (param0 >= -34) {
           field_E = (BufferedCacheFile) null;
         }
-        stackIn_6_0 = (null != DisplayModeConfirmationDialog.field_O) && (kw.field_c.a(17704));
+        stackIn_6_0 = (null != DisplayModeConfirmationDialog.field_O) && (kw.accountPhase.isLoginSessionPhase(17704));
         return stackIn_6_0;
     }
 
@@ -204,9 +204,9 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
         mn.field_b = SpriteData.b(param3, "", "fontglow");
         VertexStreamLayout.field_c = SocketConnector.field_a;
         OpenGlTransparentWaterEffect.field_i = SpriteData.b(param3, "", "smallfontalpha");
-        qr.field_a = Js5Client.a(param1, (byte) -39, "smallfont", "");
+        AccountConnectionPhase.field_a = Js5Client.a(param1, (byte) -39, "smallfont", "");
         LegacyOpenGlReflectionEffect.field_j = SpriteData.b(param3, "", "glowfontalpha");
-        sv.field_a = qr.field_a;
+        sv.field_a = AccountConnectionPhase.field_a;
         DropDownWidget.field_F = SpriteData.b(param3, "", "boldfontalpha");
         ma.field_b = Js5Client.a(param1, (byte) -36, "boldfont", "");
         ProxySocketConnector.field_f = SpriteData.b(param3, "", "boldglowfontalpha");
@@ -227,14 +227,14 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
         try {
           jj.field_c = SpriteData.b(param3, "", "statline_tab");
           ResourceRequest.field_r = SpriteData.b(param3, "", "statline_tab_flip");
-          ok.field_d = SpriteData.b(param3, "", "button_off");
+          IsaacCipher.field_d = SpriteData.b(param3, "", "button_off");
           ProxyAuthenticationRequiredException.field_a = SpriteData.b(param3, "", "button_over");
           WaterTextureResources.field_c = SpriteData.b(param3, "", "button_on");
           LegacyOpenGlFloatPostProcessEffect.field_o = SpriteData.b(param3, "", "chargebar_vertical");
           IntrusiveDequeCursor.field_e = SpriteData.a(param3, "", "congratulations");
           LegacyOpenGlPostProcessEffect.field_k = SpriteData.a(param3, "", "mouse");
           BufferedSocket.field_n = SpriteData.a(param3, "", "keyboard");
-          rl.field_l = SpriteData.b(param3, "", "player");
+          RasterStateFrame.field_l = SpriteData.b(param3, "", "player");
           kk.field_e = SpriteData.b(param3, "", "mook");
           HardwareTurbulentWaterNoise.field_w = SpriteData.b(param3, "", "fast");
           StatefulWidgetRenderer.field_r = SpriteData.b(param3, "", "sleeper");
@@ -283,7 +283,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
           ke.field_c = SpriteData.a(param3, "reticule");
           PasswordValidator.field_i = SpriteData.a(param3, "", "reticule_flat");
           hc.field_a = SpriteData.b(param3, "", "gravitywell");
-          rl.field_o = SpriteData.a(param3, "", "gravitywell_field");
+          RasterStateFrame.field_o = SpriteData.a(param3, "", "gravitywell_field");
           pq.field_F = SpriteData.b(param3, "", "tutorial_images");
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "pe.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

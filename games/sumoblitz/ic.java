@@ -3,7 +3,7 @@
  */
 final class ic {
     static Object legacyRidgedWaterData;
-    static ts field_a;
+    static QuickChatCommand field_a;
     private LegacyVertexBuffer field_d;
     static int[] field_c;
 
@@ -126,7 +126,7 @@ final class ic {
                 break;
               }
               var7_ref_String = param0.substring(var6_int + 2, var5);
-              if (!jf.a(-13181, (CharSequence) ((Object) var7_ref_String))) {
+              if (!ContentTransitionPhase.a(-13181, (CharSequence) ((Object) var7_ref_String))) {
                 continue;
               }
               if (var3_int <= var5) {
@@ -159,7 +159,7 @@ final class ic {
               break;
             }
             var9 = param0.substring(2 + var8Lifetime1, var5Lifetime1);
-            if (!jf.a(-13181, (CharSequence) ((Object) var9))) {
+            if (!ContentTransitionPhase.a(-13181, (CharSequence) ((Object) var9))) {
               continue;
             }
             if (var3_int <= var5Lifetime1) {
@@ -246,6 +246,6 @@ final class ic {
     }
 
     static {
-        field_a = new ts(14, 0, 4, 1);
+        field_a = new QuickChatCommand(14, 0, 4, 1);
     }
 }

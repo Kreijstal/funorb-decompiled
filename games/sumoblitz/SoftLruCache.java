@@ -161,7 +161,7 @@ final class SoftLruCache {
         return left & right;
     }
 
-    final static void writeReflectionReply(pl packet, int guard) {
+    final static void writeReflectionReply(IsaacPacketBuffer packet, int guard) {
         try {
           int var5 = 0;
           int var10_int = 0;
@@ -213,7 +213,7 @@ final class SoftLruCache {
             if (guard <= 126) {
               return;
             }
-            var13 = (ReflectionCheck) (qr.reflectionChecks.first(-77));
+            var13 = (ReflectionCheck) (AccountConnectionPhase.reflectionChecks.first(-77));
             var17 = var13;
             if (var17 == null) {
               return;

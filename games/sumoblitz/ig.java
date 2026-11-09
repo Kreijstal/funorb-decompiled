@@ -5,7 +5,7 @@ import java.io.*;
 
 final class ig {
     static IntrusiveDeque hudMessages;
-    static pl field_a;
+    static IsaacPacketBuffer field_a;
 
     final static boolean b(int param0) {
         int var5 = 0;
@@ -191,7 +191,7 @@ final class ig {
 
     public static void releaseStatics(boolean param0) {
         if (param0) {
-          field_a = (pl) null;
+          field_a = (IsaacPacketBuffer) null;
         }
         hudMessages = null;
         field_a = null;

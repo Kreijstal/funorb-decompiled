@@ -179,7 +179,7 @@ class AudioOutput {
         if (stereo) {
           var3 = var3 << 1;
         }
-        la.a(output, 0, var3);
+        ArrayUtils.clear(output, 0, var3);
         this.scheduleCountdown = this.scheduleCountdown - sampleCount;
         if (this.stream != null &&
           this.scheduleCountdown <= 0) {

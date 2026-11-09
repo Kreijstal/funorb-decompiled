@@ -71,26 +71,26 @@ final class MarkerTrackRenderer implements WidgetRenderer {
           pg.field_a = false;
           StatusMessagePanel.field_A = false;
           ReflectionCheck.setAccountDialogResult(-1, -69);
-          vm.field_c = hm.field_a;
-          ProxySocketConnector.field_e = hm.field_a;
+          vm.nameAvailabilityState = AccountRequestDefaults.IDLE;
+          ProxySocketConnector.accountCreationState = AccountRequestDefaults.IDLE;
           return;
         }
         MarkerTrackRenderer.a((byte) -85);
         pg.field_a = false;
         StatusMessagePanel.field_A = false;
         ReflectionCheck.setAccountDialogResult(-1, -69);
-        vm.field_c = hm.field_a;
-        ProxySocketConnector.field_e = hm.field_a;
+        vm.nameAvailabilityState = AccountRequestDefaults.IDLE;
+        ProxySocketConnector.accountCreationState = AccountRequestDefaults.IDLE;
     }
 
     final static void a(int param0, km param1, int param2) {
-        pl var3 = null;
+        IsaacPacketBuffer var3 = null;
         try {
           if (param0 != -1) {
             field_e = 23;
           }
           var3 = InwardSparkParticle.field_v;
-          var3.g(param2, param0 ^ -9);
+          var3.writeCipherByte(param2, param0 ^ -9);
           var3.writeByte((byte) 85, param1.field_n);
           var3.writeByte((byte) 23, param1.field_l);
         } catch (RuntimeException runtimeException) {

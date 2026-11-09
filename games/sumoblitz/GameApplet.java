@@ -185,18 +185,18 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     abstract void initializeGame(int param0);
 
     final static void pushRasterState(int guard) {
-        rl var1 = null;
+        RasterStateFrame var1 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
         try {
           if (guard < 40) {
             GameApplet.provideLoaderApplet((java.applet.Applet) null);
           }
-          var1 = (rl) (ko.field_m.removeLast((byte) -127));
+          var1 = (RasterStateFrame) (ko.field_m.removeLast((byte) -127));
           if (var1 == null) {
-            var1 = new rl();
+            var1 = new RasterStateFrame();
           }
-          var1.a(SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, SoftwareRasterizer.clipRight, (byte) -94, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipBottom);
+          var1.set(SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, SoftwareRasterizer.clipRight, (byte) -94, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipBottom);
           IntrusiveNodeHashTable.field_g.addLast((IntrusiveNode) (var1), (byte) 39);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -833,7 +833,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
-                      if (jf.a(-13181, (CharSequence) ((Object) var4)) &&
+                      if (ContentTransitionPhase.a(-13181, (CharSequence) ((Object) var4)) &&
                         !(10 <= no.a((byte) -128, (CharSequence) ((Object) var4)))) {
                         this.a("wrongjava", 21253);
                         decompiledFrameRemainder3 = (var5 != 0);
@@ -948,7 +948,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         try {
           var1_int = -117 / ((param0 + 43) / 61);
-          stackIn_4_0 = (vm.field_c == LegacyOpenGlGraphicsHeap.field_p);
+          stackIn_4_0 = (vm.nameAvailabilityState == LegacyOpenGlGraphicsHeap.PENDING);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

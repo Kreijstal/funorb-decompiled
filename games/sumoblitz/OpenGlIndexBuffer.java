@@ -35,7 +35,7 @@ final class OpenGlIndexBuffer extends OpenGlBuffer implements IndexBuffer {
         LegacyOpenGlSpecularEffect.field_h[1] = LegacyOpenGlEffectManager.field_i;
         LegacyOpenGlSpecularEffect.field_h[0] = ResourceArchive.field_f;
         LegacyOpenGlSpecularEffect.field_h[2] = hc.field_f;
-        pl.field_u = LegacyOpenGlSpecularEffect.field_h[1] + LegacyOpenGlSpecularEffect.field_h[0] - 2 + (LegacyOpenGlSpecularEffect.field_h[2] - 1);
+        IsaacPacketBuffer.field_u = LegacyOpenGlSpecularEffect.field_h[1] + LegacyOpenGlSpecularEffect.field_h[0] - 2 + (LegacyOpenGlSpecularEffect.field_h[2] - 1);
         if (param0 < 100) {
           OpenGlIndexBuffer.b(46, -94);
         }

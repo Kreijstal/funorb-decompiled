@@ -30,8 +30,8 @@ final class EmptyWidgetRenderer implements WidgetRenderer {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            ig.field_a = new pl(param3);
-            InwardSparkParticle.field_v = new pl(param8);
+            ig.field_a = new IsaacPacketBuffer(param3);
+            InwardSparkParticle.field_v = new IsaacPacketBuffer(param8);
             CacheIoRequest.field_v = param5;
             vp.field_a = param7;
             jm.field_b = param13;
@@ -88,8 +88,8 @@ final class EmptyWidgetRenderer implements WidgetRenderer {
         InstrumentNoteMask.field_n = null;
         cd.field_d = 0;
         int var2 = SingleChildWidget.field_x;
-        SingleChildWidget.field_x = rl.field_q;
-        rl.field_q = var2;
+        SingleChildWidget.field_x = RasterStateFrame.field_q;
+        RasterStateFrame.field_q = var2;
         if (param0 == 51) {
           jk.field_b.failureCode = 2;
           jk.field_b.failureCount = jk.field_b.failureCount + 1;

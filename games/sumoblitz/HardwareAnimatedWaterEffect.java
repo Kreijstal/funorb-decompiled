@@ -86,13 +86,13 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
         this.toolkit.g(0, -124);
         if (guard == 20186) {
           this.toolkit.a(false, -16777216);
-          this.toolkit.a(mm.CONSTANT, 0, true);
+          this.toolkit.a(AccountRequestState.CONSTANT, 0, true);
           this.updateTextureUniforms((byte) -107);
           return;
         }
         this.waterTextures = (WaterTextureResources) null;
         this.toolkit.a(false, -16777216);
-        this.toolkit.a(mm.CONSTANT, 0, true);
+        this.toolkit.a(AccountRequestState.CONSTANT, 0, true);
         this.updateTextureUniforms((byte) -107);
     }
 

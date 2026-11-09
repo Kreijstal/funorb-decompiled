@@ -90,13 +90,13 @@ final class ClientException extends RuntimeException {
     }
 
     final static void popRasterState(byte guard) {
-        rl var1 = (rl) (IntrusiveNodeHashTable.field_g.removeLast((byte) -124));
+        RasterStateFrame var1 = (RasterStateFrame) (IntrusiveNodeHashTable.field_g.removeLast((byte) -124));
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        SoftwareRasterizer.setRaster(var1.field_v, var1.field_t, var1.field_m);
-        SoftwareRasterizer.setClip(var1.field_s, var1.field_r, var1.field_u, var1.field_p);
-        var1.field_v = null;
+        SoftwareRasterizer.setRaster(var1.pixels, var1.width, var1.height);
+        SoftwareRasterizer.setClip(var1.clipLeft, var1.clipTop, var1.clipRight, var1.clipBottom);
+        var1.pixels = null;
         ko.field_m.addLast((IntrusiveNode) (var1), (byte) 39);
         int var2 = -37 / ((guard - 1) / 38);
     }

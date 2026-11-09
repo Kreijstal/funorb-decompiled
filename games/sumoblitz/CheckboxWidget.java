@@ -137,7 +137,7 @@ final class CheckboxWidget extends InteractiveWidget {
             drone.velocityYQ8 = 256;
             return;
           }
-          if (-52 + rl.field_k < var5) {
+          if (-52 + RasterStateFrame.field_k < var5) {
             if (drone.velocityYQ8 <= 0) {
               return;
             }
@@ -187,7 +187,7 @@ final class CheckboxWidget extends InteractiveWidget {
         RuntimeException var2 = null;
         try {
           ValidationStatusWidget.detachKeyboardInput((java.awt.Component) ((Object) param1), -1);
-          pl.a((java.awt.Component) ((Object) param1), 7);
+          IsaacPacketBuffer.detachMouseInput((java.awt.Component) ((Object) param1), 7);
           if (!param0) {
             field_F = -67;
           }

@@ -72,7 +72,7 @@ final class WhirlpoolDigest {
           if (guard >= -2) {
             return;
           }
-          la.a(this.bitLength, 0, this.buffer, 32, 32);
+          ArrayUtils.copy(this.bitLength, 0, this.buffer, 32, 32);
           this.processBlock((byte) 99);
           var4_int = 0;
           var5 = offset;

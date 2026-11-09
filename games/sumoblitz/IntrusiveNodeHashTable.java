@@ -101,7 +101,7 @@ final class IntrusiveNodeHashTable {
         if (param0) {
           field_h = (String) null;
         }
-        return (QuickChatPhraseProvider.a(!param0 ? true : false, param1, param2) | BeveledCheckboxRenderer.b(param1, param2, -126) | UiWidget.a(param1, param2, 52)) & jf.a(param1, (byte) -91, param2);
+        return (QuickChatPhraseProvider.a(!param0 ? true : false, param1, param2) | BeveledCheckboxRenderer.b(param1, param2, -126) | UiWidget.a(param1, param2, 52)) & ContentTransitionPhase.a(param1, (byte) -91, param2);
     }
 
     final void a(IntrusiveNode param0, int param1, long param2) {

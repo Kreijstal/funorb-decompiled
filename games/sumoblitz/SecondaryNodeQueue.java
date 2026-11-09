@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SecondaryNodeQueue {
-    static vq field_a;
+    static DisplayNameForm field_a;
     static int field_c;
     static int field_d;
     private DualLinkNode sentinel;
@@ -156,7 +156,7 @@ final class SecondaryNodeQueue {
                 var5.errors[var6] = -5;
               }
             }
-            qr.reflectionChecks.addLast((IntrusiveNode) (var5), (byte) 39);
+            AccountConnectionPhase.reflectionChecks.addLast((IntrusiveNode) (var5), (byte) 39);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;

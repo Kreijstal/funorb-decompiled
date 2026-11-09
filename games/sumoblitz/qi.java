@@ -7,7 +7,7 @@ final class qi {
     final static void a(int param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
-        pl var1 = null;
+        IsaacPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
@@ -15,7 +15,7 @@ final class qi {
         try {
           var1 = InwardSparkParticle.field_v;
           while (Js5Client.nextReflectionCheckReady((byte) 125)) {
-            var1.g(8, param0 ^ 0);
+            var1.writeCipherByte(8, param0 ^ 0);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;

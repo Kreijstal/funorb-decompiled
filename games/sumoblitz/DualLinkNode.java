@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class DualLinkNode extends IntrusiveNode {
-    static ts field_n;
+    static QuickChatCommand field_n;
     DualLinkNode secondaryNext;
     DualLinkNode secondaryPrevious;
     static int[] field_k;
@@ -44,6 +44,6 @@ class DualLinkNode extends IntrusiveNode {
         field_q = new int[1];
         field_p = 20000000L;
         field_k = new int[13];
-        field_n = new ts(9, 0, 4, 1);
+        field_n = new QuickChatCommand(9, 0, 4, 1);
     }
 }

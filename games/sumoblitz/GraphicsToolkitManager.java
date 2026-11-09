@@ -337,7 +337,7 @@ final class GraphicsToolkitManager {
           GraphicsToolkit.field_g = shaderArchive;
           this.textures = textureProvider;
           LegacyOpenGlShaderProgram.field_d = nativeArchive;
-          ow.a(-18527, nativeArchive, dispatcher);
+          HuffmanDecoder.initializeNativeLibraryPaths(-18527, nativeArchive, dispatcher);
           this.setRendererPreferences(rendererPreferences, 97);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ik.<init>(" + (nativeArchive != null ? "{...}" : "null") + ',' + (shaderArchive != null ? "{...}" : "null") + ',' + (textureProvider != null ? "{...}" : "null") + ',' + (dispatcher != null ? "{...}" : "null") + ',' + (rendererPreferences != null ? "{...}" : "null") + ')');

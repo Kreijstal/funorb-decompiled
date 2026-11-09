@@ -40,7 +40,7 @@ class UsernameCredentials extends LoginCredentials {
               var3_int = maxLength;
             }
             var4 = new byte[var3_int];
-            packet.position = packet.position + LegacyOpenGlUnderwaterEffect.field_g.a(0, packet.position, var4, 116, var3_int, packet.payload);
+            packet.position = packet.position + LegacyOpenGlUnderwaterEffect.field_g.decode(0, packet.position, var4, 116, var3_int, packet.payload);
             var5 = SoftLruCache.decodeCp1252(var4, 0, var3_int, 26564);
             if (guard == -14832) {
               stackIn_7_0 = var5;
@@ -153,10 +153,10 @@ class UsernameCredentials extends LoginCredentials {
               stackIn_8_0 = -1;
               return stackIn_8_0;
             }
-            if (kw.field_c == gg.field_t) {
+            if (kw.accountPhase == gg.READY_TO_CONNECT) {
               if (reconnect) {
                 var10 = (String) null;
-                LegacyOpenGlBuffer.field_d = LoginCredentialFactory.createCredentials(lb.field_a, false, (String) null, password, false);
+                LegacyOpenGlBuffer.field_d = LoginCredentialFactory.createCredentials(StringBuilderSupport.field_a, false, (String) null, password, false);
               } else {
                 LegacyOpenGlBuffer.field_d = MouseInputHandler.credentialsForLogin(false, username, password, (byte) -94);
               }
@@ -164,29 +164,29 @@ class UsernameCredentials extends LoginCredentials {
               InwardSparkParticle.field_v.writeByte((byte) 42, 14);
               InwardSparkParticle.field_v.writeByte((byte) 96, LegacyOpenGlBuffer.field_d.credentialType((byte) 126).wireId);
               MessageDialog.a(0, -1);
-              kw.field_c = LegacyOpenGlRidgedWaterEffect.field_g;
+              kw.accountPhase = LegacyOpenGlRidgedWaterEffect.WAIT_HANDSHAKE_REPLY;
             }
-            if (kw.field_c == LegacyOpenGlRidgedWaterEffect.field_g &&
+            if (kw.accountPhase == LegacyOpenGlRidgedWaterEffect.WAIT_HANDSHAKE_REPLY &&
               OpenGlIndexBuffer.b(-1, 1)) {
               var6_int = ig.field_a.readUnsignedByte(-31302);
               if (var6_int != 0) {
                 TextureFormat.field_a = var6_int;
                 gu.field_d = -1;
-                kw.field_c = WidgetContainer.field_z;
+                kw.accountPhase = WidgetContainer.WAIT_LOGIN_ERROR;
               } else {
-                kw.field_c = OpenGlVertexBuffer.field_q;
+                kw.accountPhase = OpenGlVertexBuffer.WAIT_SERVER_SEED;
               }
               ig.field_a.position = 0;
             }
-            if (kw.field_c == OpenGlVertexBuffer.field_q &&
+            if (kw.accountPhase == OpenGlVertexBuffer.WAIT_SERVER_SEED &&
               OpenGlIndexBuffer.b(-1, 8)) {
               HardwareUnlitEffect.field_g = ig.field_a.readLong((byte) 127);
               ig.field_a.position = 0;
               LoginPacketWriter.sendLoginPacket(reconnect, jagexHosted, -12793, affiliateId, LegacyOpenGlBuffer.field_d);
-              kw.field_c = jj.field_f;
+              kw.accountPhase = jj.WAIT_LOGIN_REPLY;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (kw.field_c == jj.field_f &&
+            if (kw.accountPhase == jj.WAIT_LOGIN_REPLY &&
               OpenGlIndexBuffer.b(-1, 1)) {
               var6_intLifetime1 = ig.field_a.readUnsignedByte(-31302);
               TextureFormat.field_a = var6_intLifetime1;
@@ -195,7 +195,7 @@ class UsernameCredentials extends LoginCredentials {
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
-                  kw.field_c = WidgetContainer.field_z;
+                  kw.accountPhase = WidgetContainer.WAIT_LOGIN_ERROR;
                   gu.field_d = -1;
                   decompiledFrameRemainder0 = false;
                 }
@@ -207,13 +207,13 @@ class UsernameCredentials extends LoginCredentials {
                 }
               }
               if (decompiledFrameRemainder0) {
-                kw.field_c = MusicVoice.field_l;
+                kw.accountPhase = MusicVoice.WAIT_LOGIN_DETAILS;
                 gu.field_d = -1;
               }
             }
-            if (kw.field_c == MusicVoice.field_l &&
+            if (kw.accountPhase == MusicVoice.WAIT_LOGIN_DETAILS &&
               lt.a((byte) 119)) {
-              lb.field_a = ig.field_a.readLong((byte) 114);
+              StringBuilderSupport.field_a = ig.field_a.readLong((byte) 114);
               Bzip2State.field_j = ig.field_a.readUnsignedByte(-31302);
               ig.field_a.readUnsignedByte(-31302);
               HardwareRidgedWaterNoise.field_x = ig.field_a.readUnsignedShort(255);
@@ -234,9 +234,9 @@ class UsernameCredentials extends LoginCredentials {
                 ig.field_a.readUnsignedByte(-31302);
                 ig.field_a.readUnsignedByte(-31302);
                 ig.field_a.readInt(true);
-                pl.field_y = ig.field_a.readUnsignedShort(255);
-                WidgetStateStyle.field_b = new byte[pl.field_y];
-                for (var8 = 0; var8 < pl.field_y; var8++) {
+                IsaacPacketBuffer.field_y = ig.field_a.readUnsignedShort(255);
+                WidgetStateStyle.field_b = new byte[IsaacPacketBuffer.field_y];
+                for (var8 = 0; var8 < IsaacPacketBuffer.field_y; var8++) {
                   WidgetStateStyle.field_b[var8] = ig.field_a.readByte(true);
                 }
               }
@@ -244,7 +244,7 @@ class UsernameCredentials extends LoginCredentials {
               var11 = (CharSequence) ((Object) qv.field_o);
               PasswordValidator.field_f = AccountCreationProgressDialog.normalizeAccountName(-1, var11);
               jk.field_c = ig.field_a.readUnsignedByte(-31302);
-              kw.field_c = LegacyOpenGlUnderwaterEffect.field_j;
+              kw.accountPhase = LegacyOpenGlUnderwaterEffect.CONNECTED;
               if (LegacyOpenGlBuffer.field_d.credentialType((byte) 113) != IndexedSprite.EMAIL_CREDENTIALS) {
                 if (LegacyOpenGlBuffer.field_d.credentialType((byte) 89) == ProxyAuthenticationRequiredException.USERNAME_CREDENTIALS) {
                   LevelSelectScreen.field_j.a(true, LegacyOpenGlUnlitEffect.c(2));
@@ -266,7 +266,7 @@ class UsernameCredentials extends LoginCredentials {
                 }
               } else {
                 try {
-                  tw.a(-111, LegacyOpenGlUnlitEffect.c(2), "zap", new Object[]{MusicPatch.a(-29275, lb.field_a)});
+                  tw.a(-111, LegacyOpenGlUnlitEffect.c(2), "zap", new Object[]{MusicPatch.a(-29275, StringBuilderSupport.field_a)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -275,15 +275,15 @@ class UsernameCredentials extends LoginCredentials {
               if (HardwareRidgedWaterNoise.field_x > 0) {
                 qn.field_a = true;
               }
-              InwardSparkParticle.field_v.a((byte) 64, RendererSession.isaacSeed);
+              InwardSparkParticle.field_v.initializeCipher((byte) 64, RendererSession.isaacSeed);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 RendererSession.isaacSeed[var8Lifetime1] = RendererSession.isaacSeed[var8Lifetime1] + 50;
               }
-              ig.field_a.a((byte) 123, RendererSession.isaacSeed);
+              ig.field_a.initializeCipher((byte) 123, RendererSession.isaacSeed);
               stackIn_73_0 = TextureFormat.field_a;
               return stackIn_73_0;
             }
-            if (kw.field_c == WidgetContainer.field_z &&
+            if (kw.accountPhase == WidgetContainer.WAIT_LOGIN_ERROR &&
               lt.a((byte) 119)) {
               kk.a((byte) -115);
               if (TextureFormat.field_a == 7 &&

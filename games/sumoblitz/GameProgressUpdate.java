@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hg extends IntrusiveNode {
+final class GameProgressUpdate extends IntrusiveNode {
     static String playTheGameWithoutText;
-    int field_u;
+    int eventType;
     int field_n;
     static float[] field_l;
     int field_s;
@@ -11,10 +11,10 @@ final class hg extends IntrusiveNode {
     static float[] field_k;
     int field_p;
     int field_r;
-    int field_q;
+    int eventValue;
     static int[] field_m;
 
-    final static RendererPreference[] a(int param0, int[] param1) {
+    final static RendererPreference[] rendererPreferences(int guard, int[] backends) {
         int var2_int = 0;
         RuntimeException var2 = null;
         RendererPreference[] var3 = null;
@@ -31,30 +31,30 @@ final class hg extends IntrusiveNode {
         int var4Lifetime1;
         var6 = Sumoblitz.field_L ? 1 : 0;
         try {
-          stackIn_4_0 = (0 != param1[param1.length - 1]) ? 0 : 1;
+          stackIn_4_0 = (0 != backends[backends.length - 1]) ? 0 : 1;
           var2_int = stackIn_4_0;
           if (var2_int != 0) {
-            stackIn_7_0 = param1.length;
+            stackIn_7_0 = backends.length;
           } else {
-            stackIn_7_0 = param1.length + 1;
+            stackIn_7_0 = backends.length + 1;
           }
           var3 = new RendererPreference[stackIn_7_0];
           var4 = 0;
-          for (var4Lifetime1 = 0; var4Lifetime1 < param1.length; var4Lifetime1++) {
-            var3[var4Lifetime1] = new RendererPreference(param1[var4Lifetime1], 2);
+          for (var4Lifetime1 = 0; var4Lifetime1 < backends.length; var4Lifetime1++) {
+            var3[var4Lifetime1] = new RendererPreference(backends[var4Lifetime1], 2);
           }
           if (var4Lifetime1 < var3.length) {
             var3[var4Lifetime1] = new RendererPreference(0, 2);
           }
-          var5 = 34 / ((57 - param0) / 53);
+          var5 = 34 / ((57 - guard) / 53);
           stackIn_14_0 = var3;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_17_0 = var2;
-          stackIn_17_1 = new StringBuilder().append("hg.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_17_1 = new StringBuilder().append("hg.A(").append(guard).append(',');
+          if (backends == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
@@ -68,19 +68,19 @@ final class hg extends IntrusiveNode {
         field_l = null;
         if (param0 != 12) {
           int[] var2 = (int[]) null;
-          hg.a(-33, (int[]) null);
+          GameProgressUpdate.rendererPreferences(-33, (int[]) null);
         }
         playTheGameWithoutText = null;
         field_k = null;
         field_o = null;
     }
 
-    hg(int param0, int param1, int param2, int param3, int param4, int param5) {
+    GameProgressUpdate(int type, int value, int param2, int param3, int param4, int param5) {
         this.field_n = param4;
         this.field_r = param2;
         this.field_s = param3;
-        this.field_q = param1;
-        this.field_u = param0;
+        this.eventValue = value;
+        this.eventType = type;
         this.field_p = param5;
     }
 

@@ -125,7 +125,7 @@ final class BufferedCacheFile {
             if (this.writeStart != -1L &&
               this.position >= this.writeStart &&
               (this.position + (long)length) <= ((long)this.writeLength + this.writeStart)) {
-              la.a(this.writeBuffer, (int)(-this.writeStart + this.position), destination, offset, length);
+              ArrayUtils.copy(this.writeBuffer, (int)(-this.writeStart + this.position), destination, offset, length);
               this.position = this.position + (long)length;
               return;
             }
@@ -138,7 +138,7 @@ final class BufferedCacheFile {
               if (length < var9_int) {
                 var9_int = length;
               }
-              la.a(this.readBuffer, (int)(this.position - this.readStart), destination, offset, var9_int);
+              ArrayUtils.copy(this.readBuffer, (int)(this.position - this.readStart), destination, offset, var9_int);
               offset = offset + var9_int;
               this.position = this.position + (long)var9_int;
               length = length - var9_int;
@@ -169,7 +169,7 @@ final class BufferedCacheFile {
               if (this.readLength < var9_intLifetime1Lifetime1) {
                 var9_intLifetime1Lifetime1 = this.readLength;
               }
-              la.a(this.readBuffer, 0, destination, offset, var9_intLifetime1Lifetime1);
+              ArrayUtils.copy(this.readBuffer, 0, destination, offset, var9_intLifetime1Lifetime1);
               this.position = this.position + (long)var9_intLifetime1Lifetime1;
               offset = offset + var9_intLifetime1Lifetime1;
               length = length - var9_intLifetime1Lifetime1;
@@ -215,7 +215,7 @@ final class BufferedCacheFile {
               if (-1L < var9 &&
                 var9 < var11) {
                 var13 = (int)(var11 - var9);
-                la.a(this.writeBuffer, (int)(-this.writeStart + var9), destination, (int)(var9 - var5_long) + var7, var13);
+                ArrayUtils.copy(this.writeBuffer, (int)(-this.writeStart + var9), destination, (int)(var9 - var5_long) + var7, var13);
                 if (var11 > this.position) {
                   length = (int)((long)length - (var11 - this.position));
                   this.position = var11;
@@ -286,7 +286,7 @@ final class BufferedCacheFile {
           if (var2_long > -1L &&
             var2_long < var4) {
             var6 = (int)(-var2_long + var4);
-            la.a(this.writeBuffer, (int)(-this.writeStart + var2_long), this.readBuffer, (int)(-this.readStart + var2_long), var6);
+            ArrayUtils.copy(this.writeBuffer, (int)(-this.writeStart + var2_long), this.readBuffer, (int)(-this.readStart + var2_long), var6);
           }
           this.writeStart = -1L;
           this.writeLength = 0;
@@ -320,7 +320,7 @@ final class BufferedCacheFile {
             if (this.writeStart != -1L &&
               this.writeStart + (long)this.writeBuffer.length < this.position + (long)length) {
               var5_int = (int)(this.writeStart - this.position + (long)this.writeBuffer.length);
-              la.a(source, offset, this.writeBuffer, (int)(-this.writeStart + this.position), var5_int);
+              ArrayUtils.copy(source, offset, this.writeBuffer, (int)(-this.writeStart + this.position), var5_int);
               this.position = this.position + (long)var5_int;
               length = length - var5_int;
               offset = offset + var5_int;
@@ -335,7 +335,7 @@ final class BufferedCacheFile {
               if (this.writeStart == -1L) {
                 this.writeStart = this.position;
               }
-              la.a(source, offset, this.writeBuffer, (int)(-this.writeStart + this.position), length);
+              ArrayUtils.copy(source, offset, this.writeBuffer, (int)(-this.writeStart + this.position), length);
               this.position = this.position + (long)length;
               if (this.position - this.writeStart > (long)this.writeLength) {
                 this.writeLength = (int)(this.position - this.writeStart);
@@ -374,7 +374,7 @@ final class BufferedCacheFile {
             if (var5_long > -1L &&
               var7 > var5_long) {
               var9 = (int)(var7 - var5_long);
-              la.a(source, (int)(-this.position + (var5_long + (long)offset)), this.readBuffer, (int)(var5_long - this.readStart), var9);
+              ArrayUtils.copy(source, (int)(-this.position + (var5_long + (long)offset)), this.readBuffer, (int)(var5_long - this.readStart), var9);
             }
             this.position = this.position + (long)length;
             return;

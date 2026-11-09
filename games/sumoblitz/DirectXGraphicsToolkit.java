@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
-    jaclib.peer.pf field_Wc;
+    jaclib.peer.PeerReferenceManager field_Wc;
     private jagdx.IDirect3DVertexShader field_Vc;
     private static int[] field_Zc;
     jagdx.GeometryBuffer field_Yc;
@@ -54,8 +54,8 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
           var9.UnlockRect();
         }
         this.field_Cc.StretchRect(var9, 0, 0, width, height, var12, x, y, width, height, 0);
-        var9.a(-22671);
-        var12.a(-22671);
+        var9.release(-22671);
+        var12.release(-22671);
     }
 
     final void applyScissor(int guard) {
@@ -315,7 +315,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
     }
 
     final synchronized void updateTime(int timeMillis) {
-        this.field_Wc.b(12575);
+        this.field_Wc.pollReleasedReferences(12575);
         super.updateTime(timeMillis);
     }
 
@@ -446,7 +446,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         if (param0 == FontMetrics.PREVIOUS) {
           return 1;
         }
-        if (param0 != mm.CONSTANT) {
+        if (param0 != AccountRequestState.CONSTANT) {
           throw new IllegalArgumentException();
         }
         return 3;
@@ -935,11 +935,11 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
     }
 
     final void dispose() {
-        this.field_Wc.a(-25924);
+        this.field_Wc.releaseAll(-25924);
         super.dispose();
     }
 
-    private DirectXGraphicsToolkit(int param0, int param1, java.awt.Canvas param2, jaclib.peer.pf param3, jagdx.IDirect3D param4, jagdx.IDirect3DDevice param5, kg param6, jagdx.D3DPRESENT_PARAMETERS param7, jagdx.D3DCAPS param8, TextureProvider param9, ResourceArchive param10, int param11) {
+    private DirectXGraphicsToolkit(int param0, int param1, java.awt.Canvas param2, jaclib.peer.PeerReferenceManager param3, jagdx.IDirect3D param4, jagdx.IDirect3DDevice param5, kg param6, jagdx.D3DPRESENT_PARAMETERS param7, jagdx.D3DCAPS param8, TextureProvider param9, ResourceArchive param10, int param11) {
         super(param2, param6, param9, param10, param11, 0);
         jagdx.GeometryBuffer discarded$0 = null;
         boolean stackIn_4_1 = false;
@@ -1070,7 +1070,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        jaclib.peer.pf var7 = null;
+        jaclib.peer.PeerReferenceManager var7 = null;
         jagdx.IDirect3D var8 = null;
         jagdx.D3DCAPS var9 = null;
         jagdx.D3DPRESENT_PARAMETERS var10 = null;
@@ -1078,13 +1078,13 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         Object var12 = null;
         jagdx.IDirect3DDevice var12_ref = null;
         kg var13 = null;
-        jagdx.fg var14 = null;
+        jagdx.DirectXException var14 = null;
         DirectXGraphicsToolkit var15 = null;
         var4 = null;
         try {
           var5_int = 0;
           var6 = 1;
-          var7 = new jaclib.peer.pf();
+          var7 = new jaclib.peer.PeerReferenceManager();
           var8 = jagdx.IDirect3D.a(-2147483616, var7);
           var9 = var8.a(var5_int, var6);
           if ((16777216 & var9.RasterCaps) == 0) {
@@ -1138,9 +1138,9 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
           var12 = null;
           try {
             var12_ref = var8.a(var5_int, var6, param0, 64 | var11, var10);
-          } catch (jagdx.fg decompiledCaughtParameter0) {
+          } catch (jagdx.DirectXException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
-            var14 = (jagdx.fg) (Object) decompiledCaughtException;
+            var14 = (jagdx.DirectXException) (Object) decompiledCaughtException;
             var12_ref = var8.a(var5_int, var6, param0, 32 | var11, var10);
           }
           var13 = new kg(var12_ref.b(0), var12_ref.b());

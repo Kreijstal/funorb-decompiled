@@ -35,7 +35,7 @@ final class uj {
         Object var4_ref = null;
         RuntimeException var4_ref2 = null;
         try {
-          if (qr.field_b != null) {
+          if (AccountConnectionPhase.field_b != null) {
             DisplayModeErrorDialog.a(param3, param1, (byte) -87, 1048576, param2);
           }
           if (null != qc.field_e) {

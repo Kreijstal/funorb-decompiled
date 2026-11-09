@@ -62,8 +62,8 @@ final class kt {
           var1_int = 0;
           var2 = 0;
           while (EmailCredentials.c(-105)) {
-            RendererPreference.field_a.a((byte) 63);
-            if (RendererPreference.field_a.d(-31260)) {
+            RendererPreference.field_a.handleVerticalNavigation((byte) 63);
+            if (RendererPreference.field_a.isActivated(-31260)) {
               var1_int = 1;
             }
             if (TextureCombineOperation.field_a != 13) {
@@ -71,15 +71,15 @@ final class kt {
             }
             var2 = 1;
           }
-          RendererPreference.field_a.a(true, OpenGlAssemblyProgram.b(AgeValidator.field_f, 1882601153, LoginCredentialType.field_a), OpenGlAssemblyProgram.b(pi.field_e, 1882601153, ko.field_p));
-          if (RendererPreference.field_a.d(-31260)) {
+          RendererPreference.field_a.updatePointerSelection(true, OpenGlAssemblyProgram.b(AgeValidator.field_f, 1882601153, LoginCredentialType.field_a), OpenGlAssemblyProgram.b(pi.field_e, 1882601153, ko.field_p));
+          if (RendererPreference.field_a.isActivated(-31260)) {
             var1_int = 1;
           }
           var4 = -89 / ((param0 - 67) / 48);
           var3 = 0;
           if (var1_int != 0 &&
-            RendererPreference.field_a.field_g >= 0) {
-            var3 = jo.field_b[RendererPreference.field_a.field_g];
+            RendererPreference.field_a.selectedIndex >= 0) {
+            var3 = jo.field_b[RendererPreference.field_a.selectedIndex];
             if (var3 == 2) {
               GraphicsToolkit.b(23639);
             } else if (var3 == 5) {

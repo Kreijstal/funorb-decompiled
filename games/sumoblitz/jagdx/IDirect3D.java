@@ -4,7 +4,7 @@
 package jagdx;
 
 public class IDirect3D extends jaclib.peer.IUnknown {
-    private jaclib.peer.pf a;
+    private jaclib.peer.PeerReferenceManager a;
 
     private final native int _GetDeviceCaps(int param0, int param1, jagdx.D3DCAPS param2);
 
@@ -16,7 +16,7 @@ public class IDirect3D extends jaclib.peer.IUnknown {
 
     public final native int CheckDeviceMultiSampleType(int param0, int param1, int param2, boolean param3, int param4);
 
-    private IDirect3D(jaclib.peer.pf param0) {
+    private IDirect3D(jaclib.peer.PeerReferenceManager param0) {
         super(param0);
         this.a = param0;
     }
@@ -27,11 +27,11 @@ public class IDirect3D extends jaclib.peer.IUnknown {
         return this._GetAdapterDisplayMode(param0, param1);
     }
 
-    public final static jagdx.IDirect3D a(int param0, jaclib.peer.pf param1) {
+    public final static jagdx.IDirect3D a(int param0, jaclib.peer.PeerReferenceManager param1) {
         jagdx.IDirect3D var2 = new jagdx.IDirect3D(param1);
         int var3 = jagdx.IDirect3D._Direct3DCreate(param0, var2);
         if (jagdx.HResult.failed(var3, -1)) {
-          throw new jagdx.fg(String.valueOf(var3));
+          throw new jagdx.DirectXException(String.valueOf(var3));
         }
         return var2;
     }
@@ -40,7 +40,7 @@ public class IDirect3D extends jaclib.peer.IUnknown {
         jagdx.D3DCAPS var3 = new jagdx.D3DCAPS();
         int var4 = this._GetDeviceCaps(param0, param1, var3);
         if (jagdx.HResult.failed(var4, -1)) {
-          throw new jagdx.fg(String.valueOf(var4));
+          throw new jagdx.DirectXException(String.valueOf(var4));
         }
         return var3;
     }
@@ -53,7 +53,7 @@ public class IDirect3D extends jaclib.peer.IUnknown {
         if (!jagdx.HResult.failed(var7, -1)) {
           return var6;
         }
-        throw new jagdx.fg(String.valueOf(var7));
+        throw new jagdx.DirectXException(String.valueOf(var7));
     }
 
     public final native int CheckDeviceType(int param0, int param1, int param2, int param3, boolean param4);

@@ -90,9 +90,9 @@ final class mn {
     }
 
     final static void sendServerDataWrite(ServerDataWriteRequest request, int guard, int opcode) {
-        pl var5 = InwardSparkParticle.field_v;
-        pl var3 = var5;
-        var5.g(opcode, 8);
+        IsaacPacketBuffer var5 = InwardSparkParticle.field_v;
+        IsaacPacketBuffer var3 = var5;
+        var5.writeCipherByte(opcode, 8);
         var5.position = var5.position + 1;
         int var4 = var5.position;
         if (guard > -5) {

@@ -39,8 +39,8 @@ final class LevelSelectScreen extends MenuScreen {
         try {
           var4_int = opacity << 24;
           wo.a(up.field_c, 410, -5, var4_int, 3, toolkit, 650, 35, 1, true);
-          ForceFieldRingEffect.field_t.a(mm.field_g.toUpperCase(), var4_int | 5023231, -1, 90, 320, 0);
-          hc.field_e.a(mm.field_g.toUpperCase(), var4_int + 16777215, -1, 90, 320, 0);
+          ForceFieldRingEffect.field_t.a(AccountRequestState.field_g.toUpperCase(), var4_int | 5023231, -1, 90, 320, 0);
+          hc.field_e.a(AccountRequestState.field_g.toUpperCase(), var4_int + 16777215, -1, 90, 320, 0);
           wo.a(up.field_c, 60, 44, var4_int, 3, toolkit, 325, 370, 1, true);
           MusicCrossfadeStream.field_q[0].drawRotated(80.0f, 402.0f, 1600, 0, 1, 0, 2);
           qv.field_k.a(407, 92, 5023231 | var4_int, Integer.toString(ResourceArchive.field_f), (byte) -110, -1);
@@ -60,7 +60,7 @@ final class LevelSelectScreen extends MenuScreen {
           var6 = stackIn_4_0;
           var6 += 127;
           var7 = 0;
-          for (var8 = 108; -120 + rl.field_k > var8; var8 += 52) {
+          for (var8 = 108; -120 + RasterStateFrame.field_k > var8; var8 += 52) {
             for (var9 = 44; ArchiveCatalog.field_c - 96 > var9; var9 += 112) {
               if (var7 == 1 + ToolkitRasterStateFrame.field_e &&
                 opacity >= 250 &&

@@ -208,7 +208,7 @@ final class FullscreenMembershipDialog extends ResizingDialog implements WidgetA
             stackIn_4_0 = 34168;
             return stackIn_4_0;
           }
-          if (mm.CONSTANT == source) {
+          if (AccountRequestState.CONSTANT == source) {
             stackIn_8_0 = 34166;
             return stackIn_8_0;
           }

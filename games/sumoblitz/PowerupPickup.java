@@ -184,7 +184,7 @@ final class PowerupPickup extends IntrusiveNode {
           }
           this.velocityYQ8 = -this.velocityYQ8;
         } else {
-          if (this.yQ8 > rl.field_k - 52 << 8 &&
+          if (this.yQ8 > RasterStateFrame.field_k - 52 << 8 &&
             0 <= this.velocityYQ8) {
             if (this.velocityYQ8 == 0) {
               this.velocityYQ8 = 256;
@@ -250,7 +250,7 @@ final class PowerupPickup extends IntrusiveNode {
           return;
         }
         StrongCacheReference.field_C = null;
-        er.field_h = null;
+        MenuSelectionController.field_h = null;
         TextLayout.field_d = (byte[][]) null;
         LegacyOpenGlEffectManager.field_l = null;
         CheckboxRenderer.field_k = null;

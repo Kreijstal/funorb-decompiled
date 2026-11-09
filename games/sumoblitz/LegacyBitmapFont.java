@@ -675,7 +675,7 @@ abstract class LegacyBitmapFont extends DualLinkNode {
         if (text == null) {
           return 0;
         }
-        lb.a(lineBuilder, 60, ' ', 0);
+        StringBuilderSupport.setLength(lineBuilder, 60, ' ', 0);
         var4 = 0;
         var5 = 0;
         var6 = -1;

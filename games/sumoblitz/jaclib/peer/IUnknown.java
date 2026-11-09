@@ -4,17 +4,17 @@
 package jaclib.peer;
 
 public class IUnknown extends jaclib.peer.Peer {
-    public final long a(int param0) {
+    public final long release(int guard) {
         RuntimeException var2;
-        if (param0 == -22671) {
-          return super.a();
+        if (guard == -22671) {
+          return super.releaseReference();
         }
         return -115L;
     }
 
     public final native long AddRef();
 
-    protected IUnknown(jaclib.peer.pf param0) {
-        this.reference = (jaclib.peer.PeerReference) ((Object) new jaclib.peer.IUnknownReference(this, param0));
+    protected IUnknown(jaclib.peer.PeerReferenceManager manager) {
+        this.reference = (jaclib.peer.PeerReference) ((Object) new jaclib.peer.IUnknownReference(this, manager));
     }
 }

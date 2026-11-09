@@ -3,13 +3,13 @@
  */
 final class LegacyOpenGlUnderwaterEffect extends LegacyOpenGlEffect {
     private boolean active;
-    static ow field_g;
+    static HuffmanDecoder field_g;
     private boolean lighting;
     private LegacyOpenGlAssemblyProgram groundUnlitProgram;
     private LegacyOpenGlAssemblyProgram modelLitProgram;
     private boolean supported;
     private LegacyOpenGlAssemblyProgram modelUnlitProgram;
-    static qr field_j;
+    static AccountConnectionPhase CONNECTED;
     private boolean usingFallbackTexture;
     private LegacyOpenGlTexture2D fogRamp;
     private LegacyOpenGlAssemblyProgram groundLitProgram;
@@ -36,7 +36,7 @@ final class LegacyOpenGlUnderwaterEffect extends LegacyOpenGlEffect {
     }
 
     public static void releaseStatics(boolean param0) {
-        field_j = null;
+        CONNECTED = null;
         field_g = null;
         if (!param0) {
           field_h = -28;
@@ -263,6 +263,6 @@ final class LegacyOpenGlUnderwaterEffect extends LegacyOpenGlEffect {
     }
 
     static {
-        field_j = new qr();
+        CONNECTED = new AccountConnectionPhase();
     }
 }

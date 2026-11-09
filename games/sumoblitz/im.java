@@ -28,18 +28,18 @@ final class im {
           if (guard > -23) {
             field_c = (GraphicsToolkit) null;
           }
-          if (LegacyOpenGlGraphicsHeap.field_p == vm.field_c) {
+          if (LegacyOpenGlGraphicsHeap.PENDING == vm.nameAvailabilityState) {
             stackIn_4_0 = null;
             return (AccountServiceResult) (stackIn_4_0);
           }
-          if (DropTargetWidget.field_z == vm.field_c &&
+          if (DropTargetWidget.COMPLETE == vm.nameAvailabilityState &&
             name.equals(PowerupPickup.field_s)) {
-            vm.field_c = hm.field_a;
+            vm.nameAvailabilityState = AccountRequestDefaults.IDLE;
             stackIn_8_0 = DraggableWidget.field_z;
             return stackIn_8_0;
           }
           DraggableWidget.field_z = null;
-          vm.field_c = LegacyOpenGlGraphicsHeap.field_p;
+          vm.nameAvailabilityState = LegacyOpenGlGraphicsHeap.PENDING;
           PowerupPickup.field_s = name;
           stackIn_10_0 = null;
           return (AccountServiceResult) (stackIn_10_0);

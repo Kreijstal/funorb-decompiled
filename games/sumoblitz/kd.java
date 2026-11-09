@@ -60,7 +60,7 @@ final class kd {
         jq.a(7161, LegacyOpenGlShaderProgram.field_a);
         nk.b();
         SoftwareRasterizer.clear();
-        ok.b(param2 + 0);
+        IsaacCipher.b(param2 + 0);
         if (256 > var5) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 256 - var5);
         }

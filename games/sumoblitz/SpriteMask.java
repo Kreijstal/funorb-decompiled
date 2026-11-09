@@ -36,6 +36,6 @@ abstract class SpriteMask {
         arcadeModeUnlockedText = "Arcade Mode unlocked!";
         field_c = new char[128];
         field_d = new int[8192];
-        er discarded$0 = new er(1);
+        MenuSelectionController discarded$0 = new MenuSelectionController(1);
     }
 }

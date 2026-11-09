@@ -74,7 +74,7 @@ final class SoundInstrument {
         int var17Lifetime3;
         int var17Lifetime1Lifetime1;
         int var17Lifetime2Lifetime1;
-        la.a(field_d, 0, sampleCount);
+        ArrayUtils.clear(field_d, 0, sampleCount);
         if (durationMillis < 10) {
           return field_d;
         }

@@ -164,22 +164,22 @@ final class GameplaySession {
           RidgedNoise3D.field_w[0].draw(0, 448);
           RidgedNoise3D.field_w[1].draw(608, 448);
           var3_int = 0;
-          var4 = (lg.field_c >> 1) % ok.field_f.length;
+          var4 = (lg.field_c >> 1) % IsaacCipher.field_f.length;
           var5 = 32;
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var5 < 608) {
-              ok.field_f[0].draw(var5, 5, 1, var3_int << 24, 1);
+              IsaacCipher.field_f[0].draw(var5, 5, 1, var3_int << 24, 1);
               var4++;
-              ok.field_f[0].draw(var5, 440, 1, var3_int << 24, 1);
+              IsaacCipher.field_f[0].draw(var5, 440, 1, var3_int << 24, 1);
               stackIn_12_0 = var4;
-              stackIn_12_1 = ok.field_f.length;
+              stackIn_12_1 = IsaacCipher.field_f.length;
               if (var6 != 0) {
                 if (stackIn_12_0 < stackIn_12_1) {
                   TurbulenceNoise3D.field_k[0].draw(9, -16 + var5, 1, var3_int << 24, 1);
                   TurbulenceNoise3D.field_k[0].draw(598, var5 - 16, 1, var3_int << 24, 1);
                   var4++;
-                  stackIn_23_0 = ~ok.field_f.length;
+                  stackIn_23_0 = ~IsaacCipher.field_f.length;
                   stackIn_23_1 = ~var4;
                   break scanLoop1;
                 }
@@ -189,7 +189,7 @@ final class GameplaySession {
                 if (stackIn_12_0 == stackIn_12_1) {
                   var4 = 0;
                 }
-                var5 = var5 + ok.field_f[0].width();
+                var5 = var5 + IsaacCipher.field_f[0].width();
                 continue;
               }
             }
@@ -204,7 +204,7 @@ final class GameplaySession {
                 TurbulenceNoise3D.field_k[0].draw(9, -16 + var5, 1, var3_int << 24, 1);
                 TurbulenceNoise3D.field_k[0].draw(598, var5 - 16, 1, var3_int << 24, 1);
                 var4++;
-                stackIn_23_0 = ~ok.field_f.length;
+                stackIn_23_0 = ~IsaacCipher.field_f.length;
                 stackIn_23_1 = ~var4;
                 if (var6 != 0) {
                   break scanLoop1;
@@ -212,7 +212,7 @@ final class GameplaySession {
                 if (stackIn_23_0 == stackIn_23_1) {
                   var4 = 0;
                 }
-                var5 = var5 + ok.field_f[0].width();
+                var5 = var5 + IsaacCipher.field_f[0].width();
               }
             }
             stackIn_23_0 = guard;
@@ -523,7 +523,7 @@ final class GameplaySession {
           var9_array = new int[param1.field_c];
           var10 = of.field_t;
           var11 = r.field_r;
-          var12 = qr.field_d;
+          var12 = AccountConnectionPhase.field_d;
           var13 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(var13 < param1.field_c)))) {
@@ -879,7 +879,7 @@ final class GameplaySession {
           LegacyOpenGlSpriteTexture.field_w = false;
           LoginPacketWriter.field_a = 0;
           GraphicsToolkit.field_f = 0;
-          ts.field_a = 0;
+          QuickChatCommand.field_a = 0;
           OpenGlTransparentWaterEffect.field_e = 0;
           TextureFormat.elapsedTicks = 0;
           SoftwareTransform3D.field_b = 0;
@@ -929,7 +929,7 @@ final class GameplaySession {
           OpenGlIndexBuffer.field_p[0].drawRotated(624.0f, 464.0f, 4096, 16384);
           OpenGlIndexBuffer.field_p[1].drawRotated(624.0f, 464.0f, 4096, 16384);
           var3_int = 0;
-          var4 = (lg.field_c >> 1) % ok.field_f.length;
+          var4 = (lg.field_c >> 1) % IsaacCipher.field_f.length;
           var5 = 32;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var5 >= 608))) {
@@ -948,13 +948,13 @@ final class GameplaySession {
               if (var3_intLifetime1 < 20) {
                 var3_intLifetime1 = 20;
               }
-              ok.field_f[0].drawRotated((float)(var5 + 16), 25.0f, 4096, 0, 3, var3_intLifetime1 << 24, 1);
+              IsaacCipher.field_f[0].drawRotated((float)(var5 + 16), 25.0f, 4096, 0, 3, var3_intLifetime1 << 24, 1);
               var4++;
-              ok.field_f[0].drawRotated((float)(var5 + 16), 454.0f, 4096, 0, 3, var3_intLifetime1 << 24, 1);
-              if (~ok.field_f.length == ~var4) {
+              IsaacCipher.field_f[0].drawRotated((float)(var5 + 16), 454.0f, 4096, 0, 3, var3_intLifetime1 << 24, 1);
+              if (~IsaacCipher.field_f.length == ~var4) {
                 var4 = 0;
               }
-              var5 = var5 + ok.field_f[0].width();
+              var5 = var5 + IsaacCipher.field_f[0].width();
               continue;
             }
             break;
@@ -983,13 +983,13 @@ final class GameplaySession {
             if (var3_intLifetime2 < 20) {
               var3_intLifetime2 = 20;
             }
-            ok.field_f[0].drawRotated(25.0f, (float)var5Lifetime1, 4096, 16384, 3, var3_intLifetime2 << 24, 1);
+            IsaacCipher.field_f[0].drawRotated(25.0f, (float)var5Lifetime1, 4096, 16384, 3, var3_intLifetime2 << 24, 1);
             var4++;
-            ok.field_f[0].drawRotated(614.0f, (float)var5Lifetime1, 4096, 16384, 3, var3_intLifetime2 << 24, 1);
-            if (ok.field_f.length == var4) {
+            IsaacCipher.field_f[0].drawRotated(614.0f, (float)var5Lifetime1, 4096, 16384, 3, var3_intLifetime2 << 24, 1);
+            if (IsaacCipher.field_f.length == var4) {
               var4 = 0;
             }
-            var5Lifetime1 = var5Lifetime1 + ok.field_f[0].width();
+            var5Lifetime1 = var5Lifetime1 + IsaacCipher.field_f[0].width();
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1089,7 +1089,7 @@ final class GameplaySession {
           }
           boolean decompiledFrameRemainder2 = true;
           if (GridWidgetContainer.livesRemaining > 0) {
-            ts.field_a = ts.field_a + 8;
+            QuickChatCommand.field_a = QuickChatCommand.field_a + 8;
             GraphicsToolkit.field_f = GraphicsToolkit.field_f + 10;
             LoginPacketWriter.field_a = LoginPacketWriter.field_a - 5;
             SoftwareTransform3D.field_b = SoftwareTransform3D.field_b - 3;
@@ -1100,7 +1100,7 @@ final class GameplaySession {
                 decompiledFrameRemainder2 = (var6 != 0);
               }
               if (decompiledFrameRemainder2) {
-                ts.field_a = ts.field_a + 1;
+                QuickChatCommand.field_a = QuickChatCommand.field_a + 1;
                 if (var6 != 0) {
                   if (BufferedCacheFile.a((byte) -84, 10) >= 5) {
                     LoginPacketWriter.field_a = LoginPacketWriter.field_a - 1;
@@ -1214,7 +1214,7 @@ final class GameplaySession {
           }
           boolean decompiledFrameCompleted1 = true;
           boolean decompiledFrameCompleted0 = true;
-          if (ok.field_b) {
+          if (IsaacCipher.field_b) {
             var4_int = 4;
             var5 = 0;
             while (var5 < ServerDataWriteRequest.droneSlotLimit) {
@@ -1257,7 +1257,7 @@ final class GameplaySession {
               km.updateEnemySteering((byte) 32);
             }
             boolean decompiledFrameRemainder0 = true;
-            er.c((byte) 54);
+            MenuSelectionController.updateDroneBoundaryAndDestruction((byte) 54);
             if ((MessageDialog.arcadeMode) &&
               (decompiledFrameRemainder0 = (0 == TextureFormat.elapsedTicks % 250)) &&
               (decompiledFrameRemainder0 = !(AgeValidator.countEnemyDrones(true) >= (SpriteMask.drones.length - 1)))) {
@@ -1646,11 +1646,11 @@ final class GameplaySession {
             !LegacyOpenGlSpriteTexture.field_w) {
             boolean decompiledSharedTail0 = !(!MessageDialog.arcadeMode);
             if (!decompiledSharedTail0) {
-              GameKeyHandler.field_a = new id(0, 65535, GraphicsToolkit.field_f, LoginPacketWriter.field_a, ts.field_a, SoftwareTransform3D.field_b, new int[]{IntrusiveNodeHashTable.field_c, TextureFormat.elapsedTicks});
+              GameKeyHandler.field_a = new id(0, 65535, GraphicsToolkit.field_f, LoginPacketWriter.field_a, QuickChatCommand.field_a, SoftwareTransform3D.field_b, new int[]{IntrusiveNodeHashTable.field_c, TextureFormat.elapsedTicks});
               decompiledSharedTail0 = (Sumoblitz.field_L);
             }
             if (decompiledSharedTail0) {
-              GameKeyHandler.field_a = new id(1, 65534, GraphicsToolkit.field_f, LoginPacketWriter.field_a, ts.field_a, SoftwareTransform3D.field_b, new int[]{IntrusiveNodeHashTable.field_c, TextureFormat.elapsedTicks});
+              GameKeyHandler.field_a = new id(1, 65534, GraphicsToolkit.field_f, LoginPacketWriter.field_a, QuickChatCommand.field_a, SoftwareTransform3D.field_b, new int[]{IntrusiveNodeHashTable.field_c, TextureFormat.elapsedTicks});
             }
             if (!vs.b((byte) 9)) {
               kp.a(3, GameKeyHandler.field_a, 79);
@@ -1714,11 +1714,11 @@ final class GameplaySession {
                   HudMessage.field_s[4].draw(567, 0);
                   qv.field_k.a(19, 85, -11753985, ps.scoreText + "" + FadingWidget.score, (byte) -21, -1);
                   uq.field_a.a(19, 85, -4720129, "<col=ffffff>" + ps.scoreText + "</col>" + FadingWidget.score, (byte) -18, -1);
-                  qv.field_k.a(-1, 560, pl.levelText + "" + (OpenGlShaderProgram.levelIndex + 1) + " " + OpenGlVertexLayout.multiplierText + "" + pd.scoreMultiplier + "x " + InwardSparkParticle.livesText + "" + GridWidgetContainer.livesRemaining + "", 19, -11753985, 74);
+                  qv.field_k.a(-1, 560, IsaacPacketBuffer.levelText + "" + (OpenGlShaderProgram.levelIndex + 1) + " " + OpenGlVertexLayout.multiplierText + "" + pd.scoreMultiplier + "x " + InwardSparkParticle.livesText + "" + GridWidgetContainer.livesRemaining + "", 19, -11753985, 74);
                 }
                 break;
               }
-              uq.field_a.a(-1, 560, "<col=ffffff> " + pl.levelText + "</col>" + (1 + OpenGlShaderProgram.levelIndex) + "<col=ffffff> " + OpenGlVertexLayout.multiplierText + "</col>" + pd.scoreMultiplier + "x" + "<col=ffffff> " + InwardSparkParticle.livesText + "</col>" + GridWidgetContainer.livesRemaining + "", 19, -4720129, 120);
+              uq.field_a.a(-1, 560, "<col=ffffff> " + IsaacPacketBuffer.levelText + "</col>" + (1 + OpenGlShaderProgram.levelIndex) + "<col=ffffff> " + OpenGlVertexLayout.multiplierText + "</col>" + pd.scoreMultiplier + "x" + "<col=ffffff> " + InwardSparkParticle.livesText + "</col>" + GridWidgetContainer.livesRemaining + "", 19, -4720129, 120);
             }
             SpriteState.field_B[0].draw(139, 448);
             SpriteState.field_B[1].draw(-16 + HudMessage.field_s[0].width() + 155, 448);
@@ -1826,7 +1826,7 @@ final class GameplaySession {
           IntrusiveNodeHashTable.field_c = 0;
           OpenGlShaderProgram.levelIndex = levelIndex;
           GraphicsToolkit.field_f = 0;
-          ts.field_a = 0;
+          QuickChatCommand.field_a = 0;
           TextureFormat.elapsedTicks = 0;
           LoginPacketWriter.field_a = 0;
           PasswordValidator.e(104);

@@ -365,7 +365,7 @@ final class IntrusiveDequeCursor {
             }
             return;
           }
-          ts.field_a = ts.field_a + param0;
+          QuickChatCommand.field_a = QuickChatCommand.field_a + param0;
         } else {
           if (BufferedCacheFile.a((byte) -84, 10) >= 5) {
             GraphicsToolkit.field_f = GraphicsToolkit.field_f - param0;

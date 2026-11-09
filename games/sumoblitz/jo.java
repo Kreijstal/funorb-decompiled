@@ -45,8 +45,8 @@ final class jo {
           ActiveCanvasProvider.field_a > 0) {
           fieldTemp$4 = ActiveCanvasProvider.field_a - 1;
           ActiveCanvasProvider.field_a = ActiveCanvasProvider.field_a - 1;
-          var2_ref_byte__Lifetime1 = ow.field_d[fieldTemp$4];
-          ow.field_d[ActiveCanvasProvider.field_a] = null;
+          var2_ref_byte__Lifetime1 = HuffmanDecoder.field_d[fieldTemp$4];
+          HuffmanDecoder.field_d[ActiveCanvasProvider.field_a] = null;
           return var2_ref_byte__Lifetime1;
         }
         if (30000 == param1 &&

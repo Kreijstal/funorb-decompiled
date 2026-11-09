@@ -75,7 +75,7 @@ final class IntList {
         int var4 = -38 % ((-60 - guard) / 46);
         int[] var5 = new int[this.capacityFor(1, index)];
         int[] var3 = var5;
-        la.a(this.values, 0, var5, 0, this.values.length);
+        ArrayUtils.copy(this.values, 0, var5, 0, this.values.length);
         this.values = var5;
     }
 
@@ -145,7 +145,7 @@ final class IntList {
           }
           if (this.lastIndex >= index) {
             if (index != this.lastIndex) {
-              la.a(this.values, 1 + index, this.values, index, this.lastIndex - index);
+              ArrayUtils.copy(this.values, 1 + index, this.values, index, this.lastIndex - index);
             }
             this.lastIndex = this.lastIndex - 1;
             return;
@@ -157,7 +157,7 @@ final class IntList {
         }
         if (this.lastIndex >= index) {
           if (index != this.lastIndex) {
-            la.a(this.values, 1 + index, this.values, index, this.lastIndex - index);
+            ArrayUtils.copy(this.values, 1 + index, this.values, index, this.lastIndex - index);
           }
           this.lastIndex = this.lastIndex - 1;
           return;

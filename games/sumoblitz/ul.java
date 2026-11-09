@@ -189,11 +189,11 @@ final class ul {
         int[] var5 = null;
         int var6 = 0;
         int var7 = Sumoblitz.field_L ? 1 : 0;
-        Sprite[] var1 = new Sprite[rl.field_n];
+        Sprite[] var1 = new Sprite[RasterStateFrame.field_n];
         if (param0 != 255) {
           ul.a(79);
         }
-        for (var2 = 0; var2 < rl.field_n; var2++) {
+        for (var2 = 0; var2 < RasterStateFrame.field_n; var2++) {
           var3 = CheckboxRenderer.field_k[var2] * ScrollViewport.field_B[var2];
           var10 = TextLayout.field_d[var2];
           var11 = new int[var3];
@@ -202,7 +202,7 @@ final class ul {
           for (var6 = 0; var3 > var6; var6++) {
             var5[var6] = LegacyOpenGlEffectManager.field_l[LegacyOpenGlPostProcessManager.bitwiseAnd(255, (int) var10[var6])];
           }
-          var1[var2] = new Sprite(vf.field_d, ToolkitImageProducerBuffer.field_u, er.field_h[var2], StrongCacheReference.field_C[var2], CheckboxRenderer.field_k[var2], ScrollViewport.field_B[var2], var11);
+          var1[var2] = new Sprite(vf.field_d, ToolkitImageProducerBuffer.field_u, MenuSelectionController.field_h[var2], StrongCacheReference.field_C[var2], CheckboxRenderer.field_k[var2], ScrollViewport.field_B[var2], var11);
         }
         PowerupPickup.releaseSpriteDecoderArrays((byte) -79);
         return var1;

@@ -104,7 +104,7 @@ final class HardwareUnlitEffect extends ShaderEffect {
           if (param0.radiusQ8 + param0.xQ8 > ArchiveCatalog.field_c - 26 << 8) {
             param0.xQ8 = param0.xQ8 - (26 << 9 + param0.radiusQ8);
           }
-          if (rl.field_k - 26 << 8 < param0.radiusQ8 + param0.yQ8) {
+          if (RasterStateFrame.field_k - 26 << 8 < param0.radiusQ8 + param0.yQ8) {
             param0.yQ8 = param0.yQ8 - (26 << 9 + param0.radiusQ8);
           }
           for (var4Lifetime2 = 0; var4Lifetime2 < ServerDataWriteRequest.droneSlotLimit; var4Lifetime2++) {
@@ -204,7 +204,7 @@ final class HardwareUnlitEffect extends ShaderEffect {
         if (!(GameApplet.field_l >= param5)) {
           field_f = param5;
         }
-        jf.field_f[LoginCredentials.field_d] = param1;
+        ContentTransitionPhase.field_f[LoginCredentials.field_d] = param1;
         ic.field_c[LoginCredentials.field_d] = param4;
         SlowBurstParticle.field_z[LoginCredentials.field_d] = param0;
         int var6 = param0 + param4 + param1;

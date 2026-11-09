@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ea {
-    static ts field_a;
+    static QuickChatCommand field_a;
     static String difficultyText;
 
     public static void releaseStatics(int param0) {
@@ -112,15 +112,15 @@ final class ea {
         }
         try {
           SecondaryNodeQueue.b(246);
-          vm.field_c = hm.field_a;
-          ProxySocketConnector.field_e = hm.field_a;
+          vm.nameAvailabilityState = AccountRequestDefaults.IDLE;
+          ProxySocketConnector.accountCreationState = AccountRequestDefaults.IDLE;
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ea.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        field_a = new ts(12, 0, 1, 0);
+        field_a = new QuickChatCommand(12, 0, 1, 0);
         difficultyText = "Difficulty: ";
     }
 }

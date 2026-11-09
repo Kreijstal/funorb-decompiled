@@ -31,7 +31,7 @@ final class lg extends qt {
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
           wo.a(up.field_c, 360, -5, -16777216, 3, param0, 650, 50, 1, true);
-          hc.field_e.a(vq.areYouSureYouText, -1, -16777216, 150, 320, 0);
+          hc.field_e.a(DisplayNameForm.areYouSureYouText, -1, -16777216, 150, 320, 0);
           if (param1 != 22707) {
             lg.a(73, 17, -78);
           }
@@ -43,9 +43,9 @@ final class lg extends qt {
             var7 = up.field_c;
             wo.a(var7, 100, var6, 0, 1, var5, 200, 200, 1, true);
             if (var4 != this.field_a) {
-              hc.field_e.a(lb.yesNoLabels[var4], -1, -16777216, 260, 100 + var3_int, 0);
+              hc.field_e.a(StringBuilderSupport.yesNoLabels[var4], -1, -16777216, 260, 100 + var3_int, 0);
             } else {
-              ForceFieldRingEffect.field_t.a(lb.yesNoLabels[var4], -1, -16777216, 258, -4 + (var3_int + 100), param1 ^ 22707);
+              ForceFieldRingEffect.field_t.a(StringBuilderSupport.yesNoLabels[var4], -1, -16777216, 258, -4 + (var3_int + 100), param1 ^ 22707);
             }
             var3_int += 300;
             var4++;

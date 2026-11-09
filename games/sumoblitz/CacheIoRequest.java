@@ -51,7 +51,7 @@ final class CacheIoRequest extends ResourceRequest {
     static {
         field_A = new int[25];
         field_z = new int[25];
-        la.a(field_z, 0, 25, 2147483647);
-        la.a(field_A, 0, 25, -1);
+        ArrayUtils.fill(field_z, 0, 25, 2147483647);
+        ArrayUtils.fill(field_A, 0, 25, -1);
     }
 }

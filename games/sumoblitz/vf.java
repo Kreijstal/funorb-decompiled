@@ -3,7 +3,7 @@
  */
 final class vf {
     static int field_b;
-    static qr field_c;
+    static AccountConnectionPhase WAIT_ACCOUNT_RESPONSE;
     static String reloadGameText;
     static ResourceArchive field_a;
     static int field_d;
@@ -12,22 +12,22 @@ final class vf {
         if (null != hc.field_c) {
           hc.field_c.n(-7);
           if (param0 == -49) {
-            SecondaryNodeQueue.field_a = new vq();
+            SecondaryNodeQueue.field_a = new DisplayNameForm();
             SlowBurstParticle.field_y.transitionToContent((byte) -94, SecondaryNodeQueue.field_a);
             return;
           }
           vf.a(3);
-          SecondaryNodeQueue.field_a = new vq();
+          SecondaryNodeQueue.field_a = new DisplayNameForm();
           SlowBurstParticle.field_y.transitionToContent((byte) -94, SecondaryNodeQueue.field_a);
           return;
         }
         if (param0 != -49) {
           vf.a(3);
-          SecondaryNodeQueue.field_a = new vq();
+          SecondaryNodeQueue.field_a = new DisplayNameForm();
           SlowBurstParticle.field_y.transitionToContent((byte) -94, SecondaryNodeQueue.field_a);
           return;
         }
-        SecondaryNodeQueue.field_a = new vq();
+        SecondaryNodeQueue.field_a = new DisplayNameForm();
         SlowBurstParticle.field_y.transitionToContent((byte) -94, SecondaryNodeQueue.field_a);
     }
 
@@ -48,7 +48,7 @@ final class vf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            field_c = (qr) null;
+            WAIT_ACCOUNT_RESPONSE = (AccountConnectionPhase) null;
           }
           var5_int = param4.groupId(0, param2);
           var6 = param4.fileId(var5_int, param3, (byte) 126);
@@ -96,12 +96,12 @@ final class vf {
           vf.a((ResourceArchive) null, false, (String) null, (String) null, (ResourceArchive) null);
           field_a = null;
           reloadGameText = null;
-          field_c = null;
+          WAIT_ACCOUNT_RESPONSE = null;
           return;
         }
         field_a = null;
         reloadGameText = null;
-        field_c = null;
+        WAIT_ACCOUNT_RESPONSE = null;
     }
 
     final static void a(int param0) {
@@ -116,7 +116,7 @@ final class vf {
           var1_int = ModalDialog.field_C[param0];
           for (var2 = 1; var2 < ModalDialog.field_C.length; var2++) {
             var3 = ModalDialog.field_C[var2];
-            la.a(Sumoblitz.field_G, var2 << 4, Sumoblitz.field_G, var1_int, var3);
+            ArrayUtils.copy(Sumoblitz.field_G, var2 << 4, Sumoblitz.field_G, var1_int, var3);
             var1_int = var1_int + var3;
           }
           return;
@@ -130,6 +130,6 @@ final class vf {
     static {
         field_b = 200;
         reloadGameText = "Reload game";
-        field_c = new qr();
+        WAIT_ACCOUNT_RESPONSE = new AccountConnectionPhase();
     }
 }

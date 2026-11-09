@@ -4,7 +4,7 @@
 final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
     private LegacyWaterTextureResources waterTextures;
     private LegacyOpenGlTexture1D depthRamp;
-    static qr field_g;
+    static AccountConnectionPhase WAIT_HANDSHAKE_REPLY;
     private LegacyOpenGlDisplayLists stateLists;
     static int[] field_k;
     static int field_h;
@@ -43,22 +43,22 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
 
     public static void releaseStatics(int param0) {
         if (param0 == 8192) {
-          field_g = null;
+          WAIT_HANDSHAKE_REPLY = null;
           field_k = null;
           notYetAchievedText = null;
           return;
         }
         notYetAchievedText = (String) null;
-        field_g = null;
+        WAIT_HANDSHAKE_REPLY = null;
         field_k = null;
         notYetAchievedText = null;
     }
 
     final static String c(byte param0) {
-        if (ProxySocketConnector.field_e == LegacyOpenGlGraphicsHeap.field_p) {
+        if (ProxySocketConnector.accountCreationState == LegacyOpenGlGraphicsHeap.PENDING) {
           return ValidationStatusWidget.field_G;
         }
-        if (vm.field_c == LegacyOpenGlGraphicsHeap.field_p) {
+        if (vm.nameAvailabilityState == LegacyOpenGlGraphicsHeap.PENDING) {
           return PowerupPickup.field_s;
         }
         if (param0 != -2) {
@@ -237,7 +237,7 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
     }
 
     static {
-        field_g = new qr();
+        WAIT_HANDSHAKE_REPLY = new AccountConnectionPhase();
         field_k = new int[8192];
         notYetAchievedText = "Not yet achieved";
     }
