@@ -6,7 +6,7 @@ final class PasswordInputRenderer extends BeveledTextInputRenderer {
     static String ifYouDoNothingText;
     static int displayDialogX;
     static String unfortunatelyThereWasAText;
-    static int[] field_u;
+    static int[] upgradeAllocation;
 
     final String widgetText(boolean guard, UiWidget widget) {
         RuntimeException var3 = null;
@@ -39,13 +39,13 @@ final class PasswordInputRenderer extends BeveledTextInputRenderer {
         if (param0 == 22760) {
           unfortunatelyThereWasAText = null;
           ifYouDoNothingText = null;
-          field_u = null;
+          upgradeAllocation = null;
           return;
         }
         ifYouDoNothingText = (String) null;
         unfortunatelyThereWasAText = null;
         ifYouDoNothingText = null;
-        field_u = null;
+        upgradeAllocation = null;
     }
 
     private PasswordInputRenderer(LegacyBitmapFont textFont, int textColor) {
@@ -104,6 +104,6 @@ final class PasswordInputRenderer extends BeveledTextInputRenderer {
     static {
         ifYouDoNothingText = "If you do nothing the game will revert to normal view once the timer reaches 0.";
         unfortunatelyThereWasAText = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled, or try a different resolution.";
-        field_u = new int[]{1, 1, 1};
+        upgradeAllocation = new int[]{1, 1, 1};
     }
 }

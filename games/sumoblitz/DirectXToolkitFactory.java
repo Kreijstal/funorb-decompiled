@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nu {
-    final static GraphicsToolkit a(int param0, ResourceArchive param1, TextureProvider param2, java.awt.Canvas param3, int param4) {
+final class DirectXToolkitFactory {
+    final static GraphicsToolkit createToolkit(int guard, ResourceArchive archive, TextureProvider textures, java.awt.Canvas canvas, int options) {
         try {
           Class var5 = null;
           RuntimeException var5_ref = null;
@@ -18,13 +18,13 @@ final class nu {
             if (!ScrollPane.b((byte) 125, "jagdx")) {
               throw new RuntimeException("");
             }
-            if (param0 != 7023) {
+            if (guard != 7023) {
               stackIn_7_0 = (GraphicsToolkit) null;
               return stackIn_7_0;
             }
             var5 = Class.forName("DirectXGraphicsToolkit");
             var6 = var5.getDeclaredMethod("createToolkit", new Class[]{Class.forName("java.awt.Canvas"), Class.forName("TextureProvider"), Class.forName("ResourceArchive"), Class.forName("java.lang.Integer")});
-            stackIn_9_0 = (GraphicsToolkit) (var6.invoke((Object) null, new Object[]{param3, param2, param1, new Integer(param4)}));
+            stackIn_9_0 = (GraphicsToolkit) (var6.invoke((Object) null, new Object[]{canvas, textures, archive, new Integer(options)}));
             return stackIn_9_0;
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

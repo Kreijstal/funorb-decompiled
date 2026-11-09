@@ -322,7 +322,7 @@ final class QuickChatPhrase extends DualLinkNode {
         if (null != this.responseIds) {
           var2 = 0;
           while (var2 < this.responseIds.length) {
-            this.responseIds[var2] = ic.a(this.responseIds[var2], 32768);
+            this.responseIds[var2] = LegacyOpenGlInterleavedStream.bitwiseOr(this.responseIds[var2], 32768);
             var2++;
             if (var3 != 0) {
               decompiledFrameCompleted0 = false;

@@ -65,13 +65,13 @@ final class DroneChargeParticle extends TimedSceneEffect {
         GameClientShell.field_u[6] = RenderPresentationException.menuText;
         GameClientShell.field_u[12] = TurbulenceNoise3D.soundText;
         GameClientShell.field_u[7] = RendererPreference.endGameText;
-        GameClientShell.field_u[0] = k.startGameText;
+        GameClientShell.field_u[0] = SpriteSheetSupport.startGameText;
         GameClientShell.field_u[3] = WidgetTheme.instructionsText;
         int var1 = 56 % ((param0 + 26) / 42);
         GameClientShell.field_u[15] = OpenGlTexture3D.logInCreateAccountText;
         GameClientShell.field_u[4] = ResourceArchive.field_j;
         GameClientShell.field_u[2] = MouseInputHandler.field_a;
-        GameClientShell.field_u[13] = gu.musicText;
+        GameClientShell.field_u[13] = HardwareBufferSet.musicText;
         GameClientShell.field_u[21] = DropDownListWidget.regularText;
         GameClientShell.field_u[25] = ea.difficultyText;
         GameClientShell.field_u[18] = CompactMeshGeometry.previousText;
@@ -81,7 +81,7 @@ final class DroneChargeParticle extends TimedSceneEffect {
         GameClientShell.field_u[24] = MatchingTextValidator.optionsText;
         GameClientShell.field_u[17] = FadingWidget.nextText;
         GameClientShell.field_u[28] = ss.restartLevelText;
-        GameClientShell.field_u[19] = dn.arcadeGameText;
+        GameClientShell.field_u[19] = LoadingStatusText.arcadeGameText;
         GameClientShell.field_u[22] = MusicPatch.editorText;
         BufferedSocket.field_i = new String[]{ArchiveLoadingStage.highText, DiskCacheDataFile.lowText};
         GameClientShell.field_u[33] = AccountRequestState.levelSelectText;

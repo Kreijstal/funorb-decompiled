@@ -93,7 +93,7 @@ final class MenuSelectionController {
           ArenaDefinition.field_c = ResizingDialog.a(var2, RasterStateFrame.field_o, (byte) -11);
           DelegatingCanvas.field_b = new ToolkitSprite[]{ArchiveLoadingStage.field_j, PlayingSound.field_l, ProjectionMode.field_b};
           PasswordValidator.field_j = new ToolkitSprite[]{AccountServiceResult.field_f, TextureMetadata.field_a, DirectByteArrayStorage.field_d};
-          Sumoblitz.field_J = DroneDebris.createToolkitSprites(pq.field_F, var2, 28513);
+          Sumoblitz.field_J = DroneDebris.createToolkitSprites(StripedProgressWidget.field_F, var2, 28513);
           return;
         }
         QuickChatCommand.field_e = DroneDebris.createToolkitSprites(LruNodeCache.field_a, var2, 28513);
@@ -142,7 +142,7 @@ final class MenuSelectionController {
         ArenaDefinition.field_c = ResizingDialog.a(var2, RasterStateFrame.field_o, (byte) -11);
         DelegatingCanvas.field_b = new ToolkitSprite[]{ArchiveLoadingStage.field_j, PlayingSound.field_l, ProjectionMode.field_b};
         PasswordValidator.field_j = new ToolkitSprite[]{AccountServiceResult.field_f, TextureMetadata.field_a, DirectByteArrayStorage.field_d};
-        Sumoblitz.field_J = DroneDebris.createToolkitSprites(pq.field_F, var2, 28513);
+        Sumoblitz.field_J = DroneDebris.createToolkitSprites(StripedProgressWidget.field_F, var2, 28513);
     }
 
     final boolean isActivated(int guard) {

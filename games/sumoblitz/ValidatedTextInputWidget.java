@@ -32,7 +32,7 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
         if (param2 >= -6) {
           return true;
         }
-        return wn.a(param0, param1, -107) & tf.a(param1, -2626, param0);
+        return wn.a(param0, param1, -107) & LegacyAlphaFontLoader.a(param1, -2626, param0);
     }
 
     public final InputValidator getValidator(int guard) {

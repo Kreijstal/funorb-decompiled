@@ -1044,7 +1044,7 @@ final class MidiPcmStream extends PcmStream {
         }
         if (var5Lifetime4 == 64) {
           if (var6Lifetime3 >= 64) {
-            this.channelFlags[var4Lifetime4] = ic.a(this.channelFlags[var4Lifetime4], 1);
+            this.channelFlags[var4Lifetime4] = LegacyOpenGlInterleavedStream.bitwiseOr(this.channelFlags[var4Lifetime4], 1);
             if (var8 != 0) {
               this.channelFlags[var4Lifetime4] = LegacyOpenGlPostProcessManager.bitwiseAnd(this.channelFlags[var4Lifetime4], -2);
             }
@@ -1057,10 +1057,10 @@ final class MidiPcmStream extends PcmStream {
             this.releasePortamentoVoices(var4Lifetime4, (byte) 122);
             this.channelFlags[var4Lifetime4] = LegacyOpenGlPostProcessManager.bitwiseAnd(this.channelFlags[var4Lifetime4], -3);
             if (var8 != 0) {
-              this.channelFlags[var4Lifetime4] = ic.a(this.channelFlags[var4Lifetime4], 2);
+              this.channelFlags[var4Lifetime4] = LegacyOpenGlInterleavedStream.bitwiseOr(this.channelFlags[var4Lifetime4], 2);
             }
           } else {
-            this.channelFlags[var4Lifetime4] = ic.a(this.channelFlags[var4Lifetime4], 2);
+            this.channelFlags[var4Lifetime4] = LegacyOpenGlInterleavedStream.bitwiseOr(this.channelFlags[var4Lifetime4], 2);
           }
         }
         if (var5Lifetime4 == 99) {
@@ -1107,10 +1107,10 @@ final class MidiPcmStream extends PcmStream {
             this.resetRetriggerPhases(var4Lifetime4, 32605);
             this.channelFlags[var4Lifetime4] = LegacyOpenGlPostProcessManager.bitwiseAnd(this.channelFlags[var4Lifetime4], -5);
             if (var8 != 0) {
-              this.channelFlags[var4Lifetime4] = ic.a(this.channelFlags[var4Lifetime4], 4);
+              this.channelFlags[var4Lifetime4] = LegacyOpenGlInterleavedStream.bitwiseOr(this.channelFlags[var4Lifetime4], 4);
             }
           } else {
-            this.channelFlags[var4Lifetime4] = ic.a(this.channelFlags[var4Lifetime4], 4);
+            this.channelFlags[var4Lifetime4] = LegacyOpenGlInterleavedStream.bitwiseOr(this.channelFlags[var4Lifetime4], 4);
           }
         }
         if (var5Lifetime4 == 17) {

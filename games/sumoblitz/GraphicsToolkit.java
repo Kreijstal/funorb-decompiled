@@ -48,7 +48,7 @@ abstract class GraphicsToolkit {
           if (backend != 3) {
             throw new IllegalArgumentException("UM");
           }
-          stackIn_16_0 = nu.a(7023, resources, textures, canvas, samples);
+          stackIn_16_0 = DirectXToolkitFactory.createToolkit(7023, resources, textures, canvas, samples);
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

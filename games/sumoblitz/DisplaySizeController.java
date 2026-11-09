@@ -37,7 +37,7 @@ final class DisplaySizeController {
             return;
           }
           this.updateCountdown = this.updateInterval;
-          if (wh.maxHeapMiB < this.requiredHeapMiB) {
+          if (LegacyOpenGlPbuffer.maxHeapMiB < this.requiredHeapMiB) {
             this.automatic = false;
           } else {
             if (guard != 2) {
@@ -147,7 +147,7 @@ final class DisplaySizeController {
         if (guard != -1) {
           return false;
         }
-        stackIn_6_0 = (HardwareRidgedWaterNoise.field_x > 0) && (wh.maxHeapMiB < this.requiredHeapMiB);
+        stackIn_6_0 = (HardwareRidgedWaterNoise.field_x > 0) && (LegacyOpenGlPbuffer.maxHeapMiB < this.requiredHeapMiB);
         return stackIn_6_0;
     }
 
@@ -221,7 +221,7 @@ final class DisplaySizeController {
         if (guard != -1) {
           this.aspectRatio = 2.1707825660705566f;
         }
-        stackIn_6_0 = (wh.maxHeapMiB >= this.requiredHeapMiB) && (0 < HardwareRidgedWaterNoise.field_x);
+        stackIn_6_0 = (LegacyOpenGlPbuffer.maxHeapMiB >= this.requiredHeapMiB) && (0 < HardwareRidgedWaterNoise.field_x);
         return stackIn_6_0;
     }
 

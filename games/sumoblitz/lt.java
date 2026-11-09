@@ -13,41 +13,41 @@ final class lt extends IntrusiveNode {
     final static boolean a(byte param0) {
         if (param0 != 119) {
           lt.c((byte) -70);
-          if (-1 == gu.field_d) {
+          if (-1 == HardwareBufferSet.field_d) {
             if (!OpenGlIndexBuffer.b(-1, 1)) {
               return false;
             }
-            gu.field_d = ig.field_a.readUnsignedByte(-31302);
-            ig.field_a.position = 0;
+            HardwareBufferSet.field_d = NativeLibraryExtractor.field_a.readUnsignedByte(-31302);
+            NativeLibraryExtractor.field_a.position = 0;
           }
-          if (gu.field_d == -2) {
+          if (HardwareBufferSet.field_d == -2) {
             if (!OpenGlIndexBuffer.b(-1, 2)) {
               return false;
             }
-            gu.field_d = ig.field_a.readUnsignedShort(255);
-            ig.field_a.position = 0;
+            HardwareBufferSet.field_d = NativeLibraryExtractor.field_a.readUnsignedShort(255);
+            NativeLibraryExtractor.field_a.position = 0;
           }
-          return OpenGlIndexBuffer.b(-1, gu.field_d);
+          return OpenGlIndexBuffer.b(-1, HardwareBufferSet.field_d);
         }
-        if (-1 == gu.field_d) {
+        if (-1 == HardwareBufferSet.field_d) {
           if (!OpenGlIndexBuffer.b(-1, 1)) {
             return false;
           }
-          gu.field_d = ig.field_a.readUnsignedByte(-31302);
-          ig.field_a.position = 0;
+          HardwareBufferSet.field_d = NativeLibraryExtractor.field_a.readUnsignedByte(-31302);
+          NativeLibraryExtractor.field_a.position = 0;
         }
-        if (gu.field_d == -2) {
+        if (HardwareBufferSet.field_d == -2) {
           if (!OpenGlIndexBuffer.b(-1, 2)) {
             return false;
           }
-          gu.field_d = ig.field_a.readUnsignedShort(255);
-          ig.field_a.position = 0;
+          HardwareBufferSet.field_d = NativeLibraryExtractor.field_a.readUnsignedShort(255);
+          NativeLibraryExtractor.field_a.position = 0;
         }
-        return OpenGlIndexBuffer.b(-1, gu.field_d);
+        return OpenGlIndexBuffer.b(-1, HardwareBufferSet.field_d);
     }
 
     final static void c(byte param0) {
-        lf.a(0, (byte) -58);
+        lf.setSoundVolume(0, (byte) -58);
         if (param0 != 53) {
           field_m = (PlatformTaskDispatcher) null;
         }

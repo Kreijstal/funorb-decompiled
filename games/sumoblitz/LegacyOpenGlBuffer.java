@@ -51,7 +51,7 @@ abstract class LegacyOpenGlBuffer {
             return stackIn_2_0;
           }
           var5 = param1.fileId(var4_int, param0, (byte) 126);
-          stackIn_4_0 = tt.loadOpaqueSprites((byte) -100, var5, param1, var4_int);
+          stackIn_4_0 = TextureGeneratorNode.loadOpaqueSprites((byte) -100, var5, param1, var4_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -43,14 +43,14 @@ final class LevelSelectScreen extends MenuScreen {
           hc.field_e.a(AccountRequestState.field_g.toUpperCase(), var4_int + 16777215, -1, 90, 320, 0);
           DelegatingCanvas.a(up.field_c, 60, 44, var4_int, 3, toolkit, 325, 370, 1, true);
           MusicCrossfadeStream.field_q[0].drawRotated(80.0f, 402.0f, 1600, 0, 1, 0, 2);
-          QueuedIntArrayRequest.field_k.a(407, 92, 5023231 | var4_int, Integer.toString(ResourceArchive.field_f), (byte) -110, -1);
-          uq.field_a.a(407, 92, var4_int + 16777215, Integer.toString(ResourceArchive.field_f), (byte) -35, -1);
+          QueuedIntArrayRequest.field_k.a(407, 92, 5023231 | var4_int, Integer.toString(ResourceArchive.selectedSpeedLevel), (byte) -110, -1);
+          uq.field_a.a(407, 92, var4_int + 16777215, Integer.toString(ResourceArchive.selectedSpeedLevel), (byte) -35, -1);
           MusicCrossfadeStream.field_q[1].drawRotated(130.0f, 402.0f, 1600, 0, 1, 0, 2);
-          QueuedIntArrayRequest.field_k.a(407, 142, var4_int | 5023231, Integer.toString(LegacyOpenGlEffectManager.field_i), (byte) -101, -1);
-          uq.field_a.a(407, 142, 16777215 + var4_int, Integer.toString(LegacyOpenGlEffectManager.field_i), (byte) -36, -1);
+          QueuedIntArrayRequest.field_k.a(407, 142, var4_int | 5023231, Integer.toString(LegacyOpenGlEffectManager.selectedTractionLevel), (byte) -101, -1);
+          uq.field_a.a(407, 142, 16777215 + var4_int, Integer.toString(LegacyOpenGlEffectManager.selectedTractionLevel), (byte) -36, -1);
           MusicCrossfadeStream.field_q[2].drawRotated(180.0f, 402.0f, 1600, 0, 1, 0, 2);
-          QueuedIntArrayRequest.field_k.a(407, 192, var4_int | 5023231, Integer.toString(hc.field_f), (byte) -15, -1);
-          uq.field_a.a(407, 192, 16777215 + var4_int, Integer.toString(hc.field_f), (byte) -51, -1);
+          QueuedIntArrayRequest.field_k.a(407, 192, var4_int | 5023231, Integer.toString(hc.selectedBounceLevel), (byte) -15, -1);
+          uq.field_a.a(407, 192, 16777215 + var4_int, Integer.toString(hc.selectedBounceLevel), (byte) -51, -1);
           var5 = ResetStatsConfirmationOverlay.field_c << 2;
           if (128 >= var5 % 255) {
             stackIn_4_0 = var5 % 255;

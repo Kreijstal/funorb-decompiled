@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nv {
-    static int field_a;
+final class ComboState {
+    static int comboCount;
     static int field_c;
     static int field_b;
 

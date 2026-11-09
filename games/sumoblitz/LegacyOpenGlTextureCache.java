@@ -32,7 +32,7 @@ final class LegacyOpenGlTextureCache {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!k.decodeSpriteSheet(archive, groupId, fileId, -23046)) {
+          if (!SpriteSheetSupport.decodeSpriteSheet(archive, groupId, fileId, -23046)) {
             stackIn_2_0 = null;
             return (RasterIndexedSprite[]) (stackIn_2_0);
           }

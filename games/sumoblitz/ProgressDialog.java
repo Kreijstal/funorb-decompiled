@@ -6,7 +6,7 @@ final class ProgressDialog extends ResizingDialog {
     private String field_W;
     private String field_U;
     private boolean field_P;
-    private pq field_Q;
+    private StripedProgressWidget field_Q;
     static RasterBuffer field_R;
     static String waitingForGraphicsText;
     static String namesCannotStartOrText;
@@ -61,7 +61,7 @@ final class ProgressDialog extends ResizingDialog {
     final void k(int param0) {
         this.field_S = true;
         int var2 = -98 % ((param0 - 11) / 47);
-        this.field_Q.field_J = false;
+        this.field_Q.animated = false;
     }
 
     ProgressDialog(DialogLayer param0, String param1) {
@@ -73,9 +73,9 @@ final class ProgressDialog extends ResizingDialog {
             var3_int = LegacyOpenGlDisplayLists.field_a.wrappedHeight(this.field_U, 260, LegacyOpenGlDisplayLists.field_a.ascent);
             this.resizeCentered(300, var3_int + 150, 58);
           }
-          this.field_Q = new pq(13, 50, 274, 30, 15, 2113632, 4210752);
+          this.field_Q = new StripedProgressWidget(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_S = false;
-          this.field_Q.field_J = true;
+          this.field_Q.animated = true;
           this.field_P = false;
           this.addChild(this.field_Q, 124);
         } catch (RuntimeException runtimeException) {
@@ -106,19 +106,19 @@ final class ProgressDialog extends ResizingDialog {
             stackIn_12_1 = (param3);
             this.field_P = stackIn_12_1;
             if (this.field_P) {
-              this.field_Q.b(8405024, 4210752, 108);
-              this.field_Q.field_J = true;
+              this.field_Q.setColors(8405024, 4210752, 108);
+              this.field_Q.animated = true;
             } else {
-              this.field_Q.b(2113632, 4210752, 99);
+              this.field_Q.setColors(2113632, 4210752, 99);
               if (!this.field_S) {
-                this.field_Q.field_I = (int)(65536.0f * (param1 / 100.0f));
+                this.field_Q.progressQ16 = (int)(65536.0f * (param1 / 100.0f));
                 this.field_W = param2;
                 return;
               }
-              this.field_Q.field_J = false;
+              this.field_Q.animated = false;
             }
           }
-          this.field_Q.field_I = (int)(65536.0f * (param1 / 100.0f));
+          this.field_Q.progressQ16 = (int)(65536.0f * (param1 / 100.0f));
           this.field_W = param2;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

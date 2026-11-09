@@ -14,7 +14,7 @@ final class IterableNodeHashTable implements Iterable {
         if (null != SecondaryNodeDequeIterator.field_b) {
           SecondaryNodeDequeIterator.field_b.automatic = false;
         }
-        jl.a(25, param0);
+        HardwareQuadBatchBuffers.notifyBrowserResizing(25, param0);
     }
 
     final IntrusiveNode first(int param0) {

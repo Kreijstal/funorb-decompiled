@@ -119,7 +119,7 @@ final class SpriteStripButtonRenderer extends TextWidgetRenderer {
           if (guard != -70) {
             SpriteStripButtonRenderer.releaseStatics(-111);
           }
-          var28 = ig.field_a;
+          var28 = NativeLibraryExtractor.field_a;
           var2 = var28.readUnsignedByte(-31302);
           if (0 == var2) {
             var3 = var28.readUnsignedShort(255);

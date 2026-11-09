@@ -7,7 +7,7 @@ final class o {
 
     final static void a(int param0) {
         TextureMetadata.field_f[OpenGlShaderProgram.levelIndex] = true;
-        jk.field_a = TextureFormat.elapsedTicks;
+        Js5ClientState.field_a = TextureFormat.elapsedTicks;
         if (RenderPresentationException.a(false)) {
           NineSlicePanel.field_d[OpenGlShaderProgram.levelIndex] = true;
         }

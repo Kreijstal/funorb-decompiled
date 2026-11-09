@@ -314,12 +314,12 @@ final class LevelCompleteUpgradeScreen extends MenuScreen {
           if (guard != -2355) {
             this.field_i = 108;
           }
-          QueuedIntArrayRequest.field_k.a(100, opacity << 24 | 5023231, 0, 200, 220, (int[]) null, (ToolkitSprite[]) null, 40, -1, 0, 0, guard - 6432, ps.scoreText.toUpperCase() + " " + il.field_a + "<br>" + InstrumentNoteMask.timeText.toUpperCase() + " " + UiStyleNode.formatGameTime(jk.field_a, guard - 21265), (SpriteMask) null, 1, 1);
-          uq.field_a.a(100, -1, 0, 200, 220, (int[]) null, (ToolkitSprite[]) null, 40, -1, 0, 0, -8787, ps.scoreText.toUpperCase() + " " + il.field_a + "<br>" + InstrumentNoteMask.timeText.toUpperCase() + " " + UiStyleNode.formatGameTime(jk.field_a, -23620), (SpriteMask) null, 1, 1);
-          MessageDialog.field_db.a(200, 5023231 | opacity << 24, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 118, -1, 0, 0, -8787, wh.clickToAssignPointsText, (SpriteMask) null, 1, 0);
-          LegacyOpenGlEffect.field_c.a(200, -1, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 118, -1, 0, 0, guard ^ 11104, wh.clickToAssignPointsText, (SpriteMask) null, 1, 0);
-          QueuedIntArrayRequest.field_k.a(ic.a(HotspotTextWidget.pointsRemainingText, new String[]{Integer.toString(HardwareUnlitEffect.d(17079) - IsaacPacketBuffer.field_u)}, (byte) -128).toUpperCase(), opacity << 24 | 5023231, -1, 180, 320, 0);
-          uq.field_a.a(ic.a(HotspotTextWidget.pointsRemainingText, new String[]{Integer.toString(HardwareUnlitEffect.d(17079) - IsaacPacketBuffer.field_u)}, (byte) -128).toUpperCase(), -1, -1, 180, 320, 0);
+          QueuedIntArrayRequest.field_k.a(100, opacity << 24 | 5023231, 0, 200, 220, (int[]) null, (ToolkitSprite[]) null, 40, -1, 0, 0, guard - 6432, ps.scoreText.toUpperCase() + " " + il.field_a + "<br>" + InstrumentNoteMask.timeText.toUpperCase() + " " + UiStyleNode.formatGameTime(Js5ClientState.field_a, guard - 21265), (SpriteMask) null, 1, 1);
+          uq.field_a.a(100, -1, 0, 200, 220, (int[]) null, (ToolkitSprite[]) null, 40, -1, 0, 0, -8787, ps.scoreText.toUpperCase() + " " + il.field_a + "<br>" + InstrumentNoteMask.timeText.toUpperCase() + " " + UiStyleNode.formatGameTime(Js5ClientState.field_a, -23620), (SpriteMask) null, 1, 1);
+          MessageDialog.field_db.a(200, 5023231 | opacity << 24, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 118, -1, 0, 0, -8787, LegacyOpenGlPbuffer.clickToAssignPointsText, (SpriteMask) null, 1, 0);
+          LegacyOpenGlEffect.field_c.a(200, -1, 0, 300, 170, (int[]) null, (ToolkitSprite[]) null, 118, -1, 0, 0, guard ^ 11104, LegacyOpenGlPbuffer.clickToAssignPointsText, (SpriteMask) null, 1, 0);
+          QueuedIntArrayRequest.field_k.a(LegacyOpenGlInterleavedStream.formatIndexedTokens(HotspotTextWidget.pointsRemainingText, new String[]{Integer.toString(HardwareUnlitEffect.d(17079) - IsaacPacketBuffer.field_u)}, (byte) -128).toUpperCase(), opacity << 24 | 5023231, -1, 180, 320, 0);
+          uq.field_a.a(LegacyOpenGlInterleavedStream.formatIndexedTokens(HotspotTextWidget.pointsRemainingText, new String[]{Integer.toString(HardwareUnlitEffect.d(17079) - IsaacPacketBuffer.field_u)}, (byte) -128).toUpperCase(), -1, -1, 180, 320, 0);
           var4_int = 140;
           var5 = 0;
           while (400 > var4_int) {
@@ -377,14 +377,14 @@ final class LevelCompleteUpgradeScreen extends MenuScreen {
           if (var1 == 0) {
             var1 = 32;
           }
-          lf.a(-var1 + kr.field_c, (byte) -58);
+          lf.setSoundVolume(-var1 + kr.field_c, (byte) -58);
           if (param0 < 121) {
             LevelCompleteUpgradeScreen.b((byte) -57);
             return;
           }
           return;
         }
-        lf.a(0, (byte) -58);
+        lf.setSoundVolume(0, (byte) -58);
         if (param0 < 121) {
           LevelCompleteUpgradeScreen.b((byte) -57);
           return;

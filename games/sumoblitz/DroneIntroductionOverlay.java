@@ -30,7 +30,7 @@ final class DroneIntroductionOverlay {
             return stackIn_4_0;
           }
           for (var5 = 0; var5 < text.length(); var5++) {
-            if (!jl.a((byte) 110, text.charAt(var5))) {
+            if (!HardwareQuadBatchBuffers.isAllowedNameCharacter((byte) 110, text.charAt(var5))) {
               stackIn_11_0 = MarkerTrackWidget.namesCanOnlyContainText;
               return stackIn_11_0;
             }

@@ -93,7 +93,7 @@ abstract class OpenGlTexture implements GpuTexture {
                 var21 = var21 + (var17 >> 24 & 255);
                 incrementValue$9 = var13;
                 var13++;
-                var11[incrementValue$9] = ic.a(LegacyOpenGlPostProcessManager.bitwiseAnd(1020, var20) >> 2, ic.a(LegacyOpenGlPostProcessManager.bitwiseAnd(1020, var19) << 6, ic.a(LegacyOpenGlPostProcessManager.bitwiseAnd(16711680, var18 << 14), LegacyOpenGlPostProcessManager.bitwiseAnd(var21, 1020) << 22)));
+                var11[incrementValue$9] = LegacyOpenGlInterleavedStream.bitwiseOr(LegacyOpenGlPostProcessManager.bitwiseAnd(1020, var20) >> 2, LegacyOpenGlInterleavedStream.bitwiseOr(LegacyOpenGlPostProcessManager.bitwiseAnd(1020, var19) << 6, LegacyOpenGlInterleavedStream.bitwiseOr(LegacyOpenGlPostProcessManager.bitwiseAnd(16711680, var18 << 14), LegacyOpenGlPostProcessManager.bitwiseAnd(var21, 1020) << 22)));
               }
               var22 = var22 + width;
               var23 = var23 + width;

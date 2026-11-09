@@ -227,7 +227,7 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
           } else {
             try {
               DisplayModeConfirmationDialog.accountSocket = new BufferedSocket((java.net.Socket) (EmptyWidgetRenderer.field_a.result), CacheReferenceNode.field_t);
-              var4 = ig.field_a;
+              var4 = NativeLibraryExtractor.field_a;
               var5 = var4;
               InwardSparkParticle.field_v.position = 0;
               var5.position = 0;

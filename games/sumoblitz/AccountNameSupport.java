@@ -53,7 +53,7 @@ final class AccountNameSupport {
             var4 = (String) null;
             AccountNameSupport.containsNameIgnoringUnderscores(true, (String) null, (String) null);
           }
-          var3 = TextureFilter.a(name, (byte) 81);
+          var3 = TextureFilter.reverseString(name, (byte) 81);
           stackIn_7_0 = (-1 != text.indexOf(name)) || (text.indexOf(var3) != -1);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -79,10 +79,10 @@ final class AccountNameSupport {
     final static void muteMusic(int guard) {
         if (guard != 24238) {
           field_a = (int[]) null;
-          lf.a(0, 0);
+          lf.setMusicVolume(0, 0);
           return;
         }
-        lf.a(0, 0);
+        lf.setMusicVolume(0, 0);
     }
 
     public static void releaseStatics(boolean param0) {

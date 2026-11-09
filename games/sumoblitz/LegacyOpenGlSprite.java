@@ -86,7 +86,7 @@ final class LegacyOpenGlSprite extends ToolkitSprite {
           var17 = var11;
           if (var11 != null) {
             for (var9 = 0; var14.length > var9; var9++) {
-              var11[var9] = ic.a(var14[var9], -16777216);
+              var11[var9] = LegacyOpenGlInterleavedStream.bitwiseOr(var14[var9], -16777216);
             }
             this.uploadPixels(height, destinationX, (byte) -76, width, var17, destinationY, 0, width);
           }

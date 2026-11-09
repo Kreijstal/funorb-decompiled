@@ -6,15 +6,15 @@ final class ih {
     static ArchiveLoadingStage field_a;
     static String field_b;
 
-    public static void a(byte param0) {
+    public static void releaseLoginState(byte guard) {
         try {
           field_b = null;
           field_a = null;
-          if (param0 <= 11) {
-            ih.a(-113);
+          if (guard <= 11) {
+            ih.restoreBaselineUpgrades(-113);
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ih.B(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ih.B(" + guard + ')');
         }
     }
 
@@ -171,14 +171,14 @@ final class ih {
         }
     }
 
-    final static void a(int param0) {
+    final static void restoreBaselineUpgrades(int guard) {
         try {
-          hc.field_f = LegacyOpenGlSpecularEffect.field_h[2];
-          LegacyOpenGlEffectManager.field_i = LegacyOpenGlSpecularEffect.field_h[1];
-          ResourceArchive.field_f = LegacyOpenGlSpecularEffect.field_h[0];
-          int var1_int = -21 / ((param0 + 59) / 40);
+          hc.selectedBounceLevel = LegacyOpenGlSpecularEffect.field_h[2];
+          LegacyOpenGlEffectManager.selectedTractionLevel = LegacyOpenGlSpecularEffect.field_h[1];
+          ResourceArchive.selectedSpeedLevel = LegacyOpenGlSpecularEffect.field_h[0];
+          int var1_int = -21 / ((guard + 59) / 40);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ih.C(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ih.C(" + guard + ')');
         }
     }
 

@@ -200,7 +200,7 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
           var5Lifetime1 = this.field_P.x + this.field_P.width / 2;
           this.field_P.width = 150;
           this.field_P.x = -20 + var5Lifetime1 - this.field_P.width;
-          this.field_Q = this.a(-128, (WidgetListener) (this), dn.applyText);
+          this.field_Q = this.a(-128, (WidgetListener) (this), LoadingStatusText.applyText);
           this.field_Q.enabled = false;
           this.field_Q.width = this.field_P.width;
           this.field_Q.x = var5Lifetime1 + 20;

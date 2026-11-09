@@ -21,12 +21,12 @@ final class VertexAttribute {
         int var2 = Sumoblitz.field_L ? 1 : 0;
         int var1_intLifetime1;
         try {
-          jl.field_a.reset((byte) 105);
+          HardwareQuadBatchBuffers.field_a.reset((byte) 105);
           for (var1_int = 0; var1_int < 32; var1_int++) {
             Js5Client.field_k[var1_int] = 0L;
           }
           for (var1_intLifetime1 = param0; var1_intLifetime1 < 32; var1_intLifetime1++) {
-            fa.field_a[var1_intLifetime1] = 0L;
+            AppletTickHistory.tickTimes[var1_intLifetime1] = 0L;
           }
           BurstParticle.field_t = 0;
         } catch (RuntimeException runtimeException) {
@@ -38,7 +38,7 @@ final class VertexAttribute {
         if (param0 != -62) {
           return (String) null;
         }
-        return ig.field_a.readCp1252String(-1);
+        return NativeLibraryExtractor.field_a.readCp1252String(-1);
     }
 
     final static void a(int param0, int param1, int param2) {

@@ -9,7 +9,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
 
     final void disable(boolean guard) {
         this.field_f.a(-103, (jagdx.IDirect3DVertexShader) null);
-        this.toolkit.a(jq.TEXTURE, 0, 0);
+        this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, 0);
         if (!guard) {
           this.toolkit.a(NetworkResourceRequest.PRIMARY_COLOR, 1, 0);
           this.toolkit.a(AccountRequestState.CONSTANT, 2, 0);
@@ -161,7 +161,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
     }
 
     final void enable(boolean lighting, int guard) {
-        this.toolkit.a(jq.TEXTURE, 0, 0);
+        this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, 0);
         this.toolkit.a(AccountRequestState.CONSTANT, 1, 0);
         this.toolkit.setColorCombineSource((byte) -125, 2, false, true, NetworkResourceRequest.PRIMARY_COLOR);
         this.toolkit.b(0, false);

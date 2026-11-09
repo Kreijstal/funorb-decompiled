@@ -31,7 +31,7 @@ final class hw {
             PlatformTaskDispatcher var9 = (PlatformTaskDispatcher) null;
             hw.a((java.awt.Component) null, -65, -27, (byte) 49, true, (MusicCrossfadeStream) null, (PlatformTaskDispatcher) null, -58);
           }
-          AccountConnectionPhase.field_b.setVolume((byte) -43, tt.field_l);
+          AccountConnectionPhase.field_b.setVolume((byte) -43, TextureGeneratorNode.musicVolume);
           EmailCredentials.field_f.setStream(AccountConnectionPhase.field_b);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "hw.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gu extends ka {
+final class HardwareBufferSet extends ka {
     private IndexBufferReference field_g;
     private int field_e;
     static String musicText;
@@ -13,7 +13,7 @@ final class gu extends ka {
     private VertexBufferReference field_f;
     private VertexBufferReference field_l;
 
-    final void b(byte param0) {
+    final void close(byte guard) {
         int var2;
         int var2Lifetime1;
         if (null != this.field_i) {
@@ -21,7 +21,7 @@ final class gu extends ka {
         }
         if (this.field_k == null) {
           if (this.field_l == null) {
-            var2 = -105 % ((-65 - param0) / 56);
+            var2 = -105 % ((-65 - guard) / 56);
             if (this.field_f != null) {
               this.field_f.close(16711680);
             }
@@ -38,7 +38,7 @@ final class gu extends ka {
             this.field_l.close(16711680);
           }
         }
-        var2Lifetime1 = -105 % ((-65 - param0) / 56);
+        var2Lifetime1 = -105 % ((-65 - guard) / 56);
         if (this.field_f != null) {
           this.field_f.close(16711680);
         }
@@ -48,7 +48,7 @@ final class gu extends ka {
         this.field_g.close(-1);
     }
 
-    gu(HardwareGraphicsToolkit param0, int param1, int param2, boolean param3, boolean param4) {
+    HardwareBufferSet(HardwareGraphicsToolkit param0, int param1, int param2, boolean param3, boolean param4) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -71,10 +71,10 @@ final class gu extends ka {
           }
           if (param3 ||
             EmailAvailabilityRequest.a(this.field_e, (byte) -113, this.field_c)) {
-            this.field_f = new VertexBufferReference(mo.a(this.field_c, this.field_e, 30643));
+            this.field_f = new VertexBufferReference(PerlinNoise2D.a(this.field_c, this.field_e, 30643));
           }
           if (!param3 &&
-            !tf.a(this.field_c, -2626, this.field_e)) {
+            !LegacyAlphaFontLoader.a(this.field_c, -2626, this.field_e)) {
             return;
           }
           this.field_g = new IndexBufferReference(ValidatedTextInputWidget.b(this.field_e, this.field_c, -126));
@@ -96,7 +96,7 @@ final class gu extends ka {
     public static void releaseStatics(boolean param0) {
         musicText = null;
         if (!param0) {
-          gu.releaseStatics(true);
+          HardwareBufferSet.releaseStatics(true);
         }
     }
 

@@ -4,7 +4,7 @@
 final class kr {
     static String[] field_f;
     static SpriteData[] field_b;
-    static tf field_a;
+    static LegacyAlphaFontLoader field_a;
     static int[] field_d;
     static int field_c;
     static int field_e;
@@ -14,7 +14,7 @@ final class kr {
         field_a = null;
         field_d = null;
         if (param0 > -58) {
-          field_a = (tf) null;
+          field_a = (LegacyAlphaFontLoader) null;
           field_b = null;
           return;
         }
@@ -33,7 +33,7 @@ final class kr {
           if (param0 != 19889) {
             field_d = (int[]) null;
           }
-          if (k.decodeSpriteSheet(param1, param2, param3, param0 - 42935)) {
+          if (SpriteSheetSupport.decodeSpriteSheet(param1, param2, param3, param0 - 42935)) {
             stackIn_6_0 = NextLevelChoiceOverlay.takeDecodedSprites(-124);
             return stackIn_6_0;
           }
@@ -87,7 +87,7 @@ final class kr {
 
     static {
         field_f = new String[]{null, "to discard it and<nbsp>continue.", "to discard it and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue."};
-        field_a = new tf();
+        field_a = new LegacyAlphaFontLoader();
         field_e = 0;
         field_c = 256;
     }

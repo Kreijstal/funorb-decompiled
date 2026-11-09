@@ -217,11 +217,11 @@ final class LegacyOpenGlTurbulentTextureEffect extends LegacyOpenGlEffect {
             if (null == this.program) {
               return;
             }
-            var16 = qe.a(false, 3, 0, 4, 4096, 4, 64, 256, 0.4000000059604645f);
+            var16 = PerlinNoiseFactory.generateNoise(false, 3, 0, 4, 4096, 4, 64, 256, 0.4000000059604645f);
             var12 = var16;
             var11 = var12;
             var3 = var11;
-            var23 = qe.a(false, 3, 8, 4, 4096, 4, 64, 256, 0.4000000059604645f);
+            var23 = PerlinNoiseFactory.generateNoise(false, 3, 8, 4, 4096, 4, 64, 256, 0.4000000059604645f);
             var5 = 0;
             this.animatedNoise = new float[32768];
             for (var6 = 0; 256 > var6; var6++) {

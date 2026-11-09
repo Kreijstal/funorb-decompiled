@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dn {
+final class LoadingStatusText {
     static String arcadeGameText;
     static String applyText;
 
@@ -13,7 +13,7 @@ final class dn {
         arcadeGameText = null;
     }
 
-    final static String b(int param0) {
+    final static String preparationMessage(int guard) {
         if (TextureCoordinateGeneration.field_a < 2) {
           return pi.field_b;
         }
@@ -29,8 +29,8 @@ final class dn {
         if (!EmailCredentials.field_j.tryLoadNamedGroup("commonui", 100)) {
           return LegacyOpenGlTurbulentTextureEffect.loadingGraphicsText + " - " + EmailCredentials.field_j.namedGroupLoadPercent("commonui", (byte) 33) + "%";
         }
-        if (param0 <= 90) {
-          dn.b(-125);
+        if (guard <= 90) {
+          LoadingStatusText.preparationMessage(-125);
         }
         if (!LegacyOpenGlPostProcessManager.field_f.loadIndex((byte) 127)) {
           return ToolkitRasterBuffer.waitingForFontsText;

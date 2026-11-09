@@ -58,7 +58,7 @@ abstract class TextInputValidator extends DebouncedInputValidator implements Tex
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!k.decodeSpriteSheet(param2, param0, param3, param1 ^ 30429)) {
+          if (!SpriteSheetSupport.decodeSpriteSheet(param2, param0, param3, param1 ^ 30429)) {
             return null;
           }
           if (param1 == -11481) {

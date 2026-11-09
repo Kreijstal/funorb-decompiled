@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wh extends DualLinkNode {
-    int field_v;
-    private LegacyOpenGlGraphicsToolkit field_u;
-    private long field_t;
+final class LegacyOpenGlPbuffer extends DualLinkNode {
+    int pixelCount;
+    private LegacyOpenGlGraphicsToolkit toolkit;
+    private long pbuffer;
     static int maxHeapMiB;
     static String clickToAssignPointsText;
     static int field_s;
@@ -18,23 +18,23 @@ final class wh extends DualLinkNode {
         field_w = null;
     }
 
-    private final void f(int param0) {
-        if (this.field_t > 0L) {
-          this.field_u.field_y.releasePbuffer(this.field_t);
-          this.field_t = 0L;
+    private final void close(int guard) {
+        if (this.pbuffer > 0L) {
+          this.toolkit.field_y.releasePbuffer(this.pbuffer);
+          this.pbuffer = 0L;
         }
-        if (param0 == 30611) {
+        if (guard == 30611) {
           return;
         }
-        this.field_u = (LegacyOpenGlGraphicsToolkit) null;
+        this.toolkit = (LegacyOpenGlGraphicsToolkit) null;
     }
 
-    final static String a(byte param0) {
+    final static String playerLabel(byte guard) {
         String var1 = "";
         if (no.field_a != null) {
           var1 = no.field_a.a((byte) 48);
         }
-        if (param0 <= -53) {
+        if (guard <= -53) {
           if (0 == var1.length()) {
             var1 = LegacyOpenGlRenderbuffer.f(1);
           }
@@ -54,24 +54,24 @@ final class wh extends DualLinkNode {
     }
 
     protected final void finalize() throws Throwable {
-        this.f(30611);
+        this.close(30611);
         super.finalize();
     }
 
-    final long e(int param0) {
-        if (param0 >= -68) {
+    final long handle(int guard) {
+        if (guard >= -68) {
           return -90L;
         }
-        return this.field_t;
+        return this.pbuffer;
     }
 
-    wh(LegacyOpenGlGraphicsToolkit param0, int param1, int param2) {
+    LegacyOpenGlPbuffer(LegacyOpenGlGraphicsToolkit toolkit, int width, int height) {
         try {
-          this.field_u = param0;
-          this.field_v = param1 * param2;
-          this.field_t = this.field_u.field_y.createPbuffer(param1, param2);
+          this.toolkit = toolkit;
+          this.pixelCount = width * height;
+          this.pbuffer = this.toolkit.field_y.createPbuffer(width, height);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wh.<init>(" + (toolkit != null ? "{...}" : "null") + ',' + width + ',' + height + ')');
         }
     }
 

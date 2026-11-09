@@ -39,7 +39,7 @@ final class PasswordValidator extends TextInputValidator {
             stackIn_5_0 = ArchiveIndex.passwordsMustBeBetweenText;
             return stackIn_5_0;
           }
-          if (me.a(false, var5)) {
+          if (AsciiCharacterChecks.containsNonAlphanumeric(false, var5)) {
             stackIn_8_0 = ContentTransitionDialog.passwordsCanOnlyContainText;
             return stackIn_8_0;
           }
@@ -112,7 +112,7 @@ final class PasswordValidator extends TextInputValidator {
           if (guard != 26) {
             field_j = (ToolkitSprite[]) null;
           }
-          stackIn_13_0 = qe.VALID;
+          stackIn_13_0 = PerlinNoiseFactory.VALID;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

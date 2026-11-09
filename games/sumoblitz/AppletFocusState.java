@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ii {
+final class AppletFocusState {
     static String retryText;
-    static boolean field_a;
+    static boolean focused;
     private static String field_z;
 
     public static void releaseStatics(byte param0) {
         if (param0 != -55) {
-          ii.releaseStatics((byte) 18);
+          AppletFocusState.releaseStatics((byte) 18);
           retryText = null;
           return;
         }

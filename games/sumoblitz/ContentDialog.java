@@ -33,11 +33,11 @@ final class ContentDialog extends ContentTransitionDialog {
 
     final static void l(int param0) {
         if (param0 <= kr.field_c) {
-          lf.a(256, (byte) -58);
+          lf.setSoundVolume(256, (byte) -58);
           return;
         }
         int var1 = kr.field_c % 32;
-        lf.a(32 + (kr.field_c - var1), (byte) -58);
+        lf.setSoundVolume(32 + (kr.field_c - var1), (byte) -58);
     }
 
     static {

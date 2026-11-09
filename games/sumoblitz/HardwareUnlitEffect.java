@@ -205,7 +205,7 @@ final class HardwareUnlitEffect extends ShaderEffect {
           field_f = param5;
         }
         ContentTransitionPhase.field_f[LoginCredentials.field_d] = param1;
-        ic.field_c[LoginCredentials.field_d] = param4;
+        LegacyOpenGlInterleavedStream.field_c[LoginCredentials.field_d] = param4;
         SlowBurstParticle.field_z[LoginCredentials.field_d] = param0;
         int var6 = param0 + param4 + param1;
         if (!param2) {

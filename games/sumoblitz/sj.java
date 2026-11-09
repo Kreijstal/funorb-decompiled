@@ -390,7 +390,7 @@ final class sj {
               sj.a(-58);
               return true;
             }
-            if (jl.a((byte) 110, param2.charAt(var3_int))) {
+            if (HardwareQuadBatchBuffers.isAllowedNameCharacter((byte) 110, param2.charAt(var3_int))) {
               var3_int++;
               continue;
             }

@@ -11,9 +11,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
           LoginFieldValue.field_a = new int[param0 * 2];
           if (ContentTransitionPhase.field_f == null) {
             ContentTransitionPhase.field_f = new int[2 * param0];
-            if (ic.field_c == null ||
-              !(param0 <= ic.field_c.length)) {
-              ic.field_c = new int[2 * param0];
+            if (LegacyOpenGlInterleavedStream.field_c == null ||
+              !(param0 <= LegacyOpenGlInterleavedStream.field_c.length)) {
+              LegacyOpenGlInterleavedStream.field_c = new int[2 * param0];
             }
             if (SlowBurstParticle.field_z == null ||
               !(param0 <= SlowBurstParticle.field_z.length)) {
@@ -33,9 +33,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
             }
           } else {
             if (param0 <= ContentTransitionPhase.field_f.length) {
-              if (ic.field_c == null ||
-                !(param0 <= ic.field_c.length)) {
-                ic.field_c = new int[2 * param0];
+              if (LegacyOpenGlInterleavedStream.field_c == null ||
+                !(param0 <= LegacyOpenGlInterleavedStream.field_c.length)) {
+                LegacyOpenGlInterleavedStream.field_c = new int[2 * param0];
               }
               if (SlowBurstParticle.field_z == null ||
                 !(param0 <= SlowBurstParticle.field_z.length)) {
@@ -55,9 +55,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
               }
             } else {
               ContentTransitionPhase.field_f = new int[2 * param0];
-              if (ic.field_c == null ||
-                !(param0 <= ic.field_c.length)) {
-                ic.field_c = new int[2 * param0];
+              if (LegacyOpenGlInterleavedStream.field_c == null ||
+                !(param0 <= LegacyOpenGlInterleavedStream.field_c.length)) {
+                LegacyOpenGlInterleavedStream.field_c = new int[2 * param0];
               }
               if (SlowBurstParticle.field_z == null ||
                 !(param0 <= SlowBurstParticle.field_z.length)) {
@@ -84,9 +84,9 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
               !(param0 <= ContentTransitionPhase.field_f.length)) {
               ContentTransitionPhase.field_f = new int[2 * param0];
             }
-            if (ic.field_c == null ||
-              !(param0 <= ic.field_c.length)) {
-              ic.field_c = new int[2 * param0];
+            if (LegacyOpenGlInterleavedStream.field_c == null ||
+              !(param0 <= LegacyOpenGlInterleavedStream.field_c.length)) {
+              LegacyOpenGlInterleavedStream.field_c = new int[2 * param0];
             }
             if (SlowBurstParticle.field_z == null ||
               !(param0 <= SlowBurstParticle.field_z.length)) {
@@ -129,8 +129,8 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
               !(param0 <= ContentTransitionPhase.field_f.length)) {
               ContentTransitionPhase.field_f = new int[2 * param0];
             }
-            if (ic.field_c == null) {
-              ic.field_c = new int[2 * param0];
+            if (LegacyOpenGlInterleavedStream.field_c == null) {
+              LegacyOpenGlInterleavedStream.field_c = new int[2 * param0];
               if (SlowBurstParticle.field_z == null ||
                 !(param0 <= SlowBurstParticle.field_z.length)) {
                 SlowBurstParticle.field_z = new int[param0 * 2];
@@ -168,7 +168,7 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                 }
               }
             } else {
-              if (param0 <= ic.field_c.length) {
+              if (param0 <= LegacyOpenGlInterleavedStream.field_c.length) {
                 if (SlowBurstParticle.field_z == null ||
                   !(param0 <= SlowBurstParticle.field_z.length)) {
                   SlowBurstParticle.field_z = new int[param0 * 2];
@@ -206,7 +206,7 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
                   }
                 }
               } else {
-                ic.field_c = new int[2 * param0];
+                LegacyOpenGlInterleavedStream.field_c = new int[2 * param0];
                 if (SlowBurstParticle.field_z == null ||
                   !(param0 <= SlowBurstParticle.field_z.length)) {
                   SlowBurstParticle.field_z = new int[param0 * 2];
@@ -296,7 +296,7 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
           return;
         }
         HardwareTurbulentWaterNoise.widgetTheme = ToolkitRasterStateCacheEntry.c(false);
-        pu.field_e = new DialogLayer();
+        HardwareTextureSprite.field_e = new DialogLayer();
         QuickChatPhraseProvider.showGraphicsOptions(40);
     }
 

@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jl {
-    private IndexBuffer field_b;
-    private VertexBuffer field_d;
+final class HardwareQuadBatchBuffers {
+    private IndexBuffer indices;
+    private VertexBuffer normals;
     static TickClock field_a;
-    private VertexBuffer field_c;
+    private VertexBuffer dynamicVertices;
 
     public static void releaseStatics(int param0) {
         if (param0 != 786336) {
@@ -14,22 +14,22 @@ final class jl {
         field_a = null;
     }
 
-    final static boolean a(int param0) {
+    final static boolean hasActivePlayer(int guard) {
         boolean stackIn_7_0 = false;
-        if (param0 >= -19) {
-          jl.a(0, false);
+        if (guard >= -19) {
+          HardwareQuadBatchBuffers.resendShortValueRequests(0, false);
         }
         stackIn_7_0 = (25 > OpenGlShaderProgram.levelIndex) && (SpriteMask.drones[0] != null) && (SpriteMask.drones[0].isActive((byte) 115));
         return stackIn_7_0;
     }
 
-    final static void a(int param0, int param1) {
+    final static void notifyBrowserResizing(int guard, int mode) {
         try {
           try {
-            BrowserScriptBridge.call(-126, LegacyOpenGlUnlitEffect.c(param0 - 23), "resizing", new Object[]{new Integer(param1)});
+            BrowserScriptBridge.call(-126, LegacyOpenGlUnlitEffect.c(guard - 23), "resizing", new Object[]{new Integer(mode)});
           } catch (Throwable throwable) {
           }
-          if (param0 != 25) {
+          if (guard != 25) {
             field_a = (TickClock) null;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -39,20 +39,20 @@ final class jl {
         }
     }
 
-    final static boolean a(byte param0, char param1) {
-        if (Character.isISOControl(param1)) {
+    final static boolean isAllowedNameCharacter(byte guard, char character) {
+        if (Character.isISOControl(character)) {
           return false;
         }
-        if (qw.a(57, param1)) {
+        if (qw.a(57, character)) {
           return true;
         }
-        if (param1 != 45 &&
-          160 != param1 &&
-          param1 != 32) {
-          if (param1 == 95) {
+        if (character != 45 &&
+          160 != character &&
+          character != 32) {
+          if (character == 95) {
             return true;
           }
-          if (param0 != 110) {
+          if (guard != 110) {
             field_a = (TickClock) null;
           }
           return false;
@@ -60,7 +60,7 @@ final class jl {
         return true;
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void resendShortValueRequests(int opcode, boolean guard) {
         int var3 = 0;
         km var4 = null;
         RuntimeException decompiledCaughtException = null;
@@ -68,22 +68,22 @@ final class jl {
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
           var4 = (km) (EmailValidationError.field_a.first(111));
-          if (!param1) {
+          if (!guard) {
             field_a = (TickClock) null;
           }
           while (var4 != null) {
-            MarkerTrackRenderer.a(-1, var4, param0);
+            MarkerTrackRenderer.a(-1, var4, opcode);
             var4 = (km) (EmailValidationError.field_a.next((byte) 18));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "jl.B(" + param0 + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "jl.B(" + opcode + ',' + guard + ')');
         }
     }
 
-    final static void a(java.applet.Applet param0, boolean param1) {
+    final static void quitToWebsite(java.applet.Applet applet, boolean guard) {
         try {
           java.net.URL var2 = null;
           RuntimeException stackIn_8_0 = null;
@@ -94,11 +94,11 @@ final class jl {
           RuntimeException var2_ref2 = null;
           try {
             try {
-              var2 = new java.net.URL(param0.getCodeBase(), "quit.ws");
-              if (param1) {
+              var2 = new java.net.URL(applet.getCodeBase(), "quit.ws");
+              if (guard) {
                 return;
               }
-              param0.getAppletContext().showDocument(MusicPatch.a((byte) 125, param0, var2), "_top");
+              applet.getAppletContext().showDocument(MusicPatch.a((byte) 125, applet, var2), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;
@@ -110,12 +110,12 @@ final class jl {
             var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackIn_8_0 = var2_ref2;
             stackIn_8_1 = new StringBuilder().append("jl.A(");
-            if (param0 == null) {
+            if (applet == null) {
               stackIn_9_2 = "null";
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(guard).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -154,11 +154,11 @@ final class jl {
             return false;
           }
         }
-        var4 = SlowBurstParticle.field_z[param1] + ic.field_c[param1] + ContentTransitionPhase.field_f[param1];
+        var4 = SlowBurstParticle.field_z[param1] + LegacyOpenGlInterleavedStream.field_c[param1] + ContentTransitionPhase.field_f[param1];
         if (param3 != 98) {
           return true;
         }
-        var5 = SlowBurstParticle.field_z[param0] + ContentTransitionPhase.field_f[param0] + ic.field_c[param0];
+        var5 = SlowBurstParticle.field_z[param0] + ContentTransitionPhase.field_f[param0] + LegacyOpenGlInterleavedStream.field_c[param0];
         if (var4 < var5) {
           return true;
         }
@@ -168,14 +168,14 @@ final class jl {
         return !(param0 <= param1);
     }
 
-    final void b(int param0) {
-        this.field_c.close(12001);
-        if (param0 != -19073) {
-          jl.a(121, -85, true, (byte) 9);
+    final void closeDynamicVertices(int guard) {
+        this.dynamicVertices.close(12001);
+        if (guard != -19073) {
+          HardwareQuadBatchBuffers.a(121, -85, true, (byte) 9);
         }
     }
 
-    jl(HardwareGraphicsToolkit param0) {
+    HardwareQuadBatchBuffers(HardwareGraphicsToolkit toolkit) {
         int var4_int = 0;
         int var5 = 0;
         jaclib.memory.Buffer var7 = null;
@@ -189,15 +189,15 @@ final class jl {
         jaclib.memory.Buffer var9 = null;
         int var5Lifetime1;
         try {
-          param0.a(new VertexStreamLayout[]{new VertexStreamLayout(new VertexAttribute[]{VertexAttribute.POSITION, VertexAttribute.COLOR, VertexAttribute.TEXCOORD2}), new VertexStreamLayout(VertexAttribute.NORMAL)}, (byte) 53);
-          this.field_c = param0.createVertexBuffer((byte) 51, true);
-          this.field_d = param0.createVertexBuffer((byte) 51, false);
-          this.field_d.allocate(12, (byte) -35, 393168);
-          this.field_b = param0.createIndexBuffer(3, false);
-          this.field_b.allocate((byte) -116, 49146);
-          var7 = this.field_b.map(true, 10081);
+          toolkit.a(new VertexStreamLayout[]{new VertexStreamLayout(new VertexAttribute[]{VertexAttribute.POSITION, VertexAttribute.COLOR, VertexAttribute.TEXCOORD2}), new VertexStreamLayout(VertexAttribute.NORMAL)}, (byte) 53);
+          this.dynamicVertices = toolkit.createVertexBuffer((byte) 51, true);
+          this.normals = toolkit.createVertexBuffer((byte) 51, false);
+          this.normals.allocate(12, (byte) -35, 393168);
+          this.indices = toolkit.createIndexBuffer(3, false);
+          this.indices.allocate((byte) -116, 49146);
+          var7 = this.indices.map(true, 10081);
           if (var7 != null) {
-            var8 = param0.a(true, var7);
+            var8 = toolkit.a(true, var7);
             if (!jaclib.memory.Stream.b()) {
               for (var4_int = 0; var4_int < 8191; var4_int++) {
                 var5 = 4 * var4_int;
@@ -220,11 +220,11 @@ final class jl {
               }
             }
             var8.a();
-            this.field_b.unmap(-28833);
+            this.indices.unmap(-28833);
           }
-          var9 = this.field_d.map(7454, true);
+          var9 = this.normals.map(7454, true);
           if (var9 != null) {
-            var4 = param0.a(true, var9);
+            var4 = toolkit.a(true, var9);
             if (!jaclib.memory.Stream.b()) {
               for (var5Lifetime1 = 0; 8191 > var5Lifetime1; var5Lifetime1++) {
                 var4.b(0.0f);
@@ -257,7 +257,7 @@ final class jl {
               }
             }
             var4.a();
-            this.field_d.unmap(22957);
+            this.normals.unmap(22957);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -265,7 +265,7 @@ final class jl {
           var2 = decompiledCaughtException;
           stackIn_22_0 = var2;
           stackIn_22_1 = new StringBuilder().append("jl.<init>(");
-          if (param0 == null) {
+          if (toolkit == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";
@@ -274,12 +274,12 @@ final class jl {
         }
     }
 
-    final void a(int param0, HardwareGraphicsToolkit param1) {
+    final void allocateDynamicVertices(int guard, HardwareGraphicsToolkit toolkit) {
         try {
-          int var3_int = -4 % ((param0 - 65) / 32);
-          this.field_c.allocate(24, (byte) -35, 786336);
+          int var3_int = -4 % ((guard - 65) / 32);
+          this.dynamicVertices.allocate(24, (byte) -35, 786336);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "jl.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "jl.D(" + guard + ',' + (toolkit != null ? "{...}" : "null") + ')');
         }
     }
 

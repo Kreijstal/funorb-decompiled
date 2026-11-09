@@ -1,37 +1,37 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ic {
+final class LegacyOpenGlInterleavedStream {
     static Object legacyRidgedWaterData;
     static QuickChatCommand field_a;
-    private LegacyVertexBuffer field_d;
+    private LegacyVertexBuffer vertices;
     static int[] field_c;
 
-    final static void a(int param0) {
-        if (param0 == 4) {
-          jk.field_b.failureCount = 0;
-          jk.field_b.failureCode = 0;
+    final static void clearJs5Failures(int guard) {
+        if (guard == 4) {
+          Js5ClientState.field_b.failureCount = 0;
+          Js5ClientState.field_b.failureCode = 0;
           return;
         }
-        ic.a(7);
-        jk.field_b.failureCount = 0;
-        jk.field_b.failureCode = 0;
+        LegacyOpenGlInterleavedStream.clearJs5Failures(7);
+        Js5ClientState.field_b.failureCount = 0;
+        Js5ClientState.field_b.failureCode = 0;
     }
 
-    final void a(LegacyOpenGlGraphicsToolkit param0, boolean param1) {
-        jq discarded$0 = null;
-        jq discarded$1 = null;
-        jq discarded$2 = null;
+    final void initializeStream(LegacyOpenGlGraphicsToolkit toolkit, boolean guard) {
+        LegacyVertexAttribute discarded$0 = null;
+        LegacyVertexAttribute discarded$1 = null;
+        LegacyVertexAttribute discarded$2 = null;
         try {
-          if (param1) {
+          if (guard) {
             legacyRidgedWaterData = (Object) null;
           }
-          this.field_d = param0.a(24, true, (byte) -23, 196584, (byte[]) null);
-          discarded$0 = new jq(this.field_d, 5126, 2, 0);
-          discarded$1 = new jq(this.field_d, 5126, 3, 8);
-          discarded$2 = new jq(this.field_d, 5121, 4, 20);
+          this.vertices = toolkit.a(24, true, (byte) -23, 196584, (byte[]) null);
+          discarded$0 = new LegacyVertexAttribute(this.vertices, 5126, 2, 0);
+          discarded$1 = new LegacyVertexAttribute(this.vertices, 5126, 3, 8);
+          discarded$2 = new LegacyVertexAttribute(this.vertices, 5121, 4, 20);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ic.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ic.C(" + (toolkit != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
@@ -42,46 +42,46 @@ final class ic {
         legacyRidgedWaterData = null;
     }
 
-    final static int b(int param0, int param1) {
+    final static int sinQ16(int angle, int guard) {
         int stackIn_5_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_19_0 = 0;
-        param0 = param0 & 8191;
-        if (param1 == -431) {
-          if (param0 < 4096) {
-            if (param0 >= 2048) {
-              stackIn_19_0 = ToolkitRasterBuffer.field_p[-param0 + 4096];
+        angle = angle & 8191;
+        if (guard == -431) {
+          if (angle < 4096) {
+            if (angle >= 2048) {
+              stackIn_19_0 = ToolkitRasterBuffer.field_p[-angle + 4096];
             } else {
-              stackIn_19_0 = ToolkitRasterBuffer.field_p[param0];
+              stackIn_19_0 = ToolkitRasterBuffer.field_p[angle];
             }
             return stackIn_19_0;
           }
-          if (param0 >= 6144) {
-            stackIn_15_0 = -ToolkitRasterBuffer.field_p[8192 - param0];
+          if (angle >= 6144) {
+            stackIn_15_0 = -ToolkitRasterBuffer.field_p[8192 - angle];
           } else {
-            stackIn_15_0 = -ToolkitRasterBuffer.field_p[-4096 + param0];
+            stackIn_15_0 = -ToolkitRasterBuffer.field_p[-4096 + angle];
           }
           return stackIn_15_0;
         }
         legacyRidgedWaterData = (Object) null;
-        if (param0 < 4096) {
-          if (param0 >= 2048) {
-            stackIn_9_0 = ToolkitRasterBuffer.field_p[-param0 + 4096];
+        if (angle < 4096) {
+          if (angle >= 2048) {
+            stackIn_9_0 = ToolkitRasterBuffer.field_p[-angle + 4096];
           } else {
-            stackIn_9_0 = ToolkitRasterBuffer.field_p[param0];
+            stackIn_9_0 = ToolkitRasterBuffer.field_p[angle];
           }
           return stackIn_9_0;
         }
-        if (param0 >= 6144) {
-          stackIn_5_0 = -ToolkitRasterBuffer.field_p[8192 - param0];
+        if (angle >= 6144) {
+          stackIn_5_0 = -ToolkitRasterBuffer.field_p[8192 - angle];
         } else {
-          stackIn_5_0 = -ToolkitRasterBuffer.field_p[-4096 + param0];
+          stackIn_5_0 = -ToolkitRasterBuffer.field_p[-4096 + angle];
         }
         return stackIn_5_0;
     }
 
-    final static String a(String param0, String[] param1, byte param2) {
+    final static String formatIndexedTokens(String template, String[] arguments, byte guard) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -109,35 +109,35 @@ final class ic {
         int var8Lifetime1;
         var11 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var3_int = param0.length();
+          var3_int = template.length();
           var4 = var3_int;
           var5 = 0;
-          if (param2 >= -127) {
+          if (guard >= -127) {
             stackIn_3_0 = (String) null;
             return stackIn_3_0;
           }
           while (true) {
-            var6_int = param0.indexOf("<%", var5);
+            var6_int = template.indexOf("<%", var5);
             if (0 <= var6_int) {
               for (var5 = var6_int + 2; var3_int > var5; var5++) {
-                if (ea.isAsciiDigit((byte) -54, param0.charAt(var5))) {
+                if (ea.isAsciiDigit((byte) -54, template.charAt(var5))) {
                   continue;
                 }
                 break;
               }
-              var7_ref_String = param0.substring(var6_int + 2, var5);
+              var7_ref_String = template.substring(var6_int + 2, var5);
               if (!ContentTransitionPhase.a(-13181, (CharSequence) ((Object) var7_ref_String))) {
                 continue;
               }
               if (var3_int <= var5) {
                 continue;
               }
-              if (param0.charAt(var5) != 62) {
+              if (template.charAt(var5) != 62) {
                 continue;
               }
               var5++;
               var8 = no.parseDecimal((byte) -127, (CharSequence) ((Object) var7_ref_String));
-              var4 = var4 + (-var5 + var6_int + param1[var8].length());
+              var4 = var4 + (-var5 + var6_int + arguments[var8].length());
               continue;
             }
             break;
@@ -146,59 +146,59 @@ final class ic {
           var5Lifetime1 = 0;
           var7 = 0;
           while (true) {
-            var8Lifetime1 = param0.indexOf("<%", var5Lifetime1);
+            var8Lifetime1 = template.indexOf("<%", var5Lifetime1);
             if (var8Lifetime1 < 0) {
-              discarded$0 = var6.append(param0.substring(var7));
+              discarded$0 = var6.append(template.substring(var7));
               stackIn_27_0 = var6.toString();
               return stackIn_27_0;
             }
             for (var5Lifetime1 = var8Lifetime1 + 2; var3_int > var5Lifetime1; var5Lifetime1++) {
-              if (ea.isAsciiDigit((byte) -54, param0.charAt(var5Lifetime1))) {
+              if (ea.isAsciiDigit((byte) -54, template.charAt(var5Lifetime1))) {
                 continue;
               }
               break;
             }
-            var9 = param0.substring(2 + var8Lifetime1, var5Lifetime1);
+            var9 = template.substring(2 + var8Lifetime1, var5Lifetime1);
             if (!ContentTransitionPhase.a(-13181, (CharSequence) ((Object) var9))) {
               continue;
             }
             if (var3_int <= var5Lifetime1) {
               continue;
             }
-            if (param0.charAt(var5Lifetime1) != 62) {
+            if (template.charAt(var5Lifetime1) != 62) {
               continue;
             }
             var5Lifetime1++;
             var10 = no.parseDecimal((byte) -128, (CharSequence) ((Object) var9));
-            discarded$1 = var6.append(param0.substring(var7, var8Lifetime1));
+            discarded$1 = var6.append(template.substring(var7, var8Lifetime1));
             var7 = var5Lifetime1;
-            discarded$2 = var6.append(param1[var10]);
+            discarded$2 = var6.append(arguments[var10]);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_30_0 = var3;
           stackIn_30_1 = new StringBuilder().append("ic.A(");
-          if (param0 == null) {
+          if (template == null) {
             stackIn_31_2 = "null";
           } else {
             stackIn_31_2 = "{...}";
           }
           stackIn_33_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',');
-          if (param1 == null) {
+          if (arguments == null) {
             stackIn_34_2 = "null";
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    static int a(int param0, int param1) {
-        return param0 | param1;
+    static int bitwiseOr(int left, int right) {
+        return left | right;
     }
 
-    final static void a(boolean param0, java.applet.Applet param1) {
+    final static void openServerList(boolean guard, java.applet.Applet applet) {
         try {
           java.net.URL var2 = null;
           RuntimeException var2_ref = null;
@@ -209,24 +209,24 @@ final class ic {
           Exception var2_ref2 = null;
           try {
             try {
-              var2 = new java.net.URL(param1.getCodeBase(), "toserverlist.ws");
-              param1.getAppletContext().showDocument(MusicPatch.a((byte) 126, param1, var2), "_top");
+              var2 = new java.net.URL(applet.getCodeBase(), "toserverlist.ws");
+              applet.getAppletContext().showDocument(MusicPatch.a((byte) 126, applet, var2), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref2 = (Exception) (Object) decompiledCaughtException;
               var2_ref2.printStackTrace();
             }
-            if (!param0) {
+            if (!guard) {
               return;
             }
-            ic.a(111);
+            LegacyOpenGlInterleavedStream.clearJs5Failures(111);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var2_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackIn_8_0 = var2_ref;
-            stackIn_8_1 = new StringBuilder().append("ic.E(").append(param0).append(',');
-            if (param1 == null) {
+            stackIn_8_1 = new StringBuilder().append("ic.E(").append(guard).append(',');
+            if (applet == null) {
               stackIn_9_2 = "null";
             } else {
               stackIn_9_2 = "{...}";
@@ -240,7 +240,7 @@ final class ic {
         }
     }
 
-    ic() {
+    LegacyOpenGlInterleavedStream() {
         FloatPacketBuffer discarded$0 = new FloatPacketBuffer(786336);
         HardwareTextureCache.bitLength(1600, (byte) -115);
     }

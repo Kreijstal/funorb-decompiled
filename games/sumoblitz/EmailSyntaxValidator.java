@@ -67,7 +67,7 @@ final class EmailSyntaxValidator extends TextInputValidator {
           stackIn_5_0 = (il.validateEmailAddress(text, (byte) 38) != null) ? 0 : 1;
           var3_int = stackIn_5_0;
           if (var3_int != 0) {
-            return qe.VALID;
+            return PerlinNoiseFactory.VALID;
           }
           stackIn_8_0 = AccountConnectionPhase.INVALID;
           return stackIn_8_0;

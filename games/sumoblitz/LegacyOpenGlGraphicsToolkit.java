@@ -14,7 +14,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
     private Hashtable field_Gb;
     private int field_Z;
     static String unfortunatelyYourConfigurationDoesnText;
-    private ic field_O;
+    private LegacyOpenGlInterleavedStream field_O;
     private LegacyOpenGlTextureCache field_Pb;
     int field_X;
     private LegacyOpenGlPostProcessManager postProcessManager;
@@ -565,7 +565,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         var20 = null;
         this.field_Gb = new Hashtable();
         this.field_X = 128;
-        this.field_O = new ic();
+        this.field_O = new LegacyOpenGlInterleavedStream();
         LegacyOpenGlTransform3D discarded$0 = new LegacyOpenGlTransform3D();
         LegacyOpenGlTransform3D discarded$1 = new LegacyOpenGlTransform3D();
         this.field_jc = false;
@@ -896,7 +896,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
               for (var7 = 0; data.field_h > var7; var7++) {
                 incrementValue$0 = var5;
                 var5++;
-                var3[incrementValue$0] = ic.a(data.field_g[LegacyOpenGlPostProcessManager.bitwiseAnd((int) data.field_e[var4], 255)], data.field_a[var4] << 24);
+                var3[incrementValue$0] = LegacyOpenGlInterleavedStream.bitwiseOr(data.field_g[LegacyOpenGlPostProcessManager.bitwiseAnd((int) data.field_e[var4], 255)], data.field_a[var4] << 24);
                 var4++;
               }
             }
@@ -911,7 +911,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
                 stackIn_8_0 = var10;
                 stackIn_8_1 = incrementValue$2;
                 if (var8 != 0) {
-                  stackIn_9_2 = ic.a(-16777216, var8);
+                  stackIn_9_2 = LegacyOpenGlInterleavedStream.bitwiseOr(-16777216, var8);
                 } else {
                   stackIn_9_2 = 0;
                 }
@@ -1111,8 +1111,8 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
     }
 
     final void useHeap(GraphicsHeap heap) {
-        jq discarded$2 = null;
-        jq discarded$3 = null;
+        LegacyVertexAttribute discarded$2 = null;
+        LegacyVertexAttribute discarded$3 = null;
         FloatPacketBuffer var3 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -1167,9 +1167,9 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
               var3.writeFloatLE((byte) -36, 0.0f);
             }
             this.field_Rb = this.a(20, false, (byte) -23, var3.position, var3.payload);
-            discarded$2 = new jq(this.field_Rb, 5126, 3, 0);
-            discarded$3 = new jq(this.field_Rb, 5126, 2, 12);
-            this.field_O.a(this, false);
+            discarded$2 = new LegacyVertexAttribute(this.field_Rb, 5126, 3, 0);
+            discarded$3 = new LegacyVertexAttribute(this.field_Rb, 5126, 2, 12);
+            this.field_O.initializeStream(this, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2044,12 +2044,12 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         String stackIn_32_2 = null;
         RuntimeException decompiledCaughtException = null;
         LegacyOpenGlRenderbuffer var3 = null;
-        wh var3_ref = null;
+        LegacyOpenGlPbuffer var3_ref = null;
         RuntimeException var3_ref2 = null;
         DualLinkNode var4 = null;
         int var6 = 0;
-        wh var7 = null;
-        wh var8 = null;
+        LegacyOpenGlPbuffer var7 = null;
+        LegacyOpenGlPbuffer var8 = null;
         LegacyOpenGlRenderbuffer var9 = null;
         LegacyOpenGlRenderbuffer var10 = null;
         var6 = Sumoblitz.field_L ? 1 : 0;
@@ -2091,19 +2091,19 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
             if (!this.field_Gc) {
               throw new RuntimeException("");
             }
-            var3_ref = (wh) (this.field_nc.a(117, (long)(this.field_Tb.width() << 16 | this.field_Tb.height())));
+            var3_ref = (LegacyOpenGlPbuffer) (this.field_nc.a(117, (long)(this.field_Tb.width() << 16 | this.field_Tb.height())));
             if (var3_ref == null) {
-              var7 = new wh(this, this.field_Tb.width(), this.field_Tb.height());
+              var7 = new LegacyOpenGlPbuffer(this, this.field_Tb.width(), this.field_Tb.height());
               var3_ref = var7;
-              this.field_ic = this.field_ic + var7.field_v * 4;
+              this.field_ic = this.field_ic + var7.pixelCount * 4;
               while (this.field_ic > 2097152) {
                 var4 = this.field_Db.removeLast((byte) 126);
                 if (var4 != null) {
-                  var8 = (wh) (var4);
+                  var8 = (LegacyOpenGlPbuffer) (var4);
                   var8.unlinkSecondary(-5106);
                   var8.unlink(false);
-                  this.field_y.releasePbuffer(var8.e(-99));
-                  this.field_ic = this.field_ic - var8.field_v;
+                  this.field_y.releasePbuffer(var8.handle(-99));
+                  this.field_ic = this.field_ic - var8.pixelCount;
                   continue;
                 }
                 break;
@@ -2111,7 +2111,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
               this.field_nc.a(var7, -1, (long)(this.field_Tb.width() << 16 | this.field_Tb.height()));
             }
             this.field_Db.addFirst(var3_ref, -4);
-            this.field_y.setPbuffer(var3_ref.e(-106));
+            this.field_y.setPbuffer(var3_ref.handle(-106));
           }
           this.field_Z = sprite.width();
           this.field_Ec = sprite.height();

@@ -4,7 +4,7 @@
 final class hc {
     static MessageDialog field_c;
     static ToolkitFont field_e;
-    static int field_f;
+    static int selectedBounceLevel;
     static SpriteData[] field_a;
     static SpriteData field_b;
     static String continueToNextLevelText;
@@ -111,6 +111,6 @@ final class hc {
 
     static {
         continueToNextLevelText = "Continue to next level?";
-        field_f = 1;
+        selectedBounceLevel = 1;
     }
 }

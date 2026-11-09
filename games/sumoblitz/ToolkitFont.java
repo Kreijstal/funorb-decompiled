@@ -533,7 +533,7 @@ abstract class ToolkitFont {
           var14 = var6[var9];
           RasterIndexedSprite[] var10 = var14;
           for (var11_int = 0; var11_int < var14.length; var11_int++) {
-            var14[var11_int] = jk.a(var19[var11_int], var5[var9], -105);
+            var14[var11_int] = Js5ClientState.withPalette(var19[var11_int], var5[var9], -105);
           }
         }
         var9 = var17.field_u;

@@ -88,7 +88,7 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
         AffineTransform3D.field_j = param0;
     }
 
-    final static byte[] a(byte[] param0, int param1, int param2, byte param3) {
+    final static byte[] copyByteRange(byte[] bytes, int length, int offset, byte guard) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -98,12 +98,12 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = new byte[param1];
+          var5 = new byte[length];
           var4 = var5;
-          if (param3 <= 48) {
+          if (guard <= 48) {
             EMPTY = (ValidationStatus) null;
           }
-          ArrayUtils.copy(param0, param2, var5, 0, param1);
+          ArrayUtils.copy(bytes, offset, var5, 0, length);
           stackIn_3_0 = var5;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -111,12 +111,12 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
           var4_ref = decompiledCaughtException;
           stackIn_6_0 = var4_ref;
           stackIn_6_1 = new StringBuilder().append("ad.D(");
-          if (param0 == null) {
+          if (bytes == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(length).append(',').append(offset).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -161,10 +161,10 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
               CubeMapSource.field_a = false;
               var4 = 1;
             }
-            ProxyAuthenticationRequiredException.drawLoadingProgress(true, OpenGlTexture.g(14296), IntIndexHashTable.field_a, var4 != 0, dn.b(102));
+            ProxyAuthenticationRequiredException.drawLoadingProgress(true, OpenGlTexture.g(14296), IntIndexHashTable.field_a, var4 != 0, LoadingStatusText.preparationMessage(102));
             return;
           }
-          if (!lf.b(-251)) {
+          if (!lf.isIntroFinished(-251)) {
             SoftwareRasterizer.clear();
             kd.a(240, 320, 256);
             IterableNodeHashTable.a(0, 0, param1, (byte) 125);

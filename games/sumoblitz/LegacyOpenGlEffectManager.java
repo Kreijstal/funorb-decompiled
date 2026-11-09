@@ -5,7 +5,7 @@ import java.util.*;
 
 final class LegacyOpenGlEffectManager {
     static MenuScreen[] field_g;
-    static int field_i;
+    static int selectedTractionLevel;
     private int parameters1;
     private int activeEffect;
     private LegacyOpenGlEffect[] effects;
@@ -524,7 +524,7 @@ final class LegacyOpenGlEffectManager {
     }
 
     static {
-        field_i = 1;
+        selectedTractionLevel = 1;
         field_g = new MenuScreen[13];
         field_b = new Random(2L);
     }

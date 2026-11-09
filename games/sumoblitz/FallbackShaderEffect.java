@@ -1157,7 +1157,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("connectionlost_reconnecting", (byte) -23);
                 if (null != var2) {
-                  qe.connectionLostAttemptingToText = MusicVoice.a(0, var2);
+                  PerlinNoiseFactory.connectionLostAttemptingToText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("connectionlost_withreason", (byte) -23);
                 if (null != var2) {
@@ -1173,7 +1173,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("retry", (byte) -23);
                 if (var2 != null) {
-                  ii.retryText = MusicVoice.a(0, var2);
+                  AppletFocusState.retryText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("back", (byte) -23);
                 if (var2 != null) {
@@ -1464,7 +1464,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("create_email_confirm", (byte) -23);
                 if (null != var2) {
-                  pq.confirmEmailText = MusicVoice.a(0, var2);
+                  StripedProgressWidget.confirmEmailText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("create_age", (byte) -23);
                 if (var2 != null) {
@@ -1944,7 +1944,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("music_colon", (byte) -23);
                 if (var2 != null) {
-                  gu.musicText = MusicVoice.a(param0 - 7, var2);
+                  HardwareBufferSet.musicText = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = OpenGlCubeTexture.a("fullscreen", (byte) -23);
                 if (null != var2) {
@@ -2074,7 +2074,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("ok", (byte) -23);
                 if (null != var2) {
-                  tf.field_a = MusicVoice.a(0, var2);
+                  LegacyAlphaFontLoader.field_a = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("on", (byte) -23);
                 if (var2 != null) {
@@ -2610,15 +2610,15 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("members_expansion_benefits,0", (byte) -23);
                 if (null != var2) {
-                  mo.membershipBenefitLines[0] = MusicVoice.a(0, var2);
+                  PerlinNoise2D.membershipBenefitLines[0] = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("members_expansion_benefits,1", (byte) -23);
                 if (var2 != null) {
-                  mo.membershipBenefitLines[1] = MusicVoice.a(GzipDecompressor.bitwiseXor(param0, 7), var2);
+                  PerlinNoise2D.membershipBenefitLines[1] = MusicVoice.a(GzipDecompressor.bitwiseXor(param0, 7), var2);
                 }
                 var2 = OpenGlCubeTexture.a("members_expansion_benefits,2", (byte) -23);
                 if (null != var2) {
-                  mo.membershipBenefitLines[2] = MusicVoice.a(0, var2);
+                  PerlinNoise2D.membershipBenefitLines[2] = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("members_expansion_price_top", (byte) -23);
                 if (var2 != null) {
@@ -2850,7 +2850,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("graphics_config_apply", (byte) -23);
                 if (var2 != null) {
-                  dn.applyText = MusicVoice.a(0, var2);
+                  LoadingStatusText.applyText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("graphics_config_title", (byte) -23);
                 if (var2 != null) {
@@ -3016,55 +3016,55 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("subscription_cost_monthly,0", (byte) -23);
                 if (null != var2) {
-                  fa.field_c[0] = MusicVoice.a(param0 - 7, var2);
+                  AppletTickHistory.field_c[0] = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = OpenGlCubeTexture.a("subscription_cost_monthly,1", (byte) -23);
                 if (var2 != null) {
-                  fa.field_c[1] = MusicVoice.a(param0 - 7, var2);
+                  AppletTickHistory.field_c[1] = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = OpenGlCubeTexture.a("subscription_cost_monthly,2", (byte) -23);
                 if (null != var2) {
-                  fa.field_c[2] = MusicVoice.a(0, var2);
+                  AppletTickHistory.field_c[2] = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("subscription_cost_monthly,3", (byte) -23);
                 if (null != var2) {
-                  fa.field_c[3] = MusicVoice.a(0, var2);
+                  AppletTickHistory.field_c[3] = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("subscription_cost_monthly,4", (byte) -23);
                 if (null != var2) {
-                  fa.field_c[4] = MusicVoice.a(0, var2);
+                  AppletTickHistory.field_c[4] = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("subscription_cost_monthly,5", (byte) -23);
                 if (var2 != null) {
-                  fa.field_c[5] = MusicVoice.a(0, var2);
+                  AppletTickHistory.field_c[5] = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("subscription_cost_monthly,6", (byte) -23);
                 if (null != var2) {
-                  fa.field_c[6] = MusicVoice.a(0, var2);
+                  AppletTickHistory.field_c[6] = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("subscription_cost_monthly,7", (byte) -23);
                 if (null != var2) {
-                  fa.field_c[7] = MusicVoice.a(param0 - 7, var2);
+                  AppletTickHistory.field_c[7] = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = OpenGlCubeTexture.a("subscription_cost_monthly,8", (byte) -23);
                 if (var2 != null) {
-                  fa.field_c[8] = MusicVoice.a(0, var2);
+                  AppletTickHistory.field_c[8] = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("subscription_cost_monthly,9", (byte) -23);
                 if (null != var2) {
-                  fa.field_c[9] = MusicVoice.a(0, var2);
+                  AppletTickHistory.field_c[9] = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("subscription_cost_monthly,10", (byte) -23);
                 if (null != var2) {
-                  fa.field_c[10] = MusicVoice.a(param0 - 7, var2);
+                  AppletTickHistory.field_c[10] = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = OpenGlCubeTexture.a("subscription_cost_monthly,11", (byte) -23);
                 if (null != var2) {
-                  fa.field_c[11] = MusicVoice.a(GzipDecompressor.bitwiseXor(param0, 7), var2);
+                  AppletTickHistory.field_c[11] = MusicVoice.a(GzipDecompressor.bitwiseXor(param0, 7), var2);
                 }
                 var2 = OpenGlCubeTexture.a("subscription_cost_monthly,12", (byte) -23);
                 if (var2 != null) {
-                  fa.field_c[12] = MusicVoice.a(0, var2);
+                  AppletTickHistory.field_c[12] = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("sentence_separator", (byte) -23);
                 if (var2 != null) {

@@ -3,7 +3,7 @@
  */
 final class LegacyRidgedWaterNoise extends RidgedNoise3D {
     private byte[] pixels;
-    static tf field_y;
+    static LegacyAlphaFontLoader field_y;
 
     final void writeVoxel(byte value, int index, int guard) {
         int var4 = 0;
@@ -41,17 +41,17 @@ final class LegacyRidgedWaterNoise extends RidgedNoise3D {
             if (null != CompactMeshGeometry.field_o &&
               CompactMeshGeometry.field_o.field_a) {
               HardwareAnimatedWaterEffect.d(1);
-              pu.field_e.pushDialog((byte) 113, new DisplayModeErrorDialog(pu.field_e, CachedArchiveProvider.field_e));
+              HardwareTextureSprite.field_e.pushDialog((byte) 113, new DisplayModeErrorDialog(HardwareTextureSprite.field_e, CachedArchiveProvider.field_e));
             }
             return;
           }
-          pu.field_e.dispatchPointerInput(JaggrabDownloader.displayDialogY, PasswordInputRenderer.displayDialogX, true, guard - 1886067878);
+          HardwareTextureSprite.field_e.dispatchPointerInput(JaggrabDownloader.displayDialogY, PasswordInputRenderer.displayDialogX, true, guard - 1886067878);
           if (guard != 1886067877) {
             LegacyRidgedWaterNoise.releaseStatics((byte) -127);
           }
-          pu.field_e.advanceDialogAnimations(-104);
+          HardwareTextureSprite.field_e.advanceDialogAnimations(-104);
           while (EmailCredentials.c(-81)) {
-            pu.field_e.dispatchKey(WhirlpoolDigest.field_c, TextureCombineOperation.field_a, true);
+            HardwareTextureSprite.field_e.dispatchKey(WhirlpoolDigest.field_c, TextureCombineOperation.field_a, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -69,6 +69,6 @@ final class LegacyRidgedWaterNoise extends RidgedNoise3D {
     }
 
     static {
-        field_y = new tf();
+        field_y = new LegacyAlphaFontLoader();
     }
 }

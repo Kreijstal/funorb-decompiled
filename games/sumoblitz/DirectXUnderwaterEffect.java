@@ -38,7 +38,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         this.toolkit.a(this.field_i, guard - 20076);
         this.toolkit.a((byte) -83, lf.REPLACE, OpenGlBuffer.INTERPOLATE);
         this.toolkit.a(AccountRequestState.CONSTANT, 0, guard ^ guard);
-        this.toolkit.setColorCombineSource((byte) 89, 2, true, false, jq.TEXTURE);
+        this.toolkit.setColorCombineSource((byte) 89, 2, true, false, LegacyVertexAttribute.TEXTURE);
         this.toolkit.a(FontMetrics.PREVIOUS, 0, true);
         this.toolkit.g(0, guard - 20311);
         this.d(-86);
@@ -48,11 +48,11 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         this.toolkit.g(1, -121);
         this.toolkit.a((GpuTexture) null, 100);
         this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
-        this.toolkit.a(jq.TEXTURE, 0, 0);
+        this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, 0);
         if (guard) {
           this.setParameters(-69, 14, -105);
           this.toolkit.a(AccountRequestState.CONSTANT, 2, 0);
-          this.toolkit.a(jq.TEXTURE, 0, true);
+          this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, true);
           this.toolkit.g(0, -109);
           if (!this.field_e) {
             if (null == this.field_j) {
@@ -62,8 +62,8 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
             this.field_j = null;
             return;
           }
-          this.toolkit.a(jq.TEXTURE, 0, 0);
-          this.toolkit.a(jq.TEXTURE, 0, true);
+          this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, 0);
+          this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, true);
           this.field_e = false;
           if (null != this.field_j) {
             this.field_l.a(-122, (jagdx.IDirect3DVertexShader) null);
@@ -73,11 +73,11 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
           return;
         }
         this.toolkit.a(AccountRequestState.CONSTANT, 2, 0);
-        this.toolkit.a(jq.TEXTURE, 0, true);
+        this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, true);
         this.toolkit.g(0, -109);
         if (this.field_e) {
-          this.toolkit.a(jq.TEXTURE, 0, 0);
-          this.toolkit.a(jq.TEXTURE, 0, true);
+          this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, 0);
+          this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, true);
           this.field_e = false;
           if (null == this.field_j) {
             return;
@@ -172,8 +172,8 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         }
         if (texture != null) {
           if (this.field_e) {
-            this.toolkit.a(jq.TEXTURE, 0, 0);
-            this.toolkit.a(jq.TEXTURE, 0, true);
+            this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, 0);
+            this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, true);
             this.field_e = false;
           }
           this.toolkit.a(texture, guard ^ 18892);

@@ -32,9 +32,9 @@ final class OpenGlIndexBuffer extends OpenGlBuffer implements IndexBuffer {
     }
 
     final static void g(int param0) {
-        LegacyOpenGlSpecularEffect.field_h[1] = LegacyOpenGlEffectManager.field_i;
-        LegacyOpenGlSpecularEffect.field_h[0] = ResourceArchive.field_f;
-        LegacyOpenGlSpecularEffect.field_h[2] = hc.field_f;
+        LegacyOpenGlSpecularEffect.field_h[1] = LegacyOpenGlEffectManager.selectedTractionLevel;
+        LegacyOpenGlSpecularEffect.field_h[0] = ResourceArchive.selectedSpeedLevel;
+        LegacyOpenGlSpecularEffect.field_h[2] = hc.selectedBounceLevel;
         IsaacPacketBuffer.field_u = LegacyOpenGlSpecularEffect.field_h[1] + LegacyOpenGlSpecularEffect.field_h[0] - 2 + (LegacyOpenGlSpecularEffect.field_h[2] - 1);
         if (param0 < 100) {
           OpenGlIndexBuffer.b(46, -94);
@@ -46,7 +46,7 @@ final class OpenGlIndexBuffer extends OpenGlBuffer implements IndexBuffer {
           int var2_int = 0;
           IOException var2 = null;
           Throwable decompiledCaughtException = null;
-          if (ig.field_a.position >= param1) {
+          if (NativeLibraryExtractor.field_a.position >= param1) {
             return true;
           }
           if (null == DisplayModeConfirmationDialog.accountSocket) {
@@ -65,16 +65,16 @@ final class OpenGlIndexBuffer extends OpenGlBuffer implements IndexBuffer {
               LegacyOpenGlTextureCache.closeAccountSocket((byte) -118);
               return false;
             }
-            if (-ig.field_a.position + param1 < var2_int) {
-              var2_int = -ig.field_a.position + param1;
+            if (-NativeLibraryExtractor.field_a.position + param1 < var2_int) {
+              var2_int = -NativeLibraryExtractor.field_a.position + param1;
             }
-            DisplayModeConfirmationDialog.accountSocket.readFully(param0 ^ 99, ig.field_a.position, var2_int, ig.field_a.payload);
+            DisplayModeConfirmationDialog.accountSocket.readFully(param0 ^ 99, NativeLibraryExtractor.field_a.position, var2_int, NativeLibraryExtractor.field_a.payload);
             CacheReferenceNode.lastServerReadMillis = wq.monotonicTimeMillis(-47);
-            ig.field_a.position = ig.field_a.position + var2_int;
-            if (ig.field_a.position < param1) {
+            NativeLibraryExtractor.field_a.position = NativeLibraryExtractor.field_a.position + var2_int;
+            if (NativeLibraryExtractor.field_a.position < param1) {
               return false;
             }
-            ig.field_a.position = 0;
+            NativeLibraryExtractor.field_a.position = 0;
             return true;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

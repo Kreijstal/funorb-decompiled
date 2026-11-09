@@ -18,7 +18,7 @@ final class ke {
         field_b = (byte[][]) null;
     }
 
-    final static byte[] a(byte param0, String param1) {
+    final static byte[] fetchGameDataFile(byte guard, String fileName) {
         RuntimeException var2 = null;
         byte[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -26,17 +26,17 @@ final class ke {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 < 87) {
+          if (guard < 87) {
             field_a = (GameApplet) null;
           }
-          stackIn_3_0 = Drone.field_J.fetchNamedFile(param1, "", -1);
+          stackIn_3_0 = Drone.field_J.fetchNamedFile(fileName, "", -1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("ke.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("ke.A(").append(guard).append(',');
+          if (fileName == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -60,7 +60,7 @@ final class ke {
         }
         if (AccountServiceResult.waveIndex < Bzip2State.field_J.length) {
           SocketConnector.field_c = 0;
-          ig.b(120);
+          NativeLibraryExtractor.spawnNextWaveGroup(120);
           uc.field_f = TextureFormat.elapsedTicks;
           kp.field_a = false;
           DroneDebris.field_C = false;

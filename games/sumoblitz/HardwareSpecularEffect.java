@@ -46,7 +46,7 @@ final class HardwareSpecularEffect extends ShaderEffect {
           this.setParameters(114, 98, -46);
         }
         if (!this.active) {
-          this.toolkit.a(jq.TEXTURE, 0, true);
+          this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, true);
         } else {
           this.toolkit.g(1, -109);
           this.toolkit.a((GpuTexture) null, 102);
@@ -54,17 +54,17 @@ final class HardwareSpecularEffect extends ShaderEffect {
           this.toolkit.l(0);
           if (!this.useTwoUnits) {
             this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
-            this.toolkit.a(jq.TEXTURE, 0, 0);
+            this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, 0);
             this.toolkit.g(2, -117);
             this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
-            this.toolkit.a(jq.TEXTURE, 0, 0);
+            this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, 0);
             this.toolkit.a(FontMetrics.PREVIOUS, 1, 0);
-            this.toolkit.a(jq.TEXTURE, 0, true);
+            this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, true);
             this.toolkit.a((GpuTexture) null, 110);
           } else {
             this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
-            this.toolkit.a(jq.TEXTURE, 0, 0);
-            this.toolkit.a(jq.TEXTURE, 0, true);
+            this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, 0);
+            this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, true);
           }
           this.toolkit.g(0, -126);
           this.active = false;
@@ -269,7 +269,7 @@ final class HardwareSpecularEffect extends ShaderEffect {
               this.toolkit.a(this.toolkit.field_D, guard - 20079);
             } else {
               this.toolkit.a((byte) -83, lf.REPLACE, LoginForm.ADD);
-              this.toolkit.setColorCombineSource((byte) -66, 0, true, false, jq.TEXTURE);
+              this.toolkit.setColorCombineSource((byte) -66, 0, true, false, LegacyVertexAttribute.TEXTURE);
               this.toolkit.a(NetworkResourceRequest.PRIMARY_COLOR, 0, true);
             }
             this.toolkit.g(0, -113);

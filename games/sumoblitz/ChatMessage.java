@@ -56,7 +56,7 @@ final class ChatMessage {
           if (this.senderId == OpenGlShader.field_d) {
             return 1;
           }
-          if (wh.field_s != 2) {
+          if (LegacyOpenGlPbuffer.field_s != 2) {
             return 0;
           }
           if (StatusMessagePanel.isFriend(false, this.senderName)) {
@@ -70,7 +70,7 @@ final class ChatMessage {
         if (this.senderId == OpenGlShader.field_d) {
           return 1;
         }
-        if (wh.field_s != 2) {
+        if (LegacyOpenGlPbuffer.field_s != 2) {
           return 0;
         }
         if (StatusMessagePanel.isFriend(false, this.senderName)) {

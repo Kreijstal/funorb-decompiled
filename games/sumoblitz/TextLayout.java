@@ -128,7 +128,7 @@ abstract class TextLayout {
         if (hc.field_c != null) {
           hc.field_c.n(-7);
         }
-        String var1 = wh.a((byte) -72);
+        String var1 = LegacyOpenGlPbuffer.playerLabel((byte) -72);
         no.field_a = new LoginForm(var1, (String) null, true, false, false);
         RenderPresentationException.field_a.pushDialog((byte) 114, SlowBurstParticle.field_y);
         SlowBurstParticle.field_y.transitionToContent((byte) -118, no.field_a);
@@ -164,14 +164,14 @@ abstract class TextLayout {
 
     final static void b(int param0) {
         int var1 = 0;
-        if (tt.field_l <= 32) {
-          lf.a(0, 0);
+        if (TextureGeneratorNode.musicVolume <= 32) {
+          lf.setMusicVolume(0, 0);
         } else {
-          var1 = tt.field_l % 32;
+          var1 = TextureGeneratorNode.musicVolume % 32;
           if (var1 == 0) {
             var1 = 32;
           }
-          lf.a(0, tt.field_l - var1);
+          lf.setMusicVolume(0, TextureGeneratorNode.musicVolume - var1);
         }
         if (param0 != 0) {
           field_b = -64;

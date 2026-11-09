@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class k {
+final class SpriteSheetSupport {
     static String startGameText;
 
     final static boolean decodeSpriteSheet(ResourceArchive archive, int groupId, int fileId, int guard) {

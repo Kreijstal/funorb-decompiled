@@ -21,8 +21,8 @@ final class MarkerTrackWidget extends InteractiveWidget {
           IOException var2 = null;
           var3 = Sumoblitz.field_L ? 1 : 0;
           try {
-            if (null != jk.field_b) {
-              jk.field_b.closeConnection(-106);
+            if (null != Js5ClientState.field_b) {
+              Js5ClientState.field_b.closeConnection(-106);
             }
             if (FadingWidget.field_D != null) {
               FadingWidget.field_D.shutdown(109);
@@ -176,11 +176,11 @@ final class MarkerTrackWidget extends InteractiveWidget {
           if (NameSuggestionsPanel.field_E != null) {
             try {
               NameSuggestionsPanel.field_E.seek(-7564, 0L);
-              NameSuggestionsPanel.field_E.write(ig.field_a.payload, 24, (byte) -41, ig.field_a.position);
+              NameSuggestionsPanel.field_E.write(NativeLibraryExtractor.field_a.payload, 24, (byte) -41, NativeLibraryExtractor.field_a.position);
             } catch (Exception exception) {
             }
           }
-          ig.field_a.position = ig.field_a.position + skipBytes;
+          NativeLibraryExtractor.field_a.position = NativeLibraryExtractor.field_a.position + skipBytes;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

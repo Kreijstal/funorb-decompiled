@@ -85,7 +85,7 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
     }
 
     final void disable(boolean guard) {
-        this.toolkit.a(jq.TEXTURE, 0, 0);
+        this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, 0);
         jaggl.OpenGL.glBindProgramARB(34336, 0);
         jaggl.OpenGL.glDisable(34820);
         jaggl.OpenGL.glDisable(34336);

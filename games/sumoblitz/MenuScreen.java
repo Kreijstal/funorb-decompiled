@@ -489,7 +489,7 @@ class MenuScreen {
           vm.field_a[2].drawRotated((float)(vm.field_a[1].paddedWidth() * 3 - 2 + var19 - 2 + 10), (float)(10 + (3 + var6_int) - 2), 4096, 0, 1, 0, 2);
           vm.field_a[3].drawRotated((float)(-2 + var19 - 2 + 10 + 4 * vm.field_a[1].paddedWidth()), (float)(3 + var6_int + 8), 4096, 0, 1, 0, 2);
           if (var8 != 12) {
-            stackIn_44_0 = tt.field_l;
+            stackIn_44_0 = TextureGeneratorNode.musicVolume;
           } else {
             stackIn_44_0 = kr.field_c;
           }
@@ -596,7 +596,7 @@ class MenuScreen {
           if (TextureCombineOperation.field_a == 99) {
             if (!(this.field_g.selectedIndex >= 0) ||
               !(this.field_g.selectedIndex <= 2)) {
-              this.field_g.setKeyboardSelection(-31865, gu.field_j);
+              this.field_g.setKeyboardSelection(-31865, HardwareBufferSet.field_j);
               if (var3 != 0) {
                 this.field_g.setKeyboardSelection(-31865, 3);
               }
@@ -606,7 +606,7 @@ class MenuScreen {
           }
           if (TextureCombineOperation.field_a == 98) {
             if (this.field_g.selectedIndex == 3) {
-              this.field_g.setKeyboardSelection(-31865, gu.field_j);
+              this.field_g.setKeyboardSelection(-31865, HardwareBufferSet.field_j);
               if (var3 != 0) {
                 this.field_g.setKeyboardSelection(-31865, 3);
               }
@@ -879,7 +879,7 @@ class MenuScreen {
                     if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
-                    ih.a(-125);
+                    ih.restoreBaselineUpgrades(-125);
                     StrongCacheReference.switchMenuScreen(-7753, param0, -1);
                     LegacyTurbulentWaterNoise.advanceToNextLevel(10);
                     ByteArrayCacheNode.initializeGameplaySession((byte) 104);
@@ -980,7 +980,7 @@ class MenuScreen {
                     if (ToolkitRasterStateFrame.field_e <= -1) {
                       break regionExit2;
                     }
-                    pu.a((byte) -33);
+                    HardwareTextureSprite.snapshotUpgradeAllocation((byte) -33);
                     StrongCacheReference.switchMenuScreen(-7753, param0, 9);
                     AffineTransform3D.field_j = 7;
                     if (var9 == 0) {
@@ -991,7 +991,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                     UiWidget.d((byte) -32);
-                    tt.a(30692);
+                    TextureGeneratorNode.restoreUpgradeAllocation(30692);
                     StrongCacheReference.switchMenuScreen(-7753, param0, AffineTransform3D.field_j);
                     if (var9 == 0) {
                       break regionExit2;
@@ -1113,7 +1113,7 @@ class MenuScreen {
                       AccountNameSupport.muteMusic(24238);
                     }
                     if (this.field_g.isEndPressed(103)) {
-                      ig.a(22075);
+                      NativeLibraryExtractor.restoreMusicVolume(22075);
                     }
                     if (this.field_g.isLeftPressed(2542)) {
                       FullscreenMembershipDialog.l(34168);
@@ -1129,23 +1129,23 @@ class MenuScreen {
                       var7 = 8 + ((-var6 + (this.b(param2, 35) + this.f(90, param2)) >> 1) + (SocketJs5Client.field_q - (SocketJs5Client.field_q >> 2)));
                       var8 = -var7 + ko.field_p << 1;
                       if (var8 <= 0) {
-                        lf.a(0, 0);
+                        lf.setMusicVolume(0, 0);
                         if (var9 != 0) {
                           if (var8 >= 256) {
-                            lf.a(0, 256);
-                            lf.a(0, var8);
+                            lf.setMusicVolume(0, 256);
+                            lf.setMusicVolume(0, var8);
                           } else {
-                            lf.a(0, var8);
+                            lf.setMusicVolume(0, var8);
                           }
                         }
                       } else {
                         if (var8 >= 256) {
-                          lf.a(0, 256);
+                          lf.setMusicVolume(0, 256);
                           if (var9 != 0) {
-                            lf.a(0, var8);
+                            lf.setMusicVolume(0, var8);
                           }
                         } else {
-                          lf.a(0, var8);
+                          lf.setMusicVolume(0, var8);
                         }
                       }
                     }
@@ -1185,7 +1185,7 @@ class MenuScreen {
                     if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
-                    gu.field_j = 0;
+                    HardwareBufferSet.field_j = 0;
                     if (var9 == 0) {
                       break regionExit2;
                     }
@@ -1193,7 +1193,7 @@ class MenuScreen {
                     if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
-                    gu.field_j = 1;
+                    HardwareBufferSet.field_j = 1;
                     if (var9 == 0) {
                       break regionExit2;
                     }
@@ -1201,7 +1201,7 @@ class MenuScreen {
                     if (!this.field_g.isActivated(-31260)) {
                       break regionExit2;
                     }
-                    gu.field_j = 2;
+                    HardwareBufferSet.field_j = 2;
                     if (var9 == 0) {
                       break regionExit2;
                     }
@@ -1276,7 +1276,7 @@ class MenuScreen {
                     if (CompactMeshGeometry.field_o != null) {
                       LegacyOpenGlNormalMapGenerator.c((byte) 126);
                     }
-                    jl.a(LegacyOpenGlUnlitEffect.c(2), false);
+                    HardwareQuadBatchBuffers.quitToWebsite(LegacyOpenGlUnlitEffect.c(2), false);
                     if (var9 == 0) {
                       break regionExit2;
                     }
@@ -1923,10 +1923,10 @@ class MenuScreen {
         if (3 == EmailValidationError.field_c) {
         }
         var5 = wq.allHiscoresText;
-        if (1 == gu.field_j) {
+        if (1 == HardwareBufferSet.field_j) {
           var5 = SpriteState.myHiscoresText;
         }
-        if (2 == gu.field_j) {
+        if (2 == HardwareBufferSet.field_j) {
           var5 = jm.bestHiscoresText;
         }
         regionExit1: {
@@ -1950,9 +1950,9 @@ class MenuScreen {
                 }
               }
               var6 = HardwareSpecularEffect.noHighscoresText;
-              var8 = var7_ref_of.names[gu.field_j];
-              var9 = var7_ref_of.values[gu.field_j];
-              var10 = kp.findSubmittedHiscore(var7_ref_of, param1 - 2, GameKeyHandler.field_a, gu.field_j);
+              var8 = var7_ref_of.names[HardwareBufferSet.field_j];
+              var9 = var7_ref_of.values[HardwareBufferSet.field_j];
+              var10 = kp.findSubmittedHiscore(var7_ref_of, param1 - 2, GameKeyHandler.field_a, HardwareBufferSet.field_j);
               SocketConnector.field_a.a("10. ", param1 - 1);
               var11 = AccountConnectionPhase.field_a.field_i + 140;
               var11 -= 20;

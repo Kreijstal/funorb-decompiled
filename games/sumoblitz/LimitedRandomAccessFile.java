@@ -112,7 +112,7 @@ final class LimitedRandomAccessFile {
         int var9Lifetime1;
         var10 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var7_int = pq.a(1, param1);
+          var7_int = StripedProgressWidget.alignToEight(1, param1);
           if (ValidationStatus.field_b == null) {
             ValidationStatus.field_b = new java.security.SecureRandom();
           }

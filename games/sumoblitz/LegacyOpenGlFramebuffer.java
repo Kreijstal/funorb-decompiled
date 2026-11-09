@@ -16,7 +16,7 @@ final class LegacyOpenGlFramebuffer implements LegacyOpenGlFramebufferTarget {
         if (param0 != -5) {
           return 63;
         }
-        if (jk.field_b.service((byte) 119)) {
+        if (Js5ClientState.field_b.service((byte) 119)) {
           return 0;
         }
         return TextureFilter.a(true);

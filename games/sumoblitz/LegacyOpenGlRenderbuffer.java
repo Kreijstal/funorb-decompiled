@@ -79,9 +79,9 @@ final class LegacyOpenGlRenderbuffer extends DualLinkNode implements LegacyOpenG
             return;
           }
           ToolkitRasterStateFrame.field_e = var6.readUnsignedByte(-31302);
-          ResourceArchive.field_f = var6.readUnsignedByte(-31302);
-          LegacyOpenGlEffectManager.field_i = var6.readUnsignedByte(-31302);
-          hc.field_f = var6.readUnsignedByte(-31302);
+          ResourceArchive.selectedSpeedLevel = var6.readUnsignedByte(-31302);
+          LegacyOpenGlEffectManager.selectedTractionLevel = var6.readUnsignedByte(-31302);
+          hc.selectedBounceLevel = var6.readUnsignedByte(-31302);
           if (param0 <= 92) {
             return;
           }

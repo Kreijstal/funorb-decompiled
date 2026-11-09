@@ -255,19 +255,19 @@ final class LegacyOpenGlTransform3D extends Transform3D {
     }
 
     final float[] a(int param0) {
-        mo.field_n[1] = this.field_j;
-        mo.field_n[10] = this.field_d;
-        mo.field_n[param0] = this.field_e;
-        mo.field_n[8] = this.field_m;
-        mo.field_n[6] = this.field_o;
-        mo.field_n[2] = this.field_l;
-        mo.field_n[12] = 0.0f;
-        mo.field_n[14] = 0.0f;
-        mo.field_n[0] = this.field_n;
-        mo.field_n[9] = this.field_k;
-        mo.field_n[13] = 0.0f;
-        mo.field_n[4] = this.field_b;
-        return mo.field_n;
+        PerlinNoise2D.field_n[1] = this.field_j;
+        PerlinNoise2D.field_n[10] = this.field_d;
+        PerlinNoise2D.field_n[param0] = this.field_e;
+        PerlinNoise2D.field_n[8] = this.field_m;
+        PerlinNoise2D.field_n[6] = this.field_o;
+        PerlinNoise2D.field_n[2] = this.field_l;
+        PerlinNoise2D.field_n[12] = 0.0f;
+        PerlinNoise2D.field_n[14] = 0.0f;
+        PerlinNoise2D.field_n[0] = this.field_n;
+        PerlinNoise2D.field_n[9] = this.field_k;
+        PerlinNoise2D.field_n[13] = 0.0f;
+        PerlinNoise2D.field_n[4] = this.field_b;
+        return PerlinNoise2D.field_n;
     }
 
     public static void releaseStatics(int param0) {
@@ -281,19 +281,19 @@ final class LegacyOpenGlTransform3D extends Transform3D {
         if (param0 <= 50) {
           this.c(-118);
         }
-        mo.field_n[0] = this.field_n;
-        mo.field_n[6] = this.field_o;
-        mo.field_n[8] = this.field_m;
-        mo.field_n[14] = this.field_g;
-        mo.field_n[13] = this.field_i;
-        mo.field_n[1] = this.field_j;
-        mo.field_n[12] = this.field_c;
-        mo.field_n[4] = this.field_b;
-        mo.field_n[10] = this.field_d;
-        mo.field_n[2] = this.field_l;
-        mo.field_n[9] = this.field_k;
-        mo.field_n[5] = this.field_e;
-        return mo.field_n;
+        PerlinNoise2D.field_n[0] = this.field_n;
+        PerlinNoise2D.field_n[6] = this.field_o;
+        PerlinNoise2D.field_n[8] = this.field_m;
+        PerlinNoise2D.field_n[14] = this.field_g;
+        PerlinNoise2D.field_n[13] = this.field_i;
+        PerlinNoise2D.field_n[1] = this.field_j;
+        PerlinNoise2D.field_n[12] = this.field_c;
+        PerlinNoise2D.field_n[4] = this.field_b;
+        PerlinNoise2D.field_n[10] = this.field_d;
+        PerlinNoise2D.field_n[2] = this.field_l;
+        PerlinNoise2D.field_n[9] = this.field_k;
+        PerlinNoise2D.field_n[5] = this.field_e;
+        return PerlinNoise2D.field_n;
     }
 
     LegacyOpenGlTransform3D() {

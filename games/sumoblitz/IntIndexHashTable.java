@@ -22,7 +22,7 @@ final class IntIndexHashTable {
         if (!IntrusiveNode.field_a) {
           throw new IllegalStateException();
         }
-        pu.field_m = true;
+        HardwareTextureSprite.field_m = true;
         jv.a(true, false);
         jv.field_a = param0;
     }

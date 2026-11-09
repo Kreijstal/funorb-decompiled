@@ -136,7 +136,7 @@ final class ScreenNameValidator extends TextInputValidator {
           if (!this.available) {
             stackIn_16_0 = AccountConnectionPhase.INVALID;
           } else {
-            stackIn_16_0 = qe.VALID;
+            stackIn_16_0 = PerlinNoiseFactory.VALID;
           }
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -304,7 +304,7 @@ final class ScreenNameValidator extends TextInputValidator {
               jo.field_b[1] = 5;
             }
           } else {
-            var3_int = DelegatingCanvas.a(GameInstructions.field_c, ValidatedTextInputWidget.field_R, LegacyOpenGlVertexBuffer.field_j, false, ic.a(ClientExceptionSupport.ifYouDoNothingText, new String[]{"<br><%0><br>"}, (byte) -128));
+            var3_int = DelegatingCanvas.a(GameInstructions.field_c, ValidatedTextInputWidget.field_R, LegacyOpenGlVertexBuffer.field_j, false, LegacyOpenGlInterleavedStream.formatIndexedTokens(ClientExceptionSupport.ifYouDoNothingText, new String[]{"<br><%0><br>"}, (byte) -128));
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(GameInstructions.field_c[var5])) {
@@ -321,7 +321,7 @@ final class ScreenNameValidator extends TextInputValidator {
             TickClock.field_c = new String[-1 - var4 + var3_int];
             ArrayUtils.copy(GameInstructions.field_c, var4 + 1, TickClock.field_c, 0, -var4 + (var3_int - 1));
             var4 = -1;
-            var3_int = DelegatingCanvas.a(GameInstructions.field_c, ValidatedTextInputWidget.field_R, LegacyOpenGlVertexBuffer.field_j, false, ic.a(lq.field_a, new String[]{"<br><%0><br>"}, (byte) -128));
+            var3_int = DelegatingCanvas.a(GameInstructions.field_c, ValidatedTextInputWidget.field_R, LegacyOpenGlVertexBuffer.field_j, false, LegacyOpenGlInterleavedStream.formatIndexedTokens(lq.field_a, new String[]{"<br><%0><br>"}, (byte) -128));
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(GameInstructions.field_c[var5])) {
                 continue;
@@ -433,7 +433,7 @@ final class ScreenNameValidator extends TextInputValidator {
             }
             RenderPresentationException.field_d = stackIn_116_0 + stackIn_117_1;
           }
-          ProxyAuthenticationRequiredException.field_f = -(RenderPresentationException.field_d >> 1) + nv.field_b;
+          ProxyAuthenticationRequiredException.field_f = -(RenderPresentationException.field_d >> 1) + ComboState.field_b;
           var4Lifetime3 = -96 % ((param2 - 48) / 57);
           HardwareAnimatedWaterEffect.field_g = new int[IntIndexHashTable.field_c.length][];
           var5Lifetime3 = 0;

@@ -74,7 +74,7 @@ final class LegacyOpenGlAssemblyProgram {
             for (var8Lifetime1 = param5; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
               var9Lifetime1 = pd.field_q[var8Lifetime1];
               var10Lifetime1 = pd.field_q[1 + var8Lifetime1];
-              if (jl.a(var10Lifetime1, var9Lifetime1, param6, (byte) 98)) {
+              if (HardwareQuadBatchBuffers.a(var10Lifetime1, var9Lifetime1, param6, (byte) 98)) {
                 pd.field_q[var8Lifetime1] = var10Lifetime1;
                 pd.field_q[var8Lifetime1 + 1] = var9Lifetime1;
               }

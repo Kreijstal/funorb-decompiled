@@ -60,10 +60,10 @@ final class MusicPatchEnvelope {
         RuntimeException var2 = null;
         try {
           var2_int = 71 / ((guard - 40) / 59);
-          if (null == ic.legacyRidgedWaterData) {
+          if (null == LegacyOpenGlInterleavedStream.legacyRidgedWaterData) {
             var8 = new LegacyRidgedWaterNoise();
             var20 = var8.generate((byte) 10, 128, 128, 16);
-            ic.legacyRidgedWaterData = DroneDebris.storeByteArray((byte) -123, var20, false);
+            LegacyOpenGlInterleavedStream.legacyRidgedWaterData = DroneDebris.storeByteArray((byte) -123, var20, false);
           }
           if (GameplaySession.legacyTurbulentWaterData == null) {
             var10 = new LegacyTurbulentWaterNoise();

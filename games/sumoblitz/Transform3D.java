@@ -103,7 +103,7 @@ abstract class Transform3D {
                 var20 = var20 + (255 & var19 >> 16);
                 incrementValue$4 = var15;
                 var15++;
-                var13[incrementValue$4] = ic.a(ic.a(LegacyOpenGlPostProcessManager.bitwiseAnd(var21, 1020) << 6, ic.a(LegacyOpenGlPostProcessManager.bitwiseAnd(16711680, var20 << 14), LegacyOpenGlPostProcessManager.bitwiseAnd(1020, var23) << 22)), LegacyOpenGlPostProcessManager.bitwiseAnd(var22 >> 2, 255));
+                var13[incrementValue$4] = LegacyOpenGlInterleavedStream.bitwiseOr(LegacyOpenGlInterleavedStream.bitwiseOr(LegacyOpenGlPostProcessManager.bitwiseAnd(var21, 1020) << 6, LegacyOpenGlInterleavedStream.bitwiseOr(LegacyOpenGlPostProcessManager.bitwiseAnd(16711680, var20 << 14), LegacyOpenGlPostProcessManager.bitwiseAnd(1020, var23) << 22)), LegacyOpenGlPostProcessManager.bitwiseAnd(var22 >> 2, 255));
               }
               var24 = var24 + param2;
               var25 = var25 + param2;

@@ -83,7 +83,7 @@ final class ConfirmedEmailValidator extends TextInputValidator {
             this.emailAvailable = var3.isAvailable(-1);
           }
           if (this.emailAvailable) {
-            stackIn_12_0 = qe.VALID;
+            stackIn_12_0 = PerlinNoiseFactory.VALID;
           } else {
             stackIn_12_0 = AccountConnectionPhase.INVALID;
           }

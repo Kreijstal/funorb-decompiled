@@ -21,7 +21,7 @@ final class wn {
         if (!IntrusiveNode.field_a) {
           throw new IllegalStateException();
         }
-        pu.field_m = param0;
+        HardwareTextureSprite.field_m = param0;
         jv.a(false, !param0 ? true : false);
         jv.field_a = 0;
     }

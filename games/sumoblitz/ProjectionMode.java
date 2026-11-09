@@ -14,7 +14,7 @@ final class ProjectionMode {
 
     final boolean usesViewTransform(int guard) {
         if (guard == -20011) {
-          return ((pd.field_m == this ? 1 : 0) | (mo.field_w == this ? 1 : 0)) != 0;
+          return ((pd.field_m == this ? 1 : 0) | (PerlinNoise2D.field_w == this ? 1 : 0)) != 0;
         }
         return false;
     }

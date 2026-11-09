@@ -31,11 +31,11 @@ final class LegacyTurbulentWaterNoise extends TurbulenceNoise3D {
         OpenGlShaderProgram.levelIndex = OpenGlShaderProgram.levelIndex + 1;
         kr.field_e = 3;
         AccountCreationProgressDialog.field_ob = true;
-        if (!jl.a(-89)) {
+        if (!HardwareQuadBatchBuffers.hasActivePlayer(-89)) {
           return;
         }
         ke.a(false);
-        nv.field_a = 0;
+        ComboState.comboCount = 0;
         pd.scoreMultiplier = un.field_a[0];
         FadingWidget.score = 0;
         CacheReferenceNode.field_u = 0;

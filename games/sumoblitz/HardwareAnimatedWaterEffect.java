@@ -56,12 +56,12 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
         this.toolkit.g(1, -115);
         if (!guard) {
           this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
-          this.toolkit.a(jq.TEXTURE, 0, 0);
-          this.toolkit.a(jq.TEXTURE, 0, true);
+          this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, 0);
+          this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, true);
           this.toolkit.c(1, 110);
           this.toolkit.a((GpuTexture) null, 95);
           this.toolkit.g(0, -111);
-          this.toolkit.a(jq.TEXTURE, 0, true);
+          this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, true);
           return;
         }
     }
@@ -80,7 +80,7 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
     final void enable(boolean lighting, int guard) {
         this.toolkit.g(1, -119);
         this.toolkit.a((byte) -83, lf.REPLACE, LoginForm.ADD);
-        this.toolkit.setColorCombineSource((byte) 111, 0, true, false, jq.TEXTURE);
+        this.toolkit.setColorCombineSource((byte) 111, 0, true, false, LegacyVertexAttribute.TEXTURE);
         this.toolkit.a(FontMetrics.PREVIOUS, 0, true);
         this.toolkit.c(0, guard ^ 20151);
         this.toolkit.g(0, -124);

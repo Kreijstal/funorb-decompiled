@@ -227,7 +227,7 @@ final class SoftwareTransform3D extends Transform3D {
           if (param0) {
             SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 192);
           }
-          pu.field_e.render(0, 0, false);
+          HardwareTextureSprite.field_e.render(0, 0, false);
           return;
         }
     }

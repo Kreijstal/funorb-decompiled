@@ -161,7 +161,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
               var18.d(var9, -(var18.field_u >> 1) + var10, 256);
               return;
             }
-            if (qe.VALID != var6Lifetime5) {
+            if (PerlinNoiseFactory.VALID != var6Lifetime5) {
               return;
             }
             var19 = ToolkitRasterStateCacheEntry.field_m[1];
@@ -173,17 +173,17 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           var12 = var20.field_w << 1;
           if (this.field_K == null) {
             this.field_K = new Sprite(var11, var12);
-            jq.pushSpriteRaster(7161, this.field_K);
+            LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
           } else {
             if (var11 > this.field_K.field_x) {
               this.field_K = new Sprite(var11, var12);
-              jq.pushSpriteRaster(7161, this.field_K);
+              LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
             } else {
               if (this.field_K.field_u < var12) {
                 this.field_K = new Sprite(var11, var12);
-                jq.pushSpriteRaster(7161, this.field_K);
+                LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
               } else {
-                jq.pushSpriteRaster(7161, this.field_K);
+                LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
                 SoftwareRasterizer.clear();
               }
             }
@@ -213,7 +213,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
               var23.d(var9Lifetime1, -(var23.field_u >> 1) + var10Lifetime1, 256);
               return;
             }
-            if (qe.VALID != var6Lifetime1) {
+            if (PerlinNoiseFactory.VALID != var6Lifetime1) {
               return;
             }
             var24 = ToolkitRasterStateCacheEntry.field_m[1];
@@ -225,17 +225,17 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           var12Lifetime1 = var25.field_w << 1;
           if (this.field_K == null) {
             this.field_K = new Sprite(var11Lifetime1, var12Lifetime1);
-            jq.pushSpriteRaster(7161, this.field_K);
+            LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
           } else {
             if (var11Lifetime1 > this.field_K.field_x) {
               this.field_K = new Sprite(var11Lifetime1, var12Lifetime1);
-              jq.pushSpriteRaster(7161, this.field_K);
+              LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
             } else {
               if (this.field_K.field_u < var12Lifetime1) {
                 this.field_K = new Sprite(var11Lifetime1, var12Lifetime1);
-                jq.pushSpriteRaster(7161, this.field_K);
+                LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
               } else {
-                jq.pushSpriteRaster(7161, this.field_K);
+                LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
                 SoftwareRasterizer.clear();
               }
             }
@@ -263,7 +263,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
               var28.d(var9Lifetime2, -(var28.field_u >> 1) + var10Lifetime2, 256);
               return;
             }
-            if (qe.VALID != var6Lifetime1) {
+            if (PerlinNoiseFactory.VALID != var6Lifetime1) {
               return;
             }
             var29 = ToolkitRasterStateCacheEntry.field_m[1];
@@ -275,18 +275,18 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           var12Lifetime2 = var30.field_w << 1;
           if (this.field_K == null) {
             this.field_K = new Sprite(var11Lifetime2, var12Lifetime2);
-            jq.pushSpriteRaster(7161, this.field_K);
+            LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
           } else {
             if (var11Lifetime2 > this.field_K.field_x) {
               this.field_K = new Sprite(var11Lifetime2, var12Lifetime2);
-              jq.pushSpriteRaster(7161, this.field_K);
+              LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
             } else {
               if (this.field_K.field_u >= var12Lifetime2) {
-                jq.pushSpriteRaster(7161, this.field_K);
+                LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
                 SoftwareRasterizer.clear();
               } else {
                 this.field_K = new Sprite(var11Lifetime2, var12Lifetime2);
-                jq.pushSpriteRaster(7161, this.field_K);
+                LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
               }
             }
           }
@@ -313,7 +313,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
               var33.d(var9Lifetime3, -(var33.field_u >> 1) + var10Lifetime3, 256);
               return;
             }
-            if (qe.VALID != var6Lifetime2) {
+            if (PerlinNoiseFactory.VALID != var6Lifetime2) {
               return;
             }
             var34 = ToolkitRasterStateCacheEntry.field_m[1];
@@ -325,18 +325,18 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           var12Lifetime3 = var35.field_w << 1;
           if (this.field_K == null) {
             this.field_K = new Sprite(var11Lifetime3, var12Lifetime3);
-            jq.pushSpriteRaster(7161, this.field_K);
+            LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
           } else {
             if (var11Lifetime3 > this.field_K.field_x) {
               this.field_K = new Sprite(var11Lifetime3, var12Lifetime3);
-              jq.pushSpriteRaster(7161, this.field_K);
+              LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
             } else {
               if (this.field_K.field_u >= var12Lifetime3) {
-                jq.pushSpriteRaster(7161, this.field_K);
+                LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
                 SoftwareRasterizer.clear();
               } else {
                 this.field_K = new Sprite(var11Lifetime3, var12Lifetime3);
-                jq.pushSpriteRaster(7161, this.field_K);
+                LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
               }
             }
           }
@@ -359,7 +359,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
               var47.d(var9Lifetime4, -(var47.field_u >> 1) + var10Lifetime4, 256);
               return;
             }
-            if (qe.VALID != var6Lifetime3) {
+            if (PerlinNoiseFactory.VALID != var6Lifetime3) {
               return;
             }
             var48 = ToolkitRasterStateCacheEntry.field_m[1];
@@ -372,15 +372,15 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           if (this.field_K != null &&
             var11Lifetime4 <= this.field_K.field_x) {
             if (this.field_K.field_u >= var12Lifetime4) {
-              jq.pushSpriteRaster(7161, this.field_K);
+              LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
               SoftwareRasterizer.clear();
             } else {
               this.field_K = new Sprite(var11Lifetime4, var12Lifetime4);
-              jq.pushSpriteRaster(7161, this.field_K);
+              LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
             }
           } else {
             this.field_K = new Sprite(var11Lifetime4, var12Lifetime4);
-            jq.pushSpriteRaster(7161, this.field_K);
+            LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
           }
           var49.drawRotatedScaled(112, 144, var49.field_z << 4, var49.field_w << 4, -this.animationTicks << 10, 4096);
           ClientException.popRasterState((byte) -50);
@@ -401,15 +401,15 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           if (this.field_K != null &&
             var11Lifetime5 <= this.field_K.field_x) {
             if (this.field_K.field_u >= var12Lifetime5) {
-              jq.pushSpriteRaster(7161, this.field_K);
+              LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
               SoftwareRasterizer.clear();
             } else {
               this.field_K = new Sprite(var11Lifetime5, var12Lifetime5);
-              jq.pushSpriteRaster(7161, this.field_K);
+              LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
             }
           } else {
             this.field_K = new Sprite(var11Lifetime5, var12Lifetime5);
-            jq.pushSpriteRaster(7161, this.field_K);
+            LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
           }
           var38.drawRotatedScaled(112, 144, var38.field_z << 4, var38.field_w << 4, -this.animationTicks << 10, 4096);
           ClientException.popRasterState((byte) -50);
@@ -422,7 +422,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             var44.d(var9Lifetime5, -(var44.field_u >> 1) + var10Lifetime5, 256);
             return;
           }
-          if (qe.VALID != var6Lifetime4) {
+          if (PerlinNoiseFactory.VALID != var6Lifetime4) {
             return;
           }
           var45 = ToolkitRasterStateCacheEntry.field_m[1];
@@ -436,15 +436,15 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         if (this.field_K != null &&
           var11Lifetime6 <= this.field_K.field_x) {
           if (this.field_K.field_u >= var12Lifetime6) {
-            jq.pushSpriteRaster(7161, this.field_K);
+            LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
             SoftwareRasterizer.clear();
           } else {
             this.field_K = new Sprite(var11Lifetime6, var12Lifetime6);
-            jq.pushSpriteRaster(7161, this.field_K);
+            LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
           }
         } else {
           this.field_K = new Sprite(var11Lifetime6, var12Lifetime6);
-          jq.pushSpriteRaster(7161, this.field_K);
+          LegacyVertexAttribute.pushSpriteRaster(7161, this.field_K);
         }
         var39.drawRotatedScaled(112, 144, var39.field_z << 4, var39.field_w << 4, -this.animationTicks << 10, 4096);
         ClientException.popRasterState((byte) -50);
@@ -453,9 +453,9 @@ final class ValidationMessageWidget extends HotspotTextWidget {
     }
 
     final static void f(int param0) {
-        nv.field_a = nv.field_a + 1;
+        ComboState.comboCount = ComboState.comboCount + 1;
         CacheReferenceNode.field_u = 150;
-        int var1 = nv.field_a / param0;
+        int var1 = ComboState.comboCount / param0;
         if (un.field_a.length - 1 != var1) {
           if (un.field_a.length <= var1) {
             var1 = un.field_a.length - 1;

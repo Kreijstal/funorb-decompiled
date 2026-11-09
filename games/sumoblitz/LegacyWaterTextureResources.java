@@ -27,7 +27,7 @@ final class LegacyWaterTextureResources {
         if (guard != 0) {
           LegacyWaterTextureResources.showConnectionLost(20);
         }
-        HardwareUnlitEffect.a(qe.connectionLostAttemptingToText, false, (byte) 49);
+        HardwareUnlitEffect.a(PerlinNoiseFactory.connectionLostAttemptingToText, false, (byte) 49);
     }
 
     LegacyWaterTextureResources(LegacyOpenGlGraphicsToolkit toolkit) {
@@ -56,17 +56,17 @@ final class LegacyWaterTextureResources {
           if (!this.useVolumeTextures) {
             this.ridgedSlices = new LegacyOpenGlTexture2D[16];
             for (var2_int = 0; var2_int < 16; var2_int++) {
-              var23 = iq.a(ic.legacyRidgedWaterData, 14381, 32768, var2_int * 32768);
+              var23 = ByteStorageRanges.copyRange(LegacyOpenGlInterleavedStream.legacyRidgedWaterData, 14381, 32768, var2_int * 32768);
               this.ridgedSlices[var2_int] = new LegacyOpenGlTexture2D(toolkit, 3553, 6410, 128, 128, true, var23, 6410, false);
             }
             this.turbulenceSlices = new LegacyOpenGlTexture2D[16];
             for (var2_intLifetime1 = 0; var2_intLifetime1 < 16; var2_intLifetime1++) {
-              var24 = iq.a(GameplaySession.legacyTurbulentWaterData, 14381, 32768, var2_intLifetime1 * 32768);
+              var24 = ByteStorageRanges.copyRange(GameplaySession.legacyTurbulentWaterData, 14381, 32768, var2_intLifetime1 * 32768);
               this.turbulenceSlices[var2_intLifetime1] = new LegacyOpenGlTexture2D(toolkit, 3553, 6410, 128, 128, true, var24, 6410, false);
             }
             return;
           }
-          var20 = NoiseSliceGenerator.extractByteArray(false, ic.legacyRidgedWaterData, 0);
+          var20 = NoiseSliceGenerator.extractByteArray(false, LegacyOpenGlInterleavedStream.legacyRidgedWaterData, 0);
           this.ridgedVolume = new LegacyOpenGlTexture3D(toolkit, 6410, 128, 128, 16, var20, 6410);
           var21 = NoiseSliceGenerator.extractByteArray(false, GameplaySession.legacyTurbulentWaterData, 0);
           this.turbulenceVolume = new LegacyOpenGlTexture3D(toolkit, 6410, 128, 128, 16, var21, 6410);

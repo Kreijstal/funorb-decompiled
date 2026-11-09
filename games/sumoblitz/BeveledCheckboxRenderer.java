@@ -78,18 +78,18 @@ final class BeveledCheckboxRenderer implements WidgetRenderer {
     final static boolean hasOpenDialogs(boolean guard) {
         if (guard) {
           emailAddressIsUnavailableText = (String) null;
-          if (pu.field_e == null) {
+          if (HardwareTextureSprite.field_e == null) {
             return false;
           }
-          if (null != pu.field_e.topOpenDialog((byte) 54)) {
+          if (null != HardwareTextureSprite.field_e.topOpenDialog((byte) 54)) {
             return true;
           }
           return false;
         }
-        if (pu.field_e == null) {
+        if (HardwareTextureSprite.field_e == null) {
           return false;
         }
-        if (null != pu.field_e.topOpenDialog((byte) 54)) {
+        if (null != HardwareTextureSprite.field_e.topOpenDialog((byte) 54)) {
           return true;
         }
         return false;

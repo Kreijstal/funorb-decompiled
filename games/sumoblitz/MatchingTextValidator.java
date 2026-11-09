@@ -22,7 +22,7 @@ final class MatchingTextValidator extends TextInputValidator {
           if (this.matchingInput instanceof ValidationProvider) {
             var3 = ((ValidationProvider) ((Object) this.matchingInput)).getValidator(72);
             if (var3 != null &&
-              var3.getStatus(88) != qe.VALID) {
+              var3.getStatus(88) != PerlinNoiseFactory.VALID) {
               stackIn_5_0 = AccountConnectionPhase.INVALID;
               return stackIn_5_0;
             }
@@ -33,7 +33,7 @@ final class MatchingTextValidator extends TextInputValidator {
           if (!text.equals(this.matchingInput.text)) {
             stackIn_11_0 = AccountConnectionPhase.INVALID;
           } else {
-            stackIn_11_0 = qe.VALID;
+            stackIn_11_0 = PerlinNoiseFactory.VALID;
           }
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -110,7 +110,7 @@ final class MatchingTextValidator extends TextInputValidator {
           if (this.matchingInput instanceof ValidationProvider) {
             var3 = ((ValidationProvider) ((Object) this.matchingInput)).getValidator(-114);
             if (var3 != null) {
-              if (var3.getStatus(guard - 98) == qe.VALID &&
+              if (var3.getStatus(guard - 98) == PerlinNoiseFactory.VALID &&
                 !text.equals(this.matchingInput.text)) {
                 stackIn_8_0 = LegacyOpenGlFloatPostProcessEffect.thisEntryDoesnTText;
                 return stackIn_8_0;

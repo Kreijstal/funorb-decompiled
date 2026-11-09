@@ -60,7 +60,7 @@ final class il {
         }
     }
 
-    final static boolean a(boolean param0, ResourceArchive param1) {
+    final static boolean prepareGameMusicPatches(boolean guard, ResourceArchive patchArchive) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -74,18 +74,18 @@ final class il {
         try {
           for (var2_int = 0; var2_int < 9; var2_int++) {
             if (null != TimedSceneEffect.field_m[var2_int] &&
-              !AccountConnectionPhase.field_b.firstSynthesizer.loadTrackPatches(LegacyOpenGlPostProcessManager.field_b, TimedSceneEffect.field_m[var2_int], -1, param1, 176400)) {
+              !AccountConnectionPhase.field_b.firstSynthesizer.loadTrackPatches(LegacyOpenGlPostProcessManager.field_b, TimedSceneEffect.field_m[var2_int], -1, patchArchive, 176400)) {
               return false;
             }
           }
-          if (param0) {
+          if (guard) {
             return false;
           }
           var4 = 0;
           var2_intLifetime1 = var4;
           while (var4 < 9) {
             if (TimedSceneEffect.field_m[var4] != null &&
-              !AccountConnectionPhase.field_b.secondSynthesizer.loadTrackPatches(LegacyOpenGlPostProcessManager.field_b, TimedSceneEffect.field_m[var4], -1, param1, 176400)) {
+              !AccountConnectionPhase.field_b.secondSynthesizer.loadTrackPatches(LegacyOpenGlPostProcessManager.field_b, TimedSceneEffect.field_m[var4], -1, patchArchive, 176400)) {
               return false;
             }
             var4++;
@@ -97,8 +97,8 @@ final class il {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_24_0 = var2;
-          stackIn_24_1 = new StringBuilder().append("il.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_24_1 = new StringBuilder().append("il.B(").append(guard).append(',');
+          if (patchArchive == null) {
             stackIn_25_2 = "null";
           } else {
             stackIn_25_2 = "{...}";

@@ -10,7 +10,7 @@ class HotspotTextWidget extends InteractiveWidget {
     private IntrusiveDeque hotspots;
     static String pointsRemainingText;
     static Sprite field_E;
-    static tf field_L;
+    static LegacyAlphaFontLoader field_L;
 
     final void setBoundsToTextHeight(int y, boolean guard, int x, int width) {
         this.setBounds(-50, x, y, ((TextWidgetLayout) ((Object) this.renderer)).measuredTextHeight((UiWidget) (this), (byte) 116), width);
@@ -81,7 +81,7 @@ class HotspotTextWidget extends InteractiveWidget {
         byte[] var13 = null;
         var7 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var11 = ig.field_a;
+          var11 = NativeLibraryExtractor.field_a;
           var2 = var11.readUnsignedByte(-31302);
           var3 = 99 / ((-33 - guard) / 36);
           if (var2 == 0) {
@@ -279,7 +279,7 @@ class HotspotTextWidget extends InteractiveWidget {
         }
         TextWidgetLayout var9 = (TextWidgetLayout) ((Object) this.renderer);
         if (guard >= -35) {
-          field_L = (tf) null;
+          field_L = (LegacyAlphaFontLoader) null;
         }
         TextHotspot var6 = this.hoveredHotspot;
         if (var6 != null) {
@@ -368,6 +368,6 @@ class HotspotTextWidget extends InteractiveWidget {
         activePointerButton = 0;
         pointsRemainingText = "points remaining: <%0>";
         field_N = new IntrusiveNodeHashTable(8);
-        field_L = new tf();
+        field_L = new LegacyAlphaFontLoader();
     }
 }

@@ -128,10 +128,10 @@ final class NanoTickClock extends TickClock {
           return 25;
         }
         if (!BeveledCheckboxRenderer.hasOpenDialogs(false) ||
-          null == pu.field_e.topOpenDialog((byte) 54)) {
+          null == HardwareTextureSprite.field_e.topOpenDialog((byte) 54)) {
           return -1;
         }
-        return pu.field_e.topOpenDialog((byte) 54).y;
+        return HardwareTextureSprite.field_e.topOpenDialog((byte) 54).y;
     }
 
     final long sleepMillis(byte guard) {

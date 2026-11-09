@@ -171,13 +171,13 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
         this.toolkit.g(1, -119);
         this.toolkit.a((GpuTexture) null, 113);
         this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
-        this.toolkit.a(jq.TEXTURE, 0, 0);
+        this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, 0);
         this.toolkit.a(AccountRequestState.CONSTANT, 2, 0);
-        this.toolkit.a(jq.TEXTURE, 0, true);
+        this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, true);
         this.toolkit.g(0, -108);
         if (this.field_h) {
-          this.toolkit.a(jq.TEXTURE, 0, 0);
-          this.toolkit.a(jq.TEXTURE, 0, true);
+          this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, 0);
+          this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, true);
           this.field_h = false;
         }
         if (this.field_l) {
@@ -222,8 +222,8 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
           }
           if (texture != null) {
             if (this.field_h) {
-              this.toolkit.a(jq.TEXTURE, 0, 0);
-              this.toolkit.a(jq.TEXTURE, 0, true);
+              this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, 0);
+              this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, true);
               this.field_h = false;
             }
             this.toolkit.a(texture, 121);
@@ -266,7 +266,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
           this.toolkit.a(this.field_o, guard - 20070);
           this.toolkit.a((byte) -83, lf.REPLACE, OpenGlBuffer.INTERPOLATE);
           this.toolkit.a(AccountRequestState.CONSTANT, 0, 0);
-          this.toolkit.setColorCombineSource((byte) 85, 2, true, false, jq.TEXTURE);
+          this.toolkit.setColorCombineSource((byte) 85, 2, true, false, LegacyVertexAttribute.TEXTURE);
           this.toolkit.a(FontMetrics.PREVIOUS, 0, true);
           this.toolkit.g(0, -108);
           this.e((byte) 14);

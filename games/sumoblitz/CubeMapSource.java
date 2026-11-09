@@ -68,7 +68,7 @@ abstract class CubeMapSource {
         int[] var12 = null;
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var10 = ig.field_a;
+          var10 = NativeLibraryExtractor.field_a;
           if (guard != -22683) {
             return;
           }
@@ -80,7 +80,7 @@ abstract class CubeMapSource {
               LegacyOpenGlTextureCache.closeAccountSocket((byte) -127);
               return;
             }
-            var5_int = gu.field_d - var10.position;
+            var5_int = HardwareBufferSet.field_d - var10.position;
             var12 = var4_ref_qv.values;
             var11 = var12;
             var6 = var11;

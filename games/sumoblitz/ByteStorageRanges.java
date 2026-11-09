@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class iq {
-    final static byte[] a(Object param0, int param1, int param2, int param3) {
+final class ByteStorageRanges {
+    final static byte[] copyRange(Object storage, int guard, int length, int offset) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         ByteArrayStorage var5 = null;
@@ -14,20 +14,20 @@ final class iq {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 == null) {
+          if (storage == null) {
             return null;
           }
-          if (param0 instanceof byte[]) {
-            var4 = (byte[]) (param0);
-            stackIn_6_0 = LegacyOpenGlGraphicsHeap.a(var4, param2, param3, (byte) 53);
+          if (storage instanceof byte[]) {
+            var4 = (byte[]) (storage);
+            stackIn_6_0 = LegacyOpenGlGraphicsHeap.copyByteRange(var4, length, offset, (byte) 53);
             return stackIn_6_0;
           }
-          if (param0 instanceof ByteArrayStorage) {
-            var5 = (ByteArrayStorage) (param0);
-            stackIn_9_0 = var5.copyRange(param3, param2, 15747);
+          if (storage instanceof ByteArrayStorage) {
+            var5 = (ByteArrayStorage) (storage);
+            stackIn_9_0 = var5.copyRange(offset, length, 15747);
             return stackIn_9_0;
           }
-          if (param1 == 14381) {
+          if (guard == 14381) {
             throw new IllegalArgumentException();
           }
           stackIn_12_0 = (byte[]) null;
@@ -37,12 +37,12 @@ final class iq {
           var4_ref = decompiledCaughtException;
           stackIn_16_0 = var4_ref;
           stackIn_16_1 = new StringBuilder().append("iq.A(");
-          if (param0 == null) {
+          if (storage == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(guard).append(',').append(length).append(',').append(offset).append(')').toString());
         }
     }
 

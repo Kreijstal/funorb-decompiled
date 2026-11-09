@@ -86,10 +86,10 @@ final class vs {
             if (var5_ref_ub != null &&
               var2_long > var5_ref_ub.deliveryTimeMillis) {
               var5_ref_ub.unlink(false);
-              gu.field_d = var5_ref_ub.payload.length;
-              ig.field_a.position = 0;
-              for (var6_int = 0; var6_int < gu.field_d; var6_int++) {
-                ig.field_a.payload[var6_int] = var5_ref_ub.payload[var6_int];
+              HardwareBufferSet.field_d = var5_ref_ub.payload.length;
+              NativeLibraryExtractor.field_a.position = 0;
+              for (var6_int = 0; var6_int < HardwareBufferSet.field_d; var6_int++) {
+                NativeLibraryExtractor.field_a.payload[var6_int] = var5_ref_ub.payload[var6_int];
               }
               ToolkitImageProducerBuffer.field_r = RotarySelectorWidget.field_I;
               RotarySelectorWidget.field_I = ContentTransitionDialog.field_Q;
@@ -114,13 +114,13 @@ final class vs {
         try {
           while (true) {
             if (stackIn_17_0 < 0) {
-              ig.field_a.position = 0;
+              NativeLibraryExtractor.field_a.position = 0;
               if (!OpenGlIndexBuffer.b(-1, 1)) {
                 return false;
               }
-              lq.field_b = ig.field_a.readCipherByte(255);
-              ig.field_a.position = 0;
-              gu.field_d = param0[lq.field_b];
+              lq.field_b = NativeLibraryExtractor.field_a.readCipherByte(255);
+              NativeLibraryExtractor.field_a.position = 0;
+              HardwareBufferSet.field_d = param0[lq.field_b];
             }
             if (!lt.a((byte) 119)) {
               return false;
@@ -140,9 +140,9 @@ final class vs {
                 var5 = 0;
               }
             }
-            var6 = new DelayedInboundPacket((long)var5 + var2_long, lq.field_b, new byte[gu.field_d]);
-            for (var7 = 0; gu.field_d > var7; var7++) {
-              var6.payload[var7] = ig.field_a.payload[var7];
+            var6 = new DelayedInboundPacket((long)var5 + var2_long, lq.field_b, new byte[HardwareBufferSet.field_d]);
+            for (var7 = 0; HardwareBufferSet.field_d > var7; var7++) {
+              var6.payload[var7] = NativeLibraryExtractor.field_a.payload[var7];
             }
             un.field_b.addLast((IntrusiveNode) (var6), (byte) 39);
             lq.field_b = -1;

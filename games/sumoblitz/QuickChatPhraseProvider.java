@@ -10,7 +10,7 @@ final class QuickChatPhraseProvider {
     static boolean field_a;
 
     final static void b(int param0) {
-        lf.a(256, (byte) -58);
+        lf.setSoundVolume(256, (byte) -58);
         if (param0 <= 56) {
           field_b = false;
         }
@@ -48,14 +48,14 @@ final class QuickChatPhraseProvider {
 
     final static void showGraphicsOptions(int guard) {
         if (guard >= 27) {
-          pu.field_e.closeAllDialogs((byte) 123);
-          pu.field_e.pushDialog((byte) 112, new GraphicsOptionsDialog(pu.field_e));
+          HardwareTextureSprite.field_e.closeAllDialogs((byte) 123);
+          HardwareTextureSprite.field_e.pushDialog((byte) 112, new GraphicsOptionsDialog(HardwareTextureSprite.field_e));
           return;
         }
         String var2 = (String) null;
         QuickChatPhraseProvider.findIgnoredContact((byte) 10, (String) null);
-        pu.field_e.closeAllDialogs((byte) 123);
-        pu.field_e.pushDialog((byte) 112, new GraphicsOptionsDialog(pu.field_e));
+        HardwareTextureSprite.field_e.closeAllDialogs((byte) 123);
+        HardwareTextureSprite.field_e.pushDialog((byte) 112, new GraphicsOptionsDialog(HardwareTextureSprite.field_e));
     }
 
     final static SocialContact findIgnoredContact(byte guard, String name) {

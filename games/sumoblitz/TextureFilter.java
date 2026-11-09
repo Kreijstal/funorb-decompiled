@@ -17,11 +17,11 @@ final class TextureFilter {
           int var1_int = 0;
           IOException var1 = null;
           PacketBuffer var2 = null;
-          if (4 <= jk.field_b.failureCount) {
-            if (jk.field_b.failureCode == -1) {
+          if (4 <= Js5ClientState.field_b.failureCount) {
+            if (Js5ClientState.field_b.failureCode == -1) {
               return 3;
             }
-            if (jk.field_b.failureCode == -2) {
+            if (Js5ClientState.field_b.failureCode == -2) {
               return 4;
             }
             return 1;
@@ -71,7 +71,7 @@ final class TextureFilter {
             if (FullscreenDisplayMode.field_d != 4) {
               return -1;
             }
-            jk.field_b.attachConnection(LegacyOpenGlAssemblyProgram.field_e, (byte) 114, InstrumentNoteMask.field_n);
+            Js5ClientState.field_b.attachConnection(LegacyOpenGlAssemblyProgram.field_e, (byte) 114, InstrumentNoteMask.field_n);
             BufferedSocket.field_p = null;
             InstrumentNoteMask.field_n = null;
             FullscreenDisplayMode.field_d = 0;
@@ -93,7 +93,7 @@ final class TextureFilter {
         throw new IllegalStateException();
     }
 
-    final static String a(java.applet.Applet param0, byte param1, String param2) {
+    final static String readBrowserCookie(java.applet.Applet applet, byte guard, String name) {
         try {
           int var5 = 0;
           String var3 = null;
@@ -113,15 +113,15 @@ final class TextureFilter {
           var7 = Sumoblitz.field_L ? 1 : 0;
           try {
             try {
-              var3 = (String) (BrowserScriptBridge.call(param0, -32, "getcookies"));
+              var3 = (String) (BrowserScriptBridge.call(applet, -32, "getcookies"));
               var4 = SocialContact.split(';', var3, -27224);
-              if (param1 != -57) {
+              if (guard != -57) {
                 TextureFilter.releaseStatics(-92);
               }
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&
-                  var4[var5].substring(0, var6).trim().equals(param2)) {
+                  var4[var5].substring(0, var6).trim().equals(name)) {
                   stackIn_8_0 = var4[var5].substring(1 + var6).trim();
                   return stackIn_8_0;
                 }
@@ -137,13 +137,13 @@ final class TextureFilter {
             var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackIn_16_0 = var3_ref2;
             stackIn_16_1 = new StringBuilder().append("ji.B(");
-            if (param0 == null) {
+            if (applet == null) {
               stackIn_17_2 = "null";
             } else {
               stackIn_17_2 = "{...}";
             }
-            stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',');
-            if (param2 == null) {
+            stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(guard).append(',');
+            if (name == null) {
               stackIn_20_2 = "null";
             } else {
               stackIn_20_2 = "{...}";
@@ -157,7 +157,7 @@ final class TextureFilter {
         }
     }
 
-    final static String a(String param0, byte param1) {
+    final static String reverseString(String text, byte guard) {
         int var4 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -170,12 +170,12 @@ final class TextureFilter {
         RuntimeException decompiledCaughtException = null;
         var5 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var2_int = param0.length();
+          var2_int = text.length();
           var3 = new char[var2_int];
           for (var4 = 0; var2_int > var4; var4++) {
-            var3[-1 + var2_int - var4] = param0.charAt(var4);
+            var3[-1 + var2_int - var4] = text.charAt(var4);
           }
-          if (param1 <= 61) {
+          if (guard <= 61) {
             useThisAlternativeAsText = (String) null;
           }
           stackIn_7_0 = new String(var3);
@@ -185,12 +185,12 @@ final class TextureFilter {
           var2 = decompiledCaughtException;
           stackIn_10_0 = var2;
           stackIn_10_1 = new StringBuilder().append("ji.A(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(guard).append(')').toString());
         }
     }
 

@@ -89,7 +89,7 @@ final class WidgetStateStyle {
           WidgetStateStyle.releaseStatics((byte) 108);
         }
         SpriteMask.drones[0].recomputeUpgradeStats((byte) 35);
-        fa.field_b = 250;
+        AppletTickHistory.field_b = 250;
     }
 
     final WidgetStateStyle withOffsetX(int offset, int guard) {

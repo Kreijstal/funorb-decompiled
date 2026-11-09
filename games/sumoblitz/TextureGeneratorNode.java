@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class tt extends IntrusiveNode {
+abstract class TextureGeneratorNode extends IntrusiveNode {
     static String defeatText;
-    static int field_l;
+    static int musicVolume;
 
     final static Sprite[] loadOpaqueSprites(byte guard, int groupId, ResourceArchive archive, int fileId) {
         RuntimeException var4 = null;
@@ -14,7 +14,7 @@ abstract class tt extends IntrusiveNode {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!k.decodeSpriteSheet(archive, groupId, fileId, -23046)) {
+          if (!SpriteSheetSupport.decodeSpriteSheet(archive, groupId, fileId, -23046)) {
             return null;
           }
           if (guard <= -79) {
@@ -37,17 +37,17 @@ abstract class tt extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0) {
-        if (param0 == 30692) {
-          ResourceArchive.field_f = PasswordInputRenderer.field_u[0];
-          LegacyOpenGlEffectManager.field_i = PasswordInputRenderer.field_u[1];
-          hc.field_f = PasswordInputRenderer.field_u[2];
+    final static void restoreUpgradeAllocation(int guard) {
+        if (guard == 30692) {
+          ResourceArchive.selectedSpeedLevel = PasswordInputRenderer.upgradeAllocation[0];
+          LegacyOpenGlEffectManager.selectedTractionLevel = PasswordInputRenderer.upgradeAllocation[1];
+          hc.selectedBounceLevel = PasswordInputRenderer.upgradeAllocation[2];
           return;
         }
         defeatText = (String) null;
-        ResourceArchive.field_f = PasswordInputRenderer.field_u[0];
-        LegacyOpenGlEffectManager.field_i = PasswordInputRenderer.field_u[1];
-        hc.field_f = PasswordInputRenderer.field_u[2];
+        ResourceArchive.selectedSpeedLevel = PasswordInputRenderer.upgradeAllocation[0];
+        LegacyOpenGlEffectManager.selectedTractionLevel = PasswordInputRenderer.upgradeAllocation[1];
+        hc.selectedBounceLevel = PasswordInputRenderer.upgradeAllocation[2];
     }
 
     public static void releaseStatics(boolean param0) {
@@ -57,10 +57,10 @@ abstract class tt extends IntrusiveNode {
         }
     }
 
-    tt(int param0, boolean param1) {
+    TextureGeneratorNode(int unusedInputCount, boolean unusedFlag) {
     }
 
-    final static int a(byte param0, int param1) {
+    final static int brightDroneTypeColor(byte guard, int type) {
         int var2 = 0;
         int var3 = 0;
         int var2Lifetime1;
@@ -68,27 +68,27 @@ abstract class tt extends IntrusiveNode {
         int var2Lifetime3;
         int var3Lifetime1;
         int var2Lifetime4;
-        if (param0 >= -127) {
-          field_l = -86;
-          var3 = param1;
+        if (guard >= -127) {
+          musicVolume = -86;
+          var3 = type;
           if (var3 != 6) {
             if (var3 == 7) {
               var2 = UiStyleNode.droneTypeColor(-26346, 0);
             } else {
-              var2 = UiStyleNode.droneTypeColor(-26346, param1);
+              var2 = UiStyleNode.droneTypeColor(-26346, type);
             }
             return ((8388607 ^ var2 >> 1) & 8355711) + var2;
           }
           var2Lifetime4 = UiStyleNode.droneTypeColor(-26346, 0);
           return ((8388607 ^ var2Lifetime4 >> 1) & 8355711) + var2Lifetime4;
         }
-        var3Lifetime1 = param1;
+        var3Lifetime1 = type;
         if (var3Lifetime1 == 6) {
           var2Lifetime1 = UiStyleNode.droneTypeColor(-26346, 0);
           return ((8388607 ^ var2Lifetime1 >> 1) & 8355711) + var2Lifetime1;
         }
         if (var3Lifetime1 != 7) {
-          var2Lifetime2 = UiStyleNode.droneTypeColor(-26346, param1);
+          var2Lifetime2 = UiStyleNode.droneTypeColor(-26346, type);
           return ((8388607 ^ var2Lifetime2 >> 1) & 8355711) + var2Lifetime2;
         }
         var2Lifetime3 = UiStyleNode.droneTypeColor(-26346, 0);
@@ -97,6 +97,6 @@ abstract class tt extends IntrusiveNode {
 
     static {
         defeatText = "DEFEAT.";
-        field_l = 256;
+        musicVolume = 256;
     }
 }

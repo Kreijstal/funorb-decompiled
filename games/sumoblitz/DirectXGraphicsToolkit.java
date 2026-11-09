@@ -240,7 +240,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         this.field_Cc.a(161, enabled);
     }
 
-    private final static int b(tf param0, int param1) {
+    private final static int b(LegacyAlphaFontLoader param0, int param1) {
         TextureFilter var3;
         if (param0 == HardwareGraphicsHeap.field_m) {
           return 1;
@@ -437,7 +437,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         if (param1 != 21) {
           return 11;
         }
-        if (jq.TEXTURE == param0) {
+        if (LegacyVertexAttribute.TEXTURE == param0) {
           return 2;
         }
         if (NetworkResourceRequest.PRIMARY_COLOR == param0) {

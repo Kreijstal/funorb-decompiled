@@ -155,7 +155,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
           INTERPOLATE = (TextureCombineOperation) null;
         }
         SecondaryNodeDequeIterator.field_b.automatic = true;
-        jl.a(param0 + 5837, 1);
+        HardwareQuadBatchBuffers.notifyBrowserResizing(param0 + 5837, 1);
     }
 
     final static String a(byte param0, String param1) {

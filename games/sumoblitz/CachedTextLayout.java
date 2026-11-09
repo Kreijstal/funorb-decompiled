@@ -187,7 +187,7 @@ final class CachedTextLayout extends TextLayout {
         RuntimeException var3_ref = null;
         try {
           param2 = ValidationStatus.a('_', param2, false, "");
-          var3 = TextureFilter.a(param0, (byte) 117);
+          var3 = TextureFilter.reverseString(param0, (byte) 117);
           if (param1 <= 29) {
             CachedTextLayout.e(58);
           }
@@ -365,7 +365,7 @@ final class CachedTextLayout extends TextLayout {
                 var11_ref_String = "";
               }
               InwardSparkParticle.field_v.writeCp1252String(var11_ref_String, (byte) -115);
-              HardwareTurbulentWaterNoise.a(gh.field_a, OpenGlShaderProgram.field_c, false, InwardSparkParticle.field_v, SoftLruCache.field_e);
+              HardwareTurbulentWaterNoise.a(AccountRsaModulus.modulus, OpenGlShaderProgram.field_c, false, InwardSparkParticle.field_v, SoftLruCache.field_e);
               InwardSparkParticle.field_v.patchShortLength(0, InwardSparkParticle.field_v.position - var10);
             } else {
               SoftLruCache.field_e.position = 0;
@@ -388,7 +388,7 @@ final class CachedTextLayout extends TextLayout {
               InwardSparkParticle.field_v.writeByte((byte) 108, 16);
               InwardSparkParticle.field_v.position = InwardSparkParticle.field_v.position + 1;
               var9 = InwardSparkParticle.field_v.position;
-              HardwareTurbulentWaterNoise.a(gh.field_a, OpenGlShaderProgram.field_c, false, InwardSparkParticle.field_v, SoftLruCache.field_e);
+              HardwareTurbulentWaterNoise.a(AccountRsaModulus.modulus, OpenGlShaderProgram.field_c, false, InwardSparkParticle.field_v, SoftLruCache.field_e);
               InwardSparkParticle.field_v.patchByteLength(InwardSparkParticle.field_v.position - var9, -13745);
             }
             MessageDialog.a(0, -1);
@@ -396,8 +396,8 @@ final class CachedTextLayout extends TextLayout {
           }
           if (kw.accountPhase == vf.WAIT_ACCOUNT_RESPONSE &&
             OpenGlIndexBuffer.b(-1, 1)) {
-            var9Lifetime1 = ig.field_a.readUnsignedByte(-31302);
-            ig.field_a.position = 0;
+            var9Lifetime1 = NativeLibraryExtractor.field_a.readUnsignedByte(-31302);
+            NativeLibraryExtractor.field_a.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               kw.accountPhase = oi.WAIT_NAME_SUGGESTIONS;
@@ -412,25 +412,25 @@ final class CachedTextLayout extends TextLayout {
                 return stackIn_37_0;
               }
               if (var9Lifetime1 != 99) {
-                gu.field_d = -1;
+                HardwareBufferSet.field_d = -1;
                 TextureFormat.field_a = var9Lifetime1;
                 kw.accountPhase = DropDownArrowRenderer.WAIT_ACCOUNT_DETAILS;
               } else {
                 OpenGlIndexBuffer.b(-1, ChatMessage.loginReplyHeaderLength(-105));
-                HardwareGraphicsToolkit.field_j = new Boolean(HiscoreRequest.readBooleanFlag(ig.field_a, 115));
-                ig.field_a.position = 0;
+                HardwareGraphicsToolkit.field_j = new Boolean(HiscoreRequest.readBooleanFlag(NativeLibraryExtractor.field_a, 115));
+                NativeLibraryExtractor.field_a.position = 0;
               }
             }
           }
           if (oi.WAIT_NAME_SUGGESTIONS == kw.accountPhase) {
             var9Lifetime2 = 2;
             if (OpenGlIndexBuffer.b(-1, var9Lifetime2)) {
-              var10Lifetime1 = ig.field_a.readUnsignedShort(255);
-              ig.field_a.position = 0;
+              var10Lifetime1 = NativeLibraryExtractor.field_a.readUnsignedShort(255);
+              NativeLibraryExtractor.field_a.position = 0;
               if (OpenGlIndexBuffer.b(-1, var10Lifetime1)) {
                 var11 = ArchiveLoadingStage.nameSuggestions.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  ArchiveLoadingStage.nameSuggestions[var12] = ig.field_a.readCircumfixedString(-105);
+                  ArchiveLoadingStage.nameSuggestions[var12] = NativeLibraryExtractor.field_a.readCircumfixedString(-105);
                 }
                 LegacyOpenGlTextureCache.closeAccountSocket((byte) -110);
                 LimitedRandomAccessFile.field_g = false;
@@ -442,9 +442,9 @@ final class CachedTextLayout extends TextLayout {
           if (DropDownArrowRenderer.WAIT_ACCOUNT_DETAILS == kw.accountPhase &&
             lt.a((byte) 119)) {
             if (TextureFormat.field_a != 255) {
-              MouseWheelInput.field_c = ig.field_a.readCp1252String(-1);
+              MouseWheelInput.field_c = NativeLibraryExtractor.field_a.readCp1252String(-1);
             } else {
-              var9_ref_String = ig.field_a.readNullableString((byte) 80);
+              var9_ref_String = NativeLibraryExtractor.field_a.readNullableString((byte) 80);
               if (var9_ref_String != null) {
                 UsernameCredentials.writeAppletSettings((byte) 97, var9_ref_String, LegacyOpenGlUnlitEffect.c(2));
               }

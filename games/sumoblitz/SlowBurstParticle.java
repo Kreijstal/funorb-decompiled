@@ -141,7 +141,7 @@ final class SlowBurstParticle extends TimedSceneEffect {
           if (param0 != -77) {
             return;
           }
-          var13 = ig.field_a;
+          var13 = NativeLibraryExtractor.field_a;
           var15 = var13;
           var2 = var15.readUnsignedByte(-31302);
           var3 = (km) (EmailValidationError.field_a.first(122));
@@ -183,10 +183,10 @@ final class SlowBurstParticle extends TimedSceneEffect {
               var6[0][var10] = RenderPresentationException.field_b[var11];
               var19[0][var10 * 4] = LoginFieldValue.field_a[var11];
               var19[0][var10 * 4 + 1] = ContentTransitionPhase.field_f[var11];
-              var19[0][2 + 4 * var10] = ic.field_c[var11];
+              var19[0][2 + 4 * var10] = LegacyOpenGlInterleavedStream.field_c[var11];
               var19[0][var10 * 4 + 3] = field_z[var11];
               if (ea.isCurrentUserName(RenderPresentationException.field_b[var11], (byte) -25) &&
-                field_z[var11] + ContentTransitionPhase.field_f[var11] + ic.field_c[var11] == 0) {
+                field_z[var11] + ContentTransitionPhase.field_f[var11] + LegacyOpenGlInterleavedStream.field_c[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -201,10 +201,10 @@ final class SlowBurstParticle extends TimedSceneEffect {
               var6[1][var14] = RenderPresentationException.field_b[var11Lifetime1];
               var19[1][4 * var14] = LoginFieldValue.field_a[var11Lifetime1];
               var19[1][1 + 4 * var14] = ContentTransitionPhase.field_f[var11Lifetime1];
-              var19[1][2 + 4 * var14] = ic.field_c[var11Lifetime1];
+              var19[1][2 + 4 * var14] = LegacyOpenGlInterleavedStream.field_c[var11Lifetime1];
               var19[1][var14 * 4 + 3] = field_z[var11Lifetime1];
               if (ea.isCurrentUserName(RenderPresentationException.field_b[var11Lifetime1], (byte) -25) &&
-                ContentTransitionPhase.field_f[var11Lifetime1] - (-ic.field_c[var11Lifetime1] - field_z[var11Lifetime1]) == 0) {
+                ContentTransitionPhase.field_f[var11Lifetime1] - (-LegacyOpenGlInterleavedStream.field_c[var11Lifetime1] - field_z[var11Lifetime1]) == 0) {
                 var6[1][var14] = null;
                 var14--;
               }

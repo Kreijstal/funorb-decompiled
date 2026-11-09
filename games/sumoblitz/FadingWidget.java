@@ -17,7 +17,7 @@ final class FadingWidget extends SingleChildWidget {
           if (!ScrollViewport.g(-1)) {
             return true;
           }
-          if (jk.field_c <= 0) {
+          if (Js5ClientState.field_c <= 0) {
             return false;
           }
           if (!LegacyOpenGlReflectionEffect.c(1)) {
@@ -31,7 +31,7 @@ final class FadingWidget extends SingleChildWidget {
         if (!ScrollViewport.g(-1)) {
           return true;
         }
-        if (jk.field_c <= 0) {
+        if (Js5ClientState.field_c <= 0) {
           return false;
         }
         if (!LegacyOpenGlReflectionEffect.c(1)) {
@@ -80,7 +80,7 @@ final class FadingWidget extends SingleChildWidget {
           return;
         }
         Sprite var6 = new Sprite(this.child.width, this.child.height);
-        jq.pushSpriteRaster(7161, var6);
+        LegacyVertexAttribute.pushSpriteRaster(7161, var6);
         if (guard < -35) {
           this.child.renderLayer(0, 0, (byte) -55, layer);
           ClientException.popRasterState((byte) 108);

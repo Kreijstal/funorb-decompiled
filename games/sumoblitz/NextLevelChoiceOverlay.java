@@ -96,7 +96,7 @@ final class NextLevelChoiceOverlay extends SelectionOverlay {
             var14 = var17;
             var7 = var14;
             for (var8 = 0; var8 < var4; var8++) {
-              var7[var8] = ic.a(LegacyOpenGlEffectManager.field_l[LegacyOpenGlPostProcessManager.bitwiseAnd((int) var21[var8], 255)], LegacyOpenGlPostProcessManager.bitwiseAnd((int) var23[var8], 255) << 24);
+              var7[var8] = LegacyOpenGlInterleavedStream.bitwiseOr(LegacyOpenGlEffectManager.field_l[LegacyOpenGlPostProcessManager.bitwiseAnd((int) var21[var8], 255)], LegacyOpenGlPostProcessManager.bitwiseAnd((int) var23[var8], 255) << 24);
             }
             var1[var2] = (Sprite) ((Object) new ArgbSprite(vf.field_d, ToolkitImageProducerBuffer.field_u, MenuSelectionController.field_h[var2], StrongCacheReference.field_C[var2], CheckboxRenderer.field_k[var2], ScrollViewport.field_B[var2], var17));
           }

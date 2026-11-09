@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jk {
+final class Js5ClientState {
     static int field_a;
     static int field_c;
     static Js5Client field_b;
 
-    final static RasterIndexedSprite a(int[] param0, RasterIndexedSprite param1, int param2) {
+    final static RasterIndexedSprite withPalette(int[] palette, RasterIndexedSprite sprite, int guard) {
         RasterIndexedSprite var3 = null;
         RuntimeException var3_ref = null;
         RasterIndexedSprite stackIn_3_0 = null;
@@ -17,18 +17,18 @@ final class jk {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2 >= -53) {
-            jk.releaseStatics((byte) 43);
+          if (guard >= -53) {
+            Js5ClientState.releaseStatics((byte) 43);
           }
           var3 = new RasterIndexedSprite(0, 0, 0);
-          var3.offsetY = param1.offsetY;
-          var3.fullHeight = param1.fullHeight;
-          var3.height = param1.height;
-          var3.offsetX = param1.offsetX;
-          var3.palette = param0;
-          var3.indices = param1.indices;
-          var3.width = param1.width;
-          var3.fullWidth = param1.fullWidth;
+          var3.offsetY = sprite.offsetY;
+          var3.fullHeight = sprite.fullHeight;
+          var3.height = sprite.height;
+          var3.offsetX = sprite.offsetX;
+          var3.palette = palette;
+          var3.indices = sprite.indices;
+          var3.width = sprite.width;
+          var3.fullWidth = sprite.fullWidth;
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -36,25 +36,25 @@ final class jk {
           var3_ref = decompiledCaughtException;
           stackIn_6_0 = var3_ref;
           stackIn_6_1 = new StringBuilder().append("jk.B(");
-          if (param0 == null) {
+          if (palette == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
           stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
-          if (param1 == null) {
+          if (sprite == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(guard).append(')').toString());
         }
     }
 
     public static void releaseStatics(byte param0) {
         if (param0 != -104) {
           RasterIndexedSprite var2 = (RasterIndexedSprite) null;
-          jk.a((int[]) null, (RasterIndexedSprite) null, -102);
+          Js5ClientState.withPalette((int[]) null, (RasterIndexedSprite) null, -102);
           field_b = null;
           return;
         }

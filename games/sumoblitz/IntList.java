@@ -6,7 +6,7 @@ final class IntList {
     private int[] values;
     private int lastIndex;
     private int growth;
-    static tf field_c;
+    static LegacyAlphaFontLoader field_c;
     static int field_g;
     static int field_h;
     static SpriteData field_e;
@@ -233,7 +233,7 @@ final class IntList {
     }
 
     static {
-        field_c = new tf();
+        field_c = new LegacyAlphaFontLoader();
         field_g = 2;
         field_h = 4;
     }

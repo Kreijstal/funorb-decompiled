@@ -681,7 +681,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           this.field_Zc = (IntrusiveDeque) null;
         }
         if (HotspotTextWidget.field_L != this.field_wb[this.field_mc]) {
-          jaggl.OpenGL.glLoadMatrixf(this.field_V[this.field_mc].writeColumnMajor4x4(-107, pq.field_y), 0);
+          jaggl.OpenGL.glLoadMatrixf(this.field_V[this.field_mc].writeColumnMajor4x4(-107, StripedProgressWidget.field_y), 0);
         } else {
           jaggl.OpenGL.glLoadIdentity();
         }
@@ -1560,21 +1560,21 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
         if (!this.field_s.usesViewTransform(-20011)) {
           if (!this.field_Db) {
-            jaggl.OpenGL.glLoadMatrixf(this.field_Lb.writeColumnMajor4x4(-110, pq.field_y), 0);
+            jaggl.OpenGL.glLoadMatrixf(this.field_Lb.writeColumnMajor4x4(-110, StripedProgressWidget.field_y), 0);
           } else {
             jaggl.OpenGL.glLoadIdentity();
           }
           this.field_Dc = false;
         } else {
           if (!this.field_Uc) {
-            jaggl.OpenGL.glLoadMatrixf(this.field_Gb.writeColumnMajor4x4(-63, pq.field_y), 0);
+            jaggl.OpenGL.glLoadMatrixf(this.field_Gb.writeColumnMajor4x4(-63, StripedProgressWidget.field_y), 0);
             this.field_Uc = true;
             this.applyLightPositions(-114);
             this.Y(param0 ^ -25);
           }
           if (!this.field_Db) {
             jaggl.OpenGL.glPushMatrix();
-            jaggl.OpenGL.glMultMatrixf(this.field_Lb.writeColumnMajor4x4(-79, pq.field_y), 0);
+            jaggl.OpenGL.glMultMatrixf(this.field_Lb.writeColumnMajor4x4(-79, StripedProgressWidget.field_y), 0);
             this.field_Dc = true;
           } else {
             this.field_Dc = false;

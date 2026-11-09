@@ -284,7 +284,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
           PasswordValidator.field_i = SpriteData.a(param3, "", "reticule_flat");
           hc.field_a = SpriteData.b(param3, "", "gravitywell");
           RasterStateFrame.field_o = SpriteData.a(param3, "", "gravitywell_field");
-          pq.field_F = SpriteData.b(param3, "", "tutorial_images");
+          StripedProgressWidget.field_F = SpriteData.b(param3, "", "tutorial_images");
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "pe.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

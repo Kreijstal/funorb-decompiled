@@ -487,9 +487,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         Object var6 = null;
         try {
           var2_long = wq.monotonicTimeMillis(-66);
-          var4 = fa.field_a[ka.field_b];
-          fa.field_a[ka.field_b] = var2_long;
-          ka.field_b = ka.field_b + 1 & 31;
+          var4 = AppletTickHistory.tickTimes[ka.tickHistoryIndex];
+          AppletTickHistory.tickTimes[ka.tickHistoryIndex] = var2_long;
+          ka.tickHistoryIndex = ka.tickHistoryIndex + 1 & 31;
           if (var4 != 0L &&
             var4 >= var2_long) {
           }
@@ -498,7 +498,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             if (param0 < 95) {
               field_e = (float[]) null;
             }
-            ii.field_a = SpriteStripButtonRenderer.field_o;
+            AppletFocusState.focused = SpriteStripButtonRenderer.field_o;
           }
           this.updateGame(-64);
           return;
@@ -624,7 +624,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           }
           NineSlicePanel.field_f.addFocusListener((java.awt.event.FocusListener) (this));
           NineSlicePanel.field_f.requestFocus();
-          ii.field_a = true;
+          AppletFocusState.focused = true;
           SpriteStripButtonRenderer.field_o = true;
           CubeMapSource.field_a = true;
           if (param0 != 1000) {
@@ -681,9 +681,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           var1 = new PacketBuffer(30000);
           var1.writeByte((byte) 117, 3);
           var1.writeByte((byte) 90, ToolkitRasterStateFrame.field_e);
-          var1.writeByte((byte) 46, ResourceArchive.field_f);
-          var1.writeByte((byte) 39, LegacyOpenGlEffectManager.field_i);
-          var1.writeByte((byte) 52, hc.field_f);
+          var1.writeByte((byte) 46, ResourceArchive.selectedSpeedLevel);
+          var1.writeByte((byte) 39, LegacyOpenGlEffectManager.selectedTractionLevel);
+          var1.writeByte((byte) 52, hc.selectedBounceLevel);
           var2 = 0;
           while (36 > var2) {
             if (var2 < 25) {
@@ -894,7 +894,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 this.e(1000);
                 ProgressDialog.field_R = SoftLruCache.a(wq.field_b, LegacyOpenGlRidgedWaterEffect.field_h, 0, (java.awt.Component) ((Object) NineSlicePanel.field_f));
                 this.initializeGame(28196);
-                jl.field_a = LegacyCubeMapSource.createTickClock(false);
+                HardwareQuadBatchBuffers.field_a = LegacyCubeMapSource.createTickClock(false);
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (NanoTickClock.field_k != 0L) {
@@ -906,7 +906,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    BurstParticle.field_t = jl.field_a.waitAndAdvance(4007, DualLinkNode.field_p);
+                    BurstParticle.field_t = HardwareQuadBatchBuffers.field_a.waitAndAdvance(4007, DualLinkNode.field_p);
                     stackIn_105_0 = 0;
                   }
                   var3 = stackIn_105_0;

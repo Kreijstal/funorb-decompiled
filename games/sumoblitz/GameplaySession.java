@@ -306,11 +306,11 @@ final class GameplaySession {
             }
           }
           if (decompiledFrameCompleted2) {
-            decompiledFrameRemainder1 = !(60 <= fa.field_b);
+            decompiledFrameRemainder1 = !(60 <= AppletTickHistory.field_b);
           }
           if (decompiledFrameRemainder1) {
-            if (fa.field_b <= 30) {
-              stackIn_34_0 = fa.field_b;
+            if (AppletTickHistory.field_b <= 30) {
+              stackIn_34_0 = AppletTickHistory.field_b;
             } else {
               stackIn_34_0 = 30;
             }
@@ -332,7 +332,7 @@ final class GameplaySession {
           boolean decompiledFrameRemainder0 = true;
           boolean decompiledFrameCompleted1 = true;
           if (!MusicPatch.simulationPaused) {
-            var4_ref2 = (HudMessage) (ig.hudMessages.first(-59));
+            var4_ref2 = (HudMessage) (NativeLibraryExtractor.hudMessages.first(-59));
             while (var4_ref2 != null) {
               stackOut_43_0 = (HudMessage) (var4_ref2);
               stackIn_54_0 = stackOut_43_0;
@@ -344,7 +344,7 @@ final class GameplaySession {
               if (stackIn_44_0 != null) {
                 var4_ref2.render((byte) -70);
               }
-              var4_ref2 = (HudMessage) (ig.hudMessages.next((byte) 18));
+              var4_ref2 = (HudMessage) (NativeLibraryExtractor.hudMessages.next((byte) 18));
             }
           }
           if ((decompiledFrameCompleted1) &&
@@ -874,7 +874,7 @@ final class GameplaySession {
             this.renderSimpleArenaBorder(109, (GraphicsToolkit) null);
           }
           GameKeyHandler.field_a = null;
-          ig.hudMessages.clear(116);
+          NativeLibraryExtractor.hudMessages.clear(116);
           FadingWidget.score = 0;
           LegacyOpenGlSpriteTexture.field_w = false;
           LoginPacketWriter.field_a = 0;
@@ -1125,7 +1125,7 @@ final class GameplaySession {
           if (TextureFormat.elapsedTicks != uc.field_f &&
             (TextureFormat.elapsedTicks - uc.field_f) % 50 == 0 &&
             !DroneDebris.field_C) {
-            DroneDebris.field_C = ig.b(114);
+            DroneDebris.field_C = NativeLibraryExtractor.spawnNextWaveGroup(114);
           }
           if (MusicPatch.simulationPaused) {
             return;
@@ -1150,14 +1150,14 @@ final class GameplaySession {
             TextureMetadata.field_f[6] ||
             MessageDialog.arcadeMode)) {
             boolean decompiledFrameRemainder1 = true;
-            if (fa.field_b > 0 &&
-              30 >= fa.field_b) {
-              fa.field_b = fa.field_b - 1;
+            if (AppletTickHistory.field_b > 0 &&
+              30 >= AppletTickHistory.field_b) {
+              AppletTickHistory.field_b = AppletTickHistory.field_b - 1;
               decompiledFrameRemainder1 = (var6 != 0);
             }
             if (decompiledFrameRemainder1) {
               var3_ref = SpriteMask.drones[0];
-              if (fa.field_b <= 0 &&
+              if (AppletTickHistory.field_b <= 0 &&
                 !var3_ref.isBlastActive(126)) {
                 if (wn.a(targetMarkerYQ8, var3_ref.radiusQ8, -105, var3_ref.xQ8, OpenGlBuffer.targetMarkerXQ8, var3_ref.yQ8)) {
                   SecondaryNodeQueue.a(var3_ref, (byte) 113);
@@ -1166,24 +1166,24 @@ final class GameplaySession {
                   }
                   ArchiveLoadRequirement.playSoundEffect(30, true);
                 }
-                fa.field_b = 250;
+                AppletTickHistory.field_b = 250;
               }
               targetMarkerYQ8 = var3_ref.yQ8;
               OpenGlBuffer.targetMarkerXQ8 = var3_ref.xQ8;
-              fa.field_b = fa.field_b - 1;
+              AppletTickHistory.field_b = AppletTickHistory.field_b - 1;
             }
-            if (fa.field_b == 30 &&
+            if (AppletTickHistory.field_b == 30 &&
               0 == DisplaySizeController.field_f) {
               OpenGlCubeTexture.sceneEffects.addLast((IntrusiveNode) (new ShrinkingRingEffect(OpenGlBuffer.targetMarkerXQ8, targetMarkerYQ8, -1)), (byte) 39);
             }
-            if (30 == fa.field_b) {
+            if (30 == AppletTickHistory.field_b) {
               ArchiveLoadRequirement.playSoundEffect(32, true);
             }
-            if (fa.field_b == 30) {
+            if (AppletTickHistory.field_b == 30) {
               Js5Client.a(10, targetMarkerYQ8, OpenGlCubeTexture.sceneEffects, 61, OpenGlBuffer.targetMarkerXQ8, 16711680);
             }
           }
-          var3_ref2 = (HudMessage) (ig.hudMessages.first(111));
+          var3_ref2 = (HudMessage) (NativeLibraryExtractor.hudMessages.first(111));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var3_ref2))) {
             stackOut_150_0 = var3_ref2.updateAndIsExpired(80);
@@ -1193,7 +1193,7 @@ final class GameplaySession {
               if (stackIn_151_0) {
                 var3_ref2.unlink(false);
               }
-              var3_ref2 = (HudMessage) (ig.hudMessages.next((byte) 18));
+              var3_ref2 = (HudMessage) (NativeLibraryExtractor.hudMessages.next((byte) 18));
               continue;
             }
             break;
@@ -1307,7 +1307,7 @@ final class GameplaySession {
               }
               if (null != Bzip2State.field_J &&
                 Bzip2State.field_J.length <= AccountServiceResult.waveIndex &&
-                jl.a(-62) &&
+                HardwareQuadBatchBuffers.hasActivePlayer(-62) &&
                 AgeValidator.countEnemyDrones(true) == 0) {
                 o.a(0);
                 if (MusicPatchEnvelope.a(8230, 10)) {
@@ -1346,7 +1346,7 @@ final class GameplaySession {
                 }
                 if (Bzip2State.field_J != null &&
                   Bzip2State.field_J.length <= AccountServiceResult.waveIndex &&
-                  !jl.a(-36) &&
+                  !HardwareQuadBatchBuffers.hasActivePlayer(-36) &&
                   AgeValidator.countEnemyDrones(true) == 0) {
                   if (Bzip2State.a((byte) -94) > ps.field_e[20]) {
                     UnderageAccountInfoPanel.b(24753, 235, 20);
@@ -1355,13 +1355,13 @@ final class GameplaySession {
                     UnderageAccountInfoPanel.b(24753, 252, 3);
                   }
                   if (OpenGlShaderProgram.levelIndex == 25) {
-                    if (ResourceArchive.field_f == 10) {
+                    if (ResourceArchive.selectedSpeedLevel == 10) {
                       UnderageAccountInfoPanel.b(24753, 255, 0);
                     }
-                    if (LegacyOpenGlEffectManager.field_i == 10) {
+                    if (LegacyOpenGlEffectManager.selectedTractionLevel == 10) {
                       UnderageAccountInfoPanel.b(24753, 254, 1);
                     }
-                    if (hc.field_f == 10) {
+                    if (hc.selectedBounceLevel == 10) {
                       UnderageAccountInfoPanel.b(24753, 253, 2);
                     }
                   }
@@ -1379,7 +1379,7 @@ final class GameplaySession {
             GridWidgetContainer.livesRemaining > 0) {
             GridWidgetContainer.livesRemaining = GridWidgetContainer.livesRemaining - 1;
             if (GridWidgetContainer.livesRemaining <= 0) {
-              jk.field_a = TextureFormat.elapsedTicks;
+              Js5ClientState.field_a = TextureFormat.elapsedTicks;
               uq.a(7, 8);
               StrongCacheReference.switchMenuScreen(-7753, true, 11);
               if (var6 != 0) {
@@ -1406,7 +1406,7 @@ final class GameplaySession {
           if (null != SpriteMask.drones[0]) {
             var4Lifetime1 = SpriteMask.drones[0];
             if (var4Lifetime1.isBlastChargeParticleTick(-2)) {
-              this.showHudMessage(231, 6356832, pu.blastReadyText);
+              this.showHudMessage(231, 6356832, HardwareTextureSprite.blastReadyText);
             }
             if (var4Lifetime1.isBlastWarningTick((byte) -59) &&
               this.showBlastHint) {
@@ -1456,7 +1456,7 @@ final class GameplaySession {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ig.hudMessages.addLast((IntrusiveNode) (new HudMessage(text, color)), (byte) 39);
+          NativeLibraryExtractor.hudMessages.addLast((IntrusiveNode) (new HudMessage(text, color)), (byte) 39);
           if (guard != 231) {
             this.spawnSceneryAndChooseDrift(-6);
           }
@@ -1794,7 +1794,7 @@ final class GameplaySession {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          ig.hudMessages.clear(117);
+          NativeLibraryExtractor.hudMessages.clear(117);
           AccountServiceResult.waveIndex = -1;
           MusicPatch.simulationPaused = true;
           SpriteMask.drones = new Drone[100];
@@ -1817,7 +1817,7 @@ final class GameplaySession {
         RuntimeException var4 = null;
         try {
           GameKeyHandler.field_a = null;
-          ig.hudMessages.clear(119);
+          NativeLibraryExtractor.hudMessages.clear(119);
           OpenGlTransparentWaterEffect.field_e = 0;
           FadingWidget.score = 0;
           SoftwareTransform3D.field_b = 0;

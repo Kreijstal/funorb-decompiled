@@ -68,7 +68,7 @@ final class CompactMeshGeometry {
                 var2 = Runtime.getRuntime();
                 var4 = (Object[]) null;
                 var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
-                wh.maxHeapMiB = (int)(var3.longValue() / 1048576L) + 1;
+                LegacyOpenGlPbuffer.maxHeapMiB = (int)(var3.longValue() / 1048576L) + 1;
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2_ref = decompiledCaughtException;

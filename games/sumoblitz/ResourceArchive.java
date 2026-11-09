@@ -13,7 +13,7 @@ final class ResourceArchive {
     static Random field_b;
     private Object[][] files;
     private Object[] packedGroups;
-    static int field_f;
+    static int selectedSpeedLevel;
 
     final synchronized byte[] fetchNamedFile(String fileName, String groupName, int guard) {
         int var4_int = 0;
@@ -992,6 +992,6 @@ final class ResourceArchive {
         field_i = false;
         field_j = "Fullscreen";
         field_b = new Random();
-        field_f = 1;
+        selectedSpeedLevel = 1;
     }
 }

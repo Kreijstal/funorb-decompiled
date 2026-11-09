@@ -10,7 +10,7 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
     static ToolkitFont field_db;
     static String loadingMusicText;
     static boolean arcadeMode;
-    private pq field_ib;
+    private StripedProgressWidget field_ib;
     private boolean field_kb;
     private boolean field_fb;
     private LegacyBitmapFont field_jb;
@@ -112,7 +112,7 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          var3 = TextureFilter.a(param1, (byte) 66);
+          var3 = TextureFilter.reverseString(param1, (byte) 66);
           if (param2 < 46) {
             loadingMusicText = (String) null;
           }
@@ -146,7 +146,7 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
 
     final void e(boolean param0) {
         StatusMessagePanel var2 = null;
-        this.field_ib.b(2121792, 4210752, 55);
+        this.field_ib.setColors(2121792, 4210752, 55);
         if (!param0) {
           var2 = new StatusMessagePanel(this, this.field_jb, ImageProducerRasterBuffer.connectionRestoredText);
           var2.a(SessionStatisticsSubmission.returnToGameText, 15, true);
@@ -290,19 +290,19 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
           if (param2 != 21089) {
             return;
           }
-          this.field_ib.b(8405024, 4210752, param2 ^ 20995);
+          this.field_ib.setColors(8405024, 4210752, param2 ^ 20995);
           var6 = new StatusMessagePanel(this, this.field_jb, param0);
           if (5 != param1) {
             if (param1 != 256) {
               stackIn_15_0 = var6;
               if (this.field_cb) {
-                stackIn_16_1 = ii.retryText;
+                stackIn_16_1 = AppletFocusState.retryText;
               } else {
                 stackIn_16_1 = FullscreenCanvas.backText;
               }
               ((StatusMessagePanel) (Object) stackIn_15_0).a(stackIn_16_1, -1, true);
             } else {
-              var6.a(ii.retryText, (byte) -123, (WidgetListener) (this));
+              var6.a(AppletFocusState.retryText, (byte) -123, (WidgetListener) (this));
             }
           } else {
             var6.a(vf.reloadGameText, 11, true);
@@ -349,8 +349,8 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
           this.field_jb = param1;
           this.field_cb = param3 ? true : false;
           this.field_kb = false;
-          this.field_ib = new pq(13, 50, 274, 30, 15, 2113632, 4210752);
-          this.field_ib.field_J = true;
+          this.field_ib = new StripedProgressWidget(13, 50, 274, 30, 15, 2113632, 4210752);
+          this.field_ib.animated = true;
           this.addChild(this.field_ib, 78);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "gt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');

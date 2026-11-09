@@ -39,7 +39,7 @@ abstract class ModalDialog extends WidgetContainer {
         }
         if (null == TickClock.field_a) {
           TickClock.field_a = new Sprite(this.width, this.height);
-          jq.pushSpriteRaster(7161, TickClock.field_a);
+          LegacyVertexAttribute.pushSpriteRaster(7161, TickClock.field_a);
           SoftwareRasterizer.clear();
           this.drawBackdrop(113, 0, 0);
           if (guard < -35) {
@@ -56,7 +56,7 @@ abstract class ModalDialog extends WidgetContainer {
         }
         if (TickClock.field_a.field_x < this.width) {
           TickClock.field_a = new Sprite(this.width, this.height);
-          jq.pushSpriteRaster(7161, TickClock.field_a);
+          LegacyVertexAttribute.pushSpriteRaster(7161, TickClock.field_a);
           SoftwareRasterizer.clear();
           this.drawBackdrop(113, 0, 0);
           if (guard < -35) {
@@ -73,7 +73,7 @@ abstract class ModalDialog extends WidgetContainer {
         }
         if (this.height > TickClock.field_a.field_u) {
           TickClock.field_a = new Sprite(this.width, this.height);
-          jq.pushSpriteRaster(7161, TickClock.field_a);
+          LegacyVertexAttribute.pushSpriteRaster(7161, TickClock.field_a);
           SoftwareRasterizer.clear();
           this.drawBackdrop(113, 0, 0);
           if (guard < -35) {
@@ -88,7 +88,7 @@ abstract class ModalDialog extends WidgetContainer {
           TickClock.field_a.a(parentX + this.x, parentY + this.y, this.opacity);
           return;
         }
-        jq.pushSpriteRaster(7161, TickClock.field_a);
+        LegacyVertexAttribute.pushSpriteRaster(7161, TickClock.field_a);
         SoftwareRasterizer.clear();
         this.drawBackdrop(113, 0, 0);
         if (guard < -35) {

@@ -80,7 +80,7 @@ final class MusicVoice extends IntrusiveNode {
         }
         pd var1 = (pd) (PerlinNoiseSliceGenerator.field_g.first(103));
         if (var1 != null) {
-          var2 = ig.field_a;
+          var2 = NativeLibraryExtractor.field_a;
           var2.readInt(true);
           var2.readInt(true);
           var2.readInt(true);

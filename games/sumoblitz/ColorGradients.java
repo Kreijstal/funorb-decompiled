@@ -29,7 +29,7 @@ final class ColorGradients {
           var16 = var16 + var10;
           var18 = var18 + var12;
           var14 = var14 + var8;
-          var22[var20] = ic.a(ic.a(LegacyOpenGlPostProcessManager.bitwiseAnd(1144783103, (int)Math.round(var14)) << 16, LegacyOpenGlPostProcessManager.bitwiseAnd((int)Math.round(var16), 1979711743) << 8), LegacyOpenGlPostProcessManager.bitwiseAnd((int)Math.round(var18), 255));
+          var22[var20] = LegacyOpenGlInterleavedStream.bitwiseOr(LegacyOpenGlInterleavedStream.bitwiseOr(LegacyOpenGlPostProcessManager.bitwiseAnd(1144783103, (int)Math.round(var14)) << 16, LegacyOpenGlPostProcessManager.bitwiseAnd((int)Math.round(var16), 1979711743) << 8), LegacyOpenGlPostProcessManager.bitwiseAnd((int)Math.round(var18), 255));
         }
         return var4;
     }

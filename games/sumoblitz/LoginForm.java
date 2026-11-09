@@ -163,7 +163,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Widg
               this.field_D = new InteractiveWidget(IntrusiveNode.createAFreeAccountText, (WidgetListener) (this));
             }
           } else {
-            this.field_A = new InteractiveWidget(ii.retryText, (WidgetListener) null);
+            this.field_A = new InteractiveWidget(AppletFocusState.retryText, (WidgetListener) null);
             this.field_N = new InteractiveWidget(HiscoreRequest.quitToWebsiteText, (WidgetListener) null);
             this.field_H.enabled = false;
           }

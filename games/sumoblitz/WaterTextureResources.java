@@ -191,12 +191,12 @@ final class WaterTextureResources {
           if (!this.useVolumeTextures) {
             this.animatedSlices = new Texture2D[16];
             for (var2_int = 0; var2_int < 16; var2_int++) {
-              var17 = iq.a(pd.hardwareRidgedWaterData, 14381, 32768, var2_int * 32768);
+              var17 = ByteStorageRanges.copyRange(pd.hardwareRidgedWaterData, 14381, 32768, var2_int * 32768);
               this.animatedSlices[var2_int] = this.toolkit.a(var17, 128, 128, ps.LUMINANCE_ALPHA, 0, true);
             }
             this.secondarySlices = new Texture2D[16];
             for (var2_intLifetime1 = 0; var2_intLifetime1 < 16; var2_intLifetime1++) {
-              var18 = iq.a(LegacyOpenGlShader.hardwareTurbulentWaterData, 14381, 32768, 32768 * var2_intLifetime1);
+              var18 = ByteStorageRanges.copyRange(LegacyOpenGlShader.hardwareTurbulentWaterData, 14381, 32768, 32768 * var2_intLifetime1);
               this.secondarySlices[var2_intLifetime1] = this.toolkit.a(var18, 128, 128, ps.LUMINANCE_ALPHA, 0, true);
             }
             return;

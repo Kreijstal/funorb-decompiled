@@ -54,10 +54,10 @@ abstract class RasterBuffer {
           RasterBuffer.a(-6, -112);
           return;
         }
-        var1 = jk.field_c;
+        var1 = Js5ClientState.field_c;
         if (var1 > 0) {
           if (1 != var1) {
-            SocketJs5Client.field_s = ic.a(LruNodeCache.youHaveUnreadMessagesText, new String[]{Integer.toString(var1)}, (byte) -128);
+            SocketJs5Client.field_s = LegacyOpenGlInterleavedStream.formatIndexedTokens(LruNodeCache.youHaveUnreadMessagesText, new String[]{Integer.toString(var1)}, (byte) -128);
           } else {
             SocketJs5Client.field_s = FullscreenMembershipDialog.youHave1UnreadText;
           }

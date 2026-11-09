@@ -53,7 +53,7 @@ final class WhirlpoolDigest {
         int var8 = 0;
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
-          this.buffer[this.bufferPosition] = (byte)ic.a((int) this.buffer[this.bufferPosition], 128 >>> LegacyOpenGlPostProcessManager.bitwiseAnd(7, this.bufferBits));
+          this.buffer[this.bufferPosition] = (byte)LegacyOpenGlInterleavedStream.bitwiseOr((int) this.buffer[this.bufferPosition], 128 >>> LegacyOpenGlPostProcessManager.bitwiseAnd(7, this.bufferBits));
           this.bufferPosition = this.bufferPosition + 1;
           if (this.bufferPosition > 32) {
             while (this.bufferPosition < 64) {
@@ -178,7 +178,7 @@ final class WhirlpoolDigest {
         if (param0 != 7) {
           field_c = 'ￃ';
         }
-        return null == CompactMeshGeometry.field_o ? ii.field_a : true;
+        return null == CompactMeshGeometry.field_o ? AppletFocusState.focused : true;
     }
 
     final void updateBits(byte[] bytes, int alignmentMask, long bitCount) {
@@ -215,7 +215,7 @@ final class WhirlpoolDigest {
             var8 = bytes[var5_int] << var6 & 255 | (bytes[var5_int + 1] & 255) >>> -var6 + 8;
             if (var8 >= 0 &&
               256 > var8) {
-              this.buffer[this.bufferPosition] = (byte)ic.a((int) this.buffer[this.bufferPosition], var8 >>> var7);
+              this.buffer[this.bufferPosition] = (byte)LegacyOpenGlInterleavedStream.bitwiseOr((int) this.buffer[this.bufferPosition], var8 >>> var7);
               this.bufferPosition = this.bufferPosition + 1;
               this.bufferBits = this.bufferBits + (-var7 + 8);
               if (512 == this.bufferBits) {
@@ -235,7 +235,7 @@ final class WhirlpoolDigest {
             var8Lifetime1 = 0;
           } else {
             var8Lifetime1 = 255 & bytes[var5_int] << var6;
-            this.buffer[this.bufferPosition] = (byte)ic.a((int) this.buffer[this.bufferPosition], var8Lifetime1 >>> var7);
+            this.buffer[this.bufferPosition] = (byte)LegacyOpenGlInterleavedStream.bitwiseOr((int) this.buffer[this.bufferPosition], var8Lifetime1 >>> var7);
           }
           if (bitCount + (long)var7 < 8L) {
             this.bufferBits = (int)((long)this.bufferBits + bitCount);

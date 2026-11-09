@@ -18,7 +18,7 @@ final class ByteArrayCacheNode extends DualLinkNode {
         String stackIn_33_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (me.a(false, param0)) {
+          if (AsciiCharacterChecks.containsNonAlphanumeric(false, param0)) {
             return false;
           }
           if (LegacyOpenGlCubeTexture.hasUniformCharacters(param0, true)) {
@@ -77,7 +77,7 @@ final class ByteArrayCacheNode extends DualLinkNode {
         int var3 = 0;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          ig.hudMessages.clear(122);
+          NativeLibraryExtractor.hudMessages.clear(122);
           SpriteMask.drones = new Drone[100];
           LoginCredentialFactory.initializePlayerFromUpgradeSettings(85);
           if (guard <= 81) {

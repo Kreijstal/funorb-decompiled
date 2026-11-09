@@ -164,7 +164,7 @@ final class LegacyOpenGlNormalMapGenerator {
           if (param0 != -30084) {
             LegacyOpenGlNormalMapGenerator.c((byte) -53);
           }
-          var13 = ig.field_a;
+          var13 = NativeLibraryExtractor.field_a;
           var2 = var13.readUnsignedByte(-31302);
           if (var2 == 0) {
             var11 = VertexBufferReference.a(-14808);

@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tf {
+final class LegacyAlphaFontLoader {
     static String field_a;
 
     final static boolean a(int param0, int param1, int param2) {
         if (param1 == -2626) {
           return 0 != (2048 & param2) ? true : false;
         }
-        tf.releaseStatics((byte) -118);
+        LegacyAlphaFontLoader.releaseStatics((byte) -118);
         return 0 != (2048 & param2) ? true : false;
     }
 
@@ -16,7 +16,7 @@ final class tf {
         throw new IllegalStateException();
     }
 
-    final static LegacyAlphaFont a(ResourceArchive param0, byte param1, int param2, int param3, ResourceArchive param4) {
+    final static LegacyAlphaFont loadAlphaFont(ResourceArchive fontArchive, byte guard, int fileId, int groupId, ResourceArchive spriteArchive) {
         RuntimeException var5 = null;
         LegacyAlphaFont stackIn_5_0 = null;
         LegacyAlphaFont stackIn_7_0 = null;
@@ -27,11 +27,11 @@ final class tf {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!k.decodeSpriteSheet(param4, param3, param2, -23046)) {
+          if (!SpriteSheetSupport.decodeSpriteSheet(spriteArchive, groupId, fileId, -23046)) {
             return null;
           }
-          if (param1 < -11) {
-            stackIn_7_0 = ScrollControl.a(false, param0.fetchFile((byte) 94, param3, param2));
+          if (guard < -11) {
+            stackIn_7_0 = ScrollControl.a(false, fontArchive.fetchFile((byte) 94, groupId, fileId));
             return stackIn_7_0;
           }
           stackIn_5_0 = (LegacyAlphaFont) null;
@@ -41,13 +41,13 @@ final class tf {
           var5 = decompiledCaughtException;
           stackIn_10_0 = var5;
           stackIn_10_1 = new StringBuilder().append("tf.C(");
-          if (param0 == null) {
+          if (fontArchive == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(guard).append(',').append(fileId).append(',').append(groupId).append(',');
+          if (spriteArchive == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
@@ -59,7 +59,7 @@ final class tf {
     public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 != 17) {
-          tf.a(-5, -49, 114);
+          LegacyAlphaFontLoader.a(-5, -49, 114);
         }
     }
 

@@ -3,11 +3,11 @@
  */
 import java.io.*;
 
-final class ig {
+final class NativeLibraryExtractor {
     static IntrusiveDeque hudMessages;
     static IsaacPacketBuffer field_a;
 
-    final static boolean b(int param0) {
+    final static boolean spawnNextWaveGroup(int guard) {
         int var5 = 0;
         Drone[] var2 = null;
         int var3 = 0;
@@ -35,7 +35,7 @@ final class ig {
           var12 = Bzip2State.field_J[AccountServiceResult.waveIndex];
           var2 = var12.drones;
           var3 = 0;
-          var4 = 26 / ((67 - param0) / 42);
+          var4 = 26 / ((67 - guard) / 42);
           for (var5 = 0; var5 < var2.length; var5++) {
             if (var2[var5] != null &&
               var2[var5].field_F == SocketConnector.field_c) {
@@ -56,18 +56,18 @@ final class ig {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "ig.A(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "ig.A(" + guard + ')');
         }
     }
 
-    final static void a(int param0) {
-        if (param0 != 22075) {
-          ig.a(66);
+    final static void restoreMusicVolume(int guard) {
+        if (guard != 22075) {
+          NativeLibraryExtractor.restoreMusicVolume(66);
         }
-        lf.a(0, 256);
+        lf.setMusicVolume(0, 256);
     }
 
-    final static int a(String param0, boolean param1) {
+    final static int prepareNativeLibrary(String libraryName, boolean guard) {
         int var8_int = 0;
         int stackIn_6_0 = 0;
         int stackIn_10_0 = 0;
@@ -99,18 +99,18 @@ final class ig {
         byte[] var15 = null;
         var9 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (!param1) {
+          if (!guard) {
             hudMessages = (IntrusiveDeque) null;
           }
           if (!NineSlicePanel.field_e.field_f) {
             stackIn_6_0 = -1;
             return stackIn_6_0;
           }
-          if (TextureCombineSource.field_b.containsKey(param0)) {
+          if (TextureCombineSource.field_b.containsKey(libraryName)) {
             stackIn_10_0 = 100;
             return stackIn_10_0;
           }
-          var10 = OpenGlBuffer.a((byte) 53, param0);
+          var10 = OpenGlBuffer.a((byte) 53, libraryName);
           if (var10 == null) {
             stackIn_14_0 = -1;
             return stackIn_14_0;
@@ -169,7 +169,7 @@ final class ig {
               stackIn_42_0 = -1;
               return stackIn_42_0;
             }
-            hw.registerNativeLibraryFile(var11, param0, 23295);
+            hw.registerNativeLibraryFile(var11, libraryName, 23295);
             stackIn_44_0 = 100;
             return stackIn_44_0;
           }
@@ -180,12 +180,12 @@ final class ig {
           var2 = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_49_0 = var2;
           stackIn_49_1 = new StringBuilder().append("ig.C(");
-          if (param0 == null) {
+          if (libraryName == null) {
             stackIn_50_2 = "null";
           } else {
             stackIn_50_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',').append(guard).append(')').toString());
         }
     }
 

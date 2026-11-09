@@ -195,7 +195,7 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
         String var4_ref_StringLifetime1;
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var1 = ig.field_a;
+          var1 = NativeLibraryExtractor.field_a;
           var2 = var1.readUnsignedByte(-31302);
           if (var2 == 0) {
             if (GpuDataType.field_b == null) {
@@ -233,14 +233,14 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
           }
           if (var2 != 1) {
             if (2 == var2) {
-              if (wh.field_s == 1) {
-                wh.field_s = 2;
+              if (LegacyOpenGlPbuffer.field_s == 1) {
+                LegacyOpenGlPbuffer.field_s = 2;
               }
               return;
             }
             if (var2 == 3) {
-              if (wh.field_s == 2) {
-                wh.field_s = 1;
+              if (LegacyOpenGlPbuffer.field_s == 2) {
+                LegacyOpenGlPbuffer.field_s = 1;
               }
               return;
             }
@@ -252,7 +252,7 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
               }
               return;
             }
-            wh.field_s = 1;
+            LegacyOpenGlPbuffer.field_s = 1;
             var3 = var1.readCp1252String(-1);
             jm.field_d = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(-31302);
@@ -647,10 +647,10 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
           dupTemp$1 = new PasswordInputRenderer(10000536);
           this.confirmPasswordInput.renderer = (WidgetRenderer) ((Object) dupTemp$1);
           this.passwordInput.renderer = (WidgetRenderer) ((Object) dupTemp$1);
-          var2 = ic.a(SocialContact.byClickingCreateYouText, new String[]{this.linkStyleStart((byte) 66), this.linkStyleEnd(128)}, (byte) -128);
+          var2 = LegacyOpenGlInterleavedStream.formatIndexedTokens(SocialContact.byClickingCreateYouText, new String[]{this.linkStyleStart((byte) 66), this.linkStyleEnd(128)}, (byte) -128);
           var3 = 20;
           var3 = var3 + this.addLabeledField(HardwareTurbulentWaterNoise.emailLoginText, 170, var3, 78, this.emailInput);
-          var3 = var3 + (5 + this.addFieldWithMessage(var3, 170, (byte) 125, 20, "", this.confirmEmailInput, pq.confirmEmailText));
+          var3 = var3 + (5 + this.addFieldWithMessage(var3, 170, (byte) 125, 20, "", this.confirmEmailInput, StripedProgressWidget.confirmEmailText));
           var3 = var3 + this.addLabeledField(pi.passwordText, 170, var3, 55, this.passwordInput);
           var3 = var3 + (5 + this.addValidatedField(LegacyOpenGlTexture.confirmPasswordText, 170, 15632, var3, qw.passwordsMustBeBetweenText, this.confirmPasswordInput));
           var3 = var3 + (this.addValidatedField(un.playerNameText, 170, 15632, var3, QuickChatPhrase.playerNamesCanBeText, this.screenNameInput) + 5);

@@ -20,12 +20,12 @@ abstract class LegacyOpenGlEffect {
     final static void a(int param0) {
         if (param0 == 8192) {
           IntrusiveDequeCursor.field_b = false;
-          ig.field_a.readUnsignedByte(param0 ^ -23110);
+          NativeLibraryExtractor.field_a.readUnsignedByte(param0 ^ -23110);
           return;
         }
         field_d = (int[]) null;
         IntrusiveDequeCursor.field_b = false;
-        ig.field_a.readUnsignedByte(param0 ^ -23110);
+        NativeLibraryExtractor.field_a.readUnsignedByte(param0 ^ -23110);
     }
 
     abstract void disable(int guard);

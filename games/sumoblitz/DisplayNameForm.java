@@ -35,7 +35,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
           }
           var5 = 12 / ((-67 - guard) / 45);
           var4 = var3.getStatus(35);
-          stackIn_7_0 = (qe.VALID == var4);
+          stackIn_7_0 = (PerlinNoiseFactory.VALID == var4);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -162,7 +162,7 @@ final class DisplayNameForm extends WidgetContainer implements NameSuggestionLis
         this.nameInput = new ValidatedTextInputWidget("", (WidgetListener) null, 12);
         TextWidgetRenderer var1 = new TextWidgetRenderer(jm.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, kw.field_b.ascent, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(MouseInputRegistration.youNeedToChooseText, var1, (WidgetListener) null);
-        this.submitButton = new InteractiveWidget(tf.field_a, (WidgetListener) null);
+        this.submitButton = new InteractiveWidget(LegacyAlphaFontLoader.field_a, (WidgetListener) null);
         this.backButton = new InteractiveWidget(IntrusiveNodeHashTable.field_h, (WidgetListener) null);
         this.nameInput.tooltip = ShaderEffect.enterTheNameYouText;
         this.nameInput.setValidator((byte) 127, new ScreenNameValidator(this.nameInput));

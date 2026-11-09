@@ -677,13 +677,13 @@ final class HardwareReflectionEffect extends ShaderEffect {
             this.toolkit.applyTexCoordGeneration(13754, lf.DISABLED);
             this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
             this.toolkit.a(AccountRequestState.CONSTANT, 2, 0);
-            this.toolkit.a(jq.TEXTURE, 0, true);
+            this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, true);
             this.toolkit.l(0);
             this.toolkit.a((GpuTexture) null, 98);
             this.toolkit.g(0, -120);
             this.active = false;
           } else {
-            this.toolkit.a(jq.TEXTURE, 0, !guard ? true : false);
+            this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, !guard ? true : false);
           }
           this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
           return;
@@ -694,13 +694,13 @@ final class HardwareReflectionEffect extends ShaderEffect {
           this.toolkit.applyTexCoordGeneration(13754, lf.DISABLED);
           this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
           this.toolkit.a(AccountRequestState.CONSTANT, 2, 0);
-          this.toolkit.a(jq.TEXTURE, 0, !guard ? true : false);
+          this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, !guard ? true : false);
           this.toolkit.l(0);
           this.toolkit.a((GpuTexture) null, 98);
           this.toolkit.g(0, -120);
           this.active = false;
         } else {
-          this.toolkit.a(jq.TEXTURE, 0, !guard ? true : false);
+          this.toolkit.a(LegacyVertexAttribute.TEXTURE, 0, !guard ? true : false);
         }
         this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
     }

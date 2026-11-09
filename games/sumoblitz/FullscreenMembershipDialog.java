@@ -196,7 +196,7 @@ final class FullscreenMembershipDialog extends ResizingDialog implements WidgetA
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (source == jq.TEXTURE) {
+          if (source == LegacyVertexAttribute.TEXTURE) {
             stackIn_12_0 = 5890;
             return stackIn_12_0;
           }

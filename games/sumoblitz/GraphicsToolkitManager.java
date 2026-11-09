@@ -31,10 +31,10 @@ final class GraphicsToolkitManager {
           GraphicsToolkitManager.topDialogX(113);
         }
         if (!BeveledCheckboxRenderer.hasOpenDialogs(false) ||
-          null == pu.field_e.topOpenDialog((byte) 54)) {
+          null == HardwareTextureSprite.field_e.topOpenDialog((byte) 54)) {
           return -1;
         }
-        return pu.field_e.topOpenDialog((byte) 54).x;
+        return HardwareTextureSprite.field_e.topOpenDialog((byte) 54).x;
     }
 
     final boolean updateToolkit(boolean guard) {
@@ -128,7 +128,7 @@ final class GraphicsToolkitManager {
                   if (!LegacyOpenGlShaderProgram.field_d.loadIndex((byte) 127)) {
                     return;
                   }
-                  var7_int = ig.a("hw3d", true);
+                  var7_int = NativeLibraryExtractor.prepareNativeLibrary("hw3d", true);
                   if (var7_int == -1) {
                     var6.enabled = false;
                     decompiledFrameRemainder0 = false;
@@ -137,7 +137,7 @@ final class GraphicsToolkitManager {
                     if (100 > var7_int) {
                       return;
                     }
-                    var8_int = ig.a("jaclib", true);
+                    var8_int = NativeLibraryExtractor.prepareNativeLibrary("jaclib", true);
                     if (var8_int == -1) {
                       var6.enabled = false;
                       decompiledFrameRemainder0 = false;
@@ -146,7 +146,7 @@ final class GraphicsToolkitManager {
                       if (var8_int < 100) {
                         return;
                       }
-                      var9 = ig.a("jaggl", true);
+                      var9 = NativeLibraryExtractor.prepareNativeLibrary("jaggl", true);
                       if (var9 == -1) {
                         var6.enabled = false;
                         decompiledFrameRemainder0 = false;
@@ -164,7 +164,7 @@ final class GraphicsToolkitManager {
                       if (!LegacyOpenGlShaderProgram.field_d.loadIndex((byte) 127)) {
                         return;
                       }
-                      var7_int = ig.a("jaclib", true);
+                      var7_int = NativeLibraryExtractor.prepareNativeLibrary("jaclib", true);
                       if (var7_int == -1) {
                         var6.enabled = false;
                         decompiledFrameRemainder0 = false;
@@ -173,7 +173,7 @@ final class GraphicsToolkitManager {
                         if (var7_int < 100) {
                           return;
                         }
-                        var8_int = ig.a("jagdx", true);
+                        var8_int = NativeLibraryExtractor.prepareNativeLibrary("jagdx", true);
                         if (var8_int == -1) {
                           var6.enabled = false;
                           decompiledFrameRemainder0 = false;
@@ -182,7 +182,7 @@ final class GraphicsToolkitManager {
                           if (var8_int < 100) {
                             return;
                           }
-                          var9 = ig.a("hw3d", true);
+                          var9 = NativeLibraryExtractor.prepareNativeLibrary("hw3d", true);
                           if (var9 == -1) {
                             var6.enabled = false;
                             decompiledFrameRemainder0 = false;
@@ -201,7 +201,7 @@ final class GraphicsToolkitManager {
                       if (!LegacyOpenGlShaderProgram.field_d.loadIndex((byte) 127)) {
                         return;
                       }
-                      var7_int = ig.a("jaclib", true);
+                      var7_int = NativeLibraryExtractor.prepareNativeLibrary("jaclib", true);
                       if (var7_int == -1) {
                         var6.enabled = false;
                         decompiledFrameRemainder0 = false;
@@ -210,7 +210,7 @@ final class GraphicsToolkitManager {
                         if (100 > var7_int) {
                           return;
                         }
-                        var8_int = ig.a("sw3d", true);
+                        var8_int = NativeLibraryExtractor.prepareNativeLibrary("sw3d", true);
                         if (var8_int == -1) {
                           var6.enabled = false;
                           decompiledFrameRemainder0 = false;
@@ -226,7 +226,7 @@ final class GraphicsToolkitManager {
                     if (!LegacyOpenGlShaderProgram.field_d.loadIndex((byte) 127)) {
                       return;
                     }
-                    var7_int = ig.a("jaclib", true);
+                    var7_int = NativeLibraryExtractor.prepareNativeLibrary("jaclib", true);
                     if (-1 == var7_int) {
                       var6.enabled = false;
                       decompiledFrameRemainder0 = false;
@@ -235,7 +235,7 @@ final class GraphicsToolkitManager {
                       if (100 > var7_int) {
                         return;
                       }
-                      var8_int = ig.a("jaggl", true);
+                      var8_int = NativeLibraryExtractor.prepareNativeLibrary("jaggl", true);
                       if (var8_int == -1) {
                         var6.enabled = false;
                         decompiledFrameRemainder0 = false;

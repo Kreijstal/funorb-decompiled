@@ -927,7 +927,7 @@ class Drone {
             if (var10 != 0) {
               var12 = var8 + this.xQ8 >> 8;
               var13 = this.yQ8 + var9 >> 8;
-              toolkit.drawLine(-var10 + var12, var13, var12 + var10, var13, var6 + tt.a((byte) -128, this.droneType), 1);
+              toolkit.drawLine(-var10 + var12, var13, var12 + var10, var13, var6 + TextureGeneratorNode.brightDroneTypeColor((byte) -128, this.droneType), 1);
             }
           } else {
             if (this.destructionTicks <= 0) {
@@ -958,7 +958,7 @@ class Drone {
                     if (this.droneType != 3) {
                       if (this.droneType != 4) {
                         if (this.droneType != 5) {
-                          toolkit.drawCircle(this.xQ8 + var8 >> 8, this.yQ8 + var9 >> 8, var10, var6 + tt.a((byte) -128, this.droneType), 1);
+                          toolkit.drawCircle(this.xQ8 + var8 >> 8, this.yQ8 + var9 >> 8, var10, var6 + TextureGeneratorNode.brightDroneTypeColor((byte) -128, this.droneType), 1);
                           toolkit.drawCircle(var8 + this.xQ8 >> 8, var9 + this.yQ8 >> 8, var10 >> 2, 2236962 + var6, 1);
                         } else {
                           stackIn_83_0 = HardwareTextureCache.field_e[1];

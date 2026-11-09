@@ -57,7 +57,7 @@ final class kd {
         if (MusicPatch.field_u > 200) {
           var5 = (250 - MusicPatch.field_u << 8) / 50;
         }
-        jq.pushSpriteRaster(7161, LegacyOpenGlShaderProgram.field_a);
+        LegacyVertexAttribute.pushSpriteRaster(7161, LegacyOpenGlShaderProgram.field_a);
         SoftwareRasterViewport.syncClip();
         SoftwareRasterizer.clear();
         IsaacCipher.b(param2 + 0);

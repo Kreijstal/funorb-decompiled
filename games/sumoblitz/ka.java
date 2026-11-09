@@ -3,7 +3,7 @@
  */
 abstract class ka {
     static String passwordIsValidText;
-    static int field_b;
+    static int tickHistoryIndex;
 
     final static int glTexCoordGeneration(TextureCoordinateGeneration mode, int guard) {
         int var2_int = 0;

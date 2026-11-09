@@ -6,7 +6,7 @@ final class rn {
 
     final static void postHudMessage(String text, int x, int y, int color, int guard) {
         try {
-          ig.hudMessages.addLast((IntrusiveNode) (new HudMessage(text, color, x, y)), (byte) 39);
+          NativeLibraryExtractor.hudMessages.addLast((IntrusiveNode) (new HudMessage(text, color, x, y)), (byte) 39);
           if (guard != 28807) {
             rn.releaseStatics(16);
           }

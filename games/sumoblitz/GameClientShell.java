@@ -160,7 +160,7 @@ abstract class GameClientShell extends GameApplet {
           if (-1 != LegacyOpenGlShoreWaveWaterEffect.field_l &&
             0 != LegacyOpenGlShoreWaveWaterEffect.field_l) {
             LegacyOpenGlShoreWaveWaterEffect.field_l = -1;
-            ic.a(4);
+            LegacyOpenGlInterleavedStream.clearJs5Failures(4);
           }
         }
         if (LegacyOpenGlShoreWaveWaterEffect.field_l == 0 &&
@@ -204,7 +204,7 @@ abstract class GameClientShell extends GameApplet {
           DroneWave.tryLoadArchive(hw.field_a, 40)) {
           LruNodeCache.releaseValidationIcons((byte) -93);
           UnderageAccountInfoPanel.e(true);
-          pu.field_m = false;
+          HardwareTextureSprite.field_m = false;
           LegacyOpenGlVertexBuffer.field_k = ToolkitImageProducerBuffer.loadingText;
           ea.a(hw.field_a, NineSlicePanel.field_a, (byte) 40, LegacyOpenGlPostProcessManager.field_f, EmailCredentials.field_j);
           if (ProjectionMode.field_c ||
@@ -330,7 +330,7 @@ abstract class GameClientShell extends GameApplet {
           discarded$33 = this.a(stackIn_11_1, stackIn_12_2, false);
         } else {
           if (TextureCoordinateGeneration.field_a >= 10) {
-            if (!lf.b(-251)) {
+            if (!lf.isIntroFinished(-251)) {
               IntegerMath.a((byte) 126);
             } else {
               if (jv.field_a != 0) {
@@ -396,7 +396,7 @@ abstract class GameClientShell extends GameApplet {
                             ByteArrayStorage.receiveChatMessage(var3, (byte) 60);
                           }
                         } else {
-                          SecondaryNodeQueue.readReflectionCheck((byte) 127, ig.field_a, lt.field_m, gu.field_d);
+                          SecondaryNodeQueue.readReflectionCheck((byte) 127, NativeLibraryExtractor.field_a, lt.field_m, HardwareBufferSet.field_d);
                         }
                       } else {
                         this.o(-1);
@@ -475,7 +475,7 @@ abstract class GameClientShell extends GameApplet {
             TextureMetadata.resendServerDataRequests(false, 6);
           }
           if (InteractiveWidget.field_z[6]) {
-            jl.a(7, param0);
+            HardwareQuadBatchBuffers.resendShortValueRequests(7, param0);
           }
           if (InteractiveWidget.field_z[8]) {
             LegacyOpenGlAssemblyProgram.a(-58);
@@ -485,11 +485,11 @@ abstract class GameClientShell extends GameApplet {
     }
 
     private final void f(byte param0) {
-        int var2 = ig.field_a.readUnsignedByte(-31302);
+        int var2 = NativeLibraryExtractor.field_a.readUnsignedByte(-31302);
         int var3 = (var2 & 1) != 0 ? 1 : 0;
-        int var4 = -1 + gu.field_d;
+        int var4 = -1 + HardwareBufferSet.field_d;
         byte[] var5 = new byte[var4];
-        ig.field_a.readCipherBytes(var5, 0, 0, var4);
+        NativeLibraryExtractor.field_a.readCipherBytes(var5, 0, 0, var4);
         if (param0 > -55) {
           this.field_w = -30;
         }
@@ -644,7 +644,7 @@ abstract class GameClientShell extends GameApplet {
             if (LegacyOpenGlShoreWaveWaterEffect.field_l != -1 &&
               LegacyOpenGlShoreWaveWaterEffect.field_l != 0) {
               LegacyOpenGlShoreWaveWaterEffect.field_l = -1;
-              ic.a(4);
+              LegacyOpenGlInterleavedStream.clearJs5Failures(4);
             }
             if (param2) {
               QuickChatCommand.field_d = false;
@@ -672,14 +672,14 @@ abstract class GameClientShell extends GameApplet {
             }
           }
           if (var4 == 5) {
-            jl.a(LegacyOpenGlUnlitEffect.c(param0 - 16979), false);
+            HardwareQuadBatchBuffers.quitToWebsite(LegacyOpenGlUnlitEffect.c(param0 - 16979), false);
           }
           if (var4 == 6 &&
-            pu.field_m) {
+            HardwareTextureSprite.field_m) {
             jv.field_a = 10;
           }
           if (var4 == 7) {
-            ic.a(false, LegacyOpenGlUnlitEffect.c(2));
+            LegacyOpenGlInterleavedStream.openServerList(false, LegacyOpenGlUnlitEffect.c(2));
           }
           if (8 == var4) {
             MessageDialog.a(-1540, LegacyOpenGlUnlitEffect.c(param0 - 16979));
@@ -765,7 +765,7 @@ abstract class GameClientShell extends GameApplet {
         var11.dispose();
         this.setBackground(java.awt.Color.black);
         EmailValidationError.field_c = this.field_v;
-        jq.setLoadingLanguage(EmailValidationError.field_c, 13586);
+        LegacyVertexAttribute.setLoadingLanguage(EmailValidationError.field_c, 13586);
         EmptyWidgetRenderer.a(param0, (byte) 84, lt.field_m, 5000, this.field_E, param1, this.field_C, this.field_r, 5000, this.field_D, this.field_q, this.field_x, EmailValidationError.field_c, this.field_y);
         PacketBuffer.a(lt.field_m, this.field_r, this.field_E, this.field_D, (byte) -56, this.field_C, this.field_x, param1, EmailValidationError.field_c);
         SoftwareRenderContext.initializePunctuationKeyMap(false);

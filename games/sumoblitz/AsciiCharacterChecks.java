@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class me {
-    final static boolean a(boolean param0, String param1) {
+final class AsciiCharacterChecks {
+    final static boolean containsNonAlphanumeric(boolean guard, String text) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -13,11 +13,11 @@ final class me {
         RuntimeException decompiledCaughtException = null;
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (param0) {
+          if (guard) {
             return true;
           }
-          for (var2_int = 0; var2_int < param1.length(); var2_int++) {
-            var3 = param1.charAt(var2_int);
+          for (var2_int = 0; var2_int < text.length(); var2_int++) {
+            var3 = text.charAt(var2_int);
             if (!ModalDialog.isAsciiLetter(98, (char) var3) &&
               !ea.isAsciiDigit((byte) -54, (char) var3)) {
               return true;
@@ -28,8 +28,8 @@ final class me {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_15_0 = var2;
-          stackIn_15_1 = new StringBuilder().append("me.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_15_1 = new StringBuilder().append("me.A(").append(guard).append(',');
+          if (text == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";

@@ -90,7 +90,7 @@ final class LegacyOpenGlEnvironmentWaterEffect extends LegacyOpenGlEffect {
         RuntimeException decompiledCaughtException = null;
         var6 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var2 = TextureFilter.a(param0, (byte) -57, "jagex-last-login-method");
+          var2 = TextureFilter.readBrowserCookie(param0, (byte) -57, "jagex-last-login-method");
           if (var2 == null) {
             stackIn_4_0 = TextInputValidator.field_c;
             return stackIn_4_0;

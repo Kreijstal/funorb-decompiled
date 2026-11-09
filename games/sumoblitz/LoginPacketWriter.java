@@ -63,7 +63,7 @@ final class LoginPacketWriter {
           if (SoftwareRenderContext.field_b != null) {
             InwardSparkParticle.field_v.writeCircumfixedString(SoftwareRenderContext.field_b, (byte) 19);
           }
-          HardwareTurbulentWaterNoise.a(gh.field_a, OpenGlShaderProgram.field_c, false, InwardSparkParticle.field_v, SoftLruCache.field_e);
+          HardwareTurbulentWaterNoise.a(AccountRsaModulus.modulus, OpenGlShaderProgram.field_c, false, InwardSparkParticle.field_v, SoftLruCache.field_e);
           InwardSparkParticle.field_v.patchShortLength(guard + 12793, InwardSparkParticle.field_v.position - var5_int);
           MessageDialog.a(guard + 12793, -1);
           return;

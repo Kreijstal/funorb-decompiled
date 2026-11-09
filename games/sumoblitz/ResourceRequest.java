@@ -39,7 +39,7 @@ abstract class ResourceRequest extends DualLinkNode {
         int var4 = Sumoblitz.field_L ? 1 : 0;
         try {
           var1 = new Sprite(540, 140);
-          jq.pushSpriteRaster(7161, var1);
+          LegacyVertexAttribute.pushSpriteRaster(7161, var1);
           SoftwareRasterViewport.syncClip();
           if (param0 != -90) {
             field_r = (SpriteData[]) null;

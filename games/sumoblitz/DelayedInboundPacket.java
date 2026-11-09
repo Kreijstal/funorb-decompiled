@@ -30,7 +30,7 @@ final class DelayedInboundPacket extends IntrusiveNode {
             stackIn_9_0 = 256;
           }
           if (!hw.field_b[98] &&
-            !hw.field_b[nv.field_c]) {
+            !hw.field_b[ComboState.field_c]) {
             stackIn_13_1 = 0;
           } else {
             stackIn_13_1 = -256;

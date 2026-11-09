@@ -5,7 +5,7 @@ import java.util.*;
 
 final class HardwareGraphicsHeap extends GraphicsHeap {
     jaclib.memory.heap.NativeHeap heap;
-    static tf field_m;
+    static LegacyAlphaFontLoader field_m;
     static Random field_o;
     static ProgressDialog field_n;
 
@@ -25,11 +25,11 @@ final class HardwareGraphicsHeap extends GraphicsHeap {
     final void close(int guard) {
         this.heap.a();
         if (guard != -14365) {
-          field_m = (tf) null;
+          field_m = (LegacyAlphaFontLoader) null;
         }
     }
 
     static {
-        field_m = new tf();
+        field_m = new LegacyAlphaFontLoader();
     }
 }

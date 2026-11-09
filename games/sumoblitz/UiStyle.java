@@ -55,7 +55,7 @@ class UiStyle extends UiStyleNode {
           }
           var4 = (pd) (PerlinNoiseSliceGenerator.field_g.first(-87));
           while (var4 != null) {
-            k.a(var4, param1, (byte) 117);
+            SpriteSheetSupport.a(var4, param1, (byte) 117);
             var4 = (pd) (PerlinNoiseSliceGenerator.field_g.next((byte) 18));
           }
           return;

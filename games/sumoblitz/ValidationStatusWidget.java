@@ -60,7 +60,7 @@ final class ValidationStatusWidget extends InteractiveWidget {
           var10 = var16.field_w << 1;
           if (ValidationStatusSpriteCache.scratch == null) {
             ValidationStatusSpriteCache.scratch = new Sprite(var9, var10);
-            jq.pushSpriteRaster(7161, ValidationStatusSpriteCache.scratch);
+            LegacyVertexAttribute.pushSpriteRaster(7161, ValidationStatusSpriteCache.scratch);
             var16.drawRotatedScaled(112, 144, var16.field_z << 4, var16.field_w << 4, -this.animationTicks << 10, 4096);
             ClientException.popRasterState((byte) 126);
             ValidationStatusSpriteCache.scratch.d(var5 - var16.field_z, -var16.field_w + var6, 256);
@@ -72,7 +72,7 @@ final class ValidationStatusWidget extends InteractiveWidget {
           }
           if (var9 > ValidationStatusSpriteCache.scratch.field_x) {
             ValidationStatusSpriteCache.scratch = new Sprite(var9, var10);
-            jq.pushSpriteRaster(7161, ValidationStatusSpriteCache.scratch);
+            LegacyVertexAttribute.pushSpriteRaster(7161, ValidationStatusSpriteCache.scratch);
             var16.drawRotatedScaled(112, 144, var16.field_z << 4, var16.field_w << 4, -this.animationTicks << 10, 4096);
             ClientException.popRasterState((byte) 126);
             ValidationStatusSpriteCache.scratch.d(var5 - var16.field_z, -var16.field_w + var6, 256);
@@ -83,7 +83,7 @@ final class ValidationStatusWidget extends InteractiveWidget {
             return;
           }
           if (var10 <= ValidationStatusSpriteCache.scratch.field_u) {
-            jq.pushSpriteRaster(7161, ValidationStatusSpriteCache.scratch);
+            LegacyVertexAttribute.pushSpriteRaster(7161, ValidationStatusSpriteCache.scratch);
             SoftwareRasterizer.clear();
             var16.drawRotatedScaled(112, 144, var16.field_z << 4, var16.field_w << 4, -this.animationTicks << 10, 4096);
             ClientException.popRasterState((byte) 126);
@@ -95,7 +95,7 @@ final class ValidationStatusWidget extends InteractiveWidget {
             return;
           }
           ValidationStatusSpriteCache.scratch = new Sprite(var9, var10);
-          jq.pushSpriteRaster(7161, ValidationStatusSpriteCache.scratch);
+          LegacyVertexAttribute.pushSpriteRaster(7161, ValidationStatusSpriteCache.scratch);
           var16.drawRotatedScaled(112, 144, var16.field_z << 4, var16.field_w << 4, -this.animationTicks << 10, 4096);
           ClientException.popRasterState((byte) 126);
           ValidationStatusSpriteCache.scratch.d(var5 - var16.field_z, -var16.field_w + var6, 256);
@@ -111,7 +111,7 @@ final class ValidationStatusWidget extends InteractiveWidget {
           var10Lifetime1 = var17.field_w << 1;
           if (ValidationStatusSpriteCache.scratch == null) {
             ValidationStatusSpriteCache.scratch = new Sprite(var9Lifetime1, var10Lifetime1);
-            jq.pushSpriteRaster(7161, ValidationStatusSpriteCache.scratch);
+            LegacyVertexAttribute.pushSpriteRaster(7161, ValidationStatusSpriteCache.scratch);
             var17.drawRotatedScaled(112, 144, var17.field_z << 4, var17.field_w << 4, -this.animationTicks << 10, 4096);
             ClientException.popRasterState((byte) 126);
             ValidationStatusSpriteCache.scratch.d(var5 - var17.field_z, -var17.field_w + var6, 256);
@@ -123,7 +123,7 @@ final class ValidationStatusWidget extends InteractiveWidget {
           }
           if (var9Lifetime1 > ValidationStatusSpriteCache.scratch.field_x) {
             ValidationStatusSpriteCache.scratch = new Sprite(var9Lifetime1, var10Lifetime1);
-            jq.pushSpriteRaster(7161, ValidationStatusSpriteCache.scratch);
+            LegacyVertexAttribute.pushSpriteRaster(7161, ValidationStatusSpriteCache.scratch);
             var17.drawRotatedScaled(112, 144, var17.field_z << 4, var17.field_w << 4, -this.animationTicks << 10, 4096);
             ClientException.popRasterState((byte) 126);
             ValidationStatusSpriteCache.scratch.d(var5 - var17.field_z, -var17.field_w + var6, 256);
@@ -135,7 +135,7 @@ final class ValidationStatusWidget extends InteractiveWidget {
           }
           if (var10Lifetime1 > ValidationStatusSpriteCache.scratch.field_u) {
             ValidationStatusSpriteCache.scratch = new Sprite(var9Lifetime1, var10Lifetime1);
-            jq.pushSpriteRaster(7161, ValidationStatusSpriteCache.scratch);
+            LegacyVertexAttribute.pushSpriteRaster(7161, ValidationStatusSpriteCache.scratch);
             var17.drawRotatedScaled(112, 144, var17.field_z << 4, var17.field_w << 4, -this.animationTicks << 10, 4096);
             ClientException.popRasterState((byte) 126);
             ValidationStatusSpriteCache.scratch.d(var5 - var17.field_z, -var17.field_w + var6, 256);
@@ -146,7 +146,7 @@ final class ValidationStatusWidget extends InteractiveWidget {
             this.update(86, -51, (UiWidget) null, 16);
             return;
           }
-          jq.pushSpriteRaster(7161, ValidationStatusSpriteCache.scratch);
+          LegacyVertexAttribute.pushSpriteRaster(7161, ValidationStatusSpriteCache.scratch);
           SoftwareRasterizer.clear();
           var17.drawRotatedScaled(112, 144, var17.field_z << 4, var17.field_w << 4, -this.animationTicks << 10, 4096);
           ClientException.popRasterState((byte) 126);
@@ -168,7 +168,7 @@ final class ValidationStatusWidget extends InteractiveWidget {
           this.update(86, -51, (UiWidget) null, 16);
           return;
         }
-        if (var8 == qe.VALID) {
+        if (var8 == PerlinNoiseFactory.VALID) {
           var15 = ToolkitRasterStateCacheEntry.field_m[1];
           var15.d(var5 - (var15.field_x >> 1), var6 - (var15.field_u >> 1), 256);
         }

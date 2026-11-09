@@ -55,29 +55,29 @@ final class LoginCredentialFactory {
         if (guard <= 33) {
           LoginCredentialFactory.initializePlayerFromUpgradeSettings(-65);
           SpriteMask.drones[0] = (Drone) ((Object) new PlayerDrone(81920, 61440));
-          SpriteMask.drones[0].speedLevel = ResourceArchive.field_f;
-          SpriteMask.drones[0].bounceLevel = hc.field_f;
-          SpriteMask.drones[0].tractionLevel = LegacyOpenGlEffectManager.field_i;
+          SpriteMask.drones[0].speedLevel = ResourceArchive.selectedSpeedLevel;
+          SpriteMask.drones[0].bounceLevel = hc.selectedBounceLevel;
+          SpriteMask.drones[0].tractionLevel = LegacyOpenGlEffectManager.selectedTractionLevel;
           SpriteMask.drones[0].recomputeUpgradeStats((byte) 35);
-          fa.field_b = 250;
+          AppletTickHistory.field_b = 250;
           if (NextLevelChoiceOverlay.field_d) {
             NextLevelChoiceOverlay.field_d = false;
-            fa.field_b = fa.field_b * 2;
+            AppletTickHistory.field_b = AppletTickHistory.field_b * 2;
             return;
           }
           return;
         }
         SpriteMask.drones[0] = (Drone) ((Object) new PlayerDrone(81920, 61440));
-        SpriteMask.drones[0].speedLevel = ResourceArchive.field_f;
-        SpriteMask.drones[0].bounceLevel = hc.field_f;
-        SpriteMask.drones[0].tractionLevel = LegacyOpenGlEffectManager.field_i;
+        SpriteMask.drones[0].speedLevel = ResourceArchive.selectedSpeedLevel;
+        SpriteMask.drones[0].bounceLevel = hc.selectedBounceLevel;
+        SpriteMask.drones[0].tractionLevel = LegacyOpenGlEffectManager.selectedTractionLevel;
         SpriteMask.drones[0].recomputeUpgradeStats((byte) 35);
-        fa.field_b = 250;
+        AppletTickHistory.field_b = 250;
         if (!NextLevelChoiceOverlay.field_d) {
           return;
         }
         NextLevelChoiceOverlay.field_d = false;
-        fa.field_b = fa.field_b * 2;
+        AppletTickHistory.field_b = AppletTickHistory.field_b * 2;
     }
 
     public static void releaseStatics(byte param0) {
