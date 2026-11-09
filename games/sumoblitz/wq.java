@@ -5,35 +5,35 @@ final class wq {
     static int field_b;
     static String allHiscoresText;
 
-    final static pm a(GraphicsToolkit param0, byte param1) {
-        fw var2 = null;
-        pm var3 = null;
-        pm stackIn_3_0 = null;
-        pm stackIn_14_0 = null;
+    final static ToolkitRasterStateStack rasterStateForToolkit(GraphicsToolkit toolkit, byte guard) {
+        ToolkitRasterStateCacheEntry var2 = null;
+        ToolkitRasterStateStack var3 = null;
+        ToolkitRasterStateStack stackIn_3_0 = null;
+        ToolkitRasterStateStack stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
-          if (param0 == im.field_c) {
+          if (toolkit == im.field_c) {
             stackIn_3_0 = GraphicsToolkit.field_c;
             return stackIn_3_0;
           }
-          var2 = (fw) (HotspotTextWidget.field_N.a(122, (long)param0.toolkitId));
+          var2 = (ToolkitRasterStateCacheEntry) (HotspotTextWidget.field_N.a(122, (long)toolkit.toolkitId));
           if (var2 != null &&
-            param0 == var2.field_k) {
-            var3 = var2.field_l;
+            toolkit == var2.toolkit) {
+            var3 = var2.stateStack;
           } else {
             if (var2 != null) {
               var2.unlink(false);
             }
-            var3 = new pm(param0);
-            HotspotTextWidget.field_N.a(new fw(param0, var3), -1, (long)param0.toolkitId);
+            var3 = new ToolkitRasterStateStack(toolkit);
+            HotspotTextWidget.field_N.a(new ToolkitRasterStateCacheEntry(toolkit, var3), -1, (long)toolkit.toolkitId);
           }
-          im.field_c = param0;
+          im.field_c = toolkit;
           GraphicsToolkit.field_c = var3;
-          if (param1 <= 8) {
+          if (guard <= 8) {
             field_b = 38;
           }
           stackIn_14_0 = var3;
@@ -43,17 +43,17 @@ final class wq {
           var2_ref = decompiledCaughtException;
           stackIn_17_0 = var2_ref;
           stackIn_17_1 = new StringBuilder().append("wq.C(");
-          if (param0 == null) {
+          if (toolkit == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    final synchronized static long a(int param0) {
-        if (param0 >= -5) {
+    final synchronized static long monotonicTimeMillis(int guard) {
+        if (guard >= -5) {
           return 4L;
         }
         long var1 = System.currentTimeMillis();
@@ -106,7 +106,7 @@ final class wq {
             HardwareTextureCache.field_b[var4] = ImageProducerRasterBuffer.a(var8, -16736);
           }
           if (param0) {
-            wq.a(-93);
+            wq.monotonicTimeMillis(-93);
           }
           var10.h((byte) -63);
           var9 = 0;

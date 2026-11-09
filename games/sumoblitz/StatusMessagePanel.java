@@ -20,7 +20,7 @@ final class StatusMessagePanel extends WidgetContainer implements WidgetActionLi
         String stackIn_18_2 = null;
         Throwable decompiledCaughtException = null;
         try {
-          var6 = wd.field_f;
+          var6 = EmailCredentials.field_f;
           synchronized (var6) {
             if (param5 == GridWidgetContainer.field_B) {
               return;
@@ -57,7 +57,7 @@ final class StatusMessagePanel extends WidgetContainer implements WidgetActionLi
           this.field_B = param2;
           this.field_G = param0;
           this.field_C = param1;
-          var4_int = this.field_B != null ? this.field_C.a(this.field_B, 260, this.field_C.field_s) : 0;
+          var4_int = this.field_B != null ? this.field_C.wrappedHeight(this.field_B, 260, this.field_C.ascent) : 0;
           this.setBounds(-127, 0, 0, 22 + var4_int, 288);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "lc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -94,12 +94,12 @@ final class StatusMessagePanel extends WidgetContainer implements WidgetActionLi
     final void renderLayer(int parentX, int parentY, byte guard, int layer) {
         super.renderLayer(parentX, parentY, (byte) -118, layer);
         if (guard < -35) {
-          this.field_C.a(this.field_B, 14 + this.x + parentX, this.y + (parentY + 10), -28 + this.width, this.height, 16777215, -1, 0, 0, this.field_C.field_s);
+          this.field_C.drawParagraph(this.field_B, 14 + this.x + parentX, this.y + (parentY + 10), -28 + this.width, this.height, 16777215, -1, 0, 0, this.field_C.ascent);
           return;
         }
         String var6 = (String) null;
         StatusMessagePanel.a(false, (String) null);
-        this.field_C.a(this.field_B, 14 + this.x + parentX, this.y + (parentY + 10), -28 + this.width, this.height, 16777215, -1, 0, 0, this.field_C.field_s);
+        this.field_C.drawParagraph(this.field_B, 14 + this.x + parentX, this.y + (parentY + 10), -28 + this.width, this.height, 16777215, -1, 0, 0, this.field_C.ascent);
     }
 
     private final void a(byte param0, int param1) {

@@ -13,7 +13,7 @@ final class er {
     int field_g;
 
     final static void createRendererAssets(boolean guard) {
-        GraphicsToolkit var2 = MatchingTextValidator.field_h.a(-117);
+        GraphicsToolkit var2 = MatchingTextValidator.field_h.getToolkit(-117);
         LegacyOpenGlEffect.field_c = var2.createFont(SocketConnector.field_a, ci.field_g, true);
         MessageDialog.field_db = var2.createFont(VertexStreamLayout.field_c, mn.field_b, true);
         uq.field_a = var2.createFont(qr.field_a, OpenGlTransparentWaterEffect.field_i, true);
@@ -49,11 +49,11 @@ final class er {
           field_c = (ResourceArchive) null;
           ts.field_e = DroneDebris.createToolkitSprites(ph.field_a, var2, 28513);
           hh.field_e = DroneDebris.createToolkitSprites(CachedTextLayout.field_h, var2, 28513);
-          HardwareRidgedWaterNoise.field_A = DroneDebris.createToolkitSprites(bk.field_b, var2, 28513);
+          HardwareRidgedWaterNoise.field_A = DroneDebris.createToolkitSprites(RendererSession.field_b, var2, 28513);
           up.field_e = DroneDebris.createToolkitSprites(cd.field_c, var2, 28513);
           UnderageAccountInfoPanel.field_B = ResizingDialog.a(var2, lh.field_k, (byte) -11);
           DroneDebris.createToolkitSprites(Transform3D.field_a, var2, 28513);
-          IntrusiveDeque.field_d = ResizingDialog.a(var2, bl.field_a, (byte) -11);
+          IntrusiveDeque.field_d = ResizingDialog.a(var2, ToolkitRasterStateFrame.field_a, (byte) -11);
           MusicCrossfadeStream.field_q = DroneDebris.createToolkitSprites(uj.field_c, var2, 28513);
           ResizingDialog.a(var2, df.field_d, (byte) -11);
           DroneDebris.createToolkitSprites(DroneChargeParticle.field_v, var2, 28513);
@@ -98,11 +98,11 @@ final class er {
         }
         ts.field_e = DroneDebris.createToolkitSprites(ph.field_a, var2, 28513);
         hh.field_e = DroneDebris.createToolkitSprites(CachedTextLayout.field_h, var2, 28513);
-        HardwareRidgedWaterNoise.field_A = DroneDebris.createToolkitSprites(bk.field_b, var2, 28513);
+        HardwareRidgedWaterNoise.field_A = DroneDebris.createToolkitSprites(RendererSession.field_b, var2, 28513);
         up.field_e = DroneDebris.createToolkitSprites(cd.field_c, var2, 28513);
         UnderageAccountInfoPanel.field_B = ResizingDialog.a(var2, lh.field_k, (byte) -11);
         DroneDebris.createToolkitSprites(Transform3D.field_a, var2, 28513);
-        IntrusiveDeque.field_d = ResizingDialog.a(var2, bl.field_a, (byte) -11);
+        IntrusiveDeque.field_d = ResizingDialog.a(var2, ToolkitRasterStateFrame.field_a, (byte) -11);
         MusicCrossfadeStream.field_q = DroneDebris.createToolkitSprites(uj.field_c, var2, 28513);
         ResizingDialog.a(var2, df.field_d, (byte) -11);
         DroneDebris.createToolkitSprites(DroneChargeParticle.field_v, var2, 28513);

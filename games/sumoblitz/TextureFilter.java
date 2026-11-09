@@ -51,7 +51,7 @@ final class TextureFilter {
               var2.writeInt(48, ValidatedTextInputWidget.field_P);
               InstrumentNoteMask.field_n.write(0, -2, var2.payload, 13);
               cd.field_d = cd.field_d + 1;
-              ShrinkingRingEffect.field_s = wq.a(-109) + 30000L;
+              ShrinkingRingEffect.field_s = wq.monotonicTimeMillis(-109) + 30000L;
             }
             if (cd.field_d == 3) {
               if (InstrumentNoteMask.field_n.available(-91) > 0) {
@@ -62,7 +62,7 @@ final class TextureFilter {
                 }
                 cd.field_d = cd.field_d + 1;
               } else {
-                if (wq.a(-52) > ShrinkingRingEffect.field_s) {
+                if (wq.monotonicTimeMillis(-52) > ShrinkingRingEffect.field_s) {
                   stackIn_27_0 = EmptyWidgetRenderer.a(-2, -89);
                   return stackIn_27_0;
                 }

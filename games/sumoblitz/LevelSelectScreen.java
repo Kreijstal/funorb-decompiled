@@ -62,13 +62,13 @@ final class LevelSelectScreen extends MenuScreen {
           var7 = 0;
           for (var8 = 108; -120 + rl.field_k > var8; var8 += 52) {
             for (var9 = 44; ArchiveCatalog.field_c - 96 > var9; var9 += 112) {
-              if (var7 == 1 + bl.field_e &&
+              if (var7 == 1 + ToolkitRasterStateFrame.field_e &&
                 opacity >= 250 &&
                 !MusicPatchEnvelope.a(8230, 25)) {
                 toolkit.fillRectangle(var9, var8, 100, 42, var6 << 24 | 5023231, 1);
               }
               wo.a(up.field_c, 42, var9, var4_int, 3, toolkit, 100, var8, 1, true);
-              if (var7 <= bl.field_e + 1 &&
+              if (var7 <= ToolkitRasterStateFrame.field_e + 1 &&
                 var7 < 25) {
                 qv.field_k.a(Integer.toString(var7 + 1), 5023231 | var4_int, -1, 28 + var8, var9 + 48, 0);
                 uq.field_a.a(Integer.toString(1 + var7), var4_int + 16777215, -1, var8 + 28, 48 + var9, 0);
@@ -80,7 +80,7 @@ final class LevelSelectScreen extends MenuScreen {
           }
           super.render(opacity, toolkit, guard);
           if (this.field_i != -1) {
-            if (1 + bl.field_e < this.field_i) {
+            if (1 + ToolkitRasterStateFrame.field_e < this.field_i) {
               return;
             }
             var8Lifetime1 = 5 + this.field_i % 5 * 112 + 44;
@@ -180,7 +180,7 @@ final class LevelSelectScreen extends MenuScreen {
         this.field_i = var4;
         if (hk.field_c == 1 &&
           this.field_i != -1 &&
-          this.field_i <= bl.field_e + 1) {
+          this.field_i <= ToolkitRasterStateFrame.field_e + 1) {
           gn.a(16, true);
           ph.gameplaySession.startLevel(this.field_i, false, false);
           StrongCacheReference.switchMenuScreen(-7753, true, -1);
@@ -191,7 +191,7 @@ final class LevelSelectScreen extends MenuScreen {
           for (var5 = 0; var5 < 25; var5++) {
             TextureMetadata.field_f[var5] = true;
           }
-          bl.field_e = 25;
+          ToolkitRasterStateFrame.field_e = 25;
         }
     }
 

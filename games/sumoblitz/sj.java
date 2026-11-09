@@ -38,7 +38,7 @@ final class sj {
           }
           var2 = 0;
           if (DroneChargeParticle.field_s == 2) {
-            var3_long = wq.a(-124) - LegacyOpenGlEffectManager.field_f;
+            var3_long = wq.monotonicTimeMillis(-124) - LegacyOpenGlEffectManager.field_f;
             var2 = (int)((10999L - var3_long) / 1000L);
             if (var2 < 0) {
               var2 = 0;
@@ -47,10 +47,10 @@ final class sj {
           for (var3 = 0; IntIndexHashTable.field_c.length > var3; var3++) {
             var4 = LegacyOpenGlPostProcessManager.field_a[var3];
             if (0 <= var4) {
-              if (nj.field_a.field_g != var4) {
+              if (RendererPreference.field_a.field_g != var4) {
                 var5 = OpenGlCubeTexture.field_j;
               } else {
-                var5 = ds.field_a;
+                var5 = LoginCredentialFactory.field_a;
               }
             } else {
               var5 = ke.field_d;
@@ -99,7 +99,7 @@ final class sj {
             var8Lifetime1 = -(var7Lifetime1 >> 1) + BeveledCheckboxRenderer.field_a;
             if (var4 >= 0) {
               var1_int = var1_int + qc.field_a;
-              if (var4 != nj.field_a.field_g) {
+              if (var4 != RendererPreference.field_a.field_g) {
                 stackIn_48_0 = vp.field_e;
               } else {
                 stackIn_48_0 = PacketBuffer.field_k;
@@ -111,10 +111,10 @@ final class sj {
               var1_int = var1_int + TextLayout.field_b;
             }
             if (var4 < 0) {
-              ValidatedTextInputWidget.field_R.b(var6, var8Lifetime1, var1_int + NodeHashTableIterator.field_d, var5, -1);
+              ValidatedTextInputWidget.field_R.drawText(var6, var8Lifetime1, var1_int + NodeHashTableIterator.field_d, var5, -1);
               var1_int = var1_int + GameClientShell.field_t;
             } else {
-              MouseWheelInput.field_a.b(var6, var8Lifetime1, var1_int + LegacyOpenGlTransform3D.field_f, var5, -1);
+              MouseWheelInput.field_a.drawText(var6, var8Lifetime1, var1_int + LegacyOpenGlTransform3D.field_f, var5, -1);
               var1_int = var1_int + (qc.field_a + (TextLayout.field_b + LegacyOpenGlUnderwaterEffect.field_h));
             }
           }
@@ -138,7 +138,7 @@ final class sj {
 
     final static boolean a(int param0) {
         BeveledTextInputRenderer.field_o = true;
-        field_a = 15000L + wq.a(-13);
+        field_a = 15000L + wq.monotonicTimeMillis(-13);
         if (param0 < -26) {
           return jv.field_a == 11 ? true : false;
         }

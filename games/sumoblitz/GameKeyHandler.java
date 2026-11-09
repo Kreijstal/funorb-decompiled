@@ -10,7 +10,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         int var2_int = 0;
         int var3 = 0;
         try {
-          if (null != wd.field_e) {
+          if (null != EmailCredentials.field_e) {
             var2_int = param0.getKeyChar();
             if (var2_int != 0 &&
               var2_int != 65535 &&
@@ -39,7 +39,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         int var3 = 0;
         int var3Lifetime1;
         try {
-          if (null == wd.field_e) {
+          if (null == EmailCredentials.field_e) {
             return;
           }
           LegacyOpenGlFlowingWaterEffect.field_e = 0;
@@ -131,7 +131,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != wd.field_e) {
+          if (null != EmailCredentials.field_e) {
             LegacyOpenGlFlowingWaterEffect.field_e = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
@@ -182,7 +182,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null == wd.field_e) {
+          if (null == EmailCredentials.field_e) {
             return;
           }
           LegacyOpenGlEnvironmentWaterEffect.field_i = -1;

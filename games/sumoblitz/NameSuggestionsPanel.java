@@ -12,7 +12,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
     final static void a(int param0, float param1, String param2) {
         try {
           ContentTransitionDialog.field_R = param1;
-          hn.field_k = param2;
+          LegacyOpenGlVertexBuffer.field_k = param2;
           if (param0 != 20) {
             field_F = (SpriteData[]) null;
           }
@@ -242,11 +242,11 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
           DisplayModeConfirmationDialog.field_V = SpriteData.b(param3, "", "seeker");
           ph.field_a = SpriteData.b(param3, "", "shadowdudes");
           CachedTextLayout.field_h = SpriteData.b(param3, "", "mod_armour");
-          bk.field_b = SpriteData.b(param3, "", "mod_bomb");
+          RendererSession.field_b = SpriteData.b(param3, "", "mod_bomb");
           cd.field_c = SpriteData.b(param3, "", "mod_spikes");
           lh.field_k = SpriteData.a(param3, "", "zap");
           Transform3D.field_a = SpriteData.b(param3, "", "chargebar");
-          bl.field_a = SpriteData.a(param3, "", "bounceup");
+          ToolkitRasterStateFrame.field_a = SpriteData.a(param3, "", "bounceup");
           uj.field_c = SpriteData.b(param3, "", "powerups");
           df.field_d = SpriteData.a(param3, "", "particle");
           DroneChargeParticle.field_v = SpriteData.b(param3, "", "particles");
@@ -297,7 +297,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
         }
         LegacyBitmapFont var5 = kw.field_b;
         if (this.field_B != null) {
-          var5.a(NodeHashTableIterator.suggestedNamesText, parentX + this.x, this.y + parentY, this.width, 20, 16777215, -1, 0, 0, var5.field_I + var5.field_s);
+          var5.drawParagraph(NodeHashTableIterator.suggestedNamesText, parentX + this.x, this.y + parentY, this.width, 20, 16777215, -1, 0, 0, var5.descent + var5.ascent);
         }
         if (guard > -35) {
           this.renderLayer(120, -19, (byte) -32, 10);

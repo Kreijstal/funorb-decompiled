@@ -53,7 +53,7 @@ final class CheckboxRenderer implements WidgetRenderer {
           }
           if (null != this.font) {
             var10 = this.boxWidth - (-this.boxX - this.textPadding);
-            this.font.a(widget.text, parentX - (-widget.x - var10), this.textTop + widget.y + parentY, -var10 - this.textPadding + widget.width, -(this.textPadding << 1) + widget.height, this.textColor, this.textShadow, this.horizontalAlignment, this.verticalAlignment, 0);
+            this.font.drawParagraph(widget.text, parentX - (-widget.x - var10), this.textTop + widget.y + parentY, -var10 - this.textPadding + widget.width, -(this.textPadding << 1) + widget.height, this.textColor, this.textShadow, this.horizontalAlignment, this.verticalAlignment, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

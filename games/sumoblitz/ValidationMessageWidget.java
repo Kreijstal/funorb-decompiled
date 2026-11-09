@@ -157,18 +157,18 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           if (var6Lifetime5 != GameInstructions.DEBOUNCING &&
             kt.PENDING != var6Lifetime5) {
             if (qr.INVALID == var6Lifetime5) {
-              var18 = fw.field_m[2];
+              var18 = ToolkitRasterStateCacheEntry.field_m[2];
               var18.d(var9, -(var18.field_u >> 1) + var10, 256);
               return;
             }
             if (qe.VALID != var6Lifetime5) {
               return;
             }
-            var19 = fw.field_m[1];
+            var19 = ToolkitRasterStateCacheEntry.field_m[1];
             var19.d(var9, var10 - (var19.field_u >> 1), 256);
             return;
           }
-          var20 = fw.field_m[0];
+          var20 = ToolkitRasterStateCacheEntry.field_m[0];
           var11 = var20.field_z << 1;
           var12 = var20.field_w << 1;
           if (this.field_K == null) {
@@ -209,18 +209,18 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           if (var6Lifetime1 != GameInstructions.DEBOUNCING &&
             kt.PENDING != var6Lifetime1) {
             if (qr.INVALID == var6Lifetime1) {
-              var23 = fw.field_m[2];
+              var23 = ToolkitRasterStateCacheEntry.field_m[2];
               var23.d(var9Lifetime1, -(var23.field_u >> 1) + var10Lifetime1, 256);
               return;
             }
             if (qe.VALID != var6Lifetime1) {
               return;
             }
-            var24 = fw.field_m[1];
+            var24 = ToolkitRasterStateCacheEntry.field_m[1];
             var24.d(var9Lifetime1, var10Lifetime1 - (var24.field_u >> 1), 256);
             return;
           }
-          var25 = fw.field_m[0];
+          var25 = ToolkitRasterStateCacheEntry.field_m[0];
           var11Lifetime1 = var25.field_z << 1;
           var12Lifetime1 = var25.field_w << 1;
           if (this.field_K == null) {
@@ -259,18 +259,18 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           if (var6Lifetime1 != GameInstructions.DEBOUNCING &&
             kt.PENDING != var6Lifetime1) {
             if (qr.INVALID == var6Lifetime1) {
-              var28 = fw.field_m[2];
+              var28 = ToolkitRasterStateCacheEntry.field_m[2];
               var28.d(var9Lifetime2, -(var28.field_u >> 1) + var10Lifetime2, 256);
               return;
             }
             if (qe.VALID != var6Lifetime1) {
               return;
             }
-            var29 = fw.field_m[1];
+            var29 = ToolkitRasterStateCacheEntry.field_m[1];
             var29.d(var9Lifetime2, var10Lifetime2 - (var29.field_u >> 1), 256);
             return;
           }
-          var30 = fw.field_m[0];
+          var30 = ToolkitRasterStateCacheEntry.field_m[0];
           var11Lifetime2 = var30.field_z << 1;
           var12Lifetime2 = var30.field_w << 1;
           if (this.field_K == null) {
@@ -309,18 +309,18 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           if (var6Lifetime2 != GameInstructions.DEBOUNCING &&
             kt.PENDING != var6Lifetime2) {
             if (qr.INVALID == var6Lifetime2) {
-              var33 = fw.field_m[2];
+              var33 = ToolkitRasterStateCacheEntry.field_m[2];
               var33.d(var9Lifetime3, -(var33.field_u >> 1) + var10Lifetime3, 256);
               return;
             }
             if (qe.VALID != var6Lifetime2) {
               return;
             }
-            var34 = fw.field_m[1];
+            var34 = ToolkitRasterStateCacheEntry.field_m[1];
             var34.d(var9Lifetime3, var10Lifetime3 - (var34.field_u >> 1), 256);
             return;
           }
-          var35 = fw.field_m[0];
+          var35 = ToolkitRasterStateCacheEntry.field_m[0];
           var11Lifetime3 = var35.field_z << 1;
           var12Lifetime3 = var35.field_w << 1;
           if (this.field_K == null) {
@@ -355,18 +355,18 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           if (var6Lifetime3 != GameInstructions.DEBOUNCING &&
             kt.PENDING != var6Lifetime3) {
             if (qr.INVALID == var6Lifetime3) {
-              var47 = fw.field_m[2];
+              var47 = ToolkitRasterStateCacheEntry.field_m[2];
               var47.d(var9Lifetime4, -(var47.field_u >> 1) + var10Lifetime4, 256);
               return;
             }
             if (qe.VALID != var6Lifetime3) {
               return;
             }
-            var48 = fw.field_m[1];
+            var48 = ToolkitRasterStateCacheEntry.field_m[1];
             var48.d(var9Lifetime4, var10Lifetime4 - (var48.field_u >> 1), 256);
             return;
           }
-          var49 = fw.field_m[0];
+          var49 = ToolkitRasterStateCacheEntry.field_m[0];
           var11Lifetime4 = var49.field_z << 1;
           var12Lifetime4 = var49.field_w << 1;
           if (this.field_K != null &&
@@ -395,7 +395,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         var9Lifetime5 = this.x + parentX;
         var10Lifetime5 = var54.textOriginY(parentY, (UiWidget) (this), 0) + (var54.layoutText(-3, (UiWidget) (this)).height(true) >> 1);
         if (var6Lifetime4 == GameInstructions.DEBOUNCING) {
-          var38 = fw.field_m[0];
+          var38 = ToolkitRasterStateCacheEntry.field_m[0];
           var11Lifetime5 = var38.field_z << 1;
           var12Lifetime5 = var38.field_w << 1;
           if (this.field_K != null &&
@@ -418,18 +418,18 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         }
         if (kt.PENDING != var6Lifetime4) {
           if (qr.INVALID == var6Lifetime4) {
-            var44 = fw.field_m[2];
+            var44 = ToolkitRasterStateCacheEntry.field_m[2];
             var44.d(var9Lifetime5, -(var44.field_u >> 1) + var10Lifetime5, 256);
             return;
           }
           if (qe.VALID != var6Lifetime4) {
             return;
           }
-          var45 = fw.field_m[1];
+          var45 = ToolkitRasterStateCacheEntry.field_m[1];
           var45.d(var9Lifetime5, var10Lifetime5 - (var45.field_u >> 1), 256);
           return;
         }
-        var39 = fw.field_m[0];
+        var39 = ToolkitRasterStateCacheEntry.field_m[0];
         var16 = var39;
         var11Lifetime6 = var39.field_z << 1;
         var12Lifetime6 = var39.field_w << 1;
@@ -479,7 +479,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
     }
 
     ValidationMessageWidget(InputValidator validation, String helpText, int x, int y, int width, int height) {
-        super(helpText, fw.a(0));
+        super(helpText, ToolkitRasterStateCacheEntry.a(0));
         try {
           this.field_U = helpText;
           this.validator = validation;

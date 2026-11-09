@@ -13,7 +13,7 @@ final class uc {
         if (param0 != 26560) {
           return -46L;
         }
-        return -CacheReferenceNode.field_x + wq.a(param0 - 26634);
+        return -CacheReferenceNode.field_x + wq.monotonicTimeMillis(param0 - 26634);
     }
 
     final static boolean a(byte param0, PlatformTaskDispatcher param1) {

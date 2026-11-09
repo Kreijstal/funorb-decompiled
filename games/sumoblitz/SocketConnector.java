@@ -150,7 +150,7 @@ abstract class SocketConnector {
               }
             }
             if (decompiledFrameRemainder0) {
-              if (se.abcdefghijklmnopqrstuvwxyzabcdefghijText.indexOf(var5Lifetime1) == -1) {
+              if (LoginCredentials.abcdefghijklmnopqrstuvwxyzabcdefghijText.indexOf(var5Lifetime1) == -1) {
                 stackIn_43_0 = gs.field_a;
                 return stackIn_43_0;
               }

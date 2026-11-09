@@ -22,8 +22,8 @@ final class lq {
             java.awt.Component var3 = (java.awt.Component) null;
             lq.a(-23, (java.awt.Component) null);
           }
-          param1.addKeyListener(wd.field_e);
-          param1.addFocusListener(wd.field_e);
+          param1.addKeyListener(EmailCredentials.field_e);
+          param1.addFocusListener(EmailCredentials.field_e);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "lq.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

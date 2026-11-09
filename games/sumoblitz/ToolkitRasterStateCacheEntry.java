@@ -3,10 +3,10 @@
  */
 import java.io.*;
 
-final class fw extends IntrusiveNode {
-    GraphicsToolkit field_k;
+final class ToolkitRasterStateCacheEntry extends IntrusiveNode {
+    GraphicsToolkit toolkit;
     static Sprite[] field_m;
-    pm field_l;
+    ToolkitRasterStateStack stateStack;
 
     final static WidgetTheme c(boolean param0) {
         if (CacheReferenceNode.field_v == null) {
@@ -21,7 +21,7 @@ final class fw extends IntrusiveNode {
           CacheReferenceNode.field_v.tooltipBorderColor = 7697781;
           CacheReferenceNode.field_v.tooltipPaddingTop = 0;
           if (param0) {
-            fw.a(-20);
+            ToolkitRasterStateCacheEntry.a(-20);
             return CacheReferenceNode.field_v;
           }
           return CacheReferenceNode.field_v;
@@ -29,7 +29,7 @@ final class fw extends IntrusiveNode {
         if (!param0) {
           return CacheReferenceNode.field_v;
         }
-        fw.a(-20);
+        ToolkitRasterStateCacheEntry.a(-20);
         return CacheReferenceNode.field_v;
     }
 
@@ -119,24 +119,24 @@ final class fw extends IntrusiveNode {
     public static void releaseStatics(int param0) {
         field_m = null;
         if (param0 > -109) {
-          fw.c(true);
+          ToolkitRasterStateCacheEntry.c(true);
         }
     }
 
-    fw(GraphicsToolkit param0, pm param1) {
+    ToolkitRasterStateCacheEntry(GraphicsToolkit renderer, ToolkitRasterStateStack stack) {
         try {
-          this.field_l = param1;
-          this.field_k = param0;
+          this.stateStack = stack;
+          this.toolkit = renderer;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "fw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "fw.<init>(" + (renderer != null ? "{...}" : "null") + ',' + (stack != null ? "{...}" : "null") + ')');
         }
     }
 
     final static TextWidgetRenderer a(int param0) {
         if (null == AudioServiceThread.field_d) {
-          AudioServiceThread.field_d = new TextWidgetRenderer(jm.field_a, 20, 0, 0, 0, 11579568, -1, 0, 0, jm.field_a.field_s, -1, 2147483647, true);
+          AudioServiceThread.field_d = new TextWidgetRenderer(jm.field_a, 20, 0, 0, 0, 11579568, -1, 0, 0, jm.field_a.ascent, -1, 2147483647, true);
           if (param0 != 0) {
-            fw.c(false);
+            ToolkitRasterStateCacheEntry.c(false);
             return AudioServiceThread.field_d;
           }
           return AudioServiceThread.field_d;
@@ -144,7 +144,7 @@ final class fw extends IntrusiveNode {
         if (param0 == 0) {
           return AudioServiceThread.field_d;
         }
-        fw.c(false);
+        ToolkitRasterStateCacheEntry.c(false);
         return AudioServiceThread.field_d;
     }
 

@@ -43,7 +43,7 @@ final class kt {
         if (param0 < 99) {
           return;
         }
-        tn.b((byte) -113);
+        AlternateUsernameCredentials.b((byte) -113);
     }
 
     final static int a(int param0) {
@@ -61,9 +61,9 @@ final class kt {
         try {
           var1_int = 0;
           var2 = 0;
-          while (wd.c(-105)) {
-            nj.field_a.a((byte) 63);
-            if (nj.field_a.d(-31260)) {
+          while (EmailCredentials.c(-105)) {
+            RendererPreference.field_a.a((byte) 63);
+            if (RendererPreference.field_a.d(-31260)) {
               var1_int = 1;
             }
             if (TextureCombineOperation.field_a != 13) {
@@ -71,15 +71,15 @@ final class kt {
             }
             var2 = 1;
           }
-          nj.field_a.a(true, OpenGlAssemblyProgram.b(AgeValidator.field_f, 1882601153, nb.field_a), OpenGlAssemblyProgram.b(pi.field_e, 1882601153, ko.field_p));
-          if (nj.field_a.d(-31260)) {
+          RendererPreference.field_a.a(true, OpenGlAssemblyProgram.b(AgeValidator.field_f, 1882601153, LoginCredentialType.field_a), OpenGlAssemblyProgram.b(pi.field_e, 1882601153, ko.field_p));
+          if (RendererPreference.field_a.d(-31260)) {
             var1_int = 1;
           }
           var4 = -89 / ((param0 - 67) / 48);
           var3 = 0;
           if (var1_int != 0 &&
-            nj.field_a.field_g >= 0) {
-            var3 = jo.field_b[nj.field_a.field_g];
+            RendererPreference.field_a.field_g >= 0) {
+            var3 = jo.field_b[RendererPreference.field_a.field_g];
             if (var3 == 2) {
               GraphicsToolkit.b(23639);
             } else if (var3 == 5) {
@@ -93,7 +93,7 @@ final class kt {
           }
           if (var3 == 0 &&
             2 == DroneChargeParticle.field_s) {
-            var5 = -LegacyOpenGlEffectManager.field_f + wq.a(-84);
+            var5 = -LegacyOpenGlEffectManager.field_f + wq.monotonicTimeMillis(-84);
             var7 = (int)((10999L - var5) / 1000L);
             if (var7 <= 0) {
               var3 = 2;

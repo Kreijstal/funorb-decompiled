@@ -9,7 +9,7 @@ abstract class GraphicsToolkit {
     static int field_f;
     static String field_d;
     static ResourceArchive field_g;
-    static pm field_c;
+    static ToolkitRasterStateStack field_c;
 
     abstract void setDepthRange(int nearPlane, int farPlane);
 
@@ -142,7 +142,7 @@ abstract class GraphicsToolkit {
 
     final void present(boolean guard) throws RenderPresentationException {
         if (!guard) {
-          field_c = (pm) null;
+          field_c = (ToolkitRasterStateStack) null;
           this.present(0, 0);
           return;
         }

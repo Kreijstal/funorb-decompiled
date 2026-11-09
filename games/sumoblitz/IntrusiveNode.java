@@ -136,7 +136,7 @@ class IntrusiveNode {
         return false;
     }
 
-    final static nj[] b(int param0) {
+    final static RendererPreference[] b(int param0) {
         if (null == HardwareReflectionEffect.field_e) {
           HardwareReflectionEffect.field_e = hg.a(110, new int[]{1, 0});
         }

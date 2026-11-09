@@ -562,11 +562,11 @@ final class ArchiveCatalog {
           }
           var2Lifetime2 = ke.a((byte) 112, "institle");
           if (null != var2Lifetime2) {
-            br.instructionsText = MusicVoice.a(param1 ^ -5, var2Lifetime2);
+            ChatMessage.instructionsText = MusicVoice.a(param1 ^ -5, var2Lifetime2);
           }
           var2Lifetime3 = ke.a((byte) 113, "scoretitle");
           if (var2Lifetime3 != null) {
-            se.scoreText = MusicVoice.a(param1 ^ -5, var2Lifetime3);
+            LoginCredentials.scoreText = MusicVoice.a(param1 ^ -5, var2Lifetime3);
           }
           var2Lifetime4 = ke.a((byte) 88, "nametitle");
           if (var2Lifetime4 != null) {
@@ -1601,7 +1601,7 @@ final class ArchiveCatalog {
                 param2 = ic.a(hh.connectionLostText, new String[]{param2}, (byte) -128);
               }
               if (ih.field_c) {
-                param2 = se.pleaseTryAgainInText;
+                param2 = LoginCredentials.pleaseTryAgainInText;
               }
               hc.field_c.a(param2, param1, 21089);
             }

@@ -126,19 +126,19 @@ final class WidgetTheme {
           if (guard != -22699) {
             this.field_a = 76;
           }
-          var5_int = this.font.a(text);
-          var6 = this.font.field_y + this.font.field_I;
+          var5_int = this.font.stringWidth(text);
+          var6 = this.font.capHeight + this.font.descent;
           var7 = x;
           if (var7 + var5_int + 6 > SoftwareRasterizer.width) {
             var7 = SoftwareRasterizer.width - (var5_int + 6);
           }
-          var8 = 32 - this.font.field_y + y;
+          var8 = 32 - this.font.capHeight + y;
           if (SoftwareRasterizer.height < 6 + (var8 + var6)) {
             var8 = -6 + SoftwareRasterizer.height - var6;
           }
           SoftwareRasterizer.drawRectangle(var7, var8, var5_int + 6, 6 + var6, this.tooltipTextColor);
           SoftwareRasterizer.fillRectangle(var7 + 1, var8 + 1, var5_int + 4, 4 + var6, this.tooltipBackgroundColor);
-          this.font.b(text, var7 + 3, var8 + 3 + this.font.field_y, this.tooltipTextColor, -1);
+          this.font.drawText(text, var7 + 3, var8 + 3 + this.font.capHeight, this.tooltipTextColor, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -217,11 +217,11 @@ final class WidgetTheme {
           var6 = this.tooltipPaddingTop + this.tooltipPaddingBottom;
           var7 = this.tooltipLineHeight;
           if (var7 == -1) {
-            var7 = this.font.field_I + this.font.field_s;
+            var7 = this.font.descent + this.font.ascent;
           }
           var8 = SoftwareRasterizer.width >> 2;
-          var9 = this.font.a(text);
-          var10 = this.font.field_s + this.font.field_I;
+          var9 = this.font.stringWidth(text);
+          var10 = this.font.ascent + this.font.descent;
           var11 = 1;
           if (var9 > var8 ||
             text.indexOf("<br>") != -1) {
@@ -234,11 +234,11 @@ final class WidgetTheme {
             if (null == qn.field_b) {
               qn.field_b = new String[16];
             }
-            var11Lifetime1 = this.font.a(text, new int[]{var12}, qn.field_b);
+            var11Lifetime1 = this.font.breakLines(text, new int[]{var12}, qn.field_b);
             var9 = 0;
             var10 = var10 + var7 * (var11Lifetime1 - 1);
             for (var13Lifetime2 = 0; var13Lifetime2 < var11Lifetime1; var13Lifetime2++) {
-              var14 = this.font.a(qn.field_b[var13Lifetime2]);
+              var14 = this.font.stringWidth(qn.field_b[var13Lifetime2]);
               if (var9 < var14) {
                 var9 = var14;
               }
@@ -249,13 +249,13 @@ final class WidgetTheme {
           if (SoftwareRasterizer.width < var5_int + var12 + var9) {
             var12 = -var5_int + SoftwareRasterizer.width - var9;
           }
-          var14Lifetime1 = 32 + (-this.font.field_y + y);
+          var14Lifetime1 = 32 + (-this.font.capHeight + y);
           if (SoftwareRasterizer.height < var6 + var14Lifetime1 + var10) {
             var14Lifetime1 = -var10 + y - var6;
           }
           SoftwareRasterizer.drawRectangle(var12, var14Lifetime1, var9 + var5_int, var10 + var6, this.tooltipBorderColor);
           SoftwareRasterizer.fillRectangle(var12 + 1, 1 + var14Lifetime1, var5_int + var9 - 2, var6 + var10 - 2, this.tooltipBackgroundColor);
-          this.font.a(text, var12 + this.tooltipPaddingLeft, var14Lifetime1 + this.tooltipPaddingTop, var9, var10, this.tooltipTextColor, -1, 0, 0, var7);
+          this.font.drawParagraph(text, var12 + this.tooltipPaddingLeft, var14Lifetime1 + this.tooltipPaddingTop, var9, var10, this.tooltipTextColor, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -295,7 +295,7 @@ final class WidgetTheme {
         StatefulWidgetRenderer var14Lifetime1;
         StatefulWidgetRenderer var14Lifetime2;
         try {
-          var17 = new TextWidgetRenderer(font, 2, 2, 2236962, 1, 1, 1, font.field_I + (font.field_s + 2));
+          var17 = new TextWidgetRenderer(font, 2, 2, 2236962, 1, 1, 1, font.descent + (font.ascent + 2));
           this.labelRenderer = (WidgetRenderer) ((Object) var17);
           var17.textColor = 16777215;
           var4 = new StatefulWidgetRenderer();

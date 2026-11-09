@@ -133,7 +133,7 @@ final class SpriteOptionRenderer extends TextWidgetRenderer {
           var12 = (widget.height - var10.height) / 2 + (widget.y + parentY);
           var13 = widget.width / 2 + (parentX + widget.x);
           var10.draw(var11, var12);
-          this.font.a(this.widgetText(true, widget), var13, parentY, var9, -1);
+          this.font.drawCentered(this.widgetText(true, widget), var13, parentY, var9, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

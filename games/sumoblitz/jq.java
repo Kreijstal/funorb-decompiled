@@ -4,7 +4,7 @@
 final class jq {
     static TextureCombineSource TEXTURE;
 
-    jq(fk param0, int param1, int param2, int param3) {
+    jq(LegacyVertexBuffer param0, int param1, int param2, int param3) {
     }
 
     final static void a(int param0, int param1) {

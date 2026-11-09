@@ -4,7 +4,7 @@
 abstract class r extends DualLinkNode {
     static int[] field_r;
 
-    final static br a(boolean param0, byte param1) {
+    final static ChatMessage readChatMessage(boolean quickChat, byte guard) {
         boolean stackIn_3_0 = false;
         int stackIn_11_0 = 0;
         int[] stackIn_24_0 = null;
@@ -16,24 +16,24 @@ abstract class r extends DualLinkNode {
         Exception var6 = null;
         int var7 = 0;
         pl var8 = null;
-        oq var9 = null;
+        QuickChatPhrase var9 = null;
         var7 = Sumoblitz.field_L ? 1 : 0;
         var8 = ig.field_a;
         var2 = var8;
         var3 = var8.readUnsignedByte(-31302);
-        jb.field_h = 127 & var3;
+        UsernameCredentials.field_h = 127 & var3;
         stackIn_3_0 = (0 != (var3 & 128));
-        is.field_a = stackIn_3_0;
+        QuickChatPhraseProvider.field_a = stackIn_3_0;
         wn.field_a = var8.readUnsignedByte(-31302);
         ReassignUpgradesScreen.field_j = var8.readLong((byte) 113);
-        if (2 == jb.field_h) {
+        if (2 == UsernameCredentials.field_h) {
           eh.field_c = var8.readUnsignedShort(255);
           CacheReferenceNode.field_w = var8.readUnsignedMedium((byte) 126);
         } else {
           CacheReferenceNode.field_w = 0;
           eh.field_c = 0;
         }
-        if (param1 >= -51) {
+        if (guard >= -51) {
           field_r = (int[]) null;
         }
         stackIn_11_0 = (var8.readUnsignedByte(-31302) != 1) ? 0 : 1;
@@ -44,26 +44,26 @@ abstract class r extends DualLinkNode {
         } else {
           MarkerTrackWidget.field_E = var8.readCp1252String(-1);
         }
-        if (jb.field_h == 1) {
+        if (UsernameCredentials.field_h == 1) {
           var8.readUnsignedShort(255);
           var8.readCp1252String(-1);
         } else {
-          if (4 == jb.field_h) {
+          if (4 == UsernameCredentials.field_h) {
             var8.readUnsignedShort(255);
             var8.readCp1252String(-1);
           }
         }
-        if (!param0) {
-          oi.field_c = jb.a(var8, 80, -14832);
+        if (!quickChat) {
+          oi.field_c = UsernameCredentials.readHuffmanText(var8, 80, -14832);
           EmptyWidgetRenderer.field_c = null;
-          return new br(param0);
+          return new ChatMessage(quickChat);
         }
         var5 = var8.readUnsignedShort(255);
         try {
-          var9 = kb.field_c.a(var5, -32769);
-          oi.field_c = var9.f(1118);
+          var9 = LegacyOpenGlBuffer.field_c.getPhrase(var5, -32769);
+          oi.field_c = var9.previewText(1118);
           if (!MarkerTrackWidget.field_E.equals(qv.field_o)) {
-            stackIn_24_0 = var9.field_u;
+            stackIn_24_0 = var9.responseIds;
           } else {
             stackIn_24_0 = null;
           }
@@ -74,9 +74,9 @@ abstract class r extends DualLinkNode {
           IntrusiveNode.reportClientError("CC1", (Throwable) ((Object) var6), 0);
           EmptyWidgetRenderer.field_c = null;
           oi.field_c = null;
-          return new br(param0);
+          return new ChatMessage(quickChat);
         }
-        return new br(param0);
+        return new ChatMessage(quickChat);
     }
 
     public static void releaseStatics(int param0) {

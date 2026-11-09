@@ -2,54 +2,54 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class LegacyBitmapFont extends DualLinkNode {
-    private int[] field_A;
-    private int[] field_u;
-    int field_I;
-    private int[] field_L;
-    private int[] field_K;
-    private byte[] field_D;
-    int field_s;
-    private IndexedSprite[] field_P;
-    int field_F;
-    int field_y;
-    private static StringBuilder field_w;
-    private static int field_x;
-    private static int field_v;
-    private static int field_H;
-    private static int field_B;
-    private static int field_E;
-    private int[] field_O;
-    private static int field_J;
-    private static int field_M;
-    private static int field_z;
-    private static int field_r;
-    private int[] field_t;
-    private static String[] field_N;
-    private static int field_C;
+    private int[] glyphOffsetX;
+    private int[] inlineSpriteHeights;
+    int descent;
+    private int[] advances;
+    private int[] glyphHeights;
+    private byte[] kerning;
+    int ascent;
+    private IndexedSprite[] inlineSprites;
+    int baselineOffset;
+    int capHeight;
+    private static StringBuilder lineBuilder;
+    private static int strikethroughColor;
+    private static int underlineColor;
+    private static int textColor;
+    private static int justificationCarryQ8;
+    private static int justificationStepQ8;
+    private int[] glyphWidths;
+    private static int shadowColor;
+    private static int defaultAlpha;
+    private static int defaultShadowColor;
+    private static int defaultTextColor;
+    private int[] glyphOffsetY;
+    private static String[] lineBuffer;
+    private static int alpha;
 
-    final int a(char param0) {
-        return this.field_L[HardwareReflectionEffect.a(true, param0) & 255];
+    final int charWidth(char character) {
+        return this.advances[HardwareReflectionEffect.a(true, character) & 255];
     }
 
-    private final void a(int param0, int param1) {
-        field_x = -1;
-        field_v = -1;
-        field_z = param1;
-        field_J = param1;
-        field_r = param0;
-        field_H = param0;
-        field_M = 256;
-        field_C = 256;
-        field_E = 0;
-        field_B = 0;
+    private final void resetStyle(int color, int shadow) {
+        strikethroughColor = -1;
+        underlineColor = -1;
+        defaultShadowColor = shadow;
+        shadowColor = shadow;
+        defaultTextColor = color;
+        textColor = color;
+        defaultAlpha = 256;
+        alpha = 256;
+        justificationStepQ8 = 0;
+        justificationCarryQ8 = 0;
     }
 
     public static void releaseStatics() {
-        field_w = null;
-        field_N = null;
+        lineBuilder = null;
+        lineBuffer = null;
     }
 
-    final int a(String param0) {
+    final int stringWidth(String text) {
         int var6 = 0;
         Throwable decompiledCaughtException = null;
         int var2 = 0;
@@ -61,20 +61,20 @@ abstract class LegacyBitmapFont extends DualLinkNode {
         int var9_int = 0;
         Exception var9 = null;
         CharSequence var10 = null;
-        if (param0 == null) {
+        if (text == null) {
           return 0;
         }
         var2 = -1;
         var3 = 0;
         var4 = 0;
-        var5 = param0.length();
+        var5 = text.length();
         for (var6 = 0; var6 < var5; var6++) {
           boolean decompiledFrameRemainder0 = true;
-          var7 = param0.charAt(var6);
+          var7 = text.charAt(var6);
           if (var7 != 60) {
             if (var7 == 62 &&
               var2 != -1) {
-              var8 = param0.substring(var2 + 1, var6).toLowerCase();
+              var8 = text.substring(var2 + 1, var6).toLowerCase();
               var2 = -1;
               if (!var8.equals("lt")) {
                 if (!var8.equals("gt")) {
@@ -88,7 +88,7 @@ abstract class LegacyBitmapFont extends DualLinkNode {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
                                   var9_int = no.a((byte) -128, var10);
-                                  var4 = var4 + this.field_P[var9_int].fullWidth;
+                                  var4 = var4 + this.inlineSprites[var9_int].fullWidth;
                                   var3 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -125,10 +125,10 @@ abstract class LegacyBitmapFont extends DualLinkNode {
             if ((decompiledFrameRemainder0) &&
               (var2 == -1)) {
               var7 = (char)(HardwareReflectionEffect.a(true, (char) var7) & 255);
-              var4 = var4 + this.field_L[var7];
-              if (this.field_D != null &&
+              var4 = var4 + this.advances[var7];
+              if (this.kerning != null &&
                 var3 != 0) {
-                var4 = var4 + this.field_D[(var3 << 8) + var7];
+                var4 = var4 + this.kerning[(var3 << 8) + var7];
               }
               var3 = var7;
             }
@@ -139,7 +139,7 @@ abstract class LegacyBitmapFont extends DualLinkNode {
         return var4;
     }
 
-    private final void a(byte[] param0) {
+    private final void decodeMetrics(byte[] data) {
         int var3_int = 0;
         int incrementValue$6 = 0;
         int incrementValue$5 = 0;
@@ -171,18 +171,18 @@ abstract class LegacyBitmapFont extends DualLinkNode {
         int var8Lifetime2;
         int var7Lifetime1;
         int var7Lifetime2;
-        this.field_L = new int[256];
-        if (param0.length == 257) {
-          for (var2 = 0; var2 < this.field_L.length; var2++) {
-            this.field_L[var2] = param0[var2] & 255;
+        this.advances = new int[256];
+        if (data.length == 257) {
+          for (var2 = 0; var2 < this.advances.length; var2++) {
+            this.advances[var2] = data[var2] & 255;
           }
-          this.field_F = param0[256] & 255;
+          this.baselineOffset = data[256] & 255;
         } else {
           var2 = 0;
           for (var3_int = 0; var3_int < 256; var3_int++) {
             incrementValue$6 = var2;
             var2++;
-            this.field_L[var3_int] = param0[incrementValue$6] & 255;
+            this.advances[var3_int] = data[incrementValue$6] & 255;
           }
           var14 = new int[256];
           var10 = var14;
@@ -193,12 +193,12 @@ abstract class LegacyBitmapFont extends DualLinkNode {
           for (var5_int = 0; var5_int < 256; var5_int++) {
             incrementValue$5 = var2;
             var2++;
-            var3[var5_int] = param0[incrementValue$5] & 255;
+            var3[var5_int] = data[incrementValue$5] & 255;
           }
           for (var5_intLifetime1 = 0; var5_intLifetime1 < 256; var5_intLifetime1++) {
             incrementValue$4 = var2;
             var2++;
-            var4[var5_intLifetime1] = param0[incrementValue$4] & 255;
+            var4[var5_intLifetime1] = data[incrementValue$4] & 255;
           }
           var15 = new byte[256][];
           var11 = var15;
@@ -210,7 +210,7 @@ abstract class LegacyBitmapFont extends DualLinkNode {
             for (var8 = 0; var8 < var15[var6_int].length; var8++) {
               incrementValue$3 = var2;
               var2++;
-              var7 = (byte)(var7 + param0[incrementValue$3]);
+              var7 = (byte)(var7 + data[incrementValue$3]);
               var15[var6_int][var8] = (byte)var7;
             }
           }
@@ -224,27 +224,27 @@ abstract class LegacyBitmapFont extends DualLinkNode {
             for (var9 = 0; var9 < var16[var7Lifetime1].length; var9++) {
               incrementValue$1 = var2;
               var2++;
-              var8Lifetime1 = (byte)(var8Lifetime1 + param0[incrementValue$1]);
+              var8Lifetime1 = (byte)(var8Lifetime1 + data[incrementValue$1]);
               var16[var7Lifetime1][var9] = (byte)var8Lifetime1;
             }
           }
-          this.field_D = new byte[65536];
+          this.kerning = new byte[65536];
           for (var7Lifetime2 = 0; var7Lifetime2 < 256; var7Lifetime2++) {
             if (var7Lifetime2 != 32 &&
               var7Lifetime2 != 160) {
               for (var8Lifetime2 = 0; var8Lifetime2 < 256; var8Lifetime2++) {
                 if (var8Lifetime2 != 32 &&
                   var8Lifetime2 != 160) {
-                  this.field_D[(var7Lifetime2 << 8) + var8Lifetime2] = (byte)LegacyBitmapFont.a(var15, var16, var17, this.field_L, var14, var7Lifetime2, var8Lifetime2);
+                  this.kerning[(var7Lifetime2 << 8) + var8Lifetime2] = (byte)LegacyBitmapFont.kerningOffset(var15, var16, var17, this.advances, var14, var7Lifetime2, var8Lifetime2);
                 }
               }
             }
           }
-          this.field_F = var17[32] + var14[32];
+          this.baselineOffset = var17[32] + var14[32];
         }
     }
 
-    private final void a(String param0, int param1) {
+    private final void setJustification(String text, int targetWidth) {
         int var6 = 0;
         int var3;
         int var4;
@@ -252,9 +252,9 @@ abstract class LegacyBitmapFont extends DualLinkNode {
         int var7;
         var3 = 0;
         var4 = 0;
-        var5 = param0.length();
+        var5 = text.length();
         for (var6 = 0; var6 < var5; var6++) {
-          var7 = param0.charAt(var6);
+          var7 = text.charAt(var6);
           if (var7 != 60) {
             if (var7 != 62) {
               if (var4 == 0 &&
@@ -269,80 +269,80 @@ abstract class LegacyBitmapFont extends DualLinkNode {
           }
         }
         if (var3 > 0) {
-          field_E = (param1 - this.a(param0) << 8) / var3;
+          justificationStepQ8 = (targetWidth - this.stringWidth(text) << 8) / var3;
         }
     }
 
-    final int a(String param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
+    final int drawParagraphAlpha(String text, int x, int y, int width, int height, int color, int shadow, int opacity, int alignX, int alignY, int lineSpacing) {
         int[] var12;
         int var13;
         int var14;
         int var15;
         int var15Lifetime1;
-        if (param0 == null) {
+        if (text == null) {
           return 0;
         }
-        this.a(param5, param6, param7);
-        if (param10 == 0) {
-          param10 = this.field_F;
+        this.resetStyleAlpha(color, shadow, opacity);
+        if (lineSpacing == 0) {
+          lineSpacing = this.baselineOffset;
         }
-        var12 = new int[]{param3};
-        if (param4 < this.field_s + this.field_I + param10 &&
-          param4 < param10 + param10) {
+        var12 = new int[]{width};
+        if (height < this.ascent + this.descent + lineSpacing &&
+          height < lineSpacing + lineSpacing) {
           var12 = null;
         }
-        var13 = this.a(param0, var12, field_N);
-        if (param9 == 3 &&
+        var13 = this.breakLines(text, var12, lineBuffer);
+        if (alignY == 3 &&
           var13 == 1) {
-          param9 = 1;
+          alignY = 1;
         }
-        if (param9 != 0) {
-          if (param9 != 1) {
-            if (param9 != 2) {
-              var15 = (param4 - this.field_s - this.field_I - (var13 - 1) * param10) / (var13 + 1);
+        if (alignY != 0) {
+          if (alignY != 1) {
+            if (alignY != 2) {
+              var15 = (height - this.ascent - this.descent - (var13 - 1) * lineSpacing) / (var13 + 1);
               if (var15 < 0) {
                 var15 = 0;
               }
-              var14 = param2 + this.field_s + var15;
-              param10 = param10 + var15;
+              var14 = y + this.ascent + var15;
+              lineSpacing = lineSpacing + var15;
             } else {
-              var14 = param2 + param4 - this.field_I - (var13 - 1) * param10;
+              var14 = y + height - this.descent - (var13 - 1) * lineSpacing;
             }
           } else {
-            var14 = param2 + this.field_s + (param4 - this.field_s - this.field_I - (var13 - 1) * param10) / 2;
+            var14 = y + this.ascent + (height - this.ascent - this.descent - (var13 - 1) * lineSpacing) / 2;
           }
         } else {
-          var14 = param2 + this.field_s;
+          var14 = y + this.ascent;
         }
         for (var15Lifetime1 = 0; var15Lifetime1 < var13; var15Lifetime1++) {
-          if (param8 != 0) {
-            if (param8 != 1) {
-              if (param8 != 2) {
+          if (alignX != 0) {
+            if (alignX != 1) {
+              if (alignX != 2) {
                 if (var15Lifetime1 != var13 - 1) {
-                  this.a(field_N[var15Lifetime1], param3);
-                  this.b(field_N[var15Lifetime1], param1, var14);
-                  field_E = 0;
+                  this.setJustification(lineBuffer[var15Lifetime1], width);
+                  this.drawStyledText(lineBuffer[var15Lifetime1], x, var14);
+                  justificationStepQ8 = 0;
                 } else {
-                  this.b(field_N[var15Lifetime1], param1, var14);
+                  this.drawStyledText(lineBuffer[var15Lifetime1], x, var14);
                 }
-                var14 = var14 + param10;
+                var14 = var14 + lineSpacing;
               } else {
-                this.b(field_N[var15Lifetime1], param1 + param3 - this.a(field_N[var15Lifetime1]), var14);
-                var14 = var14 + param10;
+                this.drawStyledText(lineBuffer[var15Lifetime1], x + width - this.stringWidth(lineBuffer[var15Lifetime1]), var14);
+                var14 = var14 + lineSpacing;
               }
             } else {
-              this.b(field_N[var15Lifetime1], param1 + (param3 - this.a(field_N[var15Lifetime1])) / 2, var14);
-              var14 = var14 + param10;
+              this.drawStyledText(lineBuffer[var15Lifetime1], x + (width - this.stringWidth(lineBuffer[var15Lifetime1])) / 2, var14);
+              var14 = var14 + lineSpacing;
             }
           } else {
-            this.b(field_N[var15Lifetime1], param1, var14);
-            var14 = var14 + param10;
+            this.drawStyledText(lineBuffer[var15Lifetime1], x, var14);
+            var14 = var14 + lineSpacing;
           }
         }
         return var13;
     }
 
-    private final void b(String param0, int param1, int param2) {
+    private final void drawStyledText(String text, int x, int baselineY) {
         int var7 = 0;
         int stackIn_27_0 = 0;
         Throwable decompiledCaughtException = null;
@@ -358,17 +358,17 @@ abstract class LegacyBitmapFont extends DualLinkNode {
         int var11 = 0;
         int var12 = 0;
         CharSequence var13 = null;
-        param2 = param2 - this.field_F;
+        baselineY = baselineY - this.baselineOffset;
         var4 = -1;
         var5 = 0;
-        var6 = param0.length();
+        var6 = text.length();
         for (var7 = 0; var7 < var6; var7++) {
           boolean decompiledFrameRemainder0 = true;
-          var8 = param0.charAt(var7);
+          var8 = text.charAt(var7);
           if (var8 != 60) {
             if (var8 == 62 &&
               var4 != -1) {
-              var9_ref_String = param0.substring(var4 + 1, var7).toLowerCase();
+              var9_ref_String = text.substring(var4 + 1, var7).toLowerCase();
               var4 = -1;
               if (!var9_ref_String.equals("lt")) {
                 if (!var9_ref_String.equals("gt")) {
@@ -379,24 +379,24 @@ abstract class LegacyBitmapFont extends DualLinkNode {
                           if (!var9_ref_String.equals("copy")) {
                             if (!var9_ref_String.equals("reg")) {
                               if (!var9_ref_String.startsWith("img=")) {
-                                this.b(var9_ref_String);
+                                this.applyStyleTag(var9_ref_String);
                               } else {
                                 try {
                                   var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
                                   var10 = no.a((byte) -128, var13);
-                                  var11_ref_pb = this.field_P[var10];
-                                  if (this.field_u == null) {
+                                  var11_ref_pb = this.inlineSprites[var10];
+                                  if (this.inlineSpriteHeights == null) {
                                     stackIn_27_0 = var11_ref_pb.fullHeight;
                                   } else {
-                                    stackIn_27_0 = this.field_u[var10];
+                                    stackIn_27_0 = this.inlineSpriteHeights[var10];
                                   }
                                   var12 = stackIn_27_0;
-                                  if (field_C != 256) {
-                                    var11_ref_pb.drawAlpha(param1, param2 + this.field_F - var12, field_C);
+                                  if (alpha != 256) {
+                                    var11_ref_pb.drawAlpha(x, baselineY + this.baselineOffset - var12, alpha);
                                   } else {
-                                    var11_ref_pb.draw(param1, param2 + this.field_F - var12);
+                                    var11_ref_pb.draw(x, baselineY + this.baselineOffset - var12);
                                   }
-                                  param1 = param1 + var11_ref_pb.fullWidth;
+                                  x = x + var11_ref_pb.fullWidth;
                                   var5 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -433,38 +433,38 @@ abstract class LegacyBitmapFont extends DualLinkNode {
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
               var8 = (char)(HardwareReflectionEffect.a(true, (char) var8) & 255);
-              if (this.field_D != null &&
+              if (this.kerning != null &&
                 var5 != 0) {
-                param1 = param1 + this.field_D[(var5 << 8) + var8];
+                x = x + this.kerning[(var5 << 8) + var8];
               }
-              var9 = this.field_O[var8];
-              var10 = this.field_K[var8];
-              var11 = param1;
+              var9 = this.glyphWidths[var8];
+              var10 = this.glyphHeights[var8];
+              var11 = x;
               if (var8 == 32) {
-                if (field_E > 0) {
-                  field_B = field_B + field_E;
-                  param1 = param1 + (field_B >> 8);
-                  field_B = field_B & 255;
+                if (justificationStepQ8 > 0) {
+                  justificationCarryQ8 = justificationCarryQ8 + justificationStepQ8;
+                  x = x + (justificationCarryQ8 >> 8);
+                  justificationCarryQ8 = justificationCarryQ8 & 255;
                 }
               } else {
-                if (field_C != 256) {
-                  if (field_J != -1) {
-                    this.a(var8, param1 + this.field_A[var8] + 1, param2 + this.field_t[var8] + 1, var9, var10, field_J, field_C, true);
+                if (alpha != 256) {
+                  if (shadowColor != -1) {
+                    this.drawGlyphAlpha(var8, x + this.glyphOffsetX[var8] + 1, baselineY + this.glyphOffsetY[var8] + 1, var9, var10, shadowColor, alpha, true);
                   }
-                  this.a(var8, param1 + this.field_A[var8], param2 + this.field_t[var8], var9, var10, field_H, field_C, false);
+                  this.drawGlyphAlpha(var8, x + this.glyphOffsetX[var8], baselineY + this.glyphOffsetY[var8], var9, var10, textColor, alpha, false);
                 } else {
-                  if (field_J != -1) {
-                    this.a(var8, param1 + this.field_A[var8] + 1, param2 + this.field_t[var8] + 1, var9, var10, field_J, true);
+                  if (shadowColor != -1) {
+                    this.drawGlyph(var8, x + this.glyphOffsetX[var8] + 1, baselineY + this.glyphOffsetY[var8] + 1, var9, var10, shadowColor, true);
                   }
-                  this.a(var8, param1 + this.field_A[var8], param2 + this.field_t[var8], var9, var10, field_H, false);
+                  this.drawGlyph(var8, x + this.glyphOffsetX[var8], baselineY + this.glyphOffsetY[var8], var9, var10, textColor, false);
                 }
               }
-              param1 = param1 + this.field_L[var8];
-              if (field_x != -1) {
-                SoftwareRasterizer.drawHorizontalLine(var11, param2 + (int)((double)this.field_F * 0.7), param1 - var11, field_x);
+              x = x + this.advances[var8];
+              if (strikethroughColor != -1) {
+                SoftwareRasterizer.drawHorizontalLine(var11, baselineY + (int)((double)this.baselineOffset * 0.7), x - var11, strikethroughColor);
               }
-              if (field_v != -1) {
-                SoftwareRasterizer.drawHorizontalLine(var11, param2 + this.field_F + 1, param1 - var11, field_v);
+              if (underlineColor != -1) {
+                SoftwareRasterizer.drawHorizontalLine(var11, baselineY + this.baselineOffset + 1, x - var11, underlineColor);
               }
               var5 = var8;
             }
@@ -474,47 +474,47 @@ abstract class LegacyBitmapFont extends DualLinkNode {
         }
     }
 
-    private final void a(int param0, int param1, int param2) {
-        field_x = -1;
-        field_v = -1;
-        field_z = param1;
-        field_J = param1;
-        field_r = param0;
-        field_H = param0;
-        field_M = param2;
-        field_C = param2;
-        field_E = 0;
-        field_B = 0;
+    private final void resetStyleAlpha(int color, int shadow, int opacity) {
+        strikethroughColor = -1;
+        underlineColor = -1;
+        defaultShadowColor = shadow;
+        shadowColor = shadow;
+        defaultTextColor = color;
+        textColor = color;
+        defaultAlpha = opacity;
+        alpha = opacity;
+        justificationStepQ8 = 0;
+        justificationCarryQ8 = 0;
     }
 
-    final int a(String param0, int param1, int param2) {
-        if (param2 == 0) {
-          param2 = this.field_F;
+    final int wrappedHeight(String text, int maxWidth, int lineSpacing) {
+        if (lineSpacing == 0) {
+          lineSpacing = this.baselineOffset;
         }
-        int var4 = this.a(param0, new int[]{param1}, field_N);
-        int var5 = (var4 - 1) * param2;
-        return this.field_s + var5 + this.field_I;
+        int var4 = this.breakLines(text, new int[]{maxWidth}, lineBuffer);
+        int var5 = (var4 - 1) * lineSpacing;
+        return this.ascent + var5 + this.descent;
     }
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7);
+    abstract void drawGlyphAlpha(int glyph, int x, int y, int width, int height, int color, int opacity, boolean shadow);
 
-    final void b(String param0, int param1, int param2, int param3, int param4) {
-        if (param0 == null) {
+    final void drawText(String text, int x, int baselineY, int color, int shadow) {
+        if (text == null) {
           return;
         }
-        this.a(param3, param4);
-        this.b(param0, param1, param2);
+        this.resetStyle(color, shadow);
+        this.drawStyledText(text, x, baselineY);
     }
 
-    final void a(String param0, int param1, int param2, int param3, int param4) {
-        if (param0 == null) {
+    final void drawCentered(String text, int centerX, int baselineY, int color, int shadow) {
+        if (text == null) {
           return;
         }
-        this.a(param3, param4);
-        this.b(param0, param1 - this.a(param0) / 2, param2);
+        this.resetStyle(color, shadow);
+        this.drawStyledText(text, centerX - this.stringWidth(text) / 2, baselineY);
     }
 
-    private final static int a(byte[][] param0, byte[][] param1, int[] param2, int[] param3, int[] param4, int param5, int param6) {
+    private final static int kerningOffset(byte[][] leadingProfiles, byte[][] trailingProfiles, int[] profileStarts, int[] advances, int[] profileHeights, int leftGlyph, int rightGlyph) {
         int var18 = 0;
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
@@ -530,10 +530,10 @@ abstract class LegacyBitmapFont extends DualLinkNode {
         int var16;
         int var17;
         int var19;
-        var7 = param2[param5];
-        var8 = var7 + param4[param5];
-        var9 = param2[param6];
-        var10 = var9 + param4[param6];
+        var7 = profileStarts[leftGlyph];
+        var8 = var7 + profileHeights[leftGlyph];
+        var9 = profileStarts[rightGlyph];
+        var10 = var9 + profileHeights[rightGlyph];
         var11 = var7;
         if (var9 > var7) {
           var11 = var9;
@@ -542,12 +542,12 @@ abstract class LegacyBitmapFont extends DualLinkNode {
         if (var10 < var8) {
           var12 = var10;
         }
-        var13 = param3[param5];
-        if (param3[param6] < var13) {
-          var13 = param3[param6];
+        var13 = advances[leftGlyph];
+        if (advances[rightGlyph] < var13) {
+          var13 = advances[rightGlyph];
         }
-        var14 = param1[param5];
-        var15 = param0[param6];
+        var14 = trailingProfiles[leftGlyph];
+        var15 = leadingProfiles[rightGlyph];
         var16 = var11 - var7;
         var17 = var11 - var9;
         for (var18 = var11; var18 < var12; var18++) {
@@ -563,15 +563,15 @@ abstract class LegacyBitmapFont extends DualLinkNode {
         return -var13;
     }
 
-    final int a(String param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        return this.a(param0, param1, param2, param3, param4, param5, param6, 256, param7, param8, param9);
+    final int drawParagraph(String text, int x, int y, int width, int height, int color, int shadow, int alignX, int alignY, int lineSpacing) {
+        return this.drawParagraphAlpha(text, x, y, width, height, color, shadow, 256, alignX, alignY, lineSpacing);
     }
 
-    final int b(String param0, int param1) {
-        return this.a(param0, new int[]{param1}, field_N);
+    final int lineCount(String text, int maxWidth) {
+        return this.breakLines(text, new int[]{maxWidth}, lineBuffer);
     }
 
-    private final void b(String param0) {
+    private final void applyStyleTag(String tag) {
         Throwable decompiledCaughtException = null;
         Exception var2 = null;
         CharSequence var3 = null;
@@ -580,65 +580,65 @@ abstract class LegacyBitmapFont extends DualLinkNode {
         CharSequence var6 = null;
         CharSequence var7 = null;
         try {
-          if (!param0.startsWith("col=")) {
-            if (!param0.equals("/col")) {
-              if (!param0.startsWith("trans=")) {
-                if (!param0.equals("/trans")) {
-                  if (!param0.startsWith("str=")) {
-                    if (!param0.equals("str")) {
-                      if (!param0.equals("/str")) {
-                        if (!param0.startsWith("u=")) {
-                          if (!param0.equals("u")) {
-                            if (!param0.equals("/u")) {
-                              if (!param0.startsWith("shad=")) {
-                                if (!param0.equals("shad")) {
-                                  if (!param0.equals("/shad")) {
-                                    if (param0.equals("br")) {
-                                      this.a(field_r, field_z, field_M);
+          if (!tag.startsWith("col=")) {
+            if (!tag.equals("/col")) {
+              if (!tag.startsWith("trans=")) {
+                if (!tag.equals("/trans")) {
+                  if (!tag.startsWith("str=")) {
+                    if (!tag.equals("str")) {
+                      if (!tag.equals("/str")) {
+                        if (!tag.startsWith("u=")) {
+                          if (!tag.equals("u")) {
+                            if (!tag.equals("/u")) {
+                              if (!tag.startsWith("shad=")) {
+                                if (!tag.equals("shad")) {
+                                  if (!tag.equals("/shad")) {
+                                    if (tag.equals("br")) {
+                                      this.resetStyleAlpha(defaultTextColor, defaultShadowColor, defaultAlpha);
                                     }
                                   } else {
-                                    field_J = field_z;
+                                    shadowColor = defaultShadowColor;
                                   }
                                 } else {
-                                  field_J = 0;
+                                  shadowColor = 0;
                                 }
                               } else {
-                                var7 = (CharSequence) ((Object) param0.substring(5));
-                                field_J = ea.a((byte) -73, var7, 16);
+                                var7 = (CharSequence) ((Object) tag.substring(5));
+                                shadowColor = ea.a((byte) -73, var7, 16);
                               }
                             } else {
-                              field_v = -1;
+                              underlineColor = -1;
                             }
                           } else {
-                            field_v = 0;
+                            underlineColor = 0;
                           }
                         } else {
-                          var6 = (CharSequence) ((Object) param0.substring(2));
-                          field_v = ea.a((byte) -73, var6, 16);
+                          var6 = (CharSequence) ((Object) tag.substring(2));
+                          underlineColor = ea.a((byte) -73, var6, 16);
                         }
                       } else {
-                        field_x = -1;
+                        strikethroughColor = -1;
                       }
                     } else {
-                      field_x = 8388608;
+                      strikethroughColor = 8388608;
                     }
                   } else {
-                    var5 = (CharSequence) ((Object) param0.substring(4));
-                    field_x = ea.a((byte) -73, var5, 16);
+                    var5 = (CharSequence) ((Object) tag.substring(4));
+                    strikethroughColor = ea.a((byte) -73, var5, 16);
                   }
                 } else {
-                  field_C = field_M;
+                  alpha = defaultAlpha;
                 }
               } else {
-                var4 = (CharSequence) ((Object) param0.substring(6));
-                field_C = no.a((byte) -128, var4);
+                var4 = (CharSequence) ((Object) tag.substring(6));
+                alpha = no.a((byte) -128, var4);
               }
             } else {
-              field_H = field_r;
+              textColor = defaultTextColor;
             }
           } else {
-            var3 = (CharSequence) ((Object) param0.substring(4));
-            field_H = ea.a((byte) -73, var3, 16);
+            var3 = (CharSequence) ((Object) tag.substring(4));
+            textColor = ea.a((byte) -73, var3, 16);
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -646,7 +646,7 @@ abstract class LegacyBitmapFont extends DualLinkNode {
         }
     }
 
-    final int a(String param0, int[] param1, String[] param2) {
+    final int breakLines(String text, int[] lineWidths, String[] output) {
         int var13 = 0;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
@@ -672,10 +672,10 @@ abstract class LegacyBitmapFont extends DualLinkNode {
         Object var17 = null;
         CharSequence var18 = null;
         var17 = null;
-        if (param0 == null) {
+        if (text == null) {
           return 0;
         }
-        lb.a(field_w, 60, ' ', 0);
+        lb.a(lineBuilder, 60, ' ', 0);
         var4 = 0;
         var5 = 0;
         var6 = -1;
@@ -684,17 +684,17 @@ abstract class LegacyBitmapFont extends DualLinkNode {
         var9 = -1;
         var10 = 0;
         var11 = 0;
-        var12 = param0.length();
+        var12 = text.length();
         for (var13 = 0; var13 < var12; var13++) {
-          var14 = param0.charAt(var13);
+          var14 = text.charAt(var13);
           if (var14 != 60) {
             if (var14 == 62 &&
               var9 != -1) {
-              var15 = param0.substring(var9 + 1, var13).toLowerCase();
+              var15 = text.substring(var9 + 1, var13).toLowerCase();
               var9 = -1;
-              discarded$0 = field_w.append('<');
-              discarded$1 = field_w.append(var15);
-              discarded$2 = field_w.append('>');
+              discarded$0 = lineBuilder.append('<');
+              discarded$1 = lineBuilder.append(var15);
+              discarded$2 = lineBuilder.append('>');
               if (!var15.equals("br")) {
                 if (!var15.equals("lt")) {
                   if (!var15.equals("gt")) {
@@ -708,7 +708,7 @@ abstract class LegacyBitmapFont extends DualLinkNode {
                                   try {
                                     var18 = (CharSequence) ((Object) var15.substring(4));
                                     var16_int = no.a((byte) -127, var18);
-                                    var4 = var4 + this.field_P[var16_int].fullWidth;
+                                    var4 = var4 + this.inlineSprites[var16_int].fullWidth;
                                     var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
                                     decompiledCaughtException = decompiledCaughtParameter0;
@@ -716,73 +716,73 @@ abstract class LegacyBitmapFont extends DualLinkNode {
                                   }
                                 }
                               } else {
-                                var4 = var4 + this.a('®');
-                                if (this.field_D != null &&
+                                var4 = var4 + this.charWidth('®');
+                                if (this.kerning != null &&
                                   var10 != 0) {
-                                  var4 = var4 + this.field_D[(var10 << 8) + 174];
+                                  var4 = var4 + this.kerning[(var10 << 8) + 174];
                                 }
                                 var10 = 174;
                               }
                             } else {
-                              var4 = var4 + this.a('©');
-                              if (this.field_D != null &&
+                              var4 = var4 + this.charWidth('©');
+                              if (this.kerning != null &&
                                 var10 != 0) {
-                                var4 = var4 + this.field_D[(var10 << 8) + 169];
+                                var4 = var4 + this.kerning[(var10 << 8) + 169];
                               }
                               var10 = 169;
                             }
                           } else {
-                            var4 = var4 + this.a('€');
-                            if (this.field_D != null &&
+                            var4 = var4 + this.charWidth('€');
+                            if (this.kerning != null &&
                               var10 != 0) {
-                              var4 = var4 + this.field_D[(var10 << 8) + 128];
+                              var4 = var4 + this.kerning[(var10 << 8) + 128];
                             }
                             var10 = 8364;
                           }
                         } else {
-                          var4 = var4 + this.a('×');
-                          if (this.field_D != null &&
+                          var4 = var4 + this.charWidth('×');
+                          if (this.kerning != null &&
                             var10 != 0) {
-                            var4 = var4 + this.field_D[(var10 << 8) + 215];
+                            var4 = var4 + this.kerning[(var10 << 8) + 215];
                           }
                           var10 = 215;
                         }
                       } else {
-                        var4 = var4 + this.a('­');
-                        if (this.field_D != null &&
+                        var4 = var4 + this.charWidth('­');
+                        if (this.kerning != null &&
                           var10 != 0) {
-                          var4 = var4 + this.field_D[(var10 << 8) + 173];
+                          var4 = var4 + this.kerning[(var10 << 8) + 173];
                         }
                         var10 = 173;
                       }
                     } else {
-                      var4 = var4 + this.a(' ');
-                      if (this.field_D != null &&
+                      var4 = var4 + this.charWidth(' ');
+                      if (this.kerning != null &&
                         var10 != 0) {
-                        var4 = var4 + this.field_D[(var10 << 8) + 160];
+                        var4 = var4 + this.kerning[(var10 << 8) + 160];
                       }
                       var10 = 160;
                     }
                   } else {
-                    var4 = var4 + this.a('>');
-                    if (this.field_D != null &&
+                    var4 = var4 + this.charWidth('>');
+                    if (this.kerning != null &&
                       var10 != 0) {
-                      var4 = var4 + this.field_D[(var10 << 8) + 62];
+                      var4 = var4 + this.kerning[(var10 << 8) + 62];
                     }
                     var10 = 62;
                   }
                 } else {
-                  var4 = var4 + this.a('<');
-                  if (this.field_D != null &&
+                  var4 = var4 + this.charWidth('<');
+                  if (this.kerning != null &&
                     var10 != 0) {
-                    var4 = var4 + this.field_D[(var10 << 8) + 60];
+                    var4 = var4 + this.kerning[(var10 << 8) + 60];
                   }
                   var10 = 60;
                 }
               } else {
-                param2[var11] = field_w.toString().substring(var5, field_w.length());
+                output[var11] = lineBuilder.toString().substring(var5, lineBuilder.length());
                 var11++;
-                var5 = field_w.length();
+                var5 = lineBuilder.length();
                 var4 = 0;
                 var6 = -1;
                 var10 = 0;
@@ -791,31 +791,31 @@ abstract class LegacyBitmapFont extends DualLinkNode {
             }
             if (var9 == -1) {
               if (var14 != 0) {
-                discarded$3 = field_w.append((char) var14);
+                discarded$3 = lineBuilder.append((char) var14);
                 var14 = (char)(HardwareReflectionEffect.a(true, (char) var14) & 255);
-                var4 = var4 + this.field_L[var14];
-                if (this.field_D != null &&
+                var4 = var4 + this.advances[var14];
+                if (this.kerning != null &&
                   var10 != 0) {
-                  var4 = var4 + this.field_D[(var10 << 8) + var14];
+                  var4 = var4 + this.kerning[(var10 << 8) + var14];
                 }
                 var10 = var14;
               }
               if (var14 == 32) {
-                var6 = field_w.length();
+                var6 = lineBuilder.length();
                 var7 = var4;
                 var8 = 1;
               }
-              if (param1 != null) {
+              if (lineWidths != null) {
                 stackIn_69_0 = var4;
-                stackIn_69_1 = (int[]) (param1);
-                if (var11 >= param1.length) {
-                  stackIn_70_2 = param1.length - 1;
+                stackIn_69_1 = (int[]) (lineWidths);
+                if (var11 >= lineWidths.length) {
+                  stackIn_70_2 = lineWidths.length - 1;
                 } else {
                   stackIn_70_2 = var11;
                 }
                 if (stackIn_69_0 > stackIn_69_1[stackIn_70_2] &&
                   var6 >= 0) {
-                  param2[var11] = field_w.toString().substring(var5, var6 - var8);
+                  output[var11] = lineBuilder.toString().substring(var5, var6 - var8);
                   var11++;
                   var5 = var6;
                   var6 = -1;
@@ -824,7 +824,7 @@ abstract class LegacyBitmapFont extends DualLinkNode {
                 }
               }
               if (var14 == 45) {
-                var6 = field_w.length();
+                var6 = lineBuilder.length();
                 var7 = var4;
                 var8 = 0;
               }
@@ -833,61 +833,61 @@ abstract class LegacyBitmapFont extends DualLinkNode {
             var9 = var13;
           }
         }
-        if (field_w.length() > var5) {
-          param2[var11] = field_w.toString().substring(var5, field_w.length());
+        if (lineBuilder.length() > var5) {
+          output[var11] = lineBuilder.toString().substring(var5, lineBuilder.length());
           var11++;
         }
         return var11;
     }
 
-    final void c(String param0, int param1, int param2, int param3, int param4) {
-        if (param0 == null) {
+    final void drawRightAligned(String text, int rightX, int baselineY, int color, int shadow) {
+        if (text == null) {
           return;
         }
-        this.a(param3, param4);
-        this.b(param0, param1 - this.a(param0), param2);
+        this.resetStyle(color, shadow);
+        this.drawStyledText(text, rightX - this.stringWidth(text), baselineY);
     }
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6);
+    abstract void drawGlyph(int glyph, int x, int y, int width, int height, int color, boolean shadow);
 
-    LegacyBitmapFont(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4) {
+    LegacyBitmapFont(byte[] metrics, int[] offsetsX, int[] offsetsY, int[] widths, int[] heights) {
         int var8 = 0;
         int var6;
         int var7;
-        this.field_F = 0;
-        this.field_A = param1;
-        this.field_t = param2;
-        this.field_O = param3;
-        this.field_K = param4;
-        this.a(param0);
+        this.baselineOffset = 0;
+        this.glyphOffsetX = offsetsX;
+        this.glyphOffsetY = offsetsY;
+        this.glyphWidths = widths;
+        this.glyphHeights = heights;
+        this.decodeMetrics(metrics);
         var6 = 2147483647;
         var7 = -2147483648;
         for (var8 = 0; var8 < 256; var8++) {
-          if (this.field_t[var8] < var6 &&
-            this.field_K[var8] != 0) {
-            var6 = this.field_t[var8];
+          if (this.glyphOffsetY[var8] < var6 &&
+            this.glyphHeights[var8] != 0) {
+            var6 = this.glyphOffsetY[var8];
           }
-          if (this.field_t[var8] + this.field_K[var8] > var7) {
-            var7 = this.field_t[var8] + this.field_K[var8];
+          if (this.glyphOffsetY[var8] + this.glyphHeights[var8] > var7) {
+            var7 = this.glyphOffsetY[var8] + this.glyphHeights[var8];
           }
         }
-        this.field_s = this.field_F - var6;
-        this.field_I = var7 - this.field_F;
-        this.field_y = this.field_F - this.field_t[88];
+        this.ascent = this.baselineOffset - var6;
+        this.descent = var7 - this.baselineOffset;
+        this.capHeight = this.baselineOffset - this.glyphOffsetY[88];
     }
 
     static {
-        field_w = new StringBuilder(100);
-        field_B = 0;
-        field_x = -1;
-        field_J = -1;
-        field_E = 0;
-        field_v = -1;
-        field_z = -1;
-        field_H = 0;
-        field_N = new String[100];
-        field_r = 0;
-        field_M = 256;
-        field_C = 256;
+        lineBuilder = new StringBuilder(100);
+        justificationCarryQ8 = 0;
+        strikethroughColor = -1;
+        shadowColor = -1;
+        justificationStepQ8 = 0;
+        underlineColor = -1;
+        defaultShadowColor = -1;
+        textColor = 0;
+        lineBuffer = new String[100];
+        defaultTextColor = 0;
+        defaultAlpha = 256;
+        alpha = 256;
     }
 }

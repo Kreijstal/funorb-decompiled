@@ -15,16 +15,16 @@ abstract class ShaderEffect {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        if (null == wd.field_e) {
+        if (null == EmailCredentials.field_e) {
           if (!param0) {
             return;
           }
           ShaderEffect.releaseStatics(106);
           return;
         }
-        var1 = wd.field_e;
+        var1 = EmailCredentials.field_e;
         synchronized (var1) {
-          wd.field_e = null;
+          EmailCredentials.field_e = null;
         }
         if (param0) {
           ShaderEffect.releaseStatics(106);

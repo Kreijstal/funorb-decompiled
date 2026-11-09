@@ -23,11 +23,11 @@ final class dn {
           }
           return mm.field_c;
         }
-        if (!wd.field_j.loadIndex((byte) 127)) {
+        if (!EmailCredentials.field_j.loadIndex((byte) 127)) {
           return ProgressDialog.waitingForGraphicsText;
         }
-        if (!wd.field_j.tryLoadNamedGroup("commonui", 100)) {
-          return LegacyOpenGlTurbulentTextureEffect.loadingGraphicsText + " - " + wd.field_j.namedGroupLoadPercent("commonui", (byte) 33) + "%";
+        if (!EmailCredentials.field_j.tryLoadNamedGroup("commonui", 100)) {
+          return LegacyOpenGlTurbulentTextureEffect.loadingGraphicsText + " - " + EmailCredentials.field_j.namedGroupLoadPercent("commonui", (byte) 33) + "%";
         }
         if (param0 <= 90) {
           dn.b(-125);

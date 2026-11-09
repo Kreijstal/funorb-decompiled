@@ -79,14 +79,14 @@ final class gg extends DualLinkNode {
         try {
           ig.hudMessages.clear(122);
           SpriteMask.drones = new Drone[100];
-          ds.a(85);
+          LoginCredentialFactory.initializePlayerFromUpgradeSettings(85);
           if (param0 <= 81) {
             field_t = (qr) null;
           }
           bj.powerupPickups = new IntrusiveDeque();
-          is.arenaPads = new IntrusiveDeque();
+          QuickChatPhraseProvider.arenaPads = new IntrusiveDeque();
           if (OpenGlShaderProgram.levelIndex != -1) {
-            is.arenaPads = EnemyDrone.field_S[OpenGlShaderProgram.levelIndex].field_d;
+            QuickChatPhraseProvider.arenaPads = EnemyDrone.field_S[OpenGlShaderProgram.levelIndex].field_d;
           }
           HardwareGraphicsHeap.field_o = new Random();
           db.droneSlotLimit = 1;
@@ -96,7 +96,7 @@ final class gg extends DualLinkNode {
           var1_int = 0;
           if (-1 != OpenGlShaderProgram.levelIndex) {
             if (!MidiNoteMixer.field_r[OpenGlShaderProgram.levelIndex]) {
-              for (var2 = cj.field_e[OpenGlShaderProgram.levelIndex]; var2 < 6 + cj.field_e[OpenGlShaderProgram.levelIndex]; var2++) {
+              for (var2 = RendererStateSnapshot.field_e[OpenGlShaderProgram.levelIndex]; var2 < 6 + RendererStateSnapshot.field_e[OpenGlShaderProgram.levelIndex]; var2++) {
                 Bzip2State.field_J[var1_int] = IntrusiveDequeCursor.field_a[var2];
                 var1_int++;
               }
@@ -106,7 +106,7 @@ final class gg extends DualLinkNode {
           }
           FadingWidget.score = 0;
           if (5 >= BufferedCacheFile.a((byte) -84, 10)) {
-            fb.field_a = fb.field_a + TextureFormat.elapsedTicks;
+            LoginPacketWriter.field_a = LoginPacketWriter.field_a + TextureFormat.elapsedTicks;
           } else {
             GraphicsToolkit.field_f = GraphicsToolkit.field_f + TextureFormat.elapsedTicks;
           }

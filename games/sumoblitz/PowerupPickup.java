@@ -221,7 +221,7 @@ final class PowerupPickup extends IntrusiveNode {
         int var4;
         int var5;
         var5 = Sumoblitz.field_L ? 1 : 0;
-        var2 = new IntrusiveDequeCursor(is.arenaPads);
+        var2 = new IntrusiveDequeCursor(QuickChatPhraseProvider.arenaPads);
         if (param0 > -106) {
           field_v = -85;
         }

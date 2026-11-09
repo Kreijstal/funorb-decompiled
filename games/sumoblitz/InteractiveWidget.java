@@ -126,7 +126,7 @@ class InteractiveWidget extends UiWidget {
               stackIn_12_0 = new LegacyOpenGlSpriteTexture(param0, 34037, param5, param2, param1, param4, param3, param7);
               return stackIn_12_0;
             }
-            stackIn_10_0 = new LegacyOpenGlSpriteTexture(param0, param5, param2, param1, hn.a(false, param2), hn.a(false, param1), param3, param7);
+            stackIn_10_0 = new LegacyOpenGlSpriteTexture(param0, param5, param2, param1, LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, param2), LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, param1), param3, param7);
             return stackIn_10_0;
           }
           stackIn_7_0 = new LegacyOpenGlSpriteTexture(param0, 3553, param5, param2, param1, param4, param3, param7);

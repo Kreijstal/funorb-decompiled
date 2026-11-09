@@ -19,8 +19,8 @@ final class ValidationStatusWidget extends InteractiveWidget {
 
     final static void detachKeyboardInput(java.awt.Component component, int resetValue) {
         try {
-          component.removeKeyListener(wd.field_e);
-          component.removeFocusListener(wd.field_e);
+          component.removeKeyListener(EmailCredentials.field_e);
+          component.removeFocusListener(EmailCredentials.field_e);
           LegacyOpenGlEnvironmentWaterEffect.field_i = resetValue;
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "vr.D(" + (component != null ? "{...}" : "null") + ',' + resetValue + ')');
@@ -55,7 +55,7 @@ final class ValidationStatusWidget extends InteractiveWidget {
         int var6 = (this.height >> 1) + parentY + this.y;
         ValidationStatus var8 = this.validator.getStatus(-103);
         if (GameInstructions.DEBOUNCING == var8) {
-          var16 = fw.field_m[0];
+          var16 = ToolkitRasterStateCacheEntry.field_m[0];
           var9 = var16.field_z << 1;
           var10 = var16.field_w << 1;
           if (kv.field_a == null) {
@@ -106,7 +106,7 @@ final class ValidationStatusWidget extends InteractiveWidget {
           return;
         }
         if (kt.PENDING == var8) {
-          var17 = fw.field_m[0];
+          var17 = ToolkitRasterStateCacheEntry.field_m[0];
           var9Lifetime1 = var17.field_z << 1;
           var10Lifetime1 = var17.field_w << 1;
           if (kv.field_a == null) {
@@ -159,7 +159,7 @@ final class ValidationStatusWidget extends InteractiveWidget {
           return;
         }
         if (qr.INVALID == var8) {
-          var14 = fw.field_m[2];
+          var14 = ToolkitRasterStateCacheEntry.field_m[2];
           var14.d(-(var14.field_x >> 1) + var5, var6 - (var14.field_u >> 1), 256);
           if (guard < -35) {
             return;
@@ -169,7 +169,7 @@ final class ValidationStatusWidget extends InteractiveWidget {
           return;
         }
         if (var8 == qe.VALID) {
-          var15 = fw.field_m[1];
+          var15 = ToolkitRasterStateCacheEntry.field_m[1];
           var15.d(var5 - (var15.field_x >> 1), var6 - (var15.field_u >> 1), 256);
         }
         if (guard < -35) {

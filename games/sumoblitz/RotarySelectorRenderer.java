@@ -47,7 +47,7 @@ final class RotarySelectorRenderer implements WidgetRenderer {
           SoftwareRasterizer.drawLine(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
           if (null != this.font) {
             var13 = var14.radius + (var14.centerX + this.textPadding);
-            this.font.a(widget.text, widget.x + (parentX + var13), widget.y + (parentY + this.textTop), -this.textPadding - var13 + widget.width, -(this.textPadding << 1) + widget.height, this.textColor, this.textShadow, 1, 1, 0);
+            this.font.drawParagraph(widget.text, widget.x + (parentX + var13), widget.y + (parentY + this.textTop), -this.textPadding - var13 + widget.width, -(this.textPadding << 1) + widget.height, this.textColor, this.textShadow, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "va.A(" + (widget != null ? "{...}" : "null") + ',' + parentY + ',' + guard + ',' + isEnabled + ',' + parentX + ')');

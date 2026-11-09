@@ -1,34 +1,34 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class kb {
-    LegacyOpenGlGraphicsToolkit field_g;
-    static se field_d;
-    private boolean field_b;
+abstract class LegacyOpenGlBuffer {
+    LegacyOpenGlGraphicsToolkit toolkit;
+    static LoginCredentials field_d;
+    private boolean disposed;
     static volatile int field_i;
-    static int field_a;
-    private boolean field_e;
-    private int field_h;
-    static is field_c;
-    int field_f;
+    static int chatMessageCount;
+    private boolean streaming;
+    private int byteLength;
+    static QuickChatPhraseProvider field_c;
+    int bufferHandle;
 
     public static void releaseStatics(boolean param0) {
         field_d = null;
         field_c = null;
         if (!param0) {
-          field_a = 19;
+          chatMessageCount = 19;
         }
     }
 
     protected final void finalize() throws Throwable {
-        if (!this.field_b) {
-          this.field_g.a(this.field_f, true, this.field_h);
-          this.field_b = true;
+        if (!this.disposed) {
+          this.toolkit.a(this.bufferHandle, true, this.byteLength);
+          this.disposed = true;
         }
         super.finalize();
     }
 
-    abstract void b(int param0);
+    abstract void bind(int guard);
 
     final static Sprite[] a(String param0, ResourceArchive param1, boolean param2, String param3) {
         int var4_int = 0;
@@ -79,19 +79,19 @@ abstract class kb {
         }
     }
 
-    kb(LegacyOpenGlGraphicsToolkit param0, int param1, byte[] param2, int param3, boolean param4) {
-        this.field_b = false;
+    LegacyOpenGlBuffer(LegacyOpenGlGraphicsToolkit renderer, int target, byte[] data, int size, boolean useStreaming) {
+        this.disposed = false;
         try {
-          this.field_g = param0;
-          this.field_e = param4 ? true : false;
-          this.field_h = param3;
+          this.toolkit = renderer;
+          this.streaming = useStreaming ? true : false;
+          this.byteLength = size;
           jaggl.OpenGL.glGenBuffersARB(1, MatchingTextValidator.field_j, 0);
-          this.field_f = MatchingTextValidator.field_j[0];
-          this.b(1735490466);
-          jaggl.OpenGL.glBufferDataARBub(param1, this.field_h, param2, 0, this.field_e ? 35040 : 35044);
-          this.field_g.field_Xb = this.field_g.field_Xb + this.field_h;
+          this.bufferHandle = MatchingTextValidator.field_j[0];
+          this.bind(1735490466);
+          jaggl.OpenGL.glBufferDataARBub(target, this.byteLength, data, 0, this.streaming ? 35040 : 35044);
+          this.toolkit.field_Xb = this.toolkit.field_Xb + this.byteLength;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "kb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "kb.<init>(" + (renderer != null ? "{...}" : "null") + ',' + target + ',' + (data != null ? "{...}" : "null") + ',' + size + ',' + useStreaming + ')');
         }
     }
 

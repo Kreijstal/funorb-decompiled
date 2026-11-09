@@ -92,10 +92,10 @@ final class lf extends ka {
         jq discarded$3 = null;
         ke discarded$4 = null;
         try {
-          discarded$0 = new jq((fk) null, 5126, 3, 0);
-          discarded$1 = new jq((fk) null, 5126, 2, 0);
-          discarded$2 = new jq((fk) null, 5126, 3, 0);
-          discarded$3 = new jq((fk) null, 5121, 4, 0);
+          discarded$0 = new jq((LegacyVertexBuffer) null, 5126, 3, 0);
+          discarded$1 = new jq((LegacyVertexBuffer) null, 5126, 2, 0);
+          discarded$2 = new jq((LegacyVertexBuffer) null, 5126, 3, 0);
+          discarded$3 = new jq((LegacyVertexBuffer) null, 5121, 4, 0);
           discarded$4 = new ke();
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "lf.<init>(" + (param0 != null ? "{...}" : "null") + ')');

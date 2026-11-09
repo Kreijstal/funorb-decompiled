@@ -122,7 +122,7 @@ final class SoftwareRenderBuffer implements RenderBuffer {
           if (11 == jv.field_a) {
             tu.a((byte) -126);
           }
-          VertexStreamLayout.a(hn.field_k, ContentTransitionDialog.field_R, LegacyWaterTextureResources.field_h, 122);
+          VertexStreamLayout.a(LegacyOpenGlVertexBuffer.field_k, ContentTransitionDialog.field_R, LegacyWaterTextureResources.field_h, 122);
           IterableNodeHashTable.a(0, 0, param1, (byte) 124);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "od.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

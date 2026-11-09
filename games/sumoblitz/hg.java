@@ -14,16 +14,16 @@ final class hg extends IntrusiveNode {
     int field_q;
     static int[] field_m;
 
-    final static nj[] a(int param0, int[] param1) {
+    final static RendererPreference[] a(int param0, int[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        nj[] var3 = null;
+        RendererPreference[] var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;
-        nj[] stackIn_14_0 = null;
+        RendererPreference[] stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -38,13 +38,13 @@ final class hg extends IntrusiveNode {
           } else {
             stackIn_7_0 = param1.length + 1;
           }
-          var3 = new nj[stackIn_7_0];
+          var3 = new RendererPreference[stackIn_7_0];
           var4 = 0;
           for (var4Lifetime1 = 0; var4Lifetime1 < param1.length; var4Lifetime1++) {
-            var3[var4Lifetime1] = new nj(param1[var4Lifetime1], 2);
+            var3[var4Lifetime1] = new RendererPreference(param1[var4Lifetime1], 2);
           }
           if (var4Lifetime1 < var3.length) {
-            var3[var4Lifetime1] = new nj(0, 2);
+            var3[var4Lifetime1] = new RendererPreference(0, 2);
           }
           var5 = 34 / ((57 - param0) / 53);
           stackIn_14_0 = var3;

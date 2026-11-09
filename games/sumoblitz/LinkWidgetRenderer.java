@@ -44,10 +44,10 @@ final class LinkWidgetRenderer implements WidgetRenderer {
             stackIn_6_0 = 3249872;
           }
           var6_int = stackIn_6_0;
-          this.font.a("<u=" + Integer.toString(var6_int, 16) + ">" + widget.text + "</u>", parentX + widget.x, widget.y + parentY, widget.width, widget.height, var6_int, -1, this.horizontalAlignment, this.verticalAlignment, this.font.field_s + this.font.field_I);
+          this.font.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + widget.text + "</u>", parentX + widget.x, widget.y + parentY, widget.width, widget.height, var6_int, -1, this.horizontalAlignment, this.verticalAlignment, this.font.ascent + this.font.descent);
           if (widget.hasFocus(-1)) {
-            var7 = this.font.a(widget.text);
-            var8 = this.font.field_s + this.font.field_I;
+            var7 = this.font.stringWidth(widget.text);
+            var8 = this.font.ascent + this.font.descent;
             var9 = parentX + widget.x;
             if (2 == this.horizontalAlignment) {
               var9 = var9 + (-var7 + widget.width);

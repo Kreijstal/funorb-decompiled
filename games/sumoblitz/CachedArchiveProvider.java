@@ -482,7 +482,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
           this.groupLoadPercent(30, -8);
         }
         if (this.discardCompletedRequests &&
-          wq.a(-91) >= this.nextCleanupMillis) {
+          wq.monotonicTimeMillis(-91) >= this.nextCleanupMillis) {
           var2 = (ResourceRequest) (this.groupRequests.a(84));
           while (var2 != null) {
             if (!var2.pending) {
@@ -497,7 +497,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             }
             var2 = (ResourceRequest) (this.groupRequests.a(true));
           }
-          this.nextCleanupMillis = 1000L + wq.a(-42);
+          this.nextCleanupMillis = 1000L + wq.monotonicTimeMillis(-42);
         }
     }
 

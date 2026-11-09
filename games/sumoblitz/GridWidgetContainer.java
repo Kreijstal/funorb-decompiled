@@ -219,7 +219,7 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
           if (EmptyWidgetRenderer.field_a.status == 0) {
             return false;
           }
-          long dupTemp$0 = wq.a(-38);
+          long dupTemp$0 = wq.monotonicTimeMillis(-38);
           ArchiveCatalog.field_a = dupTemp$0;
           CacheReferenceNode.field_x = dupTemp$0;
           if (EmptyWidgetRenderer.field_a.status != 1) {

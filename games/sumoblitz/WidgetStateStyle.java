@@ -277,7 +277,7 @@ final class WidgetStateStyle {
             } else {
               stackIn_27_8 = this.alpha;
             }
-            ((LegacyBitmapFont) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_23_2, stackIn_26_3, stackIn_26_4, stackIn_26_5, stackIn_26_6, stackIn_26_7, stackIn_27_8, renderer.horizontalAlignment, renderer.verticalAlignment, renderer.lineSpacing);
+            ((LegacyBitmapFont) (Object) stackIn_20_0).drawParagraphAlpha(stackIn_20_1, stackIn_23_2, stackIn_26_3, stackIn_26_4, stackIn_26_5, stackIn_26_6, stackIn_26_7, stackIn_27_8, renderer.horizontalAlignment, renderer.verticalAlignment, renderer.lineSpacing);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -3,7 +3,7 @@
  */
 final class HardwareReflectionEffect extends ShaderEffect {
     private boolean active;
-    static nj[] field_e;
+    static RendererPreference[] field_e;
 
     final static String a(boolean param0, CharSequence[] param1) {
         RuntimeException var2 = null;
@@ -18,7 +18,7 @@ final class HardwareReflectionEffect extends ShaderEffect {
             var3 = (CharSequence[]) null;
             HardwareReflectionEffect.a(false, (CharSequence[]) null);
           }
-          stackIn_3_0 = se.a(param1, 0, param1.length, 14156);
+          stackIn_3_0 = LoginCredentials.joinCharSequences(param1, 0, param1.length, 14156);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -43,7 +43,7 @@ final class HardwareReflectionEffect extends ShaderEffect {
 
     final void setParameters(int guard, int parameters1, int parameters0) {
         if (guard != 34023) {
-          field_e = (nj[]) null;
+          field_e = (RendererPreference[]) null;
         }
     }
 
@@ -659,7 +659,7 @@ final class HardwareReflectionEffect extends ShaderEffect {
 
     final boolean isSupported(byte guard) {
         if (guard > -8) {
-          field_e = (nj[]) null;
+          field_e = (RendererPreference[]) null;
           return true;
         }
         return true;
@@ -720,7 +720,7 @@ final class HardwareReflectionEffect extends ShaderEffect {
 
     public static void releaseStatics(byte param0) {
         if (param0 < 25) {
-          field_e = (nj[]) null;
+          field_e = (RendererPreference[]) null;
           field_e = null;
           return;
         }

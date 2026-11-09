@@ -4,7 +4,7 @@
 final class ic {
     static Object legacyRidgedWaterData;
     static ts field_a;
-    private fk field_d;
+    private LegacyVertexBuffer field_d;
     static int[] field_c;
 
     final static void a(int param0) {

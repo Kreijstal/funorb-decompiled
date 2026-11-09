@@ -75,9 +75,9 @@ final class ws {
     final static boolean b(byte param0) {
         if (param0 != 52) {
           toKeepFullscreenOrText = (String) null;
-          return is.field_b;
+          return QuickChatPhraseProvider.field_b;
         }
-        return is.field_b;
+        return QuickChatPhraseProvider.field_b;
     }
 
     public static void releaseStatics(byte param0) {

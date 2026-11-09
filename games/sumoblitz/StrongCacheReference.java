@@ -85,7 +85,7 @@ final class StrongCacheReference extends CacheReferenceNode {
           LegacyOpenGlEffectManager.field_g[OpenGlCubeTexture.field_k].resetSelection(param0 - 875, param1);
         }
         if (0 == OpenGlCubeTexture.field_k &&
-          7 != nj.field_b) {
+          7 != RendererPreference.field_b) {
           TextLayout.a(0, 0);
         }
     }

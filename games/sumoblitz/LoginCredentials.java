@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class se {
+abstract class LoginCredentials {
     static String abcdefghijklmnopqrstuvwxyzabcdefghijText;
     static String pleaseTryAgainInText;
     static int field_d;
     static String scoreText;
 
-    final static int a(int param0) {
+    final static int pollAccountDialogs(int guard) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -20,14 +20,14 @@ abstract class se {
         RuntimeException decompiledCaughtException = null;
         var2 = Sumoblitz.field_L ? 1 : 0;
         try {
-          RenderPresentationException.field_a.dispatchPointerInput(CheckboxWidget.field_F, GraphicsToolkit.field_b, true, param0 - 19887);
+          RenderPresentationException.field_a.dispatchPointerInput(CheckboxWidget.field_F, GraphicsToolkit.field_b, true, guard - 19887);
           RenderPresentationException.field_a.advanceDialogAnimations(-90);
-          while (wd.c(param0 ^ -19954)) {
+          while (EmailCredentials.c(guard ^ -19954)) {
             RenderPresentationException.field_a.dispatchKey(WhirlpoolDigest.field_c, TextureCombineOperation.field_a, true);
           }
           if (MarkerTrackRenderer.field_e != -1) {
             var1_int = MarkerTrackRenderer.field_e;
-            rd.a(-1, param0 ^ -19873);
+            rd.a(-1, guard ^ -19873);
             stackIn_6_0 = var1_int;
             return stackIn_6_0;
           }
@@ -35,7 +35,7 @@ abstract class se {
             stackIn_10_0 = 3;
             return stackIn_10_0;
           }
-          if (param0 != 19886) {
+          if (guard != 19886) {
             field_d = -49;
           }
           if (vm.field_c == LegacyOpenGlGraphicsHeap.field_p) {
@@ -55,13 +55,13 @@ abstract class se {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "se.K(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "se.K(" + guard + ')');
         }
     }
 
-    abstract nb a(byte param0);
+    abstract LoginCredentialType credentialType(byte guard);
 
-    final static String a(CharSequence[] param0, int param1, int param2, int param3) {
+    final static String joinCharSequences(CharSequence[] parts, int offset, int count, int guard) {
         int var6_int = 0;
         int var7 = 0;
         StringBuilder discarded$0 = null;
@@ -85,16 +85,16 @@ abstract class se {
         CharSequence var10 = null;
         var9 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (param3 != 14156) {
+          if (guard != 14156) {
             stackIn_3_0 = (String) null;
             return stackIn_3_0;
           }
-          if (0 == param2) {
+          if (0 == count) {
             stackIn_7_0 = "";
             return stackIn_7_0;
           }
-          if (param2 == 1) {
-            var10 = param0[param1];
+          if (count == 1) {
+            var10 = parts[offset];
             var4 = var10;
             if (var4 != null) {
               return var10.toString();
@@ -102,10 +102,10 @@ abstract class se {
             stackIn_13_0 = "null";
             return stackIn_13_0;
           }
-          var4_int = param2 + param1;
+          var4_int = count + offset;
           var5 = 0;
-          for (var6_int = param1; var4_int > var6_int; var6_int++) {
-            var7_ref_CharSequence = param0[var6_int];
+          for (var6_int = offset; var4_int > var6_int; var6_int++) {
+            var7_ref_CharSequence = parts[var6_int];
             if (var7_ref_CharSequence != null) {
               var5 = var5 + var7_ref_CharSequence.length();
             } else {
@@ -113,8 +113,8 @@ abstract class se {
             }
           }
           var6 = new StringBuilder(var5);
-          for (var7 = param1; var7 < var4_int; var7++) {
-            var8 = param0[var7];
+          for (var7 = offset; var7 < var4_int; var7++) {
+            var8 = parts[var7];
             if (var8 != null) {
               discarded$0 = var6.append(var8);
             } else {
@@ -128,16 +128,16 @@ abstract class se {
           var4_ref = decompiledCaughtException;
           stackIn_30_0 = var4_ref;
           stackIn_30_1 = new StringBuilder().append("se.M(");
-          if (param0 == null) {
+          if (parts == null) {
             stackIn_31_2 = "null";
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(offset).append(',').append(count).append(',').append(guard).append(')').toString());
         }
     }
 
-    abstract void a(PacketBuffer param0, byte param1);
+    abstract void writeCredentials(PacketBuffer packet, byte guard);
 
     final static boolean a(int param0, int param1, int param2) {
         int var3 = -24 % ((-63 - param0) / 40);

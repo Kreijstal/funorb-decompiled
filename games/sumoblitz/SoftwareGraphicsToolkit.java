@@ -198,7 +198,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
           this.bindContextToCurrentThread(0);
           kr.a(true, -52, true);
           this.field_J = true;
-          this.field_A = (int)wq.a(-48);
+          this.field_A = (int)wq.monotonicTimeMillis(-48);
         } catch (Throwable throwable) {
           throwable.printStackTrace();
           this.close((byte) -34);

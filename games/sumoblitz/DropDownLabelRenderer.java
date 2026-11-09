@@ -31,10 +31,10 @@ final class DropDownLabelRenderer implements WidgetRenderer {
           var8 = this.dropdown.optionList.selectedOption(-72);
           if (var8 != null) {
             var9 = var8.toString();
-            this.dropdown.font.b(var9, var6_int + 2, (this.dropdown.font.field_s + widget.height >> 1) + (var7 - 1), 10000536, -1);
+            this.dropdown.font.drawText(var9, var6_int + 2, (this.dropdown.font.ascent + widget.height >> 1) + (var7 - 1), 10000536, -1);
             if (this.dropdown.hasFocus(-1) &&
               var9.startsWith(this.dropdown.searchPrefix)) {
-              var10 = this.dropdown.font.a(this.dropdown.searchPrefix);
+              var10 = this.dropdown.font.stringWidth(this.dropdown.searchPrefix);
               SoftwareRasterizer.fillRectangleAlpha(var6_int + 2, var7 + 2, var10, widget.height - 4, 2188450, 100);
             }
           }

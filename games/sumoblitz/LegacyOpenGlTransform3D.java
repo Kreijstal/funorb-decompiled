@@ -187,7 +187,7 @@ final class LegacyOpenGlTransform3D extends Transform3D {
         this.field_m = 0.0f;
     }
 
-    final static void a(br param0, byte param1) {
+    final static void appendChatHistory(ChatMessage message, byte guard) {
         int dupTemp$3 = 0;
         int dupTemp$0 = 0;
         int var3 = 0;
@@ -206,51 +206,51 @@ final class LegacyOpenGlTransform3D extends Transform3D {
         var5 = Sumoblitz.field_L ? 1 : 0;
         try {
           for (var2_int = 0; var2_int < 3; var2_int++) {
-            vp.field_c[var2_int] = 0;
+            vp.chatPriorityCounts[var2_int] = 0;
           }
-          for (var2_intLifetime1 = 0; kb.field_a > var2_intLifetime1; var2_intLifetime1++) {
-            if (DroneDebris.field_D[var2_intLifetime1].field_g == param0.field_g) {
-              dupTemp$3 = DroneDebris.field_D[var2_intLifetime1].c(-112);
-              vp.field_c[dupTemp$3] = vp.field_c[dupTemp$3] + 1;
+          for (var2_intLifetime1 = 0; LegacyOpenGlBuffer.chatMessageCount > var2_intLifetime1; var2_intLifetime1++) {
+            if (DroneDebris.chatHistory[var2_intLifetime1].type == message.type) {
+              dupTemp$3 = DroneDebris.chatHistory[var2_intLifetime1].retentionPriority(-112);
+              vp.chatPriorityCounts[dupTemp$3] = vp.chatPriorityCounts[dupTemp$3] + 1;
             }
           }
-          if (param1 < 69) {
+          if (guard < 69) {
             field_h = (String[]) null;
           }
-          dupTemp$0 = param0.c(-82);
-          vp.field_c[dupTemp$0] = vp.field_c[dupTemp$0] + 1;
+          dupTemp$0 = message.retentionPriority(-82);
+          vp.chatPriorityCounts[dupTemp$0] = vp.chatPriorityCounts[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
-          for (var3 = 0; kb.field_a > var3; var3++) {
+          for (var3 = 0; LegacyOpenGlBuffer.chatMessageCount > var3; var3++) {
             boolean decompiledFrameRemainder0 = true;
-            if (param0.field_g == DroneDebris.field_D[var3].field_g) {
-              var4 = DroneDebris.field_D[var3].c(-120);
-              if (SecondaryNodeQueue.field_c < vp.field_c[var4]) {
-                vp.field_c[var4] = vp.field_c[var4] - 1;
+            if (message.type == DroneDebris.chatHistory[var3].type) {
+              var4 = DroneDebris.chatHistory[var3].retentionPriority(-120);
+              if (SecondaryNodeQueue.field_c < vp.chatPriorityCounts[var4]) {
+                vp.chatPriorityCounts[var4] = vp.chatPriorityCounts[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }
             }
             if (decompiledFrameRemainder0) {
               incrementValue$2 = var2_intLifetime2;
               var2_intLifetime2++;
-              DroneDebris.field_D[incrementValue$2] = DroneDebris.field_D[var3];
+              DroneDebris.chatHistory[incrementValue$2] = DroneDebris.chatHistory[var3];
             }
           }
-          kb.field_a = var2_intLifetime2;
-          fieldTemp$1 = kb.field_a;
-          kb.field_a = kb.field_a + 1;
-          DroneDebris.field_D[fieldTemp$1] = param0;
+          LegacyOpenGlBuffer.chatMessageCount = var2_intLifetime2;
+          fieldTemp$1 = LegacyOpenGlBuffer.chatMessageCount;
+          LegacyOpenGlBuffer.chatMessageCount = LegacyOpenGlBuffer.chatMessageCount + 1;
+          DroneDebris.chatHistory[fieldTemp$1] = message;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_24_0 = var2;
           stackIn_24_1 = new StringBuilder().append("dl.B(");
-          if (param0 == null) {
+          if (message == null) {
             stackIn_25_2 = "null";
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(guard).append(')').toString());
         }
     }
 

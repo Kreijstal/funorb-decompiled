@@ -51,10 +51,10 @@ final class HardwareTurbulentWaterNoise extends TurbulenceNoise3D {
 
     final static Sprite[] a(byte param0, int param1, int param2, int param3, int param4) {
         if (param0 <= -5) {
-          return oq.a(param4, param2, 1, 1, 1, param3, (byte) -113, param1, 3);
+          return QuickChatPhrase.a(param4, param2, 1, 1, 1, param3, (byte) -113, param1, 3);
         }
         widgetTheme = (WidgetTheme) null;
-        return oq.a(param4, param2, 1, 1, 1, param3, (byte) -113, param1, 3);
+        return QuickChatPhrase.a(param4, param2, 1, 1, 1, param3, (byte) -113, param1, 3);
     }
 
     final static GraphicsToolkit createToolkitForCanvas(int backend, java.awt.Canvas canvas, TextureProvider textures, boolean guard, int options, ResourceArchive shaders) {

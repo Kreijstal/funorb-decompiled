@@ -79,7 +79,7 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
         if (guard != 14763) {
           this.paddingLeft = 25;
         }
-        return this.font.field_I + this.font.field_s;
+        return this.font.descent + this.font.ascent;
     }
 
     public final TextLayout layoutText(int guard, UiWidget widget) {
@@ -140,15 +140,15 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
           var4 = this.contentHeight(widget, true);
           var6 = this.verticalAlignment;
           if (var6 == 0) {
-            var5 = this.font.field_s;
+            var5 = this.font.ascent;
           } else {
             if (var6 == 2) {
-              var5 = var4 - this.font.field_I;
+              var5 = var4 - this.font.descent;
             } else {
               if (3 != var6 &&
                 var6 == 1) {
               }
-              var5 = this.font.field_s + (-this.font.field_I + (var4 - this.font.field_s) >> 1);
+              var5 = this.font.ascent + (-this.font.descent + (var4 - this.font.ascent) >> 1);
             }
           }
           if (guard != -12731) {
@@ -613,30 +613,30 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
                 if (var12 != 3 &&
                   var12 == 1) {
                 }
-                var11 = (-this.font.field_s + var10 - this.font.field_I >> 1) + this.font.field_s;
+                var11 = (-this.font.ascent + var10 - this.font.descent >> 1) + this.font.ascent;
               } else {
-                var11 = var10 - this.font.field_I;
+                var11 = var10 - this.font.descent;
               }
             } else {
-              var11 = this.font.field_s;
+              var11 = this.font.ascent;
             }
             var12Lifetime1 = this.horizontalAlignment;
             if (var12Lifetime1 != 0 &&
               var12Lifetime1 != 3) {
               if (var12Lifetime1 == 1) {
-                this.font.a(this.widgetText(true, widget), (var9_int >> 1) + this.textXForOffset(-3, widget, layoutX, parentX), var11 + this.textYForOffset(parentY, (byte) -121, widget, layoutY), foreground, shadow);
+                this.font.drawCentered(this.widgetText(true, widget), (var9_int >> 1) + this.textXForOffset(-3, widget, layoutX, parentX), var11 + this.textYForOffset(parentY, (byte) -121, widget, layoutY), foreground, shadow);
               } else {
                 if ((var12Lifetime1 == 2)) {
-                  this.font.c(this.widgetText(true, widget), this.textXForOffset(-3, widget, layoutX, parentX) + var9_int, var11 + this.textYForOffset(parentY, (byte) -123, widget, layoutY), foreground, shadow);
+                  this.font.drawRightAligned(this.widgetText(true, widget), this.textXForOffset(-3, widget, layoutX, parentX) + var9_int, var11 + this.textYForOffset(parentY, (byte) -123, widget, layoutY), foreground, shadow);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.font.b(this.widgetText(true, widget), this.textXForOffset(-3, widget, layoutX, parentX), var11 + this.textYForOffset(parentY, (byte) -124, widget, layoutY), foreground, shadow);
+              this.font.drawText(this.widgetText(true, widget), this.textXForOffset(-3, widget, layoutX, parentX), var11 + this.textYForOffset(parentY, (byte) -124, widget, layoutY), foreground, shadow);
             }
           } else {
-            this.font.a(this.widgetText(true, widget), this.textXForOffset(-3, widget, layoutX, parentX), this.textYForOffset(parentY, (byte) -122, widget, layoutY), var9_int, var10, foreground, shadow, this.horizontalAlignment, this.verticalAlignment, this.lineSpacing);
+            this.font.drawParagraph(this.widgetText(true, widget), this.textXForOffset(-3, widget, layoutX, parentX), this.textYForOffset(parentY, (byte) -122, widget, layoutY), var9_int, var10, foreground, shadow, this.horizontalAlignment, this.verticalAlignment, this.lineSpacing);
           }
           ClientException.popRasterState((byte) 63);
           return;

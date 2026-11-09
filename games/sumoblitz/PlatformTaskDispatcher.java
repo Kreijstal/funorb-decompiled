@@ -236,13 +236,13 @@ final class PlatformTaskDispatcher implements Runnable {
                 var2_int = var8.operation;
                 switch (var2_int) {
                   case 1:
-                    if (wq.a(-24) < field_c) {
+                    if (wq.monotonicTimeMillis(-24) < field_c) {
                       throw new IOException();
                     }
                     var8.result = new java.net.Socket(java.net.InetAddress.getByName((String) (var8.objectArgument)), var8.intArgument);
                     break;
                   case 4:
-                    if (field_c > wq.a(-94)) {
+                    if (field_c > wq.monotonicTimeMillis(-94)) {
                       throw new IOException();
                     }
                     var8.result = new DataInputStream(((java.net.URL) (var8.objectArgument)).openStream());
@@ -349,13 +349,13 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 21:
-                        if (wq.a(-18) < field_c) {
+                        if (wq.monotonicTimeMillis(-18) < field_c) {
                           throw new IOException();
                         }
                         var8.result = java.net.InetAddress.getByName((String) (var8.objectArgument)).getAddress();
                         break;
                       case 3:
-                        if (field_c > wq.a(-106)) {
+                        if (field_c > wq.monotonicTimeMillis(-106)) {
                           throw new IOException();
                         }
                         var13 = (var8.intArgument >> 24 & 255) + "." + (var8.intArgument >> 16 & 255) + "." + ((var8.intArgument & 65425) >> 8) + "." + (var8.intArgument & 255);
@@ -391,7 +391,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     var8.result = var9;
                     break;
                   case 22:
-                    if (field_c > wq.a(-96)) {
+                    if (field_c > wq.monotonicTimeMillis(-96)) {
                       throw new IOException();
                     }
                     try {

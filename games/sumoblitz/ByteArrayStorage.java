@@ -4,9 +4,9 @@
 abstract class ByteArrayStorage {
     static SpriteData[] field_a;
 
-    final static void a(br param0, byte param1) {
+    final static void receiveChatMessage(ChatMessage message, byte guard) {
         int var2_int = 0;
-        br var3 = null;
+        ChatMessage var3 = null;
         int var4 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -15,38 +15,38 @@ abstract class ByteArrayStorage {
         RuntimeException var2 = null;
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (null == param0.field_e) {
+          if (null == message.text) {
             return;
           }
-          if (param1 < 43) {
+          if (guard < 43) {
             field_a = (SpriteData[]) null;
           }
-          if (param0.field_h != 0 ||
-            0 != param0.field_c) {
-            for (var2_int = 0; kb.field_a > var2_int; var2_int++) {
-              var3 = DroneDebris.field_D[var2_int];
-              if (var3.field_g == 2 &&
-                param0.field_h == var3.field_h &&
-                var3.field_c == param0.field_c) {
+          if (message.messageIdHigh != 0 ||
+            0 != message.messageIdLow) {
+            for (var2_int = 0; LegacyOpenGlBuffer.chatMessageCount > var2_int; var2_int++) {
+              var3 = DroneDebris.chatHistory[var2_int];
+              if (var3.type == 2 &&
+                message.messageIdHigh == var3.messageIdHigh &&
+                var3.messageIdLow == message.messageIdLow) {
                 return;
               }
             }
           }
-          if (null == param0.field_b) {
+          if (null == message.quickChatResponses) {
           }
-          LegacyOpenGlTransform3D.a(param0, (byte) 76);
+          LegacyOpenGlTransform3D.appendChatHistory(message, (byte) 76);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_22_0 = var2;
           stackIn_22_1 = new StringBuilder().append("nn.E(");
-          if (param0 == null) {
+          if (message == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(guard).append(')').toString());
         }
     }
 

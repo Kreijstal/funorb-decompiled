@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sl extends ln implements fk {
+final class sl extends ln implements LegacyVertexBuffer {
     static boolean field_d;
     static int[] field_c;
     static String largeScreenSizesAndText;
@@ -10,8 +10,8 @@ final class sl extends ln implements fk {
         super(param0, param2, param3);
     }
 
-    public final int a(int param0) {
-        if (param0 != 2721) {
+    public final int bufferId(int guard) {
+        if (guard != 2721) {
           return -30;
         }
         return 0;

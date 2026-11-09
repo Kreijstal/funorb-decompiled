@@ -79,7 +79,7 @@ final class SocketJs5Client extends Js5Client {
               }
             }
             this.idleMillis = 0;
-            this.lastServiceMillis = wq.a(-78);
+            this.lastServiceMillis = wq.monotonicTimeMillis(-78);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;
@@ -153,7 +153,7 @@ final class SocketJs5Client extends Js5Client {
             return false;
           }
           if (this.socket != null) {
-            var2_long = wq.a(-113);
+            var2_long = wq.monotonicTimeMillis(-113);
             var4 = (int)(var2_long - this.lastServiceMillis);
             if (var4 > 200) {
               var4 = 200;

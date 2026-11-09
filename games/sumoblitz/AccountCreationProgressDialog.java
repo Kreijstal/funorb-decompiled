@@ -61,7 +61,7 @@ final class AccountCreationProgressDialog extends MessageDialog implements Widge
           var6 = new StatusMessagePanel((MessageDialog) (this), LegacyOpenGlDisplayLists.field_a, var4);
           if (!result.success) {
             if (this.ineligible) {
-              var6.a(wd.continueText, (byte) -123, (WidgetListener) (this));
+              var6.a(EmailCredentials.continueText, (byte) -123, (WidgetListener) (this));
             } else {
               if (result.errorCode != 5) {
                 var6.a(FullscreenCanvas.backText, -1, true);
@@ -84,7 +84,7 @@ final class AccountCreationProgressDialog extends MessageDialog implements Widge
               this.transitionToContent((byte) -95, new UnderageAccountInfoPanel(this));
               return;
             }
-            var6.a(wd.continueText, (byte) -123, (WidgetListener) (this));
+            var6.a(EmailCredentials.continueText, (byte) -123, (WidgetListener) (this));
           }
           this.transitionToContent((byte) -123, var6);
           return;

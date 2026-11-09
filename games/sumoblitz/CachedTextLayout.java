@@ -43,7 +43,7 @@ final class CachedTextLayout extends TextLayout {
         var16 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (0 == param6) {
-            param6 = param2.field_F;
+            param6 = param2.baselineOffset;
           }
           if (param4 == null) {
             this.lines = null;
@@ -68,16 +68,16 @@ final class CachedTextLayout extends TextLayout {
           this.field_k = param7;
           this.font = param2;
           this.field_m = param5;
-          var17 = new String[param2.b(param4, param7) + 1];
+          var17 = new String[param2.lineCount(param4, param7) + 1];
           var18 = var17;
-          var10 = Math.max(1, param2.a(param4, new int[]{param7}, var18));
+          var10 = Math.max(1, param2.breakLines(param4, new int[]{param7}, var18));
           if (this.field_m == 3 &&
             var10 == 1) {
             this.field_m = 1;
           }
           var12 = -23 / ((13 - param0) / 59);
           if (this.field_m == 0) {
-            var11 = param2.field_s;
+            var11 = param2.ascent;
           } else {
             if (1 != this.field_m) {
               if (this.field_m != 2) {
@@ -86,12 +86,12 @@ final class CachedTextLayout extends TextLayout {
                   var13 = 0;
                 }
                 this.field_j = this.field_j + var13;
-                var11 = param2.field_s + var13;
+                var11 = param2.ascent + var13;
               } else {
-                var11 = -(var10 * this.field_j) + this.field_g - param2.field_I;
+                var11 = -(var10 * this.field_j) + this.field_g - param2.descent;
               }
             } else {
-              var11 = (this.field_g - var10 * this.field_j >> 1) + param2.field_s;
+              var11 = (this.field_g - var10 * this.field_j >> 1) + param2.ascent;
             }
           }
           this.lines = new TextLayoutLine[var10];
@@ -99,8 +99,8 @@ final class CachedTextLayout extends TextLayout {
             var14 = var17[var13Lifetime1];
             stackIn_34_0 = null;
             stackIn_34_1 = null;
-            stackIn_34_2 = -param2.field_s + var11;
-            stackIn_34_3 = param2.field_I + var11;
+            stackIn_34_2 = -param2.ascent + var11;
+            stackIn_34_3 = param2.descent + var11;
             if (var14 != null) {
               stackIn_35_0 = null;
               stackIn_35_1 = null;
@@ -113,13 +113,13 @@ final class CachedTextLayout extends TextLayout {
             var15 = new TextLayoutLine(stackIn_34_2, stackIn_34_3, stackIn_35_4);
             var15.caretX[0] = 0;
             if (var14 != null) {
-              var15.caretX[var14.length()] = param2.a(var14);
+              var15.caretX[var14.length()] = param2.stringWidth(var14);
               stackIn_39_0 = 90;
               stackIn_39_1 = var15;
               if (3 != param1) {
                 stackIn_40_2 = 0;
               } else {
-                stackIn_40_2 = this.justificationSpaceQ8(-292767736, param7, var14, param2.a(var14));
+                stackIn_40_2 = this.justificationSpaceQ8(-292767736, param7, var14, param2.stringWidth(var14));
               }
               kw.$cfr$intArgs$a$62b8cf4125f9(stackIn_39_0, stackIn_39_1, stackIn_40_2, param2, var14);
             }
@@ -166,7 +166,7 @@ final class CachedTextLayout extends TextLayout {
           this.font = param1;
           this.field_e = 1;
           var8 = this.createSingleLine(param0, -106, param1, param3);
-          var7 = param1.a(param3);
+          var7 = param1.stringWidth(param3);
           var8.caretX[0] = -(var7 >> 1) + param4;
           var8.caretX[param3.length()] = param4 + (var7 >> 1);
           kw.$cfr$intArgs$a$62b8cf4125f9(90, var8, 0, param1, param3);
@@ -261,7 +261,7 @@ final class CachedTextLayout extends TextLayout {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new TextLayoutLine(-param2.field_s + param0, param2.field_I + param0, param3.length());
+          var6 = new TextLayoutLine(-param2.ascent + param0, param2.descent + param0, param3.length());
           var5 = var6;
           this.lines = new TextLayoutLine[]{var6};
           if (param1 != -106) {
@@ -416,7 +416,7 @@ final class CachedTextLayout extends TextLayout {
                 TextureFormat.field_a = var9Lifetime1;
                 kw.field_c = DropDownArrowRenderer.field_b;
               } else {
-                OpenGlIndexBuffer.b(-1, br.b(-105));
+                OpenGlIndexBuffer.b(-1, ChatMessage.loginReplyHeaderLength(-105));
                 HardwareGraphicsToolkit.field_j = new Boolean(of.a(ig.field_a, 115));
                 ig.field_a.position = 0;
               }
@@ -446,7 +446,7 @@ final class CachedTextLayout extends TextLayout {
             } else {
               var9_ref_String = ig.field_a.readNullableString((byte) 80);
               if (var9_ref_String != null) {
-                jb.a((byte) 97, var9_ref_String, LegacyOpenGlUnlitEffect.c(2));
+                UsernameCredentials.writeAppletSettings((byte) 97, var9_ref_String, LegacyOpenGlUnlitEffect.c(2));
               }
             }
             kk.a((byte) -127);
@@ -466,9 +466,9 @@ final class CachedTextLayout extends TextLayout {
               return stackIn_65_0;
             }
             var9Lifetime3 = vp.field_a;
-            vp.field_a = nb.field_b;
+            vp.field_a = LoginCredentialType.field_b;
             LimitedRandomAccessFile.field_g = true;
-            nb.field_b = var9Lifetime3;
+            LoginCredentialType.field_b = var9Lifetime3;
           }
           stackIn_67_0 = -1;
           return stackIn_67_0;
@@ -523,7 +523,7 @@ final class CachedTextLayout extends TextLayout {
           return;
         }
         try {
-          var8.caretX[0] = param2 - param0.a(param3);
+          var8.caretX[0] = param2 - param0.stringWidth(param3);
           var7.caretX[param3.length()] = param2;
           kw.$cfr$intArgs$a$62b8cf4125f9(90, var8, 0, param0, param3);
         } catch (RuntimeException runtimeException) {
@@ -553,7 +553,7 @@ final class CachedTextLayout extends TextLayout {
           var7 = this.createSingleLine(param1, -106, param0, param2);
           var8 = var7;
           var7.caretX[0] = param3;
-          var8.caretX[param2.length()] = param3 + param0.a(param2);
+          var8.caretX[param2.length()] = param3 + param0.stringWidth(param2);
           kw.$cfr$intArgs$a$62b8cf4125f9(90, var8, 0, param0, param2);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "jd.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');

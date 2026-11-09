@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ds {
+final class LoginCredentialFactory {
     static int field_a;
     static String[] field_b;
 
-    final static se a(long param0, boolean param1, String param2, String param3, boolean param4) {
+    final static LoginCredentials createCredentials(long usernameKey, boolean alternateUsernameType, String email, String password, boolean guard) {
         RuntimeException var6 = null;
-        tn stackIn_8_0 = null;
-        wd stackIn_10_0 = null;
-        jb stackIn_12_0 = null;
+        AlternateUsernameCredentials stackIn_8_0 = null;
+        EmailCredentials stackIn_10_0 = null;
+        UsernameCredentials stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -17,43 +17,43 @@ final class ds {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param4) {
-            ds.releaseStatics((byte) 100);
+          if (guard) {
+            LoginCredentialFactory.releaseStatics((byte) 100);
           }
-          if (param0 == 0L &&
-            param2 != null) {
-            stackIn_10_0 = new wd(param2, param3);
-            return (se) ((Object) stackIn_10_0);
+          if (usernameKey == 0L &&
+            email != null) {
+            stackIn_10_0 = new EmailCredentials(email, password);
+            return (LoginCredentials) ((Object) stackIn_10_0);
           }
-          if (param1) {
-            stackIn_8_0 = new tn(param0, param3);
-            return (se) ((Object) stackIn_8_0);
+          if (alternateUsernameType) {
+            stackIn_8_0 = new AlternateUsernameCredentials(usernameKey, password);
+            return (LoginCredentials) ((Object) stackIn_8_0);
           }
-          stackIn_12_0 = new jb(param0, param3);
-          return (se) ((Object) stackIn_12_0);
+          stackIn_12_0 = new UsernameCredentials(usernameKey, password);
+          return (LoginCredentials) ((Object) stackIn_12_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_15_0 = var6;
-          stackIn_15_1 = new StringBuilder().append("ds.C(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_15_1 = new StringBuilder().append("ds.C(").append(usernameKey).append(',').append(alternateUsernameType).append(',');
+          if (email == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
           stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',');
-          if (param3 == null) {
+          if (password == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    final static void a(int param0) {
-        if (param0 <= 33) {
-          ds.a(-65);
+    final static void initializePlayerFromUpgradeSettings(int guard) {
+        if (guard <= 33) {
+          LoginCredentialFactory.initializePlayerFromUpgradeSettings(-65);
           SpriteMask.drones[0] = (Drone) ((Object) new PlayerDrone(81920, 61440));
           SpriteMask.drones[0].speedLevel = ResourceArchive.field_f;
           SpriteMask.drones[0].bounceLevel = hc.field_f;

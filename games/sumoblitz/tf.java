@@ -16,10 +16,10 @@ final class tf {
         throw new IllegalStateException();
     }
 
-    final static bo a(ResourceArchive param0, byte param1, int param2, int param3, ResourceArchive param4) {
+    final static LegacyAlphaFont a(ResourceArchive param0, byte param1, int param2, int param3, ResourceArchive param4) {
         RuntimeException var5 = null;
-        bo stackIn_5_0 = null;
-        bo stackIn_7_0 = null;
+        LegacyAlphaFont stackIn_5_0 = null;
+        LegacyAlphaFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -34,7 +34,7 @@ final class tf {
             stackIn_7_0 = ScrollControl.a(false, param0.fetchFile((byte) 94, param3, param2));
             return stackIn_7_0;
           }
-          stackIn_5_0 = (bo) null;
+          stackIn_5_0 = (LegacyAlphaFont) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

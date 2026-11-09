@@ -257,7 +257,7 @@ final class ArenaPad extends IntrusiveNode {
             (decompiledFrameRemainder6) &&
             (decompiledFrameRemainder5) &&
             (decompiledFrameRemainder4)) {
-            var5 = is.arenaPads;
+            var5 = QuickChatPhraseProvider.arenaPads;
             var7 = 0;
             var6 = new IntrusiveDequeCursor(var5);
             var8 = (ArenaPad) (var6.first((byte) -80));

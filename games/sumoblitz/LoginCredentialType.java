@@ -1,24 +1,24 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nb {
+final class LoginCredentialType {
     static int field_b;
     static int field_a;
-    int field_c;
+    int wireId;
 
     public final String toString() {
         throw new IllegalStateException();
     }
 
-    final static void a(boolean param0) {
+    final static void showAccountSignupPrompt(boolean guard) {
         SlowBurstParticle.field_y.transitionToContent((byte) -107, new AccountSignupPrompt());
-        if (!param0) {
-          nb.a(false);
+        if (!guard) {
+          LoginCredentialType.showAccountSignupPrompt(false);
         }
     }
 
-    nb(int param0) {
-        this.field_c = param0;
+    LoginCredentialType(int encoding) {
+        this.wireId = encoding;
     }
 
     static {

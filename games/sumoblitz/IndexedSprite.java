@@ -5,7 +5,7 @@ abstract class IndexedSprite {
     int offsetX;
     int height;
     int fullHeight;
-    static nb field_b;
+    static LoginCredentialType EMAIL_CREDENTIALS;
     int fullWidth;
     int offsetY;
     int width;
@@ -59,14 +59,14 @@ abstract class IndexedSprite {
         if (param0 >= 10) {
           return new ts[]{OpenGlTexture3D.field_n, RasterBuffer.field_i, sj.field_b, OpenGlTransparentWaterEffect.field_h, lm.field_a, LegacyOpenGlSpriteTexture.field_t, RenderPresentationException.field_e, DualLinkNode.field_n, vd.field_b, ClientExceptionSupport.field_b, ea.field_a, AccountCreationForm.field_G, ic.field_a, uc.field_d};
         }
-        field_b = (nb) null;
+        EMAIL_CREDENTIALS = (LoginCredentialType) null;
         return new ts[]{OpenGlTexture3D.field_n, RasterBuffer.field_i, sj.field_b, OpenGlTransparentWaterEffect.field_h, lm.field_a, LegacyOpenGlSpriteTexture.field_t, RenderPresentationException.field_e, DualLinkNode.field_n, vd.field_b, ClientExceptionSupport.field_b, ea.field_a, AccountCreationForm.field_G, ic.field_a, uc.field_d};
     }
 
     public static void releaseStatics(int param0) {
-        field_b = null;
+        EMAIL_CREDENTIALS = null;
         if (param0 != 3) {
-          field_b = (nb) null;
+          EMAIL_CREDENTIALS = (LoginCredentialType) null;
         }
     }
 
@@ -75,6 +75,6 @@ abstract class IndexedSprite {
     abstract void draw(int x, int y);
 
     static {
-        field_b = new nb(3);
+        EMAIL_CREDENTIALS = new LoginCredentialType(3);
     }
 }

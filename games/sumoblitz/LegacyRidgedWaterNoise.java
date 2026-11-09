@@ -50,7 +50,7 @@ final class LegacyRidgedWaterNoise extends RidgedNoise3D {
             LegacyRidgedWaterNoise.releaseStatics((byte) -127);
           }
           pu.field_e.advanceDialogAnimations(-104);
-          while (wd.c(-81)) {
+          while (EmailCredentials.c(-81)) {
             pu.field_e.dispatchKey(WhirlpoolDigest.field_c, TextureCombineOperation.field_a, true);
           }
           return;

@@ -27,7 +27,7 @@ final class DisplayModeConfirmationDialog extends ResizingDialog implements Widg
             root.clearFocus((byte) 116);
           }
           var7 = -26 / ((guard + 25) / 45);
-          var5_long = -this.field_W + wq.a(-118);
+          var5_long = -this.field_W + wq.monotonicTimeMillis(-118);
           var8 = (int)((10999L - var5_long) / 1000L);
           if (var8 > 0) {
             this.field_S.text = "" + var8;
@@ -104,7 +104,7 @@ final class DisplayModeConfirmationDialog extends ResizingDialog implements Widg
         super(param0, 200, 200);
         UiWidget var3 = null;
         try {
-          this.field_W = wq.a(-97);
+          this.field_W = wq.monotonicTimeMillis(-97);
           var3 = new UiWidget(GraphicsToolkit.field_d, (WidgetListener) null);
           var3.height = 100;
           var3.y = 50;

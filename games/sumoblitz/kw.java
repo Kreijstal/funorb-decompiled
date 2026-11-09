@@ -39,13 +39,13 @@ final class kw {
           for (var7 = 1; param4.length() > var7; var7++) {
             var8 = param4.charAt(var7);
             if (60 == var8) {
-              var6 = (var5_int >> 8) + param1.caretX[0] + param3.a(param4.substring(0, var7));
+              var6 = (var5_int >> 8) + param1.caretX[0] + param3.stringWidth(param4.substring(0, var7));
             }
             if (var6 == -1) {
               if (var8 == 32) {
                 var5_int = var5_int + param2;
               }
-              param1.caretX[var7] = param1.caretX[0] + ((var5_int >> 8) + (param3.a(param4.substring(0, 1 + var7)) - param3.a((char) var8)));
+              param1.caretX[var7] = param1.caretX[0] + ((var5_int >> 8) + (param3.stringWidth(param4.substring(0, 1 + var7)) - param3.charWidth((char) var8)));
             } else {
               param1.caretX[var7] = var6;
             }
@@ -121,13 +121,13 @@ final class kw {
           for (var7 = 1; param4.length() > var7; var7++) {
             var8 = param4.charAt(var7);
             if (60 == var8) {
-              var6 = (var5_int >> 8) + param1.caretX[0] + param3.a(param4.substring(0, var7));
+              var6 = (var5_int >> 8) + param1.caretX[0] + param3.stringWidth(param4.substring(0, var7));
             }
             if (var6 == -1) {
               if (var8 == 32) {
                 var5_int = var5_int + param2;
               }
-              param1.caretX[var7] = param1.caretX[0] + ((var5_int >> 8) + (param3.a(param4.substring(0, 1 + var7)) - param3.a((char) var8)));
+              param1.caretX[var7] = param1.caretX[0] + ((var5_int >> 8) + (param3.stringWidth(param4.substring(0, 1 + var7)) - param3.charWidth((char) var8)));
             } else {
               param1.caretX[var7] = var6;
             }

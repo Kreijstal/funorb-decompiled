@@ -160,7 +160,7 @@ final class IntrusiveDequeCursor {
                 var5 = 1;
                 var4 = 1;
               }
-              uc.field_b = pm.a(83, var2 * var5, var4 * var2);
+              uc.field_b = ToolkitRasterStateStack.a(83, var2 * var5, var4 * var2);
               return;
             }
           }
@@ -212,7 +212,7 @@ final class IntrusiveDequeCursor {
           var5 = 1;
           var4 = 1;
         }
-        uc.field_b = pm.a(83, var2 * var5, var4 * var2);
+        uc.field_b = ToolkitRasterStateStack.a(83, var2 * var5, var4 * var2);
     }
 
     final static void a(cd[] param0, boolean param1) {
@@ -370,7 +370,7 @@ final class IntrusiveDequeCursor {
           if (BufferedCacheFile.a((byte) -84, 10) >= 5) {
             GraphicsToolkit.field_f = GraphicsToolkit.field_f - param0;
           } else {
-            fb.field_a = fb.field_a - param0;
+            LoginPacketWriter.field_a = LoginPacketWriter.field_a - param0;
           }
         }
         if (var2 >= 50000) {

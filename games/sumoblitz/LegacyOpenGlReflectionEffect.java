@@ -229,13 +229,13 @@ final class LegacyOpenGlReflectionEffect extends LegacyOpenGlEffect {
           pi.field_e = SecondaryNodeDeque.field_b;
           sl.field_d = ResourceArchive.field_i;
           ResourceArchive.field_i = false;
-          hk.field_c = kb.field_i;
-          nb.field_a = GzipDecompressor.field_d;
+          hk.field_c = LegacyOpenGlBuffer.field_i;
+          LoginCredentialType.field_a = GzipDecompressor.field_d;
           if (param0 < 93) {
             LegacyOpenGlReflectionEffect.d(-50);
           }
           AgeValidator.field_f = LegacyOpenGlTexture3D.field_l;
-          kb.field_i = 0;
+          LegacyOpenGlBuffer.field_i = 0;
         }
     }
 

@@ -2,33 +2,33 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GraphicsToolkitManager {
-    private nj[] field_a;
-    private TextureProvider field_e;
+    private RendererPreference[] preferences;
+    private TextureProvider textures;
     static ResourceArchive field_d;
-    private boolean field_b;
-    private bk field_c;
+    private boolean configurationApplied;
+    private RendererSession session;
 
-    private final void a(nj[] param0, int param1) {
+    private final void setRendererPreferences(RendererPreference[] preferences, int guard) {
         try {
-          if (param1 < 89) {
+          if (guard < 89) {
             java.awt.Canvas var4 = (java.awt.Canvas) null;
-            this.a(127, (java.awt.Canvas) null);
+            this.selectToolkit(127, (java.awt.Canvas) null);
           }
-          if (param0 != this.field_a) {
-            if (param0.length == 0) {
+          if (preferences != this.preferences) {
+            if (preferences.length == 0) {
               throw new IllegalArgumentException();
             }
-            this.field_a = param0;
-            this.field_b = false;
+            this.preferences = preferences;
+            this.configurationApplied = false;
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ik.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ik.G(" + (preferences != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
-    final static int c(int param0) {
-        if (param0 != -10517) {
-          GraphicsToolkitManager.c(113);
+    final static int topDialogX(int guard) {
+        if (guard != -10517) {
+          GraphicsToolkitManager.topDialogX(113);
         }
         if (!BeveledCheckboxRenderer.hasOpenDialogs(false) ||
           null == pu.field_e.topOpenDialog((byte) 54)) {
@@ -37,11 +37,11 @@ final class GraphicsToolkitManager {
         return pu.field_e.topOpenDialog((byte) 54).x;
     }
 
-    final boolean a(boolean param0) {
-        if (param0) {
-          this.field_e = (TextureProvider) null;
+    final boolean updateToolkit(boolean guard) {
+        if (guard) {
+          this.textures = (TextureProvider) null;
         }
-        return this.a(hk.b(-45), 89);
+        return this.updateToolkitForCanvas(hk.b(-45), 89);
     }
 
     public static void releaseStatics(int param0) {
@@ -51,8 +51,8 @@ final class GraphicsToolkitManager {
         field_d = null;
     }
 
-    private final boolean a(java.awt.Canvas param0, int param1) {
-        bk var3 = null;
+    private final boolean updateToolkitForCanvas(java.awt.Canvas canvas, int guard) {
+        RendererSession var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         boolean stackIn_13_0 = false;
@@ -61,19 +61,19 @@ final class GraphicsToolkitManager {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.field_c;
+          var3 = this.session;
           if (var3 == null ||
-            !this.field_b ||
-            param0 != var3.field_c) {
-            this.a(-101, param0);
+            !this.configurationApplied ||
+            canvas != var3.canvas) {
+            this.selectToolkit(-101, canvas);
           }
-          var4 = 113 / ((12 - param1) / 52);
-          if (this.field_c != null) {
-            this.field_c.field_g.updateTime((int)(wq.a(-116) - this.field_c.field_f));
+          var4 = 113 / ((12 - guard) / 52);
+          if (this.session != null) {
+            this.session.toolkit.updateTime((int)(wq.monotonicTimeMillis(-116) - this.session.startTimeMillis));
           }
           boolean decompiledFrameRemainder0 = true;
-          if (null != this.field_c && (var3 == null ||
-            this.field_c.field_g != var3.field_g)) {
+          if (null != this.session && (var3 == null ||
+            this.session.toolkit != var3.toolkit)) {
             stackIn_13_0 = true;
             decompiledFrameRemainder0 = false;
           }
@@ -86,43 +86,43 @@ final class GraphicsToolkitManager {
           var3_ref = decompiledCaughtException;
           stackIn_16_0 = var3_ref;
           stackIn_16_1 = new StringBuilder().append("ik.A(");
-          if (param0 == null) {
+          if (canvas == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    private final void a(int param0, java.awt.Canvas param1) {
+    private final void selectToolkit(int guard, java.awt.Canvas canvas) {
         int var5 = 0;
         Object stackIn_115_0 = null;
         StringBuilder stackIn_115_1 = null;
         String stackIn_116_2 = null;
         RuntimeException decompiledCaughtException = null;
         Object var3 = null;
-        nj[] var4 = null;
-        nj var6 = null;
+        RendererPreference[] var4 = null;
+        RendererPreference var6 = null;
         int var7_int = 0;
         RuntimeException var7 = null;
         int var8_int = 0;
-        bk var8 = null;
+        RendererSession var8 = null;
         int var9 = 0;
         int var10 = 0;
         GraphicsToolkit var11 = null;
         var10 = Sumoblitz.field_L ? 1 : 0;
         try {
           var3 = null;
-          if (param0 != -101) {
-            this.a(-39);
+          if (guard != -101) {
+            this.getToolkit(-39);
           }
-          var4 = this.field_a;
+          var4 = this.preferences;
           for (var5 = 0; var5 < var4.length; var5++) {
             boolean decompiledFrameRemainder0 = true;
             var6 = var4[var5];
-            if (var6.field_f) {
-              var7_int = var6.field_c;
+            if (var6.enabled) {
+              var7_int = var6.backend;
               if (var7_int != 0) {
                 if (var7_int == 5) {
                   if (!LegacyOpenGlShaderProgram.field_d.loadIndex((byte) 127)) {
@@ -130,7 +130,7 @@ final class GraphicsToolkitManager {
                   }
                   var7_int = ig.a("hw3d", true);
                   if (var7_int == -1) {
-                    var6.field_f = false;
+                    var6.enabled = false;
                     decompiledFrameRemainder0 = false;
                   }
                   else {
@@ -139,7 +139,7 @@ final class GraphicsToolkitManager {
                     }
                     var8_int = ig.a("jaclib", true);
                     if (var8_int == -1) {
-                      var6.field_f = false;
+                      var6.enabled = false;
                       decompiledFrameRemainder0 = false;
                     }
                     else {
@@ -148,7 +148,7 @@ final class GraphicsToolkitManager {
                       }
                       var9 = ig.a("jaggl", true);
                       if (var9 == -1) {
-                        var6.field_f = false;
+                        var6.enabled = false;
                         decompiledFrameRemainder0 = false;
                       }
                       else {
@@ -166,7 +166,7 @@ final class GraphicsToolkitManager {
                       }
                       var7_int = ig.a("jaclib", true);
                       if (var7_int == -1) {
-                        var6.field_f = false;
+                        var6.enabled = false;
                         decompiledFrameRemainder0 = false;
                       }
                       else {
@@ -175,7 +175,7 @@ final class GraphicsToolkitManager {
                         }
                         var8_int = ig.a("jagdx", true);
                         if (var8_int == -1) {
-                          var6.field_f = false;
+                          var6.enabled = false;
                           decompiledFrameRemainder0 = false;
                         }
                         else {
@@ -184,7 +184,7 @@ final class GraphicsToolkitManager {
                           }
                           var9 = ig.a("hw3d", true);
                           if (var9 == -1) {
-                            var6.field_f = false;
+                            var6.enabled = false;
                             decompiledFrameRemainder0 = false;
                           }
                           else {
@@ -196,14 +196,14 @@ final class GraphicsToolkitManager {
                       }
                     } else {
                       if (var7_int != 2) {
-                        throw new IllegalStateException("UT" + var6.field_c);
+                        throw new IllegalStateException("UT" + var6.backend);
                       }
                       if (!LegacyOpenGlShaderProgram.field_d.loadIndex((byte) 127)) {
                         return;
                       }
                       var7_int = ig.a("jaclib", true);
                       if (var7_int == -1) {
-                        var6.field_f = false;
+                        var6.enabled = false;
                         decompiledFrameRemainder0 = false;
                       }
                       else {
@@ -212,7 +212,7 @@ final class GraphicsToolkitManager {
                         }
                         var8_int = ig.a("sw3d", true);
                         if (var8_int == -1) {
-                          var6.field_f = false;
+                          var6.enabled = false;
                           decompiledFrameRemainder0 = false;
                         }
                         else {
@@ -228,7 +228,7 @@ final class GraphicsToolkitManager {
                     }
                     var7_int = ig.a("jaclib", true);
                     if (-1 == var7_int) {
-                      var6.field_f = false;
+                      var6.enabled = false;
                       decompiledFrameRemainder0 = false;
                     }
                     else {
@@ -237,7 +237,7 @@ final class GraphicsToolkitManager {
                       }
                       var8_int = ig.a("jaggl", true);
                       if (var8_int == -1) {
-                        var6.field_f = false;
+                        var6.enabled = false;
                         decompiledFrameRemainder0 = false;
                       }
                       else {
@@ -250,46 +250,46 @@ final class GraphicsToolkitManager {
                 }
               }
               if (decompiledFrameRemainder0) {
-                if (null != this.field_c) {
-                  if (this.field_c.field_d.a(var6, (byte) 95) &&
-                    null != this.field_c.field_g &&
-                    this.field_c.field_c == param1 &&
-                    var6.a(this.field_c, (byte) -123)) {
-                    this.field_b = true;
+                if (null != this.session) {
+                  if (this.session.preference.sameBackend(var6, (byte) 95) &&
+                    null != this.session.toolkit &&
+                    this.session.canvas == canvas &&
+                    var6.acceptsSession(this.session, (byte) -123)) {
+                    this.configurationApplied = true;
                     return;
                   }
-                  if (~this.field_c.field_d.field_c == ~var6.field_c &&
-                    this.field_c.field_g != null) {
-                    var3 = this.field_c.b(-43);
-                    this.field_c.field_g.close((byte) -94);
-                    this.field_c = null;
+                  if (~this.session.preference.backend == ~var6.backend &&
+                    this.session.toolkit != null) {
+                    var3 = this.session.captureState(-43);
+                    this.session.toolkit.close((byte) -94);
+                    this.session = null;
                   }
                 }
                 try {
-                  var11 = HardwareTurbulentWaterNoise.createToolkitForCanvas(var6.field_c, param1, this.field_e, true, var6.field_g, GraphicsToolkit.field_g);
+                  var11 = HardwareTurbulentWaterNoise.createToolkitForCanvas(var6.backend, canvas, this.textures, true, var6.options, GraphicsToolkit.field_g);
                   if (var11 != null) {
-                    var8 = new bk(var11, var6, param1);
-                    if (var6.a(var8, (byte) -36)) {
-                      if (this.field_c != null) {
-                        if (var8.field_g == this.field_c.field_g &&
-                          var8.field_c == this.field_c.field_c) {
-                          this.field_c = var8;
-                          this.field_b = true;
+                    var8 = new RendererSession(var11, var6, canvas);
+                    if (var6.acceptsSession(var8, (byte) -36)) {
+                      if (this.session != null) {
+                        if (var8.toolkit == this.session.toolkit &&
+                          var8.canvas == this.session.canvas) {
+                          this.session = var8;
+                          this.configurationApplied = true;
                           return;
                         }
-                        var3 = this.field_c.b(79);
-                        this.field_c.field_g.close((byte) -109);
+                        var3 = this.session.captureState(79);
+                        this.session.toolkit.close((byte) -109);
                       }
-                      if (var8.field_g.usesNativeRendering()) {
-                        var8.field_g.useHeap(var8.field_g.createHeap(100663296));
+                      if (var8.toolkit.usesNativeRendering()) {
+                        var8.toolkit.useHeap(var8.toolkit.createHeap(100663296));
                       }
                       if (var3 == null) {
-                        var8.field_f = wq.a(param0 + 59);
+                        var8.startTimeMillis = wq.monotonicTimeMillis(guard + 59);
                       } else {
-                        ((cj) (var3)).a(var8, 3);
+                        ((RendererStateSnapshot) (var3)).restore(var8, 3);
                       }
-                      this.field_b = true;
-                      this.field_c = var8;
+                      this.configurationApplied = true;
+                      this.session = var8;
                       return;
                     }
                   }
@@ -298,7 +298,7 @@ final class GraphicsToolkitManager {
                   var7 = decompiledCaughtException;
                   var7.printStackTrace();
                 }
-                var6.field_f = false;
+                var6.enabled = false;
               }
             }
           }
@@ -307,8 +307,8 @@ final class GraphicsToolkitManager {
           decompiledCaughtException = decompiledCaughtParameter1;
           var3 = decompiledCaughtException;
           stackIn_115_0 = var3;
-          stackIn_115_1 = new StringBuilder().append("ik.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_115_1 = new StringBuilder().append("ik.B(").append(guard).append(',');
+          if (canvas == null) {
             stackIn_116_2 = "null";
           } else {
             stackIn_116_2 = "{...}";
@@ -317,30 +317,30 @@ final class GraphicsToolkitManager {
         }
     }
 
-    final GraphicsToolkit a(int param0) {
-        if (param0 >= -89) {
+    final GraphicsToolkit getToolkit(int guard) {
+        if (guard >= -89) {
           return (GraphicsToolkit) null;
         }
-        if (this.field_c == null) {
+        if (this.session == null) {
           return null;
         }
-        return this.field_c.field_g;
+        return this.session.toolkit;
     }
 
-    GraphicsToolkitManager(int param0, int param1, TextureProvider param2) {
-        this(kd.a((byte) -123, param0), ScrollControl.b(param1, -1), param2, lt.field_m, IntrusiveNode.b(-16754));
+    GraphicsToolkitManager(int nativeArchiveId, int shaderArchiveId, TextureProvider textureProvider) {
+        this(kd.a((byte) -123, nativeArchiveId), ScrollControl.b(shaderArchiveId, -1), textureProvider, lt.field_m, IntrusiveNode.b(-16754));
     }
 
-    private GraphicsToolkitManager(ResourceArchive param0, ResourceArchive param1, TextureProvider param2, PlatformTaskDispatcher param3, nj[] param4) {
-        this.field_b = false;
+    private GraphicsToolkitManager(ResourceArchive nativeArchive, ResourceArchive shaderArchive, TextureProvider textureProvider, PlatformTaskDispatcher dispatcher, RendererPreference[] rendererPreferences) {
+        this.configurationApplied = false;
         try {
-          GraphicsToolkit.field_g = param1;
-          this.field_e = param2;
-          LegacyOpenGlShaderProgram.field_d = param0;
-          ow.a(-18527, param0, param3);
-          this.a(param4, 97);
+          GraphicsToolkit.field_g = shaderArchive;
+          this.textures = textureProvider;
+          LegacyOpenGlShaderProgram.field_d = nativeArchive;
+          ow.a(-18527, nativeArchive, dispatcher);
+          this.setRendererPreferences(rendererPreferences, 97);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ik.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ik.<init>(" + (nativeArchive != null ? "{...}" : "null") + ',' + (shaderArchive != null ? "{...}" : "null") + ',' + (textureProvider != null ? "{...}" : "null") + ',' + (dispatcher != null ? "{...}" : "null") + ',' + (rendererPreferences != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -40,7 +40,7 @@ final class GameplaySession {
         int var4_intLifetime1;
         var9 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var2 = MatchingTextValidator.field_h.a(param0 ^ -80);
+          var2 = MatchingTextValidator.field_h.getToolkit(param0 ^ -80);
           if (param0 != 60) {
             return;
           }
@@ -262,11 +262,11 @@ final class GameplaySession {
           boolean decompiledFrameCompleted4 = true;
           toolkit.clear(0);
           this.renderArenaBackground(60);
-          if (null != is.arenaPads) {
-            var4 = (ArenaPad) (is.arenaPads.first(-81));
+          if (null != QuickChatPhraseProvider.arenaPads) {
+            var4 = (ArenaPad) (QuickChatPhraseProvider.arenaPads.first(-81));
             while (var4 != null) {
               var4.render(toolkit, -15687169);
-              var4 = (ArenaPad) (is.arenaPads.next((byte) 18));
+              var4 = (ArenaPad) (QuickChatPhraseProvider.arenaPads.next((byte) 18));
               if (var6 != 0) {
                 decompiledFrameCompleted4 = false;
                 break;
@@ -397,7 +397,7 @@ final class GameplaySession {
         var7 = Sumoblitz.field_L ? 1 : 0;
         try {
           var2_int = 0;
-          var3 = new IntrusiveDequeCursor(is.arenaPads);
+          var3 = new IntrusiveDequeCursor(QuickChatPhraseProvider.arenaPads);
           if (param0 < 59) {
             return;
           }
@@ -877,7 +877,7 @@ final class GameplaySession {
           ig.hudMessages.clear(116);
           FadingWidget.score = 0;
           LegacyOpenGlSpriteTexture.field_w = false;
-          fb.field_a = 0;
+          LoginPacketWriter.field_a = 0;
           GraphicsToolkit.field_f = 0;
           ts.field_a = 0;
           OpenGlTransparentWaterEffect.field_e = 0;
@@ -1032,7 +1032,7 @@ final class GameplaySession {
         try {
           boolean decompiledFrameCompleted3 = true;
           if (processInput) {
-            while (wd.c(-112)) {
+            while (EmailCredentials.c(-112)) {
               this.handleGameKey((byte) -122);
               if (var6 != 0) {
                 decompiledFrameCompleted3 = false;
@@ -1091,7 +1091,7 @@ final class GameplaySession {
           if (GridWidgetContainer.livesRemaining > 0) {
             ts.field_a = ts.field_a + 8;
             GraphicsToolkit.field_f = GraphicsToolkit.field_f + 10;
-            fb.field_a = fb.field_a - 5;
+            LoginPacketWriter.field_a = LoginPacketWriter.field_a - 5;
             SoftwareTransform3D.field_b = SoftwareTransform3D.field_b - 3;
             TextureFormat.elapsedTicks = TextureFormat.elapsedTicks + 1;
             if (BufferedCacheFile.a((byte) -84, 10) >= 5) {
@@ -1103,7 +1103,7 @@ final class GameplaySession {
                 ts.field_a = ts.field_a + 1;
                 if (var6 != 0) {
                   if (BufferedCacheFile.a((byte) -84, 10) >= 5) {
-                    fb.field_a = fb.field_a - 1;
+                    LoginPacketWriter.field_a = LoginPacketWriter.field_a - 1;
                     GraphicsToolkit.field_f = GraphicsToolkit.field_f - 1;
                   } else {
                     GraphicsToolkit.field_f = GraphicsToolkit.field_f - 1;
@@ -1112,7 +1112,7 @@ final class GameplaySession {
               }
             } else {
               if (BufferedCacheFile.a((byte) -84, 10) >= 5) {
-                fb.field_a = fb.field_a - 1;
+                LoginPacketWriter.field_a = LoginPacketWriter.field_a - 1;
                 if (var6 != 0) {
                   GraphicsToolkit.field_f = GraphicsToolkit.field_f - 1;
                 }
@@ -1131,7 +1131,7 @@ final class GameplaySession {
             return;
           }
           qv.a(2);
-          if (is.arenaPads != null) {
+          if (QuickChatPhraseProvider.arenaPads != null) {
             this.updateArenaPads((byte) 111);
           }
           this.compatibilityTickHook(-112);
@@ -1384,7 +1384,7 @@ final class GameplaySession {
               StrongCacheReference.switchMenuScreen(-7753, true, 11);
               if (var6 != 0) {
                 if (!MessageDialog.arcadeMode) {
-                  ds.a(107);
+                  LoginCredentialFactory.initializePlayerFromUpgradeSettings(107);
                   WidgetStateStyle.initializePlayerDrone(72);
                 } else {
                   WidgetStateStyle.initializePlayerDrone(72);
@@ -1392,7 +1392,7 @@ final class GameplaySession {
               }
             } else {
               if (!MessageDialog.arcadeMode) {
-                ds.a(107);
+                LoginCredentialFactory.initializePlayerFromUpgradeSettings(107);
                 if (var6 != 0) {
                   WidgetStateStyle.initializePlayerDrone(72);
                 }
@@ -1410,7 +1410,7 @@ final class GameplaySession {
             }
             if (var4Lifetime1.isBlastWarningTick((byte) -59) &&
               this.showBlastHint) {
-              wd.a((byte) 99, 17);
+              EmailCredentials.a((byte) 99, 17);
               this.showBlastHint = false;
             }
           }
@@ -1646,11 +1646,11 @@ final class GameplaySession {
             !LegacyOpenGlSpriteTexture.field_w) {
             boolean decompiledSharedTail0 = !(!MessageDialog.arcadeMode);
             if (!decompiledSharedTail0) {
-              GameKeyHandler.field_a = new id(0, 65535, GraphicsToolkit.field_f, fb.field_a, ts.field_a, SoftwareTransform3D.field_b, new int[]{IntrusiveNodeHashTable.field_c, TextureFormat.elapsedTicks});
+              GameKeyHandler.field_a = new id(0, 65535, GraphicsToolkit.field_f, LoginPacketWriter.field_a, ts.field_a, SoftwareTransform3D.field_b, new int[]{IntrusiveNodeHashTable.field_c, TextureFormat.elapsedTicks});
               decompiledSharedTail0 = (Sumoblitz.field_L);
             }
             if (decompiledSharedTail0) {
-              GameKeyHandler.field_a = new id(1, 65534, GraphicsToolkit.field_f, fb.field_a, ts.field_a, SoftwareTransform3D.field_b, new int[]{IntrusiveNodeHashTable.field_c, TextureFormat.elapsedTicks});
+              GameKeyHandler.field_a = new id(1, 65534, GraphicsToolkit.field_f, LoginPacketWriter.field_a, ts.field_a, SoftwareTransform3D.field_b, new int[]{IntrusiveNodeHashTable.field_c, TextureFormat.elapsedTicks});
             }
             if (!vs.b((byte) 9)) {
               kp.a(3, GameKeyHandler.field_a, 79);
@@ -1681,7 +1681,7 @@ final class GameplaySession {
         StringBuilder stackIn_56_1 = null;
         String stackIn_57_2 = null;
         RuntimeException decompiledCaughtException = null;
-        pm var3 = null;
+        ToolkitRasterStateStack var3 = null;
         RuntimeException var3_ref = null;
         PlayerDrone var4 = null;
         int var5 = 0;
@@ -1693,7 +1693,7 @@ final class GameplaySession {
           if (guard > -75) {
             return;
           }
-          var3 = wq.a(toolkit, (byte) 36);
+          var3 = wq.rasterStateForToolkit(toolkit, (byte) 36);
           if ((0 != GridWidgetContainer.livesRemaining ||
             MusicPatch.simulationPaused) && !MusicPatch.simulationPaused) {
             var4 = (PlayerDrone) (SpriteMask.drones[0]);
@@ -1741,9 +1741,9 @@ final class GameplaySession {
                 uq.field_a.a(473, 175, -4720129, "<col=ffffff>" + ps.scoreText + "</col>" + FadingWidget.score, (byte) -112, -1);
               }
               LegacyOpenGlTexture1D.field_k[0].draw(3, 42);
-              var3.a((byte) 75, 395 - var4.blastChargeGaugeWidth((byte) -106) + 42, 42 + LegacyOpenGlTexture1D.field_k[0].height(), 0, 40);
+              var3.pushClip((byte) 75, 395 - var4.blastChargeGaugeWidth((byte) -106) + 42, 42 + LegacyOpenGlTexture1D.field_k[0].height(), 0, 40);
               LegacyOpenGlTexture1D.field_k[1].draw(3, 42);
-              var3.a(29709);
+              var3.pop(29709);
               if (var4.isBlastReady(20)) {
                 var5Lifetime1 = lg.field_c << 2;
                 if (255 >= var5Lifetime1 % 510) {
@@ -1828,7 +1828,7 @@ final class GameplaySession {
           GraphicsToolkit.field_f = 0;
           ts.field_a = 0;
           TextureFormat.elapsedTicks = 0;
-          fb.field_a = 0;
+          LoginPacketWriter.field_a = 0;
           PasswordValidator.e(104);
           if (OpenGlShaderProgram.levelIndex == 0 &&
             !TextureMetadata.field_f[0]) {

@@ -67,7 +67,7 @@ class MenuScreen {
         int var13Lifetime1Lifetime2;
         int var13Lifetime1Lifetime3;
         var21 = Sumoblitz.field_L ? 1 : 0;
-        var22 = MatchingTextValidator.field_h.a(-106);
+        var22 = MatchingTextValidator.field_h.getToolkit(-106);
         var5 = 16777215 | param2 << 24;
         var6 = 16777215 | param2 << 23;
         var7 = param2 << 24;
@@ -383,7 +383,7 @@ class MenuScreen {
             var9 = "ERROR: missing text";
           }
           if (29 == var8 &&
-            bl.field_e == -1) {
+            ToolkitRasterStateFrame.field_e == -1) {
             param0 = false;
           }
           var10 = this.f(101, param1) - var7;
@@ -453,7 +453,7 @@ class MenuScreen {
                 if (29 != var8) {
                   return;
                 }
-                if (bl.field_e != -1) {
+                if (ToolkitRasterStateFrame.field_e != -1) {
                   return;
                 }
                 wo.a(ResizingDialog.field_H, var11 + 8, 9 + var7, param4, 1, param3, var10 - 18, 22 + var6_int - var11, 1, true);
@@ -691,7 +691,7 @@ class MenuScreen {
           var3 = this.field_g.field_g;
         }
         if (this.screenId == 1 && this.field_g.field_g != -1 &&
-          nj.field_b != -1) {
+          RendererPreference.field_b != -1) {
           var3 = this.field_g.field_g;
         }
         if (this.screenId == 3) {
@@ -977,7 +977,7 @@ class MenuScreen {
                     if (!this.field_g.d(-31260)) {
                       break regionExit2;
                     }
-                    if (bl.field_e <= -1) {
+                    if (ToolkitRasterStateFrame.field_e <= -1) {
                       break regionExit2;
                     }
                     pu.a((byte) -33);
@@ -1070,7 +1070,7 @@ class MenuScreen {
                       gn.a(0, true);
                     }
                     if (this.field_g.b(103)) {
-                      is.b(80);
+                      QuickChatPhraseProvider.b(80);
                       gn.a(0, true);
                     }
                     if (this.field_g.e(2542)) {
@@ -1092,11 +1092,11 @@ class MenuScreen {
                         if (var8 < 256) {
                           OpenGlVertexLayout.a(16440, var8);
                           if (var9 != 0) {
-                            is.b(100);
+                            QuickChatPhraseProvider.b(100);
                             lt.c((byte) 53);
                           }
                         } else {
-                          is.b(100);
+                          QuickChatPhraseProvider.b(100);
                           if (var9 != 0) {
                             lt.c((byte) 53);
                           }
@@ -1547,14 +1547,14 @@ class MenuScreen {
         int var8;
         GraphicsToolkit var9;
         var8 = Sumoblitz.field_L ? 1 : 0;
-        var9 = MatchingTextValidator.field_h.a(-125);
+        var9 = MatchingTextValidator.field_h.getToolkit(-125);
         var4 = param1 << 24 | 16777215;
         var5 = 664;
         wo.a(up.field_c, 380, -5, param1 << 24, 3, var9, 650, 55, 1, true);
         if (param0 < 114) {
           return;
         }
-        this.a(br.instructionsText, param1, 29228);
+        this.a(ChatMessage.instructionsText, param1, 29228);
         var6 = new int[50];
         var7 = 0;
         scanLoop1: while (true) {
@@ -1791,7 +1791,7 @@ class MenuScreen {
           this.field_e = this.field_e - 1;
         }
         boolean decompiledNaturalLoopExit0 = false;
-        while (!(decompiledNaturalLoopExit0 = (!wd.c(-102)))) {
+        while (!(decompiledNaturalLoopExit0 = (!EmailCredentials.c(-102)))) {
           if (TextureCombineOperation.field_a == 13) {
             if (this.screenId == 1) {
               StrongCacheReference.switchMenuScreen(-7753, false, -1);
@@ -1831,7 +1831,7 @@ class MenuScreen {
           break;
         }
         if (decompiledNaturalLoopExit0) {
-          this.field_g.a(true, this.a(nb.field_a, (byte) 97, AgeValidator.field_f), this.a(ko.field_p, (byte) 49, pi.field_e));
+          this.field_g.a(true, this.a(LoginCredentialType.field_a, (byte) 97, AgeValidator.field_f), this.a(ko.field_p, (byte) 49, pi.field_e));
         }
         if (-1 != this.field_g.field_g) {
           this.a(true, (byte) 105, this.field_g.field_g);
@@ -1883,7 +1883,7 @@ class MenuScreen {
             param1 < 4) {
             return 179 + this.b(param1, 77);
           }
-          return nj.field_d[this.screenId];
+          return RendererPreference.field_d[this.screenId];
         }
         return 200 + this.b(param1, -108);
     }
@@ -1915,7 +1915,7 @@ class MenuScreen {
         int var15Lifetime1;
         String var6Lifetime1;
         var19 = Sumoblitz.field_L ? 1 : 0;
-        var20 = MatchingTextValidator.field_h.a(-124);
+        var20 = MatchingTextValidator.field_h.getToolkit(-124);
         wo.a(up.field_c, 424, -5, param0 << 24, 3, var20, 650, 45, param1, true);
         var4 = 0;
         if (dk.field_c == 2) {
@@ -1968,8 +1968,8 @@ class MenuScreen {
                 var15 = -17409;
               }
               uq.field_a.a(var11, var12, var15, pd.nameText, (byte) -71, -1);
-              qv.field_k.a(-1, var13, se.scoreText, var11, 5023231 | param0 << 24, 72);
-              uq.field_a.a(-1, var13, se.scoreText, var11, var15, 59);
+              qv.field_k.a(-1, var13, LoginCredentials.scoreText, var11, 5023231 | param0 << 24, 72);
+              uq.field_a.a(-1, var13, LoginCredentials.scoreText, var11, var15, 59);
               var11 += 20;
               var4 = 0;
               while (10 > var4) {

@@ -301,7 +301,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             if (0 == OpenGlUnderwaterEffect.field_r) {
               if (hk.field_c != 0) {
-                if (!this.onPointerPressed(this, guard ^ 80, AgeValidator.field_f, hk.field_c, parentX, nb.field_a, parentY)) {
+                if (!this.onPointerPressed(this, guard ^ 80, AgeValidator.field_f, hk.field_c, parentX, LoginCredentialType.field_a, parentY)) {
                   if (var5 != 0) {
                     this.clearFocus((byte) -116);
                     if (var7 != 0) {
@@ -331,7 +331,7 @@ class UiWidget extends IntrusiveNode {
             } else {
               if (var5 == 0) {
                 if (hk.field_c != 0 &&
-                  this.onPointerPressed(this, guard ^ 80, AgeValidator.field_f, hk.field_c, parentX, nb.field_a, parentY)) {
+                  this.onPointerPressed(this, guard ^ 80, AgeValidator.field_f, hk.field_c, parentX, LoginCredentialType.field_a, parentY)) {
                   inputAvailable = false;
                 }
                 if (HotspotTextWidget.activePointerButton == 0 &&
@@ -353,7 +353,7 @@ class UiWidget extends IntrusiveNode {
               } else {
                 this.onMouseWheel(parentY, OpenGlUnderwaterEffect.field_r, -1, parentX, pi.field_e, this, ko.field_p);
                 if (hk.field_c != 0) {
-                  if (!this.onPointerPressed(this, guard ^ 80, AgeValidator.field_f, hk.field_c, parentX, nb.field_a, parentY)) {
+                  if (!this.onPointerPressed(this, guard ^ 80, AgeValidator.field_f, hk.field_c, parentX, LoginCredentialType.field_a, parentY)) {
                     this.clearFocus((byte) -116);
                     if (var7 != 0) {
                       inputAvailable = false;
@@ -387,7 +387,7 @@ class UiWidget extends IntrusiveNode {
                 var5 != 0) {
                 this.onMouseWheel(parentY, OpenGlUnderwaterEffect.field_r, -1, parentX, pi.field_e, this, ko.field_p);
                 if (hk.field_c != 0) {
-                  if (!this.onPointerPressed(this, guard ^ 80, AgeValidator.field_f, hk.field_c, parentX, nb.field_a, parentY)) {
+                  if (!this.onPointerPressed(this, guard ^ 80, AgeValidator.field_f, hk.field_c, parentX, LoginCredentialType.field_a, parentY)) {
                     this.clearFocus((byte) -116);
                     if (var7 != 0) {
                       inputAvailable = false;
@@ -509,7 +509,7 @@ class UiWidget extends IntrusiveNode {
                 LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                 return inputAvailable;
               }
-              if (!this.onPointerPressed(this, guard ^ 80, AgeValidator.field_f, hk.field_c, parentX, nb.field_a, parentY)) {
+              if (!this.onPointerPressed(this, guard ^ 80, AgeValidator.field_f, hk.field_c, parentX, LoginCredentialType.field_a, parentY)) {
                 if (var5 == 0) {
                   if (HotspotTextWidget.activePointerButton != 0) {
                     RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;

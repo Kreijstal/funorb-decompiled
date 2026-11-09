@@ -61,11 +61,11 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements TextHots
         RuntimeException decompiledCaughtException = null;
         try {
           this.dialog = owner;
-          this.continueButton = new InteractiveWidget(wd.continueText, (WidgetListener) null);
+          this.continueButton = new InteractiveWidget(EmailCredentials.continueText, (WidgetListener) null);
           this.continueButton.renderer = (WidgetRenderer) ((Object) new SpriteStripButtonRenderer());
           var7 = ic.a(qv.asYouAreUnderText, new String[]{this.linkStyleStart((byte) 43), this.linkStyleEnd(116)}, (byte) -128);
           var3 = 20;
-          var4 = new TextWidgetRenderer(kw.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, kw.field_b.field_s, -1, 2147483647, true);
+          var4 = new TextWidgetRenderer(kw.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, kw.field_b.ascent, -1, 2147483647, true);
           this.policyLinks = new HotspotTextWidget(var7, var4);
           this.policyLinks.tooltip = "";
           this.policyLinks.setHotspotTooltip(-57, sb.openInPopupWindowText, 0);
@@ -111,7 +111,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements TextHots
           OpenGlTransparentWaterEffect.field_e = OpenGlTransparentWaterEffect.field_e | var3_int;
           pl.field_v.addLast((IntrusiveNode) (new ge(param2)), (byte) 39);
           if (BufferedCacheFile.a((byte) -84, 10) >= 5) {
-            fb.field_a = fb.field_a + TextureFormat.elapsedTicks;
+            LoginPacketWriter.field_a = LoginPacketWriter.field_a + TextureFormat.elapsedTicks;
           } else {
             GraphicsToolkit.field_f = GraphicsToolkit.field_f + TextureFormat.elapsedTicks;
           }
@@ -140,7 +140,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements TextHots
                 if ((param2 == 0 ||
                   param2 == 1 ||
                   2 == param2)) {
-                  fb.field_a = fb.field_a + OpenGlShaderProgram.levelIndex;
+                  LoginPacketWriter.field_a = LoginPacketWriter.field_a + OpenGlShaderProgram.levelIndex;
                 }
               }
               decompiledFrameRemainder1 = false;
@@ -150,7 +150,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements TextHots
             }
           }
           if (!LegacyOpenGlSpriteTexture.field_w) {
-            OpenGlUnderwaterEffect.field_q.addLast((IntrusiveNode) (new hg(param2, param1, GraphicsToolkit.field_f, fb.field_a, ts.field_a, SoftwareTransform3D.field_b)), (byte) 39);
+            OpenGlUnderwaterEffect.field_q.addLast((IntrusiveNode) (new hg(param2, param1, GraphicsToolkit.field_f, LoginPacketWriter.field_a, ts.field_a, SoftwareTransform3D.field_b)), (byte) 39);
           }
           boolean decompiledFrameRemainder0 = true;
           if (3 != param2) {
@@ -164,7 +164,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements TextHots
                 if ((param2 == 0 ||
                   param2 == 1 ||
                   param2 == 2)) {
-                  fb.field_a = fb.field_a - OpenGlShaderProgram.levelIndex;
+                  LoginPacketWriter.field_a = LoginPacketWriter.field_a - OpenGlShaderProgram.levelIndex;
                 }
               }
               decompiledFrameRemainder0 = false;
@@ -180,7 +180,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements TextHots
           if (5 > BufferedCacheFile.a((byte) -84, 10)) {
             GraphicsToolkit.field_f = GraphicsToolkit.field_f - TextureFormat.elapsedTicks;
           } else {
-            fb.field_a = fb.field_a - TextureFormat.elapsedTicks;
+            LoginPacketWriter.field_a = LoginPacketWriter.field_a - TextureFormat.elapsedTicks;
           }
           if (BufferedCacheFile.a((byte) -84, 10) >= 5) {
             SoftwareTransform3D.field_b = SoftwareTransform3D.field_b + IntrusiveNodeHashTable.field_c;
@@ -205,13 +205,13 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements TextHots
         var6 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (hotspotId == 0) {
-            hn.a((byte) 113, "terms.ws");
+            LegacyOpenGlVertexBuffer.requestPolicyPage((byte) 113, "terms.ws");
           } else {
             if (1 == hotspotId) {
-              hn.a((byte) 80, "privacy.ws");
+              LegacyOpenGlVertexBuffer.requestPolicyPage((byte) 80, "privacy.ws");
             } else {
               if (hotspotId == 2) {
-                hn.a((byte) 98, "conduct.ws");
+                LegacyOpenGlVertexBuffer.requestPolicyPage((byte) 98, "conduct.ws");
               }
             }
           }

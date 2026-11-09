@@ -13,7 +13,7 @@ final class qv extends IntrusiveNode {
         if (param0 != 2) {
           asYouAreUnderText = (String) null;
         }
-        fb.field_a = fb.field_a - 9;
+        LoginPacketWriter.field_a = LoginPacketWriter.field_a - 9;
         SoftwareTransform3D.field_b = SoftwareTransform3D.field_b - 4;
         GraphicsToolkit.field_f = GraphicsToolkit.field_f + 18;
     }

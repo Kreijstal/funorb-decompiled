@@ -109,12 +109,12 @@ final class ScrollControl extends ArrayWidgetContainer implements WidgetActionLi
         }
     }
 
-    final static bo a(boolean param0, byte[] param1) {
-        bo var2 = null;
+    final static LegacyAlphaFont a(boolean param0, byte[] param1) {
+        LegacyAlphaFont var2 = null;
         RuntimeException var2_ref = null;
         CharSequence var3 = null;
         Object stackIn_2_0 = null;
-        bo stackIn_6_0 = null;
+        LegacyAlphaFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -122,13 +122,13 @@ final class ScrollControl extends ArrayWidgetContainer implements WidgetActionLi
         try {
           if (param1 == null) {
             stackIn_2_0 = null;
-            return (bo) (stackIn_2_0);
+            return (LegacyAlphaFont) (stackIn_2_0);
           }
           if (param0) {
             var3 = (CharSequence) null;
             ScrollControl.encodeBase37Name((CharSequence) null, 104);
           }
-          var2 = new bo(param1, er.field_h, StrongCacheReference.field_C, CheckboxRenderer.field_k, ScrollViewport.field_B, LegacyOpenGlEffectManager.field_l, TextLayout.field_d);
+          var2 = new LegacyAlphaFont(param1, er.field_h, StrongCacheReference.field_C, CheckboxRenderer.field_k, ScrollViewport.field_B, LegacyOpenGlEffectManager.field_l, TextLayout.field_d);
           PowerupPickup.releaseSpriteDecoderArrays((byte) -60);
           stackIn_6_0 = var2;
           return stackIn_6_0;

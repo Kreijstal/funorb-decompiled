@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class is {
-    private ResourceArchive field_d;
+final class QuickChatPhraseProvider {
+    private ResourceArchive extendedArchive;
     static boolean field_b;
-    private SoftLruCache field_f;
-    private ResourceArchive field_e;
+    private SoftLruCache cache;
+    private ResourceArchive defaultArchive;
     static IntrusiveDeque arenaPads;
     static boolean field_a;
 
@@ -24,36 +24,36 @@ final class is {
         return (param1 & 33) != 0 ? true : false;
     }
 
-    final oq a(int param0, int param1) {
+    final QuickChatPhrase getPhrase(int phraseId, int guard) {
         byte[] var4 = null;
-        oq var3 = (oq) (this.field_f.get((long)param0, 123));
+        QuickChatPhrase var3 = (QuickChatPhrase) (this.cache.get((long)phraseId, 123));
         if (var3 == null) {
-          if (param0 >= 32768) {
-            var4 = this.field_d.fetchFile((byte) 115, param0 & 32767, 1);
+          if (phraseId >= 32768) {
+            var4 = this.extendedArchive.fetchFile((byte) 115, phraseId & 32767, 1);
           } else {
-            var4 = this.field_e.fetchFile((byte) 109, param0, 1);
+            var4 = this.defaultArchive.fetchFile((byte) 109, phraseId, 1);
           }
-          var3 = new oq();
+          var3 = new QuickChatPhrase();
           if (var4 != null) {
-            var3.a(new PacketBuffer(var4), true);
+            var3.decode(new PacketBuffer(var4), true);
           }
-          if (param1 >= ~param0) {
-            var3.e(param1 ^ 32885);
+          if (guard >= ~phraseId) {
+            var3.useExtendedResponseIds(guard ^ 32885);
           }
-          this.field_f.put((long)param0, var3, (byte) 19);
+          this.cache.put((long)phraseId, var3, (byte) 19);
           return var3;
         }
         return var3;
     }
 
-    final static void a(int param0) {
-        if (param0 >= 27) {
+    final static void showGraphicsOptions(int guard) {
+        if (guard >= 27) {
           pu.field_e.closeAllDialogs((byte) 123);
           pu.field_e.pushDialog((byte) 112, new GraphicsOptionsDialog(pu.field_e));
           return;
         }
         String var2 = (String) null;
-        is.a((byte) 10, (String) null);
+        QuickChatPhraseProvider.a((byte) 10, (String) null);
         pu.field_e.closeAllDialogs((byte) 123);
         pu.field_e.pushDialog((byte) 112, new GraphicsOptionsDialog(pu.field_e));
     }
@@ -116,7 +116,7 @@ final class is {
         }
     }
 
-    private is() throws Throwable {
+    private QuickChatPhraseProvider() throws Throwable {
         throw new Error();
     }
 
@@ -124,7 +124,7 @@ final class is {
         arenaPads = null;
         if (param0) {
           String var2 = (String) null;
-          is.a((byte) 3, (String) null);
+          QuickChatPhraseProvider.a((byte) 3, (String) null);
         }
     }
 

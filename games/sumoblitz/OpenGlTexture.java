@@ -129,10 +129,10 @@ abstract class OpenGlTexture implements GpuTexture {
           return -117;
         }
         if (dk.field_c == 0) {
-          if (!wd.field_j.loadIndex((byte) 127)) {
+          if (!EmailCredentials.field_j.loadIndex((byte) 127)) {
             return 20;
           }
-          if (!wd.field_j.tryLoadNamedGroup("commonui", 100)) {
+          if (!EmailCredentials.field_j.tryLoadNamedGroup("commonui", 100)) {
             return 40;
           }
           if (!LegacyOpenGlPostProcessManager.field_f.loadIndex((byte) 127)) {
@@ -159,10 +159,10 @@ abstract class OpenGlTexture implements GpuTexture {
               return 29;
             }
           }
-          if (!wd.field_j.loadIndex((byte) 127)) {
+          if (!EmailCredentials.field_j.loadIndex((byte) 127)) {
             return 43;
           }
-          if (!wd.field_j.tryLoadNamedGroup("commonui", param0 ^ 14268)) {
+          if (!EmailCredentials.field_j.tryLoadNamedGroup("commonui", param0 ^ 14268)) {
             return 57;
           }
           if (!LegacyOpenGlPostProcessManager.field_f.loadIndex((byte) 127)) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tn extends jb {
+final class AlternateUsernameCredentials extends UsernameCredentials {
     final static void b(int param0, int param1, int param2) {
         if (null == OpenGlUnderwaterEffect.field_p ||
           !(param0 <= OpenGlUnderwaterEffect.field_p.length)) {
@@ -251,7 +251,7 @@ final class tn extends jb {
         NoiseSliceGenerator.field_c = 2147483647;
         HardwareUnlitEffect.field_f = -2147483648;
         GameplaySession.field_k = 2147483647;
-        se.field_d = 0;
+        LoginCredentials.field_d = 0;
     }
 
     final static int a(LoginFieldValue param0, int param1, LoginFieldValue param2) {
@@ -266,7 +266,7 @@ final class tn extends jb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            tn.b(-2, -71, 69);
+            AlternateUsernameCredentials.b(-2, -71, 69);
           }
           var4 = (String) null;
           stackIn_3_0 = CachedTextLayout.a(param2, 0, param0, 0, false, 72, (String) null);
@@ -295,20 +295,20 @@ final class tn extends jb {
         if (param0 >= -87) {
           return;
         }
-        HardwareTurbulentWaterNoise.widgetTheme = fw.c(false);
+        HardwareTurbulentWaterNoise.widgetTheme = ToolkitRasterStateCacheEntry.c(false);
         pu.field_e = new DialogLayer();
-        is.a(40);
+        QuickChatPhraseProvider.showGraphicsOptions(40);
     }
 
-    final nb a(byte param0) {
-        if (param0 < 80) {
-          return (nb) null;
+    final LoginCredentialType credentialType(byte guard) {
+        if (guard < 80) {
+          return (LoginCredentialType) null;
         }
-        return vs.field_a;
+        return vs.ALTERNATE_USERNAME_CREDENTIALS;
     }
 
-    tn(long param0, String param1) {
-        super(param0, param1);
+    AlternateUsernameCredentials(long nameKey, String secret) {
+        super(nameKey, secret);
     }
 
     static {

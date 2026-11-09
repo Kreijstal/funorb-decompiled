@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fb {
+final class LoginPacketWriter {
     static int field_a;
 
-    final static void a(boolean param0, boolean param1, int param2, int param3, se param4) {
+    final static void sendLoginPacket(boolean reconnect, boolean jagexHosted, int guard, int affiliateId, LoginCredentials credentials) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -13,26 +13,26 @@ final class fb {
         RuntimeException var5 = null;
         int var6 = 0;
         String var7 = null;
-        se var8 = null;
+        LoginCredentials var8 = null;
         try {
-          bk.field_e[0] = fd.field_d.nextInt();
-          if (param2 != -12793) {
-            var8 = (se) null;
-            fb.a(true, true, -109, -21, (se) null);
+          RendererSession.isaacSeed[0] = fd.field_d.nextInt();
+          if (guard != -12793) {
+            var8 = (LoginCredentials) null;
+            LoginPacketWriter.sendLoginPacket(true, true, -109, -21, (LoginCredentials) null);
           }
-          bk.field_e[1] = fd.field_d.nextInt();
-          bk.field_e[2] = (int)(HardwareUnlitEffect.field_g >> 32);
+          RendererSession.isaacSeed[1] = fd.field_d.nextInt();
+          RendererSession.isaacSeed[2] = (int)(HardwareUnlitEffect.field_g >> 32);
           SoftLruCache.field_e.position = 0;
-          bk.field_e[3] = (int)HardwareUnlitEffect.field_g;
-          SoftLruCache.field_e.writeInt(48, bk.field_e[0]);
-          SoftLruCache.field_e.writeInt(48, bk.field_e[1]);
-          SoftLruCache.field_e.writeInt(48, bk.field_e[2]);
-          SoftLruCache.field_e.writeInt(48, bk.field_e[3]);
+          RendererSession.isaacSeed[3] = (int)HardwareUnlitEffect.field_g;
+          SoftLruCache.field_e.writeInt(48, RendererSession.isaacSeed[0]);
+          SoftLruCache.field_e.writeInt(48, RendererSession.isaacSeed[1]);
+          SoftLruCache.field_e.writeInt(48, RendererSession.isaacSeed[2]);
+          SoftLruCache.field_e.writeInt(48, RendererSession.isaacSeed[3]);
           StrongCacheReference.a(SoftLruCache.field_e, true);
-          SoftLruCache.field_e.writeShort(param2 + 12917, param3);
-          param4.a(SoftLruCache.field_e, (byte) -113);
+          SoftLruCache.field_e.writeShort(guard + 12917, affiliateId);
+          credentials.writeCredentials(SoftLruCache.field_e, (byte) -113);
           InwardSparkParticle.field_v.position = 0;
-          if (param0) {
+          if (reconnect) {
             InwardSparkParticle.field_v.writeByte((byte) 89, 18);
           } else {
             InwardSparkParticle.field_v.writeByte((byte) 96, 16);
@@ -48,7 +48,7 @@ final class fb {
           if (gn.field_d) {
             var6 = var6 | 4;
           }
-          if (param1) {
+          if (jagexHosted) {
             var6 = var6 | 8;
           }
           if (SoftwareRenderContext.field_b != null) {
@@ -64,15 +64,15 @@ final class fb {
             InwardSparkParticle.field_v.writeCircumfixedString(SoftwareRenderContext.field_b, (byte) 19);
           }
           HardwareTurbulentWaterNoise.a(gh.field_a, OpenGlShaderProgram.field_c, false, InwardSparkParticle.field_v, SoftLruCache.field_e);
-          InwardSparkParticle.field_v.patchShortLength(param2 + 12793, InwardSparkParticle.field_v.position - var5_int);
-          MessageDialog.a(param2 + 12793, -1);
+          InwardSparkParticle.field_v.patchShortLength(guard + 12793, InwardSparkParticle.field_v.position - var5_int);
+          MessageDialog.a(guard + 12793, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_23_0 = var5;
-          stackIn_23_1 = new StringBuilder().append("fb.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_23_1 = new StringBuilder().append("fb.A(").append(reconnect).append(',').append(jagexHosted).append(',').append(guard).append(',').append(affiliateId).append(',');
+          if (credentials == null) {
             stackIn_24_2 = "null";
           } else {
             stackIn_24_2 = "{...}";

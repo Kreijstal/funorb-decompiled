@@ -503,11 +503,11 @@ abstract class ToolkitFont {
         int var9 = 0;
         int var13 = Sumoblitz.field_L ? 1 : 0;
         int var8Lifetime1;
-        ToolkitImageProducerBuffer.field_v = kb.a("frame_top", param0, true, "commonui");
-        DropDownListWidget.field_O = kb.a("frame_bottom", param0, true, "commonui");
-        HotspotTextWidget.field_E = jb.a("commonui", "jagex_logo_grey", -104, param0);
-        LevelCompleteUpgradeScreen.field_j = kb.a("button", param0, true, "commonui");
-        fw.field_m = DelayedInboundPacket.a(param0, "commonui", (byte) -56, "validation");
+        ToolkitImageProducerBuffer.field_v = LegacyOpenGlBuffer.a("frame_top", param0, true, "commonui");
+        DropDownListWidget.field_O = LegacyOpenGlBuffer.a("frame_bottom", param0, true, "commonui");
+        HotspotTextWidget.field_E = UsernameCredentials.loadNamedSprite("commonui", "jagex_logo_grey", -104, param0);
+        LevelCompleteUpgradeScreen.field_j = LegacyOpenGlBuffer.a("button", param0, true, "commonui");
+        ToolkitRasterStateCacheEntry.field_m = DelayedInboundPacket.a(param0, "commonui", (byte) -56, "validation");
         jm.field_a = (LegacyBitmapFont) ((Object) vf.a(param1, true, "commonui", "arezzo12", param0));
         kw.field_b = (LegacyBitmapFont) ((Object) vf.a(param1, true, "commonui", "arezzo14", param0));
         LegacyOpenGlDisplayLists.field_a = (LegacyBitmapFont) ((Object) vf.a(param1, true, "commonui", "arezzo14bold", param0));

@@ -164,7 +164,7 @@ final class DropDownListWidget extends FocusProxyWidget {
               SoftwareRasterizer.fillRectangleAlpha(2 + var5, var6 + 4, -4 + this.width, this.rowHeight, 2188450, 128);
             }
             var6 = var6 + this.rowHeight;
-            this.font.b(var17, 2 + var5, var6, 10000536, -1);
+            this.font.drawText(var17, 2 + var5, var6, 10000536, -1);
           }
           return;
         }
@@ -186,7 +186,7 @@ final class DropDownListWidget extends FocusProxyWidget {
             SoftwareRasterizer.fillRectangleAlpha(2 + var5Lifetime1, var6Lifetime1 + 4, -4 + this.width, this.rowHeight, 2188450, 128);
           }
           var6Lifetime1 = var6Lifetime1 + this.rowHeight;
-          this.font.b(var15, 2 + var5Lifetime1, var6Lifetime1, 10000536, -1);
+          this.font.drawText(var15, 2 + var5Lifetime1, var6Lifetime1, 10000536, -1);
         }
     }
 
@@ -195,7 +195,7 @@ final class DropDownListWidget extends FocusProxyWidget {
         try {
           this.dropDown = param0;
           this.font = param1;
-          this.rowHeight = this.font.field_I + this.font.field_s;
+          this.rowHeight = this.font.descent + this.font.ascent;
           this.setOptions(-22994, param3, param2);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "hd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

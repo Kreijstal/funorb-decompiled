@@ -64,7 +64,7 @@ final class DroneChargeParticle extends TimedSceneEffect {
         GameClientShell.field_u[14] = LegacyOpenGlRenderbuffer.achievementsText;
         GameClientShell.field_u[6] = RenderPresentationException.menuText;
         GameClientShell.field_u[12] = TurbulenceNoise3D.soundText;
-        GameClientShell.field_u[7] = nj.endGameText;
+        GameClientShell.field_u[7] = RendererPreference.endGameText;
         GameClientShell.field_u[0] = k.startGameText;
         GameClientShell.field_u[3] = WidgetTheme.instructionsText;
         int var1 = 56 % ((param0 + 26) / 42);

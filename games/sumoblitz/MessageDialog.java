@@ -82,10 +82,10 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
             return stackIn_2_0;
           }
           if (!param2) {
-            stackIn_7_0 = ValidatedTextInputWidget.field_R.a(param1);
+            stackIn_7_0 = ValidatedTextInputWidget.field_R.stringWidth(param1);
             return stackIn_7_0;
           }
-          stackIn_5_0 = MouseWheelInput.field_a.a(param1);
+          stackIn_5_0 = MouseWheelInput.field_a.stringWidth(param1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -226,13 +226,13 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
           if (DisplayModeConfirmationDialog.field_O != null && (0 > param1 ||
             LegacyOpenGlUnderwaterEffect.field_j == kw.field_c)) {
             if (InwardSparkParticle.field_v.position == 0 &&
-              (ArchiveCatalog.field_a + 10000L) < wq.a(param0 - 14)) {
+              (ArchiveCatalog.field_a + 10000L) < wq.monotonicTimeMillis(param0 - 14)) {
               InwardSparkParticle.field_v.g(param1, 8);
             }
             if (InwardSparkParticle.field_v.position > param0) {
               try {
                 DisplayModeConfirmationDialog.field_O.write(0, -2, InwardSparkParticle.field_v.payload, InwardSparkParticle.field_v.position);
-                ArchiveCatalog.field_a = wq.a(-21);
+                ArchiveCatalog.field_a = wq.monotonicTimeMillis(-21);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
@@ -378,10 +378,10 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
             return stackIn_2_0;
           }
           if (!param2) {
-            stackIn_7_0 = ValidatedTextInputWidget.field_R.a(param1);
+            stackIn_7_0 = ValidatedTextInputWidget.field_R.stringWidth(param1);
             return stackIn_7_0;
           }
-          stackIn_5_0 = MouseWheelInput.field_a.a(param1);
+          stackIn_5_0 = MouseWheelInput.field_a.stringWidth(param1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

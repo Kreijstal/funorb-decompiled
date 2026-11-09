@@ -153,7 +153,7 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
               return;
             }
           }
-          nb.a(true);
+          LoginCredentialType.showAccountSignupPrompt(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -200,7 +200,7 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
           if (var2 == 0) {
             if (GpuDataType.field_b == null) {
               GpuDataType.field_b = new ci(128);
-              jb.field_e = 0;
+              UsernameCredentials.field_e = 0;
             }
             stackIn_11_0 = (var1.readUnsignedByte(-31302) != 1) ? 0 : 1;
             var3_int = stackIn_11_0;
@@ -208,14 +208,14 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
             if (var3_int != 0) {
               var1.readCp1252String(-1);
             }
-            var5 = is.a((byte) 123, var4_ref_String);
+            var5 = QuickChatPhraseProvider.a((byte) 123, var4_ref_String);
             var6 = var1.readCp1252String(-1);
             var7 = AccountCreationProgressDialog.normalizeAccountName(-1, (CharSequence) ((Object) var4_ref_String));
             if (var7 == null) {
               var7 = var4_ref_String;
             }
             if (null == var5) {
-              var5 = is.a((byte) 122, var6);
+              var5 = QuickChatPhraseProvider.a((byte) 122, var6);
               if (var5 != null) {
                 GpuDataType.field_b.a((long)var7.hashCode(), -8156, var5);
               }
@@ -223,8 +223,8 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
             if (null == var5) {
               var5 = new cn();
               GpuDataType.field_b.a((long)var7.hashCode(), -8156, var5);
-              fieldTemp$0 = jb.field_e;
-              jb.field_e = jb.field_e + 1;
+              fieldTemp$0 = UsernameCredentials.field_e;
+              UsernameCredentials.field_e = UsernameCredentials.field_e + 1;
               var5.field_kb = fieldTemp$0;
               SpriteState.field_t.addLast((IntrusiveNode) (var5), (byte) 39);
             }
@@ -406,20 +406,20 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
           if (hotspotId != 0) {
             if (hotspotId != 1) {
               if (hotspotId == 2) {
-                hn.a((byte) 93, "conduct.ws");
+                LegacyOpenGlVertexBuffer.requestPolicyPage((byte) 93, "conduct.ws");
                 if (var6 != 0) {
-                  hn.a((byte) 99, "privacy.ws");
-                  hn.a((byte) 122, "terms.ws");
+                  LegacyOpenGlVertexBuffer.requestPolicyPage((byte) 99, "privacy.ws");
+                  LegacyOpenGlVertexBuffer.requestPolicyPage((byte) 122, "terms.ws");
                 }
               }
             } else {
-              hn.a((byte) 99, "privacy.ws");
+              LegacyOpenGlVertexBuffer.requestPolicyPage((byte) 99, "privacy.ws");
               if (var6 != 0) {
-                hn.a((byte) 122, "terms.ws");
+                LegacyOpenGlVertexBuffer.requestPolicyPage((byte) 122, "terms.ws");
               }
             }
           } else {
-            hn.a((byte) 122, "terms.ws");
+            LegacyOpenGlVertexBuffer.requestPolicyPage((byte) 122, "terms.ws");
           }
           if (guard != -20036) {
             field_J = (String) null;
@@ -653,12 +653,12 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
           var3 = var3 + (5 + this.addFieldWithMessage(var3, 170, (byte) 125, 20, "", this.confirmEmailInput, pq.confirmEmailText));
           var3 = var3 + this.addLabeledField(pi.passwordText, 170, var3, 55, this.passwordInput);
           var3 = var3 + (5 + this.addValidatedField(LegacyOpenGlTexture.confirmPasswordText, 170, 15632, var3, qw.passwordsMustBeBetweenText, this.confirmPasswordInput));
-          var3 = var3 + (this.addValidatedField(un.playerNameText, 170, 15632, var3, oq.playerNamesCanBeText, this.screenNameInput) + 5);
+          var3 = var3 + (this.addValidatedField(un.playerNameText, 170, 15632, var3, QuickChatPhrase.playerNamesCanBeText, this.screenNameInput) + 5);
           var3 = var3 + this.addFieldWithStatus(170, DropDownArrowRenderer.ageText, var3, this.ageInput, 64);
           var4 = new LabeledWidget(46, var3, -90 + this.width, 25, this.emailNewsCheckbox, true, -120 + this.width, 5, jm.field_a, 11579568, LegacyOpenGlEnvironmentWaterEffect.pleaseSendMeNewsText);
           this.addChild(var4, 100);
           var3 = var3 + var4.height;
-          var5 = new TextWidgetRenderer(kw.field_b, 0, 0, 0, 0, 16777215, -1, 0, 0, kw.field_b.field_s, -1, 2147483647, true);
+          var5 = new TextWidgetRenderer(kw.field_b, 0, 0, 0, 0, 16777215, -1, 0, 0, kw.field_b.ascent, -1, 2147483647, true);
           this.policyLinks = new HotspotTextWidget(var2, var5);
           this.policyLinks.tooltip = "";
           this.policyLinks.setHotspotTooltip(-90, sb.openInPopupWindowText, 0);
@@ -750,7 +750,7 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
               stackIn_16_0 = new LegacyOpenGlSpriteTexture(param4, 34037, param6, param0, param3, param7, param2, param1);
               return stackIn_16_0;
             }
-            stackIn_14_0 = new LegacyOpenGlSpriteTexture(param4, param6, param0, hn.a(false, param6), hn.a(false, param0), param7);
+            stackIn_14_0 = new LegacyOpenGlSpriteTexture(param4, param6, param0, LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, param6), LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, param0), param7);
             return stackIn_14_0;
           }
           stackIn_11_0 = new LegacyOpenGlSpriteTexture(param4, 3553, param6, param0, param3, param7, param2, param1);

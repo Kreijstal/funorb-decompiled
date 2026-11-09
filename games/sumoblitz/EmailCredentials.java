@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wd extends se {
-    private String field_i;
+final class EmailCredentials extends LoginCredentials {
+    private String email;
     static GameKeyHandler field_e;
-    private String field_g;
+    private String password;
     static ResourceArchive field_j;
     static String continueText;
     static AudioOutput field_f;
@@ -17,16 +17,16 @@ final class wd extends se {
         return HardwareSpecularEffect.a(1, -74, true, param0, false, false);
     }
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void writeCredentials(PacketBuffer packet, byte guard) {
         try {
-          param0.writeCircumfixedString(this.field_i, (byte) -105);
-          param0.writeBase38Name(this.field_g, 46);
-          if (param1 >= -107) {
+          packet.writeCircumfixedString(this.email, (byte) -105);
+          packet.writeBase38Name(this.password, 46);
+          if (guard >= -107) {
             PacketBuffer var4 = (PacketBuffer) null;
-            this.a((PacketBuffer) null, (byte) 29);
+            this.writeCredentials((PacketBuffer) null, (byte) 29);
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wd.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wd.C(" + (packet != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
@@ -35,12 +35,12 @@ final class wd extends se {
         OpenGlVertexLayout.field_f.a(-3388, param1);
     }
 
-    final nb a(byte param0) {
-        if (param0 < 80) {
-          this.a((byte) -128);
-          return IndexedSprite.field_b;
+    final LoginCredentialType credentialType(byte guard) {
+        if (guard < 80) {
+          this.credentialType((byte) -128);
+          return IndexedSprite.EMAIL_CREDENTIALS;
         }
-        return IndexedSprite.field_b;
+        return IndexedSprite.EMAIL_CREDENTIALS;
     }
 
     public static void releaseStatics(byte param0) {
@@ -80,12 +80,12 @@ final class wd extends se {
         return stackIn_7_0;
     }
 
-    wd(String param0, String param1) {
+    EmailCredentials(String address, String secret) {
         try {
-          this.field_i = param0;
-          this.field_g = param1;
+          this.email = address;
+          this.password = secret;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wd.<init>(" + (address != null ? "{...}" : "null") + ',' + (secret != null ? "{...}" : "null") + ')');
         }
     }
 

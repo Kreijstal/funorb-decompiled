@@ -19,8 +19,8 @@ final class o {
         if (!SoundCache.isLevelIndexTwentyFour(-77)) {
           StrongCacheReference.switchMenuScreen(-7753, true, 10);
         }
-        if (!(OpenGlShaderProgram.levelIndex <= bl.field_e)) {
-          bl.field_e = OpenGlShaderProgram.levelIndex;
+        if (!(OpenGlShaderProgram.levelIndex <= ToolkitRasterStateFrame.field_e)) {
+          ToolkitRasterStateFrame.field_e = OpenGlShaderProgram.levelIndex;
         }
         int var1 = TextureFormat.elapsedTicks;
         if (!(var1 >= CacheIoRequest.field_z[OpenGlShaderProgram.levelIndex])) {

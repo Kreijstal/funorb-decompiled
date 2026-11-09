@@ -69,7 +69,7 @@ final class OpenGlIndexBuffer extends OpenGlBuffer implements IndexBuffer {
               var2_int = -ig.field_a.position + param1;
             }
             DisplayModeConfirmationDialog.field_O.readFully(param0 ^ 99, ig.field_a.position, var2_int, ig.field_a.payload);
-            CacheReferenceNode.field_x = wq.a(-47);
+            CacheReferenceNode.field_x = wq.monotonicTimeMillis(-47);
             ig.field_a.position = ig.field_a.position + var2_int;
             if (ig.field_a.position < param1) {
               return false;

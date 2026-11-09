@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oq extends DualLinkNode {
-    int[] field_u;
+final class QuickChatPhrase extends DualLinkNode {
+    int[] responseIds;
     static String playerNamesCanBeText;
-    private int[][] field_t;
-    private int[] field_s;
-    private String[] field_v;
+    private int[][] commandParameters;
+    private int[] commandIds;
+    private String[] textSegments;
 
-    final void a(PacketBuffer param0, boolean param1) {
+    final void decode(PacketBuffer packet, boolean guard) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -19,21 +19,21 @@ final class oq extends DualLinkNode {
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
           scanLoop1: while (true) {
-            var3_int = param0.readUnsignedByte(-31302);
+            var3_int = packet.readUnsignedByte(-31302);
             if (0 == var3_int) {
               if (var4 == 0) {
                 break scanLoop1;
               }
             } else {
-              this.a(param0, var3_int, (byte) 111);
+              this.decodeOpcode(packet, var3_int, (byte) 111);
             }
             if (var4 == 0) {
               continue;
             }
             break;
           }
-          if (!param1) {
-            oq.a(-64);
+          if (!guard) {
+            QuickChatPhrase.a(-64);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -41,12 +41,12 @@ final class oq extends DualLinkNode {
           var3 = decompiledCaughtException;
           stackIn_12_0 = var3;
           stackIn_12_1 = new StringBuilder().append("oq.G(");
-          if (param0 == null) {
+          if (packet == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -190,7 +190,7 @@ final class oq extends DualLinkNode {
         }
     }
 
-    final String f(int param0) {
+    final String previewText(int guard) {
         StringBuilder discarded$3 = null;
         StringBuilder discarded$4 = null;
         int var3 = 0;
@@ -200,18 +200,18 @@ final class oq extends DualLinkNode {
         var4 = Sumoblitz.field_L ? 1 : 0;
         var6 = new StringBuilder(80);
         var6 = var6;
-        if (this.field_v == null) {
+        if (this.textSegments == null) {
           return "";
         }
-        discarded$3 = var6.append(this.field_v[0]);
+        discarded$3 = var6.append(this.textSegments[0]);
         var3 = 1;
-        if (param0 != 1118) {
-          this.f(26);
+        if (guard != 1118) {
+          this.previewText(26);
         }
         boolean decompiledNaturalLoopExit0 = false;
-        while (!(decompiledNaturalLoopExit0 = (this.field_v.length <= var3))) {
+        while (!(decompiledNaturalLoopExit0 = (this.textSegments.length <= var3))) {
           discarded$4 = var6.append("...");
-          stackIn_9_0 = var6.append(this.field_v[var3]);
+          stackIn_9_0 = var6.append(this.textSegments[var3]);
           if (var4 == 0) {
             var3++;
             continue;
@@ -224,14 +224,14 @@ final class oq extends DualLinkNode {
         return ((StringBuilder) (Object) stackIn_9_0).toString();
     }
 
-    public static void g(int param0) {
-        if (param0 != -6811) {
-          oq.a(112, -53, -51, -110, 1, 98, (byte) -59, -49, -95);
+    public static void releaseStatics(int guard) {
+        if (guard != -6811) {
+          QuickChatPhrase.a(112, -53, -51, -110, 1, 98, (byte) -59, -49, -95);
         }
         playerNamesCanBeText = null;
     }
 
-    private final void a(PacketBuffer param0, int param1, byte param2) {
+    private final void decodeOpcode(PacketBuffer packet, int opcode, byte guard) {
         int[] array$0 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
@@ -248,48 +248,48 @@ final class oq extends DualLinkNode {
         int var4_intLifetime1;
         var9 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (param2 < 41) {
-            this.field_v = (String[]) null;
+          if (guard < 41) {
+            this.textSegments = (String[]) null;
           }
-          if (1 == param1) {
-            this.field_v = cn.a('<', param0.readCp1252String(-1), -27224);
+          if (1 == opcode) {
+            this.textSegments = cn.a('<', packet.readCp1252String(-1), -27224);
             if (var9 == 0) {
               return;
             }
           }
-          if (param1 == 2) {
-            var4_int = param0.readUnsignedByte(-31302);
-            this.field_u = new int[var4_int];
+          if (opcode == 2) {
+            var4_int = packet.readUnsignedByte(-31302);
+            this.responseIds = new int[var4_int];
             var5 = 0;
             while (true) {
               if (var5 >= var4_int) {
                 return;
               }
-              this.field_u[var5] = param0.readUnsignedShort(255);
+              this.responseIds[var5] = packet.readUnsignedShort(255);
               var5++;
               if (var9 != 0) {
                 return;
               }
             }
           }
-          if (param1 == 3) {
-            var4_intLifetime1 = param0.readUnsignedByte(-31302);
-            this.field_s = new int[var4_intLifetime1];
-            this.field_t = new int[var4_intLifetime1][];
+          if (opcode == 3) {
+            var4_intLifetime1 = packet.readUnsignedByte(-31302);
+            this.commandIds = new int[var4_intLifetime1];
+            this.commandParameters = new int[var4_intLifetime1][];
             var5Lifetime1 = 0;
             while (var4_intLifetime1 > var5Lifetime1) {
-              var6 = param0.readUnsignedShort(255);
+              var6 = packet.readUnsignedShort(255);
               var7 = ij.a(10341, var6);
               if (var9 != 0) {
                 return;
               }
               if (var7 != null) {
-                this.field_s[var5Lifetime1] = var6;
+                this.commandIds[var5Lifetime1] = var6;
                 array$0 = new int[var7.field_f];
-                this.field_t[var5Lifetime1] = array$0;
+                this.commandParameters[var5Lifetime1] = array$0;
                 var8 = 0;
                 while (!(var8 >= var7.field_f)) {
-                  this.field_t[var5Lifetime1][var8] = param0.readUnsignedShort(255);
+                  this.commandParameters[var5Lifetime1][var8] = packet.readUnsignedShort(255);
                   var8++;
                 }
               }
@@ -305,24 +305,24 @@ final class oq extends DualLinkNode {
           var4 = decompiledCaughtException;
           stackIn_30_0 = var4;
           stackIn_30_1 = new StringBuilder().append("oq.B(");
-          if (param0 == null) {
+          if (packet == null) {
             stackIn_31_2 = "null";
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(opcode).append(',').append(guard).append(')').toString());
         }
     }
 
-    final void e(int param0) {
+    final void useExtendedResponseIds(int guard) {
         int var2 = 0;
         int var3 = 0;
         boolean decompiledFrameCompleted0 = true;
         var3 = Sumoblitz.field_L ? 1 : 0;
-        if (null != this.field_u) {
+        if (null != this.responseIds) {
           var2 = 0;
-          while (var2 < this.field_u.length) {
-            this.field_u[var2] = ic.a(this.field_u[var2], 32768);
+          while (var2 < this.responseIds.length) {
+            this.responseIds[var2] = ic.a(this.responseIds[var2], 32768);
             var2++;
             if (var3 != 0) {
               decompiledFrameCompleted0 = false;
@@ -331,19 +331,19 @@ final class oq extends DualLinkNode {
           }
         }
         if ((decompiledFrameCompleted0) &&
-          (param0 > -102)) {
-          this.field_s = (int[]) null;
+          (guard > -102)) {
+          this.commandIds = (int[]) null;
         }
 
     }
 
-    oq() {
+    QuickChatPhrase() {
     }
 
     final static void a(int param0) {
         mn.b((byte) -116);
         if (param0 != -24233) {
-          oq.a(99, -71, 95, 31, -80, 103, (byte) 57, 84, 30);
+          QuickChatPhrase.a(99, -71, 95, 31, -80, 103, (byte) 57, 84, 30);
         }
     }
 

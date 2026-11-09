@@ -184,7 +184,7 @@ final class SecondaryNodeQueue {
     }
 
     final static void b(int param0) {
-        HardwareTurbulentWaterNoise.widgetTheme = fw.c(false);
+        HardwareTurbulentWaterNoise.widgetTheme = ToolkitRasterStateCacheEntry.c(false);
         RenderPresentationException.field_a = new DialogLayer();
         WidgetStateStyle.a((byte) 127, true, true);
         if (param0 != 246) {

@@ -7,7 +7,7 @@ final class so {
         var3 = Sumoblitz.field_L ? 1 : 0;
         if (5 <= BufferedCacheFile.a((byte) -84, 10)) {
           if (5 > BufferedCacheFile.a((byte) -84, 10)) {
-            fb.field_a = fb.field_a - param0;
+            LoginPacketWriter.field_a = LoginPacketWriter.field_a - param0;
           } else {
             GraphicsToolkit.field_f = GraphicsToolkit.field_f - param0;
           }
@@ -25,7 +25,7 @@ final class so {
           if (BufferedCacheFile.a((byte) -84, 10) >= 5) {
             GraphicsToolkit.field_f = GraphicsToolkit.field_f + param0;
           } else {
-            fb.field_a = fb.field_a + param0;
+            LoginPacketWriter.field_a = LoginPacketWriter.field_a + param0;
           }
         }
         if (param1 < -92) {

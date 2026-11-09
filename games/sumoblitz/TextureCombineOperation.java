@@ -11,19 +11,19 @@ final class TextureCombineOperation {
         if (param1 < 72) {
           field_a = 47;
           if (param0 % 10L != 0L) {
-            br.a(param0, (byte) -21);
+            ChatMessage.sleepIgnoringInterrupt(param0, (byte) -21);
             return;
           }
-          br.a(param0 - 1L, (byte) -21);
-          br.a(1L, (byte) -21);
+          ChatMessage.sleepIgnoringInterrupt(param0 - 1L, (byte) -21);
+          ChatMessage.sleepIgnoringInterrupt(1L, (byte) -21);
           return;
         }
         if (param0 % 10L != 0L) {
-          br.a(param0, (byte) -21);
+          ChatMessage.sleepIgnoringInterrupt(param0, (byte) -21);
           return;
         }
-        br.a(param0 - 1L, (byte) -21);
-        br.a(1L, (byte) -21);
+        ChatMessage.sleepIgnoringInterrupt(param0 - 1L, (byte) -21);
+        ChatMessage.sleepIgnoringInterrupt(1L, (byte) -21);
     }
 
     public final String toString() {

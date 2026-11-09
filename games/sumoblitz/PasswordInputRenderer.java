@@ -65,7 +65,7 @@ final class PasswordInputRenderer extends BeveledTextInputRenderer {
         int var5 = 0;
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var1 = wd.field_e;
+          var1 = EmailCredentials.field_e;
           synchronized (var1) {
             if (guard < 108) {
               return;

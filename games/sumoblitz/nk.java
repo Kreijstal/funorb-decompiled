@@ -26,7 +26,7 @@ final class nk {
         field_c = param3 - param1;
         nk.a();
         if (field_d.length < field_c) {
-          field_d = new int[hn.a(false, field_c)];
+          field_d = new int[LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, field_c)];
         }
         int var4 = param1 * SoftwareRasterizer.width + param0;
         for (var5 = 0; var5 < field_c; var5++) {

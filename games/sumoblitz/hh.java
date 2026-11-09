@@ -5,7 +5,7 @@ import java.io.*;
 
 final class hh extends IOException {
     static int field_f;
-    static nb field_c;
+    static LoginCredentialType USERNAME_CREDENTIALS;
     static SpriteData[] field_a;
     static ToolkitSprite[] field_e;
     static String connectionLostText;
@@ -116,11 +116,11 @@ final class hh extends IOException {
         field_d = null;
         int var1 = -11 % ((param0 - 24) / 60);
         field_e = null;
-        field_c = null;
+        USERNAME_CREDENTIALS = null;
     }
 
     static {
-        field_c = new nb(2);
+        USERNAME_CREDENTIALS = new LoginCredentialType(2);
         connectionLostText = "Connection lost. <%0>";
     }
 }

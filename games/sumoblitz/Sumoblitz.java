@@ -135,7 +135,7 @@ public final class Sumoblitz extends GameClientShell {
             if (2 == LegacyOpenGlUnlitEffect.field_e) {
               boolean decompiledSharedTail0 = !(vs.b((byte) 9));
               if (!decompiledSharedTail0) {
-                nj.field_b = qw.field_b;
+                RendererPreference.field_b = qw.field_b;
                 decompiledSharedTail0 = (var3 != 0);
               }
               if (decompiledSharedTail0) {
@@ -143,14 +143,14 @@ public final class Sumoblitz extends GameClientShell {
                 if (ph.gameplaySession != null) {
                   ph.gameplaySession.submitSessionStatistics(-119);
                 }
-                nj.field_b = SecondaryNodeQueue.field_d;
-                if (-2 == nj.field_b) {
-                  nj.field_b = 0;
+                RendererPreference.field_b = SecondaryNodeQueue.field_d;
+                if (-2 == RendererPreference.field_b) {
+                  RendererPreference.field_b = 0;
                   RotarySelectorWidget.a((byte) 122, false);
                 }
               }
               LegacyOpenGlUnlitEffect.field_e = 3;
-              OpenGlCubeTexture.field_k = nj.field_b;
+              OpenGlCubeTexture.field_k = RendererPreference.field_b;
               eh.field_a = 29;
               if (var3 == 0) {
                 return;
@@ -166,24 +166,24 @@ public final class Sumoblitz extends GameClientShell {
             }
           }
           stackIn_58_0 = ph.gameplaySession;
-          stackIn_59_1 = (-1 == nj.field_b);
+          stackIn_59_1 = (-1 == RendererPreference.field_b);
           ((GameplaySession) (Object) stackIn_58_0).update(stackIn_59_1, (byte) -88);
-          if (~OpenGlCubeTexture.field_k != ~nj.field_b) {
+          if (~OpenGlCubeTexture.field_k != ~RendererPreference.field_b) {
             eh.field_a = eh.field_a + 1;
             if (eh.field_a != 30) {
               return;
             }
-            if (nj.field_b == 2) {
+            if (RendererPreference.field_b == 2) {
               HardwareTextureCache.field_f = null;
             }
             eh.field_a = 0;
-            nj.field_b = OpenGlCubeTexture.field_k;
+            RendererPreference.field_b = OpenGlCubeTexture.field_k;
             if (var3 == 0) {
               return;
             }
           }
-          if (nj.field_b != -1) {
-            LegacyOpenGlEffectManager.field_g[nj.field_b].update(-18556);
+          if (RendererPreference.field_b != -1) {
+            LegacyOpenGlEffectManager.field_g[RendererPreference.field_b].update(-18556);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -233,7 +233,7 @@ public final class Sumoblitz extends GameClientShell {
           int var7 = 0;
           String var8_ref_String = null;
           int var8 = 0;
-          pm var9 = null;
+          ToolkitRasterStateStack var9 = null;
           int var10 = 0;
           int var4_intLifetime1;
           int var5_intLifetime1;
@@ -262,20 +262,20 @@ public final class Sumoblitz extends GameClientShell {
               SoftwareRenderBuffer.a(-88, var2);
               return;
             }
-            if (MatchingTextValidator.field_h.a(false) &&
+            if (MatchingTextValidator.field_h.updateToolkit(false) &&
               !this.initializeRendererAssets((byte) -124)) {
               return;
             }
-            var3 = MatchingTextValidator.field_h.a(-115);
+            var3 = MatchingTextValidator.field_h.getToolkit(-115);
             var3.clear(0);
             ph.gameplaySession.render(param0 ^ 120, var3, false);
-            if (OpenGlCubeTexture.field_k == nj.field_b) {
-              if (-1 != nj.field_b) {
-                LegacyOpenGlEffectManager.field_g[nj.field_b].render(255, var3, -2355);
+            if (OpenGlCubeTexture.field_k == RendererPreference.field_b) {
+              if (-1 != RendererPreference.field_b) {
+                LegacyOpenGlEffectManager.field_g[RendererPreference.field_b].render(255, var3, -2355);
                 if (var10 != 0) {
                   var4_int = 255 * eh.field_a / 30;
-                  if (-1 != nj.field_b) {
-                    LegacyOpenGlEffectManager.field_g[nj.field_b].render(-var4_int + 255, var3, -2355);
+                  if (-1 != RendererPreference.field_b) {
+                    LegacyOpenGlEffectManager.field_g[RendererPreference.field_b].render(-var4_int + 255, var3, -2355);
                   }
                   if (-1 != OpenGlCubeTexture.field_k) {
                     LegacyOpenGlEffectManager.field_g[OpenGlCubeTexture.field_k].render(var4_int, var3, -2355);
@@ -284,8 +284,8 @@ public final class Sumoblitz extends GameClientShell {
               }
             } else {
               var4_int = 255 * eh.field_a / 30;
-              if (-1 != nj.field_b) {
-                LegacyOpenGlEffectManager.field_g[nj.field_b].render(-var4_int + 255, var3, -2355);
+              if (-1 != RendererPreference.field_b) {
+                LegacyOpenGlEffectManager.field_g[RendererPreference.field_b].render(-var4_int + 255, var3, -2355);
               }
               if (-1 != OpenGlCubeTexture.field_k) {
                 LegacyOpenGlEffectManager.field_g[OpenGlCubeTexture.field_k].render(var4_int, var3, -2355);
@@ -390,15 +390,15 @@ public final class Sumoblitz extends GameClientShell {
               var8 = (wq.field_b - var6Lifetime2) / 2;
               if (BeveledCheckboxRenderer.hasOpenDialogs(false) &&
                 this.field_K != null) {
-                var7Lifetime1 = GraphicsToolkitManager.c(param0 ^ -10517);
+                var7Lifetime1 = GraphicsToolkitManager.topDialogX(param0 ^ -10517);
                 var8 = fd.b(3878);
               }
-              var9 = wq.a(var3, (byte) 18);
-              var9.a((byte) 111, var8, var8 + var6Lifetime2, var7Lifetime1, var7Lifetime1 + var5_intLifetime2);
+              var9 = wq.rasterStateForToolkit(var3, (byte) 18);
+              var9.pushClip((byte) 111, var8, var8 + var6Lifetime2, var7Lifetime1, var7Lifetime1 + var5_intLifetime2);
               var7Lifetime1Lifetime1 = (-SoftwareRasterizer.width + LegacyOpenGlRidgedWaterEffect.field_h) / 2;
               var8Lifetime1 = (wq.field_b - SoftwareRasterizer.height) / 2;
               var3.drawPixels(var7Lifetime1Lifetime1, var8Lifetime1, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
-              var9.a(param0 + 29709);
+              var9.pop(param0 + 29709);
             }
             try {
               var3.present(true);
@@ -433,14 +433,14 @@ public final class Sumoblitz extends GameClientShell {
             this.advanceScreenTransition((byte) -69);
           }
           GzipDecompressor.field_a = true;
-          LegacyOpenGlRenderbuffer.field_v = wd.a(4, (byte) 125);
-          dq.field_Z = wd.a(5, (byte) 125);
-          SecondaryNodeDeque.field_d = wd.a(6, (byte) 125);
-          er.field_c = wd.a(7, (byte) 125);
-          gg.field_r = wd.a(8, (byte) 125);
-          ForceFieldRingEffect.field_s = wd.a(9, (byte) 125);
-          GraphicsToolkitManager.field_d = wd.a(12, (byte) 125);
-          LegacyOpenGlEffectManager.field_b = new Random(wq.a(-52));
+          LegacyOpenGlRenderbuffer.field_v = EmailCredentials.a(4, (byte) 125);
+          dq.field_Z = EmailCredentials.a(5, (byte) 125);
+          SecondaryNodeDeque.field_d = EmailCredentials.a(6, (byte) 125);
+          er.field_c = EmailCredentials.a(7, (byte) 125);
+          gg.field_r = EmailCredentials.a(8, (byte) 125);
+          ForceFieldRingEffect.field_s = EmailCredentials.a(9, (byte) 125);
+          GraphicsToolkitManager.field_d = EmailCredentials.a(12, (byte) 125);
+          LegacyOpenGlEffectManager.field_b = new Random(wq.monotonicTimeMillis(-52));
           if (null == MatchingTextValidator.field_h) {
             MatchingTextValidator.field_h = new GraphicsToolkitManager(11, -1, (TextureProvider) null);
           }
@@ -505,11 +505,11 @@ public final class Sumoblitz extends GameClientShell {
               ScreenNameValidator.d((byte) -112);
               decompiledFrameRemainder0 = !(!ClientException.a(0));
               if (decompiledFrameRemainder0) {
-                oq.a(-24233);
+                QuickChatPhrase.a(-24233);
                 LegacyOpenGlGraphicsHeap.c(0);
-                if (5 == nj.field_b &&
+                if (5 == RendererPreference.field_b &&
                   0 == OpenGlTransparentWaterEffect.field_e) {
-                  nj.field_b = 2;
+                  RendererPreference.field_b = 2;
                   StrongCacheReference.switchMenuScreen(-7753, false, 2);
                 }
                 decompiledFrameRemainder0 = !(!so.a((byte) 119));
@@ -537,7 +537,7 @@ public final class Sumoblitz extends GameClientShell {
                       break;
                   }
                   if (!so.a((byte) 109)) {
-                    LegacyOpenGlEffectManager.field_g[nj.field_b].resetSelection(-8628, true);
+                    LegacyOpenGlEffectManager.field_g[RendererPreference.field_b].resetSelection(-8628, true);
                   }
                   decompiledFrameRemainder0 = (var4 != 0);
                 }
@@ -618,7 +618,7 @@ public final class Sumoblitz extends GameClientShell {
           if (guard >= -4) {
             field_H = -36;
           }
-          var2 = MatchingTextValidator.field_h.a(-125);
+          var2 = MatchingTextValidator.field_h.getToolkit(-125);
           if (var2 == null) {
             return false;
           }
@@ -668,7 +668,7 @@ public final class Sumoblitz extends GameClientShell {
           int var8 = 0;
           String var9_ref_String = null;
           int var9 = 0;
-          pm var10 = null;
+          ToolkitRasterStateStack var10 = null;
           int var11 = 0;
           var11 = field_L ? 1 : 0;
           try {
@@ -724,18 +724,18 @@ public final class Sumoblitz extends GameClientShell {
                                       if (decompiledFrameRemainder6) {
                                         stackIn_95_0 = MatchingTextValidator.field_h;
                                         stackIn_96_1 = !(guard);
-                                        if (!((GraphicsToolkitManager) (Object) stackIn_95_0).a(stackIn_96_1) ||
+                                        if (!((GraphicsToolkitManager) (Object) stackIn_95_0).updateToolkit(stackIn_96_1) ||
                                           this.initializeRendererAssets((byte) -105)) {
-                                          var4 = MatchingTextValidator.field_h.a(-97);
+                                          var4 = MatchingTextValidator.field_h.getToolkit(-97);
                                           var4.clear(0);
                                           ph.gameplaySession.render(124, var4, false);
-                                          if (~OpenGlCubeTexture.field_k == ~nj.field_b) {
-                                            if (-1 != nj.field_b) {
-                                              LegacyOpenGlEffectManager.field_g[nj.field_b].render(255, var4, -2355);
+                                          if (~OpenGlCubeTexture.field_k == ~RendererPreference.field_b) {
+                                            if (-1 != RendererPreference.field_b) {
+                                              LegacyOpenGlEffectManager.field_g[RendererPreference.field_b].render(255, var4, -2355);
                                               if (var11 != 0) {
                                                 var5_int = 255 * eh.field_a / 30;
-                                                if (-1 != nj.field_b) {
-                                                  LegacyOpenGlEffectManager.field_g[nj.field_b].render(255 - var5_int, var4, -2355);
+                                                if (-1 != RendererPreference.field_b) {
+                                                  LegacyOpenGlEffectManager.field_g[RendererPreference.field_b].render(255 - var5_int, var4, -2355);
                                                 }
                                                 if (OpenGlCubeTexture.field_k != -1) {
                                                   LegacyOpenGlEffectManager.field_g[OpenGlCubeTexture.field_k].render(var5_int, var4, -2355);
@@ -744,8 +744,8 @@ public final class Sumoblitz extends GameClientShell {
                                             }
                                           } else {
                                             var5_int = 255 * eh.field_a / 30;
-                                            if (-1 != nj.field_b) {
-                                              LegacyOpenGlEffectManager.field_g[nj.field_b].render(255 - var5_int, var4, -2355);
+                                            if (-1 != RendererPreference.field_b) {
+                                              LegacyOpenGlEffectManager.field_g[RendererPreference.field_b].render(255 - var5_int, var4, -2355);
                                             }
                                             if (OpenGlCubeTexture.field_k != -1) {
                                               LegacyOpenGlEffectManager.field_g[OpenGlCubeTexture.field_k].render(var5_int, var4, -2355);
@@ -851,15 +851,15 @@ public final class Sumoblitz extends GameClientShell {
                                             var9 = (-var7 + wq.field_b) / 2;
                                             if (BeveledCheckboxRenderer.hasOpenDialogs(false) &&
                                               this.field_K != null) {
-                                              var8 = GraphicsToolkitManager.c(-10517);
+                                              var8 = GraphicsToolkitManager.topDialogX(-10517);
                                               var9 = fd.b(3878);
                                             }
-                                            var10 = wq.a(var4, (byte) 126);
-                                            var10.a((byte) 91, var9, var7 + var9, var8, var6_int + var8);
+                                            var10 = wq.rasterStateForToolkit(var4, (byte) 126);
+                                            var10.pushClip((byte) 91, var9, var7 + var9, var8, var6_int + var8);
                                             var9 = (-SoftwareRasterizer.height + wq.field_b) / 2;
                                             var8 = (-SoftwareRasterizer.width + LegacyOpenGlRidgedWaterEffect.field_h) / 2;
                                             var4.drawPixels(var8, var9, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
-                                            var10.a(29709);
+                                            var10.pop(29709);
                                           }
                                           try {
                                             var4.present(true);
@@ -877,7 +877,7 @@ public final class Sumoblitz extends GameClientShell {
                                   }
                                   LegacyOpenGlPostProcessManager.field_b = new SoundCache(SecondaryNodeDeque.field_d, er.field_c);
                                   TurbulenceNoise3D.loadGameSoundEffects((byte) -62, SecondaryNodeDeque.field_d);
-                                  oq.a(-24233);
+                                  QuickChatPhrase.a(-24233);
                                   SecondaryNodeDeque.field_d = null;
                                   VertexAttribute.b(0);
                                   return false;
@@ -932,16 +932,16 @@ public final class Sumoblitz extends GameClientShell {
                     SoftwareRenderBuffer.a(-68, var3);
                     decompiledFrameRemainder5 = (var11 != 0);
                   }
-                  if ((decompiledFrameRemainder5) && (!MatchingTextValidator.field_h.a(false) ||
+                  if ((decompiledFrameRemainder5) && (!MatchingTextValidator.field_h.updateToolkit(false) ||
                     this.initializeRendererAssets((byte) -99))) {
-                    var4 = MatchingTextValidator.field_h.a(-121);
+                    var4 = MatchingTextValidator.field_h.getToolkit(-121);
                     var4.clear(0);
                     ph.gameplaySession.render(123, var4, false);
-                    boolean decompiledSharedTail7 = (~OpenGlCubeTexture.field_k == ~nj.field_b);
+                    boolean decompiledSharedTail7 = (~OpenGlCubeTexture.field_k == ~RendererPreference.field_b);
                     if (!decompiledSharedTail7) {
                       var5_int = eh.field_a * 255 / 30;
-                      if (nj.field_b != -1) {
-                        LegacyOpenGlEffectManager.field_g[nj.field_b].render(-var5_int + 255, var4, -2355);
+                      if (RendererPreference.field_b != -1) {
+                        LegacyOpenGlEffectManager.field_g[RendererPreference.field_b].render(-var5_int + 255, var4, -2355);
                       }
                       if (OpenGlCubeTexture.field_k != -1) {
                         LegacyOpenGlEffectManager.field_g[OpenGlCubeTexture.field_k].render(var5_int, var4, -2355);
@@ -949,8 +949,8 @@ public final class Sumoblitz extends GameClientShell {
                       decompiledSharedTail7 = (var11 != 0);
                     }
                     if ((decompiledSharedTail7) &&
-                      (nj.field_b != -1)) {
-                      LegacyOpenGlEffectManager.field_g[nj.field_b].render(255, var4, -2355);
+                      (RendererPreference.field_b != -1)) {
+                      LegacyOpenGlEffectManager.field_g[RendererPreference.field_b].render(255, var4, -2355);
                     }
                     if (so.a((byte) 118)) {
                       SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
@@ -1052,15 +1052,15 @@ public final class Sumoblitz extends GameClientShell {
                       var9 = (-var7 + wq.field_b) / 2;
                       if (BeveledCheckboxRenderer.hasOpenDialogs(false) &&
                         null != this.field_K) {
-                        var8 = GraphicsToolkitManager.c(-10517);
+                        var8 = GraphicsToolkitManager.topDialogX(-10517);
                         var9 = fd.b(3878);
                       }
-                      var10 = wq.a(var4, (byte) 70);
-                      var10.a((byte) -88, var9, var7 + var9, var8, var6_int + var8);
+                      var10 = wq.rasterStateForToolkit(var4, (byte) 70);
+                      var10.pushClip((byte) -88, var9, var7 + var9, var8, var6_int + var8);
                       var9 = (-SoftwareRasterizer.height + wq.field_b) / 2;
                       var8 = (-SoftwareRasterizer.width + LegacyOpenGlRidgedWaterEffect.field_h) / 2;
                       var4.drawPixels(var8, var9, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
-                      var10.a(29709);
+                      var10.pop(29709);
                     }
                     try {
                       var4.present(true);
@@ -1097,17 +1097,17 @@ public final class Sumoblitz extends GameClientShell {
                     SoftwareRenderBuffer.a(-111, var3);
                     decompiledFrameRemainder3 = (var11 != 0);
                   }
-                  if ((decompiledFrameRemainder3) && (!MatchingTextValidator.field_h.a(false) ||
+                  if ((decompiledFrameRemainder3) && (!MatchingTextValidator.field_h.updateToolkit(false) ||
                     this.initializeRendererAssets((byte) -48) ||
                     var11 != 0)) {
-                    var4 = MatchingTextValidator.field_h.a(-128);
+                    var4 = MatchingTextValidator.field_h.getToolkit(-128);
                     var4.clear(0);
                     ph.gameplaySession.render(124, var4, false);
-                    boolean decompiledSharedTail6 = (~nj.field_b == ~OpenGlCubeTexture.field_k);
+                    boolean decompiledSharedTail6 = (~RendererPreference.field_b == ~OpenGlCubeTexture.field_k);
                     if (!decompiledSharedTail6) {
                       var5_int = 255 * eh.field_a / 30;
-                      if (nj.field_b != -1) {
-                        LegacyOpenGlEffectManager.field_g[nj.field_b].render(-var5_int + 255, var4, -2355);
+                      if (RendererPreference.field_b != -1) {
+                        LegacyOpenGlEffectManager.field_g[RendererPreference.field_b].render(-var5_int + 255, var4, -2355);
                       }
                       if (OpenGlCubeTexture.field_k != -1) {
                         LegacyOpenGlEffectManager.field_g[OpenGlCubeTexture.field_k].render(var5_int, var4, -2355);
@@ -1115,8 +1115,8 @@ public final class Sumoblitz extends GameClientShell {
                       decompiledSharedTail6 = (var11 != 0);
                     }
                     if ((decompiledSharedTail6) &&
-                      (-1 != nj.field_b)) {
-                      LegacyOpenGlEffectManager.field_g[nj.field_b].render(255, var4, -2355);
+                      (-1 != RendererPreference.field_b)) {
+                      LegacyOpenGlEffectManager.field_g[RendererPreference.field_b].render(255, var4, -2355);
                     }
                     if (so.a((byte) 109)) {
                       SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
@@ -1217,15 +1217,15 @@ public final class Sumoblitz extends GameClientShell {
                       var9 = (-var7 + wq.field_b) / 2;
                       if (BeveledCheckboxRenderer.hasOpenDialogs(false) &&
                         this.field_K != null) {
-                        var8 = GraphicsToolkitManager.c(-10517);
+                        var8 = GraphicsToolkitManager.topDialogX(-10517);
                         var9 = fd.b(3878);
                       }
-                      var10 = wq.a(var4, (byte) 28);
-                      var10.a((byte) 127, var9, var7 + var9, var8, var8 + var6_int);
+                      var10 = wq.rasterStateForToolkit(var4, (byte) 28);
+                      var10.pushClip((byte) 127, var9, var7 + var9, var8, var8 + var6_int);
                       var9 = (wq.field_b - SoftwareRasterizer.height) / 2;
                       var8 = (-SoftwareRasterizer.width + LegacyOpenGlRidgedWaterEffect.field_h) / 2;
                       var4.drawPixels(var8, var9, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
-                      var10.a(29709);
+                      var10.pop(29709);
                     }
                     try {
                       var4.present(true);
@@ -1274,17 +1274,17 @@ public final class Sumoblitz extends GameClientShell {
                   if (decompiledFrameRemainder1) {
                     stackIn_450_0 = MatchingTextValidator.field_h;
                     stackIn_451_1 = !(guard);
-                    if (!((GraphicsToolkitManager) (Object) stackIn_450_0).a(stackIn_451_1) ||
+                    if (!((GraphicsToolkitManager) (Object) stackIn_450_0).updateToolkit(stackIn_451_1) ||
                       this.initializeRendererAssets((byte) -11) ||
                       var11 != 0) {
-                      var4 = MatchingTextValidator.field_h.a(-120);
+                      var4 = MatchingTextValidator.field_h.getToolkit(-120);
                       var4.clear(0);
                       ph.gameplaySession.render(122, var4, false);
-                      boolean decompiledSharedTail4 = (~nj.field_b == ~OpenGlCubeTexture.field_k);
+                      boolean decompiledSharedTail4 = (~RendererPreference.field_b == ~OpenGlCubeTexture.field_k);
                       if (!decompiledSharedTail4) {
                         var5_int = eh.field_a * 255 / 30;
-                        if (-1 != nj.field_b) {
-                          LegacyOpenGlEffectManager.field_g[nj.field_b].render(-var5_int + 255, var4, -2355);
+                        if (-1 != RendererPreference.field_b) {
+                          LegacyOpenGlEffectManager.field_g[RendererPreference.field_b].render(-var5_int + 255, var4, -2355);
                         }
                         if (OpenGlCubeTexture.field_k != -1) {
                           LegacyOpenGlEffectManager.field_g[OpenGlCubeTexture.field_k].render(var5_int, var4, -2355);
@@ -1292,8 +1292,8 @@ public final class Sumoblitz extends GameClientShell {
                         decompiledSharedTail4 = (var11 != 0);
                       }
                       if ((decompiledSharedTail4) &&
-                        (nj.field_b != -1)) {
-                        LegacyOpenGlEffectManager.field_g[nj.field_b].render(255, var4, -2355);
+                        (RendererPreference.field_b != -1)) {
+                        LegacyOpenGlEffectManager.field_g[RendererPreference.field_b].render(255, var4, -2355);
                       }
                       if (so.a((byte) -36)) {
                         SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
@@ -1395,15 +1395,15 @@ public final class Sumoblitz extends GameClientShell {
                         var9 = (-var7 + wq.field_b) / 2;
                         if (BeveledCheckboxRenderer.hasOpenDialogs(false) &&
                           this.field_K != null) {
-                          var8 = GraphicsToolkitManager.c(-10517);
+                          var8 = GraphicsToolkitManager.topDialogX(-10517);
                           var9 = fd.b(3878);
                         }
-                        var10 = wq.a(var4, (byte) 83);
-                        var10.a((byte) 71, var9, var9 + var7, var8, var8 + var6_int);
+                        var10 = wq.rasterStateForToolkit(var4, (byte) 83);
+                        var10.pushClip((byte) 71, var9, var9 + var7, var8, var8 + var6_int);
                         var9 = (wq.field_b - SoftwareRasterizer.height) / 2;
                         var8 = (LegacyOpenGlRidgedWaterEffect.field_h - SoftwareRasterizer.width) / 2;
                         var4.drawPixels(var8, var9, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
-                        var10.a(29709);
+                        var10.pop(29709);
                       }
                       try {
                         var4.present(true);
@@ -1435,7 +1435,7 @@ public final class Sumoblitz extends GameClientShell {
                       continue;
                     }
                   } else {
-                    nj.field_b = 0;
+                    RendererPreference.field_b = 0;
                     OpenGlTexture.a(50, 26175);
                     ByteArrayStorage.compatibilityNoOp(50, -106);
                     mo.a(86, 0);
@@ -1445,8 +1445,8 @@ public final class Sumoblitz extends GameClientShell {
                 }
                 vl.field_a = 0;
               }
-              if (MatchingTextValidator.field_h.a(-113) == null) {
-                MatchingTextValidator.field_h.a(false);
+              if (MatchingTextValidator.field_h.getToolkit(-113) == null) {
+                MatchingTextValidator.field_h.updateToolkit(false);
                 if (!this.initializeRendererAssets((byte) -124)) {
                   return false;
                 }
@@ -1473,17 +1473,17 @@ public final class Sumoblitz extends GameClientShell {
                   SoftwareRenderBuffer.a(-110, var3);
                   decompiledFrameRemainder0 = (var11 != 0);
                 }
-                if ((decompiledFrameRemainder0) && (!MatchingTextValidator.field_h.a(false) ||
+                if ((decompiledFrameRemainder0) && (!MatchingTextValidator.field_h.updateToolkit(false) ||
                   this.initializeRendererAssets((byte) -34) ||
                   var11 != 0)) {
-                  var4 = MatchingTextValidator.field_h.a(-125);
+                  var4 = MatchingTextValidator.field_h.getToolkit(-125);
                   var4.clear(0);
                   ph.gameplaySession.render(119, var4, false);
-                  boolean decompiledSharedTail1 = (~OpenGlCubeTexture.field_k == ~nj.field_b);
+                  boolean decompiledSharedTail1 = (~OpenGlCubeTexture.field_k == ~RendererPreference.field_b);
                   if (!decompiledSharedTail1) {
                     var5_int = eh.field_a * 255 / 30;
-                    if (nj.field_b != -1) {
-                      LegacyOpenGlEffectManager.field_g[nj.field_b].render(-var5_int + 255, var4, -2355);
+                    if (RendererPreference.field_b != -1) {
+                      LegacyOpenGlEffectManager.field_g[RendererPreference.field_b].render(-var5_int + 255, var4, -2355);
                     }
                     if (-1 != OpenGlCubeTexture.field_k) {
                       LegacyOpenGlEffectManager.field_g[OpenGlCubeTexture.field_k].render(var5_int, var4, -2355);
@@ -1491,8 +1491,8 @@ public final class Sumoblitz extends GameClientShell {
                     decompiledSharedTail1 = (var11 != 0);
                   }
                   if ((decompiledSharedTail1) &&
-                    (nj.field_b != -1)) {
-                    LegacyOpenGlEffectManager.field_g[nj.field_b].render(255, var4, -2355);
+                    (RendererPreference.field_b != -1)) {
+                    LegacyOpenGlEffectManager.field_g[RendererPreference.field_b].render(255, var4, -2355);
                   }
                   if (so.a((byte) -50)) {
                     SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
@@ -1590,15 +1590,15 @@ public final class Sumoblitz extends GameClientShell {
                     var9 = (wq.field_b - var7) / 2;
                     if (BeveledCheckboxRenderer.hasOpenDialogs(false) &&
                       null != this.field_K) {
-                      var8 = GraphicsToolkitManager.c(-10517);
+                      var8 = GraphicsToolkitManager.topDialogX(-10517);
                       var9 = fd.b(3878);
                     }
-                    var10 = wq.a(var4, (byte) 29);
-                    var10.a((byte) 61, var9, var9 + var7, var8, var6_int + var8);
+                    var10 = wq.rasterStateForToolkit(var4, (byte) 29);
+                    var10.pushClip((byte) 61, var9, var9 + var7, var8, var6_int + var8);
                     var9 = (wq.field_b - SoftwareRasterizer.height) / 2;
                     var8 = (-SoftwareRasterizer.width + LegacyOpenGlRidgedWaterEffect.field_h) / 2;
                     var4.drawPixels(var8, var9, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
-                    var10.a(29709);
+                    var10.pop(29709);
                   }
                   try {
                     var4.present(true);
@@ -1663,7 +1663,7 @@ public final class Sumoblitz extends GameClientShell {
           kt.releaseStatics((byte) -14);
           kd.releaseStatics((byte) 95);
           uq.releaseStatics((byte) -106);
-          br.releaseStatics(23050);
+          ChatMessage.releaseStatics(23050);
           lb.releaseStatics(0);
           uc.releaseStatics(-1);
           vs.releaseStatics((byte) -68);
@@ -1694,8 +1694,8 @@ public final class Sumoblitz extends GameClientShell {
           GzipDecompressor.releaseStatics((byte) 98);
           ArchiveProvider.releaseStatics((byte) -45);
           hc.releaseStatics((byte) 127);
-          bk.releaseStatics(4);
-          nj.releaseStatics((byte) 115);
+          RendererSession.releaseStatics(4);
+          RendererPreference.releaseStatics((byte) 115);
           ig.releaseStatics(!param0);
           vp.releaseStatics((byte) -111);
           vd.releaseStatics((byte) -89);
@@ -1734,14 +1734,14 @@ public final class Sumoblitz extends GameClientShell {
           GraphicsHeap.releaseStatics((byte) -103);
           pl.releaseStatics(24599);
           pi.releaseStatics(20437);
-          ds.releaseStatics((byte) -1);
+          LoginCredentialFactory.releaseStatics((byte) -1);
           qn.releaseStatics(0);
           ss.releaseStatics((byte) 102);
           LegacyBitmapFont.releaseStatics();
           hm.releaseStatics(-11418);
           rv.releaseStatics(true);
           qi.releaseStatics((byte) 16);
-          se.releaseStatics(8192);
+          LoginCredentials.releaseStatics(8192);
           SpriteMask.releaseStatics(!param0);
           sb.releaseStatics(true);
           SpriteState.releaseStatics(-109);
@@ -1797,9 +1797,9 @@ public final class Sumoblitz extends GameClientShell {
           IndexedSprite.releaseStatics(3);
           ih.a((byte) 122);
           VorbisFloor1.releaseStatics();
-          oq.g(-6811);
+          QuickChatPhrase.releaseStatics(-6811);
           qw.releaseStatics(-122);
-          is.releaseStatics(false);
+          QuickChatPhraseProvider.releaseStatics(false);
           SoftLruCache.releaseStatics(1);
           un.releaseStatics(true);
           ow.releaseStatics((byte) 123);
@@ -1904,8 +1904,8 @@ public final class Sumoblitz extends GameClientShell {
           jq.releaseStatics(107);
           LegacyOpenGlDisplayLists.releaseStatics((byte) -51);
           pt.releaseStatics((byte) 43);
-          hn.releaseStatics(true);
-          kb.releaseStatics(true);
+          LegacyOpenGlVertexBuffer.releaseStatics(true);
+          LegacyOpenGlBuffer.releaseStatics(true);
           sl.releaseStatics(-124);
           LegacyOpenGlSpecularEffect.releaseStatics((byte) -38);
           LegacyOpenGlTurbulentTextureEffect.releaseStatics(4);
@@ -1948,8 +1948,8 @@ public final class Sumoblitz extends GameClientShell {
           LegacyOpenGlSpriteMask.releaseStatics(!param0);
           ph.releaseStatics(1882049616);
           OpenGlShader.releaseStatics((byte) -70);
-          fw.releaseStatics(-114);
-          bl.releaseStatics(false);
+          ToolkitRasterStateCacheEntry.releaseStatics(-114);
+          ToolkitRasterStateFrame.releaseStatics(false);
           of.a(-26437);
           id.releaseStatics(!param0);
           df.releaseStatics(false);
@@ -1969,7 +1969,7 @@ public final class Sumoblitz extends GameClientShell {
           eg.releaseStatics(!param0);
           hg.releaseStatics((byte) 12);
           lh.releaseStatics(12);
-          cj.releaseStatics(0);
+          RendererStateSnapshot.releaseStatics(0);
           mm.releaseStatics(90);
           AccountServiceResult.releaseStatics((byte) 89);
           bj.releaseStatics(-121);
@@ -1985,7 +1985,7 @@ public final class Sumoblitz extends GameClientShell {
           DroneChargeParticle.releaseStatics(4);
           qc.releaseStatics((byte) 105);
           jj.releaseStatics(0);
-          wd.releaseStatics((byte) 88);
+          EmailCredentials.releaseStatics((byte) 88);
           vf.b(1);
           rl.releaseStatics(480);
           WidgetStateStyle.releaseStatics((byte) -30);

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vs {
-    static nb field_a;
+    static LoginCredentialType ALTERNATE_USERNAME_CREDENTIALS;
     static int field_b;
 
     final static int a(byte param0, CharSequence param1, char param2) {
@@ -48,7 +48,7 @@ final class vs {
         if (param0 != -68) {
           return;
         }
-        field_a = null;
+        ALTERNATE_USERNAME_CREDENTIALS = null;
     }
 
     final static boolean b(byte param0) {
@@ -79,7 +79,7 @@ final class vs {
             return false;
           }
           var4 = 96 / ((param1 + 72) / 53);
-          var2_long = wq.a(-45);
+          var2_long = wq.monotonicTimeMillis(-45);
           if (0 != jo.field_c &&
             lq.field_b < 0) {
             var5_ref_ub = (DelayedInboundPacket) (un.field_b.first(-99));
@@ -163,6 +163,6 @@ final class vs {
     }
 
     static {
-        field_a = new nb(0);
+        ALTERNATE_USERNAME_CREDENTIALS = new LoginCredentialType(0);
     }
 }

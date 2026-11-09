@@ -317,9 +317,9 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
             jaggl.OpenGL.glDeleteLists((int)var12.key, var12.field_m);
           }
           if (!(this.h(64) <= 100663296) &&
-            !(wq.a(-117) <= 60000L + this.field_Cc)) {
+            !(wq.monotonicTimeMillis(-117) <= 60000L + this.field_Cc)) {
             System.gc();
-            this.field_Cc = wq.a(-39);
+            this.field_Cc = wq.monotonicTimeMillis(-39);
           }
         } else {
           jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, SceneryParticle.field_A, 0);
@@ -341,9 +341,9 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
             jaggl.OpenGL.glDeleteLists((int)var12.key, var12.field_m);
           }
           if (!(this.h(64) <= 100663296) &&
-            !(wq.a(-117) <= 60000L + this.field_Cc)) {
+            !(wq.monotonicTimeMillis(-117) <= 60000L + this.field_Cc)) {
             System.gc();
-            this.field_Cc = wq.a(-39);
+            this.field_Cc = wq.monotonicTimeMillis(-39);
           }
         }
         super.updateTime(timeMillis);
@@ -371,7 +371,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
               stackIn_10_0 = new OpenGlRectangleTexture(this, param7, param1, param5, param4, param0, param3);
               return (Texture2D) ((Object) stackIn_10_0);
             }
-            var10 = new OpenGlTexture2D(this, param7, GpuDataType.FLOAT, hn.a(false, param1), hn.a(false, param5));
+            var10 = new OpenGlTexture2D(this, param7, GpuDataType.FLOAT, LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, param1), LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, param5));
             var10.uploadFloats(0, param7, param5, 0, 14137, param0, param1, param4, param3);
             stackIn_12_0 = var10;
             return (Texture2D) ((Object) stackIn_12_0);
@@ -1040,7 +1040,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           if (!this.field_Ic && (!rm.a(param3, -124) ||
             !rm.a(param2, -128))) {
             if (!this.field_bd) {
-              stackIn_10_0 = new OpenGlTexture2D(this, param1, param0, hn.a(false, param3), hn.a(false, param2));
+              stackIn_10_0 = new OpenGlTexture2D(this, param1, param0, LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, param3), LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, param2));
               return (Texture2D) ((Object) stackIn_10_0);
             }
             stackIn_8_0 = new OpenGlRectangleTexture(this, param1, param0, param3, param2);
@@ -1372,7 +1372,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
               stackIn_10_0 = new OpenGlRectangleTexture(this, param3, param6, param2, param5, param1);
               return (Texture2D) ((Object) stackIn_10_0);
             }
-            var9 = new OpenGlTexture2D(this, BeveledTextInputRenderer.RGBA, GpuDataType.UNSIGNED_BYTE, hn.a(false, param3), hn.a(false, param6));
+            var9 = new OpenGlTexture2D(this, BeveledTextInputRenderer.RGBA, GpuDataType.UNSIGNED_BYTE, LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, param3), LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, param6));
             var9.uploadInts(param6, false, param5, param3, param1, param2, 0, 0);
             stackIn_12_0 = var9;
             return (Texture2D) ((Object) stackIn_12_0);
@@ -1425,7 +1425,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
               stackIn_8_0 = new OpenGlRectangleTexture(this, param0, param1, param2, param4, param6, param3);
               return (Texture2D) ((Object) stackIn_8_0);
             }
-            var10 = new OpenGlTexture2D(this, param0, GpuDataType.UNSIGNED_BYTE, hn.a(false, param1), hn.a(false, param2));
+            var10 = new OpenGlTexture2D(this, param0, GpuDataType.UNSIGNED_BYTE, LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, param1), LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, param2));
             var10.uploadBytes(param0, 0, (byte) 77, param6, param4, param2, param1, 0, param3);
             stackIn_10_0 = var10;
             return (Texture2D) ((Object) stackIn_10_0);

@@ -223,7 +223,7 @@ abstract class ModalDialog extends WidgetContainer {
     }
 
     final static void a(byte param0, int param1) {
-        se.a(19886);
+        LoginCredentials.pollAccountDialogs(19886);
         if (param0 != 55) {
           ModalDialog.isAsciiLetter(124, 'r');
         }

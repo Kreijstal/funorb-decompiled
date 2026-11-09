@@ -47,7 +47,7 @@ final class wo extends java.awt.Canvas {
         int var6Lifetime1;
         var13 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var5_int = param1.a(param4);
+          var5_int = param1.stringWidth(param4);
           if (var5_int <= param2 &&
             -1 == param4.indexOf("<br>")) {
             args[0] = param4;
@@ -73,7 +73,7 @@ final class wo extends java.awt.Canvas {
               if (stackIn_34_0 == stackIn_34_1 ||
                 var10 == 45) {
                 var11 = param4.substring(var7, 1 + var9).trim();
-                var12 = param1.a(var11);
+                var12 = param1.stringWidth(var11);
                 if (var12 >= param2) {
                   var7 = var9 + 1;
                   incrementValue$0 = var6Lifetime1;
@@ -187,7 +187,7 @@ final class wo extends java.awt.Canvas {
         StringBuilder stackIn_131_1 = null;
         String stackIn_132_2 = null;
         RuntimeException decompiledCaughtException = null;
-        pm var10 = null;
+        ToolkitRasterStateStack var10 = null;
         RuntimeException var10_ref = null;
         int var11 = 0;
         int var12 = 0;
@@ -212,7 +212,7 @@ final class wo extends java.awt.Canvas {
         int var25Lifetime4;
         var27 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var10 = wq.a(param5, (byte) 15);
+          var10 = wq.rasterStateForToolkit(param5, (byte) 15);
           if (param0 == null) {
             return;
           }
@@ -264,29 +264,29 @@ final class wo extends java.awt.Canvas {
               var23 = param1 * var13 / (var13 + var14) + param7;
             }
             if (null != param0[0]) {
-              var10.a((byte) 81, param7, var23, param2, var21);
+              var10.pushClip((byte) 81, param7, var23, param2, var21);
               param0[0].draw(param2, param7, param4, param3, param8);
-              var10.a(29709);
+              var10.pop(29709);
             }
             if (param0[2] != null) {
-              var10.a((byte) -98, param7, var23, var22, var15);
+              var10.pushClip((byte) -98, param7, var23, var22, var15);
               param0[2].draw(var18, param7, param4, param3, param8);
-              var10.a(29709);
+              var10.pop(29709);
             }
             if (null != param0[6]) {
-              var10.a((byte) 43, var24, var16, param2, var21);
+              var10.pushClip((byte) 43, var24, var16, param2, var21);
               param0[6].draw(param2, var20, param4, param3, param8);
-              var10.a(29709);
+              var10.pop(29709);
             }
             if (param0[8] != null) {
-              var10.a((byte) 37, var24, var16, var22, var15);
+              var10.pushClip((byte) 37, var24, var16, var22, var15);
               param0[8].draw(var18, var20, param4, param3, param8);
-              var10.a(29709);
+              var10.pop(29709);
             }
             boolean decompiledFrameCompleted3 = true;
             if (param0[1] != null &&
               param0[1].paddedWidth() != 0) {
-              var10.a((byte) 51, param7, var23, var21, var22);
+              var10.pushClip((byte) 51, param7, var23, var21, var22);
               var25 = var17;
               while (var25 < var18) {
                 param0[1].draw(var25, param7, param4, param3, param8);
@@ -297,13 +297,13 @@ final class wo extends java.awt.Canvas {
                 }
               }
               if (decompiledFrameCompleted3) {
-                var10.a(29709);
+                var10.pop(29709);
               }
             }
             boolean decompiledFrameCompleted2 = true;
             if (null != param0[7] &&
               param0[7].paddedWidth() != 0) {
-              var10.a((byte) 109, var24, var16, var21, var22);
+              var10.pushClip((byte) 109, var24, var16, var21, var22);
               var25Lifetime1 = var17;
               while (var18 > var25Lifetime1) {
                 param0[7].draw(var25Lifetime1, var20, param4, param3, param8);
@@ -314,13 +314,13 @@ final class wo extends java.awt.Canvas {
                 }
               }
               if (decompiledFrameCompleted2) {
-                var10.a(29709);
+                var10.pop(29709);
               }
             }
             boolean decompiledFrameCompleted1 = true;
             if (null != param0[3] &&
               param0[3].paddedHeight() != 0) {
-              var10.a((byte) -93, var23, var24, param2, var21);
+              var10.pushClip((byte) -93, var23, var24, param2, var21);
               var25Lifetime2 = var19;
               while (var20 > var25Lifetime2) {
                 param0[3].draw(param2, var25Lifetime2, param4, param3, param8);
@@ -331,13 +331,13 @@ final class wo extends java.awt.Canvas {
                 }
               }
               if (decompiledFrameCompleted1) {
-                var10.a(29709);
+                var10.pop(29709);
               }
             }
             boolean decompiledFrameCompleted0 = true;
             if (param0[5] != null &&
               param0[5].paddedHeight() != 0) {
-              var10.a((byte) -128, var23, var24, var22, var15);
+              var10.pushClip((byte) -128, var23, var24, var22, var15);
               var25Lifetime3 = var19;
               while (var25Lifetime3 < var20) {
                 param0[5].draw(var18, var25Lifetime3, param4, param3, param8);
@@ -348,13 +348,13 @@ final class wo extends java.awt.Canvas {
                 }
               }
               if (decompiledFrameCompleted0) {
-                var10.a(29709);
+                var10.pop(29709);
               }
             }
             if (param0[4] != null &&
               param0[4].paddedWidth() != 0 &&
               0 != param0[4].paddedHeight()) {
-              var10.a((byte) 97, var23, var24, var21, var22);
+              var10.pushClip((byte) 97, var23, var24, var21, var22);
               var25Lifetime4 = var19;
               while (var20 > var25Lifetime4) {
                 if (var27 != 0) {
@@ -367,7 +367,7 @@ final class wo extends java.awt.Canvas {
                 }
                 var25Lifetime4 = var25Lifetime4 + param0[4].paddedHeight();
               }
-              var10.a(29709);
+              var10.pop(29709);
               return;
             }
             return;

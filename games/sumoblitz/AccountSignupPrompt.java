@@ -14,14 +14,14 @@ final class AccountSignupPrompt extends WidgetContainer implements WidgetActionL
         if (guard <= -35) {
           var5 = this.x + parentX;
           var6 = parentY + this.y;
-          kw.field_b.a(qn.creatingAJagexAccountText, 20 + var5, var6 + 20, this.width - 40, -50 + this.height, 16777215, -1, 1, 0, kw.field_b.field_s);
+          kw.field_b.drawParagraph(qn.creatingAJagexAccountText, 20 + var5, var6 + 20, this.width - 40, -50 + this.height, 16777215, -1, 1, 0, kw.field_b.ascent);
           super.renderLayer(parentX, parentY, (byte) -96, layer);
           return;
         }
         this.field_B = (InteractiveWidget) null;
         var5Lifetime1 = this.x + parentX;
         var6Lifetime1 = parentY + this.y;
-        kw.field_b.a(qn.creatingAJagexAccountText, 20 + var5Lifetime1, var6Lifetime1 + 20, this.width - 40, -50 + this.height, 16777215, -1, 1, 0, kw.field_b.field_s);
+        kw.field_b.drawParagraph(qn.creatingAJagexAccountText, 20 + var5Lifetime1, var6Lifetime1 + 20, this.width - 40, -50 + this.height, 16777215, -1, 1, 0, kw.field_b.ascent);
         super.renderLayer(parentX, parentY, (byte) -96, layer);
     }
 

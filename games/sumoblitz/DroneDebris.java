@@ -15,7 +15,7 @@ final class DroneDebris extends TimedSceneEffect {
     private double rotation;
     static Calendar field_y;
     static String createYourOwnFreeText;
-    static br[] field_D;
+    static ChatMessage[] chatHistory;
     private int velocityXQ8;
     static boolean field_C;
 
@@ -227,14 +227,14 @@ final class DroneDebris extends TimedSceneEffect {
         if (param0 == 2) {
           createYourOwnFreeText = null;
           pleaseCheckIfAddressText = null;
-          field_D = null;
+          chatHistory = null;
           return;
         }
         GraphicsToolkit var2 = (GraphicsToolkit) null;
         DroneDebris.createToolkitSprites((SpriteData[]) null, (GraphicsToolkit) null, -61);
         createYourOwnFreeText = null;
         pleaseCheckIfAddressText = null;
-        field_D = null;
+        chatHistory = null;
     }
 
     static {

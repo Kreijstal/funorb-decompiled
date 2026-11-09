@@ -218,7 +218,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             !LegacyOpenGlShoreWaveWaterEffect.field_e) {
             pt.field_a = true;
             if (om.field_l &&
-              -bt.field_f + wq.a(-97) > 1000L) {
+              -bt.field_f + wq.monotonicTimeMillis(-97) > 1000L) {
               var2 = param0.getClipBounds();
               if (null != var2) {
                 if (var2.width < vs.field_b) {
@@ -421,7 +421,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (this == ke.field_a &&
             !LegacyOpenGlShoreWaveWaterEffect.field_e) {
-            fd.field_k = 4000L + wq.a(-46);
+            fd.field_k = 4000L + wq.monotonicTimeMillis(-46);
             return;
           }
           return;
@@ -441,7 +441,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         java.awt.Insets var6 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_long = wq.a(-126);
+          var2_long = wq.monotonicTimeMillis(-126);
           var4 = Js5Client.field_k[CacheIoRequest.field_B];
           Js5Client.field_k[CacheIoRequest.field_B] = var2_long;
           if (var4 != (long)param0 &&
@@ -486,7 +486,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         Throwable decompiledCaughtException = null;
         Object var6 = null;
         try {
-          var2_long = wq.a(-66);
+          var2_long = wq.monotonicTimeMillis(-66);
           var4 = fa.field_a[ka.field_b];
           fa.field_a[ka.field_b] = var2_long;
           ka.field_b = ka.field_b + 1 & 31;
@@ -517,7 +517,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (ke.field_a == this &&
             !LegacyOpenGlShoreWaveWaterEffect.field_e) {
-            fd.field_k = wq.a(-125);
+            fd.field_k = wq.monotonicTimeMillis(-125);
             TextureCombineOperation.a(5000L, (byte) 119);
             CompactMeshGeometry.field_O = null;
             this.a(false, -32);
@@ -631,7 +631,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             return;
           }
           DroneDebris.field_A = false;
-          bt.field_f = wq.a(param0 ^ -912);
+          bt.field_f = wq.monotonicTimeMillis(param0 ^ -912);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -680,7 +680,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           }
           var1 = new PacketBuffer(30000);
           var1.writeByte((byte) 117, 3);
-          var1.writeByte((byte) 90, bl.field_e);
+          var1.writeByte((byte) 90, ToolkitRasterStateFrame.field_e);
           var1.writeByte((byte) 46, ResourceArchive.field_f);
           var1.writeByte((byte) 39, LegacyOpenGlEffectManager.field_i);
           var1.writeByte((byte) 52, hc.field_f);
@@ -898,7 +898,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (fd.field_k != 0L) {
-                    stackIn_105_0 = $cfr$lcmp(~wq.a(-122), ~fd.field_k);
+                    stackIn_105_0 = $cfr$lcmp(~wq.monotonicTimeMillis(-122), ~fd.field_k);
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_105_0 <= 0)) {

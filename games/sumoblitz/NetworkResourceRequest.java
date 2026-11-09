@@ -47,7 +47,7 @@ final class NetworkResourceRequest extends ResourceRequest {
         PlayingSound var2Lifetime1;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          wd.field_f.serviceOutput();
+          EmailCredentials.field_f.serviceOutput();
           var1_int = -111 % ((param0 + 34) / 35);
           LegacyOpenGlEffectManager.field_a.serviceOutput();
           vf.field_b = vf.field_b - 1;

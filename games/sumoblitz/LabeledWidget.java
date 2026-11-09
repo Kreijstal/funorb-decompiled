@@ -32,7 +32,7 @@ final class LabeledWidget extends SingleChildWidget {
           super.renderLayer(parentX, parentY, (byte) -40, layer);
           if (0 == layer) {
             var7 = this.field_H ? -this.field_A + this.width - 2 * this.field_F : 0;
-            this.field_D.a(this.field_B, var5 + (var7 + this.field_F), var6 + this.field_F, this.field_A - this.field_F, -(this.field_F * 2) + this.height, this.field_z, -1, this.field_H ? 0 : 2, 1, this.field_D.field_s);
+            this.field_D.drawParagraph(this.field_B, var5 + (var7 + this.field_F), var6 + this.field_F, this.field_A - this.field_F, -(this.field_F * 2) + this.height, this.field_z, -1, this.field_H ? 0 : 2, 1, this.field_D.ascent);
             return;
           }
           return;
@@ -41,7 +41,7 @@ final class LabeledWidget extends SingleChildWidget {
         super.renderLayer(parentX, parentY, (byte) -40, layer);
         if (0 == layer) {
           var7Lifetime1 = this.field_H ? -this.field_A + this.width - 2 * this.field_F : 0;
-          this.field_D.a(this.field_B, var5 + (var7Lifetime1 + this.field_F), var6Lifetime1 + this.field_F, this.field_A - this.field_F, -(this.field_F * 2) + this.height, this.field_z, -1, this.field_H ? 0 : 2, 1, this.field_D.field_s);
+          this.field_D.drawParagraph(this.field_B, var5 + (var7Lifetime1 + this.field_F), var6Lifetime1 + this.field_F, this.field_A - this.field_F, -(this.field_F * 2) + this.height, this.field_z, -1, this.field_H ? 0 : 2, 1, this.field_D.ascent);
           return;
         }
     }
@@ -72,7 +72,7 @@ final class LabeledWidget extends SingleChildWidget {
           this.field_D = param8;
           this.field_B = param10;
           var12_int = this.field_A - this.field_F;
-          var13 = this.field_D.a(param10, var12_int, this.field_D.field_s) + 2 * this.field_F;
+          var13 = this.field_D.wrappedHeight(param10, var12_int, this.field_D.ascent) + 2 * this.field_F;
           if (var13 <= param3) {
             var13 = param3;
           } else {

@@ -1,26 +1,26 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class jb extends se {
-    private String field_f;
-    private long field_g;
+class UsernameCredentials extends LoginCredentials {
+    private String password;
+    private long usernameKey;
     static int field_e;
     static int field_h;
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void writeCredentials(PacketBuffer packet, byte guard) {
         try {
-          param0.writeLong(false, this.field_g);
-          param0.writeBase38Name(this.field_f, 27);
-          if (param1 > -107) {
+          packet.writeLong(false, this.usernameKey);
+          packet.writeBase38Name(this.password, 27);
+          if (guard > -107) {
             PacketBuffer var4 = (PacketBuffer) null;
-            this.a((PacketBuffer) null, (byte) -83);
+            this.writeCredentials((PacketBuffer) null, (byte) -83);
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "jb.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "jb.C(" + (packet != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
-    final static String a(PacketBuffer param0, int param1, int param2) {
+    final static String readHuffmanText(PacketBuffer packet, int maxLength, int guard) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -35,14 +35,14 @@ class jb extends se {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            var3_int = param0.readUnsignedSmart(false);
-            if (var3_int > param1) {
-              var3_int = param1;
+            var3_int = packet.readUnsignedSmart(false);
+            if (var3_int > maxLength) {
+              var3_int = maxLength;
             }
             var4 = new byte[var3_int];
-            param0.position = param0.position + LegacyOpenGlUnderwaterEffect.field_g.a(0, param0.position, var4, 116, var3_int, param0.payload);
+            packet.position = packet.position + LegacyOpenGlUnderwaterEffect.field_g.a(0, packet.position, var4, 116, var3_int, packet.payload);
             var5 = SoftLruCache.decodeCp1252(var4, 0, var3_int, 26564);
-            if (param2 == -14832) {
+            if (guard == -14832) {
               stackIn_7_0 = var5;
               return stackIn_7_0;
             }
@@ -59,16 +59,16 @@ class jb extends se {
           var3_ref = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_12_0 = var3_ref;
           stackIn_12_1 = new StringBuilder().append("jb.A(");
-          if (param0 == null) {
+          if (packet == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(maxLength).append(',').append(guard).append(')').toString());
         }
     }
 
-    final static void a(byte param0, String param1, java.applet.Applet param2) {
+    final static void writeAppletSettings(byte guard, String settings, java.applet.Applet applet) {
         try {
           String var7 = null;
           String var6 = null;
@@ -81,29 +81,29 @@ class jb extends se {
           String var6Lifetime5;
           String var6Lifetime6;
           try {
-            IntIndexHashTable.field_d = param1;
+            IntIndexHashTable.field_d = settings;
             try {
-              int var4 = 82 / ((param0 + 62) / 49);
-              var7 = param2.getParameter("cookieprefix");
+              int var4 = 82 / ((guard + 62) / 49);
+              var7 = applet.getParameter("cookieprefix");
               var6 = var7;
               var6Lifetime1 = var7;
-              var5 = param2.getParameter("cookiehost");
+              var5 = applet.getParameter("cookiehost");
               var6Lifetime2 = var5;
               var6Lifetime3 = var5;
-              var8 = var7 + "settings=" + param1 + "; version=1; path=/; domain=" + var5;
+              var8 = var7 + "settings=" + settings + "; version=1; path=/; domain=" + var5;
               var6Lifetime4 = var8;
               var6Lifetime5 = var8;
-              if (param1.length() == 0) {
+              if (settings.length() == 0) {
                 var6Lifetime6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               } else {
-                var6Lifetime6 = var8 + "; Expires=" + ExpandingRingEffect.formatCookieDate(94608000000L + wq.a(-6), true) + "; Max-Age=" + 94608000L;
+                var6Lifetime6 = var8 + "; Expires=" + ExpandingRingEffect.formatCookieDate(94608000000L + wq.monotonicTimeMillis(-6), true) + "; Max-Age=" + 94608000L;
               }
-              tw.a("document.cookie=\"" + var6Lifetime6 + "\"", -15428, param2);
+              tw.a("document.cookie=\"" + var6Lifetime6 + "\"", -15428, applet);
             } catch (Throwable throwable) {
             }
-            RotarySelectorRenderer.updateAppletNavigationLinks(false, param2);
+            RotarySelectorRenderer.updateAppletNavigationLinks(false, applet);
           } catch (RuntimeException runtimeException) {
-            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "jb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "jb.D(" + guard + ',' + (settings != null ? "{...}" : "null") + ',' + (applet != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -112,7 +112,7 @@ class jb extends se {
         }
     }
 
-    final static int a(String param0, boolean param1, byte param2, boolean param3, int param4, String param5) {
+    final static int pollLogin(String username, boolean jagexHosted, byte guard, boolean reconnect, int affiliateId, String password) {
         try {
           int stackIn_3_0 = 0;
           int stackIn_8_0 = 0;
@@ -144,25 +144,25 @@ class jb extends se {
           int var8Lifetime1;
           var9 = Sumoblitz.field_L ? 1 : 0;
           try {
-            if (param2 < 15) {
+            if (guard < 15) {
               stackIn_3_0 = -61;
               return stackIn_3_0;
             }
             if (DisplayModeConfirmationDialog.field_O == null &&
-              !GridWidgetContainer.a((byte) -34, param3)) {
+              !GridWidgetContainer.a((byte) -34, reconnect)) {
               stackIn_8_0 = -1;
               return stackIn_8_0;
             }
             if (kw.field_c == gg.field_t) {
-              if (param3) {
+              if (reconnect) {
                 var10 = (String) null;
-                kb.field_d = ds.a(lb.field_a, false, (String) null, param5, false);
+                LegacyOpenGlBuffer.field_d = LoginCredentialFactory.createCredentials(lb.field_a, false, (String) null, password, false);
               } else {
-                kb.field_d = MouseInputHandler.a(false, param0, param5, (byte) -94);
+                LegacyOpenGlBuffer.field_d = MouseInputHandler.credentialsForLogin(false, username, password, (byte) -94);
               }
               InwardSparkParticle.field_v.position = 0;
               InwardSparkParticle.field_v.writeByte((byte) 42, 14);
-              InwardSparkParticle.field_v.writeByte((byte) 96, kb.field_d.a((byte) 126).field_c);
+              InwardSparkParticle.field_v.writeByte((byte) 96, LegacyOpenGlBuffer.field_d.credentialType((byte) 126).wireId);
               MessageDialog.a(0, -1);
               kw.field_c = LegacyOpenGlRidgedWaterEffect.field_g;
             }
@@ -182,7 +182,7 @@ class jb extends se {
               OpenGlIndexBuffer.b(-1, 8)) {
               HardwareUnlitEffect.field_g = ig.field_a.readLong((byte) 127);
               ig.field_a.position = 0;
-              fb.a(param3, param1, -12793, param4, kb.field_d);
+              LoginPacketWriter.sendLoginPacket(reconnect, jagexHosted, -12793, affiliateId, LegacyOpenGlBuffer.field_d);
               kw.field_c = jj.field_f;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -222,7 +222,7 @@ class jb extends se {
               if ((var7 & 1) != 0) {
                 MarkerTrackWidget.persistRandomDataAndAdvance(24);
               }
-              if (!param3) {
+              if (!reconnect) {
                 stackIn_43_0 = ((4 & var7) != 0);
                 wo.field_c = stackIn_43_0;
                 stackIn_46_0 = ((var7 & 8) != 0);
@@ -245,8 +245,8 @@ class jb extends se {
               PasswordValidator.field_f = AccountCreationProgressDialog.normalizeAccountName(-1, var11);
               jk.field_c = ig.field_a.readUnsignedByte(-31302);
               kw.field_c = LegacyOpenGlUnderwaterEffect.field_j;
-              if (kb.field_d.a((byte) 113) != IndexedSprite.field_b) {
-                if (kb.field_d.a((byte) 89) == hh.field_c) {
+              if (LegacyOpenGlBuffer.field_d.credentialType((byte) 113) != IndexedSprite.EMAIL_CREDENTIALS) {
+                if (LegacyOpenGlBuffer.field_d.credentialType((byte) 89) == hh.USERNAME_CREDENTIALS) {
                   LevelSelectScreen.field_j.a(true, LegacyOpenGlUnlitEffect.c(2));
                 }
               } else {
@@ -254,7 +254,7 @@ class jb extends se {
               }
               LimitedRandomAccessFile.field_g = false;
               if (var6 != null) {
-                jb.a((byte) -118, var6, LegacyOpenGlUnlitEffect.c(2));
+                UsernameCredentials.writeAppletSettings((byte) -118, var6, LegacyOpenGlUnlitEffect.c(2));
               }
               if (HardwareRidgedWaterNoise.field_x <= 0 &&
                 !wo.field_c) {
@@ -275,11 +275,11 @@ class jb extends se {
               if (HardwareRidgedWaterNoise.field_x > 0) {
                 qn.field_a = true;
               }
-              InwardSparkParticle.field_v.a((byte) 64, bk.field_e);
+              InwardSparkParticle.field_v.a((byte) 64, RendererSession.isaacSeed);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
-                bk.field_e[var8Lifetime1] = bk.field_e[var8Lifetime1] + 50;
+                RendererSession.isaacSeed[var8Lifetime1] = RendererSession.isaacSeed[var8Lifetime1] + 50;
               }
-              ig.field_a.a((byte) 123, bk.field_e);
+              ig.field_a.a((byte) 123, RendererSession.isaacSeed);
               stackIn_73_0 = TextureFormat.field_a;
               return stackIn_73_0;
             }
@@ -312,9 +312,9 @@ class jb extends se {
                 return stackIn_94_0;
               }
               var6_intLifetime2 = vp.field_a;
-              vp.field_a = nb.field_b;
+              vp.field_a = LoginCredentialType.field_b;
               LimitedRandomAccessFile.field_g = true;
-              nb.field_b = var6_intLifetime2;
+              LoginCredentialType.field_b = var6_intLifetime2;
             }
             stackIn_96_0 = -1;
             return stackIn_96_0;
@@ -323,13 +323,13 @@ class jb extends se {
             var6_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackIn_99_0 = var6_ref;
             stackIn_99_1 = new StringBuilder().append("jb.F(");
-            if (param0 == null) {
+            if (username == null) {
               stackIn_100_2 = "null";
             } else {
               stackIn_100_2 = "{...}";
             }
-            stackIn_102_1 = ((StringBuilder) (Object) stackIn_99_1).append(stackIn_100_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-            if (param5 == null) {
+            stackIn_102_1 = ((StringBuilder) (Object) stackIn_99_1).append(stackIn_100_2).append(',').append(jagexHosted).append(',').append(guard).append(',').append(reconnect).append(',').append(affiliateId).append(',');
+            if (password == null) {
               stackIn_103_2 = "null";
             } else {
               stackIn_103_2 = "{...}";
@@ -343,15 +343,15 @@ class jb extends se {
         }
     }
 
-    nb a(byte param0) {
-        if (param0 < 80) {
+    LoginCredentialType credentialType(byte guard) {
+        if (guard < 80) {
           java.applet.Applet var3 = (java.applet.Applet) null;
-          jb.a((byte) -100, (String) null, (java.applet.Applet) null);
+          UsernameCredentials.writeAppletSettings((byte) -100, (String) null, (java.applet.Applet) null);
         }
-        return hh.field_c;
+        return hh.USERNAME_CREDENTIALS;
     }
 
-    final static Sprite a(String param0, String param1, int param2, ResourceArchive param3) {
+    final static Sprite loadNamedSprite(String groupName, String fileName, int guard, ResourceArchive archive) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -366,29 +366,29 @@ class jb extends se {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param3.groupId(0, param0);
-          var5 = param3.fileId(var4_int, param1, (byte) 127);
-          var6 = -88 % ((-10 - param2) / 46);
-          stackIn_1_0 = TextInputValidator.a(var5, -11481, param3, var4_int);
+          var4_int = archive.groupId(0, groupName);
+          var5 = archive.fileId(var4_int, fileName, (byte) 127);
+          var6 = -88 % ((-10 - guard) / 46);
+          stackIn_1_0 = TextInputValidator.a(var5, -11481, archive, var4_int);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_4_0 = var4;
           stackIn_4_1 = new StringBuilder().append("jb.E(");
-          if (param0 == null) {
+          if (groupName == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
           stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',');
-          if (param1 == null) {
+          if (fileName == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(guard).append(',');
+          if (archive == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
@@ -397,12 +397,12 @@ class jb extends se {
         }
     }
 
-    jb(long param0, String param1) {
+    UsernameCredentials(long nameKey, String secret) {
         try {
-          this.field_g = param0;
-          this.field_f = param1;
+          this.usernameKey = nameKey;
+          this.password = secret;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "jb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "jb.<init>(" + nameKey + ',' + (secret != null ? "{...}" : "null") + ')');
         }
     }
 

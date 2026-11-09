@@ -160,7 +160,7 @@ final class vq extends WidgetContainer implements NameSuggestionListener, Widget
     public vq() {
         super(0, 0, 496, 0, (WidgetRenderer) null);
         this.field_B = new ValidatedTextInputWidget("", (WidgetListener) null, 12);
-        TextWidgetRenderer var1 = new TextWidgetRenderer(jm.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, kw.field_b.field_s, -1, 2147483647, true);
+        TextWidgetRenderer var1 = new TextWidgetRenderer(jm.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, kw.field_b.ascent, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(gs.youNeedToChooseText, var1, (WidgetListener) null);
         this.field_C = new InteractiveWidget(tf.field_a, (WidgetListener) null);
         this.field_A = new InteractiveWidget(IntrusiveNodeHashTable.field_h, (WidgetListener) null);
@@ -176,7 +176,7 @@ final class vq extends WidgetContainer implements NameSuggestionListener, Widget
         int var5 = 200;
         this.addChild(var2, 81);
         var3 += 50;
-        var3 = var3 + (5 + this.a(var3, 7541, 170, this.field_B, oq.playerNamesCanBeText, un.playerNameText));
+        var3 = var3 + (5 + this.a(var3, 7541, 170, this.field_B, QuickChatPhrase.playerNamesCanBeText, un.playerNameText));
         this.field_C.setBounds(126, 496 - var5 >> 1, var3, 40, var5);
         this.field_A.setBounds(-57, 3 + var4, var3 + 15, 40, 60);
         this.field_A.listener = (WidgetListener) (this);

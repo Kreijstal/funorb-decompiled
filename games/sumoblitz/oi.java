@@ -30,8 +30,8 @@ final class oi {
     }
 
     final static void shutdownAudioOutputs(int guard) {
-        if (wd.field_f != null) {
-          wd.field_f.shutdown();
+        if (EmailCredentials.field_f != null) {
+          EmailCredentials.field_f.shutdown();
           if (guard == -27864) {
             if (null == LegacyOpenGlEffectManager.field_a) {
               return;

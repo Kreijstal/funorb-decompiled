@@ -11,11 +11,11 @@ final class p extends IntrusiveNode implements NativeResource {
 
     private final void a(Exception param0) {
         if (!field_k) {
-          field_n = wq.a(-119);
+          field_n = wq.monotonicTimeMillis(-119);
           field_k = true;
           return;
         }
-        if (wq.a(-120) - field_n >= 30000L) {
+        if (wq.monotonicTimeMillis(-120) - field_n >= 30000L) {
           throw new RuntimeException(param0.getMessage());
         }
         this.field_o.repaint();

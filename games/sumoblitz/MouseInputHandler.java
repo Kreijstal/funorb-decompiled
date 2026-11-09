@@ -17,12 +17,12 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             LegacyOpenGlTexture.field_h = 0;
             GzipDecompressor.field_d = param0.getX();
             LegacyOpenGlTexture3D.field_l = param0.getY();
-            wq.a(-33);
+            wq.monotonicTimeMillis(-33);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
-              kb.field_i = 2;
+              LegacyOpenGlBuffer.field_i = 2;
               LegacyOpenGlNormalMapGenerator.field_a = 2;
             } else {
-              kb.field_i = 1;
+              LegacyOpenGlBuffer.field_i = 1;
               LegacyOpenGlNormalMapGenerator.field_a = 1;
             }
             var2_int = param0.getModifiers();
@@ -257,13 +257,13 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    final static se a(boolean param0, String param1, String param2, byte param3) {
+    final static LoginCredentials credentialsForLogin(boolean alternateUsernameType, String login, String password, byte guard) {
         int var4_int = 0;
         RuntimeException var4 = null;
         long var5 = 0L;
         Object var7 = null;
         CharSequence var8 = null;
-        se stackIn_4_0 = null;
+        LoginCredentials stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -271,34 +271,34 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = 63 / ((param3 + 17) / 54);
+          var4_int = 63 / ((guard + 17) / 54);
           var5 = 0L;
           var7 = null;
-          if (-1 != param1.indexOf('@')) {
-            var7 = param1;
+          if (-1 != login.indexOf('@')) {
+            var7 = login;
           } else {
-            var8 = (CharSequence) ((Object) param1);
+            var8 = (CharSequence) ((Object) login);
             var5 = ScrollControl.encodeBase37Name(var8, 7441);
           }
-          stackIn_4_0 = ds.a(var5, param0, (String) (var7), param2, false);
+          stackIn_4_0 = LoginCredentialFactory.createCredentials(var5, alternateUsernameType, (String) (var7), password, false);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_7_0 = var4;
-          stackIn_7_1 = new StringBuilder().append("os.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_7_1 = new StringBuilder().append("os.B(").append(alternateUsernameType).append(',');
+          if (login == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
           stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
-          if (param2 == null) {
+          if (password == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(guard).append(')').toString());
         }
     }
 

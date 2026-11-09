@@ -177,7 +177,7 @@ final class ScrollPane extends ArrayWidgetContainer {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -93 % ((30 - param0) / 59);
-          stackIn_1_0 = fw.a((byte) 126, hc.class, param1);
+          stackIn_1_0 = ToolkitRasterStateCacheEntry.a((byte) 126, hc.class, param1);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

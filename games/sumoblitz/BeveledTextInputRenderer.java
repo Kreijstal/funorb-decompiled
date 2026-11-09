@@ -17,7 +17,7 @@ class BeveledTextInputRenderer extends TextWidgetRenderer {
     }
 
     BeveledTextInputRenderer(LegacyBitmapFont textFont, int textColor) {
-        super(textFont, 4, 2, 2, 2, textColor, -1, 0, 1, textFont.field_s, -1, 2147483647, false);
+        super(textFont, 4, 2, 2, 2, textColor, -1, 0, 1, textFont.ascent, -1, 2147483647, false);
     }
 
     public final void renderWidget(UiWidget widget, int parentY, int guard, boolean isEnabled, int parentX) {

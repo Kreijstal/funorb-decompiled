@@ -65,7 +65,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
     boolean supportsFramebufferObjects;
     private String field_E;
     private int field_t;
-    private fk field_Rb;
+    private LegacyVertexBuffer field_Rb;
     private bt field_Y;
     private int field_gc;
     LegacyOpenGlFramebuffer scratchFramebuffer;
@@ -98,7 +98,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
     private LegacyOpenGlTexture[] field_ib;
     private boolean field_r;
     private int field_yc;
-    private fk field_zc;
+    private LegacyVertexBuffer field_zc;
     private int field_Eb;
     int field_Mb;
     private boolean field_R;
@@ -1723,16 +1723,16 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         }
         this.field_Pb.a(122);
         if (100663296 < this.e((byte) 7) &&
-          wq.a(-64) > this.field_vc + 60000L) {
+          wq.monotonicTimeMillis(-64) > this.field_vc + 60000L) {
           System.gc();
-          this.field_vc = wq.a(-78);
+          this.field_vc = wq.monotonicTimeMillis(-78);
         }
         this.animationTime = timeMillis;
     }
 
-    final fk a(int param0, boolean param1, byte param2, int param3, byte[] param4) {
+    final LegacyVertexBuffer a(int param0, boolean param1, byte param2, int param3, byte[] param4) {
         RuntimeException var6 = null;
-        hn stackIn_7_0 = null;
+        LegacyOpenGlVertexBuffer stackIn_7_0 = null;
         sl stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -1744,11 +1744,11 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
           }
           if (this.field_J && (!param1 ||
             this.field_K)) {
-            stackIn_7_0 = new hn(this, param0, param4, param3, param1);
-            return (fk) ((Object) stackIn_7_0);
+            stackIn_7_0 = new LegacyOpenGlVertexBuffer(this, param0, param4, param3, param1);
+            return (LegacyVertexBuffer) ((Object) stackIn_7_0);
           }
           stackIn_9_0 = new sl(this, param0, param4, param3);
-          return (fk) ((Object) stackIn_9_0);
+          return (LegacyVertexBuffer) ((Object) stackIn_9_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
@@ -2133,20 +2133,20 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final void a(fk param0, int param1) {
+    final void bindVertexBuffer(LegacyVertexBuffer buffer, int guard) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (param0 != this.field_zc) {
+          if (buffer != this.field_zc) {
             if (this.field_J) {
-              jaggl.OpenGL.glBindBufferARB(34962, param0.a(2721));
+              jaggl.OpenGL.glBindBufferARB(34962, buffer.bufferId(2721));
             }
-            this.field_zc = param0;
+            this.field_zc = buffer;
           }
-          if (param1 > -110) {
+          if (guard > -110) {
             this.field_Tb = (cm) null;
           }
           return;
@@ -2155,12 +2155,12 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
           var3 = decompiledCaughtException;
           stackIn_9_0 = var3;
           stackIn_9_1 = new StringBuilder().append("fr.A(");
-          if (param0 == null) {
+          if (buffer == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(guard).append(')').toString());
         }
     }
 

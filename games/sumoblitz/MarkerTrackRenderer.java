@@ -50,7 +50,7 @@ final class MarkerTrackRenderer implements WidgetRenderer {
           if (this.font == null) {
             return;
           }
-          this.font.a(var13.text, var8 + var7 / 2, var13.trackY + (this.font.field_F + var9), this.textColor, this.textShadow);
+          this.font.drawCentered(var13.text, var8 + var7 / 2, var13.trackY + (this.font.baselineOffset + var9), this.textColor, this.textShadow);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

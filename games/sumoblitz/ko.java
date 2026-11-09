@@ -21,7 +21,7 @@ abstract class ko extends IntrusiveNode {
         try {
           var4 = (hg) (SoftwareRenderTarget.field_f.first(-101));
           while (var4 != null) {
-            pm.a(param1, 1, var4);
+            ToolkitRasterStateStack.a(param1, 1, var4);
             var4 = (hg) (SoftwareRenderTarget.field_f.next((byte) 18));
           }
           if (param0 != 0) {

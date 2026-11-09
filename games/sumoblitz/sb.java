@@ -184,7 +184,7 @@ final class sb {
         if (param3 <= 46) {
           return 59;
         }
-        return se.a(19886);
+        return LoginCredentials.pollAccountDialogs(19886);
     }
 
     static {

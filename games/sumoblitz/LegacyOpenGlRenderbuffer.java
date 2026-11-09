@@ -78,7 +78,7 @@ final class LegacyOpenGlRenderbuffer extends DualLinkNode implements LegacyOpenG
           if (var2 < 1) {
             return;
           }
-          bl.field_e = var6.readUnsignedByte(-31302);
+          ToolkitRasterStateFrame.field_e = var6.readUnsignedByte(-31302);
           ResourceArchive.field_f = var6.readUnsignedByte(-31302);
           LegacyOpenGlEffectManager.field_i = var6.readUnsignedByte(-31302);
           hc.field_f = var6.readUnsignedByte(-31302);
@@ -105,7 +105,7 @@ final class LegacyOpenGlRenderbuffer extends DualLinkNode implements LegacyOpenG
               }
               if (OpenGlTexture3D.field_j[var3] != 0) {
                 TextureMetadata.field_f[var3] = true;
-                bl.field_e = var3;
+                ToolkitRasterStateFrame.field_e = var3;
               }
             }
           }

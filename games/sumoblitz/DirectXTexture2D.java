@@ -42,8 +42,8 @@ final class DirectXTexture2D extends DirectXTexture implements Texture2D {
           stackIn_4_4Lifetime1 = 0;
         }
         if (!this.toolkit.field_Oc) {
-          this.width = hn.a(false, param2);
-          this.height = hn.a(false, param3);
+          this.width = LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, param2);
+          this.height = LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, param3);
         } else {
           this.width = param2;
           this.height = param3;
@@ -111,8 +111,8 @@ final class DirectXTexture2D extends DirectXTexture implements Texture2D {
           stackIn_4_4Lifetime1 = 0;
         }
         if (!this.toolkit.field_Oc) {
-          this.width = hn.a(false, param1);
-          this.height = hn.a(false, param2);
+          this.width = LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, param1);
+          this.height = LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, param2);
         } else {
           this.width = param1;
           this.height = param2;
@@ -165,8 +165,8 @@ final class DirectXTexture2D extends DirectXTexture implements Texture2D {
     DirectXTexture2D(DirectXGraphicsToolkit param0, TextureFormat param1, GpuDataType param2, int param3, int param4) {
         super(param0, param1, param2, false, param4 * param3);
         if (!this.toolkit.field_Oc) {
-          this.width = hn.a(false, param3);
-          this.height = hn.a(false, param4);
+          this.width = LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, param3);
+          this.height = LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, param4);
         } else {
           this.width = param3;
           this.height = param4;

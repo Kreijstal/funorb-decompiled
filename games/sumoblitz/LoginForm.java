@@ -70,7 +70,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Widg
                   TimedSceneEffect.c(guard ^ 710);
                 } else {
                   if (this.field_J) {
-                    nb.a(true);
+                    LoginCredentialType.showAccountSignupPrompt(true);
                   } else {
                     pi.a((byte) -110);
                   }
@@ -95,7 +95,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Widg
 
     final void renderLayer(int parentX, int parentY, byte guard, int layer) {
         if (null != this.field_K) {
-          kw.field_b.a(this.field_K, 20 + (this.x + parentX), parentY + this.y + 15, this.width - 40, this.height, 16777215, -1, 1, 0, kw.field_b.field_s);
+          kw.field_b.drawParagraph(this.field_K, 20 + (this.x + parentX), parentY + this.y + 15, this.width - 40, this.height, 16777215, -1, 1, 0, kw.field_b.ascent);
         }
         if (guard >= -35) {
           this.field_H = (TextInputWidget) null;
@@ -194,7 +194,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Widg
           this.y = 15;
           var7 = kw.field_b;
           if (this.field_K != null) {
-            this.y = this.y + (var7.a(this.field_K, -40 + this.width, var7.field_s) + 5);
+            this.y = this.y + (var7.wrappedHeight(this.field_K, -40 + this.width, var7.ascent) + 5);
           }
           var8 = OpenGlEnvironmentWaterEffect.loginText;
           var9 = LegacyOpenGlEnvironmentWaterEffect.a(LegacyOpenGlUnlitEffect.c(2), 1);

@@ -159,7 +159,7 @@ final class DirectByteArrayStorage extends ByteArrayStorage {
         }
         try {
           GraphicsHeap.field_l[param5] = param2;
-          nj.field_d[param5] = param6;
+          RendererPreference.field_d[param5] = param6;
           DualLinkNode.field_k[param5] = param0;
           MidiNoteMixer.field_s[param5] = param1;
         } catch (RuntimeException runtimeException) {

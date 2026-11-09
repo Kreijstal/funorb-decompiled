@@ -31,7 +31,7 @@ class AudioOutput {
             this.flushDevice();
           } catch (Exception exception) {
             this.closeDevice();
-            this.reopenAtMillis = wq.a(-20) + 2000L;
+            this.reopenAtMillis = wq.monotonicTimeMillis(-20) + 2000L;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -273,7 +273,7 @@ class AudioOutput {
         if (this.stream != null) {
           this.stream.mixInto(output, 0, sampleCount);
         }
-        this.lastMixMillis = wq.a(-54);
+        this.lastMixMillis = wq.monotonicTimeMillis(-54);
     }
 
     private final void skipSamples(int param0) {
@@ -310,7 +310,7 @@ class AudioOutput {
           if (this.closed) {
             return;
           }
-          var1 = wq.a(-124);
+          var1 = wq.monotonicTimeMillis(-124);
           try {
             if (var1 > this.lastMixMillis + 6000L) {
               this.lastMixMillis = var1 - 6000L;
@@ -318,7 +318,7 @@ class AudioOutput {
             while (var1 > this.lastMixMillis + 5000L) {
               this.skipSamples(256);
               this.lastMixMillis = this.lastMixMillis + (long)(256000 / sampleRate);
-              var1 = wq.a(-119);
+              var1 = wq.monotonicTimeMillis(-119);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -423,7 +423,7 @@ class AudioOutput {
     AudioOutput() {
         this.closed = false;
         this.activityLimit = 32;
-        this.lastMixMillis = wq.a(-12);
+        this.lastMixMillis = wq.monotonicTimeMillis(-12);
         this.recentlyOpened = true;
         this.priorityHeads = new PcmStream[8];
         this.previousMaxDrain = 0;

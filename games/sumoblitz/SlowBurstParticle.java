@@ -163,7 +163,7 @@ final class SlowBurstParticle extends TimedSceneEffect {
             for (var6_int = 1; var4 > var6_int; var6_int++) {
               RenderPresentationException.field_b[var6_int] = var13.readCp1252String(-1);
             }
-            tn.b(var4, -2147483648, var5);
+            AlternateUsernameCredentials.b(var4, -2147483648, var5);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               ArenaPad.a(var15, (byte) 61);
               if (var6_intLifetime1 == 0) {
@@ -175,7 +175,7 @@ final class SlowBurstParticle extends TimedSceneEffect {
             qr.a(13136, var5);
             var6 = new String[2][var5];
             var19 = new int[2][var5 * 4];
-            var8 = se.field_d;
+            var8 = LoginCredentials.field_d;
             var9 = 0;
             var10 = 0;
             while (var9 < var8) {
