@@ -15,12 +15,12 @@ public class PixelBuffer extends jaclib.peer.NativeHeapPeer implements jaclib.me
 
     public final native int getSize();
 
-    public final void a(byte[] param0, int param1, int param2, int param3) {
-        if (((param2 < 0 ? 1 : 0) | ((param0.length < param1 + param3 ? 1 : 0) | ((param0 == null ? 1 : 0) | (param1 < 0 ? 1 : 0)))) != 0) {
+    public final void putBytes(byte[] source, int sourceOffset, int destinationOffset, int length) {
+        if (((destinationOffset < 0 ? 1 : 0) | ((source.length < sourceOffset + length ? 1 : 0) | ((source == null ? 1 : 0) | (sourceOffset < 0 ? 1 : 0)))) != 0) {
           throw new jagdx.DirectXException();
         }
-        if (param3 + param2 <= this.getSize()) {
-          this.putub(param0, param1, param2, param3);
+        if (length + destinationOffset <= this.getSize()) {
+          this.putub(source, sourceOffset, destinationOffset, length);
           return;
         }
         throw new jagdx.DirectXException();

@@ -8,7 +8,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
     private DirectXGraphicsToolkit field_f;
 
     final void disable(boolean guard) {
-        this.field_f.a(-103, (jagdx.IDirect3DVertexShader) null);
+        this.field_f.bindVertexShader(-103, (jagdx.IDirect3DVertexShader) null);
         this.toolkit.setColorCombineSource(LegacyVertexAttribute.TEXTURE, 0, 0);
         if (!guard) {
           this.toolkit.setColorCombineSource(NetworkResourceRequest.PRIMARY_COLOR, 1, 0);
@@ -28,12 +28,12 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
           var7 = this.field_f.field_Cc;
           if (this.field_h.useVolumeTextures) {
             var5_float = (float)(this.toolkit.field_kc % 4000) / 4000.0f;
-            this.toolkit.a(this.field_h.animatedVolume, 114);
-            var7.b(11, var5_float, 0.0f, 0.0f, 0.0f);
+            this.toolkit.bindTexture(this.field_h.animatedVolume, 114);
+            var7.setVertexShaderConstant(11, var5_float, 0.0f, 0.0f, 0.0f);
           } else {
             var5 = 16 * (this.toolkit.field_kc % 4000) / 4000;
-            this.toolkit.a(this.field_h.animatedSlices[var5], guard ^ 33939);
-            var7.b(11, 0.0f, 0.0f, 0.0f, 0.0f);
+            this.toolkit.bindTexture(this.field_h.animatedSlices[var5], guard ^ 33939);
+            var7.setVertexShaderConstant(11, 0.0f, 0.0f, 0.0f, 0.0f);
           }
           return;
         }
@@ -41,12 +41,12 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
         jagdx.IDirect3DDevice var6 = this.field_f.field_Cc;
         if (this.field_h.useVolumeTextures) {
           var5_floatLifetime1 = (float)(this.toolkit.field_kc % 4000) / 4000.0f;
-          this.toolkit.a(this.field_h.animatedVolume, 114);
-          var6.b(11, var5_floatLifetime1, 0.0f, 0.0f, 0.0f);
+          this.toolkit.bindTexture(this.field_h.animatedVolume, 114);
+          var6.setVertexShaderConstant(11, var5_floatLifetime1, 0.0f, 0.0f, 0.0f);
         } else {
           var5Lifetime1 = 16 * (this.toolkit.field_kc % 4000) / 4000;
-          this.toolkit.a(this.field_h.animatedSlices[var5Lifetime1], guard ^ 33939);
-          var6.b(11, 0.0f, 0.0f, 0.0f, 0.0f);
+          this.toolkit.bindTexture(this.field_h.animatedSlices[var5Lifetime1], guard ^ 33939);
+          var6.setVertexShaderConstant(11, 0.0f, 0.0f, 0.0f, 0.0f);
         }
     }
 
@@ -59,7 +59,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
     }
 
     final void refreshState(boolean lighting, byte guard) {
-        this.toolkit.a((byte) -83, LoginForm.ADD, OpenGlBuffer.INTERPOLATE);
+        this.toolkit.setTextureCombineOperations((byte) -83, LoginForm.ADD, OpenGlBuffer.INTERPOLATE);
         if (guard >= -71) {
           field_g = (float[]) null;
         }
@@ -71,7 +71,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
         if (this.field_e != null) {
           var2 = this.field_f.field_Cc;
           var3 = this.field_f.modelViewTransform((byte) 126);
-          var2.a(0, var3.writeRowMajor4x4(0, field_g));
+          var2.setVertexShaderConstants(0, var3.writeRowMajor4x4(0, field_g));
         }
         if (guard > 0) {
           return;
@@ -131,7 +131,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
         if (param1 != null &&
           this.field_h.hasAnimatedTextures(41) &&
           257 <= (65535 & this.field_f.field_Kc.VertexShaderVersion)) {
-          this.field_e = this.field_f.field_Cc.a(param1.fetchNamedFile("transparent_water", "dx", -1));
+          this.field_e = this.field_f.field_Cc.createVertexShader(param1.fetchNamedFile("transparent_water", "dx", -1));
         } else {
           this.field_e = null;
         }
@@ -141,7 +141,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
         jagdx.IDirect3DDevice var2 = null;
         if (this.field_e != null) {
           var2 = this.field_f.field_Cc;
-          var2.a(4, this.toolkit.a(-105, field_g));
+          var2.setVertexShaderConstants(4, this.toolkit.writeTransposedProjection(-105, field_g));
         }
         if (!guard) {
           return;
@@ -155,7 +155,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
         if (this.field_e != null) {
           var2_ref_jagdx_IDirect3DDevice = this.field_f.field_Cc;
           var3 = this.field_f.modelViewTransform((byte) 69);
-          var2_ref_jagdx_IDirect3DDevice.a(0, var3.writeRowMajor4x4(0, field_g));
+          var2_ref_jagdx_IDirect3DDevice.setVertexShaderConstants(0, var3.writeRowMajor4x4(0, field_g));
         }
         int var2 = 67 % ((41 - guard) / 46);
     }
@@ -166,7 +166,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
         this.toolkit.setColorCombineSource((byte) -125, 2, false, true, NetworkResourceRequest.PRIMARY_COLOR);
         this.toolkit.setFogEnabled(0, false);
         if (guard == 20186) {
-          this.field_f.a(-51, this.field_e);
+          this.field_f.bindVertexShader(-51, this.field_e);
           this.updateViewUniforms((byte) 40);
           this.updateTextureUniforms((byte) -83);
           this.updateProjectionUniforms(false);
@@ -174,7 +174,7 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
           return;
         }
         this.field_f = (DirectXGraphicsToolkit) null;
-        this.field_f.a(-51, this.field_e);
+        this.field_f.bindVertexShader(-51, this.field_e);
         this.updateViewUniforms((byte) 40);
         this.updateTextureUniforms((byte) -83);
         this.updateProjectionUniforms(false);
@@ -192,9 +192,9 @@ final class DirectXTransparentWaterEffect extends ShaderEffect {
             var3 = this.toolkit.field_Tb;
             var4 = this.toolkit.field_E;
             var5 = -512.0f + var4;
-            var2.b(10, var5, 1.0f / (-var5 + var4), var4, 1.0f / (var3 - var4));
+            var2.setVertexShaderConstant(10, var5, 1.0f / (-var5 + var4), var4, 1.0f / (var3 - var4));
           } else {
-            var2.b(10, 0.0f, 0.0f, 0.0f, 0.0f);
+            var2.setVertexShaderConstant(10, 0.0f, 0.0f, 0.0f, 0.0f);
           }
           this.toolkit.setTextureConstantColor(false, this.toolkit.field_C);
         }

@@ -21,22 +21,22 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         if (!guard) {
           if (null != this.field_j) {
             var2 = this.field_l.field_Cc;
-            var2.a(4, this.toolkit.a(-52, field_h));
+            var2.setVertexShaderConstants(4, this.toolkit.writeTransposedProjection(-52, field_h));
           }
           return;
         }
         this.field_o = false;
         if (null != this.field_j) {
           var2Lifetime1 = this.field_l.field_Cc;
-          var2Lifetime1.a(4, this.toolkit.a(-52, field_h));
+          var2Lifetime1.setVertexShaderConstants(4, this.toolkit.writeTransposedProjection(-52, field_h));
         }
     }
 
     final void enable(boolean lighting, int guard) {
         this.field_o = lighting ? true : false;
         this.toolkit.setActiveTextureUnit(1, guard - 20312);
-        this.toolkit.a(this.field_i, guard - 20076);
-        this.toolkit.a((byte) -83, LegacyOpenGlRenderBufferSet.REPLACE, OpenGlBuffer.INTERPOLATE);
+        this.toolkit.bindTexture(this.field_i, guard - 20076);
+        this.toolkit.setTextureCombineOperations((byte) -83, LegacyOpenGlRenderBufferSet.REPLACE, OpenGlBuffer.INTERPOLATE);
         this.toolkit.setColorCombineSource(AccountRequestState.CONSTANT, 0, guard ^ guard);
         this.toolkit.setColorCombineSource((byte) 89, 2, true, false, LegacyVertexAttribute.TEXTURE);
         this.toolkit.setAlphaCombineSource(FontMetrics.PREVIOUS, 0, true);
@@ -46,8 +46,8 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
 
     final void disable(boolean guard) {
         this.toolkit.setActiveTextureUnit(1, -121);
-        this.toolkit.a((GpuTexture) null, 100);
-        this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
+        this.toolkit.bindTexture((GpuTexture) null, 100);
+        this.toolkit.setTextureCombineOperations((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
         this.toolkit.setColorCombineSource(LegacyVertexAttribute.TEXTURE, 0, 0);
         if (guard) {
           this.setParameters(-69, 14, -105);
@@ -58,7 +58,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
             if (null == this.field_j) {
               return;
             }
-            this.field_l.a(-122, (jagdx.IDirect3DVertexShader) null);
+            this.field_l.bindVertexShader(-122, (jagdx.IDirect3DVertexShader) null);
             this.field_j = null;
             return;
           }
@@ -66,7 +66,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
           this.toolkit.setAlphaCombineSource(LegacyVertexAttribute.TEXTURE, 0, true);
           this.field_e = false;
           if (null != this.field_j) {
-            this.field_l.a(-122, (jagdx.IDirect3DVertexShader) null);
+            this.field_l.bindVertexShader(-122, (jagdx.IDirect3DVertexShader) null);
             this.field_j = null;
             return;
           }
@@ -82,14 +82,14 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
           if (null == this.field_j) {
             return;
           }
-          this.field_l.a(-122, (jagdx.IDirect3DVertexShader) null);
+          this.field_l.bindVertexShader(-122, (jagdx.IDirect3DVertexShader) null);
           this.field_j = null;
           return;
         }
         if (null == this.field_j) {
           return;
         }
-        this.field_l.a(-122, (jagdx.IDirect3DVertexShader) null);
+        this.field_l.bindVertexShader(-122, (jagdx.IDirect3DVertexShader) null);
         this.field_j = null;
     }
 
@@ -112,7 +112,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         if (null != this.field_j) {
           var2_ref_jagdx_IDirect3DDevice = this.field_l.field_Cc;
           var3 = this.field_l.modelViewTransform((byte) 67);
-          var2_ref_jagdx_IDirect3DDevice.a(0, var3.writeRowMajor4x4(0, field_h));
+          var2_ref_jagdx_IDirect3DDevice.setVertexShaderConstants(0, var3.writeRowMajor4x4(0, field_h));
         }
         int var2 = -118 % ((41 - guard) / 46);
     }
@@ -126,7 +126,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
           if (this.field_j != null) {
             var2 = this.field_l.field_Cc;
             var3 = this.field_l.modelViewTransform((byte) 122);
-            var2.a(0, var3.writeRowMajor4x4(0, field_h));
+            var2.setVertexShaderConstants(0, var3.writeRowMajor4x4(0, field_h));
           }
           return;
         }
@@ -134,7 +134,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         if (this.field_j != null) {
           var2Lifetime1 = this.field_l.field_Cc;
           var3Lifetime1 = this.field_l.modelViewTransform((byte) 122);
-          var2Lifetime1.a(0, var3Lifetime1.writeRowMajor4x4(0, field_h));
+          var2Lifetime1.setVertexShaderConstants(0, var3Lifetime1.writeRowMajor4x4(0, field_h));
         }
     }
 
@@ -151,11 +151,11 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         }
         if (this.field_j == var2) {
           var6.transformPlane(0.0f, field_k, (byte) -86, 0.0f, -1.0f, (float)var4);
-          var3.a(12, field_k);
+          var3.setVertexShaderConstants(12, field_k);
           return;
         }
         this.field_j = var2;
-        this.field_l.a(-116, var2);
+        this.field_l.bindVertexShader(-116, var2);
         this.e(82);
         this.updateProjectionUniforms(false);
         this.updateTextureUniforms((byte) -72);
@@ -163,7 +163,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         this.updateTransformUniforms(121);
         this.updateFogUniforms(260);
         var6.transformPlane(0.0f, field_k, (byte) -86, 0.0f, -1.0f, (float)var4);
-        var3.a(12, field_k);
+        var3.setVertexShaderConstants(12, field_k);
     }
 
     final void bindTexture(int combineMode, int guard, GpuTexture texture) {
@@ -176,13 +176,13 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
             this.toolkit.setAlphaCombineSource(LegacyVertexAttribute.TEXTURE, 0, true);
             this.field_e = false;
           }
-          this.toolkit.a(texture, guard ^ 18892);
-          this.toolkit.h(guard - 18757, combineMode);
+          this.toolkit.bindTexture(texture, guard ^ 18892);
+          this.toolkit.setTextureCombineMode(guard - 18757, combineMode);
           return;
         }
         if (!this.field_e) {
-          this.toolkit.a(this.toolkit.field_D, guard ^ 18939);
-          this.toolkit.h(guard - 18771, 1);
+          this.toolkit.bindTexture(this.toolkit.field_D, guard ^ 18939);
+          this.toolkit.setTextureCombineMode(guard - 18771, 1);
           this.toolkit.setColorCombineSource(FontMetrics.PREVIOUS, 0, guard ^ 18834);
           this.toolkit.setAlphaCombineSource(FontMetrics.PREVIOUS, 0, true);
           this.field_e = true;
@@ -208,8 +208,8 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
             var4 = this.toolkit.nearPlane();
             var5 = -((float)(-var4 + var3) * 0.125f) + (float)var3;
             var6 = (float)var3 - 0.25f * (float)(-var4 + var3);
-            var2.b(10, var6, 1.0f / (-var6 + var5), var5, 1.0f / ((float)var3 - var5));
-            var2.b(11, 1.0f / (float)this.toolkit.S(-102), (float)this.toolkit.e((byte) 26) / 255.0f, this.toolkit.field_Tb, 1.0f / (this.toolkit.field_Tb - this.toolkit.field_E));
+            var2.setVertexShaderConstant(10, var6, 1.0f / (-var6 + var5), var5, 1.0f / ((float)var3 - var5));
+            var2.setVertexShaderConstant(11, 1.0f / (float)this.toolkit.S(-102), (float)this.toolkit.e((byte) 26) / 255.0f, this.toolkit.field_Tb, 1.0f / (this.toolkit.field_Tb - this.toolkit.field_E));
             this.toolkit.setTextureConstantColor(false, this.toolkit.v(15));
           }
           return;
@@ -221,8 +221,8 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
           var4Lifetime1 = this.toolkit.nearPlane();
           var5Lifetime1 = -((float)(-var4Lifetime1 + var3Lifetime1) * 0.125f) + (float)var3Lifetime1;
           var6Lifetime1 = (float)var3Lifetime1 - 0.25f * (float)(-var4Lifetime1 + var3Lifetime1);
-          var2Lifetime1.b(10, var6Lifetime1, 1.0f / (-var6Lifetime1 + var5Lifetime1), var5Lifetime1, 1.0f / ((float)var3Lifetime1 - var5Lifetime1));
-          var2Lifetime1.b(11, 1.0f / (float)this.toolkit.S(-102), (float)this.toolkit.e((byte) 26) / 255.0f, this.toolkit.field_Tb, 1.0f / (this.toolkit.field_Tb - this.toolkit.field_E));
+          var2Lifetime1.setVertexShaderConstant(10, var6Lifetime1, 1.0f / (-var6Lifetime1 + var5Lifetime1), var5Lifetime1, 1.0f / ((float)var3Lifetime1 - var5Lifetime1));
+          var2Lifetime1.setVertexShaderConstant(11, 1.0f / (float)this.toolkit.S(-102), (float)this.toolkit.e((byte) 26) / 255.0f, this.toolkit.field_Tb, 1.0f / (this.toolkit.field_Tb - this.toolkit.field_E));
           this.toolkit.setTextureConstantColor(false, this.toolkit.v(15));
         }
     }
@@ -241,9 +241,9 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
           var4 = this.toolkit.scratchTransform(true);
           AffineTransform3D var2 = var4;
           var3 = this.field_l.field_Cc;
-          var3.b(13, this.toolkit.field_T * this.toolkit.field_J, this.toolkit.field_T * this.toolkit.field_jb, this.toolkit.field_Xb * this.toolkit.field_T, 1.0f);
-          var3.b(14, this.toolkit.field_J * this.toolkit.field_S, this.toolkit.field_jb * this.toolkit.field_S, this.toolkit.field_Xb * this.toolkit.field_S, 1.0f);
-          var3.b(16, this.toolkit.field_hb * this.toolkit.field_J, this.toolkit.field_jb * this.toolkit.field_hb, this.toolkit.field_hb * this.toolkit.field_Xb, 1.0f);
+          var3.setVertexShaderConstant(13, this.toolkit.field_T * this.toolkit.field_J, this.toolkit.field_T * this.toolkit.field_jb, this.toolkit.field_Xb * this.toolkit.field_T, 1.0f);
+          var3.setVertexShaderConstant(14, this.toolkit.field_J * this.toolkit.field_S, this.toolkit.field_jb * this.toolkit.field_S, this.toolkit.field_Xb * this.toolkit.field_S, 1.0f);
+          var3.setVertexShaderConstant(16, this.toolkit.field_hb * this.toolkit.field_J, this.toolkit.field_jb * this.toolkit.field_hb, this.toolkit.field_hb * this.toolkit.field_Xb, 1.0f);
           var4.transformDirection(-1416, this.toolkit.field_G[1], this.toolkit.field_G[0], field_k, this.toolkit.field_G[2]);
           var3.SetVertexShaderConstantF(15, field_k, 1);
           var4.transformDirection(-1416, this.toolkit.field_U[1], this.toolkit.field_U[0], field_k, this.toolkit.field_U[2]);
@@ -267,10 +267,10 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         this.field_l = param0;
         if (param1 != null &&
           (65535 & this.field_l.field_Kc.VertexShaderVersion) >= 257) {
-          this.field_f = this.field_l.field_Cc.a(param1.fetchNamedFile("uw_ground_unlit", "dx", -1));
-          this.field_n = this.field_l.field_Cc.a(param1.fetchNamedFile("uw_ground_lit", "dx", -1));
-          this.field_p = this.field_l.field_Cc.a(param1.fetchNamedFile("uw_model_unlit", "dx", -1));
-          this.field_m = this.field_l.field_Cc.a(param1.fetchNamedFile("uw_model_lit", "dx", -1));
+          this.field_f = this.field_l.field_Cc.createVertexShader(param1.fetchNamedFile("uw_ground_unlit", "dx", -1));
+          this.field_n = this.field_l.field_Cc.createVertexShader(param1.fetchNamedFile("uw_ground_lit", "dx", -1));
+          this.field_p = this.field_l.field_Cc.createVertexShader(param1.fetchNamedFile("uw_model_unlit", "dx", -1));
+          this.field_m = this.field_l.field_Cc.createVertexShader(param1.fetchNamedFile("uw_model_lit", "dx", -1));
           stackIn_6_0 = (this.field_n == null) ? 0 : 1;
           stackIn_9_1 = (this.field_f == null) ? 0 : 1;
           stackIn_11_0 = stackIn_6_0 & stackIn_9_1;
@@ -280,7 +280,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
           if ((stackIn_14_0 & stackIn_15_1) == 0) {
             this.field_g = false;
           } else {
-            this.field_i = this.toolkit.a(new int[]{0, -1}, 1, false, -110, 2);
+            this.field_i = this.toolkit.createIntTexture2D(new int[]{0, -1}, 1, false, -110, 2);
             this.field_i.setWrap(false, false, true);
             this.field_g = true;
           }

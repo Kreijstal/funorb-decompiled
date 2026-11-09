@@ -8,7 +8,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements Texture2D {
 
     final void uploadBytes(TextureFormat format, int x, byte guard, int offset, byte[] pixels, int height, int width, int y, int rowLength) {
         try {
-          this.toolkit.a((GpuTexture) (this), guard ^ 43);
+          this.toolkit.bindTexture((GpuTexture) (this), guard ^ 43);
           jaggl.OpenGL.glPixelStorei(3317, 1);
           jaggl.OpenGL.glPixelStorei(3314, rowLength);
           jaggl.OpenGL.glTexSubImage2Dub(this.target, 0, x, y, width, height, IntrusiveNodeHashTable.glTextureFormat(guard - 21416, format), 5121, pixels, offset);
@@ -39,7 +39,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements Texture2D {
         try {
           this.width = param3;
           this.height = param4;
-          this.toolkit.a((GpuTexture) (this), 108);
+          this.toolkit.bindTexture((GpuTexture) (this), 108);
           jaggl.OpenGL.glTexImage2Dub(this.target, 0, this.glInternalFormat(-67), param3, param4, 0, IntrusiveNodeHashTable.glTextureFormat(-21339, this.format), ClientStackTraceFormatter.glDataType(this.dataType, (byte) 117), (byte[]) null, 0);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "sa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
@@ -68,7 +68,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements Texture2D {
         int stackIn_13_1 = 0;
         int stackIn_14_2 = 0;
         if (guard) {
-          this.toolkit.a((GpuTexture) (this), 91);
+          this.toolkit.bindTexture((GpuTexture) (this), 91);
           stackIn_3_0 = this.target;
           stackIn_3_1 = 10242;
           stackIn_4_2 = (!repeatX) ? 33071 : 10497;
@@ -79,7 +79,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements Texture2D {
           jaggl.OpenGL.glTexParameteri(stackIn_6_0, stackIn_6_1, stackIn_7_2);
         } else {
           field_j = true;
-          this.toolkit.a((GpuTexture) (this), 91);
+          this.toolkit.bindTexture((GpuTexture) (this), 91);
           stackIn_10_0 = this.target;
           stackIn_10_1 = 10242;
           stackIn_11_2 = (!repeatX) ? 33071 : 10497;
@@ -105,7 +105,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements Texture2D {
         try {
           this.width = param2;
           this.height = param3;
-          this.toolkit.a((GpuTexture) (this), 109);
+          this.toolkit.bindTexture((GpuTexture) (this), 109);
           if (!param4 &&
             param7 == 0 &&
             param6 == 0) {
@@ -154,7 +154,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements Texture2D {
         try {
           this.height = param2;
           this.width = param1;
-          this.toolkit.a((GpuTexture) (this), 125);
+          this.toolkit.bindTexture((GpuTexture) (this), 125);
           if (param3 &&
             param6 == 0 &&
             param5 == 0) {
@@ -210,7 +210,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements Texture2D {
     }
 
     final void uploadInts(int height, boolean guard, int offset, int width, int rowLength, int[] pixels, int y, int x) {
-        this.toolkit.a((GpuTexture) (this), 123);
+        this.toolkit.bindTexture((GpuTexture) (this), 123);
         jaggl.OpenGL.glPixelStorei(3314, rowLength);
         jaggl.OpenGL.glTexSubImage2Di(this.target, 0, x, y, width, height, 32993, this.toolkit.field_Ec, pixels, offset);
         if (guard) {
@@ -237,7 +237,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements Texture2D {
         try {
           this.height = param3;
           this.width = param2;
-          this.toolkit.a((GpuTexture) (this), 109);
+          this.toolkit.bindTexture((GpuTexture) (this), 109);
           jaggl.OpenGL.glPixelStorei(3317, 1);
           if (param4 &&
             0 == param7 &&
@@ -285,7 +285,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements Texture2D {
 
     final void uploadFloats(int x, TextureFormat format, int height, int y, int guard, int offset, int width, float[] pixels, int rowLength) {
         try {
-          this.toolkit.a((GpuTexture) (this), guard - 14032);
+          this.toolkit.bindTexture((GpuTexture) (this), guard - 14032);
           jaggl.OpenGL.glPixelStorei(3314, rowLength);
           jaggl.OpenGL.glTexSubImage2Df(this.target, 0, x, y, width, height, IntrusiveNodeHashTable.glTextureFormat(-21339, format), 5121, pixels, offset);
           jaggl.OpenGL.glPixelStorei(3314, 0);

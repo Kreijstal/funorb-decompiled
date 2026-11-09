@@ -5,7 +5,7 @@ import java.io.*;
 
 final class EmptyWidgetRenderer implements WidgetRenderer {
     static String field_b;
-    static int field_d;
+    static int pendingTooltipX;
     static PlatformTask field_a;
     static int[] field_c;
 
@@ -202,6 +202,6 @@ final class EmptyWidgetRenderer implements WidgetRenderer {
 
     static {
         field_b = "Just play";
-        field_d = -1;
+        pendingTooltipX = -1;
     }
 }

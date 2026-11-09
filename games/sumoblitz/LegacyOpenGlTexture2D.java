@@ -102,7 +102,7 @@ class LegacyOpenGlTexture2D extends LegacyOpenGlTexture {
     }
 
     final void copyFromFramebuffer(byte guard, int sourceY, int destinationX, int destinationY, int height, int sourceX, int width) {
-        int var8 = this.toolkit.field_Ec - height - sourceY;
+        int var8 = this.toolkit.viewportHeight - height - sourceY;
         this.toolkit.bindTexture(97, (LegacyOpenGlTexture) (this));
         if (guard >= 110) {
           jaggl.OpenGL.glCopyTexSubImage2D(this.target, 0, destinationX, -height - destinationY + this.height, sourceX, var8, width, height);

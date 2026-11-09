@@ -40,7 +40,7 @@ final class LegacyOpenGlTexture3D extends LegacyOpenGlTexture {
         this.framebufferAttachment = -1;
     }
 
-    final static void a(String param0, int param1) {
+    final static void updateTooltip(String text, int guard) {
         int stackIn_17_0 = 0;
         RuntimeException stackIn_41_0 = null;
         StringBuilder stackIn_41_1 = null;
@@ -52,22 +52,22 @@ final class LegacyOpenGlTexture3D extends LegacyOpenGlTexture {
         int var2_intLifetime1;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          PerlinGradient.field_a = PerlinGradient.field_a + 1;
-          if (EmptyWidgetRenderer.field_d == -1 &&
-            ScanlineSpriteMask.field_e == -1) {
-            ScanlineSpriteMask.field_e = ArenaDefinitionCodec.field_e;
-            EmptyWidgetRenderer.field_d = PointLight.mouseX;
+          PerlinGradient.tooltipAge = PerlinGradient.tooltipAge + 1;
+          if (EmptyWidgetRenderer.pendingTooltipX == -1 &&
+            ScanlineSpriteMask.pendingTooltipY == -1) {
+            ScanlineSpriteMask.pendingTooltipY = ArenaDefinitionCodec.field_e;
+            EmptyWidgetRenderer.pendingTooltipX = PointLight.mouseX;
           }
           boolean decompiledFrameRemainder0 = true;
-          if (param0 != null) {
-            decompiledFrameRemainder0 = !(param0.equals(LegacyOpenGlCubeTexture.field_l));
+          if (text != null) {
+            decompiledFrameRemainder0 = !(text.equals(LegacyOpenGlCubeTexture.tooltipText));
           } else {
-            decompiledFrameRemainder0 = (LegacyOpenGlCubeTexture.field_l == null);
+            decompiledFrameRemainder0 = (LegacyOpenGlCubeTexture.tooltipText == null);
           }
           if (decompiledFrameRemainder0) {
-            if (!IntroMeshProjection.field_d) {
-              if (PerlinGradient.field_a >= GameClientShell.field_s) {
-                stackIn_17_0 = (GameClientShell.field_s + GameDefinitionLoader.field_c > PerlinGradient.field_a) ? 1 : 0;
+            if (!IntroMeshProjection.tooltipHidden) {
+              if (PerlinGradient.tooltipAge >= GameClientShell.tooltipDelay) {
+                stackIn_17_0 = (GameClientShell.tooltipDelay + GameDefinitionLoader.tooltipDuration > PerlinGradient.tooltipAge) ? 1 : 0;
               } else {
                 stackIn_17_0 = 0;
               }
@@ -75,57 +75,57 @@ final class LegacyOpenGlTexture3D extends LegacyOpenGlTexture {
               stackIn_17_0 = 0;
             }
             var2_int = stackIn_17_0;
-            if (param0 == null) {
-              PerlinGradient.field_a = 0;
+            if (text == null) {
+              PerlinGradient.tooltipAge = 0;
             } else {
-              if (IntroMeshProjection.field_d) {
-                PerlinGradient.field_a = GameClientShell.field_s;
+              if (IntroMeshProjection.tooltipHidden) {
+                PerlinGradient.tooltipAge = GameClientShell.tooltipDelay;
               } else {
                 if (var2_int == 0) {
-                  PerlinGradient.field_a = 0;
+                  PerlinGradient.tooltipAge = 0;
                 } else {
-                  PerlinGradient.field_a = GameClientShell.field_s;
+                  PerlinGradient.tooltipAge = GameClientShell.tooltipDelay;
                 }
               }
             }
-            GraphicsHeap.field_k = ScanlineSpriteMask.field_e;
-            VertexLayout.field_b = EmptyWidgetRenderer.field_d;
-            if (param0 != null) {
-              IntroMeshProjection.field_d = false;
+            GraphicsHeap.tooltipY = ScanlineSpriteMask.pendingTooltipY;
+            VertexLayout.tooltipX = EmptyWidgetRenderer.pendingTooltipX;
+            if (text != null) {
+              IntroMeshProjection.tooltipHidden = false;
             } else {
               if (var2_int != 0) {
-                IntroMeshProjection.field_d = true;
+                IntroMeshProjection.tooltipHidden = true;
               }
             }
           }
-          LegacyOpenGlCubeTexture.field_l = param0;
-          var2_intLifetime1 = -62 % ((-74 - param1) / 35);
-          if (!IntroMeshProjection.field_d &&
-            PerlinGradient.field_a < GameClientShell.field_s &&
+          LegacyOpenGlCubeTexture.tooltipText = text;
+          var2_intLifetime1 = -62 % ((-74 - guard) / 35);
+          if (!IntroMeshProjection.tooltipHidden &&
+            PerlinGradient.tooltipAge < GameClientShell.tooltipDelay &&
             LegacyOpenGlClientVertexBuffer.field_d) {
-            PerlinGradient.field_a = 0;
-            GraphicsHeap.field_k = ScanlineSpriteMask.field_e;
-            VertexLayout.field_b = EmptyWidgetRenderer.field_d;
+            PerlinGradient.tooltipAge = 0;
+            GraphicsHeap.tooltipY = ScanlineSpriteMask.pendingTooltipY;
+            VertexLayout.tooltipX = EmptyWidgetRenderer.pendingTooltipX;
           }
-          if (IntroMeshProjection.field_d &&
-            PerlinGradient.field_a == PlayerDrone.field_T) {
-            PerlinGradient.field_a = 0;
-            IntroMeshProjection.field_d = false;
+          if (IntroMeshProjection.tooltipHidden &&
+            PerlinGradient.tooltipAge == PlayerDrone.tooltipHideGrace) {
+            PerlinGradient.tooltipAge = 0;
+            IntroMeshProjection.tooltipHidden = false;
           }
-          ScanlineSpriteMask.field_e = -1;
-          EmptyWidgetRenderer.field_d = -1;
+          ScanlineSpriteMask.pendingTooltipY = -1;
+          EmptyWidgetRenderer.pendingTooltipX = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_41_0 = var2;
           stackIn_41_1 = new StringBuilder().append("ek.B(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_42_2 = "null";
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(guard).append(')').toString());
         }
     }
 

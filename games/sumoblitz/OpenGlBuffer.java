@@ -65,14 +65,14 @@ abstract class OpenGlBuffer implements GpuBuffer {
                 stackIn_10_4 = 35044;
               }
               jaggl.OpenGL.glBufferDataARBub(stackIn_9_0, stackIn_9_1, (byte[]) (stackIn_9_2), stackIn_9_3, stackIn_10_4);
-              if (this.sizeBytes <= this.toolkit.field_z.c) {
+              if (this.sizeBytes <= this.toolkit.field_z.size) {
                 this.mappingMode = 1;
                 stackIn_13_0 = this.toolkit.field_z;
                 return (jaclib.memory.Buffer) ((Object) stackIn_13_0);
               }
             }
-            if (!mapping.a() &&
-              mapping.a(this.target, this.sizeBytes, 35001)) {
+            if (!mapping.isMapped() &&
+              mapping.map(this.target, this.sizeBytes, 35001)) {
               this.mappingMode = 2;
               stackIn_18_0 = (jaggl.MapBuffer) (mapping);
               return (jaclib.memory.Buffer) ((Object) stackIn_18_0);
@@ -132,7 +132,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
 
     void close(int guard) {
         if (0 < this.bufferId) {
-          this.toolkit.a((byte) -99, this.sizeBytes, this.bufferId);
+          this.toolkit.queueBufferDeletion((byte) -99, this.sizeBytes, this.bufferId);
           this.bufferId = -1;
         }
         if (guard != 12001) {
@@ -144,7 +144,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
         if (guard != -24168) {
           return 1L;
         }
-        return this.bufferId == 0 ? this.clientBuffer.c() : 0L;
+        return this.bufferId == 0 ? this.clientBuffer.getAddress() : 0L;
     }
 
     final static void f(int param0) {
@@ -325,10 +325,10 @@ abstract class OpenGlBuffer implements GpuBuffer {
             if (this.bufferId > 0) {
               jaggl.OpenGL.glBindBufferARB(this.target, this.bufferId);
               if (1 != this.mappingMode) {
-                stackIn_7_0 = (!mapping.b()) ? 0 : 1;
+                stackIn_7_0 = (!mapping.unmap()) ? 0 : 1;
                 var3_int = stackIn_7_0;
               } else {
-                jaggl.OpenGL.glBufferSubDataARBa(this.target, 0, this.capacityBytes, this.toolkit.field_z.c());
+                jaggl.OpenGL.glBufferSubDataARBa(this.target, 0, this.capacityBytes, this.toolkit.field_z.getAddress());
               }
             }
             this.mappingMode = 0;

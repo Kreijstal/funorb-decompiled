@@ -3,7 +3,7 @@
  */
 abstract class VertexLayout {
     static String resizableText;
-    static int field_b;
+    static int tooltipX;
     static String loadingSoundEffectsText;
     private static String field_z;
 
@@ -16,7 +16,7 @@ abstract class VertexLayout {
     static {
         field_z = "hq.C(";
         resizableText = "Resizable";
-        field_b = -1;
+        tooltipX = -1;
         loadingSoundEffectsText = "Loading sound effects";
     }
 }

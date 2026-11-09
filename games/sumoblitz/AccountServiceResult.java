@@ -31,15 +31,15 @@ final class AccountServiceResult {
         TRIANGLE_FAN = null;
     }
 
-    final static void a(int param0, byte param1, GameProgressUpdate param2) {
+    final static void queueAndSendProgressUpdate(int requestType, byte guard, GameProgressUpdate update) {
         try {
-          SoftwareRenderTarget.field_f.addLast((IntrusiveNode) (param2), (byte) 39);
-          ToolkitRasterStateStack.sendProgressUpdate(param0, 1, param2);
-          if (param1 <= 5) {
+          SoftwareRenderTarget.field_f.addLast((IntrusiveNode) (update), (byte) 39);
+          ToolkitRasterStateStack.sendProgressUpdate(requestType, 1, update);
+          if (guard <= 5) {
             field_f = (ToolkitSprite) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "an.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "an.A(" + requestType + ',' + guard + ',' + (update != null ? "{...}" : "null") + ')');
         }
     }
 

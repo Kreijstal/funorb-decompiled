@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GameDefinitionLoader {
-    static int field_c;
+    static int tooltipDuration;
     static int justificationRemainderQ8;
     static String openInPopupWindowText;
     static GzipDecompressor gzipDecompressor;
@@ -38,7 +38,7 @@ final class GameDefinitionLoader {
             throw new RuntimeException("");
           }
           var8 = new OpenGlGraphicsToolkit(var9, param3, var6, param2, param0, param4);
-          var8.e(false);
+          var8.initializeHardwareResources(false);
           stackIn_9_0 = var8;
           return (GraphicsToolkit) ((Object) stackIn_9_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -85,7 +85,7 @@ final class GameDefinitionLoader {
 
     public static void releaseStatics(boolean param0) {
         if (!param0) {
-          field_c = 40;
+          tooltipDuration = 40;
         }
         openInPopupWindowText = null;
         gzipDecompressor = null;
@@ -190,7 +190,7 @@ final class GameDefinitionLoader {
     static {
         justificationRemainderQ8 = 0;
         openInPopupWindowText = "Open in popup window";
-        field_c = 250;
+        tooltipDuration = 250;
         gzipDecompressor = new GzipDecompressor();
     }
 }

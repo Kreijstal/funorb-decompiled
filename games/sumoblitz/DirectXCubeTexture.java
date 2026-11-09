@@ -9,7 +9,7 @@ final class DirectXCubeTexture extends DirectXTexture implements CubeTexture {
         if (guard != 8905) {
           this.nativeTexture(-55);
         }
-        this.toolkit.a((DirectXTexture) (this), 1);
+        this.toolkit.bindDirectXTexture((DirectXTexture) (this), 1);
     }
 
     public final void setFilter(TextureFilter filter, int guard) {
@@ -51,9 +51,9 @@ final class DirectXCubeTexture extends DirectXTexture implements CubeTexture {
         }
         this.field_g = param1;
         if (this.mipmapped) {
-          this.field_f = this.toolkit.field_Cc.a(this.field_g, 0, 1024, 21, 1);
+          this.field_f = this.toolkit.field_Cc.createCubeTexture(this.field_g, 0, 1024, 21, 1);
         } else {
-          this.field_f = this.toolkit.field_Cc.a(this.field_g, 1, 0, 21, 1);
+          this.field_f = this.toolkit.field_Cc.createCubeTexture(this.field_g, 1, 0, 21, 1);
         }
         var10 = this.toolkit.field_Jc;
         var11 = var10;

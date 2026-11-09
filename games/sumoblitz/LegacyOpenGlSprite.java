@@ -22,8 +22,8 @@ final class LegacyOpenGlSprite extends ToolkitSprite {
 
     final void draw(int x, int y, int colorMode, int color, int blendMode) {
         this.texture.setLinearFiltering(false, 0);
-        this.toolkit.q(-97);
-        this.toolkit.c(25189, blendMode);
+        this.toolkit.prepareSpriteRendering(-97);
+        this.toolkit.setBlendMode(25189, blendMode);
         jaggl.OpenGL.glColor4ub((byte)(color >> 16), (byte)(color >> 8), (byte)color, (byte)(color >> 24));
         x = x + this.insetLeft;
         y = y + this.insetTop;
@@ -80,7 +80,7 @@ final class LegacyOpenGlSprite extends ToolkitSprite {
         if (!this.toolkit.field_W) {
           this.texture.copyFromFramebuffer((byte) 125, sourceY, destinationX, destinationY, height, sourceX, width);
         } else {
-          var14 = this.toolkit.b(sourceY, width, 1, sourceX, height);
+          var14 = this.toolkit.readPixels(sourceY, width, 1, sourceX, height);
           var12 = var14;
           var11 = var12;
           var17 = var11;
@@ -100,8 +100,8 @@ final class LegacyOpenGlSprite extends ToolkitSprite {
     final void drawScaled(int x, int y, int width, int height, int colorMode, int color, int blendMode, int flags) {
         int var15 = Sumoblitz.field_L ? 1 : 0;
         this.texture.setLinearFiltering((flags & 1) != 0 ? true : false, 0);
-        this.toolkit.q(-122);
-        this.toolkit.c(25189, blendMode);
+        this.toolkit.prepareSpriteRendering(-122);
+        this.toolkit.setBlendMode(25189, blendMode);
         jaggl.OpenGL.glColor4ub((byte)(color >> 16), (byte)(color >> 8), (byte)color, (byte)(color >> 24));
         if (!this.hasInsets) {
           if (this.auxiliaryTexture == null) {
@@ -262,9 +262,9 @@ final class LegacyOpenGlSprite extends ToolkitSprite {
         var11Lifetime1 = x2 + (x1 - x0);
         var12Lifetime1 = y1 + (-y0 + y2);
         this.texture.setLinearFiltering((flags & 1) != 0 ? true : false, 0);
-        this.toolkit.q(-70);
+        this.toolkit.prepareSpriteRendering(-70);
         this.toolkit.bindTexture(110, this.texture);
-        this.toolkit.c(25189, blendMode);
+        this.toolkit.setBlendMode(25189, blendMode);
         this.toolkit.setTextureCombineMode(colorMode, true);
         jaggl.OpenGL.glColor4ub((byte)(color >> 16), (byte)(color >> 8), (byte)color, (byte)(color >> 24));
         jaggl.OpenGL.glBegin(7);

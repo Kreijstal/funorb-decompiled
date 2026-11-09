@@ -36,8 +36,8 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         jagdx.IDirect3DSurface var9;
         int var10;
         jagdx.IDirect3DSurface var12;
-        var12 = this.field_Cc.c(0);
-        var9 = this.field_Cc.a(width, height, 21, 0, 0, true);
+        var12 = this.field_Cc.getRenderTarget(0);
+        var9 = this.field_Cc.createRenderTarget(width, height, 21, 0, 0, true);
         if (jagdx.HResult.succeeded(var9.LockRect(0, 0, width, height, 0, this.field_Jc), -74)) {
           if (0 == stride) {
             stride = width;
@@ -90,11 +90,11 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final Texture2D a(GpuDataType param0, TextureFormat param1, int param2, int param3, byte param4) {
-        if (param4 > -99) {
+    final Texture2D createTexture2D(GpuDataType dataType, TextureFormat format, int height, int width, byte guard) {
+        if (guard > -99) {
           this.applyTextureMatrix(-14);
         }
-        return (Texture2D) ((Object) new DirectXTexture2D(this, param1, param0, param3, param2));
+        return (Texture2D) ((Object) new DirectXTexture2D(this, format, dataType, width, height));
     }
 
     final void bindVertexLayout(int guard, VertexLayout layout) {
@@ -103,8 +103,8 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         this.field_Cc.SetVertexDeclaration(var4.field_d);
     }
 
-    final void a(int param0, DirectXTexture3D param1) {
-        this.a((DirectXTexture) (param1), 1);
+    final void bindTexture3D(int guard, DirectXTexture3D texture) {
+        this.bindDirectXTexture((DirectXTexture) (texture), 1);
         if (!this.field_Uc[this.activeTextureUnit]) {
           this.field_Cc.SetSamplerState(this.activeTextureUnit, 1, 1);
           this.field_Uc[this.activeTextureUnit] = true;
@@ -113,17 +113,17 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
           this.field_Cc.SetSamplerState(this.activeTextureUnit, 2, 1);
           this.field_Bc[this.activeTextureUnit] = true;
         }
-        if (param0 != 2) {
+        if (guard != 2) {
           field_Zc = (int[]) null;
         }
     }
 
-    final CubeTexture a(int param0, byte param1, int[][] param2, boolean param3) {
-        int var5 = -93 / ((param1 + 23) / 48);
-        return (CubeTexture) ((Object) new DirectXCubeTexture(this, param0, param3, param2));
+    final CubeTexture createCubeTexture(int size, byte guard, int[][] facePixels, boolean mipmapped) {
+        int var5 = -93 / ((guard + 23) / 48);
+        return (CubeTexture) ((Object) new DirectXCubeTexture(this, size, mipmapped, facePixels));
     }
 
-    private final static boolean a(jagdx.IDirect3D param0, int param1, int param2, int param3, int param4, jagdx.D3DPRESENT_PARAMETERS param5) {
+    private final static boolean choosePresentationFormats(jagdx.IDirect3D direct3D, int deviceType, int adapter, int samples, int guard, jagdx.D3DPRESENT_PARAMETERS parameters) {
         int var10 = 0;
         int var11 = 0;
         Throwable decompiledCaughtException = null;
@@ -135,28 +135,28 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         jagdx.D3DDISPLAYMODE var13 = null;
         var6 = 0;
         var7 = 0;
-        if (param4 != 6) {
+        if (guard != 6) {
           field_Zc = (int[]) null;
         }
         var8 = 0;
         try {
           var12 = new jagdx.D3DDISPLAYMODE();
           var13 = var12;
-          if (jagdx.HResult.failed(param0.a(param2, var13), -1)) {
+          if (jagdx.HResult.failed(direct3D.getAdapterDisplayMode(adapter, var13), -1)) {
             return false;
           }
           scanLoop1: while (true) {
-            if (param3 >= 0) {
-              if (param3 != 1) {
-                var8 = 0 + param3;
+            if (samples >= 0) {
+              if (samples != 1) {
+                var8 = 0 + samples;
                 for (var10 = 0; field_Fc.length > var10; var10++) {
-                  if (param0.CheckDeviceType(param2, param1, var12.Format, field_Fc[var10], true) == 0 &&
-                    param0.CheckDeviceFormat(param2, param1, var12.Format, 1, 1, field_Fc[var10]) == 0 && (param3 == 0 ||
-                    0 == param0.CheckDeviceMultiSampleType(param2, param1, field_Fc[var10], true, var8))) {
+                  if (direct3D.CheckDeviceType(adapter, deviceType, var12.Format, field_Fc[var10], true) == 0 &&
+                    direct3D.CheckDeviceFormat(adapter, deviceType, var12.Format, 1, 1, field_Fc[var10]) == 0 && (samples == 0 ||
+                    0 == direct3D.CheckDeviceMultiSampleType(adapter, deviceType, field_Fc[var10], true, var8))) {
                     for (var11 = 0; var11 < field_Zc.length; var11++) {
-                      if (param0.CheckDeviceFormat(param2, param1, var12.Format, 2, 1, field_Zc[var11]) == 0 &&
-                        0 == param0.CheckDepthStencilMatch(param2, param1, var12.Format, field_Fc[var10], field_Zc[var11]) && (param3 == 0 ||
-                        param0.CheckDeviceMultiSampleType(param2, param1, field_Zc[var10], true, var8) == 0)) {
+                      if (direct3D.CheckDeviceFormat(adapter, deviceType, var12.Format, 2, 1, field_Zc[var11]) == 0 &&
+                        0 == direct3D.CheckDepthStencilMatch(adapter, deviceType, var12.Format, field_Fc[var10], field_Zc[var11]) && (samples == 0 ||
+                        direct3D.CheckDeviceMultiSampleType(adapter, deviceType, field_Zc[var10], true, var8) == 0)) {
                         var7 = field_Fc[var10];
                         var6 = field_Zc[var11];
                         break scanLoop1;
@@ -165,20 +165,20 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
                   }
                 }
               }
-              param3--;
+              samples--;
               continue;
             }
             break;
           }
-          if (0 <= param3 &&
+          if (0 <= samples &&
             0 != var7) {
             if (var6 == 0) {
               return false;
             }
-            param5.BackBufferFormat = var7;
-            param5.MultiSampleQuality = 0;
-            param5.AutoDepthStencilFormat = var6;
-            param5.MultiSampleType = var8;
+            parameters.BackBufferFormat = var7;
+            parameters.MultiSampleQuality = 0;
+            parameters.AutoDepthStencilFormat = var6;
+            parameters.MultiSampleType = var8;
             return true;
           }
           return false;
@@ -229,7 +229,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         if (guard > -74) {
           return;
         }
-        int var2 = !this.field_Ec[this.activeTextureUnit] ? 1 : DirectXGraphicsToolkit.a(this.field_K[this.activeTextureUnit], -124);
+        int var2 = !this.field_Ec[this.activeTextureUnit] ? 1 : DirectXGraphicsToolkit.d3dCombineOperation(this.colorCombineOperations[this.activeTextureUnit], -124);
         this.field_Cc.SetTextureStageState(this.activeTextureUnit, 1, var2);
     }
 
@@ -237,7 +237,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         if (guard != 1) {
           this.applyLighting(true);
         }
-        this.field_Cc.a(161, enabled);
+        this.field_Cc.setRenderState(161, enabled);
     }
 
     private final static int textureTransformFlags(TextureTransformMode mode, int guard) {
@@ -261,7 +261,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
           return 0;
         }
         var3 = (TextureFilter) null;
-        DirectXGraphicsToolkit.a((TextureFilter) null, false);
+        DirectXGraphicsToolkit.d3dTextureFilter((TextureFilter) null, false);
         return 0;
     }
 
@@ -294,17 +294,17 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
     }
 
     final void applyDepthTest(int guard) {
-        this.field_Cc.a(7, this.depthTestEnabled);
+        this.field_Cc.setRenderState(7, this.depthTestEnabled);
         if (guard <= 19) {
           this.applyScissorEnabled(30);
         }
     }
 
-    final VertexLayout a(VertexStreamLayout[] param0, byte param1) {
-        if (param1 <= 6) {
+    final VertexLayout createVertexLayout(VertexStreamLayout[] streams, byte guard) {
+        if (guard <= 6) {
           return (VertexLayout) null;
         }
-        return (VertexLayout) ((Object) new dxVertexLayout(this, param0));
+        return (VertexLayout) ((Object) new dxVertexLayout(this, streams));
     }
 
     final void applyTextureConstantColor(int greenIndex) {
@@ -319,7 +319,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         super.updateTime(timeMillis);
     }
 
-    final void a(DirectXTexture param0, int param1) {
+    final void bindDirectXTexture(DirectXTexture texture, int guard) {
         boolean stackIn_3_0 = false;
         int stackIn_4_1 = 0;
         jagdx.IDirect3DDevice stackIn_7_0 = null;
@@ -333,40 +333,40 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         int stackIn_15_2 = 0;
         int stackIn_16_3;
         int var3;
-        this.field_Cc.SetTexture(this.activeTextureUnit, param0.nativeTexture(-22689));
-        if (this.field_Dc[this.activeTextureUnit] != param0.filter) {
-          var3 = DirectXGraphicsToolkit.a(param0.filter, false);
+        this.field_Cc.SetTexture(this.activeTextureUnit, texture.nativeTexture(-22689));
+        if (this.field_Dc[this.activeTextureUnit] != texture.filter) {
+          var3 = DirectXGraphicsToolkit.d3dTextureFilter(texture.filter, false);
           this.field_Cc.SetSamplerState(this.activeTextureUnit, 6, var3);
           this.field_Cc.SetSamplerState(this.activeTextureUnit, 5, var3);
-          this.field_Dc[this.activeTextureUnit] = param0.filter;
+          this.field_Dc[this.activeTextureUnit] = texture.filter;
           stackIn_11_0 = this.field_ad[this.activeTextureUnit];
-          stackIn_12_1 = (param0.mipmapped) ? 0 : 1;
+          stackIn_12_1 = (texture.mipmapped) ? 0 : 1;
           if ((stackIn_11_0 ? 1 : 0) == stackIn_12_1) {
             stackIn_15_0 = this.field_Cc;
             stackIn_15_1 = this.activeTextureUnit;
             stackIn_15_2 = 7;
-            if (!param0.mipmapped) {
+            if (!texture.mipmapped) {
               stackIn_16_3 = 0;
             } else {
-              stackIn_16_3 = DirectXGraphicsToolkit.a(param0.filter, false);
+              stackIn_16_3 = DirectXGraphicsToolkit.d3dTextureFilter(texture.filter, false);
             }
             ((jagdx.IDirect3DDevice) (Object) stackIn_15_0).SetSamplerState(stackIn_15_1, stackIn_15_2, stackIn_16_3);
-            this.field_ad[this.activeTextureUnit] = param0.mipmapped;
+            this.field_ad[this.activeTextureUnit] = texture.mipmapped;
           }
         } else {
           stackIn_3_0 = this.field_ad[this.activeTextureUnit];
-          stackIn_4_1 = (param0.mipmapped) ? 0 : 1;
+          stackIn_4_1 = (texture.mipmapped) ? 0 : 1;
           if ((stackIn_3_0 ? 1 : 0) == stackIn_4_1) {
             stackIn_7_0 = this.field_Cc;
             stackIn_7_1 = this.activeTextureUnit;
             stackIn_7_2 = 7;
-            if (param0.mipmapped) {
-              stackIn_8_3 = DirectXGraphicsToolkit.a(param0.filter, false);
+            if (texture.mipmapped) {
+              stackIn_8_3 = DirectXGraphicsToolkit.d3dTextureFilter(texture.filter, false);
             } else {
               stackIn_8_3 = 0;
             }
             ((jagdx.IDirect3DDevice) (Object) stackIn_7_0).SetSamplerState(stackIn_7_1, stackIn_7_2, stackIn_8_3);
-            this.field_ad[this.activeTextureUnit] = param0.mipmapped;
+            this.field_ad[this.activeTextureUnit] = texture.mipmapped;
           }
         }
         if (!this.field_Ec[this.activeTextureUnit]) {
@@ -374,7 +374,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
           this.applyAlphaCombineOperation(-115);
           this.applyColorCombineOperation((byte) -113);
         }
-        if (param1 != 1) {
+        if (guard != 1) {
           this.field_Oc = false;
         }
     }
@@ -383,91 +383,91 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         this.field_Cc.Clear(1, color, 0.0f, 0);
     }
 
-    private final boolean h(boolean param0) {
+    private final boolean resetDevice(boolean guard) {
         DirectXSwapChainSurface var3 = null;
         int var4 = 0;
         int var2 = this.field_Cc.TestCooperativeLevel();
         if (var2 == 0 ||
           var2 == -2005530519) {
           var3 = (DirectXSwapChainSurface) (this.field_Ib);
-          this.s((byte) 81);
+          this.releaseDeviceResources((byte) 81);
           var3.close((byte) 71);
           this.field_Pc.BackBufferWidth = 0;
           this.field_Pc.BackBufferHeight = 0;
-          if (DirectXGraphicsToolkit.a(this.field_Xc, this.field_Ic, this.field_zc, this.field_Y, 6, this.field_Pc)) {
+          if (DirectXGraphicsToolkit.choosePresentationFormats(this.field_Xc, this.field_Ic, this.field_zc, this.field_Y, 6, this.field_Pc)) {
             var4 = this.field_Cc.Reset(this.field_Pc);
             if (jagdx.HResult.succeeded(var4, -72)) {
-              var3.attach(false, this.field_Cc.b(), this.field_Cc.b(0));
-              this.P(-100);
+              var3.attach(false, this.field_Cc.getDepthStencilSurface(), this.field_Cc.getSwapChain(0));
+              this.rebuildDeviceResources(-100);
               this.resetDriverState(1);
               return true;
             }
           }
         }
-        if (!param0) {
+        if (!guard) {
           this.field_Sc = true;
           return false;
         }
         return false;
     }
 
-    private final static int a(TextureCombineOperation param0, int param1) {
-        if (param1 >= -23) {
+    private final static int d3dCombineOperation(TextureCombineOperation operation, int guard) {
+        if (guard >= -23) {
           field_Zc = (int[]) null;
         }
-        if (LegacyOpenGlRenderBufferSet.REPLACE == param0) {
+        if (LegacyOpenGlRenderBufferSet.REPLACE == operation) {
           return 2;
         }
-        if (SlowBurstParticle.MODULATE == param0) {
+        if (SlowBurstParticle.MODULATE == operation) {
           return 4;
         }
-        if (param0 == OpenGlBuffer.INTERPOLATE) {
+        if (operation == OpenGlBuffer.INTERPOLATE) {
           return 26;
         }
-        if (param0 == LoginForm.ADD) {
+        if (operation == LoginForm.ADD) {
           return 7;
         }
-        if (EmailAvailabilityRequest.SUBTRACT == param0) {
+        if (EmailAvailabilityRequest.SUBTRACT == operation) {
           return 10;
         }
         throw new IllegalArgumentException();
     }
 
-    private final static int a(TextureCombineSource param0, int param1) {
-        if (param1 != 21) {
+    private final static int d3dCombineSource(TextureCombineSource source, int guard) {
+        if (guard != 21) {
           return 11;
         }
-        if (LegacyVertexAttribute.TEXTURE == param0) {
+        if (LegacyVertexAttribute.TEXTURE == source) {
           return 2;
         }
-        if (NetworkResourceRequest.PRIMARY_COLOR == param0) {
+        if (NetworkResourceRequest.PRIMARY_COLOR == source) {
           return 0;
         }
-        if (param0 == FontMetrics.PREVIOUS) {
+        if (source == FontMetrics.PREVIOUS) {
           return 1;
         }
-        if (param0 != AccountRequestState.CONSTANT) {
+        if (source != AccountRequestState.CONSTANT) {
           throw new IllegalArgumentException();
         }
         return 3;
     }
 
-    final void c(int param0, int param1) {
-        if (param1 < 83) {
+    final void setTextureCoordinateIndex(int index, int guard) {
+        if (guard < 83) {
           byte[] var4 = (byte[]) null;
-          this.a(true, (TextureFormat) null, -117, -19, (byte[]) null, 96);
+          this.createTexture3D(true, (TextureFormat) null, -117, -19, (byte[]) null, 96);
         }
-        this.field_Cc.SetTextureStageState(this.activeTextureUnit, 11, param0);
+        this.field_Cc.SetTextureStageState(this.activeTextureUnit, 11, index);
     }
 
-    final boolean a(GpuDataType param0, TextureFormat param1, int param2) {
+    final boolean supportsTexture2D(GpuDataType dataType, TextureFormat format, int guard) {
         jagdx.D3DDISPLAYMODE var4;
         boolean stackIn_6_0 = false;
-        if (param2 != 6) {
+        if (guard != 6) {
           this.applyDirectionalLightColors(-77);
         }
         var4 = new jagdx.D3DDISPLAYMODE();
-        stackIn_6_0 = (jagdx.HResult.succeeded(this.field_Xc.a(this.field_zc, var4), -41)) && (jagdx.HResult.succeeded(this.field_Xc.CheckDeviceFormat(this.field_zc, this.field_Ic, var4.Format, 0, 3, DirectXGraphicsToolkit.a(param1, -55, param0)), -63));
+        stackIn_6_0 = (jagdx.HResult.succeeded(this.field_Xc.getAdapterDisplayMode(this.field_zc, var4), -41)) && (jagdx.HResult.succeeded(this.field_Xc.CheckDeviceFormat(this.field_zc, this.field_Ic, var4.Format, 0, 3, DirectXGraphicsToolkit.d3dTextureFormat(format, -55, dataType)), -63));
         return stackIn_6_0;
     }
 
@@ -492,40 +492,40 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
     }
 
     final void applyAlphaTest(int guard) {
-        this.field_Cc.a(15, this.field_u);
+        this.field_Cc.setRenderState(15, this.field_u);
         int var2 = 111 % ((guard + 6) / 54);
     }
 
-    final Object a(java.awt.Canvas param0, int param1) {
-        if (param1 == 3) {
+    final Object createSurface(java.awt.Canvas canvas, int guard) {
+        if (guard == 3) {
           return null;
         }
         this.applyAlphaCombineOperation(-60);
         return null;
     }
 
-    private final static int a(PrimitiveType param0, byte param1) {
+    private final static int d3dPrimitiveType(PrimitiveType primitive, byte guard) {
         TextureFilter var3;
-        if (param1 != -121) {
+        if (guard != -121) {
           var3 = (TextureFilter) null;
-          DirectXGraphicsToolkit.a((TextureFilter) null, true);
+          DirectXGraphicsToolkit.d3dTextureFilter((TextureFilter) null, true);
         }
-        if (param0 == PasswordValidator.LINES) {
+        if (primitive == PasswordValidator.LINES) {
           return 2;
         }
-        if (param0 == AccountCreationNavigation.LINE_STRIP) {
+        if (primitive == AccountCreationNavigation.LINE_STRIP) {
           return 3;
         }
-        if (JaggrabDownloader.POINTS == param0) {
+        if (JaggrabDownloader.POINTS == primitive) {
           return 1;
         }
-        if (WhirlpoolDigest.TRIANGLES == param0) {
+        if (WhirlpoolDigest.TRIANGLES == primitive) {
           return 4;
         }
-        if (param0 == AccountServiceResult.TRIANGLE_FAN) {
+        if (primitive == AccountServiceResult.TRIANGLE_FAN) {
           return 6;
         }
-        if (param0 == OpenGlVertexLayout.TRIANGLE_STRIP) {
+        if (primitive == OpenGlVertexLayout.TRIANGLE_STRIP) {
           return 5;
         }
         throw new IllegalArgumentException("");
@@ -568,31 +568,31 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         stackIn_5_0 = this.field_Cc;
         stackIn_5_1 = 137;
         stackIn_6_2 = (this.lightingEnabled) && (!this.lightingSuppressed);
-        ((jagdx.IDirect3DDevice) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_6_2);
+        ((jagdx.IDirect3DDevice) (Object) stackIn_5_0).setRenderState(stackIn_5_1, stackIn_6_2);
     }
 
-    final void a(int param0, DirectXTexture2D param1) {
-        if (param0 != 1) {
+    final void bindTexture2D(int guard, DirectXTexture2D texture) {
+        if (guard != 1) {
           TextureCoordinateGeneration var4 = (TextureCoordinateGeneration) null;
           this.applyTexCoordGeneration(94, (TextureCoordinateGeneration) null);
         }
-        this.a((DirectXTexture) (param1), param0 ^ 0);
-        if (this.field_Uc[this.activeTextureUnit] != param1.repeatX) {
-          this.field_Cc.SetSamplerState(this.activeTextureUnit, 1, !param1.repeatX ? 3 : 1);
-          this.field_Uc[this.activeTextureUnit] = param1.repeatX;
+        this.bindDirectXTexture((DirectXTexture) (texture), guard ^ 0);
+        if (this.field_Uc[this.activeTextureUnit] != texture.repeatX) {
+          this.field_Cc.SetSamplerState(this.activeTextureUnit, 1, !texture.repeatX ? 3 : 1);
+          this.field_Uc[this.activeTextureUnit] = texture.repeatX;
         }
-        if (param1.repeatY != this.field_Bc[this.activeTextureUnit]) {
-          this.field_Cc.SetSamplerState(this.activeTextureUnit, 2, !param1.repeatY ? 3 : 1);
-          this.field_Bc[this.activeTextureUnit] = param1.repeatY;
+        if (texture.repeatY != this.field_Bc[this.activeTextureUnit]) {
+          this.field_Cc.SetSamplerState(this.activeTextureUnit, 2, !texture.repeatY ? 3 : 1);
+          this.field_Bc[this.activeTextureUnit] = texture.repeatY;
         }
     }
 
-    final void a(int param0, jagdx.IDirect3DVertexShader param1) {
-        this.field_Vc = param1;
-        if (param0 >= -29) {
+    final void bindVertexShader(int guard, jagdx.IDirect3DVertexShader shader) {
+        this.field_Vc = shader;
+        if (guard >= -29) {
           this.createIndexBuffer(-57, false);
         }
-        this.field_Cc.SetVertexShader(param1);
+        this.field_Cc.SetVertexShader(shader);
         this.applyTextureMatrix(26803);
     }
 
@@ -612,20 +612,20 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         if (invert) {
           var7 = var7 | 16;
         }
-        this.field_Cc.SetTextureStageState(this.activeTextureUnit, var6, DirectXGraphicsToolkit.a(source, 21) | var7);
+        this.field_Cc.SetTextureStageState(this.activeTextureUnit, var6, DirectXGraphicsToolkit.d3dCombineSource(source, 21) | var7);
     }
 
-    final void b(boolean param0) {
+    final void applyFogParameters(boolean guard) {
         this.field_Tb = (float)(this.field_Yb - this.field_Nb);
         this.field_E = this.field_Tb - (float)this.field_Kb;
-        if (!param0) {
+        if (!guard) {
           return;
         }
         if ((float)this.field_oc > this.field_E) {
           this.field_E = (float)this.field_oc;
         }
-        this.field_Cc.a(36, this.field_E);
-        this.field_Cc.a(37, this.field_Tb);
+        this.field_Cc.setRenderState(36, this.field_E);
+        this.field_Cc.setRenderState(37, this.field_Tb);
         this.field_Cc.SetRenderState(34, this.field_C);
     }
 
@@ -653,21 +653,21 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         this.field_Cc.SetViewport(this.field_r, this.field_y, this.field_rb, this.field_Sb, (float)guard, 1.0f);
     }
 
-    final Texture2D a(boolean param0, int param1, int[] param2, int param3, int param4, int param5, int param6) {
-        if (param4 >= -41) {
+    final Texture2D createIntTexture2D(boolean mipmapped, int rowLength, int[] pixels, int width, int guard, int offset, int height) {
+        if (guard >= -41) {
           field_Zc = (int[]) null;
         }
-        return (Texture2D) ((Object) new DirectXTexture2D(this, param3, param6, param0, param2, param5, param1));
+        return (Texture2D) ((Object) new DirectXTexture2D(this, width, height, mipmapped, pixels, offset, rowLength));
     }
 
-    private final static int a(TextureFilter param0, boolean param1) {
-        if (param1) {
+    private final static int d3dTextureFilter(TextureFilter filter, boolean guard) {
+        if (guard) {
           return -35;
         }
-        if (param0 == ArrayWidgetContainer.LINEAR) {
+        if (filter == ArrayWidgetContainer.LINEAR) {
           return 2;
         }
-        if (ServerDataReadRequest.NEAREST == param0) {
+        if (ServerDataReadRequest.NEAREST == filter) {
           return 1;
         }
         throw new IllegalArgumentException();
@@ -705,7 +705,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         if (guard > -80) {
           this.field_Cc = (jagdx.IDirect3DDevice) null;
         }
-        int var2 = !this.field_Ec[this.activeTextureUnit] ? 1 : DirectXGraphicsToolkit.a(this.field_B[this.activeTextureUnit], -34);
+        int var2 = !this.field_Ec[this.activeTextureUnit] ? 1 : DirectXGraphicsToolkit.d3dCombineOperation(this.alphaCombineOperations[this.activeTextureUnit], -34);
         this.field_Cc.SetTextureStageState(this.activeTextureUnit, 4, var2);
     }
 
@@ -716,14 +716,14 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         stackIn_3_0 = this.field_Cc;
         stackIn_3_1 = 14;
         stackIn_4_2 = (this.field_db) && (this.depthWriteEnabled);
-        ((jagdx.IDirect3DDevice) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2);
+        ((jagdx.IDirect3DDevice) (Object) stackIn_3_0).setRenderState(stackIn_3_1, stackIn_4_2);
         if (guard < 113) {
           this.applyLighting(false);
         }
     }
 
-    final void J(int param0) {
-        if (param0 != 0) {
+    final void uploadDirectionalLights(int guard) {
+        if (guard != 0) {
           return;
         }
         if (!this.field_Tc) {
@@ -739,7 +739,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
 
     final void applyDirectionalLightsEnabled(int guard) {
         this.applyDirectionalLightColors(0);
-        this.J(guard + guard);
+        this.uploadDirectionalLights(guard + guard);
     }
 
     final ShaderEffect createShaderEffect(int guard, int effectId) {
@@ -764,26 +764,26 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         return null;
     }
 
-    final boolean a(byte param0, GpuDataType param1, TextureFormat param2) {
+    final boolean supportsTexture3D(byte guard, GpuDataType dataType, TextureFormat format) {
         jagdx.D3DDISPLAYMODE var4;
         int var5;
         boolean stackIn_4_0 = false;
-        var5 = -33 / ((70 - param0) / 42);
+        var5 = -33 / ((70 - guard) / 42);
         var4 = new jagdx.D3DDISPLAYMODE();
-        stackIn_4_0 = (jagdx.HResult.succeeded(this.field_Xc.a(this.field_zc, var4), -85)) && (jagdx.HResult.succeeded(this.field_Xc.CheckDeviceFormat(this.field_zc, this.field_Ic, var4.Format, 0, 4, DirectXGraphicsToolkit.a(param2, 68, param1)), -108));
+        stackIn_4_0 = (jagdx.HResult.succeeded(this.field_Xc.getAdapterDisplayMode(this.field_zc, var4), -85)) && (jagdx.HResult.succeeded(this.field_Xc.CheckDeviceFormat(this.field_zc, this.field_Ic, var4.Format, 0, 4, DirectXGraphicsToolkit.d3dTextureFormat(format, 68, dataType)), -108));
         return stackIn_4_0;
     }
 
-    final float b(byte param0) {
-        if (param0 < 125) {
+    final float pixelCenterOffset(byte guard) {
+        if (guard < 125) {
           this.field_Uc = (boolean[]) null;
         }
         return -0.5f;
     }
 
-    final Texture2D a(TextureFormat param0, int param1, int param2, int param3, byte[] param4, byte param5, int param6, boolean param7) {
-        int var9 = -61 % ((param5 - 50) / 44);
-        return (Texture2D) ((Object) new DirectXTexture2D(this, param0, param1, param2, param7, param4, param6, param3));
+    final Texture2D createByteTexture2D(TextureFormat format, int width, int height, int rowLength, byte[] pixels, byte guard, int offset, boolean mipmapped) {
+        int var9 = -61 % ((guard - 50) / 44);
+        return (Texture2D) ((Object) new DirectXTexture2D(this, format, width, height, mipmapped, pixels, offset, rowLength));
     }
 
     final void resetDriverState(int guard) {
@@ -812,7 +812,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         this.field_Cc.SetRenderState(22, 2);
         this.field_Cc.SetRenderState(147, 1);
         this.field_Cc.SetRenderState(145, 1);
-        this.field_Cc.a(38, 0.949999988079071f);
+        this.field_Cc.setRenderState(38, 0.949999988079071f);
         this.field_Cc.SetRenderState(140, 3);
         this.field_Nc.SetType(3);
         this.field_Rc.SetType(3);
@@ -821,11 +821,11 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         super.resetDriverState(1);
     }
 
-    final Texture3D a(boolean param0, TextureFormat param1, int param2, int param3, byte[] param4, int param5) {
-        if (!param0) {
+    final Texture3D createTexture3D(boolean guard, TextureFormat format, int depth, int height, byte[] pixels, int width) {
+        if (!guard) {
           this.field_Ic = 63;
         }
-        return (Texture3D) ((Object) new DirectXTexture3D(this, param1, param5, param3, param2, param4));
+        return (Texture3D) ((Object) new DirectXTexture3D(this, format, width, height, depth, pixels));
     }
 
     final void applyFogEnabled(byte guard) {
@@ -835,42 +835,42 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         stackIn_4_0 = this.field_Cc;
         stackIn_4_1 = 28;
         stackIn_5_2 = (this.fogEnabled) && (this.fogAllowed) && (0 <= this.field_Kb);
-        ((jagdx.IDirect3DDevice) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_5_2);
+        ((jagdx.IDirect3DDevice) (Object) stackIn_4_0).setRenderState(stackIn_4_1, stackIn_5_2);
         if (guard != -119) {
           this.field_Pc = (jagdx.D3DPRESENT_PARAMETERS) null;
         }
     }
 
-    final Texture2D a(int param0, int param1, boolean param2, int param3, float[] param4, int param5, byte param6, TextureFormat param7) {
-        if (param6 < -61) {
+    final Texture2D createFloatTexture2D(int offset, int width, boolean mipmapped, int rowLength, float[] pixels, int height, byte guard, TextureFormat format) {
+        if (guard < -61) {
           return null;
         }
         return (Texture2D) null;
     }
 
-    final static int a(TextureFormat param0, int param1, GpuDataType param2) {
+    final static int d3dTextureFormat(TextureFormat format, int guard, GpuDataType dataType) {
         int var3;
-        if (param2 == GpuDataType.UNSIGNED_BYTE) {
-          if (ProgressDialog.RGB == param0) {
+        if (dataType == GpuDataType.UNSIGNED_BYTE) {
+          if (ProgressDialog.RGB == format) {
             return 22;
           }
-          if (param0 == BeveledTextInputRenderer.RGBA) {
+          if (format == BeveledTextInputRenderer.RGBA) {
             return 21;
           }
-          if (param0 == IntrusiveNodeHashTable.ALPHA) {
+          if (format == IntrusiveNodeHashTable.ALPHA) {
             return 28;
           }
-          if (param0 == IntroLogoRenderer.LUMINANCE) {
+          if (format == IntroLogoRenderer.LUMINANCE) {
             return 50;
           }
-          if (param0 == AchievementThresholds.LUMINANCE_ALPHA) {
+          if (format == AchievementThresholds.LUMINANCE_ALPHA) {
             return 51;
           }
-          if (ModalDialog.DEPTH_COMPONENT == param0) {
+          if (ModalDialog.DEPTH_COMPONENT == format) {
             return 77;
           }
         }
-        var3 = -123 % ((param1 - 17) / 48);
+        var3 = -123 % ((guard - 17) / 48);
         throw new IllegalArgumentException("");
     }
 
@@ -878,7 +878,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         if (guard != -4) {
           this.applyScissor(-23);
         }
-        this.field_Cc.a(27, this.field_ob);
+        this.field_Cc.setRenderState(27, this.field_ob);
     }
 
     final void copyFrontToBack() {
@@ -903,12 +903,12 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         if (invert) {
           var7 = var7 | 16;
         }
-        this.field_Cc.SetTextureStageState(this.activeTextureUnit, var6, DirectXGraphicsToolkit.a(source, 21) | var7);
+        this.field_Cc.SetTextureStageState(this.activeTextureUnit, var6, DirectXGraphicsToolkit.d3dCombineSource(source, 21) | var7);
     }
 
-    final void a(byte param0, jagdx.IDirect3DPixelShader param1) {
-        int var3 = 106 / ((param0 + 30) / 33);
-        this.field_Cc.SetPixelShader(param1);
+    final void bindPixelShader(byte guard, jagdx.IDirect3DPixelShader shader) {
+        int var3 = 106 / ((guard + 30) / 33);
+        this.field_Cc.SetPixelShader(shader);
     }
 
     final void drawPrimitives(int startVertex, int guard, int primitiveCount, PrimitiveType type) {
@@ -916,12 +916,12 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
           Integer var6 = (Integer) null;
           DirectXGraphicsToolkit.createToolkit((java.awt.Canvas) null, (TextureProvider) null, (ResourceArchive) null, (Integer) null);
         }
-        this.field_Cc.DrawPrimitive(DirectXGraphicsToolkit.a(type, (byte) -121), startVertex, primitiveCount);
+        this.field_Cc.DrawPrimitive(DirectXGraphicsToolkit.d3dPrimitiveType(type, (byte) -121), startVertex, primitiveCount);
     }
 
     final void applyScissorEnabled(int guard) {
         int var2 = -106 % ((guard - 0) / 55);
-        this.field_Cc.a(174, this.scissorEnabled);
+        this.field_Cc.setRenderState(174, this.scissorEnabled);
     }
 
     final void bindSpriteTarget(ToolkitSprite sprite, boolean withBuffer) {
@@ -1053,11 +1053,11 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
           if (fieldTemp$1 > 50) {
             throw new RenderPresentationException();
           }
-          discarded$2 = this.h(true);
+          discarded$2 = this.resetDevice(true);
         } else {
           this.field_Lc = 0;
           if (jagdx.HResult.failed(this.field_Hc.present(0, -95), -1)) {
-            discarded$3 = this.h(true);
+            discarded$3 = this.resetDevice(true);
           }
         }
         this.field_Cc.BeginScene();
@@ -1085,8 +1085,8 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
           var5_int = 0;
           var6 = 1;
           var7 = new jaclib.peer.PeerReferenceManager();
-          var8 = jagdx.IDirect3D.a(-2147483616, var7);
-          var9 = var8.a(var5_int, var6);
+          var8 = jagdx.IDirect3D.createDirect3D(-2147483616, var7);
+          var9 = var8.getDeviceCaps(var5_int, var6);
           if ((16777216 & var9.RasterCaps) == 0) {
             throw new RuntimeException("");
           }
@@ -1125,7 +1125,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
             throw new RuntimeException("");
           }
           var10 = new jagdx.D3DPRESENT_PARAMETERS(param0);
-          if (!DirectXGraphicsToolkit.a(var8, var6, var5_int, param3.intValue(), 6, var10)) {
+          if (!DirectXGraphicsToolkit.choosePresentationFormats(var8, var6, var5_int, param3.intValue(), 6, var10)) {
             throw new RuntimeException("");
           }
           var10.PresentationInterval = -2147483648;
@@ -1137,16 +1137,16 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
           }
           var12 = null;
           try {
-            var12_ref = var8.a(var5_int, var6, param0, 64 | var11, var10);
+            var12_ref = var8.createDevice(var5_int, var6, param0, 64 | var11, var10);
           } catch (jagdx.DirectXException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var14 = (jagdx.DirectXException) (Object) decompiledCaughtException;
-            var12_ref = var8.a(var5_int, var6, param0, 32 | var11, var10);
+            var12_ref = var8.createDevice(var5_int, var6, param0, 32 | var11, var10);
           }
-          var13 = new DirectXSwapChainSurface(var12_ref.b(0), var12_ref.b());
+          var13 = new DirectXSwapChainSurface(var12_ref.getSwapChain(0), var12_ref.getDepthStencilSurface());
           var15 = new DirectXGraphicsToolkit(var5_int, var6, param0, var7, var8, var12_ref, var13, var10, var9, param1, param2, param3.intValue());
           var4 = var15;
-          var15.e(false);
+          var15.initializeHardwareResources(false);
           stackIn_42_0 = var15;
           return (GraphicsToolkit) ((Object) stackIn_42_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

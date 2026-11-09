@@ -24,7 +24,7 @@ final class ByteArrayCacheNode extends DualLinkNode {
           if (LegacyOpenGlCubeTexture.hasUniformCharacters(param0, true)) {
             return false;
           }
-          if (ArrayWidgetContainer.a(param0, 30996)) {
+          if (ArrayWidgetContainer.isPasswordLengthInvalid(param0, 30996)) {
             return false;
           }
           var3_int = 11 / ((param2 - 63) / 59);
@@ -34,7 +34,7 @@ final class ByteArrayCacheNode extends DualLinkNode {
           if (MessageDialog.containsForwardOrReverse(param0, param1, 106)) {
             return false;
           }
-          if (CachedTextLayout.a(param0, (byte) 111, param1)) {
+          if (CachedTextLayout.isPasswordPartOfName(param0, (byte) 111, param1)) {
             return false;
           }
           if (!AccountNameSupport.containsNameIgnoringUnderscores(false, param0, param1)) {

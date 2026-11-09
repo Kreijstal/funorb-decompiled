@@ -25,7 +25,7 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
         }
         this.toolkit.setActiveTextureUnit(1, 94);
         this.toolkit.bindTexture(24, (LegacyOpenGlTexture) null);
-        this.toolkit.a(1.0f, 15, 0.0f);
+        this.toolkit.setFogDistanceAdjustment(1.0f, 15, 0.0f);
         this.toolkit.setActiveTextureUnit(0, 100);
         this.toolkit.setTextureCombineOperations(20685, 8448, 8448);
         jaggl.OpenGL.glMatrixMode(5890);
@@ -128,14 +128,14 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
           var3 = -0.5f / (float)this.toolkit.field_kc;
           this.toolkit.setActiveTextureUnit(1, 92);
           GpuDataType.field_a[1] = 0.0f;
-          GpuDataType.field_a[3] = 0.25f + var3 * this.toolkit.field_bc;
+          GpuDataType.field_a[3] = 0.25f + var3 * this.toolkit.fogStart;
           GpuDataType.field_a[2] = var3;
           GpuDataType.field_a[0] = 0.0f;
           jaggl.OpenGL.glPushMatrix();
           jaggl.OpenGL.glLoadIdentity();
           jaggl.OpenGL.glTexGenfv(8192, 9474, GpuDataType.field_a, 0);
           jaggl.OpenGL.glPopMatrix();
-          this.toolkit.a(0.5f, 15, (float)this.toolkit.field_kc);
+          this.toolkit.setFogDistanceAdjustment(0.5f, 15, (float)this.toolkit.field_kc);
           this.toolkit.bindTexture(11, this.depthRamp);
           this.toolkit.setActiveTextureUnit(0, 115);
         }
@@ -229,8 +229,8 @@ final class LegacyOpenGlRidgedWaterEffect extends LegacyOpenGlEffect {
     }
 
     final static void a(int param0, int param1, int param2) {
-        ScanlineSpriteMask.field_e = param0;
-        EmptyWidgetRenderer.field_d = param1;
+        ScanlineSpriteMask.pendingTooltipY = param0;
+        EmptyWidgetRenderer.pendingTooltipX = param1;
         if (param2 > -75) {
           LegacyOpenGlRidgedWaterEffect.releaseStatics(48);
         }

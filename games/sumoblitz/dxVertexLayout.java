@@ -62,6 +62,6 @@ public class dxVertexLayout extends VertexLayout {
           }
         }
         var10.finish();
-        this.field_d = param0.field_Cc.a(var10, (jagdx.IDirect3DVertexDeclaration) null);
+        this.field_d = param0.field_Cc.createVertexDeclaration(var10, (jagdx.IDirect3DVertexDeclaration) null);
     }
 }

@@ -49,9 +49,9 @@ final class DirectXTexture2D extends DirectXTexture implements Texture2D {
           this.height = param3;
         }
         if (param4) {
-          this.texture = this.toolkit.field_Cc.a(this.width, this.height, 0, 1024, DirectXGraphicsToolkit.a(this.format, 126, GpuDataType.UNSIGNED_BYTE), 1);
+          this.texture = this.toolkit.field_Cc.createTexture(this.width, this.height, 0, 1024, DirectXGraphicsToolkit.d3dTextureFormat(this.format, 126, GpuDataType.UNSIGNED_BYTE), 1);
         } else {
-          this.texture = this.toolkit.field_Cc.a(this.width, this.height, 1, 0, DirectXGraphicsToolkit.a(this.format, -88, GpuDataType.UNSIGNED_BYTE), 1);
+          this.texture = this.toolkit.field_Cc.createTexture(this.width, this.height, 1, 0, DirectXGraphicsToolkit.d3dTextureFormat(this.format, -88, GpuDataType.UNSIGNED_BYTE), 1);
         }
         var13 = this.toolkit.field_Jc;
         var10 = this.texture.LockRect(0, 0, 0, param2, param3, 0, var13);
@@ -64,10 +64,10 @@ final class DirectXTexture2D extends DirectXTexture implements Texture2D {
           var11 = var13.getRowPitch();
           if (var11 == param2 &&
             param2 == param7) {
-            var13.a(param5, param6, 0, param3 * param2);
+            var13.putBytes(param5, param6, 0, param3 * param2);
           } else {
             for (var12 = 0; param3 > var12; var12++) {
-              var13.a(param5, var12 * param7 + param6, var11 * var12, param2);
+              var13.putBytes(param5, var12 * param7 + param6, var11 * var12, param2);
             }
           }
           this.texture.UnlockRect(0);
@@ -118,9 +118,9 @@ final class DirectXTexture2D extends DirectXTexture implements Texture2D {
           this.height = param2;
         }
         if (!param3) {
-          this.texture = this.toolkit.field_Cc.a(this.width, this.height, 1, 0, 21, 1);
+          this.texture = this.toolkit.field_Cc.createTexture(this.width, this.height, 1, 0, 21, 1);
         } else {
-          this.texture = this.toolkit.field_Cc.a(this.width, this.height, 0, 1024, 21, 1);
+          this.texture = this.toolkit.field_Cc.createTexture(this.width, this.height, 0, 1024, 21, 1);
         }
         var12 = this.toolkit.field_Jc;
         var9 = this.texture.LockRect(0, 0, 0, param1, param2, 0, var12);
@@ -171,14 +171,14 @@ final class DirectXTexture2D extends DirectXTexture implements Texture2D {
           this.width = param3;
           this.height = param4;
         }
-        this.texture = this.toolkit.field_Cc.a(param3, param4, 1, 0, DirectXGraphicsToolkit.a(this.format, -120, this.dataType), 1);
+        this.texture = this.toolkit.field_Cc.createTexture(param3, param4, 1, 0, DirectXGraphicsToolkit.d3dTextureFormat(this.format, -120, this.dataType), 1);
     }
 
     public final void bind(int guard) {
         if (guard != 8905) {
           return;
         }
-        this.toolkit.a(guard ^ 8904, this);
+        this.toolkit.bindTexture2D(guard ^ 8904, this);
     }
 
     public final float textureU(float pixelX, int guard) {

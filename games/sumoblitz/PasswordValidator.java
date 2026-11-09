@@ -35,7 +35,7 @@ final class PasswordValidator extends TextInputValidator {
             return (String) (stackIn_2_0);
           }
           var5 = var4;
-          if (ArrayWidgetContainer.a(var5, 30996)) {
+          if (ArrayWidgetContainer.isPasswordLengthInvalid(var5, 30996)) {
             stackIn_5_0 = ArchiveIndex.passwordsMustBeBetweenText;
             return stackIn_5_0;
           }
@@ -59,7 +59,7 @@ final class PasswordValidator extends TextInputValidator {
             stackIn_19_0 = ValidationStatusWidget.thisPasswordContainsYourText;
             return stackIn_19_0;
           }
-          if (CachedTextLayout.a(var5, (byte) 114, var3)) {
+          if (CachedTextLayout.isPasswordPartOfName(var5, (byte) 114, var3)) {
             stackIn_22_0 = AccountRequestState.thisPasswordIsPartText;
             return stackIn_22_0;
           }

@@ -35,14 +35,14 @@ final class DirectXSwapChainSurface {
         if (!guard) {
           this.swapChain = chain;
           this.surface = surface;
-          this.backbuffer = this.swapChain.a(0, 0);
+          this.backbuffer = this.swapChain.getBackBuffer(0, 0);
           return;
         }
         jagdx.IDirect3DSwapChain var5 = (jagdx.IDirect3DSwapChain) null;
         this.attach(false, (jagdx.IDirect3DSurface) null, (jagdx.IDirect3DSwapChain) null);
         this.swapChain = chain;
         this.surface = surface;
-        this.backbuffer = this.swapChain.a(0, 0);
+        this.backbuffer = this.swapChain.getBackBuffer(0, 0);
     }
 
     final boolean isValid(int guard) {

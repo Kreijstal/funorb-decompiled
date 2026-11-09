@@ -22,7 +22,7 @@ abstract class LegacyOpenGlBuffer {
 
     protected final void finalize() throws Throwable {
         if (!this.disposed) {
-          this.toolkit.a(this.bufferHandle, true, this.byteLength);
+          this.toolkit.queueBufferDeletion(this.bufferHandle, true, this.byteLength);
           this.disposed = true;
         }
         super.finalize();

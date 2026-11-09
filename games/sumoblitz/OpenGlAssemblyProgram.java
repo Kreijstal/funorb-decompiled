@@ -81,7 +81,7 @@ final class OpenGlAssemblyProgram {
     }
 
     protected final void finalize() throws Throwable {
-        this.toolkit.a(this.programId, (byte) -96);
+        this.toolkit.queueProgramDeletion(this.programId, (byte) -96);
         super.finalize();
     }
 

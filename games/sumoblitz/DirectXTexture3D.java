@@ -21,7 +21,7 @@ final class DirectXTexture3D extends DirectXTexture implements Texture3D {
         this.field_f = param4;
         this.field_g = param2;
         this.field_i = param3;
-        this.field_h = this.toolkit.field_Cc.a(param2, param3, param4, 1, 0, DirectXGraphicsToolkit.a(param1, -99, this.dataType), 1);
+        this.field_h = this.toolkit.field_Cc.createVolumeTexture(param2, param3, param4, 1, 0, DirectXGraphicsToolkit.d3dTextureFormat(param1, -99, this.dataType), 1);
         var15 = this.toolkit.field_Jc;
         var8 = this.field_h.LockBox(0, 0, 0, 0, param2, param3, param4, 0, var15);
         if (!jagdx.HResult.succeeded(var8, -94)) {
@@ -31,21 +31,21 @@ final class DirectXTexture3D extends DirectXTexture implements Texture3D {
         var10 = var9 * this.field_i;
         var11 = var15.getSlicePitch();
         if (var11 == var10) {
-          var15.a(param5, 0, 0, var9 * this.field_i * this.field_f);
+          var15.putBytes(param5, 0, 0, var9 * this.field_i * this.field_f);
           this.field_h.UnlockBox(0);
           return;
         }
         var12 = var15.getRowPitch();
         if (var12 == var9) {
           for (var13 = 0; this.field_f > var13; var13++) {
-            var15.a(param5, var10 * var13, var13 * var11, var10);
+            var15.putBytes(param5, var10 * var13, var13 * var11, var10);
           }
           this.field_h.UnlockBox(0);
           return;
         }
         for (var13Lifetime1 = 0; this.field_f > var13Lifetime1; var13Lifetime1++) {
           for (var14 = 0; this.field_i > var14; var14++) {
-            var15.a(param5, var13Lifetime1 * var10 + var9 * var14, var12 * var14 + var11 * var13Lifetime1, var9);
+            var15.putBytes(param5, var13Lifetime1 * var10 + var9 * var14, var12 * var14 + var11 * var13Lifetime1, var9);
           }
         }
         this.field_h.UnlockBox(0);
@@ -68,7 +68,7 @@ final class DirectXTexture3D extends DirectXTexture implements Texture3D {
     }
 
     public final void bind(int guard) {
-        this.toolkit.a(2, this);
+        this.toolkit.bindTexture3D(2, this);
         if (guard != 8905) {
           TextureFilter var3 = (TextureFilter) null;
           this.setFilter((TextureFilter) null, 117);

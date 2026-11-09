@@ -199,7 +199,7 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
         if (guard != -4009) {
           return;
         }
-        this.heap.a();
+        this.heap.close();
     }
 
     static {

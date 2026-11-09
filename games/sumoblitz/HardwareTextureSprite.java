@@ -41,10 +41,10 @@ final class HardwareTextureSprite extends ToolkitSprite {
             }
           }
         }
-        this.toolkit.w(10);
-        this.toolkit.a(this.texture, 95);
+        this.toolkit.prepareSpriteRendering(10);
+        this.toolkit.bindTexture(this.texture, 95);
         this.toolkit.setBlendMode(blendMode, 13);
-        this.toolkit.h(59, colorMode);
+        this.toolkit.setTextureCombineMode(59, colorMode);
         this.toolkit.setColorCombineSource(AccountRequestState.CONSTANT, 1, 0);
         this.toolkit.setAlphaCombineSource(AccountRequestState.CONSTANT, 1, true);
         this.toolkit.setTextureConstantColor(false, color);
@@ -99,10 +99,10 @@ final class HardwareTextureSprite extends ToolkitSprite {
           stackIn_5_1 = ServerDataReadRequest.NEAREST;
         }
         ((Texture2D) (Object) stackIn_4_0).setFilter(stackIn_5_1, 15149);
-        this.toolkit.w(10);
-        this.toolkit.a(this.texture, 109);
+        this.toolkit.prepareSpriteRendering(10);
+        this.toolkit.bindTexture(this.texture, 109);
         this.toolkit.setBlendMode(blendMode, 13);
-        this.toolkit.h(104, colorMode);
+        this.toolkit.setTextureCombineMode(104, colorMode);
         this.toolkit.setColorCombineSource(AccountRequestState.CONSTANT, 1, 0);
         this.toolkit.setAlphaCombineSource(AccountRequestState.CONSTANT, 1, true);
         this.toolkit.setTextureConstantColor(false, color);
@@ -209,7 +209,7 @@ final class HardwareTextureSprite extends ToolkitSprite {
           this.toolkit = toolkit;
           this.width = width;
           this.height = height;
-          this.texture = toolkit.a(false, stride, pixels, width, -45, offset, height);
+          this.texture = toolkit.createIntTexture2D(false, stride, pixels, width, -45, offset, height);
           this.texture.setWrap(true, true, true);
           stackIn_4_1 = (width != this.texture.width(-16625));
           this.textureWidthDiffers = stackIn_4_1;
@@ -249,10 +249,10 @@ final class HardwareTextureSprite extends ToolkitSprite {
         x = x + this.insetLeft;
         y = y + this.insetTop;
         this.texture.setFilter(ServerDataReadRequest.NEAREST, 15149);
-        this.toolkit.w(10);
-        this.toolkit.a(this.texture, 93);
+        this.toolkit.prepareSpriteRendering(10);
+        this.toolkit.bindTexture(this.texture, 93);
         this.toolkit.setBlendMode(blendMode, 13);
-        this.toolkit.h(92, colorMode);
+        this.toolkit.setTextureCombineMode(92, colorMode);
         this.toolkit.setColorCombineSource(AccountRequestState.CONSTANT, 1, 0);
         this.toolkit.setAlphaCombineSource(AccountRequestState.CONSTANT, 1, true);
         this.toolkit.setTextureConstantColor(false, color);

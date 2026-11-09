@@ -78,7 +78,7 @@ final class WaterTextureResources {
               }
             }
           }
-          this.normalMap = this.toolkit.a(true, BeveledTextInputRenderer.RGBA, 16, 128, var24, 128);
+          this.normalMap = this.toolkit.createTexture3D(true, BeveledTextInputRenderer.RGBA, 16, 128, var24, 128);
         }
         if (guard > -120) {
           this.useVolumeTextures = true;
@@ -180,11 +180,11 @@ final class WaterTextureResources {
           this.toolkit = owner;
           this.useVolumeTextures = this.toolkit.field_Eb;
           if (this.useVolumeTextures &&
-            !this.toolkit.a((byte) -42, GpuDataType.UNSIGNED_BYTE, AchievementThresholds.LUMINANCE_ALPHA)) {
+            !this.toolkit.supportsTexture3D((byte) -42, GpuDataType.UNSIGNED_BYTE, AchievementThresholds.LUMINANCE_ALPHA)) {
             this.useVolumeTextures = false;
           }
           if (!this.useVolumeTextures &&
-            !this.toolkit.a(GpuDataType.UNSIGNED_BYTE, AchievementThresholds.LUMINANCE_ALPHA, 6)) {
+            !this.toolkit.supportsTexture2D(GpuDataType.UNSIGNED_BYTE, AchievementThresholds.LUMINANCE_ALPHA, 6)) {
             return;
           }
           InwardSparkParticle.ensureHardwareWaterNoise(23369);
@@ -192,19 +192,19 @@ final class WaterTextureResources {
             this.animatedSlices = new Texture2D[16];
             for (var2_int = 0; var2_int < 16; var2_int++) {
               var17 = ByteStorageRanges.copyRange(FourIntReadRequest.hardwareRidgedWaterData, 14381, 32768, var2_int * 32768);
-              this.animatedSlices[var2_int] = this.toolkit.a(var17, 128, 128, AchievementThresholds.LUMINANCE_ALPHA, 0, true);
+              this.animatedSlices[var2_int] = this.toolkit.createByteTexture2D(var17, 128, 128, AchievementThresholds.LUMINANCE_ALPHA, 0, true);
             }
             this.secondarySlices = new Texture2D[16];
             for (var2_intLifetime1 = 0; var2_intLifetime1 < 16; var2_intLifetime1++) {
               var18 = ByteStorageRanges.copyRange(LegacyOpenGlShader.hardwareTurbulentWaterData, 14381, 32768, 32768 * var2_intLifetime1);
-              this.secondarySlices[var2_intLifetime1] = this.toolkit.a(var18, 128, 128, AchievementThresholds.LUMINANCE_ALPHA, 0, true);
+              this.secondarySlices[var2_intLifetime1] = this.toolkit.createByteTexture2D(var18, 128, 128, AchievementThresholds.LUMINANCE_ALPHA, 0, true);
             }
             return;
           }
           var15 = NoiseSliceGenerator.extractByteArray(false, FourIntReadRequest.hardwareRidgedWaterData, 0);
-          this.animatedVolume = this.toolkit.a(true, AchievementThresholds.LUMINANCE_ALPHA, 16, 128, var15, 128);
+          this.animatedVolume = this.toolkit.createTexture3D(true, AchievementThresholds.LUMINANCE_ALPHA, 16, 128, var15, 128);
           var16 = NoiseSliceGenerator.extractByteArray(false, LegacyOpenGlShader.hardwareTurbulentWaterData, 0);
-          this.toolkit.a(true, AchievementThresholds.LUMINANCE_ALPHA, 16, 128, var16, 128);
+          this.toolkit.createTexture3D(true, AchievementThresholds.LUMINANCE_ALPHA, 16, 128, var16, 128);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

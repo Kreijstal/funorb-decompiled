@@ -170,11 +170,11 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
             if (!(widget.textLayout instanceof CachedTextLayout)) {
               return;
             }
-            ((CachedTextLayout) (widget.textLayout)).a(this.font, var5, var3_int, this.widgetText(true, widget), (byte) 79);
+            ((CachedTextLayout) (widget.textLayout)).layoutRightAligned(this.font, var5, var3_int, this.widgetText(true, widget), (byte) 79);
             return;
           }
           if (widget.textLayout instanceof CachedTextLayout) {
-            ((CachedTextLayout) (widget.textLayout)).a(this.font, var5, this.widgetText(true, widget), 0, (byte) -36);
+            ((CachedTextLayout) (widget.textLayout)).layoutLeftAligned(this.font, var5, this.widgetText(true, widget), 0, (byte) -36);
             return;
           }
           return;

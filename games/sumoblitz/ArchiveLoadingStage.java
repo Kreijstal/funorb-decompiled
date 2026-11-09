@@ -21,7 +21,7 @@ final class ArchiveLoadingStage {
           if (null != HardwareGraphicsHeap.field_n) {
             HardwareGraphicsHeap.field_n.k(-43);
           }
-          HardwareGraphicsToolkit.j((byte) 89);
+          HardwareGraphicsToolkit.resetTooltip((byte) 89);
           if (param0 != -116) {
             nameSuggestions = (String[]) null;
             return;
@@ -31,7 +31,7 @@ final class ArchiveLoadingStage {
         if (null != HardwareGraphicsHeap.field_n) {
           HardwareGraphicsHeap.field_n.k(-43);
         }
-        HardwareGraphicsToolkit.j((byte) 89);
+        HardwareGraphicsToolkit.resetTooltip((byte) 89);
         if (param0 != -116) {
           nameSuggestions = (String[]) null;
           return;

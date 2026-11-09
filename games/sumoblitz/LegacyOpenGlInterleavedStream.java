@@ -26,7 +26,7 @@ final class LegacyOpenGlInterleavedStream {
           if (guard) {
             legacyRidgedWaterData = (Object) null;
           }
-          this.vertices = toolkit.a(24, true, (byte) -23, 196584, (byte[]) null);
+          this.vertices = toolkit.createVertexBuffer(24, true, (byte) -23, 196584, (byte[]) null);
           discarded$0 = new LegacyVertexAttribute(this.vertices, 5126, 2, 0);
           discarded$1 = new LegacyVertexAttribute(this.vertices, 5126, 3, 8);
           discarded$2 = new LegacyVertexAttribute(this.vertices, 5121, 4, 20);

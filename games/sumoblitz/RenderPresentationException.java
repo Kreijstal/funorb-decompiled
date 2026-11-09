@@ -47,8 +47,8 @@ final class RenderPresentationException extends Exception {
           if (!param2) {
             field_b = (String[]) null;
           }
-          ((SocketConnector) ((Object) var3)).field_b = param0;
-          ((SocketConnector) ((Object) var3)).field_d = param1;
+          ((SocketConnector) ((Object) var3)).host = param0;
+          ((SocketConnector) ((Object) var3)).port = param1;
           stackIn_3_0 = var3;
           return (SocketConnector) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

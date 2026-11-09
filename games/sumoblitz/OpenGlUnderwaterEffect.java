@@ -134,7 +134,7 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
               this.field_u = false;
               return;
             }
-            this.field_o = this.toolkit.a(new int[]{0, -1}, 1, false, -119, 2);
+            this.field_o = this.toolkit.createIntTexture2D(new int[]{0, -1}, 1, false, -119, 2);
             this.field_o.setWrap(false, false, true);
             this.field_u = true;
             return;
@@ -169,8 +169,8 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
 
     final void disable(boolean guard) {
         this.toolkit.setActiveTextureUnit(1, -119);
-        this.toolkit.a((GpuTexture) null, 113);
-        this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
+        this.toolkit.bindTexture((GpuTexture) null, 113);
+        this.toolkit.setTextureCombineOperations((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
         this.toolkit.setColorCombineSource(LegacyVertexAttribute.TEXTURE, 0, 0);
         this.toolkit.setColorCombineSource(AccountRequestState.CONSTANT, 2, 0);
         this.toolkit.setAlphaCombineSource(LegacyVertexAttribute.TEXTURE, 0, true);
@@ -226,15 +226,15 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
               this.toolkit.setAlphaCombineSource(LegacyVertexAttribute.TEXTURE, 0, true);
               this.field_h = false;
             }
-            this.toolkit.a(texture, 121);
-            this.toolkit.h(37, combineMode);
+            this.toolkit.bindTexture(texture, 121);
+            this.toolkit.setTextureCombineMode(37, combineMode);
             return;
           }
           if (this.field_h) {
             return;
           }
-          this.toolkit.a(this.toolkit.field_D, 97);
-          this.toolkit.h(113, 1);
+          this.toolkit.bindTexture(this.toolkit.field_D, 97);
+          this.toolkit.setTextureCombineMode(113, 1);
           this.toolkit.setColorCombineSource(FontMetrics.PREVIOUS, 0, 0);
           this.toolkit.setAlphaCombineSource(FontMetrics.PREVIOUS, 0, true);
           this.field_h = true;
@@ -263,8 +263,8 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
         if (guard == 20186) {
           this.field_e = lighting ? true : false;
           this.toolkit.setActiveTextureUnit(1, -112);
-          this.toolkit.a(this.field_o, guard - 20070);
-          this.toolkit.a((byte) -83, LegacyOpenGlRenderBufferSet.REPLACE, OpenGlBuffer.INTERPOLATE);
+          this.toolkit.bindTexture(this.field_o, guard - 20070);
+          this.toolkit.setTextureCombineOperations((byte) -83, LegacyOpenGlRenderBufferSet.REPLACE, OpenGlBuffer.INTERPOLATE);
           this.toolkit.setColorCombineSource(AccountRequestState.CONSTANT, 0, 0);
           this.toolkit.setColorCombineSource((byte) 85, 2, true, false, LegacyVertexAttribute.TEXTURE);
           this.toolkit.setAlphaCombineSource(FontMetrics.PREVIOUS, 0, true);

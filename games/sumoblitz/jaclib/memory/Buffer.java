@@ -4,7 +4,7 @@
 package jaclib.memory;
 
 public interface Buffer {
-    public abstract void a(byte[] param0, int param1, int param2, int param3);
+    public abstract void putBytes(byte[] source, int sourceOffset, int destinationOffset, int length);
 
     public abstract int getSize();
 }

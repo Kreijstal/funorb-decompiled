@@ -134,7 +134,7 @@ final class LegacyOpenGlFramebuffer implements LegacyOpenGlFramebufferTarget {
     }
 
     protected final void finalize() throws Throwable {
-        this.toolkit.b((byte) -92, this.framebufferId);
+        this.toolkit.queueFramebufferDeletion((byte) -92, this.framebufferId);
         super.finalize();
     }
 

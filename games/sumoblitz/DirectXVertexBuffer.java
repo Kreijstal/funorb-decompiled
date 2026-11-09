@@ -94,13 +94,13 @@ final class DirectXVertexBuffer implements VertexBuffer {
           var5 = var5 | 512;
         }
         if (this.buffer == null) {
-          this.buffer = this.toolkit.field_Cc.a(this.sizeBytes, var5, 0, var4, this.buffer);
+          this.buffer = this.toolkit.field_Cc.createVertexBuffer(this.sizeBytes, var5, 0, var4, this.buffer);
           this.capacityBytes = this.sizeBytes;
           stackIn_11_0 = (this.buffer != null);
           return stackIn_11_0;
         }
         this.buffer.release(-22671);
-        this.buffer = this.toolkit.field_Cc.a(this.sizeBytes, var5, 0, var4, this.buffer);
+        this.buffer = this.toolkit.field_Cc.createVertexBuffer(this.sizeBytes, var5, 0, var4, this.buffer);
         this.capacityBytes = this.sizeBytes;
         stackIn_15_0 = (this.buffer != null);
         return stackIn_15_0;

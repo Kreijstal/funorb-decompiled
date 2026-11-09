@@ -378,7 +378,7 @@ final class DisplayPromptRenderer {
         RuntimeException decompiledCaughtException = null;
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (!SocketConnector.a(allowConsecutiveSeparators, 0, text)) {
+          if (!SocketConnector.isAccountNameValid(allowConsecutiveSeparators, 0, text)) {
             return false;
           }
           var3_int = 0;

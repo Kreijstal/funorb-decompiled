@@ -118,8 +118,8 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
         RuntimeException var4 = null;
         try {
           if (!this.field_h) {
-            this.toolkit.a(texture, guard ^ 18943);
-            this.toolkit.h(122, combineMode);
+            this.toolkit.bindTexture(texture, guard ^ 18943);
+            this.toolkit.setTextureCombineMode(122, combineMode);
           }
           if (guard != 18834) {
             var5 = (String) null;
@@ -150,9 +150,9 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
         if (this.field_e &&
           var3 != null) {
           this.toolkit.setActiveTextureUnit(1, guard ^ -20137);
-          this.toolkit.a(var3, 122);
+          this.toolkit.bindTexture(var3, 122);
           this.toolkit.setActiveTextureUnit(0, -125);
-          this.toolkit.a(this.field_f.normalMap, 127);
+          this.toolkit.bindTexture(this.field_f.normalMap, 127);
           var4 = this.field_j.programHandle;
           jaggl.OpenGL.glUseProgramObjectARB(var4);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var4, "normalSampler"), 0);
@@ -170,9 +170,9 @@ final class OpenGlEnvironmentWaterEffect extends ShaderEffect {
         }
         if (this.field_h) {
           this.toolkit.setActiveTextureUnit(1, -124);
-          this.toolkit.a((GpuTexture) null, 106);
+          this.toolkit.bindTexture((GpuTexture) null, 106);
           this.toolkit.setActiveTextureUnit(0, -109);
-          this.toolkit.a((GpuTexture) null, 98);
+          this.toolkit.bindTexture((GpuTexture) null, 98);
           jaggl.OpenGL.glUseProgramObjectARB(0L);
           this.field_h = false;
         }

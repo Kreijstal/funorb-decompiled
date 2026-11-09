@@ -14,7 +14,7 @@ final class LegacyOpenGlBitmapFont extends ToolkitFont {
         float var12;
         var9 = (LegacyOpenGlSpriteMask) (param5);
         var10 = var9.texture;
-        this.field_f.k(-25462);
+        this.field_f.prepareGlyphRendering(-25462);
         this.field_f.bindTexture(68, this.field_c);
         if (!this.field_d &&
           !param4) {
@@ -247,7 +247,7 @@ final class LegacyOpenGlBitmapFont extends ToolkitFont {
     }
 
     final void drawGlyph(char param0, int param1, int param2, int param3, boolean param4) {
-        this.field_f.k(-25462);
+        this.field_f.prepareGlyphRendering(-25462);
         this.field_f.bindTexture(45, this.field_c);
         if (!this.field_d &&
           !param4) {

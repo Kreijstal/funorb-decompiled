@@ -34,9 +34,9 @@ class UiWidget extends IntrusiveNode {
           }
           break;
         }
-        var5 = CachedTextLayout.e(102);
+        var5 = CachedTextLayout.visibleTooltip(102);
         if (var5 != null) {
-          HardwareTurbulentWaterNoise.widgetTheme.drawTooltip(GraphicsHeap.field_k, 13421772, VertexLayout.field_b, var5);
+          HardwareTurbulentWaterNoise.widgetTheme.drawTooltip(GraphicsHeap.tooltipY, 13421772, VertexLayout.tooltipX, var5);
         }
         if (!guard) {
           return;
@@ -398,12 +398,12 @@ class UiWidget extends IntrusiveNode {
                 }
                 if (HotspotTextWidget.activePointerButton != 0) {
                   RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
-                  LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
+                  LegacyOpenGlTexture3D.updateTooltip(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
                 if (RidgedNoise3D.field_l == 0) {
                   RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
-                  LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
+                  LegacyOpenGlTexture3D.updateTooltip(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
                 this.onPointerReleased(this, false, parentX, ArenaDefinitionCodec.field_e, PointLight.mouseX, parentY);
@@ -418,28 +418,28 @@ class UiWidget extends IntrusiveNode {
                 }
                 if (var7 == 0) {
                   RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
-                  LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
+                  LegacyOpenGlTexture3D.updateTooltip(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
                 if (0 == ActiveCanvasProvider.field_c) {
                   RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
-                  LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
+                  LegacyOpenGlTexture3D.updateTooltip(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
                 this.clearFocus((byte) 115);
                 RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
-                LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
+                LegacyOpenGlTexture3D.updateTooltip(this.hoveredTooltip(-6696), -124);
                 return inputAvailable;
               }
               if (ActiveCanvasProvider.field_c == 0) {
                 if (HotspotTextWidget.activePointerButton != 0) {
                   RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
-                  LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
+                  LegacyOpenGlTexture3D.updateTooltip(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
                 if (RidgedNoise3D.field_l == 0) {
                   RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
-                  LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
+                  LegacyOpenGlTexture3D.updateTooltip(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
                 this.onPointerReleased(this, false, parentX, ArenaDefinitionCodec.field_e, PointLight.mouseX, parentY);
@@ -447,85 +447,85 @@ class UiWidget extends IntrusiveNode {
                 if (var12 == null) {
                   if (var7 == 0) {
                     RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
-                    LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
+                    LegacyOpenGlTexture3D.updateTooltip(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
                   }
                   if (var5 == 0) {
                     RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
-                    LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
+                    LegacyOpenGlTexture3D.updateTooltip(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
                   }
                   if (0 == ActiveCanvasProvider.field_c) {
                     RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
-                    LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
+                    LegacyOpenGlTexture3D.updateTooltip(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
                   }
                   this.clearFocus((byte) 115);
                   RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
-                  LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
+                  LegacyOpenGlTexture3D.updateTooltip(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
                 if (!(var12.listener instanceof WidgetDropListener)) {
                   MessageDialog.field_gb = null;
                   if (var7 == 0) {
                     RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
-                    LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
+                    LegacyOpenGlTexture3D.updateTooltip(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
                   }
                   if (var5 == 0) {
                     RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
-                    LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
+                    LegacyOpenGlTexture3D.updateTooltip(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
                   }
                   if (0 == ActiveCanvasProvider.field_c) {
                     RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
-                    LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
+                    LegacyOpenGlTexture3D.updateTooltip(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
                   }
                   this.clearFocus((byte) 115);
                   RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
-                  LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
+                  LegacyOpenGlTexture3D.updateTooltip(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
                 ((WidgetDropListener) (var12.listener)).onDrop(var12, (DropTargetWidget) null, 20302);
                 MessageDialog.field_gb = null;
                 if (var7 == 0) {
                   RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
-                  LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
+                  LegacyOpenGlTexture3D.updateTooltip(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
                 if (var5 == 0) {
                   RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
-                  LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
+                  LegacyOpenGlTexture3D.updateTooltip(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
                 if (0 == ActiveCanvasProvider.field_c) {
                   RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
-                  LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
+                  LegacyOpenGlTexture3D.updateTooltip(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
                 this.clearFocus((byte) 115);
                 RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
-                LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
+                LegacyOpenGlTexture3D.updateTooltip(this.hoveredTooltip(-6696), -124);
                 return inputAvailable;
               }
               if (!this.onPointerPressed(this, guard ^ 80, AgeValidator.field_f, ActiveCanvasProvider.field_c, parentX, LoginCredentialType.field_a, parentY)) {
                 if (var5 == 0) {
                   if (HotspotTextWidget.activePointerButton != 0) {
                     RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
-                    LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
+                    LegacyOpenGlTexture3D.updateTooltip(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
                   }
                   if (RidgedNoise3D.field_l == 0) {
                     RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
-                    LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
+                    LegacyOpenGlTexture3D.updateTooltip(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
                   }
                   this.onPointerReleased(this, false, parentX, ArenaDefinitionCodec.field_e, PointLight.mouseX, parentY);
                   var13 = MessageDialog.field_gb;
                   if (var13 == null) {
                     RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
-                    LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
+                    LegacyOpenGlTexture3D.updateTooltip(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
                   }
                   if (!(var13.listener instanceof WidgetDropListener)) {
@@ -536,13 +536,13 @@ class UiWidget extends IntrusiveNode {
                       this.clearFocus((byte) 115);
                     }
                     RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
-                    LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
+                    LegacyOpenGlTexture3D.updateTooltip(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
                   }
                   ((WidgetDropListener) (var13.listener)).onDrop(var13, (DropTargetWidget) null, 20302);
                   MessageDialog.field_gb = null;
                   RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
-                  LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
+                  LegacyOpenGlTexture3D.updateTooltip(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
                 this.clearFocus((byte) -116);
@@ -567,13 +567,13 @@ class UiWidget extends IntrusiveNode {
                     var5 != 0) {
                     if (0 == ActiveCanvasProvider.field_c) {
                       RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
-                      LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
+                      LegacyOpenGlTexture3D.updateTooltip(this.hoveredTooltip(-6696), -124);
                       return inputAvailable;
                     }
                     this.clearFocus((byte) 115);
                   }
                   RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
-                  LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
+                  LegacyOpenGlTexture3D.updateTooltip(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
                 ((WidgetDropListener) (var14.listener)).onDrop(var14, (DropTargetWidget) null, 20302);
@@ -582,13 +582,13 @@ class UiWidget extends IntrusiveNode {
                   var5 != 0) {
                   if (0 == ActiveCanvasProvider.field_c) {
                     RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
-                    LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
+                    LegacyOpenGlTexture3D.updateTooltip(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
                   }
                   this.clearFocus((byte) 115);
                 }
                 RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
-                LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
+                LegacyOpenGlTexture3D.updateTooltip(this.hoveredTooltip(-6696), -124);
                 return inputAvailable;
               }
               if (var7 == 0) {
@@ -598,7 +598,7 @@ class UiWidget extends IntrusiveNode {
             if (var5 != 0) {
               if (0 == ActiveCanvasProvider.field_c) {
                 RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
-                LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
+                LegacyOpenGlTexture3D.updateTooltip(this.hoveredTooltip(-6696), -124);
                 return inputAvailable;
               }
               this.clearFocus((byte) 115);
@@ -606,7 +606,7 @@ class UiWidget extends IntrusiveNode {
           }
         }
         RidgedNoise3D.field_l = HotspotTextWidget.activePointerButton;
-        LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
+        LegacyOpenGlTexture3D.updateTooltip(this.hoveredTooltip(-6696), -124);
         return inputAvailable;
     }
 

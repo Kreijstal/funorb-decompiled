@@ -7,17 +7,17 @@ import java.util.*;
 final class ProxySocketConnector extends SocketConnector {
     static String emailIsValidText;
     static AccountRequestState accountCreationState;
-    private java.net.ProxySelector field_g;
+    private java.net.ProxySelector proxySelector;
     static SpriteData[] field_f;
 
     final static float lerp(int guard, float from, float to, float fraction) {
         if (guard != 1050) {
-          ProxySocketConnector.b(-23);
+          ProxySocketConnector.releaseProxyStatics(-23);
         }
         return (to - from) * fraction + from;
     }
 
-    private final java.net.Socket a(String param0, int param1, String param2, byte param3) throws IOException {
+    private final java.net.Socket openHttpProxyTunnel(String authorizationHeader, int proxyPort, String proxyHost, byte guard) throws IOException {
         java.net.Socket stackIn_12_0 = null;
         Object stackIn_27_0 = null;
         RuntimeException stackIn_30_0 = null;
@@ -43,16 +43,16 @@ final class ProxySocketConnector extends SocketConnector {
         String var8Lifetime2Lifetime2;
         var12 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (param3 != 105) {
-            ProxySocketConnector.b(109);
+          if (guard != 105) {
+            ProxySocketConnector.releaseProxyStatics(109);
           }
-          var13 = new java.net.Socket(param2, param1);
+          var13 = new java.net.Socket(proxyHost, proxyPort);
           var13.setSoTimeout(10000);
           var6 = var13.getOutputStream();
-          if (param0 == null) {
-            var6.write(("CONNECT " + this.field_b + ":" + this.field_d + " HTTP/1.0\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
+          if (authorizationHeader == null) {
+            var6.write(("CONNECT " + this.host + ":" + this.port + " HTTP/1.0\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
           } else {
-            var6.write(("CONNECT " + this.field_b + ":" + this.field_d + " HTTP/1.0\n" + param0 + "\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
+            var6.write(("CONNECT " + this.host + ":" + this.port + " HTTP/1.0\n" + authorizationHeader + "\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
           }
           boolean decompiledFrameRemainder0 = true;
           var6.flush();
@@ -106,32 +106,32 @@ final class ProxySocketConnector extends SocketConnector {
           var5 = decompiledCaughtException;
           stackIn_30_0 = var5;
           stackIn_30_1 = new StringBuilder().append("nw.E(");
-          if (param0 == null) {
+          if (authorizationHeader == null) {
             stackIn_31_2 = "null";
           } else {
             stackIn_31_2 = "{...}";
           }
-          stackIn_33_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_33_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(proxyPort).append(',');
+          if (proxyHost == null) {
             stackIn_34_2 = "null";
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseProxyStatics(int guard) {
         field_f = null;
         accountCreationState = null;
         emailIsValidText = null;
-        if (param0 != 1183) {
+        if (guard != 1183) {
           String var2 = (String) null;
-          ProxySocketConnector.a((String) null, (byte) 106, 118, (ResourceArchive) null, (String) null);
+          ProxySocketConnector.archiveLoadingMessage((String) null, (byte) 106, 118, (ResourceArchive) null, (String) null);
         }
     }
 
-    private final java.net.Socket a(int param0, java.net.Proxy param1) throws IOException {
+    private final java.net.Socket connectThroughProxy(int guard, java.net.Proxy proxy) throws IOException {
         java.net.Socket stackIn_2_0 = null;
         java.net.Socket stackIn_15_0 = null;
         Object stackIn_19_0 = null;
@@ -155,23 +155,23 @@ final class ProxySocketConnector extends SocketConnector {
         String var13 = null;
         Class var14 = null;
         try {
-          if (param1.type() == java.net.Proxy.Type.DIRECT) {
-            stackIn_2_0 = this.a((byte) 117);
+          if (proxy.type() == java.net.Proxy.Type.DIRECT) {
+            stackIn_2_0 = this.openDirectSocket((byte) 117);
             return stackIn_2_0;
           }
-          var3 = param1.address();
+          var3 = proxy.address();
           if (!((Object) var3 instanceof java.net.InetSocketAddress)) {
             return null;
           }
           var4 = (java.net.InetSocketAddress) ((Object) var3);
-          if (param1.type() != java.net.Proxy.Type.HTTP) {
-            if (param1.type() == java.net.Proxy.Type.SOCKS) {
-              var5 = new java.net.Socket(param1);
-              ((java.net.Socket) (var5)).connect((java.net.SocketAddress) ((Object) new java.net.InetSocketAddress(this.field_b, this.field_d)));
+          if (proxy.type() != java.net.Proxy.Type.HTTP) {
+            if (proxy.type() == java.net.Proxy.Type.SOCKS) {
+              var5 = new java.net.Socket(proxy);
+              ((java.net.Socket) (var5)).connect((java.net.SocketAddress) ((Object) new java.net.InetSocketAddress(this.host, this.port)));
               stackIn_19_0 = var5;
               return (java.net.Socket) (stackIn_19_0);
             }
-            if (param0 == 10000) {
+            if (guard == 10000) {
               return null;
             }
             stackIn_23_0 = (java.net.Socket) null;
@@ -193,7 +193,7 @@ final class ProxySocketConnector extends SocketConnector {
                 var11 = var14.getDeclaredMethod("getHeaderValue", new Class[]{java.net.URL.class, String.class});
                 var11.setAccessible(true);
                 var12 = (String) (var10.invoke(var8, new Object[]{}));
-                var13 = (String) (var11.invoke(var8, new Object[]{new java.net.URL("https://" + this.field_b + "/"), "https"}));
+                var13 = (String) (var11.invoke(var8, new Object[]{new java.net.URL("https://" + this.host + "/"), "https"}));
                 var5 = var12 + ": " + var13;
               }
             }
@@ -201,14 +201,14 @@ final class ProxySocketConnector extends SocketConnector {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
           }
-          stackIn_15_0 = this.a((String) (var5), var4.getPort(), var4.getHostName(), (byte) 105);
+          stackIn_15_0 = this.openHttpProxyTunnel((String) (var5), var4.getPort(), var4.getHostName(), (byte) 105);
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var3_ref = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_27_0 = var3_ref;
-          stackIn_27_1 = new StringBuilder().append("nw.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_27_1 = new StringBuilder().append("nw.C(").append(guard).append(',');
+          if (proxy == null) {
             stackIn_28_2 = "null";
           } else {
             stackIn_28_2 = "{...}";
@@ -217,7 +217,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    final java.net.Socket b(byte param0) throws IOException {
+    final java.net.Socket connect(byte guard) throws IOException {
         int var9 = 0;
         int stackIn_6_0 = 0;
         java.net.ProxySelector stackIn_9_0;
@@ -253,10 +253,10 @@ final class ProxySocketConnector extends SocketConnector {
         if (!Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
           System.setProperty("java.net.useSystemProxies", "true");
         }
-        stackIn_6_0 = (this.field_d != 443) ? 0 : 1;
+        stackIn_6_0 = (this.port != 443) ? 0 : 1;
         var5 = stackIn_6_0;
         try {
-          stackIn_9_0 = this.field_g;
+          stackIn_9_0 = this.proxySelector;
           stackIn_9_1 = null;
           stackIn_9_2 = null;
           stackIn_9_3 = new StringBuilder();
@@ -269,8 +269,8 @@ final class ProxySocketConnector extends SocketConnector {
             stackIn_10_2 = null;
             stackIn_10_4 = "https";
           }
-          var3 = ((java.net.ProxySelector) (Object) stackIn_9_0).select(new java.net.URI(((StringBuilder) (Object) stackIn_9_3).append(stackIn_10_4).append("://").append(this.field_b).toString()));
-          stackIn_12_0 = this.field_g;
+          var3 = ((java.net.ProxySelector) (Object) stackIn_9_0).select(new java.net.URI(((StringBuilder) (Object) stackIn_9_3).append(stackIn_10_4).append("://").append(this.host).toString()));
+          stackIn_12_0 = this.proxySelector;
           stackIn_12_1 = null;
           stackIn_12_2 = null;
           stackIn_12_3 = new StringBuilder();
@@ -283,17 +283,17 @@ final class ProxySocketConnector extends SocketConnector {
             stackIn_13_2 = null;
             stackIn_13_4 = "https";
           }
-          var4 = ((java.net.ProxySelector) (Object) stackIn_12_0).select(new java.net.URI(((StringBuilder) (Object) stackIn_12_3).append(stackIn_13_4).append("://").append(this.field_b).toString()));
+          var4 = ((java.net.ProxySelector) (Object) stackIn_12_0).select(new java.net.URI(((StringBuilder) (Object) stackIn_12_3).append(stackIn_13_4).append("://").append(this.host).toString()));
         } catch (java.net.URISyntaxException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (java.net.URISyntaxException) (Object) decompiledCaughtException;
-          return this.a((byte) 95);
+          return this.openDirectSocket((byte) 95);
         }
         var3.addAll((Collection) ((Object) var4));
         var6_array = var3.toArray();
         var7 = null;
         var8 = var6_array;
-        if (param0 != 61) {
+        if (guard != 61) {
           return (java.net.Socket) null;
         }
         for (var9 = 0; var9 < var8.length; var9++) {
@@ -301,7 +301,7 @@ final class ProxySocketConnector extends SocketConnector {
           var11 = (java.net.Proxy) (var10);
           try {
             if (false) throw (ProxyAuthenticationRequiredException) null;
-            var12 = this.a(param0 + 9939, var11);
+            var12 = this.connectThroughProxy(guard + 9939, var11);
             if (var12 != null) {
               stackIn_25_0 = var12;
               return stackIn_25_0;
@@ -316,12 +316,12 @@ final class ProxySocketConnector extends SocketConnector {
           }
         }
         if (var7 == null) {
-          return this.a((byte) 119);
+          return this.openDirectSocket((byte) 119);
         }
-        throw ProxySocketConnector.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
+        throw ProxySocketConnector.<RuntimeException>rethrowUnchecked((Throwable) var7);
     }
 
-    final static String a(String param0, byte param1, int param2, ResourceArchive param3, String param4) {
+    final static String archiveLoadingMessage(String waitingText, byte guard, int group, ResourceArchive archive, String loadingText) {
         RuntimeException var5 = null;
         String stackIn_5_0 = null;
         String stackIn_7_0 = null;
@@ -334,33 +334,33 @@ final class ProxySocketConnector extends SocketConnector {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != 85) {
+          if (guard != 85) {
             emailIsValidText = (String) null;
           }
-          if (!param3.loadIndex((byte) 127)) {
-            stackIn_5_0 = (String) (param0);
+          if (!archive.loadIndex((byte) 127)) {
+            stackIn_5_0 = (String) (waitingText);
             return stackIn_5_0;
           }
-          stackIn_7_0 = param4 + " - " + param3.groupLoadPercent(param2, (byte) -114) + "%";
+          stackIn_7_0 = loadingText + " - " + archive.groupLoadPercent(group, (byte) -114) + "%";
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_10_0 = var5;
           stackIn_10_1 = new StringBuilder().append("nw.D(");
-          if (param0 == null) {
+          if (waitingText == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(guard).append(',').append(group).append(',');
+          if (archive == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
           stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
-          if (param4 == null) {
+          if (loadingText == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
@@ -370,7 +370,7 @@ final class ProxySocketConnector extends SocketConnector {
     }
 
     ProxySocketConnector() {
-        this.field_g = java.net.ProxySelector.getDefault();
+        this.proxySelector = java.net.ProxySelector.getDefault();
     }
 
     static {
@@ -378,7 +378,7 @@ final class ProxySocketConnector extends SocketConnector {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException rethrowUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

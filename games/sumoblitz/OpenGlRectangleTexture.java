@@ -3,12 +3,12 @@
  */
 final class OpenGlRectangleTexture extends OpenGlTexture implements Texture2D {
     private int height;
-    static int field_k;
+    static int maximumPasswordLength;
     private int width;
 
     public final void setWrap(boolean repeatY, boolean repeatX, boolean guard) {
         if (!guard) {
-          field_k = 53;
+          maximumPasswordLength = 53;
         }
     }
 
@@ -42,7 +42,7 @@ final class OpenGlRectangleTexture extends OpenGlTexture implements Texture2D {
           var6 = MidiPcmStream.field_o;
           var2 = var6;
           if (param0 != 61) {
-            field_k = -127;
+            maximumPasswordLength = -127;
           }
           for (var3 = 0; var6.length > var3; var3++) {
             var4 = var6[var3];
@@ -93,7 +93,7 @@ final class OpenGlRectangleTexture extends OpenGlTexture implements Texture2D {
         try {
           this.width = param3;
           this.height = param4;
-          this.toolkit.a((GpuTexture) (this), 92);
+          this.toolkit.bindTexture((GpuTexture) (this), 92);
           jaggl.OpenGL.glTexImage2Dub(this.target, 0, this.glInternalFormat(-27), param3, param4, 0, IntrusiveNodeHashTable.glTextureFormat(-21339, this.format), ClientStackTraceFormatter.glDataType(this.dataType, (byte) 119), (byte[]) null, 0);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "or.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
@@ -105,7 +105,7 @@ final class OpenGlRectangleTexture extends OpenGlTexture implements Texture2D {
         try {
           this.width = param2;
           this.height = param3;
-          this.toolkit.a((GpuTexture) (this), 113);
+          this.toolkit.bindTexture((GpuTexture) (this), 113);
           jaggl.OpenGL.glPixelStorei(3317, 1);
           jaggl.OpenGL.glPixelStorei(3314, param6);
           jaggl.OpenGL.glTexImage2Dub(this.target, 0, this.glInternalFormat(-8), param2, param3, 0, IntrusiveNodeHashTable.glTextureFormat(-21339, this.format), 5121, param4, param5);
@@ -135,7 +135,7 @@ final class OpenGlRectangleTexture extends OpenGlTexture implements Texture2D {
         try {
           this.height = param3;
           this.width = param2;
-          this.toolkit.a((GpuTexture) (this), 95);
+          this.toolkit.bindTexture((GpuTexture) (this), 95);
           jaggl.OpenGL.glPixelStorei(3314, param6);
           jaggl.OpenGL.glTexImage2Df(this.target, 0, this.glInternalFormat(-103), param2, param3, 0, IntrusiveNodeHashTable.glTextureFormat(-21339, this.format), 5126, param4, param5 * 4);
           jaggl.OpenGL.glPixelStorei(3314, 0);
@@ -149,7 +149,7 @@ final class OpenGlRectangleTexture extends OpenGlTexture implements Texture2D {
         try {
           this.height = param2;
           this.width = param1;
-          this.toolkit.a((GpuTexture) (this), 93);
+          this.toolkit.bindTexture((GpuTexture) (this), 93);
           jaggl.OpenGL.glPixelStorei(3314, param5);
           jaggl.OpenGL.glTexImage2Di(this.target, 0, 6408, this.width, this.height, 0, 32993, this.toolkit.field_Ec, param3, 4 * param4);
           jaggl.OpenGL.glPixelStorei(3314, 0);
@@ -159,6 +159,6 @@ final class OpenGlRectangleTexture extends OpenGlTexture implements Texture2D {
     }
 
     static {
-        field_k = 20;
+        maximumPasswordLength = 20;
     }
 }

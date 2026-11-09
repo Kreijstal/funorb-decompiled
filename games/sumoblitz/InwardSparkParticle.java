@@ -77,7 +77,7 @@ final class InwardSparkParticle extends TimedSceneEffect {
         this.velocityXQ8 = velocityXQ8;
     }
 
-    final static void a(int param0, String[] param1) {
+    final static void applyAccountNameSuggestions(int guard, String[] suggestions) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -85,12 +85,12 @@ final class InwardSparkParticle extends TimedSceneEffect {
         RuntimeException var2 = null;
         try {
           if (ToolkitRasterBuffer.field_o != null) {
-            ToolkitRasterBuffer.field_o.nameSuggestions.a(param1, false);
+            ToolkitRasterBuffer.field_o.nameSuggestions.a(suggestions, false);
           }
           if (SecondaryNodeQueue.field_a != null) {
-            SecondaryNodeQueue.field_a.nameSuggestions.a(param1, false);
+            SecondaryNodeQueue.field_a.nameSuggestions.a(suggestions, false);
           }
-          if (param0 != 256) {
+          if (guard != 256) {
             field_y = (int[]) null;
           }
           return;
@@ -98,8 +98,8 @@ final class InwardSparkParticle extends TimedSceneEffect {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_9_0 = var2;
-          stackIn_9_1 = new StringBuilder().append("as.E(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_9_1 = new StringBuilder().append("as.E(").append(guard).append(',');
+          if (suggestions == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";

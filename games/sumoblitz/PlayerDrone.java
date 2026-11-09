@@ -3,7 +3,7 @@
  */
 final class PlayerDrone extends Drone {
     static String[] reconnectStatusFrames;
-    static int field_T;
+    static int tooltipHideGrace;
 
     PlayerDrone(int xQ8, int yQ8) {
         super(0, 0, xQ8, yQ8);
@@ -47,6 +47,6 @@ final class PlayerDrone extends Drone {
 
     static {
         reconnectStatusFrames = new String[]{"Connection lost - attempting to reconnect", "Connection lost - attempting to reconnect.", "Connection lost - attempting to reconnect..", "Connection lost - attempting to reconnect..."};
-        field_T = 10;
+        tooltipHideGrace = 10;
     }
 }

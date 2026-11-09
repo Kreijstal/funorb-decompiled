@@ -269,7 +269,7 @@ final class AlternateUsernameCredentials extends UsernameCredentials {
             AlternateUsernameCredentials.b(-2, -71, 69);
           }
           var4 = (String) null;
-          stackIn_3_0 = CachedTextLayout.a(param2, 0, param0, 0, false, 72, (String) null);
+          stackIn_3_0 = CachedTextLayout.pollAccountFormRequest(param2, 0, param0, 0, false, 72, (String) null);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

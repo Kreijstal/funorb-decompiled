@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class IntroMeshProjection {
-    static boolean field_d;
+    static boolean tooltipHidden;
     static int field_a;
     static ToolkitSprite[] field_e;
     static boolean[] threeLifeCompletions;
@@ -261,7 +261,7 @@ final class IntroMeshProjection {
     }
 
     static {
-        field_d = false;
+        tooltipHidden = false;
         field_f = new int[8192];
         threeLifeCompletions = new boolean[25];
         cancelText = "Cancel";

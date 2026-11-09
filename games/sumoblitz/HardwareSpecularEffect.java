@@ -11,7 +11,7 @@ final class HardwareSpecularEffect extends ShaderEffect {
     static String noHighscoresText;
 
     final void refreshState(boolean lighting, byte guard) {
-        this.toolkit.a((byte) -83, LegacyOpenGlRenderBufferSet.REPLACE, SlowBurstParticle.MODULATE);
+        this.toolkit.setTextureCombineOperations((byte) -83, LegacyOpenGlRenderBufferSet.REPLACE, SlowBurstParticle.MODULATE);
         if (guard > -71) {
           this.specularMaps = (CubeTexture[]) null;
         }
@@ -49,27 +49,27 @@ final class HardwareSpecularEffect extends ShaderEffect {
           this.toolkit.setAlphaCombineSource(LegacyVertexAttribute.TEXTURE, 0, true);
         } else {
           this.toolkit.setActiveTextureUnit(1, -109);
-          this.toolkit.a((GpuTexture) null, 102);
+          this.toolkit.bindTexture((GpuTexture) null, 102);
           this.toolkit.applyTexCoordGeneration(13754, LegacyOpenGlRenderBufferSet.DISABLED);
           this.toolkit.resetTextureTransform(0);
           if (!this.useTwoUnits) {
-            this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
+            this.toolkit.setTextureCombineOperations((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
             this.toolkit.setColorCombineSource(LegacyVertexAttribute.TEXTURE, 0, 0);
             this.toolkit.setActiveTextureUnit(2, -117);
-            this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
+            this.toolkit.setTextureCombineOperations((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
             this.toolkit.setColorCombineSource(LegacyVertexAttribute.TEXTURE, 0, 0);
             this.toolkit.setColorCombineSource(FontMetrics.PREVIOUS, 1, 0);
             this.toolkit.setAlphaCombineSource(LegacyVertexAttribute.TEXTURE, 0, true);
-            this.toolkit.a((GpuTexture) null, 110);
+            this.toolkit.bindTexture((GpuTexture) null, 110);
           } else {
-            this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
+            this.toolkit.setTextureCombineOperations((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
             this.toolkit.setColorCombineSource(LegacyVertexAttribute.TEXTURE, 0, 0);
             this.toolkit.setAlphaCombineSource(LegacyVertexAttribute.TEXTURE, 0, true);
           }
           this.toolkit.setActiveTextureUnit(0, -126);
           this.active = false;
         }
-        this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
+        this.toolkit.setTextureCombineOperations((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
     }
 
     final void setParameters(int guard, int parameters1, int parameters0) {
@@ -78,7 +78,7 @@ final class HardwareSpecularEffect extends ShaderEffect {
         }
         if (this.active) {
           this.toolkit.setActiveTextureUnit(1, -122);
-          this.toolkit.a(this.specularMaps[-1 + parameters0], 93);
+          this.toolkit.bindTexture(this.specularMaps[-1 + parameters0], 93);
           this.toolkit.setActiveTextureUnit(0, -119);
         }
     }
@@ -134,8 +134,8 @@ final class HardwareSpecularEffect extends ShaderEffect {
           return;
         }
         try {
-          this.toolkit.a(texture, 125);
-          this.toolkit.h(84, combineMode);
+          this.toolkit.bindTexture(texture, 125);
+          this.toolkit.setTextureCombineMode(84, combineMode);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ng.E(" + combineMode + ',' + guard + ',' + (texture != null ? "{...}" : "null") + ')');
         }
@@ -222,9 +222,9 @@ final class HardwareSpecularEffect extends ShaderEffect {
               }
             }
             this.specularMaps = new CubeTexture[3];
-            this.specularMaps[0] = this.toolkit.a(64, (byte) -105, var27, false);
-            this.specularMaps[1] = this.toolkit.a(64, (byte) -84, var28, false);
-            this.specularMaps[2] = this.toolkit.a(64, (byte) 122, var29, false);
+            this.specularMaps[0] = this.toolkit.createCubeTexture(64, (byte) -105, var27, false);
+            this.specularMaps[1] = this.toolkit.createCubeTexture(64, (byte) -84, var28, false);
+            this.specularMaps[2] = this.toolkit.createCubeTexture(64, (byte) 122, var29, false);
             return;
           }
           return;
@@ -259,16 +259,16 @@ final class HardwareSpecularEffect extends ShaderEffect {
             var6.setRotationX((byte) 79, 1024);
             this.toolkit.setTextureTransformMode(LegacyRidgedWaterNoise.TEXTURE_COUNT3, 28880);
             if (!this.useTwoUnits) {
-              this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, LegacyOpenGlRenderBufferSet.REPLACE);
+              this.toolkit.setTextureCombineOperations((byte) -83, SlowBurstParticle.MODULATE, LegacyOpenGlRenderBufferSet.REPLACE);
               this.toolkit.setColorCombineSource(FontMetrics.PREVIOUS, 0, guard ^ 20186);
               this.toolkit.setActiveTextureUnit(2, guard - 20295);
-              this.toolkit.a((byte) -83, LegacyOpenGlRenderBufferSet.REPLACE, LoginForm.ADD);
+              this.toolkit.setTextureCombineOperations((byte) -83, LegacyOpenGlRenderBufferSet.REPLACE, LoginForm.ADD);
               this.toolkit.setColorCombineSource(FontMetrics.PREVIOUS, 0, 0);
               this.toolkit.setColorCombineSource((byte) 102, 1, true, false, FontMetrics.PREVIOUS);
               this.toolkit.setAlphaCombineSource(NetworkResourceRequest.PRIMARY_COLOR, 0, true);
-              this.toolkit.a(this.toolkit.field_D, guard - 20079);
+              this.toolkit.bindTexture(this.toolkit.field_D, guard - 20079);
             } else {
-              this.toolkit.a((byte) -83, LegacyOpenGlRenderBufferSet.REPLACE, LoginForm.ADD);
+              this.toolkit.setTextureCombineOperations((byte) -83, LegacyOpenGlRenderBufferSet.REPLACE, LoginForm.ADD);
               this.toolkit.setColorCombineSource((byte) -66, 0, true, false, LegacyVertexAttribute.TEXTURE);
               this.toolkit.setAlphaCombineSource(NetworkResourceRequest.PRIMARY_COLOR, 0, true);
             }

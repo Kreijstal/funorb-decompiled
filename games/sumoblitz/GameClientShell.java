@@ -7,7 +7,7 @@ abstract class GameClientShell extends GameApplet {
     private int secondaryGamePort;
     static int field_t;
     private int language;
-    static int field_s;
+    static int tooltipDelay;
     private boolean members;
     private boolean trustedJagexHost;
     static String waitingForSoundEffectsText;
@@ -782,7 +782,7 @@ abstract class GameClientShell extends GameApplet {
     }
 
     static {
-        field_s = 50;
+        tooltipDelay = 50;
         waitingForSoundEffectsText = "Waiting for sound effects";
     }
 }

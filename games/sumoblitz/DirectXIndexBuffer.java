@@ -64,7 +64,7 @@ final class DirectXIndexBuffer implements IndexBuffer {
           if (this.buffer != null) {
             this.buffer.release(-22671);
           }
-          this.buffer = this.toolkit.field_Cc.a(this.sizeBytes, var4, GpuDataType.UNSIGNED_SHORT != this.indexType ? 102 : 101, var3, this.buffer);
+          this.buffer = this.toolkit.field_Cc.createIndexBuffer(this.sizeBytes, var4, GpuDataType.UNSIGNED_SHORT != this.indexType ? 102 : 101, var3, this.buffer);
           this.capacityBytes = this.sizeBytes;
         }
         if (guard < -67) {

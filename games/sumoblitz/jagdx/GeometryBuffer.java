@@ -14,12 +14,12 @@ public class GeometryBuffer extends jaclib.peer.NativeHeapPeer implements jaclib
 
     private final native void putub(byte[] param0, int param1, int param2, int param3);
 
-    public final void a(byte[] param0, int param1, int param2, int param3) {
-        if (((param0 == null ? 1 : 0) | (param1 < 0 ? 1 : 0) | (param0.length < param1 + param3 ? 1 : 0) | (0 > param2 ? 1 : 0)) != 0) {
+    public final void putBytes(byte[] source, int sourceOffset, int destinationOffset, int length) {
+        if (((source == null ? 1 : 0) | (sourceOffset < 0 ? 1 : 0) | (source.length < sourceOffset + length ? 1 : 0) | (0 > destinationOffset ? 1 : 0)) != 0) {
           throw new jagdx.DirectXException();
         }
-        if (param3 + param2 <= this.getSize()) {
-          this.putub(param0, param1, param2, param3);
+        if (length + destinationOffset <= this.getSize()) {
+          this.putub(source, sourceOffset, destinationOffset, length);
           return;
         }
         throw new jagdx.DirectXException();

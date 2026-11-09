@@ -585,7 +585,7 @@ public final class Sumoblitz extends GameClientShell {
                   break;
                 }
               } else {
-                AccountServiceResult.a(4, (byte) 30, var3_ref_hg);
+                AccountServiceResult.queueAndSendProgressUpdate(4, (byte) 30, var3_ref_hg);
               }
             } while (var4 == 0);
           }
@@ -882,7 +882,7 @@ public final class Sumoblitz extends GameClientShell {
                                   VertexAttribute.b(0);
                                   return false;
                                 }
-                                NameSuggestionsPanel.setLoadingProgress(20, 60.0f, ProxySocketConnector.a(ArenaPad.waitingForLevelsText, (byte) 85, 0, GraphicsToolkitManager.field_d, LegacyOpenGlNormalMapGenerator.loadingLevelsText));
+                                NameSuggestionsPanel.setLoadingProgress(20, 60.0f, ProxySocketConnector.archiveLoadingMessage(ArenaPad.waitingForLevelsText, (byte) 85, 0, GraphicsToolkitManager.field_d, LegacyOpenGlNormalMapGenerator.loadingLevelsText));
                                 return false;
                               }
                               NameSuggestionsPanel.setLoadingProgress(20, 55.0f, CubeMapSource.groupLoadingMessage("", UiStyle.field_Z, ToolkitRasterBuffer.waitingForFontsText, true, HuffmanDecoder.loadingFontsText));
@@ -894,7 +894,7 @@ public final class Sumoblitz extends GameClientShell {
                           NameSuggestionsPanel.setLoadingProgress(20, 40.0f, CubeMapSource.groupLoadingMessage("", ForceFieldRingEffect.field_s, LegacyOpenGlPostProcessEffect.waitingForMusicText, true, MessageDialog.loadingMusicText));
                           return false;
                         }
-                        NameSuggestionsPanel.setLoadingProgress(20, 30.0f, ProxySocketConnector.a(ContentTransitionPhase.waitingForInstrumentsText, (byte) 85, 0, ByteArrayCacheNode.field_r, ArchiveIndex.loadingInstrumentsText));
+                        NameSuggestionsPanel.setLoadingProgress(20, 30.0f, ProxySocketConnector.archiveLoadingMessage(ContentTransitionPhase.waitingForInstrumentsText, (byte) 85, 0, ByteArrayCacheNode.field_r, ArchiveIndex.loadingInstrumentsText));
                         return false;
                       }
                       NameSuggestionsPanel.setLoadingProgress(20, 20.0f, CubeMapSource.groupLoadingMessage("", MenuSelectionController.field_c, GameClientShell.waitingForSoundEffectsText, true, VertexLayout.loadingSoundEffectsText));
@@ -1870,7 +1870,7 @@ public final class Sumoblitz extends GameClientShell {
           PrimitiveType.releaseStatics(-99);
           OpenGlVertexBuffer.releaseStatics(false);
           IntList.releaseStatics(-26791);
-          CachedTextLayout.d(0);
+          CachedTextLayout.releaseLayoutSpriteData(0);
           DraggableWidget.releaseStatics(-1);
           DropTargetWidget.releaseStatics((byte) 118);
           ScrollPane.releaseStatics(param0);
@@ -1882,7 +1882,7 @@ public final class Sumoblitz extends GameClientShell {
           SecondaryNodeDeque.releaseStatics(-103);
           CacheReferenceNode.releaseStatics((byte) 54);
           StrongCacheReference.releaseStatics(24);
-          ProxySocketConnector.b(1183);
+          ProxySocketConnector.releaseProxyStatics(1183);
           AudioFilter.releaseStatics();
           SpriteSheetSupport.releaseStatics(28322);
           SoftwareTransform3D.releaseStatics(-1);

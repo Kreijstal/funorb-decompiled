@@ -6,9 +6,9 @@ package jaggl;
 import java.util.*;
 
 public class OpenGL {
-    private static Hashtable a;
-    private Hashtable b;
-    private Thread c;
+    private static Hashtable threadContexts;
+    private Hashtable extensions;
+    private Thread thread;
     long peer;
 
     public final native static void glFramebufferTexture3DEXT(int param0, int param1, int param2, int param3, int param4, int param5);
@@ -225,13 +225,13 @@ public class OpenGL {
 
     public final native static void glVertexPointer(int param0, int param1, int param2, long param3);
 
-    public final boolean a(String param0) {
+    public final boolean supportsExtension(String extension) {
         int var4_int = 0;
         String var5 = null;
-        if (this.b != null) {
-          return this.b.containsKey(param0);
+        if (this.extensions != null) {
+          return this.extensions.containsKey(extension);
         }
-        this.b = new Hashtable();
+        this.extensions = new Hashtable();
         String var2 = jaggl.OpenGL.glGetString(7939);
         int var3 = 0;
         while (true) {
@@ -241,16 +241,16 @@ public class OpenGL {
           }
           var5 = var2.substring(var3, var4_int).trim();
           if (var5.length() != 0) {
-            this.b.put(var5, var5);
+            this.extensions.put(var5, var5);
           }
           var3 = var4_int + 1;
         }
         String var4 = var2.substring(var3).trim();
         if (var4.length() != 0) {
-          this.b.put(var4, var4);
-          return this.b.containsKey(param0);
+          this.extensions.put(var4, var4);
+          return this.extensions.containsKey(extension);
         }
-        return this.b.containsKey(param0);
+        return this.extensions.containsKey(extension);
     }
 
     public final native static void glFinish();
@@ -321,13 +321,13 @@ public class OpenGL {
 
     public final native static void glScissor(int param0, int param1, int param2, int param3);
 
-    public final synchronized boolean a() {
-        if (this.c != Thread.currentThread()) {
+    public final synchronized boolean detachFromThread() {
+        if (this.thread != Thread.currentThread()) {
           return false;
         }
         this.detachPeer();
-        a.remove(this.c);
-        this.c = null;
+        threadContexts.remove(this.thread);
+        this.thread = null;
         return true;
     }
 
@@ -387,18 +387,18 @@ public class OpenGL {
 
     public final native static void glGetObjectParameterivARB(long param0, int param1, int[] param2, int param3);
 
-    public final synchronized boolean b() {
+    public final synchronized boolean attachToThread() {
         Thread var1 = Thread.currentThread();
         if (!this.attachPeer()) {
           return false;
         }
-        jaggl.OpenGL var2 = (jaggl.OpenGL) (a.put(var1, this));
+        jaggl.OpenGL var2 = (jaggl.OpenGL) (threadContexts.put(var1, this));
         if (var2 == null) {
-          this.c = var1;
+          this.thread = var1;
           return true;
         }
-        var2.c = null;
-        this.c = var1;
+        var2.thread = null;
+        this.thread = var1;
         return true;
     }
 
@@ -425,6 +425,6 @@ public class OpenGL {
     public final native static long glCreateShaderObjectARB(int param0);
 
     static {
-        a = new Hashtable();
+        threadContexts = new Hashtable();
     }
 }

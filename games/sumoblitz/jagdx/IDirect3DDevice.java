@@ -4,50 +4,50 @@
 package jagdx;
 
 public final class IDirect3DDevice extends jaclib.peer.IUnknown {
-    private static float[] a;
-    private jaclib.peer.PeerReferenceManager b;
+    private static float[] constantVector;
+    private jaclib.peer.PeerReferenceManager references;
 
-    public final int a(int param0, boolean param1) {
-        return this.SetRenderStateb(param0, param1);
+    public final int setRenderState(int state, boolean enabled) {
+        return this.SetRenderStateb(state, enabled);
     }
 
-    public final int a(int param0, float[] param1) {
-        return this.SetVertexShaderConstantF(param0, param1, param1.length / 4);
+    public final int setVertexShaderConstants(int startRegister, float[] values) {
+        return this.SetVertexShaderConstantF(startRegister, values, values.length / 4);
     }
 
     private final native int _CreateIndexBuffer(int param0, int param1, int param2, int param3, jagdx.IDirect3DIndexBuffer param4);
 
     private final native int _CreateDepthStencilSurface(int param0, int param1, int param2, int param3, int param4, boolean param5, jagdx.IDirect3DSurface param6);
 
-    public final jagdx.IDirect3DVertexDeclaration a(jagdx.VertexElementCollection param0, jagdx.IDirect3DVertexDeclaration param1) {
-        if (param1 != null) {
-          param1.release(-22671);
+    public final jagdx.IDirect3DVertexDeclaration createVertexDeclaration(jagdx.VertexElementCollection elements, jagdx.IDirect3DVertexDeclaration declaration) {
+        if (declaration != null) {
+          declaration.release(-22671);
         } else {
-          param1 = new jagdx.IDirect3DVertexDeclaration(this.b);
+          declaration = new jagdx.IDirect3DVertexDeclaration(this.references);
         }
-        int var3 = this._CreateVertexDeclaration(param0, param1);
+        int var3 = this._CreateVertexDeclaration(elements, declaration);
         if (!jagdx.HResult.failed(var3, -1)) {
-          return param1;
+          return declaration;
         }
         throw new jagdx.DirectXException(String.valueOf(var3));
     }
 
-    public final int a(int param0, float param1, float param2, float param3, float param4) {
-        a[3] = param4;
-        a[1] = param2;
-        a[0] = param1;
-        a[2] = param3;
-        return this.SetPixelShaderConstantF(param0, a, 1);
+    public final int setPixelShaderConstant(int register, float x, float y, float z, float w) {
+        constantVector[3] = w;
+        constantVector[1] = y;
+        constantVector[0] = x;
+        constantVector[2] = z;
+        return this.SetPixelShaderConstantF(register, constantVector, 1);
     }
 
     public final native int SetPixelShader(jagdx.IDirect3DPixelShader param0);
 
-    public final jagdx.IDirect3DVertexShader a(byte[] param0) {
-        if (param0 == null) {
+    public final jagdx.IDirect3DVertexShader createVertexShader(byte[] bytecode) {
+        if (bytecode == null) {
           return null;
         }
-        jagdx.IDirect3DVertexShader var2 = new jagdx.IDirect3DVertexShader(this.b);
-        int var3 = this._CreateVertexShader(param0, var2);
+        jagdx.IDirect3DVertexShader var2 = new jagdx.IDirect3DVertexShader(this.references);
+        int var3 = this._CreateVertexShader(bytecode, var2);
         if (jagdx.HResult.failed(var3, -1)) {
           throw new jagdx.DirectXException(String.valueOf(var3));
         }
@@ -60,9 +60,9 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
 
     public final native int SetScissorRect(int param0, int param1, int param2, int param3);
 
-    public final jagdx.IDirect3DVertexBuffer a(int param0, int param1, int param2, int param3, jagdx.IDirect3DVertexBuffer param4) {
+    public final jagdx.IDirect3DVertexBuffer createVertexBuffer(int param0, int param1, int param2, int param3, jagdx.IDirect3DVertexBuffer param4) {
         if (param4 == null) {
-          param4 = new jagdx.IDirect3DVertexBuffer(this.b);
+          param4 = new jagdx.IDirect3DVertexBuffer(this.references);
         } else {
           param4.release(-22671);
         }
@@ -77,12 +77,12 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
 
     public final native int _CreateVolumeTexture(int param0, int param1, int param2, int param3, int param4, int param5, int param6, jagdx.IDirect3DVolumeTexture param7);
 
-    public final jagdx.IDirect3DPixelShader b(byte[] param0) {
-        if (param0 == null) {
+    public final jagdx.IDirect3DPixelShader createPixelShader(byte[] bytecode) {
+        if (bytecode == null) {
           return null;
         }
-        jagdx.IDirect3DPixelShader var2 = new jagdx.IDirect3DPixelShader(this.b);
-        int var3 = this._CreatePixelShader(param0, var2);
+        jagdx.IDirect3DPixelShader var2 = new jagdx.IDirect3DPixelShader(this.references);
+        int var3 = this._CreatePixelShader(bytecode, var2);
         if (!jagdx.HResult.failed(var3, -1)) {
           return var2;
         }
@@ -95,8 +95,8 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
 
     public final native int SetViewport(int param0, int param1, int param2, int param3, float param4, float param5);
 
-    public final jagdx.IDirect3DVolumeTexture a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        jagdx.IDirect3DVolumeTexture var8 = new jagdx.IDirect3DVolumeTexture(this.b);
+    public final jagdx.IDirect3DVolumeTexture createVolumeTexture(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+        jagdx.IDirect3DVolumeTexture var8 = new jagdx.IDirect3DVolumeTexture(this.references);
         int var9 = this._CreateVolumeTexture(param0, param1, param2, param3, param4, param5, param6, var8);
         if (!jagdx.HResult.failed(var9, -1)) {
           return var8;
@@ -108,11 +108,11 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
 
     IDirect3DDevice(jaclib.peer.PeerReferenceManager param0) {
         super(param0);
-        this.b = param0;
+        this.references = param0;
     }
 
-    public final jagdx.IDirect3DSurface a(int param0, int param1, int param2, int param3, int param4, boolean param5) {
-        jagdx.IDirect3DSurface var7 = new jagdx.IDirect3DSurface(this.b);
+    public final jagdx.IDirect3DSurface createRenderTarget(int param0, int param1, int param2, int param3, int param4, boolean param5) {
+        jagdx.IDirect3DSurface var7 = new jagdx.IDirect3DSurface(this.references);
         int var8 = this._CreateRenderTarget(param0, param1, param2, param3, param4, param5, var7);
         if (!jagdx.HResult.failed(var8, -1)) {
           return var7;
@@ -140,24 +140,24 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
 
     private final native int _CreateVertexBuffer(int param0, int param1, int param2, int param3, jagdx.IDirect3DVertexBuffer param4);
 
-    public final int b(int param0, float param1, float param2, float param3, float param4) {
-        a[2] = param3;
-        a[1] = param2;
-        a[0] = param1;
-        a[3] = param4;
-        return this.SetVertexShaderConstantF(param0, a, 1);
+    public final int setVertexShaderConstant(int register, float x, float y, float z, float w) {
+        constantVector[2] = z;
+        constantVector[1] = y;
+        constantVector[0] = x;
+        constantVector[3] = w;
+        return this.SetVertexShaderConstantF(register, constantVector, 1);
     }
 
-    public final int a(int param0, float param1) {
-        return this.SetRenderStatef(param0, param1);
+    public final int setRenderState(int state, float value) {
+        return this.SetRenderStatef(state, value);
     }
 
     public final native int Reset(jagdx.D3DPRESENT_PARAMETERS param0);
 
     private final native int _GetDepthStencilSurface(jagdx.IDirect3DSurface param0);
 
-    public final jagdx.IDirect3DSurface b() {
-        jagdx.IDirect3DSurface var1 = new jagdx.IDirect3DSurface(this.b);
+    public final jagdx.IDirect3DSurface getDepthStencilSurface() {
+        jagdx.IDirect3DSurface var1 = new jagdx.IDirect3DSurface(this.references);
         int var2 = this._GetDepthStencilSurface(var1);
         if (!jagdx.HResult.failed(var2, -1)) {
           return var1;
@@ -165,9 +165,9 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
         throw new jagdx.DirectXException(String.valueOf(var2));
     }
 
-    public final jagdx.IDirect3DSwapChain b(int param0) {
-        jagdx.IDirect3DSwapChain var2 = new jagdx.IDirect3DSwapChain(this.b);
-        int var3 = this._GetSwapChain(param0, var2);
+    public final jagdx.IDirect3DSwapChain getSwapChain(int index) {
+        jagdx.IDirect3DSwapChain var2 = new jagdx.IDirect3DSwapChain(this.references);
+        int var3 = this._GetSwapChain(index, var2);
         if (jagdx.HResult.failed(var3, -1)) {
           throw new jagdx.DirectXException(String.valueOf(var3));
         }
@@ -190,8 +190,8 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
 
     public final native boolean LightEnable(int param0, boolean param1);
 
-    public final jagdx.IDirect3DCubeTexture a(int param0, int param1, int param2, int param3, int param4) {
-        jagdx.IDirect3DCubeTexture var6 = new jagdx.IDirect3DCubeTexture(this.b);
+    public final jagdx.IDirect3DCubeTexture createCubeTexture(int param0, int param1, int param2, int param3, int param4) {
+        jagdx.IDirect3DCubeTexture var6 = new jagdx.IDirect3DCubeTexture(this.references);
         int var7 = this._CreateCubeTexture(param0, param1, param2, param3, param4, var6);
         if (!jagdx.HResult.failed(var7, -1)) {
           return var6;
@@ -211,9 +211,9 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
 
     public final native int SetSamplerState(int param0, int param1, int param2);
 
-    public final jagdx.IDirect3DSurface c(int param0) {
-        jagdx.IDirect3DSurface var2 = new jagdx.IDirect3DSurface(this.b);
-        int var3 = this._GetRenderTarget(param0, var2);
+    public final jagdx.IDirect3DSurface getRenderTarget(int index) {
+        jagdx.IDirect3DSurface var2 = new jagdx.IDirect3DSurface(this.references);
+        int var3 = this._GetRenderTarget(index, var2);
         if (!jagdx.HResult.failed(var3, -1)) {
           return var2;
         }
@@ -224,8 +224,8 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
 
     public final native int BeginScene();
 
-    public final jagdx.IDirect3DTexture a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        jagdx.IDirect3DTexture var7 = new jagdx.IDirect3DTexture(this.b);
+    public final jagdx.IDirect3DTexture createTexture(int param0, int param1, int param2, int param3, int param4, int param5) {
+        jagdx.IDirect3DTexture var7 = new jagdx.IDirect3DTexture(this.references);
         int var8 = this._CreateTexture(param0, param1, param2, param3, param4, param5, var7);
         if (jagdx.HResult.failed(var8, -1)) {
           throw new jagdx.DirectXException(String.valueOf(var8));
@@ -237,11 +237,11 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
 
     public final native int TestCooperativeLevel();
 
-    public final jagdx.IDirect3DIndexBuffer a(int param0, int param1, int param2, int param3, jagdx.IDirect3DIndexBuffer param4) {
+    public final jagdx.IDirect3DIndexBuffer createIndexBuffer(int param0, int param1, int param2, int param3, jagdx.IDirect3DIndexBuffer param4) {
         if (param4 != null) {
           param4.release(-22671);
         } else {
-          param4 = new jagdx.IDirect3DIndexBuffer(this.b);
+          param4 = new jagdx.IDirect3DIndexBuffer(this.references);
         }
         int var6 = this._CreateIndexBuffer(param0, param1, param2, param3, param4);
         if (jagdx.HResult.failed(var6, -1)) {
@@ -251,6 +251,6 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
     }
 
     static {
-        a = new float[4];
+        constantVector = new float[4];
     }
 }

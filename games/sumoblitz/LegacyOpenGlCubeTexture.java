@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class LegacyOpenGlCubeTexture extends LegacyOpenGlTexture {
-    static String field_l;
+    static String tooltipText;
     private int framebufferAttachment;
     static SpriteData[] field_n;
     private int framebufferTarget;
@@ -14,7 +14,7 @@ final class LegacyOpenGlCubeTexture extends LegacyOpenGlTexture {
         if (param0 != 1) {
           return;
         }
-        field_l = null;
+        tooltipText = null;
     }
 
     public final void detachFramebuffer(int guard) {
@@ -82,7 +82,7 @@ final class LegacyOpenGlCubeTexture extends LegacyOpenGlTexture {
     }
 
     static {
-        field_l = null;
+        tooltipText = null;
         field_o = new int[8192];
     }
 }

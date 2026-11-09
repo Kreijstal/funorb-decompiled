@@ -4,12 +4,12 @@
 final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
     private jaggl.OpenGL field_Yc;
     private IntrusiveDeque field_Kc;
-    private IntrusiveDeque field_Gc;
-    private IntrusiveDeque field_Zc;
+    private IntrusiveDeque buffersToDelete;
+    private IntrusiveDeque texturesToDelete;
     private IntrusiveDeque field_Xc;
     private IntrusiveDeque field_Vc;
-    private IntrusiveDeque field_Pc;
-    private IntrusiveDeque field_Fc;
+    private IntrusiveDeque programsToDelete;
+    private IntrusiveDeque shaderObjectsToDelete;
     private boolean field_Dc;
     private boolean field_Lc;
     private OpenGlVertexBuffer[] field_zc;
@@ -68,7 +68,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         super.applyPointLights(-120);
     }
 
-    final Object a(java.awt.Canvas param0, int param1) {
+    final Object createSurface(java.awt.Canvas canvas, int guard) {
         long var3_long = 0L;
         RuntimeException var3 = null;
         TextureFormat var5 = null;
@@ -78,10 +78,10 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_long = this.field_Yc.prepareSurface(param0);
-          if (param1 != 3) {
+          var3_long = this.field_Yc.prepareSurface(canvas);
+          if (guard != 3) {
             var5 = (TextureFormat) null;
-            this.a((GpuDataType) null, (TextureFormat) null, -119, -113, (byte) -97);
+            this.createTexture2D((GpuDataType) null, (TextureFormat) null, -119, -113, (byte) -97);
           }
           if (var3_long == -1L) {
             throw new RuntimeException();
@@ -93,12 +93,12 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           var3 = decompiledCaughtException;
           stackIn_9_0 = var3;
           stackIn_9_1 = new StringBuilder().append("on.EA(");
-          if (param0 == null) {
+          if (canvas == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -166,20 +166,20 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
     }
 
     final void applyAlphaCombineOperation(int guard) {
-        jaggl.OpenGL.glTexEnvi(8960, 34162, ShaderEffect.glTextureCombineOperation(-9267, this.field_B[this.activeTextureUnit]));
+        jaggl.OpenGL.glTexEnvi(8960, 34162, ShaderEffect.glTextureCombineOperation(-9267, this.alphaCombineOperations[this.activeTextureUnit]));
         if (guard >= -80) {
-          this.b(true);
+          this.applyFogParameters(true);
         }
     }
 
-    final synchronized void a(int param0, long param1) {
+    final synchronized void queueShaderObjectDeletion(int guard, long objectHandle) {
         IntrusiveNode var4 = new IntrusiveNode();
-        if (param0 != 33984) {
+        if (guard != 33984) {
           int[] var5 = (int[]) null;
           this.drawPixels(-105, -54, 124, -38, (int[]) null, -85, -29);
         }
-        var4.key = param1;
-        this.field_Fc.addLast(var4, (byte) 39);
+        var4.key = objectHandle;
+        this.shaderObjectsToDelete.addLast(var4, (byte) 39);
     }
 
     final void applyFogEnabled(byte guard) {
@@ -215,8 +215,8 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         var4 = Sumoblitz.field_L ? 1 : 0;
         timeMillis = timeMillis & 2147483647;
         var2 = 0;
-        while (!this.field_Gc.isEmpty((byte) -100)) {
-          var5 = (IntNode) (this.field_Gc.removeFirst(9));
+        while (!this.buffersToDelete.isEmpty((byte) -100)) {
+          var5 = (IntNode) (this.buffersToDelete.removeFirst(9));
           incrementValue$5 = var2;
           var2++;
           SceneryParticle.field_A[incrementValue$5] = (int)var5.key;
@@ -231,8 +231,8 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           jaggl.OpenGL.glDeleteBuffersARB(var2, SceneryParticle.field_A, 0);
           var2 = 0;
         }
-        while (!this.field_Zc.isEmpty((byte) -105)) {
-          var6 = (IntNode) (this.field_Zc.removeFirst(9));
+        while (!this.texturesToDelete.isEmpty((byte) -105)) {
+          var6 = (IntNode) (this.texturesToDelete.removeFirst(9));
           incrementValue$4 = var2;
           var2++;
           SceneryParticle.field_A[incrementValue$4] = (int)var6.key;
@@ -304,12 +304,12 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
             var9 = (IntNode) (this.field_Kc.removeFirst(9));
             jaggl.OpenGL.glDeleteLists((int)var9.key, var9.value);
           }
-          while (!this.field_Pc.isEmpty((byte) -68)) {
-            var10 = this.field_Pc.removeFirst(9);
+          while (!this.programsToDelete.isEmpty((byte) -68)) {
+            var10 = this.programsToDelete.removeFirst(9);
             jaggl.OpenGL.glDeleteProgramARB((int)var10.key);
           }
-          while (!this.field_Fc.isEmpty((byte) -95)) {
-            var11 = this.field_Fc.removeFirst(9);
+          while (!this.shaderObjectsToDelete.isEmpty((byte) -95)) {
+            var11 = this.shaderObjectsToDelete.removeFirst(9);
             jaggl.OpenGL.glDeleteObjectARB(var11.key);
           }
           while (!this.field_Kc.isEmpty((byte) -68)) {
@@ -328,12 +328,12 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
             var9 = (IntNode) (this.field_Kc.removeFirst(9));
             jaggl.OpenGL.glDeleteLists((int)var9.key, var9.value);
           }
-          while (!this.field_Pc.isEmpty((byte) -68)) {
-            var10 = this.field_Pc.removeFirst(9);
+          while (!this.programsToDelete.isEmpty((byte) -68)) {
+            var10 = this.programsToDelete.removeFirst(9);
             jaggl.OpenGL.glDeleteProgramARB((int)var10.key);
           }
-          while (!this.field_Fc.isEmpty((byte) -95)) {
-            var11 = this.field_Fc.removeFirst(9);
+          while (!this.shaderObjectsToDelete.isEmpty((byte) -95)) {
+            var11 = this.shaderObjectsToDelete.removeFirst(9);
             jaggl.OpenGL.glDeleteObjectARB(var11.key);
           }
           while (!this.field_Kc.isEmpty((byte) -68)) {
@@ -349,7 +349,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         super.updateTime(timeMillis);
     }
 
-    final Texture2D a(int param0, int param1, boolean param2, int param3, float[] param4, int param5, byte param6, TextureFormat param7) {
+    final Texture2D createFloatTexture2D(int offset, int width, boolean mipmapped, int rowLength, float[] pixels, int height, byte guard, TextureFormat format) {
         RuntimeException var9 = null;
         OpenGlTexture2D var10 = null;
         OpenGlTexture2D stackIn_7_0 = null;
@@ -362,34 +362,34 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param6 > -61) {
+          if (guard > -61) {
             this.setMultisampling(66, false);
           }
-          if (!this.field_Ic && (!IntegerMath.isSingleBitOrZero(param1, -116) ||
-            !IntegerMath.isSingleBitOrZero(param5, -122))) {
+          if (!this.field_Ic && (!IntegerMath.isSingleBitOrZero(width, -116) ||
+            !IntegerMath.isSingleBitOrZero(height, -122))) {
             if (this.field_bd) {
-              stackIn_10_0 = new OpenGlRectangleTexture(this, param7, param1, param5, param4, param0, param3);
+              stackIn_10_0 = new OpenGlRectangleTexture(this, format, width, height, pixels, offset, rowLength);
               return (Texture2D) ((Object) stackIn_10_0);
             }
-            var10 = new OpenGlTexture2D(this, param7, GpuDataType.FLOAT, LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, param1), LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, param5));
-            var10.uploadFloats(0, param7, param5, 0, 14137, param0, param1, param4, param3);
+            var10 = new OpenGlTexture2D(this, format, GpuDataType.FLOAT, LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, width), LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, height));
+            var10.uploadFloats(0, format, height, 0, 14137, offset, width, pixels, rowLength);
             stackIn_12_0 = var10;
             return (Texture2D) ((Object) stackIn_12_0);
           }
-          stackIn_7_0 = new OpenGlTexture2D(this, param7, param1, param5, param2, param4, param0, param3);
+          stackIn_7_0 = new OpenGlTexture2D(this, format, width, height, mipmapped, pixels, offset, rowLength);
           return (Texture2D) ((Object) stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
           stackIn_15_0 = var9;
-          stackIn_15_1 = new StringBuilder().append("on.SC(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_15_1 = new StringBuilder().append("on.SC(").append(offset).append(',').append(width).append(',').append(mipmapped).append(',').append(rowLength).append(',');
+          if (pixels == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param5).append(',').append(param6).append(',');
-          if (param7 == null) {
+          stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(height).append(',').append(guard).append(',');
+          if (format == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
@@ -398,7 +398,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final void b(boolean param0) {
+    final void applyFogParameters(boolean guard) {
         this.field_Tb = (float)(-this.field_Nb + this.field_Yb);
         this.field_E = this.field_Tb - (float)this.field_Kb;
         if (this.field_E < (float)this.field_oc) {
@@ -407,7 +407,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         jaggl.OpenGL.glFogf(2915, this.field_E);
         jaggl.OpenGL.glFogf(2916, this.field_Tb);
         NetworkResourceRequest.field_v[1] = (float)LegacyOpenGlPostProcessManager.bitwiseAnd(65280, this.field_C) / 65280.0f;
-        if (!param0) {
+        if (!guard) {
           return;
         }
         NetworkResourceRequest.field_v[2] = (float)LegacyOpenGlPostProcessManager.bitwiseAnd(255, this.field_C) / 255.0f;
@@ -428,7 +428,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         jaggl.OpenGL.glViewport(this.field_r, this.field_y, this.field_rb, this.field_Sb);
     }
 
-    final boolean a(byte param0, GpuDataType param1, TextureFormat param2) {
+    final boolean supportsTexture3D(byte guard, GpuDataType dataType, TextureFormat format) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_4_0 = null;
@@ -438,20 +438,20 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = -85 / ((70 - param0) / 42);
+          var4_int = -85 / ((70 - guard) / 42);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_4_0 = var4;
-          stackIn_4_1 = new StringBuilder().append("on.HC(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_4_1 = new StringBuilder().append("on.HC(").append(guard).append(',');
+          if (dataType == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
           stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',');
-          if (param2 == null) {
+          if (format == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
@@ -468,7 +468,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
         if (guard != 1) {
           byte[] var4 = (byte[]) null;
-          this.a((TextureFormat) null, -18, -125, 65, (byte[]) null, (byte) -115, -5, true);
+          this.createByteTexture2D((TextureFormat) null, -18, -125, 65, (byte[]) null, (byte) -115, -5, true);
         }
     }
 
@@ -649,7 +649,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         if (guard >= -74) {
           this.field_ad = 99;
         }
-        jaggl.OpenGL.glTexEnvi(8960, 34161, ShaderEffect.glTextureCombineOperation(-9267, this.field_K[this.activeTextureUnit]));
+        jaggl.OpenGL.glTexEnvi(8960, 34161, ShaderEffect.glTextureCombineOperation(-9267, this.colorCombineOperations[this.activeTextureUnit]));
     }
 
     final void restoreCanvasTarget() {
@@ -657,8 +657,8 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
 
     final void drawPixels(int x, int y, int width, int height, int[] pixels, int offset, int stride) {
         try {
-          this.L(-25);
-          this.a((GpuTexture) null, 126);
+          this.usePixelProjection(-25);
+          this.bindTexture((GpuTexture) null, 126);
           this.setBlendMode(0, 13);
           this.resetModelTransform(1);
           jaggl.OpenGL.glPixelZoom(1.0f, -1.0f);
@@ -678,7 +678,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
     final void applyTextureMatrix(int guard) {
         jaggl.OpenGL.glMatrixMode(5890);
         if (guard != 26803) {
-          this.field_Zc = (IntrusiveDeque) null;
+          this.texturesToDelete = (IntrusiveDeque) null;
         }
         if (HotspotTextWidget.TEXTURE_TRANSFORM_DISABLED != this.textureTransformModes[this.activeTextureUnit]) {
           jaggl.OpenGL.glLoadMatrixf(this.textureTransforms[this.activeTextureUnit].writeColumnMajor4x4(-107, StripedProgressWidget.field_y), 0);
@@ -691,7 +691,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
     final void bindRenderTarget(RenderTarget target) {
     }
 
-    final CubeTexture a(int param0, byte param1, int[][] param2, boolean param3) {
+    final CubeTexture createCubeTexture(int size, byte guard, int[][] facePixels, boolean mipmapped) {
         int var5_int = 0;
         RuntimeException var5 = null;
         OpenGlCubeTexture stackIn_1_0 = null;
@@ -700,20 +700,20 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = 57 % ((-23 - param1) / 48);
-          stackIn_1_0 = new OpenGlCubeTexture(this, param0, param3, param2);
+          var5_int = 57 % ((-23 - guard) / 48);
+          stackIn_1_0 = new OpenGlCubeTexture(this, size, mipmapped, facePixels);
           return (CubeTexture) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_4_0 = var5;
-          stackIn_4_1 = new StringBuilder().append("on.SD(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_4_1 = new StringBuilder().append("on.SD(").append(size).append(',').append(guard).append(',');
+          if (facePixels == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(mipmapped).append(')').toString());
         }
     }
 
@@ -758,19 +758,19 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         var29 = null;
         var30 = null;
         this.field_Kc = new IntrusiveDeque();
-        this.field_Gc = new IntrusiveDeque();
-        this.field_Zc = new IntrusiveDeque();
+        this.buffersToDelete = new IntrusiveDeque();
+        this.texturesToDelete = new IntrusiveDeque();
         this.field_Xc = new IntrusiveDeque();
         this.field_Vc = new IntrusiveDeque();
-        this.field_Pc = new IntrusiveDeque();
-        this.field_Fc = new IntrusiveDeque();
+        this.programsToDelete = new IntrusiveDeque();
+        this.shaderObjectsToDelete = new IntrusiveDeque();
         this.field_zc = new OpenGlVertexBuffer[16];
         this.field_Qc = new jaggl.MapBuffer();
         this.field_Bc = new jaggl.MapBuffer();
         try {
           try {
             this.field_Yc = param0;
-            this.field_Yc.b();
+            this.field_Yc.attachToThread();
             this.field_Wc = jaggl.OpenGL.glGetString(7936).toLowerCase();
             this.field_Rc = jaggl.OpenGL.glGetString(7937).toLowerCase();
             if (this.field_Wc.indexOf("microsoft") == -1 &&
@@ -793,10 +793,10 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
               if (this.field_Oc < 12) {
                 throw new RuntimeException("");
               }
-              if (!this.field_Yc.a("GL_ARB_multitexture")) {
+              if (!this.field_Yc.supportsExtension("GL_ARB_multitexture")) {
                 throw new RuntimeException("");
               }
-              if (!this.field_Yc.a("GL_ARB_texture_env_combine")) {
+              if (!this.field_Yc.supportsExtension("GL_ARB_texture_env_combine")) {
                 throw new RuntimeException("");
               }
               var26 = new int[1];
@@ -806,18 +806,18 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
                 throw new RuntimeException("");
               }
               this.field_bc = 8;
-              this.field_Nc = this.field_Yc.a("GL_ARB_vertex_buffer_object");
-              this.field_Yc.a("GL_ARB_multisample");
-              this.field_bd = this.field_Yc.a("GL_ARB_texture_rectangle");
-              this.field_W = this.field_Yc.a("GL_ARB_texture_cube_map");
-              this.field_Ic = this.field_Yc.a("GL_ARB_texture_non_power_of_two");
-              this.field_Eb = this.field_Yc.a("GL_EXT_texture3D");
-              this.field_Jc = this.field_Yc.a("GL_ARB_vertex_shader");
-              this.field_Ac = this.field_Yc.a("GL_ARB_vertex_program");
-              this.field_Mc = this.field_Yc.a("GL_ARB_fragment_shader");
-              this.field_Yc.a("GL_ARB_fragment_program");
+              this.field_Nc = this.field_Yc.supportsExtension("GL_ARB_vertex_buffer_object");
+              this.field_Yc.supportsExtension("GL_ARB_multisample");
+              this.field_bd = this.field_Yc.supportsExtension("GL_ARB_texture_rectangle");
+              this.field_W = this.field_Yc.supportsExtension("GL_ARB_texture_cube_map");
+              this.field_Ic = this.field_Yc.supportsExtension("GL_ARB_texture_non_power_of_two");
+              this.field_Eb = this.field_Yc.supportsExtension("GL_EXT_texture3D");
+              this.field_Jc = this.field_Yc.supportsExtension("GL_ARB_vertex_shader");
+              this.field_Ac = this.field_Yc.supportsExtension("GL_ARB_vertex_program");
+              this.field_Mc = this.field_Yc.supportsExtension("GL_ARB_fragment_shader");
+              this.field_Yc.supportsExtension("GL_ARB_fragment_program");
               this.field_Hc = new int[this.textureUnitCount];
-              if (jaclib.memory.Stream.b()) {
+              if (jaclib.memory.Stream.isNativeBigEndian()) {
                 stackIn_21_1 = 33639;
               } else {
                 stackIn_21_1 = 5121;
@@ -886,7 +886,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
                     this.field_Eb = false;
                   }
                 }
-                this.field_bd = this.field_bd & this.field_Yc.a("GL_ARB_half_float_pixel");
+                this.field_bd = this.field_bd & this.field_Yc.supportsExtension("GL_ARB_half_float_pixel");
               }
               if (-1 != this.field_Wc.indexOf("intel")) {
               }
@@ -949,15 +949,15 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           jaggl.OpenGL.glDisable(2929);
         }
         if (guard <= 19) {
-          this.field_Fc = (IntrusiveDeque) null;
+          this.shaderObjectsToDelete = (IntrusiveDeque) null;
         }
     }
 
     final void bindSpriteTarget(ToolkitSprite sprite, boolean withBuffer) {
     }
 
-    final void J(int param0) {
-        if (param0 != 0) {
+    final void uploadDirectionalLights(int guard) {
+        if (guard != 0) {
           this.field_Oc = 37;
         }
     }
@@ -1001,11 +1001,11 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final synchronized void a(byte param0, int param1, int param2) {
-        IntNode var4 = new IntNode(param1);
-        var4.key = (long)param2;
-        this.field_Gc.addLast((IntrusiveNode) (var4), (byte) 39);
-        if (param0 != -99) {
+    final synchronized void queueBufferDeletion(byte guard, int byteLength, int bufferId) {
+        IntNode var4 = new IntNode(byteLength);
+        var4.key = (long)bufferId;
+        this.buffersToDelete.addLast((IntrusiveNode) (var4), (byte) 39);
+        if (guard != -99) {
           this.clear(-33);
         }
     }
@@ -1022,7 +1022,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final Texture2D a(GpuDataType param0, TextureFormat param1, int param2, int param3, byte param4) {
+    final Texture2D createTexture2D(GpuDataType dataType, TextureFormat format, int height, int width, byte guard) {
         RuntimeException var6 = null;
         OpenGlRectangleTexture stackIn_8_0 = null;
         OpenGlTexture2D stackIn_10_0 = null;
@@ -1034,37 +1034,37 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param4 > -99) {
+          if (guard > -99) {
             this.restoreCanvasTarget();
           }
-          if (!this.field_Ic && (!IntegerMath.isSingleBitOrZero(param3, -124) ||
-            !IntegerMath.isSingleBitOrZero(param2, -128))) {
+          if (!this.field_Ic && (!IntegerMath.isSingleBitOrZero(width, -124) ||
+            !IntegerMath.isSingleBitOrZero(height, -128))) {
             if (!this.field_bd) {
-              stackIn_10_0 = new OpenGlTexture2D(this, param1, param0, LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, param3), LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, param2));
+              stackIn_10_0 = new OpenGlTexture2D(this, format, dataType, LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, width), LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, height));
               return (Texture2D) ((Object) stackIn_10_0);
             }
-            stackIn_8_0 = new OpenGlRectangleTexture(this, param1, param0, param3, param2);
+            stackIn_8_0 = new OpenGlRectangleTexture(this, format, dataType, width, height);
             return (Texture2D) ((Object) stackIn_8_0);
           }
-          stackIn_12_0 = new OpenGlTexture2D(this, param1, param0, param3, param2);
+          stackIn_12_0 = new OpenGlTexture2D(this, format, dataType, width, height);
           return (Texture2D) ((Object) stackIn_12_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_15_0 = var6;
           stackIn_15_1 = new StringBuilder().append("on.NB(");
-          if (param0 == null) {
+          if (dataType == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
           stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',');
-          if (param1 == null) {
+          if (format == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(height).append(',').append(width).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -1142,17 +1142,17 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         super.resetDriverState(guard);
     }
 
-    final synchronized void a(int param0, byte param1) {
+    final synchronized void queueProgramDeletion(int programId, byte guard) {
         IntrusiveNode var3 = new IntrusiveNode();
-        var3.key = (long)param0;
-        if (param1 != -96) {
-          this.b((byte) -39);
+        var3.key = (long)programId;
+        if (guard != -96) {
+          this.pixelCenterOffset((byte) -39);
         }
-        this.field_Pc.addLast(var3, (byte) 39);
+        this.programsToDelete.addLast(var3, (byte) 39);
     }
 
-    final void c(int param0, int param1) {
-        if (param1 < 83) {
+    final void setTextureCoordinateIndex(int index, int guard) {
+        if (guard < 83) {
           this.field_Jc = false;
         }
     }
@@ -1169,7 +1169,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         var7 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (guard != 0) {
-            this.field_Pc = (IntrusiveDeque) null;
+            this.programsToDelete = (IntrusiveDeque) null;
           }
           if (type == PasswordValidator.LINES) {
             var6 = 2 * primitiveCount;
@@ -1214,7 +1214,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final boolean a(GpuDataType param0, TextureFormat param1, int param2) {
+    final boolean supportsTexture2D(GpuDataType dataType, TextureFormat format, int guard) {
         RuntimeException var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -1223,7 +1223,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2 == 6) {
+          if (guard == 6) {
             return true;
           }
           this.field_Dc = false;
@@ -1233,40 +1233,40 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           var4 = decompiledCaughtException;
           stackIn_6_0 = var4;
           stackIn_6_1 = new StringBuilder().append("on.SE(");
-          if (param0 == null) {
+          if (dataType == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
           stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
-          if (param1 == null) {
+          if (format == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    final synchronized void a(int param0, int param1, byte param2) {
-        if (param2 != 23) {
+    final synchronized void queueTextureDeletion(int byteLength, int textureId, byte guard) {
+        if (guard != 23) {
           return;
         }
-        IntNode var4 = new IntNode(param0);
-        var4.key = (long)param1;
-        this.field_Zc.addLast((IntrusiveNode) (var4), (byte) 39);
+        IntNode var4 = new IntNode(byteLength);
+        var4.key = (long)textureId;
+        this.texturesToDelete.addLast((IntrusiveNode) (var4), (byte) 39);
     }
 
     final void applyModelMatrix(int guard) {
-        this.t((byte) 68);
+        this.applyModelViewMatrix((byte) 68);
         if (guard != 0) {
-          this.field_Gc = (IntrusiveDeque) null;
+          this.buffersToDelete = (IntrusiveDeque) null;
         }
     }
 
     final IndexBuffer createIndexBuffer(int guard, boolean dynamic) {
         if (guard != 3) {
-          this.a(-106, (byte) -119, (int[][]) null, false);
+          this.createCubeTexture(-106, (byte) -119, (int[][]) null, false);
         }
         return (IndexBuffer) ((Object) new OpenGlIndexBuffer(this, GpuDataType.UNSIGNED_SHORT, dynamic));
     }
@@ -1306,8 +1306,8 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         return null;
     }
 
-    final float b(byte param0) {
-        if (param0 < 125) {
+    final float pixelCenterOffset(byte guard) {
+        if (guard < 125) {
           this.field_Yc = (jaggl.OpenGL) null;
         }
         return 0.0f;
@@ -1325,7 +1325,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final VertexLayout a(VertexStreamLayout[] param0, byte param1) {
+    final VertexLayout createVertexLayout(VertexStreamLayout[] streams, byte guard) {
         RuntimeException var3 = null;
         OpenGlVertexLayout stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -1333,26 +1333,26 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 < 6) {
+          if (guard < 6) {
             this.field_Kc = (IntrusiveDeque) null;
           }
-          stackIn_3_0 = new OpenGlVertexLayout(param0);
+          stackIn_3_0 = new OpenGlVertexLayout(streams);
           return (VertexLayout) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
           stackIn_6_1 = new StringBuilder().append("on.V(");
-          if (param0 == null) {
+          if (streams == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    final Texture2D a(boolean param0, int param1, int[] param2, int param3, int param4, int param5, int param6) {
+    final Texture2D createIntTexture2D(boolean mipmapped, int rowLength, int[] pixels, int width, int guard, int offset, int height) {
         RuntimeException var8 = null;
         OpenGlTexture2D var9 = null;
         OpenGlTexture2D stackIn_7_0 = null;
@@ -1363,33 +1363,33 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param4 > -41) {
+          if (guard > -41) {
             this.unbindTexture((byte) 14);
           }
-          if (!this.field_Ic && (!IntegerMath.isSingleBitOrZero(param3, -118) ||
-            !IntegerMath.isSingleBitOrZero(param6, -113))) {
+          if (!this.field_Ic && (!IntegerMath.isSingleBitOrZero(width, -118) ||
+            !IntegerMath.isSingleBitOrZero(height, -113))) {
             if (this.field_bd) {
-              stackIn_10_0 = new OpenGlRectangleTexture(this, param3, param6, param2, param5, param1);
+              stackIn_10_0 = new OpenGlRectangleTexture(this, width, height, pixels, offset, rowLength);
               return (Texture2D) ((Object) stackIn_10_0);
             }
-            var9 = new OpenGlTexture2D(this, BeveledTextInputRenderer.RGBA, GpuDataType.UNSIGNED_BYTE, LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, param3), LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, param6));
-            var9.uploadInts(param6, false, param5, param3, param1, param2, 0, 0);
+            var9 = new OpenGlTexture2D(this, BeveledTextInputRenderer.RGBA, GpuDataType.UNSIGNED_BYTE, LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, width), LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, height));
+            var9.uploadInts(height, false, offset, width, rowLength, pixels, 0, 0);
             stackIn_12_0 = var9;
             return (Texture2D) ((Object) stackIn_12_0);
           }
-          stackIn_7_0 = new OpenGlTexture2D(this, param3, param6, param0, param2, param5, param1);
+          stackIn_7_0 = new OpenGlTexture2D(this, width, height, mipmapped, pixels, offset, rowLength);
           return (Texture2D) ((Object) stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
           stackIn_15_0 = var8;
-          stackIn_15_1 = new StringBuilder().append("on.WD(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_15_1 = new StringBuilder().append("on.WD(").append(mipmapped).append(',').append(rowLength).append(',');
+          if (pixels == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(width).append(',').append(guard).append(',').append(offset).append(',').append(height).append(')').toString());
         }
     }
 
@@ -1404,7 +1404,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final Texture2D a(TextureFormat param0, int param1, int param2, int param3, byte[] param4, byte param5, int param6, boolean param7) {
+    final Texture2D createByteTexture2D(TextureFormat format, int width, int height, int rowLength, byte[] pixels, byte guard, int offset, boolean mipmapped) {
         int var9_int = 0;
         RuntimeException var9 = null;
         OpenGlTexture2D var10 = null;
@@ -1418,37 +1418,37 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var9_int = 108 % ((50 - param5) / 44);
-          if (!this.field_Ic && (!IntegerMath.isSingleBitOrZero(param1, -107) ||
-            !IntegerMath.isSingleBitOrZero(param2, -111))) {
+          var9_int = 108 % ((50 - guard) / 44);
+          if (!this.field_Ic && (!IntegerMath.isSingleBitOrZero(width, -107) ||
+            !IntegerMath.isSingleBitOrZero(height, -111))) {
             if (this.field_bd) {
-              stackIn_8_0 = new OpenGlRectangleTexture(this, param0, param1, param2, param4, param6, param3);
+              stackIn_8_0 = new OpenGlRectangleTexture(this, format, width, height, pixels, offset, rowLength);
               return (Texture2D) ((Object) stackIn_8_0);
             }
-            var10 = new OpenGlTexture2D(this, param0, GpuDataType.UNSIGNED_BYTE, LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, param1), LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, param2));
-            var10.uploadBytes(param0, 0, (byte) 77, param6, param4, param2, param1, 0, param3);
+            var10 = new OpenGlTexture2D(this, format, GpuDataType.UNSIGNED_BYTE, LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, width), LegacyOpenGlVertexBuffer.nextPowerOfTwo(false, height));
+            var10.uploadBytes(format, 0, (byte) 77, offset, pixels, height, width, 0, rowLength);
             stackIn_10_0 = var10;
             return (Texture2D) ((Object) stackIn_10_0);
           }
-          stackIn_5_0 = new OpenGlTexture2D(this, param0, param1, param2, param7, param4, param6, param3);
+          stackIn_5_0 = new OpenGlTexture2D(this, format, width, height, mipmapped, pixels, offset, rowLength);
           return (Texture2D) ((Object) stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
           stackIn_13_0 = var9;
           stackIn_13_1 = new StringBuilder().append("on.UA(");
-          if (param0 == null) {
+          if (format == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(width).append(',').append(height).append(',').append(rowLength).append(',');
+          if (pixels == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(guard).append(',').append(offset).append(',').append(mipmapped).append(')').toString());
         }
     }
 
@@ -1490,7 +1490,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
     final ShaderEffect createShaderEffect(int guard, int effectId) {
         int var3;
         if (guard != 0) {
-          this.field_Pc = (IntrusiveDeque) null;
+          this.programsToDelete = (IntrusiveDeque) null;
         }
         var3 = effectId;
         if (var3 == 3) {
@@ -1510,7 +1510,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         if (guard != -26911) {
           this.field_Wc = (String) null;
         }
-        this.t((byte) 68);
+        this.applyModelViewMatrix((byte) 68);
     }
 
     final void applyProjectionMatrix(int guard) {
@@ -1549,13 +1549,13 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         jaggl.OpenGL.glDepthMask(stackIn_6_0);
     }
 
-    private final void t(byte param0) {
+    private final void applyModelViewMatrix(byte guard) {
         int var3;
         var3 = Sumoblitz.field_L ? 1 : 0;
         if (this.field_Dc) {
           jaggl.OpenGL.glPopMatrix();
         }
-        if (param0 != 68) {
+        if (guard != 68) {
           return;
         }
         if (!this.projectionMode.usesViewTransform(-20011)) {
@@ -1570,7 +1570,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
             jaggl.OpenGL.glLoadMatrixf(this.viewTransform.writeColumnMajor4x4(-63, StripedProgressWidget.field_y), 0);
             this.field_Uc = true;
             this.applyLightPositions(-114);
-            this.applyPointLights(param0 ^ -25);
+            this.applyPointLights(guard ^ -25);
           }
           if (!this.modelIdentity) {
             jaggl.OpenGL.glPushMatrix();
@@ -1585,7 +1585,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
     final void dispose() {
         super.dispose();
         if (this.field_Yc != null) {
-          this.field_Yc.a();
+          this.field_Yc.detachFromThread();
           this.field_Yc.release();
           this.field_Yc = null;
         }
@@ -1627,7 +1627,7 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final Texture3D a(boolean param0, TextureFormat param1, int param2, int param3, byte[] param4, int param5) {
+    final Texture3D createTexture3D(boolean guard, TextureFormat format, int depth, int height, byte[] pixels, int width) {
         RuntimeException var7 = null;
         OpenGlTexture3D stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -1637,28 +1637,28 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param0) {
+          if (!guard) {
             this.field_Wc = (String) null;
           }
-          stackIn_3_0 = new OpenGlTexture3D(this, param1, param5, param3, param2, param4);
+          stackIn_3_0 = new OpenGlTexture3D(this, format, width, height, depth, pixels);
           return (Texture3D) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
           stackIn_6_0 = var7;
-          stackIn_6_1 = new StringBuilder().append("on.PE(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("on.PE(").append(guard).append(',');
+          if (format == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(depth).append(',').append(height).append(',');
+          if (pixels == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param5).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(width).append(')').toString());
         }
     }
 
@@ -1674,14 +1674,14 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         this.resetClip(-16088);
         jaggl.OpenGL.glReadBuffer(1028);
         jaggl.OpenGL.glDrawBuffer(1029);
-        this.d(false);
+        this.useIdentityProjection(false);
         this.setFogAllowed(false, -32);
         this.setLightingEnabled(101, false);
         this.setDepthTestEnabled(47, false);
         this.setDepthWriteEnabled(false, 4);
-        this.a((GpuTexture) null, 120);
-        this.a(-2, false, 50, false);
-        this.h(40, 1);
+        this.bindTexture((GpuTexture) null, 120);
+        this.bindMaterialTexture(-2, false, 50, false);
+        this.setTextureCombineMode(40, 1);
         this.setBlendMode(0, 13);
         jaggl.OpenGL.glMatrixMode(5889);
         jaggl.OpenGL.glLoadIdentity();

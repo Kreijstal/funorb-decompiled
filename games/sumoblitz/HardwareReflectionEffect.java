@@ -35,7 +35,7 @@ final class HardwareReflectionEffect extends ShaderEffect {
     }
 
     final void refreshState(boolean lighting, byte guard) {
-        this.toolkit.a((byte) -83, LegacyOpenGlRenderBufferSet.REPLACE, SlowBurstParticle.MODULATE);
+        this.toolkit.setTextureCombineOperations((byte) -83, LegacyOpenGlRenderBufferSet.REPLACE, SlowBurstParticle.MODULATE);
         if (guard > -71) {
           this.active = false;
         }
@@ -641,10 +641,10 @@ final class HardwareReflectionEffect extends ShaderEffect {
         }
         if (lighting) {
           this.toolkit.setActiveTextureUnit(1, -122);
-          this.toolkit.a(var3, 91);
+          this.toolkit.bindTexture(var3, 91);
           this.toolkit.applyTexCoordGeneration(guard - 6432, LabeledWidget.REFLECTION_MAP);
           this.toolkit.setActiveTextureUnit(1, -114);
-          this.toolkit.a((byte) -83, LegacyOpenGlRenderBufferSet.REPLACE, OpenGlBuffer.INTERPOLATE);
+          this.toolkit.setTextureCombineOperations((byte) -83, LegacyOpenGlRenderBufferSet.REPLACE, OpenGlBuffer.INTERPOLATE);
           this.toolkit.setColorCombineSource((byte) 101, 2, true, false, FontMetrics.PREVIOUS);
           this.toolkit.setAlphaCombineSource(NetworkResourceRequest.PRIMARY_COLOR, 0, true);
           var4 = this.toolkit.textureTransform(0);
@@ -675,40 +675,40 @@ final class HardwareReflectionEffect extends ShaderEffect {
           if (this.active) {
             this.toolkit.setActiveTextureUnit(1, -111);
             this.toolkit.applyTexCoordGeneration(13754, LegacyOpenGlRenderBufferSet.DISABLED);
-            this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
+            this.toolkit.setTextureCombineOperations((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
             this.toolkit.setColorCombineSource(AccountRequestState.CONSTANT, 2, 0);
             this.toolkit.setAlphaCombineSource(LegacyVertexAttribute.TEXTURE, 0, true);
             this.toolkit.resetTextureTransform(0);
-            this.toolkit.a((GpuTexture) null, 98);
+            this.toolkit.bindTexture((GpuTexture) null, 98);
             this.toolkit.setActiveTextureUnit(0, -120);
             this.active = false;
           } else {
             this.toolkit.setAlphaCombineSource(LegacyVertexAttribute.TEXTURE, 0, !guard ? true : false);
           }
-          this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
+          this.toolkit.setTextureCombineOperations((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
           return;
         }
         this.active = false;
         if (this.active) {
           this.toolkit.setActiveTextureUnit(1, -111);
           this.toolkit.applyTexCoordGeneration(13754, LegacyOpenGlRenderBufferSet.DISABLED);
-          this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
+          this.toolkit.setTextureCombineOperations((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
           this.toolkit.setColorCombineSource(AccountRequestState.CONSTANT, 2, 0);
           this.toolkit.setAlphaCombineSource(LegacyVertexAttribute.TEXTURE, 0, !guard ? true : false);
           this.toolkit.resetTextureTransform(0);
-          this.toolkit.a((GpuTexture) null, 98);
+          this.toolkit.bindTexture((GpuTexture) null, 98);
           this.toolkit.setActiveTextureUnit(0, -120);
           this.active = false;
         } else {
           this.toolkit.setAlphaCombineSource(LegacyVertexAttribute.TEXTURE, 0, !guard ? true : false);
         }
-        this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
+        this.toolkit.setTextureCombineOperations((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
     }
 
     final void bindTexture(int combineMode, int guard, GpuTexture texture) {
         try {
-          this.toolkit.a(texture, 113);
-          this.toolkit.h(guard ^ 18900, combineMode);
+          this.toolkit.bindTexture(texture, 113);
+          this.toolkit.setTextureCombineMode(guard ^ 18900, combineMode);
           if (guard != 18834) {
             CharSequence[] var5 = (CharSequence[]) null;
             HardwareReflectionEffect.a(true, (CharSequence[]) null);

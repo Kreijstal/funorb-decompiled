@@ -17,7 +17,7 @@ final class OpenGlShader {
     }
 
     protected final void finalize() throws Throwable {
-        this.toolkit.a(33984, this.shaderHandle);
+        this.toolkit.queueShaderObjectDeletion(33984, this.shaderHandle);
         super.finalize();
     }
 

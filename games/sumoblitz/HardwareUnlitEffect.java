@@ -239,11 +239,11 @@ final class HardwareUnlitEffect extends ShaderEffect {
 
     final void bindTexture(int combineMode, int guard, GpuTexture texture) {
         try {
-          this.toolkit.a(texture, 106);
+          this.toolkit.bindTexture(texture, 106);
           if (guard != 18834) {
             field_f = -50;
           }
-          this.toolkit.h(109, combineMode);
+          this.toolkit.setTextureCombineMode(109, combineMode);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "oc.E(" + combineMode + ',' + guard + ',' + (texture != null ? "{...}" : "null") + ')');
         }

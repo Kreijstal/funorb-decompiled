@@ -7,9 +7,9 @@ class LegacyOpenGlClientBuffer {
 
     LegacyOpenGlClientBuffer(LegacyOpenGlGraphicsToolkit renderer, byte[] initialData, int byteLength) {
         this.toolkit = renderer;
-        this.buffer = (jaclib.memory.Buffer) ((Object) this.toolkit.field_pb.a(byteLength, false));
+        this.buffer = (jaclib.memory.Buffer) ((Object) this.toolkit.field_pb.allocate(byteLength, false));
         if (initialData != null) {
-          this.buffer.a(initialData, 0, 0, byteLength);
+          this.buffer.putBytes(initialData, 0, 0, byteLength);
         }
     }
 }

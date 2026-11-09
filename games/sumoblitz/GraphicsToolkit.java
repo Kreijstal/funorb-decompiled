@@ -38,7 +38,7 @@ abstract class GraphicsToolkit {
             return stackIn_6_0;
           }
           if (backend == 1) {
-            stackIn_9_0 = HardwareGraphicsToolkit.a(textures, canvas, samples, 27541);
+            stackIn_9_0 = HardwareGraphicsToolkit.createLegacyOpenGlToolkit(textures, canvas, samples, 27541);
             return stackIn_9_0;
           }
           if (5 == backend) {

@@ -96,7 +96,7 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
     }
 
     final void refreshState(boolean lighting, byte guard) {
-        this.toolkit.a((byte) -83, LoginForm.ADD, LegacyOpenGlRenderBufferSet.REPLACE);
+        this.toolkit.setTextureCombineOperations((byte) -83, LoginForm.ADD, LegacyOpenGlRenderBufferSet.REPLACE);
         if (guard >= -71) {
           OpenGlTransparentWaterEffect.d(-46);
         }
@@ -110,11 +110,11 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
         }
         if (this.field_f.useVolumeTextures) {
           var4_float = (float)(this.toolkit.field_kc % 4000) / 4000.0f;
-          this.toolkit.a(this.field_f.animatedVolume, 96);
+          this.toolkit.bindTexture(this.field_f.animatedVolume, 96);
           jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var4_float, 0.0f, 0.0f, 1.0f);
         } else {
           var4 = 16 * (this.toolkit.field_kc % 4000) / 4000;
-          this.toolkit.a(this.field_f.animatedSlices[var4], 114);
+          this.toolkit.bindTexture(this.field_f.animatedSlices[var4], 114);
           jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, 0.0f, 0.0f, 0.0f, 1.0f);
         }
     }

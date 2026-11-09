@@ -60,7 +60,7 @@ final class LoginDialogState {
           var5_int = HardwareTextureCache.bitLength((-param4 + param3) * 3, (byte) -115);
           var6 = 3 * param4;
           var7 = -10 + var5_int;
-          HardwareGraphicsToolkit.C(-114);
+          HardwareGraphicsToolkit.clearIntroDepthBuckets(-114);
           if (0 < param1.field_E &&
             null != param1.field_a) {
             LegacyOpenGlGraphicsHeap.clearIntroFaceGroups((byte) 71);

@@ -24,11 +24,11 @@ final class FallbackShaderEffect extends ShaderEffect {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          this.toolkit.a(texture, guard - 18711);
+          this.toolkit.bindTexture(texture, guard - 18711);
           if (guard != 18834) {
             FallbackShaderEffect.d(true);
           }
-          this.toolkit.h(74, combineMode);
+          this.toolkit.setTextureCombineMode(74, combineMode);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

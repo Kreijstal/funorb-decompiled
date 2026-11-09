@@ -133,7 +133,7 @@ final class HardwareBitmapFont extends ToolkitFont {
               }
             }
           }
-          this.field_e = param0.a(var39, var6Lifetime1, false, -97, var6Lifetime1);
+          this.field_e = param0.createIntTexture2D(var39, var6Lifetime1, false, -97, var6Lifetime1);
           this.field_c = false;
         } else {
           var35 = new byte[var6Lifetime1 * var6Lifetime1];
@@ -176,16 +176,16 @@ final class HardwareBitmapFont extends ToolkitFont {
               }
             }
           }
-          if (!param0.a(GpuDataType.UNSIGNED_BYTE, IntrusiveNodeHashTable.ALPHA, 6)) {
+          if (!param0.supportsTexture2D(GpuDataType.UNSIGNED_BYTE, IntrusiveNodeHashTable.ALPHA, 6)) {
             var36 = new int[var35.length];
             var28 = var36;
             var8_ref_int__ = var28;
             for (var9 = 0; var9 < var35.length; var9++) {
               var8_ref_int__[var9] = var35[var9] << 24;
             }
-            this.field_e = param0.a(var36, var6Lifetime1, false, -127, var6Lifetime1);
+            this.field_e = param0.createIntTexture2D(var36, var6Lifetime1, false, -127, var6Lifetime1);
           } else {
-            this.field_e = param0.a(var35, var6Lifetime1, var6Lifetime1, IntrusiveNodeHashTable.ALPHA, 0, false);
+            this.field_e = param0.createByteTexture2D(var35, var6Lifetime1, var6Lifetime1, IntrusiveNodeHashTable.ALPHA, 0, false);
           }
           this.field_c = true;
         }
@@ -196,7 +196,7 @@ final class HardwareBitmapFont extends ToolkitFont {
         while (var7 < 4) {
           var33 = this.field_d.map(7454, true);
           if (var33 != null) {
-            var34 = this.field_f.a(true, var33);
+            var34 = this.field_f.streamForBuffer(true, var33);
             var10 = this.field_e.textureU((float)var6Lifetime1, -38) / (float)var6Lifetime1;
             var11 = this.field_e.textureV((float)var6Lifetime1, -19230) / (float)var6Lifetime1;
             var24 = 0;
@@ -213,52 +213,52 @@ final class HardwareBitmapFont extends ToolkitFont {
               var21 = var19 * var11;
               var22 = (var18 + (float)var15Lifetime1) * var10;
               var23 = (var19 + (float)var14Lifetime1) * var11;
-              if (!jaclib.memory.Stream.b()) {
-                var34.b((float)var17Lifetime1);
-                var34.b((float)var16Lifetime1);
-                var34.b(0.0f);
-                var34.b(var20);
-                var34.b(var21);
-                var34.b((float)var17Lifetime1);
-                var34.b((float)(var16Lifetime1 + var14Lifetime1));
-                var34.b(0.0f);
-                var34.b(var20);
-                var34.b(var23);
-                var34.b((float)(var17Lifetime1 + var15Lifetime1));
-                var34.b((float)(var16Lifetime1 + var14Lifetime1));
-                var34.b(0.0f);
-                var34.b(var22);
-                var34.b(var23);
-                var34.b((float)(var17Lifetime1 + var15Lifetime1));
-                var34.b((float)var16Lifetime1);
-                var34.b(0.0f);
-                var34.b(var22);
-                var34.b(var21);
+              if (!jaclib.memory.Stream.isNativeBigEndian()) {
+                var34.writeFloatLittleEndian((float)var17Lifetime1);
+                var34.writeFloatLittleEndian((float)var16Lifetime1);
+                var34.writeFloatLittleEndian(0.0f);
+                var34.writeFloatLittleEndian(var20);
+                var34.writeFloatLittleEndian(var21);
+                var34.writeFloatLittleEndian((float)var17Lifetime1);
+                var34.writeFloatLittleEndian((float)(var16Lifetime1 + var14Lifetime1));
+                var34.writeFloatLittleEndian(0.0f);
+                var34.writeFloatLittleEndian(var20);
+                var34.writeFloatLittleEndian(var23);
+                var34.writeFloatLittleEndian((float)(var17Lifetime1 + var15Lifetime1));
+                var34.writeFloatLittleEndian((float)(var16Lifetime1 + var14Lifetime1));
+                var34.writeFloatLittleEndian(0.0f);
+                var34.writeFloatLittleEndian(var22);
+                var34.writeFloatLittleEndian(var23);
+                var34.writeFloatLittleEndian((float)(var17Lifetime1 + var15Lifetime1));
+                var34.writeFloatLittleEndian((float)var16Lifetime1);
+                var34.writeFloatLittleEndian(0.0f);
+                var34.writeFloatLittleEndian(var22);
+                var34.writeFloatLittleEndian(var21);
               } else {
-                var34.a((float)var17Lifetime1);
-                var34.a((float)var16Lifetime1);
-                var34.a(0.0f);
-                var34.a(var20);
-                var34.a(var21);
-                var34.a((float)var17Lifetime1);
-                var34.a((float)(var16Lifetime1 + var14Lifetime1));
-                var34.a(0.0f);
-                var34.a(var20);
-                var34.a(var23);
-                var34.a((float)(var17Lifetime1 + var15Lifetime1));
-                var34.a((float)(var16Lifetime1 + var14Lifetime1));
-                var34.a(0.0f);
-                var34.a(var22);
-                var34.a(var23);
-                var34.a((float)(var17Lifetime1 + var15Lifetime1));
-                var34.a((float)var16Lifetime1);
-                var34.a(0.0f);
-                var34.a(var22);
-                var34.a(var21);
+                var34.writeFloatBigEndian((float)var17Lifetime1);
+                var34.writeFloatBigEndian((float)var16Lifetime1);
+                var34.writeFloatBigEndian(0.0f);
+                var34.writeFloatBigEndian(var20);
+                var34.writeFloatBigEndian(var21);
+                var34.writeFloatBigEndian((float)var17Lifetime1);
+                var34.writeFloatBigEndian((float)(var16Lifetime1 + var14Lifetime1));
+                var34.writeFloatBigEndian(0.0f);
+                var34.writeFloatBigEndian(var20);
+                var34.writeFloatBigEndian(var23);
+                var34.writeFloatBigEndian((float)(var17Lifetime1 + var15Lifetime1));
+                var34.writeFloatBigEndian((float)(var16Lifetime1 + var14Lifetime1));
+                var34.writeFloatBigEndian(0.0f);
+                var34.writeFloatBigEndian(var22);
+                var34.writeFloatBigEndian(var23);
+                var34.writeFloatBigEndian((float)(var17Lifetime1 + var15Lifetime1));
+                var34.writeFloatBigEndian((float)var16Lifetime1);
+                var34.writeFloatBigEndian(0.0f);
+                var34.writeFloatBigEndian(var22);
+                var34.writeFloatBigEndian(var21);
               }
               var24++;
             }
-            var34.a();
+            var34.flush();
             if (this.field_d.unmap(22957)) {
               return;
             }
@@ -270,13 +270,13 @@ final class HardwareBitmapFont extends ToolkitFont {
 
     final void drawGlyph(char param0, int param1, int param2, int param3, boolean param4) {
         AffineTransform3D var6;
-        this.field_f.K(0);
-        this.field_f.a(this.field_e, 110);
+        this.field_f.prepareGlyphRendering(0);
+        this.field_f.bindTexture(this.field_e, 110);
         if (!this.field_c &&
           !param4) {
-          this.field_f.a((byte) -83, LegacyOpenGlRenderBufferSet.REPLACE, LegacyOpenGlRenderBufferSet.REPLACE);
+          this.field_f.setTextureCombineOperations((byte) -83, LegacyOpenGlRenderBufferSet.REPLACE, LegacyOpenGlRenderBufferSet.REPLACE);
         } else {
-          this.field_f.a((byte) -83, SlowBurstParticle.MODULATE, LegacyOpenGlRenderBufferSet.REPLACE);
+          this.field_f.setTextureCombineOperations((byte) -83, SlowBurstParticle.MODULATE, LegacyOpenGlRenderBufferSet.REPLACE);
           this.field_f.setColorCombineSource(AccountRequestState.CONSTANT, 0, 0);
           this.field_f.setTextureConstantColor(false, param3);
         }

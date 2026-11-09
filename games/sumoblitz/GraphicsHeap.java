@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class GraphicsHeap extends IntrusiveNode {
-    static int field_k;
+    static int tooltipY;
     static int[] field_l;
 
     final static void a(byte[] param0, int[] param1, int param2, int param3, int param4) {
@@ -86,7 +86,7 @@ abstract class GraphicsHeap extends IntrusiveNode {
     }
 
     static {
-        field_k = -1;
+        tooltipY = -1;
         field_l = new int[13];
     }
 }

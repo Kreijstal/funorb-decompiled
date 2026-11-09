@@ -20,7 +20,7 @@ final class LegacyOpenGlPbuffer extends DualLinkNode {
 
     private final void close(int guard) {
         if (this.pbuffer > 0L) {
-          this.toolkit.field_y.releasePbuffer(this.pbuffer);
+          this.toolkit.context.releasePbuffer(this.pbuffer);
           this.pbuffer = 0L;
         }
         if (guard == 30611) {
@@ -69,7 +69,7 @@ final class LegacyOpenGlPbuffer extends DualLinkNode {
         try {
           this.toolkit = toolkit;
           this.pixelCount = width * height;
-          this.pbuffer = this.toolkit.field_y.createPbuffer(width, height);
+          this.pbuffer = this.toolkit.context.createPbuffer(width, height);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wh.<init>(" + (toolkit != null ? "{...}" : "null") + ',' + width + ',' + height + ')');
         }

@@ -4,17 +4,17 @@
 import java.io.*;
 
 abstract class SocketConnector {
-    int field_d;
+    int port;
     static int field_c;
     static FontMetrics field_a;
-    String field_b;
+    String host;
 
     public static void releaseStatics(int param0) {
         int var1 = 58 % ((param0 - 20) / 45);
         field_a = null;
     }
 
-    final static boolean a(boolean param0, int param1, CharSequence param2) {
+    final static boolean isAccountNameValid(boolean allowConsecutiveSeparators, int startIndex, CharSequence text) {
         int var6 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -28,31 +28,31 @@ abstract class SocketConnector {
         RuntimeException decompiledCaughtException = null;
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (param2 == null) {
+          if (text == null) {
             return false;
           }
-          var3_int = param2.length();
+          var3_int = text.length();
           if (var3_int < 1) {
             return false;
           }
           if (var3_int > 12) {
             return false;
           }
-          var4 = AccountCreationProgressDialog.normalizeAccountName(-1, param2);
+          var4 = AccountCreationProgressDialog.normalizeAccountName(-1, text);
           if (var4 != null &&
             1 <= var4.length()) {
             if (!AccountNameSupport.isNameSeparator((byte) -124, var4.charAt(0)) &&
               !AccountNameSupport.isNameSeparator((byte) -84, var4.charAt(var4.length() - 1))) {
               var5 = 0;
-              for (var6 = param1; param2.length() > var6; var6++) {
-                var7 = param2.charAt(var6);
+              for (var6 = startIndex; text.length() > var6; var6++) {
+                var7 = text.charAt(var6);
                 if (AccountNameSupport.isNameSeparator((byte) -85, (char) var7)) {
                   var5++;
                 } else {
                   var5 = 0;
                 }
                 if (var5 >= 2 &&
-                  !param0) {
+                  !allowConsecutiveSeparators) {
                   return false;
                 }
               }
@@ -68,8 +68,8 @@ abstract class SocketConnector {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_35_0 = var3;
-          stackIn_35_1 = new StringBuilder().append("g.J(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_35_1 = new StringBuilder().append("g.J(").append(allowConsecutiveSeparators).append(',').append(startIndex).append(',');
+          if (text == null) {
             stackIn_36_2 = "null";
           } else {
             stackIn_36_2 = "{...}";
@@ -177,13 +177,13 @@ abstract class SocketConnector {
         }
     }
 
-    abstract java.net.Socket b(byte param0) throws IOException;
+    abstract java.net.Socket connect(byte guard) throws IOException;
 
-    final java.net.Socket a(byte param0) throws IOException {
-        if (param0 <= 94) {
+    final java.net.Socket openDirectSocket(byte guard) throws IOException {
+        if (guard <= 94) {
           return (java.net.Socket) null;
         }
-        return new java.net.Socket(this.field_b, this.field_d);
+        return new java.net.Socket(this.host, this.port);
     }
 
     static {

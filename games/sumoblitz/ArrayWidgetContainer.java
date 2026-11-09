@@ -198,7 +198,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements CompositeWidgetM
           }
           if (this.beginDebugDescription(indent, visited, -124, output)) {
             this.appendDebugDetails(indent, (byte) -128, output, visited);
-            this.a(visited, indent, 10, output);
+            this.appendChildDebugTrees(visited, indent, 10, output);
           }
           stackIn_6_0 = (StringBuilder) (output);
           return stackIn_6_0;
@@ -421,7 +421,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements CompositeWidgetM
         }
     }
 
-    private final void a(Hashtable param0, int param1, int param2, StringBuilder param3) {
+    private final void appendChildDebugTrees(Hashtable visited, int depth, int guard, StringBuilder output) {
         int var6 = 0;
         StringBuilder discarded$6 = null;
         int var8 = 0;
@@ -443,21 +443,21 @@ abstract class ArrayWidgetContainer extends UiWidget implements CompositeWidgetM
           if (this.children == null) {
             return;
           }
-          if (param2 != 10) {
+          if (guard != 10) {
             var10 = (UiWidget) null;
             this.requestFocus((UiWidget) null, (byte) -20);
           }
           var11 = this.children;
           for (var6 = 0; var11.length > var6; var6++) {
             var7 = var11[var6];
-            discarded$6 = param3.append('\n');
-            for (var8 = 0; param1 >= var8; var8++) {
-              discarded$8 = param3.append(' ');
+            discarded$6 = output.append('\n');
+            for (var8 = 0; depth >= var8; var8++) {
+              discarded$8 = output.append(' ');
             }
             if (var7 != null) {
-              var7.appendDebugTree(1 + param1, param0, param3, 0);
+              var7.appendDebugTree(1 + depth, visited, output, 0);
             } else {
-              discarded$7 = param3.append("null");
+              discarded$7 = output.append("null");
             }
           }
           return;
@@ -466,13 +466,13 @@ abstract class ArrayWidgetContainer extends UiWidget implements CompositeWidgetM
           var5 = decompiledCaughtException;
           stackIn_17_0 = var5;
           stackIn_17_1 = new StringBuilder().append("ao.E(");
-          if (param0 == null) {
+          if (visited == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
-          stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(depth).append(',').append(guard).append(',');
+          if (output == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
@@ -481,19 +481,19 @@ abstract class ArrayWidgetContainer extends UiWidget implements CompositeWidgetM
         }
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean isPasswordLengthInvalid(String password, int guard) {
         RuntimeException var2 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != null &&
-            param0.length() >= ValidationMessageWidget.field_T) {
-            if (param0.length() > OpenGlRectangleTexture.field_k) {
+          if (password != null &&
+            password.length() >= ValidationMessageWidget.minimumPasswordLength) {
+            if (password.length() > OpenGlRectangleTexture.maximumPasswordLength) {
               return true;
             }
-            if (param1 == 30996) {
+            if (guard == 30996) {
               return false;
             }
             return true;
@@ -504,12 +504,12 @@ abstract class ArrayWidgetContainer extends UiWidget implements CompositeWidgetM
           var2 = decompiledCaughtException;
           stackIn_13_0 = var2;
           stackIn_13_1 = new StringBuilder().append("ao.D(");
-          if (param0 == null) {
+          if (password == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -636,7 +636,7 @@ abstract class ArrayWidgetContainer extends UiWidget implements CompositeWidgetM
         LINEAR = null;
         if (param0 != 0) {
           String var2 = (String) null;
-          ArrayWidgetContainer.a((String) null, -34);
+          ArrayWidgetContainer.isPasswordLengthInvalid((String) null, -34);
         }
     }
 

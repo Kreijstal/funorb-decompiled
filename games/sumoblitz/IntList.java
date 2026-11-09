@@ -32,7 +32,7 @@ final class IntList {
             return stackIn_2_0;
           }
           var8 = new LoginFieldValue(param3);
-          stackIn_4_0 = CachedTextLayout.a(var7, param2, var8, param4, param0, 21, param6);
+          stackIn_4_0 = CachedTextLayout.pollAccountFormRequest(var7, param2, var8, param4, param0, 21, param6);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -23,7 +23,7 @@ final class HardwareGraphicsHeap extends GraphicsHeap {
     }
 
     final void close(int guard) {
-        this.heap.a();
+        this.heap.close();
         if (guard != -14365) {
           TEXTURE_COUNT1 = (TextureTransformMode) null;
         }

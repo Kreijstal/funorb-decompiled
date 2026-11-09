@@ -51,7 +51,7 @@ final class LoginDialogNavigation {
             stackIn_7_0 = !(IntroFinalFrameResources.field_d >= 13);
             DraggableWidget.field_z = LegacyOpenGlEffect.accountSuccess(stackIn_7_0, 8192);
             var6 = (String[]) null;
-            InwardSparkParticle.a(256, (String[]) null);
+            InwardSparkParticle.applyAccountNameSuggestions(256, (String[]) null);
             return;
           }
           if (100 > response) {
@@ -63,7 +63,7 @@ final class LoginDialogNavigation {
             return;
           }
           var7 = suggestions;
-          InwardSparkParticle.a(256, var7);
+          InwardSparkParticle.applyAccountNameSuggestions(256, var7);
           DraggableWidget.field_z = AccountConnectionPhase.accountNameSuggestions(suggestions, 8192);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

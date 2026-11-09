@@ -5,7 +5,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
     private Sprite field_K;
     static int field_R;
     private InputValidator validator;
-    static int field_T;
+    static int minimumPasswordLength;
     private String field_U;
     private int animationTicks;
     static String dataServerFullOrText;
@@ -495,7 +495,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
     }
 
     static {
-        field_T = 5;
+        minimumPasswordLength = 5;
         dataServerFullOrText = "Data server full or too many connections from your address. Please try again in a few minutes.";
         field_P = false;
         field_R = 0;

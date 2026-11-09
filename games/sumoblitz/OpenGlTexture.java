@@ -420,7 +420,7 @@ abstract class OpenGlTexture implements GpuTexture {
     }
 
     private final void applyFilter(byte guard) {
-        this.toolkit.a((GpuTexture) (this), 112);
+        this.toolkit.bindTexture((GpuTexture) (this), 112);
         if (ArrayWidgetContainer.LINEAR == this.filter) {
           jaggl.OpenGL.glTexParameteri(this.target, 10241, this.mipmapped ? 9987 : 9729);
           jaggl.OpenGL.glTexParameteri(this.target, 10240, 9729);
@@ -501,7 +501,7 @@ abstract class OpenGlTexture implements GpuTexture {
 
     private final void close(int guard) {
         if (this.textureId > 0) {
-          this.toolkit.a(this.estimatedBytes(3), this.textureId, (byte) 23);
+          this.toolkit.queueTextureDeletion(this.estimatedBytes(3), this.textureId, (byte) 23);
           this.textureId = 0;
         }
         if (guard != 22989) {

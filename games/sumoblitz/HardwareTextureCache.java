@@ -137,7 +137,7 @@ final class HardwareTextureCache {
               stackIn_13_2 = BeveledTextInputRenderer.RGBA;
               stackIn_13_3 = 110;
               stackIn_14_4 = (var12.field_k == 0) ? false : true;
-              var4 = ((HardwareGraphicsToolkit) (Object) stackIn_13_0).a(stackIn_13_1, stackIn_13_2, (byte) stackIn_13_3, stackIn_14_4, var6, var39);
+              var4 = ((HardwareGraphicsToolkit) (Object) stackIn_13_0).createFloatTexture2D(stackIn_13_1, stackIn_13_2, (byte) stackIn_13_3, stackIn_14_4, var6, var39);
               var4.setWrap(var12.field_i, var12.field_l, true);
               this.textures.put((long)textureId, var4, (byte) 19);
               return var4;
@@ -155,7 +155,7 @@ final class HardwareTextureCache {
             stackIn_23_1 = var7;
             stackIn_23_2 = var6;
             stackIn_24_3 = (var12.field_k == 0) ? false : true;
-            var13 = ((HardwareGraphicsToolkit) (Object) stackIn_23_0).a(stackIn_23_1, stackIn_23_2, stackIn_24_3, -97, var6);
+            var13 = ((HardwareGraphicsToolkit) (Object) stackIn_23_0).createIntTexture2D(stackIn_23_1, stackIn_23_2, stackIn_24_3, -97, var6);
             var13.setWrap(var12.field_i, var12.field_l, true);
             this.textures.put((long)textureId, var13, (byte) 19);
             return var13;
@@ -166,7 +166,7 @@ final class HardwareTextureCache {
             stackIn_29_1 = var7Lifetime5;
             stackIn_29_2 = var6;
             stackIn_30_3 = (var12.field_k == 0) ? false : true;
-            var18 = ((HardwareGraphicsToolkit) (Object) stackIn_29_0).a(stackIn_29_1, stackIn_29_2, stackIn_30_3, -97, var6);
+            var18 = ((HardwareGraphicsToolkit) (Object) stackIn_29_0).createIntTexture2D(stackIn_29_1, stackIn_29_2, stackIn_30_3, -97, var6);
             var18.setWrap(var12.field_i, var12.field_l, true);
             this.textures.put((long)textureId, var18, (byte) 19);
             return var18;
@@ -177,7 +177,7 @@ final class HardwareTextureCache {
             stackIn_40_1 = var7Lifetime6;
             stackIn_40_2 = var6;
             stackIn_41_3 = (var12.field_k == 0) ? false : true;
-            var23 = ((HardwareGraphicsToolkit) (Object) stackIn_40_0).a(stackIn_40_1, stackIn_40_2, stackIn_41_3, -97, var6);
+            var23 = ((HardwareGraphicsToolkit) (Object) stackIn_40_0).createIntTexture2D(stackIn_40_1, stackIn_40_2, stackIn_41_3, -97, var6);
             var23.setWrap(var12.field_i, var12.field_l, true);
             this.textures.put((long)textureId, var23, (byte) 19);
             return var23;
@@ -187,7 +187,7 @@ final class HardwareTextureCache {
           stackIn_34_1 = var7Lifetime7;
           stackIn_34_2 = var6;
           stackIn_35_3 = (var12.field_k == 0) ? false : true;
-          var4Lifetime3 = ((HardwareGraphicsToolkit) (Object) stackIn_34_0).a(stackIn_34_1, stackIn_34_2, stackIn_35_3, -97, var6);
+          var4Lifetime3 = ((HardwareGraphicsToolkit) (Object) stackIn_34_0).createIntTexture2D(stackIn_34_1, stackIn_34_2, stackIn_35_3, -97, var6);
           var4Lifetime3.setWrap(var12.field_i, var12.field_l, true);
           this.textures.put((long)textureId, var4Lifetime3, (byte) 19);
           return var4Lifetime3;
@@ -209,7 +209,7 @@ final class HardwareTextureCache {
             stackIn_72_1 = var7Lifetime1;
             stackIn_72_2 = var6Lifetime1;
             stackIn_73_3 = (var29.field_k == 0) ? false : true;
-            var33 = ((HardwareGraphicsToolkit) (Object) stackIn_72_0).a(stackIn_72_1, stackIn_72_2, stackIn_73_3, -97, var6Lifetime1);
+            var33 = ((HardwareGraphicsToolkit) (Object) stackIn_72_0).createIntTexture2D(stackIn_72_1, stackIn_72_2, stackIn_73_3, -97, var6Lifetime1);
             var33.setWrap(var29.field_i, var29.field_l, true);
             this.textures.put((long)textureId, var33, (byte) 19);
             return var33;
@@ -220,7 +220,7 @@ final class HardwareTextureCache {
             stackIn_83_1 = var7Lifetime1Lifetime1;
             stackIn_83_2 = var6Lifetime1;
             stackIn_84_3 = (var29.field_k == 0) ? false : true;
-            var34 = ((HardwareGraphicsToolkit) (Object) stackIn_83_0).a(stackIn_83_1, stackIn_83_2, stackIn_84_3, -97, var6Lifetime1);
+            var34 = ((HardwareGraphicsToolkit) (Object) stackIn_83_0).createIntTexture2D(stackIn_83_1, stackIn_83_2, stackIn_84_3, -97, var6Lifetime1);
             var34.setWrap(var29.field_i, var29.field_l, true);
             this.textures.put((long)textureId, var34, (byte) 19);
             return var34;
@@ -230,7 +230,7 @@ final class HardwareTextureCache {
           stackIn_77_1 = var7Lifetime1Lifetime2;
           stackIn_77_2 = var6Lifetime1;
           stackIn_78_3 = (var29.field_k == 0) ? false : true;
-          var4Lifetime1 = ((HardwareGraphicsToolkit) (Object) stackIn_77_0).a(stackIn_77_1, stackIn_77_2, stackIn_78_3, -97, var6Lifetime1);
+          var4Lifetime1 = ((HardwareGraphicsToolkit) (Object) stackIn_77_0).createIntTexture2D(stackIn_77_1, stackIn_77_2, stackIn_78_3, -97, var6Lifetime1);
           var4Lifetime1.setWrap(var29.field_i, var29.field_l, true);
           this.textures.put((long)textureId, var4Lifetime1, (byte) 19);
           return var4Lifetime1;
@@ -242,7 +242,7 @@ final class HardwareTextureCache {
           stackIn_52_2 = BeveledTextInputRenderer.RGBA;
           stackIn_52_3 = 110;
           stackIn_53_4 = (var29.field_k == 0) ? false : true;
-          var4Lifetime2 = ((HardwareGraphicsToolkit) (Object) stackIn_52_0).a(stackIn_52_1, stackIn_52_2, (byte) stackIn_52_3, stackIn_53_4, var6Lifetime1, var40);
+          var4Lifetime2 = ((HardwareGraphicsToolkit) (Object) stackIn_52_0).createFloatTexture2D(stackIn_52_1, stackIn_52_2, (byte) stackIn_52_3, stackIn_53_4, var6Lifetime1, var40);
           var4Lifetime2.setWrap(var29.field_i, var29.field_l, true);
           this.textures.put((long)textureId, var4Lifetime2, (byte) 19);
           return var4Lifetime2;
@@ -253,7 +253,7 @@ final class HardwareTextureCache {
           stackIn_57_1 = var7Lifetime2;
           stackIn_57_2 = var6Lifetime1;
           stackIn_58_3 = (var29.field_k == 0) ? false : true;
-          var30 = ((HardwareGraphicsToolkit) (Object) stackIn_57_0).a(stackIn_57_1, stackIn_57_2, stackIn_58_3, -97, var6Lifetime1);
+          var30 = ((HardwareGraphicsToolkit) (Object) stackIn_57_0).createIntTexture2D(stackIn_57_1, stackIn_57_2, stackIn_58_3, -97, var6Lifetime1);
           var30.setWrap(var29.field_i, var29.field_l, true);
           this.textures.put((long)textureId, var30, (byte) 19);
           return var30;
@@ -264,7 +264,7 @@ final class HardwareTextureCache {
           stackIn_66_1 = var7Lifetime3;
           stackIn_66_2 = var6Lifetime1;
           stackIn_67_3 = (var29.field_k == 0) ? false : true;
-          var31 = ((HardwareGraphicsToolkit) (Object) stackIn_66_0).a(stackIn_66_1, stackIn_66_2, stackIn_67_3, -97, var6Lifetime1);
+          var31 = ((HardwareGraphicsToolkit) (Object) stackIn_66_0).createIntTexture2D(stackIn_66_1, stackIn_66_2, stackIn_67_3, -97, var6Lifetime1);
           var31.setWrap(var29.field_i, var29.field_l, true);
           this.textures.put((long)textureId, var31, (byte) 19);
           return var31;
@@ -274,7 +274,7 @@ final class HardwareTextureCache {
         stackIn_62_1 = var7Lifetime4;
         stackIn_62_2 = var6Lifetime1;
         stackIn_63_3 = (var29.field_k == 0) ? false : true;
-        var32 = ((HardwareGraphicsToolkit) (Object) stackIn_62_0).a(stackIn_62_1, stackIn_62_2, stackIn_63_3, -97, var6Lifetime1);
+        var32 = ((HardwareGraphicsToolkit) (Object) stackIn_62_0).createIntTexture2D(stackIn_62_1, stackIn_62_2, stackIn_63_3, -97, var6Lifetime1);
         var32.setWrap(var29.field_i, var29.field_l, true);
         this.textures.put((long)textureId, var32, (byte) 19);
         return var32;

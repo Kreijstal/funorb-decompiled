@@ -4,7 +4,7 @@
 final class ScanlineSpriteMask extends SpriteMask {
     int[] rowWidths;
     int[] rowStarts;
-    static int field_e;
+    static int pendingTooltipY;
     private static String dmText;
 
     private ScanlineSpriteMask() throws Throwable {
@@ -13,6 +13,6 @@ final class ScanlineSpriteMask extends SpriteMask {
 
     static {
         dmText = "dm.<init>()";
-        field_e = -1;
+        pendingTooltipY = -1;
     }
 }

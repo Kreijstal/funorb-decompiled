@@ -189,7 +189,7 @@ final class HardwareQuadBatchBuffers {
         jaclib.memory.Buffer var9 = null;
         int var5Lifetime1;
         try {
-          toolkit.a(new VertexStreamLayout[]{new VertexStreamLayout(new VertexAttribute[]{VertexAttribute.POSITION, VertexAttribute.COLOR, VertexAttribute.TEXCOORD2}), new VertexStreamLayout(VertexAttribute.NORMAL)}, (byte) 53);
+          toolkit.createVertexLayout(new VertexStreamLayout[]{new VertexStreamLayout(new VertexAttribute[]{VertexAttribute.POSITION, VertexAttribute.COLOR, VertexAttribute.TEXCOORD2}), new VertexStreamLayout(VertexAttribute.NORMAL)}, (byte) 53);
           this.dynamicVertices = toolkit.createVertexBuffer((byte) 51, true);
           this.normals = toolkit.createVertexBuffer((byte) 51, false);
           this.normals.allocate(12, (byte) -35, 393168);
@@ -197,66 +197,66 @@ final class HardwareQuadBatchBuffers {
           this.indices.allocate((byte) -116, 49146);
           var7 = this.indices.map(true, 10081);
           if (var7 != null) {
-            var8 = toolkit.a(true, var7);
-            if (!jaclib.memory.Stream.b()) {
+            var8 = toolkit.streamForBuffer(true, var7);
+            if (!jaclib.memory.Stream.isNativeBigEndian()) {
               for (var4_int = 0; var4_int < 8191; var4_int++) {
                 var5 = 4 * var4_int;
-                var8.a(var5);
-                var8.a(var5 + 1);
-                var8.a(2 + var5);
-                var8.a(var5 + 2);
-                var8.a(var5 + 3);
-                var8.a(var5);
+                var8.writeShortLittleEndian(var5);
+                var8.writeShortLittleEndian(var5 + 1);
+                var8.writeShortLittleEndian(2 + var5);
+                var8.writeShortLittleEndian(var5 + 2);
+                var8.writeShortLittleEndian(var5 + 3);
+                var8.writeShortLittleEndian(var5);
               }
             } else {
               for (var4_int = 0; var4_int < 8191; var4_int++) {
                 var5 = 4 * var4_int;
-                var8.b(var5);
-                var8.b(1 + var5);
-                var8.b(var5 + 2);
-                var8.b(2 + var5);
-                var8.b(var5 + 3);
-                var8.b(var5);
+                var8.writeShortBigEndian(var5);
+                var8.writeShortBigEndian(1 + var5);
+                var8.writeShortBigEndian(var5 + 2);
+                var8.writeShortBigEndian(2 + var5);
+                var8.writeShortBigEndian(var5 + 3);
+                var8.writeShortBigEndian(var5);
               }
             }
-            var8.a();
+            var8.flush();
             this.indices.unmap(-28833);
           }
           var9 = this.normals.map(7454, true);
           if (var9 != null) {
-            var4 = toolkit.a(true, var9);
-            if (!jaclib.memory.Stream.b()) {
+            var4 = toolkit.streamForBuffer(true, var9);
+            if (!jaclib.memory.Stream.isNativeBigEndian()) {
               for (var5Lifetime1 = 0; 8191 > var5Lifetime1; var5Lifetime1++) {
-                var4.b(0.0f);
-                var4.b(-1.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(-1.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(-1.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(-1.0f);
-                var4.b(0.0f);
+                var4.writeFloatLittleEndian(0.0f);
+                var4.writeFloatLittleEndian(-1.0f);
+                var4.writeFloatLittleEndian(0.0f);
+                var4.writeFloatLittleEndian(0.0f);
+                var4.writeFloatLittleEndian(-1.0f);
+                var4.writeFloatLittleEndian(0.0f);
+                var4.writeFloatLittleEndian(0.0f);
+                var4.writeFloatLittleEndian(-1.0f);
+                var4.writeFloatLittleEndian(0.0f);
+                var4.writeFloatLittleEndian(0.0f);
+                var4.writeFloatLittleEndian(-1.0f);
+                var4.writeFloatLittleEndian(0.0f);
               }
             } else {
               for (var5Lifetime1 = 0; 8191 > var5Lifetime1; var5Lifetime1++) {
-                var4.a(0.0f);
-                var4.a(-1.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(-1.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(-1.0f);
-                var4.a(0.0f);
-                var4.a(0.0f);
-                var4.a(-1.0f);
-                var4.a(0.0f);
+                var4.writeFloatBigEndian(0.0f);
+                var4.writeFloatBigEndian(-1.0f);
+                var4.writeFloatBigEndian(0.0f);
+                var4.writeFloatBigEndian(0.0f);
+                var4.writeFloatBigEndian(-1.0f);
+                var4.writeFloatBigEndian(0.0f);
+                var4.writeFloatBigEndian(0.0f);
+                var4.writeFloatBigEndian(-1.0f);
+                var4.writeFloatBigEndian(0.0f);
+                var4.writeFloatBigEndian(0.0f);
+                var4.writeFloatBigEndian(-1.0f);
+                var4.writeFloatBigEndian(0.0f);
               }
             }
-            var4.a();
+            var4.flush();
             this.normals.unmap(22957);
           }
           return;

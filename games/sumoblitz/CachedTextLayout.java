@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class CachedTextLayout extends TextLayout {
-    private int field_e;
+    private int horizontalAlignment;
     private boolean singleLine;
     static SpriteData[] field_h;
-    private int field_j;
-    private int field_k;
+    private int lineSpacing;
+    private int layoutWidth;
     private LegacyBitmapFont font;
-    private int field_g;
-    private int field_m;
+    private int layoutHeight;
+    private int verticalAlignment;
     private String text;
 
     final void layoutWrapped(byte param0, int param1, LegacyBitmapFont param2, int param3, String param4, int param5, int param6, int param7) {
@@ -51,47 +51,47 @@ final class CachedTextLayout extends TextLayout {
           }
           if (param2 == this.font &&
             !this.singleLine &&
-            this.field_e == param1 &&
-            this.field_m == param5 &&
-            param6 == this.field_j &&
-            param3 == this.field_g &&
-            this.field_k == param7 &&
+            this.horizontalAlignment == param1 &&
+            this.verticalAlignment == param5 &&
+            param6 == this.lineSpacing &&
+            param3 == this.layoutHeight &&
+            this.layoutWidth == param7 &&
             this.text != null &&
             this.text.equals(param4)) {
             return;
           }
           this.text = param4;
-          this.field_j = param6;
+          this.lineSpacing = param6;
           this.singleLine = false;
-          this.field_g = param3;
-          this.field_e = param1;
-          this.field_k = param7;
+          this.layoutHeight = param3;
+          this.horizontalAlignment = param1;
+          this.layoutWidth = param7;
           this.font = param2;
-          this.field_m = param5;
+          this.verticalAlignment = param5;
           var17 = new String[param2.lineCount(param4, param7) + 1];
           var18 = var17;
           var10 = Math.max(1, param2.breakLines(param4, new int[]{param7}, var18));
-          if (this.field_m == 3 &&
+          if (this.verticalAlignment == 3 &&
             var10 == 1) {
-            this.field_m = 1;
+            this.verticalAlignment = 1;
           }
           var12 = -23 / ((13 - param0) / 59);
-          if (this.field_m == 0) {
+          if (this.verticalAlignment == 0) {
             var11 = param2.ascent;
           } else {
-            if (1 != this.field_m) {
-              if (this.field_m != 2) {
-                var13 = (this.field_g - var10 * this.field_j) / (var10 + 1);
+            if (1 != this.verticalAlignment) {
+              if (this.verticalAlignment != 2) {
+                var13 = (this.layoutHeight - var10 * this.lineSpacing) / (var10 + 1);
                 if (0 > var13) {
                   var13 = 0;
                 }
-                this.field_j = this.field_j + var13;
+                this.lineSpacing = this.lineSpacing + var13;
                 var11 = param2.ascent + var13;
               } else {
-                var11 = -(var10 * this.field_j) + this.field_g - param2.descent;
+                var11 = -(var10 * this.lineSpacing) + this.layoutHeight - param2.descent;
               }
             } else {
-              var11 = (this.field_g - var10 * this.field_j >> 1) + param2.ascent;
+              var11 = (this.layoutHeight - var10 * this.lineSpacing >> 1) + param2.ascent;
             }
           }
           this.lines = new TextLayoutLine[var10];
@@ -154,17 +154,17 @@ final class CachedTextLayout extends TextLayout {
           this.lines = null;
           return;
         }
-        if (this.font == param1 && this.singleLine && this.field_e == 1 && null != this.text &&
+        if (this.font == param1 && this.singleLine && this.horizontalAlignment == 1 && null != this.text &&
           this.text.equals(param3)) {
           return;
         }
         try {
           if (param2 < 73) {
-            this.field_k = -104;
+            this.layoutWidth = -104;
           }
           this.singleLine = true;
           this.font = param1;
-          this.field_e = 1;
+          this.horizontalAlignment = 1;
           var8 = this.createSingleLine(param0, -106, param1, param3);
           var7 = param1.stringWidth(param3);
           var8.caretX[0] = -(var7 >> 1) + param4;
@@ -175,7 +175,7 @@ final class CachedTextLayout extends TextLayout {
         }
     }
 
-    final static boolean a(String param0, byte param1, String param2) {
+    final static boolean isPasswordPartOfName(String password, byte guard, String name) {
         String var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -186,25 +186,25 @@ final class CachedTextLayout extends TextLayout {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param2 = ValidationStatus.a('_', param2, false, "");
-          var3 = TextureFilter.reverseString(param0, (byte) 117);
-          if (param1 <= 29) {
-            CachedTextLayout.e(58);
+          name = ValidationStatus.a('_', name, false, "");
+          var3 = TextureFilter.reverseString(password, (byte) 117);
+          if (guard <= 29) {
+            CachedTextLayout.visibleTooltip(58);
           }
-          stackIn_7_0 = (param2.indexOf(param0) != -1) || (-1 != param2.indexOf(var3));
+          stackIn_7_0 = (name.indexOf(password) != -1) || (-1 != name.indexOf(var3));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_10_0 = var3_ref;
           stackIn_10_1 = new StringBuilder().append("jd.D(");
-          if (param0 == null) {
+          if (password == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(guard).append(',');
+          if (name == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
@@ -213,27 +213,27 @@ final class CachedTextLayout extends TextLayout {
         }
     }
 
-    public static void d(int param0) {
-        if (param0 != 0) {
+    public static void releaseLayoutSpriteData(int guard) {
+        if (guard != 0) {
           String var2 = (String) null;
-          CachedTextLayout.a((LoginFieldValue) null, -59, (LoginFieldValue) null, 54, false, 96, (String) null);
+          CachedTextLayout.pollAccountFormRequest((LoginFieldValue) null, -59, (LoginFieldValue) null, 54, false, 96, (String) null);
         }
         field_h = null;
     }
 
-    final static String e(int param0) {
-        if (param0 <= 71) {
+    final static String visibleTooltip(int guard) {
+        if (guard <= 71) {
           String var2 = (String) null;
-          CachedTextLayout.a((LoginFieldValue) null, 38, (LoginFieldValue) null, -17, false, -119, (String) null);
+          CachedTextLayout.pollAccountFormRequest((LoginFieldValue) null, 38, (LoginFieldValue) null, -17, false, -119, (String) null);
         }
-        if (IntroMeshProjection.field_d) {
+        if (IntroMeshProjection.tooltipHidden) {
           return null;
         }
-        if (GameClientShell.field_s > PerlinGradient.field_a) {
+        if (GameClientShell.tooltipDelay > PerlinGradient.tooltipAge) {
           return null;
         }
-        if (!(PerlinGradient.field_a >= GameClientShell.field_s + GameDefinitionLoader.field_c)) {
-          return LegacyOpenGlCubeTexture.field_l;
+        if (!(PerlinGradient.tooltipAge >= GameClientShell.tooltipDelay + GameDefinitionLoader.tooltipDuration)) {
+          return LegacyOpenGlCubeTexture.tooltipText;
         }
         return null;
     }
@@ -289,7 +289,7 @@ final class CachedTextLayout extends TextLayout {
         }
     }
 
-    final static int a(LoginFieldValue param0, int param1, LoginFieldValue param2, int param3, boolean param4, int param5, String param6) {
+    final static int pollAccountFormRequest(LoginFieldValue param0, int param1, LoginFieldValue param2, int param3, boolean param4, int param5, String param6) {
         int var12 = 0;
         int stackIn_8_0 = 0;
         PacketBuffer stackIn_13_0 = null;
@@ -501,62 +501,62 @@ final class CachedTextLayout extends TextLayout {
     public CachedTextLayout() {
     }
 
-    final void a(LegacyBitmapFont param0, int param1, int param2, String param3, byte param4) {
-        if (param3 == null) {
+    final void layoutRightAligned(LegacyBitmapFont font, int baselineY, int rightX, String text, byte guard) {
+        if (text == null) {
           this.lines = null;
           return;
         }
-        if (this.font == param0 &&
+        if (this.font == font &&
           this.singleLine &&
-          this.field_e == 2 &&
+          this.horizontalAlignment == 2 &&
           this.text != null &&
-          this.text.equals(param3)) {
+          this.text.equals(text)) {
           return;
         }
-        this.field_e = 2;
-        this.font = param0;
+        this.horizontalAlignment = 2;
+        this.font = font;
         this.singleLine = true;
-        this.text = param3;
-        TextLayoutLine var7 = this.createSingleLine(param1, param4 ^ -39, param0, param3);
+        this.text = text;
+        TextLayoutLine var7 = this.createSingleLine(baselineY, guard ^ -39, font, text);
         TextLayoutLine var8 = var7;
-        if (param4 != 79) {
+        if (guard != 79) {
           return;
         }
         try {
-          var8.caretX[0] = param2 - param0.stringWidth(param3);
-          var7.caretX[param3.length()] = param2;
-          TextCaretLayout.computeCaretPositions(90, var8, 0, param0, param3);
+          var8.caretX[0] = rightX - font.stringWidth(text);
+          var7.caretX[text.length()] = rightX;
+          TextCaretLayout.computeCaretPositions(90, var8, 0, font, text);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "jd.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "jd.B(" + (font != null ? "{...}" : "null") + ',' + baselineY + ',' + rightX + ',' + (text != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
-    final void a(LegacyBitmapFont param0, int param1, String param2, int param3, byte param4) {
+    final void layoutLeftAligned(LegacyBitmapFont font, int baselineY, String text, int leftX, byte guard) {
         TextLayoutLine var7 = null;
         TextLayoutLine var8 = null;
-        if (param2 == null) {
+        if (text == null) {
           this.lines = null;
           return;
         }
-        if (param4 != -36) {
+        if (guard != -36) {
           this.text = (String) null;
         }
-        if (param0 == this.font && this.singleLine && this.field_e == 0 && this.text != null &&
-          this.text.equals(param2)) {
+        if (font == this.font && this.singleLine && this.horizontalAlignment == 0 && this.text != null &&
+          this.text.equals(text)) {
           return;
         }
         try {
-          this.field_e = 0;
-          this.font = param0;
+          this.horizontalAlignment = 0;
+          this.font = font;
           this.singleLine = true;
-          this.text = param2;
-          var7 = this.createSingleLine(param1, -106, param0, param2);
+          this.text = text;
+          var7 = this.createSingleLine(baselineY, -106, font, text);
           var8 = var7;
-          var7.caretX[0] = param3;
-          var8.caretX[param2.length()] = param3 + param0.stringWidth(param2);
-          TextCaretLayout.computeCaretPositions(90, var8, 0, param0, param2);
+          var7.caretX[0] = leftX;
+          var8.caretX[text.length()] = leftX + font.stringWidth(text);
+          TextCaretLayout.computeCaretPositions(90, var8, 0, font, text);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "jd.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "jd.I(" + (font != null ? "{...}" : "null") + ',' + baselineY + ',' + (text != null ? "{...}" : "null") + ',' + leftX + ',' + guard + ')');
         }
     }
 

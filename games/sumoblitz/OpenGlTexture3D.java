@@ -39,7 +39,7 @@ final class OpenGlTexture3D extends OpenGlTexture implements Texture3D {
           this.field_i = param2;
           this.field_k = param3;
           this.field_l = param4;
-          this.toolkit.a((GpuTexture) (this), 104);
+          this.toolkit.bindTexture((GpuTexture) (this), 104);
           jaggl.OpenGL.glPixelStorei(3317, 1);
           jaggl.OpenGL.glTexImage3Dub(this.target, 0, this.glInternalFormat(-11), this.field_i, this.field_k, this.field_l, 0, IntrusiveNodeHashTable.glTextureFormat(-21339, this.format), 5121, param5, 0);
           jaggl.OpenGL.glPixelStorei(3317, 4);

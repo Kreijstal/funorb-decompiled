@@ -21,11 +21,11 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
           var5 = 1 << (3 & parameters0);
           var6 = (float)(1 << ((parameters0 & 59) >> 3)) / 32.0f;
           var7 = 65535 & parameters1;
-          var4.b(14, (float)(this.toolkit.field_kc * var5 % 40000) / 40000.0f, 0.0f, 0.0f, 0.0f);
+          var4.setVertexShaderConstant(14, (float)(this.toolkit.field_kc * var5 % 40000) / 40000.0f, 0.0f, 0.0f, 0.0f);
           var8 = (float)((parameters1 & 199087) >> 16) / 8.0f;
-          var4.b(15, var6, 0.0f, 0.0f, 0.0f);
-          var4.a(4, (float)var7, 0.0f, 0.0f, 0.0f);
-          var4.a(5, var8, 0.0f, 0.0f, 0.0f);
+          var4.setVertexShaderConstant(15, var6, 0.0f, 0.0f, 0.0f);
+          var4.setPixelShaderConstant(4, (float)var7, 0.0f, 0.0f, 0.0f);
+          var4.setPixelShaderConstant(5, var8, 0.0f, 0.0f, 0.0f);
         }
         if (guard == 34023) {
           return;
@@ -40,13 +40,13 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
         if (this.field_e) {
           var2 = this.field_h.field_Cc;
           if (0 >= this.toolkit.field_Kb) {
-            var2.b(16, 0.0f, 0.0f, 0.0f, 0.0f);
+            var2.setVertexShaderConstant(16, 0.0f, 0.0f, 0.0f, 0.0f);
           } else {
             var3 = this.toolkit.field_Tb;
             var4 = this.toolkit.field_E;
-            var2.b(16, var3, 1.0f / (var3 - var4), 0.0f, 0.0f);
+            var2.setVertexShaderConstant(16, var3, 1.0f / (var3 - var4), 0.0f, 0.0f);
           }
-          var2.a(0, (float)(255 & this.toolkit.field_C >> 16) / 255.0f, (float)((65348 & this.toolkit.field_C) >> 8) / 255.0f, (float)(255 & this.toolkit.field_C) / 255.0f, 0.0f);
+          var2.setPixelShaderConstant(0, (float)(255 & this.toolkit.field_C >> 16) / 255.0f, (float)((65348 & this.toolkit.field_C) >> 8) / 255.0f, (float)(255 & this.toolkit.field_C) / 255.0f, 0.0f);
         }
         if (guard == 260) {
           return;
@@ -59,7 +59,7 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
         if (!guard) {
           if (this.field_e) {
             var2 = this.field_h.field_Cc;
-            var2.a(8, this.toolkit.a(-82, field_f));
+            var2.setVertexShaderConstants(8, this.toolkit.writeTransposedProjection(-82, field_f));
           }
           return;
         }
@@ -74,7 +74,7 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
           if (this.field_e) {
             var2 = this.field_h.field_Cc;
             var3 = this.field_h.modelViewTransform((byte) 107);
-            var2.a(0, var3.writeRowMajor4x4(0, field_f));
+            var2.setVertexShaderConstants(0, var3.writeRowMajor4x4(0, field_f));
           }
           return;
         }
@@ -82,7 +82,7 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
         if (this.field_e) {
           var2Lifetime1 = this.field_h.field_Cc;
           var3Lifetime1 = this.field_h.modelViewTransform((byte) 107);
-          var2Lifetime1.a(0, var3Lifetime1.writeRowMajor4x4(0, field_f));
+          var2Lifetime1.setVertexShaderConstants(0, var3Lifetime1.writeRowMajor4x4(0, field_f));
         }
     }
 
@@ -96,12 +96,12 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
 
     final void disable(boolean guard) {
         if (this.field_e) {
-          this.field_h.a(-54, (jagdx.IDirect3DVertexShader) null);
-          this.field_h.a((byte) 10, (jagdx.IDirect3DPixelShader) null);
+          this.field_h.bindVertexShader(-54, (jagdx.IDirect3DVertexShader) null);
+          this.field_h.bindPixelShader((byte) 10, (jagdx.IDirect3DPixelShader) null);
           this.toolkit.setActiveTextureUnit(1, -115);
-          this.toolkit.a((GpuTexture) null, 97);
+          this.toolkit.bindTexture((GpuTexture) null, 97);
           this.toolkit.setActiveTextureUnit(0, -119);
-          this.toolkit.a((GpuTexture) null, 98);
+          this.toolkit.bindTexture((GpuTexture) null, 98);
           this.field_e = false;
         }
         if (!guard) {
@@ -117,20 +117,20 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
           if (this.field_j &&
             var3 != null) {
             var4 = this.field_h.field_Cc;
-            this.field_h.a(-73, this.field_g);
-            this.field_h.a((byte) -101, this.field_i);
+            this.field_h.bindVertexShader(-73, this.field_g);
+            this.field_h.bindPixelShader((byte) -101, this.field_i);
             this.toolkit.setActiveTextureUnit(1, guard - 20310);
-            this.toolkit.a(var3, 99);
+            this.toolkit.bindTexture(var3, 99);
             this.toolkit.setActiveTextureUnit(0, -123);
-            this.toolkit.a(this.field_k.normalMap, 108);
+            this.toolkit.bindTexture(this.field_k.normalMap, 108);
             this.field_e = true;
             this.updateTransformUniforms(guard ^ -20215);
             this.updateTextureUniforms((byte) -65);
             this.updateProjectionUniforms(false);
             this.updateFogUniforms(260);
-            var4.a(1, -this.toolkit.field_G[0], -this.toolkit.field_G[1], -this.toolkit.field_G[2], 0.0f);
-            var4.a(2, this.toolkit.field_J, this.toolkit.field_jb, this.toolkit.field_Xb, 1.0f);
-            var4.a(3, Math.abs(this.toolkit.field_G[1]) * 928.0f + 96.0f, 0.0f, 0.0f, 0.0f);
+            var4.setPixelShaderConstant(1, -this.toolkit.field_G[0], -this.toolkit.field_G[1], -this.toolkit.field_G[2], 0.0f);
+            var4.setPixelShaderConstant(2, this.toolkit.field_J, this.toolkit.field_jb, this.toolkit.field_Xb, 1.0f);
+            var4.setPixelShaderConstant(3, Math.abs(this.toolkit.field_G[1]) * 928.0f + 96.0f, 0.0f, 0.0f, 0.0f);
           }
           return;
         }
@@ -150,8 +150,8 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
           var2_ref_jagdx_IDirect3DDevice = this.field_h.field_Cc;
           var3 = this.field_h.viewTransform((byte) -28);
           var4 = this.field_h.modelViewTransform((byte) 106);
-          var2_ref_jagdx_IDirect3DDevice.a(0, var4.writeRowMajor4x4(0, field_f));
-          var2_ref_jagdx_IDirect3DDevice.a(4, var3.writeLinearRowMajor4x4(field_f, (byte) 86));
+          var2_ref_jagdx_IDirect3DDevice.setVertexShaderConstants(0, var4.writeRowMajor4x4(0, field_f));
+          var2_ref_jagdx_IDirect3DDevice.setVertexShaderConstants(4, var3.writeLinearRowMajor4x4(field_f, (byte) 86));
         }
         int var2 = 49 / ((guard - 41) / 46);
     }
@@ -205,8 +205,8 @@ final class DirectXEnvironmentWaterEffect extends ShaderEffect {
           this.field_j = false;
           return;
         }
-        this.field_g = this.field_h.field_Cc.a(param1.fetchNamedFile("environment_mapped_water_v", "dx", -1));
-        this.field_i = this.field_h.field_Cc.b(param1.fetchNamedFile("environment_mapped_water_f", "dx", -1));
+        this.field_g = this.field_h.field_Cc.createVertexShader(param1.fetchNamedFile("environment_mapped_water_v", "dx", -1));
+        this.field_i = this.field_h.field_Cc.createPixelShader(param1.fetchNamedFile("environment_mapped_water_f", "dx", -1));
         stackIn_14_1 = (null != this.field_g) && (null != this.field_i) && (this.field_k.ensureNormalMap(-123));
         this.field_j = stackIn_14_1;
     }

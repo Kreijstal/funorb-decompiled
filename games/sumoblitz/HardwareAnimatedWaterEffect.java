@@ -55,11 +55,11 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
     final void disable(boolean guard) {
         this.toolkit.setActiveTextureUnit(1, -115);
         if (!guard) {
-          this.toolkit.a((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
+          this.toolkit.setTextureCombineOperations((byte) -83, SlowBurstParticle.MODULATE, SlowBurstParticle.MODULATE);
           this.toolkit.setColorCombineSource(LegacyVertexAttribute.TEXTURE, 0, 0);
           this.toolkit.setAlphaCombineSource(LegacyVertexAttribute.TEXTURE, 0, true);
-          this.toolkit.c(1, 110);
-          this.toolkit.a((GpuTexture) null, 95);
+          this.toolkit.setTextureCoordinateIndex(1, 110);
+          this.toolkit.bindTexture((GpuTexture) null, 95);
           this.toolkit.setActiveTextureUnit(0, -111);
           this.toolkit.setAlphaCombineSource(LegacyVertexAttribute.TEXTURE, 0, true);
           return;
@@ -71,7 +71,7 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
           if (guard != 18834) {
             this.waterTextures = (WaterTextureResources) null;
           }
-          this.toolkit.a(texture, 126);
+          this.toolkit.bindTexture(texture, 126);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ib.E(" + combineMode + ',' + guard + ',' + (texture != null ? "{...}" : "null") + ')');
         }
@@ -79,10 +79,10 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
 
     final void enable(boolean lighting, int guard) {
         this.toolkit.setActiveTextureUnit(1, -119);
-        this.toolkit.a((byte) -83, LegacyOpenGlRenderBufferSet.REPLACE, LoginForm.ADD);
+        this.toolkit.setTextureCombineOperations((byte) -83, LegacyOpenGlRenderBufferSet.REPLACE, LoginForm.ADD);
         this.toolkit.setColorCombineSource((byte) 111, 0, true, false, LegacyVertexAttribute.TEXTURE);
         this.toolkit.setAlphaCombineSource(FontMetrics.PREVIOUS, 0, true);
-        this.toolkit.c(0, guard ^ 20151);
+        this.toolkit.setTextureCoordinateIndex(0, guard ^ 20151);
         this.toolkit.setActiveTextureUnit(0, -124);
         if (guard == 20186) {
           this.toolkit.setTextureConstantColor(false, -16777216);
@@ -123,23 +123,23 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
           this.setParameters(43, 107, 112);
         }
         if ((128 & parameters0) != 0) {
-          this.toolkit.a((GpuTexture) null, 97);
+          this.toolkit.bindTexture((GpuTexture) null, 97);
         } else {
           if ((1 & parameters1) != 1) {
             if (!this.waterTextures.useVolumeTextures) {
-              this.toolkit.a(this.waterTextures.animatedSlices[0], 108);
+              this.toolkit.bindTexture(this.waterTextures.animatedSlices[0], 108);
             } else {
-              this.toolkit.a(this.waterTextures.animatedVolume, 126);
+              this.toolkit.bindTexture(this.waterTextures.animatedVolume, 126);
             }
           } else {
             if (!this.waterTextures.useVolumeTextures) {
               var4 = this.toolkit.field_kc % 4000 * 16 / 4000;
-              this.toolkit.a(this.waterTextures.animatedSlices[var4], 93);
+              this.toolkit.bindTexture(this.waterTextures.animatedSlices[var4], 93);
               this.toolkit.setActiveTextureUnit(0, -113);
               return;
             }
             this.volumeTime = (float)(this.toolkit.field_kc % 4000) / 4000.0f;
-            this.toolkit.a(this.waterTextures.animatedVolume, 122);
+            this.toolkit.bindTexture(this.waterTextures.animatedVolume, 122);
           }
         }
         this.toolkit.setActiveTextureUnit(0, -113);
@@ -147,11 +147,11 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
 
     final void refreshState(boolean lighting, byte guard) {
         if (guard <= -71) {
-          this.toolkit.a((byte) -83, LegacyOpenGlRenderBufferSet.REPLACE, SlowBurstParticle.MODULATE);
+          this.toolkit.setTextureCombineOperations((byte) -83, LegacyOpenGlRenderBufferSet.REPLACE, SlowBurstParticle.MODULATE);
           return;
         }
         this.updateTextureUniforms((byte) 54);
-        this.toolkit.a((byte) -83, LegacyOpenGlRenderBufferSet.REPLACE, SlowBurstParticle.MODULATE);
+        this.toolkit.setTextureCombineOperations((byte) -83, LegacyOpenGlRenderBufferSet.REPLACE, SlowBurstParticle.MODULATE);
     }
 
     static {

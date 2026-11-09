@@ -47,7 +47,7 @@ final class OpenGlCubeTexture extends OpenGlTexture implements CubeTexture {
         int var7 = 0;
         int var5_intLifetime1;
         try {
-          this.toolkit.a((GpuTexture) (this), 100);
+          this.toolkit.bindTexture((GpuTexture) (this), 100);
           if (param2) {
             for (var5_int = 0; 6 > var5_int; var5_int++) {
               this.uploadIntMipmaps(param1, param1, param3[var5_int], 34069 + var5_int, -1);

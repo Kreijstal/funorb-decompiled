@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class PerlinGradient {
-    static int field_a;
+    static int tooltipAge;
     private static String field_z;
 
     final static int perlinGradientDot(int offsetY, int offsetZ, int axisThreshold, int hash, int offsetX) {
@@ -86,6 +86,6 @@ final class PerlinGradient {
 
     static {
         field_z = "qf.A(";
-        field_a = 0;
+        tooltipAge = 0;
     }
 }
