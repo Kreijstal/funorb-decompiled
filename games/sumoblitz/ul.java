@@ -27,7 +27,7 @@ final class ul {
         if (null != CompactMeshGeometry.field_o) {
           return;
         }
-        if (ct.field_x <= 0) {
+        if (HardwareRidgedWaterNoise.field_x <= 0) {
           this.field_g = false;
         }
         if (this.field_g) {
@@ -147,7 +147,7 @@ final class ul {
         if (param0 != -1) {
           return false;
         }
-        stackIn_6_0 = (ct.field_x > 0) && (wh.field_x < this.field_l);
+        stackIn_6_0 = (HardwareRidgedWaterNoise.field_x > 0) && (wh.field_x < this.field_l);
         return stackIn_6_0;
     }
 
@@ -200,7 +200,7 @@ final class ul {
           var9 = var11;
           var5 = var9;
           for (var6 = 0; var3 > var6; var6++) {
-            var5[var6] = LegacyOpenGlEffectManager.field_l[eb.a(255, (int) var10[var6])];
+            var5[var6] = LegacyOpenGlEffectManager.field_l[eb.bitwiseAnd(255, (int) var10[var6])];
           }
           var1[var2] = new Sprite(vf.field_d, ToolkitImageProducerBuffer.field_u, er.field_h[var2], StrongCacheReference.field_C[var2], vg.field_k[var2], ScrollViewport.field_B[var2], var11);
         }
@@ -221,7 +221,7 @@ final class ul {
         if (param0 != -1) {
           this.field_b = 2.1707825660705566f;
         }
-        stackIn_6_0 = (wh.field_x >= this.field_l) && (0 < ct.field_x);
+        stackIn_6_0 = (wh.field_x >= this.field_l) && (0 < HardwareRidgedWaterNoise.field_x);
         return stackIn_6_0;
     }
 

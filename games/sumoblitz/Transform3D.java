@@ -103,7 +103,7 @@ abstract class Transform3D {
                 var20 = var20 + (255 & var19 >> 16);
                 incrementValue$4 = var15;
                 var15++;
-                var13[incrementValue$4] = ic.a(ic.a(eb.a(var21, 1020) << 6, ic.a(eb.a(16711680, var20 << 14), eb.a(1020, var23) << 22)), eb.a(var22 >> 2, 255));
+                var13[incrementValue$4] = ic.a(ic.a(eb.bitwiseAnd(var21, 1020) << 6, ic.a(eb.bitwiseAnd(16711680, var20 << 14), eb.bitwiseAnd(1020, var23) << 22)), eb.bitwiseAnd(var22 >> 2, 255));
               }
               var24 = var24 + param2;
               var25 = var25 + param2;

@@ -195,10 +195,10 @@ final class ok {
             }
           }
           this.field_i = this.field_i + this.field_e[var2 + 128 & 255];
-          dupTemp$1 = this.field_i + this.field_e[eb.a(1020, var4) >> 2] + this.field_h;
+          dupTemp$1 = this.field_i + this.field_e[eb.bitwiseAnd(1020, var4) >> 2] + this.field_h;
           var5 = dupTemp$1;
           this.field_e[var2] = dupTemp$1;
-          dupTemp$2 = var4 + this.field_e[eb.a(255, var5 >> 8 >> 2)];
+          dupTemp$2 = var4 + this.field_e[eb.bitwiseAnd(255, var5 >> 8 >> 2)];
           this.field_h = dupTemp$2;
           this.field_c[var2] = dupTemp$2;
         }

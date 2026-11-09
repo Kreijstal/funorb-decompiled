@@ -72,7 +72,7 @@ final class cn extends dq {
         byClickingCreateYouText = null;
     }
 
-    final static void a(float param0, ab param1, int param2, byte[] param3, int param4, float param5, float param6, float param7, int param8, float param9, int param10, int param11, int param12) {
+    final static void fillNoiseVolume(float frequencyZ, NoiseSliceGenerator generator, int outputOffset, byte[] output, int octaves, float amplitude, float frequencyX, float persistence, int guard, float frequencyY, int height, int depth, int width) {
         int var13_int = 0;
         int var14 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -84,31 +84,31 @@ final class cn extends dq {
         RuntimeException var13 = null;
         var14 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (param8 != 24046) {
+          if (guard != 24046) {
             return;
           }
-          for (var13_int = 0; var13_int < param11; var13_int++) {
-            VertexAttribute.a(param0, param6, param2, param10, param3, var13_int, param7, param11, -95, param12, param4, param9, param1, param5);
-            param2 = param2 + param10 * param12;
+          for (var13_int = 0; var13_int < depth; var13_int++) {
+            VertexAttribute.fillNoiseSlice(frequencyZ, frequencyX, outputOffset, height, output, var13_int, persistence, depth, -95, width, octaves, frequencyY, generator, amplitude);
+            outputOffset = outputOffset + height * width;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var13 = decompiledCaughtException;
           stackIn_9_0 = var13;
-          stackIn_9_1 = new StringBuilder().append("cn.H(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_9_1 = new StringBuilder().append("cn.H(").append(frequencyZ).append(',');
+          if (generator == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(outputOffset).append(',');
+          if (output == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(octaves).append(',').append(amplitude).append(',').append(frequencyX).append(',').append(persistence).append(',').append(guard).append(',').append(frequencyY).append(',').append(height).append(',').append(depth).append(',').append(width).append(')').toString());
         }
     }
 

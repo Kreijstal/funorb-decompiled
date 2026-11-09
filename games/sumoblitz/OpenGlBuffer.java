@@ -171,15 +171,15 @@ abstract class OpenGlBuffer implements GpuBuffer {
           if (param0 < 5) {
             OpenGlBuffer.f(77);
           }
-          if (en.field_h.startsWith("win")) {
+          if (FixedPointPerlinNoise3D.field_h.startsWith("win")) {
             stackIn_11_0 = param1 + ".dll";
             return stackIn_11_0;
           }
-          if (en.field_h.startsWith("linux")) {
+          if (FixedPointPerlinNoise3D.field_h.startsWith("linux")) {
             stackIn_5_0 = "lib" + param1 + ".so";
             return stackIn_5_0;
           }
-          if (!en.field_h.startsWith("mac")) {
+          if (!FixedPointPerlinNoise3D.field_h.startsWith("mac")) {
             return null;
           }
           stackIn_9_0 = "lib" + param1 + ".dylib";

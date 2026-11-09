@@ -9,7 +9,7 @@ final class uk extends MessageDialog implements WidgetActionListener {
     private js field_mb;
 
     uk(DialogLayer param0, js param1) {
-        super(param0, tq.field_a, ClientException.creatingYourAccountText, false, false);
+        super(param0, LegacyOpenGlDisplayLists.field_a, ClientException.creatingYourAccountText, false, false);
         try {
           this.field_mb = param1;
         } catch (RuntimeException runtimeException) {
@@ -58,7 +58,7 @@ final class uk extends MessageDialog implements WidgetActionListener {
             var4 = vl.accountCreatedSuccessfullyText;
           }
           var5 = -1 / ((-1 - param1) / 45);
-          var6 = new StatusMessagePanel((MessageDialog) (this), tq.field_a, var4);
+          var6 = new StatusMessagePanel((MessageDialog) (this), LegacyOpenGlDisplayLists.field_a, var4);
           if (!param2.field_b) {
             if (this.field_pb) {
               var6.a(wd.continueText, (byte) -123, (WidgetListener) (this));

@@ -184,7 +184,7 @@ final class SecondaryNodeQueue {
     }
 
     final static void b(int param0) {
-        ks.field_x = fw.c(false);
+        HardwareTurbulentWaterNoise.field_x = fw.c(false);
         RenderPresentationException.field_a = new DialogLayer();
         sm.a((byte) 127, true, true);
         if (param0 != 246) {
@@ -334,8 +334,8 @@ final class SecondaryNodeQueue {
           if (param1 != 113) {
             field_d = 68;
           }
-          ct.a(6510, param0);
-          tq.a((byte) -106, param0);
+          HardwareRidgedWaterNoise.awardDroneDefeatScore(6510, param0);
+          LegacyOpenGlDisplayLists.a((byte) -106, param0);
           if (param0.field_P == 0 &&
             param0.field_R) {
             ew.field_e = ew.field_e + 1;

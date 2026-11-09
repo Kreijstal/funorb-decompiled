@@ -7,14 +7,14 @@ final class GameplaySession {
     private double backdropY;
     private boolean showBlastHint;
     private double field_h;
-    static Object field_j;
+    static Object legacyTurbulentWaterData;
     static int field_k;
     private int[] secondGradientColors;
     private double field_m;
     private double backdropX;
     private int[] firstGradientColors;
     private double backdropVelocityX;
-    static float[][] field_i;
+    static float[][] noiseGradients;
     private static int targetMarkerYQ8;
     private double backdropVelocityY;
 
@@ -159,10 +159,10 @@ final class GameplaySession {
         int stackIn_12_1Lifetime1;
         var6 = Sumoblitz.field_L ? 1 : 0;
         try {
-          ml.field_w[2].draw(0, 0);
-          ml.field_w[3].draw(608, 0);
-          ml.field_w[0].draw(0, 448);
-          ml.field_w[1].draw(608, 448);
+          RidgedNoise3D.field_w[2].draw(0, 0);
+          RidgedNoise3D.field_w[3].draw(608, 0);
+          RidgedNoise3D.field_w[0].draw(0, 448);
+          RidgedNoise3D.field_w[1].draw(608, 448);
           var3_int = 0;
           var4 = (lg.field_c >> 1) % ok.field_f.length;
           var5 = 32;
@@ -176,8 +176,8 @@ final class GameplaySession {
               stackIn_12_1 = ok.field_f.length;
               if (var6 != 0) {
                 if (stackIn_12_0 < stackIn_12_1) {
-                  ff.field_k[0].draw(9, -16 + var5, 1, var3_int << 24, 1);
-                  ff.field_k[0].draw(598, var5 - 16, 1, var3_int << 24, 1);
+                  TurbulenceNoise3D.field_k[0].draw(9, -16 + var5, 1, var3_int << 24, 1);
+                  TurbulenceNoise3D.field_k[0].draw(598, var5 - 16, 1, var3_int << 24, 1);
                   var4++;
                   stackIn_23_0 = ~ok.field_f.length;
                   stackIn_23_1 = ~var4;
@@ -201,8 +201,8 @@ final class GameplaySession {
                 if (stackIn_12_0Lifetime1 >= stackIn_12_1Lifetime1) {
                   break;
                 }
-                ff.field_k[0].draw(9, -16 + var5, 1, var3_int << 24, 1);
-                ff.field_k[0].draw(598, var5 - 16, 1, var3_int << 24, 1);
+                TurbulenceNoise3D.field_k[0].draw(9, -16 + var5, 1, var3_int << 24, 1);
+                TurbulenceNoise3D.field_k[0].draw(598, var5 - 16, 1, var3_int << 24, 1);
                 var4++;
                 stackIn_23_0 = ~ok.field_f.length;
                 stackIn_23_1 = ~var4;
@@ -441,7 +441,7 @@ final class GameplaySession {
         try {
           po.pauseMenuOpen = false;
           if (param0 != 112) {
-            field_i = (float[][]) null;
+            noiseGradients = (float[][]) null;
           }
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "qu.O(" + param0 + ')');
@@ -856,10 +856,10 @@ final class GameplaySession {
 
     public static void releaseStatics(byte param0) {
         try {
-          field_j = null;
-          field_i = (float[][]) null;
+          legacyTurbulentWaterData = null;
+          noiseGradients = (float[][]) null;
           if (param0 <= 33) {
-            field_i = (float[][]) null;
+            noiseGradients = (float[][]) null;
           }
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "qu.L(" + param0 + ')');
@@ -885,7 +885,7 @@ final class GameplaySession {
           SoftwareTransform3D.field_b = 0;
           IntrusiveNodeHashTable.field_c = 0;
           tc.e(101);
-          ct.b(true);
+          HardwareRidgedWaterNoise.resetArcadeGameplay(true);
           MessageDialog.arcadeMode = true;
           MusicPatch.simulationPaused = false;
           this.closePauseMenu((byte) 112);
@@ -1204,12 +1204,12 @@ final class GameplaySession {
           if (stackIn_158_0 != -1) {
             boolean decompiledSharedTail0 = (-LimitedRandomAccessFile.field_b + TextureFormat.elapsedTicks != 5);
             if (!decompiledSharedTail0) {
-              rn.a(ff.warningText, 320, 240, 16755456, 28807);
+              rn.a(TurbulenceNoise3D.warningText, 320, 240, 16755456, 28807);
               decompiledSharedTail0 = (var6 != 0);
             }
             if ((decompiledSharedTail0) &&
               (10 == -LimitedRandomAccessFile.field_b + TextureFormat.elapsedTicks)) {
-              rn.a(ff.warningText, 320, 255, 16776960, 28807);
+              rn.a(TurbulenceNoise3D.warningText, 320, 255, 16776960, 28807);
             }
           }
           boolean decompiledFrameCompleted1 = true;
@@ -1297,7 +1297,7 @@ final class GameplaySession {
                   }
                   if (~an.waveIndex != ~(-1 + Bzip2State.field_J.length)) {
                     LimitedRandomAccessFile.field_b = TextureFormat.elapsedTicks;
-                    rn.a(ff.warningText, 320, 225, 16711680, 28807);
+                    rn.a(TurbulenceNoise3D.warningText, 320, 225, 16711680, 28807);
                   }
                   an.waveIndex = an.waveIndex + 1;
                   gn.a(14, true);
@@ -1864,6 +1864,6 @@ final class GameplaySession {
     }
 
     static {
-        field_i = new float[][]{new float[]{-0.33333298563957214f, -0.33333298563957214f, -0.33333298563957214f}, new float[]{0.33333298563957214f, -0.33333298563957214f, -0.33333298563957214f}, new float[]{-0.33333298563957214f, 0.33333298563957214f, -0.33333298563957214f}, new float[]{0.33333298563957214f, 0.33333298563957214f, -0.33333298563957214f}, new float[]{-0.33333298563957214f, -0.33333298563957214f, 0.33333298563957214f}, new float[]{0.33333298563957214f, -0.33333298563957214f, 0.33333298563957214f}, new float[]{-0.33333298563957214f, 0.33333298563957214f, 0.33333298563957214f}, new float[]{0.33333298563957214f, 0.33333298563957214f, 0.33333298563957214f}};
+        noiseGradients = new float[][]{new float[]{-0.33333298563957214f, -0.33333298563957214f, -0.33333298563957214f}, new float[]{0.33333298563957214f, -0.33333298563957214f, -0.33333298563957214f}, new float[]{-0.33333298563957214f, 0.33333298563957214f, -0.33333298563957214f}, new float[]{0.33333298563957214f, 0.33333298563957214f, -0.33333298563957214f}, new float[]{-0.33333298563957214f, -0.33333298563957214f, 0.33333298563957214f}, new float[]{0.33333298563957214f, -0.33333298563957214f, 0.33333298563957214f}, new float[]{-0.33333298563957214f, 0.33333298563957214f, 0.33333298563957214f}, new float[]{0.33333298563957214f, 0.33333298563957214f, 0.33333298563957214f}};
     }
 }

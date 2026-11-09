@@ -510,7 +510,7 @@ abstract class ToolkitFont {
         fw.field_m = DelayedInboundPacket.a(param0, "commonui", (byte) -56, "validation");
         jm.field_a = (LegacyBitmapFont) ((Object) vf.a(param1, true, "commonui", "arezzo12", param0));
         kw.field_b = (LegacyBitmapFont) ((Object) vf.a(param1, true, "commonui", "arezzo14", param0));
-        tq.field_a = (LegacyBitmapFont) ((Object) vf.a(param1, true, "commonui", "arezzo14bold", param0));
+        LegacyOpenGlDisplayLists.field_a = (LegacyBitmapFont) ((Object) vf.a(param1, true, "commonui", "arezzo14bold", param0));
         Sprite var17 = new Sprite(param3.fetchNamedFile("", "button.gif", -1), (java.awt.Component) ((Object) qn.field_f));
         ScrollPane.a((byte) 83, param0, "dropdown", "commonui");
         ne[] var5 = ShaderEffect.a("screen_options", param0, 73, "commonui");

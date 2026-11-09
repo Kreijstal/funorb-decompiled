@@ -236,7 +236,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
           BufferedSocket.field_n = SpriteData.a(param3, "", "keyboard");
           rl.field_l = SpriteData.b(param3, "", "player");
           kk.field_e = SpriteData.b(param3, "", "mook");
-          ks.field_w = SpriteData.b(param3, "", "fast");
+          HardwareTurbulentWaterNoise.field_w = SpriteData.b(param3, "", "fast");
           fl.field_r = SpriteData.b(param3, "", "sleeper");
           kr.field_b = SpriteData.b(param3, "", "splitter");
           DisplayModeConfirmationDialog.field_V = SpriteData.b(param3, "", "seeker");
@@ -254,7 +254,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
           dq.field_v = SpriteData.b(param3, "", "particles_alpha");
           LegacyOpenGlRenderbuffer.field_w = SpriteData.b(param3, "", "particle_ring");
           bj.field_g = SpriteData.a(param3, "", "particle_sprinkle");
-          ks.field_t = SpriteData.a(param3, "", "particle_star");
+          HardwareTurbulentWaterNoise.field_t = SpriteData.a(param3, "", "particle_star");
           ShaderEffect.field_c = SpriteData.a(param3, "", "particle_pixel");
           ue.field_p = SpriteData.a(param3, "", "particle_pixel_alpha");
           pc.field_c = SpriteData.a(param3, "", "ghost");
@@ -263,7 +263,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
           mn.field_c = SpriteData.a(param3, "", "shadow");
           SceneryParticle.field_C = SpriteData.a(param3, "", "driftinglight");
           wf.field_a = SpriteData.a(param3, "", "driftinglight_snow");
-          ml.field_p = SpriteData.a(param3, "", "driftinglight_rough");
+          RidgedNoise3D.field_p = SpriteData.a(param3, "", "driftinglight_rough");
           th.field_C = SpriteData.a(param3, "", "shockwave");
           MouseInputHandler.field_b = SpriteData.b(param3, "", "lightningrod");
           SoftLruCache.field_a = SpriteData.b(param3, "", "lightningrod_lowgraphics");

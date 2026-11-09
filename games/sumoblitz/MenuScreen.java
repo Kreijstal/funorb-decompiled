@@ -163,7 +163,7 @@ class MenuScreen {
                   var21 != 0);
                 if ((decompiledFrameRemainder0) &&
                   (decompiledFrameRemainder0 = !(var12[var17]))) {
-                  if (ct.field_x <= 0 &&
+                  if (HardwareRidgedWaterNoise.field_x <= 0 &&
                     var10[var17]) {
                     var20 = uj.field_a;
                   } else {
@@ -241,8 +241,8 @@ class MenuScreen {
           }
           if (var18Lifetime1 != 0 ||
             var21 != 0) {
-            MessageDialog.field_db.a(ab.achievedText, 5023231 | param2 << 24, var7, var13Lifetime1Lifetime2, var8Lifetime2Lifetime2, 0);
-            LegacyOpenGlEffect.field_c.a(ab.achievedText, param2 << 24 | 2293572, var7, var13Lifetime1Lifetime2, var8Lifetime2Lifetime2, 0);
+            MessageDialog.field_db.a(NoiseSliceGenerator.achievedText, 5023231 | param2 << 24, var7, var13Lifetime1Lifetime2, var8Lifetime2Lifetime2, 0);
+            LegacyOpenGlEffect.field_c.a(NoiseSliceGenerator.achievedText, param2 << 24 | 2293572, var7, var13Lifetime1Lifetime2, var8Lifetime2Lifetime2, 0);
           }
           var13Lifetime1Lifetime2 += 10;
           var8Lifetime2Lifetime2 -= 10;
@@ -262,7 +262,7 @@ class MenuScreen {
           if (var18Lifetime1 != 0) {
             qw.field_a[var15].draw(160, -30 + var20_int, 0, var5, 1);
             if (var21 != 0) {
-              if (!(ct.field_x <= 0) ||
+              if (!(HardwareRidgedWaterNoise.field_x <= 0) ||
                 !var10[var15]) {
                 pi.field_d.draw(160, -30 + var20_int, 0, var5, 1);
                 uj.field_a.draw(160, var20_int - 30, 0, var5, 1);
@@ -271,7 +271,7 @@ class MenuScreen {
               }
             }
           } else {
-            if (!(ct.field_x <= 0) ||
+            if (!(HardwareRidgedWaterNoise.field_x <= 0) ||
               !var10[var15]) {
               pi.field_d.draw(160, -30 + var20_int, 0, var5, 1);
               if (var21 != 0) {
@@ -881,7 +881,7 @@ class MenuScreen {
                     }
                     ih.a(-125);
                     StrongCacheReference.switchMenuScreen(-7753, param0, -1);
-                    qb.d(10);
+                    LegacyTurbulentWaterNoise.advanceToNextLevel(10);
                     gg.a((byte) 104);
                     ph.gameplaySession.closePauseMenu((byte) 112);
                     UiWidget.d((byte) -117);

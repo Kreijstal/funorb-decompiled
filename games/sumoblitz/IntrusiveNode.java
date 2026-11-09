@@ -81,7 +81,7 @@ class IntrusiveNode {
             var8 = HardwareGraphicsToolkit.a("@", var7, "%40", true);
             var9 = HardwareGraphicsToolkit.a("&", var8, "%26", true);
             var10 = HardwareGraphicsToolkit.a("#", var9, "%23", true);
-            if (ct.field_z == null) {
+            if (HardwareRidgedWaterNoise.field_z == null) {
               return;
             }
             if (param2 != 0) {
@@ -91,7 +91,7 @@ class IntrusiveNode {
             stackIn_14_1 = 116;
             stackIn_14_2 = null;
             stackIn_14_3 = null;
-            stackIn_14_4 = ct.field_z.getCodeBase();
+            stackIn_14_4 = HardwareRidgedWaterNoise.field_z.getCodeBase();
             stackIn_14_5 = new StringBuilder().append("clienterror.ws?c=").append(SpriteState.field_s).append("&u=");
             if (dv.field_c != null) {
               stackIn_15_2 = null;

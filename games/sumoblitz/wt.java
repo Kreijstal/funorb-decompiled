@@ -5,7 +5,7 @@ final class wt extends LegacyOpenGlEffect {
     private boolean field_j;
     private LegacyOpenGlCubeTexture[] field_e;
     static ArchiveCatalog field_i;
-    private tq field_f;
+    private LegacyOpenGlDisplayLists field_f;
     private boolean field_g;
     static int[] field_h;
 
@@ -43,8 +43,8 @@ final class wt extends LegacyOpenGlEffect {
 
     private final void d(int param0) {
         int var3 = Sumoblitz.field_L ? 1 : 0;
-        this.field_f = new tq(this.field_b, 2);
-        this.field_f.a(0, 4864);
+        this.field_f = new LegacyOpenGlDisplayLists(this.field_b, 2);
+        this.field_f.beginList(0, 4864);
         this.field_b.g(1, 98);
         jaggl.OpenGL.glTexGeni(8192, 9472, 34065);
         jaggl.OpenGL.glTexGeni(8193, 9472, 34065);
@@ -70,8 +70,8 @@ final class wt extends LegacyOpenGlEffect {
           this.field_b.a(117, 0, 34167, 770);
         }
         this.field_b.g(0, 83);
-        this.field_f.a(true);
-        this.field_f.a(1, 4864);
+        this.field_f.endList(true);
+        this.field_f.beginList(1, 4864);
         if (param0 > -116) {
           field_i = (ArchiveCatalog) null;
         }
@@ -96,7 +96,7 @@ final class wt extends LegacyOpenGlEffect {
           this.field_b.a(122, 0, 5890, 770);
         }
         this.field_b.g(0, 81);
-        this.field_f.a(true);
+        this.field_f.endList(true);
     }
 
     wt(LegacyOpenGlGraphicsToolkit param0) {
@@ -218,7 +218,7 @@ final class wt extends LegacyOpenGlEffect {
           this.field_b.g(1, 91);
           this.field_b.bindTexture(59, (LegacyOpenGlTexture) null);
           this.field_b.g(0, 92);
-          this.field_f.a((byte) 121, '\001');
+          this.field_f.callList((byte) 121, '\001');
           this.field_g = false;
         } else {
           this.field_b.a(118, 0, 5890, 770);
@@ -240,7 +240,7 @@ final class wt extends LegacyOpenGlEffect {
             this.field_b.bindTexture(101, this.field_b.field_n);
             this.field_b.g(0, 105);
           }
-          this.field_f.a((byte) 121, '\0');
+          this.field_f.callList((byte) 121, '\0');
           this.field_g = true;
         } else {
           this.field_b.a(124, 0, 34168, 770);

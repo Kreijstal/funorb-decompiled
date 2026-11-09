@@ -365,7 +365,7 @@ final class CachedTextLayout extends TextLayout {
                 var11_ref_String = "";
               }
               InwardSparkParticle.field_v.writeCp1252String(var11_ref_String, (byte) -115);
-              ks.a(gh.field_a, OpenGlShaderProgram.field_c, false, InwardSparkParticle.field_v, SoftLruCache.field_e);
+              HardwareTurbulentWaterNoise.a(gh.field_a, OpenGlShaderProgram.field_c, false, InwardSparkParticle.field_v, SoftLruCache.field_e);
               InwardSparkParticle.field_v.patchShortLength(0, InwardSparkParticle.field_v.position - var10);
             } else {
               SoftLruCache.field_e.position = 0;
@@ -388,7 +388,7 @@ final class CachedTextLayout extends TextLayout {
               InwardSparkParticle.field_v.writeByte((byte) 108, 16);
               InwardSparkParticle.field_v.position = InwardSparkParticle.field_v.position + 1;
               var9 = InwardSparkParticle.field_v.position;
-              ks.a(gh.field_a, OpenGlShaderProgram.field_c, false, InwardSparkParticle.field_v, SoftLruCache.field_e);
+              HardwareTurbulentWaterNoise.a(gh.field_a, OpenGlShaderProgram.field_c, false, InwardSparkParticle.field_v, SoftLruCache.field_e);
               InwardSparkParticle.field_v.patchByteLength(InwardSparkParticle.field_v.position - var9, -13745);
             }
             MessageDialog.a(0, -1);

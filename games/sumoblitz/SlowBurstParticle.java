@@ -167,9 +167,9 @@ final class SlowBurstParticle extends TimedSceneEffect {
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               ArenaPad.a(var15, (byte) 61);
               if (var6_intLifetime1 == 0) {
-                oc.a(ReassignUpgradesScreen.field_l, DisplayModeConfirmationDialog.field_U, true, var6_intLifetime1, SoftLruCache.field_f, ch.field_d);
+                oc.a(ReassignUpgradesScreen.field_l, DisplayModeConfirmationDialog.field_U, true, var6_intLifetime1, SoftLruCache.field_f, LegacyWaterTextureResources.field_d);
               } else {
-                oc.a(ReassignUpgradesScreen.field_l, DisplayModeConfirmationDialog.field_U, true, var6_intLifetime1, SoftLruCache.field_f, ch.field_d);
+                oc.a(ReassignUpgradesScreen.field_l, DisplayModeConfirmationDialog.field_U, true, var6_intLifetime1, SoftLruCache.field_f, LegacyWaterTextureResources.field_d);
               }
             }
             qr.a(13136, var5);

@@ -37,7 +37,7 @@ final class DelayedInboundPacket extends IntrusiveNode {
           }
           var3 = stackIn_9_0 + stackIn_13_1;
           if (!hw.field_b[96] &&
-            !hw.field_b[rp.field_d]) {
+            !hw.field_b[SoftwareRenderContext.field_d]) {
             stackIn_17_0 = 0;
           } else {
             stackIn_17_0 = -256;

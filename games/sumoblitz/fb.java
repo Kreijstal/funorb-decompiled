@@ -51,7 +51,7 @@ final class fb {
           if (param1) {
             var6 = var6 | 8;
           }
-          if (rp.field_b != null) {
+          if (SoftwareRenderContext.field_b != null) {
             var6 = var6 | 16;
           }
           InwardSparkParticle.field_v.writeByte((byte) 108, var6);
@@ -60,10 +60,10 @@ final class fb {
             var7 = "";
           }
           InwardSparkParticle.field_v.writeCp1252String(var7, (byte) -106);
-          if (rp.field_b != null) {
-            InwardSparkParticle.field_v.writeCircumfixedString(rp.field_b, (byte) 19);
+          if (SoftwareRenderContext.field_b != null) {
+            InwardSparkParticle.field_v.writeCircumfixedString(SoftwareRenderContext.field_b, (byte) 19);
           }
-          ks.a(gh.field_a, OpenGlShaderProgram.field_c, false, InwardSparkParticle.field_v, SoftLruCache.field_e);
+          HardwareTurbulentWaterNoise.a(gh.field_a, OpenGlShaderProgram.field_c, false, InwardSparkParticle.field_v, SoftLruCache.field_e);
           InwardSparkParticle.field_v.patchShortLength(param2 + 12793, InwardSparkParticle.field_v.position - var5_int);
           MessageDialog.a(param2 + 12793, -1);
           return;

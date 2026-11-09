@@ -322,7 +322,7 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
                 var6.a(PowerupTrailParticle.toCustomerSupportText, 9, true);
               }
             } else {
-              var6.a(ch.playFreeVersionText, 8, true);
+              var6.a(LegacyWaterTextureResources.playFreeVersionText, 8, true);
             }
           }
           this.transitionToContent((byte) -97, var6);

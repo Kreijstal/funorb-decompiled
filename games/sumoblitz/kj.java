@@ -3,17 +3,17 @@
  */
 final class kj extends LegacyOpenGlEffect {
     static volatile int field_e;
-    private tq field_f;
-    private ch field_g;
+    private LegacyOpenGlDisplayLists field_f;
+    private LegacyWaterTextureResources field_g;
 
-    kj(LegacyOpenGlGraphicsToolkit param0, ch param1) {
+    kj(LegacyOpenGlGraphicsToolkit param0, LegacyWaterTextureResources param1) {
         super(param0);
         try {
           this.field_g = param1;
-          this.field_f = new tq(param0, 2);
-          this.field_f.a(0, 4864);
+          this.field_f = new LegacyOpenGlDisplayLists(param0, 2);
+          this.field_f.beginList(0, 4864);
           this.field_b.g(1, 98);
-          if (this.field_g.field_g) {
+          if (this.field_g.useVolumeTextures) {
             jaggl.OpenGL.glTexGeni(8194, 9472, 9217);
             jaggl.OpenGL.glEnable(3170);
           }
@@ -22,16 +22,16 @@ final class kj extends LegacyOpenGlEffect {
           jaggl.OpenGL.glEnable(3168);
           jaggl.OpenGL.glEnable(3169);
           this.field_b.g(0, 106);
-          this.field_f.a(true);
-          this.field_f.a(1, 4864);
+          this.field_f.endList(true);
+          this.field_f.beginList(1, 4864);
           this.field_b.g(1, 127);
-          if (this.field_g.field_g) {
+          if (this.field_g.useVolumeTextures) {
             jaggl.OpenGL.glDisable(3170);
           }
           jaggl.OpenGL.glDisable(3168);
           jaggl.OpenGL.glDisable(3169);
           this.field_b.g(0, 80);
-          this.field_f.a(true);
+          this.field_f.endList(true);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "kj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -44,7 +44,7 @@ final class kj extends LegacyOpenGlEffect {
     }
 
     final void b(int param0) {
-        this.field_f.a((byte) 121, '\001');
+        this.field_f.callList((byte) 121, '\001');
         if (param0 <= -125) {
           this.field_b.g(1, 100);
           this.field_b.bindTexture(88, (LegacyOpenGlTexture) null);
@@ -73,7 +73,7 @@ final class kj extends LegacyOpenGlEffect {
           GameApplet.field_e[1] = var6;
           GameApplet.field_e[0] = 0.0f;
           jaggl.OpenGL.glTexGenfv(8193, 9474, GameApplet.field_e, 0);
-          if (this.field_g.field_g) {
+          if (this.field_g.useVolumeTextures) {
             GameApplet.field_e[2] = 0.0f;
             GameApplet.field_e[0] = 0.0f;
             GameApplet.field_e[1] = 0.0f;
@@ -81,7 +81,7 @@ final class kj extends LegacyOpenGlEffect {
             jaggl.OpenGL.glTexGenfv(8194, 9473, GameApplet.field_e, 0);
           } else {
             var8 = (int)(16.0f * ((float)this.field_b.field_Ac * var5));
-            this.field_b.bindTexture(90, this.field_g.field_a[var8 % 16]);
+            this.field_b.bindTexture(90, this.field_g.turbulenceSlices[var8 % 16]);
           }
           this.field_b.g(0, 90);
           if (param0 < 39) {
@@ -100,7 +100,7 @@ final class kj extends LegacyOpenGlEffect {
         GameApplet.field_e[1] = var6;
         GameApplet.field_e[0] = 0.0f;
         jaggl.OpenGL.glTexGenfv(8193, 9474, GameApplet.field_e, 0);
-        if (this.field_g.field_g) {
+        if (this.field_g.useVolumeTextures) {
           GameApplet.field_e[2] = 0.0f;
           GameApplet.field_e[0] = 0.0f;
           GameApplet.field_e[1] = 0.0f;
@@ -108,7 +108,7 @@ final class kj extends LegacyOpenGlEffect {
           jaggl.OpenGL.glTexGenfv(8194, 9473, GameApplet.field_e, 0);
         } else {
           var8Lifetime1 = (int)(16.0f * ((float)this.field_b.field_Ac * var5));
-          this.field_b.bindTexture(90, this.field_g.field_a[var8Lifetime1 % 16]);
+          this.field_b.bindTexture(90, this.field_g.turbulenceSlices[var8Lifetime1 % 16]);
         }
         this.field_b.g(0, 90);
         if (param0 < 39) {
@@ -119,10 +119,10 @@ final class kj extends LegacyOpenGlEffect {
 
     final void a(byte param0, boolean param1) {
         if (param0 >= 33) {
-          this.field_f.a((byte) 121, '\0');
-          if (this.field_g.field_g) {
+          this.field_f.callList((byte) 121, '\0');
+          if (this.field_g.useVolumeTextures) {
             this.field_b.g(1, 120);
-            this.field_b.bindTexture(56, this.field_g.field_f);
+            this.field_b.bindTexture(56, this.field_g.turbulenceVolume);
             this.field_b.g(0, 110);
           }
           return;
@@ -185,7 +185,7 @@ final class kj extends LegacyOpenGlEffect {
 
     final boolean b(byte param0) {
         if (param0 > -64) {
-          this.field_f = (tq) null;
+          this.field_f = (LegacyOpenGlDisplayLists) null;
           return true;
         }
         return true;

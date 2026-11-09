@@ -3,13 +3,13 @@
  */
 import java.util.*;
 
-class ff extends en {
-    private int field_q;
-    private int field_p;
+class TurbulenceNoise3D extends FixedPointPerlinNoise3D {
+    private int outputIndex;
+    private int accumulatedQ12;
     static String soundText;
-    private byte[] field_r;
+    private byte[] samples;
     static ToolkitSprite[] field_k;
-    private int[] field_l;
+    private int[] octaveWeightsQ12;
     static String warningText;
     static String createText;
 
@@ -23,22 +23,22 @@ class ff extends en {
         soundText = null;
     }
 
-    final void b(int param0) {
-        this.field_q = 0;
-        this.field_p = 0;
-        if (param0 <= -7) {
+    final void resetOutput(int guard) {
+        this.outputIndex = 0;
+        this.accumulatedQ12 = 0;
+        if (guard <= -7) {
           return;
         }
         IntrusiveDeque var3 = (IntrusiveDeque) null;
-        ff.a(-47, -118, 3, (IntrusiveDeque) null, 110, (byte) -26);
+        TurbulenceNoise3D.a(-47, -118, 3, (IntrusiveDeque) null, 110, (byte) -26);
     }
 
-    ff(int param0, int param1, int param2, int param3, int param4, float param5) {
-        super(param0, param1, param2, param3, param4);
+    TurbulenceNoise3D(int noiseSeed, int octaves, int xPeriod, int yPeriod, int zPeriod, float persistence) {
+        super(noiseSeed, octaves, xPeriod, yPeriod, zPeriod);
         int var7 = 0;
-        this.field_l = new int[this.field_g];
-        for (var7 = 0; var7 < this.field_g; var7++) {
-          this.field_l[var7] = (short)(int)(4096.0 * Math.pow((double)param5, (double)var7));
+        this.octaveWeightsQ12 = new int[this.octaveCount];
+        for (var7 = 0; var7 < this.octaveCount; var7++) {
+          this.octaveWeightsQ12[var7] = (short)(int)(4096.0 * Math.pow((double)persistence, (double)var7));
         }
     }
 
@@ -72,7 +72,7 @@ class ff extends en {
           var7 = 0;
           if (param5 != 94) {
             var10 = (IntrusiveDeque) null;
-            ff.a(-96, 96, -59, (IntrusiveDeque) null, -77, (byte) 95);
+            TurbulenceNoise3D.a(-96, 96, -59, (IntrusiveDeque) null, -77, (byte) 95);
           }
           while (true) {
             stackIn_9_0 = (var6_int != 0) ? 20 : 40;
@@ -115,57 +115,57 @@ class ff extends en {
         }
     }
 
-    void a(int param0, byte param1, int param2) {
-        int fieldTemp$0 = this.field_q;
-        this.field_q = this.field_q + 1;
-        this.field_r[fieldTemp$0] = (byte)(127 + eb.a(param2, param1 >> 1));
+    void writeVoxel(int index, byte value, int bias) {
+        int fieldTemp$0 = this.outputIndex;
+        this.outputIndex = this.outputIndex + 1;
+        this.samples[fieldTemp$0] = (byte)(127 + eb.bitwiseAnd(bias, value >> 1));
     }
 
-    final void a(int param0, int param1, int param2) {
-        this.field_p = this.field_p + (this.field_l[param0] * param2 >> 12);
-        if (param1 == 1157) {
+    final void accumulateOctave(int octave, int guard, int valueQ12) {
+        this.accumulatedQ12 = this.accumulatedQ12 + (this.octaveWeightsQ12[octave] * valueQ12 >> 12);
+        if (guard == 1157) {
           return;
         }
         IntrusiveDeque var5 = (IntrusiveDeque) null;
-        ff.a(66, 11, -7, (IntrusiveDeque) null, 98, (byte) -106);
+        TurbulenceNoise3D.a(66, 11, -7, (IntrusiveDeque) null, 98, (byte) -106);
     }
 
-    final void a(boolean param0) {
+    final void finishVoxel(boolean guard) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
-        this.field_p = Math.abs(this.field_p);
-        if (param0) {
-          ff.releaseStatics(false);
-          if (this.field_p < 4096) {
-            fieldTemp$0 = this.field_q;
-            this.field_q = this.field_q + 1;
-            this.a(fieldTemp$0, (byte)(this.field_p >> 4), 127);
-            this.field_p = 0;
+        this.accumulatedQ12 = Math.abs(this.accumulatedQ12);
+        if (guard) {
+          TurbulenceNoise3D.releaseStatics(false);
+          if (this.accumulatedQ12 < 4096) {
+            fieldTemp$0 = this.outputIndex;
+            this.outputIndex = this.outputIndex + 1;
+            this.writeVoxel(fieldTemp$0, (byte)(this.accumulatedQ12 >> 4), 127);
+            this.accumulatedQ12 = 0;
             return;
           }
-          this.field_p = 4095;
-          fieldTemp$1 = this.field_q;
-          this.field_q = this.field_q + 1;
-          this.a(fieldTemp$1, (byte)(this.field_p >> 4), 127);
-          this.field_p = 0;
+          this.accumulatedQ12 = 4095;
+          fieldTemp$1 = this.outputIndex;
+          this.outputIndex = this.outputIndex + 1;
+          this.writeVoxel(fieldTemp$1, (byte)(this.accumulatedQ12 >> 4), 127);
+          this.accumulatedQ12 = 0;
           return;
         }
-        if (this.field_p >= 4096) {
-          this.field_p = 4095;
-          fieldTemp$2 = this.field_q;
-          this.field_q = this.field_q + 1;
-          this.a(fieldTemp$2, (byte)(this.field_p >> 4), 127);
-          this.field_p = 0;
+        if (this.accumulatedQ12 >= 4096) {
+          this.accumulatedQ12 = 4095;
+          fieldTemp$2 = this.outputIndex;
+          this.outputIndex = this.outputIndex + 1;
+          this.writeVoxel(fieldTemp$2, (byte)(this.accumulatedQ12 >> 4), 127);
+          this.accumulatedQ12 = 0;
           return;
         }
-        int fieldTemp$3 = this.field_q;
-        this.field_q = this.field_q + 1;
-        this.a(fieldTemp$3, (byte)(this.field_p >> 4), 127);
-        this.field_p = 0;
+        int fieldTemp$3 = this.outputIndex;
+        this.outputIndex = this.outputIndex + 1;
+        this.writeVoxel(fieldTemp$3, (byte)(this.accumulatedQ12 >> 4), 127);
+        this.accumulatedQ12 = 0;
     }
 
-    final static void a(byte param0, ResourceArchive param1) {
+    final static void loadGameSoundEffects(byte guard, ResourceArchive archive) {
         try {
           OpenGlCubeTexture.field_l[0] = eb.field_b.getSoundEffectByName(0, "fence_hum_bg_loop");
           OpenGlCubeTexture.field_l[2] = eb.field_b.getSoundEffectByName(0, "landmine_red_flash");
@@ -196,12 +196,12 @@ class ff extends en {
           OpenGlCubeTexture.field_l[35] = eb.field_b.getSoundEffectByName(0, "firework_particles2");
           OpenGlCubeTexture.field_l[36] = eb.field_b.getSoundEffectByName(0, "firework_particles3");
           OpenGlCubeTexture.field_l[37] = eb.field_b.getSoundEffectByName(0, "firework_particles4");
-          if (param0 > -42) {
+          if (guard > -42) {
             IntrusiveDeque var3 = (IntrusiveDeque) null;
-            ff.a(98, 120, 16, (IntrusiveDeque) null, 107, (byte) 5);
+            TurbulenceNoise3D.a(98, 120, 16, (IntrusiveDeque) null, 107, (byte) 5);
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ff.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ff.R(" + guard + ',' + (archive != null ? "{...}" : "null") + ')');
         }
     }
 

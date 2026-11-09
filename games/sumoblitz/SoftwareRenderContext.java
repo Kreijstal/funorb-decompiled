@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rp {
-    private SoftwareGraphicsToolkit field_a;
+final class SoftwareRenderContext {
+    private SoftwareGraphicsToolkit toolkit;
     static String field_b;
     static int field_d;
-    Runnable field_e;
-    private int[] field_f;
-    bg field_c;
+    Runnable thread;
+    private int[] scratchIndices;
+    SoftwareScanlineOffsets scanlineOffsets;
 
-    final static void a(boolean param0) {
+    final static void initializePunctuationKeyMap(boolean guard) {
         SoftwareTransform3D.field_c[93] = 43;
         SoftwareTransform3D.field_c[44] = 71;
         SoftwareTransform3D.field_c[45] = 26;
         SoftwareTransform3D.field_c[92] = 74;
         SoftwareTransform3D.field_c[59] = 57;
         SoftwareTransform3D.field_c[47] = 73;
-        if (!param0) {
+        if (!guard) {
           SoftwareTransform3D.field_c[61] = 27;
           SoftwareTransform3D.field_c[222] = 58;
           SoftwareTransform3D.field_c[520] = 59;
@@ -25,7 +25,7 @@ final class rp {
           SoftwareTransform3D.field_c[91] = 42;
           return;
         }
-        rp.b(true);
+        SoftwareRenderContext.releaseStatics(true);
         SoftwareTransform3D.field_c[61] = 27;
         SoftwareTransform3D.field_c[222] = 58;
         SoftwareTransform3D.field_c[520] = 59;
@@ -34,33 +34,33 @@ final class rp {
         SoftwareTransform3D.field_c[91] = 42;
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean guard) {
         field_b = null;
-        if (!param0) {
-          rp.a(false);
+        if (!guard) {
+          SoftwareRenderContext.initializePunctuationKeyMap(false);
         }
     }
 
-    final void a(Runnable param0, boolean param1) {
+    final void setThread(Runnable thread, boolean guard) {
         try {
-          if (!param1) {
-            rp.a(true);
+          if (!guard) {
+            SoftwareRenderContext.initializePunctuationKeyMap(true);
           }
-          this.field_e = param0;
+          this.thread = thread;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "rp.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "rp.C(" + (thread != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
-    final void a(int param0) {
-        this.field_c = new bg(this.field_a, this);
-        if (param0 < 124) {
+    final void resetScanlineOffsets(int guard) {
+        this.scanlineOffsets = new SoftwareScanlineOffsets(this.toolkit, this);
+        if (guard < 124) {
           Runnable var3 = (Runnable) null;
-          this.a((Runnable) null, true);
+          this.setThread((Runnable) null, true);
         }
     }
 
-    rp(SoftwareGraphicsToolkit param0) {
+    SoftwareRenderContext(SoftwareGraphicsToolkit owner) {
         af discarded$12 = null;
         af discarded$13 = null;
         af discarded$14 = null;
@@ -79,21 +79,21 @@ final class rp {
         RuntimeException var2 = null;
         SoftwareTransform3D discarded$11 = new SoftwareTransform3D();
         try {
-          this.field_a = param0;
-          this.field_c = new bg(param0, this);
-          discarded$12 = new af(this.field_a);
-          discarded$13 = new af(this.field_a);
-          discarded$14 = new af(this.field_a);
-          discarded$15 = new af(this.field_a);
-          discarded$16 = new af(this.field_a);
-          discarded$17 = new af(this.field_a);
-          discarded$18 = new af(this.field_a);
-          discarded$19 = new af(this.field_a);
-          discarded$20 = new af(this.field_a);
-          discarded$21 = new af(this.field_a);
-          this.field_f = new int[af.field_c];
+          this.toolkit = owner;
+          this.scanlineOffsets = new SoftwareScanlineOffsets(owner, this);
+          discarded$12 = new af(this.toolkit);
+          discarded$13 = new af(this.toolkit);
+          discarded$14 = new af(this.toolkit);
+          discarded$15 = new af(this.toolkit);
+          discarded$16 = new af(this.toolkit);
+          discarded$17 = new af(this.toolkit);
+          discarded$18 = new af(this.toolkit);
+          discarded$19 = new af(this.toolkit);
+          discarded$20 = new af(this.toolkit);
+          discarded$21 = new af(this.toolkit);
+          this.scratchIndices = new int[af.field_c];
           for (var2_int = 0; af.field_c > var2_int; var2_int++) {
-            this.field_f[var2_int] = -1;
+            this.scratchIndices[var2_int] = -1;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -101,7 +101,7 @@ final class rp {
           var2 = decompiledCaughtException;
           stackIn_7_0 = var2;
           stackIn_7_1 = new StringBuilder().append("rp.<init>(");
-          if (param0 == null) {
+          if (owner == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";

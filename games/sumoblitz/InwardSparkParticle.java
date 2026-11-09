@@ -11,22 +11,22 @@ final class InwardSparkParticle extends TimedSceneEffect {
     private int velocityXQ8;
     static MouseWheelInput field_w;
 
-    final static void f(int param0) {
-        ct var1 = null;
+    final static void ensureHardwareWaterNoise(int guard) {
+        HardwareRidgedWaterNoise var1 = null;
         byte[] var3 = null;
-        ks var1_ref = null;
+        HardwareTurbulentWaterNoise var1_ref = null;
         byte[] var4 = null;
-        if (null == pd.field_n) {
-          var1 = new ct();
-          var3 = var1.a(128, 128, false, 16);
-          pd.field_n = DroneDebris.storeByteArray((byte) -125, var3, false);
+        if (null == pd.hardwareRidgedWaterData) {
+          var1 = new HardwareRidgedWaterNoise();
+          var3 = var1.generate(128, 128, false, 16);
+          pd.hardwareRidgedWaterData = DroneDebris.storeByteArray((byte) -125, var3, false);
         }
-        if (LegacyOpenGlShader.field_d == null) {
-          var1_ref = new ks();
-          var4 = var1_ref.b(1, 128, 128, 16);
-          LegacyOpenGlShader.field_d = DroneDebris.storeByteArray((byte) -120, var4, false);
+        if (LegacyOpenGlShader.hardwareTurbulentWaterData == null) {
+          var1_ref = new HardwareTurbulentWaterNoise();
+          var4 = var1_ref.generate(1, 128, 128, 16);
+          LegacyOpenGlShader.hardwareTurbulentWaterData = DroneDebris.storeByteArray((byte) -120, var4, false);
         }
-        if (param0 != 23369) {
+        if (guard != 23369) {
           livesText = (String) null;
         }
     }

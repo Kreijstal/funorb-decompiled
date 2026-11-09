@@ -207,7 +207,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
         this.supportsFramebufferObjects = this.field_y.a("GL_EXT_framebuffer_object");
         this.field_B = this.field_y.a("GL_EXT_framebuffer_blit");
         this.field_vb = this.field_y.a("GL_EXT_framebuffer_multisample");
-        this.field_W = en.field_h.startsWith("mac");
+        this.field_W = FixedPointPerlinNoise3D.field_h.startsWith("mac");
         jaggl.OpenGL.glGetFloatv(2834, LegacyOpenGlSpriteMask.field_g, 0);
         stackIn_26_0 = (var2 != 0) ? var2 : 0;
         return stackIn_26_0;
@@ -896,7 +896,7 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
               for (var7 = 0; data.field_h > var7; var7++) {
                 incrementValue$0 = var5;
                 var5++;
-                var3[incrementValue$0] = ic.a(data.field_g[eb.a((int) data.field_e[var4], 255)], data.field_a[var4] << 24);
+                var3[incrementValue$0] = ic.a(data.field_g[eb.bitwiseAnd((int) data.field_e[var4], 255)], data.field_a[var4] << 24);
                 var4++;
               }
             }
@@ -1764,9 +1764,9 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
     }
 
     final void e(int param0, int param1) {
-        LegacyOpenGlSpriteMask.field_g[0] = (float)eb.a(param1, 16711680) / 16711680.0f;
-        LegacyOpenGlSpriteMask.field_g[2] = (float)eb.a(255, param1) / 255.0f;
-        LegacyOpenGlSpriteMask.field_g[1] = (float)eb.a(65280, param1) / 65280.0f;
+        LegacyOpenGlSpriteMask.field_g[0] = (float)eb.bitwiseAnd(param1, 16711680) / 16711680.0f;
+        LegacyOpenGlSpriteMask.field_g[2] = (float)eb.bitwiseAnd(255, param1) / 255.0f;
+        LegacyOpenGlSpriteMask.field_g[1] = (float)eb.bitwiseAnd(65280, param1) / 65280.0f;
         LegacyOpenGlSpriteMask.field_g[3] = (float)(param1 >>> 24) / 255.0f;
         jaggl.OpenGL.glTexEnvfv(8960, 8705, LegacyOpenGlSpriteMask.field_g, param0);
     }
@@ -2474,9 +2474,9 @@ final class LegacyOpenGlGraphicsToolkit extends GraphicsToolkit {
           return;
         }
         jaggl.OpenGL.glFogf(2916, this.field_Lb);
-        LegacyOpenGlSpriteMask.field_g[1] = (float)eb.a(this.field_P, 65280) / 65280.0f;
-        LegacyOpenGlSpriteMask.field_g[2] = (float)eb.a(255, this.field_P) / 255.0f;
-        LegacyOpenGlSpriteMask.field_g[0] = (float)eb.a(this.field_P, 16711680) / 16711680.0f;
+        LegacyOpenGlSpriteMask.field_g[1] = (float)eb.bitwiseAnd(this.field_P, 65280) / 65280.0f;
+        LegacyOpenGlSpriteMask.field_g[2] = (float)eb.bitwiseAnd(255, this.field_P) / 255.0f;
+        LegacyOpenGlSpriteMask.field_g[0] = (float)eb.bitwiseAnd(this.field_P, 16711680) / 16711680.0f;
         jaggl.OpenGL.glFogfv(2918, LegacyOpenGlSpriteMask.field_g, 0);
     }
 

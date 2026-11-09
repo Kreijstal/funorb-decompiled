@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class LegacyOpenGlBitmapFont extends ToolkitFont {
-    private tq field_e;
+    private LegacyOpenGlDisplayLists field_e;
     private LegacyOpenGlSpriteTexture field_c;
     private LegacyOpenGlGraphicsToolkit field_f;
     private boolean field_d;
@@ -37,7 +37,7 @@ final class LegacyOpenGlBitmapFont extends ToolkitFont {
         jaggl.OpenGL.glEnable(3169);
         jaggl.OpenGL.glColor4ub((byte)(param3 >> 16), (byte)(param3 >> 8), (byte)param3, (byte)(param3 >> 24));
         jaggl.OpenGL.glTranslatef((float)param1, (float)param2, 0.0f);
-        this.field_e.a((byte) 121, param0);
+        this.field_e.callList((byte) 121, param0);
         jaggl.OpenGL.glLoadIdentity();
         jaggl.OpenGL.glDisable(3168);
         jaggl.OpenGL.glDisable(3169);
@@ -216,7 +216,7 @@ final class LegacyOpenGlBitmapFont extends ToolkitFont {
           this.field_d = true;
         }
         this.field_c.setLinearFiltering(false, 0);
-        this.field_e = new tq(param0, 256);
+        this.field_e = new LegacyOpenGlDisplayLists(param0, 256);
         var7 = this.field_c.maxU / (float)this.field_c.spriteWidth;
         var8 = this.field_c.maxV / (float)this.field_c.spriteHeight;
         for (var9 = 0; var9 < 256; var9++) {
@@ -231,7 +231,7 @@ final class LegacyOpenGlBitmapFont extends ToolkitFont {
           var18 = var16 * var8;
           var19 = (var15 + (float)var12Lifetime1) * var7;
           var20 = (var16 + (float)var11Lifetime1) * var8;
-          this.field_e.a(var9, 4864);
+          this.field_e.beginList(var9, 4864);
           jaggl.OpenGL.glBegin(7);
           jaggl.OpenGL.glTexCoord2f(var17, this.field_c.maxV - var18);
           jaggl.OpenGL.glVertex2i(var14Lifetime1, var13Lifetime1);
@@ -242,7 +242,7 @@ final class LegacyOpenGlBitmapFont extends ToolkitFont {
           jaggl.OpenGL.glTexCoord2f(var19, this.field_c.maxV - var18);
           jaggl.OpenGL.glVertex2i(var14Lifetime1 + var12Lifetime1, var13Lifetime1);
           jaggl.OpenGL.glEnd();
-          this.field_e.a(true);
+          this.field_e.endList(true);
         }
     }
 
@@ -258,7 +258,7 @@ final class LegacyOpenGlBitmapFont extends ToolkitFont {
         }
         jaggl.OpenGL.glColor4ub((byte)(param3 >> 16), (byte)(param3 >> 8), (byte)param3, (byte)(param3 >> 24));
         jaggl.OpenGL.glTranslatef((float)param1, (float)param2, 0.0f);
-        this.field_e.a((byte) 121, param0);
+        this.field_e.callList((byte) 121, param0);
         jaggl.OpenGL.glLoadIdentity();
         if (this.field_d ||
           param4) {

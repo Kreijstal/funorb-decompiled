@@ -27,19 +27,19 @@ final class ProgressDialog extends ResizingDialog {
     final void drawBackdrop(int guard, int originX, int originY) {
         if (guard > 110) {
           super.drawBackdrop(112, originX, originY);
-          tq.field_a.a(this.field_W, originX + (this.width >> 1), originY + 103, 16777215, -1);
+          LegacyOpenGlDisplayLists.field_a.a(this.field_W, originX + (this.width >> 1), originY + 103, 16777215, -1);
           if (null != this.field_U) {
             SoftwareRasterizer.drawHorizontalLine(20 + originX, originY + 120 - 7, 260, 8421504);
-            tq.field_a.a(this.field_U, originX + 20, 128 + originY, 260, 100, 16777215, -1, 1, 0, tq.field_a.field_s);
+            LegacyOpenGlDisplayLists.field_a.a(this.field_U, originX + 20, 128 + originY, 260, 100, 16777215, -1, 1, 0, LegacyOpenGlDisplayLists.field_a.field_s);
           }
           return;
         }
         waitingForGraphicsText = (String) null;
         super.drawBackdrop(112, originX, originY);
-        tq.field_a.a(this.field_W, originX + (this.width >> 1), originY + 103, 16777215, -1);
+        LegacyOpenGlDisplayLists.field_a.a(this.field_W, originX + (this.width >> 1), originY + 103, 16777215, -1);
         if (null != this.field_U) {
           SoftwareRasterizer.drawHorizontalLine(20 + originX, originY + 120 - 7, 260, 8421504);
-          tq.field_a.a(this.field_U, originX + 20, 128 + originY, 260, 100, 16777215, -1, 1, 0, tq.field_a.field_s);
+          LegacyOpenGlDisplayLists.field_a.a(this.field_U, originX + 20, 128 + originY, 260, 100, 16777215, -1, 1, 0, LegacyOpenGlDisplayLists.field_a.field_s);
         }
     }
 
@@ -70,7 +70,7 @@ final class ProgressDialog extends ResizingDialog {
         try {
           this.field_U = param1;
           if (this.field_U != null) {
-            var3_int = tq.field_a.a(this.field_U, 260, tq.field_a.field_s);
+            var3_int = LegacyOpenGlDisplayLists.field_a.a(this.field_U, 260, LegacyOpenGlDisplayLists.field_a.field_s);
             this.resizeCentered(300, var3_int + 150, 58);
           }
           this.field_Q = new pq(13, 50, 274, 30, 15, 2113632, 4210752);

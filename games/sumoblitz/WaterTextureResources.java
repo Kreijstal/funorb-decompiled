@@ -39,14 +39,14 @@ final class WaterTextureResources {
         int var16 = Sumoblitz.field_L ? 1 : 0;
         byte[] var2Lifetime1;
         if (this.normalMap == null) {
-          if (ab.field_b == null) {
-            var22 = HardwareTextureCache.a(0.6000000238418579f, 0.5f, 128, -30865, new vu(419684), 4.0f, 4.0f, 16.0f, 16, 8, 128);
+          if (NoiseSliceGenerator.hardwareHeightNoise == null) {
+            var22 = HardwareTextureCache.generateNoiseVolume(0.6000000238418579f, 0.5f, 128, -30865, new PerlinNoiseSliceGenerator(419684), 4.0f, 4.0f, 16.0f, 16, 8, 128);
             var19 = var22;
             var18 = var19;
             var2 = var18;
-            ab.field_b = DroneDebris.storeByteArray((byte) -121, var22, false);
+            NoiseSliceGenerator.hardwareHeightNoise = DroneDebris.storeByteArray((byte) -121, var22, false);
           }
-          var23 = ab.extractByteArray(false, ab.field_b, 0);
+          var23 = NoiseSliceGenerator.extractByteArray(false, NoiseSliceGenerator.hardwareHeightNoise, 0);
           var20 = var23;
           var17 = var20;
           var2Lifetime1 = var17;
@@ -187,23 +187,23 @@ final class WaterTextureResources {
             !this.toolkit.a(GpuDataType.UNSIGNED_BYTE, ps.LUMINANCE_ALPHA, 6)) {
             return;
           }
-          InwardSparkParticle.f(23369);
+          InwardSparkParticle.ensureHardwareWaterNoise(23369);
           if (!this.useVolumeTextures) {
             this.animatedSlices = new Texture2D[16];
             for (var2_int = 0; var2_int < 16; var2_int++) {
-              var17 = iq.a(pd.field_n, 14381, 32768, var2_int * 32768);
+              var17 = iq.a(pd.hardwareRidgedWaterData, 14381, 32768, var2_int * 32768);
               this.animatedSlices[var2_int] = this.toolkit.a(var17, 128, 128, ps.LUMINANCE_ALPHA, 0, true);
             }
             this.secondarySlices = new Texture2D[16];
             for (var2_intLifetime1 = 0; var2_intLifetime1 < 16; var2_intLifetime1++) {
-              var18 = iq.a(LegacyOpenGlShader.field_d, 14381, 32768, 32768 * var2_intLifetime1);
+              var18 = iq.a(LegacyOpenGlShader.hardwareTurbulentWaterData, 14381, 32768, 32768 * var2_intLifetime1);
               this.secondarySlices[var2_intLifetime1] = this.toolkit.a(var18, 128, 128, ps.LUMINANCE_ALPHA, 0, true);
             }
             return;
           }
-          var15 = ab.extractByteArray(false, pd.field_n, 0);
+          var15 = NoiseSliceGenerator.extractByteArray(false, pd.hardwareRidgedWaterData, 0);
           this.animatedVolume = this.toolkit.a(true, ps.LUMINANCE_ALPHA, 16, 128, var15, 128);
-          var16 = ab.extractByteArray(false, LegacyOpenGlShader.field_d, 0);
+          var16 = NoiseSliceGenerator.extractByteArray(false, LegacyOpenGlShader.hardwareTurbulentWaterData, 0);
           this.toolkit.a(true, ps.LUMINANCE_ALPHA, 16, 128, var16, 128);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

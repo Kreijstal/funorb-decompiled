@@ -87,7 +87,7 @@ final class mo extends tt {
             var11 = var11 & 4095;
             var17 = this.field_x[255 & var15] & 255;
             var18 = this.field_x[var16 & 255] & 255;
-            var14 = SpriteState.field_y[var11];
+            var14 = SpriteState.noiseFadeQ12[var11];
             if (!this.field_m) {
               for (var10 = 0; ws.field_b > var10; var10++) {
                 var4_int = gs.field_b[var10] * this.field_r;
@@ -119,7 +119,7 @@ final class mo extends tt {
             var11Lifetime1 = var11Lifetime1 & 4095;
             var18Lifetime1 = 255 & this.field_x[255 & var16Lifetime1];
             var17Lifetime1 = 255 & this.field_x[255 & var15Lifetime1];
-            var14Lifetime1 = SpriteState.field_y[var11Lifetime1];
+            var14Lifetime1 = SpriteState.noiseFadeQ12[var11Lifetime1];
             for (var10Lifetime1 = 0; ws.field_b > var10Lifetime1; var10Lifetime1++) {
               var4_intLifetime1 = gs.field_b[var10Lifetime1] * this.field_r;
               var6Lifetime1 = this.a(var18Lifetime1, var14Lifetime1, param0 + 28699, var12Lifetime1, var11Lifetime1, var8Lifetime1 * var4_intLifetime1 >> 12, var17Lifetime1);
@@ -141,7 +141,7 @@ final class mo extends tt {
               }
               var11Lifetime2 = var11Lifetime2 & 4095;
               var17Lifetime2 = 255 & this.field_x[var15Lifetime2 & 255];
-              var14Lifetime2 = SpriteState.field_y[var11Lifetime2];
+              var14Lifetime2 = SpriteState.noiseFadeQ12[var11Lifetime2];
               var18Lifetime2 = 255 & this.field_x[255 & var16Lifetime2];
               if (this.field_m &&
                 this.field_s - 1 == var7) {
@@ -257,7 +257,7 @@ final class mo extends tt {
         var12 = var12 & 255;
         var10 = -4096 + param4;
         var11 = -4096 + param5;
-        var15 = SpriteState.field_y[param5];
+        var15 = SpriteState.noiseFadeQ12[param5];
         var14 = 3 & this.field_x[param6 + var13];
         if (var14 > 1) {
           if (var14 == 2) {

@@ -1,38 +1,38 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ks extends ff {
+final class HardwareTurbulentWaterNoise extends TurbulenceNoise3D {
     static int field_v;
     static SpriteData[] field_w;
     static String emailLoginText;
     static cp field_x;
     static SpriteData field_t;
-    private byte[] field_s;
+    private byte[] pixels;
 
-    ks() {
+    HardwareTurbulentWaterNoise() {
         super(12, 5, 16, 2, 2, 0.44999998807907104f);
     }
 
-    final byte[] b(int param0, int param1, int param2, int param3) {
-        this.field_s = new byte[param1 * (param2 * param3) * 2];
-        this.a(param3, param0 ^ 207, param2, param1);
-        if (param0 == 1) {
-          return this.field_s;
+    final byte[] generate(int guard, int width, int height, int depth) {
+        this.pixels = new byte[width * (height * depth) * 2];
+        this.generateVolume(depth, guard ^ 207, height, width);
+        if (guard == 1) {
+          return this.pixels;
         }
-        ks.a((byte) -23, -46, 65, -1, 46);
-        return this.field_s;
+        HardwareTurbulentWaterNoise.a((byte) -23, -46, 65, -1, 46);
+        return this.pixels;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int guard) {
         field_w = null;
-        if (param0 == -11701) {
+        if (guard == -11701) {
           field_t = null;
           emailLoginText = null;
           field_x = null;
           return;
         }
         PacketBuffer var2 = (PacketBuffer) null;
-        ks.a((java.math.BigInteger) null, (java.math.BigInteger) null, true, (PacketBuffer) null, (PacketBuffer) null);
+        HardwareTurbulentWaterNoise.a((java.math.BigInteger) null, (java.math.BigInteger) null, true, (PacketBuffer) null, (PacketBuffer) null);
         field_t = null;
         emailLoginText = null;
         field_x = null;
@@ -57,7 +57,7 @@ final class ks extends ff {
         return oq.a(param4, param2, 1, 1, 1, param3, (byte) -113, param1, 3);
     }
 
-    final static GraphicsToolkit a(int param0, java.awt.Canvas param1, TextureProvider param2, boolean param3, int param4, ResourceArchive param5) {
+    final static GraphicsToolkit createToolkitForCanvas(int backend, java.awt.Canvas canvas, TextureProvider textures, boolean guard, int options, ResourceArchive shaders) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -74,34 +74,34 @@ final class ks extends ff {
         try {
           var6_int = 0;
           var7 = 0;
-          if (param1 != null) {
-            var8 = param1.getSize();
+          if (canvas != null) {
+            var8 = canvas.getSize();
             var6_int = var8.width;
             var7 = var8.height;
           }
-          if (!param3) {
+          if (!guard) {
             field_x = (cp) null;
           }
-          stackIn_5_0 = GraphicsToolkit.createToolkit(param0, param1, -1, param4, param2, var7, var6_int, param5);
+          stackIn_5_0 = GraphicsToolkit.createToolkit(backend, canvas, -1, options, textures, var7, var6_int, shaders);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_8_0 = var6;
-          stackIn_8_1 = new StringBuilder().append("ks.D(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_8_1 = new StringBuilder().append("ks.D(").append(backend).append(',');
+          if (canvas == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
           stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',');
-          if (param2 == null) {
+          if (textures == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(',').append(param4).append(',');
-          if (param5 == null) {
+          stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(guard).append(',').append(options).append(',');
+          if (shaders == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
@@ -110,13 +110,13 @@ final class ks extends ff {
         }
     }
 
-    final void a(int param0, byte param1, int param2) {
-        param1 = (byte)((param1 >> 1 & 127) + param2);
-        int var4 = 2 * param0;
+    final void writeVoxel(int index, byte value, int bias) {
+        value = (byte)((value >> 1 & 127) + bias);
+        int var4 = 2 * index;
         int incrementValue$0 = var4;
         var4++;
-        this.field_s[incrementValue$0] = (byte)param1;
-        this.field_s[var4] = (byte)param1;
+        this.pixels[incrementValue$0] = (byte)value;
+        this.pixels[var4] = (byte)value;
     }
 
     static {

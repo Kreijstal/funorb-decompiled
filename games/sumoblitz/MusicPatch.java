@@ -516,7 +516,7 @@ final class MusicPatch extends IntrusiveNode {
               }
               var22 = var38.readVarInt((byte) 93);
             }
-            this.tunings[var23] = (short)(this.tunings[var23] + (eb.a(-1 + var22, 2) << 14));
+            this.tunings[var23] = (short)(this.tunings[var23] + (eb.bitwiseAnd(-1 + var22, 2) << 14));
             this.sampleIds[var23] = var22;
             var20Lifetime2--;
           }

@@ -19,31 +19,31 @@ final class gf {
         field_b = null;
     }
 
-    final static int a(int param0, int param1) {
+    final static int quinticSmoothStepQ12(int valueQ12, int guard) {
         int var4 = 0;
-        int var2 = param0 * (param0 * param0 >> 12) >> 12;
-        int var3 = param0 * 6 - 61440;
-        if (param1 == -676121812) {
-          var4 = 40960 + (var3 * param0 >> 12);
+        int var2 = valueQ12 * (valueQ12 * valueQ12 >> 12) >> 12;
+        int var3 = valueQ12 * 6 - 61440;
+        if (guard == -676121812) {
+          var4 = 40960 + (var3 * valueQ12 >> 12);
           return var2 * var4 >> 12;
         }
         return 110;
     }
 
-    final static int a(int param0, byte param1) {
-        param0 = (param0 & 1431655765) + ((-1431655765 & param0) >>> 1);
-        param0 = (param0 & 858993459) + (param0 >>> 2 & -214748365);
-        if (param1 == 81) {
-          param0 = param0 + (param0 >>> 4) & 252645135;
-          param0 = param0 + (param0 >>> 8);
-          param0 = param0 + (param0 >>> 16);
-          return 255 & param0;
+    final static int countSetBits(int value, byte guard) {
+        value = (value & 1431655765) + ((-1431655765 & value) >>> 1);
+        value = (value & 858993459) + (value >>> 2 & -214748365);
+        if (guard == 81) {
+          value = value + (value >>> 4) & 252645135;
+          value = value + (value >>> 8);
+          value = value + (value >>> 16);
+          return 255 & value;
         }
         gf.releaseStatics(-54);
-        param0 = param0 + (param0 >>> 4) & 252645135;
-        param0 = param0 + (param0 >>> 8);
-        param0 = param0 + (param0 >>> 16);
-        return 255 & param0;
+        value = value + (value >>> 4) & 252645135;
+        value = value + (value >>> 8);
+        value = value + (value >>> 16);
+        return 255 & value;
     }
 
     final static String a(char param0, String param1, boolean param2, String param3) {

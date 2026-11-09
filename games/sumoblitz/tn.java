@@ -248,7 +248,7 @@ final class tn extends jb {
           }
         }
         GameApplet.field_l = param1;
-        ab.field_c = 2147483647;
+        NoiseSliceGenerator.field_c = 2147483647;
         oc.field_f = -2147483648;
         GameplaySession.field_k = 2147483647;
         se.field_d = 0;
@@ -295,7 +295,7 @@ final class tn extends jb {
         if (param0 >= -87) {
           return;
         }
-        ks.field_x = fw.c(false);
+        HardwareTurbulentWaterNoise.field_x = fw.c(false);
         pu.field_e = new DialogLayer();
         is.a(40);
     }

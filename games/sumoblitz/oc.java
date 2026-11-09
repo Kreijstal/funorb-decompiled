@@ -166,7 +166,7 @@ final class oc extends ShaderEffect {
           StatusMessagePanel.field_A = true;
           int var3_int = -70 % ((param2 + 39) / 44);
           ih.field_c = param1 ? true : false;
-          hc.field_c = new MessageDialog(RenderPresentationException.field_a, tq.field_a, param0, pg.field_a, ih.field_c);
+          hc.field_c = new MessageDialog(RenderPresentationException.field_a, LegacyOpenGlDisplayLists.field_a, param0, pg.field_a, ih.field_c);
           RenderPresentationException.field_a.pushDialog((byte) 108, hc.field_c);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "oc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -199,7 +199,7 @@ final class oc extends ShaderEffect {
         pd.field_q[se.field_d] = se.field_d;
         lj.field_a[se.field_d] = param5;
         if (!(param5 >= GameplaySession.field_k)) {
-          ab.field_c = param5;
+          NoiseSliceGenerator.field_c = param5;
         }
         if (!(GameApplet.field_l >= param5)) {
           field_f = param5;
@@ -215,8 +215,8 @@ final class oc extends ShaderEffect {
         int var7 = 0 != var6 ? 1000 * param1 / var6 : 0;
         uc.field_c[se.field_d] = var7;
         se.field_d = se.field_d + 1;
-        if (ab.field_c > var7) {
-          ab.field_c = var7;
+        if (NoiseSliceGenerator.field_c > var7) {
+          NoiseSliceGenerator.field_c = var7;
         }
         if (var7 > field_f) {
           field_f = var7;

@@ -152,7 +152,7 @@ class InteractiveWidget extends UiWidget {
     }
 
     InteractiveWidget(String param0, WidgetListener param1) {
-        this(param0, ks.field_x.field_h, param1);
+        this(param0, HardwareTurbulentWaterNoise.field_x.field_h, param1);
     }
 
     final void onPointerReleased(UiWidget root, boolean guard, int parentX, int pointerY, int pointerX, int parentY) {
@@ -320,7 +320,7 @@ class InteractiveWidget extends UiWidget {
         this.actionCode = 0;
         this.focusable = true;
         this.enabled = true;
-        this.renderer = ks.field_x.field_n;
+        this.renderer = HardwareTurbulentWaterNoise.field_x.field_n;
     }
 
     static {

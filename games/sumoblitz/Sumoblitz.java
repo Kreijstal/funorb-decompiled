@@ -485,9 +485,9 @@ public final class Sumoblitz extends GameClientShell {
           }
           stackIn_11_1 = (null != CompactMeshGeometry.field_o);
           this.b(stackIn_11_1, -103);
-          if (ml.field_u) {
+          if (RidgedNoise3D.field_u) {
             this.initializeGameArchives(21961);
-            ml.field_u = false;
+            RidgedNoise3D.field_u = false;
           }
           if (FadingWidget.g(-42)) {
             this.m(106);
@@ -596,7 +596,7 @@ public final class Sumoblitz extends GameClientShell {
             }
             this.q(9289);
           } while (var4 == 0);
-          if (en.a(-23517)) {
+          if (FixedPointPerlinNoise3D.a(-23517)) {
             var3 = this.b(true);
             if (var3 == 2) {
               ScrollViewport.a((byte) 70);
@@ -876,7 +876,7 @@ public final class Sumoblitz extends GameClientShell {
                                     return false;
                                   }
                                   eb.field_b = new SoundCache(SecondaryNodeDeque.field_d, er.field_c);
-                                  ff.a((byte) -62, SecondaryNodeDeque.field_d);
+                                  TurbulenceNoise3D.loadGameSoundEffects((byte) -62, SecondaryNodeDeque.field_d);
                                   oq.a(-24233);
                                   SecondaryNodeDeque.field_d = null;
                                   VertexAttribute.b(0);
@@ -1834,7 +1834,7 @@ public final class Sumoblitz extends GameClientShell {
           GameInstructions.releaseStatics(!param0);
           ToolkitRasterBuffer.releaseStatics(-73);
           SoftwareRenderTarget.releaseStatics(5423);
-          rp.b(param0);
+          SoftwareRenderContext.releaseStatics(param0);
           Transform3D.releaseStatics(false);
           LegacyOpenGlGraphicsToolkit.releaseStatics((byte) 66);
           kk.releaseStatics((byte) -24);
@@ -1894,7 +1894,7 @@ public final class Sumoblitz extends GameClientShell {
           LegacyOpenGlTexture3D.releaseStatics(-21551);
           ve.releaseStatics((byte) -58);
           LegacyOpenGlEffect.releaseStatics((byte) -76);
-          ch.releaseStatics((byte) 60);
+          LegacyWaterTextureResources.releaseStatics((byte) 60);
           lf.a(1821625704);
           LegacyOpenGlRenderbuffer.releaseStatics(-21057);
           LegacyOpenGlGraphicsHeap.releaseStatics(-20388);
@@ -1902,7 +1902,7 @@ public final class Sumoblitz extends GameClientShell {
           wh.releaseStatics(-1);
           uj.releaseStatics(true);
           jq.releaseStatics(107);
-          tq.releaseStatics((byte) -51);
+          LegacyOpenGlDisplayLists.releaseStatics((byte) -51);
           pt.releaseStatics((byte) 43);
           hn.releaseStatics(true);
           kb.releaseStatics(true);
@@ -1923,16 +1923,16 @@ public final class Sumoblitz extends GameClientShell {
           TextureFilter.releaseStatics(0);
           HardwareGraphicsHeap.releaseStatics(124);
           jm.a(-23787);
-          vu.releaseStatics((byte) -69);
+          PerlinNoiseSliceGenerator.releaseStatics((byte) -69);
           pu.releaseStatics(1);
           ng.releaseStatics(0);
           ib.e(1);
           uo.releaseStatics((byte) 79);
           ni.d(false);
-          ml.releaseStatics((byte) 30);
-          en.releaseStatics((byte) 101);
-          ff.releaseStatics(param0);
-          ab.releaseStatics(64);
+          RidgedNoise3D.releaseStatics((byte) 30);
+          FixedPointPerlinNoise3D.releaseStatics((byte) 101);
+          TurbulenceNoise3D.releaseStatics(param0);
+          NoiseSliceGenerator.releaseStatics(64);
           sq.releaseStatics(-127);
           OpenGlCubeTexture.releaseStatics(124);
           OpenGlTexture3D.releaseStatics((byte) -17);
@@ -2005,12 +2005,12 @@ public final class Sumoblitz extends GameClientShell {
           jf.releaseStatics((byte) 91);
           s.releaseStatics(18232);
           gf.releaseStatics(1431655765);
-          ct.releaseStatics((byte) -75);
-          ks.d(-11701);
+          HardwareRidgedWaterNoise.releaseStatics((byte) -75);
+          HardwareTurbulentWaterNoise.releaseStatics(-11701);
           lr.releaseStatics(16766976);
           lm.releaseStatics(6);
           dk.releaseStatics(-102);
-          ip.releaseStatics((byte) 110);
+          LegacyRidgedWaterNoise.releaseStatics((byte) 110);
           ke.releaseStatics(true);
           gg.releaseStatics(0);
           this.field_D = null;

@@ -279,7 +279,7 @@ final class PlatformTaskDispatcher implements Runnable {
                           var3_int = var8.intArgument;
                           var4 = var8.secondIntArgument;
                           if (!this.field_t) {
-                            Class.forName("cg").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_v, new Object[]{new Integer(var3_int), new Integer(var4)});
+                            Class.forName("CursorController").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_v, new Object[]{new Integer(var3_int), new Integer(var4)});
                           } else {
                             this.field_b.a(var4, var3_int, (byte) 84);
                           }
@@ -293,14 +293,14 @@ final class PlatformTaskDispatcher implements Runnable {
                           if (this.field_t) {
                             this.field_b.a(false, var3_int != 0, var14);
                           } else {
-                            Class.forName("cg").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_v, new Object[]{var14, new Boolean(var3_int != 0)});
+                            Class.forName("CursorController").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_v, new Object[]{var14, new Boolean(var3_int != 0)});
                           }
                           break;
                         }
                         if (!this.field_t &&
                           var2_int == 17) {
                           var15 = (Object[]) (var8.objectArgument);
-                          Class.forName("cg").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_v, new Object[]{var15[0], var15[1], new Integer(var8.intArgument), new Integer(var8.secondIntArgument), var15[2]});
+                          Class.forName("CursorController").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_v, new Object[]{var15[0], var15[1], new Integer(var8.intArgument), new Integer(var8.secondIntArgument), var15[2]});
                         } else {
                           if (16 != var2_int) {
                             throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
@@ -637,7 +637,7 @@ final class PlatformTaskDispatcher implements Runnable {
             if (this.field_t) {
               this.field_b = new bm();
             } else {
-              this.field_v = Class.forName("cg").newInstance();
+              this.field_v = Class.forName("CursorController").newInstance();
             }
           } catch (java.lang.Throwable decompiledCaughtParameter10) {
             decompiledCaughtException = decompiledCaughtParameter10;

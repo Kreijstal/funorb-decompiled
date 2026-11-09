@@ -4,16 +4,16 @@
 final class LegacyOpenGlShader {
     static int field_a;
     long shaderHandle;
-    static Object field_d;
+    static Object hardwareTurbulentWaterData;
     private LegacyOpenGlGraphicsToolkit toolkit;
 
     public static void releaseStatics(int param0) {
         if (param0 != -25140) {
           LegacyOpenGlShader.releaseStatics(-127);
-          field_d = null;
+          hardwareTurbulentWaterData = null;
           return;
         }
-        field_d = null;
+        hardwareTurbulentWaterData = null;
     }
 
     protected final void finalize() throws Throwable {

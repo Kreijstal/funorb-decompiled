@@ -325,7 +325,7 @@ final class cp {
           }
           var5[4] = (Sprite) ((Object) var18);
           var4.a(false, 4).a(true, true).a(var5, 2147483647);
-          var4.a(false, 5).a(ks.a((byte) -71, 0, 65793, 0, 0), 2147483647).a(true, true).c(-1, 17818);
+          var4.a(false, 5).a(HardwareTurbulentWaterNoise.a((byte) -71, 0, 65793, 0, 0), 2147483647).a(true, true).c(-1, 17818);
           this.field_h = (WidgetRenderer) ((Object) var4);
           var6 = new fl(var4, true);
           var6.horizontalAlignment = 0;

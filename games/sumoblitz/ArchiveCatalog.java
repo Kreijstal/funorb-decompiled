@@ -21,7 +21,7 @@ final class ArchiveCatalog {
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
           boolean decompiledFrameRemainder0 = true;
-          if (ct.field_x > 0) {
+          if (HardwareRidgedWaterNoise.field_x > 0) {
             if (SecondaryNodeDequeIterator.field_b != null) {
               CompactMeshGeometry.field_o = SecondaryNodeDequeIterator.field_b.g(109);
               jl.a(25, 2);
@@ -82,7 +82,7 @@ final class ArchiveCatalog {
           if (param0 != -94) {
             ArchiveCatalog.a((byte) 97, (String) null);
           }
-          rp.field_b = param1;
+          SoftwareRenderContext.field_b = param1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -746,7 +746,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime48 = ke.a((byte) 116, "keycode_left");
           if (var2Lifetime48 != null) {
-            rp.field_d = 255 & var2Lifetime48[0];
+            SoftwareRenderContext.field_d = 255 & var2Lifetime48[0];
           }
           var2Lifetime49 = ke.a((byte) 88, "keycode_right");
           if (null != var2Lifetime49) {
@@ -1157,7 +1157,7 @@ final class ArchiveCatalog {
           }
           var2Lifetime150 = ke.a((byte) 109, "warningWave");
           if (null != var2Lifetime150) {
-            ff.warningText = MusicVoice.a(param1 ^ -5, var2Lifetime150);
+            TurbulenceNoise3D.warningText = MusicVoice.a(param1 ^ -5, var2Lifetime150);
           }
           var2Lifetime151 = ke.a((byte) 106, "powerupRunningOut");
           if (var2Lifetime151 != null) {
@@ -1233,31 +1233,31 @@ final class ArchiveCatalog {
           }
           var2Lifetime169 = ke.a((byte) 120, "powerupNames,0");
           if (null != var2Lifetime169) {
-            vu.powerupEffectNames[0] = MusicVoice.a(0, var2Lifetime169);
+            PerlinNoiseSliceGenerator.powerupEffectNames[0] = MusicVoice.a(0, var2Lifetime169);
           }
           var2Lifetime170 = ke.a((byte) 127, "powerupNames,1");
           if (var2Lifetime170 != null) {
-            vu.powerupEffectNames[1] = MusicVoice.a(0, var2Lifetime170);
+            PerlinNoiseSliceGenerator.powerupEffectNames[1] = MusicVoice.a(0, var2Lifetime170);
           }
           var2Lifetime171 = ke.a((byte) 97, "powerupNames,2");
           if (null != var2Lifetime171) {
-            vu.powerupEffectNames[2] = MusicVoice.a(0, var2Lifetime171);
+            PerlinNoiseSliceGenerator.powerupEffectNames[2] = MusicVoice.a(0, var2Lifetime171);
           }
           var2Lifetime172 = ke.a((byte) 122, "powerupNames,3");
           if (null != var2Lifetime172) {
-            vu.powerupEffectNames[3] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime172);
+            PerlinNoiseSliceGenerator.powerupEffectNames[3] = MusicVoice.a(GzipDecompressor.bitwiseXor(param1, -5), var2Lifetime172);
           }
           var2Lifetime173 = ke.a((byte) 96, "powerupNames,4");
           if (null != var2Lifetime173) {
-            vu.powerupEffectNames[4] = MusicVoice.a(0, var2Lifetime173);
+            PerlinNoiseSliceGenerator.powerupEffectNames[4] = MusicVoice.a(0, var2Lifetime173);
           }
           var2Lifetime174 = ke.a((byte) 107, "powerupNames,5");
           if (var2Lifetime174 != null) {
-            vu.powerupEffectNames[5] = MusicVoice.a(0, var2Lifetime174);
+            PerlinNoiseSliceGenerator.powerupEffectNames[5] = MusicVoice.a(0, var2Lifetime174);
           }
           var2Lifetime175 = ke.a((byte) 88, "powerupNames,6");
           if (null != var2Lifetime175) {
-            vu.powerupEffectNames[6] = MusicVoice.a(param1 + 5, var2Lifetime175);
+            PerlinNoiseSliceGenerator.powerupEffectNames[6] = MusicVoice.a(param1 + 5, var2Lifetime175);
           }
           var2Lifetime176 = ke.a((byte) 105, "powerupShortNames,0");
           if (null != var2Lifetime176) {

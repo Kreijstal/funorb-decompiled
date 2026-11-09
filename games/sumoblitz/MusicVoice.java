@@ -78,7 +78,7 @@ final class MusicVoice extends IntrusiveNode {
         if (param0) {
           return;
         }
-        pd var1 = (pd) (vu.field_g.first(103));
+        pd var1 = (pd) (PerlinNoiseSliceGenerator.field_g.first(103));
         if (var1 != null) {
           var2 = ig.field_a;
           var2.readInt(true);

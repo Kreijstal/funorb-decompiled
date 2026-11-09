@@ -53,10 +53,10 @@ class dq extends dp {
           if (param0 != 115) {
             dq.a((byte) 19, -85);
           }
-          var4 = (pd) (vu.field_g.first(-87));
+          var4 = (pd) (PerlinNoiseSliceGenerator.field_g.first(-87));
           while (var4 != null) {
             k.a(var4, param1, (byte) 117);
-            var4 = (pd) (vu.field_g.next((byte) 18));
+            var4 = (pd) (PerlinNoiseSliceGenerator.field_g.next((byte) 18));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

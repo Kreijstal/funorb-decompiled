@@ -248,7 +248,7 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
         if (rs.field_c == param0) {
           return 2;
         }
-        if (param0 == ip.field_y) {
+        if (param0 == LegacyRidgedWaterNoise.field_y) {
           return 3;
         }
         if (param0 == kr.field_a) {

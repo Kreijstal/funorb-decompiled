@@ -91,15 +91,15 @@ final class LegacyOpenGlRenderbuffer extends DualLinkNode implements LegacyOpenG
               CacheIoRequest.field_z[var3] = var6.readUnsignedShort(255);
               if (var2 >= 2) {
                 var4 = var6.readUnsignedByte(-31302);
-                CacheIoRequest.field_A[var3] = -1 + eb.a(4, var4);
+                CacheIoRequest.field_A[var3] = -1 + eb.bitwiseAnd(4, var4);
                 if (var2 >= 3) {
                   stackIn_16_0 = up.field_g;
                   stackIn_16_1 = var3;
-                  stackIn_17_2 = (eb.a(1, var4 >> 6) == 1);
+                  stackIn_17_2 = (eb.bitwiseAnd(1, var4 >> 6) == 1);
                   stackIn_16_0[stackIn_16_1] = stackIn_17_2;
                   stackIn_19_0 = qn.field_d;
                   stackIn_19_1 = var3;
-                  stackIn_20_2 = (eb.a(1, var4 >> 7) == 1);
+                  stackIn_20_2 = (eb.bitwiseAnd(1, var4 >> 7) == 1);
                   stackIn_19_0[stackIn_19_1] = stackIn_20_2;
                 }
               }

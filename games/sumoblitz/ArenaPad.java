@@ -240,7 +240,7 @@ final class ArenaPad extends IntrusiveNode {
             drone.velocityXQ8 = (int)((double)drone.velocityXQ8 + 0.00016 * (double)RasterBuffer.a(-63, var3_int) * Math.pow((double)var3_int, 2.0) / (double)drone.mass);
             drone.velocityYQ8 = (int)((double)drone.velocityYQ8 + (double)RasterBuffer.a(-69, var4) * 0.00016 * Math.pow((double)var4, 2.0) / (double)drone.mass);
             drone.steeringSuppressed = true;
-            tq.a(-111, ExpandingRingEffect.nextRandomInt(4, HardwareGraphicsHeap.field_o, (byte) -96) + 6, false);
+            LegacyOpenGlDisplayLists.a(-111, ExpandingRingEffect.nextRandomInt(4, HardwareGraphicsHeap.field_o, (byte) -96) + 6, false);
             decompiledFrameRemainder7 = (var17 != 0);
           }
           if ((decompiledFrameRemainder7) &&
@@ -250,7 +250,7 @@ final class ArenaPad extends IntrusiveNode {
             (decompiledFrameRemainder3)) {
             drone.onIce = true;
             this.contactThisTick = true;
-            tq.a(-112, 1, false);
+            LegacyOpenGlDisplayLists.a(-112, 1, false);
             decompiledFrameRemainder7 = (var17 != 0);
           }
           if ((decompiledFrameRemainder7) &&
@@ -318,7 +318,7 @@ final class ArenaPad extends IntrusiveNode {
             drone.velocityXQ8 = (int)((double)drone.velocityXQ8 + (double)RasterBuffer.a(guard ^ -16777002, var3_intLifetime2) * 0.000035 * Math.pow((double)var3_intLifetime2, 2.0) / (double)drone.mass);
             drone.velocityYQ8 = (int)((double)drone.velocityYQ8 + (double)RasterBuffer.a(-115, var4Lifetime2) * 0.000035 * Math.pow((double)var4Lifetime2, 2.0) / (double)drone.mass);
             this.contactThisTick = true;
-            tq.a(-119, 1, true);
+            LegacyOpenGlDisplayLists.a(-119, 1, true);
             decompiledFrameRemainder7 = (var17 != 0);
           }
           if ((decompiledFrameRemainder7) &&
@@ -328,7 +328,7 @@ final class ArenaPad extends IntrusiveNode {
             drone.velocityXQ8 = (int)((double)drone.velocityXQ8 - (double)RasterBuffer.a(-56, var3_intLifetime1) * 0.000035 * Math.pow((double)var3_intLifetime1, 2.0) / (double)drone.mass);
             drone.velocityYQ8 = (int)((double)drone.velocityYQ8 - 0.000035 * (double)RasterBuffer.a(-52, var4Lifetime1) * Math.pow((double)var4Lifetime1, 2.0) / (double)drone.mass);
             this.contactThisTick = true;
-            tq.a(-123, 2, true);
+            LegacyOpenGlDisplayLists.a(-123, 2, true);
           }
           if (guard != 16776960) {
             this.triggerCooldownTicks = 113;
@@ -623,9 +623,9 @@ final class ArenaPad extends IntrusiveNode {
           ReassignUpgradesScreen.field_l = (63 & var2_intLifetime1) << 15;
           ReassignUpgradesScreen.field_l = ReassignUpgradesScreen.field_l + (param0.readUnsignedByte(-31302) << 7);
           var2_intLifetime2 = param0.readUnsignedByte(-31302);
-          ch.field_d = 65536 & var2_intLifetime2 << 16;
+          LegacyWaterTextureResources.field_d = 65536 & var2_intLifetime2 << 16;
           ReassignUpgradesScreen.field_l = ReassignUpgradesScreen.field_l + (var2_intLifetime2 >> 1);
-          ch.field_d = ch.field_d + param0.readUnsignedShort(255);
+          LegacyWaterTextureResources.field_d = LegacyWaterTextureResources.field_d + param0.readUnsignedShort(255);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

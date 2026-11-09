@@ -56,7 +56,7 @@ final class qr {
           for (var2_int = 0; var2_int < se.field_d; var2_int++) {
             pd.field_q[param1 + var2_int] = var2_int;
           }
-          LegacyOpenGlAssemblyProgram.a(ab.field_c, oc.field_f, (byte) -107, param1 + se.field_d, param1 + param1, param1, false);
+          LegacyOpenGlAssemblyProgram.a(NoiseSliceGenerator.field_c, oc.field_f, (byte) -107, param1 + se.field_d, param1 + param1, param1, false);
           if (se.field_d > param1) {
             se.field_d = param1;
           }

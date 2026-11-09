@@ -57,7 +57,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             var2_int >= 0) {
             jf.field_d[lv.field_i] = var2_int;
             lv.field_i = lv.field_i + 1 & 127;
-            if (lv.field_i == ks.field_v) {
+            if (lv.field_i == HardwareTurbulentWaterNoise.field_v) {
               lv.field_i = -1;
             }
           }
@@ -144,7 +144,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               var2_int >= 0) {
               jf.field_d[lv.field_i] = ~var2_int;
               lv.field_i = lv.field_i + 1 & 127;
-              if (lv.field_i == ks.field_v) {
+              if (lv.field_i == HardwareTurbulentWaterNoise.field_v) {
                 lv.field_i = -1;
               }
             }
@@ -203,7 +203,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
 
     final static ScrollControl a(byte param0) {
         int var1 = -91 % ((79 - param0) / 41);
-        return new ScrollControl(0, 0, ks.field_x.field_g, 0, (WidgetRenderer) null, ks.field_x.field_f, ks.field_x.field_p, ks.field_x.field_g, ks.field_x.field_g, ks.field_x.field_a, ks.field_x.field_b, false, true, 32768, 0);
+        return new ScrollControl(0, 0, HardwareTurbulentWaterNoise.field_x.field_g, 0, (WidgetRenderer) null, HardwareTurbulentWaterNoise.field_x.field_f, HardwareTurbulentWaterNoise.field_x.field_p, HardwareTurbulentWaterNoise.field_x.field_g, HardwareTurbulentWaterNoise.field_x.field_g, HardwareTurbulentWaterNoise.field_x.field_a, HardwareTurbulentWaterNoise.field_x.field_b, false, true, 32768, 0);
     }
 
     final static boolean a(cn param0, int param1, cn param2) {

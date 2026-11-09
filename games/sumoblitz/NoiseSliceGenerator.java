@@ -3,14 +3,14 @@
  */
 import java.util.*;
 
-abstract class ab {
+abstract class NoiseSliceGenerator {
     static IntrusiveNodeHashTable field_a;
-    static Object field_b;
+    static Object hardwareHeightNoise;
     static String weClosedTheConnectionText;
     static String achievedText;
     static int field_c;
 
-    abstract void a(float param0, int param1, float param2, float param3, int param4, int param5, int param6, float[] param7, int param8, float param9, int param10);
+    abstract void generateSlice(float stepX, int outputOffset, float stepY, float stepZ, int slice, int depth, int latticeStep, float[] output, int width, float amplitude, int height);
 
     final static void a(int param0, IntrusiveDeque param1, Drone param2, int param3, int param4, int param5, byte param6) {
         float[] dupTemp$0 = null;
@@ -58,7 +58,7 @@ abstract class ab {
           }
           if (param6 <= 92) {
             var11 = (Object) null;
-            ab.extractByteArray(false, (Object) null, -86);
+            NoiseSliceGenerator.extractByteArray(false, (Object) null, -86);
           }
           var8Lifetime1 = 0;
           while (true) {
@@ -120,7 +120,7 @@ abstract class ab {
             return stackIn_6_0;
           }
           if (guard != 0) {
-            ab.releaseStatics(-28);
+            NoiseSliceGenerator.releaseStatics(-28);
           }
           if (!(storage instanceof ByteArrayStorage)) {
             throw new IllegalArgumentException();
@@ -149,7 +149,7 @@ abstract class ab {
           return;
         }
         achievedText = null;
-        field_b = null;
+        hardwareHeightNoise = null;
     }
 
     static {

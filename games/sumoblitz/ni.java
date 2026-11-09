@@ -99,7 +99,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("idlemessage20min", (byte) -23);
                 if (var2 != null) {
-                  ab.weClosedTheConnectionText = MusicVoice.a(param0 - 7, var2);
+                  NoiseSliceGenerator.weClosedTheConnectionText = MusicVoice.a(param0 - 7, var2);
                 }
                 var2 = OpenGlCubeTexture.a("error_js5crc", (byte) -23);
                 if (null != var2) {
@@ -1081,7 +1081,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("playfreeversion", (byte) -23);
                 if (var2 != null) {
-                  ch.playFreeVersionText = MusicVoice.a(0, var2);
+                  LegacyWaterTextureResources.playFreeVersionText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("reloadgame", (byte) -23);
                 if (var2 != null) {
@@ -1337,7 +1337,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("create", (byte) -23);
                 if (null != var2) {
-                  ff.createText = MusicVoice.a(0, var2);
+                  TurbulenceNoise3D.createText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("create_pleasechooseapassword", (byte) -23);
                 if (var2 != null) {
@@ -1460,7 +1460,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("create_email", (byte) -23);
                 if (null != var2) {
-                  ks.emailLoginText = MusicVoice.a(0, var2);
+                  HardwareTurbulentWaterNoise.emailLoginText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("create_email_confirm", (byte) -23);
                 if (null != var2) {
@@ -1940,7 +1940,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("sound_colon", (byte) -23);
                 if (null != var2) {
-                  ff.soundText = MusicVoice.a(0, var2);
+                  TurbulenceNoise3D.soundText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("music_colon", (byte) -23);
                 if (var2 != null) {
@@ -2314,7 +2314,7 @@ final class ni extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.a("achieved", (byte) -23);
                 if (null != var2) {
-                  ab.achievedText = MusicVoice.a(0, var2);
+                  NoiseSliceGenerator.achievedText = MusicVoice.a(0, var2);
                 }
                 var2 = OpenGlCubeTexture.a("orbpoints", (byte) -23);
                 if (null != var2) {

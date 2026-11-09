@@ -18,7 +18,7 @@ final class wr extends InteractiveWidget {
     private wr(String param0, WidgetRenderer param1, WidgetListener param2) {
         super(param0, param1, param2);
         try {
-          this.renderer = ks.field_x.field_i;
+          this.renderer = HardwareTurbulentWaterNoise.field_x.field_i;
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -171,9 +171,9 @@ final class wr extends InteractiveWidget {
     }
 
     private wr(String param0, WidgetListener param1) {
-        this(param0, ks.field_x.field_h, param1);
+        this(param0, HardwareTurbulentWaterNoise.field_x.field_h, param1);
         try {
-          this.renderer = ks.field_x.field_i;
+          this.renderer = HardwareTurbulentWaterNoise.field_x.field_i;
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

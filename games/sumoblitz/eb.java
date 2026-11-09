@@ -25,8 +25,8 @@ final class eb {
         return -115;
     }
 
-    static int a(int param0, int param1) {
-        return param0 & param1;
+    static int bitwiseAnd(int left, int right) {
+        return left & right;
     }
 
     public static void releaseStatics(byte param0) {

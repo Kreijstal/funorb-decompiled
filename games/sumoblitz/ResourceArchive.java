@@ -504,7 +504,7 @@ final class ResourceArchive {
             0 != xteaKey[1] ||
             xteaKey[2] != 0 ||
             0 != xteaKey[3])) {
-            var35 = ab.extractByteArray(true, this.packedGroups[groupId], 0);
+            var35 = NoiseSliceGenerator.extractByteArray(true, this.packedGroups[groupId], 0);
             var25 = var35;
             var9 = var25;
             var26 = new PacketBuffer(var35);
@@ -512,7 +512,7 @@ final class ResourceArchive {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var9 = ab.extractByteArray(false, this.packedGroups[groupId], 0);
+            var9 = NoiseSliceGenerator.extractByteArray(false, this.packedGroups[groupId], 0);
           }
           try {
             var36 = GridWidgetContainer.decompressContainer(-1, var9);
@@ -745,7 +745,7 @@ final class ResourceArchive {
             throw new RuntimeException("");
           }
           if (null != this.files[groupId][fileId]) {
-            var8 = ab.extractByteArray(false, this.files[groupId][fileId], 0);
+            var8 = NoiseSliceGenerator.extractByteArray(false, this.files[groupId][fileId], 0);
             var6 = var8;
             if (var8 == null) {
               throw new RuntimeException("");

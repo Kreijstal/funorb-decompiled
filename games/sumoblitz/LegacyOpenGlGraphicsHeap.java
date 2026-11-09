@@ -49,7 +49,7 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
         LegacyOpenGlEffectManager.field_g[4] = new MenuScreen(4);
         DirectByteArrayStorage.a(400, 38, 10, 2, new int[]{8, 9, 10, 21, 20, 5}, 2, 468);
         LegacyOpenGlEffectManager.field_g[2] = new MenuScreen(2);
-        if (0 >= ct.field_x) {
+        if (0 >= HardwareRidgedWaterNoise.field_x) {
           if (!(2 > Bzip2State.field_j)) {
             DirectByteArrayStorage.a(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
             LegacyOpenGlEffectManager.field_g[0] = new MenuScreen(0);

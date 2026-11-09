@@ -30,7 +30,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     private int field_F;
     private int targetHeight;
     private int farPlane;
-    private rp[] contexts;
+    private SoftwareRenderContext[] contexts;
     private SoftLruCache field_E;
     private static String offText;
 
@@ -1227,10 +1227,10 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    private final rp contextForThread(Runnable thread) {
+    private final SoftwareRenderContext contextForThread(Runnable thread) {
         int var2 = 0;
         for (var2 = 0; var2 < this.contextCount; var2++) {
-          if (this.contexts[var2].field_e == thread) {
+          if (this.contexts[var2].thread == thread) {
             return this.contexts[var2];
           }
         }
@@ -1254,7 +1254,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         var1Lifetime1 = this.clipTop * this.targetWidth + this.clipLeft;
         for (var2 = this.clipTop; var2 < this.clipBottom; var2++) {
           for (var3 = 0; var3 < this.contextCount; var3++) {
-            this.contexts[var3].field_c.field_a[var2 - this.clipTop] = var1Lifetime1;
+            this.contexts[var3].scanlineOffsets.rowOffsets[var2 - this.clipTop] = var1Lifetime1;
           }
           var1Lifetime1 = var1Lifetime1 + this.targetWidth;
         }
@@ -1488,13 +1488,13 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     }
 
     private final void bindContextToCurrentThread(int index) {
-        this.contexts[index].a((Runnable) ((Object) Thread.currentThread()), true);
+        this.contexts[index].setThread((Runnable) ((Object) Thread.currentThread()), true);
     }
 
     private final void refreshContexts() {
         int var1 = 0;
         for (var1 = 0; var1 < this.contextCount; var1++) {
-          this.contexts[var1].a(126);
+          this.contexts[var1].resetScanlineOffsets(126);
         }
         this.resetClip();
     }
@@ -1794,7 +1794,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     }
 
     final void setDepthRange(int nearPlane, int farPlane) {
-        rp discarded$0 = this.contextForThread((Runnable) ((Object) Thread.currentThread()));
+        SoftwareRenderContext discarded$0 = this.contextForThread((Runnable) ((Object) Thread.currentThread()));
         this.nearPlane = nearPlane;
         this.farPlane = farPlane;
     }
@@ -1827,9 +1827,9 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     private final void createContexts(int count) {
         int var2 = 0;
         this.contextCount = count;
-        this.contexts = new rp[this.contextCount];
+        this.contexts = new SoftwareRenderContext[this.contextCount];
         for (var2 = 0; var2 < this.contextCount; var2++) {
-          this.contexts[var2] = new rp(this);
+          this.contexts[var2] = new SoftwareRenderContext(this);
         }
     }
 

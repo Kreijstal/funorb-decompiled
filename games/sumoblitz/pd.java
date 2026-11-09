@@ -7,7 +7,7 @@ final class pd extends IntrusiveNode {
     int field_k;
     static int field_l;
     static int field_p;
-    static Object field_n;
+    static Object hardwareRidgedWaterData;
     static String nameText;
     static int[] field_q;
 
@@ -15,14 +15,14 @@ final class pd extends IntrusiveNode {
         if (param0 <= -117) {
           field_q = null;
           nameText = null;
-          field_n = null;
+          hardwareRidgedWaterData = null;
           field_m = null;
           return;
         }
         pd.releaseStatics((byte) 113);
         field_q = null;
         nameText = null;
-        field_n = null;
+        hardwareRidgedWaterData = null;
         field_m = null;
     }
 

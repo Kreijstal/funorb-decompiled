@@ -9,7 +9,7 @@ final class PlayingSound extends IntrusiveNode {
     static int field_n;
     IntrusiveNode lifetimeNode;
     int originalVolume;
-    static Object field_m;
+    static Object legacyHeightNoise;
 
     final static boolean a(int param0, int param1) {
         int var2 = 90 / ((30 - param0) / 44);
@@ -26,13 +26,13 @@ final class PlayingSound extends IntrusiveNode {
         field_l = null;
         if (param0 == 1022768328) {
           fullScreenText = null;
-          field_m = null;
+          legacyHeightNoise = null;
           scoreFilterLabels = null;
           return;
         }
         PlayingSound.a(-56, -102);
         fullScreenText = null;
-        field_m = null;
+        legacyHeightNoise = null;
         scoreFilterLabels = null;
     }
 

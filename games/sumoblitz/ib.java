@@ -16,7 +16,7 @@ final class ib extends ShaderEffect {
           var3.copyFrom(0, var2);
           var3.scale(0.125f, 0.125f, -126, 1.0f);
           var3.translate((byte) 96, this.field_e, 0.0f, 0.0f);
-          this.field_b.a(ip.field_y, 28880);
+          this.field_b.a(LegacyRidgedWaterNoise.field_y, 28880);
           this.field_b.g(0, -122);
         }
         if (param0 < -47) {

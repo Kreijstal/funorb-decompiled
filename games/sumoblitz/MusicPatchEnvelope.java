@@ -23,7 +23,7 @@ final class MusicPatchEnvelope {
         try {
           if (param0 != 8230) {
             var4 = (LegacyOpenGlGraphicsToolkit) null;
-            MusicPatchEnvelope.a((LegacyOpenGlGraphicsToolkit) null, (byte) 109);
+            MusicPatchEnvelope.ensureLegacyWaterNoise((LegacyOpenGlGraphicsToolkit) null, (byte) 109);
           }
           for (var2_int = 0; param1 > var2_int; var2_int++) {
             if (!TextureMetadata.field_f[var2_int]) {
@@ -45,10 +45,10 @@ final class MusicPatchEnvelope {
         }
     }
 
-    final static void a(LegacyOpenGlGraphicsToolkit param0, byte param1) {
+    final static void ensureLegacyWaterNoise(LegacyOpenGlGraphicsToolkit toolkit, byte guard) {
         int var2_int = 0;
-        ip var8 = null;
-        qb var10 = null;
+        LegacyRidgedWaterNoise var8 = null;
+        LegacyTurbulentWaterNoise var10 = null;
         LegacyOpenGlNormalMapGenerator var12 = null;
         byte[] var20 = null;
         byte[] var21 = null;
@@ -59,24 +59,24 @@ final class MusicPatchEnvelope {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          var2_int = 71 / ((param1 - 40) / 59);
-          if (null == ic.field_b) {
-            var8 = new ip();
-            var20 = var8.a((byte) 10, 128, 128, 16);
-            ic.field_b = DroneDebris.storeByteArray((byte) -123, var20, false);
+          var2_int = 71 / ((guard - 40) / 59);
+          if (null == ic.legacyRidgedWaterData) {
+            var8 = new LegacyRidgedWaterNoise();
+            var20 = var8.generate((byte) 10, 128, 128, 16);
+            ic.legacyRidgedWaterData = DroneDebris.storeByteArray((byte) -123, var20, false);
           }
-          if (GameplaySession.field_j == null) {
-            var10 = new qb();
-            var21 = var10.a(16, (byte) -8, 128, 128);
-            GameplaySession.field_j = DroneDebris.storeByteArray((byte) -117, var21, false);
+          if (GameplaySession.legacyTurbulentWaterData == null) {
+            var10 = new LegacyTurbulentWaterNoise();
+            var21 = var10.generate(16, (byte) -8, 128, 128);
+            GameplaySession.legacyTurbulentWaterData = DroneDebris.storeByteArray((byte) -117, var21, false);
           }
-          var12 = param0.field_Sb;
+          var12 = toolkit.field_Sb;
           if (var12.ensureProgram((byte) -101)) {
-            if (null != PlayingSound.field_m) {
+            if (null != PlayingSound.legacyHeightNoise) {
               return;
             }
-            var22 = HardwareTextureCache.a(0.6000000238418579f, 0.5f, 128, -30865, new vu(419684), 4.0f, 4.0f, 16.0f, 16, 8, 128);
-            PlayingSound.field_m = DroneDebris.storeByteArray((byte) -126, var22, false);
+            var22 = HardwareTextureCache.generateNoiseVolume(0.6000000238418579f, 0.5f, 128, -30865, new PerlinNoiseSliceGenerator(419684), 4.0f, 4.0f, 16.0f, 16, 8, 128);
+            PlayingSound.legacyHeightNoise = DroneDebris.storeByteArray((byte) -126, var22, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -84,12 +84,12 @@ final class MusicPatchEnvelope {
           var2 = decompiledCaughtException;
           stackIn_12_0 = var2;
           stackIn_12_1 = new StringBuilder().append("mq.B(");
-          if (param0 == null) {
+          if (toolkit == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(guard).append(')').toString());
         }
     }
 

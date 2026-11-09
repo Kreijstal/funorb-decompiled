@@ -23,9 +23,9 @@ final class ScrollViewport extends SingleChildWidget {
               return;
             }
             if (this.height != 0) {
-              ks.field_x.a(this.height + parentY + this.y, parentX + this.x, this.y + parentY, (byte) -106, parentX + this.x + this.width);
+              HardwareTurbulentWaterNoise.field_x.a(this.height + parentY + this.y, parentX + this.x, this.y + parentY, (byte) -106, parentX + this.x + this.width);
               this.child.renderLayer(this.x + parentX, this.y + parentY, (byte) -95, layer);
-              ks.field_x.b((byte) -84);
+              HardwareTurbulentWaterNoise.field_x.b((byte) -84);
               return;
             }
             return;
@@ -35,9 +35,9 @@ final class ScrollViewport extends SingleChildWidget {
               return;
             }
             if (this.height != 0) {
-              ks.field_x.a(this.height + parentY + this.y, parentX + this.x, this.y + parentY, (byte) -106, parentX + this.x + this.width);
+              HardwareTurbulentWaterNoise.field_x.a(this.height + parentY + this.y, parentX + this.x, this.y + parentY, (byte) -106, parentX + this.x + this.width);
               this.child.renderLayer(this.x + parentX, this.y + parentY, (byte) -95, layer);
-              ks.field_x.b((byte) -84);
+              HardwareTurbulentWaterNoise.field_x.b((byte) -84);
               return;
             }
             return;
@@ -49,9 +49,9 @@ final class ScrollViewport extends SingleChildWidget {
           if (this.height == 0) {
             return;
           }
-          ks.field_x.a(this.height + parentY + this.y, parentX + this.x, this.y + parentY, (byte) -106, parentX + this.x + this.width);
+          HardwareTurbulentWaterNoise.field_x.a(this.height + parentY + this.y, parentX + this.x, this.y + parentY, (byte) -106, parentX + this.x + this.width);
           this.child.renderLayer(this.x + parentX, this.y + parentY, (byte) -95, layer);
-          ks.field_x.b((byte) -84);
+          HardwareTurbulentWaterNoise.field_x.b((byte) -84);
           return;
         }
         if (layer == 0 &&
@@ -63,9 +63,9 @@ final class ScrollViewport extends SingleChildWidget {
           if (this.height == 0) {
             return;
           }
-          ks.field_x.a(this.height + parentY + this.y, parentX + this.x, this.y + parentY, (byte) -106, parentX + this.x + this.width);
+          HardwareTurbulentWaterNoise.field_x.a(this.height + parentY + this.y, parentX + this.x, this.y + parentY, (byte) -106, parentX + this.x + this.width);
           this.child.renderLayer(this.x + parentX, this.y + parentY, (byte) -95, layer);
-          ks.field_x.b((byte) -84);
+          HardwareTurbulentWaterNoise.field_x.b((byte) -84);
           return;
         }
         if (this.width == 0) {
@@ -74,9 +74,9 @@ final class ScrollViewport extends SingleChildWidget {
         if (this.height == 0) {
           return;
         }
-        ks.field_x.a(this.height + parentY + this.y, parentX + this.x, this.y + parentY, (byte) -106, parentX + this.x + this.width);
+        HardwareTurbulentWaterNoise.field_x.a(this.height + parentY + this.y, parentX + this.x, this.y + parentY, (byte) -106, parentX + this.x + this.width);
         this.child.renderLayer(this.x + parentX, this.y + parentY, (byte) -95, layer);
-        ks.field_x.b((byte) -84);
+        HardwareTurbulentWaterNoise.field_x.b((byte) -84);
     }
 
     final boolean onPointerPressed(UiWidget root, int guard, int pointerY, int button, int parentX, int pointerX, int parentY) {
@@ -141,18 +141,18 @@ final class ScrollViewport extends SingleChildWidget {
 
     final static void a(byte param0) {
         if (jv.field_a == 10) {
-          ch.a(0);
+          LegacyWaterTextureResources.showConnectionLost(0);
           jv.field_a = 11;
         } else {
           if (!au.c(1)) {
-            ch.a(0);
+            LegacyWaterTextureResources.showConnectionLost(0);
             jv.field_a = 11;
           }
         }
         if (param0 <= 10) {
           return;
         }
-        ch.field_h = true;
+        LegacyWaterTextureResources.field_h = true;
     }
 
     static {

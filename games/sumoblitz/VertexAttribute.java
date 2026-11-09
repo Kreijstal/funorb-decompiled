@@ -86,7 +86,7 @@ final class VertexAttribute {
         return null;
     }
 
-    final static void a(float param0, float param1, int param2, int param3, byte[] param4, int param5, float param6, int param7, int param8, int param9, int param10, float param11, ab param12, float param13) {
+    final static void fillNoiseSlice(float frequencyZ, float frequencyX, int outputOffset, int height, byte[] output, int slice, float amplitude, int depth, int guard, int width, int octaves, float frequencyY, NoiseSliceGenerator generator, float persistence) {
         int var18 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -105,27 +105,27 @@ final class VertexAttribute {
         int var17Lifetime1;
         var19 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (param8 > -59) {
+          if (guard > -59) {
             COLOR = (VertexAttribute) null;
           }
-          var14_int = param3 * param9;
+          var14_int = height * width;
           var24 = new float[var14_int];
-          for (var16 = 0; var16 < param10; var16++) {
-            param12.a(param1 / (float)param9, 0, param11 / (float)param3, param0 / (float)param7, param5, param7, 1, var24, param9, param6 * 127.0f, param3);
-            var17 = param2;
+          for (var16 = 0; var16 < octaves; var16++) {
+            generator.generateSlice(frequencyX / (float)width, 0, frequencyY / (float)height, frequencyZ / (float)depth, slice, depth, 1, var24, width, amplitude * 127.0f, height);
+            var17 = outputOffset;
             for (var18 = 0; var14_int > var18; var18++) {
-              param4[var17] = (byte)(int)((float)param4[var17] + var24[var18]);
+              output[var17] = (byte)(int)((float)output[var17] + var24[var18]);
               var17++;
             }
-            param6 = param6 * param13;
-            param1 = param1 * 2.0f;
-            param0 = param0 * 2.0f;
-            param11 = param11 * 2.0f;
+            amplitude = amplitude * persistence;
+            frequencyX = frequencyX * 2.0f;
+            frequencyZ = frequencyZ * 2.0f;
+            frequencyY = frequencyY * 2.0f;
           }
-          var20 = param2;
+          var20 = outputOffset;
           var16Lifetime1 = var20;
           for (var17Lifetime1 = 0; var14_int > var17Lifetime1; var17Lifetime1++) {
-            param4[var20] = (byte)(param4[var20] + 127);
+            output[var20] = (byte)(output[var20] + 127);
             var20++;
           }
           return;
@@ -133,19 +133,19 @@ final class VertexAttribute {
           decompiledCaughtException = decompiledCaughtParameter0;
           var14 = decompiledCaughtException;
           stackIn_15_0 = var14;
-          stackIn_15_1 = new StringBuilder().append("ls.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_15_1 = new StringBuilder().append("ls.D(").append(frequencyZ).append(',').append(frequencyX).append(',').append(outputOffset).append(',').append(height).append(',');
+          if (output == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',');
-          if (param12 == null) {
+          stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(slice).append(',').append(amplitude).append(',').append(depth).append(',').append(guard).append(',').append(width).append(',').append(octaves).append(',').append(frequencyY).append(',');
+          if (generator == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param13).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(persistence).append(')').toString());
         }
     }
 
@@ -159,8 +159,8 @@ final class VertexAttribute {
         TEXCOORD1 = null;
         TEXCOORD4 = null;
         if (param0 != 2) {
-          ab var2 = (ab) null;
-          VertexAttribute.a(0.4216335117816925f, -2.271651268005371f, -82, -112, (byte[]) null, 106, 0.32911431789398193f, -52, -122, -66, 54, 0.6878315806388855f, (ab) null, -1.019270896911621f);
+          NoiseSliceGenerator var2 = (NoiseSliceGenerator) null;
+          VertexAttribute.fillNoiseSlice(0.4216335117816925f, -2.271651268005371f, -82, -112, (byte[]) null, 106, 0.32911431789398193f, -52, -122, -66, 54, 0.6878315806388855f, (NoiseSliceGenerator) null, -1.019270896911621f);
         }
     }
 

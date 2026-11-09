@@ -350,7 +350,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               DirectByteArrayStorage.field_c = 0;
               wq.field_b = param1;
               lw.field_b = param1;
-              ct.field_z = ra.c(2);
+              HardwareRidgedWaterNoise.field_z = ra.c(2);
               dupTemp$0 = new PlatformTaskDispatcher(param0, param5, param6, true);
               lt.field_m = dupTemp$0;
               CompactMeshGeometry.field_O = dupTemp$0;

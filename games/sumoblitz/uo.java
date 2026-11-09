@@ -649,7 +649,7 @@ final class uo extends ShaderEffect {
           this.field_b.a(NetworkResourceRequest.PRIMARY_COLOR, 0, true);
           var4 = this.field_b.B(0);
           var4.copyLinearFrom(this.field_b.c(true), true);
-          this.field_b.a(ip.field_y, 28880);
+          this.field_b.a(LegacyRidgedWaterNoise.field_y, 28880);
           this.field_b.g(0, -124);
           this.field_f = true;
           return;

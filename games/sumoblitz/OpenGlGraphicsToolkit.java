@@ -50,10 +50,10 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
           NetworkResourceRequest.field_v[2] = (float)var3.c(true);
           NetworkResourceRequest.field_v[3] = 1.0f;
           jaggl.OpenGL.glLightfv(var5, 4611, NetworkResourceRequest.field_v, 0);
-          NetworkResourceRequest.field_v[0] = var6 * (float)eb.a(var4 >> 16, 255);
+          NetworkResourceRequest.field_v[0] = var6 * (float)eb.bitwiseAnd(var4 >> 16, 255);
           NetworkResourceRequest.field_v[3] = 1.0f;
-          NetworkResourceRequest.field_v[1] = (float)eb.a(var4 >> 8, 255) * var6;
-          NetworkResourceRequest.field_v[2] = var6 * (float)eb.a(255, var4);
+          NetworkResourceRequest.field_v[1] = (float)eb.bitwiseAnd(var4 >> 8, 255) * var6;
+          NetworkResourceRequest.field_v[2] = var6 * (float)eb.bitwiseAnd(255, var4);
           jaggl.OpenGL.glLightfv(var5, 4609, NetworkResourceRequest.field_v, 0);
           jaggl.OpenGL.glLightf(var5, 4617, 1.0f / (float)(var3.c(0) * var3.c(0)));
           jaggl.OpenGL.glEnable(var5);
@@ -406,12 +406,12 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
         }
         jaggl.OpenGL.glFogf(2915, this.field_E);
         jaggl.OpenGL.glFogf(2916, this.field_Tb);
-        NetworkResourceRequest.field_v[1] = (float)eb.a(65280, this.field_C) / 65280.0f;
+        NetworkResourceRequest.field_v[1] = (float)eb.bitwiseAnd(65280, this.field_C) / 65280.0f;
         if (!param0) {
           return;
         }
-        NetworkResourceRequest.field_v[2] = (float)eb.a(255, this.field_C) / 255.0f;
-        NetworkResourceRequest.field_v[0] = (float)eb.a(this.field_C, 16711680) / 16711680.0f;
+        NetworkResourceRequest.field_v[2] = (float)eb.bitwiseAnd(255, this.field_C) / 255.0f;
+        NetworkResourceRequest.field_v[0] = (float)eb.bitwiseAnd(this.field_C, 16711680) / 16711680.0f;
         jaggl.OpenGL.glFogfv(2918, NetworkResourceRequest.field_v, 0);
     }
 
@@ -1273,9 +1273,9 @@ final class OpenGlGraphicsToolkit extends HardwareGraphicsToolkit {
 
     final void applyTextureConstantColor(int greenIndex) {
         NetworkResourceRequest.field_v[3] = (float)(this.field_Ub >>> 24) / 255.0f;
-        NetworkResourceRequest.field_v[2] = (float)eb.a(255, this.field_Ub) / 255.0f;
-        NetworkResourceRequest.field_v[0] = (float)eb.a(16711680, this.field_Ub) / 16711680.0f;
-        NetworkResourceRequest.field_v[greenIndex] = (float)eb.a(this.field_Ub, 65280) / 65280.0f;
+        NetworkResourceRequest.field_v[2] = (float)eb.bitwiseAnd(255, this.field_Ub) / 255.0f;
+        NetworkResourceRequest.field_v[0] = (float)eb.bitwiseAnd(16711680, this.field_Ub) / 16711680.0f;
+        NetworkResourceRequest.field_v[greenIndex] = (float)eb.bitwiseAnd(this.field_Ub, 65280) / 65280.0f;
         jaggl.OpenGL.glTexEnvfv(8960, 8705, NetworkResourceRequest.field_v, 0);
     }
 

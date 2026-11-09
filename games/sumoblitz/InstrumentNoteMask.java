@@ -25,7 +25,7 @@ final class InstrumentNoteMask extends IntrusiveNode {
         int[] var3 = new int[var1];
         Sprite var4Lifetime1;
         for (var4_int = 0; var1 > var4_int; var4_int++) {
-          var3[var4_int] = LegacyOpenGlEffectManager.field_l[eb.a(255, (int) var2[var4_int])];
+          var3[var4_int] = LegacyOpenGlEffectManager.field_l[eb.bitwiseAnd(255, (int) var2[var4_int])];
         }
         if (param0 == -8) {
           var4 = new Sprite(vf.field_d, ToolkitImageProducerBuffer.field_u, er.field_h[0], StrongCacheReference.field_C[0], vg.field_k[0], ScrollViewport.field_B[0], var3);

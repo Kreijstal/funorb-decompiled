@@ -11,12 +11,12 @@ final class an {
     static int waveIndex;
     static PrimitiveType TRIANGLE_FAN;
 
-    final static float a(float param0, float param1, int param2, float param3, int param4) {
+    final static float noiseGradientDot(float offsetY, float offsetZ, int gradientIndex, float offsetX, int guard) {
         float[] var6 = null;
-        if (param4 == 2) {
-          var6 = GameplaySession.field_i[param2];
+        if (guard == 2) {
+          var6 = GameplaySession.noiseGradients[gradientIndex];
           float[] var5 = var6;
-          return var6[1] * param0 + param3 * var6[0] + var6[2] * param1;
+          return var6[1] * offsetY + offsetX * var6[0] + var6[2] * offsetZ;
         }
         return 1.2348530292510986f;
     }

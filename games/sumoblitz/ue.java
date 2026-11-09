@@ -251,7 +251,7 @@ final class ue extends TextWidgetRenderer {
     private ue(int param0, int param1, int param2) {
         this.field_q = param2;
         this.field_r = LevelCompleteUpgradeScreen.field_j;
-        this.font = tq.field_a;
+        this.font = LegacyOpenGlDisplayLists.field_a;
         this.field_s = param1;
         this.field_n = param0;
     }

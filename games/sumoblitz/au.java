@@ -3,7 +3,7 @@
  */
 final class au extends LegacyOpenGlEffect {
     static int[] field_h;
-    private tq field_f;
+    private LegacyOpenGlDisplayLists field_f;
     static SpriteData[] field_j;
     static double field_k;
     private boolean field_g;
@@ -21,7 +21,7 @@ final class au extends LegacyOpenGlEffect {
           }
           return;
         }
-        this.field_f.a((byte) 121, '\001');
+        this.field_f.callList((byte) 121, '\001');
         this.field_b.g(1, 113);
         this.field_b.bindTexture(78, (LegacyOpenGlTexture) null);
         this.field_b.g(0, 121);
@@ -45,8 +45,8 @@ final class au extends LegacyOpenGlEffect {
           if (!param0.field_Ob) {
             return;
           }
-          this.field_f = new tq(param0, 2);
-          this.field_f.a(0, 4864);
+          this.field_f = new LegacyOpenGlDisplayLists(param0, 2);
+          this.field_f.beginList(0, 4864);
           this.field_b.g(1, 116);
           this.field_b.a(20685, 7681, 34165);
           this.field_b.b(34168, 770, 2, 9);
@@ -58,8 +58,8 @@ final class au extends LegacyOpenGlEffect {
           jaggl.OpenGL.glEnable(3169);
           jaggl.OpenGL.glEnable(3170);
           this.field_b.g(0, 115);
-          this.field_f.a(true);
-          this.field_f.a(1, 4864);
+          this.field_f.endList(true);
+          this.field_f.beginList(1, 4864);
           this.field_b.g(1, 121);
           this.field_b.a(20685, 8448, 8448);
           this.field_b.b(34166, 770, 2, -123);
@@ -71,7 +71,7 @@ final class au extends LegacyOpenGlEffect {
           jaggl.OpenGL.glLoadIdentity();
           jaggl.OpenGL.glMatrixMode(5888);
           this.field_b.g(0, 121);
-          this.field_f.a(true);
+          this.field_f.endList(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -138,7 +138,7 @@ final class au extends LegacyOpenGlEffect {
             if (!param1) {
               this.field_b.a(112, 0, 34168, 770);
             } else {
-              this.field_f.a((byte) 121, '\0');
+              this.field_f.callList((byte) 121, '\0');
               this.field_b.g(1, 98);
               this.field_b.bindTexture(119, var3);
               jaggl.OpenGL.glMatrixMode(5890);

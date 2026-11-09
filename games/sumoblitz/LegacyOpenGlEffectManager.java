@@ -13,7 +13,7 @@ final class LegacyOpenGlEffectManager {
     static long field_f;
     private int field_j;
     static Random field_b;
-    private ch field_e;
+    private LegacyWaterTextureResources field_e;
     private LegacyOpenGlGraphicsToolkit field_h;
     static AudioOutput field_a;
 
@@ -290,7 +290,7 @@ final class LegacyOpenGlEffectManager {
                 if (param2 > 123) {
                   return;
                 }
-                this.field_e = (ch) null;
+                this.field_e = (LegacyWaterTextureResources) null;
                 return;
               }
               this.field_d[2147483647 & this.field_k].a(-65, param4);
@@ -307,7 +307,7 @@ final class LegacyOpenGlEffectManager {
               }
             }
             if (param2 <= 123) {
-              this.field_e = (ch) null;
+              this.field_e = (LegacyWaterTextureResources) null;
             }
             return;
           }
@@ -337,7 +337,7 @@ final class LegacyOpenGlEffectManager {
                 if (param2 > 123) {
                   return;
                 }
-                this.field_e = (ch) null;
+                this.field_e = (LegacyWaterTextureResources) null;
                 return;
               }
               this.field_d[2147483647 & this.field_k].a(-65, param4);
@@ -354,7 +354,7 @@ final class LegacyOpenGlEffectManager {
               }
             }
             if (param2 <= 123) {
-              this.field_e = (ch) null;
+              this.field_e = (LegacyWaterTextureResources) null;
             }
             return;
           }
@@ -376,7 +376,7 @@ final class LegacyOpenGlEffectManager {
                     this.field_c = param1;
                     this.field_j = param3;
                     if (param2 <= 123) {
-                      this.field_e = (ch) null;
+                      this.field_e = (LegacyWaterTextureResources) null;
                     }
                     return;
                   }
@@ -398,7 +398,7 @@ final class LegacyOpenGlEffectManager {
             if (param2 > 123) {
               return;
             }
-            this.field_e = (ch) null;
+            this.field_e = (LegacyWaterTextureResources) null;
             return;
           }
           if (param5 == 4) {
@@ -441,7 +441,7 @@ final class LegacyOpenGlEffectManager {
         if (param2 > 123) {
           return;
         }
-        this.field_e = (ch) null;
+        this.field_e = (LegacyWaterTextureResources) null;
     }
 
     final boolean a(int param0, byte param1, LegacyOpenGlTexture param2) {
@@ -491,7 +491,7 @@ final class LegacyOpenGlEffectManager {
         this.field_j = 0;
         try {
           this.field_h = param0;
-          this.field_e = new ch(param0);
+          this.field_e = new LegacyWaterTextureResources(param0);
           this.field_d = new LegacyOpenGlEffect[10];
           this.field_d[1] = (LegacyOpenGlEffect) ((Object) new wt(param0));
           this.field_d[2] = (LegacyOpenGlEffect) ((Object) new es(param0, this.field_e));

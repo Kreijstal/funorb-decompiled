@@ -257,7 +257,7 @@ final class ng extends ShaderEffect {
             this.field_b.applyTexCoordGeneration(param1 ^ 31584, nl.NORMAL_MAP);
             var6 = this.field_b.B(0);
             var6.setRotationX((byte) 79, 1024);
-            this.field_b.a(ip.field_y, 28880);
+            this.field_b.a(LegacyRidgedWaterNoise.field_y, 28880);
             if (!this.field_g) {
               this.field_b.a((byte) -83, SlowBurstParticle.MODULATE, lf.REPLACE);
               this.field_b.a(FontMetrics.PREVIOUS, 0, param1 ^ 20186);

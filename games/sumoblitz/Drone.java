@@ -355,7 +355,7 @@ class Drone {
           if (!wn.a(this.targetYQ8, 2048, -128, this.xQ8, this.targetXQ8, this.yQ8)) {
             if ((!(!this.isBlastChargeParticleTick(-2))) &&
               ((0 == this.droneType))) {
-              ab.a(lr.field_a[this.droneType], this.effects, this, 40, this.yQ8, this.xQ8, (byte) 121);
+              NoiseSliceGenerator.a(lr.field_a[this.droneType], this.effects, this, 40, this.yQ8, this.xQ8, (byte) 121);
             }
             decompiledFrameRemainder0 = false;
           }
@@ -371,7 +371,7 @@ class Drone {
         }
         if ((decompiledFrameRemainder0) && (this.isBlastChargeParticleTick(-2) &&
           0 == this.droneType)) {
-          ab.a(lr.field_a[this.droneType], this.effects, this, 40, this.yQ8, this.xQ8, (byte) 121);
+          NoiseSliceGenerator.a(lr.field_a[this.droneType], this.effects, this, 40, this.yQ8, this.xQ8, (byte) 121);
         }
         if (this.temporaryPowerup != -1) {
           this.temporaryPowerupTicks = this.temporaryPowerupTicks - 1;
@@ -1034,9 +1034,9 @@ class Drone {
             if (this.variant == 3 &&
               0 == this.destructionTicks) {
               if (this.variantCooldownTicks != 0) {
-                ct.field_A[1].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)(3072.0 * ((double)var5 / 14.0)), (int)(32768.0 * this.facingRadians / 3.141592653589793));
+                HardwareRidgedWaterNoise.field_A[1].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)(3072.0 * ((double)var5 / 14.0)), (int)(32768.0 * this.facingRadians / 3.141592653589793));
               } else {
-                ct.field_A[0].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)((double)var5 / 14.0 * 3072.0), (int)(32768.0 * this.facingRadians / 3.141592653589793));
+                HardwareRidgedWaterNoise.field_A[0].drawRotated((float)(this.xQ8 >> 8), (float)(this.yQ8 >> 8), (int)((double)var5 / 14.0 * 3072.0), (int)(32768.0 * this.facingRadians / 3.141592653589793));
               }
             }
           }

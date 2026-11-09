@@ -266,7 +266,7 @@ final class GraphicsToolkitManager {
                   }
                 }
                 try {
-                  var11 = ks.a(var6.field_c, param1, this.field_e, true, var6.field_g, GraphicsToolkit.field_g);
+                  var11 = HardwareTurbulentWaterNoise.createToolkitForCanvas(var6.field_c, param1, this.field_e, true, var6.field_g, GraphicsToolkit.field_g);
                   if (var11 != null) {
                     var8 = new bk(var11, var6, param1);
                     if (var6.a(var8, (byte) -36)) {

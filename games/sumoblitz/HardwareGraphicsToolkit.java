@@ -327,7 +327,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     private final void z(int param0) {
         float var2 = 0.0f;
-        if (vu.field_h == this.field_s) {
+        if (PerlinNoiseSliceGenerator.field_h == this.field_s) {
           var2 = this.b((byte) 127);
           this.field_Lb.translate((byte) 96, 0.0f, var2, var2);
         }
@@ -440,7 +440,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
                 for (var8 = 0; var8 < data.field_h; var8++) {
                   incrementValue$2 = var6;
                   var6++;
-                  var4[incrementValue$2] = ic.a(data.field_a[var5] << 24, data.field_g[eb.a(255, (int) data.field_e[var5])]);
+                  var4[incrementValue$2] = ic.a(data.field_a[var5] << 24, data.field_g[eb.bitwiseAnd(255, (int) data.field_e[var5])]);
                   var5++;
                 }
               }
@@ -1750,9 +1750,9 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         if (param0 != -25) {
           this.createHeap(-125);
         }
-        if (this.field_s != vu.field_h) {
+        if (this.field_s != PerlinNoiseSliceGenerator.field_h) {
           var2 = this.field_s;
-          this.field_s = vu.field_h;
+          this.field_s = PerlinNoiseSliceGenerator.field_h;
           if (var2.a(-20011)) {
             this.W(16);
           }

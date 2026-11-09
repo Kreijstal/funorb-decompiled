@@ -1,37 +1,37 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ip extends ml {
-    private byte[] field_x;
+final class LegacyRidgedWaterNoise extends RidgedNoise3D {
+    private byte[] pixels;
     static tf field_y;
 
-    final void a(byte param0, int param1, int param2) {
+    final void writeVoxel(byte value, int index, int guard) {
         int var4 = 0;
         int var5 = 0;
         int incrementValue$0 = 0;
-        if (param2 == 4096) {
-          var4 = param1 * 2;
-          var5 = param0 & 255;
+        if (guard == 4096) {
+          var4 = index * 2;
+          var5 = value & 255;
           incrementValue$0 = var4;
           var4++;
-          this.field_x[incrementValue$0] = (byte)(var5 * 3 >> 5);
-          this.field_x[var4] = (byte)(var5 * 3 >> 5);
+          this.pixels[incrementValue$0] = (byte)(var5 * 3 >> 5);
+          this.pixels[var4] = (byte)(var5 * 3 >> 5);
           return;
         }
     }
 
-    ip() {
+    LegacyRidgedWaterNoise() {
         super(8, 5, 8, 8, 2, 0.10000000149011612f, 0.550000011920929f, 3.0f);
     }
 
-    final byte[] a(byte param0, int param1, int param2, int param3) {
-        int var5 = 79 % ((param0 + 43) / 46);
-        this.field_x = new byte[2 * (param3 * (param2 * param1))];
-        this.a(param3, 206, param2, param1);
-        return this.field_x;
+    final byte[] generate(byte guard, int width, int height, int depth) {
+        int var5 = 79 % ((guard + 43) / 46);
+        this.pixels = new byte[2 * (depth * (height * width))];
+        this.generateVolume(depth, 206, height, width);
+        return this.pixels;
     }
 
-    final static void d(int param0) {
+    final static void updateDisplayDialogs(int guard) {
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -45,9 +45,9 @@ final class ip extends ml {
             }
             return;
           }
-          pu.field_e.dispatchPointerInput(JaggrabDownloader.field_j, c.field_r, true, param0 - 1886067878);
-          if (param0 != 1886067877) {
-            ip.releaseStatics((byte) -127);
+          pu.field_e.dispatchPointerInput(JaggrabDownloader.field_j, c.field_r, true, guard - 1886067878);
+          if (guard != 1886067877) {
+            LegacyRidgedWaterNoise.releaseStatics((byte) -127);
           }
           pu.field_e.advanceDialogAnimations(-104);
           while (wd.c(-81)) {
@@ -57,14 +57,14 @@ final class ip extends ml {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "ip.D(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "ip.D(" + guard + ')');
         }
     }
 
     public static void releaseStatics(byte param0) {
         field_y = null;
         if (param0 <= 53) {
-          ip.releaseStatics((byte) -74);
+          LegacyRidgedWaterNoise.releaseStatics((byte) -74);
         }
     }
 

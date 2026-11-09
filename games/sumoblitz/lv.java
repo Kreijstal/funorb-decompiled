@@ -5,12 +5,12 @@ final class lv extends LegacyOpenGlEffect {
     static int field_i;
     private boolean field_j;
     private LegacyOpenGlShaderProgram field_k;
-    private ch field_h;
+    private LegacyWaterTextureResources field_h;
     static String visitTheAccountManagementText;
     static String pleaseSendMeNewsText;
     private boolean field_g;
 
-    lv(LegacyOpenGlGraphicsToolkit param0, ch param1) {
+    lv(LegacyOpenGlGraphicsToolkit param0, LegacyWaterTextureResources param1) {
         super(param0);
         LegacyOpenGlShader var5 = null;
         LegacyOpenGlShader var4 = null;
@@ -18,7 +18,7 @@ final class lv extends LegacyOpenGlEffect {
         this.field_g = false;
         try {
           this.field_h = param1;
-          if (this.field_h.field_c != null &&
+          if (this.field_h.normalMap != null &&
             this.field_b.field_N &&
             this.field_b.supportsFragmentShaders) {
             var5 = WaterTextureResources.compileShader(this.field_b, false, 35633, "uniform float time;\nuniform float scale;\nvarying vec3 wvVertex;\nvarying float waterDepth;\nvoid main() {\nwaterDepth = gl_MultiTexCoord0.z;\nvec4 ecVertex = gl_ModelViewMatrix*gl_Vertex;\nwvVertex.x = dot(gl_NormalMatrix[0], ecVertex.xyz);\nwvVertex.y = dot(gl_NormalMatrix[1], ecVertex.xyz);\nwvVertex.z = dot(gl_NormalMatrix[2], ecVertex.xyz);\ngl_TexCoord[0].x = dot(gl_TextureMatrix[0][0], gl_MultiTexCoord0)*scale;\ngl_TexCoord[0].y = dot(gl_TextureMatrix[0][1], gl_MultiTexCoord0)*scale;\ngl_TexCoord[0].z = time;\ngl_TexCoord[0].w = 1.0;\ngl_FogFragCoord = 1.0-clamp((gl_Fog.end+ecVertex.z)*gl_Fog.scale, 0.0, 1.0);\ngl_Position = ftransform();\n}\n");
@@ -46,7 +46,7 @@ final class lv extends LegacyOpenGlEffect {
           this.field_b.g(1, 113);
           this.field_b.bindTexture(41, var3);
           this.field_b.g(0, 97);
-          this.field_b.bindTexture(121, this.field_h.field_c);
+          this.field_b.bindTexture(121, this.field_h.normalMap);
           var4 = this.field_k.programHandle;
           jaggl.OpenGL.glUseProgramObjectARB(var4);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var4, "normalSampler"), 0);
@@ -170,7 +170,7 @@ final class lv extends LegacyOpenGlEffect {
 
     final boolean b(byte param0) {
         if (param0 > -64) {
-          this.field_h = (ch) null;
+          this.field_h = (LegacyWaterTextureResources) null;
           return false;
         }
         return false;

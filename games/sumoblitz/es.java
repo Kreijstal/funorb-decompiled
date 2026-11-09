@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class es extends LegacyOpenGlEffect {
-    private ch field_f;
+    private LegacyWaterTextureResources field_f;
     private int field_h;
     private LegacyOpenGlAssemblyProgram field_i;
     private float field_g;
-    private tq field_k;
+    private LegacyOpenGlDisplayLists field_k;
     private float[] field_e;
     static String loadingGraphicsText;
 
     final boolean b(byte param0) {
         if (param0 > -64) {
-          this.field_f = (ch) null;
+          this.field_f = (LegacyWaterTextureResources) null;
           return true;
         }
         return true;
@@ -72,10 +72,10 @@ final class es extends LegacyOpenGlEffect {
           return;
         }
         if ((1 & param2) != 1) {
-          if (!this.field_f.field_g) {
-            this.field_b.bindTexture(86, this.field_f.field_i[0]);
+          if (!this.field_f.useVolumeTextures) {
+            this.field_b.bindTexture(86, this.field_f.ridgedSlices[0]);
           } else {
-            this.field_b.bindTexture(54, this.field_f.field_b);
+            this.field_b.bindTexture(54, this.field_f.ridgedVolume);
           }
           jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 65, 0.0f, 0.0f, 0.0f, 1.0f);
           this.field_b.g(0, 122);
@@ -98,8 +98,8 @@ final class es extends LegacyOpenGlEffect {
             }
           }
         } else {
-          if (this.field_f.field_g) {
-            this.field_b.bindTexture(36, this.field_f.field_b);
+          if (this.field_f.useVolumeTextures) {
+            this.field_b.bindTexture(36, this.field_f.ridgedVolume);
             jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 65, this.field_g, 0.0f, 0.0f, 1.0f);
             this.field_b.g(0, 122);
             if ((param1 & 64) != 0) {
@@ -132,7 +132,7 @@ final class es extends LegacyOpenGlEffect {
             }
           } else {
             var4Lifetime1 = 16 * (this.field_b.field_Ac % 4000) / 4000;
-            this.field_b.bindTexture(13, this.field_f.field_i[var4Lifetime1]);
+            this.field_b.bindTexture(13, this.field_f.ridgedSlices[var4Lifetime1]);
             jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 65, 0.0f, 0.0f, 0.0f, 1.0f);
             this.field_b.g(0, 122);
             if ((param1 & 64) != 0) {
@@ -179,7 +179,7 @@ final class es extends LegacyOpenGlEffect {
         if (null == this.field_k) {
           return;
         }
-        this.field_k.a((byte) 121, '\001');
+        this.field_k.callList((byte) 121, '\001');
         this.field_b.g(1, 119);
         this.field_b.bindTexture(16, (LegacyOpenGlTexture) null);
         this.field_b.g(0, 118);
@@ -188,7 +188,7 @@ final class es extends LegacyOpenGlEffect {
         }
     }
 
-    es(LegacyOpenGlGraphicsToolkit param0, ch param1) {
+    es(LegacyOpenGlGraphicsToolkit param0, LegacyWaterTextureResources param1) {
         super(param0);
         int var6 = 0;
         int var9 = 0;
@@ -261,8 +261,8 @@ final class es extends LegacyOpenGlEffect {
     }
 
     private final void a(boolean param0) {
-        this.field_k = new tq(this.field_b, 2);
-        this.field_k.a(0, 4864);
+        this.field_k = new LegacyOpenGlDisplayLists(this.field_b, 2);
+        this.field_k.beginList(0, 4864);
         this.field_b.g(1, 90);
         this.field_b.e(0, -16777216);
         this.field_b.a(20685, 7681, 260);
@@ -270,8 +270,8 @@ final class es extends LegacyOpenGlEffect {
         this.field_b.g(0, 96);
         jaggl.OpenGL.glBindProgramARB(34336, this.field_i.programId);
         jaggl.OpenGL.glEnable(34336);
-        this.field_k.a(true);
-        this.field_k.a(1, 4864);
+        this.field_k.endList(true);
+        this.field_k.beginList(1, 4864);
         this.field_b.g(1, 100);
         jaggl.OpenGL.glMatrixMode(5890);
         jaggl.OpenGL.glLoadIdentity();
@@ -282,7 +282,7 @@ final class es extends LegacyOpenGlEffect {
         jaggl.OpenGL.glBindProgramARB(34336, 0);
         jaggl.OpenGL.glDisable(34336);
         jaggl.OpenGL.glDisable(34820);
-        this.field_k.a(true);
+        this.field_k.endList(true);
     }
 
     final void a(byte param0, boolean param1) {
@@ -292,7 +292,7 @@ final class es extends LegacyOpenGlEffect {
         if (this.field_k == null) {
           return;
         }
-        this.field_k.a((byte) 121, '\0');
+        this.field_k.callList((byte) 121, '\0');
         this.field_b.g(1, 115);
         jaggl.OpenGL.glMatrixMode(5890);
         jaggl.OpenGL.glLoadMatrixf(this.field_b.field_mc.b((byte) 57), 0);
@@ -306,7 +306,7 @@ final class es extends LegacyOpenGlEffect {
               jaggl.OpenGL.glProgramLocalParameter4fvARB(34336, var4, this.field_e, var3);
               var3 += 2;
             }
-            if (this.field_f.field_g) {
+            if (this.field_f.useVolumeTextures) {
               this.field_g = (float)(this.field_b.field_Ac % 4000) / 4000.0f;
             } else {
               jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 65, 0.0f, 0.0f, 0.0f, 1.0f);

@@ -235,11 +235,11 @@ final class ow {
             ow.releaseStatics((byte) 19);
           }
           qn.field_e = param2;
-          if (!en.field_h.startsWith("win")) {
-            if (en.field_h.startsWith("linux")) {
+          if (!FixedPointPerlinNoise3D.field_h.startsWith("win")) {
+            if (FixedPointPerlinNoise3D.field_h.startsWith("linux")) {
               OpenGlUnderwaterEffect.field_n = OpenGlUnderwaterEffect.field_n + "linux/";
             } else {
-              if (en.field_h.startsWith("mac")) {
+              if (FixedPointPerlinNoise3D.field_h.startsWith("mac")) {
                 OpenGlUnderwaterEffect.field_n = OpenGlUnderwaterEffect.field_n + "macos/";
               }
             }
@@ -250,13 +250,13 @@ final class ow {
             OpenGlUnderwaterEffect.field_n = OpenGlUnderwaterEffect.field_n + "msjava/";
             return;
           }
-          if (!en.field_d.startsWith("amd64") &&
-            !en.field_d.startsWith("x86_64")) {
-            if (!en.field_d.startsWith("i386") &&
-              !en.field_d.startsWith("i486") &&
-              !en.field_d.startsWith("i586") &&
-              !en.field_d.startsWith("x86")) {
-              if (en.field_d.startsWith("ppc")) {
+          if (!FixedPointPerlinNoise3D.field_d.startsWith("amd64") &&
+            !FixedPointPerlinNoise3D.field_d.startsWith("x86_64")) {
+            if (!FixedPointPerlinNoise3D.field_d.startsWith("i386") &&
+              !FixedPointPerlinNoise3D.field_d.startsWith("i486") &&
+              !FixedPointPerlinNoise3D.field_d.startsWith("i586") &&
+              !FixedPointPerlinNoise3D.field_d.startsWith("x86")) {
+              if (FixedPointPerlinNoise3D.field_d.startsWith("ppc")) {
                 OpenGlUnderwaterEffect.field_n = OpenGlUnderwaterEffect.field_n + "ppc/";
                 return;
               }

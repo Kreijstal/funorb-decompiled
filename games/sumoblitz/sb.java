@@ -140,7 +140,7 @@ final class sb {
               EnemyDrone.field_S[var5[var6].field_e] = var5[var6];
             }
           }
-          ab.field_a = new IntrusiveNodeHashTable(16);
+          NoiseSliceGenerator.field_a = new IntrusiveNodeHashTable(16);
           for (var6 = 0; 9 > var6; var6++) {
             try {
               var2_int = param1.groupId(0, "engineered_levels/" + (1 + var6) + "/");
@@ -162,7 +162,7 @@ final class sb {
                 var7_array[var9] = wr.a(true, var10, false);
                 var8[var16[var9].field_a] = var16[var9];
               }
-              ab.field_a.a(new om(var8), param0 ^ 9936, (long)WidgetContainer.field_x[var6]);
+              NoiseSliceGenerator.field_a.a(new om(var8), param0 ^ 9936, (long)WidgetContainer.field_x[var6]);
             }
           }
           return;

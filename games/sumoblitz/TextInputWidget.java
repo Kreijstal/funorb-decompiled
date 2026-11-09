@@ -193,7 +193,7 @@ class TextInputWidget extends InteractiveWidget {
         this.wordSelectionEnd = -1;
         try {
           this.maxLength = param2;
-          this.renderer = ks.field_x.field_j;
+          this.renderer = HardwareTurbulentWaterNoise.field_x.field_j;
           this.setText(true, param0, (byte) 118);
           this.scrollToCaretEnabled = true;
           this.caretBlinkStartMillis = wq.a(-9);

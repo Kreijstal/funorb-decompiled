@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ic {
-    static Object field_b;
+    static Object legacyRidgedWaterData;
     static ts field_a;
     private fk field_d;
     static int[] field_c;
@@ -24,7 +24,7 @@ final class ic {
         jq discarded$2 = null;
         try {
           if (param1) {
-            field_b = (Object) null;
+            legacyRidgedWaterData = (Object) null;
           }
           this.field_d = param0.a(24, true, (byte) -23, 196584, (byte[]) null);
           discarded$0 = new jq(this.field_d, 5126, 2, 0);
@@ -39,7 +39,7 @@ final class ic {
         int var1 = -37 % ((param0 - 64) / 32);
         field_c = null;
         field_a = null;
-        field_b = null;
+        legacyRidgedWaterData = null;
     }
 
     final static int b(int param0, int param1) {
@@ -64,7 +64,7 @@ final class ic {
           }
           return stackIn_15_0;
         }
-        field_b = (Object) null;
+        legacyRidgedWaterData = (Object) null;
         if (param0 < 4096) {
           if (param0 >= 2048) {
             stackIn_9_0 = ToolkitRasterBuffer.field_p[-param0 + 4096];

@@ -191,7 +191,7 @@ class jb extends se {
               var6_intLifetime1 = ig.field_a.readUnsignedByte(-31302);
               TextureFormat.field_a = var6_intLifetime1;
               ig.field_a.position = 0;
-              rp.field_b = null;
+              SoftwareRenderContext.field_b = null;
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
@@ -216,7 +216,7 @@ class jb extends se {
               lb.field_a = ig.field_a.readLong((byte) 114);
               Bzip2State.field_j = ig.field_a.readUnsignedByte(-31302);
               ig.field_a.readUnsignedByte(-31302);
-              ct.field_x = ig.field_a.readUnsignedShort(255);
+              HardwareRidgedWaterNoise.field_x = ig.field_a.readUnsignedShort(255);
               var6 = ig.field_a.readNullableString((byte) 92);
               var7 = ig.field_a.readUnsignedByte(-31302);
               if ((var7 & 1) != 0) {
@@ -256,7 +256,7 @@ class jb extends se {
               if (var6 != null) {
                 jb.a((byte) -118, var6, ra.c(2));
               }
-              if (ct.field_x <= 0 &&
+              if (HardwareRidgedWaterNoise.field_x <= 0 &&
                 !wo.field_c) {
                 try {
                   tw.a(ra.c(2), 93, "unzap");
@@ -272,7 +272,7 @@ class jb extends se {
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               }
-              if (ct.field_x > 0) {
+              if (HardwareRidgedWaterNoise.field_x > 0) {
                 qn.field_a = true;
               }
               InwardSparkParticle.field_v.a((byte) 64, bk.field_e);

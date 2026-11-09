@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tq {
-    private int field_b;
+final class LegacyOpenGlDisplayLists {
+    private int baseListId;
     static LegacyBitmapFont field_a;
 
     final static void a(int param0, int param1, boolean param2) {
@@ -26,9 +26,9 @@ final class tq {
         }
     }
 
-    final void a(boolean param0) {
-        if (!param0) {
-          this.a(-14, 14);
+    final void endList(boolean guard) {
+        if (!guard) {
+          this.beginList(-14, 14);
         } else {
           jaggl.OpenGL.glEndList();
           return;
@@ -36,23 +36,23 @@ final class tq {
         jaggl.OpenGL.glEndList();
     }
 
-    tq(LegacyOpenGlGraphicsToolkit param0, int param1) {
+    LegacyOpenGlDisplayLists(LegacyOpenGlGraphicsToolkit toolkit, int count) {
         try {
-          this.field_b = jaggl.OpenGL.glGenLists(param1);
+          this.baseListId = jaggl.OpenGL.glGenLists(count);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "tq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "tq.<init>(" + (toolkit != null ? "{...}" : "null") + ',' + count + ')');
         }
     }
 
-    final void a(byte param0, char param1) {
-        jaggl.OpenGL.glCallList(param1 + this.field_b);
-        if (param0 != 121) {
+    final void callList(byte guard, char index) {
+        jaggl.OpenGL.glCallList(index + this.baseListId);
+        if (guard != 121) {
           field_a = (LegacyBitmapFont) null;
         }
     }
 
-    final void a(int param0, int param1) {
-        jaggl.OpenGL.glNewList(this.field_b + param0, param1);
+    final void beginList(int index, int mode) {
+        jaggl.OpenGL.glNewList(this.baseListId + index, mode);
     }
 
     public static void releaseStatics(byte param0) {
@@ -68,7 +68,7 @@ final class tq {
         if (param1) {
           return (param2 & 256) != 0 ? true : false;
         }
-        tq.a(34, -21, true);
+        LegacyOpenGlDisplayLists.a(34, -21, true);
         return (param2 & 256) != 0 ? true : false;
     }
 
@@ -86,7 +86,7 @@ final class tq {
           if (param0 == -106) {
             return;
           }
-          tq.releaseStatics((byte) -12);
+          LegacyOpenGlDisplayLists.releaseStatics((byte) -12);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

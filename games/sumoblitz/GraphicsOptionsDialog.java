@@ -275,7 +275,7 @@ final class GraphicsOptionsDialog extends ResizingDialog implements WidgetAction
                       this.dialogLayer.pushDialog((byte) 98, new DisplayModeErrorDialog(this.dialogLayer, Bzip2State.field_I));
                       return;
                     }
-                    if (ct.field_x > 0) {
+                    if (HardwareRidgedWaterNoise.field_x > 0) {
                       this.a(source, guard - 710);
                       return;
                     }

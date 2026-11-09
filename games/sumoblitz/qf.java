@@ -5,7 +5,7 @@ final class qf {
     static int field_a;
     private static String field_z;
 
-    final static int a(int param0, int param1, int param2, int param3, int param4) {
+    final static int perlinGradientDot(int offsetY, int offsetZ, int axisThreshold, int hash, int offsetX) {
         int stackIn_3_0 = 0;
         int stackIn_8_0 = 0;
         int stackIn_11_0 = 0;
@@ -23,11 +23,11 @@ final class qf {
         int var7Lifetime1;
         int var7Lifetime2;
         int var7Lifetime3;
-        var5 = param3 & 15;
-        stackIn_3_0 = (var5 >= param2) ? param0 : param4;
+        var5 = hash & 15;
+        stackIn_3_0 = (var5 >= axisThreshold) ? offsetY : offsetX;
         var6 = stackIn_3_0;
         if (var5 < 4) {
-          stackIn_31_0 = param0;
+          stackIn_31_0 = offsetY;
           var7 = stackIn_31_0;
           if ((2 & var5) == 0) {
             stackIn_34_0 = var7;
@@ -42,7 +42,7 @@ final class qf {
           return stackIn_34_0 + stackIn_37_1;
         }
         if (12 == var5) {
-          stackIn_8_0 = param4;
+          stackIn_8_0 = offsetX;
           var7Lifetime1 = stackIn_8_0;
           if ((2 & var5) == 0) {
             stackIn_11_0 = var7Lifetime1;
@@ -57,7 +57,7 @@ final class qf {
           return stackIn_11_0 + stackIn_14_1;
         }
         if (var5 == 14) {
-          var7Lifetime2 = param4;
+          var7Lifetime2 = offsetX;
           if ((2 & var5) == 0) {
             stackIn_26_0 = var7Lifetime2;
           } else {
@@ -70,7 +70,7 @@ final class qf {
           }
           return stackIn_26_0 + stackIn_29_1;
         }
-        var7Lifetime3 = param1;
+        var7Lifetime3 = offsetZ;
         if ((2 & var5) == 0) {
           stackIn_19_0 = var7Lifetime3;
         } else {

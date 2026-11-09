@@ -117,7 +117,7 @@ final class DisplayModeConfirmationDialog extends ResizingDialog implements Widg
           this.field_S.width = this.width;
           this.field_S.x = 0;
           this.field_S.height = 80;
-          this.field_S.renderer = (WidgetRenderer) ((Object) new TextWidgetRenderer(tq.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.field_S.renderer = (WidgetRenderer) ((Object) new TextWidgetRenderer(LegacyOpenGlDisplayLists.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(this.field_S, 117);
           this.field_P = this.a((WidgetListener) (this), 20556, km.acceptText);
           this.field_Q = this.a((WidgetListener) (this), 20556, up.cancelText);

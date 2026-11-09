@@ -3,7 +3,7 @@
  */
 abstract class SpriteState extends DualLinkNode {
     int field_z;
-    static int[] field_y;
+    static int[] noiseFadeQ12;
     int field_A;
     static String myHiscoresText;
     int field_u;
@@ -27,7 +27,7 @@ abstract class SpriteState extends DualLinkNode {
         myHiscoresText = null;
         int var1 = -35 % ((param0 + 7) / 32);
         field_B = null;
-        field_y = null;
+        noiseFadeQ12 = null;
     }
 
     SpriteState() {
@@ -36,9 +36,9 @@ abstract class SpriteState extends DualLinkNode {
     static {
         int var0 = 0;
         myHiscoresText = "MY HISCORES";
-        field_y = new int[4096];
+        noiseFadeQ12 = new int[4096];
         for (var0 = 0; 4096 > var0; var0++) {
-          field_y[var0] = gf.a(var0, -676121812);
+          noiseFadeQ12[var0] = gf.quinticSmoothStepQ12(var0, -676121812);
         }
     }
 }

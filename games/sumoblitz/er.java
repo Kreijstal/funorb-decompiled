@@ -41,7 +41,7 @@ final class er {
         bt.field_e = ResizingDialog.a(var2, BufferedSocket.field_n, (byte) -11);
         LegacyOpenGlTexture.field_e = DroneDebris.createToolkitSprites(rl.field_l, var2, 28513);
         ContentDialog.field_ab = DroneDebris.createToolkitSprites(kk.field_e, var2, 28513);
-        hv.field_d = DroneDebris.createToolkitSprites(ks.field_w, var2, 28513);
+        hv.field_d = DroneDebris.createToolkitSprites(HardwareTurbulentWaterNoise.field_w, var2, 28513);
         s.field_n = DroneDebris.createToolkitSprites(fl.field_r, var2, 28513);
         MenuScreen.field_a = DroneDebris.createToolkitSprites(kr.field_b, var2, 28513);
         HardwareTextureCache.field_e = DroneDebris.createToolkitSprites(DisplayModeConfirmationDialog.field_V, var2, 28513);
@@ -49,7 +49,7 @@ final class er {
           field_c = (ResourceArchive) null;
           ts.field_e = DroneDebris.createToolkitSprites(ph.field_a, var2, 28513);
           hh.field_e = DroneDebris.createToolkitSprites(CachedTextLayout.field_h, var2, 28513);
-          ct.field_A = DroneDebris.createToolkitSprites(bk.field_b, var2, 28513);
+          HardwareRidgedWaterNoise.field_A = DroneDebris.createToolkitSprites(bk.field_b, var2, 28513);
           up.field_e = DroneDebris.createToolkitSprites(cd.field_c, var2, 28513);
           th.field_B = ResizingDialog.a(var2, lh.field_k, (byte) -11);
           DroneDebris.createToolkitSprites(Transform3D.field_a, var2, 28513);
@@ -61,7 +61,7 @@ final class er {
           CachedArchiveProvider.field_j = DroneDebris.createToolkitSprites(dq.field_v, var2, 28513);
           OpenGlBuffer.field_g = DroneDebris.createToolkitSprites(LegacyOpenGlRenderbuffer.field_w, var2, 28513);
           ResizingDialog.a(var2, bj.field_g, (byte) -11);
-          ResizingDialog.a(var2, ks.field_t, (byte) -11);
+          ResizingDialog.a(var2, HardwareTurbulentWaterNoise.field_t, (byte) -11);
           ResizingDialog.a(var2, ShaderEffect.field_c, (byte) -11);
           im.field_a = ResizingDialog.a(var2, ue.field_p, (byte) -11);
           mn.field_j = ResizingDialog.a(var2, pc.field_c, (byte) -11);
@@ -70,12 +70,12 @@ final class er {
           OpenGlEnvironmentWaterEffect.field_i = ResizingDialog.a(var2, mn.field_c, (byte) -11);
           an.field_f = ResizingDialog.a(var2, SceneryParticle.field_C, (byte) -11);
           TextureMetadata.field_a = ResizingDialog.a(var2, wf.field_a, (byte) -11);
-          DirectByteArrayStorage.field_d = ResizingDialog.a(var2, ml.field_p, (byte) -11);
+          DirectByteArrayStorage.field_d = ResizingDialog.a(var2, RidgedNoise3D.field_p, (byte) -11);
           kw.field_a = ResizingDialog.a(var2, th.field_C, (byte) -11);
           OpenGlIndexBuffer.field_p = DroneDebris.createToolkitSprites(MouseInputHandler.field_b, var2, 28513);
-          ml.field_w = DroneDebris.createToolkitSprites(SoftLruCache.field_a, var2, 28513);
+          RidgedNoise3D.field_w = DroneDebris.createToolkitSprites(SoftLruCache.field_a, var2, 28513);
           ok.field_f = DroneDebris.createToolkitSprites(LegacyOpenGlCubeTexture.field_n, var2, 28513);
-          ff.field_k = DroneDebris.createToolkitSprites(ni.field_h, var2, 28513);
+          TurbulenceNoise3D.field_k = DroneDebris.createToolkitSprites(ni.field_h, var2, 28513);
           ResizingDialog.a(var2, ArchiveCatalog.field_f, (byte) -11);
           ResizingDialog.a(var2, MusicVoice.field_o, (byte) -11);
           DirectByteArrayStorage.field_e = ResizingDialog.a(var2, lr.field_c, (byte) -11);
@@ -98,7 +98,7 @@ final class er {
         }
         ts.field_e = DroneDebris.createToolkitSprites(ph.field_a, var2, 28513);
         hh.field_e = DroneDebris.createToolkitSprites(CachedTextLayout.field_h, var2, 28513);
-        ct.field_A = DroneDebris.createToolkitSprites(bk.field_b, var2, 28513);
+        HardwareRidgedWaterNoise.field_A = DroneDebris.createToolkitSprites(bk.field_b, var2, 28513);
         up.field_e = DroneDebris.createToolkitSprites(cd.field_c, var2, 28513);
         th.field_B = ResizingDialog.a(var2, lh.field_k, (byte) -11);
         DroneDebris.createToolkitSprites(Transform3D.field_a, var2, 28513);
@@ -110,7 +110,7 @@ final class er {
         CachedArchiveProvider.field_j = DroneDebris.createToolkitSprites(dq.field_v, var2, 28513);
         OpenGlBuffer.field_g = DroneDebris.createToolkitSprites(LegacyOpenGlRenderbuffer.field_w, var2, 28513);
         ResizingDialog.a(var2, bj.field_g, (byte) -11);
-        ResizingDialog.a(var2, ks.field_t, (byte) -11);
+        ResizingDialog.a(var2, HardwareTurbulentWaterNoise.field_t, (byte) -11);
         ResizingDialog.a(var2, ShaderEffect.field_c, (byte) -11);
         im.field_a = ResizingDialog.a(var2, ue.field_p, (byte) -11);
         mn.field_j = ResizingDialog.a(var2, pc.field_c, (byte) -11);
@@ -119,12 +119,12 @@ final class er {
         OpenGlEnvironmentWaterEffect.field_i = ResizingDialog.a(var2, mn.field_c, (byte) -11);
         an.field_f = ResizingDialog.a(var2, SceneryParticle.field_C, (byte) -11);
         TextureMetadata.field_a = ResizingDialog.a(var2, wf.field_a, (byte) -11);
-        DirectByteArrayStorage.field_d = ResizingDialog.a(var2, ml.field_p, (byte) -11);
+        DirectByteArrayStorage.field_d = ResizingDialog.a(var2, RidgedNoise3D.field_p, (byte) -11);
         kw.field_a = ResizingDialog.a(var2, th.field_C, (byte) -11);
         OpenGlIndexBuffer.field_p = DroneDebris.createToolkitSprites(MouseInputHandler.field_b, var2, 28513);
-        ml.field_w = DroneDebris.createToolkitSprites(SoftLruCache.field_a, var2, 28513);
+        RidgedNoise3D.field_w = DroneDebris.createToolkitSprites(SoftLruCache.field_a, var2, 28513);
         ok.field_f = DroneDebris.createToolkitSprites(LegacyOpenGlCubeTexture.field_n, var2, 28513);
-        ff.field_k = DroneDebris.createToolkitSprites(ni.field_h, var2, 28513);
+        TurbulenceNoise3D.field_k = DroneDebris.createToolkitSprites(ni.field_h, var2, 28513);
         ResizingDialog.a(var2, ArchiveCatalog.field_f, (byte) -11);
         ResizingDialog.a(var2, MusicVoice.field_o, (byte) -11);
         DirectByteArrayStorage.field_e = ResizingDialog.a(var2, lr.field_c, (byte) -11);

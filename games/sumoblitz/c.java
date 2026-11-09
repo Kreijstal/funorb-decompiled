@@ -79,11 +79,11 @@ final class c extends nl {
                 hw.field_b[var5] = false;
                 var5++;
               }
-              lv.field_i = ks.field_v;
+              lv.field_i = HardwareTurbulentWaterNoise.field_v;
             } else {
-              while (ks.field_v != lv.field_i) {
-                var2 = jf.field_d[ks.field_v];
-                ks.field_v = 127 & ks.field_v + 1;
+              while (HardwareTurbulentWaterNoise.field_v != lv.field_i) {
+                var2 = jf.field_d[HardwareTurbulentWaterNoise.field_v];
+                HardwareTurbulentWaterNoise.field_v = 127 & HardwareTurbulentWaterNoise.field_v + 1;
                 if (0 <= var2) {
                   hw.field_b[var2] = true;
                   continue;

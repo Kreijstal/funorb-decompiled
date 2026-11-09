@@ -36,7 +36,7 @@ class UiWidget extends IntrusiveNode {
         }
         var5 = CachedTextLayout.e(102);
         if (var5 != null) {
-          ks.field_x.a(GraphicsHeap.field_k, 13421772, VertexLayout.field_b, var5);
+          HardwareTurbulentWaterNoise.field_x.a(GraphicsHeap.field_k, 13421772, VertexLayout.field_b, var5);
         }
         if (!guard) {
           return;
@@ -313,7 +313,7 @@ class UiWidget extends IntrusiveNode {
                 }
               }
               if (ar.field_G == 0 &&
-                ml.field_l != 0) {
+                RidgedNoise3D.field_l != 0) {
                 this.onPointerReleased(this, false, parentX, pi.field_e, ko.field_p, parentY);
                 var8 = MessageDialog.field_gb;
                 if (var8 != null) {
@@ -335,7 +335,7 @@ class UiWidget extends IntrusiveNode {
                   inputAvailable = false;
                 }
                 if (ar.field_G == 0 &&
-                  ml.field_l != 0) {
+                  RidgedNoise3D.field_l != 0) {
                   this.onPointerReleased(this, false, parentX, pi.field_e, ko.field_p, parentY);
                   var9 = MessageDialog.field_gb;
                   if (var9 != null) {
@@ -363,7 +363,7 @@ class UiWidget extends IntrusiveNode {
                   }
                 }
                 if (ar.field_G == 0 &&
-                  ml.field_l != 0) {
+                  RidgedNoise3D.field_l != 0) {
                   this.onPointerReleased(this, false, parentX, pi.field_e, ko.field_p, parentY);
                   var10 = MessageDialog.field_gb;
                   if (var10 != null) {
@@ -397,12 +397,12 @@ class UiWidget extends IntrusiveNode {
                   }
                 }
                 if (ar.field_G != 0) {
-                  ml.field_l = ar.field_G;
+                  RidgedNoise3D.field_l = ar.field_G;
                   LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
-                if (ml.field_l == 0) {
-                  ml.field_l = ar.field_G;
+                if (RidgedNoise3D.field_l == 0) {
+                  RidgedNoise3D.field_l = ar.field_G;
                   LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
@@ -417,28 +417,28 @@ class UiWidget extends IntrusiveNode {
                   }
                 }
                 if (var7 == 0) {
-                  ml.field_l = ar.field_G;
+                  RidgedNoise3D.field_l = ar.field_G;
                   LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
                 if (0 == hk.field_c) {
-                  ml.field_l = ar.field_G;
+                  RidgedNoise3D.field_l = ar.field_G;
                   LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
                 this.clearFocus((byte) 115);
-                ml.field_l = ar.field_G;
+                RidgedNoise3D.field_l = ar.field_G;
                 LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                 return inputAvailable;
               }
               if (hk.field_c == 0) {
                 if (ar.field_G != 0) {
-                  ml.field_l = ar.field_G;
+                  RidgedNoise3D.field_l = ar.field_G;
                   LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
-                if (ml.field_l == 0) {
-                  ml.field_l = ar.field_G;
+                if (RidgedNoise3D.field_l == 0) {
+                  RidgedNoise3D.field_l = ar.field_G;
                   LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
@@ -446,85 +446,85 @@ class UiWidget extends IntrusiveNode {
                 var12 = MessageDialog.field_gb;
                 if (var12 == null) {
                   if (var7 == 0) {
-                    ml.field_l = ar.field_G;
+                    RidgedNoise3D.field_l = ar.field_G;
                     LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
                   }
                   if (var5 == 0) {
-                    ml.field_l = ar.field_G;
+                    RidgedNoise3D.field_l = ar.field_G;
                     LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
                   }
                   if (0 == hk.field_c) {
-                    ml.field_l = ar.field_G;
+                    RidgedNoise3D.field_l = ar.field_G;
                     LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
                   }
                   this.clearFocus((byte) 115);
-                  ml.field_l = ar.field_G;
+                  RidgedNoise3D.field_l = ar.field_G;
                   LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
                 if (!(var12.listener instanceof WidgetDropListener)) {
                   MessageDialog.field_gb = null;
                   if (var7 == 0) {
-                    ml.field_l = ar.field_G;
+                    RidgedNoise3D.field_l = ar.field_G;
                     LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
                   }
                   if (var5 == 0) {
-                    ml.field_l = ar.field_G;
+                    RidgedNoise3D.field_l = ar.field_G;
                     LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
                   }
                   if (0 == hk.field_c) {
-                    ml.field_l = ar.field_G;
+                    RidgedNoise3D.field_l = ar.field_G;
                     LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
                   }
                   this.clearFocus((byte) 115);
-                  ml.field_l = ar.field_G;
+                  RidgedNoise3D.field_l = ar.field_G;
                   LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
                 ((WidgetDropListener) (var12.listener)).onDrop(var12, (DropTargetWidget) null, 20302);
                 MessageDialog.field_gb = null;
                 if (var7 == 0) {
-                  ml.field_l = ar.field_G;
+                  RidgedNoise3D.field_l = ar.field_G;
                   LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
                 if (var5 == 0) {
-                  ml.field_l = ar.field_G;
+                  RidgedNoise3D.field_l = ar.field_G;
                   LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
                 if (0 == hk.field_c) {
-                  ml.field_l = ar.field_G;
+                  RidgedNoise3D.field_l = ar.field_G;
                   LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
                 this.clearFocus((byte) 115);
-                ml.field_l = ar.field_G;
+                RidgedNoise3D.field_l = ar.field_G;
                 LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                 return inputAvailable;
               }
               if (!this.onPointerPressed(this, guard ^ 80, jc.field_f, hk.field_c, parentX, nb.field_a, parentY)) {
                 if (var5 == 0) {
                   if (ar.field_G != 0) {
-                    ml.field_l = ar.field_G;
+                    RidgedNoise3D.field_l = ar.field_G;
                     LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
                   }
-                  if (ml.field_l == 0) {
-                    ml.field_l = ar.field_G;
+                  if (RidgedNoise3D.field_l == 0) {
+                    RidgedNoise3D.field_l = ar.field_G;
                     LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
                   }
                   this.onPointerReleased(this, false, parentX, pi.field_e, ko.field_p, parentY);
                   var13 = MessageDialog.field_gb;
                   if (var13 == null) {
-                    ml.field_l = ar.field_G;
+                    RidgedNoise3D.field_l = ar.field_G;
                     LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
                   }
@@ -535,13 +535,13 @@ class UiWidget extends IntrusiveNode {
                       0 != hk.field_c) {
                       this.clearFocus((byte) 115);
                     }
-                    ml.field_l = ar.field_G;
+                    RidgedNoise3D.field_l = ar.field_G;
                     LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
                   }
                   ((WidgetDropListener) (var13.listener)).onDrop(var13, (DropTargetWidget) null, 20302);
                   MessageDialog.field_gb = null;
-                  ml.field_l = ar.field_G;
+                  RidgedNoise3D.field_l = ar.field_G;
                   LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
@@ -555,7 +555,7 @@ class UiWidget extends IntrusiveNode {
               if (ar.field_G != 0) {
                 break regionExit1;
               }
-              if (ml.field_l == 0) {
+              if (RidgedNoise3D.field_l == 0) {
                 break regionExit1;
               }
               this.onPointerReleased(this, false, parentX, pi.field_e, ko.field_p, parentY);
@@ -566,13 +566,13 @@ class UiWidget extends IntrusiveNode {
                   if (var7 != 0 &&
                     var5 != 0) {
                     if (0 == hk.field_c) {
-                      ml.field_l = ar.field_G;
+                      RidgedNoise3D.field_l = ar.field_G;
                       LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                       return inputAvailable;
                     }
                     this.clearFocus((byte) 115);
                   }
-                  ml.field_l = ar.field_G;
+                  RidgedNoise3D.field_l = ar.field_G;
                   LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                   return inputAvailable;
                 }
@@ -581,13 +581,13 @@ class UiWidget extends IntrusiveNode {
                 if (var7 != 0 &&
                   var5 != 0) {
                   if (0 == hk.field_c) {
-                    ml.field_l = ar.field_G;
+                    RidgedNoise3D.field_l = ar.field_G;
                     LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                     return inputAvailable;
                   }
                   this.clearFocus((byte) 115);
                 }
-                ml.field_l = ar.field_G;
+                RidgedNoise3D.field_l = ar.field_G;
                 LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                 return inputAvailable;
               }
@@ -597,7 +597,7 @@ class UiWidget extends IntrusiveNode {
             }
             if (var5 != 0) {
               if (0 == hk.field_c) {
-                ml.field_l = ar.field_G;
+                RidgedNoise3D.field_l = ar.field_G;
                 LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
                 return inputAvailable;
               }
@@ -605,7 +605,7 @@ class UiWidget extends IntrusiveNode {
             }
           }
         }
-        ml.field_l = ar.field_G;
+        RidgedNoise3D.field_l = ar.field_G;
         LegacyOpenGlTexture3D.a(this.hoveredTooltip(-6696), -124);
         return inputAvailable;
     }
@@ -807,7 +807,7 @@ class UiWidget extends IntrusiveNode {
     }
 
     UiWidget(String param0, WidgetListener param1) {
-        this(param0, ks.field_x.field_e, param1);
+        this(param0, HardwareTurbulentWaterNoise.field_x.field_e, param1);
     }
 
     final static boolean a(int param0, int param1, int param2) {

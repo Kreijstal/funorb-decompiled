@@ -3,7 +3,7 @@
  */
 final class gr extends LegacyOpenGlEffect {
     static boolean field_e;
-    private ch field_j;
+    private LegacyWaterTextureResources field_j;
     static int[] field_h;
     private boolean field_k;
     static String updatesWillSentToText;
@@ -133,7 +133,7 @@ final class gr extends LegacyOpenGlEffect {
         }
     }
 
-    gr(LegacyOpenGlGraphicsToolkit param0, ch param1) {
+    gr(LegacyOpenGlGraphicsToolkit param0, LegacyWaterTextureResources param1) {
         super(param0);
         LegacyOpenGlShader var5 = null;
         LegacyOpenGlShader var4 = null;
@@ -141,7 +141,7 @@ final class gr extends LegacyOpenGlEffect {
         this.field_f = false;
         try {
           this.field_j = param1;
-          if (this.field_j.field_c != null &&
+          if (this.field_j.normalMap != null &&
             this.field_b.field_N) {
             if (!this.field_b.supportsFragmentShaders) {
               return;
@@ -173,7 +173,7 @@ final class gr extends LegacyOpenGlEffect {
               this.field_b.g(1, 92);
               this.field_b.bindTexture(46, var3);
               this.field_b.g(0, 110);
-              this.field_b.bindTexture(46, this.field_j.field_c);
+              this.field_b.bindTexture(46, this.field_j.normalMap);
               var5 = this.field_i.programHandle;
               jaggl.OpenGL.glUseProgramObjectARB(var5);
               jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var5, "normalSampler"), 0);
@@ -196,7 +196,7 @@ final class gr extends LegacyOpenGlEffect {
           this.field_b.g(1, 92);
           this.field_b.bindTexture(46, var3Lifetime1);
           this.field_b.g(0, 110);
-          this.field_b.bindTexture(46, this.field_j.field_c);
+          this.field_b.bindTexture(46, this.field_j.normalMap);
           var5Lifetime1 = this.field_i.programHandle;
           jaggl.OpenGL.glUseProgramObjectARB(var5Lifetime1);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var5Lifetime1, "normalSampler"), 0);

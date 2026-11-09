@@ -70,7 +70,7 @@ abstract class GameClientShell extends GameApplet {
         au.d(123);
         if (!FadingWidget.g(-66) &&
           11 != jv.field_a) {
-          ip.d(1886067877);
+          LegacyRidgedWaterNoise.updateDisplayDialogs(1886067877);
         }
         if (null != InwardSparkParticle.field_w) {
           OpenGlUnderwaterEffect.field_r = InwardSparkParticle.field_w.a(-88);
@@ -86,7 +86,7 @@ abstract class GameClientShell extends GameApplet {
             this.field_B = false;
             kk.a((byte) -112);
             ScrollViewport.a((byte) 16);
-            ArchiveCatalog.a((byte) 87, 2, ab.weClosedTheConnectionText);
+            ArchiveCatalog.a((byte) 87, 2, NoiseSliceGenerator.weClosedTheConnectionText);
             GraphicsToolkit.a(-36);
             ts.field_d = true;
             sj.field_a = 15000L + wq.a(-96);
@@ -100,7 +100,7 @@ abstract class GameClientShell extends GameApplet {
           if (var3Lifetime1 != 0 &&
             gr.field_l == 0 &&
             11 == jv.field_a &&
-            !en.a(-23517)) {
+            !FixedPointPerlinNoise3D.a(-23517)) {
             RasterBuffer.b(2);
           }
           if (gr.field_l != -1 &&
@@ -154,7 +154,7 @@ abstract class GameClientShell extends GameApplet {
         }
         if ((gr.field_l != -1 &&
           gr.field_l != 0 ||
-          en.a(-23517)) &&
+          FixedPointPerlinNoise3D.a(-23517)) &&
           wq.a(-87) >= sj.field_a) {
           ts.field_d = false;
           if (-1 != gr.field_l &&
@@ -164,8 +164,8 @@ abstract class GameClientShell extends GameApplet {
           }
         }
         if (gr.field_l == 0 &&
-          !en.a(-23517)) {
-          ch.field_h = false;
+          !FixedPointPerlinNoise3D.a(-23517)) {
+          LegacyWaterTextureResources.field_h = false;
         }
         if (TextureCoordinateGeneration.field_a == 0 &&
           LegacyOpenGlSpriteTexture.d((byte) 63)) {
@@ -244,12 +244,12 @@ abstract class GameClientShell extends GameApplet {
             decompiledFrameRemainder0 = false;
           }
           else {
-            ml.field_u = true;
+            RidgedNoise3D.field_u = true;
             TextureCoordinateGeneration.field_a = 12;
           }
         }
         if (TextureCoordinateGeneration.field_a == 12 &&
-          !ml.field_u) {
+          !RidgedNoise3D.field_u) {
           TextureCoordinateGeneration.field_a = 13;
         }
         if (TextureCoordinateGeneration.field_a == 13) {
@@ -279,7 +279,7 @@ abstract class GameClientShell extends GameApplet {
         if (this.field_d) {
           return -1;
         }
-        if (!en.a(-23517)) {
+        if (!FixedPointPerlinNoise3D.a(-23517)) {
           return -1;
         }
         if (ts.field_d) {
@@ -768,7 +768,7 @@ abstract class GameClientShell extends GameApplet {
         jq.a(dk.field_c, 13586);
         tm.a(param0, (byte) 84, lt.field_m, 5000, this.field_E, param1, this.field_C, this.field_r, 5000, this.field_D, this.field_q, this.field_x, dk.field_c, this.field_y);
         PacketBuffer.a(lt.field_m, this.field_r, this.field_E, this.field_D, (byte) -56, this.field_C, this.field_x, param1, dk.field_c);
-        rp.a(false);
+        SoftwareRenderContext.initializePunctuationKeyMap(false);
         InwardSparkParticle.field_w = dk.a((byte) -126);
         int var10 = -116 / ((2 - param2) / 36);
         db.a(false, qn.field_f);

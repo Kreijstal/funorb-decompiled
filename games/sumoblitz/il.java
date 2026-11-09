@@ -44,7 +44,7 @@ final class il {
             stackIn_12_0 = var5;
             return stackIn_12_0;
           }
-          stackIn_4_0 = en.field_j;
+          stackIn_4_0 = FixedPointPerlinNoise3D.field_j;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -29,7 +29,7 @@ final class nf {
           var16 = var16 + var10;
           var18 = var18 + var12;
           var14 = var14 + var8;
-          var22[var20] = ic.a(ic.a(eb.a(1144783103, (int)Math.round(var14)) << 16, eb.a((int)Math.round(var16), 1979711743) << 8), eb.a((int)Math.round(var18), 255));
+          var22[var20] = ic.a(ic.a(eb.bitwiseAnd(1144783103, (int)Math.round(var14)) << 16, eb.bitwiseAnd((int)Math.round(var16), 1979711743) << 8), eb.bitwiseAnd((int)Math.round(var18), 255));
         }
         return var4;
     }

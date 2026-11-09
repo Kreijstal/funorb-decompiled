@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gi extends LegacyOpenGlEffect {
-    private ch field_e;
+    private LegacyWaterTextureResources field_e;
     private LegacyOpenGlTexture1D field_l;
     static qr field_g;
-    private tq field_j;
+    private LegacyOpenGlDisplayLists field_j;
     static int[] field_k;
     static int field_h;
     static int field_i;
@@ -15,7 +15,7 @@ final class gi extends LegacyOpenGlEffect {
         if (param0 > -125) {
           return;
         }
-        this.field_j.a((byte) 121, '\001');
+        this.field_j.callList((byte) 121, '\001');
         if (this.field_b.field_kc <= 0) {
           this.field_b.a(20685, 8448, 8448);
           jaggl.OpenGL.glMatrixMode(5890);
@@ -81,15 +81,15 @@ final class gi extends LegacyOpenGlEffect {
         int var4 = 0;
         int var5 = Sumoblitz.field_L ? 1 : 0;
         if ((1 & param1) != 1) {
-          if (!this.field_e.field_g) {
-            this.field_b.bindTexture(108, this.field_e.field_i[0]);
+          if (!this.field_e.useVolumeTextures) {
+            this.field_b.bindTexture(108, this.field_e.ridgedSlices[0]);
             if (param0 <= 39) {
               this.d(2);
               return;
             }
             return;
           }
-          this.field_b.bindTexture(82, this.field_e.field_b);
+          this.field_b.bindTexture(82, this.field_e.ridgedVolume);
           GpuDataType.field_a[1] = 0.0f;
           GpuDataType.field_a[2] = 0.0f;
           GpuDataType.field_a[3] = 0.0f;
@@ -101,16 +101,16 @@ final class gi extends LegacyOpenGlEffect {
           }
           return;
         }
-        if (!this.field_e.field_g) {
+        if (!this.field_e.useVolumeTextures) {
           var4 = this.field_b.field_Ac % 4000 * 16 / 4000;
-          this.field_b.bindTexture(39, this.field_e.field_i[var4]);
+          this.field_b.bindTexture(39, this.field_e.ridgedSlices[var4]);
           if (param0 > 39) {
             return;
           }
           this.d(2);
           return;
         }
-        this.field_b.bindTexture(80, this.field_e.field_b);
+        this.field_b.bindTexture(80, this.field_e.ridgedVolume);
         GpuDataType.field_a[3] = (float)(this.field_b.field_Ac % 4000) / 4000.0f;
         GpuDataType.field_a[2] = 0.0f;
         GpuDataType.field_a[0] = 0.0f;
@@ -139,7 +139,7 @@ final class gi extends LegacyOpenGlEffect {
           this.field_b.bindTexture(11, this.field_l);
           this.field_b.g(0, 115);
         }
-        this.field_j.a((byte) 121, '\0');
+        this.field_j.callList((byte) 121, '\0');
         jaggl.OpenGL.glMatrixMode(5890);
         jaggl.OpenGL.glPushMatrix();
         if (param0 < 33) {
@@ -153,7 +153,7 @@ final class gi extends LegacyOpenGlEffect {
         jaggl.OpenGL.glMatrixMode(5888);
     }
 
-    gi(LegacyOpenGlGraphicsToolkit param0, ch param1) {
+    gi(LegacyOpenGlGraphicsToolkit param0, LegacyWaterTextureResources param1) {
         super(param0);
         try {
           this.field_e = param1;
@@ -166,8 +166,8 @@ final class gi extends LegacyOpenGlEffect {
     }
 
     private final void d(int param0) {
-        this.field_j = new tq(this.field_b, 2);
-        this.field_j.a(0, 4864);
+        this.field_j = new LegacyOpenGlDisplayLists(this.field_b, 2);
+        this.field_j.beginList(0, 4864);
         this.field_b.g(1, 100);
         this.field_b.a(20685, 260, 7681);
         this.field_b.b(34168, 768, 0, 104);
@@ -175,15 +175,15 @@ final class gi extends LegacyOpenGlEffect {
         jaggl.OpenGL.glEnable(3168);
         this.field_b.g(0, 123);
         jaggl.OpenGL.glTexEnvf(8960, 34163, 2.0f);
-        if (this.field_e.field_g) {
+        if (this.field_e.useVolumeTextures) {
           jaggl.OpenGL.glTexGeni(8194, 9472, 9217);
           jaggl.OpenGL.glTexGeni(8195, 9472, 9217);
           jaggl.OpenGL.glTexGenfv(8195, 9473, new float[]{0.0f, 0.0f, 0.0f, 1.0f}, 0);
           jaggl.OpenGL.glEnable(3170);
           jaggl.OpenGL.glEnable(3171);
         }
-        this.field_j.a(true);
-        this.field_j.a(1, 4864);
+        this.field_j.endList(true);
+        this.field_j.beginList(1, 4864);
         if (param0 >= -38) {
           field_k = (int[]) null;
           this.field_b.g(1, 110);
@@ -192,14 +192,14 @@ final class gi extends LegacyOpenGlEffect {
           jaggl.OpenGL.glDisable(3168);
           this.field_b.g(0, 95);
           jaggl.OpenGL.glTexEnvf(8960, 34163, 1.0f);
-          if (this.field_e.field_g) {
+          if (this.field_e.useVolumeTextures) {
             jaggl.OpenGL.glDisable(3170);
             jaggl.OpenGL.glDisable(3171);
           } else {
-            this.field_j.a(true);
+            this.field_j.endList(true);
             return;
           }
-          this.field_j.a(true);
+          this.field_j.endList(true);
           return;
         }
         this.field_b.g(1, 110);
@@ -208,14 +208,14 @@ final class gi extends LegacyOpenGlEffect {
         jaggl.OpenGL.glDisable(3168);
         this.field_b.g(0, 95);
         jaggl.OpenGL.glTexEnvf(8960, 34163, 1.0f);
-        if (this.field_e.field_g) {
+        if (this.field_e.useVolumeTextures) {
           jaggl.OpenGL.glDisable(3170);
           jaggl.OpenGL.glDisable(3171);
         } else {
-          this.field_j.a(true);
+          this.field_j.endList(true);
           return;
         }
-        this.field_j.a(true);
+        this.field_j.endList(true);
     }
 
     final void a(byte param0, int param1, LegacyOpenGlTexture param2) {

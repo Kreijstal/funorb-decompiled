@@ -256,7 +256,7 @@ final class js extends WidgetContainer implements ca, WidgetActionListener, oe {
             var3 = var1.readCp1252String(-1);
             jm.field_d = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(-31302);
-            en.a((byte) 38, var4);
+            FixedPointPerlinNoise3D.a((byte) 38, var4);
             return;
           }
           if (null == wr.field_G) {
@@ -620,7 +620,7 @@ final class js extends WidgetContainer implements ca, WidgetActionListener, oe {
           this.field_K = new qq("", (WidgetListener) null, 3);
           var1_int = 1;
           this.field_H = new wr("", (WidgetListener) null, var1_int != 0);
-          this.field_M = new InteractiveWidget(ff.createText, (WidgetListener) null);
+          this.field_M = new InteractiveWidget(TurbulenceNoise3D.createText, (WidgetListener) null);
           this.field_D = new InteractiveWidget(jc.goBackText, (WidgetListener) null);
           this.field_A.tooltip = ShaderEffect.enterTheNameYouText;
           this.field_I.tooltip = pi.yourEmailAddressIsText;
@@ -649,7 +649,7 @@ final class js extends WidgetContainer implements ca, WidgetActionListener, oe {
           this.field_N.renderer = (WidgetRenderer) ((Object) dupTemp$1);
           var2 = ic.a(cn.byClickingCreateYouText, new String[]{this.e((byte) 66), this.k(128)}, (byte) -128);
           var3 = 20;
-          var3 = var3 + this.a(ks.emailLoginText, 170, var3, 78, this.field_I);
+          var3 = var3 + this.a(HardwareTurbulentWaterNoise.emailLoginText, 170, var3, 78, this.field_I);
           var3 = var3 + (5 + this.a(var3, 170, (byte) 125, 20, "", this.field_E, pq.confirmEmailText));
           var3 = var3 + this.a(pi.passwordText, 170, var3, 55, this.field_N);
           var3 = var3 + (5 + this.a(LegacyOpenGlTexture.confirmPasswordText, 170, 15632, var3, qw.passwordsMustBeBetweenText, this.field_L));

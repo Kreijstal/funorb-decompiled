@@ -101,7 +101,7 @@ final class gg extends DualLinkNode {
                 var1_int++;
               }
             } else {
-              Bzip2State.field_J = ((om) (ab.field_a.a(107, (long)OpenGlShaderProgram.levelIndex))).a(-120);
+              Bzip2State.field_J = ((om) (NoiseSliceGenerator.field_a.a(107, (long)OpenGlShaderProgram.levelIndex))).a(-120);
             }
           }
           FadingWidget.score = 0;

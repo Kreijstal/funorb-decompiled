@@ -10,11 +10,11 @@ final class ProxySocketConnector extends SocketConnector {
     private java.net.ProxySelector field_g;
     static SpriteData[] field_f;
 
-    final static float a(int param0, float param1, float param2, float param3) {
-        if (param0 != 1050) {
+    final static float lerp(int guard, float from, float to, float fraction) {
+        if (guard != 1050) {
           ProxySocketConnector.b(-23);
         }
-        return (param2 - param1) * param3 + param1;
+        return (to - from) * fraction + from;
     }
 
     private final java.net.Socket a(String param0, int param1, String param2, byte param3) throws IOException {

@@ -314,7 +314,7 @@ final class HardwareTextureCache {
         return var2 + value;
     }
 
-    final static byte[] a(float param0, float param1, int param2, int param3, ab param4, float param5, float param6, float param7, int param8, int param9, int param10) {
+    final static byte[] generateNoiseVolume(float amplitude, float persistence, int width, int guard, NoiseSliceGenerator generator, float frequencyX, float frequencyY, float frequencyZ, int depth, int octaves, int height) {
         byte[] var11 = null;
         RuntimeException var11_ref = null;
         byte[] var12 = null;
@@ -324,25 +324,25 @@ final class HardwareTextureCache {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param3 != -30865) {
+          if (guard != -30865) {
             field_b = (CompactMeshGeometry[]) null;
           }
-          var12 = new byte[param10 * (param2 * param8)];
+          var12 = new byte[height * (width * depth)];
           var11 = var12;
-          cn.a(param7, param4, 0, var12, param9, param0, param6, param1, 24046, param5, param10, param8, param2);
+          cn.fillNoiseVolume(frequencyZ, generator, 0, var12, octaves, amplitude, frequencyY, persistence, 24046, frequencyX, height, depth, width);
           stackIn_3_0 = var12;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var11_ref = decompiledCaughtException;
           stackIn_6_0 = var11_ref;
-          stackIn_6_1 = new StringBuilder().append("mr.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_6_1 = new StringBuilder().append("mr.B(").append(amplitude).append(',').append(persistence).append(',').append(width).append(',').append(guard).append(',');
+          if (generator == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(frequencyX).append(',').append(frequencyY).append(',').append(frequencyZ).append(',').append(depth).append(',').append(octaves).append(',').append(height).append(')').toString());
         }
     }
 
