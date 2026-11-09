@@ -77,8 +77,8 @@ final class cq extends WidgetContainer implements ButtonListener {
     }
 
     final static void a(int param0) {
-        if (null != le.field_e) {
-          le.field_e.removeClosedDialogs((byte) 121);
+        if (null != ByteArrayStorage.field_e) {
+          ByteArrayStorage.field_e.removeClosedDialogs((byte) 121);
         }
         if (param0 == -50) {
           if (MouseInputHandler.field_h != null) {
@@ -124,7 +124,7 @@ final class cq extends WidgetContainer implements ButtonListener {
         }
     }
 
-    public final void a(FocusableWidget param0, int param1, int param2, int param3, int param4) {
+    public final void onButtonClicked(FocusableWidget param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -163,7 +163,7 @@ final class cq extends WidgetContainer implements ButtonListener {
         }
     }
 
-    final static void a(nq param0, boolean param1) {
+    final static void a(BitmapFont param0, boolean param1) {
         try {
           ss.field_b = param0;
           if (!param1) {

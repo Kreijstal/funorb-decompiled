@@ -33,7 +33,7 @@ final class IterableNodeHashTable implements Iterable {
     }
 
     final static void b(int param0) {
-        ai.a(true, -1, ae.field_g, aa.field_G);
+        ai.a(true, -1, ae.field_g, AccountCreationForm.field_G);
         if (param0 > -28) {
           byte[] var2 = (byte[]) null;
           IterableNodeHashTable.a((byte[]) null, -113);

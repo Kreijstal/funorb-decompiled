@@ -274,14 +274,14 @@ final class TutorialAi extends LegacyAi {
             var21Lifetime3 = var15;
             var30Lifetime3 = var21Lifetime3;
             var21Lifetime4 = var15;
-            var16 = ts.field_H;
+            var16 = TextHotspotWidget.field_H;
             var14.field_j.a(false, var15, var16, 12);
             var17 = DerelictVictoryChecker.field_m;
             var18 = BoundsRect.field_m[2];
             var21Lifetime5 = var18;
             var30Lifetime4 = var21Lifetime5;
             var21Lifetime6 = var18;
-            var19 = ah.field_O;
+            var19 = ValidationMessageWidget.field_O;
             var17.field_j.a(false, var18, var19, 13);
           }
           if (param0 == 1) {

@@ -3,7 +3,7 @@
  */
 final class PlayerEliminatedEvent extends IntrusiveNode {
     static String field_i;
-    static a field_h;
+    static HitRegion field_h;
     static int field_j;
 
     public static void clearStatics(int param0) {
@@ -23,9 +23,9 @@ final class PlayerEliminatedEvent extends IntrusiveNode {
         try {
           AgeValidator.field_n.field_z = param3;
           if (ProductionContent.field_h == 2) {
-            cb.field_l.field_z = kh.field_Kb;
+            DirectByteArrayStorage.field_l.field_z = kh.field_Kb;
           } else {
-            cb.field_l.field_z = StellarBombEvent.field_m;
+            DirectByteArrayStorage.field_l.field_z = StellarBombEvent.field_m;
           }
           var9_int = 495;
           var10 = 5;
@@ -34,14 +34,14 @@ final class PlayerEliminatedEvent extends IntrusiveNode {
           cg.field_C.setTarget(cg.field_C.field_K, param2, (byte) 112, 0, uq.field_j.field_K);
           var10 = var10 + (param2 + param4);
           hd.field_m.setTarget(hd.field_m.measureWidthUnbounded(false), param1, (byte) 77, var10, 5);
-          var11 = cb.field_l.measureWidthUnbounded(false);
-          cb.field_l.setTarget(var11, param1, (byte) 39, var10, -var11 + (-5 + var9_int));
+          var11 = DirectByteArrayStorage.field_l.measureWidthUnbounded(false);
+          DirectByteArrayStorage.field_l.setTarget(var11, param1, (byte) 39, var10, -var11 + (-5 + var9_int));
           var12 = 5 + (var10 + param1);
           AgeValidator.field_n.setTarget(var9_int, param7, (byte) 70, 0, 0);
           MenuButton.field_w.setTarget(var9_int, var12, (byte) 48, param7, 0);
           MenuButton.field_w.field_F = Wormhole.a(16, 3, MenuButton.field_w.field_mb, 11579568, 8421504, 2105376);
           var12 = var12 + param7;
-          fa.field_X.setTarget(var9_int, var12, (byte) 106, -(var12 / 2) + param8, -(var9_int / 2) + param0);
+          ValidatedTextInputWidget.field_X.setTarget(var9_int, var12, (byte) 106, -(var12 / 2) + param8, -(var9_int / 2) + param0);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ca.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
@@ -77,8 +77,8 @@ final class PlayerEliminatedEvent extends IntrusiveNode {
               var9[var7] = ae.a(69, "", param5, RichTextLayout.field_r[var7]);
             }
           }
-          wl.field_b = ah.field_Q;
-          AnimatedPanel.a(hn.field_j, pg.field_C, MidiPcmStream.field_w, ScrollPane.field_Db, CellVertex.field_d, 5, Dialog.field_J, param1, param3, 6, param2, var10, -117, param4, var10);
+          wl.field_b = ValidationMessageWidget.field_Q;
+          AnimatedPanel.a(IntList.field_j, pg.field_C, MidiPcmStream.field_w, ScrollPane.field_Db, CellVertex.field_d, 5, Dialog.field_J, param1, param3, 6, param2, var10, -117, param4, var10);
           gn.field_y = id.a(2, param5, "", "lobbyicon");
           PanelNode.field_o = false;
           pe.field_D = ChatMessage.field_c;

@@ -79,7 +79,7 @@ final class nd {
                           id.a((String[]) (var6), 0, var8);
                         } else {
                           if (var5.equalsIgnoreCase("action")) {
-                            eq.a((String[]) (var6), var8, 0);
+                            ReflectionCheck.a((String[]) (var6), var8, 0);
                           } else {
                             if (!var5.equalsIgnoreCase("flag")) {
                               if (!var5.equalsIgnoreCase("endthread")) {

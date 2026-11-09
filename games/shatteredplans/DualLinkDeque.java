@@ -129,12 +129,12 @@ final class DualLinkDeque {
         this.field_c = var2.field_h;
         if (param0 >= -126) {
           String[] var3 = (String[]) null;
-          DualLinkDeque.a(95, (nq) null, (String) null, (String[]) null, 64);
+          DualLinkDeque.a(95, (BitmapFont) null, (String) null, (String[]) null, 64);
         }
         return var2;
     }
 
-    final static int a(int param0, nq param1, String param2, String[] param3, int param4) {
+    final static int a(int param0, BitmapFont param1, String param2, String[] param3, int param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;

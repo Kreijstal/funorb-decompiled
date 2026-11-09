@@ -127,7 +127,7 @@ final class lg extends IOException {
               var7Lifetime2 = var9;
               var7Lifetime3 = var9;
               if (0L <= param0) {
-                var7Lifetime4 = var9 + "; Expires=" + vm.a(pr.currentTimeMillis(14274) + 1000L * param0, 10) + "; Max-Age=" + param0;
+                var7Lifetime4 = var9 + "; Expires=" + QuickChatMenu.a(pr.currentTimeMillis(14274) + 1000L * param0, 10) + "; Max-Age=" + param0;
               } else {
                 var7Lifetime4 = var9 + "; Discard;";
               }
@@ -170,7 +170,7 @@ final class lg extends IOException {
     }
 
     final static Sprite a(int param0, String param1) {
-        th var2 = null;
+        CoverageBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -182,11 +182,11 @@ final class lg extends IOException {
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = mp.field_b;
-          var3 = ((nq) ((Object) var2)).stringWidth(param1);
-          var4 = ((nq) ((Object) var2)).field_J + ((nq) ((Object) var2)).field_q;
+          var3 = ((BitmapFont) ((Object) var2)).stringWidth(param1);
+          var4 = ((BitmapFont) ((Object) var2)).field_J + ((BitmapFont) ((Object) var2)).field_q;
           var5 = new Sprite(var3, var4);
           bs.a(var5, 112);
-          ((nq) ((Object) var2)).drawString(param1, 0, ((nq) ((Object) var2)).field_J, 16777215, -1);
+          ((BitmapFont) ((Object) var2)).drawString(param1, 0, ((BitmapFont) ((Object) var2)).field_J, 16777215, -1);
           cg.i(param0);
           stackIn_1_0 = var5;
           return stackIn_1_0;

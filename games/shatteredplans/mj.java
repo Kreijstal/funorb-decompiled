@@ -23,7 +23,7 @@ final class mj extends AnimatedPanel {
     static long field_Pb;
     static Sprite field_Kb;
     AnimatedPanel field_Ab;
-    static bg field_Rb;
+    static LoginMethodPreference field_Rb;
     static byte[][] field_Bb;
     long field_Ib;
     static Territory field_yb;
@@ -70,7 +70,7 @@ final class mj extends AnimatedPanel {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            field_Rb = (bg) null;
+            field_Rb = (LoginMethodPreference) null;
           }
           stackIn_4_0 = this.field_Vb;
           if (param0.field_Vb) {
@@ -207,6 +207,6 @@ final class mj extends AnimatedPanel {
     static {
         field_Hb = new sm[14];
         field_Bb = new byte[250][];
-        field_Rb = new bg("");
+        field_Rb = new LoginMethodPreference("");
     }
 }

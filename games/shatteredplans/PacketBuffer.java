@@ -673,7 +673,7 @@ class PacketBuffer extends IntrusiveNode {
           oq.field_a = param1;
           ei.field_e = -1;
           WeightedLruCache.field_g = null;
-          e.field_f = -1;
+          AccountFieldValue.field_f = -1;
           ByteArrayNode.field_k = -1;
           AttackTask.field_o = -1;
           md.a((byte) 73, 16777215, 8);

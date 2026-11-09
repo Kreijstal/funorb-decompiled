@@ -36,7 +36,7 @@ final class AgeValidator extends TextFieldValidator {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, nq param11, int param12, int param13, v param14, v param15, int param16, nq param17, int param18, v param19, int param20) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, BitmapFont param11, int param12, int param13, v param14, v param15, int param16, BitmapFont param17, int param18, v param19, int param20) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

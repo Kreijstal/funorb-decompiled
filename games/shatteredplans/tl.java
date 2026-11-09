@@ -70,7 +70,7 @@ abstract class tl extends GameApplet {
               ae.field_e = null;
               nl.field_c = null;
             }
-            var11 = fr.j(0);
+            var11 = DraggableWidget.j(0);
             if (var11 != null) {
               bs.a(var11.booleanValue(), (byte) 72);
             }
@@ -142,16 +142,16 @@ abstract class tl extends GameApplet {
           if (var4 == 13) {
             try {
               if (va.field_g == null) {
-                va.field_g = new UrlLoader(fa.field_W, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+                va.field_g = new UrlLoader(ValidatedTextInputWidget.field_W, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
               if (va.field_g.b(10000)) {
                 var12 = va.field_g.a(true);
                 if (var12 == null) {
                   var9 = (String) null;
-                  aa.a((String) null, true);
+                  AccountCreationForm.a((String) null, true);
                 } else {
                   var7 = StellarBombEvent.a(var12.payload, var12.position, 0, param1 ^ -128);
-                  aa.a(var7, true);
+                  AccountCreationForm.a(var7, true);
                 }
                 va.field_g = null;
               }
@@ -160,7 +160,7 @@ abstract class tl extends GameApplet {
               var5 = (Exception) (Object) decompiledCaughtException;
               GameKeyHandler.a(-29901, (Throwable) ((Object) var5), "S1");
               var10 = (String) null;
-              aa.a((String) null, true);
+              AccountCreationForm.a((String) null, true);
               va.field_g = null;
             }
           }
@@ -191,8 +191,8 @@ abstract class tl extends GameApplet {
         this.setBackground(java.awt.Color.black);
         ai.field_e = this.field_v;
         ObjectList.a(0, ai.field_e);
-        GameKeyHandler.a(0, fa.field_W, 5000, this.field_q, 5000, this.field_x, param4, param3, this.field_w, ai.field_e, this.field_r, this.field_A, this.field_s, this.field_t);
-        IntrusiveNodeHashTable.a(param3, this.field_q, this.field_r, this.field_A, ai.field_e, 1491341222, fa.field_W, this.field_s, this.field_x);
+        GameKeyHandler.a(0, ValidatedTextInputWidget.field_W, 5000, this.field_q, 5000, this.field_x, param4, param3, this.field_w, ai.field_e, this.field_r, this.field_A, this.field_s, this.field_t);
+        IntrusiveNodeHashTable.a(param3, this.field_q, this.field_r, this.field_A, ai.field_e, 1491341222, ValidatedTextInputWidget.field_W, this.field_s, this.field_x);
         lm.a((byte) 100);
         aj.field_b = cg.e(true);
         QuickChatCategoryRegistry.a(tm.field_i, false);
@@ -243,7 +243,7 @@ abstract class tl extends GameApplet {
                         this.b(false);
                       } else {
                         if (var2 == 8) {
-                          vq.a(sa.field_a, fa.field_W, rr.field_t, -3);
+                          vq.a(sa.field_a, ValidatedTextInputWidget.field_W, rr.field_t, -3);
                         } else {
                           if (var2 != 16) {
                             if (var2 != 11 &&
@@ -378,7 +378,7 @@ abstract class tl extends GameApplet {
         int var3Lifetime2;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         if (BoundsRect.field_p != null) {
-          if (null == bj.field_K) {
+          if (null == NameSuggestionsPanel.field_K) {
             var6 = StarAbandonedEvent.getAppletContainer(76);
             var4 = var6.getSize();
             BoundsRect.field_p.a(var4.width, var4.height, -28);
@@ -394,7 +394,7 @@ abstract class tl extends GameApplet {
         if (aj.field_b != null) {
           so.field_o = aj.field_b.takeRotation(86);
         }
-        if (cb.b((byte) -117)) {
+        if (DirectByteArrayStorage.b((byte) -117)) {
           var3 = ArchiveSourceManager.getTargetFrameRate(0) * 1200;
           if (this.field_y ||
             !(var3 >= ik.a(-26918)) &&
@@ -402,7 +402,7 @@ abstract class tl extends GameApplet {
             this.field_y = false;
             q.g(-113);
             IntrusiveNode.b(-11);
-            bf.a((byte) -124, 2, he.field_n);
+            bf.a((byte) -124, 2, IntNode.field_n);
             ClientException.b(false);
             md.field_B = true;
             SecondaryNodeDequeIterator.field_b = 15000L + pr.currentTimeMillis(14274);
@@ -506,7 +506,7 @@ abstract class tl extends GameApplet {
             StarAnnotation.field_j.isIndexLoaded((byte) 122)) {
             if (StarAnnotation.field_j.hasGroupByName("", (byte) -116)) {
               if (StarAnnotation.field_j.ensureGroupLoadedByName("", 51)) {
-                TutorialMapGenerator.a(StarAnnotation.field_j, true);
+                TutorialMapGenerator.loadClientText(StarAnnotation.field_j, true);
                 StarAnnotation.field_j = null;
                 ValidationState.c(126);
               }
@@ -630,7 +630,7 @@ abstract class tl extends GameApplet {
         if (QuaternaryNodeList.b(94)) {
           stackIn_12_1 = false;
           stackIn_12_2 = 1;
-          if (null == bj.field_K) {
+          if (null == NameSuggestionsPanel.field_K) {
             stackIn_13_0 = this;
             stackIn_13_3 = false;
           } else {
@@ -686,7 +686,7 @@ abstract class tl extends GameApplet {
           }
           return var2;
         }
-        if (!vm.field_Nb) {
+        if (!QuickChatMenu.field_Nb) {
           this.fail((byte) 58, "reconnect");
         }
         IntrusiveNode.b(-11);

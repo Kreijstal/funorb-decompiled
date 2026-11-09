@@ -35,12 +35,12 @@ class IntrusiveNode {
         oi.field_f = true;
     }
 
-    final static bg[] c(byte param0) {
+    final static LoginMethodPreference[] c(byte param0) {
         if (param0 == -90) {
-          return new bg[]{og.field_b, ObjectList.field_f, mj.field_Rb};
+          return new LoginMethodPreference[]{og.field_b, ObjectList.field_f, mj.field_Rb};
         }
         IntrusiveNode.a(false);
-        return new bg[]{og.field_b, ObjectList.field_f, mj.field_Rb};
+        return new LoginMethodPreference[]{og.field_b, ObjectList.field_f, mj.field_Rb};
     }
 
     final void unlink(byte param0) {

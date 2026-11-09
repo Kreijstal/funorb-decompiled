@@ -100,24 +100,24 @@ final class ld extends IntrusiveNode {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         if (param0 == 0) {
-          if (di.field_m == 0) {
-            sg.a(true, false, 0, aa.field_P, NetworkArchiveRequest.field_C);
+          if (FleetTrailPoint.field_m == 0) {
+            sg.a(true, false, 0, AccountCreationForm.field_P, NetworkArchiveRequest.field_C);
             sg.a(true, false, 700, qf.field_c, NetworkArchiveRequest.field_C);
           }
-          fieldTemp$1 = di.field_m + 1;
-          di.field_m = di.field_m + 1;
+          fieldTemp$1 = FleetTrailPoint.field_m + 1;
+          FleetTrailPoint.field_m = FleetTrailPoint.field_m + 1;
           if (fieldTemp$1 == 950) {
             ArchiveRequest.a(5, (byte) -67);
           }
           return;
         }
         field_m = (Archive) null;
-        if (di.field_m == 0) {
-          sg.a(true, false, 0, aa.field_P, NetworkArchiveRequest.field_C);
+        if (FleetTrailPoint.field_m == 0) {
+          sg.a(true, false, 0, AccountCreationForm.field_P, NetworkArchiveRequest.field_C);
           sg.a(true, false, 700, qf.field_c, NetworkArchiveRequest.field_C);
         }
-        fieldTemp$0 = di.field_m + 1;
-        di.field_m = di.field_m + 1;
+        fieldTemp$0 = FleetTrailPoint.field_m + 1;
+        FleetTrailPoint.field_m = FleetTrailPoint.field_m + 1;
         if (fieldTemp$0 == 950) {
           ArchiveRequest.a(5, (byte) -67);
         }

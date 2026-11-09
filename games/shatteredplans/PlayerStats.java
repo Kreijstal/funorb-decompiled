@@ -12,7 +12,7 @@ final class PlayerStats {
     int field_a;
     int field_e;
     static String field_b;
-    static nq field_c;
+    static BitmapFont field_c;
     static String field_p;
     int field_v;
     int field_A;
@@ -88,7 +88,7 @@ final class PlayerStats {
         nd[] var13 = null;
         var12 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var1_int = di.field_m * 100 / 1000 - 80;
+          var1_int = FleetTrailPoint.field_m * 100 / 1000 - 80;
           var2 = 465;
           var3 = 324 + (var1_int + 675);
           var13 = MenuButton.field_C;
@@ -115,7 +115,7 @@ final class PlayerStats {
             }
             if (var7.field_a == 0 &&
               vc.a((byte) -39, 250) == 0 &&
-              75 < di.field_m) {
+              75 < FleetTrailPoint.field_m) {
               var7.field_h = 10;
             }
           }
@@ -136,12 +136,12 @@ final class PlayerStats {
             var4_ref.field_l = var4_ref.field_l + var4_ref.field_k;
             var4_ref = (Particle) (DialWidget.field_K.nextForward((byte) -71));
           }
-          if (di.field_m == 0) {
+          if (FleetTrailPoint.field_m == 0) {
             sg.a(true, false, 100, RandomAccessCacheFile.field_c, NetworkArchiveRequest.field_C);
             sg.a(true, true, 800, n.field_l, NetworkArchiveRequest.field_C);
           }
-          fieldTemp$0 = di.field_m + 1;
-          di.field_m = di.field_m + 1;
+          fieldTemp$0 = FleetTrailPoint.field_m + 1;
+          FleetTrailPoint.field_m = FleetTrailPoint.field_m + 1;
           if (fieldTemp$0 != 950) {
             return;
           }

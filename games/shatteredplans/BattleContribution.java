@@ -124,11 +124,11 @@ final class BattleContribution extends IntrusiveNode {
         oe.field_c = null;
         MessageKind.field_b = null;
         mm.field_o = null;
-        he.field_h = null;
-        vm.field_Jb = null;
+        IntNode.field_h = null;
+        QuickChatMenu.field_Jb = null;
     }
 
-    final static void a(Archive param0, byte param1, nq param2) {
+    final static void a(Archive param0, byte param1, BitmapFont param2) {
         int var8 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -163,7 +163,7 @@ final class BattleContribution extends IntrusiveNode {
             return;
           }
           BufferedSocket.a(param1 - 5, var4);
-          kh.field_Nb = StandardMapReader.a(65793, 5138823, 65793, 65793, 4020342, (byte) 99, 1127256, 1513239, (nq) null, 0, 2245737, 1513239, 8947848);
+          kh.field_Nb = StandardMapReader.a(65793, 5138823, 65793, 65793, 4020342, (byte) 99, 1127256, 1513239, (BitmapFont) null, 0, 2245737, 1513239, 8947848);
           nl.field_d = StandardMapReader.a(0, 0, 0, 0, 0, (byte) 99, 0, 0, param2, 16764006, 0, 0, 0);
           ValidationIndicator.field_I = StandardMapReader.a(0, 0, 0, 0, 0, (byte) 99, 0, 0, param2, 16777215, 0, 0, 0);
           if (param1 != -64) {

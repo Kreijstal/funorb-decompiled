@@ -14,7 +14,7 @@ final class sg extends AnimatedPanel {
         int var4;
         int var5;
         int var6;
-        nq var7;
+        BitmapFont var7;
         int var5Lifetime1;
         int var6Lifetime1;
         var4 = -param1;
@@ -53,8 +53,8 @@ final class sg extends AnimatedPanel {
           this.field_Bb.field_G = this.field_G;
           return;
         }
-        var7 = (nq) null;
-        sg.a(true, false, -42, (String) null, (nq) null);
+        var7 = (BitmapFont) null;
+        sg.a(true, false, -42, (String) null, (BitmapFont) null);
         if (this.field_Db != null) {
           var4 = this.field_Db.measureWidthUnbounded(false);
         }
@@ -168,12 +168,12 @@ final class sg extends AnimatedPanel {
         field_yb = null;
         field_xb = null;
         if (param0 != 34) {
-          nq var2 = (nq) null;
-          sg.a(false, false, -26, (String) null, (nq) null);
+          BitmapFont var2 = (BitmapFont) null;
+          sg.a(false, false, -26, (String) null, (BitmapFont) null);
         }
     }
 
-    final static void a(boolean param0, boolean param1, int param2, String param3, nq param4) {
+    final static void a(boolean param0, boolean param1, int param2, String param3, BitmapFont param4) {
         int var7 = 0;
         int var6 = 0;
         int var8 = 0;
@@ -188,8 +188,8 @@ final class sg extends AnimatedPanel {
         RuntimeException var5 = null;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (null == cb.field_h) {
-            cb.field_h = new IntrusiveDeque();
+          if (null == DirectByteArrayStorage.field_h) {
+            DirectByteArrayStorage.field_h = new IntrusiveDeque();
           }
           var9 = new String[32];
           var10 = var9;
@@ -201,7 +201,7 @@ final class sg extends AnimatedPanel {
             return;
           }
           for (var7 = 0; var6 > var7; var7++) {
-            cb.field_h.addLast((byte) -113, new hd(var9[var7], param4, var7 * 50 + param2));
+            DirectByteArrayStorage.field_h.addLast((byte) -113, new hd(var9[var7], param4, var7 * 50 + param2));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

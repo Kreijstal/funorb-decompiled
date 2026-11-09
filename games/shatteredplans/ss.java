@@ -6,7 +6,7 @@ final class ss {
     static int[] field_a;
     static String field_d;
     static String field_e;
-    static nq field_b;
+    static BitmapFont field_b;
     private static String field_z;
 
     public static void clearStatics(int param0) {

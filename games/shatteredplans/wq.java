@@ -8,9 +8,9 @@ final class wq {
     String field_d;
 
     final static Object a(boolean param0, byte param1, byte[] param2) {
-        cb var3 = null;
+        DirectByteArrayStorage var3 = null;
         RuntimeException var3_ref = null;
-        cb stackIn_6_0 = null;
+        DirectByteArrayStorage stackIn_6_0 = null;
         Object stackIn_9_0 = null;
         byte[] stackIn_12_0 = null;
         byte[] stackIn_14_0 = null;
@@ -23,8 +23,8 @@ final class wq {
             return null;
           }
           if (param2.length > 136) {
-            var3 = new cb();
-            ((le) ((Object) var3)).setBytes(param2, (byte) 95);
+            var3 = new DirectByteArrayStorage();
+            ((ByteArrayStorage) ((Object) var3)).setBytes(param2, (byte) 95);
             stackIn_6_0 = var3;
             return stackIn_6_0;
           }

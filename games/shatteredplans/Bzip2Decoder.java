@@ -15,7 +15,7 @@ final class Bzip2Decoder {
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int[] param2, byte[] param3, int param4, int param5, int param6) {
+    private final static void buildHuffmanTables(int[] param0, int[] param1, int[] param2, byte[] param3, int param4, int param5, int param6) {
         int var9 = 0;
         int dupTemp$0 = 0;
         int var7;
@@ -276,7 +276,7 @@ final class Bzip2Decoder {
                 var2 = param0.field_C[var6][var4];
               }
             }
-            Bzip2Decoder.a(param0.field_o[var6], param0.field_y[var6], param0.field_H[var6], param0.field_C[var6], var2, var3, var7);
+            Bzip2Decoder.buildHuffmanTables(param0.field_o[var6], param0.field_y[var6], param0.field_H[var6], param0.field_C[var6], var2, var3, var7);
             param0.field_i[var6] = var2;
           }
           var10 = param0.field_z + 1;

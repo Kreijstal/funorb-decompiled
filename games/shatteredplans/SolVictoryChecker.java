@@ -384,7 +384,7 @@ final class SolVictoryChecker extends VictoryChecker {
           var9 = ShatteredPlansClient.field_F ? 1 : 0;
           try {
             if (wg.field_f == null &&
-              !ts.a(param2, -2)) {
+              !TextHotspotWidget.a(param2, -2)) {
               stackIn_5_0 = -1;
               return stackIn_5_0;
             }
@@ -424,7 +424,7 @@ final class SolVictoryChecker extends VictoryChecker {
             if (IntrusiveNodeHashTable.field_d == Wormhole.field_j &&
               StarAnnotation.a(119, 1)) {
               var6_intLifetime1 = sa.field_a.readUnsignedByte(-63);
-              fr.field_H = null;
+              DraggableWidget.field_H = null;
               sa.field_a.position = 0;
               BufferedCacheFile.field_e = var6_intLifetime1;
               if (var6_intLifetime1 != 0 &&
@@ -449,7 +449,7 @@ final class SolVictoryChecker extends VictoryChecker {
             if (SolMapReader.field_c == Wormhole.field_j &&
               uc.d((byte) -46)) {
               TertiaryListSequence.field_l = sa.field_a.readLong(46);
-              di.field_q = param3;
+              FleetTrailPoint.field_q = param3;
               bs.field_b = sa.field_a.readUnsignedByte(-85);
               CellVertex.field_i = sa.field_a.readUnsignedByte(-89);
               StarAnnotation.field_m = sa.field_a.readUnsignedShort(-20976);
@@ -464,10 +464,10 @@ final class SolVictoryChecker extends VictoryChecker {
                 stackIn_48_0 = ((4 & var7) != 0);
                 QuickChatPhraseDefinition.field_v = stackIn_48_0;
                 stackIn_51_0 = ((var7 & 8) != 0);
-                bg.field_g = stackIn_51_0;
+                LoginMethodPreference.field_g = stackIn_51_0;
                 stackIn_54_0 = ((2 & var7) != 0);
                 ae.field_b = stackIn_54_0;
-                if (bg.field_g) {
+                if (LoginMethodPreference.field_g) {
                   ae.field_b = true;
                 }
               }
@@ -488,10 +488,10 @@ final class SolVictoryChecker extends VictoryChecker {
               Wormhole.field_j = ih.field_f;
               if (mq.field_c.getKind((byte) 115) != IsolationistAi.field_u) {
                 if (mq.field_c.getKind((byte) 123) == oi.field_b) {
-                  ObjectList.field_f.a(GameScreen.getHostApplet((byte) 126), true);
+                  ObjectList.field_f.saveBrowserPreference(GameScreen.getHostApplet((byte) 126), true);
                 }
               } else {
-                og.field_b.a(GameScreen.getHostApplet((byte) 127), true);
+                og.field_b.saveBrowserPreference(GameScreen.getHostApplet((byte) 127), true);
               }
               BufferedSocket.field_j = false;
               if (var6 != null) {

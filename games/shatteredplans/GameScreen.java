@@ -741,7 +741,7 @@ final class GameScreen {
               if ((this.field_s.field_P.field_f & 1 << param1.field_x) == 0) {
                 stackIn_92_0 = of.field_d;
               } else {
-                stackIn_92_0 = he.field_l;
+                stackIn_92_0 = IntNode.field_l;
               }
               var8 = stackIn_92_0;
               var5.setLabel((byte) 122, 0, var8);
@@ -1650,7 +1650,7 @@ final class GameScreen {
           }
           var3 = 0;
           while (4 > var3) {
-            var4 = e.a(this.field_s.field_n.field_u[var3], (byte) -68, var3, var2);
+            var4 = AccountFieldValue.a(this.field_s.field_n.field_u[var3], (byte) -68, var3, var2);
             var4.moveTo((byte) 62, this.field_j.field_z.field_k, this.field_j.field_z.field_y + this.field_j.field_z.field_t);
             this.field_j.field_z.addChild(var4, 8);
             if (var5 != 0) {
@@ -1676,7 +1676,7 @@ final class GameScreen {
         int var7 = 0;
         int var8 = 0;
         try {
-          var5 = cl.field_m.toUpperCase() + ": " + DialogRoot.field_E[2];
+          var5 = RasterStateFrame.field_m.toUpperCase() + ": " + DialogRoot.field_E[2];
           rs.field_Cb.a(var5, param3 + 5, param1 + 5, param0 - 10, 480, 16777215, -1, 0, 0, rs.field_Cb.field_J);
           var6 = UiWidget.field_t.field_z * 2 + rs.field_Cb.stringWidth("= " + vs.field_a);
           SoftwareRasterizer.fillRoundedRectAlpha((param0 - var6) / 2 + (param3 - 10), 15 + (param1 + rs.field_Cb.field_J), var6 + 20, 10 + UiWidget.field_t.field_w * 3, 5, 0, 128);
@@ -1684,21 +1684,21 @@ final class GameScreen {
           var8 = UiWidget.field_t.field_z + rs.field_Cb.stringWidth("= " + QuickChatCategoryRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(3)}));
           ArrayWidgetGroup.field_z.draw((-ArrayWidgetGroup.field_z.field_z + UiWidget.field_t.field_z) / 2 + (param0 - var8) / 2 + param3, var7);
           UiWidget.field_t.draw((-var8 + param0) / 2 + param3, var7 - 9);
-          SoftwareRasterizer.b(ProductionContent.field_c[0] + (param3 + (UiWidget.field_t.field_z + (param0 - var8)) / 2 << 4), ul.field_Db[0] + (var7 + ArrayWidgetGroup.field_z.field_w / 2 << 4), 50, 7, MusicCrossfadeStream.field_s);
-          SoftwareRasterizer.b((param3 + (UiWidget.field_t.field_z + param0 - var8) / 2 << 4) + ProductionContent.field_c[2], (ArrayWidgetGroup.field_z.field_w / 2 + var7 << 4) + ul.field_Db[2], 50, 7, MusicCrossfadeStream.field_s);
-          SoftwareRasterizer.b(ProductionContent.field_c[3] + ((UiWidget.field_t.field_z + (-var8 + param0)) / 2 + param3 << 4), (ArrayWidgetGroup.field_z.field_w / 2 + var7 << 4) + ul.field_Db[3], 50, 7, MusicCrossfadeStream.field_s);
+          SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[0] + (param3 + (UiWidget.field_t.field_z + (param0 - var8)) / 2 << 4), ul.field_Db[0] + (var7 + ArrayWidgetGroup.field_z.field_w / 2 << 4), 50, 7, MusicCrossfadeStream.field_s);
+          SoftwareRasterizer.addRadialGlowQ4((param3 + (UiWidget.field_t.field_z + param0 - var8) / 2 << 4) + ProductionContent.field_c[2], (ArrayWidgetGroup.field_z.field_w / 2 + var7 << 4) + ul.field_Db[2], 50, 7, MusicCrossfadeStream.field_s);
+          SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[3] + ((UiWidget.field_t.field_z + (-var8 + param0)) / 2 + param3 << 4), (ArrayWidgetGroup.field_z.field_w / 2 + var7 << 4) + ul.field_Db[3], 50, 7, MusicCrossfadeStream.field_s);
           rs.field_Cb.drawString("= " + QuickChatCategoryRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(3)}), UiWidget.field_t.field_z + param3 + ((-var8 + param0) / 2 + 5), UiWidget.field_t.field_w / 2 + var7 - 4, 16777215, -1);
           var7 = var7 + UiWidget.field_t.field_w;
           ArrayWidgetGroup.field_z.draw(param3 + ((-var8 + param0) / 2 + (-ArrayWidgetGroup.field_z.field_z + UiWidget.field_t.field_z) / 2), var7);
           UiWidget.field_t.draw((param0 - var8) / 2 + param3, var7 - 9);
           int var9 = 87 % ((-25 - param2) / 51);
-          SoftwareRasterizer.b((param3 + (UiWidget.field_t.field_z + (-var8 + param0)) / 2 << 4) + ProductionContent.field_c[0], ul.field_Db[0] + (ArrayWidgetGroup.field_z.field_w / 2 + var7 << 4), 50, 7, MusicCrossfadeStream.field_s);
-          SoftwareRasterizer.b(((UiWidget.field_t.field_z - var8 + param0) / 2 + param3 << 4) + ProductionContent.field_c[1], ul.field_Db[1] + (ArrayWidgetGroup.field_z.field_w / 2 + var7 << 4), 50, 7, MusicCrossfadeStream.field_s);
+          SoftwareRasterizer.addRadialGlowQ4((param3 + (UiWidget.field_t.field_z + (-var8 + param0)) / 2 << 4) + ProductionContent.field_c[0], ul.field_Db[0] + (ArrayWidgetGroup.field_z.field_w / 2 + var7 << 4), 50, 7, MusicCrossfadeStream.field_s);
+          SoftwareRasterizer.addRadialGlowQ4(((UiWidget.field_t.field_z - var8 + param0) / 2 + param3 << 4) + ProductionContent.field_c[1], ul.field_Db[1] + (ArrayWidgetGroup.field_z.field_w / 2 + var7 << 4), 50, 7, MusicCrossfadeStream.field_s);
           rs.field_Cb.drawString("= " + QuickChatCategoryRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(2)}), 5 + UiWidget.field_t.field_z + ((param0 - var8) / 2 + param3), -4 + (var7 + UiWidget.field_t.field_w / 2), 16777215, -1);
           var7 = var7 + UiWidget.field_t.field_w;
           ArrayWidgetGroup.field_z.draw(-5 + (param3 + (-var6 + param0) / 2 + (-ArrayWidgetGroup.field_z.field_z + UiWidget.field_t.field_z) / 2), var7);
           UiWidget.field_t.draw((-var6 + param0) / 2 + param3 - 5, var7 - 9);
-          SoftwareRasterizer.b(ProductionContent.field_c[0] + (-5 + ((UiWidget.field_t.field_z + (param0 - var6)) / 2 + param3) << 4), ul.field_Db[0] + (var7 + ArrayWidgetGroup.field_z.field_w / 2 << 4), 50, 7, MusicCrossfadeStream.field_s);
+          SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[0] + (-5 + ((UiWidget.field_t.field_z + (param0 - var6)) / 2 + param3) << 4), ul.field_Db[0] + (var7 + ArrayWidgetGroup.field_z.field_w / 2 << 4), 50, 7, MusicCrossfadeStream.field_s);
           ArrayWidgetGroup.field_z.draw(-5 + (UiWidget.field_t.field_z + (-var6 + param0) / 2 + param3) + (-ArrayWidgetGroup.field_z.field_z + UiWidget.field_t.field_z) / 2, var7);
           UiWidget.field_t.draw(param3 + (-var6 + param0) / 2 + (UiWidget.field_t.field_z - 5), var7 - 9);
           rs.field_Cb.drawString("= " + vs.field_a, 2 * UiWidget.field_t.field_z + (-var6 + param0) / 2 + param3, UiWidget.field_t.field_w / 2 + (-4 + var7), 16777215, -1);
@@ -1711,7 +1711,7 @@ final class GameScreen {
         String var5 = null;
         int var6 = 0;
         try {
-          var5 = cl.field_m.toUpperCase() + ": " + DialogRoot.field_E[1];
+          var5 = RasterStateFrame.field_m.toUpperCase() + ": " + DialogRoot.field_E[1];
           rs.field_Cb.a(var5, 5 + param0, param2 + 5, -10 + param3, 480, 16777215, -1, 0, 0, rs.field_Cb.field_J);
           var6 = qe.field_j.field_z + rs.field_Cb.stringWidth("= " + vs.field_a);
           SoftwareRasterizer.fillRoundedRectAlpha(-5 + (param3 - var6) / 2 + param0, 20 + rs.field_Cb.field_J + param2, var6 + 15, qe.field_j.field_w + 10, 5, 0, 128);
@@ -2291,7 +2291,7 @@ final class GameScreen {
               }
             }
           }
-          var4Lifetime1 = cl.field_n % 64;
+          var4Lifetime1 = RasterStateFrame.field_n % 64;
           if (24 < var4Lifetime1 &&
             var4Lifetime1 <= 40) {
             var4Lifetime1 = 24;
@@ -2442,7 +2442,7 @@ final class GameScreen {
     private final void drawConquestObjectiveHelp(int param0, int param1, byte param2, int param3) {
         String var5 = null;
         try {
-          var5 = cl.field_m.toUpperCase() + ": " + DialogRoot.field_E[0];
+          var5 = RasterStateFrame.field_m.toUpperCase() + ": " + DialogRoot.field_E[0];
           int var6 = 107 / ((10 - param2) / 56);
           rs.field_Cb.a(var5, 5 + param0, param3 + 5, -10 + param1, 480, 16777215, -1, 0, 0, rs.field_Cb.field_J);
         } catch (RuntimeException runtimeException) {
@@ -3102,7 +3102,7 @@ final class GameScreen {
           if (param0 < 123) {
             field_A = (QuickChatPhraseRegistry) null;
           }
-          stackIn_7_0 = ts.field_G;
+          stackIn_7_0 = TextHotspotWidget.field_G;
           return (java.applet.Applet) ((Object) stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3825,13 +3825,13 @@ final class GameScreen {
                       if (!this.field_s.field_M) {
                         var6_ref = QuickChatCategoryRegistry.a(bb.field_d, 4371, new String[]{(String) (var6_ref)});
                       } else {
-                        var6_ref = QuickChatCategoryRegistry.a(vm.field_Fb, 4371, new String[]{(String) (var6_ref)});
+                        var6_ref = QuickChatCategoryRegistry.a(QuickChatMenu.field_Fb, 4371, new String[]{(String) (var6_ref)});
                       }
                     } else {
                       if ((var3.field_f & 1 << var5) != 0) {
                         var6_ref = QuickChatCategoryRegistry.a(lg.field_f, 4371, new String[]{(String) (var6_ref)});
                       } else {
-                        var6_ref = QuickChatCategoryRegistry.a(bj.field_M, 4371, new String[]{(String) (var6_ref)});
+                        var6_ref = QuickChatCategoryRegistry.a(NameSuggestionsPanel.field_M, 4371, new String[]{(String) (var6_ref)});
                       }
                     }
                     break regionExit2;
@@ -4322,7 +4322,7 @@ final class GameScreen {
             stackIn_16_1 = ~var5;
             if (var8 == 0) {
               if (stackIn_16_0 >= stackIn_16_1) {
-                var6 = vm.a(kr.field_f[var3_int], 0, true);
+                var6 = QuickChatMenu.a(kr.field_f[var3_int], 0, true);
                 var7 = QuaternaryLinkNode.field_w - (var6 >> 1);
                 var4 = var4 + sm.field_b;
                 if (ArrayWidgetGroup.rectContains(id.field_b + (ArchiveNetworkClient.field_i << 1), param0, var7 - MapView.field_Lb, (byte) -99, var4, (MapView.field_Lb << 1) + var6, param1)) {
@@ -4331,7 +4331,7 @@ final class GameScreen {
                 }
                 var4 = var4 + (id.field_b + (ArchiveNetworkClient.field_i << 1) + sm.field_b);
               } else {
-                var4 = var4 + e.field_d;
+                var4 = var4 + AccountFieldValue.field_d;
               }
               var3_int++;
               continue;
@@ -4476,7 +4476,7 @@ final class GameScreen {
             stackIn_47_0 = new BoundsRect(0, 50, 640, 430);
             return stackIn_47_0;
           }
-          var4 = new BoundsRect(e.field_f, ByteArrayNode.field_k, ei.field_e, AttackTask.field_o);
+          var4 = new BoundsRect(AccountFieldValue.field_f, ByteArrayNode.field_k, ei.field_e, AttackTask.field_o);
           var5 = new IntrusiveDeque();
           if (var2.field_l < var4.field_l) {
             stackIn_8_0 = var5;
@@ -4818,7 +4818,7 @@ final class GameScreen {
         int var6 = 0;
         int var7 = 0;
         try {
-          var5 = cl.field_m.toUpperCase() + ": " + DialogRoot.field_E[3];
+          var5 = RasterStateFrame.field_m.toUpperCase() + ": " + DialogRoot.field_E[3];
           rs.field_Cb.a(var5, 5 + param0, param3 + 5, -10 + param1, 480, 16777215, -1, 0, 0, rs.field_Cb.field_J);
           var6 = 20 + param3 + rs.field_Cb.field_J + 9;
           var7 = 64 + rs.field_Cb.stringWidth("= " + QuickChatCategoryRegistry.a(sq.field_p, 4371, new String[]{Integer.toString(2)}));

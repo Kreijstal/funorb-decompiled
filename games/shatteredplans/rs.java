@@ -9,7 +9,7 @@ final class rs extends AnimatedPanel {
     static MenuComponent field_Db;
     static String field_yb;
     static String field_zb;
-    static th field_Cb;
+    static CoverageBitmapFont field_Cb;
     static AnimatedPanel field_Eb;
 
     private rs(long param0, AnimatedPanel param1, AnimatedPanel param2, String param3) {

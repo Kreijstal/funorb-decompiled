@@ -215,11 +215,11 @@ class StandardMapGenerator implements MapGenerator {
           Object var10 = null;
           ObjectInputStream var11 = null;
           int var12 = 0;
-          eq var13 = null;
+          ReflectionCheck var13 = null;
           java.lang.reflect.Field var15 = null;
           Object var16 = null;
           java.lang.reflect.Field var16_ref = null;
-          eq var17 = null;
+          ReflectionCheck var17 = null;
           Object var18 = null;
           java.lang.reflect.Field var19 = null;
           Object var21 = null;
@@ -235,7 +235,7 @@ class StandardMapGenerator implements MapGenerator {
           var22 = null;
           var12 = ShatteredPlansClient.field_F ? 1 : 0;
           try {
-            var13 = (eq) (MusicEnvelope.field_b.startForward(0));
+            var13 = (ReflectionCheck) (MusicEnvelope.field_b.startForward(0));
             var17 = var13;
             if (var17 == null) {
               return;

@@ -13,7 +13,7 @@ final class ListContent implements MenuContent {
     SpriteButton[][] field_f;
 
     final static boolean a(int param0, int param1, int param2, int param3) {
-        if (bg.field_g) {
+        if (LoginMethodPreference.field_g) {
           return wi.field_c.a(oq.field_j, ho.field_h, true);
         }
         if (QuickChatCategoryDefinition.field_t) {
@@ -26,10 +26,10 @@ final class ListContent implements MenuContent {
           return false;
         }
         if (param0 == 4) {
-          return le.a(param1, param2, false);
+          return ByteArrayStorage.a(param1, param2, false);
         }
         field_d = (String) null;
-        return le.a(param1, param2, false);
+        return ByteArrayStorage.a(param1, param2, false);
     }
 
     final static void a(int param0) {
@@ -39,15 +39,15 @@ final class ListContent implements MenuContent {
         RuntimeException var1_ref = null;
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (null == cb.field_h) {
+          if (null == DirectByteArrayStorage.field_h) {
             return;
           }
-          var1 = (hd) (cb.field_h.startForward(param0));
+          var1 = (hd) (DirectByteArrayStorage.field_h.startForward(param0));
           while (var1 != null) {
             if (0 > var1.field_h) {
               var1.unlink((byte) -70);
             }
-            var1 = (hd) (cb.field_h.nextForward((byte) -71));
+            var1 = (hd) (DirectByteArrayStorage.field_h.nextForward((byte) -71));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

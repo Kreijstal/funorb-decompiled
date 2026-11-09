@@ -109,11 +109,11 @@ final class uc extends MenuComponent {
         }
     }
 
-    final static hh a(byte[] param0, int param1) {
-        hh var2 = null;
+    final static BinaryBitmapFont a(byte[] param0, int param1) {
+        BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
-        hh stackIn_4_0 = null;
+        BinaryBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -121,9 +121,9 @@ final class uc extends MenuComponent {
         try {
           if (param0 == null) {
             stackIn_2_0 = null;
-            return (hh) (stackIn_2_0);
+            return (BinaryBitmapFont) (stackIn_2_0);
           }
-          var2 = new hh(param0, cf.field_H, sj.field_a, WeightedCacheEntry.field_s, IntHashIndex.field_g, hd.field_q);
+          var2 = new BinaryBitmapFont(param0, cf.field_H, sj.field_a, WeightedCacheEntry.field_s, IntHashIndex.field_g, hd.field_q);
           TertiaryListSequence.a(param1 ^ param1);
           stackIn_4_0 = var2;
           return stackIn_4_0;
@@ -151,7 +151,7 @@ final class uc extends MenuComponent {
         field_y = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, String param5, boolean param6, Sprite[] param7, byte param8, int param9, Sprite[] param10, nq param11, boolean param12, int param13, int param14) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, String param5, boolean param6, Sprite[] param7, byte param8, int param9, Sprite[] param10, BitmapFont param11, boolean param12, int param13, int param14) {
         try {
           if (param8 != -87) {
             uc.clearStatics((byte) -47);
@@ -179,8 +179,8 @@ final class uc extends MenuComponent {
           sa.field_a.position = 0;
         }
         if (param0 > -25) {
-          nq var2 = (nq) null;
-          uc.a(-68, -91, -81, 82, -51, (String) null, true, (Sprite[]) null, (byte) -67, 2, (Sprite[]) null, (nq) null, true, 22, -30);
+          BitmapFont var2 = (BitmapFont) null;
+          uc.a(-68, -91, -81, 82, -51, (String) null, true, (Sprite[]) null, (byte) -67, 2, (Sprite[]) null, (BitmapFont) null, true, 22, -30);
         }
         return StarAnnotation.a(-78, rr.field_t);
     }

@@ -122,7 +122,7 @@ final class DialogRoot extends SingleChildWidget {
           DialogRoot.clearStatics(false);
         }
         if (null != this.field_p) {
-          this.field_p.a((UiWidget) (this), param3, true, param2, (byte) 12);
+          this.field_p.paintWidget((UiWidget) (this), param3, true, param2, (byte) 12);
         }
         IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_H);
         UiWidget var6 = (UiWidget) (var5.c(105));
@@ -513,7 +513,7 @@ final class DialogRoot extends SingleChildWidget {
         int var1 = cr.field_c + 2;
         MenuList.field_v.setTarget(CanvasResizeController.field_a.field_K, CanvasResizeController.field_a.field_mb - (!ns.field_pb ? 0 : var1), (byte) 105, !ns.field_pb ? 0 : var1, 0);
         CachedArchiveSource.d(18);
-        vm.field_Ab.setTarget(MapViewState.field_j.field_K, 40, (byte) 41, -40 + MapViewState.field_j.field_mb, 0);
+        QuickChatMenu.field_Ab.setTarget(MapViewState.field_j.field_K, 40, (byte) 41, -40 + MapViewState.field_j.field_mb, 0);
         sg.field_zb.setTarget(AchievementProgress.field_i.field_K, 30, (byte) 72, 0, 0);
         qf.field_e.setTarget(AchievementProgress.field_i.field_K, -40 + AchievementProgress.field_i.field_mb - 32, (byte) 48, 30, 0);
         BattleSnapshot.field_y.setTarget(68, 30, (byte) 64, 5, 5);

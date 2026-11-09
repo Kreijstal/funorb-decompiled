@@ -23,7 +23,7 @@ final class ba {
         }
     }
 
-    final static void a(AnimatedPanel param0, AnimatedPanel param1, int param2, AnimatedPanel param3, ScrollBar param4, AnimatedPanel param5, AnimatedPanel param6, AnimatedPanel param7, boolean param8, nq param9, AnimatedPanel param10, AnimatedPanel param11) {
+    final static void a(AnimatedPanel param0, AnimatedPanel param1, int param2, AnimatedPanel param3, ScrollBar param4, AnimatedPanel param5, AnimatedPanel param6, AnimatedPanel param7, boolean param8, BitmapFont param9, AnimatedPanel param10, AnimatedPanel param11) {
         String stackIn_16_0 = null;
         int stackIn_34_0 = 0;
         RuntimeException stackIn_45_0 = null;
@@ -152,10 +152,10 @@ final class ba {
             pr.field_c = new AnimatedPanel(0L, param0);
             pr.field_c.field_z = dk.field_c;
             tg.field_c.addChild(4, pr.field_c);
-            stackIn_34_0 = cb.b((byte) -121) ? 1 : 0;
+            stackIn_34_0 = DirectByteArrayStorage.b((byte) -121) ? 1 : 0;
           }
           if (stackIn_34_0 != 0 &&
-            !bg.field_g) {
+            !LoginMethodPreference.field_g) {
             return;
           }
           wi.field_c = new eh(0, 0, 0, 0);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hn {
+final class IntList {
     private int field_b;
     static int field_i;
     static String[] field_f;
@@ -50,7 +50,7 @@ final class hn {
           field_d = null;
           return;
         }
-        hn.a(38);
+        IntList.a(38);
         field_j = null;
         field_c = null;
         field_f = null;
@@ -129,7 +129,7 @@ final class hn {
         this.field_e = (int[]) null;
     }
 
-    private hn() throws Throwable {
+    private IntList() throws Throwable {
         throw new Error();
     }
 

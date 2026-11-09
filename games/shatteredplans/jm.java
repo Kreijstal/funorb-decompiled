@@ -10,13 +10,13 @@ final class jm extends TargetedChatMessage {
     final static void a(String param0, boolean param1, byte param2, boolean param3) {
         try {
           MenuButton.f(-1);
-          le.field_e.deactivateAll(104);
+          ByteArrayStorage.field_e.deactivateAll(104);
           no.field_e = new ri(MenuWindow.field_B, (String) null, TertiaryNodeList.field_b, param3, param1);
           if (param2 > -50) {
             field_s = (String) null;
           }
-          ae.field_f = new hk(le.field_e, no.field_e);
-          le.field_e.addDialog(true, ae.field_f);
+          ae.field_f = new hk(ByteArrayStorage.field_e, no.field_e);
+          ByteArrayStorage.field_e.addDialog(true, ae.field_f);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "jm.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -49,13 +49,13 @@ final class jm extends TargetedChatMessage {
     final static void $cfr$intArgs$a$88c6728ee5b1(String param0, boolean param1, int param2, boolean param3) {
         try {
           MenuButton.f(-1);
-          le.field_e.deactivateAll(104);
+          ByteArrayStorage.field_e.deactivateAll(104);
           no.field_e = new ri(MenuWindow.field_B, (String) null, TertiaryNodeList.field_b, param3, param1);
           if (param2 > -50) {
             field_s = (String) null;
           }
-          ae.field_f = new hk(le.field_e, no.field_e);
-          le.field_e.addDialog(true, ae.field_f);
+          ae.field_f = new hk(ByteArrayStorage.field_e, no.field_e);
+          ByteArrayStorage.field_e.addDialog(true, ae.field_f);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "jm.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

@@ -73,8 +73,8 @@ class FocusableWidget extends UiWidget {
           param1.blur((byte) -122);
           this.field_A = true;
           if (this.field_u != null &&
-            this.field_u instanceof dj) {
-            ((dj) (this.field_u)).a(10202, this.field_A, (UiWidget) (this));
+            this.field_u instanceof WidgetFocusListener) {
+            ((WidgetFocusListener) (this.field_u)).onFocusChanged(10202, this.field_A, (UiWidget) (this));
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -111,8 +111,8 @@ class FocusableWidget extends UiWidget {
             this.containsWidget((byte) 124, param6);
             this.field_o = param0;
             if (null != this.field_u &&
-              this.field_u instanceof dr) {
-              ((dr) (this.field_u)).a(this, param4, param3, param5, -237, param0, param1);
+              this.field_u instanceof WidgetPointerListener) {
+              ((WidgetPointerListener) (this.field_u)).onPointerPressed(this, param4, param3, param5, -237, param0, param1);
             }
             return true;
           }
@@ -160,8 +160,8 @@ class FocusableWidget extends UiWidget {
           var2Lifetime1 = -38 % ((param0 + 84) / 33);
           return;
         }
-        if (this.field_u instanceof dj) {
-          ((dj) (this.field_u)).a(10202, this.field_A, (UiWidget) (this));
+        if (this.field_u instanceof WidgetFocusListener) {
+          ((WidgetFocusListener) (this.field_u)).onFocusChanged(10202, this.field_A, (UiWidget) (this));
           var2Lifetime2 = -38 % ((param0 + 84) / 33);
           return;
         }
@@ -169,8 +169,8 @@ class FocusableWidget extends UiWidget {
     }
 
     final static void f(byte param0) {
-        if (null != cb.field_h) {
-          cb.field_h.clear(0);
+        if (null != DirectByteArrayStorage.field_h) {
+          DirectByteArrayStorage.field_h.clear(0);
         }
         if (param0 > -122) {
           field_C = (String) null;
@@ -260,7 +260,7 @@ class FocusableWidget extends UiWidget {
         if (!(this.field_u instanceof ButtonListener)) {
           return;
         }
-        ((ButtonListener) (this.field_u)).a(this, 6, param0, param2, param1);
+        ((ButtonListener) (this.field_u)).onButtonClicked(this, 6, param0, param2, param1);
         if (param3 == -109) {
           return;
         }
@@ -279,8 +279,8 @@ class FocusableWidget extends UiWidget {
         }
         try {
           if (this.field_u != null &&
-            this.field_u instanceof dr) {
-            ((dr) (this.field_u)).a(param2, param0, param3, param1, this, (byte) -128);
+            this.field_u instanceof WidgetPointerListener) {
+            ((WidgetPointerListener) (this.field_u)).onPointerReleased(param2, param0, param3, param1, this, (byte) -128);
           }
           this.field_o = 0;
         } catch (RuntimeException runtimeException) {

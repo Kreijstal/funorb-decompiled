@@ -11,7 +11,7 @@ final class wp {
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
         if (ce.field_x.field_M) {
           if ((1 << ce.field_x.field_h & ce.field_x.field_P.field_e) != 0) {
-            oq.field_i[13] = eq.field_i;
+            oq.field_i[13] = ReflectionCheck.field_i;
           } else {
             if (ce.field_x.field_P.field_e != 0) {
               oq.field_i[13] = MusicVoice.field_s;
@@ -33,7 +33,7 @@ final class wp {
               if (-1 + (1 << ce.field_x.field_P.field_r) == (ce.field_x.field_i | 1 << ce.field_x.field_h)) {
                 oq.field_i[13] = SecondaryNodeDequeIterator.field_d;
               } else {
-                oq.field_i[13] = hn.field_a;
+                oq.field_i[13] = IntList.field_a;
               }
             }
           }

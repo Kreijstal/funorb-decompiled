@@ -5,7 +5,7 @@ final class CheckboxPainter implements WidgetPainter {
     static int field_n;
     private int field_g;
     private int field_m;
-    private nq field_i;
+    private BitmapFont field_i;
     static String[] field_c;
     private int field_e;
     private int field_f;
@@ -84,7 +84,7 @@ final class CheckboxPainter implements WidgetPainter {
         }
     }
 
-    final static void a(int param0, nq param1, int param2, nq param3) {
+    final static void a(int param0, BitmapFont param1, int param2, BitmapFont param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -151,7 +151,7 @@ final class CheckboxPainter implements WidgetPainter {
               if (stackIn_13_0 > stackIn_13_1) {
                 fieldTemp$0 = SolVictoryChecker.field_p;
                 SolVictoryChecker.field_p = SolVictoryChecker.field_p + 1;
-                StandardMapReader.field_g = bj.field_J[fieldTemp$0];
+                StandardMapReader.field_g = NameSuggestionsPanel.field_J[fieldTemp$0];
                 continue;
               }
             }
@@ -233,7 +233,7 @@ final class CheckboxPainter implements WidgetPainter {
         }
     }
 
-    public final void a(UiWidget param0, int param1, boolean param2, int param3, byte param4) {
+    public final void paintWidget(UiWidget param0, int param1, boolean param2, int param3, byte param4) {
         UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -290,7 +290,7 @@ final class CheckboxPainter implements WidgetPainter {
         }
     }
 
-    CheckboxPainter(nq param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    CheckboxPainter(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

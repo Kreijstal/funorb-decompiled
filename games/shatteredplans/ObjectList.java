@@ -3,7 +3,7 @@
  */
 final class ObjectList {
     static AnimatedPanel field_h;
-    static bg field_f;
+    static LoginMethodPreference field_f;
     static Sprite[] field_d;
     Object[] field_b;
     int field_g;
@@ -195,7 +195,7 @@ final class ObjectList {
             if (ls.field_a == param2) {
               var21 += 42;
             }
-            var33 = nq.truncateWithEllipsis(var12.field_Ab.field_nb, var32, var21);
+            var33 = BitmapFont.truncateWithEllipsis(var12.field_Ab.field_nb, var32, var21);
             var20 = var33;
             var20 = var33;
             var20 = var33;
@@ -573,6 +573,6 @@ final class ObjectList {
     static {
         field_a = "Shattered Plans has <%highlight>four different game types</col>, each with a different <%glossary>victory condition</col>.<br><br><%highlight>CONQUEST</col> - This is the simplest type of game: destroy all opponents to achieve victory. Any of the other game types can also be won in this way.<br><br><%highlight>CAPTURE AND HOLD</col> - The game has a fixed length of <%highlight>20 turns</col>, and a fixed map layout. In the centre of the map is <%highlight>Sol</col> and the damaged remains of Earth. At the end of each turn, the player who owns Sol earns <%highlight>1 point</col>. At the end of the 20 turns, the surviving player with the highest score wins. <%glossary>Ties</col> are broken in favour of the player who owns Sol. If none of the tied players own Sol, they draw and the other players lose.<br><br><%highlight>POINTS</col> - Players earn points each turn for the <%glossary>systems</col> they own. <%glossary>Colony homeworlds</col> are worth <%highlight>3 points</col> each turn, <%glossary>neutral homeworlds</col> are worth <%highlight>2 points</col>, and other worlds are worth <%highlight>1 point</col> each. The first player to reach the target number of points, which varies depending on map size, wins the game.<br><br><%highlight>DERELICTS</col> - Several <%glossary>derelict alien objects</col> are scattered around the map. Capturing a derelict allows you to begin researching it, earning you points each turn. This research is expensive, however, and so owning a derelict <%highlight>reduces your income<col> in each <%glossary>resource</col>. The first player to reach the target of <%highlight>50 points</col> wins.<br><br>";
         field_c = "Display Options";
-        field_f = new bg("usename");
+        field_f = new LoginMethodPreference("usename");
     }
 }

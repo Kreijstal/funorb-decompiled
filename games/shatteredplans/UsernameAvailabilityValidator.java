@@ -81,7 +81,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
         mj var3 = null;
         int var2 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          he.field_p = null;
+          IntNode.field_p = null;
           np.field_a = null;
           TurnEventLog.field_i = false;
           if (null != gr.field_p) {

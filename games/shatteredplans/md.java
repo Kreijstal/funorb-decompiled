@@ -37,7 +37,7 @@ final class md extends UiWidget {
         int var9Lifetime1;
         int var10Lifetime1;
         int var13Lifetime1;
-        aq.a((byte) 83, var15);
+        aq.pushSpriteRaster((byte) 83, var15);
         int var6 = this.field_n >> 1;
         for (var7 = 0; var7 < this.field_n; var7++) {
           var8 = (this.field_H * 2 - 1) * (var7 >> 1) % (2 * this.field_H);
@@ -146,7 +146,7 @@ final class md extends UiWidget {
           }
           Star.f((byte) -64);
           if (SoftwareRasterizer.field_i <= param2 + this.field_R.field_z) {
-            aq.a((byte) -90, this.field_S);
+            aq.pushSpriteRaster((byte) -90, this.field_S);
             param0.draw(-this.field_P, 0);
             param0.draw(-this.field_P + this.field_H * 2, 0);
             this.field_N.drawMultiply(0, 0);
@@ -154,7 +154,7 @@ final class md extends UiWidget {
             this.field_S.draw(param2, param1);
           }
           if (SoftwareRasterizer.field_l >= -this.field_R.field_z + var5_int) {
-            aq.a((byte) 98, this.field_S);
+            aq.pushSpriteRaster((byte) 98, this.field_S);
             for (var7 = -this.field_R.field_z + this.field_x + this.field_P; 2 * this.field_H < var7; var7 = var7 - 2 * this.field_H) {
             }
             param0.draw(-var7, 0);
@@ -264,7 +264,7 @@ final class md extends UiWidget {
         int var2 = this.field_n >> 1;
         Sprite var3 = new Sprite(var2, this.field_n);
         int var4 = 44 / ((param0 + 16) / 62);
-        aq.a((byte) -50, var3);
+        aq.pushSpriteRaster((byte) -50, var3);
         for (var5 = 0; this.field_n > var5; var5++) {
           for (var6 = 0; var2 > var6; var6++) {
             var7 = (double)var6 * (double)var6 / (double)(var5 * (-var5 + this.field_n));

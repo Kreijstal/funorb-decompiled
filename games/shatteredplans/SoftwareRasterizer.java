@@ -449,7 +449,7 @@ final class SoftwareRasterizer {
         return;
     }
 
-    final static void b(int param0, int param1, int param2, int param3, int[] param4) {
+    final static void addRadialGlowQ4(int param0, int param1, int param2, int param3, int[] param4) {
         int var5 = param2 * param2;
         int var6 = param0 - param2 >> 4;
         int var7 = param0 + param2 + 15 >> 4;
@@ -487,7 +487,7 @@ final class SoftwareRasterizer {
         int var21 = var20 - var19;
         int var22 = var6 + var8 * field_b;
         int var23 = field_b + var6 - var7;
-        SoftwareRasterizer.a(0, 0, 0, 0, 0, var15, var5, var22, field_h, param3, param4, var23, var13, var6 - var7, var16 + var10, var19, var21, var8 - var9);
+        SoftwareRasterizer.addRadialGlowScanlines(0, 0, 0, 0, 0, var15, var5, var22, field_h, param3, param4, var23, var13, var6 - var7, var16 + var10, var19, var21, var8 - var9);
     }
 
     final static void fillCircleAlpha(int param0, int param1, int param2, int param3, int param4) {
@@ -686,10 +686,10 @@ final class SoftwareRasterizer {
         }
         int var4 = field_b - param2;
         int var5 = param0 + param1 * field_b;
-        SoftwareRasterizer.a(var5, field_h, 0, param2, -param3, var4);
+        SoftwareRasterizer.halveRgbRows(var5, field_h, 0, param2, -param3, var4);
     }
 
-    private final static void e(int param0, int param1, int param2, int param3, int param4, int param5) {
+    private final static void fillVerticalGradientAdditive(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -1261,7 +1261,7 @@ final class SoftwareRasterizer {
         }
     }
 
-    private final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int[] param8, int param9, int[] param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17) {
+    private final static void addRadialGlowScanlines(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int[] param8, int param9, int[] param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17) {
         int var18 = 0;
         while (param17 < 0) {
           param3 = param14;
@@ -1407,7 +1407,7 @@ final class SoftwareRasterizer {
         int var26Lifetime1;
         int var26Lifetime2;
         if (param4 == 0) {
-          SoftwareRasterizer.e(param0, param1, param2, param3, param5, param6);
+          SoftwareRasterizer.fillVerticalGradientAdditive(param0, param1, param2, param3, param5, param6);
           return;
         }
         if (param4 < 0) {
@@ -1553,7 +1553,7 @@ final class SoftwareRasterizer {
         field_g = null;
     }
 
-    private final static void a(int param0, int[] param1, int param2, int param3, int param4, int param5) {
+    private final static void halveRgbRows(int param0, int[] param1, int param2, int param3, int param4, int param5) {
         while (param4 < 0) {
           param2 = param0 + param3 - 7;
           while (param0 < param2) {

@@ -63,7 +63,7 @@ final class en {
           ro.field_a.a(so.field_t.field_K, 22 + cr.field_c, 0, 2, -128, -cr.field_c + (so.field_t.field_mb - 2) - 20, pe.field_K);
           DialPainter.field_g.setTarget(am.field_xb.field_K, 40, (byte) 107, -40 + am.field_xb.field_mb, 0);
           ArchiveSourceManager.field_f.setTarget(IntrusiveDeque.field_g.field_K, 30, (byte) 44, 0, 0);
-          bj.field_D.setTarget(IntrusiveDeque.field_g.field_K, -42 + (IntrusiveDeque.field_g.field_mb - 30), (byte) 125, 30, 0);
+          NameSuggestionsPanel.field_D.setTarget(IntrusiveDeque.field_g.field_K, -42 + (IntrusiveDeque.field_g.field_mb - 30), (byte) 125, 30, 0);
           var2_int = 3 + ProductionContent.field_k;
           if (nl.field_a.length < 2) {
             var2_int--;
@@ -71,15 +71,15 @@ final class en {
           if (param1) {
             var2_int--;
           }
-          var3 = (-20 + (bj.field_D.field_mb + (2 + (var2_int + 1) / 2))) / (var2_int + 1) - 2;
+          var3 = (-20 + (NameSuggestionsPanel.field_D.field_mb + (2 + (var2_int + 1) / 2))) / (var2_int + 1) - 2;
           if (var3 > 30) {
             var3 = 30;
           }
-          var4 = -(var2_int * (var3 + 2)) - 5 + (bj.field_D.field_mb - 5);
+          var4 = -(var2_int * (var3 + 2)) - 5 + (NameSuggestionsPanel.field_D.field_mb - 5);
           if (var4 > 40) {
             var4 = 40;
           }
-          StarAnnotation.field_l.setTarget(bj.field_D.field_K - 5 - 5, var4, (byte) 83, 5, 5);
+          StarAnnotation.field_l.setTarget(NameSuggestionsPanel.field_D.field_K - 5 - 5, var4, (byte) 83, 5, 5);
           var5 = 2 + var4 + 5;
           for (var6 = 0; ProductionContent.field_k + 4 > var6; var6++) {
             if ((var6 != 1 ||

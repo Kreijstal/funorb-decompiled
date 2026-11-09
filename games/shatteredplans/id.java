@@ -145,7 +145,7 @@ final class id {
     final static int a(int param0, int param1) {
         int var2 = 0;
         if (param1 == 0) {
-          var2 = vm.field_Bb;
+          var2 = QuickChatMenu.field_Bb;
         }
         if (param1 == 1) {
           var2 = sq.field_a;
@@ -163,7 +163,7 @@ final class id {
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         field_b = param4;
-        e.field_d = param0;
+        AccountFieldValue.field_d = param0;
         if (param2 == 26883) {
           QuickChatCategoryDefinition.field_v = param1;
           je.field_g = param3;

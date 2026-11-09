@@ -148,9 +148,9 @@ final class SolMapGenerator extends StandardMapGenerator {
         kb.field_v = id.a(2, param1, "commonui", "jagex_logo_grey");
         AttackTask.field_q = ae.a(-80, "commonui", param1, "button");
         MenuList.field_w = va.a("validation", 0, "commonui", param1);
-        EmailValidator.field_x = (nq) ((Object) ri.a("arezzo12", "commonui", param1, param2, (byte) -17));
-        gn.field_u = (nq) ((Object) ri.a("arezzo14", "commonui", param1, param2, (byte) 90));
-        CipherPacketBuffer.field_p = (nq) ((Object) ri.a("arezzo14bold", "commonui", param1, param2, (byte) 111));
+        EmailValidator.field_x = (BitmapFont) ((Object) ri.a("arezzo12", "commonui", param1, param2, (byte) -17));
+        gn.field_u = (BitmapFont) ((Object) ri.a("arezzo14", "commonui", param1, param2, (byte) 90));
+        CipherPacketBuffer.field_p = (BitmapFont) ((Object) ri.a("arezzo14bold", "commonui", param1, param2, (byte) 111));
         Sprite var17 = new Sprite(param3.getFileByName(true, "", "button.gif"), (java.awt.Component) ((Object) tm.field_i));
         GameApplet.a("commonui", -108, param1, "dropdown");
         IndexedSprite[] var5 = SliderPainter.a("commonui", param1, "screen_options", (byte) -118);
@@ -181,7 +181,7 @@ final class SolMapGenerator extends StandardMapGenerator {
         }
         try {
           var9 = var17.field_w;
-          wh.a(false);
+          wh.pushRasterState(false);
           var17.bindAsRenderTarget();
           SoftwareRasterizer.desaturateRect(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_k);
           var15 = new Sprite(var9, var9);

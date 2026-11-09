@@ -68,8 +68,8 @@ final class lh extends MenuComponent {
     }
 
     final static void d(byte param0) {
-        int fieldTemp$0 = di.field_m + 1;
-        di.field_m = di.field_m + 1;
+        int fieldTemp$0 = FleetTrailPoint.field_m + 1;
+        FleetTrailPoint.field_m = FleetTrailPoint.field_m + 1;
         if (fieldTemp$0 < 200) {
           if (param0 == 44) {
             return;

@@ -149,7 +149,7 @@ final class wk {
         return this;
     }
 
-    final static int a(int param0, String param1, nq param2, int[] param3) {
+    final static int a(int param0, String param1, BitmapFont param2, int[] param3) {
         ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -341,7 +341,7 @@ final class wk {
     }
 
     final void a(int param0, boolean param1, UiWidget param2, int param3, gn param4) {
-        nq stackIn_21_0 = null;
+        BitmapFont stackIn_21_0 = null;
         String stackIn_21_1 = null;
         int stackIn_22_2 = 0;
         int stackIn_24_2;
@@ -417,7 +417,7 @@ final class wk {
             } else {
               stackIn_28_8 = this.field_d;
             }
-            ((nq) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_24_2, stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, param4.field_r, param4.field_l, param4.field_j);
+            ((BitmapFont) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_24_2, stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, param4.field_r, param4.field_l, param4.field_j);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

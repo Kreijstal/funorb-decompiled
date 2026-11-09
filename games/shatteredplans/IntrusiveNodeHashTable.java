@@ -117,7 +117,7 @@ final class IntrusiveNodeHashTable {
           dh.field_a = param6;
           StandardMapReader.field_d = param7;
           QuickChatPhraseDefinition.field_u = param0;
-          hn.field_i = param1;
+          IntList.field_i = param1;
           if (param5 != 1491341222) {
             field_j = (String) null;
           }
@@ -271,7 +271,7 @@ final class IntrusiveNodeHashTable {
           if (!param1) {
             field_k = (java.util.zip.CRC32) null;
           }
-          stackIn_5_0 = (null != di.a(param0, 119));
+          stackIn_5_0 = (null != FleetTrailPoint.a(param0, 119));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

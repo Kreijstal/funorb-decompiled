@@ -22,7 +22,7 @@ abstract class VictoryChecker {
         if (param0 < 19) {
           field_e = 28;
         }
-        stackIn_6_0 = (MenuWindow.f(29443)) && (0 == (8 & cl.field_n));
+        stackIn_6_0 = (MenuWindow.f(29443)) && (0 == (8 & RasterStateFrame.field_n));
         return stackIn_6_0;
     }
 

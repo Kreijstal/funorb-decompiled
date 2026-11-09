@@ -133,8 +133,8 @@ abstract class jl extends Dialog {
           var8Lifetime1++;
         }
         kb.field_v.draw(this.field_x + param0 - 90, 10 + param2);
-        wh.a(os.field_u, param2 + 35, this.field_x - 10, (byte) -114, 5 + param0);
-        wh.a(IntrusiveNode.field_d, -22 + (this.field_n + param2), this.field_x, (byte) -99, param0);
+        wh.drawHorizontalSpriteStrip(os.field_u, param2 + 35, this.field_x - 10, (byte) -114, 5 + param0);
+        wh.drawHorizontalSpriteStrip(IntrusiveNode.field_d, -22 + (this.field_n + param2), this.field_x, (byte) -99, param0);
         var5Lifetime2 = 169;
         var4Lifetime2 = -79 + this.field_n;
         var6Lifetime2 = 127;

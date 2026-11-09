@@ -4,12 +4,12 @@
 class rr extends WidgetTheme {
     static int field_t;
 
-    final static a a(IntrusiveDeque param0, int param1, int param2, int param3) {
-        a dupTemp$1 = null;
-        a var5 = null;
+    final static HitRegion a(IntrusiveDeque param0, int param1, int param2, int param3) {
+        HitRegion dupTemp$1 = null;
+        HitRegion var5 = null;
         int var6 = 0;
-        a var7 = null;
-        a stackIn_10_0 = null;
+        HitRegion var7 = null;
+        HitRegion stackIn_10_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -20,15 +20,15 @@ class rr extends WidgetTheme {
           if (param0 == null) {
             return null;
           }
-          var7 = (a) (param0.startForward(param3 ^ param3));
+          var7 = (HitRegion) (param0.startForward(param3 ^ param3));
           while (var7 != null) {
-            dupTemp$1 = var7.b(-125, param2, param1);
+            dupTemp$1 = var7.hitTest(-125, param2, param1);
             var5 = dupTemp$1;
             if (null != dupTemp$1) {
               stackIn_10_0 = var5;
               return stackIn_10_0;
             }
-            var7 = (a) (param0.nextForward((byte) -71));
+            var7 = (HitRegion) (param0.nextForward((byte) -71));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -45,16 +45,16 @@ class rr extends WidgetTheme {
         }
     }
 
-    rr(nq param0, int param1) {
+    rr(BitmapFont param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_J, -1, 2147483647, false);
     }
 
-    public final void a(UiWidget param0, int param1, boolean param2, int param3, byte param4) {
+    public final void paintWidget(UiWidget param0, int param1, boolean param2, int param3, byte param4) {
         try {
           if (param2) {
             ClientException.a((byte) 93, param0.field_q + param3, param0.field_n, param1 + param0.field_m, param0.field_x);
           }
-          super.a(param0, param1, param2, param3, param4);
+          super.paintWidget(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "rr.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

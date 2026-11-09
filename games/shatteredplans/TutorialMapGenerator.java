@@ -644,7 +644,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
         int var1_int = 0;
         int var2 = 0;
         try {
-          fr.f((byte) -115);
+          DraggableWidget.f((byte) -115);
           var1_int = SecondaryNodeHashTable.field_f.field_o;
           var2 = SecondaryNodeHashTable.field_f.field_p;
           SecondaryNodeHashTable.field_f.drawAdditive((-var1_int + 640) / 2, (param0 - var2) / 2, 256);
@@ -657,7 +657,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
         super(1, 1, 0, 1, 1);
     }
 
-    final static String[] a(nq param0, byte param1, String param2, int[] param3) {
+    final static String[] a(BitmapFont param0, byte param1, String param2, int[] param3) {
         ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -738,8 +738,8 @@ final class TutorialMapGenerator extends StandardMapGenerator {
         }
     }
 
-    final static void a(Archive param0, boolean param1) {
-        class $CfrPartitionedBody {
+    final static void loadClientText(Archive param0, boolean param1) {
+        class ClientTextLoader {
             RuntimeException stackIn_2605_0;
             StringBuilder stackIn_2605_1;
             String stackIn_2606_2;
@@ -749,7 +749,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
             Archive param0;
             boolean param1;
             boolean finished;
-            $CfrPartitionedBody(Archive initialParam0, boolean initialParam1) {
+            ClientTextLoader(Archive initialParam0, boolean initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2605_0 = null;
@@ -759,7 +759,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 this.var2 = null;
                 this.var2_ref = null;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadLoginAndAccountRules() throws java.lang.RuntimeException {
                 Archive.field_d = param0;
                 var2 = TertiaryLinkNode.a("loginm3", 511);
                 if (null != var2) {
@@ -775,7 +775,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("idlemessage20min", 511);
                 if (var2 != null) {
-                  he.field_n = IterableNodeHashTable.a(var2, 17746);
+                  IntNode.field_n = IterableNodeHashTable.a(var2, 17746);
                 }
                 if (!param1) {
                   finished = true; return;
@@ -890,7 +890,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("mu_x_entered_other_game", 511);
                 if (null != var2) {
-                  fa.field_Y = IterableNodeHashTable.a(var2, 17746);
+                  ValidatedTextInputWidget.field_Y = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_x_left_lobby", 511);
                 if (null != var2) {
@@ -994,15 +994,15 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("mu_gamelist_owner", 511);
                 if (null != var2) {
-                  di.field_j = IterableNodeHashTable.a(var2, 17746);
+                  FleetTrailPoint.field_j = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_gamelist_players", 511);
                 if (null != var2) {
-                  vm.field_Lb = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatMenu.field_Lb = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_gamelist_avg_rating", 511);
                 if (null != var2) {
-                  fa.field_T = IterableNodeHashTable.a(var2, 17746);
+                  ValidatedTextInputWidget.field_T = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_gamelist_options", 511);
                 if (var2 != null) {
@@ -1046,7 +1046,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("yes", 511);
                 if (null != var2) {
-                  he.field_j = IterableNodeHashTable.a(var2, 17746);
+                  IntNode.field_j = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("no", 511);
                 if (null != var2) {
@@ -1066,7 +1066,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("add_x_to_ignore", 511);
                 if (null != var2) {
-                  ts.field_F = IterableNodeHashTable.a(var2, 17746);
+                  TextHotspotWidget.field_F = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rm_x_from_friends", 511);
                 if (null != var2) {
@@ -1150,11 +1150,11 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("mu_chat_lobby_friends", 511);
                 if (var2 != null) {
-                  ts.field_H = IterableNodeHashTable.a(var2, 17746);
+                  TextHotspotWidget.field_H = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_chat_lobby_hide", 511);
                 if (var2 != null) {
-                  ah.field_O = IterableNodeHashTable.a(var2, 17746);
+                  ValidationMessageWidget.field_O = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_chat_game_show_all", 511);
                 if (null != var2) {
@@ -1162,7 +1162,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("mu_chat_game_friends_only", 511);
                 if (var2 != null) {
-                  he.field_m = IterableNodeHashTable.a(var2, 17746);
+                  IntNode.field_m = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mu_chat_game_friends", 511);
                 if (null != var2) {
@@ -1202,7 +1202,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("rated_game", 511);
                 if (null != var2) {
-                  le.field_c = IterableNodeHashTable.a(var2, 17746);
+                  ByteArrayStorage.field_c = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("unrated_game", 511);
                 if (null != var2) {
@@ -1258,7 +1258,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("xs_game", 511);
                 if (null != var2) {
-                  he.field_q = IterableNodeHashTable.a(var2, 17746);
+                  IntNode.field_q = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("waiting_for_x_to_start_game", 511);
                 if (null != var2) {
@@ -1386,7 +1386,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("show_players_in_xs_game", 511);
                 if (null != var2) {
-                  cb.field_g = IterableNodeHashTable.a(var2, 17746);
+                  DirectByteArrayStorage.field_g = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("connecting_to_friend_server_twoline", 511);
                 if (null != var2) {
@@ -1470,7 +1470,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("publicchat_unavailable_ratedgame", 511);
                 if (null != var2) {
-                  di.field_k = IterableNodeHashTable.a(var2, 17746);
+                  FleetTrailPoint.field_k = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("privatechat_friend_offline", 511);
                 if (null != var2) {
@@ -1685,7 +1685,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                   RichTextLayout.field_o = IterableNodeHashTable.a(var2, 17746);
                 }
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadAccountRulesAndMenuText() throws java.lang.RuntimeException {
                 var2 = TertiaryLinkNode.a("rule_pillar_1", 511);
                 if (var2 != null) {
                   tq.field_k = IterableNodeHashTable.a(var2, 17746);
@@ -1748,7 +1748,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("invaliduserorpass", 511);
                 if (null != var2) {
-                  aa.field_N = IterableNodeHashTable.a(var2, 17746);
+                  AccountCreationForm.field_N = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("pleasetryagain", 511);
                 if (null != var2) {
@@ -1852,7 +1852,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("retry", 511);
                 if (null != var2) {
-                  ts.field_E = IterableNodeHashTable.a(var2, 17746);
+                  TextHotspotWidget.field_E = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("back", 511);
                 if (var2 != null) {
@@ -2256,11 +2256,11 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("create_password_hint", 511);
                 if (null != var2) {
-                  ab.field_a = IterableNodeHashTable.a(var2, 17746);
+                  AccountValidationText.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_password_confirm_tooltip", 511);
                 if (var2 != null) {
-                  he.field_o = IterableNodeHashTable.a(var2, 17746);
+                  IntNode.field_o = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_email_tooltip", 511);
                 if (var2 != null) {
@@ -2336,7 +2336,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("create_alert_passlength", 511);
                 if (var2 != null) {
-                  ab.field_b = IterableNodeHashTable.a(var2, 17746);
+                  AccountValidationText.field_b = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_alert_passcontainsname", 511);
                 if (var2 != null) {
@@ -2360,7 +2360,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("create_alert_email_unavailable", 511);
                 if (var2 != null) {
-                  ab.field_d = IterableNodeHashTable.a(var2, 17746);
+                  AccountValidationText.field_d = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_alert_invaliddate", 511);
                 if (var2 != null) {
@@ -2484,7 +2484,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("waitingfor_graphics", 511);
                 if (null != var2) {
-                  fa.field_J = IterableNodeHashTable.a(var2, 17746);
+                  ValidatedTextInputWidget.field_J = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("waitingfor_models", 511);
                 if (var2 != null) {
@@ -2500,7 +2500,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("waitingfor_music", 511);
                 if (var2 != null) {
-                  le.field_a = IterableNodeHashTable.a(var2, 17746);
+                  ByteArrayStorage.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("waitingfor_instruments", 511);
                 if (null != var2) {
@@ -2663,7 +2663,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                   lq.field_p = IterableNodeHashTable.a(var2, 17746);
                 }
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadMenuAndMembershipText() throws java.lang.RuntimeException {
                 var2 = TertiaryLinkNode.a("tohighscores", 511);
                 if (null != var2) {
                   IterableNodeHashTable.a(var2, 17746);
@@ -3058,7 +3058,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("mp_offerrematch", 511);
                 if (var2 != null) {
-                  hn.field_a = IterableNodeHashTable.a(var2, 17746);
+                  IntList.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_offerrematch_unrated", 511);
                 if (var2 != null) {
@@ -3078,7 +3078,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("mp_cancelrematch_unrated", 511);
                 if (var2 != null) {
-                  eq.field_i = IterableNodeHashTable.a(var2, 17746);
+                  ReflectionCheck.field_i = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_rematchnewgame", 511);
                 if (var2 != null) {
@@ -3098,7 +3098,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("mp_x_offersrematch_unrated", 511);
                 if (null != var2) {
-                  vm.field_Fb = IterableNodeHashTable.a(var2, 17746);
+                  QuickChatMenu.field_Fb = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_youofferrematch", 511);
                 if (null != var2) {
@@ -3134,7 +3134,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("mp_x_hasleft", 511);
                 if (var2 != null) {
-                  bj.field_M = IterableNodeHashTable.a(var2, 17746);
+                  NameSuggestionsPanel.field_M = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_x_haswon", 511);
                 if (var2 != null) {
@@ -3222,27 +3222,27 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("quickchat_shortcut_keys,0", 511);
                 if (var2 != null) {
-                  bg.field_d[0] = IterableNodeHashTable.a(var2, 17746);
+                  LoginMethodPreference.field_d[0] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("quickchat_shortcut_keys,1", 511);
                 if (null != var2) {
-                  bg.field_d[1] = IterableNodeHashTable.a(var2, 17746);
+                  LoginMethodPreference.field_d[1] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("quickchat_shortcut_keys,2", 511);
                 if (var2 != null) {
-                  bg.field_d[2] = IterableNodeHashTable.a(var2, 17746);
+                  LoginMethodPreference.field_d[2] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("quickchat_shortcut_keys,3", 511);
                 if (var2 != null) {
-                  bg.field_d[3] = IterableNodeHashTable.a(var2, 17746);
+                  LoginMethodPreference.field_d[3] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("quickchat_shortcut_keys,4", 511);
                 if (null != var2) {
-                  bg.field_d[4] = IterableNodeHashTable.a(var2, 17746);
+                  LoginMethodPreference.field_d[4] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("quickchat_shortcut_keys,5", 511);
                 if (null != var2) {
-                  bg.field_d[5] = IterableNodeHashTable.a(var2, 17746);
+                  LoginMethodPreference.field_d[5] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("keychar_the_character_under_questionmark", 511);
                 if (null != var2) {
@@ -3306,19 +3306,19 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("reconnect_lost_seq,0", 511);
                 if (var2 != null) {
-                  cl.field_q[0] = IterableNodeHashTable.a(var2, 17746);
+                  RasterStateFrame.field_q[0] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("reconnect_lost_seq,1", 511);
                 if (var2 != null) {
-                  cl.field_q[1] = IterableNodeHashTable.a(var2, 17746);
+                  RasterStateFrame.field_q[1] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("reconnect_lost_seq,2", 511);
                 if (var2 != null) {
-                  cl.field_q[2] = IterableNodeHashTable.a(var2, 17746);
+                  RasterStateFrame.field_q[2] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("reconnect_lost_seq,3", 511);
                 if (null != var2) {
-                  cl.field_q[3] = IterableNodeHashTable.a(var2, 17746);
+                  RasterStateFrame.field_q[3] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("reconnect_lost", 511);
                 if (var2 != null) {
@@ -3550,7 +3550,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("createtouse", 511);
                 if (var2 != null) {
-                  fr.field_D = IterableNodeHashTable.a(var2, 17746);
+                  DraggableWidget.field_D = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("achievementsoffline", 511);
                 if (null != var2) {
@@ -3661,7 +3661,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                   IterableNodeHashTable.a(var2, 17746);
                 }
             }
-            void runChunk3() throws java.lang.RuntimeException {
+            void loadSubscriptionText() throws java.lang.RuntimeException {
                 var2 = TertiaryLinkNode.a("mustlogin_alternate,1", 511);
                 if (null != var2) {
                   QuickChatCategoryDefinition.field_x[1] = IterableNodeHashTable.a(var2, 17746);
@@ -3751,13 +3751,13 @@ final class TutorialMapGenerator extends StandardMapGenerator {
             }
             void run() {
                 try {
-                  runChunk0();
+                  loadLoginAndAccountRules();
                   if (finished) return;
-                  runChunk1();
+                  loadAccountRulesAndMenuText();
                   if (finished) return;
-                  runChunk2();
+                  loadMenuAndMembershipText();
                   if (finished) return;
-                  runChunk3();
+                  loadSubscriptionText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -3773,7 +3773,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        ClientTextLoader decompiledBody = new ClientTextLoader(param0, param1);
         decompiledBody.run();
     }
 
@@ -3853,7 +3853,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
         try {
           field_m = null;
           if (param0 != -10) {
-            TutorialMapGenerator.a((nq) null, (byte) 27, (String) null, (int[]) null);
+            TutorialMapGenerator.a((BitmapFont) null, (byte) 27, (String) null, (int[]) null);
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "vi.C(" + param0 + ')');

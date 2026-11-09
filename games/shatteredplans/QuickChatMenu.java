@@ -3,12 +3,12 @@
  */
 import java.util.*;
 
-final class vm extends AnimatedPanel {
+final class QuickChatMenu extends AnimatedPanel {
     private int field_xb;
     static int field_Bb;
     private int field_Eb;
     private int field_Qb;
-    private vm field_Ob;
+    private QuickChatMenu field_Ob;
     private sg[] field_Kb;
     private int field_Mb;
     static AnimatedPanel field_Cb;
@@ -20,7 +20,7 @@ final class vm extends AnimatedPanel {
     private char[] field_zb;
     private int[] field_Hb;
     private int field_Db;
-    private vm[] field_yb;
+    private QuickChatMenu[] field_yb;
     private int field_Gb;
     static AnimatedPanel field_Ab;
     static Sprite field_Jb;
@@ -78,7 +78,7 @@ final class vm extends AnimatedPanel {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            vm.clearStatics(-38);
+            QuickChatMenu.clearStatics(-38);
           }
           if (!param2) {
             stackIn_6_0 = PlayerStats.field_c.stringWidth(param0);
@@ -113,8 +113,8 @@ final class vm extends AnimatedPanel {
         int var6;
         sg stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
-        vm var4;
-        vm var7;
+        QuickChatMenu var4;
+        QuickChatMenu var7;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         for (var4_int = 0; this.field_Kb.length > var4_int; var4_int++) {
           var5 = this.field_Kb[var4_int];
@@ -126,7 +126,7 @@ final class vm extends AnimatedPanel {
           }
         }
         if (param2 > -101) {
-          vm.clearStatics(96);
+          QuickChatMenu.clearStatics(96);
         }
         if (this.field_Gb != -1) {
           var7 = this.field_yb[this.field_Gb];
@@ -235,7 +235,7 @@ final class vm extends AnimatedPanel {
         int var7 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param1) {
           String var8 = (String) null;
-          vm.a((String) null, -29, (String) null, (String) null);
+          QuickChatMenu.a((String) null, -29, (String) null, (String) null);
         }
         int var4 = oq.field_j == 85 ? 1 : 0;
         if (this.field_Ob != null) {
@@ -268,7 +268,7 @@ final class vm extends AnimatedPanel {
         return false;
     }
 
-    vm(long param0, AnimatedPanel param1, AnimatedPanel param2, AnimatedPanel param3, vm[] param4, int[] param5, String[] param6, char[] param7) {
+    QuickChatMenu(long param0, AnimatedPanel param1, AnimatedPanel param2, AnimatedPanel param3, QuickChatMenu[] param4, int[] param5, String[] param6, char[] param7) {
         super(param0, param1);
         int var13 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -292,8 +292,8 @@ final class vm extends AnimatedPanel {
         String var12 = null;
         Object var14 = null;
         int var15 = 0;
-        nq var17 = null;
-        nq var18 = null;
+        BitmapFont var17 = null;
+        BitmapFont var18 = null;
         this.field_Gb = -1;
         try {
           this.field_Hb = param5;
@@ -381,7 +381,7 @@ final class vm extends AnimatedPanel {
         field_Jb = null;
         field_Fb = null;
         if (param0 != -22521) {
-          vm.clearStatics(-73);
+          QuickChatMenu.clearStatics(-73);
         }
         field_Cb = null;
         field_Ab = null;

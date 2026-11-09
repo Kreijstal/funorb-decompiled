@@ -3,7 +3,7 @@
  */
 final class og implements WidgetPainter {
     static int[] field_c;
-    static bg field_b;
+    static LoginMethodPreference field_b;
     static String field_a;
 
     final static Ai a(int param0, AiHost param1, Player param2, GameState param3, int param4) {
@@ -25,7 +25,7 @@ final class og implements WidgetPainter {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 >= -69) {
-            field_b = (bg) null;
+            field_b = (LoginMethodPreference) null;
           }
           if (param0 == 2) {
             stackIn_5_0 = new TutorialAi(param3, param2, param1);
@@ -85,7 +85,7 @@ final class og implements WidgetPainter {
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
         if (param0) {
-          field_b = (bg) null;
+          field_b = (LoginMethodPreference) null;
         }
         if (null == TertiaryListSequence.field_j) {
           return;
@@ -106,10 +106,10 @@ final class og implements WidgetPainter {
     }
 
     final static void a(int param0, boolean param1) {
-        le.field_e.draw(0, param0, (byte) -66);
+        ByteArrayStorage.field_e.draw(0, param0, (byte) -66);
     }
 
-    public final void a(UiWidget param0, int param1, boolean param2, int param3, byte param4) {
+    public final void paintWidget(UiWidget param0, int param1, boolean param2, int param3, byte param4) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -263,7 +263,7 @@ final class og implements WidgetPainter {
     }
 
     static {
-        field_b = new bg("email");
+        field_b = new LoginMethodPreference("email");
         field_a = "Rules: Classic";
     }
 }

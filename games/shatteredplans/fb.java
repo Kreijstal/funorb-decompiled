@@ -128,7 +128,7 @@ final class fb extends AnimatedPanel {
           if ((param7.field_w & 1 << param4.field_x) == 0) {
             if (1 != param3) {
               if (param5 == 1) {
-                var14 = QuickChatCategoryRegistry.a(fa.field_S, 4371, new String[]{Integer.toString(param3)});
+                var14 = QuickChatCategoryRegistry.a(ValidatedTextInputWidget.field_S, 4371, new String[]{Integer.toString(param3)});
               } else {
                 var14 = QuickChatCategoryRegistry.a(jm.field_q, 4371, new String[]{Integer.toString(param3), Integer.toString(param5)});
               }
@@ -192,7 +192,7 @@ final class fb extends AnimatedPanel {
           TertiaryNodeList.field_c != SoftwareRasterizer.field_k) && (so.field_q.field_d == SoftwareRasterizer.field_k &&
           SoftwareRasterizer.field_b == so.field_q.field_g)) {
           if (null == np.field_a) {
-            if (null == he.field_p) {
+            if (null == IntNode.field_p) {
               DialogRoot.j(param9 ^ 97);
             } else {
               en.a(param9 + 15471, true);

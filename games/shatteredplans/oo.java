@@ -22,7 +22,7 @@ final class oo {
 
     final static void a(String param0, byte param1) {
         try {
-          fr.field_H = param0;
+          DraggableWidget.field_H = param0;
           int var2_int = 81 % ((param1 - 0) / 43);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "oo.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

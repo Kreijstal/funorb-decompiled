@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class fr extends SingleChildWidget {
+final class DraggableWidget extends SingleChildWidget {
     static String field_D;
     private int field_A;
     private int field_C;
@@ -15,8 +15,8 @@ final class fr extends SingleChildWidget {
     private int field_G;
 
     final static void f(byte param0) {
-        int var1 = (int)(1600.0 * (1.0 + Math.cos((double)((float)cl.field_n / 500.0f))));
-        int var2 = (int)(1600.0 * (-Math.sin((double)((float)cl.field_n / 500.0f)) + 1.0));
+        int var1 = (int)(1600.0 * (1.0 + Math.cos((double)((float)RasterStateFrame.field_n / 500.0f))));
+        int var2 = (int)(1600.0 * (-Math.sin((double)((float)RasterStateFrame.field_n / 500.0f)) + 1.0));
         if (param0 > -28) {
           return;
         }
@@ -57,8 +57,8 @@ final class fr extends SingleChildWidget {
               var6 != this.field_q) {
               this.field_m = var5_int;
               this.field_q = var6;
-              if (this.field_u instanceof cd) {
-                ((cd) (this.field_u)).a((byte) 80, param1, this, param0);
+              if (this.field_u instanceof WidgetDragListener) {
+                ((WidgetDragListener) (this.field_u)).onWidgetDragged((byte) 80, param1, this, param0);
               }
             }
           } else {
@@ -189,7 +189,7 @@ final class fr extends SingleChildWidget {
         }
     }
 
-    private fr(int param0, int param1, int param2, int param3, WidgetPainter param4, WidgetListener param5, UiWidget param6, boolean param7, boolean param8) {
+    private DraggableWidget(int param0, int param1, int param2, int param3, WidgetPainter param4, WidgetListener param5, UiWidget param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_C = 2147483647;
         this.field_J = 2147483647;

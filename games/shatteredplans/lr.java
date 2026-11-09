@@ -72,7 +72,7 @@ final class lr {
             stackIn_9_0 = (MenuList) null;
             return stackIn_9_0;
           }
-          bg.a(-2612, param4.length);
+          LoginMethodPreference.buildMenuDividerSprites(-2612, param4.length);
           var8 = new SpriteButton(3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, 3 + var13.field_i / 2 + rs.field_Cb.field_J, BattleContribution.a(-1, false));
           var13.addChild(var8, 8);
           var8.field_o = QuickChatCategoryRegistry.a(AudioService.field_f, 4371, new String[]{param3.name});

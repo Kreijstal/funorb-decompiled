@@ -242,7 +242,7 @@ final class MidiPcmStream extends PcmStream {
         int var6_int = 0;
         RuntimeException var6 = null;
         Object var7 = null;
-        be var8 = null;
+        BytePayloadNode var8 = null;
         int var9 = 0;
         int var11 = 0;
         MusicPatch var12 = null;
@@ -258,7 +258,7 @@ final class MidiPcmStream extends PcmStream {
           if (0 < param3) {
             var7 = new int[]{param3};
           }
-          var8 = (be) (param1.field_i.startTraversal(-126));
+          var8 = (BytePayloadNode) (param1.field_i.startTraversal(-126));
           while (var8 != null) {
             var9 = (int)var8.key;
             var12 = (MusicPatch) (this.field_Q.get((long)var9, -25064));
@@ -275,11 +275,11 @@ final class MidiPcmStream extends PcmStream {
             } else {
               if (!var12.loadSamples(param4, var8.field_j, (int[]) (var7), 1)) {
                 var6_int = 0;
-                var8 = (be) (param1.field_i.nextInTraversal(false));
+                var8 = (BytePayloadNode) (param1.field_i.nextInTraversal(false));
                 continue;
               }
             }
-            var8 = (be) (param1.field_i.nextInTraversal(false));
+            var8 = (BytePayloadNode) (param1.field_i.nextInTraversal(false));
           }
           if (var6_int != 0) {
             param1.b();
@@ -669,7 +669,7 @@ final class MidiPcmStream extends PcmStream {
               } else {
                 var12.field_Db.setTarget(68, cr.field_c, (byte) 72, var31, 0);
               }
-              var12.field_Pb.field_z = nq.truncateWithEllipsis(var12.field_Pb.field_nb, var32, 78);
+              var12.field_Pb.field_z = BitmapFont.truncateWithEllipsis(var12.field_Pb.field_nb, var32, 78);
               var12.field_Pb.setTarget(78, cr.field_c, (byte) 85, var31, 70);
               if (var12.field_Pb.field_L &&
                 !var12.field_Pb.field_z.equals(var32)) {
@@ -845,7 +845,7 @@ final class MidiPcmStream extends PcmStream {
               if (!var12.field_ec) {
                 stackIn_155_0 = ArrayWidgetGroup.field_G;
               } else {
-                stackIn_155_0 = le.field_c;
+                stackIn_155_0 = ByteArrayStorage.field_c;
               }
               DualLinkDequeSequence.field_k = stackIn_155_0;
             }

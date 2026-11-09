@@ -12,7 +12,7 @@ final class WidgetStyle {
     WidgetPainter field_o;
     int field_d;
     int field_l;
-    nq field_h;
+    BitmapFont field_h;
     WidgetPainter field_s;
     int field_t;
     private boolean field_n;
@@ -23,7 +23,7 @@ final class WidgetStyle {
     int field_c;
     int field_k;
 
-    final void a(nq param0, boolean param1) {
+    final void a(BitmapFont param0, boolean param1) {
         WidgetTheme var17 = null;
         gn var4 = null;
         Sprite[] var5 = null;
@@ -390,7 +390,7 @@ final class WidgetStyle {
           SoftwareRasterizer.fillRect(1 + var7, 1 + var8, var5_int + 4, var6 + 4, this.field_k);
           this.field_h.drawString(param2, var7 + 3, 3 + (var8 + this.field_h.field_K), this.field_p, -1);
           if (param0 > -98) {
-            this.field_h = (nq) null;
+            this.field_h = (BitmapFont) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

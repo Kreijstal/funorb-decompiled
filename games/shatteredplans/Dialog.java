@@ -12,10 +12,10 @@ abstract class Dialog extends WidgetContainer {
 
     final static void a(String[] args, int param1, sq param2, int param3) {
         try {
-          param2.field_t = bg.a(args[0], 107);
-          param2.field_b = bg.a(args[1], 108);
-          param2.field_j = bg.a(args[2], 120);
-          param2.field_q = bg.a(args[3], 100);
+          param2.field_t = LoginMethodPreference.parseIntegerOrAuto(args[0], 107);
+          param2.field_b = LoginMethodPreference.parseIntegerOrAuto(args[1], 108);
+          param2.field_j = LoginMethodPreference.parseIntegerOrAuto(args[2], 120);
+          param2.field_q = LoginMethodPreference.parseIntegerOrAuto(args[3], 100);
           param2.field_n = param1;
           if (param3 > -11) {
             Dialog.a(-61);
@@ -79,7 +79,7 @@ abstract class Dialog extends WidgetContainer {
           !(ArchiveIndex.field_r.field_w >= this.field_n)) {
           ArchiveIndex.field_r = new Sprite(this.field_x, this.field_n);
         }
-        aq.a((byte) 110, ArchiveIndex.field_r);
+        aq.pushSpriteRaster((byte) 110, ArchiveIndex.field_r);
         SoftwareRasterizer.clear();
         this.a(0, 103, 0);
         super.drawLayer(param0, param1, -param2 - this.field_q, -param3 - this.field_m);

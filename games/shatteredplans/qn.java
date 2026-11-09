@@ -38,7 +38,7 @@ final class qn {
 
     final static void a(ik[] param0, int param1, boolean param2) {
         try {
-          bj.k(26987);
+          NameSuggestionsPanel.resetPolygonScanlineBuckets(26987);
           bk.a(param0, 0);
           if (!param2) {
             field_c = -118;
@@ -60,17 +60,17 @@ final class qn {
         int var6 = 0;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (cb.field_h == null) {
+          if (DirectByteArrayStorage.field_h == null) {
             return;
           }
-          var1 = (hd) (cb.field_h.startForward(0));
+          var1 = (hd) (DirectByteArrayStorage.field_h.startForward(0));
           var2 = (int)RandomAccessCacheFile.field_e + 20;
           var3 = 20;
           var4 = 63 % ((param0 + 56) / 39);
           while (var1 != null) {
             if (var1.field_h < 0) {
               var2 = var2 + var1.field_i.field_w;
-              var1 = (hd) (cb.field_h.nextForward((byte) -71));
+              var1 = (hd) (DirectByteArrayStorage.field_h.nextForward((byte) -71));
               continue;
             }
             if (230 > var1.field_h) {
@@ -86,7 +86,7 @@ final class qn {
               }
             }
             var2 = var2 + var1.field_i.field_w;
-            var1 = (hd) (cb.field_h.nextForward((byte) -71));
+            var1 = (hd) (DirectByteArrayStorage.field_h.nextForward((byte) -71));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

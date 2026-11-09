@@ -35,7 +35,7 @@ final class hd extends IntrusiveNode {
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           SoftwareRasterizer.clear();
-          var2 = 300 - di.field_m;
+          var2 = 300 - FleetTrailPoint.field_m;
           var1_int = -25 + var2 / 8;
           DualLinkDeque.field_a.drawColourised(var1_int, 0, 33023);
           var1_intLifetime1 = var2 / 6 - 100;
@@ -46,11 +46,11 @@ final class hd extends IntrusiveNode {
           for (var4 = 0; var4 < var7.length; var4++) {
             var9 = var7[var4];
             if (var9.field_a != 0) {
-              SoftwareRasterizer.b(var1_intLifetime1 + var9.field_e << 4, var9.field_j << 4, var9.field_f, var9.field_a, MenuButton.field_u);
+              SoftwareRasterizer.addRadialGlowQ4(var1_intLifetime1 + var9.field_e << 4, var9.field_j << 4, var9.field_f, var9.field_a, MenuButton.field_u);
             }
           }
           var1_intLifetime2 = -250 + var2 / 4;
-          vm.field_Jb.drawColourised(var1_intLifetime2, 120, 8421631);
+          QuickChatMenu.field_Jb.drawColourised(var1_intLifetime2, 120, 8421631);
           SliderPainter.field_e.drawAlpha(var1_intLifetime2, param0, QuickChatCategoryDefinition.field_r / 4);
           sr.field_F.drawAlpha(var1_intLifetime2, 120, QuickChatCategoryDefinition.field_r);
           var3Lifetime1 = MenuButton.field_H;
@@ -59,7 +59,7 @@ final class hd extends IntrusiveNode {
           while (var3Lifetime1.length > var8) {
             var10 = var3Lifetime1[var8];
             if (0 != var10.field_a) {
-              SoftwareRasterizer.b(var10.field_e + var1_intLifetime2 << 4, var10.field_j + 120 << 4, var10.field_f, var10.field_a, MenuButton.field_u);
+              SoftwareRasterizer.addRadialGlowQ4(var10.field_e + var1_intLifetime2 << 4, var10.field_j + 120 << 4, var10.field_f, var10.field_a, MenuButton.field_u);
             }
             var8++;
           }
@@ -86,7 +86,7 @@ final class hd extends IntrusiveNode {
         field_n = null;
     }
 
-    hd(String param0, nq param1, int param2) {
+    hd(String param0, BitmapFont param1, int param2) {
         int var7 = 0;
         int stackIn_4_0 = 0;
         RuntimeException stackIn_18_0 = null;
@@ -167,13 +167,13 @@ final class hd extends IntrusiveNode {
           return;
         }
         try {
-          cb.field_i = new int[var1_int];
+          DirectByteArrayStorage.field_i = new int[var1_int];
           for (var2 = 0; var1_int > var2; var2++) {
-            var3 = aa.a(var2, (byte) -71);
+            var3 = AccountCreationForm.a(var2, (byte) -71);
             if (var2 != -1 + var1_int) {
               var3 += 50;
             }
-            cb.field_i[var2] = var3;
+            DirectByteArrayStorage.field_i[var2] = var3;
             kb.field_A = kb.field_A + var3;
           }
           kb.field_A = kb.field_A - 294;

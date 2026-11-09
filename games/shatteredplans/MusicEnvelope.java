@@ -5,7 +5,7 @@ final class MusicEnvelope {
     static IntrusiveDeque field_b;
     int field_j;
     int field_c;
-    static nq field_g;
+    static BitmapFont field_g;
     int field_a;
     int field_h;
     byte[] field_e;

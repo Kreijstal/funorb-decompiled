@@ -77,7 +77,7 @@ final class nb {
         if (null == ji.field_G) {
           var1 = Dialog.l(param0 ^ param0);
           no.field_e = new ri(var1, (String) null, true, false, false);
-          le.field_e.addDialog(true, ae.field_f);
+          ByteArrayStorage.field_e.addDialog(true, ae.field_f);
           ae.field_f.b(no.field_e, param0 - 18);
           ae.field_f.n(param0 + 7363);
           return;
@@ -85,7 +85,7 @@ final class nb {
         ji.field_G.i((byte) -104);
         var1Lifetime1 = Dialog.l(param0 ^ param0);
         no.field_e = new ri(var1Lifetime1, (String) null, true, false, false);
-        le.field_e.addDialog(true, ae.field_f);
+        ByteArrayStorage.field_e.addDialog(true, ae.field_f);
         ae.field_f.b(no.field_e, param0 - 18);
         ae.field_f.n(param0 + 7363);
     }

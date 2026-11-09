@@ -3,7 +3,7 @@
  */
 final class EmailValidator extends TextFieldValidator {
     private MatchingTextValidator field_s;
-    static nq field_x;
+    static BitmapFont field_x;
     static boolean field_r;
     static String field_u;
     static IndexedSprite[] field_o;
@@ -14,9 +14,9 @@ final class EmailValidator extends TextFieldValidator {
     private String field_t;
     static boolean field_p;
 
-    final static th a(int param0, int param1, Archive param2, Archive param3, int param4) {
+    final static CoverageBitmapFont a(int param0, int param1, Archive param2, Archive param3, int param4) {
         RuntimeException var5 = null;
-        th stackIn_7_0 = null;
+        CoverageBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -117,7 +117,7 @@ final class EmailValidator extends TextFieldValidator {
             return stackIn_7_0;
           }
           if (this.computeStateFor(-11196, param1) == ArchiveSourceManager.field_b) {
-            stackIn_12_0 = ab.field_d;
+            stackIn_12_0 = AccountValidationText.field_d;
             return stackIn_12_0;
           }
           stackIn_14_0 = DualLinkDequeSequence.field_g;
@@ -204,7 +204,7 @@ final class EmailValidator extends TextFieldValidator {
             }
           } else {
             if (np.field_a == null) {
-              if (null == he.field_p) {
+              if (null == IntNode.field_p) {
                 IntrusiveNodeHashTable.field_e = false;
                 if (Archive.field_b <= 0) {
                   if (0 >= PrivateChatMessage.field_k) {
@@ -395,14 +395,14 @@ final class EmailValidator extends TextFieldValidator {
           stackIn_9_0 = null;
           stackIn_9_1 = null;
           stackIn_9_2 = var5;
-          if (null == bj.field_K) {
+          if (null == NameSuggestionsPanel.field_K) {
             stackIn_10_0 = null;
             stackIn_10_1 = null;
             stackIn_10_3 = tm.field_i;
           } else {
             stackIn_10_0 = null;
             stackIn_10_1 = null;
-            stackIn_10_3 = bj.field_K;
+            stackIn_10_3 = NameSuggestionsPanel.field_K;
           }
           stackIn_11_0 = new Sprite(stackIn_9_2, (java.awt.Component) (stackIn_10_3));
           return stackIn_11_0;

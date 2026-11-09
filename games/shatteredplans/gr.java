@@ -32,22 +32,22 @@ final class gr extends IntrusiveNode {
         try {
           var4_int = -param0 + 256;
           var5 = 16711935 & param3;
-          c.c();
+          PolygonSpanIterator.resetEdges();
           var6 = 65280 & param3;
-          c.a(param2, 0, param2.length);
-          c.d();
-          while (c.a()) {
-            var7 = c.field_e;
+          PolygonSpanIterator.appendPolygonEdges(param2, 0, param2.length);
+          PolygonSpanIterator.initializeScanlines();
+          while (PolygonSpanIterator.nextSpan()) {
+            var7 = PolygonSpanIterator.spanLeft;
             if (SoftwareRasterizer.field_i > var7) {
               var7 = SoftwareRasterizer.field_i;
             }
-            var8 = c.field_a;
+            var8 = PolygonSpanIterator.spanRight;
             if (SoftwareRasterizer.field_l < var8) {
               var8 = SoftwareRasterizer.field_l;
             }
-            var9 = (var7 & -8) - (7 & c.field_h);
+            var9 = (var7 & -8) - (7 & PolygonSpanIterator.scanlineY);
             var9 = var9 + (8 + (-8 & -var9 + var7));
-            var10 = var9 + c.field_h * SoftwareRasterizer.field_b;
+            var10 = var9 + PolygonSpanIterator.scanlineY * SoftwareRasterizer.field_b;
             while (var8 > var9) {
               SoftwareRasterizer.field_h[var10] = we.intAnd(16711935, we.intAnd(16711935, SoftwareRasterizer.field_h[var10]) * var4_int + var5 * param0 >>> 8) + (we.intAnd(we.intAnd(65280, SoftwareRasterizer.field_h[var10]) * var4_int + var6 * param0, 16711680) >>> 8);
               var10 += 8;
@@ -75,14 +75,14 @@ final class gr extends IntrusiveNode {
 
     public static void clearStatics(int param0) {
         if (param0 >= -25) {
-          gr.a((byte) -99, 47, -15);
+          gr.createSolidSquare((byte) -99, 47, -15);
           field_p = null;
           return;
         }
         field_p = null;
     }
 
-    final static Sprite a(byte param0, int param1, int param2) {
+    final static Sprite createSolidSquare(byte param0, int param1, int param2) {
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         Sprite var3 = new Sprite(param2, param2);
         int var4 = 0;

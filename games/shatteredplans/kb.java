@@ -147,7 +147,7 @@ final class kb extends MenuComponent {
               var7Lifetime1 = var9Lifetime1;
             }
           }
-          ah.field_R = -(var7Lifetime1 >> 1) + var7Lifetime1 + WeightedLruCache.field_e;
+          ValidationMessageWidget.field_R = -(var7Lifetime1 >> 1) + var7Lifetime1 + WeightedLruCache.field_e;
           ld.field_j = -(var7Lifetime1 >> 1) + WeightedLruCache.field_e;
           DiskCacheWorker.field_b = (js.field_e + uo.field_g << 1) * ns.field_nb.field_b;
           for (var8Lifetime2 = 0; var8Lifetime2 < StarLinkPlanner.field_c.length; var8Lifetime2++) {

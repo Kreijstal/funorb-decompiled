@@ -62,7 +62,7 @@ final class Wormhole extends IntrusiveNode {
     }
 
     final static void a(byte param0) {
-        an.field_b = new aa();
+        an.field_b = new AccountCreationForm();
         if (param0 > 64) {
           ae.field_f.b(an.field_b, -88);
           return;

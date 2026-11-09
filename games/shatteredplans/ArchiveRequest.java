@@ -30,17 +30,17 @@ abstract class ArchiveRequest extends DualLinkNode {
 
     abstract int e(int param0);
 
-    final static bg a(java.applet.Applet param0, boolean param1) {
+    final static LoginMethodPreference a(java.applet.Applet param0, boolean param1) {
         int var4 = 0;
         String var2 = null;
         RuntimeException var2_ref = null;
-        bg[] var3 = null;
-        bg var5 = null;
+        LoginMethodPreference[] var3 = null;
+        LoginMethodPreference var5 = null;
         int var6 = 0;
         java.applet.Applet var7 = null;
-        bg stackIn_4_0 = null;
-        bg stackIn_10_0 = null;
-        bg stackIn_15_0 = null;
+        LoginMethodPreference stackIn_4_0 = null;
+        LoginMethodPreference stackIn_10_0 = null;
+        LoginMethodPreference stackIn_15_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -55,7 +55,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           var3 = IntrusiveNode.c((byte) -90);
           for (var4 = 0; var3.length > var4; var4++) {
             var5 = var3[var4];
-            if (var5.a((byte) 80, var2)) {
+            if (var5.matches((byte) 80, var2)) {
               stackIn_10_0 = var5;
               return stackIn_10_0;
             }
@@ -99,7 +99,7 @@ abstract class ArchiveRequest extends DualLinkNode {
             return false;
           }
           if (!eh.field_P) {
-            return !cb.b((byte) -119) ? true : false;
+            return !DirectByteArrayStorage.b((byte) -119) ? true : false;
           }
           return false;
         }
@@ -107,7 +107,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           return false;
         }
         if (!eh.field_P) {
-          return !cb.b((byte) -119) ? true : false;
+          return !DirectByteArrayStorage.b((byte) -119) ? true : false;
         }
         return false;
     }

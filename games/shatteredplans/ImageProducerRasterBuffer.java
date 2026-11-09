@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
-    static hh field_p;
+    static BinaryBitmapFont field_p;
     static int field_i;
     static String field_m;
     static boolean field_n;

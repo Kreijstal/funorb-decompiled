@@ -53,7 +53,7 @@ abstract class ArchiveSource {
             return stackIn_8_0;
           }
           if (3 == param0) {
-            stackIn_12_0 = QuickChatCategoryRegistry.a(fa.field_Y, 4371, new String[]{param2});
+            stackIn_12_0 = QuickChatCategoryRegistry.a(ValidatedTextInputWidget.field_Y, 4371, new String[]{param2});
             return stackIn_12_0;
           }
           if (4 == param0) {

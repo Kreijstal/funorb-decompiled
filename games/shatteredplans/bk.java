@@ -8,7 +8,7 @@ final class bk {
     static String[] field_b;
 
     final static boolean a(byte param0) {
-        eq var1 = null;
+        ReflectionCheck var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
@@ -18,7 +18,7 @@ final class bk {
           if (param0 != -50) {
             bk.a((byte) -35);
           }
-          var1 = (eq) (MusicEnvelope.field_b.startForward(0));
+          var1 = (ReflectionCheck) (MusicEnvelope.field_b.startForward(0));
           if (null == var1) {
             return false;
           }
@@ -168,8 +168,8 @@ final class bk {
           var2 = null;
           var3 = 85 / ((-64 - param0) / 60);
           if (0 == ProductionContent.field_h &&
-            null != he.field_p) {
-            var2 = di.field_k;
+            null != IntNode.field_p) {
+            var2 = FleetTrailPoint.field_k;
           }
           if (ProductionContent.field_h == 2 &&
             !lh.e((byte) 75)) {
@@ -188,7 +188,7 @@ final class bk {
           }
           if (null == var2 &&
             !ShatteredPlansClient.field_K &&
-            fa.field_X == null) {
+            ValidatedTextInputWidget.field_X == null) {
             var2 = ce.field_u;
           }
           if (var2 != null) {
@@ -222,7 +222,7 @@ final class bk {
                     decompiledSharedTail1 = (var11 != 0);
                   }
                   if (decompiledSharedTail1) {
-                    var5 = "[" + QuickChatCategoryRegistry.a(he.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
+                    var5 = "[" + QuickChatCategoryRegistry.a(IntNode.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
                   }
                 }
               }
@@ -233,7 +233,7 @@ final class bk {
               }
               var9 = stackIn_53_0;
               var5 = var5 + var4 + var9;
-              boolean decompiledSharedTail0 = !(bg.field_g);
+              boolean decompiledSharedTail0 = !(LoginMethodPreference.field_g);
               if (!decompiledSharedTail0) {
                 var6 = "";
                 var5 = "<col=999999>" + var5 + uh.field_d + "</col>";
@@ -248,7 +248,7 @@ final class bk {
               if (!BattleEvent.a((byte) 110)) {
                 if (uq.field_j.field_L &&
                   var10 > (-uq.field_j.field_B + TertiaryListSequence.field_k)) {
-                  if (bg.field_g) {
+                  if (LoginMethodPreference.field_g) {
                     var1 = "Broken!";
                   } else {
                     var1 = qj.field_c;
@@ -256,12 +256,12 @@ final class bk {
                 }
                 if (uq.field_j.field_rb != 0 &&
                   uq.field_j.field_Q < var10 &&
-                  !bg.field_g) {
+                  !LoginMethodPreference.field_g) {
                   ClientException.a(true);
                 }
               }
             }
-            cq.a(-110, BufferedSocket.field_q[var7], var6, var5 + nq.escapeMarkup(cg.field_E.toString()), var8);
+            cq.a(-110, BufferedSocket.field_q[var7], var6, var5 + BitmapFont.escapeMarkup(cg.field_E.toString()), var8);
             if (!sr.field_h) {
               cg.field_C.field_L = false;
             }

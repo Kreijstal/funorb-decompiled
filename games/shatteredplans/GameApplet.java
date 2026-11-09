@@ -18,7 +18,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     public static int field_k;
 
     public final void start() {
-        if (this != ts.field_G ||
+        if (this != TextHotspotWidget.field_G ||
           fc.field_a) {
           return;
         }
@@ -60,7 +60,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     }
 
     public final void stop() {
-        if (ts.field_G != this ||
+        if (TextHotspotWidget.field_G != this ||
           fc.field_a) {
           return;
         }
@@ -331,7 +331,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
               }
               if (decompiledFrameRemainder3) {
-                var1 = ts.field_G;
+                var1 = TextHotspotWidget.field_G;
                 if (NodeSequence.field_a != null) {
                   var1 = NodeSequence.field_a;
                 }
@@ -367,7 +367,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   do {
                     if (!(DerelictVictoryChecker.field_p > var3)) {
                       this.runDraw((byte) 58);
-                      ud.a(-22, fa.field_W, tm.field_i);
+                      ud.a(-22, ValidatedTextInputWidget.field_W, tm.field_i);
                       break;
                     }
                     this.runUpdate((byte) -23);
@@ -576,7 +576,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           var9 = ShatteredPlansClient.field_F ? 1 : 0;
           try {
             try {
-              if (null != ts.field_G) {
+              if (null != TextHotspotWidget.field_G) {
                 js.field_d = js.field_d + 1;
                 if (js.field_d < 3) {
                   this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
@@ -591,16 +591,16 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 field_f = (int[]) null;
               }
               gn.field_B = 0;
-              ts.field_G = this;
+              TextHotspotWidget.field_G = this;
               VictoryChecker.field_e = param6;
               ArchiveSourceManager.field_h = param6;
               SliderWidget.field_G = param5;
               NanoFrameTimer.field_k = 0;
               ei.field_c = GameScreen.getHostApplet((byte) 126);
               dupTemp$0 = new PlatformTaskDispatcher(param3, param4, param1, true);
-              fa.field_W = dupTemp$0;
+              ValidatedTextInputWidget.field_W = dupTemp$0;
               jl.field_S = dupTemp$0;
-              var8 = fa.field_W.requestThread(true, 1, (Runnable) (this));
+              var8 = ValidatedTextInputWidget.field_W.requestThread(true, 1, (Runnable) (this));
               while (true) {
                 if (0 == var8.field_d) {
                   jb.sleep((byte) -120, 10L);
@@ -644,7 +644,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         java.awt.Rectangle var2 = null;
         RuntimeException var2_ref = null;
         try {
-          if (ts.field_G == this &&
+          if (TextHotspotWidget.field_G == this &&
             !fc.field_a) {
             oq.field_e = true;
             if (VictoryChecker.field_a &&
@@ -852,7 +852,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     }
 
     public final void destroy() {
-        if (ts.field_G != this ||
+        if (TextHotspotWidget.field_G != this ||
           fc.field_a) {
           return;
         }
@@ -978,9 +978,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               exception = (Exception) (Object) decompiledCaughtException;
             }
           }
-          if (fa.field_W != null) {
+          if (ValidatedTextInputWidget.field_W != null) {
             try {
-              fa.field_W.shutdown(58);
+              ValidatedTextInputWidget.field_W.shutdown(58);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -1051,7 +1051,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (null == cg.field_K) {
             if (null == uf.field_b) {
               if (NodeSequence.field_a == null) {
-                var2 = ts.field_G;
+                var2 = TextHotspotWidget.field_G;
                 if (var4 != 0) {
                   var2 = NodeSequence.field_a;
                   var2 = uf.field_b;

@@ -77,7 +77,7 @@ final class DualLinkDequeSequence extends NodeSequence {
 
     final static gq[] a(int param0) {
         if (param0 == 4) {
-          return new gq[]{IntrusiveDequeCursor.field_g, nd.field_c, SliderWidget.field_O, ss.field_c, cl.field_p, GameApplet.field_c, CheckboxPainter.field_j, Bzip2State.field_I, ld.field_h, ArchiveSource.field_b, StrongCacheEntry.field_A, WeightedCacheEntry.field_r, ks.field_a, ro.field_c};
+          return new gq[]{IntrusiveDequeCursor.field_g, nd.field_c, SliderWidget.field_O, ss.field_c, RasterStateFrame.field_p, GameApplet.field_c, CheckboxPainter.field_j, Bzip2State.field_I, ld.field_h, ArchiveSource.field_b, StrongCacheEntry.field_A, WeightedCacheEntry.field_r, ks.field_a, ro.field_c};
         }
         return (gq[]) null;
     }

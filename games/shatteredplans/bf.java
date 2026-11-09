@@ -52,7 +52,7 @@ final class bf {
               if (TertiaryNodeList.field_b) {
                 param2 = QuickChatCategoryDefinition.field_p;
               } else {
-                param2 = aa.field_N;
+                param2 = AccountCreationForm.field_N;
               }
               no.field_e.a(16311, MenuWindow.field_B);
             }

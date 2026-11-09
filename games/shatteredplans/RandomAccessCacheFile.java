@@ -235,7 +235,7 @@ final class RandomAccessCacheFile {
 
     final static void a(int param0) {
         Archive.field_c[field_k] = SoftwareRasterizer.field_h;
-        cb.field_f[field_k] = SoftwareRasterizer.field_i;
+        DirectByteArrayStorage.field_f[field_k] = SoftwareRasterizer.field_i;
         dk.field_b[field_k] = SoftwareRasterizer.field_l;
         if (param0 >= -103) {
           RandomAccessCacheFile.a(109, 107);

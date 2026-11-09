@@ -81,10 +81,10 @@ final class ClientException extends RuntimeException {
         int var10 = 0;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var1_int = ah.field_R - ld.field_j;
+          var1_int = ValidationMessageWidget.field_R - ld.field_j;
           ld.field_j = -(var1_int >> 1) + WeightedLruCache.field_e;
           vo.field_b = -(DiskCacheWorker.field_b >> 1) + ri.field_O;
-          ah.field_R = ld.field_j + var1_int;
+          ValidationMessageWidget.field_R = ld.field_j + var1_int;
           var2 = vo.field_b;
           if (param0 <= 32) {
             return;

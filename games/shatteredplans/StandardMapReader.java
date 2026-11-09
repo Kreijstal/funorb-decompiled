@@ -86,7 +86,7 @@ final class StandardMapReader implements MapGenerator {
         }
     }
 
-    final static AnimatedPanel a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6, int param7, nq param8, int param9, int param10, int param11, int param12) {
+    final static AnimatedPanel a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6, int param7, BitmapFont param8, int param9, int param10, int param11, int param12) {
         AnimatedPanel var13 = null;
         RuntimeException var13_ref = null;
         AnimatedPanel stackIn_2_0 = null;

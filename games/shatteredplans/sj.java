@@ -121,7 +121,7 @@ final class sj {
               decompiledFrameRemainder0 = false;
             }
             else {
-              uq.field_m.a(cb.field_m, 27275, "generateshortfall");
+              uq.field_m.a(DirectByteArrayStorage.field_m, 27275, "generateshortfall");
             }
           }
           var4Lifetime1 = 0;
@@ -137,7 +137,7 @@ final class sj {
           while (var11 < 4) {
             if (var12.field_u[var11] > 0 &&
               var3[var11]) {
-              var7_ref = QuickChatCategoryRegistry.a("<col=<%0>><%1></col>", param0 ^ -27221, new String[]{Integer.toString(bg.field_e[var11], 16), or.field_d[var11]});
+              var7_ref = QuickChatCategoryRegistry.a("<col=<%0>><%1></col>", param0 ^ -27221, new String[]{Integer.toString(LoginMethodPreference.field_e[var11], 16), or.field_d[var11]});
               var5Lifetime1 = var7_ref;
               if (var4Lifetime2 == 0) {
                 var5Lifetime1 = var7_ref;

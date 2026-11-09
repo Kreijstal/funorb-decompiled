@@ -7,7 +7,7 @@ final class ce extends rr {
     static String field_w;
     static GameSession field_x;
 
-    private ce(nq param0, int param1) {
+    private ce(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 

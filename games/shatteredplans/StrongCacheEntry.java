@@ -101,13 +101,13 @@ final class StrongCacheEntry extends WeightedCacheEntry {
             var12_ref = (Territory) (param1[var11Lifetime1].field_i.startForward(0));
             while (var12_ref != null) {
               im.writePlayer(var12_ref.field_o, param2, 9555);
-              di.writeStar(var12_ref.field_q, false, param2);
+              FleetTrailPoint.writeStar(var12_ref.field_q, false, param2);
               var13 = var12_ref.starCount(89);
               param2.writeByte(var13, (byte) -112);
               var14_ref_ln = var12_ref.firstStar(18229);
               while (var14_ref_ln != null) {
                 if (var14_ref_ln != var12_ref.field_q) {
-                  di.writeStar(var14_ref_ln, false, param2);
+                  FleetTrailPoint.writeStar(var14_ref_ln, false, param2);
                 }
                 var14_ref_ln = var12_ref.nextStar(-23410);
               }
@@ -127,13 +127,13 @@ final class StrongCacheEntry extends WeightedCacheEntry {
             if (var13_ref_lo != null &&
               var13_ref_lo.starCount(122) > 0) {
               im.writePlayer(param1[var12_intLifetime1], param2, 9555);
-              di.writeStar(var13_ref_lo.field_q, false, param2);
+              FleetTrailPoint.writeStar(var13_ref_lo.field_q, false, param2);
               var14 = var13_ref_lo.starCount(-127);
               param2.writeByte(var14, (byte) -69);
               var15 = var13_ref_lo.firstStar(18229);
               while (var15 != null) {
                 if (var15 != var13_ref_lo.field_q) {
-                  di.writeStar(var15, false, param2);
+                  FleetTrailPoint.writeStar(var15, false, param2);
                 }
                 var15 = var13_ref_lo.nextStar(-23410);
               }
@@ -159,8 +159,8 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           param2.writeByte(param4.size(0), (byte) -67);
           var12 = (Wormhole) (param4.startForward(0));
           while (var12 != null) {
-            di.writeStar(var12.field_n, false, param2);
-            di.writeStar(var12.field_k, false, param2);
+            FleetTrailPoint.writeStar(var12.field_n, false, param2);
+            FleetTrailPoint.writeStar(var12.field_k, false, param2);
             param2.writeByte(var12.field_m, (byte) -82);
             var12 = (Wormhole) (param4.nextForward((byte) -71));
           }
@@ -248,7 +248,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
         String stackIn_36_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
-        hh var7 = null;
+        BinaryBitmapFont var7 = null;
         AnimatedPanel var8 = null;
         AnimatedPanel var9 = null;
         AnimatedPanel var10 = null;
@@ -309,7 +309,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           ImageProducerRasterBuffer.field_p.a(var5, var24);
           ul.field_xb.a(var5, var24);
           var8 = new AnimatedPanel(0L, (AnimatedPanel) null);
-          var8.field_nb = (nq) ((Object) var7);
+          var8.field_nb = (BitmapFont) ((Object) var7);
           var8.field_x = 16777215;
           var8.field_Y = cr.field_c;
           var8.field_G = 1;
@@ -318,7 +318,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           var10 = new AnimatedPanel(0L, (AnimatedPanel) null);
           var10.field_x = 16777215;
           var10.field_Y = cr.field_c;
-          var10.field_nb = (nq) ((Object) ImageProducerRasterBuffer.field_p);
+          var10.field_nb = (BitmapFont) ((Object) ImageProducerRasterBuffer.field_p);
           var10.field_G = 1;
           var11 = var10;
           var11.field_y = 1;
@@ -346,14 +346,14 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           jr.field_h = new AnimatedPanel(0L, var10);
           jr.field_h.field_kb = 2;
           jr.field_h.field_F = ArchiveSourceManager.a(false, 2039583, false, 30, 3815994, (byte) -35);
-          vm.field_Cb = new AnimatedPanel(0L, var10);
-          vm.field_Cb.field_kb = 2;
-          vm.field_Cb.field_F = ArchiveSourceManager.a(false, 2039583, true, 30, 3815994, (byte) -64);
+          QuickChatMenu.field_Cb = new AnimatedPanel(0L, var10);
+          QuickChatMenu.field_Cb.field_kb = 2;
+          QuickChatMenu.field_Cb.field_F = ArchiveSourceManager.a(false, 2039583, true, 30, 3815994, (byte) -64);
           SpriteState.field_u = new AnimatedPanel(0L, (AnimatedPanel) null);
           SpriteState.field_u.field_x = 13421772;
           SpriteState.field_u.field_Y = cr.field_c;
           SpriteState.field_u.field_G = 1;
-          SpriteState.field_u.field_nb = (nq) ((Object) ImageProducerRasterBuffer.field_p);
+          SpriteState.field_u.field_nb = (BitmapFont) ((Object) ImageProducerRasterBuffer.field_p);
           gn.field_w = new AnimatedPanel(0L, SpriteState.field_u);
           gn.field_w.field_ab = 16777215;
           gn.field_w.field_W = 8421504;
@@ -363,7 +363,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           var15 = new AnimatedPanel(0L, gn.field_w);
           var15.field_x = 16777215;
           var15.field_Y = cr.field_c;
-          var15.field_nb = (nq) ((Object) var7);
+          var15.field_nb = (BitmapFont) ((Object) var7);
           fg.field_b = new AnimatedPanel(0L, SpriteState.field_u);
           fg.field_b.field_F = ArchiveSourceManager.a(false, 2236962, false, 16, 2236962, (byte) -40);
           fg.field_b.field_kb = 2;
@@ -514,7 +514,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, Sprite[] param5, int param6, int param7, Sprite[] param8, int param9, nq param10, nq param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, Sprite[] param19, int param20) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, Sprite[] param5, int param6, int param7, Sprite[] param8, int param9, BitmapFont param10, BitmapFont param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, Sprite[] param19, int param20) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -533,7 +533,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           AgeValidator.a(param2, param16, param9, 0, param12, param13, param20, param7, param6, param0, param4, param10, param17, param3, new v(param8), new v(param19), param18, param11, param14, new v(param5), param15);
           if (param1 != 13421772) {
             var22 = (Sprite[]) null;
-            StrongCacheEntry.a(48, 114, -92, -17, -81, (Sprite[]) null, 87, -77, (Sprite[]) null, 10, (nq) null, (nq) null, -117, -102, 14, -52, -97, -21, 46, (Sprite[]) null, 33);
+            StrongCacheEntry.a(48, 114, -92, -17, -81, (Sprite[]) null, 87, -77, (Sprite[]) null, 10, (BitmapFont) null, (BitmapFont) null, -117, -102, 14, -52, -97, -21, 46, (Sprite[]) null, 33);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

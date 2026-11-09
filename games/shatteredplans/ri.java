@@ -86,12 +86,12 @@ final class ri extends WidgetContainer implements TextFieldListener, ButtonListe
         }
     }
 
-    final static th a(String param0, String param1, Archive param2, Archive param3, byte param4) {
+    final static CoverageBitmapFont a(String param0, String param1, Archive param2, Archive param3, byte param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
-        th stackIn_1_0 = null;
+        CoverageBitmapFont stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -224,9 +224,9 @@ final class ri extends WidgetContainer implements TextFieldListener, ButtonListe
         RuntimeException decompiledCaughtException = null;
         qp var6 = null;
         RuntimeException var6_ref = null;
-        nq var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
-        bg var9 = null;
+        LoginMethodPreference var9 = null;
         pg var12 = null;
         pg var13 = null;
         try {
@@ -241,8 +241,8 @@ final class ri extends WidgetContainer implements TextFieldListener, ButtonListe
             this.field_D)) {
             throw new IllegalStateException();
           }
-          this.field_H = (TextFieldWidget) ((Object) new fa(param0, (WidgetListener) (this), 100));
-          this.field_R = (TextFieldWidget) ((Object) new fa("", (WidgetListener) (this), 20));
+          this.field_H = (TextFieldWidget) ((Object) new ValidatedTextInputWidget(param0, (WidgetListener) (this), 100));
+          this.field_R = (TextFieldWidget) ((Object) new ValidatedTextInputWidget("", (WidgetListener) (this), 20));
           if (!this.field_L) {
             this.field_K = new FocusableWidget(wl.field_e, (WidgetListener) null);
             stackIn_18_1 = null;
@@ -261,7 +261,7 @@ final class ri extends WidgetContainer implements TextFieldListener, ButtonListe
               this.field_Q = new FocusableWidget(oj.field_Ab, (WidgetListener) (this));
             }
           } else {
-            this.field_K = new FocusableWidget(ts.field_E, (WidgetListener) null);
+            this.field_K = new FocusableWidget(TextHotspotWidget.field_E, (WidgetListener) null);
             this.field_P = new FocusableWidget(ProductionContent.field_g, (WidgetListener) null);
             this.field_H.field_y = false;
           }
@@ -368,7 +368,7 @@ final class ri extends WidgetContainer implements TextFieldListener, ButtonListe
         }
     }
 
-    public final void a(FocusableWidget param0, int param1, int param2, int param3, int param4) {
+    public final void onButtonClicked(FocusableWidget param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;

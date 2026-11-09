@@ -56,7 +56,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           }
           for (var5 = 0; var3 > var5; var5++) {
             if (!ng.readBoolean(param1, (byte) -95)) {
-              var6 = param1.b((byte) 127, a.a(var5 - 1, 1));
+              var6 = param1.b((byte) 127, HitRegion.signedBitLength(var5 - 1, 1));
               var4[var5] = var4[var6];
             } else {
               var6_ref_hc = new hc();

@@ -47,9 +47,9 @@ final class AchievementProgress {
           while (var7 != null) {
             param4.writeByte(var7.field_o + 251, (byte) -125);
             im.writePlayer(var7.field_p, param4, 9555);
-            di.writeStar(var7.field_q, false, param4);
+            FleetTrailPoint.writeStar(var7.field_q, false, param4);
             if (var7.field_o == 3) {
-              di.writeStar(var7.field_r, false, param4);
+              FleetTrailPoint.writeStar(var7.field_r, false, param4);
             }
             var7 = (ProjectUse) (param2.next(false));
           }

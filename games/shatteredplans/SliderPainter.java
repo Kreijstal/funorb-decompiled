@@ -7,7 +7,7 @@ final class SliderPainter implements WidgetPainter {
     private int field_f;
     private int field_h;
     static int field_g;
-    private nq field_c;
+    private BitmapFont field_c;
     static Sprite field_e;
     private int field_a;
     private int field_i;
@@ -16,7 +16,7 @@ final class SliderPainter implements WidgetPainter {
     static int field_j;
     static String field_d;
 
-    public final void a(UiWidget param0, int param1, boolean param2, int param3, byte param4) {
+    public final void paintWidget(UiWidget param0, int param1, boolean param2, int param3, byte param4) {
         int var10 = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -137,7 +137,7 @@ final class SliderPainter implements WidgetPainter {
         }
     }
 
-    SliderPainter(nq param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    SliderPainter(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_c = param0;
           this.field_a = param5;

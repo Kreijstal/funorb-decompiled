@@ -3,7 +3,7 @@
  */
 final class CipherPacketBuffer extends PacketBuffer {
     static String field_q;
-    static nq field_p;
+    static BitmapFont field_p;
     static int field_r;
     private int field_n;
     static SecondaryNodeHashTable field_m;
@@ -100,11 +100,11 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final static e j(byte param0) {
+    final static AccountFieldValue j(byte param0) {
         if (param0 != 64) {
-          return (e) null;
+          return (AccountFieldValue) null;
         }
-        return new e(of.a((byte) 42), bo.q(-108));
+        return new AccountFieldValue(of.a((byte) 42), bo.q(-108));
     }
 
     public static void clearStatics(int param0) {
@@ -136,7 +136,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           Throwable decompiledCaughtException = null;
           try {
             if (param2 <= 33) {
-              field_p = (nq) null;
+              field_p = (BitmapFont) null;
             }
             try {
               var3 = new java.net.URL(param1.getCodeBase(), param0);
@@ -240,7 +240,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         this.field_n = this.position * 8;
     }
 
-    final static void a(int param0, vm param1) {
+    final static void a(int param0, QuickChatMenu param1) {
         if (param1 == null) {
           return;
         }

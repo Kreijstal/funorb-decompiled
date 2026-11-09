@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class di extends IntrusiveNode {
+final class FleetTrailPoint extends IntrusiveNode {
     int field_l;
     int field_n;
     static String field_j;
@@ -123,7 +123,7 @@ final class di extends IntrusiveNode {
           var6 = (CharSequence) ((Object) param0);
           var2 = ji.a(var6, true);
           if (param1 <= 115) {
-            di.clearStatics(false);
+            FleetTrailPoint.clearStatics(false);
           }
           if (var2 == null) {
             var2 = param0;
@@ -175,7 +175,7 @@ final class di extends IntrusiveNode {
           }
           ((PacketBuffer) (Object) stackIn_2_0).writeByte(stackIn_3_1, (byte) -57);
           if (param1) {
-            di.clearStatics(true);
+            FleetTrailPoint.clearStatics(true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -248,7 +248,7 @@ final class di extends IntrusiveNode {
         Star.f((byte) 123);
     }
 
-    di() {
+    FleetTrailPoint() {
     }
 
     final static void a(int param0, boolean param1, int param2) {
@@ -326,7 +326,7 @@ final class di extends IntrusiveNode {
             }
             stackIn_20_0 = var6.field_Cb;
             if (0 < var10) {
-              stackIn_21_1 = nq.truncateWithEllipsis(var6.field_Cb.field_nb, var6.field_Ab, var10);
+              stackIn_21_1 = BitmapFont.truncateWithEllipsis(var6.field_Cb.field_nb, var6.field_Ab, var10);
             } else {
               stackIn_21_1 = var6.field_Ab;
             }

@@ -7,7 +7,7 @@ final class LinkPainter implements WidgetPainter {
     static int field_i;
     static int field_e;
     static AnimatedPanel field_b;
-    private nq field_f;
+    private BitmapFont field_f;
     static Archive field_g;
     static String field_h;
     private int field_a;
@@ -28,7 +28,7 @@ final class LinkPainter implements WidgetPainter {
         }
     }
 
-    public final void a(UiWidget param0, int param1, boolean param2, int param3, byte param4) {
+    public final void paintWidget(UiWidget param0, int param1, boolean param2, int param3, byte param4) {
         int stackIn_8_0 = 0;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
@@ -258,7 +258,7 @@ final class LinkPainter implements WidgetPainter {
                   }
                   stackIn_46_0 = var7.field_Cb;
                   if (var14 > 0) {
-                    stackIn_47_1 = nq.truncateWithEllipsis(var7.field_Cb.field_nb, var7.field_Ab, var14);
+                    stackIn_47_1 = BitmapFont.truncateWithEllipsis(var7.field_Cb.field_nb, var7.field_Ab, var14);
                   } else {
                     stackIn_47_1 = var7.field_Ab;
                   }
@@ -288,7 +288,7 @@ final class LinkPainter implements WidgetPainter {
                       SliderPainter.a((int[]) null, 0L, (String) null, var16, 293, d.field_a.field_Db, var7, -1, -1);
                       if (null != var7.field_xb &&
                         !Player.a(62, DerelictVictoryChecker.field_m.field_k) &&
-                        !bg.field_g) {
+                        !LoginMethodPreference.field_g) {
                         if (!ae.field_b) {
                           var17 = DerelictVictoryChecker.field_m;
                           var18 = QuickChatCategoryRegistry.a(NetworkArchiveRequest.field_B, 4371, new String[]{var16});
@@ -343,7 +343,7 @@ final class LinkPainter implements WidgetPainter {
         }
     }
 
-    LinkPainter(nq param0, int param1, int param2) {
+    LinkPainter(BitmapFont param0, int param1, int param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

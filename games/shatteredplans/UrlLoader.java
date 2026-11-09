@@ -168,7 +168,7 @@ final class UrlLoader implements Runnable {
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var1 = new Sprite(540, 140);
-          aq.a((byte) 117, var1);
+          aq.pushSpriteRaster((byte) 117, var1);
           wn.c();
           SoftwareRasterizer.clear();
           js.field_j = 0;

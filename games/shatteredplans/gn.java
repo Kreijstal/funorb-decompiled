@@ -10,12 +10,12 @@ final class gn extends WidgetTheme {
     static AnimatedPanel field_w;
     private wk field_z;
     static String field_A;
-    static nq field_u;
+    static BitmapFont field_u;
     private wk[] field_C;
 
     final static void a(int param0, int param1, boolean param2, int param3) {
         StarAnnotation.field_n = param3;
-        ah.field_P = param1;
+        ValidationMessageWidget.field_P = param1;
         IterableNodeHashTable.field_b = param0;
         if (param2) {
           field_w = (AnimatedPanel) null;
@@ -49,7 +49,7 @@ final class gn extends WidgetTheme {
         if (!b.d((byte) -97)) {
           return false;
         }
-        int var4 = le.a(param0, param2, false) ? 1 : 0;
+        int var4 = ByteArrayStorage.a(param0, param2, false) ? 1 : 0;
         if (80 == oq.field_j ||
           oq.field_j == 84) {
           var4 = 1;
@@ -197,13 +197,13 @@ final class gn extends WidgetTheme {
         field_y = null;
     }
 
-    final static vm a(int param0, QuickChatPhraseDefinition param1, AnimatedPanel param2, AnimatedPanel param3, AnimatedPanel param4) {
+    final static QuickChatMenu a(int param0, QuickChatPhraseDefinition param1, AnimatedPanel param2, AnimatedPanel param3, AnimatedPanel param4) {
         int var14 = 0;
         Object stackIn_3_0 = null;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
-        vm stackIn_12_0 = null;
-        vm stackIn_28_0 = null;
+        QuickChatMenu stackIn_12_0 = null;
+        QuickChatMenu stackIn_28_0 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
@@ -221,7 +221,7 @@ final class gn extends WidgetTheme {
         String[] var8 = null;
         char[] var9 = null;
         int[] var10 = null;
-        vm[] var11 = null;
+        QuickChatMenu[] var11 = null;
         int var12 = 0;
         QuickChatPhraseDefinition var13_ref_si = null;
         int var13 = 0;
@@ -237,7 +237,7 @@ final class gn extends WidgetTheme {
         try {
           if (param1 == null) {
             stackIn_3_0 = null;
-            return (vm) (stackIn_3_0);
+            return (QuickChatMenu) (stackIn_3_0);
           }
           if (param1.field_r != null) {
             stackIn_7_0 = param1.field_r.length;
@@ -254,7 +254,7 @@ final class gn extends WidgetTheme {
           var7 = var5_int + var6;
           var8 = new String[var7];
           if (param0 != 0) {
-            stackIn_12_0 = (vm) null;
+            stackIn_12_0 = (QuickChatMenu) null;
             return stackIn_12_0;
           }
           var21 = new char[var7];
@@ -263,7 +263,7 @@ final class gn extends WidgetTheme {
           var20 = new int[var7];
           var18 = var20;
           var10 = var18;
-          var11 = new vm[var7];
+          var11 = new QuickChatMenu[var7];
           if (param1.field_r != null) {
             for (var12 = 0; var12 < param1.field_r.length; var12++) {
               var13_ref_si = GameScreen.field_A.a(param1.field_r[var12], (byte) 100);
@@ -293,7 +293,7 @@ final class gn extends WidgetTheme {
               }
             }
           }
-          stackIn_28_0 = new vm(0L, param2, param4, param3, var11, var20, var8, var21);
+          stackIn_28_0 = new QuickChatMenu(0L, param2, param4, param3, var11, var20, var8, var21);
           return stackIn_28_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -343,7 +343,7 @@ final class gn extends WidgetTheme {
           var7 = this.field_C;
           var3 = var7;
           if (param0 != 8) {
-            field_u = (nq) null;
+            field_u = (BitmapFont) null;
           }
           for (var4 = 0; var4 < var7.length; var4++) {
             var5 = var7[var4];
@@ -382,7 +382,7 @@ final class gn extends WidgetTheme {
         }
     }
 
-    public final void a(UiWidget param0, int param1, boolean param2, int param3, byte param4) {
+    public final void paintWidget(UiWidget param0, int param1, boolean param2, int param3, byte param4) {
         UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;

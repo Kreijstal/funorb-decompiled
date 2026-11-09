@@ -68,7 +68,7 @@ final class dg extends AnimatedPanel {
           var10 = 50;
           var11 = 0;
           for (var12 = 0; var12 < CheckboxPainter.field_c.length; var12++) {
-            var13 = new AnimatedPanel(0L, param3, bg.field_d[var12]);
+            var13 = new AnimatedPanel(0L, param3, LoginMethodPreference.field_d[var12]);
             var14 = new AnimatedPanel(0L, param3, CheckboxPainter.field_c[var12]);
             var15 = param3.field_nb.stringWidth(CheckboxPainter.field_c[var12]);
             var13.setTarget(65, 15, (byte) 69, var10, 20);

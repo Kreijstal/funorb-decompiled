@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fa extends TextFieldWidget implements ValidatableWidget {
+final class ValidatedTextInputWidget extends TextFieldWidget implements ValidatableWidget {
     static String field_T;
     static String field_J;
     static String field_Y;
@@ -21,7 +21,7 @@ final class fa extends TextFieldWidget implements ValidatableWidget {
         }
     }
 
-    fa(String param0, WidgetListener param1, int param2) {
+    ValidatedTextInputWidget(String param0, WidgetListener param1, int param2) {
         super(param0, param1, param2);
     }
 
@@ -79,7 +79,7 @@ final class fa extends TextFieldWidget implements ValidatableWidget {
           SocketArchiveNetworkClient.a(DerelictMapGenerator.field_m - 24, 0, tg.field_a, 3, 640, 5, TextLayout.field_b);
           return;
         }
-        fa.a(-2, (byte) -122);
+        ValidatedTextInputWidget.a(-2, (byte) -122);
         SocketArchiveNetworkClient.a(DerelictMapGenerator.field_m - 24, 0, tg.field_a, 3, 640, 5, TextLayout.field_b);
     }
 
@@ -92,7 +92,7 @@ final class fa extends TextFieldWidget implements ValidatableWidget {
         field_S = null;
         field_J = null;
         if (param0 != 5) {
-          fa.a(-11, (byte) -25);
+          ValidatedTextInputWidget.a(-11, (byte) -25);
         }
     }
 

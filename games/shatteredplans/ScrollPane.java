@@ -119,7 +119,7 @@ final class ScrollPane extends AnimatedPanel {
         }
     }
 
-    final static void a(int param0, nq param1, v param2, int param3, int param4, int param5, nq param6, int param7, int param8, int param9, int param10, v param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, v param19) {
+    final static void a(int param0, BitmapFont param1, v param2, int param3, int param4, int param5, BitmapFont param6, int param7, int param8, int param9, int param10, v param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, v param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -259,7 +259,7 @@ final class ScrollPane extends AnimatedPanel {
             if (!jn.field_a) {
               continue;
             }
-            if (bj.field_L <= 0) {
+            if (NameSuggestionsPanel.field_L <= 0) {
               continue;
             }
             ListContent.a(param0 ^ 93);
@@ -270,10 +270,10 @@ final class ScrollPane extends AnimatedPanel {
             }
             ArchiveRequest.a(stackIn_21_0, (byte) 125);
           }
-          if (50 + ValidationState.field_a < cl.field_n) {
-            ValidationState.field_a = cl.field_n + vc.a((byte) -39, 50);
+          if (50 + ValidationState.field_a < RasterStateFrame.field_n) {
+            ValidationState.field_a = RasterStateFrame.field_n + vc.a((byte) -39, 50);
           }
-          var1_int = cl.field_n - ValidationState.field_a;
+          var1_int = RasterStateFrame.field_n - ValidationState.field_a;
           if (0 > var1_int) {
             QuickChatCategoryDefinition.field_r = 0;
           } else {
@@ -304,16 +304,16 @@ final class ScrollPane extends AnimatedPanel {
             }
           }
           if (!CachedArchiveSource.field_n) {
-            if (bj.field_L < 50) {
-              bj.field_L = bj.field_L + 1;
+            if (NameSuggestionsPanel.field_L < 50) {
+              NameSuggestionsPanel.field_L = NameSuggestionsPanel.field_L + 1;
             }
           } else {
-            fieldTemp$0 = bj.field_L - 1;
-            bj.field_L = bj.field_L - 1;
+            fieldTemp$0 = NameSuggestionsPanel.field_L - 1;
+            NameSuggestionsPanel.field_L = NameSuggestionsPanel.field_L - 1;
             if (fieldTemp$0 <= 0) {
               CachedArchiveSource.field_n = false;
               SolVictoryChecker.field_m = MusicEnvelope.field_i;
-              bj.field_L = 0;
+              NameSuggestionsPanel.field_L = 0;
               if (SolVictoryChecker.field_m == -1) {
                 uc.field_v = 50;
                 ta.a(0, 0, (byte) 96, false);
@@ -324,10 +324,10 @@ final class ScrollPane extends AnimatedPanel {
                 gq.b(param0 + 29);
               }
               if (SolVictoryChecker.field_m != 4) {
-                di.field_m = 0;
+                FleetTrailPoint.field_m = 0;
               } else {
                 IsaacRandom.b(param0 + 1674225223);
-                di.field_m = 0;
+                FleetTrailPoint.field_m = 0;
               }
             }
           }
@@ -382,7 +382,7 @@ final class ScrollPane extends AnimatedPanel {
             }
             if (!CachedArchiveSource.field_n &&
               jn.field_a) {
-              if (bj.field_L <= 0) {
+              if (NameSuggestionsPanel.field_L <= 0) {
                 return;
               }
               ListContent.a(0);

@@ -28,8 +28,8 @@ final class sf {
     }
 
     final static void a(byte param0, int param1) {
-        if (param1 >= ah.field_T) {
-          ah.field_T = param1;
+        if (param1 >= ValidationMessageWidget.field_T) {
+          ValidationMessageWidget.field_T = param1;
           no.field_f = new boolean[param1];
           og.field_c = new int[param1];
           GameScreen.field_c = new int[param1];

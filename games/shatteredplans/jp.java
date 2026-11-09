@@ -514,8 +514,8 @@ final class jp extends AnimatedPanel {
     final static void a(String param0, float param1, byte param2, boolean param3) {
         try {
           if (MouseInputHandler.field_h == null) {
-            MouseInputHandler.field_h = new eo(le.field_e, tl.field_z);
-            le.field_e.addDialog(true, MouseInputHandler.field_h);
+            MouseInputHandler.field_h = new eo(ByteArrayStorage.field_e, tl.field_z);
+            ByteArrayStorage.field_e.addDialog(true, MouseInputHandler.field_h);
           }
           MouseInputHandler.field_h.a(param3, param0, 65536, param1);
           if (param2 <= 118) {
@@ -558,14 +558,14 @@ final class jp extends AnimatedPanel {
 
     final static void a(String[] args, boolean param1) {
         if (null != an.field_b) {
-          an.field_b.field_D.a(args, 0);
+          an.field_b.field_D.setSuggestions(args, 0);
         }
         if (param1) {
           return;
         }
         try {
           if (sj.field_b != null) {
-            sj.field_b.field_F.a(args, 0);
+            sj.field_b.field_F.setSuggestions(args, 0);
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "jp.D(" + (args != null ? "{...}" : "null") + ',' + param1 + ')');

@@ -35,7 +35,7 @@ final class uk {
           }
           var2_int = param1.field_B;
           if (var2_int == 0) {
-            stackIn_22_0 = bj.field_H;
+            stackIn_22_0 = NameSuggestionsPanel.field_H;
             return stackIn_22_0;
           }
           if (1 == var2_int) {
@@ -47,7 +47,7 @@ final class uk {
             return stackIn_26_0;
           }
           if (3 == var2_int) {
-            return be.field_k;
+            return BytePayloadNode.field_k;
           }
           if (var2_int == 4) {
             return rl.field_c;

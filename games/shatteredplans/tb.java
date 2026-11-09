@@ -84,7 +84,7 @@ final class tb {
           mk.field_e[2] = MouseWheelInput.field_e;
           MenuList.field_v = new AnimatedPanel(0L, (AnimatedPanel) null);
           SoundPlayback.field_m = new AnimatedPanel(0L, SliderWidget.field_N, gd.field_c);
-          sf.field_f = new AnimatedPanel(0L, vm.field_Cb, mk.field_b);
+          sf.field_f = new AnimatedPanel(0L, QuickChatMenu.field_Cb, mk.field_b);
           ls.field_a = new ScrollPane(0L, new AnimatedPanel(0L, (AnimatedPanel) null), VictoryChecker.field_d, AchievementProgress.field_m);
           MenuList.field_v.addChild(param13 ^ -7962, SoundPlayback.field_m);
           if (ns.field_pb) {
@@ -98,15 +98,15 @@ final class tb {
           var24.field_y = 1;
           nm.field_c = new AnimatedPanel(0L, SpriteState.field_u);
           nm.field_c.field_y = 1;
-          vm.field_Ab = new AnimatedPanel(0L, bd.field_E, v.field_a.toUpperCase());
+          QuickChatMenu.field_Ab = new AnimatedPanel(0L, bd.field_E, v.field_a.toUpperCase());
           sg.field_zb = new AnimatedPanel(0L, gg.field_d, uc.field_z.toUpperCase());
           qf.field_e = new AnimatedPanel(0L, rs.field_Eb);
           BattleSnapshot.field_y = new AnimatedPanel(0L, SliderWidget.field_N, sm.field_c);
-          GameSession.field_e = new AnimatedPanel(0L, jr.field_h, di.field_j);
-          WeightedCacheEntry.field_t = new AnimatedPanel(0L, jr.field_h, vm.field_Lb);
-          ta.field_d = new AnimatedPanel(0L, jr.field_h, fa.field_T);
+          GameSession.field_e = new AnimatedPanel(0L, jr.field_h, FleetTrailPoint.field_j);
+          WeightedCacheEntry.field_t = new AnimatedPanel(0L, jr.field_h, QuickChatMenu.field_Lb);
+          ta.field_d = new AnimatedPanel(0L, jr.field_h, ValidatedTextInputWidget.field_T);
           IsaacBackedRandom.field_c = new AnimatedPanel(0L, jr.field_h, WidgetContainer.field_z);
-          hq.field_b = new AnimatedPanel(0L, vm.field_Cb, DerelictMapGenerator.field_o);
+          hq.field_b = new AnimatedPanel(0L, QuickChatMenu.field_Cb, DerelictMapGenerator.field_o);
           SingleChildWidget.field_y = new ScrollPane(0L, new AnimatedPanel(0L, (AnimatedPanel) null), VictoryChecker.field_d, AchievementProgress.field_m);
           gb.field_m = new AnimatedPanel(0L, IsaacBackedRandom.field_a, GameApplet.field_a.toUpperCase());
           gb.field_m.field_s = ns.field_pb;
@@ -156,7 +156,7 @@ final class tb {
           DefendTask.field_x = new AnimatedPanel(0L, SpriteState.field_u);
           DefendTask.field_x.field_y = 1;
           lr.field_a = new AnimatedPanel(0L, SliderWidget.field_N, gd.field_c);
-          MenuComponent.field_q = new AnimatedPanel(0L, vm.field_Cb, mk.field_b);
+          MenuComponent.field_q = new AnimatedPanel(0L, QuickChatMenu.field_Cb, mk.field_b);
           ro.field_a = new ScrollPane(0L, new AnimatedPanel(0L, (AnimatedPanel) null), VictoryChecker.field_d, AchievementProgress.field_m);
           so.field_t.addChild(4, DefendTask.field_x);
           so.field_t.addChild(4, lr.field_a);
@@ -166,7 +166,7 @@ final class tb {
           so.field_t.addChild(param13 + 7970, ro.field_a);
           DialPainter.field_g = new AnimatedPanel(0L, bd.field_E, tm.field_o.toUpperCase());
           ArchiveSourceManager.field_f = new AnimatedPanel(0L, gg.field_d);
-          bj.field_D = new AnimatedPanel(0L, rs.field_Eb);
+          NameSuggestionsPanel.field_D = new AnimatedPanel(0L, rs.field_Eb);
           StarAnnotation.field_l = new AnimatedPanel(0L, nl.field_b, MessageKind.field_e.toUpperCase());
           QuickChatCategoryRegistry.field_g = new AnimatedPanel[4 + param0];
           ByteArrayNode.field_p = new sg[4 + param0][];
@@ -188,7 +188,7 @@ final class tb {
             }
           }
           QuickChatCategoryRegistry.field_g[2] = new AnimatedPanel(0L, ObjectList.field_h, sq.field_s);
-          ByteArrayNode.field_p[2] = new sg[]{new sg(0L, an.field_d, (AnimatedPanel) null, gn.field_w, (Sprite) null, DefendTask.field_r), new sg(0L, an.field_d, (AnimatedPanel) null, gn.field_w, LegacyAi.field_s[0], mi.field_c), new sg(0L, an.field_d, (AnimatedPanel) null, gn.field_w, LegacyAi.field_s[1], he.field_j)};
+          ByteArrayNode.field_p[2] = new sg[]{new sg(0L, an.field_d, (AnimatedPanel) null, gn.field_w, (Sprite) null, DefendTask.field_r), new sg(0L, an.field_d, (AnimatedPanel) null, gn.field_w, LegacyAi.field_s[0], mi.field_c), new sg(0L, an.field_d, (AnimatedPanel) null, gn.field_w, LegacyAi.field_s[1], IntNode.field_j)};
           if (FleetMove.field_A > 1) {
             QuickChatCategoryRegistry.field_g[3] = new AnimatedPanel(0L, ObjectList.field_h, QuickChatPhraseRegistry.field_e);
             array$1 = new sg[1 + FleetMove.field_A];
@@ -247,16 +247,16 @@ final class tb {
           var17.field_y = 1;
           IntrusiveDeque.field_g = new AnimatedPanel(0L, (AnimatedPanel) null);
           IntrusiveDeque.field_g.addChild(param13 + 7970, ArchiveSourceManager.field_f);
-          IntrusiveDeque.field_g.addChild(4, bj.field_D);
-          bj.field_D.addChild(4, StarAnnotation.field_l);
+          IntrusiveDeque.field_g.addChild(4, NameSuggestionsPanel.field_D);
+          NameSuggestionsPanel.field_D.addChild(4, StarAnnotation.field_l);
           for (var18Lifetime2 = 0; 4 + param0 > var18Lifetime2; var18Lifetime2++) {
             if ((var18Lifetime2 != 1 ||
               !(nl.field_a.length < 2)) && (var18Lifetime2 != 3 ||
               !(FleetMove.field_A <= 1))) {
-              bj.field_D.addChild(4, QuickChatCategoryRegistry.field_g[var18Lifetime2]);
+              NameSuggestionsPanel.field_D.addChild(4, QuickChatCategoryRegistry.field_g[var18Lifetime2]);
               for (var19 = 0; var19 < ByteArrayNode.field_p[var18Lifetime2].length; var19++) {
                 if (null != ByteArrayNode.field_p[var18Lifetime2][var19]) {
-                  bj.field_D.addChild(4, ByteArrayNode.field_p[var18Lifetime2][var19]);
+                  NameSuggestionsPanel.field_D.addChild(4, ByteArrayNode.field_p[var18Lifetime2][var19]);
                 }
               }
             }

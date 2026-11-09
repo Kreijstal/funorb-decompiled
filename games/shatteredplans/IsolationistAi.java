@@ -180,7 +180,7 @@ final class IsolationistAi extends StandardAi {
               var3 = "[" + MessageKind.field_a + "] ";
             }
             if (param1.field_n == 1) {
-              var3 = "[" + QuickChatCategoryRegistry.a(he.field_q, 4371, new String[]{param1.field_o}) + "] ";
+              var3 = "[" + QuickChatCategoryRegistry.a(IntNode.field_q, 4371, new String[]{param1.field_o}) + "] ";
             }
             if (param1.field_n == 4 &&
               AiTask.field_m != null) {

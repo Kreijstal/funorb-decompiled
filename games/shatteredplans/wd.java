@@ -162,9 +162,9 @@ final class wd extends ji {
     private wd(WidgetPainter param0, boolean param1) {
         super(0, 0, 0, 0, (WidgetPainter) null);
         try {
-          this.field_O = (TextFieldWidget) ((Object) new fa("", (WidgetListener) null, 2));
-          this.field_M = (TextFieldWidget) ((Object) new fa("", (WidgetListener) null, 2));
-          this.field_R = (TextFieldWidget) ((Object) new fa("", (WidgetListener) null, 4));
+          this.field_O = (TextFieldWidget) ((Object) new ValidatedTextInputWidget("", (WidgetListener) null, 2));
+          this.field_M = (TextFieldWidget) ((Object) new ValidatedTextInputWidget("", (WidgetListener) null, 2));
+          this.field_R = (TextFieldWidget) ((Object) new ValidatedTextInputWidget("", (WidgetListener) null, 4));
           this.field_R.field_p = param0;
           this.field_M.field_p = param0;
           this.field_O.field_p = param0;

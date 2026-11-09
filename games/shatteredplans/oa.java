@@ -5,7 +5,7 @@ import java.io.*;
 
 final class oa {
     static fg field_a;
-    static fr field_b;
+    static DraggableWidget field_b;
 
     final static void a(int param0, int param1, int param2, byte param3, int param4) {
         int var9 = 0;
@@ -123,7 +123,7 @@ final class oa {
         if (param1) {
           oa.a(-72, 121, 20, (byte) 125, 74);
         }
-        return ao.a((byte) 97, param0, param2, 1, param3);
+        return SolidNineSliceFactory.createSolidNineSlice((byte) 97, param0, param2, 1, param3);
     }
 
     public static void clearStatics(int param0) {

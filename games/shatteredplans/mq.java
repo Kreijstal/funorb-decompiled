@@ -51,12 +51,12 @@ final class mq {
             null == PanelNode.field_q) {
             return;
           }
-          if (-e.field_f + ei.field_e > 20 &&
+          if (-AccountFieldValue.field_f + ei.field_e > 20 &&
             -ByteArrayNode.field_k + AttackTask.field_o > 20) {
-            ei.a(true, -ByteArrayNode.field_k + AttackTask.field_o, -e.field_f + ei.field_e, param0 - 12350, ByteArrayNode.field_k, e.field_f, SolVictoryChecker.blendColours(3974311, 0, -120, 128));
+            ei.a(true, -ByteArrayNode.field_k + AttackTask.field_o, -AccountFieldValue.field_f + ei.field_e, param0 - 12350, ByteArrayNode.field_k, AccountFieldValue.field_f, SolVictoryChecker.blendColours(3974311, 0, -120, 128));
           }
           if (WeightedLruCache.field_g == PanelNode.field_q) {
-            var1_int = e.field_f + 13;
+            var1_int = AccountFieldValue.field_f + 13;
             var2 = 6 + ByteArrayNode.field_k;
             var3 = te.field_c;
             if (eh.field_L != null) {

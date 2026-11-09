@@ -75,7 +75,7 @@ final class aq extends IntrusiveNode {
         field_k = null;
         if (param0 < 71) {
           Sprite var2 = (Sprite) null;
-          aq.a((byte) 4, (Sprite) null);
+          aq.pushSpriteRaster((byte) 4, (Sprite) null);
         }
     }
 
@@ -86,10 +86,10 @@ final class aq extends IntrusiveNode {
         return np.field_m;
     }
 
-    final static void a(byte param0, Sprite param1) {
+    final static void pushSpriteRaster(byte param0, Sprite param1) {
         try {
           int var2_int = -121 % ((29 - param0) / 51);
-          wh.a(false);
+          wh.pushRasterState(false);
           SoftwareRasterizer.setTarget(param1.field_B, param1.field_o, param1.field_p);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "aq.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

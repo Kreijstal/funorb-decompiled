@@ -248,7 +248,7 @@ final class ScrollBar extends AnimatedPanel {
         if (param1) {
           return;
         }
-        cb.field_n = param0;
+        DirectByteArrayStorage.field_n = param0;
         GzipInflater.field_c = param2;
     }
 

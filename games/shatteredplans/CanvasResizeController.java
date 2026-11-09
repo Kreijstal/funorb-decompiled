@@ -193,7 +193,7 @@ final class CanvasResizeController {
 
     final void a(boolean param0) {
         int fieldTemp$0 = 0;
-        if (bj.field_K != null) {
+        if (NameSuggestionsPanel.field_K != null) {
           return;
         }
         if (StarAnnotation.field_m <= 0) {
@@ -235,7 +235,7 @@ final class CanvasResizeController {
         this.field_n = VictoryChecker.field_e;
         this.field_s.a(this.field_g, this.field_k, param0 ^ -12725);
         IntrusiveDeque.field_c = false;
-        FullscreenFocusCanvas var2 = QuickChatPhraseDefinition.a(this.field_k, fa.field_W, 0, (byte) 125, param0, this.field_g);
+        FullscreenFocusCanvas var2 = QuickChatPhraseDefinition.a(this.field_k, ValidatedTextInputWidget.field_W, 0, (byte) 125, param0, this.field_g);
         if (var2 == null) {
           this.c(param0 ^ -115);
         }

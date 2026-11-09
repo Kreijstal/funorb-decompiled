@@ -83,13 +83,13 @@ final class qf {
     final static void a(byte param0) {
         int var1 = 125 / ((param0 + 68) / 50);
         ValidationState.field_a = vc.a((byte) -39, 50);
-        NetworkArchiveRequest.field_C = (nq) ((Object) rs.field_Cb);
+        NetworkArchiveRequest.field_C = (BitmapFont) ((Object) rs.field_Cb);
         DialWidget.field_K = new IntrusiveDeque();
         SolVictoryChecker.field_m = 0;
         MusicEnvelope.field_i = 0;
-        di.field_m = 0;
+        FleetTrailPoint.field_m = 0;
         CachedArchiveSource.field_n = false;
-        bj.field_L = 0;
+        NameSuggestionsPanel.field_L = 0;
         MusicTrack var2 = (MusicTrack) null;
         QuickChatPhraseRegistry.a(32767, (MusicTrack) null, true, 50);
         FocusableWidget.f((byte) -123);

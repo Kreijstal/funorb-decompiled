@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class le {
+abstract class ByteArrayStorage {
     static DialogRoot field_e;
     static String field_a;
     static String field_c;
@@ -50,11 +50,11 @@ abstract class le {
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         var3 = 1;
         if (!ShatteredPlansClient.field_K &&
-          fa.field_X == null) {
+          ValidatedTextInputWidget.field_X == null) {
           var3 = 0;
         }
         if (ProductionContent.field_h == 0 &&
-          he.field_p != null) {
+          IntNode.field_p != null) {
           var3 = 0;
         }
         if (2 == ProductionContent.field_h &&
@@ -114,7 +114,7 @@ abstract class le {
           if (!param2) {
             return false;
           }
-          le.clearStatics(36);
+          ByteArrayStorage.clearStatics(36);
           return false;
         }
         if (var3 == 0) {
@@ -164,7 +164,7 @@ abstract class le {
                 return true;
               }
               if (!DialPainter.field_c) {
-                var50 = "[" + QuickChatCategoryRegistry.a(he.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
+                var50 = "[" + QuickChatCategoryRegistry.a(IntNode.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
                 var51 = var50 + var18 + ": ";
                 var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var51);
                 if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
@@ -173,7 +173,7 @@ abstract class le {
                 return true;
               }
               if (AiTask.field_m == null) {
-                var48 = "[" + QuickChatCategoryRegistry.a(he.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
+                var48 = "[" + QuickChatCategoryRegistry.a(IntNode.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
                 var49 = var48 + var18 + ": ";
                 var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var49);
                 if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
@@ -193,7 +193,7 @@ abstract class le {
           }
           if (null != np.field_a) {
             if (!DialPainter.field_c) {
-              var57 = "[" + QuickChatCategoryRegistry.a(he.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
+              var57 = "[" + QuickChatCategoryRegistry.a(IntNode.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
               var58 = var57 + var18 + ": ";
               var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var58);
               if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
@@ -202,7 +202,7 @@ abstract class le {
               return true;
             }
             if (AiTask.field_m == null) {
-              var55 = "[" + QuickChatCategoryRegistry.a(he.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
+              var55 = "[" + QuickChatCategoryRegistry.a(IntNode.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
               var56 = var55 + var18 + ": ";
               var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var56);
               if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {

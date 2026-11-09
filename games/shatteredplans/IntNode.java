@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class he extends IntrusiveNode {
+final class IntNode extends IntrusiveNode {
     static String field_l;
     static Sprite field_h;
     static String field_q;
@@ -19,7 +19,7 @@ final class he extends IntrusiveNode {
           ByteArrayNode.a(ClientException.field_c, 72, false);
           if (param0 != 8192) {
             String var3 = (String) null;
-            he.a(62, (String) null);
+            IntNode.a(62, (String) null);
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "he.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -62,7 +62,7 @@ final class he extends IntrusiveNode {
         }
     }
 
-    he(int param0) {
+    IntNode(int param0) {
         this.field_k = param0;
     }
 

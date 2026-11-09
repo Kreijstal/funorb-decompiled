@@ -568,7 +568,7 @@ final class AggressiveAi extends StandardAi {
                     var11 = 1;
                   }
                   if (var17 > 0 &&
-                    var17 > a.field_j) {
+                    var17 > HitRegion.field_j) {
                     var13 = 1;
                   }
                 }
@@ -601,7 +601,7 @@ final class AggressiveAi extends StandardAi {
                 var14 = stackIn_216_0;
               }
               if (bs.field_b >= 2 &&
-                di.field_p[12]) {
+                FleetTrailPoint.field_p[12]) {
                 var15 = 0;
                 var12 = 0;
                 var14 = 0;
@@ -637,7 +637,7 @@ final class AggressiveAi extends StandardAi {
                 }
                 js.a(-1, 1, param2, var8, 0, param1, var10, -1);
                 if (bs.field_b >= 2 &&
-                  di.field_p[12]) {
+                  FleetTrailPoint.field_p[12]) {
                   wg.field_d = true;
                 }
                 if (!wg.field_d) {
@@ -716,7 +716,7 @@ final class AggressiveAi extends StandardAi {
                       }
                     }
                     if (var13 != 0) {
-                      var32 = QuickChatCategoryRegistry.a(dh.field_d, 4371, new String[]{Integer.toString(a.field_j), Integer.toString(ArchiveIndex.field_h[var8][var10])});
+                      var32 = QuickChatCategoryRegistry.a(dh.field_d, 4371, new String[]{Integer.toString(HitRegion.field_j), Integer.toString(ArchiveIndex.field_h[var8][var10])});
                       var23 = var32;
                       var26 = var23;
                       var23 = var26;
@@ -996,7 +996,7 @@ final class AggressiveAi extends StandardAi {
                   !(var8 > 2 * var6.field_x));
               }
               if (decompiledFrameRemainder0) {
-                var7Lifetime1 = cb.field_o[var4_int];
+                var7Lifetime1 = DirectByteArrayStorage.field_o[var4_int];
                 var8Lifetime1 = var5 * (var7Lifetime1 * var7Lifetime1);
                 if (var3 < var8Lifetime1) {
                   var2 = var6;

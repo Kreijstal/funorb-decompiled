@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aa extends WidgetContainer implements op, ButtonListener, dl {
-    private fa field_J;
-    private fa field_Q;
+final class AccountCreationForm extends WidgetContainer implements HyperlinkListener, ButtonListener, NameSuggestionListener {
+    private ValidatedTextInputWidget field_J;
+    private ValidatedTextInputWidget field_Q;
     private CheckboxWidget field_K;
     private FocusableWidget field_E;
     static String field_N;
     private FocusableWidget field_O;
     static String field_G;
-    private fa field_H;
+    private ValidatedTextInputWidget field_H;
     static String field_P;
-    private fa field_L;
-    private fa field_M;
-    private ts field_I;
-    bj field_D;
-    private fa field_F;
+    private ValidatedTextInputWidget field_L;
+    private ValidatedTextInputWidget field_M;
+    private TextHotspotWidget field_I;
+    NameSuggestionsPanel field_D;
+    private ValidatedTextInputWidget field_F;
 
-    public final void a(int param0, int param1, int param2, ts param3) {
+    public final void onLinkClicked(int param0, int param1, int param2, TextHotspotWidget param3) {
         int var6 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -38,7 +38,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
             SoundPlayback.a(64, "terms.ws");
           }
           if (param2 != 2) {
-            this.field_F = (fa) null;
+            this.field_F = (ValidatedTextInputWidget) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -59,7 +59,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
         try {
           if (!param1) {
             String var3 = (String) null;
-            aa.a((String) null, false);
+            AccountCreationForm.a((String) null, false);
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "aa.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -68,8 +68,8 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
 
     private final String linkEndTag(int param0) {
         if (param0 != 15) {
-          ts var3 = (ts) null;
-          this.a(102, -126, 94, (ts) null);
+          TextHotspotWidget var3 = (TextHotspotWidget) null;
+          this.onLinkClicked(102, -126, 94, (TextHotspotWidget) null);
           return "</col></u>";
         }
         return "</col></u>";
@@ -78,7 +78,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
     private final int a(int param0, int param1, int param2, UiWidget param3, String param4, String param5, int param6) {
         int discarded$1 = 0;
         RuntimeException var8 = null;
-        ah var9 = null;
+        ValidationMessageWidget var9 = null;
         String var10 = null;
         pg var11 = null;
         int stackIn_3_0 = 0;
@@ -97,7 +97,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
           }
           var11 = new pg(20, param2, 120 + param1, 25, param3, false, 120, 3, gn.field_u, 16777215, param5);
           this.b((byte) -120, var11);
-          var9 = new ah(((ValidatableWidget) ((Object) param3)).getValidationSource((byte) 96), param4, 126, param2 + var11.field_n, 50 + param1, param6);
+          var9 = new ValidationMessageWidget(((ValidatableWidget) ((Object) param3)).getValidationSource((byte) 96), param4, 126, param2 + var11.field_n, 50 + param1, param6);
           var9.field_u = (WidgetListener) (this);
           this.b((byte) -52, var9);
           stackIn_3_0 = var9.field_n + var11.field_n;
@@ -182,7 +182,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
         try {
           var6 = new pg(20, param3, 120 + param4, 25, param2, false, 120, 3, gn.field_u, 16777215, param0);
           if (param1 != 21760) {
-            aa.a(-24, (byte) 20);
+            AccountCreationForm.a(-24, (byte) 20);
           }
           this.b((byte) -126, var6);
           stackIn_3_0 = var6.field_n;
@@ -207,9 +207,9 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
         }
     }
 
-    public final void a(int param0, String param1) {
+    public final void onNameSuggested(int param0, String param1) {
         int discarded$1 = 0;
-        fa var3 = null;
+        ValidatedTextInputWidget var3 = null;
         String var4 = null;
         String var5 = null;
         RuntimeException stackIn_5_0 = null;
@@ -244,21 +244,21 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
         field_G = null;
         field_N = null;
         if (param0 != 32) {
-          aa.clearStatics((byte) 69);
+          AccountCreationForm.clearStatics((byte) 69);
           field_P = null;
           return;
         }
         field_P = null;
     }
 
-    public aa() {
+    public AccountCreationForm() {
         super(0, 0, 496, 0, (WidgetPainter) null);
-        this.field_Q = new fa("", (WidgetListener) null, 12);
-        this.field_F = new fa("", (WidgetListener) null, 100);
-        this.field_M = new fa("", (WidgetListener) null, 100);
-        this.field_J = new fa("", (WidgetListener) null, 20);
-        this.field_H = new fa("", (WidgetListener) null, 20);
-        this.field_L = new fa("", (WidgetListener) null, 3);
+        this.field_Q = new ValidatedTextInputWidget("", (WidgetListener) null, 12);
+        this.field_F = new ValidatedTextInputWidget("", (WidgetListener) null, 100);
+        this.field_M = new ValidatedTextInputWidget("", (WidgetListener) null, 100);
+        this.field_J = new ValidatedTextInputWidget("", (WidgetListener) null, 20);
+        this.field_H = new ValidatedTextInputWidget("", (WidgetListener) null, 20);
+        this.field_L = new ValidatedTextInputWidget("", (WidgetListener) null, 3);
         int var1 = 1;
         this.field_K = new CheckboxWidget("", (WidgetListener) null, var1 != 0);
         this.field_E = new FocusableWidget(qn.field_e, (WidgetListener) null);
@@ -267,7 +267,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
         this.field_F.field_v = LegacyAi.field_p;
         this.field_M.field_v = sf.field_h;
         this.field_J.field_v = AiTask.field_k;
-        this.field_H.field_v = he.field_o;
+        this.field_H.field_v = IntNode.field_o;
         this.field_L.field_v = DerelictMapGenerator.field_p;
         this.field_K.field_v = PlayerEliminatedEvent.field_i;
         this.field_Q.setValidationSource(new UsernameAvailabilityValidator(this.field_Q), 8945);
@@ -293,14 +293,14 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
         var3 = var3 + this.a(IntrusiveDequeCursor.field_i, 21760, this.field_F, var3, 170);
         var3 = var3 + (5 + this.a(127, 170, var3, this.field_M, "", UsernameAvailabilityValidator.field_u, 20));
         var3 = var3 + this.a(GarrisonTask.field_t, 21760, this.field_J, var3, 170);
-        var3 = var3 + (5 + this.a(170, ab.field_a, var3, (byte) -127, this.field_H, MusicVoice.field_l));
+        var3 = var3 + (5 + this.a(170, AccountValidationText.field_a, var3, (byte) -127, this.field_H, MusicVoice.field_l));
         var3 = var3 + (this.a(170, AllianceExpiredEvent.field_m, var3, (byte) -128, this.field_Q, MapView.field_zb) + 5);
         var3 = var3 + this.a(SolMapGenerator.field_m, this.field_L, var3, (byte) -123, 170);
         pg var4 = new pg(46, var3, -90 + this.field_x, 25, this.field_K, true, -120 + this.field_x, 5, EmailValidator.field_x, 11579568, MenuButton.field_E);
         this.b((byte) -71, var4);
         var3 = var3 + var4.field_n;
         WidgetTheme var5 = new WidgetTheme(gn.field_u, 0, 0, 0, 0, 16777215, -1, 0, 0, gn.field_u.field_J, -1, 2147483647, true);
-        this.field_I = new ts(var2, var5);
+        this.field_I = new TextHotspotWidget(var2, var5);
         this.field_I.field_v = "";
         this.field_I.a(0, true, bk.field_c);
         this.field_I.a(1, true, bk.field_c);
@@ -316,7 +316,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
         this.field_E.field_u = (WidgetListener) (this);
         this.b((byte) -115, this.field_E);
         this.b((byte) -119, this.field_O);
-        this.field_D = new bj((dl) (this));
+        this.field_D = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_D.setBounds(this.field_Q.field_q + 20, 150, (byte) 115, 60 + (this.field_Q.field_m + this.field_Q.field_x), -60 + (-this.field_Q.field_m + this.field_x) - this.field_Q.field_x);
         this.b((byte) -120, this.field_D);
         this.setBounds(0, var3 + 55 + var6, (byte) 122, 0, 496);
@@ -374,7 +374,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
         int var2 = -1;
         try {
           if (param0) {
-            this.a(-121);
+            this.onMoreSuggestionsRequested(-121);
           }
           var2 = Integer.parseInt(this.field_L.field_s);
         } catch (NumberFormatException numberFormatException) {
@@ -382,7 +382,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
         return cg.a(this.field_F.field_s, this.field_K.field_z, this.field_Q.field_s, var2, this.field_J.field_s, this, -13037);
     }
 
-    public final void a(int param0) {
+    public final void onMoreSuggestionsRequested(int param0) {
         ((UsernameAvailabilityValidator) (this.field_Q.getValidationSource((byte) 117))).d(0);
         if (param0 != 2147483647) {
           field_P = (String) null;
@@ -500,7 +500,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
           var17 = WhirlpoolHasher.field_l;
           var5 = var5 + (var3 * (3 + 4 * var6Lifetime4) >> 2);
           var6Lifetime4Lifetime1 = wk.a(param1 ^ 9672, wg.field_e.a(param1 ^ -5538, var17), rs.field_Cb, new int[]{var4 - 80});
-          var18 = fr.field_F;
+          var18 = DraggableWidget.field_F;
           var5 = var5 + ((var6Lifetime4Lifetime1 * 4 + 3) * var3 >> 2);
           var6Lifetime4Lifetime2 = wk.a(-9615, wg.field_e.a(5607, var18), rs.field_Cb, new int[]{var4 - 80});
           var19 = ScrollPane.field_Cb;
@@ -582,7 +582,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
             return stackIn_6_0;
           }
           if (param2 != 13) {
-            aa.a(104, (byte) -32);
+            AccountCreationForm.a(104, (byte) -32);
           }
           if (param0 != 99) {
             return false;
@@ -672,7 +672,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
         return false;
     }
 
-    public final void a(FocusableWidget param0, int param1, int param2, int param3, int param4) {
+    public final void onButtonClicked(FocusableWidget param0, int param1, int param2, int param3, int param4) {
         boolean discarded$1 = false;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -688,7 +688,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
             }
           }
           if (param1 != 6) {
-            this.field_M = (fa) null;
+            this.field_M = (ValidatedTextInputWidget) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

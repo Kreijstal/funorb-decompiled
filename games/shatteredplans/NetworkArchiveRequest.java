@@ -10,7 +10,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
     byte field_w;
     static String[] field_v;
     static int field_y;
-    static nq field_C;
+    static BitmapFont field_C;
 
     final int e(int param0) {
         if (null == this.field_D) {
@@ -73,7 +73,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
     }
 
     final static boolean a(long param0, String param1, boolean param2, int[] param3, int param4) {
-        vm var6 = null;
+        QuickChatMenu var6 = null;
         RuntimeException var6_ref = null;
         String stackIn_11_0 = null;
         boolean stackIn_12_1 = false;

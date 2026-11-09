@@ -7,7 +7,7 @@ final class of {
     static volatile int field_e;
     static String field_g;
     static int field_f;
-    static vm field_b;
+    static QuickChatMenu field_b;
     static String field_d;
 
     public static void b(int param0) {
@@ -50,16 +50,16 @@ final class of {
         return wh.field_a.a(-45);
     }
 
-    final static e a(int param0) {
+    final static AccountFieldValue a(int param0) {
         String var1 = BoundsRect.d(-77);
         if (param0 == 64) {
           if (var1 != null &&
             var1.indexOf('@') >= 0) {
             var1 = "";
           }
-          return new e(BoundsRect.d(-98), ta.a(33));
+          return new AccountFieldValue(BoundsRect.d(-98), ta.a(33));
         }
-        return (e) null;
+        return (AccountFieldValue) null;
     }
 
     static {

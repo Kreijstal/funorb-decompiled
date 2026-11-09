@@ -194,7 +194,7 @@ class TextFieldWidget extends FocusableWidget {
         if (param0 != 0) {
           return;
         }
-        this.field_p.a((UiWidget) (this), param3, this.field_y, param2, (byte) 12);
+        this.field_p.paintWidget((UiWidget) (this), param3, this.field_y, param2, (byte) 12);
         if (!(this.field_p instanceof WidgetMetrics)) {
           return;
         }
@@ -214,7 +214,7 @@ class TextFieldWidget extends FocusableWidget {
           return;
         }
         this.field_H = param1;
-        if (di.field_p[81]) {
+        if (FleetTrailPoint.field_p[81]) {
           return;
         }
         this.field_N = this.field_H;
@@ -289,7 +289,7 @@ class TextFieldWidget extends FocusableWidget {
               if (param0 == 96) {
                 if (this.field_H > 0) {
                   stackIn_56_1 = 127;
-                  if (di.field_p[82]) {
+                  if (FleetTrailPoint.field_p[82]) {
                     stackIn_57_2 = this.findPreviousWordBoundary((byte) 88);
                   } else {
                     stackIn_57_2 = -1 + this.field_H;
@@ -301,7 +301,7 @@ class TextFieldWidget extends FocusableWidget {
                 if (param0 == 97) {
                   if (this.field_H < this.field_s.length()) {
                     stackIn_49_1 = 88;
-                    if (!di.field_p[82]) {
+                    if (!FleetTrailPoint.field_p[82]) {
                       stackIn_50_2 = 1 + this.field_H;
                     } else {
                       stackIn_50_2 = this.findNextWordBoundary(-1);
@@ -322,17 +322,17 @@ class TextFieldWidget extends FocusableWidget {
                     this.fireEnter((byte) 2);
                     return true;
                   }
-                  if (di.field_p[82] &&
+                  if (FleetTrailPoint.field_p[82] &&
                     param0 == 65) {
                     this.cutSelection((byte) -95);
                     return true;
                   }
-                  if (di.field_p[82] &&
+                  if (FleetTrailPoint.field_p[82] &&
                     param0 == 66) {
                     this.copyToClipboard(param2 - 14);
                     return true;
                   }
-                  if (di.field_p[82] &&
+                  if (FleetTrailPoint.field_p[82] &&
                     67 == param0) {
                     this.pasteFromClipboard((byte) -7);
                     return true;
@@ -551,12 +551,12 @@ class TextFieldWidget extends FocusableWidget {
         }
     }
 
-    final static hh a(int param0, String param1, Archive param2, Archive param3, String param4) {
+    final static BinaryBitmapFont a(int param0, String param1, Archive param2, Archive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        hh stackIn_2_0 = null;
-        hh stackIn_4_0 = null;
+        BinaryBitmapFont stackIn_2_0 = null;
+        BinaryBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -574,7 +574,7 @@ class TextFieldWidget extends FocusableWidget {
             stackIn_4_0 = cf.a(param3, 1, param2, var5_int, var6);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (hh) null;
+          stackIn_2_0 = (BinaryBitmapFont) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

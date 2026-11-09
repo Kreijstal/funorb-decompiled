@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class bl extends RasterBuffer {
+final class BufferedImageRasterBuffer extends RasterBuffer {
     private java.awt.Component field_i;
 
     final void paint(java.awt.Graphics param0, int param1, byte param2, int param3) {
@@ -45,6 +45,6 @@ final class bl extends RasterBuffer {
         this.bindAsRenderTarget((byte) 109);
     }
 
-    public bl() {
+    public BufferedImageRasterBuffer() {
     }
 }

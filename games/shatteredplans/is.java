@@ -14,8 +14,8 @@ final class is {
         if (param0 != -94) {
           is.a((byte) -54, 83);
         }
-        int var2 = hn.field_i;
-        hn.field_i = cf.field_D;
+        int var2 = IntList.field_i;
+        IntList.field_i = cf.field_D;
         if (param1 == 51) {
           TertiaryLinkNode.field_o.field_p = 2;
           cf.field_D = var2;

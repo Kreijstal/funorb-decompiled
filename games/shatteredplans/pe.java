@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pe extends WidgetContainer implements op, ButtonListener {
+final class pe extends WidgetContainer implements HyperlinkListener, ButtonListener {
     private FocusableWidget field_H;
-    private ts field_G;
+    private TextHotspotWidget field_G;
     static String[] field_J;
     private oj field_I;
     static ih field_E;
@@ -59,7 +59,7 @@ final class pe extends WidgetContainer implements op, ButtonListener {
           var2 = QuickChatCategoryRegistry.a(DiskCacheWorker.field_e, 4371, new String[]{this.l(98), this.a(56)});
           var3 = 20;
           var4 = new WidgetTheme(gn.field_u, 0, 0, 0, 0, 16777215, -1, 3, 0, gn.field_u.field_J, -1, 2147483647, true);
-          this.field_G = new ts(var2, var4);
+          this.field_G = new TextHotspotWidget(var2, var4);
           this.field_G.field_v = "";
           this.field_G.a(0, true, bk.field_c);
           this.field_G.a(1, true, bk.field_c);
@@ -89,7 +89,7 @@ final class pe extends WidgetContainer implements op, ButtonListener {
         }
     }
 
-    public final void a(int param0, int param1, int param2, ts param3) {
+    public final void onLinkClicked(int param0, int param1, int param2, TextHotspotWidget param3) {
         int var6 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -415,7 +415,7 @@ final class pe extends WidgetContainer implements op, ButtonListener {
                   no.field_c[var23Lifetime2] = -2147483648;
                 } else {
                   ul.field_Cb[var23Lifetime2] = var27Lifetime1 / var29Lifetime1 + var21Lifetime2;
-                  he.field_i[var23Lifetime2] = var28Lifetime1 / var29Lifetime1 + var22Lifetime2;
+                  IntNode.field_i[var23Lifetime2] = var28Lifetime1 / var29Lifetime1 + var22Lifetime2;
                   if (var7_int > var29Lifetime1) {
                     var7_int = var29Lifetime1;
                   }
@@ -547,7 +547,7 @@ final class pe extends WidgetContainer implements op, ButtonListener {
         }
     }
 
-    public final void a(FocusableWidget param0, int param1, int param2, int param3, int param4) {
+    public final void onButtonClicked(FocusableWidget param0, int param1, int param2, int param3, int param4) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

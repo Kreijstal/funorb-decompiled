@@ -74,7 +74,7 @@ final class we {
             }
             if (qn.field_c < 0) {
               for (var2 = 0; var2 < 112; var2++) {
-                di.field_p[var2] = false;
+                FleetTrailPoint.field_p[var2] = false;
               }
               qn.field_c = NodeSequence.field_e;
             } else {
@@ -82,10 +82,10 @@ final class we {
                 var2 = StrongCacheEntry.field_x[NodeSequence.field_e];
                 NodeSequence.field_e = 127 & 1 + NodeSequence.field_e;
                 if (var2 < 0) {
-                  di.field_p[~var2] = false;
+                  FleetTrailPoint.field_p[~var2] = false;
                   continue;
                 }
-                di.field_p[var2] = true;
+                FleetTrailPoint.field_p[var2] = true;
               }
             }
             MenuButton.field_J = cg.field_I;

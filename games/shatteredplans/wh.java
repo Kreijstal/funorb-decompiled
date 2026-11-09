@@ -15,25 +15,25 @@ final class wh {
         return pr.currentTimeMillis(14274) - IntrusiveDeque.field_e;
     }
 
-    final static void a(boolean param0) {
-        cl var1 = null;
-        cl var1Lifetime1;
+    final static void pushRasterState(boolean param0) {
+        RasterStateFrame var1 = null;
+        RasterStateFrame var1Lifetime1;
         if (!param0) {
-          var1 = (cl) (ql.field_p.pollLast(true));
+          var1 = (RasterStateFrame) (ql.field_p.pollLast(true));
           if (var1 == null) {
-            var1 = new cl();
+            var1 = new RasterStateFrame();
           }
-          var1.a(SoftwareRasterizer.field_i, SoftwareRasterizer.field_f, SoftwareRasterizer.field_h, SoftwareRasterizer.field_k, SoftwareRasterizer.field_a, 5, SoftwareRasterizer.field_b, SoftwareRasterizer.field_l);
+          var1.setRasterState(SoftwareRasterizer.field_i, SoftwareRasterizer.field_f, SoftwareRasterizer.field_h, SoftwareRasterizer.field_k, SoftwareRasterizer.field_a, 5, SoftwareRasterizer.field_b, SoftwareRasterizer.field_l);
           ta.field_b.addLast((byte) -113, var1);
           return;
         }
         Sprite[] var2 = (Sprite[]) null;
-        wh.a((Sprite[]) null, 98, -107, (byte) 31, 66);
-        var1Lifetime1 = (cl) (ql.field_p.pollLast(true));
+        wh.drawHorizontalSpriteStrip((Sprite[]) null, 98, -107, (byte) 31, 66);
+        var1Lifetime1 = (RasterStateFrame) (ql.field_p.pollLast(true));
         if (var1Lifetime1 == null) {
-          var1Lifetime1 = new cl();
+          var1Lifetime1 = new RasterStateFrame();
         }
-        var1Lifetime1.a(SoftwareRasterizer.field_i, SoftwareRasterizer.field_f, SoftwareRasterizer.field_h, SoftwareRasterizer.field_k, SoftwareRasterizer.field_a, 5, SoftwareRasterizer.field_b, SoftwareRasterizer.field_l);
+        var1Lifetime1.setRasterState(SoftwareRasterizer.field_i, SoftwareRasterizer.field_f, SoftwareRasterizer.field_h, SoftwareRasterizer.field_k, SoftwareRasterizer.field_a, 5, SoftwareRasterizer.field_b, SoftwareRasterizer.field_l);
         ta.field_b.addLast((byte) -113, var1Lifetime1);
     }
 
@@ -46,7 +46,7 @@ final class wh {
         field_c = null;
     }
 
-    final static void a(Sprite[] param0, int param1, int param2, byte param3, int param4) {
+    final static void drawHorizontalSpriteStrip(Sprite[] param0, int param1, int param2, byte param3, int param4) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;

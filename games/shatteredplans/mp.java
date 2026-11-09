@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mp {
-    static th field_b;
+    static CoverageBitmapFont field_b;
     static String field_d;
     static String field_a;
     static Sprite[] field_e;

@@ -48,7 +48,7 @@ final class jf {
               if (param1.length() == 0) {
                 var5Lifetime6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               } else {
-                var5Lifetime6 = var8 + "; Expires=" + vm.a(94608000000L + pr.currentTimeMillis(param0 ^ -21444), param0 + 25612) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var8 + "; Expires=" + QuickChatMenu.a(94608000000L + pr.currentTimeMillis(param0 ^ -21444), param0 + 25612) + "; Max-Age=" + 94608000L;
               }
               ll.evalJavaScript(param2, "document.cookie=\"" + var5Lifetime6 + "\"", (byte) 123);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {

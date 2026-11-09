@@ -10,7 +10,7 @@ class ns extends il implements ButtonListener {
     private boolean field_tb;
     private boolean field_sb;
     static boolean field_ob;
-    private nq field_ub;
+    private BitmapFont field_ub;
     static String field_xb;
     private boolean field_wb;
     static PcmStreamMixer field_rb;
@@ -69,7 +69,7 @@ class ns extends il implements ButtonListener {
         this.i((byte) -32);
     }
 
-    public void a(FocusableWidget param0, int param1, int param2, int param3, int param4) {
+    public void onButtonClicked(FocusableWidget param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -100,7 +100,7 @@ class ns extends il implements ButtonListener {
         }
     }
 
-    ns(DialogRoot param0, nq param1, String param2, boolean param3, boolean param4) {
+    ns(DialogRoot param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new cf((ns) null, param1, param2), 77, 10, 10);
         try {
           this.field_sb = false;
@@ -172,13 +172,13 @@ class ns extends il implements ButtonListener {
             var6.a(ProductionContent.field_g, (byte) 120, 17);
           } else {
             if (param1 == 256) {
-              var6.a((WidgetListener) (this), 121, ts.field_E);
+              var6.a((WidgetListener) (this), 121, TextHotspotWidget.field_E);
             } else {
               stackIn_10_0 = var6;
               if (!this.field_tb) {
                 stackIn_11_1 = ss.field_e;
               } else {
-                stackIn_11_1 = ts.field_E;
+                stackIn_11_1 = TextHotspotWidget.field_E;
               }
               ((cf) (Object) stackIn_10_0).a(stackIn_11_1, (byte) 119, -1);
             }

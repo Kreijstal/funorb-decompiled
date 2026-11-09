@@ -77,7 +77,7 @@ final class aj {
               var11.field_j.a(1, 16, var12);
             } else {
               var9 = DerelictVictoryChecker.field_m;
-              var10 = QuickChatCategoryRegistry.a(cb.field_g, 4371, new String[]{param3});
+              var10 = QuickChatCategoryRegistry.a(DirectByteArrayStorage.field_g, 4371, new String[]{param3});
               var9.field_j.a(1, 15, var10);
             }
           }

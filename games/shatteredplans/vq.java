@@ -34,14 +34,14 @@ final class vq {
           String var15 = null;
           String var16 = null;
           int var17 = 0;
-          eq var18 = null;
+          ReflectionCheck var18 = null;
           byte[][] var19 = null;
           String var20 = null;
           byte[][] var21 = null;
           int var13Lifetime1;
           var14 = ShatteredPlansClient.field_F ? 1 : 0;
           try {
-            var18 = new eq();
+            var18 = new ReflectionCheck();
             var18.field_l = param0.readUnsignedByte(param3 ^ 120);
             var18.field_j = param0.readInt(16711680);
             var18.field_h = new byte[var18.field_l][][];

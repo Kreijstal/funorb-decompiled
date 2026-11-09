@@ -248,7 +248,7 @@ final class kd {
               if (GameState.field_l.field_c == var4) {
                 var5 = StarAnnotation.field_n;
               } else {
-                var5 = ah.field_P;
+                var5 = ValidationMessageWidget.field_P;
               }
             } else {
               var5 = IterableNodeHashTable.field_b;
@@ -293,7 +293,7 @@ final class kd {
             stackIn_40_0 = var6;
             stackIn_40_1 = 0;
             stackIn_41_2 = !(var4 < 0);
-            var7Lifetime1 = vm.a(stackIn_40_0, stackIn_40_1, stackIn_41_2);
+            var7Lifetime1 = QuickChatMenu.a(stackIn_40_0, stackIn_40_1, stackIn_41_2);
             var8Lifetime1 = -(var7Lifetime1 >> 1) + QuaternaryLinkNode.field_w;
             if (0 <= var4) {
               var1_int = var1_int + sm.field_b;
@@ -313,7 +313,7 @@ final class kd {
               var1_int = var1_int + (id.field_b + (sm.field_b + ArchiveNetworkClient.field_i));
             } else {
               PlayerStats.field_c.drawString(var6, var8Lifetime1, QuickChatCategoryDefinition.field_v + var1_int, var5, -1);
-              var1_int = var1_int + e.field_d;
+              var1_int = var1_int + AccountFieldValue.field_d;
             }
           }
           return;
@@ -333,15 +333,15 @@ final class kd {
     }
 
     final static void a(int param0, int param1) {
-        if (ah.field_U >= param1) {
+        if (ValidationMessageWidget.field_U >= param1) {
           return;
         }
         if (param0 != 23299) {
           field_c = (String) null;
         }
         ValidationState.field_c = new int[param1];
-        cb.field_o = new int[param1];
-        ah.field_U = param1;
+        DirectByteArrayStorage.field_o = new int[param1];
+        ValidationMessageWidget.field_U = param1;
         QuaternaryNodeList.field_b = new int[param1];
         rl.field_b = new boolean[param1];
         WeightedLruCache.field_a = new int[param1];

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eq extends IntrusiveNode {
+final class ReflectionCheck extends IntrusiveNode {
     static Sprite field_o;
     static String field_i;
     int[] field_r;
@@ -30,7 +30,7 @@ final class eq extends IntrusiveNode {
           uc.field_w = new int[260];
           if (param0 != -47) {
             var5 = (sq) null;
-            eq.a((String[]) null, (sq) null, 48);
+            ReflectionCheck.a((String[]) null, (sq) null, 48);
           }
           for (var1_int = 0; var1_int < 256; var1_int++) {
             var2 = 15.0;
@@ -101,7 +101,7 @@ final class eq extends IntrusiveNode {
         field_k = null;
     }
 
-    eq() {
+    ReflectionCheck() {
     }
 
     static {

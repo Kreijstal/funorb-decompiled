@@ -60,7 +60,7 @@ final class cg extends SingleChildWidget {
         }
         if (this.field_J != 256) {
           var6 = new Sprite(this.field_z.field_x, this.field_z.field_n);
-          aq.a((byte) 114, var6);
+          aq.pushSpriteRaster((byte) 114, var6);
           this.field_z.drawLayer(param0, param1, 0, 0);
           Star.f((byte) -78);
           var6.drawAlpha(param3 + this.field_m, param2 + this.field_q, this.field_J);
@@ -72,7 +72,7 @@ final class cg extends SingleChildWidget {
     final static Sprite[] a(int param0, Sprite param1) {
         Sprite[] var2 = null;
         RuntimeException var2_ref = null;
-        aa var3 = null;
+        AccountCreationForm var3 = null;
         Sprite[] var4 = null;
         Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -81,8 +81,8 @@ final class cg extends SingleChildWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -15338) {
-            var3 = (aa) null;
-            cg.a((String) null, false, (String) null, -21, (String) null, (aa) null, -88);
+            var3 = (AccountCreationForm) null;
+            cg.a((String) null, false, (String) null, -21, (String) null, (AccountCreationForm) null, -88);
           }
           var4 = new Sprite[9];
           var2 = var4;
@@ -103,7 +103,7 @@ final class cg extends SingleChildWidget {
         }
     }
 
-    final static boolean a(String param0, boolean param1, String param2, int param3, String param4, aa param5, int param6) {
+    final static boolean a(String param0, boolean param1, String param2, int param3, String param4, AccountCreationForm param5, int param6) {
         RuntimeException var7 = null;
         oj var8 = null;
         RuntimeException stackIn_17_0 = null;
@@ -123,15 +123,15 @@ final class cg extends SingleChildWidget {
           if (oj.field_Fb != PrivateChatMessage.field_l) {
             return false;
           }
-          var8 = new oj(le.field_e, param5);
-          le.field_e.addDialog(true, var8);
+          var8 = new oj(ByteArrayStorage.field_e, param5);
+          ByteArrayStorage.field_e.addDialog(true, var8);
           if (TextFieldWidget.j(0)) {
             var8.f(false);
             return true;
           }
           PrivateChatMessage.field_l = ue.field_a;
           np.field_m = param1;
-          aa.field_G = param4;
+          AccountCreationForm.field_G = param4;
           PlayerStats.field_j = param2;
           wh.field_c = null;
           ae.field_g = param0;
@@ -172,7 +172,7 @@ final class cg extends SingleChildWidget {
     final static void i(int param0) {
         RandomAccessCacheFile.field_k = RandomAccessCacheFile.field_k - 1;
         SoftwareRasterizer.setTarget(Archive.field_c[RandomAccessCacheFile.field_k], oj.field_Cb[RandomAccessCacheFile.field_k], TertiaryLinkNode.field_s[RandomAccessCacheFile.field_k]);
-        SoftwareRasterizer.field_i = cb.field_f[RandomAccessCacheFile.field_k];
+        SoftwareRasterizer.field_i = DirectByteArrayStorage.field_f[RandomAccessCacheFile.field_k];
         if (param0 == 0) {
           SoftwareRasterizer.field_l = dk.field_b[RandomAccessCacheFile.field_k];
           SoftwareRasterizer.field_a = bf.field_c[RandomAccessCacheFile.field_k];
@@ -219,8 +219,8 @@ final class cg extends SingleChildWidget {
           field_G = null;
           return;
         }
-        aa var2 = (aa) null;
-        cg.a((String) null, false, (String) null, 41, (String) null, (aa) null, 17);
+        AccountCreationForm var2 = (AccountCreationForm) null;
+        cg.a((String) null, false, (String) null, 41, (String) null, (AccountCreationForm) null, 17);
         field_K = null;
         field_G = null;
     }

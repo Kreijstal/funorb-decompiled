@@ -25,19 +25,19 @@ final class DisplayModeInfo {
     }
 
     final static MenuWindow a(int param0, int param1) {
-        eq.field_k = new MenuWindow(0, -((4 + kb.field_y.field_o) * param0) + 479 - 28, 200, (kb.field_y.field_o + 4) * param0 + 28, ba.field_a.toUpperCase());
-        MenuButton var2 = new MenuButton(184 + eq.field_k.field_k, 2 + eq.field_k.field_t, 11, 11, param1, (Sprite) null, "X", 16711680);
-        var2.field_h = eq.field_k;
-        eq.field_k.addChild(var2, param1 + 9);
-        MenuList var3 = new MenuList(9 + eq.field_k.field_k, 20 + eq.field_k.field_t, 182, (4 + kb.field_y.field_o) * param0);
-        eq.field_k.addChild(var3, 8);
-        eq.field_k.field_z = var3;
-        return eq.field_k;
+        ReflectionCheck.field_k = new MenuWindow(0, -((4 + kb.field_y.field_o) * param0) + 479 - 28, 200, (kb.field_y.field_o + 4) * param0 + 28, ba.field_a.toUpperCase());
+        MenuButton var2 = new MenuButton(184 + ReflectionCheck.field_k.field_k, 2 + ReflectionCheck.field_k.field_t, 11, 11, param1, (Sprite) null, "X", 16711680);
+        var2.field_h = ReflectionCheck.field_k;
+        ReflectionCheck.field_k.addChild(var2, param1 + 9);
+        MenuList var3 = new MenuList(9 + ReflectionCheck.field_k.field_k, 20 + ReflectionCheck.field_k.field_t, 182, (4 + kb.field_y.field_o) * param0);
+        ReflectionCheck.field_k.addChild(var3, 8);
+        ReflectionCheck.field_k.field_z = var3;
+        return ReflectionCheck.field_k;
     }
 
     final static void a(byte param0) {
-        int fieldTemp$0 = di.field_m + 1;
-        di.field_m = di.field_m + 1;
+        int fieldTemp$0 = FleetTrailPoint.field_m + 1;
+        FleetTrailPoint.field_m = FleetTrailPoint.field_m + 1;
         if (fieldTemp$0 == 350) {
           ArchiveRequest.a(-1, (byte) -114);
         }

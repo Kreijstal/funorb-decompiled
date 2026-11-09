@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class e {
+final class AccountFieldValue {
     private String field_c;
     static int field_f;
     static Sprite field_e;
@@ -30,7 +30,7 @@ final class e {
           var12 = var11;
           if (param1 > -22) {
             var10 = (PcmSample) null;
-            e.a(-126, -120, (PcmSample) null);
+            AccountFieldValue.a(-126, -120, (PcmSample) null);
           }
           param3.field_c[param2] = var11;
           var5 = new MenuLabel(132 - rs.field_Cb.stringWidth(or.field_d[param2]), 0, or.field_d[param2]);
@@ -75,14 +75,14 @@ final class e {
         }
     }
 
-    final String a(byte param0) {
+    final String text(byte param0) {
         int var2 = 96 / ((param0 + 10) / 51);
         return this.field_c;
     }
 
-    final boolean a(int param0) {
+    final boolean shouldSubmitText(int param0) {
         if (param0 != 2) {
-          e.clearStatics(20);
+          AccountFieldValue.clearStatics(20);
           return this.field_a;
         }
         return this.field_a;
@@ -123,11 +123,11 @@ final class e {
         field_e = null;
     }
 
-    e(String param0) {
+    AccountFieldValue(String param0) {
         this(param0, false);
     }
 
-    e(String param0, boolean param1) {
+    AccountFieldValue(String param0, boolean param1) {
         RuntimeException var3 = null;
         boolean stackIn_4_1 = false;
         RuntimeException stackIn_12_0 = null;

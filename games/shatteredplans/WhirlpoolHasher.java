@@ -119,7 +119,7 @@ final class WhirlpoolHasher {
             WhirlpoolHasher.a(-92, 119, -115, 97, 9);
           }
           if (TaskAi.field_o.field_rb != 0 &&
-            !bg.field_g) {
+            !LoginMethodPreference.field_g) {
             if (ae.field_b) {
               ClientException.a(true);
             } else {
@@ -128,12 +128,12 @@ final class WhirlpoolHasher {
           }
           if (sr.field_h) {
             PlayerEliminatedEvent.a(param3, param0, param0, param2, param7, param1, -10, 20, param6);
-            fa.field_X.a(param5, -20429);
+            ValidatedTextInputWidget.field_X.a(param5, -20429);
             if (param5) {
               if (hd.field_m.field_rb != 0) {
                 sr.field_h = false;
               }
-              if (cb.field_l.field_rb == 0) {
+              if (DirectByteArrayStorage.field_l.field_rb == 0) {
                 return;
               }
               MusicVoice.c(false);
@@ -302,11 +302,11 @@ final class WhirlpoolHasher {
             }
             var21 = stackIn_39_0;
             var22 = ul.field_Cb[var15Lifetime1];
-            var23 = he.field_i[var15Lifetime1];
+            var23 = IntNode.field_i[var15Lifetime1];
             var24 = ul.field_Cb[var16];
-            var25 = he.field_i[var16];
+            var25 = IntNode.field_i[var16];
             var26 = ul.field_Cb[var17];
-            var27 = he.field_i[var17];
+            var27 = IntNode.field_i[var17];
             if (var18 == var19 &&
               var20 == var19) {
               var28 = var54[var18];
@@ -551,7 +551,7 @@ final class WhirlpoolHasher {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_m[var2] = bg.longXor(bg.longXor(bg.longXor(GarrisonTask.longAnd((long)this.field_a[5 + var3] << 16, 16711680L), bg.longXor(bg.longXor(GarrisonTask.longAnd((long)this.field_a[var3 + 3], 255L) << 32, bg.longXor(bg.longXor(GarrisonTask.longAnd((long)this.field_a[1 + var3], 255L) << 48, (long)this.field_a[var3] << 56), GarrisonTask.longAnd((long)this.field_a[2 + var3] << 40, 280375465082880L))), GarrisonTask.longAnd(4278190080L, (long)this.field_a[4 + var3] << 24))), GarrisonTask.longAnd((long)this.field_a[6 + var3], 255L) << 8), GarrisonTask.longAnd(255L, (long)this.field_a[7 + var3]));
+          this.field_m[var2] = LoginMethodPreference.longXor(LoginMethodPreference.longXor(LoginMethodPreference.longXor(GarrisonTask.longAnd((long)this.field_a[5 + var3] << 16, 16711680L), LoginMethodPreference.longXor(LoginMethodPreference.longXor(GarrisonTask.longAnd((long)this.field_a[var3 + 3], 255L) << 32, LoginMethodPreference.longXor(LoginMethodPreference.longXor(GarrisonTask.longAnd((long)this.field_a[1 + var3], 255L) << 48, (long)this.field_a[var3] << 56), GarrisonTask.longAnd((long)this.field_a[2 + var3] << 40, 280375465082880L))), GarrisonTask.longAnd(4278190080L, (long)this.field_a[4 + var3] << 24))), GarrisonTask.longAnd((long)this.field_a[6 + var3], 255L) << 8), GarrisonTask.longAnd(255L, (long)this.field_a[7 + var3]));
           var2++;
           var3 += 8;
         }
@@ -559,7 +559,7 @@ final class WhirlpoolHasher {
           dupTemp$0 = this.field_c[var2Lifetime1];
           arrayValue$1 = this.field_m[var2Lifetime1];
           this.field_e[var2Lifetime1] = dupTemp$0;
-          this.field_f[var2Lifetime1] = bg.longXor(arrayValue$1, dupTemp$0);
+          this.field_f[var2Lifetime1] = LoginMethodPreference.longXor(arrayValue$1, dupTemp$0);
         }
         for (var2Lifetime2 = 1; 10 >= var2Lifetime2; var2Lifetime2++) {
           for (var3Lifetime1 = 0; 8 > var3Lifetime1; var3Lifetime1++) {
@@ -567,7 +567,7 @@ final class WhirlpoolHasher {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_h[var3Lifetime1] = bg.longXor(this.field_h[var3Lifetime1], BufferedSocket.field_l[var4][we.intAnd(255, (int)(this.field_e[we.intAnd(7, -var4 + var3Lifetime1)] >>> var5))]);
+              this.field_h[var3Lifetime1] = LoginMethodPreference.longXor(this.field_h[var3Lifetime1], BufferedSocket.field_l[var4][we.intAnd(255, (int)(this.field_e[we.intAnd(7, -var4 + var3Lifetime1)] >>> var5))]);
               var5 -= 8;
               var4++;
             }
@@ -575,14 +575,14 @@ final class WhirlpoolHasher {
           for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
             this.field_e[var3Lifetime1Lifetime1] = this.field_h[var3Lifetime1Lifetime1];
           }
-          this.field_e[0] = bg.longXor(this.field_e[0], BufferedSocket.field_k[var2Lifetime2]);
+          this.field_e[0] = LoginMethodPreference.longXor(this.field_e[0], BufferedSocket.field_k[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
             this.field_h[var3Lifetime1Lifetime2] = this.field_e[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_h[var3Lifetime1Lifetime2] = bg.longXor(this.field_h[var3Lifetime1Lifetime2], BufferedSocket.field_l[var7][we.intAnd((int)(this.field_f[we.intAnd(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1), 255)]);
+              this.field_h[var3Lifetime1Lifetime2] = LoginMethodPreference.longXor(this.field_h[var3Lifetime1Lifetime2], BufferedSocket.field_l[var7][we.intAnd((int)(this.field_f[we.intAnd(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1), 255)]);
               var5Lifetime1 -= 8;
               var7++;
             }
@@ -596,7 +596,7 @@ final class WhirlpoolHasher {
           this.field_m = (long[]) null;
         }
         while (var2Lifetime3 < 8) {
-          this.field_c[var2Lifetime3] = bg.longXor(this.field_c[var2Lifetime3], bg.longXor(this.field_f[var2Lifetime3], this.field_m[var2Lifetime3]));
+          this.field_c[var2Lifetime3] = LoginMethodPreference.longXor(this.field_c[var2Lifetime3], LoginMethodPreference.longXor(this.field_f[var2Lifetime3], this.field_m[var2Lifetime3]));
           var2Lifetime3++;
         }
     }

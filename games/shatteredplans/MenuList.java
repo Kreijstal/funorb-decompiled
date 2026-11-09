@@ -96,7 +96,7 @@ final class MenuList extends MenuComponent implements gj {
             SliderPainter.field_b = DerelictMapGenerator.field_q;
             jb.field_d = TargetedChatMessage.field_j + ArchiveRequest.field_r >> 1;
             MenuButton.field_B = TargetedChatMessage.field_j + ArchiveRequest.field_r >> 1;
-            oi.field_a = be.field_h;
+            oi.field_a = BytePayloadNode.field_h;
             var13 = (sq) null;
             qj.a((sq) null, -1);
             return;
@@ -153,7 +153,7 @@ final class MenuList extends MenuComponent implements gj {
             return;
           }
           DerelictMapGenerator.field_q = SliderPainter.field_b;
-          be.field_h = oi.field_a;
+          BytePayloadNode.field_h = oi.field_a;
           TargetedChatMessage.field_j = jb.field_d + MenuButton.field_B >> 1;
           ArchiveRequest.field_r = jb.field_d + MenuButton.field_B >> 1;
           return;
@@ -173,8 +173,8 @@ final class MenuList extends MenuComponent implements gj {
 
     final static void writeFleetMove(FleetMove param0, byte param1, PacketBuffer param2) {
         try {
-          di.writeStar(param0.field_y, false, param2);
-          di.writeStar(param0.field_B, false, param2);
+          FleetTrailPoint.writeStar(param0.field_y, false, param2);
+          FleetTrailPoint.writeStar(param0.field_B, false, param2);
           param2.writeShort(param0.field_z, 255);
           if (param1 > -67) {
             field_A = (String) null;

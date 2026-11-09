@@ -43,10 +43,10 @@ final class SecondaryNodeHashTable {
         return var2;
     }
 
-    final static th a(int param0, byte[] param1) {
-        th var2 = null;
+    final static CoverageBitmapFont a(int param0, byte[] param1) {
+        CoverageBitmapFont var2 = null;
         RuntimeException var2_ref = null;
-        th stackIn_6_0 = null;
+        CoverageBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -58,7 +58,7 @@ final class SecondaryNodeHashTable {
           if (param0 != 15) {
             field_f = (Sprite) null;
           }
-          var2 = new th(param1, cf.field_H, sj.field_a, WeightedCacheEntry.field_s, IntHashIndex.field_g, eo.field_fb, hd.field_q);
+          var2 = new CoverageBitmapFont(param1, cf.field_H, sj.field_a, WeightedCacheEntry.field_s, IntHashIndex.field_g, eo.field_fb, hd.field_q);
           TertiaryListSequence.a(param0 - 15);
           stackIn_6_0 = var2;
           return stackIn_6_0;
@@ -514,7 +514,7 @@ final class SecondaryNodeHashTable {
           Throwable decompiledCaughtException = null;
           try {
             try {
-              var4 = Class.forName("bl");
+              var4 = Class.forName("BufferedImageRasterBuffer");
               if (param1 != 16) {
                 stackIn_2_0 = (RasterBuffer) null;
                 return stackIn_2_0;
@@ -589,7 +589,7 @@ final class SecondaryNodeHashTable {
         }
         MapViewState.field_j = new AnimatedPanel(0L, (AnimatedPanel) null);
         MapViewState.field_j.addChild(param0 + 87, Archive.field_g.field_d);
-        MapViewState.field_j.addChild(4, vm.field_Ab);
+        MapViewState.field_j.addChild(4, QuickChatMenu.field_Ab);
         DialogRoot.j(96);
     }
 

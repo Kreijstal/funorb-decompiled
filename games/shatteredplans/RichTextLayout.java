@@ -11,12 +11,12 @@ final class RichTextLayout extends TextLayout {
     static Archive field_k;
     static String field_n;
     private String field_g;
-    private nq field_j;
+    private BitmapFont field_j;
     static String[] field_r;
     private int field_q;
     private int field_i;
 
-    final void layoutSingleLine(int param0, String param1, int param2, nq param3, int param4) {
+    final void layoutSingleLine(int param0, String param1, int param2, BitmapFont param3, int param4) {
         TextLayoutLine var8 = null;
         int var7 = 0;
         if (param1 == null) {
@@ -41,7 +41,7 @@ final class RichTextLayout extends TextLayout {
         }
     }
 
-    final void a(String param0, int param1, int param2, int param3, int param4, int param5, nq param6, int param7) {
+    final void a(String param0, int param1, int param2, int param3, int param4, int param5, BitmapFont param6, int param7) {
         TextLayoutLine stackIn_33_0;
         TextLayoutLine stackIn_33_1;
         int stackIn_33_2;
@@ -176,7 +176,7 @@ final class RichTextLayout extends TextLayout {
         }
     }
 
-    private final TextLayoutLine createLine(int param0, nq param1, String param2, byte param3) {
+    private final TextLayoutLine createLine(int param0, BitmapFont param1, String param2, byte param3) {
         TextLayoutLine var5 = null;
         RuntimeException var5_ref = null;
         TextLayoutLine var6 = null;
@@ -229,7 +229,7 @@ final class RichTextLayout extends TextLayout {
         field_o = null;
     }
 
-    final void a(nq param0, int param1, int param2, String param3, int param4) {
+    final void a(BitmapFont param0, int param1, int param2, String param3, int param4) {
         TextLayoutLine var7 = null;
         TextLayoutLine var8 = null;
         if (param3 == null) {
@@ -258,7 +258,7 @@ final class RichTextLayout extends TextLayout {
         }
     }
 
-    final void a(int param0, int param1, nq param2, String param3, int param4) {
+    final void a(int param0, int param1, BitmapFont param2, String param3, int param4) {
         TextLayoutLine var9 = null;
         TextLayoutLine var10 = null;
         if (param3 == null) {

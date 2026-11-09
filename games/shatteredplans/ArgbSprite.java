@@ -407,7 +407,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void i(int param0, int param1) {
+    final void drawRotated180(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -694,7 +694,7 @@ final class ArgbSprite extends Sprite {
         super(param0, param1, param2, param3, param4, param5, param6);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void rotateNearest(int param0, int param1, int param2, int param3, int param4, int param5) {
         int incrementValue$8 = 0;
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
@@ -1401,7 +1401,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final ArgbSprite h() {
+    final ArgbSprite copyArgb() {
         int var3 = 0;
         ArgbSprite var1 = new ArgbSprite(this.field_z, this.field_w);
         var1.field_o = this.field_o;
@@ -1446,7 +1446,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void h(int param0, int param1) {
+    final void drawMirroredHorizontal(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;

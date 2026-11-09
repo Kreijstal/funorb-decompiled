@@ -114,12 +114,12 @@ final class gi {
           aj.field_a.clear(0);
           if (WeightedLruCache.field_g == PanelNode.field_q) {
             ei.field_e = TargetedChatMessage.field_j;
-            e.field_f = ArchiveRequest.field_r;
-            ByteArrayNode.field_k = be.field_h;
+            AccountFieldValue.field_f = ArchiveRequest.field_r;
+            ByteArrayNode.field_k = BytePayloadNode.field_h;
             AttackTask.field_o = DerelictMapGenerator.field_q;
           } else {
-            e.field_f = QuickChatCategoryRegistry.a(ArchiveRequest.field_r, 32, BufferedCacheFile.field_m, MenuButton.field_B, 0);
-            ByteArrayNode.field_k = QuickChatCategoryRegistry.a(be.field_h, 32, BufferedCacheFile.field_m, oi.field_a, 0);
+            AccountFieldValue.field_f = QuickChatCategoryRegistry.a(ArchiveRequest.field_r, 32, BufferedCacheFile.field_m, MenuButton.field_B, 0);
+            ByteArrayNode.field_k = QuickChatCategoryRegistry.a(BytePayloadNode.field_h, 32, BufferedCacheFile.field_m, oi.field_a, 0);
             ei.field_e = QuickChatCategoryRegistry.a(TargetedChatMessage.field_j, 32, BufferedCacheFile.field_m, jb.field_d, 0);
             stackIn_28_0 = DerelictMapGenerator.field_q;
             stackIn_28_1 = 32;
@@ -202,8 +202,8 @@ final class gi {
           }
           js.field_f.position = js.field_f.position + 2;
           var5_int = js.field_f.position;
-          js.field_f.writeInt(11135, e.field_b);
-          js.field_f.writeLong(-16426, be.field_l);
+          js.field_f.writeInt(11135, AccountFieldValue.field_b);
+          js.field_f.writeLong(-16426, BytePayloadNode.field_l);
           var6 = 0;
           if (DualLinkDeque.field_b) {
             var6 = var6 | 1;
@@ -214,7 +214,7 @@ final class gi {
           if (param2) {
             var6 = var6 | 8;
           }
-          if (fr.field_H != null) {
+          if (DraggableWidget.field_H != null) {
             var6 = var6 | 16;
           }
           js.field_f.writeByte(var6, (byte) -93);
@@ -223,8 +223,8 @@ final class gi {
             var7 = "";
           }
           js.field_f.writeString(var7, (byte) 0);
-          if (fr.field_H != null) {
-            js.field_f.writeMarkedString((byte) 95, fr.field_H);
+          if (DraggableWidget.field_H != null) {
+            js.field_f.writeMarkedString((byte) 95, DraggableWidget.field_H);
           }
           GarrisonTask.a(25050, js.field_f, hr.field_a, eo.field_cb, jl.field_V);
           js.field_f.patchLengthShort(-549342136, js.field_f.position - var5_int);

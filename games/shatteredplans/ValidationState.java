@@ -21,14 +21,14 @@ final class ValidationState {
         if (param1) {
           ValidationState.clearStatics(58);
           if (GameRules.field_c == -3) {
-            ts.a(6493);
+            TextHotspotWidget.a(6493);
           } else {
             if (null != ce.field_x) {
               IntrusiveDequeCursor.a(1, param0);
               return;
             }
             if (null == SecondaryNodeHashTable.field_g) {
-              fr.f((byte) -99);
+              DraggableWidget.f((byte) -99);
               return;
             }
             IntrusiveDequeCursor.a(1, param0);
@@ -37,14 +37,14 @@ final class ValidationState {
           return;
         }
         if (GameRules.field_c == -3) {
-          ts.a(6493);
+          TextHotspotWidget.a(6493);
         } else {
           if (null != ce.field_x) {
             IntrusiveDequeCursor.a(1, param0);
             return;
           }
           if (null == SecondaryNodeHashTable.field_g) {
-            fr.f((byte) -99);
+            DraggableWidget.f((byte) -99);
             return;
           }
           IntrusiveDequeCursor.a(1, param0);

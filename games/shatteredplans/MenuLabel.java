@@ -106,7 +106,7 @@ class MenuLabel extends MenuComponent {
             var3 = (String) null;
             MenuLabel.a((String) null, 122, (byte) 75);
           }
-          stackIn_3_0 = e.a(param0.field_a, -124, param0.field_f);
+          stackIn_3_0 = AccountFieldValue.a(param0.field_a, -124, param0.field_f);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -136,7 +136,7 @@ class MenuLabel extends MenuComponent {
         MenuButton.f(-1);
         oe.field_f = true;
         TertiaryNodeList.field_b = true;
-        le.field_e.deactivateAll(99);
+        ByteArrayStorage.field_e.deactivateAll(99);
         if (param0 > -12) {
           return;
         }

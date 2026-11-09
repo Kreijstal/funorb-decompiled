@@ -21,7 +21,7 @@ final class DiskCacheWorker implements Runnable {
         int var3 = 0;
         int var8 = ShatteredPlansClient.field_F ? 1 : 0;
         RandomAccessCacheFile.a(-111);
-        vm.field_Jb = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro1_1");
+        QuickChatMenu.field_Jb = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro1_1");
         Dialog.field_D = id.a(param0 - 48, DerelictVictoryChecker.field_n, "intro", "intro1_2");
         DualLinkDeque.field_a = id.a(param0 ^ 48, DerelictVictoryChecker.field_n, "intro", "intro1_3");
         sr.field_F = id.a(param0 - 48, DerelictVictoryChecker.field_n, "intro", "intro1_flash");
@@ -31,7 +31,7 @@ final class DiskCacheWorker implements Runnable {
         BattleContribution.a(0, SoftwareRasterizer.field_b, (byte) 24, 0, 0, 64, SoftwareRasterizer.field_k);
         Dialog.field_D.bindAsRenderTarget();
         BattleContribution.a(0, SoftwareRasterizer.field_b, (byte) 24, 0, 0, 128, SoftwareRasterizer.field_k);
-        vm.field_Jb.bindAsRenderTarget();
+        QuickChatMenu.field_Jb.bindAsRenderTarget();
         MouseWheelInput.a(0, 0, SoftwareRasterizer.field_k, 0, SoftwareRasterizer.field_b, param0 + 24024);
         id.a(2, DerelictVictoryChecker.field_n, "intro", "intro2_glow");
         DefendTask.field_s = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro2_earth");
@@ -57,16 +57,16 @@ final class DiskCacheWorker implements Runnable {
         ch.field_c = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro3_crater");
         var1_int = q.field_Cb.field_z;
         var2 = q.field_Cb.field_w + 60;
-        he.field_h = new Sprite(var1_int, var2);
+        IntNode.field_h = new Sprite(var1_int, var2);
         for (var3 = 0; (var2 - 60) * var1_int > var3; var3++) {
-          he.field_h.field_B[var3 + var1_int * 60] = q.field_Cb.field_B[var3];
+          IntNode.field_h.field_B[var3 + var1_int * 60] = q.field_Cb.field_B[var3];
         }
         var1_int = mm.field_o.field_z;
-        he.field_h.field_o = q.field_Cb.field_o;
-        he.field_h.field_t = q.field_Cb.field_t;
-        he.field_h.field_x = -60 + q.field_Cb.field_x;
+        IntNode.field_h.field_o = q.field_Cb.field_o;
+        IntNode.field_h.field_t = q.field_Cb.field_t;
+        IntNode.field_h.field_x = -60 + q.field_Cb.field_x;
         var2 = 60 + mm.field_o.field_w;
-        he.field_h.field_p = 60 + q.field_Cb.field_p;
+        IntNode.field_h.field_p = 60 + q.field_Cb.field_p;
         we.field_f = new Sprite(var1_int, var2);
         for (var3 = 0; (var2 - 60) * var1_int > var3; var3++) {
           we.field_f.field_B[var1_int * 60 + var3] = mm.field_o.field_B[var3];
@@ -75,12 +75,12 @@ final class DiskCacheWorker implements Runnable {
         we.field_f.field_p = mm.field_o.field_p + 60;
         we.field_f.field_x = -60 + mm.field_o.field_x;
         we.field_f.field_o = mm.field_o.field_o;
-        he.field_h.bindAsRenderTarget();
+        IntNode.field_h.bindAsRenderTarget();
         if (param0 != 50) {
           return;
         }
         try {
-          SoftwareRasterizer.b(60, 60, 0, 0, he.field_h.field_z, he.field_h.field_w);
+          SoftwareRasterizer.b(60, 60, 0, 0, IntNode.field_h.field_z, IntNode.field_h.field_w);
           we.field_f.bindAsRenderTarget();
           SoftwareRasterizer.b(60, 60, 0, 0, we.field_f.field_z, we.field_f.field_w);
           ks.field_j = va.field_e.copy();
@@ -438,7 +438,7 @@ final class DiskCacheWorker implements Runnable {
           ArchiveRequest.a(param2 - 1102, param3);
           oj.a(param2 ^ 902, param3);
           AnimatedPanel.a(param3, (byte) 56);
-          eq.d((byte) -47);
+          ReflectionCheck.d((byte) -47);
           UrlLoader.b((byte) -112);
           js.field_j = -aj.field_c + 0;
         } catch (RuntimeException runtimeException) {

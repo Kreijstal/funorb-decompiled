@@ -92,22 +92,22 @@ final class DiskArchiveRequest extends ArchiveRequest {
         if (param0 != 118) {
           CharSequence var2 = (CharSequence) null;
           DiskArchiveRequest.countChar(22, (CharSequence) null, '\001');
-          if (di.field_m == 0) {
+          if (FleetTrailPoint.field_m == 0) {
             sg.a(true, false, 50, GameRules.field_d, NetworkArchiveRequest.field_C);
           }
-          fieldTemp$0 = di.field_m + 1;
-          di.field_m = di.field_m + 1;
+          fieldTemp$0 = FleetTrailPoint.field_m + 1;
+          FleetTrailPoint.field_m = FleetTrailPoint.field_m + 1;
           if (fieldTemp$0 == 750) {
             ArchiveRequest.a(4, (byte) 122);
             return;
           }
           return;
         }
-        if (di.field_m == 0) {
+        if (FleetTrailPoint.field_m == 0) {
           sg.a(true, false, 50, GameRules.field_d, NetworkArchiveRequest.field_C);
         }
-        int fieldTemp$1 = di.field_m + 1;
-        di.field_m = di.field_m + 1;
+        int fieldTemp$1 = FleetTrailPoint.field_m + 1;
+        FleetTrailPoint.field_m = FleetTrailPoint.field_m + 1;
         if (fieldTemp$1 != 750) {
           return;
         }

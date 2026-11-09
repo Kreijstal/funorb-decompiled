@@ -57,7 +57,7 @@ final class DialWidget extends FocusableWidget {
           if (param0 != 96) {
             field_J = (String) null;
           }
-          stackIn_3_0 = e.a(param2 * param1.field_a / 96, -108, param1.field_f);
+          stackIn_3_0 = AccountFieldValue.a(param2 * param1.field_a / 96, -108, param1.field_f);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -250,7 +250,7 @@ final class DialWidget extends FocusableWidget {
                 return;
               }
               if (var31.field_Vb) {
-                ah.field_X = ah.field_X - 1;
+                ValidationMessageWidget.field_X = ValidationMessageWidget.field_X - 1;
                 var31.field_Vb = false;
               }
               if (var5 == 0) {
@@ -269,7 +269,7 @@ final class DialWidget extends FocusableWidget {
                 var34.unlinkSecondary(16);
                 var34 = (mj) (gr.field_p.nextForward((byte) -71));
               }
-              ah.field_X = 0;
+              ValidationMessageWidget.field_X = 0;
               return;
             }
             if (8 == var2) {
@@ -383,7 +383,7 @@ final class DialWidget extends FocusableWidget {
                     return;
                   }
                   if (var2 == 22) {
-                    a.field_j = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-20976);
+                    HitRegion.field_j = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-20976);
                     BoundsRect.field_h = ((PacketBuffer) ((Object) var1)).readVariableInt(false);
                     return;
                   }
@@ -404,7 +404,7 @@ final class DialWidget extends FocusableWidget {
                 }
                 if (15 != var2) {
                   if (var25.field_Vb) {
-                    ah.field_X = ah.field_X - 1;
+                    ValidationMessageWidget.field_X = ValidationMessageWidget.field_X - 1;
                     var25.field_Vb = false;
                   }
                 } else {
@@ -422,7 +422,7 @@ final class DialWidget extends FocusableWidget {
               if (var29 != null) {
                 if (var2 != 14) {
                   if (!var29.field_Vb) {
-                    ah.field_X = ah.field_X + 1;
+                    ValidationMessageWidget.field_X = ValidationMessageWidget.field_X + 1;
                     var29.field_Vb = true;
                   }
                 } else {
@@ -458,7 +458,7 @@ final class DialWidget extends FocusableWidget {
               var3_ref_mjLifetime1.field_Vb) {
               var3_ref_mjLifetime1.field_Tb = false;
               if (var3_ref_mjLifetime1.field_Vb) {
-                ah.field_X = ah.field_X - 1;
+                ValidationMessageWidget.field_X = ValidationMessageWidget.field_X - 1;
                 var3_ref_mjLifetime1.field_Vb = false;
               }
               WidgetContainer.a((byte) -60, var3_ref_mjLifetime1);
@@ -480,10 +480,10 @@ final class DialWidget extends FocusableWidget {
           }
           if (var2 != 2 &&
             var2 != 3) {
-            he.field_p = null;
+            IntNode.field_p = null;
           } else {
-            if (he.field_p == null) {
-              he.field_p = new fb(ProductionContent.field_k);
+            if (IntNode.field_p == null) {
+              IntNode.field_p = new fb(ProductionContent.field_k);
             }
           }
           if (var2 != 3) {

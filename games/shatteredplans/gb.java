@@ -21,9 +21,9 @@ final class gb extends IntrusiveNode {
     final static void a(byte param0, int param1, int param2, int param3) {
         int var4;
         if (param3 == 0 &&
-          vm.field_Bb != param2) {
+          QuickChatMenu.field_Bb != param2) {
           MenuWindow.field_v = true;
-          vm.field_Bb = param2;
+          QuickChatMenu.field_Bb = param2;
           kb.a(68, param1);
         }
         if (param3 == 1 &&

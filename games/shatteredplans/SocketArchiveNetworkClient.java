@@ -19,14 +19,14 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
         RuntimeException var4 = null;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          c.c();
-          c.a(param2, 0, param2.length);
+          PolygonSpanIterator.resetEdges();
+          PolygonSpanIterator.appendPolygonEdges(param2, 0, param2.length);
           if (param1 != 18117) {
             return;
           }
-          c.d();
-          while (c.a()) {
-            SoftwareRasterizer.drawHorizontalLineAlpha(c.field_e, c.field_h, -c.field_e + c.field_a, param0, param3);
+          PolygonSpanIterator.initializeScanlines();
+          while (PolygonSpanIterator.nextSpan()) {
+            SoftwareRasterizer.drawHorizontalLineAlpha(PolygonSpanIterator.spanLeft, PolygonSpanIterator.scanlineY, -PolygonSpanIterator.spanLeft + PolygonSpanIterator.spanRight, param0, param3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

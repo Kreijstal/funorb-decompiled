@@ -107,11 +107,11 @@ final class wj extends IntrusiveNode {
         int var8Lifetime1;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var3 = (float)di.field_m / 1000.0f + 0.15000000596046448f;
+          var3 = (float)FleetTrailPoint.field_m / 1000.0f + 0.15000000596046448f;
           var1_int = -(int)(200.0 * Math.sin((double)var3));
           var2 = (int)(Math.cos((double)var3) * 200.0) - 200;
           va.field_e.draw(var1_int, var2);
-          var4 = -(di.field_m * 120 / 1000) + 176;
+          var4 = -(FleetTrailPoint.field_m * 120 / 1000) + 176;
           var5 = 540 - var4;
           RandomAccessCacheFile.a(-111);
           if (var5 < 256) {
@@ -126,12 +126,12 @@ final class wj extends IntrusiveNode {
             MessageKind.field_b.drawOpaque(0, 0);
           }
           var1_intLifetime1 = -5;
-          var2Lifetime1 = -80 + 100 * di.field_m / 1000;
+          var2Lifetime1 = -80 + 100 * FleetTrailPoint.field_m / 1000;
           so.a(0, 0, var2Lifetime1 - var4 + DefendTask.field_s.field_x, DefensiveAi.field_r);
           cg.i(0);
           var6 = 256;
-          if (512 > di.field_m) {
-            var6 = di.field_m >> 1;
+          if (512 > FleetTrailPoint.field_m) {
+            var6 = FleetTrailPoint.field_m >> 1;
             SoftwareRasterizer.fillCircle(320, var4 + 528, 400, 16777215);
           }
           if (param0 != 128) {
@@ -159,7 +159,7 @@ final class wj extends IntrusiveNode {
           for (var8 = 0; var11.length > var8; var8++) {
             var9_ref_nd = var11[var8];
             if (0 != var9_ref_nd.field_a) {
-              SoftwareRasterizer.b(var9_ref_nd.field_e + var1_intLifetime1 << 4, var9_ref_nd.field_j + var2Lifetime1 << 4, var9_ref_nd.field_f, var9_ref_nd.field_a, MenuButton.field_u);
+              SoftwareRasterizer.addRadialGlowQ4(var9_ref_nd.field_e + var1_intLifetime1 << 4, var9_ref_nd.field_j + var2Lifetime1 << 4, var9_ref_nd.field_f, var9_ref_nd.field_a, MenuButton.field_u);
             }
           }
           var7_ref = (Particle) (DialWidget.field_K.startForward(0));
@@ -168,14 +168,14 @@ final class wj extends IntrusiveNode {
             var1_intLifetime2 = (int)var7_ref.field_l;
             for (var8Lifetime1 = 1; var8Lifetime1 < 50; var8Lifetime1++) {
               var9 = -var8Lifetime1 + var7_ref.field_q;
-              SoftwareRasterizer.b(var1_intLifetime2 << 4, var2Lifetime2 << 4, -var8Lifetime1 + 50, -(var8Lifetime1 * 2) + 100, MenuButton.field_u);
+              SoftwareRasterizer.addRadialGlowQ4(var1_intLifetime2 << 4, var2Lifetime2 << 4, -var8Lifetime1 + 50, -(var8Lifetime1 * 2) + 100, MenuButton.field_u);
               if (var9 < 0) {
                 var9 += 50;
               }
               var1_intLifetime2 = (int)var7_ref.field_o[var9];
               var2Lifetime2 = (int)var7_ref.field_i[var9];
             }
-            SoftwareRasterizer.b((int)var7_ref.field_l << 4, (int)var7_ref.field_n << 4, 128, 100, MenuButton.field_u);
+            SoftwareRasterizer.addRadialGlowQ4((int)var7_ref.field_l << 4, (int)var7_ref.field_n << 4, 128, 100, MenuButton.field_u);
             var7_ref = (Particle) (DialWidget.field_K.nextForward((byte) -71));
           }
           return;

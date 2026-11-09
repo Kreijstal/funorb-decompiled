@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cl extends IntrusiveNode {
+final class RasterStateFrame extends IntrusiveNode {
     int[] field_i;
     int field_r;
     int field_o;
@@ -14,7 +14,7 @@ final class cl extends IntrusiveNode {
     static String[] field_q;
     static String field_m;
 
-    final void a(int param0, int param1, int[] param2, int param3, int param4, int param5, int param6, int param7) {
+    final void setRasterState(int param0, int param1, int[] param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_r = param6;
           this.field_i = param2;
@@ -68,7 +68,7 @@ final class cl extends IntrusiveNode {
           SoftwareRasterizer.drawHorizontalLine(param8 + param0, param7, -param8 + param3, 16777215);
           SoftwareRasterizer.drawHorizontalLine(param0, param4 + (param7 - 1), 1 - param8 + param3, 16777215);
           if (param2 != -22466) {
-            cl.a(73, -126, -112, 94, -98, 98, 92, 119, -99);
+            RasterStateFrame.a(73, -126, -112, 94, -98, 98, 92, 119, -99);
           }
           for (var9_intLifetime1 = 1; var9_intLifetime1 < -1 + param4; var9_intLifetime1++) {
             var10Lifetime1 = param7 + var9_intLifetime1;
@@ -107,12 +107,12 @@ final class cl extends IntrusiveNode {
         field_p = null;
         field_q = null;
         if (param0 != 16777215) {
-          cl.clearStatics(-104);
+          RasterStateFrame.clearStatics(-104);
         }
         field_m = null;
     }
 
-    cl() {
+    RasterStateFrame() {
     }
 
     static {

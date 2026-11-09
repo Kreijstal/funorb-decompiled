@@ -66,7 +66,7 @@ final class eh extends ArrayWidgetGroup implements ButtonListener {
         EmailValidator.field_x.drawString(kr.field_c, this.field_m + (param3 + 4), this.field_q + (param2 + (EmailValidator.field_x.field_J + 4)), 16777215, -1);
     }
 
-    public final void a(FocusableWidget param0, int param1, int param2, int param3, int param4) {
+    public final void onButtonClicked(FocusableWidget param0, int param1, int param2, int param3, int param4) {
         if (this.field_J.getValidationSource((byte) 111).getState(-123) != CachedArchiveSource.field_g) {
           return;
         }

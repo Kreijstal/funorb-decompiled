@@ -220,7 +220,7 @@ class StandardAi implements Ai {
             var7 = var11[var6];
             var8 = this.starValue(var7, -5);
             var9 = this.starWeight(var7, (byte) -127);
-            cb.field_o[var6] = var8;
+            DirectByteArrayStorage.field_o[var6] = var8;
             StandardMapGenerator.field_i[var6] = var9;
             ei.field_d[var6] = this.starPriority(var7, 2);
             ValidationState.field_d[var6] = (var8 << 16) / var9;
@@ -722,7 +722,7 @@ class StandardAi implements Ai {
         RuntimeException decompiledCaughtException = null;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var3_int = cb.field_o[param0.field_p];
+          var3_int = DirectByteArrayStorage.field_o[param0.field_p];
           for (var4 = 0; var4 < 4; var4++) {
             var3_int = var3_int + param0.field_G[var4] * lh.field_y[var4];
           }
@@ -1672,7 +1672,7 @@ class StandardAi implements Ai {
         for (var4_int = 0; this.field_o > var4_int; var4_int++) {
           var5 = StandardMapGenerator.field_i[var4_int];
           if (var5 >= 6) {
-            var6 = cb.field_o[var4_int];
+            var6 = DirectByteArrayStorage.field_o[var4_int];
             var7 = var5 * var6 * var6;
             if (var3 < var7) {
               var3 = var7;
@@ -2068,7 +2068,7 @@ class StandardAi implements Ai {
           this.field_c = (int[]) null;
         }
         while (var2 < this.field_o) {
-          cb.field_o[var2] = 0;
+          DirectByteArrayStorage.field_o[var2] = 0;
           StandardMapGenerator.field_i[var2] = 0;
           ei.field_d[var2] = 0;
           ValidationState.field_d[var2] = 0;

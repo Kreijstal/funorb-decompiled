@@ -174,7 +174,7 @@ final class ValidationIndicator extends FocusableWidget {
             var12 = (int)(12288.0 / (var10 + 3.0));
             var13 = 1920 + (int)(var8 * 2400.0 / (3.0 + var10));
             var14 = (int)(1920.0 / (3.0 + var10));
-            e.field_e.drawRotatedAbout(e.field_e.field_o << 3, e.field_e.field_p << 3, var13, var14, 0, var12);
+            AccountFieldValue.field_e.drawRotatedAbout(AccountFieldValue.field_e.field_o << 3, AccountFieldValue.field_e.field_p << 3, var13, var14, 0, var12);
           }
           var2[var4] = new Sprite(60, 30);
           var16[var4].bindAsRenderTarget();
@@ -226,11 +226,11 @@ final class ValidationIndicator extends FocusableWidget {
         if (null != gg.field_e &&
           var9 <= gg.field_e.field_z &&
           gg.field_e.field_w >= var10) {
-          aq.a((byte) 90, gg.field_e);
+          aq.pushSpriteRaster((byte) 90, gg.field_e);
           SoftwareRasterizer.clear();
         } else {
           gg.field_e = new Sprite(var9, var10);
-          aq.a((byte) -107, gg.field_e);
+          aq.pushSpriteRaster((byte) -107, gg.field_e);
         }
         var14.drawRotatedAbout(112, 144, var14.field_o << 4, var14.field_p << 4, -this.field_F << 10, 4096);
         Star.f((byte) -94);

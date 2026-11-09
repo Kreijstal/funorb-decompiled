@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class th extends nq {
+final class CoverageBitmapFont extends BitmapFont {
     private byte[][] field_H;
 
     final void drawGlyph(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
@@ -44,9 +44,9 @@ final class th extends nq {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param6) {
-            th.blitGlyphRows(SoftwareRasterizer.field_h, this.field_H[param0], param5, var11, var8, param3, param4, var9, var10);
+            CoverageBitmapFont.blitGlyphRows(SoftwareRasterizer.field_h, this.field_H[param0], param5, var11, var8, param3, param4, var9, var10);
           } else {
-            hh.blitGlyphRows(SoftwareRasterizer.field_h, this.field_H[param0], param5, var11, var8, param3, param4, var9, var10);
+            BinaryBitmapFont.blitGlyphRows(SoftwareRasterizer.field_h, this.field_H[param0], param5, var11, var8, param3, param4, var9, var10);
           }
           return;
         }
@@ -119,9 +119,9 @@ final class th extends nq {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param7) {
-            th.blitGlyphAlphaRows(SoftwareRasterizer.field_h, this.field_H[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+            CoverageBitmapFont.blitGlyphAlphaRows(SoftwareRasterizer.field_h, this.field_H[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           } else {
-            hh.blitGlyphAlphaRows(SoftwareRasterizer.field_h, this.field_H[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+            BinaryBitmapFont.blitGlyphAlphaRows(SoftwareRasterizer.field_h, this.field_H[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           }
           return;
         }
@@ -168,9 +168,9 @@ final class th extends nq {
           param4 > 0) {
           var12 = var12 - var11 * param3;
           if (!param7) {
-            th.blitGlyphTransposedAlphaRows(SoftwareRasterizer.field_h, this.field_H[param0], param5, var13, var9, var11, param3, param4, var10, var12, param6);
+            CoverageBitmapFont.blitGlyphTransposedAlphaRows(SoftwareRasterizer.field_h, this.field_H[param0], param5, var13, var9, var11, param3, param4, var10, var12, param6);
           } else {
-            hh.blitGlyphTransposedAlphaRows(SoftwareRasterizer.field_h, this.field_H[param0], param5, var13, var9, var11, param3, param4, var10, var12, param6);
+            BinaryBitmapFont.blitGlyphTransposedAlphaRows(SoftwareRasterizer.field_h, this.field_H[param0], param5, var13, var9, var11, param3, param4, var10, var12, param6);
           }
           return;
         }
@@ -217,18 +217,18 @@ final class th extends nq {
           param4 > 0) {
           var11 = var11 - var10 * param3;
           if (!param6) {
-            th.blitGlyphTransposedRows(SoftwareRasterizer.field_h, this.field_H[param0], param5, var12, var8, var10, param3, param4, var9, var11);
+            CoverageBitmapFont.blitGlyphTransposedRows(SoftwareRasterizer.field_h, this.field_H[param0], param5, var12, var8, var10, param3, param4, var9, var11);
           } else {
-            hh.blitGlyphTransposedRows(SoftwareRasterizer.field_h, this.field_H[param0], param5, var12, var8, var10, param3, param4, var9, var11);
+            BinaryBitmapFont.blitGlyphTransposedRows(SoftwareRasterizer.field_h, this.field_H[param0], param5, var12, var8, var10, param3, param4, var9, var11);
           }
           return;
         }
     }
 
-    th(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, int[] param5, byte[][] param6) {
+    CoverageBitmapFont(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, int[] param5, byte[][] param6) {
         super(param0, param1, param2, param3, param4);
         this.field_H = new byte[256][];
-        this.field_H = th.remapMasks(param5, param6);
+        this.field_H = CoverageBitmapFont.remapMasks(param5, param6);
     }
 
     private final static void blitGlyphAlphaRows(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {

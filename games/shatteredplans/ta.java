@@ -8,7 +8,7 @@ final class ta {
     static String field_c;
     static String field_e;
 
-    final static void a(String param0, TextLayoutLine param1, int param2, int param3, nq param4) {
+    final static void a(String param0, TextLayoutLine param1, int param2, int param3, BitmapFont param4) {
         int var7 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -78,7 +78,7 @@ final class ta {
         if (WeightedLruCache.a(-104)) {
           param0 = false;
         }
-        di.a(false, param0);
+        FleetTrailPoint.a(false, param0);
         if (WidgetContainer.field_C) {
           SoftwareRasterizer.clearRect(n.field_h.field_d.field_hb, n.field_h.field_d.field_db, n.field_h.field_d.field_K, n.field_h.field_d.field_mb);
           n.field_h.field_d.drawFullRaster(param0, -68);

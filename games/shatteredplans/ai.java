@@ -93,7 +93,7 @@ final class ai {
     }
 
     final static void a(boolean param0) {
-        double var1 = 3.141592653589793 * (double)(cl.field_n % 512) / 256.0;
+        double var1 = 3.141592653589793 * (double)(RasterStateFrame.field_n % 512) / 256.0;
         int var3 = 16 * (UiWidget.field_t.field_z / 2 - 9);
         ProductionContent.field_c[0] = (int)((double)var3 * Math.sin(var1));
         ul.field_Db[0] = (int)(Math.cos(var1) * (double)var3);

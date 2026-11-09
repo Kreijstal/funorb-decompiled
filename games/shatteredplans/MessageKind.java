@@ -4,7 +4,7 @@
 final class MessageKind {
     static String field_a;
     static Sprite field_b;
-    static a field_c;
+    static HitRegion field_c;
     static String field_e;
     int field_d;
 

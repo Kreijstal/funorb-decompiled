@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class nq extends DualLinkNode {
+abstract class BitmapFont extends DualLinkNode {
     private int[] field_E;
     int field_L;
     private int[] field_I;
@@ -188,7 +188,7 @@ abstract class nq extends DualLinkNode {
                                   }
                                   var12 = stackIn_27_0;
                                   if (field_A != 256) {
-                                    var11_ref_bq.a(param1, param2 + this.field_L - var12, field_A);
+                                    var11_ref_bq.drawAlpha(param1, param2 + this.field_L - var12, field_A);
                                   } else {
                                     var11_ref_bq.a(param1, param2 + this.field_L - var12);
                                   }
@@ -540,7 +540,7 @@ abstract class nq extends DualLinkNode {
         field_v = 0;
     }
 
-    final static String truncateWithEllipsis(nq param0, String param1, int param2) {
+    final static String truncateWithEllipsis(BitmapFont param0, String param1, int param2) {
         int var6 = 0;
         int var3;
         int var4;
@@ -1061,7 +1061,7 @@ abstract class nq extends DualLinkNode {
               for (var8Lifetime2 = 0; var8Lifetime2 < 256; var8Lifetime2++) {
                 if (var8Lifetime2 != 32 &&
                   var8Lifetime2 != 160) {
-                  this.field_M[(var7Lifetime2 << 8) + var8Lifetime2] = (byte)nq.a(var15, var16, var17, this.field_y, var14, var7Lifetime2, var8Lifetime2);
+                  this.field_M[(var7Lifetime2 << 8) + var8Lifetime2] = (byte)BitmapFont.a(var15, var16, var17, this.field_y, var14, var7Lifetime2, var8Lifetime2);
                 }
               }
             }
@@ -1079,7 +1079,7 @@ abstract class nq extends DualLinkNode {
         this.b(param0, param1, param2);
     }
 
-    nq(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4) {
+    BitmapFont(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4) {
         int var8 = 0;
         int var6;
         int var7;

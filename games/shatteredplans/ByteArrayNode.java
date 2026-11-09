@@ -16,8 +16,8 @@ final class ByteArrayNode extends IntrusiveNode {
         try {
           ToggleButton.field_D = param2;
           FleetMove.field_C = true;
-          ji.field_G = new ns(le.field_e, CipherPacketBuffer.field_p, param0, TertiaryNodeList.field_b, ToggleButton.field_D);
-          le.field_e.addDialog(true, ji.field_G);
+          ji.field_G = new ns(ByteArrayStorage.field_e, CipherPacketBuffer.field_p, param0, TertiaryNodeList.field_b, ToggleButton.field_D);
+          ByteArrayStorage.field_e.addDialog(true, ji.field_G);
           int var3_int = -116 / ((-1 - param1) / 54);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "fk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

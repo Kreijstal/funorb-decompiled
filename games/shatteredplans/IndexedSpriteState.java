@@ -24,7 +24,7 @@ abstract class IndexedSpriteState {
           RecklessAi.field_p = new AnimatedPanel(0L, SpriteState.field_u);
           RecklessAi.field_p.field_y = 1;
           BattleSnapshot.field_t = new AnimatedPanel(0L, SliderWidget.field_N, gd.field_c);
-          FleetMove.field_F = new AnimatedPanel(0L, vm.field_Cb, GalaxyMap.field_i);
+          FleetMove.field_F = new AnimatedPanel(0L, QuickChatMenu.field_Cb, GalaxyMap.field_i);
           kh.field_Ib = new AnimatedPanel(0L, gn.field_w);
           cg.field_A.addChild(4, RecklessAi.field_p);
           cg.field_A.addChild(4, BattleSnapshot.field_t);
@@ -70,7 +70,7 @@ abstract class IndexedSpriteState {
 
     abstract void a(int param0, int param1);
 
-    abstract void a(int param0, int param1, int param2);
+    abstract void drawAlpha(int param0, int param1, int param2);
 
     static {
         field_f = "you lost 0 fleets in the attack";

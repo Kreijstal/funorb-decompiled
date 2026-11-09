@@ -13,12 +13,12 @@ final class AudioService implements Runnable {
     final static void a(int param0) {
         MusicVoice.field_I = ks.c(108);
         if (param0 == 0) {
-          le.field_e = new DialogRoot();
+          ByteArrayStorage.field_e = new DialogRoot();
           wa.a((byte) -50, true, true);
           return;
         }
         field_f = (String) null;
-        le.field_e = new DialogRoot();
+        ByteArrayStorage.field_e = new DialogRoot();
         wa.a((byte) -50, true, true);
     }
 

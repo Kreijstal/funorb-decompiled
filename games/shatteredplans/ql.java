@@ -10,7 +10,7 @@ final class ql extends IntrusiveNode {
     int field_i;
     static IntrusiveDeque field_p;
     int field_j;
-    static nq field_n;
+    static BitmapFont field_n;
     static volatile int field_q;
 
     final static void a(byte param0, String[] param1) {

@@ -39,11 +39,11 @@ final class jb {
           return;
         }
         if (param1 % 10L == 0L) {
-          he.a(true, -1L + param1);
-          he.a(true, 1L);
+          IntNode.a(true, -1L + param1);
+          IntNode.a(true, 1L);
           return;
         }
-        he.a(true, param1);
+        IntNode.a(true, param1);
     }
 
     static {

@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bj extends WidgetContainer implements ButtonListener {
-    private dl field_F;
+final class NameSuggestionsPanel extends WidgetContainer implements ButtonListener {
+    private NameSuggestionListener field_F;
     static wa[] field_J;
     static String field_E;
     static AnimatedPanel field_D;
@@ -15,7 +15,7 @@ final class bj extends WidgetContainer implements ButtonListener {
 
     public static void clearStatics(int param0) {
         if (param0 != 9075) {
-          bj.clearStatics(-83);
+          NameSuggestionsPanel.clearStatics(-83);
         }
         field_E = null;
         field_D = null;
@@ -25,7 +25,7 @@ final class bj extends WidgetContainer implements ButtonListener {
         field_H = null;
     }
 
-    final static void k(int param0) {
+    final static void resetPolygonScanlineBuckets(int param0) {
         int var1_int = 0;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -58,13 +58,13 @@ final class bj extends WidgetContainer implements ButtonListener {
         if (param0 != 0) {
           return;
         }
-        nq var5 = gn.field_u;
+        BitmapFont var5 = gn.field_u;
         if (this.field_G != null) {
           var5.a(DebouncedValidator.field_c, param3 + this.field_m, this.field_q + param2, this.field_x, 20, 16777215, -1, 0, 0, var5.field_q + var5.field_J);
         }
     }
 
-    public final void a(FocusableWidget param0, int param1, int param2, int param3, int param4) {
+    public final void onButtonClicked(FocusableWidget param0, int param1, int param2, int param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         RuntimeException stackIn_16_0 = null;
@@ -76,14 +76,14 @@ final class bj extends WidgetContainer implements ButtonListener {
         try {
           for (var6_int = 0; var6_int < this.field_G.length; var6_int++) {
             if (this.field_I[var6_int] == param0) {
-              this.field_F.a(15270, this.field_G[var6_int]);
+              this.field_F.onNameSuggested(15270, this.field_G[var6_int]);
             }
           }
           if (param1 != 6) {
             this.drawLayer(105, -29, -115, 86);
           }
           if (this.field_I[this.field_G.length] == param0) {
-            this.field_F.a(2147483647);
+            this.field_F.onMoreSuggestionsRequested(2147483647);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -100,7 +100,7 @@ final class bj extends WidgetContainer implements ButtonListener {
         }
     }
 
-    bj(dl param0) {
+    NameSuggestionsPanel(NameSuggestionListener param0) {
         super(0, 0, 0, 0, (WidgetPainter) null);
         try {
           this.field_F = param0;
@@ -109,7 +109,7 @@ final class bj extends WidgetContainer implements ButtonListener {
         }
     }
 
-    final void a(String[] param0, int param1) {
+    final void setSuggestions(String[] param0, int param1) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_16_0 = null;

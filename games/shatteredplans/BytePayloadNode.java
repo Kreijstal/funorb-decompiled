@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class be extends IntrusiveNode {
+final class BytePayloadNode extends IntrusiveNode {
     static int field_h;
     static Sprite field_k;
     static long field_l;
@@ -132,7 +132,7 @@ final class be extends IntrusiveNode {
           ks.field_e = param8;
           UsernameAvailabilityValidator.field_p = -1L;
           ProductionContent.field_k = param8.length;
-          he.field_p = null;
+          IntNode.field_p = null;
           np.field_a = null;
           id.field_c = new byte[(Particle.field_h + 7) / 8];
           TurnEventLog.field_i = false;
@@ -148,9 +148,9 @@ final class be extends IntrusiveNode {
           gr.field_p = param7.field_M;
           gr.field_p.clear(0);
           ShatteredPlansClient.field_H = new SecondaryNodeHashTable(param1);
-          a.field_j = -1;
+          HitRegion.field_j = -1;
           BoundsRect.field_h = -1;
-          ah.field_X = 0;
+          ValidationMessageWidget.field_X = 0;
           GameApplet.field_g = 0;
           if (param0.field_M == null) {
             param0.field_M = new IntrusiveDeque();
@@ -202,12 +202,12 @@ final class be extends IntrusiveNode {
     public static void clearStatics(byte param0) {
         field_k = null;
         if (param0 < 67) {
-          be.a((byte) -90, 116, 111, -79, -48, 35, -128, -23, -56);
+          BytePayloadNode.a((byte) -90, 116, 111, -79, -48, 35, -128, -23, -56);
         }
         field_i = null;
     }
 
-    be(byte[] param0) {
+    BytePayloadNode(byte[] param0) {
         try {
           this.field_j = param0;
         } catch (RuntimeException runtimeException) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ab {
+final class AccountValidationText {
     static String field_b;
     static Sprite field_e;
     static String field_d;

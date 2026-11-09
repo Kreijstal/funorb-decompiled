@@ -82,7 +82,7 @@ class PanelNode extends DualLinkNode {
 
     final static void writePlacementOrder(PlacementOrder param0, PacketBuffer param1, boolean param2) {
         try {
-          di.writeStar(param0.field_u, false, param1);
+          FleetTrailPoint.writeStar(param0.field_u, false, param1);
           if (!param2) {
             field_q = (sq) null;
           }

@@ -13,16 +13,16 @@ final class cr {
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
         Sprite[] var7 = new Sprite[9];
         Sprite[] var4 = var7;
-        var7[0] = gr.a((byte) -57, param3, param1);
+        var7[0] = gr.createSolidSquare((byte) -57, param3, param1);
         for (var5 = 1; var5 < 9; var5++) {
           var7[var5] = var7[0];
         }
         if (param2 == -10) {
-          var4[4] = gr.a((byte) -124, param0, 64);
+          var4[4] = gr.createSolidSquare((byte) -124, param0, 64);
           return var4;
         }
         cr.a(-10, 81, 16, 82);
-        var4[4] = gr.a((byte) -124, param0, 64);
+        var4[4] = gr.createSolidSquare((byte) -124, param0, 64);
         return var4;
     }
 

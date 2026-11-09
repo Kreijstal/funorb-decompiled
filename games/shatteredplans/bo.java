@@ -25,7 +25,7 @@ final class bo extends jl implements ButtonListener {
         try {
           var3 = null;
           if (eo.field_Z != param1) {
-            if (param1 != bg.field_f) {
+            if (param1 != LoginMethodPreference.field_f) {
               if (param1 == pe.field_E) {
                 this.field_n = this.field_n + 30;
                 var3 = AggressiveAi.field_p;
@@ -33,7 +33,7 @@ final class bo extends jl implements ButtonListener {
             } else {
               var3 = MenuList.field_z;
               this.field_n = this.field_n + 10;
-              if (cb.c((byte) 58)) {
+              if (DirectByteArrayStorage.c((byte) 58)) {
                 this.field_n = this.field_n + 20;
                 var3 = IterableNodeHashTable.field_c;
               }
@@ -140,7 +140,7 @@ final class bo extends jl implements ButtonListener {
         var2.writeByte(param1, (byte) -97);
     }
 
-    public final void a(FocusableWidget param0, int param1, int param2, int param3, int param4) {
+    public final void onButtonClicked(FocusableWidget param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -169,20 +169,20 @@ final class bo extends jl implements ButtonListener {
         }
     }
 
-    final static vm a(int[] param0, byte param1, AnimatedPanel param2, AnimatedPanel param3, AnimatedPanel param4) {
+    final static QuickChatMenu a(int[] param0, byte param1, AnimatedPanel param2, AnimatedPanel param3, AnimatedPanel param4) {
         int var10_int = 0;
         int var5_int = 0;
         String[] var6 = null;
         char[] var7 = null;
-        vm[] var8 = null;
+        QuickChatMenu[] var8 = null;
         int var9 = 0;
         QuickChatCategoryDefinition var11 = null;
         int var12 = 0;
         char[] var13 = null;
         char[] var14 = null;
-        vm stackIn_4_0 = null;
+        QuickChatMenu stackIn_4_0 = null;
         Object stackIn_10_0 = null;
-        vm stackIn_12_0 = null;
+        QuickChatMenu stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -202,11 +202,11 @@ final class bo extends jl implements ButtonListener {
           var14 = new char[var5_int];
           var13 = var14;
           var7 = var13;
-          var8 = new vm[var5_int];
+          var8 = new QuickChatMenu[var5_int];
           var9 = 49;
           try {
             if (param1 >= -106) {
-              stackIn_4_0 = (vm) null;
+              stackIn_4_0 = (QuickChatMenu) null;
               return stackIn_4_0;
             }
             for (var10_int = 0; var5_int > var10_int; var10_int++) {
@@ -220,9 +220,9 @@ final class bo extends jl implements ButtonListener {
             decompiledCaughtException = decompiledCaughtParameter0;
             var10 = (Exception) (Object) decompiledCaughtException;
             stackIn_10_0 = null;
-            return (vm) (stackIn_10_0);
+            return (QuickChatMenu) (stackIn_10_0);
           }
-          stackIn_12_0 = new vm(0L, param3, param4, param2, var8, param0, var6, var14);
+          stackIn_12_0 = new QuickChatMenu(0L, param3, param4, param2, var8, param0, var6, var14);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;

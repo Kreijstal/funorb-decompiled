@@ -150,7 +150,7 @@ final class SolMapReader implements MapGenerator {
     }
 
     final static void a(int param0) {
-        bg.field_g = false;
+        LoginMethodPreference.field_g = false;
         ae.field_b = ~sa.field_a.readUnsignedByte(-99) == param0 ? true : false;
     }
 
@@ -199,7 +199,7 @@ final class SolMapReader implements MapGenerator {
         for (var7 = DebouncedValidator.field_g - 1; 0 <= var7; var7--) {
           var8_ref_nf = wm.field_d[var7];
           var9 = 0;
-          if (!bg.field_g &&
+          if (!LoginMethodPreference.field_g &&
             TargetedChatMessage.field_i > var5) {
             var10_int = id.a(-7019, var8_ref_nf.field_n);
             if (var10_int <= var8_ref_nf.a((byte) 116) && (var8_ref_nf.field_h ||
@@ -217,7 +217,7 @@ final class SolMapReader implements MapGenerator {
               if (null != var8_ref_nf.field_j) {
               }
               var10 = IsolationistAi.a(param0, var8_ref_nf);
-              var11 = var10 + nq.escapeMarkup(var8_ref_nf.field_k);
+              var11 = var10 + BitmapFont.escapeMarkup(var8_ref_nf.field_k);
               var12 = jl.a(var8_ref_nf, (byte) -73);
               var8_ref_nf.field_j = new AnimatedPanel(0L, BoundsRect.field_k, var11);
               var8_ref_nf.field_j.field_nb = ho.field_f;
@@ -255,7 +255,7 @@ final class SolMapReader implements MapGenerator {
           ji.field_I.field_xb.field_db = -ji.field_I.field_xb.field_mb + ji.field_I.field_zb.field_mb;
         }
         if (sr.field_h &&
-          null != fa.field_X) {
+          null != ValidatedTextInputWidget.field_X) {
           ShatteredPlansClient.field_K = true;
         }
         var9Lifetime1 = ji.field_I.field_zb.field_mb - ji.field_I.field_xb.field_mb - ji.field_I.field_xb.field_gb;

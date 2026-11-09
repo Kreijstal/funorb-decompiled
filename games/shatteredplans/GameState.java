@@ -917,7 +917,7 @@ final class GameState {
             }
             if (param2 != null) {
               param2.field_h[var4.field_p.field_x] = param2.field_h[var4.field_p.field_x] + 1;
-              if (this.field_O > 0 && (0 == ab.field_c[this.field_G] ||
+              if (this.field_O > 0 && (0 == AccountValidationText.field_c[this.field_G] ||
                 lr.field_b[this.field_n] == 0)) {
                 param2.field_d[var4.field_p.field_x][0] = true;
               }
@@ -939,7 +939,7 @@ final class GameState {
               if (param2 != null) {
                 param2.field_b[var4Lifetime1.field_p.field_x] = param2.field_b[var4Lifetime1.field_p.field_x] + var5;
                 param2.field_h[var4Lifetime1.field_p.field_x] = param2.field_h[var4Lifetime1.field_p.field_x] + 1;
-                if (this.field_O > 0 && (ab.field_c[this.field_G] == 2 ||
+                if (this.field_O > 0 && (AccountValidationText.field_c[this.field_G] == 2 ||
                   lr.field_b[this.field_n] == 2)) {
                   param2.field_d[var4Lifetime1.field_p.field_x][2] = true;
                 }
@@ -1946,7 +1946,7 @@ final class GameState {
               }
               if (param0 != null) {
                 param0.field_h[var5.field_p.field_x] = param0.field_h[var5.field_p.field_x] + 1;
-                if (this.field_O > 0 && (ab.field_c[this.field_G] == 3 ||
+                if (this.field_O > 0 && (AccountValidationText.field_c[this.field_G] == 3 ||
                   lr.field_b[this.field_n] == 3)) {
                   param0.field_d[var5.field_p.field_x][3] = true;
                 }
@@ -1963,7 +1963,7 @@ final class GameState {
                   continue;
                 }
                 param0.field_h[var5.field_p.field_x] = param0.field_h[var5.field_p.field_x] + 1;
-                if (0 < this.field_O && (ab.field_c[this.field_G] == 1 ||
+                if (0 < this.field_O && (AccountValidationText.field_c[this.field_G] == 1 ||
                   lr.field_b[this.field_n] == 1)) {
                   param0.field_d[var5.field_p.field_x][1] = true;
                 }

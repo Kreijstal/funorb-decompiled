@@ -113,7 +113,7 @@ final class MenuWindow extends MenuComponent {
         int var4 = 1125164;
         int var5 = 3974311;
         if (this.field_A) {
-          var6 = cl.field_n % 64;
+          var6 = RasterStateFrame.field_n % 64;
           if (var6 > 24 &&
             var6 <= 40) {
             var6 = 24;
@@ -212,7 +212,7 @@ final class MenuWindow extends MenuComponent {
         if (param0 != 29443) {
           field_B = (String) null;
         }
-        return null != bj.field_K ? true : MusicPatch.field_i;
+        return null != NameSuggestionsPanel.field_K ? true : MusicPatch.field_i;
     }
 
     final static void g(int param0) {

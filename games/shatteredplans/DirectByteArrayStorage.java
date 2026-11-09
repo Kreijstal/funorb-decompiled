@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cb extends le {
+final class DirectByteArrayStorage extends ByteArrayStorage {
     private java.nio.ByteBuffer field_k;
     static IntrusiveDeque field_h;
     static String field_g;
@@ -13,7 +13,7 @@ final class cb extends le {
     static int field_j;
     static int field_n;
 
-    cb() {
+    DirectByteArrayStorage() {
     }
 
     final void setBytes(byte[] param0, byte param1) {
@@ -21,7 +21,7 @@ final class cb extends le {
           this.field_k = java.nio.ByteBuffer.allocateDirect(param0.length);
           this.field_k.position(0);
           if (param1 != 95) {
-            cb.a((byte) -7);
+            DirectByteArrayStorage.a((byte) -7);
           }
           this.field_k.put(param0);
         } catch (RuntimeException runtimeException) {
@@ -64,7 +64,7 @@ final class cb extends le {
           field_f = null;
           return;
         }
-        cb.c((byte) 27);
+        DirectByteArrayStorage.c((byte) 27);
         field_f = null;
     }
 

@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bg {
-    private String field_b;
+final class LoginMethodPreference {
+    private String value;
     static ih field_f;
     static Sprite field_a;
     static boolean field_g;
@@ -18,11 +18,11 @@ final class bg {
         throw new IllegalStateException();
     }
 
-    final void a(java.applet.Applet param0, boolean param1) {
+    final void saveBrowserPreference(java.applet.Applet param0, boolean param1) {
         try {
-          lg.a(31536000L, param0, 52, "jagex-last-login-method", this.field_b);
+          lg.a(31536000L, param0, 52, "jagex-last-login-method", this.value);
           if (!param1) {
-            this.field_b = (String) null;
+            this.value = (String) null;
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "bg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -44,7 +44,7 @@ final class bg {
         field_e = null;
     }
 
-    final static int a(String param0, int param1) {
+    final static int parseIntegerOrAuto(String param0, int param1) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         int stackIn_2_0 = 0;
@@ -78,7 +78,7 @@ final class bg {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void buildMenuDividerSprites(int param0, int param1) {
         int var2 = (182 - IntrusiveDeque.field_a[0].field_z) / (param1 - 1);
         GameState.field_F = new Sprite(var2, 2);
         IntrusiveDeque.field_d = new Sprite(var2 + IntrusiveDeque.field_a[0].field_z / 4, 2);
@@ -100,7 +100,7 @@ final class bg {
         field_f = (ih) null;
     }
 
-    final boolean a(byte param0, String param1) {
+    final boolean matches(byte param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         boolean stackIn_1_0 = false;
@@ -110,7 +110,7 @@ final class bg {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 106 / ((param0 - 33) / 39);
-          stackIn_1_0 = this.field_b.equals(param1);
+          stackIn_1_0 = this.value.equals(param1);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -126,9 +126,9 @@ final class bg {
         }
     }
 
-    bg(String param0) {
+    LoginMethodPreference(String param0) {
         try {
-          this.field_b = param0;
+          this.value = param0;
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "bg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

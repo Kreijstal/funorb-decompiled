@@ -9,7 +9,7 @@ final class lq extends IntrusiveNode {
     static String field_r;
     int field_j;
     int field_l;
-    static nq field_k;
+    static BitmapFont field_k;
     int field_m;
     int field_i;
     static Sprite field_o;

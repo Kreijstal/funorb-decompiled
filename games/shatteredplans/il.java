@@ -10,7 +10,7 @@ abstract class il extends jl {
     private int field_Z;
     static String field_fb;
     static PacketBuffer field_kb;
-    static a field_bb;
+    static HitRegion field_bb;
     static String field_Y;
     static String field_lb;
     private int field_mb;

@@ -84,7 +84,7 @@ final class GameSession implements AiHost {
           var4 = param0.name + ": ";
           var5 = ji.field_I.field_K;
           if (this.field_f) {
-            var5 = var5 - ho.field_f.stringWidth("[" + QuickChatCategoryRegistry.a(he.field_q, 4371, new String[]{this.field_P.field_v[0].name}) + "] ");
+            var5 = var5 - ho.field_f.stringWidth("[" + QuickChatCategoryRegistry.a(IntNode.field_q, 4371, new String[]{this.field_P.field_v[0].name}) + "] ");
           }
           if (this.field_f) {
             stackIn_16_0 = 0;
@@ -795,15 +795,15 @@ final class GameSession implements AiHost {
           }
           var9 = var8[vc.a((byte) -39, var8.length)];
           var10 = this.field_P.field_v[this.field_P.field_m[-1 + this.field_P.field_r]];
-          var9 = vm.a(var10.name, 108, "largestplayer", var9);
-          var9 = vm.a(this.field_n.name, 124, "you", var9);
-          var9 = vm.a(param3.name, 121, "me", var9);
+          var9 = QuickChatMenu.a(var10.name, 108, "largestplayer", var9);
+          var9 = QuickChatMenu.a(this.field_n.name, 124, "you", var9);
+          var9 = QuickChatMenu.a(param3.name, 121, "me", var9);
           if (this.field_P.field_g.field_e.length <= param0) {
             stackIn_14_0 = "";
           } else {
             stackIn_14_0 = this.field_P.field_g.field_e[param0].name;
           }
-          var9 = vm.a(stackIn_14_0, 100, "system", var9);
+          var9 = QuickChatMenu.a(stackIn_14_0, 100, "system", var9);
           this.addChatLine(param3, var9, (byte) 51);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1332,7 +1332,7 @@ final class GameSession implements AiHost {
           }
           var3 = this.field_z.field_k;
           var4 = this.field_z.field_E;
-          if (di.field_p[96]) {
+          if (FleetTrailPoint.field_p[96]) {
             var3 = var3 - 5.0f * (this.field_z.field_I + 50.0f) / 300.0f;
             if (0.0f > var3) {
               var3 = 0.0f;
@@ -1342,33 +1342,33 @@ final class GameSession implements AiHost {
             this.d(88);
           }
           var5 = this.field_z.field_I;
-          if (di.field_p[97]) {
+          if (FleetTrailPoint.field_p[97]) {
             var3 = var3 + 5.0f * (this.field_z.field_I + 50.0f) / 300.0f;
             if ((float)(this.field_P.field_g.field_k + 0) < var3) {
               var3 = (float)(0 + this.field_P.field_g.field_k);
             }
           }
-          if (di.field_p[98]) {
+          if (FleetTrailPoint.field_p[98]) {
             var4 = var4 - 5.0f * (this.field_z.field_I + 50.0f) / 300.0f;
             if (var4 < 0.0f) {
               var4 = 0.0f;
             }
           }
-          if (di.field_p[99]) {
+          if (FleetTrailPoint.field_p[99]) {
             var4 = var4 + 5.0f * (this.field_z.field_I + 50.0f) / 300.0f;
             if ((float)(0 + this.field_P.field_g.field_b) < var4) {
               var4 = (float)(this.field_P.field_g.field_b + 0);
             }
           }
-          if (di.field_p[27] ||
-            di.field_p[87]) {
+          if (FleetTrailPoint.field_p[27] ||
+            FleetTrailPoint.field_p[87]) {
             var5 = var5 / 1.100000023841858f;
             if (this.field_z.field_g > var5) {
               var5 = this.field_z.field_g;
             }
           }
-          if (di.field_p[26] ||
-            di.field_p[88]) {
+          if (FleetTrailPoint.field_p[26] ||
+            FleetTrailPoint.field_p[88]) {
             var5 = var5 * 1.100000023841858f;
             if (this.field_z.field_F < var5) {
               var5 = this.field_z.field_F;
@@ -1652,17 +1652,17 @@ final class GameSession implements AiHost {
             this.field_c = (Territory) null;
           }
           var2_int = 0;
-          if (di.field_p[81]) {
+          if (FleetTrailPoint.field_p[81]) {
             var2_int = 81;
           }
-          if (di.field_p[86]) {
+          if (FleetTrailPoint.field_p[86]) {
             if (0 != var2_int) {
               stackIn_14_0 = 0;
               return stackIn_14_0;
             }
             var2_int = 86;
           }
-          if (di.field_p[82]) {
+          if (FleetTrailPoint.field_p[82]) {
             if (var2_int != 0) {
               stackIn_21_0 = 0;
               return stackIn_21_0;
@@ -2709,10 +2709,10 @@ final class GameSession implements AiHost {
           this.field_Y.h(-1);
           if (AchievementProgress.field_g &&
             !this.field_f) {
-            if ((!di.field_p[86] ||
-              !di.field_p[35]) &&
-              (decompiledFrameRemainder0 = !(!di.field_p[86])) &&
-              (decompiledFrameRemainder0 = !(!di.field_p[67]))) {
+            if ((!FleetTrailPoint.field_p[86] ||
+              !FleetTrailPoint.field_p[35]) &&
+              (decompiledFrameRemainder0 = !(!FleetTrailPoint.field_p[86])) &&
+              (decompiledFrameRemainder0 = !(!FleetTrailPoint.field_p[67]))) {
               var2 = this.field_P.field_v;
               var3_intLifetime1 = 0;
               while (true) {
@@ -2739,8 +2739,8 @@ final class GameSession implements AiHost {
           if (AchievementProgress.field_g &&
             this.field_f &&
             null != this.field_n &&
-            di.field_p[82] &&
-            di.field_p[81] &&
+            FleetTrailPoint.field_p[82] &&
+            FleetTrailPoint.field_p[81] &&
             oq.field_j == 16) {
             sm.field_e = true;
             ProductionContent.a(mq.c((byte) 73), 1);
@@ -3105,15 +3105,15 @@ final class GameSession implements AiHost {
                     continue;
                   }
                 } else {
-                  var5_ref2.field_b = new sf(var4_ref2, cl.field_n);
+                  var5_ref2.field_b = new sf(var4_ref2, RasterStateFrame.field_n);
                 }
                 break;
               }
               if (var8 != 0) {
-                this.field_E = new sf(var4_ref2, cl.field_n);
+                this.field_E = new sf(var4_ref2, RasterStateFrame.field_n);
               }
             } else {
-              this.field_E = new sf(var4_ref2, cl.field_n);
+              this.field_E = new sf(var4_ref2, RasterStateFrame.field_n);
             }
             this.field_x = this.field_x + 1;
             this.refreshMapView(2);
@@ -3311,7 +3311,7 @@ final class GameSession implements AiHost {
           ((MapView) (Object) stackIn_13_0).tick(stackIn_14_1, 66);
           scanLoop1: while (true) {
             if (null != this.field_E) {
-              stackIn_24_0 = cl.field_n - this.field_E.field_c;
+              stackIn_24_0 = RasterStateFrame.field_n - this.field_E.field_c;
               stackIn_24_1 = 50;
               if (var4 != 0) {
                 break scanLoop1;
@@ -4257,7 +4257,7 @@ final class GameSession implements AiHost {
             var10_int = 1;
             while (true) {
               if (this.field_P.field_r > var10_int) {
-                this.field_P.field_v[var10_int].name = hn.field_f[var10_int];
+                this.field_P.field_v[var10_int].name = IntList.field_f[var10_int];
                 var10_int++;
                 if (var13 == 0) {
                   continue;
@@ -4265,7 +4265,7 @@ final class GameSession implements AiHost {
               } else {
                 stackIn_21_0 = this.field_P.field_v[0];
                 if (Dialog.d(true)) {
-                  stackIn_22_1 = hn.field_f[0];
+                  stackIn_22_1 = IntList.field_f[0];
                 } else {
                   stackIn_22_1 = Star.field_o;
                 }
@@ -4286,7 +4286,7 @@ final class GameSession implements AiHost {
                 break;
               }
               if (stackIn_27_0) {
-                this.field_P.field_v[var10_intLifetime2].name = hn.field_f[var10_intLifetime2];
+                this.field_P.field_v[var10_intLifetime2].name = IntList.field_f[var10_intLifetime2];
               }
               var10_intLifetime2++;
             }

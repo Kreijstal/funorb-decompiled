@@ -19,7 +19,7 @@ final class PrivateChatMessage extends ChatMessage {
         try {
           param0.writeMarkedString((byte) 95, this.field_m);
           if (param1 <= 67) {
-            PrivateChatMessage.a((vm) null, false);
+            PrivateChatMessage.a((QuickChatMenu) null, false);
           }
           param0.writePackedName((byte) -120, this.field_i);
           return;
@@ -37,7 +37,7 @@ final class PrivateChatMessage extends ChatMessage {
         }
     }
 
-    final static void a(vm param0, boolean param1) {
+    final static void a(QuickChatMenu param0, boolean param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -118,8 +118,8 @@ final class PrivateChatMessage extends ChatMessage {
         }
     }
 
-    final static void a(int param0, Archive param1) {
-        class $CfrPartitionedBody {
+    final static void loadGameText(int param0, Archive param1) {
+        class GameTextLoader {
             RuntimeException stackIn_1731_0;
             StringBuilder stackIn_1731_1;
             String stackIn_1732_2;
@@ -132,7 +132,7 @@ final class PrivateChatMessage extends ChatMessage {
             int param0;
             Archive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, Archive initialParam1) {
+            GameTextLoader(int initialParam0, Archive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_1731_0 = null;
@@ -145,7 +145,7 @@ final class PrivateChatMessage extends ChatMessage {
                 this.var4 = 0;
                 this.var5 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadMenusAndInstructionOverview() throws java.lang.RuntimeException {
                 ArrayWidgetGroup.field_D = param1;
                 var2 = nb.a("text_game_name", 96);
                 if (var2 != null) {
@@ -369,7 +369,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("achievements_rated_only", 110);
                 if (var2 != null) {
-                  a.field_i = IterableNodeHashTable.a(var2, 17746);
+                  HitRegion.field_i = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("gameoptlabels,0", 98);
                 if (null != var2) {
@@ -493,27 +493,27 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("empire_names,0", 112);
                 if (null != var2) {
-                  hn.field_f[0] = IterableNodeHashTable.a(var2, 17746);
+                  IntList.field_f[0] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("empire_names,1", 101);
                 if (var2 != null) {
-                  hn.field_f[1] = IterableNodeHashTable.a(var2, 17746);
+                  IntList.field_f[1] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("empire_names,2", 102);
                 if (null != var2) {
-                  hn.field_f[2] = IterableNodeHashTable.a(var2, 17746);
+                  IntList.field_f[2] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("empire_names,3", 124);
                 if (null != var2) {
-                  hn.field_f[3] = IterableNodeHashTable.a(var2, 17746);
+                  IntList.field_f[3] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("empire_names,4", 95);
                 if (var2 != null) {
-                  hn.field_f[4] = IterableNodeHashTable.a(var2, 17746);
+                  IntList.field_f[4] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("empire_names,5", 119);
                 if (var2 != null) {
-                  hn.field_f[5] = IterableNodeHashTable.a(var2, 17746);
+                  IntList.field_f[5] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("resource_names,0", 121);
                 if (var2 != null) {
@@ -621,7 +621,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("TEXT_INTRO4_START", 115);
                 if (null != var2) {
-                  aa.field_P = IterableNodeHashTable.a(var2, 17746);
+                  AccountCreationForm.field_P = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("TEXT_INTRO4_END", 112);
                 if (var2 != null) {
@@ -781,7 +781,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("text_resigned", 116);
                 if (var2 != null) {
-                  he.field_l = IterableNodeHashTable.a(var2, 17746);
+                  IntNode.field_l = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_join_final", 118);
                 if (null != var2) {
@@ -809,7 +809,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("turnObjective", 105);
                 if (null != var2) {
-                  cl.field_m = IterableNodeHashTable.a(var2, 17746);
+                  RasterStateFrame.field_m = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("turnOnePoint", 123);
                 if (null != var2) {
@@ -1061,7 +1061,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("text_instructions_icon_terraformed", 101);
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadInstructionsAndFleetControls() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   sk.field_i = IterableNodeHashTable.a(var2, 17746);
                 }
@@ -1095,7 +1095,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("text_instructions_hotkeys", 104);
                 if (var2 != null) {
-                  fr.field_F = IterableNodeHashTable.a(var2, 17746);
+                  DraggableWidget.field_F = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_instructions_stats", 104);
                 if (null != var2) {
@@ -1411,7 +1411,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("tutorial_balanced", 121);
                 if (var2 != null) {
-                  cb.field_m = IterableNodeHashTable.a(var2, 17746);
+                  DirectByteArrayStorage.field_m = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("tutorial_shortfall1", 127);
                 if (var2 != null) {
@@ -1744,11 +1744,11 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("text_totalplayers", 126);
                 if (var2 != null) {
-                  be.field_i = IterableNodeHashTable.a(var2, 17746);
+                  BytePayloadNode.field_i = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_human_players", 118);
                 if (null != var2) {
-                  ah.field_Q = IterableNodeHashTable.a(var2, 17746);
+                  ValidationMessageWidget.field_Q = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_map_hex", 121);
                 if (null != var2) {
@@ -1991,7 +1991,7 @@ final class PrivateChatMessage extends ChatMessage {
                   StatusContent.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadDiplomacyAndVictoryText() throws java.lang.RuntimeException {
                 var2 = nb.a("tooltipAllFleetsPlaced", 96);
                 if (var2 != null) {
                   pe.field_F = IterableNodeHashTable.a(var2, 17746);
@@ -2078,7 +2078,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
                 var2 = nb.a("tooltipVictoryPaneManyOne", 126);
                 if (null != var2) {
-                  fa.field_S = IterableNodeHashTable.a(var2, 17746);
+                  ValidatedTextInputWidget.field_S = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("tooltipProjectedWinner", 115);
                 if (var2 != null) {
@@ -2137,11 +2137,11 @@ final class PrivateChatMessage extends ChatMessage {
             void run() {
                 var4 = ShatteredPlansClient.field_F ? 1 : 0;
                 try {
-                  runChunk0();
+                  loadMenusAndInstructionOverview();
                   if (finished) return;
-                  runChunk1();
+                  loadInstructionsAndFleetControls();
                   if (finished) return;
-                  runChunk2();
+                  loadDiplomacyAndVictoryText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -2162,7 +2162,7 @@ final class PrivateChatMessage extends ChatMessage {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        GameTextLoader decompiledBody = new GameTextLoader(param0, param1);
         decompiledBody.run();
     }
 

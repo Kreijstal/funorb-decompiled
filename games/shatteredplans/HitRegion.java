@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class a extends IntrusiveNode {
-    int field_l;
+abstract class HitRegion extends IntrusiveNode {
+    int x;
     static String field_i;
-    private int field_n;
-    private int field_m;
-    private boolean field_k;
+    private int width;
+    private int height;
+    private boolean enabled;
     static int field_j;
-    int field_h;
+    int y;
 
     public static void clearStatics(byte param0) {
         if (param0 != 15) {
-          a.a(-111, -63);
+          HitRegion.signedBitLength(-111, -63);
           field_i = null;
           return;
         }
@@ -21,13 +21,13 @@ abstract class a extends IntrusiveNode {
 
     final void c(int param0, int param1, int param2) {
         if (param1 != 2) {
-          this.field_h = 109;
+          this.y = 109;
         }
     }
 
     final static AnimatedPanel a(int param0) {
         if (param0 != 20605) {
-          a.clearStatics((byte) -50);
+          HitRegion.clearStatics((byte) -50);
           return SingleChildWidget.field_y.field_xb;
         }
         return SingleChildWidget.field_y.field_xb;
@@ -35,16 +35,16 @@ abstract class a extends IntrusiveNode {
 
     final void d(int param0, int param1, int param2) {
         if (param2 != -30872) {
-          this.field_m = -77;
+          this.height = -77;
         }
     }
 
-    private final boolean a(int param0, int param1, int param2) {
-        if (!this.field_k) {
+    private final boolean containsPoint(int param0, int param1, int param2) {
+        if (!this.enabled) {
           return false;
         }
-        param0 = param0 - this.field_l;
-        param2 = param2 - this.field_h;
+        param0 = param0 - this.x;
+        param2 = param2 - this.y;
         if (param1 != -19255) {
           return true;
         }
@@ -54,27 +54,27 @@ abstract class a extends IntrusiveNode {
         if (param2 < 0) {
           return false;
         }
-        if (param0 >= this.field_n) {
+        if (param0 >= this.width) {
           return false;
         }
-        if (this.field_m > param2) {
+        if (this.height > param2) {
           return true;
         }
         return false;
     }
 
-    final a b(int param0, int param1, int param2) {
-        if (this.a(param1, -19255, param2)) {
+    final HitRegion hitTest(int param0, int param1, int param2) {
+        if (this.containsPoint(param1, -19255, param2)) {
           return this;
         }
         if (param0 <= -108) {
           return null;
         }
-        this.field_h = -25;
+        this.y = -25;
         return null;
     }
 
-    final static int a(int param0, int param1) {
+    final static int signedBitLength(int param0, int param1) {
         int var2;
         int var2Lifetime1;
         if (0 == param0) {
@@ -131,7 +131,7 @@ abstract class a extends IntrusiveNode {
         return var2Lifetime1;
     }
 
-    private a() throws Throwable {
+    private HitRegion() throws Throwable {
         throw new Error();
     }
 

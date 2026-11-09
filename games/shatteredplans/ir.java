@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ir extends WidgetContainer implements dl, ButtonListener {
+final class ir extends WidgetContainer implements NameSuggestionListener, ButtonListener {
     static int field_D;
-    private fa field_H;
+    private ValidatedTextInputWidget field_H;
     static int field_E;
     private FocusableWidget field_G;
-    bj field_F;
+    NameSuggestionsPanel field_F;
     private FocusableWidget field_I;
 
     private final int a(int param0, int param1, int param2, UiWidget param3, String param4, String param5, boolean param6) {
         RuntimeException var8 = null;
-        ah var9 = null;
+        ValidationMessageWidget var9 = null;
         pg var10 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -28,7 +28,7 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
           }
           var10 = new pg(20, param1, 120 + param2, 25, param3, false, 120, 3, gn.field_u, 16777215, param5);
           this.b((byte) -68, var10);
-          var9 = new ah(((ValidatableWidget) ((Object) param3)).getValidationSource((byte) 80), param4, 126, var10.field_n + param1, param2 + 25, param0);
+          var9 = new ValidationMessageWidget(((ValidatableWidget) ((Object) param3)).getValidationSource((byte) 80), param4, 126, var10.field_n + param1, param2 + 25, param0);
           var9.field_u = (WidgetListener) (this);
           this.b((byte) -100, var9);
           stackIn_3_0 = var9.field_n + var10.field_n;
@@ -68,7 +68,7 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
         }
     }
 
-    public final void a(int param0) {
+    public final void onMoreSuggestionsRequested(int param0) {
         if (param0 == 2147483647) {
           ((UsernameAvailabilityValidator) (this.field_H.getValidationSource((byte) 63))).d(0);
           return;
@@ -78,8 +78,8 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
         ((UsernameAvailabilityValidator) (this.field_H.getValidationSource((byte) 63))).d(0);
     }
 
-    public final void a(int param0, String param1) {
-        fa var3 = null;
+    public final void onNameSuggested(int param0, String param1) {
+        ValidatedTextInputWidget var3 = null;
         String var4 = null;
         try {
           if (param0 != 15270) {
@@ -100,11 +100,11 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
         if (!this.k(-60)) {
           return;
         }
-        he.a(8192, this.field_H.field_s);
+        IntNode.a(8192, this.field_H.field_s);
     }
 
     final static void l(int param0) {
-        FullscreenFocusCanvas.field_f = new String[cb.field_j];
+        FullscreenFocusCanvas.field_f = new String[DirectByteArrayStorage.field_j];
         FullscreenFocusCanvas.field_f[11] = wg.field_g;
         FullscreenFocusCanvas.field_f[21] = Player.field_j;
         FullscreenFocusCanvas.field_f[7] = ls.field_c;
@@ -131,7 +131,7 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
         FullscreenFocusCanvas.field_f[6] = MusicVoice.field_x;
     }
 
-    public final void a(FocusableWidget param0, int param1, int param2, int param3, int param4) {
+    public final void onButtonClicked(FocusableWidget param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -148,7 +148,7 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
           if (param1 == 6) {
             return;
           }
-          this.a(97);
+          this.onMoreSuggestionsRequested(97);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -211,7 +211,7 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
 
     private final boolean k(int param0) {
         if (param0 != -60) {
-          this.field_F = (bj) null;
+          this.field_F = (NameSuggestionsPanel) null;
           if (this.a((ValidatableWidget) (this.field_H), (byte) 13)) {
             return true;
           }
@@ -299,7 +299,7 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
 
     public ir() {
         super(0, 0, 496, 0, (WidgetPainter) null);
-        this.field_H = new fa("", (WidgetListener) null, 12);
+        this.field_H = new ValidatedTextInputWidget("", (WidgetListener) null, 12);
         WidgetTheme var1 = new WidgetTheme(EmailValidator.field_x, 0, 0, 0, 0, 16777215, -1, 3, 0, gn.field_u.field_J, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(IterableNodeHashTable.field_i, var1, (WidgetListener) null);
         this.field_I = new FocusableWidget(ck.field_c, (WidgetListener) null);
@@ -323,7 +323,7 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
         this.field_I.field_u = (WidgetListener) (this);
         this.b((byte) -63, this.field_I);
         this.b((byte) -48, this.field_G);
-        this.field_F = new bj((dl) (this));
+        this.field_F = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_F.setBounds(20, 150, (byte) 115, this.field_H.field_m - (-this.field_H.field_x - 60), this.field_x - this.field_H.field_m + (-this.field_H.field_x - 60));
         this.b((byte) -98, this.field_F);
         this.setBounds(0, 55 + var3 + var4, (byte) 117, 0, 496);

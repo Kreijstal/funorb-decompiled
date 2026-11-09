@@ -4,7 +4,7 @@
 final class DerelictMapReader implements MapGenerator {
     private PacketBuffer field_m;
     private int field_l;
-    static vm field_h;
+    static QuickChatMenu field_h;
     private int field_b;
     static Sprite field_g;
     static boolean field_f;
@@ -112,7 +112,7 @@ final class DerelictMapReader implements MapGenerator {
         if (param0 != 0) {
           DerelictMapReader.clearStatics(false);
         }
-        return ul.field_Hb + (sq.field_a << 2) + (vm.field_Bb << 4);
+        return ul.field_Hb + (sq.field_a << 2) + (QuickChatMenu.field_Bb << 4);
     }
 
     DerelictMapReader(PacketBuffer param0, int param1, int param2, int param3, int param4, int param5) {

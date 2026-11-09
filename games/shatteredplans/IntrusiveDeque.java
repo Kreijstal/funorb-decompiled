@@ -75,7 +75,7 @@ final class IntrusiveDeque {
           var6 = SliderWidget.field_P;
           var4Lifetime1.field_j.b(0, 0, 0, var5, var6);
         }
-        di.a(-7904, param1, param0);
+        FleetTrailPoint.a(-7904, param1, param0);
     }
 
     final IntrusiveNode startReverse(int param0) {

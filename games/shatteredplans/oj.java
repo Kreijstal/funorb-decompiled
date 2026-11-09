@@ -9,7 +9,7 @@ final class oj extends ns implements ButtonListener {
     static int[] field_Cb;
     static AnimatedPanel field_zb;
     static mp field_Fb;
-    private aa field_Db;
+    private AccountCreationForm field_Db;
     private boolean field_Hb;
     static String field_Ab;
 
@@ -36,7 +36,7 @@ final class oj extends ns implements ButtonListener {
           var10.m(-84);
           wc.field_a = SecondaryNodeDequeIterator.a(24243, var10);
           vc.field_d = new sr[var3];
-          fa.field_Z = new int[var3][];
+          ValidatedTextInputWidget.field_Z = new int[var3][];
           if (param0 <= 82) {
             return;
           }
@@ -51,7 +51,7 @@ final class oj extends ns implements ButtonListener {
             var5.a(6, -226, 6, 6, 1);
             var5.a(true);
             var6 = new int[]{var5.field_O + var5.field_k >> 1, var5.field_j + var5.field_t >> 1, var5.field_E + var5.field_r >> 1};
-            fa.field_Z[var9] = var6;
+            ValidatedTextInputWidget.field_Z[var9] = var6;
             var5.a(-var6[2], -var6[0], -var6[1], 32767);
             var9++;
           }
@@ -83,7 +83,7 @@ final class oj extends ns implements ButtonListener {
         }
     }
 
-    public final void a(FocusableWidget param0, int param1, int param2, int param3, int param4) {
+    public final void onButtonClicked(FocusableWidget param0, int param1, int param2, int param3, int param4) {
         if (this.field_Eb) {
           wa.a((byte) -40, false, true);
           return;
@@ -134,7 +134,7 @@ final class oj extends ns implements ButtonListener {
         return super.animate((byte) 30);
     }
 
-    oj(DialogRoot param0, aa param1) {
+    oj(DialogRoot param0, AccountCreationForm param1) {
         super(param0, CipherPacketBuffer.field_p, mp.field_a, false, false);
         try {
           this.field_Db = param1;
@@ -168,7 +168,7 @@ final class oj extends ns implements ButtonListener {
             } else {
               var4 = lr.field_d;
               if (this.field_Db != null) {
-                this.field_Db.a(2147483647);
+                this.field_Db.onMoreSuggestionsRequested(2147483647);
               }
             }
           } else {

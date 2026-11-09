@@ -6,7 +6,7 @@ final class cf extends WidgetContainer implements ButtonListener {
     private ns field_K;
     static int field_D;
     static Sprite field_F;
-    private nq field_J;
+    private BitmapFont field_J;
     private String field_L;
     private int[] field_N;
     static int[] field_H;
@@ -14,11 +14,11 @@ final class cf extends WidgetContainer implements ButtonListener {
     private FocusableWidget[] field_E;
     static String field_I;
 
-    final static hh a(Archive param0, int param1, Archive param2, int param3, int param4) {
+    final static BinaryBitmapFont a(Archive param0, int param1, Archive param2, int param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
-        hh stackIn_5_0 = null;
-        hh stackIn_7_0 = null;
+        BinaryBitmapFont stackIn_5_0 = null;
+        BinaryBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -28,13 +28,13 @@ final class cf extends WidgetContainer implements ButtonListener {
         try {
           if (!MenuComponent.a(param3, param2, param4, param1 ^ 3)) {
             stackIn_2_0 = null;
-            return (hh) (stackIn_2_0);
+            return (BinaryBitmapFont) (stackIn_2_0);
           }
           if (param1 == 1) {
             stackIn_7_0 = uc.a(param0.getFile(param3, -1, param4), 0);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (hh) null;
+          stackIn_5_0 = (BinaryBitmapFont) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -78,7 +78,7 @@ final class cf extends WidgetContainer implements ButtonListener {
               } else {
                 PlayerEliminatedEvent.field_h = BattleSnapshot.field_s;
                 if (null != PlayerEliminatedEvent.field_h) {
-                  PlayerEliminatedEvent.field_h.d(-PlayerEliminatedEvent.field_h.field_l + TertiaryListSequence.field_k, -PlayerEliminatedEvent.field_h.field_h + bb.field_b, -30872);
+                  PlayerEliminatedEvent.field_h.d(-PlayerEliminatedEvent.field_h.x + TertiaryListSequence.field_k, -PlayerEliminatedEvent.field_h.y + bb.field_b, -30872);
                 }
               }
               BattleSnapshot.field_s = null;
@@ -93,7 +93,7 @@ final class cf extends WidgetContainer implements ButtonListener {
                 }
               }
               if (il.field_bb != null) {
-                il.field_bb.c(bb.field_b - il.field_bb.field_h, 2, -il.field_bb.field_l + TertiaryListSequence.field_k);
+                il.field_bb.c(bb.field_b - il.field_bb.y, 2, -il.field_bb.x + TertiaryListSequence.field_k);
               }
             }
           } else {
@@ -153,7 +153,7 @@ final class cf extends WidgetContainer implements ButtonListener {
         stackIn_14_11 = (v.field_b) || (MusicEnvelope.field_d);
         IsolationistAi.a(stackIn_8_0, stackIn_9_1, stackIn_12_2, stackIn_12_3, stackIn_12_4, stackIn_12_5, stackIn_12_6, stackIn_12_7, stackIn_12_8, stackIn_12_9 != 0, stackIn_12_10, stackIn_14_11);
         if (sm.field_e &&
-          cl.field_n % 50 == 0) {
+          RasterStateFrame.field_n % 50 == 0) {
           js.field_f.h(58, 255);
         }
         if (DefendTask.field_u) {
@@ -236,7 +236,7 @@ final class cf extends WidgetContainer implements ButtonListener {
         }
     }
 
-    cf(ns param0, nq param1, String param2) {
+    cf(ns param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (WidgetPainter) null);
         int var4_int = 0;
         this.field_G = 0;
@@ -274,7 +274,7 @@ final class cf extends WidgetContainer implements ButtonListener {
         }
     }
 
-    public final void a(FocusableWidget param0, int param1, int param2, int param3, int param4) {
+    public final void onButtonClicked(FocusableWidget param0, int param1, int param2, int param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;

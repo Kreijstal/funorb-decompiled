@@ -7,7 +7,7 @@ final class SliderWidget extends FocusableWidget {
     static gq field_O;
     int field_M;
     static GameRules field_K;
-    private hn field_J;
+    private IntList field_J;
     static int field_G;
     static boolean field_L;
     static AnimatedPanel field_N;

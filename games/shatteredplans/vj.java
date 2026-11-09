@@ -23,9 +23,9 @@ final class vj extends SingleChildWidget {
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (GzipInflater.field_c == -1 &&
-            cb.field_n == -1) {
+            DirectByteArrayStorage.field_n == -1) {
             GzipInflater.field_c = TertiaryListSequence.field_k;
-            cb.field_n = bb.field_b;
+            DirectByteArrayStorage.field_n = bb.field_b;
           }
           boolean decompiledFrameRemainder0 = true;
           LinkPainter.field_e = LinkPainter.field_e + 1;
@@ -65,7 +65,7 @@ final class vj extends SingleChildWidget {
                 AggressiveAi.field_q = true;
               }
             }
-            rs.field_Fb = cb.field_n;
+            rs.field_Fb = DirectByteArrayStorage.field_n;
             RandomAccessCacheFile.field_g = GzipInflater.field_c;
           }
           GameKeyHandler.field_d = param0;
@@ -73,14 +73,14 @@ final class vj extends SingleChildWidget {
             LinkPainter.field_e < ri.field_F &&
             UrlLoader.field_d) {
             LinkPainter.field_e = 0;
-            rs.field_Fb = cb.field_n;
+            rs.field_Fb = DirectByteArrayStorage.field_n;
             RandomAccessCacheFile.field_g = GzipInflater.field_c;
           }
           GzipInflater.field_c = -1;
           if (param1 != 0) {
             field_F = (int[]) null;
           }
-          cb.field_n = -1;
+          DirectByteArrayStorage.field_n = -1;
           if (AggressiveAi.field_q &&
             LinkPainter.field_e == StarLinkPlanner.field_f) {
             AggressiveAi.field_q = false;
@@ -113,7 +113,7 @@ final class vj extends SingleChildWidget {
           return ns.field_xb;
         }
         if (!LinkPainter.field_g.isIndexLoaded((byte) 13)) {
-          return fa.field_J;
+          return ValidatedTextInputWidget.field_J;
         }
         if (!LinkPainter.field_g.ensureGroupLoadedByName("commonui", 77)) {
           return SpriteState.field_r + " - " + LinkPainter.field_g.getGroupProgressByName("commonui", (byte) 65) + "%";
@@ -154,7 +154,7 @@ final class vj extends SingleChildWidget {
 
     final void handleRelease(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         super.handleRelease(param0, param1, param2, param3, param4 + 0, param5);
-        fr var8 = oa.field_b;
+        DraggableWidget var8 = oa.field_b;
         if (param4 != -600269855) {
           return;
         }
@@ -190,12 +190,12 @@ final class vj extends SingleChildWidget {
         if (param0 >= -90) {
           field_B = (String) null;
           if (ue.field_a == PrivateChatMessage.field_l) {
-            return aa.field_G;
+            return AccountCreationForm.field_G;
           }
           return oj.field_Ib;
         }
         if (ue.field_a == PrivateChatMessage.field_l) {
-          return aa.field_G;
+          return AccountCreationForm.field_G;
         }
         return oj.field_Ib;
     }

@@ -62,14 +62,14 @@ final class GzipInflater {
               var9 != 0) {
               var5 = var4_ref_String;
             }
-            var6 = di.a(var4_ref_String, 124);
+            var6 = FleetTrailPoint.a(var4_ref_String, 124);
             var7 = var1.readString(-1);
             var8 = ji.a((CharSequence) ((Object) var4_ref_String), true);
             if (var8 == null) {
               var8 = var4_ref_String;
             }
             if (var6 == null) {
-              var6 = di.a(var7, 124);
+              var6 = FleetTrailPoint.a(var7, 124);
               if (null != var6) {
                 CipherPacketBuffer.field_m.put((long)var8.hashCode(), var6, true);
               }
@@ -188,7 +188,7 @@ final class GzipInflater {
           return;
         }
         try {
-          UsernameAvailabilityValidator.a(param0 ^ -2, bg.field_c, 8);
+          UsernameAvailabilityValidator.a(param0 ^ -2, LoginMethodPreference.field_c, 8);
           if (!AttackTask.d((byte) 104)) {
             UsernameAvailabilityValidator.a(-1, IterableNodeHashTable.field_h, 1);
             UsernameAvailabilityValidator.a(-1, SecondaryNodeDeque.field_b, 2);

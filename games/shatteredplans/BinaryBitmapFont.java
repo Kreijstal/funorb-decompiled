@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hh extends nq {
+final class BinaryBitmapFont extends BitmapFont {
     private byte[][] field_H;
 
     final static void blitGlyphTransposedAlphaRows(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
@@ -138,9 +138,9 @@ final class hh extends nq {
         if (param3 > 0 &&
           param4 > 0) {
           if (SoftwareRasterizer.field_c == null) {
-            hh.blitGlyphRows(SoftwareRasterizer.field_h, this.field_H[param0], param5, var11, var8, param3, param4, var9, var10);
+            BinaryBitmapFont.blitGlyphRows(SoftwareRasterizer.field_h, this.field_H[param0], param5, var11, var8, param3, param4, var9, var10);
           } else {
-            hh.blitGlyphClippedRows(SoftwareRasterizer.field_h, this.field_H[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, SoftwareRasterizer.field_c, SoftwareRasterizer.field_d);
+            BinaryBitmapFont.blitGlyphClippedRows(SoftwareRasterizer.field_h, this.field_H[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, SoftwareRasterizer.field_c, SoftwareRasterizer.field_d);
           }
           return;
         }
@@ -225,10 +225,10 @@ final class hh extends nq {
           param4 <= 0) {
           return;
         }
-        hh.blitGlyphAlphaRows(SoftwareRasterizer.field_h, this.field_H[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+        BinaryBitmapFont.blitGlyphAlphaRows(SoftwareRasterizer.field_h, this.field_H[param0], param5, var12, var9, param3, param4, var10, var11, param6);
     }
 
-    hh(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, byte[][] param5) {
+    BinaryBitmapFont(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, byte[][] param5) {
         super(param0, param1, param2, param3, param4);
         this.field_H = new byte[256][];
         this.field_H = param5;
@@ -334,7 +334,7 @@ final class hh extends nq {
           return;
         }
         var11 = var11 - var10 * param3;
-        hh.blitGlyphTransposedRows(SoftwareRasterizer.field_h, this.field_H[param0], param5, var12, var8, var10, param3, param4, var9, var11);
+        BinaryBitmapFont.blitGlyphTransposedRows(SoftwareRasterizer.field_h, this.field_H[param0], param5, var12, var8, var10, param3, param4, var9, var11);
     }
 
     final void drawGlyphTransposedAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
@@ -374,6 +374,6 @@ final class hh extends nq {
           return;
         }
         var12 = var12 - var11 * param3;
-        hh.blitGlyphTransposedAlphaRows(SoftwareRasterizer.field_h, this.field_H[param0], param5, var13, var9, var11, param3, param4, var10, var12, param6);
+        BinaryBitmapFont.blitGlyphTransposedAlphaRows(SoftwareRasterizer.field_h, this.field_H[param0], param5, var13, var9, var11, param3, param4, var10, var12, param6);
     }
 }

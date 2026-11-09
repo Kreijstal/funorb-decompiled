@@ -168,7 +168,7 @@ final class os extends MenuComponent {
             stackIn_7_0 = MenuWindow.field_C;
             return stackIn_7_0;
           }
-          var7 = di.a(param2, param0 ^ 12);
+          var7 = FleetTrailPoint.a(param2, param0 ^ 12);
           if (var7 == null) {
             stackIn_10_0 = QuickChatCategoryRegistry.a(DelegatingCanvas.field_d, param0 + 4254, new String[]{param2});
             return stackIn_10_0;
@@ -209,9 +209,9 @@ final class os extends MenuComponent {
     }
 
     final static void a(int param0, int param1) {
-        vm.field_Bb = (50 & param1) >> 4;
-        if (vm.field_Bb > 2) {
-          vm.field_Bb = 2;
+        QuickChatMenu.field_Bb = (50 & param1) >> 4;
+        if (QuickChatMenu.field_Bb > 2) {
+          QuickChatMenu.field_Bb = 2;
         }
         sq.field_a = param1 >> 2 & 3;
         if (param0 >= -76) {

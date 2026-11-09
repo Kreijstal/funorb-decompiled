@@ -91,7 +91,7 @@ final class PasswordValidator extends TextFieldValidator {
           IndexedSpriteState.a(127);
           tg.field_c.a(param3, -20429);
           if (null != wi.field_c) {
-            if (bg.field_g) {
+            if (LoginMethodPreference.field_g) {
               wi.field_c.a(tg.field_c.field_B, param3, tg.field_c.field_N, (byte) 0);
             } else {
               wi.field_c = null;
@@ -289,7 +289,7 @@ final class PasswordValidator extends TextFieldValidator {
           }
           var5 = var4;
           if (cg.a(-76, var5)) {
-            stackIn_6_0 = ab.field_b;
+            stackIn_6_0 = AccountValidationText.field_b;
             return stackIn_6_0;
           }
           if (NodeSequence.a(var5, -31654)) {
@@ -321,7 +321,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_31_0;
           }
           if (!Bzip2State.a(var5, 127, var6)) {
-            return ab.field_b;
+            return AccountValidationText.field_b;
           }
           stackIn_35_0 = po.field_e;
           return stackIn_35_0;

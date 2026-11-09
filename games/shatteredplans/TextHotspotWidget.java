@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-class ts extends FocusableWidget {
+class TextHotspotWidget extends FocusableWidget {
     static String[] field_K;
     static Sprite[] field_L;
     private IntrusiveDeque field_D;
@@ -78,7 +78,7 @@ class ts extends FocusableWidget {
         }
     }
 
-    ts(String param0, WidgetPainter param1) {
+    TextHotspotWidget(String param0, WidgetPainter param1) {
         super(param0, (WidgetListener) null);
         this.field_I = null;
         try {
@@ -257,8 +257,8 @@ class ts extends FocusableWidget {
         if (param0 != 6493) {
           return;
         }
-        if (bj.field_L < 50) {
-          us.a(0, bj.field_L);
+        if (NameSuggestionsPanel.field_L < 50) {
+          us.a(0, NameSuggestionsPanel.field_L);
         }
         qn.a((byte) -120);
         var1 = NetworkArchiveRequest.field_C.stringWidth(np.field_d) + 20;
@@ -480,7 +480,7 @@ class ts extends FocusableWidget {
           return;
         }
         if (this.field_u != null) {
-          ((op) ((Object) this.field_u)).a(param0, var7.field_i, 2, this);
+          ((HyperlinkListener) ((Object) this.field_u)).onLinkClicked(param0, var7.field_i, 2, this);
           return;
         }
     }

@@ -63,7 +63,7 @@ final class SoundPlayback extends IntrusiveNode {
           eh.field_C = param2;
           BoundsRect.field_j = true;
           if (eh.field_C == 0) {
-            var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, ValidationIndicator.field_D, ts.field_K, 3);
+            var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, ValidationIndicator.field_D, TextHotspotWidget.field_K, 3);
             var4 = 3 + var3_int;
             kr.field_f = new String[var4];
             ss.field_a = new int[var4];
@@ -72,7 +72,7 @@ final class SoundPlayback extends IntrusiveNode {
             }
             ShatteredPlansClient.field_E = new int[2];
             for (var5 = 0; var3_int > var5; var5++) {
-              kr.field_f[var5] = ts.field_K[var5];
+              kr.field_f[var5] = TextHotspotWidget.field_K[var5];
             }
             kr.field_f[-3 + var4] = "";
             kr.field_f[-2 + var4] = jm.field_s;
@@ -82,7 +82,7 @@ final class SoundPlayback extends IntrusiveNode {
             ss.field_a[var4 - 1] = 1;
             ShatteredPlansClient.field_E[1] = 5;
           } else if (eh.field_C == 1) {
-            var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, ValidationIndicator.field_D, ts.field_K, 3);
+            var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, ValidationIndicator.field_D, TextHotspotWidget.field_K, 3);
             var4 = 2 + var3_int;
             kr.field_f = new String[var4];
             ss.field_a = new int[var4];
@@ -91,7 +91,7 @@ final class SoundPlayback extends IntrusiveNode {
             }
             ShatteredPlansClient.field_E = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
-              kr.field_f[var5] = ts.field_K[var5];
+              kr.field_f[var5] = TextHotspotWidget.field_K[var5];
             }
             kr.field_f[var4 - 2] = "";
             kr.field_f[-1 + var4] = nf.field_i;
@@ -99,10 +99,10 @@ final class SoundPlayback extends IntrusiveNode {
             ShatteredPlansClient.field_E[0] = 5;
           } else if (eh.field_C != 2) {
             if (eh.field_C == 3) {
-              if (fa.field_W.field_w) {
-                var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, ja.field_k, ts.field_K, 3);
+              if (ValidatedTextInputWidget.field_W.field_w) {
+                var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, ja.field_k, TextHotspotWidget.field_K, 3);
               } else {
-                var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, BattleContribution.field_n, ts.field_K, 3);
+                var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, BattleContribution.field_n, TextHotspotWidget.field_K, 3);
               }
               var4 = 2 + var3_int;
               kr.field_f = new String[var4];
@@ -112,14 +112,14 @@ final class SoundPlayback extends IntrusiveNode {
               }
               ShatteredPlansClient.field_E = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
-                kr.field_f[var5] = ts.field_K[var5];
+                kr.field_f[var5] = TextHotspotWidget.field_K[var5];
               }
               kr.field_f[-2 + var4] = "";
               kr.field_f[-1 + var4] = nf.field_i;
               ss.field_a[-1 + var4] = 0;
               ShatteredPlansClient.field_E[0] = 5;
             } else if (4 == eh.field_C) {
-              var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, MenuList.field_z, ts.field_K, 3);
+              var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, MenuList.field_z, TextHotspotWidget.field_K, 3);
               var4 = var3_int + 2;
               kr.field_f = new String[var4];
               ss.field_a = new int[var4];
@@ -128,7 +128,7 @@ final class SoundPlayback extends IntrusiveNode {
               }
               ShatteredPlansClient.field_E = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
-                kr.field_f[var5] = ts.field_K[var5];
+                kr.field_f[var5] = TextHotspotWidget.field_K[var5];
               }
               kr.field_f[var4 - 2] = "";
               kr.field_f[-1 + var4] = nf.field_i;
@@ -138,7 +138,7 @@ final class SoundPlayback extends IntrusiveNode {
               if (eh.field_C != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, AggressiveAi.field_p, ts.field_K, 3);
+              var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, AggressiveAi.field_p, TextHotspotWidget.field_K, 3);
               var4 = 3 + var3_int;
               kr.field_f = new String[var4];
               ss.field_a = new int[var4];
@@ -147,7 +147,7 @@ final class SoundPlayback extends IntrusiveNode {
               }
               ShatteredPlansClient.field_E = new int[2];
               for (var5 = 0; var3_int > var5; var5++) {
-                kr.field_f[var5] = ts.field_K[var5];
+                kr.field_f[var5] = TextHotspotWidget.field_K[var5];
               }
               kr.field_f[-3 + var4] = "";
               kr.field_f[-2 + var4] = MusicVoice.field_t;
@@ -158,10 +158,10 @@ final class SoundPlayback extends IntrusiveNode {
               ShatteredPlansClient.field_E[1] = 5;
             }
           } else {
-            var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, QuickChatCategoryRegistry.a(vs.field_f, 4371, new String[]{"<br><%0><br>"}), ts.field_K, 3);
+            var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, QuickChatCategoryRegistry.a(vs.field_f, 4371, new String[]{"<br><%0><br>"}), TextHotspotWidget.field_K, 3);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
-              if (!"<%0>".equals(ts.field_K[var5])) {
+              if (!"<%0>".equals(TextHotspotWidget.field_K[var5])) {
                 continue;
               }
               var4 = var5;
@@ -171,13 +171,13 @@ final class SoundPlayback extends IntrusiveNode {
               throw new IllegalStateException();
             }
             TargetedChatMessage.field_o = new String[var4];
-            ArrayOperations.copyObjects(ts.field_K, 0, TargetedChatMessage.field_o, 0, var4);
+            ArrayOperations.copyObjects(TextHotspotWidget.field_K, 0, TargetedChatMessage.field_o, 0, var4);
             kd.field_b = new String[-1 + (var3_int - var4)];
-            ArrayOperations.copyObjects(ts.field_K, var4 + 1, kd.field_b, 0, var3_int + (-var4 - 1));
+            ArrayOperations.copyObjects(TextHotspotWidget.field_K, var4 + 1, kd.field_b, 0, var3_int + (-var4 - 1));
             var4 = -1;
-            var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, QuickChatCategoryRegistry.a(Star.field_U, 4371, new String[]{"<br><%0><br>"}), ts.field_K, 3);
+            var3_int = DualLinkDeque.a(FrameTimer.field_c, PlayerStats.field_c, QuickChatCategoryRegistry.a(Star.field_U, 4371, new String[]{"<br><%0><br>"}), TextHotspotWidget.field_K, 3);
             for (var5 = 0; var5 < var3_int; var5++) {
-              if (!"<%0>".equals(ts.field_K[var5])) {
+              if (!"<%0>".equals(TextHotspotWidget.field_K[var5])) {
                 continue;
               }
               var4 = var5;
@@ -187,9 +187,9 @@ final class SoundPlayback extends IntrusiveNode {
               throw new IllegalStateException();
             }
             TertiaryNodeList.field_d = new String[var4];
-            ArrayOperations.copyObjects(ts.field_K, 0, TertiaryNodeList.field_d, 0, var4);
+            ArrayOperations.copyObjects(TextHotspotWidget.field_K, 0, TertiaryNodeList.field_d, 0, var4);
             PanelNode.field_p = new String[-1 + (var3_int - var4)];
-            ArrayOperations.copyObjects(ts.field_K, var4 + 1, PanelNode.field_p, 0, var3_int - var4 - 1);
+            ArrayOperations.copyObjects(TextHotspotWidget.field_K, var4 + 1, PanelNode.field_p, 0, var3_int - var4 - 1);
             if (TargetedChatMessage.field_o.length >= TertiaryNodeList.field_d.length) {
               stackIn_37_0 = TargetedChatMessage.field_o.length;
             } else {
@@ -251,7 +251,7 @@ final class SoundPlayback extends IntrusiveNode {
             stackIn_89_0 = kr.field_f[var4Lifetime1];
             stackIn_89_1 = 0;
             stackIn_90_2 = !(ss.field_a[var4Lifetime1] < 0);
-            var5Lifetime1 = vm.a(stackIn_89_0, stackIn_89_1, stackIn_90_2);
+            var5Lifetime1 = QuickChatMenu.a(stackIn_89_0, stackIn_89_1, stackIn_90_2);
             if (var3_intLifetime1 < var5Lifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -261,7 +261,7 @@ final class SoundPlayback extends IntrusiveNode {
             var4_ref_String__ = var11;
             for (var5Lifetime2 = 0; var11.length > var5Lifetime2; var5Lifetime2++) {
               var12 = var11[var5Lifetime2];
-              var7Lifetime1 = vm.a(var12, 0, false);
+              var7Lifetime1 = QuickChatMenu.a(var12, 0, false);
               if (var7Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1;
               }
@@ -269,7 +269,7 @@ final class SoundPlayback extends IntrusiveNode {
             var4_ref_String__Lifetime1 = kd.field_b;
             for (var5Lifetime2Lifetime1 = 0; var5Lifetime2Lifetime1 < var4_ref_String__Lifetime1.length; var5Lifetime2Lifetime1++) {
               var13 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
-              var7Lifetime1Lifetime1 = vm.a(var13, 0, false);
+              var7Lifetime1Lifetime1 = QuickChatMenu.a(var13, 0, false);
               if (var7Lifetime1Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1Lifetime1;
               }
@@ -281,7 +281,7 @@ final class SoundPlayback extends IntrusiveNode {
           for (var4Lifetime2 = 0; var4Lifetime2 < kr.field_f.length; var4Lifetime2++) {
             stackIn_115_0 = DerelictMapReader.field_a;
             if (0 > ss.field_a[var4Lifetime2]) {
-              stackIn_116_1 = e.field_d;
+              stackIn_116_1 = AccountFieldValue.field_d;
             } else {
               stackIn_116_1 = id.field_b;
             }
@@ -295,7 +295,7 @@ final class SoundPlayback extends IntrusiveNode {
           while (var4Lifetime3 < kr.field_f.length) {
             var7Lifetime2 = ss.field_a[var4Lifetime3];
             if (var7Lifetime2 >= 0) {
-              var8Lifetime1 = vm.a(kr.field_f[var4Lifetime3], 0, true);
+              var8Lifetime1 = QuickChatMenu.a(kr.field_f[var4Lifetime3], 0, true);
               var9 = QuaternaryLinkNode.field_w - (var8Lifetime1 >> 1);
               var6Lifetime1 = var6Lifetime1 + sm.field_b;
               StrongCacheEntry.field_w[var4Lifetime3] = new int[4];
@@ -305,7 +305,7 @@ final class SoundPlayback extends IntrusiveNode {
               var6Lifetime1 = var6Lifetime1 + (id.field_b + ((ArchiveNetworkClient.field_i << 1) + sm.field_b));
               StrongCacheEntry.field_w[var4Lifetime3][3] = (ArchiveNetworkClient.field_i << 1) + id.field_b;
             } else {
-              var6Lifetime1 = var6Lifetime1 + e.field_d;
+              var6Lifetime1 = var6Lifetime1 + AccountFieldValue.field_d;
             }
             var4Lifetime3++;
           }

@@ -76,7 +76,7 @@ final class ck {
             IsaacRandom.field_b[var9_int] = var20;
           }
           cg.i(0);
-          hn.field_c = MessageKind.a(true, param0, "", "menu_hex");
+          IntList.field_c = MessageKind.a(true, param0, "", "menu_hex");
           jm.field_r = id.a(2, param0, "", "instr_mainview");
           NodeSequence.field_d = id.a(param6 ^ -6, param0, "", "instr_starframe");
           ae.a(-100, "", param0, "zoomicons");
@@ -127,11 +127,11 @@ final class ck {
           SpriteState.field_q.bindAsRenderTarget();
           SpriteState.field_q.drawColourised(0, 0, 2105376);
           cg.i(0);
-          bj.field_H = MessageKind.a(true, param0, "", "planet_burnt");
+          NameSuggestionsPanel.field_H = MessageKind.a(true, param0, "", "planet_burnt");
           qe.field_j = MessageKind.a(true, param0, "", "planet_scorchedearth");
           NetworkArchiveRequest.field_x = MessageKind.a(true, param0, "", "planet_earthlike");
           ta.field_a = MessageKind.a(true, param0, "", "planet_exotic");
-          be.field_k = MessageKind.a(true, param0, "", "planet_gas");
+          BytePayloadNode.field_k = MessageKind.a(true, param0, "", "planet_gas");
           rl.field_c = MessageKind.a(true, param0, "", "planet_ringed");
           kr.field_d = MessageKind.a(true, param0, "", "planet_rock");
           rk.field_k = MessageKind.a(true, param0, "", "alien_miner");
@@ -140,17 +140,17 @@ final class ck {
           kb.field_y = id.a(2, param0, "", "ship");
           wo.field_b = id.a(2, param0, "", "shield");
           oo.field_a = id.a(param6 ^ -6, param0, "", "defensegrid");
-          ab.field_e = id.a(2, param0, "", "chevron");
+          AccountValidationText.field_e = id.a(2, param0, "", "chevron");
           TextFieldWidget.field_L = MessageKind.a(true, param0, "", "warning");
           bd.field_G = id.a(2, param0, "", "hammer");
-          e.field_e = id.a(param6 ^ -6, param0, "", "beaker");
+          AccountFieldValue.field_e = id.a(param6 ^ -6, param0, "", "beaker");
           UiWidget.field_t = MessageKind.a(true, param0, "", "factionring");
           SpriteState.field_y = MessageKind.a(true, param0, "", "factionringtag");
           ArrayWidgetGroup.field_z = MessageKind.a(true, param0, "", "factionringcentre");
           MatchingTextValidator.field_p = MessageKind.a(true, param0, "", "arrowship");
-          eq.field_o = MessageKind.a(true, param0, "", "arrowshipdamaged");
+          ReflectionCheck.field_o = MessageKind.a(true, param0, "", "arrowshipdamaged");
           cf.field_F = MessageKind.a(true, param0, "", "fleetsarrowship");
-          di.field_i = va.a("fleetbuttons", 0, "", param0);
+          FleetTrailPoint.field_i = va.a("fleetbuttons", 0, "", param0);
           StarAbandonedEvent.field_r = va.a("anim_icons", 0, "", param0);
           GarrisonTask.field_s = new ArgbSprite(6, 6);
           GarrisonTask.field_s.field_B[33] = 469762047;
@@ -187,13 +187,13 @@ final class ck {
           GarrisonTask.field_s.field_B[8] = -3684409;
           GarrisonTask.field_s.field_B[9] = -5329234;
           GarrisonTask.field_s.field_B[1] = 0;
-          ts.field_L = (Sprite[]) ((Object) new ArgbSprite[6]);
+          TextHotspotWidget.field_L = (Sprite[]) ((Object) new ArgbSprite[6]);
           GarrisonTask.field_s.field_B[16] = -10658467;
           GarrisonTask.field_s.field_B[23] = 1207959552;
           GarrisonTask.field_s.field_B[21] = -10066330;
           for (var13_int = 0; mj.field_Nb.length > var13_int; var13_int++) {
             mj.field_Nb[var13_int] = MessageKind.a(true, param0, "", "res_side_" + var13_int);
-            ts.field_L[var13_int] = MessageKind.a(true, param0, "", "res_low_" + var13_int);
+            TextHotspotWidget.field_L[var13_int] = MessageKind.a(true, param0, "", "res_low_" + var13_int);
           }
           MenuLabel.field_y = va.a("defnet_anim_small", 0, "", param0);
           for (var13_intLifetime1 = 0; var13_intLifetime1 < MenuLabel.field_y[0].field_B.length; var13_intLifetime1++) {
@@ -253,7 +253,7 @@ final class ck {
           oo.field_a.drawColourised(1, 1, 8421504);
           mj.field_Kb = new Sprite(12, 12);
           mj.field_Kb.bindAsRenderTarget();
-          ab.field_e.drawColourised(1, 1, 8421504);
+          AccountValidationText.field_e.drawColourised(1, 1, 8421504);
           wa.field_b = new Sprite(128, 128);
           wa.field_b.bindAsRenderTarget();
           TextFieldWidget.field_L.draw(0, 0);
@@ -293,8 +293,8 @@ final class ck {
           bs.a(GameScreen.field_R, 78);
           SoftwareRasterizer.fillCircle(15, 15, 15, 65793);
           SoftwareRasterizer.fillCircle(15, 15, 5, 0);
-          le.field_d = new Sprite(15, 20);
-          le.field_d.bindAsRenderTarget();
+          ByteArrayStorage.field_d = new Sprite(15, 20);
+          ByteArrayStorage.field_d.bindAsRenderTarget();
           SoftwareRasterizer.fillRect(0, 0, 15, 20, 65793);
           SoftwareRasterizer.fillCircle(0, -1, 5, 0);
           SoftwareRasterizer.fillCircle(0, 20, 5, 0);
@@ -302,16 +302,16 @@ final class ck {
           GameKeyHandler.field_e = new Sprite(2 + var15Lifetime1.field_z, 2 + var15Lifetime1.field_w);
           GameKeyHandler.field_e.bindAsRenderTarget();
           var15Lifetime1.drawSilhouette(1, 1, 65793);
-          bg.field_a = new Sprite(21, 22);
-          bg.field_a.bindAsRenderTarget();
+          LoginMethodPreference.field_a = new Sprite(21, 22);
+          LoginMethodPreference.field_a.bindAsRenderTarget();
           for (var16 = 0; var16 < 20; var16++) {
             var17 = var16 > 10 ? 20 - var16 : 3;
             SoftwareRasterizer.drawHorizontalLine(11 - var17, 1 + var16, 2 * var17, 65793);
           }
           cg.i(0);
           GameKeyHandler.field_e.addOutline(2458760);
-          bg.field_a.addOutline(2458760);
-          WidgetTheme.field_k = bg.field_a.copy();
+          LoginMethodPreference.field_a.addOutline(2458760);
+          WidgetTheme.field_k = LoginMethodPreference.field_a.copy();
           WidgetTheme.field_k.flipVertical();
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ck.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');

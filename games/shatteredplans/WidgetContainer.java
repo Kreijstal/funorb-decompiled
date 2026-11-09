@@ -130,7 +130,7 @@ class WidgetContainer extends UiWidget implements ni {
           if (var6 != 80) {
             return false;
           }
-          if (di.field_p[81]) {
+          if (FleetTrailPoint.field_p[81]) {
             stackIn_18_0 = this.isBeforeFocusedChild(param3, true);
           } else {
             stackIn_18_0 = this.isAfterFocusedChild(param3, param2 + 105);
@@ -390,7 +390,7 @@ class WidgetContainer extends UiWidget implements ni {
         int var7 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 == 0 &&
           null != this.field_p) {
-          this.field_p.a((UiWidget) (this), param3, true, param2, (byte) 12);
+          this.field_p.paintWidget((UiWidget) (this), param3, true, param2, (byte) 12);
         }
         IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_A);
         if (param1 != -11857) {

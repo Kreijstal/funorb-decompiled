@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class an {
-    static aa field_b;
+    static AccountCreationForm field_b;
     static int field_c;
     static AnimatedPanel field_d;
     static String field_a;

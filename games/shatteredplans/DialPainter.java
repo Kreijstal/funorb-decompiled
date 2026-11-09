@@ -8,7 +8,7 @@ final class DialPainter implements WidgetPainter {
     private int field_h;
     private int field_m;
     static IntrusiveDeque field_n;
-    private nq field_d;
+    private BitmapFont field_d;
     private int field_i;
     private int field_k;
     static AnimatedPanel field_g;
@@ -111,7 +111,7 @@ final class DialPainter implements WidgetPainter {
         field_e = null;
     }
 
-    public final void a(UiWidget param0, int param1, boolean param2, int param3, byte param4) {
+    public final void paintWidget(UiWidget param0, int param1, boolean param2, int param3, byte param4) {
         int var7 = 0;
         int var8 = 0;
         double var9 = 0.0;
@@ -174,7 +174,7 @@ final class DialPainter implements WidgetPainter {
         }
     }
 
-    DialPainter(nq param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    DialPainter(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_i = param3;
           this.field_j = param2;

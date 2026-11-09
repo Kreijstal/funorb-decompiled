@@ -264,13 +264,13 @@ final class sm {
             var8 >= -294) {
             this.a(var8 + param1 + 3, true, var9, param0 + 30);
           }
-          var8 = var8 + cb.field_i[var9];
+          var8 = var8 + DirectByteArrayStorage.field_i[var9];
         }
         SoftwareRasterizer.restoreClip(var25);
         if (kb.field_A > var4) {
-          bg.field_a.drawAdditive(param0 - (-TutorialVictoryChecker.field_r[this.field_a] + 26), -35 + (TutorialVictoryChecker.field_t[this.field_a] + param1), 256);
+          LoginMethodPreference.field_a.drawAdditive(param0 - (-TutorialVictoryChecker.field_r[this.field_a] + 26), -35 + (TutorialVictoryChecker.field_t[this.field_a] + param1), 256);
           if (BattleContribution.field_o == -3) {
-            bg.field_a.drawAdditive(TutorialVictoryChecker.field_r[this.field_a] + param0 - 26, param1 + TutorialVictoryChecker.field_t[this.field_a] - 35, 256);
+            LoginMethodPreference.field_a.drawAdditive(TutorialVictoryChecker.field_r[this.field_a] + param0 - 26, param1 + TutorialVictoryChecker.field_t[this.field_a] - 35, 256);
           }
         }
         if (0 < var4) {
@@ -395,7 +395,7 @@ final class sm {
           field_c = (String) null;
         }
         while (var4 < var2) {
-          var3 = var3 - cb.field_i[var4];
+          var3 = var3 - DirectByteArrayStorage.field_i[var4];
           if (0 <= var3) {
             var4++;
             continue;
@@ -447,7 +447,7 @@ final class sm {
             fg.field_c[var4Lifetime2] = vc.a((byte) -39, 35);
           }
         }
-        var6Lifetime1 = cl.field_n % 50;
+        var6Lifetime1 = RasterStateFrame.field_n % 50;
         if (var6Lifetime1 == 0) {
           for (var4Lifetime3 = 0; 5 > var4Lifetime3; var4Lifetime3++) {
             WhirlpoolHasher.field_q[var4Lifetime3] = fg.field_c[var4Lifetime3];
@@ -505,17 +505,17 @@ final class sm {
               TutorialVictoryChecker.field_p[this.field_a][var6] != 28) {
               var4Lifetime1 = this.itemY(var6, true);
               if (var6 == this.field_d.field_c) {
-                hn.field_c.draw(25 + var3, (TutorialVictoryChecker.field_l[this.field_a] - hn.field_c.field_w) / 2 + var4Lifetime1);
+                IntList.field_c.draw(25 + var3, (TutorialVictoryChecker.field_l[this.field_a] - IntList.field_c.field_w) / 2 + var4Lifetime1);
               } else {
                 var8 = this.field_d.field_b * 6 + var6 * 4;
                 var9 = Math.abs(var5 - var8);
                 if (2 * this.field_d.field_b <= var9) {
                   if (var9 < 6 * this.field_d.field_b) {
                     var10 = (6 * this.field_d.field_b - var9) * 256 / (this.field_d.field_b * 4);
-                    hn.field_c.drawAlpha(25 + var3, (-hn.field_c.field_w + TutorialVictoryChecker.field_l[this.field_a]) / 2 + var4Lifetime1, var10);
+                    IntList.field_c.drawAlpha(25 + var3, (-IntList.field_c.field_w + TutorialVictoryChecker.field_l[this.field_a]) / 2 + var4Lifetime1, var10);
                   }
                 } else {
-                  hn.field_c.drawAlpha(var3 + 25, var4Lifetime1 + (TutorialVictoryChecker.field_l[this.field_a] - hn.field_c.field_w) / 2, 256);
+                  IntList.field_c.drawAlpha(var3 + 25, var4Lifetime1 + (TutorialVictoryChecker.field_l[this.field_a] - IntList.field_c.field_w) / 2, 256);
                 }
               }
             }
@@ -845,7 +845,7 @@ final class sm {
           MidiPcmStream.a(var4, var6, var5, (byte) -124, var3);
         }
         SoftwareRasterizer.setClip(8 + var5, 8 + var6, var5 + var3 - 8, -8 + var6 + var4);
-        rs.field_Cb.drawCentred(fr.field_D, 320, (rs.field_Cb.field_J + var4 >> 1) + var6, 16777215, -1);
+        rs.field_Cb.drawCentred(DraggableWidget.field_D, 320, (rs.field_Cb.field_J + var4 >> 1) + var6, 16777215, -1);
         SoftwareRasterizer.restoreClip(MusicEnvelope.field_m);
     }
 
@@ -872,7 +872,7 @@ final class sm {
         }
         RasterBuffer.field_e = -1;
         this.field_g = -1;
-        TutorialVictoryChecker.field_q = cl.field_n;
+        TutorialVictoryChecker.field_q = RasterStateFrame.field_n;
         for (var4 = 1; 6 > var4; var4++) {
           Star.field_H[var4] = 0;
         }
@@ -883,7 +883,7 @@ final class sm {
         BattleContribution.field_o = -1;
         CandidateLink.field_t = 24;
         Star.field_H[0] = 24;
-        if (cb.field_i == null && (6 == this.field_a ||
+        if (DirectByteArrayStorage.field_i == null && (6 == this.field_a ||
           this.field_a == 7)) {
           hd.c(false);
         }
@@ -944,10 +944,10 @@ final class sm {
         int var5;
         int var2Lifetime1;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
-        int fieldTemp$0 = le.field_b + 1;
-        le.field_b = le.field_b + 1;
+        int fieldTemp$0 = ByteArrayStorage.field_b + 1;
+        ByteArrayStorage.field_b = ByteArrayStorage.field_b + 1;
         if (32 < fieldTemp$0) {
-          le.field_b = 32;
+          ByteArrayStorage.field_b = 32;
         }
         if (!param0) {
           field_c = (String) null;
@@ -1153,20 +1153,20 @@ final class sm {
                   var12 = 390;
                 }
                 ai.a(true);
-                SoftwareRasterizer.b(16 * var12 + ProductionContent.field_c[0], ul.field_Db[0] + param0 * 16, 50, 7, MusicCrossfadeStream.field_s);
+                SoftwareRasterizer.addRadialGlowQ4(16 * var12 + ProductionContent.field_c[0], ul.field_Db[0] + param0 * 16, 50, 7, MusicCrossfadeStream.field_s);
                 rs.field_Cb.drawString(sk.field_i, var12 + 22, param0 + rs.field_Cb.field_J / 4, 16777215, -1);
                 param0 += 40;
-                SoftwareRasterizer.b(16 * var12 + ProductionContent.field_c[0], ul.field_Db[0] + 16 * param0, 50, 7, MusicCrossfadeStream.field_s);
-                SoftwareRasterizer.b(ProductionContent.field_c[1] + 16 * var12, 16 * param0 + ul.field_Db[1], 50, 7, MusicCrossfadeStream.field_s);
+                SoftwareRasterizer.addRadialGlowQ4(16 * var12 + ProductionContent.field_c[0], ul.field_Db[0] + 16 * param0, 50, 7, MusicCrossfadeStream.field_s);
+                SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[1] + 16 * var12, 16 * param0 + ul.field_Db[1], 50, 7, MusicCrossfadeStream.field_s);
                 rs.field_Cb.drawString(pg.field_F, var12 + 22, rs.field_Cb.field_J / 4 + param0, 16777215, -1);
                 param0 += 40;
-                SoftwareRasterizer.b(16 * var12 + ProductionContent.field_c[0], param0 * 16 + ul.field_Db[0], 50, 7, MusicCrossfadeStream.field_s);
-                SoftwareRasterizer.b(ProductionContent.field_c[2] + var12 * 16, ul.field_Db[2] + 16 * param0, 50, 7, MusicCrossfadeStream.field_s);
-                SoftwareRasterizer.b(ProductionContent.field_c[3] + var12 * 16, ul.field_Db[3] + param0 * 16, 50, 7, MusicCrossfadeStream.field_s);
+                SoftwareRasterizer.addRadialGlowQ4(16 * var12 + ProductionContent.field_c[0], param0 * 16 + ul.field_Db[0], 50, 7, MusicCrossfadeStream.field_s);
+                SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[2] + var12 * 16, ul.field_Db[2] + 16 * param0, 50, 7, MusicCrossfadeStream.field_s);
+                SoftwareRasterizer.addRadialGlowQ4(ProductionContent.field_c[3] + var12 * 16, ul.field_Db[3] + param0 * 16, 50, 7, MusicCrossfadeStream.field_s);
                 rs.field_Cb.drawString(MenuComponent.field_n, var12 + 22, param0 + rs.field_Cb.field_J / 4, 16777215, -1);
                 param0 += 40;
                 MenuLabel.field_y[0].drawScaled(var12 - 15, param0 - 15, 30, 30);
-                var13 = cl.field_n % 104;
+                var13 = RasterStateFrame.field_n % 104;
                 if (4 < var13 &&
                   48 >= var13) {
                   MenuLabel.field_y[var13 / 4].drawScaledAdditive(var12 - 15, param0 - 15, 30, 30, 128);
@@ -1179,19 +1179,19 @@ final class sm {
               if (param2 == 5) {
                 var9_ref_bi = new Sprite(80, 80);
                 bs.a(var9_ref_bi, 90);
-                bd.field_G.drawRotated(40, 40, cl.field_n % 25 * 200, 16384);
+                bd.field_G.drawRotated(40, 40, RasterStateFrame.field_n % 25 * 200, 16384);
                 cg.i(0);
                 var9_ref_bi.drawHalfSize(param3 + 15, 8 + param0);
                 var42 = WhirlpoolHasher.field_n;
                 var10Lifetime2 = rs.field_Cb.a(wg.field_e.a(5607, var42), param3 + 80, param0, -80 + var6, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + ((3 + var10Lifetime2 * 4) * var8 >> 2);
-                var11Lifetime1 = cl.field_n % 200;
+                var11Lifetime1 = RasterStateFrame.field_n % 200;
                 eo.a(false, 68 + param0, param0 + 40, (byte) -51, var11Lifetime1, 55 + param3, param3);
                 this.a(param0 + 40, var11Lifetime1, param3 + 55, false, 92, param3, param0 + 68, 0, false);
                 var43 = ri.field_N;
                 var10Lifetime2Lifetime1 = rs.field_Cb.a(wg.field_e.a(5607, var43), param3 + 80, param0, var6 - 80, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + ((4 * var10Lifetime2Lifetime1 + 3) * var8 >> 2);
-                kj.field_f[cl.field_n % kj.field_f.length].draw(5 + param3, 42 + param0);
+                kj.field_f[RasterStateFrame.field_n % kj.field_f.length].draw(5 + param3, 42 + param0);
                 var44 = rk.field_n;
                 var5 = var44;
                 var10Lifetime2Lifetime2 = rs.field_Cb.a(wg.field_e.a(5607, var44), 80 + param3, param0, -80 + var6, var7, 16777215, -1, 3, 0, var8);
@@ -1200,9 +1200,9 @@ final class sm {
               }
               if (param2 == 6) {
                 var45 = (ArgbSprite) (MatchingTextValidator.field_p);
-                var10_ref_om = var45.h();
+                var10_ref_om = var45.copyArgb();
                 var10_ref_om.rotate90();
-                var11Lifetime2 = cl.field_n % 200;
+                var11Lifetime2 = RasterStateFrame.field_n % 200;
                 var12Lifetime1 = param3 + 35;
                 var13Lifetime1 = param0 + 40;
                 if (var11Lifetime2 < 170) {
@@ -1210,9 +1210,9 @@ final class sm {
                   SoftwareRasterizer.fillCircleAlpha(var12Lifetime1, var13Lifetime1, 30, 16777215, 92);
                   ie.a(var10_ref_om, var10_ref_om.field_z << 3, var10_ref_om.field_w << 3, var12Lifetime1 * 16, var13Lifetime1 * 16, 0, 4096);
                   SoftwareRasterizer.fillCircleAlpha(var12Lifetime1, var13Lifetime1, 9, 0, 92);
-                  di.field_i[0].draw(-(di.field_i[0].field_z / 2) + 30 + var12Lifetime1, var13Lifetime1 - di.field_i[0].field_w / 2);
-                  di.field_i[1].draw(var12Lifetime1 - 30 - di.field_i[0].field_z / 2, var13Lifetime1 - di.field_i[0].field_w / 2);
-                  di.field_i[2].draw(var12Lifetime1 - di.field_i[0].field_z / 2, 30 + (var13Lifetime1 - di.field_i[0].field_w / 2));
+                  FleetTrailPoint.field_i[0].draw(-(FleetTrailPoint.field_i[0].field_z / 2) + 30 + var12Lifetime1, var13Lifetime1 - FleetTrailPoint.field_i[0].field_w / 2);
+                  FleetTrailPoint.field_i[1].draw(var12Lifetime1 - 30 - FleetTrailPoint.field_i[0].field_z / 2, var13Lifetime1 - FleetTrailPoint.field_i[0].field_w / 2);
+                  FleetTrailPoint.field_i[2].draw(var12Lifetime1 - FleetTrailPoint.field_i[0].field_z / 2, 30 + (var13Lifetime1 - FleetTrailPoint.field_i[0].field_w / 2));
                   var14 = 4;
                   if (120 <= var11Lifetime2) {
                     var14 = 1;
@@ -1233,22 +1233,22 @@ final class sm {
                   if (var11Lifetime2 / 20 > 0 &&
                     var11Lifetime2 / 20 < 4 &&
                     var11Lifetime2 % 20 < 3) {
-                    SoftwareRasterizer.drawCircle(var12Lifetime1 + 30, var13Lifetime1, di.field_i[0].field_z / 2, 16777215);
+                    SoftwareRasterizer.drawCircle(var12Lifetime1 + 30, var13Lifetime1, FleetTrailPoint.field_i[0].field_z / 2, 16777215);
                   }
                   if (var11Lifetime2 / 20 > 3 &&
                     var11Lifetime2 / 20 < 7 &&
                     var11Lifetime2 % 20 < 3) {
-                    SoftwareRasterizer.drawCircle(-30 + var12Lifetime1, var13Lifetime1, di.field_i[1].field_z / 2, 16777215);
+                    SoftwareRasterizer.drawCircle(-30 + var12Lifetime1, var13Lifetime1, FleetTrailPoint.field_i[1].field_z / 2, 16777215);
                   }
                   if (var11Lifetime2 > 160 &&
                     var11Lifetime2 < 165) {
-                    SoftwareRasterizer.drawCircle(var12Lifetime1, 30 + var13Lifetime1, di.field_i[2].field_z / 2, 16777215);
+                    SoftwareRasterizer.drawCircle(var12Lifetime1, 30 + var13Lifetime1, FleetTrailPoint.field_i[2].field_z / 2, 16777215);
                   }
                 }
                 var32 = DebouncedValidator.field_a;
                 var14 = rs.field_Cb.a(wg.field_e.a(5607, var32), 80 + param3, param0, var6 - 80, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + (var8 * (3 + 4 * var14) >> 2);
-                var15 = cl.field_n % 50;
+                var15 = RasterStateFrame.field_n % 50;
                 if (var15 >= 25) {
                   var15 -= 25;
                   var15 = var15 * ((614400 - 16384 * var15) * var15) / 15625;
@@ -1259,7 +1259,7 @@ final class sm {
                   var17_int = (-var15 + var16_int * 8192) / 6;
                   var18_int = (20 * je.sine(var17_int, (byte) -104) >> 12) + (param3 + 35 << 4);
                   var19 = (20 * IntrusiveNode.cosine(var17_int, -122) >> 12) + (40 + param0 << 4);
-                  SoftwareRasterizer.b(var18_int, var19, 64, 255, vj.field_F);
+                  SoftwareRasterizer.addRadialGlowQ4(var18_int, var19, 64, 255, vj.field_F);
                 }
                 for (var16_intLifetime1 = 0; var16_intLifetime1 < 10; var16_intLifetime1++) {
                   SoftwareRasterizer.drawHorizontalLine(-(var16_intLifetime1 >> 1) + (param3 + 36), var16_intLifetime1 + param0 + 30, -2 & var16_intLifetime1, 16777215);
@@ -1267,8 +1267,8 @@ final class sm {
                 var33 = WhirlpoolHasher.field_l;
                 var14 = rs.field_Cb.a(wg.field_e.a(5607, var33), param3 + 80, param0, -80 + var6, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + (var8 * (3 + var14 * 4) >> 2);
-                var16_intLifetime2 = cl.field_n / 100 % 3;
-                var17_intLifetime1 = cl.field_n % 100;
+                var16_intLifetime2 = RasterStateFrame.field_n / 100 % 3;
+                var17_intLifetime1 = RasterStateFrame.field_n % 100;
                 var18_intLifetime1 = 0;
                 if (var17_intLifetime1 > 20 &&
                   var17_intLifetime1 < 40) {
@@ -1322,11 +1322,11 @@ final class sm {
                   var10_ref_om.drawAdditive(15 + param3, param0 + 15, var17_intLifetime2);
                   var10_ref_om.drawAdditive(15 + param3, param0 + 15, var18_intLifetime1);
                 }
-                var36 = fr.field_F;
+                var36 = DraggableWidget.field_F;
                 var14 = rs.field_Cb.a(wg.field_e.a(5607, var36), 80 + param3, param0, var6 - 80, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + (var8 * (3 + var14 * 4) >> 2);
                 if (null != oo.field_b) {
-                  var19Lifetime2 = cl.field_n % 50;
+                  var19Lifetime2 = RasterStateFrame.field_n % 50;
                   for (var20Lifetime2 = 0; 5 > var20Lifetime2; var20Lifetime2++) {
                     oo.field_b[var20Lifetime2] = QuickChatCategoryRegistry.a(WhirlpoolHasher.field_q[var20Lifetime2], 50, var19Lifetime2, fg.field_c[var20Lifetime2], 0);
                   }
@@ -1350,7 +1350,7 @@ final class sm {
                 return;
               }
               if (param2 == 7) {
-                var9Lifetime2 = cl.field_n % 200;
+                var9Lifetime2 = RasterStateFrame.field_n % 200;
                 var10Lifetime3 = rs.field_Cb.a(wg.field_e.a(5607, jl.field_N), param3, param0, var6, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + ((2 * var10Lifetime3 + 3) * var8 >> 1);
                 var11Lifetime3 = param0;
@@ -1371,8 +1371,8 @@ final class sm {
                 rs.field_Cb.a(var18, var13Lifetime2, var11Lifetime3, var15, var21Lifetime1, 16777215, -1, 0, 1, var8);
                 eo.a(false, param0 + 25, 25 + param0, (byte) 120, var9Lifetime2, param3 + 100, param3);
                 this.a(param0 + 25, var9Lifetime2, param3 + 100, false, 92, param3, 25 + param0, 8, true);
-                var22Lifetime1 = (50 + cl.field_n) % 800 / 200;
-                this.a(param3 + 295, 16, var22Lifetime1, (var21Lifetime1 >> 1) + var11Lifetime3, (byte) -70, (cl.field_n + 50) % 200);
+                var22Lifetime1 = (50 + RasterStateFrame.field_n) % 800 / 200;
+                this.a(param3 + 295, 16, var22Lifetime1, (var21Lifetime1 >> 1) + var11Lifetime3, (byte) -70, (RasterStateFrame.field_n + 50) % 200);
                 var11Lifetime3 = var11Lifetime3 + (rs.field_Cb.field_J + var21Lifetime1);
                 var17Lifetime1 = wg.field_e.a(5607, tb.field_b);
                 var18Lifetime1 = wg.field_e.a(5607, wq.field_c);
@@ -1385,7 +1385,7 @@ final class sm {
                 rs.field_Cb.a(var18Lifetime1, var13Lifetime2, var11Lifetime3, var15, var21Lifetime1Lifetime1, 16777215, -1, 0, 1, var8);
                 eo.a(false, 90 + param0, 90 + param0, (byte) 73, var9Lifetime2, param3 + 10, param3 + 110);
                 this.a(90 + param0, var9Lifetime2, param3 + 10, true, 92, 110 + param3, 90 + param0, 4, true);
-                this.a(param3 + 295, 16, -1, var11Lifetime3 + (var21Lifetime1Lifetime1 >> 1), (byte) -21, (100 + cl.field_n) % 200);
+                this.a(param3 + 295, 16, -1, var11Lifetime3 + (var21Lifetime1Lifetime1 >> 1), (byte) -21, (100 + RasterStateFrame.field_n) % 200);
                 var11Lifetime3 = var11Lifetime3 + (var8 + var21Lifetime1Lifetime1);
                 var17Lifetime2 = wg.field_e.a(5607, of.field_a);
                 var10Lifetime3Lifetime4 = rs.field_Cb.wrapText(var17Lifetime2, new int[]{200}, var16);
@@ -1428,23 +1428,23 @@ final class sm {
               if (8 == param2) {
                 var38 = StandardMapGenerator.field_g;
                 var9Lifetime3 = rs.field_Cb.a(wg.field_e.a(5607, var38), param3 + 40, param0, var6 - 40, var7, 16777215, -1, 3, 0, var8);
-                this.a(param3 + 15, 20, 0, param0 + (rs.field_Cb.field_J * (var9Lifetime3 * 2 + 1) >> 2), (byte) -15, cl.field_n % 200);
+                this.a(param3 + 15, 20, 0, param0 + (rs.field_Cb.field_J * (var9Lifetime3 * 2 + 1) >> 2), (byte) -15, RasterStateFrame.field_n % 200);
                 param0 = param0 + ((3 + var9Lifetime3 * 4) * var8 >> 2);
                 var39 = WidgetStyle.field_b;
                 var9Lifetime3Lifetime1 = rs.field_Cb.a(wg.field_e.a(5607, var39), param3 + 40, param0, -40 + var6, var7, 16777215, -1, 3, 0, var8);
-                this.a(15 + param3, 20, 1, param0 + (rs.field_Cb.field_J * (1 + var9Lifetime3Lifetime1 * 2) >> 2), (byte) -71, (cl.field_n + 185) % 200);
+                this.a(15 + param3, 20, 1, param0 + (rs.field_Cb.field_J * (1 + var9Lifetime3Lifetime1 * 2) >> 2), (byte) -71, (RasterStateFrame.field_n + 185) % 200);
                 param0 = param0 + (var8 * (3 + 4 * var9Lifetime3Lifetime1) >> 2);
                 var40 = jb.field_f;
                 var5 = var40;
                 var5 = var40;
                 var9Lifetime3Lifetime2 = rs.field_Cb.a(wg.field_e.a(5607, var40), param3 + 40, param0, var6 - 40, var7, 16777215, -1, 3, 0, var8);
-                this.a(15 + param3, 20, 2, (rs.field_Cb.field_J * (2 * var9Lifetime3Lifetime2 + 1) >> 2) + param0, (byte) -82, (170 + cl.field_n) % 200);
+                this.a(15 + param3, 20, 2, (rs.field_Cb.field_J * (2 * var9Lifetime3Lifetime2 + 1) >> 2) + param0, (byte) -82, (170 + RasterStateFrame.field_n) % 200);
                 var41 = ArchiveNetworkClient.field_o;
                 var5 = var41;
                 var5 = var41;
                 param0 = param0 + (var8 * (4 * var9Lifetime3Lifetime2 + 3) >> 2);
                 var9Lifetime3Lifetime3 = rs.field_Cb.a(wg.field_e.a(5607, var41), 40 + param3, param0, var6 - 40, var7, 16777215, -1, 3, 0, var8);
-                this.a(param3 + 15, 20, 3, ((var9Lifetime3Lifetime3 * 2 + 1) * rs.field_Cb.field_J >> 2) + param0, (byte) 90, (155 + cl.field_n) % 200);
+                this.a(param3 + 15, 20, 3, ((var9Lifetime3Lifetime3 * 2 + 1) * rs.field_Cb.field_J >> 2) + param0, (byte) 90, (155 + RasterStateFrame.field_n) % 200);
                 param0 = param0 + (var8 * (4 * var9Lifetime3Lifetime3 + 3) >> 2);
                 return;
               }
@@ -1505,7 +1505,7 @@ final class sm {
         if (param2 != -1) {
           GarrisonTask.field_p[param2].drawScaled(-param1 + param0, var8 + param3 - param1, 2 * param1, 2 * param1);
         } else {
-          bd.field_G.a(15, var8 + param3, 8192 * param1 / bd.field_G.field_z, param0, 200 * (cl.field_n % 25));
+          bd.field_G.a(15, var8 + param3, 8192 * param1 / bd.field_G.field_z, param0, 200 * (RasterStateFrame.field_n % 25));
         }
     }
 
@@ -1708,7 +1708,7 @@ final class sm {
           this.a((String) null, -102, (byte) 82, -77, 35, 32, 13, -31, 45, 70);
         }
         for (var3 = 0; var3 < param1; var3++) {
-          DefendTask.field_w = DefendTask.field_w + cb.field_i[var3];
+          DefendTask.field_w = DefendTask.field_w + DirectByteArrayStorage.field_i[var3];
         }
         jn.field_b = 1;
     }
@@ -1813,9 +1813,9 @@ final class sm {
               PasswordValidator.f((byte) 124);
             }
             if (((var5 != 0)) && ((!(this.field_d.b((byte) -114)) ||
-              !(cl.field_n <= TutorialVictoryChecker.field_q)))) {
+              !(RasterStateFrame.field_n <= TutorialVictoryChecker.field_q)))) {
               MenuLabel.a(SocketArchiveNetworkClient.field_w, 89);
-              TutorialVictoryChecker.field_q = 25 + cl.field_n;
+              TutorialVictoryChecker.field_q = 25 + RasterStateFrame.field_n;
             }
             decompiledFrameRemainder0 = false;
           }
@@ -1915,7 +1915,7 @@ final class sm {
         var4 = var2;
         SoftwareRasterizer.resetClip();
         for (var6 = 0; var6 < 25; var6++) {
-          var7_int = (int)(Math.cos((double)(-(23 * var6)) + 3.141592653589793 * (double)(2 * cl.field_n) / 150.0) * 64.0) + 64;
+          var7_int = (int)(Math.cos((double)(-(23 * var6)) + 3.141592653589793 * (double)(2 * RasterStateFrame.field_n) / 150.0) * 64.0) + 64;
           stackIn_5_0 = ((1 << var6 & vq.field_a) == 0) ? 0 : 1;
           var5 = stackIn_5_0;
           if (var5 != 0) {
@@ -1932,7 +1932,7 @@ final class sm {
           }
           var29 = stackIn_11_0;
           var9_ref_bi = var29;
-          if (le.field_b == 32) {
+          if (ByteArrayStorage.field_b == 32) {
             if (an.field_c == var6) {
               if (var5 == 0) {
                 stackIn_24_0 = n.field_k;
@@ -1974,8 +1974,8 @@ final class sm {
               }
             }
           } else {
-            var28.drawAdditive(-16 + var4, var3 - 16, var7_int * le.field_b / 32);
-            var29.drawAdditive(var4, var3, (le.field_b << 8) / 32);
+            var28.drawAdditive(-16 + var4, var3 - 16, var7_int * ByteArrayStorage.field_b / 32);
+            var29.drawAdditive(var4, var3, (ByteArrayStorage.field_b << 8) / 32);
           }
           var4 += 42;
           if (12 == var6 % 13) {
@@ -2015,8 +2015,8 @@ final class sm {
         il.field_gb.bindAsRenderTarget();
         var8Lifetime1.drawOpaque(0, 0);
         cg.i(0);
-        var9 = 64 + (int)(64.0 * Math.cos(3.141592653589793 * (double)(cl.field_n * 2) / 150.0));
-        var10 = QuickChatCategoryRegistry.a(0, 32, le.field_b, 600, 0);
+        var9 = 64 + (int)(64.0 * Math.cos(3.141592653589793 * (double)(RasterStateFrame.field_n * 2) / 150.0));
+        var10 = QuickChatCategoryRegistry.a(0, 32, ByteArrayStorage.field_b, 600, 0);
         var11 = 155;
         var12 = (640 - var10) / 2;
         var13 = 220;
@@ -2044,7 +2044,7 @@ final class sm {
           var21_ref_String = "(" + QuickChatCategoryRegistry.a(DelegatingCanvas.field_e, 4371, new String[]{Integer.toString(ei.field_g[var6])}) + ")";
           var22 = rs.field_Cb.a(var21_ref_String, 10 + var2Lifetime1, 14 + (var20 + rs.field_Cb.field_J), var18 - 20, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
           var22 = var22 + (1 + rs.field_Cb.a(ul.field_Qb[var6], 10 + var2Lifetime1, rs.field_Cb.field_J / 2 + var20 + (14 + (1 + var22) * rs.field_Cb.field_J), -20 + var18, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J));
-          rs.field_Cb.a(a.field_i, 10 + var2Lifetime1, var20 - (-14 - (var22 + 1) * rs.field_Cb.field_J), var18 - 20, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
+          rs.field_Cb.a(HitRegion.field_i, 10 + var2Lifetime1, var20 - (-14 - (var22 + 1) * rs.field_Cb.field_J), var18 - 20, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
         } else {
           if (var6 == 24) {
             mp.field_b.drawString(ud.field_a[var6].toUpperCase(), var2Lifetime1 + 10, 6 + var20 + mp.field_b.field_J, 2805974, -1);
@@ -2057,7 +2057,7 @@ final class sm {
             }
             var23 = rs.field_Cb.a(var21_ref_String, var2Lifetime1 + 10, 14 + (var20 + rs.field_Cb.field_J), -20 + var18, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
             var23 = var23 + (1 + rs.field_Cb.a(var22_ref_String, 10 + var2Lifetime1, (var23 + 1) * rs.field_Cb.field_J + (var20 - (-14 - rs.field_Cb.field_J / 2)), var18 - 20, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J));
-            rs.field_Cb.a(a.field_i, var2Lifetime1 + 10, (var23 + 1) * rs.field_Cb.field_J + 14 + var20, -20 + var18, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
+            rs.field_Cb.a(HitRegion.field_i, var2Lifetime1 + 10, (var23 + 1) * rs.field_Cb.field_J + 14 + var20, -20 + var18, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
           } else {
             if (!oe.field_e) {
               mp.field_b.drawString(VictoryChecker.field_c.toUpperCase(), var2Lifetime1 + 10, mp.field_b.field_J + (6 + var20), 2805974, -1);
@@ -2073,7 +2073,7 @@ final class sm {
         } else {
           var21 = q.field_Bb;
         }
-        var21 = QuickChatCategoryRegistry.a(0, 32, le.field_b, var21, 0);
+        var21 = QuickChatCategoryRegistry.a(0, 32, ByteArrayStorage.field_b, var21, 0);
         if (var21 > 20) {
           var18Lifetime1 = 52;
           var2Lifetime2 = 89 + var14;
@@ -2139,7 +2139,7 @@ final class sm {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, nq param7, String param8) {
+    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, BitmapFont param7, String param8) {
         int var12 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -2222,7 +2222,7 @@ final class sm {
         int var3 = Star.field_H.length;
         int var4 = DefendTask.field_w + 147;
         for (var5 = 0; var5 < var3; var5++) {
-          var4 = var4 - cb.field_i[var5];
+          var4 = var4 - DirectByteArrayStorage.field_i[var5];
           if (var4 < 0) {
             break;
           }
@@ -2314,12 +2314,12 @@ final class sm {
                                   if (var5 != 21 &&
                                     var5 != 22) {
                                     if (var5 == 7) {
-                                      if (null != bj.field_K) {
+                                      if (null != NameSuggestionsPanel.field_K) {
                                         BufferedCacheFile.c(param3 ^ -32580);
                                       } else {
                                         var5 = param1 ? 1 : 0;
                                         BattleContribution.field_s = false;
-                                        StrongCacheEntry.a(8, 13421772, IterableNodeHashTable.field_b, 8, mp.field_b.field_K, DerelictMapReader.field_i, 240, mp.field_b.field_K + mp.field_b.field_q, DerelictMapReader.field_i, 320, mp.field_b, mp.field_b, 0, mp.field_b.field_K, ah.field_P, mp.field_b.field_q + mp.field_b.field_K, 0, 2, 480, (Sprite[]) null, StarAnnotation.field_n);
+                                        StrongCacheEntry.a(8, 13421772, IterableNodeHashTable.field_b, 8, mp.field_b.field_K, DerelictMapReader.field_i, 240, mp.field_b.field_K + mp.field_b.field_q, DerelictMapReader.field_i, 320, mp.field_b, mp.field_b, 0, mp.field_b.field_K, ValidationMessageWidget.field_P, mp.field_b.field_q + mp.field_b.field_K, 0, 2, 480, (Sprite[]) null, StarAnnotation.field_n);
                                         HuffmanCodec.a(var5 != 0, -1);
                                       }
                                       break regionExit1;
@@ -2362,7 +2362,7 @@ final class sm {
                                                       if (this.field_a != 8 &&
                                                         5 != GameRules.field_c) {
                                                         if ((this.field_a == 11)) {
-                                                          ts.a(GameScreen.getHostApplet((byte) 126), (byte) 51);
+                                                          TextHotspotWidget.a(GameScreen.getHostApplet((byte) 126), (byte) 51);
                                                         }
                                                       } else {
                                                         MenuLabel.a(AchievementProgress.field_a, this.field_a, (byte) 123);
@@ -2490,8 +2490,8 @@ final class sm {
           field_c = (String) null;
         }
         if (8 == this.field_a) {
-          fieldTemp$1 = le.field_b - 1;
-          le.field_b = le.field_b - 1;
+          fieldTemp$1 = ByteArrayStorage.field_b - 1;
+          ByteArrayStorage.field_b = ByteArrayStorage.field_b - 1;
           return fieldTemp$1 <= 0 ? true : false;
         }
         if (this.field_a == 10) {
@@ -2750,7 +2750,7 @@ final class sm {
         if (!param3) {
           stackIn_23_0 = MatchingTextValidator.field_p;
         } else {
-          stackIn_23_0 = eq.field_o;
+          stackIn_23_0 = ReflectionCheck.field_o;
         }
         ie.a((ArgbSprite) (stackIn_23_0), MatchingTextValidator.field_p.field_z << 3, MatchingTextValidator.field_p.field_w << 3, var30, var31, var32Lifetime1, 4096);
         if (param8) {

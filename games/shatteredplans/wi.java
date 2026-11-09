@@ -57,7 +57,7 @@ final class wi {
         }
     }
 
-    final static int a(e param0, e param1, int param2) {
+    final static int a(AccountFieldValue param0, AccountFieldValue param1, int param2) {
         RuntimeException var3 = null;
         v var4 = null;
         String var5 = null;

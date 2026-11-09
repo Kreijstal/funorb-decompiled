@@ -197,10 +197,10 @@ final class BufferedCacheFile {
         int var2 = 0;
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (cb.field_h == null) {
+          if (DirectByteArrayStorage.field_h == null) {
             return;
           }
-          var1 = (hd) (cb.field_h.startForward(0));
+          var1 = (hd) (DirectByteArrayStorage.field_h.startForward(0));
           if (var1 != null) {
             fieldTemp$0 = var1.field_h + 1;
             var1.field_h = var1.field_h + 1;
@@ -208,7 +208,7 @@ final class BufferedCacheFile {
               RandomAccessCacheFile.field_e = RandomAccessCacheFile.field_e + (float)var1.field_i.field_w;
               var1.unlink((byte) -63);
             }
-            var1 = (hd) (cb.field_h.nextForward((byte) -71));
+            var1 = (hd) (DirectByteArrayStorage.field_h.nextForward((byte) -71));
           }
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var1))) {
@@ -220,7 +220,7 @@ final class BufferedCacheFile {
               if (stackIn_20_0 > stackIn_20_1) {
                 var1.field_h = 75;
               }
-              var1 = (hd) (cb.field_h.nextForward((byte) -71));
+              var1 = (hd) (DirectByteArrayStorage.field_h.nextForward((byte) -71));
               continue;
             }
             break;
@@ -454,12 +454,12 @@ final class BufferedCacheFile {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          if (bj.field_K == null) {
+          if (NameSuggestionsPanel.field_K == null) {
             return;
           }
-          StandardMapGenerator.attachInputListeners(bj.field_K, (byte) 9);
-          bj.field_K.a(fa.field_W, -17115);
-          bj.field_K = null;
+          StandardMapGenerator.attachInputListeners(NameSuggestionsPanel.field_K, (byte) 9);
+          NameSuggestionsPanel.field_K.a(ValidatedTextInputWidget.field_W, -17115);
+          NameSuggestionsPanel.field_K = null;
           if (null != BoundsRect.field_p) {
             BoundsRect.field_p.c(-119);
           }
@@ -739,7 +739,7 @@ final class BufferedCacheFile {
         try {
           var5_int = RecklessAi.c(param0 ^ -85, (param4 - param3) * 3);
           var6 = 3 * param3;
-          ah.g((byte) 111);
+          ValidationMessageWidget.g((byte) 111);
           var7 = -10 + var5_int;
           if (param2.field_o > 0 &&
             null != param2.field_p) {
@@ -758,11 +758,11 @@ final class BufferedCacheFile {
             if (var19 == 0) {
               if (stackIn_10_0) {
                 var12 = ul.field_Cb[var9];
-                var13 = he.field_i[var9];
+                var13 = IntNode.field_i[var9];
                 var14 = -var12 + ul.field_Cb[var10];
                 var15 = -var12 + ul.field_Cb[var11];
-                var16 = he.field_i[var10] - var13;
-                var17 = -var13 + he.field_i[var11];
+                var16 = IntNode.field_i[var10] - var13;
+                var17 = -var13 + IntNode.field_i[var11];
               }
               if (!stackIn_10_0 ||
                 var17 * var14 - var16 * var15 < 0) {
@@ -891,7 +891,7 @@ final class BufferedCacheFile {
         try {
           var5_int = RecklessAi.c(param0 ^ -85, (param4 - param3) * 3);
           var6 = 3 * param3;
-          ah.g((byte) 111);
+          ValidationMessageWidget.g((byte) 111);
           var7 = -10 + var5_int;
           if (param2.field_o > 0 &&
             null != param2.field_p) {
@@ -910,11 +910,11 @@ final class BufferedCacheFile {
             if (var19 == 0) {
               if (stackIn_10_0) {
                 var12 = ul.field_Cb[var9];
-                var13 = he.field_i[var9];
+                var13 = IntNode.field_i[var9];
                 var14 = -var12 + ul.field_Cb[var10];
                 var15 = -var12 + ul.field_Cb[var11];
-                var16 = he.field_i[var10] - var13;
-                var17 = -var13 + he.field_i[var11];
+                var16 = IntNode.field_i[var10] - var13;
+                var17 = -var13 + IntNode.field_i[var11];
               }
               if (!stackIn_10_0 ||
                 var17 * var14 - var16 * var15 < 0) {

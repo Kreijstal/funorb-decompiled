@@ -17,15 +17,15 @@ final class HuffmanCodec {
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param1 > ~StarAnnotation.field_m) {
           if (null == BoundsRect.field_p) {
-            bj.field_K = QuickChatPhraseDefinition.a(640, fa.field_W, 0, (byte) 98, 0, 480);
+            NameSuggestionsPanel.field_K = QuickChatPhraseDefinition.a(640, ValidatedTextInputWidget.field_W, 0, (byte) 98, 0, 480);
           } else {
-            bj.field_K = BoundsRect.field_p.a(0);
+            NameSuggestionsPanel.field_K = BoundsRect.field_p.a(0);
             GameRules.a(param1 - 15468, 2);
           }
-          if (null == bj.field_K) {
+          if (null == NameSuggestionsPanel.field_K) {
             var2 = 3;
           } else {
-            QuickChatCategoryRegistry.a(bj.field_K, false);
+            QuickChatCategoryRegistry.a(NameSuggestionsPanel.field_K, false);
             var2 = 2;
           }
         } else {

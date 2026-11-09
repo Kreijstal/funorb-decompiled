@@ -19,7 +19,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
     static int field_n;
     int field_f;
     int field_e;
-    nq field_c;
+    BitmapFont field_c;
     int field_l;
 
     public final int getTextHeight(byte param0, UiWidget param1) {
@@ -460,7 +460,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
         }
     }
 
-    WidgetTheme(nq param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    WidgetTheme(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
@@ -708,7 +708,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
         }
     }
 
-    public void a(UiWidget param0, int param1, boolean param2, int param3, byte param4) {
+    public void paintWidget(UiWidget param0, int param1, boolean param2, int param3, byte param4) {
         if (null == this.field_c) {
           return;
         }
@@ -749,7 +749,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
     protected WidgetTheme() {
     }
 
-    WidgetTheme(nq param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    WidgetTheme(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_b = param3;
           this.field_l = param8;

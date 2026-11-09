@@ -931,10 +931,10 @@ final class Archive {
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (!qe.a(116)) {
-            if (null != bj.field_K &&
-              bj.field_K.field_c) {
+            if (null != NameSuggestionsPanel.field_K &&
+              NameSuggestionsPanel.field_K.field_c) {
               BufferedCacheFile.c(0);
-              DialWidget.field_I.addDialog(true, new bo(DialWidget.field_I, bg.field_f));
+              DialWidget.field_I.addDialog(true, new bo(DialWidget.field_I, LoginMethodPreference.field_f));
             }
             return;
           }

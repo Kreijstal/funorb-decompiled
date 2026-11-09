@@ -113,7 +113,7 @@ final class bb {
           if (param2 != -2) {
             field_d = (String) null;
           }
-          if (he.field_p != null) {
+          if (IntNode.field_p != null) {
             var15 = TextFieldWidget.field_I;
             var17 = var15;
             TextFieldWidget.field_I.field_mb = 0;
@@ -124,7 +124,7 @@ final class bb {
             var6 = DualLinkDequeSequence.field_f;
             DualLinkDequeSequence.field_f.field_mb = 0;
             var6.field_K = 0;
-            ArchiveSourceManager.field_f.field_z = le.field_c.toUpperCase();
+            ArchiveSourceManager.field_f.field_z = ByteArrayStorage.field_c.toUpperCase();
             var7 = (2 + IntrusiveDeque.field_g.field_K) / 2;
             DualLinkDequeSequence.field_f.setTarget(-2 + var7, 40, (byte) 108, IntrusiveDeque.field_g.field_mb - 40, 0);
             aq.field_j.setTarget(-var7 + IntrusiveDeque.field_g.field_K, 40, (byte) 73, IntrusiveDeque.field_g.field_mb - 40, var7);
@@ -215,9 +215,9 @@ final class bb {
                   ArrayWidgetGroup.field_F[var13] = false;
                   var13++;
                 }
-                js.a(-1, param2 + 3, he.field_p, ProductionContent.field_k, 0, true, -1, -1);
+                js.a(-1, param2 + 3, IntNode.field_p, ProductionContent.field_k, 0, true, -1, -1);
                 if (!(bs.field_b < 2) &&
-                  di.field_p[12]) {
+                  FleetTrailPoint.field_p[12]) {
                   wg.field_d = true;
                 }
               }
@@ -259,7 +259,7 @@ final class bb {
           stackIn_81_1 = (param1) && (!param0) && (IntrusiveNodeHashTable.field_e);
           ((AnimatedPanel) (Object) stackIn_80_0).a(stackIn_81_1, -20429);
           n.field_h.field_d.f(false);
-          if (he.field_p != null) {
+          if (IntNode.field_p != null) {
             stackIn_83_0 = ~DialPainter.field_g.field_rb;
             if (stackIn_83_0 != -1) {
               je.a((byte) 62, param3);
@@ -271,7 +271,7 @@ final class bb {
                 oq.a(param3, false);
               }
             }
-            AggressiveAi.a(-109, true, he.field_p, param3);
+            AggressiveAi.a(-109, true, IntNode.field_p, param3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

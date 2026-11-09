@@ -64,7 +64,7 @@ final class Bzip2State {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param2 = fr.a(param2, 1, '_', "");
+          param2 = DraggableWidget.a(param2, 1, '_', "");
           var3 = DualLinkDequeSequence.a(param2, true);
           if (param1 < 126) {
             var4 = (String) null;
@@ -172,7 +172,7 @@ final class Bzip2State {
           ScrollPane.field_Db[0] = new String[5];
           for (var1_int = 0; var1_int < 5; var1_int++) {
             Dialog.field_J[0][var1_int] = Integer.toString(var1_int);
-            ScrollPane.field_Db[0][var1_int] = be.field_i;
+            ScrollPane.field_Db[0][var1_int] = BytePayloadNode.field_i;
           }
           ScrollPane.field_Db[4] = SectorCacheStore.field_c;
           ScrollPane.field_Db[2] = DialogRoot.field_E;

@@ -22,9 +22,9 @@ final class PointsVictoryChecker extends VictoryChecker {
         RuntimeException var6_ref = null;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          hn.field_d = param0.getParameter("overxgames");
-          if (hn.field_d == null) {
-            hn.field_d = "0";
+          IntList.field_d = param0.getParameter("overxgames");
+          if (IntList.field_d == null) {
+            IntList.field_d = "0";
           }
           ja.field_j = param0.getParameter("overxachievements");
           if (null == ja.field_j) {
@@ -83,7 +83,7 @@ final class PointsVictoryChecker extends VictoryChecker {
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 != 0) {
           var10 = (String) null;
-          PointsVictoryChecker.a(-33, (nq) null, 126, 13, -76, 49, (String) null, true, -106, 108, -72, 85);
+          PointsVictoryChecker.a(-33, (BitmapFont) null, 126, 13, -76, 49, (String) null, true, -106, 108, -72, 85);
         }
         if (null != this.field_g) {
           return this.field_g;
@@ -152,7 +152,7 @@ final class PointsVictoryChecker extends VictoryChecker {
         }
     }
 
-    final static void a(int param0, nq param1, int param2, int param3, int param4, int param5, String param6, boolean param7, int param8, int param9, int param10, int param11) {
+    final static void a(int param0, BitmapFont param1, int param2, int param3, int param4, int param5, String param6, boolean param7, int param8, int param9, int param10, int param11) {
         Sprite var13 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -162,7 +162,7 @@ final class PointsVictoryChecker extends VictoryChecker {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var12 = null;
         try {
-          cl.a(param5, param8, -22466, param0, param9, param4, param2, param3, param11);
+          RasterStateFrame.a(param5, param8, -22466, param0, param9, param4, param2, param3, param11);
           param1.drawCentred(param6, param5 + (param0 >> 1), param3 + (param1.field_J + param9 >> 1), 16777215, param10);
           if (param7) {
             var13 = new Sprite(param0, param9);

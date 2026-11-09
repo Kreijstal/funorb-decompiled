@@ -27,7 +27,7 @@ final class sq {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         Object var4 = null;
-        le var5 = null;
+        ByteArrayStorage var5 = null;
         byte[] stackIn_7_0 = null;
         byte[] stackIn_9_0 = null;
         byte[] stackIn_15_0 = null;
@@ -52,10 +52,10 @@ final class sq {
             var4 = (Object) null;
             sq.a(101, (Object) null, true);
           }
-          if (!(param1 instanceof le)) {
+          if (!(param1 instanceof ByteArrayStorage)) {
             throw new IllegalArgumentException();
           }
-          var5 = (le) (param1);
+          var5 = (ByteArrayStorage) (param1);
           stackIn_15_0 = var5.toByteArray(false);
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -211,7 +211,7 @@ final class sq {
             }
             param2 = 1;
           }
-          var9 = bj.field_J[param0];
+          var9 = NameSuggestionsPanel.field_J[param0];
           var10 = var9;
           var7 = var10;
           if (var10 != null &&
@@ -229,7 +229,7 @@ final class sq {
             var7.field_c = wi.a(param1, param6, var7.field_c, param3, param2, param4, -3903);
             return;
           }
-          bj.field_J[param0] = wi.a(param1, param6, var9, param3, param2, param4, -3903);
+          NameSuggestionsPanel.field_J[param0] = wi.a(param1, param6, var9, param3, param2, param4, -3903);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

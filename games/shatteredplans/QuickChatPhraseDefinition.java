@@ -27,7 +27,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         }
     }
 
-    final static int a(int param0, int param1, e param2, e param3, int param4, String param5, boolean param6) {
+    final static int a(int param0, int param1, AccountFieldValue param2, AccountFieldValue param3, int param4, String param5, boolean param6) {
         int var12 = 0;
         int stackIn_3_0 = 0;
         int stackIn_8_0 = 0;
@@ -66,14 +66,14 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         int var9Lifetime3;
         var13 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var14 = param3.a((byte) -126);
-          var8 = param2.a((byte) 77);
+          var14 = param3.text((byte) -126);
+          var8 = param2.text((byte) 77);
           if (param4 < 116) {
             stackIn_3_0 = 63;
             return stackIn_3_0;
           }
           if (wg.field_f == null &&
-            !ts.a(false, -2)) {
+            !TextHotspotWidget.a(false, -2)) {
             stackIn_8_0 = -1;
             return stackIn_8_0;
           }
@@ -86,7 +86,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
               eo.field_cb.writeInt(11135, Bzip2State.field_u.nextInt());
               stackIn_21_0 = eo.field_cb;
               stackIn_21_1 = 95;
-              if (!param3.a(2)) {
+              if (!param3.shouldSubmitText(2)) {
                 stackIn_22_2 = "";
               } else {
                 stackIn_22_2 = var14;
@@ -94,7 +94,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
               ((PacketBuffer) (Object) stackIn_21_0).writeMarkedString((byte) stackIn_21_1, stackIn_22_2);
               stackIn_24_0 = eo.field_cb;
               stackIn_24_1 = 95;
-              if (!param2.a(2)) {
+              if (!param2.shouldSubmitText(2)) {
                 stackIn_25_2 = "";
               } else {
                 stackIn_25_2 = var8;

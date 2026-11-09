@@ -147,7 +147,7 @@ final class BufferedSocket implements Runnable {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        wh.a(false);
+        wh.pushRasterState(false);
         if (param0 != -6187) {
           BufferedSocket.clearStatics((byte) 13);
         }
@@ -377,7 +377,7 @@ final class BufferedSocket implements Runnable {
         field_k[0] = 0L;
         for (var0 = 1; var0 <= 10; var0++) {
           var1 = (var0 - 1) * 8;
-          field_k[var0] = bg.longXor(bg.longXor(GarrisonTask.longAnd(65280L, field_l[6][var1 + 6]), bg.longXor(bg.longXor(GarrisonTask.longAnd(4278190080L, field_l[4][var1 + 4]), bg.longXor(GarrisonTask.longAnd(1095216660480L, field_l[3][var1 + 3]), bg.longXor(GarrisonTask.longAnd(field_l[2][2 + var1], 280375465082880L), bg.longXor(GarrisonTask.longAnd(field_l[1][var1 + 1], 71776119061217280L), GarrisonTask.longAnd(field_l[0][var1], -72057594037927936L))))), GarrisonTask.longAnd(field_l[5][var1 + 5], 16711680L))), GarrisonTask.longAnd(field_l[7][var1 + 7], 255L));
+          field_k[var0] = LoginMethodPreference.longXor(LoginMethodPreference.longXor(GarrisonTask.longAnd(65280L, field_l[6][var1 + 6]), LoginMethodPreference.longXor(LoginMethodPreference.longXor(GarrisonTask.longAnd(4278190080L, field_l[4][var1 + 4]), LoginMethodPreference.longXor(GarrisonTask.longAnd(1095216660480L, field_l[3][var1 + 3]), LoginMethodPreference.longXor(GarrisonTask.longAnd(field_l[2][2 + var1], 280375465082880L), LoginMethodPreference.longXor(GarrisonTask.longAnd(field_l[1][var1 + 1], 71776119061217280L), GarrisonTask.longAnd(field_l[0][var1], -72057594037927936L))))), GarrisonTask.longAnd(field_l[5][var1 + 5], 16711680L))), GarrisonTask.longAnd(field_l[7][var1 + 7], 255L));
         }
     }
 }

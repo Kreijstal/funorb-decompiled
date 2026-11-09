@@ -474,23 +474,23 @@ final class ProxySocketConnector extends SocketConnector {
     }
 
     final static void c(int param0) {
-        float var3 = (float)di.field_m / 1000.0f + 0.15000000596046448f;
+        float var3 = (float)FleetTrailPoint.field_m / 1000.0f + 0.15000000596046448f;
         int var1 = -(int)(Math.sin((double)var3) * 200.0);
         int var2 = -200 + (int)(Math.cos((double)var3) * 200.0);
         va.field_e.draw(var1, var2);
-        var2 = -(di.field_m * 40 / 800) + 200;
+        var2 = -(FleetTrailPoint.field_m * 40 / 800) + 200;
         var1 = -62;
-        he.field_h.drawAdditive(var1, -60 + var2, 256);
-        var2 = 300 - 150 * di.field_m / 800;
+        IntNode.field_h.drawAdditive(var1, -60 + var2, 256);
+        var2 = 300 - 150 * FleetTrailPoint.field_m / 800;
         var1 = -120;
         we.field_f.drawAdditive(var1, -60 + var2, 256);
         var1 = -62;
-        var2 = -(di.field_m * 40 / 800) + 200;
+        var2 = -(FleetTrailPoint.field_m * 40 / 800) + 200;
         q.field_Cb.draw(var1, var2);
         var1 = -120;
-        var2 = -(di.field_m * 150 / 800) + 300;
+        var2 = -(FleetTrailPoint.field_m * 150 / 800) + 300;
         mm.field_o.draw(var1, var2);
-        var2 = di.field_m * 240 / 800 + 20;
+        var2 = FleetTrailPoint.field_m * 240 / 800 + 20;
         var1 = 0;
         ch.field_c.draw(var1, var2);
         SoftwareRasterizer.fillRect(0, ch.field_c.field_p + var2, 640, 480, 0);

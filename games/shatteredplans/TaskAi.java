@@ -835,29 +835,29 @@ final class TaskAi implements Ai {
         if (param1 != -26671) {
           field_d = (String) null;
         }
-        if (0 <= a.field_j) {
-          nm.field_c.field_z = QuickChatCategoryRegistry.a(BattleSnapshot.field_A, 4371, new String[]{Integer.toString(a.field_j)});
+        if (0 <= HitRegion.field_j) {
+          nm.field_c.field_z = QuickChatCategoryRegistry.a(BattleSnapshot.field_A, 4371, new String[]{Integer.toString(HitRegion.field_j)});
         } else {
           nm.field_c.field_z = null;
         }
         stackIn_11_0 = MapViewState.field_j;
-        stackIn_12_1 = (param0) && (!param2) && (!IntrusiveDequeCursor.field_b) && (np.field_a == null) && (he.field_p == null);
+        stackIn_12_1 = (param0) && (!param2) && (!IntrusiveDequeCursor.field_b) && (np.field_a == null) && (IntNode.field_p == null);
         ((AnimatedPanel) (Object) stackIn_11_0).a(stackIn_12_1, -20429);
         stackIn_18_0 = AchievementProgress.field_i;
-        stackIn_19_1 = (param0) && (!param2) && (!IntrusiveDequeCursor.field_b) && (null == np.field_a) && (null == he.field_p);
+        stackIn_19_1 = (param0) && (!param2) && (!IntrusiveDequeCursor.field_b) && (null == np.field_a) && (null == IntNode.field_p);
         ((AnimatedPanel) (Object) stackIn_18_0).a(stackIn_19_1, -20429);
         stackIn_23_0 = so.field_v;
         stackIn_24_1 = (param0) && (!param2) && (IntrusiveDequeCursor.field_b);
         ((AnimatedPanel) (Object) stackIn_23_0).a(stackIn_24_1, param1 ^ 10210);
         Archive.field_g.field_d.f(false);
-        if (0 != vm.field_Ab.field_rb) {
+        if (0 != QuickChatMenu.field_Ab.field_rb) {
           GzipInflater.field_d = true;
         }
         boolean decompiledFrameRemainder0 = true;
         if (gb.field_m.field_rb != 0) {
           if (!PanelNode.field_o &&
             0 >= StarAnnotation.field_m && (!(bs.field_b >= 2) ||
-            !di.field_p[12])) {
+            !FleetTrailPoint.field_p[12])) {
             uc.field_B = true;
             decompiledFrameRemainder0 = false;
           }
@@ -2118,7 +2118,7 @@ final class TaskAi implements Ai {
         if (param1 != -16) {
           return (Sprite[]) null;
         }
-        var3[4] = gr.a((byte) -52, param0, 64);
+        var3[4] = gr.createSolidSquare((byte) -52, param0, 64);
         return var2;
     }
 

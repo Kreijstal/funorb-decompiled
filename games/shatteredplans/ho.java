@@ -4,7 +4,7 @@
 final class ho {
     static int field_b;
     static AnimatedPanel field_j;
-    static nq field_f;
+    static BitmapFont field_f;
     static int field_c;
     static int field_a;
     static char field_h;

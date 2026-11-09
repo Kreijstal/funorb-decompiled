@@ -25,7 +25,7 @@ class AnimatedPanel extends PanelNode {
     boolean field_r;
     int field_G;
     Sprite field_U;
-    nq field_nb;
+    BitmapFont field_nb;
     int field_T;
     Sprite[] field_lb;
     Sprite field_fb;
@@ -1001,7 +1001,7 @@ class AnimatedPanel extends PanelNode {
           var6 = new Sprite(param0.getFileByName(true, "", "final_frame.jpg"), (java.awt.Component) ((Object) tm.field_i));
           var3 = var6.field_z;
           var4 = var6.field_w;
-          wh.a(false);
+          wh.pushRasterState(false);
           if (param1 <= 22) {
             GameRules var5 = (GameRules) null;
             AnimatedPanel.a(-15, 122, (String[]) null, (GameRules) null, -98, -12);

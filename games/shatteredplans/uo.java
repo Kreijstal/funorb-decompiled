@@ -26,15 +26,15 @@ final class uo {
         RuntimeException var1 = null;
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          le.field_e.a(kd.field_a, true, oo.field_e, (byte) 0);
-          le.field_e.updateDialogs(120);
+          ByteArrayStorage.field_e.a(kd.field_a, true, oo.field_e, (byte) 0);
+          ByteArrayStorage.field_e.updateDialogs(120);
           if (param0 != -75) {
             stackIn_3_0 = -107;
             return stackIn_3_0;
           }
           stackIn_6_0 = 55;
           while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(stackIn_6_0)) {
-            le.field_e.a(oq.field_j, ho.field_h, true);
+            ByteArrayStorage.field_e.a(oq.field_j, ho.field_h, true);
             stackIn_6_0 = 55;
           }
           if (cr.field_b != -1) {
@@ -201,7 +201,7 @@ final class uo {
             var7.field_K = 0;
             if (!SecondaryNodeDequeIterator.a((byte) -94)) {
               var9_ref_String = np.field_a.field_Xb;
-              ArchiveSourceManager.field_f.field_z = QuickChatCategoryRegistry.a(he.field_q, 4371, new String[]{var9_ref_String}).toUpperCase();
+              ArchiveSourceManager.field_f.field_z = QuickChatCategoryRegistry.a(IntNode.field_q, 4371, new String[]{var9_ref_String}).toUpperCase();
               DualLinkDequeSequence.field_f.setTarget(IntrusiveDeque.field_g.field_K, 40, (byte) 56, IntrusiveDeque.field_g.field_mb - 40, 0);
               DualLinkDequeSequence.field_f.field_z = QuickChatCategoryRegistry.a(gq.field_a, 4371, new String[]{var9_ref_String});
               var8 = DualLinkDequeSequence.field_f;
@@ -217,9 +217,9 @@ final class uo {
                 TextFieldWidget.field_I.field_s = true;
               }
               TextFieldWidget.field_I.field_F = IsaacBackedRandom.field_a.field_F;
-              if (0 < ah.field_X) {
-                if (ah.field_X != 1) {
-                  var10_ref_String = QuickChatCategoryRegistry.a(AudioService.field_e, 4371, new String[]{Integer.toString(ah.field_X)});
+              if (0 < ValidationMessageWidget.field_X) {
+                if (ValidationMessageWidget.field_X != 1) {
+                  var10_ref_String = QuickChatCategoryRegistry.a(AudioService.field_e, 4371, new String[]{Integer.toString(ValidationMessageWidget.field_X)});
                 } else {
                   var10_ref_String = SolVictoryChecker.field_k;
                 }
@@ -301,7 +301,7 @@ final class uo {
                   break;
                 }
                 if (!(2 > bs.field_b) &&
-                  di.field_p[12]) {
+                  FleetTrailPoint.field_p[12]) {
                   var10 = 2;
                 }
               }
@@ -383,7 +383,7 @@ final class uo {
                     break;
                   }
                   if (2 <= bs.field_b &&
-                    di.field_p[12]) {
+                    FleetTrailPoint.field_p[12]) {
                     var16Lifetime1Lifetime1 = 0;
                   }
                   if ((var16Lifetime1Lifetime1 != 0)) {

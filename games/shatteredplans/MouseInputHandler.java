@@ -159,7 +159,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        int var3 = he.field_p != null ? 1 : 0;
+        int var3 = IntNode.field_p != null ? 1 : 0;
         if (param0 != 1) {
           return true;
         }
@@ -178,21 +178,21 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             return false;
           }
           if (TertiaryLinkNode.field_r == 2) {
-            if (!ShatteredPlansClient.a(16, DefendTask.field_o, ah.field_S)) {
+            if (!ShatteredPlansClient.a(16, DefendTask.field_o, ValidationMessageWidget.field_S)) {
               return false;
             }
             if (TertiaryLinkNode.field_r == 2) {
               if (!SolMapReader.b(57)) {
                 return true;
               }
-              ih.a(ah.field_S, param0 ^ 3, vs.field_d, TertiaryLinkNode.field_r, (String) null, param1);
+              ih.a(ValidationMessageWidget.field_S, param0 ^ 3, vs.field_d, TertiaryLinkNode.field_r, (String) null, param1);
               return true;
             }
             if (var3 != 0) {
               return false;
             }
             if (SolMapReader.b(57)) {
-              ih.a(ah.field_S, param0 ^ 3, vs.field_d, TertiaryLinkNode.field_r, (String) null, param1);
+              ih.a(ValidationMessageWidget.field_S, param0 ^ 3, vs.field_d, TertiaryLinkNode.field_r, (String) null, param1);
             }
             return true;
           }
@@ -201,7 +201,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             return false;
           }
           if (SolMapReader.b(57)) {
-            ih.a(ah.field_S, param0 ^ 3, vs.field_d, TertiaryLinkNode.field_r, (String) null, param1);
+            ih.a(ValidationMessageWidget.field_S, param0 ^ 3, vs.field_d, TertiaryLinkNode.field_r, (String) null, param1);
           }
           return true;
         }
@@ -218,13 +218,13 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               return false;
             }
             if (TertiaryLinkNode.field_r == 2) {
-              if (ShatteredPlansClient.a(16, DefendTask.field_o, ah.field_S)) {
+              if (ShatteredPlansClient.a(16, DefendTask.field_o, ValidationMessageWidget.field_S)) {
                 if (TertiaryLinkNode.field_r != 2 &&
                   var3 != 0) {
                   return false;
                 }
                 if (SolMapReader.b(57)) {
-                  ih.a(ah.field_S, param0 ^ 3, vs.field_d, TertiaryLinkNode.field_r, (String) null, param1);
+                  ih.a(ValidationMessageWidget.field_S, param0 ^ 3, vs.field_d, TertiaryLinkNode.field_r, (String) null, param1);
                 }
                 return true;
               }
@@ -235,7 +235,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               return false;
             }
             if (SolMapReader.b(57)) {
-              ih.a(ah.field_S, param0 ^ 3, vs.field_d, TertiaryLinkNode.field_r, (String) null, param1);
+              ih.a(ValidationMessageWidget.field_S, param0 ^ 3, vs.field_d, TertiaryLinkNode.field_r, (String) null, param1);
             }
             return true;
           }

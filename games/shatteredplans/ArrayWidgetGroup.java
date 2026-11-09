@@ -145,7 +145,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ni {
           if (80 != var5_int) {
             return false;
           }
-          if (di.field_p[81]) {
+          if (FleetTrailPoint.field_p[81]) {
             stackIn_19_0 = this.a(111, param3);
           } else {
             stackIn_19_0 = this.a(param3, -1);
@@ -311,7 +311,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ni {
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 == 0 &&
           null != this.field_p) {
-          this.field_p.a((UiWidget) (this), param3, true, param2, (byte) 12);
+          this.field_p.paintWidget((UiWidget) (this), param3, true, param2, (byte) 12);
         }
         if (param1 != -11857) {
           this.setBounds(-17, 93, (byte) 121, 115, -79);

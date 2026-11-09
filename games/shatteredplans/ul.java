@@ -9,7 +9,7 @@ final class ul extends AnimatedPanel {
     static String field_Ob;
     private AnimatedPanel field_Nb;
     private Sprite[] field_Lb;
-    static hh field_xb;
+    static BinaryBitmapFont field_xb;
     private AnimatedPanel field_Mb;
     private int field_Eb;
     static String[] field_Fb;

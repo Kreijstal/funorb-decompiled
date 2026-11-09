@@ -210,14 +210,14 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             stackIn_13_2 = null;
             stackIn_13_3 = ei.field_c.getCodeBase();
             stackIn_13_4 = new StringBuilder().append("clienterror.ws?c=").append(SliderWidget.field_G).append("&u=");
-            if (null == bj.field_E) {
+            if (null == NameSuggestionsPanel.field_E) {
               stackIn_14_1 = null;
               stackIn_14_2 = null;
               stackIn_14_5 = "" + GarrisonTask.field_o;
             } else {
               stackIn_14_1 = null;
               stackIn_14_2 = null;
-              stackIn_14_5 = bj.field_E;
+              stackIn_14_5 = NameSuggestionsPanel.field_E;
             }
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).requestUrl(new java.net.URL(stackIn_13_3, ((StringBuilder) (Object) stackIn_13_4).append(stackIn_14_5).append("&v1=").append(PlatformTaskDispatcher.field_r).append("&v2=").append(PlatformTaskDispatcher.field_i).append("&e=").append(var10).toString()), false);
             while (0 == var4.field_d) {
@@ -342,12 +342,12 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             if (param0 != 0) {
               GameKeyHandler.a((byte) 38);
             }
-            be.field_l = param13;
+            BytePayloadNode.field_l = param13;
             bb.field_c = param5;
             mk.field_c = param12;
             DualLinkDeque.field_b = param8;
             uk.field_a = param9;
-            e.field_b = param10;
+            AccountFieldValue.field_b = param10;
             WidgetStyle.field_g = param11;
             if (StarAbandonedEvent.field_l.field_a == null) {
               return;

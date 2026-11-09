@@ -157,8 +157,8 @@ final class kh extends AnimatedPanel {
             this.field_Cb.addChild(4, var28[1]);
             var28[2] = new AnimatedPanel(0L, (AnimatedPanel) null);
             this.field_Cb.addChild(4, var28[2]);
-            this.field_Hb = new AnimatedPanel[cb.field_j];
-            for (var16 = 0; var16 < cb.field_j; var16++) {
+            this.field_Hb = new AnimatedPanel[DirectByteArrayStorage.field_j];
+            for (var16 = 0; var16 < DirectByteArrayStorage.field_j; var16++) {
               if (null != FullscreenFocusCanvas.field_f[var16]) {
                 this.field_Hb[var16] = new AnimatedPanel(0L, param10, FullscreenFocusCanvas.field_f[var16]);
                 this.field_Hb[var16].field_y = 0;
@@ -185,7 +185,7 @@ final class kh extends AnimatedPanel {
             if (var17Lifetime3 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime3;
             }
-            for (var17Lifetime4 = 0; var17Lifetime4 < cb.field_j; var17Lifetime4++) {
+            for (var17Lifetime4 = 0; var17Lifetime4 < DirectByteArrayStorage.field_j; var17Lifetime4++) {
               if (this.field_Hb[var17Lifetime4] != null) {
                 var18 = this.field_Hb[var17Lifetime4].measureWidthUnbounded(false);
                 if (var16Lifetime2 < var18) {
@@ -389,7 +389,7 @@ final class kh extends AnimatedPanel {
     }
 
     final static boolean f(byte param0) {
-        vm.field_Nb = true;
+        QuickChatMenu.field_Nb = true;
         if (param0 != -67) {
           kh.a(false, false);
         }
@@ -477,7 +477,7 @@ final class kh extends AnimatedPanel {
             stackIn_6_0.field_bb = stackIn_7_1;
           }
           this.field_Bb.field_K = this.field_K - this.field_Bb.field_hb;
-          for (var3 = 0; var3 < cb.field_j; var3++) {
+          for (var3 = 0; var3 < DirectByteArrayStorage.field_j; var3++) {
             if (this.field_Hb[var3] != null) {
               stackIn_15_0 = this.field_Hb[var3];
               stackIn_16_1 = !(this.field_xb.length() <= 0);

@@ -20,8 +20,8 @@ final class DelegatingCanvas extends java.awt.Canvas {
           if (param1 != 0) {
             return true;
           }
-          if (di.field_q != null) {
-            stackIn_9_0 = !(param0.toLowerCase().indexOf(di.field_q.toLowerCase()) < 0);
+          if (FleetTrailPoint.field_q != null) {
+            stackIn_9_0 = !(param0.toLowerCase().indexOf(FleetTrailPoint.field_q.toLowerCase()) < 0);
             return stackIn_9_0;
           }
           return false;

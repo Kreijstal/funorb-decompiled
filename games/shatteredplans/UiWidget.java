@@ -98,7 +98,7 @@ class UiWidget extends IntrusiveNode {
 
     final boolean a(int param0, boolean param1, int param2, byte param3) {
         int var5;
-        fr var6;
+        DraggableWidget var6;
         int var7;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         this.updateHover(param0, param2, this, (byte) 91);
@@ -239,7 +239,7 @@ class UiWidget extends IntrusiveNode {
     void drawLayer(int param0, int param1, int param2, int param3) {
         if (param0 == 0 &&
           null != this.field_p) {
-          this.field_p.a(this, param3, true, param2, (byte) 12);
+          this.field_p.paintWidget(this, param3, true, param2, (byte) 12);
         }
         if (param1 != -11857) {
           this.field_m = -30;

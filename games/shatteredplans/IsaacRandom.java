@@ -39,7 +39,7 @@ final class IsaacRandom {
           }
           try {
             if (gb.field_i == 0) {
-              oj.field_Gb = dh.field_a.requestSocket(65535, hn.field_i, StandardMapReader.field_d);
+              oj.field_Gb = dh.field_a.requestSocket(65535, IntList.field_i, StandardMapReader.field_d);
               gb.field_i = gb.field_i + 1;
             }
             if (gb.field_i == 1) {

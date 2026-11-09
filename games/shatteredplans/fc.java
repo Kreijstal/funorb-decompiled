@@ -249,17 +249,17 @@ final class fc {
             if (var5 == null &&
               var6 == 0) {
               this.field_j.a(1, 4, QuickChatCategoryRegistry.a(IntrusiveNodeHashTable.field_j, 4371, new String[]{var7}));
-              this.field_j.a(1, 6, QuickChatCategoryRegistry.a(ts.field_F, 4371, new String[]{var7}));
+              this.field_j.a(1, 6, QuickChatCategoryRegistry.a(TextHotspotWidget.field_F, 4371, new String[]{var7}));
               if (param0 != null &&
                 param1 != 2 &&
-                !bg.field_g) {
+                !LoginMethodPreference.field_g) {
                 this.field_i = param0;
                 this.field_j.a(1, 19, QuickChatCategoryRegistry.a(ri.field_G, 4371, new String[]{var7}));
               }
             }
             if (var5 != null) {
               if (!Player.a(-68, this.field_k) &&
-                !bg.field_g) {
+                !LoginMethodPreference.field_g) {
                 if (!ae.field_b) {
                   this.field_j.a(1, 8, QuickChatCategoryRegistry.a(NetworkArchiveRequest.field_B, 4371, new String[]{var7}));
                 }
@@ -436,14 +436,14 @@ final class fc {
           }
           this.field_l = param0.field_n;
           if (param0.field_n == 0) {
-            if (vm.field_Bb == 0) {
+            if (QuickChatMenu.field_Bb == 0) {
               this.field_j.a(1, 12, wg.field_c);
             }
-            this.field_j.a(1, 13, ah.field_O);
+            this.field_j.a(1, 13, ValidationMessageWidget.field_O);
           }
           if (param0.field_n == 1) {
             if (sq.field_a == 0) {
-              this.field_j.a(1, 12, he.field_m);
+              this.field_j.a(1, 12, IntNode.field_m);
             }
             this.field_j.a(1, 13, gn.field_A);
           }

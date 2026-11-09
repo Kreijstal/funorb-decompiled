@@ -167,7 +167,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         int var32Lifetime1;
         var34 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var3 = 0.15000000596046448f + (float)di.field_m / 1000.0f;
+          var3 = 0.15000000596046448f + (float)FleetTrailPoint.field_m / 1000.0f;
           var1_int = -(int)(200.0 * Math.sin((double)var3));
           var2 = -200 + (int)(200.0 * Math.cos((double)var3));
           ks.field_j.draw(var1_int, var2);
@@ -182,11 +182,11 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           var11 = 140;
           var2Lifetime1 = var10;
           var1_intLifetime1 = -260;
-          if (var5 > di.field_m) {
-            if (di.field_m < var4) {
+          if (var5 > FleetTrailPoint.field_m) {
+            if (FleetTrailPoint.field_m < var4) {
               stackIn_6_0 = var10;
             } else {
-              stackIn_6_0 = QuickChatCategoryRegistry.a(var10, -var4 + var5, -var4 + di.field_m, var11, param0 - 320);
+              stackIn_6_0 = QuickChatCategoryRegistry.a(var10, -var4 + var5, -var4 + FleetTrailPoint.field_m, var11, param0 - 320);
             }
           } else {
             stackIn_6_0 = var11;
@@ -194,21 +194,21 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           var12 = stackIn_6_0;
           CheckboxPainter.field_b.drawAdditive(var1_intLifetime1, var2Lifetime1 + (var12 - 120), 128);
           MusicVoice.field_n.draw(var1_intLifetime1, var12 + var2Lifetime1);
-          if (var5 <= di.field_m) {
+          if (var5 <= FleetTrailPoint.field_m) {
             stackIn_11_0 = 205 + var10 << 4;
           } else {
-            if (di.field_m < var4) {
+            if (FleetTrailPoint.field_m < var4) {
               stackIn_11_0 = 0;
             } else {
-              stackIn_11_0 = QuickChatCategoryRegistry.a(0, -var4 + var5, di.field_m - var4, 205 + var10 << 4, 0);
+              stackIn_11_0 = QuickChatCategoryRegistry.a(0, -var4 + var5, FleetTrailPoint.field_m - var4, 205 + var10 << 4, 0);
             }
           }
           var13 = stackIn_11_0;
           var14 = 454 + var1_intLifetime1 << 4;
           var15 = -var13 + (var10 + 374 + var2Lifetime1 << 4);
           var16 = 32 + vc.a((byte) -39, 32);
-          if (var6 > di.field_m) {
-            SoftwareRasterizer.b(var14, var15, var16, 128, MenuButton.field_u);
+          if (var6 > FleetTrailPoint.field_m) {
+            SoftwareRasterizer.addRadialGlowQ4(var14, var15, var16, 128, MenuButton.field_u);
           }
           var17 = 454 + (var1_intLifetime1 + 3);
           var18 = var17 << 4;
@@ -218,8 +218,8 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           }
           var20 = var19 << 4;
           var21 = 144;
-          if (var7 <= di.field_m) {
-            var22 = -var7 + di.field_m;
+          if (var7 <= FleetTrailPoint.field_m) {
+            var22 = -var7 + FleetTrailPoint.field_m;
             var23 = -var7 + 1000;
             var24 = var22 << 2;
             var24 = var24 + var22 * 16 * var22 / var23;
@@ -237,8 +237,8 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           var23Lifetime1 = var23Lifetime1 - (var24Lifetime1 >> 4);
           SoftwareRasterizer.setClip(0, 0, var22Lifetime1 + 320 >> 4, 480);
           SoftwareRasterizer.fillRect(var17, var19, 20, 4, 0);
-          if (di.field_m >= var9) {
-            var25 = -var9 + di.field_m;
+          if (FleetTrailPoint.field_m >= var9) {
+            var25 = -var9 + FleetTrailPoint.field_m;
             var26 = var6 - var9;
             var27_int = 440 * var25 / var26;
             var28 = var27_int + ClientException.randomInRange(64, -64, (byte) 109);
@@ -275,8 +275,8 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             SoftwareRasterizer.setPixel(var17 + 7, 1 + var19, (var28Lifetime3 >> 2) * 65793);
           }
           SoftwareRasterizer.resetClip();
-          if (var9 <= di.field_m) {
-            var25Lifetime1 = -var9 + di.field_m;
+          if (var9 <= FleetTrailPoint.field_m) {
+            var25Lifetime1 = -var9 + FleetTrailPoint.field_m;
             var26Lifetime1 = -var9 + var8;
             var27 = 0.0003141592653589793 * (double)var25Lifetime1 * (double)var25Lifetime1;
             if (var25Lifetime1 > var26Lifetime1) {
@@ -292,7 +292,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
               var32 = var32 + var20;
               if ((var22Lifetime1 + 320) >= var31) {
                 SoftwareRasterizer.drawLine(var17, var19, var31 >> 4, var32 >> 4, 0);
-                SoftwareRasterizer.b(var31, var32, 64, var29, MenuButton.field_x);
+                SoftwareRasterizer.addRadialGlowQ4(var31, var32, 64, var29, MenuButton.field_x);
                 CachedArchiveSource.field_A[Territory.field_p] = var31;
                 np.field_f[Territory.field_p] = var32;
                 fieldTemp$0 = Territory.field_p + 1;
@@ -310,16 +310,16 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
                 var31Lifetime1 += 600;
               }
               var33 = 256 * (var30Lifetime1 - var32Lifetime1) / 600;
-              SoftwareRasterizer.b(CachedArchiveSource.field_A[var31Lifetime1], np.field_f[var31Lifetime1], var33, 12, MenuButton.field_x);
-              SoftwareRasterizer.b(CachedArchiveSource.field_A[var31Lifetime1], np.field_f[var31Lifetime1], var33 >> 2, 128, MenuButton.field_x);
+              SoftwareRasterizer.addRadialGlowQ4(CachedArchiveSource.field_A[var31Lifetime1], np.field_f[var31Lifetime1], var33, 12, MenuButton.field_x);
+              SoftwareRasterizer.addRadialGlowQ4(CachedArchiveSource.field_A[var31Lifetime1], np.field_f[var31Lifetime1], var33 >> 2, 128, MenuButton.field_x);
               var31Lifetime1--;
             }
           }
-          if (900 < di.field_m) {
-            if (di.field_m > 950) {
-              var16Lifetime1 = QuickChatCategoryRegistry.a(0, 50, -900 + di.field_m, 256, 0);
+          if (900 < FleetTrailPoint.field_m) {
+            if (FleetTrailPoint.field_m > 950) {
+              var16Lifetime1 = QuickChatCategoryRegistry.a(0, 50, -900 + FleetTrailPoint.field_m, 256, 0);
             } else {
-              var16Lifetime1 = QuickChatCategoryRegistry.a(256, 50, -950 + di.field_m, 0, 0);
+              var16Lifetime1 = QuickChatCategoryRegistry.a(256, 50, -950 + FleetTrailPoint.field_m, 0, 0);
             }
             SoftwareRasterizer.a(var22Lifetime1, var23Lifetime1, var16Lifetime1, 12, MenuButton.field_v);
             SoftwareRasterizer.a(var22Lifetime1 + 128, var23Lifetime1 - 16, var16Lifetime1 >> 1, 12, MenuButton.field_v);
@@ -333,7 +333,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
               var18 = var18 + (var16Lifetime2 - 320 << 1);
               var16Lifetime2 = -(var16Lifetime2 >> 2) + 320;
             }
-            SoftwareRasterizer.b(var18, var20, var16Lifetime2, 256, MenuButton.field_u);
+            SoftwareRasterizer.addRadialGlowQ4(var18, var20, var16Lifetime2, 256, MenuButton.field_u);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

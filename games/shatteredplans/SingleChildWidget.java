@@ -401,7 +401,7 @@ abstract class SingleChildWidget extends UiWidget implements ni {
         }
         if (param0 == 0 &&
           this.field_p != null) {
-          this.field_p.a((UiWidget) (this), param3, true, param2, (byte) 12);
+          this.field_p.paintWidget((UiWidget) (this), param3, true, param2, (byte) 12);
         }
         if (null != this.field_z) {
           this.field_z.drawLayer(param0, -11857, this.field_q + param2, this.field_m + param3);
@@ -429,7 +429,7 @@ abstract class SingleChildWidget extends UiWidget implements ni {
           if (var5_int != 80) {
             return false;
           }
-          if (di.field_p[81]) {
+          if (FleetTrailPoint.field_p[81]) {
             stackIn_14_0 = this.a(9501, param3);
           } else {
             stackIn_14_0 = this.a(param3, 125);

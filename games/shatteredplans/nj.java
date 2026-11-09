@@ -102,12 +102,12 @@ final class nj {
 
     final static void b(int param0) {
         int var1 = -119 % ((param0 + 49) / 41);
-        fa.field_X = null;
+        ValidatedTextInputWidget.field_X = null;
         if (ck.field_a == null) {
           sg.field_Ab = null;
           hd.field_m = null;
           AgeValidator.field_n = null;
-          cb.field_l = null;
+          DirectByteArrayStorage.field_l = null;
           sr.field_h = true;
           return;
         }
@@ -120,7 +120,7 @@ final class nj {
         sg.field_Ab = null;
         hd.field_m = null;
         AgeValidator.field_n = null;
-        cb.field_l = null;
+        DirectByteArrayStorage.field_l = null;
         sr.field_h = true;
     }
 
