@@ -58,26 +58,26 @@ final class HardwareBufferSet extends RenderBufferSet {
           this.field_c = param2;
           this.field_e = param1;
           if (param3 ||
-            ContentTransitionPhase.a(this.field_e, (byte) -97, this.field_c)) {
-            this.field_i = new VertexBufferReference(IntrusiveNodeHashTable.a(false, this.field_e, this.field_c));
+            ContentTransitionPhase.hasFlag2048(this.field_e, (byte) -97, this.field_c)) {
+            this.field_i = new VertexBufferReference(IntrusiveNodeHashTable.hasFlag2048AndMask55(false, this.field_e, this.field_c));
           }
           if (param3 ||
-            ArchiveIndex.a(this.field_c, this.field_e, 37)) {
-            this.field_k = new VertexBufferReference(DroneWaveDefinition.a(this.field_c, this.field_e, (byte) -50));
+            ArchiveIndex.hasFlag2048(this.field_c, this.field_e, 37)) {
+            this.field_k = new VertexBufferReference(DroneWaveDefinition.hasDisabledMeshFeatureAndFlag2048(this.field_c, this.field_e, (byte) -50));
           }
           if (param3 ||
-            BeveledCheckboxRenderer.a(this.field_e, 13836, this.field_c)) {
-            this.field_l = new VertexBufferReference(LoginCredentials.a(31, this.field_e, this.field_c));
+            BeveledCheckboxRenderer.hasFlag2048(this.field_e, 13836, this.field_c)) {
+            this.field_l = new VertexBufferReference(LoginCredentials.hasFlag2048AndConditionalMasks(31, this.field_e, this.field_c));
           }
           if (param3 ||
-            EmailAvailabilityRequest.a(this.field_e, (byte) -113, this.field_c)) {
-            this.field_f = new VertexBufferReference(PerlinNoise2D.a(this.field_c, this.field_e, 30643));
+            EmailAvailabilityRequest.hasFlag2048AndOtherMask55(this.field_e, (byte) -113, this.field_c)) {
+            this.field_f = new VertexBufferReference(PerlinNoise2D.hasFlag2048AndOtherMask55WithExtraBits(this.field_c, this.field_e, 30643));
           }
           if (!param3 &&
-            !TextureTransformMode.a(this.field_c, -2626, this.field_e)) {
+            !TextureTransformMode.hasFlag2048(this.field_c, -2626, this.field_e)) {
             return;
           }
-          this.field_g = new IndexBufferReference(ValidatedTextInputWidget.b(this.field_e, this.field_c, -126));
+          this.field_g = new IndexBufferReference(ValidatedTextInputWidget.hasAllMask2064(this.field_e, this.field_c, -126));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

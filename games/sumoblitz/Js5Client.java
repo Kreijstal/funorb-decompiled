@@ -20,7 +20,7 @@ abstract class Js5Client {
     byte xorKey;
     NetworkResourceRequest currentResponse;
 
-    final static FontMetrics a(ResourceArchive param0, byte param1, String param2, String param3) {
+    final static FontMetrics loadFontMetrics(ResourceArchive archive, byte guard, String fileName, String groupName) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -36,13 +36,13 @@ abstract class Js5Client {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = param0.fetchNamedFile(param2, param3, -1);
+          var5 = archive.fetchNamedFile(fileName, groupName, -1);
           var4 = var5;
           if (var5 == null) {
             stackIn_2_0 = null;
             return (FontMetrics) (stackIn_2_0);
           }
-          if (param1 < -1) {
+          if (guard < -1) {
             stackIn_7_0 = new FontMetrics(var5);
             return stackIn_7_0;
           }
@@ -53,19 +53,19 @@ abstract class Js5Client {
           var4_ref = decompiledCaughtException;
           stackIn_10_0 = var4_ref;
           stackIn_10_1 = new StringBuilder().append("gd.I(");
-          if (param0 == null) {
+          if (archive == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(guard).append(',');
+          if (fileName == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
           stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
-          if (param3 == null) {
+          if (groupName == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
@@ -97,7 +97,7 @@ abstract class Js5Client {
 
     abstract void invalidateConnection(int guard);
 
-    final static void a(int param0, int param1, IntrusiveDeque param2, int param3, int param4, int param5) {
+    final static void spawnInwardSparkParticles(int param0, int param1, IntrusiveDeque param2, int param3, int param4, int param5) {
         float[] dupTemp$0 = null;
         int stackIn_6_0 = 0;
         int stackIn_10_0 = 0;
@@ -239,7 +239,7 @@ abstract class Js5Client {
           return this.backgroundRequestCount((byte) -100) >= 20 ? true : false;
         }
         String var3 = (String) null;
-        Js5Client.a((ResourceArchive) null, (byte) -79, (String) null, (String) null);
+        Js5Client.loadFontMetrics((ResourceArchive) null, (byte) -79, (String) null, (String) null);
         return this.backgroundRequestCount((byte) -100) >= 20 ? true : false;
     }
 

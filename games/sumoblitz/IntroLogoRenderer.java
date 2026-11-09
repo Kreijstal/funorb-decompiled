@@ -60,7 +60,7 @@ final class IntroLogoRenderer {
         LegacyVertexAttribute.pushSpriteRaster(7161, LegacyOpenGlShaderProgram.field_a);
         SoftwareRasterViewport.syncClip();
         SoftwareRasterizer.clear();
-        IsaacCipher.b(opacity + 0);
+        IsaacCipher.renderIntroMeshes(opacity + 0);
         if (256 > var5) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 256 - var5);
         }

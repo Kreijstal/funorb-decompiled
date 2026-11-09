@@ -33,7 +33,7 @@ final class QuickChatPhrase extends DualLinkNode {
             break;
           }
           if (!guard) {
-            QuickChatPhrase.a(-64);
+            QuickChatPhrase.finishDialogAnimations(-64);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -50,7 +50,7 @@ final class QuickChatPhrase extends DualLinkNode {
         }
     }
 
-    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6, int param7, int param8) {
+    final static Sprite[] createBeveledNineSlice(int fillColor, int innerColor, int inset, int borderWidth, int innerBorderWidth, int highlightColor, byte guard, int shadowColor, int edgeLength) {
         int stackIn_11_0 = 0;
         int stackIn_22_0 = 0;
         int stackIn_24_0 = 0;
@@ -73,8 +73,8 @@ final class QuickChatPhrase extends DualLinkNode {
         int var12Lifetime2Lifetime1;
         int var12Lifetime2Lifetime2;
         var15 = Sumoblitz.field_L ? 1 : 0;
-        var9 = param2 + (param3 + param4);
-        var10 = new Sprite[]{new Sprite(var9, var9), new Sprite(param8, var9), new Sprite(var9, var9), new Sprite(var9, param8), new Sprite(64, 64), new Sprite(var9, param8), new Sprite(var9, var9), new Sprite(param8, var9), new Sprite(var9, var9)};
+        var9 = inset + (borderWidth + innerBorderWidth);
+        var10 = new Sprite[]{new Sprite(var9, var9), new Sprite(edgeLength, var9), new Sprite(var9, var9), new Sprite(var9, edgeLength), new Sprite(64, 64), new Sprite(var9, edgeLength), new Sprite(var9, var9), new Sprite(edgeLength, var9), new Sprite(var9, var9)};
         var11_ref_wb__ = var10;
         var12 = 0;
         scanLoop1: while (true) {
@@ -86,7 +86,7 @@ final class QuickChatPhrase extends DualLinkNode {
             }
             var14 = stackIn_11_0;
             while (var13_ref_wb.pixels.length > var14) {
-              var13_ref_wb.pixels[var14] = param0;
+              var13_ref_wb.pixels[var14] = fillColor;
               var14++;
             }
             var12++;
@@ -97,17 +97,17 @@ final class QuickChatPhrase extends DualLinkNode {
         }
         var11 = stackIn_11_0;
         scanLoop2: while (true) {
-          if (var11 < param3) {
+          if (var11 < borderWidth) {
             stackIn_22_0 = 0;
             if (var15 != 0) {
               break scanLoop2;
             }
             var12Lifetime1 = stackIn_22_0;
             while (var9 > var12Lifetime1) {
-              var10[6].pixels[var12Lifetime1 + (-1 + (var9 - var11)) * var9] = param7;
-              var10[8].pixels[var12Lifetime1 + var9 * (-1 + (var9 - var11))] = param7;
-              var10[2].pixels[-1 + var9 - var11 + var12Lifetime1 * var9] = param7;
-              var10[8].pixels[-var11 + (var9 - 1) + var12Lifetime1 * var9] = param7;
+              var10[6].pixels[var12Lifetime1 + (-1 + (var9 - var11)) * var9] = shadowColor;
+              var10[8].pixels[var12Lifetime1 + var9 * (-1 + (var9 - var11))] = shadowColor;
+              var10[2].pixels[-1 + var9 - var11 + var12Lifetime1 * var9] = shadowColor;
+              var10[8].pixels[-var11 + (var9 - 1) + var12Lifetime1 * var9] = shadowColor;
               var12Lifetime1++;
             }
             var11++;
@@ -118,20 +118,20 @@ final class QuickChatPhrase extends DualLinkNode {
         }
         var11Lifetime1 = stackIn_22_0;
         while (true) {
-          stackIn_24_0 = param3;
+          stackIn_24_0 = borderWidth;
           stackIn_24_1 = var11Lifetime1;
           if (stackIn_24_0 > stackIn_24_1) {
             stackIn_35_0 = 0;
             if (var15 == 0) {
               var12Lifetime2 = stackIn_35_0;
               while (var9 > var12Lifetime2) {
-                var10[0].pixels[var12Lifetime2 + var11Lifetime1 * var9] = param5;
-                var10[0].pixels[var11Lifetime1 + var12Lifetime2 * var9] = param5;
+                var10[0].pixels[var12Lifetime2 + var11Lifetime1 * var9] = highlightColor;
+                var10[0].pixels[var11Lifetime1 + var12Lifetime2 * var9] = highlightColor;
                 stackIn_24_0 = ~(var9 - var11Lifetime1);
                 stackIn_24_1 = ~var12Lifetime2;
                 if (stackIn_24_0 < stackIn_24_1) {
-                  var10[2].pixels[var12Lifetime2 + var9 * var11Lifetime1] = param5;
-                  var10[6].pixels[var11Lifetime1 + var9 * var12Lifetime2] = param5;
+                  var10[2].pixels[var12Lifetime2 + var9 * var11Lifetime1] = highlightColor;
+                  var10[6].pixels[var11Lifetime1 + var9 * var12Lifetime2] = highlightColor;
                 }
                 var12Lifetime2++;
               }
@@ -139,22 +139,22 @@ final class QuickChatPhrase extends DualLinkNode {
               continue;
             }
           } else {
-            var11Lifetime1 = -16 / ((30 - param6) / 43);
+            var11Lifetime1 = -16 / ((30 - guard) / 43);
             stackIn_35_0 = 0;
           }
           var12Lifetime2Lifetime1 = stackIn_35_0;
           scanLoop3: while (true) {
-            if (var12Lifetime2Lifetime1 < param8) {
+            if (var12Lifetime2Lifetime1 < edgeLength) {
               stackIn_46_0 = 0;
               if (var15 != 0) {
                 break scanLoop3;
               }
               var13 = stackIn_46_0;
-              while (param3 > var13) {
-                var10[7].pixels[var12Lifetime2Lifetime1 + param8 * (-1 + (-var13 + var9))] = param7;
-                var10[5].pixels[var9 - 1 - var13 + var9 * var12Lifetime2Lifetime1] = param7;
-                var10[1].pixels[var12Lifetime2Lifetime1 + var13 * param8] = param5;
-                var10[3].pixels[var13 + var12Lifetime2Lifetime1 * var9] = param5;
+              while (borderWidth > var13) {
+                var10[7].pixels[var12Lifetime2Lifetime1 + edgeLength * (-1 + (-var13 + var9))] = shadowColor;
+                var10[5].pixels[var9 - 1 - var13 + var9 * var12Lifetime2Lifetime1] = shadowColor;
+                var10[1].pixels[var12Lifetime2Lifetime1 + var13 * edgeLength] = highlightColor;
+                var10[3].pixels[var13 + var12Lifetime2Lifetime1 * var9] = highlightColor;
                 var13++;
               }
               var12Lifetime2Lifetime1++;
@@ -164,14 +164,14 @@ final class QuickChatPhrase extends DualLinkNode {
             break;
           }
           var12Lifetime2Lifetime2 = stackIn_46_0;
-          scanLoop4: while (var12Lifetime2Lifetime2 < param8 >> 1) {
+          scanLoop4: while (var12Lifetime2Lifetime2 < edgeLength >> 1) {
             var13Lifetime1 = 0;
             while (true) {
-              if (var13Lifetime1 < param4) {
-                var10[1].pixels[var12Lifetime2Lifetime2 + (-1 - var13Lifetime1 + var9) * param8] = param1;
-                var10[3].pixels[var9 * var12Lifetime2Lifetime2 - (var13Lifetime1 + 1) + var9] = param1;
-                var10[7].pixels[var12Lifetime2Lifetime2 + param8 * var13Lifetime1] = param1;
-                var10[5].pixels[var9 * var12Lifetime2Lifetime2 + var13Lifetime1] = param1;
+              if (var13Lifetime1 < innerBorderWidth) {
+                var10[1].pixels[var12Lifetime2Lifetime2 + (-1 - var13Lifetime1 + var9) * edgeLength] = innerColor;
+                var10[3].pixels[var9 * var12Lifetime2Lifetime2 - (var13Lifetime1 + 1) + var9] = innerColor;
+                var10[7].pixels[var12Lifetime2Lifetime2 + edgeLength * var13Lifetime1] = innerColor;
+                var10[5].pixels[var9 * var12Lifetime2Lifetime2 + var13Lifetime1] = innerColor;
                 var13Lifetime1++;
                 if (var15 == 0) {
                   continue;
@@ -226,7 +226,7 @@ final class QuickChatPhrase extends DualLinkNode {
 
     public static void releaseStatics(int guard) {
         if (guard != -6811) {
-          QuickChatPhrase.a(112, -53, -51, -110, 1, 98, (byte) -59, -49, -95);
+          QuickChatPhrase.createBeveledNineSlice(112, -53, -51, -110, 1, 98, (byte) -59, -49, -95);
         }
         playerNamesCanBeText = null;
     }
@@ -340,10 +340,10 @@ final class QuickChatPhrase extends DualLinkNode {
     QuickChatPhrase() {
     }
 
-    final static void a(int param0) {
-        ArchiveLoadingStage.b((byte) -116);
-        if (param0 != -24233) {
-          QuickChatPhrase.a(99, -71, 95, 31, -80, 103, (byte) 57, 84, 30);
+    final static void finishDialogAnimations(int guard) {
+        ArchiveLoadingStage.finishDialogAnimations((byte) -116);
+        if (guard != -24233) {
+          QuickChatPhrase.createBeveledNineSlice(99, -71, 95, 31, -80, 103, (byte) 57, 84, 30);
         }
     }
 

@@ -28,7 +28,7 @@ abstract class LegacyBitmapFont extends DualLinkNode {
     private static int alpha;
 
     final int charWidth(char character) {
-        return this.advances[HardwareReflectionEffect.a(true, character) & 255];
+        return this.advances[HardwareReflectionEffect.encodeCp1252Character(true, character) & 255];
     }
 
     private final void resetStyle(int color, int shadow) {
@@ -124,7 +124,7 @@ abstract class LegacyBitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var2 == -1)) {
-              var7 = (char)(HardwareReflectionEffect.a(true, (char) var7) & 255);
+              var7 = (char)(HardwareReflectionEffect.encodeCp1252Character(true, (char) var7) & 255);
               var4 = var4 + this.advances[var7];
               if (this.kerning != null &&
                 var3 != 0) {
@@ -432,7 +432,7 @@ abstract class LegacyBitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
-              var8 = (char)(HardwareReflectionEffect.a(true, (char) var8) & 255);
+              var8 = (char)(HardwareReflectionEffect.encodeCp1252Character(true, (char) var8) & 255);
               if (this.kerning != null &&
                 var5 != 0) {
                 x = x + this.kerning[(var5 << 8) + var8];
@@ -792,7 +792,7 @@ abstract class LegacyBitmapFont extends DualLinkNode {
             if (var9 == -1) {
               if (var14 != 0) {
                 discarded$3 = lineBuilder.append((char) var14);
-                var14 = (char)(HardwareReflectionEffect.a(true, (char) var14) & 255);
+                var14 = (char)(HardwareReflectionEffect.encodeCp1252Character(true, (char) var14) & 255);
                 var4 = var4 + this.advances[var14];
                 if (this.kerning != null &&
                   var10 != 0) {

@@ -325,7 +325,7 @@ final class WidgetTheme {
           }
           var5[4] = (Sprite) ((Object) var18);
           var4.createStateStyle(false, 4).withFlushBeforeApply(true, true).withBackgroundSlices(var5, 2147483647);
-          var4.createStateStyle(false, 5).withBackgroundSlices(HardwareTurbulentWaterNoise.a((byte) -71, 0, 65793, 0, 0), 2147483647).withFlushBeforeApply(true, true).withTextColor(-1, 17818);
+          var4.createStateStyle(false, 5).withBackgroundSlices(HardwareTurbulentWaterNoise.createBeveledNineSlice((byte) -71, 0, 65793, 0, 0), 2147483647).withFlushBeforeApply(true, true).withTextColor(-1, 17818);
           this.textInputRenderer = (WidgetRenderer) ((Object) var4);
           var6 = new StatefulWidgetRenderer(var4, true);
           var6.horizontalAlignment = 0;

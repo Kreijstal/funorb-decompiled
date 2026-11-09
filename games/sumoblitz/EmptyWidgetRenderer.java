@@ -19,7 +19,7 @@ final class EmptyWidgetRenderer implements WidgetRenderer {
         }
     }
 
-    final static void a(boolean param0, byte param1, PlatformTaskDispatcher param2, int param3, int param4, int param5, int param6, int param7, int param8, String param9, boolean param10, int param11, int param12, long param13) {
+    final static void initializeAccountService(boolean param0, byte param1, PlatformTaskDispatcher param2, int param3, int param4, int param5, int param6, int param7, int param8, String param9, boolean param10, int param11, int param12, long param13) {
         try {
           RuntimeException stackIn_16_0 = null;
           StringBuilder stackIn_16_1 = null;
@@ -82,7 +82,7 @@ final class EmptyWidgetRenderer implements WidgetRenderer {
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int handleJs5ConnectionFailure(int replyCode, int guard) {
         int var3 = Sumoblitz.field_L ? 1 : 0;
         BufferedSocket.field_p = null;
         InstrumentNoteMask.field_n = null;
@@ -90,18 +90,18 @@ final class EmptyWidgetRenderer implements WidgetRenderer {
         int var2 = SingleChildWidget.field_x;
         SingleChildWidget.field_x = RasterStateFrame.field_q;
         RasterStateFrame.field_q = var2;
-        if (param0 == 51) {
+        if (replyCode == 51) {
           Js5ClientState.field_b.failureCode = 2;
           Js5ClientState.field_b.failureCount = Js5ClientState.field_b.failureCount + 1;
           if (Js5ClientState.field_b.failureCount < 2) {
             if (Js5ClientState.field_b.failureCount >= 2) {
-              if (50 == param0) {
+              if (50 == replyCode) {
                 return 5;
               }
               if (Js5ClientState.field_b.failureCount >= 4) {
                 return 1;
               }
-              if (param1 < -80) {
+              if (guard < -80) {
                 return -1;
               }
               return 65;
@@ -109,18 +109,18 @@ final class EmptyWidgetRenderer implements WidgetRenderer {
             if (Js5ClientState.field_b.failureCount >= 4) {
               return 1;
             }
-            if (param1 >= -80) {
+            if (guard >= -80) {
               return 65;
             }
             return -1;
           }
-          if (param0 != 51) {
+          if (replyCode != 51) {
             if (Js5ClientState.field_b.failureCount >= 2) {
-              if (50 != param0) {
+              if (50 != replyCode) {
                 if (Js5ClientState.field_b.failureCount >= 4) {
                   return 1;
                 }
-                if (param1 >= -80) {
+                if (guard >= -80) {
                   return 65;
                 }
                 return -1;
@@ -130,26 +130,26 @@ final class EmptyWidgetRenderer implements WidgetRenderer {
             if (Js5ClientState.field_b.failureCount >= 4) {
               return 1;
             }
-            if (param1 >= -80) {
+            if (guard >= -80) {
               return 65;
             }
             return -1;
           }
           return 2;
         }
-        if (param0 != 50) {
+        if (replyCode != 50) {
           Js5ClientState.field_b.failureCode = 1;
           Js5ClientState.field_b.failureCount = Js5ClientState.field_b.failureCount + 1;
           if (Js5ClientState.field_b.failureCount >= 2 &&
-            param0 == 51) {
+            replyCode == 51) {
             return 2;
           }
           if (Js5ClientState.field_b.failureCount >= 2) {
-            if (50 != param0) {
+            if (50 != replyCode) {
               if (Js5ClientState.field_b.failureCount >= 4) {
                 return 1;
               }
-              if (param1 >= -80) {
+              if (guard >= -80) {
                 return 65;
               }
               return -1;
@@ -159,7 +159,7 @@ final class EmptyWidgetRenderer implements WidgetRenderer {
           if (Js5ClientState.field_b.failureCount >= 4) {
             return 1;
           }
-          if (param1 >= -80) {
+          if (guard >= -80) {
             return 65;
           }
           return -1;
@@ -167,15 +167,15 @@ final class EmptyWidgetRenderer implements WidgetRenderer {
         Js5ClientState.field_b.failureCode = 5;
         Js5ClientState.field_b.failureCount = Js5ClientState.field_b.failureCount + 1;
         if (Js5ClientState.field_b.failureCount >= 2 &&
-          param0 == 51) {
+          replyCode == 51) {
           return 2;
         }
         if (Js5ClientState.field_b.failureCount >= 2) {
-          if (50 != param0) {
+          if (50 != replyCode) {
             if (Js5ClientState.field_b.failureCount >= 4) {
               return 1;
             }
-            if (param1 >= -80) {
+            if (guard >= -80) {
               return 65;
             }
             return -1;
@@ -185,7 +185,7 @@ final class EmptyWidgetRenderer implements WidgetRenderer {
         if (Js5ClientState.field_b.failureCount >= 4) {
           return 1;
         }
-        if (param1 >= -80) {
+        if (guard >= -80) {
           return 65;
         }
         return -1;

@@ -167,15 +167,15 @@ final class WhirlpoolDigest {
           }
         }
         if (guard != 99) {
-          WhirlpoolDigest.a(-88);
+          WhirlpoolDigest.isGameFocused(-88);
         }
         for (var2Lifetime3 = 0; var2Lifetime3 < 8; var2Lifetime3++) {
           this.hash[var2Lifetime3] = ArenaBackdropPalettes.xor(this.hash[var2Lifetime3], ArenaBackdropPalettes.xor(this.block[var2Lifetime3], this.state[var2Lifetime3]));
         }
     }
 
-    final static boolean a(int param0) {
-        if (param0 != 7) {
+    final static boolean isGameFocused(int guard) {
+        if (guard != 7) {
           keyCharacter = 'ￃ';
         }
         return null == CompactMeshGeometry.field_o ? AppletFocusState.focused : true;

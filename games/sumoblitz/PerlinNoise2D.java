@@ -214,11 +214,11 @@ final class PerlinNoise2D extends TextureGeneratorNode {
         this.octaveCount = 4;
     }
 
-    final static boolean a(int param0, int param1, int param2) {
-        if (param2 != 30643) {
+    final static boolean hasFlag2048AndOtherMask55WithExtraBits(int otherFlags, int flags, int guard) {
+        if (guard != 30643) {
           return false;
         }
-        return EmailAvailabilityRequest.a(param1, (byte) -113, param0) & (((8192 & param1) != 0 ? true : false) | ResetStatsConfirmationOverlay.a(param1, param2 ^ -30697, param0) | GameInstructions.a(true, param0, param1));
+        return EmailAvailabilityRequest.hasFlag2048AndOtherMask55(flags, (byte) -113, otherFlags) & (((8192 & flags) != 0 ? true : false) | ResetStatsConfirmationOverlay.hasMask24OrAll544(flags, guard ^ -30697, otherFlags) | GameInstructions.hasFlag65536(true, otherFlags, flags));
     }
 
     private final int interpolateCell(int nextYHash, int yFade, int gradientMask, int repeatX, int yFractionQ12, int xQ12, int yHash) {

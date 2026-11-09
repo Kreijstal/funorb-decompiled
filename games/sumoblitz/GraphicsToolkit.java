@@ -34,7 +34,7 @@ abstract class GraphicsToolkit {
             return stackIn_3_0;
           }
           if (2 == backend) {
-            stackIn_6_0 = DroneIntroductionOverlay.a(width, height, guard ^ 0, canvas, textures);
+            stackIn_6_0 = DroneIntroductionOverlay.createNativeSoftwareToolkit(width, height, guard ^ 0, canvas, textures);
             return stackIn_6_0;
           }
           if (backend == 1) {

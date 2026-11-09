@@ -186,19 +186,19 @@ abstract class FixedPointPerlinNoise3D {
         }
     }
 
-    final static void a(byte param0, int param1) {
-        PasswordInputRenderer.field_s = 3 & param1 >> 4;
+    final static void unpackPrivacyLevels(byte guard, int packedLevels) {
+        PasswordInputRenderer.field_s = 3 & packedLevels >> 4;
         if (!(PasswordInputRenderer.field_s <= 2)) {
           PasswordInputRenderer.field_s = 2;
         }
-        if (param0 < 24) {
+        if (guard < 24) {
           FixedPointPerlinNoise3D.releaseStatics((byte) 45);
         }
-        EmailSyntaxValidator.field_f = (param1 & 15) >> 2;
+        EmailSyntaxValidator.field_f = (packedLevels & 15) >> 2;
         if (!(EmailSyntaxValidator.field_f <= 2)) {
           EmailSyntaxValidator.field_f = 2;
         }
-        IntList.field_g = param1 & 3;
+        IntList.field_g = packedLevels & 3;
         if (IntList.field_g > 2) {
           IntList.field_g = 2;
         }
@@ -206,9 +206,9 @@ abstract class FixedPointPerlinNoise3D {
 
     abstract void resetOutput(int guard);
 
-    final static boolean a(int param0) {
+    final static boolean isReconnectRequired(int guard) {
         boolean stackIn_7_0 = false;
-        if (param0 != -23517) {
+        if (guard != -23517) {
           field_h = (String) null;
         }
         stackIn_7_0 = (10 <= LoginDialogNavigation.field_a) && (!IntrusiveNode.field_a) && (!TimedSceneEffect.isAccountConnected((byte) 116));

@@ -11,8 +11,8 @@ final class RenderPresentationException extends Exception {
     public RenderPresentationException() {
     }
 
-    final static boolean a(boolean param0) {
-        if (!param0) {
+    final static boolean isHardDifficulty(boolean guard) {
+        if (!guard) {
           return TextureCombineSource.field_a == 1 ? true : false;
         }
         field_b = (String[]) null;

@@ -45,10 +45,10 @@ public final class DirectXGraphicsToolkit extends HardwareGraphicsToolkit {
           var10 = this.field_Jc.getRowPitch();
           if (stride == width &&
             var10 == 4 * width) {
-            this.field_Jc.a(pixels, offset, 0, width * height);
+            this.field_Jc.putInts(pixels, offset, 0, width * height);
           } else {
             for (var11 = 0; var11 < height; var11++) {
-              this.field_Jc.a(pixels, offset + var11 * stride, var10 * var11, width);
+              this.field_Jc.putInts(pixels, offset + var11 * stride, var10 * var11, width);
             }
           }
           var9.UnlockRect();

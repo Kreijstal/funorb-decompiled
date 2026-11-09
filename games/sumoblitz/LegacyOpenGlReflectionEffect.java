@@ -210,8 +210,8 @@ final class LegacyOpenGlReflectionEffect extends LegacyOpenGlEffect {
         }
     }
 
-    final static boolean c(int param0) {
-        if (param0 != 1) {
+    final static boolean isConnectionStatusGateOpen(int guard) {
+        if (guard != 1) {
           LegacyOpenGlReflectionEffect.releaseStatics((byte) 90);
           return true;
         }

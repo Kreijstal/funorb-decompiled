@@ -73,7 +73,7 @@ final class LegacyOpenGlEnvironmentWaterEffect extends LegacyOpenGlEffect {
         pleaseSendMeNewsText = null;
     }
 
-    final static LoginMethodPreference a(java.applet.Applet param0, int param1) {
+    final static LoginMethodPreference readLoginMethodPreference(java.applet.Applet applet, int guard) {
         int var4 = 0;
         String var2 = null;
         RuntimeException var2_ref = null;
@@ -90,19 +90,19 @@ final class LegacyOpenGlEnvironmentWaterEffect extends LegacyOpenGlEffect {
         RuntimeException decompiledCaughtException = null;
         var6 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var2 = TextureFilter.readBrowserCookie(param0, (byte) -57, "jagex-last-login-method");
+          var2 = TextureFilter.readBrowserCookie(applet, (byte) -57, "jagex-last-login-method");
           if (var2 == null) {
             stackIn_4_0 = TextInputValidator.field_c;
             return stackIn_4_0;
           }
-          if (param1 != 1) {
+          if (guard != 1) {
             stackIn_7_0 = (LoginMethodPreference) null;
             return stackIn_7_0;
           }
           var3 = SingleChildWidget.loginMethodPreferences(32);
           for (var4 = 0; var3.length > var4; var4++) {
             var5 = var3[var4];
-            if (var5.matches(var2, param1 - 2184)) {
+            if (var5.matches(var2, guard - 2184)) {
               stackIn_13_0 = var5;
               return stackIn_13_0;
             }
@@ -114,12 +114,12 @@ final class LegacyOpenGlEnvironmentWaterEffect extends LegacyOpenGlEffect {
           var2_ref = decompiledCaughtException;
           stackIn_19_0 = var2_ref;
           stackIn_19_1 = new StringBuilder().append("lv.C(");
-          if (param0 == null) {
+          if (applet == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(guard).append(')').toString());
         }
     }
 

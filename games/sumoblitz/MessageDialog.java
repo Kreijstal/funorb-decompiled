@@ -41,7 +41,7 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
             return;
           }
           if (this.field_fb) {
-            LinkWidgetRenderer.a(-363927231);
+            LinkWidgetRenderer.showRetainedLoginForm(-363927231);
             return;
           }
           return;
@@ -55,7 +55,7 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
           return;
         }
         if (this.field_fb) {
-          LinkWidgetRenderer.a(-363927231);
+          LinkWidgetRenderer.showRetainedLoginForm(-363927231);
           return;
         }
     }
@@ -253,7 +253,7 @@ class MessageDialog extends ContentTransitionDialog implements WidgetActionListe
     final static void shutdownClientSession(int guard) {
         HardwareAnimatedWaterEffect.exitFullscreen(1);
         if (NineSlicePanel.field_f != null) {
-          CheckboxWidget.a(true, NineSlicePanel.field_f);
+          CheckboxWidget.detachInputHandlers(true, NineSlicePanel.field_f);
         }
         ShaderEffect.releaseKeyboardState(false);
         MouseInputShutdown.releaseMouseInput(28679);

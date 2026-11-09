@@ -32,7 +32,7 @@ abstract class ResourceRequest extends DualLinkNode {
         }
     }
 
-    final static void a(byte param0) {
+    final static void buildIntroGlow(byte guard) {
         Sprite var1 = null;
         Sprite var2 = null;
         int var3 = 0;
@@ -41,12 +41,12 @@ abstract class ResourceRequest extends DualLinkNode {
           var1 = new Sprite(540, 140);
           LegacyVertexAttribute.pushSpriteRaster(7161, var1);
           SoftwareRasterViewport.syncClip();
-          if (param0 != -90) {
+          if (guard != -90) {
             field_r = (SpriteData[]) null;
           }
           SoftwareRasterizer.clear();
           MusicPatch.introFrame = 0;
-          IsaacCipher.b(256);
+          IsaacCipher.renderIntroMeshes(256);
           var2 = var1.copy();
           for (var3 = 0; var3 < 15; var3++) {
             var2.drawSilhouette(-2, -2, 16777215);
@@ -56,7 +56,7 @@ abstract class ResourceRequest extends DualLinkNode {
           var1.drawHalfSize(0, 0);
           ClientException.popRasterState((byte) 76);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "rw.B(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "rw.B(" + guard + ')');
         }
     }
 

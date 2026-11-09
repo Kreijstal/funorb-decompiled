@@ -18,13 +18,13 @@ final class IntIndexHashTable {
         field_c = null;
     }
 
-    final static void a(int param0) {
+    final static void reenterLoginDialog(int state) {
         if (!IntrusiveNode.field_a) {
           throw new IllegalStateException();
         }
         HardwareTextureSprite.field_m = true;
         LoginDialogNavigation.showLoginDialog(true, false);
-        LoginDialogNavigation.field_a = param0;
+        LoginDialogNavigation.field_a = state;
     }
 
     IntIndexHashTable(int[] keys) {

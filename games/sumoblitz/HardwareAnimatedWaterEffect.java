@@ -100,7 +100,7 @@ final class HardwareAnimatedWaterEffect extends ShaderEffect {
         if (CompactMeshGeometry.field_o == null) {
           return;
         }
-        CheckboxWidget.a(true, CompactMeshGeometry.field_o);
+        CheckboxWidget.detachInputHandlers(true, CompactMeshGeometry.field_o);
         if (guard != 1) {
           return;
         }

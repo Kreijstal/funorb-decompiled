@@ -8,7 +8,7 @@ final class ByteArrayCacheNode extends DualLinkNode {
     static ResourceArchive field_r;
     static AccountConnectionPhase READY_TO_CONNECT;
 
-    final static boolean a(String param0, String param1, int param2) {
+    final static boolean isPasswordAcceptable(String password, String name, int guard) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_29_0 = null;
@@ -18,26 +18,26 @@ final class ByteArrayCacheNode extends DualLinkNode {
         String stackIn_33_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (AsciiCharacterChecks.containsNonAlphanumeric(false, param0)) {
+          if (AsciiCharacterChecks.containsNonAlphanumeric(false, password)) {
             return false;
           }
-          if (LegacyOpenGlCubeTexture.hasUniformCharacters(param0, true)) {
+          if (LegacyOpenGlCubeTexture.hasUniformCharacters(password, true)) {
             return false;
           }
-          if (ArrayWidgetContainer.isPasswordLengthInvalid(param0, 30996)) {
+          if (ArrayWidgetContainer.isPasswordLengthInvalid(password, 30996)) {
             return false;
           }
-          var3_int = 11 / ((param2 - 63) / 59);
-          if (param1.length() == 0) {
+          var3_int = 11 / ((guard - 63) / 59);
+          if (name.length() == 0) {
             return true;
           }
-          if (MessageDialog.containsForwardOrReverse(param0, param1, 106)) {
+          if (MessageDialog.containsForwardOrReverse(password, name, 106)) {
             return false;
           }
-          if (CachedTextLayout.isPasswordPartOfName(param0, (byte) 111, param1)) {
+          if (CachedTextLayout.isPasswordPartOfName(password, (byte) 111, name)) {
             return false;
           }
-          if (!AccountNameSupport.containsNameIgnoringUnderscores(false, param0, param1)) {
+          if (!AccountNameSupport.containsNameIgnoringUnderscores(false, password, name)) {
             return true;
           }
           return false;
@@ -46,18 +46,18 @@ final class ByteArrayCacheNode extends DualLinkNode {
           var3 = decompiledCaughtException;
           stackIn_29_0 = var3;
           stackIn_29_1 = new StringBuilder().append("gg.C(");
-          if (param0 == null) {
+          if (password == null) {
             stackIn_30_2 = "null";
           } else {
             stackIn_30_2 = "{...}";
           }
           stackIn_32_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',');
-          if (param1 == null) {
+          if (name == null) {
             stackIn_33_2 = "null";
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param2).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(guard).append(')').toString());
         }
     }
 

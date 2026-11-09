@@ -71,7 +71,7 @@ final class FullscreenPromptController {
             }
             var2 = 1;
           }
-          RendererPreference.field_a.updatePointerSelection(true, OpenGlAssemblyProgram.b(AgeValidator.field_f, 1882601153, LoginCredentialType.field_a), OpenGlAssemblyProgram.b(ArenaDefinitionCodec.field_e, 1882601153, PointLight.mouseX));
+          RendererPreference.field_a.updatePointerSelection(true, OpenGlAssemblyProgram.hitTestDisplayPrompt(AgeValidator.field_f, 1882601153, LoginCredentialType.field_a), OpenGlAssemblyProgram.hitTestDisplayPrompt(ArenaDefinitionCodec.field_e, 1882601153, PointLight.mouseX));
           if (RendererPreference.field_a.isActivated(-31260)) {
             var1_int = 1;
           }
@@ -97,7 +97,7 @@ final class FullscreenPromptController {
             var7 = (int)((10999L - var5) / 1000L);
             if (var7 <= 0) {
               var3 = 2;
-              ScreenNameValidator.a(true, 5, (byte) 118);
+              ScreenNameValidator.showFullscreenPrompt(true, 5, (byte) 118);
             }
           }
           stackIn_30_0 = var3;

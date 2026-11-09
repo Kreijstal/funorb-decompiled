@@ -131,14 +131,14 @@ final class DirectXTexture2D extends DirectXTexture implements Texture2D {
           var10 = var12.getRowPitch();
           if (var10 != param1 * 4) {
             for (var11 = 0; var11 < param2; var11++) {
-              var12.a(param4, param5 + param6 * var11, var10 * var11, param1);
+              var12.putInts(param4, param5 + param6 * var11, var10 * var11, param1);
             }
           } else if (param6 != param1) {
             for (var11 = 0; var11 < param2; var11++) {
-              var12.a(param4, param5 + param6 * var11, var10 * var11, param1);
+              var12.putInts(param4, param5 + param6 * var11, var10 * var11, param1);
             }
           } else {
-            var12.a(param4, param5, 0, param2 * param1);
+            var12.putInts(param4, param5, 0, param2 * param1);
           }
           this.texture.UnlockRect(0);
         }

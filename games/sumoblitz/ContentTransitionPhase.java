@@ -22,9 +22,9 @@ final class ContentTransitionPhase {
         RuntimeException decompiledCaughtException = null;
         try {
           if (guard != -13181) {
-            ContentTransitionPhase.a(74, (byte) -66, -15);
+            ContentTransitionPhase.hasFlag2048(74, (byte) -66, -15);
           }
-          stackIn_3_0 = LegacyOpenGlUnlitEffect.a(10, text, -46, true);
+          stackIn_3_0 = LegacyOpenGlUnlitEffect.isIntegerInRadix(10, text, -46, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -40,11 +40,11 @@ final class ContentTransitionPhase {
         }
     }
 
-    final static boolean a(int param0, byte param1, int param2) {
-        if (param1 > -85) {
+    final static boolean hasFlag2048(int flags, byte guard, int unused) {
+        if (guard > -85) {
           return true;
         }
-        return 0 != (2048 & param0) ? true : false;
+        return 0 != (2048 & flags) ? true : false;
     }
 
     public static void releaseStatics(byte param0) {

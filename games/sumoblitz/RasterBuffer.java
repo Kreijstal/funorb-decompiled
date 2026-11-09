@@ -40,7 +40,7 @@ abstract class RasterBuffer {
 
     abstract void drawImage(int guard, int x, java.awt.Graphics graphics, int y);
 
-    final static void b(int param0) {
+    final static void completeLogin(int guard) {
         int var1;
         int var2;
         var2 = Sumoblitz.field_L ? 1 : 0;
@@ -48,7 +48,7 @@ abstract class RasterBuffer {
         SocketJs5Client.field_s = null;
         if (ReconnectState.reconnecting) {
           AccountStatusDialogState.activeDialog.showConnectionRestored(false);
-          if (param0 == 2) {
+          if (guard == 2) {
             return;
           }
           RasterBuffer.signum(-6, -112);
@@ -63,9 +63,9 @@ abstract class RasterBuffer {
           }
           SocketJs5Client.field_s = HardwareReflectionEffect.joinCharSequences(false, new CharSequence[]{(CharSequence) ((Object) SocketJs5Client.field_s), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) LegacyOpenGlEnvironmentWaterEffect.visitTheAccountManagementText)});
         }
-        AccountStatusDialogState.activeDialog.closeDialog(param0 ^ -5);
+        AccountStatusDialogState.activeDialog.closeDialog(guard ^ -5);
         SoftwareRenderBuffer.showProgressDialog(5178);
-        if (param0 == 2) {
+        if (guard == 2) {
           return;
         }
         RasterBuffer.signum(-6, -112);

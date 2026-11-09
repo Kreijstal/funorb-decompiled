@@ -38,10 +38,10 @@ final class LevelSelectScreen extends MenuScreen {
         var14 = Sumoblitz.field_L ? 1 : 0;
         try {
           var4_int = opacity << 24;
-          DelegatingCanvas.a(IntroMeshProjection.field_c, 410, -5, var4_int, 3, toolkit, 650, 35, 1, true);
+          DelegatingCanvas.drawToolkitNineSlice(IntroMeshProjection.field_c, 410, -5, var4_int, 3, toolkit, 650, 35, 1, true);
           ForceFieldRingEffect.field_t.drawCenteredText(AccountRequestState.field_g.toUpperCase(), var4_int | 5023231, -1, 90, 320, 0);
           AccountStatusDialogState.headingFont.drawCenteredText(AccountRequestState.field_g.toUpperCase(), var4_int + 16777215, -1, 90, 320, 0);
-          DelegatingCanvas.a(IntroMeshProjection.field_c, 60, 44, var4_int, 3, toolkit, 325, 370, 1, true);
+          DelegatingCanvas.drawToolkitNineSlice(IntroMeshProjection.field_c, 60, 44, var4_int, 3, toolkit, 325, 370, 1, true);
           MusicCrossfadeStream.field_q[0].drawRotated(80.0f, 402.0f, 1600, 0, 1, 0, 2);
           QueuedIntArrayRequest.field_k.drawText(407, 92, 5023231 | var4_int, Integer.toString(ResourceArchive.selectedSpeedLevel), (byte) -110, -1);
           GameTrackPlayback.field_a.drawText(407, 92, var4_int + 16777215, Integer.toString(ResourceArchive.selectedSpeedLevel), (byte) -35, -1);
@@ -64,10 +64,10 @@ final class LevelSelectScreen extends MenuScreen {
             for (var9 = 44; ArchiveCatalog.field_c - 96 > var9; var9 += 112) {
               if (var7 == 1 + ToolkitRasterStateFrame.field_e &&
                 opacity >= 250 &&
-                !MusicPatchEnvelope.a(8230, 25)) {
+                !MusicPatchEnvelope.areFirstLevelsComplete(8230, 25)) {
                 toolkit.fillRectangle(var9, var8, 100, 42, var6 << 24 | 5023231, 1);
               }
-              DelegatingCanvas.a(IntroMeshProjection.field_c, 42, var9, var4_int, 3, toolkit, 100, var8, 1, true);
+              DelegatingCanvas.drawToolkitNineSlice(IntroMeshProjection.field_c, 42, var9, var4_int, 3, toolkit, 100, var8, 1, true);
               if (var7 <= ToolkitRasterStateFrame.field_e + 1 &&
                 var7 < 25) {
                 QueuedIntArrayRequest.field_k.drawCenteredText(Integer.toString(var7 + 1), 5023231 | var4_int, -1, 28 + var8, var9 + 48, 0);
@@ -89,7 +89,7 @@ final class LevelSelectScreen extends MenuScreen {
             var11 = -25 + var8Lifetime1;
             var12 = -21 + var9Lifetime1;
             var13 = IntroMeshProjection.field_c;
-            DelegatingCanvas.a(var13, 84, var11, 0, 1, var10_ref_ha, 142, var12, 1, true);
+            DelegatingCanvas.drawToolkitNineSlice(var13, 84, var11, 0, 1, var10_ref_ha, 142, var12, 1, true);
             if (TextureMetadata.completedLevels[this.field_i]) {
               MessageDialog.field_db.drawCenteredText(InstrumentNoteMask.timeText.toLowerCase() + UiStyleNode.formatGameTime(CacheIoRequest.field_z[this.field_i], -23620), var4_int | 5023231, -1, 5 + var9Lifetime1, 42 + var8Lifetime1, 0);
               LegacyOpenGlEffect.field_c.drawCenteredText(InstrumentNoteMask.timeText.toLowerCase() + UiStyleNode.formatGameTime(CacheIoRequest.field_z[this.field_i], -23620), 16777215 + var4_int, -1, var9Lifetime1 + 5, -8 + (var8Lifetime1 + 50), guard + 2355);

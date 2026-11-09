@@ -24,7 +24,7 @@ final class TextureMetadata {
     static ToolkitSprite field_a;
     int field_q;
 
-    final static void a(int param0, int param1, int param2, int param3, int[] param4) {
+    final static void blendHalfSpan(int guard, int offset, int colorContribution, int length, int[] pixels) {
         int var8 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -37,26 +37,26 @@ final class TextureMetadata {
         int[] var9 = null;
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (param0 != -1) {
+          if (guard != -1) {
             field_a = (ToolkitSprite) null;
           }
-          param3--;
-          while (param3 >= 0) {
-            var9 = param4;
+          length--;
+          while (length >= 0) {
+            var9 = pixels;
             var5 = var9;
-            var6 = param1;
-            var7 = param2;
+            var6 = offset;
+            var7 = colorContribution;
             var9[var6] = LegacyOpenGlPostProcessManager.bitwiseAnd(8355711, var9[var6] >> 1) + var7;
-            param1++;
-            param3--;
+            offset++;
+            length--;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = decompiledCaughtException;
           stackIn_10_0 = var5_ref;
-          stackIn_10_1 = new StringBuilder().append("wm.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_10_1 = new StringBuilder().append("wm.C(").append(guard).append(',').append(offset).append(',').append(colorContribution).append(',').append(length).append(',');
+          if (pixels == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
@@ -88,7 +88,7 @@ final class TextureMetadata {
             return;
           }
           var4 = (int[]) null;
-          TextureMetadata.a(-1, 109, 92, -119, (int[]) null);
+          TextureMetadata.blendHalfSpan(-1, 109, 92, -119, (int[]) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

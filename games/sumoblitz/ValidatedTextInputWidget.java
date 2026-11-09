@@ -28,11 +28,11 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
         }
     }
 
-    final static boolean b(int param0, int param1, int param2) {
-        if (param2 >= -6) {
+    final static boolean hasAllMask2064(int flags, int unused, int guard) {
+        if (guard >= -6) {
           return true;
         }
-        return DroneProximitySupport.hasMaskBit16(param0, param1, -107) & TextureTransformMode.a(param1, -2626, param0);
+        return DroneProximitySupport.hasMaskBit16(flags, unused, -107) & TextureTransformMode.hasFlag2048(unused, -2626, flags);
     }
 
     public final InputValidator getValidator(int guard) {
@@ -66,7 +66,7 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 18416) {
-            ValidatedTextInputWidget.b(-31, 81, 66);
+            ValidatedTextInputWidget.hasAllMask2064(-31, 81, 66);
           }
           var2 = new PlayingSound(param1, param1);
           ContentTransitionPhase.field_c.addLast((IntrusiveNode) (var2), (byte) 39);

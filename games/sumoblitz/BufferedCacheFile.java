@@ -17,15 +17,15 @@ final class BufferedCacheFile {
     private int readLength;
     private long length;
 
-    final static void c(int param0) {
-        NextLevelChoiceOverlay.a(false, LegacyOpenGlUnlitEffect.activeApplet(param0 ^ 2));
-        if (param0 != 0) {
+    final static void setLegacyStatusFlag(int guard) {
+        NextLevelChoiceOverlay.setLegacyStatusFlag(false, LegacyOpenGlUnlitEffect.activeApplet(guard ^ 2));
+        if (guard != 0) {
           String var2 = (String) null;
-          BufferedCacheFile.a(42L, (java.applet.Applet) null, false, (String) null, (String) null);
+          BufferedCacheFile.setBrowserCookie(42L, (java.applet.Applet) null, false, (String) null, (String) null);
         }
     }
 
-    final static void a(long param0, java.applet.Applet param1, boolean param2, String param3, String param4) {
+    final static void setBrowserCookie(long maxAgeSeconds, java.applet.Applet applet, boolean guard, String value, String name) {
         try {
           RuntimeException stackIn_11_0 = null;
           StringBuilder stackIn_11_1 = null;
@@ -46,21 +46,21 @@ final class BufferedCacheFile {
           String var7Lifetime4;
           try {
             try {
-              var8 = param1.getParameter("cookiehost");
+              var8 = applet.getParameter("cookiehost");
               var7 = var8;
               var7Lifetime1 = var8;
-              if (!param2) {
+              if (!guard) {
                 return;
               }
-              var9 = param4 + "=" + param3 + "; version=1; path=/; domain=" + var8;
+              var9 = name + "=" + value + "; version=1; path=/; domain=" + var8;
               var7Lifetime2 = var9;
               var7Lifetime3 = var9;
-              if (param0 < 0L) {
+              if (maxAgeSeconds < 0L) {
                 var7Lifetime4 = var9 + "; Discard;";
               } else {
-                var7Lifetime4 = var9 + "; Expires=" + ExpandingRingEffect.formatCookieDate(param0 * 1000L + IntroMeshResources.monotonicTimeMillis(-123), true) + "; Max-Age=" + param0;
+                var7Lifetime4 = var9 + "; Expires=" + ExpandingRingEffect.formatCookieDate(maxAgeSeconds * 1000L + IntroMeshResources.monotonicTimeMillis(-123), true) + "; Max-Age=" + maxAgeSeconds;
               }
-              BrowserScriptBridge.evaluateScript("document.cookie=\"" + var7Lifetime4 + "\"", -15428, param1);
+              BrowserScriptBridge.evaluateScript("document.cookie=\"" + var7Lifetime4 + "\"", -15428, applet);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = decompiledCaughtException;
@@ -70,20 +70,20 @@ final class BufferedCacheFile {
             decompiledCaughtException = decompiledCaughtParameter1;
             var6_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackIn_11_0 = var6_ref;
-            stackIn_11_1 = new StringBuilder().append("gj.H(").append(param0).append(',');
-            if (param1 == null) {
+            stackIn_11_1 = new StringBuilder().append("gj.H(").append(maxAgeSeconds).append(',');
+            if (applet == null) {
               stackIn_12_2 = "null";
             } else {
               stackIn_12_2 = "{...}";
             }
-            stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',');
-            if (param3 == null) {
+            stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(guard).append(',');
+            if (value == null) {
               stackIn_15_2 = "null";
             } else {
               stackIn_15_2 = "{...}";
             }
             stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',');
-            if (param4 == null) {
+            if (name == null) {
               stackIn_18_2 = "null";
             } else {
               stackIn_18_2 = "{...}";
@@ -401,7 +401,7 @@ final class BufferedCacheFile {
     final void close(int guard) throws IOException {
         this.flush((byte) -114);
         if (guard != -1) {
-          BufferedCacheFile.c(-23);
+          BufferedCacheFile.setLegacyStatusFlag(-23);
         }
         this.file.close(0);
     }
@@ -446,7 +446,7 @@ final class BufferedCacheFile {
         }
         if (guard != -1) {
           var5 = (String) null;
-          BufferedCacheFile.a(20L, (java.applet.Applet) null, true, (String) null, (String) null);
+          BufferedCacheFile.setBrowserCookie(20L, (java.applet.Applet) null, true, (String) null, (String) null);
         }
         this.readStart = this.position;
         while (this.readLength < this.readBuffer.length) {

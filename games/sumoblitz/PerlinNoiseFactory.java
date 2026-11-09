@@ -19,7 +19,7 @@ final class PerlinNoiseFactory {
         var10.repeatX = repeatX;
         var10.normalizeOutput = normalize ? true : false;
         var10.initialize(-8);
-        SecondaryNodeDequeIterator.a(-1203350004, width, height);
+        SecondaryNodeDequeIterator.prepareNoiseCoordinates(-1203350004, width, height);
         for (var11 = 0; var11 < height; var11++) {
           var10.fillRow(fixedPointScale - 32792, var11, var15[var11]);
         }

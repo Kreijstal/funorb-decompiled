@@ -19,7 +19,7 @@ final class HardwareTurbulentWaterNoise extends TurbulenceNoise3D {
         if (guard == 1) {
           return this.pixels;
         }
-        HardwareTurbulentWaterNoise.a((byte) -23, -46, 65, -1, 46);
+        HardwareTurbulentWaterNoise.createBeveledNineSlice((byte) -23, -46, 65, -1, 46);
         return this.pixels;
     }
 
@@ -49,12 +49,12 @@ final class HardwareTurbulentWaterNoise extends TurbulenceNoise3D {
         }
     }
 
-    final static Sprite[] a(byte param0, int param1, int param2, int param3, int param4) {
-        if (param0 <= -5) {
-          return QuickChatPhrase.a(param4, param2, 1, 1, 1, param3, (byte) -113, param1, 3);
+    final static Sprite[] createBeveledNineSlice(byte guard, int shadowColor, int innerColor, int highlightColor, int fillColor) {
+        if (guard <= -5) {
+          return QuickChatPhrase.createBeveledNineSlice(fillColor, innerColor, 1, 1, 1, highlightColor, (byte) -113, shadowColor, 3);
         }
         widgetTheme = (WidgetTheme) null;
-        return QuickChatPhrase.a(param4, param2, 1, 1, 1, param3, (byte) -113, param1, 3);
+        return QuickChatPhrase.createBeveledNineSlice(fillColor, innerColor, 1, 1, 1, highlightColor, (byte) -113, shadowColor, 3);
     }
 
     final static GraphicsToolkit createToolkitForCanvas(int backend, java.awt.Canvas canvas, TextureProvider textures, boolean guard, int options, ResourceArchive shaders) {

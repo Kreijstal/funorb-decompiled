@@ -9,19 +9,19 @@ final class QuickChatPhraseProvider {
     static IntrusiveDeque arenaPads;
     static boolean field_a;
 
-    final static void b(int param0) {
+    final static void restoreFullSoundVolume(int guard) {
         LegacyOpenGlRenderBufferSet.setSoundVolume(256, (byte) -58);
-        if (param0 <= 56) {
+        if (guard <= 56) {
           field_b = false;
         }
     }
 
-    final static boolean a(boolean param0, int param1, int param2) {
-        if (param0) {
-          return (param1 & 33) != 0 ? true : false;
+    final static boolean hasAnyMask33(boolean guard, int flags, int unused) {
+        if (guard) {
+          return (flags & 33) != 0 ? true : false;
         }
         field_a = true;
-        return (param1 & 33) != 0 ? true : false;
+        return (flags & 33) != 0 ? true : false;
     }
 
     final QuickChatPhrase getPhrase(int phraseId, int guard) {

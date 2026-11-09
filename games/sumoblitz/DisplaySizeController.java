@@ -157,7 +157,7 @@ final class DisplaySizeController {
         this.resizeListener.resizeCanvas(8310, this.fullscreenWidth, this.fullscreenHeight);
         int var2 = -25 % ((50 - guard) / 48);
         DroneDebris.field_A = false;
-        FullscreenCanvas var3 = IndexedSprite.a(this.fullscreenWidth, 8089, 0, this.fullscreenHeight, FourIntUpdateRequest.platformDispatcher, 0);
+        FullscreenCanvas var3 = IndexedSprite.createFullscreenCanvas(this.fullscreenWidth, 8089, 0, this.fullscreenHeight, FourIntUpdateRequest.platformDispatcher, 0);
         if (var3 == null) {
           this.restoreWindowedSize(2);
         }

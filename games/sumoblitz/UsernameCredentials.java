@@ -149,7 +149,7 @@ class UsernameCredentials extends LoginCredentials {
               return stackIn_3_0;
             }
             if (DisplayModeConfirmationDialog.accountSocket == null &&
-              !GridWidgetContainer.a((byte) -34, reconnect)) {
+              !GridWidgetContainer.advanceAccountConnection((byte) -34, reconnect)) {
               stackIn_8_0 = -1;
               return stackIn_8_0;
             }
@@ -369,7 +369,7 @@ class UsernameCredentials extends LoginCredentials {
           var4_int = archive.groupId(0, groupName);
           var5 = archive.fileId(var4_int, fileName, (byte) 127);
           var6 = -88 % ((-10 - guard) / 46);
-          stackIn_1_0 = TextInputValidator.a(var5, -11481, archive, var4_int);
+          stackIn_1_0 = TextInputValidator.loadSprite(var5, -11481, archive, var4_int);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

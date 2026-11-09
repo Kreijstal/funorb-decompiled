@@ -193,7 +193,7 @@ final class ScrollPane extends ArrayWidgetContainer {
         }
     }
 
-    final static RasterIndexedSprite a(byte param0, ResourceArchive param1, String param2, String param3) {
+    final static RasterIndexedSprite loadIndexedSprite(byte guard, ResourceArchive archive, String fileName, String groupName) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -208,29 +208,29 @@ final class ScrollPane extends ArrayWidgetContainer {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param1.groupId(0, param3);
-          var5 = -112 / ((param0 + 84) / 40);
-          var6 = param1.fileId(var4_int, param2, (byte) 127);
-          stackIn_1_0 = TextureFormat.loadIndexedSprite(var6, var4_int, param1, -21834);
+          var4_int = archive.groupId(0, groupName);
+          var5 = -112 / ((guard + 84) / 40);
+          var6 = archive.fileId(var4_int, fileName, (byte) 127);
+          stackIn_1_0 = TextureFormat.loadIndexedSprite(var6, var4_int, archive, -21834);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_4_0 = var4;
-          stackIn_4_1 = new StringBuilder().append("mc.TA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_4_1 = new StringBuilder().append("mc.TA(").append(guard).append(',');
+          if (archive == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
           stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',');
-          if (param2 == null) {
+          if (fileName == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
           stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
-          if (param3 == null) {
+          if (groupName == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";

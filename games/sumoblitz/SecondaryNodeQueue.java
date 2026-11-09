@@ -188,7 +188,7 @@ final class SecondaryNodeQueue {
         RenderPresentationException.field_a = new DialogLayer();
         WidgetStateStyle.showLoginDialog((byte) 127, true, true);
         if (guard != 246) {
-          SecondaryNodeQueue.a(22, 45, -112, 42, -110, true, -91, 8, 90);
+          SecondaryNodeQueue.firstSweptCircleCollisionFraction(22, 45, -112, 42, -110, true, -91, 8, 90);
         }
     }
 
@@ -199,61 +199,61 @@ final class SecondaryNodeQueue {
         }
     }
 
-    final static int a(int param0, int param1, int param2, int param3, int param4, boolean param5, int param6, int param7, int param8) {
+    final static int firstSweptCircleCollisionFraction(int centerX, int fractionBits, int startY, int endX, int centerY, boolean guard, int endY, int radius, int startX) {
         int var9;
         int var9Lifetime1;
         boolean decompiledFrameRemainder1 = true;
-        param8 = param8 - param0;
-        param3 = param3 - param0;
-        param2 = param2 - param4;
-        param6 = param6 - param4;
-        if (param3 > param8) {
-          decompiledFrameRemainder1 = !(param3 < -param7);
+        startX = startX - centerX;
+        endX = endX - centerX;
+        startY = startY - centerY;
+        endY = endY - centerY;
+        if (endX > startX) {
+          decompiledFrameRemainder1 = !(endX < -radius);
           if (decompiledFrameRemainder1) {
-            decompiledFrameRemainder1 = !(param8 > param7);
+            decompiledFrameRemainder1 = !(startX > radius);
           }
         } else {
-          decompiledFrameRemainder1 = !(param8 < -param7);
+          decompiledFrameRemainder1 = !(startX < -radius);
           if (decompiledFrameRemainder1) {
-            decompiledFrameRemainder1 = !(param3 > param7);
+            decompiledFrameRemainder1 = !(endX > radius);
           }
         }
         if (decompiledFrameRemainder1) {
           boolean decompiledFrameRemainder0 = true;
-          if (param6 > param2) {
-            decompiledFrameRemainder0 = !(-param7 > param6);
+          if (endY > startY) {
+            decompiledFrameRemainder0 = !(-radius > endY);
             if (decompiledFrameRemainder0) {
-              decompiledFrameRemainder0 = !(param7 < param2);
+              decompiledFrameRemainder0 = !(radius < startY);
             }
           } else {
-            decompiledFrameRemainder0 = !(-param7 > param2);
+            decompiledFrameRemainder0 = !(-radius > startY);
             if (decompiledFrameRemainder0) {
-              decompiledFrameRemainder0 = !(param7 < param6);
+              decompiledFrameRemainder0 = !(radius < endY);
             }
           }
           if (decompiledFrameRemainder0) {
-            var9 = -12 + IntegerMath.floorLog2(42, param7 >> 31 ^ param7 | (param6 >> 31 ^ param6 | (param2 ^ param2 >> 31 | param8 >> 31 ^ param8 | param3 ^ param3 >> 31)));
+            var9 = -12 + IntegerMath.floorLog2(42, radius >> 31 ^ radius | (endY >> 31 ^ endY | (startY ^ startY >> 31 | startX >> 31 ^ startX | endX ^ endX >> 31)));
             if (var9 > 0) {
-              param3 = param3 >> var9;
-              param2 = param2 >> var9;
-              param7 = param7 >> var9;
-              param6 = param6 >> var9;
-              param8 = param8 >> var9;
+              endX = endX >> var9;
+              startY = startY >> var9;
+              radius = radius >> var9;
+              endY = endY >> var9;
+              startX = startX >> var9;
             }
-            if (param5) {
-              SecondaryNodeQueue.a(67, -70, -24, 44, 33, true, -93, 8, -123);
+            if (guard) {
+              SecondaryNodeQueue.firstSweptCircleCollisionFraction(67, -70, -24, 44, 33, true, -93, 8, -123);
             }
-            if (param7 <= 0) {
+            if (radius <= 0) {
               return -1;
             }
-            var9Lifetime1 = param7 * param7;
-            if (param8 * param8 + param2 * param2 < var9Lifetime1 &&
-              param6 * param6 + param3 * param3 < var9Lifetime1) {
-              return 1 + (1 << param1);
+            var9Lifetime1 = radius * radius;
+            if (startX * startX + startY * startY < var9Lifetime1 &&
+              endY * endY + endX * endX < var9Lifetime1) {
+              return 1 + (1 << fractionBits);
             }
-            param6 = param6 - param2;
-            param3 = param3 - param8;
-            return BurstParticle.firstCollisionFraction(-var9Lifetime1 + param2 * param2 + param8 * param8, -103, param2 * param6 + param8 * param3 << 1, param6 * param6 + param3 * param3 << 1, param1);
+            endY = endY - startY;
+            endX = endX - startX;
+            return BurstParticle.firstCollisionFraction(-var9Lifetime1 + startY * startY + startX * startX, -103, startY * endY + startX * endX << 1, endY * endY + endX * endX << 1, fractionBits);
           }
           return -1;
         }
@@ -342,7 +342,7 @@ final class SecondaryNodeQueue {
             if (AchievementThresholds.targets[9] != EmailSyntaxValidator.field_e) {
               return;
             }
-            UnderageAccountInfoPanel.b(24753, 246, 9);
+            UnderageAccountInfoPanel.awardAchievement(24753, 246, 9);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -249,11 +249,11 @@ final class ArchiveIndex {
         loadingInstrumentsText = null;
     }
 
-    final static boolean a(int param0, int param1, int param2) {
-        if (param2 < 12) {
+    final static boolean hasFlag2048(int unused, int flags, int guard) {
+        if (guard < 12) {
           return false;
         }
-        return (param1 & 2048) != 0 ? true : false;
+        return (flags & 2048) != 0 ? true : false;
     }
 
     ArchiveIndex(byte[] containerBytes, int expectedCrc, byte[] expectedDigest) {

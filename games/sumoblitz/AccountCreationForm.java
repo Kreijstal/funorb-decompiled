@@ -245,7 +245,7 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
               return;
             }
             if (var2 != 4) {
-              IntrusiveNode.reportClientError("F1: " + VictoryScreen.b((byte) 104), (Throwable) null, 0);
+              IntrusiveNode.reportClientError("F1: " + VictoryScreen.accountPacketDiagnostic((byte) 104), (Throwable) null, 0);
               LegacyOpenGlTextureCache.closeAccountSocket((byte) -112);
               if (guard <= 71) {
                 field_G = (QuickChatCommand) null;
@@ -256,7 +256,7 @@ final class AccountCreationForm extends WidgetContainer implements TextHotspotLi
             var3 = var1.readCp1252String(-1);
             MouseInputShutdown.field_d = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(-31302);
-            FixedPointPerlinNoise3D.a((byte) 38, var4);
+            FixedPointPerlinNoise3D.unpackPrivacyLevels((byte) 38, var4);
             return;
           }
           if (null == CheckboxWidget.field_G) {

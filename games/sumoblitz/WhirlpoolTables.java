@@ -17,10 +17,10 @@ final class WhirlpoolTables {
         resumeGameText = null;
     }
 
-    final static void c(int param0) {
+    final static void resetUpgrades(int guard) {
         LegacyOpenGlEffectManager.selectedTractionLevel = 1;
         AccountStatusDialogState.selectedBounceLevel = 1;
-        if (param0 >= 40) {
+        if (guard >= 40) {
           ResourceArchive.selectedSpeedLevel = 1;
           ArrayUtils.fill(CacheIoRequest.field_A, 0, 25, -1);
           return;
@@ -30,9 +30,9 @@ final class WhirlpoolTables {
         ArrayUtils.fill(CacheIoRequest.field_A, 0, 25, -1);
     }
 
-    final static void a(int param0) {
+    final static void resetGameProgress(int guard) {
         CacheIoRequest.field_z = new int[25];
-        if (param0 == 17534) {
+        if (guard == 17534) {
           AccountStatusDialogState.selectedBounceLevel = 1;
           CacheIoRequest.field_A = new int[25];
           OpenGlTexture3D.field_j = new int[25];

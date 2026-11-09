@@ -4,8 +4,8 @@
 abstract class Transform3D {
     static SpriteData[] field_a;
 
-    final static int a(byte param0) {
-        if (param0 != -97) {
+    final static int registrationAge(byte guard) {
+        if (guard != -97) {
           return -56;
         }
         return IntroFinalFrameResources.field_d;
@@ -18,7 +18,7 @@ abstract class Transform3D {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7) {
+    final static void uploadIntMipmaps(int guard, int height, int width, int target, int[] pixels, int internalFormat, int type, int format) {
         int var26 = 0;
         int var27 = 0;
         int incrementValue$4 = 0;
@@ -49,35 +49,35 @@ abstract class Transform3D {
         int var28 = 0;
         var28 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (param2 > 0 &&
-            !IntegerMath.isSingleBitOrZero(param2, -113)) {
+          if (width > 0 &&
+            !IntegerMath.isSingleBitOrZero(width, -113)) {
             throw new IllegalArgumentException("");
           }
-          if (param1 > 0 &&
-            !IntegerMath.isSingleBitOrZero(param1, -108)) {
+          if (height > 0 &&
+            !IntegerMath.isSingleBitOrZero(height, -108)) {
             throw new IllegalArgumentException("");
           }
-          if (32993 != param7) {
+          if (32993 != format) {
             throw new IllegalArgumentException("");
           }
           var8_int = 0;
-          if (param0 > -64) {
+          if (guard > -64) {
             return;
           }
-          stackIn_16_0 = (param2 < param1) ? param2 : param1;
+          stackIn_16_0 = (width < height) ? width : height;
           var9 = stackIn_16_0;
-          var10 = param2 >> 1;
-          var11 = param1 >> 1;
-          var12 = param4;
+          var10 = width >> 1;
+          var11 = height >> 1;
+          var12 = pixels;
           var13 = new int[var11 * var10];
           while (true) {
-            jaggl.OpenGL.glTexImage2Di(param3, var8_int, param5, param2, param1, 0, param7, param6, var12, 0);
+            jaggl.OpenGL.glTexImage2Di(target, var8_int, internalFormat, width, height, 0, format, type, var12, 0);
             if (var9 <= 1) {
               return;
             }
             var15 = 0;
             var24 = 0;
-            var25 = param2 + var24;
+            var25 = width + var24;
             var14 = var13;
             for (var26 = 0; var26 < var11; var26++) {
               for (var27 = 0; var10 > var27; var27++) {
@@ -105,12 +105,12 @@ abstract class Transform3D {
                 var15++;
                 var13[incrementValue$4] = LegacyOpenGlInterleavedStream.bitwiseOr(LegacyOpenGlInterleavedStream.bitwiseOr(LegacyOpenGlPostProcessManager.bitwiseAnd(var21, 1020) << 6, LegacyOpenGlInterleavedStream.bitwiseOr(LegacyOpenGlPostProcessManager.bitwiseAnd(16711680, var20 << 14), LegacyOpenGlPostProcessManager.bitwiseAnd(1020, var23) << 22)), LegacyOpenGlPostProcessManager.bitwiseAnd(var22 >> 2, 255));
               }
-              var24 = var24 + param2;
-              var25 = var25 + param2;
+              var24 = var24 + width;
+              var25 = var25 + width;
             }
             var13 = var12;
-            param2 = var10;
-            param1 = var11;
+            width = var10;
+            height = var11;
             var12 = var14;
             var8_int++;
             var10 = var10 >> 1;
@@ -121,13 +121,13 @@ abstract class Transform3D {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
           stackIn_29_0 = var8;
-          stackIn_29_1 = new StringBuilder().append("eu.BA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_29_1 = new StringBuilder().append("eu.BA(").append(guard).append(',').append(height).append(',').append(width).append(',').append(target).append(',');
+          if (pixels == null) {
             stackIn_30_2 = "null";
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(internalFormat).append(',').append(type).append(',').append(format).append(')').toString());
         }
     }
 

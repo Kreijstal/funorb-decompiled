@@ -124,54 +124,54 @@ final class HardwareQuadBatchBuffers {
         }
     }
 
-    final static boolean a(int param0, int param1, boolean param2, byte param3) {
+    final static boolean hiscoreRowSortsBefore(int left, int right, boolean primaryStatisticFirst, byte guard) {
         int var4;
         int var5;
-        if (!param2) {
-          if (IntroductionOverlaySupport.field_c[param0] > IntroductionOverlaySupport.field_c[param1]) {
+        if (!primaryStatisticFirst) {
+          if (IntroductionOverlaySupport.field_c[left] > IntroductionOverlaySupport.field_c[right]) {
             return true;
           }
-          if (IntroductionOverlaySupport.field_c[param0] < IntroductionOverlaySupport.field_c[param1]) {
+          if (IntroductionOverlaySupport.field_c[left] < IntroductionOverlaySupport.field_c[right]) {
             return false;
           }
-          if (LoginFieldValue.field_a[param1] < LoginFieldValue.field_a[param0]) {
+          if (LoginFieldValue.field_a[right] < LoginFieldValue.field_a[left]) {
             return true;
           }
-          if (LoginFieldValue.field_a[param1] > LoginFieldValue.field_a[param0]) {
+          if (LoginFieldValue.field_a[right] > LoginFieldValue.field_a[left]) {
             return false;
           }
         } else {
-          if (LoginFieldValue.field_a[param0] > LoginFieldValue.field_a[param1]) {
+          if (LoginFieldValue.field_a[left] > LoginFieldValue.field_a[right]) {
             return true;
           }
-          if (LoginFieldValue.field_a[param1] > LoginFieldValue.field_a[param0]) {
+          if (LoginFieldValue.field_a[right] > LoginFieldValue.field_a[left]) {
             return false;
           }
-          if (IntroductionOverlaySupport.field_c[param1] < IntroductionOverlaySupport.field_c[param0]) {
+          if (IntroductionOverlaySupport.field_c[right] < IntroductionOverlaySupport.field_c[left]) {
             return true;
           }
-          if (IntroductionOverlaySupport.field_c[param0] < IntroductionOverlaySupport.field_c[param1]) {
+          if (IntroductionOverlaySupport.field_c[left] < IntroductionOverlaySupport.field_c[right]) {
             return false;
           }
         }
-        var4 = SlowBurstParticle.field_z[param1] + LegacyOpenGlInterleavedStream.field_c[param1] + ContentTransitionPhase.field_f[param1];
-        if (param3 != 98) {
+        var4 = SlowBurstParticle.field_z[right] + LegacyOpenGlInterleavedStream.field_c[right] + ContentTransitionPhase.field_f[right];
+        if (guard != 98) {
           return true;
         }
-        var5 = SlowBurstParticle.field_z[param0] + ContentTransitionPhase.field_f[param0] + LegacyOpenGlInterleavedStream.field_c[param0];
+        var5 = SlowBurstParticle.field_z[left] + ContentTransitionPhase.field_f[left] + LegacyOpenGlInterleavedStream.field_c[left];
         if (var4 < var5) {
           return true;
         }
         if (var5 < var4) {
           return false;
         }
-        return !(param0 <= param1);
+        return !(left <= right);
     }
 
     final void closeDynamicVertices(int guard) {
         this.dynamicVertices.close(12001);
         if (guard != -19073) {
-          HardwareQuadBatchBuffers.a(121, -85, true, (byte) 9);
+          HardwareQuadBatchBuffers.hiscoreRowSortsBefore(121, -85, true, (byte) 9);
         }
     }
 

@@ -58,9 +58,9 @@ final class ProgressDialog extends ResizingDialog {
         RGB = null;
     }
 
-    final void k(int param0) {
+    final void enableDeterminateProgress(int guard) {
         this.field_S = true;
-        int var2 = -98 % ((param0 - 11) / 47);
+        int var2 = -98 % ((guard - 11) / 47);
         this.field_Q.animated = false;
     }
 
@@ -83,7 +83,7 @@ final class ProgressDialog extends ResizingDialog {
         }
     }
 
-    final void a(boolean param0, float param1, String param2, boolean param3) {
+    final void updateProgress(boolean guard, float percent, String message, boolean waiting) {
         RuntimeException var5 = null;
         int stackIn_5_0 = 0;
         int stackIn_8_1 = 0;
@@ -93,17 +93,17 @@ final class ProgressDialog extends ResizingDialog {
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0) {
+          if (guard) {
             namesCannotStartOrText = (String) null;
           }
-          stackIn_5_0 = (param3) ? 0 : 1;
+          stackIn_5_0 = (waiting) ? 0 : 1;
           if (this.field_P) {
             stackIn_8_1 = 0;
           } else {
             stackIn_8_1 = 1;
           }
           if (stackIn_5_0 != stackIn_8_1) {
-            stackIn_12_1 = (param3);
+            stackIn_12_1 = (waiting);
             this.field_P = stackIn_12_1;
             if (this.field_P) {
               this.field_Q.setColors(8405024, 4210752, 108);
@@ -111,27 +111,27 @@ final class ProgressDialog extends ResizingDialog {
             } else {
               this.field_Q.setColors(2113632, 4210752, 99);
               if (!this.field_S) {
-                this.field_Q.progressQ16 = (int)(65536.0f * (param1 / 100.0f));
-                this.field_W = param2;
+                this.field_Q.progressQ16 = (int)(65536.0f * (percent / 100.0f));
+                this.field_W = message;
                 return;
               }
               this.field_Q.animated = false;
             }
           }
-          this.field_Q.progressQ16 = (int)(65536.0f * (param1 / 100.0f));
-          this.field_W = param2;
+          this.field_Q.progressQ16 = (int)(65536.0f * (percent / 100.0f));
+          this.field_W = message;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_21_0 = var5;
-          stackIn_21_1 = new StringBuilder().append("m.E(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_21_1 = new StringBuilder().append("m.E(").append(guard).append(',').append(percent).append(',');
+          if (message == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(waiting).append(')').toString());
         }
     }
 

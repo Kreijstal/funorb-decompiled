@@ -186,7 +186,7 @@ final class CachedTextLayout extends TextLayout {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          name = ValidationStatus.a('_', name, false, "");
+          name = ValidationStatus.replaceCharacter('_', name, false, "");
           var3 = TextureFilter.reverseString(password, (byte) 117);
           if (guard <= 29) {
             CachedTextLayout.visibleTooltip(58);
@@ -335,7 +335,7 @@ final class CachedTextLayout extends TextLayout {
           var15 = param0.text(true);
           var8 = param2.text(true);
           if (null == DisplayModeConfirmationDialog.accountSocket &&
-            !GridWidgetContainer.a((byte) -83, false)) {
+            !GridWidgetContainer.advanceAccountConnection((byte) -83, false)) {
             stackIn_8_0 = -1;
             return stackIn_8_0;
           }
@@ -404,7 +404,7 @@ final class CachedTextLayout extends TextLayout {
               ArchiveLoadingStage.nameSuggestions = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
-                NextLevelChoiceOverlay.a(false, LegacyOpenGlUnlitEffect.activeApplet(2));
+                NextLevelChoiceOverlay.setLegacyStatusFlag(false, LegacyOpenGlUnlitEffect.activeApplet(2));
                 MouseWheelInput.field_c = DisplayModeConfirmationDialog.unfortunatelyWeAreUnableText;
                 LegacyOpenGlTextureCache.closeAccountSocket((byte) -116);
                 LimitedRandomAccessFile.field_g = false;

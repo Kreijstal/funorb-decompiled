@@ -163,7 +163,7 @@ final class LegacyOpenGlTextureCache {
           if (2 == var5.field_p) {
             var7 = this.provider.loadPixels(guard - 25069, var6, var6, false, 0.699999988079071f, textureId);
           } else {
-            if (!PlayingSound.a(-83, (int) var5.field_d)) {
+            if (!PlayingSound.usesAlternativeTexturePixels(-83, (int) var5.field_d)) {
               var23 = this.provider.loadPixels(guard - 25069, var6, var6, false, 0.699999988079071f, textureId);
               stackIn_12_0 = null;
               stackIn_12_1 = null;
@@ -247,7 +247,7 @@ final class LegacyOpenGlTextureCache {
         if (2 == var5.field_p) {
           var7Lifetime1 = this.provider.loadPixels(guard - 25069, var6, var6, false, 0.699999988079071f, textureId);
         } else {
-          if (!PlayingSound.a(-83, (int) var5.field_d)) {
+          if (!PlayingSound.usesAlternativeTexturePixels(-83, (int) var5.field_d)) {
             var24 = this.provider.loadPixels(guard - 25069, var6, var6, false, 0.699999988079071f, textureId);
             stackIn_31_0 = null;
             stackIn_31_1 = null;

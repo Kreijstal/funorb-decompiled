@@ -212,7 +212,7 @@ final class LegacyOpenGlBitmapFont extends ToolkitFont {
               }
             }
           }
-          this.field_c = InteractiveWidget.a(param0, var6Lifetime1, var6Lifetime1, var30, false, 6406, 121, 6406);
+          this.field_c = InteractiveWidget.createLegacyByteSpriteTexture(param0, var6Lifetime1, var6Lifetime1, var30, false, 6406, 121, 6406);
           this.field_d = true;
         }
         this.field_c.setLinearFiltering(false, 0);

@@ -11,12 +11,12 @@ final class PlayingSound extends IntrusiveNode {
     int originalVolume;
     static Object legacyHeightNoise;
 
-    final static boolean a(int param0, int param1) {
-        int var2 = 90 / ((30 - param0) / 44);
-        if (param1 == 1) {
+    final static boolean usesAlternativeTexturePixels(int guard, int effectId) {
+        int var2 = 90 / ((30 - guard) / 44);
+        if (effectId == 1) {
           return false;
         }
-        if (param1 != 7) {
+        if (effectId != 7) {
           return true;
         }
         return false;
@@ -30,7 +30,7 @@ final class PlayingSound extends IntrusiveNode {
           scoreFilterLabels = null;
           return;
         }
-        PlayingSound.a(-56, -102);
+        PlayingSound.usesAlternativeTexturePixels(-56, -102);
         fullScreenText = null;
         legacyHeightNoise = null;
         scoreFilterLabels = null;

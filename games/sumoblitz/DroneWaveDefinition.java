@@ -28,9 +28,9 @@ final class DroneWaveDefinition extends IntrusiveNode {
         return this.waves;
     }
 
-    final static boolean a(int param0, int param1, byte param2) {
-        int var3 = -118 / ((param2 - 64) / 51);
-        return HardwareCubeMapSource.a(false, param0, param1) & ArchiveIndex.a(param0, param1, 65);
+    final static boolean hasDisabledMeshFeatureAndFlag2048(int otherFlags, int flags, byte guard) {
+        int var3 = -118 / ((guard - 64) / 51);
+        return HardwareCubeMapSource.isDisabledMeshFeature(false, otherFlags, flags) & ArchiveIndex.hasFlag2048(otherFlags, flags, 65);
     }
 
     static {

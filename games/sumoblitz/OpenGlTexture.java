@@ -121,11 +121,11 @@ abstract class OpenGlTexture implements GpuTexture {
         }
     }
 
-    final static int g(int param0) {
+    final static int clientPreparationPercent(int guard) {
         if (2 > TextureCoordinateGeneration.clientPreparationPhase) {
           return 0;
         }
-        if (param0 != 14296) {
+        if (guard != 14296) {
           return -117;
         }
         if (EmailValidationError.field_c == 0) {
@@ -162,7 +162,7 @@ abstract class OpenGlTexture implements GpuTexture {
           if (!EmailCredentials.field_j.loadIndex((byte) 127)) {
             return 43;
           }
-          if (!EmailCredentials.field_j.tryLoadNamedGroup("commonui", param0 ^ 14268)) {
+          if (!EmailCredentials.field_j.tryLoadNamedGroup("commonui", guard ^ 14268)) {
             return 57;
           }
           if (!LegacyOpenGlPostProcessManager.field_f.loadIndex((byte) 127)) {

@@ -318,14 +318,14 @@ class Drone {
         this.field_d = this.field_d + 1;
         if (this.droneType == 0 &&
           this.field_d * 20 / 1000 >= 30) {
-          UnderageAccountInfoPanel.b(24753, 247, 8);
+          UnderageAccountInfoPanel.awardAchievement(24753, 247, 8);
         }
         if (this.destructionTicks > 0) {
           this.velocityYQ8 = this.velocityYQ8 >> 1;
           this.destructionTicks = this.destructionTicks + 1;
           this.velocityXQ8 = this.velocityXQ8 >> 1;
           if (2 == this.destructionTicks) {
-            QuickChatCommand.a(this.xQ8, this.effects, -16240, 20, VertexBufferReference.field_a[this.droneType], this.yQ8);
+            QuickChatCommand.spawnBurstParticles(this.xQ8, this.effects, -16240, 20, VertexBufferReference.field_a[this.droneType], this.yQ8);
             var5 = new float[]{0.0f, -3.0f};
             var9 = FullscreenPromptController.rotateVector((byte) -99, var5, (float)this.facingRadians);
             var6 = var9;
@@ -499,7 +499,7 @@ class Drone {
         this.blastTicksRemaining = 12;
         this.blastActive = true;
         this.effects = new IntrusiveDeque();
-        QuickChatCommand.a(this.xQ8, this.effects, -16240, 40, VertexBufferReference.field_a[this.droneType], this.yQ8);
+        QuickChatCommand.spawnBurstParticles(this.xQ8, this.effects, -16240, 40, VertexBufferReference.field_a[this.droneType], this.yQ8);
         int var2 = 111 % ((param0 - 57) / 38);
         ArchiveLoadRequirement.playSoundEffect(19 + ExpandingRingEffect.nextRandomInt(3, HardwareGraphicsHeap.field_o, (byte) -96), true);
     }
@@ -601,7 +601,7 @@ class Drone {
             }
           }
         }
-        if (RenderPresentationException.a(false) &&
+        if (RenderPresentationException.isHardDifficulty(false) &&
           this.droneType != 0) {
           this.bounceScale = this.bounceScale * 2.0;
           this.targetSpeedQ8 = this.targetSpeedQ8 << 1;
@@ -1082,7 +1082,7 @@ class Drone {
           }
           this.blastTicksRemaining = 12;
           this.effects = new IntrusiveDeque();
-          QuickChatCommand.a(this.xQ8, this.effects, -16240, 50, VertexBufferReference.field_a[this.droneType], this.yQ8);
+          QuickChatCommand.spawnBurstParticles(this.xQ8, this.effects, -16240, 50, VertexBufferReference.field_a[this.droneType], this.yQ8);
           this.resetBlastButtonHold(-82);
           return;
         }

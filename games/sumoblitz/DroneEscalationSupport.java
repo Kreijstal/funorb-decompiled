@@ -94,13 +94,13 @@ final class DroneEscalationSupport {
           if (!DisplayPromptState.isDisplayPromptOpen((byte) 101)) {
             return;
           }
-          ScreenNameValidator.a(false, 4, (byte) -24);
+          ScreenNameValidator.showFullscreenPrompt(false, 4, (byte) -24);
           return;
         }
         if (!DisplayPromptState.isDisplayPromptOpen((byte) 101)) {
           return;
         }
-        ScreenNameValidator.a(false, 4, (byte) -24);
+        ScreenNameValidator.showFullscreenPrompt(false, 4, (byte) -24);
     }
 
     final static void spawnEscalatedEnemy(int guard, Drone source) {

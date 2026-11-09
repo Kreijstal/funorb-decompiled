@@ -969488,7 +969488,7 @@
       "commit": "5bf6bf34923dd6ca1094e2e2c652ac9f1e608d35",
       "subdirectory": "games/escapevector"
     },
-    "rulesSha256": "5f981fc5943f0e73d6deecc6ecc27a033b046869673e137e1e84a87b1d1a986b",
+    "rulesSha256": "30ea4f6273d5b631f01da7620a3ed8b347060c19e443cd5b64e81f35fedaef7a",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "82b7291a0348217948a2570cdb137b669e6eac075c4ee17a3d81d9ca9e38e18d",
     "outputTreeSha256": "2cb7493ca9183f6bb7a43b2accf244947f9c06e4f5186c2ddb3e0283040687ec",

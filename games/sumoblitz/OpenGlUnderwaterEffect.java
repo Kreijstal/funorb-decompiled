@@ -35,9 +35,9 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
             var3 = this.toolkit.nearPlane();
             var4 = (float)var2 - (float)(-var3 + var2) * 0.125f;
             var5 = -(0.25f * (float)(var2 - var3)) + (float)var2;
-            jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var5, var4, 1.0f / (float)this.toolkit.S(98), (float)this.toolkit.e((byte) 99) / 255.0f);
+            jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var5, var4, 1.0f / (float)this.toolkit.underwaterFogDivisor(98), (float)this.toolkit.underwaterFogIntensity((byte) 99) / 255.0f);
             this.toolkit.setActiveTextureUnit(1, -116);
-            this.toolkit.setTextureConstantColor(false, this.toolkit.v(15));
+            this.toolkit.setTextureConstantColor(false, this.toolkit.underwaterFogColor(15));
             this.toolkit.setActiveTextureUnit(0, -117);
           }
           return;
@@ -48,9 +48,9 @@ final class OpenGlUnderwaterEffect extends ShaderEffect {
           var3Lifetime1 = this.toolkit.nearPlane();
           var4Lifetime1 = (float)var2Lifetime1 - (float)(-var3Lifetime1 + var2Lifetime1) * 0.125f;
           var5Lifetime1 = -(0.25f * (float)(var2Lifetime1 - var3Lifetime1)) + (float)var2Lifetime1;
-          jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var5Lifetime1, var4Lifetime1, 1.0f / (float)this.toolkit.S(98), (float)this.toolkit.e((byte) 99) / 255.0f);
+          jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var5Lifetime1, var4Lifetime1, 1.0f / (float)this.toolkit.underwaterFogDivisor(98), (float)this.toolkit.underwaterFogIntensity((byte) 99) / 255.0f);
           this.toolkit.setActiveTextureUnit(1, -116);
-          this.toolkit.setTextureConstantColor(false, this.toolkit.v(15));
+          this.toolkit.setTextureConstantColor(false, this.toolkit.underwaterFogColor(15));
           this.toolkit.setActiveTextureUnit(0, -117);
         }
     }

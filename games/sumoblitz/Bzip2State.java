@@ -46,7 +46,7 @@ final class Bzip2State {
         field_J = null;
     }
 
-    final static int a(byte param0) {
+    final static int totalLevelScore(byte guard) {
         int var2 = 0;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -56,7 +56,7 @@ final class Bzip2State {
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
           var1_int = 0;
-          if (param0 != -94) {
+          if (guard != -94) {
             field_J = (DroneWave[]) null;
           }
           for (var2 = 0; var2 < 25; var2++) {
@@ -67,7 +67,7 @@ final class Bzip2State {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "ku.B(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "ku.B(" + guard + ')');
         }
     }
 

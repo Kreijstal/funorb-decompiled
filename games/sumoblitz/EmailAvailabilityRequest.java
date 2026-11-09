@@ -49,21 +49,21 @@ final class EmailAvailabilityRequest {
         int var3 = 18 % ((guard - 38) / 60);
     }
 
-    final static boolean a(int param0, byte param1, int param2) {
-        if (param1 != -113) {
-          EmailAvailabilityRequest.a(-103, (byte) 12, 126);
-          if ((param0 & 2048) == 0) {
+    final static boolean hasFlag2048AndOtherMask55(int flags, byte guard, int otherFlags) {
+        if (guard != -113) {
+          EmailAvailabilityRequest.hasFlag2048AndOtherMask55(-103, (byte) 12, 126);
+          if ((flags & 2048) == 0) {
             return false;
           }
-          if ((55 & param2) != 0) {
+          if ((55 & otherFlags) != 0) {
             return true;
           }
           return false;
         }
-        if ((param0 & 2048) == 0) {
+        if ((flags & 2048) == 0) {
           return false;
         }
-        if ((55 & param2) != 0) {
+        if ((55 & otherFlags) != 0) {
           return true;
         }
         return false;

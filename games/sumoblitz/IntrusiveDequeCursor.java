@@ -361,7 +361,7 @@ final class IntrusiveDequeCursor {
               return;
             }
             if (!MessageDialog.arcadeMode) {
-              UnderageAccountInfoPanel.b(24753, 241, 14);
+              UnderageAccountInfoPanel.awardAchievement(24753, 241, 14);
             }
             return;
           }
@@ -382,7 +382,7 @@ final class IntrusiveDequeCursor {
         if (MessageDialog.arcadeMode) {
           return;
         }
-        UnderageAccountInfoPanel.b(24753, 241, 14);
+        UnderageAccountInfoPanel.awardAchievement(24753, 241, 14);
     }
 
     final static int approximateIntegerSqrt(int guard, int value) {

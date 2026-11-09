@@ -18,7 +18,7 @@ final class IntroPreparation {
           IntroMeshResources.loadIntroMeshes(false, archive);
           IntroFinalFrameResources.loadIntroFinalFrame(archive, -84);
           SelectionOverlay.initializeIntroLighting(true);
-          ResourceRequest.a((byte) -90);
+          ResourceRequest.buildIntroGlow((byte) -90);
           if (guard < 125) {
             restartLevelText = (String) null;
           }

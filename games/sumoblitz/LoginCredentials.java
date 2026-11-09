@@ -139,15 +139,15 @@ abstract class LoginCredentials {
 
     abstract void writeCredentials(PacketBuffer packet, byte guard);
 
-    final static boolean a(int param0, int param1, int param2) {
-        int var3 = -24 % ((-63 - param0) / 40);
-        if (!BeveledCheckboxRenderer.a(param1, 13836, param2)) {
+    final static boolean hasFlag2048AndConditionalMasks(int guard, int flags, int otherFlags) {
+        int var3 = -24 % ((-63 - guard) / 40);
+        if (!BeveledCheckboxRenderer.hasFlag2048(flags, 13836, otherFlags)) {
           return false;
         }
-        if (((param1 & 36864) != 0 ? true : false) | EmailValidationError.a(param1, (byte) -107, param2) | LegacyOpenGlDisplayLists.a(param2, true, param1)) {
+        if (((flags & 36864) != 0 ? true : false) | EmailValidationError.hasAnyMask540800(flags, (byte) -107, otherFlags) | LegacyOpenGlDisplayLists.hasFlag256(otherFlags, true, flags)) {
           return true;
         }
-        return (ResetStatsConfirmationOverlay.a(param1, -22, param2) | ((8192 & param1) != 0 ? true : false) | GameInstructions.a(true, param2, param1)) & ((param2 & 55) == 0 ? true : false);
+        return (ResetStatsConfirmationOverlay.hasMask24OrAll544(flags, -22, otherFlags) | ((8192 & flags) != 0 ? true : false) | GameInstructions.hasFlag65536(true, otherFlags, flags)) & ((otherFlags & 55) == 0 ? true : false);
     }
 
     public static void releaseStatics(int param0) {

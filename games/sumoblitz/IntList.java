@@ -11,7 +11,7 @@ final class IntList {
     static int field_h;
     static SpriteData field_e;
 
-    final static int a(boolean param0, String param1, int param2, String param3, int param4, int param5, String param6) {
+    final static int pollAccountCreation(boolean param0, String param1, int param2, String param3, int param4, int param5, String param6) {
         LoginFieldValue var7 = null;
         RuntimeException var7_ref = null;
         LoginFieldValue var8 = null;
@@ -191,7 +191,7 @@ final class IntList {
           return var3;
         }
         var5 = (String) null;
-        IntList.a(false, (String) null, 93, (String) null, -122, -38, (String) null);
+        IntList.pollAccountCreation(false, (String) null, 93, (String) null, -122, -38, (String) null);
         var3Lifetime1 = this.values.length;
         while (var3Lifetime1 <= index) {
           if (!this.multiplicativeGrowth) {

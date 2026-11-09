@@ -18,7 +18,7 @@ final class LegacyOpenGlUnlitEffect extends LegacyOpenGlEffect {
     final boolean isSupported(byte guard) {
         if (guard > -64) {
           CharSequence var3 = (CharSequence) null;
-          LegacyOpenGlUnlitEffect.a(-87, (CharSequence) null, 43, true);
+          LegacyOpenGlUnlitEffect.isIntegerInRadix(-87, (CharSequence) null, 43, true);
           return true;
         }
         return true;
@@ -72,7 +72,7 @@ final class LegacyOpenGlUnlitEffect extends LegacyOpenGlEffect {
         return (java.applet.Applet) ((Object) AppletInstanceState.activeApplet);
     }
 
-    final static boolean a(int param0, CharSequence param1, int param2, boolean param3) {
+    final static boolean isIntegerInRadix(int radix, CharSequence text, int guard, boolean allowPlus) {
         int var8 = 0;
         int stackIn_43_0 = 0;
         RuntimeException stackIn_46_0 = null;
@@ -89,25 +89,25 @@ final class LegacyOpenGlUnlitEffect extends LegacyOpenGlEffect {
         int var11 = 0;
         var11 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (param2 != -46) {
+          if (guard != -46) {
             LegacyOpenGlUnlitEffect.activeApplet(-41);
           }
-          if (2 <= param0 &&
-            param0 <= 36) {
+          if (2 <= radix &&
+            radix <= 36) {
             var4_int = 0;
             var5 = 0;
             var6 = 0;
-            var7 = param1.length();
+            var7 = text.length();
             for (var8 = 0; var7 > var8; var8++) {
               boolean decompiledFrameRemainder0 = true;
-              var9 = param1.charAt(var8);
+              var9 = text.charAt(var8);
               if ((var8 == 0) &&
                 (var9 == 45)) {
                 var4_int = 1;
                 decompiledFrameRemainder0 = false;
               }
               if ((decompiledFrameRemainder0) && (var8 != 0 || (var9 != 43 ||
-                !param3))) {
+                !allowPlus))) {
                 if (var9 >= 48 &&
                   var9 <= 57) {
                   var9 -= 48;
@@ -123,14 +123,14 @@ final class LegacyOpenGlUnlitEffect extends LegacyOpenGlEffect {
                   }
                   var9 -= 87;
                 }
-                if (var9 >= param0) {
+                if (var9 >= radix) {
                   return false;
                 }
                 if (var4_int != 0) {
                   var9 = -var9;
                 }
-                var10 = var6 * param0 + var9;
-                if (var10 / param0 != var6) {
+                var10 = var6 * radix + var9;
+                if (var10 / radix != var6) {
                   return false;
                 }
                 var6 = var10;
@@ -140,18 +140,18 @@ final class LegacyOpenGlUnlitEffect extends LegacyOpenGlEffect {
             stackIn_43_0 = var5;
             return stackIn_43_0 != 0;
           }
-          throw new IllegalArgumentException("" + param0);
+          throw new IllegalArgumentException("" + radix);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_46_0 = var4;
-          stackIn_46_1 = new StringBuilder().append("ra.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_46_1 = new StringBuilder().append("ra.C(").append(radix).append(',');
+          if (text == null) {
             stackIn_47_2 = "null";
           } else {
             stackIn_47_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(guard).append(',').append(allowPlus).append(')').toString());
         }
     }
 

@@ -53,8 +53,8 @@ class TimedSceneEffect extends IntrusiveNode {
         return false;
     }
 
-    final static void c(int param0) {
-        if (param0 != 0) {
+    final static void requestReconnectCancel(int guard) {
+        if (guard != 0) {
           return;
         }
         ReflectionCheck.setAccountDialogResult(17, -103);

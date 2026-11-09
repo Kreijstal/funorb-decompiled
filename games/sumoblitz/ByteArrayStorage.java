@@ -88,7 +88,7 @@ abstract class ByteArrayStorage {
 
     abstract byte[] copyRange(int offset, int length, int guard);
 
-    final static boolean a(int param0, int param1) {
+    final static boolean areFirstLevelsCompleteOnHard(int count, int guard) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -97,9 +97,9 @@ abstract class ByteArrayStorage {
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
           var2_int = 0;
-          var3 = 53 / ((55 - param1) / 52);
+          var3 = 53 / ((55 - guard) / 52);
           while (true) {
-            if (param0 <= var2_int) {
+            if (count <= var2_int) {
               return true;
             }
             if (NineSlicePanel.field_d[var2_int]) {
@@ -112,7 +112,7 @@ abstract class ByteArrayStorage {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "nn.C(" + param0 + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var2), "nn.C(" + count + ',' + guard + ')');
         }
     }
 

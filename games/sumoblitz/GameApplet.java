@@ -892,7 +892,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 CompactMeshGeometry.refreshMaxHeapMiB(true);
                 this.replaceCanvas(1000);
-                ProgressDialog.field_R = SoftLruCache.a(IntroMeshResources.canvasHeight, LegacyOpenGlRidgedWaterEffect.field_h, 0, (java.awt.Component) ((Object) NineSlicePanel.field_f));
+                ProgressDialog.field_R = SoftLruCache.createRasterBuffer(IntroMeshResources.canvasHeight, LegacyOpenGlRidgedWaterEffect.field_h, 0, (java.awt.Component) ((Object) NineSlicePanel.field_f));
                 this.initializeGame(28196);
                 HardwareQuadBatchBuffers.field_a = LegacyCubeMapSource.createTickClock(false);
                 do {

@@ -145,7 +145,7 @@ final class HardwareTextureCache {
             if (2 == var12.field_p) {
               var7 = this.provider.loadPixels(-25069, var6, var6, false, 0.699999988079071f, textureId);
             } else {
-              if (PlayingSound.a(108, (int) var12.field_d)) {
+              if (PlayingSound.usesAlternativeTexturePixels(108, (int) var12.field_d)) {
                 var7 = this.provider.loadPixels(true, var6, (byte) -81, var6, 0.699999988079071f, textureId);
               } else {
                 var7 = this.provider.loadPixels(-25069, var6, var6, false, 0.699999988079071f, textureId);
@@ -171,7 +171,7 @@ final class HardwareTextureCache {
             this.textures.put((long)textureId, var18, (byte) 19);
             return var18;
           }
-          if (!PlayingSound.a(108, (int) var12.field_d)) {
+          if (!PlayingSound.usesAlternativeTexturePixels(108, (int) var12.field_d)) {
             var7Lifetime6 = this.provider.loadPixels(-25069, var6, var6, false, 0.699999988079071f, textureId);
             stackIn_40_0 = this.toolkit;
             stackIn_40_1 = var7Lifetime6;
@@ -214,7 +214,7 @@ final class HardwareTextureCache {
             this.textures.put((long)textureId, var33, (byte) 19);
             return var33;
           }
-          if (!PlayingSound.a(108, (int) var29.field_d)) {
+          if (!PlayingSound.usesAlternativeTexturePixels(108, (int) var29.field_d)) {
             var7Lifetime1Lifetime1 = this.provider.loadPixels(-25069, var6Lifetime1, var6Lifetime1, false, 0.699999988079071f, textureId);
             stackIn_83_0 = this.toolkit;
             stackIn_83_1 = var7Lifetime1Lifetime1;
@@ -258,7 +258,7 @@ final class HardwareTextureCache {
           this.textures.put((long)textureId, var30, (byte) 19);
           return var30;
         }
-        if (!PlayingSound.a(108, (int) var29.field_d)) {
+        if (!PlayingSound.usesAlternativeTexturePixels(108, (int) var29.field_d)) {
           var7Lifetime3 = this.provider.loadPixels(-25069, var6Lifetime1, var6Lifetime1, false, 0.699999988079071f, textureId);
           stackIn_66_0 = this.toolkit;
           stackIn_66_1 = var7Lifetime3;

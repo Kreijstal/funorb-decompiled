@@ -39,7 +39,7 @@ final class IntroMeshMaterial {
             return stackIn_3_0;
           }
           while (var2_int > var4) {
-            var3 = -var3 + ((var3 << 5) + HardwareReflectionEffect.a(true, text.charAt(var4)));
+            var3 = -var3 + ((var3 << 5) + HardwareReflectionEffect.encodeCp1252Character(true, text.charAt(var4)));
             var4++;
           }
           stackIn_7_0 = var3;

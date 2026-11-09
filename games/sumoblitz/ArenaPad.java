@@ -28,7 +28,7 @@ final class ArenaPad extends IntrusiveNode {
           waitingForLevelsText = null;
           waitingForTextTranslations = null;
           if (param0 != 1432625512) {
-            ArenaPad.a((PacketBuffer) null, (byte) -50);
+            ArenaPad.readPackedHiscoreStats((PacketBuffer) null, (byte) -50);
           }
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "nm.B(" + param0 + ')');
@@ -162,7 +162,7 @@ final class ArenaPad extends IntrusiveNode {
               this.triggerCooldownTicks = 200;
               this.exploding = true;
               ArchiveLoadRequirement.playSoundEffect(3, true);
-              QuickChatCommand.a(this.xQ8, this.effects, -16240, 25, 65535, this.yQ8);
+              QuickChatCommand.spawnBurstParticles(this.xQ8, this.effects, -16240, 25, 65535, this.yQ8);
             }
             decompiledFrameRemainder7 = !(this.explosionTicksRemaining <= 0);
             if (decompiledFrameRemainder7) {
@@ -197,7 +197,7 @@ final class ArenaPad extends IntrusiveNode {
                   if (12 == OpenGlShaderProgram.levelIndex) {
                     ValidationMessageWidget.field_P = true;
                   }
-                  QuickChatCommand.a(this.xQ8, this.effects, -16240, 25, 65535, this.yQ8);
+                  QuickChatCommand.spawnBurstParticles(this.xQ8, this.effects, -16240, 25, 65535, this.yQ8);
                   decompiledFrameRemainder7 = (var17 != 0);
                 }
                 if (decompiledFrameRemainder7) {
@@ -224,7 +224,7 @@ final class ArenaPad extends IntrusiveNode {
                   ValidationMessageWidget.field_P = true;
                 }
                 this.triggerCooldownTicks = 200;
-                QuickChatCommand.a(this.xQ8, this.effects, -16240, 25, 65535, this.yQ8);
+                QuickChatCommand.spawnBurstParticles(this.xQ8, this.effects, -16240, 25, 65535, this.yQ8);
                 decompiledFrameRemainder7 = (var17 != 0);
               }
             }
@@ -290,7 +290,7 @@ final class ArenaPad extends IntrusiveNode {
             }
             if (decompiledFrameCompleted0) {
               ArchiveLoadRequirement.playSoundEffect(stackIn_145_0, stackIn_145_1 != 0);
-              QuickChatCommand.a(this.xQ8, this.effects, -16240, 10, 16776960, this.yQ8);
+              QuickChatCommand.spawnBurstParticles(this.xQ8, this.effects, -16240, 10, 16776960, this.yQ8);
               decompiledFrameRemainder7 = (var17 != 0);
             }
           }
@@ -600,7 +600,7 @@ final class ArenaPad extends IntrusiveNode {
         }
     }
 
-    final static void a(PacketBuffer param0, byte param1) {
+    final static void readPackedHiscoreStats(PacketBuffer packet, byte guard) {
         int var2_int = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -610,34 +610,34 @@ final class ArenaPad extends IntrusiveNode {
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
-          if (param1 < 30) {
+          if (guard < 30) {
             ArenaPad.releaseStatics(-34);
           }
-          DisplayModeConfirmationDialog.field_U = param0.readUnsignedShort(255) << 5;
-          var2_int = param0.readUnsignedByte(-31302);
+          DisplayModeConfirmationDialog.field_U = packet.readUnsignedShort(255) << 5;
+          var2_int = packet.readUnsignedByte(-31302);
           DisplayModeConfirmationDialog.field_U = DisplayModeConfirmationDialog.field_U + (var2_int >> 3);
           SoftLruCache.field_f = 1835008 & var2_int << 18;
-          SoftLruCache.field_f = SoftLruCache.field_f + (param0.readUnsignedShort(255) << 2);
-          var2_intLifetime1 = param0.readUnsignedByte(-31302);
+          SoftLruCache.field_f = SoftLruCache.field_f + (packet.readUnsignedShort(255) << 2);
+          var2_intLifetime1 = packet.readUnsignedByte(-31302);
           SoftLruCache.field_f = SoftLruCache.field_f + (var2_intLifetime1 >> 6);
           ReassignUpgradesScreen.field_l = (63 & var2_intLifetime1) << 15;
-          ReassignUpgradesScreen.field_l = ReassignUpgradesScreen.field_l + (param0.readUnsignedByte(-31302) << 7);
-          var2_intLifetime2 = param0.readUnsignedByte(-31302);
+          ReassignUpgradesScreen.field_l = ReassignUpgradesScreen.field_l + (packet.readUnsignedByte(-31302) << 7);
+          var2_intLifetime2 = packet.readUnsignedByte(-31302);
           LegacyWaterTextureResources.field_d = 65536 & var2_intLifetime2 << 16;
           ReassignUpgradesScreen.field_l = ReassignUpgradesScreen.field_l + (var2_intLifetime2 >> 1);
-          LegacyWaterTextureResources.field_d = LegacyWaterTextureResources.field_d + param0.readUnsignedShort(255);
+          LegacyWaterTextureResources.field_d = LegacyWaterTextureResources.field_d + packet.readUnsignedShort(255);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_8_0 = var2;
           stackIn_8_1 = new StringBuilder().append("nm.G(");
-          if (param0 == null) {
+          if (packet == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(guard).append(')').toString());
         }
     }
 

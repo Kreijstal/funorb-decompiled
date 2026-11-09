@@ -97,11 +97,11 @@ final class IntrusiveNodeHashTable {
         return this.next(true);
     }
 
-    final static boolean a(boolean param0, int param1, int param2) {
-        if (param0) {
+    final static boolean hasFlag2048AndMask55(boolean guard, int flags, int unused) {
+        if (guard) {
           field_h = (String) null;
         }
-        return (QuickChatPhraseProvider.a(!param0 ? true : false, param1, param2) | BeveledCheckboxRenderer.b(param1, param2, -126) | UiWidget.a(param1, param2, 52)) & ContentTransitionPhase.a(param1, (byte) -91, param2);
+        return (QuickChatPhraseProvider.hasAnyMask33(!guard ? true : false, flags, unused) | BeveledCheckboxRenderer.hasAnyMask34(flags, unused, -126) | UiWidget.hasAnyMask52(flags, unused, 52)) & ContentTransitionPhase.hasFlag2048(flags, (byte) -91, unused);
     }
 
     final void put(IntrusiveNode node, int guard, long key) {

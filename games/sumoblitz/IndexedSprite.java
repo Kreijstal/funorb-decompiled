@@ -10,7 +10,7 @@ abstract class IndexedSprite {
     int offsetY;
     int width;
 
-    final static FullscreenCanvas a(int param0, int param1, int param2, int param3, PlatformTaskDispatcher param4, int param5) {
+    final static FullscreenCanvas createFullscreenCanvas(int width, int guard, int bitDepth, int height, PlatformTaskDispatcher dispatcher, int refreshRate) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         FullscreenCanvas var7 = null;
@@ -23,20 +23,20 @@ abstract class IndexedSprite {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = ResizingDialog.a(true, param4, param5, param2, param3, param0);
+          var8 = ResizingDialog.enterFullscreen(true, dispatcher, refreshRate, bitDepth, height, width);
           var6 = var8;
           if (var8 == null) {
             stackIn_2_0 = null;
             return (FullscreenCanvas) (stackIn_2_0);
           }
-          if (param1 != 8089) {
+          if (guard != 8089) {
             stackIn_5_0 = (FullscreenCanvas) null;
             return stackIn_5_0;
           }
           var7 = new FullscreenCanvas();
           var7.field_b = var8;
           var7.field_b.add((java.awt.Component) ((Object) var7));
-          var7.setBounds(0, 0, param0, param3);
+          var7.setBounds(0, 0, width, height);
           var7.addFocusListener(var7);
           var7.requestFocus();
           stackIn_7_0 = var7;
@@ -45,13 +45,13 @@ abstract class IndexedSprite {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = decompiledCaughtException;
           stackIn_10_0 = var6_ref;
-          stackIn_10_1 = new StringBuilder().append("pb.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_10_1 = new StringBuilder().append("pb.C(").append(width).append(',').append(guard).append(',').append(bitDepth).append(',').append(height).append(',');
+          if (dispatcher == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param5).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(refreshRate).append(')').toString());
         }
     }
 

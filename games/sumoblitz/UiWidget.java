@@ -810,11 +810,11 @@ class UiWidget extends IntrusiveNode {
         this(param0, HardwareTurbulentWaterNoise.widgetTheme.labelRenderer, param1);
     }
 
-    final static boolean a(int param0, int param1, int param2) {
-        if (param2 != 52) {
+    final static boolean hasAnyMask52(int flags, int unused, int guard) {
+        if (guard != 52) {
           return true;
         }
-        return 0 != (param0 & 52) ? true : false;
+        return 0 != (flags & 52) ? true : false;
     }
 
     boolean requestFocus(UiWidget root, byte guard) {

@@ -119,14 +119,14 @@ final class DisplayModeConfirmationDialog extends ResizingDialog implements Widg
           this.field_S.height = 80;
           this.field_S.renderer = (WidgetRenderer) ((Object) new TextWidgetRenderer(LegacyOpenGlDisplayLists.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(this.field_S, 117);
-          this.field_P = this.a((WidgetListener) (this), 20556, FourStatHiscoreRequest.acceptText);
-          this.field_Q = this.a((WidgetListener) (this), 20556, IntroMeshProjection.cancelText);
+          this.field_P = this.appendButton((WidgetListener) (this), 20556, FourStatHiscoreRequest.acceptText);
+          this.field_Q = this.appendButton((WidgetListener) (this), 20556, IntroMeshProjection.cancelText);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "qk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final InteractiveWidget a(WidgetListener param0, int param1, String param2) {
+    private final InteractiveWidget appendButton(WidgetListener listener, int guard, String text) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -139,13 +139,13 @@ final class DisplayModeConfirmationDialog extends ResizingDialog implements Widg
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new InteractiveWidget(param2, param0);
+          var4 = new InteractiveWidget(text, listener);
           var4.renderer = (WidgetRenderer) ((Object) new SpriteStripButtonRenderer());
           var5 = this.height - 6;
           this.height = this.height + 38;
           var4.setBounds(114, 15, var5, 30, -16 + this.width - 14);
-          this.addChild(var4, param1 - 20458);
-          if (param1 != 20556) {
+          this.addChild(var4, guard - 20458);
+          if (guard != 20556) {
             stackIn_2_0 = (InteractiveWidget) null;
             return stackIn_2_0;
           }
@@ -157,13 +157,13 @@ final class DisplayModeConfirmationDialog extends ResizingDialog implements Widg
           var4_ref = decompiledCaughtException;
           stackIn_7_0 = var4_ref;
           stackIn_7_1 = new StringBuilder().append("qk.E(");
-          if (param0 == null) {
+          if (listener == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(guard).append(',');
+          if (text == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";

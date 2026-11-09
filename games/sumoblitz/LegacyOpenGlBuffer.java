@@ -30,7 +30,7 @@ abstract class LegacyOpenGlBuffer {
 
     abstract void bind(int guard);
 
-    final static Sprite[] a(String param0, ResourceArchive param1, boolean param2, String param3) {
+    final static Sprite[] loadSpriteSheet(String fileName, ResourceArchive archive, boolean guard, String groupName) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -45,32 +45,32 @@ abstract class LegacyOpenGlBuffer {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param1.groupId(0, param3);
-          if (!param2) {
+          var4_int = archive.groupId(0, groupName);
+          if (!guard) {
             stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
-          var5 = param1.fileId(var4_int, param0, (byte) 126);
-          stackIn_4_0 = TextureGeneratorNode.loadOpaqueSprites((byte) -100, var5, param1, var4_int);
+          var5 = archive.fileId(var4_int, fileName, (byte) 126);
+          stackIn_4_0 = TextureGeneratorNode.loadOpaqueSprites((byte) -100, var5, archive, var4_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_7_0 = var4;
           stackIn_7_1 = new StringBuilder().append("kb.G(");
-          if (param0 == null) {
+          if (fileName == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
           stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
-          if (param1 == null) {
+          if (archive == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(guard).append(',');
+          if (groupName == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";

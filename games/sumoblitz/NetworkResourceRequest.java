@@ -13,7 +13,7 @@ final class NetworkResourceRequest extends ResourceRequest {
         field_v = null;
         if (guard != 62) {
           ResourceArchive var2 = (ResourceArchive) null;
-          NetworkResourceRequest.a(-52, (ResourceArchive) null, (ResourceArchive) null);
+          NetworkResourceRequest.initializeArchiveHook(-52, (ResourceArchive) null, (ResourceArchive) null);
         }
     }
 
@@ -27,17 +27,17 @@ final class NetworkResourceRequest extends ResourceRequest {
         return 50;
     }
 
-    final static void a(int param0, ResourceArchive param1, ResourceArchive param2) {
+    final static void initializeArchiveHook(int guard, ResourceArchive firstArchive, ResourceArchive secondArchive) {
         try {
-          if (param0 != 7966) {
+          if (guard != 7966) {
             NetworkResourceRequest.clearStaticState((byte) 80);
           }
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "fv.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "fv.F(" + guard + ',' + (firstArchive != null ? "{...}" : "null") + ',' + (secondArchive != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void e(byte param0) {
+    final static void serviceAudioOutputs(byte guard) {
         int var1_int = 0;
         PlayingSound var2 = null;
         int var3 = 0;
@@ -48,7 +48,7 @@ final class NetworkResourceRequest extends ResourceRequest {
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
           EmailCredentials.field_f.serviceOutput();
-          var1_int = -111 % ((param0 + 34) / 35);
+          var1_int = -111 % ((guard + 34) / 35);
           LegacyOpenGlEffectManager.field_a.serviceOutput();
           DisplayModeFailure.soundCleanupCountdown = DisplayModeFailure.soundCleanupCountdown - 1;
           if (DisplayModeFailure.soundCleanupCountdown == 0) {
@@ -81,7 +81,7 @@ final class NetworkResourceRequest extends ResourceRequest {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "fv.G(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "fv.G(" + guard + ')');
         }
     }
 

@@ -49,14 +49,14 @@ final class AccountConnectionPhase {
         RuntimeException var2 = null;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          LegacyOpenGlAssemblyProgram.a(GameplaySession.field_k, GameApplet.field_l, (byte) -107, LoginCredentials.field_d, limit, 0, true);
+          LegacyOpenGlAssemblyProgram.sortHiscoreRows(GameplaySession.field_k, GameApplet.field_l, (byte) -107, LoginCredentials.field_d, limit, 0, true);
           if (guard != 13136) {
             field_d = (int[]) null;
           }
           for (var2_int = 0; var2_int < LoginCredentials.field_d; var2_int++) {
             FourIntReadRequest.field_q[limit + var2_int] = var2_int;
           }
-          LegacyOpenGlAssemblyProgram.a(NoiseSliceGenerator.field_c, HardwareUnlitEffect.field_f, (byte) -107, limit + LoginCredentials.field_d, limit + limit, limit, false);
+          LegacyOpenGlAssemblyProgram.sortHiscoreRows(NoiseSliceGenerator.field_c, HardwareUnlitEffect.field_f, (byte) -107, limit + LoginCredentials.field_d, limit + limit, limit, false);
           if (LoginCredentials.field_d > limit) {
             LoginCredentials.field_d = limit;
           }

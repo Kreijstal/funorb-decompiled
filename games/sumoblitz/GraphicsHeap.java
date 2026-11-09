@@ -5,7 +5,7 @@ abstract class GraphicsHeap extends IntrusiveNode {
     static int tooltipY;
     static int[] menuLeft;
 
-    final static void a(byte[] param0, int[] param1, int param2, int param3, int param4) {
+    final static void regroupIntroFaces(byte[] faceGroups, int[] groupOffsets, int remaining, int firstBucket, int face) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         byte dupTemp$2 = 0;
@@ -22,27 +22,27 @@ abstract class GraphicsHeap extends IntrusiveNode {
         int var7 = 0;
         var7 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var5_int = param3;
+          var5_int = firstBucket;
           while (true) {
             if (ModalDialog.field_C.length <= var5_int) {
               return;
             }
-            param2 = ModalDialog.field_C[var5_int];
+            remaining = ModalDialog.field_C[var5_int];
             var6 = var5_int << 4;
             while (true) {
-              incrementValue$0 = param2;
-              param2--;
+              incrementValue$0 = remaining;
+              remaining--;
               if (incrementValue$0 == 0) {
                 var5_int++;
                 break;
               }
               incrementValue$1 = var6;
               var6++;
-              param4 = Sumoblitz.field_G[incrementValue$1];
-              dupTemp$2 = param0[param4];
-              dupTemp$3 = param1[dupTemp$2];
-              param1[dupTemp$2] = dupTemp$3 + 1;
-              Sumoblitz.field_G[dupTemp$3] = param4;
+              face = Sumoblitz.field_G[incrementValue$1];
+              dupTemp$2 = faceGroups[face];
+              dupTemp$3 = groupOffsets[dupTemp$2];
+              groupOffsets[dupTemp$2] = dupTemp$3 + 1;
+              Sumoblitz.field_G[dupTemp$3] = face;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -50,18 +50,18 @@ abstract class GraphicsHeap extends IntrusiveNode {
           var5 = decompiledCaughtException;
           stackIn_10_0 = var5;
           stackIn_10_1 = new StringBuilder().append("za.I(");
-          if (param0 == null) {
+          if (faceGroups == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
           stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
-          if (param1 == null) {
+          if (groupOffsets == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(remaining).append(',').append(firstBucket).append(',').append(face).append(')').toString());
         }
     }
 
@@ -74,8 +74,8 @@ abstract class GraphicsHeap extends IntrusiveNode {
         menuLeft = null;
     }
 
-    final static int c(boolean param0) {
-        if (param0) {
+    final static int mouseInputSnapshotCount(boolean guard) {
+        if (guard) {
           menuLeft = (int[]) null;
           return LegacyOpenGlTexture.field_h;
         }

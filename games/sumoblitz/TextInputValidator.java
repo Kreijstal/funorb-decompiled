@@ -42,14 +42,14 @@ abstract class TextInputValidator extends DebouncedInputValidator implements Tex
           this.markChanged((byte) -101);
           if (guard > -127) {
             ResourceArchive var4 = (ResourceArchive) null;
-            TextInputValidator.a(-98, -50, (ResourceArchive) null, -100);
+            TextInputValidator.loadSprite(-98, -50, (ResourceArchive) null, -100);
           }
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "na.I(" + (source != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 
-    final static Sprite a(int param0, int param1, ResourceArchive param2, int param3) {
+    final static Sprite loadSprite(int fileId, int guard, ResourceArchive archive, int groupId) {
         RuntimeException var4 = null;
         Sprite stackIn_5_0 = null;
         Sprite stackIn_7_0 = null;
@@ -58,11 +58,11 @@ abstract class TextInputValidator extends DebouncedInputValidator implements Tex
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!SpriteSheetSupport.decodeSpriteSheet(param2, param0, param3, param1 ^ 30429)) {
+          if (!SpriteSheetSupport.decodeSpriteSheet(archive, fileId, groupId, guard ^ 30429)) {
             return null;
           }
-          if (param1 == -11481) {
-            stackIn_7_0 = InstrumentNoteMask.c((byte) -8);
+          if (guard == -11481) {
+            stackIn_7_0 = InstrumentNoteMask.buildFirstDecodedSprite((byte) -8);
             return stackIn_7_0;
           }
           stackIn_5_0 = (Sprite) null;
@@ -71,13 +71,13 @@ abstract class TextInputValidator extends DebouncedInputValidator implements Tex
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_10_0 = var4;
-          stackIn_10_1 = new StringBuilder().append("na.R(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_10_1 = new StringBuilder().append("na.R(").append(fileId).append(',').append(guard).append(',');
+          if (archive == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(groupId).append(')').toString());
         }
     }
 

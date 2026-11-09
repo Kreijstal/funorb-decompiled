@@ -29,7 +29,7 @@ final class NextLevelChoiceOverlay extends SelectionOverlay {
           if (!guard) {
             return;
           }
-          DelegatingCanvas.a(IntroMeshProjection.field_c, 360, -5, -16777216, 3, toolkit, 650, 50, 1, guard);
+          DelegatingCanvas.drawToolkitNineSlice(IntroMeshProjection.field_c, 360, -5, -16777216, 3, toolkit, 650, 50, 1, guard);
           AccountStatusDialogState.headingFont.drawCenteredText(AccountStatusDialogState.continueToNextLevelText, -1, -16777216, 150, 320, 0);
           var3_int = 45;
           var4 = 0;
@@ -37,7 +37,7 @@ final class NextLevelChoiceOverlay extends SelectionOverlay {
             var5 = toolkit;
             var6 = var3_int;
             var7 = IntroMeshProjection.field_c;
-            DelegatingCanvas.a(var7, 100, var6, 0, 1, var5, 250, 200, 1, true);
+            DelegatingCanvas.drawToolkitNineSlice(var7, 100, var6, 0, 1, var5, 250, 200, 1, true);
             if (this.hoveredOption == var4) {
               ForceFieldRingEffect.field_t.drawCenteredText(NextLevelChoiceLabels.choices[var4], -1, -16777216, 258, var3_int + 125 - 4, 0);
             } else {
@@ -133,22 +133,22 @@ final class NextLevelChoiceOverlay extends SelectionOverlay {
         }
     }
 
-    final static void a(boolean param0, java.applet.Applet param1) {
+    final static void setLegacyStatusFlag(boolean guard, java.applet.Applet applet) {
         String var2 = null;
         String var3 = null;
         long var4 = 0L;
         try {
           ShaderEffect.field_d = true;
           var2 = "tuhstatbut";
-          if (param0) {
+          if (guard) {
             java.applet.Applet var6 = (java.applet.Applet) null;
-            NextLevelChoiceOverlay.a(true, (java.applet.Applet) null);
+            NextLevelChoiceOverlay.setLegacyStatusFlag(true, (java.applet.Applet) null);
           }
           var3 = "rvnadlm";
           var4 = -1L;
-          BufferedCacheFile.a(var4, param1, true, var3, var2);
+          BufferedCacheFile.setBrowserCookie(var4, applet, true, var3, var2);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "bw.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "bw.I(" + guard + ',' + (applet != null ? "{...}" : "null") + ')');
         }
     }
 

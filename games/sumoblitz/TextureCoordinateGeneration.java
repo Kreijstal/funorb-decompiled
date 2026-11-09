@@ -5,11 +5,11 @@ final class TextureCoordinateGeneration {
     static int[] field_b;
     static int clientPreparationPhase;
 
-    final static void a(int param0, int param1) {
-        if (param1 <= 114) {
+    final static void stopSoundStream(int index, int guard) {
+        if (guard <= 114) {
           return;
         }
-        PcmSampleStream var2 = ImageProducerRasterBuffer.field_n[param0];
+        PcmSampleStream var2 = ImageProducerRasterBuffer.field_n[index];
         GpuDataType.removeSoundStream(125, var2);
     }
 

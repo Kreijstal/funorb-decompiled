@@ -102,7 +102,7 @@ final class FontMetrics {
           var15 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var15 >= var14))) {
-            var16 = HardwareReflectionEffect.a(true, text.charAt(var15)) & 255;
+            var16 = HardwareReflectionEffect.encodeCp1252Character(true, text.charAt(var15)) & 255;
             var17 = 0;
             stackIn_164_0 = ~var16;
             stackIn_164_1 = -61;
@@ -425,7 +425,7 @@ final class FontMetrics {
                 }
                 if ((decompiledFrameRemainder0) &&
                   (var4_int == -1)) {
-                  var6 = var6 + (255 & this.advances[HardwareReflectionEffect.a(true, (char) var9) & 255]);
+                  var6 = var6 + (255 & this.advances[HardwareReflectionEffect.encodeCp1252Character(true, (char) var9) & 255]);
                   if (null != this.kerningTable &&
                     var5 != -1) {
                     var6 = var6 + this.kerningTable[var5][var9];
@@ -599,7 +599,7 @@ final class FontMetrics {
                 }
                 if ((decompiledFrameRemainder0) &&
                   (var5_int == -1)) {
-                  var7 = var7 + (this.advances[HardwareReflectionEffect.a(true, (char) var11) & 255] & 255);
+                  var7 = var7 + (this.advances[HardwareReflectionEffect.encodeCp1252Character(true, (char) var11) & 255] & 255);
                   if (null != this.kerningTable &&
                     var6 != -1) {
                     var7 = var7 + this.kerningTable[var6][var11];

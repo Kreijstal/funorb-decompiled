@@ -16,7 +16,7 @@ abstract class ResizingDialog extends ModalDialog {
         this.finishResize((byte) -128);
         if (guard != 0) {
           PlatformTaskDispatcher var3 = (PlatformTaskDispatcher) null;
-          ResizingDialog.a(true, (PlatformTaskDispatcher) null, -72, -89, 23, -11);
+          ResizingDialog.enterFullscreen(true, (PlatformTaskDispatcher) null, -72, -89, 23, -11);
         }
         return super.finishAnimation(0);
     }
@@ -34,7 +34,7 @@ abstract class ResizingDialog extends ModalDialog {
         try {
           if (guard != -11) {
             var4 = (PlatformTaskDispatcher) null;
-            ResizingDialog.a(false, (PlatformTaskDispatcher) null, -97, 35, 94, -35);
+            ResizingDialog.enterFullscreen(false, (PlatformTaskDispatcher) null, -97, 35, 94, -35);
           }
           stackIn_3_0 = toolkit.createSprite(data, false);
           return stackIn_3_0;
@@ -189,7 +189,7 @@ abstract class ResizingDialog extends ModalDialog {
         }
     }
 
-    final static java.awt.Frame a(boolean param0, PlatformTaskDispatcher param1, int param2, int param3, int param4, int param5) {
+    final static java.awt.Frame enterFullscreen(boolean guard, PlatformTaskDispatcher dispatcher, int refreshRate, int bitDepth, int height, int width) {
         int var8 = 0;
         Object stackIn_8_0 = null;
         Object stackIn_35_0 = null;
@@ -207,11 +207,11 @@ abstract class ResizingDialog extends ModalDialog {
         PlatformTask var11 = null;
         var9 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (!param1.supportsFullscreen((byte) 125)) {
+          if (!dispatcher.supportsFullscreen((byte) 125)) {
             return null;
           }
-          if (param3 == 0) {
-            var10 = DisplaySizeController.listFullscreenModes((byte) -73, param1);
+          if (bitDepth == 0) {
+            var10 = DisplaySizeController.listFullscreenModes((byte) -73, dispatcher);
             var6 = var10;
             if (var6 == null) {
               stackIn_8_0 = null;
@@ -219,12 +219,12 @@ abstract class ResizingDialog extends ModalDialog {
             }
             var7_int = 0;
             for (var8 = 0; var8 < var10.length; var8++) {
-              if (param5 == var10[var8].width &&
-                var10[var8].height == param4 && ((param2 == 0 ||
-                var10[var8].refreshRate == param2) &&
+              if (width == var10[var8].width &&
+                var10[var8].height == height && ((refreshRate == 0 ||
+                var10[var8].refreshRate == refreshRate) &&
                 (var7_int == 0 ||
-                !(param3 >= var10[var8].bitDepth)))) {
-                param3 = var10[var8].bitDepth;
+                !(bitDepth >= var10[var8].bitDepth)))) {
+                bitDepth = var10[var8].bitDepth;
                 var7_int = 1;
               }
             }
@@ -232,7 +232,7 @@ abstract class ResizingDialog extends ModalDialog {
               return null;
             }
           }
-          var11 = param1.enterFullscreen(false, param2, param3, param5, param4);
+          var11 = dispatcher.enterFullscreen(false, refreshRate, bitDepth, width, height);
           while (0 == var11.status) {
             TextureCombineOperation.sleepMillis(10L, (byte) 118);
           }
@@ -241,26 +241,26 @@ abstract class ResizingDialog extends ModalDialog {
             stackIn_35_0 = null;
             return (java.awt.Frame) (stackIn_35_0);
           }
-          if (!param0) {
+          if (!guard) {
             field_H = (ToolkitSprite[]) null;
           }
           if (var11.status != 2) {
             return var7;
           }
-          OpenGlTransparentWaterEffect.exitFullscreen(var7, param1, false);
+          OpenGlTransparentWaterEffect.exitFullscreen(var7, dispatcher, false);
           stackIn_41_0 = null;
           return (java.awt.Frame) (stackIn_41_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = decompiledCaughtException;
           stackIn_44_0 = var6_ref;
-          stackIn_44_1 = new StringBuilder().append("hf.IA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_44_1 = new StringBuilder().append("hf.IA(").append(guard).append(',');
+          if (dispatcher == null) {
             stackIn_45_2 = "null";
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(refreshRate).append(',').append(bitDepth).append(',').append(height).append(',').append(width).append(')').toString());
         }
     }
 

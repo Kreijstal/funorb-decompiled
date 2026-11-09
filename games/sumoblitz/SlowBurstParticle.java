@@ -11,9 +11,9 @@ final class SlowBurstParticle extends TimedSceneEffect {
     static ContentDialog field_y;
     private int textureKind;
 
-    final static void e(int param0) {
+    final static void showProgressDialogAndSetResult(int result) {
         SoftwareRenderBuffer.showProgressDialog(5178);
-        ReflectionCheck.setAccountDialogResult(param0, param0 - 31);
+        ReflectionCheck.setAccountDialogResult(result, result - 31);
     }
 
     final boolean updateAndIsExpired(int param0) {
@@ -163,9 +163,9 @@ final class SlowBurstParticle extends TimedSceneEffect {
             for (var6_int = 1; var4 > var6_int; var6_int++) {
               RenderPresentationException.field_b[var6_int] = var13.readCp1252String(-1);
             }
-            AlternateUsernameCredentials.b(var4, -2147483648, var5);
+            AlternateUsernameCredentials.initializeHiscoreRows(var4, -2147483648, var5);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
-              ArenaPad.a(var15, (byte) 61);
+              ArenaPad.readPackedHiscoreStats(var15, (byte) 61);
               if (var6_intLifetime1 == 0) {
                 HardwareUnlitEffect.appendHiscoreRow(ReassignUpgradesScreen.field_l, DisplayModeConfirmationDialog.field_U, true, var6_intLifetime1, SoftLruCache.field_f, LegacyWaterTextureResources.field_d);
               } else {

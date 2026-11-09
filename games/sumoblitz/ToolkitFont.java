@@ -355,7 +355,7 @@ abstract class ToolkitFont {
           }
           for (var13 = 0; var13 < var12; var13++) {
             boolean decompiledFrameRemainder0 = true;
-            var14 = (char)(255 & HardwareReflectionEffect.a(true, text.charAt(var13)));
+            var14 = (char)(255 & HardwareReflectionEffect.encodeCp1252Character(true, text.charAt(var13)));
             if (60 != var14) {
               if (62 == var14 &&
                 var10_int != -1) {
@@ -503,16 +503,16 @@ abstract class ToolkitFont {
         int var9 = 0;
         int var13 = Sumoblitz.field_L ? 1 : 0;
         int var8Lifetime1;
-        ToolkitImageProducerBuffer.field_v = LegacyOpenGlBuffer.a("frame_top", graphicsArchive, true, "commonui");
-        DropDownListWidget.field_O = LegacyOpenGlBuffer.a("frame_bottom", graphicsArchive, true, "commonui");
+        ToolkitImageProducerBuffer.field_v = LegacyOpenGlBuffer.loadSpriteSheet("frame_top", graphicsArchive, true, "commonui");
+        DropDownListWidget.field_O = LegacyOpenGlBuffer.loadSpriteSheet("frame_bottom", graphicsArchive, true, "commonui");
         HotspotTextWidget.field_E = UsernameCredentials.loadNamedSprite("commonui", "jagex_logo_grey", -104, graphicsArchive);
-        LevelCompleteUpgradeScreen.field_j = LegacyOpenGlBuffer.a("button", graphicsArchive, true, "commonui");
+        LevelCompleteUpgradeScreen.field_j = LegacyOpenGlBuffer.loadSpriteSheet("button", graphicsArchive, true, "commonui");
         ToolkitRasterStateCacheEntry.field_m = DelayedInboundPacket.loadNamedSprites(graphicsArchive, "commonui", (byte) -56, "validation");
         MouseInputShutdown.field_a = (LegacyBitmapFont) ((Object) DisplayModeFailure.loadNamedAlphaFont(fontArchive, true, "commonui", "arezzo12", graphicsArchive));
         TextCaretLayout.field_b = (LegacyBitmapFont) ((Object) DisplayModeFailure.loadNamedAlphaFont(fontArchive, true, "commonui", "arezzo14", graphicsArchive));
         LegacyOpenGlDisplayLists.field_a = (LegacyBitmapFont) ((Object) DisplayModeFailure.loadNamedAlphaFont(fontArchive, true, "commonui", "arezzo14bold", graphicsArchive));
         Sprite var17 = new Sprite(extraArchive.fetchNamedFile("", "button.gif", -1), (java.awt.Component) ((Object) NineSlicePanel.field_f));
-        ScrollPane.a((byte) 83, graphicsArchive, "dropdown", "commonui");
+        ScrollPane.loadIndexedSprite((byte) 83, graphicsArchive, "dropdown", "commonui");
         RasterIndexedSprite[] var5 = ShaderEffect.loadNamedIndexedSprites("screen_options", graphicsArchive, 73, "commonui");
         GameDefinitionLoader.field_d = new RasterIndexedSprite[4];
         WidgetStateStyle.field_c = new RasterIndexedSprite[4];

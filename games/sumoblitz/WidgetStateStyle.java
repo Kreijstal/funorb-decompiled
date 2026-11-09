@@ -82,9 +82,9 @@ final class WidgetStateStyle {
 
     final static void initializePlayerDrone(int guard) {
         SpriteMask.drones[0] = (Drone) ((Object) new PlayerDrone(81920, 61440));
-        SpriteMask.drones[0].speedLevel = !RenderPresentationException.a(false) ? 5 : 10;
-        SpriteMask.drones[0].tractionLevel = !RenderPresentationException.a(false) ? 5 : 10;
-        SpriteMask.drones[0].bounceLevel = RenderPresentationException.a(false) ? 10 : 5;
+        SpriteMask.drones[0].speedLevel = !RenderPresentationException.isHardDifficulty(false) ? 5 : 10;
+        SpriteMask.drones[0].tractionLevel = !RenderPresentationException.isHardDifficulty(false) ? 5 : 10;
+        SpriteMask.drones[0].bounceLevel = RenderPresentationException.isHardDifficulty(false) ? 10 : 5;
         if (guard <= 68) {
           WidgetStateStyle.releaseStatics((byte) 108);
         }

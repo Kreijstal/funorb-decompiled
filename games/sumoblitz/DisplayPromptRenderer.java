@@ -136,10 +136,10 @@ final class DisplayPromptRenderer {
         field_b = null;
     }
 
-    final static boolean a(int param0) {
+    final static boolean armReconnectDelay(int guard) {
         BeveledTextInputRenderer.field_o = true;
         field_a = 15000L + IntroMeshResources.monotonicTimeMillis(-13);
-        if (param0 < -26) {
+        if (guard < -26) {
           return LoginDialogNavigation.field_a == 11 ? true : false;
         }
         field_b = (QuickChatCommand) null;
@@ -258,7 +258,7 @@ final class DisplayPromptRenderer {
           }
           return;
         }
-        DisplayPromptRenderer.a(-9);
+        DisplayPromptRenderer.armReconnectDelay(-9);
         if (SocketJs5Client.field_p[levelIndex]) {
           return;
         }
@@ -387,7 +387,7 @@ final class DisplayPromptRenderer {
               if (guard > 122) {
                 return true;
               }
-              DisplayPromptRenderer.a(-58);
+              DisplayPromptRenderer.armReconnectDelay(-58);
               return true;
             }
             if (HardwareQuadBatchBuffers.isAllowedNameCharacter((byte) 110, text.charAt(var3_int))) {

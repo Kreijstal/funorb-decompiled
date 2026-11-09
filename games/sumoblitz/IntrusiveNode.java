@@ -136,11 +136,11 @@ class IntrusiveNode {
         return false;
     }
 
-    final static RendererPreference[] b(int param0) {
+    final static RendererPreference[] defaultRendererPreferences(int guard) {
         if (null == HardwareReflectionEffect.field_e) {
           HardwareReflectionEffect.field_e = GameProgressUpdate.rendererPreferences(110, new int[]{1, 0});
         }
-        if (param0 == -16754) {
+        if (guard == -16754) {
           return HardwareReflectionEffect.field_e;
         }
         Throwable var2 = (Throwable) null;

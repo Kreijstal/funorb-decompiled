@@ -18,7 +18,7 @@ final class QuickChatCommand {
         field_e = null;
     }
 
-    final static void a(int param0, IntrusiveDeque param1, int param2, int param3, int param4, int param5) {
+    final static void spawnBurstParticles(int param0, IntrusiveDeque param1, int param2, int param3, int param4, int param5) {
         float[] dupTemp$0 = null;
         int stackIn_4_0 = 0;
         int stackIn_10_0 = 0;

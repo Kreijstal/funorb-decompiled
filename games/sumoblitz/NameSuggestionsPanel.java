@@ -30,7 +30,7 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
         orbPointsText = null;
     }
 
-    final void a(String[] param0, boolean param1) {
+    final void setSuggestions(String[] names, boolean guard) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_18_0 = null;
@@ -45,16 +45,16 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
         var6 = Sumoblitz.field_L ? 1 : 0;
         try {
           this.children.clear(125);
-          if (param0 != null &&
-            0 != param0.length) {
-            var3_int = param0.length;
+          if (names != null &&
+            0 != names.length) {
+            var3_int = names.length;
             this.field_B = new String[var3_int];
-            if (param1) {
+            if (guard) {
               var7 = (String[]) null;
-              this.a((String[]) null, true);
+              this.setSuggestions((String[]) null, true);
             }
             for (var4_int = 0; var3_int > var4_int; var4_int++) {
-              this.field_B[var4_int] = LegacyOpenGlRenderbuffer.canonicalizeBase37Name((CharSequence) ((Object) param0[var4_int]), (byte) 38).replace(' ', ' ');
+              this.field_B[var4_int] = LegacyOpenGlRenderbuffer.canonicalizeBase37Name((CharSequence) ((Object) names[var4_int]), (byte) 38).replace(' ', ' ');
             }
             var4 = new LinkWidgetRenderer(TextCaretLayout.field_b, 0, 1);
             this.field_C = new InteractiveWidget[1 + var3_int];
@@ -78,12 +78,12 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
           var3 = decompiledCaughtException;
           stackIn_18_0 = var3;
           stackIn_18_1 = new StringBuilder().append("pe.E(");
-          if (param0 == null) {
+          if (names == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(guard).append(')').toString());
         }
     }
 
@@ -198,95 +198,95 @@ final class NameSuggestionsPanel extends WidgetContainer implements WidgetAction
         }
     }
 
-    final static void a(ResourceArchive param0, ResourceArchive param1, int param2, ResourceArchive param3) {
-        SecondaryNodeHashTable.field_g = SpriteData.loadSheet(param3, "", "fontalpha");
-        SocketConnector.field_a = Js5Client.a(param1, (byte) -79, "font", "");
-        ArchiveLoadingStage.field_b = SpriteData.loadSheet(param3, "", "fontglow");
+    final static void loadGameSprites(ResourceArchive commonGraphics, ResourceArchive fontMetrics, int guard, ResourceArchive gameGraphics) {
+        SecondaryNodeHashTable.field_g = SpriteData.loadSheet(gameGraphics, "", "fontalpha");
+        SocketConnector.field_a = Js5Client.loadFontMetrics(fontMetrics, (byte) -79, "font", "");
+        ArchiveLoadingStage.field_b = SpriteData.loadSheet(gameGraphics, "", "fontglow");
         VertexStreamLayout.field_c = SocketConnector.field_a;
-        OpenGlTransparentWaterEffect.field_i = SpriteData.loadSheet(param3, "", "smallfontalpha");
-        AccountConnectionPhase.field_a = Js5Client.a(param1, (byte) -39, "smallfont", "");
-        LegacyOpenGlReflectionEffect.field_j = SpriteData.loadSheet(param3, "", "glowfontalpha");
+        OpenGlTransparentWaterEffect.field_i = SpriteData.loadSheet(gameGraphics, "", "smallfontalpha");
+        AccountConnectionPhase.field_a = Js5Client.loadFontMetrics(fontMetrics, (byte) -39, "smallfont", "");
+        LegacyOpenGlReflectionEffect.field_j = SpriteData.loadSheet(gameGraphics, "", "glowfontalpha");
         RsaEnvelopeScratch.field_a = AccountConnectionPhase.field_a;
-        DropDownWidget.field_F = SpriteData.loadSheet(param3, "", "boldfontalpha");
-        LoginTextResources.field_b = Js5Client.a(param1, (byte) -36, "boldfont", "");
-        ProxySocketConnector.field_f = SpriteData.loadSheet(param3, "", "boldglowfontalpha");
+        DropDownWidget.field_F = SpriteData.loadSheet(gameGraphics, "", "boldfontalpha");
+        LoginTextResources.field_b = Js5Client.loadFontMetrics(fontMetrics, (byte) -36, "boldfont", "");
+        ProxySocketConnector.field_f = SpriteData.loadSheet(gameGraphics, "", "boldglowfontalpha");
         IntroLightingLookup.field_b = LoginTextResources.field_b;
-        field_F = SpriteData.loadSheet(param3, "", "menu_frame");
-        MidiNoteMixer.field_q = SpriteData.loadSheet(param3, "", "tooltip_kit");
-        SoftwareRenderTarget.field_b = SpriteData.loadSheet(param3, "", "achievements");
-        CompactMeshGeometry.field_N = SpriteData.loadSprite(param0, "basic", "unachieved");
-        MusicCrossfadeStream.field_p = SpriteData.loadSprite(param0, "basic", "locked");
-        IntrusiveNode.field_d = SpriteData.loadSprite(param3, "", "titleimage");
-        OpenGlCubeTexture.field_i = SpriteData.loadSprite(param3, "", "lock");
-        AccountStatusDialogState.heartSpriteData = SpriteData.loadSprite(param3, "", "heart");
-        HiscoreRequestQueue.field_d = SpriteData.loadSprite(param3, "", "skull");
-        TextLayoutLine.field_c = SpriteData.loadSheet(param3, "", "slider");
-        if (param2 != 20) {
+        field_F = SpriteData.loadSheet(gameGraphics, "", "menu_frame");
+        MidiNoteMixer.field_q = SpriteData.loadSheet(gameGraphics, "", "tooltip_kit");
+        SoftwareRenderTarget.field_b = SpriteData.loadSheet(gameGraphics, "", "achievements");
+        CompactMeshGeometry.field_N = SpriteData.loadSprite(commonGraphics, "basic", "unachieved");
+        MusicCrossfadeStream.field_p = SpriteData.loadSprite(commonGraphics, "basic", "locked");
+        IntrusiveNode.field_d = SpriteData.loadSprite(gameGraphics, "", "titleimage");
+        OpenGlCubeTexture.field_i = SpriteData.loadSprite(gameGraphics, "", "lock");
+        AccountStatusDialogState.heartSpriteData = SpriteData.loadSprite(gameGraphics, "", "heart");
+        HiscoreRequestQueue.field_d = SpriteData.loadSprite(gameGraphics, "", "skull");
+        TextLayoutLine.field_c = SpriteData.loadSheet(gameGraphics, "", "slider");
+        if (guard != 20) {
           return;
         }
         try {
-          LoginMethodPreference.field_c = SpriteData.loadSheet(param3, "", "statline_tab");
-          ResourceRequest.field_r = SpriteData.loadSheet(param3, "", "statline_tab_flip");
-          IsaacCipher.field_d = SpriteData.loadSheet(param3, "", "button_off");
-          ProxyAuthenticationRequiredException.field_a = SpriteData.loadSheet(param3, "", "button_over");
-          WaterTextureResources.field_c = SpriteData.loadSheet(param3, "", "button_on");
-          LegacyOpenGlFloatPostProcessEffect.field_o = SpriteData.loadSheet(param3, "", "chargebar_vertical");
-          IntrusiveDequeCursor.field_e = SpriteData.loadSprite(param3, "", "congratulations");
-          LegacyOpenGlPostProcessEffect.field_k = SpriteData.loadSprite(param3, "", "mouse");
-          BufferedSocket.field_n = SpriteData.loadSprite(param3, "", "keyboard");
-          RasterStateFrame.field_l = SpriteData.loadSheet(param3, "", "player");
-          LegacyOpenGlTextureCache.field_e = SpriteData.loadSheet(param3, "", "mook");
-          HardwareTurbulentWaterNoise.field_w = SpriteData.loadSheet(param3, "", "fast");
-          StatefulWidgetRenderer.field_r = SpriteData.loadSheet(param3, "", "sleeper");
-          RasterColorTables.field_b = SpriteData.loadSheet(param3, "", "splitter");
-          DisplayModeConfirmationDialog.field_V = SpriteData.loadSheet(param3, "", "seeker");
-          LruNodeCache.field_a = SpriteData.loadSheet(param3, "", "shadowdudes");
-          CachedTextLayout.field_h = SpriteData.loadSheet(param3, "", "mod_armour");
-          RendererSession.field_b = SpriteData.loadSheet(param3, "", "mod_bomb");
-          FullscreenDisplayMode.field_c = SpriteData.loadSheet(param3, "", "mod_spikes");
-          ServerDataReadRequest.field_k = SpriteData.loadSprite(param3, "", "zap");
-          Transform3D.field_a = SpriteData.loadSheet(param3, "", "chargebar");
-          ToolkitRasterStateFrame.field_a = SpriteData.loadSprite(param3, "", "bounceup");
-          EnemyDroneFactory.field_c = SpriteData.loadSheet(param3, "", "powerups");
-          HiscorePlayerName.field_d = SpriteData.loadSprite(param3, "", "particle");
-          DroneChargeParticle.field_v = SpriteData.loadSheet(param3, "", "particles");
-          FullscreenMembershipDialog.field_T = SpriteData.loadSprite(param3, "", "particle_alpha");
-          UiStyle.field_v = SpriteData.loadSheet(param3, "", "particles_alpha");
-          LegacyOpenGlRenderbuffer.field_w = SpriteData.loadSheet(param3, "", "particle_ring");
-          EmailAvailabilityRequest.field_g = SpriteData.loadSprite(param3, "", "particle_sprinkle");
-          HardwareTurbulentWaterNoise.field_t = SpriteData.loadSprite(param3, "", "particle_star");
-          ShaderEffect.field_c = SpriteData.loadSprite(param3, "", "particle_pixel");
-          SpriteStripButtonRenderer.field_p = SpriteData.loadSprite(param3, "", "particle_pixel_alpha");
-          FriendListState.ghostSpriteData = SpriteData.loadSprite(param3, "", "ghost");
-          LoginFormState.ghostCloudSpriteData = SpriteData.loadSprite(param3, "", "ghost_cloud");
-          LabeledWidget.field_E = SpriteData.loadSprite(param3, "", "ghost_splatter");
-          ArchiveLoadingStage.field_c = SpriteData.loadSprite(param3, "", "shadow");
-          SceneryParticle.field_C = SpriteData.loadSprite(param3, "", "driftinglight");
-          SnowParticleSpriteData.spriteData = SpriteData.loadSprite(param3, "", "driftinglight_snow");
-          RidgedNoise3D.field_p = SpriteData.loadSprite(param3, "", "driftinglight_rough");
-          UnderageAccountInfoPanel.field_C = SpriteData.loadSprite(param3, "", "shockwave");
-          MouseInputHandler.field_b = SpriteData.loadSheet(param3, "", "lightningrod");
-          SoftLruCache.field_a = SpriteData.loadSheet(param3, "", "lightningrod_lowgraphics");
-          LegacyOpenGlCubeTexture.field_n = SpriteData.loadSheet(param3, "", "electricity");
-          FallbackShaderEffect.field_h = SpriteData.loadSheet(param3, "", "electricity_flip");
-          ArchiveCatalog.field_f = SpriteData.loadSprite(param3, "", "attract");
-          MusicVoice.field_o = SpriteData.loadSprite(param3, "", "repulse");
-          VertexBufferReference.field_c = SpriteData.loadSprite(param3, "", "icepatch");
-          BigBurstaProgress.attractorSpriteData = SpriteData.loadSheet(param3, "", "attractor");
-          IntList.field_e = SpriteData.loadSprite(param3, "", "bouncer");
-          FullscreenMembershipDialog.field_S = SpriteData.loadSheet(param3, "", "landmine");
-          ByteArrayStorage.field_a = SpriteData.loadSheet(param3, "", "repeller");
-          ScrollViewport.field_C = SpriteData.loadSheet(param3, "", "accelerator");
-          FriendListState.teleporterSpriteData = SpriteData.loadSheet(param3, "", "teleporter");
-          ScrollPane.field_F = SpriteData.loadSheet(param3, "", "ice");
-          DroneWaveDefinition.field_m = SpriteData.loadSheet(param3, "", "zaptrap");
-          AppletInstanceState.reticuleSpriteData = SpriteData.loadFlatSheet(param3, "reticule");
-          PasswordValidator.field_i = SpriteData.loadSprite(param3, "", "reticule_flat");
-          AccountStatusDialogState.gravityWellSpriteData = SpriteData.loadSheet(param3, "", "gravitywell");
-          RasterStateFrame.field_o = SpriteData.loadSprite(param3, "", "gravitywell_field");
-          StripedProgressWidget.field_F = SpriteData.loadSheet(param3, "", "tutorial_images");
+          LoginMethodPreference.field_c = SpriteData.loadSheet(gameGraphics, "", "statline_tab");
+          ResourceRequest.field_r = SpriteData.loadSheet(gameGraphics, "", "statline_tab_flip");
+          IsaacCipher.field_d = SpriteData.loadSheet(gameGraphics, "", "button_off");
+          ProxyAuthenticationRequiredException.field_a = SpriteData.loadSheet(gameGraphics, "", "button_over");
+          WaterTextureResources.field_c = SpriteData.loadSheet(gameGraphics, "", "button_on");
+          LegacyOpenGlFloatPostProcessEffect.field_o = SpriteData.loadSheet(gameGraphics, "", "chargebar_vertical");
+          IntrusiveDequeCursor.field_e = SpriteData.loadSprite(gameGraphics, "", "congratulations");
+          LegacyOpenGlPostProcessEffect.field_k = SpriteData.loadSprite(gameGraphics, "", "mouse");
+          BufferedSocket.field_n = SpriteData.loadSprite(gameGraphics, "", "keyboard");
+          RasterStateFrame.field_l = SpriteData.loadSheet(gameGraphics, "", "player");
+          LegacyOpenGlTextureCache.field_e = SpriteData.loadSheet(gameGraphics, "", "mook");
+          HardwareTurbulentWaterNoise.field_w = SpriteData.loadSheet(gameGraphics, "", "fast");
+          StatefulWidgetRenderer.field_r = SpriteData.loadSheet(gameGraphics, "", "sleeper");
+          RasterColorTables.field_b = SpriteData.loadSheet(gameGraphics, "", "splitter");
+          DisplayModeConfirmationDialog.field_V = SpriteData.loadSheet(gameGraphics, "", "seeker");
+          LruNodeCache.field_a = SpriteData.loadSheet(gameGraphics, "", "shadowdudes");
+          CachedTextLayout.field_h = SpriteData.loadSheet(gameGraphics, "", "mod_armour");
+          RendererSession.field_b = SpriteData.loadSheet(gameGraphics, "", "mod_bomb");
+          FullscreenDisplayMode.field_c = SpriteData.loadSheet(gameGraphics, "", "mod_spikes");
+          ServerDataReadRequest.field_k = SpriteData.loadSprite(gameGraphics, "", "zap");
+          Transform3D.field_a = SpriteData.loadSheet(gameGraphics, "", "chargebar");
+          ToolkitRasterStateFrame.field_a = SpriteData.loadSprite(gameGraphics, "", "bounceup");
+          EnemyDroneFactory.field_c = SpriteData.loadSheet(gameGraphics, "", "powerups");
+          HiscorePlayerName.field_d = SpriteData.loadSprite(gameGraphics, "", "particle");
+          DroneChargeParticle.field_v = SpriteData.loadSheet(gameGraphics, "", "particles");
+          FullscreenMembershipDialog.field_T = SpriteData.loadSprite(gameGraphics, "", "particle_alpha");
+          UiStyle.field_v = SpriteData.loadSheet(gameGraphics, "", "particles_alpha");
+          LegacyOpenGlRenderbuffer.field_w = SpriteData.loadSheet(gameGraphics, "", "particle_ring");
+          EmailAvailabilityRequest.field_g = SpriteData.loadSprite(gameGraphics, "", "particle_sprinkle");
+          HardwareTurbulentWaterNoise.field_t = SpriteData.loadSprite(gameGraphics, "", "particle_star");
+          ShaderEffect.field_c = SpriteData.loadSprite(gameGraphics, "", "particle_pixel");
+          SpriteStripButtonRenderer.field_p = SpriteData.loadSprite(gameGraphics, "", "particle_pixel_alpha");
+          FriendListState.ghostSpriteData = SpriteData.loadSprite(gameGraphics, "", "ghost");
+          LoginFormState.ghostCloudSpriteData = SpriteData.loadSprite(gameGraphics, "", "ghost_cloud");
+          LabeledWidget.field_E = SpriteData.loadSprite(gameGraphics, "", "ghost_splatter");
+          ArchiveLoadingStage.field_c = SpriteData.loadSprite(gameGraphics, "", "shadow");
+          SceneryParticle.field_C = SpriteData.loadSprite(gameGraphics, "", "driftinglight");
+          SnowParticleSpriteData.spriteData = SpriteData.loadSprite(gameGraphics, "", "driftinglight_snow");
+          RidgedNoise3D.field_p = SpriteData.loadSprite(gameGraphics, "", "driftinglight_rough");
+          UnderageAccountInfoPanel.field_C = SpriteData.loadSprite(gameGraphics, "", "shockwave");
+          MouseInputHandler.field_b = SpriteData.loadSheet(gameGraphics, "", "lightningrod");
+          SoftLruCache.field_a = SpriteData.loadSheet(gameGraphics, "", "lightningrod_lowgraphics");
+          LegacyOpenGlCubeTexture.field_n = SpriteData.loadSheet(gameGraphics, "", "electricity");
+          FallbackShaderEffect.field_h = SpriteData.loadSheet(gameGraphics, "", "electricity_flip");
+          ArchiveCatalog.field_f = SpriteData.loadSprite(gameGraphics, "", "attract");
+          MusicVoice.field_o = SpriteData.loadSprite(gameGraphics, "", "repulse");
+          VertexBufferReference.field_c = SpriteData.loadSprite(gameGraphics, "", "icepatch");
+          BigBurstaProgress.attractorSpriteData = SpriteData.loadSheet(gameGraphics, "", "attractor");
+          IntList.field_e = SpriteData.loadSprite(gameGraphics, "", "bouncer");
+          FullscreenMembershipDialog.field_S = SpriteData.loadSheet(gameGraphics, "", "landmine");
+          ByteArrayStorage.field_a = SpriteData.loadSheet(gameGraphics, "", "repeller");
+          ScrollViewport.field_C = SpriteData.loadSheet(gameGraphics, "", "accelerator");
+          FriendListState.teleporterSpriteData = SpriteData.loadSheet(gameGraphics, "", "teleporter");
+          ScrollPane.field_F = SpriteData.loadSheet(gameGraphics, "", "ice");
+          DroneWaveDefinition.field_m = SpriteData.loadSheet(gameGraphics, "", "zaptrap");
+          AppletInstanceState.reticuleSpriteData = SpriteData.loadFlatSheet(gameGraphics, "reticule");
+          PasswordValidator.field_i = SpriteData.loadSprite(gameGraphics, "", "reticule_flat");
+          AccountStatusDialogState.gravityWellSpriteData = SpriteData.loadSheet(gameGraphics, "", "gravitywell");
+          RasterStateFrame.field_o = SpriteData.loadSprite(gameGraphics, "", "gravitywell_field");
+          StripedProgressWidget.field_F = SpriteData.loadSheet(gameGraphics, "", "tutorial_images");
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "pe.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "pe.F(" + (commonGraphics != null ? "{...}" : "null") + ',' + (fontMetrics != null ? "{...}" : "null") + ',' + guard + ',' + (gameGraphics != null ? "{...}" : "null") + ')');
         }
     }
 

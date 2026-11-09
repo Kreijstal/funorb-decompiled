@@ -4,12 +4,12 @@
 final class TextureTransformMode {
     static String field_a;
 
-    final static boolean a(int param0, int param1, int param2) {
-        if (param1 == -2626) {
-          return 0 != (2048 & param2) ? true : false;
+    final static boolean hasFlag2048(int unused, int guard, int flags) {
+        if (guard == -2626) {
+          return 0 != (2048 & flags) ? true : false;
         }
         TextureTransformMode.releaseStatics((byte) -118);
-        return 0 != (2048 & param2) ? true : false;
+        return 0 != (2048 & flags) ? true : false;
     }
 
     public final String toString() {
@@ -59,7 +59,7 @@ final class TextureTransformMode {
     public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 != 17) {
-          TextureTransformMode.a(-5, -49, 114);
+          TextureTransformMode.hasFlag2048(-5, -49, 114);
         }
     }
 

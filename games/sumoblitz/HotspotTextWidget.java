@@ -126,7 +126,7 @@ class HotspotTextWidget extends InteractiveWidget {
               var5_ref_db.unlink(false);
               return;
             }
-            IntrusiveNode.reportClientError("A1: " + VictoryScreen.b((byte) -9), (Throwable) null, 0);
+            IntrusiveNode.reportClientError("A1: " + VictoryScreen.accountPacketDiagnostic((byte) -9), (Throwable) null, 0);
             LegacyOpenGlTextureCache.closeAccountSocket((byte) -128);
           }
           return;

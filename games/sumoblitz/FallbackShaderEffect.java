@@ -26,7 +26,7 @@ final class FallbackShaderEffect extends ShaderEffect {
         try {
           this.toolkit.bindTexture(texture, guard - 18711);
           if (guard != 18834) {
-            FallbackShaderEffect.d(true);
+            FallbackShaderEffect.releaseClientTextAndScenery(true);
           }
           this.toolkit.setTextureCombineMode(74, combineMode);
           return;
@@ -58,8 +58,8 @@ final class FallbackShaderEffect extends ShaderEffect {
         }
     }
 
-    final static void a(int param0, ResourceArchive param1) {
-        class $CfrPartitionedBody {
+    final static void loadClientText(int guard, ResourceArchive archive) {
+        class ClientTextLoader {
             RuntimeException stackIn_2612_0;
             StringBuilder stackIn_2612_1;
             String stackIn_2613_2;
@@ -71,7 +71,7 @@ final class FallbackShaderEffect extends ShaderEffect {
             int param0;
             ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, ResourceArchive initialParam1) {
+            ClientTextLoader(int initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2612_0 = null;
@@ -83,7 +83,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 this.var2_ref = null;
                 this.var3 = 0;
             }
-            void runChunk0() throws java.lang.RuntimeException {
+            void loadLoginAndAccountText() throws java.lang.RuntimeException {
                 ToolkitRasterBuffer.field_q = param1;
                 var2 = OpenGlCubeTexture.fetchNamedAsset("loginm3", (byte) -23);
                 if (var2 != null) {
@@ -1074,7 +1074,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                   LoginCredentials.pleaseTryAgainInText = MusicVoice.decodeCp1252(param0 - 7, var2);
                 }
             }
-            void runChunk1() throws java.lang.RuntimeException {
+            void loadAccountActionsAndMenuText() throws java.lang.RuntimeException {
                 var2 = OpenGlCubeTexture.fetchNamedAsset("pleasereenterpass", (byte) -23);
                 if (null != var2) {
                   MusicVoice.decodeCp1252(0, var2);
@@ -2016,7 +2016,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.fetchNamedAsset("menu", (byte) -23);
             }
-            void runChunk2() throws java.lang.RuntimeException {
+            void loadGameplayAndMembershipText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   RenderPresentationException.menuText = MusicVoice.decodeCp1252(param0 ^ 7, var2);
                 }
@@ -2970,7 +2970,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
                 var2 = OpenGlCubeTexture.fetchNamedAsset("mustlogin4,5", (byte) -23);
             }
-            void runChunk3() throws java.lang.RuntimeException {
+            void loadMembershipAndSubscriptionText() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   RasterColorTables.field_f[5] = MusicVoice.decodeCp1252(0, var2);
                 }
@@ -3075,13 +3075,13 @@ final class FallbackShaderEffect extends ShaderEffect {
             void run() {
                 var3 = Sumoblitz.field_L ? 1 : 0;
                 try {
-                  runChunk0();
+                  loadLoginAndAccountText();
                   if (finished) return;
-                  runChunk1();
+                  loadAccountActionsAndMenuText();
                   if (finished) return;
-                  runChunk2();
+                  loadGameplayAndMembershipText();
                   if (finished) return;
-                  runChunk3();
+                  loadMembershipAndSubscriptionText();
                   if (finished) return;
                 } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -3101,7 +3101,7 @@ final class FallbackShaderEffect extends ShaderEffect {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        ClientTextLoader decompiledBody = new ClientTextLoader(guard, archive);
         decompiledBody.run();
     }
 
@@ -3125,17 +3125,17 @@ final class FallbackShaderEffect extends ShaderEffect {
         }
     }
 
-    public static void d(boolean param0) {
+    public static void releaseClientTextAndScenery(boolean guard) {
         field_g = null;
         sceneryParticles = null;
-        if (param0) {
+        if (guard) {
           return;
         }
         try {
           field_h = null;
           field_f = null;
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ni.N(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ni.N(" + guard + ')');
         }
     }
 

@@ -13,7 +13,7 @@ final class LegacyOpenGlAssemblyProgram {
         super.finalize();
     }
 
-    final static void a(int param0, int param1, byte param2, int param3, int param4, int param5, boolean param6) {
+    final static void sortHiscoreRows(int minimum, int maximum, byte guard, int end, int limit, int start, boolean primaryStatisticFirst) {
         int var11 = 0;
         int incrementValue$0 = 0;
         int stackIn_23_0 = 0;
@@ -32,21 +32,21 @@ final class LegacyOpenGlAssemblyProgram {
         int var10Lifetime1;
         var14 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (param4 <= param5) {
+          if (limit <= start) {
             return;
           }
-          if (param3 <= 1 + param5) {
+          if (end <= 1 + start) {
             return;
           }
-          if (param3 > param5 + 5 &&
-            param0 != param1) {
-            var7_int = (param0 & param1 & 1) + (param0 >> 1) + (param1 >> 1);
-            var8 = param5;
-            var9 = param1;
-            var10 = param0;
-            for (var11 = param5; param3 > var11; var11++) {
+          if (end > start + 5 &&
+            minimum != maximum) {
+            var7_int = (minimum & maximum & 1) + (minimum >> 1) + (maximum >> 1);
+            var8 = start;
+            var9 = maximum;
+            var10 = minimum;
+            for (var11 = start; end > var11; var11++) {
               var12 = FourIntReadRequest.field_q[var11];
-              if (!param6) {
+              if (!primaryStatisticFirst) {
                 stackIn_23_0 = IntroductionOverlaySupport.field_c[var12];
               } else {
                 stackIn_23_0 = LoginFieldValue.field_a[var12];
@@ -66,15 +66,15 @@ final class LegacyOpenGlAssemblyProgram {
                 FourIntReadRequest.field_q[incrementValue$0] = var12;
               }
             }
-            LegacyOpenGlAssemblyProgram.a(var9, param1, param2, var8, param4, param5, param6);
-            LegacyOpenGlAssemblyProgram.a(param0, var10, (byte) -107, param3, param4, var8, param6);
+            LegacyOpenGlAssemblyProgram.sortHiscoreRows(var9, maximum, guard, var8, limit, start, primaryStatisticFirst);
+            LegacyOpenGlAssemblyProgram.sortHiscoreRows(minimum, var10, (byte) -107, end, limit, var8, primaryStatisticFirst);
             return;
           }
-          for (var7_intLifetime1 = -1 + param3; var7_intLifetime1 > param5; var7_intLifetime1--) {
-            for (var8Lifetime1 = param5; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
+          for (var7_intLifetime1 = -1 + end; var7_intLifetime1 > start; var7_intLifetime1--) {
+            for (var8Lifetime1 = start; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
               var9Lifetime1 = FourIntReadRequest.field_q[var8Lifetime1];
               var10Lifetime1 = FourIntReadRequest.field_q[1 + var8Lifetime1];
-              if (HardwareQuadBatchBuffers.a(var10Lifetime1, var9Lifetime1, param6, (byte) 98)) {
+              if (HardwareQuadBatchBuffers.hiscoreRowSortsBefore(var10Lifetime1, var9Lifetime1, primaryStatisticFirst, (byte) 98)) {
                 FourIntReadRequest.field_q[var8Lifetime1] = var10Lifetime1;
                 FourIntReadRequest.field_q[var8Lifetime1 + 1] = var9Lifetime1;
               }
@@ -84,7 +84,7 @@ final class LegacyOpenGlAssemblyProgram {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var7), "vk.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var7), "vk.C(" + minimum + ',' + maximum + ',' + guard + ',' + end + ',' + limit + ',' + start + ',' + primaryStatisticFirst + ')');
         }
     }
 
@@ -98,7 +98,7 @@ final class LegacyOpenGlAssemblyProgram {
     public static void releaseStatics(int guard) {
         levelLoadStepLabels = null;
         if (guard != 429166529) {
-          LegacyOpenGlAssemblyProgram.a(100, 10, (byte) 96, 17, -1, -25, true);
+          LegacyOpenGlAssemblyProgram.sortHiscoreRows(100, 10, (byte) 96, 17, -1, -25, true);
         }
         field_d = null;
     }

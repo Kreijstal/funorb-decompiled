@@ -19,7 +19,7 @@ final class VictoryScreen extends MenuScreen {
           this.field_i = -126;
         }
         if (0 == this.field_i % 100) {
-          TurbulenceNoise3D.a(LegacyOpenGlRenderbuffer.field_u.xQ8, 40, LegacyOpenGlRenderbuffer.field_u.yQ8, ParticleSpriteResources.victoryParticles, VertexBufferReference.field_a[ExpandingRingEffect.nextRandomInt(6, HardwareGraphicsHeap.field_o, (byte) -96)], (byte) 94);
+          TurbulenceNoise3D.spawnSlowBurstParticles(LegacyOpenGlRenderbuffer.field_u.xQ8, 40, LegacyOpenGlRenderbuffer.field_u.yQ8, ParticleSpriteResources.victoryParticles, VertexBufferReference.field_a[ExpandingRingEffect.nextRandomInt(6, HardwareGraphicsHeap.field_o, (byte) -96)], (byte) 94);
           ArchiveLoadRequirement.playSoundEffect(34 + ExpandingRingEffect.nextRandomInt(4, HardwareGraphicsHeap.field_o, (byte) -96), true);
         }
         if (this.field_i % 2 == 0) {
@@ -46,14 +46,14 @@ final class VictoryScreen extends MenuScreen {
         this.field_i = this.field_i + 1;
     }
 
-    final static String b(byte param0) {
+    final static String accountPacketDiagnostic(byte guard) {
         int var3 = 0;
         String var8 = null;
         int var4 = 0;
         int var5 = 0;
         String var9 = null;
         int var6 = Sumoblitz.field_L ? 1 : 0;
-        int var2 = 42 / ((param0 + 75) / 49);
+        int var2 = 42 / ((guard + 75) / 49);
         String var7 = "(" + ToolkitImageProducerBuffer.field_r + " " + RotarySelectorWidget.field_I + " " + ContentTransitionDialog.field_Q + ") " + TextureFormat.receivedAccountOpcode;
         String var1 = var7;
         if (0 >= HardwareBufferSet.accountPacketLength) {
@@ -94,8 +94,8 @@ final class VictoryScreen extends MenuScreen {
         try {
           var8 = toolkit;
           var5 = ResizingDialog.field_H;
-          DelegatingCanvas.a(var5, 60, 210, 0, 1, var8, 220, 350, 1, true);
-          DelegatingCanvas.a(ResizingDialog.field_H, LegacyOpenGlSpriteMask.field_e.height() + 20, -10 + (-(LegacyOpenGlSpriteMask.field_e.width() >> 1) + 320), -1426063360, 3, toolkit, LegacyOpenGlSpriteMask.field_e.width() + 20, 190 - (LegacyOpenGlSpriteMask.field_e.height() >> 1), 1, true);
+          DelegatingCanvas.drawToolkitNineSlice(var5, 60, 210, 0, 1, var8, 220, 350, 1, true);
+          DelegatingCanvas.drawToolkitNineSlice(ResizingDialog.field_H, LegacyOpenGlSpriteMask.field_e.height() + 20, -10 + (-(LegacyOpenGlSpriteMask.field_e.width() >> 1) + 320), -1426063360, 3, toolkit, LegacyOpenGlSpriteMask.field_e.width() + 20, 190 - (LegacyOpenGlSpriteMask.field_e.height() >> 1), 1, true);
           LegacyOpenGlSpriteMask.field_e.draw(-(LegacyOpenGlSpriteMask.field_e.width() >> 1) + 320, 200 - (LegacyOpenGlSpriteMask.field_e.height() >> 1));
           var7 = (TimedSceneEffect) (ParticleSpriteResources.victoryParticles.first(-102));
           while (var7 != null) {

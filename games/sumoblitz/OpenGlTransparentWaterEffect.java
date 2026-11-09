@@ -22,7 +22,7 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
     final void bindTexture(int combineMode, int guard, GpuTexture texture) {
         try {
           if (guard != 18834) {
-            OpenGlTransparentWaterEffect.d(-57);
+            OpenGlTransparentWaterEffect.resolveDroneCollisions(-57);
           }
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "wj.E(" + combineMode + ',' + guard + ',' + (texture != null ? "{...}" : "null") + ')');
@@ -98,7 +98,7 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
     final void refreshState(boolean lighting, byte guard) {
         this.toolkit.setTextureCombineOperations((byte) -83, LoginForm.ADD, LegacyOpenGlRenderBufferSet.REPLACE);
         if (guard >= -71) {
-          OpenGlTransparentWaterEffect.d(-46);
+          OpenGlTransparentWaterEffect.resolveDroneCollisions(-46);
         }
     }
 
@@ -126,7 +126,7 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
         return this.field_g != null ? true : false;
     }
 
-    final static void d(int param0) {
+    final static void resolveDroneCollisions(int guard) {
         int var1_int = 0;
         int var3 = 0;
         int stackIn_21_0 = 0;
@@ -230,7 +230,7 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
                       var4.field_P = var1_int;
                       var4.field_d = 0;
                       if (var2.droneType == 0 &&
-                        var2.isBlastActive(param0 - 22379)) {
+                        var2.isBlastActive(guard - 22379)) {
                         var4.field_R = true;
                       } else {
                         var4.field_R = false;
@@ -250,7 +250,7 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
                         var2.xQ8 = var2.xQ8 - var25;
                         var2.yQ8 = var2.yQ8 - var26;
                       }
-                      if (!var2.isBlastActive(param0 - 22327)) {
+                      if (!var2.isBlastActive(guard - 22327)) {
                         if (var4.isBlastActive(22)) {
                           if (var4.droneType != 0) {
                             var10 = var10 * 8.0;
@@ -276,7 +276,7 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
                       var4.velocityXQ8 = -(var28 * var13) + var12 * var25Lifetime1 / var9 >> 8;
                       var4.velocityYQ8 = var25Lifetime1 * var13 / var9 + var28 * var12 >> 8;
                       if (!var2.isBlastActive(63)) {
-                        if (var4.isBlastActive(param0 - 22319)) {
+                        if (var4.isBlastActive(guard - 22319)) {
                           var2.velocityXQ8 = var2.velocityXQ8 << 1;
                           var2.velocityYQ8 = var2.velocityYQ8 << 1;
                         }
@@ -296,14 +296,14 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
               }
             }
           }
-          if (param0 != 22403) {
+          if (guard != 22403) {
             field_i = (SpriteData[]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "wj.H(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "wj.H(" + guard + ')');
         }
     }
 

@@ -36,7 +36,7 @@ final class LegacyOpenGlPbuffer extends DualLinkNode {
         }
         if (guard <= -53) {
           if (0 == var1.length()) {
-            var1 = LegacyOpenGlRenderbuffer.f(1);
+            var1 = LegacyOpenGlRenderbuffer.accountDisplayName(1);
           }
           if (var1.length() == 0) {
             var1 = FullscreenMembershipDialog.playerText;
@@ -45,7 +45,7 @@ final class LegacyOpenGlPbuffer extends DualLinkNode {
         }
         field_w = (String[]) null;
         if (0 == var1.length()) {
-          var1 = LegacyOpenGlRenderbuffer.f(1);
+          var1 = LegacyOpenGlRenderbuffer.accountDisplayName(1);
         }
         if (var1.length() == 0) {
           var1 = FullscreenMembershipDialog.playerText;

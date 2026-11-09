@@ -4,9 +4,9 @@
 final class NativeGraphicsHeap extends GraphicsHeap implements NativeResource {
     long field_nativeid;
 
-    final native void r();
+    final native void nativeServiceHeap();
 
-    final native void ga();
+    final native void nativeDisposeHeap();
 
     NativeGraphicsHeap(NativeSoftwareGraphicsToolkit toolkit, int capacity) {
         this.allocate(toolkit, capacity);

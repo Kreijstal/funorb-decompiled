@@ -5,12 +5,12 @@ final class ResetStatsConfirmationOverlay extends SelectionOverlay {
     static PcmSample[][][] field_d;
     static int field_c;
 
-    final static boolean a(int param0, int param1, int param2) {
-        if (param1 <= -11) {
-          return ((544 == (param0 & 544) ? 1 : 0) | ((param0 & 24) != 0 ? 1 : 0)) != 0;
+    final static boolean hasMask24OrAll544(int flags, int guard, int unused) {
+        if (guard <= -11) {
+          return ((544 == (flags & 544) ? 1 : 0) | ((flags & 24) != 0 ? 1 : 0)) != 0;
         }
         field_c = 52;
-        return ((544 == (param0 & 544) ? 1 : 0) | ((param0 & 24) != 0 ? 1 : 0)) != 0;
+        return ((544 == (flags & 544) ? 1 : 0) | ((flags & 24) != 0 ? 1 : 0)) != 0;
     }
 
     public ResetStatsConfirmationOverlay() {
@@ -30,10 +30,10 @@ final class ResetStatsConfirmationOverlay extends SelectionOverlay {
         RuntimeException var3 = null;
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
-          DelegatingCanvas.a(IntroMeshProjection.field_c, 360, -5, -16777216, 3, toolkit, 650, 50, 1, true);
+          DelegatingCanvas.drawToolkitNineSlice(IntroMeshProjection.field_c, 360, -5, -16777216, 3, toolkit, 650, 50, 1, true);
           AccountStatusDialogState.headingFont.drawCenteredText(DisplayNameForm.areYouSureYouText, -1, -16777216, 150, 320, 0);
           if (guard != 22707) {
-            ResetStatsConfirmationOverlay.a(73, 17, -78);
+            ResetStatsConfirmationOverlay.hasMask24OrAll544(73, 17, -78);
           }
           var3_int = 70;
           var4 = 0;
@@ -41,7 +41,7 @@ final class ResetStatsConfirmationOverlay extends SelectionOverlay {
             var5 = toolkit;
             var6 = var3_int;
             var7 = IntroMeshProjection.field_c;
-            DelegatingCanvas.a(var7, 100, var6, 0, 1, var5, 200, 200, 1, true);
+            DelegatingCanvas.drawToolkitNineSlice(var7, 100, var6, 0, 1, var5, 200, 200, 1, true);
             if (var4 != this.hoveredOption) {
               AccountStatusDialogState.headingFont.drawCenteredText(StringBuilderSupport.yesNoLabels[var4], -1, -16777216, 260, 100 + var3_int, 0);
             } else {
@@ -89,7 +89,7 @@ final class ResetStatsConfirmationOverlay extends SelectionOverlay {
                 if (this.hoveredOption == -1) {
                 } else {
                   if (0 == this.hoveredOption) {
-                    WhirlpoolTables.c(89);
+                    WhirlpoolTables.resetUpgrades(89);
                     UiWidget.saveProgressToServer((byte) -83);
                     this.hide((byte) -127);
                   } else {
@@ -106,7 +106,7 @@ final class ResetStatsConfirmationOverlay extends SelectionOverlay {
               return;
             }
             if (0 == this.hoveredOption) {
-              WhirlpoolTables.c(89);
+              WhirlpoolTables.resetUpgrades(89);
               UiWidget.saveProgressToServer((byte) -83);
               this.hide((byte) -127);
               return;
@@ -121,7 +121,7 @@ final class ResetStatsConfirmationOverlay extends SelectionOverlay {
             }
             if (this.hoveredOption != -1) {
               if (0 == this.hoveredOption) {
-                WhirlpoolTables.c(89);
+                WhirlpoolTables.resetUpgrades(89);
                 UiWidget.saveProgressToServer((byte) -83);
                 this.hide((byte) -127);
                 return;
@@ -137,7 +137,7 @@ final class ResetStatsConfirmationOverlay extends SelectionOverlay {
               return;
             }
             if (0 == this.hoveredOption) {
-              WhirlpoolTables.c(89);
+              WhirlpoolTables.resetUpgrades(89);
               UiWidget.saveProgressToServer((byte) -83);
               this.hide((byte) -127);
               return;
@@ -158,7 +158,7 @@ final class ResetStatsConfirmationOverlay extends SelectionOverlay {
                 return;
               }
               if (0 == this.hoveredOption) {
-                WhirlpoolTables.c(89);
+                WhirlpoolTables.resetUpgrades(89);
                 UiWidget.saveProgressToServer((byte) -83);
                 this.hide((byte) -127);
                 return;
@@ -173,7 +173,7 @@ final class ResetStatsConfirmationOverlay extends SelectionOverlay {
               return;
             }
             if (0 == this.hoveredOption) {
-              WhirlpoolTables.c(89);
+              WhirlpoolTables.resetUpgrades(89);
               UiWidget.saveProgressToServer((byte) -83);
               this.hide((byte) -127);
               return;
@@ -190,7 +190,7 @@ final class ResetStatsConfirmationOverlay extends SelectionOverlay {
               return;
             }
             if (0 == this.hoveredOption) {
-              WhirlpoolTables.c(89);
+              WhirlpoolTables.resetUpgrades(89);
               UiWidget.saveProgressToServer((byte) -83);
               this.hide((byte) -127);
               return;
@@ -205,7 +205,7 @@ final class ResetStatsConfirmationOverlay extends SelectionOverlay {
             return;
           }
           if (0 == this.hoveredOption) {
-            WhirlpoolTables.c(89);
+            WhirlpoolTables.resetUpgrades(89);
             UiWidget.saveProgressToServer((byte) -83);
             this.hide((byte) -127);
             return;

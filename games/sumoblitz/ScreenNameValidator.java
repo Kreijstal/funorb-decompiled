@@ -14,7 +14,7 @@ final class ScreenNameValidator extends TextInputValidator {
     final void invalidateAvailability(int guard) {
         this.lastCheckedName = null;
         if (guard != -1) {
-          ScreenNameValidator.a(false, -24, (byte) -79);
+          ScreenNameValidator.showFullscreenPrompt(false, -24, (byte) -79);
         }
     }
 
@@ -158,7 +158,7 @@ final class ScreenNameValidator extends TextInputValidator {
         field_g = null;
     }
 
-    final static void a(boolean param0, int param1, byte param2) {
+    final static void showFullscreenPrompt(boolean keyboardSelection, int state, byte guard) {
         int stackIn_31_0 = 0;
         int stackIn_34_0 = 0;
         String[] stackIn_41_0 = null;
@@ -207,9 +207,9 @@ final class ScreenNameValidator extends TextInputValidator {
         var10 = Sumoblitz.field_L ? 1 : 0;
         try {
           LimitedRandomAccessFile.field_d = true;
-          DroneChargeParticle.field_s = param1;
+          DroneChargeParticle.field_s = state;
           if (0 == DroneChargeParticle.field_s) {
-            var3_int = DelegatingCanvas.a(GameInstructions.field_c, ValidatedTextInputWidget.field_R, LegacyOpenGlVertexBuffer.field_j, false, IntrusiveNode.fullscreenPlayIsAnText);
+            var3_int = DelegatingCanvas.wrapPromptText(GameInstructions.field_c, ValidatedTextInputWidget.field_R, LegacyOpenGlVertexBuffer.field_j, false, IntrusiveNode.fullscreenPlayIsAnText);
             var4 = 3 + var3_int;
             IntIndexHashTable.field_c = new String[var4];
             LegacyOpenGlPostProcessManager.field_a = new int[var4];
@@ -228,7 +228,7 @@ final class ScreenNameValidator extends TextInputValidator {
             LegacyOpenGlPostProcessManager.field_a[-1 + var4] = 1;
             ByteArrayPool.field_b[1] = 5;
           } else if (DroneChargeParticle.field_s == 1) {
-            var3_int = DelegatingCanvas.a(GameInstructions.field_c, ValidatedTextInputWidget.field_R, LegacyOpenGlVertexBuffer.field_j, false, IntrusiveNode.fullscreenPlayIsAnText);
+            var3_int = DelegatingCanvas.wrapPromptText(GameInstructions.field_c, ValidatedTextInputWidget.field_R, LegacyOpenGlVertexBuffer.field_j, false, IntrusiveNode.fullscreenPlayIsAnText);
             var4 = var3_int + 2;
             LegacyOpenGlPostProcessManager.field_a = new int[var4];
             IntIndexHashTable.field_c = new String[var4];
@@ -246,9 +246,9 @@ final class ScreenNameValidator extends TextInputValidator {
           } else if (DroneChargeParticle.field_s != 2) {
             if (DroneChargeParticle.field_s == 3) {
               if (!FourIntUpdateRequest.platformDispatcher.field_f) {
-                var3_int = DelegatingCanvas.a(GameInstructions.field_c, ValidatedTextInputWidget.field_R, LegacyOpenGlVertexBuffer.field_j, false, LegacyOpenGlGraphicsToolkit.unfortunatelyYourConfigurationDoesnText);
+                var3_int = DelegatingCanvas.wrapPromptText(GameInstructions.field_c, ValidatedTextInputWidget.field_R, LegacyOpenGlVertexBuffer.field_j, false, LegacyOpenGlGraphicsToolkit.unfortunatelyYourConfigurationDoesnText);
               } else {
-                var3_int = DelegatingCanvas.a(GameInstructions.field_c, ValidatedTextInputWidget.field_R, LegacyOpenGlVertexBuffer.field_j, false, FallbackShaderEffect.field_f);
+                var3_int = DelegatingCanvas.wrapPromptText(GameInstructions.field_c, ValidatedTextInputWidget.field_R, LegacyOpenGlVertexBuffer.field_j, false, FallbackShaderEffect.field_f);
               }
               var4 = var3_int + 2;
               LegacyOpenGlPostProcessManager.field_a = new int[var4];
@@ -265,7 +265,7 @@ final class ScreenNameValidator extends TextInputValidator {
               LegacyOpenGlPostProcessManager.field_a[-1 + var4] = 0;
               ByteArrayPool.field_b[0] = 5;
             } else if (4 == DroneChargeParticle.field_s) {
-              var3_int = DelegatingCanvas.a(GameInstructions.field_c, ValidatedTextInputWidget.field_R, LegacyOpenGlVertexBuffer.field_j, false, LimitedRandomAccessFile.field_c);
+              var3_int = DelegatingCanvas.wrapPromptText(GameInstructions.field_c, ValidatedTextInputWidget.field_R, LegacyOpenGlVertexBuffer.field_j, false, LimitedRandomAccessFile.field_c);
               var4 = var3_int + 2;
               IntIndexHashTable.field_c = new String[var4];
               LegacyOpenGlPostProcessManager.field_a = new int[var4];
@@ -284,7 +284,7 @@ final class ScreenNameValidator extends TextInputValidator {
               if (DroneChargeParticle.field_s != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = DelegatingCanvas.a(GameInstructions.field_c, ValidatedTextInputWidget.field_R, LegacyOpenGlVertexBuffer.field_j, false, OpenGlBuffer.fullscreenModeWasCancelledText);
+              var3_int = DelegatingCanvas.wrapPromptText(GameInstructions.field_c, ValidatedTextInputWidget.field_R, LegacyOpenGlVertexBuffer.field_j, false, OpenGlBuffer.fullscreenModeWasCancelledText);
               var4 = 3 + var3_int;
               LegacyOpenGlPostProcessManager.field_a = new int[var4];
               IntIndexHashTable.field_c = new String[var4];
@@ -304,7 +304,7 @@ final class ScreenNameValidator extends TextInputValidator {
               ByteArrayPool.field_b[1] = 5;
             }
           } else {
-            var3_int = DelegatingCanvas.a(GameInstructions.field_c, ValidatedTextInputWidget.field_R, LegacyOpenGlVertexBuffer.field_j, false, LegacyOpenGlInterleavedStream.formatIndexedTokens(ClientExceptionSupport.ifYouDoNothingText, new String[]{"<br><%0><br>"}, (byte) -128));
+            var3_int = DelegatingCanvas.wrapPromptText(GameInstructions.field_c, ValidatedTextInputWidget.field_R, LegacyOpenGlVertexBuffer.field_j, false, LegacyOpenGlInterleavedStream.formatIndexedTokens(ClientExceptionSupport.ifYouDoNothingText, new String[]{"<br><%0><br>"}, (byte) -128));
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(GameInstructions.field_c[var5])) {
@@ -321,7 +321,7 @@ final class ScreenNameValidator extends TextInputValidator {
             TickClock.field_c = new String[-1 - var4 + var3_int];
             ArrayUtils.copy(GameInstructions.field_c, var4 + 1, TickClock.field_c, 0, -var4 + (var3_int - 1));
             var4 = -1;
-            var3_int = DelegatingCanvas.a(GameInstructions.field_c, ValidatedTextInputWidget.field_R, LegacyOpenGlVertexBuffer.field_j, false, LegacyOpenGlInterleavedStream.formatIndexedTokens(IntroFinalFrameResources.field_a, new String[]{"<br><%0><br>"}, (byte) -128));
+            var3_int = DelegatingCanvas.wrapPromptText(GameInstructions.field_c, ValidatedTextInputWidget.field_R, LegacyOpenGlVertexBuffer.field_j, false, LegacyOpenGlInterleavedStream.formatIndexedTokens(IntroFinalFrameResources.field_a, new String[]{"<br><%0><br>"}, (byte) -128));
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(GameInstructions.field_c[var5])) {
                 continue;
@@ -434,7 +434,7 @@ final class ScreenNameValidator extends TextInputValidator {
             RenderPresentationException.field_d = stackIn_116_0 + stackIn_117_1;
           }
           ProxyAuthenticationRequiredException.field_f = -(RenderPresentationException.field_d >> 1) + ComboState.field_b;
-          var4Lifetime3 = -96 % ((param2 - 48) / 57);
+          var4Lifetime3 = -96 % ((guard - 48) / 57);
           HardwareAnimatedWaterEffect.field_g = new int[IntIndexHashTable.field_c.length][];
           var5Lifetime3 = 0;
           var6Lifetime1 = ProxyAuthenticationRequiredException.field_f;
@@ -456,15 +456,15 @@ final class ScreenNameValidator extends TextInputValidator {
             var5Lifetime3++;
           }
           if (DroneChargeParticle.field_s == 2) {
-            RendererPreference.field_a.resetSelection(param0, 84, -1, -1);
+            RendererPreference.field_a.resetSelection(keyboardSelection, 84, -1, -1);
           } else {
-            RendererPreference.field_a.resetSelection(param0, -27, OpenGlAssemblyProgram.b(ArenaDefinitionCodec.field_e, 1882601153, PointLight.mouseX), 0);
+            RendererPreference.field_a.resetSelection(keyboardSelection, -27, OpenGlAssemblyProgram.hitTestDisplayPrompt(ArenaDefinitionCodec.field_e, 1882601153, PointLight.mouseX), 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var3), "ou.G(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var3), "ou.G(" + keyboardSelection + ',' + state + ',' + guard + ')');
         }
     }
 

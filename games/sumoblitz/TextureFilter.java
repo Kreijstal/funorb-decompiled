@@ -7,7 +7,7 @@ final class TextureFilter {
     static String abcdefghijklmnopqrstuvwxyzabcdefghijText;
     static String useThisAlternativeAsText;
 
-    final static int a(boolean param0) {
+    final static int advanceJs5Connection(boolean guard) {
         try {
           int stackIn_16_0 = 0;
           int stackIn_27_0 = 0;
@@ -31,12 +31,12 @@ final class TextureFilter {
               BufferedSocket.field_p = CompactMeshGeometry.field_u.openDirectSocket((byte) 51, Js5Client.field_a, SingleChildWidget.field_x);
               FullscreenDisplayMode.field_d = FullscreenDisplayMode.field_d + 1;
             }
-            if (!param0) {
+            if (!guard) {
               useThisAlternativeAsText = (String) null;
             }
             if (FullscreenDisplayMode.field_d == 1) {
               if (BufferedSocket.field_p.status == 2) {
-                stackIn_16_0 = EmptyWidgetRenderer.a(-1, -84);
+                stackIn_16_0 = EmptyWidgetRenderer.handleJs5ConnectionFailure(-1, -84);
                 return stackIn_16_0;
               }
               if (BufferedSocket.field_p.status == 1) {
@@ -57,13 +57,13 @@ final class TextureFilter {
               if (InstrumentNoteMask.field_n.available(-91) > 0) {
                 var1_int = InstrumentNoteMask.field_n.readByte(-106);
                 if (var1_int != 0) {
-                  stackIn_30_0 = EmptyWidgetRenderer.a(var1_int, -93);
+                  stackIn_30_0 = EmptyWidgetRenderer.handleJs5ConnectionFailure(var1_int, -93);
                   return stackIn_30_0;
                 }
                 FullscreenDisplayMode.field_d = FullscreenDisplayMode.field_d + 1;
               } else {
                 if (IntroMeshResources.monotonicTimeMillis(-52) > ShrinkingRingEffect.field_s) {
-                  stackIn_27_0 = EmptyWidgetRenderer.a(-2, -89);
+                  stackIn_27_0 = EmptyWidgetRenderer.handleJs5ConnectionFailure(-2, -89);
                   return stackIn_27_0;
                 }
               }
@@ -80,7 +80,7 @@ final class TextureFilter {
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (IOException) (Object) decompiledCaughtException;
-            return EmptyWidgetRenderer.a(-3, -94);
+            return EmptyWidgetRenderer.handleJs5ConnectionFailure(-3, -94);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

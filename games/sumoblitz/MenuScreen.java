@@ -79,7 +79,7 @@ class MenuScreen {
         var10 = new boolean[]{false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false};
         var11 = new boolean[]{false, false, false, true, true, false, false, false, false, true, true, true, false, true, false, true, false, false, false, false, true, true, false, true, true, false, true, false};
         var12 = new boolean[]{false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, true, false, false, false, false, false, false, false, false, true, false, false, true};
-        DelegatingCanvas.a(IntroMeshProjection.field_c, 380, -5, opacity << 24, 3, var22, 650, 55, 1, true);
+        DelegatingCanvas.drawToolkitNineSlice(IntroMeshProjection.field_c, 380, -5, opacity << 24, 3, var22, 650, 55, 1, true);
         var8Lifetime1 = 35;
         if (guard >= -56) {
           return;
@@ -219,7 +219,7 @@ class MenuScreen {
             LegacyOpenGlEffect.field_c.drawCenteredText(InstrumentNoteMask.createAFreeAccountText, var5, -1, 32 + (SocketConnector.field_a.field_i * 3 + 200 + 32), 320, 0);
           }
         } else {
-          DelegatingCanvas.a(ResizingDialog.field_H, 160, 140, opacity << 24, 3, var22, 360, 160, 1, true);
+          DelegatingCanvas.drawToolkitNineSlice(ResizingDialog.field_H, 160, 140, opacity << 24, 3, var22, 360, 160, 1, true);
           var8Lifetime2 = 390;
           var13Lifetime1 = 310;
           var17_ref_String = Integer.toString(LegacyOpenGlClientVertexBuffer.field_c[var15] * 100);
@@ -391,19 +391,19 @@ class MenuScreen {
           if (highlighted) {
             if (ActiveCanvasProvider.field_c != 1 &&
               !AudioOutputBootstrap.field_b[84]) {
-              DelegatingCanvas.a(IntrusiveDeque.field_c, var11 << 1, var7, opacity << 24, 1, toolkit, var10, var6_int - var11 + 10, 1, true);
+              DelegatingCanvas.drawToolkitNineSlice(IntrusiveDeque.field_c, var11 << 1, var7, opacity << 24, 1, toolkit, var10, var6_int - var11 + 10, 1, true);
               if (var21 != 0) {
-                DelegatingCanvas.a(IsaacCipher.field_j, var11 << 1, var7, opacity << 24, 1, toolkit, var10, -var11 + (var6_int + 10), 1, true);
-                DelegatingCanvas.a(SecondaryNodeDequeIterator.field_a, var11 << 1, var7, opacity << 24, 1, toolkit, var10, 10 + (var6_int - var11), 1, true);
+                DelegatingCanvas.drawToolkitNineSlice(IsaacCipher.field_j, var11 << 1, var7, opacity << 24, 1, toolkit, var10, -var11 + (var6_int + 10), 1, true);
+                DelegatingCanvas.drawToolkitNineSlice(SecondaryNodeDequeIterator.field_a, var11 << 1, var7, opacity << 24, 1, toolkit, var10, 10 + (var6_int - var11), 1, true);
               }
             } else {
-              DelegatingCanvas.a(IsaacCipher.field_j, var11 << 1, var7, opacity << 24, 1, toolkit, var10, -var11 + (var6_int + 10), 1, true);
+              DelegatingCanvas.drawToolkitNineSlice(IsaacCipher.field_j, var11 << 1, var7, opacity << 24, 1, toolkit, var10, -var11 + (var6_int + 10), 1, true);
               if (var21 != 0) {
-                DelegatingCanvas.a(SecondaryNodeDequeIterator.field_a, var11 << 1, var7, opacity << 24, 1, toolkit, var10, 10 + (var6_int - var11), 1, true);
+                DelegatingCanvas.drawToolkitNineSlice(SecondaryNodeDequeIterator.field_a, var11 << 1, var7, opacity << 24, 1, toolkit, var10, 10 + (var6_int - var11), 1, true);
               }
             }
           } else {
-            DelegatingCanvas.a(SecondaryNodeDequeIterator.field_a, var11 << 1, var7, opacity << 24, 1, toolkit, var10, 10 + (var6_int - var11), 1, true);
+            DelegatingCanvas.drawToolkitNineSlice(SecondaryNodeDequeIterator.field_a, var11 << 1, var7, opacity << 24, 1, toolkit, var10, 10 + (var6_int - var11), 1, true);
           }
           var12 = 16777215 | opacity << 24;
           var13 = null;
@@ -456,7 +456,7 @@ class MenuScreen {
                 if (ToolkitRasterStateFrame.field_e != -1) {
                   return;
                 }
-                DelegatingCanvas.a(ResizingDialog.field_H, var11 + 8, 9 + var7, opacity, 1, toolkit, var10 - 18, 22 + var6_int - var11, 1, true);
+                DelegatingCanvas.drawToolkitNineSlice(ResizingDialog.field_H, var11 + 8, 9 + var7, opacity, 1, toolkit, var10 - 18, 22 + var6_int - var11, 1, true);
                 if (var21 == 0) {
                   return;
                 }
@@ -856,7 +856,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                     {
-                      DroneIntroductionOverlay.a(animateTransition, true, false);
+                      DroneIntroductionOverlay.endGameplaySession(animateTransition, true, false);
                       StrongCacheReference.switchMenuScreen(-7753, animateTransition, -1);
                       if (MessageDialog.arcadeMode) {
                         LruNodeCache.gameplaySession.startArcadeGame((byte) -120);
@@ -894,7 +894,7 @@ class MenuScreen {
                     }
                     {
                       LruNodeCache.gameplaySession.resetSession(70);
-                      DroneIntroductionOverlay.a(animateTransition, true, false);
+                      DroneIntroductionOverlay.endGameplaySession(animateTransition, true, false);
                       if (AccountPacketReader.isGuestSession((byte) 9)) {
                         if (0 < IntrusiveNodeHashTable.field_c) {
                           StrongCacheReference.switchMenuScreen(-7753, animateTransition, 6);
@@ -923,7 +923,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                     regionExit3: {
-                      DroneIntroductionOverlay.a(animateTransition, true, false);
+                      DroneIntroductionOverlay.endGameplaySession(animateTransition, true, false);
                       if (!AccountPacketReader.isGuestSession((byte) 9)) {
                         if (!MessageDialog.arcadeMode) {
                           StrongCacheReference.switchMenuScreen(-7753, true, 7);
@@ -1014,7 +1014,7 @@ class MenuScreen {
                       break regionExit2;
                     }
                     StrongCacheReference.switchMenuScreen(-7753, animateTransition, 0);
-                    WhirlpoolTables.a(17534);
+                    WhirlpoolTables.resetGameProgress(17534);
                     OpenGlTransparentWaterEffect.field_e = 0;
                     LoginIdentifierSupport.field_e = 0;
                     OpenGlUnderwaterEffect.field_q.clear(115);
@@ -1070,11 +1070,11 @@ class MenuScreen {
                       ArchiveLoadRequirement.playSoundEffect(0, true);
                     }
                     if (this.selection.isEndPressed(103)) {
-                      QuickChatPhraseProvider.b(80);
+                      QuickChatPhraseProvider.restoreFullSoundVolume(80);
                       ArchiveLoadRequirement.playSoundEffect(0, true);
                     }
                     if (this.selection.isLeftPressed(2542)) {
-                      HardwareSpecularEffect.e(-124);
+                      HardwareSpecularEffect.decreaseSoundVolume(-124);
                       ArchiveLoadRequirement.playSoundEffect(0, true);
                     }
                     if (this.selection.isRightPressed(116224)) {
@@ -1092,11 +1092,11 @@ class MenuScreen {
                         if (var8 < 256) {
                           OpenGlVertexLayout.setSoundVolume(16440, var8);
                           if (var9 != 0) {
-                            QuickChatPhraseProvider.b(100);
+                            QuickChatPhraseProvider.restoreFullSoundVolume(100);
                             FourIntUpdateRequest.muteSoundEffects((byte) 53);
                           }
                         } else {
-                          QuickChatPhraseProvider.b(100);
+                          QuickChatPhraseProvider.restoreFullSoundVolume(100);
                           if (var9 != 0) {
                             FourIntUpdateRequest.muteSoundEffects((byte) 53);
                           }
@@ -1170,7 +1170,7 @@ class MenuScreen {
                     if (!this.selection.isActivated(-31260)) {
                       break regionExit2;
                     }
-                    DroneIntroductionOverlay.a(animateTransition, true, false);
+                    DroneIntroductionOverlay.endGameplaySession(animateTransition, true, false);
                     if (OpenGlTransparentWaterEffect.field_e == 0) {
                       StrongCacheReference.switchMenuScreen(-7753, animateTransition, 2);
                       if (var9 == 0) {
@@ -1392,7 +1392,7 @@ class MenuScreen {
           if (0 == this.screenId ||
             1 == this.screenId ||
             this.screenId == 8) {
-            DelegatingCanvas.a(IntroMeshProjection.field_c, 490, 320 + (-(MouseWheelInput.field_b.width() / 2) - 20), opacity << 24, var4_int, toolkit, MouseWheelInput.field_b.width() + 40, -5, 1, true);
+            DelegatingCanvas.drawToolkitNineSlice(IntroMeshProjection.field_c, 490, 320 + (-(MouseWheelInput.field_b.width() / 2) - 20), opacity << 24, var4_int, toolkit, MouseWheelInput.field_b.width() + 40, -5, 1, true);
             if (DisplaySizeController.field_f == 0 &&
               !OpenGlTransparentWaterEffect.field_k) {
               stackIn_18_0 = 3;
@@ -1420,7 +1420,7 @@ class MenuScreen {
                 }
                 if ((decompiledFrameRemainder0) &&
                   (this.screenId == 6)) {
-                  DelegatingCanvas.a(IntroMeshProjection.field_c, 380, -5, opacity << 24, var4_int, toolkit, 650, 55, 1, true);
+                  DelegatingCanvas.drawToolkitNineSlice(IntroMeshProjection.field_c, 380, -5, opacity << 24, var4_int, toolkit, 650, 55, 1, true);
                   DualLinkNode.menuTop[this.screenId] = 200;
                   var6Lifetime1 = 200 - (-SocketConnector.field_a.field_i + 70);
                   var7 = 4 + SocketConnector.field_a.field_c + SocketConnector.field_a.field_h;
@@ -1550,7 +1550,7 @@ class MenuScreen {
         var9 = MatchingTextValidator.field_h.getToolkit(-125);
         var4 = opacity << 24 | 16777215;
         var5 = 664;
-        DelegatingCanvas.a(IntroMeshProjection.field_c, 380, -5, opacity << 24, 3, var9, 650, 55, 1, true);
+        DelegatingCanvas.drawToolkitNineSlice(IntroMeshProjection.field_c, 380, -5, opacity << 24, 3, var9, 650, 55, 1, true);
         if (guard < 114) {
           return;
         }
@@ -1916,7 +1916,7 @@ class MenuScreen {
         String var6Lifetime1;
         var19 = Sumoblitz.field_L ? 1 : 0;
         var20 = MatchingTextValidator.field_h.getToolkit(-124);
-        DelegatingCanvas.a(IntroMeshProjection.field_c, 424, -5, opacity << 24, 3, var20, 650, 45, guard, true);
+        DelegatingCanvas.drawToolkitNineSlice(IntroMeshProjection.field_c, 424, -5, opacity << 24, 3, var20, 650, 45, guard, true);
         var4 = 0;
         if (EmailValidationError.field_c == 2) {
         }

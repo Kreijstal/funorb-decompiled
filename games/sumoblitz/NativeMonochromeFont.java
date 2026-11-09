@@ -4,7 +4,7 @@
 final class NativeMonochromeFont extends ToolkitFont implements NativeResource {
     long field_nativeid;
 
-    private final native void NA(char param0, int param1, int param2, int param3, boolean param4, SpriteMask param5, int param6, int param7);
+    private final native void nativeDrawMaskedGlyph(char param0, int param1, int param2, int param3, boolean param4, SpriteMask param5, int param6, int param7);
 
     final native void drawGlyph(char param0, int param1, int param2, int param3, boolean param4);
 
@@ -17,7 +17,7 @@ final class NativeMonochromeFont extends ToolkitFont implements NativeResource {
     public final native void disposeNativeResource(boolean param0);
 
     final void drawMaskedGlyph(char param0, int param1, int param2, int param3, boolean param4, SpriteMask param5, int param6, int param7) {
-        this.NA(param0, param1, param2, param3, param4, param5, param6, param7);
+        this.nativeDrawMaskedGlyph(param0, param1, param2, param3, param4, param5, param6, param7);
     }
 
     NativeMonochromeFont(NativeSoftwareGraphicsToolkit param0, NativeGraphicsHeap param1, FontMetrics param2, SpriteData[] param3, ToolkitSprite[] param4) {
@@ -35,8 +35,8 @@ final class NativeMonochromeFont extends ToolkitFont implements NativeResource {
           var9[var11] = param3[var11].leftInset;
           var10[var11] = param3[var11].topInset;
         }
-        this.JA(param0, param1, var6, var7, var8, var9, var10);
+        this.nativeInitialize(param0, param1, var6, var7, var8, var9, var10);
     }
 
-    private final native void JA(NativeSoftwareGraphicsToolkit param0, NativeGraphicsHeap param1, byte[][] param2, int[] param3, int[] param4, int[] param5, int[] param6);
+    private final native void nativeInitialize(NativeSoftwareGraphicsToolkit toolkit, NativeGraphicsHeap heap, byte[][] glyphs, int[] widths, int[] heights, int[] leftInsets, int[] topInsets);
 }

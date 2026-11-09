@@ -19,7 +19,7 @@ abstract class TickClock {
 
     abstract void reset(byte guard);
 
-    final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void rasterizeHalfBlendTriangle(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         RuntimeException stackIn_77_0 = null;
         StringBuilder stackIn_77_1 = null;
         String stackIn_78_2 = null;
@@ -126,16 +126,16 @@ abstract class TickClock {
                     if (0 == var18) {
                       if (var17 >= 0 &&
                         SoftwareRasterViewport.width > var17) {
-                        TextureMetadata.a(-1, var17 + var16Lifetime2, param4, var18, param0);
+                        TextureMetadata.blendHalfSpan(-1, var17 + var16Lifetime2, param4, var18, param0);
                       }
                     } else {
                       if (var18 + var17 >= SoftwareRasterViewport.width) {
                         var18 = SoftwareRasterViewport.width - var17 - 1;
                       }
                       if (0 > var17) {
-                        TextureMetadata.a(-1, var16Lifetime2, param4, var18 + var17, param0);
+                        TextureMetadata.blendHalfSpan(-1, var16Lifetime2, param4, var18 + var17, param0);
                       } else {
-                        TextureMetadata.a(-1, var17 + var16Lifetime2, param4, var18, param0);
+                        TextureMetadata.blendHalfSpan(-1, var17 + var16Lifetime2, param4, var18, param0);
                       }
                     }
                   }
@@ -179,14 +179,14 @@ abstract class TickClock {
                     var17Lifetime1 = -1 + (SoftwareRasterViewport.width - var16Lifetime1);
                   }
                   if (0 <= var16Lifetime1) {
-                    TextureMetadata.a(param6 ^ -1955582417, var15Lifetime1 + var16Lifetime1, param4, var17Lifetime1, param0);
+                    TextureMetadata.blendHalfSpan(param6 ^ -1955582417, var15Lifetime1 + var16Lifetime1, param4, var17Lifetime1, param0);
                   } else {
-                    TextureMetadata.a(-1, var15Lifetime1, param4, var17Lifetime1 + var16Lifetime1, param0);
+                    TextureMetadata.blendHalfSpan(-1, var15Lifetime1, param4, var17Lifetime1 + var16Lifetime1, param0);
                   }
                 } else {
                   if (0 <= var16Lifetime1 &&
                     SoftwareRasterViewport.width > var16Lifetime1) {
-                    TextureMetadata.a(-1, var15Lifetime1 + var16Lifetime1, param4, var17Lifetime1, param0);
+                    TextureMetadata.blendHalfSpan(-1, var15Lifetime1 + var16Lifetime1, param4, var17Lifetime1, param0);
                   }
                 }
               }

@@ -35,11 +35,11 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    final static boolean c(int param0) {
-        if (param0 > -83) {
+    final static boolean hasLegacyStatusFlag(int guard) {
+        if (guard > -83) {
           field_n = (PcmSampleStream[]) null;
         }
-        return IndexBufferReference.a(59, LegacyOpenGlUnlitEffect.activeApplet(2));
+        return IndexBufferReference.hasLegacyStatusFlag(59, LegacyOpenGlUnlitEffect.activeApplet(2));
     }
 
     public final void startProduction(java.awt.image.ImageConsumer param0) {
@@ -122,7 +122,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           if (guard == -1) {
             return null;
           }
-          ImageProducerRasterBuffer.c(40);
+          ImageProducerRasterBuffer.hasLegacyStatusFlag(40);
           stackIn_27_0 = null;
           return (EmailValidationError) (stackIn_27_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -196,7 +196,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             var5.field_K = WidgetStateStyle.decodePackedShortArray(var5.field_K, packet, -112, 16);
           }
           if (LoginIdentifierSupport.readBitFlag(packet, false)) {
-            var5.field_a = OpenGlBuffer.a(16, 0, var5.field_a, packet);
+            var5.field_a = OpenGlBuffer.decodePackedByteArray(16, 0, var5.field_a, packet);
             var6 = 0;
             for (var7 = 0; var7 < var5.field_a.length; var7++) {
               if (var6 < (255 & var5.field_a[var7])) {

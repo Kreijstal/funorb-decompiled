@@ -28,8 +28,8 @@ final class LegacyOpenGlSpecularEffect extends LegacyOpenGlEffect {
         }
     }
 
-    final static void c(int param0) {
-        if (param0 != 8193) {
+    final static void initializeClientHook(int guard) {
+        if (guard != 8193) {
           pendingUpgradeLevels = (int[]) null;
         }
     }
@@ -231,7 +231,7 @@ final class LegacyOpenGlSpecularEffect extends LegacyOpenGlEffect {
 
     final void enable(byte guard, boolean lighting) {
         if (guard <= 33) {
-          LegacyOpenGlSpecularEffect.c(-77);
+          LegacyOpenGlSpecularEffect.initializeClientHook(-77);
         }
         if (this.stateLists != null &&
           lighting) {
@@ -261,7 +261,7 @@ final class LegacyOpenGlSpecularEffect extends LegacyOpenGlEffect {
           this.toolkit.setActiveTextureUnit(0, 95);
         }
         if (guard < 39) {
-          LegacyOpenGlSpecularEffect.c(-83);
+          LegacyOpenGlSpecularEffect.initializeClientHook(-83);
         }
     }
 

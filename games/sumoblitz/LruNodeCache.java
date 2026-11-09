@@ -80,7 +80,7 @@ final class LruNodeCache {
         ValidationStatus.field_a = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, byte param14, int param15, int param16) {
+    final static void rasterizeGouraudTriangle(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, byte param14, int param15, int param16) {
         int var17_int = 0;
         int var18 = 0;
         int var19 = 0;

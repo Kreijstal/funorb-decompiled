@@ -30,7 +30,7 @@ final class GameInstructions {
         }
     }
 
-    final static byte[] a(CharSequence param0, byte param1) {
+    final static byte[] encodeCp1252(CharSequence text, byte guard) {
         int var4 = 0;
         byte[] stackIn_69_0 = null;
         RuntimeException stackIn_72_0 = null;
@@ -44,14 +44,14 @@ final class GameInstructions {
         int var6 = 0;
         var6 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var2_int = param0.length();
-          if (param1 != 32) {
+          var2_int = text.length();
+          if (guard != 32) {
             upgradesHelpLines = (String[]) null;
           }
           var3 = new byte[var2_int];
           for (var4 = 0; var2_int > var4; var4++) {
             {
-              var5 = param0.charAt(var4);
+              var5 = text.charAt(var4);
               if ((var5 <= 0 ||
                 128 <= var5) && (var5 < 160 ||
                 var5 > 255)) {
@@ -153,20 +153,20 @@ final class GameInstructions {
           var2 = decompiledCaughtException;
           stackIn_72_0 = var2;
           stackIn_72_1 = new StringBuilder().append("mb.A(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_73_2 = "null";
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(guard).append(')').toString());
         }
     }
 
-    final static boolean a(boolean param0, int param1, int param2) {
-        if (!param0) {
+    final static boolean hasFlag65536(boolean guard, int unused, int flags) {
+        if (!guard) {
           return false;
         }
-        return (param2 & 65536) != 0 ? true : false;
+        return (flags & 65536) != 0 ? true : false;
     }
 
     static {

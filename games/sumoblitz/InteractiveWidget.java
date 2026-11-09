@@ -105,7 +105,7 @@ class InteractiveWidget extends UiWidget {
         this.enabled = true;
     }
 
-    final static LegacyOpenGlSpriteTexture a(LegacyOpenGlGraphicsToolkit param0, int param1, int param2, byte[] param3, boolean param4, int param5, int param6, int param7) {
+    final static LegacyOpenGlSpriteTexture createLegacyByteSpriteTexture(LegacyOpenGlGraphicsToolkit param0, int param1, int param2, byte[] param3, boolean param4, int param5, int param6, int param7) {
         RuntimeException var8 = null;
         LegacyOpenGlSpriteTexture stackIn_7_0 = null;
         LegacyOpenGlSpriteTexture stackIn_10_0 = null;

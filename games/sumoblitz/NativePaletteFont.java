@@ -14,7 +14,7 @@ final class NativePaletteFont extends ToolkitFont implements NativeResource {
 
     public final native void disposeNativeResource(boolean param0);
 
-    private final native void S(NativeSoftwareGraphicsToolkit param0, NativeGraphicsHeap param1, byte[][] param2, int[] param3, int[] param4, int[] param5, int[] param6, int[] param7);
+    private final native void nativeInitialize(NativeSoftwareGraphicsToolkit toolkit, NativeGraphicsHeap heap, byte[][] glyphs, int[] palette, int[] widths, int[] heights, int[] leftInsets, int[] topInsets);
 
     NativePaletteFont(NativeSoftwareGraphicsToolkit param0, NativeGraphicsHeap param1, FontMetrics param2, SpriteData[] param3, ToolkitSprite[] param4) {
         super(param0, param2);
@@ -31,12 +31,12 @@ final class NativePaletteFont extends ToolkitFont implements NativeResource {
           var9[var11] = param3[var11].leftInset;
           var10[var11] = param3[var11].topInset;
         }
-        this.S(param0, param1, var6, param3[0].palette, var7, var8, var9, var10);
+        this.nativeInitialize(param0, param1, var6, param3[0].palette, var7, var8, var9, var10);
     }
 
-    private final native void PA(char param0, int param1, int param2, int param3, boolean param4, SpriteMask param5, int param6, int param7);
+    private final native void nativeDrawMaskedGlyph(char param0, int param1, int param2, int param3, boolean param4, SpriteMask param5, int param6, int param7);
 
     final void drawMaskedGlyph(char param0, int param1, int param2, int param3, boolean param4, SpriteMask param5, int param6, int param7) {
-        this.PA(param0, param1, param2, param3, param4, param5, param6, param7);
+        this.nativeDrawMaskedGlyph(param0, param1, param2, param3, param4, param5, param6, param7);
     }
 }

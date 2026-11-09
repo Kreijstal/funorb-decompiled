@@ -105,7 +105,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
           ParticleSpriteResources.victoryParticles = new IntrusiveDeque();
           IntroMeshProjection.field_a = ExpandingRingEffect.nextRandomInt(640, HardwareGraphicsHeap.field_o, (byte) -96) << 8;
           LoginForm.field_E = ExpandingRingEffect.nextRandomInt(480, HardwareGraphicsHeap.field_o, (byte) -96) << 8;
-          LimitedRandomAccessFile.d(22030);
+          LimitedRandomAccessFile.resetMainMenu(22030);
           if (guard != 35040) {
             OpenGlBuffer.createSolidPanelSlices(116, -119);
           }
@@ -216,7 +216,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
         }
     }
 
-    final static byte[] a(int param0, int param1, byte[] param2, IsaacPacketBuffer param3) {
+    final static byte[] decodePackedByteArray(int lengthBits, int nullLength, byte[] values, IsaacPacketBuffer packet) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -233,40 +233,40 @@ abstract class OpenGlBuffer implements GpuBuffer {
         RuntimeException var4 = null;
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var4_int = param3.readBits(param0, (byte) -87);
-          if (var4_int == param1) {
+          var4_int = packet.readBits(lengthBits, (byte) -87);
+          if (var4_int == nullLength) {
             stackIn_3_0 = null;
             return (byte[]) (stackIn_3_0);
           }
-          if (param2 == null ||
-            var4_int != param2.length) {
-            param2 = new byte[var4_int];
+          if (values == null ||
+            var4_int != values.length) {
+            values = new byte[var4_int];
           }
-          var5 = param3.readBits(3, (byte) -94);
-          var6 = (byte)param3.readBits(8, (byte) -117);
+          var5 = packet.readBits(3, (byte) -94);
+          var6 = (byte)packet.readBits(8, (byte) -117);
           if (var5 > 0) {
             for (var7 = 0; var4_int > var7; var7++) {
-              param2[var7] = (byte)(var6 + param3.readBits(var5, (byte) -127));
+              values[var7] = (byte)(var6 + packet.readBits(var5, (byte) -127));
             }
           } else {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param2[var7] = (byte)var6;
+              values[var7] = (byte)var6;
             }
           }
-          stackIn_16_0 = (byte[]) (param2);
+          stackIn_16_0 = (byte[]) (values);
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_19_0 = var4;
-          stackIn_19_1 = new StringBuilder().append("ua.V(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_19_1 = new StringBuilder().append("ua.V(").append(lengthBits).append(',').append(nullLength).append(',');
+          if (values == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
           }
           stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',');
-          if (param3 == null) {
+          if (packet == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";

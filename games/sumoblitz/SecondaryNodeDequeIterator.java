@@ -34,7 +34,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         this.field_e = null;
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void prepareNoiseCoordinates(int guard, int width, int height) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -43,35 +43,35 @@ final class SecondaryNodeDequeIterator implements Iterator {
         int var3_intLifetime1;
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (ClientStackTraceFormatter.field_b != param1) {
-            MouseInputRegistration.field_b = new int[param1];
-            for (var3_int = 0; var3_int < param1; var3_int++) {
-              MouseInputRegistration.field_b[var3_int] = (var3_int << 12) / param1;
+          if (ClientStackTraceFormatter.field_b != width) {
+            MouseInputRegistration.field_b = new int[width];
+            for (var3_int = 0; var3_int < width; var3_int++) {
+              MouseInputRegistration.field_b[var3_int] = (var3_int << 12) / width;
             }
-            ClientStackTraceFormatter.field_b = param1;
+            ClientStackTraceFormatter.field_b = width;
           }
-          if (param0 != -1203350004) {
+          if (guard != -1203350004) {
             SecondaryNodeDequeIterator.releaseStatics(86);
           }
-          if (QuickChatCommand.field_c != param2) {
-            if (ClientStackTraceFormatter.field_b != param2) {
-              SpriteOptionRenderer.field_o = new int[param2];
+          if (QuickChatCommand.field_c != height) {
+            if (ClientStackTraceFormatter.field_b != height) {
+              SpriteOptionRenderer.field_o = new int[height];
               var5 = 0;
               var3_intLifetime1 = var5;
-              while (param2 > var5) {
-                SpriteOptionRenderer.field_o[var5] = (var5 << 12) / param2;
+              while (height > var5) {
+                SpriteOptionRenderer.field_o[var5] = (var5 << 12) / height;
                 var5++;
               }
             } else {
               SpriteOptionRenderer.field_o = MouseInputRegistration.field_b;
             }
-            QuickChatCommand.field_c = param2;
+            QuickChatCommand.field_c = height;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var3), "vv.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var3), "vv.A(" + guard + ',' + width + ',' + height + ')');
         }
     }
 

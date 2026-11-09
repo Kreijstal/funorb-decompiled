@@ -17,15 +17,15 @@ abstract class LegacyOpenGlEffect {
         return var2;
     }
 
-    final static void a(int param0) {
-        if (param0 == 8192) {
+    final static void readStatusFlagReply(int guard) {
+        if (guard == 8192) {
           IntrusiveDequeCursor.field_b = false;
-          NativeLibraryExtractor.incomingPacket.readUnsignedByte(param0 ^ -23110);
+          NativeLibraryExtractor.incomingPacket.readUnsignedByte(guard ^ -23110);
           return;
         }
         field_d = (int[]) null;
         IntrusiveDequeCursor.field_b = false;
-        NativeLibraryExtractor.incomingPacket.readUnsignedByte(param0 ^ -23110);
+        NativeLibraryExtractor.incomingPacket.readUnsignedByte(guard ^ -23110);
     }
 
     abstract void disable(int guard);

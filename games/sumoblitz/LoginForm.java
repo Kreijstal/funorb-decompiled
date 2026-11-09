@@ -67,7 +67,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Widg
             } else {
               if (this.field_N == source) {
                 if (this.reconnecting) {
-                  TimedSceneEffect.c(guard ^ 710);
+                  TimedSceneEffect.requestReconnectCancel(guard ^ 710);
                 } else {
                   if (this.allowGuestPlay) {
                     LoginCredentialType.showAccountSignupPrompt(true);
@@ -197,7 +197,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Widg
             this.y = this.y + (var7.wrappedHeight(this.messageText, -40 + this.width, var7.ascent) + 5);
           }
           var8 = OpenGlEnvironmentWaterEffect.loginText;
-          var9 = LegacyOpenGlEnvironmentWaterEffect.a(LegacyOpenGlUnlitEffect.activeApplet(2), 1);
+          var9 = LegacyOpenGlEnvironmentWaterEffect.readLoginMethodPreference(LegacyOpenGlUnlitEffect.activeApplet(2), 1);
           if (OpenGlTexture3D.field_m != var9) {
             if (LevelSelectScreen.field_j == var9) {
               var8 = LruNodeCache.usernameText;
@@ -352,20 +352,20 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Widg
         }
     }
 
-    final void a(int param0, String param1) {
+    final void setIdentifierAndClearPassword(int guard, String identifier) {
         TextInputWidget var3 = null;
         String var4 = null;
         try {
-          if (param0 != -3499) {
+          if (guard != -3499) {
             TextInputWidget var5 = (TextInputWidget) null;
             this.onTextSubmitted((TextInputWidget) null, 89);
           }
           var3 = this.identifierInput;
-          var4 = param1;
+          var4 = identifier;
           var3.setText(false, var4, (byte) 67);
-          this.passwordInput.clearText(param0 + 3498);
+          this.passwordInput.clearText(guard + 3498);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "cv.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "cv.L(" + guard + ',' + (identifier != null ? "{...}" : "null") + ')');
         }
     }
 

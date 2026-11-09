@@ -13,7 +13,7 @@ final class SoftLruCache {
     static SpriteData[] field_a;
     static int field_f;
 
-    final static RasterBuffer a(int param0, int param1, int param2, java.awt.Component param3) {
+    final static RasterBuffer createRasterBuffer(int height, int width, int guard, java.awt.Component component) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
@@ -31,18 +31,18 @@ final class SoftLruCache {
             try {
               var4 = Class.forName("BufferedImageRasterBuffer");
               var5 = (RasterBuffer) (var4.newInstance());
-              if (param2 != 0) {
+              if (guard != 0) {
                 stackIn_2_0 = (RasterBuffer) null;
                 return stackIn_2_0;
               }
-              var5.initializeRaster(param3, param0, param1, param2 - 119);
+              var5.initializeRaster(component, height, width, guard - 119);
               stackIn_4_0 = var5;
               return stackIn_4_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
               var5_ref = new ImageProducerRasterBuffer();
-              ((RasterBuffer) ((Object) var5_ref)).initializeRaster(param3, param0, param1, -125);
+              ((RasterBuffer) ((Object) var5_ref)).initializeRaster(component, height, width, -125);
               stackIn_6_0 = var5_ref;
               return (RasterBuffer) ((Object) stackIn_6_0);
             }
@@ -50,8 +50,8 @@ final class SoftLruCache {
             decompiledCaughtException = decompiledCaughtParameter1;
             var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackIn_9_0 = var4_ref2;
-            stackIn_9_1 = new StringBuilder().append("sd.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-            if (param3 == null) {
+            stackIn_9_1 = new StringBuilder().append("sd.I(").append(height).append(',').append(width).append(',').append(guard).append(',');
+            if (component == null) {
               stackIn_10_2 = "null";
             } else {
               stackIn_10_2 = "{...}";
@@ -373,7 +373,7 @@ final class SoftLruCache {
         this(maxWeight, maxWeight);
     }
 
-    final static void a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7) {
+    final static void drawHalfBlendTriangle(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7) {
         int var9;
         var9 = Sumoblitz.field_L ? 1 : 0;
         if (param3 != 27) {
@@ -381,23 +381,23 @@ final class SoftLruCache {
         }
         if (param4 > param5) {
           if (param4 < param2) {
-            TickClock.a(SoftwareRasterizer.pixels, param6, param5, param2, param1, param0, param3 + 1955582389, param7, param4);
+            TickClock.rasterizeHalfBlendTriangle(SoftwareRasterizer.pixels, param6, param5, param2, param1, param0, param3 + 1955582389, param7, param4);
           } else {
             if (param2 <= param5) {
-              TickClock.a(SoftwareRasterizer.pixels, param0, param2, param4, param1, param7, 1955582416, param6, param5);
+              TickClock.rasterizeHalfBlendTriangle(SoftwareRasterizer.pixels, param0, param2, param4, param1, param7, 1955582416, param6, param5);
             } else {
-              TickClock.a(SoftwareRasterizer.pixels, param0, param5, param4, param1, param6, param3 ^ 1955582411, param7, param2);
+              TickClock.rasterizeHalfBlendTriangle(SoftwareRasterizer.pixels, param0, param5, param4, param1, param6, param3 ^ 1955582411, param7, param2);
             }
           }
         } else {
           if (param2 <= param5) {
             if (param2 > param4) {
-              TickClock.a(SoftwareRasterizer.pixels, param7, param4, param5, param1, param6, 1955582416, param0, param2);
+              TickClock.rasterizeHalfBlendTriangle(SoftwareRasterizer.pixels, param7, param4, param5, param1, param6, 1955582416, param0, param2);
             } else {
-              TickClock.a(SoftwareRasterizer.pixels, param7, param2, param5, param1, param0, 1955582416, param6, param4);
+              TickClock.rasterizeHalfBlendTriangle(SoftwareRasterizer.pixels, param7, param2, param5, param1, param0, 1955582416, param6, param4);
             }
           } else {
-            TickClock.a(SoftwareRasterizer.pixels, param6, param4, param2, param1, param7, 1955582416, param0, param5);
+            TickClock.rasterizeHalfBlendTriangle(SoftwareRasterizer.pixels, param6, param4, param2, param1, param7, 1955582416, param0, param5);
           }
         }
     }

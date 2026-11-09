@@ -6,8 +6,8 @@ abstract class HardwareCubeMapSource extends CubeMapSource {
 
     abstract CubeTexture cubeTexture(int guard);
 
-    final static boolean a(boolean param0, int param1, int param2) {
-        if (param0) {
+    final static boolean isDisabledMeshFeature(boolean guard, int flags, int otherFlags) {
+        if (guard) {
           field_d = (IntrusiveDeque) null;
           return false;
         }

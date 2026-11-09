@@ -15,24 +15,24 @@ final class ArchiveLoadingStage {
     static int textColor;
     static SpriteData[] field_b;
 
-    final static void b(byte param0) {
+    final static void finishDialogAnimations(byte guard) {
         if (null != RenderPresentationException.field_a) {
           RenderPresentationException.field_a.finishDialogAnimations(false);
           if (null != HardwareGraphicsHeap.field_n) {
-            HardwareGraphicsHeap.field_n.k(-43);
+            HardwareGraphicsHeap.field_n.enableDeterminateProgress(-43);
           }
           HardwareGraphicsToolkit.resetTooltip((byte) 89);
-          if (param0 != -116) {
+          if (guard != -116) {
             nameSuggestions = (String[]) null;
             return;
           }
           return;
         }
         if (null != HardwareGraphicsHeap.field_n) {
-          HardwareGraphicsHeap.field_n.k(-43);
+          HardwareGraphicsHeap.field_n.enableDeterminateProgress(-43);
         }
         HardwareGraphicsToolkit.resetTooltip((byte) 89);
-        if (param0 != -116) {
+        if (guard != -116) {
           nameSuggestions = (String[]) null;
           return;
         }
@@ -160,7 +160,7 @@ final class ArchiveLoadingStage {
         RuntimeException decompiledCaughtException = null;
         try {
           if (guard >= -10) {
-            ArchiveLoadingStage.b((byte) -42);
+            ArchiveLoadingStage.finishDialogAnimations((byte) -42);
           }
           var4_float = (float)(1 + this.currentRequirement) + (float)percent / 100.0f;
           this.progress = var4_float * (float)this.weight / (float)(1 + this.requirementCount);

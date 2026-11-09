@@ -1836,8 +1836,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final int v(int param0) {
-        if (param0 != 15) {
+    final int underwaterFogColor(int guard) {
+        if (guard != 15) {
           return -11;
         }
         return this.field_k;
@@ -1845,8 +1845,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     abstract void setTextureCoordinateIndex(int index, int guard);
 
-    final int S(int param0) {
-        int var2 = -108 / ((64 - param0) / 32);
+    final int underwaterFogDivisor(int guard) {
+        int var2 = -108 / ((64 - guard) / 32);
         return this.field_Ob;
     }
 
@@ -1930,8 +1930,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final int e(byte param0) {
-        if (param0 < 5) {
+    final int underwaterFogIntensity(byte guard) {
+        if (guard < 5) {
           TextureFormat var3 = (TextureFormat) null;
           this.createTexture2D((GpuDataType) null, (TextureFormat) null, -127, 20, (byte) -94);
         }

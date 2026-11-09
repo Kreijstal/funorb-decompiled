@@ -8,7 +8,7 @@ final class LevelCompletionSupport {
     final static void completeLevel(int guard) {
         TextureMetadata.completedLevels[OpenGlShaderProgram.levelIndex] = true;
         Js5ClientState.field_a = TextureFormat.elapsedTicks;
-        if (RenderPresentationException.a(false)) {
+        if (RenderPresentationException.isHardDifficulty(false)) {
           NineSlicePanel.field_d[OpenGlShaderProgram.levelIndex] = true;
         }
         if (GridWidgetContainer.livesRemaining == 3) {
@@ -34,7 +34,7 @@ final class LevelCompletionSupport {
         }
         if (OpenGlShaderProgram.levelIndex == 12 &&
           !ValidationMessageWidget.field_P) {
-          UnderageAccountInfoPanel.b(24753, 245, 10);
+          UnderageAccountInfoPanel.awardAchievement(24753, 245, 10);
         }
         MatchingTextValidator.field_i = MatchingTextValidator.field_i + 1;
         BlendMode.lastLevelScore = FadingWidget.score;

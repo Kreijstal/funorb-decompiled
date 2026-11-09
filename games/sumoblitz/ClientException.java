@@ -71,8 +71,8 @@ final class ClientException extends RuntimeException {
         }
     }
 
-    final static boolean a(int param0) {
-        if (param0 != 0) {
+    final static boolean isAccountProgressReady(int guard) {
+        if (guard != 0) {
           byte[] var2 = (byte[]) null;
           ClientException.compileShader(6, (OpenGlGraphicsToolkit) null, (byte[]) null, -63);
           if (!TimedSceneEffect.field_r) {

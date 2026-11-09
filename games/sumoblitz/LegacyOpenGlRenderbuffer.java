@@ -47,8 +47,8 @@ final class LegacyOpenGlRenderbuffer extends DualLinkNode implements LegacyOpenG
         this.renderbufferId = 0;
     }
 
-    final static String f(int param0) {
-        if (param0 != 1) {
+    final static String accountDisplayName(int guard) {
+        if (guard != 1) {
           return (String) null;
         }
         if (null == QueuedIntArrayRequest.accountDisplayName) {
@@ -57,7 +57,7 @@ final class LegacyOpenGlRenderbuffer extends DualLinkNode implements LegacyOpenG
         return QueuedIntArrayRequest.accountDisplayName;
     }
 
-    final static void a(byte param0) {
+    final static void decodeSavedProgress(byte guard) {
         int var3 = 0;
         boolean[] stackIn_16_0 = null;
         int stackIn_16_1 = 0;
@@ -82,7 +82,7 @@ final class LegacyOpenGlRenderbuffer extends DualLinkNode implements LegacyOpenG
           ResourceArchive.selectedSpeedLevel = var6.readUnsignedByte(-31302);
           LegacyOpenGlEffectManager.selectedTractionLevel = var6.readUnsignedByte(-31302);
           AccountStatusDialogState.selectedBounceLevel = var6.readUnsignedByte(-31302);
-          if (param0 <= 92) {
+          if (guard <= 92) {
             return;
           }
           for (var3 = 0; 36 > var3; var3++) {
@@ -113,7 +113,7 @@ final class LegacyOpenGlRenderbuffer extends DualLinkNode implements LegacyOpenG
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "kf.F(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "kf.F(" + guard + ')');
         }
     }
 

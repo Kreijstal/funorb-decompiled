@@ -23,7 +23,7 @@ final class FullscreenMembershipDialog extends ResizingDialog implements WidgetA
             this.field_P = (InteractiveWidget) null;
           }
           if (source == this.field_U) {
-            IntIndexHashTable.a(0);
+            IntIndexHashTable.reenterLoginDialog(0);
             this.setOpenIfActive(false);
             return;
           }

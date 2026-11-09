@@ -114,18 +114,18 @@ final class IterableNodeHashTable implements Iterable {
         return var6;
     }
 
-    final static void a(int param0, int param1, java.awt.Canvas param2, byte param3) {
+    final static void presentDialogRaster(int y, int x, java.awt.Canvas canvas, byte guard) {
         java.awt.Graphics var4 = null;
-        if (param3 <= 123) {
+        if (guard <= 123) {
           java.awt.Canvas var5 = (java.awt.Canvas) null;
-          IterableNodeHashTable.a(-16, -25, (java.awt.Canvas) null, (byte) 50);
+          IterableNodeHashTable.presentDialogRaster(-16, -25, (java.awt.Canvas) null, (byte) 50);
         }
         try {
-          var4 = param2.getGraphics();
-          ProgressDialog.field_R.drawImage(-52, param1, var4, param0);
+          var4 = canvas.getGraphics();
+          ProgressDialog.field_R.drawImage(-52, x, var4, y);
           var4.dispose();
         } catch (Exception exception) {
-          param2.repaint();
+          canvas.repaint();
         }
     }
 

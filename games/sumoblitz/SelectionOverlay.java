@@ -16,7 +16,7 @@ abstract class SelectionOverlay {
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
           if (!guard) {
-            SelectionOverlay.a((byte) -32);
+            SelectionOverlay.nameAvailabilityIdentifierValue((byte) -32);
           }
           SoftwareRasterViewport.syncClip();
           IntroLightingLookup.highlightIntensity = new int[260];
@@ -39,8 +39,8 @@ abstract class SelectionOverlay {
         }
     }
 
-    final static LoginFieldValue a(byte param0) {
-        if (param0 != 21) {
+    final static LoginFieldValue nameAvailabilityIdentifierValue(byte guard) {
+        if (guard != 21) {
           return (LoginFieldValue) null;
         }
         String var1 = LegacyOpenGlRidgedWaterEffect.accountFormIdentifier((byte) -2);
@@ -48,7 +48,7 @@ abstract class SelectionOverlay {
           var1.indexOf('@') >= 0) {
           var1 = "";
         }
-        return new LoginFieldValue(LegacyOpenGlRidgedWaterEffect.accountFormIdentifier((byte) -2), GameApplet.isNameAvailabilityPending(param0 - 3));
+        return new LoginFieldValue(LegacyOpenGlRidgedWaterEffect.accountFormIdentifier((byte) -2), GameApplet.isNameAvailabilityPending(guard - 3));
     }
 
     final void hide(byte guard) {

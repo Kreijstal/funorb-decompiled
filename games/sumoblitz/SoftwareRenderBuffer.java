@@ -122,8 +122,8 @@ final class SoftwareRenderBuffer implements RenderBuffer {
           if (11 == LoginDialogNavigation.field_a) {
             CanvasPresentationHook.beforeCanvasPresent((byte) -126);
           }
-          VertexStreamLayout.a(LegacyOpenGlVertexBuffer.field_k, ContentTransitionDialog.field_R, LegacyWaterTextureResources.field_h, 122);
-          IterableNodeHashTable.a(0, 0, canvas, (byte) 124);
+          VertexStreamLayout.renderProgressDialog(LegacyOpenGlVertexBuffer.field_k, ContentTransitionDialog.field_R, LegacyWaterTextureResources.field_h, 122);
+          IterableNodeHashTable.presentDialogRaster(0, 0, canvas, (byte) 124);
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "od.C(" + guard + ',' + (canvas != null ? "{...}" : "null") + ')');
         }

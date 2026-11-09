@@ -144,7 +144,7 @@ final class ScrollViewport extends SingleChildWidget {
           LegacyWaterTextureResources.showConnectionLost(0);
           LoginDialogNavigation.field_a = 11;
         } else {
-          if (!LegacyOpenGlReflectionEffect.c(1)) {
+          if (!LegacyOpenGlReflectionEffect.isConnectionStatusGateOpen(1)) {
             LegacyWaterTextureResources.showConnectionLost(0);
             LoginDialogNavigation.field_a = 11;
           }

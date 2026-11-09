@@ -53,7 +53,7 @@ final class LoginMethodPreference {
 
     final void savePreference(boolean guard, java.applet.Applet applet) {
         try {
-          BufferedCacheFile.a(31536000L, applet, guard, this.cookieValue, "jagex-last-login-method");
+          BufferedCacheFile.setBrowserCookie(31536000L, applet, guard, this.cookieValue, "jagex-last-login-method");
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "jj.C(" + guard + ',' + (applet != null ? "{...}" : "null") + ')');
         }

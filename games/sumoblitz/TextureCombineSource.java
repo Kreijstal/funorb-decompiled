@@ -7,7 +7,7 @@ final class TextureCombineSource {
     static Hashtable extractedNativeLibraryFiles;
     static int field_a;
 
-    final static int a(byte param0, int param1, int param2) {
+    final static int reverseBits(byte guard, int value, int count) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -16,12 +16,12 @@ final class TextureCombineSource {
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
           var3_int = 0;
-          while (0 < param2) {
-            var3_int = var3_int << 1 | param1 & 1;
-            param2--;
-            param1 = param1 >>> 1;
+          while (0 < count) {
+            var3_int = var3_int << 1 | value & 1;
+            count--;
+            value = value >>> 1;
           }
-          if (param0 != 72) {
+          if (guard != 72) {
             field_a = 103;
           }
           stackIn_7_0 = var3_int;
@@ -29,7 +29,7 @@ final class TextureCombineSource {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var3), "mi.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var3), "mi.B(" + guard + ',' + value + ',' + count + ')');
         }
     }
 
@@ -40,7 +40,7 @@ final class TextureCombineSource {
     public static void releaseStatics(boolean param0) {
         extractedNativeLibraryFiles = null;
         if (param0) {
-          TextureCombineSource.a((byte) 75, 50, 40);
+          TextureCombineSource.reverseBits((byte) 75, 50, 40);
         }
     }
 

@@ -111,7 +111,7 @@ abstract class CubeMapSource {
             LegacyOpenGlTextureCache.closeAccountSocket((byte) -114);
             return;
           }
-          IntrusiveNode.reportClientError("LR1: " + VictoryScreen.b((byte) 126), (Throwable) null, 0);
+          IntrusiveNode.reportClientError("LR1: " + VictoryScreen.accountPacketDiagnostic((byte) 126), (Throwable) null, 0);
           LegacyOpenGlTextureCache.closeAccountSocket((byte) -119);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

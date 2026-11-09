@@ -323,7 +323,7 @@ final class ResourceArchive {
           if (Drone.field_g == null) {
             return true;
           }
-          LegacyOpenGlRenderbuffer.a((byte) 111);
+          LegacyOpenGlRenderbuffer.decodeSavedProgress((byte) 111);
           return true;
         }
         return false;

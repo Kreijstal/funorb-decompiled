@@ -212,7 +212,7 @@ final class IntroMeshProjection {
             stackIn_71_0 = sortFlag ? 1 : 0;
             break;
           }
-          LoginDialogState.a(stackIn_71_0 != 0, mesh, -1, var8, var7_int);
+          LoginDialogState.bucketIntroFaces(stackIn_71_0 != 0, mesh, -1, var8, var7_int);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

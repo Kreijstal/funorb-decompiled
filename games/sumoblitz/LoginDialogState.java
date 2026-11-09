@@ -18,7 +18,7 @@ final class LoginDialogState {
         }
     }
 
-    final static void a(boolean param0, CompactMeshGeometry param1, int param2, int param3, int param4) {
+    final static void bucketIntroFaces(boolean cullBackfaces, CompactMeshGeometry mesh, int guard, int farDepth, int nearDepth) {
         byte dupTemp$0 = 0;
         boolean stackIn_10_0 = false;
         int stackIn_32_0 = 0;
@@ -57,22 +57,22 @@ final class LoginDialogState {
         int var13Lifetime1;
         var19 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var5_int = HardwareTextureCache.bitLength((-param4 + param3) * 3, (byte) -115);
-          var6 = 3 * param4;
+          var5_int = HardwareTextureCache.bitLength((-nearDepth + farDepth) * 3, (byte) -115);
+          var6 = 3 * nearDepth;
           var7 = -10 + var5_int;
           HardwareGraphicsToolkit.clearIntroDepthBuckets(-114);
-          if (0 < param1.field_E &&
-            null != param1.field_a) {
+          if (0 < mesh.field_E &&
+            null != mesh.field_a) {
             LegacyOpenGlGraphicsHeap.clearIntroFaceGroups((byte) 71);
           }
           RsaEnvelopeScratch.field_b = 0;
           var8 = 0;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(param1.field_n > var8)))) {
-            var9 = param1.field_A[var8];
-            var10 = param1.field_b[var8];
-            var11 = param1.field_l[var8];
-            stackOut_9_0 = param0;
+          while (!(decompiledNaturalLoopExit0 = (!(mesh.field_n > var8)))) {
+            var9 = mesh.field_A[var8];
+            var10 = mesh.field_b[var8];
+            var11 = mesh.field_l[var8];
+            stackOut_9_0 = cullBackfaces;
             stackIn_52_0 = stackOut_9_0 ? 1 : 0;
             stackIn_10_0 = stackOut_9_0;
             if (var19 == 0) {
@@ -119,9 +119,9 @@ final class LoginDialogState {
                         var18 = stackIn_43_0Lifetime1 - stackIn_43_1Lifetime1;
                         Sumoblitz.field_G[var18] = var8;
                         ModalDialog.field_C[var16] = var17 + 1;
-                        if (param1.field_E > 0 &&
-                          null != param1.field_a) {
-                          dupTemp$0 = param1.field_a[var8];
+                        if (mesh.field_E > 0 &&
+                          null != mesh.field_a) {
+                          dupTemp$0 = mesh.field_a[var8];
                           LoginForm.field_G[dupTemp$0] = LoginForm.field_G[dupTemp$0] + 1;
                         }
                         RsaEnvelopeScratch.field_b = RsaEnvelopeScratch.field_b + 1;
@@ -137,13 +137,13 @@ final class LoginDialogState {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            stackIn_52_0 = param2;
+            stackIn_52_0 = guard;
           }
           if (stackIn_52_0 != -1) {
             field_a = (ArchiveLoadingStage) null;
           }
-          if (0 < param1.field_E &&
-            param1.field_a != null) {
+          if (0 < mesh.field_E &&
+            mesh.field_a != null) {
             var8Lifetime1 = 0;
             var9Lifetime1 = 0;
             while (!(LoginForm.field_G.length <= var9Lifetime1)) {
@@ -161,13 +161,13 @@ final class LoginDialogState {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_69_0 = var5;
-          stackIn_69_1 = new StringBuilder().append("ih.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_69_1 = new StringBuilder().append("ih.A(").append(cullBackfaces).append(',');
+          if (mesh == null) {
             stackIn_70_2 = "null";
           } else {
             stackIn_70_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(guard).append(',').append(farDepth).append(',').append(nearDepth).append(')').toString());
         }
     }
 

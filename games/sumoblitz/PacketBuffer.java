@@ -147,7 +147,7 @@ class PacketBuffer extends IntrusiveNode {
             throw new IllegalArgumentException("");
           }
           var5 = (CharSequence) ((Object) value);
-          this.position = this.position + MusicPatchEnvelope.a(0, this.payload, (byte) -110, var5, value.length(), this.position);
+          this.position = this.position + MusicPatchEnvelope.encodeCp1252Range(0, this.payload, (byte) -110, var5, value.length(), this.position);
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
@@ -455,7 +455,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
           var5 = (CharSequence) ((Object) value);
-          this.position = this.position + MusicPatchEnvelope.a(0, this.payload, (byte) -124, var5, value.length(), this.position);
+          this.position = this.position + MusicPatchEnvelope.encodeCp1252Range(0, this.payload, (byte) -124, var5, value.length(), this.position);
           fieldTemp$1 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte) 0;

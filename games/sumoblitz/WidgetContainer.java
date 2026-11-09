@@ -8,7 +8,7 @@ class WidgetContainer extends UiWidget implements CompositeWidgetMarker {
     static int[] field_x;
     IntrusiveDeque children;
 
-    private final void a(StringBuilder param0, byte param1, Hashtable param2, int param3) {
+    private final void appendChildDebugTrees(StringBuilder text, byte guard, Hashtable names, int depth) {
         StringBuilder discarded$3 = null;
         int var7 = 0;
         StringBuilder discarded$4 = null;
@@ -27,16 +27,16 @@ class WidgetContainer extends UiWidget implements CompositeWidgetMarker {
         try {
           var5 = new IntrusiveDequeCursor(this.children);
           var6 = (UiWidget) (var5.first((byte) -80));
-          if (param1 >= -30) {
+          if (guard >= -30) {
             var9 = (UiWidget) null;
             this.requestFocus((UiWidget) null, (byte) -17);
           }
           while (var6 != null) {
-            discarded$3 = param0.append('\n');
-            for (var7 = 0; var7 <= param3; var7++) {
-              discarded$4 = param0.append(' ');
+            discarded$3 = text.append('\n');
+            for (var7 = 0; var7 <= depth; var7++) {
+              discarded$4 = text.append(' ');
             }
-            var6.appendDebugTree(param3 + 1, param2, param0, 0);
+            var6.appendDebugTree(depth + 1, names, text, 0);
             var6 = (UiWidget) (var5.next(0));
           }
           return;
@@ -45,18 +45,18 @@ class WidgetContainer extends UiWidget implements CompositeWidgetMarker {
           var5_ref = decompiledCaughtException;
           stackIn_11_0 = var5_ref;
           stackIn_11_1 = new StringBuilder().append("sp.SA(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(guard).append(',');
+          if (names == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(depth).append(')').toString());
         }
     }
 
@@ -218,7 +218,7 @@ class WidgetContainer extends UiWidget implements CompositeWidgetMarker {
         try {
           if (this.beginDebugDescription(indent, visited, -22, output)) {
             this.appendDebugDetails(indent, (byte) -128, output, visited);
-            this.a(output, (byte) -57, visited, indent);
+            this.appendChildDebugTrees(output, (byte) -57, visited, indent);
           }
           if (guard != 0) {
             this.children = (IntrusiveDeque) null;

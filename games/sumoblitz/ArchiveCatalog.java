@@ -26,10 +26,10 @@ final class ArchiveCatalog {
               CompactMeshGeometry.field_o = SecondaryNodeDequeIterator.field_b.enterFullscreen(109);
               HardwareQuadBatchBuffers.notifyBrowserResizing(25, 2);
               if (var3 != 0) {
-                CompactMeshGeometry.field_o = IndexedSprite.a(640, 8089, 0, 480, FourIntUpdateRequest.platformDispatcher, 0);
+                CompactMeshGeometry.field_o = IndexedSprite.createFullscreenCanvas(640, 8089, 0, 480, FourIntUpdateRequest.platformDispatcher, 0);
               }
             } else {
-              CompactMeshGeometry.field_o = IndexedSprite.a(640, 8089, 0, 480, FourIntUpdateRequest.platformDispatcher, 0);
+              CompactMeshGeometry.field_o = IndexedSprite.createFullscreenCanvas(640, 8089, 0, 480, FourIntUpdateRequest.platformDispatcher, 0);
             }
             if (null == CompactMeshGeometry.field_o) {
               var2_int = 3;
@@ -59,7 +59,7 @@ final class ArchiveCatalog {
           }
           if (SecondaryNodeDequeIterator.field_b == null &&
             BufferedSocket.field_f) {
-            ScreenNameValidator.a(param0, var2_int, (byte) -28);
+            ScreenNameValidator.showFullscreenPrompt(param0, var2_int, (byte) -28);
           }
           if (param1) {
             lastAccountWriteMillis = -94L;
@@ -1589,7 +1589,7 @@ final class ArchiveCatalog {
               } else {
                 message = RasterBuffer.invalidPasswordText;
               }
-              LoginFormState.activeForm.a(-3499, FocusProxyWidget.loginIdentifier);
+              LoginFormState.activeForm.setIdentifierAndClearPassword(-3499, FocusProxyWidget.loginIdentifier);
             }
             var4 = 1;
             if (replyCode == 10) {

@@ -139,7 +139,7 @@ final class LegacyOpenGlNormalMapGenerator {
         }
     }
 
-    final static void a(int param0) {
+    final static void readServerIntReply(int guard) {
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -161,7 +161,7 @@ final class LegacyOpenGlNormalMapGenerator {
         var16 = null;
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
-          if (param0 != -30084) {
+          if (guard != -30084) {
             LegacyOpenGlNormalMapGenerator.exitFullscreenIfActive((byte) -53);
           }
           var13 = NativeLibraryExtractor.incomingPacket;
@@ -174,7 +174,7 @@ final class LegacyOpenGlNormalMapGenerator {
             var10 = var11;
             var4 = var10;
             var5 = var13;
-            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(param0 - 1218);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(guard - 1218);
             for (var7 = 0; var7 < var6; var7++) {
               var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(true);
             }
@@ -201,11 +201,11 @@ final class LegacyOpenGlNormalMapGenerator {
               var14.firstValue = var14.values[0];
               var14.unlink(false);
             } else {
-              IntrusiveNode.reportClientError("A1: " + VictoryScreen.b((byte) 110), (Throwable) null, 0);
+              IntrusiveNode.reportClientError("A1: " + VictoryScreen.accountPacketDiagnostic((byte) 110), (Throwable) null, 0);
               LegacyOpenGlTextureCache.closeAccountSocket((byte) -120);
             }
           } else {
-            var12 = (GameProgressUpdate) (SoftwareRenderTarget.field_f.first(param0 + 29968));
+            var12 = (GameProgressUpdate) (SoftwareRenderTarget.field_f.first(guard + 29968));
             if (var12 == null) {
               LegacyOpenGlTextureCache.closeAccountSocket((byte) -113);
               return;
@@ -216,7 +216,7 @@ final class LegacyOpenGlNormalMapGenerator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "b.D(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "b.D(" + guard + ')');
         }
     }
 

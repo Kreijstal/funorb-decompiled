@@ -9,20 +9,20 @@ final class VertexStreamLayout {
     private int attributeCount;
     static int[] sqrtQ12;
 
-    final static void a(String param0, float param1, boolean param2, int param3) {
+    final static void renderProgressDialog(String message, float percent, boolean waiting, int guard) {
         try {
-          if (param3 < 75) {
+          if (guard < 75) {
             field_c = (FontMetrics) null;
           }
           if (null == HardwareGraphicsHeap.field_n) {
             HardwareGraphicsHeap.field_n = new ProgressDialog(RenderPresentationException.field_a, SocketJs5Client.field_s);
             RenderPresentationException.field_a.pushDialog((byte) 100, HardwareGraphicsHeap.field_n);
           }
-          HardwareGraphicsHeap.field_n.a(false, param1, param0, param2);
+          HardwareGraphicsHeap.field_n.updateProgress(false, percent, message, waiting);
           SoftwareRasterizer.clear();
           BurstParticle.renderDialogLayer(true, true);
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "hu.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "hu.G(" + (message != null ? "{...}" : "null") + ',' + percent + ',' + waiting + ',' + guard + ')');
         }
     }
 

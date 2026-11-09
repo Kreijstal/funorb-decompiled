@@ -509,7 +509,7 @@ final class GameplaySession {
           if (null != var8.field_a &&
             var8.field_E > 1) {
             var9 = var8.field_a;
-            GraphicsHeap.a(var9, LoginForm.field_G, 0, 0, 0);
+            GraphicsHeap.regroupIntroFaces(var9, LoginForm.field_G, 0, 0, 0);
             if (var40 != 0) {
               DisplayModeFailure.flattenFaceBuckets(0);
             }
@@ -619,7 +619,7 @@ final class GameplaySession {
               var32 = 65280 & var30;
               var33 = (-16711696 & var31 * var28) >>> 8 | (16711739 & var28 * var32) >>> 8;
               var33 = var33 + var29 * 65793;
-              SoftLruCache.a(var24, 8355711 & var33 >> 1, var27, (byte) 27, var25, var23, var26, var22);
+              SoftLruCache.drawHalfBlendTriangle(var24, 8355711 & var33 >> 1, var27, (byte) 27, var25, var23, var26, var22);
             } else {
               var28 = var8_array[var18];
               var29 = var8_array[var19];
@@ -641,7 +641,7 @@ final class GameplaySession {
               var37 = var37 + 65793 * var31;
               var39 = (16711933 & var30 * var36) >>> 8 | (var35 * var30 & -16711934) >>> 8;
               var39 = var39 + var33 * 65793;
-              SoftwareRenderTarget.a(var26, var39 >> 16, var27, (byte) 27, 255 & var37, var22, var38 >> 16, (var39 & 65340) >> 8, var25, var37 >> 16, (65513 & var38) >> 8, var39 & 255, var23, var38 & 255, (65436 & var37) >> 8, var24);
+              SoftwareRenderTarget.drawGouraudTriangle(var26, var39 >> 16, var27, (byte) 27, 255 & var37, var22, var38 >> 16, (var39 & 65340) >> 8, var25, var37 >> 16, (65513 & var38) >> 8, var39 & 255, var23, var38 & 255, (65436 & var37) >> 8, var24);
             }
             var13Lifetime1++;
           }
@@ -1143,7 +1143,7 @@ final class GameplaySession {
           if (decompiledSharedTail1) {
             MessageDialog.field_ab = MessageDialog.field_ab - 1;
             if (PowerupPickup.field_v >= AchievementThresholds.targets[11]) {
-              UnderageAccountInfoPanel.b(24753, 244, 11);
+              UnderageAccountInfoPanel.awardAchievement(24753, 244, 11);
             }
           }
           if (SpriteMask.drones[0] != null && (!(6 > OpenGlShaderProgram.levelIndex) ||
@@ -1180,7 +1180,7 @@ final class GameplaySession {
               ArchiveLoadRequirement.playSoundEffect(32, true);
             }
             if (AppletTickHistory.field_b == 30) {
-              Js5Client.a(10, targetMarkerYQ8, OpenGlCubeTexture.sceneEffects, 61, OpenGlBuffer.targetMarkerXQ8, 16711680);
+              Js5Client.spawnInwardSparkParticles(10, targetMarkerYQ8, OpenGlCubeTexture.sceneEffects, 61, OpenGlBuffer.targetMarkerXQ8, 16711680);
             }
           }
           var3_ref2 = (HudMessage) (NativeLibraryExtractor.hudMessages.first(111));
@@ -1246,7 +1246,7 @@ final class GameplaySession {
           }
           if ((decompiledFrameCompleted1) &&
             (decompiledFrameCompleted0)) {
-            OpenGlTransparentWaterEffect.d(22403);
+            OpenGlTransparentWaterEffect.resolveDroneCollisions(22403);
           }
           if (decompiledFrameCompleted1) {
             if (processInput &&
@@ -1310,36 +1310,36 @@ final class GameplaySession {
                 HardwareQuadBatchBuffers.hasActivePlayer(-62) &&
                 AgeValidator.countEnemyDrones(true) == 0) {
                 LevelCompletionSupport.completeLevel(0);
-                if (MusicPatchEnvelope.a(8230, 10)) {
-                  UnderageAccountInfoPanel.b(24753, 239, 16);
+                if (MusicPatchEnvelope.areFirstLevelsComplete(8230, 10)) {
+                  UnderageAccountInfoPanel.awardAchievement(24753, 239, 16);
                   if (LegacyOpenGlClientVertexBuffer.areEarlierLevelsComplete((byte) 90, 10)) {
-                    UnderageAccountInfoPanel.b(24753, 238, 17);
+                    UnderageAccountInfoPanel.awardAchievement(24753, 238, 17);
                   }
                 }
-                if (MusicPatchEnvelope.a(8230, 25)) {
-                  UnderageAccountInfoPanel.b(24753, 237, 18);
+                if (MusicPatchEnvelope.areFirstLevelsComplete(8230, 25)) {
+                  UnderageAccountInfoPanel.awardAchievement(24753, 237, 18);
                   if (LegacyOpenGlClientVertexBuffer.areEarlierLevelsComplete((byte) 90, 25)) {
-                    UnderageAccountInfoPanel.b(24753, 236, 19);
+                    UnderageAccountInfoPanel.awardAchievement(24753, 236, 19);
                   }
-                  if (ByteArrayStorage.a(25, 115)) {
-                    UnderageAccountInfoPanel.b(24753, 234, 21);
+                  if (ByteArrayStorage.areFirstLevelsCompleteOnHard(25, 115)) {
+                    UnderageAccountInfoPanel.awardAchievement(24753, 234, 21);
                   }
                 }
                 if (MatchingTextValidator.field_i == 10 &&
                   !RotarySelectorWidget.field_E) {
-                  UnderageAccountInfoPanel.b(24753, 251, 4);
+                  UnderageAccountInfoPanel.awardAchievement(24753, 251, 4);
                 }
                 if (MatchingTextValidator.field_i == 5 &&
                   !SecondaryNodeDeque.field_e) {
-                  UnderageAccountInfoPanel.b(24753, 250, 5);
+                  UnderageAccountInfoPanel.awardAchievement(24753, 250, 5);
                 }
                 if (MatchingTextValidator.field_i == 5 &&
                   !DroneChargeParticle.field_w) {
-                  UnderageAccountInfoPanel.b(24753, 249, 6);
+                  UnderageAccountInfoPanel.awardAchievement(24753, 249, 6);
                 }
                 if (MatchingTextValidator.field_i == 5 &&
                   !LegacyOpenGlNormalMapGenerator.field_c) {
-                  UnderageAccountInfoPanel.b(24753, 248, 7);
+                  UnderageAccountInfoPanel.awardAchievement(24753, 248, 7);
                 }
                 if (SoundCache.isLevelIndexTwentyFour(-102)) {
                   OpenGlShaderProgram.levelIndex = OpenGlShaderProgram.levelIndex + 1;
@@ -1348,21 +1348,21 @@ final class GameplaySession {
                   Bzip2State.field_J.length <= AccountServiceResult.waveIndex &&
                   !HardwareQuadBatchBuffers.hasActivePlayer(-36) &&
                   AgeValidator.countEnemyDrones(true) == 0) {
-                  if (Bzip2State.a((byte) -94) > AchievementThresholds.targets[20]) {
-                    UnderageAccountInfoPanel.b(24753, 235, 20);
+                  if (Bzip2State.totalLevelScore((byte) -94) > AchievementThresholds.targets[20]) {
+                    UnderageAccountInfoPanel.awardAchievement(24753, 235, 20);
                   }
                   if (DropDownWidget.field_C == 0) {
-                    UnderageAccountInfoPanel.b(24753, 252, 3);
+                    UnderageAccountInfoPanel.awardAchievement(24753, 252, 3);
                   }
                   if (OpenGlShaderProgram.levelIndex == 25) {
                     if (ResourceArchive.selectedSpeedLevel == 10) {
-                      UnderageAccountInfoPanel.b(24753, 255, 0);
+                      UnderageAccountInfoPanel.awardAchievement(24753, 255, 0);
                     }
                     if (LegacyOpenGlEffectManager.selectedTractionLevel == 10) {
-                      UnderageAccountInfoPanel.b(24753, 254, 1);
+                      UnderageAccountInfoPanel.awardAchievement(24753, 254, 1);
                     }
                     if (AccountStatusDialogState.selectedBounceLevel == 10) {
-                      UnderageAccountInfoPanel.b(24753, 253, 2);
+                      UnderageAccountInfoPanel.awardAchievement(24753, 253, 2);
                     }
                   }
                   OpenGlBuffer.initializeVictoryScene(35040, new PlayerDrone(81920, 61440));
@@ -1417,27 +1417,27 @@ final class GameplaySession {
           if (null != EmailAvailabilityRequest.powerupPickups) {
             this.updatePowerupPickups(-14854);
           }
-          GameOverScreen.a(true);
+          GameOverScreen.advanceComboTimeout(true);
           if (MessageDialog.arcadeMode &&
             SpriteMask.drones[0] != null) {
             if (300 <= TextureFormat.elapsedTicks * 20 / 1000) {
-              UnderageAccountInfoPanel.b(24753, 231, 24);
+              UnderageAccountInfoPanel.awardAchievement(24753, 231, 24);
             }
             if (180 <= 20 * TextureFormat.elapsedTicks / 1000) {
-              UnderageAccountInfoPanel.b(24753, 232, 23);
+              UnderageAccountInfoPanel.awardAchievement(24753, 232, 23);
             }
             if (20 * TextureFormat.elapsedTicks / 1000 >= 60) {
-              UnderageAccountInfoPanel.b(24753, 233, 22);
+              UnderageAccountInfoPanel.awardAchievement(24753, 233, 22);
             }
-            if (RenderPresentationException.a(false)) {
+            if (RenderPresentationException.isHardDifficulty(false)) {
               if (TextureFormat.elapsedTicks * 20 / 1000 >= 300) {
-                UnderageAccountInfoPanel.b(24753, 228, 27);
+                UnderageAccountInfoPanel.awardAchievement(24753, 228, 27);
               }
               if (TextureFormat.elapsedTicks * 20 / 1000 >= 180) {
-                UnderageAccountInfoPanel.b(24753, 229, 26);
+                UnderageAccountInfoPanel.awardAchievement(24753, 229, 26);
               }
               if (60 <= TextureFormat.elapsedTicks * 20 / 1000) {
-                UnderageAccountInfoPanel.b(24753, 230, 25);
+                UnderageAccountInfoPanel.awardAchievement(24753, 230, 25);
               }
             }
           }

@@ -156,7 +156,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         }
         this.field_j = var2;
         this.field_l.bindVertexShader(-116, var2);
-        this.e(82);
+        this.uploadUnderwaterLighting(82);
         this.updateProjectionUniforms(false);
         this.updateTextureUniforms((byte) -72);
         this.updateViewUniforms((byte) 53);
@@ -209,8 +209,8 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
             var5 = -((float)(-var4 + var3) * 0.125f) + (float)var3;
             var6 = (float)var3 - 0.25f * (float)(-var4 + var3);
             var2.setVertexShaderConstant(10, var6, 1.0f / (-var6 + var5), var5, 1.0f / ((float)var3 - var5));
-            var2.setVertexShaderConstant(11, 1.0f / (float)this.toolkit.S(-102), (float)this.toolkit.e((byte) 26) / 255.0f, this.toolkit.field_Tb, 1.0f / (this.toolkit.field_Tb - this.toolkit.field_E));
-            this.toolkit.setTextureConstantColor(false, this.toolkit.v(15));
+            var2.setVertexShaderConstant(11, 1.0f / (float)this.toolkit.underwaterFogDivisor(-102), (float)this.toolkit.underwaterFogIntensity((byte) 26) / 255.0f, this.toolkit.field_Tb, 1.0f / (this.toolkit.field_Tb - this.toolkit.field_E));
+            this.toolkit.setTextureConstantColor(false, this.toolkit.underwaterFogColor(15));
           }
           return;
         }
@@ -222,17 +222,17 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
           var5Lifetime1 = -((float)(-var4Lifetime1 + var3Lifetime1) * 0.125f) + (float)var3Lifetime1;
           var6Lifetime1 = (float)var3Lifetime1 - 0.25f * (float)(-var4Lifetime1 + var3Lifetime1);
           var2Lifetime1.setVertexShaderConstant(10, var6Lifetime1, 1.0f / (-var6Lifetime1 + var5Lifetime1), var5Lifetime1, 1.0f / ((float)var3Lifetime1 - var5Lifetime1));
-          var2Lifetime1.setVertexShaderConstant(11, 1.0f / (float)this.toolkit.S(-102), (float)this.toolkit.e((byte) 26) / 255.0f, this.toolkit.field_Tb, 1.0f / (this.toolkit.field_Tb - this.toolkit.field_E));
-          this.toolkit.setTextureConstantColor(false, this.toolkit.v(15));
+          var2Lifetime1.setVertexShaderConstant(11, 1.0f / (float)this.toolkit.underwaterFogDivisor(-102), (float)this.toolkit.underwaterFogIntensity((byte) 26) / 255.0f, this.toolkit.field_Tb, 1.0f / (this.toolkit.field_Tb - this.toolkit.field_E));
+          this.toolkit.setTextureConstantColor(false, this.toolkit.underwaterFogColor(15));
         }
     }
 
-    private final void e(int param0) {
+    private final void uploadUnderwaterLighting(int guard) {
         AffineTransform3D var4 = null;
         jagdx.IDirect3DDevice var3 = null;
         if (this.field_j != null) {
           if (!this.field_o) {
-            if (param0 < 3) {
+            if (guard < 3) {
               this.enable(false, -14);
               return;
             }
@@ -249,7 +249,7 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
           var4.transformDirection(-1416, this.toolkit.field_U[1], this.toolkit.field_U[0], field_k, this.toolkit.field_U[2]);
           var3.SetVertexShaderConstantF(17, field_k, 1);
         }
-        if (param0 >= 3) {
+        if (guard >= 3) {
           return;
         }
         this.enable(false, -14);

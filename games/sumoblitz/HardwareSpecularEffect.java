@@ -32,8 +32,8 @@ final class HardwareSpecularEffect extends ShaderEffect {
         return true;
     }
 
-    final static void e(int param0) {
-        if (param0 > -9) {
+    final static void decreaseSoundVolume(int guard) {
+        if (guard > -9) {
           return;
         }
         LevelCompleteUpgradeScreen.decreaseSoundVolume((byte) 126);

@@ -43,7 +43,7 @@ final class AccountCreationProgressDialog extends MessageDialog implements Widge
               var4 = result.errorMessage;
               if (result.errorCode == 248) {
                 if (!skipEligibilityReset) {
-                  BufferedCacheFile.c(0);
+                  BufferedCacheFile.setLegacyStatusFlag(0);
                 }
                 var4 = HudMessageSupport.unfortunatelyYouAreNotText;
                 this.ineligible = true;

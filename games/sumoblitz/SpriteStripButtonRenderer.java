@@ -238,7 +238,7 @@ final class SpriteStripButtonRenderer extends TextWidgetRenderer {
             var6.unlink(false);
             return;
           }
-          IntrusiveNode.reportClientError("HS1: " + VictoryScreen.b((byte) -124), (Throwable) null, 0);
+          IntrusiveNode.reportClientError("HS1: " + VictoryScreen.accountPacketDiagnostic((byte) -124), (Throwable) null, 0);
           LegacyOpenGlTextureCache.closeAccountSocket((byte) -121);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

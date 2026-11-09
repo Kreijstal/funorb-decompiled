@@ -55,9 +55,9 @@ final class DroneIntroductionOverlay {
         String var11 = null;
         int var7 = 0;
         int var8 = 0;
-        DelegatingCanvas.a(ResizingDialog.field_H, 160, 140, -16777216, 3, toolkit, 360, 170, 1, true);
+        DelegatingCanvas.drawToolkitNineSlice(ResizingDialog.field_H, 160, 140, -16777216, 3, toolkit, 360, 170, 1, true);
         if (!(Sumoblitz.field_J.length <= this.droneType)) {
-          DelegatingCanvas.a(IntroMeshProjection.field_c, Sumoblitz.field_J[this.droneType].height() + 6, 167, -16777216, 3, toolkit, Sumoblitz.field_J[this.droneType].width() + 6, 187, 1, true);
+          DelegatingCanvas.drawToolkitNineSlice(IntroMeshProjection.field_c, Sumoblitz.field_J[this.droneType].height() + 6, 167, -16777216, 3, toolkit, Sumoblitz.field_J[this.droneType].width() + 6, 187, 1, true);
           Sumoblitz.field_J[this.droneType].draw(170, 190);
         }
         int var3_int = Sumoblitz.field_J.length > this.droneType ? 380 : 320;
@@ -113,7 +113,7 @@ final class DroneIntroductionOverlay {
         this.droneType = type;
     }
 
-    final static void a(boolean param0, boolean param1, boolean param2) {
+    final static void endGameplaySession(boolean param0, boolean param1, boolean param2) {
         int var4 = Sumoblitz.field_L ? 1 : 0;
         if (!AccountPacketReader.isGuestSession((byte) 9)) {
           LruNodeCache.gameplaySession.submitSessionStatistics(-113);
@@ -147,7 +147,7 @@ final class DroneIntroductionOverlay {
         this.visible = false;
     }
 
-    final static GraphicsToolkit a(int param0, int param1, int param2, java.awt.Canvas param3, TextureProvider param4) {
+    final static GraphicsToolkit createNativeSoftwareToolkit(int height, int width, int guard, java.awt.Canvas canvas, TextureProvider textures) {
         RuntimeException var5 = null;
         NativeSoftwareGraphicsToolkit stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -157,23 +157,23 @@ final class DroneIntroductionOverlay {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2 != -1) {
+          if (guard != -1) {
             DroneIntroductionOverlay.releaseStatics((byte) 64);
           }
-          stackIn_3_0 = new NativeSoftwareGraphicsToolkit(param3, param4, param1, param0);
+          stackIn_3_0 = new NativeSoftwareGraphicsToolkit(canvas, textures, width, height);
           return (GraphicsToolkit) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_6_0 = var5;
-          stackIn_6_1 = new StringBuilder().append("qc.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_6_1 = new StringBuilder().append("qc.A(").append(height).append(',').append(width).append(',').append(guard).append(',');
+          if (canvas == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
           stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
-          if (param4 == null) {
+          if (textures == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";

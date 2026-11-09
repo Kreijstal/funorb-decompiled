@@ -206,15 +206,15 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
         this.cellPaddingY = paddingY;
     }
 
-    final static boolean a(byte param0, boolean param1) {
+    final static boolean advanceAccountConnection(byte guard, boolean availabilityRequest) {
         try {
           IsaacPacketBuffer var4 = null;
           IsaacPacketBuffer var5 = null;
           if (EmptyWidgetRenderer.field_a == null) {
             EmptyWidgetRenderer.field_a = CacheReferenceNode.field_t.openDirectSocket((byte) 71, ScrollPane.field_C, DroneVariantScoring.field_a);
           }
-          if (param0 > -33) {
-            GridWidgetContainer.a((byte) 116, false);
+          if (guard > -33) {
+            GridWidgetContainer.advanceAccountConnection((byte) 116, false);
           }
           if (EmptyWidgetRenderer.field_a.status == 0) {
             return false;
@@ -231,9 +231,9 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
               var5 = var4;
               InwardSparkParticle.outgoingPacket.position = 0;
               var5.position = 0;
-              ToolkitImageProducerBuffer.field_r = param1 ? -2 : -1;
-              RotarySelectorWidget.field_I = param1 ? -2 : -1;
-              ContentTransitionDialog.field_Q = param1 ? -2 : -1;
+              ToolkitImageProducerBuffer.field_r = availabilityRequest ? -2 : -1;
+              RotarySelectorWidget.field_I = availabilityRequest ? -2 : -1;
+              ContentTransitionDialog.field_Q = availabilityRequest ? -2 : -1;
               TextCaretLayout.accountPhase = ByteArrayCacheNode.READY_TO_CONNECT;
               GameDefinitionLoader.writeServicePreamble(TextHotspot.field_o, 81, CacheReferenceNode.field_r, CacheIoRequest.field_v, InwardSparkParticle.outgoingPacket);
               MessageDialog.flushAccountWrites(0, -1);

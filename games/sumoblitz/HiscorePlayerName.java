@@ -7,9 +7,9 @@ final class HiscorePlayerName {
     String secondaryName;
     static SpriteData field_d;
 
-    final static int a(byte param0) {
-        if (param0 <= 97) {
-          HiscorePlayerName.a((byte) 125);
+    final static int keyboardIdleTicks(byte guard) {
+        if (guard <= 97) {
+          HiscorePlayerName.keyboardIdleTicks((byte) 125);
           return LegacyOpenGlFlowingWaterEffect.field_e;
         }
         return LegacyOpenGlFlowingWaterEffect.field_e;

@@ -16,7 +16,7 @@ abstract class DebouncedInputValidator implements InputValidator {
 
     abstract ValidationStatus evaluateStatus(byte guard);
 
-    final static void a(ResourceArchive param0, int param1) {
+    final static void loadSoundSamples(ResourceArchive unusedArchive, int guard) {
         PcmSample[] var3 = null;
         PcmSample[] var2 = null;
         PcmSample[] var4 = null;
@@ -235,13 +235,13 @@ abstract class DebouncedInputValidator implements InputValidator {
           OpenGlCubeTexture.field_l[22] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(34, "ball armoured hit 1");
           OpenGlCubeTexture.field_l[23] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(67, "ball armoured hit 2");
           OpenGlCubeTexture.field_l[24] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(112, "ball armoured hit 3");
-          if (param1 <= 4) {
+          if (guard <= 4) {
             field_b = -118;
           }
           OpenGlCubeTexture.field_l[25] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(63, "ball armoured hit 4");
           OpenGlCubeTexture.field_l[26] = LegacyOpenGlPostProcessManager.field_b.getVorbisByName(-120, "ball armoured hit5");
         } catch (RuntimeException runtimeException) {
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "dw.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "dw.O(" + (unusedArchive != null ? "{...}" : "null") + ',' + guard + ')');
         }
     }
 

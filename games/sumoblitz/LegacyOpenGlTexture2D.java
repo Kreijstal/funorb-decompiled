@@ -433,7 +433,7 @@ class LegacyOpenGlTexture2D extends LegacyOpenGlTexture {
             mipmaps &&
             sourceRowLength == 0 &&
             sourceOffset == 0) {
-            Transform3D.a(-122, this.height, this.width, this.target, pixels, this.internalFormat, this.toolkit.field_L, 32993);
+            Transform3D.uploadIntMipmaps(-122, this.height, this.width, this.target, pixels, this.internalFormat, this.toolkit.field_L, 32993);
             this.noteMipmaps(true, true);
           }
           if (stackIn_13_0 == 34037 ||

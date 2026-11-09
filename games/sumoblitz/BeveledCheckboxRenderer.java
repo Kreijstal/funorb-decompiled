@@ -14,12 +14,12 @@ final class BeveledCheckboxRenderer implements WidgetRenderer {
         emailAddressIsUnavailableText = null;
     }
 
-    final static boolean b(int param0, int param1, int param2) {
-        if (param2 <= -116) {
-          return (34 & param0) != 0 ? true : false;
+    final static boolean hasAnyMask34(int flags, int unused, int guard) {
+        if (guard <= -116) {
+          return (34 & flags) != 0 ? true : false;
         }
         BeveledCheckboxRenderer.hasOpenDialogs(true);
-        return (34 & param0) != 0 ? true : false;
+        return (34 & flags) != 0 ? true : false;
     }
 
     public final void renderWidget(UiWidget widget, int parentY, int guard, boolean isEnabled, int parentX) {
@@ -62,16 +62,16 @@ final class BeveledCheckboxRenderer implements WidgetRenderer {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2) {
-        if (param1 == 13836) {
-          return 0 != (2048 & param0) ? true : false;
+    final static boolean hasFlag2048(int flags, int guard, int unused) {
+        if (guard == 13836) {
+          return 0 != (2048 & flags) ? true : false;
         }
         BeveledCheckboxRenderer.releaseStatics(-32);
-        return 0 != (2048 & param0) ? true : false;
+        return 0 != (2048 & flags) ? true : false;
     }
 
-    final static boolean b(int param0) {
-        int var1 = -55 / ((-62 - param0) / 36);
+    final static boolean registrationEmailNews(int guard) {
+        int var1 = -55 / ((-62 - guard) / 36);
         return DropDownLabelRenderer.field_b;
     }
 

@@ -57,7 +57,7 @@ final class CheckboxWidget extends InteractiveWidget {
           var7 = 0;
           var8 = 0;
           var9 = 0;
-          var10 = SecondaryNodeQueue.a(var4, var2_int, 26, 614, var5, false, 26, var6, 26);
+          var10 = SecondaryNodeQueue.firstSweptCircleCollisionFraction(var4, var2_int, 26, 614, var5, false, 26, var6, 26);
           if (var10 != -1) {
             if (-1.5707963267948966 < drone.facingRadians) {
               stackIn_8_0 = (drone.facingRadians < 1.5707963267948966) ? 1 : 0;
@@ -69,7 +69,7 @@ final class CheckboxWidget extends InteractiveWidget {
             var8 = var10;
           }
           if (var10 == -1) {
-            var10 = SecondaryNodeQueue.a(var4, var2_int, 454, 614, var5, false, 454, var6, 26);
+            var10 = SecondaryNodeQueue.firstSweptCircleCollisionFraction(var4, var2_int, 454, 614, var5, false, 454, var6, 26);
             if (-1 != var10) {
               var8 = var10;
               var9 = 454;
@@ -82,7 +82,7 @@ final class CheckboxWidget extends InteractiveWidget {
             }
           }
           if (var10 == -1) {
-            var10 = SecondaryNodeQueue.a(var4, var3, 26, 26, var5, false, 454, var6, 26);
+            var10 = SecondaryNodeQueue.firstSweptCircleCollisionFraction(var4, var3, 26, 26, var5, false, 454, var6, 26);
             if (var10 != -1) {
               stackIn_26_0 = (!(drone.facingRadians > 0.0)) ? 0 : 1;
               var7 = stackIn_26_0;
@@ -91,7 +91,7 @@ final class CheckboxWidget extends InteractiveWidget {
             }
           }
           if (guard == var10) {
-            var10 = SecondaryNodeQueue.a(var4, var3, 26, 614, var5, false, 454, var6, 614);
+            var10 = SecondaryNodeQueue.firstSweptCircleCollisionFraction(var4, var3, 26, 614, var5, false, 454, var6, 614);
             if (var10 != -1) {
               var9 = var10;
               var8 = 614;
@@ -179,28 +179,28 @@ final class CheckboxWidget extends InteractiveWidget {
         }
     }
 
-    final static void a(boolean param0, java.awt.Canvas param1) {
+    final static void detachInputHandlers(boolean guard, java.awt.Canvas canvas) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          ValidationStatusWidget.detachKeyboardInput((java.awt.Component) ((Object) param1), -1);
-          IsaacPacketBuffer.detachMouseInput((java.awt.Component) ((Object) param1), 7);
-          if (!param0) {
+          ValidationStatusWidget.detachKeyboardInput((java.awt.Component) ((Object) canvas), -1);
+          IsaacPacketBuffer.detachMouseInput((java.awt.Component) ((Object) canvas), 7);
+          if (!guard) {
             field_F = -67;
           }
           if (InwardSparkParticle.field_w != null) {
-            InwardSparkParticle.field_w.detach((java.awt.Component) ((Object) param1), (byte) 76);
+            InwardSparkParticle.field_w.detach((java.awt.Component) ((Object) canvas), (byte) 76);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_8_0 = var2;
-          stackIn_8_1 = new StringBuilder().append("wr.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_8_1 = new StringBuilder().append("wr.C(").append(guard).append(',');
+          if (canvas == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";

@@ -120,7 +120,7 @@ public final class Sumoblitz extends GameClientShell {
                 return;
               }
               if (!DisplayPromptState.isDisplayPromptOpen((byte) -58)) {
-                IntIndexHashTable.a(0);
+                IntIndexHashTable.reenterLoginDialog(0);
                 if (var3 != 0) {
                   DroneProximitySupport.showGuestLogin(true);
                 }
@@ -249,15 +249,15 @@ public final class Sumoblitz extends GameClientShell {
           try {
             var2 = ActiveCanvasProvider.currentCanvas(-97);
             SoftwareRasterizer.clear();
-            if (FadingWidget.g(param0 ^ -99)) {
-              LegacyOpenGlGraphicsHeap.renderStartupCanvas((byte) 122, var2, WhirlpoolDigest.a(param0 ^ 7));
+            if (FadingWidget.needsPreparationScreen(param0 ^ -99)) {
+              LegacyOpenGlGraphicsHeap.renderStartupCanvas((byte) 122, var2, WhirlpoolDigest.isGameFocused(param0 ^ 7));
               return;
             }
             if (!OpenGlTexture2D.field_j) {
               SoftwareRenderBuffer.presentAccountDialogs(-62, var2);
               return;
             }
-            if (!ClientException.a(param0 ^ 0)) {
+            if (!ClientException.isAccountProgressReady(param0 ^ 0)) {
               NameSuggestionsPanel.setLoadingProgress(param0 ^ 20, 100.0f, StatefulWidgetRenderer.waitingForExtraDataText);
               SoftwareRenderBuffer.presentAccountDialogs(-88, var2);
               return;
@@ -301,7 +301,7 @@ public final class Sumoblitz extends GameClientShell {
                 SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, var4_intLifetime1);
               }
             }
-            if (DisplayPromptRenderer.a(param0 - 85) &&
+            if (DisplayPromptRenderer.armReconnectDelay(param0 - 85) &&
               !DisplayPromptState.isDisplayPromptOpen((byte) -75)) {
               if (CompactMeshGeometry.field_o != null) {
                 stackIn_50_0 = true;
@@ -360,7 +360,7 @@ public final class Sumoblitz extends GameClientShell {
               decompiledFrameRemainder0 = (var10 != 0);
             }
             if (decompiledFrameRemainder0) {
-              if (!DisplayPromptRenderer.a(-44)) {
+              if (!DisplayPromptRenderer.armReconnectDelay(-44)) {
                 if (!ClientStackTraceFormatter.retainDialogRaster((byte) 52)) {
                   this.field_F = false;
                   if (var10 != 0) {
@@ -477,7 +477,7 @@ public final class Sumoblitz extends GameClientShell {
         int var4 = 0;
         var4 = field_L ? 1 : 0;
         try {
-          NetworkResourceRequest.e((byte) 76);
+          NetworkResourceRequest.serviceAudioOutputs((byte) 76);
           if (CompactMeshGeometry.field_o != null &&
             CompactMeshGeometry.field_o.field_a) {
             LegacyOpenGlNormalMapGenerator.exitFullscreenIfActive((byte) 49);
@@ -489,9 +489,9 @@ public final class Sumoblitz extends GameClientShell {
             this.initializeGameArchives(21961);
             RidgedNoise3D.field_u = false;
           }
-          if (FadingWidget.g(-42)) {
+          if (FadingWidget.needsPreparationScreen(-42)) {
             this.updateIntroAndLogin(106);
-            if (FadingWidget.g(-33)) {
+            if (FadingWidget.needsPreparationScreen(-33)) {
               if (ScrollViewport.canRenderClientUi(-1)) {
                 discarded$0 = this.advanceGameLoading(false, true);
               }
@@ -501,11 +501,11 @@ public final class Sumoblitz extends GameClientShell {
           boolean decompiledFrameRemainder0 = true;
           boolean decompiledSharedTail0 = !(OpenGlTexture2D.field_j);
           if (!decompiledSharedTail0) {
-            if (!ClientException.a(0)) {
+            if (!ClientException.isAccountProgressReady(0)) {
               ScreenNameValidator.pollAccountProgress((byte) -112);
-              decompiledFrameRemainder0 = !(!ClientException.a(0));
+              decompiledFrameRemainder0 = !(!ClientException.isAccountProgressReady(0));
               if (decompiledFrameRemainder0) {
-                QuickChatPhrase.a(-24233);
+                QuickChatPhrase.finishDialogAnimations(-24233);
                 LegacyOpenGlGraphicsHeap.initializeDefaultMenus(0);
                 if (5 == RendererPreference.field_b &&
                   0 == OpenGlTransparentWaterEffect.field_e) {
@@ -547,7 +547,7 @@ public final class Sumoblitz extends GameClientShell {
                 }
               }
               if (decompiledFrameRemainder0) {
-                if (!DisplayPromptRenderer.a(-123)) {
+                if (!DisplayPromptRenderer.armReconnectDelay(-123)) {
                   this.advanceScreenTransition((byte) -94);
                   decompiledFrameRemainder0 = (var4 != 0);
                 }
@@ -596,7 +596,7 @@ public final class Sumoblitz extends GameClientShell {
             }
             this.dispatchAccountPacket(9289);
           } while (var4 == 0);
-          if (FixedPointPerlinNoise3D.a(-23517)) {
+          if (FixedPointPerlinNoise3D.isReconnectRequired(-23517)) {
             var3 = this.pollReconnectAndResend(true);
             if (var3 == 2) {
               ScrollViewport.handleAccountConnectionLoss((byte) 70);
@@ -706,8 +706,8 @@ public final class Sumoblitz extends GameClientShell {
                                   NameSuggestionsPanel.setLoadingProgress(20, 65.0f, ProjectionMode.unpackingSoundEffectsText);
                                   var3 = ActiveCanvasProvider.currentCanvas(-22);
                                   SoftwareRasterizer.clear();
-                                  if (FadingWidget.g(-61)) {
-                                    LegacyOpenGlGraphicsHeap.renderStartupCanvas((byte) 85, var3, WhirlpoolDigest.a(7));
+                                  if (FadingWidget.needsPreparationScreen(-61)) {
+                                    LegacyOpenGlGraphicsHeap.renderStartupCanvas((byte) 85, var3, WhirlpoolDigest.isGameFocused(7));
                                     decompiledFrameRemainder6 = (var11 != 0);
                                   }
                                   if (decompiledFrameRemainder6) {
@@ -716,7 +716,7 @@ public final class Sumoblitz extends GameClientShell {
                                       decompiledFrameRemainder6 = (var11 != 0);
                                     }
                                     if (decompiledFrameRemainder6) {
-                                      if (!ClientException.a(0)) {
+                                      if (!ClientException.isAccountProgressReady(0)) {
                                         NameSuggestionsPanel.setLoadingProgress(20, 100.0f, StatefulWidgetRenderer.waitingForExtraDataText);
                                         SoftwareRenderBuffer.presentAccountDialogs(-117, var3);
                                         decompiledFrameRemainder6 = (var11 != 0);
@@ -761,7 +761,7 @@ public final class Sumoblitz extends GameClientShell {
                                               SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, var5_int);
                                             }
                                           }
-                                          if (DisplayPromptRenderer.a(-67) &&
+                                          if (DisplayPromptRenderer.armReconnectDelay(-67) &&
                                             !DisplayPromptState.isDisplayPromptOpen((byte) 115)) {
                                             if (null != CompactMeshGeometry.field_o) {
                                               stackIn_134_0 = true;
@@ -824,7 +824,7 @@ public final class Sumoblitz extends GameClientShell {
                                             decompiledSharedTail8 = (var11 != 0);
                                           }
                                           if (decompiledSharedTail8) {
-                                            if (DisplayPromptRenderer.a(-126)) {
+                                            if (DisplayPromptRenderer.armReconnectDelay(-126)) {
                                               var6_int = (-SoftwareRasterizer.width + LegacyOpenGlRidgedWaterEffect.field_h) * 0 / 2;
                                               var7 = (IntroMeshResources.canvasHeight - SoftwareRasterizer.height) * 0 / 2;
                                               VertexAttribute.setDialogPointer(var6_int, -45, var7);
@@ -877,7 +877,7 @@ public final class Sumoblitz extends GameClientShell {
                                   }
                                   LegacyOpenGlPostProcessManager.field_b = new SoundCache(SecondaryNodeDeque.field_d, MenuSelectionController.field_c);
                                   TurbulenceNoise3D.loadGameSoundEffects((byte) -62, SecondaryNodeDeque.field_d);
-                                  QuickChatPhrase.a(-24233);
+                                  QuickChatPhrase.finishDialogAnimations(-24233);
                                   SecondaryNodeDeque.field_d = null;
                                   VertexAttribute.resetAppletTiming(0);
                                   return false;
@@ -917,8 +917,8 @@ public final class Sumoblitz extends GameClientShell {
               NameSuggestionsPanel.setLoadingProgress(20, 70.0f, ProjectionMode.unpackingSoundEffectsText);
               var3 = ActiveCanvasProvider.currentCanvas(-103);
               SoftwareRasterizer.clear();
-              if (FadingWidget.g(-96)) {
-                LegacyOpenGlGraphicsHeap.renderStartupCanvas((byte) -45, var3, WhirlpoolDigest.a(7));
+              if (FadingWidget.needsPreparationScreen(-96)) {
+                LegacyOpenGlGraphicsHeap.renderStartupCanvas((byte) -45, var3, WhirlpoolDigest.isGameFocused(7));
                 decompiledFrameRemainder5 = (var11 != 0);
               }
               if (decompiledFrameRemainder5) {
@@ -927,7 +927,7 @@ public final class Sumoblitz extends GameClientShell {
                   decompiledFrameRemainder5 = (var11 != 0);
                 }
                 if (decompiledFrameRemainder5) {
-                  if (!ClientException.a(0)) {
+                  if (!ClientException.isAccountProgressReady(0)) {
                     NameSuggestionsPanel.setLoadingProgress(20, 100.0f, StatefulWidgetRenderer.waitingForExtraDataText);
                     SoftwareRenderBuffer.presentAccountDialogs(-68, var3);
                     decompiledFrameRemainder5 = (var11 != 0);
@@ -962,7 +962,7 @@ public final class Sumoblitz extends GameClientShell {
                         SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, var5_int);
                       }
                     }
-                    if (DisplayPromptRenderer.a(-126) &&
+                    if (DisplayPromptRenderer.armReconnectDelay(-126) &&
                       !DisplayPromptState.isDisplayPromptOpen((byte) 110)) {
                       if (CompactMeshGeometry.field_o != null) {
                         stackIn_249_0 = true;
@@ -1022,7 +1022,7 @@ public final class Sumoblitz extends GameClientShell {
                       decompiledFrameRemainder4 = (var11 != 0);
                     }
                     if (decompiledFrameRemainder4) {
-                      if (!DisplayPromptRenderer.a(-124)) {
+                      if (!DisplayPromptRenderer.armReconnectDelay(-124)) {
                         if (!ClientStackTraceFormatter.retainDialogRaster((byte) 52)) {
                           this.field_F = false;
                           if (var11 != 0) {
@@ -1072,7 +1072,7 @@ public final class Sumoblitz extends GameClientShell {
                   }
                 }
               }
-              DebouncedInputValidator.a(MenuSelectionController.field_c, 105);
+              DebouncedInputValidator.loadSoundSamples(MenuSelectionController.field_c, 105);
               MenuSelectionController.field_c = null;
               VertexAttribute.resetAppletTiming(0);
               return false;
@@ -1082,8 +1082,8 @@ public final class Sumoblitz extends GameClientShell {
               NameSuggestionsPanel.setLoadingProgress(20, 75.0f, ClientException.unpackingMusicText);
               var3 = ActiveCanvasProvider.currentCanvas(-103);
               SoftwareRasterizer.clear();
-              if (FadingWidget.g(-98)) {
-                LegacyOpenGlGraphicsHeap.renderStartupCanvas((byte) 95, var3, WhirlpoolDigest.a(7));
+              if (FadingWidget.needsPreparationScreen(-98)) {
+                LegacyOpenGlGraphicsHeap.renderStartupCanvas((byte) 95, var3, WhirlpoolDigest.isGameFocused(7));
                 decompiledFrameRemainder3 = (var11 != 0);
               }
               if (decompiledFrameRemainder3) {
@@ -1092,7 +1092,7 @@ public final class Sumoblitz extends GameClientShell {
                   decompiledFrameRemainder3 = (var11 != 0);
                 }
                 if (decompiledFrameRemainder3) {
-                  if (!ClientException.a(0)) {
+                  if (!ClientException.isAccountProgressReady(0)) {
                     NameSuggestionsPanel.setLoadingProgress(20, 100.0f, StatefulWidgetRenderer.waitingForExtraDataText);
                     SoftwareRenderBuffer.presentAccountDialogs(-111, var3);
                     decompiledFrameRemainder3 = (var11 != 0);
@@ -1128,7 +1128,7 @@ public final class Sumoblitz extends GameClientShell {
                         SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, var5_int);
                       }
                     }
-                    if (DisplayPromptRenderer.a(-28) &&
+                    if (DisplayPromptRenderer.armReconnectDelay(-28) &&
                       !DisplayPromptState.isDisplayPromptOpen((byte) -55)) {
                       if (CompactMeshGeometry.field_o == null) {
                         stackIn_363_0 = AppletFocusState.focused;
@@ -1187,7 +1187,7 @@ public final class Sumoblitz extends GameClientShell {
                       decompiledFrameRemainder2 = (var11 != 0);
                     }
                     if (decompiledFrameRemainder2) {
-                      if (!DisplayPromptRenderer.a(-63)) {
+                      if (!DisplayPromptRenderer.armReconnectDelay(-63)) {
                         if (!ClientStackTraceFormatter.retainDialogRaster((byte) 52)) {
                           this.field_F = false;
                           if (var11 != 0) {
@@ -1256,8 +1256,8 @@ public final class Sumoblitz extends GameClientShell {
               NameSuggestionsPanel.setLoadingProgress(20, 80.0f, DroneWaveDefinition.unpackingLevelsText);
               var3 = ActiveCanvasProvider.currentCanvas(125);
               SoftwareRasterizer.clear();
-              if (FadingWidget.g(-128)) {
-                LegacyOpenGlGraphicsHeap.renderStartupCanvas((byte) -75, var3, WhirlpoolDigest.a(7));
+              if (FadingWidget.needsPreparationScreen(-128)) {
+                LegacyOpenGlGraphicsHeap.renderStartupCanvas((byte) -75, var3, WhirlpoolDigest.isGameFocused(7));
                 decompiledFrameRemainder1 = (var11 != 0);
               }
               if (decompiledFrameRemainder1) {
@@ -1266,7 +1266,7 @@ public final class Sumoblitz extends GameClientShell {
                   decompiledFrameRemainder1 = (var11 != 0);
                 }
                 if (decompiledFrameRemainder1) {
-                  if (!ClientException.a(0)) {
+                  if (!ClientException.isAccountProgressReady(0)) {
                     NameSuggestionsPanel.setLoadingProgress(20, 100.0f, StatefulWidgetRenderer.waitingForExtraDataText);
                     SoftwareRenderBuffer.presentAccountDialogs(-52, var3);
                     decompiledFrameRemainder1 = (var11 != 0);
@@ -1305,7 +1305,7 @@ public final class Sumoblitz extends GameClientShell {
                           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, var5_int);
                         }
                       }
-                      if (DisplayPromptRenderer.a(-103) &&
+                      if (DisplayPromptRenderer.armReconnectDelay(-103) &&
                         !DisplayPromptState.isDisplayPromptOpen((byte) 127)) {
                         if (null != CompactMeshGeometry.field_o) {
                           stackIn_492_0 = true;
@@ -1368,7 +1368,7 @@ public final class Sumoblitz extends GameClientShell {
                         decompiledSharedTail2 = (var11 != 0);
                       }
                       if (decompiledSharedTail2) {
-                        if (DisplayPromptRenderer.a(-61)) {
+                        if (DisplayPromptRenderer.armReconnectDelay(-61)) {
                           var6_int = (-SoftwareRasterizer.width + LegacyOpenGlRidgedWaterEffect.field_h) * 0 / 2;
                           var7 = (IntroMeshResources.canvasHeight - SoftwareRasterizer.height) * 0 / 2;
                           VertexAttribute.setDialogPointer(var6_int, -95, var7);
@@ -1458,8 +1458,8 @@ public final class Sumoblitz extends GameClientShell {
             NameSuggestionsPanel.setLoadingProgress(20, 90.0f, SoftwareTransform3D.unpackingGraphicsText);
             var3 = ActiveCanvasProvider.currentCanvas(78);
             SoftwareRasterizer.clear();
-            if (FadingWidget.g(-70)) {
-              LegacyOpenGlGraphicsHeap.renderStartupCanvas((byte) -86, var3, WhirlpoolDigest.a(7));
+            if (FadingWidget.needsPreparationScreen(-70)) {
+              LegacyOpenGlGraphicsHeap.renderStartupCanvas((byte) -86, var3, WhirlpoolDigest.isGameFocused(7));
               decompiledFrameRemainder0 = (var11 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -1468,7 +1468,7 @@ public final class Sumoblitz extends GameClientShell {
                 decompiledFrameRemainder0 = (var11 != 0);
               }
               if (decompiledFrameRemainder0) {
-                if (!ClientException.a(0)) {
+                if (!ClientException.isAccountProgressReady(0)) {
                   NameSuggestionsPanel.setLoadingProgress(20, 100.0f, StatefulWidgetRenderer.waitingForExtraDataText);
                   SoftwareRenderBuffer.presentAccountDialogs(-110, var3);
                   decompiledFrameRemainder0 = (var11 != 0);
@@ -1504,7 +1504,7 @@ public final class Sumoblitz extends GameClientShell {
                       SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, var5_int);
                     }
                   }
-                  if (DisplayPromptRenderer.a(-38) &&
+                  if (DisplayPromptRenderer.armReconnectDelay(-38) &&
                     !DisplayPromptState.isDisplayPromptOpen((byte) 110)) {
                     if (null == CompactMeshGeometry.field_o) {
                       stackIn_606_0 = AppletFocusState.focused;
@@ -1563,7 +1563,7 @@ public final class Sumoblitz extends GameClientShell {
                     decompiledSharedTail0 = (var11 != 0);
                   }
                   if (decompiledSharedTail0) {
-                    if (DisplayPromptRenderer.a(-67)) {
+                    if (DisplayPromptRenderer.armReconnectDelay(-67)) {
                       var6_int = 0 * (LegacyOpenGlRidgedWaterEffect.field_h - SoftwareRasterizer.width) / 2;
                       var7 = (-SoftwareRasterizer.height + IntroMeshResources.canvasHeight) * 0 / 2;
                       VertexAttribute.setDialogPointer(var6_int, -53, var7);
@@ -1610,8 +1610,8 @@ public final class Sumoblitz extends GameClientShell {
                 }
               }
             }
-            NameSuggestionsPanel.a(ArenaDefinitionCodec.field_c, UiStyle.field_Z, 20, LegacyOpenGlRenderbuffer.field_v);
-            NetworkResourceRequest.a(7966, UiStyle.field_Z, LegacyOpenGlRenderbuffer.field_v);
+            NameSuggestionsPanel.loadGameSprites(ArenaDefinitionCodec.field_c, UiStyle.field_Z, 20, LegacyOpenGlRenderbuffer.field_v);
+            NetworkResourceRequest.initializeArchiveHook(7966, UiStyle.field_Z, LegacyOpenGlRenderbuffer.field_v);
             ArenaDefinitionCodec.field_c = null;
             LegacyOpenGlRenderbuffer.field_v = null;
             UiStyle.field_Z = null;
@@ -1928,7 +1928,7 @@ public final class Sumoblitz extends GameClientShell {
           HardwareSpecularEffect.releaseStatics(0);
           HardwareAnimatedWaterEffect.releaseWaterNoiseSlices(1);
           HardwareReflectionEffect.releaseStatics((byte) 79);
-          FallbackShaderEffect.d(false);
+          FallbackShaderEffect.releaseClientTextAndScenery(false);
           RidgedNoise3D.releaseStatics((byte) 30);
           FixedPointPerlinNoise3D.releaseStatics((byte) 101);
           TurbulenceNoise3D.releaseStatics(param0);

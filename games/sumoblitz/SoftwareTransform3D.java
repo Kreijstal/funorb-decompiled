@@ -205,7 +205,7 @@ final class SoftwareTransform3D extends Transform3D {
     }
 
     SoftwareTransform3D() {
-        this.a(56);
+        this.initializeTransformHook(56);
     }
 
     final static void drawDimmedAccountDialogs(boolean unused, int guard) {
@@ -213,8 +213,8 @@ final class SoftwareTransform3D extends Transform3D {
         int var2 = 48 % ((-25 - guard) / 41);
     }
 
-    private final void a(int param0) {
-        if (param0 != 56) {
+    private final void initializeTransformHook(int guard) {
+        if (guard != 56) {
           SoftwareTransform3D.releaseStatics(-32);
         }
     }

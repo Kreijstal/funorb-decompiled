@@ -44,7 +44,7 @@ final class JaggrabDownloader implements Runnable {
         this.field_c = null;
     }
 
-    final synchronized boolean a(byte param0) {
+    final synchronized boolean pollDownload(byte guard) {
         Throwable decompiledCaughtException = null;
         int var2 = 0;
         IOException var3 = null;
@@ -54,7 +54,7 @@ final class JaggrabDownloader implements Runnable {
         if (this.field_g >= 2) {
           return true;
         }
-        var2 = 4 / ((param0 + 41) / 43);
+        var2 = 4 / ((guard + 41) / 43);
         if (this.field_g == 0) {
           if (this.field_e == null) {
             this.field_e = this.field_b.openUrlStream((byte) 107, this.field_a);
@@ -105,7 +105,7 @@ final class JaggrabDownloader implements Runnable {
             var4 = var5.getOutputStream();
             var4.write(17);
             var6 = (CharSequence) ((Object) ("JAGGRAB " + this.field_a.getFile() + "\n\n"));
-            var4.write(GameInstructions.a(var6, (byte) 32));
+            var4.write(GameInstructions.encodeCp1252(var6, (byte) 32));
             this.field_h = new DataInputStream(var5.getInputStream());
           }
           this.field_d.position = 0;

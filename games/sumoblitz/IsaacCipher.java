@@ -265,7 +265,7 @@ final class IsaacCipher {
         }
     }
 
-    final static void b(int param0) {
+    final static void renderIntroMeshes(int lightMagnitude) {
         int var15 = 0;
         int var17_int = 0;
         int var18 = 0;
@@ -329,14 +329,14 @@ final class IsaacCipher {
           var6Lifetime1 = MusicPatch.introFrame << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = LegacyOpenGlInterleavedStream.sinQ16(var6Lifetime1, -431) >> 8;
-          var9Lifetime1 = SocialContact.cosQ16(param0 - 256, var6Lifetime1) >> 8;
+          var9Lifetime1 = SocialContact.cosQ16(lightMagnitude - 256, var6Lifetime1) >> 8;
           if (PointLight.mouseX != -1 &&
             ArenaDefinitionCodec.field_e != -1) {
             var9Lifetime1 = -128;
             var7Lifetime1 = PointLight.mouseX - 320;
             var8Lifetime1 = -ArenaDefinitionCodec.field_e + 240;
           }
-          var10 = (double)param0 / Math.sqrt((double)(var9Lifetime1 * var9Lifetime1 + (var7Lifetime1 * var7Lifetime1 + var8Lifetime1 * var8Lifetime1)));
+          var10 = (double)lightMagnitude / Math.sqrt((double)(var9Lifetime1 * var9Lifetime1 + (var7Lifetime1 * var7Lifetime1 + var8Lifetime1 * var8Lifetime1)));
           var7Lifetime1 = (int)((double)var7Lifetime1 * var10);
           var8Lifetime1 = (int)((double)var8Lifetime1 * var10);
           var9Lifetime1 = (int)((double)var9Lifetime1 * var10);
@@ -367,7 +367,7 @@ final class IsaacCipher {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "ok.F(" + param0 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var1), "ok.F(" + lightMagnitude + ')');
         }
     }
 

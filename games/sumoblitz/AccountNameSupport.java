@@ -48,7 +48,7 @@ final class AccountNameSupport {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          name = ValidationStatus.a('_', name, guard, "");
+          name = ValidationStatus.replaceCharacter('_', name, guard, "");
           if (guard) {
             var4 = (String) null;
             AccountNameSupport.containsNameIgnoringUnderscores(true, (String) null, (String) null);

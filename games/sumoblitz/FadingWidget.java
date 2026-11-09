@@ -8,8 +8,8 @@ final class FadingWidget extends SingleChildWidget {
     static String nextText;
     int opacity;
 
-    final static boolean g(int param0) {
-        if (param0 > -26) {
+    final static boolean needsPreparationScreen(int guard) {
+        if (guard > -26) {
           nextText = (String) null;
           if (TextureCoordinateGeneration.clientPreparationPhase < 20) {
             return true;
@@ -20,7 +20,7 @@ final class FadingWidget extends SingleChildWidget {
           if (Js5ClientState.field_c <= 0) {
             return false;
           }
-          if (!LegacyOpenGlReflectionEffect.c(1)) {
+          if (!LegacyOpenGlReflectionEffect.isConnectionStatusGateOpen(1)) {
             return true;
           }
           return false;
@@ -34,7 +34,7 @@ final class FadingWidget extends SingleChildWidget {
         if (Js5ClientState.field_c <= 0) {
           return false;
         }
-        if (!LegacyOpenGlReflectionEffect.c(1)) {
+        if (!LegacyOpenGlReflectionEffect.isConnectionStatusGateOpen(1)) {
           return true;
         }
         return false;

@@ -15,7 +15,7 @@ final class LegacyOpenGlSpriteTexture extends LegacyOpenGlTexture2D {
         field_s = null;
         field_r = null;
         if (param0) {
-          LegacyOpenGlSpriteTexture.d((byte) 31);
+          LegacyOpenGlSpriteTexture.loadMasterIndex((byte) 31);
           field_t = null;
           return;
         }
@@ -76,9 +76,9 @@ final class LegacyOpenGlSpriteTexture extends LegacyOpenGlTexture2D {
         }
     }
 
-    final static boolean d(byte param0) {
-        if (param0 != 63) {
-          LegacyOpenGlSpriteTexture.e(false);
+    final static boolean loadMasterIndex(byte guard) {
+        if (guard != 63) {
+          LegacyOpenGlSpriteTexture.requestedPolicyPath(false);
           return LegacyOpenGlSpecularEffect.field_i.loadMasterIndex((byte) 126);
         }
         return LegacyOpenGlSpecularEffect.field_i.loadMasterIndex((byte) 126);
@@ -124,8 +124,8 @@ final class LegacyOpenGlSpriteTexture extends LegacyOpenGlTexture2D {
         }
     }
 
-    final static String e(boolean param0) {
-        if (param0) {
+    final static String requestedPolicyPath(boolean guard) {
+        if (guard) {
           field_s = (java.awt.Font) null;
           return ArchiveProvider.field_c;
         }

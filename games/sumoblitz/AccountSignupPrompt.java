@@ -39,7 +39,7 @@ final class AccountSignupPrompt extends WidgetContainer implements WidgetActionL
           } else {
             if (source != this.field_B) {
               if (this.field_C == source) {
-                SlowBurstParticle.e(4);
+                SlowBurstParticle.showProgressDialogAndSetResult(4);
               }
             } else {
               AccountCreationNavigation.showAccountCreation((byte) 114);

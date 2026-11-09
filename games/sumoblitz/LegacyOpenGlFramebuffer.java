@@ -19,7 +19,7 @@ final class LegacyOpenGlFramebuffer implements LegacyOpenGlFramebufferTarget {
         if (Js5ClientState.field_b.service((byte) 119)) {
           return 0;
         }
-        return TextureFilter.a(true);
+        return TextureFilter.advanceJs5Connection(true);
     }
 
     final void detachAttachment(int index, int guard) {

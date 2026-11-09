@@ -85,10 +85,10 @@ final class InwardSparkParticle extends TimedSceneEffect {
         RuntimeException var2 = null;
         try {
           if (ToolkitRasterBuffer.field_o != null) {
-            ToolkitRasterBuffer.field_o.nameSuggestions.a(suggestions, false);
+            ToolkitRasterBuffer.field_o.nameSuggestions.setSuggestions(suggestions, false);
           }
           if (SecondaryNodeQueue.field_a != null) {
-            SecondaryNodeQueue.field_a.nameSuggestions.a(suggestions, false);
+            SecondaryNodeQueue.field_a.nameSuggestions.setSuggestions(suggestions, false);
           }
           if (guard != 256) {
             field_y = (int[]) null;

@@ -129,7 +129,7 @@ final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
         }
     }
 
-    final static void a(int param0, java.applet.Applet param1, boolean param2, String param3) {
+    final static void openExternalUrl(int guard, java.applet.Applet applet, boolean unused, String url) {
         try {
           RuntimeException var4 = null;
           String var5 = null;
@@ -142,34 +142,34 @@ final class LegacyOpenGlFlowingWaterEffect extends LegacyOpenGlEffect {
           java.net.MalformedURLException var4_ref = null;
           try {
             if (PlatformTaskDispatcher.field_o.startsWith("win") &&
-              IntList.openWindowsBrowser(param3, -2528)) {
+              IntList.openWindowsBrowser(url, -2528)) {
               return;
             }
             try {
-              param1.getAppletContext().showDocument(new java.net.URL(param3), "_blank");
+              applet.getAppletContext().showDocument(new java.net.URL(url), "_blank");
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-              IntrusiveNode.reportClientError("MGR1: " + param3, (Throwable) null, 0);
+              IntrusiveNode.reportClientError("MGR1: " + url, (Throwable) null, 0);
             }
-            if (param0 == -23166) {
+            if (guard == -23166) {
               return;
             }
             var5 = (String) null;
-            LegacyOpenGlFlowingWaterEffect.a(93, (java.applet.Applet) null, false, (String) null);
+            LegacyOpenGlFlowingWaterEffect.openExternalUrl(93, (java.applet.Applet) null, false, (String) null);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var4 = (RuntimeException) (Object) decompiledCaughtException;
             stackIn_12_0 = var4;
-            stackIn_12_1 = new StringBuilder().append("kj.C(").append(param0).append(',');
-            if (param1 == null) {
+            stackIn_12_1 = new StringBuilder().append("kj.C(").append(guard).append(',');
+            if (applet == null) {
               stackIn_13_2 = "null";
             } else {
               stackIn_13_2 = "{...}";
             }
-            stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',');
-            if (param3 == null) {
+            stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(unused).append(',');
+            if (url == null) {
               stackIn_16_2 = "null";
             } else {
               stackIn_16_2 = "{...}";

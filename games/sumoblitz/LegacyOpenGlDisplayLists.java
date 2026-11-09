@@ -11,7 +11,7 @@ final class LegacyOpenGlDisplayLists {
         }
         GameInstructions.field_b = sampleId;
         if (loop) {
-          TextureCoordinateGeneration.a(GameInstructions.field_b, 124);
+          TextureCoordinateGeneration.stopSoundStream(GameInstructions.field_b, 124);
           QueuedIntArrayRequest.playLoopingSample(GameInstructions.field_b, 4);
           if (guard > -87) {
             field_a = (LegacyBitmapFont) null;
@@ -64,12 +64,12 @@ final class LegacyOpenGlDisplayLists {
         field_a = null;
     }
 
-    final static boolean a(int param0, boolean param1, int param2) {
-        if (param1) {
-          return (param2 & 256) != 0 ? true : false;
+    final static boolean hasFlag256(int unused, boolean guard, int flags) {
+        if (guard) {
+          return (flags & 256) != 0 ? true : false;
         }
         LegacyOpenGlDisplayLists.playSoundEffectIfChanged(34, -21, true);
-        return (param2 & 256) != 0 ? true : false;
+        return (flags & 256) != 0 ? true : false;
     }
 
     final static void maybeSpawnScorePowerup(byte guard, Drone drone) {

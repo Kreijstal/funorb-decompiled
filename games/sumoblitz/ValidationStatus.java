@@ -46,7 +46,7 @@ final class ValidationStatus {
         return 255 & value;
     }
 
-    final static String a(char param0, String param1, boolean param2, String param3) {
+    final static String replaceCharacter(char character, String text, boolean guard, String replacement) {
         StringBuilder discarded$4 = null;
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
@@ -70,18 +70,18 @@ final class ValidationStatus {
         RuntimeException var4 = null;
         var11 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var4_int = param1.length();
-          if (param2) {
+          var4_int = text.length();
+          if (guard) {
             stackIn_3_0 = (String) null;
             return stackIn_3_0;
           }
-          var5 = param3.length();
+          var5 = replacement.length();
           var6 = var4_int;
           var7 = var5 - 1;
           if (var7 != 0) {
             var8_int = 0;
             while (true) {
-              var8_int = param1.indexOf((int) param0, var8_int);
+              var8_int = text.indexOf((int) character, var8_int);
               if (var8_int < 0) {
                 break;
               }
@@ -92,28 +92,28 @@ final class ValidationStatus {
           var8 = new StringBuilder(var6);
           var9 = 0;
           while (true) {
-            var10 = param1.indexOf((int) param0, var9);
+            var10 = text.indexOf((int) character, var9);
             if (var10 < 0) {
-              discarded$4 = var8.append(param1.substring(var9));
+              discarded$4 = var8.append(text.substring(var9));
               stackIn_14_0 = var8.toString();
               return stackIn_14_0;
             }
-            discarded$2 = var8.append(param1.substring(var9, var10));
-            discarded$3 = var8.append(param3);
+            discarded$2 = var8.append(text.substring(var9, var10));
+            discarded$3 = var8.append(replacement);
             var9 = 1 + var10;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_17_0 = var4;
-          stackIn_17_1 = new StringBuilder().append("gf.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_17_1 = new StringBuilder().append("gf.A(").append(character).append(',');
+          if (text == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
-          stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(guard).append(',');
+          if (replacement == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";

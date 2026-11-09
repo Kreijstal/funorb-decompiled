@@ -102,7 +102,7 @@ final class VorbisSample extends IntrusiveNode {
           var9 = new int[var5];
           var10 = HardwareTextureCache.bitLength(var5 - 1, (byte) -115);
           for (var11 = 0; var11 < var5; var11++) {
-            var9[var11] = TextureCombineSource.a((byte) 72, var11, var10);
+            var9[var11] = TextureCombineSource.reverseBits((byte) 72, var11, var10);
           }
           if (var1 == 0) {
             shortTrigA = var6_ref_float__;

@@ -54,7 +54,7 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
             DirectByteArrayStorage.defineMenuScreen(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
             LegacyOpenGlEffectManager.field_g[0] = new MenuScreen(0);
           }
-          if (MusicPatchEnvelope.a(8230, 25)) {
+          if (MusicPatchEnvelope.areFirstLevelsComplete(8230, 25)) {
             DirectByteArrayStorage.defineMenuScreen(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
             LegacyOpenGlEffectManager.field_g[0] = new MenuScreen(0);
           }
@@ -70,7 +70,7 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
             DirectByteArrayStorage.defineMenuScreen(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
             LegacyOpenGlEffectManager.field_g[0] = new MenuScreen(0);
           }
-          if (MusicPatchEnvelope.a(8230, 25)) {
+          if (MusicPatchEnvelope.areFirstLevelsComplete(8230, 25)) {
             DirectByteArrayStorage.defineMenuScreen(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
             LegacyOpenGlEffectManager.field_g[0] = new MenuScreen(0);
           }
@@ -81,7 +81,7 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
           DirectByteArrayStorage.defineMenuScreen(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
           LegacyOpenGlEffectManager.field_g[0] = new MenuScreen(0);
         }
-        if (MusicPatchEnvelope.a(8230, 25)) {
+        if (MusicPatchEnvelope.areFirstLevelsComplete(8230, 25)) {
           DirectByteArrayStorage.defineMenuScreen(115, 38, 148, 2, new int[]{0, 23, 24, 3, 25, 2, 14, 11}, 0, 492);
           LegacyOpenGlEffectManager.field_g[0] = new MenuScreen(0);
         }
@@ -161,13 +161,13 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
               CubeMapSource.field_a = false;
               var4 = 1;
             }
-            ProxyAuthenticationRequiredException.drawLoadingProgress(true, OpenGlTexture.g(14296), IntIndexHashTable.field_a, var4 != 0, LoadingStatusText.preparationMessage(102));
+            ProxyAuthenticationRequiredException.drawLoadingProgress(true, OpenGlTexture.clientPreparationPercent(14296), IntIndexHashTable.field_a, var4 != 0, LoadingStatusText.preparationMessage(102));
             return;
           }
           if (!LegacyOpenGlRenderBufferSet.isIntroFinished(-251)) {
             SoftwareRasterizer.clear();
             IntroLogoRenderer.drawIntroLogo(240, 320, 256);
-            IterableNodeHashTable.a(0, 0, canvas, (byte) 125);
+            IterableNodeHashTable.presentDialogRaster(0, 0, canvas, (byte) 125);
             return;
           }
           if (0 != LoginDialogNavigation.field_a) {
@@ -175,7 +175,7 @@ final class LegacyOpenGlGraphicsHeap extends GraphicsHeap {
             return;
           }
           LoginDialogNavigation.drawAccountDialogs(false, (byte) -71, unused);
-          IterableNodeHashTable.a(0, 0, canvas, (byte) 125);
+          IterableNodeHashTable.presentDialogRaster(0, 0, canvas, (byte) 125);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

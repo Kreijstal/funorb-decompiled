@@ -30,7 +30,7 @@ class TurbulenceNoise3D extends FixedPointPerlinNoise3D {
           return;
         }
         IntrusiveDeque var3 = (IntrusiveDeque) null;
-        TurbulenceNoise3D.a(-47, -118, 3, (IntrusiveDeque) null, 110, (byte) -26);
+        TurbulenceNoise3D.spawnSlowBurstParticles(-47, -118, 3, (IntrusiveDeque) null, 110, (byte) -26);
     }
 
     TurbulenceNoise3D(int noiseSeed, int octaves, int xPeriod, int yPeriod, int zPeriod, float persistence) {
@@ -42,7 +42,7 @@ class TurbulenceNoise3D extends FixedPointPerlinNoise3D {
         }
     }
 
-    final static void a(int param0, int param1, int param2, IntrusiveDeque param3, int param4, byte param5) {
+    final static void spawnSlowBurstParticles(int param0, int param1, int param2, IntrusiveDeque param3, int param4, byte param5) {
         float[] dupTemp$0 = null;
         int stackIn_4_0 = 0;
         int stackIn_9_0 = 0;
@@ -72,7 +72,7 @@ class TurbulenceNoise3D extends FixedPointPerlinNoise3D {
           var7 = 0;
           if (param5 != 94) {
             var10 = (IntrusiveDeque) null;
-            TurbulenceNoise3D.a(-96, 96, -59, (IntrusiveDeque) null, -77, (byte) 95);
+            TurbulenceNoise3D.spawnSlowBurstParticles(-96, 96, -59, (IntrusiveDeque) null, -77, (byte) 95);
           }
           while (true) {
             stackIn_9_0 = (var6_int != 0) ? 20 : 40;
@@ -127,7 +127,7 @@ class TurbulenceNoise3D extends FixedPointPerlinNoise3D {
           return;
         }
         IntrusiveDeque var5 = (IntrusiveDeque) null;
-        TurbulenceNoise3D.a(66, 11, -7, (IntrusiveDeque) null, 98, (byte) -106);
+        TurbulenceNoise3D.spawnSlowBurstParticles(66, 11, -7, (IntrusiveDeque) null, 98, (byte) -106);
     }
 
     final void finishVoxel(boolean guard) {
@@ -198,7 +198,7 @@ class TurbulenceNoise3D extends FixedPointPerlinNoise3D {
           OpenGlCubeTexture.field_l[37] = LegacyOpenGlPostProcessManager.field_b.getSoundEffectByName(0, "firework_particles4");
           if (guard > -42) {
             IntrusiveDeque var3 = (IntrusiveDeque) null;
-            TurbulenceNoise3D.a(98, 120, 16, (IntrusiveDeque) null, 107, (byte) 5);
+            TurbulenceNoise3D.spawnSlowBurstParticles(98, 120, 16, (IntrusiveDeque) null, 107, (byte) 5);
           }
         } catch (RuntimeException runtimeException) {
           throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) runtimeException), "ff.R(" + guard + ',' + (archive != null ? "{...}" : "null") + ')');

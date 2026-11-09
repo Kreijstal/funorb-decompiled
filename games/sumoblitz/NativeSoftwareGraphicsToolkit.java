@@ -201,7 +201,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
         this.canvasSurfaces.clear(6407);
         NativeGraphicsHeap var1 = (NativeGraphicsHeap) (this.heaps.first(99));
         while (var1 != null) {
-          var1.ga();
+          var1.nativeDisposeHeap();
           var1 = (NativeGraphicsHeap) (this.heaps.next((byte) 18));
         }
         this.heaps.clear(125);
@@ -323,7 +323,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements Nat
         this.nativeUpdateTime(timeMillis);
         NativeGraphicsHeap var2 = (NativeGraphicsHeap) (this.heaps.first(-61));
         while (var2 != null) {
-          var2.r();
+          var2.nativeServiceHeap();
           var2 = (NativeGraphicsHeap) (this.heaps.next((byte) 18));
         }
     }

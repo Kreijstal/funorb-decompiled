@@ -5,7 +5,7 @@ final class OpenGlAssemblyProgram {
     private OpenGlGraphicsToolkit toolkit;
     int programId;
 
-    final static int b(int param0, int param1, int param2) {
+    final static int hitTestDisplayPrompt(int y, int guard, int x) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -20,7 +20,7 @@ final class OpenGlAssemblyProgram {
         try {
           var3_int = 0;
           var4 = ProxyAuthenticationRequiredException.field_f;
-          if (param1 != 1882601153) {
+          if (guard != 1882601153) {
             OpenGlAssemblyProgram.createSolidSprite(78, -126, 77);
           }
           while (IntIndexHashTable.field_c.length > var3_int) {
@@ -31,7 +31,7 @@ final class OpenGlAssemblyProgram {
               var6 = MessageDialog.displayPromptTextWidthIntGuard(-59, IntIndexHashTable.field_c[var3_int], true);
               var7 = BeveledCheckboxRenderer.field_a - (var6 >> 1);
               var4 = var4 + DroneIntroductionOverlay.field_a;
-              if (HardwareUnlitEffect.containsPoint(var4, (byte) 122, param2, var7 - DebouncedInputValidator.field_b, LegacyOpenGlUnderwaterEffect.field_h + (TextLayout.field_b << 1), param0, (DebouncedInputValidator.field_b << 1) + var6)) {
+              if (HardwareUnlitEffect.containsPoint(var4, (byte) 122, x, var7 - DebouncedInputValidator.field_b, LegacyOpenGlUnderwaterEffect.field_h + (TextLayout.field_b << 1), y, (DebouncedInputValidator.field_b << 1) + var6)) {
                 stackIn_8_0 = var5;
                 return stackIn_8_0;
               }
@@ -44,7 +44,7 @@ final class OpenGlAssemblyProgram {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var3), "wg.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var3), "wg.A(" + y + ',' + guard + ',' + x + ')');
         }
     }
 

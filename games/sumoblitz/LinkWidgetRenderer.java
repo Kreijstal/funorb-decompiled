@@ -9,7 +9,7 @@ final class LinkWidgetRenderer implements WidgetRenderer {
 
     public static void releaseStatics(int guard) {
         if (guard < 38) {
-          LinkWidgetRenderer.a(31);
+          LinkWidgetRenderer.showRetainedLoginForm(31);
           friendsCanBeAddedText = null;
           return;
         }
@@ -95,11 +95,11 @@ final class LinkWidgetRenderer implements WidgetRenderer {
         }
     }
 
-    final static void a(int param0) {
+    final static void showRetainedLoginForm(int guard) {
         String var2 = (String) null;
         AccountNameSupport.showLoginForm((byte) 99, FadingWidget.field_C, (String) null);
-        if (param0 != -363927231) {
-          LinkWidgetRenderer.a(-108);
+        if (guard != -363927231) {
+          LinkWidgetRenderer.showRetainedLoginForm(-108);
         }
     }
 

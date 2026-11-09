@@ -10,11 +10,11 @@ final class EmailValidationError {
         throw new IllegalStateException();
     }
 
-    final static boolean a(int param0, byte param1, int param2) {
-        if (param1 >= -57) {
+    final static boolean hasAnyMask540800(int flags, byte guard, int unused) {
+        if (guard >= -57) {
           return true;
         }
-        return (540800 & param0) != 0 ? true : false;
+        return (540800 & flags) != 0 ? true : false;
     }
 
     final static MouseWheelInput createMouseWheelInput(byte guard) {

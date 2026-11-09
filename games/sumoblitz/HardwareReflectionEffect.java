@@ -47,7 +47,7 @@ final class HardwareReflectionEffect extends ShaderEffect {
         }
     }
 
-    final static byte a(boolean param0, char param1) {
+    final static byte encodeCp1252Character(boolean guard, char character) {
         int var2;
         int var3;
         int var2Lifetime1;
@@ -55,98 +55,98 @@ final class HardwareReflectionEffect extends ShaderEffect {
         int var2Lifetime3;
         int var2Lifetime4;
         var3 = Sumoblitz.field_L ? 1 : 0;
-        if (param0) {
+        if (guard) {
           regionExit1: {
-            if ((param1 <= 0 ||
-              param1 >= 128) &&
-              (param1 < 160 ||
-              param1 > 255)) {
-              if (8364 == param1) {
+            if ((character <= 0 ||
+              character >= 128) &&
+              (character < 160 ||
+              character > 255)) {
+              if (8364 == character) {
                 var2 = -128;
               } else {
-                if (param1 == 8218) {
+                if (character == 8218) {
                   var2 = -126;
                 } else {
-                  if (param1 == 402) {
+                  if (character == 402) {
                     var2 = -125;
                     return (byte) var2;
                   }
-                  if (param1 == 8222) {
+                  if (character == 8222) {
                     var2 = -124;
                   } else {
-                    if (param1 == 8230) {
+                    if (character == 8230) {
                       var2 = -123;
                       return (byte) var2;
                     }
-                    if (param1 == 8224) {
+                    if (character == 8224) {
                       var2 = -122;
                       return (byte) var2;
                     }
-                    if (8225 == param1) {
+                    if (8225 == character) {
                       var2 = -121;
                       return (byte) var2;
                     }
-                    if (param1 == 710) {
+                    if (character == 710) {
                       var2 = -120;
                     } else {
-                      if (param1 == 8240) {
+                      if (character == 8240) {
                         var2 = -119;
                         return (byte) var2;
                       }
-                      if (param1 == 352) {
+                      if (character == 352) {
                         var2 = -118;
                         return (byte) var2;
                       }
-                      if (8249 == param1) {
+                      if (8249 == character) {
                         var2 = -117;
                         return (byte) var2;
                       }
-                      if (338 == param1) {
+                      if (338 == character) {
                         var2 = -116;
                       } else {
-                        if (param1 == 381) {
+                        if (character == 381) {
                           var2 = -114;
                         } else {
-                          if (param1 == 8216) {
+                          if (character == 8216) {
                             var2 = -111;
                           } else {
-                            if (param1 == 8217) {
+                            if (character == 8217) {
                               var2 = -110;
                             } else {
-                              if (param1 == 8220) {
+                              if (character == 8220) {
                                 var2 = -109;
                               } else {
-                                if (8221 == param1) {
+                                if (8221 == character) {
                                   var2 = -108;
                                 } else {
-                                  if (8226 == param1) {
+                                  if (8226 == character) {
                                     var2 = -107;
                                   } else {
-                                    if (param1 == 8211) {
+                                    if (character == 8211) {
                                       var2 = -106;
                                     } else {
-                                      if (8212 == param1) {
+                                      if (8212 == character) {
                                         var2 = -105;
                                       } else {
-                                        if (param1 == 732) {
+                                        if (character == 732) {
                                           var2 = -104;
                                         } else {
-                                          if (param1 == 8482) {
+                                          if (character == 8482) {
                                             var2 = -103;
                                           } else {
-                                            if (param1 == 353) {
+                                            if (character == 353) {
                                               var2 = -102;
                                             } else {
-                                              if (8250 == param1) {
+                                              if (8250 == character) {
                                                 var2 = -101;
                                               } else {
-                                                if (param1 == 339) {
+                                                if (character == 339) {
                                                   var2 = -100;
                                                 } else {
-                                                  if (param1 == 382) {
+                                                  if (character == 382) {
                                                     var2 = -98;
                                                   } else {
-                                                    if (param1 != 376) {
+                                                    if (character != 376) {
                                                       var2 = 63;
                                                     } else {
                                                       var2 = -97;
@@ -172,70 +172,70 @@ final class HardwareReflectionEffect extends ShaderEffect {
               }
               break regionExit1;
             }
-            var2 = (byte)param1;
+            var2 = (byte)character;
           }
           return (byte) var2;
         }
         HardwareReflectionEffect.releaseStatics((byte) 83);
-        if (param1 <= 0) {
-          if (param1 < 160) {
-            if (8364 != param1) {
-              if (param1 != 8218) {
-                if (param1 == 402) {
+        if (character <= 0) {
+          if (character < 160) {
+            if (8364 != character) {
+              if (character != 8218) {
+                if (character == 402) {
                   var2Lifetime1 = -125;
                 } else {
-                  if (param1 != 8222) {
-                    if (param1 == 8230) {
+                  if (character != 8222) {
+                    if (character == 8230) {
                       var2Lifetime1 = -123;
                     } else {
-                      if (param1 == 8224) {
+                      if (character == 8224) {
                         var2Lifetime1 = -122;
                       } else {
-                        if (8225 == param1) {
+                        if (8225 == character) {
                           var2Lifetime1 = -121;
                         } else {
-                          if (param1 != 710) {
-                            if (param1 == 8240) {
+                          if (character != 710) {
+                            if (character == 8240) {
                               var2Lifetime1 = -119;
                             } else {
-                              if (param1 == 352) {
+                              if (character == 352) {
                                 var2Lifetime1 = -118;
                               } else {
-                                if (8249 == param1) {
+                                if (8249 == character) {
                                   var2Lifetime1 = -117;
                                 } else {
-                                  if (338 == param1) {
+                                  if (338 == character) {
                                     var2Lifetime1 = -116;
                                   } else {
-                                    if (param1 == 381) {
+                                    if (character == 381) {
                                       var2Lifetime1 = -114;
                                     } else {
-                                      if (param1 != 8216) {
-                                        if (param1 != 8217) {
-                                          if (param1 == 8220) {
+                                      if (character != 8216) {
+                                        if (character != 8217) {
+                                          if (character == 8220) {
                                             var2Lifetime1 = -109;
                                           } else {
-                                            if (8221 == param1) {
+                                            if (8221 == character) {
                                               var2Lifetime1 = -108;
                                             } else {
-                                              if (8226 == param1) {
+                                              if (8226 == character) {
                                                 var2Lifetime1 = -107;
                                               } else {
-                                                if (param1 == 8211) {
+                                                if (character == 8211) {
                                                   var2Lifetime1 = -106;
                                                 } else {
-                                                  if (8212 != param1) {
-                                                    if (param1 != 732) {
-                                                      if (param1 == 8482) {
+                                                  if (8212 != character) {
+                                                    if (character != 732) {
+                                                      if (character == 8482) {
                                                         var2Lifetime1 = -103;
                                                       } else {
-                                                        if (param1 != 353) {
-                                                          if (8250 == param1) {
+                                                        if (character != 353) {
+                                                          if (8250 == character) {
                                                             var2Lifetime1 = -101;
                                                           } else {
-                                                            if (param1 != 339) {
-                                                              if (param1 != 382) {
-                                                                var2Lifetime1 = (param1 != 376) ? 63 : -97;
+                                                            if (character != 339) {
+                                                              if (character != 382) {
+                                                                var2Lifetime1 = (character != 376) ? 63 : -97;
                                                               } else {
                                                                 var2Lifetime1 = -98;
                                                               }
@@ -285,66 +285,66 @@ final class HardwareReflectionEffect extends ShaderEffect {
               var2Lifetime1 = -128;
             }
           } else {
-            if (param1 <= 255) {
-              var2Lifetime1 = (byte)param1;
+            if (character <= 255) {
+              var2Lifetime1 = (byte)character;
             } else {
-              if (8364 != param1) {
-                if (param1 != 8218) {
-                  if (param1 == 402) {
+              if (8364 != character) {
+                if (character != 8218) {
+                  if (character == 402) {
                     var2Lifetime1 = -125;
                   } else {
-                    if (param1 != 8222) {
-                      if (param1 == 8230) {
+                    if (character != 8222) {
+                      if (character == 8230) {
                         var2Lifetime1 = -123;
                       } else {
-                        if (param1 == 8224) {
+                        if (character == 8224) {
                           var2Lifetime1 = -122;
                         } else {
-                          if (8225 == param1) {
+                          if (8225 == character) {
                             var2Lifetime1 = -121;
                           } else {
-                            if (param1 != 710) {
-                              if (param1 == 8240) {
+                            if (character != 710) {
+                              if (character == 8240) {
                                 var2Lifetime1 = -119;
                               } else {
-                                if (param1 == 352) {
+                                if (character == 352) {
                                   var2Lifetime1 = -118;
                                 } else {
-                                  if (8249 == param1) {
+                                  if (8249 == character) {
                                     var2Lifetime1 = -117;
                                   } else {
-                                    if (338 == param1) {
+                                    if (338 == character) {
                                       var2Lifetime1 = -116;
                                     } else {
-                                      if (param1 == 381) {
+                                      if (character == 381) {
                                         var2Lifetime1 = -114;
                                       } else {
-                                        if (param1 != 8216) {
-                                          if (param1 != 8217) {
-                                            if (param1 == 8220) {
+                                        if (character != 8216) {
+                                          if (character != 8217) {
+                                            if (character == 8220) {
                                               var2Lifetime1 = -109;
                                             } else {
-                                              if (8221 == param1) {
+                                              if (8221 == character) {
                                                 var2Lifetime1 = -108;
                                               } else {
-                                                if (8226 == param1) {
+                                                if (8226 == character) {
                                                   var2Lifetime1 = -107;
                                                 } else {
-                                                  if (param1 == 8211) {
+                                                  if (character == 8211) {
                                                     var2Lifetime1 = -106;
                                                   } else {
-                                                    if (8212 != param1) {
-                                                      if (param1 != 732) {
-                                                        if (param1 == 8482) {
+                                                    if (8212 != character) {
+                                                      if (character != 732) {
+                                                        if (character == 8482) {
                                                           var2Lifetime1 = -103;
                                                         } else {
-                                                          if (param1 != 353) {
-                                                            if (8250 == param1) {
+                                                          if (character != 353) {
+                                                            if (8250 == character) {
                                                               var2Lifetime1 = -101;
                                                             } else {
-                                                              if (param1 != 339) {
-                                                                if (param1 != 382) {
-                                                                  var2Lifetime1 = (param1 != 376) ? 63 : -97;
+                                                              if (character != 339) {
+                                                                if (character != 382) {
+                                                                  var2Lifetime1 = (character != 376) ? 63 : -97;
                                                                 } else {
                                                                   var2Lifetime1 = -98;
                                                                 }
@@ -397,72 +397,72 @@ final class HardwareReflectionEffect extends ShaderEffect {
           }
           return (byte) var2Lifetime1;
         }
-        if (param1 < 128) {
-          var2Lifetime2 = (byte)param1;
+        if (character < 128) {
+          var2Lifetime2 = (byte)character;
           return (byte) var2Lifetime2;
         }
-        if (param1 < 160) {
-          if (8364 != param1) {
-            if (param1 != 8218) {
-              if (param1 == 402) {
+        if (character < 160) {
+          if (8364 != character) {
+            if (character != 8218) {
+              if (character == 402) {
                 var2Lifetime3 = -125;
               } else {
-                if (param1 != 8222) {
-                  if (param1 == 8230) {
+                if (character != 8222) {
+                  if (character == 8230) {
                     var2Lifetime3 = -123;
                   } else {
-                    if (param1 == 8224) {
+                    if (character == 8224) {
                       var2Lifetime3 = -122;
                     } else {
-                      if (8225 == param1) {
+                      if (8225 == character) {
                         var2Lifetime3 = -121;
                       } else {
-                        if (param1 != 710) {
-                          if (param1 == 8240) {
+                        if (character != 710) {
+                          if (character == 8240) {
                             var2Lifetime3 = -119;
                           } else {
-                            if (param1 == 352) {
+                            if (character == 352) {
                               var2Lifetime3 = -118;
                             } else {
-                              if (8249 == param1) {
+                              if (8249 == character) {
                                 var2Lifetime3 = -117;
                               } else {
-                                if (338 == param1) {
+                                if (338 == character) {
                                   var2Lifetime3 = -116;
                                 } else {
-                                  if (param1 == 381) {
+                                  if (character == 381) {
                                     var2Lifetime3 = -114;
                                   } else {
-                                    if (param1 != 8216) {
-                                      if (param1 != 8217) {
-                                        if (param1 == 8220) {
+                                    if (character != 8216) {
+                                      if (character != 8217) {
+                                        if (character == 8220) {
                                           var2Lifetime3 = -109;
                                         } else {
-                                          if (8221 == param1) {
+                                          if (8221 == character) {
                                             var2Lifetime3 = -108;
                                           } else {
-                                            if (8226 == param1) {
+                                            if (8226 == character) {
                                               var2Lifetime3 = -107;
                                             } else {
-                                              if (param1 == 8211) {
+                                              if (character == 8211) {
                                                 var2Lifetime3 = -106;
                                               } else {
-                                                if (8212 != param1) {
-                                                  if (param1 != 732) {
-                                                    if (param1 == 8482) {
+                                                if (8212 != character) {
+                                                  if (character != 732) {
+                                                    if (character == 8482) {
                                                       var2Lifetime3 = -103;
                                                     } else {
-                                                      if (param1 != 353) {
-                                                        if (8250 == param1) {
+                                                      if (character != 353) {
+                                                        if (8250 == character) {
                                                           var2Lifetime3 = -101;
                                                         } else {
-                                                          if (param1 == 339) {
+                                                          if (character == 339) {
                                                             var2Lifetime3 = -100;
                                                           } else {
-                                                            if (param1 == 382) {
+                                                            if (character == 382) {
                                                               var2Lifetime3 = -98;
                                                             } else {
-                                                              if (param1 != 376) {
+                                                              if (character != 376) {
                                                                 var2Lifetime3 = 63;
                                                               } else {
                                                                 var2Lifetime3 = -97;
@@ -513,81 +513,81 @@ final class HardwareReflectionEffect extends ShaderEffect {
           }
           return (byte) var2Lifetime3;
         }
-        if (param1 > 255) {
-          if (8364 != param1) {
-            if (param1 != 8218) {
-              if (param1 == 402) {
+        if (character > 255) {
+          if (8364 != character) {
+            if (character != 8218) {
+              if (character == 402) {
                 var2Lifetime4 = -125;
               } else {
-                if (param1 != 8222) {
-                  if (param1 == 8230) {
+                if (character != 8222) {
+                  if (character == 8230) {
                     var2Lifetime4 = -123;
                     return (byte) var2Lifetime4;
                   }
-                  if (param1 == 8224) {
+                  if (character == 8224) {
                     var2Lifetime4 = -122;
                     return (byte) var2Lifetime4;
                   }
-                  if (8225 == param1) {
+                  if (8225 == character) {
                     var2Lifetime4 = -121;
                     return (byte) var2Lifetime4;
                   }
-                  if (param1 != 710) {
-                    if (param1 == 8240) {
+                  if (character != 710) {
+                    if (character == 8240) {
                       var2Lifetime4 = -119;
                       return (byte) var2Lifetime4;
                     }
-                    if (param1 == 352) {
+                    if (character == 352) {
                       var2Lifetime4 = -118;
                       return (byte) var2Lifetime4;
                     }
-                    if (8249 == param1) {
+                    if (8249 == character) {
                       var2Lifetime4 = -117;
                       return (byte) var2Lifetime4;
                     }
-                    if (338 == param1) {
+                    if (338 == character) {
                       var2Lifetime4 = -116;
                       return (byte) var2Lifetime4;
                     }
-                    if (param1 == 381) {
+                    if (character == 381) {
                       var2Lifetime4 = -114;
                       return (byte) var2Lifetime4;
                     }
-                    if (param1 != 8216) {
-                      if (param1 != 8217) {
-                        if (param1 == 8220) {
+                    if (character != 8216) {
+                      if (character != 8217) {
+                        if (character == 8220) {
                           var2Lifetime4 = -109;
                           return (byte) var2Lifetime4;
                         }
-                        if (8221 == param1) {
+                        if (8221 == character) {
                           var2Lifetime4 = -108;
                           return (byte) var2Lifetime4;
                         }
-                        if (8226 == param1) {
+                        if (8226 == character) {
                           var2Lifetime4 = -107;
                           return (byte) var2Lifetime4;
                         }
-                        if (param1 == 8211) {
+                        if (character == 8211) {
                           var2Lifetime4 = -106;
                           return (byte) var2Lifetime4;
                         }
-                        if (8212 != param1) {
-                          if (param1 != 732) {
-                            if (param1 == 8482) {
+                        if (8212 != character) {
+                          if (character != 732) {
+                            if (character == 8482) {
                               var2Lifetime4 = -103;
                               return (byte) var2Lifetime4;
                             }
-                            if (param1 != 353) {
-                              if (8250 == param1) {
+                            if (character != 353) {
+                              if (8250 == character) {
                                 var2Lifetime4 = -101;
                               } else {
-                                if (param1 == 339) {
+                                if (character == 339) {
                                   var2Lifetime4 = -100;
                                 } else {
-                                  if (param1 == 382) {
+                                  if (character == 382) {
                                     var2Lifetime4 = -98;
                                   } else {
-                                    if (param1 != 376) {
+                                    if (character != 376) {
                                       var2Lifetime4 = 63;
                                     } else {
                                       var2Lifetime4 = -97;
@@ -624,7 +624,7 @@ final class HardwareReflectionEffect extends ShaderEffect {
             var2Lifetime4 = -128;
           }
         } else {
-          var2Lifetime4 = (byte)param1;
+          var2Lifetime4 = (byte)character;
         }
         return (byte) var2Lifetime4;
     }

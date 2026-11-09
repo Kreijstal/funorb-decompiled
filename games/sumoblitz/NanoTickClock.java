@@ -49,7 +49,7 @@ final class NanoTickClock extends TickClock {
           var8 = new AccountCreationProgressDialog(RenderPresentationException.field_a, form);
           var7 = var8;
           RenderPresentationException.field_a.pushDialog((byte) 111, var8);
-          if (ImageProducerRasterBuffer.c(guard ^ -123)) {
+          if (ImageProducerRasterBuffer.hasLegacyStatusFlag(guard ^ -123)) {
             var8.showIneligibleResult(true);
             return true;
           }

@@ -27,7 +27,7 @@ final class IndexBufferReference {
         }
     }
 
-    final static boolean a(int param0, java.applet.Applet param1) {
+    final static boolean hasLegacyStatusFlag(int separator, java.applet.Applet applet) {
         try {
           int var5 = 0;
           String var2 = null;
@@ -49,8 +49,8 @@ final class IndexBufferReference {
             }
             try {
               var2 = "tuhstatbut";
-              var3 = (String) (BrowserScriptBridge.call(param1, 116, "getcookies"));
-              var4 = SocialContact.split((char)param0, var3, -27224);
+              var3 = (String) (BrowserScriptBridge.call(applet, 116, "getcookies"));
+              var4 = SocialContact.split((char)separator, var3, -27224);
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&
@@ -62,14 +62,14 @@ final class IndexBufferReference {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = decompiledCaughtException;
             }
-            stackIn_17_0 = (param1.getParameter("tuhstatbut") != null);
+            stackIn_17_0 = (applet.getParameter("tuhstatbut") != null);
             return stackIn_17_0;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackIn_20_0 = var2_ref2;
-            stackIn_20_1 = new StringBuilder().append("lm.B(").append(param0).append(',');
-            if (param1 == null) {
+            stackIn_20_1 = new StringBuilder().append("lm.B(").append(separator).append(',');
+            if (applet == null) {
               stackIn_21_2 = "null";
             } else {
               stackIn_21_2 = "{...}";

@@ -96,20 +96,20 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements TextHots
         }
     }
 
-    final static void b(int param0, int param1, int param2) {
+    final static void awardAchievement(int guard, int value, int achievementId) {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var3_int = 1 << param2;
+          var3_int = 1 << achievementId;
           if ((var3_int & LoginIdentifierSupport.field_e) != 0) {
             return;
           }
           LoginIdentifierSupport.field_e = LoginIdentifierSupport.field_e | var3_int;
           OpenGlTransparentWaterEffect.field_e = OpenGlTransparentWaterEffect.field_e | var3_int;
-          IsaacPacketBuffer.field_v.addLast((IntrusiveNode) (new IntNode(param2)), (byte) 39);
+          IsaacPacketBuffer.field_v.addLast((IntrusiveNode) (new IntNode(achievementId)), (byte) 39);
           if (BufferedCacheFile.nextGameplayRandomInt((byte) -84, 10) >= 5) {
             LoginPacketWriter.field_a = LoginPacketWriter.field_a + TextureFormat.elapsedTicks;
           } else {
@@ -120,26 +120,26 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements TextHots
           } else {
             SoftwareTransform3D.field_b = SoftwareTransform3D.field_b - IntrusiveNodeHashTable.field_c;
           }
-          NodeHashTableIterator.a(param2, (byte) -82);
-          if (param0 != 24753) {
+          NodeHashTableIterator.scrambleAchievementScoreCounters(achievementId, (byte) -82);
+          if (guard != 24753) {
             return;
           }
           boolean decompiledFrameRemainder1 = true;
-          if (3 == param2) {
+          if (3 == achievementId) {
             SoftwareTransform3D.field_b = SoftwareTransform3D.field_b - DropDownWidget.field_C;
             GraphicsToolkit.field_f = GraphicsToolkit.field_f + OpenGlShaderProgram.levelIndex;
             QuickChatCommand.field_a = QuickChatCommand.field_a - MatchingTextValidator.field_i;
           } else {
-            if (param2 != 4 &&
-              param2 != 5 &&
-              6 != param2 &&
-              param2 != 7) {
-              if (param2 == 10) {
+            if (achievementId != 4 &&
+              achievementId != 5 &&
+              6 != achievementId &&
+              achievementId != 7) {
+              if (achievementId == 10) {
                 GraphicsToolkit.field_f = GraphicsToolkit.field_f + OpenGlShaderProgram.levelIndex;
               } else {
-                if ((param2 == 0 ||
-                  param2 == 1 ||
-                  2 == param2)) {
+                if ((achievementId == 0 ||
+                  achievementId == 1 ||
+                  2 == achievementId)) {
                   LoginPacketWriter.field_a = LoginPacketWriter.field_a + OpenGlShaderProgram.levelIndex;
                 }
               }
@@ -150,20 +150,20 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements TextHots
             }
           }
           if (!LegacyOpenGlSpriteTexture.field_w) {
-            OpenGlUnderwaterEffect.field_q.addLast((IntrusiveNode) (new GameProgressUpdate(param2, param1, GraphicsToolkit.field_f, LoginPacketWriter.field_a, QuickChatCommand.field_a, SoftwareTransform3D.field_b)), (byte) 39);
+            OpenGlUnderwaterEffect.field_q.addLast((IntrusiveNode) (new GameProgressUpdate(achievementId, value, GraphicsToolkit.field_f, LoginPacketWriter.field_a, QuickChatCommand.field_a, SoftwareTransform3D.field_b)), (byte) 39);
           }
           boolean decompiledFrameRemainder0 = true;
-          if (3 != param2) {
-            if (param2 != 4 &&
-              param2 != 5 &&
-              6 != param2 &&
-              param2 != 7) {
-              if (10 == param2) {
+          if (3 != achievementId) {
+            if (achievementId != 4 &&
+              achievementId != 5 &&
+              6 != achievementId &&
+              achievementId != 7) {
+              if (10 == achievementId) {
                 GraphicsToolkit.field_f = GraphicsToolkit.field_f - OpenGlShaderProgram.levelIndex;
               } else {
-                if ((param2 == 0 ||
-                  param2 == 1 ||
-                  param2 == 2)) {
+                if ((achievementId == 0 ||
+                  achievementId == 1 ||
+                  achievementId == 2)) {
                   LoginPacketWriter.field_a = LoginPacketWriter.field_a - OpenGlShaderProgram.levelIndex;
                 }
               }
@@ -191,7 +191,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements TextHots
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var3), "th.E(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ClientExceptionSupport.wrapWithContext((Throwable) ((Object) var3), "th.E(" + guard + ',' + value + ',' + achievementId + ')');
         }
     }
 
@@ -313,7 +313,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements TextHots
     public static void releaseStatics(boolean guard) {
         try {
           if (guard) {
-            UnderageAccountInfoPanel.b(82, -23, -57);
+            UnderageAccountInfoPanel.awardAchievement(82, -23, -57);
           }
           field_C = null;
           field_B = null;
