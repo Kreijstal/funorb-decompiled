@@ -23,15 +23,15 @@ abstract class ShooterComponent extends kna {
           }
           super.a(param0, param1);
           if (this.A(-1)) {
-            param1.a((byte) 124, this.field_F, 4);
+            param1.writeBits((byte) 124, this.field_F, 4);
             if (!this.B(-23309)) {
               return;
             }
             if (this.C(128)) {
-              param1.a((byte) 14, !this.field_I ? 0 : 1, 1);
+              param1.writeBits((byte) 14, !this.field_I ? 0 : 1, 1);
             }
             if (!this.field_I) {
-              param1.a((byte) 104, this.field_H, 4);
+              param1.writeBits((byte) 104, this.field_H, 4);
               return;
             }
           }
@@ -50,22 +50,22 @@ abstract class ShooterComponent extends kna {
           if (!this.A(-1)) {
             return;
           }
-          this.field_F = param2.b((byte) 44, 4);
+          this.field_F = param2.readBits((byte) 44, 4);
           if (this.B(-23309)) {
             if (this.C(128)) {
-              this.field_I = param2.b((byte) 44, 1) == 1 ? true : false;
+              this.field_I = param2.readBits((byte) 44, 1) == 1 ? true : false;
             }
             if (this.field_I) {
               return;
             }
-            this.field_H = param2.b((byte) 44, 4);
+            this.field_H = param2.readBits((byte) 44, 4);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ge.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void r(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 <= 92) {
           return;
         }

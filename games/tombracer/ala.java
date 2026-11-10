@@ -7,7 +7,7 @@ final class ala extends dfa {
 
     final void a(int param0) {
         if (param0 > -102) {
-          ala.c(88);
+          ala.releaseStatics(88);
         }
     }
 
@@ -23,7 +23,7 @@ final class ala extends dfa {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           field_f = (String) null;
           field_f = null;
@@ -132,11 +132,11 @@ final class ala extends dfa {
               }
             }
             if (hoa.field_p) {
-              ql.field_k.k(64, -2988);
+              ql.field_k.writeCipheredOpcode(64, -2988);
               hoa.field_p = false;
             }
             if (du.field_g) {
-              ql.field_k.k(10, param2 ^ -12313);
+              ql.field_k.writeCipheredOpcode(10, param2 ^ -12313);
               du.field_g = false;
             }
             if (qp.field_s) {
@@ -172,11 +172,11 @@ final class ala extends dfa {
           }
         }
         if (hoa.field_p) {
-          ql.field_k.k(64, -2988);
+          ql.field_k.writeCipheredOpcode(64, -2988);
           hoa.field_p = false;
         }
         if (du.field_g) {
-          ql.field_k.k(10, param2 ^ -12313);
+          ql.field_k.writeCipheredOpcode(10, param2 ^ -12313);
           du.field_g = false;
         }
         if (qp.field_s) {

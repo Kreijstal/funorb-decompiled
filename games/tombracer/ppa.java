@@ -52,7 +52,7 @@ final class ppa {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != -1551894744) {
           field_a = (String) null;
@@ -383,7 +383,7 @@ final class ppa {
           return;
         }
         try {
-          ql.field_k.k(99, -2988);
+          ql.field_k.writeCipheredOpcode(99, -2988);
           ql.field_k.f(-1477662136, param0.q((byte) -82));
           ql.field_k.f(-1477662136, param0.a((byte) 107));
           int var3_int = 79 / ((param1 - 9) / 53);

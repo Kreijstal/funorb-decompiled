@@ -13,7 +13,7 @@ abstract class uq implements fo {
         try {
           this.field_e = param1;
           if (param0 != 30711) {
-            uq.b(-92);
+            uq.releaseStatics(-92);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "uq.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -22,12 +22,12 @@ abstract class uq implements fo {
 
     abstract boolean c(int param0);
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_f = null;
         field_b = null;
         if (param0 <= 53) {
-          uq.b(22);
+          uq.releaseStatics(22);
         }
     }
 

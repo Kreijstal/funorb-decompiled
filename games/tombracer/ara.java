@@ -163,10 +163,10 @@ final class ara extends jea {
           var9.field_z = 1;
           var10 = 50;
           var11 = 0;
-          for (var12 = 0; ufa.field_q.length > var12; var12++) {
+          for (var12 = 0; PlayerProfile.field_q.length > var12; var12++) {
             var13 = new jea(0L, param3, s.field_b[var12]);
-            var14 = new jea(0L, param3, ufa.field_q[var12]);
-            var15 = param3.field_H.b(ufa.field_q[var12]);
+            var14 = new jea(0L, param3, PlayerProfile.field_q[var12]);
+            var15 = param3.field_H.b(PlayerProfile.field_q[var12]);
             if (var11 < var15) {
               var11 = var15;
             }
@@ -234,12 +234,12 @@ final class ara extends jea {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_yb = null;
         field_ub = null;
         field_vb = null;
         if (param0) {
-          ara.a(true);
+          ara.releaseStatics(true);
         }
     }
 

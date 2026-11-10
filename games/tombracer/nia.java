@@ -260,7 +260,7 @@ final class nia extends ci {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > -118) {
           field_m = (String) null;
         }

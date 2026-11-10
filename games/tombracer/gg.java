@@ -23,7 +23,7 @@ final class gg {
 
     final boolean a(boolean param0) {
         if (param0) {
-          gg.a((byte) 69);
+          gg.releaseStatics((byte) 69);
           if (!this.field_a) {
             return false;
           }
@@ -41,11 +41,11 @@ final class gg {
         return false;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = null;
         field_b = null;
         if (param0 >= -70) {
-          gg.a((byte) -71);
+          gg.releaseStatics((byte) -71);
           field_e = null;
           return;
         }

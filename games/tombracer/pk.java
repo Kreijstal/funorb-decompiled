@@ -265,9 +265,9 @@ final class pk extends we {
         return -1 + param1 == this.field_x ? true : false;
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
-          pk.b(false);
+          pk.releaseStatics(false);
         }
         field_z = null;
         field_s = null;

@@ -10,7 +10,7 @@ final class rr extends rj {
     int field_A;
     static String field_G;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_G = null;
         if (param0 == 0) {
           return;
@@ -32,7 +32,7 @@ final class rr extends rj {
         try {
           if (!super.a(112, param1, param2, param3, param4, param5, param6)) {
             if (param0 <= 70) {
-              rr.b(-11);
+              rr.releaseStatics(-11);
             }
             return false;
           }

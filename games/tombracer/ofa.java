@@ -23,7 +23,7 @@ abstract class ofa extends gn {
         this.field_J = this.field_m;
         this.field_G = 0;
         if (param3 > -80) {
-          ofa.e(-57);
+          ofa.releaseStatics(-57);
         }
     }
 
@@ -35,7 +35,7 @@ abstract class ofa extends gn {
 
     boolean a(byte param0) {
         if (param0 >= -53) {
-          ofa.e(69);
+          ofa.releaseStatics(69);
         }
         this.c(true);
         return super.a((byte) -92);
@@ -225,7 +225,7 @@ abstract class ofa extends gn {
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_D = null;
         if (param0 != 0) {
           field_D = (String) null;

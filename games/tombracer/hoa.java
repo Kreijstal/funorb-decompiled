@@ -32,7 +32,7 @@ final class hoa extends kl {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_n = null;
         if (param0 != 34067) {
           field_m = (String) null;

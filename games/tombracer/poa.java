@@ -4,9 +4,9 @@
 final class poa extends hga {
     static String field_p;
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 112) {
-          poa.c((byte) -30);
+          poa.releaseStatics((byte) -30);
           field_p = null;
           return;
         }

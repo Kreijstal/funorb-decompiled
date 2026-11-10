@@ -21,7 +21,7 @@ final class DoorwayComponent extends kna {
         super(param0, param1);
     }
 
-    public static void A(int param0) {
+    public static void releaseStatics(int param0) {
         field_F = null;
         field_K = null;
         field_L = null;

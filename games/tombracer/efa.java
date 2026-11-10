@@ -98,7 +98,7 @@ final class efa extends b implements mia, tsa {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_w = (Sprite[][]) null;
         if (!param0) {
           field_w = (Sprite[][]) null;
@@ -144,7 +144,7 @@ final class efa extends b implements mia, tsa {
           var3 = this.field_z;
           var4 = param0;
           if (param1 < 18) {
-            efa.c(false);
+            efa.releaseStatics(false);
           }
           ((tra) ((Object) var3)).a(false, -16719, var4);
         } catch (RuntimeException runtimeException) {

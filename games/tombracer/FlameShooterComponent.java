@@ -170,10 +170,10 @@ final class FlameShooterComponent extends ShooterComponent {
         }
     }
 
-    public static void D(int param0) {
+    public static void releaseStatics(int param0) {
         field_J = null;
         if (param0 > -89) {
-          FlameShooterComponent.D(10);
+          FlameShooterComponent.releaseStatics(10);
         }
         field_K = null;
     }

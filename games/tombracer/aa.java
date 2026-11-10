@@ -10,7 +10,7 @@ abstract class aa {
         throw new Error();
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_a = null;
         field_b = null;
         if (!param0) {

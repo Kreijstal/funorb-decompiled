@@ -82,10 +82,10 @@ final class bv extends jea {
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_xb = null;
         if (param0 != 0) {
-          bv.f(30);
+          bv.releaseStatics(30);
         }
     }
 

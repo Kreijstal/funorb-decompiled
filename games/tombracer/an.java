@@ -54,7 +54,7 @@ final class an {
         this.a(param3);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         if (param0 != -32768) {
           field_g = (oc[]) null;
@@ -63,7 +63,7 @@ final class an {
 
     private final void a(boolean param0) {
         if (!param0) {
-          an.a(-106);
+          an.releaseStatics(-106);
         }
         this.field_n = false;
     }

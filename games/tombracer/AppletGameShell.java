@@ -168,7 +168,7 @@ abstract class AppletGameShell extends GameApplet {
             IsaacCipher.a(di.a(104), -87);
           }
           if (var4 == 10) {
-            ql.field_k.k(17, -2988);
+            ql.field_k.writeCipheredOpcode(17, -2988);
           }
           if (11 == var4) {
             nt.a(di.a(41), -1978);
@@ -220,7 +220,7 @@ abstract class AppletGameShell extends GameApplet {
     }
 
     private final void a(byte param0, int param1, boolean param2) {
-        this.a(rd.field_r.field_c, wla.field_Eb.field_c, gfa.field_l.field_c, dba.field_d.field_c, 5000, param1, rm.field_d.field_c, param2);
+        this.a(rd.field_r.field_c, wla.field_Eb.field_c, gfa.field_l.field_c, C2SSubmitSettingsPacket.field_d.field_c, 5000, param1, rm.field_d.field_c, param2);
         if (param0 >= -25) {
           this.field_w = 116L;
         }
@@ -331,7 +331,7 @@ abstract class AppletGameShell extends GameApplet {
         } else {
           if (var2 != 1) {
             if (!fpa.field_c) {
-              this.a(-6738, "reconnect");
+              this.reportError(-6738, "reconnect");
             }
             dw.b(param0);
             epa.a(var2, (byte) -84, io.field_b);
@@ -373,7 +373,7 @@ abstract class AppletGameShell extends GameApplet {
         int var3 = 53 % ((param0 - 38) / 36);
     }
 
-    public static void l(int param0) {
+    public static void releaseStatics(int param0) {
         mazeGeneratorTypeNames = null;
         if (param0 != -1) {
           mazeGeneratorTypeNames = (String[]) null;
@@ -381,22 +381,22 @@ abstract class AppletGameShell extends GameApplet {
     }
 
     private final void i(int param0) {
-        vca.field_c[11] = -1;
-        vca.field_c[9] = -1;
-        vca.field_c[5] = -1;
-        vca.field_c[10] = -1;
-        vca.field_c[6] = -2;
-        vca.field_c[7] = -1;
-        vca.field_c[4] = -1;
-        vca.field_c[3] = -1;
-        vca.field_c[12] = -1;
-        vca.field_c[18] = 1;
-        vca.field_c[1] = param0;
-        vca.field_c[17] = -1;
-        vca.field_c[16] = -1;
-        vca.field_c[2] = -2;
-        vca.field_c[8] = -2;
-        vca.field_c[13] = -1;
+        S2CEventPacket.field_c[11] = -1;
+        S2CEventPacket.field_c[9] = -1;
+        S2CEventPacket.field_c[5] = -1;
+        S2CEventPacket.field_c[10] = -1;
+        S2CEventPacket.field_c[6] = -2;
+        S2CEventPacket.field_c[7] = -1;
+        S2CEventPacket.field_c[4] = -1;
+        S2CEventPacket.field_c[3] = -1;
+        S2CEventPacket.field_c[12] = -1;
+        S2CEventPacket.field_c[18] = 1;
+        S2CEventPacket.field_c[1] = param0;
+        S2CEventPacket.field_c[17] = -1;
+        S2CEventPacket.field_c[16] = -1;
+        S2CEventPacket.field_c[2] = -2;
+        S2CEventPacket.field_c[8] = -2;
+        S2CEventPacket.field_c[13] = -1;
     }
 
     final void d(byte param0) {
@@ -451,7 +451,7 @@ abstract class AppletGameShell extends GameApplet {
         String var10 = null;
         try {
           try {
-            if (!this.a((byte) 51)) {
+            if (!this.isHostAllowed((byte) 51)) {
               return;
             }
             this.field_x = this.getCodeBase().getHost();
@@ -482,13 +482,13 @@ abstract class AppletGameShell extends GameApplet {
               this.field_u = Integer.parseInt(var9);
             }
             vv.field_r = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
-            this.a(false, param2, param1, param0, this.field_v, 32, param3);
+            this.startAppletShell(false, param2, param1, param0, this.field_v, 32, param3);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
             ssa.a((String) null, (byte) 126, (Throwable) ((Object) var6_ref));
-            this.a(-6738, "crash");
+            this.reportError(-6738, "crash");
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -512,7 +512,7 @@ abstract class AppletGameShell extends GameApplet {
         }
         wr.field_o = null;
         cia.field_a = null;
-        ea.field_k = null;
+        C2SActionPacket.field_k = null;
         pm.field_d = null;
     }
 
@@ -606,20 +606,20 @@ abstract class AppletGameShell extends GameApplet {
           if (cga.field_f < 10) {
             if (Trap.field_m != 3) {
               if (Trap.field_m == 4) {
-                this.a(-6738, "js5io");
+                this.reportError(-6738, "js5io");
               } else {
                 if (Trap.field_m == 2) {
-                  this.a(-6738, "js5connect_full");
+                  this.reportError(-6738, "js5connect_full");
                 } else {
                   if (Trap.field_m != 5) {
-                    this.a(-6738, "js5connect");
+                    this.reportError(-6738, "js5connect");
                   } else {
-                    this.a(-6738, "outofdate");
+                    this.reportError(-6738, "outofdate");
                   }
                 }
               }
             } else {
-              this.a(-6738, "js5crc");
+              this.reportError(-6738, "js5crc");
             }
           } else {
             if (gda.field_c >= 10) {
@@ -682,7 +682,7 @@ abstract class AppletGameShell extends GameApplet {
               if (InvisibleTouchSwitchComponent.field_J.c("", -127)) {
                 TextResourceLoader.loadStrings((byte) -45, InvisibleTouchSwitchComponent.field_J);
                 InvisibleTouchSwitchComponent.field_J = null;
-                ea.a(-33);
+                C2SActionPacket.a(-33);
               }
             } else {
               InvisibleTouchSwitchComponent.field_J = null;
@@ -694,7 +694,7 @@ abstract class AppletGameShell extends GameApplet {
         }
         if (cga.field_f == 3 &&
           esa.a(vc.field_p, tk.field_b, -128, hm.field_n) &&
-          tt.a(vc.field_p, (byte) -53)) {
+          S2CActionPacket.a(vc.field_p, (byte) -53)) {
           ee.a(-1);
           eha.a((byte) -27);
           ura.field_b = nl.field_c;
@@ -718,7 +718,7 @@ abstract class AppletGameShell extends GameApplet {
           tk.field_b = null;
           vc.field_p = null;
           vga.a((java.applet.Applet) (this), (byte) -128);
-          ea.a(-33);
+          C2SActionPacket.a(-33);
           cga.field_f = 10;
         }
         if (10 == cga.field_f) {
@@ -732,7 +732,7 @@ abstract class AppletGameShell extends GameApplet {
         if (cga.field_f == 11) {
           if (ConstrainToFacingArcLocomotor.field_v != null && (!ConstrainToFacingArcLocomotor.field_v.b(-100) ||
             !ConstrainToFacingArcLocomotor.field_v.a(0))) {
-            ima.a(0.0f, vca.a(voa.field_s, hra.field_c, ConstrainToFacingArcLocomotor.field_v, (byte) 92), -80);
+            ima.a(0.0f, S2CEventPacket.a(voa.field_s, hra.field_c, ConstrainToFacingArcLocomotor.field_v, (byte) 92), -80);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -758,7 +758,7 @@ abstract class AppletGameShell extends GameApplet {
         if (!param1 &&
           wla.field_Cb) {
           pq.a(nma.field_l, false);
-          this.b((byte) 14);
+          this.recreateCanvas((byte) 14);
           fpa.a(nma.field_l, (byte) 75);
         }
         if (hd.field_a[8]) {

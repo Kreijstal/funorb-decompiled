@@ -171,16 +171,16 @@ final class SimpleBlockBehaviour extends Behaviour {
         super(param0, param1, param2);
         try {
           if (param0.field_E >= 4) {
-            this.field_q = param1.b((byte) 44, 1) == 1 ? true : false;
+            this.field_q = param1.readBits((byte) 44, 1) == 1 ? true : false;
           }
           if (param0.field_E >= 6) {
-            this.field_u = 1 == param1.b((byte) 44, 1) ? true : false;
+            this.field_u = 1 == param1.readBits((byte) 44, 1) ? true : false;
           }
           if (param0.field_E >= 11) {
-            this.field_t = param1.b((byte) 44, 1) == 1 ? true : false;
+            this.field_t = param1.readBits((byte) 44, 1) == 1 ? true : false;
           }
           if (param0.field_E >= 20) {
-            this.field_o = param1.b((byte) 44, 1) == 1 ? true : false;
+            this.field_o = param1.readBits((byte) 44, 1) == 1 ? true : false;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "eq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -225,11 +225,11 @@ final class SimpleBlockBehaviour extends Behaviour {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_p = null;
         field_n = null;
         if (param0 != 15602) {
-          SimpleBlockBehaviour.b(22);
+          SimpleBlockBehaviour.releaseStatics(22);
         }
     }
 
@@ -283,10 +283,10 @@ final class SimpleBlockBehaviour extends Behaviour {
     final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
-          param1.a((byte) 56, this.field_q ? 1 : 0, 1);
-          param1.a((byte) -125, this.field_u ? 1 : 0, 1);
-          param1.a((byte) 69, this.field_t ? 1 : 0, 1);
-          param1.a((byte) -125, this.field_o ? 1 : 0, 1);
+          param1.writeBits((byte) 56, this.field_q ? 1 : 0, 1);
+          param1.writeBits((byte) -125, this.field_u ? 1 : 0, 1);
+          param1.writeBits((byte) 69, this.field_t ? 1 : 0, 1);
+          param1.writeBits((byte) -125, this.field_o ? 1 : 0, 1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "eq.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

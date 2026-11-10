@@ -7,7 +7,7 @@ abstract class qe {
 
     abstract void a(int param0, int param1, kl param2);
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != -18318) {
           field_b = (String) null;

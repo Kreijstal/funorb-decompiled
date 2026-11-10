@@ -138,7 +138,7 @@ final class db extends IntrusiveNode implements fo, ffa, gma, noa, qn {
     public final void f(int param0) {
         if (param0 != -4366) {
           Projectile var3 = (Projectile) null;
-          this.a((up) null, (Projectile) null, 117);
+          this.a((Effect) null, (Projectile) null, 117);
         }
     }
 
@@ -220,7 +220,7 @@ final class db extends IntrusiveNode implements fo, ffa, gma, noa, qn {
         }
     }
 
-    public final int a(up param0, Projectile param1, int param2) {
+    public final int a(Effect param0, Projectile param1, int param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -389,15 +389,15 @@ final class db extends IntrusiveNode implements fo, ffa, gma, noa, qn {
         dg var5 = null;
         int var4 = TombRacer.field_G ? 1 : 0;
         try {
-          param1.a((byte) -1, this.field_p / 1048576, 7);
-          param1.a((byte) -8, this.field_r / 1048576, 7);
-          param1.a((byte) 74, this.field_g / 2097152, 6);
-          param1.a((byte) -7, this.field_q / 2097152, 6);
+          param1.writeBits((byte) -1, this.field_p / 1048576, 7);
+          param1.writeBits((byte) -8, this.field_r / 1048576, 7);
+          param1.writeBits((byte) 74, this.field_g / 2097152, 6);
+          param1.writeBits((byte) -7, this.field_q / 2097152, 6);
           if (!param0) {
             this.field_i = false;
           }
           if (this.field_m.field_E >= 9) {
-            param1.a((byte) -36, this.field_k.a((byte) -16), 2);
+            param1.writeBits((byte) -36, this.field_k.a((byte) -16), 2);
             var5 = (dg) (this.field_k.f(-80));
             while (var5 != null) {
               rm.field_a.a(15682, param1, var5);
@@ -431,7 +431,7 @@ final class db extends IntrusiveNode implements fo, ffa, gma, noa, qn {
         return 0;
     }
 
-    public final int a(up param0, int param1, pc param2) {
+    public final int a(Effect param0, int param1, pc param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -506,7 +506,7 @@ final class db extends IntrusiveNode implements fo, ffa, gma, noa, qn {
         this.field_m.field_u.b((ffa) (this), 7073);
     }
 
-    public static void h(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_h = null;
         field_j = null;
         field_s = null;
@@ -625,7 +625,7 @@ final class db extends IntrusiveNode implements fo, ffa, gma, noa, qn {
         return false;
     }
 
-    public final int a(up param0, int param1, int param2, int param3, int param4, int param5) {
+    public final int a(Effect param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -723,18 +723,18 @@ final class db extends IntrusiveNode implements fo, ffa, gma, noa, qn {
         try {
           this.field_m = param0;
           if (param0.field_E > 20) {
-            this.field_p = 1048576 * param1.b((byte) 44, 7);
-            this.field_r = param1.b((byte) 44, 7) * 1048576;
-            this.field_g = param1.b((byte) 44, 6) * 2097152;
-            this.field_q = param1.b((byte) 44, 6) * 2097152;
+            this.field_p = 1048576 * param1.readBits((byte) 44, 7);
+            this.field_r = param1.readBits((byte) 44, 7) * 1048576;
+            this.field_g = param1.readBits((byte) 44, 6) * 2097152;
+            this.field_q = param1.readBits((byte) 44, 6) * 2097152;
           } else {
-            this.field_p = param1.b((byte) 44, 12) << 16;
-            this.field_r = param1.b((byte) 44, 12) << 16;
-            this.field_q = param1.b((byte) 44, 10) << 16;
-            this.field_g = param1.b((byte) 44, 10) << 16;
+            this.field_p = param1.readBits((byte) 44, 12) << 16;
+            this.field_r = param1.readBits((byte) 44, 12) << 16;
+            this.field_q = param1.readBits((byte) 44, 10) << 16;
+            this.field_g = param1.readBits((byte) 44, 10) << 16;
           }
           if (8 < param0.field_E) {
-            var3_int = param1.b((byte) 44, 2);
+            var3_int = param1.readBits((byte) 44, 2);
             for (var4 = 0; var4 < var3_int; var4++) {
               var5 = rm.field_a.a(param0, param1, false);
               this.a(var5, true);

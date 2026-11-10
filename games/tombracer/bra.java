@@ -61,11 +61,11 @@ final class bra extends ofa implements tsa {
         }
     }
 
-    public static void i(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_O = null;
         field_M = null;
         if (param0 != 86) {
-          bra.i((byte) -117);
+          bra.releaseStatics((byte) -117);
         }
     }
 

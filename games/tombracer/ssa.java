@@ -35,7 +35,7 @@ final class ssa {
           var6 = TombRacer.field_G ? 1 : 0;
           try {
             if (param1 < 112) {
-              ssa.d(-5);
+              ssa.releaseStatics(-5);
             }
             var3 = "";
             if (param2 != null) {
@@ -319,7 +319,7 @@ final class ssa {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         field_d = null;
         if (param0 > -89) {

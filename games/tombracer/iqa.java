@@ -21,7 +21,7 @@ final class iqa {
         return (soa) null;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         int var1 = 13 % ((param0 - 26) / 56);
         field_c = null;

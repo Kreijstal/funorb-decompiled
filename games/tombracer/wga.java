@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wga implements bo {
+final class wga implements GamePacket {
     private int field_b;
     static int[] field_a;
 
@@ -19,7 +19,7 @@ final class wga implements bo {
     final static void a(boolean param0, int param1) {
         BitPacketBuffer var2 = ql.field_k;
         if (param0) {
-          var2.k(param1, -2988);
+          var2.writeCipheredOpcode(param1, -2988);
           var2.i(2, 0);
           var2.i(4, 0);
           var2.i(r.f(11), 0);
@@ -27,20 +27,20 @@ final class wga implements bo {
         }
     }
 
-    public final void a(BitPacketBuffer param0, byte param1) {
+    public final void decode(BitPacketBuffer param0, byte param1) {
         try {
-          param0.h((byte) 125);
+          param0.beginBitAccess((byte) 125);
           if (param1 != -19) {
-            wga.a(false);
+            wga.releaseStatics(false);
           }
-          this.field_b = param0.b((byte) 44, 5);
-          param0.i((byte) 98);
+          this.field_b = param0.readBits((byte) 44, 5);
+          param0.endBitAccess((byte) 98);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wga.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           field_a = (int[]) null;
           field_a = null;
@@ -49,11 +49,11 @@ final class wga implements bo {
         field_a = null;
     }
 
-    public final void a(int param0, BitPacketBuffer param1) {
+    public final void encode(int param0, BitPacketBuffer param1) {
         try {
-          param1.i(8);
-          param1.a((byte) 31, this.field_b, 5);
-          param1.k(param0 ^ -1826190742);
+          param1.beginBitWrite(8);
+          param1.writeBits((byte) 31, this.field_b, 5);
+          param1.endBitWrite(param0 ^ -1826190742);
           if (param0 != 200) {
             this.field_b = 49;
           }

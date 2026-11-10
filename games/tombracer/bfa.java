@@ -8,7 +8,7 @@ final class bfa {
     boolean field_a;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 17049) {
           field_c = null;
           field_b = null;
@@ -23,7 +23,7 @@ final class bfa {
 
     final boolean a(boolean param0) {
         if (param0) {
-          bfa.a(-40);
+          bfa.releaseStatics(-40);
           return ((Boolean) (this.field_d)).booleanValue();
         }
         return ((Boolean) (this.field_d)).booleanValue();

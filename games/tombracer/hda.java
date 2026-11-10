@@ -6,13 +6,13 @@ final class hda extends tc {
 
     final pl a(byte param0) {
         if (param0 != 113) {
-          hda.b((byte) -6);
+          hda.releaseStatics((byte) -6);
           return fq.field_c;
         }
         return fq.field_c;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_h = null;
         if (param0 > -127) {
           field_h = (String) null;
@@ -32,7 +32,7 @@ final class hda extends tc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 1303) {
-            hda.b((byte) 32);
+            hda.releaseStatics((byte) 32);
           }
           stackIn_3_0 = new sc(param2, param0 * AudioOutput.field_d / 1000);
           return stackIn_3_0;

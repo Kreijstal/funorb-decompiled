@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cm implements bo {
+final class cm implements GamePacket {
     private int field_b;
     static qg[] field_a;
 
-    public final void a(BitPacketBuffer param0, byte param1) {
+    public final void decode(BitPacketBuffer param0, byte param1) {
         try {
           this.field_b = param0.h(255);
           if (param1 != -19) {
@@ -23,7 +23,7 @@ final class cm implements bo {
         }
     }
 
-    public final void a(int param0, BitPacketBuffer param1) {
+    public final void encode(int param0, BitPacketBuffer param1) {
         if (param0 != 200) {
           return;
         }
@@ -63,7 +63,7 @@ final class cm implements bo {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_a = null;
         if (!param0) {
           field_a = (qg[]) null;
@@ -368,8 +368,8 @@ final class cm implements bo {
                 0 <= var9) {
                 if (lga.field_z != null &&
                   lga.field_z[var7] != null &&
-                  0 < (~mi.field_g & lga.field_z[var7][var9])) {
-                  var15 = b.a(~mi.field_g & lga.field_z[var7][var9], (byte) -115);
+                  0 < (~ConsoleToken.field_g & lga.field_z[var7][var9])) {
+                  var15 = b.a(~ConsoleToken.field_g & lga.field_z[var7][var9], (byte) -115);
                   var14 = 1;
                 }
                 if (PowerUpItemBehaviour.field_u != null &&
@@ -571,7 +571,7 @@ final class cm implements bo {
                   var22 = null;
                   var23 = 0;
                   if (mm.field_g) {
-                    var22 = "</col>" + mi.field_j + "<col=A00000>";
+                    var22 = "</col>" + ConsoleToken.field_j + "<col=A00000>";
                     var25Lifetime1 = var22;
                     var22 = var25Lifetime1;
                     var25Lifetime1Lifetime1 = var22;

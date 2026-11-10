@@ -6,7 +6,7 @@ final class qg {
     static g[] field_a;
     g[] field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -1485) {
           return;
         }

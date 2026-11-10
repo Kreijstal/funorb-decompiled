@@ -230,7 +230,7 @@ final class no extends me {
         if (!lf.a(param0, param1, 128)) {
           return false;
         }
-        if (bqa.a(540800, param1, param0) | ((param1 & param2) != 0 ? true : false) | go.d(param0, param1, 26205)) {
+        if (S2CNewRoomPacket.a(540800, param1, param0) | ((param1 & param2) != 0 ? true : false) | go.d(param0, param1, 26205)) {
           return true;
         }
         return (((8192 & param1) != 0 ? true : false) | kaa.a(param0, param1, false) | rg.e(param0, param2 ^ -36949, param1)) & (0 == (55 & param0) ? true : false);

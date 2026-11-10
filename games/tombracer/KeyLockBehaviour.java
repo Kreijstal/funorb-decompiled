@@ -195,10 +195,10 @@ final class KeyLockBehaviour extends Behaviour implements ut {
           if (16 < param0.field_E) {
             this.field_p = 1;
           } else {
-            this.field_p = param1.b((byte) 44, 3);
+            this.field_p = param1.readBits((byte) 44, 3);
           }
           this.field_q = new jma(15, param0, param1);
-          this.field_s = 1 == param1.b((byte) 44, 1) ? true : false;
+          this.field_s = 1 == param1.readBits((byte) 44, 1) ? true : false;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -216,7 +216,7 @@ final class KeyLockBehaviour extends Behaviour implements ut {
         try {
           super.a(param0, param1);
           this.field_q.a(this.h((byte) 111), (byte) 108, param1);
-          param1.a((byte) -127, this.field_s ? 1 : 0, 1);
+          param1.writeBits((byte) -127, this.field_s ? 1 : 0, 1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sm.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

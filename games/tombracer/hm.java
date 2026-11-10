@@ -37,7 +37,7 @@ final class hm extends tfa implements gf {
         }
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_n = null;
         if (param0 != 4) {
           return;
@@ -154,7 +154,7 @@ final class hm extends tfa implements gf {
         dr.field_a = null;
         ij.field_X = null;
         fa.field_a = null;
-        ufa.field_r = null;
+        PlayerProfile.field_r = null;
         lva.field_m = null;
         WhiteLightShooterComponent.field_K = null;
         aq.field_a = null;
@@ -173,7 +173,7 @@ final class hm extends tfa implements gf {
     }
 
     hm(kda param0, int param1, int param2, boolean param3, int[] param4, int param5, int param6) {
-        super(param0, 3553, gpa.field_a, una.field_g, param1 * param2, param3);
+        super(param0, 3553, SwitchableId.field_a, una.field_g, param1 * param2, param3);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -410,7 +410,7 @@ final class hm extends tfa implements gf {
               param8 = param8 - param3;
               param7 = param7 - param4;
               if (param1 != -15) {
-                hm.g((byte) 96);
+                hm.releaseStatics((byte) 96);
               }
               param6 = param6 - param3;
               if (var11 != 0) {
@@ -453,7 +453,7 @@ final class hm extends tfa implements gf {
               param8 = param8 - param3;
               param7 = param7 - param4;
               if (param1 != -15) {
-                hm.g((byte) 96);
+                hm.releaseStatics((byte) 96);
               }
               param6 = param6 - param3;
               if (var11Lifetime4 != 0) {
@@ -496,7 +496,7 @@ final class hm extends tfa implements gf {
               param8 = param8 - param3;
               param7 = param7 - param4;
               if (param1 != -15) {
-                hm.g((byte) 96);
+                hm.releaseStatics((byte) 96);
               }
               param6 = param6 - param3;
               if (var11Lifetime5 != 0) {
@@ -539,7 +539,7 @@ final class hm extends tfa implements gf {
               param8 = param8 - param3;
               param7 = param7 - param4;
               if (param1 != -15) {
-                hm.g((byte) 96);
+                hm.releaseStatics((byte) 96);
               }
               param6 = param6 - param3;
               if (var11Lifetime6 != 0) {
@@ -582,7 +582,7 @@ final class hm extends tfa implements gf {
               param8 = param8 - param3;
               param7 = param7 - param4;
               if (param1 != -15) {
-                hm.g((byte) 96);
+                hm.releaseStatics((byte) 96);
               }
               param6 = param6 - param3;
               if (var11Lifetime7 != 0) {
@@ -625,7 +625,7 @@ final class hm extends tfa implements gf {
               param8 = param8 - param3;
               param7 = param7 - param4;
               if (param1 != -15) {
-                hm.g((byte) 96);
+                hm.releaseStatics((byte) 96);
               }
               param6 = param6 - param3;
               if (var11Lifetime8 != 0) {
@@ -668,7 +668,7 @@ final class hm extends tfa implements gf {
               param8 = param8 - param3;
               param7 = param7 - param4;
               if (param1 != -15) {
-                hm.g((byte) 96);
+                hm.releaseStatics((byte) 96);
               }
               param6 = param6 - param3;
               if (var11Lifetime9 != 0) {
@@ -713,7 +713,7 @@ final class hm extends tfa implements gf {
             param8 = param8 - param3;
             param7 = param7 - param4;
             if (param1 != -15) {
-              hm.g((byte) 96);
+              hm.releaseStatics((byte) 96);
             }
             param6 = param6 - param3;
             if (var11Lifetime10 != 0) {
@@ -766,7 +766,7 @@ final class hm extends tfa implements gf {
               param8 = param8 - param3;
               param7 = param7 - param4;
               if (param1 != -15) {
-                hm.g((byte) 96);
+                hm.releaseStatics((byte) 96);
               }
               param6 = param6 - param3;
               if (var11Lifetime1 != 0) {
@@ -809,7 +809,7 @@ final class hm extends tfa implements gf {
               param8 = param8 - param3;
               param7 = param7 - param4;
               if (param1 != -15) {
-                hm.g((byte) 96);
+                hm.releaseStatics((byte) 96);
               }
               param6 = param6 - param3;
               if (var11Lifetime1Lifetime1 != 0) {
@@ -852,7 +852,7 @@ final class hm extends tfa implements gf {
               param8 = param8 - param3;
               param7 = param7 - param4;
               if (param1 != -15) {
-                hm.g((byte) 96);
+                hm.releaseStatics((byte) 96);
               }
               param6 = param6 - param3;
               if (var11Lifetime1Lifetime2 != 0) {
@@ -895,7 +895,7 @@ final class hm extends tfa implements gf {
               param8 = param8 - param3;
               param7 = param7 - param4;
               if (param1 != -15) {
-                hm.g((byte) 96);
+                hm.releaseStatics((byte) 96);
               }
               param6 = param6 - param3;
               if (var11Lifetime1Lifetime3 != 0) {
@@ -938,7 +938,7 @@ final class hm extends tfa implements gf {
               param8 = param8 - param3;
               param7 = param7 - param4;
               if (param1 != -15) {
-                hm.g((byte) 96);
+                hm.releaseStatics((byte) 96);
               }
               param6 = param6 - param3;
               if (var11Lifetime1Lifetime4 != 0) {
@@ -981,7 +981,7 @@ final class hm extends tfa implements gf {
               param8 = param8 - param3;
               param7 = param7 - param4;
               if (param1 != -15) {
-                hm.g((byte) 96);
+                hm.releaseStatics((byte) 96);
               }
               param6 = param6 - param3;
               if (var11Lifetime1Lifetime5 != 0) {
@@ -1024,7 +1024,7 @@ final class hm extends tfa implements gf {
               param8 = param8 - param3;
               param7 = param7 - param4;
               if (param1 != -15) {
-                hm.g((byte) 96);
+                hm.releaseStatics((byte) 96);
               }
               param6 = param6 - param3;
               if (var11Lifetime1Lifetime6 != 0) {
@@ -1069,7 +1069,7 @@ final class hm extends tfa implements gf {
             param8 = param8 - param3;
             param7 = param7 - param4;
             if (param1 != -15) {
-              hm.g((byte) 96);
+              hm.releaseStatics((byte) 96);
             }
             param6 = param6 - param3;
             if (var11Lifetime1Lifetime7 != 0) {
@@ -1139,7 +1139,7 @@ final class hm extends tfa implements gf {
               param8 = param8 - param3;
               param7 = param7 - param4;
               if (param1 != -15) {
-                hm.g((byte) 96);
+                hm.releaseStatics((byte) 96);
               }
               param6 = param6 - param3;
               if (var11Lifetime2 != 0) {
@@ -1201,7 +1201,7 @@ final class hm extends tfa implements gf {
         param8 = param8 - param3;
         param7 = param7 - param4;
         if (param1 != -15) {
-          hm.g((byte) 96);
+          hm.releaseStatics((byte) 96);
         }
         param6 = param6 - param3;
         if (var11Lifetime3 != 0) {
@@ -1229,7 +1229,7 @@ final class hm extends tfa implements gf {
 
     public final float a(int param0, float param1) {
         if (param0 <= 60) {
-          hm.g((byte) -22);
+          hm.releaseStatics((byte) -22);
           return param1 / (float)this.field_l;
         }
         return param1 / (float)this.field_l;

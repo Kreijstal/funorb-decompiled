@@ -14,7 +14,7 @@ interface ffa {
 
     public abstract int c(int param0);
 
-    public abstract int a(up param0, int param1, int param2, int param3, int param4, int param5);
+    public abstract int a(Effect param0, int param1, int param2, int param3, int param4, int param5);
 
     public abstract boolean a(gma param0, int param1);
 
@@ -22,13 +22,13 @@ interface ffa {
 
     public abstract boolean a(int param0);
 
-    public abstract int a(up param0, Projectile param1, int param2);
+    public abstract int a(Effect param0, Projectile param1, int param2);
 
     public abstract int a(boolean param0, int param1, int param2, int param3, int param4, int param5);
 
     public abstract int a(byte param0);
 
-    public abstract int a(up param0, int param1, pc param2);
+    public abstract int a(Effect param0, int param1, pc param2);
 
     public abstract int b(int param0);
 

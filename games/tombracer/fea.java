@@ -769,14 +769,14 @@ final class fea {
             } else {
               kda.field_pd = false;
             }
-            mi.field_f = tqa.field_g;
+            ConsoleToken.field_f = tqa.field_g;
             vf.field_f = SimpleBlockBehaviour.field_r;
           }
           if (!kda.field_pd &&
             bda.field_m > fr.field_c &&
             qma.field_c) {
             vf.field_f = SimpleBlockBehaviour.field_r;
-            mi.field_f = tqa.field_g;
+            ConsoleToken.field_f = tqa.field_g;
             fr.field_c = 0;
           }
           MazeComponent.field_F = param1;

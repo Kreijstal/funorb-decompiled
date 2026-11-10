@@ -97,7 +97,7 @@ final class ub {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_d = null;
         field_i = null;
         field_g = null;

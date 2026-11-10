@@ -31,15 +31,15 @@ final class mg {
         int var3_int = 0;
         int var4 = TombRacer.field_G ? 1 : 0;
         try {
-          param1.a((byte) 86, this.field_i.length, 4);
+          param1.writeBits((byte) 86, this.field_i.length, 4);
           for (var3_int = 0; this.field_i.length > var3_int; var3_int++) {
-            param1.a((byte) -25, this.field_i[var3_int], 12);
+            param1.writeBits((byte) -25, this.field_i[var3_int], 12);
           }
           if (param0 != 15637) {
             BitPacketBuffer var5 = (BitPacketBuffer) null;
             this.a(-109, (BitPacketBuffer) null);
           }
-          param1.a((byte) -36, this.field_c, 12);
+          param1.writeBits((byte) -36, this.field_c, 12);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "mg.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -56,7 +56,7 @@ final class mg {
         this(param0, 0);
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         field_k = null;
         field_b = null;
@@ -169,7 +169,7 @@ final class mg {
 
     final int b(int param0) {
         if (param0 != 12) {
-          mg.e(6);
+          mg.releaseStatics(6);
         }
         return this.field_f;
     }
@@ -191,18 +191,18 @@ final class mg {
         int var4 = 0;
         this.field_f = -1;
         try {
-          var3_int = param1.b((byte) 44, 4);
+          var3_int = param1.readBits((byte) 44, 4);
           this.field_i = new int[var3_int];
           if (param0 <= 9) {
             for (var4 = 0; var3_int > var4; var4++) {
-              this.field_i[var4] = param1.b((byte) 44, 8);
+              this.field_i[var4] = param1.readBits((byte) 44, 8);
             }
-            this.field_c = param1.b((byte) 44, 8);
+            this.field_c = param1.readBits((byte) 44, 8);
           } else {
             for (var4 = 0; var4 < var3_int; var4++) {
-              this.field_i[var4] = param1.b((byte) 44, 12);
+              this.field_i[var4] = param1.readBits((byte) 44, 12);
             }
-            this.field_c = param1.b((byte) 44, 12);
+            this.field_c = param1.readBits((byte) 44, 12);
           }
           this.a(false, this.field_c);
         } catch (RuntimeException runtimeException) {

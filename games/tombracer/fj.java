@@ -7,7 +7,7 @@ final class fj {
     static String field_b;
     static wla field_c;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_a = null;
         field_c = null;

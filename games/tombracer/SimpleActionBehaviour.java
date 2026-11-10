@@ -8,7 +8,7 @@ final class SimpleActionBehaviour extends Behaviour {
     SimpleActionBehaviour(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
-          this.field_o = param1.b((byte) 44, 4);
+          this.field_o = param1.readBits((byte) 44, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -54,7 +54,7 @@ final class SimpleActionBehaviour extends Behaviour {
     final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
-          param1.a((byte) -125, this.field_o, 4);
+          param1.writeBits((byte) -125, this.field_o, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wn.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -73,7 +73,7 @@ final class SimpleActionBehaviour extends Behaviour {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < 120) {
           return;
         }

@@ -123,7 +123,7 @@ final class VortexBehaviour extends Behaviour {
         }
     }
 
-    public static void d(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_u = null;
         field_o = null;
         field_t = null;
@@ -142,9 +142,9 @@ final class VortexBehaviour extends Behaviour {
     final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
-          param1.a((byte) 72, this.field_q ? 1 : 0, 1);
-          param1.a((byte) 32, this.field_r, 4);
-          param1.a((byte) -127, this.field_p, 4);
+          param1.writeBits((byte) 72, this.field_q ? 1 : 0, 1);
+          param1.writeBits((byte) 32, this.field_r, 4);
+          param1.writeBits((byte) -127, this.field_p, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "bn.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -163,9 +163,9 @@ final class VortexBehaviour extends Behaviour {
         this.field_q = true;
         this.field_p = 1;
         try {
-          this.field_q = param1.b((byte) 44, 1) == 1 ? true : false;
-          this.field_r = param1.b((byte) 44, 4);
-          this.field_p = param1.b((byte) 44, 4);
+          this.field_q = param1.readBits((byte) 44, 1) == 1 ? true : false;
+          this.field_r = param1.readBits((byte) 44, 4);
+          this.field_p = param1.readBits((byte) 44, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "bn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

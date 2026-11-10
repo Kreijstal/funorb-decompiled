@@ -11,7 +11,7 @@ final class fca {
         NodeHashTableIterator.a(-1, param0);
         tc.a(param0, 0);
         if (param1 != 7) {
-          fca.a(-109);
+          fca.releaseStatics(-109);
         }
     }
 
@@ -20,7 +20,7 @@ final class fca {
         super.finalize();
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         int var1 = 24 % ((-47 - param0) / 44);
         field_b = null;

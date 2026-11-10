@@ -330,7 +330,7 @@ final class sw extends jea {
             return stackIn_3_0;
           }
           for (var2_int = this.field_ub - 1; var2_int > 0; var2_int--) {
-            if (!up.a(this.field_wb.charAt(var2_int - 1), true)) {
+            if (!Effect.a(this.field_wb.charAt(var2_int - 1), true)) {
               continue;
             }
             break;
@@ -838,7 +838,7 @@ final class sw extends jea {
             return stackIn_5_0;
           }
           for (var3 = 1 + this.field_ub; var2_int > var3; var3++) {
-            if (!up.a(this.field_wb.charAt(var3 - 1), true)) {
+            if (!Effect.a(this.field_wb.charAt(var3 - 1), true)) {
               continue;
             }
             break;

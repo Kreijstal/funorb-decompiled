@@ -17,7 +17,7 @@ final class rq {
     int field_i;
     private static short[] field_g;
 
-    public static void a() {
+    public static void releaseStatics() {
         field_c = null;
         field_h = null;
         field_n = null;

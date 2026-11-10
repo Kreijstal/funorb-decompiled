@@ -21,11 +21,11 @@ final class gia extends ci {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_o = null;
         field_q = null;
         if (param0 != -26382) {
-          gia.c(102);
+          gia.releaseStatics(102);
         }
     }
 

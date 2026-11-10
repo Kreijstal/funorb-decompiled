@@ -151,7 +151,7 @@ final class kua extends IntrusiveNode implements fo {
         var5 = TombRacer.field_G ? 1 : 0;
         try {
           if (param1 != -6962) {
-            kua.a((byte) 94);
+            kua.releaseStatics((byte) 94);
           }
           var2_int = param0.length();
           if (var2_int == 0) {
@@ -192,7 +192,7 @@ final class kua extends IntrusiveNode implements fo {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_i = null;
         int var1 = -102 / ((-79 - param0) / 34);
     }

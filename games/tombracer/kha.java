@@ -42,7 +42,7 @@ final class kha {
         return -1 + this.field_c.length;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != -1) {
           field_a = (String) null;

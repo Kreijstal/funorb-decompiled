@@ -6,7 +6,7 @@ final class roa {
     private int field_i;
     int field_t;
     boolean field_c;
-    up field_f;
+    Effect field_f;
     int field_h;
     static float field_u;
     int field_p;
@@ -47,7 +47,7 @@ final class roa {
     final void a(BitPacketBuffer param0, byte param1) {
         boolean discarded$0 = false;
         try {
-          param0.a((byte) -127, this.field_r, 5);
+          param0.writeBits((byte) -127, this.field_r, 5);
           if (param1 <= 3) {
             discarded$0 = this.a((byte) 22);
           }
@@ -63,7 +63,7 @@ final class roa {
         this.field_v = param0;
     }
 
-    final up b(byte param0) {
+    final Effect b(byte param0) {
         if (param0 != -16) {
           this.a(6, true);
           return this.field_f;
@@ -95,7 +95,7 @@ final class roa {
 
     final void b(int param0, boolean param1) {
         if (param1) {
-          this.field_f = (up) null;
+          this.field_f = (Effect) null;
           this.field_v = param0;
           return;
         }
@@ -104,7 +104,7 @@ final class roa {
 
     final boolean a(int param0) {
         if (param0 != 12111) {
-          this.field_f = (up) null;
+          this.field_f = (Effect) null;
           if (!this.a((byte) 125)) {
             return this.field_q > 0 ? true : false;
           }
@@ -193,7 +193,7 @@ final class roa {
                   var23.b(7, 128, var24);
                 }
               }
-              var23.a(-126, new up(param2, this.field_f));
+              var23.a(-126, new Effect(param2, this.field_f));
               if (this.field_i != -1) {
                 var23.a(this.field_i, -38);
               }

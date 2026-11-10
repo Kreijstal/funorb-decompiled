@@ -15,18 +15,18 @@ final class vs extends ofa {
     final void f(int param0) {
         this.field_L.field_D = false;
         if (param0 != 12936) {
-          vs.i((byte) 50);
+          vs.releaseStatics((byte) 50);
           this.field_Q = true;
           return;
         }
         this.field_Q = true;
     }
 
-    public static void i(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_R = null;
         field_T = null;
         if (param0 != -77) {
-          vs.i((byte) -111);
+          vs.releaseStatics((byte) -111);
           field_P = null;
           return;
         }

@@ -89,9 +89,9 @@ final class af {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 <= 72) {
-          af.a(-28);
+          af.releaseStatics(-28);
           field_g = null;
           field_b = null;
           return;

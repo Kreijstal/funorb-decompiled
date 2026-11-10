@@ -8,7 +8,7 @@ final class sl extends vw {
     static String field_d;
     static String field_g;
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         if (param0 != 0) {
           return;
@@ -90,7 +90,7 @@ final class sl extends vw {
 
     final void a(byte param0, int param1, int param2) {
         if (param0 != 55) {
-          sl.d(125);
+          sl.releaseStatics(125);
         }
     }
 

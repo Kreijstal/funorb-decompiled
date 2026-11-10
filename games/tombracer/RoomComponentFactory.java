@@ -538,7 +538,7 @@ final class RoomComponentFactory implements RoomComponentCodec {
         int var7 = 0;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
-          var5_int = param0.b((byte) 44, 10);
+          var5_int = param0.readBits((byte) 44, 10);
           if (param2 != -7) {
             field_a = (float[]) null;
           }
@@ -860,7 +860,7 @@ final class RoomComponentFactory implements RoomComponentCodec {
 
     public final void writeComponent(RoomComponent param0, int param1, BitPacketBuffer param2) {
         try {
-          param2.a((byte) -127, param0.r(12), 10);
+          param2.writeBits((byte) -127, param0.r(12), 10);
           param0.a(false, param2);
           if (param1 != -16097) {
             field_a = (float[]) null;

@@ -122,9 +122,9 @@ final class ck {
           var15.field_z = 1;
           lva.field_t = new jea(0L, kua.field_i);
           lva.field_t.field_z = 1;
-          st.field_j = new jea(0L, ssa.field_g, tt.field_g.toUpperCase());
+          st.field_j = new jea(0L, ssa.field_g, S2CActionPacket.field_g.toUpperCase());
           ap.field_a = new jea(0L, uda.field_s, tha.field_B.toUpperCase());
-          db.field_s = new jea(0L, cfa.field_c);
+          db.field_s = new jea(0L, CommonChooseReward.field_c);
           gta.field_b = new jea(0L, ooa.field_f, oo.field_m);
           iia.field_r = new jea(0L, cs.field_a, ria.field_r);
           RotateLocomotor.field_o = new jea(0L, cs.field_a, du.field_a);
@@ -190,7 +190,7 @@ final class ck {
           lk.field_l.b(-124, tn.field_n);
           bc.field_b = new jea(0L, ssa.field_g, jja.field_k.toUpperCase());
           wf.field_g = new jea(0L, uda.field_s);
-          dba.field_g = new jea(0L, cfa.field_c);
+          C2SSubmitSettingsPacket.field_g = new jea(0L, CommonChooseReward.field_c);
           qna.field_b = new jea(0L, KeyLockBehaviour.field_r, DoorwayComponent.field_G.toUpperCase());
           SimpleConditionBehaviour.field_p = new jea[param0 + 4];
           bf.field_b = new tv[4 + param0][];
@@ -208,7 +208,7 @@ final class ck {
             } else {
               decompiledFrameRemainder0 = !(2 > SafeZoneBehaviour.field_u.length);
               if (decompiledFrameRemainder0) {
-                SimpleConditionBehaviour.field_p[1] = new jea(0L, una.field_j, mi.field_j);
+                SimpleConditionBehaviour.field_p[1] = new jea(0L, una.field_j, ConsoleToken.field_j);
                 array$0 = new tv[1 + SafeZoneBehaviour.field_u.length];
                 bf.field_b[1] = array$0;
                 bf.field_b[1][0] = new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, (Sprite) null, aa.field_b);
@@ -326,8 +326,8 @@ final class ck {
           ((jea) (var17)).field_z = 1;
           dka.field_b = new jea(0L, (jea) null);
           dka.field_b.b(param11 ^ -25373, wf.field_g);
-          dka.field_b.b(-128, dba.field_g);
-          dba.field_g.b(-122, qna.field_b);
+          dka.field_b.b(-128, C2SSubmitSettingsPacket.field_g);
+          C2SSubmitSettingsPacket.field_g.b(-122, qna.field_b);
           var18Lifetime1 = 0;
           while (var18Lifetime1 < 4 + param0) {
             if (var21 != 0) {
@@ -338,11 +338,11 @@ final class ck {
               var21 != 0) && (var18Lifetime1 != 3 ||
               !(MirrorMoverLocomotor.field_r <= 1) ||
               var21 != 0)) {
-              dba.field_g.b(-123, SimpleConditionBehaviour.field_p[var18Lifetime1]);
+              C2SSubmitSettingsPacket.field_g.b(-123, SimpleConditionBehaviour.field_p[var18Lifetime1]);
               var19 = 0;
               while (!(var19 >= bf.field_b[var18Lifetime1].length)) {
                 if (null != bf.field_b[var18Lifetime1][var19]) {
-                  dba.field_g.b(-124, bf.field_b[var18Lifetime1][var19]);
+                  C2SSubmitSettingsPacket.field_g.b(-124, bf.field_b[var18Lifetime1][var19]);
                 }
                 var19++;
               }
@@ -352,7 +352,7 @@ final class ck {
           dka.field_b.b(-128, pk.field_z);
           dka.field_b.b(-125, hw.field_a);
           dka.field_b.b(-123, dl.field_t);
-          vca.field_e = new jea(0L, oba.field_f, eu.field_b.toUpperCase());
+          S2CEventPacket.field_e = new jea(0L, oba.field_f, eu.field_b.toUpperCase());
           Trap.field_q = new jea(0L, dp.field_i, ej.field_b.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

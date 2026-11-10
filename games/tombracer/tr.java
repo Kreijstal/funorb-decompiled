@@ -11,7 +11,7 @@ final class tr {
     private dd field_b;
     private cn field_a;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         field_d = null;
         if (param0 >= -119) {

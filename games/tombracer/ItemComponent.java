@@ -63,7 +63,7 @@ abstract class ItemComponent extends kna {
         }
     }
 
-    public static void r(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_F = null;
         int var1 = 92 / ((-13 - param0) / 58);
     }

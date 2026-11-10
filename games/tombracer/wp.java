@@ -6,7 +6,7 @@ final class wp {
     static int field_b;
     static int[] field_c;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         field_a = null;
         if (param0 <= 60) {

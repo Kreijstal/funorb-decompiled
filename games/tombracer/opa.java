@@ -8,17 +8,17 @@ final class opa extends qra {
     private boolean field_p;
     private boolean field_q;
     private boolean field_s;
-    static mi[] field_n;
+    static ConsoleToken[] field_n;
 
     final static void a(int param0, String param1, int param2, int param3, String param4, int param5) {
         BitPacketBuffer var8 = null;
         int var7 = 0;
         try {
           var8 = ql.field_k;
-          var8.k(param2, param3 - 35359);
+          var8.writeCipheredOpcode(param2, param3 - 35359);
           var8.position = var8.position + 1;
           if (param3 != 32371) {
-            field_n = (mi[]) null;
+            field_n = (ConsoleToken[]) null;
           }
           var7 = var8.position;
           var8.i(param0, 0);
@@ -44,10 +44,10 @@ final class opa extends qra {
         return false;
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_n = null;
         if (param0 < 73) {
-          field_n = (mi[]) null;
+          field_n = (ConsoleToken[]) null;
         }
     }
 
@@ -574,16 +574,16 @@ final class opa extends qra {
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        mi[] var2 = null;
+        ConsoleToken[] var2 = null;
         RuntimeException var2_ref = null;
         StringBuilder var3 = null;
         int var4 = 0;
-        mi var6 = null;
+        ConsoleToken var6 = null;
         int var7 = 0;
         int var8 = 0;
         String var9 = null;
         int var10 = 0;
-        mi[] var11 = null;
+        ConsoleToken[] var11 = null;
         var10 = TombRacer.field_G ? 1 : 0;
         try {
           var11 = LaserShooterComponent.a((byte) 126, param0);
@@ -600,15 +600,15 @@ final class opa extends qra {
             }
             var8 = stackIn_6_0;
             var9 = param0.substring(var7, var8);
-            if (var6.field_p == ma.field_e) {
+            if (var6.kind == ma.field_e) {
               discarded$0 = var3.append("<col=66ffff>").append(var9).append("</col>");
             } else {
-              if (nl.field_d == var6.field_p) {
+              if (nl.field_d == var6.kind) {
                 discarded$1 = var3.append("<col=33bbff>").append(var9).append("</col>");
               } else {
-                if (var6.field_p != tr.field_f) {
-                  if (dc.field_o != var6.field_p) {
-                    if (var6.field_p != PressureSwitchBehaviour.field_r) {
+                if (var6.kind != tr.field_f) {
+                  if (dc.field_o != var6.kind) {
+                    if (var6.kind != PressureSwitchBehaviour.field_r) {
                       discarded$2 = var3.append(var9);
                     } else {
                       discarded$3 = var3.append("<col=33ffaa>").append(var9).append("</col>");

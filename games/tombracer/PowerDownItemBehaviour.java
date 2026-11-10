@@ -6,7 +6,7 @@ final class PowerDownItemBehaviour extends ItemBehaviour {
     private gfa field_t;
 
     final static void a(int param0, int param1, byte param2, boolean param3, long param4, String param5) {
-        ql.field_k.k(param1, -2988);
+        ql.field_k.writeCipheredOpcode(param1, -2988);
         ql.field_k.position = ql.field_k.position + 1;
         int var7_int = ql.field_k.position;
         ql.field_k.a(1736565456, param4);

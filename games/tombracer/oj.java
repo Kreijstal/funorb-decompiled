@@ -240,7 +240,7 @@ final class oj extends jea {
         return false;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           field_vb = (String) null;
         }

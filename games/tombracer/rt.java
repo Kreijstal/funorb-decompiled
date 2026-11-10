@@ -115,7 +115,7 @@ class rt extends kl {
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -1) {
           field_n = (String) null;
           field_n = null;

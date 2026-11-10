@@ -16,7 +16,7 @@ final class PlatformComponent extends kna {
     final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
-          param1.a((byte) -128, this.field_G, 4);
+          param1.writeBits((byte) -128, this.field_G, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ln.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -90,7 +90,7 @@ final class PlatformComponent extends kna {
     PlatformComponent(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
         try {
-          this.field_G = param2.b((byte) 44, 4);
+          this.field_G = param2.readBits((byte) 44, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ln.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

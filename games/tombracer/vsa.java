@@ -59,7 +59,7 @@ final class vsa extends dg {
         int var24Lifetime1;
         var25 = TombRacer.field_G ? 1 : 0;
         try {
-          ufa.a(-76, param1);
+          PlayerProfile.a(-76, param1);
           var7_int = param2;
           var8 = -param5 + param1;
           if (var8 < 0) {
@@ -352,7 +352,7 @@ final class vsa extends dg {
     final void a(int param0, Room param1, BitPacketBuffer param2) {
         try {
           super.a(120, param1, param2);
-          this.field_t = param2.b((byte) 44, 4);
+          this.field_t = param2.readBits((byte) 44, 4);
           if (param0 < 119) {
             this.field_t = -32;
           }
@@ -395,7 +395,7 @@ final class vsa extends dg {
         try {
           super.a((byte) -59, param1);
           int var3_int = -50 / ((param0 + 8) / 40);
-          param1.a((byte) 18, this.field_t, 4);
+          param1.writeBits((byte) 18, this.field_t, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vsa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -584,7 +584,7 @@ final class vsa extends dg {
         }
     }
 
-    public static void q(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= -121) {
           return;
         }

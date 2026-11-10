@@ -110,7 +110,7 @@ final class cc extends IntrusiveNode {
             return true;
           }
           if (var8Lifetime1 * var8Lifetime1 <= var9 * var9) {
-            if (mi.field_k != param1 &&
+            if (ConsoleToken.field_k != param1 &&
               param1 != 98 ||
               0 <= var9) {
               if (fp.field_a != param1 &&
@@ -188,9 +188,9 @@ final class cc extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
-          cc.a(62);
+          cc.releaseStatics(62);
         }
         field_l = null;
     }

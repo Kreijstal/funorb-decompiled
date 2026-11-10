@@ -61,7 +61,7 @@ class jea extends um {
     private int field_kb;
     private int field_mb;
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 > -15) {
           return;
         }
@@ -336,7 +336,7 @@ class jea extends um {
         RuntimeException var3_ref = null;
         try {
           var3 = ql.field_k;
-          var3.k(param0, param1 ^ -3719);
+          var3.writeCipheredOpcode(param0, param1 ^ -3719);
           var3.i(param2.field_f, 0);
           var3.f(param1 ^ -1477660827, param2.field_j);
           if (param1 != 1325) {

@@ -26,7 +26,7 @@ final class caa implements Runnable {
           return;
         }
         try {
-          ql.field_k.k(97, -2988);
+          ql.field_k.writeCipheredOpcode(97, -2988);
           ql.field_k.f(-1477662136, param1.q((byte) -82));
           ql.field_k.f(-1477662136, param1.a((byte) 107));
         } catch (RuntimeException runtimeException) {

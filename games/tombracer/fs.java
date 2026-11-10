@@ -9,7 +9,7 @@ final class fs extends ci {
     private short[] field_m;
     private int[][] field_n;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 >= -91) {
           field_p = (cn) null;
         }

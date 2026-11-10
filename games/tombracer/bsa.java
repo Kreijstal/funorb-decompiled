@@ -14,11 +14,11 @@ final class bsa implements isa {
     private il field_a;
     private int field_f;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_j = null;
         field_i = null;
         if (param0 != -33) {
-          bsa.a((byte) -94);
+          bsa.releaseStatics((byte) -94);
         }
     }
 
@@ -50,7 +50,7 @@ final class bsa implements isa {
           bea.e(var7, var8, 2, 1);
           var9Lifetime1 = 3.141592653589793 * (double)var14.field_A * 2.0 / (double)var14.field_B;
           if (param2 != 16777215) {
-            bsa.a((byte) -126);
+            bsa.releaseStatics((byte) -126);
           }
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_F);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_F);

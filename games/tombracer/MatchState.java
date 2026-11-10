@@ -34,7 +34,7 @@ final class MatchState implements dv {
     int field_P;
     long[] field_F;
     private int field_f;
-    cfa field_i;
+    CommonChooseReward field_i;
     private boolean[] field_n;
     private boolean[] field_q;
     static int field_w;
@@ -287,20 +287,20 @@ final class MatchState implements dv {
         try {
           this.field_h = CircleMovementLocomotor.a(5907, param0);
           this.field_z = uma.a(32, param0, -26803);
-          this.field_A = param0.b((byte) 44, 32);
-          this.field_C = param0.b((byte) 44, 32);
+          this.field_A = param0.readBits((byte) 44, 32);
+          this.field_C = param0.readBits((byte) 44, 32);
           this.field_y = (wd[]) (gha.a(this.field_y, 1, 8, -16499, nfa.field_q, param0));
           this.field_u = (wea[]) (gha.a(this.field_u, 1, 8, -16499, kba.field_u, param0));
           this.field_v = fa.a(0, param0, 8, this.field_v);
           this.field_o = uma.a(32, param0, -26803);
           this.field_q = c.a(8, this.field_q, (byte) 93, param0);
-          this.field_P = param0.b((byte) 44, 32);
+          this.field_P = param0.readBits((byte) 44, 32);
           this.field_s = CircleMovementLocomotor.a(5907, param0);
           if (!CircleMovementLocomotor.a(5907, param0)) {
             this.field_i = null;
           } else {
             if (null == this.field_i) {
-              this.field_i = new cfa();
+              this.field_i = new CommonChooseReward();
             }
             this.field_i.a(param0, false);
           }
@@ -590,7 +590,7 @@ final class MatchState implements dv {
           var2Lifetime2++;
         }
         if (0 == this.field_K) {
-          this.field_i = new cfa(this);
+          this.field_i = new CommonChooseReward(this);
           this.field_i.b(param0 + 28713);
           this.field_E = 0;
         }
@@ -691,7 +691,7 @@ final class MatchState implements dv {
           this.field_c = new kqa(this);
           this.field_e = new sma(this);
           if (this.field_K == 0) {
-            this.field_i = new cfa(this);
+            this.field_i = new CommonChooseReward(this);
             this.field_i.b(28624);
             this.field_E = 0;
           }

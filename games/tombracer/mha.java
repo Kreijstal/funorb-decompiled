@@ -18,7 +18,7 @@ final class mha extends rj {
         return this.field_z.a(127);
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_B = null;
         if (param0 != -23897) {
           return;

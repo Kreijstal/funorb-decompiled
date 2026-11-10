@@ -7,7 +7,7 @@ final class gga extends ofa implements tsa {
     static ur field_M;
     static String field_L;
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_M = null;
         field_O = null;
         field_L = null;
@@ -33,7 +33,7 @@ final class gga extends ofa implements tsa {
           var5 = this.field_p - 6;
           this.field_p = this.field_p + 38;
           if (param2 >= -82) {
-            gga.f(16);
+            gga.releaseStatics(16);
           }
           var4.a((byte) -31, -16 + (this.field_m - 14), 30, 15, var5);
           this.a(var4, -1);
@@ -76,7 +76,7 @@ final class gga extends ofa implements tsa {
         var3 = -135 + param0;
         var4 = -35 + param1;
         if (param2 <= 81) {
-          gga.f(45);
+          gga.releaseStatics(45);
         }
         var5 = 256;
         if (TimeSwitchBehaviour.field_r < 75) {
@@ -134,7 +134,7 @@ final class gga extends ofa implements tsa {
             this.g(256);
           }
           if (param4 < 44) {
-            gga.f(-123);
+            gga.releaseStatics(-123);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -168,7 +168,7 @@ final class gga extends ofa implements tsa {
           } else {
             if (or.field_j == param1) {
               this.field_p = this.field_p + 10;
-              var3 = vca.field_b;
+              var3 = S2CEventPacket.field_b;
               if (sta.g((byte) 97)) {
                 var3 = tj.field_h;
                 this.field_p = this.field_p + 20;

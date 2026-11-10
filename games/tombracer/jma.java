@@ -22,18 +22,18 @@ final class jma implements noa {
     final void a(ew param0, byte param1, BitPacketBuffer param2) {
         try {
           this.field_d.a(30489, param0, param2);
-          param2.a((byte) -127, this.field_e, 8);
-          param2.a((byte) -45, this.field_k, 8);
-          param2.a((byte) -125, this.field_i, 8);
+          param2.writeBits((byte) -127, this.field_e, 8);
+          param2.writeBits((byte) -45, this.field_k, 8);
+          param2.writeBits((byte) -125, this.field_i, 8);
           if (param1 <= 65) {
             BitPacketBuffer var5 = (BitPacketBuffer) null;
             this.a((ew) null, (byte) 97, (BitPacketBuffer) null);
           }
-          param2.a((byte) -126, this.field_l, 8);
-          param2.a((byte) -45, this.field_f, 8);
-          param2.a((byte) 77, this.field_m ? 1 : 0, 1);
-          param2.a((byte) -127, this.field_p ? 1 : 0, 1);
-          param2.a((byte) -126, this.field_c, 4);
+          param2.writeBits((byte) -126, this.field_l, 8);
+          param2.writeBits((byte) -45, this.field_f, 8);
+          param2.writeBits((byte) 77, this.field_m ? 1 : 0, 1);
+          param2.writeBits((byte) -127, this.field_p ? 1 : 0, 1);
+          param2.writeBits((byte) -126, this.field_c, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "jma.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -72,7 +72,7 @@ final class jma implements noa {
         this.a(8);
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_h = null;
         if (param0 <= 39) {
@@ -461,20 +461,20 @@ final class jma implements noa {
         try {
           this.field_d = new koa(param0, 0, param1.field_E, param2);
           if (param1.field_E > 9) {
-            this.field_e = param2.b((byte) 44, 8);
-            this.field_k = param2.b((byte) 44, 8);
-            this.field_i = param2.b((byte) 44, 8);
-            this.field_l = param2.b((byte) 44, 8);
-            this.field_f = param2.b((byte) 44, 8);
+            this.field_e = param2.readBits((byte) 44, 8);
+            this.field_k = param2.readBits((byte) 44, 8);
+            this.field_i = param2.readBits((byte) 44, 8);
+            this.field_l = param2.readBits((byte) 44, 8);
+            this.field_f = param2.readBits((byte) 44, 8);
           } else {
-            this.field_e = param2.b((byte) 44, 8);
-            this.field_k = param2.b((byte) 44, 8);
+            this.field_e = param2.readBits((byte) 44, 8);
+            this.field_k = param2.readBits((byte) 44, 8);
           }
-          stackIn_7_1 = (1 == param2.b((byte) 44, 1));
+          stackIn_7_1 = (1 == param2.readBits((byte) 44, 1));
           this.field_m = stackIn_7_1;
-          stackIn_10_1 = (param2.b((byte) 44, 1) == 1);
+          stackIn_10_1 = (param2.readBits((byte) 44, 1) == 1);
           this.field_p = stackIn_10_1;
-          this.field_c = param2.b((byte) 44, 4);
+          this.field_c = param2.readBits((byte) 44, 4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

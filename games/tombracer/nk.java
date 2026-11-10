@@ -24,7 +24,7 @@ final class nk extends IntrusiveNode {
         return stackIn_9_0;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         if (param0 != 20) {
           field_k = (jpa[]) null;

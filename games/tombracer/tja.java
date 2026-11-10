@@ -6,11 +6,11 @@ final class tja extends pb {
     static MouseWheelInput field_q;
     private Object field_o;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_p = null;
         field_q = null;
         if (param0) {
-          tja.a(false);
+          tja.releaseStatics(false);
         }
     }
 

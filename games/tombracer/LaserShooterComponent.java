@@ -5,7 +5,7 @@ final class LaserShooterComponent extends ShooterComponent {
     final Trap a(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         BeamShooterBehaviour var5 = null;
-        up var6 = null;
+        Effect var6 = null;
         mfa var7 = null;
         boa var8 = null;
         Trap var9 = null;
@@ -20,7 +20,7 @@ final class LaserShooterComponent extends ShooterComponent {
           var9.h(param1, 0);
           var9.a((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new BeamShooterBehaviour(param2, param0);
-          var6 = new up(1, 10);
+          var6 = new Effect(1, 10);
           var6.b(1, 13);
           var5.a(var6, true);
           this.a((byte) 43, var5, param2);
@@ -124,43 +124,43 @@ final class LaserShooterComponent extends ShooterComponent {
         return false;
     }
 
-    final static mi[] a(byte param0, String param1) {
+    final static ConsoleToken[] a(byte param0, String param1) {
         int incrementValue$1 = 0;
         IntrusiveDeque var2 = null;
         RuntimeException var2_ref = null;
-        mi[] var3 = null;
+        ConsoleToken[] var3 = null;
         int var4 = 0;
-        mi var5 = null;
+        ConsoleToken var5 = null;
         int var6 = 0;
-        mi[] stackIn_3_0 = null;
-        mi[] stackIn_9_0 = null;
-        mi[] stackIn_11_0 = null;
+        ConsoleToken[] stackIn_3_0 = null;
+        ConsoleToken[] stackIn_9_0 = null;
+        ConsoleToken[] stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
-          if (param1.equals(cf.field_e)) {
+          if (param1.equals(S2CRoundResultPacket.field_e)) {
             stackIn_3_0 = opa.field_n;
             return stackIn_3_0;
           }
           var2 = lp.a((byte) 48, param1);
-          var3 = new mi[var2.a((byte) -16)];
+          var3 = new ConsoleToken[var2.a((byte) -16)];
           var4 = 0;
-          var5 = (mi) (var2.f(-80));
+          var5 = (ConsoleToken) (var2.f(-80));
           while (var5 != null) {
             incrementValue$1 = var4;
             var4++;
             var3[incrementValue$1] = var5;
-            var5 = (mi) (var2.e(124));
+            var5 = (ConsoleToken) (var2.e(124));
           }
           if (param0 != 126) {
-            stackIn_9_0 = (mi[]) null;
+            stackIn_9_0 = (ConsoleToken[]) null;
             return stackIn_9_0;
           }
           opa.field_n = var3;
-          cf.field_e = param1;
+          S2CRoundResultPacket.field_e = param1;
           stackIn_11_0 = var3;
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

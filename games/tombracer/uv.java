@@ -419,7 +419,7 @@ final class uv extends oga {
         super(param0);
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           return;
         }
@@ -428,10 +428,10 @@ final class uv extends oga {
     }
 
     final static void d(int param0) {
-        ql.field_k.k(9, -2988);
+        ql.field_k.writeCipheredOpcode(9, -2988);
         rpa.field_d = true;
         if (param0 != 30785) {
-          uv.f(9);
+          uv.releaseStatics(9);
         }
     }
 

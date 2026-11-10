@@ -8,7 +8,7 @@ abstract class GameEvent extends IntrusiveNode {
 
     void a(BitPacketBuffer param0, int param1) {
         try {
-          param0.a((byte) -3, this.b((byte) 121), 4);
+          param0.writeBits((byte) -3, this.b((byte) 121), 4);
           if (param1 != -5) {
             field_f = (float[][]) null;
           }
@@ -32,7 +32,7 @@ abstract class GameEvent extends IntrusiveNode {
           var3 = (long)param2 << 16;
           return (int)(var3 / (long)param0);
         }
-        GameEvent.a(-69);
+        GameEvent.releaseStatics(-69);
         var3Lifetime1 = (long)param2 << 16;
         return (int)(var3Lifetime1 / (long)param0);
     }
@@ -44,7 +44,7 @@ abstract class GameEvent extends IntrusiveNode {
 
     abstract void a(PlayerSimulation param0, int param1, int param2, int param3);
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         field_f = (float[][]) null;
         int var1 = -91 / ((-59 - param0) / 54);

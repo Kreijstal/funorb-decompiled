@@ -51,7 +51,7 @@ final class wk extends IntrusiveNode {
 
     final static void a(en param0, int param1, int param2, cn param3) {
         try {
-          gpa.field_b = param1 * aqa.a(1188664449) / 1000;
+          SwitchableId.field_b = param1 * aqa.a(1188664449) / 1000;
           ne.a(param3, -101);
           gja.a(param3, 0);
           jp.a(param3, (byte) 20);
@@ -61,13 +61,13 @@ final class wk extends IntrusiveNode {
           }
           mf.a(85);
           ica.a(16777215);
-          TimeSwitchBehaviour.field_r = 0 - gpa.field_b;
+          TimeSwitchBehaviour.field_r = 0 - SwitchableId.field_b;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 > -43) {
           return;
         }

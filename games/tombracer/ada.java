@@ -7,7 +7,7 @@ final class ada extends rva implements tsa {
     static int[] field_y;
     private rj field_B;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 >= -122) {
           field_z = (ura) null;
           field_y = null;
@@ -59,7 +59,7 @@ final class ada extends rva implements tsa {
 
     final static int b(boolean param0) {
         if (param0) {
-          ada.c(-7);
+          ada.releaseStatics(-7);
           return tu.field_h;
         }
         return tu.field_h;

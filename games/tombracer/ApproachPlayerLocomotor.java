@@ -194,9 +194,9 @@ final class ApproachPlayerLocomotor extends Locomotor {
         }
         try {
           super.a(param0, (byte) -83);
-          param0.a((byte) -128, this.field_q >> 16, 10);
-          param0.a((byte) -25, this.b(0, this.field_v), 8);
-          param0.a((byte) -128, this.field_u ? 1 : 0, 1);
+          param0.writeBits((byte) -128, this.field_q >> 16, 10);
+          param0.writeBits((byte) -25, this.b(0, this.field_v), 8);
+          param0.writeBits((byte) -128, this.field_u ? 1 : 0, 1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "bg.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -227,16 +227,16 @@ final class ApproachPlayerLocomotor extends Locomotor {
         this.field_r = true;
         this.field_o = new ir();
         try {
-          this.field_q = param1.b((byte) 44, 10) << 16;
+          this.field_q = param1.readBits((byte) 44, 10) << 16;
           if (7 < param0.field_E) {
-            this.field_v = this.a(param1.b((byte) 44, 8), false);
+            this.field_v = this.a(param1.readBits((byte) 44, 8), false);
           } else {
-            this.field_v = param1.b((byte) 44, 4) << 16;
+            this.field_v = param1.readBits((byte) 44, 4) << 16;
           }
           if (this.c(true).field_E < 3) {
             this.field_u = false;
           } else {
-            stackIn_8_1 = (1 == param1.b((byte) 44, 1));
+            stackIn_8_1 = (1 == param1.readBits((byte) 44, 1));
             this.field_u = stackIn_8_1;
           }
           return;
@@ -282,7 +282,7 @@ final class ApproachPlayerLocomotor extends Locomotor {
         }
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 67) {
           return;
         }

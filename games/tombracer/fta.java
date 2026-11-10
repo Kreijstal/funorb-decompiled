@@ -102,7 +102,7 @@ final class fta {
         throw new IllegalStateException();
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_b = null;
         if (param0 != 0) {

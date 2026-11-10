@@ -7,12 +7,12 @@ abstract class dna extends kna {
     static String field_H;
     static boolean field_G;
 
-    public static void r(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_F = null;
         field_I = null;
         field_H = null;
         if (param0 < 78) {
-          dna.r((byte) 9);
+          dna.releaseStatics((byte) 9);
         }
     }
 

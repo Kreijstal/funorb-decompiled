@@ -26,8 +26,8 @@ final class dj {
     final void a(pc param0, gma param1, byte param2) {
         try {
           if (param2 >= -99) {
-            up var5 = (up) null;
-            this.a((byte) 23, (pc) null, (up) null);
+            Effect var5 = (Effect) null;
+            this.a((byte) 23, (pc) null, (Effect) null);
           }
           this.a(param0.field_a, (byte) -101, param0.field_j, param0.field_i, 1, qva.a((byte) -120, -param0.field_k + param0.field_f, param0.field_c - param0.field_d) - 4096, 8, 393216, param0.field_e, 4, 8);
           this.a(param0.field_a, (byte) -110, param0.field_j, param0.field_i, 1, 0, 5, 0, param0.field_e, 6, 12);
@@ -43,7 +43,7 @@ final class dj {
         return uca.field_c.a(param1, 0);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -1) {
           return;
         }
@@ -75,7 +75,7 @@ final class dj {
         }
     }
 
-    final void a(byte param0, pc param1, up param2) {
+    final void a(byte param0, pc param1, Effect param2) {
         int var14 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;

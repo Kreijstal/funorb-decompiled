@@ -114,7 +114,7 @@ final class PushableBlockMazeComponent extends MazeComponent {
 
     final boolean C(int param0) {
         if (param0 != 1) {
-          PushableBlockMazeComponent.E(94);
+          PushableBlockMazeComponent.releaseStatics(94);
           return true;
         }
         return true;
@@ -124,9 +124,9 @@ final class PushableBlockMazeComponent extends MazeComponent {
         super(param0, param1);
     }
 
-    public static void E(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 7) {
-          PushableBlockMazeComponent.E(126);
+          PushableBlockMazeComponent.releaseStatics(126);
           field_K = null;
           return;
         }

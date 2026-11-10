@@ -36,7 +36,7 @@ final class RopeBridgeComponent extends kna {
     RopeBridgeComponent(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
         try {
-          this.field_H = param2.b((byte) 44, 4);
+          this.field_H = param2.readBits((byte) 44, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "lda.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -53,7 +53,7 @@ final class RopeBridgeComponent extends kna {
     final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
-          param1.a((byte) -125, this.field_H, 4);
+          param1.writeBits((byte) -125, this.field_H, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "lda.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -135,7 +135,7 @@ final class RopeBridgeComponent extends kna {
         }
     }
 
-    public static void r(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_G = null;
         if (param0 >= -38) {
           field_G = (String) null;

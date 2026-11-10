@@ -29,7 +29,7 @@ final class fna {
             field_j = (qua[]) null;
           }
           var3 = ql.field_k;
-          var3.k(param0, -2988);
+          var3.writeCipheredOpcode(param0, -2988);
           var3.i(2, 0);
           var3.i(0, 0);
           var3.i(param2.field_g, 0);
@@ -59,7 +59,7 @@ final class fna {
         return this.field_d + var3;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 1) {
           field_j = (qua[]) null;
         }

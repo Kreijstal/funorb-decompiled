@@ -70,13 +70,13 @@ final class ControllerLocomotor extends Locomotor {
         int var5 = 0;
         Locomotor var6 = null;
         try {
-          var4_int = param1.b((byte) 44, 2);
+          var4_int = param1.readBits((byte) 44, 2);
           this.field_u = new Locomotor[var4_int];
           for (var5 = 0; var4_int > var5; var5++) {
             var6 = ki.readLocomotor(param1, (byte) -118, param0, param2);
             this.field_u[var5] = var6;
           }
-          this.field_s = param1.b((byte) 44, 2);
+          this.field_s = param1.readBits((byte) 44, 2);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "nj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -98,7 +98,7 @@ final class ControllerLocomotor extends Locomotor {
         return param1;
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_v = null;
         if (param0 >= -30) {
           field_r = (iw) null;
@@ -131,14 +131,14 @@ final class ControllerLocomotor extends Locomotor {
         int var4 = TombRacer.field_G ? 1 : 0;
         try {
           super.a(param0, (byte) -128);
-          param0.a((byte) 7, this.field_u.length, 2);
+          param0.writeBits((byte) 7, this.field_u.length, 2);
           if (param1 > -78) {
             this.b(-101);
           }
           for (var3_int = 0; var3_int < this.field_u.length; var3_int++) {
             this.field_u[var3_int].a(param0, (byte) -117);
           }
-          param0.a((byte) -128, this.field_s, 2);
+          param0.writeBits((byte) -128, this.field_s, 2);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "nj.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

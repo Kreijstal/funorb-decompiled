@@ -15,7 +15,7 @@ final class gv extends qda {
     public gv() {
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_v = null;
         field_q = null;
         field_s = null;
@@ -174,7 +174,7 @@ final class gv extends qda {
         int var10;
         int var11;
         if (param5 != 0) {
-          gv.a(true);
+          gv.releaseStatics(true);
         }
         boolean decompiledFrameRemainder0 = true;
         var10 = -(param2 * param7 / param8) + param6;
@@ -394,7 +394,7 @@ final class gv extends qda {
               break;
             }
             if (param0 <= 26) {
-              gv.a(false);
+              gv.releaseStatics(false);
             }
             return true;
           } catch (java.io.IOException decompiledCaughtParameter1) {

@@ -58,7 +58,7 @@ class ql extends DualLinkNode {
     protected ql() {
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           return;
         }

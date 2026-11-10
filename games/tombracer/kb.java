@@ -72,7 +72,7 @@ final class kb extends IntrusiveNode {
         return false;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         int var1 = -64 % ((param0 + 32) / 32);
     }

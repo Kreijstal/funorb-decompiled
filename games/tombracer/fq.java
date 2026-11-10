@@ -18,7 +18,7 @@ final class fq {
         return !this.field_a ? this.field_f : this.field_b;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           return;
         }
@@ -77,10 +77,10 @@ final class fq {
           if (param1 != 23) {
             this.a(-16);
           }
-          param0.a((byte) 118, !this.field_a ? 0 : 1, 1);
-          param0.a((byte) -125, this.field_d, 2);
-          param0.a((byte) -128, this.field_b, 8);
-          param0.a((byte) 64, this.field_f, 8);
+          param0.writeBits((byte) 118, !this.field_a ? 0 : 1, 1);
+          param0.writeBits((byte) -125, this.field_d, 2);
+          param0.writeBits((byte) -128, this.field_b, 8);
+          param0.writeBits((byte) 64, this.field_f, 8);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "fq.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -116,25 +116,25 @@ final class fq {
         this.field_b = 10;
         try {
           if (param0 >= 11) {
-            stackIn_5_1 = (param1.b((byte) 44, 1) == 1);
+            stackIn_5_1 = (param1.readBits((byte) 44, 1) == 1);
             this.field_a = stackIn_5_1;
           }
           if (param0 < 13) {
             this.field_b = 10;
             this.field_d = 0;
           } else {
-            this.field_d = param1.b((byte) 44, 2);
-            this.field_b = param1.b((byte) 44, 8);
+            this.field_d = param1.readBits((byte) 44, 2);
+            this.field_b = param1.readBits((byte) 44, 8);
           }
           if (param0 >= 23 &&
             param0 < 26) {
-            param1.b((byte) 44, 8);
+            param1.readBits((byte) 44, 8);
           }
           if (param0 < 24) {
             this.field_f = 100;
             return;
           }
-          this.field_f = param1.b((byte) 44, 8);
+          this.field_f = param1.readBits((byte) 44, 8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

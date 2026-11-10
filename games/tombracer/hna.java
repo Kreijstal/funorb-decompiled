@@ -13,9 +13,9 @@ final class hna {
     int field_j;
     static Object field_e;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 <= 115) {
-          hna.a(-38);
+          hna.releaseStatics(-38);
           field_a = null;
           field_e = null;
           return;

@@ -42,7 +42,7 @@ final class TrapSpawner extends Spawner {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != 30000) {
           field_b = (String) null;
@@ -99,10 +99,10 @@ final class TrapSpawner extends Spawner {
           return;
         }
         BitPacketBuffer var5 = new BitPacketBuffer(30000);
-        var5.i(8);
+        var5.beginBitWrite(8);
         this.field_c.a(var5, 97);
         if (param3 == 4) {
-          var5.k(-1826190686);
+          var5.endBitWrite(-1826190686);
           var6 = this.field_c.a(param3 - 14406, this.field_a, true);
           var6.m(1, param1);
           var6.c(param2, -19879);
@@ -111,7 +111,7 @@ final class TrapSpawner extends Spawner {
           return;
         }
         this.a(false);
-        var5.k(-1826190686);
+        var5.endBitWrite(-1826190686);
         var6Lifetime1 = this.field_c.a(param3 - 14406, this.field_a, true);
         var6Lifetime1.m(1, param1);
         var6Lifetime1.c(param2, -19879);

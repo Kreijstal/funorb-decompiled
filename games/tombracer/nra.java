@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nra implements bo {
+final class nra implements GamePacket {
     static int[][] field_g;
     private long field_l;
     private int field_f;
@@ -17,7 +17,7 @@ final class nra implements bo {
     private int field_h;
     private long field_j;
 
-    public final void a(int param0, BitPacketBuffer param1) {
+    public final void encode(int param0, BitPacketBuffer param1) {
         param1.a(1736565456, this.field_j);
         param1.f(param0 ^ -1477662080, this.field_m);
         param1.i(this.field_f, 0);
@@ -38,7 +38,7 @@ final class nra implements bo {
         }
     }
 
-    public final void a(BitPacketBuffer param0, byte param1) {
+    public final void decode(BitPacketBuffer param0, byte param1) {
         this.field_j = param0.b(290646880);
         this.field_m = param0.d(122);
         this.field_f = param0.h(param1 + 274);
@@ -59,7 +59,7 @@ final class nra implements bo {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 <= 27) {
           return;
@@ -138,7 +138,7 @@ final class nra implements bo {
           return;
         }
         BitPacketBuffer var11 = (BitPacketBuffer) null;
-        this.a((BitPacketBuffer) null, (byte) -83);
+        this.decode((BitPacketBuffer) null, (byte) -83);
         this.field_n = param1;
         this.field_b = param4;
     }

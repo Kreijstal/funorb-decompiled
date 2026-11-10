@@ -40,9 +40,9 @@ final class em extends vw {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
-          em.d(-65);
+          em.releaseStatics(-65);
         }
         field_h = null;
         field_f = null;

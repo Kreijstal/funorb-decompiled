@@ -47,7 +47,7 @@ final class cia {
         }
         var2 = stackIn_5_0;
         if (param0 >= 120) {
-          if (!oj.field_tb[mi.field_k]) {
+          if (!oj.field_tb[ConsoleToken.field_k]) {
             stackIn_32_0 = (!oj.field_tb[fp.field_a]) ? 0 : 1;
           } else {
             stackIn_32_0 = -1;
@@ -82,7 +82,7 @@ final class cia {
           return;
         }
         this.field_e = 123;
-        if (!oj.field_tb[mi.field_k]) {
+        if (!oj.field_tb[ConsoleToken.field_k]) {
           stackIn_11_0 = (!oj.field_tb[fp.field_a]) ? 0 : 1;
         } else {
           stackIn_11_0 = -1;
@@ -130,9 +130,9 @@ final class cia {
         this.field_d = false;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -1) {
-          cia.b(42);
+          cia.releaseStatics(42);
           field_a = null;
           field_g = null;
           return;

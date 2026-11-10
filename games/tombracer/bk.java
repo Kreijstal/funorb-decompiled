@@ -11,7 +11,7 @@ final class bk extends ci {
     private int field_r;
     private int field_n;
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 101) {
           field_m = (String[]) null;
         }

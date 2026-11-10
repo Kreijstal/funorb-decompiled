@@ -7,14 +7,14 @@ final class fb {
     static byte[][] field_a;
     private static String field_z;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           field_a = (byte[][]) null;
           field_b = null;
           field_c = null;
           return;
         }
-        fb.a(true);
+        fb.releaseStatics(true);
         field_a = (byte[][]) null;
         field_b = null;
         field_c = null;

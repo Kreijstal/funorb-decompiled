@@ -4,7 +4,7 @@
 abstract class MouseWheelInput {
     static String[][] field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = (String[][]) null;
         if (param0 != 14979) {
           field_a = (String[][]) null;

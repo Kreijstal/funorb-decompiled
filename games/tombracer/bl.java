@@ -63,7 +63,7 @@ final class bl {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 <= 83) {
           field_a = (is) null;
@@ -83,7 +83,7 @@ final class bl {
             uga.field_n == km.field_p)) {
             if (param1 == ~ql.field_k.position &&
               mha.field_D + 10000L < bva.b((byte) -107)) {
-              ql.field_k.k(param0, -2988);
+              ql.field_k.writeCipheredOpcode(param0, -2988);
             }
             if (ql.field_k.position > 0) {
               try {

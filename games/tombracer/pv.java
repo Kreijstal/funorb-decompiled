@@ -164,7 +164,7 @@ final class pv extends ci {
         return var3;
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_p = null;
         field_m = null;
         if (param0 > -80) {

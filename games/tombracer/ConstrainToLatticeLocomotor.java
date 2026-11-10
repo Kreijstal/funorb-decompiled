@@ -49,10 +49,10 @@ final class ConstrainToLatticeLocomotor extends ConstraintLocomotor {
     final void a(BitPacketBuffer param0, byte param1) {
         try {
           super.a(param0, (byte) -123);
-          param0.a((byte) -128, this.field_t >> 16, 10);
-          param0.a((byte) -128, this.field_y >> 16, 10);
-          param0.a((byte) -127, this.field_v, 7);
-          param0.a((byte) -127, this.field_w, 7);
+          param0.writeBits((byte) -128, this.field_t >> 16, 10);
+          param0.writeBits((byte) -128, this.field_y >> 16, 10);
+          param0.writeBits((byte) -127, this.field_v, 7);
+          param0.writeBits((byte) -127, this.field_w, 7);
           if (param1 >= -78) {
             BitPacketBuffer var4 = (BitPacketBuffer) null;
             this.a((BitPacketBuffer) null, (byte) -48);
@@ -65,10 +65,10 @@ final class ConstrainToLatticeLocomotor extends ConstraintLocomotor {
     ConstrainToLatticeLocomotor(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
-          this.field_t = param1.b((byte) 44, 10) << 16;
-          this.field_y = param1.b((byte) 44, 10) << 16;
-          this.field_v = param1.b((byte) 44, 7);
-          this.field_w = param1.b((byte) 44, 7);
+          this.field_t = param1.readBits((byte) 44, 10) << 16;
+          this.field_y = param1.readBits((byte) 44, 10) << 16;
+          this.field_v = param1.readBits((byte) 44, 7);
+          this.field_w = param1.readBits((byte) 44, 7);
           this.k((byte) -56);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "rsa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -318,7 +318,7 @@ final class ConstrainToLatticeLocomotor extends ConstraintLocomotor {
         }
     }
 
-    public static void j(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_x = null;
         if (param0 <= 105) {
           return;

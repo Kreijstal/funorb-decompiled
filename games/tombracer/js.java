@@ -246,7 +246,7 @@ final class js extends dr {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_g = null;
         field_d = null;
         if (param0 != -50) {
@@ -263,7 +263,7 @@ final class js extends dr {
           this.field_f = new IntrusiveDeque();
         }
         if (param0 != 115) {
-          js.b((byte) 13);
+          js.releaseStatics((byte) 13);
         }
     }
 

@@ -19,7 +19,7 @@ final class mu extends jea {
         super(0L, (jea) null);
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 101) {
           field_Bb = (String) null;
           field_wb = null;

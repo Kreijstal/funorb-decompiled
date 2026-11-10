@@ -20,9 +20,9 @@ final class wea implements dv {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 8) {
-          wea.a(105);
+          wea.releaseStatics(105);
           field_c = null;
           field_d = null;
           return;

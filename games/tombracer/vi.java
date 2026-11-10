@@ -10,21 +10,21 @@ final class vi {
           this.field_b.d(param0 ^ 8);
           return;
         }
-        tt var3 = (tt) null;
-        this.a((byte) 62, (tt) null);
+        S2CActionPacket var3 = (S2CActionPacket) null;
+        this.a((byte) 62, (S2CActionPacket) null);
         this.field_b.d(param0 ^ 8);
     }
 
-    final tt a(boolean param0) {
+    final S2CActionPacket a(boolean param0) {
         if (!param0) {
           this.field_b = (IntrusiveDeque) null;
           if (!this.field_b.d((byte) 14)) {
-            return (tt) (this.field_b.c(-113));
+            return (S2CActionPacket) (this.field_b.c(-113));
           }
           return null;
         }
         if (!this.field_b.d((byte) 14)) {
-          return (tt) (this.field_b.c(-113));
+          return (S2CActionPacket) (this.field_b.c(-113));
         }
         return null;
     }
@@ -33,7 +33,7 @@ final class vi {
         return param0 & param1;
     }
 
-    final boolean a(byte param0, tt param1) {
+    final boolean a(byte param0, S2CActionPacket param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -66,28 +66,28 @@ final class vi {
     }
 
     final int a(byte param0, int param1) {
-        tt var4 = null;
+        S2CActionPacket var4 = null;
         int var5 = TombRacer.field_G ? 1 : 0;
         int var3 = 0;
-        tt var4Lifetime1;
+        S2CActionPacket var4Lifetime1;
         if (param0 < 21) {
           this.a((byte) 71, -82);
         } else {
-          var4 = (tt) (this.field_b.f(-80));
+          var4 = (S2CActionPacket) (this.field_b.f(-80));
           while (var4 != null) {
             if (var4.a(false, param1)) {
               var3++;
             }
-            var4 = (tt) (this.field_b.e(107));
+            var4 = (S2CActionPacket) (this.field_b.e(107));
           }
           return var3;
         }
-        var4Lifetime1 = (tt) (this.field_b.f(-80));
+        var4Lifetime1 = (S2CActionPacket) (this.field_b.f(-80));
         while (var4Lifetime1 != null) {
           if (var4Lifetime1.a(false, param1)) {
             var3++;
           }
-          var4Lifetime1 = (tt) (this.field_b.e(107));
+          var4Lifetime1 = (S2CActionPacket) (this.field_b.e(107));
         }
         return var3;
     }

@@ -1265,14 +1265,14 @@ final class gja extends ka {
         try {
           var2 = new BitPacketBuffer(param0.a("logo.fo3d", (byte) 126, ""));
           var3 = var2.h(255);
-          var2.h((byte) 119);
+          var2.beginBitAccess((byte) 119);
           ej.field_d = BrazierComponent.a(var2, (byte) 8);
           tfa.field_e = new int[var3][];
           cq.field_b = new an[var3];
           var4 = 0;
           do {
             if (var3 <= var4) {
-              var2.i((byte) 98);
+              var2.endBitAccess((byte) 98);
               break;
             }
             cq.field_b[var4] = jo.a(var2, true);
@@ -1613,7 +1613,7 @@ final class gja extends ka {
           }
           boolean decompiledFrameRemainder1 = true;
           if (null != this.field_w &&
-            !dba.a(this.field_h, 98, this.field_Y)) {
+            !C2SSubmitSettingsPacket.a(this.field_h, 98, this.field_Y)) {
             boolean decompiledFrameRemainder0 = true;
             if (0 == (55 & this.field_h)) {
               decompiledFrameRemainder0 = (this.field_E == null ||
@@ -2474,7 +2474,7 @@ final class gja extends ka {
           boolean decompiledFrameCompleted7 = true;
           boolean decompiledFrameCompleted8 = true;
           boolean decompiledFrameRemainder1 = true;
-          if (!bqa.a(540800, param4, this.field_h)) {
+          if (!S2CNewRoomPacket.a(540800, param4, this.field_h)) {
             param0.field_P = this.field_P;
             decompiledFrameRemainder1 = (var13 != 0);
           }

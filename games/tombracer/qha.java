@@ -9,7 +9,7 @@ final class qha extends ou {
         super(-1 + aq.a(-5640) + aq.a(-5640), param0);
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= -84) {
           field_g = (IntrusiveDeque) null;
           field_g = null;
@@ -102,12 +102,12 @@ final class qha extends ou {
         }
         upa.a(param1, param0);
         if (!GameEvent.field_g) {
-          ea.a(param1, -16838);
+          C2SActionPacket.a(param1, -16838);
           return;
         }
         bea.d(rm.field_e.field_a.field_qb, rm.field_e.field_a.field_T, rm.field_e.field_a.field_G, rm.field_e.field_a.field_t);
         rm.field_e.field_a.b(121, param1);
-        ea.a(param1, -16838);
+        C2SActionPacket.a(param1, -16838);
     }
 
     static {

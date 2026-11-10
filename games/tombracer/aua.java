@@ -38,11 +38,11 @@ final class aua extends mt {
     public aua() {
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_d = null;
         field_c = null;
         if (!param0) {
-          aua.a(true);
+          aua.releaseStatics(true);
         }
     }
 

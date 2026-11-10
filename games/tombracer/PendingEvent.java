@@ -184,20 +184,20 @@ final class PendingEvent extends IntrusiveNode {
 
     private final void a(BitPacketBuffer param0, int param1) {
         try {
-          param0.h((byte) 112);
+          param0.beginBitAccess((byte) 112);
           if (param1 > -108) {
             this.a(3, -70, 47);
           }
           this.field_g = EventFactory.readEvent(-90, param0, 26);
-          this.instigator = param0.b((byte) 44, 3);
-          this.course = param0.b((byte) 44, 3);
-          this.start = param0.b((byte) 44, 32);
-          this.duration = param0.b((byte) 44, 8);
+          this.instigator = param0.readBits((byte) 44, 3);
+          this.course = param0.readBits((byte) 44, 3);
+          this.start = param0.readBits((byte) 44, 32);
+          this.duration = param0.readBits((byte) 44, 8);
           this.field_l = this.start + 50 * this.duration;
           if (this.b(122)) {
-            this.room = param0.b((byte) 44, 5);
+            this.room = param0.readBits((byte) 44, 5);
           }
-          param0.i((byte) 98);
+          param0.endBitAccess((byte) 98);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pi.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -264,20 +264,20 @@ final class PendingEvent extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          param0.i(8);
+          param0.beginBitWrite(8);
           if (param1 != -19733) {
             this.c(123, -124);
           }
           this.field_g.a(param0, -5);
-          param0.a((byte) -32, this.instigator, 3);
-          param0.a((byte) -2, this.course, 3);
-          param0.a((byte) -128, this.start, 32);
-          param0.a((byte) 95, this.duration, 8);
+          param0.writeBits((byte) -32, this.instigator, 3);
+          param0.writeBits((byte) -2, this.course, 3);
+          param0.writeBits((byte) -128, this.start, 32);
+          param0.writeBits((byte) 95, this.duration, 8);
           if (this.b(122)) {
-            param0.a((byte) -125, this.room, 5);
-            param0.k(-1826190686);
+            param0.writeBits((byte) -125, this.room, 5);
+            param0.endBitWrite(-1826190686);
           } else {
-            param0.k(-1826190686);
+            param0.endBitWrite(-1826190686);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

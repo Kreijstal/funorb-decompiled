@@ -221,7 +221,7 @@ final class vf {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > -53) {
           return;
         }

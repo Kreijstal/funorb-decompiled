@@ -211,7 +211,7 @@ final class dua extends me {
         return;
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 > -125) {
           return;
         }

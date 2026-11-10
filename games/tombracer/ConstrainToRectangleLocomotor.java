@@ -408,14 +408,14 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
     ConstrainToRectangleLocomotor(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
-          this.field_u = param1.b((byte) 44, 10) << 16;
-          this.field_s = param1.b((byte) 44, 10) << 16;
+          this.field_u = param1.readBits((byte) 44, 10) << 16;
+          this.field_s = param1.readBits((byte) 44, 10) << 16;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ira.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    public static void j(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 91) {
           field_t = (jpa) null;
         }
@@ -438,11 +438,11 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
     final void a(BitPacketBuffer param0, byte param1) {
         try {
           super.a(param0, (byte) -106);
-          param0.a((byte) -126, this.field_u >> 16, 10);
+          param0.writeBits((byte) -126, this.field_u >> 16, 10);
           if (param1 >= -78) {
             ConstrainToRectangleLocomotor.a(true, -95, (byte) -90);
           }
-          param0.a((byte) 16, this.field_s >> 16, 10);
+          param0.writeBits((byte) 16, this.field_s >> 16, 10);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ira.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -59,7 +59,7 @@ final class ta extends jea {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_vb = null;
         if (param0 != -17) {
           field_ub = (ka[]) null;

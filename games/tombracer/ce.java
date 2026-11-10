@@ -537,7 +537,7 @@ final class ce extends dg {
         try {
           super.a((byte) -58, param1);
           var3_int = -7 % ((param0 + 8) / 40);
-          param1.a((byte) -16, this.field_q, 4);
+          param1.writeBits((byte) -16, this.field_q, 4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -777,7 +777,7 @@ final class ce extends dg {
         RuntimeException decompiledCaughtException = null;
         try {
           super.a(127, param1, param2);
-          this.field_q = param2.b((byte) 44, 4);
+          this.field_q = param2.readBits((byte) 44, 4);
           if (param0 <= 119) {
             this.field_s = -69;
           }

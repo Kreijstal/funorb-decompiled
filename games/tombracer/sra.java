@@ -31,7 +31,7 @@ final class sra implements eb {
         if (null != ConstrainToFacingArcLocomotor.field_v) {
           pfa.a(ConstrainToFacingArcLocomotor.field_v, param0 + 157);
           ConstrainToFacingArcLocomotor.field_v = null;
-          ea.a(-33);
+          C2SActionPacket.a(-33);
         }
         this.field_h = dd.a(16, param0 ^ -37);
         this.field_q = dd.a(17, param0 ^ -37);
@@ -47,7 +47,7 @@ final class sra implements eb {
         this.field_o = dd.a(28, 1);
         this.field_b = dd.a(29, 1);
         this.field_d = dd.a(30, 1);
-        this.field_s = dd.a(ea.field_i.field_c, 1);
+        this.field_s = dd.a(C2SActionPacket.field_i.field_c, 1);
         if (param0 != -38) {
           return;
         }
@@ -124,7 +124,7 @@ final class sra implements eb {
             this.field_e = (cn) null;
           }
           ima.a((float)param0, param2, -106);
-          ad.field_j.c(0);
+          ad.field_j.draw(0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sra.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -140,7 +140,7 @@ final class sra implements eb {
         if (this.field_e != null) {
           RoomComponent.a(1048576, new kra(this.field_e.a("", (byte) 113, "huffman")));
           this.field_e = null;
-          ea.a(-33);
+          C2SActionPacket.a(-33);
           return;
         }
         if (this.field_d != null) {
@@ -149,7 +149,7 @@ final class sra implements eb {
           gda.a(this.field_d, 17572);
           uo.b((byte) -125);
           this.field_d = null;
-          ea.a(-33);
+          C2SActionPacket.a(-33);
           return;
         }
         if (this.field_h != null &&
@@ -166,13 +166,13 @@ final class sra implements eb {
           this.field_r = null;
           this.field_m = null;
           this.field_h = null;
-          ea.a(-33);
+          C2SActionPacket.a(-33);
           return;
         }
         if (this.field_j != null) {
           ui.a(this.field_j, uba.field_g[7], 80, -79);
           this.field_j = null;
-          ea.a(-33);
+          C2SActionPacket.a(-33);
           return;
         }
         if (null != this.field_f) {
@@ -180,7 +180,7 @@ final class sra implements eb {
           this.field_g = null;
           this.field_a = null;
           this.field_f = null;
-          ea.a(-33);
+          C2SActionPacket.a(-33);
           return;
         }
         if (this.field_k != null &&
@@ -252,7 +252,7 @@ final class sra implements eb {
             var9 = new BitPacketBuffer(128);
             var9.position = var9.position + 2;
             var3 = var9.position;
-            var9.i(8);
+            var9.beginBitWrite(8);
             try {
               for (var4_int = 0; param0.length() > var4_int; var4_int++) {
                 var5_int = param0.charAt(var4_int);
@@ -268,7 +268,7 @@ final class sra implements eb {
               stackIn_11_0 = "Unable to pack " + param0;
               return stackIn_11_0;
             }
-            var9.k(-1826190686);
+            var9.endBitWrite(-1826190686);
             var9.b(-var3 + var9.position, (byte) 109);
             var9.position = 0;
             var4_ref = null;
@@ -318,14 +318,14 @@ final class sra implements eb {
           this.c(124);
           return false;
         }
-        ea.a(-33);
+        C2SActionPacket.a(-33);
         if (param0 != -4171) {
           return true;
         }
         return true;
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -35) {
           field_u = (String[]) null;
         }
@@ -340,13 +340,13 @@ final class sra implements eb {
         wm.field_a = null;
         hb.field_t = (dfa) ((Object) nl.a(0, (byte) 50));
         ima.a(100.0f, uba.field_g[10], param0 ^ 115);
-        ad.field_j.c(param0 ^ -49);
+        ad.field_j.draw(param0 ^ -49);
         gn.field_C.a(-19216);
         if (param0 != -49) {
           this.c(-107);
         }
         cla.f(0);
-        ea.a(param0 + 16);
+        C2SActionPacket.a(param0 + 16);
         if (null != mq.field_e) {
           eda.a(mq.field_e.field_g, true);
         }

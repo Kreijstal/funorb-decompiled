@@ -75,7 +75,7 @@ final class TrackMountComponent extends kna {
     final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
-          param1.a((byte) 28, SpawnerBehaviour.a((byte) 8, 4, this.field_F), 8);
+          param1.writeBits((byte) 28, SpawnerBehaviour.a((byte) 8, 4, this.field_F), 8);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wha.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -85,7 +85,7 @@ final class TrackMountComponent extends kna {
         super(param0, param1, param2, param3);
         this.field_F = 131072;
         try {
-          this.field_F = ji.a(param2.b((byte) 44, 8), 104, 4);
+          this.field_F = ji.a(param2.readBits((byte) 44, 8), 104, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -125,7 +125,7 @@ final class TrackMountComponent extends kna {
         this.a((byte) 112, new mka[]{new mka(0, 0, 2097152, 0, 40)});
     }
 
-    public static void r(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_J = null;
         field_H = null;
         field_I = null;

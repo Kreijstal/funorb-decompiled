@@ -85,7 +85,7 @@ final class kc {
           var7.unlinkSecondary(-7975);
           tba.field_k = tba.field_k - 1;
           var5 = ql.field_k;
-          var5.k(param1, -2988);
+          var5.writeCipheredOpcode(param1, -2988);
           var5.position = var5.position + 1;
           var6 = var5.position;
           var5.i(3, 0);

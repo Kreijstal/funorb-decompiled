@@ -156,7 +156,7 @@ final class qh extends dfa implements rqa {
           qa.field_b = qa.field_b + var4;
           nta.field_h = nta.field_h + var4;
           var4Lifetime1 = uca.field_c.a(7, 0);
-          cfa.field_b = cfa.field_b + (long)var4Lifetime1;
+          CommonChooseReward.field_b = CommonChooseReward.field_b + (long)var4Lifetime1;
           lra.field_f = lra.field_f + (long)var4Lifetime1;
         }
         if (this.field_z == null) {
@@ -273,7 +273,7 @@ final class qh extends dfa implements rqa {
           this.c(false))) {
           this.field_v[0][0] = var9[kda.field_hd];
           this.field_v[0][1] = var9[mf.field_a];
-          this.field_v[0][2] = var9[mi.field_k];
+          this.field_v[0][2] = var9[ConsoleToken.field_k];
           this.field_v[0][3] = var9[fp.field_a];
           this.field_v[0][4] = var9[gsa.field_j];
           this.field_v[0][7] = var9[mv.field_i];
@@ -345,7 +345,7 @@ final class qh extends dfa implements rqa {
           this.field_E = param9;
           this.field_x = param3;
           qv.field_o = null;
-          mi.field_o = false;
+          ConsoleToken.field_o = false;
           stackIn_8_1 = (param0);
           this.field_D = stackIn_8_1;
           var14_int = param2.length;
@@ -386,14 +386,14 @@ final class qh extends dfa implements rqa {
             this.field_h = 0;
           }
           msa.field_a = this.l(92);
-          ea.field_j = -1;
+          C2SActionPacket.field_j = -1;
           this.field_p = false;
           uca.field_a = -1;
           tb.field_o = 617;
           gda.field_b = 9170;
           ti.field_b = 8768;
           lu.field_a = 5180;
-          cfa.field_b = 1180282300L;
+          CommonChooseReward.field_b = 1180282300L;
           et.field_j = 17219L;
           qa.field_b = 1727002282;
           nta.field_h = -2073743619;
@@ -453,7 +453,7 @@ final class qh extends dfa implements rqa {
         if (param0 != 1) {
           this.b(-31, 0);
         }
-        ql.field_k.k(66, param0 ^ -2987);
+        ql.field_k.writeCipheredOpcode(66, param0 ^ -2987);
     }
 
     final void k(byte param0) {
@@ -558,7 +558,7 @@ final class qh extends dfa implements rqa {
         if (param0 < 40) {
           return false;
         }
-        return mi.field_o;
+        return ConsoleToken.field_o;
     }
 
     public static void b(boolean param0) {
@@ -582,9 +582,9 @@ final class qh extends dfa implements rqa {
         int[][] var10 = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
-          param1.h((byte) -94);
+          param1.beginBitAccess((byte) -94);
           this.field_k.a(param1, false);
-          param1.i((byte) 98);
+          param1.endBitAccess((byte) 98);
           this.j((byte) -115);
           if (!this.field_k.g(0)) {
             this.field_z.a((byte) 126);
@@ -819,7 +819,7 @@ final class qh extends dfa implements rqa {
           if (0 != uca.field_c.a(2, param1 ^ 5)) {
             lra.field_f = lra.field_f + nb.field_c * (var8Lifetime1 - var10);
           } else {
-            cfa.field_b = cfa.field_b - nb.field_c * (-var10 + var8Lifetime1);
+            CommonChooseReward.field_b = CommonChooseReward.field_b - nb.field_c * (-var10 + var8Lifetime1);
           }
         }
         this.field_i = param0;
@@ -1062,7 +1062,7 @@ final class qh extends dfa implements rqa {
     }
 
     final void l(byte param0) {
-        mi.field_o = true;
+        ConsoleToken.field_o = true;
         if (param0 != -38) {
           this.field_z = (v) null;
         }

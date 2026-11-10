@@ -36,10 +36,10 @@ final class MirrorMoverLocomotor extends Locomotor {
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_o = null;
         if (param0 != 1) {
-          MirrorMoverLocomotor.e(-44);
+          MirrorMoverLocomotor.releaseStatics(-44);
         }
     }
 
@@ -49,8 +49,8 @@ final class MirrorMoverLocomotor extends Locomotor {
             this.b((byte) 11);
           }
           super.a(param0, (byte) -116);
-          param0.a((byte) -128, !this.field_p ? 0 : 1, 1);
-          param0.a((byte) -125, this.field_q ? 1 : 0, 1);
+          param0.writeBits((byte) -128, !this.field_p ? 0 : 1, 1);
+          param0.writeBits((byte) -125, this.field_q ? 1 : 0, 1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ws.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -65,8 +65,8 @@ final class MirrorMoverLocomotor extends Locomotor {
     MirrorMoverLocomotor(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
-          this.field_p = param1.b((byte) 44, 1) == 1 ? true : false;
-          this.field_q = param1.b((byte) 44, 1) == 1 ? true : false;
+          this.field_p = param1.readBits((byte) 44, 1) == 1 ? true : false;
+          this.field_q = param1.readBits((byte) 44, 1) == 1 ? true : false;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ws.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -82,7 +82,7 @@ final class MirrorMoverLocomotor extends Locomotor {
 
     final static void f(int param0) {
         if (param0 != 29320) {
-          MirrorMoverLocomotor.e(-56);
+          MirrorMoverLocomotor.releaseStatics(-56);
         }
     }
 

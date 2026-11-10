@@ -113,25 +113,25 @@ final class gva implements mb {
                 var29 != 0) {
                 if (9 == var26 &&
                   var29 == 0) {
-                  var23 = ufa.field_e;
+                  var23 = PlayerProfile.field_e;
                 } else {
                   if (var26 == 8 &&
                     var29 == 0) {
-                    var23 = ufa.field_t;
+                    var23 = PlayerProfile.field_t;
                   } else {
                     if ((var26 != 15)) {
                       if (var26 == 16) {
                         if (var10 == 0) {
                           break regionExit1;
                         }
-                        var19 = ufa.field_r[1];
+                        var19 = PlayerProfile.field_r[1];
                         var20 = var16 * 512 * var12 / (var19.d() * var10);
                         var19.a((float)var8, (float)var9, var20, dfa.a(param2.f((byte) -127) << var21, 2048 << var21, -61), 0, var18, 1);
                         if (var29 == 0) {
                           break regionExit1;
                         }
                       }
-                      var23 = ufa.field_d;
+                      var23 = PlayerProfile.field_d;
                     }
                   }
                 }

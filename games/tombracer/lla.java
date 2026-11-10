@@ -22,7 +22,7 @@ final class lla {
         try {
           var3 = new String[]{param0, nga.field_o, of.field_a};
           var4 = new jea[]{param1, dqa.field_e, (jea) ((Object) jja.field_j)};
-          this.field_a = new bv(0L, up.field_a, var3, js.field_d, var4, 0);
+          this.field_a = new bv(0L, Effect.field_a, var3, js.field_d, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "lla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

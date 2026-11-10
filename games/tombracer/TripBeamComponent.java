@@ -5,7 +5,7 @@ final class TripBeamComponent extends SwitchComponent {
     static int[][] field_K;
     static String field_J;
 
-    public static void s(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_J = null;
         field_K = (int[][]) null;
         if (param0 != 25) {

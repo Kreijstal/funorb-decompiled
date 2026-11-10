@@ -192,7 +192,7 @@ abstract class dfa {
         if (param0 == 62) {
           rda.e(0);
           if (bl.b(param0 - 62)) {
-            ql.field_k.k(1, -2988);
+            ql.field_k.writeCipheredOpcode(1, -2988);
             bl.a(0, -1);
           }
           dea.a(60);
@@ -201,7 +201,7 @@ abstract class dfa {
         dfa.a(-50, false, 79);
         rda.e(0);
         if (bl.b(param0 - 62)) {
-          ql.field_k.k(1, -2988);
+          ql.field_k.writeCipheredOpcode(1, -2988);
           bl.a(0, -1);
         }
         dea.a(60);
@@ -213,7 +213,7 @@ abstract class dfa {
 
     abstract void a(boolean param0, boolean param1, int param2);
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         if (param0 != -104) {
           field_b = (gb) null;

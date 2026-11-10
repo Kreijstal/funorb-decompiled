@@ -1,67 +1,67 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cfa implements dv {
-    private int field_a;
-    private int[] field_i;
-    private int field_h;
-    private int field_f;
+final class CommonChooseReward implements dv {
+    private int currentPlayerTicks;
+    private int[] reward;
+    private int currentPlayerId;
+    private int takenCount;
     static jea field_c;
-    private boolean field_e;
+    private boolean finished;
     w field_g;
     private MatchState field_j;
-    private int field_d;
+    private int currentPos;
     static long field_b;
 
     final void a(int param0, byte param1) {
         int var3;
-        if (this.field_e) {
+        if (this.finished) {
           return;
         }
         if (-1 == param0) {
-          this.field_j.players[this.field_h].b(18202625, -1);
+          this.field_j.players[this.currentPlayerId].b(18202625, -1);
         } else {
           var3 = 63;
-          if (3 == this.field_i[param0]) {
+          if (3 == this.reward[param0]) {
             var3 = 64;
           } else {
-            if (this.field_i[param0] == 4) {
+            if (this.reward[param0] == 4) {
               var3 = 64;
             }
           }
-          if (this.field_i[param0] == 5) {
+          if (this.reward[param0] == 5) {
             var3 = 65;
           } else {
-            if (this.field_i[param0] == 6) {
+            if (this.reward[param0] == 6) {
               var3 = 65;
             }
           }
           if (this.field_g != null) {
             this.field_g.a(new fm(var3, 0, 0, 0), -58);
           }
-          this.field_j.players[this.field_h].b(18202625, this.field_i[param0]);
-          this.field_i[param0] = -1;
-          this.field_f = this.field_f + 1;
+          this.field_j.players[this.currentPlayerId].b(18202625, this.reward[param0]);
+          this.reward[param0] = -1;
+          this.takenCount = this.takenCount + 1;
         }
         if (param0 >= 0) {
         }
         if (param1 <= 86) {
-          this.field_i = (int[]) null;
+          this.reward = (int[]) null;
         }
-        this.field_a = 0;
-        this.field_d = this.field_d + 1;
+        this.currentPlayerTicks = 0;
+        this.currentPos = this.currentPos + 1;
         this.d(-14447);
     }
 
     final int c(int param0) {
         if (param0 != -1) {
           this.toString();
-          return this.field_a;
+          return this.currentPlayerTicks;
         }
-        return this.field_a;
+        return this.currentPlayerTicks;
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 103) {
           return;
         }
@@ -73,7 +73,7 @@ final class cfa implements dv {
         if (param1 == -1) {
           return -1;
         }
-        return this.field_i[param1];
+        return this.reward[param1];
     }
 
     private final void d(int param0) {
@@ -81,91 +81,91 @@ final class cfa implements dv {
         var3 = TombRacer.field_G ? 1 : 0;
         if (param0 != -14447) {
           this.field_g = (w) null;
-          if (this.field_f >= this.field_i.length) {
-            this.field_h = -1;
+          if (this.takenCount >= this.reward.length) {
+            this.currentPlayerId = -1;
           } else {
-            if (this.field_j.field_P <= this.field_d) {
-              this.field_h = -1;
+            if (this.field_j.field_P <= this.currentPos) {
+              this.currentPlayerId = -1;
             } else {
-              this.field_h = this.field_j.field_c.field_e[this.field_d];
-              if (this.field_h == -1) {
-                this.field_h = -1;
+              this.currentPlayerId = this.field_j.field_c.field_e[this.currentPos];
+              if (this.currentPlayerId == -1) {
+                this.currentPlayerId = -1;
               } else {
-                if (!this.field_j.b((byte) 90, this.field_h)) {
-                  this.field_h = -1;
+                if (!this.field_j.b((byte) 90, this.currentPlayerId)) {
+                  this.currentPlayerId = -1;
                 }
               }
             }
           }
-          if (this.field_h != -1) {
+          if (this.currentPlayerId != -1) {
             return;
           }
-          this.field_e = true;
+          this.finished = true;
           return;
         }
-        if (this.field_f >= this.field_i.length) {
-          this.field_h = -1;
-          if (this.field_h != -1) {
+        if (this.takenCount >= this.reward.length) {
+          this.currentPlayerId = -1;
+          if (this.currentPlayerId != -1) {
             return;
           }
-          this.field_e = true;
+          this.finished = true;
           return;
         }
-        if (this.field_j.field_P <= this.field_d) {
-          this.field_h = -1;
-          if (this.field_h != -1) {
+        if (this.field_j.field_P <= this.currentPos) {
+          this.currentPlayerId = -1;
+          if (this.currentPlayerId != -1) {
             return;
           }
-          this.field_e = true;
+          this.finished = true;
           return;
         }
-        this.field_h = this.field_j.field_c.field_e[this.field_d];
-        if (this.field_h == -1) {
-          this.field_h = -1;
-          if (this.field_h != -1) {
+        this.currentPlayerId = this.field_j.field_c.field_e[this.currentPos];
+        if (this.currentPlayerId == -1) {
+          this.currentPlayerId = -1;
+          if (this.currentPlayerId != -1) {
             return;
           }
-          this.field_e = true;
+          this.finished = true;
           return;
         }
-        if (this.field_j.b((byte) 90, this.field_h)) {
-          if (this.field_h != -1) {
+        if (this.field_j.b((byte) 90, this.currentPlayerId)) {
+          if (this.currentPlayerId != -1) {
             return;
           }
-          this.field_e = true;
+          this.finished = true;
           return;
         }
-        this.field_h = -1;
-        if (this.field_h == -1) {
-          this.field_e = true;
+        this.currentPlayerId = -1;
+        if (this.currentPlayerId == -1) {
+          this.finished = true;
         }
     }
 
     final int b(byte param0) {
         if (param0 <= 18) {
-          this.field_h = 121;
-          return this.field_d;
+          this.currentPlayerId = 121;
+          return this.currentPos;
         }
-        return this.field_d;
+        return this.currentPos;
     }
 
     final int a(int param0) {
         if (param0 != -28958) {
           return 27;
         }
-        return this.field_i.length;
+        return this.reward.length;
     }
 
     final boolean f(int param0) {
         if (param0 != -29004) {
           return true;
         }
-        return this.field_e;
+        return this.finished;
     }
 
     final static cn e(int param0) {
         if (param0 != -1) {
-          cfa.e(11);
+          CommonChooseReward.e(11);
           return of.a(false, gga.field_M.field_c);
         }
         return of.a(false, gga.field_M.field_c);
@@ -173,13 +173,13 @@ final class cfa implements dv {
 
     public final String toString() {
         String var4 = "CommonChooseReward[";
-        String var5 = var4 + " finished=" + this.field_e;
-        String var6 = var5 + " takenCount=" + this.field_f;
-        String var7 = var6 + " currentPos=" + this.field_d;
-        String var3 = var7 + " currentPlayerId=" + this.field_h;
+        String var5 = var4 + " finished=" + this.finished;
+        String var6 = var5 + " takenCount=" + this.takenCount;
+        String var7 = var6 + " currentPos=" + this.currentPos;
+        String var3 = var7 + " currentPlayerId=" + this.currentPlayerId;
         String var8 = var3;
-        String var9 = var8 + " reward={" + this.field_i[0] + ", " + this.field_i[1] + ", " + this.field_i[2] + "}";
-        String var10 = var9 + " currentPlayerTicks=" + this.field_a;
+        String var9 = var8 + " reward={" + this.reward[0] + ", " + this.reward[1] + ", " + this.reward[2] + "}";
+        String var10 = var9 + " currentPlayerTicks=" + this.currentPlayerTicks;
         String var1 = var10 + "]";
         return var1;
     }
@@ -187,67 +187,67 @@ final class cfa implements dv {
     final void d(byte param0) {
         if (param0 != -124) {
           field_b = -84L;
-          if (this.field_e) {
+          if (this.finished) {
             return;
           }
           if (this.field_g == null) {
-            if (-1 != this.field_h) {
-              this.field_a = this.field_a + 1;
+            if (-1 != this.currentPlayerId) {
+              this.currentPlayerTicks = this.currentPlayerTicks + 1;
               return;
             }
             this.d(-14447);
-            this.field_a = this.field_a + 1;
+            this.currentPlayerTicks = this.currentPlayerTicks + 1;
             return;
           }
           this.field_g.a(108, false);
-          if (-1 == this.field_h) {
+          if (-1 == this.currentPlayerId) {
             this.d(-14447);
-            this.field_a = this.field_a + 1;
+            this.currentPlayerTicks = this.currentPlayerTicks + 1;
             return;
           }
-          this.field_a = this.field_a + 1;
+          this.currentPlayerTicks = this.currentPlayerTicks + 1;
           return;
         }
-        if (this.field_e) {
+        if (this.finished) {
           return;
         }
         if (this.field_g != null) {
           this.field_g.a(108, false);
-          if (-1 != this.field_h) {
-            this.field_a = this.field_a + 1;
+          if (-1 != this.currentPlayerId) {
+            this.currentPlayerTicks = this.currentPlayerTicks + 1;
             return;
           }
           this.d(-14447);
-          this.field_a = this.field_a + 1;
+          this.currentPlayerTicks = this.currentPlayerTicks + 1;
           return;
         }
-        if (-1 != this.field_h) {
-          this.field_a = this.field_a + 1;
+        if (-1 != this.currentPlayerId) {
+          this.currentPlayerTicks = this.currentPlayerTicks + 1;
           return;
         }
         this.d(-14447);
-        this.field_a = this.field_a + 1;
+        this.currentPlayerTicks = this.currentPlayerTicks + 1;
     }
 
     final int g(int param0) {
         if (param0 != -1) {
           this.a(-107, 98);
-          return this.field_h;
+          return this.currentPlayerId;
         }
-        return this.field_h;
+        return this.currentPlayerId;
     }
 
     public final void a(BitPacketBuffer param0, boolean param1) {
         try {
-          this.field_i = fa.a(0, param0, 8, this.field_i);
-          this.field_d = param0.b((byte) 44, 3);
-          this.field_h = uma.a(4, param0, -26803);
-          this.field_a = param0.b((byte) 44, 16);
+          this.reward = fa.a(0, param0, 8, this.reward);
+          this.currentPos = param0.readBits((byte) 44, 3);
+          this.currentPlayerId = uma.a(4, param0, -26803);
+          this.currentPlayerTicks = param0.readBits((byte) 44, 16);
           if (param1) {
             this.a(99, -112);
           }
-          this.field_e = CircleMovementLocomotor.a(5907, param0);
-          this.field_f = param0.b((byte) 44, 2);
+          this.finished = CircleMovementLocomotor.a(5907, param0);
+          this.takenCount = param0.readBits((byte) 44, 2);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "cfa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -255,17 +255,17 @@ final class cfa implements dv {
 
     final boolean a(byte param0, int param1) {
         int var3 = -121 % ((48 - param0) / 59);
-        return this.field_i[param1] != -1 ? true : false;
+        return this.reward[param1] != -1 ? true : false;
     }
 
-    cfa() {
-        this.field_h = -1;
-        this.field_f = 0;
+    CommonChooseReward() {
+        this.currentPlayerId = -1;
+        this.takenCount = 0;
     }
 
-    cfa(MatchState param0) {
-        this.field_h = -1;
-        this.field_f = 0;
+    CommonChooseReward(MatchState param0) {
+        this.currentPlayerId = -1;
+        this.takenCount = 0;
         try {
           this.field_j = param0;
         } catch (RuntimeException runtimeException) {
@@ -282,9 +282,9 @@ final class cfa implements dv {
         BitPacketBuffer var7;
         var6 = TombRacer.field_G ? 1 : 0;
         var2 = new IsaacCipher(new int[]{this.field_j.field_C});
-        this.field_i = new int[3];
+        this.reward = new int[3];
         var3 = new boolean[7];
-        for (var4 = 0; this.field_i.length > var4; var4++) {
+        for (var4 = 0; this.reward.length > var4; var4++) {
           var5 = var2.a(7, param0 ^ 28624);
           while (var3[var5]) {
             var5++;
@@ -293,7 +293,7 @@ final class cfa implements dv {
             }
             var5 = 0;
           }
-          this.field_i[var4] = var5;
+          this.reward[var4] = var5;
           var3[var5] = true;
         }
         if (param0 == 28624) {
@@ -307,7 +307,7 @@ final class cfa implements dv {
         if (null != this.field_g) {
           this.field_g.a(new fm(61, 0, 0, 0), -58);
           if (param0 >= -44) {
-            this.field_i = (int[]) null;
+            this.reward = (int[]) null;
             return;
           }
           return;
@@ -315,7 +315,7 @@ final class cfa implements dv {
         if (param0 < -44) {
           return;
         }
-        this.field_i = (int[]) null;
+        this.reward = (int[]) null;
     }
 
     static {

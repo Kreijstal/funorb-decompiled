@@ -97,7 +97,7 @@ final class ifa extends ci {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_n = null;
         int var1 = 25 % ((param0 + 28) / 51);
         field_r = null;

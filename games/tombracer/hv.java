@@ -25,7 +25,7 @@ final class hv extends ci {
         int stackIn_10_2 = 0;
         var7 = TombRacer.field_G ? 1 : 0;
         if (param0 != 1) {
-          hv.a(true);
+          hv.releaseStatics(true);
         }
         var8 = this.field_i.a((byte) -112, param1);
         var3 = var8;
@@ -83,7 +83,7 @@ final class hv extends ci {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_n = null;
         field_o = null;
         if (param0) {

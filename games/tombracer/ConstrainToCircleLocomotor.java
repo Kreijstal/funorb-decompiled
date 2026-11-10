@@ -131,8 +131,8 @@ final class ConstrainToCircleLocomotor extends ConstraintLocomotor {
     ConstrainToCircleLocomotor(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
-          this.field_u = param1.b((byte) 44, 10) << 16;
-          this.field_s = param1.b((byte) 44, 1) == 1 ? true : false;
+          this.field_u = param1.readBits((byte) 44, 10) << 16;
+          this.field_s = param1.readBits((byte) 44, 1) == 1 ? true : false;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "uqa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -152,14 +152,14 @@ final class ConstrainToCircleLocomotor extends ConstraintLocomotor {
           if (param1 > -78) {
             this.c(-25);
           }
-          param0.a((byte) -5, this.field_u >> 16, 10);
-          param0.a((byte) 78, !this.field_s ? 0 : 1, 1);
+          param0.writeBits((byte) -5, this.field_u >> 16, 10);
+          param0.writeBits((byte) 78, !this.field_s ? 0 : 1, 1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "uqa.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public static void j(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_x = null;
         if (param0 >= -74) {
           return;

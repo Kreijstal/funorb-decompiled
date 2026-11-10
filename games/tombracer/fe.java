@@ -10,14 +10,14 @@ final class fe extends paa {
     private boolean field_G;
     private tra field_D;
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 25) {
           field_C = null;
           field_A = null;
           field_F = null;
           return;
         }
-        fe.e(83);
+        fe.releaseStatics(83);
         field_C = null;
         field_A = null;
         field_F = null;

@@ -36,9 +36,9 @@ final class ao extends dg {
         }
     }
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > -113) {
-          ao.i(100);
+          ao.releaseStatics(100);
           field_m = null;
           return;
         }

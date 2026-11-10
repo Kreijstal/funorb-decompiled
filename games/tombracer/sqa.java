@@ -89,7 +89,7 @@ abstract class sqa {
 
     abstract void a(int param0, boolean param1);
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 > -127) {
           field_a = (String) null;

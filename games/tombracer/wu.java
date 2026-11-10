@@ -56,7 +56,7 @@ final class wu implements mfa {
         int var6 = 0;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
-          var4_int = param1.b((byte) 44, 6);
+          var4_int = param1.readBits((byte) 44, 6);
           if (param2) {
             field_a = (jta) null;
           }
@@ -176,7 +176,7 @@ final class wu implements mfa {
           if (param0 != 15682) {
             field_a = (jta) null;
           }
-          param1.a((byte) -128, param2.h((byte) 81), 6);
+          param1.writeBits((byte) -128, param2.h((byte) 81), 6);
           param2.a((byte) 88, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

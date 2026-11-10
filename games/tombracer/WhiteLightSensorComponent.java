@@ -129,7 +129,7 @@ final class WhiteLightSensorComponent extends SwitchComponent {
         return 7;
     }
 
-    public static void s(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_K = null;
         if (param0 >= -34) {
           field_J = (String) null;

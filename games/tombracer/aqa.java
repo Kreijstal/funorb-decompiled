@@ -17,9 +17,9 @@ final class aqa {
         hw.a((byte) -111, 1, 78, var3);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -59) {
-          aqa.a((byte) -84);
+          aqa.releaseStatics((byte) -84);
           field_b = null;
           field_c = null;
           return;

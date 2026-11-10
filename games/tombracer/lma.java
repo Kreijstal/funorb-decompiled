@@ -302,8 +302,8 @@ final class lma extends dg {
           }
           super.a(127, param1, param2);
           if (17 <= param1.field_E) {
-            this.field_y = param2.b((byte) 44, 4);
-            stackIn_7_1 = (param2.b((byte) 44, 1) == 1);
+            this.field_y = param2.readBits((byte) 44, 4);
+            stackIn_7_1 = (param2.readBits((byte) 44, 1) == 1);
             this.field_p = stackIn_7_1;
           } else {
             this.field_p = true;
@@ -885,8 +885,8 @@ final class lma extends dg {
         try {
           super.a((byte) 86, param1);
           int var3_int = -57 / ((param0 + 8) / 40);
-          param1.a((byte) -19, this.field_y, 4);
-          param1.a((byte) 111, !this.field_p ? 0 : 1, 1);
+          param1.writeBits((byte) -19, this.field_y, 4);
+          param1.writeBits((byte) 111, !this.field_p ? 0 : 1, 1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "lma.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -1106,7 +1106,7 @@ final class lma extends dg {
         super(param0, param1, param2);
     }
 
-    public static void n(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_r = null;
         int var1 = -22 % ((param0 - 6) / 42);
     }

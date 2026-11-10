@@ -39,12 +39,12 @@ abstract class ConstraintLocomotor extends Locomotor {
             return;
           }
           if (param0.field_E < 25) {
-            this.field_o = param1.b((byte) 44, 10) << 16;
-            this.field_q = param1.b((byte) 44, 10) << 16;
+            this.field_o = param1.readBits((byte) 44, 10) << 16;
+            this.field_q = param1.readBits((byte) 44, 10) << 16;
             return;
           }
-          this.field_o = CoinItemComponent.a(true, 12, param1.b((byte) 44, 12)) << 16;
-          this.field_q = CoinItemComponent.a(true, 12, param1.b((byte) 44, 12)) << 16;
+          this.field_o = CoinItemComponent.a(true, 12, param1.readBits((byte) 44, 12)) << 16;
+          this.field_q = CoinItemComponent.a(true, 12, param1.readBits((byte) 44, 12)) << 16;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -70,10 +70,10 @@ abstract class ConstraintLocomotor extends Locomotor {
         try {
           super.a(param0, (byte) -120);
           if (param1 >= -78) {
-            ConstraintLocomotor.e(2);
+            ConstraintLocomotor.releaseStatics(2);
           }
-          param0.a((byte) -39, dqa.a(true, this.field_o >> 16, 12), 12);
-          param0.a((byte) 45, dqa.a(true, this.field_q >> 16, 12), 12);
+          param0.writeBits((byte) -39, dqa.a(true, this.field_o >> 16, 12), 12);
+          param0.writeBits((byte) 45, dqa.a(true, this.field_q >> 16, 12), 12);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "osa.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -87,7 +87,7 @@ abstract class ConstraintLocomotor extends Locomotor {
         return this.d((byte) -52) + this.field_o;
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_r = (byte[][][]) null;
         field_p = null;
         int var1 = -33 / ((-22 - param0) / 52);

@@ -123,7 +123,7 @@ class b extends ae implements tpa {
         }
     }
 
-    public static void h(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_v = null;
         int var1 = -18 / ((param0 - 38) / 48);
     }

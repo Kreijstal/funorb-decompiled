@@ -13,7 +13,7 @@ final class TripBeamBehaviour extends Behaviour implements ut {
     private int field_x;
     private mma field_p;
     private int field_s;
-    private up field_z;
+    private Effect field_z;
     private int field_E;
     private boolean field_A;
     static String[][] field_w;
@@ -37,7 +37,7 @@ final class TripBeamBehaviour extends Behaviour implements ut {
             this.field_z = null;
             return;
           }
-          this.field_z = new up(this.e(6), 4, 128);
+          this.field_z = new Effect(this.e(6), 4, 128);
           return;
         }
         this.q((byte) 92);
@@ -45,7 +45,7 @@ final class TripBeamBehaviour extends Behaviour implements ut {
           this.field_z = null;
           return;
         }
-        this.field_z = new up(this.e(6), 4, 128);
+        this.field_z = new Effect(this.e(6), 4, 128);
     }
 
     final void g(int param0) {
@@ -420,10 +420,10 @@ final class TripBeamBehaviour extends Behaviour implements ut {
           super.a(param0, param1);
           this.field_C.a(this.h((byte) 118), (byte) 113, param1);
           this.field_t.a(15637, param1);
-          param1.a((byte) -125, this.field_q >> 16, 10);
-          param1.a((byte) -127, !this.field_v ? 0 : 1, 1);
-          param1.a((byte) 110, !this.field_D ? 0 : 1, 1);
-          param1.a((byte) -125, this.field_n >> 16, 8);
+          param1.writeBits((byte) -125, this.field_q >> 16, 10);
+          param1.writeBits((byte) -127, !this.field_v ? 0 : 1, 1);
+          param1.writeBits((byte) 110, !this.field_D ? 0 : 1, 1);
+          param1.writeBits((byte) -125, this.field_n >> 16, 8);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wh.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -476,7 +476,7 @@ final class TripBeamBehaviour extends Behaviour implements ut {
         this.field_o = 58;
     }
 
-    public static void l(int param0) {
+    public static void releaseStatics(int param0) {
         field_w = (String[][]) null;
         field_y = null;
         if (param0 >= -116) {
@@ -491,10 +491,10 @@ final class TripBeamBehaviour extends Behaviour implements ut {
         try {
           this.field_C = new jma(15, param0, param1);
           this.field_t = new mg(param0.field_E, param1);
-          this.field_q = param1.b((byte) 44, 10) << 16;
-          this.field_v = param1.b((byte) 44, 1) == 1 ? true : false;
-          this.field_D = param1.b((byte) 44, 1) == 1 ? true : false;
-          this.field_n = param1.b((byte) 44, 8) << 16;
+          this.field_q = param1.readBits((byte) 44, 10) << 16;
+          this.field_v = param1.readBits((byte) 44, 1) == 1 ? true : false;
+          this.field_D = param1.readBits((byte) 44, 1) == 1 ? true : false;
+          this.field_n = param1.readBits((byte) 44, 8) << 16;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

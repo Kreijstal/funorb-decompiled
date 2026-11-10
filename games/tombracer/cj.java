@@ -11,7 +11,7 @@ final class cj implements isa {
     private int field_c;
     private int field_g;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 <= 22) {
           return;
         }
@@ -52,8 +52,8 @@ final class cj implements isa {
                 vc.field_q.payload[var5_int] = var4_ref_rha.field_g[var5_int];
               }
               vua.field_B = hla.field_xb;
-              hla.field_xb = ufa.field_c;
-              ufa.field_c = oka.field_z;
+              hla.field_xb = PlayerProfile.field_c;
+              PlayerProfile.field_c = oka.field_z;
               oka.field_z = var4_ref_rha.field_i;
               return true;
             }
@@ -64,7 +64,7 @@ final class cj implements isa {
               if (!ama.a(1, -1)) {
                 return false;
               }
-              GameKeyHandler.field_b = vc.field_q.j(-83);
+              GameKeyHandler.field_b = vc.field_q.readCipheredOpcode(-83);
               vc.field_q.position = 0;
               uca.field_d = param0[GameKeyHandler.field_b];
             }
@@ -73,8 +73,8 @@ final class cj implements isa {
             }
             if (0 == WallCrusherComponent.field_H) {
               vua.field_B = hla.field_xb;
-              hla.field_xb = ufa.field_c;
-              ufa.field_c = oka.field_z;
+              hla.field_xb = PlayerProfile.field_c;
+              PlayerProfile.field_c = oka.field_z;
               oka.field_z = GameKeyHandler.field_b;
               GameKeyHandler.field_b = -1;
               return true;

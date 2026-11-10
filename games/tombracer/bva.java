@@ -6,7 +6,7 @@ final class bva {
     static float field_c;
     static String field_a;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 > -7) {
           field_b = (fta) null;
           field_b = null;
@@ -21,7 +21,7 @@ final class bva {
         long var1 = 0L;
         long var1Lifetime1;
         if (param0 != -107) {
-          bva.a((byte) 0);
+          bva.releaseStatics((byte) 0);
           var1 = System.currentTimeMillis();
           if (var1 < dca.field_o) {
             br.field_p = br.field_p + (-var1 + dca.field_o);

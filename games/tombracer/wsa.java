@@ -96,7 +96,7 @@ final class wsa extends ci {
         int var14;
         var14 = TombRacer.field_G ? 1 : 0;
         if (param1 != 27261) {
-          wsa.c(81);
+          wsa.releaseStatics(81);
         }
         if (param3 <= 2048) {
           stackIn_5_0 = (param0 + 4096) * param3 >> 12;
@@ -158,7 +158,7 @@ final class wsa extends ci {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 >= -27) {
           field_v = (su) null;
         }

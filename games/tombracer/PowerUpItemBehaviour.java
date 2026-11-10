@@ -43,7 +43,7 @@ final class PowerUpItemBehaviour extends ItemBehaviour {
         }
     }
 
-    public static void d(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_t = null;
         if (param0) {
           field_u = (boolean[][]) null;

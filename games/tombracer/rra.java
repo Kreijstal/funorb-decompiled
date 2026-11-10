@@ -160,9 +160,9 @@ abstract class rra {
         return true;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
-          rra.a(false);
+          rra.releaseStatics(false);
           field_a = null;
           field_e = null;
           return;
@@ -179,7 +179,7 @@ abstract class rra {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         if (param4 != 0) {
-          rra.a(false);
+          rra.releaseStatics(false);
         }
         if (param3 == param5) {
           nf.a(param5, param2, param6, param0, param7, param1, -91);

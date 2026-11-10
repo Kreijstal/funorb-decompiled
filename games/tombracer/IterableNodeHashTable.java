@@ -12,10 +12,10 @@ final class IterableNodeHashTable implements Iterable {
     static int[] field_c;
     private int field_b;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         if (param0 != 33) {
-          IterableNodeHashTable.b(99);
+          IterableNodeHashTable.releaseStatics(99);
         }
         field_f = null;
     }

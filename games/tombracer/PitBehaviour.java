@@ -271,16 +271,16 @@ final class PitBehaviour extends Behaviour {
         this.field_s = false;
         this.field_r = false;
         try {
-          this.field_n = param1.b((byte) 44, 8);
-          stackIn_4_1 = (1 == param1.b((byte) 44, 1));
+          this.field_n = param1.readBits((byte) 44, 8);
+          stackIn_4_1 = (1 == param1.readBits((byte) 44, 1));
           this.field_r = stackIn_4_1;
           if (param0.field_E < 4) {
             this.field_u = jm.field_l;
           } else {
-            this.field_u = param1.b((byte) 44, 10) << 16;
+            this.field_u = param1.readBits((byte) 44, 10) << 16;
           }
           if (param0.field_E >= 11) {
-            stackIn_12_1 = (param1.b((byte) 44, 1) == 1);
+            stackIn_12_1 = (param1.readBits((byte) 44, 1) == 1);
             this.field_s = stackIn_12_1;
             this.c(0);
           } else {
@@ -317,10 +317,10 @@ final class PitBehaviour extends Behaviour {
     final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
-          param1.a((byte) 71, this.field_n, 8);
-          param1.a((byte) 34, this.field_r ? 1 : 0, 1);
-          param1.a((byte) 69, this.field_u >> 16, 10);
-          param1.a((byte) -128, !this.field_s ? 0 : 1, 1);
+          param1.writeBits((byte) 71, this.field_n, 8);
+          param1.writeBits((byte) 34, this.field_r ? 1 : 0, 1);
+          param1.writeBits((byte) 69, this.field_u >> 16, 10);
+          param1.writeBits((byte) -128, !this.field_s ? 0 : 1, 1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "mo.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

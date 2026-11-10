@@ -38,7 +38,7 @@ final class mca {
         try {
           var7 = ql.field_k;
           var8 = var7;
-          var8.k(param2, -2988);
+          var8.writeCipheredOpcode(param2, -2988);
           var8.position = var8.position + 1;
           var4 = var8.position;
           var8.i(1, 0);
@@ -60,7 +60,7 @@ final class mca {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         if (param0 != 0) {
           field_d = (String) null;

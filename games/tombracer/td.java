@@ -112,7 +112,7 @@ final class td extends vpa {
         this.field_e = ft.field_c;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > -112) {
           return;
         }

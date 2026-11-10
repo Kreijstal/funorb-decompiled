@@ -91,7 +91,7 @@ final class uua {
             param5 = param5 | -2147483648;
           }
         } else {
-          uua.a((byte) -63);
+          uua.releaseStatics((byte) -63);
           if (param2) {
             if (param5 != 0) {
               if (!param3) {
@@ -271,7 +271,7 @@ final class uua {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 33 / ((-82 - param0) / 38);
         field_a = null;
     }

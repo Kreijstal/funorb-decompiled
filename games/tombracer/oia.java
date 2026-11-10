@@ -10,7 +10,7 @@ final class oia implements gs {
 
     public final boolean d(byte param0) {
         if (param0 != 48) {
-          oia.b(true);
+          oia.releaseStatics(true);
           return this.field_c.d((byte) 48);
         }
         return this.field_c.d((byte) 48);
@@ -76,7 +76,7 @@ final class oia implements gs {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_e = null;
         field_d = null;
         if (param0) {
@@ -97,7 +97,7 @@ final class oia implements gs {
         try {
           var6 = ql.field_k;
           BitPacketBuffer var3 = var6;
-          var6.k(param0, -2988);
+          var6.writeCipheredOpcode(param0, -2988);
           var6.position = var6.position + 1;
           var4 = var6.position;
           var6.i(1, 0);

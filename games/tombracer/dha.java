@@ -147,7 +147,7 @@ final class dha {
           }
         }
         if (13 == fna.field_h) {
-          ufa.a(true);
+          PlayerProfile.a(true);
           var4 = 1;
           ni.field_c = false;
         }

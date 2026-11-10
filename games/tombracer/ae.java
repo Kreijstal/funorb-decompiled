@@ -134,14 +134,14 @@ class ae extends IntrusiveNode {
             if (param0 < -23) {
               var11 = of.a(1);
               if (var11 != null) {
-                afa.field_c.a(var11, vf.field_f, true, mi.field_f);
+                afa.field_c.a(var11, vf.field_f, true, ConsoleToken.field_f);
               }
               return;
             }
             this.field_m = -42;
             var10 = of.a(1);
             if (var10 != null) {
-              afa.field_c.a(var10, vf.field_f, true, mi.field_f);
+              afa.field_c.a(var10, vf.field_f, true, ConsoleToken.field_f);
             }
             return;
           }
@@ -150,7 +150,7 @@ class ae extends IntrusiveNode {
           if (var6 != 0) {
             var7 = of.a(1);
             if (var7 != null) {
-              afa.field_c.a(var7, vf.field_f, true, mi.field_f);
+              afa.field_c.a(var7, vf.field_f, true, ConsoleToken.field_f);
             }
             return;
           }
@@ -449,7 +449,7 @@ class ae extends IntrusiveNode {
         }
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = -111 / ((param0 - 81) / 44);
         field_k = null;
     }

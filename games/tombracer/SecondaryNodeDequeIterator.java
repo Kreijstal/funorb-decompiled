@@ -23,7 +23,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         return var1;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_e = null;
         field_a = null;

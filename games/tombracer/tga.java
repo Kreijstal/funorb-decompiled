@@ -12,7 +12,7 @@ final class tga {
         bea.g(param1, param3, param2, param4);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 < 40) {
           field_a = (GraphicsToolkit) null;

@@ -56,10 +56,10 @@ final class MovingWallComponent extends PathMoverComponent {
         }
     }
 
-    public static void D(int param0) {
+    public static void releaseStatics(int param0) {
         field_N = null;
         if (param0 != 15) {
-          MovingWallComponent.D(-122);
+          MovingWallComponent.releaseStatics(-122);
           field_M = null;
           return;
         }

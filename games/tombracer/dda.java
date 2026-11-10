@@ -7,12 +7,12 @@ final class dda extends IntrusiveNode {
 
     final GameEvent a(byte param0) {
         if (param0 != -125) {
-          dda.a(112);
+          dda.releaseStatics(112);
         }
         return this.field_g;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         if (param0 != 30967) {
           field_f = (int[]) null;

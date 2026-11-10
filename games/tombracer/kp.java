@@ -9,7 +9,7 @@ final class kp {
     private dd field_b;
     static String field_f;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_f = null;
         if (param0) {
           return;
@@ -77,7 +77,7 @@ final class kp {
         if (this.field_a.f()) {
           var9 = this.field_e.a(124, var6, var6, param0, 0.699999988079071f, false);
           float[] var7_array = var9;
-          var4 = this.field_a.a(var9, gpa.field_a, true, 0 != var5.field_r ? true : false, var6, var6);
+          var4 = this.field_a.a(var9, SwitchableId.field_a, true, 0 != var5.field_r ? true : false, var6, var6);
           var4.a((byte) -105, var5.field_b, var5.field_n);
           this.field_b.a(29166, var4, (long)param0);
           return var4;

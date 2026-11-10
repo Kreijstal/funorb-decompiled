@@ -18,7 +18,7 @@ final class EventFactory {
             stackIn_2_0 = (GameEvent) null;
             return stackIn_2_0;
           }
-          var3_int = param1.b((byte) 44, 4);
+          var3_int = param1.readBits((byte) 44, 4);
           var4 = var3_int;
           if (var4 == 0) {
             stackIn_5_0 = new gfa(param2, param1);

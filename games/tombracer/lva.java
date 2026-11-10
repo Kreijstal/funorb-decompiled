@@ -238,9 +238,9 @@ final class lva extends ci {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= -34) {
-          lva.d((byte) 124);
+          lva.releaseStatics((byte) 124);
         }
         field_o = null;
         field_m = null;

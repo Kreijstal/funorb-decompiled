@@ -44,7 +44,7 @@ final class di {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         field_f = null;
         if (param0 != -22765) {
@@ -55,7 +55,7 @@ final class di {
     }
 
     di(d param0, ei[] param1) {
-        this(tba.a((byte) 98), cfa.e(-1), param0, dsa.field_c, param1);
+        this(tba.a((byte) 98), CommonChooseReward.e(-1), param0, dsa.field_c, param1);
     }
 
     final boolean b(int param0) {

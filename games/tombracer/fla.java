@@ -76,7 +76,7 @@ final class fla extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         if (param0 != 0) {
           field_f = (IntrusiveDeque) null;

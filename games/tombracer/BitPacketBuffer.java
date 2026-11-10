@@ -3,32 +3,32 @@
  */
 final class BitPacketBuffer extends PacketBuffer {
     static String[][] field_l;
-    private int field_i;
-    private IsaacCipher field_n;
+    private int bitPosition;
+    private IsaacCipher opcodeCipher;
     static String field_p;
     static String field_j;
     static String field_m;
-    private int field_k;
+    private int bitsLeftInByte;
     static String field_o;
 
     BitPacketBuffer(byte[] param0) {
         super(param0);
     }
 
-    final int j(int param0) {
+    final int readCipheredOpcode(int param0) {
         int fieldTemp$0 = 0;
         if (param0 >= -25) {
-          this.field_i = 127;
+          this.bitPosition = 127;
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
-          return 255 & this.payload[fieldTemp$0] - this.field_n.b(104);
+          return 255 & this.payload[fieldTemp$0] - this.opcodeCipher.b(104);
         }
         int fieldTemp$1 = this.position;
         this.position = this.position + 1;
-        return 255 & this.payload[fieldTemp$1] - this.field_n.b(104);
+        return 255 & this.payload[fieldTemp$1] - this.opcodeCipher.b(104);
     }
 
-    final void a(byte param0, int param1, int param2) {
+    final void writeBits(byte param0, int param1, int param2) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int var4;
@@ -36,24 +36,24 @@ final class BitPacketBuffer extends PacketBuffer {
         var5 = TombRacer.field_G ? 1 : 0;
         var4 = 9 / ((-85 - param0) / 40);
         param1 = param1 & fca.field_b[param2];
-        while (this.field_k < param2) {
-          param2 = param2 - this.field_k;
+        while (this.bitsLeftInByte < param2) {
+          param2 = param2 - this.bitsLeftInByte;
           fieldTemp$1 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte)(this.payload[fieldTemp$1] + (param1 >>> param2));
           this.payload[this.position] = (byte) 0;
-          this.field_k = 8;
+          this.bitsLeftInByte = 8;
         }
-        if (this.field_k != param2) {
-          this.field_k = this.field_k - param2;
-          this.payload[this.position] = (byte)(this.payload[this.position] + (param1 << this.field_k));
+        if (this.bitsLeftInByte != param2) {
+          this.bitsLeftInByte = this.bitsLeftInByte - param2;
+          this.payload[this.position] = (byte)(this.payload[this.position] + (param1 << this.bitsLeftInByte));
           return;
         }
         fieldTemp$0 = this.position;
         this.position = this.position + 1;
         this.payload[fieldTemp$0] = (byte)(this.payload[fieldTemp$0] + param1);
         this.payload[this.position] = (byte) 0;
-        this.field_k = 8;
+        this.bitsLeftInByte = 8;
         return;
     }
 
@@ -61,35 +61,35 @@ final class BitPacketBuffer extends PacketBuffer {
         super(param0);
     }
 
-    final void h(byte param0) {
-        this.field_i = this.position * 8;
+    final void beginBitAccess(byte param0) {
+        this.bitPosition = this.position * 8;
         int var2 = -117 % ((61 - param0) / 49);
     }
 
-    final void i(int param0) {
+    final void beginBitWrite(int param0) {
         this.payload[this.position] = (byte) 0;
-        this.field_k = param0;
+        this.bitsLeftInByte = param0;
     }
 
-    final void a(int param0, int[] param1) {
+    final void initializeCipher(int param0, int[] param1) {
         try {
-          this.field_n = new IsaacCipher(param1);
+          this.opcodeCipher = new IsaacCipher(param1);
           if (param0 != -26185) {
-            this.b((byte) -116, 2);
+            this.readBits((byte) -116, 2);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "kh.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final int b(byte param0, int param1) {
+    final int readBits(byte param0, int param1) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int var6 = TombRacer.field_G ? 1 : 0;
-        int var3 = this.field_i >> 3;
-        int var4 = 8 - (this.field_i & 7);
+        int var3 = this.bitPosition >> 3;
+        int var4 = 8 - (this.bitPosition & 7);
         int var5 = 0;
-        this.field_i = this.field_i + param1;
+        this.bitPosition = this.bitPosition + param1;
         if (param0 == 44) {
           while (var4 < param1) {
             incrementValue$0 = var3;
@@ -121,12 +121,12 @@ final class BitPacketBuffer extends PacketBuffer {
         return var5;
     }
 
-    final void i(byte param0) {
-        this.position = (this.field_i + 7) / 8;
+    final void endBitAccess(byte param0) {
+        this.position = (this.bitPosition + 7) / 8;
         if (param0 == 98) {
           return;
         }
-        this.k(-21, -101);
+        this.writeCipheredOpcode(-21, -101);
     }
 
     final void j(int param0, int param1) {
@@ -144,13 +144,13 @@ final class BitPacketBuffer extends PacketBuffer {
         int var3Lifetime1;
         param0 = param0 & 15;
         if (param1 == 4) {
-          var3 = this.field_k;
+          var3 = this.bitsLeftInByte;
           if (var3 == 4) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
             this.payload[fieldTemp$0] = (byte)(this.payload[fieldTemp$0] + param0);
             this.payload[this.position] = (byte) 0;
-            this.field_k = 8;
+            this.bitsLeftInByte = 8;
             return;
           }
           if (var3 == 3) {
@@ -158,7 +158,7 @@ final class BitPacketBuffer extends PacketBuffer {
             this.position = this.position + 1;
             this.payload[fieldTemp$1] = (byte)(this.payload[fieldTemp$1] + (param0 >>> 1));
             this.payload[this.position] = (byte)(param0 << 7);
-            this.field_k = 7;
+            this.bitsLeftInByte = 7;
             return;
           }
           if (var3 == 2) {
@@ -166,7 +166,7 @@ final class BitPacketBuffer extends PacketBuffer {
             this.position = this.position + 1;
             this.payload[fieldTemp$4] = (byte)(this.payload[fieldTemp$4] + (param0 >>> 2));
             this.payload[this.position] = (byte)(param0 << 6);
-            this.field_k = 6;
+            this.bitsLeftInByte = 6;
             return;
           }
           if (var3 == 1) {
@@ -174,28 +174,28 @@ final class BitPacketBuffer extends PacketBuffer {
             this.position = this.position + 1;
             this.payload[fieldTemp$2] = (byte)(this.payload[fieldTemp$2] + (param0 >>> 3));
             this.payload[this.position] = (byte)(param0 << 5);
-            this.field_k = 5;
+            this.bitsLeftInByte = 5;
             return;
           }
           if (var3 != 0) {
-            this.field_k = this.field_k - 4;
-            this.payload[this.position] = (byte)(this.payload[this.position] + (param0 << this.field_k));
+            this.bitsLeftInByte = this.bitsLeftInByte - 4;
+            this.payload[this.position] = (byte)(this.payload[this.position] + (param0 << this.bitsLeftInByte));
             return;
           }
           fieldTemp$3 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$3] = (byte)(param0 << 4);
-          this.field_k = 4;
+          this.bitsLeftInByte = 4;
           return;
         }
         field_p = (String) null;
-        var3Lifetime1 = this.field_k;
+        var3Lifetime1 = this.bitsLeftInByte;
         if (var3Lifetime1 == 4) {
           fieldTemp$5 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$5] = (byte)(this.payload[fieldTemp$5] + param0);
           this.payload[this.position] = (byte) 0;
-          this.field_k = 8;
+          this.bitsLeftInByte = 8;
           return;
         }
         if (var3Lifetime1 == 3) {
@@ -203,7 +203,7 @@ final class BitPacketBuffer extends PacketBuffer {
           this.position = this.position + 1;
           this.payload[fieldTemp$6] = (byte)(this.payload[fieldTemp$6] + (param0 >>> 1));
           this.payload[this.position] = (byte)(param0 << 7);
-          this.field_k = 7;
+          this.bitsLeftInByte = 7;
           return;
         }
         if (var3Lifetime1 == 2) {
@@ -211,7 +211,7 @@ final class BitPacketBuffer extends PacketBuffer {
           this.position = this.position + 1;
           this.payload[fieldTemp$9] = (byte)(this.payload[fieldTemp$9] + (param0 >>> 2));
           this.payload[this.position] = (byte)(param0 << 6);
-          this.field_k = 6;
+          this.bitsLeftInByte = 6;
           return;
         }
         if (var3Lifetime1 == 1) {
@@ -219,18 +219,18 @@ final class BitPacketBuffer extends PacketBuffer {
           this.position = this.position + 1;
           this.payload[fieldTemp$7] = (byte)(this.payload[fieldTemp$7] + (param0 >>> 3));
           this.payload[this.position] = (byte)(param0 << 5);
-          this.field_k = 5;
+          this.bitsLeftInByte = 5;
           return;
         }
         if (var3Lifetime1 != 0) {
-          this.field_k = this.field_k - 4;
-          this.payload[this.position] = (byte)(this.payload[this.position] + (param0 << this.field_k));
+          this.bitsLeftInByte = this.bitsLeftInByte - 4;
+          this.payload[this.position] = (byte)(this.payload[this.position] + (param0 << this.bitsLeftInByte));
           return;
         }
         fieldTemp$8 = this.position;
         this.position = this.position + 1;
         this.payload[fieldTemp$8] = (byte)(param0 << 4);
-        this.field_k = 4;
+        this.bitsLeftInByte = 4;
         return;
     }
 
@@ -251,7 +251,7 @@ final class BitPacketBuffer extends PacketBuffer {
           while (var5_int < param3) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            param2[param0 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.field_n.b(120));
+            param2[param0 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.opcodeCipher.b(120));
             var5_int++;
           }
           return;
@@ -338,16 +338,16 @@ final class BitPacketBuffer extends PacketBuffer {
         }
     }
 
-    final void k(int param0, int param1) {
+    final void writeCipheredOpcode(int param0, int param1) {
         if (param1 != -2988) {
           return;
         }
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$0] = (byte)(this.field_n.b(104) + param0);
+        this.payload[fieldTemp$0] = (byte)(this.opcodeCipher.b(104) + param0);
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_j = null;
         field_m = null;
         field_l = (String[][]) null;
@@ -359,9 +359,9 @@ final class BitPacketBuffer extends PacketBuffer {
         field_j = (String) null;
     }
 
-    final void k(int param0) {
-        if (8 > this.field_k) {
-          this.field_k = 8;
+    final void endBitWrite(int param0) {
+        if (8 > this.bitsLeftInByte) {
+          this.bitsLeftInByte = 8;
           this.position = this.position + 1;
           if (param0 == -1826190686) {
             return;

@@ -13,9 +13,9 @@ final class sj {
         return "Hi!";
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
-          sj.a(false);
+          sj.releaseStatics(false);
         }
         field_b = null;
         field_a = null;

@@ -71,7 +71,7 @@ abstract class jg {
         if (param1 < -41) {
           return param2 + (param0 << 24);
         }
-        jg.b((byte) 86);
+        jg.releaseStatics((byte) 86);
         return param2 + (param0 << 24);
     }
 
@@ -82,7 +82,7 @@ abstract class jg {
         return MatchState.field_w;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 < 125) {
           return;
         }

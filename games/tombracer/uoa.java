@@ -12,7 +12,7 @@ final class uoa {
     static int[] field_a;
     static int field_f;
 
-    public static void a() {
+    public static void releaseStatics() {
         field_d = null;
         field_i = null;
         field_h = null;

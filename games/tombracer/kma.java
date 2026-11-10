@@ -27,11 +27,11 @@ abstract class kma implements nua {
         if (param0 >= 34) {
           return this.e(1890);
         }
-        kma.a((byte) -83);
+        kma.releaseStatics((byte) -83);
         return this.e(1890);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         if (param0 == -91) {
           field_a = null;

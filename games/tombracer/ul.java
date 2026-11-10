@@ -39,7 +39,7 @@ final class ul extends nqa implements na {
         boolean decompiledFrameRemainder0 = true;
         stackIn_3_0 = this;
         stackIn_3_1 = (Direct3DToolkit) (param0);
-        stackIn_3_2 = gpa.field_a;
+        stackIn_3_2 = SwitchableId.field_a;
         stackIn_3_3 = una.field_g;
         if (param2) {
           stackIn_3_0Lifetime1 = this;

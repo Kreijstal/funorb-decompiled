@@ -6,7 +6,7 @@ final class sba extends ci {
     static String field_n;
     static String field_m;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -14063) {
           return;
         }

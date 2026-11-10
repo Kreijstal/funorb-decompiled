@@ -611,7 +611,7 @@ final class kr {
         return (byte)kr.a(1, param0);
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_a = null;
     }
 

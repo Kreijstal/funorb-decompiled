@@ -41,7 +41,7 @@ final class fu extends dg {
         try {
           super.a((byte) 90, param1);
           var3_int = 39 % ((-8 - param0) / 40);
-          param1.a((byte) -128, this.field_u, 4);
+          param1.writeBits((byte) -128, this.field_u, 4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -167,7 +167,7 @@ final class fu extends dg {
             this.a((iq) null, -12, 26, 100, (byte) -44);
           }
           if (param1.field_E >= 16) {
-            this.field_u = param2.b((byte) 44, 4);
+            this.field_u = param2.readBits((byte) 44, 4);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

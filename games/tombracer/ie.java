@@ -7,10 +7,10 @@ final class ie extends qu {
     static jea field_h;
     static hja[] field_f;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         if (param0 != -13170) {
-          ie.b(98);
+          ie.releaseStatics(98);
           field_f = null;
           field_h = null;
           return;

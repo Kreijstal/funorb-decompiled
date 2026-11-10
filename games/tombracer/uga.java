@@ -30,7 +30,7 @@ final class uga extends kl {
         int var2 = -106 % ((14 - param0) / 56);
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_n = null;
         if (param0 != -12242) {
           return;

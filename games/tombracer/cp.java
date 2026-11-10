@@ -5,7 +5,7 @@ final class cp extends za {
     static String field_i;
     jaclib.memory.heap.NativeHeap field_h;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -197) {
           return;
         }
@@ -15,7 +15,7 @@ final class cp extends za {
     final void b(byte param0) {
         this.field_h.a();
         if (param0 < 83) {
-          cp.b(126);
+          cp.releaseStatics(126);
         }
     }
 
@@ -129,7 +129,7 @@ final class cp extends za {
           }
           return '_';
         }
-        cp.b(64);
+        cp.releaseStatics(64);
         var2Lifetime1 = param1;
         if (var2Lifetime1 == 32) {
           return '_';

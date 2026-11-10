@@ -8,7 +8,7 @@ final class hb extends coa {
     static String field_u;
     static String field_v;
 
-    final static mi a(in param0, boolean param1) {
+    final static ConsoleToken a(in param0, boolean param1) {
         int fieldTemp$5 = 0;
         StringBuilder discarded$6 = null;
         StringBuilder discarded$7 = null;
@@ -21,7 +21,7 @@ final class hb extends coa {
         int var6 = 0;
         int var7 = 0;
         int stackIn_13_0 = 0;
-        mi stackIn_14_0 = null;
+        ConsoleToken stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -59,7 +59,7 @@ final class hb extends coa {
             stackIn_13_0 = ma.field_e;
           }
           var6Lifetime1 = stackIn_13_0;
-          stackIn_14_0 = new mi(var6Lifetime1, var2_int, var3.toString());
+          stackIn_14_0 = new ConsoleToken(var6Lifetime1, var2_int, var3.toString());
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -78,7 +78,7 @@ final class hb extends coa {
     public hb() {
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_w = null;
         field_v = null;
         field_u = null;

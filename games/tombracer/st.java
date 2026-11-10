@@ -42,13 +42,13 @@ final class st extends cha implements java.awt.image.ImageProducer, java.awt.ima
         if (param0 == -5412) {
           return new jo(0, 0, afa.field_c.field_m, 0, (isa) null, afa.field_c.field_r, afa.field_c.field_h, afa.field_c.field_m, afa.field_c.field_m, afa.field_c.field_g, afa.field_c.field_l, false, true, 32768, 0);
         }
-        st.c(-97);
+        st.releaseStatics(-97);
         return new jo(0, 0, afa.field_c.field_m, 0, (isa) null, afa.field_c.field_r, afa.field_c.field_h, afa.field_c.field_m, afa.field_c.field_m, afa.field_c.field_g, afa.field_c.field_l, false, true, 32768, 0);
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 2) {
-          st.c(-93);
+          st.releaseStatics(-93);
           field_j = null;
           return;
         }
@@ -185,7 +185,7 @@ final class st extends cha implements java.awt.image.ImageProducer, java.awt.ima
     final void a(int param0, int param1, java.awt.Graphics param2, int param3) {
         try {
           if (param3 != 2) {
-            st.c(-107);
+            st.releaseStatics(-107);
           }
           this.a((byte) 10);
           param2.drawImage(this.field_a, param1, param0, (java.awt.image.ImageObserver) (this));

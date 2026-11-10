@@ -1,28 +1,28 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vca implements bo {
-    private PendingEvent field_a;
+final class S2CEventPacket implements GamePacket {
+    private PendingEvent event;
     static int[] field_c;
     static jea field_e;
     static ur field_d;
     static String field_b;
 
-    final PendingEvent a(byte param0) {
+    final PendingEvent getEvent(byte param0) {
         if (param0 <= 71) {
           field_d = (ur) null;
-          return this.field_a;
+          return this.event;
         }
-        return this.field_a;
+        return this.event;
     }
 
     public final String toString() {
         return "S2CEventPacket";
     }
 
-    public final void a(BitPacketBuffer param0, byte param1) {
+    public final void decode(BitPacketBuffer param0, byte param1) {
         try {
-          this.field_a = new PendingEvent(param0);
+          this.event = new PendingEvent(param0);
           if (param1 != -19) {
             field_e = (jea) null;
           }
@@ -31,18 +31,18 @@ final class vca implements bo {
         }
     }
 
-    public final void a(int param0, BitPacketBuffer param1) {
+    public final void encode(int param0, BitPacketBuffer param1) {
         if (param0 != 200) {
           return;
         }
         try {
-          this.field_a.b(param1, -19733);
+          this.event.b(param1, -19733);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vca.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_e = null;
         field_b = null;

@@ -8,7 +8,7 @@ final class gla extends ci {
     static String field_o;
     static int field_m;
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_p = null;
         field_o = null;
         if (param0 >= -91) {
@@ -207,7 +207,7 @@ final class gla extends ci {
             this.field_n = param1.d(124);
           }
           if (param0 != 107) {
-            gla.d((byte) 92);
+            gla.releaseStatics((byte) 92);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

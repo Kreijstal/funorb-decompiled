@@ -15,7 +15,7 @@ final class bb extends IntrusiveNode {
     boolean field_h;
     int[][] field_p;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           field_l = null;
           field_g = null;

@@ -82,7 +82,7 @@ final class vua extends qr {
         afa.field_c.a((byte) 38);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_A = null;
         field_D = null;
         field_y = null;
@@ -91,7 +91,7 @@ final class vua extends qr {
           field_C = null;
           return;
         }
-        vua.a((byte) -41);
+        vua.releaseStatics((byte) -41);
         field_C = null;
     }
 

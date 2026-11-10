@@ -16,7 +16,7 @@ final class vta extends vw {
         super(param0);
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_d = null;
         if (param0 != 36070) {
@@ -59,7 +59,7 @@ final class vta extends vw {
         try {
           var2_int = param0.length();
           if (param1 != -12754) {
-            vta.d(-51);
+            vta.releaseStatics(-51);
           }
           var3 = 0;
           for (var4 = 0; var4 < var2_int; var4++) {

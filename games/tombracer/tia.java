@@ -18,7 +18,7 @@ final class tia {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         if (param0 >= -91) {
           field_d = (kea) null;

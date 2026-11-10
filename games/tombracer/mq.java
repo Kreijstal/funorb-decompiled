@@ -5,7 +5,7 @@ final class mq {
     static String field_d;
     static int field_a;
     static int[] field_b;
-    static ufa field_e;
+    static PlayerProfile field_e;
     private OpenGlToolkit field_c;
     private cua field_f;
 
@@ -113,10 +113,10 @@ final class mq {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != 26860) {
-          field_e = (ufa) null;
+          field_e = (PlayerProfile) null;
         }
         field_e = null;
         field_d = null;

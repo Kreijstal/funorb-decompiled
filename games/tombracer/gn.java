@@ -17,7 +17,7 @@ abstract class gn extends b {
         return 84;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_w = null;
         if (param0 == 0) {
           field_C = null;
@@ -88,7 +88,7 @@ abstract class gn extends b {
         if (param1 == 1) {
           return ura.a(param2, param0, false, 1, param3);
         }
-        gn.c(91);
+        gn.releaseStatics(91);
         return ura.a(param2, param0, false, 1, param3);
     }
 

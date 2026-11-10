@@ -388,7 +388,7 @@ class AudioOutput {
         field_q = param2;
     }
 
-    public static void b() {
+    public static void releaseStatics() {
         field_p = null;
     }
 

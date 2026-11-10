@@ -24,7 +24,7 @@ final class dw {
     byte field_r;
     boolean field_e;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_j = null;
         if (param0 != 101) {
           return;
@@ -43,7 +43,7 @@ final class dw {
           }
         }
         if (param0 > -5) {
-          dw.a((byte) -100);
+          dw.releaseStatics((byte) -100);
         }
         rca.field_l = true;
     }

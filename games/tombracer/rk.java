@@ -27,9 +27,9 @@ final class rk extends ae {
         this.g((byte) 12);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 30548) {
-          rk.a(-86);
+          rk.releaseStatics(-86);
         }
         field_F = null;
     }

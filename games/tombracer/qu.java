@@ -10,7 +10,7 @@ abstract class qu {
 
     abstract byte[] a(byte param0, int param1, int param2);
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_e = null;
         int var1 = -73 / ((param0 - 5) / 62);
@@ -23,7 +23,7 @@ abstract class qu {
         if (param1 == -1) {
           return " (" + (param0 <= 0 ? "+" : "-") + Math.abs(param0) + ")";
         }
-        qu.a(-48);
+        qu.releaseStatics(-48);
         return " (" + (param0 <= 0 ? "+" : "-") + Math.abs(param0) + ")";
     }
 

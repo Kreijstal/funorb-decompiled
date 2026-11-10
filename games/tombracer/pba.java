@@ -8,7 +8,7 @@ final class pba {
     static String field_c;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         if (param0 == 4096) {
           field_b = null;
@@ -16,7 +16,7 @@ final class pba {
           field_d = null;
           return;
         }
-        pba.a(-39);
+        pba.releaseStatics(-39);
         field_b = null;
         field_a = null;
         field_d = null;

@@ -26,7 +26,7 @@ abstract class ip {
         BitPacketBuffer var3 = null;
         try {
           var3 = ql.field_k;
-          var3.k(param1, -2988);
+          var3.writeCipheredOpcode(param1, -2988);
           var3.i(param0.field_n, 0);
           if (param2 != 2147) {
             field_a = (String[]) null;
@@ -41,7 +41,7 @@ abstract class ip {
 
     abstract long a(byte param0);
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         int var1 = 63 / ((-11 - param0) / 48);
     }

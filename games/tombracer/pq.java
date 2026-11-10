@@ -30,7 +30,7 @@ final class pq implements os {
         int var8 = 0;
         try {
           var10 = ql.field_k;
-          var10.k(param5, -2988);
+          var10.writeCipheredOpcode(param5, -2988);
           var10.position = var10.position + 1;
           var7 = var10.position;
           var10.i(4, 0);
@@ -48,7 +48,7 @@ final class pq implements os {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_b = null;
         field_d = null;
@@ -56,7 +56,7 @@ final class pq implements os {
         field_g = null;
         field_c = null;
         if (param0 != 0) {
-          pq.a(-39);
+          pq.releaseStatics(-39);
         }
     }
 

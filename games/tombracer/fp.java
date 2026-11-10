@@ -10,9 +10,9 @@ final class fp {
     static String field_b;
     static it field_c;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 29325) {
-          fp.b(-97);
+          fp.releaseStatics(-97);
         }
         field_d = null;
         field_b = null;
@@ -163,10 +163,10 @@ final class fp {
         int incrementValue$6 = param1;
         param1++;
         var16_ref.a(incrementValue$6, (byte) 47, param0);
-        up.field_e = new jpa[7];
-        up.field_e[0] = jpa.a(param2, "", "reward_coin");
-        up.field_e[1] = jpa.a(param2, "", "reward_moneybag");
-        up.field_e[2] = jpa.a(param2, "", "reward_idol");
+        Effect.field_e = new jpa[7];
+        Effect.field_e[0] = jpa.a(param2, "", "reward_coin");
+        Effect.field_e[1] = jpa.a(param2, "", "reward_moneybag");
+        Effect.field_e[2] = jpa.a(param2, "", "reward_idol");
         ena.field_l = jpa.a(param2, "", "endround_flag");
         MirrorComponent.field_F = jpa.a(param2, "", "endround_divider_line");
         rp.field_f = jpa.a(param2, "", "endround_smoke_trail");
@@ -280,10 +280,10 @@ final class fp {
                 }
                 var6 = stackIn_24_0;
               }
-              if (ea.field_k.length <= wr.field_o.length) {
+              if (C2SActionPacket.field_k.length <= wr.field_o.length) {
                 stackIn_28_0 = wr.field_o.length;
               } else {
-                stackIn_28_0 = ea.field_k.length;
+                stackIn_28_0 = C2SActionPacket.field_k.length;
               }
               var8 = stackIn_28_0;
               if (var3 >= 7 + var7 &&

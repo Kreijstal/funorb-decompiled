@@ -150,8 +150,8 @@ final class joa {
               stackIn_10_0 = (!param0) ? -1 : -2;
               vua.field_B = stackIn_10_0;
               hla.field_xb = stackIn_10_0;
-              ufa.field_c = stackIn_10_0;
-              ea.a((byte) -125, RoomComponent.field_g, ql.field_k, vh.field_g, SocketConnector.field_c);
+              PlayerProfile.field_c = stackIn_10_0;
+              C2SActionPacket.a((byte) -125, RoomComponent.field_g, ql.field_k, vh.field_g, SocketConnector.field_c);
               bl.a(-1, -1);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

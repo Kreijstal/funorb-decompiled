@@ -119,13 +119,13 @@ final class lk extends IntrusiveNode implements qn, fo, noa {
           if (param0 >= -125) {
             this.field_n = -37;
           }
-          param1.a((byte) 20, this.field_j, 8);
-          param1.a((byte) -127, this.field_n >> 16, 12);
-          param1.a((byte) -43, this.field_p >> 16, 12);
-          param1.a((byte) -125, this.field_k >> 16, 10);
-          param1.a((byte) -128, this.field_o >> 16, 10);
-          param1.a((byte) -127, this.field_g ? 1 : 0, 1);
-          param1.a((byte) 86, !this.field_f ? 0 : 1, 1);
+          param1.writeBits((byte) 20, this.field_j, 8);
+          param1.writeBits((byte) -127, this.field_n >> 16, 12);
+          param1.writeBits((byte) -43, this.field_p >> 16, 12);
+          param1.writeBits((byte) -125, this.field_k >> 16, 10);
+          param1.writeBits((byte) -128, this.field_o >> 16, 10);
+          param1.writeBits((byte) -127, this.field_g ? 1 : 0, 1);
+          param1.writeBits((byte) 86, !this.field_f ? 0 : 1, 1);
           this.field_m.a((byte) -86, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "lk.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -173,7 +173,7 @@ final class lk extends IntrusiveNode implements qn, fo, noa {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_l = null;
         field_h = null;
         if (param0) {
@@ -198,13 +198,13 @@ final class lk extends IntrusiveNode implements qn, fo, noa {
     lk(Room param0, BitPacketBuffer param1) {
         try {
           this.field_i = param0;
-          this.field_j = param1.b((byte) 44, 8);
-          this.field_n = param1.b((byte) 44, 12) << 16;
-          this.field_p = param1.b((byte) 44, 12) << 16;
-          this.field_k = param1.b((byte) 44, 10) << 16;
-          this.field_o = param1.b((byte) 44, 10) << 16;
-          this.field_g = param1.b((byte) 44, 1) == 1 ? true : false;
-          this.field_f = param1.b((byte) 44, 1) == 1 ? true : false;
+          this.field_j = param1.readBits((byte) 44, 8);
+          this.field_n = param1.readBits((byte) 44, 12) << 16;
+          this.field_p = param1.readBits((byte) 44, 12) << 16;
+          this.field_k = param1.readBits((byte) 44, 10) << 16;
+          this.field_o = param1.readBits((byte) 44, 10) << 16;
+          this.field_g = param1.readBits((byte) 44, 1) == 1 ? true : false;
+          this.field_f = param1.readBits((byte) 44, 1) == 1 ? true : false;
           this.field_m = new bca(param0.field_E, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "lk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');

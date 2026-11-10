@@ -114,7 +114,7 @@ final class kw extends qe {
 
     final static void a(int param0, boolean param1, int param2) {
         BitPacketBuffer var3 = ql.field_k;
-        var3.k(param0, -2988);
+        var3.writeCipheredOpcode(param0, -2988);
         var3.i(3, 0);
         var3.i(10, 0);
         if (!param1) {
@@ -186,7 +186,7 @@ final class kw extends qe {
         return var4Lifetime1 * var2Lifetime1 >> 12;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_f = null;
         int var1 = -81 % ((param0 - 49) / 51);

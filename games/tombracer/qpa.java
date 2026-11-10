@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qpa implements bo {
+final class qpa implements GamePacket {
     private int field_a;
     static jea field_b;
     private int field_c;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_b = null;
         if (param0) {
           field_b = (jea) null;
         }
     }
 
-    public final void a(int param0, BitPacketBuffer param1) {
+    public final void encode(int param0, BitPacketBuffer param1) {
         try {
           param1.i(this.field_a, param0 - 200);
           if (param0 != 200) {
@@ -30,11 +30,11 @@ final class qpa implements bo {
         int var3 = 28 % ((-35 - param1) / 61);
     }
 
-    public final void a(BitPacketBuffer param0, byte param1) {
+    public final void decode(BitPacketBuffer param0, byte param1) {
         try {
           this.field_a = param0.h(255);
           if (param1 != -19) {
-            qpa.a(false);
+            qpa.releaseStatics(false);
           }
           this.field_c = param0.h(255);
         } catch (RuntimeException runtimeException) {
@@ -45,7 +45,7 @@ final class qpa implements bo {
     final void a(int param0, int param1) {
         if (param0 != 7) {
           BitPacketBuffer var4 = (BitPacketBuffer) null;
-          this.a((BitPacketBuffer) null, (byte) -41);
+          this.decode((BitPacketBuffer) null, (byte) -41);
           this.field_c = param1;
           return;
         }
@@ -62,7 +62,7 @@ final class qpa implements bo {
         var8 = TombRacer.field_G ? 1 : 0;
         try {
           if (param5 < 123) {
-            qpa.a(true);
+            qpa.releaseStatics(true);
           }
           boolean decompiledFrameRemainder0 = true;
           if (param2 != 0) {

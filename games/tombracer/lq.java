@@ -14,7 +14,7 @@ final class lq extends ela {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            lq.f(10);
+            lq.releaseStatics(10);
           }
           mn.h(30001);
           stackIn_3_0 = new bfa("void");
@@ -33,9 +33,9 @@ final class lq extends ela {
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 29706) {
-          lq.f(-18);
+          lq.releaseStatics(-18);
           field_p = null;
           field_o = null;
           return;

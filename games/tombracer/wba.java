@@ -26,10 +26,10 @@ final class wba extends ob {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_o = null;
         if (param0 != -25657) {
-          wba.e(-89);
+          wba.releaseStatics(-89);
           field_q = null;
           field_p = null;
           return;

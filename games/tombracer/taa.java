@@ -9,7 +9,7 @@ final class taa extends IntrusiveNode {
     final void a(PacketBuffer param0, int param1) {
         try {
           if (param1 != 32654) {
-            taa.a((byte) -36);
+            taa.releaseStatics((byte) -36);
           }
           param0.i(this.field_h, 0);
           param0.i(this.field_f, 0);
@@ -97,7 +97,7 @@ final class taa extends IntrusiveNode {
         return this.field_f;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_g = null;
         int var1 = 122 % ((69 - param0) / 39);
     }

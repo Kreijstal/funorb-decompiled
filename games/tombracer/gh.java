@@ -135,13 +135,13 @@ final class gh extends nh {
           }
           var2_int = param0.h(255);
           f.field_e = new BitSet(var2_int);
-          param0.h((byte) -89);
+          param0.beginBitAccess((byte) -89);
           for (var3 = 0; var3 < var2_int; var3++) {
             if (CircleMovementLocomotor.a(5907, param0)) {
               f.field_e.set(var3);
             }
           }
-          param0.i((byte) 98);
+          param0.endBitAccess((byte) 98);
           if (param1 >= -41) {
             var5 = (BitPacketBuffer) null;
             gh.a((BitPacketBuffer) null, (byte) 109);
@@ -169,7 +169,7 @@ final class gh extends nh {
         return this.field_i + this.field_j + this.field_k;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_f = null;
         int var1 = -2 % ((param0 - 70) / 50);

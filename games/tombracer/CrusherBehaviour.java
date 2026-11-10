@@ -12,13 +12,13 @@ final class CrusherBehaviour extends Behaviour {
     private int field_w;
     static String field_r;
     private int field_x;
-    private up field_t;
+    private Effect field_t;
 
     final boolean l(int param0) {
         if (param0 == -5) {
           return this.field_n == 4 ? true : false;
         }
-        this.field_t = (up) null;
+        this.field_t = (Effect) null;
         return this.field_n == 4 ? true : false;
     }
 
@@ -70,12 +70,12 @@ final class CrusherBehaviour extends Behaviour {
     final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
-          param1.a((byte) 116, this.field_v, 8);
-          param1.a((byte) -128, this.field_o, 8);
-          param1.a((byte) 107, this.field_s, 8);
-          param1.a((byte) -20, this.field_x, 8);
-          param1.a((byte) -126, this.field_u ? 1 : 0, 1);
-          param1.a((byte) -23, this.field_p ? 1 : 0, 1);
+          param1.writeBits((byte) 116, this.field_v, 8);
+          param1.writeBits((byte) -128, this.field_o, 8);
+          param1.writeBits((byte) 107, this.field_s, 8);
+          param1.writeBits((byte) -20, this.field_x, 8);
+          param1.writeBits((byte) -126, this.field_u ? 1 : 0, 1);
+          param1.writeBits((byte) -23, this.field_p ? 1 : 0, 1);
           this.field_t.a(param1, (byte) 125);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "rea.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -91,7 +91,7 @@ final class CrusherBehaviour extends Behaviour {
           this.field_x = 50;
           this.field_v = 50;
           this.field_o = 25;
-          this.field_t = new up(0, 100);
+          this.field_t = new Effect(0, 100);
           this.field_t.b(1, 4);
           this.k((byte) -106);
         } catch (RuntimeException runtimeException) {
@@ -175,16 +175,16 @@ final class CrusherBehaviour extends Behaviour {
         this.field_p = false;
         try {
           if (param0.field_E >= 3) {
-            this.field_v = param1.b((byte) 44, 8);
-            this.field_o = param1.b((byte) 44, 8);
+            this.field_v = param1.readBits((byte) 44, 8);
+            this.field_o = param1.readBits((byte) 44, 8);
             if (param0.field_E >= 20) {
-              this.field_s = param1.b((byte) 44, 8);
+              this.field_s = param1.readBits((byte) 44, 8);
             }
-            this.field_x = param1.b((byte) 44, 8);
-            stackIn_8_1 = (param1.b((byte) 44, 1) == 1);
+            this.field_x = param1.readBits((byte) 44, 8);
+            stackIn_8_1 = (param1.readBits((byte) 44, 1) == 1);
             this.field_u = stackIn_8_1;
             if (param0.field_E >= 20) {
-              stackIn_12_1 = (param1.b((byte) 44, 1) == 1);
+              stackIn_12_1 = (param1.readBits((byte) 44, 1) == 1);
               this.field_p = stackIn_12_1;
             }
           } else {
@@ -196,7 +196,7 @@ final class CrusherBehaviour extends Behaviour {
           if (16 <= param0.field_E) {
             this.field_t = ad.a((byte) 87, param1);
           } else {
-            this.field_t = new up(0, 100);
+            this.field_t = new Effect(0, 100);
           }
           this.k((byte) -101);
           return;

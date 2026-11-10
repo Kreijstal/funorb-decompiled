@@ -16,7 +16,7 @@ final class gca {
     int field_e;
     private static String[] field_i;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         field_f = null;
         field_l = null;
@@ -26,7 +26,7 @@ final class gca {
           field_j = null;
           return;
         }
-        gca.b(23);
+        gca.releaseStatics(23);
         field_j = null;
     }
 

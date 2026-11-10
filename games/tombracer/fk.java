@@ -134,7 +134,7 @@ final class fk {
         this.field_h = null;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_j = null;
         if (param0 >= -101) {
           return;

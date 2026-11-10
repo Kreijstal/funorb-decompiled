@@ -53,7 +53,7 @@ final class o extends ora implements sca {
         return true;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         if (param0 != 0) {
           field_d = (hea) null;

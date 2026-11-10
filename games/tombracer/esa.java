@@ -5,13 +5,13 @@ import java.util.*;
 
 final class esa {
     static String field_c;
-    private ufa field_b;
+    private PlayerProfile field_b;
     private BitSet field_d;
     static String field_a;
 
-    final ufa a(int param0) {
+    final PlayerProfile a(int param0) {
         if (param0 < 72) {
-          return (ufa) null;
+          return (PlayerProfile) null;
         }
         return this.field_b;
     }
@@ -98,15 +98,15 @@ final class esa {
           if (param2 != 39) {
             return;
           }
-          param0.h((byte) -95);
-          var4_int = param0.b((byte) 44, 8);
+          param0.beginBitAccess((byte) -95);
+          var4_int = param0.readBits((byte) 44, 8);
           this.field_d = new BitSet(var4_int);
           for (var5 = 0; var5 < var4_int; var5++) {
             if (CircleMovementLocomotor.a(param2 ^ 5940, param0)) {
               this.field_d.set(var5);
             }
           }
-          param0.i((byte) 98);
+          param0.endBitAccess((byte) 98);
           this.field_b.a(param0, (byte) 123);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -128,7 +128,7 @@ final class esa {
         return this.field_d;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 != 102) {
           return;
@@ -140,7 +140,7 @@ final class esa {
         int var2 = 0;
         int var1;
         int var3;
-        this.field_b = new ufa();
+        this.field_b = new PlayerProfile();
         this.field_d = new BitSet(aq.a(-5640));
         var1 = 0;
         for (var2 = 0; aq.a(-5640) > var2; var2++) {

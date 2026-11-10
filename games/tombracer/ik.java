@@ -81,7 +81,7 @@ final class ik extends IntrusiveNode {
         return;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = -13 / ((13 - param0) / 45);
         field_j = null;
         field_h = null;
@@ -89,7 +89,7 @@ final class ik extends IntrusiveNode {
 
     final static roa b(int param0) {
         roa var1 = new roa();
-        var1.field_f = new up(0, 5);
+        var1.field_f = new Effect(0, 5);
         var1.field_f.b(param0 ^ -17697, 10);
         var1.field_t = 14;
         var1.field_k = 150;

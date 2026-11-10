@@ -6,12 +6,12 @@ final class qna {
     static String field_a;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_a = null;
         field_c = null;
         if (param0 != -2) {
-          qna.a(-51);
+          qna.releaseStatics(-51);
         }
     }
 
@@ -119,7 +119,7 @@ final class qna {
               CoinItemComponent.field_H[-1 + var4] = 0;
               hb.field_w[0] = 5;
             } else if (4 == mq.field_a) {
-              var3_int = ama.a(bfa.field_c, vca.field_b, rg.field_z, 1, lra.field_c);
+              var3_int = ama.a(bfa.field_c, S2CEventPacket.field_b, rg.field_z, 1, lra.field_c);
               var4 = var3_int + 2;
               mba.field_g = new String[var4];
               CoinItemComponent.field_H = new int[var4];
@@ -188,16 +188,16 @@ final class qna {
             }
             pm.field_d = new String[var4];
             lua.a(lra.field_c, 0, pm.field_d, 0, var4);
-            ea.field_k = new String[-1 + var3_int - var4];
-            lua.a(lra.field_c, 1 + var4, ea.field_k, 0, var3_int - var4 - 1);
+            C2SActionPacket.field_k = new String[-1 + var3_int - var4];
+            lua.a(lra.field_c, 1 + var4, C2SActionPacket.field_k, 0, var3_int - var4 - 1);
             if (pm.field_d.length <= cia.field_a.length) {
               stackIn_58_0 = cia.field_a.length;
             } else {
               stackIn_58_0 = pm.field_d.length;
             }
             var5 = stackIn_58_0;
-            if (ea.field_k.length > wr.field_o.length) {
-              stackIn_61_0 = ea.field_k.length;
+            if (C2SActionPacket.field_k.length > wr.field_o.length) {
+              stackIn_61_0 = C2SActionPacket.field_k.length;
             } else {
               stackIn_61_0 = wr.field_o.length;
             }
@@ -234,10 +234,10 @@ final class qna {
             for (var8Lifetime3 = 0; var8Lifetime3 < var6; var8Lifetime3++) {
               stackIn_74_0 = mba.field_g;
               stackIn_74_1 = var8Lifetime3 + 7 + var5;
-              if (ea.field_k.length <= var8Lifetime3) {
+              if (C2SActionPacket.field_k.length <= var8Lifetime3) {
                 stackIn_75_2 = "";
               } else {
-                stackIn_75_2 = ea.field_k[var8Lifetime3];
+                stackIn_75_2 = C2SActionPacket.field_k[var8Lifetime3];
               }
               stackIn_74_0[stackIn_74_1] = stackIn_75_2;
             }

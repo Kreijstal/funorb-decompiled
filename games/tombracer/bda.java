@@ -72,7 +72,7 @@ final class bda extends ci {
         int var7 = 0;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
-          var4_int = param3.b((byte) 44, 6);
+          var4_int = param3.readBits((byte) 44, 6);
           var5 = 81 / ((-38 - param1) / 57);
           var6_int = var4_int;
           if (var6_int == 0) {

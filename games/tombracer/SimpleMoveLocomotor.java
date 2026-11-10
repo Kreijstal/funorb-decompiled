@@ -393,10 +393,10 @@ final class SimpleMoveLocomotor extends Locomotor {
         this.field_p = dfa.a(-this.field_p, 8192, 118);
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_s = null;
         if (param0 != -92) {
-          SimpleMoveLocomotor.e((byte) -48);
+          SimpleMoveLocomotor.releaseStatics((byte) -48);
         }
     }
 
@@ -425,13 +425,13 @@ final class SimpleMoveLocomotor extends Locomotor {
     final void a(BitPacketBuffer param0, byte param1) {
         try {
           super.a(param0, (byte) -117);
-          param0.a((byte) 75, this.b(0, this.field_t), 8);
-          param0.a((byte) -127, this.field_r >> 16, 10);
+          param0.writeBits((byte) 75, this.b(0, this.field_t), 8);
+          param0.writeBits((byte) -127, this.field_r >> 16, 10);
           if (param1 > -78) {
             this.b(95);
           }
-          param0.a((byte) -126, cn.a((byte) 46, this.field_p, 8192, 4), 4);
-          param0.a((byte) 63, this.field_q ? 1 : 0, 1);
+          param0.writeBits((byte) -126, cn.a((byte) 46, this.field_p, 8192, 4), 4);
+          param0.writeBits((byte) 63, this.field_q ? 1 : 0, 1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wi.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -449,17 +449,17 @@ final class SimpleMoveLocomotor extends Locomotor {
         RuntimeException var4 = null;
         try {
           if (param0.field_E > 7) {
-            this.field_t = this.a(param1.b((byte) 44, 8), false);
+            this.field_t = this.a(param1.readBits((byte) 44, 8), false);
           } else {
-            this.field_t = param1.b((byte) 44, 4) << 16;
+            this.field_t = param1.readBits((byte) 44, 4) << 16;
           }
-          this.field_r = param1.b((byte) 44, 10) << 16;
+          this.field_r = param1.readBits((byte) 44, 10) << 16;
           if (param0.field_E >= 10) {
-            this.field_p = oo.a(4, 8192, 0, param1.b((byte) 44, 4));
-            stackIn_9_1 = (1 == param1.b((byte) 44, 1));
+            this.field_p = oo.a(4, 8192, 0, param1.readBits((byte) 44, 4));
+            stackIn_9_1 = (1 == param1.readBits((byte) 44, 1));
             this.field_q = stackIn_9_1;
           } else {
-            this.field_p = oo.a(3, 8192, 0, param1.b((byte) 44, 3));
+            this.field_p = oo.a(3, 8192, 0, param1.readBits((byte) 44, 3));
             this.field_q = false;
           }
           return;

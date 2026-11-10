@@ -41,7 +41,7 @@ final class ad extends IntrusiveNode {
         return false;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = -85 / ((42 - param0) / 45);
         field_i = null;
         field_h = null;
@@ -60,25 +60,25 @@ final class ad extends IntrusiveNode {
         return this.field_f == -1 ? true : false;
     }
 
-    final static up a(byte param0, BitPacketBuffer param1) {
+    final static Effect a(byte param0, BitPacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        up var4 = null;
+        Effect var4 = null;
         BitPacketBuffer var5 = null;
-        up stackIn_3_0 = null;
+        Effect stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param1.b((byte) 44, 4);
+          var2_int = param1.readBits((byte) 44, 4);
           if (param0 != 87) {
             var5 = (BitPacketBuffer) null;
             ad.a((byte) -125, (BitPacketBuffer) null);
           }
-          var3 = param1.b((byte) 44, 10);
-          var4 = new up(var2_int, var3);
+          var3 = param1.readBits((byte) 44, 10);
+          var4 = new Effect(var2_int, var3);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

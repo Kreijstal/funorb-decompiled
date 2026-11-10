@@ -104,11 +104,11 @@ final class ena extends DualLinkNode {
         return true;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_p = null;
         field_l = null;
         if (!param0) {
-          ena.a(false);
+          ena.releaseStatics(false);
         }
     }
 

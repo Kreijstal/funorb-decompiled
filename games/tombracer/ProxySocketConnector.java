@@ -9,10 +9,10 @@ final class ProxySocketConnector extends SocketConnector {
     static jpa[] field_e;
     private java.net.ProxySelector field_d;
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         if (param0 != 90) {
-          ProxySocketConnector.b((byte) -30);
+          ProxySocketConnector.releaseStatics((byte) -30);
         }
     }
 
@@ -267,7 +267,7 @@ final class ProxySocketConnector extends SocketConnector {
             return stackIn_3_0;
           }
           if (param1 != 443) {
-            ProxySocketConnector.b((byte) 83);
+            ProxySocketConnector.releaseStatics((byte) 83);
           }
           var3 = param0.address();
           if (!((Object) var3 instanceof java.net.InetSocketAddress)) {

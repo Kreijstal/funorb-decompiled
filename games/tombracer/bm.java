@@ -10,7 +10,7 @@ final class bm extends IntrusiveNode {
     static nh[] field_f;
     int field_j;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 717) {
           field_f = (nh[]) null;
           field_f = null;

@@ -163,7 +163,7 @@ final class tha extends b implements tsa {
         this.a(this.field_x, -1);
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = -116 % ((43 - param0) / 38);
         field_y = null;
         field_B = null;

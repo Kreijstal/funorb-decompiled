@@ -77,7 +77,7 @@ final class nga extends ci {
         this(4096);
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_q = null;
         int var1 = 51 / ((param0 + 47) / 38);
         field_o = null;

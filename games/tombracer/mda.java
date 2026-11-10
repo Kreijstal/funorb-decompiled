@@ -154,7 +154,7 @@ final class mda extends c implements fo, ffa, gma {
         }
     }
 
-    public final int a(up param0, int param1, pc param2) {
+    public final int a(Effect param0, int param1, pc param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         int stackIn_5_0 = 0;
@@ -271,7 +271,7 @@ final class mda extends c implements fo, ffa, gma {
         }
     }
 
-    public final int a(up param0, Projectile param1, int param2) {
+    public final int a(Effect param0, Projectile param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
@@ -335,7 +335,7 @@ final class mda extends c implements fo, ffa, gma {
           return;
         }
         Projectile var6 = (Projectile) null;
-        this.a((up) null, (Projectile) null, -22);
+        this.a((Effect) null, (Projectile) null, -22);
         this.field_j = param2;
         this.field_p = param0;
     }
@@ -385,7 +385,7 @@ final class mda extends c implements fo, ffa, gma {
         return 0;
     }
 
-    private final int a(up param0, int param1) {
+    private final int a(Effect param0, int param1) {
         int stackIn_3_0 = 0;
         int stackIn_17_0 = 0;
         RuntimeException stackIn_20_0 = null;
@@ -409,7 +409,7 @@ final class mda extends c implements fo, ffa, gma {
               if (param0.field_j == 5) {
                 this.i((byte) -127);
                 this.field_q.b(param1 + 30103, this.field_k / 2, 1, this.field_j, this.field_p);
-                var3_int = param0.field_b;
+                var3_int = param0.size;
               }
             }
           } else {
@@ -417,13 +417,13 @@ final class mda extends c implements fo, ffa, gma {
               if (param0.field_j == 3) {
                 this.i((byte) -126);
                 this.field_q.b(30097, this.field_k / 2, 0, this.field_j, this.field_p);
-                var3_int = param0.field_b;
+                var3_int = param0.size;
               } else {
                 if (param0.field_j != 5 &&
                   param0.field_j == 0) {
                   this.field_k = this.field_k - 262144;
                   this.n(786432);
-                  var3_int = param0.field_b;
+                  var3_int = param0.size;
                 }
               }
             }
@@ -825,7 +825,7 @@ final class mda extends c implements fo, ffa, gma {
         return this.field_r;
     }
 
-    public final int a(up param0, int param1, int param2, int param3, int param4, int param5) {
+    public final int a(Effect param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_6_0 = 0;

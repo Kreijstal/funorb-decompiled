@@ -28,7 +28,7 @@ final class waa {
             stackIn_20_0 = 6407;
             return stackIn_20_0;
           }
-          if (gpa.field_a == param0) {
+          if (SwitchableId.field_a == param0) {
             stackIn_5_0 = 6408;
             return stackIn_5_0;
           }
@@ -63,7 +63,7 @@ final class waa {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 4974) {
           field_e = (String) null;
           field_b = null;

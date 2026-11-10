@@ -125,7 +125,7 @@ final class BoulderComponent extends PathMoverComponent {
         var1 = wna.field_n;
         synchronized (var1) {
           if (param0 != -44) {
-            BoulderComponent.t((byte) 73);
+            BoulderComponent.releaseStatics((byte) 73);
           }
           tu.field_h = tu.field_h + 1;
           ksa.field_p = tka.field_n;
@@ -143,7 +143,7 @@ final class BoulderComponent extends PathMoverComponent {
     final Trap a(boolean param0, int param1, Room param2) {
         RuntimeException var4 = null;
         ConstantEffectBehaviour var5 = null;
-        up var6 = null;
+        Effect var6 = null;
         SimpleBlockBehaviour var7 = null;
         PathMoveLocomotor var8 = null;
         mfa var9 = null;
@@ -164,7 +164,7 @@ final class BoulderComponent extends PathMoverComponent {
           var11.g(108, 2);
           var11.l(2, 146366800);
           var5 = new ConstantEffectBehaviour(param2, param0);
-          var6 = new up(0, 10);
+          var6 = new Effect(0, 10);
           var6.b(1, 14);
           var5.a(true, var6);
           var11.a((byte) 83, (Behaviour) (var5));
@@ -200,7 +200,7 @@ final class BoulderComponent extends PathMoverComponent {
         return false;
     }
 
-    public static void t(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 <= 60) {
           field_M = (jea) null;
           field_M = null;

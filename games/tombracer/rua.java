@@ -82,7 +82,7 @@ final class rua extends ij implements tsa {
         }
     }
 
-    public static void g(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_jb = null;
         if (param0) {
           field_hb = (String) null;

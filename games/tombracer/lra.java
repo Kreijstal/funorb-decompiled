@@ -43,12 +43,12 @@ final class lra extends ora implements va {
         return 0;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_c = null;
         field_e = null;
         if (param0 != 18168) {
-          lra.c(16);
+          lra.releaseStatics(16);
         }
     }
 

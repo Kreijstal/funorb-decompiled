@@ -398,7 +398,7 @@ final class f {
         }
         int var1 = -18 % ((-10 - param0) / 43);
         if (bta.field_q != 0) {
-          ufa.a(true);
+          PlayerProfile.a(true);
         }
         wv.field_j = 0;
     }
@@ -580,7 +580,7 @@ final class f {
         var7 = TombRacer.field_G ? 1 : 0;
         try {
           this.field_a = param0;
-          var5_int = param3.b((byte) 44, iia.d(param0, 22972));
+          var5_int = param3.readBits((byte) 44, iia.d(param0, 22972));
           this.field_f = new RoomComponent[var5_int];
           this.field_d = new cva[var5_int];
           var6 = 0;
@@ -592,7 +592,7 @@ final class f {
             stackIn_7_1 = var6;
             stackIn_7_2 = null;
             stackIn_7_3 = null;
-            if (param3.b((byte) 44, 1) != 1) {
+            if (param3.readBits((byte) 44, 1) != 1) {
               stackIn_8_2 = null;
               stackIn_8_3 = null;
               stackIn_8_4 = false;
@@ -601,7 +601,7 @@ final class f {
               stackIn_8_3 = null;
               stackIn_8_4 = true;
             }
-            stackIn_7_0[stackIn_7_1] = new cva(stackIn_8_4, param3.b((byte) 44, 8));
+            stackIn_7_0[stackIn_7_1] = new cva(stackIn_8_4, param3.readBits((byte) 44, 8));
             var6++;
           }
           return;
@@ -635,18 +635,18 @@ final class f {
             field_c = (int[]) null;
           }
           this.a(0);
-          param0.a((byte) 44, this.field_f.length, iia.d(this.field_a, 22972));
+          param0.writeBits((byte) 44, this.field_f.length, iia.d(this.field_a, 22972));
           var4_int = 0;
           while (this.field_f.length > var4_int) {
             if (var5 != 0) {
               return;
             }
             if (param2 != this.field_f[var4_int].o((byte) -48)) {
-              param0.a((byte) 73, 0, 1);
-              param0.a((byte) 111, this.field_f[var4_int].n(31974).a((byte) 62), 8);
+              param0.writeBits((byte) 73, 0, 1);
+              param0.writeBits((byte) 111, this.field_f[var4_int].n(31974).a((byte) 62), 8);
             } else {
-              param0.a((byte) -127, 1, 1);
-              param0.a((byte) -126, this.field_f[var4_int].i((byte) 84).a((byte) 115), 8);
+              param0.writeBits((byte) -127, 1, 1);
+              param0.writeBits((byte) -126, this.field_f[var4_int].i((byte) 84).a((byte) 115), 8);
             }
             var4_int++;
           }

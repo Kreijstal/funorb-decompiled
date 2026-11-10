@@ -101,7 +101,7 @@ final class es extends ip {
         return var6 / (long)this.field_c;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = 118 % ((-58 - param0) / 32);
         field_h = null;
     }

@@ -158,7 +158,7 @@ final class kda extends eo {
               stackIn_8_0 = new pe(this, param3, param5, param0, param1, param4);
               return (gf) ((Object) stackIn_8_0);
             }
-            var9 = new hm(this, gpa.field_a, una.field_g, lla.a(false, param3), lla.a(false, param5));
+            var9 = new hm(this, SwitchableId.field_a, una.field_g, lla.a(false, param3), lla.a(false, param5));
             var9.a(param1, param5, param4, 113, 0, param0, param3, 0);
             stackIn_6_0 = var9;
             return (gf) ((Object) stackIn_6_0);
@@ -947,7 +947,7 @@ final class kda extends eo {
         this.i(param0);
     }
 
-    public static void T(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 32885) {
           return;
         }

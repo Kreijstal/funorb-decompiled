@@ -15,12 +15,12 @@ abstract class me extends IntrusiveNode {
 
     final boolean c(byte param0) {
         if (param0 > -109) {
-          me.a(109);
+          me.releaseStatics(109);
         }
         return this.field_h;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 17355) {
           field_f = (String) null;
         }
@@ -62,7 +62,7 @@ abstract class me extends IntrusiveNode {
         RuntimeException var4 = null;
         var8 = TombRacer.field_G ? 1 : 0;
         try {
-          var4_int = param2.b((byte) 44, param1);
+          var4_int = param2.readBits((byte) 44, param1);
           if (var4_int == 0) {
             stackIn_3_0 = null;
             return (short[]) (stackIn_3_0);
@@ -71,11 +71,11 @@ abstract class me extends IntrusiveNode {
             param3.length != var4_int) {
             param3 = new short[var4_int];
           }
-          var5 = param2.b((byte) 44, 4);
-          var6 = (short)param2.b((byte) 44, 16);
+          var5 = param2.readBits((byte) 44, 4);
+          var6 = (short)param2.readBits((byte) 44, 16);
           if (var5 > 0) {
             for (var7 = 0; var4_int > var7; var7++) {
-              param3[var7] = (short)(param2.b((byte) 44, var5) + var6);
+              param3[var7] = (short)(param2.readBits((byte) 44, var5) + var6);
             }
           } else {
             for (var7 = 0; var7 < var4_int; var7++) {

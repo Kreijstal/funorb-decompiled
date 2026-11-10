@@ -5,9 +5,9 @@ final class ke {
     static String field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 3712) {
-          ke.a(-86);
+          ke.releaseStatics(-86);
           field_a = null;
           return;
         }

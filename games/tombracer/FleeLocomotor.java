@@ -213,18 +213,18 @@ final class FleeLocomotor extends Locomotor {
         this.field_u = 1024;
         this.field_s = new ir();
         try {
-          this.field_t = param1.b((byte) 44, 10) << 16;
+          this.field_t = param1.readBits((byte) 44, 10) << 16;
           if (7 < param0.field_E) {
-            this.field_v = param1.b((byte) 44, 10) << 16;
-            this.field_A = this.a(param1.b((byte) 44, 8), false);
-            stackIn_6_1 = (param1.b((byte) 44, 1) == 1);
+            this.field_v = param1.readBits((byte) 44, 10) << 16;
+            this.field_A = this.a(param1.readBits((byte) 44, 8), false);
+            stackIn_6_1 = (param1.readBits((byte) 44, 1) == 1);
             this.field_r = stackIn_6_1;
-            this.field_u = oo.a(8, 8192, 0, param1.b((byte) 44, 8));
-            stackIn_9_1 = (param1.b((byte) 44, 1) == 1);
+            this.field_u = oo.a(8, 8192, 0, param1.readBits((byte) 44, 8));
+            stackIn_9_1 = (param1.readBits((byte) 44, 1) == 1);
             this.field_w = stackIn_9_1;
           } else {
             this.field_v = this.field_t;
-            this.field_A = param1.b((byte) 44, 4) << 16;
+            this.field_A = param1.readBits((byte) 44, 4) << 16;
             this.field_w = false;
             this.field_r = false;
             this.field_u = 0;
@@ -322,9 +322,9 @@ final class FleeLocomotor extends Locomotor {
         RuntimeException var3 = null;
         try {
           super.a(param0, (byte) -108);
-          param0.a((byte) -34, this.field_t >> 16, 10);
-          param0.a((byte) -128, this.field_v >> 16, 10);
-          param0.a((byte) -128, this.b(0, this.field_A), 8);
+          param0.writeBits((byte) -34, this.field_t >> 16, 10);
+          param0.writeBits((byte) -128, this.field_v >> 16, 10);
+          param0.writeBits((byte) -128, this.b(0, this.field_A), 8);
           stackIn_2_0 = (BitPacketBuffer) (param0);
           stackIn_2_1 = 111;
           if (!this.field_r) {
@@ -332,8 +332,8 @@ final class FleeLocomotor extends Locomotor {
           } else {
             stackIn_3_2 = 1;
           }
-          ((BitPacketBuffer) (Object) stackIn_2_0).a((byte) stackIn_2_1, stackIn_3_2, 1);
-          param0.a((byte) -128, cn.a((byte) -104, this.field_u, 8192, 8), 8);
+          ((BitPacketBuffer) (Object) stackIn_2_0).writeBits((byte) stackIn_2_1, stackIn_3_2, 1);
+          param0.writeBits((byte) -128, cn.a((byte) -104, this.field_u, 8192, 8), 8);
           stackIn_5_0 = (BitPacketBuffer) (param0);
           stackIn_5_1 = -128;
           if (this.field_w) {
@@ -341,7 +341,7 @@ final class FleeLocomotor extends Locomotor {
           } else {
             stackIn_6_2 = 0;
           }
-          ((BitPacketBuffer) (Object) stackIn_5_0).a((byte) stackIn_5_1, stackIn_6_2, 1);
+          ((BitPacketBuffer) (Object) stackIn_5_0).writeBits((byte) stackIn_5_1, stackIn_6_2, 1);
           if (param1 >= -78) {
             this.field_w = true;
           }

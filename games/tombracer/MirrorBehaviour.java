@@ -145,12 +145,12 @@ final class MirrorBehaviour extends Behaviour {
         }
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_r = null;
         int var1 = -15 / ((-36 - param0) / 62);
     }
 
-    final int a(int param0, up param1, pc param2) {
+    final int a(int param0, Effect param1, pc param2) {
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -200,7 +200,7 @@ final class MirrorBehaviour extends Behaviour {
           var5.field_i = param2.field_i;
           var8 = qva.a((byte) -99, -param2.field_k + var7, var6 - param2.field_d);
           var9 = dfa.a(this.field_v + 2048, 8192, -71);
-          var10 = cf.a(8192, -16390, var8, var9);
+          var10 = S2CRoundResultPacket.a(8192, -16390, var8, var9);
           var11 = dfa.a(2 * var10 + var8 + 4096, 8192, 126);
           var12 = MouseInputHandler.a((byte) 99, var11 >> 2);
           var13 = bua.a(0, var11 >> 2);

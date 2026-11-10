@@ -84,7 +84,7 @@ final class sv extends wv {
         WhiteLightShooterComponent.field_K.a((aaa.a(false) >> 1) - (WhiteLightShooterComponent.field_K.a() >> 1), var3);
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_q = null;
         if (param0 > -42) {
           field_q = (String) null;

@@ -17,7 +17,7 @@ class of {
         return ck.field_a;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         int var1 = 27 % ((34 - param0) / 50);
     }

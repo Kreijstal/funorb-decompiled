@@ -55,7 +55,7 @@ final class MovingSawComponent extends PathMoverComponent {
         RuntimeException var4 = null;
         PathMoveLocomotor var5 = null;
         ConstantEffectBehaviour var6 = null;
-        up var7 = null;
+        Effect var7 = null;
         Trap var8 = null;
         SimpleBlockBehaviour var9 = null;
         mfa var10 = null;
@@ -76,7 +76,7 @@ final class MovingSawComponent extends PathMoverComponent {
           var5 = this.createPathMove((byte) 125, param2, param0);
           var12.a(var5, 0);
           var6 = new ConstantEffectBehaviour(param2, param0);
-          var7 = new up(0, 10);
+          var7 = new Effect(0, 10);
           var7.b(1, 15);
           var6.a(true, var7);
           var6.a((byte) -24, true);

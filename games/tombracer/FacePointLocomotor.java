@@ -138,14 +138,14 @@ final class FacePointLocomotor extends Locomotor {
 
     final void a(BitPacketBuffer param0, byte param1) {
         super.a(param0, (byte) -85);
-        param0.a((byte) 2, dqa.a(true, this.field_p >> 16, 12), 12);
-        param0.a((byte) -126, dqa.a(true, this.field_q >> 16, 12), 12);
+        param0.writeBits((byte) 2, dqa.a(true, this.field_p >> 16, 12), 12);
+        param0.writeBits((byte) -126, dqa.a(true, this.field_q >> 16, 12), 12);
         if (param1 > -78) {
           return;
         }
         try {
-          param0.a((byte) 79, this.field_o ? 1 : 0, 1);
-          param0.a((byte) 56, dqa.a(true, this.field_s, 12), 12);
+          param0.writeBits((byte) 79, this.field_o ? 1 : 0, 1);
+          param0.writeBits((byte) 56, dqa.a(true, this.field_s, 12), 12);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sa.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -205,7 +205,7 @@ final class FacePointLocomotor extends Locomotor {
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_r = null;
         if (param0 >= -43) {
           field_r = (ko) null;
@@ -235,14 +235,14 @@ final class FacePointLocomotor extends Locomotor {
         RuntimeException var4 = null;
         this.field_o = true;
         try {
-          this.field_p = CoinItemComponent.a(true, 12, param1.b((byte) 44, 12)) << 16;
-          this.field_q = CoinItemComponent.a(true, 12, param1.b((byte) 44, 12)) << 16;
-          stackIn_4_1 = (param1.b((byte) 44, 1) == 1);
+          this.field_p = CoinItemComponent.a(true, 12, param1.readBits((byte) 44, 12)) << 16;
+          this.field_q = CoinItemComponent.a(true, 12, param1.readBits((byte) 44, 12)) << 16;
+          stackIn_4_1 = (param1.readBits((byte) 44, 1) == 1);
           this.field_o = stackIn_4_1;
           if (this.c(true).field_E < 3) {
             this.field_s = 0;
           } else {
-            this.field_s = CoinItemComponent.a(true, 12, param1.b((byte) 44, 12));
+            this.field_s = CoinItemComponent.a(true, 12, param1.readBits((byte) 44, 12));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

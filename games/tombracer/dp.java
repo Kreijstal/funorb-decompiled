@@ -119,7 +119,7 @@ final class dp extends vw {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         field_j = null;
         if (param0 == 13936) {

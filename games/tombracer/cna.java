@@ -14,11 +14,11 @@ final class cna {
         if (param1 == 128) {
           return var2;
         }
-        cna.a(-55);
+        cna.releaseStatics(-55);
         return var2;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_d = null;
         if (param0 > -75) {

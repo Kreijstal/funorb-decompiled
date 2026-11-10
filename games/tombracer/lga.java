@@ -439,7 +439,7 @@ class lga extends rj {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_z = (int[][]) null;
         if (param0 != -123) {
           return;

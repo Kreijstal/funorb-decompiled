@@ -226,7 +226,7 @@ final class hsa {
           this.field_d.a(param1 + 29166, var41, (long)param0);
           return var41;
         }
-        hsa.b(74);
+        hsa.releaseStatics(74);
         if (var3 != null) {
           return (rt) (var3);
         }
@@ -385,7 +385,7 @@ final class hsa {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = 68 % ((-12 - param0) / 61);
         field_c = null;
     }

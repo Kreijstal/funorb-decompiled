@@ -32,7 +32,7 @@ final class aka extends cda {
         }
         try {
           super.a(123, param1, param2);
-          this.field_x = param2.b((byte) 44, 4);
+          this.field_x = param2.readBits((byte) 44, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "aka.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -80,7 +80,7 @@ final class aka extends cda {
         return;
     }
 
-    public static void o(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 <= 80) {
           field_A = (String) null;
           field_A = null;
@@ -341,7 +341,7 @@ final class aka extends cda {
     final void a(byte param0, BitPacketBuffer param1) {
         try {
           super.a((byte) 98, param1);
-          param1.a((byte) -5, this.field_x, 4);
+          param1.writeBits((byte) -5, this.field_x, 4);
           int var3_int = 102 % ((param0 + 8) / 40);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "aka.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

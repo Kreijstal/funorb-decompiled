@@ -9,7 +9,7 @@ abstract class gda {
 
     abstract void b(int param0);
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         if (param0 != 27316) {
           field_d = (jpa[]) null;
@@ -59,9 +59,9 @@ abstract class gda {
               bt.field_b = bt.field_b + 1;
               var14 = param0.a(var7.field_g, (byte) 127, var7.field_b);
               var7.field_c = new BitPacketBuffer(var14);
-              var7.field_c.h((byte) -38);
+              var7.field_c.beginBitAccess((byte) -38);
               var7.field_e = PillarComponent.a(-1, var7.field_c);
-              var7.field_c.i((byte) 98);
+              var7.field_c.endBitAccess((byte) 98);
             }
             lva.a(var4.field_c, 0, -1 + var4.field_c.length, -1);
           }
@@ -92,7 +92,7 @@ abstract class gda {
 
     final static roa a(boolean param0) {
         roa var1 = new roa();
-        var1.field_f = new up(0, 5);
+        var1.field_f = new Effect(0, 5);
         if (!param0) {
           return (roa) null;
         }

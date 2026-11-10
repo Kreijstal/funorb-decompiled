@@ -6,7 +6,7 @@ final class rf {
     static String field_a;
     static String[] field_c;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         field_b = null;
         if (param0 != -19) {
@@ -73,7 +73,7 @@ final class rf {
             return stackIn_28_0;
           }
           var5 = ql.field_k;
-          var5.k(param2, -2988);
+          var5.writeCipheredOpcode(param2, -2988);
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.i(0, 0);

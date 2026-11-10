@@ -203,7 +203,7 @@ final class kga extends dg {
         }
     }
 
-    public static void n(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_n = null;
         field_o = null;
         if (param0 != 9) {
@@ -228,7 +228,7 @@ final class kga extends dg {
           if (param1.field_E < 20) {
             return;
           }
-          this.field_t = param2.b((byte) 44, 4);
+          this.field_t = param2.readBits((byte) 44, 4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -289,7 +289,7 @@ final class kga extends dg {
     final void a(byte param0, BitPacketBuffer param1) {
         try {
           super.a((byte) -58, param1);
-          param1.a((byte) 61, this.field_t, 4);
+          param1.writeBits((byte) 61, this.field_t, 4);
           int var3_int = 15 % ((-8 - param0) / 40);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "kga.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -316,7 +316,7 @@ final class kga extends dg {
           }
           var11 = param0.field_zc;
           if (param1 < 116) {
-            kga.n((byte) 16);
+            kga.releaseStatics((byte) 16);
           }
           if (var11.a((byte) 89)) {
             if (uga.field_m != null) {

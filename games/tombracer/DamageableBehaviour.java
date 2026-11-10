@@ -43,7 +43,7 @@ final class DamageableBehaviour extends Behaviour {
         var2Lifetime1.c(2, (byte) 9);
     }
 
-    private final int a(int param0, up param1) {
+    private final int a(int param0, Effect param1) {
         int var3_int = 0;
         int stackIn_2_0 = 0;
         int stackIn_15_0 = 0;
@@ -62,28 +62,28 @@ final class DamageableBehaviour extends Behaviour {
           }
           if (0 < this.field_s &&
             this.a(var3_int, (byte) 10)) {
-            this.field_s = this.field_s - param1.field_b;
+            this.field_s = this.field_s - param1.size;
             if (this.field_s <= 0) {
               this.g((byte) 121);
             } else {
               if (this.field_v > 0 &&
                 !this.b(-106).m((byte) -99)) {
-                this.field_v = this.field_v - param1.field_b;
+                this.field_v = this.field_v - param1.size;
                 if (0 >= this.field_v) {
                   this.d(true);
                 }
               }
             }
-            stackIn_15_0 = param1.field_b;
+            stackIn_15_0 = param1.size;
             return stackIn_15_0;
           }
           if (0 < this.field_s &&
             this.a((byte) -94, var3_int)) {
-            this.field_s = this.field_s + param1.field_b;
+            this.field_s = this.field_s + param1.size;
             if (this.field_s > this.field_z) {
               this.field_s = this.field_z;
             }
-            stackIn_22_0 = param1.field_b;
+            stackIn_22_0 = param1.size;
             return stackIn_22_0;
           }
           stackIn_24_0 = 0;
@@ -154,7 +154,7 @@ final class DamageableBehaviour extends Behaviour {
         this.b(110).n(this.field_t, -127);
     }
 
-    final int a(int param0, int param1, up param2, int param3, byte param4, int param5) {
+    final int a(int param0, int param1, Effect param2, int param3, byte param4, int param5) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;
@@ -232,7 +232,7 @@ final class DamageableBehaviour extends Behaviour {
         this.field_q = -100;
     }
 
-    final int a(int param0, Projectile param1, up param2) {
+    final int a(int param0, Projectile param1, Effect param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -270,12 +270,12 @@ final class DamageableBehaviour extends Behaviour {
     final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
-          param1.a((byte) -127, !this.field_n ? 0 : 1, 1);
-          param1.a((byte) -29, this.field_r, 8);
-          param1.a((byte) -127, this.field_z, 8);
-          param1.a((byte) -128, this.field_u, 4);
-          param1.a((byte) -126, this.field_y, 4);
-          param1.a((byte) 107, this.field_t, 8);
+          param1.writeBits((byte) -127, !this.field_n ? 0 : 1, 1);
+          param1.writeBits((byte) -29, this.field_r, 8);
+          param1.writeBits((byte) -127, this.field_z, 8);
+          param1.writeBits((byte) -128, this.field_u, 4);
+          param1.writeBits((byte) -126, this.field_y, 4);
+          param1.writeBits((byte) 107, this.field_t, 8);
           this.field_w.a(param1, (byte) -120);
           this.field_A.a(param1, (byte) -120);
         } catch (RuntimeException runtimeException) {
@@ -301,7 +301,7 @@ final class DamageableBehaviour extends Behaviour {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_x = null;
         field_o = null;
         if (param0 != -1) {
@@ -327,7 +327,7 @@ final class DamageableBehaviour extends Behaviour {
         return true;
     }
 
-    final int a(int param0, up param1, pc param2) {
+    final int a(int param0, Effect param1, pc param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -367,12 +367,12 @@ final class DamageableBehaviour extends Behaviour {
     DamageableBehaviour(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
-          this.field_n = param1.b((byte) 44, 1) == 1 ? true : false;
-          this.field_r = param1.b((byte) 44, 8);
-          this.field_z = param1.b((byte) 44, 8);
-          this.field_u = param1.b((byte) 44, 4);
-          this.field_y = param1.b((byte) 44, 4);
-          this.field_t = param1.b((byte) 44, 8);
+          this.field_n = param1.readBits((byte) 44, 1) == 1 ? true : false;
+          this.field_r = param1.readBits((byte) 44, 8);
+          this.field_z = param1.readBits((byte) 44, 8);
+          this.field_u = param1.readBits((byte) 44, 4);
+          this.field_y = param1.readBits((byte) 44, 4);
+          this.field_t = param1.readBits((byte) 44, 8);
           this.field_w = new kpa(6, param0.field_E, param1);
           this.field_A = new kpa(6, param0.field_E, param1);
         } catch (RuntimeException runtimeException) {

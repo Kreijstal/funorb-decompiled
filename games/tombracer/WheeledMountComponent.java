@@ -87,7 +87,7 @@ final class WheeledMountComponent extends PathMoverComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            WheeledMountComponent.D(8);
+            WheeledMountComponent.releaseStatics(8);
           }
           if (param2 == WeaponShooterBehaviour.field_r) {
             if (param0 == baa.field_e) {
@@ -135,7 +135,7 @@ final class WheeledMountComponent extends PathMoverComponent {
         super(param0, param1, param2, param3);
         this.field_Q = 4;
         try {
-          this.field_Q = param2.b((byte) 44, 4);
+          this.field_Q = param2.readBits((byte) 44, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ipa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -149,7 +149,7 @@ final class WheeledMountComponent extends PathMoverComponent {
         return false;
     }
 
-    public static void D(int param0) {
+    public static void releaseStatics(int param0) {
         field_P = null;
         field_M = null;
         field_O = null;
@@ -207,7 +207,7 @@ final class WheeledMountComponent extends PathMoverComponent {
     final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
-          param1.a((byte) -19, this.field_Q, 4);
+          param1.writeBits((byte) -19, this.field_Q, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ipa.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

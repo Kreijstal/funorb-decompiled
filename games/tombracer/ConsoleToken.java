@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mi extends IntrusiveNode {
+final class ConsoleToken extends IntrusiveNode {
     IntrusiveDeque field_i;
     static String field_n;
     static int[] field_l;
     static int field_k;
-    String field_m;
+    String text;
     static int field_g;
     int field_h;
     static boolean field_o;
-    int field_p;
+    int kind;
     static String field_j;
     static int field_f;
 
@@ -86,54 +86,54 @@ final class mi extends IntrusiveNode {
     }
 
     public final String toString() {
-        if (tr.field_f == this.field_p) {
-          return "Method{" + this.field_m + "}";
+        if (tr.field_f == this.kind) {
+          return "Method{" + this.text + "}";
         }
-        if (this.field_p == dc.field_o) {
-          return "Number{" + this.field_m + "}";
+        if (this.kind == dc.field_o) {
+          return "Number{" + this.text + "}";
         }
-        if (PressureSwitchBehaviour.field_r == this.field_p) {
-          return "Boolean{" + this.field_m + "}";
+        if (PressureSwitchBehaviour.field_r == this.kind) {
+          return "Boolean{" + this.text + "}";
         }
-        if (nl.field_d == this.field_p) {
-          return "Char{" + this.field_m + "}";
+        if (nl.field_d == this.kind) {
+          return "Char{" + this.text + "}";
         }
-        if (ma.field_e == this.field_p) {
-          return "String{" + this.field_m + "}";
+        if (ma.field_e == this.kind) {
+          return "String{" + this.text + "}";
         }
-        if (lna.field_a == this.field_p) {
+        if (lna.field_a == this.kind) {
           return "ArgStart";
         }
-        if (rs.field_a == this.field_p) {
+        if (rs.field_a == this.kind) {
           return "ArgEnd";
         }
-        if (this.field_p == qba.field_c) {
+        if (this.kind == qba.field_c) {
           return "ArgComma";
         }
         return "Unknown";
     }
 
-    mi(int param0, int param1) {
+    ConsoleToken(int param0, int param1) {
         this(param0, param1, (String) null);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 == 101) {
           field_l = null;
           field_n = null;
           field_j = null;
           return;
         }
-        mi.a((byte) -114);
+        ConsoleToken.releaseStatics((byte) -114);
         field_l = null;
         field_n = null;
         field_j = null;
     }
 
-    mi(int param0, int param1, String param2) {
+    ConsoleToken(int param0, int param1, String param2) {
         try {
-          this.field_p = param0;
-          this.field_m = param2;
+          this.kind = param0;
+          this.text = param2;
           this.field_h = param1;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "mi.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -158,7 +158,7 @@ final class mi extends IntrusiveNode {
         NumberFormatException var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        mi var5 = null;
+        ConsoleToken var5 = null;
         int var6 = 0;
         bfa[] var7 = null;
         bfa[] var8 = null;
@@ -166,60 +166,60 @@ final class mi extends IntrusiveNode {
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           if (param0 != -1) {
-            this.field_m = (String) null;
+            this.text = (String) null;
           }
           try {
-            if (tr.field_f == this.field_p) {
+            if (tr.field_f == this.kind) {
               var7 = new bfa[this.field_i.a((byte) -16)];
               var8 = var7;
               var4 = 0;
-              var5 = (mi) (this.field_i.f(-80));
+              var5 = (ConsoleToken) (this.field_i.f(-80));
               while (var5 != null) {
                 incrementValue$0 = var4;
                 var4++;
                 var7[incrementValue$0] = var5.a(-1, param1);
-                var5 = (mi) (this.field_i.e(114));
+                var5 = (ConsoleToken) (this.field_i.e(114));
               }
-              stackIn_9_0 = pc.a(param1, 19, this.field_m, var8);
+              stackIn_9_0 = pc.a(param1, 19, this.text, var8);
               return stackIn_9_0;
             }
-            if (dc.field_o == this.field_p) {
-              var3_int = Character.toLowerCase(this.field_m.charAt(this.field_m.length() - 1));
+            if (dc.field_o == this.kind) {
+              var3_int = Character.toLowerCase(this.text.charAt(this.text.length() - 1));
               if (var3_int == 102) {
-                stackIn_13_0 = new bfa(Float.valueOf(this.field_m).floatValue());
+                stackIn_13_0 = new bfa(Float.valueOf(this.text).floatValue());
                 return stackIn_13_0;
               }
               if (var3_int == 108) {
-                stackIn_17_0 = new bfa(Long.parseLong(this.field_m.substring(0, this.field_m.length() - 1)));
+                stackIn_17_0 = new bfa(Long.parseLong(this.text.substring(0, this.text.length() - 1)));
                 return stackIn_17_0;
               }
-              if (this.field_m.indexOf('.') == -1) {
-                stackIn_22_0 = new bfa(Integer.parseInt(this.field_m));
+              if (this.text.indexOf('.') == -1) {
+                stackIn_22_0 = new bfa(Integer.parseInt(this.text));
                 return stackIn_22_0;
               }
-              stackIn_20_0 = new bfa(Double.valueOf(this.field_m).doubleValue());
+              stackIn_20_0 = new bfa(Double.valueOf(this.text).doubleValue());
               return stackIn_20_0;
             }
-            if (PressureSwitchBehaviour.field_r == this.field_p) {
-              stackIn_26_0 = new bfa(this.field_m.equals("true"));
+            if (PressureSwitchBehaviour.field_r == this.kind) {
+              stackIn_26_0 = new bfa(this.text.equals("true"));
               return stackIn_26_0;
             }
-            if (this.field_p == nl.field_d) {
-              var9 = this.field_m.substring(1, this.field_m.length() - 1);
+            if (this.kind == nl.field_d) {
+              var9 = this.text.substring(1, this.text.length() - 1);
               if (var9.length() != 1) {
                 throw new rv("Invalid char value: " + var9);
               }
               stackIn_33_0 = new bfa(var9.charAt(0));
               return stackIn_33_0;
             }
-            if (ma.field_e == this.field_p) {
-              stackIn_37_0 = new bfa(this.field_m.substring(1, -1 + this.field_m.length()));
+            if (ma.field_e == this.kind) {
+              stackIn_37_0 = new bfa(this.text.substring(1, -1 + this.text.length()));
               return stackIn_37_0;
             }
           } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var3 = (NumberFormatException) (Object) decompiledCaughtException;
-            throw new rv("NumberFormatException on: " + this.field_m);
+            throw new rv("NumberFormatException on: " + this.text);
           }
           throw new IllegalArgumentException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

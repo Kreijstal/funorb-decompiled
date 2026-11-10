@@ -8,12 +8,12 @@ final class wl extends IntrusiveNode {
     GraphicsToolkit field_g;
     ssa field_j;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_i = null;
         field_h = null;
         field_f = (dk[][]) null;
         if (param0 >= -35) {
-          wl.a((byte) -3);
+          wl.releaseStatics((byte) -3);
         }
     }
 

@@ -68,7 +68,7 @@ final class eh implements fo {
         return;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = -71 % ((-17 - param0) / 49);
         field_i = (byte[][]) null;
     }

@@ -14,10 +14,10 @@ final class TextSpewerBehaviour extends Behaviour {
     final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
-          param1.a((byte) -128, this.field_t >> 16, 10);
-          param1.a((byte) -126, this.field_p / 50, 6);
-          param1.a((byte) 1, this.field_s / 50, 6);
-          param1.a((byte) 105, !this.field_q ? 0 : 1, 1);
+          param1.writeBits((byte) -128, this.field_t >> 16, 10);
+          param1.writeBits((byte) -126, this.field_p / 50, 6);
+          param1.writeBits((byte) 1, this.field_s / 50, 6);
+          param1.writeBits((byte) 105, !this.field_q ? 0 : 1, 1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "oh.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -87,10 +87,10 @@ final class TextSpewerBehaviour extends Behaviour {
         this.field_q = true;
         this.field_t = 8388608;
         try {
-          this.field_t = param1.b((byte) 44, 10) << 16;
-          this.field_p = param1.b((byte) 44, 6) * 50;
-          this.field_s = param1.b((byte) 44, 6) * 50;
-          this.field_q = param1.b((byte) 44, 1) == 1 ? true : false;
+          this.field_t = param1.readBits((byte) 44, 10) << 16;
+          this.field_p = param1.readBits((byte) 44, 6) * 50;
+          this.field_s = param1.readBits((byte) 44, 6) * 50;
+          this.field_q = param1.readBits((byte) 44, 1) == 1 ? true : false;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "oh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

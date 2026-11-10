@@ -16,9 +16,9 @@ final class EffectSwitchBehaviour extends Behaviour implements ut {
     final void a(boolean param0, BitPacketBuffer param1) {
         super.a(param0, param1);
         this.field_q.a(this.h((byte) 116), (byte) 111, param1);
-        param1.a((byte) 42, this.field_w, 8);
-        param1.a((byte) -128, this.field_v, 8);
-        param1.a((byte) 70, this.field_n, 4);
+        param1.writeBits((byte) 42, this.field_w, 8);
+        param1.writeBits((byte) -128, this.field_v, 8);
+        param1.writeBits((byte) 70, this.field_n, 4);
         this.field_u.a(param1, (byte) -128);
         if (param0) {
           return;
@@ -35,7 +35,7 @@ final class EffectSwitchBehaviour extends Behaviour implements ut {
         return this.field_w;
     }
 
-    public static void l(int param0) {
+    public static void releaseStatics(int param0) {
         field_o = null;
         if (param0 <= 1) {
           field_r = (long[]) null;
@@ -128,23 +128,23 @@ final class EffectSwitchBehaviour extends Behaviour implements ut {
         this.field_s = 0;
         try {
           this.field_q = new jma(15, param0, param1);
-          this.field_w = param1.b((byte) 44, 8);
-          this.field_v = param1.b((byte) 44, 8);
-          this.field_n = param1.b((byte) 44, 4);
+          this.field_w = param1.readBits((byte) 44, 8);
+          this.field_v = param1.readBits((byte) 44, 8);
+          this.field_n = param1.readBits((byte) 44, 4);
           if (param0.field_E < 9) {
-            var4_int = param1.b((byte) 44, 3);
+            var4_int = param1.readBits((byte) 44, 3);
             var12 = new int[var4_int];
             var10 = var12;
             var5 = var10;
             for (var6 = 0; var4_int > var6; var6++) {
-              var5[var6] = param1.b((byte) 44, 4);
+              var5[var6] = param1.readBits((byte) 44, 4);
             }
-            var6Lifetime1 = param1.b((byte) 44, 3);
+            var6Lifetime1 = param1.readBits((byte) 44, 3);
             var13 = new int[var6Lifetime1];
             var11 = var13;
             var7 = var11;
             for (var8 = 0; var8 < var6Lifetime1; var8++) {
-              var7[var8] = param1.b((byte) 44, 4);
+              var7[var8] = param1.readBits((byte) 44, 4);
             }
             this.field_u = new kpa(6);
             this.field_u.a(var12, 0);
@@ -175,7 +175,7 @@ final class EffectSwitchBehaviour extends Behaviour implements ut {
         }
     }
 
-    final int a(int param0, int param1, up param2, int param3, byte param4, int param5) {
+    final int a(int param0, int param1, Effect param2, int param3, byte param4, int param5) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;
@@ -201,7 +201,7 @@ final class EffectSwitchBehaviour extends Behaviour implements ut {
         }
     }
 
-    final int a(int param0, Projectile param1, up param2) {
+    final int a(int param0, Projectile param1, Effect param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -236,7 +236,7 @@ final class EffectSwitchBehaviour extends Behaviour implements ut {
         }
     }
 
-    private final int a(byte param0, up param1) {
+    private final int a(byte param0, Effect param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
@@ -255,8 +255,8 @@ final class EffectSwitchBehaviour extends Behaviour implements ut {
           var3_int = param1.field_j;
           if (this.a(true, var3_int)) {
             this.field_p = 3;
-            this.field_s = this.field_s + param1.field_b;
-            stackIn_5_0 = param1.field_b;
+            this.field_s = this.field_s + param1.size;
+            stackIn_5_0 = param1.size;
             return stackIn_5_0;
           }
           if (!this.a((byte) -127, var3_int)) {
@@ -264,8 +264,8 @@ final class EffectSwitchBehaviour extends Behaviour implements ut {
             return stackIn_10_0;
           }
           this.field_p = -3;
-          this.field_s = this.field_s - param1.field_b;
-          stackIn_8_0 = param1.field_b;
+          this.field_s = this.field_s - param1.size;
+          stackIn_8_0 = param1.size;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -290,8 +290,8 @@ final class EffectSwitchBehaviour extends Behaviour implements ut {
 
     public final int j(byte param0) {
         if (param0 != -108) {
-          up var3 = (up) null;
-          this.a(-122, (Projectile) null, (up) null);
+          Effect var3 = (Effect) null;
+          this.a(-122, (Projectile) null, (Effect) null);
         }
         return this.field_s;
     }
@@ -314,8 +314,8 @@ final class EffectSwitchBehaviour extends Behaviour implements ut {
         int discarded$0 = 0;
         this.field_t.a(param1, -17075, param0);
         if (param2 > -32) {
-          up var5 = (up) null;
-          discarded$0 = this.a((byte) -27, (up) null);
+          Effect var5 = (Effect) null;
+          discarded$0 = this.a((byte) -27, (Effect) null);
         }
     }
 
@@ -394,7 +394,7 @@ final class EffectSwitchBehaviour extends Behaviour implements ut {
         }
     }
 
-    final int a(int param0, up param1, pc param2) {
+    final int a(int param0, Effect param1, pc param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;

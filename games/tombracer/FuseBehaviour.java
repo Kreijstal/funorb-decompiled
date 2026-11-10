@@ -5,7 +5,7 @@ final class FuseBehaviour extends Behaviour {
     static String field_t;
     private int field_s;
     private int field_r;
-    private up field_p;
+    private Effect field_p;
     private kpa field_x;
     private int field_o;
     static boolean field_w;
@@ -14,7 +14,7 @@ final class FuseBehaviour extends Behaviour {
     private kpa field_q;
     private int field_u;
 
-    final int a(int param0, up param1, pc param2) {
+    final int a(int param0, Effect param1, pc param2) {
         RuntimeException var4 = null;
         pc var5 = null;
         int stackIn_3_0 = 0;
@@ -27,7 +27,7 @@ final class FuseBehaviour extends Behaviour {
         try {
           if (param0 > -85) {
             var5 = (pc) null;
-            this.a(102, (up) null, (pc) null);
+            this.a(102, (Effect) null, (pc) null);
           }
           stackIn_3_0 = this.a(param1, (byte) -115);
           return stackIn_3_0;
@@ -64,7 +64,7 @@ final class FuseBehaviour extends Behaviour {
         return false;
     }
 
-    final int a(int param0, Projectile param1, up param2) {
+    final int a(int param0, Projectile param1, Effect param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -110,7 +110,7 @@ final class FuseBehaviour extends Behaviour {
     final int a(boolean param0) {
         if (param0) {
           pc var3 = (pc) null;
-          this.a(-90, (up) null, (pc) null);
+          this.a(-90, (Effect) null, (pc) null);
         }
         return 31;
     }
@@ -120,11 +120,11 @@ final class FuseBehaviour extends Behaviour {
         try {
           this.field_x = new kpa(6, param0.field_E, param1);
           this.field_q = new kpa(6, param0.field_E, param1);
-          this.field_u = param1.b((byte) 44, 8);
-          this.field_o = param1.b((byte) 44, 8);
-          this.field_r = param1.b((byte) 44, 8);
+          this.field_u = param1.readBits((byte) 44, 8);
+          this.field_o = param1.readBits((byte) 44, 8);
+          this.field_r = param1.readBits((byte) 44, 8);
           this.field_p = ad.a((byte) 87, param1);
-          this.field_n = param1.b((byte) 44, 8) << 16;
+          this.field_n = param1.readBits((byte) 44, 8) << 16;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ula.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -166,7 +166,7 @@ final class FuseBehaviour extends Behaviour {
         }
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_v = null;
         field_t = null;
         if (param0 != 42) {
@@ -175,7 +175,7 @@ final class FuseBehaviour extends Behaviour {
     }
 
     private final void j(byte param0) {
-        up var2 = new up(this.e(6), this.field_p);
+        Effect var2 = new Effect(this.e(6), this.field_p);
         if (param0 != -67) {
           this.field_q = (kpa) null;
         }
@@ -188,11 +188,11 @@ final class FuseBehaviour extends Behaviour {
           super.a(param0, param1);
           this.field_x.a(param1, (byte) -118);
           this.field_q.a(param1, (byte) -117);
-          param1.a((byte) -11, this.field_u, 8);
-          param1.a((byte) 42, this.field_o, 8);
-          param1.a((byte) 125, this.field_r, 8);
+          param1.writeBits((byte) -11, this.field_u, 8);
+          param1.writeBits((byte) 42, this.field_o, 8);
+          param1.writeBits((byte) 125, this.field_r, 8);
           this.field_p.a(param1, (byte) 125);
-          param1.a((byte) 127, this.field_n >> 16, 8);
+          param1.writeBits((byte) 127, this.field_n >> 16, 8);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ula.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -206,13 +206,13 @@ final class FuseBehaviour extends Behaviour {
           return false;
         }
         if (!param0) {
-          this.field_p = (up) null;
+          this.field_p = (Effect) null;
           return true;
         }
         return true;
     }
 
-    private final int a(up param0, byte param1) {
+    private final int a(Effect param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -226,7 +226,7 @@ final class FuseBehaviour extends Behaviour {
             this.field_x = (kpa) null;
           }
           var3_int = param0.field_j;
-          var4 = param0.field_b;
+          var4 = param0.size;
           if (!this.b(8) &&
             this.a(113, var3_int, var4)) {
             if (this.field_r > 0) {
@@ -265,8 +265,8 @@ final class FuseBehaviour extends Behaviour {
     final void k(int param0) {
         int discarded$0 = 0;
         if (param0 != 5418) {
-          up var3 = (up) null;
-          discarded$0 = this.a((up) null, (byte) -1);
+          Effect var3 = (Effect) null;
+          discarded$0 = this.a((Effect) null, (byte) -1);
         }
         if (this.field_s > 0) {
           this.field_s = this.field_s - 1;
@@ -279,13 +279,13 @@ final class FuseBehaviour extends Behaviour {
     private final boolean b(int param0) {
         int discarded$0 = 0;
         if (param0 != 8) {
-          up var3 = (up) null;
-          discarded$0 = this.a((up) null, (byte) -80);
+          Effect var3 = (Effect) null;
+          discarded$0 = this.a((Effect) null, (byte) -80);
         }
         return 0 != this.field_s ? true : false;
     }
 
-    final int a(int param0, int param1, up param2, int param3, byte param4, int param5) {
+    final int a(int param0, int param1, Effect param2, int param3, byte param4, int param5) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;

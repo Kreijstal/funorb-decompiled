@@ -34,7 +34,7 @@ final class fd {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         if (param0 >= -103) {
           field_d = (lu) null;

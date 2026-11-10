@@ -110,11 +110,11 @@ final class laa extends b implements tsa {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_y = null;
         field_x = null;
         if (param0 != 16964) {
-          laa.a(-107);
+          laa.releaseStatics(-107);
         }
     }
 

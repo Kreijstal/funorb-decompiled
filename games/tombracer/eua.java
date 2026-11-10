@@ -47,7 +47,7 @@ final class eua extends jea {
         this.a(12, 6);
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_Ab = null;
         if (param0 <= 52) {
           field_Ab = (String) null;
@@ -302,7 +302,7 @@ final class eua extends jea {
           }
         }
         if (param2 > -52) {
-          eua.f(-120);
+          eua.releaseStatics(-120);
         }
         if (this.field_tb != -1) {
           var7 = this.field_zb[this.field_tb];

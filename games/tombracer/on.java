@@ -18,7 +18,7 @@ final class on {
         return this.field_c;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 32) {
           return;
         }
@@ -135,7 +135,7 @@ final class on {
     final static boolean a(byte param0, int param1) {
         boolean stackIn_26_0 = false;
         if (param0 != 15) {
-          on.d(119);
+          on.releaseStatics(119);
         }
         boolean decompiledFrameRemainder0 = true;
         if (!oj.field_tb[82] &&

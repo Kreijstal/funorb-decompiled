@@ -50,7 +50,7 @@ final class IdolItemComponent extends ItemComponent {
         super(param0, param1);
     }
 
-    public static void e(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_K = null;
         field_I = null;
         field_H = null;

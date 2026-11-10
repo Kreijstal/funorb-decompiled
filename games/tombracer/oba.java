@@ -215,7 +215,7 @@ final class oba extends gda {
         this.field_o = -(var3 * var7) + this.field_o * var2;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 == -14) {
           field_f = null;
           field_n = null;

@@ -684,7 +684,7 @@ final class at extends ofa implements tsa {
         }
     }
 
-    public static void i(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Q = null;
         field_R = null;
         int var1 = -92 / ((26 - param0) / 46);

@@ -706,7 +706,7 @@ final class Player implements fo, gma, ffa, jfa, t {
         }
     }
 
-    public final int a(up param0, int param1, pc param2) {
+    public final int a(Effect param0, int param1, pc param2) {
         RuntimeException var4 = null;
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;
@@ -2396,7 +2396,7 @@ final class Player implements fo, gma, ffa, jfa, t {
           }
           if (this.field_C[0]) {
             var28Lifetime1 = this.field_J.q(-96).a(32, 0) + 256 << 16;
-            this.field_J.a(-116, this.y, new up(4, 32), var28Lifetime1, var28Lifetime1, this.x);
+            this.field_J.a(-116, this.y, new Effect(4, 32), var28Lifetime1, var28Lifetime1, this.x);
           }
           if (this.field_J.g((byte) -67)) {
             this.a(1, (byte) -25);
@@ -3005,7 +3005,7 @@ final class Player implements fo, gma, ffa, jfa, t {
         }
     }
 
-    private final int a(up param0, int param1) {
+    private final int a(Effect param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
@@ -3030,7 +3030,7 @@ final class Player implements fo, gma, ffa, jfa, t {
             this.q((byte) 16);
           }
           var3_int = 0;
-          if (param0.field_b >= 3) {
+          if (param0.size >= 3) {
             var4 = param0.c(-127);
             if (var4 != 0) {
               var5 = param0.e(-98);
@@ -3040,7 +3040,7 @@ final class Player implements fo, gma, ffa, jfa, t {
               this.a(var4, (byte) 89, var5);
             }
           }
-          var3_intLifetime1 = param0.field_b;
+          var3_intLifetime1 = param0.size;
           stackIn_22_0 = var3_intLifetime1;
           return stackIn_22_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3235,7 +3235,7 @@ final class Player implements fo, gma, ffa, jfa, t {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -1) {
-            this.a((up) null, 58, -120, 50, 126, -106);
+            this.a((Effect) null, 58, -120, 50, 126, -106);
           }
           stackIn_10_0 = (1 == this.field_lb) && (this.field_r == 4);
           return stackIn_10_0;
@@ -3784,7 +3784,7 @@ final class Player implements fo, gma, ffa, jfa, t {
         }
     }
 
-    public final int a(up param0, int param1, int param2, int param3, int param4, int param5) {
+    public final int a(Effect param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_4_0 = 0;
         int stackIn_9_0 = 0;
@@ -3915,7 +3915,7 @@ final class Player implements fo, gma, ffa, jfa, t {
         }
     }
 
-    public final int a(up param0, Projectile param1, int param2) {
+    public final int a(Effect param0, Projectile param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int stackIn_7_0 = 0;

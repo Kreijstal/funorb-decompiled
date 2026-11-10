@@ -5,10 +5,10 @@ final class vt {
     static IntrusiveDeque field_a;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 <= 51) {
-          vt.a((byte) -125);
+          vt.releaseStatics((byte) -125);
         }
     }
 

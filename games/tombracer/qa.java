@@ -27,7 +27,7 @@ final class qa {
         return this.field_q;
     }
 
-    final static int a(boolean param0, mi[] param1, int param2) {
+    final static int a(boolean param0, ConsoleToken[] param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -111,8 +111,8 @@ final class qa {
         }
         this.field_n.a(this.field_e, this.field_p, this.field_k, this.field_c, this.field_l, this.field_a, 51);
         if (param0 != 23479) {
-          mi[] var3 = (mi[]) null;
-          qa.a(true, (mi[]) null, 44);
+          ConsoleToken[] var3 = (ConsoleToken[]) null;
+          qa.a(true, (ConsoleToken[]) null, 44);
           if (this.field_a.f((byte) 33)) {
             return;
           }

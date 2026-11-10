@@ -14,12 +14,12 @@ final class cba {
         return qma.a((byte) 123, (double)param2 * param1 / 360.0);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_a = null;
         field_c = null;
         if (param0 <= 93) {
-          cba.a((byte) 5);
+          cba.releaseStatics((byte) 5);
         }
     }
 

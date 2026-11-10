@@ -351,7 +351,7 @@ final class op extends ofa implements tsa {
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = 16 % ((param0 - 7) / 48);
         field_O = null;
     }

@@ -66,7 +66,7 @@ final class mka {
         if (param0 == 8192) {
           return uu.field_a.field_Ab == SimpleConditionBehaviour.field_r ? true : false;
         }
-        mka.a((byte) -112);
+        mka.releaseStatics((byte) -112);
         return uu.field_a.field_Ab == SimpleConditionBehaviour.field_r ? true : false;
     }
 
@@ -90,7 +90,7 @@ final class mka {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         int var1 = 36 / ((-63 - param0) / 42);
     }

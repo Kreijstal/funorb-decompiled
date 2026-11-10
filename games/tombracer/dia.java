@@ -7,7 +7,7 @@ final class dia extends ela {
     static char field_q;
     static float[] field_r;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_o = null;
         if (!param0) {
           field_r = (float[]) null;

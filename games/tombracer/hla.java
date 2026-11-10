@@ -9,9 +9,9 @@ final class hla extends jea {
     static int field_xb;
     static ji field_ub;
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 23613) {
-          hla.f(-65);
+          hla.releaseStatics(-65);
           field_ub = null;
           return;
         }
@@ -41,7 +41,7 @@ final class hla extends jea {
           this.a(param1, param0, 0, param5);
           return;
         }
-        hla.f(-42);
+        hla.releaseStatics(-42);
         this.field_t = param6;
         this.field_qb = param3;
         this.field_G = param7;

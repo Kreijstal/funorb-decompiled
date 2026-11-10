@@ -11,7 +11,7 @@ final class PlatformMazeComponent extends MazeComponent {
     final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
-          param1.a((byte) -125, this.field_K, 4);
+          param1.writeBits((byte) -125, this.field_K, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "aea.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -114,7 +114,7 @@ final class PlatformMazeComponent extends MazeComponent {
     PlatformMazeComponent(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
         try {
-          this.field_K = param2.b((byte) 44, 4);
+          this.field_K = param2.readBits((byte) 44, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "aea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

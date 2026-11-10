@@ -50,13 +50,13 @@ abstract class MazeComponent extends kna {
             MazeComponent.b(88, -88);
           }
           if (this.D(0)) {
-            param1.a((byte) 107, this.field_I, 3);
+            param1.writeBits((byte) 107, this.field_I, 3);
             if (0 < this.field_I) {
-              param1.a((byte) -128, this.field_H, 2);
+              param1.writeBits((byte) -128, this.field_H, 2);
             }
           }
           if (this.C(1)) {
-            param1.a((byte) 100, this.field_J, 2);
+            param1.writeBits((byte) 100, this.field_J, 2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -131,13 +131,13 @@ abstract class MazeComponent extends kna {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.D(0)) {
-            this.field_I = param2.b((byte) 44, 3);
+            this.field_I = param2.readBits((byte) 44, 3);
             if (this.field_I > 0) {
-              this.field_H = param2.b((byte) 44, 2);
+              this.field_H = param2.readBits((byte) 44, 2);
             }
           }
           if (this.C(1)) {
-            this.field_J = param2.b((byte) 44, 2);
+            this.field_J = param2.readBits((byte) 44, 2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -305,7 +305,7 @@ abstract class MazeComponent extends kna {
           tn.field_n.a(lk.field_l.field_G, 2, (byte) 127, 0, io.field_a, lk.field_l.field_t - (di.field_a + 22), 20 + (2 + di.field_a));
           bc.field_b.a(nra.field_c.field_G, 40, -23776, -40 + nra.field_c.field_t, 0);
           wf.field_g.a(dka.field_b.field_G, 30, -23776, 0, 0);
-          dba.field_g.a(dka.field_b.field_G, dka.field_b.field_t - 72, -23776, 30, 0);
+          C2SSubmitSettingsPacket.field_g.a(dka.field_b.field_G, dka.field_b.field_t - 72, -23776, 30, 0);
           var2_int = 3 + fk.field_b;
           if (SafeZoneBehaviour.field_u.length < 2) {
             var2_int--;
@@ -313,15 +313,15 @@ abstract class MazeComponent extends kna {
           if (param0) {
             var2_int--;
           }
-          var3 = (-5 + (-5 + (dba.field_g.field_t - 10) + 2 + (var2_int + 1) / 2)) / (1 + var2_int) - 2;
+          var3 = (-5 + (-5 + (C2SSubmitSettingsPacket.field_g.field_t - 10) + 2 + (var2_int + 1) / 2)) / (1 + var2_int) - 2;
           if (var3 > 30) {
             var3 = 30;
           }
-          var4 = -5 + (dba.field_g.field_t - 5 - var2_int * (var3 + 2));
+          var4 = -5 + (C2SSubmitSettingsPacket.field_g.field_t - 5 - var2_int * (var3 + 2));
           if (var4 > 40) {
             var4 = 40;
           }
-          qna.field_b.a(-5 + (dba.field_g.field_G - 5), var4, -23776, 5, 5);
+          qna.field_b.a(-5 + (C2SSubmitSettingsPacket.field_g.field_G - 5), var4, -23776, 5, 5);
           var5 = 7 + var4;
           for (var6 = 0; fk.field_b + 4 > var6; var6++) {
             if ((var6 != 1 ||
@@ -404,7 +404,7 @@ abstract class MazeComponent extends kna {
             }
           }
           hf.field_a.a(360, -134 + (bea.field_a - 10), -23776, 10, bea.field_g - 360 >> 1);
-          vca.field_e.a(hf.field_a.field_G, 24, -23776, 0, 0);
+          S2CEventPacket.field_e.a(hf.field_a.field_G, 24, -23776, 0, 0);
           vs.field_R.a(hf.field_a.field_G, -24 + hf.field_a.field_t, -23776, 24, 0);
           vs.field_R.field_w = Player.c(vs.field_R.field_t, 1, 3, 11579568, param1 ^ -116, 8421504);
           rra.field_e.a(-10 + vs.field_R.field_G, -24 + vs.field_R.field_t - 12, -23776, 5, 5);

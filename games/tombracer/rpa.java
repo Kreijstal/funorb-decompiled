@@ -41,7 +41,7 @@ final class rpa extends qe {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_g = null;
         field_c = null;
         field_f = null;

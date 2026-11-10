@@ -5,7 +5,7 @@ final class pua extends hq {
     static apa field_c;
     private static String[] field_d;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         if (param0 >= -45) {
           return;
@@ -46,7 +46,7 @@ final class pua extends hq {
           var9 = rp.a(ss.field_c, -16226, pka.field_b, param4 + param1);
           var10 = rp.a(ss.field_c, -16226, pka.field_b, -param4 + param6);
           if (param0 >= -11) {
-            pua.a((byte) -34);
+            pua.releaseStatics((byte) -34);
           }
           for (var15Lifetime2 = var7_int; var15Lifetime2 <= var8; var15Lifetime2++) {
             var21 = vaa.field_a[var15Lifetime2];

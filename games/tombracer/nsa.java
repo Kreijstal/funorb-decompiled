@@ -17,11 +17,11 @@ final class nsa {
     static iv field_i;
     int field_n;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_f = null;
         field_i = null;
         if (param0) {
-          nsa.a(false);
+          nsa.releaseStatics(false);
         }
     }
 

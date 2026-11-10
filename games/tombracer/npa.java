@@ -194,7 +194,7 @@ final class npa {
         return this.b(0);
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -2147483648) {
           return;
         }
@@ -341,7 +341,7 @@ final class npa {
 
     final static boolean a(int param0) {
         if (param0 != 32) {
-          npa.c(-128);
+          npa.releaseStatics(-128);
         }
         return wt.field_d == gsa.field_y ? true : false;
     }

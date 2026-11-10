@@ -78,7 +78,7 @@ final class nna {
             return stackIn_20_0;
           }
           var5 = ql.field_k;
-          var5.k(param2, -2988);
+          var5.writeCipheredOpcode(param2, -2988);
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.i(2, 0);

@@ -16,7 +16,7 @@ final class it {
         return v.a(100, (byte) -76, 128, param1, 0, 255);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         int var1 = 47 % ((param0 - 51) / 40);
     }

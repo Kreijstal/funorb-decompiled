@@ -23,7 +23,7 @@ class hga extends vpa {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_o = null;
         field_n = null;
         int var1 = 71 % ((param0 - 38) / 42);

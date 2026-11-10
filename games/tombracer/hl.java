@@ -304,7 +304,7 @@ abstract class hl implements mta {
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         int var1 = -35 / ((param0 + 82) / 44);
         field_c = null;

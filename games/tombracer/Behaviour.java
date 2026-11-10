@@ -5,10 +5,10 @@ abstract class Behaviour extends IntrusiveNode implements lj, fo, noa, gr {
     boolean field_f;
     static String field_h;
     Trap field_g;
-    private gpa field_j;
+    private SwitchableId field_j;
     boolean field_k;
     private boolean field_i;
-    private gpa field_l;
+    private SwitchableId field_l;
     private Room field_m;
 
     final boolean d(int param0) {
@@ -23,7 +23,7 @@ abstract class Behaviour extends IntrusiveNode implements lj, fo, noa, gr {
         return io.a(var2Lifetime1.c(-47), this.field_g.e(9648), (byte) -57, var2Lifetime1.a((byte) 55), this.field_g.d(3), var2Lifetime1.e(9648), this.field_g.a((byte) 55), this.field_g.c(param0 ^ -8057), var2Lifetime1.d(3));
     }
 
-    int a(int param0, Projectile param1, up param2) {
+    int a(int param0, Projectile param1, Effect param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -61,9 +61,9 @@ abstract class Behaviour extends IntrusiveNode implements lj, fo, noa, gr {
 
     abstract int a(boolean param0);
 
-    public final gpa i(byte param0) {
+    public final SwitchableId i(byte param0) {
         if (param0 != 84) {
-          return (gpa) null;
+          return (SwitchableId) null;
         }
         return this.field_l;
     }
@@ -93,9 +93,9 @@ abstract class Behaviour extends IntrusiveNode implements lj, fo, noa, gr {
         }
     }
 
-    public final gpa n(int param0) {
+    public final SwitchableId n(int param0) {
         if (param0 != 31974) {
-          return (gpa) null;
+          return (SwitchableId) null;
         }
         return this.field_j;
     }
@@ -144,7 +144,7 @@ abstract class Behaviour extends IntrusiveNode implements lj, fo, noa, gr {
         return this.field_g.H(param0 ^ -108);
     }
 
-    int a(int param0, up param1, pc param2) {
+    int a(int param0, Effect param1, pc param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -206,9 +206,9 @@ abstract class Behaviour extends IntrusiveNode implements lj, fo, noa, gr {
     Behaviour(Room param0, BitPacketBuffer param1, boolean param2) {
         this(param0, param2);
         try {
-          this.field_f = param1.b((byte) 44, 1) == 1 ? true : false;
+          this.field_f = param1.readBits((byte) 44, 1) == 1 ? true : false;
           if (param0.field_E >= 22) {
-            this.field_k = param1.b((byte) 44, 1) == 1 ? true : false;
+            this.field_k = param1.readBits((byte) 44, 1) == 1 ? true : false;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "nv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -228,7 +228,7 @@ abstract class Behaviour extends IntrusiveNode implements lj, fo, noa, gr {
         return this.field_g.d(3);
     }
 
-    public static void j(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 18416) {
           return;
         }
@@ -287,7 +287,7 @@ abstract class Behaviour extends IntrusiveNode implements lj, fo, noa, gr {
         }
     }
 
-    int a(int param0, int param1, up param2, int param3, byte param4, int param5) {
+    int a(int param0, int param1, Effect param2, int param3, byte param4, int param5) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;
@@ -354,9 +354,9 @@ abstract class Behaviour extends IntrusiveNode implements lj, fo, noa, gr {
 
     void a(boolean param0, BitPacketBuffer param1) {
         try {
-          param1.a((byte) -127, this.a(param0), 6);
-          param1.a((byte) -126, !this.field_f ? 0 : 1, 1);
-          param1.a((byte) 112, !this.field_k ? 0 : 1, 1);
+          param1.writeBits((byte) -127, this.a(param0), 6);
+          param1.writeBits((byte) -126, !this.field_f ? 0 : 1, 1);
+          param1.writeBits((byte) 112, !this.field_k ? 0 : 1, 1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "nv.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -406,8 +406,8 @@ abstract class Behaviour extends IntrusiveNode implements lj, fo, noa, gr {
 
     public final void f(int param0) {
         if (param0 != -4366) {
-          up var3 = (up) null;
-          this.a(18, -54, (up) null, 115, (byte) 119, -22);
+          Effect var3 = (Effect) null;
+          this.a(18, -54, (Effect) null, 115, (byte) 119, -22);
         }
     }
 

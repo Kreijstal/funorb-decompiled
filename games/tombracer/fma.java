@@ -12,7 +12,7 @@ final class fma {
     private PacketBuffer field_g;
     private js[] field_i;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 82 % ((-34 - param0) / 61);
         field_f = null;
         field_d = null;
@@ -172,7 +172,7 @@ final class fma {
               return stackIn_10_0;
             }
             if (param4 <= 42) {
-              fma.a((byte) -48);
+              fma.releaseStatics((byte) -48);
             }
             this.field_g.position = param1 * 72 + 6;
             var6_int = this.field_g.e(121);

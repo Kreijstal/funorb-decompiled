@@ -38,7 +38,7 @@ final class DarknessBehaviour extends Behaviour {
         return param0;
     }
 
-    final int a(int param0, Projectile param1, up param2) {
+    final int a(int param0, Projectile param1, Effect param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
@@ -169,7 +169,7 @@ final class DarknessBehaviour extends Behaviour {
         this.field_p = 255;
         try {
           if (param0.field_E >= 4) {
-            this.field_n = param1.b((byte) 44, 10) << 16;
+            this.field_n = param1.readBits((byte) 44, 10) << 16;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -241,7 +241,7 @@ final class DarknessBehaviour extends Behaviour {
     final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
-          param1.a((byte) 59, this.field_n >> 16, 10);
+          param1.writeBits((byte) 59, this.field_n >> 16, 10);
           if (param0) {
             BitPacketBuffer var4 = (BitPacketBuffer) null;
             this.a(true, (BitPacketBuffer) null);
@@ -251,7 +251,7 @@ final class DarknessBehaviour extends Behaviour {
         }
     }
 
-    final int a(int param0, int param1, up param2, int param3, byte param4, int param5) {
+    final int a(int param0, int param1, Effect param2, int param3, byte param4, int param5) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
@@ -263,7 +263,7 @@ final class DarknessBehaviour extends Behaviour {
         try {
           if (param2.field_j == 1) {
             var7_int = et.b(param0, param1, -48) / 2;
-            this.a(param3, (byte) 90, param2.field_b, var7_int, param5);
+            this.a(param3, (byte) 90, param2.size, var7_int, param5);
           }
           var7_intLifetime1 = -5 / ((param4 - 62) / 52);
           stackIn_3_0 = 0;
@@ -324,7 +324,7 @@ final class DarknessBehaviour extends Behaviour {
         }
     }
 
-    final int a(int param0, up param1, pc param2) {
+    final int a(int param0, Effect param1, pc param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -343,13 +343,13 @@ final class DarknessBehaviour extends Behaviour {
         try {
           if (param0 > -85) {
             var10 = (pc) null;
-            this.a(26, (up) null, (pc) null);
+            this.a(26, (Effect) null, (pc) null);
           }
           var4_int = param2.field_d - this.field_g.d(3) + this.field_g.c(-67) / 2;
           var5 = param2.field_e - (this.field_g.d(3) - this.field_g.c(-63) / 2);
           var6 = param2.field_k - this.field_g.e(9648) + this.field_g.a((byte) 55) / 2;
           var7 = param2.field_a + (-this.field_g.e(9648) + this.field_g.a((byte) 55) / 2);
-          var8 = param1.field_b;
+          var8 = param1.size;
           if (var8 >= 10) {
             var8 = 9;
           }

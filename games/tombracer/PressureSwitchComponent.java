@@ -85,8 +85,8 @@ final class PressureSwitchComponent extends SwitchComponent {
     }
 
     final static void C(int param0) {
-        if (-gpa.field_b + 0 != TimeSwitchBehaviour.field_r &&
-          TimeSwitchBehaviour.field_r != 250 - gpa.field_b) {
+        if (-SwitchableId.field_b + 0 != TimeSwitchBehaviour.field_r &&
+          TimeSwitchBehaviour.field_r != 250 - SwitchableId.field_b) {
         }
         if (param0 != -5) {
           return;
@@ -106,7 +106,7 @@ final class PressureSwitchComponent extends SwitchComponent {
         super(param0, param1, param2, param3);
         this.field_L = 2;
         try {
-          this.field_L = param2.b((byte) 44, 4);
+          this.field_L = param2.readBits((byte) 44, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -278,7 +278,7 @@ final class PressureSwitchComponent extends SwitchComponent {
     final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
-          param1.a((byte) -125, this.field_L, 4);
+          param1.writeBits((byte) -125, this.field_L, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pw.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

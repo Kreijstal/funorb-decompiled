@@ -528,7 +528,7 @@ final class bh extends ela {
                 if (!var12.field_Yb) {
                   stackIn_160_0 = lva.field_v;
                 } else {
-                  stackIn_160_0 = cf.field_c;
+                  stackIn_160_0 = S2CRoundResultPacket.field_c;
                 }
               } else {
                 stackIn_160_0 = kba.field_k;

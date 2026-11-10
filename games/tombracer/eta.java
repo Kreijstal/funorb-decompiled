@@ -5,10 +5,10 @@ class eta {
     static jpa[][] field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = (jpa[][]) null;
         if (param0 != 29574) {
-          eta.a(59);
+          eta.releaseStatics(59);
         }
     }
 

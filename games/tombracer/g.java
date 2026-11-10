@@ -82,7 +82,7 @@ final class g {
           if (param4 < -17) {
             return;
           }
-          g.a(true);
+          g.releaseStatics(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -91,7 +91,7 @@ final class g {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           return;
         }

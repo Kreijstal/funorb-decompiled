@@ -121,7 +121,7 @@ final class gj {
         return null;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         field_o = null;
         field_e = null;

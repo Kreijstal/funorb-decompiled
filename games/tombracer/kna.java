@@ -8,13 +8,13 @@ abstract class kna extends RoomComponent {
     static String field_B;
     static String field_D;
 
-    public static void y(int param0) {
+    public static void releaseStatics(int param0) {
         field_D = null;
         field_E = null;
         field_C = null;
         field_B = null;
         if (param0 != 0) {
-          kna.y(74);
+          kna.releaseStatics(74);
         }
     }
 

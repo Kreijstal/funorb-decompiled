@@ -366,7 +366,7 @@ final class vba extends we {
         return var2;
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_x = null;
         field_u = null;
         if (param0 != -10) {

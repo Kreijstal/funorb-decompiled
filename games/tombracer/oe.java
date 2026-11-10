@@ -60,7 +60,7 @@ final class oe extends kca {
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_l = null;
         if (param0 != -112) {
           field_j = (int[]) null;

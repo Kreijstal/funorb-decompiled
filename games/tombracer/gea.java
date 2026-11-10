@@ -15,7 +15,7 @@ final class gea {
         return stackIn_7_0;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           return;
         }
@@ -144,14 +144,14 @@ final class gea {
         int var4 = 0;
         ir discarded$0 = new ir();
         try {
-          var3_int = param1.b((byte) 44, 4);
+          var3_int = param1.readBits((byte) 44, 4);
           this.field_b = new int[var3_int][2];
           for (var4 = 0; var3_int > var4; var4++) {
-            this.field_b[var4][0] = CoinItemComponent.a(true, 12, param1.b((byte) 44, 12)) << 16;
-            this.field_b[var4][1] = CoinItemComponent.a(true, 12, param1.b((byte) 44, 12)) << 16;
+            this.field_b[var4][0] = CoinItemComponent.a(true, 12, param1.readBits((byte) 44, 12)) << 16;
+            this.field_b[var4][1] = CoinItemComponent.a(true, 12, param1.readBits((byte) 44, 12)) << 16;
           }
           if (11 <= param0) {
-            this.field_a = param1.b((byte) 44, 1) == 1 ? true : false;
+            this.field_a = param1.readBits((byte) 44, 1) == 1 ? true : false;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "gea.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -162,12 +162,12 @@ final class gea {
         int var3_int = 0;
         int var4 = TombRacer.field_G ? 1 : 0;
         try {
-          param0.a((byte) 20, this.field_b.length, 4);
+          param0.writeBits((byte) 20, this.field_b.length, 4);
           for (var3_int = param1; var3_int < this.field_b.length; var3_int++) {
-            param0.a((byte) -128, dqa.a(true, this.field_b[var3_int][0] >> 16, 12), 12);
-            param0.a((byte) -125, dqa.a(true, this.field_b[var3_int][1] >> 16, 12), 12);
+            param0.writeBits((byte) -128, dqa.a(true, this.field_b[var3_int][0] >> 16, 12), 12);
+            param0.writeBits((byte) -125, dqa.a(true, this.field_b[var3_int][1] >> 16, 12), 12);
           }
-          param0.a((byte) 74, !this.field_a ? 0 : 1, 1);
+          param0.writeBits((byte) 74, !this.field_a ? 0 : 1, 1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "gea.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

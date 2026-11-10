@@ -8,10 +8,10 @@ final class nc {
     private cn field_d;
     static int[] field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 <= 44) {
-          nc.a(-93);
+          nc.releaseStatics(-93);
           field_e = null;
           return;
         }

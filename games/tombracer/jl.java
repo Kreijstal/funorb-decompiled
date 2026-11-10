@@ -25,7 +25,7 @@ final class jl {
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != 1088536016) {
           return;
@@ -64,7 +64,7 @@ final class jl {
             var4 = (BitPacketBuffer) null;
             jl.a((Room) null, false, (BitPacketBuffer) null);
           }
-          var3_int = param2.b((byte) 44, 5);
+          var3_int = param2.readBits((byte) 44, 5);
           stackIn_3_0 = ci.a(var3_int, -1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

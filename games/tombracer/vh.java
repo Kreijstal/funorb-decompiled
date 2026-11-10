@@ -312,7 +312,7 @@ final class vh {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         field_b = null;
         if (param0 >= -15) {
@@ -396,10 +396,10 @@ final class vh {
             field_b = (String) null;
           }
           if (!param1) {
-            stackIn_10_0 = (param0 == param3.n(31974).field_d);
+            stackIn_10_0 = (param0 == param3.n(31974).id);
             return stackIn_10_0;
           }
-          stackIn_6_0 = (param3.i((byte) 84).field_d == param0);
+          stackIn_6_0 = (param3.i((byte) 84).id == param0);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

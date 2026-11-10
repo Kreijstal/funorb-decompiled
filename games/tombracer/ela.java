@@ -11,7 +11,7 @@ abstract class ela extends DualLinkNode {
         return this.field_k;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         int var1 = 6 / ((param0 - 56) / 60);
     }

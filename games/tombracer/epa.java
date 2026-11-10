@@ -19,9 +19,9 @@ final class epa extends wv {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 2) {
-          epa.d(10);
+          epa.releaseStatics(10);
           field_q = null;
           field_r = null;
           return;
@@ -97,7 +97,7 @@ final class epa extends wv {
 
     final static en d(byte param0) {
         if (param0 != -91) {
-          epa.d(15);
+          epa.releaseStatics(15);
           return kva.field_n;
         }
         return kva.field_n;

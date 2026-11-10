@@ -147,12 +147,12 @@ final class oo extends dg {
         var17 = this.a(param0 + 3494);
         var3 = this.field_h.d(3);
         var4 = this.field_h.e(9648);
-        this.field_o = this.field_h.c(param0 ^ 3403) / dba.field_a;
-        this.field_q = this.field_h.a((byte) 55) / dba.field_a;
+        this.field_o = this.field_h.c(param0 ^ 3403) / C2SSubmitSettingsPacket.field_a;
+        this.field_q = this.field_h.a((byte) 55) / C2SSubmitSettingsPacket.field_a;
         this.field_r = new lca[this.field_o][this.field_q];
-        var5 = -(this.field_h.a((byte) 55) / 2) + (var4 + dba.field_a / 2);
+        var5 = -(this.field_h.a((byte) 55) / 2) + (var4 + C2SSubmitSettingsPacket.field_a / 2);
         for (var6 = 0; var6 < this.field_q; var6++) {
-          var7 = var3 - this.field_h.c(-60) / 2 + dba.field_a / 2;
+          var7 = var3 - this.field_h.c(-60) / 2 + C2SSubmitSettingsPacket.field_a / 2;
           for (var8 = 0; this.field_o > var8; var8++) {
             var9 = new lca();
             this.field_r[var8][var6] = var9;
@@ -232,9 +232,9 @@ final class oo extends dg {
             var9.field_e = dfa.a(var15 + tfa.field_d[var9.field_f], 2048, -78);
             var9.field_d = -var4 + var5;
             var9.field_b = var7 - var3;
-            var7 = var7 + dba.field_a;
+            var7 = var7 + C2SSubmitSettingsPacket.field_a;
           }
-          var5 = var5 + dba.field_a;
+          var5 = var5 + C2SSubmitSettingsPacket.field_a;
         }
     }
 
@@ -318,7 +318,7 @@ final class oo extends dg {
         }
     }
 
-    public static void j(int param0) {
+    public static void releaseStatics(int param0) {
         field_n = null;
         field_m = null;
         int var1 = 93 / ((-49 - param0) / 61);

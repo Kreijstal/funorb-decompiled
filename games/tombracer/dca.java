@@ -21,7 +21,7 @@ final class dca extends or {
           this.field_p[var4] = (byte)param2;
           return;
         }
-        dca.g(-128);
+        dca.releaseStatics(-128);
         param2 = (byte)(127 + (param2 >> 1 & 127));
         int incrementValue$1 = var4;
         var4++;
@@ -44,7 +44,7 @@ final class dca extends or {
         return vc.field_q.e((byte) -76);
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         field_q = null;
         if (param0 != 2) {
           field_q = (String) null;

@@ -11,7 +11,7 @@ final class dta {
     static String[] field_b;
     private String[] field_h;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_d = null;
         field_b = null;
@@ -226,7 +226,7 @@ final class dta {
                 var28_int = -68 + param6;
                 var29 = var12.a(393216, var27_intLifetime1);
                 for (var30Lifetime1 = 0; var29 > var30Lifetime1; var30Lifetime1++) {
-                  ufa.field_r[var27_intLifetime1].a(var26Lifetime1, var28_int);
+                  PlayerProfile.field_r[var27_intLifetime1].a(var26Lifetime1, var28_int);
                   var28_int -= 5;
                 }
                 var26Lifetime1 -= 20;
@@ -264,7 +264,7 @@ final class dta {
                 }
                 var31Lifetime1 = -stackIn_72_0 + var29Lifetime2 + 26;
                 var32 = var12.c(196608, var30Lifetime2);
-                ufa.field_r[var30Lifetime2].a(var17Lifetime5, var29Lifetime2);
+                PlayerProfile.field_r[var30Lifetime2].a(var17Lifetime5, var29Lifetime2);
                 oka.a(Integer.toString(var32), 11903361, qf.field_j, -1, var31Lifetime1, var17Lifetime5 - 19, 1);
                 if (var32 != this.field_a[var30Lifetime2]) {
                   this.field_h[var30Lifetime2] = Integer.toString(-this.field_a[var30Lifetime2] + var32) + "+";
@@ -274,9 +274,9 @@ final class dta {
                 if (this.field_f[var30Lifetime2] > 0) {
                   this.field_f[var30Lifetime2] = this.field_f[var30Lifetime2] - 1;
                   var33_float = 1.0f + (0.10000000149011612f + 0.20000000298023224f * (float)Math.sin(0.7 * (double)this.field_f[var30Lifetime2]));
-                  var34_int = (int)((float)ufa.field_r[var30Lifetime2].a() * var33_float);
-                  var35_int = (int)((float)ufa.field_r[var30Lifetime2].c() * var33_float);
-                  ufa.field_r[var30Lifetime2].a(var17Lifetime5 + (-var34_int + ufa.field_r[var30Lifetime2].a()) / 2, (ufa.field_r[var30Lifetime2].c() - var35_int) / 2 + var29Lifetime2, var34_int, var35_int, 1, -1, 1);
+                  var34_int = (int)((float)PlayerProfile.field_r[var30Lifetime2].a() * var33_float);
+                  var35_int = (int)((float)PlayerProfile.field_r[var30Lifetime2].c() * var33_float);
+                  PlayerProfile.field_r[var30Lifetime2].a(var17Lifetime5 + (-var34_int + PlayerProfile.field_r[var30Lifetime2].a()) / 2, (PlayerProfile.field_r[var30Lifetime2].c() - var35_int) / 2 + var29Lifetime2, var34_int, var35_int, 1, -1, 1);
                   oka.a(this.field_h[var30Lifetime2], 14142651, qf.field_j, -1, var31Lifetime1, -49 + var17Lifetime5, 1);
                 }
                 var31Lifetime1 += 23;

@@ -41,7 +41,7 @@ final class pc {
         this.field_d = param0;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           return;
         }
@@ -66,7 +66,7 @@ final class pc {
           if (param0) {
             field_g = (String) null;
           }
-          var3.k(param1, -2988);
+          var3.writeCipheredOpcode(param1, -2988);
           var3.i(5, 0);
           var3.i(0, 0);
           var3.f(-1477662136, param2.field_n);

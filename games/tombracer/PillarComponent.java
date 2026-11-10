@@ -112,7 +112,7 @@ final class PillarComponent extends kna {
             stackIn_2_0 = new fq();
             return stackIn_2_0;
           }
-          var2_int = param1.b((byte) 44, 8);
+          var2_int = param1.readBits((byte) 44, 8);
           if (param0 == -1) {
             stackIn_7_0 = new fq(var2_int, param1);
             return stackIn_7_0;

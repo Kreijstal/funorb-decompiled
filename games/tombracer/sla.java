@@ -9,7 +9,7 @@ final class sla {
     static int field_d;
     static String field_e;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == -11536) {
           field_a = null;
           field_e = null;

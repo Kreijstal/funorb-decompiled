@@ -267,8 +267,8 @@ final class SweepRotateLocomotor extends Locomotor {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_r = CoinItemComponent.a(true, 12, param1.b((byte) 44, 12));
-          this.field_p = oo.a(8, 8192, 0, param1.b((byte) 44, 8));
+          this.field_r = CoinItemComponent.a(true, 12, param1.readBits((byte) 44, 12));
+          this.field_p = oo.a(8, 8192, 0, param1.readBits((byte) 44, 8));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -377,8 +377,8 @@ final class SweepRotateLocomotor extends Locomotor {
             return;
           }
           super.a(param0, (byte) -101);
-          param0.a((byte) -125, dqa.a(true, this.field_r, 12), 12);
-          param0.a((byte) 108, cn.a((byte) -127, this.field_p, 8192, 8), 8);
+          param0.writeBits((byte) -125, dqa.a(true, this.field_r, 12), 12);
+          param0.writeBits((byte) 108, cn.a((byte) -127, this.field_p, 8192, 8), 8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

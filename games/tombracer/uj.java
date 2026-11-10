@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uj implements bo {
+final class uj implements GamePacket {
     static String field_e;
     private int[] field_a;
     private int field_c;
@@ -10,26 +10,26 @@ final class uj implements bo {
     private int[] field_b;
     static int[] field_d;
 
-    public final void a(BitPacketBuffer param0, byte param1) {
+    public final void decode(BitPacketBuffer param0, byte param1) {
         int var3_int = 0;
         int var4 = TombRacer.field_G ? 1 : 0;
         try {
           if (param1 != -19) {
             BitPacketBuffer var5 = (BitPacketBuffer) null;
-            this.a(-28, (BitPacketBuffer) null);
+            this.encode(-28, (BitPacketBuffer) null);
           }
-          param0.h((byte) -89);
+          param0.beginBitAccess((byte) -89);
           for (var3_int = 0; var3_int < this.field_c; var3_int++) {
-            this.field_g[var3_int] = param0.b((byte) 44, 1) == 1 ? true : false;
+            this.field_g[var3_int] = param0.readBits((byte) 44, 1) == 1 ? true : false;
             if (!this.field_g[var3_int]) {
-              this.field_b[var3_int] = param0.b((byte) 44, 3);
-              this.field_a[var3_int] = param0.b((byte) 44, 32);
+              this.field_b[var3_int] = param0.readBits((byte) 44, 3);
+              this.field_a[var3_int] = param0.readBits((byte) 44, 32);
             } else {
               this.field_b[var3_int] = -1;
               this.field_a[var3_int] = 0;
             }
           }
-          param0.i((byte) 98);
+          param0.endBitAccess((byte) 98);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "uj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -97,14 +97,14 @@ final class uj implements bo {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_f = null;
         field_e = null;
         int var1 = -113 / ((param0 - 0) / 40);
         field_d = null;
     }
 
-    public final void a(int param0, BitPacketBuffer param1) {
+    public final void encode(int param0, BitPacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -114,17 +114,17 @@ final class uj implements bo {
         RuntimeException var3 = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          param1.i(param0 ^ 192);
+          param1.beginBitWrite(param0 ^ 192);
           for (var3_int = 0; var3_int < this.field_c; var3_int++) {
             if (this.field_g[var3_int]) {
-              param1.a((byte) -127, 1, 1);
+              param1.writeBits((byte) -127, 1, 1);
             } else {
-              param1.a((byte) -126, 0, 1);
-              param1.a((byte) 92, this.field_b[var3_int], 3);
-              param1.a((byte) -126, this.field_a[var3_int], 32);
+              param1.writeBits((byte) -126, 0, 1);
+              param1.writeBits((byte) 92, this.field_b[var3_int], 3);
+              param1.writeBits((byte) -126, this.field_a[var3_int], 32);
             }
           }
-          param1.k(-1826190686);
+          param1.endBitWrite(-1826190686);
           if (param0 != 200) {
             this.field_a = (int[]) null;
           }

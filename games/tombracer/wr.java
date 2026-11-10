@@ -37,7 +37,7 @@ final class wr extends ela {
         super(param0, param1, param2);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = -38 / ((-34 - param0) / 34);
         field_o = null;
     }

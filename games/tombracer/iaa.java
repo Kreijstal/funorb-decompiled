@@ -5,7 +5,7 @@ final class iaa {
     static String field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         int var1 = 82 % ((29 - param0) / 57);
     }

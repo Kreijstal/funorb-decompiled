@@ -51,7 +51,7 @@ final class fa {
           if (bta.field_q == 2 &&
             !at.f(24316)) {
             if (dda.a(false, mn.field_n)) {
-              var2 = gl.$cfr$intArgs$a$53ce4ab4c593(87, mi.field_n, new String[]{wp.field_a});
+              var2 = gl.$cfr$intArgs$a$53ce4ab4c593(87, ConsoleToken.field_n, new String[]{wp.field_a});
               if (var10 != 0) {
                 var2 = gl.$cfr$intArgs$a$53ce4ab4c593(83, pba.field_a, new String[]{wp.field_a});
               }
@@ -196,7 +196,7 @@ final class fa {
         int var7Lifetime1;
         var8 = TombRacer.field_G ? 1 : 0;
         try {
-          var4_int = param1.b((byte) 44, param2);
+          var4_int = param1.readBits((byte) 44, param2);
           if (var4_int == 0) {
             stackIn_5_0 = null;
             return (int[]) (stackIn_5_0);
@@ -207,8 +207,8 @@ final class fa {
           }
           boolean decompiledFrameCompleted0 = true;
           boolean decompiledFrameCompleted1 = true;
-          var5 = param1.b((byte) 44, 6);
-          var6 = param1.b((byte) 44, 32);
+          var5 = param1.readBits((byte) 44, 6);
+          var6 = param1.readBits((byte) 44, 32);
           if (var5 <= param0) {
             var7 = 0;
             while (var7 < var4_int) {
@@ -230,7 +230,7 @@ final class fa {
                 decompiledFrameCompleted0 = false;
                 break;
               }
-              stackIn_28_0[var7Lifetime1] = param1.b((byte) 44, var5) + var6;
+              stackIn_28_0[var7Lifetime1] = param1.readBits((byte) 44, var5) + var6;
               var7Lifetime1++;
             }
           }

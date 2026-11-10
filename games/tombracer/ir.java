@@ -9,7 +9,7 @@ final class ir {
     int field_d;
     static String field_e;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 <= 96) {
           return;
         }
@@ -26,7 +26,7 @@ final class ir {
         if (param2 < -69) {
           return (33 & param0) != 0 ? true : false;
         }
-        ir.a((byte) 123);
+        ir.releaseStatics((byte) 123);
         return (33 & param0) != 0 ? true : false;
     }
 

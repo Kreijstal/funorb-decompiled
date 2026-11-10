@@ -341,7 +341,7 @@ final class aia extends IntrusiveNode {
         this.field_m = param2;
     }
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         field_v = null;
         field_t = null;
         int var1 = 12 % ((-7 - param0) / 47);

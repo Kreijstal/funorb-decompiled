@@ -165,7 +165,7 @@ final class TimeSwitchBehaviour extends Behaviour implements ut {
         return 21;
     }
 
-    public static void l(int param0) {
+    public static void releaseStatics(int param0) {
         field_n = null;
         field_p = null;
         field_q = null;

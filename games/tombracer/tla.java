@@ -40,7 +40,7 @@ final class tla {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= 76) {
           field_d = null;
           field_c = null;

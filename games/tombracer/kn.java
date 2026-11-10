@@ -28,7 +28,7 @@ final class kn {
     final void a(byte param0) {
         pfa.a(1);
         if (param0 < 22) {
-          kn.a(-128);
+          kn.releaseStatics(-128);
         }
     }
 
@@ -158,9 +158,9 @@ final class kn {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -3) {
-          kn.a(118);
+          kn.releaseStatics(118);
         }
         field_j = null;
         field_p = null;

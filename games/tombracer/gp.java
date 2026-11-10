@@ -17,7 +17,7 @@ final class gp {
     private static String[] field_g;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         field_j = null;
         field_a = null;
@@ -32,7 +32,7 @@ final class gp {
           field_k = null;
           return;
         }
-        gp.a(-113);
+        gp.releaseStatics(-113);
         field_d = null;
         field_b = null;
         field_f = null;

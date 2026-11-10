@@ -123,7 +123,7 @@ final class WhiteLightShooterComponent extends ShooterComponent {
         }
     }
 
-    public static void t(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_J = null;
         int var1 = 95 % ((param0 + 24) / 54);
         field_K = null;
@@ -162,7 +162,7 @@ final class WhiteLightShooterComponent extends ShooterComponent {
           var4.h(param1, 0);
           var4.a((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new BeamShooterBehaviour(param2, param0);
-          var5.a(new up(6, 10), true);
+          var5.a(new Effect(6, 10), true);
           this.a((byte) 43, var5, param2);
           var4.a((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;

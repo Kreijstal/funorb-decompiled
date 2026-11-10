@@ -175,7 +175,7 @@ final class fg extends IntrusiveNode {
         }
     }
 
-    public static void b() {
+    public static void releaseStatics() {
         field_D = null;
         field_n = null;
         field_K = null;

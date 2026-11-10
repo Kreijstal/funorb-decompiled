@@ -29,7 +29,7 @@ final class StripedMazeGenerator extends MazeGenerator {
           }
           var5_intLifetime1 = 2;
           if (param1 < 73) {
-            StripedMazeGenerator.a(78);
+            StripedMazeGenerator.releaseStatics(78);
           }
           while (var5_intLifetime1 < -2 + param2.field_a) {
             var6Lifetime1 = 1 + this.random.a(param2.field_f - 2, 0);
@@ -51,10 +51,10 @@ final class StripedMazeGenerator extends MazeGenerator {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != 19290) {
-          StripedMazeGenerator.a(30);
+          StripedMazeGenerator.releaseStatics(30);
           field_c = null;
           return;
         }

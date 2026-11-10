@@ -72,10 +72,10 @@ abstract class r extends DualLinkNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         if (param0 != 11) {
-          r.a(-85);
+          r.releaseStatics(-85);
           field_l = null;
           field_m = null;
           return;

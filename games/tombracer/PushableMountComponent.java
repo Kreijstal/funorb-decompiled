@@ -89,15 +89,15 @@ final class PushableMountComponent extends kna {
 
     final boolean n(byte param0) {
         if (param0 != -122) {
-          PushableMountComponent.A(-92);
+          PushableMountComponent.releaseStatics(-92);
           return false;
         }
         return false;
     }
 
-    public static void A(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < 96) {
-          PushableMountComponent.A(19);
+          PushableMountComponent.releaseStatics(19);
           field_F = null;
           return;
         }

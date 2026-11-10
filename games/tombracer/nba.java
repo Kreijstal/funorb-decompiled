@@ -20,7 +20,7 @@ final class nba {
             if (param1.q((byte) -82) < 0) {
               return;
             }
-            ql.field_k.k(98, -2988);
+            ql.field_k.writeCipheredOpcode(98, -2988);
             ql.field_k.f(-1477662136, param1.q((byte) -82));
             var3_int = 8 % ((param2 - 51) / 36);
             ql.field_k.f(-1477662136, param1.a((byte) 107));
@@ -64,9 +64,9 @@ final class nba {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
-          nba.a(true);
+          nba.releaseStatics(true);
           field_a = null;
           return;
         }

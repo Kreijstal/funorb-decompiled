@@ -31,7 +31,7 @@ final class IsaacCipher {
               var2_ref.printStackTrace();
             }
             if (param1 > -59) {
-              IsaacCipher.a(22);
+              IsaacCipher.releaseStatics(22);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -53,9 +53,9 @@ final class IsaacCipher {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -3) {
-          IsaacCipher.a(46);
+          IsaacCipher.releaseStatics(46);
         }
         field_b = null;
     }

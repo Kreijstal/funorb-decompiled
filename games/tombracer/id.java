@@ -42,7 +42,7 @@ final class id extends ou {
         return var2;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         field_i = null;
         if (param0 != 0) {

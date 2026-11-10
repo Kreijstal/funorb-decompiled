@@ -8,7 +8,7 @@ final class woa extends DualLinkNode {
     final static void a(int param0, cga param1, boolean param2) {
         try {
           if (param2) {
-            woa.a(-60);
+            woa.releaseStatics(-60);
           }
           aba.field_a.b((byte) -86, param1);
           wj.a(param1, param0, -118);
@@ -37,7 +37,7 @@ final class woa extends DualLinkNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_l = null;
         if (param0 != -20476) {
           field_l = (String) null;

@@ -103,10 +103,10 @@ final class tba extends IntrusiveNode {
 
     final static cn a(byte param0) {
         int var1 = 79 / ((param0 - 7) / 37);
-        return gba.a(-94, vca.field_d.field_c);
+        return gba.a(-94, S2CEventPacket.field_d.field_c);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         field_l = null;
         field_g = null;

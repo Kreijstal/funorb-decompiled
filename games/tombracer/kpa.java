@@ -51,7 +51,7 @@ final class kpa {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          var4_int = param2.b((byte) 44, param0);
+          var4_int = param2.readBits((byte) 44, param0);
           for (var5 = param0 - 1; 0 <= var5; var5--) {
             if ((1 & var4_int) > 0) {
               this.field_a[var5] = true;
@@ -94,7 +94,7 @@ final class kpa {
 
     final boolean a(int param0, int param1) {
         if (param0 != 0) {
-          kpa.a(116);
+          kpa.releaseStatics(116);
         }
         return this.field_a[param1];
     }
@@ -114,7 +114,7 @@ final class kpa {
               var3_int++;
             }
           }
-          param0.a((byte) 112, var3_int, this.field_a.length);
+          param0.writeBits((byte) 112, var3_int, this.field_a.length);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "kpa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -136,7 +136,7 @@ final class kpa {
         return var1;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 <= 57) {
           field_b = (String) null;
         }

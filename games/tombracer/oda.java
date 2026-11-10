@@ -7,7 +7,7 @@ final class oda extends IntrusiveNode {
     static String field_h;
     static String field_i;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_i = null;
         field_h = null;
         if (!param0) {

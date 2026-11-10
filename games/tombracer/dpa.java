@@ -17,7 +17,7 @@ final class dpa implements fo {
         if (param0 <= -86) {
           return this.field_e.e((byte) -99) - (this.field_h << 16);
         }
-        dpa.a(-37);
+        dpa.releaseStatics(-37);
         return this.field_e.e((byte) -99) - (this.field_h << 16);
     }
 
@@ -41,9 +41,9 @@ final class dpa implements fo {
         return this.field_e.c((byte) 125) + this.field_a;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -1) {
-          dpa.a(92);
+          dpa.releaseStatics(92);
           field_c = null;
           return;
         }
@@ -82,7 +82,7 @@ final class dpa implements fo {
 
     public final void f(int param0) {
         if (param0 != -4366) {
-          dpa.a(103);
+          dpa.releaseStatics(103);
         }
     }
 

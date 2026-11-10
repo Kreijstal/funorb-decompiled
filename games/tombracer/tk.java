@@ -13,10 +13,10 @@ final class tk {
         return ot.field_v;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_a = (String[][]) null;
         if (param0) {
-          tk.a(false);
+          tk.releaseStatics(false);
           field_b = null;
           return;
         }

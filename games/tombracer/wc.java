@@ -7,9 +7,9 @@ final class wc extends lu {
     static String field_d;
     static su field_e;
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -78) {
-          wc.b((byte) 127);
+          wc.releaseStatics((byte) 127);
           field_d = null;
           field_e = null;
           return;

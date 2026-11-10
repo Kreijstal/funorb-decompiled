@@ -105,7 +105,7 @@ final class bd extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         if (param0 <= 61) {
           field_i = (nh) null;
@@ -122,7 +122,7 @@ final class bd extends IntrusiveNode {
           this.field_h = param3;
           this.field_n = param5;
           if (param2 < 113) {
-            bd.a(-51);
+            bd.releaseStatics(-51);
           }
           this.field_l = param6;
         } catch (RuntimeException runtimeException) {

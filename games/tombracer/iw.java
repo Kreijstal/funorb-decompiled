@@ -10,7 +10,7 @@ final class iw {
         throw new IllegalStateException();
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           field_a = null;
           field_c = null;
@@ -31,7 +31,7 @@ final class iw {
         hf.field_a = new jea(0L, lma.field_r);
         if (param0 == -64) {
           vs.field_R = new jea(0L, (jea) null);
-          hf.field_a.b(param0 - 64, vca.field_e);
+          hf.field_a.b(param0 - 64, S2CEventPacket.field_e);
           hf.field_a.b(-122, vs.field_R);
           vs.field_R.b(-125, rra.field_e);
           vs.field_R.b(-124, Trap.field_q);
@@ -40,7 +40,7 @@ final class iw {
         }
         iw.a((byte) 33, false);
         vs.field_R = new jea(0L, (jea) null);
-        hf.field_a.b(param0 - 64, vca.field_e);
+        hf.field_a.b(param0 - 64, S2CEventPacket.field_e);
         hf.field_a.b(-122, vs.field_R);
         vs.field_R.b(-125, rra.field_e);
         vs.field_R.b(-124, Trap.field_q);

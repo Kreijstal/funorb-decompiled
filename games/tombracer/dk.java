@@ -61,7 +61,7 @@ final class dk {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 != 104) {
           return;
@@ -88,7 +88,7 @@ final class dk {
         }
         var5 = stackIn_3_0;
         if (param0 <= 82) {
-          dk.a((byte) -28);
+          dk.releaseStatics((byte) -28);
         }
         for (var6 = 0; var6 < var5; var6++) {
           for (var7 = var4; var7 < this.field_e.length; var7++) {

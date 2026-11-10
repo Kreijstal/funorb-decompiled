@@ -489,7 +489,7 @@ final class mr extends b implements tma, tsa, mia {
     final static roa a(byte param0) {
         roa var1 = new roa();
         if (param0 > 123) {
-          var1.field_f = new up(1, 3);
+          var1.field_f = new Effect(1, 3);
           var1.field_f.b(1, 12);
           var1.field_n = 655360;
           var1.field_p = 250;
@@ -504,7 +504,7 @@ final class mr extends b implements tma, tsa, mia {
           return var1;
         }
         mr.a(-0.43077895045280457f, 0.6055110096931458f, true, 1.4660576581954956f);
-        var1.field_f = new up(1, 3);
+        var1.field_f = new Effect(1, 3);
         var1.field_f.b(1, 12);
         var1.field_n = 655360;
         var1.field_p = 250;

@@ -6,7 +6,7 @@ final class jia implements ms {
     private waa[] field_c;
     static BufferedSocket field_a;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 31) {
           field_a = (BufferedSocket) null;
         }
@@ -110,7 +110,7 @@ final class jia implements ms {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         if (param5 < 15) {
-          jia.a((byte) -91);
+          jia.releaseStatics((byte) -91);
         }
         if (ica.field_a) {
           tga.field_a.v(param4 >> 14, -param2 >> 14, -param6 >> 14, param0 >> 14, -param8 >> 14, -param7 >> 14, jg.a(param1, (byte) -60, param3), 1);

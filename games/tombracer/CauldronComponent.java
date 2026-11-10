@@ -139,7 +139,7 @@ final class CauldronComponent extends SwitchComponent {
         return false;
     }
 
-    public static void C(int param0) {
+    public static void releaseStatics(int param0) {
         field_J = null;
         if (param0 != 4194304) {
           field_J = (u[]) null;

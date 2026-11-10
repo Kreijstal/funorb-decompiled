@@ -72,7 +72,7 @@ final class hqa extends kca {
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -1852) {
           field_j = (ura) null;
           field_j = null;

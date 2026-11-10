@@ -14,7 +14,7 @@ abstract class kl implements wia {
     OpenGlToolkit field_h;
     static fpa field_a;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != 1956) {
           field_j = (String) null;
@@ -88,7 +88,7 @@ abstract class kl implements wia {
         if (param0 == 9729) {
           return this.field_d ? var2 * 4 / 3 : var2;
         }
-        kl.c(61);
+        kl.releaseStatics(61);
         return this.field_d ? var2 * 4 / 3 : var2;
     }
 

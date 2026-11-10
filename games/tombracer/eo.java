@@ -530,7 +530,7 @@ abstract class eo extends GraphicsToolkit {
         return this.field_vb;
     }
 
-    public static void x(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 3) {
           return;
         }
@@ -905,7 +905,7 @@ abstract class eo extends GraphicsToolkit {
 
     final static roa D(byte param0) {
         roa var1 = new roa();
-        var1.field_f = new up(0, 5);
+        var1.field_f = new Effect(0, 5);
         var1.field_f.b(1, 11);
         var1.field_c = true;
         var1.field_d = 0;
@@ -1770,7 +1770,7 @@ abstract class eo extends GraphicsToolkit {
           var2++;
         }
         this.field_ib = new ob[-2 + this.field_e];
-        this.field_Jb = (iva) ((Object) this.a(1, 1, gpa.field_a, (byte) -63, una.field_g));
+        this.field_Jb = (iva) ((Object) this.a(1, 1, SwitchableId.field_a, (byte) -63, una.field_g));
         this.a(new to(262144));
         this.field_Db = this.a(new ne[]{new ne(new gj[]{gj.field_p, gj.field_n})}, 0);
         this.a(new ne[]{new ne(new gj[]{gj.field_p, gj.field_b})}, 0);

@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class up implements noa {
+final class Effect implements noa {
     static jea field_a;
     int field_j;
-    private int field_f;
+    private int preset;
     gma field_g;
     static jpa[] field_e;
     private int field_k;
     static String[][] field_h;
-    int field_b;
+    int size;
     private static String[] field_i;
     gma field_c;
     static String[] field_d;
@@ -60,12 +60,12 @@ final class up implements noa {
     final int b(int param0) {
         if (param0 != -344) {
           this.a(9);
-          return this.field_f;
+          return this.preset;
         }
-        return this.field_f;
+        return this.preset;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         field_h = (String[][]) null;
         field_i = null;
@@ -78,11 +78,11 @@ final class up implements noa {
 
     final void a(BitPacketBuffer param0, byte param1) {
         try {
-          param0.a((byte) -125, this.field_f, 4);
+          param0.writeBits((byte) -125, this.preset, 4);
           if (param1 != 125) {
-            this.field_f = 36;
+            this.preset = 36;
           }
-          param0.a((byte) 116, this.field_b, 10);
+          param0.writeBits((byte) 116, this.size, 10);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "up.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -96,7 +96,7 @@ final class up implements noa {
     }
 
     final void a(int param0, int param1) {
-        this.field_f = param1;
+        this.preset = param1;
         this.a(-80);
         if (param0 != 29525) {
           field_i = (String[]) null;
@@ -105,7 +105,7 @@ final class up implements noa {
 
     final int c(int param0) {
         int var2 = 77 % ((-68 - param0) / 55);
-        int var3 = this.field_f;
+        int var3 = this.preset;
         if (0 == var3) {
           return 2;
         }
@@ -125,7 +125,7 @@ final class up implements noa {
         int var2;
         int var2Lifetime1;
         if (param0) {
-          var2 = this.field_f;
+          var2 = this.preset;
           if (var2 == 0) {
             return 0;
           }
@@ -145,12 +145,12 @@ final class up implements noa {
             return 5;
           }
           if (6 != var2) {
-            throw new IllegalStateException("Unknown effect preset: " + this.field_f);
+            throw new IllegalStateException("Unknown effect preset: " + this.preset);
           }
           return 2;
         }
         field_i = (String[]) null;
-        var2Lifetime1 = this.field_f;
+        var2Lifetime1 = this.preset;
         if (var2Lifetime1 == 0) {
           return 0;
         }
@@ -170,7 +170,7 @@ final class up implements noa {
           return 5;
         }
         if (6 != var2Lifetime1) {
-          throw new IllegalStateException("Unknown effect preset: " + this.field_f);
+          throw new IllegalStateException("Unknown effect preset: " + this.preset);
         }
         return 2;
     }
@@ -192,7 +192,7 @@ final class up implements noa {
         return true;
     }
 
-    up(int param0, int param1) {
+    Effect(int param0, int param1) {
         this((gma) null, param0, param1);
     }
 
@@ -203,8 +203,8 @@ final class up implements noa {
         }
     }
 
-    up(gma param0, up param1) {
-        this(param0, param1.field_f, param1.field_b);
+    Effect(gma param0, Effect param1) {
+        this(param0, param1.preset, param1.size);
         try {
           this.field_k = param1.field_k;
         } catch (RuntimeException runtimeException) {
@@ -212,10 +212,10 @@ final class up implements noa {
         }
     }
 
-    up(gma param0, int param1, int param2) {
+    Effect(gma param0, int param1, int param2) {
         try {
-          this.field_f = param1;
-          this.field_b = param2;
+          this.preset = param1;
+          this.size = param2;
           this.a(param0, 2348);
           this.a(-70);
         } catch (RuntimeException runtimeException) {
@@ -224,7 +224,7 @@ final class up implements noa {
     }
 
     public final String toString() {
-        return "Effect: preset " + this.field_f + ", size " + this.field_b;
+        return "Effect: preset " + this.preset + ", size " + this.size;
     }
 
     static {

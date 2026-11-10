@@ -44,7 +44,7 @@ final class kv {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == -31014) {
           field_c = null;
           field_a = null;
@@ -69,7 +69,7 @@ final class kv {
           jg.field_a.i(param0, 0);
           jg.field_a.f(-1477662136, param3);
           jg.field_a.a(126, c.field_f, oca.field_a);
-          ql.field_k.k(18, param2 - 3083);
+          ql.field_k.writeCipheredOpcode(18, param2 - 3083);
           fieldTemp$0 = ql.field_k.position + 1;
           ql.field_k.position = ql.field_k.position + 1;
           var4 = fieldTemp$0;

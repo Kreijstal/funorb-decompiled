@@ -180,7 +180,7 @@ abstract class tfa implements iva {
           if (it.field_b == this.field_f) {
             return 6407;
           }
-          if (this.field_f == gpa.field_a) {
+          if (this.field_f == SwitchableId.field_a) {
             return 6408;
           }
           if (rp.field_g == this.field_f) {
@@ -201,7 +201,7 @@ abstract class tfa implements iva {
               if (this.field_f == it.field_b) {
                 return 34837;
               }
-              if (this.field_f == gpa.field_a) {
+              if (this.field_f == SwitchableId.field_a) {
                 return 34836;
               }
               if (rp.field_g == this.field_f) {
@@ -221,7 +221,7 @@ abstract class tfa implements iva {
             if (this.field_f == it.field_b) {
               return 34843;
             }
-            if (gpa.field_a == this.field_f) {
+            if (SwitchableId.field_a == this.field_f) {
               return 34842;
             }
             if (rp.field_g == this.field_f) {
@@ -308,7 +308,7 @@ abstract class tfa implements iva {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_e = (int[][]) null;
         if (param0 != 0) {
@@ -451,7 +451,7 @@ abstract class tfa implements iva {
             !cla.a(9181, param2)) {
             throw new IllegalArgumentException("");
           }
-          if (this.field_f != gpa.field_a) {
+          if (this.field_f != SwitchableId.field_a) {
             throw new IllegalArgumentException("");
           }
           if (param0 != 99) {

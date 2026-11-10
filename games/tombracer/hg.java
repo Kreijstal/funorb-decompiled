@@ -81,7 +81,7 @@ final class hg {
         return false;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_g = null;
         if (param0 != 13648) {

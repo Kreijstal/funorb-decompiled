@@ -114,7 +114,7 @@ final class iha {
         iha.a(param0, param1, param4, 0, 0, var9, bea.field_l, var12 * bea.field_g + var11, param5, var7, var8, var12 - var14, var11 - var13, bea.field_g - (var13 - var11));
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_b = null;
     }
 }

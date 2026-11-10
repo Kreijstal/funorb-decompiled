@@ -11,7 +11,7 @@ abstract class ItemBehaviour extends Behaviour {
     void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
-          param1.a((byte) -128, this.field_q / 50, 8);
+          param1.writeBits((byte) -128, this.field_q / 50, 8);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pd.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -289,7 +289,7 @@ abstract class ItemBehaviour extends Behaviour {
 
     abstract void g(byte param0);
 
-    public static void l(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 <= 31) {
           field_p = (int[]) null;
           field_p = null;
@@ -304,7 +304,7 @@ abstract class ItemBehaviour extends Behaviour {
         this.field_n = false;
         this.field_r = -1;
         try {
-          this.field_q = 50 * param1.b((byte) 44, 8);
+          this.field_q = 50 * param1.readBits((byte) 44, 8);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -315,14 +315,14 @@ abstract class ItemBehaviour extends Behaviour {
         BitPacketBuffer var2Lifetime1;
         if (param0 == 34) {
           var2 = ql.field_k;
-          var2.k(param1, param0 - 3022);
+          var2.writeCipheredOpcode(param1, param0 - 3022);
           var2.i(1, 0);
           var2.i(3, 0);
           return;
         }
         field_p = (int[]) null;
         var2Lifetime1 = ql.field_k;
-        var2Lifetime1.k(param1, param0 - 3022);
+        var2Lifetime1.writeCipheredOpcode(param1, param0 - 3022);
         var2Lifetime1.i(1, 0);
         var2Lifetime1.i(3, 0);
     }

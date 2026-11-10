@@ -5,7 +5,7 @@ final class re {
     static String field_b;
     static jpa field_a;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = -87 % ((param0 - 30) / 32);
         field_a = null;
         field_b = null;

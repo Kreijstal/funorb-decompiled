@@ -312,10 +312,10 @@ final class ts {
         this.field_c.b(7, true);
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         if (param0 != 32) {
-          ts.b(67);
+          ts.releaseStatics(67);
         }
     }
 

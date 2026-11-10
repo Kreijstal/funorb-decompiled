@@ -158,7 +158,7 @@ public final class Direct3DToolkit extends eo {
           if (it.field_b == param0) {
             return 22;
           }
-          if (param0 == gpa.field_a) {
+          if (param0 == SwitchableId.field_a) {
             return 21;
           }
           if (param0 == rp.field_g) {

@@ -26,10 +26,10 @@ final class rta extends IntrusiveNode {
     int field_m;
     tn field_y;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_j = null;
         if (param0 >= -64) {
-          rta.b(36);
+          rta.releaseStatics(36);
         }
     }
 

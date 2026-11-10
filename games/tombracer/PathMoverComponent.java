@@ -25,7 +25,7 @@ abstract class PathMoverComponent extends kna {
 
     abstract boolean C(int param0);
 
-    public static void B(int param0) {
+    public static void releaseStatics(int param0) {
         field_G = null;
         field_F = null;
         int var1 = 62 % ((param0 - 26) / 38);
@@ -98,13 +98,13 @@ abstract class PathMoverComponent extends kna {
         try {
           this.field_K = new gea(param0.field_E, param2);
           if (this.A(-97)) {
-            stackIn_5_1 = (param2.b((byte) 44, 1) == 1);
+            stackIn_5_1 = (param2.readBits((byte) 44, 1) == 1);
             this.field_I = stackIn_5_1;
           }
           if (!this.C(1760)) {
             return;
           }
-          this.field_J = ji.a(param2.b((byte) 44, 8), 107, 4);
+          this.field_J = ji.a(param2.readBits((byte) 44, 8), 107, 4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -160,7 +160,7 @@ abstract class PathMoverComponent extends kna {
             } else {
               stackIn_4_2 = 0;
             }
-            ((BitPacketBuffer) (Object) stackIn_3_0).a((byte) stackIn_3_1, stackIn_4_2, 1);
+            ((BitPacketBuffer) (Object) stackIn_3_0).writeBits((byte) stackIn_3_1, stackIn_4_2, 1);
           }
           if (param0) {
             this.field_J = -18;
@@ -168,7 +168,7 @@ abstract class PathMoverComponent extends kna {
           if (!this.C(1760)) {
             return;
           }
-          param1.a((byte) 103, SpawnerBehaviour.a((byte) 8, 4, this.field_J), 8);
+          param1.writeBits((byte) 103, SpawnerBehaviour.a((byte) 8, 4, this.field_J), 8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -48,7 +48,7 @@ final class eoa {
         this.a(var3 + 1, param1);
     }
 
-    public static void b() {
+    public static void releaseStatics() {
         field_d = null;
         field_k = null;
         field_j = null;

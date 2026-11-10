@@ -163,7 +163,7 @@ final class jo extends rva implements tsa {
         }
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= -86) {
           return;
         }
@@ -624,7 +624,7 @@ final class jo extends rva implements tsa {
         FacePointLocomotor.a(param1, (byte) 88);
         dla.b(23713);
         if (!param0) {
-          jo.g((byte) 92);
+          jo.releaseStatics((byte) 92);
         }
     }
 
@@ -708,7 +708,7 @@ final class jo extends rva implements tsa {
         int var8 = 0;
         var8 = TombRacer.field_G ? 1 : 0;
         try {
-          var2_int = param0.b((byte) 44, 8);
+          var2_int = param0.readBits((byte) 44, 8);
           if (0 < var2_int) {
             throw new IllegalStateException("" + var2_int);
           }
@@ -718,16 +718,16 @@ final class jo extends rva implements tsa {
           var3 = CircleMovementLocomotor.a(5907, param0) ? 1 : 0;
           var4 = CircleMovementLocomotor.a(5907, param0) ? 1 : 0;
           var5 = new an();
-          var5.field_I = (short)param0.b((byte) 44, 16);
+          var5.field_I = (short)param0.readBits((byte) 44, 16);
           var5.field_l = me.a((byte) 76, 16, param0, var5.field_l);
           var5.field_h = me.a((byte) 88, 16, param0, var5.field_h);
           var5.field_t = me.a((byte) 73, 16, param0, var5.field_t);
-          var5.field_u = (short)param0.b((byte) 44, 16);
+          var5.field_u = (short)param0.readBits((byte) 44, 16);
           var5.field_B = me.a((byte) 102, 16, param0, var5.field_B);
           var5.field_w = me.a((byte) 98, 16, param0, var5.field_w);
           var5.field_f = me.a((byte) 94, 16, param0, var5.field_f);
           if (var3 != 0) {
-            var5.field_A = (short)param0.b((byte) 44, 16);
+            var5.field_A = (short)param0.readBits((byte) 44, 16);
             var5.field_k = me.a((byte) 96, 16, param0, var5.field_k);
             var5.field_c = me.a((byte) 89, 16, param0, var5.field_c);
             var5.field_r = me.a((byte) 91, 16, param0, var5.field_r);
@@ -736,7 +736,7 @@ final class jo extends rva implements tsa {
             var5.field_y = me.a((byte) 101, 16, param0, var5.field_y);
           }
           if (var4 != 0) {
-            param0.b((byte) 44, 16);
+            param0.readBits((byte) 44, 16);
             var5.field_H = me.a((byte) 76, 16, param0, var5.field_H);
             var5.field_e = me.a((byte) 73, 16, param0, var5.field_e);
             var5.field_d = me.a((byte) 105, 16, param0, var5.field_d);

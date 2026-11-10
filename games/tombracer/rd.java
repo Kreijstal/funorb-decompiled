@@ -5,7 +5,7 @@ final class rd extends wv {
     private dea field_q;
     static ur field_r;
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > -126) {
           return;
         }

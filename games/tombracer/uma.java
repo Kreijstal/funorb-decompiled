@@ -17,7 +17,7 @@ final class uma {
           if (param2 != -26803) {
             field_b = (IntrusiveDeque) null;
           }
-          stackIn_3_0 = (param1.b((byte) 44, param0) ^ 1 << -1 + param0) - (1 << -1 + param0);
+          stackIn_3_0 = (param1.readBits((byte) 44, param0) ^ 1 << -1 + param0) - (1 << -1 + param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -33,7 +33,7 @@ final class uma {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_a = null;
         if (param0 != -1) {

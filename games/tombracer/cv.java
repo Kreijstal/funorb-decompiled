@@ -24,7 +24,7 @@ final class cv extends dg {
     final void a(int param0, Room param1, BitPacketBuffer param2) {
         try {
           super.a(124, param1, param2);
-          this.field_q = param2.b((byte) 44, 4);
+          this.field_q = param2.readBits((byte) 44, 4);
           if (param0 < 119) {
             this.d(72);
           }
@@ -82,14 +82,14 @@ final class cv extends dg {
     final void a(byte param0, BitPacketBuffer param1) {
         try {
           super.a((byte) 59, param1);
-          param1.a((byte) 59, this.field_q, 4);
+          param1.writeBits((byte) 59, this.field_q, 4);
           int var3_int = 26 % ((-8 - param0) / 40);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "cv.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void n(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_r = null;
         if (param0 <= 81) {
           return;

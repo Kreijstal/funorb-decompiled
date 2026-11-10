@@ -165,10 +165,10 @@ abstract class lc extends ofa {
         return super.a(127);
     }
 
-    public static void e(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_N = null;
         if (param0) {
-          lc.e(false);
+          lc.releaseStatics(false);
           field_L = null;
           return;
         }

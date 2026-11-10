@@ -6,11 +6,11 @@ final class wo extends vo implements va {
     static jea field_k;
     static ft field_i;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         field_i = null;
         if (param0 != 34962) {
-          wo.c(53);
+          wo.releaseStatics(53);
         }
     }
 

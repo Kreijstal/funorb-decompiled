@@ -72,7 +72,7 @@ final class ph {
         this.a((byte) -16);
         this.field_b.b((byte) -127);
         if (param0 >= -14) {
-          ph.a(false);
+          ph.releaseStatics(false);
         }
     }
 
@@ -101,7 +101,7 @@ final class ph {
           break;
         }
         if (param0 != -1) {
-          ph.a(false);
+          ph.releaseStatics(false);
         }
     }
 
@@ -120,12 +120,12 @@ final class ph {
         return this.field_d;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_n = null;
         field_k = null;
         field_c = null;
         if (!param0) {
-          ph.a(false);
+          ph.releaseStatics(false);
         }
     }
 

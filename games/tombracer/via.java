@@ -51,7 +51,7 @@ final class via extends java.awt.Canvas implements java.awt.event.FocusListener 
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = (String[][]) null;
         if (param0 != 64) {
           field_a = (jpa[]) null;

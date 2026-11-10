@@ -12,19 +12,19 @@ final class gfa extends GameEvent {
     final void a(BitPacketBuffer param0, int param1) {
         try {
           super.a(param0, param1);
-          param0.a((byte) -128, this.field_n, 4);
-          param0.a((byte) -125, this.field_k, 6);
+          param0.writeBits((byte) -128, this.field_n, 4);
+          param0.writeBits((byte) -125, this.field_k, 6);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "gfa.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         field_m = null;
         field_l = null;
         if (param0 <= 33) {
-          gfa.b(-87);
+          gfa.releaseStatics(-87);
           field_j = null;
           return;
         }
@@ -56,8 +56,8 @@ final class gfa extends GameEvent {
     gfa(int param0, BitPacketBuffer param1) {
         super(param0, param1);
         try {
-          this.field_n = param1.b((byte) 44, 4);
-          this.field_k = param1.b((byte) 44, 6);
+          this.field_n = param1.readBits((byte) 44, 4);
+          this.field_k = param1.readBits((byte) 44, 6);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "gfa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

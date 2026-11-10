@@ -534,7 +534,7 @@ final class sd extends lga {
         }
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 10) {
           field_J = (String) null;
           field_J = null;

@@ -16,10 +16,10 @@ final class jja extends nh {
     static String field_l;
     static hla field_j;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_j = null;
         if (param0) {
-          jja.a(true);
+          jja.releaseStatics(true);
         }
         field_l = null;
         field_d = null;

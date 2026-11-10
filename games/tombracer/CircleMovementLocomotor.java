@@ -55,7 +55,7 @@ final class CircleMovementLocomotor extends Locomotor {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 5907) {
-            stackIn_6_0 = (param1.b((byte) 44, 1) == 1);
+            stackIn_6_0 = (param1.readBits((byte) 44, 1) == 1);
             return stackIn_6_0;
           }
           return false;
@@ -119,9 +119,9 @@ final class CircleMovementLocomotor extends Locomotor {
         RuntimeException var3 = null;
         try {
           super.a(param0, (byte) -122);
-          param0.a((byte) -44, this.field_o >> 16, 10);
-          param0.a((byte) 90, dqa.a(true, this.field_r, 12), 12);
-          param0.a((byte) -126, cn.a((byte) 74, this.field_q, 32768, 4), 4);
+          param0.writeBits((byte) -44, this.field_o >> 16, 10);
+          param0.writeBits((byte) 90, dqa.a(true, this.field_r, 12), 12);
+          param0.writeBits((byte) -126, cn.a((byte) 74, this.field_q, 32768, 4), 4);
           stackIn_2_0 = (BitPacketBuffer) (param0);
           stackIn_2_1 = -128;
           if (!this.field_t) {
@@ -129,7 +129,7 @@ final class CircleMovementLocomotor extends Locomotor {
           } else {
             stackIn_3_2 = 1;
           }
-          ((BitPacketBuffer) (Object) stackIn_2_0).a((byte) stackIn_2_1, stackIn_3_2, 1);
+          ((BitPacketBuffer) (Object) stackIn_2_0).writeBits((byte) stackIn_2_1, stackIn_3_2, 1);
           if (param1 >= -78) {
             var4 = (jea) null;
             CircleMovementLocomotor.a((jea) null, -46, (byte) 104, (jea) null, -72, 112, (byte[]) null, -67, (jea) null, 84);
@@ -162,14 +162,14 @@ final class CircleMovementLocomotor extends Locomotor {
         this.field_p = false;
         this.field_t = true;
         try {
-          this.field_o = param1.b((byte) 44, 10) << 16;
-          this.field_r = CoinItemComponent.a(true, 12, param1.b((byte) 44, 12));
+          this.field_o = param1.readBits((byte) 44, 10) << 16;
+          this.field_r = CoinItemComponent.a(true, 12, param1.readBits((byte) 44, 12));
           if (param0.field_E < 10) {
-            this.field_q = oo.a(3, 32768, 0, param1.b((byte) 44, 3));
+            this.field_q = oo.a(3, 32768, 0, param1.readBits((byte) 44, 3));
             this.field_t = true;
           } else {
-            this.field_q = oo.a(4, 32768, 0, param1.b((byte) 44, 4));
-            stackIn_5_1 = (1 == param1.b((byte) 44, 1));
+            this.field_q = oo.a(4, 32768, 0, param1.readBits((byte) 44, 4));
+            stackIn_5_1 = (1 == param1.readBits((byte) 44, 1));
             this.field_t = stackIn_5_1;
           }
           return;
@@ -284,7 +284,7 @@ final class CircleMovementLocomotor extends Locomotor {
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = -111 % ((-80 - param0) / 46);
         field_s = null;
     }

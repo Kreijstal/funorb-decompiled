@@ -5,7 +5,7 @@ final class ova extends me {
     static String field_j;
     static String field_k;
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_k = null;
         if (param0 > -35) {
           return;

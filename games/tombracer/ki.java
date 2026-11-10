@@ -13,7 +13,7 @@ final class ki extends dg {
           if (param0 <= 119) {
             this.field_m = 120;
           }
-          this.field_m = param2.b((byte) 44, 4);
+          this.field_m = param2.readBits((byte) 44, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ki.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -23,7 +23,7 @@ final class ki extends dg {
         try {
           super.a((byte) 115, param1);
           int var3_int = 44 / ((param0 + 8) / 40);
-          param1.a((byte) -125, this.field_m, 4);
+          param1.writeBits((byte) -125, this.field_m, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ki.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -79,9 +79,9 @@ final class ki extends dg {
         var7 = TombRacer.field_G ? 1 : 0;
         try {
           if (param2.field_E > 7) {
-            var4_int = param0.b((byte) 44, 6);
+            var4_int = param0.readBits((byte) 44, 6);
           } else {
-            var4_int = param0.b((byte) 44, 4);
+            var4_int = param0.readBits((byte) 44, 4);
           }
           var5 = 37 / ((-67 - param1) / 45);
           var6 = var4_int;
@@ -193,7 +193,7 @@ final class ki extends dg {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_n = null;
         if (param0) {
           field_n = (jua) null;

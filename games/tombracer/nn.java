@@ -6,7 +6,7 @@ final class nn {
     static IntrusiveDeque field_a;
     static int field_c;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 < 8) {
           field_a = (IntrusiveDeque) null;
           field_a = null;

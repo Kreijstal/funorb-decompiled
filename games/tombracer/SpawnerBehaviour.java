@@ -27,12 +27,12 @@ final class SpawnerBehaviour extends Behaviour {
         if (ql.field_k == null) {
           return;
         }
-        dba var4 = new dba();
+        C2SSubmitSettingsPacket var4 = new C2SSubmitSettingsPacket();
         var4.a(param2, (byte) -60);
         var4.b(param0, (byte) 123);
         var4.a(param3, 2097152);
-        ql.field_k.k(80, param1 ^ -2984);
-        var4.a(200, ql.field_k);
+        ql.field_k.writeCipheredOpcode(80, param1 ^ -2984);
+        var4.encode(200, ql.field_k);
         if (param1 == 12) {
           return;
         }
@@ -44,7 +44,7 @@ final class SpawnerBehaviour extends Behaviour {
           super.a(param0, param1);
           this.field_o.a(15637, param1);
           this.field_q.a(param1, (byte) 52);
-          param1.a((byte) 121, this.field_p, 12);
+          param1.writeBits((byte) 121, this.field_p, 12);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wma.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -149,7 +149,7 @@ final class SpawnerBehaviour extends Behaviour {
         try {
           this.field_o = new mg(param0.field_E, param1);
           this.field_q = pha.readSpawner(param1, param0, 162);
-          this.field_p = param1.b((byte) 44, 12);
+          this.field_p = param1.readBits((byte) 44, 12);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

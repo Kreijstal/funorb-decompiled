@@ -56,11 +56,11 @@ final class eqa implements os {
             if (bta.field_q == 0) {
               return true;
             }
-            ufa.a(true);
+            PlayerProfile.a(true);
             return true;
           }
           if (vc.field_n.length() <= 0) {
-            ufa.a(true);
+            PlayerProfile.a(true);
             return true;
           }
           var4_ref_String = vc.field_n.toString();
@@ -71,7 +71,7 @@ final class eqa implements os {
             var15 = (String) null;
             var14 = (String) null;
             gu.a(0, true, (String) null, mm.field_f, (String) null, 2);
-            ufa.a(true);
+            PlayerProfile.a(true);
             return true;
           }
           var5 = bta.field_q;
@@ -83,7 +83,7 @@ final class eqa implements os {
             MazeGenerator.a(var5, param2, (byte) 108, 1);
           }
           opa.a(bta.field_q, var4_ref_String, param0, 32371, wp.field_a, -1);
-          ufa.a(true);
+          PlayerProfile.a(true);
           return true;
         }
         if (fna.field_h == 85) {
@@ -179,16 +179,16 @@ final class eqa implements os {
     public final mva[] a(int param0, int param1) {
         if (param1 != -26955) {
           this.a((byte) -119);
-          return (mva[]) ((Object) new cfa[param0]);
+          return (mva[]) ((Object) new CommonChooseReward[param0]);
         }
-        return (mva[]) ((Object) new cfa[param0]);
+        return (mva[]) ((Object) new CommonChooseReward[param0]);
     }
 
     public final mva a(byte param0) {
         if (param0 > -17) {
           return (mva) null;
         }
-        return (mva) ((Object) new cfa());
+        return (mva) ((Object) new CommonChooseReward());
     }
 
     static {

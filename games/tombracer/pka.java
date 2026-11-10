@@ -5,9 +5,9 @@ final class pka {
     static int field_b;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -1) {
-          pka.a(-110);
+          pka.releaseStatics(-110);
           field_a = null;
           return;
         }
@@ -39,7 +39,7 @@ final class pka {
               }
               return var1 != 0;
             }
-            bqa.a(dq.field_f == null ? VortexBehaviour.field_n : true, 113);
+            S2CNewRoomPacket.a(dq.field_f == null ? VortexBehaviour.field_n : true, 113);
             var1 = 1;
           }
           if (sr.a(125)) {
@@ -66,7 +66,7 @@ final class pka {
                 }
                 return var1 != 0;
               }
-              bqa.a(dq.field_f == null ? VortexBehaviour.field_n : true, 113);
+              S2CNewRoomPacket.a(dq.field_f == null ? VortexBehaviour.field_n : true, 113);
               var1 = 1;
             }
             if (!sr.a(125)) {
@@ -94,7 +94,7 @@ final class pka {
               }
               return var1 != 0;
             }
-            bqa.a(dq.field_f == null ? VortexBehaviour.field_n : true, 113);
+            S2CNewRoomPacket.a(dq.field_f == null ? VortexBehaviour.field_n : true, 113);
             var1 = 1;
           }
           if (!sr.a(125)) {
@@ -121,7 +121,7 @@ final class pka {
             }
             return var1 != 0;
           }
-          bqa.a(dq.field_f == null ? VortexBehaviour.field_n : true, 113);
+          S2CNewRoomPacket.a(dq.field_f == null ? VortexBehaviour.field_n : true, 113);
           var1 = 1;
         }
         if (!sr.a(125)) {

@@ -205,10 +205,10 @@ abstract class ota {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != 0) {
-          ota.a(1);
+          ota.releaseStatics(1);
           field_a = null;
           return;
         }

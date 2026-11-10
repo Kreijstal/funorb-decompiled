@@ -327,12 +327,12 @@ final class uda extends qra {
         return true;
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_o = null;
         field_w = null;
         field_s = null;
         if (param0 < 9) {
-          uda.h(105);
+          uda.releaseStatics(105);
         }
         field_r = null;
     }

@@ -16,7 +16,7 @@ final class tka extends vpa {
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 > -52) {
           field_q = (jea) null;
           field_p = null;

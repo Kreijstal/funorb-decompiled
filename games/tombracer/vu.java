@@ -36,7 +36,7 @@ final class vu extends vw {
         return false;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = -45 % ((-36 - param0) / 51);
         field_d = null;
         field_e = null;
@@ -170,7 +170,7 @@ final class vu extends vw {
                 if (hw.field_a.field_pb) {
                   var9 = null;
                   if (mm.field_g) {
-                    var9 = "<col=A00000>" + mi.field_j + "</col>";
+                    var9 = "<col=A00000>" + ConsoleToken.field_j + "</col>";
                     var11 = var9;
                     var9 = var11;
                     var11Lifetime1 = var9;
@@ -233,7 +233,7 @@ final class vu extends vw {
           ((jea) (Object) stackIn_77_0).c(stackIn_77_1, stackIn_78_2);
           rm.field_e.field_a.e((byte) -99);
           if (param0 != 1) {
-            vu.d(-121);
+            vu.releaseStatics(-121);
           }
           if (null != ifa.field_n) {
             if (bc.field_b.field_y != 0) {

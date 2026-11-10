@@ -118,9 +118,9 @@ final class ma extends qe {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 9681) {
-          ma.c(37);
+          ma.releaseStatics(37);
           field_f = null;
           return;
         }
@@ -129,7 +129,7 @@ final class ma extends qe {
 
     final boolean b(int param0) {
         if (param0 != -11921) {
-          ma.c(-2);
+          ma.releaseStatics(-2);
           return true;
         }
         return true;

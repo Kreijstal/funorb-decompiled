@@ -45,7 +45,7 @@ final class qq extends IntrusiveNode {
         field_h = var8;
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_h = null;
     }
 

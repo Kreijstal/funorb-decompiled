@@ -23,7 +23,7 @@ final class mla {
         int var4Lifetime1;
         if (param1 < -83) {
           var6 = ql.field_k;
-          var6.k(param0, -2988);
+          var6.writeCipheredOpcode(param0, -2988);
           var6.position = var6.position + 1;
           var3 = var6.position;
           var6.i(5, 0);
@@ -36,7 +36,7 @@ final class mla {
         }
         mla.a(-5, 33);
         BitPacketBuffer var5 = ql.field_k;
-        var5.k(param0, -2988);
+        var5.writeCipheredOpcode(param0, -2988);
         var5.position = var5.position + 1;
         var3Lifetime1 = var5.position;
         var5.i(5, 0);

@@ -503,7 +503,7 @@ final class Room implements ew, fo, noa {
 
     final boolean a(boolean param0, int param1, gma param2, int param3) {
         RuntimeException var5 = null;
-        up var6 = null;
+        Effect var6 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -511,8 +511,8 @@ final class Room implements ew, fo, noa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            var6 = (up) null;
-            this.a((Projectile) null, -25, (up) null);
+            var6 = (Effect) null;
+            this.a((Projectile) null, -25, (Effect) null);
           }
           stackIn_5_0 = (1 == this.a(131072, 131072, param2, param3, param1, (byte) -128));
           return stackIn_5_0;
@@ -549,7 +549,7 @@ final class Room implements ew, fo, noa {
         }
     }
 
-    private final int a(boolean param0, pc param1, up param2) {
+    private final int a(boolean param0, pc param1, Effect param2) {
         int var6 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -1060,34 +1060,34 @@ final class Room implements ew, fo, noa {
         bca.b((byte) 55);
         var3 = this.field_K;
         var3.position = 0;
-        var3.h((byte) -64);
-        this.field_E = var3.b((byte) 44, 8);
+        var3.beginBitAccess((byte) -64);
+        this.field_E = var3.readBits((byte) 44, 8);
         this.field_P = new fq(this.field_E, var3);
         if (19 >= this.field_E) {
-          this.field_v = var3.b((byte) 44, 12) << 16;
-          this.field_w = var3.b((byte) 44, 12) << 16;
+          this.field_v = var3.readBits((byte) 44, 12) << 16;
+          this.field_w = var3.readBits((byte) 44, 12) << 16;
         } else {
           if (20 != this.field_E) {
-            this.field_v = 2097152 * var3.b((byte) 44, 6);
-            this.field_w = var3.b((byte) 44, 6) * 2097152;
+            this.field_v = 2097152 * var3.readBits((byte) 44, 6);
+            this.field_w = var3.readBits((byte) 44, 6) * 2097152;
           } else {
-            this.field_v = 2097152 * var3.b((byte) 44, 8);
-            this.field_w = var3.b((byte) 44, 8) * 2097152;
+            this.field_v = 2097152 * var3.readBits((byte) 44, 8);
+            this.field_w = var3.readBits((byte) 44, 8) * 2097152;
           }
         }
         this.field_B.a(2097152, this, 4);
         if (11 > this.field_E) {
           this.k(109);
         } else {
-          this.field_Q = var3.b((byte) 44, 12) << 16;
-          this.field_L = var3.b((byte) 44, 12) << 16;
+          this.field_Q = var3.readBits((byte) 44, 12) << 16;
+          this.field_L = var3.readBits((byte) 44, 12) << 16;
         }
-        var4 = var3.b((byte) 44, param0);
+        var4 = var3.readBits((byte) 44, param0);
         for (var5 = 0; var4 > var5; var5++) {
           var12 = new db(this, var3);
           this.a(var12, true);
         }
-        var5Lifetime1 = var3.b((byte) 44, 8);
+        var5Lifetime1 = var3.readBits((byte) 44, 8);
         for (var6 = 0; var6 < var5Lifetime1; var6++) {
           var7_ref_fsa = new Trap(this, var3, false);
           this.a(var7_ref_fsa, (byte) 32);
@@ -1095,7 +1095,7 @@ final class Room implements ew, fo, noa {
         }
         this.field_B.a((byte) 25, var3, this);
         if (this.field_E >= 11) {
-          var6Lifetime1 = var3.b((byte) 44, 8);
+          var6Lifetime1 = var3.readBits((byte) 44, 8);
           for (var7 = 0; var6Lifetime1 > var7; var7++) {
             var8 = vha.field_c.readComponent(var3, 55, this);
             if (var8 != null) {
@@ -1105,23 +1105,23 @@ final class Room implements ew, fo, noa {
         }
         if (this.field_E == 12) {
           for (var6Lifetime2 = 0; 3 > var6Lifetime2; var6Lifetime2++) {
-            var3.b((byte) 44, 10);
+            var3.readBits((byte) 44, 10);
           }
         } else {
           if (this.field_E >= 13 &&
             26 > this.field_E) {
             for (var6Lifetime2 = 0; var6Lifetime2 < 3; var6Lifetime2++) {
-              var3.b((byte) 44, 8);
+              var3.readBits((byte) 44, 8);
             }
           }
         }
         if (16 <= this.field_E) {
-          this.field_A = var3.b((byte) 44, 2);
+          this.field_A = var3.readBits((byte) 44, 2);
         }
         if (this.field_E >= 19) {
-          this.field_J = var3.b((byte) 44, 3);
+          this.field_J = var3.readBits((byte) 44, 3);
         }
-        var3.i((byte) 98);
+        var3.endBitAccess((byte) 98);
         this.m(param0 ^ 1);
         var10 = (Trap) (this.field_i.f(-80));
         while (var10 != null) {
@@ -1154,7 +1154,7 @@ final class Room implements ew, fo, noa {
         return;
     }
 
-    final boolean a(int param0, gma param1, int param2, pc param3, gma param4, up param5) {
+    final boolean a(int param0, gma param1, int param2, pc param3, gma param4, Effect param5) {
         int discarded$3 = 0;
         int var7_int = 0;
         RuntimeException var7 = null;
@@ -1445,7 +1445,7 @@ final class Room implements ew, fo, noa {
         return stackIn_4_0;
     }
 
-    final int a(int param0, int param1, up param2, int param3, int param4, int param5) {
+    final int a(int param0, int param1, Effect param2, int param3, int param4, int param5) {
         int var10 = 0;
         int var7_int = 0;
         RuntimeException var7 = null;
@@ -1707,23 +1707,23 @@ final class Room implements ew, fo, noa {
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           this.m(9);
-          param0.i(8);
-          param0.a((byte) -127, 26, 8);
+          param0.beginBitWrite(8);
+          param0.writeBits((byte) -127, 26, 8);
           this.field_P.a(param0, 23);
           if (param1 != -28426) {
             this.o((byte) 71);
           }
-          param0.a((byte) 59, this.field_v / 2097152, 6);
-          param0.a((byte) -125, this.field_w / 2097152, 6);
-          param0.a((byte) -126, this.field_Q >> 16, 12);
-          param0.a((byte) -128, this.field_L >> 16, 12);
-          param0.a((byte) -125, this.field_d.a((byte) -16), 8);
+          param0.writeBits((byte) 59, this.field_v / 2097152, 6);
+          param0.writeBits((byte) -125, this.field_w / 2097152, 6);
+          param0.writeBits((byte) -126, this.field_Q >> 16, 12);
+          param0.writeBits((byte) -128, this.field_L >> 16, 12);
+          param0.writeBits((byte) -125, this.field_d.a((byte) -16), 8);
           var5 = (db) (this.field_d.f(-80));
           while (var5 != null) {
             var5.a(true, param0);
             var5 = (db) (this.field_d.e(113));
           }
-          param0.a((byte) 119, this.field_i.a((byte) -16), 8);
+          param0.writeBits((byte) 119, this.field_i.a((byte) -16), 8);
           var6 = (Trap) (this.field_i.f(-80));
           while (var6 != null) {
             if (!var6.w((byte) -117)) {
@@ -1732,15 +1732,15 @@ final class Room implements ew, fo, noa {
             var6 = (Trap) (this.field_i.e(114));
           }
           this.field_B.a(8, param0);
-          param0.a((byte) 120, this.field_z.a((byte) -16), 8);
+          param0.writeBits((byte) 120, this.field_z.a((byte) -16), 8);
           var7 = (RoomComponent) (this.field_z.f(-80));
           while (var7 != null) {
             vha.field_c.writeComponent(var7, -16097, param0);
             var7 = (RoomComponent) (this.field_z.e(107));
           }
-          param0.a((byte) 102, this.field_A, 2);
-          param0.a((byte) 127, this.field_J, 3);
-          param0.k(-1826190686);
+          param0.writeBits((byte) 102, this.field_A, 2);
+          param0.writeBits((byte) 127, this.field_J, 3);
+          param0.endBitWrite(-1826190686);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1789,7 +1789,7 @@ final class Room implements ew, fo, noa {
         return this.field_y;
     }
 
-    final int a(Projectile param0, int param1, up param2) {
+    final int a(Projectile param0, int param1, Effect param2) {
         int var6 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;

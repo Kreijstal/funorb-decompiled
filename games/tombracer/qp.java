@@ -220,7 +220,7 @@ final class qp extends we {
         return var7 != 0;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_r = null;
         field_v = null;
         if (param0 <= 63) {
@@ -247,7 +247,7 @@ final class qp extends we {
         eda.field_f.a(var4, false, pta.field_g.toUpperCase(), es.field_h[1], -14671840, -1);
         eda.field_f.a(var4, false, ControllerLocomotor.field_o.toUpperCase(), es.field_h[2], -14671840, -1);
         eda.field_f.a(var4, false, SimpleConditionBehaviour.field_q.toUpperCase(), es.field_h[3], -14671840, -1);
-        eda.field_f.a(var4, false, ufa.field_u.toUpperCase(), es.field_h[4], -14671840, -1);
+        eda.field_f.a(var4, false, PlayerProfile.field_u.toUpperCase(), es.field_h[4], -14671840, -1);
         eda.field_f.a(var4, false, ida.field_a.toUpperCase(), es.field_h[5], -14671840, -1);
         var5 = null;
         var6 = this.field_w;

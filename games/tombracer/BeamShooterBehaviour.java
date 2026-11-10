@@ -3,7 +3,7 @@
  */
 final class BeamShooterBehaviour extends Behaviour implements mra {
     private pc field_s;
-    private up field_r;
+    private Effect field_r;
     private mg field_n;
     private int field_u;
     private boolean field_q;
@@ -18,7 +18,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         return this.field_t;
     }
 
-    final void a(up param0, boolean param1) {
+    final void a(Effect param0, boolean param1) {
         try {
           this.field_r = param0;
           if (!param1) {
@@ -181,10 +181,10 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
             this.field_u = -117;
           }
           this.field_n.a(15637, param1);
-          param1.a((byte) -23, this.field_w >> 16, 10);
+          param1.writeBits((byte) -23, this.field_w >> 16, 10);
           this.field_r.a(param1, (byte) 125);
-          param1.a((byte) 85, !this.field_q ? 0 : 1, 1);
-          param1.a((byte) 45, this.field_u >> 16, 8);
+          param1.writeBits((byte) 85, !this.field_q ? 0 : 1, 1);
+          param1.writeBits((byte) 45, this.field_u >> 16, 8);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ov.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -235,7 +235,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         int var19Lifetime1Lifetime1;
         var23 = TombRacer.field_G ? 1 : 0;
         try {
-          ufa.a(-57, param1);
+          PlayerProfile.a(-57, param1);
           var7_int = 0;
           var8 = -param0 + param1;
           if (0 > var8) {
@@ -384,14 +384,14 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         this.field_o = 0;
         try {
           this.field_n = new mg(param0.field_E, param1);
-          this.field_w = param1.b((byte) 44, 10) << 16;
+          this.field_w = param1.readBits((byte) 44, 10) << 16;
           this.field_r = ad.a((byte) 87, param1);
           if (8 <= param0.field_E) {
-            stackIn_5_1 = (param1.b((byte) 44, 1) == 1);
+            stackIn_5_1 = (param1.readBits((byte) 44, 1) == 1);
             this.field_q = stackIn_5_1;
           }
           if (param0.field_E >= 11) {
-            this.field_u = param1.b((byte) 44, 8) << 16;
+            this.field_u = param1.readBits((byte) 44, 8) << 16;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -488,7 +488,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         this.field_o = 0;
         try {
           this.field_n = new mg();
-          this.field_r = new up(1, 10);
+          this.field_r = new Effect(1, 10);
           this.field_r.b(1, 13);
           this.field_w = 0;
           this.field_u = 0;

@@ -32,7 +32,7 @@ abstract class c extends IntrusiveNode implements fo {
         RuntimeException decompiledCaughtException = null;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
-          var4_int = param3.b((byte) 44, param0);
+          var4_int = param3.readBits((byte) 44, param0);
           if (var4_int == 0) {
             stackIn_3_0 = null;
             return (boolean[]) (stackIn_3_0);
@@ -71,7 +71,7 @@ abstract class c extends IntrusiveNode implements fo {
 
     abstract void a(uw param0, int param1);
 
-    public static void m(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         field_f = null;
         if (param0 <= 54) {

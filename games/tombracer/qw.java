@@ -21,23 +21,23 @@ final class qw extends IntrusiveNode {
         int var1Lifetime1;
         if (param0 == 256) {
           if (224 <= MatchState.field_w) {
-            cf.a(256, -116);
+            S2CRoundResultPacket.a(256, -116);
           } else {
             var1 = MatchState.field_w % 32;
-            cf.a(MatchState.field_w - (-32 + var1), -127);
+            S2CRoundResultPacket.a(MatchState.field_w - (-32 + var1), -127);
           }
           return;
         }
-        qw.a(false);
+        qw.releaseStatics(false);
         if (224 <= MatchState.field_w) {
-          cf.a(256, -116);
+          S2CRoundResultPacket.a(256, -116);
         } else {
           var1Lifetime1 = MatchState.field_w % 32;
-          cf.a(MatchState.field_w - (-32 + var1Lifetime1), -127);
+          S2CRoundResultPacket.a(MatchState.field_w - (-32 + var1Lifetime1), -127);
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_g = null;
         field_f = null;
         if (!param0) {

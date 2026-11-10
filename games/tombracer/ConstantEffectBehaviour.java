@@ -5,7 +5,7 @@ final class ConstantEffectBehaviour extends Behaviour {
     static nh field_q;
     static float field_p;
     static char[] field_n;
-    private up field_r;
+    private Effect field_r;
     int field_o;
 
     final void k(int param0) {
@@ -19,7 +19,7 @@ final class ConstantEffectBehaviour extends Behaviour {
         super(param0, param1);
         this.field_o = 0;
         try {
-          this.field_r = new up(1, 50);
+          this.field_r = new Effect(1, 50);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "fra.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -35,7 +35,7 @@ final class ConstantEffectBehaviour extends Behaviour {
         }
     }
 
-    final void a(boolean param0, up param1) {
+    final void a(boolean param0, Effect param1) {
         try {
           this.field_r = param1;
           if (!param0) {
@@ -53,7 +53,7 @@ final class ConstantEffectBehaviour extends Behaviour {
         return param0;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_q = null;
         field_n = null;
         if (param0 != -27203) {

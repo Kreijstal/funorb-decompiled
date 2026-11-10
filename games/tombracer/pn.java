@@ -38,7 +38,7 @@ final class pn extends or {
         super(12, 5, 16, 2, 2, 0.44999998807907104f);
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > -26) {
           return;
         }

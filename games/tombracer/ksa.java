@@ -15,10 +15,10 @@ final class ksa extends ci {
         this.field_o = 3072;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_n = null;
         if (param0 != -19514) {
-          ksa.c(80);
+          ksa.releaseStatics(80);
         }
     }
 

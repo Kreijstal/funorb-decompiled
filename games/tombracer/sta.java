@@ -163,7 +163,7 @@ final class sta extends rva {
         }
     }
 
-    public static void h(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= -35) {
           return;
         }

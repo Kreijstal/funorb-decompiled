@@ -891,7 +891,7 @@ class tra extends rj {
         try {
           boolean decompiledSharedTail0 = !(MatchState.field_w <= 32);
           if (!decompiledSharedTail0) {
-            cf.a(0, param0 + 8);
+            S2CRoundResultPacket.a(0, param0 + 8);
             decompiledSharedTail0 = (TombRacer.field_G);
           }
           if (decompiledSharedTail0) {
@@ -899,7 +899,7 @@ class tra extends rj {
             if (0 == var1_int) {
               var1_int = 32;
             }
-            cf.a(-var1_int + MatchState.field_w, param0 - 1);
+            S2CRoundResultPacket.a(-var1_int + MatchState.field_w, param0 - 1);
           }
           if (param0 != -113) {
             tra.g(-73);

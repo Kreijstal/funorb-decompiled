@@ -70,7 +70,7 @@ final class wja extends ci {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           return;
         }
@@ -179,7 +179,7 @@ final class wja extends ci {
         var7 = TombRacer.field_G ? 1 : 0;
         var3 = this.field_i.a((byte) 84, param1);
         if (param0 != 1) {
-          wja.c(18);
+          wja.releaseStatics(18);
         }
         if (this.field_i.field_d) {
           var4 = this.c(0, -101, param1);

@@ -134,10 +134,10 @@ class coa extends ci {
         return true;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_s = null;
         if (param0 != 16711680) {
-          coa.c(90);
+          coa.releaseStatics(90);
         }
         field_n = null;
         field_q = null;

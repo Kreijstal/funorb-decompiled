@@ -195,9 +195,9 @@ final class PlayerSimulation {
         }
     }
 
-    public static void n(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
-          PlayerSimulation.n(-118);
+          PlayerSimulation.releaseStatics(-118);
           field_n = null;
           return;
         }

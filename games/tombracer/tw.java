@@ -104,7 +104,7 @@ final class tw {
         int var2 = -88 % ((param0 - 32) / 60);
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 <= 111) {
           field_g = (String) null;
           field_g = null;

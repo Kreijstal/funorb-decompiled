@@ -46,7 +46,7 @@ abstract class ld extends ota {
         throw new Error();
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 35 / ((param0 + 62) / 50);
         field_d = null;
         field_f = null;

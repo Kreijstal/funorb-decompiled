@@ -172,7 +172,7 @@ final class jd extends tfa implements lv {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         if (param0 != 32242) {
           field_m = (String) null;

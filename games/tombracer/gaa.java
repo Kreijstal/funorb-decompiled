@@ -381,10 +381,10 @@ final class gaa extends dg {
         try {
           super.a((byte) -65, param1);
           int var3_int = 46 / ((param0 + 8) / 40);
-          param1.a((byte) 0, this.field_q, 4);
-          param1.a((byte) 19, this.field_o, 2);
-          param1.a((byte) -127, this.field_r ? 1 : 0, 1);
-          param1.a((byte) 74, this.field_m / 8, 8);
+          param1.writeBits((byte) 0, this.field_q, 4);
+          param1.writeBits((byte) 19, this.field_o, 2);
+          param1.writeBits((byte) -127, this.field_r ? 1 : 0, 1);
+          param1.writeBits((byte) 74, this.field_m / 8, 8);
           if (this.field_n == null) {
             this.field_n = new jaa(false, db.field_l);
           }
@@ -406,15 +406,15 @@ final class gaa extends dg {
         if (!(param1.field_E >= 18)) {
           return;
         }
-        this.field_q = param2.b((byte) 44, 4);
-        this.field_o = param2.b((byte) 44, 2);
-        this.field_r = 1 == param2.b((byte) 44, 1) ? true : false;
+        this.field_q = param2.readBits((byte) 44, 4);
+        this.field_o = param2.readBits((byte) 44, 2);
+        this.field_r = 1 == param2.readBits((byte) 44, 1) ? true : false;
         if (param0 < 119) {
           return;
         }
         try {
           this.field_r = true;
-          this.field_m = param2.b((byte) 44, 8) * 8;
+          this.field_m = param2.readBits((byte) 44, 8) * 8;
           this.field_n = new jaa(false, db.field_l, param1.field_E, param2);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "gaa.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

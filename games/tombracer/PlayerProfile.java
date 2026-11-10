@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ufa {
+final class PlayerProfile {
     boolean field_a;
     static int[] field_e;
     int field_h;
@@ -14,21 +14,21 @@ final class ufa {
     static String field_u;
     boolean field_l;
     private IntrusiveDeque field_i;
-    private BitSet field_s;
+    private BitSet charactersUnlocked;
     int field_k;
     static int[] field_t;
     private static int[] field_b;
-    int[] field_n;
+    int[] worldMedals;
     private static int[] field_j;
-    BitSet field_o;
-    private BitSet field_m;
+    BitSet roomsComplete;
+    private BitSet coursesUnlocked;
     static int field_c;
     static String[] field_q;
     static nh[] field_r;
 
     final static void a(boolean param0) {
         if (!param0) {
-          ufa.b(-1);
+          PlayerProfile.releaseStatics(-1);
         }
         vc.field_n.setLength(0);
         bta.field_q = 0;
@@ -38,18 +38,18 @@ final class ufa {
         int var2 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
         String var1 = "Profile - ";
-        var1 = var1 + "RoomsComplete[" + this.field_o + "]";
-        var1 = var1 + "CharUnlocked[" + this.field_s.toString() + "]";
-        var1 = var1 + "CourUnlocked[" + this.field_m.toString() + "]";
+        var1 = var1 + "RoomsComplete[" + this.roomsComplete + "]";
+        var1 = var1 + "CharUnlocked[" + this.charactersUnlocked.toString() + "]";
+        var1 = var1 + "CourUnlocked[" + this.coursesUnlocked.toString() + "]";
         var1 = var1 + "WorldMedals[";
-        for (var2 = 0; this.field_n.length > var2; var2++) {
-          var1 = var1 + this.field_n[var2] + " ,";
+        for (var2 = 0; this.worldMedals.length > var2; var2++) {
+          var1 = var1 + this.worldMedals[var2] + " ,";
         }
         var1 = var1 + "]";
         return var1;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_e = null;
         field_p = null;
@@ -67,7 +67,7 @@ final class ufa {
         if (param0 >= -22) {
           return true;
         }
-        return this.field_m.get(param1);
+        return this.coursesUnlocked.get(param1);
     }
 
     final void a(BitPacketBuffer param0, byte param1) {
@@ -90,32 +90,32 @@ final class ufa {
           if (var3_int < 16) {
             return;
           }
-          param0.h((byte) -11);
+          param0.beginBitAccess((byte) -11);
           this.field_l = CircleMovementLocomotor.a(5907, param0);
-          var4 = param0.b((byte) 44, 8);
+          var4 = param0.readBits((byte) 44, 8);
           for (var5 = 0; var4 > var5; var5++) {
             if (CircleMovementLocomotor.a(5907, param0)) {
-              this.field_o.set(var5);
+              this.roomsComplete.set(var5);
             }
           }
           var6 = -25 % ((69 - param1) / 53);
           for (var5Lifetime1 = 0; var5Lifetime1 < 13; var5Lifetime1++) {
             if (CircleMovementLocomotor.a(5907, param0)) {
-              this.field_s.set(var5Lifetime1);
+              this.charactersUnlocked.set(var5Lifetime1);
             }
           }
           for (var5Lifetime2 = 0; var5Lifetime2 < 9; var5Lifetime2++) {
             if (CircleMovementLocomotor.a(5907, param0)) {
-              this.field_m.set(var5Lifetime2);
+              this.coursesUnlocked.set(var5Lifetime2);
             }
           }
-          for (var5Lifetime3 = 0; this.field_n.length > var5Lifetime3; var5Lifetime3++) {
-            this.field_n[var5Lifetime3] = param0.b((byte) 44, 2);
+          for (var5Lifetime3 = 0; this.worldMedals.length > var5Lifetime3; var5Lifetime3++) {
+            this.worldMedals[var5Lifetime3] = param0.readBits((byte) 44, 2);
           }
-          this.field_g = param0.b((byte) 44, 4);
-          this.field_h = param0.b((byte) 44, 8);
-          this.field_k = param0.b((byte) 44, 8);
-          param0.i((byte) 98);
+          this.field_g = param0.readBits((byte) 44, 4);
+          this.field_h = param0.readBits((byte) 44, 8);
+          this.field_k = param0.readBits((byte) 44, 8);
+          param0.endBitAccess((byte) 98);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -135,12 +135,12 @@ final class ufa {
         if (param0 != 4) {
           this.field_l = false;
         }
-        return this.field_s.get(param1);
+        return this.charactersUnlocked.get(param1);
     }
 
     final taa c(int param0) {
         if (param0 < 29) {
-          ufa.b(90);
+          PlayerProfile.releaseStatics(90);
         }
         return (taa) (this.field_i.c(59));
     }
@@ -175,29 +175,29 @@ final class ufa {
         var5 = TombRacer.field_G ? 1 : 0;
         try {
           param1.i(16, 0);
-          param1.i(8);
+          param1.beginBitWrite(8);
           StaticCrusherComponent.a(this.field_l, 126, param1);
-          var3_int = -1 + this.field_o.size();
-          param1.a((byte) -4, var3_int, 8);
+          var3_int = -1 + this.roomsComplete.size();
+          param1.writeBits((byte) -4, var3_int, 8);
           for (var4 = 0; var4 < var3_int; var4++) {
-            StaticCrusherComponent.a(this.field_o.get(var4), -52, param1);
+            StaticCrusherComponent.a(this.roomsComplete.get(var4), -52, param1);
           }
           for (var4Lifetime1 = 0; var4Lifetime1 < 13; var4Lifetime1++) {
-            StaticCrusherComponent.a(this.field_s.get(var4Lifetime1), param0 + 2016803960, param1);
+            StaticCrusherComponent.a(this.charactersUnlocked.get(var4Lifetime1), param0 + 2016803960, param1);
           }
           for (var4Lifetime2 = 0; var4Lifetime2 < 9; var4Lifetime2++) {
-            StaticCrusherComponent.a(this.field_m.get(var4Lifetime2), param0 ^ -2016803978, param1);
+            StaticCrusherComponent.a(this.coursesUnlocked.get(var4Lifetime2), param0 ^ -2016803978, param1);
           }
           if (param0 != -2016804080) {
             field_e = (int[]) null;
           }
-          for (var4Lifetime3 = 0; this.field_n.length > var4Lifetime3; var4Lifetime3++) {
-            param1.a((byte) -125, this.field_n[var4Lifetime3], 2);
+          for (var4Lifetime3 = 0; this.worldMedals.length > var4Lifetime3; var4Lifetime3++) {
+            param1.writeBits((byte) -125, this.worldMedals[var4Lifetime3], 2);
           }
-          param1.a((byte) 93, this.field_g, 4);
-          param1.a((byte) -128, this.field_h, 8);
-          param1.a((byte) -26, this.field_k, 8);
-          param1.k(-1826190686);
+          param1.writeBits((byte) 93, this.field_g, 4);
+          param1.writeBits((byte) -128, this.field_h, 8);
+          param1.writeBits((byte) -26, this.field_k, 8);
+          param1.endBitWrite(-1826190686);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -213,17 +213,17 @@ final class ufa {
         }
     }
 
-    public ufa() {
+    public PlayerProfile() {
         this.field_l = false;
         this.field_a = false;
-        this.field_o = new BitSet(255);
+        this.roomsComplete = new BitSet(255);
         this.field_i = new IntrusiveDeque();
-        this.field_n = new int[9];
-        this.field_s = new BitSet(13);
-        this.field_m = new BitSet(9);
-        this.field_s.set(0);
-        this.field_s.set(6);
-        this.field_m.set(0);
+        this.worldMedals = new int[9];
+        this.charactersUnlocked = new BitSet(13);
+        this.coursesUnlocked = new BitSet(9);
+        this.charactersUnlocked.set(0);
+        this.charactersUnlocked.set(6);
+        this.coursesUnlocked.set(0);
         this.field_g = 0;
         this.field_h = 255;
         this.field_k = 255;
@@ -232,7 +232,7 @@ final class ufa {
     final void a(int param0, taa param1) {
         try {
           if (param0 != 8) {
-            ufa.a(true);
+            PlayerProfile.a(true);
           }
           this.field_i.b((byte) -48, param1);
         } catch (RuntimeException runtimeException) {

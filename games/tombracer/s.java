@@ -6,11 +6,11 @@ final class s {
     static String field_a;
     private static String field_z;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_b = null;
         field_a = null;
         if (!param0) {
-          s.a(false);
+          s.releaseStatics(false);
         }
     }
 

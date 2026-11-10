@@ -564,7 +564,7 @@ final class iia extends ci {
         return var3;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_r = null;
         if (param0 != -1) {
           return;

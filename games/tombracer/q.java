@@ -10,7 +10,7 @@ final class q extends ql {
 
     final static void a(byte param0, int param1, int param2) {
         BitPacketBuffer var3 = ql.field_k;
-        var3.k(param1, -2988);
+        var3.writeCipheredOpcode(param1, -2988);
         var3.i(3, 0);
         var3.i(8, 0);
         if (param0 < -100) {

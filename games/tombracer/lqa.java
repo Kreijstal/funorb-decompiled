@@ -73,7 +73,7 @@ final class lqa extends ei {
         this.field_h = param9 ? true : false;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_g = null;
         if (param0 != 102) {
           field_g = (String) null;

@@ -111,9 +111,9 @@ final class PrimMazeGenerator extends MazeGenerator {
         super(param0);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -21755) {
-          PrimMazeGenerator.a(96);
+          PrimMazeGenerator.releaseStatics(96);
           field_c = null;
           field_b = null;
           return;

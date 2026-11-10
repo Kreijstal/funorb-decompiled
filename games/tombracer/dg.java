@@ -527,10 +527,10 @@ abstract class dg extends IntrusiveNode implements fo, noa {
     void a(byte param0, BitPacketBuffer param1) {
         try {
           if (0 < this.field_f) {
-            param1.a((byte) 12, 1, 1);
-            param1.a((byte) -128, this.field_f, 8);
+            param1.writeBits((byte) 12, 1, 1);
+            param1.writeBits((byte) -128, this.field_f, 8);
           } else {
-            param1.a((byte) -125, 0, 1);
+            param1.writeBits((byte) -125, 0, 1);
           }
           int var3_int = -48 / ((-8 - param0) / 40);
         } catch (RuntimeException runtimeException) {
@@ -747,10 +747,10 @@ abstract class dg extends IntrusiveNode implements fo, noa {
         RuntimeException var4 = null;
         try {
           if (param1.field_E >= 15) {
-            if (param2.b((byte) 44, 1) != 1) {
+            if (param2.readBits((byte) 44, 1) != 1) {
               this.field_f = 0;
             } else {
-              this.field_f = param2.b((byte) 44, 8);
+              this.field_f = param2.readBits((byte) 44, 8);
             }
           }
           if (param0 < 119) {

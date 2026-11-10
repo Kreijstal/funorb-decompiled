@@ -41,11 +41,11 @@ final class hj {
         return false;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_e = null;
         field_d = null;
         if (param0) {
-          hj.a(false);
+          hj.releaseStatics(false);
           field_b = null;
           return;
         }

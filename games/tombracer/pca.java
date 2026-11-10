@@ -123,7 +123,7 @@ final class pca {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 8) {
           field_k = (Sprite[]) null;
         }
@@ -150,7 +150,7 @@ final class pca {
           return;
         }
         try {
-          param0.a((byte) 92, this.field_h, 8);
+          param0.writeBits((byte) 92, this.field_h, 8);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pca.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -300,11 +300,11 @@ final class pca {
           if (param0 != 29) {
             return;
           }
-          this.field_h = param2.b((byte) 44, 8);
+          this.field_h = param2.readBits((byte) 44, 8);
           if (param1.field_E >= 10 &&
             param1.field_E <= 17) {
-            param2.b((byte) 44, 1);
-            param2.b((byte) 44, 1);
+            param2.readBits((byte) 44, 1);
+            param2.readBits((byte) 44, 1);
             if (this.field_h > 5) {
               this.field_h = 1;
             } else {
@@ -353,7 +353,7 @@ final class pca {
     final static void a(int param0, int param1, int param2) {
         lu.a(param0, (double)param2, param1 + 26108, param0, (double)param2);
         if (param1 != -26109) {
-          pca.c(99);
+          pca.releaseStatics(99);
         }
     }
 

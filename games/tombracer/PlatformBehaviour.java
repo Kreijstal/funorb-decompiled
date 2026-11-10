@@ -88,8 +88,8 @@ final class PlatformBehaviour extends Behaviour {
     final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
-          param1.a((byte) 36, this.field_n, 8);
-          param1.a((byte) 87, this.field_q, 8);
+          param1.writeBits((byte) 36, this.field_n, 8);
+          param1.writeBits((byte) 87, this.field_q, 8);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "lpa.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -106,11 +106,11 @@ final class PlatformBehaviour extends Behaviour {
         super(param0, param1, param2);
         this.field_u = -1;
         try {
-          this.field_n = param1.b((byte) 44, 8);
-          this.field_q = param1.b((byte) 44, 8);
+          this.field_n = param1.readBits((byte) 44, 8);
+          this.field_q = param1.readBits((byte) 44, 8);
           if (param0.field_E >= 4 &&
             19 >= param0.field_E) {
-            param1.b((byte) 44, 1);
+            param1.readBits((byte) 44, 1);
             return;
           }
         } catch (RuntimeException runtimeException) {
@@ -245,7 +245,7 @@ final class PlatformBehaviour extends Behaviour {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 1) {
           field_p = (Random) null;
           field_s = null;

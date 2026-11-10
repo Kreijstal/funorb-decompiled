@@ -467,7 +467,7 @@ final class pfa {
                 }
                 var2 = mt.a("keycode_player1up", (byte) 111);
                 if (var2 != null) {
-                  mi.field_k = 255 & var2[0];
+                  ConsoleToken.field_k = 255 & var2[0];
                 }
                 var2 = mt.a("keycode_player1down", (byte) 112);
                 if (null != var2) {
@@ -1145,7 +1145,7 @@ final class pfa {
                 }
                 var2 = mt.a("pos_2nd", (byte) 101);
                 if (var2 != null) {
-                  bqa.field_g = jaa.a((byte) 45, var2);
+                  S2CNewRoomPacket.field_g = jaa.a((byte) 45, var2);
                 }
                 var2 = mt.a("pos_3rd", (byte) 118);
                 if (var2 != null) {
@@ -1621,27 +1621,27 @@ final class pfa {
                 }
                 var2 = mt.a("death_lava,0", (byte) 100);
                 if (var2 != null) {
-                  up.field_d[0] = jaa.a((byte) 51, var2);
+                  Effect.field_d[0] = jaa.a((byte) 51, var2);
                 }
                 var2 = mt.a("death_lava,1", (byte) 124);
                 if (null != var2) {
-                  up.field_d[1] = jaa.a((byte) 81, var2);
+                  Effect.field_d[1] = jaa.a((byte) 81, var2);
                 }
                 var2 = mt.a("death_lava,2", (byte) 110);
                 if (null != var2) {
-                  up.field_d[2] = jaa.a((byte) 74, var2);
+                  Effect.field_d[2] = jaa.a((byte) 74, var2);
                 }
                 var2 = mt.a("death_lava,3", (byte) 121);
                 if (var2 != null) {
-                  up.field_d[3] = jaa.a((byte) 115, var2);
+                  Effect.field_d[3] = jaa.a((byte) 115, var2);
                 }
                 var2 = mt.a("death_lava,4", (byte) 123);
                 if (null != var2) {
-                  up.field_d[4] = jaa.a((byte) 51, var2);
+                  Effect.field_d[4] = jaa.a((byte) 51, var2);
                 }
                 var2 = mt.a("death_lava,5", (byte) 113);
                 if (var2 != null) {
-                  up.field_d[5] = jaa.a((byte) 110, var2);
+                  Effect.field_d[5] = jaa.a((byte) 110, var2);
                 }
                 var2 = mt.a("death_snake,0", (byte) 101);
                 if (var2 != null) {

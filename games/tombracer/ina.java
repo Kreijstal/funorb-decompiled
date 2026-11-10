@@ -22,7 +22,7 @@ final class ina {
           jma.field_a = tc.a(dd.field_b, -8829, param0);
           ola.field_Ib = tc.a(hl.field_c, -8829, param0);
           mma.field_b = tc.a(DoorwayComponent.field_K, -8829, param0);
-          RevolverItemComponent.field_J = tc.a(ea.field_l, param1 - 8829, param0);
+          RevolverItemComponent.field_J = tc.a(C2SActionPacket.field_l, param1 - 8829, param0);
           ta.field_ub = tc.a(vk.field_e, -8829, param0);
           PowerUpItemBehaviour.field_t = tc.a(dq.field_h, -8829, param0);
           GameApplet.field_j = tc.a(gta.field_f, param1 ^ -8829, param0);
@@ -128,7 +128,7 @@ final class ina {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         if (param0 <= 20) {
           return;
@@ -145,7 +145,7 @@ final class ina {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -16) {
-            ina.a(46);
+            ina.releaseStatics(46);
           }
           stackIn_3_0 = on.a(param1, (byte) -91, false);
           return stackIn_3_0;

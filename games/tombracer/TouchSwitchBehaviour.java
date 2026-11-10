@@ -56,14 +56,14 @@ final class TouchSwitchBehaviour extends Behaviour implements ut {
         BitPacketBuffer var2Lifetime1;
         if (param1 <= -98) {
           var2 = ql.field_k;
-          var2.k(param0, -2988);
+          var2.writeCipheredOpcode(param0, -2988);
           var2.i(1, 0);
           var2.i(2, 0);
           return;
         }
         field_r = (String) null;
         var2Lifetime1 = ql.field_k;
-        var2Lifetime1.k(param0, -2988);
+        var2Lifetime1.writeCipheredOpcode(param0, -2988);
         var2Lifetime1.i(1, 0);
         var2Lifetime1.i(2, 0);
     }

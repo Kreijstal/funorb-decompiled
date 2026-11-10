@@ -57,7 +57,7 @@ final class uca {
           var8.unlinkSecondary(-7975);
           ii.field_a = ii.field_a - 1;
           var9 = ql.field_k;
-          var9.k(param2, param1 - 3090);
+          var9.writeCipheredOpcode(param2, param1 - 3090);
           var9.position = var9.position + 1;
           var5 = var9.position;
           var9.i(1, 0);
@@ -79,7 +79,7 @@ final class uca {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = 79 / ((-50 - param0) / 48);
         field_f = null;
         field_c = null;
@@ -90,7 +90,7 @@ final class uca {
         int var4 = 0;
         try {
           var5 = ql.field_k;
-          var5.k(param0, -2988);
+          var5.writeCipheredOpcode(param0, -2988);
           var5.position = var5.position + 1;
           if (param2 != 93) {
             field_a = 32;

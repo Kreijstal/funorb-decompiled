@@ -9,12 +9,12 @@ final class ab extends qra {
     private int field_m;
     static String field_w;
     static int[] field_t;
-    private cfa field_o;
+    private CommonChooseReward field_o;
     private int field_u;
     static sq field_n;
     private fv[][] field_p;
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_t = null;
         field_w = null;
         if (param0 != 6153) {
@@ -398,7 +398,7 @@ final class ab extends qra {
         this.field_u = 0;
     }
 
-    final cfa b(byte param0) {
+    final CommonChooseReward b(byte param0) {
         int var2 = -72 / ((35 - param0) / 62);
         return this.field_o;
     }
@@ -442,7 +442,7 @@ final class ab extends qra {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -4) {
-            ab.f(-54);
+            ab.releaseStatics(-54);
           }
           stackIn_3_0 = new jha(1, (String) null, param1);
           return stackIn_3_0;

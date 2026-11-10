@@ -25,7 +25,7 @@ final class go extends ci {
         return (param1 & 256) != 0 ? true : false;
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_m = null;
         if (param0 >= -85) {
           field_m = (int[]) null;

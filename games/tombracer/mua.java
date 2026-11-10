@@ -34,10 +34,10 @@ final class mua {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != 0) {
-          mua.a(34);
+          mua.releaseStatics(34);
         }
     }
 

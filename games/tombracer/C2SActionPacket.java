@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ea extends IntrusiveNode implements bo {
+final class C2SActionPacket extends IntrusiveNode implements GamePacket {
     static String[] field_k;
     static int field_j;
-    private int[] field_g;
+    private int[] orders;
     private int field_h;
-    private int field_f;
-    private int field_m;
+    private int hash;
+    private int round;
     static oc[] field_l;
     static ur field_i;
 
@@ -22,7 +22,7 @@ final class ea extends IntrusiveNode implements bo {
           }
           if (param0 != -33) {
             OpenGlToolkit var3 = (OpenGlToolkit) null;
-            ea.a(70, -25, (String) null, (OpenGlToolkit) null);
+            C2SActionPacket.a(70, -25, (String) null, (OpenGlToolkit) null);
           }
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
             bv.field_xb[var1_intLifetime1] = 0L;
@@ -37,14 +37,14 @@ final class ea extends IntrusiveNode implements bo {
         if (param0 != -2767) {
           return;
         }
-        this.field_f = param1;
+        this.hash = param1;
     }
 
     final void a(int param0, byte param1) {
         if (param1 != -113) {
           return;
         }
-        this.field_m = param0;
+        this.round = param0;
     }
 
     public static void b(int param0) {
@@ -63,7 +63,7 @@ final class ea extends IntrusiveNode implements bo {
         this.field_h = param1;
     }
 
-    public final void a(int param0, BitPacketBuffer param1) {
+    public final void encode(int param0, BitPacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -73,18 +73,18 @@ final class ea extends IntrusiveNode implements bo {
         RuntimeException var3 = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          param1.i(param0 - 192);
-          param1.a((byte) 90, this.field_m, 5);
-          param1.a((byte) -128, this.field_f, 8);
-          param1.a((byte) 30, this.field_h, 8);
-          for (var3_int = 0; this.field_g.length > var3_int; var3_int++) {
-            param1.a((byte) 3, uja.a(-113, this.field_g[var3_int]), 7);
+          param1.beginBitWrite(param0 - 192);
+          param1.writeBits((byte) 90, this.round, 5);
+          param1.writeBits((byte) -128, this.hash, 8);
+          param1.writeBits((byte) 30, this.field_h, 8);
+          for (var3_int = 0; this.orders.length > var3_int; var3_int++) {
+            param1.writeBits((byte) 3, uja.a(-113, this.orders[var3_int]), 7);
           }
           if (param0 != 200) {
-            ea.b(-52);
-            param1.k(-1826190686);
+            C2SActionPacket.b(-52);
+            param1.endBitWrite(-1826190686);
           } else {
-            param1.k(-1826190686);
+            param1.endBitWrite(-1826190686);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -117,9 +117,9 @@ final class ea extends IntrusiveNode implements bo {
     public final String toString() {
         int var2 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
-        String var1 = "C2SActionPacket hash:" + this.field_f + " round:" + this.field_m;
-        for (var2 = 0; this.field_g.length > var2; var2++) {
-          var1 = var1 + " " + this.field_g[var2];
+        String var1 = "C2SActionPacket hash:" + this.hash + " round:" + this.round;
+        for (var2 = 0; this.orders.length > var2; var2++) {
+          var1 = var1 + " " + this.orders[var2];
         }
         return var1;
     }
@@ -184,7 +184,7 @@ final class ea extends IntrusiveNode implements bo {
         }
     }
 
-    public final void a(BitPacketBuffer param0, byte param1) {
+    public final void decode(BitPacketBuffer param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -194,18 +194,18 @@ final class ea extends IntrusiveNode implements bo {
         RuntimeException var3 = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          param0.h((byte) 119);
-          this.field_m = param0.b((byte) 44, 5);
-          this.field_f = param0.b((byte) 44, 8);
-          this.field_h = param0.b((byte) 44, 8);
-          for (var3_int = 0; this.field_g.length > var3_int; var3_int++) {
-            this.field_g[var3_int] = vp.a(param0.b((byte) 44, 7), -6487);
+          param0.beginBitAccess((byte) 119);
+          this.round = param0.readBits((byte) 44, 5);
+          this.hash = param0.readBits((byte) 44, 8);
+          this.field_h = param0.readBits((byte) 44, 8);
+          for (var3_int = 0; this.orders.length > var3_int; var3_int++) {
+            this.orders[var3_int] = vp.a(param0.readBits((byte) 44, 7), -6487);
           }
           if (param1 != -19) {
             field_l = (oc[]) null;
-            param0.i((byte) 98);
+            param0.endBitAccess((byte) 98);
           } else {
-            param0.i((byte) 98);
+            param0.endBitAccess((byte) 98);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -223,15 +223,15 @@ final class ea extends IntrusiveNode implements bo {
     }
 
     final void a(int param0, int param1, int param2) {
-        this.field_g[param1] = param2;
+        this.orders[param1] = param2;
         if (param0 != 17) {
           BitPacketBuffer var5 = (BitPacketBuffer) null;
-          this.a((BitPacketBuffer) null, (byte) 24);
+          this.decode((BitPacketBuffer) null, (byte) 24);
         }
     }
 
-    ea() {
-        this.field_g = new int[8];
+    C2SActionPacket() {
+        this.orders = new int[8];
     }
 
     static {

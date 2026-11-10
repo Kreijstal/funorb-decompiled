@@ -81,7 +81,7 @@ final class ne {
         return (int)(this.field_a >> gj.field_f * param0) & 15;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_d = null;
         field_c = null;

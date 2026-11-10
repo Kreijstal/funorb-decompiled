@@ -20,7 +20,7 @@ final class SafeZoneBehaviour extends Behaviour {
         return param0;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_n = null;
         field_q = null;
         if (param0 != -2) {
@@ -34,10 +34,10 @@ final class SafeZoneBehaviour extends Behaviour {
         super(param0, param1, param2);
         this.field_r = false;
         try {
-          this.field_p = 1 != param1.b((byte) 44, 1) ? false : true;
-          this.field_t = param1.b((byte) 44, 1) != 1 ? false : true;
-          this.field_v = param1.b((byte) 44, 1) != 1 ? false : true;
-          this.field_o = param1.b((byte) 44, 1) == 1 ? true : false;
+          this.field_p = 1 != param1.readBits((byte) 44, 1) ? false : true;
+          this.field_t = param1.readBits((byte) 44, 1) != 1 ? false : true;
+          this.field_v = param1.readBits((byte) 44, 1) != 1 ? false : true;
+          this.field_o = param1.readBits((byte) 44, 1) == 1 ? true : false;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -87,7 +87,7 @@ final class SafeZoneBehaviour extends Behaviour {
             return stackIn_24_0;
           }
           if (param1 != 1) {
-            SafeZoneBehaviour.b(-10);
+            SafeZoneBehaviour.releaseStatics(-10);
           }
           if (!param0.equals("C")) {
             return Class.forName(param0);
@@ -153,10 +153,10 @@ final class SafeZoneBehaviour extends Behaviour {
     final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
-          param1.a((byte) -125, this.field_p ? 1 : 0, 1);
-          param1.a((byte) -25, !this.field_t ? 0 : 1, 1);
-          param1.a((byte) 12, !this.field_v ? 0 : 1, 1);
-          param1.a((byte) -125, this.field_o ? 1 : 0, 1);
+          param1.writeBits((byte) -125, this.field_p ? 1 : 0, 1);
+          param1.writeBits((byte) -25, !this.field_t ? 0 : 1, 1);
+          param1.writeBits((byte) 12, !this.field_v ? 0 : 1, 1);
+          param1.writeBits((byte) -125, this.field_o ? 1 : 0, 1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sg.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -126,7 +126,7 @@ final class ArrowShooterComponent extends ShooterComponent {
         }
     }
 
-    public static void D(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -129) {
           return;
         }

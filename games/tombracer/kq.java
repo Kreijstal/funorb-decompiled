@@ -11,7 +11,7 @@ final class kq {
 
     final void b(int param0, int param1) {
         if (param0 != 79) {
-          kq.a(-1);
+          kq.releaseStatics(-1);
         }
         this.field_e.a((byte) -114, param1);
         this.field_f = this.field_f + 1;
@@ -31,7 +31,7 @@ final class kq {
         return this.field_f;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         field_b = null;
         if (param0 != -9598) {

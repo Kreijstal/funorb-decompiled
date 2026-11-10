@@ -60,7 +60,7 @@ final class RecursiveBacktrackerMazeGenerator extends MazeGenerator {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = -112 % ((-17 - param0) / 46);
         field_c = null;
         field_b = null;

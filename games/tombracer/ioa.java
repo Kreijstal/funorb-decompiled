@@ -89,7 +89,7 @@ final class ioa extends dg {
         super(param0);
     }
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = -55 / ((param0 + 17) / 59);
         field_n = null;
         field_o = null;

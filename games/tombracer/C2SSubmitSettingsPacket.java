@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dba implements bo {
-    private int field_e;
-    private int field_f;
-    private int field_h;
+final class C2SSubmitSettingsPacket implements GamePacket {
+    private int musicVolume;
+    private int soundEffectsVolume;
+    private int graphicsMode;
     static jea field_g;
     static int field_a;
     static ur field_d;
     static String field_c;
     static int[] field_b;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_d = null;
         if (param0 >= -38) {
@@ -21,17 +21,17 @@ final class dba implements bo {
         field_g = null;
     }
 
-    public final void a(BitPacketBuffer param0, byte param1) {
+    public final void decode(BitPacketBuffer param0, byte param1) {
         try {
-          param0.h((byte) 118);
+          param0.beginBitAccess((byte) 118);
           if (param1 != -19) {
             BitPacketBuffer var4 = (BitPacketBuffer) null;
-            this.a((BitPacketBuffer) null, (byte) 29);
+            this.decode((BitPacketBuffer) null, (byte) 29);
           }
-          this.field_h = param0.b((byte) 44, 4);
-          this.field_f = param0.b((byte) 44, 8);
-          this.field_e = param0.b((byte) 44, 8);
-          param0.i((byte) 98);
+          this.graphicsMode = param0.readBits((byte) 44, 4);
+          this.soundEffectsVolume = param0.readBits((byte) 44, 8);
+          this.musicVolume = param0.readBits((byte) 44, 8);
+          param0.endBitAccess((byte) 98);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "dba.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -54,8 +54,8 @@ final class dba implements bo {
 
     final void b(int param0, byte param1) {
         int var3 = 65 % ((param1 - 7) / 60);
-        this.field_f = param0;
-        if (this.field_f > 255) {
+        this.soundEffectsVolume = param0;
+        if (this.soundEffectsVolume > 255) {
           param0 = 255;
         }
     }
@@ -77,7 +77,7 @@ final class dba implements bo {
           stackIn_7_0 = (0 != (65536 & param2));
           return stackIn_7_0 | kaa.a(param0, param2, false) | var3 != 0;
         }
-        dba.a((byte) -61);
+        C2SSubmitSettingsPacket.releaseStatics((byte) -61);
         if ((55 & param0) != 0) {
           stackIn_11_0 = oba.c(param2, param0, -19531);
         } else {
@@ -88,16 +88,16 @@ final class dba implements bo {
         return stackIn_14_0 | kaa.a(param0, param2, false) | var3Lifetime1 != 0;
     }
 
-    public final void a(int param0, BitPacketBuffer param1) {
+    public final void encode(int param0, BitPacketBuffer param1) {
         try {
-          param1.i(8);
-          param1.a((byte) 3, this.field_h, 4);
-          param1.a((byte) -128, this.field_f, 8);
-          param1.a((byte) -126, this.field_e, 8);
-          param1.k(-1826190686);
+          param1.beginBitWrite(8);
+          param1.writeBits((byte) 3, this.graphicsMode, 4);
+          param1.writeBits((byte) -128, this.soundEffectsVolume, 8);
+          param1.writeBits((byte) -126, this.musicVolume, 8);
+          param1.endBitWrite(-1826190686);
           if (param0 != 200) {
             java.awt.Canvas var4 = (java.awt.Canvas) null;
-            dba.a((java.awt.Canvas) null, (byte) 16);
+            C2SSubmitSettingsPacket.a((java.awt.Canvas) null, (byte) 16);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "dba.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -106,20 +106,20 @@ final class dba implements bo {
 
     final void a(int param0, byte param1) {
         int var3 = -59 / ((-1 - param1) / 35);
-        this.field_h = param0;
+        this.graphicsMode = param0;
     }
 
     public final String toString() {
-        return "C2SSubmitSettingsPacket: graphics mode: " + this.field_h + " Sfx vol: " + this.field_f + " Music Vol: " + this.field_e;
+        return "C2SSubmitSettingsPacket: graphics mode: " + this.graphicsMode + " Sfx vol: " + this.soundEffectsVolume + " Music Vol: " + this.musicVolume;
     }
 
     final void a(int param0, int param1) {
         if (param1 != 2097152) {
           return;
         }
-        this.field_e = param0;
-        if (this.field_e > 255) {
-          this.field_e = 255;
+        this.musicVolume = param0;
+        if (this.musicVolume > 255) {
+          this.musicVolume = 255;
         }
     }
 

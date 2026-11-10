@@ -56,7 +56,7 @@ final class nm extends vo implements sca {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_i = null;
         if (param0 < 17) {
           field_l = (nh) null;

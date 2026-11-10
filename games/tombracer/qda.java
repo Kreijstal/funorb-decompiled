@@ -22,7 +22,7 @@ abstract class qda {
     byte field_d;
     qqa field_g;
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 0) {
           field_l = (String) null;
         }
@@ -114,7 +114,7 @@ abstract class qda {
             if (cma.field_m == 2) {
               jia.field_a = new BufferedSocket((java.net.Socket) (bga.field_c.field_f), oi.field_a);
               var2 = new PacketBuffer(13);
-              ea.a((byte) 107, pu.field_b, var2, wk.field_n, joa.field_a);
+              C2SActionPacket.a((byte) 107, pu.field_b, var2, wk.field_n, joa.field_a);
               var2.i(15, 0);
               var2.a(wea.field_a, (byte) 117);
               jia.field_a.a(var2.payload, 0, 13, 106);

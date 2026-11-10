@@ -22,10 +22,10 @@ final class DelegatingCanvas extends java.awt.Canvas {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != -24962) {
-          DelegatingCanvas.a(-65);
+          DelegatingCanvas.releaseStatics(-65);
           field_c = null;
           return;
         }

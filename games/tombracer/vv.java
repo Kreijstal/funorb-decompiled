@@ -87,7 +87,7 @@ final class vv extends wv {
         super.a(param0, param1);
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = 121 % ((-79 - param0) / 34);
         field_q = null;
     }

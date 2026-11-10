@@ -16,9 +16,9 @@ final class wm {
         return GameEvent.a(param0, -28970, param1);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 <= 10) {
-          wm.a((byte) -21);
+          wm.releaseStatics((byte) -21);
           field_b = null;
           field_a = null;
           return;

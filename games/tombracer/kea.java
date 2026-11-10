@@ -17,10 +17,10 @@ final class kea {
         wu.field_a.c(new at(wu.field_a), 89);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != -7646) {
-          kea.a(104);
+          kea.releaseStatics(104);
           field_c = null;
           field_a = null;
           return;

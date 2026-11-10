@@ -37,7 +37,7 @@ final class gha implements pp {
             return stackIn_3_0;
           }
           boolean decompiledFrameCompleted0 = true;
-          var6_int = param5.b((byte) 44, param2);
+          var6_int = param5.readBits((byte) 44, param2);
           if (var6_int != 0) {
             if (param0 == null ||
               param0.length != var6_int) {
@@ -109,7 +109,7 @@ final class gha implements pp {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         int var1 = 24 / ((param0 + 30) / 62);
         field_a = null;

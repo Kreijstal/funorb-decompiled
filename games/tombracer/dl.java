@@ -143,12 +143,12 @@ final class dl extends me {
         return false;
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_t = null;
         field_o = null;
         field_p = null;
         if (param0 != 96) {
-          dl.d((byte) -110);
+          dl.releaseStatics((byte) -110);
           field_m = null;
           return;
         }

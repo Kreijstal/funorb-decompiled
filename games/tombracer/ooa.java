@@ -34,7 +34,7 @@ final class ooa extends wka {
         return var1;
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_h = null;
         field_e = null;

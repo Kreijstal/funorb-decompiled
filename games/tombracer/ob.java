@@ -14,7 +14,7 @@ abstract class ob extends IntrusiveNode {
 
     abstract void a(byte param0, int param1);
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_f = null;
         field_n = null;
         if (param0) {
@@ -71,7 +71,7 @@ abstract class ob extends IntrusiveNode {
           lh.field_b = su.a(lha.field_l, param0, (byte) 127);
           vua.field_A = su.a(wj.field_a, param0, (byte) 126);
           dn.field_d = ak.a(param0, ProxySocketConnector.field_e, -100);
-          ufa.field_r = ak.a(param0, via.field_a, param1 ^ -17261);
+          PlayerProfile.field_r = ak.a(param0, via.field_a, param1 ^ -17261);
           bm.field_f = ak.a(param0, gda.field_d, -112);
           ega.field_e = su.a(nm.field_i, param0, (byte) 126);
           tv.field_wb = su.a(lt.field_a, param0, (byte) 127);
@@ -115,7 +115,7 @@ abstract class ob extends IntrusiveNode {
           ij.field_X = su.a(ifa.field_q, param0, (byte) 125);
           su.a(field_n, param0, (byte) 125);
           gg.field_f = su.a(vua.field_y, param0, (byte) 127);
-          eca.field_c = ak.a(param0, up.field_e, -64);
+          eca.field_c = ak.a(param0, Effect.field_e, -64);
           nm.field_l = su.a(ena.field_l, param0, (byte) 127);
           su.a(MirrorComponent.field_F, param0, (byte) -2);
           gca.field_a = su.a(rp.field_f, param0, (byte) 126);

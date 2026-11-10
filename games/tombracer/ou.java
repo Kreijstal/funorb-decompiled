@@ -8,10 +8,10 @@ abstract class ou {
     private int[] field_d;
     private int field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         if (param0 < 98) {
-          ou.a(56);
+          ou.releaseStatics(56);
         }
     }
 

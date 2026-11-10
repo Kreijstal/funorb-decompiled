@@ -4,10 +4,10 @@
 abstract class Locomotor extends IntrusiveNode implements lj, noa, gr {
     private Room field_f;
     boolean field_k;
-    private gpa field_g;
+    private SwitchableId field_g;
     Trap field_n;
     boolean field_i;
-    private gpa field_h;
+    private SwitchableId field_h;
     static String field_m;
     static String field_l;
     boolean field_j;
@@ -32,13 +32,13 @@ abstract class Locomotor extends IntrusiveNode implements lj, noa, gr {
     }
 
     void a(BitPacketBuffer param0, byte param1) {
-        param0.a((byte) 61, this.c(1), 6);
+        param0.writeBits((byte) 61, this.c(1), 6);
         if (param1 > -78) {
           return;
         }
         try {
-          param0.a((byte) -126, !this.field_k ? 0 : 1, 1);
-          param0.a((byte) 107, !this.field_i ? 0 : 1, 1);
+          param0.writeBits((byte) -126, !this.field_k ? 0 : 1, 1);
+          param0.writeBits((byte) 107, !this.field_i ? 0 : 1, 1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wda.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -137,11 +137,11 @@ abstract class Locomotor extends IntrusiveNode implements lj, noa, gr {
 
     abstract void b(byte param0);
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_l = null;
         field_m = null;
         if (param0 != 12072) {
-          Locomotor.d(-112);
+          Locomotor.releaseStatics(-112);
         }
     }
 
@@ -165,12 +165,12 @@ abstract class Locomotor extends IntrusiveNode implements lj, noa, gr {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_4_1 = (param1.b((byte) 44, 1) == 1);
+          stackIn_4_1 = (param1.readBits((byte) 44, 1) == 1);
           this.field_k = stackIn_4_1;
           if (param0.field_E < 22) {
             return;
           }
-          stackIn_9_1 = (param1.b((byte) 44, 1) == 1);
+          stackIn_9_1 = (param1.readBits((byte) 44, 1) == 1);
           this.field_i = stackIn_9_1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -219,16 +219,16 @@ abstract class Locomotor extends IntrusiveNode implements lj, noa, gr {
         }
     }
 
-    public final gpa i(byte param0) {
+    public final SwitchableId i(byte param0) {
         if (param0 != 84) {
-          return (gpa) null;
+          return (SwitchableId) null;
         }
         return this.field_g;
     }
 
-    public final gpa n(int param0) {
+    public final SwitchableId n(int param0) {
         if (param0 != 31974) {
-          Locomotor.d(-9);
+          Locomotor.releaseStatics(-9);
           return this.field_h;
         }
         return this.field_h;

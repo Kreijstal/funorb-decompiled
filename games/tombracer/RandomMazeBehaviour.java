@@ -394,25 +394,25 @@ final class RandomMazeBehaviour extends Behaviour {
           !this.field_r.J(90)) {
           var26 = new BitPacketBuffer(30000);
           var15 = var26;
-          var26.i(8);
+          var26.beginBitWrite(8);
           this.field_r.a(var26, 125);
-          var26.k(-1826190686);
+          var26.endBitWrite(-1826190686);
         }
         if (null != this.field_A &&
           !this.field_A.J(51)) {
           var27 = new BitPacketBuffer(30000);
           var16 = var27;
-          var27.i(8);
+          var27.beginBitWrite(8);
           this.field_A.a(var27, 84);
-          var27.k(-1826190686);
+          var27.endBitWrite(-1826190686);
         }
         if (null != this.field_o &&
           !this.field_o.J(73)) {
           var28 = new BitPacketBuffer(30000);
           var17 = var28;
-          var28.i(8);
+          var28.beginBitWrite(8);
           this.field_o.a(var28, -112);
-          var28.k(-1826190686);
+          var28.endBitWrite(-1826190686);
         }
         for (var18 = 0; this.field_z.field_f > var18; var18++) {
           for (var19 = 0; this.field_z.field_a > var19; var19++) {
@@ -552,9 +552,9 @@ final class RandomMazeBehaviour extends Behaviour {
           return;
         }
         try {
-          param4.h((byte) 123);
+          param4.beginBitAccess((byte) 123);
           var8 = new Trap(var7, param4, true);
-          param4.i((byte) 98);
+          param4.endBitAccess((byte) 98);
           var8.d((byte) -97, true);
           var8.m(1, param5 + this.field_t * param0);
           var8.c(param1 + this.field_t * param2, -19879);
@@ -577,19 +577,19 @@ final class RandomMazeBehaviour extends Behaviour {
         this.field_u = false;
         this.field_t = 2097152;
         try {
-          this.field_s = param1.b((byte) 44, 2);
+          this.field_s = param1.readBits((byte) 44, 2);
           if (param0.field_E >= 4) {
-            this.field_t = param1.b((byte) 44, 10) << 16;
-            stackIn_6_1 = (1 == param1.b((byte) 44, 1));
+            this.field_t = param1.readBits((byte) 44, 10) << 16;
+            stackIn_6_1 = (1 == param1.readBits((byte) 44, 1));
             this.field_u = stackIn_6_1;
           } else {
             this.field_t = 2097152;
             this.field_u = true;
           }
           if (param0.field_E >= 11) {
-            this.field_x = param1.b((byte) 44, 7);
-            this.field_q = param1.b((byte) 44, 7);
-            this.field_v = param1.b((byte) 44, 3);
+            this.field_x = param1.readBits((byte) 44, 7);
+            this.field_q = param1.readBits((byte) 44, 7);
+            this.field_v = param1.readBits((byte) 44, 3);
           }
           this.field_o = null;
           if (this.field_u) {
@@ -678,8 +678,8 @@ final class RandomMazeBehaviour extends Behaviour {
         RuntimeException var3 = null;
         try {
           super.a(param0, param1);
-          param1.a((byte) -41, this.field_s, 2);
-          param1.a((byte) 42, this.field_t >> 16, 10);
+          param1.writeBits((byte) -41, this.field_s, 2);
+          param1.writeBits((byte) 42, this.field_t >> 16, 10);
           stackIn_2_0 = (BitPacketBuffer) (param1);
           stackIn_2_1 = 125;
           if (!this.field_u) {
@@ -687,10 +687,10 @@ final class RandomMazeBehaviour extends Behaviour {
           } else {
             stackIn_3_2 = 1;
           }
-          ((BitPacketBuffer) (Object) stackIn_2_0).a((byte) stackIn_2_1, stackIn_3_2, 1);
-          param1.a((byte) -128, this.field_x, 7);
-          param1.a((byte) 113, this.field_q, 7);
-          param1.a((byte) -127, this.field_v, 3);
+          ((BitPacketBuffer) (Object) stackIn_2_0).writeBits((byte) stackIn_2_1, stackIn_3_2, 1);
+          param1.writeBits((byte) -128, this.field_x, 7);
+          param1.writeBits((byte) 113, this.field_q, 7);
+          param1.writeBits((byte) -127, this.field_v, 3);
           if (!this.field_u) {
             this.field_r.a(param1, 85);
             this.field_A.a(param1, 126);

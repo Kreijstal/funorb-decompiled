@@ -82,7 +82,7 @@ final class vk implements os {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_a = null;
         field_c = null;

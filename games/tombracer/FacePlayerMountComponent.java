@@ -27,7 +27,7 @@ final class FacePlayerMountComponent extends kna {
             field_F = (ta) null;
           }
           super.a(param0, param1);
-          param1.a((byte) 72, this.field_G, 4);
+          param1.writeBits((byte) 72, this.field_G, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "kt.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -100,13 +100,13 @@ final class FacePlayerMountComponent extends kna {
         super(param0, param1, param2, param3);
         this.field_G = 4;
         try {
-          this.field_G = param2.b((byte) 44, 4);
+          this.field_G = param2.readBits((byte) 44, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "kt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void A(int param0) {
+    public static void releaseStatics(int param0) {
         field_H = null;
         field_F = null;
         if (param0 > -74) {

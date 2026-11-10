@@ -6,7 +6,7 @@ final class mqa {
 
     final static void a(int param0, byte param1) {
         int var2 = 84 % ((param1 - 20) / 57);
-        cf.a(param0, -101);
+        S2CRoundResultPacket.a(param0, -101);
     }
 
     static {

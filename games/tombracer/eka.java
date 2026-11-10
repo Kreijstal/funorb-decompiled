@@ -6,7 +6,7 @@ final class eka extends ci {
     private int field_m;
     static String field_n;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 >= -52) {
           field_n = (String) null;
         }

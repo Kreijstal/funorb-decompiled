@@ -15,14 +15,14 @@ abstract class qra {
     v field_f;
     private ko field_a;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 96) {
           field_l = null;
           field_e = null;
           field_g = null;
           return;
         }
-        qra.b(-96);
+        qra.releaseStatics(-96);
         field_l = null;
         field_e = null;
         field_g = null;
@@ -44,7 +44,7 @@ abstract class qra {
           return;
         }
         try {
-          ql.field_k.k(96, -2988);
+          ql.field_k.writeCipheredOpcode(96, -2988);
           ql.field_k.f(-1477662136, param0.q((byte) -82));
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "qra.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

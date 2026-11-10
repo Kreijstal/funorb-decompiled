@@ -60,7 +60,7 @@ abstract class ci extends IntrusiveNode {
     }
 
     final static roa a(int param0, int param1) {
-        roa var2 = tt.a(param1, param0);
+        roa var2 = S2CActionPacket.a(param1, param0);
         var2.field_r = param0;
         var2.field_q = var2.field_p;
         return var2;

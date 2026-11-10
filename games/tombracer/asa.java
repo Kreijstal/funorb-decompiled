@@ -523,7 +523,7 @@ final class asa extends gda {
         asa var3 = null;
         try {
           if (param0 != 1217) {
-            asa.e(-51);
+            asa.releaseStatics(-51);
           }
           var3 = (asa) (param1);
           this.field_p = var3.field_p;
@@ -635,9 +635,9 @@ final class asa extends gda {
         this.a(-20, (gda) null);
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 14) {
-          asa.e(96);
+          asa.releaseStatics(96);
           field_j = null;
           return;
         }

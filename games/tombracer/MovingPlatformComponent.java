@@ -16,7 +16,7 @@ final class MovingPlatformComponent extends PathMoverComponent {
 
     final boolean n(byte param0) {
         if (param0 != -122) {
-          MovingPlatformComponent.s((byte) 71);
+          MovingPlatformComponent.releaseStatics((byte) 71);
           return false;
         }
         return false;
@@ -46,7 +46,7 @@ final class MovingPlatformComponent extends PathMoverComponent {
     MovingPlatformComponent(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {
         super(param0, param1, param2, param3);
         try {
-          this.field_M = param2.b((byte) 44, 4);
+          this.field_M = param2.readBits((byte) 44, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ps.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -121,13 +121,13 @@ final class MovingPlatformComponent extends PathMoverComponent {
     final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
-          param1.a((byte) 84, this.field_M, 4);
+          param1.writeBits((byte) 84, this.field_M, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ps.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void s(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_O = null;
         int var1 = -40 % ((3 - param0) / 35);
         field_P = null;

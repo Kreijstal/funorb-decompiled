@@ -97,7 +97,7 @@ final class v {
     }
 
     private final void a(BitPacketBuffer param0, int param1) {
-        tt var3 = new tt(this.field_e);
+        S2CActionPacket var3 = new S2CActionPacket(this.field_e);
         this.a(var3, -67, param0);
         int var4 = this.field_c.a((byte) 36, var3) ? 1 : 0;
         int var5 = 1;
@@ -122,7 +122,7 @@ final class v {
     }
 
     private final void a(BitPacketBuffer param0, qh param1, int param2) {
-        cf var4 = null;
+        S2CRoundResultPacket var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -131,7 +131,7 @@ final class v {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
         try {
-          var4 = new cf(param1.field_k.players.length);
+          var4 = new S2CRoundResultPacket(param1.field_k.players.length);
           this.a(var4, 126, param0);
           var4.a(param1, param2 - 93);
           if (param2 != 93) {
@@ -180,7 +180,7 @@ final class v {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4_int = 0;
-        tt var4 = null;
+        S2CActionPacket var4 = null;
         Room var5_ref_la = null;
         int var7 = 0;
         MatchState var8 = null;
@@ -272,10 +272,10 @@ final class v {
         }
     }
 
-    private final void a(bo param0, int param1, BitPacketBuffer param2) {
+    private final void a(GamePacket param0, int param1, BitPacketBuffer param2) {
         try {
           int var4_int = -28 / ((param1 - 61) / 43);
-          param0.a(param2, (byte) -19);
+          param0.decode(param2, (byte) -19);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "v.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -321,12 +321,12 @@ final class v {
     }
 
     private final void a(boolean param0, BitPacketBuffer param1, qh param2) {
-        bqa var4 = null;
+        S2CNewRoomPacket var4 = null;
         try {
           if (!param0) {
             this.field_h = (IntrusiveDeque) null;
           }
-          var4 = new bqa();
+          var4 = new S2CNewRoomPacket();
           this.a(var4, -53, param1);
           var4.a(this, 0, param2);
         } catch (RuntimeException runtimeException) {
@@ -470,9 +470,9 @@ final class v {
         return this.field_b[param0] == 0 ? true : false;
     }
 
-    private final tt d(int param0) {
+    private final S2CActionPacket d(int param0) {
         if (param0 != -16) {
-          return (tt) null;
+          return (S2CActionPacket) null;
         }
         return this.field_c.a(true);
     }
@@ -531,14 +531,14 @@ final class v {
     }
 
     private final void a(qh param0, BitPacketBuffer param1, byte param2) {
-        vca var4 = null;
+        S2CEventPacket var4 = null;
         try {
           if (param2 > -67) {
             field_g = (String[]) null;
           }
-          var4 = new vca();
+          var4 = new S2CEventPacket();
           this.a(var4, -4, param1);
-          param0.field_k.a((byte) 121, var4.a((byte) 118));
+          param0.field_k.a((byte) 121, var4.getEvent((byte) 118));
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "v.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -553,7 +553,7 @@ final class v {
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           return;
         }
@@ -587,7 +587,7 @@ final class v {
         if (param0 != 6418) {
           v.a(125, (byte) 41, 101, 81, 77, 14);
         }
-        ql.field_k.k(81, -2988);
+        ql.field_k.writeCipheredOpcode(81, -2988);
     }
 
     private final void a(qh param0, BitPacketBuffer param1, int param2) {
@@ -634,7 +634,7 @@ final class v {
           qh var9 = (qh) null;
           this.a((BitPacketBuffer) null, (qh) null, 41);
         }
-        ea var6 = new ea();
+        C2SActionPacket var6 = new C2SActionPacket();
         for (var7 = 0; var7 < 8; var7++) {
           var6.a(17, var7, this.field_a.a(-44));
         }

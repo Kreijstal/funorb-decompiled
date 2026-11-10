@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ua implements bo {
+final class ua implements GamePacket {
     static cn field_a;
 
-    public final void a(BitPacketBuffer param0, byte param1) {
+    public final void decode(BitPacketBuffer param0, byte param1) {
         try {
           if (param1 != -19) {
             qh var4 = (qh) null;
@@ -38,14 +38,14 @@ final class ua implements bo {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 >= -101) {
           return;
         }
         field_a = null;
     }
 
-    public final void a(int param0, BitPacketBuffer param1) {
+    public final void encode(int param0, BitPacketBuffer param1) {
         try {
           if (param0 != 200) {
             field_a = (cn) null;
@@ -80,7 +80,7 @@ final class ua implements bo {
             return stackIn_9_0;
           }
           if (param3) {
-            ua.a(-63);
+            ua.releaseStatics(-63);
           }
           throw new IllegalArgumentException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -131,7 +131,7 @@ final class ua implements bo {
             return stackIn_5_0;
           }
           if (param0 == 2) {
-            stackIn_9_0 = gl.$cfr$intArgs$a$53ce4ab4c593(96, cf.field_f, new String[]{param1});
+            stackIn_9_0 = gl.$cfr$intArgs$a$53ce4ab4c593(96, S2CRoundResultPacket.field_f, new String[]{param1});
             return stackIn_9_0;
           }
           if (param0 == 3) {

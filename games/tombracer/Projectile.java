@@ -19,7 +19,7 @@ final class Projectile extends c implements fo, ffa, t {
     private Room field_z;
     private int angle;
     private int y;
-    private up field_t;
+    private Effect field_t;
     private boolean field_B;
     private int field_G;
     static nh field_n;
@@ -209,11 +209,11 @@ final class Projectile extends c implements fo, ffa, t {
         int var7;
         int var8;
         int var9;
-        up var10;
+        Effect var10;
         int var6Lifetime1;
         int var6Lifetime2;
-        up var10Lifetime1;
-        up var10Lifetime2;
+        Effect var10Lifetime1;
+        Effect var10Lifetime2;
         var9 = TombRacer.field_G ? 1 : 0;
         var5 = 0;
         if (param3) {
@@ -246,8 +246,8 @@ final class Projectile extends c implements fo, ffa, t {
               var6Lifetime2 = 1;
               if (var6Lifetime2 == 0) {
                 if (param1 >= -51) {
-                  var10 = (up) null;
-                  this.a(81, (up) null);
+                  var10 = (Effect) null;
+                  this.a(81, (Effect) null);
                 }
                 if (var5 != 0) {
                   return;
@@ -290,8 +290,8 @@ final class Projectile extends c implements fo, ffa, t {
                 this.b(true, true);
                 return;
               }
-              var10 = (up) null;
-              this.a(81, (up) null);
+              var10 = (Effect) null;
+              this.a(81, (Effect) null);
               if (var5 != 0) {
                 return;
               }
@@ -313,8 +313,8 @@ final class Projectile extends c implements fo, ffa, t {
           if (var6Lifetime2 != 0) {
             if (!this.c(param2, 0, 111)) {
               if (param1 >= -51) {
-                var10Lifetime2 = (up) null;
-                this.a(81, (up) null);
+                var10Lifetime2 = (Effect) null;
+                this.a(81, (Effect) null);
               }
               if (var5 != 0) {
                 return;
@@ -340,8 +340,8 @@ final class Projectile extends c implements fo, ffa, t {
           }
         }
         if (param1 >= -51) {
-          var10Lifetime1 = (up) null;
-          this.a(81, (up) null);
+          var10Lifetime1 = (Effect) null;
+          this.a(81, (Effect) null);
         }
         if (var5 != 0) {
           return;
@@ -404,7 +404,7 @@ final class Projectile extends c implements fo, ffa, t {
         this.field_z.b(false).a(this.y, (byte) -121, 4, this.field_G, 1, 0, 20, 0, this.x, this.field_o >> 18, this.field_o >> 17);
     }
 
-    private final int b(int param0, up param1) {
+    private final int b(int param0, Effect param1) {
         int stackIn_2_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_26_0 = 0;
@@ -441,7 +441,7 @@ final class Projectile extends c implements fo, ffa, t {
           }
           if (3 != this.field_t.field_j &&
             3 == param1.field_j) {
-            var3_int = 1 + param1.field_b / 2;
+            var3_int = 1 + param1.size / 2;
             if (0 >= var3_int) {
               stackIn_15_0 = 0;
               return stackIn_15_0;
@@ -794,14 +794,14 @@ final class Projectile extends c implements fo, ffa, t {
         return this.field_F;
     }
 
-    public static void j(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > 95) {
           field_n = null;
           field_k = null;
           field_r = null;
           return;
         }
-        Projectile.j(-85);
+        Projectile.releaseStatics(-85);
         field_n = null;
         field_k = null;
         field_r = null;
@@ -870,7 +870,7 @@ final class Projectile extends c implements fo, ffa, t {
         return this.velocityY;
     }
 
-    final void a(int param0, up param1) {
+    final void a(int param0, Effect param1) {
         try {
           this.field_t = param1;
           if (param0 > -122) {
@@ -1116,7 +1116,7 @@ final class Projectile extends c implements fo, ffa, t {
               }
             }
             if (param0 != -1) {
-              this.field_t = (up) null;
+              this.field_t = (Effect) null;
             }
             return;
           }
@@ -1160,7 +1160,7 @@ final class Projectile extends c implements fo, ffa, t {
               if (!(this.y < this.field_z.s(-121))) {
                 this.field_F = true;
                 if (param0 != -1) {
-                  this.field_t = (up) null;
+                  this.field_t = (Effect) null;
                 }
                 return;
               }
@@ -1199,7 +1199,7 @@ final class Projectile extends c implements fo, ffa, t {
         if (param0 == -1) {
           return;
         }
-        this.field_t = (up) null;
+        this.field_t = (Effect) null;
     }
 
     public final boolean a(gma param0, int param1) {
@@ -1236,7 +1236,7 @@ final class Projectile extends c implements fo, ffa, t {
         return this.y;
     }
 
-    public final int a(up param0, int param1, int param2, int param3, int param4, int param5) {
+    public final int a(Effect param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
@@ -1273,7 +1273,7 @@ final class Projectile extends c implements fo, ffa, t {
         }
     }
 
-    public final int a(up param0, Projectile param1, int param2) {
+    public final int a(Effect param0, Projectile param1, int param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -1320,7 +1320,7 @@ final class Projectile extends c implements fo, ffa, t {
         }
     }
 
-    public final int a(up param0, int param1, pc param2) {
+    public final int a(Effect param0, int param1, pc param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_5_0 = 0;
@@ -1384,8 +1384,8 @@ final class Projectile extends c implements fo, ffa, t {
         if (param0) {
           return 7 + 7 * this.field_D;
         }
-        up var3 = (up) null;
-        this.a(-80, (up) null);
+        Effect var3 = (Effect) null;
+        this.a(-80, (Effect) null);
         return 7 + 7 * this.field_D;
     }
 

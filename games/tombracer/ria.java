@@ -71,12 +71,12 @@ final class ria extends dg {
         super(param0);
     }
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         field_o = null;
         field_n = null;
         field_p = null;
         if (param0 != -30362) {
-          ria.i(28);
+          ria.releaseStatics(28);
           field_r = null;
           return;
         }
@@ -92,7 +92,7 @@ final class ria extends dg {
           return;
         }
         try {
-          this.field_q = param2.b((byte) 44, 4);
+          this.field_q = param2.readBits((byte) 44, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ria.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -102,7 +102,7 @@ final class ria extends dg {
         try {
           int var3_int = 33 % ((param0 + 8) / 40);
           super.a((byte) 117, param1);
-          param1.a((byte) -126, this.field_q, 4);
+          param1.writeBits((byte) -126, this.field_q, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ria.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

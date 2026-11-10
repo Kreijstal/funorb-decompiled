@@ -153,7 +153,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -116, "mu_x_joined_your_game");
                 if (null != var2) {
-                  cf.field_f = jaa.a((byte) 126, var2);
+                  S2CRoundResultPacket.field_f = jaa.a((byte) 126, var2);
                 }
                 var2 = dn.a((byte) -46, "mu_x_entered_other_game");
                 if (var2 != null) {
@@ -297,7 +297,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 119, "mu_options_players");
                 if (null != var2) {
-                  mi.field_j = jaa.a((byte) 38, var2);
+                  ConsoleToken.field_j = jaa.a((byte) 38, var2);
                 }
                 var2 = dn.a((byte) -60, "mu_options_dontmind");
                 if (var2 != null) {
@@ -629,7 +629,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 116, "you_can_ask_to_join");
                 if (null != var2) {
-                  cf.field_c = jaa.a((byte) 108, var2);
+                  S2CRoundResultPacket.field_c = jaa.a((byte) 108, var2);
                 }
                 var2 = dn.a((byte) 105, "you_cannot_join_in_progress");
                 if (var2 != null) {
@@ -741,7 +741,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 119, "privatechat_friend_offline");
                 if (var2 != null) {
-                  mi.field_n = jaa.a((byte) 28, var2);
+                  ConsoleToken.field_n = jaa.a((byte) 28, var2);
                 }
                 var2 = dn.a((byte) 116, "privatechat_friend_notlisted");
                 if (null != var2) {
@@ -859,7 +859,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 104, "gameopt_mightchange");
                 if (var2 != null) {
-                  dba.field_c = jaa.a((byte) 61, var2);
+                  C2SSubmitSettingsPacket.field_c = jaa.a((byte) 61, var2);
                 }
                 var2 = dn.a((byte) 104, "gameopt_playersdontqualify");
                 if (var2 != null) {
@@ -1937,7 +1937,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -113, "returntomainmenu");
                 if (var2 != null) {
-                  tt.field_g = jaa.a((byte) 36, var2);
+                  S2CActionPacket.field_g = jaa.a((byte) 36, var2);
                 }
                 var2 = dn.a((byte) 124, "returntopausemenu");
                 if (var2 != null) {
@@ -2465,27 +2465,27 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 117, "quickchat_shortcut_help,0");
                 if (var2 != null) {
-                  ufa.field_q[0] = jaa.a((byte) 102, var2);
+                  PlayerProfile.field_q[0] = jaa.a((byte) 102, var2);
                 }
                 var2 = dn.a((byte) 109, "quickchat_shortcut_help,1");
                 if (null != var2) {
-                  ufa.field_q[1] = jaa.a((byte) 30, var2);
+                  PlayerProfile.field_q[1] = jaa.a((byte) 30, var2);
                 }
                 var2 = dn.a((byte) 111, "quickchat_shortcut_help,2");
                 if (var2 != null) {
-                  ufa.field_q[2] = jaa.a((byte) 120, var2);
+                  PlayerProfile.field_q[2] = jaa.a((byte) 120, var2);
                 }
                 var2 = dn.a((byte) -112, "quickchat_shortcut_help,3");
                 if (null != var2) {
-                  ufa.field_q[3] = jaa.a((byte) 62, var2);
+                  PlayerProfile.field_q[3] = jaa.a((byte) 62, var2);
                 }
                 var2 = dn.a((byte) 116, "quickchat_shortcut_help,4");
                 if (var2 != null) {
-                  ufa.field_q[4] = jaa.a((byte) 69, var2);
+                  PlayerProfile.field_q[4] = jaa.a((byte) 69, var2);
                 }
                 var2 = dn.a((byte) -53, "quickchat_shortcut_help,5");
                 if (null != var2) {
-                  ufa.field_q[5] = jaa.a((byte) 125, var2);
+                  PlayerProfile.field_q[5] = jaa.a((byte) 125, var2);
                 }
                 var2 = dn.a((byte) 107, "quickchat_shortcut_keys,0");
                 if (var2 != null) {
@@ -2529,7 +2529,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 125, "rating_won");
                 if (null != var2) {
-                  ufa.field_u = jaa.a((byte) 48, var2);
+                  PlayerProfile.field_u = jaa.a((byte) 48, var2);
                 }
                 var2 = dn.a((byte) 111, "rating_lost");
                 if (var2 != null) {
@@ -2687,7 +2687,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 110, "fs_focus");
                 if (null != var2) {
-                  vca.field_b = jaa.a((byte) 121, var2);
+                  S2CEventPacket.field_b = jaa.a((byte) 121, var2);
                 }
                 var2 = dn.a((byte) 105, "fs_focus_or_resolution");
                 if (var2 != null) {

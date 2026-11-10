@@ -21,7 +21,7 @@ final class ow extends wv {
             this.a(22174, uja.field_e);
           } else {
             if (!SecondaryNodeDequeIterator.field_a.d((byte) 100)) {
-              this.a(22174, mi.field_l);
+              this.a(22174, ConsoleToken.field_l);
             } else {
               this.a(22174, sja.field_h);
             }
@@ -179,7 +179,7 @@ final class ow extends wv {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = -126 % ((param0 - 20) / 55);
         field_q = null;
     }

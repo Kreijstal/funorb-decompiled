@@ -16,7 +16,7 @@ final class dsa {
         return it.a(255, var1);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 40 / ((-56 - param0) / 38);
         field_c = null;
         componentTypeNames = null;

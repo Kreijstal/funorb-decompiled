@@ -177,7 +177,7 @@ final class jw extends b implements cd, tsa {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_z = null;
         int var1 = -9 % ((34 - param0) / 46);
     }
@@ -248,7 +248,7 @@ final class jw extends b implements cd, tsa {
           var4 = param0;
           var3.a(false, -16719, var4);
           if (param1 < 121) {
-            jw.c(-98);
+            jw.releaseStatics(-98);
           }
           this.field_C.f(-10);
         } catch (RuntimeException runtimeException) {

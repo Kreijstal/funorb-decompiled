@@ -124,12 +124,12 @@ abstract class mna {
         return null;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_c = null;
         field_b = null;
         field_a = null;
         if (param0) {
-          mna.a(false);
+          mna.releaseStatics(false);
         }
     }
 

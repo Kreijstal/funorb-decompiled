@@ -306,7 +306,7 @@ final class qqa extends hha {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_t = null;
         field_n = null;
         if (param0 != 0) {

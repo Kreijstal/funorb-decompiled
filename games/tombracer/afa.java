@@ -7,9 +7,9 @@ final class afa {
     sca field_a;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 58) {
-          afa.a((byte) 121);
+          afa.releaseStatics((byte) 121);
           field_b = null;
           field_c = null;
           return;

@@ -8,7 +8,7 @@ abstract class Spawner implements noa {
 
     void a(BitPacketBuffer param0, byte param1) {
         try {
-          param0.a((byte) -126, this.a(true), 4);
+          param0.writeBits((byte) -126, this.a(true), 4);
           if (param1 != 52) {
             this.a(true);
           }

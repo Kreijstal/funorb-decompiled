@@ -48,7 +48,7 @@ final class tg {
         return (short)(var7Lifetime1 | (var2Lifetime1 << 10 | var6Lifetime1 >> 4 << 7));
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         field_b = null;
         int var1 = -53 % ((param0 + 67) / 34);

@@ -21,10 +21,10 @@ final class oi {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_a = null;
         if (param0) {
-          oi.a(false);
+          oi.releaseStatics(false);
         }
     }
 

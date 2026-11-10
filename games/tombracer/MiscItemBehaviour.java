@@ -44,11 +44,11 @@ final class MiscItemBehaviour extends ItemBehaviour {
         }
     }
 
-    public static void r(int param0) {
+    public static void releaseStatics(int param0) {
         field_t = null;
         field_v = null;
         if (param0 != 0) {
-          MiscItemBehaviour.r(113);
+          MiscItemBehaviour.releaseStatics(113);
         }
     }
 
@@ -66,7 +66,7 @@ final class MiscItemBehaviour extends ItemBehaviour {
     MiscItemBehaviour(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
-          this.field_u = param1.b((byte) 44, 6);
+          this.field_u = param1.readBits((byte) 44, 6);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ue.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -167,7 +167,7 @@ final class MiscItemBehaviour extends ItemBehaviour {
     final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
-          param1.a((byte) -128, this.field_u, 6);
+          param1.writeBits((byte) -128, this.field_u, 6);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ue.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

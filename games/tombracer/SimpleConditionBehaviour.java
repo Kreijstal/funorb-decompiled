@@ -57,21 +57,21 @@ final class SimpleConditionBehaviour extends Behaviour {
     SimpleConditionBehaviour(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
-          this.field_t = param1.b((byte) 44, 4);
+          this.field_t = param1.readBits((byte) 44, 4);
           this.field_n = new jma(15, param0, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "rb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 <= -116) {
           field_q = null;
           field_o = null;
           field_p = null;
           return;
         }
-        SimpleConditionBehaviour.g((byte) 32);
+        SimpleConditionBehaviour.releaseStatics((byte) 32);
         field_q = null;
         field_o = null;
         field_p = null;
@@ -83,7 +83,7 @@ final class SimpleConditionBehaviour extends Behaviour {
         }
         try {
           super.a(param0, param1);
-          param1.a((byte) -127, this.field_t, 4);
+          param1.writeBits((byte) -127, this.field_t, 4);
           this.field_n.a(this.h((byte) 119), (byte) 88, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "rb.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

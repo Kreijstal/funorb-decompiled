@@ -123,16 +123,16 @@ final class WallCrusherComponent extends kna {
         this.field_I = 262144;
         this.field_O = 65536;
         try {
-          this.field_O = ji.a(param2.b((byte) 44, 4), 116, 2);
-          this.field_J = ji.a(param2.b((byte) 44, 8), 100, 4);
-          this.field_M = ji.a(param2.b((byte) 44, 4), 88, 2);
-          this.field_I = ji.a(param2.b((byte) 44, 8), 107, 4);
-          stackIn_4_1 = (1 == param2.b((byte) 44, 1));
+          this.field_O = ji.a(param2.readBits((byte) 44, 4), 116, 2);
+          this.field_J = ji.a(param2.readBits((byte) 44, 8), 100, 4);
+          this.field_M = ji.a(param2.readBits((byte) 44, 4), 88, 2);
+          this.field_I = ji.a(param2.readBits((byte) 44, 8), 107, 4);
+          stackIn_4_1 = (1 == param2.readBits((byte) 44, 1));
           this.field_N = stackIn_4_1;
           if (this.field_N) {
             return;
           }
-          this.field_L = param2.b((byte) 44, 4);
+          this.field_L = param2.readBits((byte) 44, 4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -162,7 +162,7 @@ final class WallCrusherComponent extends kna {
 
     final static boolean r(byte param0) {
         if (param0 > -14) {
-          WallCrusherComponent.A(-59);
+          WallCrusherComponent.releaseStatics(-59);
           return hb.field_t instanceof qh;
         }
         return hb.field_t instanceof qh;
@@ -179,10 +179,10 @@ final class WallCrusherComponent extends kna {
         RuntimeException decompiledCaughtException = null;
         try {
           super.a(param0, param1);
-          param1.a((byte) -128, SpawnerBehaviour.a((byte) 8, 2, this.field_O), 4);
-          param1.a((byte) -127, SpawnerBehaviour.a((byte) 8, 4, this.field_J), 8);
-          param1.a((byte) -4, SpawnerBehaviour.a((byte) 8, 2, this.field_M), 4);
-          param1.a((byte) -17, SpawnerBehaviour.a((byte) 8, 4, this.field_I), 8);
+          param1.writeBits((byte) -128, SpawnerBehaviour.a((byte) 8, 2, this.field_O), 4);
+          param1.writeBits((byte) -127, SpawnerBehaviour.a((byte) 8, 4, this.field_J), 8);
+          param1.writeBits((byte) -4, SpawnerBehaviour.a((byte) 8, 2, this.field_M), 4);
+          param1.writeBits((byte) -17, SpawnerBehaviour.a((byte) 8, 4, this.field_I), 8);
           stackIn_2_0 = (BitPacketBuffer) (param1);
           stackIn_2_1 = -127;
           if (this.field_N) {
@@ -190,9 +190,9 @@ final class WallCrusherComponent extends kna {
           } else {
             stackIn_3_2 = 0;
           }
-          ((BitPacketBuffer) (Object) stackIn_2_0).a((byte) stackIn_2_1, stackIn_3_2, 1);
+          ((BitPacketBuffer) (Object) stackIn_2_0).writeBits((byte) stackIn_2_1, stackIn_3_2, 1);
           if (!this.field_N) {
-            param1.a((byte) -33, this.field_L, 4);
+            param1.writeBits((byte) -33, this.field_L, 4);
           }
           if (!param0) {
             return;
@@ -213,7 +213,7 @@ final class WallCrusherComponent extends kna {
         }
     }
 
-    public static void A(int param0) {
+    public static void releaseStatics(int param0) {
         field_K = null;
         field_F = null;
         if (param0 != 4096) {

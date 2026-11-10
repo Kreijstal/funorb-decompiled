@@ -30,7 +30,7 @@ final class PitComponent extends kna {
           if (param0.field_E < 21) {
             return;
           }
-          this.field_F = param2.b((byte) 44, 2);
+          this.field_F = param2.readBits((byte) 44, 2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -65,7 +65,7 @@ final class PitComponent extends kna {
     final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
-          param1.a((byte) 24, this.field_F, 2);
+          param1.writeBits((byte) 24, this.field_F, 2);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "oma.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -73,7 +73,7 @@ final class PitComponent extends kna {
 
     final int t(int param0) {
         if (param0 != 8) {
-          PitComponent.r((byte) 9);
+          PitComponent.releaseStatics((byte) 9);
           return 4;
         }
         return 4;
@@ -87,7 +87,7 @@ final class PitComponent extends kna {
         return false;
     }
 
-    public static void r(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 <= 24) {
           field_G = (cn) null;
           field_I = null;

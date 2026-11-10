@@ -8,7 +8,7 @@ final class fn extends vw {
 
     final static void a(int param0, long param1, int param2) {
         BitPacketBuffer var4 = ql.field_k;
-        var4.k(param0, -2988);
+        var4.writeCipheredOpcode(param0, -2988);
         var4.position = var4.position + 1;
         int var6 = -78 % ((-78 - param2) / 40);
         int var5 = var4.position;
@@ -125,7 +125,7 @@ final class fn extends vw {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         if (param0 != -16973) {
           field_f = (int[]) null;

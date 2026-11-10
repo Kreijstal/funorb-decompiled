@@ -123,22 +123,22 @@ final class PlayerSensorBehaviour extends Behaviour implements ut {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          stackIn_4_1 = (param1.b((byte) 44, 1) == 1);
+          stackIn_4_1 = (param1.readBits((byte) 44, 1) == 1);
           this.field_s = stackIn_4_1;
           if (this.field_s) {
-            this.field_u = oo.a(8, 8192, 0, param1.b((byte) 44, 8));
+            this.field_u = oo.a(8, 8192, 0, param1.readBits((byte) 44, 8));
           }
-          stackIn_9_1 = (param1.b((byte) 44, 1) == 1);
+          stackIn_9_1 = (param1.readBits((byte) 44, 1) == 1);
           this.field_r = stackIn_9_1;
           if (this.field_r) {
-            this.field_o = oo.a(8, 8192, 0, param1.b((byte) 44, 8));
+            this.field_o = oo.a(8, 8192, 0, param1.readBits((byte) 44, 8));
           }
-          stackIn_14_1 = (1 == param1.b((byte) 44, 1));
+          stackIn_14_1 = (1 == param1.readBits((byte) 44, 1));
           this.field_q = stackIn_14_1;
           if (this.field_q) {
-            this.field_p = param1.b((byte) 44, 10) << 16;
+            this.field_p = param1.readBits((byte) 44, 10) << 16;
           }
-          stackIn_19_1 = (param1.b((byte) 44, 1) == 1);
+          stackIn_19_1 = (param1.readBits((byte) 44, 1) == 1);
           this.field_t = stackIn_19_1;
           this.field_n = new jma(15, param0, param1);
           return;
@@ -456,19 +456,19 @@ final class PlayerSensorBehaviour extends Behaviour implements ut {
     final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
-          param1.a((byte) -126, this.field_s ? 1 : 0, 1);
+          param1.writeBits((byte) -126, this.field_s ? 1 : 0, 1);
           if (this.field_s) {
-            param1.a((byte) -126, cn.a((byte) -120, this.field_u, 8192, 8), 8);
+            param1.writeBits((byte) -126, cn.a((byte) -120, this.field_u, 8192, 8), 8);
           }
-          param1.a((byte) 5, !this.field_r ? 0 : 1, 1);
+          param1.writeBits((byte) 5, !this.field_r ? 0 : 1, 1);
           if (this.field_r) {
-            param1.a((byte) -125, cn.a((byte) 111, this.field_o, 8192, 8), 8);
+            param1.writeBits((byte) -125, cn.a((byte) 111, this.field_o, 8192, 8), 8);
           }
-          param1.a((byte) -127, !this.field_q ? 0 : 1, 1);
+          param1.writeBits((byte) -127, !this.field_q ? 0 : 1, 1);
           if (this.field_q) {
-            param1.a((byte) -125, this.field_p >> 16, 10);
+            param1.writeBits((byte) -125, this.field_p >> 16, 10);
           }
-          param1.a((byte) -127, this.field_t ? 1 : 0, 1);
+          param1.writeBits((byte) -127, this.field_t ? 1 : 0, 1);
           this.field_n.a(this.h((byte) 111), (byte) 85, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "kj.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

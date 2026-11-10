@@ -462,7 +462,7 @@ final class ava {
                 if (tn.field_n == param0 &&
                   !mka.b(8192)) {
                   var27 = uu.field_a.field_tb;
-                  var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + gl.$cfr$intArgs$a$53ce4ab4c593(102, dba.field_c, new String[]{var27});
+                  var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + gl.$cfr$intArgs$a$53ce4ab4c593(102, C2SSubmitSettingsPacket.field_c, new String[]{var27});
                 }
                 qda.field_b = (String) (var24Lifetime2);
               }
@@ -485,7 +485,7 @@ final class ava {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -1) {
           return;
         }

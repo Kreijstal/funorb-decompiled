@@ -185,7 +185,7 @@ final class maa {
         this.field_c[param0] = this.field_d.position;
     }
 
-    public static void b() {
+    public static void releaseStatics() {
         field_b = null;
     }
 

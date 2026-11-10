@@ -41,20 +41,20 @@ final class jaa implements noa {
         try {
           var4_int = 1 << 8 - this.field_c;
           var5 = -1 + var4_int;
-          this.field_g = var4_int * param2.b((byte) 44, this.field_c);
+          this.field_g = var4_int * param2.readBits((byte) 44, this.field_c);
           if (0 < this.field_g) {
             this.field_g = this.field_g + var5;
           }
-          this.field_f = var4_int * param2.b((byte) 44, this.field_c);
+          this.field_f = var4_int * param2.readBits((byte) 44, this.field_c);
           if (this.field_f > 0) {
             this.field_f = this.field_f + var5;
           }
-          this.field_d = param2.b((byte) 44, this.field_c) * var4_int;
+          this.field_d = param2.readBits((byte) 44, this.field_c) * var4_int;
           if (0 < this.field_d) {
             this.field_d = this.field_d + var5;
           }
           if (this.field_e) {
-            this.field_h = param2.b((byte) 44, this.field_c) * var4_int;
+            this.field_h = param2.readBits((byte) 44, this.field_c) * var4_int;
           }
           if (param0 != 8) {
             field_b = (apa) null;
@@ -78,7 +78,7 @@ final class jaa implements noa {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           return;
         }
@@ -112,13 +112,13 @@ final class jaa implements noa {
         try {
           var3_int = 1 << -this.field_c + 8;
           var4 = var3_int - 1;
-          param1.a((byte) -128, iia.d(param0, -var4 + this.field_g, param0 ^ 2) / var3_int, this.field_c);
-          param1.a((byte) 61, iia.d(0, -var4 + this.field_f, 2) / var3_int, this.field_c);
-          param1.a((byte) -128, iia.d(0, -var4 + this.field_d, 2) / var3_int, this.field_c);
+          param1.writeBits((byte) -128, iia.d(param0, -var4 + this.field_g, param0 ^ 2) / var3_int, this.field_c);
+          param1.writeBits((byte) 61, iia.d(0, -var4 + this.field_f, 2) / var3_int, this.field_c);
+          param1.writeBits((byte) -128, iia.d(0, -var4 + this.field_d, 2) / var3_int, this.field_c);
           if (!this.field_e) {
             return;
           }
-          param1.a((byte) -127, iia.d(0, this.field_h - var4, 2) / var3_int, this.field_c);
+          param1.writeBits((byte) -127, iia.d(0, this.field_h - var4, 2) / var3_int, this.field_c);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

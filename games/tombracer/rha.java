@@ -7,7 +7,7 @@ final class rha extends IntrusiveNode {
     int field_i;
     long field_f;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         if (param0 != -29867) {
           field_h = (String) null;

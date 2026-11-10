@@ -38,7 +38,7 @@ final class se extends wv {
         super.a(param0, param1);
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = -61 % ((65 - param0) / 47);
         field_q = null;
         field_s = null;

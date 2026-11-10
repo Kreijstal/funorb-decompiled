@@ -412,7 +412,7 @@ final class nfa extends ci {
         int var7Lifetime1;
         var9 = TombRacer.field_G ? 1 : 0;
         if (param0 != 1) {
-          nfa.d((byte) -85);
+          nfa.releaseStatics((byte) -85);
         }
         var3 = this.field_i.a((byte) 78, param1);
         if (this.field_i.field_d) {
@@ -439,7 +439,7 @@ final class nfa extends ci {
         return var3;
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = -71 / ((-44 - param0) / 55);
         field_n = null;
         field_q = null;

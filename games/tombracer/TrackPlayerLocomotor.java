@@ -90,10 +90,10 @@ final class TrackPlayerLocomotor extends Locomotor {
         this.field_q = 131072;
         this.field_o = new ir();
         try {
-          this.field_t = 1 != param1.b((byte) 44, 1) ? false : true;
-          this.field_r = 1 == param1.b((byte) 44, 1) ? true : false;
-          this.field_q = this.a(param1.b((byte) 44, 8), false);
-          this.field_p = param1.b((byte) 44, 10) << 16;
+          this.field_t = 1 != param1.readBits((byte) 44, 1) ? false : true;
+          this.field_r = 1 == param1.readBits((byte) 44, 1) ? true : false;
+          this.field_q = this.a(param1.readBits((byte) 44, 8), false);
+          this.field_p = param1.readBits((byte) 44, 10) << 16;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -169,13 +169,13 @@ final class TrackPlayerLocomotor extends Locomotor {
     final void a(BitPacketBuffer param0, byte param1) {
         try {
           super.a(param0, (byte) -108);
-          param0.a((byte) -127, !this.field_t ? 0 : 1, 1);
-          param0.a((byte) -126, !this.field_r ? 0 : 1, 1);
+          param0.writeBits((byte) -127, !this.field_t ? 0 : 1, 1);
+          param0.writeBits((byte) -126, !this.field_r ? 0 : 1, 1);
           if (param1 > -78) {
             this.b(-8, false);
           }
-          param0.a((byte) -125, this.b(0, this.field_q), 8);
-          param0.a((byte) -128, this.field_p >> 16, 10);
+          param0.writeBits((byte) -125, this.b(0, this.field_q), 8);
+          param0.writeBits((byte) -128, this.field_p >> 16, 10);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hia.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -188,7 +188,7 @@ final class TrackPlayerLocomotor extends Locomotor {
         return 14;
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_s = null;
         if (param0 != 14) {
           field_s = (af) null;

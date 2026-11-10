@@ -108,7 +108,7 @@ final class vda extends ci {
         this.field_o = 4096;
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 90) {
           return;
         }

@@ -139,9 +139,9 @@ final class nw extends ci {
         return var1;
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 118) {
-          nw.d((byte) 93);
+          nw.releaseStatics((byte) 93);
         }
         field_s = null;
     }

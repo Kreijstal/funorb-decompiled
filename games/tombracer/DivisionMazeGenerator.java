@@ -8,7 +8,7 @@ final class DivisionMazeGenerator extends MazeGenerator {
     static String field_b;
     static int field_f;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_b = null;
         if (!param0) {
           return;

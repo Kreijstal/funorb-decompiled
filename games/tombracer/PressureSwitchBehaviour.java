@@ -67,8 +67,8 @@ final class PressureSwitchBehaviour extends Behaviour implements ut {
     final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
-          param1.a((byte) -127, this.field_o, 8);
-          param1.a((byte) -128, !this.field_q ? 0 : 1, 1);
+          param1.writeBits((byte) -127, this.field_o, 8);
+          param1.writeBits((byte) -128, !this.field_q ? 0 : 1, 1);
           this.field_n.a(this.h((byte) 117), (byte) 117, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "dja.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -78,12 +78,12 @@ final class PressureSwitchBehaviour extends Behaviour implements ut {
     PressureSwitchBehaviour(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
-          this.field_o = param1.b((byte) 44, 8);
+          this.field_o = param1.readBits((byte) 44, 8);
           if (param0.field_E <= 10) {
             this.field_o = this.field_o / 5;
           }
           if (9 <= param0.field_E) {
-            this.field_q = 1 != param1.b((byte) 44, 1) ? false : true;
+            this.field_q = 1 != param1.readBits((byte) 44, 1) ? false : true;
           }
           this.field_n = new jma(15, param0, param1);
         } catch (RuntimeException runtimeException) {

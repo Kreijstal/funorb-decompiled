@@ -107,35 +107,35 @@ final class ed {
         }
     }
 
-    final static mi a(cr param0, int param1) throws jj {
-        mi stackIn_6_0 = null;
-        mi stackIn_20_0 = null;
-        mi stackIn_26_0 = null;
+    final static ConsoleToken a(cr param0, int param1) throws jj {
+        ConsoleToken stackIn_6_0 = null;
+        ConsoleToken stackIn_20_0 = null;
+        ConsoleToken stackIn_26_0 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        mi var4 = null;
-        mi var5 = null;
-        mi var6 = null;
+        ConsoleToken var4 = null;
+        ConsoleToken var5 = null;
+        ConsoleToken var6 = null;
         try {
           var4 = param0.c((byte) -127);
-          if (var4.field_p != ma.field_e &&
-            nl.field_d != var4.field_p &&
-            dc.field_o != var4.field_p &&
-            var4.field_p != PressureSwitchBehaviour.field_r) {
+          if (var4.kind != ma.field_e &&
+            nl.field_d != var4.kind &&
+            dc.field_o != var4.kind &&
+            var4.kind != PressureSwitchBehaviour.field_r) {
             if (param1 != -31733) {
               field_a = -1.1603987584850415;
             }
-            if (var4.field_p != tr.field_f) {
+            if (var4.kind != tr.field_f) {
               throw new jj(var4.field_h);
             }
             if (param0.a((byte) 100)) {
               throw new jj(var4.field_h);
             }
             var5 = param0.c((byte) -126);
-            if (var5.field_p != lna.field_a) {
+            if (var5.kind != lna.field_a) {
               throw new jj(var5.field_h);
             }
             var4.field_i = new IntrusiveDeque();
@@ -143,7 +143,7 @@ final class ed {
               if (param0.a((byte) 127)) {
                 throw new jj(var4.field_h);
               }
-              if (param0.c((byte) -127).field_p == rs.field_a) {
+              if (param0.c((byte) -127).kind == rs.field_a) {
                 stackIn_20_0 = var4;
                 return stackIn_20_0;
               }
@@ -153,11 +153,11 @@ final class ed {
                 throw new jj(var4.field_h);
               }
               var6 = param0.c((byte) -126);
-              if (var6.field_p == rs.field_a) {
+              if (var6.kind == rs.field_a) {
                 stackIn_26_0 = var4;
                 return stackIn_26_0;
               }
-              if (var6.field_p != qba.field_c) {
+              if (var6.kind != qba.field_c) {
                 throw new jj(var6.field_h);
               }
             }

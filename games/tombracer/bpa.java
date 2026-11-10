@@ -5,10 +5,10 @@ final class bpa {
     static String field_a;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 >= -29) {
-          bpa.a((byte) 76);
+          bpa.releaseStatics((byte) 76);
         }
     }
 

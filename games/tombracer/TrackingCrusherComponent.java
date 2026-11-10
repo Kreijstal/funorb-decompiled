@@ -136,7 +136,7 @@ final class TrackingCrusherComponent extends kna {
         return false;
     }
 
-    public static void r(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 15) {
           return;
         }

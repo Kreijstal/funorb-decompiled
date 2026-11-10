@@ -54,7 +54,7 @@ class um extends DualLinkNode {
         return epa.field_r[param2];
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = -34 % ((-66 - param0) / 45);
         field_m = null;
         field_l = null;

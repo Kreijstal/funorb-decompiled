@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tt extends IntrusiveNode implements bo {
-    private int[][] field_f;
+final class S2CActionPacket extends IntrusiveNode implements GamePacket {
+    private int[][] playerOrders;
     static String field_g;
-    private boolean[] field_h;
+    private boolean[] hasPlayerOrders;
 
-    public final void a(BitPacketBuffer param0, byte param1) {
+    public final void decode(BitPacketBuffer param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -20,23 +20,23 @@ final class tt extends IntrusiveNode implements bo {
         RuntimeException var3 = null;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          param0.h((byte) 125);
-          for (var3_int = 0; this.field_f.length > var3_int; var3_int++) {
-            stackIn_5_0 = this.field_h;
+          param0.beginBitAccess((byte) 125);
+          for (var3_int = 0; this.playerOrders.length > var3_int; var3_int++) {
+            stackIn_5_0 = this.hasPlayerOrders;
             stackIn_5_1 = var3_int;
-            stackIn_6_2 = (param0.b((byte) 44, 1) == 1);
+            stackIn_6_2 = (param0.readBits((byte) 44, 1) == 1);
             stackIn_5_0[stackIn_5_1] = stackIn_6_2;
-            if (this.field_h[var3_int]) {
-              for (var4 = 0; var4 < this.field_f[var3_int].length; var4++) {
-                this.field_f[var3_int][var4] = vp.a(param0.b((byte) 44, 7), param1 - 6468);
+            if (this.hasPlayerOrders[var3_int]) {
+              for (var4 = 0; var4 < this.playerOrders[var3_int].length; var4++) {
+                this.playerOrders[var3_int][var4] = vp.a(param0.readBits((byte) 44, 7), param1 - 6468);
               }
             }
           }
           if (param1 != -19) {
-            this.field_h = (boolean[]) null;
-            param0.i((byte) 98);
+            this.hasPlayerOrders = (boolean[]) null;
+            param0.endBitAccess((byte) 98);
           } else {
-            param0.i((byte) 98);
+            param0.endBitAccess((byte) 98);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -57,8 +57,8 @@ final class tt extends IntrusiveNode implements bo {
         int var2 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
         String var1 = "S2CActionPacket playerOrders:";
-        for (var2 = 0; this.field_f.length > var2; var2++) {
-          var1 = var1 + " " + this.field_h[var2];
+        for (var2 = 0; this.playerOrders.length > var2; var2++) {
+          var1 = var1 + " " + this.hasPlayerOrders[var2];
         }
         return var1;
     }
@@ -68,7 +68,7 @@ final class tt extends IntrusiveNode implements bo {
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
         if (param0 != -1) {
-          tt.a(59);
+          S2CActionPacket.a(59);
         }
         var2 = param1;
         if (4 == var2) {
@@ -86,26 +86,26 @@ final class tt extends IntrusiveNode implements bo {
         throw new IllegalStateException("Unknown/unimplemented weapon preset: " + param1);
     }
 
-    public final void a(int param0, BitPacketBuffer param1) {
+    public final void encode(int param0, BitPacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = TombRacer.field_G ? 1 : 0;
         try {
-          param1.i(8);
+          param1.beginBitWrite(8);
           var3_int = 0;
           if (param0 != 200) {
-            this.field_h = (boolean[]) null;
+            this.hasPlayerOrders = (boolean[]) null;
           }
-          while (var3_int < this.field_f.length) {
-            param1.a((byte) 71, this.field_h[var3_int] ? 1 : 0, 1);
-            if (this.field_h[var3_int]) {
-              for (var4 = 0; var4 < this.field_f[var3_int].length; var4++) {
-                param1.a((byte) -23, uja.a(-47, this.field_f[var3_int][var4]), 7);
+          while (var3_int < this.playerOrders.length) {
+            param1.writeBits((byte) 71, this.hasPlayerOrders[var3_int] ? 1 : 0, 1);
+            if (this.hasPlayerOrders[var3_int]) {
+              for (var4 = 0; var4 < this.playerOrders[var3_int].length; var4++) {
+                param1.writeBits((byte) -23, uja.a(-47, this.playerOrders[var3_int][var4]), 7);
               }
             }
             var3_int++;
           }
-          param1.k(param0 - 1826190886);
+          param1.endBitWrite(param0 - 1826190886);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "tt.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -114,7 +114,7 @@ final class tt extends IntrusiveNode implements bo {
     public static void a(int param0) {
         if (param0 != 4) {
           cn var2 = (cn) null;
-          tt.a((cn) null, (byte) -100);
+          S2CActionPacket.a((cn) null, (byte) -100);
         }
         field_g = null;
     }
@@ -149,20 +149,20 @@ final class tt extends IntrusiveNode implements bo {
         if (param0) {
           return true;
         }
-        return this.field_h[param1];
+        return this.hasPlayerOrders[param1];
     }
 
-    tt(int param0) {
-        this.field_f = new int[param0][8];
-        this.field_h = new boolean[param0];
+    S2CActionPacket(int param0) {
+        this.playerOrders = new int[param0][8];
+        this.hasPlayerOrders = new boolean[param0];
     }
 
     final int a(boolean param0, int param1, int param2) {
         if (param0) {
           cn var5 = (cn) null;
-          tt.a((cn) null, (byte) 42);
+          S2CActionPacket.a((cn) null, (byte) 42);
         }
-        return this.field_f[param1][param2];
+        return this.playerOrders[param1][param2];
     }
 
     static {

@@ -15,12 +15,12 @@ final class ng {
     private int field_h;
     static jpa[] field_f;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         field_b = null;
         field_f = null;
         if (param0 != 46) {
-          ng.a((byte) -11);
+          ng.releaseStatics((byte) -11);
           field_k = null;
           return;
         }

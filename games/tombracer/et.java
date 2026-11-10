@@ -338,7 +338,7 @@ final class et extends cg {
 
     final static void a(int param0, int param1, int param2) {
         BitPacketBuffer var3 = ql.field_k;
-        var3.k(param0, -2988);
+        var3.writeCipheredOpcode(param0, -2988);
         var3.i(3, 0);
         var3.i(9, param1 ^ param1);
         var3.f(param1 ^ -1477662122, param2);

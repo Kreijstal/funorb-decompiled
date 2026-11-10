@@ -380,7 +380,7 @@ final class hf implements ac, gs {
         }
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 < 124) {
           return;

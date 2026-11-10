@@ -25,7 +25,7 @@ final class sma {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_c = null;
         int var1 = 67 / ((-44 - param0) / 54);
@@ -65,7 +65,7 @@ final class sma {
         var9 = TombRacer.field_G ? 1 : 0;
         try {
           if (param1 != 28893) {
-            sma.a(47);
+            sma.releaseStatics(47);
           }
           if (!hna.field_a.field_c) {
             stackIn_6_0 = -1;

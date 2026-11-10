@@ -5,7 +5,7 @@ final class pla {
     private int[] field_a;
     static String field_b;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != -1) {
           field_b = (String) null;
@@ -64,7 +64,7 @@ final class pla {
           var2 = new jua(false);
           var2.field_c = param1;
           if (param0 <= 80) {
-            pla.b(3);
+            pla.releaseStatics(3);
           }
           stackIn_3_0 = var2;
           return stackIn_3_0;

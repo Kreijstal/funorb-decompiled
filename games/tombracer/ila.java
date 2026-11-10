@@ -337,11 +337,11 @@ final class ila {
               if (0 < wla.field_ub) {
                 ft.field_a = true;
               }
-              ql.field_k.a(-26185, AllPlatformsMazeComponent.field_K);
+              ql.field_k.initializeCipher(-26185, AllPlatformsMazeComponent.field_K);
               for (var8Lifetime1 = 0; 4 > var8Lifetime1; var8Lifetime1++) {
                 AllPlatformsMazeComponent.field_K[var8Lifetime1] = AllPlatformsMazeComponent.field_K[var8Lifetime1] + 50;
               }
-              vc.field_q.a(param2 ^ -26235, AllPlatformsMazeComponent.field_K);
+              vc.field_q.initializeCipher(param2 ^ -26235, AllPlatformsMazeComponent.field_K);
               stackIn_81_0 = oka.field_z;
               return stackIn_81_0;
             }

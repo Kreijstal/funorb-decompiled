@@ -86,7 +86,7 @@ final class BlockComponent extends kna {
         return false;
     }
 
-    public static void B(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < 115) {
           field_F = (String[]) null;
           field_F = null;

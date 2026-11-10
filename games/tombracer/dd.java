@@ -206,11 +206,11 @@ final class dd {
         if (param1 == 1) {
           return nt.a(param0, 1, 5200, false, false, true);
         }
-        dd.a(10);
+        dd.releaseStatics(10);
         return nt.a(param0, 1, 5200, false, false, true);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != 8476) {
           return;

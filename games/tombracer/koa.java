@@ -71,14 +71,14 @@ final class koa {
         int var5 = TombRacer.field_G ? 1 : 0;
         try {
           this.a((byte) -12);
-          param2.a((byte) 43, this.field_f.length, iia.d(this.field_e, 22972));
+          param2.writeBits((byte) 43, this.field_f.length, iia.d(this.field_e, 22972));
           for (var4_int = 0; this.field_f.length > var4_int; var4_int++) {
             if (this.field_f[var4_int].h((byte) 114) != param1) {
-              param2.a((byte) -126, 0, 1);
-              param2.a((byte) -127, this.field_f[var4_int].n(31974).field_d, 8);
+              param2.writeBits((byte) -126, 0, 1);
+              param2.writeBits((byte) -127, this.field_f[var4_int].n(31974).id, 8);
             } else {
-              param2.a((byte) 70, 1, 1);
-              param2.a((byte) 61, this.field_f[var4_int].i((byte) 84).field_d, 8);
+              param2.writeBits((byte) 70, 1, 1);
+              param2.writeBits((byte) 61, this.field_f[var4_int].i((byte) 84).id, 8);
             }
           }
           if (param0 != 30489) {
@@ -159,18 +159,18 @@ final class koa {
         RuntimeException var5 = null;
         try {
           this.field_e = param0;
-          var5_int = param3.b((byte) 44, iia.d(param0, 22972));
+          var5_int = param3.readBits((byte) 44, iia.d(param0, 22972));
           this.field_f = new lj[var5_int];
           this.field_a = new dha[var5_int];
           for (var6 = 0; var6 < var5_int; var6++) {
             if (param2 <= 9) {
-              this.field_a[var6] = new dha(false, param3.b((byte) 44, 8));
+              this.field_a[var6] = new dha(false, param3.readBits((byte) 44, 8));
             } else {
               stackIn_6_0 = this.field_a;
               stackIn_6_1 = var6;
               stackIn_6_2 = null;
               stackIn_6_3 = null;
-              if (param3.b((byte) 44, 1) != 1) {
+              if (param3.readBits((byte) 44, 1) != 1) {
                 stackIn_7_2 = null;
                 stackIn_7_3 = null;
                 stackIn_7_4 = false;
@@ -179,7 +179,7 @@ final class koa {
                 stackIn_7_3 = null;
                 stackIn_7_4 = true;
               }
-              stackIn_6_0[stackIn_6_1] = new dha(stackIn_7_4, param3.b((byte) 44, 8));
+              stackIn_6_0[stackIn_6_1] = new dha(stackIn_7_4, param3.readBits((byte) 44, 8));
             }
           }
           return;

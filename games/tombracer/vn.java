@@ -18,12 +18,12 @@ final class vn {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         field_b = null;
         field_c = null;
         if (param0 != 0) {
-          vn.a((byte) 63);
+          vn.releaseStatics((byte) 63);
         }
     }
 

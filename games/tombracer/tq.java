@@ -33,7 +33,7 @@ final class tq {
         this.a(this.field_d + 1, param0, -1);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_b = null;
         field_g = null;

@@ -12,7 +12,7 @@ final class dq extends IntrusiveNode {
         this.field_i = param0;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         field_f = null;
         if (param0 != 8148) {

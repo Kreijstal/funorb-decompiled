@@ -21,7 +21,7 @@ final class dma extends tfa implements na {
     }
 
     dma(kda param0, int param1, boolean param2, int[][] param3) {
-        super(param0, 34067, gpa.field_a, una.field_g, param1 * (param1 * 6), param2);
+        super(param0, 34067, SwitchableId.field_a, una.field_g, param1 * (param1 * 6), param2);
         int var5_int = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -67,7 +67,7 @@ final class dma extends tfa implements na {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = (int[][]) null;
         field_l = null;
         if (param0 != -31784) {

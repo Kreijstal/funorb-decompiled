@@ -41,7 +41,7 @@ final class MirrorComponent extends kna {
         return (384 & param1) != 0 ? true : false;
     }
 
-    public static void A(int param0) {
+    public static void releaseStatics(int param0) {
         field_H = null;
         field_F = null;
         if (param0 != 4) {

@@ -479,7 +479,7 @@ abstract class wv extends dfa {
                 null != SecondaryNodeDequeIterator.field_a.field_k &&
                 SecondaryNodeDequeIterator.field_a.field_D &&
                 !SecondaryNodeDequeIterator.field_a.d((byte) 90)) {
-                ql.field_k.k(65, -2988);
+                ql.field_k.writeCipheredOpcode(65, -2988);
                 ConstrainToRectangleLocomotor.a(param1, -1, (byte) 105);
                 return true;
               }

@@ -19,10 +19,10 @@ final class boa extends dg {
     final void a(int param0, Room param1, BitPacketBuffer param2) {
         try {
           if (param0 <= 119) {
-            boa.a(false);
+            boa.releaseStatics(false);
           }
           super.a(122, param1, param2);
-          this.field_v = param2.b((byte) 44, 4);
+          this.field_v = param2.readBits((byte) 44, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "boa.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -162,7 +162,7 @@ final class boa extends dg {
         return stackIn_14_0;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_y = null;
         if (param0) {
           return;
@@ -351,7 +351,7 @@ final class boa extends dg {
     final void a(byte param0, BitPacketBuffer param1) {
         try {
           super.a((byte) -100, param1);
-          param1.a((byte) 42, this.field_v, 4);
+          param1.writeBits((byte) 42, this.field_v, 4);
           int var3_int = 108 / ((param0 + 8) / 40);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "boa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

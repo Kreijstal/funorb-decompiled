@@ -26,7 +26,7 @@ final class jq extends ob {
 
     final static void a(int param0, byte param1) {
         BitPacketBuffer var2 = ql.field_k;
-        var2.k(param0, -2988);
+        var2.writeCipheredOpcode(param0, -2988);
         var2.position = var2.position + 1;
         int var3 = var2.position;
         var2.i(2, 0);
@@ -97,7 +97,7 @@ final class jq extends ob {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -112) {
           return;
         }

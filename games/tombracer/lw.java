@@ -33,7 +33,7 @@ final class lw {
           stackIn_5_0 = (oj.field_tb[mf.field_a]) ? 1 : 0;
         }
         var2 = stackIn_5_0;
-        if (!oj.field_tb[mi.field_k]) {
+        if (!oj.field_tb[ConsoleToken.field_k]) {
           stackIn_10_0 = (!oj.field_tb[fp.field_a]) ? 0 : 1;
         } else {
           stackIn_10_0 = -1;
@@ -112,7 +112,7 @@ final class lw {
         this.field_d.a(param0 ^ param0);
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         int var1 = 17 % ((param0 + 37) / 60);
         field_i = null;

@@ -52,26 +52,26 @@ final class BrazierComponent extends kna {
         int var6Lifetime1;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
-          var2_int = param0.b((byte) 44, 8);
+          var2_int = param0.readBits((byte) 44, 8);
           if (var2_int > 0) {
             stackIn_3_0 = null;
             return (uca[]) (stackIn_3_0);
           }
-          var3 = param0.b((byte) 44, 12);
+          var3 = param0.readBits((byte) 44, 12);
           var4 = new uca[var3];
           for (var5 = 0; var3 > var5; var5++) {
             if (!CircleMovementLocomotor.a(5907, param0)) {
-              var6 = param0.b((byte) 44, nma.b(false, var5 - 1));
+              var6 = param0.readBits((byte) 44, nma.b(false, var5 - 1));
               var4[var5] = var4[var6];
             } else {
               var6_ref_uca = new uca();
-              param0.b((byte) 44, 24);
-              param0.b((byte) 44, 24);
-              var6_ref_uca.field_e = param0.b((byte) 44, 24);
-              param0.b((byte) 44, 9);
-              param0.b((byte) 44, 12);
-              param0.b((byte) 44, 12);
-              param0.b((byte) 44, 12);
+              param0.readBits((byte) 44, 24);
+              param0.readBits((byte) 44, 24);
+              var6_ref_uca.field_e = param0.readBits((byte) 44, 24);
+              param0.readBits((byte) 44, 9);
+              param0.readBits((byte) 44, 12);
+              param0.readBits((byte) 44, 12);
+              param0.readBits((byte) 44, 12);
               var4[var5] = var6_ref_uca;
             }
           }

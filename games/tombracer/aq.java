@@ -4,7 +4,7 @@
 final class aq {
     static nh[] field_a;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         int var1 = 75 % ((param0 + 32) / 34);
     }

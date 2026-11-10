@@ -18,7 +18,7 @@ final class rg extends qr {
         }
     }
 
-    public static void h(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_A = null;
         if (param0 > -125) {
           field_A = (hra) null;
@@ -101,7 +101,7 @@ final class rg extends qr {
         bq.field_k[8] = tv.field_ub;
         bq.field_k[1] = aka.field_A;
         dta.field_b = new String[4];
-        dta.field_b[1] = bqa.field_g;
+        dta.field_b[1] = S2CNewRoomPacket.field_g;
         dta.field_b[2] = vh.field_b;
         sla.field_b = new String[7];
         dta.field_b[3] = tda.field_b;
@@ -153,7 +153,7 @@ final class rg extends qr {
           tk.field_a[2] = dta.field_d;
           tk.field_a[0] = kla.field_a;
           tk.field_a[9] = vua.field_D;
-          tk.field_a[6] = up.field_d;
+          tk.field_a[6] = Effect.field_d;
           tk.field_a[1] = BlockComponent.field_F;
           tk.field_a[12] = SwitchComponent.field_F;
           tk.field_a[5] = tia.field_c;
@@ -162,27 +162,27 @@ final class rg extends qr {
           tk.field_a[7] = fpa.field_b;
           tk.field_a[4] = or.field_m;
           IntrusiveDeque.field_d[0] = new String[]{ela.field_m, fr.field_a, null, null, null, null, qfa.field_a};
-          up.field_h[0] = new String[]{daa.field_f, ioa.field_o, mr.field_H, PushableBlockMazeComponent.field_K, pba.field_c, hsa.field_c};
+          Effect.field_h[0] = new String[]{daa.field_f, ioa.field_o, mr.field_H, PushableBlockMazeComponent.field_K, pba.field_c, hsa.field_c};
           IntrusiveDeque.field_d[1] = new String[]{ct.field_c, pn.field_o, dka.field_c};
-          up.field_h[1] = new String[]{dk.field_k, BitPacketBuffer.field_m, ne.field_e};
+          Effect.field_h[1] = new String[]{dk.field_k, BitPacketBuffer.field_m, ne.field_e};
           IntrusiveDeque.field_d[2] = new String[]{kea.field_b, baa.field_a, dk.field_a};
-          up.field_h[2] = new String[]{bpa.field_a, du.field_f, vua.field_C};
+          Effect.field_h[2] = new String[]{bpa.field_a, du.field_f, vua.field_C};
           IntrusiveDeque.field_d[3] = new String[]{eua.field_Ab, rua.field_hb, Player.field_s};
           IntrusiveDeque.field_d[4] = new String[]{ConstrainToCircleLocomotor.field_t, fv.field_b, RopeBridgeComponent.field_G};
-          up.field_h[3] = new String[]{sba.field_o, vk.field_a, koa.field_d};
-          up.field_h[4] = new String[]{at.field_R, gn.field_y, tr.field_d};
+          Effect.field_h[3] = new String[]{sba.field_o, vk.field_a, koa.field_d};
+          Effect.field_h[4] = new String[]{at.field_R, gn.field_y, tr.field_d};
           IntrusiveDeque.field_d[5] = new String[]{TripBeamComponent.field_J, td.field_u, kva.field_r};
-          up.field_h[5] = new String[]{gu.field_k, MazeComponent.field_G, du.field_b};
+          Effect.field_h[5] = new String[]{gu.field_k, MazeComponent.field_G, du.field_b};
           IntrusiveDeque.field_d[6] = new String[]{ConstrainToCircleLocomotor.field_v, VortexBehaviour.field_o, PowerUpItemBehaviour.field_s};
-          up.field_h[6] = new String[]{apa.field_b, pna.field_k, bq.field_e};
+          Effect.field_h[6] = new String[]{apa.field_b, pna.field_k, bq.field_e};
           IntrusiveDeque.field_d[7] = new String[]{TouchSwitchBehaviour.field_q, tu.field_d};
           IntrusiveDeque.field_d[8] = new String[]{uv.field_u, jd.field_m, hoa.field_n};
-          up.field_h[7] = new String[]{km.field_n, ld.field_d};
+          Effect.field_h[7] = new String[]{km.field_n, ld.field_d};
           IntrusiveDeque.field_d[9] = new String[]{td.field_n, nea.field_b, gga.field_L};
-          up.field_h[8] = new String[]{hv.field_o, StaticCrusherComponent.field_G, ClientException.field_e};
-          up.field_h[9] = new String[]{qna.field_a, wv.field_h, kna.field_D};
+          Effect.field_h[8] = new String[]{hv.field_o, StaticCrusherComponent.field_G, ClientException.field_e};
+          Effect.field_h[9] = new String[]{qna.field_a, wv.field_h, kna.field_D};
           IntrusiveDeque.field_d[10] = new String[]{kd.field_z, qba.field_d, sta.field_H};
-          up.field_h[10] = new String[]{vm.field_a, ir.field_c, fb.field_b};
+          Effect.field_h[10] = new String[]{vm.field_a, ir.field_c, fb.field_b};
           return;
         }
         tk.field_a = new String[17][];
@@ -205,7 +205,7 @@ final class rg extends qr {
         tk.field_a[2] = dta.field_d;
         tk.field_a[0] = kla.field_a;
         tk.field_a[9] = vua.field_D;
-        tk.field_a[6] = up.field_d;
+        tk.field_a[6] = Effect.field_d;
         tk.field_a[1] = BlockComponent.field_F;
         tk.field_a[12] = SwitchComponent.field_F;
         tk.field_a[5] = tia.field_c;
@@ -214,27 +214,27 @@ final class rg extends qr {
         tk.field_a[7] = fpa.field_b;
         tk.field_a[4] = or.field_m;
         IntrusiveDeque.field_d[0] = new String[]{ela.field_m, fr.field_a, null, null, null, null, qfa.field_a};
-        up.field_h[0] = new String[]{daa.field_f, ioa.field_o, mr.field_H, PushableBlockMazeComponent.field_K, pba.field_c, hsa.field_c};
+        Effect.field_h[0] = new String[]{daa.field_f, ioa.field_o, mr.field_H, PushableBlockMazeComponent.field_K, pba.field_c, hsa.field_c};
         IntrusiveDeque.field_d[1] = new String[]{ct.field_c, pn.field_o, dka.field_c};
-        up.field_h[1] = new String[]{dk.field_k, BitPacketBuffer.field_m, ne.field_e};
+        Effect.field_h[1] = new String[]{dk.field_k, BitPacketBuffer.field_m, ne.field_e};
         IntrusiveDeque.field_d[2] = new String[]{kea.field_b, baa.field_a, dk.field_a};
-        up.field_h[2] = new String[]{bpa.field_a, du.field_f, vua.field_C};
+        Effect.field_h[2] = new String[]{bpa.field_a, du.field_f, vua.field_C};
         IntrusiveDeque.field_d[3] = new String[]{eua.field_Ab, rua.field_hb, Player.field_s};
         IntrusiveDeque.field_d[4] = new String[]{ConstrainToCircleLocomotor.field_t, fv.field_b, RopeBridgeComponent.field_G};
-        up.field_h[3] = new String[]{sba.field_o, vk.field_a, koa.field_d};
-        up.field_h[4] = new String[]{at.field_R, gn.field_y, tr.field_d};
+        Effect.field_h[3] = new String[]{sba.field_o, vk.field_a, koa.field_d};
+        Effect.field_h[4] = new String[]{at.field_R, gn.field_y, tr.field_d};
         IntrusiveDeque.field_d[5] = new String[]{TripBeamComponent.field_J, td.field_u, kva.field_r};
-        up.field_h[5] = new String[]{gu.field_k, MazeComponent.field_G, du.field_b};
+        Effect.field_h[5] = new String[]{gu.field_k, MazeComponent.field_G, du.field_b};
         IntrusiveDeque.field_d[6] = new String[]{ConstrainToCircleLocomotor.field_v, VortexBehaviour.field_o, PowerUpItemBehaviour.field_s};
-        up.field_h[6] = new String[]{apa.field_b, pna.field_k, bq.field_e};
+        Effect.field_h[6] = new String[]{apa.field_b, pna.field_k, bq.field_e};
         IntrusiveDeque.field_d[7] = new String[]{TouchSwitchBehaviour.field_q, tu.field_d};
         IntrusiveDeque.field_d[8] = new String[]{uv.field_u, jd.field_m, hoa.field_n};
-        up.field_h[7] = new String[]{km.field_n, ld.field_d};
+        Effect.field_h[7] = new String[]{km.field_n, ld.field_d};
         IntrusiveDeque.field_d[9] = new String[]{td.field_n, nea.field_b, gga.field_L};
-        up.field_h[8] = new String[]{hv.field_o, StaticCrusherComponent.field_G, ClientException.field_e};
-        up.field_h[9] = new String[]{qna.field_a, wv.field_h, kna.field_D};
+        Effect.field_h[8] = new String[]{hv.field_o, StaticCrusherComponent.field_G, ClientException.field_e};
+        Effect.field_h[9] = new String[]{qna.field_a, wv.field_h, kna.field_D};
         IntrusiveDeque.field_d[10] = new String[]{kd.field_z, qba.field_d, sta.field_H};
-        up.field_h[10] = new String[]{vm.field_a, ir.field_c, fb.field_b};
+        Effect.field_h[10] = new String[]{vm.field_a, ir.field_c, fb.field_b};
     }
 
     public rg() {
@@ -276,7 +276,7 @@ final class rg extends qr {
         if (param0 != 7) {
           return true;
         }
-        return gpa.a((byte) 108, di.a(31));
+        return SwitchableId.a((byte) 108, di.a(31));
     }
 
     final static int g(byte param0) {

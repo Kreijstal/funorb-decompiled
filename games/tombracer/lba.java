@@ -17,7 +17,7 @@ class lba extends fi {
     final void a(int param0, byte param1, int param2) {
         int var5 = TombRacer.field_G ? 1 : 0;
         if (param1 >= -37) {
-          lba.d(-7);
+          lba.releaseStatics(-7);
         }
         if (0 == param2) {
           this.field_q = this.field_j - (param0 >= 0 ? param0 : -param0);
@@ -212,7 +212,7 @@ class lba extends fi {
           if (0 == qpa.field_b.field_y) {
             return;
           }
-          ufa.a(true);
+          PlayerProfile.a(true);
           ni.field_c = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -292,10 +292,10 @@ class lba extends fi {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_r = null;
         if (param0 != 1713718860) {
-          lba.d(-50);
+          lba.releaseStatics(-50);
         }
     }
 

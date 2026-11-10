@@ -10,7 +10,7 @@ final class qka extends qra {
     private boolean field_q;
     private fna[] field_p;
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_m = null;
         if (param0 <= 28) {
           field_m = (long[]) null;
@@ -239,15 +239,15 @@ final class qka extends qra {
             if (var9 == uca.field_a) {
               var12_ref = null;
               var13_ref_String = hb.field_v;
-              if (ea.field_j == 3) {
+              if (C2SActionPacket.field_j == 3) {
                 var12_ref = za.field_g;
                 var13_ref_String = uaa.field_d;
               }
-              if (ea.field_j == 2) {
+              if (C2SActionPacket.field_j == 2) {
                 var13_ref_String = qna.field_c;
                 var12_ref = bca.field_d;
               }
-              if (ea.field_j == 1) {
+              if (C2SActionPacket.field_j == 1) {
                 var13_ref_String = MovingPlatformComponent.field_P;
                 var12_ref = rm.field_c;
               }
@@ -328,11 +328,11 @@ final class qka extends qra {
           if (this.field_h.field_D) {
             r.a(0, this.field_h.d((byte) 120));
           } else {
-            ea.field_j = -1;
+            C2SActionPacket.field_j = -1;
           }
         } else {
           if (param1 == 1) {
-            ql.field_k.k(67, -2988);
+            ql.field_k.writeCipheredOpcode(67, -2988);
           }
         }
     }

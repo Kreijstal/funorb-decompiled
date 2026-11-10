@@ -521,7 +521,7 @@ final class kva extends dg {
         try {
           int var3_int = -114 % ((param0 + 8) / 40);
           super.a((byte) -68, param1);
-          param1.a((byte) -127, this.field_v, 2);
+          param1.writeBits((byte) -127, this.field_v, 2);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "kva.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -623,7 +623,7 @@ final class kva extends dg {
         return 1;
     }
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         field_n = null;
         int var1 = -43 / ((param0 + 84) / 37);
         field_s = null;
@@ -693,7 +693,7 @@ final class kva extends dg {
           }
           super.a(122, param1, param2);
           if (param1.field_E >= 19) {
-            this.field_v = param2.b((byte) 44, 2);
+            this.field_v = param2.readBits((byte) 44, 2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

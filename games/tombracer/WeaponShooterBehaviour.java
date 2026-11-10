@@ -22,7 +22,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
         }
     }
 
-    final static mi a(int param0, in param1) {
+    final static ConsoleToken a(int param0, in param1) {
         int fieldTemp$2 = 0;
         StringBuilder discarded$3 = null;
         int var2_int = 0;
@@ -30,7 +30,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
         int var4 = 0;
         String var5 = null;
         int var6 = 0;
-        mi stackIn_21_0 = null;
+        ConsoleToken stackIn_21_0 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -70,7 +70,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
           } else {
             var4Lifetime1 = PressureSwitchBehaviour.field_r;
           }
-          stackIn_21_0 = new mi(var4Lifetime1, var2_int, var5);
+          stackIn_21_0 = new ConsoleToken(var4Lifetime1, var2_int, var5);
           return stackIn_21_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -124,14 +124,14 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
           super.a(param0, param1);
           this.field_n.a(15637, param1);
           this.field_u.a(param1, (byte) 84);
-          param1.a((byte) -128, this.field_o ? 1 : 0, 1);
-          param1.a((byte) -128, this.field_p ? 1 : 0, 1);
+          param1.writeBits((byte) -128, this.field_o ? 1 : 0, 1);
+          param1.writeBits((byte) -128, this.field_p ? 1 : 0, 1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ska.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_r = null;
         if (param0 != 884207088) {
           return;
@@ -152,7 +152,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
 
     final roa l(int param0) {
         if (param0 != -2) {
-          WeaponShooterBehaviour.c(-6);
+          WeaponShooterBehaviour.releaseStatics(-6);
           return this.field_u;
         }
         return this.field_u;
@@ -221,10 +221,10 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
         try {
           this.field_n = new mg(param0.field_E, param1);
           this.field_u = jl.a(param0, true, param1);
-          this.field_o = param1.b((byte) 44, 1) == 1 ? true : false;
+          this.field_o = param1.readBits((byte) 44, 1) == 1 ? true : false;
           this.field_u.a(90, this.field_o);
           if (param0.field_E >= 8) {
-            this.field_p = param1.b((byte) 44, 1) == 1 ? true : false;
+            this.field_p = param1.readBits((byte) 44, 1) == 1 ? true : false;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ska.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

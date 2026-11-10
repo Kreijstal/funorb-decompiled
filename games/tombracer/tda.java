@@ -17,7 +17,7 @@ final class tda extends jg {
         return param1 & 255;
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = -17 % ((param0 - 57) / 36);
         field_b = null;
     }

@@ -58,10 +58,10 @@ final class bp extends qra {
         return;
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_o = null;
         if (param0 != 0) {
-          bp.f(69);
+          bp.releaseStatics(69);
         }
         field_p = null;
         field_m = null;

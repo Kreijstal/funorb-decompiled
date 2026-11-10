@@ -18,12 +18,12 @@ final class cva {
         throw new IllegalStateException("NGR");
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_e = null;
         field_c = null;
         if (param0 != 1) {
-          cva.b(-7);
+          cva.releaseStatics(-7);
         }
     }
 

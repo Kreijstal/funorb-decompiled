@@ -106,7 +106,7 @@ final class mpa extends lc {
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_V = null;
         if (param0 != 0) {
           return;

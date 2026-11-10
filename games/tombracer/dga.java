@@ -118,7 +118,7 @@ final class dga {
         dka.field_b.a(438, -124 + bea.field_a, param1 - 23975, 0, var2 + 202 + var4 * 438 / var3);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_b = null;
         if (param0 != -29262) {

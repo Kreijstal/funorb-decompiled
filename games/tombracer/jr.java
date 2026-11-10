@@ -74,17 +74,17 @@ final class jr implements isa {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_j = null;
         if (param0 != -87) {
-          jr.a((byte) -24);
+          jr.releaseStatics((byte) -24);
         }
     }
 
     final static void b(byte param0) {
         kda.field_pd = false;
         fr.field_c = 0;
-        mi.field_f = -1;
+        ConsoleToken.field_f = -1;
         if (param0 <= -91) {
           vf.field_f = -1;
           MazeComponent.field_F = null;

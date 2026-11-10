@@ -48,7 +48,7 @@ final class ConveyorBehaviour extends Behaviour {
         return param0;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_q = null;
         if (param0 != 6) {
           field_p = (String) null;
@@ -83,7 +83,7 @@ final class ConveyorBehaviour extends Behaviour {
         var9 = param1 + (param5 + param3);
         var10 = new Sprite[]{new Sprite(var9, var9), new Sprite(param6, var9), new Sprite(var9, var9), new Sprite(var9, param6), new Sprite(64, 64), new Sprite(var9, param6), new Sprite(var9, var9), new Sprite(param6, var9), new Sprite(var9, var9)};
         if (!param7) {
-          ConveyorBehaviour.c(-100);
+          ConveyorBehaviour.releaseStatics(-100);
         }
         var11_ref_iu__ = var10;
         for (var12 = 0; var11_ref_iu__.length > var12; var12++) {
@@ -140,8 +140,8 @@ final class ConveyorBehaviour extends Behaviour {
     ConveyorBehaviour(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
-          this.field_s = CoinItemComponent.a(true, 4, param1.b((byte) 44, 4)) << 16;
-          this.field_r = CoinItemComponent.a(true, 4, param1.b((byte) 44, 4)) << 16;
+          this.field_s = CoinItemComponent.a(true, 4, param1.readBits((byte) 44, 4)) << 16;
+          this.field_r = CoinItemComponent.a(true, 4, param1.readBits((byte) 44, 4)) << 16;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -168,8 +168,8 @@ final class ConveyorBehaviour extends Behaviour {
     final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
-          param1.a((byte) -125, dqa.a(true, this.field_s >> 16, 4), 4);
-          param1.a((byte) -127, dqa.a(true, this.field_r >> 16, 4), 4);
+          param1.writeBits((byte) -125, dqa.a(true, this.field_s >> 16, 4), 4);
+          param1.writeBits((byte) -127, dqa.a(true, this.field_r >> 16, 4), 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hi.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

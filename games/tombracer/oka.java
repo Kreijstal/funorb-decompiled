@@ -157,18 +157,18 @@ final class oka extends wv {
             if (rd.b(false) &&
               !dta.field_g[var4]) {
               var3 = 1;
-              qf.field_k[var4].a(pha.field_ub[var4] + this.field_t, dba.field_b[var4] + this.field_r, 0, -1426063361, 1);
+              qf.field_k[var4].a(pha.field_ub[var4] + this.field_t, C2SSubmitSettingsPacket.field_b[var4] + this.field_r, 0, -1426063361, 1);
             } else {
-              cb.field_i[var4].a(pha.field_ub[var4] + this.field_t, this.field_r + dba.field_b[var4]);
+              cb.field_i[var4].a(pha.field_ub[var4] + this.field_t, this.field_r + C2SSubmitSettingsPacket.field_b[var4]);
               var5_ref_nh = uta.field_d;
               if (null != mq.field_e) {
-                if (mq.field_e.field_n[var4] == 3) {
+                if (mq.field_e.worldMedals[var4] == 3) {
                   var5_ref_nh = je.field_E;
                 }
-                if (mq.field_e.field_n[var4] == 2) {
+                if (mq.field_e.worldMedals[var4] == 2) {
                   var5_ref_nh = eu.field_a;
                 }
-                if (mq.field_e.field_n[var4] == 1) {
+                if (mq.field_e.worldMedals[var4] == 1) {
                   var5_ref_nh = pq.field_a;
                 }
               }
@@ -301,7 +301,7 @@ final class oka extends wv {
         }
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = -7 % ((param0 + 15) / 53);
         field_w = null;
         field_y = null;
@@ -341,7 +341,7 @@ final class oka extends wv {
         if (param0 == 98) {
           stackIn_20_0 = 1;
         } else {
-          stackIn_20_0 = (param0 == mi.field_k) ? 1 : 0;
+          stackIn_20_0 = (param0 == ConsoleToken.field_k) ? 1 : 0;
         }
         var6 = stackIn_20_0;
         if (99 != param0) {

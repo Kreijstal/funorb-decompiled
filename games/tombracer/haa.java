@@ -42,7 +42,7 @@ class haa extends rj {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > 37) {
           field_C = (int[][]) null;
           field_A = null;

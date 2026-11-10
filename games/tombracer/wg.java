@@ -69,7 +69,7 @@ final class wg extends tu {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_k = null;
         field_j = null;
         field_m = null;
@@ -110,7 +110,7 @@ final class wg extends tu {
         var8 = TombRacer.field_G ? 1 : 0;
         try {
           if (param0 != 1541709953) {
-            wg.a(true);
+            wg.releaseStatics(true);
           }
           var3_int = 0;
           var4 = jua.field_d;

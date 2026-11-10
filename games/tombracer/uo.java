@@ -7,10 +7,10 @@ final class uo {
     int field_c;
     int field_a;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         if (param0 != 10) {
-          uo.a((byte) -76);
+          uo.releaseStatics((byte) -76);
         }
     }
 

@@ -7,10 +7,10 @@ final class ida {
     static int[] field_b;
     static String field_a;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_a = null;
         if (param0 != 122) {
-          ida.a((byte) -7);
+          ida.releaseStatics((byte) -7);
           field_b = null;
           return;
         }

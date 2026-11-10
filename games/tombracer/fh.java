@@ -22,7 +22,7 @@ final class fh implements fo {
 
     final static void b(int param0, int param1) {
         BitPacketBuffer var2 = ql.field_k;
-        var2.k(param0, -2988);
+        var2.writeCipheredOpcode(param0, -2988);
         var2.i(1, param1 + 22243);
         if (param1 == -22243) {
           var2.i(0, 0);
@@ -590,7 +590,7 @@ final class fh implements fo {
               fga.a(0, false, 0, param1);
             } else {
               if (0 != gda.field_c) {
-                dba.a(param1, (byte) 94);
+                C2SSubmitSettingsPacket.a(param1, (byte) 94);
               } else {
                 qja.a(false, param0, param2 ^ -128);
                 fga.a(0, false, 0, param1);

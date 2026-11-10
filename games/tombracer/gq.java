@@ -21,10 +21,10 @@ final class gq extends uta {
         String var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        mi[] var4 = null;
+        ConsoleToken[] var4 = null;
         int var5 = 0;
         String var6 = null;
-        mi var7 = null;
+        ConsoleToken var7 = null;
         vj var7_ref = null;
         int var8_int = 0;
         StringBuilder var8 = null;
@@ -49,10 +49,10 @@ final class gq extends uta {
           if (var5 >= 0) {
             var7 = var4[var5];
             var8_int = var3 - var7.field_h;
-            if (tr.field_f == var7.field_p &&
+            if (tr.field_f == var7.kind &&
               0 < var8_int &&
-              var7.field_m.length() >= var8_int) {
-              var6 = var7.field_m.substring(0, var8_int);
+              var7.text.length() >= var8_int) {
+              var6 = var7.text.substring(0, var8_int);
             }
           }
           var7_ref = this.b(false, var6);
@@ -189,7 +189,7 @@ final class gq extends uta {
           cr var4 = null;
           jea var4_ref = null;
           int var5 = 0;
-          mi var6 = null;
+          ConsoleToken var6 = null;
           RuntimeException stackIn_12_0 = null;
           StringBuilder stackIn_12_1 = null;
           String stackIn_13_2 = null;
@@ -321,10 +321,10 @@ final class gq extends uta {
         String var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        mi[] var4 = null;
+        ConsoleToken[] var4 = null;
         int var5 = 0;
         String var6 = null;
-        mi var7 = null;
+        ConsoleToken var7 = null;
         vj var7_ref = null;
         int var8_int = 0;
         String[] var8 = null;
@@ -348,9 +348,9 @@ final class gq extends uta {
           if (var5 >= 0) {
             var7 = var4[var5];
             var8_int = -var7.field_h + var3;
-            if (~var7.field_p == ~tr.field_f &&
+            if (~var7.kind == ~tr.field_f &&
               var8_int > 0) {
-              var6 = var7.field_m.substring(0, Math.min(var7.field_m.length(), var8_int));
+              var6 = var7.text.substring(0, Math.min(var7.text.length(), var8_int));
               this.field_p.field_qb = this.field_m.b(var2.substring(0, var7.field_h));
               decompiledFrameRemainder1 = (var11 != 0);
             }
@@ -360,14 +360,14 @@ final class gq extends uta {
               while (true) {
                 boolean decompiledFrameRemainder0 = true;
                 if (var9 >= 0) {
-                  stackIn_31_0 = var4[var9].field_p;
+                  stackIn_31_0 = var4[var9].kind;
                   stackIn_31_1 = rs.field_a;
                   decompiledFrameRemainder0 = (var11 == 0);
                   if (decompiledFrameRemainder0) {
                     if (stackIn_31_0 == stackIn_31_1) {
                       var10_int++;
                     }
-                    if (~var4[var9].field_p == ~lna.field_a) {
+                    if (~var4[var9].kind == ~lna.field_a) {
                       var10_int--;
                     }
                     if (var10_int >= 0 ||
@@ -384,10 +384,10 @@ final class gq extends uta {
                 if (stackIn_31_0 >= stackIn_31_1) {
                   break;
                 }
-                if (~tr.field_f != ~var4[var9 - 1].field_p) {
+                if (~tr.field_f != ~var4[var9 - 1].kind) {
                   break;
                 }
-                var6 = var4[var9 - 1].field_m;
+                var6 = var4[var9 - 1].text;
                 this.field_p.field_qb = this.field_m.b(var2.substring(0, var4[var9 - 1].field_h));
                 break;
               }

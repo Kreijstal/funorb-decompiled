@@ -83,7 +83,7 @@ final class goa {
         RuntimeException var4 = null;
         var8 = TombRacer.field_G ? 1 : 0;
         try {
-          var4_int = param2.b((byte) 44, param0);
+          var4_int = param2.readBits((byte) 44, param0);
           if (param1 != -4854) {
             field_c = (String) null;
           }
@@ -95,11 +95,11 @@ final class goa {
             var4_int != param3.length) {
             param3 = new byte[var4_int];
           }
-          var5 = param2.b((byte) 44, 3);
-          var6 = (byte)param2.b((byte) 44, 8);
+          var5 = param2.readBits((byte) 44, 3);
+          var6 = (byte)param2.readBits((byte) 44, 8);
           if (var5 > 0) {
             for (var7 = 0; var4_int > var7; var7++) {
-              param3[var7] = (byte)(param2.b((byte) 44, var5) + var6);
+              param3[var7] = (byte)(param2.readBits((byte) 44, var5) + var6);
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {

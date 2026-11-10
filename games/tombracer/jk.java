@@ -27,7 +27,7 @@ final class jk extends IntrusiveNode {
         return var1;
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_h = null;
         field_i = null;
         if (param0 <= 11) {

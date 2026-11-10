@@ -154,7 +154,7 @@ final class tv extends jea {
         this.field_vb.field_bb = this.field_bb;
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_wb = null;
         field_xb = null;
         if (param0 < 114) {
@@ -185,7 +185,7 @@ final class tv extends jea {
           }
           return var4 + (param0 + param2 + var5 + param0);
         }
-        tv.f(-53);
+        tv.releaseStatics(-53);
         if (this.field_vb != null) {
           var5 = this.field_vb.b((byte) 69);
         }

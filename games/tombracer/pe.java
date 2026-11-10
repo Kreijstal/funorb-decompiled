@@ -157,7 +157,7 @@ final class pe extends tfa implements gf {
     }
 
     pe(kda param0, int param1, int param2, int[] param3, int param4, int param5) {
-        super(param0, 34037, gpa.field_a, una.field_g, param1 * param2, false);
+        super(param0, 34037, SwitchableId.field_a, una.field_g, param1 * param2, false);
         try {
           this.field_l = param1;
           this.field_n = param2;
@@ -193,7 +193,7 @@ final class pe extends tfa implements gf {
         this.a(96);
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         field_k = null;
         if (param0 == 0) {

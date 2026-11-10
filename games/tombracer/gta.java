@@ -12,7 +12,7 @@ final class gta {
     int field_h;
     private static String field_z;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_e = null;
         field_g = null;
         field_b = null;
@@ -21,7 +21,7 @@ final class gta {
           field_a = null;
           return;
         }
-        gta.a(true);
+        gta.releaseStatics(true);
         field_f = null;
         field_a = null;
     }

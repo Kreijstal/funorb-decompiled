@@ -53,7 +53,7 @@ final class gu extends me {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         if (param0 != -28) {
           field_l = (Object) null;
@@ -66,7 +66,7 @@ final class gu extends me {
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
         if (param0 > 0) {
-          gu.c(-61);
+          gu.releaseStatics(-61);
         }
         var2 = param1;
         if (var2 == 0) {

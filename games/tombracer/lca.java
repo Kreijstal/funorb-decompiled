@@ -46,7 +46,7 @@ final class lca implements fo {
 
     final static boolean a(boolean param0) {
         if (param0) {
-          lca.a(-63);
+          lca.releaseStatics(-63);
           if (null == wu.field_a) {
             return false;
           }
@@ -80,7 +80,7 @@ final class lca implements fo {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -22593) {
           field_g = (String[]) null;
           field_g = null;

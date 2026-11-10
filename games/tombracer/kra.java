@@ -17,7 +17,7 @@ final class kra {
         era.field_d = new ara(lma.field_r, oba.field_f, cga.field_g, kua.field_i, FacePlayerMountComponent.field_F, PressureSwitchBehaviour.field_p);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         if (param0 != -2350) {
           return;

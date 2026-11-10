@@ -403,7 +403,7 @@ abstract class il extends DualLinkNode {
         this.b(param0, param1 - this.b(param0), param2);
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_t = null;
         field_H = null;
     }

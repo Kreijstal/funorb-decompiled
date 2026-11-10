@@ -15,7 +15,7 @@ final class StaticCrusherComponent extends kna {
 
     final int t(int param0) {
         if (param0 != 8) {
-          StaticCrusherComponent.r((byte) -56);
+          StaticCrusherComponent.releaseStatics((byte) -56);
           return 7;
         }
         return 7;
@@ -32,7 +32,7 @@ final class StaticCrusherComponent extends kna {
         return false;
     }
 
-    public static void r(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_G = null;
         field_F = null;
         if (param0 >= -97) {
@@ -124,7 +124,7 @@ final class StaticCrusherComponent extends kna {
           } else {
             stackIn_3_2 = 0;
           }
-          ((BitPacketBuffer) (Object) stackIn_2_0).a((byte) stackIn_2_1, stackIn_3_2, 1);
+          ((BitPacketBuffer) (Object) stackIn_2_0).writeBits((byte) stackIn_2_1, stackIn_3_2, 1);
           var3_int = -96 % ((param1 - 62) / 35);
           stackIn_4_0 = param0;
           return stackIn_4_0;

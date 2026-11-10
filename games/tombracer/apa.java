@@ -7,7 +7,7 @@ final class apa {
     private Sprite[] field_d;
     static ada field_c;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         int var1 = 71 / ((param0 + 26) / 32);
         field_b = null;

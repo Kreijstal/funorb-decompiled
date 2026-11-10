@@ -43,7 +43,7 @@ final class bta extends vw {
         this.d(-124);
     }
 
-    public static void d(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           field_f = null;
           field_i = null;

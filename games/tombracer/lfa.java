@@ -19,7 +19,7 @@ final class lfa extends dg {
           return;
         }
         try {
-          this.field_q = param2.b((byte) 44, 4);
+          this.field_q = param2.readBits((byte) 44, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "lfa.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -141,7 +141,7 @@ final class lfa extends dg {
         }
     }
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 5353) {
           field_o = null;
           field_m = null;
@@ -236,7 +236,7 @@ final class lfa extends dg {
         try {
           int var3_int = 94 / ((-8 - param0) / 40);
           super.a((byte) -88, param1);
-          param1.a((byte) -125, this.field_q, 4);
+          param1.writeBits((byte) -125, this.field_q, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "lfa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

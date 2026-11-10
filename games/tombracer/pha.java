@@ -130,7 +130,7 @@ final class pha extends jea {
           if (param2 != 162) {
             field_ub = (int[]) null;
           }
-          var3_int = param0.b((byte) 44, 4);
+          var3_int = param0.readBits((byte) 44, 4);
           var4 = var3_int;
           if (var4 != 0) {
             throw new IllegalStateException("Unrecognised spawner type: " + var3_int);

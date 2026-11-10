@@ -15,7 +15,7 @@ final class wf extends IntrusiveNode {
         return this.field_f < 6 ? true : false;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         if (param0 != 2907) {
           field_g = (jea) null;
@@ -25,11 +25,11 @@ final class wf extends IntrusiveNode {
     final void a(int param0, BitPacketBuffer param1) {
         boolean discarded$0 = false;
         try {
-          param1.a((byte) 2, this.field_f, 4);
+          param1.writeBits((byte) 2, this.field_f, 4);
           if (param0 != -29928) {
             discarded$0 = this.b(-112);
           }
-          param1.a((byte) -5, this.field_h / 50, 6);
+          param1.writeBits((byte) -5, this.field_h / 50, 6);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wf.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -118,9 +118,9 @@ final class wf extends IntrusiveNode {
     wf(Room param0, BitPacketBuffer param1) {
         this.field_h = 100;
         try {
-          this.field_f = param1.b((byte) 44, 4);
+          this.field_f = param1.readBits((byte) 44, 4);
           if (param0.field_E > 8) {
-            this.field_h = 50 * param1.b((byte) 44, 6);
+            this.field_h = 50 * param1.readBits((byte) 44, 6);
           } else {
             this.field_h = 100;
           }

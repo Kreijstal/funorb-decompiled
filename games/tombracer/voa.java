@@ -350,7 +350,7 @@ final class voa extends ci {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           field_q = (String) null;
         }

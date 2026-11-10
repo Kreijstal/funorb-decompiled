@@ -11,7 +11,7 @@ final class hva {
     static int field_d;
     static int[][] field_g;
 
-    public static void a() {
+    public static void releaseStatics() {
         field_h = (float[][]) null;
         field_g = (int[][]) null;
     }

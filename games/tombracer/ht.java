@@ -167,7 +167,7 @@ final class ht extends jea {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Fb = null;
         field_Db = null;
         field_Pb = null;

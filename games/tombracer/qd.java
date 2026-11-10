@@ -11,7 +11,7 @@ final class qd {
         return -am.field_o + tia.field_a;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 22442) {
           field_a = (IntrusiveDeque) null;
           field_a = null;

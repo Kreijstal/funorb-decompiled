@@ -57,11 +57,11 @@ final class lha extends kl {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_l = null;
         field_m = null;
         if (param0 < 5) {
-          lha.a((byte) 104);
+          lha.releaseStatics((byte) 104);
         }
     }
 
@@ -93,7 +93,7 @@ final class lha extends kl {
               var7Lifetime2 = var9;
               var7Lifetime3 = var9;
               if (param2 < 109) {
-                lha.a((byte) -114);
+                lha.releaseStatics((byte) -114);
               }
               if (0L <= param3) {
                 var7Lifetime4 = var9 + "; Expires=" + ida.a(param3 * 1000L + bva.b((byte) -107), -1) + "; Max-Age=" + param3;

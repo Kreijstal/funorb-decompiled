@@ -5,7 +5,7 @@ final class dra {
     static String[] field_b;
     static String[] field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_b = null;
         if (param0 > -108) {
@@ -27,7 +27,7 @@ final class dra {
           }
           var1 = ql.field_k;
           while (SnakePitBehaviour.l(10371)) {
-            var1.k(8, -2988);
+            var1.writeCipheredOpcode(8, -2988);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;

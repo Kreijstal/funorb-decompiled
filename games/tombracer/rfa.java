@@ -9,7 +9,7 @@ abstract class rfa extends AppletGameShell implements sia {
 
     abstract boolean a(int param0, BitPacketBuffer param1, byte param2);
 
-    final void c(int param0) {
+    final void draw(int param0) {
         int var3 = 0;
         int var4 = TombRacer.field_G ? 1 : 0;
         java.awt.Canvas var2 = kw.b((byte) -97);
@@ -18,13 +18,13 @@ abstract class rfa extends AppletGameShell implements sia {
           return;
         }
         if (!lla.field_b) {
-          dba.a(var2, (byte) 101);
+          C2SSubmitSettingsPacket.a(var2, (byte) 101);
           return;
         }
         if (!av.field_e &&
           !vpa.a(109)) {
           ima.a(100.0f, WindZoneBehaviour.field_u, -75);
-          dba.a(var2, (byte) 111);
+          C2SSubmitSettingsPacket.a(var2, (byte) 111);
           return;
         }
         cna.field_a = true;
@@ -56,8 +56,8 @@ abstract class rfa extends AppletGameShell implements sia {
             this.g((byte) -126);
             this.p(22);
             this.d((byte) 87);
-            vca.field_c[9] = -1;
-            vca.field_c[10] = -1;
+            S2CEventPacket.field_c[9] = -1;
+            S2CEventPacket.field_c[10] = -1;
             kra.field_c = new Vector();
             aca.a((sia) (this), 19711);
           } catch (RuntimeException runtimeException) {
@@ -260,7 +260,7 @@ abstract class rfa extends AppletGameShell implements sia {
         }
     }
 
-    final void a(boolean param0) {
+    final void tick(boolean param0) {
         int stackIn_5_1 = 0;
         boolean stackIn_6_2 = false;
         int var2;
@@ -348,7 +348,7 @@ abstract class rfa extends AppletGameShell implements sia {
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
         var2 = 68 % ((param0 - 52) / 40);
-        while (cj.a(vca.field_c, 0)) {
+        while (cj.a(S2CEventPacket.field_c, 0)) {
           if (this.a(oka.field_z, vc.field_q, (byte) 105)) {
             continue;
           }

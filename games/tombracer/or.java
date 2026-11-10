@@ -71,7 +71,7 @@ class or extends fi {
         fp.a((byte) -83);
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_j = null;
         if (param0 != 24451) {
           return;

@@ -191,7 +191,7 @@ abstract class uta implements sia {
 
     abstract String[] a(boolean param0);
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_d = null;
         field_e = null;
@@ -231,7 +231,7 @@ abstract class uta implements sia {
         int var2Lifetime1;
         int var3Lifetime1;
         if (param0 != 1) {
-          uta.c(24);
+          uta.releaseStatics(24);
         }
         if (!(this.field_i.field_t + this.field_i.field_T <= 0)) {
           bea.c(this.field_i.field_q, this.field_i.field_A, this.field_a.field_qb, this.field_i.field_t, 5592405, 230);

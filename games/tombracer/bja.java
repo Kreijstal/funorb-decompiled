@@ -28,7 +28,7 @@ abstract class bja {
         ConstrainToRectangleLocomotor.a(false, -1, (byte) 92);
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 < 126) {
           field_d = (String) null;
         }

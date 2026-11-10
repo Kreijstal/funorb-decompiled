@@ -131,11 +131,11 @@ final class vm {
         lp.field_g = (this.field_d - mma.field_a) / 2;
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_a = null;
         if (param0 != 26583) {
-          vm.e(-62);
+          vm.releaseStatics(-62);
         }
     }
 

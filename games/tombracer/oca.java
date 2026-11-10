@@ -6,10 +6,10 @@ final class oca {
     static lla field_b;
     private static String field_z;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_a = null;
         if (param0) {
-          oca.a(false);
+          oca.releaseStatics(false);
           field_b = null;
           return;
         }

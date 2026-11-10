@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bga implements bo {
+final class bga implements GamePacket {
     private taa field_a;
     static AsyncRequest field_c;
     static int field_b;
     static boolean field_d;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 200) {
-          bga.a(33);
+          bga.releaseStatics(33);
           field_c = null;
           return;
         }
         field_c = null;
     }
 
-    final void a(ufa param0, byte param1) {
+    final void a(PlayerProfile param0, byte param1) {
         if (param1 > -10) {
           return;
         }
@@ -27,7 +27,7 @@ final class bga implements bo {
         }
     }
 
-    public final void a(int param0, BitPacketBuffer param1) {
+    public final void encode(int param0, BitPacketBuffer param1) {
         if (param0 != 200) {
           return;
         }
@@ -38,7 +38,7 @@ final class bga implements bo {
         }
     }
 
-    public final void a(BitPacketBuffer param0, byte param1) {
+    public final void decode(BitPacketBuffer param0, byte param1) {
         try {
           this.field_a = hka.a(0, param0);
           if (param1 != -19) {

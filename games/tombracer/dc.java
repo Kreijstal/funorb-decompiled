@@ -16,7 +16,7 @@ final class dc extends dg {
     final void a(int param0, Room param1, BitPacketBuffer param2) {
         try {
           super.a(120, param1, param2);
-          this.field_q = param2.b((byte) 44, 4);
+          this.field_q = param2.readBits((byte) 44, 4);
           if (param0 <= 119) {
             iq var5 = (iq) null;
             this.a((iq) null, 87, -34, 68, (byte) 5);
@@ -38,7 +38,7 @@ final class dc extends dg {
         try {
           super.a((byte) 85, param1);
           int var3_int = -96 / ((param0 + 8) / 40);
-          param1.a((byte) -125, this.field_q, 4);
+          param1.writeBits((byte) -125, this.field_q, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "dc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

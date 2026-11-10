@@ -135,10 +135,10 @@ final class bj extends ci {
         this.field_m[this.field_n] = this.field_m[0] + 4096;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_s = null;
         if (!param0) {
-          bj.a(true);
+          bj.releaseStatics(true);
         }
         field_p = null;
     }

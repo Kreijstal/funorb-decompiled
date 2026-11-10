@@ -74,7 +74,7 @@ final class uja {
         return (IntrusiveNode) null;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         field_a = null;
         field_c = null;

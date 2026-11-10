@@ -7,10 +7,10 @@ final class SweeperMountComponent extends kna {
     static String field_F;
     static String field_I;
 
-    public static void A(int param0) {
+    public static void releaseStatics(int param0) {
         field_I = null;
         if (param0 != 7) {
-          SweeperMountComponent.A(-16);
+          SweeperMountComponent.releaseStatics(-16);
           field_F = null;
           return;
         }
@@ -121,7 +121,7 @@ final class SweeperMountComponent extends kna {
     final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
-          param1.a((byte) -126, dqa.a(true, this.field_G, 5), 5);
+          param1.writeBits((byte) -126, dqa.a(true, this.field_G, 5), 5);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ona.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -138,7 +138,7 @@ final class SweeperMountComponent extends kna {
         super(param0, param1, param2, param3);
         this.field_G = 4;
         try {
-          this.field_G = CoinItemComponent.a(true, 5, param2.b((byte) 44, 5));
+          this.field_G = CoinItemComponent.a(true, 5, param2.readBits((byte) 44, 5));
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ona.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

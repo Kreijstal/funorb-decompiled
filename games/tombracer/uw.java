@@ -80,7 +80,7 @@ final class uw {
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           field_g = (wv[]) null;
         }

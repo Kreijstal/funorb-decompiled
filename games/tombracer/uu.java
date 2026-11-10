@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uu implements bo {
+final class uu implements GamePacket {
     static ht field_a;
     static int field_c;
     private int field_b;
@@ -44,7 +44,7 @@ final class uu implements bo {
           var12 = var13;
           var8 = var12;
           if (param1 != -81) {
-            uu.a(25);
+            uu.releaseStatics(25);
           }
           for (var9 = 0; var9 < 4; var9++) {
             var8[var9] = pb.field_n.nextInt();
@@ -106,14 +106,14 @@ final class uu implements bo {
         }
     }
 
-    public final void a(BitPacketBuffer param0, byte param1) {
+    public final void decode(BitPacketBuffer param0, byte param1) {
         try {
-          param0.h((byte) 122);
+          param0.beginBitAccess((byte) 122);
           if (param1 != -19) {
             this.field_b = 121;
           }
-          this.field_b = param0.b((byte) 44, 2);
-          param0.i((byte) 98);
+          this.field_b = param0.readBits((byte) 44, 2);
+          param0.endBitAccess((byte) 98);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "uu.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -153,21 +153,21 @@ final class uu implements bo {
         }
     }
 
-    public final void a(int param0, BitPacketBuffer param1) {
+    public final void encode(int param0, BitPacketBuffer param1) {
         try {
           if (param0 != 200) {
             BitPacketBuffer var4 = (BitPacketBuffer) null;
-            this.a((BitPacketBuffer) null, (byte) 46);
+            this.decode((BitPacketBuffer) null, (byte) 46);
           }
-          param1.i(8);
-          param1.a((byte) -125, this.field_b, 2);
-          param1.k(param0 ^ -1826190742);
+          param1.beginBitWrite(8);
+          param1.writeBits((byte) -125, this.field_b, 2);
+          param1.endBitWrite(param0 ^ -1826190742);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "uu.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           return;
         }

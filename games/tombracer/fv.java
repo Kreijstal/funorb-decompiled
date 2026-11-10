@@ -15,7 +15,7 @@ final class fv {
 
     final static void a(byte param0, int param1, long param2) {
         BitPacketBuffer var4 = ql.field_k;
-        var4.k(param1, -2988);
+        var4.writeCipheredOpcode(param1, -2988);
         var4.position = var4.position + 1;
         int var5 = var4.position;
         var4.i(6, 0);
@@ -65,7 +65,7 @@ final class fv {
         return false;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         field_b = null;
         int var1 = 28 / ((param0 - 3) / 37);

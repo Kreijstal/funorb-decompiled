@@ -18,7 +18,7 @@ final class jn extends we {
         return this.field_m[param0].e(param1 ^ -164);
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 72) {
           return;
         }
@@ -94,7 +94,7 @@ final class jn extends we {
         ua.a(4, qr.field_v, rka.a(td.field_r, true), 600, -1, param1 + 72, 11288327);
         var16 = IntrusiveDeque.field_d[td.field_r];
         var4 = var16;
-        var5 = up.field_h[td.field_r];
+        var5 = Effect.field_h[td.field_r];
         ura.a(-10985);
         var6 = Math.max(var5.length, var16.length);
         var7 = 80 + param1;

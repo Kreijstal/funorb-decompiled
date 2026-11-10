@@ -121,7 +121,7 @@ final class PortalComponent extends kna {
         return 3;
     }
 
-    public static void e(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           return;
         }

@@ -12,7 +12,7 @@ final class to extends za {
 
     final void b(byte param0) {
         if (param0 != 30) {
-          to.c(53);
+          to.releaseStatics(53);
         }
         this.field_h.a();
     }
@@ -27,7 +27,7 @@ final class to extends za {
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         field_n = null;
         field_i = null;

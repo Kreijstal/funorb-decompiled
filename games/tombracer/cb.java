@@ -162,7 +162,7 @@ final class cb implements ks {
         try {
           this.a(1, param1, 0, param2);
           if (!param0) {
-            cb.d(-3);
+            cb.releaseStatics(-3);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "cb.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -221,7 +221,7 @@ final class cb implements ks {
         super.finalize();
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 36053) {
           field_i = (nh[]) null;
           field_i = null;

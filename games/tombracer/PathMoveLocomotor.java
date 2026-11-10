@@ -43,22 +43,22 @@ final class PathMoveLocomotor extends Locomotor {
         try {
           this.field_t = new gea(param0.field_E, param1);
           if (7 < param0.field_E) {
-            this.field_r = this.a(param1.b((byte) 44, 8), false);
+            this.field_r = this.a(param1.readBits((byte) 44, 8), false);
           } else {
-            this.field_r = param1.b((byte) 44, 4) << 16;
+            this.field_r = param1.readBits((byte) 44, 4) << 16;
           }
           if (param0.field_E < 11) {
             stackIn_7_0 = this.field_t;
-            stackIn_8_1 = (1 == param1.b((byte) 44, 1));
+            stackIn_8_1 = (1 == param1.readBits((byte) 44, 1));
             ((gea) (Object) stackIn_7_0).a(stackIn_8_1, 1);
           }
           if (param0.field_E >= 12) {
-            stackIn_13_1 = (param1.b((byte) 44, 1) == 1);
+            stackIn_13_1 = (param1.readBits((byte) 44, 1) == 1);
             this.field_o = stackIn_13_1;
             if (this.field_o) {
-              stackIn_17_1 = (param1.b((byte) 44, 1) == 1);
+              stackIn_17_1 = (param1.readBits((byte) 44, 1) == 1);
               this.field_u = stackIn_17_1;
-              this.field_v = param1.b((byte) 44, 12);
+              this.field_v = param1.readBits((byte) 44, 12);
             }
           }
           return;
@@ -179,7 +179,7 @@ final class PathMoveLocomotor extends Locomotor {
             this.field_n.a((byte) -77, var13Lifetime6, var14Lifetime6);
             return;
           }
-          var11Lifetime6 = cf.a(8192, -16390, var10, this.field_n.g(-25787));
+          var11Lifetime6 = S2CRoundResultPacket.a(8192, -16390, var10, this.field_n.g(-25787));
           var12Lifetime6 = ua.a(var11Lifetime6, 39);
           if (this.field_v == 0) {
             this.field_n.c(false, -var11Lifetime6);
@@ -247,7 +247,7 @@ final class PathMoveLocomotor extends Locomotor {
           this.field_n.a((byte) -77, var13Lifetime2, var14Lifetime2);
           return;
         }
-        var11Lifetime3 = cf.a(8192, -16390, var10Lifetime1, this.field_n.g(-25787));
+        var11Lifetime3 = S2CRoundResultPacket.a(8192, -16390, var10Lifetime1, this.field_n.g(-25787));
         var12Lifetime3 = ua.a(var11Lifetime3, 39);
         if (this.field_v == 0) {
           this.field_n.c(false, -var11Lifetime3);
@@ -308,11 +308,11 @@ final class PathMoveLocomotor extends Locomotor {
             this.field_o = true;
           }
           this.field_t.a(param0, 0);
-          param0.a((byte) 54, this.b(0, this.field_r), 8);
-          param0.a((byte) -127, !this.field_o ? 0 : 1, 1);
+          param0.writeBits((byte) 54, this.b(0, this.field_r), 8);
+          param0.writeBits((byte) -127, !this.field_o ? 0 : 1, 1);
           if (this.field_o) {
-            param0.a((byte) -126, this.field_u ? 1 : 0, 1);
-            param0.a((byte) -128, this.field_v, 12);
+            param0.writeBits((byte) -126, this.field_u ? 1 : 0, 1);
+            param0.writeBits((byte) -128, this.field_v, 12);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ro.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

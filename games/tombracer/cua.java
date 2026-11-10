@@ -6,7 +6,7 @@ final class cua {
     private OpenGlToolkit field_a;
     long field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 3) {
           return;
         }
@@ -29,14 +29,14 @@ final class cua {
           var7.field_Cb = null;
         } else {
           var4 = ql.field_k;
-          var4.k(param2, param1 ^ -2985);
+          var4.writeCipheredOpcode(param2, param1 ^ -2985);
           var4.i(3, param1 - 3);
           var4.i(11, 0);
           var4.f(-1477662136, param0);
           return;
         }
         var4Lifetime1 = ql.field_k;
-        var4Lifetime1.k(param2, param1 ^ -2985);
+        var4Lifetime1.writeCipheredOpcode(param2, param1 ^ -2985);
         var4Lifetime1.i(3, param1 - 3);
         var4Lifetime1.i(11, 0);
         var4Lifetime1.f(-1477662136, param0);

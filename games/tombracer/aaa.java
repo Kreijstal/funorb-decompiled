@@ -12,7 +12,7 @@ final class aaa {
     static String field_e;
     boolean field_g;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 84 % ((83 - param0) / 35);
         field_d = null;
         field_e = null;

@@ -5,7 +5,7 @@ final class jta extends qr {
     static int[] field_z;
     private IntrusiveDeque field_y;
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           field_z = (int[]) null;
           field_z = null;

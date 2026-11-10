@@ -6,7 +6,7 @@ final class rga {
     int field_a;
     private int field_c;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 <= 56) {
           field_b = (int[]) null;
         }
@@ -86,7 +86,7 @@ final class rga {
             nra.a((byte) -55, param5, param6, vaa.field_a[var12], param3);
           }
           if (param1 <= 97) {
-            rga.a((byte) -93);
+            rga.releaseStatics((byte) -93);
           }
           for (var12Lifetime1 = param7; var12Lifetime1 > var9; var12Lifetime1--) {
             nra.a((byte) -55, param5, param6, vaa.field_a[var12Lifetime1], param3);

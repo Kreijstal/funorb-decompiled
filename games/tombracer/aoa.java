@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aoa implements bo {
-    private ufa field_a;
+final class aoa implements GamePacket {
+    private PlayerProfile field_a;
     static apa field_b;
 
-    public final void a(int param0, BitPacketBuffer param1) {
+    public final void encode(int param0, BitPacketBuffer param1) {
         if (param0 != 200) {
           return;
         }
@@ -38,22 +38,22 @@ final class aoa implements bo {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         int var1 = 20 % ((-9 - param0) / 59);
     }
 
-    final ufa a(boolean param0) {
+    final PlayerProfile a(boolean param0) {
         if (param0) {
-          this.field_a = (ufa) null;
+          this.field_a = (PlayerProfile) null;
           return this.field_a;
         }
         return this.field_a;
     }
 
-    public final void a(BitPacketBuffer param0, byte param1) {
+    public final void decode(BitPacketBuffer param0, byte param1) {
         try {
-          this.field_a = new ufa();
+          this.field_a = new PlayerProfile();
           this.field_a.a(param0, (byte) 122);
           if (param1 != -19) {
             field_b = (apa) null;

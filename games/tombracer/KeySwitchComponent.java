@@ -9,7 +9,7 @@ final class KeySwitchComponent extends SwitchComponent {
     static String field_K;
     static String field_M;
 
-    public static void s(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_J = null;
         field_K = null;
         field_L = null;
@@ -101,7 +101,7 @@ final class KeySwitchComponent extends SwitchComponent {
     final static void a(String param0, File param1, int param2) {
         try {
           if (param2 != 1) {
-            KeySwitchComponent.s((byte) -30);
+            KeySwitchComponent.releaseStatics((byte) -30);
           }
           gj.field_d.put(param0, param1);
         } catch (RuntimeException runtimeException) {

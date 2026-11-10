@@ -22,7 +22,7 @@ abstract class SwitchComponent extends kna {
           super.a(param0, param1);
           this.field_G.a(param1, 115, this.o((byte) -39));
           if (this.r((byte) 93)) {
-            param1.a((byte) -19, !this.field_I ? 0 : 1, 1);
+            param1.writeBits((byte) -19, !this.field_I ? 0 : 1, 1);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "fqa.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -92,7 +92,7 @@ abstract class SwitchComponent extends kna {
         try {
           this.field_G = new f(this.B(31609), 0, param0.field_E, param2);
           if (this.r((byte) 93)) {
-            this.field_I = param2.b((byte) 44, 1) == 1 ? true : false;
+            this.field_I = param2.readBits((byte) 44, 1) == 1 ? true : false;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "fqa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');

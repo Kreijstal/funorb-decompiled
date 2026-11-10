@@ -4,7 +4,7 @@
 final class hw {
     static jea field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > -44) {
           field_a = (jea) null;
           field_a = null;
@@ -13,7 +13,7 @@ final class hw {
         field_a = null;
     }
 
-    final static void a(byte param0, int param1, int param2, bo param3) {
+    final static void a(byte param0, int param1, int param2, GamePacket param3) {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -30,13 +30,13 @@ final class hw {
             return;
           }
           var9 = ql.field_k;
-          var9.k(param2, -2988);
+          var9.writeCipheredOpcode(param2, -2988);
           if (param0 != -111) {
             return;
           }
           var9.position = var9.position + param1;
           var5 = var9.position;
-          param3.a(200, var9);
+          param3.encode(200, var9);
           var6 = -var5 + var9.position;
           var7 = param1;
           if (0 == var7) {

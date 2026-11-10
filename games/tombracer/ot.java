@@ -11,7 +11,7 @@ final class ot extends lba {
         super(8, 5, 8, 8, 2, 0.10000000149011612f, 0.550000011920929f, 3.0f);
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_w = null;
         field_t = null;
         if (param0 > -66) {
@@ -40,7 +40,7 @@ final class ot extends lba {
         if (!param0) {
           return;
         }
-        ot.b((byte) 20);
+        ot.releaseStatics((byte) 20);
     }
 
     final static Sprite a(int param0, int param1, cn param2, boolean param3) {

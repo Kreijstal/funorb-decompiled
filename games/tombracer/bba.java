@@ -15,7 +15,7 @@ final class bba {
         return this.field_b;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -28) {
           return;
         }
@@ -72,7 +72,7 @@ final class bba {
           iea.a(param2, param14, 2, param13);
           TrackingCrusherComponent.A(12);
           RoomComponent.a(false);
-          gpa.a(83);
+          SwitchableId.a(83);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

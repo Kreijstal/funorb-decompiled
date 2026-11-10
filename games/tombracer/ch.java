@@ -53,7 +53,7 @@ final class ch implements Runnable {
         this.field_b = false;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         int var1 = 56 / ((31 - param0) / 61);
     }

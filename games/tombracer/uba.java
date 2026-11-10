@@ -46,11 +46,11 @@ final class uba extends kma implements cd, eaa {
         return this.field_i.i((byte) 64);
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_g = null;
         field_h = null;
         if (param0 != -128) {
-          uba.b((byte) -33);
+          uba.releaseStatics((byte) -33);
         }
     }
 

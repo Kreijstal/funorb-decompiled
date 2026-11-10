@@ -64,7 +64,7 @@ final class nma extends rra {
         this.field_k = param3;
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           field_m = (kra) null;
           field_l = null;

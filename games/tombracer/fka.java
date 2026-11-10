@@ -307,7 +307,7 @@ final class fka {
         return 0;
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_x = null;
         field_w = null;
         field_b = null;

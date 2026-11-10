@@ -81,7 +81,7 @@ final class hk {
               }
             }
           }
-          this.field_f = this.field_b.a(var23, gpa.field_a, (byte) -41, 128, 128, 16);
+          this.field_f = this.field_b.a(var23, SwitchableId.field_a, (byte) -41, 128, 128, 16);
         }
         int var2 = -20 % ((23 - param0) / 48);
         return null != this.field_f ? true : false;
@@ -292,7 +292,7 @@ final class hk {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 8) {
           field_e = (jea) null;
         }
@@ -301,7 +301,7 @@ final class hk {
 
     final static boolean a(int param0, int param1, int param2) {
         if (param2 > -81) {
-          hk.a(-35);
+          hk.releaseStatics(-35);
         }
         return (param0 & 50560) != 0 ? true : false;
     }

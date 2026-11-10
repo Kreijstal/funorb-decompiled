@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gpa {
+final class SwitchableId {
     static int field_b;
-    private boolean field_c;
+    private boolean dud;
     static ft field_a;
-    int field_d;
+    int id;
 
     final static void a(int param0) {
         rg.a((byte) -114);
         oo.a(vda.field_m[0].field_n, (byte) -104, mna.field_d, io.field_a, wg.field_i, di.field_a);
         if (param0 < 50) {
-          gpa.a(76);
+          SwitchableId.a(76);
         }
     }
 
@@ -19,10 +19,10 @@ final class gpa {
         if (param0 != 59) {
           field_b = 33;
         }
-        return this.field_c;
+        return this.dud;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_a = null;
         if (param0) {
           field_a = (ft) null;
@@ -30,11 +30,11 @@ final class gpa {
     }
 
     public final String toString() {
-        return "SwitchableID: " + this.field_d + " dud: " + this.field_c;
+        return "SwitchableID: " + this.id + " dud: " + this.dud;
     }
 
-    gpa(int param0) {
-        this.field_d = param0;
+    SwitchableId(int param0) {
+        this.id = param0;
     }
 
     final static ata a(int param0, PacketBuffer param1) {
@@ -46,7 +46,7 @@ final class gpa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 4) {
-            gpa.a(true);
+            SwitchableId.releaseStatics(true);
           }
           stackIn_3_0 = new ata(param1.b(false), param1.b(false), param1.b(false), param1.b(false), param1.a(param0 - 32772), param1.a(-32768), param1.h(255));
           return stackIn_3_0;
@@ -68,7 +68,7 @@ final class gpa {
         if (param0 < 13) {
           return 49;
         }
-        return this.field_d;
+        return this.id;
     }
 
     final static boolean a(byte param0, java.applet.Applet param1) {

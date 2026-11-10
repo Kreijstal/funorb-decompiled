@@ -72,7 +72,7 @@ final class bq {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = -31 / ((-57 - param0) / 53);
         field_b = null;
         field_h = null;

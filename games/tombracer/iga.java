@@ -23,7 +23,7 @@ final class iga extends ija implements java.awt.image.ImageProducer {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_m = null;
         field_k = null;
         int var1 = 126 / ((23 - param0) / 51);
@@ -89,7 +89,7 @@ final class iga extends ija implements java.awt.image.ImageProducer {
         java.awt.Shape var9 = null;
         try {
           if (param3 < 61) {
-            iga.a(90);
+            iga.releaseStatics(90);
           }
           this.a(param4, param0, param7, param2, true);
           var9 = param6.getClip();

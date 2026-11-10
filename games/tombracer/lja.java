@@ -14,7 +14,7 @@ final class lja {
     String field_i;
     static String field_a;
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         int var1 = 37 % ((7 - param0) / 44);
         field_j = null;
         field_a = null;
@@ -211,7 +211,7 @@ final class lja {
         int var5;
         var5 = TombRacer.field_G ? 1 : 0;
         if (param1 != -39) {
-          lja.b((byte) 36);
+          lja.releaseStatics((byte) 36);
         }
         if (param0 == 8) {
           no.a(this.field_i, this.field_g, (byte) 120);

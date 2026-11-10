@@ -49,10 +49,10 @@ final class qf extends PacketBuffer {
         return param3;
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_j = null;
         if (param0 != -93) {
-          qf.g((byte) -23);
+          qf.releaseStatics((byte) -23);
           field_k = null;
           field_l = null;
           return;

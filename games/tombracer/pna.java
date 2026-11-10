@@ -73,7 +73,7 @@ final class pna extends gda {
         this.field_m = -(var7 * var3) + var2 * this.field_m;
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = -86 / ((param0 - 40) / 50);
         field_k = null;
     }

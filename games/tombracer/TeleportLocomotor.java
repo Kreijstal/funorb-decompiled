@@ -164,12 +164,12 @@ final class TeleportLocomotor extends Locomotor {
         try {
           this.field_q = new gea(param0.field_E, param1);
           if (param0.field_E < 11) {
-            this.field_q.a(1 == param1.b((byte) 44, 1) ? true : false, 1);
+            this.field_q.a(1 == param1.readBits((byte) 44, 1) ? true : false, 1);
           }
           this.field_s = new mg(param0.field_E, param1);
           if (11 <= param0.field_E) {
-            this.field_p = param1.b((byte) 44, 1) == 1 ? true : false;
-            this.field_u = param1.b((byte) 44, 8);
+            this.field_p = param1.readBits((byte) 44, 1) == 1 ? true : false;
+            this.field_u = param1.readBits((byte) 44, 8);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "lo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -185,8 +185,8 @@ final class TeleportLocomotor extends Locomotor {
           super.a(param0, (byte) -110);
           this.field_q.a(param0, 0);
           this.field_s.a(15637, param0);
-          param0.a((byte) -126, this.field_p ? 1 : 0, 1);
-          param0.a((byte) -127, this.field_u, 8);
+          param0.writeBits((byte) -126, this.field_p ? 1 : 0, 1);
+          param0.writeBits((byte) -127, this.field_u, 8);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "lo.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -259,10 +259,10 @@ final class TeleportLocomotor extends Locomotor {
         return 15;
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         field_o = null;
         if (param0 != 1) {
-          TeleportLocomotor.e(-61);
+          TeleportLocomotor.releaseStatics(-61);
         }
     }
 

@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lta implements bo {
+final class lta implements GamePacket {
     static jea field_a;
 
-    public final void a(BitPacketBuffer param0, byte param1) {
+    public final void decode(BitPacketBuffer param0, byte param1) {
         try {
           if (param1 != -19) {
             v var4 = (v) null;
@@ -15,11 +15,11 @@ final class lta implements bo {
         }
     }
 
-    public final void a(int param0, BitPacketBuffer param1) {
+    public final void encode(int param0, BitPacketBuffer param1) {
         try {
           if (param0 != 200) {
             BitPacketBuffer var4 = (BitPacketBuffer) null;
-            this.a((BitPacketBuffer) null, (byte) 94);
+            this.decode((BitPacketBuffer) null, (byte) 94);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "lta.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -62,7 +62,7 @@ final class lta implements bo {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 >= -54) {
           field_a = (jea) null;
           field_a = null;

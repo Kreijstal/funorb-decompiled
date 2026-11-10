@@ -18,7 +18,7 @@ final class fua implements isa {
         return (param1 & 32768) != 0 ? true : false;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         field_a = null;
         if (param0 < -118) {

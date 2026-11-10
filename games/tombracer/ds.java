@@ -117,7 +117,7 @@ final class ds {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           return;
         }
@@ -145,7 +145,7 @@ final class ds {
     final void a(int param0, byte param1, int param2) {
         this.field_o[param0] = fh.a(this.field_o[param0], 1 << param2);
         if (param1 != -52) {
-          ds.a(false);
+          ds.releaseStatics(false);
         }
     }
 

@@ -5,7 +5,7 @@ final class WindZoneBehaviour extends Behaviour {
     private boolean field_t;
     private int field_r;
     private int field_q;
-    static up field_o;
+    static Effect field_o;
     static String field_u;
     static String field_s;
     private pc field_v;
@@ -20,7 +20,7 @@ final class WindZoneBehaviour extends Behaviour {
         this.field_r = param1;
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 91) {
           return;
         }
@@ -37,9 +37,9 @@ final class WindZoneBehaviour extends Behaviour {
         this.field_p = 1;
         this.field_v = new pc();
         try {
-          this.field_q = param1.b((byte) 44, 2);
-          this.field_r = param1.b((byte) 44, 4);
-          this.field_p = param1.b((byte) 44, 4);
+          this.field_q = param1.readBits((byte) 44, 2);
+          this.field_r = param1.readBits((byte) 44, 4);
+          this.field_p = param1.readBits((byte) 44, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "th.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -230,16 +230,16 @@ final class WindZoneBehaviour extends Behaviour {
         if (param1 != 8) {
           return true;
         }
-        stackIn_7_0 = (bqa.a(540800, param0, param2)) || (no.a(param2, param0, param1 ^ 36872));
+        stackIn_7_0 = (S2CNewRoomPacket.a(540800, param0, param2)) || (no.a(param2, param0, param1 ^ 36872));
         return stackIn_7_0;
     }
 
     final void a(boolean param0, BitPacketBuffer param1) {
         try {
           super.a(param0, param1);
-          param1.a((byte) -128, this.field_q, 2);
-          param1.a((byte) 44, this.field_r, 4);
-          param1.a((byte) -128, this.field_p, 4);
+          param1.writeBits((byte) -128, this.field_q, 2);
+          param1.writeBits((byte) 44, this.field_r, 4);
+          param1.writeBits((byte) -128, this.field_p, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "th.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -269,7 +269,7 @@ final class WindZoneBehaviour extends Behaviour {
     static {
         field_u = "Loading extra data";
         field_s = "Fullscreen mode was cancelled after a delay of 10 seconds. If you were unable to accept fullscreen mode during this time, there may be a problem with your configuration. You could try restarting your browser and trying again.";
-        field_o = new up(4, 50);
+        field_o = new Effect(4, 50);
         field_n = "We closed the connection because the game was left unattended for 20 minutes. Please feel free to reconnect immediately if you are there.";
     }
 }

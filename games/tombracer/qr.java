@@ -291,15 +291,15 @@ abstract class qr extends ae implements tpa {
           AllPlatformsMazeComponent.field_M.field_n = BoulderComponent.a(param4, "lobby", 5, "button_active");
           AllPlatformsMazeComponent.field_M.field_M = BoulderComponent.a(param4, "lobby", 5, "button_disabled");
           AllPlatformsMazeComponent.field_M.field_z = 1;
-          up.field_a = new jea(0L, PressureSwitchBehaviour.field_p);
-          up.field_a.field_z = 1;
-          up.field_a.field_w = rfa.a(BoulderComponent.a(param4, "lobby", 5, "tab_inactive"), 113);
-          up.field_a.field_C = rfa.a(BoulderComponent.a(param4, "lobby", 5, "tab_mouseover"), 113);
-          up.field_a.field_n = var14;
+          Effect.field_a = new jea(0L, PressureSwitchBehaviour.field_p);
+          Effect.field_a.field_z = 1;
+          Effect.field_a.field_w = rfa.a(BoulderComponent.a(param4, "lobby", 5, "tab_inactive"), 113);
+          Effect.field_a.field_C = rfa.a(BoulderComponent.a(param4, "lobby", 5, "tab_mouseover"), 113);
+          Effect.field_a.field_n = var14;
           js.field_d = new jea(0L, (jea) null);
           js.field_d.field_w = Player.c(206, -1, 3, 1856141, -113, 1127256);
-          cfa.field_c = new jea(0L, (jea) null);
-          cfa.field_c.field_w = Player.c(290, -1, 3, 11579568, -120, 6052956);
+          CommonChooseReward.field_c = new jea(0L, (jea) null);
+          CommonChooseReward.field_c.field_w = Player.c(290, -1, 3, 11579568, -120, 6052956);
           hg.field_g = new jea(0L, var15);
           hg.field_g.field_W = 1;
           hg.field_g.field_v = 1;
@@ -716,7 +716,7 @@ abstract class qr extends ae implements tpa {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           return;
         }

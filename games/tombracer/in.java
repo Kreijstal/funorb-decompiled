@@ -95,9 +95,9 @@ final class in {
         qna.a(1, param1, var2);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
-          in.a(true);
+          in.releaseStatics(true);
           field_a = null;
           return;
         }

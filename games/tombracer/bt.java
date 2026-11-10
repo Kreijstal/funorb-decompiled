@@ -18,7 +18,7 @@ final class bt implements fo {
         return this.field_a.c((byte) 112) + this.field_e.f(0);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -1) {
           return;
         }
@@ -106,7 +106,7 @@ final class bt implements fo {
 
     public final int e(byte param0) {
         if (param0 >= -86) {
-          bt.a(-6);
+          bt.releaseStatics(-6);
           return this.field_a.e((byte) -94);
         }
         return this.field_a.e((byte) -94);

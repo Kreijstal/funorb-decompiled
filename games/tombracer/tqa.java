@@ -111,8 +111,8 @@ final class tqa implements fo {
           this.field_p.d(8);
           if (param2.field_E > 8) {
             if (param2.field_E <= 9) {
-              param1.b((byte) 44, 8);
-              param1.b((byte) 44, 8);
+              param1.readBits((byte) 44, 8);
+              param1.readBits((byte) 44, 8);
             }
             for (var4_int = 0; var4_int < this.field_a; var4_int++) {
               for (var5 = 0; this.field_h > var5; var5++) {
@@ -120,7 +120,7 @@ final class tqa implements fo {
               }
             }
             if (10 <= param2.field_E) {
-              var4_intLifetime1 = param1.b((byte) 44, 8);
+              var4_intLifetime1 = param1.readBits((byte) 44, 8);
               for (var5Lifetime1 = 0; var5Lifetime1 < var4_intLifetime1; var5Lifetime1++) {
                 var6 = new lk(param2, param1);
                 this.field_p.b((byte) -77, var6);
@@ -190,7 +190,7 @@ final class tqa implements fo {
         return stackIn_8_0;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 < 24) {
           return;
         }
@@ -507,7 +507,7 @@ final class tqa implements fo {
               this.a(-98, var4, var3_int).a(param1, -78);
             }
           }
-          param1.a((byte) -128, this.field_p.a((byte) -16), param0);
+          param1.writeBits((byte) -128, this.field_p.a((byte) -16), param0);
           var6 = (lk) (this.field_p.f(-80));
           while (var6 != null) {
             var6.a((byte) -128, param1);

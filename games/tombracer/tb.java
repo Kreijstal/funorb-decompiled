@@ -5,10 +5,10 @@ final class tb extends ela {
     static mla field_p;
     static int field_o;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_p = null;
         if (param0 > -120) {
-          tb.a((byte) 123);
+          tb.releaseStatics((byte) 123);
         }
     }
 

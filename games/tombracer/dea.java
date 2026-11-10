@@ -160,7 +160,7 @@ final class dea {
         this(0);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           field_a = (mb) null;
           field_a = null;

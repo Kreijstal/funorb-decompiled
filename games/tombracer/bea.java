@@ -1049,7 +1049,7 @@ final class bea {
         }
     }
 
-    public static void d() {
+    public static void releaseStatics() {
         field_l = null;
         field_f = null;
         field_c = null;
