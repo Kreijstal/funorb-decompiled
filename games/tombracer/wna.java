@@ -82,7 +82,7 @@ final class wna extends TextureOperator {
               var2 = 255;
             }
           }
-          this.field_m[var7] = fh.a(var5, fh.a(var2 << 16, var4 << 8));
+          this.field_m[var7] = WallTile.a(var5, WallTile.a(var2 << 16, var4 << 8));
         }
         return;
     }
@@ -426,7 +426,7 @@ final class wna extends TextureOperator {
           var6 = var14[0];
           var7 = var14[1];
           var8 = var14[2];
-          for (var9 = 0; ns.field_g > var9; var9++) {
+          for (var9 = 0; ns.textureWidth > var9; var9++) {
             var4 = var17[var9] >> 4;
             if (var4 < 0) {
               var4 = 0;
@@ -449,7 +449,7 @@ final class wna extends TextureOperator {
         var6Lifetime1 = var14[0];
         var7Lifetime1 = var14[1];
         var8Lifetime1 = var14[2];
-        for (var9Lifetime1 = 0; ns.field_g > var9Lifetime1; var9Lifetime1++) {
+        for (var9Lifetime1 = 0; ns.textureWidth > var9Lifetime1; var9Lifetime1++) {
           var4Lifetime1 = var17Lifetime1[var9Lifetime1] >> 4;
           if (var4Lifetime1 < 0) {
             var4Lifetime1 = 0;

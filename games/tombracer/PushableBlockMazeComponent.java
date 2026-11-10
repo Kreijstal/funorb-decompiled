@@ -85,7 +85,7 @@ final class PushableBlockMazeComponent extends MazeComponent {
           var6 = new DamageableBehaviour(param2, param1);
           var6.b((byte) 0, true);
           var6.b(1, 50, param0 - 5);
-          var7 = var6.j((byte) -112);
+          var7 = var6.getVulnerabilities((byte) -112);
           var7.setAll(false, 67);
           var7.set(0, -17075, true);
           var10.addBehaviour((byte) 83, (Behaviour) (var6));

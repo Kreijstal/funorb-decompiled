@@ -483,7 +483,7 @@ class HotspotTextWidget extends FocusableWidget {
           var1 = var6;
           var17 = DropdownList.field_D.field_f;
           for (var3 = 0; var3 < 8; var3++) {
-            var6[var3] = fh.a(var13[var3], var17[var3]);
+            var6[var3] = WallTile.a(var13[var3], var17[var3]);
           }
           var14 = pq.field_e;
           var12 = var14;

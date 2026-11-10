@@ -23,7 +23,7 @@ final class fj {
         this.field_d = param1;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, qh param5, int param6) {
+    final void a(int param0, int param1, int param2, int param3, int param4, MatchScreen param5, int param6) {
         RuntimeException stackIn_68_0 = null;
         StringBuilder stackIn_68_1 = null;
         String stackIn_69_2 = null;
@@ -70,7 +70,7 @@ final class fj {
           if (!param5.f(-12963, param0)) {
             return;
           }
-          var38 = param5.field_k;
+          var38 = param5.matchState;
           var39 = var38;
           if (var39.b((byte) 90, param0)) {
             return;

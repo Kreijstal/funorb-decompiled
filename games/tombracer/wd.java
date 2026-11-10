@@ -260,7 +260,7 @@ final class wd implements dv {
                 var20 = var20 + ((16764137 & var19) >> 16);
                 incrementValue$9 = var15;
                 var15++;
-                var13[incrementValue$9] = fh.a(SnakePitBehaviour.c(1020, var22) >> 2, fh.a(fh.a(SnakePitBehaviour.c(var23 << 22, -16777216), SnakePitBehaviour.c(1020, var20) << 14), SnakePitBehaviour.c(var21 << 6, 65280)));
+                var13[incrementValue$9] = WallTile.a(SnakePitBehaviour.c(1020, var22) >> 2, WallTile.a(WallTile.a(SnakePitBehaviour.c(var23 << 22, -16777216), SnakePitBehaviour.c(1020, var20) << 14), SnakePitBehaviour.c(var21 << 6, 65280)));
               }
               var25 = var25 + param6;
               var24 = var24 + param6;

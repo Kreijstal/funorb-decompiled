@@ -1445,7 +1445,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("name_bruce", (byte) 109);
                 if (var2 != null) {
-                  dfa.field_a = jaa.decodeText((byte) 62, var2);
+                  GameScreen.field_a = jaa.decodeText((byte) 62, var2);
                 }
                 var2 = mt.readTextEntry("name_feng", (byte) 121);
                 if (null != var2) {

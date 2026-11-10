@@ -201,15 +201,15 @@ final class nw extends TextureOperator {
         }
         var3 = this.field_i.a((byte) -109, param1);
         if (this.field_i.field_d) {
-          var4 = sj.field_b[param1] * this.field_m + 2048;
+          var4 = sj.textureRowCoords[param1] * this.field_m + 2048;
           var5 = var4 >> 12;
           var6 = var5 + 1;
-          for (var14 = 0; var14 < ns.field_g; var14++) {
+          for (var14 = 0; var14 < ns.textureWidth; var14++) {
             CachedArchiveSource.field_l = 2147483647;
             rp.field_h = 2147483647;
             CorpseList.field_b = 2147483647;
             TextFieldValidator.field_h = 2147483647;
-            var15 = 2048 + ht.field_Fb[var14] * this.field_t;
+            var15 = 2048 + ht.textureColumnCoords[var14] * this.field_t;
             var16 = var15 >> 12;
             var17 = var16 + 1;
             for (var8 = var5 - 1; var8 <= var6; var8++) {
@@ -424,7 +424,7 @@ final class nw extends TextureOperator {
         if (param0 != 116) {
           return;
         }
-        this.field_q = pca.a(this.field_n, (byte) 76);
+        this.field_q = TileGridCell.a(this.field_n, (byte) 76);
         this.c(-94);
     }
 

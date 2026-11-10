@@ -763,7 +763,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               if (param0) {
                 this.paint((java.awt.Graphics) null);
               }
-              dfa.field_e = di.a(49);
+              GameScreen.field_e = di.a(49);
               dupTemp$0 = new PlatformTaskDispatcher(param5, param6, param3, true);
               dsa.field_c = dupTemp$0;
               nea.field_c = dupTemp$0;

@@ -40,13 +40,13 @@ final class vla extends TextureOperator {
           var6 = var23[0];
           var7 = var23[1];
           var8 = var23[2];
-          for (var9 = 0; var9 < ns.field_g; var9++) {
+          for (var9 = 0; var9 < ns.textureWidth; var9++) {
             var10 = 255 & 255 * var30[var9] >> 12;
             var11 = this.field_n * var31[var9] >> 12;
             var12 = ColourFillOperator.field_r[var10] * var11 >> 12;
             var13 = ou.field_e[var10] * var11 >> 12;
-            var14 = (var12 >> 12) + var9 & una.field_b;
-            var15 = hba.field_b & (var13 >> 12) + param0;
+            var14 = (var12 >> 12) + var9 & una.textureWidthMask;
+            var15 = hba.textureHeightMask & (var13 >> 12) + param0;
             var32 = this.getInputColourRow(var15, 0, -1);
             var6[var9] = var32[0][var14];
             var7[var9] = var32[1][var14];
@@ -82,13 +82,13 @@ final class vla extends TextureOperator {
         if (this.field_i.field_d) {
           var26 = this.getInputMonochromeRow(1, param0 - 85, param1);
           var27 = this.getInputMonochromeRow(2, -119, param1);
-          for (var6 = 0; var6 < ns.field_g; var6++) {
+          for (var6 = 0; var6 < ns.textureWidth; var6++) {
             var7 = (4094 & var26[var6]) >> 4;
             var8 = this.field_n * var27[var6] >> 12;
             var9 = ColourFillOperator.field_r[var7] * var8 >> 12;
             var10 = ou.field_e[var7] * var8 >> 12;
-            var11 = var6 + (var9 >> 12) & una.field_b;
-            var12 = hba.field_b & (var10 >> 12) + param1;
+            var11 = var6 + (var9 >> 12) & una.textureWidthMask;
+            var12 = hba.textureHeightMask & (var10 >> 12) + param1;
             var28 = this.getInputMonochromeRow(0, -27, var12);
             var16[var6] = var28[var11];
           }

@@ -73,7 +73,7 @@ final class ColourFillOperator extends TextureOperator {
           var4 = var9[0];
           var5 = var9[1];
           var6 = var9[2];
-          for (var7 = 0; var7 < ns.field_g; var7++) {
+          for (var7 = 0; var7 < ns.textureWidth; var7++) {
             var4[var7] = this.field_n;
             var5[var7] = this.field_q;
             var6[var7] = this.field_s;

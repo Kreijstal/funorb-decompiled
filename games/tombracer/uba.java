@@ -35,7 +35,7 @@ final class uba extends kma implements TextInputListener, eaa {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
         }
-        return nia.field_m;
+        return MaskBlendOperator.field_m;
     }
 
     public final boolean isEmpty(boolean param0) {

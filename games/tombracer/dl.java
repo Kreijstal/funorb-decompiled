@@ -122,7 +122,7 @@ final class dl extends me {
         }
     }
 
-    dl(qh param0, ms param1) {
+    dl(MatchScreen param0, ms param1) {
         super(param0);
         this.field_n = new dea();
         this.field_l = 20;
@@ -233,7 +233,7 @@ final class dl extends me {
             }
             var4 = new byte[var3_int];
             param0.position = param0.position + nma.field_m.a(param0.position, (byte) 121, var3_int, param0.payload, 0, var4);
-            var5 = nia.a(var4, 0, var3_int, 255);
+            var5 = MaskBlendOperator.a(var4, 0, var3_int, 255);
             if (param2 < -18) {
               stackIn_7_0 = var5;
               return stackIn_7_0;

@@ -497,7 +497,7 @@ abstract class OpenGlTexture implements GpuTexture {
                 var19 = var19 + ((var17 & 65316) >> 8);
                 incrementValue$4 = var13;
                 var13++;
-                var11[incrementValue$4] = fh.a(SnakePitBehaviour.c(255, var20 >> 2), fh.a(fh.a(SnakePitBehaviour.c(var18, 1020) << 14, SnakePitBehaviour.c(1020, var21) << 22), SnakePitBehaviour.c(var19 << 6, 65280)));
+                var11[incrementValue$4] = WallTile.a(SnakePitBehaviour.c(255, var20 >> 2), WallTile.a(WallTile.a(SnakePitBehaviour.c(var18, 1020) << 14, SnakePitBehaviour.c(1020, var21) << 22), SnakePitBehaviour.c(var19 << 6, 65280)));
               }
               var23 = var23 + param4;
               var22 = var22 + param4;

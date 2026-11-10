@@ -20,7 +20,7 @@ final class mka {
         try {
           this.field_a.field_f = -this.field_a.field_f;
           this.a(param0, param3, (byte) -100);
-          this.field_f = dfa.a(-this.field_f, 8192, 111);
+          this.field_f = GameScreen.a(-this.field_f, 8192, 111);
           if (param1 != -61) {
             return;
           }
@@ -77,7 +77,7 @@ final class mka {
         if (null == SecondaryNodeDequeIterator.field_a) {
           return;
         }
-        v.b(param0, 0);
+        MatchProtocol.b(param0, 0);
     }
 
     final void a(int param0, int param1, RoomComponent param2) {

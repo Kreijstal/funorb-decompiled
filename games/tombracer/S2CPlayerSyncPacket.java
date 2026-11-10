@@ -35,7 +35,7 @@ final class S2CPlayerSyncPacket implements GamePacket {
         }
     }
 
-    final void apply(qh param0, v param1, byte param2) {
+    final void apply(MatchScreen param0, MatchProtocol param1, byte param2) {
         int stackIn_11_0 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -52,20 +52,20 @@ final class S2CPlayerSyncPacket implements GamePacket {
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           for (var4_int = 0; this.field_c > var4_int; var4_int++) {
-            param0.field_k.field_c.field_b[var4_int] = -1;
-            param0.field_k.field_c.field_e[var4_int] = -1;
+            param0.matchState.field_c.field_b[var4_int] = -1;
+            param0.matchState.field_c.field_e[var4_int] = -1;
           }
           for (var4_intLifetime1 = 0; var4_intLifetime1 < this.field_c; var4_intLifetime1++) {
             if (!this.field_g[var4_intLifetime1]) {
-              param0.field_k.field_c.field_b[var4_intLifetime1] = this.field_b[var4_intLifetime1];
-              param0.field_k.field_c.field_e[this.field_b[var4_intLifetime1]] = var4_intLifetime1;
+              param0.matchState.field_c.field_b[var4_intLifetime1] = this.field_b[var4_intLifetime1];
+              param0.matchState.field_c.field_e[this.field_b[var4_intLifetime1]] = var4_intLifetime1;
               if (this.field_a[var4_intLifetime1] == 0) {
-                param0.field_k.simulations[var4_intLifetime1].a(94, false);
+                param0.matchState.simulations[var4_intLifetime1].a(94, false);
               } else {
-                stackIn_11_0 = (param0.field_k.simulations[var4_intLifetime1].b(0)) ? 0 : 1;
+                stackIn_11_0 = (param0.matchState.simulations[var4_intLifetime1].b(0)) ? 0 : 1;
                 var5 = stackIn_11_0;
-                param0.field_k.simulations[var4_intLifetime1].a(84, true);
-                param0.field_k.simulations[var4_intLifetime1].tick = this.field_a[var4_intLifetime1];
+                param0.matchState.simulations[var4_intLifetime1].a(84, true);
+                param0.matchState.simulations[var4_intLifetime1].tick = this.field_a[var4_intLifetime1];
                 if (var5 != 0) {
                   param0.a(98, var4_intLifetime1);
                 }
@@ -73,7 +73,7 @@ final class S2CPlayerSyncPacket implements GamePacket {
             }
           }
           var4_intLifetime2 = 125 % ((57 - param2) / 55);
-          if (param0.field_k.field_K == 0) {
+          if (param0.matchState.field_K == 0) {
             param0.k(-1);
           }
           return;

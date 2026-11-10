@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nia extends TextureOperator {
+final class MaskBlendOperator extends TextureOperator {
     static String field_m;
 
     final int[] getMonochromeRow(int param0, int param1) {
@@ -18,7 +18,7 @@ final class nia extends TextureOperator {
           var21 = this.getInputMonochromeRow(0, -39, param1);
           var20 = this.getInputMonochromeRow(1, -74, param1);
           var19 = this.getInputMonochromeRow(2, -7, param1);
-          for (var7 = 0; ns.field_g > var7; var7++) {
+          for (var7 = 0; ns.textureWidth > var7; var7++) {
             var8 = var19[var7];
             if (var8 == 4096) {
               var3[var7] = var21[var7];
@@ -61,7 +61,7 @@ final class nia extends TextureOperator {
         int[] var56Lifetime1;
         var19 = TombRacer.field_G ? 1 : 0;
         if (param1 != -1) {
-          nia.d(86);
+          MaskBlendOperator.d(86);
         }
         var31 = this.field_h.a(param0, (byte) 113);
         var21 = var31;
@@ -80,7 +80,7 @@ final class nia extends TextureOperator {
           var56 = var51[0];
           var57 = var51[1];
           var58 = var51[2];
-          for (var16 = 0; var16 < ns.field_g; var16++) {
+          for (var16 = 0; var16 < ns.textureWidth; var16++) {
             var17 = var52[var16];
             if (4096 != var17) {
               var56Lifetime1 = var51[0];
@@ -151,7 +151,7 @@ final class nia extends TextureOperator {
         }
     }
 
-    public nia() {
+    public MaskBlendOperator() {
         super(3, false);
     }
 
@@ -163,7 +163,7 @@ final class nia extends TextureOperator {
         OpenGlTexture2D.h((byte) 45);
         if (param0 != -25405) {
           String var2 = (String) null;
-          nia.a((ResourceArchive) null, (String) null, (String) null, 78);
+          MaskBlendOperator.a((ResourceArchive) null, (String) null, (String) null, 78);
         }
         rka.a(false);
         ina.a(tga.field_a, 0);
@@ -192,7 +192,7 @@ final class nia extends TextureOperator {
         try {
           if (param3 != 255) {
             var10 = (byte[]) null;
-            nia.a((byte[]) null, -10, 68, 102);
+            MaskBlendOperator.a((byte[]) null, -10, 68, 102);
           }
           var12 = new char[param2];
           var11 = var12;

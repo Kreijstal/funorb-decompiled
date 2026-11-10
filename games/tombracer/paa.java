@@ -98,7 +98,7 @@ abstract class paa extends WidgetContainer implements mk {
         if (param0 != 141) {
           return (vb) null;
         }
-        return it.a(255, 141 + uca.field_c.nextBounded(2, param0 ^ 141));
+        return it.a(255, 141 + uca.cosmeticRandom.nextBounded(2, param0 ^ 141));
     }
 
     paa(int param0, int param1, int param2, int param3, isa param4) {

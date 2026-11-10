@@ -53,7 +53,7 @@ final class RoomCompletedScreen extends me {
         }
     }
 
-    RoomCompletedScreen(qh param0) {
+    RoomCompletedScreen(MatchScreen param0) {
         super(param0);
     }
 

@@ -218,7 +218,7 @@ final class Weapon {
               this.ammo = this.ammo - 1;
             }
             if (this.field_e) {
-              param5.b(false).a((byte) 89, param1, var14, var13, param0);
+              param5.getParticleEffects(false).a((byte) 89, param1, var14, var13, param0);
             }
             param5.a(param4, param3, this.field_o, param1, (byte) 6);
             return true;

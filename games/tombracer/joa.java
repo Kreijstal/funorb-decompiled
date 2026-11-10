@@ -210,7 +210,7 @@ final class joa {
             break;
           }
           if (param0) {
-            v.b(var3_int, 0);
+            MatchProtocol.b(var3_int, 0);
           } else {
             aoa.a(120, var3_int);
           }

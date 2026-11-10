@@ -1175,7 +1175,7 @@ final class np extends ka {
               if (-1 != param2) {
                 var9 = ((-var9 + param2) * param3 >> 7) + var9;
               }
-              this.field_X[var5_int] = (short)fh.a(fh.a(var7_int << 10, var8 << 7), var9);
+              this.field_X[var5_int] = (short)WallTile.a(WallTile.a(var7_int << 10, var8 << 7), var9);
               var5_int++;
               continue;
             }
@@ -1520,7 +1520,7 @@ final class np extends ka {
             param3 = param3 << 4;
             rp.field_i = 0;
             var10 = 0;
-            dj.field_b = 0;
+            ParticleEffects.field_b = 0;
             via.field_e = 0;
             var11 = 0;
             boolean decompiledNaturalLoopExit0 = false;
@@ -1538,7 +1538,7 @@ final class np extends ka {
                       (param6 & this.field_db[var15]) != 0) {
                       rp.field_i = rp.field_i + this.field_P[var15];
                       via.field_e = via.field_e + this.field_K[var15];
-                      dj.field_b = dj.field_b + this.field_A[var15];
+                      ParticleEffects.field_b = ParticleEffects.field_b + this.field_A[var15];
                       var10++;
                     }
                     var14_int++;
@@ -1555,14 +1555,14 @@ final class np extends ka {
             }
             if (stackIn_27_0 <= stackIn_27_1) {
               via.field_e = param3;
-              dj.field_b = param4;
+              ParticleEffects.field_b = param4;
               rp.field_i = param2;
               if (var47 == 0) {
                 return;
               }
             }
             via.field_e = param3 + via.field_e / var10;
-            dj.field_b = dj.field_b / var10 + param4;
+            ParticleEffects.field_b = ParticleEffects.field_b / var10 + param4;
             rp.field_i = param2 + rp.field_i / var10;
             vea.field_b = true;
             return;
@@ -1628,13 +1628,13 @@ final class np extends ka {
                         var47 != 0) {
                         this.field_P[var14_int] = this.field_P[var14_int] - rp.field_i;
                         this.field_K[var14_int] = this.field_K[var14_int] - via.field_e;
-                        this.field_A[var14_int] = this.field_A[var14_int] - dj.field_b;
+                        this.field_A[var14_int] = this.field_A[var14_int] - ParticleEffects.field_b;
                         this.field_P[var14_int] = this.field_P[var14_int] * param2 >> 7;
                         this.field_K[var14_int] = this.field_K[var14_int] * param3 >> 7;
                         this.field_A[var14_int] = this.field_A[var14_int] * param4 >> 7;
                         this.field_P[var14_int] = this.field_P[var14_int] + rp.field_i;
                         this.field_K[var14_int] = this.field_K[var14_int] + via.field_e;
-                        this.field_A[var14_int] = this.field_A[var14_int] + dj.field_b;
+                        this.field_A[var14_int] = this.field_A[var14_int] + ParticleEffects.field_b;
                       }
                       var13++;
                     }
@@ -1652,26 +1652,26 @@ final class np extends ka {
               var14_int = param7[13] << 4;
               var15 = param7[14] << 4;
               if (vea.field_b) {
-                var16 = 8192 + (param7[0] * rp.field_i + param7[3] * via.field_e + dj.field_b * param7[6]) >> 14;
-                var17 = 8192 + (via.field_e * param7[4] + (param7[1] * rp.field_i + param7[7] * dj.field_b)) >> 14;
-                var18 = 8192 + (via.field_e * param7[5] + rp.field_i * param7[2]) + dj.field_b * param7[8] >> 14;
+                var16 = 8192 + (param7[0] * rp.field_i + param7[3] * via.field_e + ParticleEffects.field_b * param7[6]) >> 14;
+                var17 = 8192 + (via.field_e * param7[4] + (param7[1] * rp.field_i + param7[7] * ParticleEffects.field_b)) >> 14;
+                var18 = 8192 + (via.field_e * param7[5] + rp.field_i * param7[2]) + ParticleEffects.field_b * param7[8] >> 14;
                 var17 = var17 + var14_int;
                 var16 = var16 + var13;
                 via.field_e = var17;
                 rp.field_i = var16;
                 var18 = var18 + var15;
                 vea.field_b = false;
-                dj.field_b = var18;
+                ParticleEffects.field_b = var18;
               }
               var16 = param2 << 15 >> 7;
               var17 = param3 << 15 >> 7;
               var18 = param4 << 15 >> 7;
               var19 = 8192 + var16 * -rp.field_i >> 14;
               var20 = var17 * -via.field_e + 8192 >> 14;
-              var21 = 8192 + var18 * -dj.field_b >> 14;
+              var21 = 8192 + var18 * -ParticleEffects.field_b >> 14;
               var22 = var19 + rp.field_i;
               var23 = var20 + via.field_e;
-              var24 = var21 + dj.field_b;
+              var24 = var21 + ParticleEffects.field_b;
               var25 = new int[9];
               var25[0] = var16 * param7[0] + 8192 >> 14;
               var25[2] = var16 * param7[6] + 8192 >> 14;
@@ -1962,7 +1962,7 @@ final class np extends ka {
                       } else {
                         var18 = 0;
                       }
-                      this.field_X[var14_int] = (short)fh.a(var18, fh.a(var17 << 7, var16 << 10));
+                      this.field_X[var14_int] = (short)WallTile.a(var18, WallTile.a(var17 << 7, var16 << 10));
                       if (null != this.field_kb) {
                         this.field_kb.field_d = null;
                       }
@@ -2018,7 +2018,7 @@ final class np extends ka {
                         (this.field_db[var14_int] & param6) != 0) {
                         this.field_P[var14_int] = this.field_P[var14_int] - rp.field_i;
                         this.field_K[var14_int] = this.field_K[var14_int] - via.field_e;
-                        this.field_A[var14_int] = this.field_A[var14_int] - dj.field_b;
+                        this.field_A[var14_int] = this.field_A[var14_int] - ParticleEffects.field_b;
                         if (param4 != 0) {
                           var15 = qu.field_b[param4];
                           var16 = qu.field_d[param4];
@@ -2042,7 +2042,7 @@ final class np extends ka {
                         }
                         this.field_P[var14_int] = this.field_P[var14_int] + rp.field_i;
                         this.field_K[var14_int] = this.field_K[var14_int] + via.field_e;
-                        this.field_A[var14_int] = this.field_A[var14_int] + dj.field_b;
+                        this.field_A[var14_int] = this.field_A[var14_int] + ParticleEffects.field_b;
                       }
                       var13++;
                     }
@@ -2143,16 +2143,16 @@ final class np extends ka {
           var14_int = param7[13] << 4;
           var15 = param7[14] << 4;
           if (vea.field_b) {
-            var16 = 8192 + (dj.field_b * param7[6] + via.field_e * param7[3] + param7[0] * rp.field_i) >> 14;
-            var17 = dj.field_b * param7[7] + (param7[4] * via.field_e + rp.field_i * param7[1] + 8192) >> 14;
-            var18 = param7[2] * rp.field_i + (param7[5] * via.field_e + dj.field_b * param7[8] + 8192) >> 14;
+            var16 = 8192 + (ParticleEffects.field_b * param7[6] + via.field_e * param7[3] + param7[0] * rp.field_i) >> 14;
+            var17 = ParticleEffects.field_b * param7[7] + (param7[4] * via.field_e + rp.field_i * param7[1] + 8192) >> 14;
+            var18 = param7[2] * rp.field_i + (param7[5] * via.field_e + ParticleEffects.field_b * param7[8] + 8192) >> 14;
             var16 = var16 + var13;
             var17 = var17 + var14_int;
             via.field_e = var17;
             var18 = var18 + var15;
             rp.field_i = var16;
             vea.field_b = false;
-            dj.field_b = var18;
+            ParticleEffects.field_b = var18;
           }
           var16_ref_int__ = new int[9];
           var17 = qu.field_d[param2];
@@ -2172,12 +2172,12 @@ final class np extends ka {
           var16_ref_int__[8] = var19 * var17 + 8192 >> 14;
           var16_ref_int__[1] = var20 * var23 + -var19 * var22 + 8192 >> 14;
           var16_ref_int__[2] = var17 * var20 + 8192 >> 14;
-          var25_int = 8192 + (var16_ref_int__[2] * -dj.field_b + -rp.field_i * var16_ref_int__[0] + var16_ref_int__[1] * -via.field_e) >> 14;
-          var26 = 8192 + var16_ref_int__[5] * -dj.field_b + (-rp.field_i * var16_ref_int__[3] + -via.field_e * var16_ref_int__[4]) >> 14;
-          var27 = -dj.field_b * var16_ref_int__[8] + (-via.field_e * var16_ref_int__[7] + var16_ref_int__[6] * -rp.field_i + 8192) >> 14;
+          var25_int = 8192 + (var16_ref_int__[2] * -ParticleEffects.field_b + -rp.field_i * var16_ref_int__[0] + var16_ref_int__[1] * -via.field_e) >> 14;
+          var26 = 8192 + var16_ref_int__[5] * -ParticleEffects.field_b + (-rp.field_i * var16_ref_int__[3] + -via.field_e * var16_ref_int__[4]) >> 14;
+          var27 = -ParticleEffects.field_b * var16_ref_int__[8] + (-via.field_e * var16_ref_int__[7] + var16_ref_int__[6] * -rp.field_i + 8192) >> 14;
           var28 = var25_int + rp.field_i;
           var29_int = via.field_e + var26;
-          var30 = var27 + dj.field_b;
+          var30 = var27 + ParticleEffects.field_b;
           var31_ref_int__ = new int[9];
           var32 = 0;
           while (true) {
@@ -2583,7 +2583,7 @@ final class np extends ka {
           do {
             if (this.field_N <= var1_int) {
               rp.field_i = 0;
-              dj.field_b = 0;
+              ParticleEffects.field_b = 0;
               via.field_e = 0;
               break;
             }
@@ -3411,7 +3411,7 @@ final class np extends ka {
             param3 = param3 << 4;
             param2 = param2 << 4;
             var9 = 0;
-            dj.field_b = 0;
+            ParticleEffects.field_b = 0;
             rp.field_i = 0;
             via.field_e = 0;
             var10 = 0;
@@ -3429,7 +3429,7 @@ final class np extends ka {
                     rp.field_i = rp.field_i + this.field_P[var14];
                     via.field_e = via.field_e + this.field_K[var14];
                     var9++;
-                    dj.field_b = dj.field_b + this.field_A[var14];
+                    ParticleEffects.field_b = ParticleEffects.field_b + this.field_A[var14];
                     var13_int++;
                   }
                 }
@@ -3444,7 +3444,7 @@ final class np extends ka {
             }
             if (stackIn_18_0 >= stackIn_18_1) {
               rp.field_i = param2;
-              dj.field_b = param4;
+              ParticleEffects.field_b = param4;
               via.field_e = param3;
               if (var21 == 0) {
                 return;
@@ -3452,7 +3452,7 @@ final class np extends ka {
             }
             rp.field_i = param2 + rp.field_i / var9;
             via.field_e = param3 + via.field_e / var9;
-            dj.field_b = dj.field_b / var9 + param4;
+            ParticleEffects.field_b = ParticleEffects.field_b / var9 + param4;
             return;
           }
           if (param0 == 1) {
@@ -3501,13 +3501,13 @@ final class np extends ka {
                     var13_int = var11[var12];
                     this.field_P[var13_int] = this.field_P[var13_int] - rp.field_i;
                     this.field_K[var13_int] = this.field_K[var13_int] - via.field_e;
-                    this.field_A[var13_int] = this.field_A[var13_int] - dj.field_b;
+                    this.field_A[var13_int] = this.field_A[var13_int] - ParticleEffects.field_b;
                     this.field_P[var13_int] = param2 * this.field_P[var13_int] >> 7;
                     this.field_K[var13_int] = this.field_K[var13_int] * param3 >> 7;
                     this.field_A[var13_int] = param4 * this.field_A[var13_int] >> 7;
                     this.field_P[var13_int] = this.field_P[var13_int] + rp.field_i;
                     this.field_K[var13_int] = this.field_K[var13_int] + via.field_e;
-                    this.field_A[var13_int] = this.field_A[var13_int] + dj.field_b;
+                    this.field_A[var13_int] = this.field_A[var13_int] + ParticleEffects.field_b;
                     var12++;
                     if (var21 != 0) {
                       decompiledFrameCompleted4 = false;
@@ -3643,7 +3643,7 @@ final class np extends ka {
                             var17 = 127;
                           }
                         }
-                        this.field_X[var13_int] = (short)fh.a(fh.a(var16 << 7, var15 << 10), var17);
+                        this.field_X[var13_int] = (short)WallTile.a(WallTile.a(var16 << 7, var15 << 10), var17);
                         var12++;
                       }
                       if (var11.length > 0 &&
@@ -3797,7 +3797,7 @@ final class np extends ka {
                       var13_int = var11[var12];
                       this.field_P[var13_int] = this.field_P[var13_int] - rp.field_i;
                       this.field_K[var13_int] = this.field_K[var13_int] - via.field_e;
-                      this.field_A[var13_int] = this.field_A[var13_int] - dj.field_b;
+                      this.field_A[var13_int] = this.field_A[var13_int] - ParticleEffects.field_b;
                       stackIn_45_0 = ~param2;
                       stackIn_45_1 = -1;
                       if (stackIn_45_0 != stackIn_45_1) {
@@ -3823,7 +3823,7 @@ final class np extends ka {
                       }
                       this.field_P[var13_int] = this.field_P[var13_int] + rp.field_i;
                       this.field_K[var13_int] = this.field_K[var13_int] + via.field_e;
-                      this.field_A[var13_int] = this.field_A[var13_int] + dj.field_b;
+                      this.field_A[var13_int] = this.field_A[var13_int] + ParticleEffects.field_b;
                       var12++;
                     }
                   } else {
@@ -3832,7 +3832,7 @@ final class np extends ka {
                       var13_int = var11[var12];
                       this.field_P[var13_int] = this.field_P[var13_int] - rp.field_i;
                       this.field_K[var13_int] = this.field_K[var13_int] - via.field_e;
-                      this.field_A[var13_int] = this.field_A[var13_int] - dj.field_b;
+                      this.field_A[var13_int] = this.field_A[var13_int] - ParticleEffects.field_b;
                       stackIn_45_0 = 0;
                       stackIn_45_1 = param4;
                       if (stackIn_45_0 != stackIn_45_1) {
@@ -3858,7 +3858,7 @@ final class np extends ka {
                       }
                       this.field_P[var13_int] = this.field_P[var13_int] + rp.field_i;
                       this.field_K[var13_int] = this.field_K[var13_int] + via.field_e;
-                      this.field_A[var13_int] = this.field_A[var13_int] + dj.field_b;
+                      this.field_A[var13_int] = this.field_A[var13_int] + ParticleEffects.field_b;
                       var12++;
                     }
                   }

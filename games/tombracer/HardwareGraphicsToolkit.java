@@ -241,7 +241,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         var6 = TombRacer.field_G ? 1 : 0;
         if (param0 != this.field_wb) {
           if (1 == param0) {
-            var3 = dfa.field_b;
+            var3 = GameScreen.field_b;
             var5 = 1;
             var4 = 1;
           } else {
@@ -1972,7 +1972,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.field_s = false;
         this.field_nb = 0;
         this.field_ab = false;
-        this.field_lb = dfa.field_b;
+        this.field_lb = GameScreen.field_b;
         this.field_Rb = 0;
         this.field_K = 0;
         this.field_D = 50;
@@ -2602,7 +2602,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
                 for (var8 = 0; param0.field_i > var8; var8++) {
                   incrementValue$2 = var6;
                   var6++;
-                  var4[incrementValue$2] = fh.a(param0.field_h[var5] << 24, param0.field_g[SnakePitBehaviour.c((int) param0.field_f[var5], 255)]);
+                  var4[incrementValue$2] = WallTile.a(param0.field_h[var5] << 24, param0.field_g[SnakePitBehaviour.c((int) param0.field_f[var5], 255)]);
                   var5++;
                 }
               }
@@ -2619,7 +2619,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
                   if (0 == var9) {
                     stackIn_19_2 = 0;
                   } else {
-                    stackIn_19_2 = fh.a(-16777216, var9);
+                    stackIn_19_2 = WallTile.a(-16777216, var9);
                   }
                   stackIn_18_0[stackIn_18_1] = stackIn_19_2;
                 }

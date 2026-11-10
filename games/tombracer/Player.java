@@ -307,9 +307,9 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
                   if (this.elevation <= -17825792) {
                     if (this.field_T == 6) {
                       var3_ref = this.room.spawnParticle(this.x, this.y, (byte) 100, -17825792);
-                      var3_ref.a(false, 32, 4, 16, 5 + uca.field_c.nextBounded(5, 0));
+                      var3_ref.a(false, 32, 4, 16, 5 + uca.cosmeticRandom.nextBounded(5, 0));
                       var3_ref.b(param0 + 99, 0, 0);
-                      var3_ref.a(uca.field_c.nextBounded(8192, param0 ^ 5), -32 + uca.field_c.nextBounded(64, param0 - 5), -125);
+                      var3_ref.a(uca.cosmeticRandom.nextBounded(8192, param0 ^ 5), -32 + uca.cosmeticRandom.nextBounded(64, param0 - 5), -125);
                     }
                     this.elevation = -17825793;
                   }
@@ -934,7 +934,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
                           this.a(-5636, 17, true);
                           this.a(-5636, 16, true);
                           this.a(-5636, 13, true);
-                          this.room.b(false).a((byte) 61, 2097152 + this.getElevation((byte) 115), this.x, this.y);
+                          this.room.getParticleEffects(false).a((byte) 61, 2097152 + this.getElevation((byte) 115), this.x, this.y);
                         }
                       }
                     }} else {
@@ -942,19 +942,19 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
                     if (var5 != 0) {
                       this.a(-5636, 16, true);
                       this.a(-5636, 13, true);
-                      this.room.b(false).a((byte) 61, 2097152 + this.getElevation((byte) 115), this.x, this.y);
+                      this.room.getParticleEffects(false).a((byte) 61, 2097152 + this.getElevation((byte) 115), this.x, this.y);
                     }
                   }
                 } else {
                   this.a(-5636, 16, true);
                   if (var5 != 0) {
                     this.a(-5636, 13, true);
-                    this.room.b(false).a((byte) 61, 2097152 + this.getElevation((byte) 115), this.x, this.y);
+                    this.room.getParticleEffects(false).a((byte) 61, 2097152 + this.getElevation((byte) 115), this.x, this.y);
                   }
                 }
               } else {
                 this.a(-5636, 13, true);
-                this.room.b(false).a((byte) 61, 2097152 + this.getElevation((byte) 115), this.x, this.y);
+                this.room.getParticleEffects(false).a((byte) 61, 2097152 + this.getElevation((byte) 115), this.x, this.y);
               }
             }
             this.dropHeldItem(30358);

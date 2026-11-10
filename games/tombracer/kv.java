@@ -17,7 +17,7 @@ final class kv {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param2 = dfa.a('_', "", param2, 0);
+          param2 = GameScreen.a('_', "", param2, 0);
           if (param0 < 17) {
             achievementDescriptions = (String[]) null;
           }

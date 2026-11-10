@@ -70,7 +70,7 @@ final class dpa implements Renderable {
           } else {
             var4 = this.field_e.a(this, 44);
           }
-          var5 = dfa.a(this.field_f, 2048, -54);
+          var5 = GameScreen.a(this.field_f, 2048, -54);
           var6 = this.getRenderX((byte) -95);
           var7 = this.getRenderY((byte) 117);
           var8 = this.getRenderZ((byte) -106);

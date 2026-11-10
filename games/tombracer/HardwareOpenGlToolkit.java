@@ -1242,7 +1242,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         if (param0) {
           this.field_Vc = true;
         }
-        if (this.field_lb != dfa.field_b) {
+        if (this.field_lb != GameScreen.field_b) {
           if (this.field_lb == mp.field_a) {
             jaggl.OpenGL.glBlendFunc(1, 1);
           } else {

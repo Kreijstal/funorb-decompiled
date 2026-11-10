@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hb extends coa {
-    static dfa field_t;
+    static GameScreen field_t;
     static int[] field_w;
     static char[] field_x;
     static String field_u;
@@ -118,7 +118,7 @@ final class hb extends coa {
         int[] var5 = var13[1];
         int[] var6 = var13[2];
         int var7 = this.field_r * (param0 % this.field_r);
-        for (var8 = 0; ns.field_g > var8; var8++) {
+        for (var8 = 0; ns.textureWidth > var8; var8++) {
           var9 = this.field_p[var8 % this.field_m + var7];
           var6[var8] = SnakePitBehaviour.c(4080, var9 << 4);
           var5[var8] = SnakePitBehaviour.c(var9, 65280) >> 4;

@@ -50,9 +50,9 @@ final class voa extends TextureOperator {
           this.field_p = 94;
         }
         if (this.field_i.field_d) {
-          var4 = sj.field_b[param1] - 2048;
-          for (var5 = 0; var5 < ns.field_g; var5++) {
-            var6 = -2048 + ht.field_Fb[var5];
+          var4 = sj.textureRowCoords[param1] - 2048;
+          for (var5 = 0; var5 < ns.textureWidth; var5++) {
+            var6 = -2048 + ht.textureColumnCoords[var5];
             var7 = this.field_p + var6;
             if (var7 < -2048) {
               stackIn_8_0 = var7 + 4096;

@@ -13,7 +13,7 @@ final class lf implements GamePacket {
         return (2048 & param1) != 0 ? true : false;
     }
 
-    final void a(qh param0, int param1, v param2) {
+    final void a(MatchScreen param0, int param1, MatchProtocol param2) {
         try {
           if (param1 != 0) {
             BitPacketBuffer var5 = (BitPacketBuffer) null;

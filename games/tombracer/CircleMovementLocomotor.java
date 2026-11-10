@@ -39,7 +39,7 @@ final class CircleMovementLocomotor extends Locomotor {
           this.field_p = false;
         }
         this.field_q = this.field_q - this.field_r;
-        this.field_q = dfa.a(this.field_q, 32768, 78);
+        this.field_q = GameScreen.a(this.field_q, 32768, 78);
         var7 = 49 % ((param0 + 69) / 42);
         var6 = var2 + (cr.a(true, this.field_q >> 2) >> 8) * (this.field_o >> 8);
         var8 = var3 + (pla.b(102, this.field_q >> 2) >> 8) * (this.field_o >> 8);
@@ -226,7 +226,7 @@ final class CircleMovementLocomotor extends Locomotor {
             var10_int = var10_int + (um.field_m[var11] & 255);
           }
           var10_int = (var10_int + 7) / 8;
-          tqa.field_e = new byte[var10_int];
+          TileGrid.field_e = new byte[var10_int];
           if (null == param8.field_J) {
             param8.field_J = new IntrusiveDeque();
           }

@@ -89,7 +89,7 @@ final class pe extends OpenGlTexture implements GpuTexture2D {
           if (param6 != 53) {
             field_m = (fta) null;
           }
-          stackIn_3_0 = fja.a(var8, param5, param0, param1, var7, param6 + 48, param3);
+          stackIn_3_0 = PlayPhase.a(var8, param5, param0, param1, var7, param6 + 48, param3);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

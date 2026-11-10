@@ -4,7 +4,7 @@
 final class uca {
     int field_e;
     static double field_b;
-    static IsaacCipher field_c;
+    static IsaacCipher cosmeticRandom;
     static int field_a;
     static int field_d;
     static Sprite[] field_f;
@@ -82,7 +82,7 @@ final class uca {
     public static void releaseStatics(int param0) {
         int var1 = 79 / ((-50 - param0) / 48);
         field_f = null;
-        field_c = null;
+        cosmeticRandom = null;
     }
 
     final static void a(int param0, toa param1, byte param2) {
@@ -112,7 +112,7 @@ final class uca {
 
     static {
         field_b = Math.atan2(1.0, 0.0);
-        field_c = new IsaacCipher(new int[]{21312});
+        cosmeticRandom = new IsaacCipher(new int[]{21312});
         field_a = -1;
     }
 }

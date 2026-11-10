@@ -570,7 +570,7 @@ final class gq extends uta {
               this.field_o.a(var5Lifetime1, (byte) 72, var5Lifetime1);
             }
           }
-          gsa.field_w = opa.a(this.field_o.e((byte) -112), (byte) -110);
+          gsa.field_w = ResultsPhase.a(this.field_o.e((byte) -112), (byte) -110);
           if (param0 != -72) {
             this.field_v = (ela[]) null;
           }

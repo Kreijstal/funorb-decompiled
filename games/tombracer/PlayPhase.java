@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fja extends qra {
+final class PlayPhase extends MatchPhase {
     private boolean field_p;
     private qa[] field_n;
     private boolean field_o;
@@ -16,46 +16,46 @@ final class fja extends qra {
         int var4Lifetime1;
         var5 = TombRacer.field_G ? 1 : 0;
         if (param0 != 80) {
-          fja.a(59, 38, (byte) -62, 36, 61, 1);
+          PlayPhase.a(59, 38, (byte) -62, 36, 61, 1);
         }
-        var3 = this.field_h.l(115);
+        var3 = this.screen.l(115);
         if (this.field_o &&
-          this.field_c.g(0)) {
+          this.matchState.g(0)) {
           this.g(param0 - 208);
         }
         if (this.field_q > 0) {
           this.field_q = this.field_q - 1;
         }
-        if (!this.field_h.field_D &&
-          this.field_h.e(118)) {
+        if (!this.screen.field_D &&
+          this.screen.e(118)) {
           return;
         }
-        if (this.field_c.e(2) == -1) {
-          this.field_h.h(110);
+        if (this.matchState.e(2) == -1) {
+          this.screen.h(110);
         }
         for (var4 = 0; this.field_n.length > var4; var4++) {
           if (!this.field_n[var4].c(1727002282) &&
-            this.field_c.f((byte) -127, var4)) {
+            this.matchState.f((byte) -127, var4)) {
             this.field_n[var4].a(60, true);
             this.field_n[var4].a(0, (byte) 108, 2 * aaa.a(false));
           }
         }
-        if (this.field_h.d((byte) 95)) {
-          if (!this.field_h.g(0, 0)) {
-            if (this.field_h.g(param0 - 80, 1)) {
-              this.field_h.e(1, 17219);
+        if (this.screen.d((byte) 95)) {
+          if (!this.screen.g(0, 0)) {
+            if (this.screen.g(param0 - 80, 1)) {
+              this.screen.e(1, 17219);
             }
           } else {
-            this.field_h.e(-1, 17219);
+            this.screen.e(-1, 17219);
           }
         } else {
-          if (this.field_c.b((byte) 90, var3) &&
+          if (this.matchState.b((byte) 90, var3) &&
             !this.field_m) {
             this.field_m = true;
-            if (this.field_h.c(false)) {
-              this.field_h.a(new RoomCompletedScreen(this.field_h), 680);
+            if (this.screen.c(false)) {
+              this.screen.a(new RoomCompletedScreen(this.screen), 680);
             } else {
-              this.field_h.a(new gi(this.field_h), param0 + 600);
+              this.screen.a(new gi(this.screen), param0 + 600);
             }
           }
         }
@@ -66,7 +66,7 @@ final class fja extends qra {
           this.field_n[var6].a((byte) 111);
           var6++;
         }
-        if (!this.field_h.field_D) {
+        if (!this.screen.field_D) {
           this.i(0);
         }
     }
@@ -112,25 +112,25 @@ final class fja extends qra {
         int var5_intLifetime1;
         int var5_intLifetime1Lifetime1;
         var14 = TombRacer.field_G ? 1 : 0;
-        var3 = this.field_h.l(81);
+        var3 = this.screen.l(81);
         this.field_n[var3].b(23479);
-        if (!this.field_h.f((byte) 33)) {
+        if (!this.screen.f((byte) 33)) {
           var4_int = 0;
-          for (var5_int = 0; this.field_c.field_c.field_e.length > var5_int; var5_int++) {
-            if (this.field_c.field_c.field_e[var5_int] == var3) {
+          for (var5_int = 0; this.matchState.field_c.field_e.length > var5_int; var5_int++) {
+            if (this.matchState.field_c.field_e[var5_int] == var3) {
               var4_int = var5_int;
             }
           }
           var5_int = 0;
-          for (var6 = 0; var6 < this.field_c.players.length; var6++) {
-            if (!this.field_c.f((byte) -81, var6)) {
+          for (var6 = 0; var6 < this.matchState.players.length; var6++) {
+            if (!this.matchState.f((byte) -81, var6)) {
               var5_int++;
             }
           }
           if (var5_int == 2) {
             var6Lifetime2 = 0;
-            for (var7_int = 0; this.field_c.players.length > var7_int; var7_int++) {
-              if (!this.field_c.f((byte) -85, var7_int) &&
+            for (var7_int = 0; this.matchState.players.length > var7_int; var7_int++) {
+              if (!this.matchState.f((byte) -85, var7_int) &&
                 var3 != var7_int) {
                 var6Lifetime2 = var7_int;
               }
@@ -151,7 +151,7 @@ final class fja extends qra {
               }
               var6_ref_int____[0] = new int[]{1, 2};
               for (var7_int = 0; var19[var4_int].length > var7_int; var7_int++) {
-                var8 = this.field_c.field_c.field_e[var19[var4_int][var7_int]];
+                var8 = this.matchState.field_c.field_e[var19[var4_int][var7_int]];
                 if (var8 != -1 &&
                   var3 != var8) {
                   this.field_n[var8].a(var7_int, mma.field_c, -20186);
@@ -161,16 +161,16 @@ final class fja extends qra {
             }
           }
         }
-        if (!this.field_h.f((byte) 33) &&
-          !this.field_h.field_A) {
-          if (this.field_h.d((byte) 78)) {
+        if (!this.screen.f((byte) 33) &&
+          !this.screen.field_A) {
+          if (this.screen.d((byte) 78)) {
             var4_intLifetime1 = 16;
             var5_intLifetime1 = 16;
             var6Lifetime1 = 256;
             var7_intLifetime1 = 64;
             qa.a(var7_intLifetime1, var6Lifetime1, (byte) 109, var4_intLifetime1, aq.field_a, var5_intLifetime1);
             SocketConnector.a(dpa.field_c, 0, SingleChildWidget.field_v, 11903361, 40, var7_intLifetime1, 1, var5_intLifetime1, var4_intLifetime1, 0, (byte) 60, var6Lifetime1);
-            SocketConnector.a(voa.field_q + ": " + this.field_h.j(var3, 9), 2, eda.field_f, 11903361, 40, var7_intLifetime1, 1, var5_intLifetime1, var4_intLifetime1, 1, (byte) 60, var6Lifetime1);
+            SocketConnector.a(voa.field_q + ": " + this.screen.j(var3, 9), 2, eda.field_f, 11903361, 40, var7_intLifetime1, 1, var5_intLifetime1, var4_intLifetime1, 1, (byte) 60, var6Lifetime1);
             var5_intLifetime1 = var5_intLifetime1 + (var7_intLifetime1 + 16);
             var7_intLifetime1Lifetime2 = 32;
             qa.a(var7_intLifetime1Lifetime2, var6Lifetime1, (byte) 80, var4_intLifetime1, aq.field_a, var5_intLifetime1);
@@ -193,10 +193,10 @@ final class fja extends qra {
             var7_intLifetime1Lifetime1 = SwitchLinkList.b(0) / 2;
             qa.a(64, var5_intLifetime1Lifetime1, (byte) 74, -(var5_intLifetime1Lifetime1 / 2) + var6Lifetime1Lifetime1, aq.field_a, -ds.field_n.field_d + (var7_intLifetime1Lifetime1 - 32));
             if (this.field_q > 50) {
-              if (0 != this.field_c.field_K) {
+              if (0 != this.matchState.field_K) {
                 oka.a(var4, 16777215, eda.field_f, -1, var7_intLifetime1Lifetime1, var6Lifetime1Lifetime1, 0);
               } else {
-                oka.a(ConstrainToCircleLocomotor.field_z + " " + (1 + this.field_c.field_A), 16777215, eda.field_f, -1, 225, var6Lifetime1Lifetime1, 0);
+                oka.a(ConstrainToCircleLocomotor.field_z + " " + (1 + this.matchState.field_A), 16777215, eda.field_f, -1, 225, var6Lifetime1Lifetime1, 0);
                 oka.a(var4, 16777215, eda.field_f, -1, 255, var6Lifetime1Lifetime1, 0);
               }
             } else {
@@ -206,17 +206,17 @@ final class fja extends qra {
           if (this.field_p) {
             ua.a(4, kn.field_p, "Debug", 565, 0, 48, 16777215);
             ua.a(4, kn.field_p, "FPS: " + oea.field_f, 565, 0, 64, 16777215);
-            if (this.field_h.field_D) {
-              this.field_f.c(16);
+            if (this.screen.field_D) {
+              this.protocol.c(16);
             }
             if (var3 >= 0 &&
-              this.field_h.f(-12963, var3)) {
-              var16 = this.field_h.field_k.players[var3];
+              this.screen.f(-12963, var3)) {
+              var16 = this.screen.matchState.players[var3];
               var5 = var16.getRoom((byte) 87);
               var6Lifetime1Lifetime2 = var5.getId((byte) -82);
-              if (this.field_c.field_K != 3) {
-                if (this.field_c.i(0) != -1) {
-                  var7 = doa.b(var6Lifetime1Lifetime2, 0, this.field_c.i(0));
+              if (this.matchState.field_K != 3) {
+                if (this.matchState.i(0) != -1) {
+                  var7 = doa.b(var6Lifetime1Lifetime2, 0, this.matchState.i(0));
                 } else {
                   if (var5.j(0)) {
                     var7 = mna.a(0, var6Lifetime1Lifetime2);
@@ -315,25 +315,25 @@ final class fja extends qra {
             this.field_p = stackIn_23_1;
             return true;
           }
-          if (this.field_h.field_D) {
+          if (this.screen.field_D) {
             return false;
           }
-          var6 = this.field_c.getSimulation(this.field_h.field_x, param1 - 25);
+          var6 = this.matchState.getSimulation(this.screen.field_x, param1 - 25);
           if (param2 == 25) {
             var6.getCurrentRoom((byte) -114).b(7, true);
             return true;
           }
           if (param2 == 24) {
-            if (!this.field_h.d(0)) {
-              var5 = new dl(this.field_h, (ms) null);
+            if (!this.screen.d(0)) {
+              var5 = new dl(this.screen, (ms) null);
               var5.a("TITLE!", "Lalala here is some text to test with", "Press fire to continue. Or not.", (byte) 125);
-              this.field_h.a(var5, param1 + 655);
+              this.screen.a(var5, param1 + 655);
               return true;
             }
           } else {
             if (param2 == 22) {
               var6.player.a(1, (byte) 113);
-              this.field_h.l((byte) -38);
+              this.screen.l((byte) -38);
             }
           }
           if (param2 == 41) {
@@ -362,15 +362,15 @@ final class fja extends qra {
     }
 
     private final void a(int param0, int param1) {
-        this.field_h.i(param1, param0 ^ 62);
+        this.screen.i(param1, param0 ^ 62);
         if (param0 != 0) {
           this.field_o = true;
         }
     }
 
     private final void b(byte param0) {
-        int var2 = this.field_h.l(89);
-        if (this.field_c.field_P <= 1) {
+        int var2 = this.screen.l(89);
+        if (this.matchState.field_P <= 1) {
           this.field_n[var2].a(0, mf.field_d, -20186);
         } else {
           this.field_n[var2].a(0, dp.field_j, -20186);
@@ -394,21 +394,21 @@ final class fja extends qra {
         int var5;
         int[][] var7;
         var5 = TombRacer.field_G ? 1 : 0;
-        if (!this.field_h.c(false) &&
-          this.field_c.b(0)) {
-          if (this.field_c.simulations[0].e(-31170)) {
+        if (!this.screen.c(false) &&
+          this.matchState.b(0)) {
+          if (this.matchState.simulations[0].e(-31170)) {
             this.a(0, -2);
           } else {
-            if (this.field_c.field_L > 1) {
-              var7 = new int[this.field_c.field_k][3];
-              for (var3 = 0; var3 < this.field_c.field_k; var3++) {
+            if (this.matchState.field_L > 1) {
+              var7 = new int[this.matchState.field_k][3];
+              for (var3 = 0; var3 < this.matchState.field_k; var3++) {
                 for (var4 = 0; 3 > var4; var4++) {
-                  var7[var3][var4] = this.field_c.players[var3].getTreasure(196608, var4);
+                  var7[var3][var4] = this.matchState.players[var3].getTreasure(196608, var4);
                 }
               }
-              this.field_h.a((byte) 101, var7, this.field_h.field_x);
+              this.screen.a((byte) 101, var7, this.screen.field_x);
             } else {
-              this.a(0, this.field_h.field_x);
+              this.a(0, this.screen.field_x);
             }
           }
         }
@@ -422,11 +422,11 @@ final class fja extends qra {
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
         if (4 <= param0) {
-          this.field_h.field_A = true;
+          this.screen.field_A = true;
         }
         for (var3 = 0; var3 < this.field_n.length; var3++) {
-          if (~this.field_h.l(112) == ~var3 ||
-            this.field_h.d((byte) 102)) {
+          if (~this.screen.l(112) == ~var3 ||
+            this.screen.d((byte) 102)) {
             this.field_n[var3].a((byte) -115, param0);
           }
         }
@@ -437,7 +437,7 @@ final class fja extends qra {
 
     final static boolean h(int param0) {
         if (param0 <= 83) {
-          fja.a(-107, -110, (byte) -67, -77, -33, 57);
+          PlayPhase.a(-107, -110, (byte) -67, -77, -33, 57);
         }
         fpa.field_c = true;
         oga.field_f = 15000L + bva.b((byte) -107);
@@ -711,7 +711,7 @@ final class fja extends qra {
         }
     }
 
-    fja(qh param0, v param1) {
+    PlayPhase(MatchScreen param0, MatchProtocol param1) {
         super(param0, param1);
         int var3_int = 0;
         int var4 = 0;
@@ -719,21 +719,21 @@ final class fja extends qra {
         this.field_o = true;
         this.field_m = false;
         try {
-          var3_int = this.field_h.field_k.players.length;
+          var3_int = this.screen.matchState.players.length;
           this.field_n = new qa[var3_int];
           for (var4 = 0; var4 < var3_int; var4++) {
-            this.field_n[var4] = new qa(this.field_h, var4);
+            this.field_n[var4] = new qa(this.screen, var4);
           }
-          if (!this.field_h.f((byte) 33)) {
-            if (this.field_h.c(false)) {
+          if (!this.screen.f((byte) 33)) {
+            if (this.screen.c(false)) {
               this.f(16);
             }
-            if (this.field_h.field_D) {
-              this.field_h.a(new dua(this.field_h), 680);
+            if (this.screen.field_D) {
+              this.screen.a(new dua(this.screen), 680);
             }
             TripBeamComponent.b(1, 1);
           }
-          this.field_h.field_r = -1;
+          this.screen.field_r = -1;
           this.b((byte) 122);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "fja.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');

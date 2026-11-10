@@ -6,7 +6,7 @@ final class foa implements GamePacket {
     private int field_c;
     static boolean field_b;
 
-    final void a(qh param0, int param1, v param2) {
+    final void a(MatchScreen param0, int param1, MatchProtocol param2) {
         if (!param0.f(0)) {
           return;
         }

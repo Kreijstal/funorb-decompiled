@@ -42,7 +42,7 @@ final class mp {
               decompiledCaughtException = decompiledCaughtParameter0;
               throwable = decompiledCaughtException;
             }
-            v.a((byte) 64, param1);
+            MatchProtocol.a((byte) 64, param1);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -210,14 +210,14 @@ final class mp {
           var16 = new Sprite[9];
           var16[4] = var12;
           era.field_e = new jea(0L, param0);
-          v.field_i = new jea(0L, param9);
-          era.field_e.b(-128, v.field_i);
+          MatchProtocol.field_i = new jea(0L, param9);
+          era.field_e.b(-128, MatchProtocol.field_i);
           var17 = new jea(0L, (jea) null);
           var17.field_J = new IntrusiveDeque();
           ne.field_d = new iv(0L, var17, param3, param4);
-          v.field_i.b(-126, ne.field_d);
+          MatchProtocol.field_i.b(-126, ne.field_d);
           RotaterMountComponent.field_K = new jea(0L, param1);
-          v.field_i.b(-124, RotaterMountComponent.field_K);
+          MatchProtocol.field_i.b(-124, RotaterMountComponent.field_K);
           pq.field_g = new jea(0L, param5);
           pq.field_g.field_H = PlatformBehaviour.field_s;
           RotaterMountComponent.field_K.b(param6 - 124, pq.field_g);

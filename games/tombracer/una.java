@@ -16,7 +16,7 @@ final class una {
     static jea field_j;
     static int field_c;
     static String field_d;
-    static int field_b;
+    static int textureWidthMask;
 
     final static boolean a(byte param0) {
         int var1 = -97 / ((param0 - 0) / 40);

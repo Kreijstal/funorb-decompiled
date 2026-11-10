@@ -83,17 +83,17 @@ final class iia extends TextureOperator {
           if (param3 > -30) {
             this.field_y = -123;
           }
-          if (ns.field_g <= param1) {
-            param1 = param1 - ns.field_g;
+          if (ns.textureWidth <= param1) {
+            param1 = param1 - ns.textureWidth;
           }
           if (0 >= var10) {
-            if (ns.field_g >= param1 + param4) {
+            if (ns.textureWidth >= param1 + param4) {
               for (var11 = 0; var11 < param0; var11++) {
                 ArrayUtils.fill(param2[param5 + var11], param1, param4, var8_int);
               }
               return;
             }
-            var11Lifetime2 = -param1 + ns.field_g;
+            var11Lifetime2 = -param1 + ns.textureWidth;
             for (var12 = 0; param0 > var12; var12++) {
               var13_ref_int__ = param2[var12 + param5];
               ArrayUtils.fill(var13_ref_int__, param1, var11Lifetime2, var8_int);
@@ -118,14 +118,14 @@ final class iia extends TextureOperator {
                 var19 = -var17 + param0 - 1;
                 if (var14 <= var19) {
                   for (var20 = 0; var13 > var20; var20++) {
-                    dupTemp$0 = SnakePitBehaviour.c(una.field_b, -var20 + param4 + param1 - 1);
+                    dupTemp$0 = SnakePitBehaviour.c(una.textureWidthMask, -var20 + param4 + param1 - 1);
                     var18[dupTemp$0] = var8_int * var20 / var13;
-                    var18[SnakePitBehaviour.c(una.field_b, param1 + var20)] = var8_int * var20 / var13;
+                    var18[SnakePitBehaviour.c(una.textureWidthMask, param1 + var20)] = var8_int * var20 / var13;
                   }
-                  if (var16 + var15 <= ns.field_g) {
+                  if (var16 + var15 <= ns.textureWidth) {
                     ArrayUtils.fill(var18, var15, var16, var8_int);
                   } else {
-                    var20 = ns.field_g - var15;
+                    var20 = ns.textureWidth - var15;
                     ArrayUtils.fill(var18, var15, var20, var8_int);
                     ArrayUtils.fill(var18, 0, -var20 + var16, var8_int);
                   }
@@ -136,17 +136,17 @@ final class iia extends TextureOperator {
                   if (this.field_t == 0) {
                     for (var21 = 0; var21 < var13; var21++) {
                       var22 = var21 * var8_int / var13;
-                      dupTemp$1 = SnakePitBehaviour.c(una.field_b, -1 + param4 + param1 - var21);
+                      dupTemp$1 = SnakePitBehaviour.c(una.textureWidthMask, -1 + param4 + param1 - var21);
                       var18[dupTemp$1] = var20 * var22 >> 12;
-                      var18[SnakePitBehaviour.c(var21 + param1, una.field_b)] = var20 * var22 >> 12;
+                      var18[SnakePitBehaviour.c(var21 + param1, una.textureWidthMask)] = var20 * var22 >> 12;
                     }
                   } else {
                     for (var21 = 0; var13 > var21; var21++) {
                       var22 = var8_int * var21 / var13;
                       stackIn_52_0 = var18;
-                      stackIn_52_1 = SnakePitBehaviour.c(param1 + var21, una.field_b);
+                      stackIn_52_1 = SnakePitBehaviour.c(param1 + var21, una.textureWidthMask);
                       stackIn_52_2 = var18;
-                      stackIn_52_3 = SnakePitBehaviour.c(-1 - var21 + param1 + param4, una.field_b);
+                      stackIn_52_3 = SnakePitBehaviour.c(-1 - var21 + param1 + param4, una.textureWidthMask);
                       if (var22 < var20) {
                         stackIn_53_4 = var22;
                       } else {
@@ -156,8 +156,8 @@ final class iia extends TextureOperator {
                       stackIn_52_0[stackIn_52_1] = stackIn_53_4;
                     }
                   }
-                  if (var16 + var15 > ns.field_g) {
-                    var21 = -var15 + ns.field_g;
+                  if (var16 + var15 > ns.textureWidth) {
+                    var21 = -var15 + ns.textureWidth;
                     ArrayUtils.fill(var18, var15, var21, var20);
                     ArrayUtils.fill(var18, 0, -var21 + var16, var20);
                   } else {
@@ -169,17 +169,17 @@ final class iia extends TextureOperator {
                 if (this.field_t == 0) {
                   for (var20 = 0; var13 > var20; var20++) {
                     var21 = var8_int * var20 / var13;
-                    dupTemp$2 = SnakePitBehaviour.c(-var20 + (param4 + (param1 - 1)), una.field_b);
+                    dupTemp$2 = SnakePitBehaviour.c(-var20 + (param4 + (param1 - 1)), una.textureWidthMask);
                     var18[dupTemp$2] = var21 * var19 >> 12;
-                    var18[SnakePitBehaviour.c(var20 + param1, una.field_b)] = var21 * var19 >> 12;
+                    var18[SnakePitBehaviour.c(var20 + param1, una.textureWidthMask)] = var21 * var19 >> 12;
                   }
                 } else {
                   for (var20 = 0; var20 < var13; var20++) {
                     var21 = var8_int * var20 / var13;
                     stackIn_41_0 = var18;
-                    stackIn_41_1 = SnakePitBehaviour.c(var20 + param1, una.field_b);
+                    stackIn_41_1 = SnakePitBehaviour.c(var20 + param1, una.textureWidthMask);
                     stackIn_41_2 = var18;
-                    stackIn_41_3 = SnakePitBehaviour.c(-var20 + (param1 + param4 - 1), una.field_b);
+                    stackIn_41_3 = SnakePitBehaviour.c(-var20 + (param1 + param4 - 1), una.textureWidthMask);
                     if (var21 < var19) {
                       stackIn_42_4 = var21;
                     } else {
@@ -189,10 +189,10 @@ final class iia extends TextureOperator {
                     stackIn_41_0[stackIn_41_1] = stackIn_42_4;
                   }
                 }
-                if (ns.field_g >= var15 + var16) {
+                if (ns.textureWidth >= var15 + var16) {
                   ArrayUtils.fill(var18, var15, var16, var19);
                 } else {
-                  var20 = -var15 + ns.field_g;
+                  var20 = -var15 + ns.textureWidth;
                   ArrayUtils.fill(var18, var15, var20, var19);
                   ArrayUtils.fill(var18, 0, var16 - var20, var19);
                 }
@@ -411,15 +411,15 @@ final class iia extends TextureOperator {
           var11 = 1;
           var12 = 0;
           var13 = 0;
-          var14 = this.field_p * ns.field_g >> 12;
-          var15 = ns.field_g * this.field_s >> 12;
-          var16 = ArchiveNetworkClient.field_i * this.field_y >> 12;
-          var17 = this.field_w * ArchiveNetworkClient.field_i >> 12;
+          var14 = this.field_p * ns.textureWidth >> 12;
+          var15 = ns.textureWidth * this.field_s >> 12;
+          var16 = ArchiveNetworkClient.textureHeight * this.field_y >> 12;
+          var17 = this.field_w * ArchiveNetworkClient.textureHeight >> 12;
           if (var17 <= 1) {
             return var46[param1];
           }
-          this.field_o = ns.field_g / 8 * this.field_n >> 12;
-          var18 = ns.field_g / var14 + 1;
+          this.field_o = ns.textureWidth / 8 * this.field_n >> 12;
+          var18 = ns.textureWidth / var14 + 1;
           var19 = new int[var18][3];
           var47 = new int[var18][3];
           var20 = var47;
@@ -428,9 +428,9 @@ final class iia extends TextureOperator {
             var23 = var14 + BufferedSocket.a(-var14 + var15, var21, 126);
             var24 = var16 + BufferedSocket.a(-var16 + var17, var21, 96);
             var25 = var8 + var23;
-            if (ns.field_g < var25) {
-              var25 = ns.field_g;
-              var23 = ns.field_g - var8;
+            if (ns.textureWidth < var25) {
+              var25 = ns.textureWidth;
+              var23 = ns.textureWidth - var8;
             }
             regionExit1: {
               if (var11 == 0) {
@@ -439,10 +439,10 @@ final class iia extends TextureOperator {
                 var28 = 0;
                 var29_int = var5 + var25;
                 if (0 > var29_int) {
-                  var29_int = var29_int + ns.field_g;
+                  var29_int = var29_int + ns.textureWidth;
                 }
-                if (ns.field_g < var29_int) {
-                  var29_int = var29_int - ns.field_g;
+                if (ns.textureWidth < var29_int) {
+                  var29_int = var29_int - ns.textureWidth;
                 }
                 while (true) {
                   var52 = var47[var26_int];
@@ -452,10 +452,10 @@ final class iia extends TextureOperator {
                     if (var9 != var26_int) {
                       var30 = var5 + var8;
                       if (var30 < 0) {
-                        var30 = var30 + ns.field_g;
+                        var30 = var30 + ns.textureWidth;
                       }
-                      if (ns.field_g < var30) {
-                        var30 = var30 - ns.field_g;
+                      if (ns.textureWidth < var30) {
+                        var30 = var30 - ns.textureWidth;
                       }
                       for (var31 = 1; var31 <= var28; var31++) {
                         var41 = var20[(var9 + var31) % var12];
@@ -473,7 +473,7 @@ final class iia extends TextureOperator {
                               var35 = Math.min(var29_int, var37);
                             } else {
                               var34 = Math.max(var30, var36);
-                              var35 = ns.field_g;
+                              var35 = ns.textureWidth;
                             }
                           } else {
                             var34 = Math.max(var30, var36);
@@ -498,12 +498,12 @@ final class iia extends TextureOperator {
               }
               var22 = 0;
             }
-            if (var24 + var22 > ArchiveNetworkClient.field_i) {
-              var24 = ArchiveNetworkClient.field_i - var22;
+            if (var24 + var22 > ArchiveNetworkClient.textureHeight) {
+              var24 = ArchiveNetworkClient.textureHeight - var22;
             } else {
               var10 = 0;
             }
-            if (ns.field_g != var25) {
+            if (ns.textureWidth != var25) {
               incrementValue$0 = var13;
               var13++;
               var45 = var19[incrementValue$0];
@@ -533,15 +533,15 @@ final class iia extends TextureOperator {
             var12 = var13;
             var7 = var6;
             var13 = 0;
-            var6 = BufferedSocket.a(ns.field_g, var21, 71);
+            var6 = BufferedSocket.a(ns.textureWidth, var21, 71);
             var5 = var6 - var7;
             var8 = 0;
             var28Lifetime1 = var5;
             if (var28Lifetime1 < 0) {
-              var28Lifetime1 = var28Lifetime1 + ns.field_g;
+              var28Lifetime1 = var28Lifetime1 + ns.textureWidth;
             }
-            if (ns.field_g < var28Lifetime1) {
-              var28Lifetime1 = var28Lifetime1 - ns.field_g;
+            if (ns.textureWidth < var28Lifetime1) {
+              var28Lifetime1 = var28Lifetime1 - ns.textureWidth;
             }
             var9 = 0;
             var11 = 0;

@@ -95,7 +95,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         }
         var9 = this.getRoom(true);
         var10 = var9.a(1, this.trap, -66, this.field_s, this.getRoot(6), this.field_r) ? 1 : 0;
-        var9.b(false).a((byte) 120, this.field_s, this.field_r);
+        var9.getParticleEffects(false).a((byte) 120, this.field_s, this.field_r);
         if (var10 != 0) {
           var11 = this.field_s;
           while (var11 != null) {
@@ -103,7 +103,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
               return;
             }
             if (null == var11.nextSegment) {
-              var9.b(false).a(var11, this.trap, (byte) -123);
+              var9.getParticleEffects(false).a(var11, this.trap, (byte) -123);
               var9.a(param0 ^ 5463, var11.field_a, this.field_r, 524288, 524288, var11.field_e);
             }
             var11 = var11.nextSegment;

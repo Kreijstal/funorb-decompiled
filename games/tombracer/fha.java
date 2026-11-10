@@ -33,7 +33,7 @@ final class fha {
         }
         try {
           fua.field_f = BoulderComponent.a(param2, "commonui", 5, "frame_bottom");
-          ApproachPlayerLocomotor.field_s = nia.a(param2, "commonui", "jagex_logo_grey", -101);
+          ApproachPlayerLocomotor.field_s = MaskBlendOperator.a(param2, "commonui", "jagex_logo_grey", -101);
           MonochromeFillOperator.field_n = BoulderComponent.a(param2, "commonui", 5, "button");
           pq.field_b = Particle.a("validation", param2, "commonui", -57);
           eka.field_o = (BitmapFont) ((Object) SnakePitModel.a(param2, param1, false, "commonui", "arezzo12"));

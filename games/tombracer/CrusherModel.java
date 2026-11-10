@@ -371,16 +371,16 @@ final class CrusherModel extends TrapModel {
         this.field_m = 0;
         var3 = 1;
         if (this.field_v.isWaiting(76)) {
-          this.field_t = -2 + uca.field_c.nextBounded(5, 0);
+          this.field_t = -2 + uca.cosmeticRandom.nextBounded(5, 0);
           var3 = 0;
-          this.field_m = uca.field_c.nextBounded(5, ~param0) - 2;
+          this.field_m = uca.cosmeticRandom.nextBounded(5, ~param0) - 2;
         } else {
           if (this.field_v.isWindingUp(-98)) {
             var3 = 0;
-            this.field_r = this.field_n - this.field_n * this.field_v.g((byte) -107) / this.field_v.j((byte) 90);
+            this.field_r = this.field_n - this.field_n * this.field_v.getPhaseTicks((byte) -107) / this.field_v.getWindUpTicks((byte) 90);
             if (this.field_r == 0 &&
               var2 != 0) {
-              this.a(42).b(false).a(0, this.getRenderY((byte) 92), 0, 0, 0, this.getRenderX((byte) 52));
+              this.a(42).getParticleEffects(false).a(0, this.getRenderY((byte) 92), 0, 0, 0, this.getRenderX((byte) 52));
             }
             var13 = (w) (this.a(param0 + 44).field_G);
             if (var13 == null) {
@@ -428,7 +428,7 @@ final class CrusherModel extends TrapModel {
             this.field_r = 0;
             if (this.field_r == 0 &&
               var2 != 0) {
-              this.a(42).b(false).a(0, this.getRenderY((byte) 92), 0, 0, 0, this.getRenderX((byte) 52));
+              this.a(42).getParticleEffects(false).a(0, this.getRenderY((byte) 92), 0, 0, 0, this.getRenderX((byte) 52));
             }
             var9 = (w) (this.a(param0 + 44).field_G);
             if (var9 == null) {
@@ -473,10 +473,10 @@ final class CrusherModel extends TrapModel {
           }
           if (this.field_v.isRetracting(param0 - 4)) {
             var3 = 0;
-            this.field_r = this.field_n * this.field_v.g((byte) -120) / this.field_v.d(false);
+            this.field_r = this.field_n * this.field_v.getPhaseTicks((byte) -120) / this.field_v.getRetractTicks(false);
             if (this.field_r == 0 &&
               var2 != 0) {
-              this.a(42).b(false).a(0, this.getRenderY((byte) 92), 0, 0, 0, this.getRenderX((byte) 52));
+              this.a(42).getParticleEffects(false).a(0, this.getRenderY((byte) 92), 0, 0, 0, this.getRenderX((byte) 52));
             }
             var11 = (w) (this.a(param0 + 44).field_G);
             if (var11 == null) {
@@ -563,7 +563,7 @@ final class CrusherModel extends TrapModel {
             }
             return;
           }
-          this.a(42).b(false).a(0, this.getRenderY((byte) 92), 0, 0, 0, this.getRenderX((byte) 52));
+          this.a(42).getParticleEffects(false).a(0, this.getRenderY((byte) 92), 0, 0, 0, this.getRenderX((byte) 52));
         }
         var17_ref = (w) (this.a(param0 + 44).field_G);
         if (var17_ref == null) {
@@ -725,7 +725,7 @@ final class CrusherModel extends TrapModel {
           var6_int = param2 + (this.field_t << 16);
           param3 = param3 + (this.field_r << 16);
           var7 = param1 + (this.field_m << 16);
-          var8 = dfa.a(4096 - this.body.getFacingAngle(-25787) >> 2, 2048, -120);
+          var8 = GameScreen.a(4096 - this.body.getFacingAngle(-25787) >> 2, 2048, -120);
           var10 = 14 % ((param4 + 38) / 47);
           var11 = this.field_q;
           if (var11 != 0 &&

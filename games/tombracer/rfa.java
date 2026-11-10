@@ -14,7 +14,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
         int var4 = TombRacer.field_G ? 1 : 0;
         java.awt.Canvas var2 = kw.b((byte) -97);
         if (wna.c(-127)) {
-          fh.a(PortalComponent.A(90), var2, param0 ^ 0);
+          WallTile.a(PortalComponent.A(90), var2, param0 ^ 0);
           return;
         }
         if (!lla.field_b) {
@@ -111,7 +111,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
           this.updateScreen(param0, false);
         } else {
           if (!una.a((byte) 127)) {
-            if (fja.h(105)) {
+            if (PlayPhase.h(105)) {
               stackIn_46_1 = -85;
               stackIn_47_2 = (null != dq.field_f);
               var3 = this.a(stackIn_46_1, stackIn_47_2);

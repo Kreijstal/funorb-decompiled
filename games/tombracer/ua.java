@@ -7,8 +7,8 @@ final class ua implements GamePacket {
     public final void decode(BitPacketBuffer param0, byte param1) {
         try {
           if (param1 != -19) {
-            qh var4 = (qh) null;
-            this.a(113, (v) null, (qh) null);
+            MatchScreen var4 = (MatchScreen) null;
+            this.a(113, (MatchProtocol) null, (MatchScreen) null);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ua.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -26,7 +26,7 @@ final class ua implements GamePacket {
         }
     }
 
-    final void a(int param0, v param1, qh param2) {
+    final void a(int param0, MatchProtocol param1, MatchScreen param2) {
         try {
           param2.m((byte) -116);
           if (param0 != 2) {

@@ -136,7 +136,7 @@ final class fp {
         aa.field_a = SpriteData.loadSprite(param2, "", "map_routedot");
         pha.field_Bb = SpriteData.loadSprite(param2, "", "map_coin_gold");
         ConstrainToRectangleLocomotor.field_t = SpriteData.loadSprite(param2, "", "map_coin_silver");
-        qh.field_q = SpriteData.loadSprite(param2, "", "map_coin_bronze");
+        MatchScreen.field_q = SpriteData.loadSprite(param2, "", "map_coin_bronze");
         TimeSwitchBehaviour.field_n = SpriteData.loadSprite(param2, "", "map_locationdot");
         int incrementValue$4 = param1;
         param1++;
@@ -205,8 +205,8 @@ final class fp {
           incrementValue$8 = param1;
           param1++;
           var16_ref.a(incrementValue$8, (byte) 47, param0);
-          nia.a(PitComponent.field_G, "basic", "orbcoin", -121);
-          MatchState.field_p = nia.a(param2, "", "lobby_game_logo", -119);
+          MaskBlendOperator.a(PitComponent.field_G, "basic", "orbcoin", -121);
+          MatchState.field_p = MaskBlendOperator.a(param2, "", "lobby_game_logo", -119);
           bp.field_m = BoulderComponent.a(param2, "", 5, "lobby_icons");
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "fp.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -318,7 +318,7 @@ final class fp {
               var1_int = var1_int + GasVentModel.field_p;
             }
             if (var4 >= 0) {
-              qt.field_a.c(var6, var8Lifetime1, qra.field_j + var1_int, var5, -1);
+              qt.field_a.c(var6, var8Lifetime1, MatchPhase.field_j + var1_int, var5, -1);
               var1_int = var1_int + (nt.field_d + GasVentModel.field_p + mha.field_C);
             } else {
               ConsoleValue.field_c.c(var6, var8Lifetime1, var1_int + vi.field_a, var5, -1);
@@ -344,7 +344,7 @@ final class fp {
         }
         int var2 = aq.a(-5640);
         int var3 = BufferedSocket.a(2147483647, new Random(), 45);
-        cs.field_c = new qh(false, 0, new String[]{""}, 0, false, var2, -1 + var2, 1, 2, 0, (BitSet[]) null, new boolean[]{ReportAbuseDialog.field_ub > 0 ? true : false}, new qha(var3));
+        cs.field_c = new MatchScreen(false, 0, new String[]{""}, 0, false, var2, -1 + var2, 1, 2, 0, (BitSet[]) null, new boolean[]{ReportAbuseDialog.field_ub > 0 ? true : false}, new qha(var3));
         cs.field_c.k((byte) -25);
         wka.field_d = true;
     }

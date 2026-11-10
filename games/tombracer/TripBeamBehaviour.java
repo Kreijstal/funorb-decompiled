@@ -164,12 +164,12 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
           var4 = this.a(this.field_u, (byte) 72);
           this.q((byte) 92);
           var11.a(1, this.trap, -91, this.field_u, this.getRoot(6), this.field_z);
-          var11.b(false).a((byte) 119, this.field_u, this.field_z);
+          var11.getParticleEffects(false).a((byte) 119, this.field_u, this.field_z);
           var7_ref_pc = this.field_u;
           while (var7_ref_pc.nextSegment != null) {
             var7_ref_pc = var7_ref_pc.nextSegment;
           }
-          var11.b(false).a(var7_ref_pc, this.trap, (byte) -119);
+          var11.getParticleEffects(false).a(var7_ref_pc, this.trap, (byte) -119);
           var5 = this.a(this.field_u, (byte) -65);
         } else {
           this.q((byte) 92);
@@ -207,9 +207,9 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
                 }
                 if (null == var8.nextSegment) {
                   if (!this.field_r) {
-                    var11.b(false).a(var8.field_a, (byte) -120, 8, var9, 1, 0, 2, 0, var8.field_e, 2, 4);
+                    var11.getParticleEffects(false).a(var8.field_a, (byte) -120, 8, var9, 1, 0, 2, 0, var8.field_e, 2, 4);
                   } else {
-                    var11.b(false).a(var8.field_a, (byte) -117, 9, var9, 1, 0, 4, 0, var8.field_e, 4, 8);
+                    var11.getParticleEffects(false).a(var8.field_a, (byte) -117, 9, var9, 1, 0, 4, 0, var8.field_e, 4, 8);
                   }
                 }
                 var8 = var8.nextSegment;
@@ -255,9 +255,9 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
             if (var8Lifetime1.blocked) {
               if (null == var8Lifetime1.nextSegment) {
                 if (!this.field_r) {
-                  var11.b(false).a(var8Lifetime1.field_a, (byte) -120, 8, var9Lifetime1, 1, 0, 2, 0, var8Lifetime1.field_e, 2, 4);
+                  var11.getParticleEffects(false).a(var8Lifetime1.field_a, (byte) -120, 8, var9Lifetime1, 1, 0, 2, 0, var8Lifetime1.field_e, 2, 4);
                 } else {
-                  var11.b(false).a(var8Lifetime1.field_a, (byte) -117, 9, var9Lifetime1, 1, 0, 4, 0, var8Lifetime1.field_e, 4, 8);
+                  var11.getParticleEffects(false).a(var8Lifetime1.field_a, (byte) -117, 9, var9Lifetime1, 1, 0, 4, 0, var8Lifetime1.field_e, 4, 8);
                 }
               }
               var8Lifetime1 = var8Lifetime1.nextSegment;
@@ -303,9 +303,9 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
           if (var8Lifetime2.blocked) {
             if (null == var8Lifetime2.nextSegment) {
               if (!this.field_r) {
-                var11.b(false).a(var8Lifetime2.field_a, (byte) -120, 8, var9Lifetime2, 1, 0, 2, 0, var8Lifetime2.field_e, 2, 4);
+                var11.getParticleEffects(false).a(var8Lifetime2.field_a, (byte) -120, 8, var9Lifetime2, 1, 0, 2, 0, var8Lifetime2.field_e, 2, 4);
               } else {
-                var11.b(false).a(var8Lifetime2.field_a, (byte) -117, 9, var9Lifetime2, 1, 0, 4, 0, var8Lifetime2.field_e, 4, 8);
+                var11.getParticleEffects(false).a(var8Lifetime2.field_a, (byte) -117, 9, var9Lifetime2, 1, 0, 4, 0, var8Lifetime2.field_e, 4, 8);
               }
             }
             var8Lifetime2 = var8Lifetime2.nextSegment;

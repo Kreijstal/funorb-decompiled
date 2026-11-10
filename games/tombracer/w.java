@@ -188,7 +188,7 @@ final class w extends sqa {
           }
           var5 = to.field_i[var3_int];
           if (0 < var5) {
-            var4 = var4 + uca.field_c.nextBounded(var5, 0);
+            var4 = var4 + uca.cosmeticRandom.nextBounded(var5, 0);
           }
           var6 = 0;
           if (var3_int == 28) {
@@ -208,7 +208,7 @@ final class w extends sqa {
             var9 = jba.a(this.field_h, true, param0.b(param1 - 52));
             var10 = ol.a(param0.b(-118), var3_int, (byte) -91, this.field_h, param0.a(-121), this.field_c);
           }
-          var11 = v.a(100, (byte) -58, var9, var4, var6, var10);
+          var11 = MatchProtocol.a(100, (byte) -58, var9, var4, var6, var10);
           if (var7 != 0) {
             var11.field_f.b(-1);
           }

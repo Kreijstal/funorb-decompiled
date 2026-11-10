@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gi extends me {
-    gi(qh param0) {
+    gi(MatchScreen param0) {
         super(param0);
     }
 
@@ -61,7 +61,7 @@ final class gi extends me {
               oka.a((dta.field_b[var11] + "  " + this.field_i.a(var12, false) + "  " + dea.a(this.field_g.simulations[var12].tick, (byte) -8)).toUpperCase(), var13, qf.field_j, -1, var7 * var11 + var10, var2, 0);
             } else {
               if (!this.field_g.simulations[var12].e(-31170) &&
-                this.field_i.field_k.e(2) < 0) {
+                this.field_i.matchState.e(2) < 0) {
                 oka.a((dta.field_b[var11] + "  ...").toUpperCase(), 16777215, qf.field_j, -1, var11 * var7 + var10, var2, 0);
                 return;
               }

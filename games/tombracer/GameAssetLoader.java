@@ -204,7 +204,7 @@ final class GameAssetLoader implements LoadingStage {
         if (baa.field_d == null) {
           this.a(95, (byte) 47, uba.loadingQuipsShort[9]);
           FleeLocomotor.e((byte) -33);
-          baa.field_d = new di(qra.field_l, rc.field_a);
+          baa.field_d = new di(MatchPhase.field_l, rc.field_a);
         }
         LaserShooterComponent.D(17229);
         if (null == baa.field_d.field_i) {
@@ -338,7 +338,7 @@ final class GameAssetLoader implements LoadingStage {
         CoinItemComponent.a(cq.field_d, (byte) 52);
         hd.a(50, param0 ^ -78);
         wm.field_a = null;
-        hb.field_t = (dfa) ((Object) nl.a(0, (byte) 50));
+        hb.field_t = (GameScreen) ((Object) nl.a(0, (byte) 50));
         ima.a(100.0f, uba.loadingQuipsShort[10], param0 ^ 115);
         ad.field_j.draw(param0 ^ -49);
         gn.field_C.a(-19216);

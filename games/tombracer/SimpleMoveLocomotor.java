@@ -64,7 +64,7 @@ final class SimpleMoveLocomotor extends Locomotor {
             if (this.field_q) {
               if (this.trap.p((byte) -103)) {
                 var2 = -var2;
-                this.field_p = dfa.a(-this.trap.getAngle((byte) -80) + var2, 8192, 69);
+                this.field_p = GameScreen.a(-this.trap.getAngle((byte) -80) + var2, 8192, 69);
               }
               if (!this.trap.C((byte) -43)) {
                 if (this.trap.getLocalX(25745) != var8 ||
@@ -78,7 +78,7 @@ final class SimpleMoveLocomotor extends Locomotor {
                 return;
               }
               var2 = 4096 - var2;
-              this.field_p = dfa.a(var2 - this.trap.getAngle((byte) -80), 8192, 112);
+              this.field_p = GameScreen.a(var2 - this.trap.getAngle((byte) -80), 8192, 112);
             }
             if (this.trap.getLocalX(25745) != var8) {
               this.field_o = this.field_o + this.field_t;
@@ -112,11 +112,11 @@ final class SimpleMoveLocomotor extends Locomotor {
             if (this.field_q) {
               if (this.trap.p((byte) -103)) {
                 var2 = -var2;
-                this.field_p = dfa.a(-this.trap.getAngle((byte) -80) + var2, 8192, 69);
+                this.field_p = GameScreen.a(-this.trap.getAngle((byte) -80) + var2, 8192, 69);
               }
               if (this.trap.C((byte) -43)) {
                 var2 = 4096 - var2;
-                this.field_p = dfa.a(var2 - this.trap.getAngle((byte) -80), 8192, 112);
+                this.field_p = GameScreen.a(var2 - this.trap.getAngle((byte) -80), 8192, 112);
               }
             }
             if (this.trap.getLocalX(25745) != var8Lifetime4 ||
@@ -131,11 +131,11 @@ final class SimpleMoveLocomotor extends Locomotor {
             if (this.field_q) {
               if (this.trap.p((byte) -103)) {
                 var2 = -var2;
-                this.field_p = dfa.a(-this.trap.getAngle((byte) -80) + var2, 8192, 69);
+                this.field_p = GameScreen.a(-this.trap.getAngle((byte) -80) + var2, 8192, 69);
               }
               if (this.trap.C((byte) -43)) {
                 var2 = 4096 - var2;
-                this.field_p = dfa.a(var2 - this.trap.getAngle((byte) -80), 8192, 112);
+                this.field_p = GameScreen.a(var2 - this.trap.getAngle((byte) -80), 8192, 112);
               }
             }
             if (this.trap.getLocalX(25745) != var8Lifetime4 ||
@@ -163,7 +163,7 @@ final class SimpleMoveLocomotor extends Locomotor {
             if (this.field_q) {
               if (this.trap.p((byte) -103)) {
                 var2 = -var2;
-                this.field_p = dfa.a(-this.trap.getAngle((byte) -80) + var2, 8192, 69);
+                this.field_p = GameScreen.a(-this.trap.getAngle((byte) -80) + var2, 8192, 69);
               }
               if (!this.trap.C((byte) -43)) {
                 if (this.trap.getLocalX(25745) != var8Lifetime1 ||
@@ -177,7 +177,7 @@ final class SimpleMoveLocomotor extends Locomotor {
                 return;
               }
               var2 = 4096 - var2;
-              this.field_p = dfa.a(var2 - this.trap.getAngle((byte) -80), 8192, 112);
+              this.field_p = GameScreen.a(var2 - this.trap.getAngle((byte) -80), 8192, 112);
             }
             if (this.trap.getLocalX(25745) != var8Lifetime1) {
               this.field_o = this.field_o + this.field_t;
@@ -211,11 +211,11 @@ final class SimpleMoveLocomotor extends Locomotor {
             if (this.field_q) {
               if (this.trap.p((byte) -103)) {
                 var2 = -var2;
-                this.field_p = dfa.a(-this.trap.getAngle((byte) -80) + var2, 8192, 69);
+                this.field_p = GameScreen.a(-this.trap.getAngle((byte) -80) + var2, 8192, 69);
               }
               if (this.trap.C((byte) -43)) {
                 var2 = 4096 - var2;
-                this.field_p = dfa.a(var2 - this.trap.getAngle((byte) -80), 8192, 112);
+                this.field_p = GameScreen.a(var2 - this.trap.getAngle((byte) -80), 8192, 112);
               }
             }
             if (this.trap.getLocalX(25745) != var8Lifetime1Lifetime1 ||
@@ -230,11 +230,11 @@ final class SimpleMoveLocomotor extends Locomotor {
             if (this.field_q) {
               if (this.trap.p((byte) -103)) {
                 var2 = -var2;
-                this.field_p = dfa.a(-this.trap.getAngle((byte) -80) + var2, 8192, 69);
+                this.field_p = GameScreen.a(-this.trap.getAngle((byte) -80) + var2, 8192, 69);
               }
               if (this.trap.C((byte) -43)) {
                 var2 = 4096 - var2;
-                this.field_p = dfa.a(var2 - this.trap.getAngle((byte) -80), 8192, 112);
+                this.field_p = GameScreen.a(var2 - this.trap.getAngle((byte) -80), 8192, 112);
               }
             }
             if (this.trap.getLocalX(25745) != var8Lifetime1Lifetime1 ||
@@ -262,11 +262,11 @@ final class SimpleMoveLocomotor extends Locomotor {
             if (this.field_q) {
               if (this.trap.p((byte) -103)) {
                 var2 = -var2;
-                this.field_p = dfa.a(-this.trap.getAngle((byte) -80) + var2, 8192, 69);
+                this.field_p = GameScreen.a(-this.trap.getAngle((byte) -80) + var2, 8192, 69);
               }
               if (this.trap.C((byte) -43)) {
                 var2 = 4096 - var2;
-                this.field_p = dfa.a(var2 - this.trap.getAngle((byte) -80), 8192, 112);
+                this.field_p = GameScreen.a(var2 - this.trap.getAngle((byte) -80), 8192, 112);
               }
             }
             if (this.trap.getLocalX(25745) != var8Lifetime2 ||
@@ -286,11 +286,11 @@ final class SimpleMoveLocomotor extends Locomotor {
           if (this.field_q) {
             if (this.trap.p((byte) -103)) {
               var2 = -var2;
-              this.field_p = dfa.a(-this.trap.getAngle((byte) -80) + var2, 8192, 69);
+              this.field_p = GameScreen.a(-this.trap.getAngle((byte) -80) + var2, 8192, 69);
             }
             if (this.trap.C((byte) -43)) {
               var2 = 4096 - var2;
-              this.field_p = dfa.a(var2 - this.trap.getAngle((byte) -80), 8192, 112);
+              this.field_p = GameScreen.a(var2 - this.trap.getAngle((byte) -80), 8192, 112);
             }
           }
           if (this.trap.getLocalX(25745) != var8Lifetime2Lifetime1 ||
@@ -313,7 +313,7 @@ final class SimpleMoveLocomotor extends Locomotor {
         if (this.field_q) {
           if (this.trap.p((byte) -103)) {
             var2 = -var2;
-            this.field_p = dfa.a(-this.trap.getAngle((byte) -80) + var2, 8192, 69);
+            this.field_p = GameScreen.a(-this.trap.getAngle((byte) -80) + var2, 8192, 69);
           }
           if (!this.trap.C((byte) -43)) {
             if (this.trap.getLocalX(25745) != var8Lifetime3) {
@@ -347,7 +347,7 @@ final class SimpleMoveLocomotor extends Locomotor {
             return;
           }
           var2 = 4096 - var2;
-          this.field_p = dfa.a(var2 - this.trap.getAngle((byte) -80), 8192, 112);
+          this.field_p = GameScreen.a(var2 - this.trap.getAngle((byte) -80), 8192, 112);
         }
         if (this.trap.getLocalX(25745) != var8Lifetime3) {
           this.field_o = this.field_o + this.field_t;
@@ -386,11 +386,11 @@ final class SimpleMoveLocomotor extends Locomotor {
     final void c(byte param0) {
         super.c((byte) -119);
         if (param0 <= -116) {
-          this.field_p = dfa.a(-this.field_p, 8192, 118);
+          this.field_p = GameScreen.a(-this.field_p, 8192, 118);
           return;
         }
         this.getTypeId(33);
-        this.field_p = dfa.a(-this.field_p, 8192, 118);
+        this.field_p = GameScreen.a(-this.field_p, 8192, 118);
     }
 
     public static void releaseStatics(byte param0) {

@@ -59,7 +59,7 @@ final class rca extends me {
           this.b((byte) 103);
         }
         if (!this.field_k) {
-          v.a(100, (byte) -76, 128, 222, 0, 96);
+          MatchProtocol.a(100, (byte) -76, 128, 222, 0, 96);
           this.field_k = true;
         }
         if (hf.field_b == 1) {
@@ -71,7 +71,7 @@ final class rca extends me {
         }
     }
 
-    rca(qh param0, taa param1) {
+    rca(MatchScreen param0, taa param1) {
         super(param0);
         this.field_k = false;
         try {

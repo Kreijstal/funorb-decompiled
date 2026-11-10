@@ -43,7 +43,7 @@ final class bj extends TextureOperator {
         }
         boolean decompiledFrameRemainder0 = true;
         if (this.field_i.field_d) {
-          var4 = sj.field_b[param1];
+          var4 = sj.textureRowCoords[param1];
           if (this.field_q == 0) {
             var13Lifetime1 = var12;
             var5 = 0;
@@ -56,7 +56,7 @@ final class bj extends TextureOperator {
                     var5 = 4096;
                     break scanLoop1;
                   }
-                  ArrayUtils.fill(var13Lifetime1, 0, ns.field_g, var5);
+                  ArrayUtils.fill(var13Lifetime1, 0, ns.textureWidth, var5);
                   return var3;
                 }
                 var6++;
@@ -64,15 +64,15 @@ final class bj extends TextureOperator {
               }
               break;
             }
-            ArrayUtils.fill(var13Lifetime1, 0, ns.field_g, var5);
+            ArrayUtils.fill(var13Lifetime1, 0, ns.textureWidth, var5);
             decompiledFrameRemainder0 = false;
           }
           else {
             var5Lifetime1 = 0;
-            while (!(ns.field_g <= var5Lifetime1)) {
+            while (!(ns.textureWidth <= var5Lifetime1)) {
               var6Lifetime1 = 0;
               var7 = 0;
-              var8 = ht.field_Fb[var5Lifetime1];
+              var8 = ht.textureColumnCoords[var5Lifetime1];
               var9 = this.field_q;
               if (var9 != 1) {
                 if (var9 != 2) {

@@ -53,12 +53,12 @@ final class go extends TextureOperator {
         var17 = this.field_i.a((byte) 80, param1);
         var3 = var17;
         if (this.field_i.field_d) {
-          var24 = this.getInputMonochromeRow(0, -73, -1 + param1 & hba.field_b);
+          var24 = this.getInputMonochromeRow(0, -73, -1 + param1 & hba.textureHeightMask);
           var5 = this.getInputMonochromeRow(0, -112, param1);
-          var25 = this.getInputMonochromeRow(0, -47, param1 + 1 & hba.field_b);
-          for (var7 = 0; var7 < ns.field_g; var7++) {
+          var25 = this.getInputMonochromeRow(0, -47, param1 + 1 & hba.textureHeightMask);
+          for (var7 = 0; var7 < ns.textureWidth; var7++) {
             var8 = (-var24[var7] + var25[var7]) * this.field_n;
-            var9 = this.field_n * (-var5[una.field_b & var7 - 1] + var5[1 + var7 & una.field_b]);
+            var9 = this.field_n * (-var5[una.textureWidthMask & var7 - 1] + var5[1 + var7 & una.textureWidthMask]);
             var10 = var9 >> 12;
             var11 = var8 >> 12;
             var12 = var10 * var10 >> 12;

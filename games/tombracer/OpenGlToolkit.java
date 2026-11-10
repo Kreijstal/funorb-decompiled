@@ -3324,7 +3324,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
               for (var7 = 0; param0.field_i > var7; var7++) {
                 incrementValue$0 = var5;
                 var5++;
-                var3[incrementValue$0] = fh.a(param0.field_h[var4] << 24, param0.field_g[SnakePitBehaviour.c((int) param0.field_f[var4], 255)]);
+                var3[incrementValue$0] = WallTile.a(param0.field_h[var4] << 24, param0.field_g[SnakePitBehaviour.c((int) param0.field_f[var4], 255)]);
                 var4++;
               }
             }
@@ -3339,7 +3339,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
                 stackIn_8_0 = var10;
                 stackIn_8_1 = incrementValue$2;
                 if (0 != var8) {
-                  stackIn_9_2 = fh.a(-16777216, var8);
+                  stackIn_9_2 = WallTile.a(-16777216, var8);
                 } else {
                   stackIn_9_2 = 0;
                 }

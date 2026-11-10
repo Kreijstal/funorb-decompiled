@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class qra {
+abstract class MatchPhase {
     static int[] field_e;
     private boolean field_b;
     static String field_g;
     static float field_d;
-    MatchState field_c;
+    MatchState matchState;
     private boolean field_i;
-    qh field_h;
+    MatchScreen screen;
     static d field_l;
     static int field_j;
     private fna field_k;
-    v field_f;
+    MatchProtocol protocol;
     private ko field_a;
 
     public static void releaseStatics(int param0) {
@@ -22,7 +22,7 @@ abstract class qra {
           field_g = null;
           return;
         }
-        qra.releaseStatics(-96);
+        MatchPhase.releaseStatics(-96);
         field_l = null;
         field_e = null;
         field_g = null;
@@ -145,7 +145,7 @@ abstract class qra {
             return;
           }
           stackIn_27_0 = false;
-          stackIn_28_1 = (!this.field_h.field_D) ? 9 : 7;
+          stackIn_28_1 = (!this.screen.field_D) ? 9 : 7;
           ConstrainToRectangleLocomotor.a(stackIn_27_0, stackIn_28_1, (byte) 97);
           return;
         }
@@ -183,7 +183,7 @@ abstract class qra {
             return;
           }
           stackIn_58_0 = false;
-          stackIn_59_1 = (!this.field_h.field_D) ? 9 : 7;
+          stackIn_59_1 = (!this.screen.field_D) ? 9 : 7;
           ConstrainToRectangleLocomotor.a(stackIn_58_0, stackIn_59_1, (byte) 97);
           return;
         }
@@ -225,16 +225,16 @@ abstract class qra {
           return;
         }
         stackIn_92_0 = false;
-        stackIn_93_1 = (!this.field_h.field_D) ? 9 : 7;
+        stackIn_93_1 = (!this.screen.field_D) ? 9 : 7;
         ConstrainToRectangleLocomotor.a(stackIn_92_0, stackIn_93_1, (byte) 97);
         return;
     }
 
-    qra(qh param0, v param1) {
+    MatchPhase(MatchScreen param0, MatchProtocol param1) {
         try {
-          this.field_c = param0.field_k;
-          this.field_f = param1;
-          this.field_h = param0;
+          this.matchState = param0.matchState;
+          this.protocol = param1;
+          this.screen = param0;
           this.a((byte) -78);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "qra.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');

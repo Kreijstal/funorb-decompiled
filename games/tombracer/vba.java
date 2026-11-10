@@ -17,7 +17,7 @@ final class vba extends we {
         this.field_r = new int[42];
         try {
           for (var7_int = 0; var7_int < this.field_w.length; var7_int++) {
-            this.field_w[var7_int] = uca.field_c.nextBounded(3, 0);
+            this.field_w[var7_int] = uca.cosmeticRandom.nextBounded(3, 0);
           }
           this.field_o = false;
         } catch (RuntimeException runtimeException) {

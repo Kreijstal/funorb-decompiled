@@ -174,8 +174,8 @@ final class mba extends uq {
         int var8 = 0;
         int var9 = 0;
         int var11 = 0;
-        pca var12 = null;
-        pca var13 = null;
+        TileGridCell var12 = null;
+        TileGridCell var13 = null;
         int var11Lifetime1;
         try {
           var3_int = this.field_e.c((byte) 83);

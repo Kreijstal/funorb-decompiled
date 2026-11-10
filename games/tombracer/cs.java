@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cs {
-    static qh field_c;
+    static MatchScreen field_c;
     static String field_b;
     static jea field_a;
 

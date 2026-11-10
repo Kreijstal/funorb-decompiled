@@ -69,7 +69,7 @@ final class qw extends IntrusiveNode {
             return;
           }
           if (null != SecondaryNodeDequeIterator.field_a) {
-            v.b(15, 0);
+            MatchProtocol.b(15, 0);
             return;
           }
           return;
@@ -78,7 +78,7 @@ final class qw extends IntrusiveNode {
           return;
         }
         if (null != SecondaryNodeDequeIterator.field_a) {
-          v.b(15, 0);
+          MatchProtocol.b(15, 0);
           return;
         }
     }

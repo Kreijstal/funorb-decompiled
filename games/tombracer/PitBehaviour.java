@@ -53,7 +53,7 @@ final class PitBehaviour extends Behaviour {
         int var7 = 0;
         Room var7_ref_la = null;
         int var8 = 0;
-        tqa var8_ref_tqa = null;
+        TileGrid var8_ref_tqa = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -81,7 +81,7 @@ final class PitBehaviour extends Behaviour {
             var5_int = param2.getX(3);
             var6 = param2.getY(9648);
             var7_ref_la = this.getRoom(true);
-            var8_ref_tqa = var7_ref_la.f((byte) 93);
+            var8_ref_tqa = var7_ref_la.getTileGrid((byte) 93);
             var9 = var8_ref_tqa.a(var5_int, false);
             var10 = var8_ref_tqa.a(var6, false);
             var11 = var6 % this.field_u;

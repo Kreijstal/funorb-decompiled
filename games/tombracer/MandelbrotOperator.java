@@ -33,9 +33,9 @@ final class MandelbrotOperator extends TextureOperator {
         var15 = this.field_i.a((byte) 20, param1);
         var3 = var15;
         if (this.field_i.field_d) {
-          for (var4 = 0; var4 < ns.field_g; var4++) {
-            var5 = (ht.field_Fb[var4] << 12) / this.field_q + this.field_n;
-            var6 = (sj.field_b[param1] << 12) / this.field_q + this.field_p;
+          for (var4 = 0; var4 < ns.textureWidth; var4++) {
+            var5 = (ht.textureColumnCoords[var4] << 12) / this.field_q + this.field_n;
+            var6 = (sj.textureRowCoords[param1] << 12) / this.field_q + this.field_p;
             var7 = var5;
             var8 = var6;
             var9 = var5;

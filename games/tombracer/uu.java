@@ -130,7 +130,7 @@ final class uu implements GamePacket {
         if (param2 >= -56) {
           return false;
         }
-        return pca.b(param1, 113, param0) & ag.b(-1, param0, param1);
+        return TileGridCell.b(param1, 113, param0) & ag.b(-1, param0, param1);
     }
 
     final static void b(int param0, int param1) {

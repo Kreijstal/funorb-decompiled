@@ -133,7 +133,7 @@ final class gu extends me {
           return (TextureOperator) ((Object) new nfa());
         }
         if (var2 == 21) {
-          return (TextureOperator) ((Object) new nia());
+          return (TextureOperator) ((Object) new MaskBlendOperator());
         }
         if (var2 == 22) {
           return (TextureOperator) ((Object) new InvertOperator());
@@ -206,7 +206,7 @@ final class gu extends me {
         }
     }
 
-    gu(qh param0) {
+    gu(MatchScreen param0) {
         super(param0);
         this.field_j = 350;
         this.field_m = 320;

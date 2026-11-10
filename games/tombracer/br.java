@@ -98,14 +98,14 @@ final class br extends DualLinkNode {
         int var2Lifetime1;
         if (this.field_l != null) {
           for (var2 = 0; this.field_l.length > var2; var2++) {
-            this.field_l[var2] = fh.a(this.field_l[var2], 32768);
+            this.field_l[var2] = WallTile.a(this.field_l[var2], 32768);
           }
         }
         if (null != this.field_q) {
           var4 = 0;
           var2Lifetime1 = var4;
           while (var4 < this.field_q.length) {
-            this.field_q[var4] = fh.a(this.field_q[var4], 32768);
+            this.field_q[var4] = WallTile.a(this.field_q[var4], 32768);
             var4++;
           }
         }

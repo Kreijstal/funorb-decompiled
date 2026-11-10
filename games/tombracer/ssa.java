@@ -52,13 +52,13 @@ final class ssa {
             var8 = qf.a(966747152, "%40", "@", var7);
             var9 = qf.a(966747152, "%26", "&", var8);
             var10 = qf.a(966747152, "%23", "#", var9);
-            if (dfa.field_e == null) {
+            if (GameScreen.field_e == null) {
               return;
             }
             stackIn_16_0 = nea.field_c;
             stackIn_16_1 = null;
             stackIn_16_2 = null;
-            stackIn_16_3 = dfa.field_e.getCodeBase();
+            stackIn_16_3 = GameScreen.field_e.getCodeBase();
             stackIn_16_4 = new StringBuilder().append("clienterror.ws?c=").append(RotaterMountComponent.field_L).append("&u=");
             if (toa.field_f != null) {
               stackIn_17_1 = null;

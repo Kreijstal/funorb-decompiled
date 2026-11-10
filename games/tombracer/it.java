@@ -13,7 +13,7 @@ final class it {
         if (param0 != 255) {
           return (vb) null;
         }
-        return v.a(100, (byte) -76, 128, param1, 0, 255);
+        return MatchProtocol.a(100, (byte) -76, 128, param1, 0, 255);
     }
 
     public static void releaseStatics(int param0) {

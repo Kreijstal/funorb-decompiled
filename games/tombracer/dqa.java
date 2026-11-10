@@ -62,7 +62,7 @@ final class dqa extends mna {
 
     final static void a(ResourceArchive param0, ResourceArchive param1, byte param2, ResourceArchive param3) {
         try {
-          qra.field_l = (d) ((Object) new sja(param1, param0, param3));
+          MatchPhase.field_l = (d) ((Object) new sja(param1, param0, param3));
           if (param2 != 55) {
             field_e = (jea) null;
           }

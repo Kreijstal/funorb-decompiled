@@ -88,22 +88,22 @@ class coa extends TextureOperator {
           var5 = var14[1];
           var6 = var14[2];
           stackIn_6_0 = this.field_m;
-          if (ArchiveNetworkClient.field_i != this.field_r) {
-            stackIn_7_1 = this.field_r * param0 / ArchiveNetworkClient.field_i;
+          if (ArchiveNetworkClient.textureHeight != this.field_r) {
+            stackIn_7_1 = this.field_r * param0 / ArchiveNetworkClient.textureHeight;
           } else {
             stackIn_7_1 = param0;
           }
           var7 = stackIn_6_0 * stackIn_7_1;
-          if (this.field_m != ns.field_g) {
-            for (var8 = 0; var8 < ns.field_g; var8++) {
-              var9 = this.field_m * var8 / ns.field_g;
+          if (this.field_m != ns.textureWidth) {
+            for (var8 = 0; var8 < ns.textureWidth; var8++) {
+              var9 = this.field_m * var8 / ns.textureWidth;
               var10 = this.field_p[var7 + var9];
               var6[var8] = SnakePitBehaviour.c(4080, var10 << 4);
               var5[var8] = SnakePitBehaviour.c(var10, 65280) >> 4;
               var4[var8] = SnakePitBehaviour.c(16711680, var10) >> 12;
             }
           } else {
-            for (var8 = 0; ns.field_g > var8; var8++) {
+            for (var8 = 0; ns.textureWidth > var8; var8++) {
               incrementValue$0 = var7;
               var7++;
               var9 = this.field_p[incrementValue$0];

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class v {
+final class MatchProtocol {
     static int field_k;
     private static String[] field_g;
     private bka field_a;
@@ -14,7 +14,7 @@ final class v {
     private int[] field_b;
     private vi field_c;
 
-    private final void a(byte param0, BitPacketBuffer param1, qh param2) {
+    private final void a(byte param0, BitPacketBuffer param1, MatchScreen param2) {
         lta var4 = null;
         try {
           if (param0 != -73) {
@@ -28,12 +28,12 @@ final class v {
         }
     }
 
-    private final void b(qh param0, BitPacketBuffer param1, int param2) {
+    private final void b(MatchScreen param0, BitPacketBuffer param1, int param2) {
         lf var4 = null;
         try {
           if (param2 != 93) {
             java.applet.Applet var5 = (java.applet.Applet) null;
-            v.a((byte) -52, (java.applet.Applet) null);
+            MatchProtocol.a((byte) -52, (java.applet.Applet) null);
           }
           var4 = new lf();
           this.decodePacket(var4, 124, param1);
@@ -66,7 +66,7 @@ final class v {
         this.field_a.a((byte) -113, param1);
     }
 
-    private final void a(int param0, BitPacketBuffer param1, qh param2) {
+    private final void a(int param0, BitPacketBuffer param1, MatchScreen param2) {
         wga var4 = null;
         try {
           var4 = new wga();
@@ -91,7 +91,7 @@ final class v {
 
     final boolean b(int param0) {
         if (param0 != 1) {
-          v.a(-38, (byte) 20, -69, 62, 48, -77);
+          MatchProtocol.a(-38, (byte) 20, -69, 62, 48, -77);
         }
         return this.field_f;
     }
@@ -121,7 +121,7 @@ final class v {
         }
     }
 
-    private final void handleRoundResultPacket(BitPacketBuffer param0, qh param1, int param2) {
+    private final void handleRoundResultPacket(BitPacketBuffer param0, MatchScreen param1, int param2) {
         S2CRoundResultPacket var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -131,7 +131,7 @@ final class v {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
         try {
-          var4 = new S2CRoundResultPacket(param1.field_k.players.length);
+          var4 = new S2CRoundResultPacket(param1.matchState.players.length);
           this.decodePacket(var4, 126, param0);
           var4.apply(param1, param2 - 93);
           if (param2 != 93) {
@@ -164,7 +164,7 @@ final class v {
         hw.a((byte) -111, param1, 72, var3);
     }
 
-    final void a(qh param0, int param1) {
+    final void a(MatchScreen param0, int param1) {
         int var5 = 0;
         int var6 = 0;
         boolean stackIn_7_1 = false;
@@ -186,7 +186,7 @@ final class v {
         MatchState var8 = null;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
-          var8 = param0.field_k;
+          var8 = param0.matchState;
           if (param1 != 1) {
             return;
           }
@@ -258,7 +258,7 @@ final class v {
         }
     }
 
-    private final void a(int param0, qh param1, BitPacketBuffer param2) {
+    private final void a(int param0, MatchScreen param1, BitPacketBuffer param2) {
         nr var4 = null;
         try {
           var4 = new nr();
@@ -281,9 +281,9 @@ final class v {
         }
     }
 
-    private final void a(byte param0, qh param1, BitPacketBuffer param2) {
+    private final void a(byte param0, MatchScreen param1, BitPacketBuffer param2) {
         foa var4 = null;
-        qh var5 = null;
+        MatchScreen var5 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -296,8 +296,8 @@ final class v {
           this.decodePacket(var4, 112, param2);
           var4.a(param1, -1, this);
           if (param0 >= -7) {
-            var5 = (qh) null;
-            this.a(-98, (BitPacketBuffer) null, (qh) null);
+            var5 = (MatchScreen) null;
+            this.a(-98, (BitPacketBuffer) null, (MatchScreen) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -320,7 +320,7 @@ final class v {
         }
     }
 
-    private final void handleNewRoomPacket(boolean param0, BitPacketBuffer param1, qh param2) {
+    private final void handleNewRoomPacket(boolean param0, BitPacketBuffer param1, MatchScreen param2) {
         S2CNewRoomPacket var4 = null;
         try {
           if (!param0) {
@@ -342,7 +342,7 @@ final class v {
         RoomEffectTraps.a(0, -122, 10 + var2Lifetime1, "received: " + this.field_c.a((byte) 107), param0, kn.field_p, 16777215);
     }
 
-    final boolean handleServerPacket(byte param0, qh param1, BitPacketBuffer param2, int param3) {
+    final boolean handleServerPacket(byte param0, MatchScreen param1, BitPacketBuffer param2, int param3) {
         RuntimeException stackIn_44_0 = null;
         StringBuilder stackIn_44_1 = null;
         String stackIn_45_2 = null;
@@ -437,10 +437,10 @@ final class v {
         }
     }
 
-    private final void handlePlayerSyncPacket(qh param0, BitPacketBuffer param1, boolean param2) {
+    private final void handlePlayerSyncPacket(MatchScreen param0, BitPacketBuffer param1, boolean param2) {
         S2CPlayerSyncPacket var4 = null;
         try {
-          var4 = new S2CPlayerSyncPacket(param0.field_k.players.length);
+          var4 = new S2CPlayerSyncPacket(param0.matchState.players.length);
           if (param2) {
             this.field_h = (IntrusiveDeque) null;
           }
@@ -451,7 +451,7 @@ final class v {
         }
     }
 
-    private final void b(byte param0, qh param1, BitPacketBuffer param2) {
+    private final void b(byte param0, MatchScreen param1, BitPacketBuffer param2) {
         ua var4 = null;
         try {
           var4 = new ua();
@@ -530,7 +530,7 @@ final class v {
         }
     }
 
-    private final void handleEventPacket(qh param0, BitPacketBuffer param1, byte param2) {
+    private final void handleEventPacket(MatchScreen param0, BitPacketBuffer param1, byte param2) {
         S2CEventPacket var4 = null;
         try {
           if (param2 > -67) {
@@ -538,7 +538,7 @@ final class v {
           }
           var4 = new S2CEventPacket();
           this.decodePacket(var4, -4, param1);
-          param0.field_k.deliverPendingEvent((byte) 121, var4.getEvent((byte) 118));
+          param0.matchState.deliverPendingEvent((byte) 121, var4.getEvent((byte) 118));
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "v.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -585,12 +585,12 @@ final class v {
           return;
         }
         if (param0 != 6418) {
-          v.a(125, (byte) 41, 101, 81, 77, 14);
+          MatchProtocol.a(125, (byte) 41, 101, 81, 77, 14);
         }
         ql.field_k.writeCipheredOpcode(81, -2988);
     }
 
-    private final void a(qh param0, BitPacketBuffer param1, int param2) {
+    private final void a(MatchScreen param0, BitPacketBuffer param1, int param2) {
         vra var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -631,8 +631,8 @@ final class v {
         int var7 = 0;
         int var8 = TombRacer.field_G ? 1 : 0;
         if (param0 >= -80) {
-          qh var9 = (qh) null;
-          this.handleRoundResultPacket((BitPacketBuffer) null, (qh) null, 41);
+          MatchScreen var9 = (MatchScreen) null;
+          this.handleRoundResultPacket((BitPacketBuffer) null, (MatchScreen) null, 41);
         }
         C2SActionPacket var6 = new C2SActionPacket();
         for (var7 = 0; var7 < 8; var7++) {
@@ -656,7 +656,7 @@ final class v {
         }
     }
 
-    v(int param0, int param1) {
+    MatchProtocol(int param0, int param1) {
         this.field_a = new bka();
         this.field_h = new IntrusiveDeque();
         this.field_d = param0;

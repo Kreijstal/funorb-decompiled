@@ -79,17 +79,17 @@ final class FlipOperator extends TextureOperator {
           stackIn_5_1 = 0;
           stackIn_5_2 = param0 ^ -17;
           if (this.field_n) {
-            stackIn_6_3 = hba.field_b - param1;
+            stackIn_6_3 = hba.textureHeightMask - param1;
           } else {
             stackIn_6_3 = param1;
           }
           var4 = this.getInputMonochromeRow(stackIn_5_1, stackIn_5_2, stackIn_6_3);
           if (this.field_o) {
-            for (var5 = 0; var5 < ns.field_g; var5++) {
-              var7[var5] = var4[-var5 + una.field_b];
+            for (var5 = 0; var5 < ns.textureWidth; var5++) {
+              var7[var5] = var4[-var5 + una.textureWidthMask];
             }
           } else {
-            ArrayUtils.copy(var4, 0, var7, 0, ns.field_g);
+            ArrayUtils.copy(var4, 0, var7, 0, ns.textureWidth);
           }
         }
         return var3;
@@ -129,7 +129,7 @@ final class FlipOperator extends TextureOperator {
           if (!this.field_n) {
             stackIn_6_1 = param0;
           } else {
-            stackIn_6_1 = -param0 + hba.field_b;
+            stackIn_6_1 = -param0 + hba.textureHeightMask;
           }
           var26 = this.getInputColourRow(stackIn_6_1, 0, param1 ^ 0);
           var22 = var26[0];
@@ -145,15 +145,15 @@ final class FlipOperator extends TextureOperator {
           var9 = var21[1];
           var10 = var21[2];
           if (this.field_o) {
-            for (var11 = 0; var11 < ns.field_g; var11++) {
-              var8[var11] = var5[una.field_b - var11];
-              var9[var11] = var6[una.field_b - var11];
-              var10[var11] = var7[una.field_b - var11];
+            for (var11 = 0; var11 < ns.textureWidth; var11++) {
+              var8[var11] = var5[una.textureWidthMask - var11];
+              var9[var11] = var6[una.textureWidthMask - var11];
+              var10[var11] = var7[una.textureWidthMask - var11];
             }
           } else {
             var14 = 0;
             var11 = var14;
-            while (ns.field_g > var14) {
+            while (ns.textureWidth > var14) {
               var8[var14] = var22[var14];
               var9[var14] = var23[var14];
               var10[var14] = var24[var14];

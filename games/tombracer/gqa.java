@@ -113,7 +113,7 @@ final class gqa {
         if (!param0) {
           this.field_h = null;
         } else {
-          this.field_h = qra.field_e;
+          this.field_h = MatchPhase.field_e;
         }
         this.field_b = dga.field_a;
         this.field_j = gia.field_q;

@@ -185,7 +185,7 @@ abstract class AppletGameShell extends GameApplet {
               if (DarknessBehaviour.field_o.poll(false)) {
                 var7 = DarknessBehaviour.field_o.getResult((byte) -123);
                 if (var7 != null) {
-                  var8 = nia.a(var7.payload, 0, var7.position, 255);
+                  var8 = MaskBlendOperator.a(var7.payload, 0, var7.position, 255);
                   NodeHashTableIterator.a(var8, -1);
                 } else {
                   var10 = (String) null;

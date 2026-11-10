@@ -11,9 +11,9 @@ final class bda extends TextureOperator {
         int[] var8 = this.field_i.a((byte) 66, param1);
         int[] var3 = var8;
         if (this.field_i.field_d) {
-          var4 = sj.field_b[param1];
-          for (var5 = 0; var5 < ns.field_g; var5++) {
-            var8[var5] = this.d(param0 + 1876, ht.field_Fb[var5], var4) % 4096;
+          var4 = sj.textureRowCoords[param1];
+          for (var5 = 0; var5 < ns.textureWidth; var5++) {
+            var8[var5] = this.d(param0 + 1876, ht.textureColumnCoords[var5], var4) % 4096;
           }
         }
         if (param0 != 1) {

@@ -285,7 +285,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
           } else {
             this.x = -this.x;
           }
-          this.angle = dfa.a(-this.angle, 8192, -85);
+          this.angle = GameScreen.a(-this.angle, 8192, -85);
           this.d(true);
           this.field_v = !this.field_v ? true : false;
           this.m((byte) -24);

@@ -82,13 +82,13 @@ final class rda extends TextureOperator {
         RuntimeException var3 = null;
         var9 = TombRacer.field_G ? 1 : 0;
         try {
-          var3_int = ns.field_g;
+          var3_int = ns.textureWidth;
           if (param0 != -8883) {
             rda.d(56);
           }
-          var4 = ArchiveNetworkClient.field_i;
+          var4 = ArchiveNetworkClient.textureHeight;
           nfa.a(param1, param0 ^ -8901);
-          MazeGenerator.a(una.field_b, false, 0, 0, hba.field_b);
+          MazeGenerator.a(una.textureWidthMask, false, 0, 0, hba.textureHeightMask);
           if (null != this.field_p) {
             for (var5 = 0; var5 < this.field_p.length; var5++) {
               var6 = this.field_p[var5];
@@ -213,18 +213,18 @@ final class rda extends TextureOperator {
           field_m = (String[]) null;
         }
         if (this.field_h.field_f) {
-          var4 = ns.field_g;
-          var5 = ArchiveNetworkClient.field_i;
+          var4 = ns.textureWidth;
+          var5 = ArchiveNetworkClient.textureHeight;
           var29 = new int[var5][var4];
           var30 = this.field_h.a((byte) -98);
           this.a(-8883, var29);
-          for (var8 = 0; var8 < ArchiveNetworkClient.field_i; var8++) {
+          for (var8 = 0; var8 < ArchiveNetworkClient.textureHeight; var8++) {
             var32 = var29[var8];
             var31 = var30[var8];
             var11 = var31[0];
             var12 = var31[1];
             var13 = var31[2];
-            for (var14 = 0; ns.field_g > var14; var14++) {
+            for (var14 = 0; ns.textureWidth > var14; var14++) {
               var15 = var32[var14];
               var13[var14] = SnakePitBehaviour.c(255, var15) << 4;
               var12[var14] = SnakePitBehaviour.c(65280, var15) >> 4;

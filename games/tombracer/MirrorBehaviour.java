@@ -34,7 +34,7 @@ final class MirrorBehaviour extends Behaviour {
         if (param0 != 1659280738) {
           BeamSegment var3 = (BeamSegment) null;
           this.a(65, 57, (BeamSegment) null, 85);
-          var2 = dfa.a(2048 + var2, 8192, -34);
+          var2 = GameScreen.a(2048 + var2, 8192, -34);
           if (var2 != this.field_v) {
             this.field_t = MouseInputHandler.a((byte) 99, var2 >> 2);
             this.field_p = bua.a(0, var2 >> 2);
@@ -43,7 +43,7 @@ final class MirrorBehaviour extends Behaviour {
           }
           return;
         }
-        var2 = dfa.a(2048 + var2, 8192, -34);
+        var2 = GameScreen.a(2048 + var2, 8192, -34);
         if (var2 == this.field_v) {
           return;
         }
@@ -199,9 +199,9 @@ final class MirrorBehaviour extends Behaviour {
           var7 = param2.field_a;
           var5.field_i = param2.field_i;
           var8 = qva.a((byte) -99, -param2.field_k + var7, var6 - param2.field_d);
-          var9 = dfa.a(this.field_v + 2048, 8192, -71);
+          var9 = GameScreen.a(this.field_v + 2048, 8192, -71);
           var10 = S2CRoundResultPacket.a(8192, -16390, var8, var9);
-          var11 = dfa.a(2 * var10 + var8 + 4096, 8192, 126);
+          var11 = GameScreen.a(2 * var10 + var8 + 4096, 8192, 126);
           var12 = MouseInputHandler.a((byte) 99, var11 >> 2);
           var13 = bua.a(0, var11 >> 2);
           var14 = param2.field_b - gqa.a(param2.field_b, (byte) 24, this.field_w);

@@ -191,7 +191,7 @@ final class ow extends wv {
         if (SecondaryNodeDequeIterator.field_a == null) {
           return;
         }
-        if (SecondaryNodeDequeIterator.field_a.field_k == null) {
+        if (SecondaryNodeDequeIterator.field_a.matchState == null) {
           return;
         }
         if (!SecondaryNodeDequeIterator.field_a.field_D) {
@@ -200,7 +200,7 @@ final class ow extends wv {
         if (SecondaryNodeDequeIterator.field_a.d((byte) 92)) {
           return;
         }
-        int var4 = SecondaryNodeDequeIterator.field_a.field_k.field_b;
+        int var4 = SecondaryNodeDequeIterator.field_a.matchState.field_b;
         if (1 == (1 & var4 >> SecondaryNodeDequeIterator.field_a.field_x)) {
           this.field_m[1].field_e = BeamSegment.field_g.toUpperCase();
           return;

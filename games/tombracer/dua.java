@@ -23,7 +23,7 @@ final class dua extends me {
         return false;
     }
 
-    dua(qh param0) {
+    dua(MatchScreen param0) {
         super(param0);
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ala extends dfa {
+final class ala extends GameScreen {
     private int field_g;
     static String field_f;
 
@@ -284,7 +284,7 @@ final class ala extends dfa {
           return;
         }
         try {
-          tqa.a(true, (byte) 99);
+          TileGrid.a(true, (byte) 99);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ala.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }

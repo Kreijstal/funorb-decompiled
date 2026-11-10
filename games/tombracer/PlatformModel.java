@@ -286,7 +286,7 @@ final class PlatformModel extends TrapModel {
                           } else {
                             if (var11 == 0) {
                               if (var13 != 0) {
-                                var9.field_a = dfa.a(var15 + mpa.field_W[var9.field_h], 2048, -70);
+                                var9.field_a = GameScreen.a(var15 + mpa.field_W[var9.field_h], 2048, -70);
                                 var9.field_e = this;
                                 var9.field_b = var17.e(true).nextBounded(100, 0);
                                 var9.field_c = var5 - var4;
@@ -319,7 +319,7 @@ final class PlatformModel extends TrapModel {
                   }
                 }
                 if (decompiledFrameRemainder0) {
-                  var9.field_a = dfa.a(var15 + mpa.field_W[var9.field_h], 2048, -70);
+                  var9.field_a = GameScreen.a(var15 + mpa.field_W[var9.field_h], 2048, -70);
                 }
               } else {
                 var9.field_a = 512;
@@ -425,8 +425,8 @@ final class PlatformModel extends TrapModel {
           var3 = 0;
           if (this.field_m != null &&
             this.field_m.d(false)) {
-            this.field_u = -131072 + uca.field_c.nextBounded(262144, ~param0);
-            this.field_x = uca.field_c.nextBounded(262144, param0 + 1) - 131072;
+            this.field_u = -131072 + uca.cosmeticRandom.nextBounded(262144, ~param0);
+            this.field_x = uca.cosmeticRandom.nextBounded(262144, param0 + 1) - 131072;
             var2_int = 1;
             if (this.field_m.g((byte) 120)) {
               var2_int = 0;
@@ -574,7 +574,7 @@ final class PlatformModel extends TrapModel {
             for (var3 = 0; this.field_s > var3; var3++) {
               var4 = this.field_r[var2_int][var3];
               var5 = mpa.field_W[var4.field_h];
-              var4.field_a = dfa.a(-var4.field_a + var5, 2048, 65);
+              var4.field_a = GameScreen.a(-var4.field_a + var5, 2048, 65);
               var4.field_d = -var4.field_d;
             }
           }

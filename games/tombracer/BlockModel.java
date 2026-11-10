@@ -30,7 +30,7 @@ final class BlockModel extends TrapModel {
 
     final void a(byte param0, int param1) {
         super.a((byte) 97, param1);
-        this.a(28).b(false).a(this.body.getY(9648), this.body.getElevation((byte) 115), (byte) 46, this.body.getX(3));
+        this.a(28).getParticleEffects(false).a(this.body.getY(9648), this.body.getElevation((byte) 115), (byte) 46, this.body.getX(3));
         w var5 = (w) (this.a(30).field_G);
         if (var5 == null) {
           return;
@@ -464,7 +464,7 @@ final class BlockModel extends TrapModel {
             }
           }
           if (var8 != null) {
-            var9Lifetime1 = dfa.a(4096 + (var7 - this.body.getFacingAngle(-25787)) >> 2, 2048, -28);
+            var9Lifetime1 = GameScreen.a(4096 + (var7 - this.body.getFacingAngle(-25787)) >> 2, 2048, -28);
             gqa.a(var9Lifetime1, -83584144, param1, param2, (ka) (var8), param3);
           }
           return;

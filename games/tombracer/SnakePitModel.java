@@ -229,7 +229,7 @@ final class SnakePitModel extends TrapModel {
             }
             var9.field_c = var17.e(true).nextBounded(100, param0 + 3440);
             var9.field_a = this;
-            var9.field_e = dfa.a(var15 + OpenGlTexture.field_d[var9.field_f], 2048, -78);
+            var9.field_e = GameScreen.a(var15 + OpenGlTexture.field_d[var9.field_f], 2048, -78);
             var9.field_d = -var4 + var5;
             var9.field_b = var7 - var3;
             var7 = var7 + C2SSubmitSettingsPacket.field_a;
@@ -350,7 +350,7 @@ final class SnakePitModel extends TrapModel {
           for (var3 = 0; this.field_q > var3; var3++) {
             var4 = this.field_r[var2][var3];
             var5 = OpenGlTexture.field_d[var4.field_f];
-            var4.field_e = dfa.a(var5 - var4.field_e, 2048, -102);
+            var4.field_e = GameScreen.a(var5 - var4.field_e, 2048, -102);
             var4.field_b = -var4.field_b;
           }
         }
@@ -376,8 +376,8 @@ final class SnakePitModel extends TrapModel {
         var14 = TombRacer.field_G ? 1 : 0;
         try {
           var6_int = 8 + param3 + 8 + (param2 + 487);
-          v.field_i.a(var6_int - 6, -6 + era.field_e.field_t, -23776, 3, 3);
-          var7 = -5 + v.field_i.field_t;
+          MatchProtocol.field_i.a(var6_int - 6, -6 + era.field_e.field_t, -23776, 3, 3);
+          var7 = -5 + MatchProtocol.field_i.field_t;
           if (param1 != -104) {
             SnakePitModel.a(-101, -90, 0, -88);
           }
@@ -461,8 +461,8 @@ final class SnakePitModel extends TrapModel {
         if (0 < this.field_u) {
           this.field_u = this.field_u - 1;
         } else {
-          this.field_u = uca.field_c.nextBounded(100, 0) + 50;
-          var3_int = uca.field_c.nextBounded(this.field_s.length, ~param0);
+          this.field_u = uca.cosmeticRandom.nextBounded(100, 0) + 50;
+          var3_int = uca.cosmeticRandom.nextBounded(this.field_s.length, ~param0);
           if (this.field_s[var3_int].field_e.a(0)) {
             var2.a(new fm(24, this.field_s[var3_int].getRenderX((byte) -123), this.field_s[var3_int].getRenderY((byte) 94), this.field_s[var3_int].getRenderZ((byte) -112)), param0 - 57);
           } else {

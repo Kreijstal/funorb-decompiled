@@ -225,7 +225,7 @@ final class cm implements GamePacket {
               for (var8_int = 0; vk.field_b.length > var8_int; var8_int++) {
                 vk.field_b[var8_int] = (byte) 0;
               }
-              vk.field_b[var7 / 8] = (byte)fh.a((int) vk.field_b[var7 / 8], 1 << var7 % 8);
+              vk.field_b[var7 / 8] = (byte)WallTile.a((int) vk.field_b[var7 / 8], 1 << var7 % 8);
             }
             stackIn_50_0 = (!param3) ? 0 : -1;
             for (var7 = stackIn_50_0; SafeZoneBehaviour.field_u.length > var7; var7++) {
@@ -475,16 +475,16 @@ final class cm implements GamePacket {
                 } else {
                   if (var9 == -1) {
                     for (var18 = var6Lifetime4; var18 < -1 + var6Lifetime4 + var30.length; var18++) {
-                      tqa.field_e[var18 / 8] = (byte)SnakePitBehaviour.c((int) tqa.field_e[var18 / 8], ~(1 << SnakePitBehaviour.c(var18, 7)));
+                      TileGrid.field_e[var18 / 8] = (byte)SnakePitBehaviour.c((int) TileGrid.field_e[var18 / 8], ~(1 << SnakePitBehaviour.c(var18, 7)));
                     }
                   } else {
-                    tqa.field_e[(var6Lifetime4 + var9) / 8] = (byte)kha.b((int) tqa.field_e[(var6Lifetime4 + var9) / 8], 1 << SnakePitBehaviour.c(7, var9 + var6Lifetime4));
+                    TileGrid.field_e[(var6Lifetime4 + var9) / 8] = (byte)kha.b((int) TileGrid.field_e[(var6Lifetime4 + var9) / 8], 1 << SnakePitBehaviour.c(7, var9 + var6Lifetime4));
                   }
                 }
               }
               if (param3 &&
                 var16Lifetime1 != 0) {
-                tqa.field_e[(var9 + var6Lifetime4) / 8] = (byte)SnakePitBehaviour.c((int) tqa.field_e[(var9 + var6Lifetime4) / 8], ~(1 << SnakePitBehaviour.c(7, var6Lifetime4 + var9)));
+                TileGrid.field_e[(var9 + var6Lifetime4) / 8] = (byte)SnakePitBehaviour.c((int) TileGrid.field_e[(var9 + var6Lifetime4) / 8], ~(1 << SnakePitBehaviour.c(7, var6Lifetime4 + var9)));
               }
               if (var9 >= 0 &&
                 var17.field_pb) {
@@ -625,14 +625,14 @@ final class cm implements GamePacket {
                   while (var27 < var30.length + (var6Lifetime4 - 1)) {
                     stackIn_326_0 = var17;
                     stackIn_326_1 = var17.field_cb;
-                    stackIn_327_2 = (0 == (tqa.field_e[var27 / 8] & 1 << (var27 & 7)));
+                    stackIn_327_2 = (0 == (TileGrid.field_e[var27 / 8] & 1 << (var27 & 7)));
                     stackIn_326_0.field_cb = stackIn_326_1 & stackIn_327_2;
                     var27++;
                   }
                 } else {
                   stackIn_318_0 = var17;
                   stackIn_318_1 = 0;
-                  stackIn_318_2 = tqa.field_e[(var6Lifetime4 + var9) / 8] & 1 << (7 & var9 + var6Lifetime4);
+                  stackIn_318_2 = TileGrid.field_e[(var6Lifetime4 + var9) / 8] & 1 << (7 & var9 + var6Lifetime4);
                   stackIn_321_1 = (stackIn_318_1 != stackIn_318_2);
                   stackIn_318_0.field_cb = stackIn_321_1;
                 }

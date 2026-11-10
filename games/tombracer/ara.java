@@ -54,7 +54,7 @@ final class ara extends jea {
           var7 = -param2 + param3;
           if (var7 == 0) {
             if (0 != var6_int) {
-              dfa.a(param2, param5, param4, param1, param0 + 0);
+              GameScreen.a(param2, param5, param4, param1, param0 + 0);
             }
             return;
           }

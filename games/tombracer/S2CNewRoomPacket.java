@@ -12,7 +12,7 @@ final class S2CNewRoomPacket implements GamePacket {
     private int disregard;
     static String field_g;
 
-    final void apply(v param0, int param1, qh param2) {
+    final void apply(MatchProtocol param0, int param1, MatchScreen param2) {
         Player var7 = null;
         int var5 = 0;
         int var6 = TombRacer.field_G ? 1 : 0;
@@ -22,9 +22,9 @@ final class S2CNewRoomPacket implements GamePacket {
         try {
           if (this.force ||
             !param0.a(this.playerId, 54) ||
-            param2.field_k.a(false, this.playerId, this.roomId)) {
-            this.a(param2.field_k, (byte) -98);
-            var7 = param2.field_k.players[this.playerId];
+            param2.matchState.a(false, this.playerId, this.roomId)) {
+            this.a(param2.matchState, (byte) -98);
+            var7 = param2.matchState.players[this.playerId];
             Player var4 = var7;
             for (var5 = 0; 3 > var5; var5++) {
               var7.setTreasure(true, var5, this.treasure[var5]);

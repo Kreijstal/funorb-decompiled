@@ -377,7 +377,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
     }
 
     final void applyBlendFactors(boolean param0) {
-        if (dfa.field_b == this.field_lb) {
+        if (GameScreen.field_b == this.field_lb) {
           this.field_jd.SetRenderState(19, 5);
           this.field_jd.SetRenderState(20, 6);
         } else {

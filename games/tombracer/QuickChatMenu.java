@@ -225,7 +225,7 @@ final class QuickChatMenu extends jea {
                 MazeGenerator.a(var6, param0, (byte) 108, 1);
               }
               var8 = (String) null;
-              opa.a(bta.field_q, (String) null, param1, 32371, wp.field_a, var5);
+              ResultsPhase.a(bta.field_q, (String) null, param1, 32371, wp.field_a, var5);
               oi.a(ica.field_b, var5, 4, wp.field_a, bta.field_q);
               f.b(param3 - 48);
               jq.c((byte) -25);
@@ -271,7 +271,7 @@ final class QuickChatMenu extends jea {
         if (0 >= var5) {
           return false;
         }
-        if (var5 == tqa.field_o) {
+        if (var5 == TileGrid.field_o) {
           var5 = 63;
         }
         for (var6 = 0; var6 < this.field_xb.length; var6++) {

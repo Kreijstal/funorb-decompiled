@@ -27,7 +27,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         }
         if (this.field_m != null) {
           for (var2 = 0; this.field_m.length > var2; var2++) {
-            this.field_m[var2] = fh.a(this.field_m[var2], 32768);
+            this.field_m[var2] = WallTile.a(this.field_m[var2], 32768);
           }
         }
     }

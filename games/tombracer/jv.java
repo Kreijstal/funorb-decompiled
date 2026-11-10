@@ -46,15 +46,15 @@ final class jv extends TextureOperator {
         var22 = var23;
         var3 = var22;
         if (this.field_h.field_f) {
-          var41 = this.getInputMonochromeRow(0, param1 - 118, hba.field_b & -1 + param0);
+          var41 = this.getInputMonochromeRow(0, param1 - 118, hba.textureHeightMask & -1 + param0);
           var5 = this.getInputMonochromeRow(0, -32, param0);
-          var40 = this.getInputMonochromeRow(0, -111, param0 + 1 & hba.field_b);
+          var40 = this.getInputMonochromeRow(0, -111, param0 + 1 & hba.textureHeightMask);
           var42 = var29[0];
           var43 = var29[1];
           var44 = var29[2];
-          for (var10 = 0; ns.field_g > var10; var10++) {
+          for (var10 = 0; ns.textureWidth > var10; var10++) {
             var14 = (var40[var10] - var41[var10]) * this.field_o;
-            var15 = this.field_o * (-var5[una.field_b & -1 + var10] + var5[una.field_b & 1 + var10]);
+            var15 = this.field_o * (-var5[una.textureWidthMask & -1 + var10] + var5[una.textureWidthMask & 1 + var10]);
             var16 = var15 >> 12;
             var17 = var14 >> 12;
             var18 = var16 * var16 >> 12;

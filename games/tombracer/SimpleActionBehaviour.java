@@ -120,7 +120,7 @@ final class SimpleActionBehaviour extends Behaviour {
           while (true) {
             if (var5 >= var4.length) {
               var6 = -62 / ((param0 + 53) / 56);
-              stackIn_20_0 = qh.a(-58, var3[var3.length - 1]);
+              stackIn_20_0 = MatchScreen.a(-58, var3[var3.length - 1]);
               return stackIn_20_0;
             }
             var6_ref_String = var4[var5];

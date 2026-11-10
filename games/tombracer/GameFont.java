@@ -32,7 +32,7 @@ abstract class GameFont {
         }
         OpenGlToolkit.field_ab = 0;
         lra.field_g = param0;
-        v.field_k = param0;
+        MatchProtocol.field_k = param0;
         moa.field_a = 0;
         if (param1 == -1) {
           param1 = 0;
@@ -69,38 +69,38 @@ abstract class GameFont {
           try {
             if (!param0.startsWith("col=")) {
               if (param0.equals("/col")) {
-                v.field_k = 16777215 & lra.field_g | v.field_k & -16777216;
+                MatchProtocol.field_k = 16777215 & lra.field_g | MatchProtocol.field_k & -16777216;
               }
             } else {
               var5 = (CharSequence) ((Object) param0.substring(4));
-              v.field_k = -16777216 & v.field_k | 16777215 & eba.a(var5, -105, 16);
+              MatchProtocol.field_k = -16777216 & MatchProtocol.field_k | 16777215 & eba.a(var5, -105, 16);
             }
             if (!param0.startsWith("argb=")) {
               if (param0.equals("/argb")) {
-                v.field_k = lra.field_g;
+                MatchProtocol.field_k = lra.field_g;
               } else {
                 if (!param0.startsWith("str=")) {
                   if (param0.equals("str")) {
-                    nt.field_b = 8388608 | -16777216 & v.field_k;
+                    nt.field_b = 8388608 | -16777216 & MatchProtocol.field_k;
                   } else {
                     if (param0.equals("/str")) {
                       nt.field_b = -1;
                     } else {
                       if (param0.startsWith("u=")) {
                         var9 = (CharSequence) ((Object) param0.substring(2));
-                        moa.field_b = v.field_k & -16777216 | eba.a(var9, -65, 16);
+                        moa.field_b = MatchProtocol.field_k & -16777216 | eba.a(var9, -65, 16);
                       } else {
                         if (param0.equals("u")) {
-                          moa.field_b = -16777216 & v.field_k;
+                          moa.field_b = -16777216 & MatchProtocol.field_k;
                         } else {
                           if (!param0.equals("/u")) {
                             if (!param0.equalsIgnoreCase("shad=-1")) {
                               if (param0.startsWith("shad=")) {
                                 var8 = (CharSequence) ((Object) param0.substring(5));
-                                GasTrapComponent.field_G = v.field_k & -16777216 | eba.a(var8, -52, 16);
+                                GasTrapComponent.field_G = MatchProtocol.field_k & -16777216 | eba.a(var8, -52, 16);
                               } else {
                                 if (param0.equals("shad")) {
-                                  GasTrapComponent.field_G = -16777216 & v.field_k;
+                                  GasTrapComponent.field_G = -16777216 & MatchProtocol.field_k;
                                 } else {
                                   if (!param0.equals("/shad")) {
                                     if (param0.equals("br")) {
@@ -123,12 +123,12 @@ abstract class GameFont {
                   }
                 } else {
                   var7 = (CharSequence) ((Object) param0.substring(4));
-                  nt.field_b = v.field_k & -16777216 | eba.a(var7, -45, 16);
+                  nt.field_b = MatchProtocol.field_k & -16777216 | eba.a(var7, -45, 16);
                 }
               }
             } else {
               var6 = (CharSequence) ((Object) param0.substring(5));
-              v.field_k = eba.a(var6, -63, 16);
+              MatchProtocol.field_k = eba.a(var6, -63, 16);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -402,8 +402,8 @@ abstract class GameFont {
                                       stackIn_29_0 = param3[var16_int];
                                     }
                                     var18 = stackIn_29_0;
-                                    if ((-16777216 & v.field_k) != -16777216) {
-                                      var17.draw(param1, param8 + this.field_a.field_a - var18, 0, 16777215 | -16777216 & v.field_k, 1);
+                                    if ((-16777216 & MatchProtocol.field_k) != -16777216) {
+                                      var17.draw(param1, param8 + this.field_a.field_a - var18, 0, 16777215 | -16777216 & MatchProtocol.field_k, 1);
                                     } else {
                                       var17.draw(param1, this.field_a.field_a + param8 - var18, 1, 0, 1);
                                     }
@@ -453,12 +453,12 @@ abstract class GameFont {
                     if ((GasTrapComponent.field_G & -16777216) != 0) {
                       this.drawGlyph((char) var14, param1 + 1, 1 + param8, GasTrapComponent.field_G, true);
                     }
-                    this.drawGlyph((char) var14, param1, param8, v.field_k, false);
+                    this.drawGlyph((char) var14, param1, param8, MatchProtocol.field_k, false);
                   } else {
                     if ((-16777216 & GasTrapComponent.field_G) != 0) {
                       this.drawMaskedGlyph((char) var14, param1 + 1, 1 + param8, GasTrapComponent.field_G, true, param2, param7, param4);
                     }
-                    this.drawMaskedGlyph((char) var14, param1, param8, v.field_k, false, param2, param7, param4);
+                    this.drawMaskedGlyph((char) var14, param1, param8, MatchProtocol.field_k, false, param2, param7, param4);
                   }
                 }
                 var15 = this.field_a.characterWidth(255, var14);

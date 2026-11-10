@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class pca {
+final class TileGridCell {
     private int field_b;
     private int field_f;
     static String field_a;
@@ -11,16 +11,16 @@ final class pca {
     private int field_c;
     private uq field_e;
     private int field_g;
-    private tqa field_i;
+    private TileGrid grid;
     int field_h;
     static Sprite[] field_k;
     private int[] field_d;
 
-    final tqa a(int param0) {
+    final TileGrid a(int param0) {
         if (param0 != 18641) {
-          return (tqa) null;
+          return (TileGrid) null;
         }
-        return this.field_i;
+        return this.grid;
     }
 
     final void a(byte param0, iq param1) {
@@ -156,9 +156,9 @@ final class pca {
         }
     }
 
-    final void a(int param0, int param1, int param2, tqa param3) {
+    final void a(int param0, int param1, int param2, TileGrid param3) {
         try {
-          this.field_i = param3;
+          this.grid = param3;
           this.field_f = param2;
           this.field_j = param0;
           this.field_c = param3.d(-30551) * param0 + param3.d(-30551) / 2;
@@ -181,7 +181,7 @@ final class pca {
     final boolean b(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != 0) {
-          pca.a(89, (byte) 98);
+          TileGridCell.a(89, (byte) 98);
         }
         stackIn_6_0 = (null != this.field_e) && (this.field_e.c(param0 - 2));
         return stackIn_6_0;
@@ -191,7 +191,7 @@ final class pca {
         if (param0 != 0) {
           return (Room) null;
         }
-        return this.field_i.b(0);
+        return this.grid.b(0);
     }
 
     final void a(uw param0, byte param1) {
@@ -225,7 +225,7 @@ final class pca {
     final void a(byte param0, int param1) {
         this.field_g = this.field_g + param1;
         if (param0 <= 5) {
-          this.field_i = (tqa) null;
+          this.grid = (TileGrid) null;
         }
     }
 
@@ -238,7 +238,7 @@ final class pca {
         }
     }
 
-    final void a(pca param0, int param1) {
+    final void a(TileGridCell param0, int param1) {
         try {
           this.field_h = param0.field_h;
           if (param1 != 21324) {
@@ -339,7 +339,7 @@ final class pca {
         return this.field_e;
     }
 
-    pca() {
+    TileGridCell() {
         this.field_d = new int[3];
     }
 
@@ -353,7 +353,7 @@ final class pca {
     final static void a(int param0, int param1, int param2) {
         lu.a(param0, (double)param2, param1 + 26108, param0, (double)param2);
         if (param1 != -26109) {
-          pca.releaseStatics(99);
+          TileGridCell.releaseStatics(99);
         }
     }
 

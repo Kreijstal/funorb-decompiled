@@ -125,7 +125,7 @@ final class WhirlpoolDigest {
             var8 = param0[var5_int] << var6 & 255 | (param0[var5_int + 1] & 255) >>> -var6 + 8;
             if (var8 >= 0 &&
               var8 < 256) {
-              this.field_e[this.field_k] = (byte)fh.a((int) this.field_e[this.field_k], var8 >>> var7);
+              this.field_e[this.field_k] = (byte)WallTile.a((int) this.field_e[this.field_k], var8 >>> var7);
               this.field_a = this.field_a + (8 - var7);
               this.field_k = this.field_k + 1;
               if (this.field_a == 512) {
@@ -145,7 +145,7 @@ final class WhirlpoolDigest {
             stackIn_18_0 = param0[var5_int] << var6;
             stackIn_18_1 = 255;
             var8Lifetime1 = stackIn_18_0 & stackIn_18_1;
-            this.field_e[this.field_k] = (byte)fh.a((int) this.field_e[this.field_k], var8Lifetime1 >>> var7);
+            this.field_e[this.field_k] = (byte)WallTile.a((int) this.field_e[this.field_k], var8Lifetime1 >>> var7);
           } else {
             var8Lifetime1 = 0;
           }
@@ -335,7 +335,7 @@ final class WhirlpoolDigest {
         int var8 = 0;
         var8 = TombRacer.field_G ? 1 : 0;
         try {
-          this.field_e[this.field_k] = (byte)fh.a((int) this.field_e[this.field_k], 128 >>> SnakePitBehaviour.c(this.field_a, 7));
+          this.field_e[this.field_k] = (byte)WallTile.a((int) this.field_e[this.field_k], 128 >>> SnakePitBehaviour.c(this.field_a, 7));
           this.field_k = this.field_k + 1;
           if (this.field_k > param1) {
             while (this.field_k < 64) {

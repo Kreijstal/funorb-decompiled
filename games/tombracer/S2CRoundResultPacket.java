@@ -178,14 +178,14 @@ final class S2CRoundResultPacket implements GamePacket {
         }
     }
 
-    final void apply(qh param0, int param1) {
+    final void apply(MatchScreen param0, int param1) {
         MatchState var8 = null;
         int var4 = 0;
         Player var5 = null;
         int var6 = 0;
         int var7 = TombRacer.field_G ? 1 : 0;
         try {
-          var8 = param0.field_k;
+          var8 = param0.matchState;
           for (var4 = param1; var8.players.length > var4; var4++) {
             var5 = var8.players[var4];
             for (var6 = 0; 3 > var6; var6++) {
@@ -195,7 +195,7 @@ final class S2CRoundResultPacket implements GamePacket {
             var5.b(18202625, this.field_a[var4]);
             var5.f(this.field_h[var4], -25915);
           }
-          param0.field_k.field_E = this.field_j;
+          param0.matchState.field_E = this.field_j;
           param0.a((byte) 101, this.treasure, this.winner);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "cf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

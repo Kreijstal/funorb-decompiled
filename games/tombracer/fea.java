@@ -731,9 +731,9 @@ final class fea {
         var3 = TombRacer.field_G ? 1 : 0;
         try {
           if (SimpleBlockBehaviour.field_r == -1 &&
-            tqa.field_g == -1) {
+            TileGrid.field_g == -1) {
             SimpleBlockBehaviour.field_r = jba.field_j;
-            tqa.field_g = GridWidgetContainer.field_B;
+            TileGrid.field_g = GridWidgetContainer.field_B;
           }
           boolean decompiledFrameRemainder0 = true;
           fr.field_c = fr.field_c + 1;
@@ -769,18 +769,18 @@ final class fea {
             } else {
               HardwareOpenGlToolkit.field_pd = false;
             }
-            ConsoleToken.field_f = tqa.field_g;
+            ConsoleToken.field_f = TileGrid.field_g;
             vf.field_f = SimpleBlockBehaviour.field_r;
           }
           if (!HardwareOpenGlToolkit.field_pd &&
             bda.field_m > fr.field_c &&
             qma.field_c) {
             vf.field_f = SimpleBlockBehaviour.field_r;
-            ConsoleToken.field_f = tqa.field_g;
+            ConsoleToken.field_f = TileGrid.field_g;
             fr.field_c = 0;
           }
           MazeComponent.field_F = param1;
-          tqa.field_g = -1;
+          TileGrid.field_g = -1;
           if (param0 > -32) {
             return;
           }

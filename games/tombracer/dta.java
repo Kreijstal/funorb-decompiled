@@ -21,7 +21,7 @@ final class dta {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, qh param4, int param5, int param6) {
+    final void a(int param0, int param1, int param2, int param3, MatchScreen param4, int param5, int param6) {
         int var36_int = 0;
         int stackIn_12_0 = 0;
         int stackIn_72_0 = 0;
@@ -114,7 +114,7 @@ final class dta {
           if (param4.f(-12963, param2) &&
             !param4.n(-95)) {
             var10 = -94 / ((51 - param3) / 40);
-            var9 = param4.field_k;
+            var9 = param4.matchState;
             var11 = param4.l(107);
             var12 = var9.players[param2];
             var13 = var9.simulations[param2];
@@ -358,7 +358,7 @@ final class dta {
               var42 = dw.field_j;
               var31Lifetime3 = (int)(128.0 - Math.sin((double)bva.b((byte) -107) / 512.0) * 128.0);
               vv.a(var31Lifetime3, (byte) -73, var31Lifetime3, 1, SingleChildWidget.field_v, var42.toUpperCase(), 40 + (SwitchLinkList.b(0) >> 1) + (SwitchLinkList.b(0) >> 2), 11903361, param1 + param0 >> 1);
-              var32Lifetime2 = param4.field_r - param4.field_k.c((byte) 115, param2);
+              var32Lifetime2 = param4.field_r - param4.matchState.c((byte) 115, param2);
               if (var32Lifetime2 >= 250) {
                 return;
               }

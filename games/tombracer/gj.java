@@ -42,17 +42,17 @@ final class gj {
         jea var6 = null;
         jea var7 = null;
         try {
-          ConsoleValue.field_e = nia.a(param0, "basic", "display_name_changed", 121);
+          ConsoleValue.field_e = MaskBlendOperator.a(param0, "basic", "display_name_changed", 121);
           dn.field_b = new hla(0L, aaa.field_d, kea.field_a, ai.field_d);
-          OpenGlSprite.field_j = new hla(0L, aaa.field_d, dj.field_a, uma.field_a);
+          OpenGlSprite.field_j = new hla(0L, aaa.field_d, ParticleEffects.field_a, uma.field_a);
           dqa.field_e = new jea(0L, (jea) null);
           is.field_yb = new jea(0L, Corpse.field_i);
           is.field_yb.field_z = 1;
-          qh.field_F = new jea(0L, ooa.field_f, ija.field_i);
+          MatchScreen.field_F = new jea(0L, ooa.field_f, ija.field_i);
           Puddle.field_v = new jea(0L, SecondaryNodeDeque.field_b, ap.field_c);
           ita.field_c = new jea(0L, PressureSwitchBehaviour.field_p);
           dqa.field_e.b(-122, is.field_yb);
-          dqa.field_e.b(-126, qh.field_F);
+          dqa.field_e.b(-126, MatchScreen.field_F);
           if (!param1) {
             var4 = (ResourceArchive) null;
             gj.a((ResourceArchive) null, true);

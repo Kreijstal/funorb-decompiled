@@ -144,7 +144,7 @@ final class jaa implements noa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > 24) {
-            stackIn_4_0 = nia.a(param1, 0, param1.length, 255);
+            stackIn_4_0 = MaskBlendOperator.a(param1, 0, param1.length, 255);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;

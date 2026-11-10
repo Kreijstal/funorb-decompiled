@@ -368,13 +368,13 @@ final class nfa extends TextureOperator {
         var17 = var18;
         var3 = var17;
         if (this.field_h.field_f) {
-          var5 = ns.field_g / this.field_m;
-          var6 = ArchiveNetworkClient.field_i / this.field_o;
+          var5 = ns.textureWidth / this.field_m;
+          var6 = ArchiveNetworkClient.textureHeight / this.field_o;
           if (var6 <= 0) {
             var4 = this.getInputColourRow(0, 0, -1);
           } else {
             var7_int = param0 % var6;
-            var4 = this.getInputColourRow(var7_int * ArchiveNetworkClient.field_i / var6, 0, param1 + 0);
+            var4 = this.getInputColourRow(var7_int * ArchiveNetworkClient.textureHeight / var6, 0, param1 + 0);
           }
           var7 = var4[0];
           var8 = var4[1];
@@ -382,12 +382,12 @@ final class nfa extends TextureOperator {
           var10 = var19[0];
           var11 = var19[1];
           var12 = var19[2];
-          for (var13 = 0; ns.field_g > var13; var13++) {
+          for (var13 = 0; ns.textureWidth > var13; var13++) {
             if (var5 <= 0) {
               var14 = 0;
             } else {
               var15 = var13 % var5;
-              var14 = var15 * ns.field_g / var5;
+              var14 = var15 * ns.textureWidth / var5;
             }
             var10[var13] = var7[var14];
             var11[var13] = var8[var14];
@@ -416,20 +416,20 @@ final class nfa extends TextureOperator {
         }
         var3 = this.field_i.a((byte) 78, param1);
         if (this.field_i.field_d) {
-          var5 = ns.field_g / this.field_m;
-          var6 = ArchiveNetworkClient.field_i / this.field_o;
+          var5 = ns.textureWidth / this.field_m;
+          var6 = ArchiveNetworkClient.textureHeight / this.field_o;
           if (var6 <= 0) {
             var4 = this.getInputMonochromeRow(0, -84, 0);
           } else {
             var7 = param1 % var6;
-            var4 = this.getInputMonochromeRow(0, -116, var7 * ArchiveNetworkClient.field_i / var6);
+            var4 = this.getInputMonochromeRow(0, -116, var7 * ArchiveNetworkClient.textureHeight / var6);
           }
           var10 = 0;
           var7Lifetime1 = var10;
-          while (var10 < ns.field_g) {
+          while (var10 < ns.textureWidth) {
             if (var5 > 0) {
               var8 = var10 % var5;
-              var3[var10] = var4[var8 * ns.field_g / var5];
+              var3[var10] = var4[var8 * ns.textureWidth / var5];
             } else {
               var3[var10] = var4[0];
             }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sj {
-    static int[] field_b;
+    static int[] textureRowCoords;
     static String field_a;
 
     final static String a(byte param0) {
@@ -17,7 +17,7 @@ final class sj {
         if (!param0) {
           sj.releaseStatics(false);
         }
-        field_b = null;
+        textureRowCoords = null;
         field_a = null;
     }
 
@@ -55,7 +55,7 @@ final class sj {
             param5 = param5 * 2.0f;
           }
           if (param0 != 79) {
-            field_b = (int[]) null;
+            textureRowCoords = (int[]) null;
           }
           var20 = param12;
           var16Lifetime1 = var20;

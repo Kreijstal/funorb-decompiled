@@ -140,7 +140,7 @@ final class cja {
               if ((decompiledFrameRemainder0) &&
                 (decompiledFrameCompleted0)) {
                 for (var10Lifetime2 = 0; var10Lifetime2 < -1 + var16.length; var10Lifetime2++) {
-                  if (0 == (tqa.field_e[(var10Lifetime2 + param3) / 8] & 1 << (param3 + var10Lifetime2 & 7))) {
+                  if (0 == (TileGrid.field_e[(var10Lifetime2 + param3) / 8] & 1 << (param3 + var10Lifetime2 & 7))) {
                     continue;
                   }
                   var9 = 0;
@@ -281,7 +281,7 @@ final class cja {
           !dma.field_l.a(param0 - 60)) {
           return;
         }
-        qh var2 = SecondaryNodeDequeIterator.field_a;
+        MatchScreen var2 = SecondaryNodeDequeIterator.field_a;
         if (var2 == null) {
           return;
         }

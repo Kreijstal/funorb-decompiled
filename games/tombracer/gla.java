@@ -56,9 +56,9 @@ final class gla extends TextureOperator {
           if (!this.field_i.field_d) {
             return var9;
           }
-          var4 = sj.field_b[param1];
-          for (var5 = 0; ns.field_g > var5; var5++) {
-            var6 = ht.field_Fb[var5];
+          var4 = sj.textureRowCoords[param1];
+          for (var5 = 0; ns.textureWidth > var5; var5++) {
+            var6 = ht.textureColumnCoords[var5];
             if (var6 > this.field_n &&
               var6 < -this.field_n + 4096 &&
               var4 > -this.field_n + 2048 &&
@@ -127,9 +127,9 @@ final class gla extends TextureOperator {
         }
         var9Lifetime2 = var3Lifetime1;
         var11Lifetime2 = var10Lifetime1;
-        var4Lifetime1 = sj.field_b[param1];
-        for (var5Lifetime1 = 0; ns.field_g > var5Lifetime1; var5Lifetime1++) {
-          var6Lifetime1 = ht.field_Fb[var5Lifetime1];
+        var4Lifetime1 = sj.textureRowCoords[param1];
+        for (var5Lifetime1 = 0; ns.textureWidth > var5Lifetime1; var5Lifetime1++) {
+          var6Lifetime1 = ht.textureColumnCoords[var5Lifetime1];
           if (var6Lifetime1 > this.field_n &&
             var6Lifetime1 < -this.field_n + 4096 &&
             var4Lifetime1 > -this.field_n + 2048 &&

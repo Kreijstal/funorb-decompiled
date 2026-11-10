@@ -131,7 +131,7 @@ final class PerlinNoise2D extends TextureOperator {
         PacketBuffer var20 = null;
         var19 = TombRacer.field_G ? 1 : 0;
         try {
-          var5 = sj.field_b[param2] * this.field_w;
+          var5 = sj.textureRowCoords[param2] * this.field_w;
           if (this.field_n == 1) {
             var8 = this.field_r[0] << 12;
             var9 = this.field_q[0];
@@ -148,14 +148,14 @@ final class PerlinNoise2D extends TextureOperator {
             var14 = pba.field_b[var11];
             var18 = this.field_p[var16 & 255] & 255;
             if (!this.field_s) {
-              for (var10 = 0; var10 < ns.field_g; var10++) {
-                var4_int = ht.field_Fb[var10] * this.field_u;
+              for (var10 = 0; var10 < ns.textureWidth; var10++) {
+                var4_int = ht.textureColumnCoords[var10] * this.field_u;
                 var6 = this.a(var17, false, var14, var11, var4_int * var8 >> 12, var12, var18);
                 param0[var10] = var9 * var6 >> 12;
               }
             } else {
-              for (var10 = 0; ns.field_g > var10; var10++) {
-                var4_int = ht.field_Fb[var10] * this.field_u;
+              for (var10 = 0; ns.textureWidth > var10; var10++) {
+                var4_int = ht.textureColumnCoords[var10] * this.field_u;
                 var6 = this.a(var17, false, var14, var11, var4_int * var8 >> 12, var12, var18);
                 var6 = var6 * var9 >> 12;
                 param0[var10] = 2048 + (var6 >> 1);
@@ -178,8 +178,8 @@ final class PerlinNoise2D extends TextureOperator {
               var18 = 255 & this.field_p[255 & var16];
               var17 = this.field_p[var15 & 255] & 255;
               var14 = pba.field_b[var11];
-              for (var10 = 0; ns.field_g > var10; var10++) {
-                var4_int = this.field_u * ht.field_Fb[var10];
+              for (var10 = 0; ns.textureWidth > var10; var10++) {
+                var4_int = this.field_u * ht.textureColumnCoords[var10];
                 var6 = this.a(var17, false, var14, var11, var8 * var4_int >> 12, var12, var18);
                 param0[var10] = var6 * var9 >> 12;
               }
@@ -203,15 +203,15 @@ final class PerlinNoise2D extends TextureOperator {
                 var14 = pba.field_b[var11];
                 if (this.field_s &&
                   this.field_n - 1 == var7) {
-                  for (var10 = 0; ns.field_g > var10; var10++) {
-                    var4_int = this.field_u * ht.field_Fb[var10];
+                  for (var10 = 0; ns.textureWidth > var10; var10++) {
+                    var4_int = this.field_u * ht.textureColumnCoords[var10];
                     var6 = this.a(var17, false, var14, var11, var8 * var4_int >> 12, var12, var18);
                     var6 = (var6 * var9 >> 12) + param0[var10];
                     param0[var10] = (var6 >> 1) + 2048;
                   }
                 } else {
-                  for (var10 = 0; var10 < ns.field_g; var10++) {
-                    var4_int = this.field_u * ht.field_Fb[var10];
+                  for (var10 = 0; var10 < ns.textureWidth; var10++) {
+                    var4_int = this.field_u * ht.textureColumnCoords[var10];
                     var6 = this.a(var17, false, var14, var11, var4_int * var8 >> 12, var12, var18);
                     param0[var10] = param0[var10] + (var9 * var6 >> 12);
                   }
@@ -263,7 +263,7 @@ final class PerlinNoise2D extends TextureOperator {
         int var3;
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
-        this.field_p = pca.a(this.field_z, (byte) 109);
+        this.field_p = TileGridCell.a(this.field_z, (byte) 109);
         if (param0 != 116) {
           this.b((byte) 55);
         }

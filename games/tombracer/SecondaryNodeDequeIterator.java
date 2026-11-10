@@ -9,7 +9,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
     static String field_b;
     private SecondaryNodeDeque field_d;
     private DualLinkNode field_f;
-    static qh field_a;
+    static MatchScreen field_a;
 
     public final Object next() {
         Object var1 = this.field_c;
@@ -47,7 +47,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
     final static void a(int param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
         tga.field_a.c(jg.a(param0, (byte) -68, param2), param6, param3, param5, -22971, param1);
         if (param4 < 0) {
-          field_a = (qh) null;
+          field_a = (MatchScreen) null;
         }
     }
 

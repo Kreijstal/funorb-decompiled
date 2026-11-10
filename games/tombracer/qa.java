@@ -18,7 +18,7 @@ final class qa {
     private dta field_d;
     private int field_k;
     private int field_j;
-    private qh field_a;
+    private MatchScreen field_a;
 
     final boolean c(int param0) {
         if (param0 != 1727002282) {
@@ -328,7 +328,7 @@ final class qa {
         }
     }
 
-    qa(qh param0, int param1) {
+    qa(MatchScreen param0, int param1) {
         this.field_i = true;
         this.field_h = 8;
         try {

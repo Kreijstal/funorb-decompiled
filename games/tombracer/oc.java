@@ -188,7 +188,7 @@ final class oc {
             if (var5_int == this.field_b[var8] &&
               this.field_I[var8] == var6 &&
               this.field_p[var8] == var7) {
-              this.field_y[var8] = (short)fh.a((int) this.field_y[var8], (int) param1);
+              this.field_y[var8] = (short)WallTile.a((int) this.field_y[var8], (int) param1);
               stackIn_10_0 = var8;
               return stackIn_10_0;
             }

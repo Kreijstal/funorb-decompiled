@@ -82,7 +82,7 @@ final class eqa implements os {
           if (Transform3D.a(var5, -20011) == 2) {
             MazeGenerator.a(var5, param2, (byte) 108, 1);
           }
-          opa.a(bta.field_q, var4_ref_String, param0, 32371, wp.field_a, -1);
+          ResultsPhase.a(bta.field_q, var4_ref_String, param0, 32371, wp.field_a, -1);
           PlayerProfile.a(true);
           return true;
         }

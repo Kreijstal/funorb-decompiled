@@ -119,7 +119,7 @@ final class rg extends SingleChildWidget {
         Room.field_m[9] = rha.field_h;
         Room.field_m[8] = sda.field_k;
         Room.field_m[4] = kma.field_d;
-        Room.field_m[5] = dfa.field_a;
+        Room.field_m[5] = GameScreen.field_a;
         Room.field_m[0] = iea.field_e;
         Room.field_m[7] = FacePlayerLocomotor.field_q;
         Room.field_m[2] = hra.field_a;

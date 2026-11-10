@@ -172,10 +172,10 @@ final class ifa extends TextureOperator {
           ifa.a(30, 114, 96, 47, (float[]) null, 0.4474947452545166f, -17, -103, (float[]) null, (byte) 32, -65);
         }
         if (this.field_i.field_d) {
-          var4 = sj.field_b[param1];
+          var4 = sj.textureRowCoords[param1];
           var5 = var4 - 2048 >> 1;
-          for (var6 = 0; var6 < ns.field_g; var6++) {
-            var8 = ht.field_Fb[var6];
+          for (var6 = 0; var6 < ns.textureWidth; var6++) {
+            var8 = ht.textureColumnCoords[var6];
             var9 = var8 - 2048 >> 1;
             if (0 != this.field_o) {
               var10 = var5 * var5 + var9 * var9 >> 12;

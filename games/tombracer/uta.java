@@ -269,30 +269,30 @@ abstract class uta implements ShellListener {
     final static void a(int param0, int param1, int param2) {
         int var3_int = 0;
         int var4 = TombRacer.field_G ? 1 : 0;
-        if (param2 != ns.field_g) {
-          ht.field_Fb = new int[param2];
+        if (param2 != ns.textureWidth) {
+          ht.textureColumnCoords = new int[param2];
           for (var3_int = 0; var3_int < param2; var3_int++) {
-            ht.field_Fb[var3_int] = (var3_int << 12) / param2;
+            ht.textureColumnCoords[var3_int] = (var3_int << 12) / param2;
           }
           ooa.field_g = 32 * param2;
-          una.field_b = -1 + param2;
-          ns.field_g = param2;
+          una.textureWidthMask = -1 + param2;
+          ns.textureWidth = param2;
         }
         if (param0 != 0) {
           return;
         }
         try {
-          if (param1 != ArchiveNetworkClient.field_i) {
-            if (param1 == ns.field_g) {
-              sj.field_b = ht.field_Fb;
+          if (param1 != ArchiveNetworkClient.textureHeight) {
+            if (param1 == ns.textureWidth) {
+              sj.textureRowCoords = ht.textureColumnCoords;
             } else {
-              sj.field_b = new int[param1];
+              sj.textureRowCoords = new int[param1];
               for (var3_int = 0; param1 > var3_int; var3_int++) {
-                sj.field_b[var3_int] = (var3_int << 12) / param1;
+                sj.textureRowCoords[var3_int] = (var3_int << 12) / param1;
               }
             }
-            hba.field_b = -1 + param1;
-            ArchiveNetworkClient.field_i = param1;
+            hba.textureHeightMask = -1 + param1;
+            ArchiveNetworkClient.textureHeight = param1;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "uta.L(" + param0 + ',' + param1 + ',' + param2 + ')');

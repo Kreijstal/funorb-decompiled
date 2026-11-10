@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uda extends qra {
+final class uda extends MatchPhase {
     static ToolkitSprite field_r;
     private daa field_m;
     private IntrusiveDeque field_n;
@@ -98,7 +98,7 @@ final class uda extends qra {
           } else {
             bsa.field_i.draw(-(bsa.field_i.a() >> 1) + var8, -(bsa.field_i.c() >> 1) + var9, 0, 1627389951, 1);
           }
-          SocketConnector.a(this.field_h.a(var11, false).toUpperCase(), 1, qf.field_j, wga.field_a[var11], 0, 32, 1, 55 + var9, var8 - 64, -1, (byte) 60, 128);
+          SocketConnector.a(this.screen.a(var11, false).toUpperCase(), 1, qf.field_j, wga.field_a[var11], 0, 32, 1, 55 + var9, var8 - 64, -1, (byte) 60, 128);
           var11++;
         }
         se.f((byte) -6);
@@ -110,7 +110,7 @@ final class uda extends qra {
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
         if (!this.field_y) {
-          li.b(this.field_h.l(param0 + 41), (byte) 107);
+          li.b(this.screen.l(param0 + 41), (byte) 107);
           this.field_y = true;
         }
         for (var3 = 0; this.field_t.length > var3; var3++) {
@@ -124,10 +124,10 @@ final class uda extends qra {
         if (this.field_u >= 0) {
           this.field_u = this.field_u - 1;
           if (this.field_u == 0) {
-            if (this.field_h.field_D) {
+            if (this.screen.field_D) {
               return;
             }
-            this.field_h.c(111);
+            this.screen.c(111);
           }
           return;
         }
@@ -152,14 +152,14 @@ final class uda extends qra {
         if (!param0) {
           return;
         }
-        if (null != this.field_f) {
-          this.field_f.d(param1, 73);
+        if (null != this.protocol) {
+          this.protocol.d(param1, 73);
         } else {
-          this.a(this.field_h.field_x, 0, param1);
+          this.a(this.screen.field_x, 0, param1);
         }
     }
 
-    uda(qh param0, v param1) {
+    uda(MatchScreen param0, MatchProtocol param1) {
         super(param0, param1);
         int stackIn_5_0 = 0;
         int stackIn_6_1 = 0;
@@ -181,7 +181,7 @@ final class uda extends qra {
         this.field_v = 0;
         this.field_u = -1;
         try {
-          this.field_m = new daa(this.field_c);
+          this.field_m = new daa(this.matchState);
           this.field_m.field_b = new w();
           this.field_n = new IntrusiveDeque();
           for (var3_int = 0; var3_int < 13; var3_int++) {
@@ -204,7 +204,7 @@ final class uda extends qra {
             }
             this.field_n.addLast((byte) -104, var8);
           }
-          var3_intLifetime1 = param0.field_k.players.length;
+          var3_intLifetime1 = param0.matchState.players.length;
           this.field_t = new rp[var3_intLifetime1];
           this.field_y = false;
           return;
@@ -235,7 +235,7 @@ final class uda extends qra {
         var4.a(param2, false, param1, 5, true);
         int var5 = var4.c((byte) 114);
         var4.a(param1 + 107, var5, param2, 0, 0);
-        jha var6 = ab.a(param1 ^ -41, gl.$cfr$intArgs$a$53ce4ab4c593(82, coa.field_n, new String[]{this.field_c.getColouredPlayerName(param0, 23807), Room.field_m[param2]}));
+        jha var6 = ab.a(param1 ^ -41, gl.$cfr$intArgs$a$53ce4ab4c593(82, coa.field_n, new String[]{this.matchState.getColouredPlayerName(param0, 23807), Room.field_m[param2]}));
         iqa.field_c.a(0, var6);
     }
 
@@ -244,7 +244,7 @@ final class uda extends qra {
         if (param0 != -1) {
           this.field_p = -18;
         }
-        stackIn_6_0 = (!this.field_h.d((byte) 111)) && (this.field_m.a(0, this.field_h.field_x) == -1);
+        stackIn_6_0 = (!this.screen.d((byte) 111)) && (this.field_m.a(0, this.screen.field_x) == -1);
         return stackIn_6_0;
     }
 
@@ -261,16 +261,16 @@ final class uda extends qra {
           hf.field_b == 1) {
           this.a(true, this.field_v);
         }
-        if (this.field_h.g(0, 2)) {
+        if (this.screen.g(0, 2)) {
           this.field_v = this.field_v - 7;
         }
-        if (this.field_h.g(0, 3)) {
+        if (this.screen.g(0, 3)) {
           this.field_v = this.field_v + 7;
         }
-        if (this.field_h.g(param0 ^ param0, 0)) {
+        if (this.screen.g(param0 ^ param0, 0)) {
           this.field_v = this.field_v - 1;
         }
-        if (this.field_h.g(0, 1)) {
+        if (this.screen.g(0, 1)) {
           this.field_v = this.field_v + 1;
         }
         if (this.field_v >= 13) {
@@ -281,8 +281,8 @@ final class uda extends qra {
         }
         while (!this.a(this.field_v, (byte) -74)) {
           stackIn_26_1 = this.field_v;
-          if (!this.field_h.g(0, 0) &&
-            !this.field_h.g(0, 2)) {
+          if (!this.screen.g(0, 0) &&
+            !this.screen.g(0, 2)) {
             stackIn_28_2 = 1;
           } else {
             stackIn_28_2 = -1;

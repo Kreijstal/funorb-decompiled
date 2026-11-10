@@ -5,11 +5,11 @@ abstract class uq implements Renderable {
     static long field_d;
     static String field_f;
     static int field_a;
-    pca field_e;
+    TileGridCell field_e;
     static nt field_b;
     static jea field_c;
 
-    final void a(int param0, pca param1) {
+    final void a(int param0, TileGridCell param1) {
         try {
           this.field_e = param1;
           if (param0 != 30711) {

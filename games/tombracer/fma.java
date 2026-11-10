@@ -75,7 +75,7 @@ final class fma {
               if (var5.length != 65) {
                 throw new RuntimeException();
               }
-              var23 = fja.a(-5 + (var10.position - var13.length), var10.payload, 5, 8);
+              var23 = PlayPhase.a(-5 + (var10.position - var13.length), var10.payload, 5, 8);
               for (var7 = 0; var7 < 64; var7++) {
                 if (var23[var7] != var5[var7 + 1]) {
                   throw new RuntimeException();
@@ -92,7 +92,7 @@ final class fma {
           if (var5.length != 65) {
             throw new RuntimeException();
           }
-          var24 = fja.a(-5 + (var10.position - var13.length), var10.payload, 5, 8);
+          var24 = PlayPhase.a(-5 + (var10.position - var13.length), var10.payload, 5, 8);
           for (var7Lifetime3 = 0; var7Lifetime3 < 64; var7Lifetime3++) {
             if (var24[var7Lifetime3] != var5[var7Lifetime3 + 1]) {
               throw new RuntimeException();
@@ -115,7 +115,7 @@ final class fma {
           if (var5Lifetime1.length != 65) {
             throw new RuntimeException();
           }
-          var14 = fja.a(-5 + (var10.position - var13Lifetime1.length), var10.payload, 5, 8);
+          var14 = PlayPhase.a(-5 + (var10.position - var13Lifetime1.length), var10.payload, 5, 8);
           var9 = var14;
           for (var7Lifetime1 = 0; var7Lifetime1 < 64; var7Lifetime1++) {
             if (var14[var7Lifetime1] != var5Lifetime1[var7Lifetime1 + 1]) {
@@ -136,7 +136,7 @@ final class fma {
         if (var5Lifetime2.length != 65) {
           throw new RuntimeException();
         }
-        var22 = fja.a(-5 + (var10.position - var13Lifetime1.length), var10.payload, 5, 8);
+        var22 = PlayPhase.a(-5 + (var10.position - var13Lifetime1.length), var10.payload, 5, 8);
         for (var7Lifetime2 = 0; var7Lifetime2 < 64; var7Lifetime2++) {
           if (var22[var7Lifetime2] != var5Lifetime2[var7Lifetime2 + 1]) {
             throw new RuntimeException();

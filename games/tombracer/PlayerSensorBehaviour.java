@@ -30,7 +30,7 @@ final class PlayerSensorBehaviour extends Behaviour implements SwitchSource {
     private final boolean r(int param0) {
         int var2 = this.getPlayer((byte) 19).getFacingAngle(-25787);
         int var3 = ua.a(var2 - (4096 + this.field_v), -120);
-        var3 = dfa.a(var3, param0, 109);
+        var3 = GameScreen.a(var3, param0, 109);
         if (4096 < var3) {
           var3 = 8192 - var3;
         }
@@ -48,7 +48,7 @@ final class PlayerSensorBehaviour extends Behaviour implements SwitchSource {
     private final boolean l(int param0) {
         int var2 = this.trap.getFacingAngle(-25787);
         int var3 = ua.a(var2 - this.field_v, -113);
-        var3 = dfa.a(var3, param0, param0 ^ -8300);
+        var3 = GameScreen.a(var3, param0, param0 ^ -8300);
         if (var3 > 4096) {
           var3 = -var3 + 8192;
         }

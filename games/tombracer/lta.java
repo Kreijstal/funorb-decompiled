@@ -7,8 +7,8 @@ final class lta implements GamePacket {
     public final void decode(BitPacketBuffer param0, byte param1) {
         try {
           if (param1 != -19) {
-            v var4 = (v) null;
-            this.a((qh) null, false, (v) null);
+            MatchProtocol var4 = (MatchProtocol) null;
+            this.a((MatchScreen) null, false, (MatchProtocol) null);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "lta.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -26,7 +26,7 @@ final class lta implements GamePacket {
         }
     }
 
-    final void a(qh param0, boolean param1, v param2) {
+    final void a(MatchScreen param0, boolean param1, MatchProtocol param2) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;

@@ -267,7 +267,7 @@ final class no extends me {
         }
     }
 
-    no(qh param0, int param1) {
+    no(MatchScreen param0, int param1) {
         super(param0);
         this.field_t = 0;
         try {

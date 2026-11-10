@@ -107,7 +107,7 @@ final class gva implements mb {
               if (var26 == 7 &&
                 var29 == 0) {
                 var25_ref_ka = SpawnerBehaviour.a(4, 12166, 7);
-                gqa.a(dfa.a(-(param2.f((byte) -127) >> 2), 2048, -81), -83584144, var6, var5, var25_ref_ka, -393216 + var7);
+                gqa.a(GameScreen.a(-(param2.f((byte) -127) >> 2), 2048, -81), -83584144, var6, var5, var25_ref_ka, -393216 + var7);
                 break regionExit1;
               } else if (var26 != 14 ||
                 var29 != 0) {
@@ -126,7 +126,7 @@ final class gva implements mb {
                         }
                         var19 = PlayerProfile.field_r[1];
                         var20 = var16 * 512 * var12 / (var19.d() * var10);
-                        var19.drawRotated((float)var8, (float)var9, var20, dfa.a(param2.f((byte) -127) << var21, 2048 << var21, -61), 0, var18, 1);
+                        var19.drawRotated((float)var8, (float)var9, var20, GameScreen.a(param2.f((byte) -127) << var21, 2048 << var21, -61), 0, var18, 1);
                         if (var29 == 0) {
                           break regionExit1;
                         }
@@ -147,7 +147,7 @@ final class gva implements mb {
               } else {
                 var24_ref = SwitchLinkList.field_b[5];
               }
-              gqa.a(dfa.a(-(param2.f((byte) -127) >> 2), 2048, 69), -83584144, var6, var5, var24_ref, var7);
+              gqa.a(GameScreen.a(-(param2.f((byte) -127) >> 2), 2048, 69), -83584144, var6, var5, var24_ref, var7);
               break regionExit1;
             }
             if ((decompiledFrameRemainder5) &&
@@ -162,7 +162,7 @@ final class gva implements mb {
               var28 = SpawnerBehaviour.a(var27, param1 ^ -12189, 7).a((byte) 1, 526343, true);
               var28.O(var26Lifetime2 >> 2, 128, var26Lifetime2 >> 2);
               var28.a(-1, 10, 30, var26Lifetime2);
-              gqa.a(dfa.a(-(param2.f((byte) -127) >> 2), 2048, 119), -83584144, var6, var5, var28, (883 * var6 + var5 * 233 & 255) + var7);
+              gqa.a(GameScreen.a(-(param2.f((byte) -127) >> 2), 2048, 119), -83584144, var6, var5, var28, (883 * var6 + var5 * 233 & 255) + var7);
               if (var29 == 0) {
                 break regionExit1;
               }
@@ -177,7 +177,7 @@ final class gva implements mb {
               }
               var19 = Room.field_p[1][0];
               var20 = var16 * 8192 * var12 / (var19.d() * var10);
-              var19.drawRotated((float)var8, (float)var9, var20, dfa.a(param2.f((byte) -127) << var21, 2048 << var21, 76), 0, var18, 1);
+              var19.drawRotated((float)var8, (float)var9, var20, GameScreen.a(param2.f((byte) -127) << var21, 2048 << var21, 76), 0, var18, 1);
               if (var29 == 0) {
                 break regionExit1;
               }
@@ -191,7 +191,7 @@ final class gva implements mb {
               }
               var19 = Room.field_p[2][0];
               var20 = var16 * (8192 * var12) / (var19.d() * var10);
-              var19.drawRotated((float)var8, (float)var9, var20, dfa.a(param2.f((byte) -127) << var21, 2048 << var21, 83), 0, var18, 1);
+              var19.drawRotated((float)var8, (float)var9, var20, GameScreen.a(param2.f((byte) -127) << var21, 2048 << var21, 83), 0, var18, 1);
               if (var29 == 0) {
                 break regionExit1;
               }
@@ -204,7 +204,7 @@ final class gva implements mb {
               }
               var19 = Room.field_p[3][0];
               var20 = var12 * 8192 * var16 / (var10 * var19.d());
-              var19.drawRotated((float)var8, (float)var9, var20, dfa.a(param2.f((byte) -127) << var21, 2048 << var21, -97), 0, var18, 1);
+              var19.drawRotated((float)var8, (float)var9, var20, GameScreen.a(param2.f((byte) -127) << var21, 2048 << var21, -97), 0, var18, 1);
               if (var29 == 0) {
                 break regionExit1;
               }
@@ -216,7 +216,7 @@ final class gva implements mb {
               }
               var19Lifetime2 = Room.field_p[4][0];
               var20Lifetime2 = var12 * 8192 * var16 / (var19Lifetime2.d() * var10);
-              var19Lifetime2.drawRotated((float)var8, (float)var9, var20Lifetime2, dfa.a(param2.f((byte) -127) << var21, 2048 << var21, 126), 2, var17, 2);
+              var19Lifetime2.drawRotated((float)var8, (float)var9, var20Lifetime2, GameScreen.a(param2.f((byte) -127) << var21, 2048 << var21, 126), 2, var17, 2);
               if (var29 == 0) {
                 break regionExit1;
               }
@@ -227,13 +227,13 @@ final class gva implements mb {
               }
               var19Lifetime1 = Room.field_p[5][0];
               var20Lifetime1 = var16 * (8192 * var12) / (var10 * var19Lifetime1.d());
-              var19Lifetime1.drawRotated((float)var8, (float)var9, var20Lifetime1, dfa.a(param2.f((byte) -127) << var21, 2048 << var21, 95), 0, var18, 1);
+              var19Lifetime1.drawRotated((float)var8, (float)var9, var20Lifetime1, GameScreen.a(param2.f((byte) -127) << var21, 2048 << var21, 95), 0, var18, 1);
               if (var29 == 0) {
                 break regionExit1;
               }
             }
             var26_ref_ka = SpawnerBehaviour.a(3, 12166, 7);
-            gqa.a(dfa.a(-(param2.f((byte) -127) >> 2), 2048, 92), param1 ^ 83584149, var6, var5, var26_ref_ka, -393216 + var7);
+            gqa.a(GameScreen.a(-(param2.f((byte) -127) >> 2), 2048, 92), param1 ^ 83584149, var6, var5, var26_ref_ka, -393216 + var7);
           }
           if (var23 == null) {
             return;
@@ -241,7 +241,7 @@ final class gva implements mb {
           var16 = (int)((float)var16 * (float)var12 / (float)var10);
           var25 = za.$cfr$intArgs$a$c604db63f465(0, 92, java.lang.reflect.Array.getLength(var23) - 1, java.lang.reflect.Array.getLength(var23) - (int)(var13 * (float)(-1 + java.lang.reflect.Array.getLength(var23))));
           var26Lifetime1 = Math.min(var25, java.lang.reflect.Array.getLength(var23) - 1);
-          fja.a(var8, ((int[]) (var23))[var26Lifetime1], (byte) 123, 128, var16, var9);
+          PlayPhase.a(var8, ((int[]) (var23))[var26Lifetime1], (byte) 123, 128, var16, var9);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -364,7 +364,7 @@ final class gva implements mb {
               var13.O(var10 << 2, 512, var10 << 2);
               stackIn_36_0 = (Projectile) (param2);
               stackIn_37_1 = !(param1);
-              gqa.a(dfa.a(-(((Projectile) (Object) stackIn_36_0).getAngle(stackIn_37_1) >> 2), 2048, -56), -83584144, var6, var5, var13, var7 + (255 & var6 * 883 + var5 * 233));
+              gqa.a(GameScreen.a(-(((Projectile) (Object) stackIn_36_0).getAngle(stackIn_37_1) >> 2), 2048, -56), -83584144, var6, var5, var13, var7 + (255 & var6 * 883 + var5 * 233));
               if (var15 == 0) {
                 return;
               }
@@ -376,7 +376,7 @@ final class gva implements mb {
             case 0:
               stackIn_46_0 = (Projectile) (param2);
               stackIn_47_1 = !(param1);
-              gqa.a(dfa.a(-(((Projectile) (Object) stackIn_46_0).getAngle(stackIn_47_1) >> 2), 2048, -96), -83584144, var6, var5, SpawnerBehaviour.a(1, 12166, 7), var7);
+              gqa.a(GameScreen.a(-(((Projectile) (Object) stackIn_46_0).getAngle(stackIn_47_1) >> 2), 2048, -96), -83584144, var6, var5, SpawnerBehaviour.a(1, 12166, 7), var7);
               if (var15 == 0) {
                 return;
               }
@@ -384,7 +384,7 @@ final class gva implements mb {
             default:
               break;
           }
-          gqa.a(dfa.a(-(param2.getAngle(true) >> 2), 2048, 107), -83584144, var6, var5, SpawnerBehaviour.a(2, 12166, 7), var7);
+          gqa.a(GameScreen.a(-(param2.getAngle(true) >> 2), 2048, 107), -83584144, var6, var5, SpawnerBehaviour.a(2, 12166, 7), var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -422,7 +422,7 @@ final class gva implements mb {
         }
     }
 
-    private final void a(int param0, pca param1, mba param2, int param3, tqa param4, int param5) {
+    private final void a(int param0, TileGridCell param1, mba param2, int param3, TileGrid param4, int param5) {
         RuntimeException stackIn_120_0 = null;
         StringBuilder stackIn_120_1 = null;
         String stackIn_121_2 = null;
@@ -616,10 +616,10 @@ final class gva implements mb {
 
     public final void a(int param0, Room param1) {
         RuntimeException runtimeException = null;
-        tqa var3 = null;
+        TileGrid var3 = null;
         int var4 = 0;
         int var5 = 0;
-        pca var6 = null;
+        TileGridCell var6 = null;
         int var7 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -627,7 +627,7 @@ final class gva implements mb {
         RuntimeException decompiledCaughtException = null;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
-          var3 = param1.f((byte) 93);
+          var3 = param1.getTileGrid((byte) 93);
           if (param0 <= 34) {
             return;
           }
@@ -689,7 +689,7 @@ final class gva implements mb {
         }
     }
 
-    private final boolean a(int param0, int param1, tqa param2, int param3, int param4) {
+    private final boolean a(int param0, int param1, TileGrid param2, int param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         boolean stackIn_9_0 = false;
@@ -698,7 +698,7 @@ final class gva implements mb {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param2.a(param3, (byte) 48, param0)) {
+          if (!param2.containsCell(param3, (byte) 48, param0)) {
             return true;
           }
           var6_int = 55 / ((35 - param4) / 37);
@@ -832,10 +832,10 @@ final class gva implements mb {
 
     private final void a(Room param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException runtimeException = null;
-        tqa var7 = null;
+        TileGrid var7 = null;
         int var8 = 0;
         int var9 = 0;
-        pca var10 = null;
+        TileGridCell var10 = null;
         int var11 = 0;
         int stackIn_5_0 = 0;
         boolean stackIn_10_0 = false;
@@ -846,7 +846,7 @@ final class gva implements mb {
         boolean stackOut_9_0;
         var11 = TombRacer.field_G ? 1 : 0;
         try {
-          var7 = param0.f((byte) 93);
+          var7 = param0.getTileGrid((byte) 93);
           if (param3 != 2048) {
             return;
           }

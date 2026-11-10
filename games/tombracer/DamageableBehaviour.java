@@ -17,7 +17,7 @@ final class DamageableBehaviour extends Behaviour {
     private int field_v;
     static int[] field_o;
 
-    final FlagSet j(byte param0) {
+    final FlagSet getVulnerabilities(byte param0) {
         int var2 = -44 / ((-56 - param0) / 45);
         return this.vulnerabilities;
     }

@@ -241,7 +241,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 122, "mu_lobby_name_add");
                 if (null != var2) {
-                  dj.field_a = jaa.decodeText((byte) 52, var2);
+                  ParticleEffects.field_a = jaa.decodeText((byte) 52, var2);
                 }
                 var2 = dn.a((byte) 118, "mu_lobby_name_rm");
                 if (null != var2) {
@@ -801,7 +801,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 126, "gameopt_playernotmember");
                 if (var2 != null) {
-                  qra.field_g = jaa.decodeText((byte) 63, var2);
+                  MatchPhase.field_g = jaa.decodeText((byte) 63, var2);
                 }
                 var2 = dn.a((byte) -15, "gameopt_younotmember");
                 if (null != var2) {
@@ -813,7 +813,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -71, "gameopt_youneedrating");
                 if (null != var2) {
-                  tqa.field_k = jaa.decodeText((byte) 122, var2);
+                  TileGrid.field_k = jaa.decodeText((byte) 122, var2);
                 }
                 var2 = dn.a((byte) -63, "gameopt_playerneedsratedgames");
                 if (var2 != null) {
@@ -879,7 +879,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 108, "gameopt_pleaseselectoption2");
                 if (null != var2) {
-                  v.field_j = jaa.decodeText((byte) 54, var2);
+                  MatchProtocol.field_j = jaa.decodeText((byte) 54, var2);
                 }
                 var2 = dn.a((byte) -28, "gameopt_badnumplayers");
                 if (var2 != null) {
@@ -1631,7 +1631,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 122, "create_alert_invaliddate");
                 if (var2 != null) {
-                  nia.field_m = jaa.decodeText((byte) 77, var2);
+                  MaskBlendOperator.field_m = jaa.decodeText((byte) 77, var2);
                 }
                 var2 = dn.a((byte) 124, "create_alert_invalidage");
                 if (null != var2) {
@@ -2513,7 +2513,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -112, "keychar_the_character_under_questionmark");
                 if (var2 != null) {
-                  tqa.field_o = ArrowShooterComponent.a((byte) 11, var2[0]);
+                  TileGrid.field_o = ArrowShooterComponent.a((byte) 11, var2[0]);
                 }
                 var2 = dn.a((byte) -95, "rating_noratings");
                 if (var2 != null) {

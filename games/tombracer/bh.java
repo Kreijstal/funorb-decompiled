@@ -390,7 +390,7 @@ final class bh extends ela {
                 var34_int = var34_int + (var51_ref.field_n + pda.field_c);
               }
               if ((1 << TrackingCrusherComponent.field_F & var14Lifetime1) != 0) {
-                var52_ref = pca.field_k[-1 + var12.field_yb];
+                var52_ref = TileGridCell.field_k[-1 + var12.field_yb];
                 var12.field_Zb.field_R = var52_ref;
                 var12.field_Zb.a(var52_ref.field_n, var12.field_Eb.field_t, -23776, 0, var34_int);
                 var34_int = var34_int + (pda.field_c + var52_ref.field_n);

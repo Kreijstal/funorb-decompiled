@@ -163,9 +163,9 @@ final class WallCrusherComponent extends PrefabComponent {
     final static boolean r(byte param0) {
         if (param0 > -14) {
           WallCrusherComponent.releaseStatics(-59);
-          return hb.field_t instanceof qh;
+          return hb.field_t instanceof MatchScreen;
         }
-        return hb.field_t instanceof qh;
+        return hb.field_t instanceof MatchScreen;
     }
 
     final void encode(boolean param0, BitPacketBuffer param1) {

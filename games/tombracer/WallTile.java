@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fh implements Renderable {
+final class WallTile implements Renderable {
     int field_f;
     int field_i;
     private boolean field_c;
@@ -49,7 +49,7 @@ final class fh implements Renderable {
           var3_int = this.getRenderX((byte) -113);
           var4 = this.getRenderY((byte) 115);
           var5 = this.getRenderZ((byte) -108);
-          gqa.a(dfa.a(this.field_o, 2048, 87), -83584144, var4, var3_int, this.field_g.a(this, (byte) 76), var5);
+          gqa.a(GameScreen.a(this.field_o, 2048, 87), -83584144, var4, var3_int, this.field_g.a(this, (byte) 76), var5);
           if (!nk.c(-115)) {
             return;
           }
@@ -552,7 +552,7 @@ final class fh implements Renderable {
           return this.field_g.getRenderZ((byte) -115);
         }
         java.awt.Canvas var3 = (java.awt.Canvas) null;
-        fh.a(true, (java.awt.Canvas) null, -71);
+        WallTile.a(true, (java.awt.Canvas) null, -71);
         return this.field_g.getRenderZ((byte) -115);
     }
 
@@ -598,7 +598,7 @@ final class fh implements Renderable {
             }
           }
           if (param2 != 0) {
-            fh.b(107, 37);
+            WallTile.b(107, 37);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -623,7 +623,7 @@ final class fh implements Renderable {
         return this.field_g.isRenderExpired((byte) 48);
     }
 
-    fh() {
+    WallTile() {
         int fieldTemp$0 = ita.field_g;
         ita.field_g = ita.field_g + 1;
         this.field_b = fieldTemp$0;

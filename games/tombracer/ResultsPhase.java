@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class opa extends qra {
+final class ResultsPhase extends MatchPhase {
     private boolean field_o;
     private gsa[] field_r;
     private boolean field_m;
@@ -104,8 +104,8 @@ final class opa extends qra {
                 }
               }
             }
-            opa.a(param0, param1, var8, param3, (byte) -100, var9, param6);
-            opa.a(var10, var8, param2, param3, param4, param5, param6);
+            ResultsPhase.a(param0, param1, var8, param3, (byte) -100, var9, param6);
+            ResultsPhase.a(var10, var8, param2, param3, param4, param5, param6);
             return;
           }
           for (var7_intLifetime1 = param2 - 1; var7_intLifetime1 > param1; var7_intLifetime1--) {
@@ -263,12 +263,12 @@ final class opa extends qra {
           WidgetStyleLayer.field_b[0].drawRotated((float)var8Lifetime1, (float)var9, 4096, 16384, 3, 1610612736, 1);
           WidgetStyleLayer.field_b[0].drawRotated((float)(var8Lifetime1 + 150), (float)var9, 4096, 16384, 3, 1610612736, 1);
         }
-        var7Lifetime2 = this.field_c.field_E;
-        for (var8Lifetime2 = 0; this.field_c.field_k > var8Lifetime2; var8Lifetime2++) {
+        var7Lifetime2 = this.matchState.field_E;
+        for (var8Lifetime2 = 0; this.matchState.field_k > var8Lifetime2; var8Lifetime2++) {
           var9Lifetime1 = var3 + 32;
           stackIn_12_0 = 95 * var8Lifetime2;
           stackIn_12_1 = 70;
-          if (this.field_c.field_k >= 3) {
+          if (this.matchState.field_k >= 3) {
             stackIn_13_2 = 0;
           } else {
             stackIn_13_2 = 95;
@@ -327,7 +327,7 @@ final class opa extends qra {
             var20_ref_StringLifetime8 = "0" + var30;
           }
           RoomEffectTraps.a(-1, -29, var13 + 14, var20_ref_StringLifetime8.toUpperCase(), var9Lifetime1 + 24, eda.field_f, 2431750);
-          var21_int = this.field_c.players[var8Lifetime2].z(-104);
+          var21_int = this.matchState.players[var8Lifetime2].z(-104);
           var22 = 0;
           if (var21_int >= 0 &&
             2 == bta.field_n[var21_int] &&
@@ -366,26 +366,26 @@ final class opa extends qra {
           var32 = String.valueOf(this.field_r[var8Lifetime2].field_m);
           RoomEffectTraps.a(-1, -59, var24Lifetime1, "$", var23Lifetime1, SingleChildWidget.field_v, 2431750);
           RoomEffectTraps.a(0, -28, -1 + var24Lifetime1, var32.toUpperCase(), 18 + var23Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime2]);
-          var26 = this.field_c.field_v[var8Lifetime2];
-          if (var8Lifetime2 == this.field_c.e(2) &&
+          var26 = this.matchState.field_v[var8Lifetime2];
+          if (var8Lifetime2 == this.matchState.e(2) &&
             var7Lifetime2 < -100 + fd.field_e) {
             var26--;
           }
           oka.a(Integer.toString(var26), wga.field_a[var8Lifetime2], SingleChildWidget.field_v, -1, -47 + (var24Lifetime1 - 1), 55, 0);
-          oka.a(Integer.toString(this.field_c.field_L), wga.field_a[var8Lifetime2], SingleChildWidget.field_v, -1, -12 + (var24Lifetime1 - 1), 55, 0);
+          oka.a(Integer.toString(this.matchState.field_L), wga.field_a[var8Lifetime2], SingleChildWidget.field_v, -1, -12 + (var24Lifetime1 - 1), 55, 0);
           oka.a("_", wga.field_a[var8Lifetime2], SingleChildWidget.field_v, -1, -40 + var24Lifetime1, 55, 0);
         }
-        for (var8Lifetime3 = 0; var8Lifetime3 < this.field_c.field_k; var8Lifetime3++) {
+        for (var8Lifetime3 = 0; var8Lifetime3 < this.matchState.field_k; var8Lifetime3++) {
           stackIn_61_0 = 95 * var8Lifetime3 + 105;
-          if (this.field_c.field_k < 3) {
+          if (this.matchState.field_k < 3) {
             stackIn_62_1 = 95;
           } else {
             stackIn_62_1 = 0;
           }
           var9Lifetime2 = stackIn_61_0 + stackIn_62_1;
           if (-100 + fd.field_e <= var7Lifetime2 &&
-            var8Lifetime3 == this.field_c.e(2)) {
-            if (this.field_c.field_L == this.field_c.field_v[var8Lifetime3]) {
+            var8Lifetime3 == this.matchState.e(2)) {
+            if (this.matchState.field_L == this.matchState.field_v[var8Lifetime3]) {
               oka.a(vu.field_d.toUpperCase(), 2431750, SingleChildWidget.field_v, -1, var9Lifetime2 - 22, (var3 + 50 >> 1) + 20, -1);
             } else {
               oka.a(cha.field_h.toUpperCase(), 2431750, SingleChildWidget.field_v, -1, var9Lifetime2 - 22, (var3 + 50 >> 1) + 20, -1);
@@ -405,11 +405,11 @@ final class opa extends qra {
           var10Lifetime1Lifetime1 = wga.field_a[var8Lifetime3];
           gca.field_a.draw(62, 10 + var9Lifetime2 - 95, 0, var10Lifetime1Lifetime1 | -1006632960, 1);
           tga.field_a.la();
-          this.field_c.players[var8Lifetime3].n((byte) -42).a(-1, (int)this.field_r[var8Lifetime3].field_q, 1400, 1536, var9Lifetime2);
-          oka.a(this.field_c.playerNames[var8Lifetime3].toUpperCase(), var10Lifetime1Lifetime1, kn.field_p, -1, var9Lifetime2, (int)this.field_r[var8Lifetime3].field_q, -1);
+          this.matchState.players[var8Lifetime3].n((byte) -42).a(-1, (int)this.field_r[var8Lifetime3].field_q, 1400, 1536, var9Lifetime2);
+          oka.a(this.matchState.playerNames[var8Lifetime3].toUpperCase(), var10Lifetime1Lifetime1, kn.field_p, -1, var9Lifetime2, (int)this.field_r[var8Lifetime3].field_q, -1);
           if (!this.field_p &&
             var7Lifetime2 >= var8Lifetime3 * 50 + efa.field_y &&
-            var7Lifetime2 < 50 + efa.field_y + this.field_c.field_k * 50) {
+            var7Lifetime2 < 50 + efa.field_y + this.matchState.field_k * 50) {
             stackIn_151_0 = (var8Lifetime3 * 50 + efa.field_y + 25 > var7Lifetime2) ? 0 : 1;
             var11Lifetime1Lifetime1 = stackIn_151_0;
             var39 = Integer.toString(this.field_r[var8Lifetime3].field_p);
@@ -420,7 +420,7 @@ final class opa extends qra {
               stackIn_154_1 = this.field_r[var8Lifetime3].field_u;
             }
             var40 = ((StringBuilder) (Object) stackIn_153_0).append(Integer.toString(stackIn_154_1 + this.field_r[var8Lifetime3].field_v)).toString();
-            var14 = this.field_c.players[var8Lifetime3].z(-124);
+            var14 = this.matchState.players[var8Lifetime3].z(-124);
             if (var11Lifetime1Lifetime1 != 0) {
               if (this.field_r[var8Lifetime3].field_u > 0) {
                 stackIn_162_0 = (var14 < 0) ? 0 : 1;
@@ -456,7 +456,7 @@ final class opa extends qra {
             }
           } else if (!this.field_m &&
             var7Lifetime2 >= var8Lifetime3 * 50 + nta.field_d &&
-            50 + (this.field_c.field_k * 50 + nta.field_d) > var7Lifetime2) {
+            50 + (this.matchState.field_k * 50 + nta.field_d) > var7Lifetime2) {
             stackIn_126_0 = (25 + (nta.field_d + var8Lifetime3 * 50) > var7Lifetime2) ? 0 : 1;
             var11Lifetime1Lifetime1 = stackIn_126_0;
             var36 = Integer.toString(this.field_r[var8Lifetime3].field_r);
@@ -467,7 +467,7 @@ final class opa extends qra {
               stackIn_129_1 = 0;
             }
             var37 = ((StringBuilder) (Object) stackIn_128_0).append(Integer.toString(stackIn_129_1 + this.field_r[var8Lifetime3].field_n)).toString();
-            var14 = this.field_c.players[var8Lifetime3].z(39);
+            var14 = this.matchState.players[var8Lifetime3].z(39);
             if (var11Lifetime1Lifetime1 != 0) {
               if (this.field_r[var8Lifetime3].field_z > 0) {
                 stackIn_137_0 = (var14 >= 0) ? 1 : 0;
@@ -508,7 +508,7 @@ final class opa extends qra {
           } else {
             if (!this.field_o &&
               var7Lifetime2 >= var8Lifetime3 * 50 + iv.field_ub &&
-              var7Lifetime2 < this.field_c.field_k * 50 + iv.field_ub + 50) {
+              var7Lifetime2 < this.matchState.field_k * 50 + iv.field_ub + 50) {
               stackIn_101_0 = (50 * var8Lifetime3 + iv.field_ub + 25 > var7Lifetime2) ? 0 : 1;
               var11Lifetime1Lifetime1 = stackIn_101_0;
               var33 = Integer.toString(this.field_r[var8Lifetime3].field_c);
@@ -519,7 +519,7 @@ final class opa extends qra {
                 stackIn_104_1 = this.field_r[var8Lifetime3].field_f;
               }
               var34 = ((StringBuilder) (Object) stackIn_103_0).append(Integer.toString(stackIn_104_1 + this.field_r[var8Lifetime3].field_a)).toString();
-              var14 = this.field_c.players[var8Lifetime3].z(-113);
+              var14 = this.matchState.players[var8Lifetime3].z(-113);
               if (var11Lifetime1Lifetime1 != 0) {
                 if (0 < this.field_r[var8Lifetime3].field_f) {
                   stackIn_112_0 = (var14 >= 0) ? 1 : 0;
@@ -638,7 +638,7 @@ final class opa extends qra {
         }
     }
 
-    opa(qh param0, v param1, int[][] param2) {
+    ResultsPhase(MatchScreen param0, MatchProtocol param1, int[][] param2) {
         super(param0, param1);
         int var5_int = 0;
         int var13_int = 0;
@@ -681,10 +681,10 @@ final class opa extends qra {
         double var21Lifetime1;
         double var21Lifetime2;
         try {
-          var4_int = this.field_c.players.length;
+          var4_int = this.matchState.players.length;
           this.field_r = new gsa[var4_int];
           for (var5_int = 0; var4_int > var5_int; var5_int++) {
-            this.field_r[var5_int] = new gsa(this.field_c.players[var5_int], param2[var5_int]);
+            this.field_r[var5_int] = new gsa(this.matchState.players[var5_int], param2[var5_int]);
           }
           TripBeamComponent.b(1, 0);
           this.field_s = false;
@@ -779,7 +779,7 @@ final class opa extends qra {
             SweeperMountComponent.field_H = var17Lifetime2;
             var17Lifetime2 += 100;
             var18 = var15 / 100.0;
-            this.field_r[this.field_c.e(2)].field_i = var18;
+            this.field_r[this.matchState.e(2)].field_i = var18;
           }
           var17Lifetime2 += 100;
           fd.field_e = var17Lifetime2;
@@ -822,23 +822,23 @@ final class opa extends qra {
         if (param0 != 80) {
           this.b(76, true);
         }
-        for (var3 = 0; var3 < this.field_c.players.length; var3++) {
+        for (var3 = 0; var3 < this.matchState.players.length; var3++) {
           if (!this.field_q) {
-            this.field_c.players[var3].n((byte) -98).a(26, 4, true);
+            this.matchState.players[var3].n((byte) -98).a(26, 4, true);
           }
-          this.field_c.players[var3].n((byte) -127).a(param0 + 21383);
-          this.field_c.players[var3].n((byte) -54).f(-4366);
+          this.matchState.players[var3].n((byte) -127).a(param0 + 21383);
+          this.matchState.players[var3].n((byte) -54).f(-4366);
         }
         this.field_q = true;
         if (param1) {
           this.c(7);
         }
-        this.field_c.field_E = this.field_c.field_E + 1;
-        var3Lifetime1 = this.field_c.field_E;
+        this.matchState.field_E = this.matchState.field_E + 1;
+        var3Lifetime1 = this.matchState.field_E;
         if (fd.field_e <= var3Lifetime1 &&
           !this.field_s) {
-          if (this.field_f != null) {
-            this.field_f.a(6418);
+          if (this.protocol != null) {
+            this.protocol.a(6418);
           }
           this.field_s = true;
         }

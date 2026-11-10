@@ -31,12 +31,12 @@ final class un extends TextureOperator {
         int[] var3 = var18;
         if (this.field_i.field_d) {
           var7 = this.field_o * ooa.field_g >> 12;
-          var26 = this.getInputMonochromeRow(0, -126, hba.field_b & -1 + param1);
+          var26 = this.getInputMonochromeRow(0, -126, hba.textureHeightMask & -1 + param1);
           var9 = this.getInputMonochromeRow(0, param0 ^ -36, param1);
-          var25 = this.getInputMonochromeRow(0, -116, param1 + 1 & hba.field_b);
-          for (var11 = 0; var11 < ns.field_g; var11++) {
+          var25 = this.getInputMonochromeRow(0, -116, param1 + 1 & hba.textureHeightMask);
+          for (var11 = 0; var11 < ns.textureWidth; var11++) {
             var12 = (var25[var11] - var26[var11]) * var7 >> 12;
-            var13 = var7 * (var9[-1 + var11 & una.field_b] - var9[una.field_b & var11 + 1]) >> 12;
+            var13 = var7 * (var9[-1 + var11 & una.textureWidthMask] - var9[una.textureWidthMask & var11 + 1]) >> 12;
             var14 = var13 >> 4;
             var15 = var12 >> 4;
             if (var14 < 0) {

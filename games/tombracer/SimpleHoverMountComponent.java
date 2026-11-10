@@ -69,14 +69,14 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
         }
         if (0 != uq.field_c.field_y) {
           if (dea.field_c) {
-            fh.b(param3, -22243);
+            WallTile.b(param3, -22243);
           } else {
             if (ReportAbuseDialog.field_ub > 0) {
-              fh.b(param3, -22243);
+              WallTile.b(param3, -22243);
             } else {
               if (2 <= ld.field_e) {
                 if (VerticalScrollbar.field_tb[12]) {
-                  fh.b(param3, -22243);
+                  WallTile.b(param3, -22243);
                 } else {
                   qp.field_s = true;
                 }
@@ -161,7 +161,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
           gqa.a(param5, -83584144, var15, -param0 + var13, param9, param6);
           gqa.a(param1, -83584144, var15, var14, param9, param6);
           for (var16 = 0; var16 < var11_int; var16++) {
-            gqa.a(dfa.a(param8, 2048, 104), -83584144, var15, var13 + param0 * var16, param7, param6);
+            gqa.a(GameScreen.a(param8, 2048, 104), -83584144, var15, var13 + param0 * var16, param7, param6);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

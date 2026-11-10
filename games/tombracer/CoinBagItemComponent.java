@@ -293,10 +293,10 @@ final class CoinBagItemComponent extends ItemComponent {
                     if (var12 == 0) {
                       var14_ref_String = gl.$cfr$intArgs$a$53ce4ab4c593(82, field_I, new String[]{(String) (var11_ref)});
                       if (var19 != 0) {
-                        var14_ref_String = v.field_j + (String) (var11_ref);
+                        var14_ref_String = MatchProtocol.field_j + (String) (var11_ref);
                       }
                     } else {
-                      var14_ref_String = v.field_j + (String) (var11_ref);
+                      var14_ref_String = MatchProtocol.field_j + (String) (var11_ref);
                     }
                   } else {
                     var13_ref_String = lha.field_m;

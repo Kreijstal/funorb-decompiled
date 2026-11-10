@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dj {
+final class ParticleEffects {
     static int field_b;
-    private Room field_c;
+    private Room room;
     static String field_a;
 
     final void b(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -14,12 +14,12 @@ final class dj {
         int var12 = TombRacer.field_G ? 1 : 0;
         int var7 = 131072;
         for (var8 = param4; 1 > var8; var8++) {
-          var9 = param2 / 8 + (-(var7 / 2) + this.a((byte) -33, var7));
-          var10 = -(var7 / 2) + (this.a((byte) -33, var7) + param5 / 8);
-          var11 = this.field_c.spawnParticle(param1, param0, (byte) 100, param3);
-          var11.a(false, 32, 10, 16, 20 + this.a((byte) -33, 15));
+          var9 = param2 / 8 + (-(var7 / 2) + this.randomBelow((byte) -33, var7));
+          var10 = -(var7 / 2) + (this.randomBelow((byte) -33, var7) + param5 / 8);
+          var11 = this.room.spawnParticle(param1, param0, (byte) 100, param3);
+          var11.a(false, 32, 10, 16, 20 + this.randomBelow((byte) -33, 15));
           var11.a(var10, -var10 / 64, var9, -var9 / 64, 131072, -8192, (byte) -20);
-          var11.a(this.a((byte) -33, 2048), this.a((byte) -33, 32) - 16, -77);
+          var11.a(this.randomBelow((byte) -33, 2048), this.randomBelow((byte) -33, 32) - 16, -77);
         }
     }
 
@@ -36,11 +36,11 @@ final class dj {
         }
     }
 
-    private final int a(byte param0, int param1) {
+    private final int randomBelow(byte param0, int param1) {
         if (param0 != -33) {
           return 65;
         }
-        return uca.field_c.nextBounded(param1, 0);
+        return uca.cosmeticRandom.nextBounded(param1, 0);
     }
 
     public static void releaseStatics(int param0) {
@@ -63,15 +63,15 @@ final class dj {
           return;
         }
         for (var16 = 0; var16 < param4; var16++) {
-          var12 = param5 - 512 + this.a((byte) -33, 1024);
+          var12 = param5 - 512 + this.randomBelow((byte) -33, 1024);
           var13 = MouseInputHandler.a((byte) 125, var12 >> 2);
           var14 = bua.a(0, var12 >> 2);
           var17 = gqa.a(var13, (byte) 24, param7);
           var18 = gqa.a(var14, (byte) 24, param7);
-          var15 = this.field_c.spawnParticle(param8, param0, (byte) 100, param3);
+          var15 = this.room.spawnParticle(param8, param0, (byte) 100, param3);
           var15.a(false, param9, param2, param10, param6);
           var15.a(var18, -var18 / 32, var17, -var17 / 32, 0, 0, (byte) -20);
-          var15.a(this.a((byte) -33, 2048), this.a((byte) -33, 128) - 64, -125);
+          var15.a(this.randomBelow((byte) -33, 2048), this.randomBelow((byte) -33, 128) - 64, -125);
         }
     }
 
@@ -125,15 +125,15 @@ final class dj {
           }
           var13 = param1.field_k;
           for (var14 = 0; var10 > var14; var14++) {
-            var15 = this.field_c.spawnParticle(var12, var13, (byte) 100, param1.field_i);
+            var15 = this.room.spawnParticle(var12, var13, (byte) 100, param1.field_i);
             var15.a(false, 12, param1.field_j, 6, var11);
             var13 = var13 + var9;
             var12 = var12 + var8;
             var15.a(-121, var6);
             if (var12 >= 0 &&
               var13 >= 0 &&
-              var12 <= this.field_c.getWidth((byte) -86) &&
-              var13 <= this.field_c.getHeight(-127)) {
+              var12 <= this.room.getWidth((byte) -86) &&
+              var13 <= this.room.getHeight(-127)) {
               continue;
             }
             break;
@@ -170,12 +170,12 @@ final class dj {
         int var12 = TombRacer.field_G ? 1 : 0;
         int var7 = 131072;
         for (var8 = param4; var8 < 5; var8++) {
-          var9 = param3 / 8 - var7 / 2 + this.a((byte) -33, var7);
-          var10 = param0 / 8 + (-(var7 / 2) + this.a((byte) -33, var7));
-          var11 = this.field_c.spawnParticle(param5, param1, (byte) 100, param2);
-          var11.a(false, 64, 11, 16, this.a((byte) -33, 15) + 20);
+          var9 = param3 / 8 - var7 / 2 + this.randomBelow((byte) -33, var7);
+          var10 = param0 / 8 + (-(var7 / 2) + this.randomBelow((byte) -33, var7));
+          var11 = this.room.spawnParticle(param5, param1, (byte) 100, param2);
+          var11.a(false, 64, 11, 16, this.randomBelow((byte) -33, 15) + 20);
           var11.a(var10, -var10 / 64, var9, -var9 / 64, 0, 0, (byte) -20);
-          var11.a(this.a((byte) -33, 2048), -8 + this.a((byte) -33, 16), -112);
+          var11.a(this.randomBelow((byte) -33, 2048), -8 + this.randomBelow((byte) -33, 16), -112);
         }
     }
 
@@ -186,16 +186,16 @@ final class dj {
         Particle var9 = null;
         int var10 = TombRacer.field_G ? 1 : 0;
         int var5 = 262144;
-        for (var6 = 0; var6 < 4 + uca.field_c.nextBounded(4, param2 ^ 46); var6++) {
-          var7 = -(var5 / 2) + this.a((byte) -33, var5);
-          var8 = this.a((byte) -33, var5) - var5 / 2;
-          var9 = this.field_c.spawnParticle(param3, param0, (byte) 100, param1);
-          var9.a(false, 16, 14, 16, 25 + uca.field_c.nextBounded(25, param2 ^ 46));
-          var9.a(var8, -var8 / 64, var7, -var7 / 64, 131072 + uca.field_c.nextBounded(131072, 0), -8192, (byte) -20);
-          var9.a(this.a((byte) -33, 2048), this.a((byte) -33, 32) - 16, -110);
+        for (var6 = 0; var6 < 4 + uca.cosmeticRandom.nextBounded(4, param2 ^ 46); var6++) {
+          var7 = -(var5 / 2) + this.randomBelow((byte) -33, var5);
+          var8 = this.randomBelow((byte) -33, var5) - var5 / 2;
+          var9 = this.room.spawnParticle(param3, param0, (byte) 100, param1);
+          var9.a(false, 16, 14, 16, 25 + uca.cosmeticRandom.nextBounded(25, param2 ^ 46));
+          var9.a(var8, -var8 / 64, var7, -var7 / 64, 131072 + uca.cosmeticRandom.nextBounded(131072, 0), -8192, (byte) -20);
+          var9.a(this.randomBelow((byte) -33, 2048), this.randomBelow((byte) -33, 32) - 16, -110);
         }
         if (param2 != 46) {
-          this.field_c = (Room) null;
+          this.room = (Room) null;
         }
     }
 
@@ -210,19 +210,19 @@ final class dj {
           return;
         }
         while (var8 < 3) {
-          var9 = -(var7 / 2) + this.a((byte) -33, var7) + param4;
-          var10 = param2 - var7 / 2 + this.a((byte) -33, var7);
-          var11 = this.field_c.spawnParticle(param0, param5, (byte) 100, param3);
-          var11.a(false, 32, 2, 16, this.a((byte) -33, 4) + 8);
+          var9 = -(var7 / 2) + this.randomBelow((byte) -33, var7) + param4;
+          var10 = param2 - var7 / 2 + this.randomBelow((byte) -33, var7);
+          var11 = this.room.spawnParticle(param0, param5, (byte) 100, param3);
+          var11.a(false, 32, 2, 16, this.randomBelow((byte) -33, 4) + 8);
           var11.b(98, var10, var9);
-          var11.a(this.a((byte) -33, 2048), -64 + this.a((byte) -33, 128), -113);
+          var11.a(this.randomBelow((byte) -33, 2048), -64 + this.randomBelow((byte) -33, 128), -113);
           var8++;
         }
     }
 
-    dj(Room param0) {
+    ParticleEffects(Room param0) {
         try {
-          this.field_c = param0;
+          this.room = param0;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "dj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -243,11 +243,11 @@ final class dj {
           field_b = 105;
         }
         while (var6 < 8) {
-          var7 = this.a((byte) -33, 8192);
+          var7 = this.randomBelow((byte) -33, 8192);
           var8 = MouseInputHandler.a((byte) 102, var7 >> 2);
           var9 = bua.a(0, var7 >> 2);
-          var10 = this.field_c.spawnParticle(param1, param0, (byte) 100, param2);
-          var11 = var5 + this.a((byte) -33, var5);
+          var10 = this.room.spawnParticle(param1, param0, (byte) 100, param2);
+          var11 = var5 + this.randomBelow((byte) -33, var5);
           var12 = gqa.a(var8, (byte) 24, var11);
           var13 = gqa.a(var9, (byte) 24, var11);
           var10.a(false, 2, 13, 16, 10);
@@ -271,11 +271,11 @@ final class dj {
         }
         int var5 = 262144;
         for (var6 = 0; var6 < 8; var6++) {
-          var7 = this.a((byte) -33, 8192);
+          var7 = this.randomBelow((byte) -33, 8192);
           var8 = MouseInputHandler.a((byte) 126, var7 >> 2);
           var9 = bua.a(0, var7 >> 2);
-          var10 = this.field_c.spawnParticle(param2, param3, (byte) 100, param1);
-          var11 = this.a((byte) -33, var5) + var5;
+          var10 = this.room.spawnParticle(param2, param3, (byte) 100, param1);
+          var11 = this.randomBelow((byte) -33, var5) + var5;
           var12 = gqa.a(var8, (byte) 24, var11);
           var13 = gqa.a(var9, (byte) 24, var11);
           var10.a(false, 2, 4, 16, 10);
@@ -292,14 +292,14 @@ final class dj {
         int var11 = 0;
         int var12 = TombRacer.field_G ? 1 : 0;
         if (param0 < 47) {
-          this.field_c = (Room) null;
+          this.room = (Room) null;
         }
         for (var6 = 0; 5 > var6; var6++) {
-          var7 = -256 + (this.a((byte) -33, 512) + param4);
+          var7 = -256 + (this.randomBelow((byte) -33, 512) + param4);
           var8 = MouseInputHandler.a((byte) 124, var7 >> 2);
           var9 = bua.a(0, var7 >> 2);
-          var10 = this.field_c.spawnParticle(param3, param2, (byte) 100, param1);
-          var11 = 262144 + this.a((byte) -33, 262144);
+          var10 = this.room.spawnParticle(param3, param2, (byte) 100, param1);
+          var11 = 262144 + this.randomBelow((byte) -33, 262144);
           var10.a(false, 2, 4, 16, 10);
           var10.b(69, gqa.a(var9, (byte) 24, var11), gqa.a(var8, (byte) 24, var11));
         }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class wv extends dfa {
+abstract class wv extends GameScreen {
     static int field_j;
     int field_i;
     int field_p;
@@ -323,9 +323,9 @@ abstract class wv extends dfa {
               return;
             }
             if (SecondaryNodeDequeIterator.field_a != null &&
-              null != SecondaryNodeDequeIterator.field_a.field_k &&
-              SecondaryNodeDequeIterator.field_a.field_k.getPlayerRoom(param2 ^ 15283, SecondaryNodeDequeIterator.field_a.l(param2 ^ 15336)) != null) {
-              var4 = (w) (SecondaryNodeDequeIterator.field_a.field_k.getPlayerRoom(0, SecondaryNodeDequeIterator.field_a.l(param2 ^ 15326)).field_G);
+              null != SecondaryNodeDequeIterator.field_a.matchState &&
+              SecondaryNodeDequeIterator.field_a.matchState.getPlayerRoom(param2 ^ 15283, SecondaryNodeDequeIterator.field_a.l(param2 ^ 15336)) != null) {
+              var4 = (w) (SecondaryNodeDequeIterator.field_a.matchState.getPlayerRoom(0, SecondaryNodeDequeIterator.field_a.l(param2 ^ 15326)).field_G);
               if (var4 != null) {
                 var4.a(108, true);
               }
@@ -476,7 +476,7 @@ abstract class wv extends dfa {
             if (35 == var7 &&
               var8 == 0) {
               if (SecondaryNodeDequeIterator.field_a != null &&
-                null != SecondaryNodeDequeIterator.field_a.field_k &&
+                null != SecondaryNodeDequeIterator.field_a.matchState &&
                 SecondaryNodeDequeIterator.field_a.field_D &&
                 !SecondaryNodeDequeIterator.field_a.d((byte) 90)) {
                 ql.field_k.writeCipheredOpcode(65, -2988);
@@ -533,7 +533,7 @@ abstract class wv extends dfa {
                 var8 == 0) {
                 var4_int = SecondaryNodeDequeIterator.field_a.m(-1);
                 var5 = SecondaryNodeDequeIterator.field_a.h(0, 9);
-                var6 = SecondaryNodeDequeIterator.field_a.field_k.field_K;
+                var6 = SecondaryNodeDequeIterator.field_a.matchState.field_K;
                 TextLayout.a(var4_int, (byte) 101, var6);
                 SecondaryNodeDequeIterator.field_a.b(var5, 50, 0);
                 SecondaryNodeDequeIterator.field_a.j((byte) -49);

@@ -20,16 +20,16 @@ final class li {
         }
         aoa.a(91, 2);
         if (DoorwayComponent.field_I == 0) {
-          v.b(2, 0);
+          MatchProtocol.b(2, 0);
           DoorwayComponent.field_I = -DoorwayComponent.field_I + 1;
           ProxySocketConnector.a(param0, 5);
-          v.b(uca.field_c.nextBounded(6, 0) + 3, 0);
+          MatchProtocol.b(uca.cosmeticRandom.nextBounded(6, 0) + 3, 0);
           return;
         }
-        v.b(1, 0);
+        MatchProtocol.b(1, 0);
         DoorwayComponent.field_I = -DoorwayComponent.field_I + 1;
         ProxySocketConnector.a(param0, 5);
-        v.b(uca.field_c.nextBounded(6, 0) + 3, 0);
+        MatchProtocol.b(uca.cosmeticRandom.nextBounded(6, 0) + 3, 0);
     }
 
     final static su a(int param0, byte param1) {

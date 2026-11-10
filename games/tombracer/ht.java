@@ -13,7 +13,7 @@ final class ht extends jea {
     jea field_Vb;
     int field_yb;
     jea field_Rb;
-    static int[] field_Fb;
+    static int[] textureColumnCoords;
     jea field_Hb;
     jea[] field_Ub;
     long field_Ab;
@@ -168,7 +168,7 @@ final class ht extends jea {
     }
 
     public static void releaseStatics(byte param0) {
-        field_Fb = null;
+        textureColumnCoords = null;
         field_Db = null;
         field_Pb = null;
         if (param0 > -101) {

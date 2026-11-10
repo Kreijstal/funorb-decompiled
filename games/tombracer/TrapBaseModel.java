@@ -112,7 +112,7 @@ final class TrapBaseModel extends MotionTrackingModel {
         var9 = TombRacer.field_G ? 1 : 0;
         try {
           var6 = null;
-          var7 = dfa.a(4096 - this.body.getFacingAngle(-25787) >> 2, 2048, 91);
+          var7 = GameScreen.a(4096 - this.body.getFacingAngle(-25787) >> 2, 2048, 91);
           var8 = this.field_w;
           if (var8 == 0) {
             var6 = RevolverItemComponent.field_J[0];

@@ -45,27 +45,27 @@ public final class TombRacer extends rfa implements ls {
           }
           if (8 == param2) {
             DualLinkNode.field_i = 0;
-            pca.a(DualLinkNode.field_i, param0 - 26037, 0);
+            TileGridCell.a(DualLinkNode.field_i, param0 - 26037, 0);
             return true;
           }
           if (param2 == 9) {
             DualLinkNode.field_i = 50;
-            pca.a(DualLinkNode.field_i, param0 ^ 26043, 0);
+            TileGridCell.a(DualLinkNode.field_i, param0 ^ 26043, 0);
             return true;
           }
           if (param2 == 10) {
             DualLinkNode.field_i = 80;
-            pca.a(DualLinkNode.field_i, param0 - 26037, 5);
+            TileGridCell.a(DualLinkNode.field_i, param0 - 26037, 5);
             return true;
           }
           if (11 == param2) {
             DualLinkNode.field_i = 150;
-            pca.a(DualLinkNode.field_i, param0 ^ 26043, 0);
+            TileGridCell.a(DualLinkNode.field_i, param0 ^ 26043, 0);
             return true;
           }
           if (param2 == 12) {
             DualLinkNode.field_i = 200;
-            pca.a(DualLinkNode.field_i, param0 - 26037, 0);
+            TileGridCell.a(DualLinkNode.field_i, param0 - 26037, 0);
             return true;
           }
           if (param2 == 52 &&
@@ -169,11 +169,11 @@ public final class TombRacer extends rfa implements ls {
             var4_intLifetime1 = 1;
             bka.a((byte) 126);
           }
-          if (fja.h(param2 ^ 110) &&
+          if (PlayPhase.h(param2 ^ 110) &&
             !lca.a(false)) {
             tga.field_a.c(-1073741824, 0, aaa.a(false), 0, param2 ^ -22956, SwitchLinkList.b(0));
             var5_ref_ssa = IntrusiveDequeCursor.a((byte) 65, tga.field_a);
-            var5_ref_ssa.a(aaa.a(false) + mp.a((byte) -112) >> 1, SwitchLinkList.b(0) - qra.a(96) >> 1, (byte) -12, SwitchLinkList.b(0) + qra.a(96) >> 1, aaa.a(false) - mp.a((byte) -125) >> 1);
+            var5_ref_ssa.a(aaa.a(false) + mp.a((byte) -112) >> 1, SwitchLinkList.b(0) - MatchPhase.a(96) >> 1, (byte) -12, SwitchLinkList.b(0) + MatchPhase.a(96) >> 1, aaa.a(false) - mp.a((byte) -125) >> 1);
             if (dq.field_f == null) {
               stackIn_47_0 = VortexBehaviour.field_n;
             } else {
@@ -249,7 +249,7 @@ public final class TombRacer extends rfa implements ls {
         rm.releaseStatics(param0 + 12213);
         kla.releaseStatics(param0 ^ 11134);
         id.releaseStatics(param0 ^ -3666);
-        v.releaseStatics(param0 ^ -3666);
+        MatchProtocol.releaseStatics(param0 ^ -3666);
         bga.releaseStatics(200);
         aoa.releaseStatics((byte) 63);
         eca.a(30152);
@@ -276,9 +276,9 @@ public final class TombRacer extends rfa implements ls {
         via.releaseStatics(64);
         ViewportManager.releaseStatics(param0 ^ -27015);
         tia.releaseStatics((byte) -125);
-        dfa.releaseStatics((byte) -104);
+        GameScreen.releaseStatics((byte) -104);
         ala.releaseStatics(0);
-        qh.b(false);
+        MatchScreen.b(false);
         gq.f(39);
         ej.a(-1);
         uaa.releaseStatics(5193);
@@ -315,7 +315,7 @@ public final class TombRacer extends rfa implements ls {
         qw.releaseStatics(true);
         tu.releaseStatics(-1);
         kq.releaseStatics(param0 ^ 11052);
-        qra.releaseStatics(param0 + 3762);
+        MatchPhase.releaseStatics(param0 + 3762);
         Player.D(-1);
         goa.b(0);
         kv.releaseStatics(-31014);
@@ -447,11 +447,11 @@ public final class TombRacer extends rfa implements ls {
         ObjectPool.releaseStatics(true);
         CollisionGrid.releaseStatics(-2147483648);
         bba.releaseStatics((byte) -28);
-        tqa.releaseStatics((byte) 75);
+        TileGrid.releaseStatics((byte) 75);
         ui.a(4);
         RoomEffectTraps.releaseStatics(32);
         fq.releaseStatics(0);
-        dj.releaseStatics(-1);
+        ParticleEffects.releaseStatics(-1);
         Trap.K(8424);
         db.releaseStatics((byte) -117);
         Corpse.releaseStatics((byte) -113);
@@ -526,7 +526,7 @@ public final class TombRacer extends rfa implements ls {
         jia.releaseStatics((byte) 31);
         GameEvent.releaseStatics(param0 ^ -3601);
         aga.a((byte) -113);
-        pca.releaseStatics(param0 + 3674);
+        TileGridCell.releaseStatics(param0 + 3674);
         baa.a(param0 + 3786);
         uh.releaseStatics(0);
         vf.releaseStatics(-55);
@@ -535,7 +535,7 @@ public final class TombRacer extends rfa implements ls {
         RoomCompletedScreen.releaseStatics((byte) -77);
         dua.releaseStatics((byte) -128);
         ab.releaseStatics(6153);
-        opa.releaseStatics(param0 + 3766);
+        ResultsPhase.releaseStatics(param0 + 3766);
         bp.releaseStatics(0);
         gu.releaseStatics(-28);
         era.releaseStatics((byte) 114);
@@ -791,7 +791,7 @@ public final class TombRacer extends rfa implements ls {
         hb.releaseStatics(true);
         vla.releaseStatics(param0 ^ -3668);
         nfa.releaseStatics((byte) -123);
-        nia.releaseStatics(-124);
+        MaskBlendOperator.releaseStatics(-124);
         InvertOperator.releaseStatics(param0 ^ 14527);
         ThresholdOperator.releaseStatics(false);
         bj.releaseStatics(true);
@@ -1344,7 +1344,7 @@ public final class TombRacer extends rfa implements ls {
             var18 = SimpleConditionBehaviour.field_o;
             var39 = var4;
             for (var8Lifetime2 = 0; var8Lifetime2 < 8; var8Lifetime2++) {
-              var18[var8Lifetime2] = fh.a(var18[var8Lifetime2], var39[var8Lifetime2]);
+              var18[var8Lifetime2] = WallTile.a(var18[var8Lifetime2], var39[var8Lifetime2]);
             }
             return true;
           }
@@ -1377,7 +1377,7 @@ public final class TombRacer extends rfa implements ls {
           }
           param1.endBitAccess((byte) 98);
           MandelbrotOperator.field_o = null;
-          SecondaryNodeDequeIterator.field_a = new qh(true, var4_intLifetime2, var9, var10, var5_intLifetime1 != 0, var6, -1 + var6, var7Lifetime1, var8Lifetime1, 0, var11, var32, (ou) null);
+          SecondaryNodeDequeIterator.field_a = new MatchScreen(true, var4_intLifetime2, var9, var10, var5_intLifetime1 != 0, var6, -1 + var6, var7Lifetime1, var8Lifetime1, 0, var11, var32, (ou) null);
           SecondaryNodeDequeIterator.field_a.a(120, param1);
           SecondaryNodeDequeIterator.field_a.j((byte) -121);
           iqa.field_c.a(-68);
@@ -1411,7 +1411,7 @@ public final class TombRacer extends rfa implements ls {
         if (dq.field_f != null) {
           og.b(0);
         }
-        dfa.c((byte) 62);
+        GameScreen.c((byte) 62);
     }
 
     private final void x(int param0) {
@@ -1475,17 +1475,17 @@ public final class TombRacer extends rfa implements ls {
           }
           if (68 == param1) {
             var4_intLifetime1 = param0.readUnsignedByte(255);
-            for (var5 = 0; var5 < SecondaryNodeDequeIterator.field_a.field_k.field_k; var5++) {
+            for (var5 = 0; var5 < SecondaryNodeDequeIterator.field_a.matchState.field_k; var5++) {
               var6 = 1 & var4_intLifetime1 >> var5;
-              var7 = 1 & SecondaryNodeDequeIterator.field_a.field_k.field_b >> var5;
+              var7 = 1 & SecondaryNodeDequeIterator.field_a.matchState.field_b >> var5;
               if (var6 != var7 &&
                 1 == var6) {
-                var8 = SecondaryNodeDequeIterator.field_a.field_k.getPlayerName(var5, 0);
+                var8 = SecondaryNodeDequeIterator.field_a.matchState.getPlayerName(var5, 0);
                 var9 = PortalBehaviour.a(1, gl.$cfr$intArgs$a$53ce4ab4c593(107, ad.field_h, new String[]{var8}), 111, var5, var8);
                 iqa.field_c.a(0, var9);
               }
             }
-            SecondaryNodeDequeIterator.field_a.field_k.field_b = var4_intLifetime1;
+            SecondaryNodeDequeIterator.field_a.matchState.field_b = var4_intLifetime1;
             return true;
           }
           if (param1 == 69) {
@@ -1494,7 +1494,7 @@ public final class TombRacer extends rfa implements ls {
             return true;
           }
           if (param1 == 70) {
-            SecondaryNodeDequeIterator.field_a.field_k.field_t = param0.readUnsignedByte(255);
+            SecondaryNodeDequeIterator.field_a.matchState.field_t = param0.readUnsignedByte(255);
             return true;
           }
           if (param1 == 71) {

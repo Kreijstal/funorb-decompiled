@@ -353,7 +353,7 @@ final class ui {
           !(param3 > DiskCacheWorker.field_c)) {
           param0 = rp.a(hc.field_h, -16226, gca.field_d, param0);
           param4 = rp.a(hc.field_h, -16226, gca.field_d, param4);
-          dfa.a(param3, param4, param0, param2, 0);
+          GameScreen.a(param3, param4, param0, param2, 0);
         }
     }
 

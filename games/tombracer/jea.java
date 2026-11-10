@@ -702,7 +702,7 @@ class jea extends um {
           if (!param0) {
             return false;
           }
-          param2 = dfa.a('_', "", param2, 0);
+          param2 = GameScreen.a('_', "", param2, 0);
           var3 = MouseInputHandler.a(param2, 0);
           stackIn_8_0 = (param1.indexOf(param2) != -1) || (param1.indexOf(var3) != -1);
           return stackIn_8_0;

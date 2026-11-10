@@ -28,7 +28,7 @@ final class gba extends IntrusiveNode {
           gqa.a(param4, -83584144, -param2 + var12, var14, param3, param10);
           gqa.a(param8, -83584144, var13, var14, param3, param10);
           for (var15 = 0; var15 < var11_int; var15++) {
-            gqa.a(dfa.a(param7, 2048, 96), -83584144, var12 + var15 * param2, var14, param5, param10);
+            gqa.a(GameScreen.a(param7, 2048, 96), -83584144, var12 + var15 * param2, var14, param5, param10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -97,7 +97,7 @@ final class SkeletonComponent extends dna {
           var8 = new DamageableBehaviour(param2, param0);
           var8.b(0, 5, param1 - 3);
           var8.a(0, 0, 36, 0);
-          var9 = var8.j((byte) -114);
+          var9 = var8.getVulnerabilities((byte) -114);
           var9.setAll(false, param1 ^ 102);
           var9.set(0, -17075, true);
           var9.set(param1, -17075, true);

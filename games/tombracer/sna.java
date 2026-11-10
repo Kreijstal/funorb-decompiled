@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sna {
-    private qh field_l;
+    private MatchScreen field_l;
     private boolean field_m;
     private int field_g;
     private boolean field_j;
@@ -28,9 +28,9 @@ final class sna {
         int var9;
         Player var10;
         var9 = TombRacer.field_G ? 1 : 0;
-        var10 = this.field_l.field_k.players[this.field_l.field_x];
+        var10 = this.field_l.matchState.players[this.field_l.field_x];
         var3 = var10.getRoom((byte) -106);
-        var4 = this.field_l.field_k.getPlayerCourseIndex(1, this.field_l.field_x);
+        var4 = this.field_l.matchState.getPlayerCourseIndex(1, this.field_l.field_x);
         if (param0 != 9981) {
           this.a(77);
         }
@@ -158,7 +158,7 @@ final class sna {
         }
     }
 
-    sna(qh param0) {
+    sna(MatchScreen param0) {
         this.field_m = false;
         this.field_d = false;
         this.field_g = -1;

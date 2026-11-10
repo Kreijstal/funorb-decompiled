@@ -132,7 +132,7 @@ final class CrusherBehaviour extends Behaviour {
         return;
     }
 
-    final int j(byte param0) {
+    final int getWindUpTicks(byte param0) {
         if (param0 != 90) {
           field_r = (String) null;
           return this.windUpTicks;
@@ -388,15 +388,15 @@ final class CrusherBehaviour extends Behaviour {
         return param0;
     }
 
-    final int d(boolean param0) {
+    final int getRetractTicks(boolean param0) {
         if (param0) {
-          this.g((byte) -41);
+          this.getPhaseTicks((byte) -41);
           return this.retractTicks;
         }
         return this.retractTicks;
     }
 
-    final int g(byte param0) {
+    final int getPhaseTicks(byte param0) {
         if (param0 > -36) {
           field_r = (String) null;
           return this.phaseTicks;
@@ -441,7 +441,7 @@ final class CrusherBehaviour extends Behaviour {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 1) {
-            this.g((byte) 48);
+            this.getPhaseTicks((byte) 48);
           }
           stackIn_5_0 = (this.phase == 3);
           return stackIn_5_0;

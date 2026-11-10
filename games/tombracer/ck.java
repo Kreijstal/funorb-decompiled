@@ -100,7 +100,7 @@ final class ck {
           w.field_f = BoulderComponent.a(param10, "lobby", 5, "gameprivacy");
           wt.field_c = BoulderComponent.a(param10, "lobby", 5, "ratedgame");
           InvisibleTouchSwitchComponent.field_K = BoulderComponent.a(param10, "lobby", 5, "opentome");
-          pca.field_k = BoulderComponent.a(param10, "lobby", 5, "allowspectators");
+          TileGridCell.field_k = BoulderComponent.a(param10, "lobby", 5, "allowspectators");
           SocketArchiveNetworkClient.field_w = new String[5];
           SocketArchiveNetworkClient.field_w[0] = HardwareOpenGlToolkit.field_cd;
           SocketArchiveNetworkClient.field_w[2] = un.field_q;
@@ -225,7 +225,7 @@ final class ck {
               }
             }
             SimpleConditionBehaviour.field_p[2] = new jea(0L, una.field_j, nb.field_a);
-            bf.field_b[2] = new tv[]{new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, (Sprite) null, aa.field_b), new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, pca.field_k[0], ifa.field_s), new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, pca.field_k[1], rpa.field_g)};
+            bf.field_b[2] = new tv[]{new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, (Sprite) null, aa.field_b), new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, TileGridCell.field_k[0], ifa.field_s), new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, TileGridCell.field_k[1], rpa.field_g)};
             break;
           }
           boolean decompiledFrameCompleted0 = true;

@@ -70,7 +70,7 @@ final class kra {
             var7_int = var7_int & -var13 >> 31;
             var14 = var12 + (-1 + var13 + var11 >> 3);
             var13 += 24;
-            dupTemp$0 = fh.a(var7_int, var10 >>> var13);
+            dupTemp$0 = WallTile.a(var7_int, var10 >>> var13);
             var7_int = dupTemp$0;
             param1[var12] = (byte)dupTemp$0;
             if (var14 > var12) {
@@ -166,7 +166,7 @@ final class kra {
                   if (~var8 == ~var11) {
                     var12 = 1 << -var10 + 32;
                     if ((var11 & var12) == 0) {
-                      var3[var10] = fh.a(var12, var11);
+                      var3[var10] = WallTile.a(var12, var11);
                       continue;
                     }
                     var3[var10] = var3[var10 - 1];

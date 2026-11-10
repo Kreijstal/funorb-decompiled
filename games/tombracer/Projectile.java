@@ -88,7 +88,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
         try {
           this.x = param0.mirrorX(this.x, (byte) 71);
           this.velocityX = -this.velocityX;
-          this.angle = dfa.a(-this.angle, 8192, 105);
+          this.angle = GameScreen.a(-this.angle, 8192, 105);
           if (param1 >= -16) {
             this.field_I = 44;
           }
@@ -378,12 +378,12 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
           if (var3 != 3) {
             if (var3 == 0) {
               var2 = qva.a((byte) -35, this.velocityY, this.velocityX) + 4096;
-              this.room.b(false).a(this.y, (byte) -83, 5, this.z, 3, var2, 10, 262144, this.x, 16, 8);
+              this.room.getParticleEffects(false).a(this.y, (byte) -83, 5, this.z, 3, var2, 10, 262144, this.x, 16, 8);
               return;
             }
             return;
           }
-          this.room.b(false).a(this.y, (byte) -121, 4, this.z, 1, 0, 20, 0, this.x, this.field_o >> 18, this.field_o >> 17);
+          this.room.getParticleEffects(false).a(this.y, (byte) -121, 4, this.z, 1, 0, 20, 0, this.x, this.field_o >> 18, this.field_o >> 17);
           return;
         }
         var3Lifetime1 = this.effect.type;
@@ -398,10 +398,10 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
             return;
           }
           var2Lifetime1 = qva.a((byte) -35, this.velocityY, this.velocityX) + 4096;
-          this.room.b(false).a(this.y, (byte) -83, 5, this.z, 3, var2Lifetime1, 10, 262144, this.x, 16, 8);
+          this.room.getParticleEffects(false).a(this.y, (byte) -83, 5, this.z, 3, var2Lifetime1, 10, 262144, this.x, 16, 8);
           return;
         }
-        this.room.b(false).a(this.y, (byte) -121, 4, this.z, 1, 0, 20, 0, this.x, this.field_o >> 18, this.field_o >> 17);
+        this.room.getParticleEffects(false).a(this.y, (byte) -121, 4, this.z, 1, 0, 20, 0, this.x, this.field_o >> 18, this.field_o >> 17);
     }
 
     private final int b(int param0, Effect param1) {
@@ -432,7 +432,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
           if (this.effect.type == 3 && (param1.type == 4 ||
             param1.type == 5)) {
             this.destroy(false, 0);
-            this.room.b(false).c(this.x, 93, this.velocityY, this.z, this.velocityX, this.y);
+            this.room.getParticleEffects(false).c(this.x, 93, this.velocityY, this.z, this.velocityX, this.y);
             if (5 == param1.type) {
               this.room.spawnPuddle(30097, 1048576, 0, this.y, this.x);
             }
@@ -1052,11 +1052,11 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
                 this.field_i != -1) {
                 var8 = this.room.spawnParticle(this.x, this.y, (byte) 100, this.z);
                 var5 = 131072;
-                var6 = -(var5 / 2) + uca.field_c.nextBounded(var5, 0);
-                var7 = uca.field_c.nextBounded(var5, ~param0) - var5 / 2;
-                var8.a(false, 24, this.field_i, 4, 10 + uca.field_c.nextBounded(10, 0));
+                var6 = -(var5 / 2) + uca.cosmeticRandom.nextBounded(var5, 0);
+                var7 = uca.cosmeticRandom.nextBounded(var5, ~param0) - var5 / 2;
+                var8.a(false, 24, this.field_i, 4, 10 + uca.cosmeticRandom.nextBounded(10, 0));
                 var8.b(121, var7, var6);
-                var8.a(uca.field_c.nextBounded(8192, 0), -128 + uca.field_c.nextBounded(256, 0), param0 - 84);
+                var8.a(uca.cosmeticRandom.nextBounded(8192, 0), -128 + uca.cosmeticRandom.nextBounded(256, 0), param0 - 84);
               }
             } else {
               if (this.field_C) {
@@ -1074,11 +1074,11 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
                   this.field_i != -1) {
                   var10 = this.room.spawnParticle(this.x, this.y, (byte) 100, this.z);
                   var5 = 131072;
-                  var6 = -(var5 / 2) + uca.field_c.nextBounded(var5, 0);
-                  var7 = uca.field_c.nextBounded(var5, ~param0) - var5 / 2;
-                  var10.a(false, 24, this.field_i, 4, 10 + uca.field_c.nextBounded(10, 0));
+                  var6 = -(var5 / 2) + uca.cosmeticRandom.nextBounded(var5, 0);
+                  var7 = uca.cosmeticRandom.nextBounded(var5, ~param0) - var5 / 2;
+                  var10.a(false, 24, this.field_i, 4, 10 + uca.cosmeticRandom.nextBounded(10, 0));
                   var10.b(121, var7, var6);
-                  var10.a(uca.field_c.nextBounded(8192, 0), -128 + uca.field_c.nextBounded(256, 0), param0 - 84);
+                  var10.a(uca.cosmeticRandom.nextBounded(8192, 0), -128 + uca.cosmeticRandom.nextBounded(256, 0), param0 - 84);
                 }
               } else {
                 this.room.collisionGrid.pruneOutsideBounds((Collidable) (this), -66);
@@ -1092,11 +1092,11 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
                   this.field_i != -1) {
                   var12 = this.room.spawnParticle(this.x, this.y, (byte) 100, this.z);
                   var5 = 131072;
-                  var6 = -(var5 / 2) + uca.field_c.nextBounded(var5, 0);
-                  var7 = uca.field_c.nextBounded(var5, ~param0) - var5 / 2;
-                  var12.a(false, 24, this.field_i, 4, 10 + uca.field_c.nextBounded(10, 0));
+                  var6 = -(var5 / 2) + uca.cosmeticRandom.nextBounded(var5, 0);
+                  var7 = uca.cosmeticRandom.nextBounded(var5, ~param0) - var5 / 2;
+                  var12.a(false, 24, this.field_i, 4, 10 + uca.cosmeticRandom.nextBounded(10, 0));
                   var12.b(121, var7, var6);
-                  var12.a(uca.field_c.nextBounded(8192, 0), -128 + uca.field_c.nextBounded(256, 0), param0 - 84);
+                  var12.a(uca.cosmeticRandom.nextBounded(8192, 0), -128 + uca.cosmeticRandom.nextBounded(256, 0), param0 - 84);
                 }
               }
             }
@@ -1172,11 +1172,11 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
           else {
             var13 = this.room.spawnParticle(this.x, this.y, (byte) 100, this.z);
             var5Lifetime1 = 131072;
-            var6Lifetime1 = -(var5Lifetime1 / 2) + uca.field_c.nextBounded(var5Lifetime1, 0);
-            var7Lifetime1 = uca.field_c.nextBounded(var5Lifetime1, ~param0) - var5Lifetime1 / 2;
-            var13.a(false, 24, this.field_i, 4, 10 + uca.field_c.nextBounded(10, 0));
+            var6Lifetime1 = -(var5Lifetime1 / 2) + uca.cosmeticRandom.nextBounded(var5Lifetime1, 0);
+            var7Lifetime1 = uca.cosmeticRandom.nextBounded(var5Lifetime1, ~param0) - var5Lifetime1 / 2;
+            var13.a(false, 24, this.field_i, 4, 10 + uca.cosmeticRandom.nextBounded(10, 0));
             var13.b(121, var7Lifetime1, var6Lifetime1);
-            var13.a(uca.field_c.nextBounded(8192, 0), -128 + uca.field_c.nextBounded(256, 0), param0 - 84);
+            var13.a(uca.cosmeticRandom.nextBounded(8192, 0), -128 + uca.cosmeticRandom.nextBounded(256, 0), param0 - 84);
           }
         }
         if (decompiledFrameRemainder0) {

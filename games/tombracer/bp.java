@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bp extends qra {
+final class bp extends MatchPhase {
     private int field_n;
     static String field_o;
     static Sprite[] field_m;
@@ -26,32 +26,32 @@ final class bp extends qra {
         int var10;
         int var11;
         var11 = TombRacer.field_G ? 1 : 0;
-        if (0 > this.field_c.e(2)) {
+        if (0 > this.matchState.e(2)) {
           return;
         }
         if (param0 > -50) {
           this.field_n = 30;
         }
-        var3 = this.field_h.l(100);
+        var3 = this.screen.l(100);
         var4 = 160;
-        var5 = 80 + this.field_c.players.length * 20;
+        var5 = 80 + this.matchState.players.length * 20;
         var6 = 16776960;
         var7 = 11184810;
         SecondaryNodeDequeIterator.a(192, var5, 3145728, 340, (byte) 39, var4, 150);
         WhiteLightShooterComponent.a(150, (byte) -85, var4, 5242880, 2, var5, 340);
         var8 = var4 + 20 + 8;
-        oka.a(gl.$cfr$intArgs$a$53ce4ab4c593(113, ru.field_a, new String[]{this.field_h.a(this.field_c.e(2), false)}).toUpperCase(), 16777215, eda.field_f, -1, var8, 320, 0);
+        oka.a(gl.$cfr$intArgs$a$53ce4ab4c593(113, ru.field_a, new String[]{this.screen.a(this.matchState.e(2), false)}).toUpperCase(), 16777215, eda.field_f, -1, var8, 320, 0);
         var8 += 40;
         oka.a(nsa.field_f + ":", 16777215, kn.field_p, -1, var8, 320, 0);
         var8 += 20;
-        for (var9 = 0; var9 < this.field_c.players.length; var9++) {
-          if (this.field_c.players[var9] != null) {
+        for (var9 = 0; var9 < this.matchState.players.length; var9++) {
+          if (this.matchState.players[var9] != null) {
             if (var3 == var9) {
               var10 = var6;
             } else {
               var10 = var7;
             }
-            oka.a(this.field_h.a(var9, false).toUpperCase() + ": " + this.field_c.field_v[var9], var10, kn.field_p, -1, var8, 320, 0);
+            oka.a(this.screen.a(var9, false).toUpperCase() + ": " + this.matchState.field_v[var9], var10, kn.field_p, -1, var8, 320, 0);
             var8 += 20;
           }
         }
@@ -67,7 +67,7 @@ final class bp extends qra {
         field_m = null;
     }
 
-    bp(qh param0, v param1) {
+    bp(MatchScreen param0, MatchProtocol param1) {
         super(param0, param1);
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -78,11 +78,11 @@ final class bp extends qra {
         RuntimeException var3 = null;
         this.field_n = 200;
         try {
-          if (this.field_c.field_K == 1) {
-            this.field_h.a(new gi(this.field_h), 680);
+          if (this.matchState.field_K == 1) {
+            this.screen.a(new gi(this.screen), 680);
           } else {
-            this.field_c.field_e.a(false);
-            this.field_h.a(new gu(this.field_h), 680);
+            this.matchState.field_e.a(false);
+            this.screen.a(new gu(this.screen), 680);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -121,11 +121,11 @@ final class bp extends qra {
         } else {
           this.field_n = this.field_n - 1;
           if (this.field_n == 0) {
-            var3 = this.field_c.b((byte) 98);
+            var3 = this.matchState.b((byte) 98);
             if (-1 != var3) {
-              this.field_h.i(var3, 85);
+              this.screen.i(var3, 85);
             } else {
-              this.field_h.m((byte) -115);
+              this.screen.m((byte) -115);
             }
           }
         }

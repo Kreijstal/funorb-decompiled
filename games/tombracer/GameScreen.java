@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class dfa {
+abstract class GameScreen {
     static java.applet.Applet field_e;
     static String field_a;
     static gb field_b;
@@ -34,14 +34,14 @@ abstract class dfa {
                 if (2 == VerticalGradientOperator.field_n) {
                   if (VerticalScrollbar.i(-1)) {
                     var4 = (String) null;
-                    opa.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
+                    ResultsPhase.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
                   }
                   return true;
                 }
                 if (var3 == 0) {
                   if (VerticalScrollbar.i(-1)) {
                     var4 = (String) null;
-                    opa.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
+                    ResultsPhase.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
                   }
                   return true;
                 }
@@ -54,7 +54,7 @@ abstract class dfa {
                 }
                 if (VerticalScrollbar.i(-1)) {
                   var4 = (String) null;
-                  opa.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
+                  ResultsPhase.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
                 }
                 return true;
               }
@@ -75,7 +75,7 @@ abstract class dfa {
               }
               if (VerticalScrollbar.i(-1)) {
                 var4Lifetime3 = (String) null;
-                opa.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
+                ResultsPhase.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
               }
               return true;
             }
@@ -110,7 +110,7 @@ abstract class dfa {
             }
             if (VerticalScrollbar.i(-1)) {
               var4Lifetime1 = (String) null;
-              opa.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
+              ResultsPhase.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
             }
             return true;
           }
@@ -130,7 +130,7 @@ abstract class dfa {
           }
           if (VerticalScrollbar.i(-1)) {
             var4Lifetime2 = (String) null;
-            opa.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
+            ResultsPhase.a(VerticalGradientOperator.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
           }
           return true;
         }
@@ -173,7 +173,7 @@ abstract class dfa {
             return;
           }
           var7 = (String) null;
-          dfa.a('N', (String) null, (String) null, 30);
+          GameScreen.a('N', (String) null, (String) null, 30);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -198,7 +198,7 @@ abstract class dfa {
           dea.a(60);
           return;
         }
-        dfa.a(-50, false, 79);
+        GameScreen.a(-50, false, 79);
         rda.e(0);
         if (bl.b(param0 - 62)) {
           ql.field_k.writeCipheredOpcode(1, -2988);
@@ -302,7 +302,7 @@ abstract class dfa {
 
     abstract void a(byte param0);
 
-    dfa(int param0) {
+    GameScreen(int param0) {
         this.field_c = param0;
         this.field_d = this.field_c;
     }

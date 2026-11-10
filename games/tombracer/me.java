@@ -3,7 +3,7 @@
  */
 abstract class me extends IntrusiveNode {
     boolean field_h;
-    qh field_i;
+    MatchScreen field_i;
     static String field_f;
     MatchState field_g;
 
@@ -36,10 +36,10 @@ abstract class me extends IntrusiveNode {
 
     abstract void b(byte param0);
 
-    me(qh param0) {
+    me(MatchScreen param0) {
         try {
           this.field_i = param0;
-          this.field_g = param0.field_k;
+          this.field_g = param0.matchState;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "me.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

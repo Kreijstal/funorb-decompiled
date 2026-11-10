@@ -269,7 +269,7 @@ final class BrickOperator extends TextureOperator {
         var3 = var18;
         if (this.field_i.field_d) {
           var7 = 0;
-          for (var9 = sj.field_b[param1] + this.field_A; var9 < 0; var9 += 4096) {
+          for (var9 = sj.textureRowCoords[param1] + this.field_A; var9 < 0; var9 += 4096) {
           }
           while (var9 > 4096) {
             var9 -= 4096;
@@ -288,7 +288,7 @@ final class BrickOperator extends TextureOperator {
           var16 = this.field_u[-1 + var7];
           if (var16 + this.field_m < var9 &&
             var15 - this.field_m > var9) {
-            for (var4 = 0; var4 < ns.field_g; var4++) {
+            for (var4 = 0; var4 < ns.textureWidth; var4++) {
               if (var12 != 0) {
                 stackIn_23_0 = this.field_z;
               } else {
@@ -296,7 +296,7 @@ final class BrickOperator extends TextureOperator {
               }
               var5 = stackIn_23_0;
               var6 = 0;
-              for (var8 = ht.field_Fb[var4] + (this.field_r * var5 >> 12); var8 < 0; var8 += 4096) {
+              for (var8 = ht.textureColumnCoords[var4] + (this.field_r * var5 >> 12); var8 < 0; var8 += 4096) {
               }
               while (var8 > 4096) {
                 var8 -= 4096;
@@ -319,7 +319,7 @@ final class BrickOperator extends TextureOperator {
               }
             }
           } else {
-            ArrayUtils.fill(var19, 0, ns.field_g, 0);
+            ArrayUtils.fill(var19, 0, ns.textureWidth, 0);
           }
         }
         return var3;

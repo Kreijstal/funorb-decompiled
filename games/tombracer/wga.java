@@ -5,9 +5,9 @@ final class wga implements GamePacket {
     private int field_b;
     static int[] field_a;
 
-    final void a(int param0, v param1, qh param2) {
+    final void a(int param0, MatchProtocol param1, MatchScreen param2) {
         try {
-          param2.field_k.h(this.field_b, 78);
+          param2.matchState.h(this.field_b, 78);
           if (param0 != 4545315) {
             this.field_b = 35;
           }

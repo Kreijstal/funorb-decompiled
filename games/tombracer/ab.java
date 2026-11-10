@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ab extends qra {
+final class ab extends MatchPhase {
     private int field_q;
     private int field_r;
     private int field_v;
@@ -39,7 +39,7 @@ final class ab extends qra {
         return false;
     }
 
-    ab(qh param0, v param1) {
+    ab(MatchScreen param0, MatchProtocol param1) {
         super(param0, param1);
         int var7 = 0;
         int var8 = 0;
@@ -61,7 +61,7 @@ final class ab extends qra {
         this.field_r = -1;
         this.field_v = 0;
         try {
-          this.field_o = this.field_c.field_i;
+          this.field_o = this.matchState.field_i;
           this.field_o.field_g = new w();
           var3_int = this.field_o.a(-28958);
           this.field_q = 3;
@@ -142,8 +142,8 @@ final class ab extends qra {
         Room.field_j.a(0, 0);
         var3 = 0;
         var4 = this.field_o.getCurrentPlayerId(-1);
-        if (!this.field_h.d((byte) 63) &&
-          this.field_h.field_x == var4) {
+        if (!this.screen.d((byte) 63) &&
+          this.screen.field_x == var4) {
           var3 = 1;
         }
         var5 = 160;
@@ -156,7 +156,7 @@ final class ab extends qra {
           var9 = (SwitchLinkList.b(0) >> 1) - (gg.field_f.c() >> 1);
           gg.field_f.a(var8, var9);
           if (var3 == 0) {
-            SocketConnector.a(gl.$cfr$intArgs$a$53ce4ab4c593(83, cba.field_c, new String[]{this.field_h.j(var4, 9)}).toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, 32 + var9, var8, 1, (byte) 60, gg.field_f.a());
+            SocketConnector.a(gl.$cfr$intArgs$a$53ce4ab4c593(83, cba.field_c, new String[]{this.screen.j(var4, 9)}).toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, 32 + var9, var8, 1, (byte) 60, gg.field_f.a());
           } else {
             SocketConnector.a(us.field_c.toUpperCase(), 1, eda.field_f, 16777215, 0, 32, 1, var9 + 32, var8, 1, (byte) 60, gg.field_f.a());
             var10 = (-this.field_o.getCurrentPlayerTicks(-1) + 750) / 50 + 1;
@@ -172,7 +172,7 @@ final class ab extends qra {
                 if (this.a(true) &&
                   var10 == this.field_u &&
                   var11_int == this.field_m) {
-                  tga.field_a.c(fm.a(false, wga.field_a[this.field_h.field_x]), var12_ref_fv.field_g, var12_ref_fv.field_j, var12_ref_fv.field_c, -22971, var12_ref_fv.field_i);
+                  tga.field_a.c(fm.a(false, wga.field_a[this.screen.field_x]), var12_ref_fv.field_g, var12_ref_fv.field_j, var12_ref_fv.field_c, -22971, var12_ref_fv.field_i);
                 }
                 var12_ref_fv.a(1);
               }
@@ -184,17 +184,17 @@ final class ab extends qra {
         if (param0 > -50) {
           this.b(-64, false);
         }
-        while (this.field_c.players.length > var17) {
-          var9Lifetime1 = -(this.field_c.players.length * var5Lifetime1 / 2) + var6 + var5Lifetime1 * var17;
+        while (this.matchState.players.length > var17) {
+          var9Lifetime1 = -(this.matchState.players.length * var5Lifetime1 / 2) + var6 + var5Lifetime1 * var17;
           var10 = -200 + var7;
-          SocketConnector.a(this.field_h.a(var17, false).toUpperCase(), 1, kn.field_p, wga.field_a[var17], 0, 32, 1, var10, var9Lifetime1, 1, (byte) 60, var5Lifetime1);
-          if (!this.field_c.b((byte) 90, var17)) {
+          SocketConnector.a(this.screen.a(var17, false).toUpperCase(), 1, kn.field_p, wga.field_a[var17], 0, 32, 1, var10, var9Lifetime1, 1, (byte) 60, var5Lifetime1);
+          if (!this.matchState.b((byte) 90, var17)) {
             var11 = cs.field_b;
             var12 = 8947848;
           } else {
-            var13 = this.field_c.players[var17].z(115);
+            var13 = this.matchState.players[var17].z(115);
             if (var13 == -1) {
-              var14 = this.field_c.field_c.field_b[var17];
+              var14 = this.matchState.field_c.field_b[var17];
               var15 = this.field_o.getCurrentPos((byte) 50);
               if (var14 >= var15) {
                 if (var14 != var15) {
@@ -297,14 +297,14 @@ final class ab extends qra {
         jha var6 = null;
         if (this.field_o.getCurrentPlayerId(-1) == param0) {
           if (param2 == -1) {
-            var6 = ab.a(-9, gl.$cfr$intArgs$a$53ce4ab4c593(86, OpenGlTransform3D.field_n, new String[]{this.field_c.getColouredPlayerName(param0, 23807)}));
+            var6 = ab.a(-9, gl.$cfr$intArgs$a$53ce4ab4c593(86, OpenGlTransform3D.field_n, new String[]{this.matchState.getColouredPlayerName(param0, 23807)}));
             iqa.field_c.a(0, var6);
             this.field_o.a(param2, (byte) 112);
           } else {
             var4 = this.field_o.a(-108, param2);
             this.field_o.a(param2, (byte) 119);
             this.h(0);
-            var5 = ab.a(-58, gl.$cfr$intArgs$a$53ce4ab4c593(125, RecursiveBacktrackerMazeGenerator.field_b, new String[]{this.field_c.getColouredPlayerName(param0, 23807), sla.field_b[var4]}));
+            var5 = ab.a(-58, gl.$cfr$intArgs$a$53ce4ab4c593(125, RecursiveBacktrackerMazeGenerator.field_b, new String[]{this.matchState.getColouredPlayerName(param0, 23807), sla.field_b[var4]}));
             iqa.field_c.a(0, var5);
           }
         }
@@ -322,19 +322,19 @@ final class ab extends qra {
           hf.field_b == 1) {
           this.i(12721);
         }
-        if (this.field_h.g(param0, 2)) {
+        if (this.screen.g(param0, 2)) {
           this.a(0, -1, (byte) 56);
         }
-        if (this.field_h.g(0, 3)) {
+        if (this.screen.g(0, 3)) {
           this.a(0, 1, (byte) 80);
         }
-        if (this.field_h.g(0, 0)) {
+        if (this.screen.g(0, 0)) {
           this.a(-1, 0, (byte) 51);
         }
-        if (this.field_h.g(0, 1)) {
+        if (this.screen.g(0, 1)) {
           this.a(1, 0, (byte) 73);
         }
-        if (this.field_h.g(0, 4)) {
+        if (this.screen.g(0, 4)) {
           this.i(12721);
         }
     }
@@ -344,7 +344,7 @@ final class ab extends qra {
         if (!param0) {
           field_n = (sq) null;
         }
-        stackIn_6_0 = (!this.field_h.d((byte) 98)) && (this.field_h.field_x == this.field_o.getCurrentPlayerId(-1));
+        stackIn_6_0 = (!this.screen.d((byte) 98)) && (this.screen.field_x == this.field_o.getCurrentPlayerId(-1));
         return stackIn_6_0;
     }
 
@@ -359,8 +359,8 @@ final class ab extends qra {
         if (param0 != 12721) {
           return;
         }
-        if (null != this.field_f) {
-          this.field_f.c(var2, 1);
+        if (null != this.protocol) {
+          this.protocol.c(var2, 1);
         } else {
           this.field_o.a(var2, (byte) 102);
         }
@@ -386,7 +386,7 @@ final class ab extends qra {
           this.c(7);
         }
         this.field_v = this.field_v + 1;
-        if (this.field_o.getCurrentPlayerId(-1) == this.field_h.field_x &&
+        if (this.field_o.getCurrentPlayerId(-1) == this.screen.field_x &&
           !(this.field_o.getCurrentPlayerTicks(-1) <= 500) &&
           (750 - this.field_o.getCurrentPlayerTicks(-1)) % 50 == 0) {
           this.field_o.a((byte) -124);

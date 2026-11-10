@@ -319,7 +319,7 @@ final class MonsterModel extends MotionTrackingModel {
 
     private final int i(int param0) {
         if (param0 == -6874) {
-          return dfa.a(-this.body.getFacingAngle(param0 - 18913) >> 2, 2048, param0 ^ -6797);
+          return GameScreen.a(-this.body.getFacingAngle(param0 - 18913) >> 2, 2048, param0 ^ -6797);
         }
         return -83;
     }

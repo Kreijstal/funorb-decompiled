@@ -399,8 +399,8 @@ final class qt {
           }
           CoinBagItemComponent.field_H = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
           mua.field_b = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
-          for (var3Lifetime3 = 0; var3Lifetime3 < tqa.field_e.length; var3Lifetime3++) {
-            tqa.field_e[var3Lifetime3] = ((PacketBuffer) ((Object) var1)).readByte((byte) 108);
+          for (var3Lifetime3 = 0; var3Lifetime3 < TileGrid.field_e.length; var3Lifetime3++) {
+            TileGrid.field_e[var3Lifetime3] = ((PacketBuffer) ((Object) var1)).readByte((byte) 108);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -398,10 +398,10 @@ class MidiPcmStream extends PcmStream {
               if (var6Lifetime1Lifetime2 < 64) {
                 this.field_M[var4Lifetime1Lifetime3] = SnakePitBehaviour.c(this.field_M[var4Lifetime1Lifetime3], -2);
                 if (var8 != 0) {
-                  this.field_M[var4Lifetime1Lifetime3] = fh.a(this.field_M[var4Lifetime1Lifetime3], 1);
+                  this.field_M[var4Lifetime1Lifetime3] = WallTile.a(this.field_M[var4Lifetime1Lifetime3], 1);
                 }
               } else {
-                this.field_M[var4Lifetime1Lifetime3] = fh.a(this.field_M[var4Lifetime1Lifetime3], 1);
+                this.field_M[var4Lifetime1Lifetime3] = WallTile.a(this.field_M[var4Lifetime1Lifetime3], 1);
               }
               break;
             case 65:
@@ -409,10 +409,10 @@ class MidiPcmStream extends PcmStream {
                 this.d(-108, var4Lifetime1Lifetime3);
                 this.field_M[var4Lifetime1Lifetime3] = SnakePitBehaviour.c(this.field_M[var4Lifetime1Lifetime3], -3);
                 if (var8 != 0) {
-                  this.field_M[var4Lifetime1Lifetime3] = fh.a(this.field_M[var4Lifetime1Lifetime3], 2);
+                  this.field_M[var4Lifetime1Lifetime3] = WallTile.a(this.field_M[var4Lifetime1Lifetime3], 2);
                 }
               } else {
-                this.field_M[var4Lifetime1Lifetime3] = fh.a(this.field_M[var4Lifetime1Lifetime3], 2);
+                this.field_M[var4Lifetime1Lifetime3] = WallTile.a(this.field_M[var4Lifetime1Lifetime3], 2);
               }
               break;
             case 99:
@@ -459,10 +459,10 @@ class MidiPcmStream extends PcmStream {
                 this.e(28583, var4Lifetime1Lifetime3);
                 this.field_M[var4Lifetime1Lifetime3] = SnakePitBehaviour.c(this.field_M[var4Lifetime1Lifetime3], -5);
                 if (var8 != 0) {
-                  this.field_M[var4Lifetime1Lifetime3] = fh.a(this.field_M[var4Lifetime1Lifetime3], 4);
+                  this.field_M[var4Lifetime1Lifetime3] = WallTile.a(this.field_M[var4Lifetime1Lifetime3], 4);
                 }
               } else {
-                this.field_M[var4Lifetime1Lifetime3] = fh.a(this.field_M[var4Lifetime1Lifetime3], 4);
+                this.field_M[var4Lifetime1Lifetime3] = WallTile.a(this.field_M[var4Lifetime1Lifetime3], 4);
               }
               break;
             case 17:

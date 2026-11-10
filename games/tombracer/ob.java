@@ -86,7 +86,7 @@ abstract class ob extends IntrusiveNode {
           uda.field_r = su.a(aa.field_a, param0, (byte) 125);
           je.field_E = su.a(pha.field_Bb, param0, (byte) -119);
           eu.field_a = su.a(ConstrainToRectangleLocomotor.field_t, param0, (byte) -5);
-          pq.field_a = su.a(qh.field_q, param0, (byte) 28);
+          pq.field_a = su.a(MatchScreen.field_q, param0, (byte) 28);
           uta.field_d = su.a(TimeSwitchBehaviour.field_n, param0, (byte) 127);
           OpenGlFramebuffer.field_i = ak.a(param0, WallCrusherComponent.field_F, -67);
           qf.field_k = new ToolkitSprite[OpenGlFramebuffer.field_i.length];
@@ -101,7 +101,7 @@ abstract class ob extends IntrusiveNode {
               var8 = (var13[var4] & 16752521) >> 16;
               var9 = (int)(0.3 * (double)var8 + (0.59 * (double)var7 + 0.11 * (double)var6));
               var10 = var9 + ((var9 << 16) + (var9 << 8));
-              var3[var4] = fh.a(var5 << 24, var10);
+              var3[var4] = WallTile.a(var5 << 24, var10);
             }
             qf.field_k[var2_intLifetime2] = param0.createSpriteCopy(var3, OpenGlFramebuffer.field_i[var2_intLifetime2].c(), 89, OpenGlFramebuffer.field_i[var2_intLifetime2].a(), OpenGlFramebuffer.field_i[var2_intLifetime2].a(), 0);
           }

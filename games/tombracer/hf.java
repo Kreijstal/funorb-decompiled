@@ -55,7 +55,7 @@ final class hf implements ac, gs {
         }
         this.field_c.a(0);
         this.field_n.a(0);
-        this.field_h = dfa.a(8 + this.field_h, 2048, 106);
+        this.field_h = GameScreen.a(8 + this.field_h, 2048, 106);
         this.field_l.a(this.field_p.getElevation((byte) 115) + 2097152, (byte) 101, this.field_p.getY(9648), this.field_p.getX(3));
         if (param0 != -4366) {
           return;
@@ -120,7 +120,7 @@ final class hf implements ac, gs {
               regionExit4: {
                 regionExit5: {
                   regionExit6: {
-                    var5 = dfa.a(-this.field_p.getFacingAngle(-25787) >> 2, 2048, -115);
+                    var5 = GameScreen.a(-this.field_p.getFacingAngle(-25787) >> 2, 2048, -115);
                     var6 = 0;
                     var7 = this.field_f;
                     switch (var7) {
@@ -245,7 +245,7 @@ final class hf implements ac, gs {
         boolean stackIn_50_1 = false;
         w var2;
         int var3_int;
-        pca var3;
+        TileGridCell var3;
         int var4;
         int var5;
         var5 = TombRacer.field_G ? 1 : 0;
@@ -338,8 +338,8 @@ final class hf implements ac, gs {
           }
           this.field_k = 0;
           if (this.field_p.getRoom((byte) 109) != null &&
-            this.field_p.getRoom((byte) -123).f((byte) 93) != null) {
-            var3 = this.field_p.getRoom((byte) -88).f((byte) 93).a(this.getRenderY((byte) 106), this.getRenderX((byte) 102), (byte) 119);
+            this.field_p.getRoom((byte) -123).getTileGrid((byte) 93) != null) {
+            var3 = this.field_p.getRoom((byte) -88).getTileGrid((byte) 93).a(this.getRenderY((byte) 106), this.getRenderX((byte) 102), (byte) 119);
             if (var3 != null &&
               var3.b(param0 ^ 21463)) {
               this.field_k = 1;

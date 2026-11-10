@@ -40,7 +40,7 @@ final class TripBeamComponent extends SwitchComponent {
             return;
           }
           for (var4 = 0; 16 > var4; var4++) {
-            v.b(var4, 0);
+            MatchProtocol.b(var4, 0);
           }
           if (param1 != 1) {
             return;

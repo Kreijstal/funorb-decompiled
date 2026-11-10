@@ -3,7 +3,7 @@
  */
 final class wm {
     static String field_b;
-    static dfa field_a;
+    static GameScreen field_a;
 
     final static int a(int param0, int param1, int param2) {
         int var3 = 19 / ((param2 - 70) / 33);

@@ -142,7 +142,7 @@ final class LaserShooterComponent extends ShooterComponent {
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           if (param1.equals(S2CRoundResultPacket.field_e)) {
-            stackIn_3_0 = opa.field_n;
+            stackIn_3_0 = ResultsPhase.field_n;
             return stackIn_3_0;
           }
           var2 = lp.a((byte) 48, param1);
@@ -159,7 +159,7 @@ final class LaserShooterComponent extends ShooterComponent {
             stackIn_9_0 = (ConsoleToken[]) null;
             return stackIn_9_0;
           }
-          opa.field_n = var3;
+          ResultsPhase.field_n = var3;
           S2CRoundResultPacket.field_e = param1;
           stackIn_11_0 = var3;
           return stackIn_11_0;
@@ -206,7 +206,7 @@ final class LaserShooterComponent extends ShooterComponent {
           return;
         }
         if (baa.field_d.b(100663296)) {
-          nia.d(-25405);
+          MaskBlendOperator.d(-25405);
           return;
         }
         if (tga.field_a != null) {
@@ -215,7 +215,7 @@ final class LaserShooterComponent extends ShooterComponent {
         if (null == baa.field_d.field_i) {
           return;
         }
-        nia.d(-25405);
+        MaskBlendOperator.d(-25405);
     }
 
     final void q(byte param0) {

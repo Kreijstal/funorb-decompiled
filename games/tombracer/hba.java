@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hba {
-    static int field_b;
+    static int textureHeightMask;
     static ena field_c;
     static float[] field_a;
 

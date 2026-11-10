@@ -34,7 +34,7 @@ final class jq extends ob {
         int var4 = -104 % ((param1 - 22) / 36);
         var2.writeByte(CoinBagItemComponent.field_H, 0);
         var2.writeByte(mua.field_b, 0);
-        var2.writeBytes(0, tqa.field_e, tqa.field_e.length, 119);
+        var2.writeBytes(0, TileGrid.field_e, TileGrid.field_e.length, 119);
         var2.backpatchByteLength(var2.position - var3, (byte) -102);
     }
 

@@ -350,14 +350,14 @@ final class ava {
                         }
                       }
                     } else {
-                      var24Lifetime2 = gl.$cfr$intArgs$a$53ce4ab4c593(95, tqa.field_k, new String[]{null, Integer.toString(var6)});
+                      var24Lifetime2 = gl.$cfr$intArgs$a$53ce4ab4c593(95, TileGrid.field_k, new String[]{null, Integer.toString(var6)});
                     }
                   }
                 }
               } else {
                 if (var5_int != 0 &&
                   !var12.field_tb) {
-                  var24Lifetime2 = gl.$cfr$intArgs$a$53ce4ab4c593(96, qra.field_g, new String[]{var20});
+                  var24Lifetime2 = gl.$cfr$intArgs$a$53ce4ab4c593(96, MatchPhase.field_g, new String[]{var20});
                 } else {
                   if (var7 <= var12.field_zb) {
                     if (var12.field_Jb >= var6) {

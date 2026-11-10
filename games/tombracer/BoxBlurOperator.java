@@ -48,25 +48,25 @@ final class BoxBlurOperator extends TextureOperator {
           var17 = var19;
           var8 = var17;
           for (var9 = param1 - this.field_m; var9 <= this.field_m + param1; var9++) {
-            var10_ref_int__ = this.getInputMonochromeRow(0, -98, hba.field_b & var9);
-            var18 = new int[ns.field_g];
+            var10_ref_int__ = this.getInputMonochromeRow(0, -98, hba.textureHeightMask & var9);
+            var18 = new int[ns.textureWidth];
             var16 = var18;
             var11_ref_int__ = var16;
             var12 = 0;
             for (var13 = -this.field_n; var13 <= this.field_n; var13++) {
-              var12 = var12 + var10_ref_int__[var13 & una.field_b];
+              var12 = var12 + var10_ref_int__[var13 & una.textureWidthMask];
             }
             var15 = 0;
             var13Lifetime1 = var15;
-            while (var15 < ns.field_g) {
+            while (var15 < ns.textureWidth) {
               var11_ref_int__[var15] = var7 * var12 >> 16;
-              var12 = var12 - var10_ref_int__[una.field_b & -this.field_n + var15];
+              var12 = var12 - var10_ref_int__[una.textureWidthMask & -this.field_n + var15];
               var15++;
-              var12 = var12 + var10_ref_int__[var15 + this.field_n & una.field_b];
+              var12 = var12 + var10_ref_int__[var15 + this.field_n & una.textureWidthMask];
             }
             var8[-param1 + (var9 + this.field_m)] = var18;
           }
-          for (var9Lifetime1 = 0; ns.field_g > var9Lifetime1; var9Lifetime1++) {
+          for (var9Lifetime1 = 0; ns.textureWidth > var9Lifetime1; var9Lifetime1++) {
             var10 = 0;
             for (var11 = 0; var4 > var11; var11++) {
               var10 = var10 + var19[var11][var9Lifetime1];
@@ -127,8 +127,8 @@ final class BoxBlurOperator extends TextureOperator {
           var30 = var38;
           var8 = var30;
           for (var9_int = param0 - this.field_m; this.field_m + param0 >= var9_int; var9_int++) {
-            var46 = this.getInputColourRow(hba.field_b & var9_int, 0, -1);
-            var50 = new int[3][ns.field_g];
+            var46 = this.getInputColourRow(hba.textureHeightMask & var9_int, 0, -1);
+            var50 = new int[3][ns.textureWidth];
             var12 = 0;
             var13 = 0;
             var14 = 0;
@@ -136,7 +136,7 @@ final class BoxBlurOperator extends TextureOperator {
             var47 = var46[1];
             var48 = var46[2];
             for (var18_int = -this.field_n; var18_int <= this.field_n; var18_int++) {
-              var19_int = var18_int & una.field_b;
+              var19_int = var18_int & una.textureWidthMask;
               var13 = var13 + var47[var19_int];
               var14 = var14 + var48[var19_int];
               var12 = var12 + var49[var19_int];
@@ -145,16 +145,16 @@ final class BoxBlurOperator extends TextureOperator {
             var19 = var50[1];
             var20 = var50[2];
             var21 = 0;
-            while (ns.field_g > var21) {
+            while (ns.textureWidth > var21) {
               var18[var21] = var12 * var7 >> 16;
               var19[var21] = var13 * var7 >> 16;
               var20[var21] = var7 * var14 >> 16;
-              var22 = var21 - this.field_n & una.field_b;
+              var22 = var21 - this.field_n & una.textureWidthMask;
               var13 = var13 - var47[var22];
               var21++;
               var12 = var12 - var49[var22];
               var14 = var14 - var48[var22];
-              var22Lifetime1 = this.field_n + var21 & una.field_b;
+              var22Lifetime1 = this.field_n + var21 & una.textureWidthMask;
               var12 = var12 + var49[var22Lifetime1];
               var13 = var13 + var47[var22Lifetime1];
               var14 = var14 + var48[var22Lifetime1];
@@ -164,7 +164,7 @@ final class BoxBlurOperator extends TextureOperator {
           var9 = var37[0];
           var10 = var37[1];
           var11 = var37[2];
-          for (var12Lifetime1 = 0; ns.field_g > var12Lifetime1; var12Lifetime1++) {
+          for (var12Lifetime1 = 0; ns.textureWidth > var12Lifetime1; var12Lifetime1++) {
             var13Lifetime1 = 0;
             var14Lifetime1 = 0;
             var15 = 0;

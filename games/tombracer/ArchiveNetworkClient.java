@@ -9,7 +9,7 @@ abstract class ArchiveNetworkClient {
     static String field_l;
     vj field_m;
     static String field_f;
-    static int field_i;
+    static int textureHeight;
     static String field_b;
     vj field_c;
     vj field_k;
@@ -99,7 +99,7 @@ abstract class ArchiveNetworkClient {
           }
           try {
             if (cma.field_m == 0) {
-              bga.field_c = oi.field_a.a(-24818, pca.field_a, du.field_d);
+              bga.field_c = oi.field_a.a(-24818, TileGridCell.field_a, du.field_d);
               cma.field_m = cma.field_m + 1;
             }
             if (cma.field_m == 1) {
@@ -187,7 +187,7 @@ abstract class ArchiveNetworkClient {
         try {
           var2_int = 0;
           if (param1 < 80) {
-            field_i = 11;
+            textureHeight = 11;
           }
           for (var3 = 0; var3 < param0.size(); var3++) {
             if (param0.get(var3)) {

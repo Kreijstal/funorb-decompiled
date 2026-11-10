@@ -101,25 +101,25 @@ final class gia extends TextureOperator {
         var12 = var13;
         var3 = var12;
         if (this.field_h.field_f) {
-          if (ArchiveNetworkClient.field_i == this.field_p) {
+          if (ArchiveNetworkClient.textureHeight == this.field_p) {
             stackIn_6_0 = param0;
           } else {
-            stackIn_6_0 = this.field_p * param0 / ArchiveNetworkClient.field_i;
+            stackIn_6_0 = this.field_p * param0 / ArchiveNetworkClient.textureHeight;
           }
           var4 = stackIn_6_0 * this.field_r;
           var5 = var14[0];
           var6 = var14[1];
           var7 = var14[2];
-          if (this.field_r != ns.field_g) {
-            for (var8 = 0; ns.field_g > var8; var8++) {
-              var9 = var8 * this.field_r / ns.field_g;
+          if (this.field_r != ns.textureWidth) {
+            for (var8 = 0; ns.textureWidth > var8; var8++) {
+              var9 = var8 * this.field_r / ns.textureWidth;
               var10 = this.field_m[var4 + var9];
               var7[var8] = SnakePitBehaviour.c(var10, 255) << 4;
               var6[var8] = SnakePitBehaviour.c(var10, 65280) >> 4;
               var5[var8] = SnakePitBehaviour.c(16711680, var10) >> 12;
             }
           } else {
-            for (var8 = 0; var8 < ns.field_g; var8++) {
+            for (var8 = 0; var8 < ns.textureWidth; var8++) {
               incrementValue$0 = var4;
               var4++;
               var9 = this.field_m[incrementValue$0];

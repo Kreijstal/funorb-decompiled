@@ -86,7 +86,7 @@ final class pn extends or {
             var13 = var17;
             var6_ref_int__ = var13;
             for (var7 = 0; var3 > var7; var7++) {
-              var6_ref_int__[var7] = fh.a(SnakePitBehaviour.c(-16777216, var15[var7] << 24), mga.field_g[SnakePitBehaviour.c(255, (int) var21[var7])]);
+              var6_ref_int__[var7] = WallTile.a(SnakePitBehaviour.c(-16777216, var15[var7] << 24), mga.field_g[SnakePitBehaviour.c(255, (int) var21[var7])]);
             }
             var1[var2] = (Sprite) ((Object) new ArgbSprite(ika.field_a, OpenGlRenderbuffer.field_s, ak.field_p[var2], pg.field_C[var2], mq.field_b[var2], iga.field_m[var2], var17));
           }

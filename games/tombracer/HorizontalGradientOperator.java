@@ -86,7 +86,7 @@ final class HorizontalGradientOperator extends TextureOperator {
         if (param0 != 1) {
           HorizontalGradientOperator.c(97);
         }
-        return ht.field_Fb;
+        return ht.textureColumnCoords;
     }
 
     final static void c(int param0) {

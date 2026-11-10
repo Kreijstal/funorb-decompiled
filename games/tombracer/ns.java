@@ -6,7 +6,7 @@ final class ns extends qe {
     static String field_c;
     private tla field_i;
     static boolean[] field_d;
-    static int field_g;
+    static int textureWidth;
     private float[] field_e;
     private int field_h;
     private aaa field_m;

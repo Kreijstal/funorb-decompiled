@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qka extends qra {
+final class qka extends MatchPhase {
     private int[] field_r;
     static SpriteData[] field_o;
     private int field_n;
@@ -19,7 +19,7 @@ final class qka extends qra {
         field_s = null;
     }
 
-    qka(qh param0, v param1) {
+    qka(MatchScreen param0, MatchProtocol param1) {
         super(param0, param1);
         int var5 = 0;
         int stackIn_26_0 = 0;
@@ -35,36 +35,36 @@ final class qka extends qra {
         int var3_intLifetime1;
         this.field_n = -1;
         try {
-          this.field_r = new int[this.field_c.field_k];
-          for (var3_int = 0; this.field_c.field_k > var3_int; var3_int++) {
+          this.field_r = new int[this.matchState.field_k];
+          for (var3_int = 0; this.matchState.field_k > var3_int; var3_int++) {
             var4 = 0;
-            for (var5 = 0; this.field_c.field_v.length > var5; var5++) {
+            for (var5 = 0; this.matchState.field_v.length > var5; var5++) {
               if (~var5 != ~var3_int &&
-                this.field_c.field_v[var5] > this.field_c.field_v[var3_int] &&
-                !this.field_c.f((byte) -96, var5)) {
+                this.matchState.field_v[var5] > this.matchState.field_v[var3_int] &&
+                !this.matchState.f((byte) -96, var5)) {
                 var4++;
               }
             }
-            if (this.field_c.f((byte) -117, var3_int)) {
-              var4 = this.field_c.field_k - 1;
+            if (this.matchState.f((byte) -117, var3_int)) {
+              var4 = this.matchState.field_k - 1;
             }
-            if (this.field_c.field_z == -2) {
+            if (this.matchState.field_z == -2) {
               var4 = 0;
             }
             this.field_r[var3_int] = var4;
           }
-          if (this.field_h.d((byte) 116)) {
+          if (this.screen.d((byte) 116)) {
             TripBeamComponent.b(1, 0);
           } else {
-            if (0 == this.field_r[this.field_h.field_x] &&
-              this.field_c.field_z >= 0) {
+            if (0 == this.field_r[this.screen.field_x] &&
+              this.matchState.field_z >= 0) {
               TripBeamComponent.b(1, 2);
             } else {
               TripBeamComponent.b(1, 3);
             }
           }
-          if (this.field_h.field_D &&
-            !this.field_h.d((byte) 82)) {
+          if (this.screen.field_D &&
+            !this.screen.d((byte) 82)) {
             this.field_p = new fna[2];
             this.field_p[0] = new fna(33, wba.field_q[33], 1, false);
             this.field_p[0].field_b = aaa.a(false) - 110;
@@ -77,16 +77,16 @@ final class qka extends qra {
             return;
           }
           this.field_p = new fna[1];
-          stackIn_26_0 = (this.field_h.field_D) ? 33 : 16;
+          stackIn_26_0 = (this.screen.field_D) ? 33 : 16;
           var3_intLifetime1 = stackIn_26_0;
           this.field_p[0] = new fna(var3_intLifetime1, wba.field_q[var3_intLifetime1], 0, false);
           this.field_p[0].field_b = -100 + aaa.a(false);
           this.field_p[0].field_i = SwitchLinkList.b(0) - 25;
           this.field_p[0].a(false);
-          if (!this.field_h.field_D &&
+          if (!this.screen.field_D &&
             !TextWidgetPainter.a(43)) {
             this.field_p[0].field_e = aua.field_d.toUpperCase();
-            FacePlayerLocomotor.field_p = uta.a(3, this.field_h.m(-1), 0, 10, 1);
+            FacePlayerLocomotor.field_p = uta.a(3, this.screen.m(-1), 0, 10, 1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -171,11 +171,11 @@ final class qka extends qra {
         var21 = TombRacer.field_G ? 1 : 0;
         ura.a(-10985);
         Room.field_j.a(0, 0);
-        if (this.field_h.field_D) {
+        if (this.screen.field_D) {
           var3 = aaa.a(false) >> 1;
           var4 = (aaa.a(false) >> 1) / 3 + 37;
           var5 = 56;
-          var6 = this.field_c.field_k;
+          var6 = this.matchState.field_k;
           var22 = 0;
           var7 = var22;
           while (var22 < var6) {
@@ -183,28 +183,28 @@ final class qka extends qra {
             var9 = -var8 + var6;
             var10 = -(var5 * var9) + SwitchLinkList.b(0);
             var11 = var4 * var22 + (var3 - (var4 >> 1) * (-1 + var6));
-            this.field_c.players[var22].n((byte) -120).a(-1, var11, 800, 0, var10);
+            this.matchState.players[var22].n((byte) -120).a(-1, var11, 800, 0, var10);
             IntrusiveDeque.field_c.a(var11 - (IntrusiveDeque.field_c.a() >> 1) + 1, var10 - 8);
             if (var8 == 0) {
               GridWidgetContainer.field_y[-1 + GridWidgetContainer.field_y.length].a(-(GridWidgetContainer.field_y[GridWidgetContainer.field_y.length - 1].a() >> 1) + var11 - 1, var10 - 12);
             }
             var12 = 150;
             cha.a(-60 + var11, 2, tga.field_a, 4, var10 - 250, 120, 65793 | var12 << 24, 1, 100);
-            oka.a(this.field_h.a(var22, false).toUpperCase(), wga.field_a[var22], kn.field_p, -1, var10 - 230, var11, 0);
+            oka.a(this.screen.a(var22, false).toUpperCase(), wga.field_a[var22], kn.field_p, -1, var10 - 230, var11, 0);
             try {
               tga.field_a.a(var11, var10 - 140, 10 + var11, -151 + var10, var11, var10 - 151, 65793 | var12 << 24, var12 << 24 | 65793, var12 << 24 | 65793, 1);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var13_ref_Exception = (Exception) (Object) decompiledCaughtException;
             }
-            if (!this.field_c.f((byte) -102, var22)) {
+            if (!this.matchState.f((byte) -102, var22)) {
               var13 = 7829367;
-              if (-2 != this.field_c.field_z) {
-                SocketConnector.a(gl.$cfr$intArgs$a$53ce4ab4c593(93, WallCrusherComponent.field_K.toUpperCase(), new String[]{Integer.toString(this.field_c.field_v[var22])}).toUpperCase(), 1, kn.field_p, var13, 16, 60, 1, var10 - 243, -50 + var11, 0, (byte) 60, 100);
+              if (-2 != this.matchState.field_z) {
+                SocketConnector.a(gl.$cfr$intArgs$a$53ce4ab4c593(93, WallCrusherComponent.field_K.toUpperCase(), new String[]{Integer.toString(this.matchState.field_v[var22])}).toUpperCase(), 1, kn.field_p, var13, 16, 60, 1, var10 - 243, -50 + var11, 0, (byte) 60, 100);
               } else {
                 SocketConnector.a(paa.field_y.toUpperCase(), 1, kn.field_p, var13, 16, 70, 1, var10 - 243, -50 + var11, 0, (byte) 60, 100);
               }
-              if (this.field_c.g(69, var22)) {
+              if (this.matchState.g(69, var22)) {
                 SocketConnector.a(w.field_d.toUpperCase(), 1, kn.field_p, 3385907, 16, 40, 1, var10 - 203, -50 + var11, 0, (byte) 60, 100);
               }
             } else {
@@ -221,7 +221,7 @@ final class qka extends qra {
           var7 = var3;
           var8 = var4 - 80;
           kq.field_a.a(var7 - (kq.field_a.a() >> 1), var8 - (kq.field_a.c() >> 1));
-          var9 = this.field_h.m(-1);
+          var9 = this.screen.m(-1);
           stackIn_4_0 = (pl.a((byte) 64) != var9) ? 0 : 1;
           var11 = stackIn_4_0;
           if (var11 != 0) {
@@ -230,8 +230,8 @@ final class qka extends qra {
             var10_ref_String = vj.worldNames[var9].toUpperCase();
           }
           SocketConnector.a(var10_ref_String, 1, eda.field_f, 2431750, 8 + o.field_d.field_m, var6, 1, -(var6 >> 1) + var8, var7 - (var5 >> 1), -1, (byte) 60, var5);
-          oka.a(this.field_h.a(this.field_h.field_x, false).toUpperCase(), wga.field_a[this.field_h.field_x], eda.field_f, -1, -15 + var4, var3, -1);
-          if (this.field_c.field_z < 0) {
+          oka.a(this.screen.a(this.screen.field_x, false).toUpperCase(), wga.field_a[this.screen.field_x], eda.field_f, -1, -15 + var4, var3, -1);
+          if (this.matchState.field_z < 0) {
             oka.a(ArrowShooterComponent.field_K.toUpperCase(), 2431750, eda.field_f, -1, var4 - 40, var3, -1);
             oka.a(SafeZoneBehaviour.field_n.toUpperCase(), 2431750, kn.field_p, -1, 45 + var4, var3, -1);
           } else {
@@ -258,13 +258,13 @@ final class qka extends qra {
             }
           }
           if (var11 != 0) {
-            var24 = dea.a(this.field_c.c((byte) 115, this.field_h.field_x), (byte) -8);
+            var24 = dea.a(this.matchState.c((byte) 115, this.screen.field_x), (byte) -8);
             oka.a(cc.field_l.toUpperCase() + " " + var24.toUpperCase(), 2431750, kn.field_p, -1, 20 + var4, -120 + var3, -1);
             oka.a(ContentTransitionDialog.field_L.toUpperCase(), 2431750, eda.field_f, -1, var4, 120 + var3, -1);
-            var13 = this.field_h.field_k.simulations[this.field_h.field_x].player.v(74);
+            var13 = this.screen.matchState.simulations[this.screen.field_x].player.v(74);
             oka.a(Integer.toString(var13), 2431750, eda.field_f, -1, 20 + var4, 120 + var3, -1);
           } else {
-            var23 = dea.a(this.field_c.c((byte) 115, this.field_h.field_x), (byte) -8);
+            var23 = dea.a(this.matchState.c((byte) 115, this.screen.field_x), (byte) -8);
             oka.a(cc.field_l.toUpperCase() + " " + var23.toUpperCase(), 2431750, kn.field_p, -1, 48 + var4, var3 - 120, -1);
             za.field_g.a(-200 + var3, var4 + 60);
             var13 = as.a(var9, 0);
@@ -272,7 +272,7 @@ final class qka extends qra {
             bca.field_d.a(var3 - 110, 60 + var4);
             RoomEffectTraps.a(-1, -92, 79 + var4, dea.a(var13 + var13 / 2, (byte) -8), bca.field_d.d() + (var3 - 110) + 5, kn.field_p, 2431750);
             oka.a(ContentTransitionDialog.field_L.toUpperCase(), 2431750, eda.field_f, -1, 5 + var4, 120 + var3, -1);
-            var14 = this.field_h.field_k.simulations[this.field_h.field_x].player.v(110);
+            var14 = this.screen.matchState.simulations[this.screen.field_x].player.v(110);
             oka.a(Integer.toString(var14), 2431750, eda.field_f, -1, var4 + 22, var3 + 120, -1);
             if (FacePlayerLocomotor.field_p != null &&
               FacePlayerLocomotor.field_p.field_p != null &&
@@ -324,9 +324,9 @@ final class qka extends qra {
           this.b(-124, false);
         }
         if (param1 == 0) {
-          this.field_h.b(false, true, 0);
-          if (this.field_h.field_D) {
-            r.a(0, this.field_h.d((byte) 120));
+          this.screen.b(false, true, 0);
+          if (this.screen.field_D) {
+            r.a(0, this.screen.d((byte) 120));
           } else {
             C2SActionPacket.field_j = -1;
           }
@@ -352,12 +352,12 @@ final class qka extends qra {
         int var3Lifetime1;
         int var3Lifetime2;
         var5 = TombRacer.field_G ? 1 : 0;
-        for (var3 = 0; var3 < this.field_c.players.length; var3++) {
-          var4_ref_hf = (hf) (this.field_c.players[var3].n((byte) -67));
+        for (var3 = 0; var3 < this.matchState.players.length; var3++) {
+          var4_ref_hf = (hf) (this.matchState.players[var3].n((byte) -67));
           if (!this.field_q) {
             stackIn_5_0 = var4_ref_hf;
             stackIn_5_1 = 26;
-            if (var3 != this.field_c.field_z) {
+            if (var3 != this.matchState.field_z) {
               stackIn_6_2 = 0;
             } else {
               stackIn_6_2 = 23;
@@ -404,16 +404,16 @@ final class qka extends qra {
             this.a(120, var3Lifetime1);
           }
         }
-        if (this.field_h.field_D &&
-          !this.field_h.d((byte) 69)) {
-          var3Lifetime2 = this.field_h.field_k.field_t;
-          if ((var3Lifetime2 >> this.field_h.field_x & 1) == 1) {
+        if (this.screen.field_D &&
+          !this.screen.d((byte) 69)) {
+          var3Lifetime2 = this.screen.matchState.field_t;
+          if ((var3Lifetime2 >> this.screen.field_x & 1) == 1) {
             this.field_p[1].field_e = RevolverItemComponent.field_I.toUpperCase();
           } else {
             if (var3Lifetime2 != 0) {
               this.field_p[1].field_e = ot.field_t.toUpperCase();
             } else {
-              if (this.field_h.field_k.a(this.field_h.field_x, true)) {
+              if (this.screen.matchState.a(this.screen.field_x, true)) {
                 this.field_p[1].field_e = sl.field_g.toUpperCase();
               } else {
                 this.field_p[1].field_e = PrefabComponent.field_E.toUpperCase();

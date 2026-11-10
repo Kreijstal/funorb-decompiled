@@ -16,7 +16,7 @@ final class WallModel extends TrapModel {
     private boolean field_p;
     private int field_u;
     private boolean field_t;
-    private fh[][] field_x;
+    private WallTile[][] tiles;
 
     final void attach(TrapPart param0, WorldBody param1, byte param2) {
         try {
@@ -36,7 +36,7 @@ final class WallModel extends TrapModel {
         return 0;
     }
 
-    private final int b(fh param0, byte param1) {
+    private final int b(WallTile param0, byte param1) {
         RuntimeException var3 = null;
         uw var4 = null;
         int stackIn_2_0 = 0;
@@ -86,12 +86,12 @@ final class WallModel extends TrapModel {
         int discarded$1 = 0;
         Trap var3;
         int var4;
-        fh var5;
+        WallTile var5;
         w var6;
         super.d(param0 ^ 0);
         if (param0 != -1) {
-          var5 = (fh) null;
-          discarded$1 = this.b((fh) null, (byte) 19);
+          var5 = (WallTile) null;
+          discarded$1 = this.b((WallTile) null, (byte) 19);
         }
         var6 = (w) (this.a(param0 + 58).field_G);
         if (var6 == null) {
@@ -125,7 +125,7 @@ final class WallModel extends TrapModel {
         return 0;
     }
 
-    final ka a(fh param0, byte param1) {
+    final ka a(WallTile param0, byte param1) {
         int discarded$0 = 0;
         ka stackIn_44_0 = null;
         RuntimeException stackIn_47_0 = null;
@@ -136,12 +136,12 @@ final class WallModel extends TrapModel {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
-        fh var6 = null;
+        WallTile var6 = null;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
           if (param1 != 76) {
-            var6 = (fh) null;
-            discarded$0 = this.b((fh) null, (byte) -30);
+            var6 = (WallTile) null;
+            discarded$0 = this.b((WallTile) null, (byte) -30);
           }
           if (this.field_y == 0) {
             var4 = param0.field_a;
@@ -212,13 +212,13 @@ final class WallModel extends TrapModel {
           if (param1 <= 82) {
             this.o((byte) 33);
           }
-          this.field_x = (fh[][]) null;
+          this.tiles = (WallTile[][]) null;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "lma.RA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    private final int a(int param0, int param1, int param2, fh param3) {
+    private final int a(int param0, int param1, int param2, WallTile param3) {
         RuntimeException var5 = null;
         int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;
@@ -261,10 +261,10 @@ final class WallModel extends TrapModel {
         RuntimeException var4 = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
-          if (this.field_x != null) {
+          if (this.tiles != null) {
             for (var4_int = 0; this.field_q > var4_int; var4_int++) {
               for (var5 = 0; var5 < this.field_w; var5++) {
-                param2.a((byte) 88, param1, this.field_x[var4_int][var5]);
+                param2.a((byte) 88, param1, this.tiles[var4_int][var5]);
               }
             }
           }
@@ -332,19 +332,19 @@ final class WallModel extends TrapModel {
     final void h(int param0) {
         int var2 = 0;
         int var3 = 0;
-        fh var4;
+        WallTile var4;
         int var5;
         int var6;
         var6 = TombRacer.field_G ? 1 : 0;
         super.h(109);
-        if (this.field_x == null) {
+        if (this.tiles == null) {
           return;
         }
         for (var2 = 0; this.field_q > var2; var2++) {
           for (var3 = 0; this.field_w > var3; var3++) {
-            var4 = this.field_x[var2][var3];
+            var4 = this.tiles[var2][var3];
             var5 = bl.field_c[var4.field_a];
-            var4.field_o = dfa.a(-var4.field_o + var5, 2048, -73);
+            var4.field_o = GameScreen.a(-var4.field_o + var5, 2048, -73);
             var4.field_l = -var4.field_l;
             var4.field_i = sw.a(var4.field_i, 6);
             if (var4.field_a == 11) {
@@ -422,7 +422,7 @@ final class WallModel extends TrapModel {
         int var9;
         int var10;
         int var12;
-        fh var14;
+        WallTile var14;
         int var15;
         int var16;
         int var17;
@@ -462,13 +462,13 @@ final class WallModel extends TrapModel {
         var9 = this.body.getY(9648);
         this.field_w = (-this.field_u + this.field_m) / 2097152;
         this.field_q = (-this.field_v + this.field_A) / param0;
-        this.field_x = new fh[this.field_q][this.field_w];
+        this.tiles = new WallTile[this.field_q][this.field_w];
         var10 = 1048576 + this.field_u;
         for (var11 = 0; var11 < this.field_w; var11++) {
           var12 = 1048576 + this.field_v;
           for (var13 = 0; var13 < this.field_q; var13++) {
-            var14 = new fh();
-            this.field_x[var13][var11] = var14;
+            var14 = new WallTile();
+            this.tiles[var13][var11] = var14;
             stackIn_7_0 = (var13 <= 0) ? 0 : 1;
             var15 = stackIn_7_0;
             stackIn_10_0 = (var13 >= -1 + this.field_q) ? 0 : 1;
@@ -801,7 +801,7 @@ final class WallModel extends TrapModel {
                 }
               }
             }
-            var14.field_o = dfa.a(var26 + bl.field_c[var14.field_a], 2048, 120);
+            var14.field_o = GameScreen.a(var26 + bl.field_c[var14.field_a], 2048, 120);
             var14.field_i = var27;
             var14.field_f = var10 - var9;
             var14.field_l = var12 - var8;
@@ -869,10 +869,10 @@ final class WallModel extends TrapModel {
           if (param2 <= 40) {
             this.l(-14);
           }
-          if (null != this.field_x) {
+          if (null != this.tiles) {
             for (var4_int = 0; var4_int < this.field_q; var4_int++) {
               for (var5 = 0; var5 < this.field_w; var5++) {
-                param1.a(param0, this.field_x[var4_int][var5], (byte) -33);
+                param1.a(param0, this.tiles[var4_int][var5], (byte) -33);
               }
             }
           }
@@ -894,7 +894,7 @@ final class WallModel extends TrapModel {
 
     final void b(int param0, uw param1) {
         try {
-          if (null == this.field_x) {
+          if (null == this.tiles) {
             this.j(2097152);
             if (hb.d(67)) {
               this.l(32166);
@@ -920,7 +920,7 @@ final class WallModel extends TrapModel {
         int var7;
         int var8;
         int var9;
-        fh var12;
+        WallTile var12;
         int var14;
         int var15;
         int var16;
@@ -940,7 +940,7 @@ final class WallModel extends TrapModel {
         for (var10 = 0; var10 < this.field_q; var10++) {
           for (var11 = 0; this.field_w > var11; var11++) {
             boolean decompiledFrameRemainder1 = true;
-            var12 = this.field_x[var10][var11];
+            var12 = this.tiles[var10][var11];
             if (var12.field_a == 5) {
               var8 = var12.field_f + var6;
               var7 = var5 + var12.field_l;

@@ -429,7 +429,7 @@ final class CachedArchiveSource extends ArchiveSource {
               if (null != this.field_k.field_h &&
                 this.field_k.field_h[param2] != null) {
                 var28 = this.field_k.field_h[param2];
-                var29 = fja.a(-2 + var19.length, var19, 0, 8);
+                var29 = PlayPhase.a(-2 + var19.length, var19, 0, 8);
                 for (var10 = 0; 64 > var10; var10++) {
                   if (var28[var10] != var29[var10]) {
                     throw new RuntimeException();
@@ -480,7 +480,7 @@ final class CachedArchiveSource extends ArchiveSource {
             if (this.field_k.field_h != null &&
               this.field_k.field_h[param2] != null) {
               var31 = this.field_k.field_h[param2];
-              var30 = fja.a(var19.length - 2, var19, 0, 8);
+              var30 = PlayPhase.a(var19.length - 2, var19, 0, 8);
               var12 = 0;
               var10 = var12;
               while (var12 < 64) {

@@ -8,7 +8,7 @@ final class dsa {
     static String[] componentTypeNames;
 
     final static vb a(int param0) {
-        int var1 = uca.field_c.nextBounded(6, 0);
+        int var1 = uca.cosmeticRandom.nextBounded(6, 0);
         if (param0 > -11) {
           field_b = 76;
           return it.a(255, var1);

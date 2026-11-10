@@ -54,7 +54,7 @@ final class BlockComponent extends PrefabComponent {
           var15.d(var6, -1);
           var10 = new DamageableBehaviour(param2, param0);
           var10.b(1, var8, param1 - 3);
-          var11 = var10.j((byte) -106);
+          var11 = var10.getVulnerabilities((byte) -106);
           var11.setAll(false, 67);
           var11.set(0, -17075, true);
           var15.addBehaviour((byte) 83, (Behaviour) (var10));

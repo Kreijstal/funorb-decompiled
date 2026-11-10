@@ -136,8 +136,8 @@ final class bk extends TextureOperator {
             }
             var8 = stackIn_8_0;
             var8 = var8 >> 4 & 255;
-            var9 = BufferedSocket.a(ns.field_g, var6, 44);
-            var10 = BufferedSocket.a(ArchiveNetworkClient.field_i, var6, -127);
+            var9 = BufferedSocket.a(ns.textureWidth, var6, 44);
+            var10 = BufferedSocket.a(ArchiveNetworkClient.textureHeight, var6, -127);
             var11 = (this.field_o * ColourFillOperator.field_r[var8] >> 12) + var9;
             var12 = var10 + (ou.field_e[var8] * this.field_o >> 12);
             var13 = var12 - var10;
@@ -181,8 +181,8 @@ final class bk extends TextureOperator {
               }
               for (var23 = var9; var23 < var11; var23++) {
                 var24 = var21 + 1024 + (var23 - var9) * var20;
-                var25 = var23 & una.field_b;
-                var26 = var16Lifetime2 & hba.field_b;
+                var25 = var23 & una.textureWidthMask;
+                var26 = var16Lifetime2 & hba.textureHeightMask;
                 if (var15 != 0) {
                   var31[var26][var25] = var24;
                 } else {

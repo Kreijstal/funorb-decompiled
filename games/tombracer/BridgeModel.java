@@ -260,7 +260,7 @@ final class BridgeModel extends TrapModel {
           for (var3 = 0; this.field_r > var3; var3++) {
             var4 = this.field_q[var2][var3];
             var5 = IntrusiveDequeCursor.field_c[var4.field_b];
-            var4.field_e = dfa.a(-var4.field_e + var5, 2048, -31);
+            var4.field_e = GameScreen.a(-var4.field_e + var5, 2048, -31);
             var4.field_d = -var4.field_d;
           }
         }
@@ -371,8 +371,8 @@ final class BridgeModel extends TrapModel {
         super.d(param0);
         if (this.field_o != null &&
           this.field_o.d(false)) {
-          this.field_n = uca.field_c.nextBounded(262144, 0) - 131072;
-          this.field_s = -131072 + uca.field_c.nextBounded(262144, 0);
+          this.field_n = uca.cosmeticRandom.nextBounded(262144, 0) - 131072;
+          this.field_s = -131072 + uca.cosmeticRandom.nextBounded(262144, 0);
         }
         Trap var2 = (Trap) (this.body);
         if (var2 == null) {
@@ -537,7 +537,7 @@ final class BridgeModel extends TrapModel {
                 var12.field_b = 0;
               }
             }
-            var12.field_e = dfa.a(var18 + IntrusiveDequeCursor.field_c[var12.field_b], 2048, -54);
+            var12.field_e = GameScreen.a(var18 + IntrusiveDequeCursor.field_c[var12.field_b], 2048, -54);
             var12.field_a = var7 - var4;
             var12.field_d = var10 - var3;
             var20.e(true).nextBounded(100, 0);

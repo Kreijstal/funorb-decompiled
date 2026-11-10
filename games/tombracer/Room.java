@@ -29,7 +29,7 @@ final class Room implements SwitchableScope, Renderable, noa {
     CollisionGrid collisionGrid;
     private IsaacCipher field_H;
     private CorpseList corpses;
-    private tqa field_B;
+    private TileGrid tileGrid;
     private int field_r;
     private BitPacketBuffer data;
     private ui field_y;
@@ -45,7 +45,7 @@ final class Room implements SwitchableScope, Renderable, noa {
     private RoomEffectTraps effectTraps;
     private int deathCount;
     private int field_J;
-    private dj field_F;
+    private ParticleEffects particleEffects;
     private int field_A;
     sqa field_G;
 
@@ -228,7 +228,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           this.k((byte) 119);
         }
         Particle var5 = (Particle) (this.particlePool.spawn(-2698, param1, param3, this.field_S, param0));
-        var5.a(true, uca.field_c.nextBounded(100, 0));
+        var5.a(true, uca.cosmeticRandom.nextBounded(100, 0));
         return var5;
     }
 
@@ -249,11 +249,11 @@ final class Room implements SwitchableScope, Renderable, noa {
         return this.height;
     }
 
-    final dj b(boolean param0) {
+    final ParticleEffects getParticleEffects(boolean param0) {
         if (param0) {
-          this.field_B = (tqa) null;
+          this.tileGrid = (TileGrid) null;
         }
-        return this.field_F;
+        return this.particleEffects;
     }
 
     final void a(int param0, sqa param1) {
@@ -320,8 +320,8 @@ final class Room implements SwitchableScope, Renderable, noa {
           }
           var5 = (db) (this.field_d.next(108));
         }
-        if (null != this.field_B) {
-          this.field_B.a(param1, (byte) -33);
+        if (null != this.tileGrid) {
+          this.tileGrid.a(param1, (byte) -33);
         }
         if (param0 >= -4) {
           this.resetEntrance(7);
@@ -349,11 +349,11 @@ final class Room implements SwitchableScope, Renderable, noa {
         }
     }
 
-    final tqa f(byte param0) {
+    final TileGrid getTileGrid(byte param0) {
         if (param0 != 93) {
-          return (tqa) null;
+          return (TileGrid) null;
         }
-        return this.field_B;
+        return this.tileGrid;
     }
 
     final boolean a(int param0, int param1, int param2, int param3, int param4, boolean param5) {
@@ -383,7 +383,7 @@ final class Room implements SwitchableScope, Renderable, noa {
 
     final void b(int param0, boolean param1) {
         int var4 = TombRacer.field_G ? 1 : 0;
-        this.field_B.f((byte) 64);
+        this.tileGrid.f((byte) 64);
         Trap var6 = (Trap) (this.traps.first(param0 - 87));
         while (var6 != null) {
           var6.a(this, false);
@@ -441,7 +441,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         if (param4 > -110) {
           this.effectTraps = (RoomEffectTraps) null;
         }
-        this.field_B.a(param3, param6, true, param0, param1, param2, param5);
+        this.tileGrid.a(param3, param6, true, param0, param1, param2, param5);
     }
 
     final IsaacCipher getRandom(int param0) {
@@ -481,11 +481,11 @@ final class Room implements SwitchableScope, Renderable, noa {
           this.particlePool = new ObjectPool(this, new Particle(), 100);
           this.projectilePool = new ObjectPool(this, new Projectile(), 25);
           this.puddlePool = new ObjectPool(this, new Puddle(), 50);
-          this.field_B = new tqa(this, 2097152);
+          this.tileGrid = new TileGrid(this, 2097152);
           this.particlePool.releaseAll((byte) 114);
           this.projectilePool.releaseAll((byte) 122);
           this.puddlePool.releaseAll((byte) 116);
-          this.field_F = new dj(this);
+          this.particleEffects = new ParticleEffects(this);
           if (this.field_U != null) {
           }
           this.field_r = 0;
@@ -786,7 +786,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           var7 = (RoomComponent) (this.components.next(116));
         }
         dea.field_a.a(121, this);
-        this.field_B.a(this.field_S, 0);
+        this.tileGrid.a(this.field_S, 0);
         if (null != this.field_G) {
           this.field_G.c((byte) 119);
         }
@@ -956,7 +956,7 @@ final class Room implements SwitchableScope, Renderable, noa {
 
     final boolean a(int param0, int param1, int param2, int param3, boolean param4, int param5, byte param6) {
         int var8 = -28 % ((param6 - 20) / 33);
-        return this.field_B.b(param3, param2, param4, 8597, param0, param1, param5);
+        return this.tileGrid.b(param3, param2, param4, 8597, param0, param1, param5);
     }
 
     final void a(int param0, int param1, int param2, int param3, byte param4) {
@@ -964,7 +964,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           return;
         }
         if (param4 != 6) {
-          this.field_B = (tqa) null;
+          this.tileGrid = (TileGrid) null;
         }
         this.field_G.a(param4 ^ -112, new fm(param2, param1, param0, param3));
     }
@@ -992,13 +992,13 @@ final class Room implements SwitchableScope, Renderable, noa {
 
     final void g(int param0) {
         this.reset(false, (byte) 123);
-        this.field_B = null;
+        this.tileGrid = null;
         if (param0 <= 43) {
           this.a(-72, -34, 70, 80, true, 64, (byte) -83);
         }
         this.puddlePool = null;
         this.particlePool = null;
-        this.field_F = null;
+        this.particleEffects = null;
         this.projectilePool = null;
         this.collisionGrid = null;
     }
@@ -1029,7 +1029,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           Corpse var9 = (Corpse) null;
           this.recordDeath(-24, (Corpse) null);
         }
-        this.field_B.a(param1, param5, param4, param2, param0, param3, true);
+        this.tileGrid.a(param1, param5, param4, param2, param0, param3, true);
     }
 
     private final void t(int param0) {
@@ -1075,7 +1075,7 @@ final class Room implements SwitchableScope, Renderable, noa {
             this.height = var3.readBits((byte) 44, 8) * 2097152;
           }
         }
-        this.field_B.a(2097152, this, 4);
+        this.tileGrid.a(2097152, this, 4);
         if (11 > this.formatVersion) {
           this.resetEntrance(109);
         } else {
@@ -1093,7 +1093,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           this.addTrap(var7_ref_fsa, (byte) 32);
           var7_ref_fsa.D((byte) 118);
         }
-        this.field_B.a((byte) 25, var3, this);
+        this.tileGrid.a((byte) 25, var3, this);
         if (this.formatVersion >= 11) {
           var6Lifetime1 = var3.readBits((byte) 44, 8);
           for (var7 = 0; var6Lifetime1 > var7; var7++) {
@@ -1543,7 +1543,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         if (this.field_S != null) {
           this.field_S.d(0);
           if (this.simulation.isEffectActive(8, param1 + 10915)) {
-            this.field_S.c(0).a(uca.field_c.nextBounded(9, 0) - 4, 0, -4 + uca.field_c.nextBounded(9, 0), 26768);
+            this.field_S.c(0).a(uca.cosmeticRandom.nextBounded(9, 0) - 4, 0, -4 + uca.cosmeticRandom.nextBounded(9, 0), 26768);
           }
         }
         if (null != this.field_G) {
@@ -1596,7 +1596,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         this.height = this.height + var3 * 2;
         this.width = this.width + 2 * var3;
         this.entranceY = this.entranceY + var3;
-        this.field_B.b(2097152, 2, var3);
+        this.tileGrid.b(2097152, 2, var3);
         if (param1 != -20) {
           this.effectSlots = (int[]) null;
         }
@@ -1618,7 +1618,7 @@ final class Room implements SwitchableScope, Renderable, noa {
     }
 
     final void a(int param0, int param1, byte param2, int param3, int param4, int param5) {
-        pca var7 = this.field_B.a(param0, param3, (byte) 119);
+        TileGridCell var7 = this.tileGrid.a(param0, param3, (byte) 119);
         if (var7 == null) {
           return;
         }
@@ -1626,8 +1626,8 @@ final class Room implements SwitchableScope, Renderable, noa {
           field_p = (ToolkitSprite[][]) null;
         }
         if (var7.b(0) ||
-          uca.field_c.nextBounded(5, 0) == 0) {
-          this.field_F.b(param0, param3, param5, param1, 0, param4);
+          uca.cosmeticRandom.nextBounded(5, 0) == 0) {
+          this.particleEffects.b(param0, param3, param5, param1, 0, param4);
         }
     }
 
@@ -1731,7 +1731,7 @@ final class Room implements SwitchableScope, Renderable, noa {
             }
             var6 = (Trap) (this.traps.next(114));
           }
-          this.field_B.a(8, param0);
+          this.tileGrid.a(8, param0);
           param0.writeBits((byte) 120, this.components.size((byte) -16), 8);
           var7 = (RoomComponent) (this.components.first(-80));
           while (var7 != null) {
@@ -1764,13 +1764,13 @@ final class Room implements SwitchableScope, Renderable, noa {
     }
 
     final void a(boolean param0, int param1, int param2, int param3, int param4, int param5) {
-        pca var7 = this.field_B.a(param4, param1, (byte) 119);
+        TileGridCell var7 = this.tileGrid.a(param4, param1, (byte) 119);
         if (var7 == null) {
           return;
         }
         if (var7.b(0) &&
-          0 == uca.field_c.nextBounded(5, 0)) {
-          this.field_F.b(param4, param1, param3, param2, 0, param5);
+          0 == uca.cosmeticRandom.nextBounded(5, 0)) {
+          this.particleEffects.b(param4, param1, param3, param2, 0, param5);
         }
         if (param0) {
           this.spawnParticle(55, 54, (byte) -12, -30);

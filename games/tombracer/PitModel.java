@@ -491,7 +491,7 @@ final class PitModel extends TrapModel {
                 break;
             }
             var31.field_d = var30.e(true).nextBounded(100, param0 + 110);
-            var31.field_f = dfa.a(var21 + ku.field_j[var31.field_j], 2048, param0 ^ -57);
+            var31.field_f = GameScreen.a(var21 + ku.field_j[var31.field_j], 2048, param0 ^ -57);
             var31.field_a = -var6 + var7;
             var31.field_i = -var5 + var9;
             var31.field_e = this;
@@ -544,7 +544,7 @@ final class PitModel extends TrapModel {
           for (var3 = 0; var3 < this.field_t; var3++) {
             var4 = this.field_m[var2][var3];
             var5 = ku.field_j[var4.field_j];
-            var4.field_f = dfa.a(-var4.field_f + var5, 2048, 93);
+            var4.field_f = GameScreen.a(-var4.field_f + var5, 2048, 93);
             var4.field_i = -var4.field_i;
           }
         }
