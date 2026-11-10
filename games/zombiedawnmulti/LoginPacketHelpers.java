@@ -1,0 +1,219 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class LoginPacketHelpers {
+    static String field_b;
+    static DraggableWidget field_a;
+    static long field_c;
+
+    final static void handleQueuedEntryReply(byte param0) {
+        int var7 = 0;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
+        int var2 = 0;
+        int var3 = 0;
+        int var4 = 0;
+        PendingIntArrayRequest var4_ref_u = null;
+        RandomHelpers var5 = null;
+        int var5_int = 0;
+        int[] var6 = null;
+        int var8 = 0;
+        PacketBuffer var9 = null;
+        CipherPacketBuffer var11 = null;
+        int[] var12 = null;
+        int[] var13 = null;
+        var8 = ZombieDawnMulti.field_E ? 1 : 0;
+        try {
+          var11 = StatusAndMeshHelpers.field_e;
+          if (param0 < 101) {
+            var9 = (PacketBuffer) null;
+            LoginPacketHelpers.writeEncryptedLoginBlock(31, false, (java.math.BigInteger) null, 54, (java.math.BigInteger) null, (byte[]) null, (PacketBuffer) null);
+          }
+          var2 = var11.readUnsignedByte(31365);
+          var3 = var11.readUnsignedByte(31365);
+          if (var2 == 0) {
+            var4_ref_u = (PendingIntArrayRequest) (DisplayNamePanel.field_T.last(83));
+            if (var4_ref_u == null) {
+              ClientShellHelpers.closeGameSocket((byte) -119);
+              return;
+            }
+            var5_int = -var11.position + EmailAvailabilityValidator.field_q;
+            var13 = var4_ref_u.field_h;
+            var12 = var13;
+            var6 = var12;
+            if (var13.length << 2 < var5_int) {
+              var5_int = var13.length << 2;
+            }
+            for (var7 = 0; var5_int > var7; var7++) {
+              var6[var7 >> 2] = var6[var7 >> 2] + (var11.readUnsignedByte(31365) << ScrollPane.bitAnd(768, var7 << 8));
+            }
+            var4_ref_u.unlink(true);
+            return;
+          }
+          if (var2 != 1) {
+            MouseInputHandler.reportClientError("LR1: " + LevelFileList.describeCurrentPacket(0), (Throwable) null, false);
+            ClientShellHelpers.closeGameSocket((byte) -115);
+            return;
+          }
+          var4 = var11.readSignedSmart(22219);
+          var5 = (RandomHelpers) (JaggrabDownloader.field_l.last(83));
+          while (var5 != null) {
+            if (var5.field_v != var3 ||
+              var4 != var5.field_f) {
+              var5 = (RandomHelpers) (JaggrabDownloader.field_l.previous(6));
+              continue;
+            }
+            break;
+          }
+          if (var5 == null) {
+            ClientShellHelpers.closeGameSocket((byte) -117);
+            return;
+          }
+          var5.unlink(true);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "qi.E(" + param0 + ')');
+        }
+    }
+
+    final static void attachCanvasInput(int param0, java.awt.Canvas param1) {
+        RuntimeException var2 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          KeyboardListenerHelpers.attachKeyboardListeners((java.awt.Component) ((Object) param1), 11);
+          if (param0 != 100) {
+            LoginPacketHelpers.releaseStatics((byte) 52);
+          }
+          UnitStateEvent.attachMouseInput((java.awt.Component) ((Object) param1), 127);
+          if (null == FullscreenFocusCanvas.field_a) {
+            return;
+          }
+          FullscreenFocusCanvas.field_a.addTo((byte) 127, (java.awt.Component) ((Object) param1));
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_7_0 = var2;
+          stackIn_7_1 = new StringBuilder().append("qi.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+        }
+    }
+
+    final static void requestLoginBack(boolean param0) {
+        PowerupButton.setAccountDialogResult(4, 102);
+        if (param0) {
+          LoginPacketHelpers.releaseStatics((byte) -45);
+        }
+    }
+
+    public static void releaseStatics(byte param0) {
+        field_a = null;
+        field_b = null;
+        if (param0 != -17) {
+          LoginPacketHelpers.handleQueuedEntryReply((byte) -34);
+        }
+    }
+
+    final static void writeEncryptedLoginBlock(int param0, boolean param1, java.math.BigInteger param2, int param3, java.math.BigInteger param4, byte[] param5, PacketBuffer param6) {
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_23_2 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_26_2 = null;
+        StringBuilder stackIn_28_1 = null;
+        String stackIn_29_2 = null;
+        StringBuilder stackIn_31_1 = null;
+        String stackIn_32_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var7_int = 0;
+        RuntimeException var7 = null;
+        int[] var8 = null;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int[] var12 = null;
+        int[] var13 = null;
+        int var9Lifetime1;
+        var10 = ZombieDawnMulti.field_E ? 1 : 0;
+        try {
+          var7_int = AppearanceScreen.roundUpToMultipleOfEight(param1, param3);
+          if (null == ProxySocketConnector.field_j) {
+            ProxySocketConnector.field_j = new java.security.SecureRandom();
+          }
+          var13 = new int[4];
+          var12 = var13;
+          var8 = var12;
+          for (var9 = 0; 4 > var9; var9++) {
+            var8[var9] = ProxySocketConnector.field_j.nextInt();
+          }
+          if (null == UnitStateEvent.field_k ||
+            !(UnitStateEvent.field_k.payload.length >= var7_int)) {
+            UnitStateEvent.field_k = new PacketBuffer(var7_int);
+          }
+          UnitStateEvent.field_k.position = 0;
+          UnitStateEvent.field_k.writeBytes(param5, param3, param0, 114);
+          UnitStateEvent.field_k.padZerosTo(var7_int, (byte) 119);
+          UnitStateEvent.field_k.encryptXtea(0, var13);
+          if (null == RasterBuffer.field_e ||
+            !(RasterBuffer.field_e.payload.length >= 100)) {
+            RasterBuffer.field_e = new PacketBuffer(100);
+          }
+          RasterBuffer.field_e.position = 0;
+          RasterBuffer.field_e.writeByte(-30, 10);
+          var11 = 0;
+          var9Lifetime1 = var11;
+          while (4 > var11) {
+            RasterBuffer.field_e.writeInt(-128, var13[var11]);
+            var11++;
+          }
+          RasterBuffer.field_e.writeShort(param3, (byte) -82);
+          RasterBuffer.field_e.rsaEncryptContents(param4, -2628, param2);
+          param6.writeBytes(RasterBuffer.field_e.payload, RasterBuffer.field_e.position, 0, 127);
+          param6.writeBytes(UnitStateEvent.field_k.payload, UnitStateEvent.field_k.position, 0, 122);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var7 = decompiledCaughtException;
+          stackIn_22_0 = var7;
+          stackIn_22_1 = new StringBuilder().append("qi.A(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_23_2 = "null";
+          } else {
+            stackIn_23_2 = "{...}";
+          }
+          stackIn_25_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_26_2 = "null";
+          } else {
+            stackIn_26_2 = "{...}";
+          }
+          stackIn_28_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',');
+          if (param5 == null) {
+            stackIn_29_2 = "null";
+          } else {
+            stackIn_29_2 = "{...}";
+          }
+          stackIn_31_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',');
+          if (param6 == null) {
+            stackIn_32_2 = "null";
+          } else {
+            stackIn_32_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+        }
+    }
+
+    static {
+        field_b = "Your request to join has been declined.";
+    }
+}

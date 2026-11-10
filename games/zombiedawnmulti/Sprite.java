@@ -122,7 +122,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final void h(int param0, int param1, int param2) {
+    final void drawTiledHorizontally(int param0, int param1, int param2) {
         int var4 = SoftwareRasterizer.clipRight;
         if (param0 + param2 < SoftwareRasterizer.clipRight) {
           SoftwareRasterizer.clipRight = param0 + param2;
@@ -180,7 +180,7 @@ class Sprite extends SpriteState {
         return false;
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void drawTiledVertically(int param0, int param1, int param2) {
         int var4 = SoftwareRasterizer.clipBottom;
         if (param1 + param2 < SoftwareRasterizer.clipBottom) {
           SoftwareRasterizer.clipBottom = param1 + param2;
@@ -270,7 +270,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
+    private final static void blendNonzeroPixelsTowardColour(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
         int var14 = 0;
         int var15 = 0;
         int incrementValue$12 = 0;
@@ -351,7 +351,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void g(int param0, int param1, int param2) {
+    void drawRecoloredNeutral(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -978,7 +978,7 @@ class Sprite extends SpriteState {
         this.fullWidth = var3Lifetime3;
     }
 
-    final void e(int param0, int param1, int param2, int param3) {
+    final void drawTintedWithOpacity(int param0, int param1, int param2, int param3) {
         int var11 = 0;
         int var11Lifetime1;
         int var11Lifetime2;
@@ -1023,7 +1023,7 @@ class Sprite extends SpriteState {
           if (var7 <= 0) {
             return;
           }
-          Sprite.a(SoftwareRasterizer.pixels, this.pixels, 0, var6, var5, var8, var7, var9, var10, param2, param3);
+          Sprite.blendNonzeroPixelsTowardColour(SoftwareRasterizer.pixels, this.pixels, 0, var6, var5, var8, var7, var9, var10, param2, param3);
           return;
         }
     }
@@ -1075,7 +1075,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final void g() {
+    final void rotateCounterclockwise() {
         int var4 = 0;
         int incrementValue$0 = 0;
         int var3 = 0;
@@ -1229,7 +1229,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void c(int param0, int param1, int param2) {
+    void drawBlended(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -1528,7 +1528,7 @@ class Sprite extends SpriteState {
         this.offsetX = this.fullWidth - this.width - this.offsetX;
     }
 
-    void d(int param0, int param1) {
+    void drawRotatedHalfTurn(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;

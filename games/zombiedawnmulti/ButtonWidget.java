@@ -9,7 +9,7 @@ class ButtonWidget extends UiWidget {
     boolean field_G;
     boolean field_F;
     private boolean field_J;
-    static ip field_K;
+    static ClientProtocolStage field_K;
     static java.math.BigInteger field_L;
     static int[] field_I;
     static String field_D;
@@ -27,12 +27,12 @@ class ButtonWidget extends UiWidget {
         try {
           super.updatePointerState(param0, param1, param2, param3);
           if (this.field_u != 0 &&
-            this.field_u != pq.field_f) {
-            if (this.containsPointer(92, param2, MouseInputHandler.field_g, bo.field_d, param3) &&
-              pq.field_f == 0) {
-              this.activateButton((byte) -49, this.field_u, MouseInputHandler.field_g - param2, bo.field_d - param3);
+            this.field_u != PowerupAuraEffect.field_f) {
+            if (this.containsPointer(92, param2, MouseInputHandler.field_g, LoginMethod.field_d, param3) &&
+              PowerupAuraEffect.field_f == 0) {
+              this.activateButton((byte) -49, this.field_u, MouseInputHandler.field_g - param2, LoginMethod.field_d - param3);
             }
-            this.handlePointerRelease(MouseInputHandler.field_g, param1, param3, bo.field_d, true, param2);
+            this.handlePointerRelease(MouseInputHandler.field_g, param1, param3, LoginMethod.field_d, true, param2);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "gn.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -51,8 +51,8 @@ class ButtonWidget extends UiWidget {
             param0.clearKeyboardFocus((byte) 32);
             this.field_H = true;
             if (null != this.field_A &&
-              this.field_A instanceof om) {
-              ((om) (this.field_A)).onFocusChanged(this.field_H, true, (UiWidget) (this));
+              this.field_A instanceof ButtonFocusListener) {
+              ((ButtonFocusListener) (this.field_A)).onFocusChanged(this.field_H, true, (UiWidget) (this));
             }
             if (param1 == 0) {
               return true;
@@ -89,8 +89,8 @@ class ButtonWidget extends UiWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != null &&
-            param1.length() >= rp.field_j &&
-            param1.length() <= iq.field_e) {
+            param1.length() >= PlayerProfile.field_j &&
+            param1.length() <= TutorialAndMenuHelpers.field_e) {
             if (param0 == 62) {
               return false;
             }
@@ -194,7 +194,7 @@ class ButtonWidget extends UiWidget {
           }
           var3 = param1.readUnsignedShort((byte) 69);
           var4 = param1.readUnsignedByte(31365);
-          stackIn_3_0 = ak.obtainPortalEntryEvent(var4, (byte) -94, var2_int, var3);
+          stackIn_3_0 = ClientShellHelpers.obtainPortalEntryEvent(var4, (byte) -94, var2_int, var3);
           return (GameEvent) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -213,8 +213,8 @@ class ButtonWidget extends UiWidget {
     final void handlePointerRelease(int param0, UiWidget param1, int param2, int param3, boolean param4, int param5) {
         try {
           if (null != this.field_A &&
-            this.field_A instanceof ph) {
-            ((ph) (this.field_A)).onButtonPointerReleased(param2, param3, -108, param0, param5, this);
+            this.field_A instanceof ButtonPointerListener) {
+            ((ButtonPointerListener) (this.field_A)).onButtonPointerReleased(param2, param3, -108, param0, param5, this);
           }
           if (!param4) {
             field_L = (java.math.BigInteger) null;
@@ -236,8 +236,8 @@ class ButtonWidget extends UiWidget {
           if (null == this.field_A) {
             return;
           }
-          if (this.field_A instanceof om) {
-            ((om) (this.field_A)).onFocusChanged(this.field_H, true, (UiWidget) (this));
+          if (this.field_A instanceof ButtonFocusListener) {
+            ((ButtonFocusListener) (this.field_A)).onFocusChanged(this.field_H, true, (UiWidget) (this));
             return;
           }
           return;
@@ -249,14 +249,14 @@ class ButtonWidget extends UiWidget {
         if (null == this.field_A) {
           return;
         }
-        if (this.field_A instanceof om) {
-          ((om) (this.field_A)).onFocusChanged(this.field_H, true, (UiWidget) (this));
+        if (this.field_A instanceof ButtonFocusListener) {
+          ((ButtonFocusListener) (this.field_A)).onFocusChanged(this.field_H, true, (UiWidget) (this));
           return;
         }
     }
 
     ButtonWidget(String param0, WidgetListener param1) {
-        this(param0, ra.field_o.field_n, param1);
+        this(param0, PendingIntArrayReply.field_o.field_n, param1);
     }
 
     boolean handlePointerPress(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
@@ -280,8 +280,8 @@ class ButtonWidget extends UiWidget {
           this.requestKeyboardFocus(param3, param4 ^ -24);
           this.field_u = param2;
           if (null != this.field_A &&
-            this.field_A instanceof ph) {
-            ((ph) (this.field_A)).onButtonPointerPressed(param6, param1, param2, this, param5, param4 - 25285, param0);
+            this.field_A instanceof ButtonPointerListener) {
+            ((ButtonPointerListener) (this.field_A)).onButtonPointerPressed(param6, param1, param2, this, param5, param4 - 25285, param0);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -311,15 +311,15 @@ class ButtonWidget extends UiWidget {
         RuntimeException var3 = null;
         int var5 = 0;
         int var6 = 0;
-        ml var7 = null;
-        ml var8 = null;
+        SocialListRow var7 = null;
+        SocialListRow var8 = null;
         CipherPacketBuffer var9 = null;
         CharSequence var10 = null;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           var10 = (CharSequence) ((Object) param0);
-          if (!BirthDateInputWidget.a(var10, (byte) -38)) {
-            stackIn_3_0 = u.field_f;
+          if (!BirthDateInputWidget.isValidAccountName(var10, (byte) -38)) {
+            stackIn_3_0 = PendingIntArrayRequest.field_f;
             return stackIn_3_0;
           }
           if (2 != SimZombie.field_zb) {
@@ -330,14 +330,14 @@ class ButtonWidget extends UiWidget {
             stackIn_9_0 = (String) null;
             return stackIn_9_0;
           }
-          var8 = dn.a(param0, false);
+          var8 = PackedArrayHelpers.findListEntryByName(param0, false);
           if (var8 == null) {
-            stackIn_13_0 = vl.a(ki.field_i, new String[]{param0}, 2);
+            stackIn_13_0 = QueuedListRequest.substituteTemplateArguments(SpriteHotspot.field_i, new String[]{param0}, 2);
             return stackIn_13_0;
           }
-          ro.field_M.startBackwardFrom((byte) 120, (IntrusiveNode) (var8));
+          LocalGameWorld.field_M.startBackwardFrom((byte) 120, (IntrusiveNode) (var8));
           while (true) {
-            var7 = (ml) (ro.field_M.previous(6));
+            var7 = (SocialListRow) (LocalGameWorld.field_M.previous(6));
             if (var7 != null) {
               var7.field_Mb = var7.field_Mb - 1;
               continue;
@@ -345,15 +345,15 @@ class ButtonWidget extends UiWidget {
             break;
           }
           var8.unlink(true);
-          var8.a(-4564);
+          var8.unlinkSecondary(-4564);
           TabbedPane.field_Fb = TabbedPane.field_Fb - 1;
-          var9 = ma.field_a;
+          var9 = TextValidationFailure.field_a;
           var9.writeCipheredOpcode((byte) -35, param2);
           var9.position = var9.position + 1;
           var5 = var9.position;
           var9.writeByte(-93, 1);
           var9.writeString(param0, (byte) 105);
-          var9.e(73, -var5 + var9.position);
+          var9.backpatchByteLength(73, -var5 + var9.position);
           stackIn_18_0 = null;
           return (String) (stackIn_18_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -454,12 +454,12 @@ class ButtonWidget extends UiWidget {
         this.field_J = true;
         this.field_F = true;
         this.field_H = false;
-        this.painter = ra.field_o.field_a;
+        this.painter = PendingIntArrayReply.field_o.field_a;
     }
 
     static {
         field_B = new java.util.zip.CRC32();
-        field_K = new ip();
+        field_K = new ClientProtocolStage();
         field_D = "Password: ";
         field_I = new int[32];
         field_C = "Player";

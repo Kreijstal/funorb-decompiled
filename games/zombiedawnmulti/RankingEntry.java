@@ -1,0 +1,72 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class RankingEntry {
+    static String field_f;
+    boolean field_g;
+    static Sprite[] field_h;
+    static String field_b;
+    static ClientShellHelpers field_j;
+    static IndexedSprite field_k;
+    String field_c;
+    static String field_a;
+    static int field_i;
+    String field_d;
+    static String field_e;
+
+    final static void requestQuitToWebsite(int param0) {
+        int var1 = 21 % ((27 - param0) / 47);
+        PowerupButton.setAccountDialogResult(17, 115);
+    }
+
+    final static void openLoginDialog(String param0, boolean param1, byte param2, boolean param3) {
+        try {
+          ResizableDialog.resetAccountFlowState(-1);
+          DialogLayerHolder.field_a.closeAllDialogs(-92);
+          IdleTickHelpers.field_c = new LoginForm(ReportAbuseDialog.field_Ib, (String) null, IntrusiveDequeCursor.field_e, param1, param3);
+          SoundEffectInstance.field_i = new LoginDialog(DialogLayerHolder.field_a, IdleTickHelpers.field_c);
+          int var4_int = 120 / ((64 - param2) / 61);
+          DialogLayerHolder.field_a.showDialog(3016, SoundEffectInstance.field_i);
+        } catch (RuntimeException runtimeException) {
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "oi.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        }
+    }
+
+    public static void releaseStatics(int param0) {
+        field_j = null;
+        field_a = null;
+        field_e = null;
+        field_h = null;
+        field_b = null;
+        field_k = null;
+        if (param0 == 5378) {
+          field_f = null;
+          return;
+        }
+        field_h = (Sprite[]) null;
+        field_f = null;
+    }
+
+    static {
+        field_b = "<%0> wants to join";
+        field_f = "Passwords must be between 5 and 20 letters and numbers";
+        field_j = new ClientShellHelpers();
+        field_a = "You need a rating of <%1> to play with the current options.";
+        field_i = (int)(8.0 * Math.sqrt(2.0)) + 1;
+        field_e = "Fullscreen play is an option available to subscribing members only. For more details see the website.";
+    }
+
+    /* Full JVM integer arguments; original narrow signature preserved. */
+    final static void openLoginDialog(String param0, boolean param1, int param2, boolean param3) {
+        try {
+          ResizableDialog.resetAccountFlowState(-1);
+          DialogLayerHolder.field_a.closeAllDialogs(-92);
+          IdleTickHelpers.field_c = new LoginForm(ReportAbuseDialog.field_Ib, (String) null, IntrusiveDequeCursor.field_e, param1, param3);
+          SoundEffectInstance.field_i = new LoginDialog(DialogLayerHolder.field_a, IdleTickHelpers.field_c);
+          int var4_int = 120 / ((64 - param2) / 61);
+          DialogLayerHolder.field_a.showDialog(3016, SoundEffectInstance.field_i);
+        } catch (RuntimeException runtimeException) {
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "oi.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        }
+    }
+}

@@ -33,19 +33,19 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != on.field_Z) {
-            gi.field_m = 0;
-            hh.field_e = 0;
-            vj.field_m = true;
+          if (null != ValidatedTextInputWidget.field_Z) {
+            LevelFileEntry.field_m = 0;
+            MenuInputState.field_e = 0;
+            AppearanceScreen.field_m = true;
             var2_int = param0.getModifiers();
             if ((16 & var2_int) != 0) {
-              ak.field_b = ak.field_b & -2;
+              ClientShellHelpers.field_b = ClientShellHelpers.field_b & -2;
             }
             if ((8 & var2_int) != 0) {
-              ak.field_b = ak.field_b & -3;
+              ClientShellHelpers.field_b = ClientShellHelpers.field_b & -3;
             }
             if ((var2_int & 4) != 0) {
-              ak.field_b = ak.field_b & -5;
+              ClientShellHelpers.field_b = ClientShellHelpers.field_b & -5;
             }
           }
           if (param0.isPopupTrigger()) {
@@ -68,11 +68,11 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
         try {
-          if (null != on.field_Z) {
-            gi.field_m = 0;
-            pb.field_a = -1;
+          if (null != ValidatedTextInputWidget.field_Z) {
+            LevelFileEntry.field_m = 0;
+            EffectAudioHelpers.field_a = -1;
             InflaterDecompressor.field_e = -1;
-            vj.field_m = true;
+            AppearanceScreen.field_m = true;
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "bd.mouseExited(" + (param0 != null ? "{...}" : "null") + ')');
@@ -81,8 +81,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
-          if (null != on.field_Z) {
-            hh.field_e = 0;
+          if (null != ValidatedTextInputWidget.field_Z) {
+            MenuInputState.field_e = 0;
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "bd.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
@@ -694,11 +694,11 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != on.field_Z) {
-            gi.field_m = 0;
-            pb.field_a = param0.getX();
+          if (null != ValidatedTextInputWidget.field_Z) {
+            LevelFileEntry.field_m = 0;
+            EffectAudioHelpers.field_a = param0.getX();
             InflaterDecompressor.field_e = param0.getY();
-            vj.field_m = true;
+            AppearanceScreen.field_m = true;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -723,29 +723,29 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (on.field_Z != null) {
-            gi.field_m = 0;
-            de.field_g = param0.getX();
-            s.field_b = param0.getY();
-            bl.monotonicMillis((byte) 41);
+          if (ValidatedTextInputWidget.field_Z != null) {
+            LevelFileEntry.field_m = 0;
+            AwtEventPumpHelpers.field_g = param0.getX();
+            StatusAndMeshHelpers.field_b = param0.getY();
+            ClockAndScreenHelpers.monotonicMillis((byte) 41);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
-              s.field_f = 1;
-              hh.field_e = 1;
+              StatusAndMeshHelpers.field_f = 1;
+              MenuInputState.field_e = 1;
             } else {
-              s.field_f = 2;
-              hh.field_e = 2;
+              StatusAndMeshHelpers.field_f = 2;
+              MenuInputState.field_e = 2;
             }
             var2_int = param0.getModifiers();
             if ((16 & var2_int) != 0) {
-              ak.field_b = ak.field_b | 1;
+              ClientShellHelpers.field_b = ClientShellHelpers.field_b | 1;
             }
             if ((var2_int & 8) != 0) {
-              ak.field_b = ak.field_b | 2;
+              ClientShellHelpers.field_b = ClientShellHelpers.field_b | 2;
             }
             if ((var2_int & 4) != 0) {
-              ak.field_b = ak.field_b | 4;
+              ClientShellHelpers.field_b = ClientShellHelpers.field_b | 4;
             }
-            vj.field_m = true;
+            AppearanceScreen.field_m = true;
           }
           if (param0.isPopupTrigger()) {
             param0.consume();
@@ -772,11 +772,11 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != on.field_Z) {
-            gi.field_m = 0;
-            pb.field_a = param0.getX();
+          if (null != ValidatedTextInputWidget.field_Z) {
+            LevelFileEntry.field_m = 0;
+            EffectAudioHelpers.field_a = param0.getX();
             InflaterDecompressor.field_e = param0.getY();
-            vj.field_m = true;
+            AppearanceScreen.field_m = true;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -829,24 +829,24 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               }
               var3 = var3 + param0;
             }
-            GameWorld.a(2, var3);
-            var7 = we.a((byte) -65, ":", var3, "%3a");
-            var8 = we.a((byte) -114, "@", var7, "%40");
-            var9 = we.a((byte) -74, "&", var8, "%26");
-            var10 = we.a((byte) 85, "#", var9, "%23");
+            GameWorld.printEscapedError(2, var3);
+            var7 = PlayingSound.replaceAll((byte) -65, ":", var3, "%3a");
+            var8 = PlayingSound.replaceAll((byte) -114, "@", var7, "%40");
+            var9 = PlayingSound.replaceAll((byte) -74, "&", var8, "%26");
+            var10 = PlayingSound.replaceAll((byte) 85, "#", var9, "%23");
             if (null == NetworkGameClient.field_w) {
               return;
             }
-            stackIn_14_0 = kk.field_y;
+            stackIn_14_0 = CacheEntry.field_y;
             stackIn_14_1 = -12;
             stackIn_14_2 = null;
             stackIn_14_3 = null;
             stackIn_14_4 = NetworkGameClient.field_w.getCodeBase();
-            stackIn_14_5 = new StringBuilder().append("clienterror.ws?c=").append(pn.field_b).append("&u=");
+            stackIn_14_5 = new StringBuilder().append("clienterror.ws?c=").append(ArchiveAvailabilityHelpers.field_b).append("&u=");
             if (RasterSnapshot.field_j == null) {
               stackIn_15_2 = null;
               stackIn_15_3 = null;
-              stackIn_15_6 = "" + cm.field_d;
+              stackIn_15_6 = "" + LobbyRequestHelpers.field_d;
             } else {
               stackIn_15_2 = null;
               stackIn_15_3 = null;
@@ -854,7 +854,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             }
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).requestUrlStream((byte) stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(PlatformTaskDispatcher.field_r).append("&v2=").append(PlatformTaskDispatcher.field_q).append("&e=").append(var10).toString()));
             while (var4.field_f == 0) {
-              vd.a(false, 1L);
+              SleepAndNameHelpers.sleepMillis(false, 1L);
             }
             if (var4.field_f == 1) {
               var5 = (DataInputStream) (var4.field_d);
@@ -879,11 +879,11 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (on.field_Z != null) {
-            gi.field_m = 0;
-            pb.field_a = param0.getX();
+          if (ValidatedTextInputWidget.field_Z != null) {
+            LevelFileEntry.field_m = 0;
+            EffectAudioHelpers.field_a = param0.getX();
             InflaterDecompressor.field_e = param0.getY();
-            vj.field_m = true;
+            AppearanceScreen.field_m = true;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

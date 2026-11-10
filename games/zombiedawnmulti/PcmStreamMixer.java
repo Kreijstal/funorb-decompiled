@@ -31,10 +31,10 @@ final class PcmStreamMixer extends PcmStream {
           var3 = (PcmMixerListener) (this.field_k.last(126));
           var4 = var3;
           synchronized (var4) {
-            var5 = var3.a(this);
+            var5 = var3.onDeadline(this);
             if (var5 >= 0) {
               var3.field_f = var5;
-              this.a(var3.previous, var3);
+              this.insertListener(var3.previous, var3);
             } else {
               var3.field_f = 0;
               this.removeListener(var3);
@@ -44,10 +44,10 @@ final class PcmStreamMixer extends PcmStream {
         return;
     }
 
-    private final void a(IntrusiveNode param0, PcmMixerListener param1) {
+    private final void insertListener(IntrusiveNode param0, PcmMixerListener param1) {
         while (true) {
           if (param0 == this.field_k.sentinel) {
-            vc.a(param0, param1, true);
+            KeyMapHelpers.insertNodeAfter(param0, param1, true);
             this.field_m = ((PcmMixerListener) (this.field_k.sentinel.previous)).field_f;
             return;
           }
@@ -57,7 +57,7 @@ final class PcmStreamMixer extends PcmStream {
           }
           break;
         }
-        vc.a(param0, param1, true);
+        KeyMapHelpers.insertNodeAfter(param0, param1, true);
         this.field_m = ((PcmMixerListener) (this.field_k.sentinel.previous)).field_f;
         return;
     }
@@ -68,7 +68,7 @@ final class PcmStreamMixer extends PcmStream {
 
     private final void removeListener(PcmMixerListener param0) {
         param0.unlink(true);
-        param0.a();
+        param0.onRemoved();
         IntrusiveNode var2 = this.field_k.sentinel.previous;
         if (var2 == this.field_k.sentinel) {
           this.field_m = -1;
@@ -81,7 +81,7 @@ final class PcmStreamMixer extends PcmStream {
         return 0;
     }
 
-    final synchronized void b(PcmStream param0) {
+    final synchronized void addSubStream(PcmStream param0) {
         this.field_l.addLast(-25612, param0);
     }
 
@@ -118,10 +118,10 @@ final class PcmStreamMixer extends PcmStream {
           var5 = (PcmMixerListener) (this.field_k.last(84));
           var6 = var5;
           synchronized (var6) {
-            var7 = var5.a(this);
+            var7 = var5.onDeadline(this);
             if (var7 >= 0) {
               var5.field_f = var7;
-              this.a(var5.previous, var5);
+              this.insertListener(var5.previous, var5);
             } else {
               var5.field_f = 0;
               this.removeListener(var5);

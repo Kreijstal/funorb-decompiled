@@ -1,0 +1,164 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ClientProtocolStage {
+    static String field_d;
+    static String field_b;
+    static String field_a;
+    static String field_c;
+    static int field_f;
+    static IndexedSprite field_e;
+
+    final static void setFrameRate(int param0, int param1) {
+        if (param0 > -119) {
+          field_c = (String) null;
+          TextLayoutLine.field_g = 1000000000L / (long)param1;
+          return;
+        }
+        TextLayoutLine.field_g = 1000000000L / (long)param1;
+    }
+
+    final static void resetTextureAnimationLists(byte param0) {
+        HudSpriteStore.field_c = new int[]{};
+        SoundCache.field_f = new int[]{};
+        Camera.field_u = new int[]{};
+        if (param0 <= 75) {
+          field_d = (String) null;
+        }
+    }
+
+    final static void drawAwtLoadingBar(int param0, java.awt.Color param1, boolean param2, String param3, int param4) {
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_22_2 = null;
+        StringBuilder stackIn_24_1 = null;
+        String stackIn_25_2 = null;
+        Throwable decompiledCaughtException = null;
+        Exception var5 = null;
+        RuntimeException var5_ref = null;
+        Exception var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        java.awt.Graphics var9 = null;
+        java.awt.Graphics var10 = null;
+        try {
+          try {
+            var9 = NameEntryPopup.field_Ib.getGraphics();
+            if (null == GameCharacter.field_hb) {
+              GameCharacter.field_hb = new java.awt.Font("Helvetica", 1, 13);
+            }
+            if (param2) {
+              var9.setColor(java.awt.Color.black);
+              var9.fillRect(0, 0, ArchiveProvider.field_d, CredentialKind.field_i);
+            }
+            if (param1 == null) {
+              param1 = new java.awt.Color(140, 17, 17);
+            }
+            try {
+              if (null == PhaseChangeEvent.field_i) {
+                PhaseChangeEvent.field_i = NameEntryPopup.field_Ib.createImage(304, 34);
+              }
+              var10 = PhaseChangeEvent.field_i.getGraphics();
+              var10.setColor(param1);
+              var10.drawRect(0, 0, 303, 33);
+              var10.fillRect(2, 2, 3 * param0, 30);
+              var10.setColor(java.awt.Color.black);
+              var10.drawRect(1, 1, 301, 31);
+              if (param4 != 34) {
+                field_c = (String) null;
+              }
+              var10.fillRect(param0 * 3 + 2, 2, -(3 * param0) + 300, 30);
+              var10.setFont(GameCharacter.field_hb);
+              var10.setColor(java.awt.Color.white);
+              var10.drawString(param3, (-(param3.length() * 6) + 304) / 2, 22);
+              var9.drawImage(PhaseChangeEvent.field_i, ArchiveProvider.field_d / 2 - 152, -18 + CredentialKind.field_i / 2, (java.awt.image.ImageObserver) null);
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var6 = (Exception) (Object) decompiledCaughtException;
+              var7 = ArchiveProvider.field_d / 2 - 152;
+              var8 = -18 + CredentialKind.field_i / 2;
+              var9.setColor(param1);
+              var9.drawRect(var7, var8, 303, 33);
+              var9.fillRect(var7 + 2, var8 + 2, 3 * param0, 30);
+              var9.setColor(java.awt.Color.black);
+              var9.drawRect(1 + var7, 1 + var8, 301, 31);
+              var9.fillRect(2 + (var7 + param0 * 3), var8 + 2, -(3 * param0) + 300, 30);
+              var9.setFont(GameCharacter.field_hb);
+              var9.setColor(java.awt.Color.white);
+              var9.drawString(param3, (-(6 * param3.length()) + 304) / 2 + var7, 22 + var8);
+            }
+            if (SoundStopHelpers.field_b == null) {
+              return;
+            }
+            var9.setFont(GameCharacter.field_hb);
+            var9.setColor(java.awt.Color.white);
+            var9.drawString(SoundStopHelpers.field_b, ArchiveProvider.field_d / 2 - 6 * SoundStopHelpers.field_b.length() / 2, CredentialKind.field_i / 2 - 26);
+            return;
+          } catch (java.lang.Exception decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var5 = (Exception) (Object) decompiledCaughtException;
+            NameEntryPopup.field_Ib.repaint();
+            return;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
+          decompiledCaughtException = decompiledCaughtParameter2;
+          var5_ref = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_21_0 = var5_ref;
+          stackIn_21_1 = new StringBuilder().append("ip.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_22_2 = "null";
+          } else {
+            stackIn_22_2 = "{...}";
+          }
+          stackIn_24_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_25_2 = "null";
+          } else {
+            stackIn_25_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param4).append(')').toString());
+        }
+    }
+
+    public static void releaseStatics(byte param0) {
+        field_c = null;
+        if (param0 >= 118) {
+          field_d = null;
+          field_a = null;
+          field_b = null;
+          field_e = null;
+          return;
+        }
+        field_a = (String) null;
+        field_d = null;
+        field_a = null;
+        field_b = null;
+        field_e = null;
+    }
+
+    final boolean isPostRequestStage(byte param0) {
+        int var2 = 27 % ((param0 - 55) / 62);
+        if (this == PulseEffect.field_l) {
+          return true;
+        }
+        if (Js5Transport.field_e == this) {
+          return true;
+        }
+        if (this != CredentialKind.field_a) {
+          return false;
+        }
+        return true;
+    }
+
+    public final String toString() {
+        throw new IllegalStateException();
+    }
+
+    static {
+        field_a = "Create";
+        field_d = "Your zombies will not be affected by powerups. But you'll not be able to use any except Counter.";
+        field_b = "Updates will sent to the email address you've given";
+        field_c = "Summary";
+        field_f = 3;
+    }
+}

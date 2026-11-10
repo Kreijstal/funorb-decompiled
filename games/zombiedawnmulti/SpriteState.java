@@ -15,7 +15,7 @@ abstract class SpriteState extends DualLinkNode {
     static int[] field_q;
 
     final static void clearAppletStatusCookie(int param0) {
-        og.clearStatusCookie(0, StatefulTextPainter.b(0));
+        ZombieDrop.clearStatusCookie(0, StatefulTextPainter.getHostApplet(0));
         int var1 = -5 % ((33 - param0) / 60);
     }
 
@@ -37,7 +37,7 @@ abstract class SpriteState extends DualLinkNode {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          eq.a((java.awt.Component) ((Object) param1), (byte) 127);
+          Js5ArchiveManager.detachKeyboardListeners((java.awt.Component) ((Object) param1), (byte) 127);
           BufferedFile.detachMouseInput(-1693, (java.awt.Component) ((Object) param1));
           if (param0 != 95) {
             field_s = (IntrusiveDeque) null;

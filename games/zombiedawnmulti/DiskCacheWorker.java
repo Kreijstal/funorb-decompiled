@@ -3,7 +3,7 @@
  */
 final class DiskCacheWorker implements Runnable {
     private DualLinkDeque field_e;
-    static gh field_g;
+    static AccountServerResult field_g;
     static String field_d;
     static int field_a;
     private Thread field_i;
@@ -12,11 +12,11 @@ final class DiskCacheWorker implements Runnable {
     static int field_b;
     int field_h;
 
-    final li queueRead(int param0, SectorCacheStore param1, int param2) {
-        li var4 = null;
+    final DiskArchiveRequest queueRead(int param0, SectorCacheStore param1, int param2) {
+        DiskArchiveRequest var4 = null;
         RuntimeException var4_ref = null;
         SectorCacheStore var5 = null;
-        li stackIn_3_0 = null;
+        DiskArchiveRequest stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -26,7 +26,7 @@ final class DiskCacheWorker implements Runnable {
             var5 = (SectorCacheStore) null;
             this.readNow(-98, (SectorCacheStore) null, -12);
           }
-          var4 = new li();
+          var4 = new DiskArchiveRequest();
           var4.field_B = param1;
           var4.field_r = false;
           var4.field_y = 3;
@@ -50,8 +50,8 @@ final class DiskCacheWorker implements Runnable {
 
     final static void startDisplayNameLogin(String param0, byte param1) {
         try {
-          DateInputWidget.a(param0, (byte) 48);
-          PowerupCommand.a(StatefulTextPainter.field_v, false, 102);
+          DateInputWidget.setLoginExtraString(param0, (byte) 48);
+          PowerupCommand.openMessageDialog(StatefulTextPainter.field_v, false, 102);
           int var2_int = -102 % ((52 - param1) / 40);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ai.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -62,7 +62,7 @@ final class DiskCacheWorker implements Runnable {
         try {
           InterruptedException interruptedException = null;
           int var5 = 0;
-          li var7 = null;
+          DiskArchiveRequest var7 = null;
           int decompiledRegionSelector0 = 0;
           int decompiledRegionSelector1 = 0;
           Throwable decompiledCaughtException = null;
@@ -73,7 +73,7 @@ final class DiskCacheWorker implements Runnable {
           while (!this.field_f) {
             var2 = this.field_e;
             synchronized (var2) {
-              var7 = (li) (this.field_e.removeLast(11356));
+              var7 = (DiskArchiveRequest) (this.field_e.removeLast(11356));
               if (var7 != null) {
                 this.field_h = this.field_h - 1;
                 decompiledRegionSelector0 = 1;
@@ -127,11 +127,11 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    final li queueWrite(int param0, SectorCacheStore param1, byte[] param2, int param3) {
-        li var5 = null;
+    final DiskArchiveRequest queueWrite(int param0, SectorCacheStore param1, byte[] param2, int param3) {
+        DiskArchiveRequest var5 = null;
         RuntimeException var5_ref = null;
-        li stackIn_2_0 = null;
-        li stackIn_4_0 = null;
+        DiskArchiveRequest stackIn_2_0 = null;
+        DiskArchiveRequest stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -139,7 +139,7 @@ final class DiskCacheWorker implements Runnable {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = new li();
+          var5 = new DiskArchiveRequest();
           var5.field_r = false;
           var5.secondaryKey = (long)param0;
           var5.field_D = param2;
@@ -150,7 +150,7 @@ final class DiskCacheWorker implements Runnable {
             stackIn_4_0 = var5;
             return stackIn_4_0;
           }
-          stackIn_2_0 = (li) null;
+          stackIn_2_0 = (DiskArchiveRequest) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -191,37 +191,37 @@ final class DiskCacheWorker implements Runnable {
           if (param1 != 110) {
             field_d = (String) null;
           }
-          while (65536 <= DropTargetWidget.multiplyFixed16((byte) 120, DualLinkDeque.field_b, nf.field_b)) {
+          while (65536 <= DropTargetWidget.multiplyFixed16((byte) 120, DualLinkDeque.field_b, EmailDomainValidation.field_b)) {
             ClientException.field_c = ClientException.field_c + 1;
-            DualLinkDeque.field_b = DualLinkDeque.field_b - nf.field_b;
+            DualLinkDeque.field_b = DualLinkDeque.field_b - EmailDomainValidation.field_b;
           }
           var2_int = -1;
           if (null == QuickChatMenu.field_Ub) {
-            if (null != ao.field_h) {
-              var2_int = ao.field_h.length;
+            if (null != QuickChatCommandType.field_h) {
+              var2_int = QuickChatCommandType.field_h.length;
             }
           } else {
             var2_int = QuickChatMenu.field_Ub.length;
           }
           if (var2_int != -1) {
             boolean decompiledFrameRemainder0 = true;
-            if (lb.field_a < nf.field_c) {
-              lb.field_a = lb.field_a + 1;
-              if (lb.field_a > nf.field_a && (null == QuickChatMenu.field_Ub ||
+            if (PasswordCheckHelpers.field_a < EmailDomainValidation.field_c) {
+              PasswordCheckHelpers.field_a = PasswordCheckHelpers.field_a + 1;
+              if (PasswordCheckHelpers.field_a > EmailDomainValidation.field_a && (null == QuickChatMenu.field_Ub ||
                 null == QuickChatMenu.field_Ub[DebouncedValidationProvider.field_g])) {
-                lb.field_a = lb.field_a - 1;
+                PasswordCheckHelpers.field_a = PasswordCheckHelpers.field_a - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
-                if (lb.field_a >= nf.field_c &&
+                if (PasswordCheckHelpers.field_a >= EmailDomainValidation.field_c &&
                   QuickChatMenu.field_Ub[(DebouncedValidationProvider.field_g + 1) % var2_int] == null) {
-                  lb.field_a = lb.field_a - 1;
+                  PasswordCheckHelpers.field_a = PasswordCheckHelpers.field_a - 1;
                 }
               }
             }
-            if (nf.field_c <= lb.field_a) {
+            if (EmailDomainValidation.field_c <= PasswordCheckHelpers.field_a) {
               DebouncedValidationProvider.field_j = DebouncedValidationProvider.field_g;
-              if (qh.field_a) {
+              if (TabbedOverlayPanel.field_a) {
                 DebouncedValidationProvider.field_g = DebouncedValidationProvider.field_g + 1;
                 if (DebouncedValidationProvider.field_g >= var2_int) {
                   DebouncedValidationProvider.field_g = DebouncedValidationProvider.field_g - var2_int;
@@ -232,49 +232,49 @@ final class DiskCacheWorker implements Runnable {
                   DebouncedValidationProvider.field_g = DebouncedValidationProvider.field_g + var2_int;
                 }
               }
-              lb.field_a = lb.field_a - nf.field_c;
+              PasswordCheckHelpers.field_a = PasswordCheckHelpers.field_a - EmailDomainValidation.field_c;
             }
-            if (nf.field_a < lb.field_a) {
-              qh.field_a = true;
+            if (EmailDomainValidation.field_a < PasswordCheckHelpers.field_a) {
+              TabbedOverlayPanel.field_a = true;
             }
           }
           if (ReportAbuseDialog.field_Tb != null) {
             var3 = -(ReportAbuseDialog.field_Tb.field_u / 2) + 357;
             var4 = 0;
-            if (kd.field_b != 0 &&
+            if (StringHashHelpers.field_b != 0 &&
               ChatMessage.field_t > var3 &&
               ReportAbuseDialog.field_Tb.height + var3 > ChatMessage.field_t) {
-              if (269 - ReportAbuseDialog.field_Tb.width < vb.field_f &&
-                vb.field_f < 269) {
+              if (269 - ReportAbuseDialog.field_Tb.width < LobbyUiSetupHelpers.field_f &&
+                LobbyUiSetupHelpers.field_f < 269) {
                 var4 = 1;
-                lb.field_a = nf.field_c;
-                qh.field_a = false;
+                PasswordCheckHelpers.field_a = EmailDomainValidation.field_c;
+                TabbedOverlayPanel.field_a = false;
               }
-              if (vb.field_f > 586 &&
-                vb.field_f < ReportAbuseDialog.field_Tb.width + 586) {
+              if (LobbyUiSetupHelpers.field_f > 586 &&
+                LobbyUiSetupHelpers.field_f < ReportAbuseDialog.field_Tb.width + 586) {
                 var4 = 1;
-                qh.field_a = true;
-                lb.field_a = nf.field_c;
+                TabbedOverlayPanel.field_a = true;
+                PasswordCheckHelpers.field_a = EmailDomainValidation.field_c;
               }
             }
             if (var4 == 0 &&
-              nf.field_a < lb.field_a &&
-              bo.field_d > var3 &&
-              ReportAbuseDialog.field_Tb.height + var3 > bo.field_d) {
+              EmailDomainValidation.field_a < PasswordCheckHelpers.field_a &&
+              LoginMethod.field_d > var3 &&
+              ReportAbuseDialog.field_Tb.height + var3 > LoginMethod.field_d) {
               if (-ReportAbuseDialog.field_Tb.width + 269 < MouseInputHandler.field_g &&
                 269 > MouseInputHandler.field_g) {
-                lb.field_a = nf.field_a;
+                PasswordCheckHelpers.field_a = EmailDomainValidation.field_a;
               }
               if (MouseInputHandler.field_g > 586 &&
                 MouseInputHandler.field_g < 586 + ReportAbuseDialog.field_Tb.width) {
-                lb.field_a = nf.field_a;
+                PasswordCheckHelpers.field_a = EmailDomainValidation.field_a;
               }
             }
           }
           if (!param0) {
             return 0;
           }
-          UsernameSuggestionsPanel.field_H.updatePointer(ResizableDialog.hitTestPairedSprites(bo.field_d, -1, MouseInputHandler.field_g), 104, ResizableDialog.hitTestPairedSprites(ChatMessage.field_t, param1 - 111, vb.field_f));
+          UsernameSuggestionsPanel.field_H.updatePointer(ResizableDialog.hitTestPairedSprites(LoginMethod.field_d, -1, MouseInputHandler.field_g), 104, ResizableDialog.hitTestPairedSprites(ChatMessage.field_t, param1 - 111, LobbyUiSetupHelpers.field_f));
           if (UsernameSuggestionsPanel.field_H.isActivated(-85)) {
             if (UsernameSuggestionsPanel.field_H.field_d == 0) {
               stackIn_63_0 = 3;
@@ -327,30 +327,30 @@ final class DiskCacheWorker implements Runnable {
         field_g = null;
     }
 
-    final li readNow(int param0, SectorCacheStore param1, int param2) {
-        li var4 = null;
+    final DiskArchiveRequest readNow(int param0, SectorCacheStore param1, int param2) {
+        DiskArchiveRequest var4 = null;
         RuntimeException var4_ref = null;
         Object var5 = null;
-        li var6 = null;
+        DiskArchiveRequest var6 = null;
         int var8 = 0;
-        li stackIn_3_0 = null;
-        li stackIn_12_0 = null;
-        li stackIn_19_0 = null;
+        DiskArchiveRequest stackIn_3_0 = null;
+        DiskArchiveRequest stackIn_12_0 = null;
+        DiskArchiveRequest stackIn_19_0 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
         Throwable decompiledCaughtException = null;
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var4 = new li();
+          var4 = new DiskArchiveRequest();
           if (param2 != -3) {
-            stackIn_3_0 = (li) null;
+            stackIn_3_0 = (DiskArchiveRequest) null;
             return stackIn_3_0;
           }
           var4.field_y = 1;
           var5 = this.field_e;
           synchronized (var5) {
-            var6 = (li) (this.field_e.first((byte) 85));
+            var6 = (DiskArchiveRequest) (this.field_e.first((byte) 85));
             while (var6 != null) {
               if (var6.secondaryKey == (long)param0 &&
                 param1 == var6.field_B &&
@@ -360,7 +360,7 @@ final class DiskCacheWorker implements Runnable {
                 stackIn_12_0 = var4;
                 return stackIn_12_0;
               }
-              var6 = (li) (this.field_e.next((byte) 118));
+              var6 = (DiskArchiveRequest) (this.field_e.next((byte) 118));
             }
           }
           var4.field_D = param1.read(1, param0);
@@ -383,9 +383,9 @@ final class DiskCacheWorker implements Runnable {
     }
 
     final static Object wrapBytes(int param0, boolean param1, byte[] param2) {
-        bk var3 = null;
+        DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
-        bk stackIn_5_0 = null;
+        DirectByteStorage stackIn_5_0 = null;
         byte[] stackIn_8_0 = null;
         byte[] stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
@@ -397,13 +397,13 @@ final class DiskCacheWorker implements Runnable {
             return null;
           }
           if (param0 > ~param2.length) {
-            var3 = new bk();
-            ((t) ((Object) var3)).setBytes(param2, (byte) -72);
+            var3 = new DirectByteStorage();
+            ((ByteStorage) ((Object) var3)).setBytes(param2, (byte) -72);
             stackIn_5_0 = var3;
             return stackIn_5_0;
           }
           if (param1) {
-            stackIn_10_0 = ValidationState.a(255, param2);
+            stackIn_10_0 = ValidationState.copyBytes(255, param2);
             return stackIn_10_0;
           }
           stackIn_8_0 = (byte[]) (param2);
@@ -422,7 +422,7 @@ final class DiskCacheWorker implements Runnable {
         }
     }
 
-    private final void enqueue(boolean param0, li param1) {
+    private final void enqueue(boolean param0, DiskArchiveRequest param1) {
         synchronized (this.field_e) {
           this.field_e.add(29664, param1);
           if (param0) {
@@ -458,27 +458,27 @@ final class DiskCacheWorker implements Runnable {
 
     final static boolean handleQuickChatKey(boolean param0, int param1, int param2) {
         if (InfectionEvent.field_p == 13) {
-          ub.closeChatInputIfOpen(33423425);
+          LoginDialog.closeChatInputIfOpen(33423425);
           return true;
         }
         if (InfectionEvent.field_p == 102) {
-          mj.field_Ib.resetSelection((byte) 113);
+          ScrollBar.field_Ib.resetSelection((byte) 113);
           return true;
         }
         if (param0) {
           DiskCacheWorker.advanceSlideshow(true, (byte) 112);
-          if (null == mj.field_Ib) {
+          if (null == ScrollBar.field_Ib) {
             return false;
           }
-          if (mj.field_Ib.handleShortcutKey(96, param2, param1)) {
+          if (ScrollBar.field_Ib.handleShortcutKey(96, param2, param1)) {
             return true;
           }
           return false;
         }
-        if (null == mj.field_Ib) {
+        if (null == ScrollBar.field_Ib) {
           return false;
         }
-        if (mj.field_Ib.handleShortcutKey(96, param2, param1)) {
+        if (ScrollBar.field_Ib.handleShortcutKey(96, param2, param1)) {
           return true;
         }
         return false;
@@ -492,7 +492,7 @@ final class DiskCacheWorker implements Runnable {
         try {
           var2 = param0.startThread(121, (Runnable) (this), 5);
           while (var2.field_f == 0) {
-            vd.a(false, 10L);
+            SleepAndNameHelpers.sleepMillis(false, 10L);
           }
           if (var2.field_f == 2) {
             throw new RuntimeException();

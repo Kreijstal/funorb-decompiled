@@ -15,12 +15,12 @@ final class PowerupCommand extends IntrusiveNode {
     static String field_j;
     int player;
 
-    final static void a(String param0, boolean param1, int param2) {
+    final static void openMessageDialog(String param0, boolean param1, int param2) {
         try {
-          bl.field_h = param1;
-          nj.field_f = true;
-          PortalView.field_L = new MessageDialog(nb.field_a, ci.field_d, param0, IntrusiveDequeCursor.field_e, bl.field_h);
-          nb.field_a.showDialog(3016, PortalView.field_L);
+          ClockAndScreenHelpers.field_h = param1;
+          MusicPatchEnvelope.field_f = true;
+          PortalView.field_L = new MessageDialog(DialogLayerHolder.field_a, LevelFileList.field_d, param0, IntrusiveDequeCursor.field_e, ClockAndScreenHelpers.field_h);
+          DialogLayerHolder.field_a.showDialog(3016, PortalView.field_L);
           if (param2 <= 89) {
             field_j = (String) null;
           }
@@ -38,7 +38,7 @@ final class PowerupCommand extends IntrusiveNode {
           return;
         }
         String var2 = (String) null;
-        PowerupCommand.a((String) null, false, 17);
+        PowerupCommand.openMessageDialog((String) null, false, 17);
         field_m = null;
         field_o = null;
         field_l = null;

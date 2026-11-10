@@ -36,9 +36,9 @@ final class StateIconLabel extends UiComponent {
     final int measureLabelWidth(byte param0, int param1) {
         if (param0 <= 92) {
           this.layoutIconLabel(false, -106);
-          return param1 + (this.field_Lb.e(0) + this.field_Fb.e(0));
+          return param1 + (this.field_Lb.getPreferredWidth(0) + this.field_Fb.getPreferredWidth(0));
         }
-        return param1 + (this.field_Lb.e(0) + this.field_Fb.e(0));
+        return param1 + (this.field_Lb.getPreferredWidth(0) + this.field_Fb.getPreferredWidth(0));
     }
 
     private final void layoutIconLabel(boolean param0, int param1) {
@@ -46,12 +46,12 @@ final class StateIconLabel extends UiComponent {
         int var3Lifetime1;
         if (!param0) {
           StateIconLabel.sendByteRequest(-119, -84);
-          this.field_Lb.setBounds(this.field_z, 0, this.field_Lb.e(0), 0, -3344);
+          this.field_Lb.setBounds(this.field_z, 0, this.field_Lb.getPreferredWidth(0), 0, -3344);
           var3 = param1 + this.field_Lb.field_zb;
           this.field_Fb.setBounds(this.field_z, 0, this.field_zb - var3, var3, -3344);
           return;
         }
-        this.field_Lb.setBounds(this.field_z, 0, this.field_Lb.e(0), 0, -3344);
+        this.field_Lb.setBounds(this.field_z, 0, this.field_Lb.getPreferredWidth(0), 0, -3344);
         var3Lifetime1 = param1 + this.field_Lb.field_zb;
         this.field_Fb.setBounds(this.field_z, 0, this.field_zb - var3Lifetime1, var3Lifetime1, -3344);
     }
@@ -71,8 +71,8 @@ final class StateIconLabel extends UiComponent {
         field_Jb = null;
     }
 
-    final static void insertLobbyGameSorted(jh param0, int param1) {
-        jh var2 = null;
+    final static void insertLobbyGameSorted(LobbyGame param0, int param1) {
+        LobbyGame var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -85,19 +85,19 @@ final class StateIconLabel extends UiComponent {
             return;
           }
           param0.unlink(true);
-          var2 = (jh) (tn.field_C.last(79));
+          var2 = (LobbyGame) (NetworkArchiveRequest.field_C.last(79));
           while (var2 != null) {
-            if (var2.a(param0, (byte) -53)) {
-              var2 = (jh) (tn.field_C.previous(6));
+            if (var2.sortsBefore(param0, (byte) -53)) {
+              var2 = (LobbyGame) (NetworkArchiveRequest.field_C.previous(6));
               continue;
             }
             break;
           }
           if (var2 == null) {
-            tn.field_C.addFirst(param0, false);
+            NetworkArchiveRequest.field_C.addFirst(param0, false);
             return;
           }
-          vc.a(var2, param0, true);
+          KeyMapHelpers.insertNodeAfter(var2, param0, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -119,8 +119,8 @@ final class StateIconLabel extends UiComponent {
           this.field_Lb = new UiComponent(0L, param1);
           this.field_Fb = new UiComponent(0L, param2);
           this.field_Fb.field_wb = param3;
-          this.a((byte) 50, this.field_Lb);
-          this.a((byte) 50, this.field_Fb);
+          this.addChild((byte) 50, this.field_Lb);
+          this.addChild((byte) 50, this.field_Fb);
           this.markDescendantsToInheritVisualState(-128);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "mi.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -128,7 +128,7 @@ final class StateIconLabel extends UiComponent {
     }
 
     final static void sendByteRequest(int param0, int param1) {
-        CipherPacketBuffer var2 = ma.field_a;
+        CipherPacketBuffer var2 = TextValidationFailure.field_a;
         var2.writeCipheredOpcode((byte) -35, param1);
         var2.writeByte(109, param0);
         var2.writeByte(-116, 0);

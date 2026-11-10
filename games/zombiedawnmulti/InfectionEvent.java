@@ -25,19 +25,19 @@ final class InfectionEvent extends GameEvent {
         RuntimeException var4 = null;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          SceneObject.field_B = oi.field_j;
+          SceneObject.field_B = RankingEntry.field_j;
           if (param2 == 255) {
             stackIn_9_0 = false;
-            stackIn_10_1 = !(rj.field_J >= 13);
-            iq.field_c = CheckboxPainter.createFlagResult(stackIn_9_0, stackIn_10_1);
+            stackIn_10_1 = !(RubbleChunk.field_J >= 13);
+            TutorialAndMenuHelpers.field_c = CheckboxPainter.createFlagResult(stackIn_9_0, stackIn_10_1);
           } else {
             if (param2 < 100) {
-              iq.field_c = p.createRequestResult(-38, param3, param2);
+              TutorialAndMenuHelpers.field_c = ObjectFactoryHelpers.createRequestResult(-38, param3, param2);
             } else {
               if (105 < param2) {
-                iq.field_c = p.createRequestResult(-38, param3, param2);
+                TutorialAndMenuHelpers.field_c = ObjectFactoryHelpers.createRequestResult(-38, param3, param2);
               } else {
-                iq.field_c = kn.a(args, -111);
+                TutorialAndMenuHelpers.field_c = LoginStartHelpers.createResultWithArgs(args, -111);
               }
             }
           }
@@ -86,17 +86,17 @@ final class InfectionEvent extends GameEvent {
           return;
         }
         try {
-          var7 = new int[1 + me.field_f.length];
+          var7 = new int[1 + SoundCache.field_f.length];
           var3 = var7;
-          var4 = new int[me.field_f.length + 1];
-          for (var5 = 0; me.field_f.length > var5; var5++) {
-            var7[var5] = me.field_f[var5];
+          var4 = new int[SoundCache.field_f.length + 1];
+          for (var5 = 0; SoundCache.field_f.length > var5; var5++) {
+            var7[var5] = SoundCache.field_f[var5];
             var4[var5] = Camera.field_u[var5];
           }
           var3[var3.length - 1] = param1;
           var4[-1 + var4.length] = param0;
           Camera.field_u = var4;
-          me.field_f = var3;
+          SoundCache.field_f = var3;
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "sj.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
@@ -137,18 +137,18 @@ final class InfectionEvent extends GameEvent {
             var9 = param0;
             var10 = param6;
             for (var11 = param5; param4 > var11; var11++) {
-              var12 = la.field_c[var11];
+              var12 = GrowableIntList.field_c[var11];
               if (param3) {
-                stackIn_26_0 = lb.field_c[var12];
+                stackIn_26_0 = PasswordCheckHelpers.field_c[var12];
               } else {
-                stackIn_26_0 = hn.field_f[var12];
+                stackIn_26_0 = FrameCycleAnimation.field_f[var12];
               }
               var13 = stackIn_26_0;
               if (var13 > var7_int) {
-                la.field_c[var11] = la.field_c[var8];
+                GrowableIntList.field_c[var11] = GrowableIntList.field_c[var8];
                 incrementValue$0 = var8;
                 var8++;
-                la.field_c[incrementValue$0] = var12;
+                GrowableIntList.field_c[incrementValue$0] = var12;
                 if (var9 > var13) {
                   var9 = var13;
                 }
@@ -164,11 +164,11 @@ final class InfectionEvent extends GameEvent {
           }
           for (var7_intLifetime1 = param4 - 1; var7_intLifetime1 > param5; var7_intLifetime1--) {
             for (var8Lifetime1 = param5; var7_intLifetime1 > var8Lifetime1; var8Lifetime1++) {
-              var9Lifetime1 = la.field_c[var8Lifetime1];
-              var10Lifetime1 = la.field_c[1 + var8Lifetime1];
-              if (TextInputValidator.a(101, param3, var9Lifetime1, var10Lifetime1)) {
-                la.field_c[var8Lifetime1] = var10Lifetime1;
-                la.field_c[1 + var8Lifetime1] = var9Lifetime1;
+              var9Lifetime1 = GrowableIntList.field_c[var8Lifetime1];
+              var10Lifetime1 = GrowableIntList.field_c[1 + var8Lifetime1];
+              if (TextInputValidator.comesBeforeRankingRow(101, param3, var9Lifetime1, var10Lifetime1)) {
+                GrowableIntList.field_c[var8Lifetime1] = var10Lifetime1;
+                GrowableIntList.field_c[1 + var8Lifetime1] = var9Lifetime1;
               }
             }
           }
@@ -194,13 +194,13 @@ final class InfectionEvent extends GameEvent {
         Waypoint var5_ref = null;
         GameCharacter var6 = null;
         try {
-          var3 = PortalEntryEvent.field_m.a(this.field_i, 70);
+          var3 = PortalEntryEvent.field_m.findHumanView(this.field_i, 70);
           var4 = null;
           try {
             if (this.field_l == -1) {
               stackIn_4_0 = null;
             } else {
-              stackIn_4_0 = PortalEntryEvent.field_m.a(this.field_l, false);
+              stackIn_4_0 = PortalEntryEvent.field_m.findCharacter(this.field_l, false);
             }
             var4_ref = stackIn_4_0;
             if (param0 != 0) {
@@ -253,7 +253,7 @@ final class InfectionEvent extends GameEvent {
           if (param1 != 12319) {
             InfectionEvent.sortRankingRange(97, -25, -42, true, 8, 4, 118);
           }
-          stackIn_3_0 = dp.a(0, false, param0);
+          stackIn_3_0 = DisplayNameRequestHelpers.isValidDisplayNameText(0, false, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

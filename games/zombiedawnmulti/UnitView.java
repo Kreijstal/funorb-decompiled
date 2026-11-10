@@ -68,7 +68,7 @@ abstract class UnitView extends SceneObject {
           return;
         }
         this.unlink(true);
-        this.a(-4564);
+        this.unlinkSecondary(-4564);
     }
 
     final void startSlowTimer(int param0, int param1) {
@@ -93,7 +93,7 @@ abstract class UnitView extends SceneObject {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -115 / ((param0 + 53) / 59);
-          stackIn_1_0 = ng.isValidInteger(-49, true, param1, 10);
+          stackIn_1_0 = ArchiveProvider.isValidInteger(-49, true, param1, 10);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -135,7 +135,7 @@ abstract class UnitView extends SceneObject {
             field_Z = (String) null;
             return;
           }
-          this.a(-4564);
+          this.unlinkSecondary(-4564);
           this.exitCountdown = 256;
           if (param1 != -27655) {
             field_Z = (String) null;
@@ -147,7 +147,7 @@ abstract class UnitView extends SceneObject {
         this.animationFrame = 0;
         this.state = param0;
         if (param0 == 21) {
-          this.a(-4564);
+          this.unlinkSecondary(-4564);
           this.exitCountdown = 256;
           if (param1 == -27655) {
             return;
@@ -165,7 +165,7 @@ abstract class UnitView extends SceneObject {
         super(param0, param1, param2);
         this.field_U = null;
         this.state = !(this instanceof HumanView) ? 4 : 0;
-        this.facing = 1 != hp.nextBoundedInt((byte) 21, g.field_a, 2) ? 1 : 3;
+        this.facing = 1 != RandomHelpers.nextBoundedInt((byte) 21, RasterEffectHelpers.field_a, 2) ? 1 : 3;
         this.animationFrame = 0;
         this.animationTicks = 0;
         this.speed = param3;
@@ -251,8 +251,8 @@ abstract class UnitView extends SceneObject {
             stackIn_28_0 = 1;
           }
           var5 = stackIn_28_0;
-          if (Math.abs(-var2 + this.positionX) < wc.field_O &&
-            Math.abs(this.positionY - var3) < wc.field_O) {
+          if (Math.abs(-var2 + this.positionX) < ScorePopup.field_O &&
+            Math.abs(this.positionY - var3) < ScorePopup.field_O) {
             var4 = 1;
             var5 = 1;
           }
@@ -296,8 +296,8 @@ abstract class UnitView extends SceneObject {
               if (this.velocityY < 0 &&
                 var3Lifetime1 > this.positionY) {
                 var5Lifetime1 = 1;
-                if (Math.abs(-var2Lifetime1 + this.positionX) < wc.field_O &&
-                  Math.abs(this.positionY - var3Lifetime1) < wc.field_O) {
+                if (Math.abs(-var2Lifetime1 + this.positionX) < ScorePopup.field_O &&
+                  Math.abs(this.positionY - var3Lifetime1) < ScorePopup.field_O) {
                   var4Lifetime1 = 1;
                   var5Lifetime1 = 1;
                 }
@@ -337,8 +337,8 @@ abstract class UnitView extends SceneObject {
                   stackIn_62_0 = 0;
                 }
                 var5Lifetime1 = stackIn_62_0;
-                if (Math.abs(-var2Lifetime1 + this.positionX) < wc.field_O &&
-                  Math.abs(this.positionY - var3Lifetime1) < wc.field_O) {
+                if (Math.abs(-var2Lifetime1 + this.positionX) < ScorePopup.field_O &&
+                  Math.abs(this.positionY - var3Lifetime1) < ScorePopup.field_O) {
                   var4Lifetime1 = 1;
                   var5Lifetime1 = 1;
                 }
@@ -375,8 +375,8 @@ abstract class UnitView extends SceneObject {
             stackIn_107_0 = 1;
           }
           var5Lifetime1Lifetime1 = stackIn_107_0;
-          if (Math.abs(-var2Lifetime1 + this.positionX) < wc.field_O &&
-            Math.abs(this.positionY - var3Lifetime1) < wc.field_O) {
+          if (Math.abs(-var2Lifetime1 + this.positionX) < ScorePopup.field_O &&
+            Math.abs(this.positionY - var3Lifetime1) < ScorePopup.field_O) {
             var4Lifetime1 = 1;
             var5Lifetime1Lifetime1 = 1;
           }
@@ -430,8 +430,8 @@ abstract class UnitView extends SceneObject {
               stackIn_221_0 = 1;
             }
             var5Lifetime2 = stackIn_221_0;
-            if (Math.abs(-var2Lifetime1 + this.positionX) < wc.field_O &&
-              Math.abs(this.positionY - var3Lifetime1) < wc.field_O) {
+            if (Math.abs(-var2Lifetime1 + this.positionX) < ScorePopup.field_O &&
+              Math.abs(this.positionY - var3Lifetime1) < ScorePopup.field_O) {
               var4Lifetime2 = 1;
               var5Lifetime2 = 1;
             }
@@ -468,8 +468,8 @@ abstract class UnitView extends SceneObject {
               if (this.velocityY < 0 &&
                 var3Lifetime1 > this.positionY) {
                 var5Lifetime2Lifetime1 = 1;
-                if (Math.abs(-var2Lifetime1 + this.positionX) < wc.field_O &&
-                  Math.abs(this.positionY - var3Lifetime1) < wc.field_O) {
+                if (Math.abs(-var2Lifetime1 + this.positionX) < ScorePopup.field_O &&
+                  Math.abs(this.positionY - var3Lifetime1) < ScorePopup.field_O) {
                   var4Lifetime2Lifetime1 = 1;
                   var5Lifetime2Lifetime1 = 1;
                 }
@@ -509,8 +509,8 @@ abstract class UnitView extends SceneObject {
                   stackIn_139_0 = 0;
                 }
                 var5Lifetime2Lifetime1 = stackIn_139_0;
-                if (Math.abs(-var2Lifetime1 + this.positionX) < wc.field_O &&
-                  Math.abs(this.positionY - var3Lifetime1) < wc.field_O) {
+                if (Math.abs(-var2Lifetime1 + this.positionX) < ScorePopup.field_O &&
+                  Math.abs(this.positionY - var3Lifetime1) < ScorePopup.field_O) {
                   var4Lifetime2Lifetime1 = 1;
                   var5Lifetime2Lifetime1 = 1;
                 }
@@ -547,8 +547,8 @@ abstract class UnitView extends SceneObject {
             stackIn_184_0 = 1;
           }
           var5Lifetime2Lifetime2 = stackIn_184_0;
-          if (Math.abs(-var2Lifetime1 + this.positionX) < wc.field_O &&
-            Math.abs(this.positionY - var3Lifetime1) < wc.field_O) {
+          if (Math.abs(-var2Lifetime1 + this.positionX) < ScorePopup.field_O &&
+            Math.abs(this.positionY - var3Lifetime1) < ScorePopup.field_O) {
             var4Lifetime2Lifetime1 = 1;
             var5Lifetime2Lifetime2 = 1;
           }
@@ -597,8 +597,8 @@ abstract class UnitView extends SceneObject {
             stackIn_255_0 = 1;
           }
           var5Lifetime3 = stackIn_255_0;
-          if (Math.abs(-var2Lifetime1 + this.positionX) < wc.field_O &&
-            Math.abs(this.positionY - var3Lifetime1) < wc.field_O) {
+          if (Math.abs(-var2Lifetime1 + this.positionX) < ScorePopup.field_O &&
+            Math.abs(this.positionY - var3Lifetime1) < ScorePopup.field_O) {
             var4Lifetime3 = 1;
             var5Lifetime3 = 1;
           }
@@ -632,8 +632,8 @@ abstract class UnitView extends SceneObject {
         var4Lifetime4 = 0;
         if (this.velocityY == 0) {
           var5Lifetime4 = 1;
-          if (Math.abs(-var2Lifetime1 + this.positionX) < wc.field_O &&
-            Math.abs(this.positionY - var3Lifetime1) < wc.field_O) {
+          if (Math.abs(-var2Lifetime1 + this.positionX) < ScorePopup.field_O &&
+            Math.abs(this.positionY - var3Lifetime1) < ScorePopup.field_O) {
             var4Lifetime4 = 1;
             var5Lifetime4 = 1;
           }
@@ -691,8 +691,8 @@ abstract class UnitView extends SceneObject {
               stackIn_341_0 = 0;
             }
             var5Lifetime5 = stackIn_341_0;
-            if (Math.abs(-var2Lifetime1 + this.positionX) < wc.field_O &&
-              Math.abs(this.positionY - var3Lifetime1) < wc.field_O) {
+            if (Math.abs(-var2Lifetime1 + this.positionX) < ScorePopup.field_O &&
+              Math.abs(this.positionY - var3Lifetime1) < ScorePopup.field_O) {
               var4Lifetime4 = 1;
               var5Lifetime5 = 1;
             }
@@ -720,8 +720,8 @@ abstract class UnitView extends SceneObject {
             return false;
           }
           var5Lifetime5Lifetime1 = 1;
-          if (Math.abs(-var2Lifetime1 + this.positionX) < wc.field_O &&
-            Math.abs(this.positionY - var3Lifetime1) < wc.field_O) {
+          if (Math.abs(-var2Lifetime1 + this.positionX) < ScorePopup.field_O &&
+            Math.abs(this.positionY - var3Lifetime1) < ScorePopup.field_O) {
             var4Lifetime4 = 1;
             var5Lifetime5Lifetime1 = 1;
           }
@@ -775,8 +775,8 @@ abstract class UnitView extends SceneObject {
           if (this.velocityY < 0 &&
             var3Lifetime1 > this.positionY) {
             var5Lifetime6 = 1;
-            if (Math.abs(-var2Lifetime1 + this.positionX) < wc.field_O &&
-              Math.abs(this.positionY - var3Lifetime1) < wc.field_O) {
+            if (Math.abs(-var2Lifetime1 + this.positionX) < ScorePopup.field_O &&
+              Math.abs(this.positionY - var3Lifetime1) < ScorePopup.field_O) {
               var4Lifetime4 = 1;
               var5Lifetime6 = 1;
             }
@@ -815,8 +815,8 @@ abstract class UnitView extends SceneObject {
             return false;
           }
           var5Lifetime6 = 0;
-          if (Math.abs(-var2Lifetime1 + this.positionX) < wc.field_O &&
-            Math.abs(this.positionY - var3Lifetime1) < wc.field_O) {
+          if (Math.abs(-var2Lifetime1 + this.positionX) < ScorePopup.field_O &&
+            Math.abs(this.positionY - var3Lifetime1) < ScorePopup.field_O) {
             var4Lifetime4 = 1;
             var5Lifetime6 = 1;
           }
@@ -870,7 +870,7 @@ abstract class UnitView extends SceneObject {
         int var6;
         var3 = this.targetX - this.getX(param0 + 68);
         var4 = this.targetY - this.getY(-80);
-        var5 = g.b(var3 * var3 + var4 * var4);
+        var5 = RasterEffectHelpers.intSqrt(var3 * var3 + var4 * var4);
         if (param0 != 6) {
           this.advanceAnimation(-72, 91);
         }
@@ -943,9 +943,9 @@ abstract class UnitView extends SceneObject {
         int var3Lifetime1;
         int var3Lifetime2;
         int var3Lifetime3;
-        if (gg.field_j[param1] > this.animationFrame) {
+        if (ArchiveLoadStep.field_j[param1] > this.animationFrame) {
           if (param0 == 30818) {
-            var3 = gg.field_b[param1];
+            var3 = ArchiveLoadStep.field_b[param1];
             if (0 < this.slowTicks) {
               var3 = var3 * 2;
             }
@@ -954,7 +954,7 @@ abstract class UnitView extends SceneObject {
             if (var3 < fieldTemp$2) {
               fieldTemp$3 = this.animationFrame + 1;
               this.animationFrame = this.animationFrame + 1;
-              if (fieldTemp$3 == gg.field_j[param1]) {
+              if (fieldTemp$3 == ArchiveLoadStep.field_j[param1]) {
                 this.animationFrame = 0;
               }
               this.animationTicks = 0;
@@ -962,7 +962,7 @@ abstract class UnitView extends SceneObject {
             return;
           }
           field_Y = 103;
-          var3Lifetime3 = gg.field_b[param1];
+          var3Lifetime3 = ArchiveLoadStep.field_b[param1];
           if (0 < this.slowTicks) {
             var3Lifetime3 = var3Lifetime3 * 2;
           }
@@ -971,7 +971,7 @@ abstract class UnitView extends SceneObject {
           if (var3Lifetime3 < fieldTemp$0) {
             fieldTemp$1 = this.animationFrame + 1;
             this.animationFrame = this.animationFrame + 1;
-            if (fieldTemp$1 == gg.field_j[param1]) {
+            if (fieldTemp$1 == ArchiveLoadStep.field_j[param1]) {
               this.animationFrame = 0;
             }
             this.animationTicks = 0;
@@ -980,7 +980,7 @@ abstract class UnitView extends SceneObject {
         }
         this.animationFrame = 0;
         if (param0 == 30818) {
-          var3Lifetime1 = gg.field_b[param1];
+          var3Lifetime1 = ArchiveLoadStep.field_b[param1];
           if (0 < this.slowTicks) {
             var3Lifetime1 = var3Lifetime1 * 2;
           }
@@ -989,7 +989,7 @@ abstract class UnitView extends SceneObject {
           if (var3Lifetime1 < fieldTemp$4) {
             fieldTemp$5 = this.animationFrame + 1;
             this.animationFrame = this.animationFrame + 1;
-            if (fieldTemp$5 == gg.field_j[param1]) {
+            if (fieldTemp$5 == ArchiveLoadStep.field_j[param1]) {
               this.animationFrame = 0;
             }
             this.animationTicks = 0;
@@ -997,7 +997,7 @@ abstract class UnitView extends SceneObject {
           return;
         }
         field_Y = 103;
-        var3Lifetime2 = gg.field_b[param1];
+        var3Lifetime2 = ArchiveLoadStep.field_b[param1];
         if (0 < this.slowTicks) {
           var3Lifetime2 = var3Lifetime2 * 2;
         }
@@ -1006,7 +1006,7 @@ abstract class UnitView extends SceneObject {
         if (var3Lifetime2 < fieldTemp$6) {
           fieldTemp$7 = this.animationFrame + 1;
           this.animationFrame = this.animationFrame + 1;
-          if (fieldTemp$7 == gg.field_j[param1]) {
+          if (fieldTemp$7 == ArchiveLoadStep.field_j[param1]) {
             this.animationFrame = 0;
           }
           this.animationTicks = 0;

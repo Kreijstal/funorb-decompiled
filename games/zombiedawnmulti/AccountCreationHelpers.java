@@ -1,0 +1,90 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class AccountCreationHelpers {
+    static IndexedSprite field_c;
+    static Sprite[] field_b;
+    static String field_a;
+    static String field_d;
+
+    final static boolean startAccountCreation(String param0, String param1, String param2, int param3, int param4, AccountCreationForm param5, boolean param6) {
+        RuntimeException var7 = null;
+        AccountCreationDialog var8 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_15_2 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_18_2 = null;
+        StringBuilder stackIn_20_1 = null;
+        String stackIn_21_2 = null;
+        StringBuilder stackIn_23_1 = null;
+        String stackIn_24_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (TextLayout.field_b != SceneObject.field_B) {
+            return false;
+          }
+          if (param4 != -10663) {
+            field_b = (Sprite[]) null;
+          }
+          var8 = new AccountCreationDialog(DialogLayerHolder.field_a, param5);
+          DialogLayerHolder.field_a.showDialog(param4 ^ -8815, var8);
+          if (DropTargetWidget.hasStatButtonCookie(3853)) {
+            var8.showIneligibleResult(param4 ^ -10591);
+            return true;
+          }
+          TutorialAndMenuHelpers.field_c = null;
+          RandomAccessCacheFile.field_g = param2;
+          TeamSpriteHelpers.field_a = param0;
+          MusicPatchNode.field_k = param6;
+          SceneObject.field_B = BirthDateValidator.field_k;
+          RubbleChunk.field_J = param3;
+          IntrusiveDequeCursor.field_j = param1;
+          return true;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var7 = decompiledCaughtException;
+          stackIn_14_0 = var7;
+          stackIn_14_1 = new StringBuilder().append("cc.B(");
+          if (param0 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
+          }
+          stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',');
+          if (param1 == null) {
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_2 = "{...}";
+          }
+          stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',');
+          if (param2 == null) {
+            stackIn_21_2 = "null";
+          } else {
+            stackIn_21_2 = "{...}";
+          }
+          stackIn_23_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(',').append(param4).append(',');
+          if (param5 == null) {
+            stackIn_24_2 = "null";
+          } else {
+            stackIn_24_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param6).append(')').toString());
+        }
+    }
+
+    public static void releaseStatics(byte param0) {
+        if (param0 != -52) {
+          return;
+        }
+        field_b = null;
+        field_d = null;
+        field_a = null;
+        field_c = null;
+    }
+
+    static {
+        field_a = "Click here to close help.";
+        field_d = "Cloak your zombies in pure fear. Humans will run from them above all else, falling right into your clutches.";
+    }
+}

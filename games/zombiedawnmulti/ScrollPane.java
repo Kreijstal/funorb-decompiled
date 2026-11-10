@@ -175,10 +175,10 @@ final class ScrollPane extends UiComponent {
         try {
           this.field_Jb = new UiComponent(0L, param2);
           this.field_Ib = new VerticalScrollbar(0L, param3);
-          this.a((byte) 50, this.field_Jb);
-          this.a((byte) 50, this.field_Ib);
+          this.addChild((byte) 50, this.field_Jb);
+          this.addChild((byte) 50, this.field_Ib);
           this.field_Gb = param1;
-          this.field_Jb.a((byte) 50, param1);
+          this.field_Jb.addChild((byte) 50, param1);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "tq.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

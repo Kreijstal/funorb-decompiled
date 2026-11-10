@@ -45,7 +45,7 @@ final class PlayerLoadout {
 
     PlayerLoadout() {
         this.powerupReadyTick = new int[5];
-        bl.monotonicMillis((byte) 49);
+        ClockAndScreenHelpers.monotonicMillis((byte) 49);
         this.field_c = new int[3];
         this.powerupTypes = new int[5];
         this.powerupLevels = new int[5];

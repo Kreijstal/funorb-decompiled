@@ -165,15 +165,15 @@ final class ProxySocketConnector extends SocketConnector {
         var14 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           var6_int = param3 + 485 + (8 + param2) + 10;
-          qe.field_q.setBounds(-6 + ImageProducerRasterBuffer.field_k.field_z, 3, var6_int - 6, 3, -3344);
-          var7 = qe.field_q.field_z - 5;
+          GameHud.field_q.setBounds(-6 + ImageProducerRasterBuffer.field_k.field_z, 3, var6_int - 6, 3, -3344);
+          var7 = GameHud.field_q.field_z - 5;
           SimEntity.field_z.setBounds(param5, var7 - param5, param2 + 487 + param3, 5, param0 ^ -3342);
-          ec.field_b.setBounds(param5, 0, -DraggableWidget.field_E.field_zb + (SimEntity.field_z.field_zb - param2), param2, -3344);
-          DraggableWidget.field_E.setBounds(param5, 0, DraggableWidget.field_E.field_zb, param2 + ec.field_b.field_zb, param0 - 3346);
+          CookieHelpers.field_b.setBounds(param5, 0, -DraggableWidget.field_E.field_zb + (SimEntity.field_z.field_zb - param2), param2, -3344);
+          DraggableWidget.field_E.setBounds(param5, 0, DraggableWidget.field_E.field_zb, param2 + CookieHelpers.field_b.field_zb, param0 - 3346);
           var7 = var7 - (2 + param5);
-          tn.field_A.setBoundsAndLayout(param3, 2, param3 + (param0 + param2) + 485, 5, var7 - 5, param0 ^ -31467, 5);
-          if (ra.field_f != null) {
-            ra.field_f.setWidgetBounds(tn.field_A.field_x, tn.field_A.field_Q, 28972, tn.field_A.field_zb, tn.field_A.field_z);
+          NetworkArchiveRequest.field_A.setBoundsAndLayout(param3, 2, param3 + (param0 + param2) + 485, 5, var7 - 5, param0 ^ -31467, 5);
+          if (PendingIntArrayReply.field_f != null) {
+            PendingIntArrayReply.field_f.setWidgetBounds(NetworkArchiveRequest.field_A.field_x, NetworkArchiveRequest.field_A.field_Q, 28972, NetworkArchiveRequest.field_A.field_zb, NetworkArchiveRequest.field_A.field_z);
           }
           var8 = -var6_int - param2 + ImageProducerRasterBuffer.field_k.field_zb;
           var9 = var8 / 2;
@@ -181,17 +181,17 @@ final class ProxySocketConnector extends SocketConnector {
           var11 = 0;
           for (var12 = 0; var12 < 6; var12++) {
             if (5 <= var12 ||
-              la.field_h[var12] != null) {
-              var13 = (2 + (-6 + ImageProducerRasterBuffer.field_k.field_z)) * var11 / (1 + gi.field_l) + 3;
+              GrowableIntList.field_h[var12] != null) {
+              var13 = (2 + (-6 + ImageProducerRasterBuffer.field_k.field_z)) * var11 / (1 + LevelFileEntry.field_l) + 3;
               var11++;
-              var7Lifetime1 = var11 * (ImageProducerRasterBuffer.field_k.field_z - 4) / (1 + gi.field_l) + (1 - var13);
+              var7Lifetime1 = var11 * (ImageProducerRasterBuffer.field_k.field_z - 4) / (1 + LevelFileEntry.field_l) + (1 - var13);
               if (5 > var12) {
-                la.field_h[var12].setBounds(var7Lifetime1, var13, var8, var6_int, param0 ^ -3342);
+                GrowableIntList.field_h[var12].setBounds(var7Lifetime1, var13, var8, var6_int, param0 ^ -3342);
                 CheckboxPainter.field_k[var12].setBounds(var7Lifetime1, 0, var9 - param2, param2, param0 ^ -3342);
-                pf.field_d[var12].setBounds(-param4 + var7Lifetime1 - param4, param4, param1, var9, -3344);
-                hh.field_l[var12].setBounds(-param4 + var7Lifetime1 - param4, param4, var8 - (param2 + var10), var10, -3344);
+                ChatInputHelpers.field_d[var12].setBounds(-param4 + var7Lifetime1 - param4, param4, param1, var9, -3344);
+                MenuInputState.field_l[var12].setBounds(-param4 + var7Lifetime1 - param4, param4, var8 - (param2 + var10), var10, -3344);
               } else {
-                nn.field_b.setBounds(var7Lifetime1, var13, var8, var6_int, -3344);
+                LevelEncodingHelpers.field_b.setBounds(var7Lifetime1, var13, var8, var6_int, -3344);
               }
             }
           }
@@ -238,7 +238,7 @@ final class ProxySocketConnector extends SocketConnector {
         Class var14 = null;
         try {
           if (param0.type() == java.net.Proxy.Type.DIRECT) {
-            stackIn_2_0 = this.b((byte) 100);
+            stackIn_2_0 = this.connectDirect((byte) 100);
             return stackIn_2_0;
           }
           var3 = param0.address();
@@ -359,11 +359,11 @@ final class ProxySocketConnector extends SocketConnector {
                   if (var11 != -1) {
                     var8 = var14.substring(0, var11);
                   }
-                  throw new en(var8);
+                  throw new ChatPanelSetupHelpers(var8);
                 }
                 break;
               }
-              throw new en("");
+              throw new ChatPanelSetupHelpers("");
             }
             if (decompiledFrameRemainder0) {
               stackIn_12_0 = var13;
@@ -428,7 +428,7 @@ final class ProxySocketConnector extends SocketConnector {
         Object var10 = null;
         java.net.Proxy var11 = null;
         java.net.Socket var12 = null;
-        en var12_ref = null;
+        ChatPanelSetupHelpers var12_ref = null;
         IOException var12_ref2 = null;
         int var13 = 0;
         var13 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -472,7 +472,7 @@ final class ProxySocketConnector extends SocketConnector {
         } catch (java.net.URISyntaxException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (java.net.URISyntaxException) (Object) decompiledCaughtException;
-          return this.b((byte) 97);
+          return this.connectDirect((byte) 97);
         }
         var3.addAll((Collection) ((Object) var4));
         var6_array = var3.toArray();
@@ -482,15 +482,15 @@ final class ProxySocketConnector extends SocketConnector {
           var10 = var8[var9];
           var11 = (java.net.Proxy) (var10);
           try {
-            if (false) throw (en) null;
+            if (false) throw (ChatPanelSetupHelpers) null;
             var12 = this.connectViaProxy(var11, 1);
             if (var12 != null) {
               stackIn_24_0 = var12;
               return stackIn_24_0;
             }
-          } catch (en decompiledCaughtParameter1) {
+          } catch (ChatPanelSetupHelpers decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var12_ref = (en) (Object) decompiledCaughtException;
+            var12_ref = (ChatPanelSetupHelpers) (Object) decompiledCaughtException;
             var7 = var12_ref;
           } catch (java.io.IOException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
@@ -500,7 +500,7 @@ final class ProxySocketConnector extends SocketConnector {
         if (var7 != null) {
           throw ProxySocketConnector.<RuntimeException>sneakyThrow((Throwable) var7);
         }
-        return this.b((byte) 89);
+        return this.connectDirect((byte) 89);
     }
 
     static {

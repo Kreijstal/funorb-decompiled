@@ -48,14 +48,14 @@ final class CheckboxPainter implements WidgetPainter {
           var3 = 100;
           var4 = new byte[param0.length + 8];
           for (var5 = 0; var5 < 6; var5++) {
-            IntrusiveNode.writeIntAt(var5, var4, -117, ValidationState.a(param0, var5, (byte) 110));
+            IntrusiveNode.writeIntAt(var5, var4, -117, ValidationState.readIntAt(param0, var5, (byte) 110));
           }
           IntrusiveNode.writeIntAt(6, var4, -93, var2_int);
           IntrusiveNode.writeIntAt(param1, var4, -123, var3);
           for (var5Lifetime1 = 6; param0.length / 4 > var5Lifetime1; var5Lifetime1++) {
-            IntrusiveNode.writeIntAt(2 + var5Lifetime1, var4, -72, ValidationState.a(param0, var5Lifetime1, (byte) 51));
+            IntrusiveNode.writeIntAt(2 + var5Lifetime1, var4, -72, ValidationState.readIntAt(param0, var5Lifetime1, (byte) 51));
           }
-          stackIn_8_0 = bo.a(var4, param1 + 17);
+          stackIn_8_0 = LoginMethod.loadLevelVersion5(var4, param1 + 17);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -84,31 +84,31 @@ final class CheckboxPainter implements WidgetPainter {
           SoftwareRasterizer.intersectClip(var9_int, 0, var10, var11 + param6);
           param7.drawAdditive(param3 - 1, -1 + param0, param8);
           param7.drawAdditive(-1 + param3, 1 + param0, param8);
-          SoftwareRasterizer.restoreClip(b.field_f);
+          SoftwareRasterizer.restoreClip(IdleTickHelpers.field_f);
           SoftwareRasterizer.intersectClip(1 + var9_int, 0, 1 + var10, param6 + var11);
           param7.drawAdditive(1 + param3, param0 - 1, param8);
           param7.drawAdditive(1 + param3, param0 + 1, param8);
-          SoftwareRasterizer.restoreClip(b.field_f);
+          SoftwareRasterizer.restoreClip(IdleTickHelpers.field_f);
           var10Lifetime1 = param7.width + (param7.offsetX + (param3 - param5)) - param2;
           var9_intLifetime1 = param7.offsetX + param7.width - (-param3 - (-param5 - param1));
           SoftwareRasterizer.intersectClip(var9_intLifetime1, -param6 + var11, var10Lifetime1, 480);
           param7.drawAdditive(-1 + param3, param0 - 1, param8);
           param7.drawAdditive(param3 - 1, 1 + param0, param8);
-          SoftwareRasterizer.restoreClip(b.field_f);
+          SoftwareRasterizer.restoreClip(IdleTickHelpers.field_f);
           SoftwareRasterizer.intersectClip(1 + var9_intLifetime1, -param6 + var11, 1 + var10Lifetime1, 480);
           param7.drawAdditive(1 + param3, param0 - 1, param8);
           param7.drawAdditive(1 + param3, param0 + 1, param8);
           if (param4) {
             field_a = (String) null;
           }
-          SoftwareRasterizer.restoreClip(b.field_f);
+          SoftwareRasterizer.restoreClip(IdleTickHelpers.field_f);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ij.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
         }
     }
 
-    final static gh createFlagResult(boolean param0, boolean param1) {
-        gh var2 = new gh(true);
+    final static AccountServerResult createFlagResult(boolean param0, boolean param1) {
+        AccountServerResult var2 = new AccountServerResult(true);
         if (param0) {
           byte[] var3 = (byte[]) null;
           CheckboxPainter.upgradeActorSpawnerDataV4((byte[]) null, 33);

@@ -53,12 +53,12 @@ final class TriangleMesh {
         try {
           InfectionEvent.sortRankingRange(NodeHashTableIterator.field_d, -891231071, param0, true, ClickMarker.field_n, 0, MusicPatchNode.field_j);
           for (var2_int = 0; var2_int < ClickMarker.field_n; var2_int++) {
-            la.field_c[var2_int + param0] = var2_int;
+            GrowableIntList.field_c[var2_int + param0] = var2_int;
           }
           if (param1 > -27) {
             field_u = (IntrusiveDeque) null;
           }
-          InfectionEvent.sortRankingRange(MusicPatchPcmStream.field_m, -891231071, param0 + param0, false, param0 + ClickMarker.field_n, param0, mj.field_Ub);
+          InfectionEvent.sortRankingRange(MusicPatchPcmStream.field_m, -891231071, param0 + param0, false, param0 + ClickMarker.field_n, param0, ScrollBar.field_Ub);
           if (param0 < ClickMarker.field_n) {
             ClickMarker.field_n = param0;
           }
@@ -135,16 +135,16 @@ final class TriangleMesh {
         this.field_r = var4;
     }
 
-    final static ml findIgnoreEntry(byte param0, String param1) {
+    final static SocialListRow findIgnoreEntry(byte param0, String param1) {
         String var2 = null;
         int var3 = 0;
-        ml var4 = null;
+        SocialListRow var4 = null;
         String var5 = null;
         int var6 = 0;
         CharSequence var7 = null;
         CharSequence var8 = null;
         Object stackIn_3_0 = null;
-        ml stackIn_15_0 = null;
+        SocialListRow stackIn_15_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -152,20 +152,20 @@ final class TriangleMesh {
         RuntimeException var2_ref = null;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          if (bh.field_f == null) {
+          if (ChatAndOptionHelpers.field_f == null) {
             stackIn_3_0 = null;
-            return (ml) (stackIn_3_0);
+            return (SocialListRow) (stackIn_3_0);
           }
           var7 = (CharSequence) ((Object) param1);
-          var2 = tg.normalizePlayerName(var7, false);
+          var2 = AudioPumpThread.normalizePlayerName(var7, false);
           var3 = 24 / ((47 - param0) / 43);
           if (var2 == null) {
             var2 = param1;
           }
-          var4 = (ml) (bh.field_f.findByKey((long)var2.hashCode(), -22877));
+          var4 = (SocialListRow) (ChatAndOptionHelpers.field_f.findByKey((long)var2.hashCode(), -22877));
           while (var4 != null) {
             var8 = (CharSequence) ((Object) var4.field_Hb);
-            var5 = tg.normalizePlayerName(var8, false);
+            var5 = AudioPumpThread.normalizePlayerName(var8, false);
             if (var5 == null) {
               var5 = var4.field_Hb;
             }
@@ -173,7 +173,7 @@ final class TriangleMesh {
               stackIn_15_0 = var4;
               return stackIn_15_0;
             }
-            var4 = (ml) (bh.field_f.nextWithSameKey((byte) 68));
+            var4 = (SocialListRow) (ChatAndOptionHelpers.field_f.nextWithSameKey((byte) 68));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -245,7 +245,7 @@ final class TriangleMesh {
         }
     }
 
-    final static boolean precedesSocialRow(ml param0, byte param1, ml param2) {
+    final static boolean precedesSocialRow(SocialListRow param0, byte param1, SocialListRow param2) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_18_0 = null;
@@ -354,51 +354,51 @@ final class TriangleMesh {
           UiWidget.field_f = args;
           MatchingTextValidator.field_s = param4;
           ZombieDawnMulti.field_L = param5;
-          qo.field_r = param2;
-          um.field_b = param12;
-          i.field_e = param1;
+          UiComponentNode.field_r = param2;
+          ClickMarkerParticle.field_b = param12;
+          SharedTransportGlobals.field_e = param1;
           ResourceArchive.field_m = param14;
           IntrusiveDequeCursor.field_c = param11;
-          ng.field_b = param8;
-          um.field_g = param6;
-          kp.field_n = param7;
-          r.field_f = param13;
-          MatchingTextValidator.field_u = pb.loadSpritesByName("lobby", param3, -256, "gameprivacy");
-          ke.field_i = pb.loadSpritesByName("lobby", param3, -256, "ratedgame");
-          na.field_G = pb.loadSpritesByName("lobby", param3, -256, "opentome");
-          we.field_j = pb.loadSpritesByName("lobby", param3, -256, "allowspectators");
-          t.field_c = new String[5];
-          t.field_c[2] = ResizableDialog.field_W;
-          t.field_c[3] = LobbyPlayer.field_Xb;
-          t.field_c[4] = vo.field_s;
-          t.field_c[0] = vb.field_g;
-          t.field_c[1] = ChatMessage.field_m;
-          pd.field_b = new UiComponent(0L, (UiComponent) null);
-          LobbyPlayer.field_ac = new UiComponent(0L, vd.field_a, GameScreen.field_r);
-          AlignedIconLabel.field_Hb = new UiComponent(0L, pn.field_g, cg.field_j);
-          hf.field_e = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), MenuScreen.field_e, td.field_f);
-          pd.field_b.a((byte) 50, LobbyPlayer.field_ac);
+          ArchiveProvider.field_b = param8;
+          ClickMarkerParticle.field_g = param6;
+          MessageMenuScreen.field_n = param7;
+          MusicPatchLoadHelpers.field_f = param13;
+          MatchingTextValidator.field_u = EffectAudioHelpers.loadSpritesByName("lobby", param3, -256, "gameprivacy");
+          FontPaletteHelpers.field_i = EffectAudioHelpers.loadSpritesByName("lobby", param3, -256, "ratedgame");
+          AlphaChildWidget.field_G = EffectAudioHelpers.loadSpritesByName("lobby", param3, -256, "opentome");
+          PlayingSound.field_j = EffectAudioHelpers.loadSpritesByName("lobby", param3, -256, "allowspectators");
+          ByteStorage.field_c = new String[5];
+          ByteStorage.field_c[2] = ResizableDialog.field_W;
+          ByteStorage.field_c[3] = LobbyPlayer.field_Xb;
+          ByteStorage.field_c[4] = IntroScreen.field_s;
+          ByteStorage.field_c[0] = LobbyUiSetupHelpers.field_g;
+          ByteStorage.field_c[1] = ChatMessage.field_m;
+          FramePainter.field_b = new UiComponent(0L, (UiComponent) null);
+          LobbyPlayer.field_ac = new UiComponent(0L, SleepAndNameHelpers.field_a, GameScreen.field_r);
+          AlignedIconLabel.field_Hb = new UiComponent(0L, ArchiveAvailabilityHelpers.field_g, MeltdownPuddleView.field_j);
+          ConditionalTextValue.field_e = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), MenuScreen.field_e, TextLayoutLine.field_f);
+          FramePainter.field_b.addChild((byte) 50, LobbyPlayer.field_ac);
           if (GradientOutlineTextPainter.field_u) {
-            pd.field_b.a((byte) 50, AlignedIconLabel.field_Hb);
+            FramePainter.field_b.addChild((byte) 50, AlignedIconLabel.field_Hb);
           }
-          pd.field_b.a((byte) 50, hf.field_e);
-          hf.field_e.field_Jb.copyStyle((byte) -32, vo.field_m);
-          hf.field_e.field_Jb.field_lb = 1;
-          var24 = hf.field_e.field_Jb;
+          FramePainter.field_b.addChild((byte) 50, ConditionalTextValue.field_e);
+          ConditionalTextValue.field_e.field_Jb.copyStyle((byte) -32, IntroScreen.field_m);
+          ConditionalTextValue.field_e.field_Jb.field_lb = 1;
+          var24 = ConditionalTextValue.field_e.field_Jb;
           var25 = var24;
           var25.field_R = 1;
-          ql.field_b = new UiComponent(0L, vo.field_m);
-          ql.field_b.field_R = 1;
-          kj.field_u = new UiComponent(0L, DiskCacheWorker.field_c, SecondaryNodeDeque.field_b.toUpperCase());
-          ro.field_O = new UiComponent(0L, LevelFileCatalog.field_d, AttackEvent.field_j.toUpperCase());
-          ml.field_Lb = new UiComponent(0L, cg.field_f);
-          PacketBuffer.field_g = new UiComponent(0L, vd.field_a, vh.field_Nb);
-          ud.field_M = new UiComponent(0L, ResizableDialog.field_fb, GameWorld.field_p);
-          LaboratoryScreen.field_l = new UiComponent(0L, ResizableDialog.field_fb, ck.field_b);
-          sc.field_d = new UiComponent(0L, ResizableDialog.field_fb, StatefulTextPainter.field_t);
+          RasterStackHelpers.field_b = new UiComponent(0L, IntroScreen.field_m);
+          RasterStackHelpers.field_b.field_R = 1;
+          FriendListHelpers.field_u = new UiComponent(0L, DiskCacheWorker.field_c, SecondaryNodeDeque.field_b.toUpperCase());
+          LocalGameWorld.field_O = new UiComponent(0L, LevelFileCatalog.field_d, AttackEvent.field_j.toUpperCase());
+          SocialListRow.field_Lb = new UiComponent(0L, MeltdownPuddleView.field_f);
+          PacketBuffer.field_g = new UiComponent(0L, SleepAndNameHelpers.field_a, ColourPickerWidget.field_Nb);
+          DialSelectorWidget.field_M = new UiComponent(0L, ResizableDialog.field_fb, GameWorld.field_p);
+          LaboratoryScreen.field_l = new UiComponent(0L, ResizableDialog.field_fb, LobbyUpdateHandler.field_b);
+          DualLinkNodeHashTable.field_d = new UiComponent(0L, ResizableDialog.field_fb, StatefulTextPainter.field_t);
           InflaterDecompressor.field_h = new UiComponent(0L, ResizableDialog.field_fb, PortalEntryEvent.field_k);
-          AgeValidator.field_w = new UiComponent(0L, pn.field_g, fd.field_N);
-          SimEntity.field_H = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), MenuScreen.field_e, td.field_f);
+          AgeValidator.field_w = new UiComponent(0L, ArchiveAvailabilityHelpers.field_g, PropObject.field_N);
+          SimEntity.field_H = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), MenuScreen.field_e, TextLayoutLine.field_f);
           PasswordValidator.field_t = new UiComponent(0L, LinkButtonPainter.field_i, ContextMenu.field_Gb.toUpperCase());
           PasswordValidator.field_t.field_Z = GradientOutlineTextPainter.field_u;
           stackIn_5_0 = null;
@@ -408,94 +408,94 @@ final class TriangleMesh {
           if (!GradientOutlineTextPainter.field_u) {
             stackIn_6_0 = null;
             stackIn_6_1 = null;
-            stackIn_6_4 = cn.field_C;
+            stackIn_6_4 = CachedArchiveSource.field_C;
           } else {
             stackIn_6_0 = null;
             stackIn_6_1 = null;
             stackIn_6_4 = TertiaryLinkNode.field_t;
           }
           ArrayWidgetGroup.field_L = new UiComponent(stackIn_5_2, stackIn_5_3, ((String) (Object) stackIn_6_4).toUpperCase());
-          cm.field_a = new UiComponent(0L, (UiComponent) null);
-          cm.field_a.a((byte) 50, ro.field_O);
+          LobbyRequestHelpers.field_a = new UiComponent(0L, (UiComponent) null);
+          LobbyRequestHelpers.field_a.addChild((byte) 50, LocalGameWorld.field_O);
           if (!param10) {
             var22 = (CharSequence) null;
             TriangleMesh.parseDecimalInt((CharSequence) null, -24);
           }
-          cm.field_a.a((byte) 50, ml.field_Lb);
-          ml.field_Lb.a((byte) 50, PacketBuffer.field_g);
-          ml.field_Lb.a((byte) 50, ud.field_M);
-          ml.field_Lb.a((byte) 50, LaboratoryScreen.field_l);
+          LobbyRequestHelpers.field_a.addChild((byte) 50, SocialListRow.field_Lb);
+          SocialListRow.field_Lb.addChild((byte) 50, PacketBuffer.field_g);
+          SocialListRow.field_Lb.addChild((byte) 50, DialSelectorWidget.field_M);
+          SocialListRow.field_Lb.addChild((byte) 50, LaboratoryScreen.field_l);
           if (GradientOutlineTextPainter.field_u) {
-            ml.field_Lb.a((byte) 50, sc.field_d);
+            SocialListRow.field_Lb.addChild((byte) 50, DualLinkNodeHashTable.field_d);
           }
-          ml.field_Lb.a((byte) 50, InflaterDecompressor.field_h);
-          ml.field_Lb.a((byte) 50, AgeValidator.field_w);
-          ml.field_Lb.a((byte) 50, SimEntity.field_H);
+          SocialListRow.field_Lb.addChild((byte) 50, InflaterDecompressor.field_h);
+          SocialListRow.field_Lb.addChild((byte) 50, AgeValidator.field_w);
+          SocialListRow.field_Lb.addChild((byte) 50, SimEntity.field_H);
           if (GradientOutlineTextPainter.field_u) {
-            cm.field_a.a((byte) 50, PasswordValidator.field_t);
+            LobbyRequestHelpers.field_a.addChild((byte) 50, PasswordValidator.field_t);
           }
-          cm.field_a.a((byte) 50, ArrayWidgetGroup.field_L);
-          sc.field_j = new UiComponent(0L, vo.field_m);
-          sc.field_j.field_lb = 0;
-          sc.field_j.field_R = 1;
-          kn.field_a = new UiComponent(0L, GameWorld.field_n, ji.field_e.toUpperCase());
+          LobbyRequestHelpers.field_a.addChild((byte) 50, ArrayWidgetGroup.field_L);
+          DualLinkNodeHashTable.field_j = new UiComponent(0L, IntroScreen.field_m);
+          DualLinkNodeHashTable.field_j.field_lb = 0;
+          DualLinkNodeHashTable.field_j.field_R = 1;
+          LoginStartHelpers.field_a = new UiComponent(0L, GameWorld.field_n, SupportPageHelpers.field_e.toUpperCase());
           SimHuman.field_gb = new UiComponent(0L, MarkerSliderPainter.field_a);
-          SimHuman.field_gb.a((byte) 50, sc.field_j);
-          SimHuman.field_gb.a((byte) 50, kn.field_a);
+          SimHuman.field_gb.addChild((byte) 50, DualLinkNodeHashTable.field_j);
+          SimHuman.field_gb.addChild((byte) 50, LoginStartHelpers.field_a);
           UiTheme.field_i = new UiComponent(0L, MenuScreen.field_e);
-          UiTheme.field_i.copyStyle((byte) -32, vo.field_m);
+          UiTheme.field_i.copyStyle((byte) -32, IntroScreen.field_m);
           var16 = UiTheme.field_i;
           UiTheme.field_i.field_lb = 1;
           var16.field_R = 1;
           CipherPacketBuffer.field_r = new UiComponent(0L, (UiComponent) null);
-          ClientException.field_h = new UiComponent(0L, vo.field_m);
+          ClientException.field_h = new UiComponent(0L, IntroScreen.field_m);
           ClientException.field_h.field_R = 1;
-          ContentTransitionDialog.field_jb = new UiComponent(0L, vd.field_a, GameScreen.field_r);
-          bf.field_h = new UiComponent(0L, pn.field_g, cg.field_j);
-          bf.field_n = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), MenuScreen.field_e, td.field_f);
-          CipherPacketBuffer.field_r.a((byte) 50, ClientException.field_h);
-          CipherPacketBuffer.field_r.a((byte) 50, ContentTransitionDialog.field_jb);
+          ContentTransitionDialog.field_jb = new UiComponent(0L, SleepAndNameHelpers.field_a, GameScreen.field_r);
+          MeltdownPuddle.field_h = new UiComponent(0L, ArchiveAvailabilityHelpers.field_g, MeltdownPuddleView.field_j);
+          MeltdownPuddle.field_n = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), MenuScreen.field_e, TextLayoutLine.field_f);
+          CipherPacketBuffer.field_r.addChild((byte) 50, ClientException.field_h);
+          CipherPacketBuffer.field_r.addChild((byte) 50, ContentTransitionDialog.field_jb);
           if (GradientOutlineTextPainter.field_u) {
-            CipherPacketBuffer.field_r.a((byte) 50, bf.field_h);
+            CipherPacketBuffer.field_r.addChild((byte) 50, MeltdownPuddle.field_h);
           }
-          CipherPacketBuffer.field_r.a((byte) 50, bf.field_n);
-          jp.field_b = new UiComponent(0L, DiskCacheWorker.field_c, pi.field_b.toUpperCase());
-          gg.field_m = new UiComponent(0L, LevelFileCatalog.field_d);
-          SocketConnector.field_a = new UiComponent(0L, cg.field_f);
-          ik.field_d = new UiComponent(0L, EmailAvailabilityValidator.field_x, vb.field_d.toUpperCase());
+          CipherPacketBuffer.field_r.addChild((byte) 50, MeltdownPuddle.field_n);
+          ChatPromptHelpers.field_b = new UiComponent(0L, DiskCacheWorker.field_c, CredentialKind.field_b.toUpperCase());
+          ArchiveLoadStep.field_m = new UiComponent(0L, LevelFileCatalog.field_d);
+          SocketConnector.field_a = new UiComponent(0L, MeltdownPuddleView.field_f);
+          KeyboardStateHelpers.field_d = new UiComponent(0L, EmailAvailabilityValidator.field_x, LobbyUiSetupHelpers.field_d.toUpperCase());
           StateIconLabel.field_Ib = new UiComponent[4 + param9];
-          ma.field_b = new AlignedIconLabel[param9 + 4][];
-          StateIconLabel.field_Ib[0] = new UiComponent(0L, m.field_B, kg.field_f);
-          ma.field_b[0] = new AlignedIconLabel[6];
+          TextValidationFailure.field_b = new AlignedIconLabel[param9 + 4][];
+          StateIconLabel.field_Ib[0] = new UiComponent(0L, PasswordTextPainter.field_B, ProgramNoteUsage.field_f);
+          TextValidationFailure.field_b[0] = new AlignedIconLabel[6];
           for (var17_int = 0; 5 > var17_int; var17_int++) {
-            ma.field_b[0][1 + var17_int] = new AlignedIconLabel(0L, uq.field_d, (UiComponent) null, cm.field_b, MatchingTextValidator.field_u[var17_int], t.field_c[var17_int]);
+            TextValidationFailure.field_b[0][1 + var17_int] = new AlignedIconLabel(0L, BrowserPageHelpers.field_d, (UiComponent) null, LobbyRequestHelpers.field_b, MatchingTextValidator.field_u[var17_int], ByteStorage.field_c[var17_int]);
           }
-          if (qo.field_r.length >= 2) {
-            StateIconLabel.field_Ib[1] = new UiComponent(0L, m.field_B, gi.field_n);
-            array$0 = new AlignedIconLabel[1 + qo.field_r.length];
-            ma.field_b[1] = array$0;
-            ma.field_b[1][0] = new AlignedIconLabel(0L, uq.field_d, (UiComponent) null, cm.field_b, (Sprite) null, VerticalScrollbar.field_Mb);
-            for (var17_intLifetime1 = 0; var17_intLifetime1 < qo.field_r.length; var17_intLifetime1++) {
-              ma.field_b[1][1 + var17_intLifetime1] = new AlignedIconLabel(0L, uq.field_d, (UiComponent) null, cm.field_b, (Sprite) null, Integer.toString(qo.field_r[var17_intLifetime1]));
+          if (UiComponentNode.field_r.length >= 2) {
+            StateIconLabel.field_Ib[1] = new UiComponent(0L, PasswordTextPainter.field_B, LevelFileEntry.field_n);
+            array$0 = new AlignedIconLabel[1 + UiComponentNode.field_r.length];
+            TextValidationFailure.field_b[1] = array$0;
+            TextValidationFailure.field_b[1][0] = new AlignedIconLabel(0L, BrowserPageHelpers.field_d, (UiComponent) null, LobbyRequestHelpers.field_b, (Sprite) null, VerticalScrollbar.field_Mb);
+            for (var17_intLifetime1 = 0; var17_intLifetime1 < UiComponentNode.field_r.length; var17_intLifetime1++) {
+              TextValidationFailure.field_b[1][1 + var17_intLifetime1] = new AlignedIconLabel(0L, BrowserPageHelpers.field_d, (UiComponent) null, LobbyRequestHelpers.field_b, (Sprite) null, Integer.toString(UiComponentNode.field_r[var17_intLifetime1]));
             }
           }
-          StateIconLabel.field_Ib[2] = new UiComponent(0L, m.field_B, PowerupCommand.field_j);
-          ma.field_b[2] = new AlignedIconLabel[]{new AlignedIconLabel(0L, uq.field_d, (UiComponent) null, cm.field_b, (Sprite) null, VerticalScrollbar.field_Mb), new AlignedIconLabel(0L, uq.field_d, (UiComponent) null, cm.field_b, we.field_j[0], ArchiveIndex.field_f), new AlignedIconLabel(0L, uq.field_d, (UiComponent) null, cm.field_b, we.field_j[1], PowerupEvent.field_k)};
-          if (r.field_f > 1) {
-            StateIconLabel.field_Ib[3] = new UiComponent(0L, m.field_B, gj.field_d);
-            array$1 = new AlignedIconLabel[r.field_f + 1];
-            ma.field_b[3] = array$1;
-            ma.field_b[3][0] = new AlignedIconLabel(0L, uq.field_d, (UiComponent) null, cm.field_b, (Sprite) null, VerticalScrollbar.field_Mb);
-            for (var17_intLifetime2 = 0; var17_intLifetime2 < r.field_f; var17_intLifetime2++) {
-              ma.field_b[3][1 + var17_intLifetime2] = new AlignedIconLabel(0L, uq.field_d, (UiComponent) null, cm.field_b, (Sprite) null, um.field_b[var17_intLifetime2]);
+          StateIconLabel.field_Ib[2] = new UiComponent(0L, PasswordTextPainter.field_B, PowerupCommand.field_j);
+          TextValidationFailure.field_b[2] = new AlignedIconLabel[]{new AlignedIconLabel(0L, BrowserPageHelpers.field_d, (UiComponent) null, LobbyRequestHelpers.field_b, (Sprite) null, VerticalScrollbar.field_Mb), new AlignedIconLabel(0L, BrowserPageHelpers.field_d, (UiComponent) null, LobbyRequestHelpers.field_b, PlayingSound.field_j[0], ArchiveIndex.field_f), new AlignedIconLabel(0L, BrowserPageHelpers.field_d, (UiComponent) null, LobbyRequestHelpers.field_b, PlayingSound.field_j[1], PowerupEvent.field_k)};
+          if (MusicPatchLoadHelpers.field_f > 1) {
+            StateIconLabel.field_Ib[3] = new UiComponent(0L, PasswordTextPainter.field_B, SoundStopHelpers.field_d);
+            array$1 = new AlignedIconLabel[MusicPatchLoadHelpers.field_f + 1];
+            TextValidationFailure.field_b[3] = array$1;
+            TextValidationFailure.field_b[3][0] = new AlignedIconLabel(0L, BrowserPageHelpers.field_d, (UiComponent) null, LobbyRequestHelpers.field_b, (Sprite) null, VerticalScrollbar.field_Mb);
+            for (var17_intLifetime2 = 0; var17_intLifetime2 < MusicPatchLoadHelpers.field_f; var17_intLifetime2++) {
+              TextValidationFailure.field_b[3][1 + var17_intLifetime2] = new AlignedIconLabel(0L, BrowserPageHelpers.field_d, (UiComponent) null, LobbyRequestHelpers.field_b, (Sprite) null, ClickMarkerParticle.field_b[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param9 > var17_intLifetime3; var17_intLifetime3++) {
-            StateIconLabel.field_Ib[4 + var17_intLifetime3] = new UiComponent(0L, m.field_B, UiWidget.field_f[var17_intLifetime3]);
-            array$2 = new AlignedIconLabel[1 + ScrollPane.bitAnd(255, (int) ng.field_b[var17_intLifetime3])];
-            ma.field_b[var17_intLifetime3 + 4] = array$2;
-            ma.field_b[var17_intLifetime3 + 4][0] = new AlignedIconLabel(0L, uq.field_d, (UiComponent) null, cm.field_b, (Sprite) null, VerticalScrollbar.field_Mb);
-            for (var18 = 0; var18 < (255 & ng.field_b[var17_intLifetime3]); var18++) {
+            StateIconLabel.field_Ib[4 + var17_intLifetime3] = new UiComponent(0L, PasswordTextPainter.field_B, UiWidget.field_f[var17_intLifetime3]);
+            array$2 = new AlignedIconLabel[1 + ScrollPane.bitAnd(255, (int) ArchiveProvider.field_b[var17_intLifetime3])];
+            TextValidationFailure.field_b[var17_intLifetime3 + 4] = array$2;
+            TextValidationFailure.field_b[var17_intLifetime3 + 4][0] = new AlignedIconLabel(0L, BrowserPageHelpers.field_d, (UiComponent) null, LobbyRequestHelpers.field_b, (Sprite) null, VerticalScrollbar.field_Mb);
+            for (var18 = 0; var18 < (255 & ArchiveProvider.field_b[var17_intLifetime3]); var18++) {
               if (ZombieDawnMulti.field_L != null) {
                 if (null == ZombieDawnMulti.field_L[var17_intLifetime3]) {
                   var19_ref = null;
@@ -514,50 +514,50 @@ final class TriangleMesh {
                   var20 = ResourceArchive.field_m[var17_intLifetime3][var18];
                 }
               }
-              ma.field_b[var17_intLifetime3 + 4][var18 + 1] = new AlignedIconLabel(0L, uq.field_d, (UiComponent) null, cm.field_b, (Sprite) (var19_ref), (String) (var20));
+              TextValidationFailure.field_b[var17_intLifetime3 + 4][var18 + 1] = new AlignedIconLabel(0L, BrowserPageHelpers.field_d, (UiComponent) null, LobbyRequestHelpers.field_b, (Sprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; param9 + 4 > var17_intLifetime4; var17_intLifetime4++) {
             if (StateIconLabel.field_Ib[var17_intLifetime4] != null) {
               StateIconLabel.field_Ib[var17_intLifetime4].field_J = 11;
             }
-            if (null != ma.field_b[var17_intLifetime4]) {
-              for (var18Lifetime1 = 0; ma.field_b[var17_intLifetime4].length > var18Lifetime1; var18Lifetime1++) {
-                if (null != ma.field_b[var17_intLifetime4][var18Lifetime1] &&
-                  ma.field_b[var17_intLifetime4][var18Lifetime1].field_Mb != null) {
-                  ma.field_b[var17_intLifetime4][var18Lifetime1].field_Mb.field_J = 11;
+            if (null != TextValidationFailure.field_b[var17_intLifetime4]) {
+              for (var18Lifetime1 = 0; TextValidationFailure.field_b[var17_intLifetime4].length > var18Lifetime1; var18Lifetime1++) {
+                if (null != TextValidationFailure.field_b[var17_intLifetime4][var18Lifetime1] &&
+                  TextValidationFailure.field_b[var17_intLifetime4][var18Lifetime1].field_Mb != null) {
+                  TextValidationFailure.field_b[var17_intLifetime4][var18Lifetime1].field_Mb.field_J = 11;
                 }
               }
             }
           }
-          en.field_b = new UiComponent(0L, LinkButtonPainter.field_i);
+          ChatPanelSetupHelpers.field_b = new UiComponent(0L, LinkButtonPainter.field_i);
           GameKeyHandler.field_a = new UiComponent(0L, LinkButtonPainter.field_i);
-          eb.field_B = new UiComponent(0L, qc.field_u);
-          eb.field_B.copyStyle((byte) -32, vo.field_m);
-          eb.field_B.field_lb = 1;
-          var17 = eb.field_B;
+          PopupMenuBuilder.field_B = new UiComponent(0L, ArchiveRequest.field_u);
+          PopupMenuBuilder.field_B.copyStyle((byte) -32, IntroScreen.field_m);
+          PopupMenuBuilder.field_B.field_lb = 1;
+          var17 = PopupMenuBuilder.field_B;
           var17.field_R = 1;
           LevelData.field_a = new UiComponent(0L, (UiComponent) null);
-          LevelData.field_a.a((byte) 50, gg.field_m);
-          LevelData.field_a.a((byte) 50, SocketConnector.field_a);
-          SocketConnector.field_a.a((byte) 50, ik.field_d);
+          LevelData.field_a.addChild((byte) 50, ArchiveLoadStep.field_m);
+          LevelData.field_a.addChild((byte) 50, SocketConnector.field_a);
+          SocketConnector.field_a.addChild((byte) 50, KeyboardStateHelpers.field_d);
           for (var18Lifetime2 = 0; 4 + param9 > var18Lifetime2; var18Lifetime2++) {
             if ((var18Lifetime2 != 1 ||
-              !(qo.field_r.length < 2)) && (var18Lifetime2 != 3 ||
-              !(r.field_f <= 1))) {
-              SocketConnector.field_a.a((byte) 50, StateIconLabel.field_Ib[var18Lifetime2]);
-              for (var19 = 0; ma.field_b[var18Lifetime2].length > var19; var19++) {
-                if (null != ma.field_b[var18Lifetime2][var19]) {
-                  SocketConnector.field_a.a((byte) 50, ma.field_b[var18Lifetime2][var19]);
+              !(UiComponentNode.field_r.length < 2)) && (var18Lifetime2 != 3 ||
+              !(MusicPatchLoadHelpers.field_f <= 1))) {
+              SocketConnector.field_a.addChild((byte) 50, StateIconLabel.field_Ib[var18Lifetime2]);
+              for (var19 = 0; TextValidationFailure.field_b[var18Lifetime2].length > var19; var19++) {
+                if (null != TextValidationFailure.field_b[var18Lifetime2][var19]) {
+                  SocketConnector.field_a.addChild((byte) 50, TextValidationFailure.field_b[var18Lifetime2][var19]);
                 }
               }
             }
           }
-          LevelData.field_a.a((byte) 50, en.field_b);
-          LevelData.field_a.a((byte) 50, GameKeyHandler.field_a);
-          LevelData.field_a.a((byte) 50, eb.field_B);
-          mq.field_l = new UiComponent(0L, kc.field_c, p.field_c.toUpperCase());
-          pg.field_a = new UiComponent(0L, GameWorld.field_n, qq.field_d.toUpperCase());
+          LevelData.field_a.addChild((byte) 50, ChatPanelSetupHelpers.field_b);
+          LevelData.field_a.addChild((byte) 50, GameKeyHandler.field_a);
+          LevelData.field_a.addChild((byte) 50, PopupMenuBuilder.field_B);
+          AchievementsScreen.field_l = new UiComponent(0L, ScreenSizeGlobals.field_c, ObjectFactoryHelpers.field_c.toUpperCase());
+          ViewFactoryHelpers.field_a = new UiComponent(0L, GameWorld.field_n, IntHashIndex.field_d.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

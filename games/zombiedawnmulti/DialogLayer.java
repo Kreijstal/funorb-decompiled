@@ -8,7 +8,7 @@ final class DialogLayer extends SingleChildWidget {
     static String field_F;
     static String field_G;
     static boolean field_E;
-    static pd field_I;
+    static FramePainter field_I;
     static String[] field_L;
 
     final void showDialog(int param0, UiWidget param1) {
@@ -29,17 +29,17 @@ final class DialogLayer extends SingleChildWidget {
         }
     }
 
-    final static boolean l(byte param0) {
+    final static boolean canShowAdvert(byte param0) {
         CharSequence var2;
         boolean stackIn_9_0 = false;
         if (param0 > -121) {
           var2 = (CharSequence) null;
-          DialogLayer.a(-28, (CharSequence) null);
+          DialogLayer.getNameValidationError(-28, (CharSequence) null);
         }
         boolean decompiledFrameRemainder0 = true;
         if (ClientException.field_i >= 20 &&
-          SimZombie.isSessionReady(-86) && (!(qq.field_a > 0) ||
-          ValidationState.b(-118))) {
+          SimZombie.isSessionReady(-86) && (!(IntHashIndex.field_a > 0) ||
+          ValidationState.alwaysTrue(-118))) {
           stackIn_9_0 = false;
           decompiledFrameRemainder0 = false;
         }
@@ -49,20 +49,20 @@ final class DialogLayer extends SingleChildWidget {
         return stackIn_9_0;
     }
 
-    final void h(byte param0) {
+    final void advanceDialogs(byte param0) {
         int var4 = ZombieDawnMulti.field_E ? 1 : 0;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_H);
-        FadingDialog var3 = (FadingDialog) (var2.c(-3));
+        FadingDialog var3 = (FadingDialog) (var2.last(-3));
         if (param0 > -84) {
-          DialogLayer.l((byte) 127);
+          DialogLayer.canShowAdvert((byte) 127);
         }
         while (var3 != null) {
           if (var3.advanceDialogAnimation(-27388)) {
             var3.unlink(true);
           }
-          var3 = (FadingDialog) (var2.a((byte) -113));
+          var3 = (FadingDialog) (var2.previous((byte) -113));
         }
-        this.field_B = (UiWidget) ((Object) this.j((byte) -119));
+        this.field_B = (UiWidget) ((Object) this.getActiveDialog((byte) -119));
     }
 
     public static void releaseStatics(byte param0) {
@@ -75,7 +75,7 @@ final class DialogLayer extends SingleChildWidget {
         field_L = null;
     }
 
-    final static void a(ChatMessage param0, byte param1) {
+    final static void appendChatHistory(ChatMessage param0, byte param1) {
         int dupTemp$3 = 0;
         int dupTemp$0 = 0;
         int var3 = 0;
@@ -97,36 +97,36 @@ final class DialogLayer extends SingleChildWidget {
             field_J = (int[]) null;
           }
           for (var2_int = 0; var2_int < 3; var2_int++) {
-            ub.field_ub[var2_int] = 0;
+            LoginDialog.field_ub[var2_int] = 0;
           }
-          for (var2_intLifetime1 = 0; uf.field_g > var2_intLifetime1; var2_intLifetime1++) {
-            if (param0.field_l == uk.field_M[var2_intLifetime1].field_l) {
-              dupTemp$3 = uk.field_M[var2_intLifetime1].a(true);
-              ub.field_ub[dupTemp$3] = ub.field_ub[dupTemp$3] + 1;
+          for (var2_intLifetime1 = 0; MoveOrderMarker.field_g > var2_intLifetime1; var2_intLifetime1++) {
+            if (param0.field_l == ValidationIconWidget.field_M[var2_intLifetime1].field_l) {
+              dupTemp$3 = ValidationIconWidget.field_M[var2_intLifetime1].getFilterPriority(true);
+              LoginDialog.field_ub[dupTemp$3] = LoginDialog.field_ub[dupTemp$3] + 1;
             }
           }
-          dupTemp$0 = param0.a(true);
-          ub.field_ub[dupTemp$0] = ub.field_ub[dupTemp$0] + 1;
+          dupTemp$0 = param0.getFilterPriority(true);
+          LoginDialog.field_ub[dupTemp$0] = LoginDialog.field_ub[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
-          for (var3 = 0; var3 < uf.field_g; var3++) {
+          for (var3 = 0; var3 < MoveOrderMarker.field_g; var3++) {
             boolean decompiledFrameRemainder0 = true;
-            if (uk.field_M[var3].field_l == param0.field_l) {
-              var4 = uk.field_M[var3].a(true);
-              if (ub.field_ub[var4] > InfectionEvent.field_m) {
-                ub.field_ub[var4] = ub.field_ub[var4] - 1;
+            if (ValidationIconWidget.field_M[var3].field_l == param0.field_l) {
+              var4 = ValidationIconWidget.field_M[var3].getFilterPriority(true);
+              if (LoginDialog.field_ub[var4] > InfectionEvent.field_m) {
+                LoginDialog.field_ub[var4] = LoginDialog.field_ub[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }
             }
             if (decompiledFrameRemainder0) {
               incrementValue$2 = var2_intLifetime2;
               var2_intLifetime2++;
-              uk.field_M[incrementValue$2] = uk.field_M[var3];
+              ValidationIconWidget.field_M[incrementValue$2] = ValidationIconWidget.field_M[var3];
             }
           }
-          uf.field_g = var2_intLifetime2;
-          fieldTemp$1 = uf.field_g;
-          uf.field_g = uf.field_g + 1;
-          uk.field_M[fieldTemp$1] = param0;
+          MoveOrderMarker.field_g = var2_intLifetime2;
+          fieldTemp$1 = MoveOrderMarker.field_g;
+          MoveOrderMarker.field_g = MoveOrderMarker.field_g + 1;
+          ValidationIconWidget.field_M[fieldTemp$1] = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -142,7 +142,7 @@ final class DialogLayer extends SingleChildWidget {
         }
     }
 
-    final static String a(int param0, CharSequence param1) {
+    final static String getNameValidationError(int param0, CharSequence param1) {
         RuntimeException var2 = null;
         int[] var3 = null;
         String stackIn_3_0 = null;
@@ -153,7 +153,7 @@ final class DialogLayer extends SingleChildWidget {
         try {
           if (param0 != 20) {
             var3 = (int[]) null;
-            DialogLayer.a((int[]) null, true, 94, 30, (byte) 84, (int[]) null, 90, 72, -73);
+            DialogLayer.createMenuScreen((int[]) null, true, 94, 30, (byte) 84, (int[]) null, 90, 72, -73);
           }
           stackIn_3_0 = UnitStateEvent.validateNameText(false, -52, param1);
           return stackIn_3_0;
@@ -171,40 +171,40 @@ final class DialogLayer extends SingleChildWidget {
         }
     }
 
-    final static boolean i(byte param0) {
+    final static boolean isBlinkPhaseVisible(byte param0) {
         int[] var2;
         boolean stackIn_6_0 = false;
         if (param0 != -39) {
           var2 = (int[]) null;
-          DialogLayer.a((int[]) null, false, -127, -95, (byte) -9, (int[]) null, -29, -30, -79);
+          DialogLayer.createMenuScreen((int[]) null, false, -127, -95, (byte) -9, (int[]) null, -29, -30, -79);
         }
-        stackIn_6_0 = (a.hasInputFocus(-107)) && ((8 & PowerupEvent.field_m) == 0);
+        stackIn_6_0 = (LoginSuccessHelpers.hasInputFocus(-107)) && ((8 & PowerupEvent.field_m) == 0);
         return stackIn_6_0;
     }
 
-    final void h(int param0) {
+    final void closeAllDialogs(int param0) {
         int var4 = ZombieDawnMulti.field_E ? 1 : 0;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_H);
-        FadingDialog var3 = (FadingDialog) (var2.c(-3));
+        FadingDialog var3 = (FadingDialog) (var2.last(-3));
         while (var3 != null) {
           var3.field_R = false;
-          var3 = (FadingDialog) (var2.a((byte) -112));
+          var3 = (FadingDialog) (var2.previous((byte) -112));
         }
         this.field_B = null;
         if (param0 >= -81) {
-          DialogLayer.i((byte) 56);
+          DialogLayer.isBlinkPhaseVisible((byte) 56);
         }
     }
 
-    final FadingDialog j(byte param0) {
+    final FadingDialog getActiveDialog(byte param0) {
         int var4 = ZombieDawnMulti.field_E ? 1 : 0;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_H);
-        FadingDialog var3 = (FadingDialog) (var2.c(-3));
+        FadingDialog var3 = (FadingDialog) (var2.last(-3));
         while (var3 != null) {
           if (var3.field_R) {
             return var3;
           }
-          var3 = (FadingDialog) (var2.a((byte) -48));
+          var3 = (FadingDialog) (var2.previous((byte) -48));
         }
         if (param0 < -118) {
           return null;
@@ -221,10 +221,10 @@ final class DialogLayer extends SingleChildWidget {
           return;
         }
         IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_H);
-        UiWidget var6 = (UiWidget) (var5.a(32397));
+        UiWidget var6 = (UiWidget) (var5.first(32397));
         while (var6 != null) {
           var6.renderWidget(-2, param1 + this.field_i, param2, param3 + this.field_y);
-          var6 = (UiWidget) (var5.e(-3));
+          var6 = (UiWidget) (var5.next(-3));
         }
     }
 
@@ -237,17 +237,17 @@ final class DialogLayer extends SingleChildWidget {
         if (param0 != -1963) {
           return (UiWidget) null;
         }
-        var3 = (FadingDialog) (var2.c(-3));
+        var3 = (FadingDialog) (var2.last(-3));
         while (var3 != null) {
           if (var3.field_R) {
             return var3.findFocusTarget(122);
           }
-          var3 = (FadingDialog) (var2.a((byte) -38));
+          var3 = (FadingDialog) (var2.previous((byte) -38));
         }
         return null;
     }
 
-    final static Sprite[] a(int param0, int param1, ResourceArchive param2, int param3) {
+    final static Sprite[] loadSprites(int param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         Sprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -255,13 +255,13 @@ final class DialogLayer extends SingleChildWidget {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!ud.loadSpriteSheet(param3, param2, param1, (byte) -42)) {
+          if (!DialSelectorWidget.loadSpriteSheet(param3, param2, param1, (byte) -42)) {
             return null;
           }
           if (param0 < 32) {
-            DialogLayer.i((byte) -118);
+            DialogLayer.isBlinkPhaseVisible((byte) -118);
           }
-          stackIn_6_0 = eb.a(33);
+          stackIn_6_0 = PopupMenuBuilder.buildSprites(33);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -277,7 +277,7 @@ final class DialogLayer extends SingleChildWidget {
         }
     }
 
-    final static void a(int[] param0, boolean param1, int param2, int param3, byte param4, int[] param5, int param6, int param7, int param8) {
+    final static void createMenuScreen(int[] param0, boolean param1, int param2, int param3, byte param4, int[] param5, int param6, int param7, int param8) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -292,30 +292,30 @@ final class DialogLayer extends SingleChildWidget {
           boolean decompiledFrameRemainder0 = true;
           var9_int = 13 / ((param4 - 48) / 58);
           if (param2 == 1) {
-            mj.field_Hb[param2] = (MenuScreen) ((Object) new ho(param2, param1, param3, param6, param8, param7, param5));
+            ScrollBar.field_Hb[param2] = (MenuScreen) ((Object) new OptionsMenuScreen(param2, param1, param3, param6, param8, param7, param5));
           } else {
             if (3 != param2) {
               if (param2 == 4) {
-                mj.field_Hb[param2] = (MenuScreen) ((Object) new ol(param2, param1, param3, param6, param8, param7, param5));
+                ScrollBar.field_Hb[param2] = (MenuScreen) ((Object) new InstructionsScreen(param2, param1, param3, param6, param8, param7, param5));
               } else {
                 if (5 != param2 &&
                   param2 != 6) {
                   if (10 == param2) {
-                    mj.field_Hb[param2] = (MenuScreen) ((Object) new si(param2, param1, param3, param6, param8, param7, param5));
+                    ScrollBar.field_Hb[param2] = (MenuScreen) ((Object) new GameResultsScreen(param2, param1, param3, param6, param8, param7, param5));
                   } else {
                     if (param2 == 12) {
-                      mj.field_Hb[param2] = (MenuScreen) ((Object) new vo(param2, param1, param3, param6, param8, param7, param5));
+                      ScrollBar.field_Hb[param2] = (MenuScreen) ((Object) new IntroScreen(param2, param1, param3, param6, param8, param7, param5));
                     } else {
                       if (param2 == 14) {
-                        mj.field_Hb[param2] = (MenuScreen) ((Object) new vj(param2, param1, param3, param6, param8, param7, param5));
+                        ScrollBar.field_Hb[param2] = (MenuScreen) ((Object) new AppearanceScreen(param2, param1, param3, param6, param8, param7, param5));
                       } else {
                         if (param2 == 15) {
-                          mj.field_Hb[param2] = (MenuScreen) ((Object) new LaboratoryScreen(param2, param1, param3, param6, param8, param7, param5));
+                          ScrollBar.field_Hb[param2] = (MenuScreen) ((Object) new LaboratoryScreen(param2, param1, param3, param6, param8, param7, param5));
                         } else {
                           if (13 == param2) {
-                            mj.field_Hb[param2] = (MenuScreen) ((Object) new kp(param2, param1, param3, param6, param8, param7, param5));
+                            ScrollBar.field_Hb[param2] = (MenuScreen) ((Object) new MessageMenuScreen(param2, param1, param3, param6, param8, param7, param5));
                           } else {
-                            mj.field_Hb[param2] = new MenuScreen(param2, param1, param3, param6, param8, param7, param5);
+                            ScrollBar.field_Hb[param2] = new MenuScreen(param2, param1, param3, param6, param8, param7, param5);
                           }
                         }
                       }
@@ -324,14 +324,14 @@ final class DialogLayer extends SingleChildWidget {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  mj.field_Hb[param2] = (MenuScreen) ((Object) new mq(param2, param1, param3, param6, param8, param7, param5));
+                  ScrollBar.field_Hb[param2] = (MenuScreen) ((Object) new AchievementsScreen(param2, param1, param3, param6, param8, param7, param5));
                 }
               }
             } else {
-              mj.field_Hb[param2] = (MenuScreen) ((Object) new fk(param2, param1, param3, param6, param8, param7, param5));
+              ScrollBar.field_Hb[param2] = (MenuScreen) ((Object) new RankingsScreen(param2, param1, param3, param6, param8, param7, param5));
             }
           }
-          MusicPatchNode.field_h = (si) (mj.field_Hb[10]);
+          MusicPatchNode.field_h = (GameResultsScreen) (ScrollBar.field_Hb[10]);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -354,7 +354,7 @@ final class DialogLayer extends SingleChildWidget {
     }
 
     public DialogLayer() {
-        super(0, 0, ub.field_wb, kc.field_a, (WidgetPainter) null, (WidgetListener) null);
+        super(0, 0, LoginDialog.field_wb, ScreenSizeGlobals.field_a, (WidgetPainter) null, (WidgetListener) null);
         this.field_H = new IntrusiveDeque();
     }
 
@@ -364,12 +364,12 @@ final class DialogLayer extends SingleChildWidget {
         if (param0 != 118) {
           field_J = (int[]) null;
         }
-        FadingDialog var3 = (FadingDialog) (var2.c(-3));
+        FadingDialog var3 = (FadingDialog) (var2.last(-3));
         while (var3 != null) {
-          if (var3.h(-6134)) {
+          if (var3.refreshVisibilityAndCheckClosed(-6134)) {
             var3.unlink(true);
           }
-          var3 = (FadingDialog) (var2.a((byte) -30));
+          var3 = (FadingDialog) (var2.previous((byte) -30));
         }
     }
 

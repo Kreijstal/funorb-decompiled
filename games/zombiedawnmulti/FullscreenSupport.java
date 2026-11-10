@@ -1,0 +1,63 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class FullscreenSupport {
+    static Sprite[] field_a;
+    static FullscreenFocusCanvas field_f;
+    static DiskCacheWorker field_d;
+    static ResourceArchive field_e;
+    static String field_g;
+    static String field_b;
+    static String field_c;
+
+    public static void releaseStatics(byte param0) {
+        field_a = null;
+        field_e = null;
+        field_g = null;
+        field_c = null;
+        field_f = null;
+        field_b = null;
+        field_d = null;
+        int var1 = 40 % ((21 - param0) / 39);
+    }
+
+    final static void exitActiveFullscreen(int param0) {
+        if (field_f == null) {
+          return;
+        }
+        SpriteState.detachCanvasInput(95, field_f);
+        if (param0 > -26) {
+          field_a = (Sprite[]) null;
+          field_f.exitFullscreen(8192, ArrayWidgetGroup.field_J);
+          field_f = null;
+          if (null != ArchiveProvider.field_g) {
+            ArchiveProvider.field_g.restoreWindowedSize(-33);
+            NameEntryPopup.field_Ib.requestFocus();
+            return;
+          }
+          NameEntryPopup.field_Ib.requestFocus();
+          return;
+        }
+        field_f.exitFullscreen(8192, ArrayWidgetGroup.field_J);
+        field_f = null;
+        if (null == ArchiveProvider.field_g) {
+          NameEntryPopup.field_Ib.requestFocus();
+          return;
+        }
+        ArchiveProvider.field_g.restoreWindowedSize(-33);
+        NameEntryPopup.field_Ib.requestFocus();
+    }
+
+    final static UiComponent getIgnoreListContent(int param0) {
+        if (param0 != 28579) {
+          return (UiComponent) null;
+        }
+        return UsernameSuggestionsPanel.field_L.field_Ib;
+    }
+
+    static {
+        field_c = "Quick Thinker";
+        field_g = "If you do nothing the game will revert to normal view in <%0> seconds.";
+        field_b = "Some players haven't unlocked the currently selected game options.<br>Please view the '<%0>' tab on the left for details.";
+    }
+}

@@ -31,7 +31,7 @@ final class RasterSnapshot extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_j = null;
         field_n = null;
         if (param0 != 27467) {

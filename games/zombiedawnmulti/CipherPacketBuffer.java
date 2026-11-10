@@ -34,7 +34,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
-        vg var3 = null;
+        RankingsRequest var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
@@ -57,39 +57,39 @@ final class CipherPacketBuffer extends PacketBuffer {
           if (param0 < 31) {
             CipherPacketBuffer.releaseStatics(81);
           }
-          var13 = s.field_e;
+          var13 = StatusAndMeshHelpers.field_e;
           var15 = var13;
           var2 = var15.readUnsignedByte(31365);
-          var3 = (vg) (GameApplet.field_i.last(116));
+          var3 = (RankingsRequest) (GameApplet.field_i.last(116));
           while (var3 != null) {
             if (var2 != var3.field_i) {
-              var3 = (vg) (GameApplet.field_i.previous(6));
+              var3 = (RankingsRequest) (GameApplet.field_i.previous(6));
               continue;
             }
             break;
           }
           if (var3 == null) {
-            ak.closeGameSocket((byte) -123);
+            ClientShellHelpers.closeGameSocket((byte) -123);
             return;
           }
           var4 = var15.readUnsignedByte(31365);
           if (var4 != 0) {
-            kk.field_v[0] = ProgressDialog.field_lb;
+            CacheEntry.field_v[0] = ProgressDialog.field_lb;
             var5 = var3.field_p;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
-              kk.field_v[var6_int] = var13.readString((byte) -116);
+              CacheEntry.field_v[var6_int] = var13.readString((byte) -116);
             }
-            s.ensureRankingArrays(var4, (byte) 111, var5);
+            StatusAndMeshHelpers.ensureRankingArrays(var4, (byte) 111, var5);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               ContextMenu.decodePackedRankedEntry(4050, var15);
               if (var6_intLifetime1 != 0) {
-                PacketBuffer.a(1000, ao.field_c, vn.field_e, qc.field_q, var6_intLifetime1, jq.field_a);
+                PacketBuffer.addRankingRow(1000, QuickChatCommandType.field_c, MenuFrameHelpers.field_e, ArchiveRequest.field_q, var6_intLifetime1, PowerGaugeHelpers.field_a);
               } else {
-                var3.field_m = vn.field_e;
-                var3.field_g = jq.field_a;
-                var3.field_o = ao.field_c;
-                var3.field_l = qc.field_q;
-                PacketBuffer.a(1000, ao.field_c, vn.field_e, qc.field_q, var6_intLifetime1, jq.field_a);
+                var3.field_m = MenuFrameHelpers.field_e;
+                var3.field_g = PowerGaugeHelpers.field_a;
+                var3.field_o = QuickChatCommandType.field_c;
+                var3.field_l = ArchiveRequest.field_q;
+                PacketBuffer.addRankingRow(1000, QuickChatCommandType.field_c, MenuFrameHelpers.field_e, ArchiveRequest.field_q, var6_intLifetime1, PowerGaugeHelpers.field_a);
               }
             }
             TriangleMesh.sortRankingRows(var5, -109);
@@ -103,14 +103,14 @@ final class CipherPacketBuffer extends PacketBuffer {
             var9 = 0;
             var10 = 0;
             while (var9 < var8) {
-              var11 = la.field_c[var9];
-              var6[0][var10] = kk.field_v[var11];
-              var7[0][var10 * 4] = lb.field_c[var11];
+              var11 = GrowableIntList.field_c[var9];
+              var6[0][var10] = CacheEntry.field_v[var11];
+              var7[0][var10 * 4] = PasswordCheckHelpers.field_c[var11];
               var7[0][1 + 4 * var10] = DialogLayer.field_J[var11];
-              var7[0][2 + var10 * 4] = kj.field_p[var11];
+              var7[0][2 + var10 * 4] = FriendListHelpers.field_p[var11];
               var7[0][3 + 4 * var10] = ContentTransitionDialog.field_ob[var11];
-              if (sf.isCurrentUser(1, kk.field_v[var11]) &&
-                DialogLayer.field_J[var11] + kj.field_p[var11] + ContentTransitionDialog.field_ob[var11] == 0) {
+              if (SocialRequestHelpers.isCurrentUser(1, CacheEntry.field_v[var11]) &&
+                DialogLayer.field_J[var11] + FriendListHelpers.field_p[var11] + ContentTransitionDialog.field_ob[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -121,14 +121,14 @@ final class CipherPacketBuffer extends PacketBuffer {
             var14 = 0;
             var10Lifetime1 = var14;
             while (var9Lifetime1 < var8) {
-              var11Lifetime1 = la.field_c[var9Lifetime1 + var5];
-              var6[1][var14] = kk.field_v[var11Lifetime1];
-              var7[1][var14 * 4] = lb.field_c[var11Lifetime1];
+              var11Lifetime1 = GrowableIntList.field_c[var9Lifetime1 + var5];
+              var6[1][var14] = CacheEntry.field_v[var11Lifetime1];
+              var7[1][var14 * 4] = PasswordCheckHelpers.field_c[var11Lifetime1];
               var7[1][4 * var14 + 1] = DialogLayer.field_J[var11Lifetime1];
-              var7[1][2 + 4 * var14] = kj.field_p[var11Lifetime1];
+              var7[1][2 + 4 * var14] = FriendListHelpers.field_p[var11Lifetime1];
               var7[1][3 + var14 * 4] = ContentTransitionDialog.field_ob[var11Lifetime1];
-              if (sf.isCurrentUser(1, kk.field_v[var11Lifetime1]) &&
-                0 == DialogLayer.field_J[var11Lifetime1] + kj.field_p[var11Lifetime1] + ContentTransitionDialog.field_ob[var11Lifetime1]) {
+              if (SocialRequestHelpers.isCurrentUser(1, CacheEntry.field_v[var11Lifetime1]) &&
+                0 == DialogLayer.field_J[var11Lifetime1] + FriendListHelpers.field_p[var11Lifetime1] + ContentTransitionDialog.field_ob[var11Lifetime1]) {
                 var6[1][var14] = null;
                 var14--;
               }
@@ -186,28 +186,28 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final static uc startEmailValidation(String param0, boolean param1) {
+    final static FlaggedTextValue startEmailValidation(String param0, boolean param1) {
         RuntimeException var2 = null;
         String stackIn_5_0 = null;
         boolean stackIn_6_1 = false;
-        uc stackIn_9_0 = null;
-        uc stackIn_11_0 = null;
+        FlaggedTextValue stackIn_9_0 = null;
+        FlaggedTextValue stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (tg.field_g.isFlagAssigned(-99) &&
-            !param0.equals(tg.field_g.getText(31027))) {
+          if (AudioPumpThread.field_g.hasChanged(-99) &&
+            !param0.equals(AudioPumpThread.field_g.getText(31027))) {
             stackIn_5_0 = (String) (param0);
             stackIn_6_1 = !(param1);
-            tg.field_g = tg.createConditionalText(stackIn_5_0, stackIn_6_1);
+            AudioPumpThread.field_g = AudioPumpThread.createFlaggedTextValue(stackIn_5_0, stackIn_6_1);
           }
           if (!param1) {
-            stackIn_11_0 = tg.field_g;
+            stackIn_11_0 = AudioPumpThread.field_g;
             return stackIn_11_0;
           }
-          stackIn_9_0 = (uc) null;
+          stackIn_9_0 = (FlaggedTextValue) null;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -236,14 +236,14 @@ final class CipherPacketBuffer extends PacketBuffer {
         while (var4 < param0) {
           incrementValue$0 = var3;
           var3++;
-          var5 = var5 + ((mb.field_n[var4] & this.payload[incrementValue$0]) << param0 - var4);
+          var5 = var5 + ((MusicVoice.field_n[var4] & this.payload[incrementValue$0]) << param0 - var4);
           param0 = param0 - var4;
           var4 = 8;
         }
         if (param0 != var4) {
-          var5 = var5 + (this.payload[var3] >> var4 - param0 & mb.field_n[param0]);
+          var5 = var5 + (this.payload[var3] >> var4 - param0 & MusicVoice.field_n[param0]);
         } else {
-          var5 = var5 + (mb.field_n[var4] & this.payload[var3]);
+          var5 = var5 + (MusicVoice.field_n[var4] & this.payload[var3]);
         }
         return var5;
     }
@@ -251,10 +251,10 @@ final class CipherPacketBuffer extends PacketBuffer {
     final static int getChatFilterMode(int param0, boolean param1) {
         int var2 = 0;
         if (param0 == 0) {
-          var2 = li.field_C;
+          var2 = DiskArchiveRequest.field_C;
         }
         if (param0 == 1) {
-          var2 = qe.field_g;
+          var2 = GameHud.field_g;
         }
         if (!param1) {
           field_r = (UiComponent) null;

@@ -47,7 +47,7 @@ final class ReportAbuseDialog extends UiComponent {
         if (param0 != -58) {
           this.field_Mb = (UiComponent) null;
         }
-        this.a(-11838, param1);
+        this.updateRoot(-11838, param1);
         if (null != this.field_Sb) {
           this.field_Sb.field_wb = this.field_Nb.toString();
           this.field_Sb.field_x = (this.field_zb - this.field_Sb.field_yb.textWidth(this.field_Sb.field_wb)) / 2;
@@ -74,18 +74,18 @@ final class ReportAbuseDialog extends UiComponent {
           return -1;
         }
         if (param1 &&
-          kd.field_b != 0 &&
+          StringHashHelpers.field_b != 0 &&
           this.field_T == 0) {
           return -1;
         }
         return this.field_Lb;
     }
 
-    final static int d(boolean param0) {
+    final static int getPopupMenuWidth(boolean param0) {
         if (param0) {
           return -111;
         }
-        return fl.field_a - ZombieDawnMulti.field_H;
+        return ByteArrayPool.field_a - ZombieDawnMulti.field_H;
     }
 
     final String getReportedName(int param0) {
@@ -124,7 +124,7 @@ final class ReportAbuseDialog extends UiComponent {
           }
           var7 = new UiComponent(0L, param4, 0, param1, param2, 24, param0);
           param1 += 32;
-          param3.a((byte) 50, var7);
+          param3.addChild((byte) 50, var7);
           stackIn_4_0 = param1;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -164,26 +164,26 @@ final class ReportAbuseDialog extends UiComponent {
         return var2;
     }
 
-    final static boolean b(int param0, int param1) {
+    final static boolean fillIncomingBuffer(int param0, int param1) {
         try {
-          if (param1 <= s.field_e.position) {
+          if (param1 <= StatusAndMeshHelpers.field_e.position) {
             return true;
           }
-          if (null == ki.field_h) {
+          if (null == SpriteHotspot.field_h) {
             return false;
           }
-          int var2_int = ki.field_h.a(124);
+          int var2_int = SpriteHotspot.field_h.available(124);
           if (0 < var2_int) {
-            if (!(var2_int <= -s.field_e.position + param1)) {
-              var2_int = param1 - s.field_e.position;
+            if (!(var2_int <= -StatusAndMeshHelpers.field_e.position + param1)) {
+              var2_int = param1 - StatusAndMeshHelpers.field_e.position;
             }
-            ki.field_h.a(var2_int, s.field_e.position, s.field_e.payload, 120);
-            AlignedIconLabel.field_Gb = bl.monotonicMillis((byte) 80);
-            s.field_e.position = s.field_e.position + var2_int;
-            if (s.field_e.position < param1) {
+            SpriteHotspot.field_h.readFully(var2_int, StatusAndMeshHelpers.field_e.position, StatusAndMeshHelpers.field_e.payload, 120);
+            AlignedIconLabel.field_Gb = ClockAndScreenHelpers.monotonicMillis((byte) 80);
+            StatusAndMeshHelpers.field_e.position = StatusAndMeshHelpers.field_e.position + var2_int;
+            if (StatusAndMeshHelpers.field_e.position < param1) {
               return false;
             }
-            s.field_e.position = 0;
+            StatusAndMeshHelpers.field_e.position = 0;
             return true;
           }
           try {
@@ -195,9 +195,9 @@ final class ReportAbuseDialog extends UiComponent {
               LinkButtonPainter.millisSinceLastReceive((byte) -22) <= 30000L) {
               return false;
             }
-            ak.closeGameSocket((byte) -124);
+            ClientShellHelpers.closeGameSocket((byte) -124);
           } catch (IOException iOException) {
-            ak.closeGameSocket((byte) -111);
+            ClientShellHelpers.closeGameSocket((byte) -111);
           }
           return false;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -217,7 +217,7 @@ final class ReportAbuseDialog extends UiComponent {
         field_Ib = null;
     }
 
-    final static String a(int param0, int param1, int param2) {
+    final static String formatPageNumber(int param0, int param1, int param2) {
         int var3 = -124 % ((55 - param0) / 63);
         return param2 + "/" + param1;
     }
@@ -292,38 +292,38 @@ final class ReportAbuseDialog extends UiComponent {
         this.field_Lb = -2;
         try {
           this.field_Fb = param12;
-          this.field_Kb = new UiComponent(0L, param6, vc.field_g.toUpperCase());
+          this.field_Kb = new UiComponent(0L, param6, KeyMapHelpers.field_g.toUpperCase());
           this.field_Kb.field_R = 1;
-          this.a((byte) 50, this.field_Kb);
+          this.addChild((byte) 50, this.field_Kb);
           this.field_Mb = new UiComponent(0L, param7);
-          this.field_Kb.a((byte) 50, this.field_Mb);
+          this.field_Kb.addChild((byte) 50, this.field_Mb);
           this.field_Rb = new UiComponent(0L, (UiComponent) null);
-          this.a((byte) 50, this.field_Rb);
+          this.addChild((byte) 50, this.field_Rb);
           if (param11 != null) {
-            this.field_Vb = new UiComponent(0L, param8, wg.field_a);
+            this.field_Vb = new UiComponent(0L, param8, SettingsCookieHelpers.field_a);
             this.field_Vb.field_M = 11184810;
             this.field_Vb.field_R = 1;
-            this.field_Rb.a((byte) 50, this.field_Vb);
-            this.field_Pb = new UiComponent(0L, param8, bf.field_q);
+            this.field_Rb.addChild((byte) 50, this.field_Vb);
+            this.field_Pb = new UiComponent(0L, param8, MeltdownPuddle.field_q);
             this.field_Pb.field_M = 11184810;
             this.field_Pb.field_R = 1;
-            this.field_Rb.a((byte) 50, this.field_Pb);
+            this.field_Rb.addChild((byte) 50, this.field_Pb);
             this.field_Sb = new UiComponent(0L, param8);
             this.field_Sb.field_M = 16764006;
-            this.field_Rb.a((byte) 50, this.field_Sb);
+            this.field_Rb.addChild((byte) 50, this.field_Sb);
             this.field_Sb.field_vb = "|";
-            if (!(5 > am.field_b) ||
-              !(kj.field_q < 2)) {
+            if (!(5 > TeamSpriteHelpers.field_b) ||
+              !(FriendListHelpers.field_q < 2)) {
               regionExit1: {
                 stackIn_7_0 = this;
                 stackIn_7_1 = null;
                 stackIn_7_2 = null;
                 stackIn_7_3 = 0L;
                 stackIn_7_4 = (StateIconLabel) (param9);
-                if (am.field_b < 7) {
+                if (TeamSpriteHelpers.field_b < 7) {
                   stackIn_8_0 = this;
                   stackIn_7_0Lifetime1 = stackIn_8_0;
-                  if (kj.field_q < 2) {
+                  if (FriendListHelpers.field_q < 2) {
                     stackIn_9_0 = this;
                     stackIn_9_1 = null;
                     stackIn_9_2 = null;
@@ -334,28 +334,28 @@ final class ReportAbuseDialog extends UiComponent {
                 stackIn_9_0Lifetime1 = this;
                 stackIn_9_1Lifetime1 = null;
                 stackIn_9_2Lifetime1 = null;
-                stackIn_9_5 = jj.field_I;
+                stackIn_9_5 = PhantomDecoy.field_I;
               }
               this.field_Hb = new StateIconLabel(stackIn_7_3, stackIn_7_4, stackIn_9_5);
-              this.field_Rb.a((byte) 50, this.field_Hb);
+              this.field_Rb.addChild((byte) 50, this.field_Hb);
             }
             var28 = new UiComponent[3];
             var15 = var28;
             var28[0] = new UiComponent(0L, (UiComponent) null);
-            this.field_Rb.a((byte) 50, var28[0]);
+            this.field_Rb.addChild((byte) 50, var28[0]);
             var28[1] = new UiComponent(0L, (UiComponent) null);
-            this.field_Rb.a((byte) 50, var28[1]);
+            this.field_Rb.addChild((byte) 50, var28[1]);
             var28[2] = new UiComponent(0L, (UiComponent) null);
-            this.field_Rb.a((byte) 50, var28[2]);
+            this.field_Rb.addChild((byte) 50, var28[2]);
             this.field_Jb = new UiComponent[AlignedIconLabel.field_Kb];
             for (var16 = 0; AlignedIconLabel.field_Kb > var16; var16++) {
-              if (nk.field_n[var16] != null) {
-                this.field_Jb[var16] = new UiComponent(0L, param10, nk.field_n[var16]);
+              if (ZombieDetonation.field_n[var16] != null) {
+                this.field_Jb[var16] = new UiComponent(0L, param10, ZombieDetonation.field_n[var16]);
                 this.field_Jb[var16].field_R = 0;
                 stackIn_15_0 = this.field_Jb[var16];
                 stackIn_16_1 = (param11 != null);
                 stackIn_15_0.field_Z = stackIn_16_1;
-                this.field_Rb.a((byte) 50, this.field_Jb[var16]);
+                this.field_Rb.addChild((byte) 50, this.field_Jb[var16]);
               }
             }
             this.field_Nb = new StringBuilder(12);
@@ -363,21 +363,21 @@ final class ReportAbuseDialog extends UiComponent {
               discarded$0 = this.field_Nb.append(param11);
             }
             var16Lifetime2 = 0;
-            var17 = param6.field_yb.textWidth(mn.field_q);
+            var17 = param6.field_yb.textWidth(EmailLoginCredentials.field_q);
             if (var17 > var16Lifetime2) {
               var16Lifetime2 = var17;
             }
-            var17Lifetime2 = param6.field_yb.textWidth(ho.field_p);
+            var17Lifetime2 = param6.field_yb.textWidth(OptionsMenuScreen.field_p);
             if (var16Lifetime2 < var17Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
-            var17Lifetime3 = param6.field_yb.textWidth(ki.field_p);
+            var17Lifetime3 = param6.field_yb.textWidth(SpriteHotspot.field_p);
             if (var16Lifetime2 < var17Lifetime3) {
               var16Lifetime2 = var17Lifetime3;
             }
             for (var17Lifetime4 = 0; var17Lifetime4 < AlignedIconLabel.field_Kb; var17Lifetime4++) {
               if (null != this.field_Jb[var17Lifetime4]) {
-                var18 = this.field_Jb[var17Lifetime4].e(0);
+                var18 = this.field_Jb[var17Lifetime4].getPreferredWidth(0);
                 if (var16Lifetime2 < var18) {
                   var16Lifetime2 = var18;
                 }
@@ -389,36 +389,36 @@ final class ReportAbuseDialog extends UiComponent {
             var17Lifetime5 = 0;
             var18Lifetime2 = 0;
             var18Lifetime3 = 0;
-            var18Lifetime3 = this.appendReasonHeading(mn.field_q, var18Lifetime3, var16Lifetime2, var28[0], param6, 113);
-            var18Lifetime3 = this.a(var28[0], var16Lifetime2, this.field_Jb[6], var18Lifetime3, (byte) -55);
-            var18Lifetime3 = this.a(var28[0], var16Lifetime2, this.field_Jb[9], var18Lifetime3, (byte) -55);
-            var18Lifetime3 = this.a(var28[0], var16Lifetime2, this.field_Jb[5], var18Lifetime3, (byte) -55);
-            var18Lifetime3 = this.a(var28[0], var16Lifetime2, this.field_Jb[7], var18Lifetime3, (byte) -55);
-            var18Lifetime3 = this.a(var28[0], var16Lifetime2, this.field_Jb[15], var18Lifetime3, (byte) -55);
-            var18Lifetime3 = this.a(var28[0], var16Lifetime2, this.field_Jb[4], var18Lifetime3, (byte) -55);
+            var18Lifetime3 = this.appendReasonHeading(EmailLoginCredentials.field_q, var18Lifetime3, var16Lifetime2, var28[0], param6, 113);
+            var18Lifetime3 = this.appendReasonButton(var28[0], var16Lifetime2, this.field_Jb[6], var18Lifetime3, (byte) -55);
+            var18Lifetime3 = this.appendReasonButton(var28[0], var16Lifetime2, this.field_Jb[9], var18Lifetime3, (byte) -55);
+            var18Lifetime3 = this.appendReasonButton(var28[0], var16Lifetime2, this.field_Jb[5], var18Lifetime3, (byte) -55);
+            var18Lifetime3 = this.appendReasonButton(var28[0], var16Lifetime2, this.field_Jb[7], var18Lifetime3, (byte) -55);
+            var18Lifetime3 = this.appendReasonButton(var28[0], var16Lifetime2, this.field_Jb[15], var18Lifetime3, (byte) -55);
+            var18Lifetime3 = this.appendReasonButton(var28[0], var16Lifetime2, this.field_Jb[4], var18Lifetime3, (byte) -55);
             if (var18Lifetime3 > var17Lifetime5) {
               var17Lifetime5 = var18Lifetime3;
             }
             var18Lifetime4 = 0;
-            var18Lifetime4 = this.appendReasonHeading(ho.field_p, var18Lifetime4, var16Lifetime2, var28[1], param6, 114);
-            var18Lifetime4 = this.a(var28[1], var16Lifetime2, this.field_Jb[16], var18Lifetime4, (byte) -55);
-            var18Lifetime4 = this.a(var28[1], var16Lifetime2, this.field_Jb[17], var18Lifetime4, (byte) -55);
-            var18Lifetime4 = this.a(var28[1], var16Lifetime2, this.field_Jb[18], var18Lifetime4, (byte) -55);
-            var18Lifetime4 = this.a(var28[1], var16Lifetime2, this.field_Jb[19], var18Lifetime4, (byte) -55);
-            var18Lifetime4 = this.a(var28[1], var16Lifetime2, this.field_Jb[20], var18Lifetime4, (byte) -55);
+            var18Lifetime4 = this.appendReasonHeading(OptionsMenuScreen.field_p, var18Lifetime4, var16Lifetime2, var28[1], param6, 114);
+            var18Lifetime4 = this.appendReasonButton(var28[1], var16Lifetime2, this.field_Jb[16], var18Lifetime4, (byte) -55);
+            var18Lifetime4 = this.appendReasonButton(var28[1], var16Lifetime2, this.field_Jb[17], var18Lifetime4, (byte) -55);
+            var18Lifetime4 = this.appendReasonButton(var28[1], var16Lifetime2, this.field_Jb[18], var18Lifetime4, (byte) -55);
+            var18Lifetime4 = this.appendReasonButton(var28[1], var16Lifetime2, this.field_Jb[19], var18Lifetime4, (byte) -55);
+            var18Lifetime4 = this.appendReasonButton(var28[1], var16Lifetime2, this.field_Jb[20], var18Lifetime4, (byte) -55);
             if (var17Lifetime5 < var18Lifetime4) {
               var17Lifetime5 = var18Lifetime4;
             }
             var18Lifetime5 = 0;
-            var18Lifetime5 = this.appendReasonHeading(ki.field_p, var18Lifetime5, var16Lifetime2, var28[2], param6, 119);
-            var18Lifetime5 = this.a(var28[2], var16Lifetime2, this.field_Jb[13], var18Lifetime5, (byte) -55);
-            var18Lifetime5 = this.a(var28[2], var16Lifetime2, this.field_Jb[21], var18Lifetime5, (byte) -55);
-            var18Lifetime5 = this.a(var28[2], var16Lifetime2, this.field_Jb[11], var18Lifetime5, (byte) -55);
+            var18Lifetime5 = this.appendReasonHeading(SpriteHotspot.field_p, var18Lifetime5, var16Lifetime2, var28[2], param6, 119);
+            var18Lifetime5 = this.appendReasonButton(var28[2], var16Lifetime2, this.field_Jb[13], var18Lifetime5, (byte) -55);
+            var18Lifetime5 = this.appendReasonButton(var28[2], var16Lifetime2, this.field_Jb[21], var18Lifetime5, (byte) -55);
+            var18Lifetime5 = this.appendReasonButton(var28[2], var16Lifetime2, this.field_Jb[11], var18Lifetime5, (byte) -55);
             if (var17Lifetime5 < var18Lifetime5) {
               var17Lifetime5 = var18Lifetime5;
             }
             var19 = 3 * var16Lifetime2 + 26;
-            var20 = this.field_Kb.e(0);
+            var20 = this.field_Kb.getPreferredWidth(0);
             if (var20 > var19) {
               var19 = var20;
             }
@@ -431,44 +431,44 @@ final class ReportAbuseDialog extends UiComponent {
             this.field_Kb.setBounds(24, 0, 13 + var19 + 13, 0, -3344);
             this.field_Mb.setBounds(15, 5, 15, this.field_Kb.field_zb - 20, -3344);
             var21 = 10;
-            this.field_Vb.setBounds(jk.field_f * 2, var21, var19, 13, -3344);
-            var21 = var21 + 2 * jk.field_f;
-            this.field_Pb.setBounds(jk.field_f * 2, var21, var19, 13, -3344);
-            var21 = var21 + (10 + 2 * jk.field_f);
-            this.field_Sb.setBounds(jk.field_f, var21, 0, 0, -3344);
-            var21 = var21 + (10 + jk.field_f);
+            this.field_Vb.setBounds(UpgradeAccessHelpers.field_f * 2, var21, var19, 13, -3344);
+            var21 = var21 + 2 * UpgradeAccessHelpers.field_f;
+            this.field_Pb.setBounds(UpgradeAccessHelpers.field_f * 2, var21, var19, 13, -3344);
+            var21 = var21 + (10 + 2 * UpgradeAccessHelpers.field_f);
+            this.field_Sb.setBounds(UpgradeAccessHelpers.field_f, var21, 0, 0, -3344);
+            var21 = var21 + (10 + UpgradeAccessHelpers.field_f);
             if (null != this.field_Hb) {
               var20Lifetime3 = this.field_Hb.measureLabelWidth((byte) 102, 4);
-              this.field_Hb.setIconLabelBounds(var21, (byte) -96, 4, var20Lifetime3, 13 + (-var20Lifetime3 + var19) / 2, jk.field_f);
-              var21 = var21 + (10 + jk.field_f);
+              this.field_Hb.setIconLabelBounds(var21, (byte) -96, 4, var20Lifetime3, 13 + (-var20Lifetime3 + var19) / 2, UpgradeAccessHelpers.field_f);
+              var21 = var21 + (10 + UpgradeAccessHelpers.field_f);
             }
             var28[0].setBounds(var17Lifetime5, var21, var16Lifetime2, 13, -3344);
             var28[1].setBounds(var17Lifetime5, var21, var16Lifetime2, 13 + (13 + var16Lifetime2), -3344);
             var28[2].setBounds(var17Lifetime5, var21, var16Lifetime2, 2 * var16Lifetime2 + 13 + 26, -3344);
             var22 = var21;
             this.field_Rb.setBounds(var22 + var17Lifetime5 + 10, 24, 13 + (var19 + 13), 0, -3344);
-            this.field_Rb.field_ab = tg.createGradientFrameSprites(2105376, this.field_Rb.field_z, 8421504, 3, 11579568, 30);
+            this.field_Rb.field_ab = AudioPumpThread.createGradientFrameSprites(2105376, this.field_Rb.field_z, 8421504, 3, 11579568, 30);
             var23 = 13 + (13 + var19);
             var24 = var22 + 24 + var17Lifetime5 + 10;
-            var25 = MatchingTextValidator.a(param0, (byte) 109, var23, param2);
+            var25 = MatchingTextValidator.clampPopupX(param0, (byte) 109, var23, param2);
             var26 = IntrusiveNode.placePopupVertically(true, param1, param3, var24);
             this.setBounds(var24, var26, var23, var25, -3344);
             return;
           }
-          this.field_Vb = new UiComponent(0L, param8, ng.field_f);
+          this.field_Vb = new UiComponent(0L, param8, ArchiveProvider.field_f);
           this.field_Vb.field_R = 1;
           this.field_Vb.field_M = 11184810;
-          this.field_Rb.a((byte) 50, this.field_Vb);
+          this.field_Rb.addChild((byte) 50, this.field_Vb);
           var15_int = 226;
           var16Lifetime1 = 10;
           var17Lifetime1 = this.field_Vb.field_yb.countWrappedLines(this.field_Vb.field_wb, var15_int);
-          this.field_Vb.setBounds(var17Lifetime1 * jk.field_f, var16Lifetime1, var15_int, 13, -3344);
-          var16Lifetime1 = var16Lifetime1 + var17Lifetime1 * jk.field_f;
+          this.field_Vb.setBounds(var17Lifetime1 * UpgradeAccessHelpers.field_f, var16Lifetime1, var15_int, 13, -3344);
+          var16Lifetime1 = var16Lifetime1 + var17Lifetime1 * UpgradeAccessHelpers.field_f;
           this.field_Rb.setBounds(10 + var16Lifetime1, 24, 13 + (var15_int + 13), 0, -3344);
-          this.field_Rb.field_ab = tg.createGradientFrameSprites(2105376, this.field_Rb.field_z, 8421504, 3, 11579568, 92);
+          this.field_Rb.field_ab = AudioPumpThread.createGradientFrameSprites(2105376, this.field_Rb.field_z, 8421504, 3, 11579568, 92);
           var18Lifetime1 = 13 - (-var15_int - 13);
           var19Lifetime1 = 34 + var16Lifetime1;
-          var20Lifetime1 = MatchingTextValidator.a(param0, (byte) 25, var18Lifetime1, param2);
+          var20Lifetime1 = MatchingTextValidator.clampPopupX(param0, (byte) 25, var18Lifetime1, param2);
           var21Lifetime1 = IntrusiveNode.placePopupVertically(true, param1, param3, var19Lifetime1);
           this.setBounds(var19Lifetime1, var21Lifetime1, var18Lifetime1, var20Lifetime1, -3344);
           return;
@@ -522,7 +522,7 @@ final class ReportAbuseDialog extends UiComponent {
         }
     }
 
-    private final int a(UiComponent param0, int param1, UiComponent param2, int param3, byte param4) {
+    private final int appendReasonButton(UiComponent param0, int param1, UiComponent param2, int param3, byte param4) {
         int discarded$1 = 0;
         int var6_int = 0;
         RuntimeException var6 = null;
@@ -541,9 +541,9 @@ final class ReportAbuseDialog extends UiComponent {
           param3 = param3 + (0 + var6_int);
           if (param4 != -55) {
             var7 = (UiComponent) null;
-            discarded$1 = this.a((UiComponent) null, 103, (UiComponent) null, -43, (byte) -6);
+            discarded$1 = this.appendReasonButton((UiComponent) null, 103, (UiComponent) null, -43, (byte) -6);
           }
-          param0.a((byte) 50, param2);
+          param0.addChild((byte) 50, param2);
           stackIn_3_0 = param3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

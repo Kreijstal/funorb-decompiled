@@ -3,7 +3,7 @@
  */
 abstract class GameEvent extends IntrusiveNode {
     int field_f;
-    static ao field_h;
+    static QuickChatCommandType field_h;
     static String field_g;
 
     abstract void apply(int param0, GameScreen param1);
@@ -24,13 +24,13 @@ abstract class GameEvent extends IntrusiveNode {
         try {
           var3_int = param0.position;
           var5 = (CharSequence) ((Object) param1);
-          var4 = qo.a(var5, (byte) -116);
+          var4 = UiComponentNode.encodeSingleByteText(var5, (byte) -116);
           if (param2 != -31746) {
             stackIn_2_0 = 73;
             return stackIn_2_0;
           }
-          param0.c(var4.length, (byte) 78);
-          param0.position = param0.position + r.field_a.compress(var4.length, (byte) -62, 0, param0.payload, param0.position, var4);
+          param0.writeUnsignedSmart(var4.length, (byte) 78);
+          param0.position = param0.position + MusicPatchLoadHelpers.field_a.compress(var4.length, (byte) -62, 0, param0.payload, param0.position, var4);
           stackIn_4_0 = -var3_int + param0.position;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -127,6 +127,6 @@ abstract class GameEvent extends IntrusiveNode {
 
     static {
         field_g = "<%0>'s game";
-        field_h = new ao(7, 0, 1, 1);
+        field_h = new QuickChatCommandType(7, 0, 1, 1);
     }
 }

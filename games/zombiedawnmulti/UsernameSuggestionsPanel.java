@@ -4,31 +4,31 @@
 final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonActivationListener {
     private ButtonWidget[] field_I;
     static String field_K;
-    static hh field_H;
+    static MenuInputState field_H;
     private String[] field_G;
     static ScrollPaneWithFooter field_L;
     private UsernameSuggestionListener field_J;
 
     final static void resendPendingRequests(boolean param0, int param1) {
         int var3 = 0;
-        hp var4 = null;
-        u var5 = null;
+        RandomHelpers var4 = null;
+        PendingIntArrayRequest var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var4 = (hp) (JaggrabDownloader.field_l.last(108));
+          var4 = (RandomHelpers) (JaggrabDownloader.field_l.last(108));
           while (var4 != null) {
             LaboratoryScreen.sendStatSubmission(var4, 58, param1);
-            var4 = (hp) (JaggrabDownloader.field_l.previous(6));
+            var4 = (RandomHelpers) (JaggrabDownloader.field_l.previous(6));
           }
           if (!param0) {
             UsernameSuggestionsPanel.releaseStatics(false);
           }
-          var5 = (u) (DisplayNamePanel.field_T.last(59));
+          var5 = (PendingIntArrayRequest) (DisplayNamePanel.field_T.last(59));
           while (var5 != null) {
             IsaacRandom.writeResendRequest(var5, param1, -85);
-            var5 = (u) (DisplayNamePanel.field_T.previous(6));
+            var5 = (PendingIntArrayRequest) (DisplayNamePanel.field_T.previous(6));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -69,9 +69,9 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
             var3_int = param1.length;
             this.field_G = new String[var3_int];
             for (var4_int = 0; var3_int > var4_int; var4_int++) {
-              this.field_G[var4_int] = QuickChatMenu.a((byte) 0, (CharSequence) ((Object) param1[var4_int])).replace(' ', ' ');
+              this.field_G[var4_int] = QuickChatMenu.canonicalizeNameOrEmpty((byte) 0, (CharSequence) ((Object) param1[var4_int])).replace(' ', ' ');
             }
-            var4 = new LinkButtonPainter(ke.field_h, 0, 1);
+            var4 = new LinkButtonPainter(FontPaletteHelpers.field_h, 0, 1);
             this.field_I = new ButtonWidget[var3_int + 1];
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_I[var5] = new ButtonWidget(this.field_G[var5], (WidgetListener) (this));
@@ -110,15 +110,15 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
         if (param0 != -2) {
           return;
         }
-        BitmapFont var5 = ke.field_h;
+        BitmapFont var5 = FontPaletteHelpers.field_h;
         if (null != this.field_G) {
-          var5.drawParagraph(pi.field_g, param3 + this.field_y, param1 + this.field_i, this.field_n, 20, 16777215, -1, 0, 0, var5.maxDescent + var5.maxAscent);
+          var5.drawParagraph(CredentialKind.field_g, param3 + this.field_y, param1 + this.field_i, this.field_n, 20, 16777215, -1, 0, 0, var5.maxDescent + var5.maxAscent);
         }
     }
 
     final static Sprite buildFirstDecodedSprite(int param0) {
         int var5 = ZombieDawnMulti.field_E ? 1 : 0;
-        int var1 = oq.field_w[0] * vj.field_p[0];
+        int var1 = ThreeSliceButtonPainter.field_w[0] * AppearanceScreen.field_p[0];
         byte[] var2 = MatchingTextValidator.field_t[0];
         int[] var3 = new int[var1];
         int var4_int = 0;
@@ -129,8 +129,8 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
           var3[var4_int] = UsernameAvailabilityValidator.field_t[ScrollPane.bitAnd(255, (int) var2[var4_int])];
           var4_int++;
         }
-        Sprite var4 = new Sprite(ContentTransitionDialog.field_nb, hj.field_a, PacketBuffer.field_i[0], PowerupCommand.field_o[0], oq.field_w[0], vj.field_p[0], var3);
-        fd.h((byte) 126);
+        Sprite var4 = new Sprite(ContentTransitionDialog.field_nb, SpriteDecodeGlobals.field_a, PacketBuffer.field_i[0], PowerupCommand.field_o[0], ThreeSliceButtonPainter.field_w[0], AppearanceScreen.field_p[0], var3);
+        PropObject.clearSpriteDecodeBuffers((byte) 126);
         return var4;
     }
 

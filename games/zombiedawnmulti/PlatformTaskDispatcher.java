@@ -123,7 +123,7 @@ final class PlatformTaskDispatcher implements Runnable {
           int var3 = 0;
           Exception var3_ref_Exception = null;
           RandomAccessCacheFile var3_ref_mc = null;
-          en var3_ref_en = null;
+          ChatPanelSetupHelpers var3_ref_en = null;
           int var4 = 0;
           String var4_ref_String = null;
           java.awt.datatransfer.Transferable var7 = null;
@@ -168,7 +168,7 @@ final class PlatformTaskDispatcher implements Runnable {
                 var2_int = var8.field_g;
                 switch (var2_int) {
                   case 1:
-                    if (field_g > bl.monotonicMillis((byte) 109)) {
+                    if (field_g > ClockAndScreenHelpers.monotonicMillis((byte) 109)) {
                       throw new IOException();
                     }
                     var8.field_d = new java.net.Socket(java.net.InetAddress.getByName((String) (var8.field_a)), var8.field_c);
@@ -197,7 +197,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     switch (var2_int) {
                       case 3:
-                        if (bl.monotonicMillis((byte) 85) < field_g) {
+                        if (ClockAndScreenHelpers.monotonicMillis((byte) 85) < field_g) {
                           throw new IOException();
                         }
                         var15 = (255 & var8.field_c >> 24) + "." + ((var8.field_c & 16770086) >> 16) + "." + ((65396 & var8.field_c) >> 8) + "." + (255 & var8.field_c);
@@ -217,7 +217,7 @@ final class PlatformTaskDispatcher implements Runnable {
                           var3 = var8.field_c;
                           var4 = var8.field_b;
                           if (this.field_v) {
-                            this.field_p.a(var4, -12, var3);
+                            this.field_p.moveCursor(var4, -12, var3);
                           } else {
                             Class.forName("AwtCursorBridge").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_x, new Object[]{new Integer(var3), new Integer(var4)});
                           }
@@ -294,7 +294,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 21:
-                        if (bl.monotonicMillis((byte) 53) < field_g) {
+                        if (ClockAndScreenHelpers.monotonicMillis((byte) 53) < field_g) {
                           throw new IOException();
                         }
                         var8.field_d = java.net.InetAddress.getByName((String) (var8.field_a)).getAddress();
@@ -310,7 +310,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     var8.field_d = ((Class) (var10[0])).getDeclaredMethod((String) (var10[1]), (Class[]) (var10[2]));
                     break;
                   case 4:
-                    if (field_g > bl.monotonicMillis((byte) 119)) {
+                    if (field_g > ClockAndScreenHelpers.monotonicMillis((byte) 119)) {
                       throw new IOException();
                     }
                     var8.field_d = new DataInputStream(((java.net.URL) (var8.field_a)).openStream());
@@ -323,15 +323,15 @@ final class PlatformTaskDispatcher implements Runnable {
                     var8.field_d = var9;
                     break;
                   case 22:
-                    if (field_g > bl.monotonicMillis((byte) 92)) {
+                    if (field_g > ClockAndScreenHelpers.monotonicMillis((byte) 92)) {
                       throw new IOException();
                     }
                     try {
-                      if (false) throw (en) null;
-                      var8.field_d = wj.createProxyConnector((byte) 3, var8.field_c, (String) (var8.field_a)).connect(4646);
-                    } catch (en decompiledCaughtParameter2) {
+                      if (false) throw (ChatPanelSetupHelpers) null;
+                      var8.field_d = SoundEffectInstance.createProxyConnector((byte) 3, var8.field_c, (String) (var8.field_a)).connect(4646);
+                    } catch (ChatPanelSetupHelpers decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
-                      var3_ref_en = (en) (Object) decompiledCaughtException;
+                      var3_ref_en = (ChatPanelSetupHelpers) (Object) decompiledCaughtException;
                       var8.field_d = var3_ref_en.getMessage();
                       throw var3_ref_en;
                     }

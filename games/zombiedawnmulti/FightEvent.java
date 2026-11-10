@@ -13,7 +13,7 @@ final class FightEvent extends GameEvent {
     private int field_q;
     static String field_p;
 
-    final static void d(byte param0) {
+    final static void blurScreen(byte param0) {
         if (param0 != -18) {
           return;
         }
@@ -39,18 +39,18 @@ final class FightEvent extends GameEvent {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
-        jh var6 = null;
-        jh var7 = null;
+    final static void requestGamePreview(int param0, int param1, int param2) {
+        LobbyGame var6 = null;
+        LobbyGame var7 = null;
         CipherPacketBuffer var4 = null;
-        if (ao.field_e != param0) {
-          var6 = (jh) (af.field_h.findByKey((long)ao.field_e, -22877));
+        if (QuickChatCommandType.field_e != param0) {
+          var6 = (LobbyGame) (MeshMaterial.field_h.findByKey((long)QuickChatCommandType.field_e, -22877));
           var7 = var6;
           if (var7 != null) {
             var7.field_bc = null;
           }
-          ao.field_e = param0;
-          var4 = ma.field_a;
+          QuickChatCommandType.field_e = param0;
+          var4 = TextValidationFailure.field_a;
           var4.writeCipheredOpcode((byte) -35, param1);
           var4.writeByte(-39, 3);
           var4.writeByte(125, 11);
@@ -71,7 +71,7 @@ final class FightEvent extends GameEvent {
         field_p = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final void setFight(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         super.setTick(0, param2);
         this.field_q = param6;
         this.field_i = param3;
@@ -84,36 +84,36 @@ final class FightEvent extends GameEvent {
         this.field_j = param5;
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3) {
+    final static boolean handleChatComposerKey(int param0, int param1, int param2, int param3) {
         int var4 = 0;
         if (param1 != -23936) {
           field_p = (String) null;
         }
-        if (null == ki.field_e ||
+        if (null == SpriteHotspot.field_e ||
           InfectionEvent.field_p != 13) {
           if (HotspotTextWidget.field_N) {
-            if (!uk.canSendChat((byte) -120)) {
+            if (!ValidationIconWidget.canSendChat((byte) -120)) {
               return false;
             }
-            var4 = WhirlpoolHasher.a(param3, 60, param0) ? 1 : 0;
+            var4 = WhirlpoolHasher.handleChatInputKey(param3, 60, param0) ? 1 : 0;
             if (InfectionEvent.field_p == 80 ||
               InfectionEvent.field_p == 84) {
               var4 = 1;
               HotspotTextWidget.field_N = false;
             }
             if (InfectionEvent.field_p == 13) {
-              pf.clearChatInput(-77);
+              ChatInputHelpers.clearChatInput(-77);
               var4 = 1;
               HotspotTextWidget.field_N = false;
             }
             return var4 != 0;
           }
-          if (!ee.field_b &&
+          if (!LobbyScreenHelpers.field_b &&
             InfectionEvent.field_p != 9 &&
             InfectionEvent.field_p != 10 &&
             11 != InfectionEvent.field_p) {
             if (InfectionEvent.field_p == 80 &&
-              uk.canSendChat((byte) -111)) {
+              ValidationIconWidget.canSendChat((byte) -111)) {
               HotspotTextWidget.field_N = true;
               return true;
             }
@@ -121,11 +121,11 @@ final class FightEvent extends GameEvent {
           }
           return DiskCacheWorker.handleQuickChatKey(false, param0, param2);
         }
-        ki.field_e = null;
+        SpriteHotspot.field_e = null;
         return true;
     }
 
-    final static void a(int param0, boolean param1, int param2, Sprite[] param3, int param4, int param5) {
+    final static void drawThreeSliceBar(int param0, boolean param1, int param2, Sprite[] param3, int param4, int param5) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -140,23 +140,23 @@ final class FightEvent extends GameEvent {
         var11 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (!param1) {
-            FightEvent.a(-68, -96, -28, 88);
+            FightEvent.handleChatComposerKey(-68, -96, -28, 88);
           }
           if (param3 != null &&
             0 < param5) {
             var6_int = param3[0].fullWidth;
             var7 = param3[2].fullWidth;
             var8 = param3[1].fullWidth;
-            param3[0].g(param2, param4, param0);
-            param3[2].g(-var7 + (param2 + param5), param4, param0);
-            SoftwareRasterizer.saveClip(ki.field_d);
+            param3[0].drawRecoloredNeutral(param2, param4, param0);
+            param3[2].drawRecoloredNeutral(-var7 + (param2 + param5), param4, param0);
+            SoftwareRasterizer.saveClip(SpriteHotspot.field_d);
             SoftwareRasterizer.intersectClip(var6_int + param2, param4, param2 + (param5 - var7), param4 + param3[1].field_u);
             var9 = param2 + var6_int;
             var10 = param5 + param2 - var7;
             for (param2 = var9; param2 < var10; param2 = param2 + var8) {
-              param3[1].g(param2, param4, param0);
+              param3[1].drawRecoloredNeutral(param2, param4, param0);
             }
-            SoftwareRasterizer.restoreClip(ki.field_d);
+            SoftwareRasterizer.restoreClip(SpriteHotspot.field_d);
             return;
           }
           return;
@@ -174,7 +174,7 @@ final class FightEvent extends GameEvent {
         }
     }
 
-    final static String a(boolean param0, boolean param1, int param2, boolean param3) {
+    final static String getStoreProgressPrompt(boolean param0, boolean param1, int param2, boolean param3) {
         int var4 = 0;
         if (param3) {
           var4 += 4;
@@ -186,12 +186,12 @@ final class FightEvent extends GameEvent {
           var4++;
         }
         int var5 = 127 / ((param2 - 28) / 38);
-        return pg.field_d[var4];
+        return ViewFactoryHelpers.field_d[var4];
     }
 
     final void drawDebugOverlay(int param0, boolean param1, int param2, int param3) {
         if (!param1) {
-          this.a(123, -52, -122, -36, 97, -37, 99, 33);
+          this.setFight(123, -52, -122, -36, 97, -37, 99, 33);
         }
     }
 

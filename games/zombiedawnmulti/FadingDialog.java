@@ -15,8 +15,8 @@ abstract class FadingDialog extends WidgetContainer {
     static Sprite[] field_Q;
     static String field_O;
 
-    boolean h(int param0) {
-        this.field_K = this.a((byte) -20);
+    boolean refreshVisibilityAndCheckClosed(int param0) {
+        this.field_K = this.getTargetOpacity((byte) -20);
         if (param0 != -6134) {
           return false;
         }
@@ -30,7 +30,7 @@ abstract class FadingDialog extends WidgetContainer {
     }
 
     FadingDialog(DialogLayer param0, int param1, int param2) {
-        super(ub.field_wb - param1 >> 1, -param2 + kc.field_a >> 1, param1, param2, (WidgetPainter) null);
+        super(LoginDialog.field_wb - param1 >> 1, -param2 + ScreenSizeGlobals.field_a >> 1, param1, param2, (WidgetPainter) null);
         try {
           this.field_N = param0;
           this.field_R = false;
@@ -58,23 +58,23 @@ abstract class FadingDialog extends WidgetContainer {
         field_J = null;
     }
 
-    final static void a(int param0, int param1) {
+    final static void setTutorialTipPage(int param0, int param1) {
         if (param1 != 0) {
-          jh.field_ic = param1;
+          LobbyGame.field_ic = param1;
         }
-        io.field_g = PowerupCommand.field_p;
+        WeightedLruCache.field_g = PowerupCommand.field_p;
         if (param0 != -17306) {
           return;
         }
         ArmedHumanView.field_rb = param1;
     }
 
-    final static String a(int param0) {
+    final static String getTutorialTipsLabel(int param0) {
         int var1 = -20 % ((-50 - param0) / 60);
         if (PowerupCommand.field_p) {
-          return vi.field_a[0];
+          return LobbyGameListHelpers.field_a[0];
         }
-        return vi.field_a[1];
+        return LobbyGameListHelpers.field_a[1];
     }
 
     boolean advanceDialogAnimation(int param0) {
@@ -84,7 +84,7 @@ abstract class FadingDialog extends WidgetContainer {
         boolean stackIn_38_0 = false;
         int var2;
         int var3;
-        var2 = this.a((byte) -55);
+        var2 = this.getTargetOpacity((byte) -55);
         var3 = -this.field_K + var2;
         if (param0 != -27388) {
           this.field_N = (DialogLayer) null;
@@ -123,18 +123,18 @@ abstract class FadingDialog extends WidgetContainer {
         return stackIn_38_0;
     }
 
-    final static void a(boolean param0, boolean param1, boolean param2, int param3, int param4, int param5, boolean param6, int param7, int param8, int param9, int param10, boolean param11) {
-        ee.a(16777215, true, param7, param10, param4, param0, param2, param5, param11, 16777215, param8, param1, param9, param6);
+    final static void updateLobbyScreenWhiteText(boolean param0, boolean param1, boolean param2, int param3, int param4, int param5, boolean param6, int param7, int param8, int param9, int param10, boolean param11) {
+        LobbyScreenHelpers.updateLobbyScreen(16777215, true, param7, param10, param4, param0, param2, param5, param11, 16777215, param8, param1, param9, param6);
         int var12 = 115 / ((param3 + 15) / 53);
     }
 
-    final void b(int param0, int param1, int param2) {
+    final void setCenteredSize(int param0, int param1, int param2) {
         if (param2 >= 48) {
-          this.setWidgetBounds(ub.field_wb - param0 >> 1, -param1 + kc.field_a >> 1, 28972, param0, param1);
+          this.setWidgetBounds(LoginDialog.field_wb - param0 >> 1, -param1 + ScreenSizeGlobals.field_a >> 1, 28972, param0, param1);
           return;
         }
         FadingDialog.releaseStatics((byte) -100);
-        this.setWidgetBounds(ub.field_wb - param0 >> 1, -param1 + kc.field_a >> 1, 28972, param0, param1);
+        this.setWidgetBounds(LoginDialog.field_wb - param0 >> 1, -param1 + ScreenSizeGlobals.field_a >> 1, 28972, param0, param1);
     }
 
     final void renderWidget(int param0, int param1, int param2, int param3) {
@@ -151,12 +151,12 @@ abstract class FadingDialog extends WidgetContainer {
         }
         if (null == BufferedSocket.field_g) {
           BufferedSocket.field_g = new Sprite(this.field_n, this.field_w);
-          r.a(0, BufferedSocket.field_g);
+          MusicPatchLoadHelpers.pushSpriteRaster(0, BufferedSocket.field_g);
           SoftwareRasterizer.clear();
           this.drawDialogFrame(true, 0, 0);
           super.renderWidget(param0 ^ 0, -this.field_i - param1, param2, -param3 - this.field_y);
-          ql.a(true);
-          BufferedSocket.field_g.c(param3 + this.field_y, param1 + this.field_i, this.field_K);
+          RasterStackHelpers.popRaster(true);
+          BufferedSocket.field_g.drawBlended(param3 + this.field_y, param1 + this.field_i, this.field_K);
           if (param0 == -2) {
             return;
           }
@@ -165,12 +165,12 @@ abstract class FadingDialog extends WidgetContainer {
         }
         if (BufferedSocket.field_g.width < this.field_n) {
           BufferedSocket.field_g = new Sprite(this.field_n, this.field_w);
-          r.a(0, BufferedSocket.field_g);
+          MusicPatchLoadHelpers.pushSpriteRaster(0, BufferedSocket.field_g);
           SoftwareRasterizer.clear();
           this.drawDialogFrame(true, 0, 0);
           super.renderWidget(param0 ^ 0, -this.field_i - param1, param2, -param3 - this.field_y);
-          ql.a(true);
-          BufferedSocket.field_g.c(param3 + this.field_y, param1 + this.field_i, this.field_K);
+          RasterStackHelpers.popRaster(true);
+          BufferedSocket.field_g.drawBlended(param3 + this.field_y, param1 + this.field_i, this.field_K);
           if (param0 == -2) {
             return;
           }
@@ -179,33 +179,33 @@ abstract class FadingDialog extends WidgetContainer {
         }
         if (BufferedSocket.field_g.height < this.field_w) {
           BufferedSocket.field_g = new Sprite(this.field_n, this.field_w);
-          r.a(0, BufferedSocket.field_g);
+          MusicPatchLoadHelpers.pushSpriteRaster(0, BufferedSocket.field_g);
           SoftwareRasterizer.clear();
           this.drawDialogFrame(true, 0, 0);
           super.renderWidget(param0 ^ 0, -this.field_i - param1, param2, -param3 - this.field_y);
-          ql.a(true);
-          BufferedSocket.field_g.c(param3 + this.field_y, param1 + this.field_i, this.field_K);
+          RasterStackHelpers.popRaster(true);
+          BufferedSocket.field_g.drawBlended(param3 + this.field_y, param1 + this.field_i, this.field_K);
           if (param0 == -2) {
             return;
           }
           this.findFocusTarget(76);
           return;
         }
-        r.a(0, BufferedSocket.field_g);
+        MusicPatchLoadHelpers.pushSpriteRaster(0, BufferedSocket.field_g);
         SoftwareRasterizer.clear();
         this.drawDialogFrame(true, 0, 0);
         super.renderWidget(param0 ^ 0, -this.field_i - param1, param2, -param3 - this.field_y);
-        ql.a(true);
-        BufferedSocket.field_g.c(param3 + this.field_y, param1 + this.field_i, this.field_K);
+        RasterStackHelpers.popRaster(true);
+        BufferedSocket.field_g.drawBlended(param3 + this.field_y, param1 + this.field_i, this.field_K);
         if (param0 == -2) {
           return;
         }
         this.findFocusTarget(76);
     }
 
-    private final int a(byte param0) {
+    private final int getTargetOpacity(byte param0) {
         int var2 = 25 % ((param0 - 19) / 37);
-        return this.field_R ? this.field_N.j((byte) -121) != this ? 0 : 256 : 0;
+        return this.field_R ? this.field_N.getActiveDialog((byte) -121) != this ? 0 : 256 : 0;
     }
 
     final UiWidget findFocusTarget(int param0) {

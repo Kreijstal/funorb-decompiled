@@ -21,19 +21,19 @@ abstract class HumanView extends UnitView {
     int field_kb;
 
     final static void selectLanguageStrings(int param0, int param1) {
-        lo.field_f = NetworkGameClient.field_l[param1];
-        ud.field_Y = AgeValidator.field_v[param1];
+        BitPackedArrayHelpers.field_f = NetworkGameClient.field_l[param1];
+        DialSelectorWidget.field_Y = AgeValidator.field_v[param1];
         if (param0 != -7733) {
           field_ob = (String) null;
         }
-        nh.field_n = kd.field_c[param1];
+        PendingRankingRequest.field_n = StringHashHelpers.field_c[param1];
     }
 
     final void setState(int param0, int param1) {
         if (this.state == 0 &&
           param0 == 1 &&
-          hp.nextBoundedInt((byte) 29, g.field_a, 4) == 0) {
-          this.field_U = pb.createEffectStream(62, this.field_mb);
+          RandomHelpers.nextBoundedInt((byte) 29, RasterEffectHelpers.field_a, 4) == 0) {
+          this.field_U = EffectAudioHelpers.createEffectStream(62, this.field_mb);
         }
         super.setState(param0, param1);
     }
@@ -47,9 +47,9 @@ abstract class HumanView extends UnitView {
         int var2 = this.field_C;
         if (var2 != 2 && var2 != 4 &&
           6 != var2) {
-          return eb.field_A;
+          return PopupMenuBuilder.field_A;
         }
-        return n.field_i;
+        return PendingDataRequest.field_i;
     }
 
     public static void releaseStatics(int param0) {
@@ -69,8 +69,8 @@ abstract class HumanView extends UnitView {
           return;
         }
         while (var4 < -1 + this.field_fb) {
-          this.field_cb[var4] = var2 + jk.field_l[var4];
-          this.field_hb[var4] = jk.field_b[var4] + var3;
+          this.field_cb[var4] = var2 + UpgradeAccessHelpers.field_l[var4];
+          this.field_hb[var4] = UpgradeAccessHelpers.field_b[var4] + var3;
           var4++;
         }
         this.field_cb[this.field_fb - 1] = var2;
@@ -87,15 +87,15 @@ abstract class HumanView extends UnitView {
         this.field_eb = 0;
         this.field_jb = false;
         this.field_qb = -1;
-        this.field_ib = hp.nextBoundedInt((byte) 89, g.field_a, 200);
+        this.field_ib = RandomHelpers.nextBoundedInt((byte) 89, RasterEffectHelpers.field_a, 200);
         this.field_cb = new int[61];
         this.field_hb = new int[61];
         this.resetFleePoints(118);
-        this.field_lb = hp.nextBoundedInt((byte) -122, g.field_a, 5);
+        this.field_lb = RandomHelpers.nextBoundedInt((byte) -122, RasterEffectHelpers.field_a, 5);
         if (this.isFemale(15684)) {
-          this.field_mb = hp.nextBoundedInt((byte) -119, g.field_a, 4) + 49;
+          this.field_mb = RandomHelpers.nextBoundedInt((byte) -119, RasterEffectHelpers.field_a, 4) + 49;
         } else {
-          this.field_mb = 26 + hp.nextBoundedInt((byte) 124, g.field_a, 3);
+          this.field_mb = 26 + RandomHelpers.nextBoundedInt((byte) 124, RasterEffectHelpers.field_a, 3);
         }
     }
 
@@ -104,7 +104,7 @@ abstract class HumanView extends UnitView {
           return;
         }
         this.setState(18, -27655);
-        PowerupButton.field_e.f(127);
+        PowerupButton.field_e.refreshUnitCounter(127);
         if (param0) {
           this.field_kb = -115;
         }
@@ -144,13 +144,13 @@ abstract class HumanView extends UnitView {
               this.field_U = null;
             } else {
               this.field_U.setVolume(DropTargetWidget.computeScreenVolume(124, var4, var3_int));
-              this.field_U.setPan(pb.computeStereoPan(var4, var3_int, false));
+              this.field_U.setPan(EffectAudioHelpers.computeStereoPan(var4, var3_int, false));
             }
           }
-          if (i.field_b) {
+          if (SharedTransportGlobals.field_b) {
             this.drawDebugFleePoints(param1, (byte) 80);
           }
-          if (!io.a(var3_int, var4, (byte) -112, param1)) {
+          if (!WeightedLruCache.isOnScreen(var3_int, var4, (byte) -112, param1)) {
             return;
           }
           if (this.state == 32) {
@@ -174,31 +174,31 @@ abstract class HumanView extends UnitView {
             } else {
               stackIn_28_2 = var3_int - 2;
             }
-            g.a(stackIn_27_0, stackIn_27_1 + stackIn_28_2, 43 + var4);
+            RasterEffectHelpers.darkenUnderSprite(stackIn_27_0, stackIn_27_1 + stackIn_28_2, 43 + var4);
           }
           var5Lifetime1 = this.animationFrame;
-          if (gg.field_i[this.state] != null) {
-            var5Lifetime1 = gg.field_i[this.state][this.animationFrame];
+          if (ArchiveLoadStep.field_i[this.state] != null) {
+            var5Lifetime1 = ArchiveLoadStep.field_i[this.state][this.animationFrame];
           }
-          var6 = var5Lifetime1 + gg.field_l[this.state];
+          var6 = var5Lifetime1 + ArchiveLoadStep.field_l[this.state];
           if (param0 != -10136) {
             return;
           }
-          var7 = wq.field_c[this.field_C];
+          var7 = MenuStyleHelpers.field_c[this.field_C];
           if (this.state != 10 &&
             this.state != 11) {
             if (this.state == 21) {
-              var7[var6].c(var3_int, var4, this.exitCountdown);
+              var7[var6].drawBlended(var3_int, var4, this.exitCountdown);
             } else {
               var8 = 3 + var4;
-              var9 = PowerupEvent.field_m / 4 % aa.field_h.length;
+              var9 = PowerupEvent.field_m / 4 % NanoTickClock.field_h.length;
               var10 = null;
               if (this.state != 25) {
                 if (30 == this.state) {
                   var10 = SimPortal.field_N[var9];
                 }
               } else {
-                var10 = aa.field_h[var9];
+                var10 = NanoTickClock.field_h[var9];
               }
               if (var10 != null) {
                 ((IndexedSprite) (var10)).draw(var3_int, var8);
@@ -209,11 +209,11 @@ abstract class HumanView extends UnitView {
                 var11 = stackIn_60_0;
                 if (0 < this.slowTicks) {
                   if (var11 != 0) {
-                    g.a(var7[var6]);
+                    RasterEffectHelpers.mirrorHorizontally(var7[var6]);
                   }
                   var7[var6].drawTransparentWithOpacity(var3_int, var4, 142);
                   if (var11 != 0) {
-                    g.a(var7[var6]);
+                    RasterEffectHelpers.mirrorHorizontally(var7[var6]);
                   }
                 } else {
                   if (var11 != 0) {
@@ -224,10 +224,10 @@ abstract class HumanView extends UnitView {
                 }
               }
               if (var10 != null) {
-                g.c();
+                RasterEffectHelpers.pushRasterState();
                 SoftwareRasterizer.setClip(var3_int, ((IndexedSprite) (var10)).field_b / 2 + var8, 640, ((IndexedSprite) (var10)).field_b + var8);
                 ((IndexedSprite) (var10)).draw(var3_int, var8);
-                g.b();
+                RasterEffectHelpers.popRasterState();
               }
             }
           } else {
@@ -248,7 +248,7 @@ abstract class HumanView extends UnitView {
             }
           }
           if (this.field_jb) {
-            QuickChatCategoryRegistry.field_d[0].e(var3_int, var4, 128, 16711680);
+            QuickChatCategoryRegistry.field_d[0].drawTintedWithOpacity(var3_int, var4, 128, 16711680);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -345,7 +345,7 @@ abstract class HumanView extends UnitView {
               this.field_ib = 53;
             } else {
               if (!this.field_gb) {
-                stackIn_54_1 = 20 + hp.nextBoundedInt((byte) -67, g.field_a, 200);
+                stackIn_54_1 = 20 + RandomHelpers.nextBoundedInt((byte) -67, RasterEffectHelpers.field_a, 200);
               } else {
                 stackIn_54_1 = 65;
               }
@@ -384,8 +384,8 @@ abstract class HumanView extends UnitView {
               this.field_lb = 0;
               var2Lifetime1 = 0;
               var3 = PortalEntryEvent.field_m.field_A.last(103);
-              while (var3 instanceof cg) {
-                var2Lifetime1 = var2Lifetime1 != 0 | ((cg) (var3)).containsUnit(this, false) ? 1 : 0;
+              while (var3 instanceof MeltdownPuddleView) {
+                var2Lifetime1 = var2Lifetime1 != 0 | ((MeltdownPuddleView) (var3)).containsUnit(this, false) ? 1 : 0;
                 var3 = var3.previous;
               }
               if (!this.field_db &&
@@ -513,15 +513,15 @@ abstract class HumanView extends UnitView {
     final static void openPrivateChatTo(long param0, String param1, int param2) {
         CharSequence var5 = null;
         try {
-          va.field_a = 2;
+          UrlLaunchHelpers.field_a = 2;
           if (param2 != -1) {
             field_ob = (String) null;
           }
-          qf.field_g = param1;
+          TextPopupHelpers.field_g = param1;
           var5 = (CharSequence) ((Object) param1);
-          ql.field_a = tg.normalizePlayerName(var5, false);
+          RasterStackHelpers.field_a = AudioPumpThread.normalizePlayerName(var5, false);
           HotspotTextWidget.field_N = true;
-          jj.field_M = param0;
+          PhantomDecoy.field_M = param0;
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "gm.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

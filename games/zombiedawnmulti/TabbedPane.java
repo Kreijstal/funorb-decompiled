@@ -55,13 +55,13 @@ final class TabbedPane extends UiComponent {
             var9 = new UiComponent(0L, param1);
             var9.field_wb = param2[var8_int];
             this.field_Nb[var8_int] = var9;
-            this.a((byte) 50, var9);
+            this.addChild((byte) 50, var9);
           }
-          this.a((byte) 50, this.field_Mb);
+          this.addChild((byte) 50, this.field_Mb);
           var11 = 0;
           var8_intLifetime1 = var11;
           while (var11 < param4.length) {
-            this.field_Mb.a((byte) 50, param4[var11]);
+            this.field_Mb.addChild((byte) 50, param4[var11]);
             var11++;
           }
           this.field_Kb = param5;
@@ -132,7 +132,7 @@ final class TabbedPane extends UiComponent {
         }
     }
 
-    final static void a(long param0, java.applet.Applet param1, String param2, int param3, String param4) {
+    final static void setCookie(long param0, java.applet.Applet param1, String param2, int param3, String param4) {
         try {
           RuntimeException stackIn_11_0 = null;
           StringBuilder stackIn_11_1 = null;
@@ -162,7 +162,7 @@ final class TabbedPane extends UiComponent {
               if (0L > param0) {
                 var7Lifetime4 = var9 + "; Discard;";
               } else {
-                var7Lifetime4 = var9 + "; Expires=" + ke.formatCookieDate(-29971, bl.monotonicMillis((byte) 101) + 1000L * param0) + "; Max-Age=" + param0;
+                var7Lifetime4 = var9 + "; Expires=" + FontPaletteHelpers.formatCookieDate(-29971, ClockAndScreenHelpers.monotonicMillis((byte) 101) + 1000L * param0) + "; Max-Age=" + param0;
               }
               if (param3 >= -91) {
                 return;

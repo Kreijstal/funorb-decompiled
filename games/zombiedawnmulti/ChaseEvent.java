@@ -9,16 +9,16 @@ final class ChaseEvent extends GameEvent {
         GameCharacter var5 = null;
         HumanView var5_ref = null;
         try {
-          var5 = PortalEntryEvent.field_m.a(this.field_i, false);
-          TranslatedUiText.field_e.c(Integer.toString(this.field_f - param3), var5.getX(-41) - param2, -param0 + var5.getY(76), 4, -1);
+          var5 = PortalEntryEvent.field_m.findCharacter(this.field_i, false);
+          TranslatedUiText.field_e.drawLeft(Integer.toString(this.field_f - param3), var5.getX(-41) - param2, -param0 + var5.getY(76), 4, -1);
         } catch (Exception exception) {
         }
         try {
           if (!param1) {
             this.field_j = -25;
           }
-          var5_ref = PortalEntryEvent.field_m.a(this.field_i, 105);
-          TranslatedUiText.field_e.c(Integer.toString(this.field_f - param3), var5_ref.getX(81) - param2, -param0 + var5_ref.getY(87), 4, -1);
+          var5_ref = PortalEntryEvent.field_m.findHumanView(this.field_i, 105);
+          TranslatedUiText.field_e.drawLeft(Integer.toString(this.field_f - param3), var5_ref.getX(81) - param2, -param0 + var5_ref.getY(87), 4, -1);
         } catch (Exception exception) {
         }
     }
@@ -33,7 +33,7 @@ final class ChaseEvent extends GameEvent {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 83) {
-            stackIn_4_0 = WidgetStyleLayer.field_b.a("", param0, false);
+            stackIn_4_0 = WidgetStyleLayer.field_b.getNamedFile("", param0, false);
             return stackIn_4_0;
           }
           stackIn_2_0 = (byte[]) null;
@@ -75,12 +75,12 @@ final class ChaseEvent extends GameEvent {
     final void removeFromQueue(byte param0) {
         if (param0 < -47) {
           super.removeFromQueue((byte) -86);
-          a.field_c.addFirst((IntrusiveNode) (this), false);
+          LoginSuccessHelpers.field_c.addFirst((IntrusiveNode) (this), false);
           return;
         }
         this.field_j = -37;
         super.removeFromQueue((byte) -86);
-        a.field_c.addFirst((IntrusiveNode) (this), false);
+        LoginSuccessHelpers.field_c.addFirst((IntrusiveNode) (this), false);
     }
 
     ChaseEvent() {

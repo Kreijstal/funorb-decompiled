@@ -30,17 +30,17 @@ final class PortalEntryEvent extends GameEvent {
             field_l = (String) null;
           }
           if (!PortalEntryEvent.hasOpenDialog(120)) {
-            if (rn.field_f != null &&
-              rn.field_f.field_e) {
-              rn.exitActiveFullscreen(param0 ^ -79);
-              me.field_k.showDialog(3016, new vm(me.field_k, hl.field_b));
+            if (FullscreenSupport.field_f != null &&
+              FullscreenSupport.field_f.field_e) {
+              FullscreenSupport.exitActiveFullscreen(param0 ^ -79);
+              SoundCache.field_k.showDialog(3016, new FullscreenErrorDialog(SoundCache.field_k, LobbyStateHelpers.field_b));
             }
             return;
           }
-          me.field_k.processPointerFrame(jk.field_g, (byte) -27, ScoreUpdateEvent.field_j, true);
-          me.field_k.h((byte) -109);
+          SoundCache.field_k.processPointerFrame(UpgradeAccessHelpers.field_g, (byte) -27, ScoreUpdateEvent.field_j, true);
+          SoundCache.field_k.advanceDialogs((byte) -109);
           while (MusicPatchPcmStream.pollKeyEvent(-1)) {
-            me.field_k.dispatchKeyInput(param0 - 2, pn.field_d, InfectionEvent.field_p);
+            SoundCache.field_k.dispatchKeyInput(param0 - 2, ArchiveAvailabilityHelpers.field_d, InfectionEvent.field_p);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -62,7 +62,7 @@ final class PortalEntryEvent extends GameEvent {
           if (param3) {
             var4++;
           }
-          return t.field_f[var4];
+          return ByteStorage.field_f[var4];
         }
         return (String) null;
     }
@@ -89,10 +89,10 @@ final class PortalEntryEvent extends GameEvent {
 
     private final static boolean hasOpenDialog(int param0) {
         int var1 = -19 / ((70 - param0) / 45);
-        if (me.field_k == null) {
+        if (SoundCache.field_k == null) {
           return false;
         }
-        if (me.field_k.j((byte) -122) != null) {
+        if (SoundCache.field_k.getActiveDialog((byte) -122) != null) {
           return true;
         }
         return false;

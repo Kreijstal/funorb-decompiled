@@ -28,7 +28,7 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
         if (this.isInputEmpty(-3)) {
           return null;
         }
-        if (this.field_i + 350L > bl.monotonicMillis((byte) 64)) {
+        if (this.field_i + 350L > ClockAndScreenHelpers.monotonicMillis((byte) 64)) {
           return null;
         }
         if (param0 <= -102) {
@@ -41,33 +41,33 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
         if (param0 != -1306) {
           return;
         }
-        this.field_i = bl.monotonicMillis((byte) 114);
+        this.field_i = ClockAndScreenHelpers.monotonicMillis((byte) 114);
     }
 
     final static void updateChatComposer(int param0, int param1, int param2, int param3, String param4, int param5, int param6, boolean param7) {
         try {
           if (SimEntity.field_z.field_T != 0 &&
-            !nh.field_m) {
+            !PendingRankingRequest.field_m) {
             if (!SimPortal.field_L) {
               HotspotTextWidget.field_N = true;
             } else {
-              q.a(13151);
+              SineTableHelpers.openPublicQuickChat(13151);
             }
           }
           if (param0 <= 92) {
             DebouncedValidationProvider.releaseStatics(true);
           }
           if (HotspotTextWidget.field_N) {
-            ce.layoutChatComposerPopup(param6, param5, param3, 20, (byte) 110, param2, param1, param6, param4);
-            ClickMarker.field_v.a(-11838, param7);
+            TerrainEffectZone.layoutChatComposerPopup(param6, param5, param3, 20, (byte) 110, param2, param1, param6, param4);
+            ClickMarker.field_v.updateRoot(-11838, param7);
             if (!param7) {
               return;
             }
-            if (0 != dp.field_c.field_T) {
+            if (0 != DisplayNameRequestHelpers.field_c.field_T) {
               HotspotTextWidget.field_N = false;
             }
-            if (jk.field_d.field_T != 0) {
-              pf.clearChatInput(-103);
+            if (UpgradeAccessHelpers.field_d.field_T != 0) {
+              ChatInputHelpers.clearChatInput(-103);
               HotspotTextWidget.field_N = false;
               return;
             }
@@ -84,7 +84,7 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
         if (this.isInputEmpty(-3)) {
           return WidgetContainer.field_F;
         }
-        if (bl.monotonicMillis((byte) 40) >= 350L + this.field_i) {
+        if (ClockAndScreenHelpers.monotonicMillis((byte) 40) >= 350L + this.field_i) {
           return this.currentValidationState(-3);
         }
         return PortalView.field_H;
@@ -112,9 +112,9 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
             var5 = (String) null;
             DebouncedValidationProvider.updateChatComposer(-46, 36, -74, -104, (String) null, 64, 13, true);
           }
-          if (oe.field_c != null &&
-            !oe.field_c.equals(param0.getParameter("settings"))) {
-            var3 = oe.field_c;
+          if (TextDecodeHelpers.field_c != null &&
+            !TextDecodeHelpers.field_c.equals(param0.getParameter("settings"))) {
+            var3 = TextDecodeHelpers.field_c;
             var4 = var3;
             var4 = var3;
           }

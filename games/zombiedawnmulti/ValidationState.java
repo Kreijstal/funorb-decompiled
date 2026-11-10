@@ -5,29 +5,29 @@ final class ValidationState {
     static UiComponent field_a;
     static boolean field_b;
 
-    final static void a(boolean param0) {
+    final static void readLocalPlayerName(boolean param0) {
         CharSequence var3 = null;
-        ProgressDialog.field_lb = s.field_e.readString((byte) -107);
+        ProgressDialog.field_lb = StatusAndMeshHelpers.field_e.readString((byte) -107);
         if (!param0) {
           var3 = (CharSequence) ((Object) ProgressDialog.field_lb);
-          ProxySocketConnector.field_k = tg.normalizePlayerName(var3, param0);
+          ProxySocketConnector.field_k = AudioPumpThread.normalizePlayerName(var3, param0);
           return;
         }
         field_a = (UiComponent) null;
         CharSequence var2 = (CharSequence) ((Object) ProgressDialog.field_lb);
-        ProxySocketConnector.field_k = tg.normalizePlayerName(var2, param0);
+        ProxySocketConnector.field_k = AudioPumpThread.normalizePlayerName(var2, param0);
     }
 
-    final static boolean b(int param0) {
+    final static boolean alwaysTrue(int param0) {
         if (param0 > -110) {
           byte[] var2 = (byte[]) null;
-          ValidationState.a((byte[]) null, 41, (byte) -96);
+          ValidationState.readIntAt((byte[]) null, 41, (byte) -96);
           return true;
         }
         return true;
     }
 
-    final static byte[] a(int param0, byte[] param1) {
+    final static byte[] copyBytes(int param0, byte[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -63,7 +63,7 @@ final class ValidationState {
         throw new IllegalStateException();
     }
 
-    final static int a(byte[] param0, int param1, byte param2) {
+    final static int readIntAt(byte[] param0, int param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

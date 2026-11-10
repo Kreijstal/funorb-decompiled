@@ -11,7 +11,7 @@ final class BirthDateInputWidget extends DateInputWidget {
     private boolean field_Z;
     static long field_N;
     static String field_V;
-    static qh field_U;
+    static TabbedOverlayPanel field_U;
     static IndexedSprite field_X;
     static int[][][] field_Y;
     static int field_bb;
@@ -30,7 +30,7 @@ final class BirthDateInputWidget extends DateInputWidget {
         return null;
     }
 
-    final int j(int param0) {
+    final int getZeroBasedMonth(int param0) {
         NumberFormatException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -88,7 +88,7 @@ final class BirthDateInputWidget extends DateInputWidget {
         this.field_Q.setWidgetBounds(var6 + 90, 0, param2, 40, param4);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, Sprite[] param5, int param6, int param7, BitmapFont param8, int param9, int param10, int param11, int param12, Sprite[] param13, int param14, BitmapFont param15, Sprite[] param16, int param17, int param18, int param19, int param20) {
+    final static void configureTextChoiceDialog(int param0, int param1, int param2, int param3, int param4, Sprite[] param5, int param6, int param7, BitmapFont param8, int param9, int param10, int param11, int param12, Sprite[] param13, int param14, BitmapFont param15, Sprite[] param16, int param17, int param18, int param19, int param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -106,7 +106,7 @@ final class BirthDateInputWidget extends DateInputWidget {
           if (param2 != 2) {
             return;
           }
-          StatefulTextPainter.a(param4, param18, param3, param20, param11, param14, param8, new pd(param5), new pd(param13), param17, param19, param10, param7, param9, param6, param15, param12, param0, new pd(param16), param1, true);
+          StatefulTextPainter.configureLobbyStyles(param4, param18, param3, param20, param11, param14, param8, new FramePainter(param5), new FramePainter(param13), param17, param19, param10, param7, param9, param6, param15, param12, param0, new FramePainter(param16), param1, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -146,14 +146,14 @@ final class BirthDateInputWidget extends DateInputWidget {
         }
     }
 
-    final int i(int param0) {
+    final int getDay(int param0) {
         NumberFormatException var2 = null;
         CharSequence var3 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
         if (param0 != 1) {
           var3 = (CharSequence) null;
-          BirthDateInputWidget.a((CharSequence) null, (byte) 36);
+          BirthDateInputWidget.isValidAccountName((CharSequence) null, (byte) 36);
         }
         try {
           stackIn_3_0 = Integer.parseInt(this.field_R.field_j);
@@ -165,7 +165,7 @@ final class BirthDateInputWidget extends DateInputWidget {
         }
     }
 
-    public static void k(int param0) {
+    public static void releaseStatics(int param0) {
         field_W = null;
         if (param0 != 4) {
           field_N = 114L;
@@ -199,7 +199,7 @@ final class BirthDateInputWidget extends DateInputWidget {
         return true;
     }
 
-    final static boolean a(CharSequence param0, byte param1) {
+    final static boolean isValidAccountName(CharSequence param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -209,18 +209,18 @@ final class BirthDateInputWidget extends DateInputWidget {
         RuntimeException decompiledCaughtException = null;
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          if (!vd.a(true, param0, (byte) -122)) {
+          if (!SleepAndNameHelpers.isValidDisplayName(true, param0, (byte) -122)) {
             return false;
           }
           var2_int = 0;
           while (true) {
             if (var2_int >= param0.length()) {
               if (param1 != -38) {
-                BirthDateInputWidget.k(19);
+                BirthDateInputWidget.releaseStatics(19);
               }
               return true;
             }
-            if (lo.isAccountNameCharacter(param1 ^ -8230, param0.charAt(var2_int))) {
+            if (BitPackedArrayHelpers.isAccountNameCharacter(param1 ^ -8230, param0.charAt(var2_int))) {
               var2_int++;
               continue;
             }
@@ -248,8 +248,8 @@ final class BirthDateInputWidget extends DateInputWidget {
         }
         param3 = param3 + this.field_y;
         param1 = param1 + this.field_i;
-        this.drawCenteredLabel(wg.field_b, param3, param1, this.field_R, true);
-        this.drawCenteredLabel(eo.field_a, param3, param1, this.field_T, true);
+        this.drawCenteredLabel(SettingsCookieHelpers.field_b, param3, param1, this.field_R, true);
+        this.drawCenteredLabel(KeyboardListenerHelpers.field_a, param3, param1, this.field_T, true);
         this.drawCenteredLabel(CheckboxPainter.field_a, param3, param1, this.field_Q, true);
         if (param0 != -2) {
           field_cb = -58;
@@ -259,9 +259,9 @@ final class BirthDateInputWidget extends DateInputWidget {
     private BirthDateInputWidget(WidgetPainter param0, boolean param1) {
         super(0, 0, 0, 0, (WidgetPainter) null);
         try {
-          this.field_R = (TextInputWidget) ((Object) new on("", (WidgetListener) null, 2));
-          this.field_T = (TextInputWidget) ((Object) new on("", (WidgetListener) null, 2));
-          this.field_Q = (TextInputWidget) ((Object) new on("", (WidgetListener) null, 4));
+          this.field_R = (TextInputWidget) ((Object) new ValidatedTextInputWidget("", (WidgetListener) null, 2));
+          this.field_T = (TextInputWidget) ((Object) new ValidatedTextInputWidget("", (WidgetListener) null, 2));
+          this.field_Q = (TextInputWidget) ((Object) new ValidatedTextInputWidget("", (WidgetListener) null, 4));
           this.field_Q.painter = param0;
           this.field_T.painter = param0;
           this.field_R.painter = param0;
@@ -288,7 +288,7 @@ final class BirthDateInputWidget extends DateInputWidget {
         }
     }
 
-    final int getMonthIndex(byte param0) {
+    final int getYear(byte param0) {
         NumberFormatException var2 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
@@ -305,7 +305,7 @@ final class BirthDateInputWidget extends DateInputWidget {
         }
     }
 
-    final static void a(boolean param0, java.applet.Applet param1) {
+    final static void reloadPage(boolean param0, java.applet.Applet param1) {
         try {
           String var2 = null;
           int var3 = 0;
@@ -376,41 +376,41 @@ final class BirthDateInputWidget extends DateInputWidget {
             }
           }
         }
-        vm.d(93, 4, 1);
-        vm.d(95, 2, 58);
-        vm.d(-84, 57, 58);
-        vm.d(75, 56, 59);
-        wp.a(46, 5, 14, 0);
-        wp.a(56, 7, 2, 0);
-        vm.d(-115, 9, 8);
-        wp.a(9, 10, 52, 0);
-        wp.a(9, 11, 60, 0);
-        wp.a(11, 12, 34, 0);
-        wp.a(50, 13, 34, 0);
-        wp.a(32, 14, 54, 0);
-        wp.a(4, 15, 57, 0);
-        wp.a(2, 16, 57, 0);
-        wp.a(33, 17, 7, 0);
-        wp.a(36, 18, 37, 0);
-        vm.d(103, 60, 53);
-        vm.d(-109, 55, 3);
-        vm.d(-120, 54, 61);
-        vm.d(-54, 52, 53);
-        vm.d(-128, 51, 8);
-        wp.a(52, 50, 51, 0);
-        vm.d(-72, 49, 54);
-        wp.a(50, 48, 10, 0);
-        wp.a(46, 47, 49, 0);
-        wp.a(49, 35, 14, 0);
-        wp.a(47, 45, 35, 0);
-        wp.a(12, 44, 48, 0);
-        vm.d(-127, 32, 0);
-        vm.d(-94, 33, 56);
-        vm.d(125, 34, 51);
-        wp.a(55, 46, 32, 0);
-        wp.a(7, 36, 15, 0);
-        wp.a(33, 37, 16, 0);
-        vm.d(-56, 38, 11);
+        FullscreenErrorDialog.setUpgradePrerequisite(93, 4, 1);
+        FullscreenErrorDialog.setUpgradePrerequisite(95, 2, 58);
+        FullscreenErrorDialog.setUpgradePrerequisite(-84, 57, 58);
+        FullscreenErrorDialog.setUpgradePrerequisite(75, 56, 59);
+        AudioServiceHelpers.setUpgradePrerequisites(46, 5, 14, 0);
+        AudioServiceHelpers.setUpgradePrerequisites(56, 7, 2, 0);
+        FullscreenErrorDialog.setUpgradePrerequisite(-115, 9, 8);
+        AudioServiceHelpers.setUpgradePrerequisites(9, 10, 52, 0);
+        AudioServiceHelpers.setUpgradePrerequisites(9, 11, 60, 0);
+        AudioServiceHelpers.setUpgradePrerequisites(11, 12, 34, 0);
+        AudioServiceHelpers.setUpgradePrerequisites(50, 13, 34, 0);
+        AudioServiceHelpers.setUpgradePrerequisites(32, 14, 54, 0);
+        AudioServiceHelpers.setUpgradePrerequisites(4, 15, 57, 0);
+        AudioServiceHelpers.setUpgradePrerequisites(2, 16, 57, 0);
+        AudioServiceHelpers.setUpgradePrerequisites(33, 17, 7, 0);
+        AudioServiceHelpers.setUpgradePrerequisites(36, 18, 37, 0);
+        FullscreenErrorDialog.setUpgradePrerequisite(103, 60, 53);
+        FullscreenErrorDialog.setUpgradePrerequisite(-109, 55, 3);
+        FullscreenErrorDialog.setUpgradePrerequisite(-120, 54, 61);
+        FullscreenErrorDialog.setUpgradePrerequisite(-54, 52, 53);
+        FullscreenErrorDialog.setUpgradePrerequisite(-128, 51, 8);
+        AudioServiceHelpers.setUpgradePrerequisites(52, 50, 51, 0);
+        FullscreenErrorDialog.setUpgradePrerequisite(-72, 49, 54);
+        AudioServiceHelpers.setUpgradePrerequisites(50, 48, 10, 0);
+        AudioServiceHelpers.setUpgradePrerequisites(46, 47, 49, 0);
+        AudioServiceHelpers.setUpgradePrerequisites(49, 35, 14, 0);
+        AudioServiceHelpers.setUpgradePrerequisites(47, 45, 35, 0);
+        AudioServiceHelpers.setUpgradePrerequisites(12, 44, 48, 0);
+        FullscreenErrorDialog.setUpgradePrerequisite(-127, 32, 0);
+        FullscreenErrorDialog.setUpgradePrerequisite(-94, 33, 56);
+        FullscreenErrorDialog.setUpgradePrerequisite(125, 34, 51);
+        AudioServiceHelpers.setUpgradePrerequisites(55, 46, 32, 0);
+        AudioServiceHelpers.setUpgradePrerequisites(7, 36, 15, 0);
+        AudioServiceHelpers.setUpgradePrerequisites(33, 37, 16, 0);
+        FullscreenErrorDialog.setUpgradePrerequisite(-56, 38, 11);
         field_Y = new int[3][5][4];
         for (var0Lifetime1 = 0; var0Lifetime1 < field_Y.length; var0Lifetime1++) {
           for (var1Lifetime1 = 0; var1Lifetime1 < field_Y[0].length; var1Lifetime1++) {
@@ -464,21 +464,21 @@ final class BirthDateInputWidget extends DateInputWidget {
         field_Y[2][4][0] = 44;
         field_O = new int[19];
         field_N = 0L;
-        PowerupEvent.a(3, 38, -1);
-        PowerupEvent.a(2, 38, -1);
-        PowerupEvent.a(4, 37, -1);
-        PowerupEvent.a(7, 37, -1);
-        PowerupEvent.a(1, 37, -1);
-        PowerupEvent.a(2, 32, -1);
-        PowerupEvent.a(0, 32, -1);
-        PowerupEvent.a(15, 32, -1);
-        PowerupEvent.a(13, 36, -1);
-        PowerupEvent.a(4, 34, -1);
-        PowerupEvent.a(8, 34, -1);
-        PowerupEvent.a(14, 33, -1);
-        PowerupEvent.a(16, 33, -1);
-        PowerupEvent.a(5, 33, -1);
-        PowerupEvent.a(5, 35, -1);
+        PowerupEvent.linkUpgradeToPowerup(3, 38, -1);
+        PowerupEvent.linkUpgradeToPowerup(2, 38, -1);
+        PowerupEvent.linkUpgradeToPowerup(4, 37, -1);
+        PowerupEvent.linkUpgradeToPowerup(7, 37, -1);
+        PowerupEvent.linkUpgradeToPowerup(1, 37, -1);
+        PowerupEvent.linkUpgradeToPowerup(2, 32, -1);
+        PowerupEvent.linkUpgradeToPowerup(0, 32, -1);
+        PowerupEvent.linkUpgradeToPowerup(15, 32, -1);
+        PowerupEvent.linkUpgradeToPowerup(13, 36, -1);
+        PowerupEvent.linkUpgradeToPowerup(4, 34, -1);
+        PowerupEvent.linkUpgradeToPowerup(8, 34, -1);
+        PowerupEvent.linkUpgradeToPowerup(14, 33, -1);
+        PowerupEvent.linkUpgradeToPowerup(16, 33, -1);
+        PowerupEvent.linkUpgradeToPowerup(5, 33, -1);
+        PowerupEvent.linkUpgradeToPowerup(5, 35, -1);
         for (var0Lifetime2 = 0; var0Lifetime2 < 63; var0Lifetime2++) {
           field_W[var0Lifetime2] = 100;
         }

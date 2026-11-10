@@ -15,11 +15,11 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
           return;
         }
         if (this.field_Ib) {
-          io.a(-21113, true, false);
+          WeightedLruCache.openLoginDialog(-21113, true, false);
           return;
         }
         try {
-          va.a((byte) 62);
+          UrlLaunchHelpers.beginStoredLogin((byte) 62);
           this.dismissDialog(-7435);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "tf.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
@@ -27,8 +27,8 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
     }
 
     final boolean advanceDialogAnimation(int param0) {
-        gh var2 = null;
-        gh var2Lifetime1;
+        AccountServerResult var2 = null;
+        AccountServerResult var2Lifetime1;
         if (param0 != -27388) {
           PcmSampleStream var3 = (PcmSampleStream) null;
           AccountCreationDialog.playStream((PcmSampleStream) null, (byte) -100);
@@ -59,7 +59,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
         return super.advanceDialogAnimation(-27388);
     }
 
-    private final void handleRegistrationResult(int param0, boolean param1, gh param2) {
+    private final void handleRegistrationResult(int param0, boolean param1, AccountServerResult param2) {
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
@@ -76,7 +76,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
           }
           if (!param2.field_d) {
             if (param2.field_b != null) {
-              var4 = wg.field_d;
+              var4 = SettingsCookieHelpers.field_d;
               if (this.field_Gb != null) {
                 this.field_Gb.onMoreSuggestionsRequested(496);
               }
@@ -93,23 +93,23 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
           } else {
             var4 = DualLinkNode.field_g;
           }
-          var5 = new MessageDialogContent((MessageDialog) (this), ci.field_d, var4);
+          var5 = new MessageDialogContent((MessageDialog) (this), LevelFileList.field_d, var4);
           if (!param2.field_d) {
             if (!this.field_Ib) {
               if (param2.field_c != 5) {
                 var5.addActionButton(ContextMenu.field_Zb, -1, true);
               } else {
-                var5.addActionButton(lc.field_g, 11, true);
-                var5.addActionButton(oe.field_b, 17, true);
+                var5.addActionButton(PulseEffect.field_g, 11, true);
+                var5.addActionButton(TextDecodeHelpers.field_b, 17, true);
               }
             } else {
-              var5.addButton(ub.field_xb, param0 ^ 58, (WidgetListener) (this));
+              var5.addButton(LoginDialog.field_xb, param0 ^ 58, (WidgetListener) (this));
             }
             if (param2.field_c == 3) {
               var5.addActionButton(SimArmedHuman.field_zb, 7, true);
             } else {
               if (param2.field_c == 6) {
-                var5.addActionButton(wm.field_S, 9, true);
+                var5.addActionButton(MarkerSliderWidget.field_S, 9, true);
               }
             }
           } else {
@@ -117,7 +117,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
               this.transitionToContent((UiWidget) (new Under13NoticePanel(this)), (byte) 122);
               return;
             }
-            var5.addButton(ub.field_xb, -112, (WidgetListener) (this));
+            var5.addButton(LoginDialog.field_xb, -112, (WidgetListener) (this));
           }
           this.transitionToContent((UiWidget) (var5), (byte) 125);
           return;
@@ -135,11 +135,11 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
         }
     }
 
-    final static we playStream(PcmSampleStream param0, byte param1) {
-        we var2 = null;
+    final static PlayingSound playStream(PcmSampleStream param0, byte param1) {
+        PlayingSound var2 = null;
         RuntimeException var2_ref = null;
         PcmSampleStream var3 = null;
-        we stackIn_3_0 = null;
+        PlayingSound stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -149,9 +149,9 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
             var3 = (PcmSampleStream) null;
             AccountCreationDialog.playStream((PcmSampleStream) null, (byte) 86);
           }
-          var2 = new we(param0, param0);
+          var2 = new PlayingSound(param0, param0);
           GameKeyHandler.field_e.addFirst(var2, false);
-          bh.field_a.b(param0);
+          ChatAndOptionHelpers.field_a.addSubStream(param0);
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -169,7 +169,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
     }
 
     AccountCreationDialog(DialogLayer param0, AccountCreationForm param1) {
-        super(param0, ci.field_d, og.field_M, false, false);
+        super(param0, LevelFileList.field_d, ZombieDrop.field_M, false, false);
         try {
           this.field_Gb = param1;
         } catch (RuntimeException runtimeException) {
@@ -178,7 +178,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
     }
 
     final void showIneligibleResult(int param0) {
-        this.handleRegistrationResult(-6, true, p.createRequestResult(-97, MusicPatchPcmStream.field_p, param0));
+        this.handleRegistrationResult(-6, true, ObjectFactoryHelpers.createRequestResult(-97, MusicPatchPcmStream.field_p, param0));
     }
 
     public static void releaseStatics(int param0) {

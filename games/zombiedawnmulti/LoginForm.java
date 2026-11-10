@@ -14,7 +14,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
     private boolean field_Q;
     private String field_O;
 
-    final void a(int param0, String param1) {
+    final void setNameAndClearPassword(int param0, String param1) {
         TextInputWidget var4 = null;
         String var5 = null;
         try {
@@ -28,7 +28,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         }
     }
 
-    final static void a(jh param0, boolean param1, String param2, int param3) {
+    final static void openLobbyGameContextMenu(LobbyGame param0, boolean param1, String param2, int param3) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -46,27 +46,27 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         String var12 = null;
         PlayerContextMenu var13 = null;
         try {
-          ve.a(0L, 196, (String) null, SimEntity.field_H, (String) null, param0, -1, (int[]) null, param0.i(6));
+          LightningBolt.openPlayerContextMenu(0L, 196, (String) null, SimEntity.field_H, (String) null, param0, -1, (int[]) null, param0.getGameId(6));
           if (param0.field_Fb && (param0.field_fc == 2 ||
-            !(kj.field_q < 2))) {
-            var7 = pk.field_b;
-            var8 = vl.a(wj.field_f, new String[]{param2}, 2);
+            !(FriendListHelpers.field_q < 2))) {
+            var7 = ContextMenuHolder.field_b;
+            var8 = QueuedListRequest.substituteTemplateArguments(SoundEffectInstance.field_f, new String[]{param2}, 2);
             var7.field_j.addItem((byte) -118, var8, 10);
           }
-          pk.field_b.a((byte) -120);
+          ContextMenuHolder.field_b.addLobbyGameActions((byte) -120);
           if (param1) {
-            if (ao.field_e == pk.field_b.field_b) {
-              var11 = pk.field_b;
-              var12 = vl.a(GameApplet.field_g, new String[]{param2}, 2);
+            if (QuickChatCommandType.field_e == ContextMenuHolder.field_b.field_b) {
+              var11 = ContextMenuHolder.field_b;
+              var12 = QueuedListRequest.substituteTemplateArguments(GameApplet.field_g, new String[]{param2}, 2);
               var11.field_j.addItem((byte) -118, var12, 16);
             } else {
-              var9 = pk.field_b;
-              var10 = vl.a(kj.field_f, new String[]{param2}, 2);
+              var9 = ContextMenuHolder.field_b;
+              var10 = QueuedListRequest.substituteTemplateArguments(FriendListHelpers.field_f, new String[]{param2}, 2);
               var9.field_j.addItem((byte) -118, var10, 15);
             }
           }
-          var13 = pk.field_b;
-          var5 = vb.field_f;
+          var13 = ContextMenuHolder.field_b;
+          var5 = LobbyUiSetupHelpers.field_f;
           if (param3 >= -117) {
             field_I = (String) null;
           }
@@ -109,17 +109,17 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             this.submitLogin((byte) -95);
           } else {
             if (this.field_P == param2) {
-              hb.openAccountCreation(0);
+              ContainerUnpackHelpers.openAccountCreation(0);
             } else {
               if (param2 == this.field_J) {
                 if (!this.field_K) {
                   if (!this.field_L) {
-                    qi.a(false);
+                    LoginPacketHelpers.requestLoginBack(false);
                   } else {
-                    ImageProducerRasterBuffer.c(-118);
+                    ImageProducerRasterBuffer.showPlayModeChoiceDialog(-118);
                   }
                 } else {
-                  oi.requestQuitToWebsite(-124);
+                  RankingEntry.requestQuitToWebsite(-124);
                 }
               }
             }
@@ -141,7 +141,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
 
     final void renderWidget(int param0, int param1, int param2, int param3) {
         if (null != this.field_O) {
-          ke.field_h.drawParagraph(this.field_O, param3 - (-this.field_y - 20), 15 + (this.field_i + param1), this.field_n - 40, this.field_w, 16777215, -1, 1, 0, ke.field_h.maxAscent);
+          FontPaletteHelpers.field_h.drawParagraph(this.field_O, param3 - (-this.field_y - 20), 15 + (this.field_i + param1), this.field_n - 40, this.field_w, 16777215, -1, 1, 0, FontPaletteHelpers.field_h.maxAscent);
         }
         if (null != this.field_P) {
           SoftwareRasterizer.drawHorizontalLine(param3 + 10, param1 + 134, -20 + this.field_n, 4210752);
@@ -159,7 +159,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         return this.field_H.field_j;
     }
 
-    final void g(byte param0) {
+    final void clearFields(byte param0) {
         this.field_H.clearInputText(true);
         if (param0 < 101) {
           UiWidget var3 = (UiWidget) null;
@@ -186,11 +186,11 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         StringBuilder stackIn_62_1 = null;
         String stackIn_63_2 = null;
         RuntimeException decompiledCaughtException = null;
-        oq var6 = null;
+        ThreeSliceButtonPainter var6 = null;
         RuntimeException var6_ref = null;
         BitmapFont var7 = null;
         String var8 = null;
-        bo var9 = null;
+        LoginMethod var9 = null;
         LabeledChildWidget var12 = null;
         LabeledChildWidget var13 = null;
         try {
@@ -205,10 +205,10 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             this.field_L)) {
             throw new IllegalStateException();
           }
-          this.field_H = (TextInputWidget) ((Object) new on(param0, (WidgetListener) (this), 100));
-          this.field_M = (TextInputWidget) ((Object) new on("", (WidgetListener) (this), 20));
+          this.field_H = (TextInputWidget) ((Object) new ValidatedTextInputWidget(param0, (WidgetListener) (this), 100));
+          this.field_M = (TextInputWidget) ((Object) new ValidatedTextInputWidget("", (WidgetListener) (this), 20));
           if (!this.field_K) {
-            this.field_G = new ButtonWidget(qo.field_s, (WidgetListener) null);
+            this.field_G = new ButtonWidget(UiComponentNode.field_s, (WidgetListener) null);
             stackIn_18_1 = null;
             stackIn_18_2 = null;
             if (!this.field_L) {
@@ -222,16 +222,16 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             }
             this.field_J = new ButtonWidget(stackIn_19_3, (WidgetListener) null);
             if (this.field_Q) {
-              this.field_P = new ButtonWidget(en.field_a, (WidgetListener) (this));
+              this.field_P = new ButtonWidget(ChatPanelSetupHelpers.field_a, (WidgetListener) (this));
             }
           } else {
-            this.field_G = new ButtonWidget(ci.field_g, (WidgetListener) null);
-            this.field_J = new ButtonWidget(oe.field_b, (WidgetListener) null);
+            this.field_G = new ButtonWidget(LevelFileList.field_g, (WidgetListener) null);
+            this.field_J = new ButtonWidget(TextDecodeHelpers.field_b, (WidgetListener) null);
             this.field_H.field_F = false;
           }
           this.field_H.painter = (WidgetPainter) ((Object) new GradientOutlineTextPainter(10000536));
-          this.field_M.painter = (WidgetPainter) ((Object) new m(10000536));
-          var6 = new oq();
+          this.field_M.painter = (WidgetPainter) ((Object) new PasswordTextPainter(10000536));
+          var6 = new ThreeSliceButtonPainter();
           this.field_G.painter = (WidgetPainter) ((Object) var6);
           if (this.field_J != null) {
             this.field_J.painter = (WidgetPainter) ((Object) var6);
@@ -239,28 +239,28 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           if (null != this.field_P) {
             this.field_P.painter = (WidgetPainter) ((Object) var6);
           }
-          this.field_H.field_x = lh.field_e;
+          this.field_H.field_x = ArchiveLoadSequence.field_e;
           if (null != this.field_P) {
             this.field_P.field_x = field_I;
           }
           if (this.field_K) {
-            this.field_J.field_x = gi.field_p;
+            this.field_J.field_x = LevelFileEntry.field_p;
           } else {
             if (this.field_L) {
-              this.field_J.field_x = de.field_a;
+              this.field_J.field_x = AwtEventPumpHelpers.field_a;
               this.field_J.painter = (WidgetPainter) ((Object) new LinkButtonPainter());
             } else {
               this.field_J.painter = (WidgetPainter) ((Object) new LinkButtonPainter());
             }
           }
           this.field_i = 15;
-          var7 = ke.field_h;
+          var7 = FontPaletteHelpers.field_h;
           if (null != this.field_O) {
             this.field_i = this.field_i + (var7.measureWrappedHeight(this.field_O, this.field_n - 40, var7.maxAscent) + 5);
           }
           var8 = SimPortal.field_M;
-          var9 = me.readLastLoginMethod(-57, StatefulTextPainter.b(0));
-          if (wp.field_b != var9) {
+          var9 = SoundCache.readLastLoginMethod(-57, StatefulTextPainter.getHostApplet(0));
+          if (AudioServiceHelpers.field_b != var9) {
             if (RasterBuffer.field_c == var9) {
               var8 = ClickMarker.field_f;
             }
@@ -373,7 +373,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         }
     }
 
-    final static GameEvent a(CipherPacketBuffer param0, boolean param1) {
+    final static GameEvent readAttackEvent(CipherPacketBuffer param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -394,7 +394,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             LoginForm.releaseStatics(16);
           }
           var6 = param0.readUnsignedShort((byte) 69);
-          stackIn_3_0 = ClientException.a(var6, var4, var3, (byte) 104, var2_int, var5);
+          stackIn_3_0 = ClientException.obtainAttackEvent(var6, var4, var3, (byte) 104, var2_int, var5);
           return (GameEvent) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -414,7 +414,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         try {
           if (param1 != 0) {
             String var4 = (String) null;
-            LoginForm.a(-1.2370823621749878f, -17, (String) null);
+            LoginForm.setLoadingProgress(-1.2370823621749878f, -17, (String) null);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qm.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -452,35 +452,35 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         }
     }
 
-    final static vg b(int param0, int param1, int param2, int param3) {
-        vg var4;
+    final static RankingsRequest getOrRequestRankings(int param0, int param1, int param2, int param3) {
+        RankingsRequest var4;
         int var5;
-        vg var4Lifetime1;
+        RankingsRequest var4Lifetime1;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
-        var4 = (vg) (GameApplet.field_i.last(78));
+        var4 = (RankingsRequest) (GameApplet.field_i.last(78));
         while (var4 != null) {
           if (param2 == var4.field_i) {
             return var4;
           }
-          var4 = (vg) (GameApplet.field_i.previous(6));
+          var4 = (RankingsRequest) (GameApplet.field_i.previous(6));
         }
         if (param0 <= 97) {
           field_I = (String) null;
         }
-        var4Lifetime1 = new vg();
+        var4Lifetime1 = new RankingsRequest();
         var4Lifetime1.field_p = param3;
         var4Lifetime1.field_i = param2;
         GameApplet.field_i.addFirst(var4Lifetime1, false);
-        vi.a(param1, var4Lifetime1, (byte) -126);
+        LobbyGameListHelpers.sendRankingsRequest(param1, var4Lifetime1, (byte) -126);
         return var4Lifetime1;
     }
 
-    final static void a(float param0, int param1, String param2) {
+    final static void setLoadingProgress(float param0, int param1, String param2) {
         try {
-          lh.field_i = param0;
+          ArchiveLoadSequence.field_i = param0;
           if (param1 != 80) {
             String var4 = (String) null;
-            LoginForm.a(-1.1143913269042969f, -113, (String) null);
+            LoginForm.setLoadingProgress(-1.1143913269042969f, -113, (String) null);
           }
           SimArmedHuman.field_Bb = param2;
         } catch (RuntimeException runtimeException) {
@@ -491,7 +491,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
     private final void submitLogin(byte param0) {
         int var2;
         var2 = 12 % ((param0 - 8) / 49);
-        if (aa.isReconnecting(0) ||
+        if (NanoTickClock.isReconnecting(0) ||
           !(this.field_H.field_j.length() <= 0) &&
           !(this.field_M.field_j.length() <= 0)) {
           TextWidgetPainter.startLogin(this.field_H.field_j, (byte) -125, this.field_M.field_j);

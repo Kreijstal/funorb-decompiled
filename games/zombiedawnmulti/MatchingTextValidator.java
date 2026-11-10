@@ -22,7 +22,7 @@ final class MatchingTextValidator extends TextInputValidator {
         field_v = null;
     }
 
-    final static int a(int param0, byte param1, int param2, int param3) {
+    final static int clampPopupX(int param0, byte param1, int param2, int param3) {
         if (!(SoftwareRasterizer.width < param0 + param2)) {
           return param0;
         }
@@ -33,21 +33,21 @@ final class MatchingTextValidator extends TextInputValidator {
         return SoftwareRasterizer.width - param2;
     }
 
-    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
+    final static Sprite[] createSolidPanelSprites(int param0, int param1, int param2, int param3, int param4) {
         Sprite[] var6 = new Sprite[9];
         Sprite[] var5 = var6;
-        Sprite dupTemp$0 = PacketBuffer.a(-109, param1, param3);
+        Sprite dupTemp$0 = PacketBuffer.createSolidSprite(-109, param1, param3);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        Sprite dupTemp$1 = PacketBuffer.a(-125, param1, param4);
+        Sprite dupTemp$1 = PacketBuffer.createSolidSprite(-125, param1, param4);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
         if (param0 != 0) {
-          var6[4] = PacketBuffer.a(-124, 64, param0);
+          var6[4] = PacketBuffer.createSolidSprite(-124, 64, param0);
           if (param2 <= -55) {
             return var5;
           }
@@ -59,8 +59,8 @@ final class MatchingTextValidator extends TextInputValidator {
         return (Sprite[]) null;
     }
 
-    final static void a(boolean param0, boolean param1) {
-        ec.a(param0, param1, -105);
+    final static void drawModalOverlay(boolean param0, boolean param1) {
+        CookieHelpers.drawOverlayBackdrop(param0, param1, -105);
     }
 
     final ValidationState validationStateForText(boolean param0, String param1) {
@@ -79,15 +79,15 @@ final class MatchingTextValidator extends TextInputValidator {
           if (this.field_q instanceof ValidationProviderSource) {
             var3 = ((ValidationProviderSource) ((Object) this.field_q)).getValidationProvider((byte) 101);
             if (var3 != null &&
-              var3.getDebouncedValidationState(49) != db.field_b) {
-              stackIn_6_0 = jq.field_b;
+              var3.getDebouncedValidationState(49) != AudioStartupHelpers.field_b) {
+              stackIn_6_0 = PowerGaugeHelpers.field_b;
               return stackIn_6_0;
             }
           }
           if (param1.equals(this.field_q.field_j)) {
-            stackIn_10_0 = db.field_b;
+            stackIn_10_0 = AudioStartupHelpers.field_b;
           } else {
-            stackIn_10_0 = jq.field_b;
+            stackIn_10_0 = PowerGaugeHelpers.field_b;
           }
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -128,9 +128,9 @@ final class MatchingTextValidator extends TextInputValidator {
           if (this.field_q instanceof ValidationProviderSource) {
             var3 = ((ValidationProviderSource) ((Object) this.field_q)).getValidationProvider((byte) 85);
             if (var3 != null) {
-              if (var3.getDebouncedValidationState(125) == db.field_b &&
+              if (var3.getDebouncedValidationState(125) == AudioStartupHelpers.field_b &&
                 !param0.equals(this.field_q.field_j)) {
-                stackIn_5_0 = de.field_d;
+                stackIn_5_0 = AwtEventPumpHelpers.field_d;
                 return stackIn_5_0;
               }
               stackIn_7_0 = var3.getDebouncedValidationMessage(-122);
@@ -138,13 +138,13 @@ final class MatchingTextValidator extends TextInputValidator {
             }
           }
           if (!param0.equals(this.field_q.field_j)) {
-            stackIn_11_0 = de.field_d;
+            stackIn_11_0 = AwtEventPumpHelpers.field_d;
             return stackIn_11_0;
           }
           if (param1 == -1276425040) {
             return null;
           }
-          MatchingTextValidator.a(-118, 127, -62, 52, -38);
+          MatchingTextValidator.createSolidPanelSprites(-118, 127, -62, 52, -38);
           stackIn_15_0 = null;
           return (String) (stackIn_15_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

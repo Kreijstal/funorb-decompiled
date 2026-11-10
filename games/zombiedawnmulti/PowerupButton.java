@@ -17,7 +17,7 @@ final class PowerupButton {
     private int field_h;
     boolean field_b;
 
-    final boolean b(byte param0) {
+    final boolean isSelected(byte param0) {
         if (param0 < 14) {
           this.field_c = -121;
           return this.field_k;
@@ -34,7 +34,7 @@ final class PowerupButton {
         }
     }
 
-    final int a(int param0, byte param1) {
+    final int getPowerupAtX(int param0, byte param1) {
         int stackIn_18_0 = 0;
         if (param1 > -43) {
           this.field_b = false;
@@ -67,7 +67,7 @@ final class PowerupButton {
         return stackIn_18_0;
     }
 
-    final static void a(ob param0, byte param1) {
+    final static void setUnknownQuickChatPhrase(QuickChatCategoryDefinition param0, byte param1) {
         try {
           param0.field_D = new char[]{(char)63};
           int var2_int = 54 / ((23 - param1) / 40);
@@ -77,14 +77,14 @@ final class PowerupButton {
         }
     }
 
-    final static void a(int param0, int param1) {
-        jk.field_j = param0;
+    final static void setAccountDialogResult(int param0, int param1) {
+        UpgradeAccessHelpers.field_j = param0;
         if (param1 < 43) {
           PowerupButton.releaseStatics(-36);
         }
     }
 
-    private final int a(byte param0, int param1, int param2) {
+    private final int computeHoverHeight(byte param0, int param1, int param2) {
         int var5 = 0;
         int var6 = 0;
         float var7 = 0.0f;
@@ -104,20 +104,20 @@ final class PowerupButton {
         return 73;
     }
 
-    final void b(int param0) {
+    final void select(int param0) {
         this.field_a = param0;
         this.field_k = true;
         this.field_b = false;
     }
 
-    final void c(byte param0) {
+    final void deselect(byte param0) {
         this.field_k = false;
         if (param0 != 18) {
           this.field_b = false;
         }
     }
 
-    final void a(int param0) {
+    final void startCooldown(int param0) {
         this.field_k = false;
         this.field_b = true;
         this.field_a = param0;
@@ -136,7 +136,7 @@ final class PowerupButton {
     final boolean containsPoint(int param0, int param1, byte param2) {
         boolean stackIn_18_0 = false;
         if (param2 >= -32) {
-          this.a(83, (byte) -68);
+          this.getPowerupAtX(83, (byte) -68);
           if (55 <= 480 - param0) {
             return false;
           }
@@ -161,7 +161,7 @@ final class PowerupButton {
         return stackIn_18_0;
     }
 
-    final void c(int param0) {
+    final void draw(int param0) {
         int[] var9 = null;
         int var4 = 0;
         int var2 = 76 / ((param0 - 82) / 33);
@@ -179,10 +179,10 @@ final class PowerupButton {
         if (var3 > 255) {
           var3 = 255;
         }
-        LabeledChildWidget.field_H[this.field_a].c(this.field_m, -this.field_h + 480, var3);
+        LabeledChildWidget.field_H[this.field_a].drawBlended(this.field_m, -this.field_h + 480, var3);
         if (this.field_a != 2) {
           var4 = MarkerSliderPainter.field_b[this.field_n].height - MarkerSliderPainter.field_b[this.field_n].height * (-this.field_c + this.field_l) / this.field_l;
-          MarkerSliderPainter.field_b[this.field_n].c(this.field_m + 8, -this.field_h + 504, var3);
+          MarkerSliderPainter.field_b[this.field_n].drawBlended(this.field_m + 8, -this.field_h + 504, var3);
           var9 = new int[4];
           SoftwareRasterizer.saveClip(var9);
           SoftwareRasterizer.setClip(8 + this.field_m, -var4 + (MarkerSliderPainter.field_b[this.field_n].height + 24) + (480 - this.field_h), MarkerSliderPainter.field_b[this.field_n].width + 8 + this.field_m, MarkerSliderPainter.field_b[this.field_n].height + (24 - this.field_h + 480));
@@ -192,31 +192,31 @@ final class PowerupButton {
         }
         if (this.field_l > this.field_c) {
           if (this.field_k) {
-            LabeledChildWidget.field_H[this.field_a].drawAdditive(this.field_m, -this.field_h + 480, lh.field_b[this.field_i] + 96);
+            LabeledChildWidget.field_H[this.field_a].drawAdditive(this.field_m, -this.field_h + 480, ArchiveLoadSequence.field_b[this.field_i] + 96);
           }
           MarkerSliderPainter.field_b[this.field_n].drawTransparent(this.field_m + 8, -this.field_h + 480 + 24);
           if (this.field_k) {
-            MarkerSliderPainter.field_b[this.field_n].drawAdditive(8 + this.field_m, 24 + (480 - this.field_h), 196 + lh.field_b[this.field_i]);
+            MarkerSliderPainter.field_b[this.field_n].drawAdditive(8 + this.field_m, 24 + (480 - this.field_h), 196 + ArchiveLoadSequence.field_b[this.field_i]);
           }
           LabeledChildWidget.field_H[3].drawTransparent(this.field_m, 480 - this.field_h);
           return;
         }
         var4Lifetime1 = (this.field_i + this.field_m / 3) % 50;
         if (25 < var4Lifetime1) {
-          SoftwareRasterizer.fillCircleAlpha(MarkerSliderPainter.field_b[this.field_n].width / 2 + 8 + this.field_m, 504 - (this.field_h - MarkerSliderPainter.field_b[this.field_n].height / 2), lh.field_b[var4Lifetime1] * 5 / 8, 13421772, 68 - var4Lifetime1);
-          SoftwareRasterizer.fillCircleAlpha(MarkerSliderPainter.field_b[this.field_n].width / 2 + (this.field_m + 8), -this.field_h + 480 + (24 + MarkerSliderPainter.field_b[this.field_n].height / 2), 4 * lh.field_b[var4Lifetime1] / 8, 11206570, 118 - var4Lifetime1);
+          SoftwareRasterizer.fillCircleAlpha(MarkerSliderPainter.field_b[this.field_n].width / 2 + 8 + this.field_m, 504 - (this.field_h - MarkerSliderPainter.field_b[this.field_n].height / 2), ArchiveLoadSequence.field_b[var4Lifetime1] * 5 / 8, 13421772, 68 - var4Lifetime1);
+          SoftwareRasterizer.fillCircleAlpha(MarkerSliderPainter.field_b[this.field_n].width / 2 + (this.field_m + 8), -this.field_h + 480 + (24 + MarkerSliderPainter.field_b[this.field_n].height / 2), 4 * ArchiveLoadSequence.field_b[var4Lifetime1] / 8, 11206570, 118 - var4Lifetime1);
           if (this.field_k) {
-            LabeledChildWidget.field_H[this.field_a].drawAdditive(this.field_m, -this.field_h + 480, lh.field_b[this.field_i] + 96);
+            LabeledChildWidget.field_H[this.field_a].drawAdditive(this.field_m, -this.field_h + 480, ArchiveLoadSequence.field_b[this.field_i] + 96);
             MarkerSliderPainter.field_b[this.field_n].drawTransparent(this.field_m + 8, -this.field_h + 480 + 24);
             if (this.field_k) {
-              MarkerSliderPainter.field_b[this.field_n].drawAdditive(8 + this.field_m, 24 + (480 - this.field_h), 196 + lh.field_b[this.field_i]);
+              MarkerSliderPainter.field_b[this.field_n].drawAdditive(8 + this.field_m, 24 + (480 - this.field_h), 196 + ArchiveLoadSequence.field_b[this.field_i]);
             }
             LabeledChildWidget.field_H[3].drawTransparent(this.field_m, 480 - this.field_h);
             return;
           }
           MarkerSliderPainter.field_b[this.field_n].drawTransparent(this.field_m + 8, -this.field_h + 480 + 24);
           if (this.field_k) {
-            MarkerSliderPainter.field_b[this.field_n].drawAdditive(8 + this.field_m, 24 + (480 - this.field_h), 196 + lh.field_b[this.field_i]);
+            MarkerSliderPainter.field_b[this.field_n].drawAdditive(8 + this.field_m, 24 + (480 - this.field_h), 196 + ArchiveLoadSequence.field_b[this.field_i]);
           }
           LabeledChildWidget.field_H[3].drawTransparent(this.field_m, 480 - this.field_h);
           return;
@@ -224,20 +224,20 @@ final class PowerupButton {
         if (!this.field_k) {
           MarkerSliderPainter.field_b[this.field_n].drawTransparent(this.field_m + 8, -this.field_h + 480 + 24);
           if (this.field_k) {
-            MarkerSliderPainter.field_b[this.field_n].drawAdditive(8 + this.field_m, 24 + (480 - this.field_h), 196 + lh.field_b[this.field_i]);
+            MarkerSliderPainter.field_b[this.field_n].drawAdditive(8 + this.field_m, 24 + (480 - this.field_h), 196 + ArchiveLoadSequence.field_b[this.field_i]);
           }
           LabeledChildWidget.field_H[3].drawTransparent(this.field_m, 480 - this.field_h);
           return;
         }
-        LabeledChildWidget.field_H[this.field_a].drawAdditive(this.field_m, -this.field_h + 480, lh.field_b[this.field_i] + 96);
+        LabeledChildWidget.field_H[this.field_a].drawAdditive(this.field_m, -this.field_h + 480, ArchiveLoadSequence.field_b[this.field_i] + 96);
         MarkerSliderPainter.field_b[this.field_n].drawTransparent(this.field_m + 8, -this.field_h + 480 + 24);
         if (this.field_k) {
-          MarkerSliderPainter.field_b[this.field_n].drawAdditive(8 + this.field_m, 24 + (480 - this.field_h), 196 + lh.field_b[this.field_i]);
+          MarkerSliderPainter.field_b[this.field_n].drawAdditive(8 + this.field_m, 24 + (480 - this.field_h), 196 + ArchiveLoadSequence.field_b[this.field_i]);
         }
         LabeledChildWidget.field_H[3].drawTransparent(this.field_m, 480 - this.field_h);
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void tick(int param0, int param1, int param2) {
         int stackIn_14_0 = 0;
         int stackIn_67_0 = 0;
         int var4;
@@ -262,7 +262,7 @@ final class PowerupButton {
                 if (var4 > param1) {
                   stackIn_14_0 = 0;
                 } else {
-                  stackIn_14_0 = this.a((byte) 118, param1, param0);
+                  stackIn_14_0 = this.computeHoverHeight((byte) 118, param1, param0);
                 }
                 var5 = stackIn_14_0;
                 if (Math.abs(-this.field_h + var5) > 2) {
@@ -300,8 +300,8 @@ final class PowerupButton {
               this.field_a = 1;
               this.field_h = 65;
               this.field_c = this.field_c + 1;
-              this.field_c = PortalEntryEvent.field_m.currentTick - (tg.field_e.powerupReadyTick[this.field_j] - field_e.a(this.field_j, (byte) 109));
-              this.field_l = field_e.a(this.field_j, (byte) 108);
+              this.field_c = PortalEntryEvent.field_m.currentTick - (AudioPumpThread.field_e.powerupReadyTick[this.field_j] - field_e.getPowerupCooldown(this.field_j, (byte) 109));
+              this.field_l = field_e.getPowerupCooldown(this.field_j, (byte) 108);
               if (this.field_l > this.field_c) {
                 return;
               }
@@ -356,7 +356,7 @@ final class PowerupButton {
           if (var4Lifetime1 > param1) {
             stackIn_67_0 = 0;
           } else {
-            stackIn_67_0 = this.a((byte) 118, param1, param0);
+            stackIn_67_0 = this.computeHoverHeight((byte) 118, param1, param0);
           }
           var5Lifetime1 = stackIn_67_0;
           if (Math.abs(-this.field_h + var5Lifetime1) > 2) {
@@ -410,8 +410,8 @@ final class PowerupButton {
           this.field_a = 1;
           this.field_h = 65;
           this.field_c = this.field_c + 1;
-          this.field_c = PortalEntryEvent.field_m.currentTick - (tg.field_e.powerupReadyTick[this.field_j] - field_e.a(this.field_j, (byte) 109));
-          this.field_l = field_e.a(this.field_j, (byte) 108);
+          this.field_c = PortalEntryEvent.field_m.currentTick - (AudioPumpThread.field_e.powerupReadyTick[this.field_j] - field_e.getPowerupCooldown(this.field_j, (byte) 109));
+          this.field_l = field_e.getPowerupCooldown(this.field_j, (byte) 108);
           if (this.field_l > this.field_c) {
             return;
           }

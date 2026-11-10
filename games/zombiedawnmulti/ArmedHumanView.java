@@ -192,22 +192,22 @@ final class ArmedHumanView extends HumanView {
     final static void latchInputState(byte param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        var1 = on.field_Z;
+        var1 = ValidatedTextInputWidget.field_Z;
         synchronized (var1) {
-          pq.field_f = hh.field_e;
-          gi.field_m = gi.field_m + 1;
-          MouseInputHandler.field_g = pb.field_a;
-          bo.field_d = InflaterDecompressor.field_e;
-          wc.field_J = vj.field_m;
-          vj.field_m = false;
-          kd.field_b = s.field_f;
-          vb.field_f = de.field_g;
-          ChatMessage.field_t = s.field_b;
-          s.field_f = 0;
+          PowerupAuraEffect.field_f = MenuInputState.field_e;
+          LevelFileEntry.field_m = LevelFileEntry.field_m + 1;
+          MouseInputHandler.field_g = EffectAudioHelpers.field_a;
+          LoginMethod.field_d = InflaterDecompressor.field_e;
+          ScorePopup.field_J = AppearanceScreen.field_m;
+          AppearanceScreen.field_m = false;
+          StringHashHelpers.field_b = StatusAndMeshHelpers.field_f;
+          LobbyUiSetupHelpers.field_f = AwtEventPumpHelpers.field_g;
+          ChatMessage.field_t = StatusAndMeshHelpers.field_b;
+          StatusAndMeshHelpers.field_f = 0;
           if (param0 >= -82) {
             field_sb = (String) null;
           }
-          jf.field_e = ak.field_b;
+          ReportDialogGlobals.field_e = ClientShellHelpers.field_b;
         }
     }
 

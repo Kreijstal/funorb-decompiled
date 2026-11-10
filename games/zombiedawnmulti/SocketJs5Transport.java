@@ -1,0 +1,544 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.io.*;
+
+final class SocketJs5Transport extends Js5Transport {
+    static String field_u;
+    static boolean field_s;
+    static String field_r;
+    static Sprite field_t;
+    private BufferedSocket field_q;
+
+    private final void sendStateControlPacket(boolean param0, boolean param1) {
+        try {
+          PacketBuffer stackIn_5_0 = null;
+          int stackIn_5_1 = 0;
+          int stackIn_6_2 = 0;
+          Throwable decompiledCaughtException = null;
+          IOException var3 = null;
+          Exception var4 = null;
+          if (this.field_q == null) {
+            return;
+          }
+          try {
+            this.field_b.position = 0;
+            stackIn_5_0 = this.field_b;
+            stackIn_5_1 = 122;
+            if (param0) {
+              stackIn_6_2 = 2;
+            } else {
+              stackIn_6_2 = 3;
+            }
+            ((PacketBuffer) (Object) stackIn_5_0).writeByte(stackIn_5_1, stackIn_6_2);
+            this.field_b.writeLong40(0L, param1);
+            this.field_q.write(0, -100, this.field_b.payload.length, this.field_b.payload);
+            if (!param1) {
+              this.sendStateControlPacket(false, false);
+            }
+          } catch (java.io.IOException decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var3 = (IOException) (Object) decompiledCaughtException;
+            try {
+              this.field_q.close(93);
+            } catch (java.lang.Exception decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              var4 = (Exception) (Object) decompiledCaughtException;
+            }
+            this.field_n = this.field_n + 1;
+            this.field_q = null;
+            this.field_p = -2;
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    final static void initializeQuickChat(ResourceArchive param0, byte param1, BitmapFont param2) {
+        int var6 = 0;
+        int var7 = 0;
+        int[] var17 = null;
+        int var9 = 0;
+        int var10 = ZombieDawnMulti.field_E ? 1 : 0;
+        int var3_int = ObjectFactoryHelpers.field_e;
+        PlayerProfile.field_l = new UiComponent(0L, (UiComponent) null);
+        int var4 = 97 / ((param1 - 46) / 63);
+        if (param0 == null) {
+          Throwable var11 = (Throwable) null;
+          MouseInputHandler.reportClientError("QC1", (Throwable) null, false);
+          return;
+        }
+        param0.field_j = false;
+        param0.field_b = 0;
+        ViewportController.field_p = new QuickChatCategoryRegistry(var3_int, param0, param0);
+        MouseInputHandler.field_c = new QuickChatPhraseRegistry(var3_int, param0, param0, new DefaultQuickChatContext());
+        QuickChatCategoryDefinition var5 = DetonationTarget.findFirstActiveDefinition(false);
+        if (var5 == null) {
+          Throwable var12 = (Throwable) null;
+          MouseInputHandler.reportClientError("QC2", (Throwable) null, false);
+          return;
+        }
+        try {
+          PowerupButton.setUnknownQuickChatPhrase(var5, (byte) -19);
+          BitmapFont var13 = (BitmapFont) null;
+          AudioPumpThread.field_d = GameScreen.createStyledComponent(1127256, (BitmapFont) null, 65793, 1513239, 8947848, 4020342, 65793, (byte) 123, 0, 2245737, 65793, 1513239, 5138823);
+          DelayedPacket.field_k = GameScreen.createStyledComponent(0, param2, 0, 0, 0, 0, 0, (byte) 127, 16764006, 0, 0, 0, 0);
+          GameWorld.field_x = GameScreen.createStyledComponent(0, param2, 0, 0, 0, 0, 0, (byte) 122, 16777215, 0, 0, 0, 0);
+          var6 = SoftwareRasterizer.width;
+          var7 = SoftwareRasterizer.height;
+          var17 = SoftwareRasterizer.pixels;
+          GradientOutlineTextPainter.field_v = new Sprite(10, 14);
+          GradientOutlineTextPainter.field_v.bindAsRenderTarget();
+          for (var9 = 2; 7 > var9; var9++) {
+            SoftwareRasterizer.drawVerticalLine(var9, var9 + 1, 14 - (var9 << 1), 16777215);
+          }
+          SoftwareRasterizer.setTarget(var17, var6, var7);
+          QuickChatPhraseDefinition.field_t = HuffmanCodec.buildQuickChatCategoryMenu(false, AudioPumpThread.field_d, DelayedPacket.field_k, GameWorld.field_x, var5);
+          PlayerProfile.field_l.field_Cb = new IntrusiveDeque();
+        } catch (RuntimeException runtimeException) {
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ap.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final boolean poll(byte param0) {
+        try {
+          int stackIn_50_0 = 0;
+          int stackIn_67_0 = 0;
+          Throwable decompiledCaughtException = null;
+          long var2_long = 0L;
+          NetworkArchiveRequest var2 = null;
+          int var2_int = 0;
+          IOException var2_ref = null;
+          int var3_int = 0;
+          Exception var3 = null;
+          int var4 = 0;
+          Exception var5_ref_Exception = null;
+          int var5 = 0;
+          int var6 = 0;
+          int var7 = 0;
+          int var8 = 0;
+          int var9 = 0;
+          int var10 = 0;
+          int var11 = 0;
+          long var12 = 0L;
+          Object var14 = null;
+          NetworkArchiveRequest var14_ref = null;
+          int var15 = 0;
+          int var16 = 0;
+          NetworkArchiveRequest var2Lifetime1;
+          int var2_intLifetime1;
+          var16 = ZombieDawnMulti.field_E ? 1 : 0;
+          if (this.field_q != null) {
+            var2_long = ClockAndScreenHelpers.monotonicMillis((byte) 115);
+            var4 = (int)(var2_long - this.field_f);
+            if (var4 > 200) {
+              var4 = 200;
+            }
+            this.field_f = var2_long;
+            this.field_d = this.field_d + var4;
+            if (this.field_d > 30000) {
+              try {
+                this.field_q.close(99);
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var5_ref_Exception = (Exception) (Object) decompiledCaughtException;
+              }
+              this.field_q = null;
+            }
+          }
+          if (null == this.field_q) {
+            if (this.getInFlightRequestCount(0) != 0) {
+              return false;
+            }
+            if (0 == this.prefetchCount(20)) {
+              return true;
+            }
+            return false;
+          }
+          try {
+            this.field_q.checkWriteError(-26844);
+            var2 = (NetworkArchiveRequest) (this.field_g.first((byte) 111));
+            while (var2 != null) {
+              this.field_b.position = 0;
+              this.field_b.writeByte(-112, 1);
+              this.field_b.writeLong40(var2.secondaryKey, true);
+              this.field_q.write(0, -100, this.field_b.payload.length, this.field_b.payload);
+              this.field_j.add(29664, var2);
+              var2 = (NetworkArchiveRequest) (this.field_g.next((byte) 97));
+            }
+            var2Lifetime1 = (NetworkArchiveRequest) (this.field_c.first((byte) 124));
+            while (var2Lifetime1 != null) {
+              this.field_b.position = 0;
+              this.field_b.writeByte(-20, 0);
+              this.field_b.writeLong40(var2Lifetime1.secondaryKey, true);
+              this.field_q.write(0, -100, this.field_b.payload.length, this.field_b.payload);
+              this.field_l.add(29664, var2Lifetime1);
+              var2Lifetime1 = (NetworkArchiveRequest) (this.field_c.next((byte) 102));
+            }
+            for (var2_int = 0; var2_int < 100; var2_int++) {
+              var3_int = this.field_q.available(-79);
+              if (var3_int < 0) {
+                throw new IOException();
+              }
+              if (0 != var3_int) {
+                this.field_d = 0;
+                var4 = 0;
+                if (null == this.field_m) {
+                  var4 = 10;
+                } else {
+                  if (this.field_m.field_D == 0) {
+                    var4 = 1;
+                  }
+                }
+                if (var4 <= 0) {
+                  var5 = this.field_m.field_y.payload.length - this.field_m.field_B;
+                  var6 = -this.field_m.field_D + 512;
+                  if (var6 > -this.field_m.field_y.position + var5) {
+                    var6 = -this.field_m.field_y.position + var5;
+                  }
+                  if (var3_int < var6) {
+                    var6 = var3_int;
+                  }
+                  this.field_q.readFully(var6, this.field_m.field_y.position, this.field_m.field_y.payload, 117);
+                  if (0 != this.field_i) {
+                    for (var7 = 0; var6 > var7; var7++) {
+                      this.field_m.field_y.payload[var7 + this.field_m.field_y.position] = (byte)RankingsRequest.bitXor((int) this.field_m.field_y.payload[var7 + this.field_m.field_y.position], (int) this.field_i);
+                    }
+                  }
+                  this.field_m.field_y.position = this.field_m.field_y.position + var6;
+                  this.field_m.field_D = this.field_m.field_D + var6;
+                  if (this.field_m.field_y.position != var5) {
+                    if (this.field_m.field_D == 512) {
+                      this.field_m.field_D = 0;
+                    }
+                  } else {
+                    this.field_m.unlinkSecondary(-4564);
+                    this.field_m.field_t = false;
+                    this.field_m = null;
+                  }
+                } else {
+                  var5 = -this.field_k.position + var4;
+                  if (var3_int < var5) {
+                    var5 = var3_int;
+                  }
+                  this.field_q.readFully(var5, this.field_k.position, this.field_k.payload, 108);
+                  if (this.field_i != 0) {
+                    for (var6 = 0; var5 > var6; var6++) {
+                      this.field_k.payload[var6 + this.field_k.position] = (byte)RankingsRequest.bitXor((int) this.field_k.payload[var6 + this.field_k.position], (int) this.field_i);
+                    }
+                  }
+                  this.field_k.position = this.field_k.position + var5;
+                  if (var4 <= this.field_k.position) {
+                    if (this.field_m != null) {
+                      if (this.field_m.field_D != 0) {
+                        throw new IOException();
+                      }
+                      if (this.field_k.payload[0] == -1) {
+                        this.field_m.field_D = 1;
+                        this.field_k.position = 0;
+                      } else {
+                        this.field_m = null;
+                      }
+                    } else {
+                      this.field_k.position = 0;
+                      var6 = this.field_k.readUnsignedByte(31365);
+                      var7 = this.field_k.readInt(-1478490344);
+                      var8 = this.field_k.readUnsignedByte(31365);
+                      var9 = this.field_k.readInt(-1478490344);
+                      var10 = 127 & var8;
+                      stackIn_50_0 = ((var8 & 128) == 0) ? 0 : 1;
+                      boolean decompiledFrameRemainder0 = true;
+                      boolean decompiledFrameCompleted0 = true;
+                      var11 = stackIn_50_0;
+                      var12 = (long)var7 + ((long)var6 << 32);
+                      var14 = null;
+                      if (var11 == 0) {
+                        var14_ref = (NetworkArchiveRequest) (this.field_j.first((byte) 96));
+                        while (var14_ref != null) {
+                          if (~var12 == ~var14_ref.secondaryKey) {
+                            decompiledFrameCompleted0 = false;
+                            break;
+                          }
+                          var14_ref = (NetworkArchiveRequest) (this.field_j.next((byte) 123));
+                        }
+                        decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
+                      }
+                      if ((decompiledFrameRemainder0) &&
+                        (decompiledFrameCompleted0)) {
+                        var14_ref = (NetworkArchiveRequest) (this.field_l.first((byte) 110));
+                        while (var14_ref != null) {
+                          if (~var14_ref.secondaryKey == ~var12) {
+                            break;
+                          }
+                          var14_ref = (NetworkArchiveRequest) (this.field_l.next((byte) 122));
+                        }
+                      }
+                      if (var14_ref == null) {
+                        throw new IOException();
+                      }
+                      stackIn_67_0 = (var10 != 0) ? 9 : 5;
+                      var15 = stackIn_67_0;
+                      this.field_m = var14_ref;
+                      this.field_m.field_y = new PacketBuffer(var15 + (var9 + this.field_m.field_B));
+                      this.field_m.field_y.writeByte(125, var10);
+                      this.field_m.field_y.writeInt(42, var9);
+                      this.field_m.field_D = 10;
+                      this.field_k.position = 0;
+                    }
+                  }
+                }
+                continue;
+              }
+              break;
+            }
+            var2_intLifetime1 = -121 % ((44 - param0) / 45);
+            return true;
+          } catch (java.io.IOException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var2_ref = (IOException) (Object) decompiledCaughtException;
+            try {
+              this.field_q.close(82);
+            } catch (java.lang.Exception decompiledCaughtParameter2) {
+              decompiledCaughtException = decompiledCaughtParameter2;
+              var3 = (Exception) (Object) decompiledCaughtException;
+            }
+            this.field_q = null;
+            this.field_n = this.field_n + 1;
+            this.field_p = -2;
+            if (0 != this.getInFlightRequestCount(0)) {
+              return false;
+            }
+            if (0 == this.prefetchCount(20)) {
+              return true;
+            }
+            return false;
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    final static PaletteBitmapFont loadPaletteFont(ResourceArchive param0, ResourceArchive param1, String param2, int param3, String param4) {
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        PaletteBitmapFont stackIn_2_0 = null;
+        PaletteBitmapFont stackIn_4_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_14_2 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param3 != 4) {
+            stackIn_2_0 = (PaletteBitmapFont) null;
+            return stackIn_2_0;
+          }
+          var5_int = param0.getGroupIdByName(param2, (byte) 123);
+          var6 = param0.getFileId(param4, var5_int, -1);
+          stackIn_4_0 = TextInputWidget.loadPaletteFont(param1, var6, var5_int, param0, -29435);
+          return stackIn_4_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_7_0 = var5;
+          stackIn_7_1 = new StringBuilder().append("ap.Q(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
+          if (param1 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
+          if (param2 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
+          }
+          stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+        }
+    }
+
+    private final void sendInitControlPacket(int param0) {
+        try {
+          IOException iOException = null;
+          Throwable decompiledCaughtException = null;
+          Exception var3 = null;
+          if (this.field_q == null) {
+            return;
+          }
+          try {
+            this.field_b.position = param0;
+            this.field_b.writeByte(124, 6);
+            this.field_b.writeMedium(3, -8593);
+            this.field_b.writeShort(0, (byte) -55);
+            this.field_q.write(0, param0 - 100, this.field_b.payload.length, this.field_b.payload);
+          } catch (java.io.IOException decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            iOException = (IOException) (Object) decompiledCaughtException;
+            try {
+              this.field_q.close(116);
+            } catch (java.lang.Exception decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              var3 = (Exception) (Object) decompiledCaughtException;
+            }
+            this.field_p = -2;
+            this.field_q = null;
+            this.field_n = this.field_n + 1;
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    public SocketJs5Transport() {
+    }
+
+    final void resetAfterValidationFailure(byte param0) {
+        try {
+          int var2_int = 0 / ((param0 - 53) / 41);
+          this.field_q.close(-101);
+        } catch (Exception exception) {
+        }
+        this.field_n = this.field_n + 1;
+        this.field_p = -1;
+        this.field_q = null;
+        this.field_i = (byte)(int)(1.0 + Math.random() * 255.0);
+    }
+
+    final void closeConnection(int param0) {
+        if (param0 != 31) {
+          this.sendStateControlPacket(false, true);
+        }
+        if (this.field_q != null) {
+          this.field_q.close(88);
+        }
+    }
+
+    final void setConnection(boolean param0, Object param1, int param2) {
+        try {
+          RuntimeException stackIn_24_0 = null;
+          StringBuilder stackIn_24_1 = null;
+          String stackIn_25_2 = null;
+          Throwable decompiledCaughtException = null;
+          Exception var4 = null;
+          NetworkArchiveRequest var4_ref = null;
+          IOException var4_ref2 = null;
+          int var4_int = 0;
+          RuntimeException var4_ref3 = null;
+          Exception var5 = null;
+          int var6 = 0;
+          NetworkArchiveRequest var4_refLifetime1;
+          var6 = ZombieDawnMulti.field_E ? 1 : 0;
+          try {
+            if (this.field_q != null) {
+              try {
+                this.field_q.close(-90);
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var4 = (Exception) (Object) decompiledCaughtException;
+              }
+              this.field_q = null;
+            }
+            this.field_q = (BufferedSocket) (param1);
+            this.sendInitControlPacket(0);
+            this.sendStateControlPacket(param0, true);
+            this.field_m = null;
+            this.field_k.position = 0;
+            while (true) {
+              var4_ref = (NetworkArchiveRequest) (this.field_j.removeLast(11356));
+              if (var4_ref != null) {
+                this.field_g.add(29664, var4_ref);
+                continue;
+              }
+              break;
+            }
+            while (true) {
+              var4_refLifetime1 = (NetworkArchiveRequest) (this.field_l.removeLast(11356));
+              if (var4_refLifetime1 != null) {
+                this.field_c.add(29664, var4_refLifetime1);
+                continue;
+              }
+              break;
+            }
+            if (0 != this.field_i) {
+              try {
+                this.field_b.position = 0;
+                this.field_b.writeByte(126, 4);
+                this.field_b.writeByte(125, (int) this.field_i);
+                this.field_b.writeInt(-103, 0);
+                this.field_q.write(0, -100, this.field_b.payload.length, this.field_b.payload);
+              } catch (java.io.IOException decompiledCaughtParameter1) {
+                decompiledCaughtException = decompiledCaughtParameter1;
+                var4_ref2 = (IOException) (Object) decompiledCaughtException;
+                try {
+                  this.field_q.close(-53);
+                } catch (java.lang.Exception decompiledCaughtParameter2) {
+                  decompiledCaughtException = decompiledCaughtParameter2;
+                  var5 = (Exception) (Object) decompiledCaughtException;
+                }
+                this.field_q = null;
+                this.field_n = this.field_n + 1;
+                this.field_p = -2;
+              }
+            }
+            var4_int = 12 % ((param2 - 63) / 33);
+            this.field_d = 0;
+            this.field_f = ClockAndScreenHelpers.monotonicMillis((byte) 110);
+            return;
+          } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
+            decompiledCaughtException = decompiledCaughtParameter3;
+            var4_ref3 = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_24_0 = var4_ref3;
+            stackIn_24_1 = new StringBuilder().append("ap.F(").append(param0).append(',');
+            if (param1 == null) {
+              stackIn_25_2 = "null";
+            } else {
+              stackIn_25_2 = "{...}";
+            }
+            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(')').toString());
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    public static void releaseStatics(int param0) {
+        if (param0 != 16682) {
+          field_s = false;
+        }
+        field_r = null;
+        field_u = null;
+        field_t = null;
+    }
+
+    static {
+        field_s = false;
+        field_u = "Spectate";
+        field_r = "<%0> has not yet unlocked this option for use.";
+    }
+}

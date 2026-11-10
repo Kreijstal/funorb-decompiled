@@ -1,0 +1,95 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ArchiveAvailabilityHelpers {
+    static Sprite field_a;
+    static int field_e;
+    static int field_h;
+    static IntrusiveDeque field_f;
+    static IndexedSprite[] field_c;
+    static UiComponent field_g;
+    static int field_b;
+    static char field_d;
+    static String field_i;
+
+    public static void releaseStatics(int param0) {
+        if (param0 != 31) {
+          return;
+        }
+        field_g = null;
+        field_i = null;
+        field_f = null;
+        field_c = null;
+        field_a = null;
+    }
+
+    final static void compactSegments(int param0) {
+        int var1_int = 0;
+        int var2 = 0;
+        int var3 = 0;
+        int var4 = 0;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
+        var4 = ZombieDawnMulti.field_E ? 1 : 0;
+        try {
+          var1_int = LobbyStateHelpers.field_e[0];
+          var2 = 1;
+          if (param0 != 8) {
+            field_e = -57;
+          }
+          while (LobbyStateHelpers.field_e.length > var2) {
+            var3 = LobbyStateHelpers.field_e[var2];
+            ArrayOperations.copy(TranslatedUiText.field_f, var2 << 4, TranslatedUiText.field_f, var1_int, var3);
+            var1_int = var1_int + var3;
+            var2++;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "pn.A(" + param0 + ')');
+        }
+    }
+
+    final static boolean ensureArchiveAvailable(int param0, PlatformTaskDispatcher param1) {
+        RuntimeException var2 = null;
+        boolean stackIn_3_0 = false;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 != -9) {
+            field_g = (UiComponent) null;
+          }
+          stackIn_3_0 = param1.supportsFullscreen(-53);
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("pn.D(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+        }
+    }
+
+    final static void readQuickChatOnlyFlag(byte param0) {
+        PendingRankingRequest.field_m = false;
+        SimPortal.field_L = StatusAndMeshHelpers.field_e.readUnsignedByte(31365) == 0 ? true : false;
+        if (param0 > 51) {
+          return;
+        }
+        ArchiveAvailabilityHelpers.releaseStatics(74);
+    }
+
+    static {
+        field_h = 0;
+        field_f = new IntrusiveDeque();
+        field_i = "Connection lost - attempting to reconnect";
+    }
+}

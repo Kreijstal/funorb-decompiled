@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class TextWidgetPainter implements WidgetPainter, rk {
+class TextWidgetPainter implements WidgetPainter, TextWidgetLayout {
     int field_g;
     int field_d;
     int field_f;
@@ -16,7 +16,7 @@ class TextWidgetPainter implements WidgetPainter, rk {
     private boolean field_l;
     int field_h;
     static String[] field_m;
-    static sc field_c;
+    static DualLinkNodeHashTable field_c;
     int field_p;
     int field_q;
     int field_i;
@@ -88,9 +88,9 @@ class TextWidgetPainter implements WidgetPainter, rk {
     }
 
     final static void drawQuickChatOverlay(byte param0) {
-        if (ee.field_b) {
+        if (LobbyScreenHelpers.field_b) {
           SoftwareRasterizer.clearRect(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, -SoftwareRasterizer.clipLeft + SoftwareRasterizer.clipRight, SoftwareRasterizer.clipBottom - SoftwareRasterizer.clipTop);
-          rp.field_l.c(false, -1);
+          PlayerProfile.field_l.drawRoot(false, -1);
           if (param0 < 12) {
             field_o = (char[]) null;
             return;
@@ -118,7 +118,7 @@ class TextWidgetPainter implements WidgetPainter, rk {
         var7 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (param0.field_k == null) {
-            param0.field_k = (mp) ((Object) new sp());
+            param0.field_k = (TextLayout) ((Object) new CachedTextLayout());
           }
           var3_int = this.getAvailableTextWidth(param0, true);
           if (param1 >= -123) {
@@ -142,23 +142,23 @@ class TextWidgetPainter implements WidgetPainter, rk {
           if (var6Lifetime1 != 0 &&
             3 != var6Lifetime1) {
             if (1 == var6Lifetime1) {
-              if (!(param0.field_k instanceof sp)) {
+              if (!(param0.field_k instanceof CachedTextLayout)) {
                 return;
               }
-              ((sp) (param0.field_k)).layoutCenteredLine(this.field_j, this.getDisplayText(param0, -9327), var5, (byte) 65, var3_int >> 1);
+              ((CachedTextLayout) (param0.field_k)).layoutCenteredLine(this.field_j, this.getDisplayText(param0, -9327), var5, (byte) 65, var3_int >> 1);
               return;
             }
             if (var6Lifetime1 == 2 &&
-              param0.field_k instanceof sp) {
-              ((sp) (param0.field_k)).layoutRightAlignedLine(var3_int, var5, true, this.getDisplayText(param0, -9327), this.field_j);
+              param0.field_k instanceof CachedTextLayout) {
+              ((CachedTextLayout) (param0.field_k)).layoutRightAlignedLine(var3_int, var5, true, this.getDisplayText(param0, -9327), this.field_j);
               return;
             }
             return;
           }
-          if (!(param0.field_k instanceof sp)) {
+          if (!(param0.field_k instanceof CachedTextLayout)) {
             return;
           }
-          ((sp) (param0.field_k)).layoutLeftAlignedLine(0, (byte) -97, this.field_j, this.getDisplayText(param0, -9327), var5);
+          ((CachedTextLayout) (param0.field_k)).layoutLeftAlignedLine(0, (byte) -97, this.field_j, this.getDisplayText(param0, -9327), var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -241,7 +241,7 @@ class TextWidgetPainter implements WidgetPainter, rk {
 
     final static void startLogin(String param0, byte param1, String param2) {
         try {
-          kn.a(-1431, false, param2, param0);
+          LoginStartHelpers.beginLoginWithCredentials(-1431, false, param2, param0);
           if (param1 != -125) {
             field_o = (char[]) null;
           }
@@ -260,12 +260,12 @@ class TextWidgetPainter implements WidgetPainter, rk {
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
         RuntimeException var7 = null;
-        mp var8 = null;
+        TextLayout var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        td var14 = null;
+        TextLayoutLine var14 = null;
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
@@ -305,9 +305,9 @@ class TextWidgetPainter implements WidgetPainter, rk {
                 }
               }
               var16 = stackIn_17_0;
-              ra.field_o.fillRectAlpha(this.textLeft(var15, param5, 15921, param3), var14.field_h, var16 - var15, (byte) -111, this.field_i, this.field_i >>> 24, var14.field_d + (param5.field_q + (param5.field_i + param1) + this.field_g));
+              PendingIntArrayReply.field_o.fillRectAlpha(this.textLeft(var15, param5, 15921, param3), var14.field_h, var16 - var15, (byte) -111, this.field_i, this.field_i >>> 24, var14.field_d + (param5.field_q + (param5.field_i + param1) + this.field_g));
             }
-            ql.a(true);
+            RasterStackHelpers.popRaster(true);
             return;
           }
           return;
@@ -386,10 +386,10 @@ class TextWidgetPainter implements WidgetPainter, rk {
     }
 
     public final void drawCaret(UiWidget param0, byte param1, int param2, int param3, int param4) {
-        mp var13 = null;
-        mp var14 = null;
+        TextLayout var13 = null;
+        TextLayout var14 = null;
         int var7 = 0;
-        td var8 = null;
+        TextLayoutLine var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -408,8 +408,8 @@ class TextWidgetPainter implements WidgetPainter, rk {
             var11 = this.getTextOriginY(param0, 0, param4) + Math.max(0, var8.field_d);
             var12 = this.getTextOriginY(param0, param1 - 2, param4) + Math.min(this.getAvailableTextHeight(-109, param0), Math.min(var8.field_h, var14.field_e.length > 1 + var7 ? var13.field_e[1 + var7].field_d : var8.field_h));
             Camera.pushClip(param2 + param0.field_y, param0.field_w + param4 + param0.field_i, (byte) 105, param0.field_n + (param2 + param0.field_y), param0.field_i + param4);
-            ra.field_o.drawLine(var12, var10, var11, this.field_h, (byte) 100, var10);
-            ql.a(true);
+            PendingIntArrayReply.field_o.drawLine(var12, var10, var11, this.field_h, (byte) 100, var10);
+            RasterStackHelpers.popRaster(true);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "hq.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
@@ -565,10 +565,10 @@ class TextWidgetPainter implements WidgetPainter, rk {
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_j.c(this.getDisplayText(param5, -9327), this.textLeft(param6, param5, param3 ^ 15920, param7), var11 + this.contentWidth(param4, param2, 105, param5), param1, param0);
+              this.field_j.drawLeft(this.getDisplayText(param5, -9327), this.textLeft(param6, param5, param3 ^ 15920, param7), var11 + this.contentWidth(param4, param2, 105, param5), param1, param0);
             }
           }
-          ql.a(true);
+          RasterStackHelpers.popRaster(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -613,22 +613,22 @@ class TextWidgetPainter implements WidgetPainter, rk {
         }
     }
 
-    public final mp getTextLayout(UiWidget param0, int param1) {
+    public final TextLayout getTextLayout(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
-        mp stackIn_9_0 = null;
+        TextLayout stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0.field_k == null) {
-            param0.field_k = (mp) ((Object) new sp());
+            param0.field_k = (TextLayout) ((Object) new CachedTextLayout());
           }
           if (!this.field_l) {
             this.layoutSingleLine(param0, -126);
           } else {
-            ((sp) (param0.field_k)).layoutWrappedText(this.getDisplayText(param0, -9327), this.field_d, this.getAvailableTextHeight(-117, param0), this.field_f, (byte) -30, this.field_a, this.getAvailableTextWidth(param0, true), this.field_j);
+            ((CachedTextLayout) (param0.field_k)).layoutWrappedText(this.getDisplayText(param0, -9327), this.field_d, this.getAvailableTextHeight(-117, param0), this.field_f, (byte) -30, this.field_a, this.getAvailableTextWidth(param0, true), this.field_j);
           }
           if (param1 >= -94) {
             var4 = (UiWidget) null;

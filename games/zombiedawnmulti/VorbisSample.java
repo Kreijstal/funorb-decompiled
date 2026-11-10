@@ -100,7 +100,7 @@ final class VorbisSample extends IntrusiveNode {
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];
-          var2.a(0, -6351, var5, var6);
+          var2.readBytes(0, -6351, var5, var6);
           this.packets[var4] = var6;
         }
     }
@@ -131,7 +131,7 @@ final class VorbisSample extends IntrusiveNode {
     private final static boolean ensureSetup(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_u) {
-          var1 = param0.a(0, true, 0);
+          var1 = param0.getFile(0, true, 0);
           if (var1 == null) {
             return false;
           }
@@ -152,10 +152,10 @@ final class VorbisSample extends IntrusiveNode {
         try {
           VorbisSample var4_ref = null;
           if (!VorbisSample.ensureSetup(param0)) {
-            param0.b(param2, param1, 0);
+            param0.isFileAvailable(param2, param1, 0);
             return null;
           }
-          byte[] var3 = param0.a(param1, true, param2);
+          byte[] var3 = param0.getFile(param1, true, param2);
           if (var3 == null) {
             return null;
           }
@@ -240,7 +240,7 @@ final class VorbisSample extends IntrusiveNode {
             var8[2 * var9_int + 1] = -(float)Math.sin((double)(4 * var9_int + 2) * 3.141592653589793 / (double)var2);
           }
           var9 = new int[var5];
-          var10 = mb.bitLength((byte) -31, var5 - 1);
+          var10 = MusicVoice.bitLength((byte) -31, var5 - 1);
           for (var11 = 0; var11 < var5; var11++) {
             var9[var11] = SimHuman.reverseBits(var11, -19863, var10);
           }
@@ -462,7 +462,7 @@ final class VorbisSample extends IntrusiveNode {
         int var18_intLifetime2;
         VorbisSample.setBitstream(this.packets[param0], 0);
         VorbisSample.readBit();
-        var2 = VorbisSample.readBits(mb.bitLength((byte) -31, field_q.length - 1));
+        var2 = VorbisSample.readBits(MusicVoice.bitLength((byte) -31, field_q.length - 1));
         var3 = field_B[var2] ? 1 : 0;
         if (var3 == 0) {
           stackIn_3_0 = field_J;
@@ -581,7 +581,7 @@ final class VorbisSample extends IntrusiveNode {
             var20_ref_float__[4 * var25Lifetime1 + 3] = (var26_floatLifetime1 - var28Lifetime1) * var30 - (var27Lifetime1 - var29Lifetime1) * var31;
             var20_ref_float__[4 * var25Lifetime1 + 1] = (var27Lifetime1 - var29Lifetime1) * var30 + (var26_floatLifetime1 - var28Lifetime1) * var31;
           }
-          var25Lifetime2 = mb.bitLength((byte) -31, var4 - 1);
+          var25Lifetime2 = MusicVoice.bitLength((byte) -31, var4 - 1);
           for (var26 = 0; var26 < var25Lifetime2 - 3; var26++) {
             var27_int = var4 >> var26 + 2;
             var28_int = 8 << var26;
@@ -704,10 +704,10 @@ final class VorbisSample extends IntrusiveNode {
         try {
           VorbisSample var4_ref = null;
           if (!VorbisSample.ensureSetup(param0)) {
-            param0.a((byte) -28, param2, param1);
+            param0.isNamedFileAvailable((byte) -28, param2, param1);
             return null;
           }
-          byte[] var3 = param0.a(param1, param2, false);
+          byte[] var3 = param0.getNamedFile(param1, param2, false);
           if (var3 == null) {
             return null;
           }

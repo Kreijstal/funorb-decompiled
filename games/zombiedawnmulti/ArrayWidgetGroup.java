@@ -5,7 +5,7 @@ import java.util.*;
 
 abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
     UiWidget[] field_E;
-    static pi field_G;
+    static CredentialKind field_G;
     static PlatformTaskDispatcher field_J;
     static int field_F;
     static String field_D;
@@ -317,8 +317,8 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
         }
     }
 
-    final static void a(int param0, byte param1, int param2) {
-        CipherPacketBuffer var3 = ma.field_a;
+    final static void sendShortSettingRequest(int param0, byte param1, int param2) {
+        CipherPacketBuffer var3 = TextValidationFailure.field_a;
         var3.writeCipheredOpcode((byte) -35, param0);
         var3.writeByte(112, 3);
         var3.writeByte(117, 8);
@@ -345,7 +345,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
             return false;
           }
           if (param4 != -24) {
-            field_G = (pi) null;
+            field_G = (CredentialKind) null;
           }
           var12 = this.field_E;
           var8 = var12;
@@ -371,7 +371,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
         }
     }
 
-    private final boolean a(byte param0, UiWidget param1) {
+    private final boolean focusNextChild(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -514,7 +514,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
         }
     }
 
-    private final boolean a(UiWidget param0, byte param1) {
+    private final boolean focusPreviousChild(UiWidget param0, byte param1) {
         RuntimeException var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -523,7 +523,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= -74) {
-            ArrayWidgetGroup.a(-78, (byte) 4, -120);
+            ArrayWidgetGroup.sendShortSettingRequest(-78, (byte) 4, -120);
           }
           stackIn_3_0 = this.focusBackwardFromFocused(param0, 32, 1);
           return stackIn_3_0;
@@ -670,10 +670,10 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
           if (var5_int != 80) {
             return false;
           }
-          if (lc.field_m[81]) {
-            stackIn_19_0 = this.a(param2, (byte) -80);
+          if (PulseEffect.field_m[81]) {
+            stackIn_19_0 = this.focusPreviousChild(param2, (byte) -80);
           } else {
-            stackIn_19_0 = this.a((byte) -20, param2);
+            stackIn_19_0 = this.focusNextChild((byte) -20, param2);
           }
           return stackIn_19_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -691,7 +691,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements ChildWidgetOwner {
     }
 
     static {
-        field_G = new pi(2);
+        field_G = new CredentialKind(2);
         field_D = "Make one of your zombies quite appealing, charming humans into following it...to their doom!";
         field_K = "Enter name of player to add to list";
     }

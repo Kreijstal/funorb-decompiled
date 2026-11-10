@@ -81,14 +81,14 @@ final class InflaterDecompressor {
         }
     }
 
-    final static int[] a(int param0) {
+    final static int[] newEightInts(int param0) {
         if (param0 != 8) {
           return (int[]) null;
         }
         return new int[8];
     }
 
-    final static void b(int param0) {
+    final static void closeArchiveConnections(int param0) {
         try {
           int var1_int = 0;
           Throwable decompiledCaughtException = null;
@@ -98,18 +98,18 @@ final class InflaterDecompressor {
           int var3 = 0;
           var3 = ZombieDawnMulti.field_E ? 1 : 0;
           try {
-            if (null != i.field_a) {
-              i.field_a.closeConnection(31);
+            if (null != SharedTransportGlobals.field_a) {
+              SharedTransportGlobals.field_a.closeConnection(31);
             }
-            if (null != rn.field_d) {
-              rn.field_d.shutdown((byte) 77);
+            if (null != FullscreenSupport.field_d) {
+              FullscreenSupport.field_d.shutdown((byte) 77);
             }
             if (param0 != -8) {
               field_g = (String) null;
             }
-            if (null != hc.field_b) {
+            if (null != AntialiasedFontHelpers.field_b) {
               try {
-                hc.field_b.close((byte) -106);
+                AntialiasedFontHelpers.field_b.close((byte) -106);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var1 = (IOException) (Object) decompiledCaughtException;
@@ -141,10 +141,10 @@ final class InflaterDecompressor {
         }
     }
 
-    final static n a(int param0, int param1, byte[] param2) {
-        n var3 = null;
+    final static PendingDataRequest queueBytePayloadRequest(int param0, int param1, byte[] param2) {
+        PendingDataRequest var3 = null;
         RuntimeException var3_ref = null;
-        n stackIn_3_0 = null;
+        PendingDataRequest stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -153,9 +153,9 @@ final class InflaterDecompressor {
           if (param0 >= -44) {
             field_c = 35L;
           }
-          var3 = new n(param2);
+          var3 = new PendingDataRequest(param2);
           SpriteState.field_s.addFirst(var3, false);
-          ih.a(var3, 1, param1);
+          StatSubmissionHelpers.sendSaveDataRequest(var3, 1, param1);
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -176,7 +176,7 @@ final class InflaterDecompressor {
         this(-1, 1000000, 1000000);
     }
 
-    final static IndexedSprite[] a(String param0, ResourceArchive param1, byte param2, String param3) {
+    final static IndexedSprite[] loadIndexedSpritesByName(String param0, ResourceArchive param1, byte param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -193,9 +193,9 @@ final class InflaterDecompressor {
           if (param2 != 19) {
             InflaterDecompressor.releaseStatics((byte) -85);
           }
-          var4_int = param1.a(param3, (byte) -65);
-          var5 = param1.a(param0, var4_int, param2 ^ -20);
-          stackIn_3_0 = pf.loadIndexedSprites(var4_int, param1, -75, var5);
+          var4_int = param1.getGroupIdByName(param3, (byte) -65);
+          var5 = param1.getFileId(param0, var4_int, param2 ^ -20);
+          stackIn_3_0 = ChatInputHelpers.loadIndexedSprites(var4_int, param1, -75, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -223,7 +223,7 @@ final class InflaterDecompressor {
         }
     }
 
-    final static Sprite a(int param0, String param1) {
+    final static Sprite createTextSprite(int param0, String param1) {
         BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Sprite var3 = null;
@@ -234,7 +234,7 @@ final class InflaterDecompressor {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = pb.field_e;
+          var2 = EffectAudioHelpers.field_e;
           var3 = new Sprite(var2.textWidth(param1), 27);
           var3.bindAsRenderTarget();
           var2.drawCentered(param1, var3.width / 2, 17, 16777215, -1);

@@ -17,10 +17,10 @@ abstract class SimEntity extends TertiaryLinkNode {
     static String field_F;
     GameSimulation simulation;
 
-    final static int a(boolean param0, int param1, String param2, int param3, String param4, String param5, int param6) {
-        hf var7 = null;
+    final static int pollRegistrationRequest(boolean param0, int param1, String param2, int param3, String param4, String param5, int param6) {
+        ConditionalTextValue var7 = null;
         RuntimeException var7_ref = null;
-        hf var8 = null;
+        ConditionalTextValue var8 = null;
         int var9 = 0;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_4_0 = null;
@@ -33,9 +33,9 @@ abstract class SimEntity extends TertiaryLinkNode {
         RuntimeException decompiledCaughtException = null;
         try {
           var9 = -51 % ((param3 + 75) / 50);
-          var7 = new hf(param5);
-          var8 = new hf(param2);
-          stackIn_1_0 = mg.performAccountServerRequest(param0, var7, param6, var8, param4, param1, (byte) -92);
+          var7 = new ConditionalTextValue(param5);
+          var8 = new ConditionalTextValue(param2);
+          stackIn_1_0 = ZombieDropView.performAccountServerRequest(param0, var7, param6, var8, param4, param1, (byte) -92);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -63,7 +63,7 @@ abstract class SimEntity extends TertiaryLinkNode {
         }
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_J = null;
         field_F = null;
         if (param0 < -63) {
@@ -105,18 +105,18 @@ abstract class SimEntity extends TertiaryLinkNode {
 
     abstract void tick(int param0);
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
-        me.field_h = param4;
+    final static void setPopupMenuStyle(int param0, int param1, int param2, int param3, int param4) {
+        SoundCache.field_h = param4;
         if (param2 == 1829947600) {
           MenuScreen.field_h = param0;
           WidgetContainer.field_C = param1;
-          bf.field_g = param3;
+          MeltdownPuddle.field_g = param3;
           return;
         }
         field_z = (UiComponent) null;
         MenuScreen.field_h = param0;
         WidgetContainer.field_C = param1;
-        bf.field_g = param3;
+        MeltdownPuddle.field_g = param3;
     }
 
     final int getY(int param0) {
@@ -124,23 +124,23 @@ abstract class SimEntity extends TertiaryLinkNode {
           return this.positionY >> 16;
         }
         String var3 = (String) null;
-        SimEntity.a(false, -35, (String) null, -111, (String) null, (String) null, -17);
+        SimEntity.pollRegistrationRequest(false, -35, (String) null, -111, (String) null, (String) null, -17);
         return this.positionY >> 16;
     }
 
-    final static void i(int param0) {
-        q.field_a = null;
-        aa.field_n = null;
-        ik.field_a = null;
+    final static void closePopupMenu(int param0) {
+        SineTableHelpers.field_a = null;
+        NanoTickClock.field_n = null;
+        KeyboardStateHelpers.field_a = null;
         if (param0 >= 45) {
           SectorCacheStore.field_c = false;
-          ud.field_N = null;
+          DialSelectorWidget.field_N = null;
           return;
         }
         String var2 = (String) null;
-        SimEntity.a(false, 8, (String) null, -49, (String) null, (String) null, -19);
+        SimEntity.pollRegistrationRequest(false, 8, (String) null, -49, (String) null, (String) null, -19);
         SectorCacheStore.field_c = false;
-        ud.field_N = null;
+        DialSelectorWidget.field_N = null;
     }
 
     void attachToSimulation(int param0, GameSimulation param1) {
@@ -157,7 +157,7 @@ abstract class SimEntity extends TertiaryLinkNode {
 
     final int getX(byte param0) {
         if (param0 != -112) {
-          SimEntity.i(98);
+          SimEntity.closePopupMenu(98);
           return this.positionX >> 16;
         }
         return this.positionX >> 16;

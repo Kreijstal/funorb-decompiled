@@ -28,15 +28,15 @@ final class MarkerSliderPainter implements WidgetPainter {
         int var8 = 0;
         int var9 = 0;
         int var11 = 0;
-        wm var12 = null;
+        MarkerSliderWidget var12 = null;
         var11 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          if (param4 instanceof wm) {
+          if (param4 instanceof MarkerSliderWidget) {
             stackIn_4_0 = (UiWidget) (param4);
           } else {
             stackIn_4_0 = null;
           }
-          var12 = (wm) (stackIn_4_0);
+          var12 = (MarkerSliderWidget) (stackIn_4_0);
           SoftwareRasterizer.fillRect(param4.field_y + param3, param4.field_i + param1, param4.field_n, param4.field_w, this.field_i);
           if (var12 != null) {
           }
@@ -47,8 +47,8 @@ final class MarkerSliderPainter implements WidgetPainter {
           var8 = param4.field_y + param3 + var12.field_M;
           var9 = param1 + (param4.field_i + var12.field_N);
           SoftwareRasterizer.drawLine(var8, var9, var8 + var7, var9, this.field_c);
-          for (var10 = var12.a((byte) -72) - 1; 0 <= var10; var10--) {
-            SoftwareRasterizer.fillCircle(var8 + var7 * var12.a(var10, false) / var12.g((byte) -106), var9, this.field_f, this.field_l);
+          for (var10 = var12.getMarkerCount((byte) -72) - 1; 0 <= var10; var10--) {
+            SoftwareRasterizer.fillCircle(var8 + var7 * var12.getMarkerValue(var10, false) / var12.getMaximumValue((byte) -106), var9, this.field_f, this.field_l);
           }
           if (null == this.field_h) {
             return;
@@ -74,7 +74,7 @@ final class MarkerSliderPainter implements WidgetPainter {
         field_j = null;
         field_a = null;
         if (param0 != 2) {
-          MarkerSliderPainter.a((byte) -21);
+          MarkerSliderPainter.detectMaxMemoryMb((byte) -21);
           field_d = null;
           return;
         }
@@ -95,7 +95,7 @@ final class MarkerSliderPainter implements WidgetPainter {
         }
     }
 
-    final static void a(byte param0) {
+    final static void detectMaxMemoryMb(byte param0) {
         try {
           Throwable decompiledCaughtException = null;
           java.lang.reflect.Method var1 = null;

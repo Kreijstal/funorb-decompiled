@@ -21,10 +21,10 @@ final class NodeHashTableIterator implements Iterator {
         this.field_b = null;
     }
 
-    final static void b(int param0) {
+    final static void centreMessageMenu(int param0) {
         int var3 = 0;
         boolean stackIn_11_0 = false;
-        pd stackIn_16_0 = null;
+        FramePainter stackIn_16_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -34,7 +34,7 @@ final class NodeHashTableIterator implements Iterator {
         String var6 = null;
         int var7 = 0;
         int var8 = 0;
-        pd var9 = null;
+        FramePainter var9 = null;
         int var10 = 0;
         int var4Lifetime1;
         var10 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -42,12 +42,12 @@ final class NodeHashTableIterator implements Iterator {
           var1_int = RandomAccessCacheFile.field_e - IntrusiveDequeCursor.field_i;
           IntrusiveDequeCursor.field_i = NetworkGameClient.field_x - (var1_int >> 1);
           RandomAccessCacheFile.field_e = IntrusiveDequeCursor.field_i + var1_int;
-          eb.field_M = TextInputWidget.field_Q - (ArrayWidgetGroup.field_F >> 1);
-          var2 = eb.field_M;
-          for (var3 = 0; var3 < eo.field_e.length; var3++) {
-            var4 = dn.field_a[var3];
+          PopupMenuBuilder.field_M = TextInputWidget.field_Q - (ArrayWidgetGroup.field_F >> 1);
+          var2 = PopupMenuBuilder.field_M;
+          for (var3 = 0; var3 < KeyboardListenerHelpers.field_e.length; var3++) {
+            var4 = PackedArrayHelpers.field_a[var3];
             if (var4 < 0) {
-              var5 = kk.field_x;
+              var5 = CacheEntry.field_x;
             } else {
               if (var4 == AlignedIconLabel.field_Jb.field_d) {
                 var5 = DraggableWidget.field_N;
@@ -55,16 +55,16 @@ final class NodeHashTableIterator implements Iterator {
                 var5 = IndexedSpriteState.field_c;
               }
             }
-            var6 = eo.field_e[var3];
+            var6 = KeyboardListenerHelpers.field_e[var3];
             stackIn_11_0 = !(var4 < 0);
-            var7 = vh.measureText(stackIn_11_0, -76, var6);
+            var7 = ColourPickerWidget.measureText(stackIn_11_0, -76, var6);
             var8 = -(var7 >> 1) + NetworkGameClient.field_x;
             if (var4 >= 0) {
-              var2 = var2 + pb.field_b;
+              var2 = var2 + EffectAudioHelpers.field_b;
               if (var4 == AlignedIconLabel.field_Jb.field_d) {
                 stackIn_16_0 = DialogLayer.field_I;
               } else {
-                stackIn_16_0 = li.field_E;
+                stackIn_16_0 = DiskArchiveRequest.field_E;
               }
               var9 = stackIn_16_0;
               if (var9 != null) {
@@ -73,11 +73,11 @@ final class NodeHashTableIterator implements Iterator {
               var2 = var2 + MessageDialog.field_tb;
             }
             if (var4 < 0) {
-              SecondaryNodeDeque.field_c.c(var6, var8, mg.field_H + var2, var5, -1);
+              SecondaryNodeDeque.field_c.drawLeft(var6, var8, ZombieDropView.field_H + var2, var5, -1);
               var2 = var2 + ImageProducerRasterBuffer.field_l;
             } else {
-              wn.field_u.c(var6, var8, var2 + LaboratoryScreen.field_n, var5, -1);
-              var2 = var2 + (MusicPatch.field_n + (pb.field_b + MessageDialog.field_tb));
+              AlternateUsernameCredentials.field_u.drawLeft(var6, var8, var2 + LaboratoryScreen.field_n, var5, -1);
+              var2 = var2 + (MusicPatch.field_n + (EffectAudioHelpers.field_b + MessageDialog.field_tb));
             }
           }
           var4Lifetime1 = -17 / ((param0 + 59) / 46);
@@ -115,13 +115,13 @@ final class NodeHashTableIterator implements Iterator {
         return var1;
     }
 
-    final static void a(boolean param0) {
-        LobbyPlayer.field_ac.setBounds(18, 0, -(GradientOutlineTextPainter.field_u ? 40 + (2 + (DualLinkNode.field_o + 2)) : 0) + pd.field_b.field_zb, 0, -3344);
-        AlignedIconLabel.field_Hb.setBounds(18, 0, 42 + DualLinkNode.field_o, -2 + (pd.field_b.field_zb + (-DualLinkNode.field_o - 40)), -3344);
+    final static void layoutLobbySocialPanels(boolean param0) {
+        LobbyPlayer.field_ac.setBounds(18, 0, -(GradientOutlineTextPainter.field_u ? 40 + (2 + (DualLinkNode.field_o + 2)) : 0) + FramePainter.field_b.field_zb, 0, -3344);
+        AlignedIconLabel.field_Hb.setBounds(18, 0, 42 + DualLinkNode.field_o, -2 + (FramePainter.field_b.field_zb + (-DualLinkNode.field_o - 40)), -3344);
         if (param0) {
           field_g = (UiComponent) null;
         }
-        hf.field_e.setBoundsAndLayout(DualLinkNode.field_o, 2, pd.field_b.field_zb, 0, pd.field_b.field_z - 20, -31465, 20);
+        ConditionalTextValue.field_e.setBoundsAndLayout(DualLinkNode.field_o, 2, FramePainter.field_b.field_zb, 0, FramePainter.field_b.field_z - 20, -31465, 20);
     }
 
     public final boolean hasNext() {
@@ -145,27 +145,27 @@ final class NodeHashTableIterator implements Iterator {
         return false;
     }
 
-    final static String a(int param0) {
+    final static String getTimedNoticeText(int param0) {
         int var1 = 57 % ((param0 - 77) / 49);
-        if (cb.field_l) {
+        if (PowerupProgressCard.field_l) {
           return null;
         }
-        if (RasterBuffer.field_a < um.field_h) {
+        if (RasterBuffer.field_a < ClickMarkerParticle.field_h) {
           return null;
         }
-        if (!(IntrusiveNode.field_a + um.field_h <= RasterBuffer.field_a)) {
-          return kg.field_k;
+        if (!(IntrusiveNode.field_a + ClickMarkerParticle.field_h <= RasterBuffer.field_a)) {
+          return ProgramNoteUsage.field_k;
         }
         return null;
     }
 
-    private final void c(int param0) {
+    private final void reset(int param0) {
         this.field_e = this.field_h.buckets[0].previous;
         this.field_a = param0;
         this.field_b = null;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_g = null;
         field_f = null;
         field_c = null;
@@ -178,7 +178,7 @@ final class NodeHashTableIterator implements Iterator {
         this.field_b = null;
         try {
           this.field_h = param0;
-          this.c(1);
+          this.reset(1);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "up.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

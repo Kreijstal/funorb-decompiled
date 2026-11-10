@@ -13,7 +13,7 @@ final class ProgressDialog extends ResizableDialog {
     static char[] field_pb;
     private ProgressBarWidget field_qb;
     private String field_mb;
-    static ak field_hb;
+    static ClientShellHelpers field_hb;
 
     public static void releaseStatics(byte param0) {
         if (param0 <= -61) {
@@ -42,8 +42,8 @@ final class ProgressDialog extends ResizableDialog {
         try {
           this.field_mb = param1;
           if (null != this.field_mb) {
-            var3_int = ci.field_d.measureWrappedHeight(this.field_mb, 260, ci.field_d.maxAscent);
-            this.b(300, var3_int + 150, 78);
+            var3_int = LevelFileList.field_d.measureWrappedHeight(this.field_mb, 260, LevelFileList.field_d.maxAscent);
+            this.setCenteredSize(300, var3_int + 150, 78);
           }
           this.field_qb = new ProgressBarWidget(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_kb = false;
@@ -69,10 +69,10 @@ final class ProgressDialog extends ResizableDialog {
             stackIn_7_1 = (param3);
             this.field_kb = stackIn_7_1;
             if (this.field_kb) {
-              this.field_qb.a(4210752, 8405024, (byte) -95);
+              this.field_qb.setStripeColours(4210752, 8405024, (byte) -95);
               this.field_qb.field_L = true;
             } else {
-              this.field_qb.a(4210752, 2113632, (byte) 117);
+              this.field_qb.setStripeColours(4210752, 2113632, (byte) 117);
               if (this.field_nb) {
                 this.field_qb.field_L = false;
               }
@@ -110,19 +110,19 @@ final class ProgressDialog extends ResizableDialog {
     final void drawDialogFrame(boolean param0, int param1, int param2) {
         if (param0) {
           super.drawDialogFrame(param0, param1, param2);
-          ci.field_d.drawCentered(this.field_rb, param1 + (this.field_n >> 1), 103 + param2, 16777215, -1);
+          LevelFileList.field_d.drawCentered(this.field_rb, param1 + (this.field_n >> 1), 103 + param2, 16777215, -1);
           if (null != this.field_mb) {
             SoftwareRasterizer.drawHorizontalLine(param1 + 20, 120 + (param2 - 7), 260, 8421504);
-            ci.field_d.drawParagraph(this.field_mb, param1 + 20, param2 + 120 + 8, 260, 100, 16777215, -1, 1, 0, ci.field_d.maxAscent);
+            LevelFileList.field_d.drawParagraph(this.field_mb, param1 + 20, param2 + 120 + 8, 260, 100, 16777215, -1, 1, 0, LevelFileList.field_d.maxAscent);
           }
           return;
         }
-        field_hb = (ak) null;
+        field_hb = (ClientShellHelpers) null;
         super.drawDialogFrame(param0, param1, param2);
-        ci.field_d.drawCentered(this.field_rb, param1 + (this.field_n >> 1), 103 + param2, 16777215, -1);
+        LevelFileList.field_d.drawCentered(this.field_rb, param1 + (this.field_n >> 1), 103 + param2, 16777215, -1);
         if (null != this.field_mb) {
           SoftwareRasterizer.drawHorizontalLine(param1 + 20, 120 + (param2 - 7), 260, 8421504);
-          ci.field_d.drawParagraph(this.field_mb, param1 + 20, param2 + 120 + 8, 260, 100, 16777215, -1, 1, 0, ci.field_d.maxAscent);
+          LevelFileList.field_d.drawParagraph(this.field_mb, param1 + 20, param2 + 120 + 8, 260, 100, 16777215, -1, 1, 0, LevelFileList.field_d.maxAscent);
         }
     }
 

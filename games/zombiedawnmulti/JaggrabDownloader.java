@@ -12,7 +12,7 @@ final class JaggrabDownloader implements Runnable {
     private PlatformTaskDispatcher field_j;
     static IntrusiveDeque field_l;
     private PlatformTask field_d;
-    static jh field_c;
+    static LobbyGame field_c;
     static UiComponent field_i;
     private java.net.URL field_a;
     static int field_h;
@@ -108,7 +108,7 @@ final class JaggrabDownloader implements Runnable {
             var3 = var4.getOutputStream();
             var3.write(17);
             var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_a.getFile() + "\n\n"));
-            var3.write(qo.a(var5, (byte) -116));
+            var3.write(UiComponentNode.encodeSingleByteText(var5, (byte) -116));
             this.field_f = new DataInputStream(var4.getInputStream());
           }
           this.field_g.position = 0;
@@ -187,18 +187,18 @@ final class JaggrabDownloader implements Runnable {
     }
 
     final static void consumeQueuedRequestReply(int param0) {
-        vl var1 = null;
+        QueuedListRequest var1 = null;
         CipherPacketBuffer var2 = null;
-        vl var1Lifetime1;
+        QueuedListRequest var1Lifetime1;
         CipherPacketBuffer var2Lifetime1;
         if (param0 != 0) {
           field_l = (IntrusiveDeque) null;
-          var1 = (vl) (lf.field_e.last(param0 + 69));
+          var1 = (QueuedListRequest) (TransitionPhase.field_e.last(param0 + 69));
           if (var1 == null) {
-            ak.closeGameSocket((byte) -112);
+            ClientShellHelpers.closeGameSocket((byte) -112);
             return;
           }
-          var2 = s.field_e;
+          var2 = StatusAndMeshHelpers.field_e;
           var2.readInt(-1478490344);
           var2.readInt(-1478490344);
           var2.readInt(-1478490344);
@@ -206,12 +206,12 @@ final class JaggrabDownloader implements Runnable {
           var1.unlink(true);
           return;
         }
-        var1Lifetime1 = (vl) (lf.field_e.last(param0 + 69));
+        var1Lifetime1 = (QueuedListRequest) (TransitionPhase.field_e.last(param0 + 69));
         if (var1Lifetime1 == null) {
-          ak.closeGameSocket((byte) -112);
+          ClientShellHelpers.closeGameSocket((byte) -112);
           return;
         }
-        var2Lifetime1 = s.field_e;
+        var2Lifetime1 = StatusAndMeshHelpers.field_e;
         var2Lifetime1.readInt(-1478490344);
         var2Lifetime1.readInt(-1478490344);
         var2Lifetime1.readInt(-1478490344);

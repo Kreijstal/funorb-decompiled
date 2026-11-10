@@ -18,18 +18,18 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
         super(param0, param1, param2, param3, param4);
     }
 
-    abstract int j(int param0);
+    abstract int getZeroBasedMonth(int param0);
 
-    abstract int getMonthIndex(byte param0);
+    abstract int getYear(byte param0);
 
-    abstract int i(int param0);
+    abstract int getDay(int param0);
 
     abstract boolean isDateIncomplete(int param0);
 
     void setBirthDateValidator(int param0, BirthDateValidator param1) {
         try {
           if (param0 != 3) {
-            this.j(-11);
+            this.getZeroBasedMonth(-11);
           }
           this.field_H = param1;
           this.field_H.field_n = this;
@@ -38,12 +38,12 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
         }
     }
 
-    final static void a(String param0, byte param1) {
+    final static void setLoginExtraString(String param0, byte param1) {
         try {
           if (param1 <= 27) {
             DateInputWidget.releaseStatics(-110);
           }
-          oe.field_f = param0;
+          TextDecodeHelpers.field_f = param0;
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "wk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

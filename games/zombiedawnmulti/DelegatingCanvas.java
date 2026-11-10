@@ -15,7 +15,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         RuntimeException var1_ref = null;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var5 = nn.field_c;
+          var5 = LevelEncodingHelpers.field_c;
           var1 = var5;
           var2 = param0;
           var3 = var5.length;

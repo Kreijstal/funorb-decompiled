@@ -5,9 +5,9 @@ final class CheckboxWidget extends ButtonWidget {
     static boolean field_M;
 
     private CheckboxWidget(String param0, WidgetListener param1) {
-        this(param0, ra.field_o.field_n, param1);
+        this(param0, PendingIntArrayReply.field_o.field_n, param1);
         try {
-          this.painter = ra.field_o.field_k;
+          this.painter = PendingIntArrayReply.field_o.field_k;
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "fj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -16,25 +16,25 @@ final class CheckboxWidget extends ButtonWidget {
     private CheckboxWidget(String param0, WidgetPainter param1, WidgetListener param2) {
         super(param0, param1, param2);
         try {
-          this.painter = ra.field_o.field_k;
+          this.painter = PendingIntArrayReply.field_o.field_k;
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "fj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(byte param0) {
+    final static void saveRandomData(byte param0) {
         try {
-          if (null != bg.field_e) {
+          if (null != DialWidgetPainter.field_e) {
             try {
-              bg.field_e.seek(0L, (byte) -70);
-              bg.field_e.write(-1, 24, s.field_e.position, s.field_e.payload);
+              DialWidgetPainter.field_e.seek(0L, (byte) -70);
+              DialWidgetPainter.field_e.write(-1, 24, StatusAndMeshHelpers.field_e.position, StatusAndMeshHelpers.field_e.payload);
             } catch (Exception exception) {
             }
           }
           if (param0 != 85) {
             field_M = true;
           }
-          s.field_e.position = s.field_e.position + 24;
+          StatusAndMeshHelpers.field_e.position = StatusAndMeshHelpers.field_e.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -42,7 +42,7 @@ final class CheckboxWidget extends ButtonWidget {
         }
     }
 
-    final static void a(int param0, Sprite param1) {
+    final static void padToFourPixelAlignment(int param0, Sprite param1) {
         int var3 = 0;
         int var4 = 0;
         int[] var5 = null;
@@ -99,7 +99,7 @@ final class CheckboxWidget extends ButtonWidget {
         super.activateButton(param0, param1, param2, param3);
     }
 
-    final static Sprite[] a(String param0, String param1, int param2, ResourceArchive param3) {
+    final static Sprite[] loadFrameSprites(String param0, String param1, int param2, ResourceArchive param3) {
         Sprite[] var4 = null;
         RuntimeException var4_ref = null;
         Sprite[] var5 = null;
@@ -113,7 +113,7 @@ final class CheckboxWidget extends ButtonWidget {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = pb.loadSpritesByName(param1, param3, -256, param0);
+          var5 = EffectAudioHelpers.loadSpritesByName(param1, param3, -256, param0);
           var4 = var5;
           var5[param2].field_u = var5[3].height;
           var5[1].fullWidth = var5[1].width;

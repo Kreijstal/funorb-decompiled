@@ -13,7 +13,7 @@ final class PhaseChangeEvent extends GameEvent {
         try {
           if (param0 != 0) {
             PacketBuffer var4 = (PacketBuffer) null;
-            PhaseChangeEvent.a((PacketBuffer) null, (byte) 15);
+            PhaseChangeEvent.readBooleanByte((PacketBuffer) null, (byte) 15);
           }
           param1.enterPhase((byte) -74, this.field_l, this.field_m);
         } catch (RuntimeException runtimeException) {
@@ -29,18 +29,18 @@ final class PhaseChangeEvent extends GameEvent {
           return;
         }
         PacketBuffer var2 = (PacketBuffer) null;
-        PhaseChangeEvent.a((PacketBuffer) null, (byte) -34);
+        PhaseChangeEvent.readBooleanByte((PacketBuffer) null, (byte) -34);
         field_k = null;
     }
 
     final void drawDebugOverlay(int param0, boolean param1, int param2, int param3) {
         if (param1) {
-          pb.field_e.c("state " + this.field_l + " in " + (-param3 + this.field_f), 5, 20, 16777215, 0);
+          EffectAudioHelpers.field_e.drawLeft("state " + this.field_l + " in " + (-param3 + this.field_f), 5, 20, 16777215, 0);
           return;
         }
     }
 
-    final static boolean a(int param0, CipherPacketBuffer param1) {
+    final static boolean readFlagBit(int param0, CipherPacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
@@ -66,7 +66,7 @@ final class PhaseChangeEvent extends GameEvent {
         }
     }
 
-    final static boolean a(int param0, int param1, int[] param2) {
+    final static boolean isBitSet(int param0, int param1, int[] param2) {
         RuntimeException var3 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -93,16 +93,16 @@ final class PhaseChangeEvent extends GameEvent {
         }
     }
 
-    final static void a(boolean param0, int param1, MusicTrack param2, int param3, int param4) {
+    final static void crossfadeToTrack(boolean param0, int param1, MusicTrack param2, int param3, int param4) {
         try {
-          ra.field_m.a(param2, 1000000, !param0 ? true : false, param4, param1, true);
+          PendingIntArrayReply.field_m.switchTrack(param2, 1000000, !param0 ? true : false, param4, param1, true);
           int var5_int = 95 / ((5 - param3) / 60);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "fq.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final static boolean a(PacketBuffer param0, byte param1) {
+    final static boolean readBooleanByte(PacketBuffer param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

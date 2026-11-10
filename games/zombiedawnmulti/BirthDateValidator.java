@@ -3,7 +3,7 @@
  */
 final class BirthDateValidator extends DebouncedValidationProvider implements TextInputListener, BirthDateValidationMarker {
     DateInputWidget field_n;
-    static ak field_k;
+    static ClientShellHelpers field_k;
     static IndexedSprite field_p;
     static int field_m;
     static boolean field_l;
@@ -29,7 +29,7 @@ final class BirthDateValidator extends DebouncedValidationProvider implements Te
           field_p = null;
           return;
         }
-        field_k = (ak) null;
+        field_k = (ClientShellHelpers) null;
         field_o = null;
         field_k = null;
         field_p = null;
@@ -53,28 +53,28 @@ final class BirthDateValidator extends DebouncedValidationProvider implements Te
         ValidationState stackIn_10_0 = null;
         Throwable decompiledCaughtException = null;
         try {
-          var2_int = this.field_n.i(1);
-          var3 = this.field_n.j(param0 - 191);
-          var4 = this.field_n.getMonthIndex((byte) -118);
-          var5 = oa.getCurrentYear((byte) -63);
+          var2_int = this.field_n.getDay(1);
+          var3 = this.field_n.getZeroBasedMonth(param0 - 191);
+          var4 = this.field_n.getYear((byte) -118);
+          var5 = ClientTickHelpers.getCurrentYear((byte) -63);
           if (var4 < 1890) {
-            stackIn_2_0 = jq.field_b;
+            stackIn_2_0 = PowerGaugeHelpers.field_b;
             return stackIn_2_0;
           }
           if (var4 > var5 + param0) {
-            stackIn_6_0 = jq.field_b;
+            stackIn_6_0 = PowerGaugeHelpers.field_b;
             return stackIn_6_0;
           }
-          if (!ImageProducerRasterBuffer.a((byte) -82, var3, var2_int, var4)) {
-            stackIn_10_0 = jq.field_b;
+          if (!ImageProducerRasterBuffer.isValidDate((byte) -82, var3, var2_int, var4)) {
+            stackIn_10_0 = PowerGaugeHelpers.field_b;
             return stackIn_10_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
-          return jq.field_b;
+          return PowerGaugeHelpers.field_b;
         }
-        return db.field_b;
+        return AudioStartupHelpers.field_b;
     }
 
     public final void onTextInputChanged(TextInputWidget param0, int param1) {
@@ -101,29 +101,29 @@ final class BirthDateValidator extends DebouncedValidationProvider implements Te
           this.currentValidationMessage(-103);
         }
         try {
-          var2_int = this.field_n.i(1);
-          var3 = this.field_n.j(param0 - 191);
-          var4 = this.field_n.getMonthIndex((byte) -86);
-          var5 = oa.getCurrentYear((byte) -44);
+          var2_int = this.field_n.getDay(1);
+          var3 = this.field_n.getZeroBasedMonth(param0 - 191);
+          var4 = this.field_n.getYear((byte) -86);
+          var5 = ClientTickHelpers.getCurrentYear((byte) -44);
           if (var4 >= 1890 &&
             var4 <= var5 - 3) {
-            if (ImageProducerRasterBuffer.a((byte) -65, var3, var2_int, var4)) {
+            if (ImageProducerRasterBuffer.isValidDate((byte) -65, var3, var2_int, var4)) {
               stackIn_9_0 = null;
               return (String) (stackIn_9_0);
             }
           } else {
-            stackIn_6_0 = vl.a(PasswordValidator.field_v, new String[]{"1890", Integer.toString(var5 - 3)}, 2);
+            stackIn_6_0 = QueuedListRequest.substituteTemplateArguments(PasswordValidator.field_v, new String[]{"1890", Integer.toString(var5 - 3)}, 2);
             return stackIn_6_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
         }
-        return wm.field_T;
+        return MarkerSliderWidget.field_T;
     }
 
     static {
-        field_k = new ak();
+        field_k = new ClientShellHelpers();
         field_m = 4;
         field_o = "SCORE";
     }

@@ -1,0 +1,108 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class TextDecodeHelpers {
+    static String field_a;
+    static String field_d;
+    static String field_f;
+    static String field_c;
+    static String field_e;
+    static String field_b;
+
+    final static boolean isNameEntryPopupOpen(int param0) {
+        int var1 = 26 % ((-17 - param0) / 52);
+        return LevelFileEntry.field_i != null ? true : false;
+    }
+
+    final static String decodeSingleByteText(int param0, byte[] param1, boolean param2, int param3) {
+        int var6 = 0;
+        int incrementValue$1 = 0;
+        char[] var4 = null;
+        RuntimeException var4_ref = null;
+        int var5 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        byte[] var10 = null;
+        char[] var11 = null;
+        char[] var12 = null;
+        String stackIn_15_0 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        var9 = ZombieDawnMulti.field_E ? 1 : 0;
+        try {
+          var12 = new char[param0];
+          var11 = var12;
+          var4 = var11;
+          if (param2) {
+            var10 = (byte[]) null;
+            TextDecodeHelpers.decodeSingleByteText(-96, (byte[]) null, true, 87);
+          }
+          var5 = 0;
+          for (var6 = 0; var6 < param0; var6++) {
+            var7 = 255 & param1[var6 + param3];
+            if (var7 != 0) {
+              if (var7 >= 128 &&
+                var7 < 160) {
+                var8 = RankingsRequest.field_s[-128 + var7];
+                if (0 == var8) {
+                  var8 = 63;
+                }
+                var7 = var8;
+              }
+              incrementValue$1 = var5;
+              var5++;
+              var4[incrementValue$1] = (char)var7;
+            }
+          }
+          stackIn_15_0 = new String(var12, 0, var5);
+          return stackIn_15_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4_ref = decompiledCaughtException;
+          stackIn_18_0 = var4_ref;
+          stackIn_18_1 = new StringBuilder().append("oe.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_19_2 = "null";
+          } else {
+            stackIn_19_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    public static void releaseStatics(int param0) {
+        if (param0 != -9162) {
+          field_f = (String) null;
+        }
+        field_a = null;
+        field_d = null;
+        field_b = null;
+        field_e = null;
+        field_f = null;
+        field_c = null;
+    }
+
+    final static void setMenuFrameStyle(int param0, int param1, Sprite[] param2, byte param3) {
+        try {
+          TextPopupHelpers.field_c = new FramePainter(param2);
+          if (param3 != -21) {
+            field_d = (String) null;
+          }
+          LoginCredentials.field_g = param1;
+          SecondaryNodeDeque.field_a = param0;
+          TertiaryLinkNode.drawMenuPanel(-4604);
+        } catch (RuntimeException runtimeException) {
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "oe.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+        }
+    }
+
+    static {
+        field_a = "You can spectate this game";
+        field_d = "Shaun";
+        field_e = "<%0> has entered a game.";
+        field_b = "Quit to website";
+    }
+}

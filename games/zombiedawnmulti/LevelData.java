@@ -25,22 +25,22 @@ class LevelData {
         field_a = null;
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void openScreenshotSlideshow(byte param0, boolean param1) {
         DebouncedValidationProvider.field_g = 0;
         DualLinkDeque.field_b = 0;
         ClientException.field_c = 0;
-        lb.field_a = nf.field_a;
+        PasswordCheckHelpers.field_a = EmailDomainValidation.field_a;
         if (param0 < 121) {
           return;
         }
-        UsernameSuggestionsPanel.field_H = new hh(2);
-        UsernameSuggestionsPanel.field_H.initializeSelection(-1, param1, -31458, ResizableDialog.hitTestPairedSprites(bo.field_d, -1, MouseInputHandler.field_g));
+        UsernameSuggestionsPanel.field_H = new MenuInputState(2);
+        UsernameSuggestionsPanel.field_H.initializeSelection(-1, param1, -31458, ResizableDialog.hitTestPairedSprites(LoginMethod.field_d, -1, MouseInputHandler.field_g));
     }
 
     private final SceneObject createObject(int param0, int param1, byte param2, int param3, int param4) {
         int var6_int;
         PortalView var6;
-        fd var6_ref;
+        PropObject var6_ref;
         int var7;
         GameCharacter var8;
         if (param1 == 0) {
@@ -51,10 +51,10 @@ class LevelData {
           return (SceneObject) ((Object) var8);
         }
         if (param1 == 1) {
-          return (SceneObject) ((Object) pg.createArmedHumanView(param0, (byte) -128, param3, param4));
+          return (SceneObject) ((Object) ViewFactoryHelpers.createArmedHumanView(param0, (byte) -128, param3, param4));
         }
         if (2 == param1) {
-          var6_ref = new fd(param0, param4, param3 & -1610612737);
+          var6_ref = new PropObject(param0, param4, param3 & -1610612737);
           if (0 < (param3 & 1073741824)) {
             var6_ref.field_H = true;
           }
@@ -64,7 +64,7 @@ class LevelData {
           return (SceneObject) ((Object) var6_ref);
         }
         if (3 == param1) {
-          return (SceneObject) ((Object) new mg(param0, param4, param3));
+          return (SceneObject) ((Object) new ZombieDropView(param0, param4, param3));
         }
         if (param1 == 4) {
           var6 = new PortalView(param0, param4, false);
@@ -74,11 +74,11 @@ class LevelData {
         if (param2 <= -60) {
           return null;
         }
-        this.a((byte) 54);
+        this.initializeTileGrid((byte) 54);
         return null;
     }
 
-    private final int a(boolean param0, int param1) {
+    private final int encodeTileSprite(boolean param0, int param1) {
         if (!param0) {
           this.field_b = 72;
         }
@@ -110,9 +110,9 @@ class LevelData {
         return var3;
     }
 
-    void a(byte param0) {
-        this.a(this.field_g, 9);
-        this.b(this.field_g, -10);
+    void initializeTileGrid(byte param0) {
+        this.buildWalkabilityFlags(this.field_g, 9);
+        this.markGeneratedWallTiles(this.field_g, -10);
         this.field_d = this.field_g[0].length;
         if (param0 < 120) {
           return;
@@ -120,20 +120,20 @@ class LevelData {
         this.field_e = this.field_g.length;
     }
 
-    final void a(int param0, int param1, int param2, boolean param3) {
+    final void setTileWallFlags(int param0, int param1, int param2, boolean param3) {
         if (param0 != -8927) {
           this.field_h = (int[][]) null;
         }
-        this.field_k[param1][param2] = cr.b(param3 ? 1 : 0, ScrollPane.bitAnd(14, this.field_k[param1][param2]));
+        this.field_k[param1][param2] = PendingStatusRequest.bitOr(param3 ? 1 : 0, ScrollPane.bitAnd(14, this.field_k[param1][param2]));
         if (this.field_k[param1].length > param2 + 1) {
-          this.field_k[param1][param2 + 1] = cr.b(ScrollPane.bitAnd(this.field_k[param1][1 + param2], -3), param3 ? 2 : 0);
+          this.field_k[param1][param2 + 1] = PendingStatusRequest.bitOr(ScrollPane.bitAnd(this.field_k[param1][1 + param2], -3), param3 ? 2 : 0);
         }
         if (0 < param2 - 1) {
-          this.field_k[param1][-1 + param2] = cr.b(ScrollPane.bitAnd(this.field_k[param1][-1 + param2], -5), param3 ? 4 : 0);
+          this.field_k[param1][-1 + param2] = PendingStatusRequest.bitOr(ScrollPane.bitAnd(this.field_k[param1][-1 + param2], -5), param3 ? 4 : 0);
         }
     }
 
-    private final void b(int[][] param0, int param1) {
+    private final void markGeneratedWallTiles(int[][] param0, int param1) {
         boolean discarded$0 = false;
         int var3_int = 0;
         int var4 = 0;
@@ -149,18 +149,18 @@ class LevelData {
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (param1 != -10) {
-            discarded$0 = this.a(94, -4, (byte) -2);
+            discarded$0 = this.isOpenTile(94, -4, (byte) -2);
           }
           for (var3_int = 0; param0.length > var3_int; var3_int++) {
             for (var4 = 0; param0[0].length > var4; var4++) {
-              var5 = this.a(var3_int, true, var4);
+              var5 = this.computeWallTile(var3_int, true, var4);
               var6 = 511 & var5 >> 7;
               var7 = var5 >> 16 & 511;
               if ((-2147483648 & var5) != 0 && (var6 >= 9 &&
                 32 >= var6 ||
                 var7 >= 9 &&
                 32 >= var7 ||
-                (this.a(1 + var3_int, true, var4) & 65408) >> 7 == 16)) {
+                (this.computeWallTile(1 + var3_int, true, var4) & 65408) >> 7 == 16)) {
                 var5 = var5 | 67108864;
               }
               this.field_f[var3_int][var4] = var5;
@@ -181,7 +181,7 @@ class LevelData {
         }
     }
 
-    final void a(int[][] param0, int param1) {
+    final void buildWalkabilityFlags(int[][] param0, int param1) {
         SceneObject discarded$0 = null;
         int[] dupTemp$1 = null;
         int dupTemp$2 = 0;
@@ -239,12 +239,12 @@ class LevelData {
             while (param0[0].length - 1 > var7) {
               if (1 == (this.field_k[var3_intLifetime1][var7] & 1)) {
                 dupTemp$1 = this.field_k[var3_intLifetime1];
-                dupTemp$2 = cr.b(this.field_k[var3_intLifetime1][var7 + 1], 2);
+                dupTemp$2 = PendingStatusRequest.bitOr(this.field_k[var3_intLifetime1][var7 + 1], 2);
                 arrayValue$3 = this.field_h[var3_intLifetime1];
                 dupTemp$1[1 + var7] = dupTemp$2;
                 arrayValue$3[1 + var7] = dupTemp$2;
                 dupTemp$4 = this.field_k[var3_intLifetime1];
-                dupTemp$5 = cr.b(4, this.field_k[var3_intLifetime1][-1 + var7]);
+                dupTemp$5 = PendingStatusRequest.bitOr(4, this.field_k[var3_intLifetime1][-1 + var7]);
                 arrayValue$6 = this.field_h[var3_intLifetime1];
                 dupTemp$4[-1 + var7] = dupTemp$5;
                 arrayValue$6[var7 - 1] = dupTemp$5;
@@ -267,7 +267,7 @@ class LevelData {
         }
     }
 
-    private final int a(int param0, boolean param1, int param2) {
+    private final int computeWallTile(int param0, boolean param1, int param2) {
         int stackIn_10_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_19_0 = 0;
@@ -286,236 +286,236 @@ class LevelData {
         int var11;
         int var12;
         var12 = ZombieDawnMulti.field_E ? 1 : 0;
-        var4 = this.a((byte) 91, param2, param0);
+        var4 = this.getTile((byte) 91, param2, param0);
         var4 = var4 & -67108865;
         var5 = 511 & var4 >> 7;
         if ((var4 & 33554432) != 0 &&
           var5 == 0) {
           var4 = var4 & -65409;
-          if (!this.a(param2 + 1, param0, (byte) -53)) {
-            stackIn_10_0 = (!this.a(param0, param2 + 1, 2)) ? 1 : 0;
+          if (!this.isOpenTile(param2 + 1, param0, (byte) -53)) {
+            stackIn_10_0 = (!this.isBlockedBelow(param0, param2 + 1, 2)) ? 1 : 0;
           } else {
             stackIn_10_0 = 0;
           }
           var6 = stackIn_10_0;
-          var7 = this.a(param2, 3 + param0, (byte) -53) ? 1 : 0;
-          var8 = this.a(param2, param0 - 1, (byte) -53) ? 1 : 0;
-          if (!this.a(param2 - 1, param0, (byte) -53)) {
-            stackIn_16_0 = (!this.a(param0, param2 - 1, 2)) ? 1 : 0;
+          var7 = this.isOpenTile(param2, 3 + param0, (byte) -53) ? 1 : 0;
+          var8 = this.isOpenTile(param2, param0 - 1, (byte) -53) ? 1 : 0;
+          if (!this.isOpenTile(param2 - 1, param0, (byte) -53)) {
+            stackIn_16_0 = (!this.isBlockedBelow(param0, param2 - 1, 2)) ? 1 : 0;
           } else {
             stackIn_16_0 = 1;
           }
           var9 = stackIn_16_0;
-          stackIn_19_0 = (!this.a(param2 + 1, param0, (byte) -53)) ? 0 : 1;
+          stackIn_19_0 = (!this.isOpenTile(param2 + 1, param0, (byte) -53)) ? 0 : 1;
           var10 = stackIn_19_0;
-          if (this.a(param0, param2, 2) &&
+          if (this.isBlockedBelow(param0, param2, 2) &&
             var6 == 0) {
             if (var7 != 0 &&
               var8 != 0 &&
               var9 != 0 &&
               var10 != 0) {
-              var4 = var4 | this.a(param1, 9);
+              var4 = var4 | this.encodeTileSprite(param1, 9);
             }
             if (var7 != 0 &&
               var8 != 0 &&
               var9 != 0 &&
               var10 == 0) {
-              var4 = var4 | this.a(true, 10);
+              var4 = var4 | this.encodeTileSprite(true, 10);
             }
             if (var7 != 0 &&
               var8 != 0 &&
               var9 == 0 &&
               var10 != 0) {
-              var4 = var4 | this.a(param1, 11);
+              var4 = var4 | this.encodeTileSprite(param1, 11);
             }
             if (var7 != 0 &&
               var8 != 0 &&
               var9 == 0 &&
               var10 == 0) {
-              var4 = var4 | this.a(true, 18);
+              var4 = var4 | this.encodeTileSprite(true, 18);
             }
             if (var7 != 0 &&
               var8 == 0 &&
               var9 != 0 &&
               var10 != 0) {
-              var4 = var4 | this.a(true, 12);
+              var4 = var4 | this.encodeTileSprite(true, 12);
             }
             if (var7 != 0 &&
               var8 == 0 &&
               var9 != 0 &&
               var10 == 0) {
-              var4 = var4 | this.a(true, 14);
+              var4 = var4 | this.encodeTileSprite(true, 14);
             }
             if (var7 != 0 &&
               var8 == 0 &&
               var9 == 0 &&
               var10 != 0) {
-              var4 = var4 | this.a(true, 15);
+              var4 = var4 | this.encodeTileSprite(true, 15);
             }
             if (var7 != 0 &&
               var8 == 0 &&
               var9 == 0 &&
               var10 == 0) {
-              var4 = var4 | this.a(true, 21);
+              var4 = var4 | this.encodeTileSprite(true, 21);
             }
             if (var7 == 0 &&
               var8 != 0 &&
               var9 != 0 &&
               var10 != 0) {
-              var4 = var4 | this.a(true, 13);
+              var4 = var4 | this.encodeTileSprite(true, 13);
             }
             if (var7 == 0 &&
               var8 != 0 &&
               var9 != 0 &&
               var10 == 0) {
-              var4 = var4 | this.a(param1, 16);
+              var4 = var4 | this.encodeTileSprite(param1, 16);
             }
             if (var7 == 0 &&
               var8 != 0 &&
               var9 == 0 &&
               var10 != 0) {
-              var4 = var4 | this.a(param1, 17);
+              var4 = var4 | this.encodeTileSprite(param1, 17);
             }
             if (var7 == 0 &&
               var8 != 0 &&
               var9 == 0 &&
               var10 == 0) {
-              var4 = var4 | this.a(true, 20);
+              var4 = var4 | this.encodeTileSprite(true, 20);
             }
             if (var7 == 0 &&
               var8 == 0 &&
               var9 != 0 &&
               var10 != 0) {
-              var4 = var4 | this.a(true, 19);
+              var4 = var4 | this.encodeTileSprite(true, 19);
             }
             if (var7 == 0 &&
               var8 == 0 &&
               var9 != 0 &&
               var10 == 0) {
-              var4 = var4 | this.a(true, 22);
+              var4 = var4 | this.encodeTileSprite(true, 22);
             }
             if (var7 == 0 &&
               var8 == 0 &&
               var9 == 0 &&
               var10 != 0) {
-              var4 = var4 | this.a(true, 23);
+              var4 = var4 | this.encodeTileSprite(true, 23);
             }
             if (var7 == 0 &&
               var8 == 0 &&
               var9 == 0 &&
               var10 == 0) {
-              var4 = var4 | this.a(param1, 24);
+              var4 = var4 | this.encodeTileSprite(param1, 24);
             }
-          } else if (this.a(param0, param2, 2) &&
+          } else if (this.isBlockedBelow(param0, param2, 2) &&
             var6 != 0) {
             stackIn_27_0 = var10;
-            if (!this.a(param2 + 1, 2 + param0, (byte) -53) &&
-              !this.a(1 + param2, param0 + 1, (byte) -53)) {
+            if (!this.isOpenTile(param2 + 1, 2 + param0, (byte) -53) &&
+              !this.isOpenTile(1 + param2, param0 + 1, (byte) -53)) {
               stackIn_29_1 = 0;
             } else {
               stackIn_29_1 = 1;
             }
             var10 = stackIn_27_0 | stackIn_29_1;
             stackIn_32_0 = var9;
-            if (!this.a(param2 - 1, 2 + param0, (byte) -53) &&
-              !this.a(-1 + param2, param0 + 1, (byte) -53)) {
+            if (!this.isOpenTile(param2 - 1, 2 + param0, (byte) -53) &&
+              !this.isOpenTile(-1 + param2, param0 + 1, (byte) -53)) {
               stackIn_34_1 = 0;
             } else {
               stackIn_34_1 = 1;
             }
             var9 = stackIn_32_0 | stackIn_34_1;
-            stackIn_37_0 = (!this.a(param2 + 1, param0 + 1, (byte) -53)) ? 0 : 128;
+            stackIn_37_0 = (!this.isOpenTile(param2 + 1, param0 + 1, (byte) -53)) ? 0 : 128;
             var11 = stackIn_37_0;
             if (var7 == 0 &&
               var8 == 0 &&
               var9 != 0 &&
               var10 != 0) {
-              var4 = var4 | -var11 + this.a(true, 26);
+              var4 = var4 | -var11 + this.encodeTileSprite(true, 26);
             }
             if (var7 == 0 &&
               var8 == 0 &&
               var9 == 0 &&
               var10 != 0) {
-              var4 = var4 | this.a(true, 28) - var11;
+              var4 = var4 | this.encodeTileSprite(true, 28) - var11;
             }
           } else {
-            if (!this.a(param2, 1 + param0, (byte) -53)) {
-              if (this.a(param2, param0 + 2, (byte) -53)) {
-                if (this.a(param2 + 1, param0, (byte) -53) &&
-                  this.a(param2 - 1, param0, (byte) -53)) {
-                  var4 = var4 | this.a(param1, 6);
+            if (!this.isOpenTile(param2, 1 + param0, (byte) -53)) {
+              if (this.isOpenTile(param2, param0 + 2, (byte) -53)) {
+                if (this.isOpenTile(param2 + 1, param0, (byte) -53) &&
+                  this.isOpenTile(param2 - 1, param0, (byte) -53)) {
+                  var4 = var4 | this.encodeTileSprite(param1, 6);
                 } else {
-                  if (!this.a(param2 + 1, param0, (byte) -53)) {
-                    if (!this.a(-1 + param2, param0, (byte) -53)) {
-                      var4 = var4 | this.a(true, 2);
+                  if (!this.isOpenTile(param2 + 1, param0, (byte) -53)) {
+                    if (!this.isOpenTile(-1 + param2, param0, (byte) -53)) {
+                      var4 = var4 | this.encodeTileSprite(true, 2);
                     } else {
-                      var4 = var4 | this.a(true, 4);
+                      var4 = var4 | this.encodeTileSprite(true, 4);
                     }
                   } else {
-                    var4 = var4 | this.a(param1, 8);
+                    var4 = var4 | this.encodeTileSprite(param1, 8);
                   }
                 }
               }
             } else {
-              if (this.a(1 + param2, param0, (byte) -53) &&
-                this.a(-1 + param2, param0, (byte) -53)) {
-                var4 = var4 | this.a(true, 5);
+              if (this.isOpenTile(1 + param2, param0, (byte) -53) &&
+                this.isOpenTile(-1 + param2, param0, (byte) -53)) {
+                var4 = var4 | this.encodeTileSprite(true, 5);
               } else {
-                if (!this.a(param2 + 1, param0, (byte) -53)) {
-                  if (!this.a(param2 - 1, param0, (byte) -53)) {
-                    var4 = var4 | this.a(true, 1);
+                if (!this.isOpenTile(param2 + 1, param0, (byte) -53)) {
+                  if (!this.isOpenTile(param2 - 1, param0, (byte) -53)) {
+                    var4 = var4 | this.encodeTileSprite(true, 1);
                   } else {
-                    var4 = var4 | this.a(param1, 3);
+                    var4 = var4 | this.encodeTileSprite(param1, 3);
                   }
                 } else {
-                  var4 = var4 | this.a(true, 7);
+                  var4 = var4 | this.encodeTileSprite(true, 7);
                 }
               }
             }
           }
           if ((65408 & var4) == 0) {
-            var4 = var4 | this.a(param1, 24);
+            var4 = var4 | this.encodeTileSprite(param1, 24);
           }
           if (!param1) {
-            this.a((int[][]) null, -26);
+            this.buildWalkabilityFlags((int[][]) null, -26);
           }
           return var4;
         }
         return var4;
     }
 
-    private final boolean a(int param0, int param1, int param2) {
+    private final boolean isBlockedBelow(int param0, int param1, int param2) {
         boolean stackIn_6_0 = false;
         if (param2 != 2) {
           this.field_d = -47;
         }
-        stackIn_6_0 = (!this.a(param1, param0 + 1, (byte) -53)) && (!this.a(param1, param0 + 2, (byte) -53));
+        stackIn_6_0 = (!this.isOpenTile(param1, param0 + 1, (byte) -53)) && (!this.isOpenTile(param1, param0 + 2, (byte) -53));
         return stackIn_6_0;
     }
 
-    final static void b(byte param0) {
-        if (f.field_a != -vm.field_hb + 0 &&
-          -vm.field_hb + 250 != f.field_a) {
+    final static void advanceLogoTimer(byte param0) {
+        if (NodeHashTable.field_a != -FullscreenErrorDialog.field_hb + 0 &&
+          -FullscreenErrorDialog.field_hb + 250 != NodeHashTable.field_a) {
         }
         if (param0 != -9) {
           field_a = (UiComponent) null;
         }
-        f.field_a = f.field_a + 1;
+        NodeHashTable.field_a = NodeHashTable.field_a + 1;
     }
 
-    private final boolean a(int param0, int param1, byte param2) {
+    private final boolean isOpenTile(int param0, int param1, byte param2) {
         boolean stackIn_7_0 = false;
         if (param2 != -53) {
           return false;
         }
-        stackIn_7_0 = (0 == (this.a((byte) 82, param0, param1) & 33554432)) || !((this.a((byte) 105, param0, param1) >> 7 & 511) <= 64);
+        stackIn_7_0 = (0 == (this.getTile((byte) 82, param0, param1) & 33554432)) || !((this.getTile((byte) 105, param0, param1) >> 7 & 511) <= 64);
         return stackIn_7_0;
     }
 
-    private final int a(byte param0, int param1, int param2) {
+    private final int getTile(byte param0, int param1, int param2) {
         boolean discarded$0 = false;
         if (param0 <= 31) {
-          discarded$0 = this.a(24, -127, (byte) 25);
+          discarded$0 = this.isOpenTile(24, -127, (byte) 25);
         }
         if (param1 < 0) {
           return 0;
@@ -545,13 +545,13 @@ class LevelData {
           this.field_f = new int[param0.length][param0[0].length];
           this.field_k = new int[param0.length][param0[0].length];
           this.field_h = new int[param0.length][param0[0].length];
-          this.a((byte) 121);
+          this.initializeTileGrid((byte) 121);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "fc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 
     static {
-        field_m = InflaterDecompressor.a(8);
+        field_m = InflaterDecompressor.newEightInts(8);
     }
 }

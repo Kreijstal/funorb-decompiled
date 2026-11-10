@@ -13,7 +13,7 @@ final class ChatMessage {
     UiComponent field_q;
     int field_j;
     long field_a;
-    static ao field_b;
+    static QuickChatCommandType field_b;
     static String field_c;
     static String field_p;
     boolean field_k;
@@ -23,7 +23,7 @@ final class ChatMessage {
     static int field_t;
     String field_d;
 
-    final int a(boolean param0) {
+    final int getFilterPriority(boolean param0) {
         if (this.field_k) {
           return 2;
         }
@@ -41,7 +41,7 @@ final class ChatMessage {
             field_c = (String) null;
             return 0;
           }
-          if (kj.a((byte) -94, this.field_e)) {
+          if (FriendListHelpers.isFriend((byte) -94, this.field_e)) {
             return 1;
           }
           if (param0) {
@@ -54,7 +54,7 @@ final class ChatMessage {
           return 1;
         }
         if (SimZombie.field_zb == 2 &&
-          kj.a((byte) -94, this.field_e)) {
+          FriendListHelpers.isFriend((byte) -94, this.field_e)) {
           return 1;
         }
         if (!param0) {
@@ -64,11 +64,11 @@ final class ChatMessage {
         return 0;
     }
 
-    final static void a(int param0, byte param1) {
+    final static void setAnimationRate(int param0, byte param1) {
         int var2 = 83 % ((param1 + 31) / 51);
-        nf.field_b = (param0 << 16) / 150;
-        nf.field_c = param0 * 400 / 150;
-        nf.field_a = param0 * 100 / 150;
+        EmailDomainValidation.field_b = (param0 << 16) / 150;
+        EmailDomainValidation.field_c = param0 * 400 / 150;
+        EmailDomainValidation.field_a = param0 * 100 / 150;
     }
 
     public static void releaseStatics(byte param0) {
@@ -83,7 +83,7 @@ final class ChatMessage {
         field_c = null;
     }
 
-    final static IndexedSprite a(int param0, int param1, int param2, ResourceArchive param3) {
+    final static IndexedSprite loadIndexedSprite(int param0, int param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         ResourceArchive var5 = null;
         IndexedSprite stackIn_6_0 = null;
@@ -92,14 +92,14 @@ final class ChatMessage {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!ud.loadSpriteSheet(param2, param3, param1, (byte) -42)) {
+          if (!DialSelectorWidget.loadSpriteSheet(param2, param3, param1, (byte) -42)) {
             return null;
           }
           if (param0 != -1) {
             var5 = (ResourceArchive) null;
-            ChatMessage.a(-91, -49, -2, (ResourceArchive) null);
+            ChatMessage.loadIndexedSprite(-91, -49, -2, (ResourceArchive) null);
           }
-          stackIn_6_0 = lc.c((byte) 89);
+          stackIn_6_0 = PulseEffect.buildFirstDecodedIndexedSprite((byte) 89);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -116,21 +116,21 @@ final class ChatMessage {
     }
 
     ChatMessage(boolean param0) {
-        this.field_l = wc.field_N;
+        this.field_l = ScorePopup.field_N;
         this.field_h = BufferedFile.field_g;
         this.field_g = ContextMenu.field_Ib;
         this.field_k = AccountCreationForm.field_R;
         this.field_a = SimEntity.field_K;
-        this.field_n = kk.field_s;
+        this.field_n = CacheEntry.field_s;
         this.field_o = UnitView.field_W;
-        this.field_d = pg.field_b;
+        this.field_d = ViewFactoryHelpers.field_b;
         this.field_i = LaboratoryScreen.field_m;
         this.field_e = IntrusiveDequeCursor.field_h;
-        this.field_j = ce.field_r;
+        this.field_j = TerrainEffectZone.field_r;
         if (!param0) {
           this.field_r = null;
         } else {
-          this.field_r = af.field_g;
+          this.field_r = MeshMaterial.field_g;
         }
     }
 
@@ -154,7 +154,7 @@ final class ChatMessage {
     }
 
     static {
-        field_b = new ao(9, 0, 4, 1);
+        field_b = new QuickChatCommandType(9, 0, 4, 1);
         field_p = "Game full";
         field_c = "Make your creations sing, and the mortals will cower in fear...";
         field_m = "Clan";

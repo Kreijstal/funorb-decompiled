@@ -27,7 +27,7 @@ class TextInputWidget extends ButtonWidget {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          this.field_T = bl.monotonicMillis((byte) 45);
+          this.field_T = ClockAndScreenHelpers.monotonicMillis((byte) 45);
           if (param1 != 60 &&
             param1 != 62) {
             if (param1 >= 32 &&
@@ -81,28 +81,28 @@ class TextInputWidget extends ButtonWidget {
                 if (param0 != 96) {
                   if (97 != param0) {
                     if (param0 == 102) {
-                      this.b(false, 0);
+                      this.moveCaret(false, 0);
                       return true;
                     }
                     if (param0 == 103) {
-                      this.b(false, this.field_j.length());
+                      this.moveCaret(false, this.field_j.length());
                       return true;
                     }
                     if (84 == param0) {
-                      this.h(97);
+                      this.notifyTextSubmitted(97);
                       return true;
                     }
-                    if (lc.field_m[82] &&
+                    if (PulseEffect.field_m[82] &&
                       param0 == 65) {
-                      this.f(102);
+                      this.cutSelectedText(102);
                       return true;
                     }
-                    if (lc.field_m[82] &&
+                    if (PulseEffect.field_m[82] &&
                       param0 == 66) {
                       this.copySelectedTextToClipboard((byte) -60);
                       return true;
                     }
-                    if (lc.field_m[82] &&
+                    if (PulseEffect.field_m[82] &&
                       param0 == 67) {
                       this.pasteClipboardText(param3 + 6458);
                       return true;
@@ -110,24 +110,24 @@ class TextInputWidget extends ButtonWidget {
                   } else {
                     if (this.field_O < this.field_j.length()) {
                       stackIn_33_1 = false;
-                      if (!lc.field_m[82]) {
+                      if (!PulseEffect.field_m[82]) {
                         stackIn_34_2 = this.field_O + 1;
                       } else {
                         stackIn_34_2 = this.findNextWordBoundary(param3 + 6329);
                       }
-                      this.b(stackIn_33_1, stackIn_34_2);
+                      this.moveCaret(stackIn_33_1, stackIn_34_2);
                       return true;
                     }
                   }
                 } else {
                   if (this.field_O > 0) {
                     stackIn_26_1 = false;
-                    if (lc.field_m[82]) {
+                    if (PulseEffect.field_m[82]) {
                       stackIn_27_2 = this.findPreviousWordBoundary((byte) -110);
                     } else {
                       stackIn_27_2 = -1 + this.field_O;
                     }
-                    this.b(stackIn_26_1, stackIn_27_2);
+                    this.moveCaret(stackIn_26_1, stackIn_27_2);
                     return true;
                   }
                 }
@@ -185,16 +185,16 @@ class TextInputWidget extends ButtonWidget {
         RuntimeException var8 = null;
         try {
           if (super.handlePointerPress(param0, param1, param2, param3, param4, param5, param6) &&
-            this.painter instanceof rk) {
-            var8_int = ((rk) ((Object) this.painter)).hitTestCaretIndex(param5, param6, MouseInputHandler.field_g, bo.field_d, 98, (UiWidget) (this));
+            this.painter instanceof TextWidgetLayout) {
+            var8_int = ((TextWidgetLayout) ((Object) this.painter)).hitTestCaretIndex(param5, param6, MouseInputHandler.field_g, LoginMethod.field_d, 98, (UiWidget) (this));
             stackIn_4_1 = false;
             if (-1 == var8_int) {
               stackIn_5_2 = 0;
             } else {
               stackIn_5_2 = var8_int;
             }
-            this.b(stackIn_4_1, stackIn_5_2);
-            var8_long = bl.monotonicMillis((byte) 115);
+            this.moveCaret(stackIn_4_1, stackIn_5_2);
+            var8_long = ClockAndScreenHelpers.monotonicMillis((byte) 115);
             stackIn_8_1 = !(-this.field_X + var8_long >= 250L);
             this.field_M = stackIn_8_1;
             if (this.field_M) {
@@ -256,7 +256,7 @@ class TextInputWidget extends ButtonWidget {
     }
 
     final void renderWidget(int param0, int param1, int param2, int param3) {
-        rk var8 = null;
+        TextWidgetLayout var8 = null;
         long var6 = 0L;
         if (param0 != -2) {
           this.field_O = -67;
@@ -264,12 +264,12 @@ class TextInputWidget extends ButtonWidget {
         if (null != this.painter &&
           0 == param2) {
           this.painter.paintWidget(this.field_F, param1, -15112, param3, (UiWidget) (this));
-          if (this.painter instanceof rk) {
-            var8 = (rk) ((Object) this.painter);
+          if (this.painter instanceof TextWidgetLayout) {
+            var8 = (TextWidgetLayout) ((Object) this.painter);
             if (this.field_S != this.field_O) {
               var8.drawSelection(this.field_S, param1, this.field_O, param3, param0 ^ -93, (UiWidget) (this));
             }
-            var6 = bl.monotonicMillis((byte) 56);
+            var6 = ClockAndScreenHelpers.monotonicMillis((byte) 56);
             if (500L > (-this.field_T + var6) % 1000L) {
               var8.drawCaret((UiWidget) (this), (byte) 2, param3, this.field_O, param1);
             }
@@ -293,24 +293,24 @@ class TextInputWidget extends ButtonWidget {
         }
     }
 
-    private final void g(byte param0) {
-        mp var3;
+    private final void scrollCaretIntoView(byte param0) {
+        TextLayout var3;
         int var4;
         int var5;
         int var6;
         int var7;
         int var8;
-        rk var9;
+        TextWidgetLayout var9;
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
         if (!this.field_U) {
           this.field_z = 0;
           this.field_q = 0;
           return;
         }
-        if (!(this.painter instanceof rk)) {
+        if (!(this.painter instanceof TextWidgetLayout)) {
           return;
         }
-        var9 = (rk) ((Object) this.painter);
+        var9 = (TextWidgetLayout) ((Object) this.painter);
         var3 = var9.getTextLayout((UiWidget) (this), -112);
         if (param0 >= -60) {
           this.field_W = -107;
@@ -348,10 +348,10 @@ class TextInputWidget extends ButtonWidget {
         this.field_X = 0L;
         try {
           this.field_W = param2;
-          this.painter = ra.field_o.field_o;
+          this.painter = PendingIntArrayReply.field_o.field_o;
           this.setInputText(true, param0, (byte) 108);
           this.field_U = true;
-          this.field_T = bl.monotonicMillis((byte) 106);
+          this.field_T = ClockAndScreenHelpers.monotonicMillis((byte) 106);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "pm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -362,7 +362,7 @@ class TextInputWidget extends ButtonWidget {
         int var3 = this.field_O <= this.field_S ? this.field_S : this.field_O;
         if (param0 >= -98) {
           ResourceArchive var4 = (ResourceArchive) null;
-          TextInputWidget.a((ResourceArchive) null, -5, 40, (ResourceArchive) null, -102);
+          TextInputWidget.loadPaletteFont((ResourceArchive) null, -5, 40, (ResourceArchive) null, -102);
         }
         return this.field_j.substring(var2, var3);
     }
@@ -391,15 +391,15 @@ class TextInputWidget extends ButtonWidget {
     }
 
     void updatePointerState(int param0, UiWidget param1, int param2, int param3) {
-        rk var5 = null;
+        TextWidgetLayout var5 = null;
         int var6 = 0;
         try {
           super.updatePointerState(param0, param1, param2, param3);
-          this.g((byte) -84);
+          this.scrollCaretIntoView((byte) -84);
           if (1 == this.field_u) {
-            if (this.painter instanceof rk) {
-              var5 = (rk) ((Object) this.painter);
-              var6 = var5.hitTestCaretIndex(param2, param3, MouseInputHandler.field_g, bo.field_d, 98, (UiWidget) (this));
+            if (this.painter instanceof TextWidgetLayout) {
+              var5 = (TextWidgetLayout) ((Object) this.painter);
+              var6 = var5.hitTestCaretIndex(param2, param3, MouseInputHandler.field_g, LoginMethod.field_d, 98, (UiWidget) (this));
               if (var6 != -1) {
                 if (this.field_M &&
                   var6 < this.field_V &&
@@ -409,7 +409,7 @@ class TextInputWidget extends ButtonWidget {
                 this.field_O = var6;
               }
             }
-            this.field_T = bl.monotonicMillis((byte) 121);
+            this.field_T = ClockAndScreenHelpers.monotonicMillis((byte) 121);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "pm.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -425,9 +425,9 @@ class TextInputWidget extends ButtonWidget {
         }
     }
 
-    private final void b(boolean param0, int param1) {
+    private final void moveCaret(boolean param0, int param1) {
         this.field_O = param1;
-        if (!lc.field_m[81]) {
+        if (!PulseEffect.field_m[81]) {
           this.field_S = this.field_O;
         }
         if (param0) {
@@ -450,7 +450,7 @@ class TextInputWidget extends ButtonWidget {
           break;
         }
         if (param0 != -110) {
-          this.h(15);
+          this.notifyTextSubmitted(15);
         }
         return var2;
     }
@@ -481,33 +481,33 @@ class TextInputWidget extends ButtonWidget {
         }
     }
 
-    private final void f(int param0) {
+    private final void cutSelectedText(int param0) {
         this.copySelectedTextToClipboard((byte) -60);
         this.deleteSelectedText(false);
         if (param0 != 102) {
-          this.b(true, -83);
+          this.moveCaret(true, -83);
         }
     }
 
-    final static void a(boolean param0, boolean param1) {
-        if (null != ui.field_j) {
-          Waypoint.a(ui.field_j, -123);
+    final static void drawOverlayLayers(boolean param0, boolean param1) {
+        if (null != MeltdownPuddleCell.field_j) {
+          Waypoint.drawTooltip(MeltdownPuddleCell.field_j, -123);
         }
         if (param0) {
           ResourceArchive var3 = (ResourceArchive) null;
-          TextInputWidget.a((ResourceArchive) null, -81, 46, (ResourceArchive) null, -115);
+          TextInputWidget.loadPaletteFont((ResourceArchive) null, -81, 46, (ResourceArchive) null, -115);
         }
-        if (null != pk.field_b) {
-          pk.field_b.b(param1, (byte) 47);
+        if (null != ContextMenuHolder.field_b) {
+          ContextMenuHolder.field_b.drawMenu(param1, (byte) 47);
         }
         EmailAvailabilityValidator.drawNameEntryPopup(param1, -19);
-        if (null != bk.field_i) {
-          bk.field_i.c(param1, -1);
+        if (null != DirectByteStorage.field_i) {
+          DirectByteStorage.field_i.drawRoot(param1, -1);
         }
-        ContentTransitionDialog.a(param1, param0);
+        ContentTransitionDialog.drawQuickChatHelpDialog(param1, param0);
     }
 
-    final static PaletteBitmapFont a(ResourceArchive param0, int param1, int param2, ResourceArchive param3, int param4) {
+    final static PaletteBitmapFont loadPaletteFont(ResourceArchive param0, int param1, int param2, ResourceArchive param3, int param4) {
         RuntimeException var5 = null;
         PaletteBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -517,13 +517,13 @@ class TextInputWidget extends ButtonWidget {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!ud.loadSpriteSheet(param2, param3, param1, (byte) -42)) {
+          if (!DialSelectorWidget.loadSpriteSheet(param2, param3, param1, (byte) -42)) {
             return null;
           }
           if (param4 != -29435) {
             field_R = (PacketBuffer) null;
           }
-          stackIn_6_0 = me.createPaletteFont(param0.a(param2, true, param1), true);
+          stackIn_6_0 = SoundCache.createPaletteFont(param0.getFile(param2, true, param1), true);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -545,7 +545,7 @@ class TextInputWidget extends ButtonWidget {
         }
     }
 
-    private final void h(int param0) {
+    private final void notifyTextSubmitted(int param0) {
         if (this.field_A instanceof TextInputListener) {
           ((TextInputListener) (this.field_A)).onTextInputSubmitted(this, true);
         }

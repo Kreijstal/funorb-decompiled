@@ -54,15 +54,15 @@ final class DualLinkDeque {
         return null;
     }
 
-    final static ma validateDomainLabel(byte param0, String param1) {
+    final static TextValidationFailure validateDomainLabel(byte param0, String param1) {
         int var3 = 0;
         int var2_int = 0;
         int var4 = 0;
         int var5 = 0;
-        ma stackIn_5_0 = null;
-        ma stackIn_9_0 = null;
-        ma stackIn_18_0 = null;
-        ma stackIn_22_0 = null;
+        TextValidationFailure stackIn_5_0 = null;
+        TextValidationFailure stackIn_9_0 = null;
+        TextValidationFailure stackIn_18_0 = null;
+        TextValidationFailure stackIn_22_0 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
@@ -75,11 +75,11 @@ final class DualLinkDeque {
             DualLinkDeque.releaseStatics(-68);
           }
           if (0 == var2_int) {
-            stackIn_5_0 = jo.field_e;
+            stackIn_5_0 = FeatureSupportHelpers.field_e;
             return stackIn_5_0;
           }
           if (var2_int > 63) {
-            stackIn_9_0 = er.field_f;
+            stackIn_9_0 = TipPanelHelpers.field_f;
             return stackIn_9_0;
           }
           for (var3 = 0; var2_int > var3; var3++) {
@@ -91,7 +91,7 @@ final class DualLinkDeque {
                 return stackIn_18_0;
               }
             } else {
-              if (lb.field_e.indexOf(var4) == -1) {
+              if (PasswordCheckHelpers.field_e.indexOf(var4) == -1) {
                 stackIn_22_0 = UnitStateEvent.field_t;
                 return stackIn_22_0;
               }
@@ -123,7 +123,7 @@ final class DualLinkDeque {
             if (this.field_e == var5) {
               break;
             }
-            var5.a(-4564);
+            var5.unlinkSecondary(-4564);
           }
           this.field_f = null;
           return;
@@ -133,7 +133,7 @@ final class DualLinkDeque {
           if (this.field_e == var4) {
             break;
           }
-          var4.a(-4564);
+          var4.unlinkSecondary(-4564);
         }
         this.field_f = null;
     }
@@ -175,14 +175,14 @@ final class DualLinkDeque {
           DualLinkDeque.isChatOverlayOpen(-38);
           var2 = this.field_e.secondaryPrevious;
           if (var2 != this.field_e) {
-            var2.a(-4564);
+            var2.unlinkSecondary(-4564);
             return var2;
           }
           return null;
         }
         var2Lifetime1 = this.field_e.secondaryPrevious;
         if (var2Lifetime1 != this.field_e) {
-          var2Lifetime1.a(-4564);
+          var2Lifetime1.unlinkSecondary(-4564);
           return var2Lifetime1;
         }
         return null;
@@ -191,7 +191,7 @@ final class DualLinkDeque {
     final void add(int param0, DualLinkNode param1) {
         try {
           if (param1.secondaryNext != null) {
-            param1.a(param0 - 34228);
+            param1.unlinkSecondary(param0 - 34228);
           }
           param1.secondaryPrevious = this.field_e;
           param1.secondaryNext = this.field_e.secondaryNext;

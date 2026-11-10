@@ -19,7 +19,7 @@ class UiWidget extends IntrusiveNode {
     WidgetListener field_A;
     int field_y;
     WidgetPainter painter;
-    mp field_k;
+    TextLayout field_k;
     static long field_g;
     String field_j;
     static String[] field_f;
@@ -37,27 +37,27 @@ class UiWidget extends IntrusiveNode {
           TabbedPane.field_Fb = 0;
           ClientException.field_d = 0;
           ProgressDialog.field_ob = null;
-          ro.field_M.clear(param0 ^ 22926);
-          jf.field_d.clear(-30986);
+          LocalGameWorld.field_M.clear(param0 ^ 22926);
+          ReportDialogGlobals.field_d.clear(-30986);
           if (param0 != -8328) {
             field_o = (String) null;
           }
-          var1 = ol.field_o.firstInTraversal((byte) 7);
+          var1 = InstructionsScreen.field_o.firstInTraversal((byte) 7);
           while (true) {
             if (var1 != null) {
-              var1.a(-4564);
-              var1 = ol.field_o.nextInTraversal((byte) 112);
+              var1.unlinkSecondary(-4564);
+              var1 = InstructionsScreen.field_o.nextInTraversal((byte) 112);
               if (var2 == 0) {
                 continue;
               }
               break;
             }
-            var1 = bh.field_f.firstInTraversal((byte) 7);
+            var1 = ChatAndOptionHelpers.field_f.firstInTraversal((byte) 7);
             break;
           }
           while (var1 != null) {
-            var1.a(param0 ^ 12628);
-            var1 = bh.field_f.nextInTraversal((byte) 104);
+            var1.unlinkSecondary(param0 ^ 12628);
+            var1 = ChatAndOptionHelpers.field_f.nextInTraversal((byte) 104);
             if (var2 != 0) {
               return;
             }
@@ -72,20 +72,20 @@ class UiWidget extends IntrusiveNode {
     }
 
     final static void showMessageDialogText(byte param0, String param1) {
-        sc.field_j.field_wb = param1;
-        ee.field_a = true;
+        DualLinkNodeHashTable.field_j.field_wb = param1;
+        LobbyScreenHelpers.field_a = true;
         int var2_int = SocketConnector.field_h.field_h;
         int var3 = SocketConnector.field_h.field_f;
-        int var4 = sc.field_j.field_yb.measureWrappedHeight(param1, 272, sc.field_j.field_J);
+        int var4 = DualLinkNodeHashTable.field_j.field_yb.measureWrappedHeight(param1, 272, DualLinkNodeHashTable.field_j.field_J);
         int var5 = -(var4 / 2) + 7 + (-110 + var3 / 2);
         SimHuman.field_gb.setBounds(-(2 * var5) + var3 - 120, var5, 320, (-320 + var2_int) / 2, -3344);
-        SimHuman.field_gb.field_ab = tg.createGradientFrameSprites(2105376, SimHuman.field_gb.field_z, 8421504, 3, 11579568, 114);
-        sc.field_j.setBounds(-20 + (SimHuman.field_gb.field_z - 24), 16, -24 + SimHuman.field_gb.field_zb - 24, 24, -3344);
+        SimHuman.field_gb.field_ab = AudioPumpThread.createGradientFrameSprites(2105376, SimHuman.field_gb.field_z, 8421504, 3, 11579568, 114);
+        DualLinkNodeHashTable.field_j.setBounds(-20 + (SimHuman.field_gb.field_z - 24), 16, -24 + SimHuman.field_gb.field_zb - 24, 24, -3344);
         if (param0 >= -6) {
           return;
         }
         try {
-          kn.field_a.setBounds(24, -24 + (-20 + SimHuman.field_gb.field_z), 80, 120, -3344);
+          LoginStartHelpers.field_a.setBounds(24, -24 + (-20 + SimHuman.field_gb.field_z), 80, 120, -3344);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "cf.CC(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -100,7 +100,7 @@ class UiWidget extends IntrusiveNode {
     }
 
     UiWidget(String param0, WidgetListener param1) {
-        this(param0, ra.field_o.field_s, param1);
+        this(param0, PendingIntArrayReply.field_o.field_s, param1);
     }
 
     StringBuilder appendWidgetDiagnostics(int param0, Hashtable param1, int param2, StringBuilder param3) {
@@ -192,55 +192,55 @@ class UiWidget extends IntrusiveNode {
           this.updatePointerState(-5407, this, param0, param2);
           var5 = this.hasKeyboardFocus(127) ? 1 : 0;
           if (param3) {
-            if (t.field_d == 0) {
-              if (kd.field_b == 0) {
-                if (0 == pq.field_f &&
-                  aj.field_j != 0) {
-                  this.handlePointerRelease(MouseInputHandler.field_g, this, param2, bo.field_d, true, param0);
-                  var8 = qi.field_a;
+            if (ByteStorage.field_d == 0) {
+              if (StringHashHelpers.field_b == 0) {
+                if (0 == PowerupAuraEffect.field_f &&
+                  EffectResistedEvent.field_j != 0) {
+                  this.handlePointerRelease(MouseInputHandler.field_g, this, param2, LoginMethod.field_d, true, param0);
+                  var8 = LoginPacketHelpers.field_a;
                   if (var8 != null) {
-                    if (!(var8.field_A instanceof vq)) {
-                      qi.field_a = null;
+                    if (!(var8.field_A instanceof DragDropListener)) {
+                      LoginPacketHelpers.field_a = null;
                     } else {
-                      ((vq) (var8.field_A)).a(var8, (byte) 5, (DropTargetWidget) null);
-                      qi.field_a = null;
+                      ((DragDropListener) (var8.field_A)).onWidgetDropped(var8, (byte) 5, (DropTargetWidget) null);
+                      LoginPacketHelpers.field_a = null;
                     }
                   }
                   if (var7 != 0 &&
                     var5 != 0 &&
-                    0 != kd.field_b) {
+                    0 != StringHashHelpers.field_b) {
                     this.clearKeyboardFocus((byte) 32);
                   }
                 }
-                aj.field_j = pq.field_f;
-                ii.updateTooltip(-16898, this.getHoverText((byte) -51));
+                EffectResistedEvent.field_j = PowerupAuraEffect.field_f;
+                TickClock.updateTooltip(-16898, this.getHoverText((byte) -51));
                 if (param1 != -27) {
                   this.field_w = -89;
                 }
                 return param3;
               }
-              if (!this.handlePointerPress(ChatMessage.field_t, vb.field_f, kd.field_b, this, -24, param0, param2)) {
+              if (!this.handlePointerPress(ChatMessage.field_t, LobbyUiSetupHelpers.field_f, StringHashHelpers.field_b, this, -24, param0, param2)) {
                 if (var5 == 0) {
-                  if (0 == pq.field_f &&
-                    aj.field_j != 0) {
-                    this.handlePointerRelease(MouseInputHandler.field_g, this, param2, bo.field_d, true, param0);
-                    var9 = qi.field_a;
+                  if (0 == PowerupAuraEffect.field_f &&
+                    EffectResistedEvent.field_j != 0) {
+                    this.handlePointerRelease(MouseInputHandler.field_g, this, param2, LoginMethod.field_d, true, param0);
+                    var9 = LoginPacketHelpers.field_a;
                     if (var9 != null) {
-                      if (!(var9.field_A instanceof vq)) {
-                        qi.field_a = null;
+                      if (!(var9.field_A instanceof DragDropListener)) {
+                        LoginPacketHelpers.field_a = null;
                       } else {
-                        ((vq) (var9.field_A)).a(var9, (byte) 5, (DropTargetWidget) null);
-                        qi.field_a = null;
+                        ((DragDropListener) (var9.field_A)).onWidgetDropped(var9, (byte) 5, (DropTargetWidget) null);
+                        LoginPacketHelpers.field_a = null;
                       }
                     }
                     if (var7 != 0 &&
                       var5 != 0 &&
-                      0 != kd.field_b) {
+                      0 != StringHashHelpers.field_b) {
                       this.clearKeyboardFocus((byte) 32);
                     }
                   }
-                  aj.field_j = pq.field_f;
-                  ii.updateTooltip(-16898, this.getHoverText((byte) -51));
+                  EffectResistedEvent.field_j = PowerupAuraEffect.field_f;
+                  TickClock.updateTooltip(-16898, this.getHoverText((byte) -51));
                   if (param1 != -27) {
                     this.field_w = -89;
                   }
@@ -253,34 +253,34 @@ class UiWidget extends IntrusiveNode {
               } else {
                 param3 = false;
               }
-              if (0 == pq.field_f &&
-                aj.field_j != 0) {
-                this.handlePointerRelease(MouseInputHandler.field_g, this, param2, bo.field_d, true, param0);
-                var10 = qi.field_a;
+              if (0 == PowerupAuraEffect.field_f &&
+                EffectResistedEvent.field_j != 0) {
+                this.handlePointerRelease(MouseInputHandler.field_g, this, param2, LoginMethod.field_d, true, param0);
+                var10 = LoginPacketHelpers.field_a;
                 if (var10 != null) {
-                  if (!(var10.field_A instanceof vq)) {
-                    qi.field_a = null;
+                  if (!(var10.field_A instanceof DragDropListener)) {
+                    LoginPacketHelpers.field_a = null;
                     if (var7 != 0 &&
                       var5 != 0 &&
-                      0 != kd.field_b) {
+                      0 != StringHashHelpers.field_b) {
                       this.clearKeyboardFocus((byte) 32);
                     }
-                    aj.field_j = pq.field_f;
-                    ii.updateTooltip(-16898, this.getHoverText((byte) -51));
+                    EffectResistedEvent.field_j = PowerupAuraEffect.field_f;
+                    TickClock.updateTooltip(-16898, this.getHoverText((byte) -51));
                     if (param1 != -27) {
                       this.field_w = -89;
                     }
                     return param3;
                   }
-                  ((vq) (var10.field_A)).a(var10, (byte) 5, (DropTargetWidget) null);
-                  qi.field_a = null;
+                  ((DragDropListener) (var10.field_A)).onWidgetDropped(var10, (byte) 5, (DropTargetWidget) null);
+                  LoginPacketHelpers.field_a = null;
                   if (var7 != 0 &&
                     var5 != 0 &&
-                    0 != kd.field_b) {
+                    0 != StringHashHelpers.field_b) {
                     this.clearKeyboardFocus((byte) 32);
                   }
-                  aj.field_j = pq.field_f;
-                  ii.updateTooltip(-16898, this.getHoverText((byte) -51));
+                  EffectResistedEvent.field_j = PowerupAuraEffect.field_f;
+                  TickClock.updateTooltip(-16898, this.getHoverText((byte) -51));
                   if (param1 != -27) {
                     this.field_w = -89;
                   }
@@ -288,10 +288,10 @@ class UiWidget extends IntrusiveNode {
                 }
                 if (var7 != 0 &&
                   var5 != 0 &&
-                  0 != kd.field_b) {
+                  0 != StringHashHelpers.field_b) {
                   this.clearKeyboardFocus((byte) 32);
-                  aj.field_j = pq.field_f;
-                  ii.updateTooltip(-16898, this.getHoverText((byte) -51));
+                  EffectResistedEvent.field_j = PowerupAuraEffect.field_f;
+                  TickClock.updateTooltip(-16898, this.getHoverText((byte) -51));
                   if (param1 != -27) {
                     this.field_w = -89;
                   }
@@ -301,58 +301,58 @@ class UiWidget extends IntrusiveNode {
               break regionExit1;
             }
             if (var5 != 0) {
-              this.requestKeyboardFocus((byte) -111, t.field_d, bo.field_d, param0, param2, MouseInputHandler.field_g, this);
+              this.requestKeyboardFocus((byte) -111, ByteStorage.field_d, LoginMethod.field_d, param0, param2, MouseInputHandler.field_g, this);
             }
-            if (kd.field_b == 0) {
-              if (0 != pq.field_f) {
-                aj.field_j = pq.field_f;
-                ii.updateTooltip(-16898, this.getHoverText((byte) -51));
+            if (StringHashHelpers.field_b == 0) {
+              if (0 != PowerupAuraEffect.field_f) {
+                EffectResistedEvent.field_j = PowerupAuraEffect.field_f;
+                TickClock.updateTooltip(-16898, this.getHoverText((byte) -51));
                 if (param1 != -27) {
                   this.field_w = -89;
                 }
                 return param3;
               }
-              if (aj.field_j != 0) {
-                this.handlePointerRelease(MouseInputHandler.field_g, this, param2, bo.field_d, true, param0);
-                var11 = qi.field_a;
+              if (EffectResistedEvent.field_j != 0) {
+                this.handlePointerRelease(MouseInputHandler.field_g, this, param2, LoginMethod.field_d, true, param0);
+                var11 = LoginPacketHelpers.field_a;
                 if (var11 != null) {
-                  if (!(var11.field_A instanceof vq)) {
-                    qi.field_a = null;
+                  if (!(var11.field_A instanceof DragDropListener)) {
+                    LoginPacketHelpers.field_a = null;
                   } else {
-                    ((vq) (var11.field_A)).a(var11, (byte) 5, (DropTargetWidget) null);
-                    qi.field_a = null;
+                    ((DragDropListener) (var11.field_A)).onWidgetDropped(var11, (byte) 5, (DropTargetWidget) null);
+                    LoginPacketHelpers.field_a = null;
                   }
                 }
                 if (var7 != 0 &&
                   var5 != 0 &&
-                  0 != kd.field_b) {
+                  0 != StringHashHelpers.field_b) {
                   this.clearKeyboardFocus((byte) 32);
                 }
               }
-              aj.field_j = pq.field_f;
-              ii.updateTooltip(-16898, this.getHoverText((byte) -51));
+              EffectResistedEvent.field_j = PowerupAuraEffect.field_f;
+              TickClock.updateTooltip(-16898, this.getHoverText((byte) -51));
               if (param1 != -27) {
                 this.field_w = -89;
               }
               return param3;
             }
-            if (!this.handlePointerPress(ChatMessage.field_t, vb.field_f, kd.field_b, this, -24, param0, param2)) {
+            if (!this.handlePointerPress(ChatMessage.field_t, LobbyUiSetupHelpers.field_f, StringHashHelpers.field_b, this, -24, param0, param2)) {
               if (var5 == 0) {
-                if (0 == pq.field_f &&
-                  aj.field_j != 0) {
-                  this.handlePointerRelease(MouseInputHandler.field_g, this, param2, bo.field_d, true, param0);
-                  var12 = qi.field_a;
+                if (0 == PowerupAuraEffect.field_f &&
+                  EffectResistedEvent.field_j != 0) {
+                  this.handlePointerRelease(MouseInputHandler.field_g, this, param2, LoginMethod.field_d, true, param0);
+                  var12 = LoginPacketHelpers.field_a;
                   if (var12 != null) {
-                    if (!(var12.field_A instanceof vq)) {
-                      qi.field_a = null;
+                    if (!(var12.field_A instanceof DragDropListener)) {
+                      LoginPacketHelpers.field_a = null;
                     } else {
-                      ((vq) (var12.field_A)).a(var12, (byte) 5, (DropTargetWidget) null);
-                      qi.field_a = null;
+                      ((DragDropListener) (var12.field_A)).onWidgetDropped(var12, (byte) 5, (DropTargetWidget) null);
+                      LoginPacketHelpers.field_a = null;
                     }
                   }
                   if (var7 != 0 &&
                     var5 != 0 &&
-                    0 != kd.field_b) {
+                    0 != StringHashHelpers.field_b) {
                     this.clearKeyboardFocus((byte) 32);
                   }
                 }
@@ -365,25 +365,25 @@ class UiWidget extends IntrusiveNode {
             } else {
               param3 = false;
             }
-            if ((0 == pq.field_f) &&
-              (aj.field_j != 0)) {
-              this.handlePointerRelease(MouseInputHandler.field_g, this, param2, bo.field_d, true, param0);
-              var13 = qi.field_a;
+            if ((0 == PowerupAuraEffect.field_f) &&
+              (EffectResistedEvent.field_j != 0)) {
+              this.handlePointerRelease(MouseInputHandler.field_g, this, param2, LoginMethod.field_d, true, param0);
+              var13 = LoginPacketHelpers.field_a;
               if (var13 != null) {
-                if (!(var13.field_A instanceof vq)) {
-                  qi.field_a = null;
+                if (!(var13.field_A instanceof DragDropListener)) {
+                  LoginPacketHelpers.field_a = null;
                   if (var7 != 0 &&
                     var5 != 0 &&
-                    0 != kd.field_b) {
+                    0 != StringHashHelpers.field_b) {
                     this.clearKeyboardFocus((byte) 32);
                     break regionExit1;
                   }
                 } else {
-                  ((vq) (var13.field_A)).a(var13, (byte) 5, (DropTargetWidget) null);
-                  qi.field_a = null;
+                  ((DragDropListener) (var13.field_A)).onWidgetDropped(var13, (byte) 5, (DropTargetWidget) null);
+                  LoginPacketHelpers.field_a = null;
                   if (var7 != 0 &&
                     var5 != 0 &&
-                    0 != kd.field_b) {
+                    0 != StringHashHelpers.field_b) {
                     this.clearKeyboardFocus((byte) 32);
                     break regionExit1;
                   }
@@ -391,19 +391,19 @@ class UiWidget extends IntrusiveNode {
                 break regionExit1;
               }
               if ((var7 != 0) && (var5 != 0 &&
-                0 != kd.field_b)) {
+                0 != StringHashHelpers.field_b)) {
                 this.clearKeyboardFocus((byte) 32);
               }
             }
           } else {
             if (var5 != 0 &&
-              0 != kd.field_b) {
+              0 != StringHashHelpers.field_b) {
               this.clearKeyboardFocus((byte) 32);
             }
           }
         }
-        aj.field_j = pq.field_f;
-        ii.updateTooltip(-16898, this.getHoverText((byte) -51));
+        EffectResistedEvent.field_j = PowerupAuraEffect.field_f;
+        TickClock.updateTooltip(-16898, this.getHoverText((byte) -51));
         if (param1 == -27) {
           return param3;
         }
@@ -511,9 +511,9 @@ class UiWidget extends IntrusiveNode {
           }
           break;
         }
-        var5 = NodeHashTableIterator.a(-19);
+        var5 = NodeHashTableIterator.getTimedNoticeText(-19);
         if (var5 != null) {
-          ra.field_o.drawTooltip(AccountCreationDialog.field_Db, var5, bl.field_c, (byte) 95);
+          PendingIntArrayReply.field_o.drawTooltip(AccountCreationDialog.field_Db, var5, ClockAndScreenHelpers.field_c, (byte) 95);
         }
         var6 = 46 % ((param0 + 30) / 47);
     }
@@ -639,13 +639,13 @@ class UiWidget extends IntrusiveNode {
           if (param0 != -5407) {
             return;
           }
-          var5_int = this.containsPointer(param0 ^ 5437, param2, MouseInputHandler.field_g, bo.field_d, param3) ? 1 : 0;
+          var5_int = this.containsPointer(param0 ^ 5437, param2, MouseInputHandler.field_g, LoginMethod.field_d, param3) ? 1 : 0;
           if ((this.field_l ? 1 : 0) != var5_int) {
             stackIn_7_1 = (var5_int != 0);
             this.field_l = stackIn_7_1;
             if (this.field_A != null &&
-              this.field_A instanceof ar) {
-              ((ar) (this.field_A)).onPointerInsideChanged(this, -14339, var5_int != 0);
+              this.field_A instanceof PointerHoverListener) {
+              ((PointerHoverListener) (this.field_A)).onPointerInsideChanged(this, -14339, var5_int != 0);
               return;
             }
           }
@@ -743,7 +743,7 @@ class UiWidget extends IntrusiveNode {
         String var5 = null;
         String var5Lifetime1;
         String var5Lifetime2;
-        if (bk.field_i == null) {
+        if (DirectByteStorage.field_i == null) {
           if (!param2) {
             var5 = (String) null;
             UiWidget.showMessageDialogText((byte) -35, (String) null);
@@ -751,7 +751,7 @@ class UiWidget extends IntrusiveNode {
           }
           return;
         }
-        int var3 = bk.field_i.updateAndPollReason((byte) -58, param1);
+        int var3 = DirectByteStorage.field_i.updateAndPollReason((byte) -58, param1);
         if (var3 == -2) {
           if (!param2) {
             var5Lifetime1 = (String) null;
@@ -761,11 +761,11 @@ class UiWidget extends IntrusiveNode {
           return;
         }
         if (var3 != -1) {
-          var4 = bk.field_i.isMuteRequested(-23217) ? 1 : 0;
-          LevelFileCatalog.a(bk.field_i.getReportedName(-26895), bk.field_i.field_Fb, param0, var3, var4 != 0, 21965);
+          var4 = DirectByteStorage.field_i.isMuteRequested(-23217) ? 1 : 0;
+          LevelFileCatalog.writeAbuseReport(DirectByteStorage.field_i.getReportedName(-26895), DirectByteStorage.field_i.field_Fb, param0, var3, var4 != 0, 21965);
         }
-        bk.field_i = null;
-        q.b(80);
+        DirectByteStorage.field_i = null;
+        SineTableHelpers.closePlayerContextMenu(80);
         if (!param2) {
           var5Lifetime2 = (String) null;
           UiWidget.showMessageDialogText((byte) -35, (String) null);
@@ -834,7 +834,7 @@ class UiWidget extends IntrusiveNode {
 
     UiWidget(String param0, WidgetPainter param1, WidgetListener param2) {
         RuntimeException runtimeException = null;
-        rk var4 = null;
+        TextWidgetLayout var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -849,8 +849,8 @@ class UiWidget extends IntrusiveNode {
           this.field_j = param0;
           this.painter = param1;
           this.field_A = param2;
-          if (this.painter instanceof rk) {
-            var4 = (rk) ((Object) this.painter);
+          if (this.painter instanceof TextWidgetLayout) {
+            var4 = (TextWidgetLayout) ((Object) this.painter);
             this.field_n = var4.contentHeight(this, -126);
             this.field_w = var4.getPreferredHeight((byte) 39, this);
           }

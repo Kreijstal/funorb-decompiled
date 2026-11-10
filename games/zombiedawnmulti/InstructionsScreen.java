@@ -1,0 +1,447 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class InstructionsScreen extends MenuScreen {
+    static Sprite field_n;
+    static DualLinkNodeHashTable field_o;
+    private int field_m;
+    static String field_q;
+    static int field_p;
+    static String field_l;
+
+    final void resetToFirstPage(int param0) {
+        this.field_g.field_d = 2;
+        this.field_m = 0;
+        if (param0 < 26) {
+          this.field_m = 114;
+        }
+    }
+
+    InstructionsScreen(int param0, boolean param1, int param2, int param3, int param4, int param5, int[] param6) {
+        super(param0, param1, param2, param3, param4, param5, param6);
+        this.field_m = 0;
+    }
+
+    final boolean isItemEnabled(int param0, int param1) {
+        boolean stackIn_10_0 = false;
+        if (param1 != 16777215) {
+          this.field_m = -35;
+        }
+        stackIn_10_0 = ((param0 != 0 ||
+          0 != this.field_m) &&
+          (param0 != 2 ||
+          this.field_m != 6));
+        return stackIn_10_0;
+    }
+
+    public static void releaseStatics(byte param0) {
+        field_n = null;
+        field_l = null;
+        field_q = null;
+        field_o = null;
+        int var1 = 11 % ((58 - param0) / 35);
+    }
+
+    final int getItemRight(int param0, int param1) {
+        if (param0 > -65) {
+          return -64;
+        }
+        return 180 + this.getItemX((byte) -118, param1);
+    }
+
+    final void handleNavigationKeys(boolean param0) {
+        int stackIn_3_0 = 0;
+        int stackIn_6_0 = 0;
+        int var2;
+        int var3;
+        stackIn_3_0 = (0 != this.field_m) ? 0 : 1;
+        var2 = stackIn_3_0;
+        stackIn_6_0 = (6 != this.field_m) ? 0 : 1;
+        var3 = stackIn_6_0;
+        if (var2 == 0 &&
+          var3 == 0) {
+          this.field_g.handleHorizontalNavigation(1, param0);
+          return;
+        }
+        if (InfectionEvent.field_p == 96) {
+          this.field_g.handleHorizontalNavigation(1, false);
+          if (var2 != 0) {
+            if (this.field_g.field_d == 0) {
+              this.field_g.handleHorizontalNavigation(1, false);
+              if (ZombieDawnMulti.field_E &&
+                var3 != 0 &&
+                this.field_g.field_d == 2) {
+                this.field_g.handleHorizontalNavigation(1, false);
+              }
+            } else {
+              if (var3 != 0 &&
+                this.field_g.field_d == 2) {
+                this.field_g.handleHorizontalNavigation(1, false);
+              }
+            }
+          } else {
+            if (var3 != 0 &&
+              this.field_g.field_d == 2) {
+              this.field_g.handleHorizontalNavigation(1, false);
+            }
+          }
+        } else {
+          if (97 != InfectionEvent.field_p) {
+            this.field_g.handleHorizontalNavigation(1, param0);
+          } else {
+            this.field_g.handleHorizontalNavigation(1, false);
+            if (var2 != 0) {
+              if (this.field_g.field_d == 0) {
+                this.field_g.handleHorizontalNavigation(1, false);
+                if (ZombieDawnMulti.field_E &&
+                  var3 != 0 &&
+                  this.field_g.field_d == 2) {
+                  this.field_g.handleHorizontalNavigation(1, false);
+                }
+              } else {
+                if (var3 != 0 &&
+                  this.field_g.field_d == 2) {
+                  this.field_g.handleHorizontalNavigation(1, false);
+                }
+              }
+            } else {
+              if (var3 != 0 &&
+                this.field_g.field_d == 2) {
+                this.field_g.handleHorizontalNavigation(1, false);
+              }
+            }
+          }
+        }
+    }
+
+    final void showNextPage(int param0, boolean param1) {
+        int var3 = 0;
+        this.field_m = this.field_m + 1;
+        if (param0 != 1) {
+          InstructionsScreen.releaseStatics((byte) 94);
+        }
+        if (!param1 &&
+          DisplayNamePanel.field_S.length == this.field_m) {
+          var3 = InfectionEvent.field_p;
+          InfectionEvent.field_p = 96;
+          this.field_g.handleHorizontalNavigation(1, false);
+          InfectionEvent.field_p = var3;
+        }
+    }
+
+    final void drawScreen(boolean param0) {
+        int stackIn_3_0 = 0;
+        BinaryBitmapFont stackIn_18_0;
+        String stackIn_18_1;
+        int stackIn_18_2;
+        int stackIn_18_3;
+        int stackIn_19_4 = 0;
+        int stackIn_27_0 = 0;
+        int stackIn_68_0 = 0;
+        BinaryBitmapFont stackIn_68_1 = null;
+        String stackIn_68_2 = null;
+        int stackIn_69_3 = 0;
+        int stackIn_71_4;
+        int stackIn_72_5 = 0;
+        Sprite[] stackIn_81_0 = null;
+        int stackIn_82_1 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        var16 = ZombieDawnMulti.field_E ? 1 : 0;
+        super.drawScreen(param0);
+        var2 = 3 + (EffectAudioHelpers.field_e.maxAscent + EffectAudioHelpers.field_e.maxDescent);
+        var3 = 600;
+        var6 = 200;
+        stackIn_3_0 = (ObjectFactoryHelpers.field_e != 1) ? 0 : 1;
+        regionExit1: {
+          regionExit2: {
+            var7 = stackIn_3_0;
+            var14 = this.field_m;
+            switch ((var16 == 0
+              || var14 == 1
+              || var14 == 2
+              || var14 == 3
+              || var14 == 4
+              || var14 == 6
+              || var14 == 7
+              ) ? var14 : -1) {
+              case 0:
+                TranslatedUiText.field_e.drawLeft(DisplayNamePanel.field_J[0][0], 20, 135, 2, 0);
+                stackIn_18_0 = EffectAudioHelpers.field_e;
+                stackIn_18_1 = DisplayNamePanel.field_S[0][0];
+                stackIn_18_2 = 20;
+                stackIn_18_3 = 155;
+                if (var7 != 0) {
+                  stackIn_19_4 = var3;
+                } else {
+                  stackIn_19_4 = var3 - 70;
+                }
+                var4 = ((BinaryBitmapFont) (Object) stackIn_18_0).drawParagraph(stackIn_18_1, stackIn_18_2, stackIn_18_3, stackIn_19_4, 440, 16777215, 0, 0, 0, var2);
+                var5 = var2 * var4;
+                if (var7 != 0) {
+                  var5 -= 20;
+                }
+                TranslatedUiText.field_e.drawLeft(DisplayNamePanel.field_J[0][1], 20, 210 + var5, 2, 0);
+                EffectAudioHelpers.field_e.drawParagraph(DisplayNamePanel.field_S[0][1], 20, 230 + var5, var3, 440, 16777215, 0, 0, 0, var2);
+                if (var7 != 0) {
+                  EffectAudioHelpers.field_e.drawRightAligned(ReportAbuseDialog.formatPageNumber(120, 1 + DisplayNamePanel.field_S.length, 1 + this.field_m), 620, 410, 16777215, 0);
+                  break regionExit1;
+                }
+                AccountCreationDialog.field_Hb[0].drawTransparent(530, 150);
+                AccountCreationDialog.field_Hb[1].drawTransparent(230, 242);
+                if (var16 == 0) {
+                  break;
+                }
+              case 1:
+                var10 = 30;
+                var9 = 155;
+                var2 -= 4;
+                TranslatedUiText.field_e.drawLeft(DisplayNamePanel.field_J[1][0], 20, 135, 2, 0);
+                stackIn_27_0 = (var7 == 0) ? 340 : 400;
+                var8 = stackIn_27_0;
+                TriangleMesh.field_N[1].drawTransparent(-50 + var6, -8 + var9);
+                var9 = var9 + (var10 + var2 * EffectAudioHelpers.field_e.drawParagraph(DisplayNamePanel.field_S[1][0], var6, var9, var8, 50, 16777215, 0, 0, 0, var2));
+                var11 = var6 - 95;
+                var12 = -20 + var9;
+                var9 = var9 + (EffectAudioHelpers.field_e.drawParagraph(DisplayNamePanel.field_S[1][1], var6, var9, var8, 50, 16777215, 0, 0, 0, var2) * var2 + var10);
+                UsernameCredentials.field_q[3].draw(-31 + var6, 3 + var9);
+                TriangleMesh.field_N[3].drawTransparent(var6 - 20, var9 + 15);
+                var9 = var9 + (var2 * EffectAudioHelpers.field_e.drawParagraph(DisplayNamePanel.field_S[1][2], var6, var9, var8, 50, 16777215, 0, 0, 0, var2) + var10);
+                TriangleMesh.field_N[5].drawTransparent(-46 + var6, 2 + var9);
+                var9 = var9 + (var2 * EffectAudioHelpers.field_e.drawParagraph(DisplayNamePanel.field_S[1][3], var6, var9, var8, 50, 16777215, 0, 0, 0, var2) + var10);
+                TriangleMesh.field_N[6].drawTransparent(-60 + var6, var9 - 20);
+                var9 = var9 + (var2 * EffectAudioHelpers.field_e.drawParagraph(DisplayNamePanel.field_S[1][4], var6, var9, var8, 50, 16777215, 0, 0, 0, var2) + var10);
+                TriangleMesh.field_N[0].drawTransparent(var11, var12);
+                QuickChatCategoryRegistry.field_d[0].drawBlended(var11 - 8, var12 - 4, 128);
+                QuickChatCategoryRegistry.field_d[0].drawBlended(var11 + 13, var12 + 14, 128);
+                QuickChatCategoryRegistry.field_d[0].drawBlended(var11 + 41, var12 + 11, 128);
+                SoftwareRasterizer.drawRect(var11 + 3, 14 + var12, 77, 47, 16777215);
+                SoftwareRasterizer.drawRectAlpha(4 + var11, 15 + var12, 75, 45, 10066431, 32);
+                SoftwareRasterizer.fillRectAlpha(5 + var11, var12 + 16, 73, 43, 3355647, 32);
+                if (var16 == 0) {
+                  break;
+                }
+              case 2:
+                var9 = 175;
+                var2 -= 4;
+                var10 = 35;
+                TranslatedUiText.field_e.drawLeft(DisplayNamePanel.field_J[2][0], 20, 135, 2, 0);
+                UsernameCredentials.field_q[8].draw(var6 - 36, var9 + 4);
+                TriangleMesh.field_N[3].drawTransparent(-25 + var6, var9 + 15);
+                var9 = var9 + (var10 + var2 * EffectAudioHelpers.field_e.drawParagraph(DisplayNamePanel.field_S[2][0], var6, var9, 340, 50, 16777215, 0, 0, 0, var2));
+                TriangleMesh.field_N[4].drawTransparent(var6 - 110, -10 + var9);
+                QuickChatCategoryRegistry.field_d[0].drawBlended(-54 + var6, -3 + var9, 128);
+                TriangleMesh.field_N[3].drawTransparent(var6 - 25, 30 + var9);
+                var9 = var9 + (var10 + var2 * EffectAudioHelpers.field_e.drawParagraph(DisplayNamePanel.field_S[2][1], var6, var9, 340, 50, 16777215, 0, 0, 0, var2));
+                TriangleMesh.field_N[7].drawTransparent(var6 - 63, 10 + var9);
+                var9 = var9 + (var2 * EffectAudioHelpers.field_e.drawParagraph(DisplayNamePanel.field_S[2][2], var6, var9, 340, 50, 16777215, 0, 0, 0, var2) + var10);
+                TriangleMesh.field_N[9].drawTransparent(var6 - 94, var9 + 10);
+                var9 = var9 + (var10 + var2 * EffectAudioHelpers.field_e.drawParagraph(DisplayNamePanel.field_S[2][3], var6, var9, 340, 50, 16777215, 0, 0, 0, var2));
+                if (var16 == 0) {
+                  break;
+                }
+              case 3:
+                TranslatedUiText.field_e.drawLeft(DisplayNamePanel.field_J[3][0], 20, 135, 2, 0);
+                HudSpriteStore.field_e[0].drawTransparent(18, 148);
+                HudSpriteStore.field_e[1].drawTransparent(8, 235);
+                TranslatedUiText.field_e.drawLeft("1/5", 100, 202, 2, -1);
+                TranslatedUiText.field_e.drawLeft("2:15", 85, 365, 0, -1);
+                var4 = EffectAudioHelpers.field_e.drawParagraph(DisplayNamePanel.field_S[3][0], 165, 170, var3 - 150, 440, 16777215, 0, 0, 0, -2 + var2);
+                if (var16 == 0) {
+                  break;
+                }
+              case 4:
+                TranslatedUiText.field_e.drawLeft(DisplayNamePanel.field_J[4][0], 20, 135, 2, 0);
+                var13 = var2 - 4;
+                var4 = EffectAudioHelpers.field_e.drawParagraph(DisplayNamePanel.field_S[4][0], 20, 155, var3, 440, 16777215, 0, 0, 0, var13);
+                var5 = 135 + (var13 * var4 + 39);
+                var14 = 0;
+                while (5 > var14) {
+                  var15 = -1;
+                  if (var16 != 0) {
+                    break regionExit2;
+                  }
+                  if (0 == var14) {
+                    var15 = 3;
+                  }
+                  if (1 == var14) {
+                    var15 = 0;
+                  }
+                  if (var14 == 2) {
+                    var15 = 1;
+                  }
+                  if (var14 == 3) {
+                    var15 = 1;
+                  }
+                  if (var14 == 3) {
+                    var15 = 8;
+                  }
+                  if (-1 != var15) {
+                    MarkerSliderPainter.field_b[var15].drawTransparent(20, var5 + 2);
+                  }
+                  var5 = var5 + (EffectAudioHelpers.field_e.drawParagraph(DisplayNamePanel.field_I[var14], 60, var5, -40 + var3, 400, 16777215, 0, 0, 0, var13) * var13 + 15);
+                  var14++;
+                }
+                if (var16 == 0) {
+                  break;
+                }
+              case 5:
+                var5 = 154;
+                TranslatedUiText.field_e.drawLeft(DisplayNamePanel.field_J[5][0], 20, 135, 2, 0);
+                var14 = 0;
+                while (var14 < DisplayNamePanel.field_Q.length) {
+                  var15 = -1;
+                  if (var16 != 0) {
+                    break regionExit2;
+                  }
+                  if (1 == var14) {
+                    var15 = 43;
+                  }
+                  if (2 == var14) {
+                    var15 = 41;
+                  }
+                  if (var14 == 3) {
+                    var15 = 40;
+                  }
+                  if (var14 == 4) {
+                    var15 = 35;
+                  }
+                  if (var15 != -1) {
+                    MarkerSliderPainter.field_b[var15].drawTransparent(20, var5 + 2);
+                  }
+                  stackIn_68_0 = var5;
+                  stackIn_68_1 = EffectAudioHelpers.field_e;
+                  stackIn_68_2 = DisplayNamePanel.field_Q[var14];
+                  if (0 == var14) {
+                    stackIn_69_3 = 20;
+                  } else {
+                    stackIn_69_3 = 60;
+                  }
+                  stackIn_71_4 = var5;
+                  if (var14 != 0) {
+                    stackIn_72_5 = -40 + var3;
+                  } else {
+                    stackIn_72_5 = var3;
+                  }
+                  var5 = stackIn_68_0 + (((BinaryBitmapFont) (Object) stackIn_68_1).drawParagraph(stackIn_68_2, stackIn_69_3, stackIn_71_4, stackIn_72_5, 400, 16777215, 0, 0, 0, var2) * var2 + 15);
+                  var14++;
+                }
+                if (var16 == 0) {
+                  break;
+                }
+              case 6:
+                TranslatedUiText.field_e.drawLeft(DisplayNamePanel.field_J[6][0], 20, 135, 2, 0);
+                EffectAudioHelpers.field_e.drawParagraph(DisplayNamePanel.field_S[5][0], 20, 155, 600, 440, 16777215, 0, 0, 0, var2);
+                if (var16 == 0) {
+                  break;
+                }
+              case 7:
+                var5 = 155;
+                TranslatedUiText.field_e.drawLeft(DisplayNamePanel.field_J[7][0], 20, 135, 2, 0);
+                var14 = 0;
+                while (2 > var14) {
+                  if (var16 != 0) {
+                    break regionExit2;
+                  }
+                  stackIn_81_0 = IntrusiveDequeCursor.field_b;
+                  if (var14 == 0) {
+                    stackIn_82_1 = 0;
+                  } else {
+                    stackIn_82_1 = 3;
+                  }
+                  ((Sprite) (Object) stackIn_81_0[stackIn_82_1]).drawTransparent(28, -8 + var5);
+                  var5 = var5 + (var2 * EffectAudioHelpers.field_e.drawParagraph(ChatAndOptionHelpers.field_b[var14], 100, var5, var3 - 80, 400, 16777215, 0, 0, 0, var2) + 20);
+                  var14++;
+                }
+              default:
+                break;
+            }
+            EffectAudioHelpers.field_e.drawRightAligned(ReportAbuseDialog.formatPageNumber(120, 1 + DisplayNamePanel.field_S.length, 1 + this.field_m), 620, 410, 16777215, 0);
+          }
+        }
+    }
+
+    final void showPreviousPage(boolean param0, byte param1) {
+        int var3 = 0;
+        this.field_m = this.field_m - 1;
+        if (!param0 &&
+          this.field_m == 0) {
+          var3 = InfectionEvent.field_p;
+          InfectionEvent.field_p = 97;
+          this.field_g.handleHorizontalNavigation(1, false);
+          InfectionEvent.field_p = var3;
+        }
+        if (param1 > -110) {
+          this.showPreviousPage(false, (byte) -86);
+        }
+    }
+
+    final static boolean containsNonAlphanumeric(String param0, boolean param1) {
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        boolean stackIn_6_0 = false;
+        boolean stackIn_13_0 = false;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        boolean stackOut_5_0;
+        var4 = ZombieDawnMulti.field_E ? 1 : 0;
+        try {
+          if (param1) {
+            field_p = 29;
+          }
+          var2_int = 0;
+          boolean decompiledNaturalLoopExit0 = false;
+          while (!(decompiledNaturalLoopExit0 = (!(var2_int < param0.length())))) {
+            var3 = param0.charAt(var2_int);
+            stackOut_5_0 = EmailAvailabilityValidator.isAsciiLetter(-24315, (char) var3);
+            stackIn_13_0 = stackOut_5_0;
+            stackIn_6_0 = stackOut_5_0;
+            if (var4 == 0) {
+              if (!stackIn_6_0 &&
+                !ColourPickerWidget.isAsciiDigit((char) var3, (byte) 85)) {
+                return true;
+              }
+              var2_int++;
+              continue;
+            }
+            break;
+          }
+          if (decompiledNaturalLoopExit0) {
+            stackIn_13_0 = false;
+          }
+          return stackIn_13_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_16_0 = var2;
+          stackIn_16_1 = new StringBuilder().append("ol.JA(");
+          if (param0 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    static {
+        field_l = "Here you can set up a rated game. If you win, your rating will go up. If<nbsp>you lose, it will go down!<br><br>Please specify your preferences and click '<%0>'. Our system will then attempt to find suitable opponents in under a minute, depending on how busy the lobby<nbsp>is.<br><br>This is an excellent way to get to know new people!";
+    }
+}

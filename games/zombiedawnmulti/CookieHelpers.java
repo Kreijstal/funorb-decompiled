@@ -1,0 +1,109 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class CookieHelpers {
+    static UiComponent field_b;
+    static String field_a;
+    static boolean field_c;
+
+    public static void releaseStatics(byte param0) {
+        field_b = null;
+        field_a = null;
+        if (param0 != -12) {
+          field_b = (UiComponent) null;
+        }
+    }
+
+    final static String readCookie(java.applet.Applet param0, byte param1, String param2) {
+        try {
+          int var5 = 0;
+          RuntimeException var3 = null;
+          String[] var4 = null;
+          int var6 = 0;
+          int var7 = 0;
+          String var8 = null;
+          String stackIn_9_0 = null;
+          Object stackIn_16_0 = null;
+          RuntimeException stackIn_19_0 = null;
+          StringBuilder stackIn_19_1 = null;
+          String stackIn_20_2 = null;
+          StringBuilder stackIn_22_1 = null;
+          String stackIn_23_2 = null;
+          Throwable decompiledCaughtException = null;
+          Throwable var3_ref = null;
+          var7 = ZombieDawnMulti.field_E ? 1 : 0;
+          try {
+            try {
+              var8 = (String) (JavaScriptBridge.callJavaScript(param0, 13093, "getcookies"));
+              var4 = WidgetStyleLayer.splitAtCharacter(';', false, var8);
+              for (var5 = 0; var4.length > var5; var5++) {
+                var6 = var4[var5].indexOf('=');
+                if (var6 >= 0 &&
+                  var4[var5].substring(0, var6).trim().equals(param2)) {
+                  stackIn_9_0 = var4[var5].substring(1 + var6).trim();
+                  return stackIn_9_0;
+                }
+              }
+              if (param1 < 94) {
+                field_a = (String) null;
+              }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var3_ref = decompiledCaughtException;
+            }
+            stackIn_16_0 = null;
+            return (String) (stackIn_16_0);
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var3 = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_19_0 = var3;
+            stackIn_19_1 = new StringBuilder().append("ec.B(");
+            if (param0 == null) {
+              stackIn_20_2 = "null";
+            } else {
+              stackIn_20_2 = "{...}";
+            }
+            stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',');
+            if (param2 == null) {
+              stackIn_23_2 = "null";
+            } else {
+              stackIn_23_2 = "{...}";
+            }
+            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    final static void drawOverlayBackdrop(boolean param0, boolean param1, int param2) {
+        String var4 = null;
+        String var4Lifetime1;
+        if (param0) {
+          SoftwareRasterizer.fillRectAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 192);
+          if (param2 >= -98) {
+            var4 = (String) null;
+            CookieHelpers.readCookie((java.applet.Applet) null, (byte) -12, (String) null);
+            SoundEffectInstance.drawDialogLayer(param0, -120);
+            return;
+          }
+          SoundEffectInstance.drawDialogLayer(param0, -120);
+          return;
+        }
+        SoftwareRasterizer.clear();
+        if (param2 >= -98) {
+          var4Lifetime1 = (String) null;
+          CookieHelpers.readCookie((java.applet.Applet) null, (byte) -12, (String) null);
+          SoundEffectInstance.drawDialogLayer(param0, -120);
+          return;
+        }
+        SoundEffectInstance.drawDialogLayer(param0, -120);
+    }
+
+    static {
+        field_c = false;
+        field_a = "Research";
+    }
+}

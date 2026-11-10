@@ -16,7 +16,7 @@ final class PowerupBar {
     private PowerupButton[] field_b;
     private int field_l;
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         try {
           int var1_int = 98 / ((-2 - param0) / 60);
           field_j = null;
@@ -28,7 +28,7 @@ final class PowerupBar {
         }
     }
 
-    private final void a(Sprite param0, byte param1, Sprite param2) {
+    private final void drawCenteredBanner(Sprite param0, byte param1, Sprite param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -43,7 +43,7 @@ final class PowerupBar {
           if (param1 != 59) {
             return;
           }
-          g.a(param2, 320 - param2.width / 2, 400);
+          RasterEffectHelpers.darkenUnderSprite(param2, 320 - param2.width / 2, 400);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -68,7 +68,7 @@ final class PowerupBar {
         }
     }
 
-    final boolean a(int param0, int param1, int param2) {
+    final boolean addPowerupButton(int param0, int param1, int param2) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
@@ -79,16 +79,16 @@ final class PowerupBar {
           if (param1 != 255 &&
             param1 < 19 && (!FullscreenFocusCanvas.field_k.isUpgradeEquipped(45, -128) ||
             param1 == 17)) {
-            if (PortalView.isGuestOrNonMember(51603) && (jk.a((byte) -73, param1) ||
-              jk.a((byte) -122, param2))) {
+            if (PortalView.isGuestOrNonMember(51603) && (UpgradeAccessHelpers.isMembersOnlyUpgrade((byte) -73, param1) ||
+              UpgradeAccessHelpers.isMembersOnlyUpgrade((byte) -122, param2))) {
               return false;
             }
             if (this.field_m == 8) {
               return false;
             }
             this.field_b[-1 + this.field_m] = new PowerupButton(190 + (this.field_m * 40 - 40), param1, this.field_m - 1);
-            this.field_b[-1 + this.field_m].field_l = -PortalEntryEvent.field_m.currentTick + tg.field_e.powerupReadyTick[this.field_m - 1];
-            this.field_b[this.field_m - 1].a(0);
+            this.field_b[-1 + this.field_m].field_l = -PortalEntryEvent.field_m.currentTick + AudioPumpThread.field_e.powerupReadyTick[this.field_m - 1];
+            this.field_b[this.field_m - 1].startCooldown(0);
             return true;
           }
           return false;
@@ -99,7 +99,7 @@ final class PowerupBar {
         }
     }
 
-    final boolean a(byte param0) {
+    final boolean hasTargetMode(byte param0) {
         boolean stackIn_11_0 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -116,7 +116,7 @@ final class PowerupBar {
         }
     }
 
-    final boolean g(int param0) {
+    final boolean targetsHumans(int param0) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -133,7 +133,7 @@ final class PowerupBar {
         }
     }
 
-    final void a(int param0, int param1, byte param2) {
+    final void updatePointer(int param0, int param1, byte param2) {
         int var5_int = 0;
         int var4_int = 0;
         PowerupButton[] var4 = null;
@@ -151,17 +151,17 @@ final class PowerupBar {
           for (var5_int = 0; var5_int < var8.length; var5_int++) {
             var6_ref_fb = var8[var5_int];
             if (var6_ref_fb != null) {
-              var6_ref_fb.a(param1, param0, 255);
+              var6_ref_fb.tick(param1, param0, 255);
             }
           }
           this.field_a = -1;
           if (param2 < 64) {
-            this.b(119, 56, -64);
+            this.handleClick(119, 56, -64);
           }
           for (var4_int = 0; var4_int < this.field_b.length; var4_int++) {
             var5 = this.field_b[var4_int];
             if (var5 != null) {
-              var6 = var5.a(param1, (byte) -66);
+              var6 = var5.getPowerupAtX(param1, (byte) -66);
               if (-1 != var6) {
                 this.field_f = 20 + var5.field_m;
                 this.field_a = var4_int;
@@ -176,7 +176,7 @@ final class PowerupBar {
         }
     }
 
-    final static void a(boolean param0, int param1, boolean param2, boolean param3) {
+    final static void updateLobbyButtons(boolean param0, int param1, boolean param2, boolean param3) {
         UiComponent stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         boolean stackIn_15_2 = false;
@@ -191,52 +191,52 @@ final class PowerupBar {
         int var5 = 0;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          v.a(199);
+          LobbySlideLayout.positionSlidingPanels(199);
           if (param2) {
-            PowerupBar.d(-60);
+            PowerupBar.releaseStatics(-60);
           }
-          if (0 > bc.field_e) {
-            ql.field_b.field_wb = null;
+          if (0 > GlintButtonHelpers.field_e) {
+            RasterStackHelpers.field_b.field_wb = null;
           } else {
-            ql.field_b.field_wb = vl.a(ob.field_v, new String[]{Integer.toString(bc.field_e)}, 2);
+            RasterStackHelpers.field_b.field_wb = QueuedListRequest.substituteTemplateArguments(QuickChatCategoryDefinition.field_v, new String[]{Integer.toString(GlintButtonHelpers.field_e)}, 2);
           }
-          stackIn_14_0 = qe.field_k;
+          stackIn_14_0 = GameHud.field_k;
           stackIn_14_1 = -11838;
-          stackIn_15_2 = (param0) && (!param3) && (!ee.field_a) && (null == JaggrabDownloader.field_c) && (BufferedSocket.field_n == null);
-          ((UiComponent) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_15_2);
-          stackIn_22_0 = cm.field_a;
+          stackIn_15_2 = (param0) && (!param3) && (!LobbyScreenHelpers.field_a) && (null == JaggrabDownloader.field_c) && (BufferedSocket.field_n == null);
+          ((UiComponent) (Object) stackIn_14_0).updateRoot(stackIn_14_1, stackIn_15_2);
+          stackIn_22_0 = LobbyRequestHelpers.field_a;
           stackIn_22_1 = -11838;
-          stackIn_23_2 = (param0) && (!param3) && (!ee.field_a) && (JaggrabDownloader.field_c == null) && (BufferedSocket.field_n == null);
-          ((UiComponent) (Object) stackIn_22_0).a(stackIn_22_1, stackIn_23_2);
+          stackIn_23_2 = (param0) && (!param3) && (!LobbyScreenHelpers.field_a) && (JaggrabDownloader.field_c == null) && (BufferedSocket.field_n == null);
+          ((UiComponent) (Object) stackIn_22_0).updateRoot(stackIn_22_1, stackIn_23_2);
           stackIn_28_0 = SimHuman.field_gb;
           stackIn_28_1 = -11838;
-          stackIn_29_2 = (param0) && (!param3) && (ee.field_a);
-          ((UiComponent) (Object) stackIn_28_0).a(stackIn_28_1, stackIn_29_2);
-          de.field_b.field_c.processTabPresses(-37);
-          if (0 != kj.field_u.field_T) {
-            uk.field_N = true;
+          stackIn_29_2 = (param0) && (!param3) && (LobbyScreenHelpers.field_a);
+          ((UiComponent) (Object) stackIn_28_0).updateRoot(stackIn_28_1, stackIn_29_2);
+          AwtEventPumpHelpers.field_b.field_c.processTabPresses(-37);
+          if (0 != FriendListHelpers.field_u.field_T) {
+            ValidationIconWidget.field_N = true;
           }
           boolean decompiledFrameRemainder0 = true;
           if (PasswordValidator.field_t.field_T != 0) {
-            if (!bo.field_e &&
-              vl.field_h <= 0 && (!(kj.field_q >= 2) ||
-              !lc.field_m[12])) {
-              pb.field_f = true;
+            if (!LoginMethod.field_e &&
+              QueuedListRequest.field_h <= 0 && (!(FriendListHelpers.field_q >= 2) ||
+              !PulseEffect.field_m[12])) {
+              EffectAudioHelpers.field_f = true;
               decompiledFrameRemainder0 = false;
             }
             else {
-              ii.sendZeroBytePacket(param1, -1);
+              TickClock.sendZeroBytePacket(param1, -1);
             }
           }
           if (ArrayWidgetGroup.field_L.field_T != 0) {
-            if (1 == qo.field_r.length &&
-              i.field_e != qo.field_r[0]) {
-              i.field_e = qo.field_r[0];
+            if (1 == UiComponentNode.field_r.length &&
+              SharedTransportGlobals.field_e != UiComponentNode.field_r[0]) {
+              SharedTransportGlobals.field_e = UiComponentNode.field_r[0];
             }
-            cm.a(123, 0, i.field_e, IntrusiveDequeCursor.field_c, true, param1);
+            LobbyRequestHelpers.writeGameOptionsPacket(123, 0, SharedTransportGlobals.field_e, IntrusiveDequeCursor.field_c, true, param1);
           }
-          if (0 != kn.field_a.field_T) {
-            ee.field_a = false;
+          if (0 != LoginStartHelpers.field_a.field_T) {
+            LobbyScreenHelpers.field_a = false;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -246,7 +246,7 @@ final class PowerupBar {
         }
     }
 
-    final boolean a(boolean param0) {
+    final boolean targetsOwnZombies(boolean param0) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -263,7 +263,7 @@ final class PowerupBar {
         }
     }
 
-    final void c(int param0) {
+    final void draw(int param0) {
         RuntimeException decompiledCaughtException = null;
         PowerupButton[] var2 = null;
         int var2_int = 0;
@@ -286,49 +286,49 @@ final class PowerupBar {
           for (var3 = 0; var3 < var6.length; var3++) {
             var4_ref_fb = var6[var3];
             if (var4_ref_fb != null) {
-              var4_ref_fb.c(123);
+              var4_ref_fb.draw(123);
             }
           }
           if (this.field_a != -1 &&
-            this.field_a < tg.field_e.powerupTypes.length) {
-            var2_int = tg.field_e.powerupTypes[this.field_a];
-            var3Lifetime1 = tg.field_e.powerupLevels[this.field_a];
+            this.field_a < AudioPumpThread.field_e.powerupTypes.length) {
+            var2_int = AudioPumpThread.field_e.powerupTypes[this.field_a];
+            var3Lifetime1 = AudioPumpThread.field_e.powerupLevels[this.field_a];
             if (255 != var2_int) {
-              g.a(AccountCreationForm.field_W[var2_int], this.field_f - 100, 453);
+              RasterEffectHelpers.darkenUnderSprite(AccountCreationForm.field_W[var2_int], this.field_f - 100, 453);
               BirthDateEntryPanel.field_M[var2_int].drawTransparent(-100 + this.field_f, 453);
               if (var3Lifetime1 != 255) {
-                g.a(AccountCreationForm.field_W[var3Lifetime1], -100 + this.field_f, 438);
+                RasterEffectHelpers.darkenUnderSprite(AccountCreationForm.field_W[var3Lifetime1], -100 + this.field_f, 438);
                 BirthDateEntryPanel.field_M[var3Lifetime1].drawTransparent(-100 + this.field_f, 438);
               }
             }
           }
           if (this.field_e) {
-            this.a(wp.field_e, (byte) 59, vl.field_k);
+            this.drawCenteredBanner(AudioServiceHelpers.field_e, (byte) 59, QueuedListRequest.field_k);
           } else {
             if (this.field_d &&
               this.field_g &&
               this.field_c) {
-              this.a(la.field_j, (byte) 59, kj.field_o);
+              this.drawCenteredBanner(GrowableIntList.field_j, (byte) 59, FriendListHelpers.field_o);
             } else {
               if (this.field_d &&
                 this.field_g) {
-                this.a(NodeHashTableIterator.field_f, (byte) 59, oq.field_t);
+                this.drawCenteredBanner(NodeHashTableIterator.field_f, (byte) 59, ThreeSliceButtonPainter.field_t);
               } else {
                 if (!this.field_g) {
                   if (this.field_c &&
                     this.field_d) {
-                    this.a(StateIconLabel.field_Mb, (byte) 59, NetworkGameClient.field_u);
+                    this.drawCenteredBanner(StateIconLabel.field_Mb, (byte) 59, NetworkGameClient.field_u);
                   } else {
                     if (this.field_c) {
-                      this.a(SectorCacheStore.field_a, (byte) 59, ii.field_c);
+                      this.drawCenteredBanner(SectorCacheStore.field_a, (byte) 59, TickClock.field_c);
                     } else {
                       if (this.field_d) {
-                        this.a(AccountCreationForm.field_U, (byte) 59, ap.field_t);
+                        this.drawCenteredBanner(AccountCreationForm.field_U, (byte) 59, SocketJs5Transport.field_t);
                       }
                     }
                   }
                 } else {
-                  this.a(SocketConnector.field_c, (byte) 59, bf.field_f);
+                  this.drawCenteredBanner(SocketConnector.field_c, (byte) 59, MeltdownPuddle.field_f);
                 }
               }
             }
@@ -336,13 +336,13 @@ final class PowerupBar {
           var2_intLifetime1 = this.getSelectedPowerupType(-1);
           if (255 != var2_intLifetime1 &&
             0 < MouseInputHandler.field_g) {
-            if (bo.field_d <= 0) {
+            if (LoginMethod.field_d <= 0) {
               return;
             }
             var3Lifetime2 = 4 + MouseInputHandler.field_g;
-            var4 = 15 + bo.field_d;
-            MarkerSliderPainter.field_b[var2_intLifetime1].c(var3Lifetime2, var4, 255);
-            if (bk.field_g) {
+            var4 = 15 + LoginMethod.field_d;
+            MarkerSliderPainter.field_b[var2_intLifetime1].drawBlended(var3Lifetime2, var4, 255);
+            if (DirectByteStorage.field_g) {
               return;
             }
             LabeledChildWidget.field_E.drawHalfSize(1 + var3Lifetime2, var4 + 1);
@@ -375,7 +375,7 @@ final class PowerupBar {
         }
     }
 
-    final void a(int param0, int param1) {
+    final void selectSlot(int param0, int param1) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
@@ -383,7 +383,7 @@ final class PowerupBar {
             return;
           }
           if (!this.field_b[param0].field_b) {
-            this.b(param1 ^ -18, param0);
+            this.selectPowerup(param1 ^ -18, param0);
           }
           if (param1 != -1) {
             this.field_m = -102;
@@ -396,7 +396,7 @@ final class PowerupBar {
         }
     }
 
-    final boolean f(int param0) {
+    final boolean targetsGround(int param0) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -413,7 +413,7 @@ final class PowerupBar {
         }
     }
 
-    final int b(boolean param0) {
+    final int getTileEffectRadius(boolean param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int stackIn_8_0 = 0;
@@ -427,7 +427,7 @@ final class PowerupBar {
             var2_int != 10) {
             return 0;
           }
-          stackIn_8_0 = ip.field_f;
+          stackIn_8_0 = ClientProtocolStage.field_f;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -436,7 +436,7 @@ final class PowerupBar {
         }
     }
 
-    final boolean b(int param0, int param1) {
+    final boolean selectPowerup(int param0, int param1) {
         boolean stackIn_50_1 = false;
         boolean stackIn_59_1 = false;
         boolean stackIn_64_1 = false;
@@ -459,19 +459,19 @@ final class PowerupBar {
           if (param0 != 17) {
             this.field_c = false;
           }
-          if (!this.field_b[param1].b((byte) 92)) {
-            iq.a(-10, (byte) 99);
+          if (!this.field_b[param1].isSelected((byte) 92)) {
+            TutorialAndMenuHelpers.handleTutorialEvent(-10, (byte) 99);
             var7 = this.field_b;
             var3 = var7;
             for (var4 = 0; var4 < var7.length; var4++) {
               var5_ref_fb = var7[var4];
               if (null != var5_ref_fb) {
-                var5_ref_fb.c((byte) 18);
+                var5_ref_fb.deselect((byte) 18);
               }
             }
             regionExit1: {
               this.field_l = param1;
-              this.field_b[param1].b(2);
+              this.field_b[param1].select(2);
               var3_int = this.field_b[param1].getPowerupType((byte) 114);
               this.field_e = false;
               this.field_g = false;
@@ -542,8 +542,8 @@ final class PowerupBar {
             if (!FadingDialog.field_I) {
               return true;
             }
-            TranslatedUiText.openPowerupInfoPage((byte) -86, var3_int);
-            iq.a(var3_int, (byte) 99);
+            TranslatedUiText.showTipPage((byte) -86, var3_int);
+            TutorialAndMenuHelpers.handleTutorialEvent(var3_int, (byte) 99);
           } else {
             this.deselectActive(1);
           }
@@ -555,7 +555,7 @@ final class PowerupBar {
         }
     }
 
-    final boolean b(int param0, int param1, int param2) {
+    final boolean handleClick(int param0, int param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         boolean stackIn_9_0 = false;
@@ -568,7 +568,7 @@ final class PowerupBar {
             if (!this.field_b[var4_int].containsPoint(param0, param2, (byte) -46)) {
               return false;
             }
-            stackIn_9_0 = this.b(17, var4_int);
+            stackIn_9_0 = this.selectPowerup(17, var4_int);
             return stackIn_9_0;
           }
           return false;
@@ -583,11 +583,11 @@ final class PowerupBar {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (!this.a((byte) -122)) {
+          if (!this.hasTargetMode((byte) -122)) {
             return false;
           }
           if (null != this.field_b[this.field_l]) {
-            this.field_b[this.field_l].c((byte) 18);
+            this.field_b[this.field_l].deselect((byte) 18);
           }
           this.field_l = -1;
           this.field_c = false;
@@ -605,7 +605,7 @@ final class PowerupBar {
         }
     }
 
-    final void a(int param0, SceneObject param1, int param2, int param3) {
+    final void usePowerupOn(int param0, SceneObject param1, int param2, int param3) {
         UnitView stackIn_8_0 = null;
         RuntimeException stackIn_80_0 = null;
         StringBuilder stackIn_80_1 = null;
@@ -623,7 +623,7 @@ final class PowerupBar {
         try {
           regionExit1: {
             var5_int = this.getSelectedPowerupType(-1);
-            if (!(param1 instanceof jj)) {
+            if (!(param1 instanceof PhantomDecoy)) {
               var6_ref = (UnitView) (param1);
               if (var6_ref instanceof GameCharacter) {
                 stackIn_8_0 = var6_ref;
@@ -646,14 +646,14 @@ final class PowerupBar {
                       param0 = -1;
                       param2 = var6_ref.objectId;
                     }
-                    ok.sendPowerupRequest(-101, param0, ma.field_a, PortalEntryEvent.field_m.currentTick, param2, this.field_l);
+                    ViewportController.sendPowerupRequest(-101, param0, TextValidationFailure.field_a, PortalEntryEvent.field_m.currentTick, param2, this.field_l);
                     break regionExit1;
                   }
                   if (3 == var8) {
                     if (var7 != null &&
-                      var7.q(-14945) &&
+                      var7.isRecognizableZombie(-14945) &&
                       !var7.isBusy(127)) {
-                      MessageDialogContent.a(var6_ref.objectId, -1, this.field_l, PortalEntryEvent.field_m.currentTick, ma.field_a);
+                      MessageDialogContent.sendPowerupRequest(var6_ref.objectId, -1, this.field_l, PortalEntryEvent.field_m.currentTick, TextValidationFailure.field_a);
                       break regionExit1;
                     }
                     return;
@@ -668,26 +668,26 @@ final class PowerupBar {
                     if (var8 != 7 &&
                       var8 == 0) {
                     }
-                    MessageDialogContent.a(var6_ref.objectId, -1, this.field_l, PortalEntryEvent.field_m.currentTick, ma.field_a);
+                    MessageDialogContent.sendPowerupRequest(var6_ref.objectId, -1, this.field_l, PortalEntryEvent.field_m.currentTick, TextValidationFailure.field_a);
                     break regionExit1;
                   }
                   if (var7 != null &&
                     !var7.isBusy(88)) {
-                    MessageDialogContent.a(var6_ref.objectId, -1, this.field_l, PortalEntryEvent.field_m.currentTick, ma.field_a);
+                    MessageDialogContent.sendPowerupRequest(var6_ref.objectId, -1, this.field_l, PortalEntryEvent.field_m.currentTick, TextValidationFailure.field_a);
                     break regionExit1;
                   }
                   return;
                 }
-                ok.sendPowerupRequest(-117, param0, ma.field_a, PortalEntryEvent.field_m.currentTick, param2, this.field_l);
+                ViewportController.sendPowerupRequest(-117, param0, TextValidationFailure.field_a, PortalEntryEvent.field_m.currentTick, param2, this.field_l);
                 break regionExit1;
               }
-              nn.sendUntargetedPowerupRequest(ma.field_a, PortalEntryEvent.field_m.currentTick, this.field_l, (byte) 102);
+              LevelEncodingHelpers.sendUntargetedPowerupRequest(TextValidationFailure.field_a, PortalEntryEvent.field_m.currentTick, this.field_l, (byte) 102);
             } else {
-              MessageDialogContent.a(param1.objectId, -1, this.field_l, PortalEntryEvent.field_m.currentTick, ma.field_a);
+              MessageDialogContent.sendPowerupRequest(param1.objectId, -1, this.field_l, PortalEntryEvent.field_m.currentTick, TextValidationFailure.field_a);
             }
           }
-          tg.field_e.powerupReadyTick[this.field_l] = PortalEntryEvent.field_m.currentTick + PortalEntryEvent.field_m.getPowerupCooldown(FullscreenFocusCanvas.field_k.field_g[this.field_l], var5_int, PowerupButton.field_e.localTeam, false);
-          this.field_b[this.field_l].a(0);
+          AudioPumpThread.field_e.powerupReadyTick[this.field_l] = PortalEntryEvent.field_m.currentTick + PortalEntryEvent.field_m.getPowerupCooldown(FullscreenFocusCanvas.field_k.field_g[this.field_l], var5_int, PowerupButton.field_e.localTeam, false);
+          this.field_b[this.field_l].startCooldown(0);
           this.field_c = false;
           this.field_g = false;
           if (param3 < 112) {
@@ -696,7 +696,7 @@ final class PowerupBar {
           this.field_l = -1;
           this.field_e = false;
           this.field_d = false;
-          iq.a(-11, (byte) 99);
+          TutorialAndMenuHelpers.handleTutorialEvent(-11, (byte) 99);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -712,7 +712,7 @@ final class PowerupBar {
         }
     }
 
-    final boolean a(int param0) {
+    final boolean targetsEnemies(int param0) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -729,7 +729,7 @@ final class PowerupBar {
         }
     }
 
-    final void b(int param0) {
+    final void resetButtons(int param0) {
         int var4 = 0;
         int var2_int = 0;
         PowerupButton[] var3 = null;
@@ -745,8 +745,8 @@ final class PowerupBar {
             var5 = var3[var4];
             if (var5 != null) {
               var5.field_b = false;
-              var5.b(2);
-              var5.c((byte) 18);
+              var5.select(2);
+              var5.deselect((byte) 18);
             }
           }
           return;

@@ -68,7 +68,7 @@ final class IndexedSprite extends IndexedSpriteState {
         }
     }
 
-    final void c() {
+    final void rotateClockwise() {
         int var4 = 0;
         int incrementValue$0 = 0;
         int var3 = 0;
@@ -317,7 +317,7 @@ final class IndexedSprite extends IndexedSpriteState {
         return false;
     }
 
-    final void d(int param0, int param1) {
+    final void drawOpaque(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -420,7 +420,7 @@ final class IndexedSprite extends IndexedSpriteState {
         IndexedSprite.copyPaletteRowsScaled(SoftwareRasterizer.pixels, this.pixelIndices, this.palette, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
     }
 
-    final void b() {
+    final void rotateCounterclockwise() {
         int var4 = 0;
         int incrementValue$0 = 0;
         int var3 = 0;
@@ -448,7 +448,7 @@ final class IndexedSprite extends IndexedSpriteState {
         this.field_f = var3Lifetime3;
     }
 
-    final IndexedSprite d() {
+    final IndexedSprite copy() {
         int var3 = 0;
         IndexedSprite var1 = new IndexedSprite(this.field_e, this.field_b, this.palette.length);
         int var3Lifetime1;
@@ -616,7 +616,7 @@ final class IndexedSprite extends IndexedSpriteState {
         }
     }
 
-    final void e() {
+    final void encodeTransparentRuns() {
         int var2 = 0;
         int var4 = 0;
         int var1;

@@ -8,23 +8,23 @@ final class MusicPatch extends IntrusiveNode {
     PcmSample[] field_s;
     static int field_n;
     static String field_i;
-    static pd field_l;
+    static FramePainter field_l;
     static UiComponent field_k;
     short[] field_g;
     byte[] field_j;
     static String field_f;
     int field_o;
     static boolean field_p;
-    nj[] field_q;
+    MusicPatchEnvelope[] field_q;
     byte[] field_h;
     byte[] field_m;
 
-    final static void a(byte param0, int param1) {
+    final static void setStatusFlagBit(byte param0, int param1) {
         int var2 = 30 / ((param0 - 70) / 37);
-        w.field_m = w.field_m | 1 << -param1;
+        MusicCrossfadeStream.field_m = MusicCrossfadeStream.field_m | 1 << -param1;
     }
 
-    final void e(int param0) {
+    final void clearSampleIds(int param0) {
         this.field_r = null;
         if (param0 != -6930) {
           field_p = true;
@@ -39,45 +39,45 @@ final class MusicPatch extends IntrusiveNode {
         field_f = null;
     }
 
-    final static void a(int param0) {
-        nk.field_n = new String[AlignedIconLabel.field_Kb];
-        nk.field_n[7] = kg.field_l;
-        nk.field_n[5] = jk.field_e;
-        nk.field_n[4] = hp.field_h;
-        nk.field_n[18] = PortalEntryEvent.field_o;
-        nk.field_n[21] = ClickMarker.field_p;
-        nk.field_n[6] = QuickChatMenu.field_Lb;
-        nk.field_n[16] = mn.field_n;
-        nk.field_n[19] = DropTargetWidget.field_E;
-        nk.field_n[13] = vn.field_a;
-        nk.field_n[20] = GameSimulation.field_c;
+    final static void initializeReportReasonLabels(int param0) {
+        ZombieDetonation.field_n = new String[AlignedIconLabel.field_Kb];
+        ZombieDetonation.field_n[7] = ProgramNoteUsage.field_l;
+        ZombieDetonation.field_n[5] = UpgradeAccessHelpers.field_e;
+        ZombieDetonation.field_n[4] = RandomHelpers.field_h;
+        ZombieDetonation.field_n[18] = PortalEntryEvent.field_o;
+        ZombieDetonation.field_n[21] = ClickMarker.field_p;
+        ZombieDetonation.field_n[6] = QuickChatMenu.field_Lb;
+        ZombieDetonation.field_n[16] = EmailLoginCredentials.field_n;
+        ZombieDetonation.field_n[19] = DropTargetWidget.field_E;
+        ZombieDetonation.field_n[13] = MenuFrameHelpers.field_a;
+        ZombieDetonation.field_n[20] = GameSimulation.field_c;
         if (param0 != 2) {
-          MusicPatch.d(2);
+          MusicPatch.randomTileOffset(2);
         }
-        nk.field_n[17] = tj.field_d;
-        nk.field_n[9] = li.field_z;
-        nk.field_n[11] = si.field_D;
-        nk.field_n[15] = HuffmanCodec.field_f;
+        ZombieDetonation.field_n[17] = EffectVolumeHelpers.field_d;
+        ZombieDetonation.field_n[9] = DiskArchiveRequest.field_z;
+        ZombieDetonation.field_n[11] = GameResultsScreen.field_D;
+        ZombieDetonation.field_n[15] = HuffmanCodec.field_f;
     }
 
-    final static int d(int param0) {
+    final static int randomTileOffset(int param0) {
         if (param0 != 12949) {
           return -35;
         }
-        return hp.nextBoundedInt((byte) -122, g.field_a, 16) + 4;
+        return RandomHelpers.nextBoundedInt((byte) -122, RasterEffectHelpers.field_a, 16) + 4;
     }
 
-    final static boolean c(int param0) {
+    final static boolean isEmailAvailabilityPending(int param0) {
         if (param0 != 128) {
           return true;
         }
-        return !tg.field_g.isFlagAssigned(-86) ? true : false;
+        return !AudioPumpThread.field_g.hasChanged(-86) ? true : false;
     }
 
     MusicPatch(byte[] param0) {
         int var11_int = 0;
         int incrementValue$0 = 0;
-        nj dupTemp$8 = null;
+        MusicPatchEnvelope dupTemp$8 = null;
         int incrementValue$6 = 0;
         int var25_int = 0;
         int incrementValue$3 = 0;
@@ -99,11 +99,11 @@ final class MusicPatch extends IntrusiveNode {
         byte[] var11 = null;
         int var12 = 0;
         int var13_int = 0;
-        nj[] var13 = null;
+        MusicPatchEnvelope[] var13 = null;
         int var14 = 0;
         int var15_int = 0;
         byte[] var15 = null;
-        nj var15_ref = null;
+        MusicPatchEnvelope var15_ref = null;
         byte[] var16 = null;
         int var16_int = 0;
         int var17 = 0;
@@ -128,19 +128,19 @@ final class MusicPatch extends IntrusiveNode {
         int var37 = 0;
         PacketBuffer var38 = null;
         byte[] var39 = null;
-        nj var40 = null;
+        MusicPatchEnvelope var40 = null;
         byte[] var41 = null;
         byte[] var42 = null;
         byte[] var43 = null;
         byte[] var44 = null;
-        nj var45 = null;
+        MusicPatchEnvelope var45 = null;
         byte[] var46 = null;
         byte[] var47 = null;
-        nj var48 = null;
-        nj var49 = null;
-        nj var50 = null;
-        nj var51 = null;
-        nj var52 = null;
+        MusicPatchEnvelope var48 = null;
+        MusicPatchEnvelope var49 = null;
+        MusicPatchEnvelope var50 = null;
+        MusicPatchEnvelope var51 = null;
+        MusicPatchEnvelope var52 = null;
         byte[] var53 = null;
         byte[] var54 = null;
         byte[] var55 = null;
@@ -204,7 +204,7 @@ final class MusicPatch extends IntrusiveNode {
         int var30Lifetime1Lifetime2;
         int var31Lifetime1Lifetime1;
         try {
-          this.field_q = new nj[128];
+          this.field_q = new MusicPatchEnvelope[128];
           this.field_h = new byte[128];
           this.field_s = new PcmSample[128];
           this.field_m = new byte[128];
@@ -270,9 +270,9 @@ final class MusicPatch extends IntrusiveNode {
           } else {
             var12 = var9;
           }
-          var13 = new nj[var12];
+          var13 = new MusicPatchEnvelope[var12];
           for (var14Lifetime1 = 0; var13.length > var14Lifetime1; var14Lifetime1++) {
-            dupTemp$8 = new nj();
+            dupTemp$8 = new MusicPatchEnvelope();
             var13[var14Lifetime1] = dupTemp$8;
             var40 = dupTemp$8;
             var15_ref = var40;
@@ -391,7 +391,7 @@ final class MusicPatch extends IntrusiveNode {
                 }
               }
               var20Lifetime5--;
-              this.field_q[var26] = (nj) (var25);
+              this.field_q[var26] = (MusicPatchEnvelope) (var25);
             }
           }
           var21Lifetime4 = 0;
@@ -472,7 +472,7 @@ final class MusicPatch extends IntrusiveNode {
               var31 = var15[var29Lifetime3Lifetime1 + 1];
               var32 = (var30 - var27Lifetime6Lifetime1) / 2 + var28 * (var30 - var27Lifetime6Lifetime1);
               for (var33 = var27Lifetime6Lifetime1; var33 < var30; var33++) {
-                var34 = cn.a(-var27Lifetime6Lifetime1 + var30, -95, var32);
+                var34 = CachedArchiveSource.floorDiv(-var27Lifetime6Lifetime1 + var30, -95, var32);
                 var32 = var32 + (-var28 + var31);
                 this.field_h[var33] = (byte)(32 + var34 * this.field_h[var33] >> 6);
               }
@@ -511,7 +511,7 @@ final class MusicPatch extends IntrusiveNode {
               var37 = var27Lifetime7Lifetime1;
               var33Lifetime1 = var37;
               while (var30Lifetime1Lifetime1 > var37) {
-                var34Lifetime1 = cn.a(-var27Lifetime7Lifetime1 + var30Lifetime1Lifetime1, -125, var32Lifetime1);
+                var34Lifetime1 = CachedArchiveSource.floorDiv(-var27Lifetime7Lifetime1 + var30Lifetime1Lifetime1, -125, var32Lifetime1);
                 var35 = (this.field_j[var37] & 255) + var34Lifetime1;
                 if (0 > var35) {
                   var35 = 0;
@@ -584,7 +584,7 @@ final class MusicPatch extends IntrusiveNode {
         }
     }
 
-    final boolean a(me param0, int param1, byte[] param2, int[] param3) {
+    final boolean loadSamples(SoundCache param0, int param1, byte[] param2, int[] param3) {
         int var8 = 0;
         int stackIn_22_0 = 0;
         RuntimeException stackIn_25_0 = null;
@@ -605,7 +605,7 @@ final class MusicPatch extends IntrusiveNode {
         try {
           var5_int = 1;
           if (param1 < 39) {
-            MusicPatch.c(-70);
+            MusicPatch.isEmailAvailabilityPending(-70);
           }
           var6 = 0;
           var7 = null;

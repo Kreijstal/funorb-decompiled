@@ -274,8 +274,8 @@ final class LevelActorSpawner extends LevelData {
         }
     }
 
-    final void a(byte param0) {
-        this.a(this.field_g, 9);
+    final void initializeTileGrid(byte param0) {
+        this.buildWalkabilityFlags(this.field_g, 9);
         if (param0 <= 120) {
           return;
         }
@@ -324,7 +324,7 @@ final class LevelActorSpawner extends LevelData {
               var5 = 0;
               break;
             }
-            var5 = hp.nextBoundedInt((byte) 10, g.field_a, param0.teamCount - var4) + var4;
+            var5 = RandomHelpers.nextBoundedInt((byte) 10, RasterEffectHelpers.field_a, param0.teamCount - var4) + var4;
             var6_int = param0.field_y[var5];
             param0.field_y[var5] = param0.field_y[var4];
             param0.field_y[var4] = var6_int;
@@ -407,10 +407,10 @@ final class LevelActorSpawner extends LevelData {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new Sprite(param1.a("final_frame.jpg", "", false), (java.awt.Component) ((Object) NameEntryPopup.field_Ib));
+          var2 = new Sprite(param1.getNamedFile("final_frame.jpg", "", false), (java.awt.Component) ((Object) NameEntryPopup.field_Ib));
           var3 = var2.width;
           var4 = var2.height;
-          m.pushRasterState(540);
+          PasswordTextPainter.pushRasterState(540);
           if (param0 != 30651) {
             return;
           }
@@ -421,7 +421,7 @@ final class LevelActorSpawner extends LevelData {
           GameScreen.field_s.bindAsRenderTarget();
           var2.drawOpaque(0, -MatchingTextValidator.field_v.height);
           GameScreen.field_s.field_y = MatchingTextValidator.field_v.height;
-          ql.a(true);
+          RasterStackHelpers.popRaster(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -478,7 +478,7 @@ final class LevelActorSpawner extends LevelData {
             return (SimEntity) ((Object) stackIn_13_0);
           }
           if (param4 == 1) {
-            stackIn_8_0 = ee.a(param3, param1, param0, true);
+            stackIn_8_0 = LobbyScreenHelpers.createArmedHuman(param3, param1, param0, true);
             return (SimEntity) ((Object) stackIn_8_0);
           }
           if (param4 != 4) {
@@ -567,57 +567,57 @@ final class LevelActorSpawner extends LevelData {
         int var5 = 0;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          en.a(-1, 1);
+          ChatPanelSetupHelpers.setCursorType(-1, 1);
           if (param1 == 10 &&
             1 == PortalEntryEvent.field_m.teamCount) {
-            bi.field_e = true;
+            AccountTextGlobals.field_e = true;
             param3 = 1;
             param1 = 15;
           }
-          gk.field_b = 0;
-          vd.field_d = param3;
-          sp.field_g = param1;
+          NoticeMenuHelpers.field_b = 0;
+          SleepAndNameHelpers.field_d = param3;
+          CachedTextLayout.field_g = param1;
           if (param2 <= 124) {
             return;
           }
-          if (sp.field_g == -4 ||
-            sp.field_g == -2 ||
-            sp.field_g == -5 ||
-            1 == sp.field_g ||
-            8 == sp.field_g) {
-            UiComponent.d(false, 0);
+          if (CachedTextLayout.field_g == -4 ||
+            CachedTextLayout.field_g == -2 ||
+            CachedTextLayout.field_g == -5 ||
+            1 == CachedTextLayout.field_g ||
+            8 == CachedTextLayout.field_g) {
+            UiComponent.playMusicTrack(false, 0);
             if ((var5 != 0) &&
-              (sp.field_g == 15)) {
-              UiComponent.d(false, 10);
+              (CachedTextLayout.field_g == 15)) {
+              UiComponent.playMusicTrack(false, 10);
             }
           } else {
-            if (sp.field_g == 15) {
-              UiComponent.d(false, 10);
+            if (CachedTextLayout.field_g == 15) {
+              UiComponent.playMusicTrack(false, 10);
             }
           }
-          if (-4 == sp.field_g) {
-            iq.field_f = true;
+          if (-4 == CachedTextLayout.field_g) {
+            TutorialAndMenuHelpers.field_f = true;
             if ((var5 != 0) &&
-              (sp.field_g == -7)) {
-              iq.field_f = false;
+              (CachedTextLayout.field_g == -7)) {
+              TutorialAndMenuHelpers.field_f = false;
             }
           } else {
-            if (sp.field_g == -7) {
-              iq.field_f = false;
+            if (CachedTextLayout.field_g == -7) {
+              TutorialAndMenuHelpers.field_f = false;
             }
           }
-          if (lb.a((byte) 53, sp.field_g)) {
+          if (PasswordCheckHelpers.isNonNegative((byte) 53, CachedTextLayout.field_g)) {
             var4_int = 0;
-            if (sp.field_g == 8) {
+            if (CachedTextLayout.field_g == 8) {
               var4_int = -1;
             }
-            if (null == gk.lookupMenuScreen(2, sp.field_g)) {
+            if (null == NoticeMenuHelpers.lookupMenuScreen(2, CachedTextLayout.field_g)) {
               MouseInputHandler.reportClientError("no target_menu ", (Throwable) null, false);
               return;
             }
-            gk.lookupMenuScreen(2, sp.field_g).onEnter(0, param0, var4_int);
-            if (8 == sp.field_g) {
-              LevelData.a((byte) 127, param0);
+            NoticeMenuHelpers.lookupMenuScreen(2, CachedTextLayout.field_g).onEnter(0, param0, var4_int);
+            if (8 == CachedTextLayout.field_g) {
+              LevelData.openScreenshotSlideshow((byte) 127, param0);
             }
           }
           return;

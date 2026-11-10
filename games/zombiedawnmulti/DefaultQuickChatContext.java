@@ -1,0 +1,262 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class DefaultQuickChatContext implements QuickChatContext {
+    static String field_a;
+    static IndexedSprite field_g;
+    static String field_b;
+    static String field_e;
+    static String field_c;
+    static Boolean field_d;
+    static Sprite[][] field_f;
+
+    public static void releaseStatics(boolean param0) {
+        field_g = null;
+        field_f = (Sprite[][]) null;
+        field_c = null;
+        field_e = null;
+        field_a = null;
+        field_d = null;
+        if (!param0) {
+          field_b = null;
+          return;
+        }
+        int[] var2 = (int[]) null;
+        DefaultQuickChatContext.pollIncomingPacket((int[]) null, (byte) 46);
+        field_b = null;
+    }
+
+    final static void drawMenuUiAndPopups(boolean param0, int param1) {
+        MenuScreen.drawLobbyOverlays(param1 ^ -122, param0);
+        if (param1 != 0) {
+          return;
+        }
+        TextInputWidget.drawOverlayLayers(false, param0);
+    }
+
+    final static void clearBucketCounts(byte param0) {
+        int[] var1 = null;
+        int var2 = 0;
+        int var3 = 0;
+        int var4 = 0;
+        int[] var5 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
+        var4 = ZombieDawnMulti.field_E ? 1 : 0;
+        try {
+          var5 = LobbyStateHelpers.field_e;
+          var1 = var5;
+          if (param0 != 8) {
+            field_e = (String) null;
+          }
+          var2 = 0;
+          var3 = var5.length;
+          while (var3 > var2) {
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "dd.C(" + param0 + ')');
+        }
+    }
+
+    final static boolean pollIncomingPacket(int[] param0, byte param1) {
+        int var5_int = 0;
+        int var6 = 0;
+        int stackIn_20_0 = 0;
+        RuntimeException stackIn_44_0 = null;
+        StringBuilder stackIn_44_1 = null;
+        String stackIn_45_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        long var2_long = 0L;
+        RuntimeException var2 = null;
+        DelayedPacket var4_ref_bb = null;
+        int var4 = 0;
+        DelayedPacket var5 = null;
+        int var7 = 0;
+        var7 = ZombieDawnMulti.field_E ? 1 : 0;
+        try {
+          if (CredentialKind.field_a != IntroScreen.field_l) {
+            return false;
+          }
+          var2_long = ClockAndScreenHelpers.monotonicMillis((byte) 94);
+          if (param1 > -77) {
+            return true;
+          }
+          if (SimArmedHuman.field_Db != 0 &&
+            PropObject.field_F < 0) {
+            var4_ref_bb = (DelayedPacket) (LinkButtonPainter.field_k.last(60));
+            if (var4_ref_bb != null &&
+              var4_ref_bb.field_j < var2_long) {
+              var4_ref_bb.unlink(true);
+              EmailAvailabilityValidator.field_q = var4_ref_bb.field_f.length;
+              StatusAndMeshHelpers.field_e.position = 0;
+              for (var5_int = 0; EmailAvailabilityValidator.field_q > var5_int; var5_int++) {
+                StatusAndMeshHelpers.field_e.payload[var5_int] = var4_ref_bb.field_f[var5_int];
+              }
+              PacketBuffer.field_k = ChatPromptHelpers.field_e;
+              ChatPromptHelpers.field_e = CheckboxPainter.field_d;
+              CheckboxPainter.field_d = PortalEntryEvent.field_i;
+              PortalEntryEvent.field_i = var4_ref_bb.field_l;
+              return true;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_44_0 = var2;
+          stackIn_44_1 = new StringBuilder().append("dd.F(");
+          if (param0 == null) {
+            stackIn_45_2 = "null";
+          } else {
+            stackIn_45_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param1).append(')').toString());
+        }
+        stackIn_20_0 = PropObject.field_F;
+        try {
+          while (true) {
+            if (stackIn_20_0 < 0) {
+              StatusAndMeshHelpers.field_e.position = 0;
+              if (!ReportAbuseDialog.fillIncomingBuffer(10, 1)) {
+                return false;
+              }
+              PropObject.field_F = StatusAndMeshHelpers.field_e.readCipheredOpcode(101);
+              StatusAndMeshHelpers.field_e.position = 0;
+              EmailAvailabilityValidator.field_q = param0[PropObject.field_F];
+            }
+            if (!DefaultQuickChatContext.isPacketPayloadReady(0)) {
+              return false;
+            }
+            if (SimArmedHuman.field_Db == 0) {
+              PacketBuffer.field_k = ChatPromptHelpers.field_e;
+              ChatPromptHelpers.field_e = CheckboxPainter.field_d;
+              CheckboxPainter.field_d = PortalEntryEvent.field_i;
+              PortalEntryEvent.field_i = PropObject.field_F;
+              PropObject.field_F = -1;
+              return true;
+            }
+            var4 = SimArmedHuman.field_Db;
+            if (0.0 != GrowableIntList.field_n) {
+              var4 = (int)((double)var4 + TertiaryLinkDeque.field_c.nextGaussian() * GrowableIntList.field_n);
+              if (var4 < 0) {
+                var4 = 0;
+              }
+            }
+            var5 = new DelayedPacket(var2_long + (long)var4, PropObject.field_F, new byte[EmailAvailabilityValidator.field_q]);
+            for (var6 = 0; EmailAvailabilityValidator.field_q > var6; var6++) {
+              var5.field_f[var6] = StatusAndMeshHelpers.field_e.payload[var6];
+            }
+            LinkButtonPainter.field_k.addFirst(var5, false);
+            PropObject.field_F = -1;
+            stackIn_20_0 = PropObject.field_F;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+          decompiledCaughtException = decompiledCaughtParameter1;
+          var2 = decompiledCaughtException;
+          stackIn_44_0 = var2;
+          stackIn_44_1 = new StringBuilder().append("dd.F(");
+          if (param0 == null) {
+            stackIn_45_2 = "null";
+          } else {
+            stackIn_45_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final static boolean isPacketPayloadReady(int param0) {
+        if (param0 == ~EmailAvailabilityValidator.field_q) {
+          if (!ReportAbuseDialog.fillIncomingBuffer(10, 1)) {
+            return false;
+          }
+          EmailAvailabilityValidator.field_q = StatusAndMeshHelpers.field_e.readUnsignedByte(param0 + 31365);
+          StatusAndMeshHelpers.field_e.position = 0;
+        }
+        if (EmailAvailabilityValidator.field_q == -2) {
+          if (!ReportAbuseDialog.fillIncomingBuffer(param0 + 10, 2)) {
+            return false;
+          }
+          EmailAvailabilityValidator.field_q = StatusAndMeshHelpers.field_e.readUnsignedShort((byte) 69);
+          StatusAndMeshHelpers.field_e.position = 0;
+        }
+        return ReportAbuseDialog.fillIncomingBuffer(10, EmailAvailabilityValidator.field_q);
+    }
+
+    final static void handleAccountRequestResult(int param0, String[] param1, String param2, int param3) {
+        int var5 = 0;
+        String[] var6 = null;
+        boolean stackIn_4_0 = false;
+        boolean stackIn_5_1 = false;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_18_2 = null;
+        StringBuilder stackIn_20_1 = null;
+        String stackIn_21_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var4 = null;
+        String[] var7 = null;
+        var5 = ZombieDawnMulti.field_E ? 1 : 0;
+        try {
+          ProgressDialog.field_hb = RankingEntry.field_j;
+          if (param3 != 255) {
+            if (param3 < 100) {
+              DiskCacheWorker.field_g = ObjectFactoryHelpers.createRequestResult(-28, param2, param3);
+            } else {
+              if (param3 <= 105) {
+                var7 = param1;
+                UpgradeAccessHelpers.setUsernameSuggestions(param0 ^ 0, var7);
+                DiskCacheWorker.field_g = LoginStartHelpers.createResultWithArgs(param1, param0 ^ -107);
+              } else {
+                DiskCacheWorker.field_g = ObjectFactoryHelpers.createRequestResult(-28, param2, param3);
+              }
+            }
+          } else {
+            stackIn_4_0 = false;
+            stackIn_5_1 = !(RubbleChunk.field_J >= 13);
+            DiskCacheWorker.field_g = CheckboxPainter.createFlagResult(stackIn_4_0, stackIn_5_1);
+            var6 = (String[]) null;
+            UpgradeAccessHelpers.setUsernameSuggestions(0, (String[]) null);
+          }
+          if (param0 == 0) {
+            return;
+          }
+          DefaultQuickChatContext.releaseStatics(false);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_17_0 = var4;
+          stackIn_17_1 = new StringBuilder().append("dd.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_2 = "{...}";
+          }
+          stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',');
+          if (param2 == null) {
+            stackIn_21_2 = "null";
+          } else {
+            stackIn_21_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    static {
+        field_a = "Please check if address is correct";
+        field_b = "Draws even more zombies to you at the start of each match than Prepared. Equip both for the maximum number of minions.";
+        field_f = new Sprite[5][];
+        field_e = "Cancel";
+        field_c = "For the zombie on the go.";
+    }
+}

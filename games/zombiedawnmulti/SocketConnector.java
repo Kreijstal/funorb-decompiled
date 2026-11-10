@@ -26,19 +26,19 @@ abstract class SocketConnector {
         field_a = null;
     }
 
-    final static void a(jh param0, boolean param1, PacketBuffer param2, boolean param3) {
+    final static void readLobbyGameEntry(LobbyGame param0, boolean param1, PacketBuffer param2, boolean param3) {
         int var8 = 0;
-        jh stackIn_6_0 = null;
+        LobbyGame stackIn_6_0 = null;
         boolean stackIn_7_1 = false;
-        jh stackIn_9_0 = null;
+        LobbyGame stackIn_9_0 = null;
         boolean stackIn_10_1 = false;
-        jh stackIn_12_0 = null;
+        LobbyGame stackIn_12_0 = null;
         boolean stackIn_13_1 = false;
-        jh stackIn_16_0 = null;
+        LobbyGame stackIn_16_0 = null;
         boolean stackIn_17_1 = false;
-        jh stackIn_19_0 = null;
+        LobbyGame stackIn_19_0 = null;
         boolean stackIn_20_1 = false;
-        jh stackIn_22_0 = null;
+        LobbyGame stackIn_22_0 = null;
         int stackIn_23_1 = 0;
         int stackIn_26_0 = 0;
         int stackIn_31_0 = 0;
@@ -62,22 +62,22 @@ abstract class SocketConnector {
           param0.field_mc = param2.readUnsignedByte(31365);
           param0.field_Pb = param2.readUnsignedByte(31365);
           var4_int = param2.readUnsignedByte(31365);
-          stackIn_6_0 = (jh) (param0);
+          stackIn_6_0 = (LobbyGame) (param0);
           stackIn_7_1 = (0 != (var4_int & 128));
           stackIn_6_0.field_Mb = stackIn_7_1;
-          stackIn_9_0 = (jh) (param0);
+          stackIn_9_0 = (LobbyGame) (param0);
           stackIn_10_1 = ((var4_int & 64) != 0);
           stackIn_9_0.field_Fb = stackIn_10_1;
-          stackIn_12_0 = (jh) (param0);
+          stackIn_12_0 = (LobbyGame) (param0);
           stackIn_13_1 = ((32 & var4_int) != 0);
           stackIn_12_0.field_dc = stackIn_13_1;
-          stackIn_16_0 = (jh) (param0);
+          stackIn_16_0 = (LobbyGame) (param0);
           stackIn_17_1 = (param0.field_Mb) && (param0.field_cc < param0.field_mc);
           stackIn_16_0.field_Ob = stackIn_17_1;
-          stackIn_19_0 = (jh) (param0);
+          stackIn_19_0 = (LobbyGame) (param0);
           stackIn_20_1 = ((var4_int & 8) != 0);
           stackIn_19_0.field_Wb = stackIn_20_1;
-          stackIn_22_0 = (jh) (param0);
+          stackIn_22_0 = (LobbyGame) (param0);
           if ((16 & var4_int) == 0) {
             stackIn_23_1 = 1;
           } else {
@@ -89,11 +89,11 @@ abstract class SocketConnector {
           if (param3) {
             field_d = (String) null;
           }
-          param2.a(0, -6351, param0.field_Zb.length, param0.field_Zb);
+          param2.readBytes(0, -6351, param0.field_Zb.length, param0.field_Zb);
           stackIn_31_0 = ((var4_int & 2) == 0) ? 0 : 1;
           var6 = stackIn_31_0;
           param0.field_Ub = param2.readUnsignedShort((byte) 69);
-          param0.field_qc = bl.monotonicMillis((byte) 108) - (long)param2.readInt(-1478490344);
+          param0.field_qc = ClockAndScreenHelpers.monotonicMillis((byte) 108) - (long)param2.readInt(-1478490344);
           if (var5 == 0) {
             param0.field_Sb = -1;
           } else {
@@ -132,41 +132,41 @@ abstract class SocketConnector {
         }
     }
 
-    final static void a(int param0) {
+    final static void createCircleMarkerSprites(int param0) {
         int var1_int = 0;
         int var2 = ZombieDawnMulti.field_E ? 1 : 0;
         if (null == field_h) {
           return;
         }
         try {
-          g.c();
+          RasterEffectHelpers.pushRasterState();
           if (param0 >= -18) {
             field_d = (String) null;
           }
-          pk.field_c = new Sprite(60, 60);
-          pk.field_c.bindAsRenderTarget();
+          ContextMenuHolder.field_c = new Sprite(60, 60);
+          ContextMenuHolder.field_c.bindAsRenderTarget();
           SoftwareRasterizer.fillCircle(30, 30, 28, 4521728);
-          wi.field_g = new Sprite[8];
+          TextHotspot.field_g = new Sprite[8];
           for (var1_int = 0; var1_int < 8; var1_int++) {
-            wi.field_g[var1_int] = new Sprite(22, 22);
-            wi.field_g[var1_int].bindAsRenderTarget();
+            TextHotspot.field_g[var1_int] = new Sprite(22, 22);
+            TextHotspot.field_g[var1_int].bindAsRenderTarget();
             SoftwareRasterizer.fillCircle(11, 11, var1_int + 2, 5622784);
             SoftwareRasterizer.fillCircle(11, 11, var1_int, 65793);
           }
-          g.b();
+          RasterEffectHelpers.popRasterState();
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "dl.J(" + param0 + ')');
         }
     }
 
-    final static Boolean c(byte param0) {
-        Boolean var1 = dd.field_d;
-        dd.field_d = null;
+    final static Boolean takePendingBooleanResult(byte param0) {
+        Boolean var1 = DefaultQuickChatContext.field_d;
+        DefaultQuickChatContext.field_d = null;
         int var2 = -94 % ((-29 - param0) / 60);
         return var1;
     }
 
-    final java.net.Socket b(byte param0) throws IOException {
+    final java.net.Socket connectDirect(byte param0) throws IOException {
         if (param0 < 77) {
           return (java.net.Socket) null;
         }

@@ -1,0 +1,179 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class SocialRequestHelpers {
+    static QuickChatCommandType field_d;
+    static int field_g;
+    static String field_c;
+    static int field_e;
+    static String field_f;
+    static int field_b;
+    static int field_a;
+
+    public static void releaseStatics(int param0) {
+        if (param0 != 4) {
+          return;
+        }
+        field_c = null;
+        field_d = null;
+        field_f = null;
+    }
+
+    final static LevelData decodeActorLevel(byte param0, byte[] param1) {
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        LevelData stackIn_2_0 = null;
+        LevelActorSpawner stackIn_7_0 = null;
+        Object stackIn_10_0 = null;
+        LevelActorSpawner stackIn_12_0 = null;
+        LevelActorSpawner stackIn_14_0 = null;
+        LevelActorSpawner stackIn_16_0 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_20_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 != -96) {
+            stackIn_2_0 = (LevelData) null;
+            return stackIn_2_0;
+          }
+          var2_int = ValidationState.readIntAt(param1, 0, (byte) 77);
+          if (var2_int == 3) {
+            stackIn_16_0 = MidiPcmStream.upgradeActorSpawnerDataV3(param1, (byte) 46);
+            return (LevelData) ((Object) stackIn_16_0);
+          }
+          if (4 == var2_int) {
+            stackIn_14_0 = CheckboxPainter.upgradeActorSpawnerDataV4(param1, 7);
+            return (LevelData) ((Object) stackIn_14_0);
+          }
+          if (5 == var2_int) {
+            stackIn_7_0 = LoginMethod.loadLevelVersion5(param1, 24);
+            return (LevelData) ((Object) stackIn_7_0);
+          }
+          if (var2_int == 6) {
+            stackIn_12_0 = QuickChatHelpDialog.decodeLevelData((byte) 104, param1);
+            return (LevelData) ((Object) stackIn_12_0);
+          }
+          stackIn_10_0 = null;
+          return (LevelData) (stackIn_10_0);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_19_0 = var2;
+          stackIn_19_1 = new StringBuilder().append("sf.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_20_2 = "null";
+          } else {
+            stackIn_20_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+        }
+    }
+
+    final static String requestAddIgnoredPlayer(int param0, int param1, String param2) {
+        RuntimeException var3 = null;
+        int var4 = 0;
+        CipherPacketBuffer var5 = null;
+        CharSequence var6 = null;
+        String stackIn_3_0 = null;
+        String stackIn_6_0 = null;
+        String stackIn_9_0 = null;
+        String stackIn_12_0 = null;
+        String stackIn_15_0 = null;
+        String stackIn_18_0 = null;
+        Object stackIn_22_0 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_26_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var6 = (CharSequence) ((Object) param2);
+          if (!BirthDateInputWidget.isValidAccountName(var6, (byte) -38)) {
+            stackIn_3_0 = PendingIntArrayRequest.field_f;
+            return stackIn_3_0;
+          }
+          if (SocialRequestHelpers.isCurrentUser(1, param2)) {
+            stackIn_6_0 = ConditionalTextValue.field_b;
+            return stackIn_6_0;
+          }
+          if (SimZombie.field_zb != 2) {
+            stackIn_9_0 = DialWidgetPainter.field_d;
+            return stackIn_9_0;
+          }
+          if (RandomHelpers.isIgnored(param2, 1020)) {
+            stackIn_12_0 = QueuedListRequest.substituteTemplateArguments(BitPackedArrayHelpers.field_i, new String[]{param2}, 2);
+            return stackIn_12_0;
+          }
+          if (ClientException.field_d >= 100) {
+            stackIn_15_0 = IntrusiveDeque.field_c;
+            return stackIn_15_0;
+          }
+          if (FriendListHelpers.isFriend((byte) -94, param2)) {
+            stackIn_18_0 = QueuedListRequest.substituteTemplateArguments(BitPackedArrayHelpers.field_h, new String[]{param2}, 2);
+            return stackIn_18_0;
+          }
+          if (param0 >= -75) {
+            field_d = (QuickChatCommandType) null;
+          }
+          var5 = TextValidationFailure.field_a;
+          var5.writeCipheredOpcode((byte) -35, param1);
+          var5.position = var5.position + 1;
+          var4 = var5.position;
+          var5.writeByte(125, 2);
+          var5.writeString(param2, (byte) 105);
+          var5.backpatchByteLength(100, -var4 + var5.position);
+          stackIn_22_0 = null;
+          return (String) (stackIn_22_0);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_25_0 = var3;
+          stackIn_25_1 = new StringBuilder().append("sf.D(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_26_2 = "null";
+          } else {
+            stackIn_26_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+        }
+    }
+
+    final static boolean isCurrentUser(int param0, String param1) {
+        RuntimeException var2 = null;
+        CharSequence var3 = null;
+        boolean stackIn_4_0 = false;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 != 1) {
+            return false;
+          }
+          var3 = (CharSequence) ((Object) param1);
+          stackIn_4_0 = ProxySocketConnector.field_k.equals(AudioPumpThread.normalizePlayerName(var3, false));
+          return stackIn_4_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_7_0 = var2;
+          stackIn_7_1 = new StringBuilder().append("sf.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+        }
+    }
+
+    static {
+        field_f = "Waiting for levels";
+        field_g = 32;
+        field_b = 17;
+        field_e = 39;
+        field_c = "<%0> cannot join; the game has started.";
+        field_a = (640 - ((field_b - 1) * (-field_g + field_e) + field_g * field_b)) / 2;
+        field_d = new QuickChatCommandType(1, 2, 2, 0);
+    }
+}

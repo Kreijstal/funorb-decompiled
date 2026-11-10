@@ -1,0 +1,105 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ClickMarkerParticle {
+    static String field_f;
+    static String field_i;
+    static GameKeyHandler field_c;
+    static int field_h;
+    private float field_e;
+    private float field_k;
+    private float field_d;
+    private float field_j;
+    static int field_a;
+    static Sprite[][] field_g;
+    static String[] field_b;
+
+    final void draw(int param0, byte param1, Sprite param2, int param3, int param4, int param5) {
+        if (param1 != 33) {
+          return;
+        }
+        try {
+          param2.drawAdditive(-16 + (int)this.field_d + param5, -16 + (int)this.field_e + param0, param4);
+          param2.drawBlended(param5 + (int)this.field_d - 16, (int)this.field_e + (param0 - 16), param3);
+        } catch (RuntimeException runtimeException) {
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "um.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+    }
+
+    final void advance(int param0, int param1, byte param2) {
+        this.field_d = this.field_d + this.field_j;
+        this.field_e = this.field_e + this.field_k;
+        if (param2 >= -51) {
+          ClickMarkerParticle.isPublicChatInputOpen(-91);
+          if (0.0f != this.field_j) {
+            if (PowerupButton.field_e.navigation.isPositionWalkable(59, (int)(this.field_e + (float)param0), (int)((float)param1 + this.field_d))) {
+              return;
+            }
+            this.field_j = 0.0f;
+            this.field_k = 0.0f;
+            return;
+          }
+          if (0.0f == this.field_k) {
+            return;
+          }
+          if (PowerupButton.field_e.navigation.isPositionWalkable(59, (int)(this.field_e + (float)param0), (int)((float)param1 + this.field_d))) {
+            return;
+          }
+          this.field_j = 0.0f;
+          this.field_k = 0.0f;
+          return;
+        }
+        if (0.0f == this.field_j) {
+          if (0.0f == this.field_k) {
+            return;
+          }
+          if (PowerupButton.field_e.navigation.isPositionWalkable(59, (int)(this.field_e + (float)param0), (int)((float)param1 + this.field_d))) {
+            return;
+          }
+          this.field_j = 0.0f;
+          this.field_k = 0.0f;
+          return;
+        }
+        if (!PowerupButton.field_e.navigation.isPositionWalkable(59, (int)(this.field_e + (float)param0), (int)((float)param1 + this.field_d))) {
+          this.field_j = 0.0f;
+          this.field_k = 0.0f;
+          return;
+        }
+    }
+
+    final static boolean isPublicChatInputOpen(int param0) {
+        if (!HotspotTextWidget.field_N) {
+          return false;
+        }
+        if (UrlLaunchHelpers.field_a != 0) {
+          return false;
+        }
+        if (param0 >= -119) {
+          return false;
+        }
+        return true;
+    }
+
+    public static void releaseStatics(int param0) {
+        int var1 = 48 / ((param0 + 1) / 58);
+        field_c = null;
+        field_b = null;
+        field_i = null;
+        field_g = (Sprite[][]) null;
+        field_f = null;
+    }
+
+    ClickMarkerParticle(float param0, float param1) {
+        this.field_d = 0.0f;
+        this.field_k = param1;
+        this.field_j = param0;
+        this.field_e = 0.0f;
+    }
+
+    static {
+        field_i = "Names can only contain letters, numbers, spaces and underscores";
+        field_f = "members-only content";
+        field_h = 50;
+        field_c = new GameKeyHandler();
+    }
+}

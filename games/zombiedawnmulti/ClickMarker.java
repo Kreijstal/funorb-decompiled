@@ -13,7 +13,7 @@ final class ClickMarker extends IntrusiveNode {
     static String field_k;
     private int field_j;
     static String field_p;
-    private um[] field_u;
+    private ClickMarkerParticle[] field_u;
     static String[] field_h;
     private int field_r;
     static String field_f;
@@ -21,18 +21,18 @@ final class ClickMarker extends IntrusiveNode {
     private int field_l;
     static String field_s;
 
-    final void a(int param0) {
+    final void tick(int param0) {
         int var3 = 0;
-        um var4 = null;
+        ClickMarkerParticle var4 = null;
         int var5 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param0 != -20587) {
           field_p = (String) null;
         }
-        um[] var6 = this.field_u;
-        um[] var2 = var6;
+        ClickMarkerParticle[] var6 = this.field_u;
+        ClickMarkerParticle[] var2 = var6;
         for (var3 = 0; var3 < var6.length; var3++) {
           var4 = var6[var3];
-          var4.a(this.field_w, this.field_l, (byte) -125);
+          var4.advance(this.field_w, this.field_l, (byte) -125);
         }
         if (this.field_i != null &&
           this.field_i.isSamplePositionOutOfRange()) {
@@ -41,14 +41,14 @@ final class ClickMarker extends IntrusiveNode {
         this.field_r = this.field_r + 6;
         if (this.field_j < this.field_r) {
           if (this.field_o) {
-            PowerupButton.field_e.navigation.level.a((byte) 127);
-            PowerupButton.field_e.navigation.a(48);
+            PowerupButton.field_e.navigation.level.initializeTileGrid((byte) 127);
+            PowerupButton.field_e.navigation.buildCornerWaypoints(48);
           }
           this.unlink(true);
         }
     }
 
-    final void a(byte param0, Camera param1) {
+    final void draw(byte param0, Camera param1) {
         int stackIn_5_0 = 0;
         int stackIn_17_0 = 0;
         RuntimeException stackIn_29_0 = null;
@@ -107,12 +107,12 @@ final class ClickMarker extends IntrusiveNode {
             var10 = 32;
           }
           for (var11 = 0; this.field_u.length / 2 > var11; var11++) {
-            this.field_u[var11].a(var4, (byte) 33, td.field_c[var6], var10 / 2, var8 / 2, var3_int);
+            this.field_u[var11].draw(var4, (byte) 33, TextLayoutLine.field_c[var6], var10 / 2, var8 / 2, var3_int);
           }
           var13 = this.field_u.length / 2;
           var11Lifetime1 = var13;
           while (this.field_u.length > var13) {
-            this.field_u[var13].a(var4, (byte) 33, td.field_c[var6], var10, var8, var3_int);
+            this.field_u[var13].draw(var4, (byte) 33, TextLayoutLine.field_c[var6], var10, var8, var3_int);
             var13++;
           }
           return;
@@ -143,14 +143,14 @@ final class ClickMarker extends IntrusiveNode {
         field_v = null;
     }
 
-    final static void a(BitmapFont param0, int param1, BitmapFont param2, int param3) {
+    final static void configureFonts(BitmapFont param0, int param1, BitmapFont param2, int param3) {
         try {
-          m.field_C = param0;
+          PasswordTextPainter.field_C = param0;
           int var4_int = 43 / ((12 - param3) / 47);
-          ib.field_b = param1;
-          uq.field_f = param2;
-          AttackEvent.a(SoftwareRasterizer.height / 2, SoftwareRasterizer.width / 2, 1633);
-          SimEntity.a(param0.field_J, param2.maxDescent + param2.field_J, 1829947600, param2.field_J, param0.maxDescent + param0.field_J);
+          TickButtonPainter.field_b = param1;
+          BrowserPageHelpers.field_f = param2;
+          AttackEvent.setMenuCentre(SoftwareRasterizer.height / 2, SoftwareRasterizer.width / 2, 1633);
+          SimEntity.setPopupMenuStyle(param0.field_J, param2.maxDescent + param2.field_J, 1829947600, param2.field_J, param0.maxDescent + param0.field_J);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "lj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -167,14 +167,14 @@ final class ClickMarker extends IntrusiveNode {
           param1 = param1 - (param1 % 24 - 4);
         }
         this.field_w = param1;
-        this.field_u = new um[150];
+        this.field_u = new ClickMarkerParticle[150];
         this.field_r = 0;
         this.field_l = param0;
         for (var4 = 0; this.field_u.length / 2 > var4; var4++) {
-          this.field_u[var4] = new um(FightEvent.field_n[var4] * 6.0f, FightEvent.field_k[var4] * 6.0f);
+          this.field_u[var4] = new ClickMarkerParticle(FightEvent.field_n[var4] * 6.0f, FightEvent.field_k[var4] * 6.0f);
         }
         for (var4Lifetime1 = this.field_u.length / 2; this.field_u.length > var4Lifetime1; var4Lifetime1++) {
-          this.field_u[var4Lifetime1] = new um(FightEvent.field_n[var4Lifetime1 % FightEvent.field_n.length] * 6.0f / 2.0f, FightEvent.field_k[var4Lifetime1 % FightEvent.field_k.length] * 6.0f / 2.0f);
+          this.field_u[var4Lifetime1] = new ClickMarkerParticle(FightEvent.field_n[var4Lifetime1 % FightEvent.field_n.length] * 6.0f / 2.0f, FightEvent.field_k[var4Lifetime1 % FightEvent.field_k.length] * 6.0f / 2.0f);
         }
         IntrusiveDeque discarded$0 = new IntrusiveDeque();
         if (!param2) {

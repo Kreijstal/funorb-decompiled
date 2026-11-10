@@ -9,7 +9,7 @@ final class SectorCacheStore {
     static String field_f;
     private BufferedFile field_b;
     static boolean field_c;
-    static ao field_i;
+    static QuickChatCommandType field_i;
     private BufferedFile field_d;
     static Sprite field_a;
     private int field_e;
@@ -48,9 +48,9 @@ final class SectorCacheStore {
                 return null;
               }
               this.field_d.seek((long)(param1 * 6), (byte) -70);
-              this.field_d.read(6, 0, la.field_g, 47);
-              var4_int = (la.field_g[2] & 255) + (((la.field_g[param0] & 255) << 8) + ((255 & la.field_g[0]) << 16));
-              var5 = ((255 & la.field_g[3]) << 16) + (la.field_g[4] << 8 & 65280) + (la.field_g[5] & 255);
+              this.field_d.read(6, 0, GrowableIntList.field_g, 47);
+              var4_int = (GrowableIntList.field_g[2] & 255) + (((GrowableIntList.field_g[param0] & 255) << 8) + ((255 & GrowableIntList.field_g[0]) << 16));
+              var5 = ((255 & GrowableIntList.field_g[3]) << 16) + (GrowableIntList.field_g[4] << 8 & 65280) + (GrowableIntList.field_g[5] & 255);
               if (var4_int < 0) {
                 return null;
               }
@@ -79,21 +79,21 @@ final class SectorCacheStore {
                     var9 = 510;
                   }
                   var14 = 10;
-                  this.field_b.read(var9 + var14, 0, la.field_g, param0 - 96);
-                  var12 = (la.field_g[8] & 255) + ((16711680 & la.field_g[6] << 16) + (65280 & la.field_g[7] << 8));
-                  var11 = (la.field_g[5] & 255) + (la.field_g[4] << 8 & 65280);
-                  var13 = 255 & la.field_g[9];
-                  var10 = (65280 & la.field_g[2] << 8) + ((255 & la.field_g[1]) << 16) + (((255 & la.field_g[0]) << 24) + (la.field_g[3] & 255));
+                  this.field_b.read(var9 + var14, 0, GrowableIntList.field_g, param0 - 96);
+                  var12 = (GrowableIntList.field_g[8] & 255) + ((16711680 & GrowableIntList.field_g[6] << 16) + (65280 & GrowableIntList.field_g[7] << 8));
+                  var11 = (GrowableIntList.field_g[5] & 255) + (GrowableIntList.field_g[4] << 8 & 65280);
+                  var13 = 255 & GrowableIntList.field_g[9];
+                  var10 = (65280 & GrowableIntList.field_g[2] << 8) + ((255 & GrowableIntList.field_g[1]) << 16) + (((255 & GrowableIntList.field_g[0]) << 24) + (GrowableIntList.field_g[3] & 255));
                 } else {
                   if (512 < var9) {
                     var9 = 512;
                   }
                   var14 = 8;
-                  this.field_b.read(var14 + var9, 0, la.field_g, 68);
-                  var12 = (la.field_g[6] & 255) + ((255 & la.field_g[5]) << 8) + (la.field_g[4] << 16 & 16711680);
-                  var13 = la.field_g[7] & 255;
-                  var10 = (65280 & la.field_g[0] << 8) + (la.field_g[1] & 255);
-                  var11 = (255 & la.field_g[3]) + (65280 & la.field_g[2] << 8);
+                  this.field_b.read(var14 + var9, 0, GrowableIntList.field_g, 68);
+                  var12 = (GrowableIntList.field_g[6] & 255) + ((255 & GrowableIntList.field_g[5]) << 8) + (GrowableIntList.field_g[4] << 16 & 16711680);
+                  var13 = GrowableIntList.field_g[7] & 255;
+                  var10 = (65280 & GrowableIntList.field_g[0] << 8) + (GrowableIntList.field_g[1] & 255);
+                  var11 = (255 & GrowableIntList.field_g[3]) + (65280 & GrowableIntList.field_g[2] << 8);
                 }
                 if (param1 != var10) {
                   return null;
@@ -117,7 +117,7 @@ final class SectorCacheStore {
                 for (var16 = var14; var15 > var16; var16++) {
                   incrementValue$2 = var7;
                   var7++;
-                  var6[incrementValue$2] = la.field_g[var16];
+                  var6[incrementValue$2] = GrowableIntList.field_g[var16];
                 }
               }
               stackIn_50_0 = var6;
@@ -225,8 +225,8 @@ final class SectorCacheStore {
                     return false;
                   }
                   this.field_d.seek((long)(param4 * 6), (byte) -70);
-                  this.field_d.read(6, 0, la.field_g, -128);
-                  var7_int = (la.field_g[5] & 255) + ((255 & la.field_g[4]) << 8) + (16711680 & la.field_g[3] << 16);
+                  this.field_d.read(6, 0, GrowableIntList.field_g, -128);
+                  var7_int = (GrowableIntList.field_g[5] & 255) + ((255 & GrowableIntList.field_g[4]) << 8) + (16711680 & GrowableIntList.field_g[3] << 16);
                   if (var7_int <= 0 ||
                     !((long)var7_int <= (this.field_b.length(-1) / 520L))) {
                     return false;
@@ -237,14 +237,14 @@ final class SectorCacheStore {
                     var7_int = 1;
                   }
                 }
-                la.field_g[1] = (byte)(param3 >> 8);
-                la.field_g[2] = (byte)param3;
-                la.field_g[0] = (byte)(param3 >> 16);
-                la.field_g[3] = (byte)(var7_int >> 16);
-                la.field_g[5] = (byte)var7_int;
-                la.field_g[4] = (byte)(var7_int >> 8);
+                GrowableIntList.field_g[1] = (byte)(param3 >> 8);
+                GrowableIntList.field_g[2] = (byte)param3;
+                GrowableIntList.field_g[0] = (byte)(param3 >> 16);
+                GrowableIntList.field_g[3] = (byte)(var7_int >> 16);
+                GrowableIntList.field_g[5] = (byte)var7_int;
+                GrowableIntList.field_g[4] = (byte)(var7_int >> 8);
                 this.field_d.seek((long)(param4 * 6), (byte) -70);
-                this.field_d.write(param2 ^ -50, 6, 0, la.field_g);
+                this.field_d.write(param2 ^ -50, 6, 0, GrowableIntList.field_g);
                 var8 = 0;
                 var9 = 0;
                 scanLoop1: while (true) {
@@ -255,7 +255,7 @@ final class SectorCacheStore {
                       this.field_b.seek((long)(520 * var7_int), (byte) -70);
                       if (65535 >= param4) {
                         try {
-                          this.field_b.read(8, 0, la.field_g, -126);
+                          this.field_b.read(8, 0, GrowableIntList.field_g, -126);
                           decompiledRegionSelector0 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -265,13 +265,13 @@ final class SectorCacheStore {
                         if (decompiledRegionSelector0 != 0) {
                           break scanLoop1;
                         }
-                        var10 = ((255 & la.field_g[4]) << 16) - (-(65280 & la.field_g[5] << 8) - (la.field_g[6] & 255));
-                        var12 = (65280 & la.field_g[2] << 8) + (255 & la.field_g[3]);
-                        var11 = (la.field_g[1] & 255) + ((la.field_g[0] & 255) << 8);
-                        var13 = la.field_g[7] & 255;
+                        var10 = ((255 & GrowableIntList.field_g[4]) << 16) - (-(65280 & GrowableIntList.field_g[5] << 8) - (GrowableIntList.field_g[6] & 255));
+                        var12 = (65280 & GrowableIntList.field_g[2] << 8) + (255 & GrowableIntList.field_g[3]);
+                        var11 = (GrowableIntList.field_g[1] & 255) + ((GrowableIntList.field_g[0] & 255) << 8);
+                        var13 = GrowableIntList.field_g[7] & 255;
                       } else {
                         try {
-                          this.field_b.read(10, 0, la.field_g, -103);
+                          this.field_b.read(10, 0, GrowableIntList.field_g, -103);
                           decompiledRegionSelector1 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -281,10 +281,10 @@ final class SectorCacheStore {
                         if (decompiledRegionSelector1 != 0) {
                           break scanLoop1;
                         }
-                        var13 = 255 & la.field_g[9];
-                        var11 = (la.field_g[3] & 255) + (((la.field_g[2] & 255) << 8) + ((la.field_g[0] & 255) << 24)) + (16711680 & la.field_g[1] << 16);
-                        var12 = ((255 & la.field_g[4]) << 8) + (255 & la.field_g[5]);
-                        var10 = (65280 & la.field_g[7] << 8) + ((255 & la.field_g[6]) << 16) + (la.field_g[8] & 255);
+                        var13 = 255 & GrowableIntList.field_g[9];
+                        var11 = (GrowableIntList.field_g[3] & 255) + (((GrowableIntList.field_g[2] & 255) << 8) + ((GrowableIntList.field_g[0] & 255) << 24)) + (16711680 & GrowableIntList.field_g[1] << 16);
+                        var12 = ((255 & GrowableIntList.field_g[4]) << 8) + (255 & GrowableIntList.field_g[5]);
+                        var10 = (65280 & GrowableIntList.field_g[7] << 8) + ((255 & GrowableIntList.field_g[6]) << 16) + (GrowableIntList.field_g[8] & 255);
                       }
                       if ((var11 == param4 &&
                         var9 == var12 &&
@@ -311,16 +311,16 @@ final class SectorCacheStore {
                       var10 = 0;
                     }
                     if (param4 <= 65535) {
-                      la.field_g[6] = (byte)var10;
-                      la.field_g[0] = (byte)(param4 >> 8);
-                      la.field_g[4] = (byte)(var10 >> 16);
-                      la.field_g[2] = (byte)(var9 >> 8);
-                      la.field_g[3] = (byte)var9;
-                      la.field_g[5] = (byte)(var10 >> 8);
-                      la.field_g[7] = (byte)this.field_h;
-                      la.field_g[1] = (byte)param4;
+                      GrowableIntList.field_g[6] = (byte)var10;
+                      GrowableIntList.field_g[0] = (byte)(param4 >> 8);
+                      GrowableIntList.field_g[4] = (byte)(var10 >> 16);
+                      GrowableIntList.field_g[2] = (byte)(var9 >> 8);
+                      GrowableIntList.field_g[3] = (byte)var9;
+                      GrowableIntList.field_g[5] = (byte)(var10 >> 8);
+                      GrowableIntList.field_g[7] = (byte)this.field_h;
+                      GrowableIntList.field_g[1] = (byte)param4;
                       this.field_b.seek((long)(var7_int * 520), (byte) -70);
-                      this.field_b.write(param2 ^ -50, 8, 0, la.field_g);
+                      this.field_b.write(param2 ^ -50, 8, 0, GrowableIntList.field_g);
                       var11 = param3 - var8;
                       if (512 < var11) {
                         var11 = 512;
@@ -328,18 +328,18 @@ final class SectorCacheStore {
                       this.field_b.write(-1, var11, var8, param1);
                       var8 = var8 + var11;
                     } else {
-                      la.field_g[3] = (byte)param4;
-                      la.field_g[5] = (byte)var9;
-                      la.field_g[1] = (byte)(param4 >> 16);
-                      la.field_g[2] = (byte)(param4 >> 8);
-                      la.field_g[8] = (byte)var10;
-                      la.field_g[9] = (byte)this.field_h;
-                      la.field_g[0] = (byte)(param4 >> 24);
-                      la.field_g[7] = (byte)(var10 >> 8);
-                      la.field_g[6] = (byte)(var10 >> 16);
-                      la.field_g[4] = (byte)(var9 >> 8);
+                      GrowableIntList.field_g[3] = (byte)param4;
+                      GrowableIntList.field_g[5] = (byte)var9;
+                      GrowableIntList.field_g[1] = (byte)(param4 >> 16);
+                      GrowableIntList.field_g[2] = (byte)(param4 >> 8);
+                      GrowableIntList.field_g[8] = (byte)var10;
+                      GrowableIntList.field_g[9] = (byte)this.field_h;
+                      GrowableIntList.field_g[0] = (byte)(param4 >> 24);
+                      GrowableIntList.field_g[7] = (byte)(var10 >> 8);
+                      GrowableIntList.field_g[6] = (byte)(var10 >> 16);
+                      GrowableIntList.field_g[4] = (byte)(var9 >> 8);
                       this.field_b.seek((long)(520 * var7_int), (byte) -70);
-                      this.field_b.write(-1, 10, 0, la.field_g);
+                      this.field_b.write(-1, 10, 0, GrowableIntList.field_g);
                       var11 = param3 - var8;
                       if (510 < var11) {
                         var11 = 510;
@@ -396,6 +396,6 @@ final class SectorCacheStore {
     static {
         field_c = false;
         field_g = new int[8192];
-        field_i = new ao(8, 0, 4, 1);
+        field_i = new QuickChatCommandType(8, 0, 4, 1);
     }
 }

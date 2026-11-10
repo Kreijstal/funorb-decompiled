@@ -30,9 +30,9 @@ final class ScoreUpdateEvent extends GameEvent {
         }
     }
 
-    final static void a(int param0) {
+    final static void emptyStaticHook(int param0) {
         if (param0 != -29956) {
-          ScoreUpdateEvent.a(-45);
+          ScoreUpdateEvent.emptyStaticHook(-45);
         }
     }
 
@@ -47,18 +47,18 @@ final class ScoreUpdateEvent extends GameEvent {
         }
     }
 
-    final static void a(int param0, long param1, String param2) {
+    final static void openPrivateChatTo(int param0, long param1, String param2) {
         CharSequence var5 = null;
         try {
-          qf.field_g = param2;
+          TextPopupHelpers.field_g = param2;
           if (param0 != -16745) {
             field_k = (byte[]) null;
           }
-          va.field_a = 2;
+          UrlLaunchHelpers.field_a = 2;
           var5 = (CharSequence) ((Object) param2);
-          ql.field_a = tg.normalizePlayerName(var5, false);
-          jj.field_M = param1;
-          lp.a((byte) 69);
+          RasterStackHelpers.field_a = AudioPumpThread.normalizePlayerName(var5, false);
+          PhantomDecoy.field_M = param1;
+          ReflectionCheckRequest.showDefaultQuickChatMenu((byte) 69);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "fg.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

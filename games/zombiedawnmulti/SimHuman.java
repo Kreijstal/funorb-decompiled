@@ -8,7 +8,7 @@ abstract class SimHuman extends SimUnit {
     private int[] field_ub;
     private int field_kb;
     private int field_ib;
-    private sa field_mb;
+    private ScreechAura field_mb;
     static String field_jb;
     private int field_tb;
     int field_lb;
@@ -25,7 +25,7 @@ abstract class SimHuman extends SimUnit {
     static int field_pb;
     static String field_ob;
 
-    private final boolean a(byte param0, int param1, int param2) {
+    private final boolean isCellUnclaimed(byte param0, int param1, int param2) {
         boolean stackIn_14_0 = false;
         param2 = param2 / 24;
         param1 = param1 / 24;
@@ -34,7 +34,7 @@ abstract class SimHuman extends SimUnit {
           if (this.field_sb[0].length > param2 &&
             this.field_sb.length > param1) {
             if (param0 < 102) {
-              this.field_mb = (sa) null;
+              this.field_mb = (ScreechAura) null;
             }
             stackIn_14_0 = (this.field_sb[param1][param2] != -1) && (this.field_sb[param1][param2] < 1);
             return stackIn_14_0;
@@ -44,7 +44,7 @@ abstract class SimHuman extends SimUnit {
         return false;
     }
 
-    final boolean a(boolean param0, SimUnit param1) {
+    final boolean moveTowardMidpointWith(boolean param0, SimUnit param1) {
         boolean stackIn_3_1 = false;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -68,16 +68,16 @@ abstract class SimHuman extends SimUnit {
           var7 = 400;
           if (var7 <= var5 * var5 + var6 * var6) {
             var8 = 8;
-            if (!this.a((byte) 117, var4, var3_int)) {
-              var3_int = var3_int + (hp.nextBoundedInt((byte) -107, g.field_a, 2 * var8) + (12 - var8));
-              var4 = var4 + (12 + (hp.nextBoundedInt((byte) 108, g.field_a, 2 * var8) - var8));
+            if (!this.isCellUnclaimed((byte) 117, var4, var3_int)) {
+              var3_int = var3_int + (RandomHelpers.nextBoundedInt((byte) -107, RasterEffectHelpers.field_a, 2 * var8) + (12 - var8));
+              var4 = var4 + (12 + (RandomHelpers.nextBoundedInt((byte) 108, RasterEffectHelpers.field_a, 2 * var8) - var8));
             }
-            if (this.a((byte) 125, var4, var3_int) &&
+            if (this.isCellUnclaimed((byte) 125, var4, var3_int) &&
               this.simulation.navigation.traceLine(this.getY(1829947600), this.getX((byte) -112), -17201, var3_int, var4, false, false) != -1) {
-              this.b(this.targetX, -94, this.targetY);
+              this.releaseCell(this.targetX, -94, this.targetY);
               this.targetX = var3_int;
               this.targetY = var4;
-              this.b(this.targetY, (byte) -61, this.targetX);
+              this.claimCell(this.targetY, (byte) -61, this.targetX);
             }
           } else {
             if (this.targetX == this.getX((byte) -112) &&
@@ -135,7 +135,7 @@ abstract class SimHuman extends SimUnit {
         return null;
     }
 
-    final boolean k(byte param0) {
+    final boolean isFemale(byte param0) {
         int var2;
         int var3;
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -213,14 +213,14 @@ abstract class SimHuman extends SimUnit {
         this.field_wb = false;
         this.targetX = this.field_ub[var2];
         this.targetY = this.field_qb[var2];
-        this.b(this.getX((byte) -112), -80, this.getY(1829947600));
-        this.b(this.targetY, (byte) -61, this.targetX);
+        this.releaseCell(this.getX((byte) -112), -80, this.getY(1829947600));
+        this.claimCell(this.targetY, (byte) -61, this.targetX);
         this.moveToward(-50, this.speedMultiplier * this.baseSpeed);
         this.setState(1, (byte) -89);
         return true;
     }
 
-    private final boolean m(int param0) {
+    private final boolean isFleePointNearFearedZombie(int param0) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -229,7 +229,7 @@ abstract class SimHuman extends SimUnit {
         int var9 = ZombieDawnMulti.field_E ? 1 : 0;
         int var2 = 0;
         if (param0 != -7) {
-          this.b(-71, -11, -39);
+          this.releaseCell(-71, -11, -39);
         }
         SimEntity var3 = (SimEntity) (this.simulation.entities.last(100));
         while (var3 != null) {
@@ -250,7 +250,7 @@ abstract class SimHuman extends SimUnit {
         return var2 != 0;
     }
 
-    final void c(boolean param0) {
+    final void startDelayedInfection(boolean param0) {
         this.setState(32, (byte) -89);
         if (param0) {
           this.resetFleePoints((byte) -45);
@@ -258,7 +258,7 @@ abstract class SimHuman extends SimUnit {
         this.needsSync = true;
     }
 
-    private final void b(int param0, int param1, int param2) {
+    private final void releaseCell(int param0, int param1, int param2) {
         int var4 = 38 % ((-40 - param1) / 34);
         param2 = param2 / 24;
         param0 = param0 / 24;
@@ -293,13 +293,13 @@ abstract class SimHuman extends SimUnit {
         if (!this.simulation.field_l) {
           stackIn_3_0 = 0;
         } else {
-          stackIn_3_0 = this.m(-7) ? 1 : 0;
+          stackIn_3_0 = this.isFleePointNearFearedZombie(-7) ? 1 : 0;
         }
         var2 = stackIn_3_0;
         for (var3 = 0; this.field_lb > var3; var3++) {
           regionExit1: {
             ClientException.field_a[var3] = 0;
-            if (~(-1 + this.field_lb) != ~var3 && (!this.a((byte) 108, this.field_qb[var3], this.field_ub[var3]) ||
+            if (~(-1 + this.field_lb) != ~var3 && (!this.isCellUnclaimed((byte) 108, this.field_qb[var3], this.field_ub[var3]) ||
               -1 == this.simulation.navigation.traceLineDefault(this.field_qb[var3], 95, this.field_ub[var3], this.getY(1829947600), this.getX((byte) -112)))) {
               ClientException.field_a[var3] = -1;
               break regionExit1;
@@ -340,7 +340,7 @@ abstract class SimHuman extends SimUnit {
 
     final void remove(int param0) {
         this.setState(param0, (byte) -89);
-        this.simulation.world.c(-112);
+        this.simulation.world.recordHumanEscape(-112);
         super.remove(18);
     }
 
@@ -361,7 +361,7 @@ abstract class SimHuman extends SimUnit {
         int var4;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param0 < 30) {
-          this.p(110);
+          this.markInfected(110);
         }
         regionExit1: {
           super.tick(38);
@@ -377,7 +377,7 @@ abstract class SimHuman extends SimUnit {
                 this.field_rb = 53;
               } else {
                 if (!this.field_vb) {
-                  stackIn_65_1 = hp.nextBoundedInt((byte) -77, g.field_a, 200) + 20;
+                  stackIn_65_1 = RandomHelpers.nextBoundedInt((byte) -77, RasterEffectHelpers.field_a, 200) + 20;
                 } else {
                   stackIn_65_1 = 65;
                 }
@@ -400,7 +400,7 @@ abstract class SimHuman extends SimUnit {
                 if (this.animationFrame != 4) {
                   if (this.animationFrame == 6) {
                     this.setState(0, (byte) -89);
-                    this.b(this.getY(1829947600), (byte) -61, this.getX((byte) -112));
+                    this.claimCell(this.getY(1829947600), (byte) -61, this.getX((byte) -112));
                   }
                 } else {
                   fieldTemp$7 = this.field_xb;
@@ -415,7 +415,7 @@ abstract class SimHuman extends SimUnit {
               } else {
                 this.animationTicks = this.animationTicks + 1;
               }
-              if (!(this.simulation.navigation.a(this.positionX + this.velocityX >> 16, true, true, this.velocityY + this.positionY >> 16))) {
+              if (!(this.simulation.navigation.isPassableAt(this.positionX + this.velocityX >> 16, true, true, this.velocityY + this.positionY >> 16))) {
                 this.positionY = this.positionY - this.velocityY;
                 this.positionX = this.positionX - this.velocityX;
                 this.velocityX = 0;
@@ -430,8 +430,8 @@ abstract class SimHuman extends SimUnit {
                 this.field_kb = 0;
                 var2 = 0;
                 var3 = this.simulation.world.field_A.last(106);
-                while (var3 instanceof bf) {
-                  var2 = var2 != 0 | ((bf) (var3)).containsUnit(this, 0) ? 1 : 0;
+                while (var3 instanceof MeltdownPuddle) {
+                  var2 = var2 != 0 | ((MeltdownPuddle) (var3)).containsUnit(this, 0) ? 1 : 0;
                   var3 = var3.previous;
                 }
                 if (!this.field_wb &&
@@ -516,7 +516,7 @@ abstract class SimHuman extends SimUnit {
             field_pb = 1;
           }
           if (!(param1 instanceof SimZombie)) {
-            if (param1 instanceof og) {
+            if (param1 instanceof ZombieDrop) {
               var5_int = this.field_ub[param2] - param1.getX((byte) -112);
               var6 = this.field_qb[param2] - param1.getY(param3 ^ 1829947602);
               var7 = var5_int * var5_int + var6 * var6;
@@ -595,11 +595,11 @@ abstract class SimHuman extends SimUnit {
         this.field_rb = 0;
         this.field_nb = null;
         this.field_xb = 0;
-        this.field_rb = hp.nextBoundedInt((byte) 43, g.field_a, 200);
+        this.field_rb = RandomHelpers.nextBoundedInt((byte) 43, RasterEffectHelpers.field_a, 200);
         this.field_ub = new int[43];
         this.field_qb = new int[43];
         this.resetFleePoints((byte) 119);
-        this.field_kb = hp.nextBoundedInt((byte) 20, g.field_a, 20);
+        this.field_kb = RandomHelpers.nextBoundedInt((byte) 20, RasterEffectHelpers.field_a, 20);
     }
 
     final boolean isZombieWithin(boolean param0, int param1, int param2) {
@@ -636,7 +636,7 @@ abstract class SimHuman extends SimUnit {
               while (var13 instanceof SimEntity) {
                 var14 = (SimEntity) (var13);
                 if (var13 instanceof SimZombie &&
-                  ((SimZombie) (var13)).isVisibleToHumans(-127) || var14 instanceof og) {
+                  ((SimZombie) (var13)).isVisibleToHumans(-127) || var14 instanceof ZombieDrop) {
                   var15 = var14.getX((byte) -112);
                   var16 = var14.getY(1829947600);
                   var17 = -var8 + var15;
@@ -652,7 +652,7 @@ abstract class SimHuman extends SimUnit {
           }
         }
         if (param2 >= -13) {
-          this.b(85, 115, -91);
+          this.releaseCell(85, 115, -91);
         }
         return false;
     }
@@ -666,9 +666,9 @@ abstract class SimHuman extends SimUnit {
         this.needsSync = param1 ? true : false;
     }
 
-    final void p(int param0) {
+    final void markInfected(int param0) {
         this.field_hb = true;
-        this.field_D = !this.k((byte) 122) ? 21 : 22;
+        this.field_D = !this.isFemale((byte) 122) ? 21 : 22;
         if (param0 < 22) {
           this.field_nb = (SimZombie) null;
         }
@@ -683,12 +683,12 @@ abstract class SimHuman extends SimUnit {
         }
     }
 
-    final void n(byte param0) {
+    final void clearStunTimer(byte param0) {
         int var2 = 19 % ((param0 - 2) / 44);
         this.field_tb = 0;
     }
 
-    final void b(int param0, byte param1, int param2) {
+    final void claimCell(int param0, byte param1, int param2) {
         param2 = param2 / 24;
         param0 = param0 / 24;
         int[] dupTemp$0 = this.field_sb[param0];
@@ -715,7 +715,7 @@ abstract class SimHuman extends SimUnit {
         this.field_qb[-1 + this.field_lb] = var3;
     }
 
-    final void a(int param0, sa param1) {
+    final void reactToScreech(int param0, ScreechAura param1) {
         if (this.state == 18 ||
           20 == this.state ||
           16 == this.state ||
@@ -734,16 +734,16 @@ abstract class SimHuman extends SimUnit {
         }
     }
 
-    final int o(int param0) {
+    final int getInfectionScore(int param0) {
         int var4 = ZombieDawnMulti.field_E ? 1 : 0;
         int var2 = -103 % ((72 - param0) / 49);
         int var3 = this.field_D;
         if (2 != var3 &&
           var3 != 4 &&
           6 != var3) {
-          return eb.field_A;
+          return PopupMenuBuilder.field_A;
         }
-        return n.field_i;
+        return PendingDataRequest.field_i;
     }
 
     public static void releaseStatics(int param0) {

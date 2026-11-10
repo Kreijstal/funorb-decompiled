@@ -27,13 +27,13 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
         field_G = null;
         if (param0 > -23) {
           CipherPacketBuffer var2 = (CipherPacketBuffer) null;
-          MessageDialogContent.a(11, 88, 108, -22, (CipherPacketBuffer) null);
+          MessageDialogContent.sendPowerupRequest(11, 88, 108, -22, (CipherPacketBuffer) null);
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, CipherPacketBuffer param4) {
+    final static void sendPowerupRequest(int param0, int param1, int param2, int param3, CipherPacketBuffer param4) {
         try {
-          ok.sendPowerupRequest(param1 - 126, param1, param4, param3, param0, param2);
+          ViewportController.sendPowerupRequest(param1 - 126, param1, param4, param3, param0, param2);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "wd.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -60,7 +60,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
         this.field_N = var4;
     }
 
-    final static void a(int param0, int param1, CipherPacketBuffer param2, int param3, int param4, int param5) {
+    final static void sendOrderZombieCommand(int param0, int param1, CipherPacketBuffer param2, int param3, int param4, int param5) {
         if (PortalEntryEvent.field_m.field_c) {
           return;
         }
@@ -110,7 +110,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new ButtonWidget(param0, param2);
-          var4.painter = (WidgetPainter) ((Object) new oq());
+          var4.painter = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
           var5 = this.field_w - 2;
           this.setWidgetBounds(0, 0, 28972, this.field_n, this.field_w + 34);
           var4.setWidgetBounds(7, var5, 28972, -14 + this.field_n, 30);
@@ -174,7 +174,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
             if (var7 == -1) {
               this.field_R.dismissDialog(-7435);
             } else {
-              PowerupButton.a(this.field_N[var6_int], 111);
+              PowerupButton.setAccountDialogResult(this.field_N[var6_int], 111);
             }
             break;
           }

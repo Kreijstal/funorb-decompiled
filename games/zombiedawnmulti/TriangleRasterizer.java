@@ -18,9 +18,9 @@ final class TriangleRasterizer {
         int var5 = 0;
         field_i = param2 - param0;
         field_h = param3 - param1;
-        TriangleRasterizer.b();
+        TriangleRasterizer.centerProjection();
         if (field_a.length < field_h) {
-          field_a = new int[cb.nextPowerOfTwo(-74, field_h)];
+          field_a = new int[PowerupProgressCard.nextPowerOfTwo(-74, field_h)];
         }
         int var4 = param1 * SoftwareRasterizer.width + param0;
         for (var5 = 0; var5 < field_h; var5++) {
@@ -29,7 +29,7 @@ final class TriangleRasterizer {
         }
     }
 
-    final static int a() {
+    final static int getFirstPixelX() {
         return field_a[0] % SoftwareRasterizer.width;
     }
 
@@ -159,11 +159,11 @@ final class TriangleRasterizer {
         }
     }
 
-    final static int d() {
+    final static int getFirstPixelY() {
         return field_a[0] / SoftwareRasterizer.width;
     }
 
-    final static void e() {
+    final static void useRasterClip() {
         TriangleRasterizer.setClip(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipBottom);
     }
 
@@ -604,13 +604,13 @@ final class TriangleRasterizer {
         return;
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void checkVerticesOutsideViewport(int param0, int param1, int param2) {
         boolean stackIn_8_0 = false;
         stackIn_8_0 = !(param0 >= 0) || !(param0 <= field_i) || !(param1 >= 0) || !(param1 <= field_i) || !(param2 >= 0) || !(param2 <= field_i);
         field_g = stackIn_8_0;
     }
 
-    private final static void b() {
+    private final static void centerProjection() {
         field_d = field_i / 2;
         field_c = field_h / 2;
     }

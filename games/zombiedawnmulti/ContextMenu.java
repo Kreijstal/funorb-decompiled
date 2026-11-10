@@ -35,15 +35,15 @@ final class ContextMenu extends UiComponent {
         int var8Lifetime1;
         var11 = ZombieDawnMulti.field_E ? 1 : 0;
         if (0 == this.field_Vb) {
-          this.field_Tb[this.field_Vb] = new AlignedIconLabel(0L, (UiComponent) null, (UiComponent) null, this.field_Fb, (Sprite) null, bg.field_a);
+          this.field_Tb[this.field_Vb] = new AlignedIconLabel(0L, (UiComponent) null, (UiComponent) null, this.field_Fb, (Sprite) null, DialWidgetPainter.field_a);
           this.field_Tb[this.field_Vb].field_lb = 1;
-          this.a((byte) 50, this.field_Tb[this.field_Vb]);
+          this.addChild((byte) 50, this.field_Tb[this.field_Vb]);
           this.field_Xb[this.field_Vb] = -1;
           this.field_Vb = this.field_Vb + 1;
         }
         var6 = 0;
         for (var7 = 0; var7 < this.field_Vb; var7++) {
-          var8 = this.field_Tb[var7].a(this.field_Pb, false, this.field_Kb);
+          var8 = this.field_Tb[var7].measureLabelWidth(this.field_Pb, false, this.field_Kb);
           if (var8 > var6) {
             var6 = var8;
           }
@@ -53,7 +53,7 @@ final class ContextMenu extends UiComponent {
         if (param0 != 4542) {
           return;
         }
-        var8Lifetime1 = MatchingTextValidator.a(param1, (byte) 30, var6, param4);
+        var8Lifetime1 = MatchingTextValidator.clampPopupX(param1, (byte) 30, var6, param4);
         var9 = IntrusiveNode.placePopupVertically(true, param3, param2, var7Lifetime1);
         this.setBounds(var7Lifetime1, var9, var6, var8Lifetime1, -3344);
         for (var10 = 0; this.field_Vb > var10; var10++) {
@@ -65,7 +65,7 @@ final class ContextMenu extends UiComponent {
     final int updateAndPollAction(boolean param0, int param1) {
         int var3 = 0;
         int var4 = ZombieDawnMulti.field_E ? 1 : 0;
-        this.a(-11838, param0);
+        this.updateRoot(-11838, param0);
         if (!param0) {
           return -2;
         }
@@ -78,7 +78,7 @@ final class ContextMenu extends UiComponent {
           String var5 = (String) null;
           this.addItem((byte) 97, (String) null, -128);
         }
-        if (kd.field_b != 0) {
+        if (StringHashHelpers.field_b != 0) {
           return -1;
         }
         return this.field_Ob;
@@ -121,22 +121,22 @@ final class ContextMenu extends UiComponent {
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
-          vn.field_e = param1.readUnsignedShort((byte) 69) << 5;
+          MenuFrameHelpers.field_e = param1.readUnsignedShort((byte) 69) << 5;
           var2_int = param1.readUnsignedByte(param0 + 27315);
-          ao.field_c = (var2_int & 7) << 18;
-          vn.field_e = vn.field_e + (var2_int >> 3);
-          ao.field_c = ao.field_c + (param1.readUnsignedShort((byte) 69) << 2);
+          QuickChatCommandType.field_c = (var2_int & 7) << 18;
+          MenuFrameHelpers.field_e = MenuFrameHelpers.field_e + (var2_int >> 3);
+          QuickChatCommandType.field_c = QuickChatCommandType.field_c + (param1.readUnsignedShort((byte) 69) << 2);
           var2_intLifetime1 = param1.readUnsignedByte(31365);
-          ao.field_c = ao.field_c + (var2_intLifetime1 >> 6);
-          jq.field_a = var2_intLifetime1 << 15 & 2064384;
+          QuickChatCommandType.field_c = QuickChatCommandType.field_c + (var2_intLifetime1 >> 6);
+          PowerGaugeHelpers.field_a = var2_intLifetime1 << 15 & 2064384;
           if (param0 != 4050) {
             ContextMenu.releaseStatics((byte) 16);
           }
-          jq.field_a = jq.field_a + (param1.readUnsignedByte(31365) << 7);
+          PowerGaugeHelpers.field_a = PowerGaugeHelpers.field_a + (param1.readUnsignedByte(31365) << 7);
           var2_intLifetime2 = param1.readUnsignedByte(31365);
-          qc.field_q = var2_intLifetime2 << 16 & 65536;
-          jq.field_a = jq.field_a + (var2_intLifetime2 >> 1);
-          qc.field_q = qc.field_q + param1.readUnsignedShort((byte) 69);
+          ArchiveRequest.field_q = var2_intLifetime2 << 16 & 65536;
+          PowerGaugeHelpers.field_a = PowerGaugeHelpers.field_a + (var2_intLifetime2 >> 1);
+          ArchiveRequest.field_q = ArchiveRequest.field_q + param1.readUnsignedShort((byte) 69);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "sn.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -167,7 +167,7 @@ final class ContextMenu extends UiComponent {
           this.field_Tb[this.field_Vb].field_X = this.field_Ub;
           this.field_Tb[this.field_Vb].field_ib = true;
           this.field_Tb[this.field_Vb].field_lb = 1;
-          this.a((byte) 50, this.field_Tb[this.field_Vb]);
+          this.addChild((byte) 50, this.field_Tb[this.field_Vb]);
           this.field_Xb[this.field_Vb] = param2;
           this.field_Vb = this.field_Vb + 1;
           if (param0 != -118) {
@@ -184,7 +184,7 @@ final class ContextMenu extends UiComponent {
           this.field_Tb[this.field_Vb].field_X = this.field_Ub;
           this.field_Tb[this.field_Vb].field_ib = param3 ? true : false;
           this.field_Tb[this.field_Vb].field_lb = 1;
-          this.a((byte) 50, this.field_Tb[this.field_Vb]);
+          this.addChild((byte) 50, this.field_Tb[this.field_Vb]);
           this.field_Xb[this.field_Vb] = param1;
           this.field_Vb = this.field_Vb + 1;
         } catch (RuntimeException runtimeException) {

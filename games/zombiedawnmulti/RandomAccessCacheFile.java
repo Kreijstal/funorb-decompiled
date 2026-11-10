@@ -4,9 +4,9 @@
 import java.io.*;
 
 final class RandomAccessCacheFile {
-    static vg field_i;
+    static RankingsRequest field_i;
     private long field_c;
-    static pd field_a;
+    static FramePainter field_a;
     static IndexedSprite[] field_h;
     static String field_g;
     static String field_b;
@@ -167,7 +167,7 @@ final class RandomAccessCacheFile {
 
     final void close(byte param0) throws IOException {
         if (param0 != 38) {
-          field_i = (vg) null;
+          field_i = (RankingsRequest) null;
           if (null != this.field_f) {
             this.field_f.close();
             this.field_f = null;

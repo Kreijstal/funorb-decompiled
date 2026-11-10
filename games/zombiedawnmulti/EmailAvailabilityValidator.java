@@ -6,9 +6,9 @@ import java.io.*;
 final class EmailAvailabilityValidator extends TextInputValidator {
     private MatchingTextValidator field_z;
     private String field_v;
-    static ao field_r;
+    static QuickChatCommandType field_r;
     private boolean field_y;
-    static ao field_w;
+    static QuickChatCommandType field_w;
     static String field_t;
     static UiComponent field_x;
     static AccountCreationForm field_s;
@@ -27,7 +27,7 @@ final class EmailAvailabilityValidator extends TextInputValidator {
     }
 
     final ValidationState validationStateForText(boolean param0, String param1) {
-        uc var3 = null;
+        FlaggedTextValue var3 = null;
         RuntimeException var3_ref = null;
         ValidationState stackIn_2_0 = null;
         ValidationState stackIn_7_0 = null;
@@ -37,23 +37,23 @@ final class EmailAvailabilityValidator extends TextInputValidator {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_z.validationStateForText(param0, param1) == jq.field_b) {
-            stackIn_2_0 = jq.field_b;
+          if (this.field_z.validationStateForText(param0, param1) == PowerGaugeHelpers.field_b) {
+            stackIn_2_0 = PowerGaugeHelpers.field_b;
             return stackIn_2_0;
           }
           if (!param1.equals(this.field_v)) {
             var3 = CipherPacketBuffer.startEmailValidation(param1, false);
-            if (!var3.isFlagAssigned(-99)) {
+            if (!var3.hasChanged(-99)) {
               stackIn_7_0 = DraggableWidget.field_I;
               return stackIn_7_0;
             }
             this.field_v = param1;
-            this.field_y = var3.isFlagged(18307);
+            this.field_y = var3.isEnabled(18307);
           }
           if (!this.field_y) {
-            stackIn_12_0 = jq.field_b;
+            stackIn_12_0 = PowerGaugeHelpers.field_b;
           } else {
-            stackIn_12_0 = db.field_b;
+            stackIn_12_0 = AudioStartupHelpers.field_b;
           }
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -81,7 +81,7 @@ final class EmailAvailabilityValidator extends TextInputValidator {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_z.validationStateForText(false, param0) == jq.field_b) {
+          if (this.field_z.validationStateForText(false, param0) == PowerGaugeHelpers.field_b) {
             stackIn_3_0 = this.field_z.validationMessageForText(param0, -1276425040);
             return stackIn_3_0;
           }
@@ -89,11 +89,11 @@ final class EmailAvailabilityValidator extends TextInputValidator {
             stackIn_6_0 = (String) null;
             return stackIn_6_0;
           }
-          if (this.validationStateForText(false, param0) != jq.field_b) {
-            stackIn_11_0 = gi.field_h;
+          if (this.validationStateForText(false, param0) != PowerGaugeHelpers.field_b) {
+            stackIn_11_0 = LevelFileEntry.field_h;
             return stackIn_11_0;
           }
-          stackIn_9_0 = eg.field_z;
+          stackIn_9_0 = StrongCacheEntry.field_z;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -112,7 +112,7 @@ final class EmailAvailabilityValidator extends TextInputValidator {
     final static boolean isAsciiLetter(int param0, char param1) {
         boolean stackIn_10_0 = false;
         if (param0 != -24315) {
-          field_r = (ao) null;
+          field_r = (QuickChatCommandType) null;
         }
         stackIn_10_0 = ((!(param1 < 65) &&
           !(param1 > 90)) ||
@@ -123,7 +123,7 @@ final class EmailAvailabilityValidator extends TextInputValidator {
 
     final static void writeEncryptedPayload(java.math.BigInteger param0, byte param1, java.math.BigInteger param2, PacketBuffer param3, PacketBuffer param4) {
         try {
-          qi.a(0, true, param0, param3.position, param2, param3.payload, param4);
+          LoginPacketHelpers.writeEncryptedLoginBlock(0, true, param0, param3.position, param2, param3.payload, param4);
           int var5_int = 19 % ((-76 - param1) / 44);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "hd.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
@@ -171,11 +171,11 @@ final class EmailAvailabilityValidator extends TextInputValidator {
           Object var10 = null;
           ObjectInputStream var11 = null;
           int var12 = 0;
-          lp var13 = null;
+          ReflectionCheckRequest var13 = null;
           java.lang.reflect.Field var15 = null;
           Object var16 = null;
           java.lang.reflect.Field var16_ref = null;
-          lp var17 = null;
+          ReflectionCheckRequest var17 = null;
           Object var18 = null;
           java.lang.reflect.Field var19 = null;
           Object var21 = null;
@@ -191,7 +191,7 @@ final class EmailAvailabilityValidator extends TextInputValidator {
           var22 = null;
           var12 = ZombieDawnMulti.field_E ? 1 : 0;
           try {
-            var13 = (lp) (we.field_k.last(76));
+            var13 = (ReflectionCheckRequest) (PlayingSound.field_k.last(76));
             var17 = var13;
             if (var17 == null) {
               return;
@@ -259,7 +259,7 @@ final class EmailAvailabilityValidator extends TextInputValidator {
                       param0.writeByte(param1 + 123, 0);
                     } else if (var10 instanceof Number) {
                       param0.writeByte(116, 1);
-                      param0.a(((Number) (var10)).longValue(), true);
+                      param0.writeLong(((Number) (var10)).longValue(), true);
                     } else if (!(var10 instanceof String)) {
                       param0.writeByte(-45, 4);
                     } else {
@@ -325,7 +325,7 @@ final class EmailAvailabilityValidator extends TextInputValidator {
                 }
               }
             }
-            param0.f(var4, 117);
+            param0.appendCrc32(var4, 117);
             var17.unlink(true);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
@@ -348,8 +348,8 @@ final class EmailAvailabilityValidator extends TextInputValidator {
     }
 
     final static void drawNameEntryPopup(boolean param0, int param1) {
-        if (gi.field_i != null) {
-          gi.field_i.c(param0, -1);
+        if (LevelFileEntry.field_i != null) {
+          LevelFileEntry.field_i.drawRoot(param0, -1);
         }
         if (param1 != -19) {
           PacketBuffer var3 = (PacketBuffer) null;
@@ -385,15 +385,15 @@ final class EmailAvailabilityValidator extends TextInputValidator {
             return stackIn_11_0;
           }
           if (~param0 == param2) {
-            stackIn_14_0 = fd.field_I;
+            stackIn_14_0 = PropObject.field_I;
             return stackIn_14_0;
           }
           if (param0 == 9) {
-            stackIn_17_0 = la.field_b;
+            stackIn_17_0 = GrowableIntList.field_b;
             return stackIn_17_0;
           }
           if (param0 == 10) {
-            stackIn_20_0 = qi.field_b;
+            stackIn_20_0 = LoginPacketHelpers.field_b;
             return stackIn_20_0;
           }
           if (11 == param0) {
@@ -403,7 +403,7 @@ final class EmailAvailabilityValidator extends TextInputValidator {
           if (param0 != 14) {
             return null;
           }
-          stackIn_27_0 = vl.a(UsernameSuggestionsPanel.field_K, new String[]{param1}, 2);
+          stackIn_27_0 = QueuedListRequest.substituteTemplateArguments(UsernameSuggestionsPanel.field_K, new String[]{param1}, 2);
           return stackIn_27_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -420,8 +420,8 @@ final class EmailAvailabilityValidator extends TextInputValidator {
     }
 
     static {
-        field_r = new ao(0, 2, 2, 1);
-        field_w = new ao(13, 0, 1, 0);
+        field_r = new QuickChatCommandType(0, 2, 2, 1);
+        field_w = new QuickChatCommandType(13, 0, 1, 0);
         field_t = "Phantom";
         field_u = 75;
     }

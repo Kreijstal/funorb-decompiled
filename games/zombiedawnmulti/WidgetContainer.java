@@ -25,13 +25,13 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           if (param1 != 0) {
             this.clearKeyboardFocus((byte) -102);
           }
-          var4 = (UiWidget) (var3.c(-3));
+          var4 = (UiWidget) (var3.last(-3));
           while (true) {
             if (var4 == null) {
               return false;
             }
             if (!var4.requestKeyboardFocus(param0, param1 ^ 0)) {
-              var4 = (UiWidget) (var3.a((byte) -89));
+              var4 = (UiWidget) (var3.previous((byte) -89));
               continue;
             }
             break;
@@ -73,14 +73,14 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         var7 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           var10 = new IntrusiveDequeCursor(this.field_B);
-          var9 = (UiWidget) (var10.c(-3));
+          var9 = (UiWidget) (var10.last(-3));
           while (var9 != null) {
             if (var9.isLinked(4)) {
               if (var9.hasKeyboardFocus(127) &&
                 var9.handleKeyInput(param0, param1, param2, -6208)) {
                 return true;
               }
-              var9 = (UiWidget) (var10.a((byte) -126));
+              var9 = (UiWidget) (var10.previous((byte) -126));
               continue;
             }
             break;
@@ -93,7 +93,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           if (var6 != 80) {
             return false;
           }
-          if (!lc.field_m[81]) {
+          if (!PulseEffect.field_m[81]) {
             stackIn_15_0 = this.focusNextChild(param3 + 6319, param2);
           } else {
             stackIn_15_0 = this.focusPreviousChild((byte) -1, param2);
@@ -130,11 +130,11 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
             this.updatePointerState(64, (UiWidget) null, 84, 126);
           }
           var7 = new IntrusiveDequeCursor(this.field_B);
-          var8 = (UiWidget) (var7.c(-3));
+          var8 = (UiWidget) (var7.last(-3));
           while (var8 != null) {
             if (var8.isLinked(4)) {
               var8.handlePointerRelease(param0, param1, param2 + this.field_i, param3, true, param5 + this.field_y);
-              var8 = (UiWidget) (var7.a((byte) -80));
+              var8 = (UiWidget) (var7.previous((byte) -80));
               continue;
             }
             break;
@@ -174,20 +174,20 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
             return true;
           }
           var8 = new IntrusiveDequeCursor(this.field_B);
-          var4 = (UiWidget) (var8.c(-3));
+          var4 = (UiWidget) (var8.last(-3));
           while (var4 != null) {
             if (var4.hasKeyboardFocus(126)) {
               var5 = new IntrusiveDequeCursor(this.field_B);
-              var5.a(2680, var4);
-              var6 = (UiWidget) (var5.a((byte) -36));
+              var5.startBackwardFrom(2680, var4);
+              var6 = (UiWidget) (var5.previous((byte) -36));
               while (var6 != null) {
                 if (var6.requestKeyboardFocus(param1, 0)) {
                   return true;
                 }
-                var6 = (UiWidget) (var5.a((byte) -58));
+                var6 = (UiWidget) (var5.previous((byte) -58));
               }
             }
-            var4 = (UiWidget) (var8.a((byte) -126));
+            var4 = (UiWidget) (var8.previous((byte) -126));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -213,13 +213,13 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         var2 = new IntrusiveDequeCursor(this.field_B);
         var3 = -21 / ((53 - param0) / 57);
-        var4 = (UiWidget) (var2.c(-3));
+        var4 = (UiWidget) (var2.last(-3));
         while (var4 != null) {
           var5 = var4.getHoverText((byte) 112);
           if (var5 != null) {
             return var5;
           }
-          var4 = (UiWidget) (var2.a((byte) -46));
+          var4 = (UiWidget) (var2.previous((byte) -46));
         }
         return null;
     }
@@ -234,10 +234,10 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           field_D = (String) null;
         }
         IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_B);
-        UiWidget var6 = (UiWidget) (var5.a(32397));
+        UiWidget var6 = (UiWidget) (var5.first(32397));
         while (var6 != null) {
           var6.renderWidget(-2, param1 + this.field_i, param2, this.field_y + param3);
-          var6 = (UiWidget) (var5.e(param0 ^ 3));
+          var6 = (UiWidget) (var5.next(param0 ^ 3));
         }
     }
 
@@ -245,10 +245,10 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         int var5 = ZombieDawnMulti.field_E ? 1 : 0;
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_B);
         int var4 = -105 % ((param0 - 36) / 61);
-        UiWidget var3 = (UiWidget) (var2.c(-3));
+        UiWidget var3 = (UiWidget) (var2.last(-3));
         while (var3 != null) {
           var3.refreshLayout(-1);
-          var3 = (UiWidget) (var2.a((byte) -34));
+          var3 = (UiWidget) (var2.previous((byte) -34));
         }
     }
 
@@ -274,21 +274,21 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
             var8 = (UiWidget) null;
             this.requestKeyboardFocus((UiWidget) null, 48);
           }
-          var4 = (UiWidget) (var9.a(32397));
+          var4 = (UiWidget) (var9.first(32397));
           while (var4 != null) {
             if (var4.hasKeyboardFocus(125)) {
               var5 = new IntrusiveDequeCursor(this.field_B);
-              var5.b(-4, var4);
-              var6 = (UiWidget) (var5.e(-3));
+              var5.startForwardFrom(-4, var4);
+              var6 = (UiWidget) (var5.next(-3));
               while (var6 != null) {
                 if (!var6.requestKeyboardFocus(param1, 0)) {
-                  var6 = (UiWidget) (var5.e(param0 ^ 2));
+                  var6 = (UiWidget) (var5.next(param0 ^ 2));
                   continue;
                 }
                 return true;
               }
             }
-            var4 = (UiWidget) (var9.e(-3));
+            var4 = (UiWidget) (var9.next(-3));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -361,14 +361,14 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           var5 = new IntrusiveDequeCursor(this.field_B);
-          var6 = (UiWidget) (var5.c(-3));
+          var6 = (UiWidget) (var5.last(-3));
           while (var6 != null) {
             discarded$2 = param3.append('\n');
             for (var7 = 0; param1 >= var7; var7++) {
               discarded$3 = param3.append(' ');
             }
             var6.appendWidgetDiagnostics(7, param0, 1 + param1, param3);
-            var6 = (UiWidget) (var5.a((byte) -94));
+            var6 = (UiWidget) (var5.previous((byte) -94));
           }
           if (param2 >= -79) {
             field_D = (String) null;
@@ -407,11 +407,11 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         try {
           super.updatePointerState(param0, param1, param2, param3);
           var5 = new IntrusiveDequeCursor(this.field_B);
-          var6 = (UiWidget) (var5.c(-3));
+          var6 = (UiWidget) (var5.last(-3));
           while (var6 != null) {
             if (var6.isLinked(4)) {
               var6.updatePointerState(-5407, param1, param2 + this.field_y, param3 + this.field_i);
-              var6 = (UiWidget) (var5.a((byte) -59));
+              var6 = (UiWidget) (var5.previous((byte) -59));
               continue;
             }
             break;
@@ -445,14 +445,14 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         try {
           var9 = -59 / ((48 - param0) / 37);
           var8 = new IntrusiveDequeCursor(this.field_B);
-          var10 = (UiWidget) (var8.c(-3));
+          var10 = (UiWidget) (var8.last(-3));
           while (var10 != null) {
             if (var10.isLinked(4)) {
               if (var10.hasKeyboardFocus(126) &&
                 var10.requestKeyboardFocus((byte) 105, param1, param2, param3, param4, param5, param6)) {
                 return true;
               }
-              var10 = (UiWidget) (var8.a((byte) -50));
+              var10 = (UiWidget) (var8.previous((byte) -50));
               continue;
             }
             break;
@@ -501,13 +501,13 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         var2 = 0;
         var3 = new IntrusiveDequeCursor(this.field_B);
-        var4 = (UiWidget) (var3.c(param0 - 47));
+        var4 = (UiWidget) (var3.last(param0 - 47));
         while (var4 != null) {
           var5 = var4.getTopLayer((byte) 44);
           if (var5 > var2) {
             var2 = var5;
           }
-          var4 = (UiWidget) (var3.a((byte) -74));
+          var4 = (UiWidget) (var3.previous((byte) -74));
         }
         if (param0 != 44) {
           var7 = (StringBuilder) null;
@@ -522,10 +522,10 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           this.field_B = (IntrusiveDeque) null;
         }
         IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_B);
-        UiWidget var3 = (UiWidget) (var2.c(-3));
+        UiWidget var3 = (UiWidget) (var2.last(-3));
         while (var3 != null) {
           var3.clearKeyboardFocus((byte) 32);
-          var3 = (UiWidget) (var2.a((byte) -50));
+          var3 = (UiWidget) (var2.previous((byte) -50));
         }
     }
 
@@ -543,12 +543,12 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           field_F = (ValidationState) null;
         }
         var2 = new IntrusiveDequeCursor(this.field_B);
-        var3 = (UiWidget) (var2.c(-3));
+        var3 = (UiWidget) (var2.last(-3));
         while (var3 != null) {
           if (var3.hasKeyboardFocus(125)) {
             return var3;
           }
-          var3 = (UiWidget) (var2.a((byte) -40));
+          var3 = (UiWidget) (var2.previous((byte) -40));
         }
         return null;
     }
@@ -568,11 +568,11 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           if (param4 != -24) {
             field_C = 84;
           }
-          var9 = (UiWidget) (var8.c(-3));
+          var9 = (UiWidget) (var8.last(-3));
           while (var9 != null) {
             if (var9.isLinked(4)) {
               if (!var9.handlePointerPress(param0, param1, param2, param3, -24, param5 + this.field_y, param6 + this.field_i)) {
-                var9 = (UiWidget) (var8.a((byte) -81));
+                var9 = (UiWidget) (var8.previous((byte) -81));
                 continue;
               }
               return true;

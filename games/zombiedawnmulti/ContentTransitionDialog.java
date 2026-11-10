@@ -11,10 +11,10 @@ abstract class ContentTransitionDialog extends ResizableDialog {
     private int field_gb;
     static long field_sb;
     static int[] field_ob;
-    private lf field_pb;
+    private TransitionPhase field_pb;
     private int field_qb;
     static UiComponent field_jb;
-    private na field_hb;
+    private AlphaChildWidget field_hb;
 
     public static void releaseStatics(int param0) {
         if (param0 != 7181) {
@@ -36,7 +36,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
             if (fieldTemp$0 != this.field_qb) {
               this.field_hb.field_E = 256 - (this.field_lb << 8) / this.field_qb;
               if (param0 != -27388) {
-                this.h(-5);
+                this.refreshVisibilityAndCheckClosed(-5);
                 return super.advanceDialogAnimation(-27388);
               }
               return super.advanceDialogAnimation(-27388);
@@ -46,16 +46,16 @@ abstract class ContentTransitionDialog extends ResizableDialog {
             this.field_lb = 0;
             this.field_hb.field_E = 0;
             if (param0 != -27388) {
-              this.h(-5);
+              this.refreshVisibilityAndCheckClosed(-5);
               return super.advanceDialogAnimation(-27388);
             }
             return super.advanceDialogAnimation(-27388);
           }
-          if (this.field_pb != lf.field_a) {
+          if (this.field_pb != TransitionPhase.field_a) {
             if (param0 == -27388) {
               return super.advanceDialogAnimation(-27388);
             }
-            this.h(-5);
+            this.refreshVisibilityAndCheckClosed(-5);
             return super.advanceDialogAnimation(-27388);
           }
           fieldTemp$1 = this.field_lb + 1;
@@ -66,20 +66,20 @@ abstract class ContentTransitionDialog extends ResizableDialog {
             if (param0 == -27388) {
               return super.advanceDialogAnimation(-27388);
             }
-            this.h(-5);
+            this.refreshVisibilityAndCheckClosed(-5);
             return super.advanceDialogAnimation(-27388);
           }
           this.field_hb.field_E = (this.field_lb << 8) / this.field_gb;
           if (param0 == -27388) {
             return super.advanceDialogAnimation(-27388);
           }
-          this.h(-5);
+          this.refreshVisibilityAndCheckClosed(-5);
           return super.advanceDialogAnimation(-27388);
         }
         if (param0 == -27388) {
           return super.advanceDialogAnimation(-27388);
         }
-        this.h(-5);
+        this.refreshVisibilityAndCheckClosed(-5);
         return super.advanceDialogAnimation(-27388);
     }
 
@@ -117,10 +117,10 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         }
     }
 
-    final static void a(boolean param0, boolean param1) {
-        if (null != ki.field_e) {
+    final static void drawQuickChatHelpDialog(boolean param0, boolean param1) {
+        if (null != SpriteHotspot.field_e) {
           SoftwareRasterizer.clearRect(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, -SoftwareRasterizer.clipLeft + SoftwareRasterizer.clipRight, SoftwareRasterizer.clipBottom - SoftwareRasterizer.clipTop);
-          ki.field_e.c(param0, -1);
+          SpriteHotspot.field_e.drawRoot(param0, -1);
           if (param1) {
             field_ob = (int[]) null;
             return;
@@ -137,7 +137,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         if (param0 >= -70) {
           field_ob = (int[]) null;
           if (QuickChatMenu.field_Rb != this.field_pb) {
-            this.field_pb = lf.field_a;
+            this.field_pb = TransitionPhase.field_a;
             this.field_lb = 0;
             this.installContent(this.field_kb, false);
             this.field_hb.field_E = 0;
@@ -147,7 +147,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
           return;
         }
         if (QuickChatMenu.field_Rb != this.field_pb) {
-          this.field_pb = lf.field_a;
+          this.field_pb = TransitionPhase.field_a;
           this.field_lb = 0;
           this.installContent(this.field_kb, false);
           this.field_hb.field_E = 0;
@@ -156,12 +156,12 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         }
     }
 
-    final boolean h(int param0) {
+    final boolean refreshVisibilityAndCheckClosed(int param0) {
         this.finishTransition((byte) 30);
         if (param0 != -6134) {
           return false;
         }
-        return super.h(-6134);
+        return super.refreshVisibilityAndCheckClosed(-6134);
     }
 
     ContentTransitionDialog(DialogLayer param0, UiWidget param1, int param2, int param3, int param4) {
@@ -181,20 +181,20 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         if (this.field_pb == null) {
           super.finishTransition((byte) 63);
           if (param0 < 29) {
-            this.h(-78);
+            this.refreshVisibilityAndCheckClosed(-78);
             return;
           }
           return;
         }
-        if (this.field_pb != lf.field_a) {
-          this.b(12 + this.field_kb.field_n, this.field_kb.field_w + (this.field_rb + 12), 78);
+        if (this.field_pb != TransitionPhase.field_a) {
+          this.setCenteredSize(12 + this.field_kb.field_n, this.field_kb.field_w + (this.field_rb + 12), 78);
           this.installContent(this.field_kb, false);
         } else {
           this.field_pb = null;
           this.field_hb.field_E = 256;
           super.finishTransition((byte) 63);
           if (param0 < 29) {
-            this.h(-78);
+            this.refreshVisibilityAndCheckClosed(-78);
             return;
           }
           return;
@@ -205,7 +205,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         if (param0 >= 29) {
           return;
         }
-        this.h(-78);
+        this.refreshVisibilityAndCheckClosed(-78);
     }
 
     void transitionToContent(UiWidget param0, byte param1) {
@@ -253,9 +253,9 @@ abstract class ContentTransitionDialog extends ResizableDialog {
           }
           if (param0 != null) {
             param0.setWidgetBounds(6, 6 + this.field_rb, 28972, param0.field_n, param0.field_w);
-            this.field_hb = new na(param0);
+            this.field_hb = new AlphaChildWidget(param0);
           } else {
-            this.field_hb = new na();
+            this.field_hb = new AlphaChildWidget();
           }
           this.addChild((byte) 95, this.field_hb);
           this.field_kb = null;

@@ -27,7 +27,7 @@ final class WhirlpoolHasher {
         this.field_m[0] = (byte) 0;
         if (param0 != 32) {
           byte[] var4 = (byte[]) null;
-          this.a((byte[]) null, 76, -115);
+          this.finishDigest((byte[]) null, 76, -115);
         }
         this.field_f = 0;
         for (var2Lifetime1 = 0; var2Lifetime1 < 8; var2Lifetime1++) {
@@ -35,7 +35,7 @@ final class WhirlpoolHasher {
         }
     }
 
-    final void a(byte[] param0, int param1, int param2) {
+    final void finishDigest(byte[] param0, int param1, int param2) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         RuntimeException stackIn_16_0 = null;
@@ -50,7 +50,7 @@ final class WhirlpoolHasher {
         LobbyPlayer var9 = null;
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          this.field_m[this.field_c] = (byte)cr.b((int) this.field_m[this.field_c], 128 >>> ScrollPane.bitAnd(this.field_f, 7));
+          this.field_m[this.field_c] = (byte)PendingStatusRequest.bitOr((int) this.field_m[this.field_c], 128 >>> ScrollPane.bitAnd(this.field_f, 7));
           this.field_c = this.field_c + 1;
           if (this.field_c > 32) {
             while (this.field_c < 64) {
@@ -58,7 +58,7 @@ final class WhirlpoolHasher {
               this.field_c = this.field_c + 1;
               this.field_m[fieldTemp$0] = (byte) 0;
             }
-            this.a(param1 - 3);
+            this.processBlock(param1 - 3);
             this.field_c = 0;
           }
           while (this.field_c < 32) {
@@ -67,11 +67,11 @@ final class WhirlpoolHasher {
             this.field_m[fieldTemp$1] = (byte) 0;
           }
           ArrayOperations.copy(this.field_e, 0, this.field_m, 32, 32);
-          this.a(-2);
+          this.processBlock(-2);
           var4_int = 0;
           if (param1 != 1) {
             var9 = (LobbyPlayer) null;
-            WhirlpoolHasher.a(-29, (ScrollPane) null, -43, 102, (byte) 41, -126, (LobbyPlayer) null);
+            WhirlpoolHasher.showLobbyPlayerContextMenu(-29, (ScrollPane) null, -43, 102, (byte) 41, -126, (LobbyPlayer) null);
           }
           var5 = param2;
           while (var4_int < 8) {
@@ -102,7 +102,7 @@ final class WhirlpoolHasher {
         }
     }
 
-    private final void a(int param0) {
+    private final void processBlock(int param0) {
         long dupTemp$0 = 0L;
         long arrayValue$1 = 0L;
         int var2;
@@ -127,7 +127,7 @@ final class WhirlpoolHasher {
         }
         var3 = 0;
         while (var2 < 8) {
-          this.field_h[var2] = ScrollPane.bitXor(en.longAnd(255L, (long)this.field_m[7 + var3]), ScrollPane.bitXor(en.longAnd(255L, (long)this.field_m[6 + var3]) << 8, ScrollPane.bitXor(en.longAnd(255L, (long)this.field_m[var3 + 5]) << 16, ScrollPane.bitXor(ScrollPane.bitXor(ScrollPane.bitXor(en.longAnd(280375465082880L, (long)this.field_m[var3 + 2] << 40), ScrollPane.bitXor((long)this.field_m[var3] << 56, en.longAnd((long)this.field_m[var3 + 1], 255L) << 48)), en.longAnd((long)this.field_m[var3 + 3] << 32, 1095216660480L)), en.longAnd((long)this.field_m[var3 + 4] << 24, 4278190080L)))));
+          this.field_h[var2] = ScrollPane.bitXor(ChatPanelSetupHelpers.longAnd(255L, (long)this.field_m[7 + var3]), ScrollPane.bitXor(ChatPanelSetupHelpers.longAnd(255L, (long)this.field_m[6 + var3]) << 8, ScrollPane.bitXor(ChatPanelSetupHelpers.longAnd(255L, (long)this.field_m[var3 + 5]) << 16, ScrollPane.bitXor(ScrollPane.bitXor(ScrollPane.bitXor(ChatPanelSetupHelpers.longAnd(280375465082880L, (long)this.field_m[var3 + 2] << 40), ScrollPane.bitXor((long)this.field_m[var3] << 56, ChatPanelSetupHelpers.longAnd((long)this.field_m[var3 + 1], 255L) << 48)), ChatPanelSetupHelpers.longAnd((long)this.field_m[var3 + 3] << 32, 1095216660480L)), ChatPanelSetupHelpers.longAnd((long)this.field_m[var3 + 4] << 24, 4278190080L)))));
           var2++;
           var3 += 8;
         }
@@ -143,7 +143,7 @@ final class WhirlpoolHasher {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_a[var3Lifetime1] = ScrollPane.bitXor(this.field_a[var3Lifetime1], p.field_f[var4][ScrollPane.bitAnd(255, (int)(this.field_d[ScrollPane.bitAnd(7, -var4 + var3Lifetime1)] >>> var5))]);
+              this.field_a[var3Lifetime1] = ScrollPane.bitXor(this.field_a[var3Lifetime1], ObjectFactoryHelpers.field_f[var4][ScrollPane.bitAnd(255, (int)(this.field_d[ScrollPane.bitAnd(7, -var4 + var3Lifetime1)] >>> var5))]);
               var4++;
               var5 -= 8;
             }
@@ -151,14 +151,14 @@ final class WhirlpoolHasher {
           for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
             this.field_d[var3Lifetime1Lifetime1] = this.field_a[var3Lifetime1Lifetime1];
           }
-          this.field_d[0] = ScrollPane.bitXor(this.field_d[0], p.field_d[var2Lifetime2]);
+          this.field_d[0] = ScrollPane.bitXor(this.field_d[0], ObjectFactoryHelpers.field_d[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
             this.field_a[var3Lifetime1Lifetime2] = this.field_d[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_a[var3Lifetime1Lifetime2] = ScrollPane.bitXor(this.field_a[var3Lifetime1Lifetime2], p.field_f[var7][ScrollPane.bitAnd((int)(this.field_b[ScrollPane.bitAnd(7, var3Lifetime1Lifetime2 - var7)] >>> var5Lifetime1), 255)]);
+              this.field_a[var3Lifetime1Lifetime2] = ScrollPane.bitXor(this.field_a[var3Lifetime1Lifetime2], ObjectFactoryHelpers.field_f[var7][ScrollPane.bitAnd((int)(this.field_b[ScrollPane.bitAnd(7, var3Lifetime1Lifetime2 - var7)] >>> var5Lifetime1), 255)]);
               var7++;
               var5Lifetime1 -= 8;
             }
@@ -182,7 +182,7 @@ final class WhirlpoolHasher {
         field_i = null;
     }
 
-    final void a(byte[] param0, int param1, long param2) {
+    final void updateBits(byte[] param0, int param1, long param2) {
         int stackIn_16_0 = 0;
         int stackIn_16_1 = 0;
         RuntimeException stackIn_26_0 = null;
@@ -220,11 +220,11 @@ final class WhirlpoolHasher {
             var9 = param0[var6] << var7 & 255 | (param0[1 + var6] & 255) >>> 8 - var7;
             if (0 <= var9 &&
               var9 < 256) {
-              this.field_m[this.field_c] = (byte)cr.b((int) this.field_m[this.field_c], var9 >>> var8);
+              this.field_m[this.field_c] = (byte)PendingStatusRequest.bitOr((int) this.field_m[this.field_c], var9 >>> var8);
               this.field_c = this.field_c + 1;
               this.field_f = this.field_f + (-var8 + 8);
               if (512 == this.field_f) {
-                this.a(-2);
+                this.processBlock(-2);
                 this.field_f = 0;
                 this.field_c = 0;
               }
@@ -240,7 +240,7 @@ final class WhirlpoolHasher {
             stackIn_16_0 = 255;
             stackIn_16_1 = param0[var6] << var7;
             var9Lifetime1 = stackIn_16_0 & stackIn_16_1;
-            this.field_m[this.field_c] = (byte)cr.b((int) this.field_m[this.field_c], var9Lifetime1 >>> var8);
+            this.field_m[this.field_c] = (byte)PendingStatusRequest.bitOr((int) this.field_m[this.field_c], var9Lifetime1 >>> var8);
           } else {
             var9Lifetime1 = 0;
           }
@@ -249,7 +249,7 @@ final class WhirlpoolHasher {
             this.field_c = this.field_c + 1;
             this.field_f = this.field_f + (8 - var8);
             if (this.field_f == 512) {
-              this.a(-2);
+              this.processBlock(-2);
               this.field_c = 0;
               this.field_f = 0;
             }
@@ -273,7 +273,7 @@ final class WhirlpoolHasher {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean handleChatInputKey(int param0, int param1, int param2) {
         StringBuilder discarded$0 = null;
         int var3;
         int var4;
@@ -305,81 +305,81 @@ final class WhirlpoolHasher {
         var21 = null;
         var11 = ZombieDawnMulti.field_E ? 1 : 0;
         var3 = 1;
-        if (!sp.field_h &&
+        if (!CachedTextLayout.field_h &&
           ClickMarker.field_v == null) {
           var3 = 0;
         }
-        if (va.field_a == 0 &&
+        if (UrlLaunchHelpers.field_a == 0 &&
           BufferedSocket.field_n != null) {
           var3 = 0;
         }
-        if (va.field_a == 2 &&
+        if (UrlLaunchHelpers.field_a == 2 &&
           !QuickChatPhraseDefinition.isPrivateRecipientReachable((byte) -20)) {
           var3 = 0;
         }
         if (InfectionEvent.field_p == 84) {
           if (var3 != 0) {
-            if (rm.field_a.length() > 0) {
-              var4_ref_String = rm.field_a.toString();
+            if (PowerupEventFactory.field_a.length() > 0) {
+              var4_ref_String = PowerupEventFactory.field_a.toString();
               if (!UnitStateEvent.containsFilterText(-115, var4_ref_String)) {
-                var5 = va.field_a;
+                var5 = UrlLaunchHelpers.field_a;
                 if (var5 == 0 &&
                   JaggrabDownloader.field_c != null) {
                   var5 = 1;
                 }
                 if (CipherPacketBuffer.getChatFilterMode(var5, true) == 2) {
-                  kp.a(var5, param2, 1, true);
+                  MessageMenuScreen.setChatFilter(var5, param2, 1, true);
                 }
-                GameWorld.a(-1, qf.field_g, param0, var4_ref_String, va.field_a, 29602);
+                GameWorld.sendChatMessage(-1, TextPopupHelpers.field_g, param0, var4_ref_String, UrlLaunchHelpers.field_a, 29602);
               } else {
                 var13 = (String) null;
                 var12 = (String) null;
-                vm.a((String) null, 0, (String) null, iq.field_d, 2, 0);
+                FullscreenErrorDialog.addChatMessage((String) null, 0, (String) null, TutorialAndMenuHelpers.field_d, 2, 0);
                 var15 = (String) null;
                 var14 = (String) null;
-                vm.a((String) null, 0, (String) null, IsaacRandom.field_l, 2, 0);
+                FullscreenErrorDialog.addChatMessage((String) null, 0, (String) null, IsaacRandom.field_l, 2, 0);
               }
             }
-            pf.clearChatInput(64);
+            ChatInputHelpers.clearChatInput(64);
           } else {
-            if (0 != va.field_a) {
-              pf.clearChatInput(48);
+            if (0 != UrlLaunchHelpers.field_a) {
+              ChatInputHelpers.clearChatInput(48);
             }
           }
           return true;
         }
         if (InfectionEvent.field_p == 85) {
           if (var3 != 0 &&
-            rm.field_a.length() > 0) {
-            lf.a(' ', rm.field_a.length() - 1, 0, rm.field_a);
+            PowerupEventFactory.field_a.length() > 0) {
+            TransitionPhase.padWithChar(' ', PowerupEventFactory.field_a.length() - 1, 0, PowerupEventFactory.field_a);
           }
           return true;
         }
-        var4 = pn.field_d;
-        if (!og.isRenderableCharacter((char) var4, (byte) 123)) {
+        var4 = ArchiveAvailabilityHelpers.field_d;
+        if (!ZombieDrop.isRenderableCharacter((char) var4, (byte) 123)) {
           if (param1 < 30) {
             field_i = (String) null;
           }
           return false;
         }
         if (var3 != 0) {
-          if (80 <= rm.field_a.length()) {
+          if (80 <= PowerupEventFactory.field_a.length()) {
             return true;
           }
-          discarded$0 = rm.field_a.append((char) var4);
+          discarded$0 = PowerupEventFactory.field_a.append((char) var4);
           var5Lifetime1 = 485;
           var17 = ProgressDialog.field_lb;
           var7 = var17;
           var7Lifetime1 = var17;
-          var16 = nh.prefixWithCrown(2, var17);
+          var16 = PendingRankingRequest.prefixWithCrown(2, var17);
           var7Lifetime2 = var16;
           var7Lifetime3 = var16;
           var19 = var16;
           var7Lifetime4 = var19;
           var7Lifetime5 = var19;
-          if (va.field_a != 2) {
+          if (UrlLaunchHelpers.field_a != 2) {
             var7Lifetime6 = "";
-            if (va.field_a == 0) {
+            if (UrlLaunchHelpers.field_a == 0) {
               if (null == JaggrabDownloader.field_c &&
                 ContextMenu.field_Hb) {
                 var7Lifetime6 = "[" + MessageDialog.field_vb + "] ";
@@ -389,50 +389,50 @@ final class WhirlpoolHasher {
                   AgeValidator.field_t != null) {
                   var7Lifetime6 = "[" + AgeValidator.field_t + "] ";
                 } else {
-                  var7Lifetime6 = "[" + vl.a(GameEvent.field_g, new String[]{JaggrabDownloader.field_c.field_Nb}, 2) + "] ";
+                  var7Lifetime6 = "[" + QueuedListRequest.substituteTemplateArguments(GameEvent.field_g, new String[]{JaggrabDownloader.field_c.field_Nb}, 2) + "] ";
                 }
               }
             }
             var20 = var7Lifetime6 + var19 + ": ";
-            var5Lifetime1 = var5Lifetime1 - w.field_A.textWidth(var20);
+            var5Lifetime1 = var5Lifetime1 - MusicCrossfadeStream.field_A.textWidth(var20);
           } else {
-            var22 = (CharSequence) ((Object) qf.field_g);
-            var18 = vl.a(v.field_c, new String[]{QuickChatMenu.a((byte) 0, var22)}, 2);
+            var22 = (CharSequence) ((Object) TextPopupHelpers.field_g);
+            var18 = QueuedListRequest.substituteTemplateArguments(LobbySlideLayout.field_c, new String[]{QuickChatMenu.canonicalizeNameOrEmpty((byte) 0, var22)}, 2);
             var7Lifetime6 = var18;
             var7Lifetime6 = var18;
-            var8 = vl.a(lc.field_n, new String[]{var16}, 2);
+            var8 = QueuedListRequest.substituteTemplateArguments(PulseEffect.field_n, new String[]{var16}, 2);
             var7Lifetime6 = var8;
             var7Lifetime6 = var8;
-            var9 = w.field_A.textWidth(var18);
-            var10 = w.field_A.textWidth(var8);
+            var9 = MusicCrossfadeStream.field_A.textWidth(var18);
+            var10 = MusicCrossfadeStream.field_A.textWidth(var8);
             if (var10 < var9) {
               var5Lifetime1 = var5Lifetime1 - var9;
             } else {
               var5Lifetime1 = var5Lifetime1 - var10;
             }
           }
-          if (w.field_A.textWidth(rm.field_a.toString()) > var5Lifetime1) {
-            lf.a(' ', -1 + rm.field_a.length(), 0, rm.field_a);
+          if (MusicCrossfadeStream.field_A.textWidth(PowerupEventFactory.field_a.toString()) > var5Lifetime1) {
+            TransitionPhase.padWithChar(' ', -1 + PowerupEventFactory.field_a.length(), 0, PowerupEventFactory.field_a);
           }
         }
         return true;
     }
 
-    final static void a(int param0, ScrollPane param1, int param2, int param3, byte param4, int param5, LobbyPlayer param6) {
+    final static void showLobbyPlayerContextMenu(int param0, ScrollPane param1, int param2, int param3, byte param4, int param5, LobbyPlayer param6) {
         PlayerContextMenu var13 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         try {
-          ve.a(param6.field_ec, 196, param6.field_Lb, param1, param6.field_Jb, param6, -1, (int[]) null, -1);
-          pk.field_b.a(true, (byte) -102);
-          pk.field_b.buildPlayerMenu(0, (int[]) null, (byte) 13);
-          pk.field_b.c(param4 ^ -42);
+          LightningBolt.openPlayerContextMenu(param6.field_ec, 196, param6.field_Lb, param1, param6.field_Jb, param6, -1, (int[]) null, -1);
+          ContextMenuHolder.field_b.addGameSetupMenuItems(true, (byte) -102);
+          ContextMenuHolder.field_b.buildPlayerMenu(0, (int[]) null, (byte) 13);
+          ContextMenuHolder.field_b.addReportAbuseAction(param4 ^ -42);
           if (param4 != 81) {
-            WhirlpoolHasher.a(-56, -95, -27);
+            WhirlpoolHasher.handleChatInputKey(-56, -95, -27);
           }
-          var13 = pk.field_b;
+          var13 = ContextMenuHolder.field_b;
           var8 = param5;
           var9 = param0;
           var10 = param3;

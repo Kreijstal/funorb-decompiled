@@ -21,7 +21,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
     }
 
     final ValidationState validationStateForText(boolean param0, String param1) {
-        gh var3 = null;
+        AccountServerResult var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
         CharSequence var5 = null;
@@ -35,11 +35,11 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
         try {
           var5 = (CharSequence) ((Object) param1);
           if (!InfectionEvent.isValidPlayerNameText(var5, 12319)) {
-            stackIn_2_0 = jq.field_b;
+            stackIn_2_0 = PowerGaugeHelpers.field_b;
             return stackIn_2_0;
           }
           if (!param1.equals(this.field_r)) {
-            var3 = LevelFileCatalog.a((byte) 127, param1);
+            var3 = LevelFileCatalog.pollUsernameAvailability((byte) 127, param1);
             if (var3 != null &&
               null == var3.field_h) {
               this.field_r = param1;
@@ -54,9 +54,9 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
             this.validationMessageForText((String) null, 126);
           }
           if (this.field_q) {
-            stackIn_16_0 = db.field_b;
+            stackIn_16_0 = AudioStartupHelpers.field_b;
           } else {
-            stackIn_16_0 = jq.field_b;
+            stackIn_16_0 = PowerGaugeHelpers.field_b;
           }
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -76,7 +76,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
     final String validationMessageForText(String param0, int param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
-        gh var4 = null;
+        AccountServerResult var4 = null;
         String var5 = null;
         CharSequence var6 = null;
         String stackIn_3_0 = null;
@@ -87,7 +87,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = (CharSequence) ((Object) param0);
-          var3 = DialogLayer.a(param1 ^ -1276425052, var6);
+          var3 = DialogLayer.getNameValidationError(param1 ^ -1276425052, var6);
           if (var3 != null) {
             stackIn_3_0 = var3;
             return stackIn_3_0;
@@ -97,7 +97,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
             this.validationStateForText(true, (String) null);
           }
           if (!param0.equals(this.field_r)) {
-            var4 = LevelFileCatalog.a((byte) 127, param0);
+            var4 = LevelFileCatalog.pollUsernameAvailability((byte) 127, param0);
             if (var4 == null) {
               return null;
             }
@@ -110,7 +110,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
           if (this.field_q) {
             return MusicPatchPcmStream.field_j;
           }
-          stackIn_17_0 = wg.field_d;
+          stackIn_17_0 = SettingsCookieHelpers.field_d;
           return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

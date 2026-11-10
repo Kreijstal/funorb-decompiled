@@ -494,7 +494,7 @@ final class ArgbSprite extends Sprite {
         ArgbSprite.blendArgbRows(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 
-    final void d(int param0, int param1) {
+    final void drawRotatedHalfTurn(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -538,7 +538,7 @@ final class ArgbSprite extends Sprite {
         ArgbSprite.blendArgbReversedRows(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 
-    private final static void e(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitArgbAlphaDimmed(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$12 = 0;
@@ -569,7 +569,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void c(int param0, int param1, int param2) {
+    final void drawBlended(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -775,10 +775,10 @@ final class ArgbSprite extends Sprite {
           var6 <= 0) {
           return;
         }
-        ArgbSprite.e(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
+        ArgbSprite.blitArgbAlphaDimmed(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
-    final void g(int param0, int param1, int param2) {
+    final void drawRecoloredNeutral(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;

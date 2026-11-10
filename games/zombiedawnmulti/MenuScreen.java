@@ -4,7 +4,7 @@
 class MenuScreen {
     static UiComponent field_e;
     int[] field_j;
-    hh field_g;
+    MenuInputState field_g;
     int field_i;
     private int field_b;
     private boolean field_f;
@@ -20,15 +20,15 @@ class MenuScreen {
         if (this.field_d == 2) {
           this.field_b = this.field_b - TranslatedUiText.field_e.maxAscent / 2;
           this.field_j = new int[]{1, 12, 13, 34, 47, 4, 50, 3, 7};
-          this.field_g = new hh(this.field_j.length);
+          this.field_g = new MenuInputState(this.field_j.length);
         } else {
           if (3 == this.field_d) {
             this.field_j = new int[]{48, 5};
-            this.field_g = new hh(this.field_j.length);
+            this.field_g = new MenuInputState(this.field_j.length);
           } else {
             if (this.field_d == 5) {
               this.field_j = new int[]{5};
-              this.field_g = new hh(this.field_j.length);
+              this.field_g = new MenuInputState(this.field_j.length);
             }
           }
         }
@@ -43,18 +43,18 @@ class MenuScreen {
         int var5 = ZombieDawnMulti.field_E ? 1 : 0;
         int var3Lifetime1;
         if (DisplayNamePanel.field_K) {
-          bi.field_e = true;
-          kk.a(-97, 0, 11);
+          AccountTextGlobals.field_e = true;
+          CacheEntry.requestSpectateGame(-97, 0, 11);
         } else {
           if (FadingDialog.field_I) {
-            var3 = pp.field_n ? 1 : 0;
-            GameCharacter.l((byte) 124);
+            var3 = UsernameCredentials.field_n ? 1 : 0;
+            GameCharacter.endLocalGame((byte) 124);
             if (var3 == 0) {
               var4 = param0 ? 1 : 0;
-              LevelActorSpawner.requestMenuScreen(var4 != 0, 15, 127, sp.field_g);
+              LevelActorSpawner.requestMenuScreen(var4 != 0, 15, 127, CachedTextLayout.field_g);
             } else {
               var4 = param0 ? 1 : 0;
-              LevelActorSpawner.requestMenuScreen(var4 != 0, 1, 125, sp.field_g);
+              LevelActorSpawner.requestMenuScreen(var4 != 0, 1, 125, CachedTextLayout.field_g);
             }
           }
         }
@@ -62,7 +62,7 @@ class MenuScreen {
           this.field_b = 82;
         }
         var3Lifetime1 = param0 ? 1 : 0;
-        LevelActorSpawner.requestMenuScreen(var3Lifetime1 != 0, -5, 126, sp.field_g);
+        LevelActorSpawner.requestMenuScreen(var3Lifetime1 != 0, -5, 126, CachedTextLayout.field_g);
     }
 
     public static void releaseStatics(boolean param0) {
@@ -78,7 +78,7 @@ class MenuScreen {
           return false;
         }
         if (this.field_j[param0] == 21 &&
-          PowerupButton.field_e.g(param1 - 16777149) == 0) {
+          PowerupButton.field_e.getDebugValue(param1 - 16777149) == 0) {
           return false;
         }
         if (param1 != 16777215) {
@@ -92,7 +92,7 @@ class MenuScreen {
         int var1;
         boolean stackIn_5_0 = false;
         var1 = 91 % ((param0 - 33) / 35);
-        stackIn_5_0 = (ki.field_e != null) || (ee.field_b);
+        stackIn_5_0 = (SpriteHotspot.field_e != null) || (LobbyScreenHelpers.field_b);
         return stackIn_5_0;
     }
 
@@ -125,27 +125,27 @@ class MenuScreen {
                 if (this.field_d == 15) {
                   SoftwareRasterizer.fillRect(0, 0, 640, 480, 16777215);
                   SoftwareRasterizer.setClip(0, 0, 640, 5);
-                  dd.field_g.d(0, 0);
+                  DefaultQuickChatContext.field_g.drawOpaque(0, 0);
                   SoftwareRasterizer.setClip(0, 5, 640, 480);
-                  dd.field_g.d(0, -32);
-                  v.field_e.d(0, 448 - (pi.field_f.field_b + v.field_e.field_b));
+                  DefaultQuickChatContext.field_g.drawOpaque(0, -32);
+                  LobbySlideLayout.field_e.drawOpaque(0, 448 - (CredentialKind.field_f.field_b + LobbySlideLayout.field_e.field_b));
                   SoftwareRasterizer.setClip(4, 330, 636, 335);
-                  dd.field_g.d(0, 330);
+                  DefaultQuickChatContext.field_g.drawOpaque(0, 330);
                   SoftwareRasterizer.setClip(0, 335, 640, 419);
-                  v.field_e.d(0, 300);
+                  LobbySlideLayout.field_e.drawOpaque(0, 300);
                   SoftwareRasterizer.resetClip();
-                  pi.field_f.d(0, 480 - pi.field_f.field_b);
+                  CredentialKind.field_f.drawOpaque(0, 480 - CredentialKind.field_f.field_b);
                   break regionExit1;
                 }
                 if (4 == this.field_d) {
-                  dd.field_g.d(0, 0);
-                  v.field_e.d(0, -v.field_e.field_b + (480 - pi.field_f.field_b));
-                  pi.field_f.d(0, -pi.field_f.field_b + 480);
+                  DefaultQuickChatContext.field_g.drawOpaque(0, 0);
+                  LobbySlideLayout.field_e.drawOpaque(0, -LobbySlideLayout.field_e.field_b + (480 - CredentialKind.field_f.field_b));
+                  CredentialKind.field_f.drawOpaque(0, -CredentialKind.field_f.field_b + 480);
                 } else {
                   if (this.field_d == 10) {
-                    dd.field_g.d(0, 0);
-                    v.field_e.d(0, -v.field_e.field_b + (-pi.field_f.field_b + 480));
-                    pi.field_f.d(0, -pi.field_f.field_b + 480);
+                    DefaultQuickChatContext.field_g.drawOpaque(0, 0);
+                    LobbySlideLayout.field_e.drawOpaque(0, -LobbySlideLayout.field_e.field_b + (-CredentialKind.field_f.field_b + 480));
+                    CredentialKind.field_f.drawOpaque(0, -CredentialKind.field_f.field_b + 480);
                   } else {
                     if (9 == this.field_d) {
                       BufferedFile.field_e[4].drawOpaque(0, 0);
@@ -161,9 +161,9 @@ class MenuScreen {
                   }
                 }
               } else {
-                dd.field_g.d(0, 0);
-                v.field_e.d(0, -v.field_e.field_b - pi.field_f.field_b + 480);
-                pi.field_f.d(0, 480 - pi.field_f.field_b);
+                DefaultQuickChatContext.field_g.drawOpaque(0, 0);
+                LobbySlideLayout.field_e.drawOpaque(0, -LobbySlideLayout.field_e.field_b - CredentialKind.field_f.field_b + 480);
+                CredentialKind.field_f.drawOpaque(0, 480 - CredentialKind.field_f.field_b);
               }
               break regionExit1;
             }
@@ -175,8 +175,8 @@ class MenuScreen {
     }
 
     final void drawTitle(int param0) {
-        if (null != ao.field_b[this.field_d]) {
-          ao.field_b[this.field_d].drawTransparent(0, this.field_d == 15 ? 6 : 13);
+        if (null != QuickChatCommandType.field_b[this.field_d]) {
+          QuickChatCommandType.field_b[this.field_d].drawTransparent(0, this.field_d == 15 ? 6 : 13);
         }
         if (param0 != 4) {
           this.field_f = false;
@@ -198,11 +198,11 @@ class MenuScreen {
         if (var6 == 40) {
           if (this.field_g.isActivated(-85)) {
             FadingDialog.field_I = false;
-            if (!wc.j(127)) {
+            if (!ScorePopup.isGuestSession(127)) {
               var6 = param1 ? 1 : 0;
-              LevelActorSpawner.requestMenuScreen(var6 != 0, -4, 126, sp.field_g);
+              LevelActorSpawner.requestMenuScreen(var6 != 0, -4, 126, CachedTextLayout.field_g);
             } else {
-              rj.a(-4, (byte) -37, af.field_a);
+              RubbleChunk.setPopupId(-4, (byte) -37, MeshMaterial.field_a);
             }
           }
         } else {
@@ -211,170 +211,170 @@ class MenuScreen {
               if (var6 == 45) {
                 if (this.field_g.isActivated(-85)) {
                   this.onExit((byte) 69);
-                  tg.startLocalGame((byte) 25, false);
+                  AudioPumpThread.startLocalGame((byte) 25, false);
                   var6 = param1 ? 1 : 0;
-                  LevelActorSpawner.requestMenuScreen(var6 != 0, -7, 125, sp.field_g);
-                  vd.field_d = this.field_d;
+                  LevelActorSpawner.requestMenuScreen(var6 != 0, -7, 125, CachedTextLayout.field_g);
+                  SleepAndNameHelpers.field_d = this.field_d;
                 }
               } else {
                 if (var6 != 1) {
                   if (5 == var6) {
                     if (this.field_g.isActivated(-85)) {
                       var6 = param1 ? 1 : 0;
-                      LevelActorSpawner.requestMenuScreen(var6 != 0, 1, 126, sp.field_g);
+                      LevelActorSpawner.requestMenuScreen(var6 != 0, 1, 126, CachedTextLayout.field_g);
                     }
                   } else {
                     if (var6 != 16) {
                       if (var6 == 14) {
                         if (this.field_g.isActivated(-85)) {
                           var6 = param1 ? 1 : 0;
-                          LevelActorSpawner.requestMenuScreen(var6 != 0, 5, 127, sp.field_g);
-                          vd.field_d = this.field_d;
+                          LevelActorSpawner.requestMenuScreen(var6 != 0, 5, 127, CachedTextLayout.field_g);
+                          SleepAndNameHelpers.field_d = this.field_d;
                         }
                       } else {
                         if (var6 != 44) {
                           if (3 == var6) {
                             if (this.field_g.isActivated(-85)) {
-                              ((ol) (mj.field_Hb[4])).resetToFirstPage(113);
+                              ((InstructionsScreen) (ScrollBar.field_Hb[4])).resetToFirstPage(113);
                               var6 = param1 ? 1 : 0;
-                              LevelActorSpawner.requestMenuScreen(var6 != 0, 4, 125, sp.field_g);
-                              vd.field_d = this.field_d;
+                              LevelActorSpawner.requestMenuScreen(var6 != 0, 4, 125, CachedTextLayout.field_g);
+                              SleepAndNameHelpers.field_d = this.field_d;
                             }
                           } else {
                             if (6 == var6) {
                               if (this.field_g.isActivated(-85)) {
-                                var6 = vd.field_d;
+                                var6 = SleepAndNameHelpers.field_d;
                                 var7 = param1 ? 1 : 0;
-                                LevelActorSpawner.requestMenuScreen(var7 != 0, var6, 126, sp.field_g);
+                                LevelActorSpawner.requestMenuScreen(var7 != 0, var6, 126, CachedTextLayout.field_g);
                               }
                             } else {
                               if (2 == var6) {
                                 if (this.field_g.isActivated(-85)) {
                                   var6 = param1 ? 1 : 0;
-                                  LevelActorSpawner.requestMenuScreen(var6 != 0, 3, 126, sp.field_g);
+                                  LevelActorSpawner.requestMenuScreen(var6 != 0, 3, 126, CachedTextLayout.field_g);
                                 }
                               } else {
                                 if (12 == var6) {
-                                  var5 = db.field_c;
+                                  var5 = AudioStartupHelpers.field_c;
                                   if (this.field_g.isHomePressed(8)) {
-                                    tj.setSoundEffectVolume(3273, 0);
+                                    EffectVolumeHelpers.setSoundEffectVolume(3273, 0);
                                   }
                                   if (this.field_g.isEndKeyPressed(-23954)) {
-                                    tj.setSoundEffectVolume(3273, 224);
+                                    EffectVolumeHelpers.setSoundEffectVolume(3273, 224);
                                   }
                                   if (this.field_g.isPointerHeld(false)) {
-                                    var6 = ok.field_l + 137;
-                                    var7 = 8 + (-var6 + this.getItemX((byte) -118, param2) + this.getItemRight(-110, param2) >> 1) + ok.field_l;
+                                    var6 = ViewportController.field_l + 137;
+                                    var7 = 8 + (-var6 + this.getItemX((byte) -118, param2) + this.getItemRight(-110, param2) >> 1) + ViewportController.field_l;
                                     var8 = -var7 + MouseInputHandler.field_g << 1;
                                     var8 = var8 * 224 >> 8;
                                     if (0 >= var8) {
-                                      tj.setSoundEffectVolume(3273, 0);
+                                      EffectVolumeHelpers.setSoundEffectVolume(3273, 0);
                                     } else {
                                       if (var8 >= 224) {
-                                        tj.setSoundEffectVolume(3273, 224);
+                                        EffectVolumeHelpers.setSoundEffectVolume(3273, 224);
                                       } else {
-                                        tj.setSoundEffectVolume(3273, var8);
+                                        EffectVolumeHelpers.setSoundEffectVolume(3273, var8);
                                       }
                                     }
                                   }
                                   if (this.field_g.isLeftPressed(96)) {
-                                    if (db.field_c > 28) {
-                                      var6 = db.field_c % 28;
+                                    if (AudioStartupHelpers.field_c > 28) {
+                                      var6 = AudioStartupHelpers.field_c % 28;
                                       if (var6 == 0) {
                                         var6 = 28;
                                       }
-                                      tj.setSoundEffectVolume(3273, -var6 + db.field_c);
+                                      EffectVolumeHelpers.setSoundEffectVolume(3273, -var6 + AudioStartupHelpers.field_c);
                                     } else {
-                                      tj.setSoundEffectVolume(3273, 0);
+                                      EffectVolumeHelpers.setSoundEffectVolume(3273, 0);
                                     }
                                   }
                                   if (this.field_g.isEndPressed(97)) {
-                                    if (db.field_c < 196) {
-                                      var6 = db.field_c % 28;
-                                      tj.setSoundEffectVolume(3273, -var6 + (db.field_c + 28));
+                                    if (AudioStartupHelpers.field_c < 196) {
+                                      var6 = AudioStartupHelpers.field_c % 28;
+                                      EffectVolumeHelpers.setSoundEffectVolume(3273, -var6 + (AudioStartupHelpers.field_c + 28));
                                     } else {
-                                      tj.setSoundEffectVolume(3273, 224);
+                                      EffectVolumeHelpers.setSoundEffectVolume(3273, 224);
                                     }
                                   }
-                                  if (var5 != db.field_c && (jq.field_d == null ||
-                                    jq.field_d.isSamplePositionOutOfRange())) {
-                                    jq.field_d = Camera.createMixerStream(-128, 47);
+                                  if (var5 != AudioStartupHelpers.field_c && (PowerGaugeHelpers.field_d == null ||
+                                    PowerGaugeHelpers.field_d.isSamplePositionOutOfRange())) {
+                                    PowerGaugeHelpers.field_d = Camera.createMixerStream(-128, 47);
                                   }
                                 } else {
                                   if (var6 == 13) {
                                     if (this.field_g.isHomePressed(127)) {
-                                      TertiaryLinkNode.a(0, -127);
+                                      TertiaryLinkNode.setMusicVolume(0, -127);
                                     }
                                     if (this.field_g.isEndKeyPressed(-23954)) {
-                                      TertiaryLinkNode.a(200, 92);
+                                      TertiaryLinkNode.setMusicVolume(200, 92);
                                     }
                                     if (this.field_g.isPointerHeld(false)) {
-                                      var6 = 137 + ok.field_l;
-                                      var7 = 8 + (this.getItemX((byte) -118, param2) + this.getItemRight(-93, param2) - var6 >> 1) + ok.field_l;
+                                      var6 = 137 + ViewportController.field_l;
+                                      var7 = 8 + (this.getItemX((byte) -118, param2) + this.getItemRight(-93, param2) - var6 >> 1) + ViewportController.field_l;
                                       var8 = MouseInputHandler.field_g - var7 << 1;
                                       var8 = var8 * 200 >> 8;
                                       if (var8 <= 0) {
-                                        TertiaryLinkNode.a(0, 61);
+                                        TertiaryLinkNode.setMusicVolume(0, 61);
                                       } else {
                                         if (200 <= var8) {
-                                          TertiaryLinkNode.a(200, 24);
+                                          TertiaryLinkNode.setMusicVolume(200, 24);
                                         } else {
-                                          TertiaryLinkNode.a(var8, 81);
+                                          TertiaryLinkNode.setMusicVolume(var8, 81);
                                         }
                                       }
                                     }
                                     if (this.field_g.isLeftPressed(96)) {
-                                      var6 = uk.field_S;
+                                      var6 = ValidationIconWidget.field_S;
                                       if (var6 <= 25) {
-                                        TertiaryLinkNode.a(0, -88);
+                                        TertiaryLinkNode.setMusicVolume(0, -88);
                                       } else {
                                         var7 = var6 % 25;
                                         if (var7 == 0) {
                                           var7 = 25;
                                         }
-                                        TertiaryLinkNode.a(var6 - var7, -103);
+                                        TertiaryLinkNode.setMusicVolume(var6 - var7, -103);
                                       }
                                     }
                                     if (this.field_g.isEndPressed(97)) {
-                                      var6 = uk.field_S;
+                                      var6 = ValidationIconWidget.field_S;
                                       if (var6 >= 175) {
-                                        TertiaryLinkNode.a(200, -118);
+                                        TertiaryLinkNode.setMusicVolume(200, -118);
                                       } else {
                                         var7 = var6 % 25;
-                                        TertiaryLinkNode.a(-var7 + var6 + 25, -89);
+                                        TertiaryLinkNode.setMusicVolume(-var7 + var6 + 25, -89);
                                       }
                                     }
                                   } else {
                                     if (var6 == 4) {
                                       if (this.field_g.isActivated(-85)) {
-                                        if (rn.field_f != null) {
-                                          rn.exitActiveFullscreen(-69);
+                                        if (FullscreenSupport.field_f != null) {
+                                          FullscreenSupport.exitActiveFullscreen(-69);
                                         } else {
                                           var6 = param1 ? 1 : 0;
                                           MouseInputHandler.field_f = false;
-                                          lp.a((byte) -60, var6 != 0);
+                                          ReflectionCheckRequest.toggleFullscreen((byte) -60, var6 != 0);
                                         }
                                       }
                                     } else {
                                       switch (var6) {
                                         case 49:
                                           if (this.field_g.isActivated(-85)) {
-                                            mj.field_Hb[ArrayWidgetGroup.field_I].field_j[param2] = 48;
+                                            ScrollBar.field_Hb[ArrayWidgetGroup.field_I].field_j[param2] = 48;
                                             DropTargetWidget.field_F = 1;
                                           }
                                           break;
                                         case 18:
                                           if (this.field_g.isActivated(-85) &&
                                             this.isItemEnabled(param2, 16777215)) {
-                                            ((ol) (mj.field_Hb[4])).showNextPage(1, param1);
+                                            ((InstructionsScreen) (ScrollBar.field_Hb[4])).showNextPage(1, param1);
                                           }
                                           break;
                                         case 11:
                                           if (this.field_g.isActivated(-85)) {
-                                            if (rn.field_f != null) {
-                                              rn.exitActiveFullscreen(-128);
+                                            if (FullscreenSupport.field_f != null) {
+                                              FullscreenSupport.exitActiveFullscreen(-128);
                                             }
-                                            cq.a(StatefulTextPainter.b(0), false);
+                                            QuitPageHelpers.openQuitPage(StatefulTextPainter.getHostApplet(0), false);
                                           }
                                           break;
                                         case 50:
@@ -393,8 +393,8 @@ class MenuScreen {
                                           break;
                                         case 34:
                                           if (this.field_g.isActivated(-85)) {
-                                            oq.toggleNoticeBar((byte) 127);
-                                            we.field_g[34] = FadingDialog.a(-128);
+                                            ThreeSliceButtonPainter.toggleNoticeBar((byte) 127);
+                                            PlayingSound.field_g[34] = FadingDialog.getTutorialTipsLabel(-128);
                                             FullscreenFocusCanvas.field_k.field_i = FullscreenFocusCanvas.field_k.field_i ^ 2;
                                             IntrusiveDeque.saveProfile((byte) -61);
                                           }
@@ -419,7 +419,7 @@ class MenuScreen {
                                         case 17:
                                           if (this.field_g.isActivated(-85) &&
                                             this.isItemEnabled(param2, 16777215)) {
-                                            ((ol) (mj.field_Hb[4])).showPreviousPage(param1, (byte) -119);
+                                            ((InstructionsScreen) (ScrollBar.field_Hb[4])).showPreviousPage(param1, (byte) -119);
                                           }
                                           break;
                                         case 15:
@@ -429,15 +429,15 @@ class MenuScreen {
                                               if (this.field_d != 7) {
                                                 break;
                                               }
-                                              rj.a(6, (byte) 125, af.field_a);
+                                              RubbleChunk.setPopupId(6, (byte) 125, MeshMaterial.field_a);
                                               break;
                                             }
-                                            rj.a(this.field_d, (byte) 101, af.field_a);
+                                            RubbleChunk.setPopupId(this.field_d, (byte) 101, MeshMaterial.field_a);
                                           }
                                           break;
                                         case 48:
                                           if (this.field_g.isActivated(-85)) {
-                                            mj.field_Hb[ArrayWidgetGroup.field_I].field_j[param2] = 49;
+                                            ScrollBar.field_Hb[ArrayWidgetGroup.field_I].field_j[param2] = 49;
                                             DropTargetWidget.field_F = 0;
                                           }
                                           break;
@@ -457,10 +457,10 @@ class MenuScreen {
                           }
                         } else {
                           if (this.field_g.isActivated(-85)) {
-                            mj.field_Hb[15].onEnter(0, param1, 0);
+                            ScrollBar.field_Hb[15].onEnter(0, param1, 0);
                             var6 = param1 ? 1 : 0;
-                            LevelActorSpawner.requestMenuScreen(var6 != 0, 15, 126, sp.field_g);
-                            vd.field_d = this.field_d;
+                            LevelActorSpawner.requestMenuScreen(var6 != 0, 15, 126, CachedTextLayout.field_g);
+                            SleepAndNameHelpers.field_d = this.field_d;
                           }
                         }
                       }
@@ -469,7 +469,7 @@ class MenuScreen {
                         var6 = 1;
                         var7 = var6;
                         var8 = param1 ? 1 : 0;
-                        LevelActorSpawner.requestMenuScreen(var8 != 0, var7, 126, sp.field_g);
+                        LevelActorSpawner.requestMenuScreen(var8 != 0, var7, 126, CachedTextLayout.field_g);
                         var14 = PacketBuffer.field_n;
                         for (var8 = 0; var8 < 8; var8++) {
                           var14[var8] = 0;
@@ -484,24 +484,24 @@ class MenuScreen {
                 } else {
                   if (this.field_g.isActivated(-85)) {
                     var6 = param1 ? 1 : 0;
-                    LevelActorSpawner.requestMenuScreen(var6 != 0, -7, 127, sp.field_g);
-                    vd.field_d = 1;
+                    LevelActorSpawner.requestMenuScreen(var6 != 0, -7, 127, CachedTextLayout.field_g);
+                    SleepAndNameHelpers.field_d = 1;
                   }
                 }
               }
             } else {
               if (this.field_g.isActivated(-85)) {
-                tg.startLocalGame((byte) 27, true);
+                AudioPumpThread.startLocalGame((byte) 27, true);
                 var6 = param1 ? 1 : 0;
-                LevelActorSpawner.requestMenuScreen(var6 != 0, -7, 127, sp.field_g);
-                vd.field_d = this.field_d;
+                LevelActorSpawner.requestMenuScreen(var6 != 0, -7, 127, CachedTextLayout.field_g);
+                SleepAndNameHelpers.field_d = this.field_d;
               }
             }
           } else {
             if (this.field_g.isActivated(-85)) {
               var6 = param1 ? 1 : 0;
-              LevelActorSpawner.requestMenuScreen(var6 != 0, 14, 127, sp.field_g);
-              vd.field_d = this.field_d;
+              LevelActorSpawner.requestMenuScreen(var6 != 0, 14, 127, CachedTextLayout.field_g);
+              SleepAndNameHelpers.field_d = this.field_d;
             }
           }
         }
@@ -524,7 +524,7 @@ class MenuScreen {
         if (param1 >= 0 &&
           12 != param1 &&
           param1 != 13 && this.field_g.isActivated(-85)) {
-          ib.a((byte) 112, ei.field_a[68]);
+          TickButtonPainter.playSoundEffect((byte) 112, LayoutCenterHelpers.field_a[68]);
         }
     }
 
@@ -540,7 +540,7 @@ class MenuScreen {
     }
 
     final static void drawLobbyOverlays(int param0, boolean param1) {
-        tm.drawLobbyAndChatPanels(param1, false);
+        LobbyDrawHelpers.drawLobbyAndChatPanels(param1, false);
         IntrusiveNode.drawLobbyPanels(param1, 2);
         int var2 = 31 % ((param0 + 57) / 56);
     }
@@ -586,7 +586,7 @@ class MenuScreen {
         int var2Lifetime1;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
         if (this.field_d == -7) {
-          wp.field_h.draw(true, 1);
+          AudioServiceHelpers.field_h.draw(true, 1);
           return;
         }
         if (this.field_d == 11) {
@@ -594,23 +594,23 @@ class MenuScreen {
         }
         if (this.field_d != 7) {
           if (this.field_d == 8) {
-            ok.drawBenefitsScreen(true);
+            ViewportController.drawBenefitsScreen(true);
             return;
           }
           if (2 == this.field_d) {
-            wp.field_h.draw(true, 1);
+            AudioServiceHelpers.field_h.draw(true, 1);
             SoftwareRasterizer.clearRect(0, 0, 640, 480);
-            nn.drawDimmedPanel(!param0);
+            LevelEncodingHelpers.drawDimmedPanel(!param0);
           }
         } else {
-          nn.drawDimmedPanel(false);
+          LevelEncodingHelpers.drawDimmedPanel(false);
           var2 = 100 + TranslatedUiText.field_e.maxAscent;
           var3 = 4 + TranslatedUiText.field_e.maxDescent + TranslatedUiText.field_e.field_J;
           var4 = 16777215;
-          pb.field_e.drawCentered(af.field_a, 320, var2, var4, -1);
-          pb.field_e.drawCentered(FightEvent.a(vh.field_Mb, false, 118, gg.field_k), 320, var3 + var2, var4, -1);
-          pb.field_e.drawCentered(on.chooseClickPrompt(true, gg.field_k, vh.field_Mb, false), 320, var2 + (3 * var3 + 38), var4, -1);
-          pb.field_e.drawCentered(PortalEntryEvent.chooseDiscardPrompt(vh.field_Mb, gg.field_k, 4, false), 320, 76 + (var2 + var3 * 4), var4, -1);
+          EffectAudioHelpers.field_e.drawCentered(MeshMaterial.field_a, 320, var2, var4, -1);
+          EffectAudioHelpers.field_e.drawCentered(FightEvent.getStoreProgressPrompt(ColourPickerWidget.field_Mb, false, 118, ArchiveLoadStep.field_k), 320, var3 + var2, var4, -1);
+          EffectAudioHelpers.field_e.drawCentered(ValidatedTextInputWidget.chooseClickPrompt(true, ArchiveLoadStep.field_k, ColourPickerWidget.field_Mb, false), 320, var2 + (3 * var3 + 38), var4, -1);
+          EffectAudioHelpers.field_e.drawCentered(PortalEntryEvent.chooseDiscardPrompt(ColourPickerWidget.field_Mb, ArchiveLoadStep.field_k, 4, false), 320, 76 + (var2 + var3 * 4), var4, -1);
         }
         if (!param0) {
           this.updateScreen(-45);
@@ -668,13 +668,13 @@ class MenuScreen {
           var6Lifetime1 = 1;
         }
         if (var6Lifetime1 != -7) {
-          mj.field_Hb[var6Lifetime1].drawBackground(0);
+          ScrollBar.field_Hb[var6Lifetime1].drawBackground(0);
         } else {
-          wp.field_h.draw(true, 1);
+          AudioServiceHelpers.field_h.draw(true, 1);
           SoftwareRasterizer.clearRect(0, 0, 640, 480);
           ClientException.field_e.replaceZeroWithOne();
         }
-        SocketConnector.field_h.b((byte) 99);
+        SocketConnector.field_h.bindRaster((byte) 99);
         ClientException.field_e.drawWithVerticalAlphaGradient(0, 0, var4, var5);
     }
 
@@ -699,9 +699,9 @@ class MenuScreen {
         if (~this.field_g.field_d != param0) {
           param2 = this.field_g.field_d;
         }
-        this.field_g.initializeSelection(param2, param1, -31458, this.findItemAt(param0 - 6003, bo.field_d, MouseInputHandler.field_g));
+        this.field_g.initializeSelection(param2, param1, -31458, this.findItemAt(param0 - 6003, LoginMethod.field_d, MouseInputHandler.field_g));
         if (this.field_d == 8) {
-          LevelData.a((byte) 124, param1);
+          LevelData.openScreenshotSlideshow((byte) 124, param1);
         }
     }
 
@@ -714,19 +714,19 @@ class MenuScreen {
         Throwable decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          if (ra.field_m != null) {
-            PhaseChangeEvent.a(param0, 1048576, param3, 124, param1);
+          if (PendingIntArrayReply.field_m != null) {
+            PhaseChangeEvent.crossfadeToTrack(param0, 1048576, param3, 124, param1);
           }
           var4_int = -64 % ((param2 - 42) / 38);
           if (MessageDialogContent.field_L != null) {
-            var5 = rm.field_b;
+            var5 = PowerupEventFactory.field_b;
             synchronized (var5) {
               MessageDialogContent.field_L.setChannelGain(param1, -1, false);
               if (param3 == DelayedPacket.field_g) {
                 return;
               }
               MessageDialogContent.field_L.stop(2);
-              rm.field_b.flush();
+              PowerupEventFactory.field_b.flush();
               DelayedPacket.field_g = param3;
               if (DelayedPacket.field_g != null) {
                 MessageDialogContent.field_L.playTrack(DelayedPacket.field_g, param0, 8361407);
@@ -771,29 +771,29 @@ class MenuScreen {
         if (this.field_d != -7 &&
           2 != this.field_d) {
           if (this.field_d == 8) {
-            stackIn_8_0 = !(cq.a(15000));
+            stackIn_8_0 = !(QuitPageHelpers.deferReconnect(15000));
             var3 = DiskCacheWorker.advanceSlideshow(stackIn_8_0, (byte) 110);
             if (var3 == 3) {
-              if (rn.field_f != null) {
-                rn.exitActiveFullscreen(-36);
+              if (FullscreenSupport.field_f != null) {
+                FullscreenSupport.exitActiveFullscreen(-36);
               }
-              uq.a(param0 + 3, StatefulTextPainter.b(0));
+              BrowserPageHelpers.openSubscribePage(param0 + 3, StatefulTextPainter.getHostApplet(0));
             }
             if (var3 == 1) {
-              stackIn_16_0 = (ec.field_c) ? 15 : 1;
+              stackIn_16_0 = (CookieHelpers.field_c) ? 15 : 1;
               var4 = stackIn_16_0;
-              LevelActorSpawner.requestMenuScreen(false, var4, param0 ^ 127, sp.field_g);
+              LevelActorSpawner.requestMenuScreen(false, var4, param0 ^ 127, CachedTextLayout.field_g);
             }
             if (var3 != 2) {
               return;
             }
-            stackIn_21_0 = (!ec.field_c) ? 1 : 15;
+            stackIn_21_0 = (!CookieHelpers.field_c) ? 1 : 15;
             var4Lifetime1 = stackIn_21_0;
-            LevelActorSpawner.requestMenuScreen(true, var4Lifetime1, 126, sp.field_g);
+            LevelActorSpawner.requestMenuScreen(true, var4Lifetime1, 126, CachedTextLayout.field_g);
             return;
           }
         } else {
-          stackIn_24_0 = wp.field_h;
+          stackIn_24_0 = AudioServiceHelpers.field_h;
           stackIn_24_1 = 122;
           stackIn_25_2 = (this.field_d != 2);
           ((GameScreen) (Object) stackIn_24_0).update((byte) stackIn_24_1, stackIn_25_2);
@@ -802,15 +802,15 @@ class MenuScreen {
           }
         }
         while (MusicPatchPcmStream.pollKeyEvent(-1)) {
-          if (am.isGameScreenActive(param0 ^ -118)) {
-            if (iq.field_f) {
+          if (TeamSpriteHelpers.isGameScreenActive(param0 ^ -118)) {
+            if (TutorialAndMenuHelpers.field_f) {
               if (ValidationState.field_b &&
-                hh.field_b) {
-                if (va.a((byte) -59, 13, 15, 12)) {
+                MenuInputState.field_b) {
+                if (UrlLaunchHelpers.handleChatKeyInput((byte) -59, 13, 15, 12)) {
                   continue;
                 }
               } else {
-                if (w.a(13, 15, 12, 18663)) {
+                if (MusicCrossfadeStream.routeKeyInput(13, 15, 12, 18663)) {
                   continue;
                 }
               }
@@ -818,11 +818,11 @@ class MenuScreen {
                 InfectionEvent.field_p != 80) {
                 continue;
               }
-              iq.field_f = false;
+              TutorialAndMenuHelpers.field_f = false;
               continue;
             }
             if (InfectionEvent.field_p == 80) {
-              iq.field_f = true;
+              TutorialAndMenuHelpers.field_f = true;
               continue;
             }
           }
@@ -836,8 +836,8 @@ class MenuScreen {
             continue;
           }
           if (this.field_d == 2) {
-            LevelActorSpawner.requestMenuScreen(false, -7, param0 ^ 126, sp.field_g);
-            vd.field_d = 1;
+            LevelActorSpawner.requestMenuScreen(false, -7, param0 ^ 126, CachedTextLayout.field_g);
+            SleepAndNameHelpers.field_d = 1;
             continue;
           }
           if (this.field_d == 10) {
@@ -850,29 +850,29 @@ class MenuScreen {
             continue;
           }
           if (this.field_d == 15) {
-            LevelActorSpawner.requestMenuScreen(false, 1, param0 ^ 125, sp.field_g);
+            LevelActorSpawner.requestMenuScreen(false, 1, param0 ^ 125, CachedTextLayout.field_g);
             continue;
           }
-          var3Lifetime1 = vd.field_d;
-          LevelActorSpawner.requestMenuScreen(false, var3Lifetime1, param0 + 125, sp.field_g);
+          var3Lifetime1 = SleepAndNameHelpers.field_d;
+          LevelActorSpawner.requestMenuScreen(false, var3Lifetime1, param0 + 125, CachedTextLayout.field_g);
         }
         var3Lifetime2 = 1;
-        if (am.isGameScreenActive(param0 ^ -112) &&
+        if (TeamSpriteHelpers.isGameScreenActive(param0 ^ -112) &&
           PowerupButton.field_e != null &&
           !FadingDialog.field_I) {
-          stackIn_65_0 = (PowerupButton.field_e.a(true, 15978)) ? 0 : 1;
+          stackIn_65_0 = (PowerupButton.field_e.updateChatHintText(true, 15978)) ? 0 : 1;
           var3Lifetime2 = stackIn_65_0;
           if (ValidationState.field_b) {
-            w.a(320, 180, true, 81);
+            MusicCrossfadeStream.drawChatInputBox(320, 180, true, 81);
           }
         }
-        if (param0 != ~this.findItemAt(-6003, bo.field_d, MouseInputHandler.field_g)) {
-          en.a(-1, 1);
+        if (param0 != ~this.findItemAt(-6003, LoginMethod.field_d, MouseInputHandler.field_g)) {
+          ChatPanelSetupHelpers.setCursorType(-1, 1);
         } else {
-          en.a(-1, 4);
+          ChatPanelSetupHelpers.setCursorType(-1, 4);
         }
         if (var3Lifetime2 != 0) {
-          this.field_g.updatePointer(this.findItemAt(-6003, bo.field_d, MouseInputHandler.field_g), 42, this.findItemAt(-6003, ChatMessage.field_t, vb.field_f));
+          this.field_g.updatePointer(this.findItemAt(-6003, LoginMethod.field_d, MouseInputHandler.field_g), 42, this.findItemAt(-6003, ChatMessage.field_t, LobbyUiSetupHelpers.field_f));
           if (this.field_g.field_d != -1) {
             this.playSelectionSound(12, this.field_g.field_d);
             this.handleMenuAction(-74, true, this.field_g.field_d);
@@ -930,7 +930,7 @@ class MenuScreen {
           32 != var6 &&
           var6 != 33 &&
           var6 != 26) {
-          var18 = we.field_g[var6];
+          var18 = PlayingSound.field_g[var6];
           var7 = var18;
           var12_ref_String = var7;
           var7Lifetime1 = var18;
@@ -940,30 +940,30 @@ class MenuScreen {
           stackIn_17_0 = (param1) ? 1 : 10;
           var10 = stackIn_17_0;
           if (4 == var6 &&
-            rn.field_f == null && (!(0 < vl.field_h) ||
-            !pn.ensureArchiveAvailable(-9, ArrayWidgetGroup.field_J))) {
+            FullscreenSupport.field_f == null && (!(0 < QueuedListRequest.field_h) ||
+            !ArchiveAvailabilityHelpers.ensureArchiveAvailable(-9, ArrayWidgetGroup.field_J))) {
             stackIn_25_0 = (param1) ? 7 : 6;
             var10 = stackIn_25_0;
           }
           if (var6 == 40 &&
-            wc.j(127)) {
+            ScorePopup.isGuestSession(127)) {
             stackIn_31_0 = (!param1) ? 6 : 7;
             var10 = stackIn_31_0;
           }
           if (null != PowerupButton.field_e) {
-            stackIn_35_0 = PowerupButton.field_e.g(-127);
+            stackIn_35_0 = PowerupButton.field_e.getDebugValue(-127);
           } else {
             stackIn_35_0 = 0;
           }
           var11 = stackIn_35_0;
           if (var7Lifetime2 != null) {
             if (var6 == 20) {
-              var7Lifetime2 = vl.a(var18, new String[]{Integer.toString(var11)}, 2);
+              var7Lifetime2 = QueuedListRequest.substituteTemplateArguments(var18, new String[]{Integer.toString(var11)}, 2);
               var12_ref_StringLifetime1 = var7Lifetime2;
               var12_ref_StringLifetime1Lifetime1 = var7Lifetime2;
             } else {
               if (var6 == 21) {
-                var7Lifetime2 = vl.a(var18, new String[]{Integer.toString(var11)}, 2);
+                var7Lifetime2 = QueuedListRequest.substituteTemplateArguments(var18, new String[]{Integer.toString(var11)}, 2);
                 if (var11 == 0) {
                   var10 = 6;
                 }
@@ -977,7 +977,7 @@ class MenuScreen {
               if (FullscreenFocusCanvas.field_k.field_k == 0) {
                 var12_ref_StringLifetime2 = FightEvent.field_l;
               } else {
-                var12_ref_StringLifetime2 = jp.field_a;
+                var12_ref_StringLifetime2 = ChatPromptHelpers.field_a;
               }
             } else {
               var12_ref_StringLifetime2 = InflaterDecompressor.field_f;
@@ -995,15 +995,15 @@ class MenuScreen {
           }
           stackIn_59_0 = (var6 != 12) ? 200 : 224;
           var13 = stackIn_59_0;
-          var14 = 137 + ok.field_l;
+          var14 = 137 + ViewportController.field_l;
           var15 = var5 + (-var14 + var8 >> 1);
-          TranslatedUiText.field_e.c(var7Lifetime2, var15, (var12 >> 1) + TranslatedUiText.field_e.maxAscent + var4 + ZombieDawnMulti.field_I[0].field_u, var10, 0);
-          var15 = var15 + (8 + ok.field_l);
+          TranslatedUiText.field_e.drawLeft(var7Lifetime2, var15, (var12 >> 1) + TranslatedUiText.field_e.maxAscent + var4 + ZombieDawnMulti.field_I[0].field_u, var10, 0);
+          var15 = var15 + (8 + ViewportController.field_l);
           SoftwareRasterizer.drawRect(var15, var9 / 2 + var4 - 1, 129, 2, var10);
           if (12 != var6) {
-            stackIn_62_0 = uk.field_S;
+            stackIn_62_0 = ValidationIconWidget.field_S;
           } else {
-            stackIn_62_0 = db.field_c;
+            stackIn_62_0 = AudioStartupHelpers.field_c;
           }
           var16 = stackIn_62_0;
           var16 = (var16 << 8) / var13;
@@ -1021,7 +1021,7 @@ class MenuScreen {
           this.field_f = param1 ? true : false;
           this.field_b = param4;
           this.field_i = param2;
-          this.field_g = new hh(this.field_j.length);
+          this.field_g = new MenuInputState(this.field_j.length);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "nc.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }

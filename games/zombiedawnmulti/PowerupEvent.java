@@ -15,25 +15,25 @@ final class PowerupEvent extends GameEvent {
     static String field_r;
     static String field_n;
 
-    final static void a(int param0, int param1, int param2) {
-        BirthDateInputWidget.field_O[param0] = cr.b(BirthDateInputWidget.field_O[param0], 1 << -32 + param1);
+    final static void linkUpgradeToPowerup(int param0, int param1, int param2) {
+        BirthDateInputWidget.field_O[param0] = PendingStatusRequest.bitOr(BirthDateInputWidget.field_O[param0], 1 << -32 + param1);
         if (param2 != -1) {
           field_k = (String) null;
         }
     }
 
-    final static void a(int param0) {
+    final static void buildLobbyRoot(int param0) {
         if (param0 == 6835) {
-          lo.field_g = new UiComponent(0L, (UiComponent) null);
+          BitPackedArrayHelpers.field_g = new UiComponent(0L, (UiComponent) null);
           if (GradientOutlineTextPainter.field_u) {
-            lo.field_g.a((byte) 50, ql.field_b);
+            BitPackedArrayHelpers.field_g.addChild((byte) 50, RasterStackHelpers.field_b);
           }
-          lo.field_g.a((byte) 50, pd.field_b);
-          de.field_b = new qh(MessageDialog.field_vb, lo.field_g);
-          qe.field_k = new UiComponent(0L, (UiComponent) null);
-          qe.field_k.a((byte) 50, de.field_b.field_c);
-          qe.field_k.a((byte) 50, kj.field_u);
-          wn.a((byte) 3);
+          BitPackedArrayHelpers.field_g.addChild((byte) 50, FramePainter.field_b);
+          AwtEventPumpHelpers.field_b = new TabbedOverlayPanel(MessageDialog.field_vb, BitPackedArrayHelpers.field_g);
+          GameHud.field_k = new UiComponent(0L, (UiComponent) null);
+          GameHud.field_k.addChild((byte) 50, AwtEventPumpHelpers.field_b.field_c);
+          GameHud.field_k.addChild((byte) 50, FriendListHelpers.field_u);
+          AlternateUsernameCredentials.layoutLobbyWidgets((byte) 3);
           return;
         }
     }
@@ -46,7 +46,7 @@ final class PowerupEvent extends GameEvent {
         }
     }
 
-    final static int a(hf param0, hf param1, int param2) {
+    final static int pollLoginRequest(ConditionalTextValue param0, ConditionalTextValue param1, int param2) {
         RuntimeException var3 = null;
         String var4 = null;
         int stackIn_3_0 = 0;
@@ -61,7 +61,7 @@ final class PowerupEvent extends GameEvent {
             field_t = 10;
           }
           var4 = (String) null;
-          stackIn_3_0 = mg.performAccountServerRequest(false, param0, 0, param1, (String) null, 0, (byte) -92);
+          stackIn_3_0 = ZombieDropView.performAccountServerRequest(false, param0, 0, param1, (String) null, 0, (byte) -92);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -177,29 +177,29 @@ final class PowerupEvent extends GameEvent {
                       break;
                     }
                     if (this.field_s == -1) {
-                      param1.c(this.field_p, 68);
+                      param1.resetUnitEffects(this.field_p, 68);
                       break;
                     }
-                    param1.b(this.field_p, -106, this.field_s, this.field_j);
+                    param1.handleEffectClick(this.field_p, -106, this.field_s, this.field_j);
                     break;
                   }
                   stackIn_85_0 = (GameScreen) (param1);
                   stackIn_85_1 = this.field_p;
                   stackIn_86_2 = (32 == this.field_o);
-                  ((GameScreen) (Object) stackIn_85_0).a(stackIn_85_1, stackIn_86_2, this.field_s, (byte) -40, this.field_j);
+                  ((GameScreen) (Object) stackIn_85_0).applySlowArea(stackIn_85_1, stackIn_86_2, this.field_s, (byte) -40, this.field_j);
                   break;
                 }
                 var5 = PortalEntryEvent.field_m.computeEffectDuration((byte) 32, this.field_j, 1000);
-                param1.a((byte) -111, this.field_s, this.field_q, var5, this.field_p);
+                param1.addTileDestruction((byte) -111, this.field_s, this.field_q, var5, this.field_p);
                 break;
               case 4:
-                var4 = PortalEntryEvent.field_m.a(this.field_l, false);
+                var4 = PortalEntryEvent.field_m.findCharacter(this.field_l, false);
                 stackIn_76_0 = var4;
                 stackIn_77_1 = (this.field_o == 34);
                 stackIn_76_0.field_Hb = stackIn_77_1;
                 break;
               case 7:
-                var3 = PortalEntryEvent.field_m.a(this.field_l, (byte) 33);
+                var3 = PortalEntryEvent.field_m.findObjectById(this.field_l, (byte) 33);
                 if (var3 instanceof GameCharacter &&
                   37 == this.field_o) {
                   var8 = (GameCharacter) (var3);
@@ -207,21 +207,21 @@ final class PowerupEvent extends GameEvent {
                 }
                 break;
               case 12:
-                param1.b(this.field_j, 0, PortalEntryEvent.field_m.computeEffectDuration((byte) 32, this.field_j, 750));
+                param1.setEffectTimer(this.field_j, 0, PortalEntryEvent.field_m.computeEffectDuration((byte) 32, this.field_j, 750));
                 break;
               case 11:
-                param1.c(this.field_j, PortalEntryEvent.field_m.computeEffectDuration((byte) 32, this.field_j, 500), -2);
+                param1.setTeamValue(this.field_j, PortalEntryEvent.field_m.computeEffectDuration((byte) 32, this.field_j, 500), -2);
                 break;
             }
           } else {
             if (this.field_s == -1 &&
               this.field_p == -1) {
-              param1.b(this.field_q, param1.camera.screenToWorldX(320, param0 + 2), this.field_j, param1.camera.screenToWorldY(true, 240), -99);
+              param1.addPositionMarker(this.field_q, param1.camera.screenToWorldX(320, param0 + 2), this.field_j, param1.camera.screenToWorldY(true, 240), -99);
             } else {
               if (this.field_s != -1) {
-                param1.b(this.field_q, this.field_p, this.field_j, this.field_s, -46);
+                param1.addPositionMarker(this.field_q, this.field_p, this.field_j, this.field_s, -46);
               } else {
-                param1.a(50, this.field_j, this.field_l, this.field_q);
+                param1.addUnitMarker(50, this.field_j, this.field_l, this.field_q);
               }
             }
             this.field_f = this.field_f + 50;
@@ -230,7 +230,7 @@ final class PowerupEvent extends GameEvent {
             Camera.createMixerStream(-127, 67);
           }
           if (param0 != 0) {
-            PowerupEvent.a(11);
+            PowerupEvent.buildLobbyRoot(11);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -250,7 +250,7 @@ final class PowerupEvent extends GameEvent {
     PowerupEvent() {
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final void initialize(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         super.setTick(param2 + 32, param1);
         if (param6 != 255) {
         }
@@ -286,7 +286,7 @@ final class PowerupEvent extends GameEvent {
 
     final void removeFromQueue(byte param0) {
         super.removeFromQueue((byte) -86);
-        dg.field_K.addFirst((IntrusiveNode) (this), false);
+        PlayModeChoiceDialog.field_K.addFirst((IntrusiveNode) (this), false);
         if (param0 > -47) {
           GameScreen var3 = (GameScreen) null;
           this.apply(96, (GameScreen) null);

@@ -11,7 +11,7 @@ final class HuffmanCodec {
     static String field_c;
     private byte[] field_a;
 
-    final static void a(int param0, int param1, int param2) {
+    final static void drawLogoAnimation(int param0, int param1, int param2) {
         int var3;
         int var4;
         int var5;
@@ -21,61 +21,61 @@ final class HuffmanCodec {
         int var6Lifetime1;
         int var7Lifetime1;
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
-        if (f.field_a < 0) {
+        if (NodeHashTable.field_a < 0) {
           return;
         }
         var3 = param0 - 135;
         var4 = param1 - 35;
         var5 = 256;
-        if (f.field_a < 75) {
-          var5 = (f.field_a << 8) / 75;
+        if (NodeHashTable.field_a < 75) {
+          var5 = (NodeHashTable.field_a << 8) / 75;
         }
-        if (200 < f.field_a) {
-          var5 = (-f.field_a + 250 << 8) / 50;
+        if (200 < NodeHashTable.field_a) {
+          var5 = (-NodeHashTable.field_a + 250 << 8) / 50;
         }
-        r.a(0, m.field_w);
-        TriangleRasterizer.e();
+        MusicPatchLoadHelpers.pushSpriteRaster(0, PasswordTextPainter.field_w);
+        TriangleRasterizer.useRasterClip();
         SoftwareRasterizer.clear();
         GameSimulation.renderLogoMeshes((byte) 125);
         if (var5 < 256) {
           SoftwareRasterizer.fillRectAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, -var5 + 256);
         }
-        ql.a(true);
-        if (f.field_a < 150) {
-          m.field_w.drawHalfSize(var3, var4);
+        RasterStackHelpers.popRaster(true);
+        if (NodeHashTable.field_a < 150) {
+          PasswordTextPainter.field_w.drawHalfSize(var3, var4);
         } else {
-          MatchingTextValidator.field_v.c(15 + var3, var4 + 10, var5);
+          MatchingTextValidator.field_v.drawBlended(15 + var3, var4 + 10, var5);
         }
         if (param2 < 70) {
           return;
         }
-        var6 = f.field_a - 125;
+        var6 = NodeHashTable.field_a - 125;
         if (0 < var6 &&
           var6 < 50) {
           if (var6 >= 20) {
             if (30 <= var6) {
               var7 = 256 * (50 - var6) / 20;
-              kk.field_r.drawAdditive(var3, var4, var7);
+              CacheEntry.field_r.drawAdditive(var3, var4, var7);
             } else {
-              kk.field_r.drawAdditive(var3, var4, 256);
+              CacheEntry.field_r.drawAdditive(var3, var4, 256);
             }
           } else {
             var7 = 256 * var6 / 20;
-            kk.field_r.drawAdditive(var3, var4, var7);
+            CacheEntry.field_r.drawAdditive(var3, var4, var7);
           }
         }
-        var6Lifetime1 = f.field_a - 140;
+        var6Lifetime1 = NodeHashTable.field_a - 140;
         if (var6Lifetime1 > 0) {
           var7Lifetime1 = 256;
           if (var6Lifetime1 < 20) {
             var7Lifetime1 = var6Lifetime1 * 256 / 20;
           }
-          GameScreen.field_s.c(var3 + 15, 10 + var4, var7Lifetime1 * var5 >> 8);
+          GameScreen.field_s.drawBlended(var3 + 15, 10 + var4, var7Lifetime1 * var5 >> 8);
         }
         return;
     }
 
-    final static QuickChatMenu a(boolean param0, UiComponent param1, UiComponent param2, UiComponent param3, ob param4) {
+    final static QuickChatMenu buildQuickChatCategoryMenu(boolean param0, UiComponent param1, UiComponent param2, UiComponent param3, QuickChatCategoryDefinition param4) {
         int var14 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -99,12 +99,12 @@ final class HuffmanCodec {
         int[] var10 = null;
         QuickChatMenu[] var11 = null;
         int var12 = 0;
-        ob var13_ref_ob = null;
+        QuickChatCategoryDefinition var13_ref_ob = null;
         int var13 = 0;
         int var15 = 0;
         QuickChatPhraseDefinition var16 = null;
         int var17 = 0;
-        ob var18 = null;
+        QuickChatCategoryDefinition var18 = null;
         int[] var19 = null;
         char[] var20 = null;
         int[] var21 = null;
@@ -129,8 +129,8 @@ final class HuffmanCodec {
           var6 = stackIn_10_0;
           var7 = var5_int + var6;
           if (param0) {
-            var18 = (ob) null;
-            HuffmanCodec.a(false, (UiComponent) null, (UiComponent) null, (UiComponent) null, (ob) null);
+            var18 = (QuickChatCategoryDefinition) null;
+            HuffmanCodec.buildQuickChatCategoryMenu(false, (UiComponent) null, (UiComponent) null, (UiComponent) null, (QuickChatCategoryDefinition) null);
           }
           var8 = new String[var7];
           var22 = new char[var7];
@@ -142,10 +142,10 @@ final class HuffmanCodec {
           var11 = new QuickChatMenu[var7];
           if (null != param4.field_x) {
             for (var12 = 0; param4.field_x.length > var12; var12++) {
-              var13_ref_ob = ok.field_p.a(param4.field_x[var12], 32767);
+              var13_ref_ob = ViewportController.field_p.getCategory(param4.field_x[var12], 32767);
               var8[var12] = var13_ref_ob.field_s;
               var9[var12] = param4.field_r[var12];
-              var11[var12] = HuffmanCodec.a(false, param1, param2, param3, var13_ref_ob);
+              var11[var12] = HuffmanCodec.buildQuickChatCategoryMenu(false, param1, param2, param3, var13_ref_ob);
             }
           }
           if (param4.field_B != null) {
@@ -203,29 +203,29 @@ final class HuffmanCodec {
         }
     }
 
-    final static void a(int param0) {
+    final static void renderLogoGlow(int param0) {
         Sprite var1 = null;
         Sprite var2 = null;
         int var3 = 0;
         int var4 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           var1 = new Sprite(540, 140);
-          r.a(0, var1);
-          TriangleRasterizer.e();
+          MusicPatchLoadHelpers.pushSpriteRaster(0, var1);
+          TriangleRasterizer.useRasterClip();
           SoftwareRasterizer.clear();
-          f.field_a = 0;
+          NodeHashTable.field_a = 0;
           GameSimulation.renderLogoMeshes((byte) 120);
           var2 = var1.copy();
           for (var3 = 0; var3 < 15; var3++) {
             var2.drawSilhouette(-2, -2, 16777215);
             SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
-          kk.field_r.bindAsRenderTarget();
+          CacheEntry.field_r.bindAsRenderTarget();
           var1.drawHalfSize(0, 0);
           if (param0 != -1741) {
             field_f = (String) null;
           }
-          ql.a(true);
+          RasterStackHelpers.popRaster(true);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "eh.A(" + param0 + ')');
         }
@@ -236,8 +236,8 @@ final class HuffmanCodec {
         field_g = null;
         field_f = null;
         if (param0 <= 26) {
-          ob var2 = (ob) null;
-          HuffmanCodec.a(false, (UiComponent) null, (UiComponent) null, (UiComponent) null, (ob) null);
+          QuickChatCategoryDefinition var2 = (QuickChatCategoryDefinition) null;
+          HuffmanCodec.buildQuickChatCategoryMenu(false, (UiComponent) null, (UiComponent) null, (UiComponent) null, (QuickChatCategoryDefinition) null);
         }
         field_c = null;
     }
@@ -491,7 +491,7 @@ final class HuffmanCodec {
             var14 = (-1 + (var13 + var11) >> 3) + var12;
             var8 = var8 + var11;
             var13 += 24;
-            dupTemp$0 = cr.b(var7_int, var10 >>> var13);
+            dupTemp$0 = PendingStatusRequest.bitOr(var7_int, var10 >>> var13);
             var7_int = dupTemp$0;
             param3[var12] = (byte)dupTemp$0;
             if (var14 > var12) {
@@ -586,7 +586,7 @@ final class HuffmanCodec {
                   if (~var11 == ~var8) {
                     var12 = 1 << 32 - var10;
                     if ((var11 & var12) == 0) {
-                      var3[var10] = cr.b(var12, var11);
+                      var3[var10] = PendingStatusRequest.bitOr(var12, var11);
                       continue;
                     }
                     var3[var10] = var3[-1 + var10];

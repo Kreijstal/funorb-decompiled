@@ -64,18 +64,18 @@ final class Under13NoticePanel extends WidgetContainer implements HotspotActivat
         int var6 = 0;
         try {
           this.field_H = param0;
-          this.field_G = new ButtonWidget(ub.field_xb, (WidgetListener) null);
-          this.field_G.painter = (WidgetPainter) ((Object) new oq());
-          var7 = vl.a(ng.field_a, new String[]{this.getLinkOpenMarkup(-1), this.getLinkCloseMarkup(111)}, 2);
+          this.field_G = new ButtonWidget(LoginDialog.field_xb, (WidgetListener) null);
+          this.field_G.painter = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
+          var7 = QueuedListRequest.substituteTemplateArguments(ArchiveProvider.field_a, new String[]{this.getLinkOpenMarkup(-1), this.getLinkCloseMarkup(111)}, 2);
           var3 = 20;
-          var4 = new TextWidgetPainter(ke.field_h, 0, 0, 0, 0, 16777215, -1, 3, 0, ke.field_h.maxAscent, -1, 2147483647, true);
+          var4 = new TextWidgetPainter(FontPaletteHelpers.field_h, 0, 0, 0, 0, 16777215, -1, 3, 0, FontPaletteHelpers.field_h.maxAscent, -1, 2147483647, true);
           this.field_L = new HotspotTextWidget(var7, var4);
           this.field_L.field_x = "";
-          this.field_L.setHotspotHoverText(0, (byte) -107, mp.field_d);
-          this.field_L.setHotspotHoverText(1, (byte) -115, mp.field_d);
+          this.field_L.setHotspotHoverText(0, (byte) -107, TextLayout.field_d);
+          this.field_L.setHotspotHoverText(1, (byte) -115, TextLayout.field_d);
           this.field_L.field_A = (WidgetListener) (this);
           this.field_L.field_n = -40 + this.field_n;
-          this.field_L.a(this.field_n - 40, var3, (byte) -4, 26);
+          this.field_L.setBoundsToTextHeight(this.field_n - 40, var3, (byte) -4, 26);
           var3 = var3 + (this.field_L.field_w + 15);
           this.addChild((byte) 108, this.field_L);
           var5 = 4;
@@ -125,12 +125,12 @@ final class Under13NoticePanel extends WidgetContainer implements HotspotActivat
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param0.a(param4, (byte) 105);
+          var5_int = param0.getGroupIdByName(param4, (byte) 105);
           if (param1 != 4) {
             field_I = (ProgressDialog) null;
           }
-          var6 = param0.a(param3, var5_int, param1 - 5);
-          stackIn_3_0 = er.a(param2, var5_int, 0, var6, param0);
+          var6 = param0.getFileId(param3, var5_int, param1 - 5);
+          stackIn_3_0 = TipPanelHelpers.loadBinaryFont(param2, var5_int, 0, var6, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -208,7 +208,7 @@ final class Under13NoticePanel extends WidgetContainer implements HotspotActivat
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 == this.field_G) {
-            va.a((byte) 62);
+            UrlLaunchHelpers.beginStoredLogin((byte) 62);
             this.field_H.dismissDialog(-7435);
           }
           if (param3 < -83) {
@@ -232,18 +232,18 @@ final class Under13NoticePanel extends WidgetContainer implements HotspotActivat
     }
 
     final static void addTileAnimation(int param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
-        hn[] var11 = null;
-        hn[] var7 = null;
+        FrameCycleAnimation[] var11 = null;
+        FrameCycleAnimation[] var7 = null;
         int var8 = 0;
         int var10 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var11 = new hn[PasswordValidator.field_x.length + 1];
+          var11 = new FrameCycleAnimation[PasswordValidator.field_x.length + 1];
           var7 = var11;
           int var9 = 83 / ((50 - param5) / 57);
           for (var8 = 0; PasswordValidator.field_x.length > var8; var8++) {
             var11[var8] = PasswordValidator.field_x[var8];
           }
-          var7[-1 + var7.length] = new hn(param3, param4, param1, param6, param0, param2);
+          var7[-1 + var7.length] = new FrameCycleAnimation(param3, param4, param1, param6, param0, param2);
           PasswordValidator.field_x = var7;
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "pj.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');

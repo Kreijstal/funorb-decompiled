@@ -25,7 +25,7 @@ class DualLinkNode extends IntrusiveNode {
         }
     }
 
-    final boolean c(int param0) {
+    final boolean isSecondaryLinked(int param0) {
         if (null == this.secondaryNext) {
           return false;
         }
@@ -36,14 +36,14 @@ class DualLinkNode extends IntrusiveNode {
         return true;
     }
 
-    final long d(int param0) {
+    final long getSecondaryKey(int param0) {
         if (param0 > -60) {
           return -16L;
         }
         return this.secondaryKey;
     }
 
-    final void a(byte param0, long param1) {
+    final void setSecondaryKey(byte param0, long param1) {
         if (null != this.secondaryNext) {
           throw new RuntimeException();
         }
@@ -53,20 +53,20 @@ class DualLinkNode extends IntrusiveNode {
         }
     }
 
-    final void a(int param0) {
+    final void unlinkSecondary(int param0) {
         if (this.secondaryNext == null) {
           return;
         }
         this.secondaryNext.secondaryPrevious = this.secondaryPrevious;
         this.secondaryPrevious.secondaryNext = this.secondaryNext;
         if (param0 != -4564) {
-          this.a((byte) -27, 73L);
+          this.setSecondaryKey((byte) -27, 73L);
         }
         this.secondaryPrevious = null;
         this.secondaryNext = null;
     }
 
-    final static Sprite[] a(int param0, int param1, int param2, int param3, byte param4, int param5, int param6, int param7, int param8) {
+    final static Sprite[] createBeveledFrameSprites(int param0, int param1, int param2, int param3, byte param4, int param5, int param6, int param7, int param8) {
         int var14 = 0;
         int var9;
         Sprite[] var10;
@@ -132,7 +132,7 @@ class DualLinkNode extends IntrusiveNode {
         return var10;
     }
 
-    final static boolean a(byte param0, String param1) {
+    final static boolean isAllSameChar(byte param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

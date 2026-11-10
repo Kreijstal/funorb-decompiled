@@ -14,7 +14,7 @@ final class QuickChatHelpDialog extends UiComponent {
         int var1 = -7 % ((-1 - param0) / 63);
         if (null != IndexedSpriteState.field_k) {
           var2 = IndexedSpriteState.field_k;
-          UiWidget.showMessageDialogText((byte) -61, vl.a(lp.field_h, new String[]{var2}, 2));
+          UiWidget.showMessageDialogText((byte) -61, QueuedListRequest.substituteTemplateArguments(ReflectionCheckRequest.field_h, new String[]{var2}, 2));
           IndexedSpriteState.field_k = null;
         }
     }
@@ -41,17 +41,17 @@ final class QuickChatHelpDialog extends UiComponent {
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (param2 == null) {
-            stackIn_4_0 = bg.field_q;
+            stackIn_4_0 = DialWidgetPainter.field_q;
             return stackIn_4_0;
           }
           var3_int = param2.length();
           if (var3_int >= 1 &&
             var3_int <= 12) {
-            var4 = tg.normalizePlayerName(param2, false);
+            var4 = AudioPumpThread.normalizePlayerName(param2, false);
             if (var4 != null &&
               var4.length() >= 1) {
-              if (!eb.a((byte) -104, var4.charAt(0)) &&
-                !eb.a((byte) -119, var4.charAt(-1 + var4.length()))) {
+              if (!PopupMenuBuilder.isNameSeparator((byte) -104, var4.charAt(0)) &&
+                !PopupMenuBuilder.isNameSeparator((byte) -119, var4.charAt(-1 + var4.length()))) {
                 var5 = 0;
                 if (param1 >= -11) {
                   stackIn_22_0 = (String) null;
@@ -59,14 +59,14 @@ final class QuickChatHelpDialog extends UiComponent {
                 }
                 for (var6 = 0; var6 < param2.length(); var6++) {
                   var7 = param2.charAt(var6);
-                  if (eb.a((byte) 94, (char) var7)) {
+                  if (PopupMenuBuilder.isNameSeparator((byte) 94, (char) var7)) {
                     var5++;
                   } else {
                     var5 = 0;
                   }
                   if (2 <= var5 &&
                     !param0) {
-                    stackIn_32_0 = hn.field_a;
+                    stackIn_32_0 = FrameCycleAnimation.field_a;
                     return stackIn_32_0;
                   }
                 }
@@ -79,10 +79,10 @@ final class QuickChatHelpDialog extends UiComponent {
               stackIn_19_0 = IntrusiveDeque.field_a;
               return stackIn_19_0;
             }
-            stackIn_14_0 = bg.field_q;
+            stackIn_14_0 = DialWidgetPainter.field_q;
             return stackIn_14_0;
           }
-          stackIn_9_0 = bg.field_q;
+          stackIn_9_0 = DialWidgetPainter.field_q;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -146,13 +146,13 @@ final class QuickChatHelpDialog extends UiComponent {
           var2_int = 1;
           incrementValue$0 = var2_int;
           var2_int++;
-          var3 = ValidationState.a(param1, incrementValue$0, (byte) 86);
+          var3 = ValidationState.readIntAt(param1, incrementValue$0, (byte) 86);
           incrementValue$1 = var2_int;
           var2_int++;
-          var4 = ValidationState.a(param1, incrementValue$1, (byte) 99);
+          var4 = ValidationState.readIntAt(param1, incrementValue$1, (byte) 99);
           incrementValue$2 = var2_int;
           var2_int++;
-          var5 = ValidationState.a(param1, incrementValue$2, (byte) 113);
+          var5 = ValidationState.readIntAt(param1, incrementValue$2, (byte) 113);
           var23 = new int[4];
           var19 = var23;
           var6 = var19;
@@ -162,41 +162,41 @@ final class QuickChatHelpDialog extends UiComponent {
           for (var8 = 0; var8 < 4; var8++) {
             incrementValue$10 = var2_int;
             var2_int++;
-            var6[var8] = ValidationState.a(param1, incrementValue$10, (byte) 56);
+            var6[var8] = ValidationState.readIntAt(param1, incrementValue$10, (byte) 56);
             incrementValue$11 = var2_int;
             var2_int++;
-            var7[var8] = ValidationState.a(param1, incrementValue$11, (byte) 88);
+            var7[var8] = ValidationState.readIntAt(param1, incrementValue$11, (byte) 88);
           }
           incrementValue$3 = var2_int;
           var2_int++;
-          var8Lifetime1 = ValidationState.a(param1, incrementValue$3, (byte) 75);
+          var8Lifetime1 = ValidationState.readIntAt(param1, incrementValue$3, (byte) 75);
           incrementValue$4 = var2_int;
           var2_int++;
-          var9 = ValidationState.a(param1, incrementValue$4, (byte) 112);
+          var9 = ValidationState.readIntAt(param1, incrementValue$4, (byte) 112);
           incrementValue$5 = var2_int;
           var2_int++;
-          var10 = ValidationState.a(param1, incrementValue$5, (byte) 113);
+          var10 = ValidationState.readIntAt(param1, incrementValue$5, (byte) 113);
           incrementValue$6 = var2_int;
           var2_int++;
-          var11 = ValidationState.a(param1, incrementValue$6, (byte) 67);
+          var11 = ValidationState.readIntAt(param1, incrementValue$6, (byte) 67);
           var26 = new int[var11][var10];
           for (var13 = 0; var13 < var11; var13++) {
             for (var14_int = 0; var14_int < var10; var14_int++) {
               incrementValue$9 = var2_int;
               var2_int++;
-              var26[var13][var14_int] = ValidationState.a(param1, incrementValue$9, (byte) 71);
+              var26[var13][var14_int] = ValidationState.readIntAt(param1, incrementValue$9, (byte) 71);
             }
           }
           incrementValue$7 = var2_int;
           var2_int++;
-          var13Lifetime1 = ValidationState.a(param1, incrementValue$7, (byte) 59);
+          var13Lifetime1 = ValidationState.readIntAt(param1, incrementValue$7, (byte) 59);
           var22 = new int[var13Lifetime1 * 4];
           var18 = var22;
           var14 = var18;
           for (var15 = 0; var15 < 4 * var13Lifetime1; var15++) {
             incrementValue$8 = var2_int;
             var2_int++;
-            var14[var15] = ValidationState.a(param1, incrementValue$8, (byte) 62);
+            var14[var15] = ValidationState.readIntAt(param1, incrementValue$8, (byte) 62);
           }
           if (param0 != 104) {
             field_Hb = (Sprite[][]) null;
@@ -234,8 +234,8 @@ final class QuickChatHelpDialog extends UiComponent {
           return true;
         }
         boolean decompiledFrameRemainder0 = true;
-        this.a(param0 ^ -11838, true);
-        if ((kd.field_b == 0 ||
+        this.updateRoot(param0 ^ -11838, true);
+        if ((StringHashHelpers.field_b == 0 ||
           this.field_T != 0) && this.field_Ib.field_T == 0) {
           stackIn_9_0 = false;
           decompiledFrameRemainder0 = false;
@@ -282,7 +282,7 @@ final class QuickChatHelpDialog extends UiComponent {
           var10 = 50;
           var11 = 0;
           for (var12 = 0; ClickMarker.field_h.length > var12; var12++) {
-            var13 = new UiComponent(0L, param3, cm.field_c[var12]);
+            var13 = new UiComponent(0L, param3, LobbyRequestHelpers.field_c[var12]);
             var14 = new UiComponent(0L, param3, ClickMarker.field_h[var12]);
             var15 = param3.field_yb.textWidth(ClickMarker.field_h[var12]);
             var13.setBounds(15, var10, 65, 20, -3344);
@@ -290,8 +290,8 @@ final class QuickChatHelpDialog extends UiComponent {
               var11 = var15;
             }
             var14.setBounds(15, var10, 640, 90, -3344);
-            var8.a((byte) 50, var13);
-            var8.a((byte) 50, var14);
+            var8.addChild((byte) 50, var13);
+            var8.addChild((byte) 50, var14);
             var10 += 30;
           }
           var10 += 15;
@@ -300,11 +300,11 @@ final class QuickChatHelpDialog extends UiComponent {
           this.field_Ib.setBounds(15, 5, 15, -20 + var17.field_zb, -3344);
           var8.setBounds(this.field_z - var17.field_z, var17.field_z, this.field_zb, 0, -3344);
           var9.setBounds(15, 20, this.field_zb, 0, -3344);
-          var8.field_ab = tg.createGradientFrameSprites(2105376, var8.field_z, 8421504, 3, 11579568, 102);
-          var17.a((byte) 50, this.field_Ib);
-          var8.a((byte) 50, var9);
-          this.a((byte) 50, var17);
-          this.a((byte) 50, var8);
+          var8.field_ab = AudioPumpThread.createGradientFrameSprites(2105376, var8.field_z, 8421504, 3, 11579568, 102);
+          var17.addChild((byte) 50, this.field_Ib);
+          var8.addChild((byte) 50, var9);
+          this.addChild((byte) 50, var17);
+          this.addChild((byte) 50, var8);
           var10Lifetime1 = -(this.field_z >> 1) + 240;
           this.field_x = 320 - (this.field_zb >> 1);
           return;

@@ -1,0 +1,206 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.io.*;
+
+final class MarkerSliderWidget extends ButtonWidget {
+    private GrowableIntList field_R;
+    static ResourceArchive field_V;
+    static String field_U;
+    static String field_P;
+    private int field_O;
+    static int[] field_Q;
+    static String field_S;
+    int field_N;
+    int field_M;
+    static String field_T;
+
+    public static void releaseStatics(byte param0) {
+        field_P = null;
+        field_S = null;
+        field_Q = null;
+        if (param0 >= 5) {
+          field_T = null;
+          field_V = null;
+          field_U = null;
+          return;
+        }
+        field_T = (String) null;
+        field_T = null;
+        field_V = null;
+        field_U = null;
+    }
+
+    final int getMarkerCount(byte param0) {
+        int var2 = 111 / ((param0 + 8) / 48);
+        return this.field_R.size(1);
+    }
+
+    final static QuickChatCommandType[] listResponseTypes(boolean param0) {
+        if (!param0) {
+          MarkerSliderWidget.listResponseTypes(false);
+          return new QuickChatCommandType[]{EmailAvailabilityValidator.field_r, SocialRequestHelpers.field_d, UnitStateEvent.field_o, ValidationMessageWidget.field_W, WidgetStyleLayer.field_g, GameEvent.field_h, SectorCacheStore.field_i, ChatMessage.field_b, AlignedIconLabel.field_Lb, DetonationTarget.field_i, CachedArchiveSource.field_j, EmailAvailabilityValidator.field_w, ClientTickHelpers.field_a, PopupMenuBuilder.field_w};
+        }
+        return new QuickChatCommandType[]{EmailAvailabilityValidator.field_r, SocialRequestHelpers.field_d, UnitStateEvent.field_o, ValidationMessageWidget.field_W, WidgetStyleLayer.field_g, GameEvent.field_h, SectorCacheStore.field_i, ChatMessage.field_b, AlignedIconLabel.field_Lb, DetonationTarget.field_i, CachedArchiveSource.field_j, EmailAvailabilityValidator.field_w, ClientTickHelpers.field_a, PopupMenuBuilder.field_w};
+    }
+
+    final int getMaximumValue(byte param0) {
+        if (param0 != -106) {
+          return -4;
+        }
+        return this.field_O;
+    }
+
+    final static ResourceArchive createResourceArchive(int param0, int param1, boolean param2, boolean param3, int param4, boolean param5) {
+        try {
+          int var6_int = 0;
+          IOException var6 = null;
+          Object var7 = null;
+          Object var8 = null;
+          CachedArchiveSource var9 = null;
+          ResourceArchive stackIn_12_0 = null;
+          Throwable decompiledCaughtException = null;
+          try {
+            var6_int = 122 % ((-63 - param4) / 63);
+            var7 = null;
+            if (ObjectFactoryHelpers.field_a.field_i != null) {
+              AntialiasedFontHelpers.field_b = new BufferedFile(ObjectFactoryHelpers.field_a.field_i, 5200, 0);
+              ObjectFactoryHelpers.field_a.field_i = null;
+              var7 = new SectorCacheStore(255, AntialiasedFontHelpers.field_b, new BufferedFile(ObjectFactoryHelpers.field_a.field_k, 12000, 0), 2097152);
+            }
+            var8 = null;
+            if (AntialiasedFontHelpers.field_b != null) {
+              if (GameSimulation.field_r == null) {
+                GameSimulation.field_r = new BufferedFile[ObjectFactoryHelpers.field_a.field_t.length];
+              }
+              if (GameSimulation.field_r[param0] == null) {
+                GameSimulation.field_r[param0] = new BufferedFile(ObjectFactoryHelpers.field_a.field_t[param0], 12000, 0);
+                ObjectFactoryHelpers.field_a.field_t[param0] = null;
+              }
+              var8 = new SectorCacheStore(param0, AntialiasedFontHelpers.field_b, GameSimulation.field_r[param0], 2097152);
+            }
+            var9 = EffectVolumeHelpers.field_a.openProvider(param0, (SectorCacheStore) (var7), -15893, (SectorCacheStore) (var8), param3);
+            if (param5) {
+              var9.startPrefetch(false);
+            }
+            stackIn_12_0 = new ResourceArchive(var9, param2, param1);
+            return stackIn_12_0;
+          } catch (java.io.IOException decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var6 = (IOException) (Object) decompiledCaughtException;
+            throw new RuntimeException(var6.toString());
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    final static int getProtocolConstant(int param0) {
+        if (param0 != 1) {
+          MarkerSliderWidget.getProtocolConstant(-92);
+          return 1;
+        }
+        return 1;
+    }
+
+    final static void logoutAndReload(int param0, java.applet.Applet param1) {
+        try {
+          if (param0 != -1) {
+            MarkerSliderWidget.createResourceArchive(0, -46, true, false, 5, false);
+          }
+          PendingIntArrayReply.setSessionCookie(param1, -89, "");
+          BirthDateInputWidget.reloadPage(false, param1);
+        } catch (RuntimeException runtimeException) {
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "wm.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    private MarkerSliderWidget() throws Throwable {
+        throw new Error();
+    }
+
+    final int getMarkerValue(int param0, boolean param1) {
+        if (param0 < 0) {
+          return -1;
+        }
+        if (param0 >= this.field_R.size(1)) {
+          return -1;
+        }
+        if (!param1) {
+          return this.field_R.get((byte) 105, param0);
+        }
+        this.field_M = -39;
+        return this.field_R.get((byte) 105, param0);
+    }
+
+    final boolean handlePointerPress(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
+        int var12 = 0;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        String stackIn_29_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var8_int = 0;
+        RuntimeException var8 = null;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var13 = 0;
+        int var14 = 0;
+        var14 = ZombieDawnMulti.field_E ? 1 : 0;
+        try {
+          if (!super.handlePointerPress(param0, param1, param2, param3, param4, param5, param6)) {
+            return false;
+          }
+          var8_int = -param5 + param1 - this.field_M;
+          var9 = this.field_n - this.field_M * 2;
+          if (var8_int > var9) {
+            var8_int = var9;
+          }
+          if (var8_int < 0) {
+            var8_int = 0;
+          }
+          var8_int = var8_int * this.field_O / var9;
+          if (param2 == 1) {
+            this.field_R.add((byte) -7, var8_int);
+          } else {
+            if (param2 == 2) {
+              var10 = 2147483647;
+              var11 = -1;
+              for (var12 = 0; this.field_R.size(1) > var12; var12++) {
+                var13 = this.field_R.get((byte) 105, var12) - var8_int;
+                var13 = var13 * var13;
+                if (var13 < var10) {
+                  var10 = var13;
+                  var11 = var12;
+                }
+              }
+              if (var11 >= 0) {
+                this.field_R.removeAt(-102, var11);
+              }
+            }
+          }
+          return true;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var8 = decompiledCaughtException;
+          stackIn_28_0 = var8;
+          stackIn_28_1 = new StringBuilder().append("wm.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_29_2 = "null";
+          } else {
+            stackIn_29_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+        }
+    }
+
+    static {
+        field_U = "Select any zombie!";
+        field_P = "Keep them away from the other portals.";
+        field_S = "To Customer Support";
+        field_Q = new int[10];
+        field_T = "Invalid date";
+    }
+}

@@ -7,13 +7,13 @@ class HotspotTextWidget extends ButtonWidget {
     private IntrusiveDeque field_T;
     static boolean field_N;
     static int field_S;
-    private wi field_V;
+    private TextHotspot field_V;
     static int field_Q;
     static int field_O;
     static int[] field_U;
     static String field_P;
 
-    final static void a(int param0, int param1, int param2, int param3, Sprite param4, int param5, int param6, int param7) {
+    final static void drawSpriteOutline(int param0, int param1, int param2, int param3, Sprite param4, int param5, int param6, int param7) {
         int var16 = 0;
         int var17 = 0;
         RuntimeException stackIn_45_0 = null;
@@ -54,7 +54,7 @@ class HotspotTextWidget extends ButtonWidget {
             var21 = param4.copy();
             var30 = SoftwareRasterizer.pixels;
             if (param0 != 5) {
-              HotspotTextWidget.g(-57);
+              HotspotTextWidget.drawLegacyMenu(-57);
             }
             var10 = SoftwareRasterizer.width;
             var11 = SoftwareRasterizer.height;
@@ -119,21 +119,21 @@ class HotspotTextWidget extends ButtonWidget {
         super.activateButton(param0, param1, param2, param3);
         int var5 = -this.field_y + param2;
         int var6 = -this.field_i + param3;
-        wi var7 = this.findHotspot((byte) 23, var5, var6);
+        TextHotspot var7 = this.findHotspot((byte) 23, var5, var6);
         if (var7 != null &&
           null != this.field_A) {
           ((HotspotActivationListener) ((Object) this.field_A)).onHotspotActivated(param1, this, -38, var7.field_l);
         }
     }
 
-    private final wi findHotspot(byte param0, int param1, int param2) {
-        wi var4;
-        wi var5;
+    private final TextHotspot findHotspot(byte param0, int param1, int param2) {
+        TextHotspot var4;
+        TextHotspot var5;
         int var6;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
-        var4 = (wi) (this.field_T.last(105));
+        var4 = (TextHotspot) (this.field_T.last(105));
         if (param0 != 23) {
-          return (wi) null;
+          return (TextHotspot) null;
         }
         while (var4 != null) {
           var5 = var4;
@@ -146,7 +146,7 @@ class HotspotTextWidget extends ButtonWidget {
             }
             var5 = var5.field_i;
           }
-          var4 = (wi) (this.field_T.previous(6));
+          var4 = (TextHotspot) (this.field_T.previous(6));
         }
         return null;
     }
@@ -169,7 +169,7 @@ class HotspotTextWidget extends ButtonWidget {
           this.field_V = null;
           if (this.field_l) {
             var5_int = MouseInputHandler.field_g - (param2 + this.field_y);
-            var6 = bo.field_d + (-param3 - this.field_i);
+            var6 = LoginMethod.field_d + (-param3 - this.field_i);
             this.field_V = this.findHotspot((byte) 23, var5_int, var6);
           }
           return;
@@ -187,11 +187,11 @@ class HotspotTextWidget extends ButtonWidget {
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void setBoundsToTextHeight(int param0, int param1, byte param2, int param3) {
         if (param2 != -4) {
           field_S = 74;
         }
-        this.setWidgetBounds(param3, param1, param2 ^ -28976, param0, ((rk) ((Object) this.painter)).getPreferredHeight((byte) 39, (UiWidget) (this)));
+        this.setWidgetBounds(param3, param1, param2 ^ -28976, param0, ((TextWidgetLayout) ((Object) this.painter)).getPreferredHeight((byte) 39, (UiWidget) (this)));
     }
 
     final void rebuildHotspotBounds(byte param0) {
@@ -199,18 +199,18 @@ class HotspotTextWidget extends ButtonWidget {
         int stackIn_10_0 = 0;
         int stackIn_15_0 = 0;
         int var2;
-        rk var3;
-        mp var4;
+        TextWidgetLayout var3;
+        TextLayout var4;
         int var5;
         String var6;
         int var7;
         int var8;
         int var9;
         Object var10;
-        td var12;
+        TextLayoutLine var12;
         int var13;
         int var14;
-        wi var15;
+        TextHotspot var15;
         int var16;
         int var7Lifetime1;
         var16 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -219,7 +219,7 @@ class HotspotTextWidget extends ButtonWidget {
         if (param0 != 94) {
           this.rebuildHotspotBounds((byte) -110);
         }
-        var3 = (rk) ((Object) this.painter);
+        var3 = (TextWidgetLayout) ((Object) this.painter);
         var4 = var3.getTextLayout((UiWidget) (this), -102);
         while (true) {
           var5 = this.field_j.indexOf("<hotspot=", var2);
@@ -251,9 +251,9 @@ class HotspotTextWidget extends ButtonWidget {
               }
             }
             var14 = stackIn_15_0;
-            var15 = new wi(var7Lifetime1, var13, var12.field_d, -var13 + var14, Math.max(var3.getLineHeight(0), var12.field_h - var12.field_d));
+            var15 = new TextHotspot(var7Lifetime1, var13, var12.field_d, -var13 + var14, Math.max(var3.getLineHeight(0), var12.field_h - var12.field_d));
             if (var10 != null) {
-              ((wi) (var10)).field_i = var15;
+              ((TextHotspot) (var10)).field_i = var15;
             }
             var10 = var15;
             this.field_T.addFirst(var15, false);
@@ -261,7 +261,7 @@ class HotspotTextWidget extends ButtonWidget {
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_P = null;
         if (param0 != 2) {
           field_R = -124;
@@ -325,13 +325,13 @@ class HotspotTextWidget extends ButtonWidget {
         if (0 != param2) {
           return;
         }
-        rk var5 = (rk) ((Object) this.painter);
-        wi var6 = this.field_V;
+        TextWidgetLayout var5 = (TextWidgetLayout) ((Object) this.painter);
+        TextHotspot var6 = this.field_V;
         if (var6 != null) {
           var7 = var5.getTextOriginX(false, param3, (UiWidget) (this));
           var8 = var5.getTextOriginY((UiWidget) (this), 0, param1);
           do {
-            hl.drawDottedRectangle(-2 + var6.field_f + var8, var7 - (-var6.field_k + 2), (byte) 126, var6.field_j + 2, 2 + var6.field_n);
+            LobbyStateHelpers.drawDottedRectangle(-2 + var6.field_f + var8, var7 - (-var6.field_k + 2), (byte) 126, var6.field_j + 2, 2 + var6.field_n);
             var6 = var6.field_i;
           } while (var6 != null);
         }
@@ -369,7 +369,7 @@ class HotspotTextWidget extends ButtonWidget {
         this.rebuildHotspotBounds((byte) 94);
     }
 
-    final static void g(int param0) {
+    final static void drawLegacyMenu(int param0) {
         int stackIn_18_0 = 0;
         String stackIn_23_0 = null;
         int stackIn_27_0 = 0;
@@ -377,7 +377,7 @@ class HotspotTextWidget extends ButtonWidget {
         int stackIn_39_0 = 0;
         String stackIn_39_1 = null;
         boolean stackIn_40_2 = false;
-        pd stackIn_44_0 = null;
+        FramePainter stackIn_44_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -389,17 +389,17 @@ class HotspotTextWidget extends ButtonWidget {
         String var6 = null;
         int var7 = 0;
         int var8 = 0;
-        pd var9 = null;
+        FramePainter var9 = null;
         int var10 = 0;
         int var3Lifetime1;
         int var7Lifetime1;
         int var8Lifetime1;
         var10 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var1_int = ce.field_k;
+          var1_int = TerrainEffectZone.field_k;
           var2 = 0;
-          if (ho.field_q == 2) {
-            var3_long = bl.monotonicMillis((byte) 49) - UnitStateEvent.field_s;
+          if (OptionsMenuScreen.field_q == 2) {
+            var3_long = ClockAndScreenHelpers.monotonicMillis((byte) 49) - UnitStateEvent.field_s;
             var2 = (int)((-var3_long + 10999L) / 1000L);
             if (var2 < 0) {
               var2 = 0;
@@ -409,41 +409,41 @@ class HotspotTextWidget extends ButtonWidget {
             var4 = MessageDialogContent.field_Q[var3];
             if (var4 >= 0) {
               if (var4 != NetworkGameClient.field_B.field_d) {
-                var5 = hp.field_k;
+                var5 = RandomHelpers.field_k;
               } else {
                 var5 = PhaseChangeEvent.field_n;
               }
             } else {
-              var5 = qh.field_e;
+              var5 = TabbedOverlayPanel.field_e;
             }
             var6 = TextWidgetPainter.field_m[var3];
-            if (ho.field_q == 2 &&
+            if (OptionsMenuScreen.field_q == 2 &&
               var2 == 1) {
-              if (aa.field_n.length < q.field_a.length) {
-                stackIn_18_0 = q.field_a.length;
+              if (NanoTickClock.field_n.length < SineTableHelpers.field_a.length) {
+                stackIn_18_0 = SineTableHelpers.field_a.length;
               } else {
-                stackIn_18_0 = aa.field_n.length;
+                stackIn_18_0 = NanoTickClock.field_n.length;
               }
               var7 = stackIn_18_0;
               if (var3 >= 6 &&
                 var3 < 6 + var7) {
-                if (0 > -6 + var3 - (-aa.field_n.length + var7)) {
+                if (0 > -6 + var3 - (-NanoTickClock.field_n.length + var7)) {
                   stackIn_23_0 = "";
                 } else {
-                  stackIn_23_0 = aa.field_n[var3 - (6 + (-aa.field_n.length + var7))];
+                  stackIn_23_0 = NanoTickClock.field_n[var3 - (6 + (-NanoTickClock.field_n.length + var7))];
                 }
                 var6 = stackIn_23_0;
               }
-              if (ud.field_N.length <= ik.field_a.length) {
-                stackIn_27_0 = ik.field_a.length;
+              if (DialSelectorWidget.field_N.length <= KeyboardStateHelpers.field_a.length) {
+                stackIn_27_0 = KeyboardStateHelpers.field_a.length;
               } else {
-                stackIn_27_0 = ud.field_N.length;
+                stackIn_27_0 = DialSelectorWidget.field_N.length;
               }
               var8 = stackIn_27_0;
               if (7 + var7 <= var3 &&
                 var7 + 7 + var8 > var3) {
-                if (ik.field_a.length > -var7 - 7 + var3) {
-                  stackIn_33_0 = ik.field_a[-7 + var3 - var7];
+                if (KeyboardStateHelpers.field_a.length > -var7 - 7 + var3) {
+                  stackIn_33_0 = KeyboardStateHelpers.field_a[-7 + var3 - var7];
                 } else {
                   stackIn_33_0 = "";
                 }
@@ -456,26 +456,26 @@ class HotspotTextWidget extends ButtonWidget {
             stackIn_39_0 = 0;
             stackIn_39_1 = var6;
             stackIn_40_2 = !(var4 < 0);
-            var7Lifetime1 = hn.measureMenuText(stackIn_39_0, stackIn_39_1, stackIn_40_2);
-            var8Lifetime1 = am.field_c - (var7Lifetime1 >> 1);
+            var7Lifetime1 = FrameCycleAnimation.measureMenuText(stackIn_39_0, stackIn_39_1, stackIn_40_2);
+            var8Lifetime1 = TeamSpriteHelpers.field_c - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
               var1_int = var1_int + ResizableDialog.field_bb;
               if (var4 != NetworkGameClient.field_B.field_d) {
                 stackIn_44_0 = RandomAccessCacheFile.field_a;
               } else {
-                stackIn_44_0 = en.field_d;
+                stackIn_44_0 = ChatPanelSetupHelpers.field_d;
               }
               var9 = stackIn_44_0;
               if (var9 != null) {
-                var9.drawFrame(var1_int, -QuickChatHelpDialog.field_Gb + var8Lifetime1, var7Lifetime1 + (QuickChatHelpDialog.field_Gb << 1), me.field_h + (DateInputWidget.field_G << 1), 12018);
+                var9.drawFrame(var1_int, -QuickChatHelpDialog.field_Gb + var8Lifetime1, var7Lifetime1 + (QuickChatHelpDialog.field_Gb << 1), SoundCache.field_h + (DateInputWidget.field_G << 1), 12018);
               }
               var1_int = var1_int + DateInputWidget.field_G;
             }
             if (var4 >= 0) {
-              m.field_C.c(var6, var8Lifetime1, var1_int + MenuScreen.field_h, var5, -1);
-              var1_int = var1_int + (ResizableDialog.field_bb + (DateInputWidget.field_G + me.field_h));
+              PasswordTextPainter.field_C.drawLeft(var6, var8Lifetime1, var1_int + MenuScreen.field_h, var5, -1);
+              var1_int = var1_int + (ResizableDialog.field_bb + (DateInputWidget.field_G + SoundCache.field_h));
             } else {
-              uq.field_f.c(var6, var8Lifetime1, var1_int + bf.field_g, var5, -1);
+              BrowserPageHelpers.field_f.drawLeft(var6, var8Lifetime1, var1_int + MeltdownPuddle.field_g, var5, -1);
               var1_int = var1_int + WidgetContainer.field_C;
             }
           }
@@ -488,7 +488,7 @@ class HotspotTextWidget extends ButtonWidget {
         }
     }
 
-    final static void a(int param0, Sprite[] param1, boolean param2) {
+    final static void buildIconSprites(int param0, Sprite[] param1, boolean param2) {
         int var4 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -499,123 +499,123 @@ class HotspotTextWidget extends ButtonWidget {
         try {
           ReportAbuseDialog.field_Qb[param0] = param1;
           if (param2) {
-            HotspotTextWidget.f(-7);
+            HotspotTextWidget.releaseStatics(-7);
           }
           if (0 == param0) {
             param1[6].bindAsRenderTarget();
             SoftwareRasterizer.fillRect(0, 0, 24, 24, 0);
-            qc.a(2, (byte) -126, param1, 79, 3);
-            qc.a(2, (byte) -126, param1, 78, 4);
-            qc.a(2, (byte) -126, param1, 77, 1);
-            qc.a(2, (byte) -126, param1, 76, 2);
-            qc.a(2, (byte) -126, param1, 75, 5);
-            qc.a(2, (byte) -126, param1, 74, 6);
-            qc.a(2, (byte) -126, param1, 73, 7);
-            qc.a(2, (byte) -126, param1, 72, 8);
-            qc.a(0, (byte) -126, param1, 71, 3);
-            qc.a(0, (byte) -126, param1, 70, 4);
-            qc.a(0, (byte) -126, param1, 69, 1);
-            qc.a(0, (byte) -126, param1, 68, 2);
-            qc.a(0, (byte) -126, param1, 67, 5);
-            qc.a(0, (byte) -126, param1, 66, 6);
-            qc.a(0, (byte) -126, param1, 65, 7);
-            qc.a(0, (byte) -126, param1, 64, 8);
-            qc.a(7, (byte) -126, param1, 61, 2);
-            qc.a(7, (byte) -126, param1, 60, 1);
-            qc.a(7, (byte) -126, param1, 59, 5);
-            qc.a(7, (byte) -126, param1, 58, 6);
-            qc.a(7, (byte) -126, param1, 57, 7);
-            qc.a(7, (byte) -126, param1, 56, 8);
-            qc.a(24, (byte) -126, param1, 55, 2);
-            qc.a(24, (byte) -126, param1, 54, 1);
-            qc.a(24, (byte) -126, param1, 53, 5);
-            qc.a(2, (byte) -126, param1, 63, 0);
-            qc.a(0, (byte) -126, param1, 62, 0);
+            ArchiveRequest.buildBlendedTileSprite(2, (byte) -126, param1, 79, 3);
+            ArchiveRequest.buildBlendedTileSprite(2, (byte) -126, param1, 78, 4);
+            ArchiveRequest.buildBlendedTileSprite(2, (byte) -126, param1, 77, 1);
+            ArchiveRequest.buildBlendedTileSprite(2, (byte) -126, param1, 76, 2);
+            ArchiveRequest.buildBlendedTileSprite(2, (byte) -126, param1, 75, 5);
+            ArchiveRequest.buildBlendedTileSprite(2, (byte) -126, param1, 74, 6);
+            ArchiveRequest.buildBlendedTileSprite(2, (byte) -126, param1, 73, 7);
+            ArchiveRequest.buildBlendedTileSprite(2, (byte) -126, param1, 72, 8);
+            ArchiveRequest.buildBlendedTileSprite(0, (byte) -126, param1, 71, 3);
+            ArchiveRequest.buildBlendedTileSprite(0, (byte) -126, param1, 70, 4);
+            ArchiveRequest.buildBlendedTileSprite(0, (byte) -126, param1, 69, 1);
+            ArchiveRequest.buildBlendedTileSprite(0, (byte) -126, param1, 68, 2);
+            ArchiveRequest.buildBlendedTileSprite(0, (byte) -126, param1, 67, 5);
+            ArchiveRequest.buildBlendedTileSprite(0, (byte) -126, param1, 66, 6);
+            ArchiveRequest.buildBlendedTileSprite(0, (byte) -126, param1, 65, 7);
+            ArchiveRequest.buildBlendedTileSprite(0, (byte) -126, param1, 64, 8);
+            ArchiveRequest.buildBlendedTileSprite(7, (byte) -126, param1, 61, 2);
+            ArchiveRequest.buildBlendedTileSprite(7, (byte) -126, param1, 60, 1);
+            ArchiveRequest.buildBlendedTileSprite(7, (byte) -126, param1, 59, 5);
+            ArchiveRequest.buildBlendedTileSprite(7, (byte) -126, param1, 58, 6);
+            ArchiveRequest.buildBlendedTileSprite(7, (byte) -126, param1, 57, 7);
+            ArchiveRequest.buildBlendedTileSprite(7, (byte) -126, param1, 56, 8);
+            ArchiveRequest.buildBlendedTileSprite(24, (byte) -126, param1, 55, 2);
+            ArchiveRequest.buildBlendedTileSprite(24, (byte) -126, param1, 54, 1);
+            ArchiveRequest.buildBlendedTileSprite(24, (byte) -126, param1, 53, 5);
+            ArchiveRequest.buildBlendedTileSprite(2, (byte) -126, param1, 63, 0);
+            ArchiveRequest.buildBlendedTileSprite(0, (byte) -126, param1, 62, 0);
           } else {
             if (param0 == 4) {
-              qc.a(0, (byte) -126, param1, 79, 3);
-              qc.a(0, (byte) -126, param1, 78, 4);
-              qc.a(0, (byte) -126, param1, 77, 1);
-              qc.a(0, (byte) -126, param1, 76, 2);
-              qc.a(0, (byte) -126, param1, 75, 5);
-              qc.a(0, (byte) -126, param1, 74, 6);
-              qc.a(0, (byte) -126, param1, 73, 7);
-              qc.a(0, (byte) -126, param1, 72, 8);
-              qc.a(0, (byte) -126, param1, 71, 0);
+              ArchiveRequest.buildBlendedTileSprite(0, (byte) -126, param1, 79, 3);
+              ArchiveRequest.buildBlendedTileSprite(0, (byte) -126, param1, 78, 4);
+              ArchiveRequest.buildBlendedTileSprite(0, (byte) -126, param1, 77, 1);
+              ArchiveRequest.buildBlendedTileSprite(0, (byte) -126, param1, 76, 2);
+              ArchiveRequest.buildBlendedTileSprite(0, (byte) -126, param1, 75, 5);
+              ArchiveRequest.buildBlendedTileSprite(0, (byte) -126, param1, 74, 6);
+              ArchiveRequest.buildBlendedTileSprite(0, (byte) -126, param1, 73, 7);
+              ArchiveRequest.buildBlendedTileSprite(0, (byte) -126, param1, 72, 8);
+              ArchiveRequest.buildBlendedTileSprite(0, (byte) -126, param1, 71, 0);
             } else {
               if (1 == param0) {
-                qc.a(2, (byte) -126, param1, 63, 2);
-                qc.a(2, (byte) -126, param1, 62, 1);
-                qc.a(2, (byte) -126, param1, 61, 5);
-                qc.a(2, (byte) -126, param1, 60, 6);
-                qc.a(2, (byte) -126, param1, 59, 8);
-                qc.a(2, (byte) -126, param1, 58, 7);
-                qc.a(2, (byte) -126, param1, 57, 4);
-                qc.a(3, (byte) -126, param1, 56, 2);
-                qc.a(3, (byte) -126, param1, 55, 1);
-                qc.a(3, (byte) -126, param1, 54, 5);
-                qc.a(3, (byte) -126, param1, 53, 6);
-                qc.a(3, (byte) -126, param1, 52, 8);
-                qc.a(3, (byte) -126, param1, 51, 7);
-                qc.a(3, (byte) -126, param1, 50, 0);
-                qc.a(2, (byte) -126, param1, 49, 3);
-                qc.a(0, (byte) -126, param1, 48, 1);
-                qc.a(0, (byte) -126, param1, 47, 2);
-                qc.a(9, (byte) -126, param1, 46, 3);
+                ArchiveRequest.buildBlendedTileSprite(2, (byte) -126, param1, 63, 2);
+                ArchiveRequest.buildBlendedTileSprite(2, (byte) -126, param1, 62, 1);
+                ArchiveRequest.buildBlendedTileSprite(2, (byte) -126, param1, 61, 5);
+                ArchiveRequest.buildBlendedTileSprite(2, (byte) -126, param1, 60, 6);
+                ArchiveRequest.buildBlendedTileSprite(2, (byte) -126, param1, 59, 8);
+                ArchiveRequest.buildBlendedTileSprite(2, (byte) -126, param1, 58, 7);
+                ArchiveRequest.buildBlendedTileSprite(2, (byte) -126, param1, 57, 4);
+                ArchiveRequest.buildBlendedTileSprite(3, (byte) -126, param1, 56, 2);
+                ArchiveRequest.buildBlendedTileSprite(3, (byte) -126, param1, 55, 1);
+                ArchiveRequest.buildBlendedTileSprite(3, (byte) -126, param1, 54, 5);
+                ArchiveRequest.buildBlendedTileSprite(3, (byte) -126, param1, 53, 6);
+                ArchiveRequest.buildBlendedTileSprite(3, (byte) -126, param1, 52, 8);
+                ArchiveRequest.buildBlendedTileSprite(3, (byte) -126, param1, 51, 7);
+                ArchiveRequest.buildBlendedTileSprite(3, (byte) -126, param1, 50, 0);
+                ArchiveRequest.buildBlendedTileSprite(2, (byte) -126, param1, 49, 3);
+                ArchiveRequest.buildBlendedTileSprite(0, (byte) -126, param1, 48, 1);
+                ArchiveRequest.buildBlendedTileSprite(0, (byte) -126, param1, 47, 2);
+                ArchiveRequest.buildBlendedTileSprite(9, (byte) -126, param1, 46, 3);
               } else {
                 if (param0 != 2) {
                   if (param0 == 3) {
-                    qc.a(4, (byte) -126, param1, 63, 3);
-                    qc.a(4, (byte) -126, param1, 62, 4);
-                    qc.a(4, (byte) -126, param1, 61, 1);
-                    qc.a(4, (byte) -126, param1, 60, 2);
-                    qc.a(4, (byte) -126, param1, 59, 5);
-                    qc.a(4, (byte) -126, param1, 58, 6);
-                    qc.a(4, (byte) -126, param1, 57, 7);
-                    qc.a(4, (byte) -126, param1, 56, 8);
-                    qc.a(4, (byte) -126, param1, 55, 0);
-                    qc.a(5, (byte) -126, param1, 52, 0);
-                    qc.a(12, (byte) -126, param1, 51, 2);
-                    qc.a(12, (byte) -126, param1, 50, 1);
-                    qc.a(26, (byte) -126, param1, 49, 2);
-                    qc.a(26, (byte) -126, param1, 48, 1);
-                    qc.a(26, (byte) -126, param1, 47, 8);
-                    qc.a(26, (byte) -126, param1, 46, 5);
-                    qc.a(26, (byte) -126, param1, 45, 6);
-                    qc.a(26, (byte) -126, param1, 44, 7);
-                    qc.a(6, (byte) -126, param1, 43, 2);
-                    qc.a(6, (byte) -126, param1, 42, 1);
-                    qc.a(12, (byte) -126, param1, 41, 5);
-                    qc.a(12, (byte) -126, param1, 40, 8);
-                    qc.a(12, (byte) -126, param1, 39, 4);
-                    qc.a(12, (byte) -126, param1, 38, 3);
-                    qc.a(29, (byte) -126, param1, 37, 2);
-                    qc.a(29, (byte) -126, param1, 36, 0);
-                    qc.a(26, (byte) -126, param1, 23, 4);
-                    qc.a(12, (byte) -126, param1, 22, 6);
-                    qc.a(12, (byte) -126, param1, 21, 7);
+                    ArchiveRequest.buildBlendedTileSprite(4, (byte) -126, param1, 63, 3);
+                    ArchiveRequest.buildBlendedTileSprite(4, (byte) -126, param1, 62, 4);
+                    ArchiveRequest.buildBlendedTileSprite(4, (byte) -126, param1, 61, 1);
+                    ArchiveRequest.buildBlendedTileSprite(4, (byte) -126, param1, 60, 2);
+                    ArchiveRequest.buildBlendedTileSprite(4, (byte) -126, param1, 59, 5);
+                    ArchiveRequest.buildBlendedTileSprite(4, (byte) -126, param1, 58, 6);
+                    ArchiveRequest.buildBlendedTileSprite(4, (byte) -126, param1, 57, 7);
+                    ArchiveRequest.buildBlendedTileSprite(4, (byte) -126, param1, 56, 8);
+                    ArchiveRequest.buildBlendedTileSprite(4, (byte) -126, param1, 55, 0);
+                    ArchiveRequest.buildBlendedTileSprite(5, (byte) -126, param1, 52, 0);
+                    ArchiveRequest.buildBlendedTileSprite(12, (byte) -126, param1, 51, 2);
+                    ArchiveRequest.buildBlendedTileSprite(12, (byte) -126, param1, 50, 1);
+                    ArchiveRequest.buildBlendedTileSprite(26, (byte) -126, param1, 49, 2);
+                    ArchiveRequest.buildBlendedTileSprite(26, (byte) -126, param1, 48, 1);
+                    ArchiveRequest.buildBlendedTileSprite(26, (byte) -126, param1, 47, 8);
+                    ArchiveRequest.buildBlendedTileSprite(26, (byte) -126, param1, 46, 5);
+                    ArchiveRequest.buildBlendedTileSprite(26, (byte) -126, param1, 45, 6);
+                    ArchiveRequest.buildBlendedTileSprite(26, (byte) -126, param1, 44, 7);
+                    ArchiveRequest.buildBlendedTileSprite(6, (byte) -126, param1, 43, 2);
+                    ArchiveRequest.buildBlendedTileSprite(6, (byte) -126, param1, 42, 1);
+                    ArchiveRequest.buildBlendedTileSprite(12, (byte) -126, param1, 41, 5);
+                    ArchiveRequest.buildBlendedTileSprite(12, (byte) -126, param1, 40, 8);
+                    ArchiveRequest.buildBlendedTileSprite(12, (byte) -126, param1, 39, 4);
+                    ArchiveRequest.buildBlendedTileSprite(12, (byte) -126, param1, 38, 3);
+                    ArchiveRequest.buildBlendedTileSprite(29, (byte) -126, param1, 37, 2);
+                    ArchiveRequest.buildBlendedTileSprite(29, (byte) -126, param1, 36, 0);
+                    ArchiveRequest.buildBlendedTileSprite(26, (byte) -126, param1, 23, 4);
+                    ArchiveRequest.buildBlendedTileSprite(12, (byte) -126, param1, 22, 6);
+                    ArchiveRequest.buildBlendedTileSprite(12, (byte) -126, param1, 21, 7);
                   }
                 } else {
-                  qc.a(0, (byte) -126, param1, 63, 3);
-                  qc.a(0, (byte) -126, param1, 62, 4);
-                  qc.a(0, (byte) -126, param1, 61, 1);
-                  qc.a(0, (byte) -126, param1, 60, 2);
-                  qc.a(0, (byte) -126, param1, 59, 5);
-                  qc.a(0, (byte) -126, param1, 58, 6);
-                  qc.a(0, (byte) -126, param1, 57, 7);
-                  qc.a(0, (byte) -126, param1, 56, 8);
-                  qc.a(3, (byte) -126, param1, 55, 3);
-                  qc.a(3, (byte) -126, param1, 54, 4);
-                  qc.a(3, (byte) -126, param1, 53, 1);
-                  qc.a(3, (byte) -126, param1, 52, 2);
-                  qc.a(3, (byte) -126, param1, 51, 5);
-                  qc.a(3, (byte) -126, param1, 50, 6);
-                  qc.a(3, (byte) -126, param1, 49, 7);
-                  qc.a(3, (byte) -126, param1, 48, 8);
-                  qc.a(0, (byte) -126, param1, 47, 0);
-                  qc.a(3, (byte) -126, param1, 46, 0);
-                  qc.a(15, (byte) -126, param1, 45, 2);
-                  qc.a(15, (byte) -126, param1, 44, 1);
+                  ArchiveRequest.buildBlendedTileSprite(0, (byte) -126, param1, 63, 3);
+                  ArchiveRequest.buildBlendedTileSprite(0, (byte) -126, param1, 62, 4);
+                  ArchiveRequest.buildBlendedTileSprite(0, (byte) -126, param1, 61, 1);
+                  ArchiveRequest.buildBlendedTileSprite(0, (byte) -126, param1, 60, 2);
+                  ArchiveRequest.buildBlendedTileSprite(0, (byte) -126, param1, 59, 5);
+                  ArchiveRequest.buildBlendedTileSprite(0, (byte) -126, param1, 58, 6);
+                  ArchiveRequest.buildBlendedTileSprite(0, (byte) -126, param1, 57, 7);
+                  ArchiveRequest.buildBlendedTileSprite(0, (byte) -126, param1, 56, 8);
+                  ArchiveRequest.buildBlendedTileSprite(3, (byte) -126, param1, 55, 3);
+                  ArchiveRequest.buildBlendedTileSprite(3, (byte) -126, param1, 54, 4);
+                  ArchiveRequest.buildBlendedTileSprite(3, (byte) -126, param1, 53, 1);
+                  ArchiveRequest.buildBlendedTileSprite(3, (byte) -126, param1, 52, 2);
+                  ArchiveRequest.buildBlendedTileSprite(3, (byte) -126, param1, 51, 5);
+                  ArchiveRequest.buildBlendedTileSprite(3, (byte) -126, param1, 50, 6);
+                  ArchiveRequest.buildBlendedTileSprite(3, (byte) -126, param1, 49, 7);
+                  ArchiveRequest.buildBlendedTileSprite(3, (byte) -126, param1, 48, 8);
+                  ArchiveRequest.buildBlendedTileSprite(0, (byte) -126, param1, 47, 0);
+                  ArchiveRequest.buildBlendedTileSprite(3, (byte) -126, param1, 46, 0);
+                  ArchiveRequest.buildBlendedTileSprite(15, (byte) -126, param1, 45, 2);
+                  ArchiveRequest.buildBlendedTileSprite(15, (byte) -126, param1, 44, 1);
                 }
               }
             }

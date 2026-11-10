@@ -4,7 +4,7 @@
 final class AlignedIconLabel extends UiComponent {
     static long field_Gb;
     private UiComponent field_Pb;
-    static ao field_Lb;
+    static QuickChatCommandType field_Lb;
     UiComponent field_Mb;
     static IntrusiveDeque field_Fb;
     static UiComponent field_Hb;
@@ -12,7 +12,7 @@ final class AlignedIconLabel extends UiComponent {
     static int field_Kb;
     static String field_Nb;
     static int field_Ib;
-    static hh field_Jb;
+    static MenuInputState field_Jb;
 
     final void setIconLabelBounds(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         this.setBounds(param2, param5, param3, param4, -3344);
@@ -38,7 +38,7 @@ final class AlignedIconLabel extends UiComponent {
         field_Fb = null;
     }
 
-    final int a(int param0, boolean param1, int param2) {
+    final int measureLabelWidth(int param0, boolean param1, int param2) {
         int var4 = 0;
         int var5 = 0;
         int var4Lifetime1;
@@ -46,27 +46,27 @@ final class AlignedIconLabel extends UiComponent {
         if (!param1) {
           var4 = -param2;
           if (this.field_Pb != null) {
-            var4 = this.field_Pb.e(0);
+            var4 = this.field_Pb.getPreferredWidth(0);
           }
           var5 = -param2;
           if (null != this.field_Mb) {
-            var5 = this.field_Mb.e(0);
+            var5 = this.field_Mb.getPreferredWidth(0);
           }
           return param0 + param2 + param0 - (-var4 - var5);
         }
         field_Ob = (IndexedSprite[]) null;
         var4Lifetime1 = -param2;
         if (this.field_Pb != null) {
-          var4Lifetime1 = this.field_Pb.e(0);
+          var4Lifetime1 = this.field_Pb.getPreferredWidth(0);
         }
         var5Lifetime1 = -param2;
         if (null != this.field_Mb) {
-          var5Lifetime1 = this.field_Mb.e(0);
+          var5Lifetime1 = this.field_Mb.getPreferredWidth(0);
         }
         return param0 + param2 + param0 - (-var4Lifetime1 - var5Lifetime1);
     }
 
-    final static String a(String param0, int param1, int param2, String param3, ResourceArchive param4) {
+    final static String formatArchiveProgress(String param0, int param1, int param2, String param3, ResourceArchive param4) {
         RuntimeException var5 = null;
         String stackIn_3_0 = null;
         String stackIn_7_0 = null;
@@ -79,14 +79,14 @@ final class AlignedIconLabel extends UiComponent {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param4.a((byte) -119)) {
+          if (!param4.ensureIndex((byte) -119)) {
             stackIn_3_0 = (String) (param3);
             return stackIn_3_0;
           }
           if (param2 != -3) {
             field_Kb = -26;
           }
-          stackIn_7_0 = param0 + " - " + param4.a(param1, (byte) 121) + "%";
+          stackIn_7_0 = param0 + " - " + param4.getGroupProgress(param1, (byte) 121) + "%";
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -114,7 +114,7 @@ final class AlignedIconLabel extends UiComponent {
         }
     }
 
-    final static void a(int param0, PacketBuffer param1, int param2, int param3, byte param4) {
+    final static void writeHandshakeHeader(int param0, PacketBuffer param1, int param2, int param3, byte param4) {
         try {
           param1.writeByte(-120, 12);
           param1.writeShort(17, (byte) -56);
@@ -129,10 +129,10 @@ final class AlignedIconLabel extends UiComponent {
         }
     }
 
-    final static void i(int param0) {
-        jg.field_a = false;
+    final static void closeMenuMessageBox(int param0) {
+        LevelUpgradeHelpers.field_a = false;
         if (param0 > -2) {
-          AlignedIconLabel.i(-59);
+          AlignedIconLabel.closeMenuMessageBox(-59);
         }
     }
 
@@ -144,7 +144,7 @@ final class AlignedIconLabel extends UiComponent {
         var4 = -param0;
         var5 = -param0;
         if (null != this.field_Pb) {
-          var4 = this.field_Pb.e(param1 + 17369);
+          var4 = this.field_Pb.getPreferredWidth(param1 + 17369);
         }
         if (param1 == -17369) {
           if (null != this.field_Mb) {
@@ -208,34 +208,34 @@ final class AlignedIconLabel extends UiComponent {
         this.field_Mb.field_lb = this.field_lb;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, byte param7) {
+    final static void drawSortedTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, byte param7) {
         int var9;
         var9 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param4 <= param2) {
           if (param2 < param6) {
-            QuickChatMenu.a(-12628, param6, param2, param5, param3, param4, param0, SoftwareRasterizer.pixels, param1);
+            QuickChatMenu.drawFlatTriangle(-12628, param6, param2, param5, param3, param4, param0, SoftwareRasterizer.pixels, param1);
           } else {
             if (param4 < param6) {
-              QuickChatMenu.a(-12628, param2, param6, param0, param3, param4, param5, SoftwareRasterizer.pixels, param1);
+              QuickChatMenu.drawFlatTriangle(-12628, param2, param6, param0, param3, param4, param5, SoftwareRasterizer.pixels, param1);
             } else {
-              QuickChatMenu.a(-12628, param2, param4, param0, param5, param6, param3, SoftwareRasterizer.pixels, param1);
+              QuickChatMenu.drawFlatTriangle(-12628, param2, param4, param0, param5, param6, param3, SoftwareRasterizer.pixels, param1);
             }
           }
         } else {
           if (param4 < param6) {
-            QuickChatMenu.a(-12628, param6, param4, param5, param0, param2, param3, SoftwareRasterizer.pixels, param1);
+            QuickChatMenu.drawFlatTriangle(-12628, param6, param4, param5, param0, param2, param3, SoftwareRasterizer.pixels, param1);
           } else {
             if (param6 > param2) {
-              QuickChatMenu.a(-12628, param4, param6, param3, param0, param2, param5, SoftwareRasterizer.pixels, param1);
+              QuickChatMenu.drawFlatTriangle(-12628, param4, param6, param3, param0, param2, param5, SoftwareRasterizer.pixels, param1);
             } else {
-              QuickChatMenu.a(-12628, param4, param2, param3, param5, param6, param0, SoftwareRasterizer.pixels, param1);
+              QuickChatMenu.drawFlatTriangle(-12628, param4, param2, param3, param5, param6, param0, SoftwareRasterizer.pixels, param1);
             }
           }
         }
         if (param7 > 30) {
           return;
         }
-        AlignedIconLabel.a(-113, 39, -55, 5, -113, 4, -124, (byte) 78);
+        AlignedIconLabel.drawSortedTriangle(-113, 39, -55, 5, -113, 4, -124, (byte) 78);
     }
 
     AlignedIconLabel(long param0, UiComponent param1, UiComponent param2, UiComponent param3, Sprite param4, String param5) {
@@ -257,11 +257,11 @@ final class AlignedIconLabel extends UiComponent {
           if (param4 != null) {
             this.field_Pb = new UiComponent(0L, param2);
             this.field_Pb.field_rb = param4;
-            this.a((byte) 50, this.field_Pb);
+            this.addChild((byte) 50, this.field_Pb);
           }
           if (param5 != null) {
             this.field_Mb = new UiComponent(0L, param3, param5);
-            this.a((byte) 50, this.field_Mb);
+            this.addChild((byte) 50, this.field_Mb);
             this.markDescendantsToInheritVisualState(-128);
           } else {
             this.markDescendantsToInheritVisualState(-128);
@@ -306,10 +306,10 @@ final class AlignedIconLabel extends UiComponent {
     }
 
     static {
-        field_Lb = new ao(10, 2, 2, 0);
+        field_Lb = new QuickChatCommandType(10, 2, 2, 0);
         field_Kb = 22;
         field_Nb = "Your email address is used to identify this account";
         field_Fb = new IntrusiveDeque();
-        field_Jb = new hh(1);
+        field_Jb = new MenuInputState(1);
     }
 }

@@ -1,0 +1,200 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class LevelUpgradeHelpers {
+    static String field_b;
+    static boolean field_a;
+
+    final static String readCompressedChatText(PacketBuffer param0, int param1, int param2) {
+        int var3_int = 0;
+        Exception var3 = null;
+        RuntimeException var3_ref = null;
+        byte[] var4 = null;
+        String var5 = null;
+        String stackIn_6_0 = null;
+        String stackIn_8_0 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_12_2 = null;
+        Throwable decompiledCaughtException = null;
+        try {
+          try {
+            var3_int = param0.readUnsignedSmart((byte) -109);
+            if (var3_int > param1) {
+              var3_int = param1;
+            }
+            var4 = new byte[var3_int];
+            param0.position = param0.position + MusicPatchLoadHelpers.field_a.decompress(var3_int, param2 - 3574, 0, param0.payload, var4, param0.position);
+            if (param2 != 3460) {
+              LevelUpgradeHelpers.releaseStatics(43);
+            }
+            var5 = TextDecodeHelpers.decodeSingleByteText(var3_int, var4, false, 0);
+            stackIn_6_0 = var5;
+            return stackIn_6_0;
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var3 = (Exception) (Object) decompiledCaughtException;
+            stackIn_8_0 = "Cabbage";
+            return stackIn_8_0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+          decompiledCaughtException = decompiledCaughtParameter1;
+          var3_ref = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_11_0 = var3_ref;
+          stackIn_11_1 = new StringBuilder().append("jg.D(");
+          if (param0 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+        }
+    }
+
+    final static LevelData upgradeLevelDataV5(int param0, byte[] param1) {
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        LevelData stackIn_9_0 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        byte[] var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        byte[] var7 = null;
+        byte[] var8 = null;
+        int var2_intLifetime1;
+        int var2_intLifetime2;
+        var6 = ZombieDawnMulti.field_E ? 1 : 0;
+        try {
+          var2_int = 0;
+          var8 = new byte[24 + param1.length];
+          var7 = var8;
+          var3 = var7;
+          for (var2_intLifetime1 = 0; var2_intLifetime1 < 4; var2_intLifetime1++) {
+            LevelEncodingHelpers.putInt(-128, var2_intLifetime1, var3, RasterStackHelpers.readIntAt(true, var2_intLifetime1, param1));
+          }
+          incrementValue$0 = var2_intLifetime1;
+          var2_intLifetime1++;
+          var4 = RasterStackHelpers.readIntAt(true, incrementValue$0, param1);
+          incrementValue$1 = var2_intLifetime1;
+          var2_intLifetime1++;
+          var5 = RasterStackHelpers.readIntAt(true, incrementValue$1, param1);
+          LevelEncodingHelpers.putInt(-114, 4, var8, var4);
+          LevelEncodingHelpers.putInt(-128, 5, var8, var5);
+          LevelEncodingHelpers.putInt(-111, 6, var8, var4);
+          LevelEncodingHelpers.putInt(-118, 7, var8, var5);
+          LevelEncodingHelpers.putInt(-113, 8, var8, var4);
+          LevelEncodingHelpers.putInt(-106, 9, var8, var5);
+          LevelEncodingHelpers.putInt(-123, 10, var8, var4);
+          LevelEncodingHelpers.putInt(-127, 11, var8, var5);
+          var2_intLifetime2 = 6;
+          if (param0 != 30270) {
+            field_b = (String) null;
+          }
+          while (param1.length / 4 > var2_intLifetime2) {
+            LevelEncodingHelpers.putInt(param0 ^ -30281, var2_intLifetime2 + 6, var3, RasterStackHelpers.readIntAt(true, var2_intLifetime2, param1));
+            var2_intLifetime2++;
+          }
+          stackIn_9_0 = LevelFileEntry.parseLevelDataV6(var8, -113);
+          return stackIn_9_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_12_0 = var2;
+          stackIn_12_1 = new StringBuilder().append("jg.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+        }
+    }
+
+    final static DisplayMode[] getFullscreenDisplayModes(int param0, PlatformTaskDispatcher param1) {
+        int var6 = 0;
+        DisplayMode[] stackIn_3_0 = null;
+        DisplayMode[] stackIn_9_0 = null;
+        DisplayMode[] stackIn_14_0 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
+        int[] var3 = null;
+        DisplayMode[] var4 = null;
+        int var5 = 0;
+        DisplayMode var7 = null;
+        int var8 = 0;
+        PlatformTask var9 = null;
+        int[] var10 = null;
+        int[] var11 = null;
+        var8 = ZombieDawnMulti.field_E ? 1 : 0;
+        try {
+          if (!param1.supportsFullscreen(-36)) {
+            stackIn_3_0 = new DisplayMode[]{};
+            return stackIn_3_0;
+          }
+          var9 = param1.requestDisplayModes(0);
+          while (0 == var9.field_f) {
+            SleepAndNameHelpers.sleepMillis(false, 10L);
+          }
+          if (2 == var9.field_f) {
+            stackIn_9_0 = new DisplayMode[]{};
+            return stackIn_9_0;
+          }
+          var11 = (int[]) (var9.field_d);
+          var10 = var11;
+          var3 = var10;
+          var5 = 88 % ((27 - param0) / 55);
+          var4 = new DisplayMode[var11.length >> 2];
+          for (var6 = 0; var4.length > var6; var6++) {
+            var7 = new DisplayMode();
+            var4[var6] = var7;
+            var7.field_e = var3[var6 << 2];
+            var7.field_a = var3[(var6 << 2) + 1];
+            var7.field_c = var3[(var6 << 2) + 2];
+            var7.field_d = var3[(var6 << 2) + 3];
+          }
+          stackIn_14_0 = var4;
+          return stackIn_14_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_17_0 = var2;
+          stackIn_17_1 = new StringBuilder().append("jg.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+        }
+    }
+
+    final static void openLoginPanelAtStage(int param0) {
+        if (!ZombieDrop.field_N) {
+          throw new IllegalStateException();
+        }
+        MenuInputState.field_m = true;
+        DualLinkNodeHashTable.showLoginDialog(param0 ^ -75, true);
+        LoginSuccessHelpers.field_b = param0;
+    }
+
+    public static void releaseStatics(int param0) {
+        if (param0 != 7) {
+          return;
+        }
+        field_b = null;
+    }
+
+    static {
+        field_b = "This private message is prefixed with \"<col=9090FF>To <%1>:</col>\" on your screen.<br>On <%1>'s screen, it will be prefixed with \"<col=FF6060>From <%0>:</col>\", which is<br>a different length and may leave less room for the message itself.<br><br>This shading covers the area which is not available on <%1>'s screen.<br>Provided your message fits to the left of the shaded area,<br><%1> should be able to see it in full.<br><br>(Note: this may be inaccurate if <%1> is playing in a different<br>language from you.)";
+        field_a = false;
+    }
+}

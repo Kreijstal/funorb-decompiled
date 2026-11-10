@@ -4,7 +4,7 @@
 final class WidgetStyleLayer {
     private boolean field_i;
     private int field_h;
-    static ao field_g;
+    static QuickChatCommandType field_g;
     private int field_m;
     private int field_f;
     static String[] field_c;
@@ -90,7 +90,7 @@ final class WidgetStyleLayer {
         var9 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           var10 = (CharSequence) ((Object) param2);
-          var3_int = ro.countCharacter(-125, param0, var10);
+          var3_int = LocalGameWorld.countCharacter(-125, param0, var10);
           var4 = new String[var3_int + 1];
           var5 = 0;
           var6 = 0;
@@ -175,7 +175,7 @@ final class WidgetStyleLayer {
         RuntimeException var6_ref = null;
         int var7 = 0;
         try {
-          s.drawNineSliceFrame(param3.field_i + param4, 0, this.field_e, param3.field_y + param0, param3.field_w, param3.field_n);
+          StatusAndMeshHelpers.drawNineSliceFrame(param3.field_i + param4, 0, this.field_e, param3.field_y + param0, param3.field_w, param3.field_n);
           if (param1) {
             this.field_m = -63;
           }
@@ -345,7 +345,7 @@ final class WidgetStyleLayer {
         return this;
     }
 
-    final WidgetStyleLayer setOffsetX(int param0, byte param1) {
+    final WidgetStyleLayer setVerticalOffset(int param0, byte param1) {
         this.field_j = param0;
         if (param1 != 47) {
           return (WidgetStyleLayer) null;
@@ -366,7 +366,7 @@ final class WidgetStyleLayer {
 
     static {
         field_c = new String[]{"Showing by rating", "Showing by win percentage"};
-        field_g = new ao(6, 0, 4, 2);
+        field_g = new QuickChatCommandType(6, 0, 4, 2);
         field_n = "Tips";
         field_d = 64;
         field_l = "Rated game";

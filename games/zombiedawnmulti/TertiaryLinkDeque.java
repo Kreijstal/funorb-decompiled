@@ -26,7 +26,7 @@ final class TertiaryLinkDeque {
         int var5Lifetime3;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         var2 = 0;
-        var3 = f.field_a;
+        var3 = NodeHashTable.field_a;
         if (var3 < 5) {
           var2 = 8192 * var3 * var3 / 1100;
           var4 = 1;
@@ -80,7 +80,7 @@ final class TertiaryLinkDeque {
             var4 = 1;
             var5 = 1;
           }
-          hl.field_c = me.buildRotationTransform(var5 * var2, -2106461552, var2 * var4);
+          LobbyStateHelpers.field_c = SoundCache.buildRotationTransform(var5 * var2, -2106461552, var2 * var4);
           return;
         }
         if (var3 < 105) {
@@ -136,7 +136,7 @@ final class TertiaryLinkDeque {
             var4Lifetime1 = 1;
             var5Lifetime1 = 1;
           }
-          hl.field_c = me.buildRotationTransform(var5Lifetime1 * var2, -2106461552, var2 * var4Lifetime1);
+          LobbyStateHelpers.field_c = SoundCache.buildRotationTransform(var5Lifetime1 * var2, -2106461552, var2 * var4Lifetime1);
           return;
         }
         if (120 <= var3) {
@@ -191,7 +191,7 @@ final class TertiaryLinkDeque {
             var4Lifetime2 = 1;
             var5Lifetime2 = 1;
           }
-          hl.field_c = me.buildRotationTransform(var5Lifetime2 * var2, -2106461552, var2 * var4Lifetime2);
+          LobbyStateHelpers.field_c = SoundCache.buildRotationTransform(var5Lifetime2 * var2, -2106461552, var2 * var4Lifetime2);
           return;
         }
         var3 = 120 - var3;
@@ -247,15 +247,15 @@ final class TertiaryLinkDeque {
           var4Lifetime3 = 1;
           var5Lifetime3 = 1;
         }
-        hl.field_c = me.buildRotationTransform(var5Lifetime3 * var2Lifetime1, -2106461552, var2Lifetime1 * var4Lifetime3);
+        LobbyStateHelpers.field_c = SoundCache.buildRotationTransform(var5Lifetime3 * var2Lifetime1, -2106461552, var2Lifetime1 * var4Lifetime3);
         return;
     }
 
-    final static boolean isMasterIndexReady(byte param0) {
+    final static boolean pollMasterIndex(byte param0) {
         if (param0 != 98) {
           return true;
         }
-        return tj.field_a.c(param0 - 224);
+        return EffectVolumeHelpers.field_a.pollMasterIndex(param0 - 224);
     }
 
     public static void releaseStatics(int param0) {
@@ -324,13 +324,13 @@ final class TertiaryLinkDeque {
     final static void showLoadingProgress(boolean param0, byte param1, float param2, String param3) {
         try {
           if (null == Under13NoticePanel.field_I) {
-            Under13NoticePanel.field_I = new ProgressDialog(nb.field_a, TextInputWidget.field_P);
-            nb.field_a.showDialog(3016, Under13NoticePanel.field_I);
+            Under13NoticePanel.field_I = new ProgressDialog(DialogLayerHolder.field_a, TextInputWidget.field_P);
+            DialogLayerHolder.field_a.showDialog(3016, Under13NoticePanel.field_I);
           }
           Under13NoticePanel.field_I.updateProgress(param3, param2, 66, param0);
           SoftwareRasterizer.clear();
           int var4_int = 30 % ((param1 + 45) / 37);
-          wj.b(true, -114);
+          SoundEffectInstance.drawDialogLayer(true, -114);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "c.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

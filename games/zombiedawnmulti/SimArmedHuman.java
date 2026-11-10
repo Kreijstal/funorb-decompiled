@@ -47,11 +47,11 @@ final class SimArmedHuman extends SimHuman {
             if (this.field_nb.isCharmed(124) &&
               var4 * var4 + var5 * var5 <= 125000) {
               if (this.simulation.navigation.traceLine(this.getY(param0 ^ 1829947583), this.getX((byte) -112), -17201, this.field_nb.getX((byte) -112), this.field_nb.getY(1829947600), false, false) != -1) {
-                this.a(false, this.field_nb);
+                this.moveTowardMidpointWith(false, this.field_nb);
                 return;
               }
               if (this.simulation.navigation.traceLine(this.getY(1829947600) - 48, this.getX((byte) -112), -17201, this.field_nb.getX((byte) -112), this.field_nb.getY(1829947600) - 48, false, false) != -1) {
-                this.a(false, this.field_nb);
+                this.moveTowardMidpointWith(false, this.field_nb);
                 return;
               }
             }
@@ -89,7 +89,7 @@ final class SimArmedHuman extends SimHuman {
             this.field_nb = this.findVisibleZombie(this.field_yb, 250, 5690);
             if (this.field_nb != null) {
               this.setState(30, (byte) -89);
-              this.b(this.targetY, (byte) -61, this.targetX);
+              this.claimCell(this.targetY, (byte) -61, this.targetX);
               this.decideAction((byte) 111);
               if (param0 != 111) {
                 field_zb = (String) null;
@@ -115,11 +115,11 @@ final class SimArmedHuman extends SimHuman {
             if (this.field_nb.isCharmed(124) &&
               var4Lifetime1 * var4Lifetime1 + var5Lifetime1 * var5Lifetime1 <= 125000) {
               if (this.simulation.navigation.traceLine(this.getY(param0 ^ 1829947583), this.getX((byte) -112), -17201, this.field_nb.getX((byte) -112), this.field_nb.getY(1829947600), false, false) != -1) {
-                this.a(false, this.field_nb);
+                this.moveTowardMidpointWith(false, this.field_nb);
                 return;
               }
               if (this.simulation.navigation.traceLine(this.getY(1829947600) - 48, this.getX((byte) -112), -17201, this.field_nb.getX((byte) -112), this.field_nb.getY(1829947600) - 48, false, false) != -1) {
-                this.a(false, this.field_nb);
+                this.moveTowardMidpointWith(false, this.field_nb);
                 return;
               }
             }
@@ -135,7 +135,7 @@ final class SimArmedHuman extends SimHuman {
             this.field_nb = this.findVisibleZombie(this.field_yb, 250, 5690);
             if (this.field_nb != null) {
               this.setState(30, (byte) -89);
-              this.b(this.targetY, (byte) -61, this.targetX);
+              this.claimCell(this.targetY, (byte) -61, this.targetX);
               this.decideAction((byte) 111);
             } else {
               if (3 == this.state) {
@@ -188,11 +188,11 @@ final class SimArmedHuman extends SimHuman {
           if (this.field_nb.isCharmed(124) &&
             var4Lifetime2 * var4Lifetime2 + var5Lifetime2 * var5Lifetime2 <= 125000) {
             if (this.simulation.navigation.traceLine(this.getY(param0 ^ 1829947583), this.getX((byte) -112), -17201, this.field_nb.getX((byte) -112), this.field_nb.getY(1829947600), false, false) != -1) {
-              this.a(false, this.field_nb);
+              this.moveTowardMidpointWith(false, this.field_nb);
               return;
             }
             if (this.simulation.navigation.traceLine(this.getY(1829947600) - 48, this.getX((byte) -112), -17201, this.field_nb.getX((byte) -112), this.field_nb.getY(1829947600) - 48, false, false) != -1) {
-              this.a(false, this.field_nb);
+              this.moveTowardMidpointWith(false, this.field_nb);
               return;
             }
           }
@@ -208,7 +208,7 @@ final class SimArmedHuman extends SimHuman {
           this.field_nb = this.findVisibleZombie(this.field_yb, 250, 5690);
           if (this.field_nb != null) {
             this.setState(30, (byte) -89);
-            this.b(this.targetY, (byte) -61, this.targetX);
+            this.claimCell(this.targetY, (byte) -61, this.targetX);
             this.decideAction((byte) 111);
           } else {
             if (3 == this.state) {

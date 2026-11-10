@@ -6,16 +6,16 @@ final class SoundEffect {
     private SynthInstrument[] instruments;
     private int field_b;
 
-    final static SoundEffect a(ResourceArchive param0, String param1, String param2) {
-        byte[] var3 = param0.a(param1, param2, false);
+    final static SoundEffect loadNamed(ResourceArchive param0, String param1, String param2) {
+        byte[] var3 = param0.getNamedFile(param1, param2, false);
         if (var3 == null) {
           return null;
         }
         return new SoundEffect(new PacketBuffer(var3));
     }
 
-    final static SoundEffect a(ResourceArchive param0, int param1, int param2) {
-        byte[] var3 = param0.a(param1, true, param2);
+    final static SoundEffect load(ResourceArchive param0, int param1, int param2) {
+        byte[] var3 = param0.getFile(param1, true, param2);
         if (var3 == null) {
           return null;
         }

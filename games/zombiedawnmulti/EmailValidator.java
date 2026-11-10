@@ -19,12 +19,12 @@ final class EmailValidator extends TextInputValidator {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.validationStateForText(false, param0) == jq.field_b) {
-            stackIn_2_0 = dd.field_a;
+          if (this.validationStateForText(false, param0) == PowerGaugeHelpers.field_b) {
+            stackIn_2_0 = DefaultQuickChatContext.field_a;
             return stackIn_2_0;
           }
           if (param1 == -1276425040) {
-            stackIn_7_0 = gi.field_h;
+            stackIn_7_0 = LevelFileEntry.field_h;
             return stackIn_7_0;
           }
           stackIn_5_0 = (String) null;
@@ -68,13 +68,13 @@ final class EmailValidator extends TextInputValidator {
           if (param0) {
             EmailValidator.releaseStatics(true);
           }
-          stackIn_5_0 = (null != gi.validateEmailAddress(4, param1)) ? 0 : 1;
+          stackIn_5_0 = (null != LevelFileEntry.validateEmailAddress(4, param1)) ? 0 : 1;
           var3_int = stackIn_5_0;
           if (var3_int != 0) {
-            stackIn_9_0 = db.field_b;
+            stackIn_9_0 = AudioStartupHelpers.field_b;
             return stackIn_9_0;
           }
-          stackIn_7_0 = jq.field_b;
+          stackIn_7_0 = PowerGaugeHelpers.field_b;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

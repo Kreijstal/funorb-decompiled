@@ -17,9 +17,9 @@ final class AttackEvent extends GameEvent {
         field_j = null;
     }
 
-    final static void b(boolean param0, int param1) {
+    final static void sendGameOptions(boolean param0, int param1) {
         int var3 = 0;
-        CipherPacketBuffer var2 = ma.field_a;
+        CipherPacketBuffer var2 = TextValidationFailure.field_a;
         int var3Lifetime1;
         var2.writeCipheredOpcode((byte) -35, param1);
         var2.position = var2.position + 1;
@@ -27,32 +27,32 @@ final class AttackEvent extends GameEvent {
           var3 = var2.position;
           var2.writeByte(-116, 2);
           var2.writeBytes(ScoreUpdateEvent.field_k, ScoreUpdateEvent.field_k.length, 0, 123);
-          var2.writeByte(123, pb.field_h);
-          var2.writeByte(125, sc.field_f);
-          var2.writeBytes(tg.field_a, tg.field_a.length, 0, 119);
-          var2.e(113, var2.position - var3);
+          var2.writeByte(123, EffectAudioHelpers.field_h);
+          var2.writeByte(125, DualLinkNodeHashTable.field_f);
+          var2.writeBytes(AudioPumpThread.field_a, AudioPumpThread.field_a.length, 0, 119);
+          var2.backpatchByteLength(113, var2.position - var3);
           return;
         }
-        AttackEvent.b(true, -17);
+        AttackEvent.sendGameOptions(true, -17);
         var3Lifetime1 = var2.position;
         var2.writeByte(-116, 2);
         var2.writeBytes(ScoreUpdateEvent.field_k, ScoreUpdateEvent.field_k.length, 0, 123);
-        var2.writeByte(123, pb.field_h);
-        var2.writeByte(125, sc.field_f);
-        var2.writeBytes(tg.field_a, tg.field_a.length, 0, 119);
-        var2.e(113, var2.position - var3Lifetime1);
+        var2.writeByte(123, EffectAudioHelpers.field_h);
+        var2.writeByte(125, DualLinkNodeHashTable.field_f);
+        var2.writeBytes(AudioPumpThread.field_a, AudioPumpThread.field_a.length, 0, 119);
+        var2.backpatchByteLength(113, var2.position - var3Lifetime1);
     }
 
     final void removeFromQueue(byte param0) {
         if (param0 <= -47) {
           super.removeFromQueue((byte) -82);
-          ic.field_c.addFirst((IntrusiveNode) (this), false);
+          LoginCredentials.field_c.addFirst((IntrusiveNode) (this), false);
           return;
         }
         GameScreen var3 = (GameScreen) null;
         this.apply(70, (GameScreen) null);
         super.removeFromQueue((byte) -82);
-        ic.field_c.addFirst((IntrusiveNode) (this), false);
+        LoginCredentials.field_c.addFirst((IntrusiveNode) (this), false);
     }
 
     final void apply(int param0, GameScreen param1) {
@@ -72,7 +72,7 @@ final class AttackEvent extends GameEvent {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, byte param4, int param5) {
+    final void initialize(int param0, int param1, int param2, int param3, byte param4, int param5) {
         super.setTick(param4 - 14, param0);
         this.field_m = param3;
         if (param4 == 14) {
@@ -87,8 +87,8 @@ final class AttackEvent extends GameEvent {
         this.field_l = param5;
     }
 
-    final static void a(int param0, int param1, int param2) {
-        am.field_c = param1;
+    final static void setMenuCentre(int param0, int param1, int param2) {
+        TeamSpriteHelpers.field_c = param1;
         if (param2 != 1633) {
           field_j = (String) null;
           AgeValidator.field_r = param0;

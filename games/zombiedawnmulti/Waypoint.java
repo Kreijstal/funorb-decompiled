@@ -8,7 +8,7 @@ final class Waypoint extends IntrusiveNode {
     static String field_i;
     int x;
 
-    final static GameEvent a(CipherPacketBuffer param0, byte param1) {
+    final static GameEvent readScoreUpdateEvent(CipherPacketBuffer param0, byte param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -55,7 +55,7 @@ final class Waypoint extends IntrusiveNode {
         field_i = null;
     }
 
-    final static void a(String param0, int param1) {
+    final static void drawTooltip(String param0, int param1) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -65,18 +65,18 @@ final class Waypoint extends IntrusiveNode {
         int var8 = 0;
         try {
           var2_int = MouseInputHandler.field_g;
-          var3 = bo.field_d;
-          var4 = vo.field_m.field_yb.countWrappedLines(param0, 500);
-          var5 = vo.field_m.field_yb.maxLineWidth(param0, 500) + 6;
-          var6 = 2 + var4 * jk.field_f;
-          var7 = MatchingTextValidator.a(var2_int, (byte) 126, var5, 12);
+          var3 = LoginMethod.field_d;
+          var4 = IntroScreen.field_m.field_yb.countWrappedLines(param0, 500);
+          var5 = IntroScreen.field_m.field_yb.maxLineWidth(param0, 500) + 6;
+          var6 = 2 + var4 * UpgradeAccessHelpers.field_f;
+          var7 = MatchingTextValidator.clampPopupX(var2_int, (byte) 126, var5, 12);
           var8 = IntrusiveNode.placePopupVertically(true, var3, 20, var6);
           SoftwareRasterizer.drawRect(var7, var8, var5, var6, 0);
           SoftwareRasterizer.fillRect(var7 + 1, var8 + 1, -2 + var5, var6 - 2, 16777088);
           if (param1 > -109) {
             field_j = 23;
           }
-          vo.field_m.field_yb.drawParagraph(param0, var7 + 3, -vo.field_m.field_yb.maxAscent + 1 + (var8 + jp.field_f), 500, 1000, 0, -1, 0, 0, jk.field_f);
+          IntroScreen.field_m.field_yb.drawParagraph(param0, var7 + 3, -IntroScreen.field_m.field_yb.maxAscent + 1 + (var8 + ChatPromptHelpers.field_f), 500, 1000, 0, -1, 0, 0, UpgradeAccessHelpers.field_f);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -1,0 +1,55 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class PlayingSound extends IntrusiveNode {
+    static IntrusiveDeque field_k;
+    int field_m;
+    static String[] field_n;
+    static String[] field_g;
+    static String field_l;
+    static Sprite[] field_j;
+    static String field_i;
+    IntrusiveNode field_h;
+    PcmSampleStream field_f;
+
+    public static void releaseStatics(byte param0) {
+        field_i = null;
+        if (param0 != 103) {
+          return;
+        }
+        field_g = null;
+        field_l = null;
+        field_k = null;
+        field_n = null;
+        field_j = null;
+    }
+
+    final static String replaceAll(byte param0, String param1, String param2, String param3) {
+        int var6 = ZombieDawnMulti.field_E ? 1 : 0;
+        int var4 = param2.indexOf(param1);
+        while (-1 != var4) {
+          param2 = param2.substring(0, var4) + param3 + param2.substring(param1.length() + var4);
+          var4 = param2.indexOf(param1, param3.length() + var4);
+        }
+        int var5 = -18 / ((-2 - param0) / 54);
+        return param2;
+    }
+
+    PlayingSound(PcmSampleStream param0, IntrusiveNode param1) {
+        try {
+          this.field_f = param0;
+          this.field_m = param0.getVolume();
+          this.field_h = param1;
+          this.field_f.setInternalVolume(this.field_m * AudioStartupHelpers.field_c + 128 >> 8);
+        } catch (RuntimeException runtimeException) {
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "we.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        field_k = new IntrusiveDeque();
+        field_n = new String[]{null, "Or click", "Or click", "Or click", "Or click", "Or click", "Or click", "Or click"};
+        field_i = "Resilient";
+        field_l = "Remove <%0> from ignore list";
+    }
+}

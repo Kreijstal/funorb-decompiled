@@ -8,7 +8,7 @@ class PcmPlayerService {
     private int field_e;
     private PcmStream field_s;
     static int sampleRate;
-    private static tg field_q;
+    private static AudioPumpThread field_q;
     private long field_i;
     int[] field_l;
     private int field_a;
@@ -43,7 +43,7 @@ class PcmPlayerService {
             this.flushDevice();
           } catch (Exception exception) {
             this.closeDevice();
-            this.field_o = bl.monotonicMillis((byte) 103) + 2000L;
+            this.field_o = ClockAndScreenHelpers.monotonicMillis((byte) 103) + 2000L;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -105,7 +105,7 @@ class PcmPlayerService {
               ((PcmPlayerService) ((Object) var4)).openDevice(((PcmPlayerService) ((Object) var4)).field_a);
               if (field_b > 0 &&
                 field_q == null) {
-                field_q = new tg();
+                field_q = new AudioPumpThread();
                 field_q.field_b = param0;
                 param0.startThread(22, (Runnable) ((Object) field_q), field_b);
               }
@@ -155,7 +155,7 @@ class PcmPlayerService {
           if (this.field_r) {
             return;
           }
-          var1 = bl.monotonicMillis((byte) 79);
+          var1 = ClockAndScreenHelpers.monotonicMillis((byte) 79);
           try {
             if (var1 > this.field_i + 6000L) {
               this.field_i = var1 - 6000L;
@@ -163,7 +163,7 @@ class PcmPlayerService {
             while (var1 > this.field_i + 5000L) {
               this.skip(256);
               this.field_i = this.field_i + (long)(256000 / sampleRate);
-              var1 = bl.monotonicMillis((byte) 66);
+              var1 = ClockAndScreenHelpers.monotonicMillis((byte) 66);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -260,7 +260,7 @@ class PcmPlayerService {
           if (var1 != 0) {
             field_q.field_h = true;
             while (field_q.field_c) {
-              vd.a(false, 50L);
+              SleepAndNameHelpers.sleepMillis(false, 50L);
             }
             field_q = null;
           }
@@ -407,7 +407,7 @@ class PcmPlayerService {
         if (this.field_s != null) {
           this.field_s.mixInto(param0, 0, param1);
         }
-        this.field_i = bl.monotonicMillis((byte) 108);
+        this.field_i = ClockAndScreenHelpers.monotonicMillis((byte) 108);
     }
 
     void writeFrames() throws Exception {
@@ -423,7 +423,7 @@ class PcmPlayerService {
     PcmPlayerService() {
         this.field_r = false;
         this.field_e = 32;
-        this.field_i = bl.monotonicMillis((byte) 98);
+        this.field_i = ClockAndScreenHelpers.monotonicMillis((byte) 98);
         this.field_o = 0L;
         this.field_d = 0L;
         this.field_h = 0;

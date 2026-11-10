@@ -11,11 +11,11 @@ final class BirthDateEntryPanel extends ArrayWidgetGroup implements ButtonActiva
     static String field_O;
 
     public final void onButtonActivated(int param0, int param1, ButtonWidget param2, int param3, int param4) {
-        if (this.field_P.getValidationProvider((byte) 78).getDebouncedValidationState(117) != db.field_b) {
+        if (this.field_P.getValidationProvider((byte) 78).getDebouncedValidationState(117) != AudioStartupHelpers.field_b) {
           return;
         }
         try {
-          mp.sendBirthDateSubmission(0, this.field_P.j(-194), this.field_P.i(1), this.field_P.getMonthIndex((byte) -126));
+          TextLayout.sendBirthDateSubmission(0, this.field_P.getZeroBasedMonth(-194), this.field_P.getDay(1), this.field_P.getYear((byte) -126));
           if (param3 >= -83) {
             BirthDateEntryPanel.clearSharedReferences(103);
           }
@@ -32,25 +32,25 @@ final class BirthDateEntryPanel extends ArrayWidgetGroup implements ButtonActiva
 
     final void renderWidget(int param0, int param1, int param2, int param3) {
         super.renderWidget(param0, param1, param2, param3);
-        DisplayNamePanel.field_H.c(DualLinkNode.field_m, 4 + param3 + this.field_y, 4 + param1 - (-this.field_i - DisplayNamePanel.field_H.maxAscent), 16777215, -1);
+        DisplayNamePanel.field_H.drawLeft(DualLinkNode.field_m, 4 + param3 + this.field_y, 4 + param1 - (-this.field_i - DisplayNamePanel.field_H.maxAscent), 16777215, -1);
     }
 
     BirthDateEntryPanel(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3, (WidgetPainter) null);
-        this.field_P = new BirthDateInputWidget(new GradientOutlineTextPainter(10000536), tm.field_b, 0, 0, 140, 25);
+        this.field_P = new BirthDateInputWidget(new GradientOutlineTextPainter(10000536), LobbyDrawHelpers.field_b, 0, 0, 140, 25);
         this.field_P.setBirthDateValidator(3, new BirthDateValidator());
-        this.field_B = new ButtonWidget(ub.field_xb, (WidgetListener) (this));
+        this.field_B = new ButtonWidget(LoginDialog.field_xb, (WidgetListener) (this));
         this.field_E = new UiWidget[]{(UiWidget) ((Object) this.field_P), (UiWidget) ((Object) this.field_B)};
-        this.field_B.painter = (WidgetPainter) ((Object) new oq());
+        this.field_B.painter = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
         this.refreshLayout(-1);
     }
 
     final static ResourceArchive openArchive(boolean param0, int param1, int param2, int param3, boolean param4) {
         if (param3 == -24285) {
-          return wm.a(param1, param2, param4, false, -127, param0);
+          return MarkerSliderWidget.createResourceArchive(param1, param2, param4, false, -127, param0);
         }
         field_O = (String) null;
-        return wm.a(param1, param2, param4, false, -127, param0);
+        return MarkerSliderWidget.createResourceArchive(param1, param2, param4, false, -127, param0);
     }
 
     public static void clearSharedReferences(int param0) {
@@ -67,7 +67,7 @@ final class BirthDateEntryPanel extends ArrayWidgetGroup implements ButtonActiva
     final void updatePointerState(int param0, UiWidget param1, int param2, int param3) {
         try {
           super.updatePointerState(param0, param1, param2, param3);
-          this.field_B.field_F = this.field_P.getValidationProvider((byte) 126).getDebouncedValidationState(53) == db.field_b ? true : false;
+          this.field_B.field_F = this.field_P.getValidationProvider((byte) 126).getDebouncedValidationState(53) == AudioStartupHelpers.field_b ? true : false;
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "oj.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }

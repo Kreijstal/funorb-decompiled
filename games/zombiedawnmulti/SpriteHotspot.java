@@ -1,0 +1,438 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class SpriteHotspot {
+    int field_q;
+    static Sprite field_k;
+    static LoginCredentials field_a;
+    int field_c;
+    int field_g;
+    Sprite field_b;
+    static String[][] field_o;
+    static String field_n;
+    static ResourceArchive field_m;
+    static String field_f;
+    static String field_p;
+    static String field_i;
+    static BufferedSocket field_h;
+    static String field_j;
+    static int[] field_d;
+    static QuickChatHelpDialog field_e;
+    static String field_l;
+
+    public static void releaseStatics(int param0) {
+        field_h = null;
+        field_e = null;
+        field_a = null;
+        field_l = null;
+        field_k = null;
+        field_i = null;
+        field_j = null;
+        field_o = (String[][]) null;
+        field_d = null;
+        field_p = null;
+        field_n = null;
+        field_f = null;
+        field_m = null;
+        if (param0 != -23636) {
+          field_e = (QuickChatHelpDialog) null;
+        }
+    }
+
+    final static String getLocalPlayerNameOrEmpty(byte param0) {
+        int var1 = -112 / ((-77 - param0) / 37);
+        if (null == ProgressDialog.field_lb) {
+          return "";
+        }
+        return ProgressDialog.field_lb;
+    }
+
+    final boolean isHovered(byte param0) {
+        if (param0 > 3) {
+          return this.field_b.isOpaqueAt(this.field_q, this.field_g, MouseInputHandler.field_g, LoginMethod.field_d);
+        }
+        SpriteHotspot.releaseStatics(-41);
+        return this.field_b.isOpaqueAt(this.field_q, this.field_g, MouseInputHandler.field_g, LoginMethod.field_d);
+    }
+
+    final void draw(boolean param0) {
+        this.field_b.drawOpaque(this.field_q, this.field_g);
+        if (!param0) {
+          SpriteHotspot.slideChatPanelClosed(-85);
+        }
+    }
+
+    final static void slideChatPanelClosed(int param0) {
+        if (ByteStorage.field_e > 0) {
+          ByteStorage.field_e = ByteStorage.field_e - 1;
+        }
+        if (param0 != 26) {
+          field_h = (BufferedSocket) null;
+        }
+        if (ValidationMessageWidget.field_cb != SocketConnector.field_h.field_f) {
+          AppearanceScreen.field_t = AppearanceScreen.field_t + (-ValidationMessageWidget.field_cb + SocketConnector.field_h.field_f);
+          ValidationMessageWidget.field_cb = SocketConnector.field_h.field_f;
+        }
+        if (ByteStorage.field_e > 0) {
+          MiasmaParticle.layoutAnimatedChatPanel((byte) 63);
+        }
+    }
+
+    final static String formatArchiveGroupProgress(String param0, String param1, ResourceArchive param2, byte param3, String param4) {
+        RuntimeException var5 = null;
+        String var6 = null;
+        String stackIn_3_0 = null;
+        String stackIn_7_0 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_14_2 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_17_2 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_20_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (!param2.ensureIndex((byte) -116)) {
+            stackIn_3_0 = (String) (param0);
+            return stackIn_3_0;
+          }
+          if (param3 != 76) {
+            var6 = (String) null;
+            SpriteHotspot.formatArchiveGroupProgress((String) null, (String) null, (ResourceArchive) null, (byte) 113, (String) null);
+          }
+          stackIn_7_0 = param4 + " - " + param2.getGroupProgressByName(0, param1) + "%";
+          return stackIn_7_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_10_0 = var5;
+          stackIn_10_1 = new StringBuilder().append("ki.F(");
+          if (param0 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
+          if (param1 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
+          }
+          stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
+          if (param2 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
+          }
+          stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_20_2 = "null";
+          } else {
+            stackIn_20_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+        }
+    }
+
+    SpriteHotspot(int param0, int param1, int param2) {
+        String var10 = null;
+        int var6 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        String var8 = null;
+        int var9 = 0;
+        String var10Lifetime1;
+        String var10Lifetime2;
+        String var10Lifetime3;
+        String var8Lifetime1;
+        String var8Lifetime2;
+        String var10Lifetime4;
+        String var10Lifetime5;
+        String var10Lifetime6;
+        String var8Lifetime3;
+        String var10Lifetime1Lifetime1;
+        String var10Lifetime1Lifetime2;
+        String var8Lifetime1Lifetime1;
+        int var6Lifetime1;
+        int var6Lifetime2;
+        int var4Lifetime1;
+        int var4Lifetime2;
+        int var5Lifetime1;
+        int var5Lifetime2;
+        int var6Lifetime3;
+        int var4Lifetime3;
+        int var5Lifetime3;
+        int var6Lifetime1Lifetime1;
+        int var4Lifetime1Lifetime1;
+        int var5Lifetime1Lifetime1;
+        this.field_b = new Sprite(137, 49);
+        this.field_c = param0;
+        this.field_g = param2;
+        this.field_q = param1;
+        RasterEffectHelpers.pushSpriteTarget(this.field_b);
+        Object var7 = null;
+        if (0 > param0) {
+          if (32 > param0 ||
+            param0 > 38) {
+            var6 = 1993752;
+            if (FullscreenFocusCanvas.field_k.isResearchable(127, param0)) {
+              var7 = MarkerSliderPainter.field_b[-44 + (param0 + 26)];
+            }
+            var4 = 280577;
+            var5 = 2306851;
+            var8 = NavigationGrid.field_g;
+            var9 = FullscreenFocusCanvas.field_k.field_t[param0];
+            if (FullscreenFocusCanvas.field_k.isUpgradeUnlocked(param0, 53)) {
+              var8 = IntroScreen.field_n;
+              var9 = PendingStatusRequest.getMaxResearchLevel(param0, -117);
+            } else {
+              if (var9 != 0) {
+                var8 = QueuedListRequest.substituteTemplateArguments(NavigationGrid.field_d, new String[]{Integer.toString(var9), Integer.toString(PendingStatusRequest.getMaxResearchLevel(param0, -83))}, 2);
+              }
+            }
+            var9 = var9 * 131 / PendingStatusRequest.getMaxResearchLevel(param0, -110);
+            SoftwareRasterizer.fillRectGradient(1, 1, 135, 47, var4, var5);
+            SoftwareRasterizer.fillRectAlpha(2, 2, 133, 30, 16777215, 32);
+            SoftwareRasterizer.fillRectAlpha(3, 3, 101, 28, 65793, 128);
+            SoftwareRasterizer.fillRectAlpha(106, 3, 28, 28, 65793, 128);
+            SoftwareRasterizer.fillRect(2, 33, 133, 14, 65793);
+            SoftwareRasterizer.fillRect(3, 34, var9, 12, var6);
+            if (var7 != null) {
+              ((Sprite) (var7)).drawTransparent(108, 5);
+            }
+            if (!FullscreenFocusCanvas.field_k.isResearchable(127, param0)) {
+              var10 = LocalGameWorld.field_N;
+            } else {
+              var10 = AccountServerResult.field_f[param0];
+            }
+            MatchingTextValidator.field_w.drawParagraph(var10, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
+            MatchingTextValidator.field_w.drawCentered(var8, 68, 45, 16777215, -1);
+            RasterEffectHelpers.popRaster();
+            return;
+          }
+          if (FullscreenFocusCanvas.field_k.isResearchable(127, param0)) {
+            var7 = MarkerSliderPainter.field_b[-13 + param0];
+          }
+          var6Lifetime3 = 8783880;
+          var5Lifetime3 = 5053184;
+          var4Lifetime3 = 8135424;
+          var8Lifetime3 = NavigationGrid.field_g;
+          var9 = FullscreenFocusCanvas.field_k.field_t[param0];
+          if (FullscreenFocusCanvas.field_k.isUpgradeUnlocked(param0, 53)) {
+            var8Lifetime3 = IntroScreen.field_n;
+            var10Lifetime4 = var8Lifetime3;
+            var8Lifetime3 = var10Lifetime4;
+            var9 = PendingStatusRequest.getMaxResearchLevel(param0, -117);
+            var9 = var9 * 131 / PendingStatusRequest.getMaxResearchLevel(param0, -110);
+            SoftwareRasterizer.fillRectGradient(1, 1, 135, 47, var4Lifetime3, var5Lifetime3);
+            SoftwareRasterizer.fillRectAlpha(2, 2, 133, 30, 16777215, 32);
+            SoftwareRasterizer.fillRectAlpha(3, 3, 101, 28, 65793, 128);
+            SoftwareRasterizer.fillRectAlpha(106, 3, 28, 28, 65793, 128);
+            SoftwareRasterizer.fillRect(2, 33, 133, 14, 65793);
+            SoftwareRasterizer.fillRect(3, 34, var9, 12, var6Lifetime3);
+            if (var7 != null) {
+              ((Sprite) (var7)).drawTransparent(108, 5);
+            }
+            if (!FullscreenFocusCanvas.field_k.isResearchable(127, param0)) {
+              var10Lifetime4 = LocalGameWorld.field_N;
+            } else {
+              var10Lifetime4 = AccountServerResult.field_f[param0];
+              var8Lifetime3 = var10Lifetime4;
+            }
+            MatchingTextValidator.field_w.drawParagraph(var10Lifetime4, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
+            MatchingTextValidator.field_w.drawCentered(var8Lifetime3, 68, 45, 16777215, -1);
+            RasterEffectHelpers.popRaster();
+            return;
+          }
+          if (var9 != 0) {
+            var8Lifetime3 = QueuedListRequest.substituteTemplateArguments(NavigationGrid.field_d, new String[]{Integer.toString(var9), Integer.toString(PendingStatusRequest.getMaxResearchLevel(param0, -83))}, 2);
+            var10Lifetime5 = var8Lifetime3;
+            var8Lifetime3 = var10Lifetime5;
+          }
+          var9 = var9 * 131 / PendingStatusRequest.getMaxResearchLevel(param0, -110);
+          SoftwareRasterizer.fillRectGradient(1, 1, 135, 47, var4Lifetime3, var5Lifetime3);
+          SoftwareRasterizer.fillRectAlpha(2, 2, 133, 30, 16777215, 32);
+          SoftwareRasterizer.fillRectAlpha(3, 3, 101, 28, 65793, 128);
+          SoftwareRasterizer.fillRectAlpha(106, 3, 28, 28, 65793, 128);
+          SoftwareRasterizer.fillRect(2, 33, 133, 14, 65793);
+          SoftwareRasterizer.fillRect(3, 34, var9, 12, var6Lifetime3);
+          if (var7 != null) {
+            ((Sprite) (var7)).drawTransparent(108, 5);
+          }
+          if (!FullscreenFocusCanvas.field_k.isResearchable(127, param0)) {
+            var10Lifetime6 = LocalGameWorld.field_N;
+          } else {
+            var10Lifetime6 = AccountServerResult.field_f[param0];
+            var8Lifetime3 = var10Lifetime6;
+            var8Lifetime3 = var10Lifetime6;
+          }
+          MatchingTextValidator.field_w.drawParagraph(var10Lifetime6, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
+          MatchingTextValidator.field_w.drawCentered(var8Lifetime3, 68, 45, 16777215, -1);
+          RasterEffectHelpers.popRaster();
+          return;
+        }
+        if (param0 >= 19) {
+          if (32 > param0 ||
+            param0 > 38) {
+            var6Lifetime1 = 1993752;
+            if (FullscreenFocusCanvas.field_k.isResearchable(127, param0)) {
+              var7 = MarkerSliderPainter.field_b[-44 + (param0 + 26)];
+            }
+            var4Lifetime1 = 280577;
+            var5Lifetime1 = 2306851;
+            var8Lifetime1 = NavigationGrid.field_g;
+            var9 = FullscreenFocusCanvas.field_k.field_t[param0];
+            if (FullscreenFocusCanvas.field_k.isUpgradeUnlocked(param0, 53)) {
+              var8Lifetime1 = IntroScreen.field_n;
+              var9 = PendingStatusRequest.getMaxResearchLevel(param0, -117);
+            } else {
+              if (var9 != 0) {
+                var8Lifetime1 = QueuedListRequest.substituteTemplateArguments(NavigationGrid.field_d, new String[]{Integer.toString(var9), Integer.toString(PendingStatusRequest.getMaxResearchLevel(param0, -83))}, 2);
+              }
+            }
+            var9 = var9 * 131 / PendingStatusRequest.getMaxResearchLevel(param0, -110);
+            SoftwareRasterizer.fillRectGradient(1, 1, 135, 47, var4Lifetime1, var5Lifetime1);
+            SoftwareRasterizer.fillRectAlpha(2, 2, 133, 30, 16777215, 32);
+            SoftwareRasterizer.fillRectAlpha(3, 3, 101, 28, 65793, 128);
+            SoftwareRasterizer.fillRectAlpha(106, 3, 28, 28, 65793, 128);
+            SoftwareRasterizer.fillRect(2, 33, 133, 14, 65793);
+            SoftwareRasterizer.fillRect(3, 34, var9, 12, var6Lifetime1);
+            if (var7 != null) {
+              ((Sprite) (var7)).drawTransparent(108, 5);
+            }
+            if (!FullscreenFocusCanvas.field_k.isResearchable(127, param0)) {
+              var10Lifetime1 = LocalGameWorld.field_N;
+            } else {
+              var10Lifetime1 = AccountServerResult.field_f[param0];
+            }
+            MatchingTextValidator.field_w.drawParagraph(var10Lifetime1, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
+            MatchingTextValidator.field_w.drawCentered(var8Lifetime1, 68, 45, 16777215, -1);
+            RasterEffectHelpers.popRaster();
+            return;
+          }
+          if (FullscreenFocusCanvas.field_k.isResearchable(127, param0)) {
+            var7 = MarkerSliderPainter.field_b[-13 + param0];
+          }
+          var6Lifetime1Lifetime1 = 8783880;
+          var5Lifetime1Lifetime1 = 5053184;
+          var4Lifetime1Lifetime1 = 8135424;
+          var8Lifetime1Lifetime1 = NavigationGrid.field_g;
+          var9 = FullscreenFocusCanvas.field_k.field_t[param0];
+          if (FullscreenFocusCanvas.field_k.isUpgradeUnlocked(param0, 53)) {
+            var8Lifetime1Lifetime1 = IntroScreen.field_n;
+            var10Lifetime1Lifetime1 = var8Lifetime1Lifetime1;
+            var8Lifetime1Lifetime1 = var10Lifetime1Lifetime1;
+            var9 = PendingStatusRequest.getMaxResearchLevel(param0, -117);
+            var9 = var9 * 131 / PendingStatusRequest.getMaxResearchLevel(param0, -110);
+            SoftwareRasterizer.fillRectGradient(1, 1, 135, 47, var4Lifetime1Lifetime1, var5Lifetime1Lifetime1);
+            SoftwareRasterizer.fillRectAlpha(2, 2, 133, 30, 16777215, 32);
+            SoftwareRasterizer.fillRectAlpha(3, 3, 101, 28, 65793, 128);
+            SoftwareRasterizer.fillRectAlpha(106, 3, 28, 28, 65793, 128);
+            SoftwareRasterizer.fillRect(2, 33, 133, 14, 65793);
+            SoftwareRasterizer.fillRect(3, 34, var9, 12, var6Lifetime1Lifetime1);
+            if (var7 != null) {
+              ((Sprite) (var7)).drawTransparent(108, 5);
+            }
+            if (!FullscreenFocusCanvas.field_k.isResearchable(127, param0)) {
+              var10Lifetime1Lifetime1 = LocalGameWorld.field_N;
+            } else {
+              var10Lifetime1Lifetime1 = AccountServerResult.field_f[param0];
+              var8Lifetime1Lifetime1 = var10Lifetime1Lifetime1;
+              var8Lifetime1Lifetime1 = var10Lifetime1Lifetime1;
+            }
+            MatchingTextValidator.field_w.drawParagraph(var10Lifetime1Lifetime1, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
+            MatchingTextValidator.field_w.drawCentered(var8Lifetime1Lifetime1, 68, 45, 16777215, -1);
+            RasterEffectHelpers.popRaster();
+            return;
+          }
+          if (var9 != 0) {
+            var8Lifetime1Lifetime1 = QueuedListRequest.substituteTemplateArguments(NavigationGrid.field_d, new String[]{Integer.toString(var9), Integer.toString(PendingStatusRequest.getMaxResearchLevel(param0, -83))}, 2);
+          }
+          var9 = var9 * 131 / PendingStatusRequest.getMaxResearchLevel(param0, -110);
+          SoftwareRasterizer.fillRectGradient(1, 1, 135, 47, var4Lifetime1Lifetime1, var5Lifetime1Lifetime1);
+          SoftwareRasterizer.fillRectAlpha(2, 2, 133, 30, 16777215, 32);
+          SoftwareRasterizer.fillRectAlpha(3, 3, 101, 28, 65793, 128);
+          SoftwareRasterizer.fillRectAlpha(106, 3, 28, 28, 65793, 128);
+          SoftwareRasterizer.fillRect(2, 33, 133, 14, 65793);
+          SoftwareRasterizer.fillRect(3, 34, var9, 12, var6Lifetime1Lifetime1);
+          if (var7 != null) {
+            ((Sprite) (var7)).drawTransparent(108, 5);
+          }
+          if (!FullscreenFocusCanvas.field_k.isResearchable(127, param0)) {
+            var10Lifetime1Lifetime2 = LocalGameWorld.field_N;
+          } else {
+            var10Lifetime1Lifetime2 = AccountServerResult.field_f[param0];
+          }
+          MatchingTextValidator.field_w.drawParagraph(var10Lifetime1Lifetime2, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
+          MatchingTextValidator.field_w.drawCentered(var8Lifetime1Lifetime1, 68, 45, 16777215, -1);
+          RasterEffectHelpers.popRaster();
+          return;
+        }
+        if (FullscreenFocusCanvas.field_k.isResearchable(127, param0)) {
+          var7 = MarkerSliderPainter.field_b[param0];
+        }
+        var4Lifetime2 = 6575425;
+        var5Lifetime2 = 3420451;
+        var6Lifetime2 = 5524287;
+        var8Lifetime2 = NavigationGrid.field_g;
+        var9 = FullscreenFocusCanvas.field_k.field_t[param0];
+        if (FullscreenFocusCanvas.field_k.isUpgradeUnlocked(param0, 53)) {
+          var8Lifetime2 = IntroScreen.field_n;
+          var9 = PendingStatusRequest.getMaxResearchLevel(param0, -117);
+          var9 = var9 * 131 / PendingStatusRequest.getMaxResearchLevel(param0, -110);
+          SoftwareRasterizer.fillRectGradient(1, 1, 135, 47, var4Lifetime2, var5Lifetime2);
+          SoftwareRasterizer.fillRectAlpha(2, 2, 133, 30, 16777215, 32);
+          SoftwareRasterizer.fillRectAlpha(3, 3, 101, 28, 65793, 128);
+          SoftwareRasterizer.fillRectAlpha(106, 3, 28, 28, 65793, 128);
+          SoftwareRasterizer.fillRect(2, 33, 133, 14, 65793);
+          SoftwareRasterizer.fillRect(3, 34, var9, 12, var6Lifetime2);
+          if (var7 != null) {
+            ((Sprite) (var7)).drawTransparent(108, 5);
+          }
+          if (!FullscreenFocusCanvas.field_k.isResearchable(127, param0)) {
+            var10Lifetime2 = LocalGameWorld.field_N;
+          } else {
+            var10Lifetime2 = AccountServerResult.field_f[param0];
+          }
+          MatchingTextValidator.field_w.drawParagraph(var10Lifetime2, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
+          MatchingTextValidator.field_w.drawCentered(var8Lifetime2, 68, 45, 16777215, -1);
+          RasterEffectHelpers.popRaster();
+          return;
+        }
+        if (var9 != 0) {
+          var8Lifetime2 = QueuedListRequest.substituteTemplateArguments(NavigationGrid.field_d, new String[]{Integer.toString(var9), Integer.toString(PendingStatusRequest.getMaxResearchLevel(param0, -83))}, 2);
+        }
+        var9 = var9 * 131 / PendingStatusRequest.getMaxResearchLevel(param0, -110);
+        SoftwareRasterizer.fillRectGradient(1, 1, 135, 47, var4Lifetime2, var5Lifetime2);
+        SoftwareRasterizer.fillRectAlpha(2, 2, 133, 30, 16777215, 32);
+        SoftwareRasterizer.fillRectAlpha(3, 3, 101, 28, 65793, 128);
+        SoftwareRasterizer.fillRectAlpha(106, 3, 28, 28, 65793, 128);
+        SoftwareRasterizer.fillRect(2, 33, 133, 14, 65793);
+        SoftwareRasterizer.fillRect(3, 34, var9, 12, var6Lifetime2);
+        if (var7 != null) {
+          ((Sprite) (var7)).drawTransparent(108, 5);
+        }
+        if (!FullscreenFocusCanvas.field_k.isResearchable(127, param0)) {
+          var10Lifetime3 = LocalGameWorld.field_N;
+        } else {
+          var10Lifetime3 = AccountServerResult.field_f[param0];
+        }
+        MatchingTextValidator.field_w.drawParagraph(var10Lifetime3, 6, 4, 95, 26, 16777215, -1, 0, 0, 0);
+        MatchingTextValidator.field_w.drawCentered(var8Lifetime2, 68, 45, 16777215, -1);
+        RasterEffectHelpers.popRaster();
+    }
+
+    static {
+        field_a = null;
+        field_k = new Sprite(1280, 960);
+        field_f = "Enter a password for this account. Try to pick a strong password that can't easily be guessed.";
+        field_p = "Security";
+        field_i = "<%0> is not on your friend list.";
+        field_j = "Message lobby";
+        field_n = "Checking";
+        field_d = new int[4];
+        field_l = "<%0> has entered another game.";
+    }
+}

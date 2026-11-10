@@ -10,14 +10,14 @@ final class NameEntryPopup extends UiComponent {
     private UiComponent field_Gb;
     static String field_Kb;
 
-    final static void f(boolean param0, int param1) {
-        ClickMarker.field_v.c(param0, -1);
+    final static void drawChatComposerPopup(boolean param0, int param1) {
+        ClickMarker.field_v.drawRoot(param0, -1);
         if (param1 != 13758) {
-          NameEntryPopup.f(false, 88);
+          NameEntryPopup.drawChatComposerPopup(false, 88);
         }
     }
 
-    final static void e(boolean param0, int param1) {
+    final static void drawLobbyBackgroundPanels(boolean param0, int param1) {
         UiComponent stackIn_6_0 = null;
         boolean stackIn_7_1 = false;
         UiComponent stackIn_10_0 = null;
@@ -62,123 +62,123 @@ final class NameEntryPopup extends UiComponent {
         if (param1 != -7579) {
           NameEntryPopup.releaseStatics((byte) -88);
           if (0 < JaggrabDownloader.field_h) {
-            if (null == vm.field_lb) {
-              stackIn_6_0 = qe.field_k;
-              stackIn_7_1 = (param0) && (!ee.field_a);
-              ((UiComponent) (Object) stackIn_6_0).c(stackIn_7_1, param1 ^ 7578);
-              stackIn_10_0 = cm.field_a;
-              stackIn_11_1 = (param0) && (!ee.field_a);
-              ((UiComponent) (Object) stackIn_10_0).c(stackIn_11_1, -1);
+            if (null == FullscreenErrorDialog.field_lb) {
+              stackIn_6_0 = GameHud.field_k;
+              stackIn_7_1 = (param0) && (!LobbyScreenHelpers.field_a);
+              ((UiComponent) (Object) stackIn_6_0).drawRoot(stackIn_7_1, param1 ^ 7578);
+              stackIn_10_0 = LobbyRequestHelpers.field_a;
+              stackIn_11_1 = (param0) && (!LobbyScreenHelpers.field_a);
+              ((UiComponent) (Object) stackIn_10_0).drawRoot(stackIn_11_1, -1);
               if (!(HotspotTextWidget.field_Q <= 0) ||
                 !(InflaterDecompressor.field_a <= 0)) {
-                if (vm.field_lb != null) {
-                  vm.field_lb.drawOpaque(JaggrabDownloader.field_i.field_x, 0);
+                if (FullscreenErrorDialog.field_lb != null) {
+                  FullscreenErrorDialog.field_lb.drawOpaque(JaggrabDownloader.field_i.field_x, 0);
                 }
                 stackIn_20_0 = JaggrabDownloader.field_i;
-                stackIn_21_1 = (param0) && (!io.field_b);
-                ((UiComponent) (Object) stackIn_20_0).c(stackIn_21_1, -1);
+                stackIn_21_1 = (param0) && (!WeightedLruCache.field_b);
+                ((UiComponent) (Object) stackIn_20_0).drawRoot(stackIn_21_1, -1);
                 stackIn_24_0 = LevelData.field_a;
-                stackIn_25_1 = (param0) && (!io.field_b);
-                ((UiComponent) (Object) stackIn_24_0).c(stackIn_25_1, param1 + 7578);
+                stackIn_25_1 = (param0) && (!WeightedLruCache.field_b);
+                ((UiComponent) (Object) stackIn_24_0).drawRoot(stackIn_25_1, param1 + 7578);
               }
-              ql.a(true);
+              RasterStackHelpers.popRaster(true);
               return;
             }
-            vm.field_lb.drawOpaque(qe.field_k.field_x, 0);
-            stackIn_30_0 = qe.field_k;
-            stackIn_31_1 = (param0) && (!ee.field_a);
-            ((UiComponent) (Object) stackIn_30_0).c(stackIn_31_1, param1 ^ 7578);
-            stackIn_34_0 = cm.field_a;
-            stackIn_35_1 = (param0) && (!ee.field_a);
-            ((UiComponent) (Object) stackIn_34_0).c(stackIn_35_1, -1);
+            FullscreenErrorDialog.field_lb.drawOpaque(GameHud.field_k.field_x, 0);
+            stackIn_30_0 = GameHud.field_k;
+            stackIn_31_1 = (param0) && (!LobbyScreenHelpers.field_a);
+            ((UiComponent) (Object) stackIn_30_0).drawRoot(stackIn_31_1, param1 ^ 7578);
+            stackIn_34_0 = LobbyRequestHelpers.field_a;
+            stackIn_35_1 = (param0) && (!LobbyScreenHelpers.field_a);
+            ((UiComponent) (Object) stackIn_34_0).drawRoot(stackIn_35_1, -1);
           }
           if (HotspotTextWidget.field_Q > 0) {
-            if (vm.field_lb != null) {
-              vm.field_lb.drawOpaque(JaggrabDownloader.field_i.field_x, 0);
+            if (FullscreenErrorDialog.field_lb != null) {
+              FullscreenErrorDialog.field_lb.drawOpaque(JaggrabDownloader.field_i.field_x, 0);
             }
             stackIn_57_0 = JaggrabDownloader.field_i;
-            stackIn_58_1 = (param0) && (!io.field_b);
-            ((UiComponent) (Object) stackIn_57_0).c(stackIn_58_1, -1);
+            stackIn_58_1 = (param0) && (!WeightedLruCache.field_b);
+            ((UiComponent) (Object) stackIn_57_0).drawRoot(stackIn_58_1, -1);
             stackIn_61_0 = LevelData.field_a;
-            stackIn_62_1 = (param0) && (!io.field_b);
-            ((UiComponent) (Object) stackIn_61_0).c(stackIn_62_1, param1 + 7578);
+            stackIn_62_1 = (param0) && (!WeightedLruCache.field_b);
+            ((UiComponent) (Object) stackIn_61_0).drawRoot(stackIn_62_1, param1 + 7578);
           } else {
             if (InflaterDecompressor.field_a > 0) {
-              if (vm.field_lb != null) {
-                vm.field_lb.drawOpaque(JaggrabDownloader.field_i.field_x, 0);
+              if (FullscreenErrorDialog.field_lb != null) {
+                FullscreenErrorDialog.field_lb.drawOpaque(JaggrabDownloader.field_i.field_x, 0);
               }
               stackIn_44_0 = JaggrabDownloader.field_i;
-              stackIn_45_1 = (param0) && (!io.field_b);
-              ((UiComponent) (Object) stackIn_44_0).c(stackIn_45_1, -1);
+              stackIn_45_1 = (param0) && (!WeightedLruCache.field_b);
+              ((UiComponent) (Object) stackIn_44_0).drawRoot(stackIn_45_1, -1);
               stackIn_48_0 = LevelData.field_a;
-              stackIn_49_1 = (param0) && (!io.field_b);
-              ((UiComponent) (Object) stackIn_48_0).c(stackIn_49_1, param1 + 7578);
+              stackIn_49_1 = (param0) && (!WeightedLruCache.field_b);
+              ((UiComponent) (Object) stackIn_48_0).drawRoot(stackIn_49_1, param1 + 7578);
             }
           }
         } else {
           if (0 >= JaggrabDownloader.field_h) {
             if (HotspotTextWidget.field_Q > 0) {
-              if (vm.field_lb != null) {
-                vm.field_lb.drawOpaque(JaggrabDownloader.field_i.field_x, 0);
+              if (FullscreenErrorDialog.field_lb != null) {
+                FullscreenErrorDialog.field_lb.drawOpaque(JaggrabDownloader.field_i.field_x, 0);
               }
               stackIn_110_0 = JaggrabDownloader.field_i;
-              stackIn_111_1 = (param0) && (!io.field_b);
-              ((UiComponent) (Object) stackIn_110_0).c(stackIn_111_1, -1);
+              stackIn_111_1 = (param0) && (!WeightedLruCache.field_b);
+              ((UiComponent) (Object) stackIn_110_0).drawRoot(stackIn_111_1, -1);
               stackIn_114_0 = LevelData.field_a;
-              stackIn_115_1 = (param0) && (!io.field_b);
-              ((UiComponent) (Object) stackIn_114_0).c(stackIn_115_1, param1 + 7578);
+              stackIn_115_1 = (param0) && (!WeightedLruCache.field_b);
+              ((UiComponent) (Object) stackIn_114_0).drawRoot(stackIn_115_1, param1 + 7578);
             } else {
               if (InflaterDecompressor.field_a > 0) {
-                if (vm.field_lb != null) {
-                  vm.field_lb.drawOpaque(JaggrabDownloader.field_i.field_x, 0);
+                if (FullscreenErrorDialog.field_lb != null) {
+                  FullscreenErrorDialog.field_lb.drawOpaque(JaggrabDownloader.field_i.field_x, 0);
                 }
                 stackIn_124_0 = JaggrabDownloader.field_i;
-                stackIn_125_1 = (param0) && (!io.field_b);
-                ((UiComponent) (Object) stackIn_124_0).c(stackIn_125_1, -1);
+                stackIn_125_1 = (param0) && (!WeightedLruCache.field_b);
+                ((UiComponent) (Object) stackIn_124_0).drawRoot(stackIn_125_1, -1);
                 stackIn_128_0 = LevelData.field_a;
-                stackIn_129_1 = (param0) && (!io.field_b);
-                ((UiComponent) (Object) stackIn_128_0).c(stackIn_129_1, param1 + 7578);
+                stackIn_129_1 = (param0) && (!WeightedLruCache.field_b);
+                ((UiComponent) (Object) stackIn_128_0).drawRoot(stackIn_129_1, param1 + 7578);
               }
             }
           } else {
-            if (null != vm.field_lb) {
-              vm.field_lb.drawOpaque(qe.field_k.field_x, 0);
+            if (null != FullscreenErrorDialog.field_lb) {
+              FullscreenErrorDialog.field_lb.drawOpaque(GameHud.field_k.field_x, 0);
             }
-            stackIn_70_0 = qe.field_k;
-            stackIn_71_1 = (param0) && (!ee.field_a);
-            ((UiComponent) (Object) stackIn_70_0).c(stackIn_71_1, param1 ^ 7578);
-            stackIn_74_0 = cm.field_a;
-            stackIn_75_1 = (param0) && (!ee.field_a);
-            ((UiComponent) (Object) stackIn_74_0).c(stackIn_75_1, -1);
+            stackIn_70_0 = GameHud.field_k;
+            stackIn_71_1 = (param0) && (!LobbyScreenHelpers.field_a);
+            ((UiComponent) (Object) stackIn_70_0).drawRoot(stackIn_71_1, param1 ^ 7578);
+            stackIn_74_0 = LobbyRequestHelpers.field_a;
+            stackIn_75_1 = (param0) && (!LobbyScreenHelpers.field_a);
+            ((UiComponent) (Object) stackIn_74_0).drawRoot(stackIn_75_1, -1);
             if (HotspotTextWidget.field_Q > 0) {
-              if (vm.field_lb != null) {
-                vm.field_lb.drawOpaque(JaggrabDownloader.field_i.field_x, 0);
+              if (FullscreenErrorDialog.field_lb != null) {
+                FullscreenErrorDialog.field_lb.drawOpaque(JaggrabDownloader.field_i.field_x, 0);
               }
               stackIn_82_0 = JaggrabDownloader.field_i;
-              stackIn_83_1 = (param0) && (!io.field_b);
-              ((UiComponent) (Object) stackIn_82_0).c(stackIn_83_1, -1);
+              stackIn_83_1 = (param0) && (!WeightedLruCache.field_b);
+              ((UiComponent) (Object) stackIn_82_0).drawRoot(stackIn_83_1, -1);
               stackIn_86_0 = LevelData.field_a;
-              stackIn_87_1 = (param0) && (!io.field_b);
-              ((UiComponent) (Object) stackIn_86_0).c(stackIn_87_1, param1 + 7578);
+              stackIn_87_1 = (param0) && (!WeightedLruCache.field_b);
+              ((UiComponent) (Object) stackIn_86_0).drawRoot(stackIn_87_1, param1 + 7578);
             } else {
               if (InflaterDecompressor.field_a > 0) {
-                if (vm.field_lb != null) {
-                  vm.field_lb.drawOpaque(JaggrabDownloader.field_i.field_x, 0);
+                if (FullscreenErrorDialog.field_lb != null) {
+                  FullscreenErrorDialog.field_lb.drawOpaque(JaggrabDownloader.field_i.field_x, 0);
                 }
                 stackIn_96_0 = JaggrabDownloader.field_i;
-                stackIn_97_1 = (param0) && (!io.field_b);
-                ((UiComponent) (Object) stackIn_96_0).c(stackIn_97_1, -1);
+                stackIn_97_1 = (param0) && (!WeightedLruCache.field_b);
+                ((UiComponent) (Object) stackIn_96_0).drawRoot(stackIn_97_1, -1);
                 stackIn_100_0 = LevelData.field_a;
-                stackIn_101_1 = (param0) && (!io.field_b);
-                ((UiComponent) (Object) stackIn_100_0).c(stackIn_101_1, param1 + 7578);
+                stackIn_101_1 = (param0) && (!WeightedLruCache.field_b);
+                ((UiComponent) (Object) stackIn_100_0).drawRoot(stackIn_101_1, param1 + 7578);
               }
             }
           }
         }
-        ql.a(true);
+        RasterStackHelpers.popRaster(true);
     }
 
-    final boolean h(int param0) {
+    final boolean handleNormalizedNameKey(int param0) {
         StringBuilder discarded$5 = null;
         StringBuilder discarded$6 = null;
         StringBuilder discarded$7 = null;
@@ -196,7 +196,7 @@ final class NameEntryPopup extends UiComponent {
         }
         if (InfectionEvent.field_p != 85) {
           if (this.field_Hb.length() < 12) {
-            var2 = Character.toLowerCase(pn.field_d);
+            var2 = Character.toLowerCase(ArchiveAvailabilityHelpers.field_d);
             if (32 == var2) {
               var2 = 95;
             }
@@ -206,7 +206,7 @@ final class NameEntryPopup extends UiComponent {
               if (EmailAvailabilityValidator.isAsciiLetter(-24315, (char) var2)) {
                 discarded$6 = this.field_Hb.append((char) var2);
               } else {
-                if (vh.a((char) var2, (byte) 85)) {
+                if (ColourPickerWidget.isAsciiDigit((char) var2, (byte) 85)) {
                   discarded$7 = this.field_Hb.append((char) var2);
                 }
               }
@@ -245,7 +245,7 @@ final class NameEntryPopup extends UiComponent {
               }
               return true;
             }
-            if (vh.a((char) var2, (byte) 85)) {
+            if (ColourPickerWidget.isAsciiDigit((char) var2, (byte) 85)) {
               discarded$9 = this.field_Hb.append((char) var2);
               if (InfectionEvent.field_p == 84) {
                 if (0 >= this.field_Hb.length()) {
@@ -289,7 +289,7 @@ final class NameEntryPopup extends UiComponent {
           return true;
         }
         if (0 < this.field_Hb.length()) {
-          lf.a(' ', this.field_Hb.length() - 1, 0, this.field_Hb);
+          TransitionPhase.padWithChar(' ', this.field_Hb.length() - 1, 0, this.field_Hb);
         }
         if (this.field_Hb.length() >= 12) {
           if (InfectionEvent.field_p != 84) {
@@ -316,7 +316,7 @@ final class NameEntryPopup extends UiComponent {
           }
           return true;
         }
-        var2Lifetime1 = Character.toLowerCase(pn.field_d);
+        var2Lifetime1 = Character.toLowerCase(ArchiveAvailabilityHelpers.field_d);
         if (32 == var2Lifetime1) {
           var2Lifetime1 = 95;
         }
@@ -326,7 +326,7 @@ final class NameEntryPopup extends UiComponent {
           if (EmailAvailabilityValidator.isAsciiLetter(-24315, (char) var2Lifetime1)) {
             discarded$1 = this.field_Hb.append((char) var2Lifetime1);
           } else {
-            if (vh.a((char) var2Lifetime1, (byte) 85)) {
+            if (ColourPickerWidget.isAsciiDigit((char) var2Lifetime1, (byte) 85)) {
               discarded$2 = this.field_Hb.append((char) var2Lifetime1);
             }
           }
@@ -365,7 +365,7 @@ final class NameEntryPopup extends UiComponent {
           this.field_Fb = 1;
           return true;
         }
-        if (!vh.a((char) var2Lifetime1, (byte) 85)) {
+        if (!ColourPickerWidget.isAsciiDigit((char) var2Lifetime1, (byte) 85)) {
           if (InfectionEvent.field_p == 84) {
             if (0 >= this.field_Hb.length()) {
               this.field_Fb = 1;
@@ -425,20 +425,20 @@ final class NameEntryPopup extends UiComponent {
         field_Kb = null;
     }
 
-    final int a(byte param0, boolean param1) {
+    final int updateAndPollNameInput(byte param0, boolean param1) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         int var4;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
-        this.a(-11838, param1);
+        this.updateRoot(-11838, param1);
         if (!param1) {
           this.field_Gb.field_wb = this.field_Hb.toString();
           if (param0 < 84) {
             this.field_Hb = (StringBuilder) null;
             if (param1 &&
-              kd.field_b != 0 &&
+              StringHashHelpers.field_b != 0 &&
               this.field_T == 0) {
               this.field_Fb = 1;
             }
@@ -447,7 +447,7 @@ final class NameEntryPopup extends UiComponent {
           if (!param1) {
             return this.field_Fb;
           }
-          if (kd.field_b == 0) {
+          if (StringHashHelpers.field_b == 0) {
             return this.field_Fb;
           }
           if (this.field_T != 0) {
@@ -462,7 +462,7 @@ final class NameEntryPopup extends UiComponent {
             if (param0 < 84) {
               this.field_Hb = (StringBuilder) null;
               if (param1 &&
-                kd.field_b != 0 &&
+                StringHashHelpers.field_b != 0 &&
                 this.field_T == 0) {
                 this.field_Fb = 1;
               }
@@ -471,7 +471,7 @@ final class NameEntryPopup extends UiComponent {
             if (!param1) {
               return this.field_Fb;
             }
-            if (kd.field_b == 0) {
+            if (StringHashHelpers.field_b == 0) {
               return this.field_Fb;
             }
             if (this.field_T != 0) {
@@ -482,21 +482,21 @@ final class NameEntryPopup extends UiComponent {
           }
           if (InfectionEvent.field_p == 85 &&
             this.field_Hb.length() > 0) {
-            lf.a(' ', this.field_Hb.length() - 1, 0, this.field_Hb);
+            TransitionPhase.padWithChar(' ', this.field_Hb.length() - 1, 0, this.field_Hb);
           }
-          if (ck.a(pn.field_d, -1, (CharSequence) ((Object) this.field_Hb))) {
-            discarded$0 = this.field_Hb.append(pn.field_d);
+          if (LobbyUpdateHandler.canAppendNameCharacter(ArchiveAvailabilityHelpers.field_d, -1, (CharSequence) ((Object) this.field_Hb))) {
+            discarded$0 = this.field_Hb.append(ArchiveAvailabilityHelpers.field_d);
           } else {
             if (0 == this.field_Hb.length() &&
-              pn.field_d == 91) {
-              discarded$1 = this.field_Hb.append(pn.field_d);
+              ArchiveAvailabilityHelpers.field_d == 91) {
+              discarded$1 = this.field_Hb.append(ArchiveAvailabilityHelpers.field_d);
             } else {
               if (this.field_Hb.length() == 1 &&
-                pn.field_d == 35) {
-                discarded$2 = this.field_Hb.append(pn.field_d);
+                ArchiveAvailabilityHelpers.field_d == 35) {
+                discarded$2 = this.field_Hb.append(ArchiveAvailabilityHelpers.field_d);
               } else {
-                if (pn.field_d == 93) {
-                  discarded$3 = this.field_Hb.append(pn.field_d);
+                if (ArchiveAvailabilityHelpers.field_d == 93) {
+                  discarded$3 = this.field_Hb.append(ArchiveAvailabilityHelpers.field_d);
                 }
               }
             }
@@ -537,18 +537,18 @@ final class NameEntryPopup extends UiComponent {
         this.field_Fb = 0;
         try {
           this.field_Lb = new UiComponent(0L, param6, param4);
-          this.a((byte) 50, this.field_Lb);
+          this.addChild((byte) 50, this.field_Lb);
           this.field_Gb = new UiComponent(0L, param7);
           this.field_Gb.field_M = 16764006;
-          this.a((byte) 50, this.field_Gb);
+          this.addChild((byte) 50, this.field_Gb);
           this.field_Gb.field_vb = "|";
           this.field_Hb = new StringBuilder(12);
-          var9_int = this.field_Lb.e(0);
-          this.field_Lb.setBounds(jk.field_f, 3, var9_int, 5, -3344);
-          this.field_Gb.setBounds(jk.field_f, 3 + jk.field_f, var9_int, 5, -3344);
+          var9_int = this.field_Lb.getPreferredWidth(0);
+          this.field_Lb.setBounds(UpgradeAccessHelpers.field_f, 3, var9_int, 5, -3344);
+          this.field_Gb.setBounds(UpgradeAccessHelpers.field_f, 3 + UpgradeAccessHelpers.field_f, var9_int, 5, -3344);
           var10 = var9_int + 5 + 5;
-          var11 = 3 + jk.field_f * 2 + 3;
-          var12 = MatchingTextValidator.a(param0, (byte) 116, var10, param2);
+          var11 = 3 + UpgradeAccessHelpers.field_f * 2 + 3;
+          var12 = MatchingTextValidator.clampPopupX(param0, (byte) 116, var10, param2);
           var13 = IntrusiveNode.placePopupVertically(true, param1, param3, var11);
           this.setBounds(var11, var13, var10, var12, -3344);
           return;

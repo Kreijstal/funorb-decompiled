@@ -28,14 +28,14 @@ final class ClientException extends RuntimeException {
         field_l = null;
     }
 
-    final static AttackEvent a(int param0, int param1, int param2, byte param3, int param4, int param5) {
+    final static AttackEvent obtainAttackEvent(int param0, int param1, int param2, byte param3, int param4, int param5) {
         AttackEvent var6 = null;
         if (param3 > 86) {
-          var6 = (AttackEvent) (ic.field_c.removeLast(62));
+          var6 = (AttackEvent) (LoginCredentials.field_c.removeLast(62));
           if (var6 == null) {
             var6 = new AttackEvent();
           }
-          var6.a(param4, param5, param1, param2, (byte) 14, param0);
+          var6.initialize(param4, param5, param1, param2, (byte) 14, param0);
           return var6;
         }
         return (AttackEvent) null;

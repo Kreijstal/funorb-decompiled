@@ -11,13 +11,13 @@ final class PasswordValidator extends TextInputValidator {
     static String field_v;
     private TextInputWidget field_z;
     static int field_s;
-    static hn[] field_x;
+    static FrameCycleAnimation[] field_x;
 
-    final static void a(int param0, int param1, boolean param2, int param3) {
-        StatefulTextPainter.a(jk.field_f, (byte) -97, jo.field_f, param2, param1, param0, nj.field_h);
+    final static void updateChatInputBox(int param0, int param1, boolean param2, int param3) {
+        StatefulTextPainter.updateChatComposerForChannel(UpgradeAccessHelpers.field_f, (byte) -97, FeatureSupportHelpers.field_f, param2, param1, param0, MusicPatchEnvelope.field_h);
         if (param3 != 0) {
           String var5 = (String) null;
-          PasswordValidator.a(-113, (String) null, (String) null);
+          PasswordValidator.passwordContainsName(-113, (String) null, (String) null);
         }
     }
 
@@ -50,12 +50,12 @@ final class PasswordValidator extends TextInputValidator {
             stackIn_5_0 = PlayerContextMenu.field_k;
             return stackIn_5_0;
           }
-          if (ol.containsNonAlphanumeric(var5, false)) {
-            stackIn_9_0 = bi.field_c;
+          if (InstructionsScreen.containsNonAlphanumeric(var5, false)) {
+            stackIn_9_0 = AccountTextGlobals.field_c;
             return stackIn_9_0;
           }
-          if (DualLinkNode.a((byte) -125, var5)) {
-            stackIn_12_0 = gi.field_g;
+          if (DualLinkNode.isAllSameChar((byte) -125, var5)) {
+            stackIn_12_0 = LevelFileEntry.field_g;
             return stackIn_12_0;
           }
           if (param1 != -1276425040) {
@@ -63,25 +63,25 @@ final class PasswordValidator extends TextInputValidator {
             return stackIn_15_0;
           }
           if (this.passwordContainsEmailPart(param0, -1)) {
-            stackIn_18_0 = oq.field_z;
+            stackIn_18_0 = ThreeSliceButtonPainter.field_z;
             return stackIn_18_0;
           }
           if (var6.length() <= 0) {
-            stackIn_32_0 = eb.field_y;
+            stackIn_32_0 = PopupMenuBuilder.field_y;
             return stackIn_32_0;
           }
-          if (cr.a(var6, var5, param1 + 1276425039)) {
-            stackIn_22_0 = kc.field_b;
+          if (PendingStatusRequest.containsNameVariant(var6, var5, param1 + 1276425039)) {
+            stackIn_22_0 = ScreenSizeGlobals.field_b;
             return stackIn_22_0;
           }
-          if (a.containsForwardOrReversed(var5, var6, (byte) -86)) {
+          if (LoginSuccessHelpers.containsForwardOrReversed(var5, var6, (byte) -86)) {
             stackIn_26_0 = ScrollPane.field_Hb;
             return stackIn_26_0;
           }
-          if (!PasswordValidator.a(101, var6, var5)) {
+          if (!PasswordValidator.passwordContainsName(101, var6, var5)) {
             return PlayerContextMenu.field_k;
           }
-          stackIn_30_0 = kc.field_b;
+          stackIn_30_0 = ScreenSizeGlobals.field_b;
           return stackIn_30_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -107,7 +107,7 @@ final class PasswordValidator extends TextInputValidator {
         }
     }
 
-    final static boolean a(int param0, String param1, String param2) {
+    final static boolean passwordContainsName(int param0, String param1, String param2) {
         String var3 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -121,8 +121,8 @@ final class PasswordValidator extends TextInputValidator {
           if (param0 <= 91) {
             return false;
           }
-          param1 = ee.a('_', "", param1, -40);
-          var3 = qc.b((byte) -32, param1);
+          param1 = LobbyScreenHelpers.replaceChar('_', "", param1, -40);
+          var3 = ArchiveRequest.reverseString((byte) -32, param1);
           stackIn_8_0 = (param2.indexOf(param1) != -1) || (param2.indexOf(var3) != -1);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -225,17 +225,17 @@ final class PasswordValidator extends TextInputValidator {
           var3 = this.field_z.field_j.toLowerCase();
           var4 = param1.toLowerCase();
           if (var4.length() == 0) {
-            stackIn_5_0 = jq.field_b;
+            stackIn_5_0 = PowerGaugeHelpers.field_b;
             return stackIn_5_0;
           }
-          if (!lb.a(var3, var4, (byte) -10)) {
-            stackIn_9_0 = jq.field_b;
+          if (!PasswordCheckHelpers.isPasswordAcceptable(var3, var4, (byte) -10)) {
+            stackIn_9_0 = PowerGaugeHelpers.field_b;
             return stackIn_9_0;
           }
           if (!this.passwordContainsEmailPart(param1, -1)) {
-            return db.field_b;
+            return AudioStartupHelpers.field_b;
           }
-          stackIn_13_0 = jq.field_b;
+          stackIn_13_0 = PowerGaugeHelpers.field_b;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -255,6 +255,6 @@ final class PasswordValidator extends TextInputValidator {
         field_u = "";
         field_w = "Player Name: ";
         field_v = "Please enter a year between <%0> and <%1>";
-        field_x = new hn[]{};
+        field_x = new FrameCycleAnimation[]{};
     }
 }

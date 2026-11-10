@@ -26,7 +26,7 @@ final class AgeValidator extends TextInputValidator {
         try {
           var4 = (CharSequence) ((Object) param1);
           if (!UnitView.isValidNameText((byte) 57, var4)) {
-            stackIn_2_0 = jq.field_b;
+            stackIn_2_0 = PowerGaugeHelpers.field_b;
             return stackIn_2_0;
           }
           var5 = (CharSequence) ((Object) param1);
@@ -34,13 +34,13 @@ final class AgeValidator extends TextInputValidator {
           if (var3_int > 0 &&
             var3_int <= 130) {
             if (!param0) {
-              stackIn_12_0 = db.field_b;
+              stackIn_12_0 = AudioStartupHelpers.field_b;
               return stackIn_12_0;
             }
             stackIn_10_0 = (ValidationState) null;
             return stackIn_10_0;
           }
-          stackIn_7_0 = jq.field_b;
+          stackIn_7_0 = PowerGaugeHelpers.field_b;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -56,14 +56,14 @@ final class AgeValidator extends TextInputValidator {
         }
     }
 
-    final static void writeScoreSubmission(kj param0, boolean param1, int param2) {
+    final static void writeScoreSubmission(FriendListHelpers param0, boolean param1, int param2) {
         CipherPacketBuffer var7 = null;
         CipherPacketBuffer var8 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var7 = ma.field_a;
+          var7 = TextValidationFailure.field_a;
           var8 = var7;
           var8.writeCipheredOpcode((byte) -35, param2);
           var8.position = var8.position + 1;
@@ -83,8 +83,8 @@ final class AgeValidator extends TextInputValidator {
           if (!param1) {
             field_u = (UiComponent) null;
           }
-          var8.f(var4, 118);
-          var8.e(77, var8.position - var4);
+          var8.appendCrc32(var4, 118);
+          var8.backpatchByteLength(77, var8.position - var4);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "bp.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -136,7 +136,7 @@ final class AgeValidator extends TextInputValidator {
           String var16 = null;
           String var17 = null;
           int var18 = 0;
-          lp var19 = null;
+          ReflectionCheckRequest var19 = null;
           byte[][] var20 = null;
           String var21 = null;
           String var22 = null;
@@ -144,7 +144,7 @@ final class AgeValidator extends TextInputValidator {
           int var13Lifetime1;
           var14 = ZombieDawnMulti.field_E ? 1 : 0;
           try {
-            var19 = new lp();
+            var19 = new ReflectionCheckRequest();
             var19.field_n = param1.readUnsignedByte(31365);
             var19.field_r = param1.readInt(param3 - 1478490340);
             var19.field_m = new PlatformTask[var19.field_n];
@@ -176,7 +176,7 @@ final class AgeValidator extends TextInputValidator {
                         var13 = param1.readInt(-1478490344);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
-                        param1.a(0, param3 - 6347, var13, var23[var12_int]);
+                        param1.readBytes(0, param3 - 6347, var13, var23[var12_int]);
                       }
                     }
                     var19.field_i[var5] = var6_int;
@@ -184,10 +184,10 @@ final class AgeValidator extends TextInputValidator {
                     var18 = 0;
                     var13Lifetime1 = var18;
                     while (var9 > var18) {
-                      var12[var18] = mq.loadClassOrPrimitive(var10[var18], (byte) -119);
+                      var12[var18] = AchievementsScreen.loadClassOrPrimitive(var10[var18], (byte) -119);
                       var18++;
                     }
-                    var19.field_l[var5] = param2.requestDeclaredMethod(var12, false, mq.loadClassOrPrimitive(var21, (byte) -123), var22);
+                    var19.field_l[var5] = param2.requestDeclaredMethod(var12, false, AchievementsScreen.loadClassOrPrimitive(var21, (byte) -123), var22);
                     var19.field_o[var5] = var23;
                   }
                 } else {
@@ -201,7 +201,7 @@ final class AgeValidator extends TextInputValidator {
                   }
                   var19.field_i[var5] = var6_int;
                   var19.field_q[var5] = var9;
-                  var19.field_m[var5] = param2.requestDeclaredField((byte) -89, var16, mq.loadClassOrPrimitive(var17, (byte) -29));
+                  var19.field_m[var5] = param2.requestDeclaredField((byte) -89, var16, AchievementsScreen.loadClassOrPrimitive(var17, (byte) -29));
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -225,7 +225,7 @@ final class AgeValidator extends TextInputValidator {
                 var19.field_g[var5] = -5;
               }
             }
-            we.field_k.addFirst(var19, false);
+            PlayingSound.field_k.addFirst(var19, false);
             if (param3 != -4) {
               var15 = (PlatformTaskDispatcher) null;
               AgeValidator.handleReflectionCheck(-51, (PacketBuffer) null, (PlatformTaskDispatcher) null, 59);
@@ -265,8 +265,8 @@ final class AgeValidator extends TextInputValidator {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.validationStateForText(false, param0) == jq.field_b) {
-            stackIn_3_0 = ob.field_z;
+          if (this.validationStateForText(false, param0) == PowerGaugeHelpers.field_b) {
+            stackIn_3_0 = QuickChatCategoryDefinition.field_z;
             return stackIn_3_0;
           }
           if (param1 == -1276425040) {

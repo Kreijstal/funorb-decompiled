@@ -1,0 +1,190 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.io.*;
+
+final class TransitionPhase {
+    static Sprite[] field_c;
+    static TransitionPhase field_a;
+    static int field_d;
+    static IntrusiveDeque field_e;
+    static String field_b;
+
+    final static StringBuilder padWithChar(char param0, int param1, int param2, StringBuilder param3) {
+        int var5 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        int var6 = 0;
+        StringBuilder var7 = null;
+        StringBuilder stackIn_7_0 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        var6 = ZombieDawnMulti.field_E ? 1 : 0;
+        try {
+          var4_int = param3.length();
+          param3.setLength(param1);
+          if (param2 != 0) {
+            var7 = (StringBuilder) null;
+            TransitionPhase.padWithChar('￝', 1, -128, (StringBuilder) null);
+          }
+          for (var5 = var4_int; param1 > var5; var5++) {
+            param3.setCharAt(var5, param0);
+          }
+          stackIn_7_0 = (StringBuilder) (param3);
+          return stackIn_7_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_10_0 = var4;
+          stackIn_10_1 = new StringBuilder().append("lf.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+        }
+    }
+
+    final static void insertLobbyPlayerSorted(LobbyPlayer param0, boolean param1) {
+        LobbyPlayer var2 = null;
+        RuntimeException var2_ref = null;
+        int var3 = 0;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        var3 = ZombieDawnMulti.field_E ? 1 : 0;
+        try {
+          param0.unlink(param1);
+          var2 = (LobbyPlayer) (MeltdownPuddleView.field_i.last(104));
+          while (var2 != null) {
+            if (var2.sortsBefore((byte) -117, param0)) {
+              var2 = (LobbyPlayer) (MeltdownPuddleView.field_i.previous(6));
+              continue;
+            }
+            break;
+          }
+          if (var2 == null) {
+            MeltdownPuddleView.field_i.addFirst(param0, false);
+            return;
+          }
+          KeyMapHelpers.insertNodeAfter(var2, param0, param1);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          stackIn_11_0 = var2_ref;
+          stackIn_11_1 = new StringBuilder().append("lf.B(");
+          if (param0 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    public static void releaseStatics(int param0) {
+        field_a = null;
+        field_c = null;
+        field_b = null;
+        if (param0 != 0) {
+          return;
+        }
+        field_e = null;
+    }
+
+    final static void configureConnection(boolean param0, int param1, long param2, int param3, int param4, int param5, PlatformTaskDispatcher param6, int param7, boolean param8, int param9, int param10, int param11, String param12, int param13) {
+        try {
+          RuntimeException stackIn_16_0 = null;
+          StringBuilder stackIn_16_1 = null;
+          String stackIn_17_2 = null;
+          StringBuilder stackIn_19_1 = null;
+          String stackIn_20_2 = null;
+          Throwable decompiledCaughtException = null;
+          IOException var15 = null;
+          RuntimeException var15_ref = null;
+          try {
+            if (param1 != -5989) {
+              return;
+            }
+            StatusAndMeshHelpers.field_e = new CipherPacketBuffer(param11);
+            TextValidationFailure.field_a = new CipherPacketBuffer(param10);
+            LobbyDrawHelpers.field_c = param12;
+            LobbyRequestHelpers.field_e = param8;
+            ViewportController.field_m = param6;
+            SoundStopHelpers.field_e = param0;
+            TabbedPane.field_Hb = param3;
+            FeatureSupportHelpers.field_b = param13;
+            PlayerProfile.field_q = param7;
+            BitPackedArrayHelpers.field_b = param5;
+            LobbySlideLayout.field_f = param4;
+            DualLinkNode.field_i = param2;
+            TertiaryLinkNode.field_s = param9;
+            if (null == ViewportController.field_m.field_s) {
+              return;
+            }
+            try {
+              DialWidgetPainter.field_e = new BufferedFile(ViewportController.field_m.field_s, 64, 0);
+              return;
+            } catch (java.io.IOException decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var15 = (IOException) (Object) decompiledCaughtException;
+              throw new RuntimeException(var15.toString());
+            }
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var15_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_16_0 = var15_ref;
+            stackIn_16_1 = new StringBuilder().append("lf.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
+            if (param6 == null) {
+              stackIn_17_2 = "null";
+            } else {
+              stackIn_17_2 = "{...}";
+            }
+            stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',');
+            if (param12 == null) {
+              stackIn_20_2 = "null";
+            } else {
+              stackIn_20_2 = "{...}";
+            }
+            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param13).append(')').toString());
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    public final String toString() {
+        throw new IllegalStateException();
+    }
+
+    final static void scaleIconToFont(BinaryBitmapFont param0, int param1) {
+        int var2_int = 0;
+        Sprite var3 = null;
+        if (null == BufferedFile.field_k) {
+          return;
+        }
+        try {
+          var2_int = param0.maxAscent + param0.maxDescent;
+          var3 = new Sprite(var2_int, var2_int);
+          var3.bindAsRenderTarget();
+          BufferedFile.field_k.drawScaledAveraged(0, param1, var2_int, var2_int);
+          SocketConnector.field_h.bindRaster((byte) 119);
+          BufferedFile.field_k = var3;
+        } catch (RuntimeException runtimeException) {
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "lf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    static {
+        field_a = new TransitionPhase();
+        field_e = new IntrusiveDeque();
+        field_b = "Disguise";
+    }
+}

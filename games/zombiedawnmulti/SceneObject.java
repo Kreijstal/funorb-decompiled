@@ -6,7 +6,7 @@ abstract class SceneObject extends TertiaryLinkNode {
     static String field_x;
     static String field_A;
     int positionX;
-    static ak field_B;
+    static ClientShellHelpers field_B;
     int objectId;
     static int field_D;
     int positionY;
@@ -15,7 +15,7 @@ abstract class SceneObject extends TertiaryLinkNode {
 
     abstract void draw(int param0, Camera param1);
 
-    final static void d(byte param0) {
+    final static void removeFinishedSounds(byte param0) {
         IntrusiveNode var1 = null;
         IntrusiveNode var2 = null;
         int var3 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -25,35 +25,35 @@ abstract class SceneObject extends TertiaryLinkNode {
           if (param0 != 20) {
             field_D = -84;
           }
-          var1 = fd.field_M.last(49);
-          while (var1 instanceof wj) {
+          var1 = PropObject.field_M.last(49);
+          while (var1 instanceof SoundEffectInstance) {
             var2 = var1.previous;
-            if (((wj) (var1)).field_m.isSamplePositionOutOfRange()) {
+            if (((SoundEffectInstance) (var1)).field_m.isSamplePositionOutOfRange()) {
               var1.unlink(true);
             }
             var1 = var2;
           }
-          var1 = qo.field_q.last(param0 ^ 68);
-          while (var1 instanceof wj) {
+          var1 = UiComponentNode.field_q.last(param0 ^ 68);
+          while (var1 instanceof SoundEffectInstance) {
             var2Lifetime1 = var1.previous;
-            if (((wj) (var1)).field_m.isSamplePositionOutOfRange()) {
+            if (((SoundEffectInstance) (var1)).field_m.isSamplePositionOutOfRange()) {
               var1.unlink(true);
             }
             var1 = var2Lifetime1;
           }
-          var1 = jp.field_c.last(80);
-          while (var1 instanceof wj) {
+          var1 = ChatPromptHelpers.field_c.last(80);
+          while (var1 instanceof SoundEffectInstance) {
             var2Lifetime2 = var1.previous;
-            if (((wj) (var1)).field_m.isSamplePositionOutOfRange()) {
+            if (((SoundEffectInstance) (var1)).field_m.isSamplePositionOutOfRange()) {
               var1.unlink(true);
             }
             var1 = var2Lifetime2;
           }
-          wp.b(127);
-          if (null != td.field_b &&
+          AudioServiceHelpers.serviceAudio(127);
+          if (null != TextLayoutLine.field_b &&
             !MessageDialogContent.field_L.hasMidiData(-37)) {
-            fk.a(td.field_b, true);
-            td.field_b = null;
+            RankingsScreen.playMenuMusicTrack(TextLayoutLine.field_b, true);
+            TextLayoutLine.field_b = null;
             return;
           }
         } catch (RuntimeException runtimeException) {
@@ -78,7 +78,7 @@ abstract class SceneObject extends TertiaryLinkNode {
         return this.positionY >> 16;
     }
 
-    final static QuickChatMenu a(UiComponent param0, UiComponent param1, byte param2, int[] param3, UiComponent param4) {
+    final static QuickChatMenu buildQuickChatResponseMenu(UiComponent param0, UiComponent param1, byte param2, int[] param3, UiComponent param4) {
         int var10_int = 0;
         int var5_int = 0;
         RuntimeException var5 = null;

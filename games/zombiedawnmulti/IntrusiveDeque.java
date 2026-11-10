@@ -192,22 +192,22 @@ final class IntrusiveDeque {
         byte[] var1Lifetime1;
         if (param0 != -61) {
           IntrusiveDeque.isPointInRect(30, 99, -87, 29, -54, -51, -90);
-          if (wc.j(112)) {
+          if (ScorePopup.isGuestSession(112)) {
             ClientException.field_b = true;
           } else {
             var2 = FullscreenFocusCanvas.field_k.encodeProfile(-16613);
             var1 = var2;
-            InflaterDecompressor.a(-55, 6, var2);
+            InflaterDecompressor.queueBytePayloadRequest(-55, 6, var2);
             return;
           }
           return;
         }
-        if (wc.j(112)) {
+        if (ScorePopup.isGuestSession(112)) {
           ClientException.field_b = true;
         } else {
           var2Lifetime1 = FullscreenFocusCanvas.field_k.encodeProfile(-16613);
           var1Lifetime1 = var2Lifetime1;
-          InflaterDecompressor.a(-55, 6, var2Lifetime1);
+          InflaterDecompressor.queueBytePayloadRequest(-55, 6, var2Lifetime1);
           return;
         }
     }

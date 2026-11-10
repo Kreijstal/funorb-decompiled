@@ -9,9 +9,9 @@ final class VorbisCodebook {
     private float[][] field_d;
     int field_e;
 
-    private final static int lookup1Values(int param0, int param1) {
+    private final static int computeLookupValueCount(int param0, int param1) {
         int var2 = 0;
-        for (var2 = (int)Math.pow((double)param0, 1.0 / (double)param1) + 1; og.integerPower(var2, 200, param1) > param0; var2--) {
+        for (var2 = (int)Math.pow((double)param0, 1.0 / (double)param1) + 1; ZombieDrop.integerPower(var2, 200, param1) > param0; var2--) {
         }
         return var2;
     }
@@ -163,7 +163,7 @@ final class VorbisCodebook {
           var2 = 0;
           var3_int = VorbisSample.readBits(5) + 1;
           while (var2 < this.field_f) {
-            var4_int = VorbisSample.readBits(mb.bitLength((byte) -31, this.field_f - var2));
+            var4_int = VorbisSample.readBits(MusicVoice.bitLength((byte) -31, this.field_f - var2));
             for (var5 = 0; var5 < var4_int; var5++) {
               incrementValue$0 = var2;
               var2++;
@@ -197,7 +197,7 @@ final class VorbisCodebook {
           if (var2Lifetime1 != 1) {
             var7 = this.field_f * this.field_e;
           } else {
-            var7 = VorbisCodebook.lookup1Values(this.field_f, this.field_e);
+            var7 = VorbisCodebook.computeLookupValueCount(this.field_f, this.field_e);
           }
           this.field_b = new int[var7];
           for (var8 = 0; var8 < var7; var8++) {

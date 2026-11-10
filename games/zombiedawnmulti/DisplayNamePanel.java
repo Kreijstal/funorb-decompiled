@@ -11,7 +11,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
     static ResourceArchive field_P;
     static Calendar field_U;
     private ButtonWidget field_W;
-    private on field_G;
+    private ValidatedTextInputWidget field_G;
     static Sprite[] field_X;
     static IntrusiveDeque field_T;
     static String[][] field_J;
@@ -58,14 +58,14 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         }
     }
 
-    private final void i(int param0) {
+    private final void submitName(int param0) {
         boolean discarded$0 = false;
-        if (!this.h(param0 - 16777195)) {
+        if (!this.isNameValid(param0 - 16777195)) {
           return;
         }
         DiskCacheWorker.startDisplayNameLogin(this.field_G.field_j, (byte) 126);
         if (param0 != 16777215) {
-          discarded$0 = this.h(-58);
+          discarded$0 = this.isNameValid(-58);
         }
     }
 
@@ -85,10 +85,10 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         try {
           if (param2 != this.field_W) {
             if (param2 == this.field_M) {
-              this.i(16777215);
+              this.submitName(16777215);
             }
           } else {
-            qe.c((byte) 125);
+            GameHud.showEmbeddedLoginForm((byte) 125);
           }
           if (param3 < -83) {
             return;
@@ -126,7 +126,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
             return true;
           }
           var5 = var3.getDebouncedValidationState(55);
-          stackIn_6_0 = (var5 == db.field_b);
+          stackIn_6_0 = (var5 == AudioStartupHelpers.field_b);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -144,15 +144,15 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
 
     public DisplayNamePanel() {
         super(0, 0, 496, 0, (WidgetPainter) null);
-        this.field_G = new on("", (WidgetListener) null, 12);
-        TextWidgetPainter var1 = new TextWidgetPainter(field_H, 0, 0, 0, 0, 16777215, -1, 3, 0, ke.field_h.maxAscent, -1, 2147483647, true);
-        UiWidget var2 = new UiWidget(la.field_e, var1, (WidgetListener) null);
-        this.field_M = new ButtonWidget(ji.field_e, (WidgetListener) null);
-        this.field_W = new ButtonWidget(gk.field_a, (WidgetListener) null);
-        this.field_G.field_x = bi.field_d;
+        this.field_G = new ValidatedTextInputWidget("", (WidgetListener) null, 12);
+        TextWidgetPainter var1 = new TextWidgetPainter(field_H, 0, 0, 0, 0, 16777215, -1, 3, 0, FontPaletteHelpers.field_h.maxAscent, -1, 2147483647, true);
+        UiWidget var2 = new UiWidget(GrowableIntList.field_e, var1, (WidgetListener) null);
+        this.field_M = new ButtonWidget(SupportPageHelpers.field_e, (WidgetListener) null);
+        this.field_W = new ButtonWidget(NoticeMenuHelpers.field_a, (WidgetListener) null);
+        this.field_G.field_x = AccountTextGlobals.field_d;
         this.field_G.setValidationProvider((byte) -27, new UsernameAvailabilityValidator(this.field_G));
         this.field_M.field_F = false;
-        this.field_M.painter = (WidgetPainter) ((Object) new oq());
+        this.field_M.painter = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
         this.field_W.painter = (WidgetPainter) ((Object) new LinkButtonPainter());
         this.field_G.painter = (WidgetPainter) ((Object) new GradientOutlineTextPainter(10000536));
         int var3 = 20;
@@ -161,7 +161,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         int var5 = 200;
         var3 += 50;
         this.addChild((byte) 101, var2);
-        var3 = var3 + (this.a(var3, PasswordValidator.field_w, 170, this.field_G, -43, r.field_e) + 5);
+        var3 = var3 + (this.addFieldWithHelpDefaultWidth(var3, PasswordValidator.field_w, 170, this.field_G, -43, MusicPatchLoadHelpers.field_e) + 5);
         this.field_M.setWidgetBounds(-var5 + 496 >> 1, var3, 28972, var5, 40);
         this.field_W.setWidgetBounds(3 + var4, var3 + 15, 28972, 60, 40);
         this.field_W.field_A = (WidgetListener) (this);
@@ -207,13 +207,13 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
     final void updatePointerState(int param0, UiWidget param1, int param2, int param3) {
         try {
           super.updatePointerState(param0, param1, param2, param3);
-          this.field_M.field_F = this.h(param0 + 5427);
+          this.field_M.field_F = this.isNameValid(param0 + 5427);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "cp.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    private final int a(int param0, String param1, int param2, UiWidget param3, int param4, String param5) {
+    private final int addFieldWithHelpDefaultWidth(int param0, String param1, int param2, UiWidget param3, int param4, String param5) {
         int discarded$1 = 0;
         RuntimeException var7 = null;
         String var8 = null;
@@ -229,9 +229,9 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         try {
           if (param4 >= -9) {
             var8 = (String) null;
-            discarded$1 = this.a(82, (String) null, 77, (UiWidget) null, 115, (String) null);
+            discarded$1 = this.addFieldWithHelpDefaultWidth(82, (String) null, 77, (UiWidget) null, 115, (String) null);
           }
-          stackIn_3_0 = this.a(param0, param3, param5, 35, param1, 12352, param2);
+          stackIn_3_0 = this.addFieldWithHelp(param0, param3, param5, 35, param1, 12352, param2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -259,12 +259,12 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         }
     }
 
-    static long a(long param0, long param1) {
+    static long bitOr(long param0, long param1) {
         return param0 | param1;
     }
 
     public final void onSuggestionSelected(String param0, int param1) {
-        on var3 = null;
+        ValidatedTextInputWidget var3 = null;
         String var4 = null;
         if (param1 != 1) {
           return;
@@ -278,7 +278,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         }
     }
 
-    private final int a(int param0, UiWidget param1, String param2, int param3, String param4, int param5, int param6) {
+    private final int addFieldWithHelp(int param0, UiWidget param1, String param2, int param3, String param4, int param5, int param6) {
         RuntimeException var8 = null;
         ValidationMessageWidget var9 = null;
         LabeledChildWidget var10 = null;
@@ -295,7 +295,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
           if (param5 != 12352) {
             field_U = (Calendar) null;
           }
-          var10 = new LabeledChildWidget(20, param0, 120 + param6, 25, param1, false, 120, 3, ke.field_h, 16777215, param4);
+          var10 = new LabeledChildWidget(20, param0, 120 + param6, 25, param1, false, 120, 3, FontPaletteHelpers.field_h, 16777215, param4);
           this.addChild((byte) 115, var10);
           var9 = new ValidationMessageWidget(((ValidationProviderSource) ((Object) param1)).getValidationProvider((byte) -61), param2, 126, var10.field_w + param0, 25 + param6, param3);
           var9.field_A = (WidgetListener) (this);
@@ -328,7 +328,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         }
     }
 
-    private final boolean h(int param0) {
+    private final boolean isNameValid(int param0) {
         if (!this.isInputValid((ValidationProviderSource) (this.field_G), param0 + 104)) {
           return false;
         }

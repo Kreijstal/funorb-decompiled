@@ -8,10 +8,10 @@ final class LevelFileCatalog {
     static int field_c;
     static String field_e;
 
-    final static gh a(byte param0, String param1) {
+    final static AccountServerResult pollUsernameAvailability(byte param0, String param1) {
         RuntimeException var2 = null;
         String var3 = null;
-        gh stackIn_8_0 = null;
+        AccountServerResult stackIn_8_0 = null;
         Object stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -23,19 +23,19 @@ final class LevelFileCatalog {
           }
           if (param0 != 127) {
             var3 = (String) null;
-            LevelFileCatalog.a((byte) -55, (String) null);
+            LevelFileCatalog.pollUsernameAvailability((byte) -55, (String) null);
           }
-          if (oi.field_j == ProgressDialog.field_hb &&
-            param1.equals(ih.field_a)) {
-            ProgressDialog.field_hb = mp.field_b;
+          if (RankingEntry.field_j == ProgressDialog.field_hb &&
+            param1.equals(StatSubmissionHelpers.field_a)) {
+            ProgressDialog.field_hb = TextLayout.field_b;
             stackIn_8_0 = DiskCacheWorker.field_g;
             return stackIn_8_0;
           }
           DiskCacheWorker.field_g = null;
-          ih.field_a = param1;
+          StatSubmissionHelpers.field_a = param1;
           ProgressDialog.field_hb = BirthDateValidator.field_k;
           stackIn_10_0 = null;
-          return (gh) (stackIn_10_0);
+          return (AccountServerResult) (stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -50,7 +50,7 @@ final class LevelFileCatalog {
         }
     }
 
-    final static void a(String param0, long param1, int param2, int param3, boolean param4, int param5) {
+    final static void writeAbuseReport(String param0, long param1, int param2, int param3, boolean param4, int param5) {
         int var7_int = 0;
         ResourceArchive var8 = null;
         CipherPacketBuffer stackIn_2_0 = null;
@@ -62,13 +62,13 @@ final class LevelFileCatalog {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
         try {
-          ma.field_a.writeCipheredOpcode((byte) -35, param2);
-          ma.field_a.position = ma.field_a.position + 1;
-          var7_int = ma.field_a.position;
-          ma.field_a.a(param1, true);
-          ma.field_a.writeString(param0, (byte) 105);
-          ma.field_a.writeByte(-31, param3);
-          stackIn_2_0 = ma.field_a;
+          TextValidationFailure.field_a.writeCipheredOpcode((byte) -35, param2);
+          TextValidationFailure.field_a.position = TextValidationFailure.field_a.position + 1;
+          var7_int = TextValidationFailure.field_a.position;
+          TextValidationFailure.field_a.writeLong(param1, true);
+          TextValidationFailure.field_a.writeString(param0, (byte) 105);
+          TextValidationFailure.field_a.writeByte(-31, param3);
+          stackIn_2_0 = TextValidationFailure.field_a;
           stackIn_2_1 = 107;
           if (!param4) {
             stackIn_3_2 = 0;
@@ -76,10 +76,10 @@ final class LevelFileCatalog {
             stackIn_3_2 = 1;
           }
           ((CipherPacketBuffer) (Object) stackIn_2_0).writeByte(stackIn_2_1, stackIn_3_2);
-          ma.field_a.e(76, -var7_int + ma.field_a.position);
+          TextValidationFailure.field_a.backpatchByteLength(76, -var7_int + TextValidationFailure.field_a.position);
           if (param5 != 21965) {
             var8 = (ResourceArchive) null;
-            LevelFileCatalog.a((ResourceArchive) null, -63);
+            LevelFileCatalog.loadLevelFiles((ResourceArchive) null, -63);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -105,47 +105,47 @@ final class LevelFileCatalog {
         field_a = null;
     }
 
-    final static ci a(ResourceArchive param0, int param1) {
-        ci var2 = null;
+    final static LevelFileList loadLevelFiles(ResourceArchive param0, int param1) {
+        LevelFileList var2 = null;
         RuntimeException var2_ref = null;
-        ci stackIn_2_0 = null;
-        ci stackIn_4_0 = null;
+        LevelFileList stackIn_2_0 = null;
+        LevelFileList stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -2852) {
-            stackIn_2_0 = (ci) null;
+            stackIn_2_0 = (LevelFileList) null;
             return stackIn_2_0;
           }
-          var2 = new ci();
-          var2.a((byte) 97, param0.a("", "sandbox.zdl", false));
-          var2.a((byte) 84, param0.a("", "tutorial.zdl", false));
-          var2.a((byte) 111, param0.a("", "n2/ma_1.zdl", false));
-          var2.a((byte) 115, param0.a("", "n2/wh_1.zdl", false));
-          var2.a((byte) 126, param0.a("", "n2/pp_1.zdl", false));
-          var2.a((byte) 94, param0.a("", "n2/pr_1.zdl", false));
-          var2.a((byte) 85, param0.a("", "n4/ma_1.zdl", false));
-          var2.a((byte) 115, param0.a("", "n4/wh_1.zdl", false));
-          var2.a((byte) 125, param0.a("", "n4/pp_1.zdl", false));
-          var2.a((byte) 83, param0.a("", "n4/pr_1.zdl", false));
-          var2.a((byte) 107, param0.a("", "Badgirls_2.zdl", false));
-          var2.a((byte) 110, param0.a("", "Carpark_4.zdl", false));
-          var2.a((byte) 103, param0.a("", "Cineplex_2.zdl", false));
-          var2.a((byte) 76, param0.a("", "Claustrophobia_2.zdl", false));
-          var2.a((byte) 79, param0.a("", "Core_2.zdl", false));
-          var2.a((byte) 120, param0.a("", "Hotel_4.zdl", false));
-          var2.a((byte) 72, param0.a("", "Megamall_4.zdl", false));
-          var2.a((byte) 126, param0.a("", "Prisonbreak_4.zdl", false));
-          var2.a((byte) 95, param0.a("", "AnyonesConference.zdl", false));
-          var2.a((byte) 80, param0.a("", "impound.zdl", false));
-          var2.a((byte) 72, param0.a("", "mini_mart.zdl", false));
-          var2.a((byte) 114, param0.a("", "Birdmaster1.zdl", false));
-          var2.a((byte) 94, param0.a("", "Sken58_2.zdl", false));
-          var2.a((byte) 126, param0.a("", "precinct42.zdl", false));
-          var2.a((byte) 125, param0.a("", "sustained_alpha.zdl", false));
-          var2.a((byte) 121, param0.a("", "Media_2.zdl", false));
+          var2 = new LevelFileList();
+          var2.addLevelFile((byte) 97, param0.getNamedFile("", "sandbox.zdl", false));
+          var2.addLevelFile((byte) 84, param0.getNamedFile("", "tutorial.zdl", false));
+          var2.addLevelFile((byte) 111, param0.getNamedFile("", "n2/ma_1.zdl", false));
+          var2.addLevelFile((byte) 115, param0.getNamedFile("", "n2/wh_1.zdl", false));
+          var2.addLevelFile((byte) 126, param0.getNamedFile("", "n2/pp_1.zdl", false));
+          var2.addLevelFile((byte) 94, param0.getNamedFile("", "n2/pr_1.zdl", false));
+          var2.addLevelFile((byte) 85, param0.getNamedFile("", "n4/ma_1.zdl", false));
+          var2.addLevelFile((byte) 115, param0.getNamedFile("", "n4/wh_1.zdl", false));
+          var2.addLevelFile((byte) 125, param0.getNamedFile("", "n4/pp_1.zdl", false));
+          var2.addLevelFile((byte) 83, param0.getNamedFile("", "n4/pr_1.zdl", false));
+          var2.addLevelFile((byte) 107, param0.getNamedFile("", "Badgirls_2.zdl", false));
+          var2.addLevelFile((byte) 110, param0.getNamedFile("", "Carpark_4.zdl", false));
+          var2.addLevelFile((byte) 103, param0.getNamedFile("", "Cineplex_2.zdl", false));
+          var2.addLevelFile((byte) 76, param0.getNamedFile("", "Claustrophobia_2.zdl", false));
+          var2.addLevelFile((byte) 79, param0.getNamedFile("", "Core_2.zdl", false));
+          var2.addLevelFile((byte) 120, param0.getNamedFile("", "Hotel_4.zdl", false));
+          var2.addLevelFile((byte) 72, param0.getNamedFile("", "Megamall_4.zdl", false));
+          var2.addLevelFile((byte) 126, param0.getNamedFile("", "Prisonbreak_4.zdl", false));
+          var2.addLevelFile((byte) 95, param0.getNamedFile("", "AnyonesConference.zdl", false));
+          var2.addLevelFile((byte) 80, param0.getNamedFile("", "impound.zdl", false));
+          var2.addLevelFile((byte) 72, param0.getNamedFile("", "mini_mart.zdl", false));
+          var2.addLevelFile((byte) 114, param0.getNamedFile("", "Birdmaster1.zdl", false));
+          var2.addLevelFile((byte) 94, param0.getNamedFile("", "Sken58_2.zdl", false));
+          var2.addLevelFile((byte) 126, param0.getNamedFile("", "precinct42.zdl", false));
+          var2.addLevelFile((byte) 125, param0.getNamedFile("", "sustained_alpha.zdl", false));
+          var2.addLevelFile((byte) 121, param0.getNamedFile("", "Media_2.zdl", false));
           stackIn_4_0 = var2;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -277,8 +277,8 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
           if (var5_int != 80) {
             return false;
           }
-          if (lc.field_m[81]) {
-            stackIn_12_0 = this.a(-81, param2);
+          if (PulseEffect.field_m[81]) {
+            stackIn_12_0 = this.focusUnfocusedChild(-81, param2);
           } else {
             stackIn_12_0 = this.handlePointerPress(param2, (byte) -125);
           }
@@ -297,7 +297,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
         }
     }
 
-    private final boolean a(int param0, UiWidget param1) {
+    private final boolean focusUnfocusedChild(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -371,23 +371,23 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
         return null != this.findFocusTarget(-1963) ? true : false;
     }
 
-    final static UiTheme g(int param0) {
+    final static UiTheme getDefaultTheme(int param0) {
         if (param0 != -18799) {
           return (UiTheme) null;
         }
-        if (null == lh.field_g) {
-          lh.field_g = new UiTheme();
-          lh.field_g.initializePainters(125269879, ke.field_h);
-          lh.field_g.field_d = 2763306;
-          lh.field_g.field_p = 14;
-          lh.field_g.field_e = 0;
-          lh.field_g.field_c = 5;
-          lh.field_g.field_l = 6;
-          lh.field_g.field_h = DisplayNamePanel.field_H;
-          lh.field_g.field_b = 7697781;
-          lh.field_g.field_m = 4;
+        if (null == ArchiveLoadSequence.field_g) {
+          ArchiveLoadSequence.field_g = new UiTheme();
+          ArchiveLoadSequence.field_g.initializePainters(125269879, FontPaletteHelpers.field_h);
+          ArchiveLoadSequence.field_g.field_d = 2763306;
+          ArchiveLoadSequence.field_g.field_p = 14;
+          ArchiveLoadSequence.field_g.field_e = 0;
+          ArchiveLoadSequence.field_g.field_c = 5;
+          ArchiveLoadSequence.field_g.field_l = 6;
+          ArchiveLoadSequence.field_g.field_h = DisplayNamePanel.field_H;
+          ArchiveLoadSequence.field_g.field_b = 7697781;
+          ArchiveLoadSequence.field_g.field_m = 4;
         }
-        return lh.field_g;
+        return ArchiveLoadSequence.field_g;
     }
 
     final boolean requestKeyboardFocus(UiWidget param0, int param1) {

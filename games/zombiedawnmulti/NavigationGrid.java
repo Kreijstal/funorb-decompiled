@@ -21,7 +21,7 @@ final class NavigationGrid {
     static int field_j;
     static String field_g;
 
-    private final Waypoint[] a(boolean param0, Waypoint param1, Waypoint[] param2) {
+    private final Waypoint[] appendWaypoint(boolean param0, Waypoint param1, Waypoint[] param2) {
         int var5 = 0;
         Waypoint[] var4 = null;
         RuntimeException var4_ref = null;
@@ -148,7 +148,7 @@ final class NavigationGrid {
         return true;
     }
 
-    final boolean a(int param0, boolean param1, boolean param2, int param3) {
+    final boolean isPassableAt(int param0, boolean param1, boolean param2, int param3) {
         int var5;
         int var6;
         int var7;
@@ -166,7 +166,7 @@ final class NavigationGrid {
           }
           if (!param1) {
             var10 = (Camera) null;
-            this.a(110, false, (Camera) null, -115);
+            this.drawTileLayer(110, false, (Camera) null, -115);
           }
           var7 = param0 % 24;
           var8 = 1;
@@ -202,20 +202,20 @@ final class NavigationGrid {
         int var19;
         int var20;
         var20 = ZombieDawnMulti.field_E ? 1 : 0;
-        if (!this.a(param1, true, param5, param0)) {
+        if (!this.isPassableAt(param1, true, param5, param0)) {
           return -1;
         }
         var8 = 12.0f;
         var9 = -param3 + param1;
         var10 = -param4 + param0;
-        var11 = g.b(var10 * var10 + var9 * var9);
+        var11 = RasterEffectHelpers.intSqrt(var10 * var10 + var9 * var9);
         if (var11 == 0) {
           return 0;
         }
         var12 = var8 / (float)var11;
         var13 = var12 * (float)var9;
         if (param2 != -17201) {
-          this.a(54, true, false, 113);
+          this.isPassableAt(54, true, false, 113);
         }
         var14 = (float)var10 * var12;
         var15 = (float)param3;
@@ -227,7 +227,7 @@ final class NavigationGrid {
           var16 = var16 + var14;
           var15 = var15 + var13;
           if (var18 != 0) {
-            stackIn_15_0 = (this.a((int)var15, true, param5, (int)var16)) ? 1 : 0;
+            stackIn_15_0 = (this.isPassableAt((int)var15, true, param5, (int)var16)) ? 1 : 0;
           } else {
             stackIn_15_0 = 0;
           }
@@ -238,7 +238,7 @@ final class NavigationGrid {
             }
           } else {
             if (var17 != 0) {
-              stackIn_22_0 = (this.a((int)var15, true, param5, -48 + (int)var16)) ? 1 : 0;
+              stackIn_22_0 = (this.isPassableAt((int)var15, true, param5, -48 + (int)var16)) ? 1 : 0;
             } else {
               stackIn_22_0 = 0;
             }
@@ -253,7 +253,7 @@ final class NavigationGrid {
         return var11;
     }
 
-    final void a(int param0) {
+    final void buildCornerWaypoints(int param0) {
         int var2;
         int var3;
         int var4;
@@ -266,7 +266,7 @@ final class NavigationGrid {
         int var3Lifetime1;
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param0 != 48) {
-          NavigationGrid.a(true);
+          NavigationGrid.releaseStatics(true);
         }
         this.field_q = new Waypoint[]{};
         for (var2 = 0; var2 < this.level.field_e; var2++) {
@@ -279,24 +279,24 @@ final class NavigationGrid {
               var7 = this.isTileWalkable(1 + var3, (byte) 36, -1 + var2) ? 1 : 0;
               if (var4 != 0) {
                 if (var5 == 0) {
-                  this.field_q = this.a(false, new Waypoint(24 * var3 + 1, var2 * 24 + 12), this.field_q);
+                  this.field_q = this.appendWaypoint(false, new Waypoint(24 * var3 + 1, var2 * 24 + 12), this.field_q);
                 }
                 if (var4 == 0 &&
                   var5 != 0) {
-                  this.field_q = this.a(false, new Waypoint(-1 + (24 * var3 + 48), 24 * var2 + 12), this.field_q);
+                  this.field_q = this.appendWaypoint(false, new Waypoint(-1 + (24 * var3 + 48), 24 * var2 + 12), this.field_q);
                 }
               } else {
                 if (var5 != 0) {
-                  this.field_q = this.a(false, new Waypoint(-1 + (24 * var3 + 48), 24 * var2 + 12), this.field_q);
+                  this.field_q = this.appendWaypoint(false, new Waypoint(-1 + (24 * var3 + 48), 24 * var2 + 12), this.field_q);
                 }
               }
               if (var6 != 0 &&
                 var7 == 0) {
-                this.field_q = this.a(false, new Waypoint(1 + 24 * var3, 24 * (var2 + 1) - 12), this.field_q);
+                this.field_q = this.appendWaypoint(false, new Waypoint(1 + 24 * var3, 24 * (var2 + 1) - 12), this.field_q);
               }
               if (var6 == 0 &&
                 var7 != 0) {
-                this.field_q = this.a(false, new Waypoint(47 + var3 * 24, (var2 + 1) * 24 - 12), this.field_q);
+                this.field_q = this.appendWaypoint(false, new Waypoint(47 + var3 * 24, (var2 + 1) * 24 - 12), this.field_q);
               }
             }
           }
@@ -306,13 +306,13 @@ final class NavigationGrid {
           var9 = 0;
           var3Lifetime1 = var9;
           while (var9 < this.field_q.length) {
-            this.field_a[var2Lifetime1][var9] = this.a(this.field_q[var2Lifetime1], this.field_q[var9], (byte) -71);
+            this.field_a[var2Lifetime1][var9] = this.traceLineBetween(this.field_q[var2Lifetime1], this.field_q[var9], (byte) -71);
             var9++;
           }
         }
     }
 
-    final static void c(int param0) {
+    final static void handlePendingRequestReply(int param0) {
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -324,19 +324,19 @@ final class NavigationGrid {
         int var8 = 0;
         int[] var10 = null;
         int[] var11 = null;
-        ra var12 = null;
+        PendingIntArrayReply var12 = null;
         MusicPatchNode var13 = null;
         CipherPacketBuffer var14 = null;
-        ra var15 = null;
+        PendingIntArrayReply var15 = null;
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var14 = s.field_e;
+          var14 = StatusAndMeshHelpers.field_e;
           var2 = var14.readUnsignedByte(31365);
           if (param0 != 1) {
             return;
           }
           if (0 == var2) {
-            var11 = InflaterDecompressor.a(8);
+            var11 = InflaterDecompressor.newEightInts(8);
             var3 = var11;
             var10 = var11;
             var4 = var10;
@@ -345,9 +345,9 @@ final class NavigationGrid {
             for (var7 = 0; var7 < var6; var7++) {
               var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(-1478490344);
             }
-            var12 = (ra) (UnitStateEvent.field_j.last(param0 ^ 60));
+            var12 = (PendingIntArrayReply) (UnitStateEvent.field_j.last(param0 ^ 60));
             if (var12 == null) {
-              ak.closeGameSocket((byte) -111);
+              ClientShellHelpers.closeGameSocket((byte) -111);
               return;
             }
             var12.field_h = var3;
@@ -358,21 +358,21 @@ final class NavigationGrid {
           if (1 == var2) {
             var13 = (MusicPatchNode) (QuickChatCategoryRegistry.field_a.last(param0 ^ 73));
             if (var13 == null) {
-              ak.closeGameSocket((byte) -117);
+              ClientShellHelpers.closeGameSocket((byte) -117);
               return;
             }
             var13.unlink(true);
           } else {
             if (var2 != 2) {
-              MouseInputHandler.reportClientError("A1: " + ci.a(0), (Throwable) null, false);
-              ak.closeGameSocket((byte) -118);
+              MouseInputHandler.reportClientError("A1: " + LevelFileList.describeCurrentPacket(0), (Throwable) null, false);
+              ClientShellHelpers.closeGameSocket((byte) -118);
             } else {
-              var15 = (ra) (UnitStateEvent.field_j.last(param0 ^ 76));
+              var15 = (PendingIntArrayReply) (UnitStateEvent.field_j.last(param0 ^ 76));
               if (var15 == null) {
-                ak.closeGameSocket((byte) -128);
+                ClientShellHelpers.closeGameSocket((byte) -128);
                 return;
               }
-              var15.field_h = InflaterDecompressor.a(8);
+              var15.field_h = InflaterDecompressor.newEightInts(8);
               var15.field_k = true;
               var15.unlink(true);
             }
@@ -385,7 +385,7 @@ final class NavigationGrid {
         }
     }
 
-    final void a(byte param0, Camera param1) {
+    final void drawDebugGrid(byte param0, Camera param1) {
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
         String stackIn_46_2 = null;
@@ -456,13 +456,13 @@ final class NavigationGrid {
                 var14Lifetime1 = this.getTile(var5, var6, (byte) 126);
                 var15Lifetime1 = (var14Lifetime1 & 127) >> 0;
                 if (var15Lifetime1 >= 0 &&
-                  rn.field_a.length > var15Lifetime1) {
-                  rn.field_a[var15Lifetime1].drawOpaque(var3_int, var4);
+                  FullscreenSupport.field_a.length > var15Lifetime1) {
+                  FullscreenSupport.field_a[var15Lifetime1].drawOpaque(var3_int, var4);
                 } else {
                   SoftwareRasterizer.fillRect(var3_int, var4, 24, 24, 7631988);
                 }
-                if (qq.field_h) {
-                  MatchingTextValidator.field_w.c(Integer.toString(this.level.field_k[var6][var5]), 12 + var3_int, 12 + var4, 16777215, 1);
+                if (IntHashIndex.field_h) {
+                  MatchingTextValidator.field_w.drawLeft(Integer.toString(this.level.field_k[var6][var5]), 12 + var3_int, 12 + var4, 16777215, 1);
                 }
                 var3_int += 24;
                 this.field_l[var13][var12] = var14Lifetime1;
@@ -481,9 +481,9 @@ final class NavigationGrid {
             var5 = var11;
             var6++;
           }
-          if (qq.field_h) {
+          if (IntHashIndex.field_h) {
             var14Lifetime2 = param1.screenToWorldX(MouseInputHandler.field_g, 2);
-            var15Lifetime2 = param1.screenToWorldY(true, bo.field_d);
+            var15Lifetime2 = param1.screenToWorldY(true, LoginMethod.field_d);
             for (var16 = 0; var16 < this.field_q.length; var16++) {
               var17 = param1.worldToScreenX(this.field_q[var16].x, -20126);
               var18 = param1.worldToScreenY(this.field_q[var16].y, 119);
@@ -526,7 +526,7 @@ final class NavigationGrid {
         }
     }
 
-    private final int a(Waypoint param0, Waypoint param1, byte param2) {
+    private final int traceLineBetween(Waypoint param0, Waypoint param1, byte param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -598,7 +598,7 @@ final class NavigationGrid {
         this.field_l = new int[41][55];
         try {
           this.level = param0;
-          this.a(48);
+          this.buildCornerWaypoints(48);
           this.computePixelSize(true);
           var8 = this.level.field_k;
           var7 = var8;
@@ -674,7 +674,7 @@ final class NavigationGrid {
         if (!this.isTileWalkable(var6Lifetime1, (byte) 22, var7Lifetime1)) {
           return null;
         }
-        if (!this.a(param3, true, true, param1)) {
+        if (!this.isPassableAt(param3, true, true, param1)) {
           if (!this.isTileWalkable(var6Lifetime1 - 1, (byte) 122, var7Lifetime1)) {
             param3 = 24 + 24 * var6Lifetime1 - 1;
           } else {
@@ -686,12 +686,12 @@ final class NavigationGrid {
         var8 = new Waypoint(param0, param2);
         if (param4 != 8760) {
           var20 = (Camera) null;
-          this.a(-105, true, (Camera) null, 61);
+          this.drawTileLayer(-105, true, (Camera) null, 61);
         }
         var9 = new Waypoint(param3, param1);
         var10 = new IntrusiveDeque();
         var10.addFirst(var9, false);
-        var11 = this.a(var9, var8, (byte) -71);
+        var11 = this.traceLineBetween(var9, var8, (byte) -71);
         if (var11 >= 0) {
           return var10;
         }
@@ -702,7 +702,7 @@ final class NavigationGrid {
         var22 = var24;
         var13 = var22;
         for (var14 = 0; var23.length > var14; var14++) {
-          var15 = this.a(var8, this.field_q[var14], (byte) -71);
+          var15 = this.traceLineBetween(var8, this.field_q[var14], (byte) -71);
           var23[var14] = var15;
           stackIn_29_0 = var13;
           stackIn_29_1 = var14;
@@ -733,7 +733,7 @@ final class NavigationGrid {
         var15Lifetime2 = -1;
         var16Lifetime1 = -1;
         for (var17 = 0; var23.length > var17; var17++) {
-          var18 = this.a(var9, this.field_q[var17], (byte) -71);
+          var18 = this.traceLineBetween(var9, this.field_q[var17], (byte) -71);
           if (var18 >= 0 &&
             var23[var17] != -1 && (var16Lifetime1 == -1 ||
             var16Lifetime1 > var18 + var23[var17])) {
@@ -754,17 +754,17 @@ final class NavigationGrid {
         return var10;
     }
 
-    final static void b(int param0) {
-        ee.field_b = false;
-        if (null != mj.field_Ib) {
-          mj.field_Ib.resetSelection((byte) 123);
+    final static void closeQuickChatMenu(int param0) {
+        LobbyScreenHelpers.field_b = false;
+        if (null != ScrollBar.field_Ib) {
+          ScrollBar.field_Ib.resetSelection((byte) 123);
         }
-        if (0 != va.field_a) {
-          pf.clearChatInput(89);
+        if (0 != UrlLaunchHelpers.field_a) {
+          ChatInputHelpers.clearChatInput(89);
         }
         UnitView.field_Y = 0;
         if (param0 != 31706) {
-          NavigationGrid.b(-67);
+          NavigationGrid.closeQuickChatMenu(-67);
         }
     }
 
@@ -807,7 +807,7 @@ final class NavigationGrid {
         return this.traceLine(param0, param2, -17201, param4, param3, true, false);
     }
 
-    final void a(int param0, boolean param1, Camera param2, int param3) {
+    final void drawTileLayer(int param0, boolean param1, Camera param2, int param3) {
         int var8 = 0;
         int var9 = 0;
         RuntimeException stackIn_83_0 = null;
@@ -891,10 +891,10 @@ final class NavigationGrid {
                             }
                             if (0 <= var11 &&
                               var11 < MessageDialog.field_Ab.length) {
-                              MessageDialog.field_Ab[var11].c(var5_int, var6, 128);
+                              MessageDialog.field_Ab[var11].drawBlended(var5_int, var6, 128);
                             } else {
                               SoftwareRasterizer.fillRectAlpha(var5_int, var6, 24, 24, 0, 128);
-                              MessageDialog.field_Ab[21].c(var5_int, var6 + 24, 128);
+                              MessageDialog.field_Ab[21].drawBlended(var5_int, var6 + 24, 128);
                             }
                           } else {
                             SoftwareRasterizer.fillRectAlpha(var5_int, var6, 24, 24, 0, 128);
@@ -924,7 +924,7 @@ final class NavigationGrid {
                       if (!this.field_k[var8 + this.field_b][this.field_o + var9]) {
                         if (0 < (1073741824 & var10) &&
                           0 < (536870912 & var10)) {
-                          var15.d(var5_int, var6);
+                          var15.drawRotatedHalfTurn(var5_int, var6);
                         } else {
                           if (0 >= (var10 & 1073741824)) {
                             if ((var10 & 536870912) > 0) {
@@ -937,7 +937,7 @@ final class NavigationGrid {
                           }
                         }
                       } else {
-                        var15.c(var5_int, var6, 128);
+                        var15.drawBlended(var5_int, var6, 128);
                       }
                       if (MusicPatch.field_p &&
                         (var10 & 33554432) != 0) {
@@ -955,7 +955,7 @@ final class NavigationGrid {
             var6 += 24;
           }
           if (param3 != -1) {
-            this.a(-106, false, true, 19);
+            this.isPassableAt(-106, false, true, 19);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -972,7 +972,7 @@ final class NavigationGrid {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_d = null;
         field_e = null;
         field_g = null;

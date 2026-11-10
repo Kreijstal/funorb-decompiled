@@ -3,7 +3,7 @@
  */
 final class MusicTrack extends IntrusiveNode {
     byte[] field_g;
-    f field_f;
+    NodeHashTable field_f;
 
     final void releasePatchUsage() {
         this.field_f = null;
@@ -22,8 +22,8 @@ final class MusicTrack extends IntrusiveNode {
         int var11;
         int var12;
         int var13;
-        kg var14;
-        kg var15;
+        ProgramNoteUsage var14;
+        ProgramNoteUsage var15;
         int[] var16;
         int[] var18;
         int[] var19;
@@ -38,7 +38,7 @@ final class MusicTrack extends IntrusiveNode {
         if (this.field_f != null) {
           return;
         }
-        this.field_f = new f(16);
+        this.field_f = new NodeHashTable(16);
         var21 = new int[16];
         var18 = var21;
         var1 = var18;
@@ -95,11 +95,11 @@ final class MusicTrack extends IntrusiveNode {
               var12Lifetime1 = var8 >> 16 & 127;
               if (var12Lifetime1 > 0) {
                 var13 = var19[var10Lifetime2];
-                var14 = (kg) (this.field_f.a(0, (long)var13));
+                var14 = (ProgramNoteUsage) (this.field_f.get(0, (long)var13));
                 if (var14 == null) {
-                  var15 = new kg(new byte[128]);
+                  var15 = new ProgramNoteUsage(new byte[128]);
                   var14 = var15;
-                  this.field_f.a(true, (long)var13, var15);
+                  this.field_f.put(true, (long)var13, var15);
                 }
                 var14.field_h[var11Lifetime2] = (byte) 1;
               }
@@ -445,7 +445,7 @@ final class MusicTrack extends IntrusiveNode {
           var62 = -1;
           while (true) {
             var63 = param0.readVarInt(0);
-            var51.g(0, var63);
+            var51.writeVarInt(0, var63);
             incrementValue$0 = var29Lifetime1;
             var29Lifetime1++;
             var64 = param0.payload[incrementValue$0] & 255;
@@ -458,7 +458,7 @@ final class MusicTrack extends IntrusiveNode {
               }
               var51.writeByte(-69, 47);
               var51.writeByte(110, 0);
-              var51.a((byte) 123, var51.position - var61);
+              var51.backpatchIntLength((byte) 123, var51.position - var61);
               var60++;
               break;
             }
@@ -633,7 +633,7 @@ final class MusicTrack extends IntrusiveNode {
     }
 
     final static MusicTrack load(ResourceArchive param0, String param1, String param2) {
-        byte[] var3 = param0.a(param1, param2, false);
+        byte[] var3 = param0.getNamedFile(param1, param2, false);
         if (var3 == null) {
           return null;
         }

@@ -195,8 +195,8 @@ abstract class SimUnit extends SimEntity {
             stackIn_29_0 = 1;
           }
           var5 = stackIn_29_0;
-          if (Math.abs(-var2 + this.positionX) < ho.field_s &&
-            Math.abs(this.positionY - var3) < ho.field_s) {
+          if (Math.abs(-var2 + this.positionX) < OptionsMenuScreen.field_s &&
+            Math.abs(this.positionY - var3) < OptionsMenuScreen.field_s) {
             var5 = 1;
             var4 = 1;
           }
@@ -265,8 +265,8 @@ abstract class SimUnit extends SimEntity {
             stackIn_78_0 = 1;
           }
           var5Lifetime1 = stackIn_78_0;
-          if (Math.abs(-var2Lifetime1 + this.positionX) < ho.field_s &&
-            Math.abs(this.positionY - var3Lifetime1) < ho.field_s) {
+          if (Math.abs(-var2Lifetime1 + this.positionX) < OptionsMenuScreen.field_s &&
+            Math.abs(this.positionY - var3Lifetime1) < OptionsMenuScreen.field_s) {
             var5Lifetime1 = 1;
             var4Lifetime1 = 1;
           }
@@ -304,8 +304,8 @@ abstract class SimUnit extends SimEntity {
               if (this.velocityY < 0 &&
                 var3Lifetime1 > this.positionY) {
                 var5Lifetime2 = 1;
-                if (Math.abs(-var2Lifetime1 + this.positionX) < ho.field_s &&
-                  Math.abs(this.positionY - var3Lifetime1) < ho.field_s) {
+                if (Math.abs(-var2Lifetime1 + this.positionX) < OptionsMenuScreen.field_s &&
+                  Math.abs(this.positionY - var3Lifetime1) < OptionsMenuScreen.field_s) {
                   var5Lifetime2 = 1;
                   var4Lifetime2 = 1;
                 }
@@ -345,8 +345,8 @@ abstract class SimUnit extends SimEntity {
                   stackIn_111_0 = 0;
                 }
                 var5Lifetime2 = stackIn_111_0;
-                if (Math.abs(-var2Lifetime1 + this.positionX) < ho.field_s &&
-                  Math.abs(this.positionY - var3Lifetime1) < ho.field_s) {
+                if (Math.abs(-var2Lifetime1 + this.positionX) < OptionsMenuScreen.field_s &&
+                  Math.abs(this.positionY - var3Lifetime1) < OptionsMenuScreen.field_s) {
                   var5Lifetime2 = 1;
                   var4Lifetime2 = 1;
                 }
@@ -383,8 +383,8 @@ abstract class SimUnit extends SimEntity {
             stackIn_160_0 = 1;
           }
           var5Lifetime2Lifetime1 = stackIn_160_0;
-          if (Math.abs(-var2Lifetime1 + this.positionX) < ho.field_s &&
-            Math.abs(this.positionY - var3Lifetime1) < ho.field_s) {
+          if (Math.abs(-var2Lifetime1 + this.positionX) < OptionsMenuScreen.field_s &&
+            Math.abs(this.positionY - var3Lifetime1) < OptionsMenuScreen.field_s) {
             var5Lifetime2Lifetime1 = 1;
             var4Lifetime2 = 1;
           }
@@ -438,8 +438,8 @@ abstract class SimUnit extends SimEntity {
               }
             }
             var5Lifetime3 = stackIn_282_0;
-            if (Math.abs(-var2Lifetime1 + this.positionX) < ho.field_s &&
-              Math.abs(this.positionY - var3Lifetime1) < ho.field_s) {
+            if (Math.abs(-var2Lifetime1 + this.positionX) < OptionsMenuScreen.field_s &&
+              Math.abs(this.positionY - var3Lifetime1) < OptionsMenuScreen.field_s) {
               var5Lifetime3 = 1;
               var4Lifetime3 = 1;
             }
@@ -476,8 +476,8 @@ abstract class SimUnit extends SimEntity {
               if (this.velocityY < 0 &&
                 var3Lifetime1 > this.positionY) {
                 var5Lifetime3Lifetime1 = 1;
-                if (Math.abs(-var2Lifetime1 + this.positionX) < ho.field_s &&
-                  Math.abs(this.positionY - var3Lifetime1) < ho.field_s) {
+                if (Math.abs(-var2Lifetime1 + this.positionX) < OptionsMenuScreen.field_s &&
+                  Math.abs(this.positionY - var3Lifetime1) < OptionsMenuScreen.field_s) {
                   var5Lifetime3Lifetime1 = 1;
                   var4Lifetime3Lifetime1 = 1;
                 }
@@ -517,8 +517,8 @@ abstract class SimUnit extends SimEntity {
                   stackIn_194_0 = 0;
                 }
                 var5Lifetime3Lifetime1 = stackIn_194_0;
-                if (Math.abs(-var2Lifetime1 + this.positionX) < ho.field_s &&
-                  Math.abs(this.positionY - var3Lifetime1) < ho.field_s) {
+                if (Math.abs(-var2Lifetime1 + this.positionX) < OptionsMenuScreen.field_s &&
+                  Math.abs(this.positionY - var3Lifetime1) < OptionsMenuScreen.field_s) {
                   var5Lifetime3Lifetime1 = 1;
                   var4Lifetime3Lifetime1 = 1;
                 }
@@ -555,8 +555,8 @@ abstract class SimUnit extends SimEntity {
             stackIn_243_0 = 1;
           }
           var5Lifetime3Lifetime2 = stackIn_243_0;
-          if (Math.abs(-var2Lifetime1 + this.positionX) < ho.field_s &&
-            Math.abs(this.positionY - var3Lifetime1) < ho.field_s) {
+          if (Math.abs(-var2Lifetime1 + this.positionX) < OptionsMenuScreen.field_s &&
+            Math.abs(this.positionY - var3Lifetime1) < OptionsMenuScreen.field_s) {
             var5Lifetime3Lifetime2 = 1;
             var4Lifetime3Lifetime1 = 1;
           }
@@ -605,8 +605,8 @@ abstract class SimUnit extends SimEntity {
             }
           }
           var5Lifetime4 = stackIn_318_0;
-          if (Math.abs(-var2Lifetime1 + this.positionX) < ho.field_s &&
-            Math.abs(this.positionY - var3Lifetime1) < ho.field_s) {
+          if (Math.abs(-var2Lifetime1 + this.positionX) < OptionsMenuScreen.field_s &&
+            Math.abs(this.positionY - var3Lifetime1) < OptionsMenuScreen.field_s) {
             var5Lifetime4 = 1;
             var4Lifetime4 = 1;
           }
@@ -640,8 +640,8 @@ abstract class SimUnit extends SimEntity {
         var4Lifetime5 = 0;
         if (this.velocityY == 0) {
           var5Lifetime5 = 1;
-          if (Math.abs(-var2Lifetime1 + this.positionX) < ho.field_s) {
-            if (Math.abs(this.positionY - var3Lifetime1) >= ho.field_s) {
+          if (Math.abs(-var2Lifetime1 + this.positionX) < OptionsMenuScreen.field_s) {
+            if (Math.abs(this.positionY - var3Lifetime1) >= OptionsMenuScreen.field_s) {
               if (var4Lifetime5 != 0 &&
                 var5Lifetime5 == 0) {
                 if (this.velocityX != 0) {
@@ -680,8 +680,8 @@ abstract class SimUnit extends SimEntity {
             } else {
               var5Lifetime5 = 0;
             }
-            if (Math.abs(-var2Lifetime1 + this.positionX) < ho.field_s &&
-              Math.abs(this.positionY - var3Lifetime1) < ho.field_s) {
+            if (Math.abs(-var2Lifetime1 + this.positionX) < OptionsMenuScreen.field_s &&
+              Math.abs(this.positionY - var3Lifetime1) < OptionsMenuScreen.field_s) {
               var5Lifetime5 = 1;
               var4Lifetime5 = 1;
             }
@@ -693,8 +693,8 @@ abstract class SimUnit extends SimEntity {
                 stackIn_426_0 = 0;
               }
               var5Lifetime5 = stackIn_426_0;
-              if (Math.abs(-var2Lifetime1 + this.positionX) < ho.field_s &&
-                Math.abs(this.positionY - var3Lifetime1) < ho.field_s) {
+              if (Math.abs(-var2Lifetime1 + this.positionX) < OptionsMenuScreen.field_s &&
+                Math.abs(this.positionY - var3Lifetime1) < OptionsMenuScreen.field_s) {
                 var5Lifetime5 = 1;
                 var4Lifetime5 = 1;
               }
@@ -726,8 +726,8 @@ abstract class SimUnit extends SimEntity {
               return false;
             }
             var5Lifetime5 = 1;
-            if (Math.abs(-var2Lifetime1 + this.positionX) < ho.field_s) {
-              if (Math.abs(this.positionY - var3Lifetime1) >= ho.field_s) {
+            if (Math.abs(-var2Lifetime1 + this.positionX) < OptionsMenuScreen.field_s) {
+              if (Math.abs(this.positionY - var3Lifetime1) >= OptionsMenuScreen.field_s) {
                 if (var4Lifetime5 != 0 &&
                   var5Lifetime5 == 0) {
                   if (this.velocityX != 0) {
@@ -793,20 +793,20 @@ abstract class SimUnit extends SimEntity {
     final static TextWidgetPainter getDefaultTextPainter(byte param0) {
         int var1 = 0;
         int var1Lifetime1;
-        if (hj.field_d != null) {
+        if (SpriteDecodeGlobals.field_d != null) {
           var1 = -122 % ((53 - param0) / 62);
-          return hj.field_d;
+          return SpriteDecodeGlobals.field_d;
         }
-        hj.field_d = new TextWidgetPainter(DisplayNamePanel.field_H, 20, 0, 0, 0, 11579568, -1, 0, 0, DisplayNamePanel.field_H.maxAscent, -1, 2147483647, true);
+        SpriteDecodeGlobals.field_d = new TextWidgetPainter(DisplayNamePanel.field_H, 20, 0, 0, 0, 11579568, -1, 0, 0, DisplayNamePanel.field_H.maxAscent, -1, 2147483647, true);
         var1Lifetime1 = -122 % ((53 - param0) / 62);
-        return hj.field_d;
+        return SpriteDecodeGlobals.field_d;
     }
 
     SimUnit(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2);
         this.state = this instanceof SimHuman ? 0 : 4;
         this.field_X = false;
-        hp.nextBoundedInt((byte) 105, g.field_a, 2);
+        RandomHelpers.nextBoundedInt((byte) 105, RasterEffectHelpers.field_a, 2);
         this.animationFrame = 0;
         this.removed = false;
         this.speedEffectTicks = 400;
@@ -849,11 +849,11 @@ abstract class SimUnit extends SimEntity {
         this.removed = true;
         this.unlink(true);
         if (param0 == 18) {
-          this.a(param0 - 4582);
+          this.unlinkSecondary(param0 - 4582);
           return;
         }
         this.targetX = -127;
-        this.a(param0 - 4582);
+        this.unlinkSecondary(param0 - 4582);
     }
 
     final void moveToward(int param0, int param1) {
@@ -879,7 +879,7 @@ abstract class SimUnit extends SimEntity {
         this.speed = param1;
         var3 = this.targetX - this.getX((byte) -112);
         var4 = this.targetY - this.getY(1829947600);
-        var5 = g.b(var3 * var3 + var4 * var4);
+        var5 = RasterEffectHelpers.intSqrt(var3 * var3 + var4 * var4);
         if (var5 != 0) {
           var6 = param1 / var5;
           this.setVelocity(var6 * var4, (byte) -127, var3 * var6);
@@ -944,10 +944,10 @@ abstract class SimUnit extends SimEntity {
     final void advanceAnimation(byte param0, int param1) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
-        if (!(this.animationFrame < gg.field_j[param1])) {
+        if (!(this.animationFrame < ArchiveLoadStep.field_j[param1])) {
           this.animationFrame = 0;
         }
-        int var3 = gg.field_b[param1];
+        int var3 = ArchiveLoadStep.field_b[param1];
         if (param0 <= 116) {
           this.applySlow(55, -76);
           if (2 > this.speedMultiplier) {
@@ -960,7 +960,7 @@ abstract class SimUnit extends SimEntity {
           }
           fieldTemp$1 = this.animationFrame + 1;
           this.animationFrame = this.animationFrame + 1;
-          if (fieldTemp$1 == gg.field_j[param1]) {
+          if (fieldTemp$1 == ArchiveLoadStep.field_j[param1]) {
             this.animationFrame = 0;
           } else {
             this.animationTicks = 0;
@@ -979,7 +979,7 @@ abstract class SimUnit extends SimEntity {
         }
         int fieldTemp$3 = this.animationFrame + 1;
         this.animationFrame = this.animationFrame + 1;
-        if (fieldTemp$3 == gg.field_j[param1]) {
+        if (fieldTemp$3 == ArchiveLoadStep.field_j[param1]) {
           this.animationFrame = 0;
         } else {
           this.animationTicks = 0;
@@ -995,7 +995,7 @@ abstract class SimUnit extends SimEntity {
             return;
           }
           this.unlink(true);
-          this.a(-4564);
+          this.unlinkSecondary(-4564);
           this.positionY = 262144000;
           this.positionX = 262144000;
           return;
@@ -1052,14 +1052,14 @@ abstract class SimUnit extends SimEntity {
         this.state = param0;
         if (param1 == -89) {
           if (param0 == 21) {
-            this.a(-4564);
+            this.unlinkSecondary(-4564);
             this.field_U = 256;
           }
           return;
         }
         field_bb = (String) null;
         if (param0 == 21) {
-          this.a(-4564);
+          this.unlinkSecondary(-4564);
           this.field_U = 256;
         }
     }

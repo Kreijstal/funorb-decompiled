@@ -35,7 +35,7 @@ final class IterableNodeHashTable implements Iterable {
         return var6;
     }
 
-    final void a(long param0, byte param1, IntrusiveNode param2) {
+    final void put(long param0, byte param1, IntrusiveNode param2) {
         IntrusiveNode var5 = null;
         try {
           if (null != param2.next) {
@@ -55,7 +55,7 @@ final class IterableNodeHashTable implements Iterable {
         }
     }
 
-    final static LevelData a(byte[] param0, int param1) {
+    final static LevelData decodeLevelData(byte[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -70,25 +70,25 @@ final class IterableNodeHashTable implements Iterable {
         try {
           if (param1 >= -12) {
             var3 = (byte[]) null;
-            IterableNodeHashTable.a((byte[]) null, -96);
+            IterableNodeHashTable.decodeLevelData((byte[]) null, -96);
           }
-          var2_int = ql.a(true, 0, param0);
+          var2_int = RasterStackHelpers.readIntAt(true, 0, param0);
           if (var2_int == 3) {
-            stackIn_4_0 = ee.a(param0, true);
+            stackIn_4_0 = LobbyScreenHelpers.loadLevelVersion3(param0, true);
             return stackIn_4_0;
           }
           if (var2_int == 4) {
-            stackIn_15_0 = nn.decodeLegacyLevel(-99, param0);
+            stackIn_15_0 = LevelEncodingHelpers.decodeLegacyLevel(-99, param0);
             return stackIn_15_0;
           }
           if (var2_int == 5) {
-            stackIn_13_0 = jg.a(30270, param0);
+            stackIn_13_0 = LevelUpgradeHelpers.upgradeLevelDataV5(30270, param0);
             return stackIn_13_0;
           }
           if (var2_int != 6) {
             return null;
           }
-          stackIn_10_0 = gi.parseLevelDataV6(param0, -115);
+          stackIn_10_0 = LevelFileEntry.parseLevelDataV6(param0, -115);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -111,39 +111,39 @@ final class IterableNodeHashTable implements Iterable {
     public static void releaseStatics(boolean param0) {
         if (param0) {
           byte[] var2 = (byte[]) null;
-          IterableNodeHashTable.a((byte[]) null, -107);
+          IterableNodeHashTable.decodeLevelData((byte[]) null, -107);
           field_b = null;
           return;
         }
         field_b = null;
     }
 
-    final static void a(int param0, int param1, int param2, String param3, String param4) {
-        ec.field_b.field_vb = param4;
-        ec.field_b.field_wb = param3;
-        ec.field_b.field_M = param1;
-        ec.field_b.field_zb = ec.field_b.field_zb + DraggableWidget.field_E.field_zb;
+    final static void setChatTabLabel(int param0, int param1, int param2, String param3, String param4) {
+        CookieHelpers.field_b.field_vb = param4;
+        CookieHelpers.field_b.field_wb = param3;
+        CookieHelpers.field_b.field_M = param1;
+        CookieHelpers.field_b.field_zb = CookieHelpers.field_b.field_zb + DraggableWidget.field_E.field_zb;
         DraggableWidget.field_E.field_x = DraggableWidget.field_E.field_x + DraggableWidget.field_E.field_zb;
         if (param0 != 6) {
           return;
         }
         try {
           DraggableWidget.field_E.field_zb = param2;
-          ec.field_b.field_zb = ec.field_b.field_zb - DraggableWidget.field_E.field_zb;
+          CookieHelpers.field_b.field_zb = CookieHelpers.field_b.field_zb - DraggableWidget.field_E.field_zb;
           DraggableWidget.field_E.field_x = DraggableWidget.field_E.field_x - DraggableWidget.field_E.field_zb;
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "wh.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static Sprite a(int param0, double param1, int param2) {
+    final static Sprite createTitleBannerSprite(int param0, double param1, int param2) {
         int var8 = 0;
         Sprite var9 = new Sprite(640, 75);
         var9.bindAsRenderTarget();
         SoftwareRasterizer.fillRectGradient(0, 5, 640, 55, 16777215, 1);
         Sprite var5 = new Sprite(640, 75);
         var5.bindAsRenderTarget();
-        TertiaryLinkNode.field_r.drawCentered(sm.field_g[param2], 320, 65, 53248, 1);
+        TertiaryLinkNode.field_r.drawCentered(DisplayMode.field_g[param2], 320, 65, 53248, 1);
         Sprite var6 = new Sprite(640, 75);
         var6.bindAsRenderTarget();
         int var7 = (int)(param1 * 640.0);
@@ -155,7 +155,7 @@ final class IterableNodeHashTable implements Iterable {
           var6.addOutline(16777215);
           var6.addOutline(1);
           var6.addOutline(1);
-          SocketConnector.field_h.b((byte) 96);
+          SocketConnector.field_h.bindRaster((byte) 96);
           return var6;
         }
         return (Sprite) null;

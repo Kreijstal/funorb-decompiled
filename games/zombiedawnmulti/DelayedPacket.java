@@ -36,12 +36,12 @@ final class DelayedPacket extends IntrusiveNode {
 
     final static String getPendingPassword(int param0) {
         if (BirthDateValidator.field_k == SceneObject.field_B) {
-          return am.field_a;
+          return TeamSpriteHelpers.field_a;
         }
         if (param0 != -19385) {
           return (String) null;
         }
-        return s.field_a;
+        return StatusAndMeshHelpers.field_a;
     }
 
     DelayedPacket(long param0, int param1, byte[] param2) {

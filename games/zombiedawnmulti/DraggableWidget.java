@@ -65,11 +65,11 @@ final class DraggableWidget extends SingleChildWidget {
 
     final static int pollClientConnections(int param0) {
         int var1 = -104 % ((59 - param0) / 49);
-        tj.field_a.b(0);
-        if (i.field_a.poll((byte) 99)) {
+        EffectVolumeHelpers.field_a.serviceProviders(0);
+        if (SharedTransportGlobals.field_a.poll((byte) 99)) {
           return 0;
         }
-        return IntrusiveDequeCursor.b(19352);
+        return IntrusiveDequeCursor.pollServerConnection(19352);
     }
 
     public static void releaseStatics(byte param0) {
@@ -108,15 +108,15 @@ final class DraggableWidget extends SingleChildWidget {
         ResourceArchive var4 = null;
         try {
           if (param1 == 1) {
-            stackIn_2_0 = vl.a(oe.field_e, new String[]{param2}, 2);
+            stackIn_2_0 = QueuedListRequest.substituteTemplateArguments(TextDecodeHelpers.field_e, new String[]{param2}, 2);
             return stackIn_2_0;
           }
           if (param1 == 2) {
-            stackIn_5_0 = vl.a(qb.field_o, new String[]{param2}, 2);
+            stackIn_5_0 = QueuedListRequest.substituteTemplateArguments(Js5Transport.field_o, new String[]{param2}, 2);
             return stackIn_5_0;
           }
           if (param1 == 3) {
-            stackIn_8_0 = vl.a(ki.field_l, new String[]{param2}, 2);
+            stackIn_8_0 = QueuedListRequest.substituteTemplateArguments(SpriteHotspot.field_l, new String[]{param2}, 2);
             return stackIn_8_0;
           }
           if (param0 != -61) {
@@ -124,37 +124,37 @@ final class DraggableWidget extends SingleChildWidget {
             DraggableWidget.setBenefitsArchives((ResourceArchive) null, (ResourceArchive) null, (byte) 0);
           }
           if (4 == param1) {
-            stackIn_14_0 = vl.a(NavigationGrid.field_f, new String[]{param2}, 2);
+            stackIn_14_0 = QueuedListRequest.substituteTemplateArguments(NavigationGrid.field_f, new String[]{param2}, 2);
             return stackIn_14_0;
           }
           if (param1 == 5) {
-            stackIn_17_0 = vl.a(TextInputValidator.field_l, new String[]{param2}, 2);
+            stackIn_17_0 = QueuedListRequest.substituteTemplateArguments(TextInputValidator.field_l, new String[]{param2}, 2);
             return stackIn_17_0;
           }
           if (param1 == 6) {
-            stackIn_21_0 = vl.a(ik.field_e, new String[]{param2}, 2);
+            stackIn_21_0 = QueuedListRequest.substituteTemplateArguments(KeyboardStateHelpers.field_e, new String[]{param2}, 2);
             return stackIn_21_0;
           }
           if (param1 == 7) {
-            stackIn_25_0 = vl.a(sf.field_c, new String[]{param2}, 2);
+            stackIn_25_0 = QueuedListRequest.substituteTemplateArguments(SocialRequestHelpers.field_c, new String[]{param2}, 2);
             return stackIn_25_0;
           }
           if (8 == param1) {
-            stackIn_28_0 = vl.a(ScrollPane.field_Fb, new String[]{param2}, 2);
+            stackIn_28_0 = QueuedListRequest.substituteTemplateArguments(ScrollPane.field_Fb, new String[]{param2}, 2);
             return stackIn_28_0;
           }
           if (param1 == 11) {
-            stackIn_31_0 = vl.a(qh.field_b, new String[]{param2}, 2);
+            stackIn_31_0 = QueuedListRequest.substituteTemplateArguments(TabbedOverlayPanel.field_b, new String[]{param2}, 2);
             return stackIn_31_0;
           }
           if (param1 == 12) {
-            stackIn_34_0 = vl.a(oa.field_b, new String[]{param2}, param0 + 63);
+            stackIn_34_0 = QueuedListRequest.substituteTemplateArguments(ClientTickHelpers.field_b, new String[]{param2}, param0 + 63);
             return stackIn_34_0;
           }
           if (13 != param1) {
             return null;
           }
-          stackIn_38_0 = vl.a(Waypoint.field_i, new String[]{param2}, param0 + 63);
+          stackIn_38_0 = QueuedListRequest.substituteTemplateArguments(Waypoint.field_i, new String[]{param2}, param0 + 63);
           return stackIn_38_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -192,7 +192,7 @@ final class DraggableWidget extends SingleChildWidget {
           if (1 != param2) {
             return true;
           }
-          qi.field_a = this;
+          LoginPacketHelpers.field_a = this;
           this.field_F = -param6 + (-this.field_i + param0);
           this.field_L = -param5 + (-this.field_y + param1);
           return true;
@@ -214,13 +214,13 @@ final class DraggableWidget extends SingleChildWidget {
         if (PortalView.field_L != null) {
           PortalView.field_L.dismissDialog(-7435);
         }
-        qe.field_e = new DisplayNamePanel();
+        GameHud.field_e = new DisplayNamePanel();
         if (param0 == -2) {
-          wj.field_i.transitionToContent((UiWidget) (qe.field_e), (byte) 123);
+          SoundEffectInstance.field_i.transitionToContent((UiWidget) (GameHud.field_e), (byte) 123);
           return;
         }
         DraggableWidget.pollClientConnections(-84);
-        wj.field_i.transitionToContent((UiWidget) (qe.field_e), (byte) 123);
+        SoundEffectInstance.field_i.transitionToContent((UiWidget) (GameHud.field_e), (byte) 123);
     }
 
     final void handlePointerRelease(int param0, UiWidget param1, int param2, int param3, boolean param4, int param5) {
@@ -250,7 +250,7 @@ final class DraggableWidget extends SingleChildWidget {
           if (param2 != 23) {
             field_N = 91;
           }
-          lb.field_d = param0;
+          PasswordCheckHelpers.field_d = param0;
           ArrayWidgetGroup.field_C = param1;
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ua.IA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -274,13 +274,13 @@ final class DraggableWidget extends SingleChildWidget {
             ((ButtonWidget) (this.field_B)).field_F) &&
             this.field_u == 1) {
             var5_int = -this.field_L + (MouseInputHandler.field_g - param2);
-            var6 = -param3 + (-this.field_F + bo.field_d);
+            var6 = -param3 + (-this.field_F + LoginMethod.field_d);
             if (this.field_y != var5_int ||
               this.field_i != var6) {
               this.field_i = var6;
               this.field_y = var5_int;
-              if (this.field_A instanceof ad) {
-                ((ad) (this.field_A)).onDragMoved(param2, false, this, param3);
+              if (this.field_A instanceof DragMovementListener) {
+                ((DragMovementListener) (this.field_A)).onDragMoved(param2, false, this, param3);
               }
             }
           } else if (this.field_H) {

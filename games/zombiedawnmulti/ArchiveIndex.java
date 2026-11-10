@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ArchiveIndex {
-    qq field_d;
+    IntHashIndex field_d;
     static String field_m;
     static String field_k;
     static String field_f;
@@ -16,7 +16,7 @@ final class ArchiveIndex {
     byte[][] field_a;
     int[] field_p;
     int field_e;
-    qq[] field_n;
+    IntHashIndex[] field_n;
     private int field_q;
     int[] field_b;
     private int[] field_j;
@@ -68,7 +68,7 @@ final class ArchiveIndex {
         int var13Lifetime1Lifetime1;
         var16 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var17 = new PacketBuffer(hb.decompressContainer(param1, param0));
+          var17 = new PacketBuffer(ContainerUnpackHelpers.decompressContainer(param1, param0));
           var4 = var17.readUnsignedByte(31365);
           if (5 <= var4 &&
             7 >= var4) {
@@ -85,14 +85,14 @@ final class ArchiveIndex {
             if (var4 < 7) {
               this.field_q = var17.readUnsignedShort((byte) 69);
             } else {
-              this.field_q = var17.e((byte) -49);
+              this.field_q = var17.readUnsignedShortOrInt((byte) -49);
             }
             var8 = 0;
             this.field_l = new int[this.field_q];
             var9 = -1;
             if (var4 >= 7) {
               for (var10 = 0; var10 < this.field_q; var10++) {
-                dupTemp$0 = var8 + var17.e((byte) -49);
+                dupTemp$0 = var8 + var17.readUnsignedShortOrInt((byte) -49);
                 var8 = dupTemp$0;
                 this.field_l[var10] = dupTemp$0;
                 if (this.field_l[var10] > var9) {
@@ -126,28 +126,28 @@ final class ArchiveIndex {
               for (var10Lifetime1Lifetime1 = 0; this.field_q > var10Lifetime1Lifetime1; var10Lifetime1Lifetime1++) {
                 this.field_j[this.field_l[var10Lifetime1Lifetime1]] = var17.readInt(param0 - 1478490344);
               }
-              this.field_d = new qq(this.field_j);
+              this.field_d = new IntHashIndex(this.field_j);
             }
             for (var10Lifetime2 = 0; this.field_q > var10Lifetime2; var10Lifetime2++) {
               this.field_r[this.field_l[var10Lifetime2]] = var17.readInt(param0 - 1478490344);
             }
             if (var7 == 0) {
               for (var10Lifetime3 = 0; this.field_q > var10Lifetime3; var10Lifetime3++) {
-                this.field_p[this.field_l[var10Lifetime3]] = var17.readInt(vg.a(param0, -1478490344));
+                this.field_p[this.field_l[var10Lifetime3]] = var17.readInt(RankingsRequest.bitXor(param0, -1478490344));
               }
             } else {
               for (var10Lifetime3 = 0; this.field_q > var10Lifetime3; var10Lifetime3++) {
                 var21 = new byte[64];
-                var17.a(0, param0 - 6351, 64, var21);
+                var17.readBytes(0, param0 - 6351, 64, var21);
                 this.field_a[this.field_l[var10Lifetime3]] = var21;
               }
               for (var10Lifetime3 = 0; this.field_q > var10Lifetime3; var10Lifetime3++) {
-                this.field_p[this.field_l[var10Lifetime3]] = var17.readInt(vg.a(param0, -1478490344));
+                this.field_p[this.field_l[var10Lifetime3]] = var17.readInt(RankingsRequest.bitXor(param0, -1478490344));
               }
             }
             if (var4 >= 7) {
               for (var10Lifetime4 = 0; var10Lifetime4 < this.field_q; var10Lifetime4++) {
-                this.field_s[this.field_l[var10Lifetime4]] = var17.e((byte) -49);
+                this.field_s[this.field_l[var10Lifetime4]] = var17.readUnsignedShortOrInt((byte) -49);
               }
               for (var10Lifetime4 = 0; this.field_q > var10Lifetime4; var10Lifetime4++) {
                 var11 = this.field_l[var10Lifetime4];
@@ -157,7 +157,7 @@ final class ArchiveIndex {
                 this.field_i[var11] = array$2;
                 var13 = -1;
                 for (var14 = 0; var12 > var14; var14++) {
-                  dupTemp$3 = var8Lifetime1 + var17.e((byte) -49);
+                  dupTemp$3 = var8Lifetime1 + var17.readUnsignedShortOrInt((byte) -49);
                   var8Lifetime1 = dupTemp$3;
                   dupTemp$4 = this.field_i[var11];
                   dupTemp$4[var14] = dupTemp$3;
@@ -199,7 +199,7 @@ final class ArchiveIndex {
               }
             }
             if (var6 != 0) {
-              this.field_n = new qq[1 + var9];
+              this.field_n = new IntHashIndex[1 + var9];
               this.field_c = new int[1 + var9][];
               for (var10Lifetime5 = 0; var10Lifetime5 < this.field_q; var10Lifetime5++) {
                 var11Lifetime1 = this.field_l[var10Lifetime5];
@@ -217,7 +217,7 @@ final class ArchiveIndex {
                   }
                   this.field_c[var11Lifetime1][var14Lifetime1] = var17.readInt(-1478490344);
                 }
-                this.field_n[var11Lifetime1] = new qq(this.field_c[var11Lifetime1]);
+                this.field_n[var11Lifetime1] = new IntHashIndex(this.field_c[var11Lifetime1]);
               }
               return;
             }
@@ -270,7 +270,7 @@ final class ArchiveIndex {
     ArchiveIndex(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
-          this.field_o = pb.computeCrc(param0, param0.length, (byte) -120);
+          this.field_o = EffectAudioHelpers.computeCrc(param0, param0.length, (byte) -120);
           if (this.field_o != param1) {
             throw new RuntimeException();
           }
@@ -278,7 +278,7 @@ final class ArchiveIndex {
             if (64 != param2.length) {
               throw new RuntimeException();
             }
-            this.field_g = ho.computeWhirlpoolDigest(4246, 0, param0, param0.length);
+            this.field_g = OptionsMenuScreen.computeWhirlpoolDigest(4246, 0, param0, param0.length);
             for (var4_int = 0; var4_int < 64; var4_int++) {
               if (this.field_g[var4_int] != param2[var4_int]) {
                 throw new RuntimeException();

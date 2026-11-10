@@ -10,20 +10,20 @@ class TertiaryLinkNode extends DualLinkNode {
     TertiaryLinkNode tertiaryPrevious;
     static String field_t;
 
-    final static void f(int param0) {
+    final static void drawMenuPanel(int param0) {
         int var2 = 0;
-        int var1 = bl.getMenuWidth(-42);
+        int var1 = ClockAndScreenHelpers.getMenuWidth(-42);
         int var2Lifetime1;
         if (param0 == -4604) {
-          var2 = ii.getContextMenuHeight((byte) -126);
-          qf.field_c.drawFrame(-ic.field_g + eb.field_M, IntrusiveDequeCursor.field_i - SecondaryNodeDeque.field_a, (SecondaryNodeDeque.field_a << 1) + var1, var2 + (ic.field_g << 1), 12018);
-          NodeHashTableIterator.b(-125);
+          var2 = TickClock.getContextMenuHeight((byte) -126);
+          TextPopupHelpers.field_c.drawFrame(-LoginCredentials.field_g + PopupMenuBuilder.field_M, IntrusiveDequeCursor.field_i - SecondaryNodeDeque.field_a, (SecondaryNodeDeque.field_a << 1) + var1, var2 + (LoginCredentials.field_g << 1), 12018);
+          NodeHashTableIterator.centreMessageMenu(-125);
           return;
         }
         field_t = (String) null;
-        var2Lifetime1 = ii.getContextMenuHeight((byte) -126);
-        qf.field_c.drawFrame(-ic.field_g + eb.field_M, IntrusiveDequeCursor.field_i - SecondaryNodeDeque.field_a, (SecondaryNodeDeque.field_a << 1) + var1, var2Lifetime1 + (ic.field_g << 1), 12018);
-        NodeHashTableIterator.b(-125);
+        var2Lifetime1 = TickClock.getContextMenuHeight((byte) -126);
+        TextPopupHelpers.field_c.drawFrame(-LoginCredentials.field_g + PopupMenuBuilder.field_M, IntrusiveDequeCursor.field_i - SecondaryNodeDeque.field_a, (SecondaryNodeDeque.field_a << 1) + var1, var2Lifetime1 + (LoginCredentials.field_g << 1), 12018);
+        NodeHashTableIterator.centreMessageMenu(-125);
     }
 
     final void unlinkTertiary(byte param0) {
@@ -37,48 +37,48 @@ class TertiaryLinkNode extends DualLinkNode {
           this.tertiaryNext = null;
           return;
         }
-        TertiaryLinkNode.f(-48);
+        TertiaryLinkNode.drawMenuPanel(-48);
         this.tertiaryPrevious.tertiaryNext = this.tertiaryNext;
         this.tertiaryNext.tertiaryPrevious = this.tertiaryPrevious;
         this.tertiaryPrevious = null;
         this.tertiaryNext = null;
     }
 
-    final static void a(int param0, int param1) {
+    final static void setMusicVolume(int param0, int param1) {
         int var2 = 0;
         int var2Lifetime1;
-        uk.field_S = param0;
+        ValidationIconWidget.field_S = param0;
         if (MessageDialogContent.field_L == null) {
           var2 = 8 % ((-28 - param1) / 48);
-          if (ra.field_m != null) {
-            ra.field_m.a(param0, 18813);
+          if (PendingIntArrayReply.field_m != null) {
+            PendingIntArrayReply.field_m.setVolume(param0, 18813);
           }
           return;
         }
         MessageDialogContent.field_L.setMasterVolume(param0, (byte) 116);
         var2Lifetime1 = 8 % ((-28 - param1) / 48);
-        if (ra.field_m != null) {
-          ra.field_m.a(param0, 18813);
+        if (PendingIntArrayReply.field_m != null) {
+          PendingIntArrayReply.field_m.setVolume(param0, 18813);
         }
     }
 
     protected TertiaryLinkNode() {
     }
 
-    final static void a(byte param0, int param1) {
+    final static void resendRankingsRequests(byte param0, int param1) {
         int var3 = 0;
-        vg var4 = null;
+        RankingsRequest var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (param0 != 126) {
-            TertiaryLinkNode.a(-116, -3);
+            TertiaryLinkNode.setMusicVolume(-116, -3);
           }
-          var4 = (vg) (GameApplet.field_i.last(param0 - 74));
+          var4 = (RankingsRequest) (GameApplet.field_i.last(param0 - 74));
           while (var4 != null) {
-            vi.a(param1, var4, (byte) -123);
-            var4 = (vg) (GameApplet.field_i.previous(6));
+            LobbyGameListHelpers.sendRankingsRequest(param1, var4, (byte) -123);
+            var4 = (RankingsRequest) (GameApplet.field_i.previous(6));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

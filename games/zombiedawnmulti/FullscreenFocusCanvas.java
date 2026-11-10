@@ -4,8 +4,8 @@
 final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.event.FocusListener {
     java.awt.Frame field_i;
     volatile boolean field_e;
-    static lf field_j;
-    static rp field_k;
+    static TransitionPhase field_j;
+    static PlayerProfile field_k;
     static MouseWheelInput field_a;
     static java.awt.Frame field_g;
     static int field_b;
@@ -14,9 +14,9 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     static int[] field_f;
     static boolean[] field_c;
 
-    final void a(int param0, PlatformTaskDispatcher param1) {
+    final void exitFullscreen(int param0, PlatformTaskDispatcher param1) {
         try {
-          sp.exitFullscreenAndDisposeFrame(param1, param0 ^ 8193, this.field_i);
+          CachedTextLayout.exitFullscreenAndDisposeFrame(param1, param0 ^ 8193, this.field_i);
           if (param0 != 8192) {
             java.awt.event.FocusEvent var4 = (java.awt.event.FocusEvent) null;
             this.focusGained((java.awt.event.FocusEvent) null);
@@ -59,7 +59,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     }
 
     static {
-        field_j = new lf();
+        field_j = new TransitionPhase();
         field_d = "Show chat";
         field_f = new int[8192];
     }

@@ -11,7 +11,7 @@ final class QuickChatMenu extends UiComponent {
     private int field_Tb;
     private QuickChatMenu field_Ib;
     private int field_Mb;
-    static lf field_Rb;
+    static TransitionPhase field_Rb;
     private AlignedIconLabel[] field_Gb;
     private int field_Vb;
     private QuickChatMenu[] field_Fb;
@@ -44,7 +44,7 @@ final class QuickChatMenu extends UiComponent {
         }
     }
 
-    final static void a(jh param0, boolean param1, int param2, int param3) {
+    final static void updateGameOptionControls(LobbyGame param0, boolean param1, int param2, int param3) {
         AlignedIconLabel dupTemp$0 = null;
         int var17_int = 0;
         int var24 = 0;
@@ -145,10 +145,10 @@ final class QuickChatMenu extends UiComponent {
         var26 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (param1) {
-            stackIn_12_0 = (la.field_k) ? 0 : 1;
+            stackIn_12_0 = (GrowableIntList.field_k) ? 0 : 1;
             var4_int = stackIn_12_0;
           } else {
-            if (hl.isLocalPlayerGameHost(0)) {
+            if (LobbyStateHelpers.isLocalPlayerGameHost(0)) {
               stackIn_8_0 = (!param0.field_Fb) ? 1 : 0;
             } else {
               stackIn_8_0 = 0;
@@ -159,54 +159,54 @@ final class QuickChatMenu extends UiComponent {
           if (!param1) {
             for (var6 = 0; var6 < 5; var6++) {
               if (var4_int != 0 &&
-                ma.field_b[0][1 + var6].field_T != 0 &&
+                TextValidationFailure.field_b[0][1 + var6].field_T != 0 &&
                 var6 != param0.field_Pb) {
                 var5 = 1;
                 param0.field_Pb = var6;
               }
-              stackIn_22_0 = ma.field_b[0][var6 + 1];
+              stackIn_22_0 = TextValidationFailure.field_b[0][var6 + 1];
               stackIn_23_1 = (var4_int != 0);
               stackIn_22_0.field_Z = stackIn_23_1;
               if (!GradientOutlineTextPainter.field_u &&
                 var6 == 3) {
-                ma.field_b[0][1 + var6].field_Z = false;
+                TextValidationFailure.field_b[0][1 + var6].field_Z = false;
               }
-              stackIn_29_0 = ma.field_b[0][1 + var6];
+              stackIn_29_0 = TextValidationFailure.field_b[0][1 + var6];
               stackIn_30_1 = (param0.field_Pb == var6);
               stackIn_29_0.field_Ab = stackIn_30_1;
             }
-            if (ma.field_b[0][2].field_pb) {
-              if (hl.isLocalPlayerGameHost(0)) {
-                ui.field_j = pd.field_f;
+            if (TextValidationFailure.field_b[0][2].field_pb) {
+              if (LobbyStateHelpers.isLocalPlayerGameHost(0)) {
+                MeltdownPuddleCell.field_j = FramePainter.field_f;
               } else {
-                ui.field_j = vl.a(vc.field_e, new String[]{JaggrabDownloader.field_c.field_Nb}, 2);
+                MeltdownPuddleCell.field_j = QueuedListRequest.substituteTemplateArguments(KeyMapHelpers.field_e, new String[]{JaggrabDownloader.field_c.field_Nb}, 2);
               }
             }
           }
-          if (qo.field_r.length >= 2) {
+          if (UiComponentNode.field_r.length >= 2) {
             if (param1) {
-              stackIn_43_0 = (tj.field_c != -1) ? 1 : 0;
+              stackIn_43_0 = (EffectVolumeHelpers.field_c != -1) ? 1 : 0;
             } else {
               stackIn_43_0 = 0;
             }
             var6Lifetime1 = stackIn_43_0;
             if (var6Lifetime1 != 0) {
-              var7 = tj.field_c;
+              var7 = EffectVolumeHelpers.field_c;
               for (var8_int = 0; var8_int < ScoreUpdateEvent.field_k.length; var8_int++) {
                 ScoreUpdateEvent.field_k[var8_int] = (byte) 0;
               }
-              ScoreUpdateEvent.field_k[var7 / 8] = (byte)cr.b((int) ScoreUpdateEvent.field_k[var7 / 8], 1 << var7 % 8);
+              ScoreUpdateEvent.field_k[var7 / 8] = (byte)PendingStatusRequest.bitOr((int) ScoreUpdateEvent.field_k[var7 / 8], 1 << var7 % 8);
             }
             stackIn_51_0 = (!param1) ? 0 : -1;
-            for (var7 = stackIn_51_0; qo.field_r.length > var7; var7++) {
+            for (var7 = stackIn_51_0; UiComponentNode.field_r.length > var7; var7++) {
               if (var6Lifetime1 != 0) {
-                stackIn_59_0 = (tj.field_c != var7) ? 1 : 0;
+                stackIn_59_0 = (EffectVolumeHelpers.field_c != var7) ? 1 : 0;
               } else {
                 stackIn_59_0 = 0;
               }
               var8_intLifetime1 = stackIn_59_0;
               if (var4_int != 0 &&
-                ma.field_b[1][var7 + 1].field_T != 0) {
+                TextValidationFailure.field_b[1][var7 + 1].field_T != 0) {
                 if (param1) {
                   if (var6Lifetime1 == 0) {
                     if (var7 == -1) {
@@ -214,11 +214,11 @@ final class QuickChatMenu extends UiComponent {
                         ScoreUpdateEvent.field_k[var9] = (byte) 0;
                       }
                     } else {
-                      ScoreUpdateEvent.field_k[var7 / 8] = (byte)vg.a((int) ScoreUpdateEvent.field_k[var7 / 8], 1 << ScrollPane.bitAnd(var7, 7));
+                      ScoreUpdateEvent.field_k[var7 / 8] = (byte)RankingsRequest.bitXor((int) ScoreUpdateEvent.field_k[var7 / 8], 1 << ScrollPane.bitAnd(var7, 7));
                     }
                   }
                 } else {
-                  var9 = qo.field_r[var7];
+                  var9 = UiComponentNode.field_r[var7];
                   if (var9 != param0.field_mc) {
                     param0.field_mc = var9;
                     var5 = 1;
@@ -226,27 +226,27 @@ final class QuickChatMenu extends UiComponent {
                 }
               }
               if (!param1) {
-                var9 = qo.field_r[var7];
-                stackIn_84_0 = ma.field_b[1][1 + var7];
+                var9 = UiComponentNode.field_r[var7];
+                stackIn_84_0 = TextValidationFailure.field_b[1][1 + var7];
                 stackIn_85_1 = (param0.field_mc == var9);
                 stackIn_84_0.field_Ab = stackIn_85_1;
               } else {
                 if (var7 == -1) {
-                  ma.field_b[1][var7 + 1].field_Ab = true;
-                  for (var9 = 0; qo.field_r.length > var9; var9++) {
-                    dupTemp$0 = ma.field_b[1][var7 + 1];
+                  TextValidationFailure.field_b[1][var7 + 1].field_Ab = true;
+                  for (var9 = 0; UiComponentNode.field_r.length > var9; var9++) {
+                    dupTemp$0 = TextValidationFailure.field_b[1][var7 + 1];
                     stackIn_76_0 = dupTemp$0;
                     stackIn_76_1 = dupTemp$0.field_Ab;
                     stackIn_77_2 = ((ScoreUpdateEvent.field_k[var9 / 8] & 1 << (var9 & 7)) == 0);
                     stackIn_76_0.field_Ab = stackIn_76_1 & stackIn_77_2;
                   }
                 } else {
-                  stackIn_80_0 = ma.field_b[1][var7 + 1];
+                  stackIn_80_0 = TextValidationFailure.field_b[1][var7 + 1];
                   stackIn_81_1 = ((ScoreUpdateEvent.field_k[var7 / 8] & 1 << (7 & var7)) != 0);
                   stackIn_80_0.field_Ab = stackIn_81_1;
                 }
               }
-              stackIn_89_0 = ma.field_b[1][var7 + 1];
+              stackIn_89_0 = TextValidationFailure.field_b[1][var7 + 1];
               stackIn_90_1 = (var4_int != 0) && (var8_intLifetime1 == 0);
               stackIn_89_0.field_Z = stackIn_90_1;
             }
@@ -257,7 +257,7 @@ final class QuickChatMenu extends UiComponent {
             field_Kb = -74L;
           }
           while (var6Lifetime2 < 3) {
-            var28 = ma.field_b[2][var6Lifetime2];
+            var28 = TextValidationFailure.field_b[2][var6Lifetime2];
             if (var4_int != 0 &&
               var28.field_T != 0) {
               if (!param1) {
@@ -267,9 +267,9 @@ final class QuickChatMenu extends UiComponent {
                 }
               } else {
                 if (var6Lifetime2 == 0) {
-                  sc.field_f = 0;
+                  DualLinkNodeHashTable.field_f = 0;
                 } else {
-                  sc.field_f = sc.field_f ^ var6Lifetime2;
+                  DualLinkNodeHashTable.field_f = DualLinkNodeHashTable.field_f ^ var6Lifetime2;
                 }
               }
             }
@@ -283,23 +283,23 @@ final class QuickChatMenu extends UiComponent {
             } else {
               if (var6Lifetime2 == 0) {
                 stackIn_117_0 = var28;
-                stackIn_118_1 = (sc.field_f == 0);
+                stackIn_118_1 = (DualLinkNodeHashTable.field_f == 0);
                 stackIn_117_0.field_Ab = stackIn_118_1;
               } else {
                 stackIn_113_0 = var28;
-                stackIn_114_1 = ((var6Lifetime2 & sc.field_f) != 0);
+                stackIn_114_1 = ((var6Lifetime2 & DualLinkNodeHashTable.field_f) != 0);
                 stackIn_113_0.field_Ab = stackIn_114_1;
               }
             }
             var6Lifetime2++;
           }
           if (param1 &&
-            r.field_f > 1) {
-            for (var6Lifetime3 = 0; r.field_f + 1 > var6Lifetime3; var6Lifetime3++) {
-              var29 = ma.field_b[3][var6Lifetime3];
+            MusicPatchLoadHelpers.field_f > 1) {
+            for (var6Lifetime3 = 0; MusicPatchLoadHelpers.field_f + 1 > var6Lifetime3; var6Lifetime3++) {
+              var29 = TextValidationFailure.field_b[3][var6Lifetime3];
               if (var4_int != 0 &&
                 var29.field_T != 0) {
-                pb.field_h = var6Lifetime3;
+                EffectAudioHelpers.field_h = var6Lifetime3;
               }
               if (var29.field_pb &&
                 0 < var6Lifetime3) {
@@ -310,20 +310,20 @@ final class QuickChatMenu extends UiComponent {
                 }
                 var8 = stackIn_139_0;
                 if (var8 != null) {
-                  ui.field_j = var8;
+                  MeltdownPuddleCell.field_j = var8;
                 }
               }
               stackIn_144_0 = var29;
               stackIn_145_1 = (var4_int != 0);
               stackIn_144_0.field_Z = stackIn_145_1;
               stackIn_147_0 = var29;
-              stackIn_148_1 = (pb.field_h == var6Lifetime3);
+              stackIn_148_1 = (EffectAudioHelpers.field_h == var6Lifetime3);
               stackIn_147_0.field_Ab = stackIn_148_1;
             }
           }
           var6Lifetime4 = 0;
-          for (var7 = 0; var7 < kj.field_h; var7++) {
-            var30 = ma.field_b[4 + var7];
+          for (var7 = 0; var7 < FriendListHelpers.field_h; var7++) {
+            var30 = TextValidationFailure.field_b[4 + var7];
             var8_array = var30;
             stackIn_154_0 = (!param1) ? 0 : -1;
             for (var9 = stackIn_154_0; var9 < var30.length - 1; var9++) {
@@ -335,15 +335,15 @@ final class QuickChatMenu extends UiComponent {
               var15 = 0;
               if (var4_int != 0 &&
                 0 <= var9) {
-                if (na.field_J != null &&
-                  null != na.field_J[var7] &&
-                  (~ql.field_c & na.field_J[var7][var9]) > 0) {
+                if (AlphaChildWidget.field_J != null &&
+                  null != AlphaChildWidget.field_J[var7] &&
+                  (~RasterStackHelpers.field_c & AlphaChildWidget.field_J[var7][var9]) > 0) {
                   var14 = 1;
-                  var15 = vl.highestOneBit(~ql.field_c & na.field_J[var7][var9], (byte) -103);
+                  var15 = QueuedListRequest.highestOneBit(~RasterStackHelpers.field_c & AlphaChildWidget.field_J[var7][var9], (byte) -103);
                 }
                 if (null != IntrusiveDequeCursor.field_g &&
                   IntrusiveDequeCursor.field_g[var7] != null &&
-                  0 >= vl.field_h &&
+                  0 >= QueuedListRequest.field_h &&
                   IntrusiveDequeCursor.field_g[var7][var9]) {
                   var10 = 1;
                 }
@@ -351,21 +351,21 @@ final class QuickChatMenu extends UiComponent {
                   null != DropTargetWidget.field_G[var7]) {
                   var16 = DropTargetWidget.field_G[var7][var9];
                   if (0 != var16 &&
-                    !bo.field_e &&
-                    vl.field_h <= 0) {
+                    !LoginMethod.field_e &&
+                    QueuedListRequest.field_h <= 0) {
                     var10 = 1;
                   }
                   if (var16 > 0 &&
-                    bc.field_e < var16) {
+                    GlintButtonHelpers.field_e < var16) {
                     var12 = 1;
                   }
                 }
-                if (null != r.field_c &&
-                  r.field_c[var7] != null) {
-                  var16Lifetime2 = r.field_c[var7][var9];
+                if (null != MusicPatchLoadHelpers.field_c &&
+                  MusicPatchLoadHelpers.field_c[var7] != null) {
+                  var16Lifetime2 = MusicPatchLoadHelpers.field_c[var7][var9];
                   if (var16Lifetime2 != 0 &&
-                    !bo.field_e &&
-                    vl.field_h <= 0) {
+                    !LoginMethod.field_e &&
+                    QueuedListRequest.field_h <= 0) {
                     var10 = 1;
                   }
                   if (var16Lifetime2 > 0 &&
@@ -374,9 +374,9 @@ final class QuickChatMenu extends UiComponent {
                   }
                 }
                 if (param1) {
-                  if (mb.field_k != null) {
-                    if (null != mb.field_k[var7]) {
-                      stackIn_200_0 = (!mb.field_k[var7][var9]) ? 0 : 1;
+                  if (MusicVoice.field_k != null) {
+                    if (null != MusicVoice.field_k[var7]) {
+                      stackIn_200_0 = (!MusicVoice.field_k[var7][var9]) ? 0 : 1;
                     } else {
                       stackIn_200_0 = 0;
                     }
@@ -388,8 +388,8 @@ final class QuickChatMenu extends UiComponent {
                 }
                 var13 = stackIn_200_0;
               }
-              if (kj.field_q >= 2 &&
-                lc.field_m[12]) {
+              if (FriendListHelpers.field_q >= 2 &&
+                PulseEffect.field_m[12]) {
                 var13 = 0;
                 var10 = 0;
                 var14 = 0;
@@ -412,20 +412,20 @@ final class QuickChatMenu extends UiComponent {
               var16Lifetime1 = stackIn_212_0;
               if (var16Lifetime1 == 0 &&
                 0 <= var9 &&
-                null != iq.field_b && (!param1 ||
-                !la.field_k)) {
-                lp.field_p = false;
+                null != TutorialAndMenuHelpers.field_b && (!param1 ||
+                !GrowableIntList.field_k)) {
+                ReflectionCheckRequest.field_p = false;
                 if (null == GameSimulation.field_v) {
-                  GameSimulation.field_v = new byte[kj.field_h];
-                  FullscreenFocusCanvas.field_c = new boolean[kj.field_h];
+                  GameSimulation.field_v = new byte[FriendListHelpers.field_h];
+                  FullscreenFocusCanvas.field_c = new boolean[FriendListHelpers.field_h];
                 }
                 BirthDateValidator.field_l = false;
                 for (var17_int = 0; var17_int < var7; var17_int++) {
                   FullscreenFocusCanvas.field_c[var17_int] = false;
                 }
-                bh.findValidSettingCombination(-1712, var9, 0, param0, param1, var7, -1, -1);
-                if (kj.field_q >= 2 &&
-                  lc.field_m[12]) {
+                ChatAndOptionHelpers.findValidSettingCombination(-1712, var9, 0, param0, param1, var7, -1, -1);
+                if (FriendListHelpers.field_q >= 2 &&
+                  PulseEffect.field_m[12]) {
                   BirthDateValidator.field_l = true;
                 }
                 if (!BirthDateValidator.field_l) {
@@ -438,10 +438,10 @@ final class QuickChatMenu extends UiComponent {
                 if (param1) {
                   if (-1 == var9) {
                     for (var18 = var6Lifetime4; var18 < var30.length + var6Lifetime4 - 1; var18++) {
-                      tg.field_a[var18 / 8] = (byte)ScrollPane.bitAnd((int) tg.field_a[var18 / 8], ~(1 << ScrollPane.bitAnd(var18, 7)));
+                      AudioPumpThread.field_a[var18 / 8] = (byte)ScrollPane.bitAnd((int) AudioPumpThread.field_a[var18 / 8], ~(1 << ScrollPane.bitAnd(var18, 7)));
                     }
                   } else {
-                    tg.field_a[(var6Lifetime4 + var9) / 8] = (byte)vg.a((int) tg.field_a[(var6Lifetime4 + var9) / 8], 1 << ScrollPane.bitAnd(var6Lifetime4 + var9, 7));
+                    AudioPumpThread.field_a[(var6Lifetime4 + var9) / 8] = (byte)RankingsRequest.bitXor((int) AudioPumpThread.field_a[(var6Lifetime4 + var9) / 8], 1 << ScrollPane.bitAnd(var6Lifetime4 + var9, 7));
                   }
                 } else {
                   if (var16Lifetime1 == 0 &&
@@ -453,7 +453,7 @@ final class QuickChatMenu extends UiComponent {
               }
               if (param1 &&
                 var16Lifetime1 != 0) {
-                tg.field_a[(var9 + var6Lifetime4) / 8] = (byte)ScrollPane.bitAnd((int) tg.field_a[(var9 + var6Lifetime4) / 8], ~(1 << ScrollPane.bitAnd(var9 + var6Lifetime4, 7)));
+                AudioPumpThread.field_a[(var9 + var6Lifetime4) / 8] = (byte)ScrollPane.bitAnd((int) AudioPumpThread.field_a[(var9 + var6Lifetime4) / 8], ~(1 << ScrollPane.bitAnd(var9 + var6Lifetime4, 7)));
               }
               if (var9 >= 0 &&
                 var17.field_pb) {
@@ -466,9 +466,9 @@ final class QuickChatMenu extends UiComponent {
                     var18_ref = ResourceArchive.field_m[var7][var9];
                   }
                 }
-                if (kp.field_n != null) {
-                  if (kp.field_n[var7] != null) {
-                    var19 = kp.field_n[var7][var9];
+                if (MessageMenuScreen.field_n != null) {
+                  if (MessageMenuScreen.field_n[var7] != null) {
+                    var19 = MessageMenuScreen.field_n[var7][var9];
                   } else {
                     var19 = null;
                   }
@@ -484,15 +484,15 @@ final class QuickChatMenu extends UiComponent {
                 if (var13 == 0) {
                   if (var10 == 0) {
                     if (var11 != 0) {
-                      var22_int = r.field_c[var7][var9] - LobbyPlayer.field_Zb;
+                      var22_int = MusicPatchLoadHelpers.field_c[var7][var9] - LobbyPlayer.field_Zb;
                       if (var22_int != 1) {
-                        var21 = vl.a(sc.field_c, new String[]{Integer.toString(var22_int)}, 2);
+                        var21 = QueuedListRequest.substituteTemplateArguments(DualLinkNodeHashTable.field_c, new String[]{Integer.toString(var22_int)}, 2);
                       } else {
-                        var21 = uq.field_a;
+                        var21 = BrowserPageHelpers.field_a;
                       }
                     }
                     if (var12 != 0) {
-                      var31 = vl.a(LobbyPlayer.field_Rb, new String[]{Integer.toString(bc.field_e), Integer.toString(DropTargetWidget.field_G[var7][var9])}, 2);
+                      var31 = QueuedListRequest.substituteTemplateArguments(LobbyPlayer.field_Rb, new String[]{Integer.toString(GlintButtonHelpers.field_e), Integer.toString(DropTargetWidget.field_G[var7][var9])}, 2);
                       var21 = var31;
                       var21 = var31;
                       if (var21 == null) {
@@ -502,12 +502,12 @@ final class QuickChatMenu extends UiComponent {
                       }
                     }
                     if (var14 != 0) {
-                      var22 = eb.field_L;
+                      var22 = PopupMenuBuilder.field_L;
                       if (var15 > 0 &&
-                        null != ki.field_o &&
-                        var15 <= ki.field_o.length &&
-                        null != ki.field_o[-1 + var15]) {
-                        var22 = ki.field_o[-1 + var15][0];
+                        null != SpriteHotspot.field_o &&
+                        var15 <= SpriteHotspot.field_o.length &&
+                        null != SpriteHotspot.field_o[-1 + var15]) {
+                        var22 = SpriteHotspot.field_o[-1 + var15][0];
                       }
                       if (var21 == null) {
                         var21 = var22;
@@ -524,8 +524,8 @@ final class QuickChatMenu extends UiComponent {
                 if (var4_int != 0 &&
                   !BirthDateValidator.field_l) {
                   var22 = null;
-                  if (lp.field_p) {
-                    var22 = "</col>" + gi.field_n + "<col=A00000>";
+                  if (ReflectionCheckRequest.field_p) {
+                    var22 = "</col>" + LevelFileEntry.field_n + "<col=A00000>";
                     var25 = var22;
                     var22 = var25;
                     var25Lifetime1 = var22;
@@ -552,12 +552,12 @@ final class QuickChatMenu extends UiComponent {
                   if (var23 != 0) {
                     var21 = GameWorld.field_q + (String) (var22);
                   } else {
-                    var21 = vl.a(io.field_a, new String[]{(String) (var22)}, 2);
+                    var21 = QueuedListRequest.substituteTemplateArguments(WeightedLruCache.field_a, new String[]{(String) (var22)}, 2);
                   }
                 }
                 if (var21 != null) {
                   var21 = "<col=A00000>" + (String) (var21);
-                  var32 = sa.replaceLiteral((String) (var21), param3 + 123, "<br>", "<br><col=A00000>");
+                  var32 = ScreechAura.replaceLiteral((String) (var21), param3 + 123, "<br>", "<br><col=A00000>");
                   if (var20 == null) {
                     var20 = var32;
                   } else {
@@ -565,7 +565,7 @@ final class QuickChatMenu extends UiComponent {
                   }
                 }
                 if (var20 != null) {
-                  ui.field_j = (String) (var20);
+                  MeltdownPuddleCell.field_j = (String) (var20);
                 }
               }
               if (!param1) {
@@ -592,13 +592,13 @@ final class QuickChatMenu extends UiComponent {
                   while (-1 + (var30.length + var6Lifetime4) > var27) {
                     stackIn_313_0 = var17;
                     stackIn_313_1 = var17.field_Ab;
-                    stackIn_314_2 = ((tg.field_a[var27 / 8] & 1 << (7 & var27)) == 0);
+                    stackIn_314_2 = ((AudioPumpThread.field_a[var27 / 8] & 1 << (7 & var27)) == 0);
                     stackIn_313_0.field_Ab = stackIn_313_1 & stackIn_314_2;
                     var27++;
                   }
                 } else {
                   stackIn_317_0 = var17;
-                  stackIn_318_1 = (0 != (tg.field_a[(var9 + var6Lifetime4) / 8] & 1 << (var6Lifetime4 + var9 & 7)));
+                  stackIn_318_1 = (0 != (AudioPumpThread.field_a[(var9 + var6Lifetime4) / 8] & 1 << (var6Lifetime4 + var9 & 7)));
                   stackIn_317_0.field_Ab = stackIn_318_1;
                 }
               }
@@ -612,7 +612,7 @@ final class QuickChatMenu extends UiComponent {
             if (param1) {
               return;
             }
-            og.sendGameOptions(param2, 115);
+            ZombieDrop.sendGameOptions(param2, 115);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -679,7 +679,7 @@ final class QuickChatMenu extends UiComponent {
               var14 = GradientOutlineTextPainter.field_v;
             }
             this.field_Gb[var13] = new AlignedIconLabel(0L, param2, (UiComponent) null, param3, (Sprite) (var14), param6[var13]);
-            this.a((byte) 50, this.field_Gb[var13]);
+            this.addChild((byte) 50, this.field_Gb[var13]);
             var15 = var17.textWidth(param6[var13]);
             if (this.field_Vb < var15) {
               this.field_Vb = var15;
@@ -771,10 +771,10 @@ final class QuickChatMenu extends UiComponent {
         }
     }
 
-    final static String a(byte param0, CharSequence param1) {
+    final static String canonicalizeNameOrEmpty(byte param0, CharSequence param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
-        jh var3 = null;
+        LobbyGame var3 = null;
         String stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -782,10 +782,10 @@ final class QuickChatMenu extends UiComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            var3 = (jh) null;
-            QuickChatMenu.a((jh) null, false, 60, 111);
+            var3 = (LobbyGame) null;
+            QuickChatMenu.updateGameOptionControls((LobbyGame) null, false, 60, 111);
           }
-          var2 = RandomAccessCacheFile.decodeBase37(cq.a(0, param1), (byte) 26);
+          var2 = RandomAccessCacheFile.decodeBase37(QuitPageHelpers.encodeBase37(0, param1), (byte) 26);
           if (var2 == null) {
             var2 = "";
           }
@@ -855,7 +855,7 @@ final class QuickChatMenu extends UiComponent {
         this.setExpansionTicks(12, 11183);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int[] param7, int param8) {
+    final static void drawFlatTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int[] param7, int param8) {
         RuntimeException stackIn_80_0 = null;
         StringBuilder stackIn_80_1 = null;
         String stackIn_81_2 = null;
@@ -1076,8 +1076,8 @@ final class QuickChatMenu extends UiComponent {
         field_Lb = null;
         field_Rb = null;
         if (param0 >= -104) {
-          jh var2 = (jh) null;
-          QuickChatMenu.a((jh) null, false, 77, -3);
+          LobbyGame var2 = (LobbyGame) null;
+          QuickChatMenu.updateGameOptionControls((LobbyGame) null, false, 77, -3);
         }
         field_Ub = null;
     }
@@ -1104,23 +1104,23 @@ final class QuickChatMenu extends UiComponent {
             this.field_Ib.setExpansionTicks(12, 11183);
           } else {
             if (this.field_Qb[param1] == -1) {
-              GameScreen.c(4024);
-              NavigationGrid.b(31706);
+              GameScreen.openQuickChatHelp(4024);
+              NavigationGrid.closeQuickChatMenu(31706);
             } else {
               var5 = 32768 | this.field_Qb[param1];
-              var6 = va.field_a;
+              var6 = UrlLaunchHelpers.field_a;
               if (var6 == 0 &&
                 JaggrabDownloader.field_c != null) {
                 var6 = 1;
               }
               if (CipherPacketBuffer.getChatFilterMode(var6, true) == 2) {
-                kp.a(var6, param3, 1, true);
+                MessageMenuScreen.setChatFilter(var6, param3, 1, true);
               }
               var8 = (String) null;
-              GameWorld.a(var5, qf.field_g, param2, (String) null, va.field_a, 29602);
-              ii.rememberRepeatMessage(va.field_a, (byte) -128, var5, qf.field_g, jj.field_M);
-              NavigationGrid.b(31706);
-              lh.a(true);
+              GameWorld.sendChatMessage(var5, TextPopupHelpers.field_g, param2, (String) null, UrlLaunchHelpers.field_a, 29602);
+              TickClock.rememberRepeatMessage(UrlLaunchHelpers.field_a, (byte) -128, var5, TextPopupHelpers.field_g, PhantomDecoy.field_M);
+              NavigationGrid.closeQuickChatMenu(31706);
+              ArchiveLoadSequence.resetFrameTimer(true);
             }
           }
         }
@@ -1146,15 +1146,15 @@ final class QuickChatMenu extends UiComponent {
           return this.field_Ib.handleShortcutKey(-119, param1, param2);
         }
         if (null == this.field_Ib &&
-          mj.field_Ib == this &&
+          ScrollBar.field_Ib == this &&
           var4 != 0) {
-          NavigationGrid.b(31706);
+          NavigationGrid.closeQuickChatMenu(31706);
           return true;
         }
-        var5 = pn.field_d;
+        var5 = ArchiveAvailabilityHelpers.field_d;
         var6 = -52 / ((param0 - 38) / 52);
         if (var5 > 0) {
-          if (wc.field_I == var5) {
+          if (ScorePopup.field_I == var5) {
             var5 = 63;
           }
           var7 = 0;
@@ -1170,18 +1170,18 @@ final class QuickChatMenu extends UiComponent {
         return false;
     }
 
-    final static void j(int param0) {
-        q.b(72);
+    final static void closeTransientPopups(int param0) {
+        SineTableHelpers.closePlayerContextMenu(72);
         if (param0 != 1481707568) {
           field_Kb = -107L;
         }
-        bc.clearNameEntryPopupHolder(10);
-        bk.field_i = null;
-        NavigationGrid.b(param0 - 1481675862);
+        GlintButtonHelpers.clearNameEntryPopupHolder(10);
+        DirectByteStorage.field_i = null;
+        NavigationGrid.closeQuickChatMenu(param0 - 1481675862);
     }
 
     static {
-        field_Rb = new lf();
+        field_Rb = new TransitionPhase();
         field_Lb = "Buying or selling an account";
     }
 }

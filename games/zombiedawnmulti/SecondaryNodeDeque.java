@@ -11,7 +11,7 @@ final class SecondaryNodeDeque implements Iterable {
     static String field_b;
     static BitmapFont field_c;
 
-    final static void a(ResourceArchive param0, byte[] param1, int param2, String[] param3, int[] param4, int param5, Sprite[][] param6, String[] param7, boolean param8, String[][] param9, int param10, String[][] param11, ResourceArchive param12, byte[] param13, int[] param14, IndexedSprite[] param15, Sprite[][] param16, ResourceArchive param17, boolean param18) {
+    final static void initializeGameAssetsReordered(ResourceArchive param0, byte[] param1, int param2, String[] param3, int[] param4, int param5, Sprite[][] param6, String[] param7, boolean param8, String[][] param9, int param10, String[][] param11, ResourceArchive param12, byte[] param13, int[] param14, IndexedSprite[] param15, Sprite[][] param16, ResourceArchive param17, boolean param18) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -49,7 +49,7 @@ final class SecondaryNodeDeque implements Iterable {
             field_e = (Camera) null;
           }
           var20 = (String[]) null;
-          vb.a(param10, param11, (String[]) null, param3, param18, param9, param4, param7, param1, param17, param14, 1, param6, param5, param0, false, param16, param12, param13, param15);
+          LobbyUiSetupHelpers.initializeLobbyUi(param10, param11, (String[]) null, param3, param18, param9, param4, param7, param1, param17, param14, 1, param6, param5, param0, false, param16, param12, param13, param15);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -143,9 +143,9 @@ final class SecondaryNodeDeque implements Iterable {
         }
     }
 
-    final void a(DualLinkNode param0, byte param1) {
+    final void addFirst(DualLinkNode param0, byte param1) {
         if (param0.secondaryNext != null) {
-          param0.a(-4564);
+          param0.unlinkSecondary(-4564);
         }
         if (param1 < 72) {
           return;
@@ -160,7 +160,7 @@ final class SecondaryNodeDeque implements Iterable {
         }
     }
 
-    final static void a(byte param0, IndexedSprite param1) {
+    final static void padToFourPixelAlignment(byte param0, IndexedSprite param1) {
         int var7 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;
@@ -200,12 +200,12 @@ final class SecondaryNodeDeque implements Iterable {
         }
     }
 
-    final DualLinkNode a(boolean param0) {
+    final DualLinkNode removeLast(boolean param0) {
         DualLinkNode var2 = this.field_d.secondaryPrevious;
         if (var2 == this.field_d) {
           return null;
         }
-        var2.a(-4564);
+        var2.unlinkSecondary(-4564);
         if (param0) {
           return (DualLinkNode) null;
         }

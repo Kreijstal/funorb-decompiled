@@ -16,7 +16,7 @@ class GradientOutlineTextPainter extends TextWidgetPainter {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            ng.drawInsetFieldBorder(1, param3 + param4.field_y, param4.field_n, param4.field_i + param1, param4.field_w);
+            ArchiveProvider.drawInsetFieldBorder(1, param3 + param4.field_y, param4.field_n, param4.field_i + param1, param4.field_w);
           }
           super.paintWidget(param0, param1, param2 ^ 0, param3, param4);
           if (param2 == -15112) {
@@ -40,7 +40,7 @@ class GradientOutlineTextPainter extends TextWidgetPainter {
     }
 
     GradientOutlineTextPainter(int param0) {
-        this(ke.field_h, param0);
+        this(FontPaletteHelpers.field_h, param0);
     }
 
     public static void releaseStatics(byte param0) {
@@ -62,10 +62,10 @@ class GradientOutlineTextPainter extends TextWidgetPainter {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        if (um.field_c != null) {
-          var1 = um.field_c;
+        if (ClickMarkerParticle.field_c != null) {
+          var1 = ClickMarkerParticle.field_c;
           synchronized (var1) {
-            um.field_c = null;
+            ClickMarkerParticle.field_c = null;
           }
         }
         if (param0 != 4862) {

@@ -3,7 +3,7 @@
  */
 final class QuickChatCategoryRegistry {
     static IntrusiveDeque field_a;
-    private io field_c;
+    private WeightedLruCache field_c;
     private ResourceArchive field_h;
     private ResourceArchive field_f;
     static Sprite field_b;
@@ -11,27 +11,27 @@ final class QuickChatCategoryRegistry {
     static String field_g;
     static Sprite field_e;
 
-    final ob a(int param0, int param1) {
+    final QuickChatCategoryDefinition getCategory(int param0, int param1) {
         byte[] var4 = null;
-        ob var3 = (ob) (this.field_c.a((byte) 127, (long)param0));
+        QuickChatCategoryDefinition var3 = (QuickChatCategoryDefinition) (this.field_c.get((byte) 127, (long)param0));
         if (var3 != null) {
           return var3;
         }
         if (32768 <= param0) {
-          var4 = this.field_h.a(0, true, 32767 & param0);
+          var4 = this.field_h.getFile(0, true, 32767 & param0);
         } else {
-          var4 = this.field_f.a(0, true, param0);
+          var4 = this.field_f.getFile(0, true, param0);
         }
-        var3 = new ob();
+        var3 = new QuickChatCategoryDefinition();
         if (var4 != null) {
           var3.decode(64, new PacketBuffer(var4));
         }
         if (param0 >= 32768) {
           var3.markGlobalIds((byte) -72);
         }
-        this.field_c.a(var3, (long)param0, 1);
+        this.field_c.put(var3, (long)param0, 1);
         if (param1 != 32767) {
-          this.field_c = (io) null;
+          this.field_c = (WeightedLruCache) null;
         }
         return var3;
     }
@@ -41,7 +41,7 @@ final class QuickChatCategoryRegistry {
         field_e = null;
         field_a = null;
         if (param0) {
-          QuickChatCategoryRegistry.a((byte) -89, 58, false, -109);
+          QuickChatCategoryRegistry.updateChatPanel((byte) -89, 58, false, -109);
         }
         field_b = null;
         field_g = null;
@@ -55,15 +55,15 @@ final class QuickChatCategoryRegistry {
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        this.field_c = new io(64);
+        this.field_c = new WeightedLruCache(64);
         try {
           this.field_f = param1;
           this.field_h = param2;
           if (this.field_f != null) {
-            this.field_f.d(0, -2);
+            this.field_f.getFileCount(0, -2);
           }
           if (this.field_h != null) {
-            this.field_h.d(0, -2);
+            this.field_h.getFileCount(0, -2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -86,7 +86,7 @@ final class QuickChatCategoryRegistry {
         }
     }
 
-    final static void a(byte param0, int param1, boolean param2, int param3) {
+    final static void updateChatPanel(byte param0, int param1, boolean param2, int param3) {
         int var4_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
@@ -98,46 +98,46 @@ final class QuickChatCategoryRegistry {
         int var6Lifetime1;
         var7 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          if (t.field_e < b.field_d) {
-            t.field_e = t.field_e + 1;
+          if (ByteStorage.field_e < IdleTickHelpers.field_d) {
+            ByteStorage.field_e = ByteStorage.field_e + 1;
           }
           if (ValidationMessageWidget.field_cb != SocketConnector.field_h.field_f) {
-            vj.field_t = vj.field_t + (SocketConnector.field_h.field_f - ValidationMessageWidget.field_cb);
+            AppearanceScreen.field_t = AppearanceScreen.field_t + (SocketConnector.field_h.field_f - ValidationMessageWidget.field_cb);
             ValidationMessageWidget.field_cb = SocketConnector.field_h.field_f;
           }
-          if (0 >= t.field_e) {
+          if (0 >= ByteStorage.field_e) {
             return;
           }
-          lk.g((byte) 93);
-          ImageProducerRasterBuffer.field_k.a(-11838, param2);
-          if (ra.field_f != null) {
-            if (nh.field_m) {
-              ra.field_f.processPointerFrame(ImageProducerRasterBuffer.field_k.field_w, (byte) -27, ImageProducerRasterBuffer.field_k.field_qb, param2);
+          MiasmaParticle.layoutAnimatedChatPanel((byte) 93);
+          ImageProducerRasterBuffer.field_k.updateRoot(-11838, param2);
+          if (PendingIntArrayReply.field_f != null) {
+            if (PendingRankingRequest.field_m) {
+              PendingIntArrayReply.field_f.processPointerFrame(ImageProducerRasterBuffer.field_k.field_w, (byte) -27, ImageProducerRasterBuffer.field_k.field_qb, param2);
             } else {
-              ra.field_f = null;
+              PendingIntArrayReply.field_f = null;
             }
           }
           for (var4_int = 0; var4_int < 5; var4_int++) {
-            var5 = la.field_h[var4_int];
+            var5 = GrowableIntList.field_h[var4_int];
             if (var5 != null) {
               if (var5.field_T != 0) {
-                cm.a(-105, var4_int, var5);
+                LobbyRequestHelpers.openChatFilterMenu(-105, var4_int, var5);
               }
               var6 = CipherPacketBuffer.getChatFilterMode(var4_int, true);
-              pf.field_d[var4_int].field_rb = wp.field_j[var6];
-              hh.field_l[var4_int].field_wb = vg.field_h[var6];
+              ChatInputHelpers.field_d[var4_int].field_rb = AudioServiceHelpers.field_j[var6];
+              MenuInputState.field_l[var4_int].field_wb = RankingsRequest.field_h[var6];
             }
           }
-          if (nn.field_b.field_T != 0) {
-            bk.field_i = new ReportAbuseDialog(nn.field_b.field_w, nn.field_b.field_qb, nn.field_b.field_zb, nn.field_b.field_z, param3, MarkerSliderPainter.field_a, kc.field_c, jf.field_a, vo.field_m, jk.field_h, cm.field_b, (String) null, 0L);
+          if (LevelEncodingHelpers.field_b.field_T != 0) {
+            DirectByteStorage.field_i = new ReportAbuseDialog(LevelEncodingHelpers.field_b.field_w, LevelEncodingHelpers.field_b.field_qb, LevelEncodingHelpers.field_b.field_zb, LevelEncodingHelpers.field_b.field_z, param3, MarkerSliderPainter.field_a, ScreenSizeGlobals.field_c, ReportDialogGlobals.field_a, IntroScreen.field_m, UpgradeAccessHelpers.field_h, LobbyRequestHelpers.field_b, (String) null, 0L);
           }
-          var9 = ValidationMessageWidget.b(-7, param1, jk.field_f, nj.field_h);
+          var9 = ValidationMessageWidget.findChatLineAt(-7, param1, UpgradeAccessHelpers.field_f, MusicPatchEnvelope.field_h);
           if (var9 != null) {
-            kj.a(-31806, var9);
+            FriendListHelpers.openChatMessageContextMenu(-31806, var9);
           }
-          var8 = jp.a((byte) -104);
+          var8 = ChatPromptHelpers.buildChatInputPrompt((byte) -104);
           if (var8 != null) {
-            ui.field_j = var8;
+            MeltdownPuddleCell.field_j = var8;
           }
           var6Lifetime1 = -44 % ((-68 - param0) / 36);
           return;

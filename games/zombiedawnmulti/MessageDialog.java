@@ -33,27 +33,27 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
           stackIn_6_1 = (param2 == 256);
           this.field_yb = stackIn_6_1;
           this.field_ub = true;
-          this.field_Bb.a(4210752, 8405024, (byte) -31);
+          this.field_Bb.setStripeColours(4210752, 8405024, (byte) -31);
           var7 = new MessageDialogContent(this, this.field_zb, param0);
           if (5 != param2) {
             if (param2 == 256) {
-              var7.addButton(ci.field_g, -76, (WidgetListener) (this));
+              var7.addButton(LevelFileList.field_g, -76, (WidgetListener) (this));
             } else {
               stackIn_11_0 = var7;
               if (!this.field_wb) {
                 stackIn_12_1 = ContextMenu.field_Zb;
               } else {
-                stackIn_12_1 = ci.field_g;
+                stackIn_12_1 = LevelFileList.field_g;
               }
               ((MessageDialogContent) (Object) stackIn_11_0).addActionButton(stackIn_12_1, -1, true);
             }
           } else {
-            var7.addActionButton(lc.field_g, 11, true);
-            var7.addActionButton(oe.field_b, 17, true);
+            var7.addActionButton(PulseEffect.field_g, 11, true);
+            var7.addActionButton(TextDecodeHelpers.field_b, 17, true);
           }
           if (3 != param2) {
             if (param2 == 4) {
-              var7.addActionButton(bc.field_c, 8, true);
+              var7.addActionButton(GlintButtonHelpers.field_c, 8, true);
             } else {
               if (6 != param2) {
                 if (param2 != 9) {
@@ -63,7 +63,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
                 }
                 var7.addButton(RasterSnapshot.field_l, -74, (WidgetListener) (this));
               } else {
-                var7.addActionButton(wm.field_S, 9, true);
+                var7.addActionButton(MarkerSliderWidget.field_S, 9, true);
               }
             }
           } else {
@@ -95,25 +95,25 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
           return;
         }
         if (this.field_wb) {
-          lb.a(9047);
+          PasswordCheckHelpers.showLoginForm(9047);
           return;
         }
         if (!this.field_xb) {
           return;
         }
-        ce.showLoginFormForUser((byte) -123);
+        TerrainEffectZone.showLoginFormForUser((byte) -123);
     }
 
     final static void setMenuLayoutMetrics(int param0, int param1, int param2, int param3, int param4) {
         if (param1 == 20341) {
-          mg.field_H = param0;
+          ZombieDropView.field_H = param0;
           ImageProducerRasterBuffer.field_l = param2;
           LaboratoryScreen.field_n = param4;
           MusicPatch.field_n = param3;
           return;
         }
         field_Ab = (Sprite[]) null;
-        mg.field_H = param0;
+        ZombieDropView.field_H = param0;
         ImageProducerRasterBuffer.field_l = param2;
         LaboratoryScreen.field_n = param4;
         MusicPatch.field_n = param3;
@@ -128,10 +128,10 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
     }
 
     final void showConnectionRestoredContent(boolean param0) {
-        this.field_Bb.a(4210752, 2121792, (byte) 116);
+        this.field_Bb.setStripeColours(4210752, 2121792, (byte) 116);
         MessageDialogContent var2 = new MessageDialogContent(this, this.field_zb, DualLinkDeque.field_c);
         if (!param0) {
-          var2.addActionButton(og.field_T, 15, true);
+          var2.addActionButton(ZombieDrop.field_T, 15, true);
           this.transitionToContent((UiWidget) (var2), (byte) -18);
           return;
         }
@@ -145,10 +145,10 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_yb) {
-            PowerupButton.a(3, 118);
+            PowerupButton.setAccountDialogResult(3, 118);
             this.dismissDialog(-7435);
           } else {
-            ic.a(StatefulTextPainter.b(0), "tochangedisplayname.ws", 114);
+            LoginCredentials.openRelativeUrl(StatefulTextPainter.getHostApplet(0), "tochangedisplayname.ws", 114);
           }
           if (param3 < -83) {
             return;

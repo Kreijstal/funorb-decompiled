@@ -3,7 +3,7 @@
  */
 final class MusicPatchNode extends IntrusiveNode {
     int field_g;
-    static si field_h;
+    static GameResultsScreen field_h;
     int field_l;
     static boolean field_k;
     int field_f;

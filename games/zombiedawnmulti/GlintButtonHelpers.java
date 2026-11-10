@@ -1,0 +1,107 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class GlintButtonHelpers {
+    static int field_e;
+    static String field_b;
+    static String field_a;
+    static String field_d;
+    static String field_c;
+
+    final static void clearNameEntryPopupHolder(int param0) {
+        LevelFileEntry.field_i = null;
+        if (param0 != 10) {
+          field_d = (String) null;
+        }
+    }
+
+    public static void releaseStatics(int param0) {
+        if (param0 != 22382) {
+          field_d = (String) null;
+        }
+        field_b = null;
+        field_d = null;
+        field_c = null;
+        field_a = null;
+    }
+
+    final static void drawGlintingButton(int param0, int param1, byte param2, boolean param3) {
+        int var4;
+        if (param2 != -59) {
+          GlintButtonHelpers.updateToggleLabelWidths((byte) 86);
+        }
+        TipPanelHelpers.field_j.drawTransparent(param0, param1);
+        if (param3) {
+          var4 = ClientException.field_c % TipPanelHelpers.field_j.width * 2;
+          if (var4 >= TipPanelHelpers.field_j.width) {
+            var4 = TipPanelHelpers.field_j.width - var4 + TipPanelHelpers.field_j.width;
+          }
+          if (var4 < 10) {
+            var4 = 10;
+          } else {
+            if (-40 + TipPanelHelpers.field_j.width < var4) {
+              var4 = -40 + TipPanelHelpers.field_j.width;
+            }
+          }
+          CheckboxPainter.drawGlowOutline(param1, 30, 0, param0, false, var4, 0, TipPanelHelpers.field_j, 80);
+        }
+    }
+
+    final static void updateToggleLabelWidths(byte param0) {
+        TutorialAndMenuHelpers.createMenuScreens((byte) -78);
+        ViewportController.field_l = TranslatedUiText.field_e.textWidth(PlayingSound.field_g[12]);
+        int var1 = TranslatedUiText.field_e.textWidth(PlayingSound.field_g[13]);
+        if (!(var1 <= ViewportController.field_l)) {
+          ViewportController.field_l = var1;
+        }
+        ((OptionsMenuScreen) (ScrollBar.field_Hb[1])).measureItemWidths((byte) 74);
+        if (param0 < 8) {
+          GlintButtonHelpers.updateToggleLabelWidths((byte) -52);
+        }
+    }
+
+    final static IndexedSprite[] buildIndexedSprites(int param0) {
+        int var3 = ZombieDawnMulti.field_E ? 1 : 0;
+        IndexedSprite[] var1 = new IndexedSprite[ArchiveRequest.field_v];
+        int var2 = 0;
+        if (param0 != 2) {
+          return (IndexedSprite[]) null;
+        }
+        while (var2 < ArchiveRequest.field_v) {
+          var1[var2] = new IndexedSprite(ContentTransitionDialog.field_nb, SpriteDecodeGlobals.field_a, PacketBuffer.field_i[var2], PowerupCommand.field_o[var2], ThreeSliceButtonPainter.field_w[var2], AppearanceScreen.field_p[var2], MatchingTextValidator.field_t[var2], UsernameAvailabilityValidator.field_t);
+          var2++;
+        }
+        PropObject.clearSpriteDecodeBuffers((byte) 125);
+        return var1;
+    }
+
+    static {
+        field_d = "Public chat is unavailable while setting up a rated game.";
+        field_b = "Loading fonts";
+        field_a = "Waiting for graphics";
+        field_c = "Play free version";
+    }
+
+    /* Full JVM integer arguments; original narrow signature preserved. */
+    final static void drawGlintingButton(int param0, int param1, int param2, boolean param3) {
+        int var4;
+        if (param2 != -59) {
+          GlintButtonHelpers.updateToggleLabelWidths((byte) 86);
+        }
+        TipPanelHelpers.field_j.drawTransparent(param0, param1);
+        if (param3) {
+          var4 = ClientException.field_c % TipPanelHelpers.field_j.width * 2;
+          if (var4 >= TipPanelHelpers.field_j.width) {
+            var4 = TipPanelHelpers.field_j.width - var4 + TipPanelHelpers.field_j.width;
+          }
+          if (var4 < 10) {
+            var4 = 10;
+          } else {
+            if (-40 + TipPanelHelpers.field_j.width < var4) {
+              var4 = -40 + TipPanelHelpers.field_j.width;
+            }
+          }
+          CheckboxPainter.drawGlowOutline(param1, 30, 0, param0, false, var4, 0, TipPanelHelpers.field_j, 80);
+        }
+    }
+}

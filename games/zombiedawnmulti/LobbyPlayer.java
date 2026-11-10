@@ -29,7 +29,7 @@ final class LobbyPlayer extends UiComponent {
     static int field_Zb;
     static String field_Rb;
 
-    final boolean a(byte param0, LobbyPlayer param1) {
+    final boolean sortsBefore(byte param0, LobbyPlayer param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         boolean stackIn_6_0 = false;
@@ -76,14 +76,14 @@ final class LobbyPlayer extends UiComponent {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isUnindexed(byte param0) {
         if (param0 != 15) {
           this.field_Gb = (UiComponent) null;
         }
-        return !this.c(0) ? true : false;
+        return !this.isSecondaryLinked(0) ? true : false;
     }
 
-    final static InfectionEvent a(byte param0, CipherPacketBuffer param1) {
+    final static InfectionEvent readInfectionEvent(byte param0, CipherPacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -146,13 +146,13 @@ final class LobbyPlayer extends UiComponent {
           this.field_Lb = param1;
           this.field_ec = param2;
           var6 = (CharSequence) ((Object) this.field_Jb);
-          tg.normalizePlayerName(var6, false);
+          AudioPumpThread.normalizePlayerName(var6, false);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "dm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final void a(String param0, String param1, int param2) {
+    final void setNames(String param0, String param1, int param2) {
         CharSequence var5 = null;
         try {
           this.field_Jb = param0;
@@ -161,7 +161,7 @@ final class LobbyPlayer extends UiComponent {
             this.field_Kb = -111L;
           }
           var5 = (CharSequence) ((Object) this.field_Jb);
-          tg.normalizePlayerName(var5, false);
+          AudioPumpThread.normalizePlayerName(var5, false);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "dm.BA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

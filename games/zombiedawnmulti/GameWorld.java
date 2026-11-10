@@ -42,7 +42,7 @@ class GameWorld {
     int[] field_y;
     static String field_B;
 
-    final static void a(int param0, int param1, Sprite[] param2, int param3, Sprite[] param4, BitmapFont param5, int param6, int param7, int param8, int param9, Sprite[] param10, byte param11, int param12, int param13, int param14) {
+    final static void initializeUiTheme(int param0, int param1, Sprite[] param2, int param3, Sprite[] param4, BitmapFont param5, int param6, int param7, int param8, int param9, Sprite[] param10, byte param11, int param12, int param13, int param14) {
         int var16 = 0;
         int var15_int = param5.field_J + param5.maxDescent;
         if (param11 >= -114) {
@@ -50,7 +50,7 @@ class GameWorld {
         }
         try {
           var16 = param5.field_J;
-          BirthDateInputWidget.a(param14, param8, 2, param3, var15_int, param10, param13, param1, param5, param7, param12, 480, var16, param4, param0, param5, param2, var16, param9, var15_int, param6);
+          BirthDateInputWidget.configureTextChoiceDialog(param14, param8, 2, param3, var15_int, param10, param13, param1, param5, param7, param12, 480, var16, param4, param0, param5, param2, var16, param9, var15_int, param6);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "kb.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ',' + param11 + ',' + param12 + ',' + param13 + ',' + param14 + ')');
         }
@@ -61,7 +61,7 @@ class GameWorld {
           return false;
         }
         if (param0 > -61) {
-          this.b(103, -2);
+          this.resistsEffect(103, -2);
         }
         return (1L << param1 & this.teamUpgradeMask[param2]) != 0L ? true : false;
     }
@@ -79,7 +79,7 @@ class GameWorld {
         if (param3) {
           return -15;
         }
-        return g.a(param1, param0, this.hasUpgrade((byte) -81, 59, param2), this.hasUpgrade((byte) -92, 56, param2));
+        return RasterEffectHelpers.computePowerupCooldown(param1, param0, this.hasUpgrade((byte) -81, 59, param2), this.hasUpgrade((byte) -92, 56, param2));
     }
 
     public static void releaseStatics(int param0) {
@@ -87,7 +87,7 @@ class GameWorld {
         field_B = null;
         if (param0 != -6) {
           Sprite[] var2 = (Sprite[]) null;
-          GameWorld.a(-39, -50, (Sprite[]) null, -9, (Sprite[]) null, (BitmapFont) null, -54, 88, -18, -27, (Sprite[]) null, (byte) -4, -116, -58, 27);
+          GameWorld.initializeUiTheme(-39, -50, (Sprite[]) null, -9, (Sprite[]) null, (BitmapFont) null, -54, 88, -18, -27, (Sprite[]) null, (byte) -4, -116, -58, 27);
         }
         field_E = null;
         field_n = null;
@@ -96,7 +96,7 @@ class GameWorld {
         field_x = null;
     }
 
-    final IntrusiveDeque a(byte param0) {
+    final IntrusiveDeque getCharacters(byte param0) {
         if (param0 < 108) {
           return (IntrusiveDeque) null;
         }
@@ -117,28 +117,28 @@ class GameWorld {
         return var4;
     }
 
-    final void a(byte param0, int param1) {
+    final void markFinished(byte param0, int param1) {
         if (param0 != -110) {
-          this.a(-88, true);
+          this.findCharacter(-88, true);
         }
         this.field_c = true;
     }
 
-    final static void a(int param0, String param1) {
-        System.out.println("Error: " + we.a((byte) -73, "%0a", param1, "\n"));
+    final static void printEscapedError(int param0, String param1) {
+        System.out.println("Error: " + PlayingSound.replaceAll((byte) -73, "%0a", param1, "\n"));
         if (param0 != 2) {
           field_n = (UiComponent) null;
         }
     }
 
-    final boolean b(int param0, int param1) {
+    final boolean resistsEffect(int param0, int param1) {
         boolean stackIn_8_0 = false;
         if (param0 != 0) {
           this.field_u = (IntrusiveDeque) null;
         }
         boolean decompiledFrameRemainder0 = true;
         if (!this.hasUpgrade((byte) -83, 45, param1) && (!this.hasUpgrade((byte) -83, 46, param1) ||
-          !(hp.nextBoundedInt((byte) 7, g.field_a, 100) < 40))) {
+          !(RandomHelpers.nextBoundedInt((byte) 7, RasterEffectHelpers.field_a, 100) < 40))) {
           stackIn_8_0 = false;
           decompiledFrameRemainder0 = false;
         }
@@ -148,7 +148,7 @@ class GameWorld {
         return stackIn_8_0;
     }
 
-    final SceneObject a(int param0, byte param1) {
+    final SceneObject findObjectById(int param0, byte param1) {
         SceneObject var3;
         int var4;
         SceneObject var3Lifetime1;
@@ -176,14 +176,14 @@ class GameWorld {
     final void decodeFromPacket(int param0, PacketBuffer param1) {
         int dupTemp$0 = 0;
         boolean stackIn_4_1 = false;
-        jj stackIn_21_0;
-        jj stackIn_21_1;
+        PhantomDecoy stackIn_21_0;
+        PhantomDecoy stackIn_21_1;
         int stackIn_21_2;
         int stackIn_21_3;
         int stackIn_21_4;
         int stackIn_21_5;
-        jj stackIn_22_0;
-        jj stackIn_22_1;
+        PhantomDecoy stackIn_22_0;
+        PhantomDecoy stackIn_22_1;
         boolean stackIn_22_6;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
@@ -199,14 +199,14 @@ class GameWorld {
         int var9 = 0;
         GameCharacter var10 = null;
         HumanView var11 = null;
-        jj var12 = null;
-        cg var13 = null;
+        PhantomDecoy var12 = null;
+        MeltdownPuddleView var13 = null;
         int var14 = 0;
         int var15 = 0;
         Object var16 = null;
         int var17 = 0;
         String var18 = null;
-        ce var19 = null;
+        TerrainEffectZone var19 = null;
         Object var4Lifetime1;
         int var3_intLifetime1;
         var16 = null;
@@ -221,7 +221,7 @@ class GameWorld {
           this.phase = param1.readUnsignedByte(31365);
           if (param0 != 2) {
             var18 = (String) null;
-            GameWorld.a(51, (String) null);
+            GameWorld.printEscapedError(51, (String) null);
           }
           for (var3_int = 0; var3_int < this.teamCount; var3_int++) {
             this.field_y[var3_int] = param1.readUnsignedByte(31365);
@@ -256,7 +256,7 @@ class GameWorld {
               this.teamCharacterCounts[var9] = this.teamCharacterCounts[var9] + 1;
             } else {
               if (var14 == 2) {
-                var11 = pg.createArmedHumanView(var6, (byte) -83, var8, var7);
+                var11 = ViewFactoryHelpers.createArmedHumanView(var6, (byte) -83, var8, var7);
                 var4Lifetime1 = var11;
               } else {
                 if (3 == var14) {
@@ -275,7 +275,7 @@ class GameWorld {
                     stackIn_22_1 = null;
                     stackIn_22_6 = true;
                   }
-                  var12 = new jj(stackIn_21_2, stackIn_21_3, stackIn_21_4, stackIn_21_5, stackIn_22_6);
+                  var12 = new PhantomDecoy(stackIn_21_2, stackIn_21_3, stackIn_21_4, stackIn_21_5, stackIn_22_6);
                   var4Lifetime1 = var12;
                 } else {
                   if (var14 != 4) {
@@ -285,11 +285,11 @@ class GameWorld {
                     var4Lifetime1 = null;
                     var14 = var5;
                     var15 = var8 & 255 | var8 >> 16;
-                    this.a(var6, var14, 117, var7, var15, (NavigationGrid) null);
-                    var19 = (ce) (this.field_s.first((byte) -127));
+                    this.addTerrainEffectZone(var6, var14, 117, var7, var15, (NavigationGrid) null);
+                    var19 = (TerrainEffectZone) (this.field_s.first((byte) -127));
                     var19.field_l = var15 * 2;
                   } else {
-                    var13 = new cg((var8 & -1073741824) >>> 30, var6, var7);
+                    var13 = new MeltdownPuddleView((var8 & -1073741824) >>> 30, var6, var7);
                     this.field_A.addFirst(var13, false);
                     var4Lifetime1 = null;
                   }
@@ -317,11 +317,11 @@ class GameWorld {
         }
     }
 
-    final static void a(int param0, String param1, int param2, String param3, int param4, int param5) {
+    final static void sendChatMessage(int param0, String param1, int param2, String param3, int param4, int param5) {
         CipherPacketBuffer var8 = null;
         int var7 = 0;
         try {
-          var8 = ma.field_a;
+          var8 = TextValidationFailure.field_a;
           CipherPacketBuffer var6 = var8;
           var8.writeCipheredOpcode((byte) -35, param2);
           if (param5 != 29602) {
@@ -338,7 +338,7 @@ class GameWorld {
           } else {
             GameEvent.writeCompressedString(var8, param3, -31746);
           }
-          var8.e(41, var8.position - var7);
+          var8.backpatchByteLength(41, var8.position - var7);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "kb.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
@@ -347,7 +347,7 @@ class GameWorld {
     final void addEntity(int param0, TertiaryLinkNode param1) {
         try {
           param1.unlink(true);
-          param1.a(-4564);
+          param1.unlinkSecondary(-4564);
           if (param0 >= -95) {
             this.field_g = 51;
           }
@@ -358,7 +358,7 @@ class GameWorld {
         }
     }
 
-    final void c(int param0) {
+    final void recordHumanEscape(int param0) {
         if (this.phase == 1) {
           this.field_C = this.field_C - 250;
         }
@@ -368,8 +368,8 @@ class GameWorld {
         }
     }
 
-    final GameCharacter a(int param0, boolean param1) {
-        SceneObject var3 = this.a(param0, (byte) 33);
+    final GameCharacter findCharacter(int param0, boolean param1) {
+        SceneObject var3 = this.findObjectById(param0, (byte) 33);
         if (var3 == null) {
           return null;
         }
@@ -378,13 +378,13 @@ class GameWorld {
         }
         if (param1) {
           String var4 = (String) null;
-          GameWorld.a(-73, (String) null, 60, (String) null, 9, -123);
+          GameWorld.sendChatMessage(-73, (String) null, 60, (String) null, 9, -123);
         }
         return (GameCharacter) (var3);
     }
 
-    final HumanView a(int param0, int param1) {
-        SceneObject var3 = this.a(param0, (byte) 33);
+    final HumanView findHumanView(int param0, int param1) {
+        SceneObject var3 = this.findObjectById(param0, (byte) 33);
         if (var3 == null) {
           return null;
         }
@@ -395,8 +395,8 @@ class GameWorld {
         return (HumanView) (var3);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, NavigationGrid param5) {
-        ce var7 = null;
+    final void addTerrainEffectZone(int param0, int param1, int param2, int param3, int param4, NavigationGrid param5) {
+        TerrainEffectZone var7 = null;
         Sprite[] var8 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -404,11 +404,11 @@ class GameWorld {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7_ref = null;
         try {
-          var7 = new ce(param5, param0, param3, param4, param1);
+          var7 = new TerrainEffectZone(param5, param0, param3, param4, param1);
           this.field_s.addFirst(var7, false);
           if (param2 <= 98) {
             var8 = (Sprite[]) null;
-            GameWorld.a(-11, 108, (Sprite[]) null, -106, (Sprite[]) null, (BitmapFont) null, -103, -20, -90, 29, (Sprite[]) null, (byte) 50, 82, -116, 28);
+            GameWorld.initializeUiTheme(-11, 108, (Sprite[]) null, -106, (Sprite[]) null, (BitmapFont) null, -103, -20, -90, 29, (Sprite[]) null, (byte) 50, 82, -116, 28);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

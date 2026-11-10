@@ -79,7 +79,7 @@ final class VorbisFloor1 {
         var2 = this.xList.length;
         System.arraycopy(this.xList, 0, field_b, 0, var2);
         var3 = field_i[this.multiplier - 1];
-        var4 = mb.bitLength((byte) -31, var3 - 1);
+        var4 = MusicVoice.bitLength((byte) -31, var3 - 1);
         field_j[0] = VorbisSample.readBits(var4);
         field_j[1] = VorbisSample.readBits(var4);
         var5 = 2;

@@ -112,7 +112,7 @@ final class MicrosoftCursorController extends com.ms.dll.Callback {
         com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void moveCursor(int param0, int param1, int param2) {
         com.ms.win32.User32.SetCursorPos(param2, param0);
         if (param1 >= -10) {
           java.awt.Component var5 = (java.awt.Component) null;

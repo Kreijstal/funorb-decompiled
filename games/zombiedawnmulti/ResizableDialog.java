@@ -25,7 +25,7 @@ abstract class ResizableDialog extends FadingDialog {
             return;
           }
           try {
-            JavaScriptBridge.callFunctionWithArgs(StatefulTextPainter.b(0), "resizing", (byte) 23, new Object[]{new Integer(param1)});
+            JavaScriptBridge.callFunctionWithArgs(StatefulTextPainter.getHostApplet(0), "resizing", (byte) 23, new Object[]{new Integer(param1)});
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = decompiledCaughtException;
@@ -67,7 +67,7 @@ abstract class ResizableDialog extends FadingDialog {
             this.field_db = 0;
             this.onResizeComplete((byte) -101);
           }
-          this.b(var2, var3, param0 + 27505);
+          this.setCenteredSize(var2, var3, param0 + 27505);
         }
         return super.advanceDialogAnimation(-27388);
     }
@@ -76,15 +76,15 @@ abstract class ResizableDialog extends FadingDialog {
         if (param0 <= 68) {
           return (String) null;
         }
-        return s.field_e.readString((byte) -24);
+        return StatusAndMeshHelpers.field_e.readString((byte) -24);
     }
 
     final static void resetAccountFlowState(int param0) {
         IntrusiveDequeCursor.field_e = false;
-        nj.field_f = false;
-        PowerupButton.a(param0, 99);
-        SceneObject.field_B = mp.field_b;
-        ProgressDialog.field_hb = mp.field_b;
+        MusicPatchEnvelope.field_f = false;
+        PowerupButton.setAccountDialogResult(param0, 99);
+        SceneObject.field_B = TextLayout.field_b;
+        ProgressDialog.field_hb = TextLayout.field_b;
     }
 
     public static void releaseStatics(byte param0) {
@@ -198,8 +198,8 @@ abstract class ResizableDialog extends FadingDialog {
           var7Lifetime1++;
         }
         TextWidgetPainter.field_e.drawTransparent(-90 + param1 + this.field_n, 10 + param2);
-        fk.a(param1 + 5, this.field_n - 10, param0, ContextMenu.field_Nb, 35 + param2);
-        fk.a(param1, this.field_n, true, jh.field_Hb, this.field_w + param2 - 22);
+        RankingsScreen.drawHorizontalThreeSlice(param1 + 5, this.field_n - 10, param0, ContextMenu.field_Nb, 35 + param2);
+        RankingsScreen.drawHorizontalThreeSlice(param1, this.field_n, true, LobbyGame.field_Hb, this.field_w + param2 - 22);
         var5Lifetime2 = 169;
         var4Lifetime2 = this.field_w - 79;
         var6Lifetime2 = 127;
@@ -216,17 +216,17 @@ abstract class ResizableDialog extends FadingDialog {
     }
 
     final static int hitTestPairedSprites(int param0, int param1, int param2) {
-        if (null == er.field_j) {
+        if (null == TipPanelHelpers.field_j) {
           return -1;
         }
-        if (param2 >= jp.field_d &&
-          param2 < jp.field_d + er.field_j.width &&
-          param0 >= cr.field_j &&
-          cr.field_j + er.field_j.height > param0) {
+        if (param2 >= ChatPromptHelpers.field_d &&
+          param2 < ChatPromptHelpers.field_d + TipPanelHelpers.field_j.width &&
+          param0 >= PendingStatusRequest.field_j &&
+          PendingStatusRequest.field_j + TipPanelHelpers.field_j.height > param0) {
           return 0;
         }
-        if (RasterSnapshot.field_k <= param2 && param2 < RasterSnapshot.field_k + er.field_j.width && param0 >= HotspotTextWidget.field_O &&
-          !(param0 >= HotspotTextWidget.field_O + er.field_j.height)) {
+        if (RasterSnapshot.field_k <= param2 && param2 < RasterSnapshot.field_k + TipPanelHelpers.field_j.width && param0 >= HotspotTextWidget.field_O &&
+          !(param0 >= HotspotTextWidget.field_O + TipPanelHelpers.field_j.height)) {
           return 1;
         }
         if (param1 != -1) {
@@ -235,12 +235,12 @@ abstract class ResizableDialog extends FadingDialog {
         return -1;
     }
 
-    boolean h(int param0) {
+    boolean refreshVisibilityAndCheckClosed(int param0) {
         if (param0 != -6134) {
           field_U = (String) null;
         }
         this.finishTransition((byte) 113);
-        return super.h(-6134);
+        return super.refreshVisibilityAndCheckClosed(-6134);
     }
 
     void finishTransition(byte param0) {
@@ -250,14 +250,14 @@ abstract class ResizableDialog extends FadingDialog {
         if (this.field_db <= 0) {
           return;
         }
-        this.b(this.field_V, this.field_Y, 69);
+        this.setCenteredSize(this.field_V, this.field_Y, 69);
         this.field_db = 0;
         this.onResizeComplete((byte) -116);
     }
 
     final void startResizeTransition(int param0, byte param1, int param2, int param3) {
         if (param0 <= 0) {
-          this.b(param3, param2, 73);
+          this.setCenteredSize(param3, param2, 73);
           return;
         }
         this.field_V = param3;
@@ -265,7 +265,7 @@ abstract class ResizableDialog extends FadingDialog {
         this.field_S = 0;
         this.field_T = this.field_w;
         if (param1 != -112) {
-          this.h(20);
+          this.refreshVisibilityAndCheckClosed(20);
         }
         this.field_X = this.field_n;
         this.field_db = param0;

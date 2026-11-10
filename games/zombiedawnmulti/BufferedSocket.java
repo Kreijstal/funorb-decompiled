@@ -6,7 +6,7 @@ import java.io.*;
 final class BufferedSocket implements Runnable {
     static String field_o;
     static Sprite field_g;
-    static jh field_n;
+    static LobbyGame field_n;
     static int field_e;
     private PlatformTaskDispatcher field_s;
     private PlatformTask field_c;
@@ -24,7 +24,7 @@ final class BufferedSocket implements Runnable {
     static String field_k;
     static int[] field_p;
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_n = null;
         field_g = null;
         field_j = null;
@@ -45,7 +45,7 @@ final class BufferedSocket implements Runnable {
           throw new IOException();
         }
         if (param0 != -26844) {
-          this.c(-17);
+          this.close(-17);
         }
     }
 
@@ -144,53 +144,53 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final static cr a(byte param0, int param1) {
+    final static PendingStatusRequest queueStatusRequest(byte param0, int param1) {
         if (param0 >= -32) {
-          BufferedSocket.b((byte) 24);
+          BufferedSocket.releaseStatics((byte) 24);
         }
-        cr var2 = new cr();
+        PendingStatusRequest var2 = new PendingStatusRequest();
         TabbedPane.field_Gb.addFirst(var2, false);
         StateIconLabel.sendByteRequest(1, param1);
         return var2;
     }
 
     protected final void finalize() {
-        this.c(92);
+        this.close(92);
     }
 
-    final static void a(Sprite param0, byte param1, Sprite param2) {
-        jj.field_F = new Sprite[7];
-        rb.field_e = new Sprite[7];
-        eg.field_D = new Sprite(300, 200);
-        rb.field_e[0] = param2;
-        jj.field_F[0] = new Sprite(param2.width + 20, param2.height + 10);
-        rb.field_e[1] = param0;
-        jj.field_F[1] = new Sprite(param0.width + 10, 10 + param0.height);
-        rb.field_e[2] = new Sprite(150, 100);
-        jj.field_F[2] = new Sprite(150, 100);
-        rb.field_e[3] = new Sprite(120, 50);
-        jj.field_F[3] = new Sprite(120, 50);
-        rb.field_e[4] = new Sprite(300, 50);
-        jj.field_F[4] = new Sprite(300, 50);
-        rb.field_e[5] = new Sprite(200, 90);
-        jj.field_F[5] = new Sprite(200, 90);
-        rb.field_e[6] = new Sprite(200, 50);
+    final static void createGlowSprites(Sprite param0, byte param1, Sprite param2) {
+        PhantomDecoy.field_F = new Sprite[7];
+        HudSpriteStore.field_e = new Sprite[7];
+        StrongCacheEntry.field_D = new Sprite(300, 200);
+        HudSpriteStore.field_e[0] = param2;
+        PhantomDecoy.field_F[0] = new Sprite(param2.width + 20, param2.height + 10);
+        HudSpriteStore.field_e[1] = param0;
+        PhantomDecoy.field_F[1] = new Sprite(param0.width + 10, 10 + param0.height);
+        HudSpriteStore.field_e[2] = new Sprite(150, 100);
+        PhantomDecoy.field_F[2] = new Sprite(150, 100);
+        HudSpriteStore.field_e[3] = new Sprite(120, 50);
+        PhantomDecoy.field_F[3] = new Sprite(120, 50);
+        HudSpriteStore.field_e[4] = new Sprite(300, 50);
+        PhantomDecoy.field_F[4] = new Sprite(300, 50);
+        HudSpriteStore.field_e[5] = new Sprite(200, 90);
+        PhantomDecoy.field_F[5] = new Sprite(200, 90);
+        HudSpriteStore.field_e[6] = new Sprite(200, 50);
         if (param1 >= -4) {
           return;
         }
         try {
-          jj.field_F[6] = new Sprite(200, 50);
-          g.c();
-          jj.field_F[0].bindAsRenderTarget();
-          rb.field_e[0].drawSilhouette(5, 5, 16777215);
-          FightEvent.d((byte) -18);
-          rb.field_e[0].drawSilhouette(5, 5, 0);
-          jj.field_F[1].bindAsRenderTarget();
-          rb.field_e[1].drawSilhouette(-35, 5, 16777215);
-          g.a(16777215);
-          FightEvent.d((byte) -18);
-          rb.field_e[1].drawSilhouette(-35, 5, 0);
-          g.b();
+          PhantomDecoy.field_F[6] = new Sprite(200, 50);
+          RasterEffectHelpers.pushRasterState();
+          PhantomDecoy.field_F[0].bindAsRenderTarget();
+          HudSpriteStore.field_e[0].drawSilhouette(5, 5, 16777215);
+          FightEvent.blurScreen((byte) -18);
+          HudSpriteStore.field_e[0].drawSilhouette(5, 5, 0);
+          PhantomDecoy.field_F[1].bindAsRenderTarget();
+          HudSpriteStore.field_e[1].drawSilhouette(-35, 5, 16777215);
+          RasterEffectHelpers.outlineRasterInPlace(16777215);
+          FightEvent.blurScreen((byte) -18);
+          HudSpriteStore.field_e[1].drawSilhouette(-35, 5, 0);
+          RasterEffectHelpers.popRasterState();
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ej.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -200,7 +200,7 @@ final class BufferedSocket implements Runnable {
         this(param0, param1, 5000);
     }
 
-    final int a(int param0) throws IOException {
+    final int available(int param0) throws IOException {
         if (this.field_r) {
           return 0;
         }
@@ -208,7 +208,7 @@ final class BufferedSocket implements Runnable {
         return this.field_d.available();
     }
 
-    final static long a(byte param0) {
+    final static long collectLoadoutUpgradeMask(byte param0) {
         int var4 = 0;
         int var5 = 0;
         long var1_long = 0L;
@@ -237,7 +237,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void a(int param0, int param1, byte[] param2, int param3) throws IOException {
+    final void readFully(int param0, int param1, byte[] param2, int param3) throws IOException {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -259,7 +259,7 @@ final class BufferedSocket implements Runnable {
             param0 = param0 - var5_int;
           }
           if (param3 <= 96) {
-            BufferedSocket.b((byte) 10);
+            BufferedSocket.releaseStatics((byte) 10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -276,7 +276,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void c(int param0) {
+    final void close(int param0) {
         try {
           int var4 = 0;
           var4 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -290,7 +290,7 @@ final class BufferedSocket implements Runnable {
           int var2 = 61 / ((param0 - 20) / 58);
           if (this.field_c != null) {
             while (this.field_c.field_f == 0) {
-              vd.a(false, 1L);
+              SleepAndNameHelpers.sleepMillis(false, 1L);
             }
             if (this.field_c.field_f == 1) {
               try {
@@ -307,7 +307,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
+    final void write(int param0, int param1, int param2, byte[] param3) throws IOException {
         int var6 = 0;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
@@ -333,7 +333,7 @@ final class BufferedSocket implements Runnable {
           synchronized (var5) {
             if (param1 != -100) {
               var9 = (Sprite) null;
-              BufferedSocket.a((Sprite) null, (byte) -16, (Sprite) null);
+              BufferedSocket.createGlowSprites((Sprite) null, (byte) -16, (Sprite) null);
             }
             for (var6 = 0; param2 > var6; var6++) {
               this.field_b[this.field_a] = param3[param0 + var6];
@@ -362,7 +362,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final int c(byte param0) throws IOException {
+    final int readByte(byte param0) throws IOException {
         if (param0 != 59) {
           this.field_r = true;
         }

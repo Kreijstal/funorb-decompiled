@@ -82,21 +82,21 @@ final class VerticalScrollbar extends UiComponent {
         try {
           this.field_Jb = new UiComponent(0L, param1);
           this.field_Ib = new UiComponent(0L, param2);
-          this.a((byte) 50, this.field_Jb);
-          this.a((byte) 50, this.field_Ib);
+          this.addChild((byte) 50, this.field_Jb);
+          this.addChild((byte) 50, this.field_Ib);
           this.field_Gb = new UiComponent(0L, (UiComponent) null);
-          this.a((byte) 50, this.field_Gb);
+          this.addChild((byte) 50, this.field_Gb);
           this.field_Hb = new UiComponent(0L, param3);
           this.field_Lb = new UiComponent(0L, param3);
           var9 = this.field_Hb;
           var10 = var9;
           this.field_Lb.field_ib = true;
           var10.field_ib = true;
-          this.field_Gb.a((byte) 50, this.field_Hb);
-          this.field_Gb.a((byte) 50, this.field_Lb);
+          this.field_Gb.addChild((byte) 50, this.field_Hb);
+          this.field_Gb.addChild((byte) 50, this.field_Lb);
           this.field_Kb = new UiComponent(0L, param4);
           this.field_Kb.field_fb = true;
-          this.field_Gb.a((byte) 50, this.field_Kb);
+          this.field_Gb.addChild((byte) 50, this.field_Kb);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -215,7 +215,7 @@ final class VerticalScrollbar extends UiComponent {
         if (this.field_Fb != 0) {
           return false;
         }
-        if (bo.field_d >= this.field_Kb.field_mb + this.field_Kb.field_qb) {
+        if (LoginMethod.field_d >= this.field_Kb.field_mb + this.field_Kb.field_qb) {
           return false;
         }
         this.field_Fb = 3;
@@ -477,31 +477,31 @@ final class VerticalScrollbar extends UiComponent {
     final static void tickLobbyHighlights(int param0) {
         RuntimeException decompiledCaughtException = null;
         LobbyPlayer var1 = null;
-        jh var1_ref = null;
+        LobbyGame var1_ref = null;
         RuntimeException var1_ref2 = null;
         int var2 = 0;
         LobbyPlayer var1Lifetime1;
         var2 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var1 = (LobbyPlayer) (cg.field_i.last(param0 ^ 120));
+          var1 = (LobbyPlayer) (MeltdownPuddleView.field_i.last(param0 ^ 120));
           while (var1 != null) {
             if (0 < var1.field_bc) {
               var1.field_bc = var1.field_bc - 1;
               if (0 == var1.field_bc) {
                 var1.field_Fb = 0;
-                if (var1.c((byte) 15)) {
+                if (var1.isUnindexed((byte) 15)) {
                   var1.unlink(true);
                 }
               }
             }
-            var1 = (LobbyPlayer) (cg.field_i.previous(6));
+            var1 = (LobbyPlayer) (MeltdownPuddleView.field_i.previous(6));
           }
-          var1_ref = (jh) (tn.field_C.last(97));
+          var1_ref = (LobbyGame) (NetworkArchiveRequest.field_C.last(97));
           while (var1_ref != null) {
             if (var1_ref.field_Jb > 0) {
               var1_ref.field_Jb = var1_ref.field_Jb - 1;
               if (var1_ref.field_Jb != 0) {
-                var1_ref = (jh) (tn.field_C.previous(6));
+                var1_ref = (LobbyGame) (NetworkArchiveRequest.field_C.previous(6));
                 continue;
               }
               var1_ref.field_Vb = 0;
@@ -509,9 +509,9 @@ final class VerticalScrollbar extends UiComponent {
                 var1_ref.unlink(true);
               }
             }
-            var1_ref = (jh) (tn.field_C.previous(6));
+            var1_ref = (LobbyGame) (NetworkArchiveRequest.field_C.previous(6));
           }
-          var1Lifetime1 = (LobbyPlayer) (nh.field_g.last(65));
+          var1Lifetime1 = (LobbyPlayer) (PendingRankingRequest.field_g.last(65));
           if (param0 != 2) {
             return;
           }
@@ -520,12 +520,12 @@ final class VerticalScrollbar extends UiComponent {
               var1Lifetime1.field_bc = var1Lifetime1.field_bc - 1;
               if (var1Lifetime1.field_bc == 0) {
                 var1Lifetime1.field_Fb = 0;
-                if (var1Lifetime1.c((byte) 15)) {
+                if (var1Lifetime1.isUnindexed((byte) 15)) {
                   var1Lifetime1.unlink(true);
                 }
               }
             }
-            var1Lifetime1 = (LobbyPlayer) (nh.field_g.previous(6));
+            var1Lifetime1 = (LobbyPlayer) (PendingRankingRequest.field_g.previous(6));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -549,7 +549,7 @@ final class VerticalScrollbar extends UiComponent {
         if (this.field_Fb != 0) {
           return false;
         }
-        if (bo.field_d < this.field_Kb.field_I + (this.field_Kb.field_z + this.field_Kb.field_qb + this.field_Kb.field_mb)) {
+        if (LoginMethod.field_d < this.field_Kb.field_I + (this.field_Kb.field_z + this.field_Kb.field_qb + this.field_Kb.field_mb)) {
           return false;
         }
         this.field_Fb = 3;

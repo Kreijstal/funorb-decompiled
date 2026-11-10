@@ -13,13 +13,13 @@ final class PortalView extends SceneObject {
     private PcmSampleStream field_N;
     int[] field_P;
     static ValidationState field_H;
-    private ea field_O;
+    private SwirlNoiseRenderer field_O;
     int field_I;
     static int[] field_K;
 
     final static byte[] unwrapArchiveBytes(Object param0, int param1, boolean param2) {
         byte[] var3 = null;
-        t var3_ref = null;
+        ByteStorage var3_ref = null;
         RuntimeException var3_ref2 = null;
         Object stackIn_2_0 = null;
         byte[] stackIn_5_0 = null;
@@ -40,16 +40,16 @@ final class PortalView extends SceneObject {
             return stackIn_5_0;
           }
           if (!(param0 instanceof byte[])) {
-            if (!(param0 instanceof t)) {
+            if (!(param0 instanceof ByteStorage)) {
               throw new IllegalArgumentException();
             }
-            var3_ref = (t) (param0);
+            var3_ref = (ByteStorage) (param0);
             stackIn_14_0 = var3_ref.getBytes(-111);
             return stackIn_14_0;
           }
           var3 = (byte[]) (param0);
           if (param2) {
-            stackIn_11_0 = ValidationState.a(255, var3);
+            stackIn_11_0 = ValidationState.copyBytes(255, var3);
             return stackIn_11_0;
           }
           stackIn_9_0 = var3;
@@ -106,12 +106,12 @@ final class PortalView extends SceneObject {
         String stackIn_39_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2.a((byte) -122) &&
-            param2.a(false, "commonui")) {
-            if (param0.a((byte) -112) &&
-              param0.a(false, "commonui")) {
-              if (param3.a((byte) -125) &&
-                param3.a(false, "button.gif")) {
+          if (param2.ensureIndex((byte) -122) &&
+            param2.isGroupAvailableByName(false, "commonui")) {
+            if (param0.ensureIndex((byte) -112) &&
+              param0.isGroupAvailableByName(false, "commonui")) {
+              if (param3.ensureIndex((byte) -125) &&
+                param3.isGroupAvailableByName(false, "button.gif")) {
                 if (param1 == -3726) {
                   return true;
                 }
@@ -190,9 +190,9 @@ final class PortalView extends SceneObject {
           if (param0 > -66) {
             field_K = (int[]) null;
           }
-          rn.field_a = ReportAbuseDialog.field_Qb[param1];
-          SimArmedHuman.field_Ab = dd.field_f[param1];
-          MessageDialog.field_Ab = pf.field_e[param1];
+          FullscreenSupport.field_a = ReportAbuseDialog.field_Qb[param1];
+          SimArmedHuman.field_Ab = DefaultQuickChatContext.field_f[param1];
+          MessageDialog.field_Ab = ChatInputHelpers.field_e[param1];
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -227,2135 +227,2135 @@ final class PortalView extends SceneObject {
                 this.var3 = 0;
             }
             void runChunk0() throws java.lang.RuntimeException {
-                bo.field_b = param0;
-                var2 = qe.a(-128, "text_game_name");
+                LoginMethod.field_b = param0;
+                var2 = GameHud.readRootTextFile(-128, "text_game_name");
                 if (null != var2) {
-                  qe.a(-2739, var2);
+                  GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "waitingfor_patches");
+                var2 = GameHud.readRootTextFile(-125, "waitingfor_patches");
                 if (null != var2) {
-                  DelayedPacket.field_o = qe.a(-2739, var2);
+                  DelayedPacket.field_o = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "loading_patches");
+                var2 = GameHud.readRootTextFile(-122, "loading_patches");
                 if (null != var2) {
-                  bk.field_k = qe.a(-2739, var2);
+                  DirectByteStorage.field_k = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "mouseoverathing");
+                var2 = GameHud.readRootTextFile(-127, "mouseoverathing");
                 if (var2 != null) {
-                  GameWorld.field_E = qe.a(-2739, var2);
+                  GameWorld.field_E = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "achievementsthisgame");
+                var2 = GameHud.readRootTextFile(-123, "achievementsthisgame");
                 if (null != var2) {
-                  ContextMenu.field_Mb = qe.a(-2739, var2);
+                  ContextMenu.field_Mb = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "gameoptlabels,0");
+                var2 = GameHud.readRootTextFile(-123, "gameoptlabels,0");
                 if (var2 != null) {
-                  ZombieDawnMulti.field_K[0] = qe.a(-2739, var2);
+                  ZombieDawnMulti.field_K[0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "gameoptlabels,1");
+                var2 = GameHud.readRootTextFile(-127, "gameoptlabels,1");
                 if (var2 != null) {
-                  ZombieDawnMulti.field_K[1] = qe.a(-2739, var2);
+                  ZombieDawnMulti.field_K[1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "gameoptnames,0,0");
+                var2 = GameHud.readRootTextFile(-124, "gameoptnames,0,0");
                 if (null != var2) {
-                  tj.field_e[0][0] = qe.a(-2739, var2);
+                  EffectVolumeHelpers.field_e[0][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "gameoptnames,0,1");
+                var2 = GameHud.readRootTextFile(-127, "gameoptnames,0,1");
                 if (var2 != null) {
-                  tj.field_e[0][1] = qe.a(-2739, var2);
+                  EffectVolumeHelpers.field_e[0][1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "gameoptnames,0,2");
+                var2 = GameHud.readRootTextFile(-126, "gameoptnames,0,2");
                 if (var2 != null) {
-                  tj.field_e[0][2] = qe.a(-2739, var2);
+                  EffectVolumeHelpers.field_e[0][2] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "gameoptnames,0,3");
+                var2 = GameHud.readRootTextFile(-124, "gameoptnames,0,3");
                 if (null != var2) {
-                  tj.field_e[0][3] = qe.a(-2739, var2);
+                  EffectVolumeHelpers.field_e[0][3] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "gameoptnames,0,4");
+                var2 = GameHud.readRootTextFile(-128, "gameoptnames,0,4");
                 if (var2 != null) {
-                  tj.field_e[0][4] = qe.a(-2739, var2);
+                  EffectVolumeHelpers.field_e[0][4] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "gameopttooltips,0,0");
+                var2 = GameHud.readRootTextFile(-124, "gameopttooltips,0,0");
                 if (null != var2) {
-                  LinkButtonPainter.field_d[0][0] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_d[0][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "gameopttooltips,0,1");
+                var2 = GameHud.readRootTextFile(-124, "gameopttooltips,0,1");
                 if (null != var2) {
-                  LinkButtonPainter.field_d[0][1] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_d[0][1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "gameopttooltips,0,2");
+                var2 = GameHud.readRootTextFile(-124, "gameopttooltips,0,2");
                 if (null != var2) {
-                  LinkButtonPainter.field_d[0][2] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_d[0][2] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "gameopttooltips,0,3");
+                var2 = GameHud.readRootTextFile(-127, "gameopttooltips,0,3");
                 if (var2 != null) {
-                  LinkButtonPainter.field_d[0][3] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_d[0][3] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "gameopttooltips,0,4");
+                var2 = GameHud.readRootTextFile(-122, "gameopttooltips,0,4");
                 if (var2 != null) {
-                  LinkButtonPainter.field_d[0][4] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_d[0][4] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "lobby_hint_1");
+                var2 = GameHud.readRootTextFile(-125, "lobby_hint_1");
                 if (var2 != null) {
-                  SpriteState.field_A = qe.a(-2739, var2);
+                  SpriteState.field_A = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "lobby_hint_2");
+                var2 = GameHud.readRootTextFile(-128, "lobby_hint_2");
                 if (null != var2) {
-                  wm.field_P = qe.a(-2739, var2);
+                  MarkerSliderWidget.field_P = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "info_msg");
+                var2 = GameHud.readRootTextFile(-122, "info_msg");
                 if (var2 != null) {
-                  cc.field_a = qe.a(-2739, var2);
+                  AccountCreationHelpers.field_a = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "tree_msg");
+                var2 = GameHud.readRootTextFile(-127, "tree_msg");
                 if (var2 != null) {
-                  uc.field_g = qe.a(-2739, var2);
+                  FlaggedTextValue.field_g = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "powerups_msg");
+                var2 = GameHud.readRootTextFile(-124, "powerups_msg");
                 if (var2 != null) {
-                  wq.field_d = qe.a(-2739, var2);
+                  MenuStyleHelpers.field_d = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "modifiers_msg");
+                var2 = GameHud.readRootTextFile(-124, "modifiers_msg");
                 if (var2 != null) {
-                  jf.field_c = qe.a(-2739, var2);
+                  ReportDialogGlobals.field_c = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "traits_msg");
+                var2 = GameHud.readRootTextFile(-125, "traits_msg");
                 if (null != var2) {
-                  pi.field_h = qe.a(-2739, var2);
+                  CredentialKind.field_h = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "RESEARCH_TOOLTIP");
+                var2 = GameHud.readRootTextFile(-125, "RESEARCH_TOOLTIP");
                 if (var2 != null) {
-                  qe.a(-2739, var2);
+                  GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "MODIFIER_SEPARATOR");
+                var2 = GameHud.readRootTextFile(-127, "MODIFIER_SEPARATOR");
                 if (var2 != null) {
-                  ii.field_b = qe.a(-2739, var2);
+                  TickClock.field_b = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "RECHARGE_TIME_SEP_AND_VAL");
+                var2 = GameHud.readRootTextFile(-127, "RECHARGE_TIME_SEP_AND_VAL");
                 if (var2 != null) {
-                  qe.a(-2739, var2);
+                  GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "OFFERING_REMATCH");
+                var2 = GameHud.readRootTextFile(-125, "OFFERING_REMATCH");
                 if (var2 != null) {
-                  ak.field_d = qe.a(-2739, var2);
+                  ClientShellHelpers.field_d = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "TREE_VIEW_TITLE");
+                var2 = GameHud.readRootTextFile(-123, "TREE_VIEW_TITLE");
                 if (null != var2) {
-                  qe.a(-2739, var2);
+                  GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "TRAY_SPELL_TITLE");
+                var2 = GameHud.readRootTextFile(-123, "TRAY_SPELL_TITLE");
                 if (null != var2) {
-                  qe.a(-2739, var2);
+                  GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "TRAY_TRAIT_TITLE");
+                var2 = GameHud.readRootTextFile(-124, "TRAY_TRAIT_TITLE");
                 if (var2 != null) {
-                  qe.a(-2739, var2);
+                  GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "WINLOSE_SCREEN_RESIGNED");
+                var2 = GameHud.readRootTextFile(-124, "WINLOSE_SCREEN_RESIGNED");
                 if (null != var2) {
-                  io.field_d = qe.a(-2739, var2);
+                  WeightedLruCache.field_d = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "FAKE_USERNAME");
+                var2 = GameHud.readRootTextFile(-124, "FAKE_USERNAME");
                 if (null != var2) {
-                  oe.field_d = qe.a(-2739, var2);
+                  TextDecodeHelpers.field_d = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "RANKINGS_PAGE_PLAYER_TITLE");
+                var2 = GameHud.readRootTextFile(-125, "RANKINGS_PAGE_PLAYER_TITLE");
                 if (var2 != null) {
-                  ButtonWidget.field_C = qe.a(-2739, var2);
+                  ButtonWidget.field_C = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "TEXT_WISE_SAGE_TIP");
+                var2 = GameHud.readRootTextFile(-122, "TEXT_WISE_SAGE_TIP");
                 if (var2 != null) {
-                  vc.field_b = qe.a(-2739, var2);
+                  KeyMapHelpers.field_b = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "TEXT_POWERUPS_AND_MODIFIERS");
+                var2 = GameHud.readRootTextFile(-127, "TEXT_POWERUPS_AND_MODIFIERS");
                 if (var2 != null) {
-                  ve.field_a = qe.a(-2739, var2);
+                  LightningBolt.field_a = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "TEXT_TRAITS");
+                var2 = GameHud.readRootTextFile(-123, "TEXT_TRAITS");
                 if (null != var2) {
-                  en.field_f = qe.a(-2739, var2);
+                  ChatPanelSetupHelpers.field_f = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "UNRESEARCHED");
+                var2 = GameHud.readRootTextFile(-122, "UNRESEARCHED");
                 if (null != var2) {
-                  NavigationGrid.field_g = qe.a(-2739, var2);
+                  NavigationGrid.field_g = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "FULLY_RESEARCHED");
+                var2 = GameHud.readRootTextFile(-128, "FULLY_RESEARCHED");
                 if (var2 != null) {
-                  vo.field_n = qe.a(-2739, var2);
+                  IntroScreen.field_n = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "PARTIAL_RESEARCHED");
+                var2 = GameHud.readRootTextFile(-127, "PARTIAL_RESEARCHED");
                 if (null != var2) {
-                  NavigationGrid.field_d = qe.a(-2739, var2);
+                  NavigationGrid.field_d = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "comma_seperated_values");
+                var2 = GameHud.readRootTextFile(-124, "comma_seperated_values");
                 if (var2 != null) {
-                  qe.a(-2739, var2);
+                  GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "menu_titles,0");
+                var2 = GameHud.readRootTextFile(-126, "menu_titles,0");
                 if (null != var2) {
-                  sm.field_g[0] = qe.a(-2739, var2);
+                  DisplayMode.field_g[0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "menu_titles,1");
+                var2 = GameHud.readRootTextFile(-123, "menu_titles,1");
                 if (null != var2) {
-                  sm.field_g[1] = qe.a(-2739, var2);
+                  DisplayMode.field_g[1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "menu_titles,2");
+                var2 = GameHud.readRootTextFile(-122, "menu_titles,2");
                 if (null != var2) {
-                  sm.field_g[2] = qe.a(-2739, var2);
+                  DisplayMode.field_g[2] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "menu_titles,3");
+                var2 = GameHud.readRootTextFile(-123, "menu_titles,3");
                 if (null != var2) {
-                  sm.field_g[3] = qe.a(-2739, var2);
+                  DisplayMode.field_g[3] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "menu_titles,4");
+                var2 = GameHud.readRootTextFile(-125, "menu_titles,4");
                 if (var2 != null) {
-                  sm.field_g[4] = qe.a(-2739, var2);
+                  DisplayMode.field_g[4] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "menu_titles,5");
+                var2 = GameHud.readRootTextFile(-126, "menu_titles,5");
                 if (null != var2) {
-                  sm.field_g[5] = qe.a(-2739, var2);
+                  DisplayMode.field_g[5] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "menu_titles,6");
+                var2 = GameHud.readRootTextFile(-128, "menu_titles,6");
                 if (var2 != null) {
-                  sm.field_g[6] = qe.a(-2739, var2);
+                  DisplayMode.field_g[6] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "menu_titles,7");
+                var2 = GameHud.readRootTextFile(-125, "menu_titles,7");
                 if (var2 != null) {
-                  sm.field_g[7] = qe.a(-2739, var2);
+                  DisplayMode.field_g[7] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "menu_titles,8");
+                var2 = GameHud.readRootTextFile(-123, "menu_titles,8");
                 if (null != var2) {
-                  sm.field_g[8] = qe.a(-2739, var2);
+                  DisplayMode.field_g[8] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "menu_titles,9");
+                var2 = GameHud.readRootTextFile(-124, "menu_titles,9");
                 if (var2 != null) {
-                  sm.field_g[9] = qe.a(-2739, var2);
+                  DisplayMode.field_g[9] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "menu_titles,10");
+                var2 = GameHud.readRootTextFile(-127, "menu_titles,10");
                 if (var2 != null) {
-                  sm.field_g[10] = qe.a(-2739, var2);
+                  DisplayMode.field_g[10] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "menu_titles,11");
+                var2 = GameHud.readRootTextFile(-125, "menu_titles,11");
                 if (null != var2) {
-                  sm.field_g[11] = qe.a(-2739, var2);
+                  DisplayMode.field_g[11] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "menu_titles,12");
+                var2 = GameHud.readRootTextFile(-125, "menu_titles,12");
                 if (var2 != null) {
-                  sm.field_g[12] = qe.a(-2739, var2);
+                  DisplayMode.field_g[12] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "menu_titles,13");
+                var2 = GameHud.readRootTextFile(-128, "menu_titles,13");
                 if (var2 != null) {
-                  sm.field_g[13] = qe.a(-2739, var2);
+                  DisplayMode.field_g[13] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "menu_titles,14");
+                var2 = GameHud.readRootTextFile(-122, "menu_titles,14");
                 if (var2 != null) {
-                  sm.field_g[14] = qe.a(-2739, var2);
+                  DisplayMode.field_g[14] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "menu_titles,15");
+                var2 = GameHud.readRootTextFile(-125, "menu_titles,15");
                 if (null != var2) {
-                  sm.field_g[15] = qe.a(-2739, var2);
+                  DisplayMode.field_g[15] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "achievement_names,0");
+                var2 = GameHud.readRootTextFile(-126, "achievement_names,0");
                 if (var2 != null) {
-                  dg.field_G[0] = qe.a(-2739, var2);
+                  PlayModeChoiceDialog.field_G[0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "achievement_names,1");
+                var2 = GameHud.readRootTextFile(-127, "achievement_names,1");
                 if (var2 != null) {
-                  dg.field_G[1] = qe.a(-2739, var2);
+                  PlayModeChoiceDialog.field_G[1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "achievement_names,2");
+                var2 = GameHud.readRootTextFile(-127, "achievement_names,2");
                 if (null != var2) {
-                  dg.field_G[2] = qe.a(-2739, var2);
+                  PlayModeChoiceDialog.field_G[2] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "achievement_names,3");
+                var2 = GameHud.readRootTextFile(-126, "achievement_names,3");
                 if (null != var2) {
-                  dg.field_G[3] = qe.a(-2739, var2);
+                  PlayModeChoiceDialog.field_G[3] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "achievement_names,4");
+                var2 = GameHud.readRootTextFile(-125, "achievement_names,4");
                 if (null != var2) {
-                  dg.field_G[4] = qe.a(-2739, var2);
+                  PlayModeChoiceDialog.field_G[4] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "achievement_names,5");
+                var2 = GameHud.readRootTextFile(-123, "achievement_names,5");
                 if (null != var2) {
-                  dg.field_G[5] = qe.a(-2739, var2);
+                  PlayModeChoiceDialog.field_G[5] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "achievement_names,6");
+                var2 = GameHud.readRootTextFile(-123, "achievement_names,6");
                 if (null != var2) {
-                  dg.field_G[6] = qe.a(-2739, var2);
+                  PlayModeChoiceDialog.field_G[6] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "achievement_names,7");
+                var2 = GameHud.readRootTextFile(-126, "achievement_names,7");
                 if (var2 != null) {
-                  dg.field_G[7] = qe.a(-2739, var2);
+                  PlayModeChoiceDialog.field_G[7] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "achievement_names,8");
+                var2 = GameHud.readRootTextFile(-126, "achievement_names,8");
                 if (null != var2) {
-                  dg.field_G[8] = qe.a(-2739, var2);
+                  PlayModeChoiceDialog.field_G[8] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "achievement_names,9");
+                var2 = GameHud.readRootTextFile(-123, "achievement_names,9");
                 if (null != var2) {
-                  dg.field_G[9] = qe.a(-2739, var2);
+                  PlayModeChoiceDialog.field_G[9] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "achievement_names,10");
+                var2 = GameHud.readRootTextFile(-124, "achievement_names,10");
                 if (var2 != null) {
-                  dg.field_G[10] = qe.a(-2739, var2);
+                  PlayModeChoiceDialog.field_G[10] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "achievement_names,11");
+                var2 = GameHud.readRootTextFile(-122, "achievement_names,11");
                 if (null != var2) {
-                  dg.field_G[11] = qe.a(-2739, var2);
+                  PlayModeChoiceDialog.field_G[11] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "achievement_names,12");
+                var2 = GameHud.readRootTextFile(-122, "achievement_names,12");
                 if (var2 != null) {
-                  dg.field_G[12] = qe.a(-2739, var2);
+                  PlayModeChoiceDialog.field_G[12] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "achievement_names,13");
+                var2 = GameHud.readRootTextFile(-126, "achievement_names,13");
                 if (var2 != null) {
-                  dg.field_G[13] = qe.a(-2739, var2);
+                  PlayModeChoiceDialog.field_G[13] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "achievement_names,14");
+                var2 = GameHud.readRootTextFile(-122, "achievement_names,14");
                 if (null != var2) {
-                  dg.field_G[14] = qe.a(-2739, var2);
+                  PlayModeChoiceDialog.field_G[14] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "achievement_names,15");
+                var2 = GameHud.readRootTextFile(-127, "achievement_names,15");
                 if (var2 != null) {
-                  dg.field_G[15] = qe.a(-2739, var2);
+                  PlayModeChoiceDialog.field_G[15] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "achievement_names,16");
+                var2 = GameHud.readRootTextFile(-128, "achievement_names,16");
                 if (var2 != null) {
-                  dg.field_G[16] = qe.a(-2739, var2);
+                  PlayModeChoiceDialog.field_G[16] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "achievement_names,17");
+                var2 = GameHud.readRootTextFile(-122, "achievement_names,17");
                 if (var2 != null) {
-                  dg.field_G[17] = qe.a(-2739, var2);
+                  PlayModeChoiceDialog.field_G[17] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "achievement_names,18");
+                var2 = GameHud.readRootTextFile(-127, "achievement_names,18");
                 if (var2 != null) {
-                  dg.field_G[18] = qe.a(-2739, var2);
+                  PlayModeChoiceDialog.field_G[18] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "achievement_names,19");
+                var2 = GameHud.readRootTextFile(-128, "achievement_names,19");
                 if (var2 != null) {
-                  dg.field_G[19] = qe.a(-2739, var2);
+                  PlayModeChoiceDialog.field_G[19] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "achievement_names,20");
+                var2 = GameHud.readRootTextFile(-127, "achievement_names,20");
                 if (null != var2) {
-                  dg.field_G[20] = qe.a(-2739, var2);
+                  PlayModeChoiceDialog.field_G[20] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "achievement_names,21");
+                var2 = GameHud.readRootTextFile(-125, "achievement_names,21");
                 if (null != var2) {
-                  dg.field_G[21] = qe.a(-2739, var2);
+                  PlayModeChoiceDialog.field_G[21] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "achievement_names,22");
+                var2 = GameHud.readRootTextFile(-122, "achievement_names,22");
                 if (var2 != null) {
-                  dg.field_G[22] = qe.a(-2739, var2);
+                  PlayModeChoiceDialog.field_G[22] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "achievement_names,23");
+                var2 = GameHud.readRootTextFile(-127, "achievement_names,23");
                 if (var2 != null) {
-                  dg.field_G[23] = qe.a(-2739, var2);
+                  PlayModeChoiceDialog.field_G[23] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "achievement_criteria,0");
+                var2 = GameHud.readRootTextFile(-126, "achievement_criteria,0");
                 if (var2 != null) {
-                  ih.field_e[0] = qe.a(-2739, var2);
+                  StatSubmissionHelpers.field_e[0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "achievement_criteria,1");
+                var2 = GameHud.readRootTextFile(-122, "achievement_criteria,1");
                 if (var2 != null) {
-                  ih.field_e[1] = qe.a(-2739, var2);
+                  StatSubmissionHelpers.field_e[1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "achievement_criteria,2");
+                var2 = GameHud.readRootTextFile(-125, "achievement_criteria,2");
                 if (var2 != null) {
-                  ih.field_e[2] = qe.a(-2739, var2);
+                  StatSubmissionHelpers.field_e[2] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "achievement_criteria,3");
+                var2 = GameHud.readRootTextFile(-125, "achievement_criteria,3");
                 if (null != var2) {
-                  ih.field_e[3] = qe.a(-2739, var2);
+                  StatSubmissionHelpers.field_e[3] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "achievement_criteria,4");
+                var2 = GameHud.readRootTextFile(-126, "achievement_criteria,4");
                 if (var2 != null) {
-                  ih.field_e[4] = qe.a(-2739, var2);
+                  StatSubmissionHelpers.field_e[4] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "achievement_criteria,5");
+                var2 = GameHud.readRootTextFile(-127, "achievement_criteria,5");
                 if (null != var2) {
-                  ih.field_e[5] = qe.a(-2739, var2);
+                  StatSubmissionHelpers.field_e[5] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "achievement_criteria,6");
+                var2 = GameHud.readRootTextFile(-128, "achievement_criteria,6");
                 if (var2 != null) {
-                  ih.field_e[6] = qe.a(-2739, var2);
+                  StatSubmissionHelpers.field_e[6] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "achievement_criteria,7");
+                var2 = GameHud.readRootTextFile(-128, "achievement_criteria,7");
                 if (null != var2) {
-                  ih.field_e[7] = qe.a(-2739, var2);
+                  StatSubmissionHelpers.field_e[7] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "achievement_criteria,8");
+                var2 = GameHud.readRootTextFile(-123, "achievement_criteria,8");
                 if (null != var2) {
-                  ih.field_e[8] = qe.a(-2739, var2);
+                  StatSubmissionHelpers.field_e[8] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "achievement_criteria,9");
+                var2 = GameHud.readRootTextFile(-126, "achievement_criteria,9");
                 if (null != var2) {
-                  ih.field_e[9] = qe.a(-2739, var2);
+                  StatSubmissionHelpers.field_e[9] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "achievement_criteria,10");
+                var2 = GameHud.readRootTextFile(-122, "achievement_criteria,10");
                 if (null != var2) {
-                  ih.field_e[10] = qe.a(-2739, var2);
+                  StatSubmissionHelpers.field_e[10] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "achievement_criteria,11");
+                var2 = GameHud.readRootTextFile(-126, "achievement_criteria,11");
                 if (var2 != null) {
-                  ih.field_e[11] = qe.a(-2739, var2);
+                  StatSubmissionHelpers.field_e[11] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "achievement_criteria,12");
+                var2 = GameHud.readRootTextFile(-124, "achievement_criteria,12");
                 if (var2 != null) {
-                  ih.field_e[12] = qe.a(-2739, var2);
+                  StatSubmissionHelpers.field_e[12] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "achievement_criteria,13");
+                var2 = GameHud.readRootTextFile(-128, "achievement_criteria,13");
                 if (null != var2) {
-                  ih.field_e[13] = qe.a(-2739, var2);
+                  StatSubmissionHelpers.field_e[13] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "achievement_criteria,14");
+                var2 = GameHud.readRootTextFile(-127, "achievement_criteria,14");
                 if (null != var2) {
-                  ih.field_e[14] = qe.a(-2739, var2);
+                  StatSubmissionHelpers.field_e[14] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "achievement_criteria,15");
+                var2 = GameHud.readRootTextFile(-125, "achievement_criteria,15");
                 if (null != var2) {
-                  ih.field_e[15] = qe.a(-2739, var2);
+                  StatSubmissionHelpers.field_e[15] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "achievement_criteria,16");
+                var2 = GameHud.readRootTextFile(-127, "achievement_criteria,16");
                 if (null != var2) {
-                  ih.field_e[16] = qe.a(-2739, var2);
+                  StatSubmissionHelpers.field_e[16] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "achievement_criteria,17");
+                var2 = GameHud.readRootTextFile(-122, "achievement_criteria,17");
                 if (null != var2) {
-                  ih.field_e[17] = qe.a(-2739, var2);
+                  StatSubmissionHelpers.field_e[17] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "achievement_criteria,18");
+                var2 = GameHud.readRootTextFile(-123, "achievement_criteria,18");
                 if (var2 != null) {
-                  ih.field_e[18] = qe.a(-2739, var2);
+                  StatSubmissionHelpers.field_e[18] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "achievement_criteria,19");
+                var2 = GameHud.readRootTextFile(-127, "achievement_criteria,19");
                 if (var2 != null) {
-                  ih.field_e[19] = qe.a(-2739, var2);
+                  StatSubmissionHelpers.field_e[19] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "achievement_criteria,20");
+                var2 = GameHud.readRootTextFile(-123, "achievement_criteria,20");
                 if (null != var2) {
-                  ih.field_e[20] = qe.a(-2739, var2);
+                  StatSubmissionHelpers.field_e[20] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "achievement_criteria,21");
+                var2 = GameHud.readRootTextFile(-125, "achievement_criteria,21");
                 if (null != var2) {
-                  ih.field_e[21] = qe.a(-2739, var2);
+                  StatSubmissionHelpers.field_e[21] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "achievement_criteria,22");
+                var2 = GameHud.readRootTextFile(-126, "achievement_criteria,22");
                 if (var2 != null) {
-                  ih.field_e[22] = qe.a(-2739, var2);
+                  StatSubmissionHelpers.field_e[22] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "achievement_criteria,23");
+                var2 = GameHud.readRootTextFile(-126, "achievement_criteria,23");
                 if (var2 != null) {
-                  ih.field_e[23] = qe.a(-2739, var2);
+                  StatSubmissionHelpers.field_e[23] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "stage_name,0");
+                var2 = GameHud.readRootTextFile(-123, "stage_name,0");
                 if (var2 != null) {
-                  UnitView.field_M[0] = qe.a(-2739, var2);
+                  UnitView.field_M[0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "stage_name,1");
+                var2 = GameHud.readRootTextFile(-123, "stage_name,1");
                 if (var2 != null) {
-                  UnitView.field_M[1] = qe.a(-2739, var2);
+                  UnitView.field_M[1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "stage_name,2");
+                var2 = GameHud.readRootTextFile(-127, "stage_name,2");
                 if (null != var2) {
-                  UnitView.field_M[2] = qe.a(-2739, var2);
+                  UnitView.field_M[2] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "stage_name,3");
+                var2 = GameHud.readRootTextFile(-126, "stage_name,3");
                 if (var2 != null) {
-                  UnitView.field_M[3] = qe.a(-2739, var2);
+                  UnitView.field_M[3] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "levelselect_title,0");
+                var2 = GameHud.readRootTextFile(-122, "levelselect_title,0");
                 if (null != var2) {
-                  tm.field_a[0] = qe.a(-2739, var2);
+                  LobbyDrawHelpers.field_a[0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "levelselect_title,1");
+                var2 = GameHud.readRootTextFile(-123, "levelselect_title,1");
                 if (var2 != null) {
-                  tm.field_a[1] = qe.a(-2739, var2);
+                  LobbyDrawHelpers.field_a[1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "levelselect_title,2");
+                var2 = GameHud.readRootTextFile(-128, "levelselect_title,2");
                 if (null != var2) {
-                  tm.field_a[2] = qe.a(-2739, var2);
+                  LobbyDrawHelpers.field_a[2] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "levelselect_title,3");
+                var2 = GameHud.readRootTextFile(-123, "levelselect_title,3");
                 if (var2 != null) {
-                  tm.field_a[3] = qe.a(-2739, var2);
+                  LobbyDrawHelpers.field_a[3] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "levelselect_title,4");
+                var2 = GameHud.readRootTextFile(-127, "levelselect_title,4");
                 if (var2 != null) {
-                  tm.field_a[4] = qe.a(-2739, var2);
+                  LobbyDrawHelpers.field_a[4] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "zombiespeech,0");
+                var2 = GameHud.readRootTextFile(-128, "zombiespeech,0");
                 if (var2 != null) {
-                  LinkButtonPainter.field_b[0] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "zombiespeech,1");
+                var2 = GameHud.readRootTextFile(-122, "zombiespeech,1");
                 if (null != var2) {
-                  LinkButtonPainter.field_b[1] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "zombiespeech,2");
+                var2 = GameHud.readRootTextFile(-127, "zombiespeech,2");
                 if (var2 != null) {
-                  LinkButtonPainter.field_b[2] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[2] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "zombiespeech,3");
+                var2 = GameHud.readRootTextFile(-123, "zombiespeech,3");
                 if (var2 != null) {
-                  LinkButtonPainter.field_b[3] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[3] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "zombiespeech,4");
+                var2 = GameHud.readRootTextFile(-125, "zombiespeech,4");
                 if (var2 != null) {
-                  LinkButtonPainter.field_b[4] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[4] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "zombiespeech,5");
+                var2 = GameHud.readRootTextFile(-123, "zombiespeech,5");
                 if (var2 != null) {
-                  LinkButtonPainter.field_b[5] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[5] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "zombiespeech,6");
+                var2 = GameHud.readRootTextFile(-125, "zombiespeech,6");
                 if (var2 != null) {
-                  LinkButtonPainter.field_b[6] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[6] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "zombiespeech,7");
+                var2 = GameHud.readRootTextFile(-125, "zombiespeech,7");
                 if (var2 != null) {
-                  LinkButtonPainter.field_b[7] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[7] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "zombiespeech,8");
+                var2 = GameHud.readRootTextFile(-125, "zombiespeech,8");
                 if (null != var2) {
-                  LinkButtonPainter.field_b[8] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[8] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "zombiespeech,9");
+                var2 = GameHud.readRootTextFile(-128, "zombiespeech,9");
                 if (var2 != null) {
-                  LinkButtonPainter.field_b[9] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[9] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "zombiespeech,10");
+                var2 = GameHud.readRootTextFile(-126, "zombiespeech,10");
                 if (var2 != null) {
-                  LinkButtonPainter.field_b[10] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[10] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "zombiespeech,11");
+                var2 = GameHud.readRootTextFile(-128, "zombiespeech,11");
                 if (null != var2) {
-                  LinkButtonPainter.field_b[11] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[11] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "zombiespeech,12");
+                var2 = GameHud.readRootTextFile(-122, "zombiespeech,12");
                 if (null != var2) {
-                  LinkButtonPainter.field_b[12] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[12] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "zombiespeech,13");
+                var2 = GameHud.readRootTextFile(-127, "zombiespeech,13");
                 if (var2 != null) {
-                  LinkButtonPainter.field_b[13] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[13] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "zombiespeech,14");
+                var2 = GameHud.readRootTextFile(-125, "zombiespeech,14");
                 if (var2 != null) {
-                  LinkButtonPainter.field_b[14] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[14] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "zombiespeech,15");
+                var2 = GameHud.readRootTextFile(-127, "zombiespeech,15");
                 if (var2 != null) {
-                  LinkButtonPainter.field_b[15] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[15] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "zombiespeech,16");
+                var2 = GameHud.readRootTextFile(-126, "zombiespeech,16");
                 if (null != var2) {
-                  LinkButtonPainter.field_b[16] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[16] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "zombiespeech,17");
+                var2 = GameHud.readRootTextFile(-122, "zombiespeech,17");
                 if (null != var2) {
-                  LinkButtonPainter.field_b[17] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[17] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "zombiespeech,18");
+                var2 = GameHud.readRootTextFile(-124, "zombiespeech,18");
                 if (var2 != null) {
-                  LinkButtonPainter.field_b[18] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[18] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "zombiespeech,19");
+                var2 = GameHud.readRootTextFile(-122, "zombiespeech,19");
                 if (null != var2) {
-                  LinkButtonPainter.field_b[19] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[19] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "zombiespeech,20");
+                var2 = GameHud.readRootTextFile(-125, "zombiespeech,20");
                 if (var2 != null) {
-                  LinkButtonPainter.field_b[20] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[20] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "zombiespeech,21");
+                var2 = GameHud.readRootTextFile(-122, "zombiespeech,21");
                 if (var2 != null) {
-                  LinkButtonPainter.field_b[21] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[21] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "zombiespeech,22");
+                var2 = GameHud.readRootTextFile(-128, "zombiespeech,22");
                 if (null != var2) {
-                  LinkButtonPainter.field_b[22] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[22] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "zombiespeech,23");
+                var2 = GameHud.readRootTextFile(-126, "zombiespeech,23");
                 if (var2 != null) {
-                  LinkButtonPainter.field_b[23] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[23] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "zombiespeech,24");
+                var2 = GameHud.readRootTextFile(-125, "zombiespeech,24");
                 if (null != var2) {
-                  LinkButtonPainter.field_b[24] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[24] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "zombiespeech,25");
+                var2 = GameHud.readRootTextFile(-123, "zombiespeech,25");
                 if (null != var2) {
-                  LinkButtonPainter.field_b[25] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[25] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "zombiespeech,26");
+                var2 = GameHud.readRootTextFile(-128, "zombiespeech,26");
                 if (var2 != null) {
-                  LinkButtonPainter.field_b[26] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[26] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "zombiespeech,27");
+                var2 = GameHud.readRootTextFile(-124, "zombiespeech,27");
                 if (var2 != null) {
-                  LinkButtonPainter.field_b[27] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[27] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "zombiespeech,28");
+                var2 = GameHud.readRootTextFile(-124, "zombiespeech,28");
                 if (null != var2) {
-                  LinkButtonPainter.field_b[28] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[28] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "zombiespeech,29");
+                var2 = GameHud.readRootTextFile(-128, "zombiespeech,29");
                 if (null != var2) {
-                  LinkButtonPainter.field_b[29] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[29] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "zombiespeech,30");
+                var2 = GameHud.readRootTextFile(-127, "zombiespeech,30");
                 if (null != var2) {
-                  LinkButtonPainter.field_b[30] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[30] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "zombiespeech,31");
+                var2 = GameHud.readRootTextFile(-125, "zombiespeech,31");
                 if (var2 != null) {
-                  LinkButtonPainter.field_b[31] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[31] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "zombiespeech,32");
+                var2 = GameHud.readRootTextFile(-126, "zombiespeech,32");
                 if (var2 != null) {
-                  LinkButtonPainter.field_b[32] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[32] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "zombiespeech,33");
+                var2 = GameHud.readRootTextFile(-125, "zombiespeech,33");
                 if (null != var2) {
-                  LinkButtonPainter.field_b[33] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[33] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "zombiespeech,34");
+                var2 = GameHud.readRootTextFile(-124, "zombiespeech,34");
                 if (null != var2) {
-                  LinkButtonPainter.field_b[34] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[34] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "zombiespeech,35");
+                var2 = GameHud.readRootTextFile(-123, "zombiespeech,35");
                 if (var2 != null) {
-                  LinkButtonPainter.field_b[35] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[35] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "zombiespeech,36");
+                var2 = GameHud.readRootTextFile(-126, "zombiespeech,36");
                 if (var2 != null) {
-                  LinkButtonPainter.field_b[36] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[36] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "zombiespeech,37");
+                var2 = GameHud.readRootTextFile(-127, "zombiespeech,37");
                 if (null != var2) {
-                  LinkButtonPainter.field_b[37] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[37] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "zombiespeech,38");
+                var2 = GameHud.readRootTextFile(-127, "zombiespeech,38");
                 if (null != var2) {
-                  LinkButtonPainter.field_b[38] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[38] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "zombiespeech,39");
+                var2 = GameHud.readRootTextFile(-128, "zombiespeech,39");
                 if (null != var2) {
-                  LinkButtonPainter.field_b[39] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[39] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "zombiespeech,40");
+                var2 = GameHud.readRootTextFile(-125, "zombiespeech,40");
                 if (null != var2) {
-                  LinkButtonPainter.field_b[40] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[40] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "zombiespeech,41");
+                var2 = GameHud.readRootTextFile(-128, "zombiespeech,41");
                 if (null != var2) {
-                  LinkButtonPainter.field_b[41] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[41] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "zombiespeech,42");
+                var2 = GameHud.readRootTextFile(-128, "zombiespeech,42");
                 if (null != var2) {
-                  LinkButtonPainter.field_b[42] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[42] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "zombiespeech,43");
+                var2 = GameHud.readRootTextFile(-127, "zombiespeech,43");
                 if (var2 != null) {
-                  LinkButtonPainter.field_b[43] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[43] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "zombiespeech,44");
+                var2 = GameHud.readRootTextFile(-123, "zombiespeech,44");
                 if (null != var2) {
-                  LinkButtonPainter.field_b[44] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[44] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "zombiespeech,45");
+                var2 = GameHud.readRootTextFile(-126, "zombiespeech,45");
                 if (var2 != null) {
-                  LinkButtonPainter.field_b[45] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[45] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "zombiespeech,46");
+                var2 = GameHud.readRootTextFile(-123, "zombiespeech,46");
                 if (var2 != null) {
-                  LinkButtonPainter.field_b[46] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[46] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "zombiespeech,47");
+                var2 = GameHud.readRootTextFile(-125, "zombiespeech,47");
                 if (var2 != null) {
-                  LinkButtonPainter.field_b[47] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[47] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "zombiespeech,48");
+                var2 = GameHud.readRootTextFile(-123, "zombiespeech,48");
                 if (var2 != null) {
-                  LinkButtonPainter.field_b[48] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[48] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "zombiespeech,49");
+                var2 = GameHud.readRootTextFile(-127, "zombiespeech,49");
                 if (var2 != null) {
-                  LinkButtonPainter.field_b[49] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[49] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "zombiespeech,50");
+                var2 = GameHud.readRootTextFile(-125, "zombiespeech,50");
                 if (var2 != null) {
-                  LinkButtonPainter.field_b[50] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[50] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "zombiespeech,51");
+                var2 = GameHud.readRootTextFile(-122, "zombiespeech,51");
                 if (null != var2) {
-                  LinkButtonPainter.field_b[51] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[51] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "zombiespeech,52");
+                var2 = GameHud.readRootTextFile(-124, "zombiespeech,52");
                 if (null != var2) {
-                  LinkButtonPainter.field_b[52] = qe.a(-2739, var2);
+                  LinkButtonPainter.field_b[52] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "locked_level");
+                var2 = GameHud.readRootTextFile(-126, "locked_level");
                 if (var2 != null) {
-                  qe.a(-2739, var2);
+                  GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "levelselect_questionmarks");
+                var2 = GameHud.readRootTextFile(-125, "levelselect_questionmarks");
                 if (null != var2) {
-                  qe.a(-2739, var2);
+                  GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "levelselect_levelname");
+                var2 = GameHud.readRootTextFile(-123, "levelselect_levelname");
                 if (var2 != null) {
-                  qe.a(-2739, var2);
+                  GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "esc_to_skip");
+                var2 = GameHud.readRootTextFile(-127, "esc_to_skip");
                 if (var2 != null) {
-                  QuickChatHelpDialog.field_Fb = qe.a(-2739, var2);
+                  QuickChatHelpDialog.field_Fb = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "instructions,0,0");
+                var2 = GameHud.readRootTextFile(-122, "instructions,0,0");
                 if (null != var2) {
-                  DisplayNamePanel.field_S[0][0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_S[0][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "instructions,0,1");
+                var2 = GameHud.readRootTextFile(-126, "instructions,0,1");
                 if (null != var2) {
-                  DisplayNamePanel.field_S[0][1] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_S[0][1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "instructions,1,0");
+                var2 = GameHud.readRootTextFile(-125, "instructions,1,0");
                 if (var2 != null) {
-                  DisplayNamePanel.field_S[1][0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_S[1][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "instructions,1,1");
+                var2 = GameHud.readRootTextFile(-125, "instructions,1,1");
                 if (null != var2) {
-                  DisplayNamePanel.field_S[1][1] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_S[1][1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "instructions,1,2");
+                var2 = GameHud.readRootTextFile(-128, "instructions,1,2");
                 if (null != var2) {
-                  DisplayNamePanel.field_S[1][2] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_S[1][2] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "instructions,1,3");
+                var2 = GameHud.readRootTextFile(-122, "instructions,1,3");
                 if (var2 != null) {
-                  DisplayNamePanel.field_S[1][3] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_S[1][3] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "instructions,1,4");
+                var2 = GameHud.readRootTextFile(-126, "instructions,1,4");
                 if (null != var2) {
-                  DisplayNamePanel.field_S[1][4] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_S[1][4] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "instructions,2,0");
+                var2 = GameHud.readRootTextFile(-125, "instructions,2,0");
                 if (null != var2) {
-                  DisplayNamePanel.field_S[2][0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_S[2][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "instructions,2,1");
+                var2 = GameHud.readRootTextFile(-125, "instructions,2,1");
                 if (null != var2) {
-                  DisplayNamePanel.field_S[2][1] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_S[2][1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "instructions,2,2");
+                var2 = GameHud.readRootTextFile(-125, "instructions,2,2");
                 if (var2 != null) {
-                  DisplayNamePanel.field_S[2][2] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_S[2][2] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "instructions,2,3");
+                var2 = GameHud.readRootTextFile(-124, "instructions,2,3");
                 if (null != var2) {
-                  DisplayNamePanel.field_S[2][3] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_S[2][3] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "instructions,3,0");
+                var2 = GameHud.readRootTextFile(-128, "instructions,3,0");
                 if (var2 != null) {
-                  DisplayNamePanel.field_S[3][0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_S[3][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "instructions,4,0");
+                var2 = GameHud.readRootTextFile(-122, "instructions,4,0");
                 if (null != var2) {
-                  DisplayNamePanel.field_S[4][0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_S[4][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "instructions,5,0");
+                var2 = GameHud.readRootTextFile(-128, "instructions,5,0");
                 if (var2 != null) {
-                  DisplayNamePanel.field_S[5][0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_S[5][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "instructions_titles,0,0");
+                var2 = GameHud.readRootTextFile(-126, "instructions_titles,0,0");
                 if (var2 != null) {
-                  DisplayNamePanel.field_J[0][0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_J[0][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "instructions_titles,0,1");
+                var2 = GameHud.readRootTextFile(-125, "instructions_titles,0,1");
                 if (null != var2) {
-                  DisplayNamePanel.field_J[0][1] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_J[0][1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "instructions_titles,1,0");
+                var2 = GameHud.readRootTextFile(-128, "instructions_titles,1,0");
                 if (var2 != null) {
-                  DisplayNamePanel.field_J[1][0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_J[1][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "instructions_titles,2,0");
+                var2 = GameHud.readRootTextFile(-123, "instructions_titles,2,0");
                 if (null != var2) {
-                  DisplayNamePanel.field_J[2][0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_J[2][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "instructions_titles,3,0");
+                var2 = GameHud.readRootTextFile(-127, "instructions_titles,3,0");
                 if (null != var2) {
-                  DisplayNamePanel.field_J[3][0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_J[3][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "instructions_titles,4,0");
+                var2 = GameHud.readRootTextFile(-126, "instructions_titles,4,0");
                 if (null != var2) {
-                  DisplayNamePanel.field_J[4][0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_J[4][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "instructions_titles,5,0");
+                var2 = GameHud.readRootTextFile(-128, "instructions_titles,5,0");
                 if (null != var2) {
-                  DisplayNamePanel.field_J[5][0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_J[5][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "instructions_titles,6,0");
+                var2 = GameHud.readRootTextFile(-127, "instructions_titles,6,0");
                 if (null != var2) {
-                  DisplayNamePanel.field_J[6][0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_J[6][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "instructions_powerups,0");
+                var2 = GameHud.readRootTextFile(-122, "instructions_powerups,0");
                 if (var2 != null) {
-                  DisplayNamePanel.field_I[0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_I[0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "instructions_powerups,1");
+                var2 = GameHud.readRootTextFile(-124, "instructions_powerups,1");
                 if (null != var2) {
-                  DisplayNamePanel.field_I[1] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_I[1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "instructions_powerups,2");
+                var2 = GameHud.readRootTextFile(-123, "instructions_powerups,2");
                 if (null != var2) {
-                  DisplayNamePanel.field_I[2] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_I[2] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "instructions_powerups,3");
+                var2 = GameHud.readRootTextFile(-127, "instructions_powerups,3");
                 if (null != var2) {
-                  DisplayNamePanel.field_I[3] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_I[3] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "instructions_powerups,4");
+                var2 = GameHud.readRootTextFile(-122, "instructions_powerups,4");
                 if (null != var2) {
-                  DisplayNamePanel.field_I[4] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_I[4] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "instructions_traits,0");
+                var2 = GameHud.readRootTextFile(-125, "instructions_traits,0");
                 if (null != var2) {
-                  DisplayNamePanel.field_Q[0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_Q[0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "instructions_traits,1");
+                var2 = GameHud.readRootTextFile(-123, "instructions_traits,1");
                 if (null != var2) {
-                  DisplayNamePanel.field_Q[1] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_Q[1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "instructions_traits,2");
+                var2 = GameHud.readRootTextFile(-126, "instructions_traits,2");
                 if (var2 != null) {
-                  DisplayNamePanel.field_Q[2] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_Q[2] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "instructions_traits,3");
+                var2 = GameHud.readRootTextFile(-128, "instructions_traits,3");
                 if (var2 != null) {
-                  DisplayNamePanel.field_Q[3] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_Q[3] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "instructions_traits,4");
+                var2 = GameHud.readRootTextFile(-122, "instructions_traits,4");
                 if (var2 != null) {
-                  DisplayNamePanel.field_Q[4] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_Q[4] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "instructions_traits,5");
+                var2 = GameHud.readRootTextFile(-126, "instructions_traits,5");
                 if (null != var2) {
-                  DisplayNamePanel.field_Q[5] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_Q[5] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "intro_text,0");
+                var2 = GameHud.readRootTextFile(-126, "intro_text,0");
                 if (var2 != null) {
-                  DisplayNamePanel.field_R[0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_R[0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "intro_text,1");
+                var2 = GameHud.readRootTextFile(-125, "intro_text,1");
                 if (var2 != null) {
-                  DisplayNamePanel.field_R[1] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_R[1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "intro_text,2");
+                var2 = GameHud.readRootTextFile(-127, "intro_text,2");
                 if (var2 != null) {
-                  DisplayNamePanel.field_R[2] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_R[2] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "intro_text,3");
+                var2 = GameHud.readRootTextFile(-125, "intro_text,3");
                 if (var2 != null) {
-                  DisplayNamePanel.field_R[3] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_R[3] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "intro_text,4");
+                var2 = GameHud.readRootTextFile(-128, "intro_text,4");
                 if (null != var2) {
-                  DisplayNamePanel.field_R[4] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_R[4] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "intro_text,5");
+                var2 = GameHud.readRootTextFile(-125, "intro_text,5");
                 if (var2 != null) {
-                  DisplayNamePanel.field_R[5] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_R[5] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "ZOMBIE_COUNTER");
+                var2 = GameHud.readRootTextFile(-125, "ZOMBIE_COUNTER");
                 if (null != var2) {
-                  ob.field_q = qe.a(-2739, var2);
+                  QuickChatCategoryDefinition.field_q = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "ZOMBIE_POINTS");
+                var2 = GameHud.readRootTextFile(-122, "ZOMBIE_POINTS");
                 if (var2 != null) {
-                  bi.field_b = qe.a(-2739, var2);
+                  AccountTextGlobals.field_b = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "ZOMBIE_COUNTER_PANIC_MODE");
+                var2 = GameHud.readRootTextFile(-127, "ZOMBIE_COUNTER_PANIC_MODE");
                 if (var2 != null) {
-                  en.field_e = qe.a(-2739, var2);
+                  ChatPanelSetupHelpers.field_e = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "ZOMBIE_POINTS_PANIC_MODE");
+                var2 = GameHud.readRootTextFile(-125, "ZOMBIE_POINTS_PANIC_MODE");
                 if (null != var2) {
-                  ob.field_C = qe.a(-2739, var2);
+                  QuickChatCategoryDefinition.field_C = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "MENU_TEXT_GRAPHICS_FASTEST");
+                var2 = GameHud.readRootTextFile(-127, "MENU_TEXT_GRAPHICS_FASTEST");
                 if (null != var2) {
-                  InflaterDecompressor.field_f = qe.a(-2739, var2);
+                  InflaterDecompressor.field_f = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "MENU_TEXT_GRAPHICS_MEDIUM");
+                var2 = GameHud.readRootTextFile(-126, "MENU_TEXT_GRAPHICS_MEDIUM");
                 if (null != var2) {
-                  FightEvent.field_l = qe.a(-2739, var2);
+                  FightEvent.field_l = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "MENU_TEXT_GRAPHICS_BEST");
+                var2 = GameHud.readRootTextFile(-128, "MENU_TEXT_GRAPHICS_BEST");
                 if (var2 != null) {
-                  jp.field_a = qe.a(-2739, var2);
+                  ChatPromptHelpers.field_a = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "benefits_1");
+                var2 = GameHud.readRootTextFile(-127, "benefits_1");
                 if (null != var2) {
-                  Camera.field_b = qe.a(-2739, var2);
+                  Camera.field_b = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "benefits_2");
+                var2 = GameHud.readRootTextFile(-127, "benefits_2");
                 if (var2 != null) {
-                  DelayedPacket.field_h = qe.a(-2739, var2);
+                  DelayedPacket.field_h = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "offer_rematch");
+                var2 = GameHud.readRootTextFile(-123, "offer_rematch");
                 if (null != var2) {
-                  u.field_j = qe.a(-2739, var2);
+                  PendingIntArrayRequest.field_j = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "accept_rematch");
+                var2 = GameHud.readRootTextFile(-126, "accept_rematch");
                 if (var2 != null) {
-                  ih.field_c = qe.a(-2739, var2);
+                  StatSubmissionHelpers.field_c = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "research_is_only_earned_in_rated_games");
+                var2 = GameHud.readRootTextFile(-124, "research_is_only_earned_in_rated_games");
                 if (null != var2) {
-                  aa.field_p = qe.a(-2739, var2);
+                  NanoTickClock.field_p = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "SUMMARY");
+                var2 = GameHud.readRootTextFile(-123, "SUMMARY");
                 if (var2 != null) {
-                  ip.field_c = qe.a(-2739, var2);
+                  ClientProtocolStage.field_c = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "RESEARCH");
+                var2 = GameHud.readRootTextFile(-128, "RESEARCH");
                 if (var2 != null) {
-                  ec.field_a = qe.a(-2739, var2);
+                  CookieHelpers.field_a = GameHud.decodeText(-2739, var2);
                 }
             }
             void runChunk1() throws java.lang.RuntimeException {
-                var2 = qe.a(-122, "backtolab");
+                var2 = GameHud.readRootTextFile(-122, "backtolab");
                 if (null != var2) {
-                  WidgetContainer.field_D = qe.a(-2739, var2);
+                  WidgetContainer.field_D = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "keycode_left");
+                var2 = GameHud.readRootTextFile(-125, "keycode_left");
                 if (var2 != null) {
                   GameScreen.field_e = 255 & var2[0];
                 }
-                var2 = qe.a(-123, "keycode_right");
+                var2 = GameHud.readRootTextFile(-123, "keycode_right");
                 if (null != var2) {
                   MouseInputHandler.field_d = 255 & var2[0];
                 }
-                var2 = qe.a(-126, "keycode_up");
+                var2 = GameHud.readRootTextFile(-126, "keycode_up");
                 if (null != var2) {
-                  rp.field_d = var2[0] & 255;
+                  PlayerProfile.field_d = var2[0] & 255;
                 }
-                var2 = qe.a(-123, "keycode_down");
+                var2 = GameHud.readRootTextFile(-123, "keycode_down");
                 if (null != var2) {
-                  uq.field_g = var2[0] & 255;
+                  BrowserPageHelpers.field_g = var2[0] & 255;
                 }
-                var2 = qe.a(-122, "keycode_powerup1");
+                var2 = GameHud.readRootTextFile(-122, "keycode_powerup1");
                 if (null != var2) {
-                  eg.field_C = var2[0] & 255;
+                  StrongCacheEntry.field_C = var2[0] & 255;
                 }
-                var2 = qe.a(-125, "keycode_powerup2");
+                var2 = GameHud.readRootTextFile(-125, "keycode_powerup2");
                 if (null != var2) {
                   QuickChatPhraseDefinition.field_v = var2[0] & 255;
                 }
-                var2 = qe.a(-125, "keycode_powerup3");
+                var2 = GameHud.readRootTextFile(-125, "keycode_powerup3");
                 if (var2 != null) {
                   UsernameAvailabilityValidator.field_s = 255 & var2[0];
                 }
-                var2 = qe.a(-122, "keycode_powerup4");
+                var2 = GameHud.readRootTextFile(-122, "keycode_powerup4");
                 if (var2 != null) {
-                  pd.field_c = 255 & var2[0];
+                  FramePainter.field_c = 255 & var2[0];
                 }
-                var2 = qe.a(-126, "keycode_powerup5");
+                var2 = GameHud.readRootTextFile(-126, "keycode_powerup5");
                 if (var2 != null) {
-                  mg.field_F = var2[0] & 255;
+                  ZombieDropView.field_F = var2[0] & 255;
                 }
-                var2 = qe.a(-124, "name_POWERUP_SPEED");
+                var2 = GameHud.readRootTextFile(-124, "name_POWERUP_SPEED");
                 if (var2 != null) {
-                  SimEntity.field_F = qe.a(-2739, var2);
+                  SimEntity.field_F = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "name_POWERUP_MELTDOWN");
+                var2 = GameHud.readRootTextFile(-125, "name_POWERUP_MELTDOWN");
                 if (null != var2) {
-                  rp.field_b = qe.a(-2739, var2);
+                  PlayerProfile.field_b = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "name_POWERUP_PHANTOM");
+                var2 = GameHud.readRootTextFile(-124, "name_POWERUP_PHANTOM");
                 if (var2 != null) {
-                  EmailAvailabilityValidator.field_t = qe.a(-2739, var2);
+                  EmailAvailabilityValidator.field_t = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "name_POWERUP_DISGUISE");
+                var2 = GameHud.readRootTextFile(-126, "name_POWERUP_DISGUISE");
                 if (var2 != null) {
-                  lf.field_b = qe.a(-2739, var2);
+                  TransitionPhase.field_b = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "name_POWERUP_DETONATE");
+                var2 = GameHud.readRootTextFile(-128, "name_POWERUP_DETONATE");
                 if (null != var2) {
-                  ResourceArchive.field_d = qe.a(-2739, var2);
+                  ResourceArchive.field_d = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "name_POWERUP_SCREECH");
+                var2 = GameHud.readRootTextFile(-128, "name_POWERUP_SCREECH");
                 if (var2 != null) {
-                  MarkerSliderPainter.field_j = qe.a(-2739, var2);
+                  MarkerSliderPainter.field_j = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "name_POWERUP_TOUGH");
+                var2 = GameHud.readRootTextFile(-128, "name_POWERUP_TOUGH");
                 if (null != var2) {
-                  hc.field_a = qe.a(-2739, var2);
+                  AntialiasedFontHelpers.field_a = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "name_POWERUP_CURSE");
+                var2 = GameHud.readRootTextFile(-124, "name_POWERUP_CURSE");
                 if (null != var2) {
-                  ScrollPaneWithFooter.field_Mb = qe.a(-2739, var2);
+                  ScrollPaneWithFooter.field_Mb = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "name_POWERUP_HAMMER");
+                var2 = GameHud.readRootTextFile(-127, "name_POWERUP_HAMMER");
                 if (var2 != null) {
-                  UiComponent.field_B = qe.a(-2739, var2);
+                  UiComponent.field_B = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "name_POWERUP_BARRIER");
+                var2 = GameHud.readRootTextFile(-128, "name_POWERUP_BARRIER");
                 if (var2 != null) {
-                  IterableNodeHashTable.field_b = qe.a(-2739, var2);
+                  IterableNodeHashTable.field_b = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "name_POWERUP_BREACH");
+                var2 = GameHud.readRootTextFile(-125, "name_POWERUP_BREACH");
                 if (null != var2) {
-                  SimArmedHuman.field_Eb = qe.a(-2739, var2);
+                  SimArmedHuman.field_Eb = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "name_POWERUP_HAZE");
+                var2 = GameHud.readRootTextFile(-126, "name_POWERUP_HAZE");
                 if (null != var2) {
-                  LevelFileCatalog.field_e = qe.a(-2739, var2);
+                  LevelFileCatalog.field_e = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "name_POWERUP_QUAKE");
+                var2 = GameHud.readRootTextFile(-123, "name_POWERUP_QUAKE");
                 if (var2 != null) {
-                  wi.field_m = qe.a(-2739, var2);
+                  TextHotspot.field_m = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "name_POWERUP_FIREBALL");
+                var2 = GameHud.readRootTextFile(-125, "name_POWERUP_FIREBALL");
                 if (var2 != null) {
-                  hf.field_a = qe.a(-2739, var2);
+                  ConditionalTextValue.field_a = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "name_POWERUP_FEAR");
+                var2 = GameHud.readRootTextFile(-125, "name_POWERUP_FEAR");
                 if (null != var2) {
-                  vm.field_jb = qe.a(-2739, var2);
+                  FullscreenErrorDialog.field_jb = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "name_POWERUP_SHACKLES");
+                var2 = GameHud.readRootTextFile(-122, "name_POWERUP_SHACKLES");
                 if (null != var2) {
-                  i.field_c = qe.a(-2739, var2);
+                  SharedTransportGlobals.field_c = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "name_POWERUP_CHARM");
+                var2 = GameHud.readRootTextFile(-128, "name_POWERUP_CHARM");
                 if (null != var2) {
-                  DisplayNamePanel.field_L = qe.a(-2739, var2);
+                  DisplayNamePanel.field_L = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "name_POWERUP_COUNTER");
+                var2 = GameHud.readRootTextFile(-122, "name_POWERUP_COUNTER");
                 if (null != var2) {
-                  PacketBuffer.field_h = qe.a(-2739, var2);
+                  PacketBuffer.field_h = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "name_POWERUP_TELEPORT");
+                var2 = GameHud.readRootTextFile(-122, "name_POWERUP_TELEPORT");
                 if (var2 != null) {
-                  ob.field_u = qe.a(-2739, var2);
+                  QuickChatCategoryDefinition.field_u = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "name_TRAIT_HUNGRY");
+                var2 = GameHud.readRootTextFile(-128, "name_TRAIT_HUNGRY");
                 if (var2 != null) {
-                  qc.field_w = qe.a(-2739, var2);
+                  ArchiveRequest.field_w = GameHud.decodeText(-2739, var2);
                 }
                 if (param1 > -23) {
                   field_L = (MessageDialog) null;
                 }
-                var2 = qe.a(-126, "name_TRAIT_HUMAN_LOVER");
+                var2 = GameHud.readRootTextFile(-126, "name_TRAIT_HUMAN_LOVER");
                 if (null != var2) {
-                  uc.field_c = qe.a(-2739, var2);
+                  FlaggedTextValue.field_c = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "name_TRAIT_FAST_CASTER");
+                var2 = GameHud.readRootTextFile(-124, "name_TRAIT_FAST_CASTER");
                 if (null != var2) {
-                  TextInputValidator.field_o = qe.a(-2739, var2);
+                  TextInputValidator.field_o = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "name_TRAIT_EXPERT");
+                var2 = GameHud.readRootTextFile(-122, "name_TRAIT_EXPERT");
                 if (var2 != null) {
-                  me.field_j = qe.a(-2739, var2);
+                  SoundCache.field_j = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "name_TRAIT_SPELL_MASTER");
+                var2 = GameHud.readRootTextFile(-126, "name_TRAIT_SPELL_MASTER");
                 if (var2 != null) {
-                  MatchingTextValidator.field_r = qe.a(-2739, var2);
+                  MatchingTextValidator.field_r = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "name_TRAIT_QUICK_THINKER");
+                var2 = GameHud.readRootTextFile(-125, "name_TRAIT_QUICK_THINKER");
                 if (var2 != null) {
-                  rn.field_c = qe.a(-2739, var2);
+                  FullscreenSupport.field_c = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "name_TRAIT_FOCUSED");
+                var2 = GameHud.readRootTextFile(-125, "name_TRAIT_FOCUSED");
                 if (null != var2) {
-                  wn.field_s = qe.a(-2739, var2);
+                  AlternateUsernameCredentials.field_s = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "name_TRAIT_FAMISHED");
+                var2 = GameHud.readRootTextFile(-126, "name_TRAIT_FAMISHED");
                 if (var2 != null) {
-                  ok.field_t = qe.a(-2739, var2);
+                  ViewportController.field_t = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "name_TRAIT_ZOMBIE_LOVER");
+                var2 = GameHud.readRootTextFile(-127, "name_TRAIT_ZOMBIE_LOVER");
                 if (null != var2) {
-                  pb.field_c = qe.a(-2739, var2);
+                  EffectAudioHelpers.field_c = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "name_TRAIT_PREPARED");
+                var2 = GameHud.readRootTextFile(-127, "name_TRAIT_PREPARED");
                 if (var2 != null) {
-                  lc.field_i = qe.a(-2739, var2);
+                  PulseEffect.field_i = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "name_TRAIT_GENERAL");
+                var2 = GameHud.readRootTextFile(-127, "name_TRAIT_GENERAL");
                 if (null != var2) {
-                  eb.field_e = qe.a(-2739, var2);
+                  PopupMenuBuilder.field_e = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "name_TRAIT_READY");
+                var2 = GameHud.readRootTextFile(-122, "name_TRAIT_READY");
                 if (var2 != null) {
-                  w.field_n = qe.a(-2739, var2);
+                  MusicCrossfadeStream.field_n = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "name_TRAIT_DETERMINED");
+                var2 = GameHud.readRootTextFile(-125, "name_TRAIT_DETERMINED");
                 if (null != var2) {
-                  dg.field_O = qe.a(-2739, var2);
+                  PlayModeChoiceDialog.field_O = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "name_TRAIT_WISE");
+                var2 = GameHud.readRootTextFile(-125, "name_TRAIT_WISE");
                 if (var2 != null) {
-                  vd.field_b = qe.a(-2739, var2);
+                  SleepAndNameHelpers.field_b = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "name_TRAIT_FAST");
+                var2 = GameHud.readRootTextFile(-128, "name_TRAIT_FAST");
                 if (null != var2) {
-                  og.field_S = qe.a(-2739, var2);
+                  ZombieDrop.field_S = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "name_TRAIT_RESILIENT");
+                var2 = GameHud.readRootTextFile(-122, "name_TRAIT_RESILIENT");
                 if (var2 != null) {
-                  we.field_i = qe.a(-2739, var2);
+                  PlayingSound.field_i = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "name_TRAIT_SCEPTIC");
+                var2 = GameHud.readRootTextFile(-128, "name_TRAIT_SCEPTIC");
                 if (var2 != null) {
-                  db.field_d = qe.a(-2739, var2);
+                  AudioStartupHelpers.field_d = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "name_TRAIT_SAGE");
+                var2 = GameHud.readRootTextFile(-128, "name_TRAIT_SAGE");
                 if (var2 != null) {
-                  kn.field_e = qe.a(-2739, var2);
+                  LoginStartHelpers.field_e = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "name_MODIFIER_ANNOYING");
+                var2 = GameHud.readRootTextFile(-123, "name_MODIFIER_ANNOYING");
                 if (var2 != null) {
-                  ZombieDawnMulti.field_M = qe.a(-2739, var2);
+                  ZombieDawnMulti.field_M = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "name_MODIFIER_IMPOSED");
+                var2 = GameHud.readRootTextFile(-125, "name_MODIFIER_IMPOSED");
                 if (var2 != null) {
-                  cq.field_b = qe.a(-2739, var2);
+                  QuitPageHelpers.field_b = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "name_MODIFIER_LETHAL");
+                var2 = GameHud.readRootTextFile(-124, "name_MODIFIER_LETHAL");
                 if (var2 != null) {
-                  ic.field_i = qe.a(-2739, var2);
+                  LoginCredentials.field_i = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "name_MODIFIER_MOBILE");
+                var2 = GameHud.readRootTextFile(-126, "name_MODIFIER_MOBILE");
                 if (var2 != null) {
-                  gj.field_c = qe.a(-2739, var2);
+                  SoundStopHelpers.field_c = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "name_MODIFIER_DEADLY");
+                var2 = GameHud.readRootTextFile(-127, "name_MODIFIER_DEADLY");
                 if (null != var2) {
-                  fk.field_l = qe.a(-2739, var2);
+                  RankingsScreen.field_l = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "name_MODIFIER_HOSTILE");
+                var2 = GameHud.readRootTextFile(-124, "name_MODIFIER_HOSTILE");
                 if (null != var2) {
-                  FadingDialog.field_G = qe.a(-2739, var2);
+                  FadingDialog.field_G = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "name_MODIFIER_REALISTIC");
+                var2 = GameHud.readRootTextFile(-126, "name_MODIFIER_REALISTIC");
                 if (var2 != null) {
-                  ic.field_b = qe.a(-2739, var2);
+                  LoginCredentials.field_b = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "teaser_POWERUP_SPEED");
+                var2 = GameHud.readRootTextFile(-125, "teaser_POWERUP_SPEED");
                 if (null != var2) {
-                  hb.field_a = qe.a(-2739, var2);
+                  ContainerUnpackHelpers.field_a = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "teaser_POWERUP_MELTDOWN");
+                var2 = GameHud.readRootTextFile(-123, "teaser_POWERUP_MELTDOWN");
                 if (var2 != null) {
-                  jo.field_a = qe.a(-2739, var2);
+                  FeatureSupportHelpers.field_a = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "teaser_POWERUP_PHANTOM");
+                var2 = GameHud.readRootTextFile(-128, "teaser_POWERUP_PHANTOM");
                 if (null != var2) {
-                  na.field_F = qe.a(-2739, var2);
+                  AlphaChildWidget.field_F = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "teaser_POWERUP_DISGUISE");
+                var2 = GameHud.readRootTextFile(-125, "teaser_POWERUP_DISGUISE");
                 if (null != var2) {
-                  SimHuman.field_jb = qe.a(-2739, var2);
+                  SimHuman.field_jb = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "teaser_POWERUP_DETONATE");
+                var2 = GameHud.readRootTextFile(-124, "teaser_POWERUP_DETONATE");
                 if (null != var2) {
-                  qf.field_e = qe.a(-2739, var2);
+                  TextPopupHelpers.field_e = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "teaser_POWERUP_SCREECH");
+                var2 = GameHud.readRootTextFile(-122, "teaser_POWERUP_SCREECH");
                 if (var2 != null) {
-                  ChatMessage.field_c = qe.a(-2739, var2);
+                  ChatMessage.field_c = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "teaser_POWERUP_TOUGH");
+                var2 = GameHud.readRootTextFile(-127, "teaser_POWERUP_TOUGH");
                 if (var2 != null) {
-                  eb.field_i = qe.a(-2739, var2);
+                  PopupMenuBuilder.field_i = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "teaser_POWERUP_CURSE");
+                var2 = GameHud.readRootTextFile(-125, "teaser_POWERUP_CURSE");
                 if (var2 != null) {
-                  s.field_d = qe.a(-2739, var2);
+                  StatusAndMeshHelpers.field_d = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "teaser_POWERUP_HAMMER");
+                var2 = GameHud.readRootTextFile(-122, "teaser_POWERUP_HAMMER");
                 if (null != var2) {
-                  SimPortal.field_P = qe.a(-2739, var2);
+                  SimPortal.field_P = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "teaser_POWERUP_BARRIER");
+                var2 = GameHud.readRootTextFile(-127, "teaser_POWERUP_BARRIER");
                 if (null != var2) {
-                  me.field_c = qe.a(-2739, var2);
+                  SoundCache.field_c = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "teaser_POWERUP_BREACH");
+                var2 = GameHud.readRootTextFile(-127, "teaser_POWERUP_BREACH");
                 if (var2 != null) {
-                  ClientException.field_j = qe.a(-2739, var2);
+                  ClientException.field_j = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "teaser_POWERUP_HAZE");
+                var2 = GameHud.readRootTextFile(-128, "teaser_POWERUP_HAZE");
                 if (null != var2) {
-                  wp.field_a = qe.a(-2739, var2);
+                  AudioServiceHelpers.field_a = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "teaser_POWERUP_QUAKE");
+                var2 = GameHud.readRootTextFile(-126, "teaser_POWERUP_QUAKE");
                 if (null != var2) {
-                  QuickChatHelpDialog.field_Kb = qe.a(-2739, var2);
+                  QuickChatHelpDialog.field_Kb = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "teaser_POWERUP_FIREBALL");
+                var2 = GameHud.readRootTextFile(-126, "teaser_POWERUP_FIREBALL");
                 if (var2 != null) {
-                  SecondaryNodeDeque.field_f = qe.a(-2739, var2);
+                  SecondaryNodeDeque.field_f = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "teaser_POWERUP_FEAR");
+                var2 = GameHud.readRootTextFile(-124, "teaser_POWERUP_FEAR");
                 if (null != var2) {
-                  TextInputValidator.field_n = qe.a(-2739, var2);
+                  TextInputValidator.field_n = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "teaser_POWERUP_SHACKLES");
+                var2 = GameHud.readRootTextFile(-126, "teaser_POWERUP_SHACKLES");
                 if (null != var2) {
-                  LinkButtonPainter.field_c = qe.a(-2739, var2);
+                  LinkButtonPainter.field_c = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "teaser_POWERUP_CHARM");
+                var2 = GameHud.readRootTextFile(-128, "teaser_POWERUP_CHARM");
                 if (null != var2) {
-                  ha.field_h = qe.a(-2739, var2);
+                  DetonationTarget.field_h = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "teaser_POWERUP_COUNTER");
+                var2 = GameHud.readRootTextFile(-127, "teaser_POWERUP_COUNTER");
                 if (var2 != null) {
-                  DelayedPacket.field_i = qe.a(-2739, var2);
+                  DelayedPacket.field_i = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "teaser_POWERUP_TELEPORT");
+                var2 = GameHud.readRootTextFile(-122, "teaser_POWERUP_TELEPORT");
                 if (null != var2) {
-                  UnitView.field_Z = qe.a(-2739, var2);
+                  UnitView.field_Z = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "teaser_TRAIT_HUNGRY");
+                var2 = GameHud.readRootTextFile(-127, "teaser_TRAIT_HUNGRY");
                 if (null != var2) {
-                  fk.field_o = qe.a(-2739, var2);
+                  RankingsScreen.field_o = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "teaser_TRAIT_HUMAN_LOVER");
+                var2 = GameHud.readRootTextFile(-124, "teaser_TRAIT_HUMAN_LOVER");
                 if (var2 != null) {
-                  og.field_P = qe.a(-2739, var2);
+                  ZombieDrop.field_P = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "teaser_TRAIT_FAST_CASTER");
+                var2 = GameHud.readRootTextFile(-125, "teaser_TRAIT_FAST_CASTER");
                 if (var2 != null) {
-                  TextWidgetPainter.field_k = qe.a(-2739, var2);
+                  TextWidgetPainter.field_k = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "teaser_TRAIT_EXPERT");
+                var2 = GameHud.readRootTextFile(-126, "teaser_TRAIT_EXPERT");
                 if (var2 != null) {
-                  MusicPatch.field_i = qe.a(-2739, var2);
+                  MusicPatch.field_i = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "teaser_TRAIT_SPELL_MASTER");
+                var2 = GameHud.readRootTextFile(-128, "teaser_TRAIT_SPELL_MASTER");
                 if (null != var2) {
-                  wi.field_p = qe.a(-2739, var2);
+                  TextHotspot.field_p = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "teaser_TRAIT_QUICK_THINKER");
+                var2 = GameHud.readRootTextFile(-127, "teaser_TRAIT_QUICK_THINKER");
                 if (null != var2) {
-                  BirthDateInputWidget.field_V = qe.a(-2739, var2);
+                  BirthDateInputWidget.field_V = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "teaser_TRAIT_FOCUSED");
+                var2 = GameHud.readRootTextFile(-123, "teaser_TRAIT_FOCUSED");
                 if (var2 != null) {
-                  field_F = qe.a(-2739, var2);
+                  field_F = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "teaser_TRAIT_FAMISHED");
+                var2 = GameHud.readRootTextFile(-128, "teaser_TRAIT_FAMISHED");
                 if (var2 != null) {
-                  FadingDialog.field_O = qe.a(-2739, var2);
+                  FadingDialog.field_O = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "teaser_TRAIT_ZOMBIE_LOVER");
+                var2 = GameHud.readRootTextFile(-124, "teaser_TRAIT_ZOMBIE_LOVER");
                 if (var2 != null) {
-                  PasswordValidator.field_u = qe.a(-2739, var2);
+                  PasswordValidator.field_u = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "teaser_TRAIT_PREPARED");
+                var2 = GameHud.readRootTextFile(-128, "teaser_TRAIT_PREPARED");
                 if (null != var2) {
-                  DelayedPacket.field_m = qe.a(-2739, var2);
+                  DelayedPacket.field_m = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "teaser_TRAIT_GENERAL");
+                var2 = GameHud.readRootTextFile(-123, "teaser_TRAIT_GENERAL");
                 if (var2 != null) {
-                  nk.field_f = qe.a(-2739, var2);
+                  ZombieDetonation.field_f = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "teaser_TRAIT_READY");
+                var2 = GameHud.readRootTextFile(-128, "teaser_TRAIT_READY");
                 if (null != var2) {
-                  SocketConnector.field_d = qe.a(-2739, var2);
+                  SocketConnector.field_d = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "teaser_TRAIT_DETERMINED");
+                var2 = GameHud.readRootTextFile(-125, "teaser_TRAIT_DETERMINED");
                 if (null != var2) {
-                  ContextMenu.field_Sb = qe.a(-2739, var2);
+                  ContextMenu.field_Sb = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "teaser_TRAIT_WISE");
+                var2 = GameHud.readRootTextFile(-127, "teaser_TRAIT_WISE");
                 if (null != var2) {
-                  uf.field_d = qe.a(-2739, var2);
+                  MoveOrderMarker.field_d = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "teaser_TRAIT_FAST");
+                var2 = GameHud.readRootTextFile(-126, "teaser_TRAIT_FAST");
                 if (null != var2) {
-                  cn.field_u = qe.a(-2739, var2);
+                  CachedArchiveSource.field_u = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "teaser_TRAIT_RESILIENT");
+                var2 = GameHud.readRootTextFile(-127, "teaser_TRAIT_RESILIENT");
                 if (var2 != null) {
-                  SimHuman.field_ob = qe.a(-2739, var2);
+                  SimHuman.field_ob = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "teaser_TRAIT_SCEPTIC");
+                var2 = GameHud.readRootTextFile(-126, "teaser_TRAIT_SCEPTIC");
                 if (var2 != null) {
-                  me.field_m = qe.a(-2739, var2);
+                  SoundCache.field_m = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "teaser_TRAIT_SAGE");
+                var2 = GameHud.readRootTextFile(-126, "teaser_TRAIT_SAGE");
                 if (null != var2) {
-                  hn.field_b = qe.a(-2739, var2);
+                  FrameCycleAnimation.field_b = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "teaser_MODIFIER_ANNOYING");
+                var2 = GameHud.readRootTextFile(-125, "teaser_MODIFIER_ANNOYING");
                 if (null != var2) {
-                  ic.field_j = qe.a(-2739, var2);
+                  LoginCredentials.field_j = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "teaser_MODIFIER_IMPOSED");
+                var2 = GameHud.readRootTextFile(-126, "teaser_MODIFIER_IMPOSED");
                 if (null != var2) {
-                  ResizableDialog.field_U = qe.a(-2739, var2);
+                  ResizableDialog.field_U = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "teaser_MODIFIER_LETHAL");
+                var2 = GameHud.readRootTextFile(-122, "teaser_MODIFIER_LETHAL");
                 if (null != var2) {
-                  ReportAbuseDialog.field_Ob = qe.a(-2739, var2);
+                  ReportAbuseDialog.field_Ob = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "teaser_MODIFIER_MOBILE");
+                var2 = GameHud.readRootTextFile(-126, "teaser_MODIFIER_MOBILE");
                 if (var2 != null) {
-                  dd.field_c = qe.a(-2739, var2);
+                  DefaultQuickChatContext.field_c = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "teaser_MODIFIER_DEADLY");
+                var2 = GameHud.readRootTextFile(-123, "teaser_MODIFIER_DEADLY");
                 if (var2 != null) {
-                  mn.field_s = qe.a(-2739, var2);
+                  EmailLoginCredentials.field_s = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "teaser_MODIFIER_HOSTILE");
+                var2 = GameHud.readRootTextFile(-125, "teaser_MODIFIER_HOSTILE");
                 if (null != var2) {
-                  uf.field_c = qe.a(-2739, var2);
+                  MoveOrderMarker.field_c = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "teaser_MODIFIER_REALISTIC");
+                var2 = GameHud.readRootTextFile(-128, "teaser_MODIFIER_REALISTIC");
                 if (var2 != null) {
-                  InflaterDecompressor.field_g = qe.a(-2739, var2);
+                  InflaterDecompressor.field_g = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "tip_POWERUP_SPEED");
+                var2 = GameHud.readRootTextFile(-122, "tip_POWERUP_SPEED");
                 if (var2 != null) {
-                  UiComponent.field_db = qe.a(-2739, var2);
+                  UiComponent.field_db = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "tip_POWERUP_MELTDOWN");
+                var2 = GameHud.readRootTextFile(-124, "tip_POWERUP_MELTDOWN");
                 if (null != var2) {
-                  PortalEntryEvent.field_j = qe.a(-2739, var2);
+                  PortalEntryEvent.field_j = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "tip_POWERUP_PHANTOM");
+                var2 = GameHud.readRootTextFile(-127, "tip_POWERUP_PHANTOM");
                 if (var2 != null) {
-                  UiWidget.field_t = qe.a(-2739, var2);
+                  UiWidget.field_t = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "tip_POWERUP_DISGUISE");
+                var2 = GameHud.readRootTextFile(-128, "tip_POWERUP_DISGUISE");
                 if (var2 != null) {
-                  VerticalScrollbar.field_Nb = qe.a(-2739, var2);
+                  VerticalScrollbar.field_Nb = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "tip_POWERUP_DETONATE");
+                var2 = GameHud.readRootTextFile(-125, "tip_POWERUP_DETONATE");
                 if (null != var2) {
-                  ha.field_n = qe.a(-2739, var2);
+                  DetonationTarget.field_n = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "tip_POWERUP_SCREECH");
+                var2 = GameHud.readRootTextFile(-122, "tip_POWERUP_SCREECH");
                 if (null != var2) {
-                  bl.field_d = qe.a(-2739, var2);
+                  ClockAndScreenHelpers.field_d = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "tip_POWERUP_TOUGH");
+                var2 = GameHud.readRootTextFile(-123, "tip_POWERUP_TOUGH");
                 if (var2 != null) {
-                  lo.field_e = qe.a(-2739, var2);
+                  BitPackedArrayHelpers.field_e = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "tip_POWERUP_CURSE");
+                var2 = GameHud.readRootTextFile(-125, "tip_POWERUP_CURSE");
                 if (var2 != null) {
-                  SimUnit.field_bb = qe.a(-2739, var2);
+                  SimUnit.field_bb = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "tip_POWERUP_HAMMER");
+                var2 = GameHud.readRootTextFile(-125, "tip_POWERUP_HAMMER");
                 if (null != var2) {
-                  TertiaryLinkDeque.field_d = qe.a(-2739, var2);
+                  TertiaryLinkDeque.field_d = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "tip_POWERUP_BARRIER");
+                var2 = GameHud.readRootTextFile(-126, "tip_POWERUP_BARRIER");
                 if (var2 != null) {
-                  SimZombie.field_ib = qe.a(-2739, var2);
+                  SimZombie.field_ib = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "tip_POWERUP_BREACH");
+                var2 = GameHud.readRootTextFile(-125, "tip_POWERUP_BREACH");
                 if (null != var2) {
-                  eo.field_c = qe.a(-2739, var2);
+                  KeyboardListenerHelpers.field_c = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "tip_POWERUP_HAZE");
+                var2 = GameHud.readRootTextFile(-122, "tip_POWERUP_HAZE");
                 if (var2 != null) {
-                  nh.field_j = qe.a(-2739, var2);
+                  PendingRankingRequest.field_j = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "tip_POWERUP_QUAKE");
+                var2 = GameHud.readRootTextFile(-125, "tip_POWERUP_QUAKE");
                 if (var2 != null) {
-                  uc.field_d = qe.a(-2739, var2);
+                  FlaggedTextValue.field_d = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "tip_POWERUP_FIREBALL");
+                var2 = GameHud.readRootTextFile(-125, "tip_POWERUP_FIREBALL");
                 if (null != var2) {
-                  rq.field_n = qe.a(-2739, var2);
+                  MiasmaPuff.field_n = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "tip_POWERUP_FEAR");
+                var2 = GameHud.readRootTextFile(-123, "tip_POWERUP_FEAR");
                 if (null != var2) {
-                  cc.field_d = qe.a(-2739, var2);
+                  AccountCreationHelpers.field_d = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "tip_POWERUP_SHACKLES");
+                var2 = GameHud.readRootTextFile(-125, "tip_POWERUP_SHACKLES");
                 if (null != var2) {
-                  pp.field_o = qe.a(-2739, var2);
+                  UsernameCredentials.field_o = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "tip_POWERUP_CHARM");
+                var2 = GameHud.readRootTextFile(-125, "tip_POWERUP_CHARM");
                 if (null != var2) {
-                  ArrayWidgetGroup.field_D = qe.a(-2739, var2);
+                  ArrayWidgetGroup.field_D = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "tip_POWERUP_COUNTER");
+                var2 = GameHud.readRootTextFile(-124, "tip_POWERUP_COUNTER");
                 if (null != var2) {
-                  NavigationGrid.field_e = qe.a(-2739, var2);
+                  NavigationGrid.field_e = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "tip_POWERUP_TELEPORT");
+                var2 = GameHud.readRootTextFile(-124, "tip_POWERUP_TELEPORT");
                 if (null != var2) {
-                  vf.field_a = qe.a(-2739, var2);
+                  SpriteAlphaBuffers.field_a = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "tip_TRAIT_HUNGRY");
+                var2 = GameHud.readRootTextFile(-124, "tip_TRAIT_HUNGRY");
                 if (null != var2) {
-                  ClickMarker.field_q = qe.a(-2739, var2);
+                  ClickMarker.field_q = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "tip_TRAIT_HUMAN_LOVER");
+                var2 = GameHud.readRootTextFile(-128, "tip_TRAIT_HUMAN_LOVER");
                 if (null != var2) {
-                  ih.field_b = qe.a(-2739, var2);
+                  StatSubmissionHelpers.field_b = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "tip_TRAIT_FAST_CASTER");
+                var2 = GameHud.readRootTextFile(-127, "tip_TRAIT_FAST_CASTER");
                 if (null != var2) {
-                  vc.field_f = qe.a(-2739, var2);
+                  KeyMapHelpers.field_f = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "tip_TRAIT_EXPERT");
+                var2 = GameHud.readRootTextFile(-128, "tip_TRAIT_EXPERT");
                 if (null != var2) {
-                  ok.field_i = qe.a(-2739, var2);
+                  ViewportController.field_i = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "tip_TRAIT_SPELL_MASTER");
+                var2 = GameHud.readRootTextFile(-123, "tip_TRAIT_SPELL_MASTER");
                 if (null != var2) {
-                  UsernameAvailabilityValidator.field_u = qe.a(-2739, var2);
+                  UsernameAvailabilityValidator.field_u = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "tip_TRAIT_QUICK_THINKER");
+                var2 = GameHud.readRootTextFile(-126, "tip_TRAIT_QUICK_THINKER");
                 if (var2 != null) {
-                  lh.field_a = qe.a(-2739, var2);
+                  ArchiveLoadSequence.field_a = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "tip_TRAIT_FOCUSED");
+                var2 = GameHud.readRootTextFile(-126, "tip_TRAIT_FOCUSED");
                 if (null != var2) {
-                  ResourceArchive.field_c = qe.a(-2739, var2);
+                  ResourceArchive.field_c = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "tip_TRAIT_FAMISHED");
+                var2 = GameHud.readRootTextFile(-127, "tip_TRAIT_FAMISHED");
                 if (null != var2) {
-                  ResourceArchive.field_h = qe.a(-2739, var2);
+                  ResourceArchive.field_h = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "tip_TRAIT_ZOMBIE_LOVER");
+                var2 = GameHud.readRootTextFile(-122, "tip_TRAIT_ZOMBIE_LOVER");
                 if (null != var2) {
-                  cr.field_g = qe.a(-2739, var2);
+                  PendingStatusRequest.field_g = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "tip_TRAIT_PREPARED");
+                var2 = GameHud.readRootTextFile(-128, "tip_TRAIT_PREPARED");
                 if (null != var2) {
-                  wj.field_j = qe.a(-2739, var2);
+                  SoundEffectInstance.field_j = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "tip_TRAIT_GENERAL");
+                var2 = GameHud.readRootTextFile(-128, "tip_TRAIT_GENERAL");
                 if (var2 != null) {
-                  PowerupCommand.field_l = qe.a(-2739, var2);
+                  PowerupCommand.field_l = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "tip_TRAIT_READY");
+                var2 = GameHud.readRootTextFile(-124, "tip_TRAIT_READY");
                 if (null != var2) {
-                  dd.field_b = qe.a(-2739, var2);
+                  DefaultQuickChatContext.field_b = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "tip_TRAIT_DETERMINED");
+                var2 = GameHud.readRootTextFile(-127, "tip_TRAIT_DETERMINED");
                 if (var2 != null) {
-                  PowerupButton.field_g = qe.a(-2739, var2);
+                  PowerupButton.field_g = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "tip_TRAIT_WISE");
+                var2 = GameHud.readRootTextFile(-128, "tip_TRAIT_WISE");
                 if (var2 != null) {
-                  BirthDateEntryPanel.field_O = qe.a(-2739, var2);
+                  BirthDateEntryPanel.field_O = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "tip_TRAIT_FAST");
+                var2 = GameHud.readRootTextFile(-124, "tip_TRAIT_FAST");
                 if (var2 != null) {
-                  ResourceArchive.field_i = qe.a(-2739, var2);
+                  ResourceArchive.field_i = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "tip_TRAIT_RESILIENT");
+                var2 = GameHud.readRootTextFile(-126, "tip_TRAIT_RESILIENT");
                 if (null != var2) {
-                  AccountCreationForm.field_X = qe.a(-2739, var2);
+                  AccountCreationForm.field_X = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "tip_TRAIT_SCEPTIC");
+                var2 = GameHud.readRootTextFile(-128, "tip_TRAIT_SCEPTIC");
                 if (null != var2) {
-                  ip.field_d = qe.a(-2739, var2);
+                  ClientProtocolStage.field_d = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "tip_TRAIT_SAGE");
+                var2 = GameHud.readRootTextFile(-124, "tip_TRAIT_SAGE");
                 if (null != var2) {
-                  TertiaryLinkNode.field_q = qe.a(-2739, var2);
+                  TertiaryLinkNode.field_q = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "tip_MODIFIER_ANNOYING");
+                var2 = GameHud.readRootTextFile(-126, "tip_MODIFIER_ANNOYING");
                 if (var2 != null) {
-                  UiWidget.field_o = qe.a(-2739, var2);
+                  UiWidget.field_o = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "tip_MODIFIER_IMPOSED");
+                var2 = GameHud.readRootTextFile(-125, "tip_MODIFIER_IMPOSED");
                 if (null != var2) {
-                  WhirlpoolHasher.field_g = qe.a(-2739, var2);
+                  WhirlpoolHasher.field_g = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "tip_MODIFIER_LETHAL");
+                var2 = GameHud.readRootTextFile(-122, "tip_MODIFIER_LETHAL");
                 if (var2 != null) {
-                  vg.field_q = qe.a(-2739, var2);
+                  RankingsRequest.field_q = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "tip_MODIFIER_MOBILE");
+                var2 = GameHud.readRootTextFile(-126, "tip_MODIFIER_MOBILE");
                 if (var2 != null) {
-                  wq.field_e = qe.a(-2739, var2);
+                  MenuStyleHelpers.field_e = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "tip_MODIFIER_DEADLY");
+                var2 = GameHud.readRootTextFile(-127, "tip_MODIFIER_DEADLY");
                 if (var2 != null) {
-                  va.field_b = qe.a(-2739, var2);
+                  UrlLaunchHelpers.field_b = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "tip_MODIFIER_HOSTILE");
+                var2 = GameHud.readRootTextFile(-125, "tip_MODIFIER_HOSTILE");
                 if (null != var2) {
-                  cb.field_r = qe.a(-2739, var2);
+                  PowerupProgressCard.field_r = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "tip_MODIFIER_REALISTIC");
+                var2 = GameHud.readRootTextFile(-128, "tip_MODIFIER_REALISTIC");
                 if (var2 != null) {
-                  UiTheme.field_q = qe.a(-2739, var2);
+                  UiTheme.field_q = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "nextlevel");
+                var2 = GameHud.readRootTextFile(-126, "nextlevel");
                 if (var2 != null) {
-                  TranslatedUiText.field_b = qe.a(-2739, var2);
+                  TranslatedUiText.field_b = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "retry");
+                var2 = GameHud.readRootTextFile(-124, "retry");
                 if (null != var2) {
-                  s.field_g = qe.a(-2739, var2);
+                  StatusAndMeshHelpers.field_g = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "restart");
+                var2 = GameHud.readRootTextFile(-127, "restart");
                 if (null != var2) {
-                  r.field_d = qe.a(-2739, var2);
+                  MusicPatchLoadHelpers.field_d = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "endofgame");
+                var2 = GameHud.readRootTextFile(-128, "endofgame");
                 if (var2 != null) {
-                  DualLinkDeque.field_a = qe.a(-2739, var2);
+                  DualLinkDeque.field_a = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "endoffreegame");
+                var2 = GameHud.readRootTextFile(-122, "endoffreegame");
                 if (var2 != null) {
-                  WhirlpoolHasher.field_i = qe.a(-2739, var2);
+                  WhirlpoolHasher.field_i = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "testchamber");
+                var2 = GameHud.readRootTextFile(-122, "testchamber");
                 if (var2 != null) {
-                  ZombieDawnMulti.field_F = qe.a(-2739, var2);
+                  ZombieDawnMulti.field_F = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "gameover_return_to_lobby");
+                var2 = GameHud.readRootTextFile(-126, "gameover_return_to_lobby");
                 if (var2 != null) {
-                  UiWidget.field_m = qe.a(-2739, var2);
+                  UiWidget.field_m = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "zombiecolours");
+                var2 = GameHud.readRootTextFile(-127, "zombiecolours");
                 if (var2 != null) {
-                  ic.field_l = qe.a(-2739, var2);
+                  LoginCredentials.field_l = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "research");
+                var2 = GameHud.readRootTextFile(-122, "research");
                 if (null != var2) {
-                  vg.field_f = qe.a(-2739, var2);
+                  RankingsRequest.field_f = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "scorecolonspace");
+                var2 = GameHud.readRootTextFile(-122, "scorecolonspace");
                 if (null != var2) {
-                  wp.field_d = qe.a(-2739, var2);
+                  AudioServiceHelpers.field_d = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "bonuscount");
+                var2 = GameHud.readRootTextFile(-126, "bonuscount");
                 if (var2 != null) {
-                  ra.field_g = qe.a(-2739, var2);
+                  PendingIntArrayReply.field_g = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "rank");
+                var2 = GameHud.readRootTextFile(-122, "rank");
                 if (null != var2) {
-                  qe.a(-2739, var2);
+                  GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "name");
+                var2 = GameHud.readRootTextFile(-125, "name");
                 if (var2 != null) {
-                  qe.a(-2739, var2);
+                  GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "score");
+                var2 = GameHud.readRootTextFile(-124, "score");
                 if (var2 != null) {
-                  qe.a(-2739, var2);
+                  GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "youhavewon");
+                var2 = GameHud.readRootTextFile(-125, "youhavewon");
                 if (null != var2) {
-                  nh.field_h = qe.a(-2739, var2);
+                  PendingRankingRequest.field_h = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "youhavelost");
+                var2 = GameHud.readRootTextFile(-122, "youhavelost");
                 if (null != var2) {
-                  DebouncedValidationProvider.field_c = qe.a(-2739, var2);
+                  DebouncedValidationProvider.field_c = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "bonuslevelcomplete");
+                var2 = GameHud.readRootTextFile(-124, "bonuslevelcomplete");
                 if (var2 != null) {
-                  qe.a(-2739, var2);
+                  GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "gamecomplete");
+                var2 = GameHud.readRootTextFile(-128, "gamecomplete");
                 if (null != var2) {
-                  qe.a(-2739, var2);
+                  GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "zombiesremaining");
+                var2 = GameHud.readRootTextFile(-127, "zombiesremaining");
                 if (var2 != null) {
-                  qe.a(-2739, var2);
+                  GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "timeelapsed");
+                var2 = GameHud.readRootTextFile(-123, "timeelapsed");
                 if (var2 != null) {
-                  wi.field_o = qe.a(-2739, var2);
+                  TextHotspot.field_o = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "researchpoints");
+                var2 = GameHud.readRootTextFile(-128, "researchpoints");
                 if (var2 != null) {
-                  QuickChatCategoryRegistry.field_g = qe.a(-2739, var2);
+                  QuickChatCategoryRegistry.field_g = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "zombiesacross");
+                var2 = GameHud.readRootTextFile(-125, "zombiesacross");
                 if (null != var2) {
-                  qe.a(-2739, var2);
+                  GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "overallscore");
+                var2 = GameHud.readRootTextFile(-126, "overallscore");
                 if (var2 != null) {
-                  qe.a(-2739, var2);
+                  GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "summary_score");
+                var2 = GameHud.readRootTextFile(-125, "summary_score");
                 if (null != var2) {
-                  BirthDateValidator.field_o = qe.a(-2739, var2);
+                  BirthDateValidator.field_o = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "summary_traits");
+                var2 = GameHud.readRootTextFile(-122, "summary_traits");
                 if (var2 != null) {
-                  LoginForm.field_N = qe.a(-2739, var2);
+                  LoginForm.field_N = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "summary_new");
+                var2 = GameHud.readRootTextFile(-124, "summary_new");
                 if (var2 != null) {
-                  IntrusiveDeque.field_d = qe.a(-2739, var2);
+                  IntrusiveDeque.field_d = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "summary_rating");
+                var2 = GameHud.readRootTextFile(-128, "summary_rating");
                 if (var2 != null) {
-                  bo.field_c = qe.a(-2739, var2);
+                  LoginMethod.field_c = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "selectazombie");
+                var2 = GameHud.readRootTextFile(-126, "selectazombie");
                 if (var2 != null) {
-                  np.field_l = qe.a(-2739, var2);
+                  UnitMoveEvent.field_l = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "selectazombieenemy");
+                var2 = GameHud.readRootTextFile(-128, "selectazombieenemy");
                 if (var2 != null) {
-                  mj.field_Sb = qe.a(-2739, var2);
+                  ScrollBar.field_Sb = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "selectahuman");
+                var2 = GameHud.readRootTextFile(-126, "selectahuman");
                 if (null != var2) {
-                  BufferedSocket.field_k = qe.a(-2739, var2);
+                  BufferedSocket.field_k = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "selectanyenemy");
+                var2 = GameHud.readRootTextFile(-126, "selectanyenemy");
                 if (var2 != null) {
-                  mq.field_o = qe.a(-2739, var2);
+                  AchievementsScreen.field_o = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "selectanyone");
+                var2 = GameHud.readRootTextFile(-122, "selectanyone");
                 if (var2 != null) {
-                  vc.field_a = qe.a(-2739, var2);
+                  KeyMapHelpers.field_a = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "selectanyzombie");
+                var2 = GameHud.readRootTextFile(-127, "selectanyzombie");
                 if (var2 != null) {
-                  wm.field_U = qe.a(-2739, var2);
+                  MarkerSliderWidget.field_U = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "selectapoint");
+                var2 = GameHud.readRootTextFile(-123, "selectapoint");
                 if (null != var2) {
-                  bg.field_p = qe.a(-2739, var2);
+                  DialWidgetPainter.field_p = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "rated_membersonly");
+                var2 = GameHud.readRootTextFile(-127, "rated_membersonly");
                 if (null != var2) {
-                  bl.field_e = qe.a(-2739, var2);
+                  ClockAndScreenHelpers.field_e = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "researchtreenames,0");
+                var2 = GameHud.readRootTextFile(-123, "researchtreenames,0");
                 if (null != var2) {
-                  fl.field_b[0] = qe.a(-2739, var2);
+                  ByteArrayPool.field_b[0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "researchtreenames,1");
+                var2 = GameHud.readRootTextFile(-122, "researchtreenames,1");
                 if (null != var2) {
-                  fl.field_b[1] = qe.a(-2739, var2);
+                  ByteArrayPool.field_b[1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "researchtreenames,2");
+                var2 = GameHud.readRootTextFile(-122, "researchtreenames,2");
                 if (null != var2) {
-                  fl.field_b[2] = qe.a(-2739, var2);
+                  ByteArrayPool.field_b[2] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "levelname,0,0");
+                var2 = GameHud.readRootTextFile(-128, "levelname,0,0");
                 if (null != var2) {
-                  DisplayNamePanel.field_N[0][0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[0][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "levelname,0,1");
+                var2 = GameHud.readRootTextFile(-123, "levelname,0,1");
                 if (null != var2) {
-                  DisplayNamePanel.field_N[0][1] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[0][1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "levelname,0,2");
+                var2 = GameHud.readRootTextFile(-126, "levelname,0,2");
                 if (null != var2) {
-                  DisplayNamePanel.field_N[0][2] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[0][2] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "levelname,0,3");
+                var2 = GameHud.readRootTextFile(-124, "levelname,0,3");
                 if (null != var2) {
-                  DisplayNamePanel.field_N[0][3] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[0][3] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "levelname,0,4");
+                var2 = GameHud.readRootTextFile(-126, "levelname,0,4");
                 if (null != var2) {
-                  DisplayNamePanel.field_N[0][4] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[0][4] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "levelname,0,5");
+                var2 = GameHud.readRootTextFile(-124, "levelname,0,5");
                 if (null != var2) {
-                  DisplayNamePanel.field_N[0][5] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[0][5] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "levelname,1,0");
+                var2 = GameHud.readRootTextFile(-123, "levelname,1,0");
                 if (null != var2) {
-                  DisplayNamePanel.field_N[1][0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[1][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "levelname,1,1");
+                var2 = GameHud.readRootTextFile(-126, "levelname,1,1");
                 if (null != var2) {
-                  DisplayNamePanel.field_N[1][1] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[1][1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "levelname,1,2");
+                var2 = GameHud.readRootTextFile(-128, "levelname,1,2");
                 if (null != var2) {
-                  DisplayNamePanel.field_N[1][2] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[1][2] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "levelname,1,3");
+                var2 = GameHud.readRootTextFile(-126, "levelname,1,3");
                 if (null != var2) {
-                  DisplayNamePanel.field_N[1][3] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[1][3] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "levelname,1,4");
+                var2 = GameHud.readRootTextFile(-128, "levelname,1,4");
                 if (var2 != null) {
-                  DisplayNamePanel.field_N[1][4] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[1][4] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "levelname,1,5");
+                var2 = GameHud.readRootTextFile(-128, "levelname,1,5");
                 if (var2 != null) {
-                  DisplayNamePanel.field_N[1][5] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[1][5] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "levelname,2,0");
+                var2 = GameHud.readRootTextFile(-124, "levelname,2,0");
                 if (var2 != null) {
-                  DisplayNamePanel.field_N[2][0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[2][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "levelname,2,1");
+                var2 = GameHud.readRootTextFile(-128, "levelname,2,1");
                 if (var2 != null) {
-                  DisplayNamePanel.field_N[2][1] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[2][1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "levelname,2,2");
+                var2 = GameHud.readRootTextFile(-127, "levelname,2,2");
                 if (var2 != null) {
-                  DisplayNamePanel.field_N[2][2] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[2][2] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "levelname,2,3");
+                var2 = GameHud.readRootTextFile(-128, "levelname,2,3");
                 if (var2 != null) {
-                  DisplayNamePanel.field_N[2][3] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[2][3] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "levelname,2,4");
+                var2 = GameHud.readRootTextFile(-128, "levelname,2,4");
                 if (var2 != null) {
-                  DisplayNamePanel.field_N[2][4] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[2][4] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "levelname,2,5");
+                var2 = GameHud.readRootTextFile(-122, "levelname,2,5");
                 if (null != var2) {
-                  DisplayNamePanel.field_N[2][5] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[2][5] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "levelname,3,0");
+                var2 = GameHud.readRootTextFile(-126, "levelname,3,0");
                 if (var2 != null) {
-                  DisplayNamePanel.field_N[3][0] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[3][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "levelname,3,1");
+                var2 = GameHud.readRootTextFile(-125, "levelname,3,1");
                 if (null != var2) {
-                  DisplayNamePanel.field_N[3][1] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[3][1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "levelname,3,2");
+                var2 = GameHud.readRootTextFile(-126, "levelname,3,2");
                 if (null != var2) {
-                  DisplayNamePanel.field_N[3][2] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[3][2] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "levelname,3,3");
+                var2 = GameHud.readRootTextFile(-126, "levelname,3,3");
                 if (var2 != null) {
-                  DisplayNamePanel.field_N[3][3] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[3][3] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "levelname,3,4");
+                var2 = GameHud.readRootTextFile(-124, "levelname,3,4");
                 if (null != var2) {
-                  DisplayNamePanel.field_N[3][4] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[3][4] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "levelname,3,5");
+                var2 = GameHud.readRootTextFile(-123, "levelname,3,5");
                 if (null != var2) {
-                  DisplayNamePanel.field_N[3][5] = qe.a(-2739, var2);
+                  DisplayNamePanel.field_N[3][5] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "bonuslevel");
+                var2 = GameHud.readRootTextFile(-123, "bonuslevel");
                 if (var2 != null) {
-                  qe.a(-2739, var2);
+                  GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "theend");
+                var2 = GameHud.readRootTextFile(-127, "theend");
                 if (null != var2) {
-                  qe.a(-2739, var2);
+                  GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "getready,0");
+                var2 = GameHud.readRootTextFile(-124, "getready,0");
                 if (var2 != null) {
-                  HumanView.field_pb[0] = qe.a(-2739, var2);
+                  HumanView.field_pb[0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "getready,1");
+                var2 = GameHud.readRootTextFile(-127, "getready,1");
                 if (null != var2) {
-                  HumanView.field_pb[1] = qe.a(-2739, var2);
+                  HumanView.field_pb[1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "getready,2");
+                var2 = GameHud.readRootTextFile(-128, "getready,2");
                 if (var2 != null) {
-                  HumanView.field_pb[2] = qe.a(-2739, var2);
+                  HumanView.field_pb[2] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "getready,3");
+                var2 = GameHud.readRootTextFile(-122, "getready,3");
                 if (null != var2) {
-                  HumanView.field_pb[3] = qe.a(-2739, var2);
+                  HumanView.field_pb[3] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "getready,4");
+                var2 = GameHud.readRootTextFile(-126, "getready,4");
                 if (null != var2) {
-                  HumanView.field_pb[4] = qe.a(-2739, var2);
+                  HumanView.field_pb[4] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "getready,5");
+                var2 = GameHud.readRootTextFile(-125, "getready,5");
                 if (var2 != null) {
-                  HumanView.field_pb[5] = qe.a(-2739, var2);
+                  HumanView.field_pb[5] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "getready,6");
+                var2 = GameHud.readRootTextFile(-123, "getready,6");
                 if (null != var2) {
-                  HumanView.field_pb[6] = qe.a(-2739, var2);
+                  HumanView.field_pb[6] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "getready,7");
+                var2 = GameHud.readRootTextFile(-127, "getready,7");
                 if (null != var2) {
-                  HumanView.field_pb[7] = qe.a(-2739, var2);
+                  HumanView.field_pb[7] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "getready,8");
+                var2 = GameHud.readRootTextFile(-122, "getready,8");
                 if (null != var2) {
-                  HumanView.field_pb[8] = qe.a(-2739, var2);
+                  HumanView.field_pb[8] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "getready,9");
+                var2 = GameHud.readRootTextFile(-127, "getready,9");
                 if (var2 != null) {
-                  HumanView.field_pb[9] = qe.a(-2739, var2);
+                  HumanView.field_pb[9] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "getready,10");
+                var2 = GameHud.readRootTextFile(-124, "getready,10");
                 if (null != var2) {
-                  HumanView.field_pb[10] = qe.a(-2739, var2);
+                  HumanView.field_pb[10] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "getready,11");
+                var2 = GameHud.readRootTextFile(-124, "getready,11");
                 if (var2 != null) {
-                  HumanView.field_pb[11] = qe.a(-2739, var2);
+                  HumanView.field_pb[11] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "getready,12");
+                var2 = GameHud.readRootTextFile(-122, "getready,12");
                 if (null != var2) {
-                  HumanView.field_pb[12] = qe.a(-2739, var2);
+                  HumanView.field_pb[12] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "getready,13");
+                var2 = GameHud.readRootTextFile(-124, "getready,13");
                 if (var2 != null) {
-                  HumanView.field_pb[13] = qe.a(-2739, var2);
+                  HumanView.field_pb[13] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "getready,14");
+                var2 = GameHud.readRootTextFile(-123, "getready,14");
                 if (null != var2) {
-                  HumanView.field_pb[14] = qe.a(-2739, var2);
+                  HumanView.field_pb[14] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "getready,15");
+                var2 = GameHud.readRootTextFile(-122, "getready,15");
                 if (var2 != null) {
-                  HumanView.field_pb[15] = qe.a(-2739, var2);
+                  HumanView.field_pb[15] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "getready,16");
+                var2 = GameHud.readRootTextFile(-123, "getready,16");
                 if (null != var2) {
-                  HumanView.field_pb[16] = qe.a(-2739, var2);
+                  HumanView.field_pb[16] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "getready,17");
+                var2 = GameHud.readRootTextFile(-126, "getready,17");
                 if (null != var2) {
-                  HumanView.field_pb[17] = qe.a(-2739, var2);
+                  HumanView.field_pb[17] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "getready,18");
+                var2 = GameHud.readRootTextFile(-126, "getready,18");
                 if (null != var2) {
-                  HumanView.field_pb[18] = qe.a(-2739, var2);
+                  HumanView.field_pb[18] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "getready,19");
+                var2 = GameHud.readRootTextFile(-125, "getready,19");
                 if (null != var2) {
-                  HumanView.field_pb[19] = qe.a(-2739, var2);
+                  HumanView.field_pb[19] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "getready,20");
+                var2 = GameHud.readRootTextFile(-126, "getready,20");
                 if (null != var2) {
-                  HumanView.field_pb[20] = qe.a(-2739, var2);
+                  HumanView.field_pb[20] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "getready,21");
+                var2 = GameHud.readRootTextFile(-125, "getready,21");
                 if (null != var2) {
-                  HumanView.field_pb[21] = qe.a(-2739, var2);
+                  HumanView.field_pb[21] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "getready,22");
+                var2 = GameHud.readRootTextFile(-127, "getready,22");
                 if (null != var2) {
-                  HumanView.field_pb[22] = qe.a(-2739, var2);
+                  HumanView.field_pb[22] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "getready,23");
+                var2 = GameHud.readRootTextFile(-127, "getready,23");
                 if (var2 != null) {
-                  HumanView.field_pb[23] = qe.a(-2739, var2);
+                  HumanView.field_pb[23] = GameHud.decodeText(-2739, var2);
                 }
             }
             void runChunk2() throws java.lang.RuntimeException {
-                var2 = qe.a(-125, "getready,24");
+                var2 = GameHud.readRootTextFile(-125, "getready,24");
                 if (null != var2) {
-                  HumanView.field_pb[24] = qe.a(-2739, var2);
+                  HumanView.field_pb[24] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "getready,25");
+                var2 = GameHud.readRootTextFile(-124, "getready,25");
                 if (null != var2) {
-                  HumanView.field_pb[25] = qe.a(-2739, var2);
+                  HumanView.field_pb[25] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "getready,26");
+                var2 = GameHud.readRootTextFile(-124, "getready,26");
                 if (null != var2) {
-                  HumanView.field_pb[26] = qe.a(-2739, var2);
+                  HumanView.field_pb[26] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "matchover");
+                var2 = GameHud.readRootTextFile(-126, "matchover");
                 if (null != var2) {
-                  tm.field_g = qe.a(-2739, var2);
+                  LobbyDrawHelpers.field_g = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "bonusleveltext,0");
+                var2 = GameHud.readRootTextFile(-122, "bonusleveltext,0");
                 if (null != var2) {
-                  hp.field_p[0] = qe.a(-2739, var2);
+                  RandomHelpers.field_p[0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "bonusleveltext,1");
+                var2 = GameHud.readRootTextFile(-123, "bonusleveltext,1");
                 if (null != var2) {
-                  hp.field_p[1] = qe.a(-2739, var2);
+                  RandomHelpers.field_p[1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "bonusleveltext,2");
+                var2 = GameHud.readRootTextFile(-124, "bonusleveltext,2");
                 if (var2 != null) {
-                  hp.field_p[2] = qe.a(-2739, var2);
+                  RandomHelpers.field_p[2] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "bonusleveltext,3");
+                var2 = GameHud.readRootTextFile(-124, "bonusleveltext,3");
                 if (var2 != null) {
-                  hp.field_p[3] = qe.a(-2739, var2);
+                  RandomHelpers.field_p[3] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "tutorialtoggle,0");
+                var2 = GameHud.readRootTextFile(-125, "tutorialtoggle,0");
                 if (var2 != null) {
-                  vi.field_a[0] = qe.a(-2739, var2);
+                  LobbyGameListHelpers.field_a[0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "tutorialtoggle,1");
+                var2 = GameHud.readRootTextFile(-127, "tutorialtoggle,1");
                 if (var2 != null) {
-                  vi.field_a[1] = qe.a(-2739, var2);
+                  LobbyGameListHelpers.field_a[1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "controlText,0");
+                var2 = GameHud.readRootTextFile(-124, "controlText,0");
                 if (null != var2) {
-                  vn.field_d[0] = qe.a(-2739, var2);
+                  MenuFrameHelpers.field_d[0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "controlText,1");
+                var2 = GameHud.readRootTextFile(-123, "controlText,1");
                 if (null != var2) {
-                  vn.field_d[1] = qe.a(-2739, var2);
+                  MenuFrameHelpers.field_d[1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "difficultytoggle,0");
+                var2 = GameHud.readRootTextFile(-122, "difficultytoggle,0");
                 if (null != var2) {
-                  ce.field_g[0] = qe.a(-2739, var2);
+                  TerrainEffectZone.field_g[0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "difficultytoggle,1");
+                var2 = GameHud.readRootTextFile(-123, "difficultytoggle,1");
                 if (null != var2) {
-                  ce.field_g[1] = qe.a(-2739, var2);
+                  TerrainEffectZone.field_g[1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "unknownresearch");
+                var2 = GameHud.readRootTextFile(-125, "unknownresearch");
                 if (null != var2) {
-                  ro.field_N = qe.a(-2739, var2);
+                  LocalGameWorld.field_N = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "masteredresearch");
+                var2 = GameHud.readRootTextFile(-128, "masteredresearch");
                 if (null != var2) {
-                  qe.a(-2739, var2);
+                  GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "tutorial,0,0");
+                var2 = GameHud.readRootTextFile(-128, "tutorial,0,0");
                 if (var2 != null) {
-                  ei.field_g[0][0] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[0][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "tutorial,0,1");
+                var2 = GameHud.readRootTextFile(-122, "tutorial,0,1");
                 if (null != var2) {
-                  ei.field_g[0][1] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[0][1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "tutorial,1,0");
+                var2 = GameHud.readRootTextFile(-122, "tutorial,1,0");
                 if (null != var2) {
-                  ei.field_g[1][0] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[1][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "tutorial,1,1");
+                var2 = GameHud.readRootTextFile(-123, "tutorial,1,1");
                 if (null != var2) {
-                  ei.field_g[1][1] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[1][1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "tutorial,2,0");
+                var2 = GameHud.readRootTextFile(-126, "tutorial,2,0");
                 if (null != var2) {
-                  ei.field_g[2][0] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[2][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "tutorial,2,1");
+                var2 = GameHud.readRootTextFile(-125, "tutorial,2,1");
                 if (null != var2) {
-                  ei.field_g[2][1] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[2][1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "tutorial,3,0");
+                var2 = GameHud.readRootTextFile(-123, "tutorial,3,0");
                 if (null != var2) {
-                  ei.field_g[3][0] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[3][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "tutorial,3,1");
+                var2 = GameHud.readRootTextFile(-122, "tutorial,3,1");
                 if (var2 != null) {
-                  ei.field_g[3][1] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[3][1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "tutorial,4,0");
+                var2 = GameHud.readRootTextFile(-126, "tutorial,4,0");
                 if (var2 != null) {
-                  ei.field_g[4][0] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[4][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "tutorial,4,1");
+                var2 = GameHud.readRootTextFile(-123, "tutorial,4,1");
                 if (var2 != null) {
-                  ei.field_g[4][1] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[4][1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "tutorial,4,2");
+                var2 = GameHud.readRootTextFile(-126, "tutorial,4,2");
                 if (null != var2) {
-                  ei.field_g[4][2] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[4][2] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "tutorial,5,0");
+                var2 = GameHud.readRootTextFile(-126, "tutorial,5,0");
                 if (null != var2) {
-                  ei.field_g[5][0] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[5][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "tutorial,5,1");
+                var2 = GameHud.readRootTextFile(-127, "tutorial,5,1");
                 if (var2 != null) {
-                  ei.field_g[5][1] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[5][1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "tutorial,5,2");
+                var2 = GameHud.readRootTextFile(-127, "tutorial,5,2");
                 if (var2 != null) {
-                  ei.field_g[5][2] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[5][2] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "tutorial,6,0");
+                var2 = GameHud.readRootTextFile(-126, "tutorial,6,0");
                 if (null != var2) {
-                  ei.field_g[6][0] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[6][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "tutorial,7,0");
+                var2 = GameHud.readRootTextFile(-122, "tutorial,7,0");
                 if (var2 != null) {
-                  ei.field_g[7][0] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[7][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "tutorial,7,1");
+                var2 = GameHud.readRootTextFile(-125, "tutorial,7,1");
                 if (var2 != null) {
-                  ei.field_g[7][1] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[7][1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "tutorial,8,0");
+                var2 = GameHud.readRootTextFile(-122, "tutorial,8,0");
                 if (var2 != null) {
-                  ei.field_g[8][0] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[8][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "tutorial,8,1");
+                var2 = GameHud.readRootTextFile(-122, "tutorial,8,1");
                 if (null != var2) {
-                  ei.field_g[8][1] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[8][1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "tutorial,9,0");
+                var2 = GameHud.readRootTextFile(-127, "tutorial,9,0");
                 if (var2 != null) {
-                  ei.field_g[9][0] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[9][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "tutorial,10,0");
+                var2 = GameHud.readRootTextFile(-124, "tutorial,10,0");
                 if (null != var2) {
-                  ei.field_g[10][0] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[10][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "tutorial,11,0");
+                var2 = GameHud.readRootTextFile(-124, "tutorial,11,0");
                 if (null != var2) {
-                  ei.field_g[11][0] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[11][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "tutorial,12,0");
+                var2 = GameHud.readRootTextFile(-122, "tutorial,12,0");
                 if (null != var2) {
-                  ei.field_g[12][0] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[12][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "tutorial,13,0");
+                var2 = GameHud.readRootTextFile(-127, "tutorial,13,0");
                 if (var2 != null) {
-                  ei.field_g[13][0] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[13][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "tutorial,13,1");
+                var2 = GameHud.readRootTextFile(-122, "tutorial,13,1");
                 if (var2 != null) {
-                  ei.field_g[13][1] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[13][1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "tutorial,14,0");
+                var2 = GameHud.readRootTextFile(-125, "tutorial,14,0");
                 if (var2 != null) {
-                  ei.field_g[14][0] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[14][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "tutorial,14,1");
+                var2 = GameHud.readRootTextFile(-126, "tutorial,14,1");
                 if (var2 != null) {
-                  ei.field_g[14][1] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[14][1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "tutorial,15,0");
+                var2 = GameHud.readRootTextFile(-123, "tutorial,15,0");
                 if (var2 != null) {
-                  ei.field_g[15][0] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[15][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "tutorial,15,1");
+                var2 = GameHud.readRootTextFile(-123, "tutorial,15,1");
                 if (null != var2) {
-                  ei.field_g[15][1] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[15][1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "tutorial,16,0");
+                var2 = GameHud.readRootTextFile(-126, "tutorial,16,0");
                 if (var2 != null) {
-                  ei.field_g[16][0] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[16][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "tutorial,16,1");
+                var2 = GameHud.readRootTextFile(-126, "tutorial,16,1");
                 if (var2 != null) {
-                  ei.field_g[16][1] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[16][1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "tutorial,17,0");
+                var2 = GameHud.readRootTextFile(-123, "tutorial,17,0");
                 if (var2 != null) {
-                  ei.field_g[17][0] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[17][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "tutorial,18,0");
+                var2 = GameHud.readRootTextFile(-127, "tutorial,18,0");
                 if (null != var2) {
-                  ei.field_g[18][0] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[18][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "tutorial,19,0");
+                var2 = GameHud.readRootTextFile(-126, "tutorial,19,0");
                 if (var2 != null) {
-                  ei.field_g[19][0] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[19][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "tutorial,20,0");
+                var2 = GameHud.readRootTextFile(-124, "tutorial,20,0");
                 if (var2 != null) {
-                  ei.field_g[20][0] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[20][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "tutorial,21,0");
+                var2 = GameHud.readRootTextFile(-126, "tutorial,21,0");
                 if (var2 != null) {
-                  ei.field_g[21][0] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[21][0] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "tutorial,21,1");
+                var2 = GameHud.readRootTextFile(-128, "tutorial,21,1");
                 if (null != var2) {
-                  ei.field_g[21][1] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[21][1] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "tutorial,21,2");
+                var2 = GameHud.readRootTextFile(-127, "tutorial,21,2");
                 if (var2 != null) {
-                  ei.field_g[21][2] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[21][2] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-124, "tutorial,21,3");
+                var2 = GameHud.readRootTextFile(-124, "tutorial,21,3");
                 if (null != var2) {
-                  ei.field_g[21][3] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[21][3] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "tutorial,21,4");
+                var2 = GameHud.readRootTextFile(-125, "tutorial,21,4");
                 if (var2 != null) {
-                  ei.field_g[21][4] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[21][4] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "tutorial,21,5");
+                var2 = GameHud.readRootTextFile(-122, "tutorial,21,5");
                 if (var2 != null) {
-                  ei.field_g[21][5] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[21][5] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "tutorial,21,6");
+                var2 = GameHud.readRootTextFile(-128, "tutorial,21,6");
                 if (null != var2) {
-                  ei.field_g[21][6] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[21][6] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "tutorial,21,7");
+                var2 = GameHud.readRootTextFile(-122, "tutorial,21,7");
                 if (var2 != null) {
-                  ei.field_g[21][7] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[21][7] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-122, "tutorial,21,8");
+                var2 = GameHud.readRootTextFile(-122, "tutorial,21,8");
                 if (null != var2) {
-                  ei.field_g[21][8] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[21][8] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "tutorial,21,9");
+                var2 = GameHud.readRootTextFile(-127, "tutorial,21,9");
                 if (null != var2) {
-                  ei.field_g[21][9] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[21][9] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "tutorial,21,10");
+                var2 = GameHud.readRootTextFile(-127, "tutorial,21,10");
                 if (null != var2) {
-                  ei.field_g[21][10] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[21][10] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "tutorial,21,11");
+                var2 = GameHud.readRootTextFile(-125, "tutorial,21,11");
                 if (var2 != null) {
-                  ei.field_g[21][11] = qe.a(-2739, var2);
+                  LayoutCenterHelpers.field_g[21][11] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "tutorial_alternate,4");
+                var2 = GameHud.readRootTextFile(-127, "tutorial_alternate,4");
                 if (var2 != null) {
-                  ci.field_c[4] = qe.a(-2739, var2);
+                  LevelFileList.field_c[4] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "tutorial_alternate,6");
+                var2 = GameHud.readRootTextFile(-126, "tutorial_alternate,6");
                 if (var2 != null) {
-                  ci.field_c[6] = qe.a(-2739, var2);
+                  LevelFileList.field_c[6] = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "clicktoclose");
+                var2 = GameHud.readRootTextFile(-125, "clicktoclose");
                 if (var2 != null) {
-                  ob.field_A = qe.a(-2739, var2);
+                  QuickChatCategoryDefinition.field_A = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "clickformore");
+                var2 = GameHud.readRootTextFile(-128, "clickformore");
                 if (null != var2) {
-                  DebouncedValidationProvider.field_b = qe.a(-2739, var2);
+                  DebouncedValidationProvider.field_b = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-123, "ready");
+                var2 = GameHud.readRootTextFile(-123, "ready");
                 if (var2 != null) {
-                  Under13NoticePanel.field_J = qe.a(-2739, var2);
+                  Under13NoticePanel.field_J = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "go");
+                var2 = GameHud.readRootTextFile(-126, "go");
                 if (var2 != null) {
-                  NodeHashTableIterator.field_c = qe.a(-2739, var2);
+                  NodeHashTableIterator.field_c = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "preparetorun");
+                var2 = GameHud.readRootTextFile(-125, "preparetorun");
                 if (null != var2) {
-                  ng.field_c = qe.a(-2739, var2);
+                  ArchiveProvider.field_c = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-128, "timetorun");
+                var2 = GameHud.readRootTextFile(-128, "timetorun");
                 if (null != var2) {
-                  sm.field_f = qe.a(-2739, var2);
+                  DisplayMode.field_f = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "timetorun_spectator");
+                var2 = GameHud.readRootTextFile(-125, "timetorun_spectator");
                 if (null != var2) {
-                  ButtonWidget.field_E = qe.a(-2739, var2);
+                  ButtonWidget.field_E = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-125, "achievementsonlyinrated");
+                var2 = GameHud.readRootTextFile(-125, "achievementsonlyinrated");
                 if (null != var2) {
-                  DialogLayer.field_G = qe.a(-2739, var2);
+                  DialogLayer.field_G = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-126, "hidechattocontinue");
+                var2 = GameHud.readRootTextFile(-126, "hidechattocontinue");
                 if (null != var2) {
-                  ArchiveIndex.field_m = qe.a(-2739, var2);
+                  ArchiveIndex.field_m = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "mp_showchat_nounread");
+                var2 = GameHud.readRootTextFile(-127, "mp_showchat_nounread");
                 if (null != var2) {
-                  FullscreenFocusCanvas.field_d = qe.a(-2739, var2);
+                  FullscreenFocusCanvas.field_d = GameHud.decodeText(-2739, var2);
                 }
-                var2 = qe.a(-127, "members_only_research");
+                var2 = GameHud.readRootTextFile(-127, "members_only_research");
                 if (null != var2) {
-                  ik.field_b = qe.a(-2739, var2);
+                  KeyboardStateHelpers.field_b = GameHud.decodeText(-2739, var2);
                 }
-                bo.field_b = null;
+                LoginMethod.field_b = null;
             }
             void run() {
                 var3 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -2410,8 +2410,8 @@ final class PortalView extends SceneObject {
             field_H = (ValidationState) null;
           }
           var4 = param0.worldToScreenY(this.getY(126), param1 ^ 13542456);
-          if (!io.a(-48 + var3_int, var4, (byte) -107, param0) &&
-            !io.a(var3_int, -48 + var4, (byte) -105, param0)) {
+          if (!WeightedLruCache.isOnScreen(-48 + var3_int, var4, (byte) -107, param0) &&
+            !WeightedLruCache.isOnScreen(var3_int, -48 + var4, (byte) -105, param0)) {
             return;
           }
           boolean decompiledFrameRemainder3 = true;
@@ -2479,14 +2479,14 @@ final class PortalView extends SceneObject {
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           var4 = new Sprite[9];
-          var4[0] = PacketBuffer.a(-123, param2, param3);
+          var4[0] = PacketBuffer.createSolidSprite(-123, param2, param3);
           var5 = 1;
           do {
             if (var5 >= 9) {
               if (param0 > -85) {
                 PortalView.unwrapArchiveBytes((Object) null, 65, true);
               }
-              var4[4] = PacketBuffer.a(-128, 64, param1);
+              var4[4] = PacketBuffer.createSolidSprite(-128, 64, param1);
               break;
             }
             var4[var5] = var4[0];
@@ -2504,7 +2504,7 @@ final class PortalView extends SceneObject {
     final void draw(int param0, Camera param1) {
         int stackIn_67_0 = 0;
         int stackIn_67_1 = 0;
-        ea stackIn_83_0 = null;
+        SwirlNoiseRenderer stackIn_83_0 = null;
         int stackIn_84_1 = 0;
         RuntimeException stackIn_95_0 = null;
         StringBuilder stackIn_95_1 = null;
@@ -2531,10 +2531,10 @@ final class PortalView extends SceneObject {
           var4 = param1.worldToScreenY(this.getY(123), 121);
           if (null != this.field_N) {
             this.field_N.setVolume(DropTargetWidget.computeScreenVolume(param0 ^ -10218, var4, var3_int));
-            this.field_N.setPan(pb.computeStereoPan(var4, var3_int, false));
+            this.field_N.setPan(EffectAudioHelpers.computeStereoPan(var4, var3_int, false));
           }
-          if (!io.a(var3_int, var4, (byte) -86, param1) &&
-            !io.a(var3_int, var4 - 48, (byte) -73, param1)) {
+          if (!WeightedLruCache.isOnScreen(var3_int, var4, (byte) -86, param1) &&
+            !WeightedLruCache.isOnScreen(var3_int, var4 - 48, (byte) -73, param1)) {
             return;
           }
           boolean decompiledFrameRemainder2 = true;
@@ -2581,18 +2581,18 @@ final class PortalView extends SceneObject {
           if (param0 != -10136) {
             this.isWithinRange(107, -17, (byte) 63);
           }
-          g.c(vn.field_h);
+          RasterEffectHelpers.pushSpriteTarget(MenuFrameHelpers.field_h);
           SoftwareRasterizer.clear();
           boolean decompiledSharedTail0 = (this.field_J == 1);
           if (!decompiledSharedTail0) {
-            na.field_H[this.field_C][var5].drawScaled((vn.field_h.width - this.field_Q) / 2, (-this.field_M + vn.field_h.height) / 2, this.field_Q, this.field_M);
+            AlphaChildWidget.field_H[this.field_C][var5].drawScaled((MenuFrameHelpers.field_h.width - this.field_Q) / 2, (-this.field_M + MenuFrameHelpers.field_h.height) / 2, this.field_Q, this.field_M);
             decompiledSharedTail0 = (var12 != 0);
           }
           if (decompiledSharedTail0) {
-            na.field_H[this.field_C][var5].draw((-this.field_Q + vn.field_h.width) / 2, (vn.field_h.height - this.field_M) / 2);
+            AlphaChildWidget.field_H[this.field_C][var5].draw((-this.field_Q + MenuFrameHelpers.field_h.width) / 2, (MenuFrameHelpers.field_h.height - this.field_M) / 2);
           }
-          g.d();
-          var8 = vn.field_h.pixels;
+          RasterEffectHelpers.popRaster();
+          var8 = MenuFrameHelpers.field_h.pixels;
           var9 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var9 >= var8.length))) {
@@ -2603,11 +2603,11 @@ final class PortalView extends SceneObject {
               if (stackIn_67_0 != stackIn_67_1) {
                 if (0 == (65535 & var10)) {
                   var11 = var10 >> 16;
-                  var8[var9] = cr.b(ScrollPane.bitAnd(var11 * ScrollPane.bitAnd(var7 >> 16, 255), -855572736) << 8, cr.b(ScrollPane.bitAnd(var7, 255) * var11 >> 8, ScrollPane.bitAnd(var11 * ScrollPane.bitAnd(var7 >> 8, 255), 65280)));
+                  var8[var9] = PendingStatusRequest.bitOr(ScrollPane.bitAnd(var11 * ScrollPane.bitAnd(var7 >> 16, 255), -855572736) << 8, PendingStatusRequest.bitOr(ScrollPane.bitAnd(var7, 255) * var11 >> 8, ScrollPane.bitAnd(var11 * ScrollPane.bitAnd(var7 >> 8, 255), 65280)));
                 } else {
                   if ((16711935 & var10) == 0) {
                     var11 = var10 >> 8;
-                    var8[var9] = cr.b(ScrollPane.bitAnd(var11 * (ScrollPane.bitAnd(var6, 16730352) >> 16), -201261312) << 8, cr.b(ScrollPane.bitAnd(65280, ScrollPane.bitAnd(var6 >> 8, 255) * var11), var11 * ScrollPane.bitAnd(var6, 255) >> 8));
+                    var8[var9] = PendingStatusRequest.bitOr(ScrollPane.bitAnd(var11 * (ScrollPane.bitAnd(var6, 16730352) >> 16), -201261312) << 8, PendingStatusRequest.bitOr(ScrollPane.bitAnd(65280, ScrollPane.bitAnd(var6 >> 8, 255) * var11), var11 * ScrollPane.bitAnd(var6, 255) >> 8));
                   }
                 }
               }
@@ -2617,25 +2617,25 @@ final class PortalView extends SceneObject {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            vn.field_h.drawTransparent(var3_int - vn.field_h.width / 2, var4 - vn.field_h.height / 2);
-            if (vo.field_r == null) {
-              vo.field_r = new Sprite(ud.field_Q.field_e, 2 * ud.field_Q.field_b);
+            MenuFrameHelpers.field_h.drawTransparent(var3_int - MenuFrameHelpers.field_h.width / 2, var4 - MenuFrameHelpers.field_h.height / 2);
+            if (IntroScreen.field_r == null) {
+              IntroScreen.field_r = new Sprite(DialSelectorWidget.field_Q.field_e, 2 * DialSelectorWidget.field_Q.field_b);
             }
-            g.c(vo.field_r);
+            RasterEffectHelpers.pushSpriteTarget(IntroScreen.field_r);
             stackIn_67_0 = -2;
             stackIn_67_1 = ~FullscreenFocusCanvas.field_k.field_k;
           }
           if (stackIn_67_0 == stackIn_67_1) {
-            ud.field_Q.drawFadedToColour(0, 0, 128, var7);
+            DialSelectorWidget.field_Q.drawFadedToColour(0, 0, 128, var7);
           }
           if (stackIn_67_0 != stackIn_67_1 ||
             var12 != 0) {
-            ud.field_Q.d(0, 0);
+            DialSelectorWidget.field_Q.drawOpaque(0, 0);
           }
           if (this.field_O == null) {
-            this.field_O = new ea();
+            this.field_O = new SwirlNoiseRenderer();
           }
-          this.field_P = nk.createColorRamp(var7, 455739624, 1);
+          this.field_P = ZombieDetonation.createColorRamp(var7, 455739624, 1);
           if (FullscreenFocusCanvas.field_k.field_k != 1) {
             stackIn_83_0 = this.field_O;
             if (FullscreenFocusCanvas.field_k.field_k != 2) {
@@ -2643,18 +2643,18 @@ final class PortalView extends SceneObject {
             } else {
               stackIn_84_1 = 4;
             }
-            ((ea) (Object) stackIn_83_0).a(stackIn_84_1, -((double)PowerupEvent.field_m / 5.0) + 2000000000.0, this.field_P);
+            ((SwirlNoiseRenderer) (Object) stackIn_83_0).renderSwirl(stackIn_84_1, -((double)PowerupEvent.field_m / 5.0) + 2000000000.0, this.field_P);
           }
-          g.d();
+          RasterEffectHelpers.popRaster();
           if (FullscreenFocusCanvas.field_k.field_k == 1) {
-            vo.field_r.drawWithVerticalAlphaGradient(var3_int + 14 - vn.field_h.width / 2, var4 - 33 - vn.field_h.height / 2, 64, 400);
-            vo.field_r.drawAdditive(14 + (var3_int - vn.field_h.width / 2), var4 + (-33 - vn.field_h.height / 2), 192);
+            IntroScreen.field_r.drawWithVerticalAlphaGradient(var3_int + 14 - MenuFrameHelpers.field_h.width / 2, var4 - 33 - MenuFrameHelpers.field_h.height / 2, 64, 400);
+            IntroScreen.field_r.drawAdditive(14 + (var3_int - MenuFrameHelpers.field_h.width / 2), var4 + (-33 - MenuFrameHelpers.field_h.height / 2), 192);
             if (var12 == 0) {
               return;
             }
           }
-          vo.field_r.drawWithVerticalAlphaGradient(-(vn.field_h.width / 2) + (14 + var3_int), -(vn.field_h.height / 2) + var4 - 33, 64, 400);
-          vo.field_r.drawAdditive(14 + (var3_int - vn.field_h.width / 2), -(vn.field_h.height / 2) + var4 - 33, 32);
+          IntroScreen.field_r.drawWithVerticalAlphaGradient(-(MenuFrameHelpers.field_h.width / 2) + (14 + var3_int), -(MenuFrameHelpers.field_h.height / 2) + var4 - 33, 64, 400);
+          IntroScreen.field_r.drawAdditive(14 + (var3_int - MenuFrameHelpers.field_h.width / 2), -(MenuFrameHelpers.field_h.height / 2) + var4 - 33, 32);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2684,7 +2684,7 @@ final class PortalView extends SceneObject {
           if (fieldTemp$1 >= 5) {
             fieldTemp$2 = this.field_R + 1;
             this.field_R = this.field_R + 1;
-            if (fieldTemp$2 >= na.field_H[this.field_C].length) {
+            if (fieldTemp$2 >= AlphaChildWidget.field_H[this.field_C].length) {
               this.field_R = 0;
             }
             this.field_S = 0;
@@ -2707,10 +2707,10 @@ final class PortalView extends SceneObject {
         this.field_S = 0;
         try {
           this.field_J = 1;
-          this.field_Q = na.field_H[this.field_C][0].field_e;
-          this.field_M = na.field_H[this.field_C][0].field_b;
+          this.field_Q = AlphaChildWidget.field_H[this.field_C][0].field_e;
+          this.field_M = AlphaChildWidget.field_H[this.field_C][0].field_b;
           if (!param2) {
-            this.field_N = wc.b(-1, 88);
+            this.field_N = ScorePopup.playLoopingSound(-1, 88);
           }
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "h.<init>(" + param0 + ',' + param1 + ',' + param2 + ')');
@@ -2725,7 +2725,7 @@ final class PortalView extends SceneObject {
           if (param0 != 51603) {
             return true;
           }
-          stackIn_10_0 = (wc.j(115)) || !(vl.field_h > 0);
+          stackIn_10_0 = (ScorePopup.isGuestSession(115)) || !(QueuedListRequest.field_h > 0);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

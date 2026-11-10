@@ -49,10 +49,10 @@ class IntrusiveNode {
     }
 
     final static void drawLobbyPanels(boolean param0, int param1) {
-        if (cr.a((byte) 27)) {
+        if (PendingStatusRequest.hasBlockingInputPopup((byte) 27)) {
           param0 = false;
         }
-        gg.drawGameSetupPanels(124, param0);
+        ArchiveLoadStep.drawGameSetupPanels(124, param0);
         TextWidgetPainter.drawQuickChatOverlay((byte) 117);
         if (param1 != 2) {
           field_a = -119;

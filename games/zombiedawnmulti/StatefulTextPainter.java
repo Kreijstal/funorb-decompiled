@@ -56,7 +56,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
             return;
           }
           var8 = (Sprite) null;
-          this.a((Sprite) null, (byte) -75);
+          this.setContentSprite((Sprite) null, (byte) -75);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -72,7 +72,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, BitmapFont param6, pd param7, pd param8, int param9, int param10, int param11, int param12, int param13, int param14, BitmapFont param15, int param16, int param17, pd param18, int param19, boolean param20) {
+    final static void configureLobbyStyles(int param0, int param1, int param2, int param3, int param4, int param5, BitmapFont param6, FramePainter param7, FramePainter param8, int param9, int param10, int param11, int param12, int param13, int param14, BitmapFont param15, int param16, int param17, FramePainter param18, int param19, boolean param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -87,15 +87,15 @@ final class StatefulTextPainter extends TextWidgetPainter {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var21 = null;
         try {
-          ClickMarker.a(param6, param4, param15, 61);
-          SimEntity.a(param16, param0, 1829947600, param9, param10);
-          AttackEvent.a(param13, param1, 1633);
+          ClickMarker.configureFonts(param6, param4, param15, 61);
+          SimEntity.setPopupMenuStyle(param16, param0, 1829947600, param9, param10);
+          AttackEvent.setMenuCentre(param13, param1, 1633);
           if (!param20) {
             field_t = (String) null;
           }
-          vl.a(param18, param8, 127, param2, param12, param11);
-          qb.a(param17, (byte) -115, param7, param14);
-          nn.setMessageBoxColours((byte) 55, param3, param19, param5);
+          QueuedListRequest.setLegacyMenuFrame(param18, param8, 127, param2, param12, param11);
+          Js5Transport.setMenuButtonStyle(param17, (byte) -115, param7, param14);
+          LevelEncodingHelpers.setMessageBoxColours((byte) 55, param3, param19, param5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -174,15 +174,15 @@ final class StatefulTextPainter extends TextWidgetPainter {
         }
     }
 
-    final static java.applet.Applet b(int param0) {
-        if (null != fd.field_L) {
-          return fd.field_L;
+    final static java.applet.Applet getHostApplet(int param0) {
+        if (null != PropObject.field_L) {
+          return PropObject.field_L;
         }
         if (param0 != 0) {
           field_v = (String) null;
-          return (java.applet.Applet) ((Object) tg.field_i);
+          return (java.applet.Applet) ((Object) AudioPumpThread.field_i);
         }
-        return (java.applet.Applet) ((Object) tg.field_i);
+        return (java.applet.Applet) ((Object) AudioPumpThread.field_i);
     }
 
     public final void paintWidget(boolean param0, int param1, int param2, int param3, UiWidget param4) {
@@ -247,7 +247,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
             }
           }
           this.field_w.draw(param3, false, this, param4, param1);
-          ql.a(true);
+          RasterStackHelpers.popRaster(true);
           if (param2 == -15112) {
             return;
           }
@@ -268,7 +268,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         }
     }
 
-    final void a(Sprite param0, byte param1) {
+    final void setContentSprite(Sprite param0, byte param1) {
         int var4 = 0;
         WidgetStyleLayer[] var3 = null;
         WidgetStyleLayer var5_ref_mk = null;
@@ -306,10 +306,10 @@ final class StatefulTextPainter extends TextWidgetPainter {
         }
     }
 
-    final static void a(int param0, byte param1, int param2, boolean param3, int param4, int param5, int param6) {
+    final static void updateChatComposerForChannel(int param0, byte param1, int param2, boolean param3, int param4, int param5, int param6) {
         String var7 = null;
-        if (va.field_a != 2) {
-          var7 = pi.field_e;
+        if (UrlLaunchHelpers.field_a != 2) {
+          var7 = CredentialKind.field_e;
         } else {
           var7 = MenuScreen.field_c;
         }
@@ -317,8 +317,8 @@ final class StatefulTextPainter extends TextWidgetPainter {
         if (param1 == -97) {
           return;
         }
-        pd var8 = (pd) null;
-        StatefulTextPainter.a(-33, 72, 86, 111, -101, -58, (BitmapFont) null, (pd) null, (pd) null, -42, -100, -45, 56, 89, -124, (BitmapFont) null, -98, -113, (pd) null, -13, true);
+        FramePainter var8 = (FramePainter) null;
+        StatefulTextPainter.configureLobbyStyles(-33, 72, 86, 111, -101, -58, (BitmapFont) null, (FramePainter) null, (FramePainter) null, -42, -100, -45, 56, 89, -124, (BitmapFont) null, -98, -113, (FramePainter) null, -13, true);
     }
 
     final void setFrameSpritesForAllStates(Sprite[] param0, boolean param1) {

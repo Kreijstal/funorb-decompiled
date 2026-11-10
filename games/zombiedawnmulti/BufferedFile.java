@@ -14,7 +14,7 @@ final class BufferedFile {
     private RandomAccessCacheFile field_o;
     static Sprite field_k;
     private int field_a;
-    static ma field_d;
+    static TextValidationFailure field_d;
     private long field_h;
     private byte[] field_f;
     static String field_p;
@@ -182,7 +182,7 @@ final class BufferedFile {
     }
 
     final static void clearReflectionChecks(byte param0) {
-        we.field_k = new IntrusiveDeque();
+        PlayingSound.field_k = new IntrusiveDeque();
         if (param0 < 97) {
           java.awt.Component var2 = (java.awt.Component) null;
           BufferedFile.detachMouseInput(116, (java.awt.Component) null);
@@ -410,10 +410,10 @@ final class BufferedFile {
 
     final static void detachMouseInput(int param0, java.awt.Component param1) {
         try {
-          param1.removeMouseListener(on.field_Z);
-          param1.removeMouseMotionListener(on.field_Z);
-          param1.removeFocusListener(on.field_Z);
-          hh.field_e = 0;
+          param1.removeMouseListener(ValidatedTextInputWidget.field_Z);
+          param1.removeMouseMotionListener(ValidatedTextInputWidget.field_Z);
+          param1.removeFocusListener(ValidatedTextInputWidget.field_Z);
+          MenuInputState.field_e = 0;
           if (param0 != -1693) {
             field_e = (Sprite[]) null;
           }
@@ -440,16 +440,16 @@ final class BufferedFile {
         }
     }
 
-    final static gh takeRegistrationResponse(int param0) {
-        if (mp.field_b == SceneObject.field_B) {
+    final static AccountServerResult takeRegistrationResponse(int param0) {
+        if (TextLayout.field_b == SceneObject.field_B) {
           throw new IllegalStateException();
         }
         if (param0 != 0) {
-          return (gh) null;
+          return (AccountServerResult) null;
         }
-        if (oi.field_j == SceneObject.field_B) {
-          SceneObject.field_B = mp.field_b;
-          return iq.field_c;
+        if (RankingEntry.field_j == SceneObject.field_B) {
+          SceneObject.field_B = TextLayout.field_b;
+          return TutorialAndMenuHelpers.field_c;
         }
         return null;
     }
@@ -457,6 +457,6 @@ final class BufferedFile {
     static {
         field_e = new Sprite[5];
         field_p = "Friends";
-        field_d = new ma();
+        field_d = new TextValidationFailure();
     }
 }

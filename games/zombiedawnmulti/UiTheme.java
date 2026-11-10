@@ -56,7 +56,7 @@ final class UiTheme {
           }
           SoftwareRasterizer.drawRect(var7, var8, 6 + var5_int, 6 + var6, this.field_f);
           SoftwareRasterizer.fillRect(1 + var7, 1 + var8, 4 + var5_int, var6 + 4, this.field_d);
-          this.field_h.c(param1, 3 + var7, this.field_h.field_J + (3 + var8), this.field_f, -1);
+          this.field_h.drawLeft(param1, 3 + var7, this.field_h.field_J + (3 + var8), this.field_f, -1);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "sk.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -76,7 +76,7 @@ final class UiTheme {
         int var7_int = 0;
         StatefulTextPainter var6 = null;
         StatefulTextPainter var7 = null;
-        bg discarded$0 = null;
+        DialWidgetPainter discarded$0 = null;
         MarkerSliderPainter discarded$1 = null;
         StatefulTextPainter var8 = null;
         Sprite[] var9 = null;
@@ -107,9 +107,9 @@ final class UiTheme {
           this.field_m = 3;
           this.field_c = 3;
           this.field_e = 3;
-          var4.createStateLayer(0, (byte) -36).setTextColour(15658734, 0).setFrameSprites(vn.a(43, 7829367, 10066329, 8947848), 2147483647);
-          var4.createStateLayer(1, (byte) -36).setFrameSprites(vn.a(62, 13421772, 10066329, 11184810), 2147483647);
-          var4.createStateLayer(3, (byte) -36).setFrameSprites(vn.a(67, 10066329, 7829367, 8947848), 2147483647).setHorizontalOffset(1, 2147483647).setOffsetX(1, (byte) 47);
+          var4.createStateLayer(0, (byte) -36).setTextColour(15658734, 0).setFrameSprites(MenuFrameHelpers.createBeveledFrameSprites(43, 7829367, 10066329, 8947848), 2147483647);
+          var4.createStateLayer(1, (byte) -36).setFrameSprites(MenuFrameHelpers.createBeveledFrameSprites(62, 13421772, 10066329, 11184810), 2147483647);
+          var4.createStateLayer(3, (byte) -36).setFrameSprites(MenuFrameHelpers.createBeveledFrameSprites(67, 10066329, 7829367, 8947848), 2147483647).setHorizontalOffset(1, 2147483647).setVerticalOffset(1, (byte) 47);
           var5 = new Sprite[9];
           var17 = new ArgbSprite(32, 32);
           var19 = var17;
@@ -118,20 +118,20 @@ final class UiTheme {
           }
           var5[4] = (Sprite) ((Object) var19);
           var4.createStateLayer(4, (byte) -36).setFlushBeforeOverlay(true, 2521).setFrameSprites(var5, 2147483647);
-          var4.createStateLayer(5, (byte) -36).setFrameSprites(u.createFrameSprites(21242, 0, 65793, 0, 0), 2147483647).setFlushBeforeOverlay(true, 2521).setTextColour(-1, 0);
+          var4.createStateLayer(5, (byte) -36).setFrameSprites(PendingIntArrayRequest.createFrameSprites(21242, 0, 65793, 0, 0), 2147483647).setFlushBeforeOverlay(true, 2521).setTextColour(-1, 0);
           this.field_n = (WidgetPainter) ((Object) var4);
           var6 = new StatefulTextPainter(var4, true);
           var6.field_d = 0;
           var7 = new StatefulTextPainter(var4, true);
           var7.field_d = 0;
-          var7.setFrameSpritesForAllStates(nk.createSolidCentreFrame(8947848, (byte) -98), false);
-          var7.createStateLayer(1, (byte) -36).setFrameSprites(nk.createSolidCentreFrame(11184810, (byte) 108), 2147483647).setTextColour(2236962, 0);
+          var7.setFrameSpritesForAllStates(ZombieDetonation.createSolidCentreFrame(8947848, (byte) -98), false);
+          var7.createStateLayer(1, (byte) -36).setFrameSprites(ZombieDetonation.createSolidCentreFrame(11184810, (byte) 108), 2147483647).setTextColour(2236962, 0);
           this.field_k = (WidgetPainter) ((Object) new CheckboxPainter(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
-          discarded$0 = new bg(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
+          discarded$0 = new DialWidgetPainter(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new MarkerSliderPainter(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new StatefulTextPainter();
           var18.copyStyleTo(-3, var8);
-          var8.createStateLayer(0, (byte) -36).setFrameSprites(vn.a(120, 10066329, 7829367, 15658734), 2147483647).setTextColour(1118481, 0).setTextShadowColour((byte) 44, -1);
+          var8.createStateLayer(0, (byte) -36).setFrameSprites(MenuFrameHelpers.createBeveledFrameSprites(120, 10066329, 7829367, 15658734), 2147483647).setTextColour(1118481, 0).setTextShadowColour((byte) 44, -1);
           var8.createStateLayer(4, (byte) -36).setFlushBeforeOverlay(true, 2521).setFrameSprites(var5, 2147483647);
           this.field_o = (WidgetPainter) ((Object) var8);
           var9 = new Sprite[9];
@@ -152,16 +152,16 @@ final class UiTheme {
           var13 = new Sprite(7, 4);
           var13.pixels = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new StatefulTextPainter(var4, true);
-          var14.a(var13.copy(), (byte) -102);
+          var14.setContentSprite(var13.copy(), (byte) -102);
           var13.rotateClockwise();
           var14Lifetime1 = new StatefulTextPainter(var4, true);
-          var14Lifetime1.a(var13.copy(), (byte) 79);
+          var14Lifetime1.setContentSprite(var13.copy(), (byte) 79);
           var13.rotateClockwise();
           var14Lifetime2 = new StatefulTextPainter(var4, true);
-          var14Lifetime2.a(var13.copy(), (byte) -53);
+          var14Lifetime2.setContentSprite(var13.copy(), (byte) -53);
           var13.rotateClockwise();
           var20 = new StatefulTextPainter(var4, true);
-          var20.a(var13, (byte) -107);
+          var20.setContentSprite(var13, (byte) -107);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "sk.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -170,14 +170,14 @@ final class UiTheme {
     final static void setChatPanelY(boolean param0, int param1) {
         int var2 = 0;
         int var3 = 0;
-        vj.field_t = param1;
-        if (b.field_d != t.field_e) {
-          var2 = b.field_d * b.field_d;
-          var3 = -(t.field_e * t.field_e) + var2;
+        AppearanceScreen.field_t = param1;
+        if (IdleTickHelpers.field_d != ByteStorage.field_e) {
+          var2 = IdleTickHelpers.field_d * IdleTickHelpers.field_d;
+          var3 = -(ByteStorage.field_e * ByteStorage.field_e) + var2;
           param1 = param1 + var3 * (-param1 + ValidationMessageWidget.field_cb) / var2;
         }
-        ImageProducerRasterBuffer.field_k.setBounds(120, param1, 640, ck.field_a, -3344);
-        eo.a(nj.field_h, LevelFileCatalog.field_c, 0, -10, 5, 640, ValidationMessageWidget.field_cb - 24);
+        ImageProducerRasterBuffer.field_k.setBounds(120, param1, 640, LobbyUpdateHandler.field_a, -3344);
+        KeyboardListenerHelpers.layoutQuickChatMenu(MusicPatchEnvelope.field_h, LevelFileCatalog.field_c, 0, -10, 5, 640, ValidationMessageWidget.field_cb - 24);
         if (!param0) {
           return;
         }
@@ -260,8 +260,8 @@ final class UiTheme {
           var11 = 1;
           if (var9 > var8 ||
             -1 != param2.indexOf("<br>")) {
-            if (vm.field_gb == null) {
-              vm.field_gb = new String[16];
+            if (FullscreenErrorDialog.field_gb == null) {
+              FullscreenErrorDialog.field_gb = new String[16];
             }
             if (var9 <= var8) {
               var12 = var8;
@@ -269,11 +269,11 @@ final class UiTheme {
               var13 = var9 / var8;
               var12 = 2 * ((-1 + var13 + var9 % var8) / var13) + var8;
             }
-            var11Lifetime1 = this.field_h.wrapText(param2, new int[]{var12}, vm.field_gb);
+            var11Lifetime1 = this.field_h.wrapText(param2, new int[]{var12}, FullscreenErrorDialog.field_gb);
             var9 = 0;
             var10 = var10 + var7 * (-1 + var11Lifetime1);
             for (var13Lifetime2 = 0; var11Lifetime1 > var13Lifetime2; var13Lifetime2++) {
-              var14 = this.field_h.textWidth(vm.field_gb[var13Lifetime2]);
+              var14 = this.field_h.textWidth(FullscreenErrorDialog.field_gb[var13Lifetime2]);
               if (var9 < var14) {
                 var9 = var14;
               }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class UiComponent extends qo {
+class UiComponent extends UiComponentNode {
     Sprite field_O;
     int field_Y;
     private int field_hb;
@@ -65,7 +65,7 @@ class UiComponent extends qo {
     int field_I;
     int field_xb;
 
-    final void a(byte param0, UiComponent param1) {
+    final void addChild(byte param0, UiComponent param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -94,16 +94,16 @@ class UiComponent extends qo {
         }
     }
 
-    final void c(boolean param0, int param1) {
+    final void drawRoot(boolean param0, int param1) {
         if (param1 == -1) {
           this.drawTree(SoftwareRasterizer.width, true, SoftwareRasterizer.height, false, false, false, param0, false, 0, param1 ^ -80, 0);
           return;
         }
     }
 
-    final void a(int param0, boolean param1) {
+    final void updateRoot(int param0, boolean param1) {
         if (param0 == -11838) {
-          me.field_g = !param1 ? true : false;
+          SoundCache.field_g = !param1 ? true : false;
           AgeValidator.field_q = !param1 ? true : false;
           this.updateTree(-100, true, SoftwareRasterizer.height, 0, 0, SoftwareRasterizer.width);
           return;
@@ -311,7 +311,7 @@ class UiComponent extends qo {
             param1.field_Q = 0;
           }
           if (param2 != 1300) {
-            this.a(56, true);
+            this.updateRoot(56, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -443,9 +443,9 @@ class UiComponent extends qo {
         var21 = var19 + this.field_D;
         var22 = var20 + this.field_v;
         if (!this.field_ib) {
-          s.drawNineSliceFrame(this.field_qb, 0, var16, this.field_w, this.field_z, this.field_zb);
+          StatusAndMeshHelpers.drawNineSliceFrame(this.field_qb, 0, var16, this.field_w, this.field_z, this.field_zb);
         } else {
-          s.drawNineSliceFrame(param8, 0, var16, param10, param2, param0);
+          StatusAndMeshHelpers.drawNineSliceFrame(param8, 0, var16, param10, param2, param0);
         }
         if (var17 != null) {
           var23_int = var21 + this.field_w;
@@ -463,7 +463,7 @@ class UiComponent extends qo {
             var24 = var24 + (this.field_z - var17.field_u);
           }
           if (256 > this.field_hb) {
-            var17.c(var23_int, var24, this.field_hb);
+            var17.drawBlended(var23_int, var24, this.field_hb);
           } else {
             var17.drawTransparent(var23_int, var24);
           }
@@ -521,7 +521,7 @@ class UiComponent extends qo {
         field_C = null;
         field_db = null;
         if (param0) {
-          UiComponent.g(-31);
+          UiComponent.getLoadingStatusMessage(-31);
         }
         field_Eb = null;
         field_B = null;
@@ -620,28 +620,28 @@ class UiComponent extends qo {
         var12 = 0;
         if (!AgeValidator.field_q &&
           param1 &&
-          kd.field_b != 0 &&
-          SoftwareRasterizer.clipLeft <= vb.field_f &&
-          vb.field_f < SoftwareRasterizer.clipRight &&
+          StringHashHelpers.field_b != 0 &&
+          SoftwareRasterizer.clipLeft <= LobbyUiSetupHelpers.field_f &&
+          LobbyUiSetupHelpers.field_f < SoftwareRasterizer.clipRight &&
           ChatMessage.field_t >= SoftwareRasterizer.clipTop &&
           ChatMessage.field_t < SoftwareRasterizer.clipBottom) {
-          this.field_T = kd.field_b;
+          this.field_T = StringHashHelpers.field_b;
           this.field_G = -this.field_qb + ChatMessage.field_t;
-          this.field_jb = kd.field_b;
+          this.field_jb = StringHashHelpers.field_b;
           var12 = 1;
-          this.field_U = vb.field_f - this.field_w;
+          this.field_U = LobbyUiSetupHelpers.field_f - this.field_w;
         } else {
-          if (kd.field_b != 0) {
+          if (StringHashHelpers.field_b != 0) {
             this.field_jb = 0;
           }
           this.field_T = 0;
         }
-        if (pq.field_f == 0) {
+        if (PowerupAuraEffect.field_f == 0) {
           this.field_jb = 0;
         }
-        stackIn_34_1 = (!me.field_g) && (SoftwareRasterizer.clipLeft <= MouseInputHandler.field_g) && (MouseInputHandler.field_g < SoftwareRasterizer.clipRight) && (SoftwareRasterizer.clipTop <= bo.field_d) && (SoftwareRasterizer.clipBottom > bo.field_d);
+        stackIn_34_1 = (!SoundCache.field_g) && (SoftwareRasterizer.clipLeft <= MouseInputHandler.field_g) && (MouseInputHandler.field_g < SoftwareRasterizer.clipRight) && (SoftwareRasterizer.clipTop <= LoginMethod.field_d) && (SoftwareRasterizer.clipBottom > LoginMethod.field_d);
         this.field_pb = stackIn_34_1;
-        stackIn_39_1 = (this.field_pb) && (this.field_jb == pq.field_f) && (param1);
+        stackIn_39_1 = (this.field_pb) && (this.field_jb == PowerupAuraEffect.field_f) && (param1);
         this.field_L = stackIn_39_1;
         if (this.field_Cb != null) {
           var13 = (UiComponent) (this.field_Cb.first((byte) -44));
@@ -651,7 +651,7 @@ class UiComponent extends qo {
           }
         }
         if (this.field_pb) {
-          me.field_g = true;
+          SoundCache.field_g = true;
         }
         if (param0 > -6) {
           this.field_wb = (String) null;
@@ -663,7 +663,7 @@ class UiComponent extends qo {
         if (0 != this.field_jb &&
           this.field_fb) {
           this.field_x = -param3 - this.field_U + MouseInputHandler.field_g;
-          this.field_Q = -this.field_G + (bo.field_d - param4);
+          this.field_Q = -this.field_G + (LoginMethod.field_d - param4);
           if (this.field_x < 0) {
             this.field_x = 0;
           }
@@ -683,49 +683,49 @@ class UiComponent extends qo {
         }
     }
 
-    final static void d(boolean param0, int param1) {
+    final static void playMusicTrack(boolean param0, int param1) {
         if (!FadingDialog.field_H) {
           return;
         }
-        fk.a(hl.field_d[param1], true);
+        RankingsScreen.playMenuMusicTrack(LobbyStateHelpers.field_d[param1], true);
         if (param0) {
           return;
         }
-        td.field_b = null;
+        TextLayoutLine.field_b = null;
     }
 
-    final static String g(int param0) {
+    final static String getLoadingStatusMessage(int param0) {
         if (2 > ClientException.field_i) {
-          return lo.field_f;
+          return BitPackedArrayHelpers.field_f;
         }
         if (null != DisplayNamePanel.field_P) {
-          if (!DisplayNamePanel.field_P.a((byte) -122)) {
-            return ud.field_Y;
+          if (!DisplayNamePanel.field_P.ensureIndex((byte) -122)) {
+            return DialSelectorWidget.field_Y;
           }
-          return nh.field_n;
+          return PendingRankingRequest.field_n;
         }
-        if (!ra.field_l.a((byte) -110)) {
-          return bc.field_a;
+        if (!PendingIntArrayReply.field_l.ensureIndex((byte) -110)) {
+          return GlintButtonHelpers.field_a;
         }
-        if (!ra.field_l.a(false, "commonui")) {
-          return ei.field_e + " - " + ra.field_l.a(0, "commonui") + "%";
+        if (!PendingIntArrayReply.field_l.isGroupAvailableByName(false, "commonui")) {
+          return LayoutCenterHelpers.field_e + " - " + PendingIntArrayReply.field_l.getGroupProgressByName(0, "commonui") + "%";
         }
-        if (!AccountCreationForm.field_L.a((byte) -123)) {
-          return sm.field_b;
+        if (!AccountCreationForm.field_L.ensureIndex((byte) -123)) {
+          return DisplayMode.field_b;
         }
-        if (!AccountCreationForm.field_L.a(false, "commonui")) {
-          return bc.field_b + " - " + AccountCreationForm.field_L.a(0, "commonui") + "%";
+        if (!AccountCreationForm.field_L.isGroupAvailableByName(false, "commonui")) {
+          return GlintButtonHelpers.field_b + " - " + AccountCreationForm.field_L.getGroupProgressByName(0, "commonui") + "%";
         }
-        if (!wm.field_V.a((byte) -117)) {
-          return pd.field_a;
+        if (!MarkerSliderWidget.field_V.ensureIndex((byte) -117)) {
+          return FramePainter.field_a;
         }
-        if (!wm.field_V.a(param0 ^ param0)) {
-          return s.field_h + " - " + wm.field_V.b(param0 - 18006) + "%";
+        if (!MarkerSliderWidget.field_V.areAllGroupsAvailable(param0 ^ param0)) {
+          return StatusAndMeshHelpers.field_h + " - " + MarkerSliderWidget.field_V.getOverallProgress(param0 - 18006) + "%";
         }
         return PortalEntryEvent.field_l;
     }
 
-    final static int a(ChatMessage param0, byte param1) {
+    final static int getChatMessageColour(ChatMessage param0, byte param1) {
         int var2_int = 0;
         int var3 = 0;
         int stackIn_17_0 = 0;
@@ -737,7 +737,7 @@ class UiComponent extends qo {
         int var2_intLifetime1;
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var2_int = wj.field_g;
+          var2_int = SoundEffectInstance.field_g;
           if (param1 >= -45) {
             UiComponent.releaseStatics(false);
           }
@@ -745,21 +745,21 @@ class UiComponent extends qo {
             if (!param0.field_k) {
               if (0 == param0.field_i &&
                 param0.field_o == 0) {
-                var2_intLifetime1 = pq.field_m[param0.field_l];
+                var2_intLifetime1 = PowerupAuraEffect.field_m[param0.field_l];
               } else {
-                var2_intLifetime1 = wp.field_c[param0.field_l];
+                var2_intLifetime1 = AudioServiceHelpers.field_c[param0.field_l];
               }
             } else {
-              var2_intLifetime1 = wj.field_g;
+              var2_intLifetime1 = SoundEffectInstance.field_g;
             }
           } else {
             if (param0.field_l == 4) {
-              var2_intLifetime1 = wp.field_c[param0.field_l];
+              var2_intLifetime1 = AudioServiceHelpers.field_c[param0.field_l];
             } else {
               if (ContentTransitionDialog.field_sb != param0.field_a) {
-                var2_intLifetime1 = wp.field_c[param0.field_l];
+                var2_intLifetime1 = AudioServiceHelpers.field_c[param0.field_l];
               } else {
-                var2_intLifetime1 = pq.field_m[param0.field_l];
+                var2_intLifetime1 = PowerupAuraEffect.field_m[param0.field_l];
               }
             }
           }
@@ -779,7 +779,7 @@ class UiComponent extends qo {
         }
     }
 
-    final int e(int param0) {
+    final int getPreferredWidth(int param0) {
         if (param0 != 0) {
           this.field_U = 72;
         }

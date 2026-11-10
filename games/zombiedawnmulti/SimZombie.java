@@ -25,7 +25,7 @@ final class SimZombie extends SimUnit {
     private int field_fb;
     private int field_nb;
     private int field_ob;
-    private sa field_vb;
+    private ScreechAura field_vb;
     static int field_zb;
     static String field_ib;
     boolean field_eb;
@@ -73,7 +73,7 @@ final class SimZombie extends SimUnit {
         int var2;
         int var3;
         int var4;
-        og var5;
+        ZombieDrop var5;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         super.tick(77);
         this.field_Ab = this.field_Ab - 1;
@@ -118,16 +118,16 @@ final class SimZombie extends SimUnit {
             if (this.field_nb != 1 && (!(this.speedMultiplier > 2) ||
               this.field_Bb)) {
               if ((this.field_nb == 0)) {
-                this.field_nb = hp.nextBoundedInt((byte) 114, g.field_a, 60) + 60;
+                this.field_nb = RandomHelpers.nextBoundedInt((byte) 114, RasterEffectHelpers.field_a, 60) + 60;
                 if (!(!this.simulation.world.hasUpgrade((byte) -98, 55, this.field_gb))) {
                   this.field_nb = 0;
                 }
               }
               break regionExit1;
             }
-            var2 = -24 + this.getX((byte) -112) + hp.nextBoundedInt((byte) 22, g.field_a, 48);
-            var3 = -24 + (this.getY(1829947600) + hp.nextBoundedInt((byte) -66, g.field_a, 48));
-            if (!this.simulation.navigation.a(var2, true, true, var3)) {
+            var2 = -24 + this.getX((byte) -112) + RandomHelpers.nextBoundedInt((byte) 22, RasterEffectHelpers.field_a, 48);
+            var3 = -24 + (this.getY(1829947600) + RandomHelpers.nextBoundedInt((byte) -66, RasterEffectHelpers.field_a, 48));
+            if (!this.simulation.navigation.isPassableAt(var2, true, true, var3)) {
               this.field_nb = this.field_nb + 1;
             } else {
               this.wanderTo(var3, 750, var2);
@@ -183,7 +183,7 @@ final class SimZombie extends SimUnit {
                             this.field_Bb = false;
                             this.applyVelocity((byte) 33);
                             if (this.simulation != null) {
-                              stackIn_155_0 = (this.simulation.navigation.a(this.getX((byte) -112), true, true, this.getY(1829947600))) ? 0 : 1;
+                              stackIn_155_0 = (this.simulation.navigation.isPassableAt(this.getX((byte) -112), true, true, this.getY(1829947600))) ? 0 : 1;
                               var2 = stackIn_155_0;
                               if (var2 != 0) {
                                 this.positionY = this.positionY - this.velocityY;
@@ -205,7 +205,7 @@ final class SimZombie extends SimUnit {
                                     this.animationTicks = this.animationTicks - 1;
                                     this.field_Bb = false;
                                     if (this.field_vb == null) {
-                                      this.field_vb = new sa(this, this.getX((byte) -112), -30 + this.getY(1829947600), this.simulation.world.computeEffectDuration((byte) 32, this.field_gb, 750));
+                                      this.field_vb = new ScreechAura(this, this.getX((byte) -112), -30 + this.getY(1829947600), this.simulation.world.computeEffectDuration((byte) 32, this.field_gb, 750));
                                       this.simulation.world.field_G.addFirst(this.field_vb, false);
                                     } else {
                                       if (this.field_vb.isFinished(true)) {
@@ -234,7 +234,7 @@ final class SimZombie extends SimUnit {
                                       this.animationTicks = this.animationTicks - 1;
                                       this.field_xb = 0;
                                       if (this.field_vb == null) {
-                                        this.field_vb = new sa(this, this.getX((byte) -112), -30 + this.getY(1829947600), this.simulation.world.computeEffectDuration((byte) 32, this.field_gb, 750));
+                                        this.field_vb = new ScreechAura(this, this.getX((byte) -112), -30 + this.getY(1829947600), this.simulation.world.computeEffectDuration((byte) 32, this.field_gb, 750));
                                         this.simulation.world.field_G.addFirst(this.field_vb, false);
                                       }
                                       if (!(!this.field_vb.isFinished(true))) {
@@ -256,27 +256,27 @@ final class SimZombie extends SimUnit {
                                       if (this.state != 19 &&
                                         this.state != 24) {
                                         if (this.state == 27) {
-                                          if (this.animationFrame == gg.field_j[27] / 2) {
+                                          if (this.animationFrame == ArchiveLoadStep.field_j[27] / 2) {
                                             this.field_Bb = false;
                                             this.field_ub = 0;
                                             this.field_xb = this.simulation.world.computeEffectDuration((byte) 32, this.field_gb, 2250);
                                           }
-                                          if ((~(-1 + gg.field_j[27]) == ~this.animationFrame)) {
+                                          if ((~(-1 + ArchiveLoadStep.field_j[27]) == ~this.animationFrame)) {
                                             this.setState(4, (byte) -89);
                                           }
                                         } else {
                                           if (this.state == 31) {
-                                            if ((~this.animationFrame == ~(gg.field_j[31] - 1))) {
+                                            if ((~this.animationFrame == ~(ArchiveLoadStep.field_j[31] - 1))) {
                                               this.setState(4, (byte) -89);
                                             }
                                           } else {
                                             if ((this.state == 28)) {
-                                              if (gg.field_j[28] / 2 == this.animationFrame) {
+                                              if (ArchiveLoadStep.field_j[28] / 2 == this.animationFrame) {
                                                 this.field_xb = 0;
                                                 this.field_Bb = false;
                                                 this.field_ub = this.simulation.world.computeEffectDuration((byte) 32, this.field_gb, 2250);
                                               }
-                                              if ((gg.field_j[28] - 1 == this.animationFrame)) {
+                                              if ((ArchiveLoadStep.field_j[28] - 1 == this.animationFrame)) {
                                                 this.setState(4, (byte) -89);
                                               }
                                             }
@@ -298,7 +298,7 @@ final class SimZombie extends SimUnit {
                                 if (4 == this.animationFrame) {
                                   this.setState(4, (byte) -89);
                                   this.field_nb = 2;
-                                  var5 = new og(this.getX((byte) -112), this.getY(1829947600), this.field_D, this.field_gb);
+                                  var5 = new ZombieDrop(this.getX((byte) -112), this.getY(1829947600), this.field_D, this.field_gb);
                                   this.simulation.world.characters.addFirst(var5, false);
                                   var5.attachToSimulation(-9019, this.simulation);
                                 }
@@ -320,14 +320,14 @@ final class SimZombie extends SimUnit {
                       this.field_Bb = false;
                       if ((this.animationFrame == 0 ||
                         this.animationFrame == 2) && this.animationTicks == 0) {
-                        if (hp.nextBoundedInt((byte) 63, g.field_a, 3) != 0) {
-                          hp.nextBoundedInt((byte) 124, g.field_a, 5);
+                        if (RandomHelpers.nextBoundedInt((byte) 63, RasterEffectHelpers.field_a, 3) != 0) {
+                          RandomHelpers.nextBoundedInt((byte) 124, RasterEffectHelpers.field_a, 5);
                         } else {
                           if (this.field_tb != null &&
-                            !this.field_tb.k((byte) -7)) {
-                            hp.nextBoundedInt((byte) -106, g.field_a, 3);
+                            !this.field_tb.isFemale((byte) -7)) {
+                            RandomHelpers.nextBoundedInt((byte) -106, RasterEffectHelpers.field_a, 3);
                           } else {
-                            hp.nextBoundedInt((byte) -111, g.field_a, 4);
+                            RandomHelpers.nextBoundedInt((byte) -111, RasterEffectHelpers.field_a, 4);
                           }
                         }
                       }
@@ -412,10 +412,10 @@ final class SimZombie extends SimUnit {
 
     final static void advanceFrameCycleAnimations(int param0) {
         int var2 = 0;
-        hn[] var1 = null;
-        hn var3 = null;
+        FrameCycleAnimation[] var1 = null;
+        FrameCycleAnimation var3 = null;
         int var4 = 0;
-        hn[] var5 = null;
+        FrameCycleAnimation[] var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -508,8 +508,8 @@ final class SimZombie extends SimUnit {
           return;
         }
         try {
-          rb.field_a = param0;
-          PowerupButton.a(12, 74);
+          HudSpriteStore.field_a = param0;
+          PowerupButton.setAccountDialogResult(12, 74);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ge.SB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -587,8 +587,8 @@ final class SimZombie extends SimUnit {
         this.field_vb = null;
         this.velocityY = 0;
         this.velocityX = 0;
-        this.field_mb = hp.nextBoundedInt((byte) -103, g.field_a, 10);
-        this.field_nb = hp.nextBoundedInt((byte) -80, g.field_a, 120);
+        this.field_mb = RandomHelpers.nextBoundedInt((byte) -103, RasterEffectHelpers.field_a, 10);
+        this.field_nb = RandomHelpers.nextBoundedInt((byte) -80, RasterEffectHelpers.field_a, 120);
     }
 
     final void startCharm(int param0) {
@@ -1015,7 +1015,7 @@ final class SimZombie extends SimUnit {
         if (param0 >= -59) {
           field_zb = -82;
         }
-        stackIn_6_0 = (a.field_b >= 10) && (ClientException.field_i >= 13);
+        stackIn_6_0 = (LoginSuccessHelpers.field_b >= 10) && (ClientException.field_i >= 13);
         return stackIn_6_0;
     }
 

@@ -17,41 +17,41 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
         }
     }
 
-    final static boolean a(int param0, boolean param1, int param2, int param3) {
+    final static boolean comesBeforeRankingRow(int param0, boolean param1, int param2, int param3) {
         int var4;
         int var5;
         if (param0 < 74) {
-          TextInputValidator.a((int[]) null, 70, 11, -98, -57, -82, -73, -16, 0, -9, 113, -26, 31, 38, 49, 83, -9);
+          TextInputValidator.fillGouraudTriangle((int[]) null, 70, 11, -98, -57, -82, -73, -16, 0, -9, 113, -26, 31, 38, 49, 83, -9);
         }
         if (param1) {
-          if (lb.field_c[param2] < lb.field_c[param3]) {
+          if (PasswordCheckHelpers.field_c[param2] < PasswordCheckHelpers.field_c[param3]) {
             return true;
           }
-          if (lb.field_c[param2] > lb.field_c[param3]) {
+          if (PasswordCheckHelpers.field_c[param2] > PasswordCheckHelpers.field_c[param3]) {
             return false;
           }
-          if (hn.field_f[param3] > hn.field_f[param2]) {
+          if (FrameCycleAnimation.field_f[param3] > FrameCycleAnimation.field_f[param2]) {
             return true;
           }
-          if (hn.field_f[param3] < hn.field_f[param2]) {
+          if (FrameCycleAnimation.field_f[param3] < FrameCycleAnimation.field_f[param2]) {
             return false;
           }
         } else {
-          if (hn.field_f[param2] < hn.field_f[param3]) {
+          if (FrameCycleAnimation.field_f[param2] < FrameCycleAnimation.field_f[param3]) {
             return true;
           }
-          if (hn.field_f[param2] > hn.field_f[param3]) {
+          if (FrameCycleAnimation.field_f[param2] > FrameCycleAnimation.field_f[param3]) {
             return false;
           }
-          if (lb.field_c[param2] < lb.field_c[param3]) {
+          if (PasswordCheckHelpers.field_c[param2] < PasswordCheckHelpers.field_c[param3]) {
             return true;
           }
-          if (lb.field_c[param3] < lb.field_c[param2]) {
+          if (PasswordCheckHelpers.field_c[param3] < PasswordCheckHelpers.field_c[param2]) {
             return false;
           }
         }
-        var4 = ContentTransitionDialog.field_ob[param2] + (kj.field_p[param2] + DialogLayer.field_J[param2]);
-        var5 = ContentTransitionDialog.field_ob[param3] + (DialogLayer.field_J[param3] + kj.field_p[param3]);
+        var4 = ContentTransitionDialog.field_ob[param2] + (FriendListHelpers.field_p[param2] + DialogLayer.field_J[param2]);
+        var5 = ContentTransitionDialog.field_ob[param3] + (DialogLayer.field_J[param3] + FriendListHelpers.field_p[param3]);
         if (var4 < var5) {
           return true;
         }
@@ -96,7 +96,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
         return stackIn_7_0;
     }
 
-    final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
+    final static void fillGouraudTriangle(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
         int var17_int = 0;
         int var18 = 0;
         int var19 = 0;
@@ -232,14 +232,14 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
                         var38 = -1 + (TriangleRasterizer.field_i - var37);
                       }
                       if (var37 >= 0) {
-                        ub.drawHalfBlendGouraudSpan(var38, var21, var29, (byte) 116, param0, var40, var41, var25, var37 + var36Lifetime2, var39);
+                        LoginDialog.drawHalfBlendGouraudSpan(var38, var21, var29, (byte) 116, param0, var40, var41, var25, var37 + var36Lifetime2, var39);
                       } else {
-                        ub.drawHalfBlendGouraudSpan(var37 + var38, var21 - var39 * var37, var29 - var37 * var41, (byte) -126, param0, var40, var41, -(var37 * var40) + var25, var36Lifetime2, var39);
+                        LoginDialog.drawHalfBlendGouraudSpan(var37 + var38, var21 - var39 * var37, var29 - var37 * var41, (byte) -126, param0, var40, var41, -(var37 * var40) + var25, var36Lifetime2, var39);
                       }
                     } else {
                       if (0 <= var37 &&
                         var37 < TriangleRasterizer.field_i) {
-                        ub.drawHalfBlendGouraudSpan(var38, var21, var29, (byte) 102, param0, 0, 0, var25, var37 + var36Lifetime2, 0);
+                        LoginDialog.drawHalfBlendGouraudSpan(var38, var21, var29, (byte) 102, param0, 0, 0, var25, var37 + var36Lifetime2, 0);
                       }
                     }
                   }
@@ -388,14 +388,14 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
                     var37Lifetime1 = -1 + (TriangleRasterizer.field_i - var36Lifetime1);
                   }
                   if (var36Lifetime1 >= 0) {
-                    ub.drawHalfBlendGouraudSpan(var37Lifetime1, var21, var29, (byte) -24, param0, var39Lifetime1, var40Lifetime1, var25, var35Lifetime1 + var36Lifetime1, var38Lifetime1);
+                    LoginDialog.drawHalfBlendGouraudSpan(var37Lifetime1, var21, var29, (byte) -24, param0, var39Lifetime1, var40Lifetime1, var25, var35Lifetime1 + var36Lifetime1, var38Lifetime1);
                   } else {
-                    ub.drawHalfBlendGouraudSpan(var37Lifetime1 + var36Lifetime1, var21 - var38Lifetime1 * var36Lifetime1, var29 - var36Lifetime1 * var40Lifetime1, (byte) 81, param0, var39Lifetime1, var40Lifetime1, -(var39Lifetime1 * var36Lifetime1) + var25, var35Lifetime1, var38Lifetime1);
+                    LoginDialog.drawHalfBlendGouraudSpan(var37Lifetime1 + var36Lifetime1, var21 - var38Lifetime1 * var36Lifetime1, var29 - var36Lifetime1 * var40Lifetime1, (byte) 81, param0, var39Lifetime1, var40Lifetime1, -(var39Lifetime1 * var36Lifetime1) + var25, var35Lifetime1, var38Lifetime1);
                   }
                 } else {
                   if (var36Lifetime1 >= 0 &&
                     TriangleRasterizer.field_i > var36Lifetime1) {
-                    ub.drawHalfBlendGouraudSpan(var37Lifetime1, var21, var29, (byte) -84, param0, 0, 0, var25, var35Lifetime1 + var36Lifetime1, 0);
+                    LoginDialog.drawHalfBlendGouraudSpan(var37Lifetime1, var21, var29, (byte) -84, param0, 0, 0, var25, var35Lifetime1 + var36Lifetime1, 0);
                   }
                 }
               }
@@ -450,7 +450,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
 
     final String currentValidationMessage(int param0) {
         if (param0 != -3) {
-          TextInputValidator.a((int[]) null, -99, -31, 9, -3, 10, 88, -54, -105, 27, -84, -122, -1, -93, -21, -86, 107);
+          TextInputValidator.fillGouraudTriangle((int[]) null, -99, -31, 9, -3, 10, 88, -54, -105, 27, -84, -122, -1, -93, -21, -86, 107);
         }
         return this.validationMessageForText(this.field_m.field_j, -1276425040);
     }

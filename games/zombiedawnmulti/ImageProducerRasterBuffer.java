@@ -27,7 +27,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
 
     final void drawTo(int param0, java.awt.Graphics param1, int param2, int param3) {
         try {
-          this.c((byte) -127);
+          this.pushPixels((byte) -127);
           param1.drawImage(this.field_g, param3, param0, (java.awt.image.ImageObserver) (this));
           if (param2 != 2) {
             java.awt.image.ImageConsumer var6 = (java.awt.image.ImageConsumer) null;
@@ -46,7 +46,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    private final synchronized void c(byte param0) {
+    private final synchronized void pushPixels(byte param0) {
         if (this.field_n != null) {
           this.field_n.setPixels(0, 0, this.field_h, this.field_f, this.field_m, this.field_b, 0, this.field_h);
           int var2 = 56 / ((param0 + 54) / 43);
@@ -62,13 +62,13 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           this.field_h = param3;
           this.field_m = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
           this.field_g = param1.createImage((java.awt.image.ImageProducer) (this));
-          this.c((byte) -110);
+          this.pushPixels((byte) -110);
           param1.prepareImage(this.field_g, (java.awt.image.ImageObserver) (this));
-          this.c((byte) 77);
+          this.pushPixels((byte) 77);
           param1.prepareImage(this.field_g, (java.awt.image.ImageObserver) (this));
-          this.c((byte) 50);
+          this.pushPixels((byte) 50);
           param1.prepareImage(this.field_g, (java.awt.image.ImageObserver) (this));
-          this.b((byte) 126);
+          this.bindRaster((byte) 126);
           if (param0 != -6) {
             field_i = (String) null;
           }
@@ -88,7 +88,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         field_j = (int[][]) null;
     }
 
-    final static int b(int param0, int param1) {
+    final static int bitLength(int param0, int param1) {
         int var2;
         int var2Lifetime1;
         if (param0 == 0) {
@@ -119,7 +119,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           return var2;
         }
         if (param1 != 16) {
-          ImageProducerRasterBuffer.b(-122, 106);
+          ImageProducerRasterBuffer.bitLength(-122, 106);
         }
         var2Lifetime1 = 2;
         if (param0 < -65536) {
@@ -157,12 +157,12 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    final static boolean a(byte param0, int param1, int param2, int param3) {
+    final static boolean isValidDate(byte param0, int param1, int param2, int param3) {
         if (param0 < -39) {
           if (param1 >= 0 &&
             param1 <= 11) {
             if (param2 >= 1 &&
-              param2 <= ib.a(param1, 1, param3)) {
+              param2 <= TickButtonPainter.daysInMonth(param1, 1, param3)) {
               return true;
             }
             return false;
@@ -179,19 +179,19 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         if (param2 < 1) {
           return false;
         }
-        if (param2 > ib.a(param1, 1, param3)) {
+        if (param2 > TickButtonPainter.daysInMonth(param1, 1, param3)) {
           return false;
         }
         return true;
     }
 
-    final static void c(int param0) {
+    final static void showPlayModeChoiceDialog(int param0) {
         if (param0 < -117) {
-          wj.field_i.transitionToContent((UiWidget) (new dg()), (byte) -41);
+          SoundEffectInstance.field_i.transitionToContent((UiWidget) (new PlayModeChoiceDialog()), (byte) -41);
           return;
         }
         field_j = (int[][]) null;
-        wj.field_i.transitionToContent((UiWidget) (new dg()), (byte) -41);
+        SoundEffectInstance.field_i.transitionToContent((UiWidget) (new PlayModeChoiceDialog()), (byte) -41);
     }
 
     public final void requestTopDownLeftRightResend(java.awt.image.ImageConsumer param0) {

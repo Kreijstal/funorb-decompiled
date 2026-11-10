@@ -13,7 +13,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         if (param0 != -20) {
           field_v = 88;
         }
-        return pd.isOnlineFriendOrLobbyPlayer(jj.field_M, ql.field_a, param0 + 22);
+        return FramePainter.isOnlineFriendOrLobbyPlayer(PhantomDecoy.field_M, RasterStackHelpers.field_a, param0 + 22);
     }
 
     final void decode(PacketBuffer param0, byte param1) {
@@ -57,7 +57,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         int var3 = ZombieDawnMulti.field_E ? 1 : 0;
         if (this.field_r != null) {
           for (var2 = 0; var2 < this.field_r.length; var2++) {
-            this.field_r[var2] = cr.b(this.field_r[var2], 32768);
+            this.field_r[var2] = PendingStatusRequest.bitOr(this.field_r[var2], 32768);
           }
         }
         if (param0 <= 98) {
@@ -98,7 +98,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        ao var8 = null;
+        QuickChatCommandType var8 = null;
         int var10 = 0;
         var10 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
@@ -116,7 +116,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
               this.field_q = new int[var5];
               for (var6 = 0; var6 < var5; var6++) {
                 var7 = param1.readUnsignedShort((byte) 69);
-                var8 = r.a(var7, (byte) 35);
+                var8 = MusicPatchLoadHelpers.findKindById(var7, (byte) 35);
                 if (var8 != null) {
                   this.field_q[var6] = var7;
                   array$0 = new int[var8.field_f];

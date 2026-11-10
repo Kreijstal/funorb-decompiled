@@ -20,7 +20,7 @@ final class IsaacRandom {
         int var2 = ZombieDawnMulti.field_E ? 1 : 0;
         int var1_intLifetime1;
         try {
-          kj.field_r.resetTiming(-102);
+          FriendListHelpers.field_r.resetTiming(-102);
           for (var1_int = 0; var1_int < 32; var1_int++) {
             TabbedPane.field_Ib[var1_int] = 0L;
           }
@@ -30,7 +30,7 @@ final class IsaacRandom {
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
             Under13NoticePanel.field_K[var1_intLifetime1] = 0L;
           }
-          ic.field_a = 0;
+          LoginCredentials.field_a = 0;
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "o.F(" + param0 + ')');
         }
@@ -243,8 +243,8 @@ final class IsaacRandom {
         }
     }
 
-    final static void writeResendRequest(u param0, int param1, int param2) {
-        CipherPacketBuffer var3 = ma.field_a;
+    final static void writeResendRequest(PendingIntArrayRequest param0, int param1, int param2) {
+        CipherPacketBuffer var3 = TextValidationFailure.field_a;
         var3.writeCipheredOpcode((byte) -35, param1);
         var3.writeByte(-54, 2);
         if (param2 >= -69) {

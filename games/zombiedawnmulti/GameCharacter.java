@@ -12,7 +12,7 @@ final class GameCharacter extends UnitView {
     private int field_Jb;
     static java.awt.Font field_hb;
     private int field_qb;
-    private ve field_kb;
+    private LightningBolt field_kb;
     private boolean field_xb;
     int field_ib;
     private boolean field_nb;
@@ -21,7 +21,7 @@ final class GameCharacter extends UnitView {
     private boolean field_wb;
     private int field_ob;
     private int field_Nb;
-    private pq field_jb;
+    private PowerupAuraEffect field_jb;
     private int field_ub;
     private int field_Ob;
     int field_Ib;
@@ -44,20 +44,20 @@ final class GameCharacter extends UnitView {
     private IntrusiveDeque field_gb;
     private boolean field_Gb;
 
-    final void p(int param0) {
+    final void pickVoiceSound(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
           if (param0 != 72) {
-            GameCharacter.l((byte) 29);
+            GameCharacter.endLocalGame((byte) 29);
           }
-          if (!this.m(-2)) {
-            this.field_U = qq.b(1481485697, 72 + hp.nextBoundedInt((byte) -68, g.field_a, 2));
+          if (!this.isMaleVariant(-2)) {
+            this.field_U = IntHashIndex.createMixerStream(1481485697, 72 + RandomHelpers.nextBoundedInt((byte) -68, RasterEffectHelpers.field_a, 2));
             if (!ZombieDawnMulti.field_E) {
               return;
             }
           }
-          this.field_U = qq.b(1481485697, 70 + hp.nextBoundedInt((byte) -90, g.field_a, 2));
+          this.field_U = IntHashIndex.createMixerStream(1481485697, 70 + RandomHelpers.nextBoundedInt((byte) -90, RasterEffectHelpers.field_a, 2));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -141,7 +141,7 @@ final class GameCharacter extends UnitView {
           }
           if (null != this.field_jb && (param0 == 9 ||
             21 == param0)) {
-            this.field_jb.c(-24421);
+            this.field_jb.finishFade(-24421);
           }
           super.setState(param0, param1);
           if (this.state == 21) {
@@ -207,13 +207,13 @@ final class GameCharacter extends UnitView {
                   return;
                 }
               }
-              if (!this.m(-2)) {
-                this.field_U = qq.b(1481485697, 25);
+              if (!this.isMaleVariant(-2)) {
+                this.field_U = IntHashIndex.createMixerStream(1481485697, 25);
                 if (var5 == 0) {
                   return;
                 }
               }
-              this.field_U = qq.b(1481485697, 15);
+              this.field_U = IntHashIndex.createMixerStream(1481485697, 15);
               if (var5 == 0) {
                 return;
               }
@@ -236,7 +236,7 @@ final class GameCharacter extends UnitView {
         }
     }
 
-    public static void o(byte param0) {
+    public static void releaseStatics(byte param0) {
         try {
           field_hb = null;
           int var1_int = -96 % ((param0 - 52) / 58);
@@ -262,7 +262,7 @@ final class GameCharacter extends UnitView {
         }
     }
 
-    final void e(boolean param0) {
+    final void startResistFlash(boolean param0) {
         try {
           this.field_Fb = 250;
           if (param0) {
@@ -273,12 +273,12 @@ final class GameCharacter extends UnitView {
         }
     }
 
-    private final void n(int param0) {
+    private final void applyDisguiseColours(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
           if (param0 != 0) {
-            this.field_kb = (ve) null;
+            this.field_kb = (LightningBolt) null;
           }
           if (this.field_xb &&
             this.field_nb &&
@@ -328,7 +328,7 @@ final class GameCharacter extends UnitView {
         }
     }
 
-    final void r(int param0) {
+    final void startSelectionGlow(int param0) {
         try {
           this.field_Bb = true;
           this.field_qb = param0;
@@ -337,7 +337,7 @@ final class GameCharacter extends UnitView {
         }
     }
 
-    private final void s(int param0) {
+    private final void applyResistFlashColour(int param0) {
         int var2_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -363,7 +363,7 @@ final class GameCharacter extends UnitView {
         }
     }
 
-    private final boolean n(byte param0) {
+    private final boolean startIdleAction(byte param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
@@ -432,7 +432,7 @@ final class GameCharacter extends UnitView {
         int var27 = 0;
         var27 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var3_int = ub.getHazeIntensity(-124);
+          var3_int = LoginDialog.getHazeIntensity(-124);
           stackIn_5_0 = (var3_int <= 0) ? 0 : 1;
           var4 = stackIn_5_0;
           if (param0 != -10136) {
@@ -441,7 +441,7 @@ final class GameCharacter extends UnitView {
           var5 = this.state;
           var6 = this.animationFrame;
           if (var4 != 0 &&
-            hp.nextBoundedInt((byte) 59, g.field_a, 30) == 0) {
+            RandomHelpers.nextBoundedInt((byte) 59, RasterEffectHelpers.field_a, 30) == 0) {
             stackIn_17_1 = !(this.field_wb);
             this.field_wb = stackIn_17_1;
           }
@@ -522,7 +522,7 @@ final class GameCharacter extends UnitView {
               default:
                 var5 = 0;
             }
-            if (gg.field_j[var5] <= var6) {
+            if (ArchiveLoadStep.field_j[var5] <= var6) {
               var6 = 0;
             }
           }
@@ -553,7 +553,7 @@ final class GameCharacter extends UnitView {
               }
               if (1 != FullscreenFocusCanvas.field_k.field_k) {
                 if (null == this.field_kb) {
-                  this.field_kb = new ve(var7, var8, 8, 0.0, 8.0, 3.0, 4, 1.5, 0.99, 1);
+                  this.field_kb = new LightningBolt(var7, var8, 8, 0.0, 8.0, 3.0, 4, 1.5, 0.99, 1);
                 }
                 this.field_kb.field_k = 13 * var7 + (PowerupEvent.field_m + 79 * var8);
                 var12 = 200;
@@ -565,7 +565,7 @@ final class GameCharacter extends UnitView {
                 var14 = var14 << 8;
                 var13 = var13 << 16;
                 var15 = var15 >> 8;
-                this.field_kb.a(var13 | var14 | var15, var7, true, var8, var10, -1963);
+                this.field_kb.draw(var13 | var14 | var15, var7, true, var8, var10, -1963);
               }
               decompiledFrameRemainder5 = (var11 != 0 ||
                 var27 != 0);
@@ -578,23 +578,23 @@ final class GameCharacter extends UnitView {
               if (this.state == 8) {
                 MidiPcmStream.field_B = PortalEntryEvent.field_m.field_D[this.team][0];
                 AlignedIconLabel.field_Ib = PortalEntryEvent.field_m.field_D[this.team][1];
-                this.n(0);
-                this.s(2);
-                var12_ref_ja = nk.createTintedSprite(QuickChatCategoryRegistry.field_d[var6 + (gg.field_l[var5] + this.field_fb)], AlignedIconLabel.field_Ib, 255, MidiPcmStream.field_B);
+                this.applyDisguiseColours(0);
+                this.applyResistFlashColour(2);
+                var12_ref_ja = ZombieDetonation.createTintedSprite(QuickChatCategoryRegistry.field_d[var6 + (ArchiveLoadStep.field_l[var5] + this.field_fb)], AlignedIconLabel.field_Ib, 255, MidiPcmStream.field_B);
                 var12_ref_ja.drawTransparent(var7 + this.field_mb - 3, var8 + this.field_cb - 3);
                 return;
               }
-              if (!ei.field_f) {
+              if (!LayoutCenterHelpers.field_f) {
               }
               if (null != this.field_U) {
                 if (!this.field_U.isSamplePositionOutOfRange()) {
                   this.field_U.setVolume(DropTargetWidget.computeScreenVolume(-49, var8, var7));
-                  this.field_U.setPan(pb.computeStereoPan(var8, var7, false));
+                  this.field_U.setPan(EffectAudioHelpers.computeStereoPan(var8, var7, false));
                 } else {
                   this.field_U = null;
                 }
               }
-              if (!io.a(var7, var8, (byte) -99, param1) &&
+              if (!WeightedLruCache.isOnScreen(var7, var8, (byte) -99, param1) &&
                 var27 == 0) {
                 return;
               }
@@ -607,31 +607,31 @@ final class GameCharacter extends UnitView {
                 } else {
                   stackIn_192_2 = var7 - 5;
                 }
-                g.a(stackIn_191_0, stackIn_191_1 + stackIn_192_2, 43 + var8);
+                RasterEffectHelpers.darkenUnderSprite(stackIn_191_0, stackIn_191_1 + stackIn_192_2, 43 + var8);
               }
               var12 = 0;
               var13 = 0;
               if (this.field_Cb ||
                 33 == this.state) {
-                if (nk.field_h == null) {
-                  g.c(DelayedPacket.field_n);
-                  nk.field_h = new ea();
-                  g.d();
+                if (ZombieDetonation.field_h == null) {
+                  RasterEffectHelpers.pushSpriteTarget(DelayedPacket.field_n);
+                  ZombieDetonation.field_h = new SwirlNoiseRenderer();
+                  RasterEffectHelpers.popRaster();
                 }
-                g.c(DelayedPacket.field_n);
+                RasterEffectHelpers.pushSpriteTarget(DelayedPacket.field_n);
                 SoftwareRasterizer.clear();
                 SoftwareRasterizer.fillCircle(SoftwareRasterizer.height / 2, SoftwareRasterizer.height / 2, SoftwareRasterizer.height / 2, 1);
                 if (0 >= this.field_yb) {
-                  var14_ref_int__ = nk.createColorRamp(1052800, 455739624, 8454143);
+                  var14_ref_int__ = ZombieDetonation.createColorRamp(1052800, 455739624, 8454143);
                   var15 = 1073741824 + this.objectId - PowerupEvent.field_m;
                 } else {
-                  var14_ref_int__ = nk.createColorRamp(8392720, 455739624, 16744448);
+                  var14_ref_int__ = ZombieDetonation.createColorRamp(8392720, 455739624, 16744448);
                   var15 = -this.objectId + PowerupEvent.field_m;
                 }
-                nk.field_h.a(2, (double)var15 / 7.0, var14_ref_int__);
-                g.d();
+                ZombieDetonation.field_h.renderSwirl(2, (double)var15 / 7.0, var14_ref_int__);
+                RasterEffectHelpers.popRaster();
                 if (this.field_Cb) {
-                  DelayedPacket.field_n.c(var7, var8, 200);
+                  DelayedPacket.field_n.drawBlended(var7, var8, 200);
                 } else {
                   if (this.field_yb < 0) {
                     var12 = DelayedPacket.field_n.width * -this.field_yb / 100;
@@ -648,11 +648,11 @@ final class GameCharacter extends UnitView {
                 }
               }
               var14 = var6;
-              if (null != gg.field_i[var5]) {
-                var14 = gg.field_i[var5][var6];
+              if (null != ArchiveLoadStep.field_i[var5]) {
+                var14 = ArchiveLoadStep.field_i[var5][var6];
               }
               boolean decompiledFrameRemainder4 = true;
-              var15 = var14 + gg.field_l[var5];
+              var15 = var14 + ArchiveLoadStep.field_l[var5];
               if (this.field_xb) {
                 if (this.isOwnedByLocalPlayer((byte) 122) &&
                   var4 == 0) {
@@ -663,7 +663,7 @@ final class GameCharacter extends UnitView {
                 }
                 else {
                   if (!this.field_nb) {
-                    this.a(var7, var8, 256, (byte) -91);
+                    this.drawDisguisedAsHuman(var7, var8, 256, (byte) -91);
                     return;
                   }
                 }
@@ -680,8 +680,8 @@ final class GameCharacter extends UnitView {
                   }
                   MidiPcmStream.field_B = PortalEntryEvent.field_m.field_D[var16][0];
                   AlignedIconLabel.field_Ib = PortalEntryEvent.field_m.field_D[var16][1];
-                  this.n(param0 + 10136);
-                  this.s(2);
+                  this.applyDisguiseColours(param0 + 10136);
+                  this.applyResistFlashColour(2);
                 } else {
                   boolean decompiledFrameRemainder1 = true;
                   boolean decompiledFrameRemainder2 = true;
@@ -726,7 +726,7 @@ final class GameCharacter extends UnitView {
               var17 = QuickChatHelpDialog.field_Hb;
               if (var4 != 0 &&
                 !this.field_wb) {
-                var17 = wq.field_c;
+                var17 = MenuStyleHelpers.field_c;
               }
               boolean decompiledFrameRemainder3 = true;
               if (!LinkButtonPainter.field_a &&
@@ -752,18 +752,18 @@ final class GameCharacter extends UnitView {
               }
               var18 = stackIn_330_0;
               if (var18 == 0) {
-                nk.createTintedSprite(var17[var16][var15], AlignedIconLabel.field_Ib, param0 + 10391, MidiPcmStream.field_B);
+                ZombieDetonation.createTintedSprite(var17[var16][var15], AlignedIconLabel.field_Ib, param0 + 10391, MidiPcmStream.field_B);
               } else {
-                g.c(vb.field_b);
+                RasterEffectHelpers.pushSpriteTarget(LobbyUiSetupHelpers.field_b);
                 var19 = 117;
                 var20_ref_ja = QuickChatHelpDialog.field_Hb[var16][var15];
                 var21 = 6;
                 var22 = 3;
-                if (ic.field_h.length > var15) {
-                  var21 = ic.field_h[var15];
-                  var22 = ui.field_i[var15];
+                if (LoginCredentials.field_h.length > var15) {
+                  var21 = LoginCredentials.field_h[var15];
+                  var22 = MeltdownPuddleCell.field_i[var15];
                 }
-                if (!this.m(-2)) {
+                if (!this.isMaleVariant(-2)) {
                   var22++;
                   var21 -= 3;
                 }
@@ -781,41 +781,41 @@ final class GameCharacter extends UnitView {
                     if ((var25 & 65535) != 0) {
                       if (0 == (16711935 & var25)) {
                         var26 = var25 >> 8;
-                        var23[var24] = cr.b(cr.b(ScrollPane.bitAnd(65280, ScrollPane.bitAnd(255, AlignedIconLabel.field_Ib >> 8) * var26), ScrollPane.bitAnd(AlignedIconLabel.field_Ib, 255) * var26 >> 8), ScrollPane.bitAnd(16711777, (ScrollPane.bitAnd(AlignedIconLabel.field_Ib, 16754034) >> 16) * var26 << 8));
+                        var23[var24] = PendingStatusRequest.bitOr(PendingStatusRequest.bitOr(ScrollPane.bitAnd(65280, ScrollPane.bitAnd(255, AlignedIconLabel.field_Ib >> 8) * var26), ScrollPane.bitAnd(AlignedIconLabel.field_Ib, 255) * var26 >> 8), ScrollPane.bitAnd(16711777, (ScrollPane.bitAnd(AlignedIconLabel.field_Ib, 16754034) >> 16) * var26 << 8));
                       }
                     } else {
                       var26 = var25 >> 16;
-                      var23[var24] = cr.b(cr.b(var26 * ScrollPane.bitAnd(255, MidiPcmStream.field_B) >> 8, ScrollPane.bitAnd(65280, var26 * (ScrollPane.bitAnd(65430, MidiPcmStream.field_B) >> 8))), ScrollPane.bitAnd(1895890688, var26 * ScrollPane.bitAnd(255, MidiPcmStream.field_B >> 16)) << 8);
+                      var23[var24] = PendingStatusRequest.bitOr(PendingStatusRequest.bitOr(var26 * ScrollPane.bitAnd(255, MidiPcmStream.field_B) >> 8, ScrollPane.bitAnd(65280, var26 * (ScrollPane.bitAnd(65430, MidiPcmStream.field_B) >> 8))), ScrollPane.bitAnd(1895890688, var26 * ScrollPane.bitAnd(255, MidiPcmStream.field_B >> 16)) << 8);
                     }
                   }
                   var24++;
                 }
-                g.d();
+                RasterEffectHelpers.popRaster();
               }
               if (this.isOwnedByLocalPlayer((byte) 119) ||
                 this.field_xb &&
                 this.field_nb) {
-                g.c(vb.field_b);
+                RasterEffectHelpers.pushSpriteTarget(LobbyUiSetupHelpers.field_b);
                 stackIn_370_0 = 0;
                 stackIn_370_1 = 0;
-                g.a(stackIn_370_0, stackIn_370_1, 54, 54, MidiPcmStream.field_B);
-                g.d();
+                RasterEffectHelpers.outlineRasterRegion(stackIn_370_0, stackIn_370_1, 54, 54, MidiPcmStream.field_B);
+                RasterEffectHelpers.popRaster();
               }
               if (this.state != 21) {
-                var19 = PowerupEvent.field_m / 4 % aa.field_h.length;
+                var19 = PowerupEvent.field_m / 4 % NanoTickClock.field_h.length;
                 if (this.facing == 3) {
-                  g.a(vb.field_b);
+                  RasterEffectHelpers.mirrorHorizontally(LobbyUiSetupHelpers.field_b);
                 }
                 var20 = 3 + var8;
                 if (this.state == 23) {
-                  aa.field_h[var19].draw(var7, var20);
+                  NanoTickClock.field_h[var19].draw(var7, var20);
                 } else if (this.field_Nb > 0) {
-                  var21 = pn.field_c.length;
+                  var21 = ArchiveAvailabilityHelpers.field_c.length;
                   var19 = -var21 + (1 + PowerupEvent.field_m / 4 % (-1 + var21 * 2));
                   if (0 > var19) {
                     var19 = -var19;
                   }
-                  stackIn_389_0 = pn.field_c[var19];
+                  stackIn_389_0 = ArchiveAvailabilityHelpers.field_c[var19];
                   stackIn_389_1 = var7;
                   if (this.facing != 3) {
                     stackIn_390_2 = 2;
@@ -833,34 +833,34 @@ final class GameCharacter extends UnitView {
                     } else {
                       var21 = this.field_ub / 2 + 48;
                     }
-                    vb.field_b.drawScaledAlpha(var7 - 3 - (var21 - 48) / 2, -var21 + 48 - 3 + var8, var21, var21, 128);
+                    LobbyUiSetupHelpers.field_b.drawScaledAlpha(var7 - 3 - (var21 - 48) / 2, -var21 + 48 - 3 + var8, var21, var21, 128);
                   }
                 }
                 if (this.state == 33) {
-                  vb.field_b.drawScaled(var13 + var7, var8 + var13, var12, var12);
+                  LobbyUiSetupHelpers.field_b.drawScaled(var13 + var7, var8 + var13, var12, var12);
                 } else if (this.slowTicks <= 0) {
-                  vb.field_b.drawTransparent(var7 - 3, var8 - 3);
+                  LobbyUiSetupHelpers.field_b.drawTransparent(var7 - 3, var8 - 3);
                 } else {
-                  vb.field_b.drawTransparentWithOpacity(-3 + var7, var8 - 3, 142);
+                  LobbyUiSetupHelpers.field_b.drawTransparentWithOpacity(-3 + var7, var8 - 3, 142);
                 }
                 if (this.state == 23 ||
                   this.field_Nb > 0) {
-                  g.c();
-                  SoftwareRasterizer.setClip(var7, var20 + aa.field_h[var19].field_b / 2, 640, aa.field_h[var19].field_b + var20);
+                  RasterEffectHelpers.pushRasterState();
+                  SoftwareRasterizer.setClip(var7, var20 + NanoTickClock.field_h[var19].field_b / 2, 640, NanoTickClock.field_h[var19].field_b + var20);
                   if (23 == this.state) {
-                    aa.field_h[var19].draw(var7, var20);
+                    NanoTickClock.field_h[var19].draw(var7, var20);
                   }
-                  g.b();
+                  RasterEffectHelpers.popRasterState();
                 }
               } else {
-                vb.field_b.c(-3 + var7, -3 + var8, this.exitCountdown);
+                LobbyUiSetupHelpers.field_b.drawBlended(-3 + var7, -3 + var8, this.exitCountdown);
               }
               if (this.field_zb) {
-                QuickChatCategoryRegistry.field_d[0].e(1 + var7, var8 + 2, 128, 16711680);
+                QuickChatCategoryRegistry.field_d[0].drawTintedWithOpacity(1 + var7, var8 + 2, 128, 16711680);
               } else {
                 if (!this.field_Bb) {
                   if ((this.field_eb)) {
-                    QuickChatCategoryRegistry.field_d[0].c(var7, var8 + 2, 96);
+                    QuickChatCategoryRegistry.field_d[0].drawBlended(var7, var8 + 2, 96);
                   }
                   decompiledFrameRemainder5 = false;
                 }
@@ -877,8 +877,8 @@ final class GameCharacter extends UnitView {
                     QuickChatCategoryRegistry.field_d[0].drawSilhouette(var7, var8 + 3, 1);
                     QuickChatCategoryRegistry.field_d[0].drawSilhouette(var7, var8, 16777215);
                     if (0 != this.field_Kb) {
-                      pb.field_e.drawCharacter((char)(this.field_Kb + 48), var7 - (-QuickChatCategoryRegistry.field_d[0].width - 9) + 1, QuickChatCategoryRegistry.field_d[0].height + (7 + (var8 + 1)), 0);
-                      pb.field_e.drawCharacter((char)(48 + this.field_Kb), 9 + (QuickChatCategoryRegistry.field_d[0].width + var7), 7 + (var8 + QuickChatCategoryRegistry.field_d[0].height), 16777215);
+                      EffectAudioHelpers.field_e.drawCharacter((char)(this.field_Kb + 48), var7 - (-QuickChatCategoryRegistry.field_d[0].width - 9) + 1, QuickChatCategoryRegistry.field_d[0].height + (7 + (var8 + 1)), 0);
+                      EffectAudioHelpers.field_e.drawCharacter((char)(48 + this.field_Kb), 9 + (QuickChatCategoryRegistry.field_d[0].width + var7), 7 + (var8 + QuickChatCategoryRegistry.field_d[0].height), 16777215);
                     }
                   }
                 }
@@ -901,7 +901,7 @@ final class GameCharacter extends UnitView {
         }
     }
 
-    private final boolean m(int param0) {
+    private final boolean isMaleVariant(int param0) {
         RuntimeException var2 = null;
         boolean stackIn_7_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -918,7 +918,7 @@ final class GameCharacter extends UnitView {
         }
     }
 
-    final void a(boolean param0, Camera param1) {
+    final void drawCommandTarget(boolean param0, Camera param1) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -958,8 +958,8 @@ final class GameCharacter extends UnitView {
           }
           var8 = PortalEntryEvent.field_m.field_D[this.team][0];
           var9 = PortalEntryEvent.field_m.field_D[this.team][1];
-          var10 = am.createTeamColouredSprite(0, var9, this.field_C, 1, var8);
-          var10.c(-24 + var4, -24 + var5, var7 * 2);
+          var10 = TeamSpriteHelpers.createTeamColouredSprite(0, var9, this.field_C, 1, var8);
+          var10.drawBlended(-24 + var4, -24 + var5, var7 * 2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1010,15 +1010,15 @@ final class GameCharacter extends UnitView {
         }
     }
 
-    final static int h(byte param0) {
+    final static int getRegistrationAge(byte param0) {
         RuntimeException var1 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -80) {
-            GameCharacter.k((byte) 98);
+            GameCharacter.isMessageBoxOpen((byte) 98);
           }
-          stackIn_4_0 = rj.field_J;
+          stackIn_4_0 = RubbleChunk.field_J;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1027,15 +1027,15 @@ final class GameCharacter extends UnitView {
         }
     }
 
-    final static void l(byte param0) {
+    final static void endLocalGame(byte param0) {
         int var1_int = 0;
         Throwable decompiledCaughtException = null;
         Exception var1 = null;
         RuntimeException var1_ref = null;
         try {
           try {
-            gj.stopAllSounds(6962);
-            bi.field_e = true;
+            SoundStopHelpers.stopAllSounds(6962);
+            AccountTextGlobals.field_e = true;
             UiWidget.field_s = null;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -1065,7 +1065,7 @@ final class GameCharacter extends UnitView {
         }
     }
 
-    private final void c(boolean param0) {
+    private final void updateHook(boolean param0) {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -1080,7 +1080,7 @@ final class GameCharacter extends UnitView {
         }
     }
 
-    final void d(boolean param0) {
+    final void stopScreech(boolean param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -1091,7 +1091,7 @@ final class GameCharacter extends UnitView {
             this.setState(4, -27655);
           }
           if (param0) {
-            GameCharacter.k((byte) -17);
+            GameCharacter.isMessageBoxOpen((byte) -17);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1101,13 +1101,13 @@ final class GameCharacter extends UnitView {
         }
     }
 
-    final static boolean k(byte param0) {
+    final static boolean isMessageBoxOpen(byte param0) {
         RuntimeException var1 = null;
         boolean stackIn_4_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > 91) {
-            stackIn_4_0 = jg.field_a;
+            stackIn_4_0 = LevelUpgradeHelpers.field_a;
             return stackIn_4_0;
           }
           return true;
@@ -1175,12 +1175,12 @@ final class GameCharacter extends UnitView {
         }
     }
 
-    private final void m(byte param0) {
+    private final void stopMovement(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
           if (param0 != 6) {
-            this.e(false);
+            this.startResistFlash(false);
           }
           this.setState(4, param0 ^ -27649);
           return;
@@ -1191,7 +1191,7 @@ final class GameCharacter extends UnitView {
         }
     }
 
-    final void j(byte param0) {
+    final void clearDisguise(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -1209,7 +1209,7 @@ final class GameCharacter extends UnitView {
         }
     }
 
-    private final void a(int param0, int param1, int param2, byte param3) {
+    private final void drawDisguisedAsHuman(int param0, int param1, int param2, byte param3) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         int var6 = 0;
@@ -1223,30 +1223,30 @@ final class GameCharacter extends UnitView {
         try {
           if (!this.field_nb) {
             var5_int = 0;
-            var6 = this.animationFrame % gg.field_j[var5_int];
+            var6 = this.animationFrame % ArchiveLoadStep.field_j[var5_int];
             var7 = PortalEntryEvent.field_m.field_h.field_j;
             stackIn_6_0 = (var7 != 0) ? 6 : 2;
             var8 = stackIn_6_0;
-            var9 = gg.field_l[var5_int] + var6;
+            var9 = ArchiveLoadStep.field_l[var5_int] + var6;
             if (param2 >= 256) {
               if (this.facing != 1) {
-                wq.field_c[var8][var9].drawTransparent(param0, param1);
+                MenuStyleHelpers.field_c[var8][var9].drawTransparent(param0, param1);
                 if (var10 != 0) {
-                  wq.field_c[var8][var9].drawHorizontalFlip(param0, param1);
-                  wq.field_c[var8][var9].c(param0, param1, param2);
+                  MenuStyleHelpers.field_c[var8][var9].drawHorizontalFlip(param0, param1);
+                  MenuStyleHelpers.field_c[var8][var9].drawBlended(param0, param1, param2);
                 }
               } else {
-                wq.field_c[var8][var9].drawHorizontalFlip(param0, param1);
+                MenuStyleHelpers.field_c[var8][var9].drawHorizontalFlip(param0, param1);
                 if (var10 != 0) {
-                  wq.field_c[var8][var9].c(param0, param1, param2);
+                  MenuStyleHelpers.field_c[var8][var9].drawBlended(param0, param1, param2);
                 }
               }
             } else {
-              wq.field_c[var8][var9].c(param0, param1, param2);
+              MenuStyleHelpers.field_c[var8][var9].drawBlended(param0, param1, param2);
             }
           }
           if (param3 >= -54) {
-            this.a(true, (Camera) null);
+            this.drawCommandTarget(true, (Camera) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1261,14 +1261,14 @@ final class GameCharacter extends UnitView {
         int fieldTemp$1 = 0;
         boolean discarded$2 = false;
         IntrusiveDeque stackIn_158_0;
-        jj stackIn_158_1;
-        jj stackIn_158_2;
+        PhantomDecoy stackIn_158_1;
+        PhantomDecoy stackIn_158_2;
         int stackIn_158_3;
         int stackIn_158_4;
         int stackIn_158_5;
         int stackIn_158_6;
-        jj stackIn_159_1 = null;
-        jj stackIn_159_2 = null;
+        PhantomDecoy stackIn_159_1 = null;
+        PhantomDecoy stackIn_159_2 = null;
         boolean stackIn_159_7 = false;
         boolean stackIn_248_1 = false;
         RuntimeException decompiledCaughtException = null;
@@ -1366,29 +1366,29 @@ final class GameCharacter extends UnitView {
                     if ((this.animationFrame == 0 ||
                       this.animationFrame == 2) && this.animationTicks == 0) {
                       var2_int = 0;
-                      if (0 == hp.nextBoundedInt((byte) -112, g.field_a, 3)) {
+                      if (0 == RandomHelpers.nextBoundedInt((byte) -112, RasterEffectHelpers.field_a, 3)) {
                         if (this.field_Eb != null &&
                           !this.field_Eb.isFemale(15684)) {
-                          var2_intLifetime2 = 37 + hp.nextBoundedInt((byte) 14, g.field_a, 3);
+                          var2_intLifetime2 = 37 + RandomHelpers.nextBoundedInt((byte) 14, RasterEffectHelpers.field_a, 3);
                           if (var3 != 0) {
-                            var2_intLifetime2 = 40 + hp.nextBoundedInt((byte) -118, g.field_a, 4);
-                            var2_intLifetime2 = hp.nextBoundedInt((byte) -103, g.field_a, 5) + 30;
+                            var2_intLifetime2 = 40 + RandomHelpers.nextBoundedInt((byte) -118, RasterEffectHelpers.field_a, 4);
+                            var2_intLifetime2 = RandomHelpers.nextBoundedInt((byte) -103, RasterEffectHelpers.field_a, 5) + 30;
                           }
                         } else {
-                          var2_intLifetime2 = 40 + hp.nextBoundedInt((byte) -118, g.field_a, 4);
+                          var2_intLifetime2 = 40 + RandomHelpers.nextBoundedInt((byte) -118, RasterEffectHelpers.field_a, 4);
                           if (var3 != 0) {
-                            var2_intLifetime2 = hp.nextBoundedInt((byte) -103, g.field_a, 5) + 30;
+                            var2_intLifetime2 = RandomHelpers.nextBoundedInt((byte) -103, RasterEffectHelpers.field_a, 5) + 30;
                           }
                         }
                       } else {
-                        var2_intLifetime2 = hp.nextBoundedInt((byte) -103, g.field_a, 5) + 30;
+                        var2_intLifetime2 = RandomHelpers.nextBoundedInt((byte) -103, RasterEffectHelpers.field_a, 5) + 30;
                       }
-                      this.field_U = qq.b(1481485697, var2_intLifetime2);
+                      this.field_U = IntHashIndex.createMixerStream(1481485697, var2_intLifetime2);
                     }
                     if (this.field_lb != 30) {
                       break regionExit1;
                     }
-                    PowerupButton.field_e.a(1, this.field_Eb.getX(76), this.field_Eb.getY(117));
+                    PowerupButton.field_e.spawnDebris(1, this.field_Eb.getX(76), this.field_Eb.getY(117));
                     if (var3 == 0) {
                       break regionExit1;
                     }
@@ -1401,12 +1401,12 @@ final class GameCharacter extends UnitView {
                       if (this.animationFrame != 5) {
                         break regionExit1;
                       }
-                      PowerupButton.field_e.a(1, this.getX(124), this.getY(-105));
+                      PowerupButton.field_e.spawnDebris(1, this.getX(124), this.getY(-105));
                       PowerupButton.field_e.deselectCharacter(true, this);
                       if (this.field_jb == null) {
                         break regionExit1;
                       }
-                      this.field_jb.c(-24421);
+                      this.field_jb.finishFade(-24421);
                       this.field_jb.unlink(true);
                       this.field_jb = null;
                       if (var3 == 0) {
@@ -1438,7 +1438,7 @@ final class GameCharacter extends UnitView {
                             stackIn_159_2 = null;
                             stackIn_159_7 = true;
                           }
-                          ((IntrusiveDeque) (Object) stackIn_158_0).addFirst(new jj(stackIn_158_3, stackIn_158_4, stackIn_158_5, stackIn_158_6, stackIn_159_7), false);
+                          ((IntrusiveDeque) (Object) stackIn_158_0).addFirst(new PhantomDecoy(stackIn_158_3, stackIn_158_4, stackIn_158_5, stackIn_158_6, stackIn_159_7), false);
                           this.setState(4, -27655);
                           if (var3 == 0) {
                             break regionExit1;
@@ -1451,20 +1451,20 @@ final class GameCharacter extends UnitView {
                           this.animationTicks = this.animationTicks - 1;
                           this.field_xb = false;
                           if (this.field_jb == null) {
-                            this.field_jb = new pq(this.getX(-74), this.getY(-61) - 30, PortalEntryEvent.field_m.computeEffectDuration((byte) 32, this.team, 750));
+                            this.field_jb = new PowerupAuraEffect(this.getX(-74), this.getY(-61) - 30, PortalEntryEvent.field_m.computeEffectDuration((byte) 32, this.team, 750));
                             PortalEntryEvent.field_m.field_G.addFirst(this.field_jb, false);
                             if (var3 == 0) {
                               break regionExit1;
                             }
                           }
-                          if (!this.field_jb.d(67)) {
+                          if (!this.field_jb.isFinished(67)) {
                             this.applyVelocity(5197);
                             if (this.stepTowardTarget(-100) ||
                               0 == this.velocityX &&
                               this.velocityY == 0) {
-                              this.m((byte) 6);
+                              this.stopMovement((byte) 6);
                             }
-                            this.field_jb.a(this.getY(92) - 30, this.getX(71), 0);
+                            this.field_jb.setPosition(this.getY(92) - 30, this.getX(71), 0);
                             if (var3 == 0) {
                               break regionExit1;
                             }
@@ -1481,7 +1481,7 @@ final class GameCharacter extends UnitView {
                           if (this.state == 17) {
                             if (this.animationFrame == 3 &&
                               this.animationTicks == 0) {
-                              PowerupButton.field_e.a((byte) 126, this.getX(-113), this.getY(-82), this.team);
+                              PowerupButton.field_e.addAreaEffect((byte) 126, this.getX(-113), this.getY(-82), this.team);
                             }
                             if (this.animationFrame < 5) {
                               break regionExit1;
@@ -1495,12 +1495,12 @@ final class GameCharacter extends UnitView {
                           if (this.state != 19 &&
                             this.state != 24) {
                             if (this.state == 27) {
-                              if (~(gg.field_j[27] / 2) == ~this.animationFrame) {
+                              if (~(ArchiveLoadStep.field_j[27] / 2) == ~this.animationFrame) {
                                 this.field_ub = 0;
                                 this.field_xb = false;
                                 this.field_Nb = PortalEntryEvent.field_m.computeEffectDuration((byte) 32, this.team, 2250);
                               }
-                              if (gg.field_j[27] - 1 != this.animationFrame) {
+                              if (ArchiveLoadStep.field_j[27] - 1 != this.animationFrame) {
                                 break regionExit1;
                               }
                               this.setState(4, -27655);
@@ -1511,13 +1511,13 @@ final class GameCharacter extends UnitView {
                             if (this.state != 28) {
                               break regionExit1;
                             }
-                            if (this.animationFrame == gg.field_j[28] / 2) {
+                            if (this.animationFrame == ArchiveLoadStep.field_j[28] / 2) {
                               this.field_xb = false;
                               this.field_Nb = 0;
                               this.field_Mb = PortalEntryEvent.field_m.computeEffectDuration((byte) 32, this.team, 2250);
                               this.field_ub = this.field_Mb;
                             }
-                            if (this.animationFrame != -1 + gg.field_j[28]) {
+                            if (this.animationFrame != -1 + ArchiveLoadStep.field_j[28]) {
                               break regionExit1;
                             }
                             this.setState(4, -27655);
@@ -1542,10 +1542,10 @@ final class GameCharacter extends UnitView {
                         this.animationTicks = this.animationTicks - 1;
                         this.field_xb = false;
                         if (this.field_jb == null) {
-                          this.field_jb = new pq(this.getX(73), this.getY(-104) - 30, PortalEntryEvent.field_m.computeEffectDuration((byte) 32, this.team, 750));
+                          this.field_jb = new PowerupAuraEffect(this.getX(73), this.getY(-104) - 30, PortalEntryEvent.field_m.computeEffectDuration((byte) 32, this.team, 750));
                           PortalEntryEvent.field_m.field_G.addFirst(this.field_jb, false);
                         }
-                        if (!this.field_jb.d(124)) {
+                        if (!this.field_jb.isFinished(124)) {
                           break regionExit1;
                         }
                         this.field_jb.unlink(true);
@@ -1564,7 +1564,7 @@ final class GameCharacter extends UnitView {
                       this.animationFrame = 0;
                       this.field_xb = false;
                       PowerupButton.field_e.addClickMarker(this.field_Hb, 0, this.getY(-71), this.getX(-88));
-                      this.b(false);
+                      this.advanceIdleTimer(false);
                       if (var3 == 0) {
                         break regionExit1;
                       }
@@ -1613,8 +1613,8 @@ final class GameCharacter extends UnitView {
                   if (this.animationTicks != 0) {
                     break regionExit1;
                   }
-                  var2_intLifetime1 = 30 + hp.nextBoundedInt((byte) 22, g.field_a, 5);
-                  this.field_U = qq.b(1481485697, var2_intLifetime1);
+                  var2_intLifetime1 = 30 + RandomHelpers.nextBoundedInt((byte) 22, RasterEffectHelpers.field_a, 5);
+                  this.field_U = IntHashIndex.createMixerStream(1481485697, var2_intLifetime1);
                   if (var3 == 0) {
                     break regionExit1;
                   }
@@ -1638,7 +1638,7 @@ final class GameCharacter extends UnitView {
               if (0 < this.field_sb) {
                 this.field_sb = this.field_sb - 1;
               }
-              this.c(true);
+              this.updateHook(true);
               this.applyVelocity(5197);
               if (this.field_Bb &&
                 this.field_qb < 128) {
@@ -1652,22 +1652,22 @@ final class GameCharacter extends UnitView {
                   break regionExit1;
                 }
               }
-              this.m((byte) 6);
+              this.stopMovement((byte) 6);
               if (var3 == 0) {
                 break regionExit1;
               }
             }
-            if (this.animationFrame == gg.field_j[31] / 4) {
+            if (this.animationFrame == ArchiveLoadStep.field_j[31] / 4) {
               if (this.isOwnedByLocalPlayer((byte) -54)) {
                 if (this.field_Bb) {
-                  this.t(16);
-                  this.a(-4564);
+                  this.stopSelectionGlow(16);
+                  this.unlinkSecondary(-4564);
                 }
                 this.field_gb = null;
               }
               this.team = this.field_ib;
             }
-            if (~(-1 + gg.field_j[31]) == ~this.animationFrame) {
+            if (~(-1 + ArchiveLoadStep.field_j[31]) == ~this.animationFrame) {
               this.setState(4, -27655);
             }
           }
@@ -1682,12 +1682,12 @@ final class GameCharacter extends UnitView {
               if (this.state == 17) {
                 return;
               }
-              this.b(false);
+              this.advanceIdleTimer(false);
               if (var3 == 0) {
                 return;
               }
             }
-            discarded$2 = this.n((byte) -119);
+            discarded$2 = this.startIdleAction((byte) -119);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1719,14 +1719,14 @@ final class GameCharacter extends UnitView {
         try {
           this.velocityX = 0;
           this.velocityY = 0;
-          hp.nextBoundedInt((byte) 57, g.field_a, 5);
-          hp.nextBoundedInt((byte) 82, g.field_a, 120);
+          RandomHelpers.nextBoundedInt((byte) 57, RasterEffectHelpers.field_a, 5);
+          RandomHelpers.nextBoundedInt((byte) 82, RasterEffectHelpers.field_a, 120);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "wb.<init>(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final boolean q(int param0) {
+    final boolean isRecognizableZombie(int param0) {
         RuntimeException var2 = null;
         boolean stackIn_16_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -1782,12 +1782,12 @@ final class GameCharacter extends UnitView {
         }
     }
 
-    final void t(int param0) {
+    final void stopSelectionGlow(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
           if (param0 != 16) {
-            GameCharacter.l((byte) -55);
+            GameCharacter.endLocalGame((byte) -55);
           }
           this.field_Bb = false;
           return;
@@ -1798,7 +1798,7 @@ final class GameCharacter extends UnitView {
         }
     }
 
-    private final void b(boolean param0) {
+    private final void advanceIdleTimer(boolean param0) {
         int fieldTemp$1 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;

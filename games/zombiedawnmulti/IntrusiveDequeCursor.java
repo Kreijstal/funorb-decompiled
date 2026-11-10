@@ -16,7 +16,7 @@ final class IntrusiveDequeCursor {
     private IntrusiveDeque field_d;
     private IntrusiveNode field_f;
 
-    final static boolean a(int param0, boolean param1) {
+    final static boolean isModifierUpgrade(int param0, boolean param1) {
         if (param1) {
           IntrusiveDequeCursor.releaseStatics(76);
           if (param0 < 32) {
@@ -36,7 +36,7 @@ final class IntrusiveDequeCursor {
         return false;
     }
 
-    final static int b(int param0) {
+    final static int pollServerConnection(int param0) {
         try {
           int stackIn_15_0 = 0;
           int stackIn_23_0 = 0;
@@ -48,72 +48,72 @@ final class IntrusiveDequeCursor {
           int var1_int = 0;
           IOException var1 = null;
           PacketBuffer var2 = null;
-          if (4 <= i.field_a.field_n) {
-            if (i.field_a.field_p == -1) {
+          if (4 <= SharedTransportGlobals.field_a.field_n) {
+            if (SharedTransportGlobals.field_a.field_p == -1) {
               return 3;
             }
-            if (i.field_a.field_p != -2) {
+            if (SharedTransportGlobals.field_a.field_p != -2) {
               return 1;
             }
             return 4;
           }
           try {
-            if (la.field_d == 0) {
-              vo.field_o = p.field_a.requestSocket(vg.field_r, qe.field_f, (byte) -120);
-              la.field_d = la.field_d + 1;
+            if (GrowableIntList.field_d == 0) {
+              IntroScreen.field_o = ObjectFactoryHelpers.field_a.requestSocket(RankingsRequest.field_r, GameHud.field_f, (byte) -120);
+              GrowableIntList.field_d = GrowableIntList.field_d + 1;
             }
-            if (la.field_d == 1) {
-              if (vo.field_o.field_f == 2) {
-                stackIn_15_0 = u.handleConnectionFailure(-1, 5);
+            if (GrowableIntList.field_d == 1) {
+              if (IntroScreen.field_o.field_f == 2) {
+                stackIn_15_0 = PendingIntArrayRequest.handleConnectionFailure(-1, 5);
                 return stackIn_15_0;
               }
-              if (1 == vo.field_o.field_f) {
-                la.field_d = la.field_d + 1;
+              if (1 == IntroScreen.field_o.field_f) {
+                GrowableIntList.field_d = GrowableIntList.field_d + 1;
               }
             }
-            if (la.field_d == 2) {
-              vh.field_Gb = new BufferedSocket((java.net.Socket) (vo.field_o.field_d), p.field_a);
+            if (GrowableIntList.field_d == 2) {
+              ColourPickerWidget.field_Gb = new BufferedSocket((java.net.Socket) (IntroScreen.field_o.field_d), ObjectFactoryHelpers.field_a);
               var2 = new PacketBuffer(13);
-              AlignedIconLabel.a(IsaacRandom.field_b, var2, BufferedSocket.field_q, db.field_e, (byte) -124);
+              AlignedIconLabel.writeHandshakeHeader(IsaacRandom.field_b, var2, BufferedSocket.field_q, AudioStartupHelpers.field_e, (byte) -124);
               var2.writeByte(param0 - 19244, 15);
-              var2.writeInt(-128, kk.field_q);
-              vh.field_Gb.a(0, -100, 13, var2.payload);
-              la.field_d = la.field_d + 1;
-              li.field_A = 30000L + bl.monotonicMillis((byte) 43);
+              var2.writeInt(-128, CacheEntry.field_q);
+              ColourPickerWidget.field_Gb.write(0, -100, 13, var2.payload);
+              GrowableIntList.field_d = GrowableIntList.field_d + 1;
+              DiskArchiveRequest.field_A = 30000L + ClockAndScreenHelpers.monotonicMillis((byte) 43);
             }
             if (param0 != 19352) {
               stackIn_23_0 = 36;
               return stackIn_23_0;
             }
-            if (la.field_d == 3) {
-              if (vh.field_Gb.a(116) > 0) {
-                var1_int = vh.field_Gb.c((byte) 59);
+            if (GrowableIntList.field_d == 3) {
+              if (ColourPickerWidget.field_Gb.available(116) > 0) {
+                var1_int = ColourPickerWidget.field_Gb.readByte((byte) 59);
                 if (var1_int != 0) {
-                  stackIn_32_0 = u.handleConnectionFailure(var1_int, 5);
+                  stackIn_32_0 = PendingIntArrayRequest.handleConnectionFailure(var1_int, 5);
                   return stackIn_32_0;
                 }
-                la.field_d = la.field_d + 1;
+                GrowableIntList.field_d = GrowableIntList.field_d + 1;
               } else {
-                if (bl.monotonicMillis((byte) 124) > li.field_A) {
-                  stackIn_29_0 = u.handleConnectionFailure(-2, param0 - 19347);
+                if (ClockAndScreenHelpers.monotonicMillis((byte) 124) > DiskArchiveRequest.field_A) {
+                  stackIn_29_0 = PendingIntArrayRequest.handleConnectionFailure(-2, param0 - 19347);
                   return stackIn_29_0;
                 }
               }
             }
-            if (4 != la.field_d) {
+            if (4 != GrowableIntList.field_d) {
               stackIn_38_0 = -1;
               return stackIn_38_0;
             }
-            i.field_a.setConnection(PacketBuffer.field_f, vh.field_Gb, 104);
-            vo.field_o = null;
-            la.field_d = 0;
-            vh.field_Gb = null;
+            SharedTransportGlobals.field_a.setConnection(PacketBuffer.field_f, ColourPickerWidget.field_Gb, 104);
+            IntroScreen.field_o = null;
+            GrowableIntList.field_d = 0;
+            ColourPickerWidget.field_Gb = null;
             stackIn_36_0 = 0;
             return stackIn_36_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (IOException) (Object) decompiledCaughtException;
-            return u.handleConnectionFailure(-3, 5);
+            return PendingIntArrayRequest.handleConnectionFailure(-3, 5);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -139,7 +139,7 @@ final class IntrusiveDequeCursor {
         field_j = null;
     }
 
-    final IntrusiveNode b(int param0, IntrusiveNode param1) {
+    final IntrusiveNode startForwardFrom(int param0, IntrusiveNode param1) {
         IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_8_0 = null;
@@ -150,7 +150,7 @@ final class IntrusiveDequeCursor {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -4) {
-            IntrusiveDequeCursor.a(92, false);
+            IntrusiveDequeCursor.isModifierUpgrade(92, false);
           }
           if (param1 != null) {
             var3 = param1;
@@ -179,7 +179,7 @@ final class IntrusiveDequeCursor {
         }
     }
 
-    final IntrusiveNode a(int param0, IntrusiveNode param1) {
+    final IntrusiveNode startBackwardFrom(int param0, IntrusiveNode param1) {
         IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_5_0 = null;
@@ -201,7 +201,7 @@ final class IntrusiveDequeCursor {
           }
           this.field_f = var3.previous;
           if (param0 != 2680) {
-            IntrusiveDequeCursor.a(95, true);
+            IntrusiveDequeCursor.isModifierUpgrade(95, true);
           }
           stackIn_9_0 = var3;
           return stackIn_9_0;
@@ -219,7 +219,7 @@ final class IntrusiveDequeCursor {
         }
     }
 
-    final IntrusiveNode e(int param0) {
+    final IntrusiveNode next(int param0) {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
         if (param0 != -3) {
@@ -241,7 +241,7 @@ final class IntrusiveDequeCursor {
         return var2Lifetime1;
     }
 
-    final IntrusiveNode c(int param0) {
+    final IntrusiveNode last(int param0) {
         IntrusiveNode var2 = this.field_d.sentinel.previous;
         if (var2 == this.field_d.sentinel) {
           this.field_f = null;
@@ -256,7 +256,7 @@ final class IntrusiveDequeCursor {
         return var2;
     }
 
-    final IntrusiveNode a(int param0) {
+    final IntrusiveNode first(int param0) {
         IntrusiveNode var2 = this.field_d.sentinel.next;
         if (var2 == this.field_d.sentinel) {
           this.field_f = null;
@@ -266,12 +266,12 @@ final class IntrusiveDequeCursor {
           this.field_f = var2.next;
           return var2;
         }
-        this.c(62);
+        this.last(62);
         this.field_f = var2.next;
         return var2;
     }
 
-    final IntrusiveNode a(byte param0) {
+    final IntrusiveNode previous(byte param0) {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
         if (param0 >= -26) {

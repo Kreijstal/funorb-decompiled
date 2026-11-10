@@ -59,7 +59,7 @@ final class LinkButtonPainter implements WidgetPainter {
                 var10 = var10 + (param4.field_w - var8 >> 1);
               }
             }
-            hl.drawDottedRectangle(var10 + 2, -2 + var9, (byte) 97, 4 + var7, var8);
+            LobbyStateHelpers.drawDottedRectangle(var10 + 2, -2 + var9, (byte) 97, 4 + var7, var8);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -82,11 +82,11 @@ final class LinkButtonPainter implements WidgetPainter {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        n var4_ref_n = null;
+        PendingDataRequest var4_ref_n = null;
         Object var5 = null;
         int var6 = 0;
         byte[] var8 = null;
-        cr var9 = null;
+        PendingStatusRequest var9 = null;
         CipherPacketBuffer var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
@@ -95,12 +95,12 @@ final class LinkButtonPainter implements WidgetPainter {
           if (param0 != -9355) {
             LinkButtonPainter.readSavedDataReply(-53);
           }
-          var10 = s.field_e;
+          var10 = StatusAndMeshHelpers.field_e;
           var2 = var10.readUnsignedByte(31365);
           if (var2 == 0) {
-            var9 = (cr) (TabbedPane.field_Gb.last(param0 + 9430));
+            var9 = (PendingStatusRequest) (TabbedPane.field_Gb.last(param0 + 9430));
             if (var9 == null) {
-              ak.closeGameSocket((byte) -128);
+              ClientShellHelpers.closeGameSocket((byte) -128);
               return;
             }
             var4 = var10.readUnsignedByte(param0 + 40720);
@@ -109,13 +109,13 @@ final class LinkButtonPainter implements WidgetPainter {
               var11 = var12;
               var8 = var11;
               var5 = var8;
-              var10.a(0, -6351, var4, var12);
+              var10.readBytes(0, -6351, var4, var12);
             } else {
               var5 = null;
             }
             var10.position = var10.position + 4;
-            if (!var10.c(false)) {
-              ak.closeGameSocket((byte) -113);
+            if (!var10.verifyCrc32(false)) {
+              ClientShellHelpers.closeGameSocket((byte) -113);
               return;
             }
             var9.field_f = (byte[]) (var5);
@@ -124,23 +124,23 @@ final class LinkButtonPainter implements WidgetPainter {
           } else {
             if (var2 == 1) {
               var3 = var10.readInt(-1478490344);
-              var4_ref_n = (n) (SpriteState.field_s.last(param0 ^ -9398));
+              var4_ref_n = (PendingDataRequest) (SpriteState.field_s.last(param0 ^ -9398));
               while (var4_ref_n != null) {
                 if (var4_ref_n.field_h != var3) {
-                  var4_ref_n = (n) (SpriteState.field_s.previous(param0 + 9361));
+                  var4_ref_n = (PendingDataRequest) (SpriteState.field_s.previous(param0 + 9361));
                   continue;
                 }
                 break;
               }
               if (var4_ref_n == null) {
-                ak.closeGameSocket((byte) -114);
+                ClientShellHelpers.closeGameSocket((byte) -114);
                 return;
               }
               var4_ref_n.unlink(true);
               return;
             }
-            MouseInputHandler.reportClientError("A1: " + ci.a(0), (Throwable) null, false);
-            ak.closeGameSocket((byte) -111);
+            MouseInputHandler.reportClientError("A1: " + LevelFileList.describeCurrentPacket(0), (Throwable) null, false);
+            ClientShellHelpers.closeGameSocket((byte) -111);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -163,7 +163,7 @@ final class LinkButtonPainter implements WidgetPainter {
     }
 
     public LinkButtonPainter() {
-        this.field_g = ke.field_h;
+        this.field_g = FontPaletteHelpers.field_h;
         this.field_j = 1;
         this.field_h = 1;
     }
@@ -182,7 +182,7 @@ final class LinkButtonPainter implements WidgetPainter {
         if (param0 != -22) {
           field_e = 45L;
         }
-        return -AlignedIconLabel.field_Gb + bl.monotonicMillis((byte) 56);
+        return -AlignedIconLabel.field_Gb + ClockAndScreenHelpers.monotonicMillis((byte) 56);
     }
 
     static {

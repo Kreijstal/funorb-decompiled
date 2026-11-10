@@ -3,7 +3,7 @@
  */
 abstract class MouseWheelInput {
     static IntrusiveDeque field_b;
-    static ip field_c;
+    static ClientProtocolStage field_c;
     static String field_a;
 
     abstract int takeRotation(int param0);
@@ -13,18 +13,18 @@ abstract class MouseWheelInput {
     final static void layoutLobbySlidePanels(int param0, boolean param1) {
         int var3 = 0;
         int var4 = 0;
-        int var2 = (-640 + kp.field_l) / 2;
+        int var2 = (-640 + MessageMenuScreen.field_l) / 2;
         int var3Lifetime1;
         int var4Lifetime1;
         if (!param1) {
-          var3 = b.field_d * b.field_d;
+          var3 = IdleTickHelpers.field_d * IdleTickHelpers.field_d;
           var4 = var3 - param0 * param0;
           JaggrabDownloader.field_i.setBounds(-90 + (-120 + SoftwareRasterizer.height) - 4, 90, 199, -(var4 * 199 / var3) + var2, -3344);
           LevelData.field_a.setBounds(-120 + (SoftwareRasterizer.height - 4), 0, 438, var2 + (202 + 438 * var4 / var3), -3344);
           return;
         }
         MouseWheelInput.layoutLobbySlidePanels(56, false);
-        var3Lifetime1 = b.field_d * b.field_d;
+        var3Lifetime1 = IdleTickHelpers.field_d * IdleTickHelpers.field_d;
         var4Lifetime1 = var3Lifetime1 - param0 * param0;
         JaggrabDownloader.field_i.setBounds(-90 + (-120 + SoftwareRasterizer.height) - 4, 90, 199, -(var4Lifetime1 * 199 / var3Lifetime1) + var2, -3344);
         LevelData.field_a.setBounds(-120 + (SoftwareRasterizer.height - 4), 0, 438, var2 + (202 + 438 * var4Lifetime1 / var3Lifetime1), -3344);
@@ -46,7 +46,7 @@ abstract class MouseWheelInput {
 
     static {
         field_b = new IntrusiveDeque();
-        field_c = new ip();
+        field_c = new ClientProtocolStage();
         field_a = "<%0> is not on your ignore list.";
     }
 }

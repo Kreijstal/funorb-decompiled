@@ -112,8 +112,8 @@ final class Camera {
     }
 
     final static PcmSampleStream createMixerStream(int param0, int param1) {
-        wj var2 = new wj(param1);
-        fd.field_M.addFirst(var2, false);
+        SoundEffectInstance var2 = new SoundEffectInstance(param1);
+        PropObject.field_M.addFirst(var2, false);
         if (param0 <= -125) {
           return var2.field_m;
         }
@@ -124,7 +124,7 @@ final class Camera {
         if (param2 != 105) {
           return;
         }
-        m.pushRasterState(540);
+        PasswordTextPainter.pushRasterState(540);
         SoftwareRasterizer.intersectClip(param0, param4, param3, param1);
     }
 

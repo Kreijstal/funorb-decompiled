@@ -3,7 +3,7 @@
  */
 final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static String field_d;
-    static db field_c;
+    static AudioStartupHelpers field_c;
     static UiComponent field_a;
     static IntrusiveDeque field_e;
     static byte[][][] field_b;
@@ -15,16 +15,16 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         int var2_int = 0;
         int var3 = 0;
         try {
-          if (um.field_c != null) {
+          if (ClickMarkerParticle.field_c != null) {
             var2_int = param0.getKeyChar();
             if (0 != var2_int &&
               var2_int != 65535 &&
-              am.isTypeableCharacter((char) var2_int, (byte) 91)) {
-              var3 = f.field_c + 1 & 127;
-              if (var3 != lp.field_j) {
-                td.field_a[f.field_c] = -1;
-                ProgressDialog.field_pb[f.field_c] = (char)var2_int;
-                f.field_c = var3;
+              TeamSpriteHelpers.isTypeableCharacter((char) var2_int, (byte) 91)) {
+              var3 = NodeHashTable.field_c + 1 & 127;
+              if (var3 != ReflectionCheckRequest.field_j) {
+                TextLayoutLine.field_a[NodeHashTable.field_c] = -1;
+                ProgressDialog.field_pb[NodeHashTable.field_c] = (char)var2_int;
+                NodeHashTable.field_c = var3;
               }
             }
           }
@@ -44,34 +44,34 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         int var3 = 0;
         int var3Lifetime1;
         try {
-          if (um.field_c == null) {
+          if (ClickMarkerParticle.field_c == null) {
             return;
           }
           BirthDateInputWidget.field_cb = 0;
           var2_int = param0.getKeyCode();
           if (0 <= var2_int &&
-            ud.field_V.length > var2_int) {
-            var2_int = ud.field_V[var2_int];
+            DialSelectorWidget.field_V.length > var2_int) {
+            var2_int = DialSelectorWidget.field_V[var2_int];
             if ((128 & var2_int) != 0) {
               var2_int = -1;
             }
           } else {
             var2_int = -1;
           }
-          if (qf.field_f >= 0 &&
+          if (TextPopupHelpers.field_f >= 0 &&
             0 <= var2_int) {
-            SecondaryNodeDequeIterator.field_f[qf.field_f] = var2_int;
-            qf.field_f = 127 & 1 + qf.field_f;
-            if (NavigationGrid.field_j == qf.field_f) {
-              qf.field_f = -1;
+            SecondaryNodeDequeIterator.field_f[TextPopupHelpers.field_f] = var2_int;
+            TextPopupHelpers.field_f = 127 & 1 + TextPopupHelpers.field_f;
+            if (NavigationGrid.field_j == TextPopupHelpers.field_f) {
+              TextPopupHelpers.field_f = -1;
             }
           }
           if (var2_int >= 0) {
-            var3 = 127 & f.field_c + 1;
-            if (var3 != lp.field_j) {
-              td.field_a[f.field_c] = var2_int;
-              ProgressDialog.field_pb[f.field_c] = (char)0;
-              f.field_c = var3;
+            var3 = 127 & NodeHashTable.field_c + 1;
+            if (var3 != ReflectionCheckRequest.field_j) {
+              TextLayoutLine.field_a[NodeHashTable.field_c] = var2_int;
+              ProgressDialog.field_pb[NodeHashTable.field_c] = (char)0;
+              NodeHashTable.field_c = var3;
             }
           }
           var3Lifetime1 = param0.getModifiers();
@@ -110,21 +110,21 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != um.field_c) {
+          if (null != ClickMarkerParticle.field_c) {
             BirthDateInputWidget.field_cb = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
-              var2_int < ud.field_V.length) {
-              var2_int = -129 & ud.field_V[var2_int];
+              var2_int < DialSelectorWidget.field_V.length) {
+              var2_int = -129 & DialSelectorWidget.field_V[var2_int];
             } else {
               var2_int = -1;
             }
-            if (qf.field_f >= 0 &&
+            if (TextPopupHelpers.field_f >= 0 &&
               var2_int >= 0) {
-              SecondaryNodeDequeIterator.field_f[qf.field_f] = ~var2_int;
-              qf.field_f = 1 + qf.field_f & 127;
-              if (NavigationGrid.field_j == qf.field_f) {
-                qf.field_f = -1;
+              SecondaryNodeDequeIterator.field_f[TextPopupHelpers.field_f] = ~var2_int;
+              TextPopupHelpers.field_f = 1 + TextPopupHelpers.field_f & 127;
+              if (NavigationGrid.field_j == TextPopupHelpers.field_f) {
+                TextPopupHelpers.field_f = -1;
               }
             }
           }
@@ -153,7 +153,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           field_c = null;
           return;
         }
-        field_c = (db) null;
+        field_c = (AudioStartupHelpers) null;
         field_d = null;
         field_e = null;
         field_b = (byte[][][]) null;
@@ -174,7 +174,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         if (param0 != 250) {
           return true;
         }
-        return f.field_a > 250 ? true : false;
+        return NodeHashTable.field_a > 250 ? true : false;
     }
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
@@ -184,10 +184,10 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (um.field_c == null) {
+          if (ClickMarkerParticle.field_c == null) {
             return;
           }
-          qf.field_f = -1;
+          TextPopupHelpers.field_f = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -205,7 +205,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
 
     static {
         field_d = "No players";
-        field_c = new db();
+        field_c = new AudioStartupHelpers();
         field_e = new IntrusiveDeque();
     }
 }

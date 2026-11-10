@@ -20,12 +20,12 @@ final class MusicPatchPcmStream extends PcmStream {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        mb var6 = null;
+        MusicVoice var6 = null;
         int var7 = 0;
         var7 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           this.field_o.mixInto(param0, param1, param2);
-          var6 = (mb) (this.field_k.last(76));
+          var6 = (MusicVoice) (this.field_k.last(76));
           while (var6 != null) {
             stackIn_4_0 = this.field_n.discardInactiveVoice(-1, var6);
             boolean decompiledFrameCompleted0 = true;
@@ -46,7 +46,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 var6.field_D = var6.field_D - var5;
               }
             }
-            var6 = (mb) (this.field_k.previous(6));
+            var6 = (MusicVoice) (this.field_k.previous(6));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -63,7 +63,7 @@ final class MusicPatchPcmStream extends PcmStream {
         }
     }
 
-    private final void renderNote(int param0, int param1, int param2, mb param3, int[] param4, int param5) {
+    private final void renderNote(int param0, int param1, int param2, MusicVoice param3, int[] param4, int param5) {
         MidiPcmStream stackIn_13_0 = null;
         boolean stackIn_14_1 = false;
         RuntimeException stackIn_27_0 = null;
@@ -120,7 +120,7 @@ final class MusicPatchPcmStream extends PcmStream {
               if (!var11.isRamping()) {
                 continue;
               }
-              this.field_o.b(var11);
+              this.field_o.addSubStream(var11);
             }
           }
           param3.field_C.mixInto(param4, param0, param2);
@@ -146,7 +146,7 @@ final class MusicPatchPcmStream extends PcmStream {
     }
 
     final PcmStream firstSubStream() {
-        mb var1 = (mb) (this.field_k.last(76));
+        MusicVoice var1 = (MusicVoice) (this.field_k.last(76));
         if (var1 == null) {
           return null;
         }
@@ -156,7 +156,7 @@ final class MusicPatchPcmStream extends PcmStream {
         return this.nextSubStream();
     }
 
-    private final void skipNote(mb param0, int param1, boolean param2) {
+    private final void skipNote(MusicVoice param0, int param1, boolean param2) {
         MidiPcmStream stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
         RuntimeException stackIn_17_0 = null;
@@ -220,11 +220,11 @@ final class MusicPatchPcmStream extends PcmStream {
 
     final void skip(int param0) {
         int var2;
-        mb var3;
+        MusicVoice var3;
         int var4;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         this.field_o.skip(param0);
-        var3 = (mb) (this.field_k.last(91));
+        var3 = (MusicVoice) (this.field_k.last(91));
         while (var3 != null) {
           if (!this.field_n.discardInactiveVoice(-1, var3)) {
             var2 = param0;
@@ -238,7 +238,7 @@ final class MusicPatchPcmStream extends PcmStream {
               var2 = var2 - var3.field_D;
             } while (!this.field_n.updateNote(var3, var2, 0, (int[]) null, 22));
           }
-          var3 = (mb) (this.field_k.previous(6));
+          var3 = (MusicVoice) (this.field_k.previous(6));
         }
     }
 
@@ -247,9 +247,9 @@ final class MusicPatchPcmStream extends PcmStream {
     }
 
     final PcmStream nextSubStream() {
-        mb var1;
+        MusicVoice var1;
         while (true) {
-          var1 = (mb) (this.field_k.previous(6));
+          var1 = (MusicVoice) (this.field_k.previous(6));
           if (var1 == null) {
             return null;
           }
@@ -265,17 +265,17 @@ final class MusicPatchPcmStream extends PcmStream {
         Throwable var2 = null;
         boolean stackIn_7_0 = false;
         Throwable decompiledCaughtException = null;
-        var1_ref = um.field_c;
+        var1_ref = ClickMarkerParticle.field_c;
         synchronized (var1_ref) {
-          if (lp.field_j == kj.field_j) {
+          if (ReflectionCheckRequest.field_j == FriendListHelpers.field_j) {
             return false;
           }
-          InfectionEvent.field_p = td.field_a[lp.field_j];
-          pn.field_d = ProgressDialog.field_pb[lp.field_j];
+          InfectionEvent.field_p = TextLayoutLine.field_a[ReflectionCheckRequest.field_j];
+          ArchiveAvailabilityHelpers.field_d = ProgressDialog.field_pb[ReflectionCheckRequest.field_j];
           if (param0 != -1) {
             field_m = -21;
           }
-          lp.field_j = lp.field_j + 1 & 127;
+          ReflectionCheckRequest.field_j = ReflectionCheckRequest.field_j + 1 & 127;
           stackIn_7_0 = true;
         }
         return stackIn_7_0;

@@ -1,0 +1,242 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class MoveOrderMarker {
+    private int field_e;
+    static int field_g;
+    private int field_j;
+    private float field_f;
+    private int field_a;
+    static String field_d;
+    static int[][] field_b;
+    static String field_c;
+    static String field_i;
+    private boolean field_k;
+    static Sprite field_h;
+
+    final void markUnreachable(boolean param0) {
+        this.field_k = param0 ? true : false;
+        Camera.createMixerStream(-128, 59);
+    }
+
+    public static void releaseStatics(int param0) {
+        field_h = null;
+        field_c = null;
+        field_b = (int[][]) null;
+        field_i = null;
+        if (param0 != 16737894) {
+          field_d = (String) null;
+        }
+        field_d = null;
+    }
+
+    final void draw(Camera param0, byte param1) {
+        IndexedSprite[] stackIn_3_0 = null;
+        int stackIn_4_1 = 0;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
+        try {
+          if (0.0f <= this.field_f) {
+            stackIn_3_0 = UsernameCredentials.field_q;
+            if (!this.field_k) {
+              stackIn_4_1 = (int)this.field_f;
+            } else {
+              stackIn_4_1 = 6;
+            }
+            ((IndexedSprite) (Object) stackIn_3_0[stackIn_4_1]).drawAlpha(param0.worldToScreenX(this.field_e, -20126) - 12, -12 + param0.worldToScreenY(this.field_j, 111), this.field_a);
+          }
+          if (param1 < 33) {
+            this.field_a = -63;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_10_0 = var3;
+          stackIn_10_1 = new StringBuilder().append("uf.A(");
+          if (param0 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final void place(int param0, int param1, int param2) {
+        this.field_a = 256;
+        this.field_f = (float)param0;
+        this.field_j = param2;
+        this.field_e = param1;
+    }
+
+    final void markReachable(boolean param0) {
+        this.field_k = false;
+        if (!param0) {
+          Camera var3 = (Camera) null;
+          this.draw((Camera) null, (byte) 30);
+        }
+        Camera.createMixerStream(-126, 20);
+    }
+
+    final void tick(int param0) {
+        if (this.field_f != -1.0f) {
+          this.field_f = this.field_f + 0.5f;
+          if (this.field_a > 25) {
+            this.field_a = this.field_a - 25;
+          }
+          if (this.field_f > 5.0f) {
+            this.field_f = -1.0f;
+          }
+        }
+        if (param0 != -29987) {
+          field_b = (int[][]) null;
+        }
+    }
+
+    MoveOrderMarker() {
+        this.field_j = 0;
+        this.field_e = 0;
+        this.field_f = -1.0f;
+        this.field_k = false;
+    }
+
+    final static void updateIgnoreListPanel(int param0, boolean param1, byte param2) {
+        ScrollPane stackIn_5_0;
+        int stackIn_5_1;
+        boolean stackIn_5_2;
+        int stackIn_5_3;
+        boolean stackIn_6_4 = false;
+        UiComponent stackIn_22_0 = null;
+        String stackIn_23_1 = null;
+        int stackIn_26_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        IntrusiveDeque var4 = null;
+        Object var5 = null;
+        SocialListRow var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        String var13_ref_String = null;
+        int var13 = 0;
+        int var14 = 0;
+        int var15 = 0;
+        PlayerContextMenu var17 = null;
+        PlayerContextMenu var18 = null;
+        var15 = ZombieDawnMulti.field_E ? 1 : 0;
+        try {
+          if (param2 != 39) {
+            return;
+          }
+          stackIn_5_0 = UsernameSuggestionsPanel.field_L.field_Jb;
+          stackIn_5_1 = 2;
+          stackIn_5_2 = param1;
+          stackIn_5_3 = 2 + UpgradeAccessHelpers.field_f;
+          stackIn_6_4 = (KeyMapHelpers.field_d == UsernameSuggestionsPanel.field_L.field_Jb);
+          var3_int = ((ScrollPane) (Object) stackIn_5_0).updateContentLayout(stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_6_4, param0 * (3 * UpgradeAccessHelpers.field_f + 6), -90) ? 1 : 0;
+          var4 = UsernameSuggestionsPanel.field_L.field_Ib.field_Cb;
+          if (SimZombie.field_zb != 2 &&
+            SimZombie.field_zb != 1) {
+            UsernameSuggestionsPanel.field_L.field_Z = false;
+            UsernameSuggestionsPanel.field_L.field_Jb.field_Jb.field_wb = SpriteDecodeGlobals.field_e;
+            QuickChatCategoryDefinition.resetChildBounds(UsernameSuggestionsPanel.field_L.field_Ib, 37);
+            return;
+          }
+          UsernameSuggestionsPanel.field_L.field_Z = true;
+          UsernameSuggestionsPanel.field_L.field_Jb.field_Jb.field_wb = null;
+          var5 = null;
+          var6 = (SocialListRow) (var4.last(43));
+          while (var6 != null) {
+            var7 = 0;
+            if (var6.field_Cb == null) {
+              var6.field_Ib = new UiComponent(0L, PasswordTextPainter.field_x);
+              var6.addChild((byte) 50, var6.field_Ib);
+              var6.field_Gb = new UiComponent(0L, PasswordTextPainter.field_x);
+              var6.addChild((byte) 50, var6.field_Gb);
+              var7 = 1;
+              var6.markDescendantsToInheritVisualState(-128);
+            }
+            var6.field_zb = UsernameSuggestionsPanel.field_L.field_Ib.field_zb;
+            var6.field_Ib.setBounds(UpgradeAccessHelpers.field_f, 0, var6.field_zb, 0, -3344);
+            var8 = 0;
+            if (var6.field_Kb != null &&
+              !var6.field_Kb.equals("")) {
+              var6.field_Gb.field_ob = 16737894;
+              var6.field_Gb.field_rb = SimUnit.field_T;
+              var6.field_Gb.setBounds(UpgradeAccessHelpers.field_f, 0, 3 + SimUnit.field_T.fullWidth, 0, -3344);
+              var8 = 1;
+            }
+            var9 = 0;
+            var10 = var6.field_zb;
+            if (var8 != 0) {
+              var9 = 3 + SimUnit.field_T.fullWidth;
+              var10 = var10 - var9;
+            }
+            stackIn_22_0 = var6.field_Ib;
+            if (var10 > 0) {
+              stackIn_23_1 = BitmapFont.truncateText(var6.field_Ib.field_yb, var6.field_Hb, var10);
+            } else {
+              stackIn_23_1 = var6.field_Hb;
+            }
+            stackIn_22_0.field_wb = stackIn_23_1;
+            stackIn_26_0 = (var6.field_Ib.field_wb.equals(var6.field_Hb)) ? 0 : 1;
+            var11 = stackIn_26_0;
+            var6.field_Ib.setBounds(UpgradeAccessHelpers.field_f, 0, var10, var9, param2 - 3383);
+            if (var3_int == 0) {
+              var6.field_I = -var6.field_z + UpgradeAccessHelpers.field_f;
+            }
+            if (var7 != 0) {
+              UsernameSuggestionsPanel.field_L.field_Ib.placeBelow(2, var6, 1300, (UiComponent) (var5));
+            }
+            if (null != var6.field_Gb &&
+              var6.field_Gb.field_L) {
+              MeltdownPuddleCell.field_j = var6.field_Kb;
+            } else {
+              if (var6.field_Ib.field_L &&
+                var11 != 0) {
+                MeltdownPuddleCell.field_j = var6.field_Hb;
+              }
+            }
+            if (var6.field_T != 0) {
+              LightningBolt.openPlayerContextMenu(0L, 196, var6.field_Hb, UsernameSuggestionsPanel.field_L.field_Jb, var6.field_Pb, var6, -1, (int[]) null, -1);
+              var17 = ContextMenuHolder.field_b;
+              var13_ref_String = TabbedOverlayPanel.field_d;
+              var17.field_j.addItem((byte) -118, var13_ref_String, 7);
+              var18 = ContextMenuHolder.field_b;
+              var13 = LobbyUiSetupHelpers.field_f;
+              var14 = ChatMessage.field_t;
+              var18.field_j.layoutAtAnchor(4542, var13, 0, var14, 0);
+            }
+            var5 = var6;
+            var6 = (SocialListRow) (var4.previous(6));
+          }
+          if (0 != UsernameSuggestionsPanel.field_L.field_Gb.field_T) {
+            LevelFileEntry.field_i = new NameEntryPopup(UsernameSuggestionsPanel.field_L.field_Gb.field_w, UsernameSuggestionsPanel.field_L.field_Gb.field_qb, UsernameSuggestionsPanel.field_L.field_Gb.field_zb, UsernameSuggestionsPanel.field_L.field_Gb.field_z, ArrayWidgetGroup.field_K, StringHashHelpers.field_a, IntroScreen.field_m, IntroScreen.field_m);
+            LoginCredentials.field_e = 2;
+          }
+          if (UsernameSuggestionsPanel.field_L.field_Hb.field_T == 0) {
+            return;
+          }
+          LevelFileEntry.field_i = new NameEntryPopup(UsernameSuggestionsPanel.field_L.field_Hb.field_w, UsernameSuggestionsPanel.field_L.field_Hb.field_qb, UsernameSuggestionsPanel.field_L.field_Hb.field_zb, UsernameSuggestionsPanel.field_L.field_Hb.field_z, DebouncedValidationProvider.field_d, StringHashHelpers.field_a, IntroScreen.field_m, IntroScreen.field_m);
+          LoginCredentials.field_e = 3;
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "uf.E(" + param0 + ',' + param1 + ',' + param2 + ')');
+        }
+    }
+
+    static {
+        field_d = "Enhance your technological skills.";
+        field_i = "<%0> has resigned.";
+        field_c = "Aggressive zombies get the brains.";
+    }
+}

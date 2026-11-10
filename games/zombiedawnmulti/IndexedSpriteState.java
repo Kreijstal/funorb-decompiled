@@ -5,7 +5,7 @@ abstract class IndexedSpriteState {
     int field_j;
     int field_h;
     int field_a;
-    static ip field_i;
+    static ClientProtocolStage field_i;
     int field_b;
     static String field_g;
     static String field_k;
@@ -14,14 +14,14 @@ abstract class IndexedSpriteState {
     int field_f;
     static String field_d;
 
-    final static ma validateEmailLocalPart(int param0, String param1) {
-        ma stackIn_3_0 = null;
-        ma stackIn_9_0 = null;
-        ma stackIn_13_0 = null;
+    final static TextValidationFailure validateEmailLocalPart(int param0, String param1) {
+        TextValidationFailure stackIn_3_0 = null;
+        TextValidationFailure stackIn_9_0 = null;
+        TextValidationFailure stackIn_13_0 = null;
         int stackIn_22_0 = 0;
-        ma stackIn_27_0 = null;
-        ma stackIn_40_0 = null;
-        ma stackIn_44_0 = null;
+        TextValidationFailure stackIn_27_0 = null;
+        TextValidationFailure stackIn_40_0 = null;
+        TextValidationFailure stackIn_44_0 = null;
         RuntimeException stackIn_50_0 = null;
         StringBuilder stackIn_50_1 = null;
         String stackIn_51_2 = null;
@@ -39,14 +39,14 @@ abstract class IndexedSpriteState {
         try {
           var2_int = param1.length();
           if (var2_int == 0) {
-            stackIn_3_0 = jo.field_e;
+            stackIn_3_0 = FeatureSupportHelpers.field_e;
             return stackIn_3_0;
           }
           if (param0 != 32351) {
             field_d = (String) null;
           }
           if (64 < var2_int) {
-            stackIn_9_0 = er.field_f;
+            stackIn_9_0 = TipPanelHelpers.field_f;
             return stackIn_9_0;
           }
           if (param1.charAt(0) == 34) {
@@ -125,6 +125,6 @@ abstract class IndexedSpriteState {
     static {
         field_g = "Add <%0> to ignore list";
         field_d = "CRC mismatch - unable to get a valid download. Please check any firewall/antivirus/filtering software.";
-        field_i = new ip();
+        field_i = new ClientProtocolStage();
     }
 }

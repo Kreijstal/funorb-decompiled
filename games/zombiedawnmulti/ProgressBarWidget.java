@@ -18,7 +18,7 @@ final class ProgressBarWidget extends UiWidget {
     private Sprite field_M;
     private Sprite[] field_F;
 
-    final static int a(int param0, byte param1) {
+    final static int fixedSquareRoot(int param0, byte param1) {
         int var2;
         int var3;
         int var4;
@@ -33,7 +33,7 @@ final class ProgressBarWidget extends UiWidget {
         }
         if (param0 >= 32768) {
           if (param0 < 131072) {
-            return pk.field_a[param0 - 32768];
+            return ContextMenuHolder.field_a[param0 - 32768];
           }
           if (param0 < 33554432) {
             if (param0 >= 2097152) {
@@ -49,7 +49,7 @@ final class ProgressBarWidget extends UiWidget {
             }
           }
           param0 = param0 >> (var3 << 1);
-          return pk.field_a[-32768 + param0] << var3;
+          return ContextMenuHolder.field_a[-32768 + param0] << var3;
         }
         if (param0 >= 128) {
           if (param0 < 2048) {
@@ -72,17 +72,17 @@ final class ProgressBarWidget extends UiWidget {
           }
         }
         param0 = param0 << (var3Lifetime1 << 1);
-        return pk.field_a[-32768 + param0] >> var3Lifetime1;
+        return ContextMenuHolder.field_a[-32768 + param0] >> var3Lifetime1;
     }
 
-    final static boolean b(int param0, byte param1) {
+    final static boolean hasFeatureBit(int param0, byte param1) {
         if (-1 == param0) {
           return true;
         }
         if (param1 != -70) {
           field_I = (String) null;
         }
-        return (1 << param0 & pb.field_d) != 0 ? true : false;
+        return (1 << param0 & EffectAudioHelpers.field_d) != 0 ? true : false;
     }
 
     private final Sprite buildStripeSprite(int param0, int param1, int param2) {
@@ -101,7 +101,7 @@ final class ProgressBarWidget extends UiWidget {
         if (param0 != -16711936) {
           return (Sprite) null;
         }
-        r.a(0, var14);
+        MusicPatchLoadHelpers.pushSpriteRaster(0, var14);
         int var5 = this.field_w >> 1;
         for (var6 = 0; var6 < this.field_w; var6++) {
           var7 = (var6 >> 1) * (2 * this.field_D - 1) % (2 * this.field_D);
@@ -118,7 +118,7 @@ final class ProgressBarWidget extends UiWidget {
           SoftwareRasterizer.drawHorizontalLine(var7 + this.field_D, var6, this.field_D, var12Lifetime1);
           SoftwareRasterizer.drawHorizontalLine(var7 - this.field_D, var6, this.field_D, var12Lifetime1);
         }
-        ql.a(true);
+        RasterStackHelpers.popRaster(true);
         return var14;
     }
 
@@ -131,7 +131,7 @@ final class ProgressBarWidget extends UiWidget {
         int var2 = this.field_w >> 1;
         Sprite var3 = new Sprite(var2, this.field_w);
         int var5Lifetime1;
-        r.a(0, var3);
+        MusicPatchLoadHelpers.pushSpriteRaster(0, var3);
         for (var4 = 0; var4 < this.field_w; var4++) {
           for (var5 = 0; var2 > var5; var5++) {
             var6 = (double)var5 * (double)var5 / (double)(var4 * (this.field_w - var4));
@@ -144,15 +144,15 @@ final class ProgressBarWidget extends UiWidget {
           }
         }
         var5Lifetime1 = 121 % ((45 - param0) / 54);
-        ql.a(true);
+        RasterStackHelpers.popRaster(true);
         return var3;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_G = null;
         field_I = null;
         if (param0 != 0) {
-          ProgressBarWidget.$cfr$intArgs$b$c86821474a52(67, 68);
+          ProgressBarWidget.hasFeatureBit(67, 68);
         }
         field_P = null;
     }
@@ -206,7 +206,7 @@ final class ProgressBarWidget extends UiWidget {
         if (this.field_B < 65536) {
           Camera.pushClip(var5 + (this.field_n * this.field_B >> 16), this.field_w + var6, (byte) 105, this.field_n + var5, var6);
           this.drawRoundedStripes((byte) 116, this.field_F[1], var5, var6);
-          ql.a(true);
+          RasterStackHelpers.popRaster(true);
         }
     }
 
@@ -214,7 +214,7 @@ final class ProgressBarWidget extends UiWidget {
         this(param0, param1, param2, param3, param4, param5, param6, (param5 & 16711422) >> 1, 8355711 & param6 >> 1);
     }
 
-    final void a(int param0, int param1, byte param2) {
+    final void setStripeColours(int param0, int param1, byte param2) {
         int var4 = 17 / ((55 - param2) / 61);
         this.field_H = (param1 & 16711422) >> 1;
         this.field_E = param1;
@@ -243,23 +243,23 @@ final class ProgressBarWidget extends UiWidget {
           for (var6 = param2 - this.field_J; var6 < var5_int; var6 = var6 + param1.width) {
             param1.drawTransparent(var6, param3);
           }
-          ql.a(true);
+          RasterStackHelpers.popRaster(true);
           if (SoftwareRasterizer.clipLeft <= this.field_M.width + param2) {
-            r.a(0, this.field_C);
+            MusicPatchLoadHelpers.pushSpriteRaster(0, this.field_C);
             param1.drawTransparent(-this.field_J, 0);
             param1.drawTransparent(this.field_D * 2 - this.field_J, 0);
             this.field_O.drawMultiply(0, 0);
-            ql.a(true);
+            RasterStackHelpers.popRaster(true);
             this.field_C.drawTransparent(param2, param3);
           }
           if (SoftwareRasterizer.clipRight >= -this.field_M.width + var5_int) {
-            r.a(0, this.field_C);
+            MusicPatchLoadHelpers.pushSpriteRaster(0, this.field_C);
             for (var7 = -this.field_M.width + this.field_n + this.field_J; this.field_D * 2 < var7; var7 = var7 - 2 * this.field_D) {
             }
             param1.drawTransparent(-var7, 0);
             param1.drawTransparent(2 * this.field_D - var7, 0);
             this.field_M.drawMultiply(0, 0);
-            ql.a(true);
+            RasterStackHelpers.popRaster(true);
             this.field_C.drawTransparent(var5_int - this.field_M.width, param3);
             return;
           }
@@ -304,13 +304,13 @@ final class ProgressBarWidget extends UiWidget {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static boolean $cfr$intArgs$b$c86821474a52(int param0, int param1) {
+    final static boolean hasFeatureBit(int param0, int param1) {
         if (-1 == param0) {
           return true;
         }
         if (param1 != -70) {
           field_I = (String) null;
         }
-        return (1 << param0 & pb.field_d) != 0 ? true : false;
+        return (1 << param0 & EffectAudioHelpers.field_d) != 0 ? true : false;
     }
 }

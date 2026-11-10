@@ -35,9 +35,9 @@ final class ScrollPaneWithFooter extends UiComponent {
           this.field_Hb = new UiComponent(0L, param4);
           this.field_Gb.field_wb = param5;
           this.field_Hb.field_wb = param6;
-          this.a((byte) 50, this.field_Jb);
-          this.a((byte) 50, this.field_Gb);
-          this.a((byte) 50, this.field_Hb);
+          this.addChild((byte) 50, this.field_Jb);
+          this.addChild((byte) 50, this.field_Gb);
+          this.addChild((byte) 50, this.field_Hb);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "cd.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
@@ -79,27 +79,27 @@ final class ScrollPaneWithFooter extends UiComponent {
           }
           if (QuickChatMenu.field_Ub == null) {
             if (null != DebouncedValidationProvider.field_e) {
-              DebouncedValidationProvider.field_e.drawParagraph(hj.field_e, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              DebouncedValidationProvider.field_e.drawParagraph(SpriteDecodeGlobals.field_e, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
           var6 = QuickChatMenu.field_Ub[DebouncedValidationProvider.field_g];
           if (var6 == null) {
             if (null != DebouncedValidationProvider.field_e) {
-              DebouncedValidationProvider.field_e.drawParagraph(hj.field_e, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              DebouncedValidationProvider.field_e.drawParagraph(SpriteDecodeGlobals.field_e, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           } else {
             var6.drawTransparent(245, 199);
           }
-          if (nf.field_a > lb.field_a) {
+          if (EmailDomainValidation.field_a > PasswordCheckHelpers.field_a) {
             var7 = QuickChatMenu.field_Ub[DebouncedValidationProvider.field_j];
             if (var7 != null) {
-              var2_int = lb.field_a * (var7.fullWidth + 60) / nf.field_a;
+              var2_int = PasswordCheckHelpers.field_a * (var7.fullWidth + 60) / EmailDomainValidation.field_a;
               var3 = var2_int - 30;
-              if (qh.field_a) {
-                cb.drawHorizontalFadeSprite(199, false, var3 * -256 / 30, 245, var7, 256 * (-var3 + var7.fullWidth) / 30);
+              if (TabbedOverlayPanel.field_a) {
+                PowerupProgressCard.drawHorizontalFadeSprite(199, false, var3 * -256 / 30, 245, var7, 256 * (-var3 + var7.fullWidth) / 30);
               } else {
-                cb.drawHorizontalFadeSprite(199, false, 256 * (var7.fullWidth - var3) / 30, 245, var7, -256 * var3 / 30);
+                PowerupProgressCard.drawHorizontalFadeSprite(199, false, 256 * (var7.fullWidth - var3) / 30, 245, var7, -256 * var3 / 30);
               }
             }
           }

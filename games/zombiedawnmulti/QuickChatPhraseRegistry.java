@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class QuickChatPhraseRegistry {
-    private io field_a;
+    private WeightedLruCache field_a;
     private ResourceArchive field_b;
     private ResourceArchive field_c;
 
     final static void addQuickChatSubmenu(byte param0, QuickChatMenu param1) {
         try {
-          rp.field_l.a((byte) 50, param1);
+          PlayerProfile.field_l.addChild((byte) 50, param1);
           if (param0 < 42) {
             QuickChatMenu var3 = (QuickChatMenu) null;
             QuickChatPhraseRegistry.addQuickChatSubmenu((byte) 16, (QuickChatMenu) null);
@@ -23,40 +23,40 @@ final class QuickChatPhraseRegistry {
         if (param1 != -11452) {
           return (QuickChatPhraseDefinition) null;
         }
-        QuickChatPhraseDefinition var3 = (QuickChatPhraseDefinition) (this.field_a.a((byte) 127, (long)param0));
+        QuickChatPhraseDefinition var3 = (QuickChatPhraseDefinition) (this.field_a.get((byte) 127, (long)param0));
         if (var3 != null) {
           return var3;
         }
         if (param0 < 32768) {
-          var4 = this.field_c.a(1, true, param0);
+          var4 = this.field_c.getFile(1, true, param0);
         } else {
-          var4 = this.field_b.a(1, true, param0 & 32767);
+          var4 = this.field_b.getFile(1, true, param0 & 32767);
         }
         QuickChatPhraseDefinition var5 = new QuickChatPhraseDefinition();
         if (var4 != null) {
           var5.decode(new PacketBuffer(var4), (byte) 118);
           if (param0 >= 32768) {
             var5.applyGlobalIds((byte) 100);
-            this.field_a.a(var5, (long)param0, 1);
+            this.field_a.put(var5, (long)param0, 1);
             return var5;
           }
-          this.field_a.a(var5, (long)param0, 1);
+          this.field_a.put(var5, (long)param0, 1);
           return var5;
         }
         if (param0 < 32768) {
-          this.field_a.a(var5, (long)param0, 1);
+          this.field_a.put(var5, (long)param0, 1);
           return var5;
         }
         var5.applyGlobalIds((byte) 100);
-        this.field_a.a(var5, (long)param0, 1);
+        this.field_a.put(var5, (long)param0, 1);
         return var5;
     }
 
     final static void drawRootUiAndOverlay(int param0, boolean param1) {
         BirthDateEntryPanel var2 = null;
-        ImageProducerRasterBuffer.field_k.c(param1, -1);
+        ImageProducerRasterBuffer.field_k.drawRoot(param1, -1);
         if (param0 == 1) {
-          var2 = ra.field_f;
+          var2 = PendingIntArrayReply.field_f;
           if (var2 != null) {
             var2.renderWidgetPassesAndTooltip(param0 ^ -112, ImageProducerRasterBuffer.field_k.field_qb, ImageProducerRasterBuffer.field_k.field_w);
           }
@@ -64,14 +64,14 @@ final class QuickChatPhraseRegistry {
         }
     }
 
-    final static hf createLoginCredentials(int param0) {
+    final static ConditionalTextValue createLoginCredentials(int param0) {
         if (param0 != 1) {
-          return (hf) null;
+          return (ConditionalTextValue) null;
         }
-        return new hf(gg.getPendingEmail(91), MusicPatch.c(128));
+        return new ConditionalTextValue(ArchiveLoadStep.getPendingEmail(91), MusicPatch.isEmailAvailabilityPending(128));
     }
 
-    QuickChatPhraseRegistry(int param0, ResourceArchive param1, ResourceArchive param2, dr param3) {
+    QuickChatPhraseRegistry(int param0, ResourceArchive param1, ResourceArchive param2, QuickChatContext param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -81,17 +81,17 @@ final class QuickChatPhraseRegistry {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        this.field_a = new io(64);
+        this.field_a = new WeightedLruCache(64);
         try {
           this.field_c = param1;
           this.field_b = param2;
           if (this.field_c != null) {
-            this.field_c.d(1, -2);
+            this.field_c.getFileCount(1, -2);
           }
           if (this.field_b == null) {
             return;
           }
-          this.field_b.d(1, -2);
+          this.field_b.getFileCount(1, -2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

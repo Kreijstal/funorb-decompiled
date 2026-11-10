@@ -219,7 +219,7 @@ abstract class BitmapFont extends DualLinkNode {
         return this.glyphAdvances[MouseInputHandler.encodeExtendedChar(param0, (byte) -41) & 255];
     }
 
-    final void c(String param0, int param1, int param2, int param3, int param4) {
+    final void drawLeft(String param0, int param1, int param2, int param3, int param4) {
         if (param0 == null) {
           return;
         }
@@ -256,7 +256,7 @@ abstract class BitmapFont extends DualLinkNode {
         if (param0 == null) {
           return 0;
         }
-        lf.a(' ', 0, 0, field_q);
+        TransitionPhase.padWithChar(' ', 0, 0, field_q);
         var4 = 0;
         var5 = 0;
         var6 = -1;
@@ -472,7 +472,7 @@ abstract class BitmapFont extends DualLinkNode {
                                 }
                               } else {
                                 var7 = (CharSequence) ((Object) param0.substring(5));
-                                currentShadowColor = ho.parseInteger(var7, 16, 3);
+                                currentShadowColor = OptionsMenuScreen.parseInteger(var7, 16, 3);
                               }
                             } else {
                               underlineColor = -1;
@@ -482,7 +482,7 @@ abstract class BitmapFont extends DualLinkNode {
                           }
                         } else {
                           var6 = (CharSequence) ((Object) param0.substring(2));
-                          underlineColor = ho.parseInteger(var6, 16, 3);
+                          underlineColor = OptionsMenuScreen.parseInteger(var6, 16, 3);
                         }
                       } else {
                         field_u = -1;
@@ -492,7 +492,7 @@ abstract class BitmapFont extends DualLinkNode {
                     }
                   } else {
                     var5 = (CharSequence) ((Object) param0.substring(4));
-                    field_u = ho.parseInteger(var5, 16, 3);
+                    field_u = OptionsMenuScreen.parseInteger(var5, 16, 3);
                   }
                 } else {
                   currentAlpha = defaultAlpha;
@@ -506,7 +506,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
           } else {
             var3 = (CharSequence) ((Object) param0.substring(4));
-            currentTextColor = ho.parseInteger(var3, 16, 3);
+            currentTextColor = OptionsMenuScreen.parseInteger(var3, 16, 3);
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
