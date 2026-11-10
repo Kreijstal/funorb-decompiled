@@ -11,7 +11,7 @@ final class dn extends pa {
     static Sprite field_E;
     static String field_J;
 
-    final void b(int param0, boolean param1, int param2) {
+    final void recentreDialogs(int param0, boolean param1, int param2) {
         int var8 = ZombieDawn.field_J;
         if (param2 == this.field_i &&
           param0 == this.field_n) {
@@ -33,14 +33,14 @@ final class dn extends pa {
         }
     }
 
-    final ei c(boolean param0) {
+    final ei getTopOpenDialog(boolean param0) {
         cj var2;
         ei var3;
         int var4;
         var4 = ZombieDawn.field_J;
         var2 = new cj(this.field_H);
         if (!param0) {
-          this.j(112);
+          this.hideAllDialogs(112);
         }
         var3 = (ei) (var2.c((byte) -116));
         while (var3 != null) {
@@ -112,7 +112,7 @@ final class dn extends pa {
           var22 = null;
           var12 = ZombieDawn.field_J;
           try {
-            var13 = (n) (Js5Archive.field_l.b((byte) 26));
+            var13 = (n) (Js5Archive.field_l.last((byte) 26));
             var17 = var13;
             if (var17 == null) {
               return;
@@ -183,7 +183,7 @@ final class dn extends pa {
                       param0.writeByte(0, 89);
                     } else if (var10 instanceof Number) {
                       param0.writeByte(1, 12);
-                      param0.a(((Number) (var10)).longValue(), 121);
+                      param0.writeLong(((Number) (var10)).longValue(), 121);
                     } else if (!(var10 instanceof String)) {
                       param0.writeByte(4, -119);
                     } else {
@@ -311,17 +311,17 @@ final class dn extends pa {
             var1[var2] = (Sprite) ((Object) new cd(gl.field_F, Zombie.field_pb, sl.field_d[var2], bo.field_o[var2], bn.field_c[var2], uf.field_n[var2], var16));
           }
         }
-        no.f((byte) -114);
+        no.clearSpriteDecodeBuffers((byte) -114);
         return var1;
     }
 
-    final UiWidget f(int param0) {
+    final UiWidget getFocusedChild(int param0) {
         cj var2;
         ei var3;
         int var4;
         var4 = ZombieDawn.field_J;
         if (param0 > -2) {
-          this.f(-10);
+          this.getFocusedChild(-10);
         }
         var2 = new cj(this.field_H);
         var3 = (ei) (var2.c((byte) -116));
@@ -334,7 +334,7 @@ final class dn extends pa {
         return null;
     }
 
-    final void g(int param0) {
+    final void advanceDialogAnimations(int param0) {
         int var4 = ZombieDawn.field_J;
         if (param0 > -122) {
           field_J = (String) null;
@@ -342,15 +342,15 @@ final class dn extends pa {
         cj var2 = new cj(this.field_H);
         ei var3 = (ei) (var2.c((byte) -116));
         while (var3 != null) {
-          if (var3.j(2634)) {
+          if (var3.tickLayerAndCheckHidden(2634)) {
             var3.unlink(-27598);
           }
           var3 = (ei) (var2.a((byte) 61));
         }
-        this.field_z = (UiWidget) ((Object) this.c(true));
+        this.field_z = (UiWidget) ((Object) this.getTopOpenDialog(true));
     }
 
-    final void a(UiWidget param0, boolean param1) {
+    final void addDialog(UiWidget param0, boolean param1) {
         ei var3 = null;
         try {
           if (!(param0 instanceof ei)) {
@@ -365,10 +365,10 @@ final class dn extends pa {
         }
     }
 
-    final void j(int param0) {
+    final void hideAllDialogs(int param0) {
         int var4 = ZombieDawn.field_J;
         if (param0 != -636330975) {
-          this.j(-51);
+          this.hideAllDialogs(-51);
         }
         cj var2 = new cj(this.field_H);
         ei var3 = (ei) (var2.c((byte) -123));
@@ -388,7 +388,7 @@ final class dn extends pa {
         return stackIn_7_0;
     }
 
-    final void e(byte param0) {
+    final void removeHiddenDialogs(byte param0) {
         int var4 = ZombieDawn.field_J;
         if (param0 != -36) {
           return;
@@ -396,7 +396,7 @@ final class dn extends pa {
         cj var2 = new cj(this.field_H);
         ei var3 = (ei) (var2.c((byte) -125));
         while (var3 != null) {
-          if (var3.e((byte) 28)) {
+          if (var3.isFullyFadedOut((byte) 28)) {
             var3.unlink(-27598);
           }
           var3 = (ei) (var2.a((byte) 61));
@@ -429,7 +429,7 @@ final class dn extends pa {
           var3_int = 0;
           var4 = el.field_k;
           while (n.field_r.length > var3_int) {
-            var5 = la.field_b[var3_int];
+            var5 = FullscreenFocusCanvas.field_b[var3_int];
             if (var5 >= 0) {
               var6 = sm.a(32564, true, n.field_r[var3_int]);
               var7 = im.field_d - (var6 >> 1);
@@ -453,10 +453,10 @@ final class dn extends pa {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         int var7 = ZombieDawn.field_J;
         if (this.field_h != null) {
-          this.field_h.a(16777215, true, param0, (UiWidget) (this), param2);
+          this.field_h.drawWidget(16777215, true, param0, (UiWidget) (this), param2);
         }
         if (param3 != 0) {
           return;
@@ -464,7 +464,7 @@ final class dn extends pa {
         cj var5 = new cj(this.field_H);
         UiWidget var6 = (UiWidget) (var5.b((byte) -21));
         while (var6 != null) {
-          var6.a(this.field_j + param0, param1, this.field_k + param2, param3 ^ 0);
+          var6.drawLayer(this.field_j + param0, param1, this.field_k + param2, param3 ^ 0);
           var6 = (UiWidget) (var5.a(17));
         }
     }

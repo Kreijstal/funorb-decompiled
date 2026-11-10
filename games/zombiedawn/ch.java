@@ -155,12 +155,12 @@ final class ch {
           }
           return new byte[param1];
         }
-        if (qg.field_c > 0) {
+        if (SocketConnector.field_c > 0) {
           fieldTemp$15 = ff.field_c;
-          fieldTemp$16 = qg.field_c - 1;
-          qg.field_c = qg.field_c - 1;
+          fieldTemp$16 = SocketConnector.field_c - 1;
+          SocketConnector.field_c = SocketConnector.field_c - 1;
           var2_ref_byte__Lifetime1 = fieldTemp$15[fieldTemp$16];
-          ff.field_c[qg.field_c] = null;
+          ff.field_c[SocketConnector.field_c] = null;
           return var2_ref_byte__Lifetime1;
         }
         if (param0 != -5827) {
@@ -266,11 +266,11 @@ final class ch {
         RuntimeException decompiledCaughtException = null;
         var4 = ZombieDawn.field_J;
         try {
-          if (!vb.a(param2, param0, param1)) {
+          if (!vb.isValidDisplayName(param2, param0, param1)) {
             return false;
           }
           for (var3_int = 0; param0.length() > var3_int; var3_int++) {
-            if (!jb.a((byte) 27, param0.charAt(var3_int))) {
+            if (!jb.isValidNameCharacter((byte) 27, param0.charAt(var3_int))) {
               return false;
             }
           }

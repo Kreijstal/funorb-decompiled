@@ -29,7 +29,7 @@ final class mc extends pm {
             stackIn_2_0 = (rh) null;
             return stackIn_2_0;
           }
-          stackIn_6_0 = (la.a(param0, (byte) -103) != null) ? 0 : 1;
+          stackIn_6_0 = (FullscreenFocusCanvas.validateEmailAddress(param0, (byte) -103) != null) ? 0 : 1;
           var3_int = stackIn_6_0;
           if (var3_int != 0) {
             stackIn_10_0 = (rh) (field_g);
@@ -51,7 +51,7 @@ final class mc extends pm {
         }
     }
 
-    final static boolean a(String param0, boolean param1) {
+    final static boolean isKnownPlayerName(String param0, boolean param1) {
         RuntimeException var2 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;

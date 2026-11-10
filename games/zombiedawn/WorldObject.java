@@ -14,7 +14,7 @@ abstract class WorldObject extends SpatialObject {
     int field_z;
     int field_B;
 
-    void d(byte param0) {
+    void updateGridCell(byte param0) {
         if (ng.field_e) {
           return;
         }
@@ -24,7 +24,7 @@ abstract class WorldObject extends SpatialObject {
         if (this.field_B != var3) {
           this.field_u = var4;
           this.field_B = var3;
-          Js5Archive.field_e.a(false, this);
+          Js5Archive.field_e.addToSpatialGrid(false, this);
           return;
         }
         if (this.field_u == var4) {
@@ -32,42 +32,42 @@ abstract class WorldObject extends SpatialObject {
         }
         this.field_u = var4;
         this.field_B = var3;
-        Js5Archive.field_e.a(false, this);
+        Js5Archive.field_e.addToSpatialGrid(false, this);
     }
 
-    final WorldObject e(byte param0) {
+    final WorldObject nextNearbyObject(byte param0) {
         Object var3;
         WorldObject var3_ref;
         WorldObject var6;
         if (param0 == 32) {
           if (-1 == this.field_v) {
-            return (WorldObject) (Js5Archive.field_e.spatialGrid.b(false));
+            return (WorldObject) (Js5Archive.field_e.spatialGrid.nextQueryObject(false));
           }
           do {
-            var6 = (WorldObject) (Js5Archive.field_e.spatialGrid.b(false));
+            var6 = (WorldObject) (Js5Archive.field_e.spatialGrid.nextQueryObject(false));
             if (var6 == null) {
               return null;
             }
-          } while (!var6.a((byte) 75, this.field_v) || -1 != this.field_A &&
-            this.a(var6, 1654152400) >= this.field_A);
+          } while (!var6.matchesTypeMask((byte) 75, this.field_v) || -1 != this.field_A &&
+            this.distanceSquaredTo(var6, 1654152400) >= this.field_A);
           return var6;
         }
         this.field_x = -55;
         if (-1 == this.field_v) {
-          return (WorldObject) (Js5Archive.field_e.spatialGrid.b(false));
+          return (WorldObject) (Js5Archive.field_e.spatialGrid.nextQueryObject(false));
         }
         while (true) {
-          var3_ref = (WorldObject) (Js5Archive.field_e.spatialGrid.b(false));
+          var3_ref = (WorldObject) (Js5Archive.field_e.spatialGrid.nextQueryObject(false));
           if (var3_ref == null) {
             return null;
           }
-          if (!var3_ref.a((byte) 75, this.field_v)) {
+          if (!var3_ref.matchesTypeMask((byte) 75, this.field_v)) {
             continue;
           }
           if (-1 == this.field_A) {
             return var3_ref;
           }
-          if (this.a(var3_ref, 1654152400) >= this.field_A) {
+          if (this.distanceSquaredTo(var3_ref, 1654152400) >= this.field_A) {
             continue;
           }
           break;
@@ -75,7 +75,7 @@ abstract class WorldObject extends SpatialObject {
         return var3_ref;
     }
 
-    final int a(WorldObject param0, int param1) {
+    final int distanceSquaredTo(WorldObject param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -87,7 +87,7 @@ abstract class WorldObject extends SpatialObject {
         try {
           var3_int = param0.field_y - this.field_y >> 16;
           if (param1 != 1654152400) {
-            this.a((byte) 21, -16);
+            this.matchesTypeMask((byte) 21, -16);
           }
           var4 = -this.field_x + param0.field_x >> 16;
           this.field_s = var3_int * var3_int + var4 * var4;
@@ -107,9 +107,9 @@ abstract class WorldObject extends SpatialObject {
         }
     }
 
-    abstract void a(byte param0, Camera param1);
+    abstract void draw(byte param0, Camera param1);
 
-    final boolean a(byte param0, int param1) {
+    final boolean matchesTypeMask(byte param0, int param1) {
         if (this instanceof Human) {
           return (param1 & 1) != 0 ? true : false;
         }
@@ -134,7 +134,7 @@ abstract class WorldObject extends SpatialObject {
         return false;
     }
 
-    final WorldObject a(byte param0, int param1, int param2) {
+    final WorldObject firstNearbyObject(byte param0, int param1, int param2) {
         Object var4;
         WorldObject var4_ref;
         int var5;
@@ -147,9 +147,9 @@ abstract class WorldObject extends SpatialObject {
           var4 = null;
           if (param1 != -1) {
             var5 = 1 + (param1 >> 7);
-            var4_ref = (WorldObject) (Js5Archive.field_e.spatialGrid.a(var5, this.field_u, 29845, this.field_B));
+            var4_ref = (WorldObject) (Js5Archive.field_e.spatialGrid.firstObjectNear(var5, this.field_u, 29845, this.field_B));
           } else {
-            var4_ref = (WorldObject) (Js5Archive.field_e.spatialGrid.a(true));
+            var4_ref = (WorldObject) (Js5Archive.field_e.spatialGrid.firstObject(true));
           }
           if (param0 != -74) {
             return (WorldObject) null;
@@ -157,25 +157,25 @@ abstract class WorldObject extends SpatialObject {
           if (var4_ref == null) {
             return null;
           }
-          if (!var4_ref.a((byte) 114, param2)) {
-            return this.e((byte) 32);
+          if (!var4_ref.matchesTypeMask((byte) 114, param2)) {
+            return this.nextNearbyObject((byte) 32);
           }
           if (this.field_A == -1) {
             return var4_ref;
           }
-          if (this.a(var4_ref, param0 ^ -1654152346) < this.field_A) {
+          if (this.distanceSquaredTo(var4_ref, param0 ^ -1654152346) < this.field_A) {
             return var4_ref;
           }
-          return this.e((byte) 32);
+          return this.nextNearbyObject((byte) 32);
         }
         this.field_A = -1;
         this.field_v = param2;
         var4Lifetime1 = null;
         if (param1 != -1) {
           var5Lifetime1 = 1 + (param1 >> 7);
-          var4_refLifetime1 = (WorldObject) (Js5Archive.field_e.spatialGrid.a(var5Lifetime1, this.field_u, 29845, this.field_B));
+          var4_refLifetime1 = (WorldObject) (Js5Archive.field_e.spatialGrid.firstObjectNear(var5Lifetime1, this.field_u, 29845, this.field_B));
         } else {
-          var4_refLifetime1 = (WorldObject) (Js5Archive.field_e.spatialGrid.a(true));
+          var4_refLifetime1 = (WorldObject) (Js5Archive.field_e.spatialGrid.firstObject(true));
         }
         if (param0 != -74) {
           return (WorldObject) null;
@@ -183,19 +183,19 @@ abstract class WorldObject extends SpatialObject {
         if (var4_refLifetime1 == null) {
           return null;
         }
-        if (!var4_refLifetime1.a((byte) 114, param2)) {
-          return this.e((byte) 32);
+        if (!var4_refLifetime1.matchesTypeMask((byte) 114, param2)) {
+          return this.nextNearbyObject((byte) 32);
         }
         if (this.field_A == -1) {
           return var4_refLifetime1;
         }
-        if (this.a(var4_refLifetime1, param0 ^ -1654152346) >= this.field_A) {
-          return this.e((byte) 32);
+        if (this.distanceSquaredTo(var4_refLifetime1, param0 ^ -1654152346) >= this.field_A) {
+          return this.nextNearbyObject((byte) 32);
         }
         return var4_refLifetime1;
     }
 
-    final WorldObject b(int param0, int param1) {
+    final WorldObject firstNearbyAnyObject(int param0, int param1) {
         int var3 = 0;
         int var3Lifetime1;
         int var3Lifetime2;
@@ -205,36 +205,36 @@ abstract class WorldObject extends SpatialObject {
           this.field_v = -1;
           if (param1 == 16) {
             if (param0 == -1) {
-              return (WorldObject) (Js5Archive.field_e.spatialGrid.a(true));
+              return (WorldObject) (Js5Archive.field_e.spatialGrid.firstObject(true));
             }
             var3 = (param0 >> 7) + 1;
-            return (WorldObject) (Js5Archive.field_e.spatialGrid.a(var3, this.field_u, 29845, this.field_B));
+            return (WorldObject) (Js5Archive.field_e.spatialGrid.firstObjectNear(var3, this.field_u, 29845, this.field_B));
           }
           this.field_x = 64;
           if (param0 == -1) {
-            return (WorldObject) (Js5Archive.field_e.spatialGrid.a(true));
+            return (WorldObject) (Js5Archive.field_e.spatialGrid.firstObject(true));
           }
           var3Lifetime3 = (param0 >> 7) + 1;
-          return (WorldObject) (Js5Archive.field_e.spatialGrid.a(var3Lifetime3, this.field_u, 29845, this.field_B));
+          return (WorldObject) (Js5Archive.field_e.spatialGrid.firstObjectNear(var3Lifetime3, this.field_u, 29845, this.field_B));
         }
         this.field_A = -1;
         this.field_v = -1;
         if (param1 == 16) {
           if (param0 == -1) {
-            return (WorldObject) (Js5Archive.field_e.spatialGrid.a(true));
+            return (WorldObject) (Js5Archive.field_e.spatialGrid.firstObject(true));
           }
           var3Lifetime1 = (param0 >> 7) + 1;
-          return (WorldObject) (Js5Archive.field_e.spatialGrid.a(var3Lifetime1, this.field_u, 29845, this.field_B));
+          return (WorldObject) (Js5Archive.field_e.spatialGrid.firstObjectNear(var3Lifetime1, this.field_u, 29845, this.field_B));
         }
         this.field_x = 64;
         if (param0 == -1) {
-          return (WorldObject) (Js5Archive.field_e.spatialGrid.a(true));
+          return (WorldObject) (Js5Archive.field_e.spatialGrid.firstObject(true));
         }
         var3Lifetime2 = (param0 >> 7) + 1;
-        return (WorldObject) (Js5Archive.field_e.spatialGrid.a(var3Lifetime2, this.field_u, 29845, this.field_B));
+        return (WorldObject) (Js5Archive.field_e.spatialGrid.firstObjectNear(var3Lifetime2, this.field_u, 29845, this.field_B));
     }
 
-    final static void a(int param0, byte[] param1, byte param2, int param3) {
+    final static void putIntAt(int param0, byte[] param1, byte param2, int param3) {
         try {
           int var4_int = -40 / ((param2 + 5) / 42);
           param1[param0 * 4] = (byte)(param3 >>> 24);
@@ -256,13 +256,13 @@ abstract class WorldObject extends SpatialObject {
 
     final int getX(boolean param0) {
         if (!param0) {
-          WorldObject.a(-36, -98);
+          WorldObject.cosFixed(-36, -98);
           return this.field_y >> 16;
         }
         return this.field_y >> 16;
     }
 
-    final static int a(int param0, int param1) {
+    final static int cosFixed(int param0, int param1) {
         int stackIn_5_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_15_0 = 0;
@@ -286,7 +286,7 @@ abstract class WorldObject extends SpatialObject {
           return stackIn_15_0;
         }
         var3 = (byte[]) null;
-        WorldObject.a(28, (byte[]) null, (byte) -56, 124);
+        WorldObject.putIntAt(28, (byte[]) null, (byte) -56, 124);
         param1 = param1 & 8191;
         if (4096 > param1) {
           if (2048 <= param1) {
@@ -304,7 +304,7 @@ abstract class WorldObject extends SpatialObject {
         return stackIn_5_0;
     }
 
-    abstract void g(int param0);
+    abstract void tick(int param0);
 
     public static void releaseStatics(int param0) {
         if (param0 != 237239984) {

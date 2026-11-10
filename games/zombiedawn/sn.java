@@ -68,11 +68,11 @@ final class sn {
         Sprite var5 = new Sprite(640, 90);
         ki.a((byte) -94, var5);
         Rasterizer.fillVerticalGradient(0, 5, 640, 75, 16777215, 1);
-        pa.a(-21189);
+        pa.popRasterState(-21189);
         Sprite var6 = new Sprite(640, 90);
         ki.a((byte) -113, var6);
         b.field_j.drawStringCentered(f.field_j[param0], 320, 65, 13631488, 1);
-        pa.a(-21189);
+        pa.popRasterState(-21189);
         Sprite var7 = new Sprite(640, 90);
         ki.a((byte) -123, var7);
         int var8 = (int)(param1 * 640.0);
@@ -83,9 +83,9 @@ final class sn {
         var7.addOutline(16777215);
         var7.addOutline(1);
         var7.addOutline(1);
-        pa.a(-21189);
+        pa.popRasterState(-21189);
         var7.drawTransparent(0, 13);
-        pa.a(-21189);
+        pa.popRasterState(-21189);
         return var10;
     }
 
@@ -93,7 +93,7 @@ final class sn {
         if (param0 != 12) {
           return false;
         }
-        return NodeHashTableIterator.a(param0 - 139, hc.a(param0 ^ 12));
+        return NodeHashTableIterator.hasTuhstatbutCookie(param0 - 139, hc.a(param0 ^ 12));
     }
 
     final static tj a(int param0, int param1, Js5Archive param2, Js5Archive param3, int param4) {
@@ -111,7 +111,7 @@ final class sn {
             field_f = (int[]) null;
           }
           if (ph.a(param0, 31043, param4, param2)) {
-            stackIn_6_0 = ua.a((byte) -128, param3.a((byte) 51, param0, param4));
+            stackIn_6_0 = ua.a((byte) -128, param3.getFile((byte) 51, param0, param4));
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
@@ -148,7 +148,7 @@ final class sn {
     final static void a(int param0, ep param1, int param2) {
         int var4 = 0;
         am var5 = dp.field_e;
-        var5.j(11, param0);
+        var5.writeCipheredByte(11, param0);
         if (param2 != 0) {
           return;
         }
@@ -184,7 +184,7 @@ final class sn {
           return;
         }
         try {
-          pg.a(true, param1, 31536000L, "jagex-last-login-method", this.field_a);
+          pg.setCookie(true, param1, 31536000L, "jagex-last-login-method", this.field_a);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "sn.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -38,9 +38,9 @@ final class dd {
             var6 = (wg) null;
             dd.a(34, (wg) null, 116);
           }
-          var4_int = param3.a(param0, (byte) 8);
-          var5 = param3.a(var4_int, param1, true);
-          stackIn_3_0 = MouseInputHandler.a(param3, var4_int, -87, var5);
+          var4_int = param3.getGroupIdByName(param0, (byte) 8);
+          var5 = param3.getFileIdByName(var4_int, param1, true);
+          stackIn_3_0 = MouseInputHandler.loadIndexedSprites(param3, var4_int, -87, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

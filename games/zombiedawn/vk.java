@@ -18,7 +18,7 @@ final class vk {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = param0.a(param1, (byte) 41);
+          var4 = param0.getFlatFile(param1, (byte) 41);
           var3 = var4;
           if (var4 == null) {
             stackIn_2_0 = null;

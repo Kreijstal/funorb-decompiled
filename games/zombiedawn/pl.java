@@ -11,7 +11,7 @@ final class pl extends al {
     private int[] field_n;
     static Sprite field_p;
 
-    final static void a(int param0, int param1, byte param2) {
+    final static void resizeDialogLayer(int param0, int param1, byte param2) {
         if (param2 != 50) {
           return;
         }
@@ -19,14 +19,14 @@ final class pl extends al {
           pk.field_N = param0;
           b.field_l = param1;
           if (e.field_S != null) {
-            e.field_S.b(param1, false, param0);
+            e.field_S.recentreDialogs(param1, false, param0);
           }
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "pl.P(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final int b(boolean param0, int param1, int param2) {
+    final int findItemAt(boolean param0, int param1, int param2) {
         int stackIn_7_0 = 0;
         int stackIn_32_0 = 0;
         int stackIn_44_0 = 0;
@@ -52,9 +52,9 @@ final class pl extends al {
             param2 -= 80;
             var4_int = -1;
             for (var5 = 0; var5 < 4; var5++) {
-              if (this.b(2 + var5, -1, 16777215) &&
-                param1 > sf.field_d[var5] &&
-                fl.field_c[var5] + sf.field_d[var5] > param1 &&
+              if (this.isLevelUnlocked(2 + var5, -1, 16777215) &&
+                param1 > BufferedFile.field_d[var5] &&
+                fl.field_c[var5] + BufferedFile.field_d[var5] > param1 &&
                 param2 > gj.field_n[var5] &&
                 param2 < gj.field_n[var5] + pj.field_u[var5]) {
                 var4_int = var5;
@@ -76,7 +76,7 @@ final class pl extends al {
               var5 = -1;
             }
             if (-1 != var5 &&
-              this.b(var5 + 3, rg.field_F, 16777215)) {
+              this.isLevelUnlocked(var5 + 3, rg.field_F, 16777215)) {
               stackIn_44_0 = 3 + var5;
               return stackIn_44_0;
             }
@@ -103,7 +103,7 @@ final class pl extends al {
         }
     }
 
-    private final void f(int param0, int param1) {
+    private final void renderMapSnapshot(int param0, int param1) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
@@ -113,10 +113,10 @@ final class pl extends al {
             return;
           }
           Rasterizer.clear();
-          this.a(0, 0, param1 ^ 260);
+          this.drawChapterMap(0, 0, param1 ^ 260);
           if (param0 >= 0) {
             Rasterizer.blurRectangle(3, 3, 0, 0, 640, 341);
-            this.a(0, 0, 0, param0);
+            this.drawChapterPanel(0, 0, 0, param0);
             cn.field_f.makeRasterTarget(125);
           } else {
             cn.field_f.makeRasterTarget(125);
@@ -129,7 +129,7 @@ final class pl extends al {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, boolean param4) {
+    private final void drawChapterIcon(int param0, int param1, int param2, int param3, boolean param4) {
         int stackIn_14_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
@@ -138,13 +138,13 @@ final class pl extends al {
         var7 = ZombieDawn.field_J;
         try {
           if (b.field_q == param2) {
-            bd.field_i[qd.field_e][param2].b(param3 + sf.field_d[param2], param1 + gj.field_n[param2], 248, 16776960);
-            qn.field_g.drawAdditive(-10 + (sf.field_d[param2] + param3), param1 + (-10 + gj.field_n[param2]), sn.field_f[rk.field_a]);
+            WhirlpoolHasher.field_i[qd.field_e][param2].drawTransparentWithOpacity(param3 + BufferedFile.field_d[param2], param1 + gj.field_n[param2], 248, 16776960);
+            RandomAccessCacheFile.field_g.drawAdditive(-10 + (BufferedFile.field_d[param2] + param3), param1 + (-10 + gj.field_n[param2]), sn.field_f[rk.field_a]);
           } else {
             if (param4) {
-              jo.field_Tb[qd.field_e][param2].e(param3 + sf.field_d[param2], gj.field_n[param2] + param1, 100);
+              jo.field_Tb[qd.field_e][param2].drawWithOpacity(param3 + BufferedFile.field_d[param2], gj.field_n[param2] + param1, 100);
             } else {
-              bd.field_i[qd.field_e][param2].drawTransparent(sf.field_d[param2] + param3, gj.field_n[param2] + param1);
+              WhirlpoolHasher.field_i[qd.field_e][param2].drawTransparent(BufferedFile.field_d[param2] + param3, gj.field_n[param2] + param1);
             }
           }
           if (!param4 &&
@@ -159,12 +159,12 @@ final class pl extends al {
               af.field_d.drawMirrored(ki.field_X[param2], no.field_G[param2] + param1);
             }
             if (cj.field_c[param2] != -1 &&
-              this.b(param2 + 3, -1, 16777215)) {
+              this.isLevelUnlocked(param2 + 3, -1, 16777215)) {
               af.field_d.drawTransparent(cj.field_c[param2], param1 + no.field_G[param2]);
             }
           }
           if (param0 <= 68) {
-            this.a((byte) -30, 7, 28);
+            this.handleMapClick((byte) -30, 7, 28);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -214,7 +214,7 @@ final class pl extends al {
         }
     }
 
-    final void a(int param0) {
+    final void handleNavigationKeys(int param0) {
         jp stackIn_40_0 = null;
         jp stackIn_42_0 = null;
         jp stackIn_43_0 = null;
@@ -257,7 +257,7 @@ final class pl extends al {
                   if (stackIn_58_0 != this.field_b.field_d &&
                     this.field_b.field_d != 1) {
                     if (this.field_b.field_d != 2) {
-                      this.field_b.b(-1 + this.field_b.field_d, 69);
+                      this.field_b.setSelectedIndex(-1 + this.field_b.field_d, 69);
                     } else {
                       stackIn_70_0 = this.field_b;
                       if (var3 != 0 &&
@@ -266,12 +266,12 @@ final class pl extends al {
                       } else {
                         stackIn_71_1 = var3;
                       }
-                      ((jp) (Object) stackIn_70_0).b(stackIn_71_1, -111);
+                      ((jp) (Object) stackIn_70_0).setSelectedIndex(stackIn_71_1, -111);
                     }
                   } else {
-                    this.field_b.b(-1 + this.field_b.field_h, -102);
+                    this.field_b.setSelectedIndex(-1 + this.field_b.field_h, -102);
                   }
-                  if (this.b(this.field_b.field_d, rg.field_F, 16777215)) {
+                  if (this.isLevelUnlocked(this.field_b.field_d, rg.field_F, 16777215)) {
                     decompiledFrameCompleted0 = false;
                     break;
                   }
@@ -279,7 +279,7 @@ final class pl extends al {
                 }
               }
               if (decompiledFrameCompleted0) {
-                this.field_b.b(0, 63);
+                this.field_b.setSelectedIndex(0, 63);
               }
             }
             boolean decompiledFrameRemainder2 = true;
@@ -289,9 +289,9 @@ final class pl extends al {
                   if (-1 + this.field_b.field_h != this.field_b.field_d) {
                     if (this.field_b.field_d != 0 &&
                       this.field_b.field_d != 1) {
-                      this.field_b.b(this.field_b.field_d + 1, -76);
+                      this.field_b.setSelectedIndex(this.field_b.field_d + 1, -76);
                     } else {
-                      this.field_b.b(2, param0 + 31557);
+                      this.field_b.setSelectedIndex(2, param0 + 31557);
                     }
                   } else {
                     boolean decompiledFrameRemainder1 = true;
@@ -308,53 +308,53 @@ final class pl extends al {
                       stackIn_84_0 = stackIn_81_0;
                       stackIn_84_1 = var3;
                     }
-                    ((jp) (Object) stackIn_84_0).b(stackIn_84_1, param0 ^ 31699);
+                    ((jp) (Object) stackIn_84_0).setSelectedIndex(stackIn_84_1, param0 ^ 31699);
                   }
-                } while (!this.b(this.field_b.field_d, rg.field_F, 16777215));
+                } while (!this.isLevelUnlocked(this.field_b.field_d, rg.field_F, 16777215));
                 decompiledFrameRemainder2 = false;
               }
               else {
-                this.field_b.b(0, -75);
+                this.field_b.setSelectedIndex(0, -75);
               }
             }
             if (kg.field_i == 97 ||
               96 == kg.field_i) {
               if (var2_int == 0) {
-                this.field_b.b(1, 126);
+                this.field_b.setSelectedIndex(1, 126);
               } else {
                 if (var2_int != 1 &&
                   var2_int >= 0) {
-                  this.field_b.g(102);
+                  this.field_b.pollKeyboardCode(102);
                   return;
                 }
-                this.field_b.b(0, 97);
+                this.field_b.setSelectedIndex(0, 97);
               }
             }
           } else {
             if (kg.field_i == 96) {
               if (var2_int < 2) {
-                this.field_b.b(0, -125);
+                this.field_b.setSelectedIndex(0, -125);
               } else {
                 if (2 < var2_int) {
-                  this.field_b.b(this.field_b.field_d - 1, 107);
+                  this.field_b.setSelectedIndex(this.field_b.field_d - 1, 107);
                 }
               }
             }
             if (kg.field_i == 97) {
               if (var2_int >= 2) {
                 if (var2_int < 5 &&
-                  this.b(var2_int + 1, -1, 16777215)) {
-                  this.field_b.b(1 + var2_int, -81);
+                  this.isLevelUnlocked(var2_int + 1, -1, 16777215)) {
+                  this.field_b.setSelectedIndex(1 + var2_int, -81);
                 }
               } else {
-                this.field_b.b(0, -99);
+                this.field_b.setSelectedIndex(0, -99);
               }
             }
             if (kg.field_i == 99) {
               if (var2_int >= 2) {
                 id.field_N = var2_int;
               }
-              this.field_b.b(0, param0 ^ -31697);
+              this.field_b.setSelectedIndex(0, param0 ^ -31697);
             }
             if (kg.field_i == 98) {
               if (-1 != var2_int) {
@@ -373,14 +373,14 @@ final class pl extends al {
                     stackIn_43_0 = stackIn_40_0;
                     stackIn_43_1 = 2;
                   }
-                  ((jp) (Object) stackIn_43_0).b(stackIn_43_1, 120);
+                  ((jp) (Object) stackIn_43_0).setSelectedIndex(stackIn_43_1, 120);
                 }
               } else {
-                this.field_b.b(0, param0 + 31733);
+                this.field_b.setSelectedIndex(0, param0 + 31733);
               }
             }
           }
-          this.field_b.g(102);
+          this.field_b.pollKeyboardCode(102);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -389,7 +389,7 @@ final class pl extends al {
         }
     }
 
-    final void a(boolean param0, int param1, int param2) {
+    final void activateItem(boolean param0, int param1, int param2) {
         GameWorld stackIn_44_0 = null;
         GameWorld stackIn_44_1 = null;
         int stackIn_44_2 = 0;
@@ -411,8 +411,8 @@ final class pl extends al {
           var4_int = this.field_h[param1];
           var5 = var4_int;
           if (var5 == 26) {
-            if (this.field_b.d(-120)) {
-              this.e(50, -1);
+            if (this.field_b.isActivated(-120)) {
+              this.setOpenChapter(50, -1);
             }
           } else {
             if (var5 != 22 &&
@@ -426,9 +426,9 @@ final class pl extends al {
                 var5 != 31 &&
                 var5 != 32 &&
                 33 != var5) {
-                super.a(param0, param1, -8512);
+                super.activateItem(param0, param1, -8512);
               } else {
-                if (!(!this.field_b.d(-121))) {
+                if (!(!this.field_b.isActivated(-121))) {
                   var5 = rg.field_F + 4 * qd.field_e;
                   var6 = var4_int - 27;
                   stackIn_44_0 = null;
@@ -446,7 +446,7 @@ final class pl extends al {
                   vl.field_b = new GameWorld(stackIn_44_2, stackIn_45_3);
                   if (var6 == 0 &&
                     var5 == 0) {
-                    ((kl) (jj.c(12, 81))).e(-124);
+                    ((kl) (jj.getScreen(12, 81))).startIntro(-124);
                     ca.a(true, true, 12);
                   } else {
                     ca.a(true, true, 0);
@@ -456,8 +456,8 @@ final class pl extends al {
               decompiledFrameRemainder0 = false;
             }
             else {
-              if (this.field_b.d(-122)) {
-                this.e(param2 + 8562, var4_int - 22);
+              if (this.field_b.isActivated(-122)) {
+                this.setOpenChapter(param2 + 8562, var4_int - 22);
               }
             }
           }
@@ -472,7 +472,7 @@ final class pl extends al {
         }
     }
 
-    final void b(byte param0, boolean param1) {
+    final void resetChapterHighlights(byte param0, boolean param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -482,7 +482,7 @@ final class pl extends al {
           hm.field_J = -1;
           b.field_q = -1;
           if (param0 < 83) {
-            this.a(114, -11, -24, -34);
+            this.drawChapterPanel(114, -11, -24, -34);
           }
           if (param1) {
             rg.field_F = -1;
@@ -500,7 +500,7 @@ final class pl extends al {
         }
     }
 
-    final static void a(String param0, byte param1, java.applet.Applet param2) {
+    final static void setSessionCookie(String param0, byte param1, java.applet.Applet param2) {
         try {
           String var6 = null;
           String var5 = null;
@@ -532,7 +532,7 @@ final class pl extends al {
           } catch (Throwable throwable) {
           }
           var3_int = 60 % ((6 - param1) / 62);
-          NodeHashTableIterator.a(param2, 1);
+          NodeHashTableIterator.updatePageLinks(param2, 1);
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -540,7 +540,7 @@ final class pl extends al {
         }
     }
 
-    final void a(byte param0) {
+    final void drawScreen(byte param0) {
         int stackIn_15_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
@@ -548,11 +548,11 @@ final class pl extends al {
         int var3 = 0;
         int var4 = 0;
         try {
-          super.a((byte) -68);
+          super.drawScreen((byte) -68);
           if (rg.field_F != -1) {
-            this.a(0, vh.field_b, 80 + id.field_M, rg.field_F);
+            this.drawChapterPanel(0, vh.field_b, 80 + id.field_M, rg.field_F);
           } else {
-            this.a(80 + id.field_M, vh.field_b, -5);
+            this.drawChapterMap(80 + id.field_M, vh.field_b, -5);
           }
           if (param0 > -35) {
             field_r = 53;
@@ -580,7 +580,7 @@ final class pl extends al {
         }
     }
 
-    final void a(byte param0, int param1, int param2) {
+    final void handleMapClick(byte param0, int param1, int param2) {
         try {
           int var4_int = -99 % ((-61 - param0) / 34);
         } catch (RuntimeException runtimeException) {
@@ -588,7 +588,7 @@ final class pl extends al {
         }
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void drawChapterMap(int param0, int param1, int param2) {
         Object stackIn_3_0;
         int stackIn_3_1;
         int stackIn_3_2;
@@ -623,35 +623,35 @@ final class pl extends al {
           stackIn_3_2 = param0;
           stackIn_3_3 = 0;
           stackIn_3_4 = param1;
-          stackIn_4_5 = !(this.b(2, -1, param2 + 16777220));
-          this.a(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_4_5);
+          stackIn_4_5 = !(this.isLevelUnlocked(2, -1, param2 + 16777220));
+          this.drawChapterIcon(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_4_5);
           stackIn_7_0 = this;
           stackIn_7_1 = 82;
           stackIn_7_2 = param0;
           stackIn_7_3 = 1;
           stackIn_7_4 = param1;
-          stackIn_8_5 = !(this.b(3, -1, 16777215));
-          this.a(stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_7_4, stackIn_8_5);
+          stackIn_8_5 = !(this.isLevelUnlocked(3, -1, 16777215));
+          this.drawChapterIcon(stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_7_4, stackIn_8_5);
           stackIn_11_0 = this;
           stackIn_11_1 = 69;
           stackIn_11_2 = param0;
           stackIn_11_3 = 3;
           stackIn_11_4 = param1;
-          stackIn_12_5 = !(this.b(5, -1, 16777215));
-          this.a(stackIn_11_1, stackIn_11_2, stackIn_11_3, stackIn_11_4, stackIn_12_5);
+          stackIn_12_5 = !(this.isLevelUnlocked(5, -1, 16777215));
+          this.drawChapterIcon(stackIn_11_1, stackIn_11_2, stackIn_11_3, stackIn_11_4, stackIn_12_5);
           stackIn_15_0 = this;
           stackIn_15_1 = 115;
           stackIn_15_2 = param0;
           stackIn_15_3 = 2;
           stackIn_15_4 = param1;
-          if (this.b(4, -1, 16777215)) {
+          if (this.isLevelUnlocked(4, -1, 16777215)) {
             stackIn_16_0 = this;
             stackIn_16_5 = false;
           } else {
             stackIn_16_0 = this;
             stackIn_16_5 = true;
           }
-          this.a(stackIn_15_1, stackIn_15_2, stackIn_15_3, stackIn_15_4, stackIn_16_5);
+          this.drawChapterIcon(stackIn_15_1, stackIn_15_2, stackIn_15_3, stackIn_15_4, stackIn_16_5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -660,7 +660,7 @@ final class pl extends al {
         }
     }
 
-    final void c(int param0) {
+    final void handleEscape(int param0) {
         boolean stackIn_12_0 = false;
         boolean stackIn_12_1 = false;
         int stackIn_13_2 = 0;
@@ -668,7 +668,7 @@ final class pl extends al {
         RuntimeException var2 = null;
         try {
           if (param0 != -26931) {
-            this.b((byte) -31, true);
+            this.resetChapterHighlights((byte) -31, true);
           }
           if (ce.field_p != 0) {
             return;
@@ -683,7 +683,7 @@ final class pl extends al {
             }
             ca.a(stackIn_12_0, stackIn_12_1, stackIn_13_2);
           } else {
-            this.e(50, -1);
+            this.setOpenChapter(50, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -693,7 +693,7 @@ final class pl extends al {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3) {
+    private final void drawChapterPanel(int param0, int param1, int param2, int param3) {
         int var12 = 0;
         int stackIn_5_0 = 0;
         int stackIn_9_0 = 0;
@@ -741,7 +741,7 @@ final class pl extends al {
           } else {
             Rasterizer.setClip(0, 0, 320 + param1, nh.field_P);
             nc.field_k.drawTransparent(qo.field_s + param1, 30 + param2);
-            Rasterizer.setClip(320 + param1, 0, bd.field_e, nh.field_P);
+            Rasterizer.setClip(320 + param1, 0, WhirlpoolHasher.field_e, nh.field_P);
             nc.field_k.drawTransparent(param1 - (-j.field_d + nc.field_k.field_r), 30 + param2);
             Rasterizer.resetClip();
           }
@@ -775,7 +775,7 @@ final class pl extends al {
           for (var12 = param0; var12 < 7; var12++) {
             stackIn_34_0 = (hm.field_J == var12) ? 1 : 0;
             var13 = stackIn_34_0;
-            stackIn_38_0 = (this.b(3 + var12, param3, 16777215)) ? 0 : 1;
+            stackIn_38_0 = (this.isLevelUnlocked(3 + var12, param3, 16777215)) ? 0 : 1;
             var14 = stackIn_38_0;
             var15 = null;
             if (var14 != 0) {
@@ -822,7 +822,7 @@ final class pl extends al {
         }
     }
 
-    final void a(byte param0, boolean param1) {
+    final void handleInput(byte param0, boolean param1) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -834,7 +834,7 @@ final class pl extends al {
         int var3_intLifetime2;
         var5 = ZombieDawn.field_J;
         try {
-          super.a((byte) -113, param1);
+          super.handleInput((byte) -113, param1);
           if (ce.field_p != 0) {
             if (!fm.field_F) {
               ce.field_p = ce.field_p - 1;
@@ -845,7 +845,7 @@ final class pl extends al {
               return;
             }
             rg.field_F = IterableNodeHashTable.field_b;
-            this.f(-1, -257);
+            this.renderMapSnapshot(-1, -257);
             i.field_T.setAsRenderTarget();
             Rasterizer.blurRectangle(3, 3, 0, 0, 640, 341);
             cn.field_f.makeRasterTarget(-128);
@@ -894,7 +894,7 @@ final class pl extends al {
             b.field_q = -1;
           } else {
             if (var3_intLifetime2 - 2 != b.field_q) {
-              ub.a(-2 + var3_intLifetime2, (byte) -31);
+              ub.renderLevelIconGlow(-2 + var3_intLifetime2, (byte) -31);
             }
           }
           return;
@@ -905,24 +905,24 @@ final class pl extends al {
         }
     }
 
-    private final void e(int param0, int param1) {
+    private final void setOpenChapter(int param0, int param1) {
         int stackIn_7_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
         try {
-          this.b((byte) 107, false);
+          this.resetChapterHighlights((byte) 107, false);
           if (param0 != 50) {
             this.field_o = (int[]) null;
           }
           if (param1 == -1) {
             var3_int = rg.field_F + 2;
-            this.f(rg.field_F, -257);
+            this.renderMapSnapshot(rg.field_F, -257);
             this.field_h = this.field_n;
             this.field_b = this.field_q;
             fm.field_F = false;
             ce.field_p = 15;
-            this.field_b.a(this.field_s.field_j, (byte) -125, this.b(true, ha.field_b, ei.field_K), var3_int);
+            this.field_b.initializeSelection(this.field_s.field_j, (byte) -125, this.findItemAt(true, ha.field_b, ei.field_K), var3_int);
             rg.field_F = -1;
           } else {
             IterableNodeHashTable.field_b = param1;
@@ -930,7 +930,7 @@ final class pl extends al {
             this.field_h = this.field_o;
             this.field_b = this.field_s;
             ce.field_p = 1;
-            this.field_b.a(this.field_q.field_j, (byte) -114, this.b(true, ha.field_b, ei.field_K), 3);
+            this.field_b.initializeSelection(this.field_q.field_j, (byte) -114, this.findItemAt(true, ha.field_b, ei.field_K), 3);
             if (param1 != 9) {
               stackIn_7_0 = sg.field_jb.textWidth(gn.field_c[qd.field_e][param1]) + 80;
             } else {
@@ -943,7 +943,7 @@ final class pl extends al {
             j.field_d = 320 + (bm.field_c >> 1);
             qo.field_s = 320 - (bm.field_c >> 1);
             wl.field_b = j.field_d - 34;
-            this.f(param1, param0 ^ -307);
+            this.renderMapSnapshot(param1, param0 ^ -307);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -953,7 +953,7 @@ final class pl extends al {
         }
     }
 
-    private final boolean b(int param0, int param1, int param2) {
+    private final boolean isLevelUnlocked(int param0, int param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -994,7 +994,7 @@ final class pl extends al {
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         try {
           field_t = null;
           field_p = null;

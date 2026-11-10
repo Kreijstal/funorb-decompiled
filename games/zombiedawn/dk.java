@@ -15,7 +15,7 @@ final class dk extends wc {
     private int field_Yb;
     private a[] field_bc;
 
-    final void b(int param0, byte param1, int param2) {
+    final void drawMuzzleFlash(int param0, byte param1, int param2) {
         int var8 = ZombieDawn.field_J;
         int var4 = 2 + this.field_Gb;
         if (param1 > -91) {
@@ -47,7 +47,7 @@ final class dk extends wc {
         }
     }
 
-    final void g(int param0) {
+    final void tick(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -61,8 +61,8 @@ final class dk extends wc {
         this.field_Wb = this.field_Wb + 1;
         if (1 == this.state) {
           this.field_V = false;
-          this.g((byte) 87);
-          this.h((byte) -91);
+          this.applyVelocity((byte) 87);
+          this.stepTowardTarget((byte) -91);
           this.field_V = true;
         }
         if (this.state == 10 &&
@@ -109,11 +109,11 @@ final class dk extends wc {
                         if (this.field_Wb >= 15930) {
                           if (this.field_Wb == 15930) {
                             this.setState(0, -6904);
-                            super.g(112);
+                            super.tick(112);
                           } else {
                             if (this.field_Wb == 15980) {
                               this.setState(2, -6904);
-                              super.g(112);
+                              super.tick(112);
                             } else {
                               if (this.field_Wb > 15980) {
                                 if (this.field_G >= 4) {
@@ -126,7 +126,7 @@ final class dk extends wc {
                                     this.targetY = this.getY(237239984);
                                     this.field_G = 0;
                                     this.setState(0, -6904);
-                                    super.g(100);
+                                    super.tick(100);
                                     this.field_Wb = 15930;
                                   } else {
                                     this.field_y = this.field_y - 8192;
@@ -137,7 +137,7 @@ final class dk extends wc {
                                   if (this.state != 10) {
                                     this.field_y = this.field_y - 12288;
                                   }
-                                  super.g(125);
+                                  super.tick(125);
                                   fieldTemp$1 = this.field_N + 1;
                                   this.field_N = this.field_N + 1;
                                   if (fieldTemp$1 > 5) {
@@ -150,12 +150,12 @@ final class dk extends wc {
                                   }
                                 }
                               } else {
-                                super.g(120);
+                                super.tick(120);
                               }
                             }
                           }
                         } else {
-                          super.g(109);
+                          super.tick(109);
                           if (null != this.field_yb &&
                             this.state == 10) {
                             this.field_cc = 0;
@@ -171,7 +171,7 @@ final class dk extends wc {
                         }
                       } else {
                         kh.a(110, false);
-                        jp.$cfr$intArgs$a$c44adeabe1a9(127, 100);
+                        jp.startTrackedSoundEffect(127, 100);
                         this.setState(0, -6904);
                       }
                     }
@@ -186,10 +186,10 @@ final class dk extends wc {
         }
     }
 
-    final void r(byte param0) {
+    final void raiseWithDrawOffset(byte param0) {
         this.field_Xb = this.field_Xb + 2621440;
         if (param0 >= -31) {
-          this.r((byte) 103);
+          this.raiseWithDrawOffset((byte) 103);
         }
         this.field_x = this.field_x - 2621440;
     }
@@ -203,7 +203,7 @@ final class dk extends wc {
         field_Tb = (int[][][]) null;
     }
 
-    final void a(byte param0, Camera param1) {
+    final void draw(byte param0, Camera param1) {
         int var8 = 0;
         int stackIn_16_0 = 0;
         Sprite stackIn_29_0 = null;
@@ -231,7 +231,7 @@ final class dk extends wc {
           var5 = 0;
           var6 = var4;
           if (param0 > -76) {
-            this.q((byte) -95);
+            this.skipToFinalPhase((byte) -95);
           }
           var7_int = this.state;
           if (var7_int != 0 &&
@@ -273,7 +273,7 @@ final class dk extends wc {
           ld.field_l[this.field_t][var5].drawTransparent(-24 + var3_int, var6 - 48);
           var7 = new int[]{0, -16, 16};
           if (this.field_Gb > 0) {
-            this.b(var3_int - 4 + var7[this.field_cc], (byte) -97, 15 + var6);
+            this.drawMuzzleFlash(var3_int - 4 + var7[this.field_cc], (byte) -97, 15 + var6);
           }
           if (this.field_Wb >= 402) {
             for (var8 = 0; var8 < 40; var8++) {
@@ -296,12 +296,12 @@ final class dk extends wc {
         }
     }
 
-    final void q(byte param0) {
+    final void skipToFinalPhase(byte param0) {
         if (param0 < 89) {
-          this.b(-1, (byte) -3, 12);
+          this.drawMuzzleFlash(-1, (byte) -3, 12);
         }
         this.field_Wb = 15930;
-        this.g(124);
+        this.tick(124);
     }
 
     dk(int param0, int param1) {

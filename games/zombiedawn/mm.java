@@ -20,10 +20,10 @@ final class mm extends IntrusiveNode {
         RuntimeException var3 = null;
         var4 = ZombieDawn.field_J;
         try {
-          var5 = (pb) (this.field_h.b((byte) 26));
+          var5 = (pb) (this.field_h.last((byte) 26));
           while (var5 != null) {
             var5.a((byte) -28, param1);
-            var5 = (pb) (this.field_h.a(false));
+            var5 = (pb) (this.field_h.previous(false));
           }
           if (param0 != 117) {
             field_j = (String) null;
@@ -48,7 +48,7 @@ final class mm extends IntrusiveNode {
           field_k = 1.1166023015975952f;
         }
         if (j.field_l == null) {
-          j.field_l = t.a(false, 6);
+          j.field_l = t.sendTrackedRequest(false, 6);
         }
         if (j.field_l.field_k) {
           j.field_l = null;
@@ -64,7 +64,7 @@ final class mm extends IntrusiveNode {
     }
 
     final static void c(byte param0) {
-        se.field_j = oj.b(0);
+        ProxySocketConnector.field_j = oj.b(0);
         if (param0 > -57) {
           mm.c((byte) -40);
         }
@@ -74,10 +74,10 @@ final class mm extends IntrusiveNode {
 
     final void a(int param0) {
         int var3 = ZombieDawn.field_J;
-        pb var5 = (pb) (this.field_h.b((byte) 26));
+        pb var5 = (pb) (this.field_h.last((byte) 26));
         while (var5 != null) {
           var5.e((byte) -113);
-          var5 = (pb) (this.field_h.a(false));
+          var5 = (pb) (this.field_h.previous(false));
         }
         if (param0 != -25687) {
           Human var4 = (Human) null;
@@ -134,13 +134,13 @@ final class mm extends IntrusiveNode {
           if (param1 <= 49) {
             mm.releaseStatics((byte) 37);
           }
-          var5 = (pb) (this.field_h.b((byte) 26));
+          var5 = (pb) (this.field_h.last((byte) 26));
           while (true) {
             if (var5 == null) {
               return false;
             }
             if (!var5.a(var4, var3_int, 114)) {
-              var5 = (pb) (this.field_h.a(false));
+              var5 = (pb) (this.field_h.previous(false));
               continue;
             }
             break;

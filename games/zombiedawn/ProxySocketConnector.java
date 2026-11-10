@@ -4,7 +4,7 @@
 import java.io.*;
 import java.util.*;
 
-final class se extends qg {
+final class ProxySocketConnector extends SocketConnector {
     private java.net.ProxySelector field_k;
     static int field_o;
     static cg field_n;
@@ -109,7 +109,7 @@ final class se extends qg {
         }
     }
 
-    final static void a(int param0, java.awt.Canvas param1) {
+    final static void attachCanvasInput(int param0, java.awt.Canvas param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -117,9 +117,9 @@ final class se extends qg {
         RuntimeException decompiledCaughtException = null;
         try {
           rk.a((byte) -65, (java.awt.Component) ((Object) param1));
-          pg.a((java.awt.Component) ((Object) param1), (byte) 66);
+          pg.attachInputListeners((java.awt.Component) ((Object) param1), (byte) 66);
           if (param0 != 20922) {
-            se.a(true, -64, 43, 72, 83, -44, -98, -34, -52, -65, -84, 97, -14, 56, 78, 114);
+            ProxySocketConnector.drawSortedTriangle(true, -64, 43, 72, 83, -44, -98, -34, -52, -65, -84, 97, -14, 56, 78, 114);
           }
           if (jl.field_u == null) {
             return;
@@ -149,33 +149,33 @@ final class se extends qg {
           field_i = null;
           return;
         }
-        se.releaseStatics(-126);
+        ProxySocketConnector.releaseStatics(-126);
         field_n = null;
         field_l = null;
         field_i = null;
     }
 
-    final static void a(boolean param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
+    final static void drawSortedTriangle(boolean param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
         int var17;
         var17 = ZombieDawn.field_J;
         if (param13 < param4) {
           if (param4 < param14) {
-            pi.a(param11, param10, Rasterizer.pixels, param6, (byte) -104, param7, param12, param8, param2, param1, param15, param14, param9, param3, param5, param13, param4);
+            ImageProducerRasterBuffer.fillGouraudTriangle(param11, param10, Rasterizer.pixels, param6, (byte) -104, param7, param12, param8, param2, param1, param15, param14, param9, param3, param5, param13, param4);
           } else {
             if (param13 >= param14) {
-              pi.a(param5, param1, Rasterizer.pixels, param11, (byte) -104, param12, param9, param3, param8, param15, param10, param4, param7, param2, param6, param14, param13);
+              ImageProducerRasterBuffer.fillGouraudTriangle(param5, param1, Rasterizer.pixels, param11, (byte) -104, param12, param9, param3, param8, param15, param10, param4, param7, param2, param6, param14, param13);
             } else {
-              pi.a(param5, param15, Rasterizer.pixels, param6, (byte) -104, param12, param7, param3, param2, param1, param10, param4, param9, param8, param11, param13, param14);
+              ImageProducerRasterBuffer.fillGouraudTriangle(param5, param15, Rasterizer.pixels, param6, (byte) -104, param12, param7, param3, param2, param1, param10, param4, param9, param8, param11, param13, param14);
             }
           }
         } else {
           if (param13 < param14) {
-            pi.a(param11, param1, Rasterizer.pixels, param5, (byte) -104, param7, param9, param8, param3, param10, param15, param14, param12, param2, param6, param4, param13);
+            ImageProducerRasterBuffer.fillGouraudTriangle(param11, param1, Rasterizer.pixels, param5, (byte) -104, param7, param9, param8, param3, param10, param15, param14, param12, param2, param6, param4, param13);
           } else {
             if (param4 >= param14) {
-              pi.a(param6, param10, Rasterizer.pixels, param11, (byte) -104, param9, param12, param2, param8, param15, param1, param13, param7, param3, param5, param14, param4);
+              ImageProducerRasterBuffer.fillGouraudTriangle(param6, param10, Rasterizer.pixels, param11, (byte) -104, param9, param12, param2, param8, param15, param1, param13, param7, param3, param5, param14, param4);
             } else {
-              pi.a(param6, param15, Rasterizer.pixels, param5, (byte) -104, param9, param7, param2, param3, param10, param1, param13, param12, param8, param11, param4, param14);
+              ImageProducerRasterBuffer.fillGouraudTriangle(param6, param15, Rasterizer.pixels, param5, (byte) -104, param9, param7, param2, param3, param10, param1, param13, param12, param8, param11, param4, param14);
             }
           }
         }
@@ -185,11 +185,11 @@ final class se extends qg {
         field_m = (IntrusiveDeque) null;
     }
 
-    se() {
+    ProxySocketConnector() {
         this.field_k = java.net.ProxySelector.getDefault();
     }
 
-    final java.net.Socket a(boolean param0) throws IOException {
+    final java.net.Socket connect(boolean param0) throws IOException {
         int var9 = 0;
         int stackIn_6_0 = 0;
         java.net.ProxySelector stackIn_9_0;
@@ -273,7 +273,7 @@ final class se extends qg {
           var11 = (java.net.Proxy) (var10);
           try {
             if (false) throw (dg) null;
-            var12 = this.a(var11, (byte) -27);
+            var12 = this.connectViaProxy(var11, (byte) -27);
             if (var12 != null) {
               stackIn_25_0 = var12;
               return stackIn_25_0;
@@ -288,12 +288,12 @@ final class se extends qg {
           }
         }
         if (var7 != null) {
-          throw se.<RuntimeException>rethrowUnchecked((Throwable) var7);
+          throw ProxySocketConnector.<RuntimeException>rethrowUnchecked((Throwable) var7);
         }
         return this.connectDirect(16076);
     }
 
-    private final java.net.Socket a(java.net.Proxy param0, byte param1) throws IOException {
+    private final java.net.Socket connectViaProxy(java.net.Proxy param0, byte param1) throws IOException {
         java.net.Socket stackIn_2_0 = null;
         Object stackIn_5_0 = null;
         java.net.Socket stackIn_15_0 = null;

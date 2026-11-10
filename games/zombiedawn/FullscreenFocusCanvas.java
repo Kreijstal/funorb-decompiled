@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class la extends java.awt.Canvas implements java.awt.event.FocusListener {
+final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.event.FocusListener {
     java.awt.Frame field_e;
     volatile boolean field_a;
     static int[] field_b;
@@ -11,7 +11,7 @@ final class la extends java.awt.Canvas implements java.awt.event.FocusListener {
     public static void releaseStatics(int param0) {
         if (param0 < 39) {
           Js5Archive var2 = (Js5Archive) null;
-          la.a((Js5Archive) null, 13, (Js5Archive) null, (byte) 28, -8);
+          FullscreenFocusCanvas.loadBinaryFont((Js5Archive) null, 13, (Js5Archive) null, (byte) 28, -8);
           field_c = null;
           field_b = null;
           field_d = null;
@@ -22,7 +22,7 @@ final class la extends java.awt.Canvas implements java.awt.event.FocusListener {
         field_d = null;
     }
 
-    final static void a(int param0) {
+    final static void updateBackdropActors(int param0) {
         int var2 = 0;
         u[] var1 = null;
         u var3 = null;
@@ -35,7 +35,7 @@ final class la extends java.awt.Canvas implements java.awt.event.FocusListener {
           var5 = ij.field_L;
           var1 = var5;
           if (param0 < 17) {
-            la.a((byte) 114);
+            FullscreenFocusCanvas.persistSessionSeedBytes((byte) 114);
           }
           for (var2 = 0; var2 < var5.length; var2++) {
             var3 = var5[var2];
@@ -49,9 +49,9 @@ final class la extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
     }
 
-    final void a(PlatformTaskDispatcher param0, byte param1) {
+    final void exitFullscreen(PlatformTaskDispatcher param0, byte param1) {
         try {
-          jb.a(113, this.field_e, param0);
+          jb.closeFullscreenFrame(113, this.field_e, param0);
           if (param1 <= 112) {
             java.awt.Graphics var4 = (java.awt.Graphics) null;
             this.paint((java.awt.Graphics) null);
@@ -61,7 +61,7 @@ final class la extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
     }
 
-    final static int b(int param0) {
+    final static int getEnteredAge(int param0) {
         if (param0 != 0) {
           field_d = (uh) null;
           return ae.field_a;
@@ -72,10 +72,10 @@ final class la extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void update(java.awt.Graphics param0) {
     }
 
-    la() {
+    FullscreenFocusCanvas() {
     }
 
-    final static void a(byte param0) {
+    final static void persistSessionSeedBytes(byte param0) {
         try {
           Exception var1 = null;
           Throwable decompiledCaughtException = null;
@@ -84,8 +84,8 @@ final class la extends java.awt.Canvas implements java.awt.event.FocusListener {
           }
           if (null != ce.field_t) {
             try {
-              ce.field_t.a(0, 0L);
-              ce.field_t.a(122, fj.field_g.payload, fj.field_g.position, 24);
+              ce.field_t.seek(0, 0L);
+              ce.field_t.write(122, fj.field_g.payload, fj.field_g.position, 24);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
@@ -112,7 +112,7 @@ final class la extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    final static oi a(Js5Archive param0, int param1, Js5Archive param2, byte param3, int param4) {
+    final static oi loadBinaryFont(Js5Archive param0, int param1, Js5Archive param2, byte param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
         oi stackIn_5_0 = null;
@@ -129,7 +129,7 @@ final class la extends java.awt.Canvas implements java.awt.event.FocusListener {
             return (oi) (stackIn_2_0);
           }
           if (param3 <= -96) {
-            stackIn_7_0 = Point.a(-16491, param0.a((byte) 51, param4, param1));
+            stackIn_7_0 = Point.createGlyphFont(-16491, param0.getFile((byte) 51, param4, param1));
             return stackIn_7_0;
           }
           stackIn_5_0 = (oi) null;
@@ -154,7 +154,7 @@ final class la extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
     }
 
-    final static vk a(String param0, byte param1) {
+    final static vk validateEmailAddress(String param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;

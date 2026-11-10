@@ -7,7 +7,7 @@ final class ca {
 
     final static void a(byte param0, String param1) {
         try {
-          pa.a(param1, false);
+          pa.setRequestedDisplayName(param1, false);
           if (param0 != 2) {
             ca.a(11, -83, 78, 21, -117, 67, 107, -114, 29);
           }
@@ -124,15 +124,15 @@ final class ca {
         RuntimeException var2 = null;
         var3 = ZombieDawn.field_J;
         try {
-          var4 = (wg) (jb.field_b.b((byte) 26));
+          var4 = (wg) (jb.field_b.last((byte) 26));
           while (var4 != null) {
             nd.a(param0, 1, var4);
-            var4 = (wg) (jb.field_b.a(false));
+            var4 = (wg) (jb.field_b.previous(false));
           }
-          var5 = (lo) (c.field_b.b((byte) 26));
+          var5 = (lo) (c.field_b.last((byte) 26));
           while (var5 != null) {
-            UiWidget.a(param0, 0, var5);
-            var5 = (lo) (c.field_b.a(false));
+            UiWidget.sendIntArrayRequest(param0, 0, var5);
+            var5 = (lo) (c.field_b.previous(false));
           }
           if (param1 > -95) {
             ca.a(33, (byte) -47);
@@ -158,15 +158,15 @@ final class ca {
         var4 = ZombieDawn.field_J;
         if (!ng.field_e) {
           if (param2 == 1) {
-            ph.a((byte) 106, w.field_a[0]);
+            ph.a((byte) 106, ArchiveProvider.field_a[0]);
           } else {
             if (4 != param2) {
               if (param2 == 2 &&
                 GameApplet.field_c.field_d == 4) {
-                vl.field_b.c(9091);
+                vl.field_b.playLevelMusic(9091);
               }
             } else {
-              tp.a(109, true, w.field_a[9]);
+              tp.playMusicTrack(109, true, ArchiveProvider.field_a[9]);
             }
           }
           if (GameApplet.field_c.field_d == 0) {
@@ -178,7 +178,7 @@ final class ca {
           } else {
             if (GameApplet.field_c.field_d == 2 &&
               param2 == 0) {
-              vj.c(74);
+              vj.fadeOutAllSoundEffects(74);
             }
           }
         }
@@ -187,7 +187,7 @@ final class ca {
           stackIn_19_0 = (0 != vl.field_b.field_G);
           eh.field_z = stackIn_19_0;
         }
-        sg.field_eb = jj.c(param2, 96);
+        sg.field_eb = jj.getScreen(param2, 96);
         po.field_xb = 0;
         if (GameApplet.field_c.field_d == 1 &&
           sg.field_eb.field_d == 14 ||
@@ -196,11 +196,11 @@ final class ca {
           po.field_xb = 31;
         }
         if (sg.field_eb.field_d >= 0) {
-          sg.field_eb.a((byte) 74, 0, param0);
+          sg.field_eb.resetSelection((byte) 74, 0, param0);
         }
         if (sg.field_eb.field_d == 1 &&
           GameApplet.field_c.field_d != 14) {
-          ip.c(-94);
+          ip.resetBackdropActors(-94);
         }
         if (!param1) {
           field_a = -0.24351234703539312;

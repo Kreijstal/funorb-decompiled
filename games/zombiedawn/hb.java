@@ -17,9 +17,9 @@ final class hb extends UiWidget {
     private int field_H;
     private int field_E;
 
-    private final void g(int param0) {
-        this.field_L = new Sprite[]{this.b(this.field_y, this.field_A, -69), this.b(this.field_z, this.field_x, -105)};
-        this.field_K = this.a(-108);
+    private final void rebuildSprites(int param0) {
+        this.field_L = new Sprite[]{this.createStripeSprite(this.field_y, this.field_A, -69), this.createStripeSprite(this.field_z, this.field_x, -105)};
+        this.field_K = this.createCapMask(-108);
         this.field_J = this.field_K.copyFlippedHorizontal();
         this.field_B = new Sprite(this.field_n >> 1, this.field_n);
         int var2 = -77 / ((param0 - 88) / 33);
@@ -29,7 +29,7 @@ final class hb extends UiWidget {
         this(param0, param1, param2, param3, param4, param5, param6, 8355711 & param5 >> 1, param6 >> 1 & 8355711);
     }
 
-    private final Sprite b(int param0, int param1, int param2) {
+    private final Sprite createStripeSprite(int param0, int param1, int param2) {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -60,11 +60,11 @@ final class hb extends UiWidget {
           Rasterizer.drawHorizontalLine(var8 + this.field_E, var7, this.field_E, var13Lifetime1);
           Rasterizer.drawHorizontalLine(-this.field_E + var8, var7, this.field_E, var13Lifetime1);
         }
-        pa.a(-21189);
+        pa.popRasterState(-21189);
         return var15;
     }
 
-    private final void a(int param0, Sprite param1, byte param2, int param3) {
+    private final void drawStripedBar(int param0, Sprite param1, byte param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -78,18 +78,18 @@ final class hb extends UiWidget {
         var8 = ZombieDawn.field_J;
         try {
           var5_int = this.field_i + param3;
-          Mover.$cfr$intArgs$a$3aedf8649552(param0, 99, -this.field_K.field_w + var5_int, this.field_n + param0, this.field_K.field_w + param3);
+          Mover.intersectClipIntArgs(param0, 99, -this.field_K.field_w + var5_int, this.field_n + param0, this.field_K.field_w + param3);
           for (var6 = param3 - this.field_H; var5_int > var6; var6 = var6 + param1.field_w) {
             param1.drawTransparent(var6, param0);
           }
           var7 = -32 / ((param2 - 34) / 50);
-          pa.a(-21189);
+          pa.popRasterState(-21189);
           if (Rasterizer.clipLeft <= this.field_K.field_w + param3) {
             ki.a((byte) -118, this.field_B);
             param1.drawTransparent(-this.field_H, 0);
             param1.drawTransparent(-this.field_H + 2 * this.field_E, 0);
             this.field_J.drawMultiply(0, 0);
-            pa.a(-21189);
+            pa.popRasterState(-21189);
             this.field_B.drawTransparent(param3, param0);
           }
           if (-this.field_K.field_w + var5_int <= Rasterizer.clipRight) {
@@ -99,7 +99,7 @@ final class hb extends UiWidget {
             param1.drawTransparent(-var7Lifetime1, 0);
             param1.drawTransparent(-var7Lifetime1 + 2 * this.field_E, 0);
             this.field_K.drawMultiply(0, 0);
-            pa.a(-21189);
+            pa.popRasterState(-21189);
             this.field_B.drawTransparent(var5_int - this.field_K.field_w, param0);
             return;
           }
@@ -118,7 +118,7 @@ final class hb extends UiWidget {
         }
     }
 
-    final void c(int param0, int param1, int param2) {
+    final void setColors(int param0, int param1, int param2) {
         if (param0 >= 0) {
           return;
         }
@@ -126,7 +126,7 @@ final class hb extends UiWidget {
         this.field_A = param1;
         this.field_x = 8355711 & param1 >> 1;
         this.field_y = param2;
-        this.g(52);
+        this.rebuildSprites(52);
     }
 
     public static void releaseStatics(int param0) {
@@ -137,7 +137,7 @@ final class hb extends UiWidget {
         }
     }
 
-    private final Sprite a(int param0) {
+    private final Sprite createCapMask(int param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -160,11 +160,11 @@ final class hb extends UiWidget {
         if (param0 >= -81) {
           this.field_H = 42;
         }
-        pa.a(-21189);
+        pa.popRasterState(-21189);
         return var3;
     }
 
-    final void a(UiWidget param0, byte param1, int param2, int param3) {
+    final void updatePointer(UiWidget param0, byte param1, int param2, int param3) {
         try {
           if (this.field_F) {
             this.field_H = this.field_H + 1;
@@ -178,24 +178,24 @@ final class hb extends UiWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         if (param1 != 0) {
           return;
         }
         int var5 = this.field_k + param2;
         int var6 = this.field_j + param0;
-        this.a(var6, this.field_L[param3], (byte) -52, var5);
+        this.drawStripedBar(var6, this.field_L[param3], (byte) -52, var5);
         if (this.field_C < 65536) {
-          Mover.$cfr$intArgs$a$3aedf8649552(var6, 99, var5 + this.field_i, var6 + this.field_n, (this.field_i * this.field_C >> 16) + var5);
-          this.a(var6, this.field_L[1], (byte) -104, var5);
-          pa.a(-21189);
+          Mover.intersectClipIntArgs(var6, 99, var5 + this.field_i, var6 + this.field_n, (this.field_i * this.field_C >> 16) + var5);
+          this.drawStripedBar(var6, this.field_L[1], (byte) -104, var5);
+          pa.popRasterState(-21189);
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
         int var6 = -79 / ((-23 - param0) / 48);
-        super.a(-116, param1, param2, param3, param4);
-        this.g(123);
+        super.setBounds(-116, param1, param2, param3, param4);
+        this.rebuildSprites(123);
     }
 
     private hb(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
@@ -204,7 +204,7 @@ final class hb extends UiWidget {
         this.field_y = param5;
         this.field_x = param8;
         this.field_A = param6;
-        this.a(-91, param1, param0, param2, param3);
+        this.setBounds(-91, param1, param0, param2, param3);
     }
 
     static {

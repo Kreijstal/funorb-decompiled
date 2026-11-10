@@ -16,7 +16,7 @@ final class jp {
     private int field_l;
     int field_d;
 
-    final void a(byte param0, int param1, int param2) {
+    final void updatePointer(byte param0, int param1, int param2) {
         if (param1 >= this.field_h) {
           throw new IllegalArgumentException();
         }
@@ -323,7 +323,7 @@ final class jp {
         }
     }
 
-    final void a(boolean param0, byte param1, int param2, int param3) {
+    final void initializeSelection(boolean param0, byte param1, int param2, int param3) {
         if (param1 > -68) {
           return;
         }
@@ -336,7 +336,7 @@ final class jp {
         this.field_d = param2;
     }
 
-    final static java.net.URL a(byte param0, java.net.URL param1, String param2, String param3, int param4) {
+    final static java.net.URL rewriteAppletUrl(byte param0, java.net.URL param1, String param2, String param3, int param4) {
         try {
           StringBuilder discarded$0 = null;
           StringBuilder discarded$1 = null;
@@ -480,7 +480,7 @@ final class jp {
         }
     }
 
-    final void g(int param0) {
+    final void pollKeyboardCode(int param0) {
         int var2 = -82 / ((param0 + 60) / 51);
         this.field_e = 0;
         this.field_b = 0;
@@ -490,7 +490,7 @@ final class jp {
         this.field_b = kg.field_i;
     }
 
-    final boolean b(int param0) {
+    final boolean isHeld(int param0) {
         if (param0 < -6) {
           return 0 != this.field_l ? true : false;
         }
@@ -498,13 +498,13 @@ final class jp {
         return 0 != this.field_l ? true : false;
     }
 
-    final void a(int param0, boolean param1, int param2) {
+    final void setPointerSelection(int param0, boolean param1, int param2) {
         this.field_l = 0;
         this.field_j = param1 ? true : false;
         if (this.field_j) {
           this.field_d = param0;
           if (param2 != -20258) {
-            this.g(49);
+            this.pollKeyboardCode(49);
             return;
           }
           return;
@@ -512,25 +512,25 @@ final class jp {
         if (param2 == -20258) {
           return;
         }
-        this.g(49);
+        this.pollKeyboardCode(49);
     }
 
-    final boolean c(int param0) {
+    final boolean isLeftArrow(int param0) {
         if (param0 != -97) {
           return false;
         }
         return this.field_b == 96 ? true : false;
     }
 
-    final boolean e(int param0) {
+    final boolean isRightArrow(int param0) {
         if (param0 == -98) {
           return this.field_b == 97 ? true : false;
         }
-        this.b(42, -37);
+        this.setSelectedIndex(42, -37);
         return this.field_b == 97 ? true : false;
     }
 
-    final void a(int param0) {
+    final void navigateVertical(int param0) {
         this.field_e = 0;
         this.field_b = 0;
         if (param0 != 21657) {
@@ -578,16 +578,16 @@ final class jp {
         this.field_d = 0;
     }
 
-    final static void a(byte param0) {
+    final static void showChooseNameDialog(byte param0) {
         int var1 = -48 / ((param0 - 16) / 50);
         if (null != Point.field_i) {
-          Point.field_i.h((byte) 74);
+          Point.field_i.closeDialog((byte) 74);
         }
         ni.field_c = new fh();
-        bm.field_d.b(20, ni.field_c);
+        bm.field_d.transitionToContent(20, ni.field_c);
     }
 
-    final void b(int param0, int param1) {
+    final void setSelectedIndex(int param0, int param1) {
         int var3 = 0;
         int var3Lifetime1;
         if (this.field_l != 0) {
@@ -599,7 +599,7 @@ final class jp {
         var3Lifetime1 = -31 / ((-12 - param1) / 56);
     }
 
-    final static void b(byte param0) {
+    final static void showUnreadMessagesDialog(byte param0) {
         rl.c(9);
         if (param0 != -50) {
           field_a = -13;
@@ -609,7 +609,7 @@ final class jp {
         og.b(-126, 4);
     }
 
-    final boolean b(boolean param0) {
+    final boolean isHomeKey(boolean param0) {
         if (param0) {
           return false;
         }
@@ -630,7 +630,7 @@ final class jp {
         field_g = null;
     }
 
-    final boolean d(int param0) {
+    final boolean isActivated(int param0) {
         if (param0 >= -119) {
           this.field_h = -98;
           if (this.field_e != 0) {
@@ -653,9 +653,9 @@ final class jp {
         return true;
     }
 
-    final static PcmSampleStream a(byte param0, int param1) {
+    final static PcmSampleStream playSoundEffect(byte param0, int param1) {
         tm var2 = new tm(param1);
-        var2.field_j.e(-1);
+        var2.field_j.setLoopCount(-1);
         if (param0 > 123) {
           kn.field_L.addFirst(0, var2);
           return var2.field_j;
@@ -665,7 +665,7 @@ final class jp {
         return var2.field_j;
     }
 
-    final boolean f(int param0) {
+    final boolean isEndKey(int param0) {
         if (param0 == -104) {
           return this.field_b == 103 ? true : false;
         }
@@ -673,7 +673,7 @@ final class jp {
         return this.field_b == 103 ? true : false;
     }
 
-    final void a(int param0, int param1) {
+    final void navigateHorizontal(int param0, int param1) {
         this.field_e = 0;
         this.field_b = 0;
         if (0 != this.field_l) {
@@ -874,9 +874,9 @@ final class jp {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static PcmSampleStream $cfr$intArgs$a$c44adeabe1a9(int param0, int param1) {
+    final static PcmSampleStream startTrackedSoundEffect(int param0, int param1) {
         tm var2 = new tm(param1);
-        var2.field_j.e(-1);
+        var2.field_j.setLoopCount(-1);
         if (param0 > 123) {
           kn.field_L.addFirst(0, var2);
           return var2.field_j;

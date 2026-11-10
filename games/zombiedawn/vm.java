@@ -24,9 +24,9 @@ final class vm extends vf {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param3.a(param2, (byte) 8);
+          var4_int = param3.getGroupIdByName(param2, (byte) 8);
           var6 = -84 / ((param0 - 64) / 43);
-          var5 = param3.a(var4_int, param1, true);
+          var5 = param3.getFileIdByName(var4_int, param1, true);
           stackIn_1_0 = ji.a(param3, -1, var4_int, var5);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -133,7 +133,7 @@ final class vm extends vf {
         this.field_t = param2;
     }
 
-    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
+    public final void drawWidget(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         int stackIn_6_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_18_0 = 0;
@@ -147,7 +147,7 @@ final class vm extends vf {
         int var8 = 0;
         try {
           if (!param3.field_l) {
-            stackIn_6_0 = (param3.e(-17741)) ? 1 : 0;
+            stackIn_6_0 = (param3.isFocused(-17741)) ? 1 : 0;
           } else {
             stackIn_6_0 = 1;
           }

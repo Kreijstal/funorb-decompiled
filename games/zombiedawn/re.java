@@ -14,8 +14,8 @@ final class re {
         if (cn.field_b == null) {
           return;
         }
-        SpatialObject.a((byte) -46, cn.field_b);
-        cn.field_b.a(vh.field_a, (byte) 115);
+        SpatialObject.detachCanvasInput((byte) -46, cn.field_b);
+        cn.field_b.exitFullscreen(vh.field_a, (byte) 115);
         if (param0 != -71) {
           return;
         }
@@ -24,7 +24,7 @@ final class re {
           cj.field_d.requestFocus();
           return;
         }
-        rn.field_b.b(true);
+        rn.field_b.restoreWindowedSize(true);
         cj.field_d.requestFocus();
     }
 

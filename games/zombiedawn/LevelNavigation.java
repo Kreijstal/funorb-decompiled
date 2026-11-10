@@ -34,7 +34,7 @@ final class LevelNavigation {
     private int[] field_m;
     static Sprite[] field_o;
 
-    final int[][] a(int param0) {
+    final int[][] createDistanceGrid(int param0) {
         int var4 = 0;
         int var5 = ZombieDawn.field_J;
         int[][] var6 = new int[this.field_A.field_r][this.field_A.field_k];
@@ -45,7 +45,7 @@ final class LevelNavigation {
         }
         while (this.field_A.field_r > var3) {
           for (var4 = 0; var4 < this.field_A.field_k; var4++) {
-            var6[var3][var4] = !this.b(param0 - 8728, var4, var3) ? -1 : 0;
+            var6[var3][var4] = !this.isCellOpen(param0 - 8728, var4, var3) ? -1 : 0;
           }
           var3++;
         }
@@ -67,7 +67,7 @@ final class LevelNavigation {
           this.field_A.field_k > var5) {
           var7 = param2 % 24;
           if (param0) {
-            this.c(126, 21, -100);
+            this.getRenderTile(126, 21, -100);
           }
           var8 = 1;
           if (param3) {
@@ -87,22 +87,22 @@ final class LevelNavigation {
 
     public static void releaseStatics(byte param0) {
         if (param0 > -83) {
-          LevelNavigation.a((byte) 29);
+          LevelNavigation.handleHighscoreResponse((byte) 29);
         }
         field_o = null;
         field_a = null;
     }
 
-    private final void b(int param0) {
+    private final void updatePixelSize(int param0) {
         this.width = 24 * this.field_A.field_k;
         if (param0 != -1) {
           Camera var3 = (Camera) null;
-          this.a(49, (Camera) null);
+          this.drawFloorCached(49, (Camera) null);
         }
         this.height = this.field_A.field_r * 24;
     }
 
-    final void a(Camera param0, int param1, boolean param2, boolean param3) {
+    final void drawWallLayer(Camera param0, int param1, boolean param2, boolean param3) {
         int var8 = 0;
         int var9 = 0;
         RuntimeException stackIn_92_0 = null;
@@ -122,7 +122,7 @@ final class LevelNavigation {
         int var14 = 0;
         var14 = ZombieDawn.field_J;
         try {
-          var5_int = bd.field_d - param0.x;
+          var5_int = WhirlpoolHasher.field_d - param0.x;
           var6 = nh.field_G - param0.y;
           if (-24 > var5_int) {
             var5_int = var5_int % 24;
@@ -131,15 +131,15 @@ final class LevelNavigation {
             var6 = var6 % 24;
           }
           if (!(this.field_v.length >= nh.field_I) ||
-            !(bd.field_a <= this.field_v[0].length)) {
-            this.field_v = new int[nh.field_I][bd.field_a];
+            !(WhirlpoolHasher.field_a <= this.field_v[0].length)) {
+            this.field_v = new int[nh.field_I][WhirlpoolHasher.field_a];
           }
           var7 = var5_int;
           if (!param2) {
             return;
           }
           for (var8 = 0; var8 < nh.field_I; var8++) {
-            for (var9 = 0; var9 < bd.field_a; var9++) {
+            for (var9 = 0; var9 < WhirlpoolHasher.field_a; var9++) {
               boolean decompiledFrameRemainder0 = true;
               if (this.field_b[0].length > (var9 + this.field_f) &&
                 this.field_b.length > var8 + this.field_j) {
@@ -199,11 +199,11 @@ final class LevelNavigation {
                               var11 = 9;
                             }
                             if (var11 >= 0 &&
-                              la.field_c.length > var11) {
-                              la.field_c[var11].e(var5_int, var6, 128);
+                              FullscreenFocusCanvas.field_c.length > var11) {
+                              FullscreenFocusCanvas.field_c[var11].drawWithOpacity(var5_int, var6, 128);
                             } else {
                               Rasterizer.fillRectangleBlended(var5_int, var6, 24, 24, 0, 128);
-                              la.field_c[21].e(var5_int, 24 + var6, 128);
+                              FullscreenFocusCanvas.field_c[21].drawWithOpacity(var5_int, 24 + var6, 128);
                             }
                           }
                         }
@@ -242,8 +242,8 @@ final class LevelNavigation {
                           var11 < tm.field_h.length) {
                           var12 = this.field_f + var9;
                           var13_int = var8 + this.field_j;
-                          if (this.b(0, var12, 1 + var13_int) ||
-                            this.b(0, var12, var13_int + 2)) {
+                          if (this.isCellOpen(0, var12, 1 + var13_int) ||
+                            this.isCellOpen(0, var12, var13_int + 2)) {
                             Rasterizer.drawRectOutline(var5_int, var6, 24, 24, 16711808);
                           }
                         }
@@ -274,7 +274,7 @@ final class LevelNavigation {
         }
     }
 
-    final static void a(byte param0) {
+    final static void handleHighscoreResponse(byte param0) {
         int var8_int = 0;
         String[][] dupTemp$0 = null;
         long[][] dupTemp$1 = null;
@@ -322,11 +322,11 @@ final class LevelNavigation {
           }
           var2 = var27.readUnsignedByte((byte) -128);
           if (var2 == 0) {
-            var3 = var27.f(2);
-            var4 = (jc) (TileMap.field_g.b((byte) 26));
+            var3 = var27.readUnsignedShort(2);
+            var4 = (jc) (TileMap.field_g.last((byte) 26));
             while (var4 != null) {
               if (var4.field_s != var3) {
-                var4 = (jc) (TileMap.field_g.a(false));
+                var4 = (jc) (TileMap.field_g.previous(false));
                 continue;
               }
               break;
@@ -343,12 +343,12 @@ final class LevelNavigation {
               cm.field_b[0].field_c = ce.field_r;
               var7 = var4.field_o;
               for (var8_int = 1; var5 > var8_int; var8_int++) {
-                cm.field_b[var8_int].field_c = var27.a(true);
+                cm.field_b[var8_int].field_c = var27.readNullTerminatedString(true);
                 cm.field_b[var8_int].field_a = false;
                 if (1 != var27.readUnsignedByte((byte) -128)) {
                   cm.field_b[var8_int].field_d = null;
                 } else {
-                  cm.field_b[var8_int].field_d = var27.a(true);
+                  cm.field_b[var8_int].field_d = var27.readNullTerminatedString(true);
                 }
               }
               dupTemp$0 = new String[3][var6];
@@ -420,12 +420,12 @@ final class LevelNavigation {
             return;
           }
           if (1 == var2) {
-            var3Lifetime1 = var27.f(2);
+            var3Lifetime1 = var27.readUnsignedShort(2);
             var4_long = var27.readLong(true);
-            var6_ref_rc = (rc) (hk.field_F.b((byte) 26));
+            var6_ref_rc = (rc) (hk.field_F.last((byte) 26));
             while (var6_ref_rc != null) {
               if (var3Lifetime1 != var6_ref_rc.field_i) {
-                var6_ref_rc = (rc) (hk.field_F.a(false));
+                var6_ref_rc = (rc) (hk.field_F.previous(false));
                 continue;
               }
               break;
@@ -448,7 +448,7 @@ final class LevelNavigation {
         }
     }
 
-    private final void c(byte param0) {
+    private final void buildWaypointGraphStep(byte param0) {
         int[] dupTemp$0 = null;
         int dupTemp$1 = 0;
         int[] arrayValue$2 = null;
@@ -469,29 +469,29 @@ final class LevelNavigation {
           this.field_C = new Point[]{};
           for (var2 = 0; var2 < this.field_A.field_r; var2++) {
             for (var3 = 0; var3 < this.field_A.field_k; var3++) {
-              if (this.b(0, var3, var2) &&
-                this.b(0, 1 + var3, var2) &&
-                this.b(0, var3, 1 + var2) &&
-                !this.b(0, 1 + var3, 1 + var2)) {
-                this.field_C = this.a(this.field_C, (byte) -97, new Point(24 * var3 + 1, 12 + var2 * 24));
+              if (this.isCellOpen(0, var3, var2) &&
+                this.isCellOpen(0, 1 + var3, var2) &&
+                this.isCellOpen(0, var3, 1 + var2) &&
+                !this.isCellOpen(0, 1 + var3, 1 + var2)) {
+                this.field_C = this.appendPoint(this.field_C, (byte) -97, new Point(24 * var3 + 1, 12 + var2 * 24));
               }
-              if (this.b(param0 + 88, var3, var2) &&
-                this.b(0, var3 + 1, var2) &&
-                !this.b(0, var3, 1 + var2) &&
-                this.b(param0 ^ -88, 1 + var3, 1 + var2)) {
-                this.field_C = this.a(this.field_C, (byte) -87, new Point((var3 + 2) * 24 - 1, 12 + 24 * var2));
+              if (this.isCellOpen(param0 + 88, var3, var2) &&
+                this.isCellOpen(0, var3 + 1, var2) &&
+                !this.isCellOpen(0, var3, 1 + var2) &&
+                this.isCellOpen(param0 ^ -88, 1 + var3, 1 + var2)) {
+                this.field_C = this.appendPoint(this.field_C, (byte) -87, new Point((var3 + 2) * 24 - 1, 12 + 24 * var2));
               }
-              if (this.b(param0 ^ -88, var3, var2) &&
-                this.b(param0 ^ -88, 1 + var3, var2) &&
-                this.b(0, var3, var2 - 1) &&
-                !this.b(0, var3 + 1, -1 + var2)) {
-                this.field_C = this.a(this.field_C, (byte) -111, new Point(var3 * 24 + 1, (var2 + 1) * 24 - 12));
+              if (this.isCellOpen(param0 ^ -88, var3, var2) &&
+                this.isCellOpen(param0 ^ -88, 1 + var3, var2) &&
+                this.isCellOpen(0, var3, var2 - 1) &&
+                !this.isCellOpen(0, var3 + 1, -1 + var2)) {
+                this.field_C = this.appendPoint(this.field_C, (byte) -111, new Point(var3 * 24 + 1, (var2 + 1) * 24 - 12));
               }
-              if (this.b(0, var3, var2) &&
-                this.b(0, 1 + var3, var2) &&
-                !this.b(0, var3, var2 - 1) &&
-                this.b(0, 1 + var3, var2 - 1)) {
-                this.field_C = this.a(this.field_C, (byte) -105, new Point(24 * var3 + 48 - 1, 12 + 24 * var2));
+              if (this.isCellOpen(0, var3, var2) &&
+                this.isCellOpen(0, 1 + var3, var2) &&
+                !this.isCellOpen(0, var3, var2 - 1) &&
+                this.isCellOpen(0, 1 + var3, var2 - 1)) {
+                this.field_C = this.appendPoint(this.field_C, (byte) -105, new Point(24 * var3 + 48 - 1, 12 + 24 * var2));
               }
             }
           }
@@ -501,7 +501,7 @@ final class LevelNavigation {
             for (var2 = 1; this.field_C.length / 2 > var2; var2++) {
               for (var3 = 0; var2 > var3; var3++) {
                 dupTemp$0 = this.field_E[var2];
-                dupTemp$1 = this.a((byte) -128, this.field_C[var2], this.field_C[var3]);
+                dupTemp$1 = this.traceDistance((byte) -128, this.field_C[var2], this.field_C[var3]);
                 arrayValue$2 = this.field_E[var3];
                 dupTemp$0[var3] = dupTemp$1;
                 arrayValue$2[var2] = dupTemp$1;
@@ -512,7 +512,7 @@ final class LevelNavigation {
               for (var2 = this.field_C.length / 2; this.field_C.length > var2; var2++) {
                 for (var3 = 0; var2 > var3; var3++) {
                   dupTemp$3 = this.field_E[var2];
-                  dupTemp$4 = this.a((byte) -128, this.field_C[var2], this.field_C[var3]);
+                  dupTemp$4 = this.traceDistance((byte) -128, this.field_C[var2], this.field_C[var3]);
                   arrayValue$5 = this.field_E[var3];
                   dupTemp$3[var3] = dupTemp$4;
                   arrayValue$5[var2] = dupTemp$4;
@@ -564,11 +564,11 @@ final class LevelNavigation {
           }
         }
         if (param0 != -88) {
-          LevelNavigation.a((byte) -52);
+          LevelNavigation.handleHighscoreResponse((byte) -52);
         }
     }
 
-    final int a(int param0, int param1, int param2, byte param3, boolean param4, int param5) {
+    final int traceLine(int param0, int param1, int param2, byte param3, boolean param4, int param5) {
         int var17 = ZombieDawn.field_J;
         if (!this.isWalkable(false, param0, param5, param4)) {
           return -1;
@@ -584,7 +584,7 @@ final class LevelNavigation {
         float var12 = var11 * (float)var8;
         float var13 = var11 * (float)var9;
         if (param3 > -90) {
-          this.a(80, -57, 113, (byte) -23, true, 59);
+          this.traceLine(80, -57, 113, (byte) -23, true, 59);
         }
         float var14 = (float)param1;
         float var15 = (float)param2;
@@ -600,7 +600,7 @@ final class LevelNavigation {
         return var10;
     }
 
-    final int c(int param0, int param1, int param2) {
+    final int getRenderTile(int param0, int param1, int param2) {
         if (0 > param2) {
           return 0;
         }
@@ -617,7 +617,7 @@ final class LevelNavigation {
         return this.field_A.field_h[param0][param2];
     }
 
-    final void a(boolean param0, int param1) {
+    final void startWaypointGraphBuild(boolean param0, int param1) {
         int var4 = ZombieDawn.field_J;
         int var3 = 46 % ((param1 + 45) / 52);
         if (this.field_t) {
@@ -628,12 +628,12 @@ final class LevelNavigation {
         }
         if (!param0) {
           while (this.field_t) {
-            this.c((byte) -88);
+            this.buildWaypointGraphStep((byte) -88);
           }
         }
     }
 
-    private final Point[] a(Point[] param0, byte param1, Point param2) {
+    private final Point[] appendPoint(Point[] param0, byte param1, Point param2) {
         int var5 = 0;
         Point[] var4 = null;
         RuntimeException var4_ref = null;
@@ -679,14 +679,14 @@ final class LevelNavigation {
         }
     }
 
-    final void a(boolean param0) {
+    final void updateWaypointGraphBuild(boolean param0) {
         if (this.field_t) {
-          this.c((byte) -88);
+          this.buildWaypointGraphStep((byte) -88);
           if (!this.field_t) {
-            Js5Archive.field_e.a(true);
+            Js5Archive.field_e.onNavigationRebuilt(true);
             if (this.field_q) {
               this.field_q = false;
-              this.a(true, 108);
+              this.startWaypointGraphBuild(true, 108);
             }
           }
         }
@@ -695,7 +695,7 @@ final class LevelNavigation {
         }
     }
 
-    private final void a(int param0, Camera param1) {
+    private final void drawFloorCached(int param0, Camera param1) {
         int discarded$0 = 0;
         RuntimeException stackIn_58_0 = null;
         StringBuilder stackIn_58_1 = null;
@@ -730,7 +730,7 @@ final class LevelNavigation {
           this.field_n = 1;
           this.field_g = 0;
           this.field_z = 0;
-          var3_int = bd.field_d - param1.x;
+          var3_int = WhirlpoolHasher.field_d - param1.x;
           var4 = -param1.y + nh.field_G;
           var5 = 0;
           var6 = 0;
@@ -744,10 +744,10 @@ final class LevelNavigation {
           }
           var7 = 0;
           if (!(this.field_v.length >= nh.field_I) ||
-            !(bd.field_a <= this.field_v[0].length)) {
-            this.field_v = new int[nh.field_I][bd.field_a];
+            !(WhirlpoolHasher.field_a <= this.field_v[0].length)) {
+            this.field_v = new int[nh.field_I][WhirlpoolHasher.field_a];
           }
-          var8 = var5 + bd.field_a;
+          var8 = var5 + WhirlpoolHasher.field_a;
           if (this.field_A.field_k < var8) {
             var8 = this.field_A.field_k;
           }
@@ -758,20 +758,20 @@ final class LevelNavigation {
           var10 = var5;
           if (param0 != -19795) {
             var18 = (Point) null;
-            discarded$0 = this.a((byte) 93, (Point) null, (Point) null);
+            discarded$0 = this.traceDistance((byte) 93, (Point) null, (Point) null);
           }
           var11 = 0;
           this.field_f = var5;
           var12 = 0;
           this.field_j = var6;
-          if (24 + bd.field_e == GameLoopApplet.field_A.field_r &&
+          if (24 + WhirlpoolHasher.field_e == GameLoopApplet.field_A.field_r &&
             GameLoopApplet.field_A.field_q == nh.field_P + 24) {
             if (0 > this.field_y) {
               gp.fillInts(GameLoopApplet.field_A.field_z, 0, GameLoopApplet.field_A.field_z.length, 0);
             }
           } else {
             GameLoopApplet.field_A = null;
-            GameLoopApplet.field_A = new Sprite(24 + bd.field_e, nh.field_P + 24);
+            GameLoopApplet.field_A = new Sprite(24 + WhirlpoolHasher.field_e, nh.field_P + 24);
             this.field_y = -1;
           }
           if (this.field_y >= 0) {
@@ -800,8 +800,8 @@ final class LevelNavigation {
             var14Lifetime1 = 0;
             while (var9 > var6) {
               while (var5 < var8) {
-                var15_int = this.c(var6, -39, var5);
-                if (ub.a(127, this.field_A.tiles[var6][var5]) != null ||
+                var15_int = this.getRenderTile(var6, -39, var5);
+                if (ub.findAnimatedTile(127, this.field_A.tiles[var6][var5]) != null ||
                   this.field_r <= var5 &&
                   this.field_z >= var5 ||
                   this.field_n <= var6 &&
@@ -830,18 +830,18 @@ final class LevelNavigation {
             param1.y = param1.y + var4;
             if (6 == this.field_A.field_a && (this.field_n <= this.field_g ||
               this.field_z >= this.field_r)) {
-              var15 = Js5Archive.field_e.zombies.b((byte) 26);
+              var15 = Js5Archive.field_e.zombies.last((byte) 26);
               while (var15 != null) {
                 if (var15 instanceof oo) {
                   var20 = (oo) (var15);
-                  var20.a(param1, (byte) 65);
+                  var20.drawShadow(param1, (byte) 65);
                 }
-                var15 = Js5Archive.field_e.zombies.a(false);
+                var15 = Js5Archive.field_e.zombies.previous(false);
               }
             }
             param1.y = param1.y - var4;
             param1.x = param1.x - var3_int;
-            pa.a(-21189);
+            pa.popRasterState(-21189);
             GameLoopApplet.field_A.drawWithOffsets(var3_int, var4);
             return;
           }
@@ -886,16 +886,16 @@ final class LevelNavigation {
         var16 = ZombieDawn.field_J;
         var6 = param3 / 24;
         var7 = param2 / 24;
-        if (!this.b(0, var6, var7)) {
-          if (this.b(0, var6, -1 + var7)) {
+        if (!this.isCellOpen(0, var6, var7)) {
+          if (this.isCellOpen(0, var6, -1 + var7)) {
             param2 -= 24;
           } else {
-            if (!this.b(0, var6, 1 + var7)) {
-              if (!this.b(0, var6, 2 + var7)) {
-                if (this.b(0, 1 + var6, var7)) {
+            if (!this.isCellOpen(0, var6, 1 + var7)) {
+              if (!this.isCellOpen(0, var6, 2 + var7)) {
+                if (this.isCellOpen(0, 1 + var6, var7)) {
                   param3 += 24;
                 } else {
-                  if (this.b(0, -1 + var6, var7)) {
+                  if (this.isCellOpen(0, -1 + var6, var7)) {
                     param3 -= 24;
                   }
                 }
@@ -909,13 +909,13 @@ final class LevelNavigation {
         }
         var6Lifetime1 = param3 / 24;
         var7Lifetime1 = param2 / 24;
-        if (!this.b(0, var6Lifetime1, var7Lifetime1)) {
+        if (!this.isCellOpen(0, var6Lifetime1, var7Lifetime1)) {
           return null;
         }
         stackIn_17_1 = !(param0);
         if (!this.isWalkable(stackIn_17_1, param2, param3, param0)) {
-          if (this.b(0, var6Lifetime1 - 1, var7Lifetime1)) {
-            if (!this.b(0, 1 + var6Lifetime1, var7Lifetime1)) {
+          if (this.isCellOpen(0, var6Lifetime1 - 1, var7Lifetime1)) {
+            if (!this.isCellOpen(0, 1 + var6Lifetime1, var7Lifetime1)) {
               param3 = var6Lifetime1 * 24;
             }
           } else {
@@ -926,13 +926,13 @@ final class LevelNavigation {
         var9 = new Point(param3, param2);
         var10 = new Path();
         var10.addFirst(0, var9);
-        var11 = this.a((byte) -128, var9, var8);
+        var11 = this.traceDistance((byte) -128, var9, var8);
         var10.field_g = var11;
         if (0 <= var11) {
           return var10;
         }
         for (var12 = 0; this.field_e.length > var12; var12++) {
-          var13 = this.a((byte) -128, var8, this.field_i[var12]);
+          var13 = this.traceDistance((byte) -128, var8, this.field_i[var12]);
           this.field_e[var12] = var13;
           stackIn_30_0 = this.field_m;
           stackIn_30_1 = var12;
@@ -958,7 +958,7 @@ final class LevelNavigation {
         var12Lifetime2 = -1;
         var13Lifetime2 = -1;
         for (var14 = 0; var14 < this.field_e.length; var14++) {
-          var15 = this.a((byte) -128, var9, this.field_i[var14]);
+          var15 = this.traceDistance((byte) -128, var9, this.field_i[var14]);
           if (var15 >= 0 &&
             this.field_e[var14] != -1 && (var13Lifetime2 == -1 ||
             var13Lifetime2 > var15 + this.field_e[var14])) {
@@ -980,7 +980,7 @@ final class LevelNavigation {
         return var10;
     }
 
-    private final boolean b(int param0, int param1, int param2) {
+    private final boolean isCellOpen(int param0, int param1, int param2) {
         if (param1 <= 0) {
           return false;
         }
@@ -996,7 +996,7 @@ final class LevelNavigation {
         return (1 & this.field_A.field_p[param2][param1]) != 0 ? true : false;
     }
 
-    private final int a(byte param0, Point param1, Point param2) {
+    private final int traceDistance(byte param0, Point param1, Point param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -1008,7 +1008,7 @@ final class LevelNavigation {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -128) {
-            stackIn_4_0 = this.a(param1.y, param2.y, param1.x, param2.x, 117);
+            stackIn_4_0 = this.traceLineFromTo(param1.y, param2.y, param1.x, param2.x, 117);
             return stackIn_4_0;
           }
           stackIn_2_0 = -108;
@@ -1033,7 +1033,7 @@ final class LevelNavigation {
         }
     }
 
-    final boolean a(int param0, int param1, int param2) {
+    final boolean isPixelWalkable(int param0, int param1, int param2) {
         int stackIn_5_0 = 0;
         int stackIn_8_0 = 0;
         int stackIn_13_0 = 0;
@@ -1052,13 +1052,13 @@ final class LevelNavigation {
         var4 = param0 / 24;
         var5 = param1 / 24;
         var6 = 4;
-        if (!this.b(0, var4, var5)) {
+        if (!this.isCellOpen(0, var4, var5)) {
           return false;
         }
         var7 = param0 % 24;
         var8 = param1 % 24;
         if (var4 != 0) {
-          stackIn_5_0 = this.b(0, -1 + var4, var5) ? 1 : 0;
+          stackIn_5_0 = this.isCellOpen(0, -1 + var4, var5) ? 1 : 0;
         } else {
           stackIn_5_0 = 0;
         }
@@ -1066,14 +1066,14 @@ final class LevelNavigation {
         if (this.field_A.field_k - 1 == var4) {
           stackIn_8_0 = 0;
         } else {
-          stackIn_8_0 = this.b(0, var4 + 1, var5) ? 1 : 0;
+          stackIn_8_0 = this.isCellOpen(0, var4 + 1, var5) ? 1 : 0;
         }
         var10 = stackIn_8_0;
         if (param2 <= 8) {
-          this.a(-111, -117, 12, 52, 71);
+          this.traceLineFromTo(-111, -117, 12, 52, 71);
         }
         if (var5 != -1 + this.field_A.field_r) {
-          stackIn_13_0 = this.b(0, var4, 1 + var5) ? 1 : 0;
+          stackIn_13_0 = this.isCellOpen(0, var4, 1 + var5) ? 1 : 0;
         } else {
           stackIn_13_0 = 0;
         }
@@ -1081,7 +1081,7 @@ final class LevelNavigation {
         if (var10 != 0) {
           stackIn_17_0 = var10;
           if (var6 <= var8 &&
-            !this.b(0, 1 + var4, var5 + 1)) {
+            !this.isCellOpen(0, 1 + var4, var5 + 1)) {
             stackIn_19_1 = 0;
           } else {
             stackIn_19_1 = 1;
@@ -1091,7 +1091,7 @@ final class LevelNavigation {
         if (var9 != 0) {
           stackIn_24_0 = var9;
           if (var6 <= var8 &&
-            !this.b(0, -1 + var4, var5 + 1)) {
+            !this.isCellOpen(0, -1 + var4, var5 + 1)) {
             stackIn_26_1 = 0;
           } else {
             stackIn_26_1 = 1;
@@ -1115,7 +1115,7 @@ final class LevelNavigation {
         return true;
     }
 
-    final void a(Camera param0, boolean param1) {
+    final void drawFloor(Camera param0, boolean param1) {
         RuntimeException stackIn_64_0 = null;
         StringBuilder stackIn_64_1 = null;
         String stackIn_65_2 = null;
@@ -1160,9 +1160,9 @@ final class LevelNavigation {
         try {
           if (!ng.field_e &&
             !this.field_A.field_e) {
-            this.a(-19795, param0);
+            this.drawFloorCached(-19795, param0);
           } else {
-            var3_int = -param0.x + bd.field_d;
+            var3_int = -param0.x + WhirlpoolHasher.field_d;
             var4 = -param0.y + nh.field_G;
             var5 = 0;
             var6 = 0;
@@ -1174,14 +1174,14 @@ final class LevelNavigation {
               var6 = -(var4 / 24);
               var4 = var4 % 24;
             }
-            var7 = var5 + bd.field_a;
+            var7 = var5 + WhirlpoolHasher.field_a;
             var8 = var6 + nh.field_I;
             var9 = var3_int;
             var10 = var5;
             var11 = 0;
             var12 = 0;
             for (var13 = 0; var13 < nh.field_I; var13++) {
-              for (var14 = 0; var14 < bd.field_a; var14++) {
+              for (var14 = 0; var14 < WhirlpoolHasher.field_a; var14++) {
                 this.field_v[var13][var14] = 0;
               }
             }
@@ -1193,7 +1193,7 @@ final class LevelNavigation {
               }
               while (var7 > var5) {
                 if (this.field_A.field_k > var5) {
-                  var13Lifetime1 = this.c(var6, 123, var5);
+                  var13Lifetime1 = this.getRenderTile(var6, 123, var5);
                   var14Lifetime1 = var13Lifetime1 >> 0 & 127;
                   if (var14Lifetime1 >= 0 &&
                     var14Lifetime1 < field_o.length) {
@@ -1233,17 +1233,17 @@ final class LevelNavigation {
                   Rasterizer.drawLineBlendedInclusive(var6Lifetime1, var7Lifetime1, var9Lifetime1, var10Lifetime1, 65280, 48);
                 }
               }
-              if (this.a(var4Lifetime1, this.field_i[var5Lifetime1].y, var3_intLifetime1, this.field_i[var5Lifetime1].x, 112) != -1) {
+              if (this.traceLineFromTo(var4Lifetime1, this.field_i[var5Lifetime1].y, var3_intLifetime1, this.field_i[var5Lifetime1].x, 112) != -1) {
                 var8Lifetime1 = param0.worldToScreenX(var3_intLifetime1, (byte) -64);
                 var9Lifetime1 = param0.worldToScreenY(var4Lifetime1, 0);
                 Rasterizer.drawLine(var6Lifetime1, var7Lifetime1, var8Lifetime1, var9Lifetime1, 16711680);
               }
             }
             for (var5Lifetime1Lifetime1 = 0; var5Lifetime1Lifetime1 < this.field_i.length; var5Lifetime1Lifetime1++) {
-              var6Lifetime1Lifetime1 = bd.field_d - param0.x + this.field_i[var5Lifetime1Lifetime1].x;
+              var6Lifetime1Lifetime1 = WhirlpoolHasher.field_d - param0.x + this.field_i[var5Lifetime1Lifetime1].x;
               var7Lifetime1Lifetime1 = -param0.y + this.field_i[var5Lifetime1Lifetime1].y + nh.field_G;
               Rasterizer.fillCircleBlended(var6Lifetime1Lifetime1, var7Lifetime1Lifetime1, 2, 16711680, 256);
-              pc.field_k.drawLeftAlpha(Integer.toString(var5Lifetime1Lifetime1), var6Lifetime1Lifetime1, var7Lifetime1Lifetime1, 16777215, 0, 64);
+              Js5Transport.field_k.drawLeftAlpha(Integer.toString(var5Lifetime1Lifetime1), var6Lifetime1Lifetime1, var7Lifetime1Lifetime1, 16777215, 0, 64);
             }
             if (!this.field_t) {
               return;
@@ -1263,10 +1263,10 @@ final class LevelNavigation {
               }
             }
             for (var5Lifetime1Lifetime3 = 0; var5Lifetime1Lifetime3 < this.field_C.length; var5Lifetime1Lifetime3++) {
-              var6Lifetime1Lifetime3 = bd.field_d + (-param0.x + this.field_C[var5Lifetime1Lifetime3].x);
+              var6Lifetime1Lifetime3 = WhirlpoolHasher.field_d + (-param0.x + this.field_C[var5Lifetime1Lifetime3].x);
               var7Lifetime1Lifetime3 = this.field_C[var5Lifetime1Lifetime3].y + (-param0.y + nh.field_G);
               Rasterizer.fillCircleBlended(var6Lifetime1Lifetime3, var7Lifetime1Lifetime3, 2, 34952, 256);
-              pc.field_k.drawLeftAlpha(Integer.toString(var5Lifetime1Lifetime3), var6Lifetime1Lifetime3, var7Lifetime1Lifetime3, 2285021, 0, 64);
+              Js5Transport.field_k.drawLeftAlpha(Integer.toString(var5Lifetime1Lifetime3), var6Lifetime1Lifetime3, var7Lifetime1Lifetime3, 2285021, 0, 64);
             }
             return;
           }
@@ -1285,21 +1285,21 @@ final class LevelNavigation {
         }
     }
 
-    final int a(int param0, int param1, int param2, int param3, int param4) {
+    final int traceLineFromTo(int param0, int param1, int param2, int param3, int param4) {
         if (param4 <= 102) {
           field_d = -128;
         }
-        return this.a(param0, param3, param1, (byte) -126, true, param2);
+        return this.traceLine(param0, param3, param1, (byte) -126, true, param2);
     }
 
     LevelNavigation(TileMap param0) {
-        this.field_v = new int[nh.field_I][bd.field_a];
+        this.field_v = new int[nh.field_I][WhirlpoolHasher.field_a];
         this.field_c = -1;
         this.field_y = -1;
         try {
           this.field_A = param0;
-          this.a(false, 11);
-          this.b(-1);
+          this.startWaypointGraphBuild(false, 11);
+          this.updatePixelSize(-1);
           this.field_c = -1;
           this.field_b = new boolean[this.field_A.field_r][this.field_A.field_k];
           this.field_y = -1;

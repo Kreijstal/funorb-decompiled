@@ -301,18 +301,18 @@ final class ve {
           this.field_r.b(param0);
         }
         for (var3 = 0; var3 < 10; var3++) {
-          var4 = param0.c((byte) -107);
+          var4 = param0.readSmart((byte) -107);
           if (var4 == 0) {
             break;
           }
           this.field_l[var3] = var4;
-          this.field_w[var3] = param0.f((byte) 102);
-          this.field_k[var3] = param0.c((byte) -107);
+          this.field_w[var3] = param0.readSignedSmart((byte) 102);
+          this.field_k[var3] = param0.readSmart((byte) -107);
         }
-        this.field_j = param0.c((byte) -107);
-        this.field_x = param0.c((byte) -107);
-        this.field_y = param0.f(2);
-        this.field_b = param0.f(2);
+        this.field_j = param0.readSmart((byte) -107);
+        this.field_x = param0.readSmart((byte) -107);
+        this.field_y = param0.readUnsignedShort(2);
+        this.field_b = param0.readUnsignedShort(2);
         this.field_s = new ie();
         this.field_i = new ko();
         this.field_s.decode(param0, this.field_i);

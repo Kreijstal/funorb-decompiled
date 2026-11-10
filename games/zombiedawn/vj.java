@@ -14,7 +14,7 @@ final class vj extends al {
     static int field_o;
     private Sprite field_u;
 
-    final void a(int param0) {
+    final void handleNavigationKeys(int param0) {
         int var3;
         var3 = ZombieDawn.field_J;
         if (param0 != -31645) {
@@ -23,33 +23,33 @@ final class vj extends al {
         boolean decompiledFrameRemainder0 = true;
         if (kg.field_i == 98) {
           if (this.field_b.field_d >= 2) {
-            this.field_b.b(1, 64);
+            this.field_b.setSelectedIndex(1, 64);
           } else {
             if (0 < this.field_b.field_d) {
-              this.field_b.b(this.field_b.field_d - 1, param0 ^ 31727);
+              this.field_b.setSelectedIndex(this.field_b.field_d - 1, param0 ^ 31727);
             }
           }
         } else {
           if (99 == kg.field_i) {
             if (!(this.field_b.field_d >= 2)) {
-              this.field_b.b(this.field_b.field_d + 1, param0 + 31551);
+              this.field_b.setSelectedIndex(this.field_b.field_d + 1, param0 + 31551);
             }
             decompiledFrameRemainder0 = false;
           }
           else {
             if (kg.field_i == 96) {
               if (!(this.field_b.field_d < 3)) {
-                super.a(-31645);
+                super.handleNavigationKeys(-31645);
               }
               decompiledFrameRemainder0 = false;
             }
             else {
               if (97 != kg.field_i) {
-                super.a(-31645);
+                super.handleNavigationKeys(-31645);
               } else {
                 if (this.field_b.field_d >= 2 &&
                   !(-1 + this.field_b.field_h <= this.field_b.field_d)) {
-                  super.a(-31645);
+                  super.handleNavigationKeys(-31645);
                 }
               }
             }
@@ -58,7 +58,7 @@ final class vj extends al {
 
     }
 
-    final static String a(Throwable param0, byte param1) throws IOException {
+    final static String describeThrowable(Throwable param0, byte param1) throws IOException {
         String var2;
         PrintWriter var4;
         String var5;
@@ -168,38 +168,38 @@ final class vj extends al {
         }
     }
 
-    final int a(boolean param0, int param1) {
+    final int getItemRight(boolean param0, int param1) {
         if (!param0) {
           return -21;
         }
-        if (po.w(13296)) {
+        if (po.isGuestSession(13296)) {
           if (param1 != 0) {
-            return this.c(param1, 6) + 100;
+            return this.getItemLeft(param1, 6) + 100;
           }
-          return 350 + this.c(param1, 6);
+          return 350 + this.getItemLeft(param1, 6);
         }
         if (param1 < 2) {
           return jb.field_a[1].field_w + (vh.field_b + 30);
         }
-        return 180 + this.c(param1, 6);
+        return 180 + this.getItemLeft(param1, 6);
     }
 
-    final static void d(int param0) {
+    final static void showAccountCreationDialog(int param0) {
         ng.field_a = new fk();
-        bm.field_d.b(20, ng.field_a);
+        bm.field_d.transitionToContent(20, ng.field_a);
         int var1 = 54 / ((-28 - param0) / 39);
     }
 
-    final int b(int param0, boolean param1) {
+    final int getItemHeight(int param0, boolean param1) {
         if (!param1) {
           String var4 = (String) null;
-          vj.a((Js5Archive) null, (String) null, (String) null, -46);
+          vj.loadIndexedSprite((Js5Archive) null, (String) null, (String) null, -46);
         }
-        if (!po.w(13296) &&
+        if (!po.isGuestSession(13296) &&
           param0 < 2) {
           return jb.field_a[1].field_t;
         }
-        return super.b(param0, true);
+        return super.getItemHeight(param0, true);
     }
 
     public static void releaseStatics(byte param0) {
@@ -216,7 +216,7 @@ final class vj extends al {
         super(param0, param1, param2, param3, param4, param5, param6);
     }
 
-    final void a(byte param0) {
+    final void drawScreen(byte param0) {
         int var5_int = 0;
         int stackIn_35_0 = 0;
         String stackIn_54_0 = null;
@@ -240,8 +240,8 @@ final class vj extends al {
         int var3Lifetime1Lifetime1;
         String var2Lifetime1;
         var14 = ZombieDawn.field_J;
-        super.a((byte) -51);
-        li.a(false);
+        super.drawScreen((byte) -51);
+        JaggrabDownloader.drawPipeboxBackdrop(false);
         if (this.field_r == null) {
           this.field_r = new Sprite(100, 100);
           ki.a((byte) -92, this.field_r);
@@ -251,7 +251,7 @@ final class vj extends al {
             so.a(4424743);
           }
           Rasterizer.blurRectangle(2, 2, 0, 0, 100, 100);
-          pa.a(-21189);
+          pa.popRasterState(-21189);
           this.field_u = new Sprite(100, 100);
           ki.a((byte) -94, this.field_u);
           Rasterizer.clear();
@@ -259,9 +259,9 @@ final class vj extends al {
           for (var3Lifetime3 = 0; var3Lifetime3 < 2; var3Lifetime3++) {
             so.a(16777215);
           }
-          pa.a(-21189);
+          pa.popRasterState(-21189);
         }
-        if (!po.w(13296)) {
+        if (!po.isGuestSession(13296)) {
           var3Lifetime1 = nh.field_G - 45;
           var4 = vh.field_b + 30;
           for (var5_int = 0; 2 > var5_int; var5_int++) {
@@ -281,11 +281,11 @@ final class vj extends al {
             }
             var3Lifetime1 += 90;
           }
-          if (null == bd.field_m) {
-            bd.field_m = fg.a(3, 10, 1, qm.field_b + 42, 1);
+          if (null == WhirlpoolHasher.field_m) {
+            WhirlpoolHasher.field_m = fg.getRankingQuery(3, 10, 1, qm.field_b + 42, 1);
           }
           var5 = sg.field_jb;
-          var6 = bd.field_m;
+          var6 = WhirlpoolHasher.field_m;
           if (!var6.field_j) {
             var2 = jh.field_l;
           } else if (null != var6.field_m &&
@@ -295,7 +295,7 @@ final class vj extends al {
             var18 = var6.field_k[ad.field_e];
             var9 = ph.a(wi.field_b, (byte) -93, ad.field_e, var6);
             var3Lifetime1Lifetime1 = var5.field_I + (89 + id.field_M);
-            var5.drawStringCentered(q.field_G[qm.field_b], bd.field_d, var3Lifetime1Lifetime1, 10, 0);
+            var5.drawStringCentered(q.field_G[qm.field_b], WhirlpoolHasher.field_d, var3Lifetime1Lifetime1, 10, 0);
             var3Lifetime1Lifetime1 = var3Lifetime1Lifetime1 + (var5.field_I + 10);
             var5.drawStringRightAligned(og.field_z, 220 + (vh.field_b - 30), var3Lifetime1Lifetime1, 2, 0);
             var5.drawString(lo.field_r, -10 + (220 + vh.field_b), var3Lifetime1Lifetime1, 2, 0);
@@ -335,48 +335,48 @@ final class vj extends al {
         if (param0 > -35) {
           this.field_u = (Sprite) null;
         }
-        if (po.w(13296)) {
+        if (po.isGuestSession(13296)) {
           stackIn_54_0 = rn.field_a;
         } else {
           stackIn_54_0 = k.field_r;
         }
         var2Lifetime1 = stackIn_54_0;
-        bj.field_q.drawStringCentered(var2Lifetime1, bd.field_d, id.field_M + 412, 14540253, 3355443);
+        bj.field_q.drawStringCentered(var2Lifetime1, WhirlpoolHasher.field_d, id.field_M + 412, 14540253, 3355443);
     }
 
-    final int a(int param0, int param1) {
-        if (po.w(13296)) {
+    final int getItemTop(int param0, int param1) {
+        if (po.isGuestSession(13296)) {
           return id.field_M + this.field_k;
         }
         if (2 > param0) {
           return 90 * param0 + (-90 + nh.field_G + 45);
         }
         if (param1 != -1) {
-          vj.d(63);
+          vj.showAccountCreationDialog(63);
         }
         return id.field_M + this.field_k;
     }
 
-    final static void c(int param0) {
+    final static void fadeOutAllSoundEffects(int param0) {
         IntrusiveNode var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
         var2 = ZombieDawn.field_J;
         try {
-          var1 = kn.field_L.b((byte) 26);
+          var1 = kn.field_L.last((byte) 26);
           while (var1 instanceof tm) {
             aa.a(119, ((tm) (var1)).field_j);
             var1 = var1.previous;
           }
-          var1 = se.field_m.b((byte) 26);
+          var1 = ProxySocketConnector.field_m.last((byte) 26);
           while (var1 instanceof tm) {
             aa.a(10, ((tm) (var1)).field_j);
             var1 = var1.previous;
           }
-          var1 = DelegatingCanvas.field_e.b((byte) 26);
+          var1 = DelegatingCanvas.field_e.last((byte) 26);
           if (param0 < 8) {
-            vj.d(4);
+            vj.showAccountCreationDialog(4);
           }
           while (var1 instanceof tm) {
             aa.a(48, ((tm) (var1)).field_j);
@@ -390,20 +390,20 @@ final class vj extends al {
         }
     }
 
-    final void d(byte param0) {
+    final void selectScoreTable(byte param0) {
         if (qm.field_b != this.field_b.field_d) {
           qm.field_b = this.field_b.field_d;
-          bd.field_m = null;
+          WhirlpoolHasher.field_m = null;
         }
         int var2 = -113 % ((param0 + 78) / 35);
     }
 
-    final int c(int param0, int param1) {
+    final int getItemLeft(int param0, int param1) {
         int var3 = 0;
         if (param1 != 6) {
           field_q = -82;
         }
-        if (!po.w(13296)) {
+        if (!po.isGuestSession(13296)) {
           if (param0 < 2) {
             return 30 + vh.field_b;
           }
@@ -414,7 +414,7 @@ final class vj extends al {
         return (param0 == 0 ? 50 : 470) + vh.field_b;
     }
 
-    final static v a(Js5Archive param0, String param1, String param2, int param3) {
+    final static v loadIndexedSprite(Js5Archive param0, String param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -428,8 +428,8 @@ final class vj extends al {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0.a(param2, (byte) 8);
-          var5 = param0.a(var4_int, param1, true);
+          var4_int = param0.getGroupIdByName(param2, (byte) 8);
+          var5 = param0.getFileIdByName(var4_int, param1, true);
           if (param3 != 4424743) {
             field_t = (int[]) null;
           }

@@ -54,8 +54,8 @@ final class ko {
         this.field_h = new int[this.field_k];
         this.field_c = new int[this.field_k];
         for (var2 = 0; var2 < this.field_k; var2++) {
-          this.field_h[var2] = param0.f(2);
-          this.field_c[var2] = param0.f(2);
+          this.field_h[var2] = param0.readUnsignedShort(2);
+          this.field_c[var2] = param0.readUnsignedShort(2);
         }
     }
 

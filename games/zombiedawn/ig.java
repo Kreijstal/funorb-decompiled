@@ -4,18 +4,18 @@
 final class ig extends wo {
     static String field_Bb;
 
-    final int j(byte param0) {
+    final int chooseFleePoint(byte param0) {
         if (param0 > -42) {
           return -15;
         }
-        return super.j((byte) -86);
+        return super.chooseFleePoint((byte) -86);
     }
 
     ig(int param0, int param1, int param2) {
         super(param0, param1, param2);
     }
 
-    final void l(byte param0) {
+    final void updateBehaviour(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -26,7 +26,7 @@ final class ig extends wo {
         int var7Lifetime1;
         var8 = ZombieDawn.field_J;
         this.state = 0;
-        super.l(param0);
+        super.updateBehaviour(param0);
         var2 = this.getX(true);
         var3 = var2 / 24;
         var4 = this.getY(param0 ^ 237239940);
@@ -80,18 +80,18 @@ final class ig extends wo {
                       this.field_Ab = false;
                     }
                     if (var6 == 3) {
-                      Js5Archive.field_e.a(this, (byte) 110);
+                      Js5Archive.field_e.onHumanHerded(this, (byte) 110);
                       ho.a(this.getY(237239984), (byte) 54, this.getX(true));
                       this.unlink(-27598);
-                      this.d(0);
+                      this.unlinkFromBucket(0);
                     } else {
                       if (var2 <= -24) {
                         this.unlink(-27598);
-                        this.d(0);
+                        this.unlinkFromBucket(0);
                       } else {
                         if (24 + Js5Archive.field_e.navigation.width <= var2) {
                           this.unlink(-27598);
-                          this.d(0);
+                          this.unlinkFromBucket(0);
                         }
                       }
                     }
@@ -107,7 +107,7 @@ final class ig extends wo {
             }
             if (var7 == 0) {
               if (var6 == 3) {
-                Js5Archive.field_e.a(this, (byte) 110);
+                Js5Archive.field_e.onHumanHerded(this, (byte) 110);
                 ho.a(this.getY(237239984), (byte) 54, this.getX(true));
               } else {
                 if (var2 > -24 &&
@@ -116,25 +116,25 @@ final class ig extends wo {
                 }
               }
               this.unlink(-27598);
-              this.d(0);
+              this.unlinkFromBucket(0);
               return;
             }
             this.moveToward(0, this.field_D);
             this.setState(1, -6904);
             this.field_Ab = false;
             if (var6 == 3) {
-              Js5Archive.field_e.a(this, (byte) 110);
+              Js5Archive.field_e.onHumanHerded(this, (byte) 110);
               ho.a(this.getY(237239984), (byte) 54, this.getX(true));
               this.unlink(-27598);
-              this.d(0);
+              this.unlinkFromBucket(0);
             } else {
               if (var2 <= -24) {
                 this.unlink(-27598);
-                this.d(0);
+                this.unlinkFromBucket(0);
               } else {
                 if (24 + Js5Archive.field_e.navigation.width <= var2) {
                   this.unlink(-27598);
-                  this.d(0);
+                  this.unlinkFromBucket(0);
                 }
               }
             }
@@ -144,7 +144,7 @@ final class ig extends wo {
             3 < var3 &&
             var5 > 5) {
             if (var6 == 3) {
-              Js5Archive.field_e.a(this, (byte) 110);
+              Js5Archive.field_e.onHumanHerded(this, (byte) 110);
               ho.a(this.getY(237239984), (byte) 54, this.getX(true));
             } else {
               if (var2 > -24 &&
@@ -153,7 +153,7 @@ final class ig extends wo {
               }
             }
             this.unlink(-27598);
-            this.d(0);
+            this.unlinkFromBucket(0);
             return;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -202,19 +202,19 @@ final class ig extends wo {
                     this.field_Ab = false;
                   }
                   if (var6 == 3) {
-                    Js5Archive.field_e.a(this, (byte) 110);
+                    Js5Archive.field_e.onHumanHerded(this, (byte) 110);
                     ho.a(this.getY(237239984), (byte) 54, this.getX(true));
                     this.unlink(-27598);
-                    this.d(0);
+                    this.unlinkFromBucket(0);
                     return;
                   }
                   if (var2 <= -24) {
                     this.unlink(-27598);
-                    this.d(0);
+                    this.unlinkFromBucket(0);
                   } else {
                     if (24 + Js5Archive.field_e.navigation.width <= var2) {
                       this.unlink(-27598);
-                      this.d(0);
+                      this.unlinkFromBucket(0);
                       return;
                     }
                   }
@@ -235,7 +235,7 @@ final class ig extends wo {
           }
         }
         if (var6 == 3) {
-          Js5Archive.field_e.a(this, (byte) 110);
+          Js5Archive.field_e.onHumanHerded(this, (byte) 110);
           ho.a(this.getY(237239984), (byte) 54, this.getX(true));
         } else {
           if (var2 > -24 &&
@@ -244,23 +244,23 @@ final class ig extends wo {
           }
         }
         this.unlink(-27598);
-        this.d(0);
+        this.unlinkFromBucket(0);
     }
 
-    final void g(int param0) {
-        super.g(107);
+    final void tick(int param0) {
+        super.tick(107);
         if (param0 < 95) {
-          this.g(18);
+          this.tick(18);
         }
         if (this.getY(237239984) - 48 <= Js5Archive.field_e.navigation.height &&
           this.getX(true) - 48 <= Js5Archive.field_e.navigation.width) {
           return;
         }
         this.unlink(-27598);
-        this.d(0);
+        this.unlinkFromBucket(0);
     }
 
-    final void a(Camera param0, int param1) {
+    final void drawDebugOverlay(Camera param0, int param1) {
         int var5 = 0;
         int var3_int = 0;
         int var4 = 0;
@@ -278,7 +278,7 @@ final class ig extends wo {
           var4 = param0.worldToScreenY(this.getY(237239984), 0);
           Rasterizer.drawCircleOutline(var3_int, var4, this.field_pb, 65535);
           if (param1 != 5060) {
-            ig.m((byte) 7);
+            ig.resetLoginState((byte) 7);
           }
           Rasterizer.drawLine(var3_int, var4, param0.worldToScreenX(this.targetX, (byte) -128), param0.worldToScreenY(this.targetY, param1 - 5060), 16711935);
           for (var5 = 0; var5 < this.field_ub; var5++) {
@@ -309,7 +309,7 @@ final class ig extends wo {
         }
     }
 
-    final static void m(byte param0) {
+    final static void resetLoginState(byte param0) {
         ce.field_q = false;
         nm.field_c = false;
         og.b(-115, -1);
@@ -323,7 +323,7 @@ final class ig extends wo {
         tk.field_a = ic.field_S;
     }
 
-    final void d(byte param0) {
+    final void updateGridCell(byte param0) {
         if (this.getY(237239984) < 0) {
           return;
         }
@@ -334,10 +334,10 @@ final class ig extends wo {
           return;
         }
         int var2 = 57 % ((param0 - 66) / 50);
-        super.d((byte) 123);
+        super.updateGridCell((byte) 123);
     }
 
-    final static int f(int param0, int param1) {
+    final static int sinFixed(int param0, int param1) {
         if (param0 != 2047) {
           field_Bb = (String) null;
           return en.field_e[param1 & 2047];
@@ -345,7 +345,7 @@ final class ig extends wo {
         return en.field_e[param1 & 2047];
     }
 
-    final static void a(Font param0, int param1, int param2, int param3, int param4, Font param5, int param6, int param7, int param8, mf param9, int param10, mf param11, int param12, mf param13, int param14, int param15, int param16, int param17, int param18, int param19) {
+    final static void initializeSharedUiResources(Font param0, int param1, int param2, int param3, int param4, Font param5, int param6, int param7, int param8, mf param9, int param10, mf param11, int param12, mf param13, int param14, int param15, int param16, int param17, int param18, int param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -362,14 +362,14 @@ final class ig extends wo {
         try {
           re.field_g = param0;
           FunOrbApplet.field_m = param5;
-          di.a(param17, param10, param12, (byte) -116, param19);
+          di.setDialogFrameMetrics(param17, param10, param12, (byte) -116, param19);
           hn.a(1780, param14, param13, param8);
           ro.a(param4, param7, param9, param11, param16, -386);
           ba.a(18002, param18, param2);
           if (param3 != 495) {
             field_Bb = (String) null;
           }
-          kc.a((byte) 50, param15, param1, param6);
+          kc.setMenuTextColours((byte) 50, param15, param1, param6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

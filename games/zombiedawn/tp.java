@@ -19,7 +19,7 @@ final class tp extends PcmStream {
     private int field_y;
     private int field_A;
 
-    final synchronized void a(int param0, boolean param1, int param2, int param3, int param4, wj param5) {
+    final synchronized void switchTrack(int param0, boolean param1, int param2, int param3, int param4, wj param5) {
         boolean stackIn_16_1 = false;
         int stackIn_29_0 = 0;
         rj stackIn_40_0 = null;
@@ -43,21 +43,21 @@ final class tp extends PcmStream {
             param1) {
             if (this.field_A <= 0) {
               if (null != this.field_r) {
-                this.field_t.c(28013);
+                this.field_t.stop(28013);
               }
               this.field_r = param5;
               if (param5 != null) {
-                this.field_t.a((byte) -22, param5, false);
-                this.a(param2, param3, this.field_t, -1);
+                this.field_t.playTrack((byte) -22, param5, false);
+                this.configureSynthesizer(param2, param3, this.field_t, -1);
               }
             } else {
               if (this.field_l != null) {
-                this.field_v.c(28013);
+                this.field_v.stop(28013);
               }
               this.field_l = param5;
               if (param5 != null) {
-                this.field_v.a((byte) -22, param5, false);
-                this.a(param2, param3, this.field_v, -1);
+                this.field_v.playTrack((byte) -22, param5, false);
+                this.configureSynthesizer(param2, param3, this.field_v, -1);
               }
             }
             return;
@@ -66,12 +66,12 @@ final class tp extends PcmStream {
           this.field_x = stackIn_16_1;
           if (param5 == this.field_l) {
             this.field_A = param0;
-            this.a(param2, param3, this.field_v, -1);
+            this.configureSynthesizer(param2, param3, this.field_v, -1);
             return;
           }
           if (param5 == this.field_r) {
             this.field_A = -param0;
-            this.a(param2, param3, this.field_t, -1);
+            this.configureSynthesizer(param2, param3, this.field_t, -1);
             return;
           }
           if (param4 >= -46) {
@@ -89,7 +89,7 @@ final class tp extends PcmStream {
           }
           if (var7_int != 0) {
             if (this.field_l != null) {
-              this.field_v.c(28013);
+              this.field_v.stop(28013);
             }
             this.field_l = param5;
             if (param5 != null) {
@@ -97,13 +97,13 @@ final class tp extends PcmStream {
               stackIn_49_1 = -22;
               stackIn_49_2 = (wj) (param5);
               stackIn_50_3 = !(param1);
-              ((rj) (Object) stackIn_49_0).a((byte) stackIn_49_1, stackIn_49_2, stackIn_50_3);
-              this.a(param2, param3, this.field_v, -1);
+              ((rj) (Object) stackIn_49_0).playTrack((byte) stackIn_49_1, stackIn_49_2, stackIn_50_3);
+              this.configureSynthesizer(param2, param3, this.field_v, -1);
             }
             this.field_A = param0;
           } else {
             if (this.field_r != null) {
-              this.field_t.c(28013);
+              this.field_t.stop(28013);
             }
             this.field_r = param5;
             if (param5 != null) {
@@ -111,8 +111,8 @@ final class tp extends PcmStream {
               stackIn_40_1 = -22;
               stackIn_40_2 = (wj) (param5);
               stackIn_41_3 = !(param1);
-              ((rj) (Object) stackIn_40_0).a((byte) stackIn_40_1, stackIn_40_2, stackIn_41_3);
-              this.a(param2, param3, this.field_t, -1);
+              ((rj) (Object) stackIn_40_0).playTrack((byte) stackIn_40_1, stackIn_40_2, stackIn_41_3);
+              this.configureSynthesizer(param2, param3, this.field_t, -1);
             }
             this.field_A = -param0;
           }
@@ -183,7 +183,7 @@ final class tp extends PcmStream {
                 this.field_A = 0;
                 if (!this.field_w) {
                   if (null != this.field_r) {
-                    this.field_t.c(28013);
+                    this.field_t.stop(28013);
                   }
                   this.field_r = null;
                 }
@@ -195,7 +195,7 @@ final class tp extends PcmStream {
                   this.field_A = 0;
                   if (!this.field_w) {
                     if (this.field_l != null) {
-                      this.field_v.c(28013);
+                      this.field_v.stop(28013);
                     }
                     this.field_l = null;
                   }
@@ -282,14 +282,14 @@ final class tp extends PcmStream {
         }
     }
 
-    final static void a(byte param0, Js5Archive param1) {
+    final static void loadLogoSound(byte param0, Js5Archive param1) {
         mb var2 = null;
         if (param0 <= 120) {
           return;
         }
         try {
-          mb.decodeSetup(param1.a("", -121, "headers.packvorbis"));
-          var2 = mb.a(param1, "jagex logo2.packvorbis", "");
+          mb.decodeSetup(param1.getFileByName("", -121, "headers.packvorbis"));
+          var2 = mb.load(param1, "jagex logo2.packvorbis", "");
           var2.decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "tp.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -300,14 +300,14 @@ final class tp extends PcmStream {
         return null;
     }
 
-    final static ji c(byte param0) {
+    final static ji createActiveEmailLookupValue(byte param0) {
         if (param0 != 0) {
           field_p = -26L;
         }
-        return new ji(DualLinkDeque.e((byte) -16), df.a(1));
+        return new ji(DualLinkDeque.getCurrentAccountName((byte) -16), df.a(1));
     }
 
-    final static PcmSampleStream b(byte param0, int param1) {
+    final static PcmSampleStream playSoundEffect(byte param0, int param1) {
         if (4 <= DelegatingCanvas.field_e.size(-56)) {
           return null;
         }
@@ -319,16 +319,16 @@ final class tp extends PcmStream {
         return var2.field_j;
     }
 
-    private final void a(int param0, int param1, rj param2, int param3) {
+    private final void configureSynthesizer(int param0, int param1, rj param2, int param3) {
         try {
-          param2.a(param0, true, param3);
-          param2.a(param1, false);
+          param2.setChannelVolume(param0, true, param3);
+          param2.setTempoScale(param1, false);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "tp.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    final static vf c(int param0) {
+    final static vf getDefaultTextPainter(int param0) {
         if (null == jo.field_Ob) {
           jo.field_Ob = new vf(SecondaryNodeDeque.field_a, 20, 0, 0, 0, 11579568, -1, 0, 0, SecondaryNodeDeque.field_a.field_I, -1, 2147483647, true);
         }
@@ -336,7 +336,7 @@ final class tp extends PcmStream {
         return jo.field_Ob;
     }
 
-    final static void a(int param0, boolean param1, wj param2) {
+    final static void playMusicTrack(int param0, boolean param1, wj param2) {
         try {
           i.a(256, param1, (byte) -115, param2);
           int var3_int = -119 / ((-38 - param0) / 47);
@@ -356,7 +356,7 @@ final class tp extends PcmStream {
         return 2;
     }
 
-    final static void a(Sprite[] param0, int param1) {
+    final static void createHudPanelSprites(Sprite[] param0, int param1) {
         try {
           si.field_Ub = new Sprite[7];
           vh.field_e = new Sprite[7];
@@ -394,7 +394,7 @@ final class tp extends PcmStream {
         return null;
     }
 
-    final synchronized void a(byte param0, int param1) {
+    final synchronized void setVolume(byte param0, int param1) {
         this.field_y = param1;
         if (param0 != 122) {
           this.field_y = -6;
@@ -496,7 +496,7 @@ final class tp extends PcmStream {
               this.field_A = 0;
               if (!this.field_w) {
                 if (null != this.field_r) {
-                  this.field_t.c(28013);
+                  this.field_t.stop(28013);
                 }
                 this.field_r = null;
               }
@@ -508,7 +508,7 @@ final class tp extends PcmStream {
                 this.field_A = 0;
                 if (!this.field_w) {
                   if (this.field_l != null) {
-                    this.field_v.c(28013);
+                    this.field_v.stop(28013);
                   }
                   this.field_l = null;
                 }
@@ -526,7 +526,7 @@ final class tp extends PcmStream {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static PcmSampleStream $cfr$intArgs$b$3010b50b2764(int param0, int param1) {
+    final static PcmSampleStream playSoundEffect(int param0, int param1) {
         if (4 <= DelegatingCanvas.field_e.size(-56)) {
           return null;
         }

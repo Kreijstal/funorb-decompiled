@@ -11,7 +11,7 @@ abstract class pj extends DualLinkNode {
 
     final static void a(wj param0, byte param1, int param2, int param3, boolean param4) {
         try {
-          nc.field_p.a(param3, !param4 ? true : false, param2, 1000000, -93, param0);
+          nc.field_p.switchTrack(param3, !param4 ? true : false, param2, 1000000, -93, param0);
           int var5_int = 2 % ((param1 + 11) / 36);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "pj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');

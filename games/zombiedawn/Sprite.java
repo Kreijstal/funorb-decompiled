@@ -764,7 +764,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void e(int param0, int param1, int param2) {
+    void drawWithOpacity(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -1342,7 +1342,7 @@ class Sprite extends SpriteState {
         Rasterizer.setBuffer(this.field_z, this.field_w, this.field_t);
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void drawTransparentWithOpacity(int param0, int param1, int param2, int param3) {
         int var11 = 0;
         int var11Lifetime1;
         int var11Lifetime2;
@@ -1387,7 +1387,7 @@ class Sprite extends SpriteState {
           if (var7 <= 0) {
             return;
           }
-          Sprite.a(Rasterizer.pixels, this.field_z, 0, var6, var5, var8, var7, var9, var10, param2, param3);
+          Sprite.blendNonzeroPixelsTowardColour(Rasterizer.pixels, this.field_z, 0, var6, var5, var8, var7, var9, var10, param2, param3);
           return;
         }
     }
@@ -2109,7 +2109,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
+    private final static void blendNonzeroPixelsTowardColour(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
         int var14 = 0;
         int var15 = 0;
         int incrementValue$12 = 0;
@@ -2140,7 +2140,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void c(int param0, int param1, int param2) {
+    void drawRecoloredNeutral(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;

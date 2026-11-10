@@ -22,7 +22,7 @@ class qk extends Human {
     private int field_Ib;
     private boolean field_Bb;
 
-    final static Sprite c(int param0, byte param1, int param2) {
+    final static Sprite createSolidSprite(int param0, byte param1, int param2) {
         int var5 = ZombieDawn.field_J;
         Sprite var6 = new Sprite(param2, param2);
         Sprite var3 = var6;
@@ -47,9 +47,9 @@ class qk extends Human {
         field_Kb = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, boolean param4) {
+    final static void drawDimmedBlurredRect(int param0, int param1, int param2, int param3, boolean param4) {
         int var5 = 0;
-        if (Rasterizer.width == bd.field_e) {
+        if (Rasterizer.width == WhirlpoolHasher.field_e) {
           if (Rasterizer.height != nh.field_P) {
             return;
           }
@@ -63,32 +63,32 @@ class qk extends Human {
         }
     }
 
-    void a(byte param0, Camera param1) {
+    void draw(byte param0, Camera param1) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          super.a((byte) -83, param1);
+          super.draw((byte) -83, param1);
           if (param0 > -76) {
             return;
           }
           if (this.field_G == 1 &&
             this.state == 10) {
-            this.b(param1.worldToScreenX(this.getX(true), (byte) -70), (byte) -114, param1.worldToScreenY(this.getY(237239984), 0));
+            this.drawMuzzleFlash(param1.worldToScreenX(this.getX(true), (byte) -70), (byte) -114, param1.worldToScreenY(this.getY(237239984), 0));
           }
           if (ng.field_e) {
             if (this.field_t == 28) {
-              this.a(param1, 5060);
+              this.drawDebugOverlay(param1, 5060);
               return;
             }
             if (this.field_t == 23) {
-              this.a(param1, 5060);
+              this.drawDebugOverlay(param1, 5060);
               return;
             }
             if (18 == this.field_t) {
-              this.a(param1, 5060);
+              this.drawDebugOverlay(param1, 5060);
               return;
             }
           }
@@ -117,7 +117,7 @@ class qk extends Human {
         super.setState(param0, param1);
     }
 
-    final static void n(byte param0) {
+    final static void advanceAnimatedTiles(byte param0) {
         int var2 = 0;
         va[] var1 = null;
         va var3 = null;
@@ -144,32 +144,32 @@ class qk extends Human {
         }
     }
 
-    private final boolean a(int param0, boolean param1, int param2) {
+    private final boolean findNearestTargetZombie(int param0, boolean param1, int param2) {
         Zombie var5 = null;
         int var6 = ZombieDawn.field_J;
         this.field_mb = 2147483647;
         this.field_sb = null;
         this.field_fb = false;
         if (param0 != -19718) {
-          this.g(-115);
+          this.tick(-115);
         }
-        WorldObject var4 = this.a((byte) -74, param2, 2);
+        WorldObject var4 = this.firstNearbyObject((byte) -74, param2, 2);
         while (var4 != null) {
           var5 = (Zombie) (var4);
-          if (!var5.field_hb && var5.state != 9 && var5.x(param0 ^ -19794) &&
-            (param1 || this.a(57, var4))) {
+          if (!var5.field_hb && var5.state != 9 && var5.isVisibleToHumans(param0 ^ -19794) &&
+            (param1 || this.hasLineOfSight(57, var4))) {
             if (this.field_mb > this.field_s) {
               this.field_sb = var4;
               this.field_mb = this.field_s;
             }
             this.field_fb = var5.field_bb > 0 ? true : false;
           }
-          var4 = this.e((byte) 32);
+          var4 = this.nextNearbyObject((byte) 32);
         }
         return this.field_sb != null ? true : false;
     }
 
-    void l(byte param0) {
+    void updateBehaviour(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -181,14 +181,14 @@ class qk extends Human {
         }
         if (param0 != 52) {
           var5 = (Camera) null;
-          this.a((Camera) null, 14);
+          this.drawDebugOverlay((Camera) null, 14);
         }
         boolean decompiledFrameRemainder1 = true;
         var2 = this.field_Eb;
         var3 = this.field_Eb / 2;
         if ((this.field_t == 28 ||
-          !this.a(-68, var2, false)) && (this.field_t != 28 ||
-          !this.a(-19718, false, var2))) {
+          !this.findNearestTarget(-68, var2, false)) && (this.field_t != 28 ||
+          !this.findNearestTargetZombie(-19718, false, var2))) {
           if ((this.state == 3)) {
             this.setState(0, param0 ^ -6852);
           }
@@ -200,12 +200,12 @@ class qk extends Human {
             0 < this.field_Ab) {
             if (this.field_mb >= var3 * var3) {
               if (!this.field_Bb) {
-                this.m((byte) -116);
+                this.aimAtNearestZombie((byte) -116);
                 decompiledFrameRemainder1 = false;
               }
               else {
-                if (!this.p(param0 ^ -79)) {
-                  this.m((byte) -116);
+                if (!this.startFleeing(param0 ^ -79)) {
+                  this.aimAtNearestZombie((byte) -116);
                   decompiledFrameRemainder1 = false;
                 }
                 else {
@@ -220,12 +220,12 @@ class qk extends Human {
             if ((decompiledFrameRemainder1) &&
               (decompiledFrameRemainder0)) {
               if (this.field_Bb) {
-                this.m((byte) -90);
+                this.aimAtNearestZombie((byte) -90);
                 decompiledFrameRemainder1 = false;
               }
               else {
-                if (!this.p(param0 ^ -79)) {
-                  this.m((byte) -90);
+                if (!this.startFleeing(param0 ^ -79)) {
+                  this.aimAtNearestZombie((byte) -90);
                   decompiledFrameRemainder1 = false;
                 }
                 else {
@@ -240,7 +240,7 @@ class qk extends Human {
           }
           if ((decompiledFrameRemainder1) &&
             (decompiledFrameRemainder0) &&
-            (!this.p(-120))) {
+            (!this.startFleeing(-120))) {
             this.setState(3, -6904);
           }
         }
@@ -330,7 +330,7 @@ class qk extends Human {
         }
     }
 
-    void a(Camera param0, int param1) {
+    void drawDebugOverlay(Camera param0, int param1) {
         String var3 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -365,7 +365,7 @@ class qk extends Human {
         }
     }
 
-    void b(int param0, byte param1, int param2) {
+    void drawMuzzleFlash(int param0, byte param1, int param2) {
         int var4;
         int var5;
         int var6;
@@ -379,7 +379,7 @@ class qk extends Human {
         var5 = var4;
         var6 = var4 / 2;
         if (param1 > -91) {
-          qk.a(-55, -46, -124, -122, -112);
+          qk.registerSpecialTile(-55, -46, -124, -122, -112);
         }
         var7 = -var4 + 8;
         if (this.field_S != 1) {
@@ -411,7 +411,7 @@ class qk extends Human {
         }
     }
 
-    void g(int param0) {
+    void tick(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int stackIn_32_1 = 0;
@@ -420,7 +420,7 @@ class qk extends Human {
         if (param0 <= 95) {
           field_Db = -122;
         }
-        super.g(112);
+        super.tick(112);
         if (0 < this.field_xb) {
           this.field_xb = this.field_xb - 1;
         }
@@ -441,9 +441,9 @@ class qk extends Human {
                   this.field_Ab = this.field_Ab - 1;
                   if (fieldTemp$0 >= 0) {
                     if (28 != this.field_t) {
-                      this.field_yb.z(0);
+                      this.field_yb.takeLethalHit(0);
                     } else {
-                      Js5Archive.field_e.b(2, this.field_yb.getY(237239984), true, this.field_yb.getX(true));
+                      Js5Archive.field_e.addBlast(2, this.field_yb.getY(237239984), true, this.field_yb.getX(true));
                     }
                     if (this.field_Ab > 2000) {
                       this.field_Ab = 3000;
@@ -481,7 +481,7 @@ class qk extends Human {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void registerSpecialTile(int param0, int param1, int param2, int param3, int param4) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -514,7 +514,7 @@ class qk extends Human {
         }
     }
 
-    final void m(byte param0) {
+    final void aimAtNearestZombie(byte param0) {
         int stackIn_29_1 = 0;
         int stackIn_33_1 = 0;
         Object var2;
@@ -545,9 +545,9 @@ class qk extends Human {
         var3 = this.field_Eb * this.field_Eb;
         if (var2 == null ||
           ((Zombie) (var11)).field_hb) {
-          var4_ref_fb = this.a((byte) -74, this.field_Eb, 2);
+          var4_ref_fb = this.firstNearbyObject((byte) -74, this.field_Eb, 2);
           while (var4_ref_fb != null) {
-            if ((((Zombie) (var4_ref_fb)).x(42) ||
+            if ((((Zombie) (var4_ref_fb)).isVisibleToHumans(42) ||
               this instanceof we) &&
               !((Zombie) (var4_ref_fb)).field_hb) {
               var5 = var4_ref_fb.getX(true);
@@ -556,16 +556,16 @@ class qk extends Human {
               var8 = -var6 + this.getY(237239984);
               var9 = var7 * var7 + var8 * var8;
               if (var3 > var9) {
-                if (Js5Archive.field_e.navigation.a(var6, this.getY(237239984), var5, this.getX(true), 123) == -1 &&
-                  Js5Archive.field_e.navigation.a(-24 + var6, -24 + this.getY(237239984), var5, this.getX(true), 105) == -1) {
-                  var4_ref_fb = this.e((byte) 32);
+                if (Js5Archive.field_e.navigation.traceLineFromTo(var6, this.getY(237239984), var5, this.getX(true), 123) == -1 &&
+                  Js5Archive.field_e.navigation.traceLineFromTo(-24 + var6, -24 + this.getY(237239984), var5, this.getX(true), 105) == -1) {
+                  var4_ref_fb = this.nextNearbyObject((byte) 32);
                   continue;
                 }
                 var2 = (Zombie) (var4_ref_fb);
                 var3 = var9;
               }
             }
-            var4_ref_fb = this.e((byte) 32);
+            var4_ref_fb = this.nextNearbyObject((byte) 32);
           }
         }
         if (var2 != null) {

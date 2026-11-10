@@ -21,7 +21,7 @@ final class SecondaryNodeDeque implements Iterable {
         field_a = null;
     }
 
-    final static int a(int param0, int param1, byte[] param2) {
+    final static int computeCrc32(int param0, int param1, byte[] param2) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -48,7 +48,7 @@ final class SecondaryNodeDeque implements Iterable {
         }
     }
 
-    final DualLinkNode a(int param0) {
+    final DualLinkNode removeFirst(int param0) {
         DualLinkNode var2 = this.field_c.secondaryNext;
         if (param0 < 46) {
           field_d = 104;
@@ -65,7 +65,7 @@ final class SecondaryNodeDeque implements Iterable {
         return null;
     }
 
-    final void a(int param0, DualLinkNode param1) {
+    final void addLast(int param0, DualLinkNode param1) {
         try {
           if (param1.secondaryPrevious != null) {
             param1.unlinkSecondary((byte) -12);
@@ -75,7 +75,7 @@ final class SecondaryNodeDeque implements Iterable {
           param1.secondaryPrevious.secondaryNext = param1;
           if (param0 != 0) {
             byte[] var4 = (byte[]) null;
-            SecondaryNodeDeque.a(-82, 33, (byte[]) null);
+            SecondaryNodeDeque.computeCrc32(-82, 33, (byte[]) null);
           }
           param1.secondaryNext.secondaryPrevious = param1;
         } catch (RuntimeException runtimeException) {

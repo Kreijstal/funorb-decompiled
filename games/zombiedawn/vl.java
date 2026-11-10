@@ -23,7 +23,7 @@ final class vl implements io {
     private int field_o;
     static String field_f;
 
-    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
+    public final void drawWidget(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -93,12 +93,12 @@ final class vl implements io {
               decompiledFrameRemainder0 = (df.field_j == ic.field_T);
               if ((decompiledFrameRemainder0) && (dp.field_e.position == 0 &&
                 pd.monotonicTimeMillis(-22826) > (10000L + hm.field_N))) {
-                dp.field_e.j(11, param1);
+                dp.field_e.writeCipheredByte(11, param1);
               }
             } else {
               if (dp.field_e.position == 0 &&
                 pd.monotonicTimeMillis(-22826) > (10000L + hm.field_N)) {
-                dp.field_e.j(11, param1);
+                dp.field_e.writeCipheredByte(11, param1);
               }
             }
             if (decompiledFrameRemainder0) {

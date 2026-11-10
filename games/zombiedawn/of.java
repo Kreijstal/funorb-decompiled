@@ -23,14 +23,14 @@ final class of {
     int field_o;
     int field_i;
 
-    final void a(int param0, int param1, byte param2, int param3, int param4) {
-        Mover.$cfr$intArgs$a$3aedf8649552(param3, 99, param1, param4, param0);
+    final void pushClipRect(int param0, int param1, byte param2, int param3, int param4) {
+        Mover.intersectClipIntArgs(param3, 99, param1, param4, param0);
         if (param2 > -60) {
           this.field_k = 55;
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3, int param4, int param5) {
+    final void drawLine(int param0, int param1, byte param2, int param3, int param4, int param5) {
         Rasterizer.drawLine(param3, param4, param5, param0, param1);
         if (param2 != -14) {
           this.field_f = 122;
@@ -84,7 +84,7 @@ final class of {
               return stackIn_21_0;
             }
             var6 = var4[var5];
-            var7 = GameKeyHandler.a(-126, var6);
+            var7 = GameKeyHandler.validateDomainLabel(-126, var6);
             if (var7 == null) {
               var5++;
               continue;
@@ -122,10 +122,10 @@ final class of {
             IntrusiveDeque.field_a[0] != null) {
             var1_int = IntrusiveDeque.field_a[0].field_w;
             IntrusiveDeque.field_a[0].drawWithOffsets(0, 0);
-            IntrusiveDeque.field_a[1].drawWithOffsets(-var1_int + bd.field_e, 0);
+            IntrusiveDeque.field_a[1].drawWithOffsets(-var1_int + WhirlpoolHasher.field_e, 0);
             IntrusiveDeque.field_a[2].drawWithOffsets(0, nh.field_P - var1_int);
-            IntrusiveDeque.field_a[3].drawWithOffsets(-var1_int + bd.field_e, -var1_int + nh.field_P);
-            Mover.$cfr$intArgs$a$3aedf8649552(0, 99, -var1_int + bd.field_e, nh.field_P, var1_int);
+            IntrusiveDeque.field_a[3].drawWithOffsets(-var1_int + WhirlpoolHasher.field_e, -var1_int + nh.field_P);
+            Mover.intersectClipIntArgs(0, 99, -var1_int + WhirlpoolHasher.field_e, nh.field_P, var1_int);
             if (param0 != 11690) {
               return;
             }
@@ -134,13 +134,13 @@ final class of {
               ch.field_a.drawWithOffsets(var2, 0);
               ch.field_a.drawVerticalFlip(var2, var3);
             }
-            Rasterizer.setClip(0, var1_int, bd.field_e, nh.field_P - var1_int);
-            var2Lifetime1 = -var1_int + bd.field_e;
+            Rasterizer.setClip(0, var1_int, WhirlpoolHasher.field_e, nh.field_P - var1_int);
+            var2Lifetime1 = -var1_int + WhirlpoolHasher.field_e;
             for (var3Lifetime1 = var1_int; Rasterizer.clipBottom > var3Lifetime1; var3Lifetime1 = var3Lifetime1 + GameWorld.field_x.field_t) {
               GameWorld.field_x.drawWithOffsets(0, var3Lifetime1);
               GameWorld.field_x.drawMirrored(var2Lifetime1, var3Lifetime1);
             }
-            pa.a(-21189);
+            pa.popRasterState(-21189);
             return;
           }
           return;
@@ -151,7 +151,7 @@ final class of {
         }
     }
 
-    final void a(int param0, int param1, String param2, int param3) {
+    final void drawTooltip(int param0, int param1, String param2, int param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -162,9 +162,9 @@ final class of {
             return;
           }
           if (this.field_l) {
-            this.a(param1, param2, param0, 0);
+            this.drawWrappedTooltip(param1, param2, param0, 0);
           } else {
-            this.a(param2, param1, param0, (byte) 53);
+            this.drawSingleLineTooltip(param2, param1, param0, (byte) 53);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -181,7 +181,7 @@ final class of {
         }
     }
 
-    private final void a(String param0, int param1, int param2, byte param3) {
+    private final void drawSingleLineTooltip(String param0, int param1, int param2, byte param3) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -195,7 +195,7 @@ final class of {
           var5_int = this.field_c.textWidth(param0);
           var6 = this.field_c.field_x + this.field_c.field_w;
           if (param3 != 53) {
-            this.a(60, -58, (byte) 14, 69, -115);
+            this.pushClipRect(60, -58, (byte) 14, 69, -115);
           }
           var7 = param1;
           if (Rasterizer.width < 6 + (var5_int + var7)) {
@@ -223,7 +223,7 @@ final class of {
         }
     }
 
-    final void a(int param0, Font param1) {
+    final void installDefaultPainters(int param0, Font param1) {
         vf var17 = null;
         qo var4 = null;
         Sprite[] var5 = null;
@@ -251,7 +251,7 @@ final class of {
           this.field_n = (io) ((Object) var17);
           var17.field_l = 16777215;
           var4 = new qo();
-          var17.a(var4, (byte) 106);
+          var17.copyStyleTo(var4, (byte) 106);
           this.field_h = 3;
           this.field_q = 3;
           var4.field_j = 11711154;
@@ -263,9 +263,9 @@ final class of {
           this.field_i = 15658734;
           this.field_j = 15658734;
           this.field_t = -1;
-          var4.a((byte) 73, 0).b((byte) -21, 15658734).a(tb.c(10066329, 8947848, -2967, 7829367), param0 ^ 37);
-          var4.a((byte) 73, 1).a(tb.c(10066329, 11184810, -2967, 13421772), 33);
-          var4.a((byte) 73, 3).a(tb.c(7829367, 8947848, param0 - 2971, 10066329), param0 ^ 37).a((byte) 126, 1).a(1, (byte) 57);
+          var4.createStateStyle((byte) 73, 0).setTextColor((byte) -21, 15658734).setFrameSprites(tb.createSolidFrameSprites(10066329, 8947848, -2967, 7829367), param0 ^ 37);
+          var4.createStateStyle((byte) 73, 1).setFrameSprites(tb.createSolidFrameSprites(10066329, 11184810, -2967, 13421772), 33);
+          var4.createStateStyle((byte) 73, 3).setFrameSprites(tb.createSolidFrameSprites(7829367, 8947848, param0 - 2971, 10066329), param0 ^ 37).setOffsetX((byte) 126, 1).setOffsetY(1, (byte) 57);
           var5 = new Sprite[9];
           var16 = new cd(32, 32);
           var18 = var16;
@@ -273,22 +273,22 @@ final class of {
             var16.field_z[var7_int] = 1077952576;
           }
           var5[4] = (Sprite) ((Object) var18);
-          var4.a((byte) 73, 4).a(true, (byte) 74).a(var5, 33);
-          var4.a((byte) 73, 5).a(ab.a(0, (byte) -36, 0, 0, 65793), 33).a(true, (byte) -113).b((byte) -21, -1);
+          var4.createStateStyle((byte) 73, 4).setFlushBeforeOverlay(true, (byte) 74).setFrameSprites(var5, 33);
+          var4.createStateStyle((byte) 73, 5).setFrameSprites(ab.createSimpleBevelFrameSprites(0, (byte) -36, 0, 0, 65793), 33).setFlushBeforeOverlay(true, (byte) -113).setTextColor((byte) -21, -1);
           this.field_a = (io) ((Object) var4);
           var6 = new qo(var4, true);
           var6.field_h = 0;
           var7 = new qo(var4, true);
           var7.field_h = 0;
-          var7.a(69, bm.a((byte) -75, 8947848));
-          var7.a((byte) 73, 1).a(bm.a((byte) -107, 11184810), param0 ^ 37).b((byte) -21, 2236962);
+          var7.setFrameSpritesForAllStates(69, bm.a((byte) -75, 8947848));
+          var7.createStateStyle((byte) 73, 1).setFrameSprites(bm.a((byte) -107, 11184810), param0 ^ 37).setTextColor((byte) -21, 2236962);
           this.field_g = (io) ((Object) new vl(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new t(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new el(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new qo();
-          var17.a(var8, (byte) -57);
-          var8.a((byte) 73, 0).a(tb.c(7829367, 15658734, param0 ^ -2963, 10066329), param0 + 29).b((byte) -21, 1118481).a(-1, param0 ^ -107);
-          var8.a((byte) 73, param0).a(true, (byte) 72).a(var5, param0 + 29);
+          var17.copyStyleTo(var8, (byte) -57);
+          var8.createStateStyle((byte) 73, 0).setFrameSprites(tb.createSolidFrameSprites(7829367, 15658734, param0 ^ -2963, 10066329), param0 + 29).setTextColor((byte) -21, 1118481).setTextShadowColor(-1, param0 ^ -107);
+          var8.createStateStyle((byte) 73, param0).setFlushBeforeOverlay(true, (byte) 72).setFrameSprites(var5, param0 + 29);
           this.field_b = (io) ((Object) var8);
           var9 = new Sprite[9];
           var10 = new Sprite[9];
@@ -299,37 +299,37 @@ final class of {
           var10[4].field_z = new int[]{6710886, 7829367};
           var11 = new qo();
           var12 = new qo();
-          var11.a(1, var9, 0);
-          var12.a(1, var10, 0);
+          var11.setStateFrameSprites(1, var9, 0);
+          var12.setStateFrameSprites(1, var10, 0);
           this.field_m = (io) ((Object) var4);
           this.field_s = (io) ((Object) var12);
           var13 = new Sprite(7, 4);
           var13.field_z = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           this.field_p = 10;
           var14 = new qo(var4, true);
-          var14.a(var13.copySprite(), 0);
+          var14.setIconForAllStates(var13.copySprite(), 0);
           var13.rotateCounterClockwise();
           var14Lifetime1 = new qo(var4, true);
-          var14Lifetime1.a(var13.copySprite(), param0 - 4);
+          var14Lifetime1.setIconForAllStates(var13.copySprite(), param0 - 4);
           var13.rotateCounterClockwise();
           var14Lifetime2 = new qo(var4, true);
-          var14Lifetime2.a(var13.copySprite(), 0);
+          var14Lifetime2.setIconForAllStates(var13.copySprite(), 0);
           var13.rotateCounterClockwise();
           var19 = new qo(var4, true);
-          var19.a(var13, 0);
+          var19.setIconForAllStates(var13, 0);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "of.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void b(int param0) {
+    final void popClipRect(int param0) {
         if (param0 != 3) {
           return;
         }
-        pa.a(-21189);
+        pa.popRasterState(-21189);
     }
 
-    private final void a(int param0, String param1, int param2, int param3) {
+    private final void drawWrappedTooltip(int param0, String param1, int param2, int param3) {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -408,7 +408,7 @@ final class of {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
+    final void fillRectangleAlpha(int param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
         Rasterizer.fillRectangleBlended(param3, param0, param2, param1, param6, param4);
         if (param5 > -88) {
           String var9 = (String) null;

@@ -11,22 +11,22 @@ abstract class pn extends ei {
     private int field_N;
     static String field_M;
 
-    void l(int param0) {
+    void onResizeComplete(int param0) {
         if (param0 != -7476) {
           pn.releaseStatics(10);
         }
     }
 
-    boolean e(byte param0) {
-        this.f((byte) -45);
+    boolean isFullyFadedOut(byte param0) {
+        this.finishTransition((byte) -45);
         if (param0 != 28) {
           field_R = (String[]) null;
-          return super.e((byte) 28);
+          return super.isFullyFadedOut((byte) 28);
         }
-        return super.e((byte) 28);
+        return super.isFullyFadedOut((byte) 28);
     }
 
-    void a(int param0, int param1, byte param2) {
+    void drawPanelBackground(int param0, int param1, byte param2) {
         int var4;
         int var5;
         int var6;
@@ -110,7 +110,7 @@ abstract class pn extends ei {
           var7++;
         }
         if (param2 > -111) {
-          this.a(-128, -39, (byte) -12);
+          this.drawPanelBackground(-128, -39, (byte) -12);
         }
         var6Lifetime1 = 169;
         var4Lifetime1 = 22;
@@ -156,7 +156,7 @@ abstract class pn extends ei {
         gl.a(-753, (String) null, param0, param2);
     }
 
-    boolean j(int param0) {
+    boolean tickLayerAndCheckHidden(int param0) {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
         int var2;
@@ -169,7 +169,7 @@ abstract class pn extends ei {
         int var5Lifetime1;
         if (param0 == 2634) {
           if (this.field_Q <= 0) {
-            return super.j(param0 + 0);
+            return super.tickLayerAndCheckHidden(param0 + 0);
           }
           var2 = this.field_N;
           var3 = this.field_O;
@@ -177,19 +177,19 @@ abstract class pn extends ei {
           this.field_L = this.field_L + 1;
           if (fieldTemp$2 >= this.field_Q) {
             this.field_Q = 0;
-            this.l(param0 - 10110);
+            this.onResizeComplete(param0 - 10110);
           } else {
             var4 = (this.field_Q * 2 - this.field_L) * this.field_L;
             var5 = this.field_Q * this.field_Q;
             var3 = this.field_S + var4 * (this.field_O - this.field_S) / var5;
             var2 = (-this.field_P + this.field_N) * var4 / var5 + this.field_P;
           }
-          this.a((byte) 123, var3, var2);
-          return super.j(param0 + 0);
+          this.centerOnScreen((byte) 123, var3, var2);
+          return super.tickLayerAndCheckHidden(param0 + 0);
         }
-        this.f((byte) -55);
+        this.finishTransition((byte) -55);
         if (this.field_Q <= 0) {
-          return super.j(param0 + 0);
+          return super.tickLayerAndCheckHidden(param0 + 0);
         }
         var2Lifetime1 = this.field_N;
         var3Lifetime1 = this.field_O;
@@ -197,30 +197,30 @@ abstract class pn extends ei {
         this.field_L = this.field_L + 1;
         if (fieldTemp$3 >= this.field_Q) {
           this.field_Q = 0;
-          this.l(param0 - 10110);
+          this.onResizeComplete(param0 - 10110);
         } else {
           var4Lifetime1 = (this.field_Q * 2 - this.field_L) * this.field_L;
           var5Lifetime1 = this.field_Q * this.field_Q;
           var3Lifetime1 = this.field_S + var4Lifetime1 * (this.field_O - this.field_S) / var5Lifetime1;
           var2Lifetime1 = (-this.field_P + this.field_N) * var4Lifetime1 / var5Lifetime1 + this.field_P;
         }
-        this.a((byte) 123, var3Lifetime1, var2Lifetime1);
-        return super.j(param0 + 0);
+        this.centerOnScreen((byte) 123, var3Lifetime1, var2Lifetime1);
+        return super.tickLayerAndCheckHidden(param0 + 0);
     }
 
-    void f(byte param0) {
+    void finishTransition(byte param0) {
         if (this.field_Q <= 0) {
           return;
         }
-        this.a((byte) 90, this.field_O, this.field_N);
+        this.centerOnScreen((byte) 90, this.field_O, this.field_N);
         int var2 = 97 % ((22 - param0) / 59);
         this.field_Q = 0;
-        this.l(-7476);
+        this.onResizeComplete(-7476);
     }
 
-    final void a(boolean param0, int param1, int param2, int param3) {
+    final void resizeDialog(boolean param0, int param1, int param2, int param3) {
         if (0 >= param3) {
-          this.a((byte) 98, param1, param2);
+          this.centerOnScreen((byte) 98, param1, param2);
           return;
         }
         this.field_S = this.field_n;
@@ -263,7 +263,7 @@ abstract class pn extends ei {
           }
           var4 = ac.field_m % var3_int;
           if (ac.field_m % var3_int == 0) {
-            lg.a(2 + var4 % (2 * var3_int) / var3_int * 2, (byte) -90);
+            ViewportController.spawnCutsceneZombies(2 + var4 % (2 * var3_int) / var3_int * 2, (byte) -90);
           }
           if (-1.0f == oc.field_c) {
             oc.field_c = (float)param0.y;
@@ -275,11 +275,11 @@ abstract class pn extends ei {
           if (ac.field_m == 1562) {
             if (null != qj.field_f &&
               !qj.field_f.isSamplePositionOutOfRange()) {
-              pc.a((byte) 13, qj.field_f);
+              Js5Transport.stopSoundEffect((byte) 13, qj.field_f);
             }
             ch.b(124);
             hm.a(9);
-            ZombieDawn.b(116, wi.field_a);
+            ZombieDawn.setMusicVolume(116, wi.field_a);
             qb.a(false, wc.field_Rb);
             wo.field_wb = true;
             return;
@@ -293,13 +293,13 @@ abstract class pn extends ei {
             if (var5 < 0) {
               var5 = 0;
             }
-            ZombieDawn.b(param1 - 30, wi.field_a * var5 >> 8);
+            ZombieDawn.setMusicVolume(param1 - 30, wi.field_a * var5 >> 8);
             qb.a(false, var5 * wc.field_Rb >> 8);
-            vf.field_c.h(wc.field_Rb);
+            vf.field_c.setVolume(wc.field_Rb);
             if (ac.field_m % 2 == 0) {
-              param2.i(16777215);
+              param2.growLetterbox(16777215);
               if (100 == (ac.field_m - 990) / 2) {
-                hp.field_A.r((byte) -84);
+                hp.field_A.raiseWithDrawOffset((byte) -84);
               }
             }
           }
@@ -321,15 +321,15 @@ abstract class pn extends ei {
                   if (var5Lifetime1 > 256) {
                     var5Lifetime1 = 256;
                   }
-                  nc.field_r.h(wc.field_Rb * var5Lifetime1 >> 8);
+                  nc.field_r.setVolume(wc.field_Rb * var5Lifetime1 >> 8);
                 }
               } else {
-                nc.field_r = jp.$cfr$intArgs$a$c44adeabe1a9(125, 152);
-                nc.field_r.h(0);
+                nc.field_r = jp.startTrackedSoundEffect(125, 152);
+                nc.field_r.setVolume(0);
                 wc.field_Rb = ge.field_c;
               }
             } else {
-              hp.field_A.q((byte) 111);
+              hp.field_A.skipToFinalPhase((byte) 111);
             }
           }
           if (ac.field_m > 140) {

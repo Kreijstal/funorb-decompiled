@@ -40,9 +40,9 @@ final class df extends IntrusiveNode {
           if (param0 != 24) {
             field_l = true;
           }
-          var4_int = param3.a(param1, (byte) 8);
-          var5 = param3.a(var4_int, param2, true);
-          stackIn_3_0 = an.a(var4_int, var5, 127, param3);
+          var4_int = param3.getGroupIdByName(param1, (byte) 8);
+          var5 = param3.getFileIdByName(var4_int, param2, true);
+          stackIn_3_0 = an.loadSpriteSheet(var4_int, var5, 127, param3);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

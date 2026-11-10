@@ -11,7 +11,7 @@ final class dp implements io {
     static am field_e;
     private int field_c;
 
-    final static void a(int param0, int param1) {
+    final static void resendQueuedRequests(int param0, int param1) {
         int var3 = 0;
         rc var4 = null;
         jc var5 = null;
@@ -19,18 +19,18 @@ final class dp implements io {
         RuntimeException var2 = null;
         var3 = ZombieDawn.field_J;
         try {
-          var4 = (rc) (hk.field_F.b((byte) 26));
+          var4 = (rc) (hk.field_F.last((byte) 26));
           while (var4 != null) {
             DelegatingCanvas.a((byte) -109, param0, var4);
-            var4 = (rc) (hk.field_F.a(false));
+            var4 = (rc) (hk.field_F.previous(false));
           }
           if (param1 != -4) {
-            dp.a(-47, 66, -71);
+            dp.drawIntroLogo(-47, 66, -71);
           }
-          var5 = (jc) (TileMap.field_g.b((byte) 26));
+          var5 = (jc) (TileMap.field_g.last((byte) 26));
           while (var5 != null) {
-            pm.a(param1 + 4, param0, var5);
-            var5 = (jc) (TileMap.field_g.a(false));
+            pm.writeHighscoreQuery(param1 + 4, param0, var5);
+            var5 = (jc) (TileMap.field_g.previous(false));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -40,7 +40,7 @@ final class dp implements io {
         }
     }
 
-    final static int a(int param0) {
+    final static int getCommonUiLoadProgress(int param0) {
         int var1;
         var1 = 67 % ((4 - param0) / 37);
         if (ld.field_j < 2) {
@@ -50,19 +50,19 @@ final class dp implements io {
           if (!IntrusiveDeque.field_d.isIndexLoaded((byte) 73)) {
             return 20;
           }
-          if (!IntrusiveDeque.field_d.a(-1, "commonui")) {
+          if (!IntrusiveDeque.field_d.loadGroupByName(-1, "commonui")) {
             return 40;
           }
           if (!da.field_l.isIndexLoaded((byte) 73)) {
             return 50;
           }
-          if (!da.field_l.a(-1, "commonui")) {
+          if (!da.field_l.loadGroupByName(-1, "commonui")) {
             return 60;
           }
           if (!al.field_a.isIndexLoaded((byte) 73)) {
             return 70;
           }
-          if (!al.field_a.c(9001)) {
+          if (!al.field_a.areAllGroupsLoaded(9001)) {
             return 80;
           }
           return 100;
@@ -71,19 +71,19 @@ final class dp implements io {
           if (!IntrusiveDeque.field_d.isIndexLoaded((byte) 73)) {
             return 43;
           }
-          if (!IntrusiveDeque.field_d.a(-1, "commonui")) {
+          if (!IntrusiveDeque.field_d.loadGroupByName(-1, "commonui")) {
             return 57;
           }
           if (!da.field_l.isIndexLoaded((byte) 73)) {
             return 71;
           }
-          if (!da.field_l.a(-1, "commonui")) {
+          if (!da.field_l.loadGroupByName(-1, "commonui")) {
             return 80;
           }
           if (!al.field_a.isIndexLoaded((byte) 73)) {
             return 82;
           }
-          if (!al.field_a.c(9001)) {
+          if (!al.field_a.areAllGroupsLoaded(9001)) {
             return 86;
           }
           return 100;
@@ -91,34 +91,34 @@ final class dp implements io {
         if (!f.field_i.isIndexLoaded((byte) 73)) {
           return 14;
         }
-        if (!f.field_i.a("", 0)) {
+        if (!f.field_i.hasGroupName("", 0)) {
           return 29;
         }
-        if (!f.field_i.a(-1, "")) {
+        if (!f.field_i.loadGroupByName(-1, "")) {
           return 29;
         }
         if (!IntrusiveDeque.field_d.isIndexLoaded((byte) 73)) {
           return 43;
         }
-        if (!IntrusiveDeque.field_d.a(-1, "commonui")) {
+        if (!IntrusiveDeque.field_d.loadGroupByName(-1, "commonui")) {
           return 57;
         }
         if (!da.field_l.isIndexLoaded((byte) 73)) {
           return 71;
         }
-        if (!da.field_l.a(-1, "commonui")) {
+        if (!da.field_l.loadGroupByName(-1, "commonui")) {
           return 80;
         }
         if (!al.field_a.isIndexLoaded((byte) 73)) {
           return 82;
         }
-        if (al.field_a.c(9001)) {
+        if (al.field_a.areAllGroupsLoaded(9001)) {
           return 100;
         }
         return 86;
     }
 
-    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
+    public final void drawWidget(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         int stackIn_7_0 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -137,14 +137,14 @@ final class dp implements io {
             this.field_d = -68;
           }
           if (!param3.field_l &&
-            !param3.e(-17741)) {
+            !param3.isFocused(-17741)) {
             stackIn_7_0 = 2188450;
           } else {
             stackIn_7_0 = 3249872;
           }
           var6_int = stackIn_7_0;
           this.field_f.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_o + "</u>", param3.field_k + param4, param2 + param3.field_j, param3.field_i, param3.field_n, var6_int, -1, this.field_c, this.field_d, this.field_f.field_I + this.field_f.field_x);
-          if (param3.e(param0 ^ -16759476)) {
+          if (param3.isFocused(param0 ^ -16759476)) {
             var7 = this.field_f.textWidth(param3.field_o);
             var8 = this.field_f.field_x + this.field_f.field_I;
             var9 = param3.field_k + param4;
@@ -163,7 +163,7 @@ final class dp implements io {
             } else {
               var10 = var10 + (param3.field_n - var8);
             }
-            TileMap.b(var7 + 4, var8, var9 - 2, param0 - 16777135, 2 + var10);
+            TileMap.drawDottedRectangle(var7 + 4, var8, var9 - 2, param0 - 16777135, 2 + var10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -192,7 +192,7 @@ final class dp implements io {
         field_a = null;
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void drawIntroLogo(int param0, int param1, int param2) {
         int var3;
         int var4;
         int var5;
@@ -222,15 +222,15 @@ final class dp implements io {
         ki.a((byte) -102, ti.field_g);
         en.useRasterClip();
         Rasterizer.clear();
-        gk.j(30549);
+        gk.buildLogoModelFrame(30549);
         if (var5 < 256) {
           Rasterizer.fillRectangleBlended(0, 0, Rasterizer.width, Rasterizer.height, 0, 256 - var5);
-          pa.a(param1 ^ 32173);
+          pa.popRasterState(param1 ^ 32173);
           if (param1 != -12138) {
-            dp.a(118, -83);
+            dp.resendQueuedRequests(118, -83);
           }
           if (150 <= LevelNavigation.field_x) {
-            kh.field_a.e(var3 + 15, var4 + 10, var5);
+            kh.field_a.drawWithOpacity(var3 + 15, var4 + 10, var5);
           } else {
             ti.field_g.drawHalfSize(var3, var4);
           }
@@ -243,7 +243,7 @@ final class dp implements io {
                 if (var6 < 20) {
                   var7 = var6 * 256 / 20;
                 }
-                bh.field_j.e(15 + var3, var4 + 10, var7 * var5 >> 8);
+                bh.field_j.drawWithOpacity(15 + var3, var4 + 10, var7 * var5 >> 8);
               }
               return;
             }
@@ -265,15 +265,15 @@ final class dp implements io {
             if (var6Lifetime3 < 20) {
               var7Lifetime3 = var6Lifetime3 * 256 / 20;
             }
-            bh.field_j.e(15 + var3, var4 + 10, var7Lifetime3 * var5 >> 8);
+            bh.field_j.drawWithOpacity(15 + var3, var4 + 10, var7Lifetime3 * var5 >> 8);
           }
           return;
         }
-        pa.a(param1 ^ 32173);
+        pa.popRasterState(param1 ^ 32173);
         if (param1 != -12138) {
-          dp.a(118, -83);
+          dp.resendQueuedRequests(118, -83);
           if (150 <= LevelNavigation.field_x) {
-            kh.field_a.e(var3 + 15, var4 + 10, var5);
+            kh.field_a.drawWithOpacity(var3 + 15, var4 + 10, var5);
           } else {
             ti.field_g.drawHalfSize(var3, var4);
           }
@@ -294,7 +294,7 @@ final class dp implements io {
           }
         } else {
           if (150 <= LevelNavigation.field_x) {
-            kh.field_a.e(var3 + 15, var4 + 10, var5);
+            kh.field_a.drawWithOpacity(var3 + 15, var4 + 10, var5);
           } else {
             ti.field_g.drawHalfSize(var3, var4);
           }
@@ -320,7 +320,7 @@ final class dp implements io {
           if (var6Lifetime2 < 20) {
             var7Lifetime2 = var6Lifetime2 * 256 / 20;
           }
-          bh.field_j.e(15 + var3, var4 + 10, var7Lifetime2 * var5 >> 8);
+          bh.field_j.drawWithOpacity(15 + var3, var4 + 10, var7Lifetime2 * var5 >> 8);
         }
     }
 

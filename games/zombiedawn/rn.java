@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rn {
-    static lg field_b;
+    static ViewportController field_b;
     static String field_a;
 
     final static void a(byte[] param0, int param1) {
@@ -46,7 +46,7 @@ final class rn {
           var16 = new PacketBuffer(param0);
           var17 = var16;
           var17.position = -2 + param0.length;
-          t.field_h = var17.f(param1 + 2);
+          t.field_h = var17.readUnsignedShort(param1 + 2);
           bn.field_c = new int[t.field_h];
           uf.field_n = new int[t.field_h];
           sl.field_d = new int[t.field_h];
@@ -55,20 +55,20 @@ final class rn {
           jc.field_r = new boolean[t.field_h];
           bo.field_o = new int[t.field_h];
           var17.position = -7 + (param0.length - t.field_h * 8);
-          gl.field_F = var17.f(2);
-          Zombie.field_pb = var17.f(2);
+          gl.field_F = var17.readUnsignedShort(2);
+          Zombie.field_pb = var17.readUnsignedShort(2);
           var3 = (255 & var17.readUnsignedByte((byte) -125)) + 1;
           for (var4 = 0; var4 < t.field_h; var4++) {
-            sl.field_d[var4] = var16.f(2);
+            sl.field_d[var4] = var16.readUnsignedShort(2);
           }
           for (var4Lifetime1 = 0; t.field_h > var4Lifetime1; var4Lifetime1++) {
-            bo.field_o[var4Lifetime1] = var17.f(2);
+            bo.field_o[var4Lifetime1] = var17.readUnsignedShort(2);
           }
           for (var4Lifetime2 = 0; var4Lifetime2 < t.field_h; var4Lifetime2++) {
-            bn.field_c[var4Lifetime2] = var17.f(2);
+            bn.field_c[var4Lifetime2] = var17.readUnsignedShort(2);
           }
           for (var4Lifetime3 = param1; t.field_h > var4Lifetime3; var4Lifetime3++) {
-            uf.field_n[var4Lifetime3] = var17.f(2);
+            uf.field_n[var4Lifetime3] = var17.readUnsignedShort(2);
           }
           var17.position = -(t.field_h * 8) - 7 + param0.length - (var3 - 1) * 3;
           j.field_a = new int[var3];

@@ -30,7 +30,7 @@ final class ij extends pa {
         }
     }
 
-    final StringBuilder a(Hashtable param0, StringBuilder param1, boolean param2, int param3) {
+    final StringBuilder appendDebugTree(Hashtable param0, StringBuilder param1, boolean param2, int param3) {
         StringBuilder discarded$62 = null;
         StringBuilder discarded$63 = null;
         RuntimeException var5 = null;
@@ -45,9 +45,9 @@ final class ij extends pa {
           if (!param2) {
             field_M = (String[]) null;
           }
-          if (this.a(param0, param1, 11098, param3)) {
-            this.a(param0, param3, 113, param1);
-            this.a(param0, param3, param1, -10643);
+          if (this.beginDebugDescription(param0, param1, 11098, param3)) {
+            this.appendDebugProperties(param0, param3, 113, param1);
+            this.appendChildDebugTrees(param0, param3, param1, -10643);
             discarded$62 = param1.append(" revert=").append(this.field_K);
             if (this.field_Q != 2147483647 &&
               2147483647 != this.field_G) {
@@ -78,7 +78,7 @@ final class ij extends pa {
 
     final void refreshChildLayout(boolean param0) {
         super.refreshChildLayout(param0);
-        this.field_z.a(29, 0, 0, this.field_i, this.field_n);
+        this.field_z.setBounds(29, 0, 0, this.field_i, this.field_n);
         this.field_G = this.field_j;
         this.field_Q = this.field_k;
     }
@@ -111,19 +111,19 @@ final class ij extends pa {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
+    final void handlePointerRelease(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         try {
           if (param1 <= 1) {
             field_I = -68;
           }
-          super.a(param0, 29, param2, param3, param4, param5);
+          super.handlePointerRelease(param0, 29, param2, param3, param4, param5);
           this.field_m = 0;
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ij.MA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static HumanFactory h(int param0) {
+    final static AccountServerResult h(int param0) {
         if (param0 >= -26) {
           field_E = -41;
           if (ic.field_S == fk.field_F) {
@@ -189,7 +189,7 @@ final class ij extends pa {
         }
     }
 
-    final void a(UiWidget param0, byte param1, int param2, int param3) {
+    final void updatePointer(UiWidget param0, byte param1, int param2, int param3) {
         int stackIn_14_1 = 0;
         int stackIn_17_2 = 0;
         int stackIn_22_1 = 0;
@@ -213,7 +213,7 @@ final class ij extends pa {
               this.field_j = var6;
               this.field_k = var5_int;
               if (this.field_v instanceof tn) {
-                ((tn) (this.field_v)).a(param2, -20962, this, param3);
+                ((tn) (this.field_v)).onDragged(param2, -20962, this, param3);
               }
             }
           } else {
@@ -248,7 +248,7 @@ final class ij extends pa {
               }
             }
           }
-          super.a(param0, (byte) 100, param2, param3);
+          super.updatePointer(param0, (byte) 100, param2, param3);
           var5_intLifetime1 = -91 % ((param1 - 46) / 42);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -265,7 +265,7 @@ final class ij extends pa {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
+    final boolean handlePointerPress(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         int stackIn_11_0 = 0;
@@ -277,12 +277,12 @@ final class ij extends pa {
           if (param1 != 1) {
             this.field_N = 84;
           }
-          var8_int = super.a(param0, param1 + 0, param2, param3, param4, param5, param6) ? 1 : 0;
+          var8_int = super.handlePointerPress(param0, param1 + 0, param2, param3, param4, param5, param6) ? 1 : 0;
           if (var8_int != 0 &&
             this.field_D) {
             return true;
           }
-          if (!this.b(param3, 21224, param2, param4, param0)) {
+          if (!this.containsPoint(param3, 21224, param2, param4, param0)) {
             stackIn_11_0 = var8_int;
             return stackIn_11_0 != 0;
           }

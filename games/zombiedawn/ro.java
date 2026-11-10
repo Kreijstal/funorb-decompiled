@@ -52,7 +52,7 @@ final class ro {
             }
             var1[var2] = new Sprite(gl.field_F, Zombie.field_pb, sl.field_d[var2], bo.field_o[var2], bn.field_c[var2], uf.field_n[var2], var5);
           }
-          no.f((byte) -111);
+          no.clearSpriteDecodeBuffers((byte) -111);
           return var1;
         }
         field_a = (IntrusiveDeque) null;
@@ -65,7 +65,7 @@ final class ro {
           }
           var1[var2Lifetime1] = new Sprite(gl.field_F, Zombie.field_pb, sl.field_d[var2Lifetime1], bo.field_o[var2Lifetime1], bn.field_c[var2Lifetime1], uf.field_n[var2Lifetime1], var5Lifetime1);
         }
-        no.f((byte) -111);
+        no.clearSpriteDecodeBuffers((byte) -111);
         return var1;
     }
 

@@ -7,7 +7,7 @@ final class kl extends al {
     static cg field_p;
     static String[] field_o;
 
-    final void a(byte param0) {
+    final void drawScreen(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -20,12 +20,12 @@ final class kl extends al {
         var6 = ZombieDawn.field_J;
         var2 = vh.field_b;
         if (param0 >= -35) {
-          this.a((byte) -96);
+          this.drawScreen((byte) -96);
         }
         var3 = id.field_M;
         Rasterizer.clear();
         if (this.field_n) {
-          this.d(-105);
+          this.drawIntroCaptions(-105);
           return;
         }
         Rasterizer.intersectClip(-32 + vh.field_b, 0, 672 + vh.field_b, nh.field_P);
@@ -46,7 +46,7 @@ final class kl extends al {
                   } else {
                     nn.field_j.drawTransparent(-264 + var2, var3);
                     pg.field_t.drawTransparent(var2 + 270, 200 + var3);
-                    Rasterizer.fillRectangleBlended(0, var3, bd.field_e, 550, 0, 2 * this.field_m - 3448);
+                    Rasterizer.fillRectangleBlended(0, var3, WhirlpoolHasher.field_e, 550, 0, 2 * this.field_m - 3448);
                   }
                 }
               } else {
@@ -60,16 +60,16 @@ final class kl extends al {
           } else {
             nn.field_j.drawTransparent(var2, var3);
             we.field_Ub.drawTransparent(var2, -we.field_Ub.field_q + (480 + var3));
-            Rasterizer.fillRectangleBlended(0, var3, bd.field_e, 550, 0, -(2 * (-260 + this.field_m)) + 256);
+            Rasterizer.fillRectangleBlended(0, var3, WhirlpoolHasher.field_e, 550, 0, -(2 * (-260 + this.field_m)) + 256);
           }
         }
-        this.d(-119);
+        this.drawIntroCaptions(-119);
         Rasterizer.intersectClip(-32 + vh.field_b, 0, vh.field_b + 672, nh.field_P);
         if (this.field_m > 120 &&
           this.field_m < 388) {
-          bj.field_q.drawStringCentered(rg.field_L, bd.field_d, Math.min(510 + id.field_M, nh.field_P - 20), 16777215, 0);
+          bj.field_q.drawStringCentered(rg.field_L, WhirlpoolHasher.field_d, Math.min(510 + id.field_M, nh.field_P - 20), 16777215, 0);
         }
-        if (640 < bd.field_e) {
+        if (640 < WhirlpoolHasher.field_e) {
           var4Lifetime1 = 8;
           Rasterizer.drawVerticalLineAlpha(-1 + vh.field_b, id.field_M, 550, 0, 4);
           for (var5Lifetime1 = vh.field_b - 2; 0 < var5Lifetime1; var5Lifetime1--) {
@@ -82,7 +82,7 @@ final class kl extends al {
           }
           var4Lifetime1Lifetime1 = 8;
           Rasterizer.drawVerticalLineAlpha(640 + vh.field_b, id.field_M, 550, 0, 4);
-          for (var5Lifetime1Lifetime1 = 640 + vh.field_b + 1; var5Lifetime1Lifetime1 < bd.field_e; var5Lifetime1Lifetime1++) {
+          for (var5Lifetime1Lifetime1 = 640 + vh.field_b + 1; var5Lifetime1Lifetime1 < WhirlpoolHasher.field_e; var5Lifetime1Lifetime1++) {
             if (256 <= var4Lifetime1Lifetime1) {
               break;
             }
@@ -92,7 +92,7 @@ final class kl extends al {
         }
     }
 
-    private final void d(int param0) {
+    private final void drawIntroCaptions(int param0) {
         int stackIn_21_0 = 0;
         int var2;
         int var3;
@@ -139,7 +139,7 @@ final class kl extends al {
           }
           if (null == eg.field_n ||
             eg.field_n != var5) {
-            this.a(var8Lifetime1, var7 - var4, 5, (String) (var5));
+            this.renderGlowingCaption(var8Lifetime1, var7 - var4, 5, (String) (var5));
           }
           if (256 > var6) {
             sg.field_jb.drawParagraphAlpha((String) (var5), var2 + 60, var7, 520, 200, 0, 0, var6, 1, 0, var8Lifetime1);
@@ -156,7 +156,7 @@ final class kl extends al {
         eg.field_n = (String) (var5);
     }
 
-    final static void c(int param0) {
+    final static void shutdownAudioOutputs(int param0) {
         if (null != ExceptionWrapper.field_d) {
           ExceptionWrapper.field_d.shutdown();
         }
@@ -164,22 +164,22 @@ final class kl extends al {
           cf.field_fb.shutdown();
         }
         if (param0 != -16861) {
-          kl.e(-83, 78);
+          kl.highlightArea(-83, 78);
         }
     }
 
-    final boolean a(int param0, int param1, char param2) {
+    final boolean handleKeyPress(int param0, int param1, char param2) {
         if (param1 != 65793) {
-          kl.c(95);
+          kl.shutdownAudioOutputs(95);
         }
         if (this.field_m <= 100) {
           return true;
         }
-        this.d((byte) -117);
+        this.finishIntro((byte) -117);
         return true;
     }
 
-    final void a(byte param0, boolean param1) {
+    final void handleInput(byte param0, boolean param1) {
         int stackIn_3_0 = 0;
         int var3;
         int var4;
@@ -194,10 +194,10 @@ final class kl extends al {
         }
         if (var3 != 0 &&
           100 < this.field_m) {
-          this.d((byte) 113);
+          this.finishIntro((byte) 113);
         }
         if (this.field_m == jc.field_q[0]) {
-          ph.a((byte) 103, w.field_a[9]);
+          ph.a((byte) 103, ArchiveProvider.field_a[9]);
         }
         var4 = -71 / ((param0 + 39) / 61);
         if (this.field_m > 1896 &&
@@ -206,11 +206,11 @@ final class kl extends al {
           if (var5 < 0) {
             var5 = 0;
           }
-          ZombieDawn.b(119, vk.field_a * var5 >> 8);
+          ZombieDawn.setMusicVolume(119, vk.field_a * var5 >> 8);
         }
     }
 
-    final void onTextSubmitted(al param0, int param1) {
+    final void onReplacedByScreen(al param0, int param1) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -219,10 +219,10 @@ final class kl extends al {
         try {
           this.field_n = true;
           if (param1 <= 70) {
-            this.d(-27);
-            oj.field_d.c(100, 10);
+            this.drawIntroCaptions(-27);
+            oj.field_d.unloadResourceGroup(100, 10);
           } else {
-            oj.field_d.c(100, 10);
+            oj.field_d.unloadResourceGroup(100, 10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -239,7 +239,7 @@ final class kl extends al {
         }
     }
 
-    final static boolean a(String param0, int param1, fk param2, String param3, int param4, String param5, boolean param6) {
+    final static boolean startAccountCreation(String param0, int param1, fk param2, String param3, int param4, String param5, boolean param6) {
         RuntimeException var7 = null;
         md var8 = null;
         RuntimeException stackIn_15_0 = null;
@@ -257,12 +257,12 @@ final class kl extends al {
             return false;
           }
           if (param1 != 640) {
-            kl.e(-27, 118);
+            kl.highlightArea(-27, 118);
           }
           var8 = new md(e.field_S, param2);
-          e.field_S.a(var8, true);
+          e.field_S.addDialog(var8, true);
           if (sn.b((byte) 12)) {
-            var8.c(false);
+            var8.showTimeoutResult(false);
             return true;
           }
           to.field_d = param5;
@@ -315,14 +315,14 @@ final class kl extends al {
         }
     }
 
-    private final void d(byte param0) {
+    private final void finishIntro(byte param0) {
         int var2 = 118 % ((61 - param0) / 52);
-        ZombieDawn.b(117, vk.field_a);
-        ph.a((byte) 47, w.field_a[1]);
+        ZombieDawn.setMusicVolume(117, vk.field_a);
+        ph.a((byte) 47, ArchiveProvider.field_a[1]);
         ca.a(true, true, 0);
     }
 
-    private final void a(int param0, int param1, int param2, String param3) {
+    private final void renderGlowingCaption(int param0, int param1, int param2, String param3) {
         try {
           lf.field_h.setAsRenderTarget();
           Rasterizer.clear();
@@ -339,7 +339,7 @@ final class kl extends al {
         }
     }
 
-    final static void e(int param0, int param1) {
+    final static void highlightArea(int param0, int param1) {
         int var5 = 0;
         int var6 = ZombieDawn.field_J;
         if (be.field_j <= 0 &&
@@ -347,7 +347,7 @@ final class kl extends al {
           return;
         }
         bn.field_i = param0;
-        ki.a((byte) -119, cc.field_b);
+        ki.a((byte) -119, PowerupCard.field_b);
         Rasterizer.clear();
         Sprite var2 = f.field_d;
         int var3 = 0;
@@ -362,7 +362,7 @@ final class kl extends al {
         }
         try {
           Rasterizer.blurRectangle(2, 2, 0, 0, 195, 170);
-          pa.a(-21189);
+          pa.popRasterState(-21189);
           ti.field_b = 3 * wd.field_z.length >> 2;
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "kl.T(" + param0 + ',' + param1 + ')');
@@ -377,12 +377,12 @@ final class kl extends al {
         field_p = null;
     }
 
-    final void e(int param0) {
+    final void startIntro(int param0) {
         this.field_n = false;
         if (param0 >= -123) {
           return;
         }
-        oj.field_d.a(false, 10);
+        oj.field_d.queueResourceGroup(false, 10);
         this.field_m = 0;
         ch.b(65);
         vk.field_a = ce.field_u;

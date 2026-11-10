@@ -8,5 +8,5 @@ interface GameLayer {
 
     public abstract boolean onKeyTyped(char param0, int param1, int param2);
 
-    public abstract boolean a(byte param0);
+    public abstract boolean consumesInput(byte param0);
 }

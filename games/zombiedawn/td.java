@@ -15,10 +15,10 @@ final class td {
         RuntimeException decompiledCaughtException = null;
         var3 = ZombieDawn.field_J;
         try {
-          var4 = (nn) (ro.field_a.b((byte) 26));
+          var4 = (nn) (ro.field_a.last((byte) 26));
           while (var4 != null) {
-            pi.a((byte) 25, param0, var4);
-            var4 = (nn) (ro.field_a.a(false));
+            ImageProducerRasterBuffer.writeHighscoreRequest((byte) 25, param0, var4);
+            var4 = (nn) (ro.field_a.previous(false));
           }
           if (param1 <= -62) {
             return;

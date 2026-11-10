@@ -163,7 +163,7 @@ final class fd {
           var2 = 0;
           var3_int = mb.readBits(5) + 1;
           while (var2 < this.field_a) {
-            var4_int = mb.readBits(IterableNodeHashTable.a(this.field_a - var2, (byte) 100));
+            var4_int = mb.readBits(IterableNodeHashTable.bitLength(this.field_a - var2, (byte) 100));
             for (var5 = 0; var5 < var4_int; var5++) {
               incrementValue$0 = var2;
               var2++;

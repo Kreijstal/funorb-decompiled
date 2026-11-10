@@ -40,12 +40,12 @@ final class o {
           Rasterizer.fillVerticalGradient(0, 0, 622, 47, 4540749, 65793);
           var3 = 16448250;
           var4 = 10068666;
-          var16 = gk.a(var4, -107, var3);
+          var16 = gk.createColorRamp(var4, -107, var3);
           this.a(-1, 0, 622, 0, 47, ui.field_b, var16, this.field_j);
-          pa.a(-21189);
+          pa.popRasterState(-21189);
           this.field_g = new Sprite(475, 24);
           this.a(SecondaryNodeDequeIterator.field_e, 0, (byte) 112, this.field_g, var16, -4, ui.field_b, 475, 0.75f, 24);
-          var14 = gk.a(526344, -116, 526344);
+          var14 = gk.createColorRamp(526344, -116, 526344);
           var12 = var14;
           var10 = var12;
           var6 = new Sprite(121, 122);
@@ -53,15 +53,15 @@ final class o {
           Rasterizer.fillVerticalGradient(0, 0, var6.field_w, var6.field_t / 2, 16180917, 16306250);
           Rasterizer.fillVerticalGradient(0, var6.field_t / 2, var6.field_w, var6.field_t, 16306250, 15568919);
           var7 = an.field_y;
-          var8 = se.field_i;
+          var8 = ProxySocketConnector.field_i;
           this.a(var7, 0, (byte) 63, var6, var14, -16, ui.field_b, var6.field_w, 0.5f, var6.field_t);
           this.a(var8, 0, (byte) 42, var6, var14, 20, ui.field_b, var6.field_w, 0.5f, var6.field_t);
           this.a(ui.field_e[this.field_h], 0, (byte) 99, var6, var10, var6.field_t / 2 + (-ui.field_b.field_I + 12), ui.field_b, var6.field_w, 0.699999988079071f, var6.field_t / 3);
-          pa.a(-21189);
+          pa.popRasterState(-21189);
           this.field_p = new Sprite(121, 122);
           ki.a((byte) -121, this.field_p);
           var6.drawRotatedAboutCenter(this.field_p.field_w / 2, this.field_p.field_t / 2, -2048, 4096);
-          pa.a(-21189);
+          pa.popRasterState(-21189);
           return;
         }
     }
@@ -126,7 +126,7 @@ final class o {
           var7 = param1.getParameter("currency");
           if (var7 != null &&
             sj.a((byte) -117, (CharSequence) ((Object) var7))) {
-            this.field_h = DualLinkDeque.a((CharSequence) ((Object) var7), 115);
+            this.field_h = DualLinkDeque.parseDecimalInt((CharSequence) ((Object) var7), 115);
           } else {
             this.field_h = 2;
           }
@@ -136,7 +136,7 @@ final class o {
           this.field_k = param3;
           if (this.field_m != null &&
             this.field_m.length >= 3) {
-            bd.field_r = param0;
+            WhirlpoolHasher.field_r = param0;
             return;
           }
           throw new IllegalArgumentException("");
@@ -173,11 +173,11 @@ final class o {
     }
 
     final int b(int param0) {
-        this.field_a.a(param0 + 17875);
+        this.field_a.navigateVertical(param0 + 17875);
         if (param0 != 3782) {
           return 58;
         }
-        if (this.field_a.d(param0 ^ -3772)) {
+        if (this.field_a.isActivated(param0 ^ -3772)) {
           if (this.field_a.field_d == 0) {
             this.c(1);
             return 3;
@@ -217,10 +217,10 @@ final class o {
           ki.a((byte) -83, var13);
           param3.drawScaled((int)((float)(-param1) / param8), (int)((float)(-param5) / param8), (int)((float)param3.field_w / param8), (int)((float)param3.field_t / param8));
           this.a(-1, 0, var11_int, 0, var12, param6, param4, param0);
-          pa.a(-21189);
+          pa.popRasterState(-21189);
           ki.a((byte) -91, param3);
           var13.drawScaledAveraged(param1, param5, param7, param9);
-          pa.a(-21189);
+          pa.popRasterState(-21189);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -259,7 +259,7 @@ final class o {
         this.field_i = ij.field_I;
         this.field_o = 0;
         this.field_c = 0;
-        this.field_a.a(param0, (byte) -120, this.a(ei.field_K, ha.field_b, -33), -1);
+        this.field_a.initializeSelection(param0, (byte) -120, this.a(ei.field_K, ha.field_b, -33), -1);
         if (param1 != 1) {
           field_l = (byte[]) null;
         }
@@ -299,36 +299,36 @@ final class o {
         this.a(9);
         if (null != nl.field_t &&
           nl.field_t.isIndexLoaded((byte) 73) &&
-          nl.field_t.a(-1, "members_expansion_screen") &&
-          nl.field_t.a(-1, "arialish12") &&
-          nl.field_t.a(-1, "pump32") &&
+          nl.field_t.loadGroupByName(-1, "members_expansion_screen") &&
+          nl.field_t.loadGroupByName(-1, "arialish12") &&
+          nl.field_t.loadGroupByName(-1, "pump32") &&
           ge.field_b != null &&
           ge.field_b.isIndexLoaded((byte) 73) &&
-          ge.field_b.a(-1, "arialish12") &&
-          ge.field_b.a(-1, "pump32")) {
-          li.field_i = vj.a(nl.field_t, "frame", "members_expansion_screen", 4424743);
+          ge.field_b.loadGroupByName(-1, "arialish12") &&
+          ge.field_b.loadGroupByName(-1, "pump32")) {
+          JaggrabDownloader.field_i = vj.loadIndexedSprite(nl.field_t, "frame", "members_expansion_screen", 4424743);
           nl.field_r = gf.a(nl.field_t, "arrow", 8, "members_expansion_screen");
-          tc.field_r = gb.a("", -1, ge.field_b, "arialish12", nl.field_t);
-          ui.field_b = DualLinkDeque.a(ge.field_b, "pump32", "", 0, nl.field_t);
-          ck.field_i = bn.a("benefit_orbs", nl.field_t, "members_expansion_screen", 1);
-          bb.field_c = bn.a("button_text", nl.field_t, "members_expansion_screen", 1);
+          tc.field_r = gb.loadGlyphFontByName("", -1, ge.field_b, "arialish12", nl.field_t);
+          ui.field_b = DualLinkDeque.loadCoverageFont(ge.field_b, "pump32", "", 0, nl.field_t);
+          ck.field_i = bn.loadSpriteByName("benefit_orbs", nl.field_t, "members_expansion_screen", 1);
+          bb.field_c = bn.loadSpriteByName("button_text", nl.field_t, "members_expansion_screen", 1);
           ng.field_c = df.a((byte) 24, "members_expansion_screen", "button_highlights", nl.field_t);
           nl.field_t = null;
           ge.field_b = null;
         }
         this.a((byte) -127);
-        if (null == li.field_i) {
+        if (null == JaggrabDownloader.field_i) {
           return;
         }
         this.field_p.drawTransparent(376, 339);
         this.field_b.drawTransparent(9, 9);
-        li.field_i.draw(0, 0);
+        JaggrabDownloader.field_i.draw(0, 0);
         if (null != nl.field_r) {
           nl.field_r.drawTransparent(9, 257);
           nl.field_r.drawMirrored(558, 257);
           if (257 < ei.field_K &&
             ei.field_K < 290) {
-            var2Lifetime2 = 40 + (40 * ig.f(2047, this.field_o << 4) >> 16);
+            var2Lifetime2 = 40 + (40 * ig.sinFixed(2047, this.field_o << 4) >> 16);
             if (var2Lifetime2 > 0) {
               if (ha.field_b > 9 &&
                 ha.field_b < 82) {
@@ -377,7 +377,7 @@ final class o {
 
     private final void c(int param0) {
         try {
-          GameWorld.a(hc.a(param0 ^ param0), 124);
+          GameWorld.openSubscribePage(hc.a(param0 ^ param0), 124);
         } catch (Exception exception) {
           exception.printStackTrace();
         }
@@ -385,7 +385,7 @@ final class o {
 
     private final int a(int param0, int param1, int param2) {
         int var4 = -72 / ((83 - param2) / 41);
-        if (null == li.field_i) {
+        if (null == JaggrabDownloader.field_i) {
           return -1;
         }
         if (param1 >= 508 &&
@@ -501,9 +501,9 @@ final class o {
         if (!param0) {
           return 0;
         }
-        this.field_a.a((byte) -35, this.a(ei.field_K, ha.field_b, 125), this.a(hp.field_D, nc.field_j, 126));
+        this.field_a.updatePointer((byte) -35, this.a(ei.field_K, ha.field_b, 125), this.a(hp.field_D, nc.field_j, 126));
         var4Lifetime1 = 0;
-        if (this.field_a.d(-125)) {
+        if (this.field_a.isActivated(-125)) {
           if (0 == this.field_a.field_d) {
             var4Lifetime1 = 1;
           }
@@ -511,8 +511,8 @@ final class o {
             return 2;
           }
         }
-        if (bd.field_r) {
-          while (TileMap.b(param1 - 146)) {
+        if (WhirlpoolHasher.field_r) {
+          while (TileMap.pollKeyEvent(param1 - 146)) {
             var5 = this.b(param1 + 3525);
             if (var5 != 0) {
               return var5;
@@ -532,7 +532,7 @@ final class o {
         int var11 = 0;
         int var12 = ZombieDawn.field_J;
         try {
-          hk.i(1584);
+          hk.pushRasterState(1584);
           if (param0 != -1) {
             this.field_p = (Sprite) null;
           }
@@ -542,7 +542,7 @@ final class o {
             var11 = param6[param6.length + (-var10 - 1)];
             param5.drawParagraph(param7, param3, param1, param2, param4, var11, -1, 1, 1, 0);
           }
-          pa.a(-21189);
+          pa.popRasterState(-21189);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "o.L(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ')');
         }

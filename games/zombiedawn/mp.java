@@ -4,7 +4,7 @@
 final class mp {
     static cg field_b;
     static IntrusiveDeque field_g;
-    static HumanFactory field_f;
+    static AccountServerResult field_f;
     static int field_d;
     static boolean field_e;
     static long field_a;
@@ -17,16 +17,16 @@ final class mp {
         int var7;
         int var6Lifetime1;
         int var7Lifetime1;
-        j.field_b[qn.field_e] = param0;
-        qd.field_c[qn.field_e] = qn.field_e;
-        Js5Archive.field_g[qn.field_e] = param1;
+        j.field_b[RandomAccessCacheFile.field_e] = param0;
+        qd.field_c[RandomAccessCacheFile.field_e] = RandomAccessCacheFile.field_e;
+        Js5Archive.field_g[RandomAccessCacheFile.field_e] = param1;
         if (param1 <= ub.field_d) {
           if (param1 < fe.field_O) {
             sg.field_pb = param1;
           }
-          qo.field_r[qn.field_e] = param4;
-          sg.field_kb[qn.field_e] = param5;
-          jd.field_d[qn.field_e] = param2;
+          qo.field_r[RandomAccessCacheFile.field_e] = param4;
+          sg.field_kb[RandomAccessCacheFile.field_e] = param5;
+          jd.field_d[RandomAccessCacheFile.field_e] = param2;
           var6 = param5 + (param4 + param2);
           if (0 == var6) {
             stackIn_26_0 = 0;
@@ -34,8 +34,8 @@ final class mp {
             stackIn_26_0 = 1000 * param4 / var6;
           }
           var7 = stackIn_26_0;
-          qp.field_b[qn.field_e] = var7;
-          qn.field_e = qn.field_e + 1;
+          qp.field_b[RandomAccessCacheFile.field_e] = var7;
+          RandomAccessCacheFile.field_e = RandomAccessCacheFile.field_e + 1;
           if (var7 < sg.field_pb) {
             sg.field_pb = var7;
           }
@@ -51,9 +51,9 @@ final class mp {
         if (param1 < fe.field_O) {
           sg.field_pb = param1;
         }
-        qo.field_r[qn.field_e] = param4;
-        sg.field_kb[qn.field_e] = param5;
-        jd.field_d[qn.field_e] = param2;
+        qo.field_r[RandomAccessCacheFile.field_e] = param4;
+        sg.field_kb[RandomAccessCacheFile.field_e] = param5;
+        jd.field_d[RandomAccessCacheFile.field_e] = param2;
         var6Lifetime1 = param5 + (param4 + param2);
         if (0 == var6Lifetime1) {
           stackIn_7_0 = 0;
@@ -61,8 +61,8 @@ final class mp {
           stackIn_7_0 = 1000 * param4 / var6Lifetime1;
         }
         var7Lifetime1 = stackIn_7_0;
-        qp.field_b[qn.field_e] = var7Lifetime1;
-        qn.field_e = qn.field_e + 1;
+        qp.field_b[RandomAccessCacheFile.field_e] = var7Lifetime1;
+        RandomAccessCacheFile.field_e = RandomAccessCacheFile.field_e + 1;
         if (var7Lifetime1 < sg.field_pb) {
           sg.field_pb = var7Lifetime1;
         }
@@ -95,16 +95,16 @@ final class mp {
           tk.field_a = hm.field_H;
           if (param2 != 255) {
             if (param2 < 100) {
-              r.field_G = te.a(param3, -13466, param2);
+              r.field_G = te.createResponseWithMessage(param3, -13466, param2);
               return;
             }
             if (105 < param2) {
-              r.field_G = te.a(param3, -13466, param2);
+              r.field_G = te.createResponseWithMessage(param3, -13466, param2);
               return;
             }
             var7 = param1;
             hn.a(false, var7);
-            r.field_G = ao.a(param1, param0 ^ -928);
+            r.field_G = ao.createResponseWithLines(param1, param0 ^ -928);
             return;
           }
           stackIn_11_0 = 5;

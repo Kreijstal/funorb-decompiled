@@ -20,7 +20,7 @@ class vf implements io, ak {
     int field_b;
     int field_h;
 
-    public final vg a(int param0, UiWidget param1) {
+    public final vg getTextLayout(int param0, UiWidget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         vg stackIn_7_0 = null;
@@ -33,9 +33,9 @@ class vf implements io, ak {
             param1.field_t = (vg) ((Object) new ad());
           }
           if (this.field_e) {
-            ((ad) (param1.field_t)).a(this.b(12307, param1), (byte) -106, this.a(param1, -23803), this.field_m, this.field_n, this.field_i, this.field_h, this.a((byte) 127, param1));
+            ((ad) (param1.field_t)).layoutParagraph(this.getDisplayText(12307, param1), (byte) -106, this.getAvailableTextHeight(param1, -23803), this.field_m, this.field_n, this.field_i, this.field_h, this.getAvailableTextWidth((byte) 127, param1));
           } else {
-            this.c(26289, param1);
+            this.layoutSingleLine(26289, param1);
           }
           var3_int = -7 % ((param0 - 25) / 63);
           stackIn_7_0 = param1.field_t;
@@ -54,7 +54,7 @@ class vf implements io, ak {
         }
     }
 
-    public final int a(UiWidget param0, int param1, int param2) {
+    public final int getTextOriginY(UiWidget param0, int param1, int param2) {
         RuntimeException var4 = null;
         UiWidget var5 = null;
         int stackIn_3_0 = 0;
@@ -65,9 +65,9 @@ class vf implements io, ak {
         try {
           if (param1 != 1) {
             var5 = (UiWidget) null;
-            this.a((byte) -2, (UiWidget) null);
+            this.getAvailableTextWidth((byte) -2, (UiWidget) null);
           }
-          stackIn_3_0 = this.a(param0, 0, (byte) 24, param2);
+          stackIn_3_0 = this.computeTextY(param0, 0, (byte) 24, param2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -87,7 +87,7 @@ class vf implements io, ak {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    public final int b(UiWidget param0, int param1, int param2) {
+    public final int getTextOriginX(UiWidget param0, int param1, int param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -97,7 +97,7 @@ class vf implements io, ak {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 128) {
-            stackIn_4_0 = this.a(true, param0, 0, param2);
+            stackIn_4_0 = this.computeTextX(true, param0, 0, param2);
             return stackIn_4_0;
           }
           stackIn_2_0 = -51;
@@ -116,7 +116,7 @@ class vf implements io, ak {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6, int param7) {
+    private final void drawTextRun(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6, int param7) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -131,14 +131,14 @@ class vf implements io, ak {
         int var12Lifetime1;
         var13 = ZombieDawn.field_J;
         try {
-          Mover.$cfr$intArgs$a$3aedf8649552(param2 + param6.field_j, 99, param6.field_i + (param4 + param6.field_k), param6.field_n + (param6.field_j + param2), param4 + param6.field_k);
+          Mover.intersectClipIntArgs(param2 + param6.field_j, 99, param6.field_i + (param4 + param6.field_k), param6.field_n + (param6.field_j + param2), param4 + param6.field_k);
           if (param7 < 3) {
             var14 = (UiWidget) null;
-            this.b((UiWidget) null, 57, -8);
+            this.getTextOriginX((UiWidget) null, 57, -8);
           }
           boolean decompiledFrameRemainder0 = true;
-          var9_int = this.a((byte) 123, param6);
-          var10 = this.a(param6, -23803);
+          var9_int = this.getAvailableTextWidth((byte) 123, param6);
+          var10 = this.getAvailableTextHeight(param6, -23803);
           if (!this.field_e) {
             var12 = this.field_i;
             if (var12 == 0) {
@@ -157,21 +157,21 @@ class vf implements io, ak {
             if (var12Lifetime1 != 0 &&
               var12Lifetime1 != 3) {
               if (var12Lifetime1 == 1) {
-                this.field_m.drawStringCentered(this.b(12307, param6), (var9_int >> 1) + this.a(true, param6, param0, param4), var11 + this.a(param6, param1, (byte) 24, param2), param3, param5);
+                this.field_m.drawStringCentered(this.getDisplayText(12307, param6), (var9_int >> 1) + this.computeTextX(true, param6, param0, param4), var11 + this.computeTextY(param6, param1, (byte) 24, param2), param3, param5);
               } else {
                 if ((var12Lifetime1 == 2)) {
-                  this.field_m.drawStringRightAligned(this.b(12307, param6), this.a(true, param6, param0, param4) + var9_int, var11 + this.a(param6, param1, (byte) 24, param2), param3, param5);
+                  this.field_m.drawStringRightAligned(this.getDisplayText(12307, param6), this.computeTextX(true, param6, param0, param4) + var9_int, var11 + this.computeTextY(param6, param1, (byte) 24, param2), param3, param5);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_m.drawString(this.b(12307, param6), this.a(true, param6, param0, param4), var11 + this.a(param6, param1, (byte) 24, param2), param3, param5);
+              this.field_m.drawString(this.getDisplayText(12307, param6), this.computeTextX(true, param6, param0, param4), var11 + this.computeTextY(param6, param1, (byte) 24, param2), param3, param5);
             }
           } else {
-            this.field_m.drawParagraph(this.b(12307, param6), this.a(true, param6, param0, param4), this.a(param6, param1, (byte) 24, param2), var9_int, var10, param3, param5, this.field_h, this.field_i, this.field_n);
+            this.field_m.drawParagraph(this.getDisplayText(12307, param6), this.computeTextX(true, param6, param0, param4), this.computeTextY(param6, param1, (byte) 24, param2), var9_int, var10, param3, param5, this.field_h, this.field_i, this.field_n);
           }
-          pa.a(-21189);
+          pa.popRasterState(-21189);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -187,7 +187,7 @@ class vf implements io, ak {
         }
     }
 
-    String b(int param0, UiWidget param1) {
+    String getDisplayText(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
         String stackIn_3_0 = null;
@@ -198,7 +198,7 @@ class vf implements io, ak {
         try {
           if (param0 != 12307) {
             var4 = (UiWidget) null;
-            this.b((byte) 77, (UiWidget) null);
+            this.getPreferredTextWidth((byte) 77, (UiWidget) null);
           }
           stackIn_3_0 = param1.field_o;
           return stackIn_3_0;
@@ -216,14 +216,14 @@ class vf implements io, ak {
         }
     }
 
-    public final int a(int param0) {
+    public final int getLineInkHeight(int param0) {
         if (param0 != 5) {
           return -34;
         }
         return this.field_m.field_I + this.field_m.field_x;
     }
 
-    final static void a(int param0, String param1) {
+    final static void onCountryListLoaded(int param0, String param1) {
         try {
           int var2_int = 90 / ((-63 - param0) / 58);
         } catch (RuntimeException runtimeException) {
@@ -231,7 +231,7 @@ class vf implements io, ak {
         }
     }
 
-    public final void a(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
+    public final void drawSelection(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
         int var12 = 0;
         int stackIn_12_0 = 0;
         int stackIn_17_0 = 0;
@@ -255,8 +255,8 @@ class vf implements io, ak {
           if (param1 == param5) {
             return;
           }
-          if (param3.e(-17741)) {
-            var17 = this.a(104, param3);
+          if (param3.isFocused(-17741)) {
+            var17 = this.getTextLayout(104, param3);
             var18 = var17;
             if (param5 > param1) {
               var8 = param1;
@@ -265,19 +265,19 @@ class vf implements io, ak {
               var8 = param5;
               var9 = param1;
             }
-            var10 = var18.a(104, var8);
-            var11 = var18.a(-71, var9);
-            Mover.$cfr$intArgs$a$3aedf8649552(param2 + param3.field_j, 99, param4 + (param3.field_k + param3.field_i), param3.field_n + (param3.field_j + param2), param4 + param3.field_k);
+            var10 = var18.lineIndexForCharacter(104, var8);
+            var11 = var18.lineIndexForCharacter(-71, var9);
+            Mover.intersectClipIntArgs(param2 + param3.field_j, 99, param4 + (param3.field_k + param3.field_i), param3.field_n + (param3.field_j + param2), param4 + param3.field_k);
             for (var12 = var10; var11 >= var12; var12++) {
               var13 = var17.field_b[var12];
               if (~var10 != ~var12) {
                 stackIn_12_0 = var13.field_e[0];
               } else {
-                stackIn_12_0 = var18.a((byte) -72, var8);
+                stackIn_12_0 = var18.characterX((byte) -72, var8);
               }
               var14 = stackIn_12_0;
               if (var12 == var11) {
-                stackIn_17_0 = var18.a((byte) -72, var9);
+                stackIn_17_0 = var18.characterX((byte) -72, var9);
               } else {
                 if (var13 == null) {
                   stackIn_17_0 = 0;
@@ -286,12 +286,12 @@ class vf implements io, ak {
                 }
               }
               var15 = stackIn_17_0;
-              se.field_j.a(var13.field_b + param3.field_p + (param3.field_j + param2 + this.field_b), var13.field_g, var15 - var14, this.a(true, param3, var14, param4), this.field_j >>> 24, (byte) -90, this.field_j);
+              ProxySocketConnector.field_j.fillRectangleAlpha(var13.field_b + param3.field_p + (param3.field_j + param2 + this.field_b), var13.field_g, var15 - var14, this.computeTextX(true, param3, var14, param4), this.field_j >>> 24, (byte) -90, this.field_j);
             }
-            pa.a(-21189);
+            pa.popRasterState(-21189);
           }
           if (param0 >= -99) {
-            vf.b(-125);
+            vf.releaseStatics(-125);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -308,12 +308,12 @@ class vf implements io, ak {
         }
     }
 
-    public void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
+    public void drawWidget(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         if (null == this.field_m) {
           return;
         }
         try {
-          this.a(param2, (byte) 119, param4, param3);
+          this.drawWidgetText(param2, (byte) 119, param4, param3);
           if (param0 != 16777215) {
             this.field_m = (Font) null;
           }
@@ -322,7 +322,7 @@ class vf implements io, ak {
         }
     }
 
-    public final int a(boolean param0, UiWidget param1) {
+    public final int getPreferredTextHeight(boolean param0, UiWidget param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -335,8 +335,8 @@ class vf implements io, ak {
             stackIn_2_0 = -79;
             return stackIn_2_0;
           }
-          this.a(114, param1);
-          stackIn_4_0 = param1.field_t.a((byte) -38) + this.field_b + this.field_p;
+          this.getTextLayout(114, param1);
+          stackIn_4_0 = param1.field_t.height((byte) -38) + this.field_b + this.field_p;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -352,7 +352,7 @@ class vf implements io, ak {
         }
     }
 
-    final static void a(int param0, Sprite[] param1, int param2, int param3, int param4, int param5) {
+    final static void drawNineSliceFrame(int param0, Sprite[] param1, int param2, int param3, int param4, int param5) {
         int var21 = 0;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
@@ -514,7 +514,7 @@ class vf implements io, ak {
         }
     }
 
-    final void a(vf param0, byte param1) {
+    final void copyStyleTo(vf param0, byte param1) {
         try {
           param0.field_h = this.field_h;
           param0.field_i = this.field_i;
@@ -535,7 +535,7 @@ class vf implements io, ak {
         }
     }
 
-    public final int a(byte param0, UiWidget param1) {
+    public final int getAvailableTextWidth(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -562,7 +562,7 @@ class vf implements io, ak {
         }
     }
 
-    private final int a(UiWidget param0, int param1, byte param2, int param3) {
+    private final int computeTextY(UiWidget param0, int param1, byte param2, int param3) {
         RuntimeException var5 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -591,7 +591,7 @@ class vf implements io, ak {
         }
     }
 
-    private final int a(UiWidget param0, int param1) {
+    private final int getAvailableTextHeight(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -620,9 +620,9 @@ class vf implements io, ak {
         }
     }
 
-    private final void a(int param0, byte param1, int param2, UiWidget param3) {
+    private final void drawWidgetText(int param0, byte param1, int param2, UiWidget param3) {
         try {
-          this.a(0, 0, param0, this.field_l, param2, this.field_q, param3, 72);
+          this.drawTextRun(0, 0, param0, this.field_l, param2, this.field_q, param3, 72);
           if (param1 <= 42) {
             this.field_p = -124;
           }
@@ -631,7 +631,7 @@ class vf implements io, ak {
         }
     }
 
-    public final int b(byte param0, UiWidget param1) {
+    public final int getPreferredTextWidth(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
         int stackIn_3_0 = 0;
@@ -642,10 +642,10 @@ class vf implements io, ak {
         try {
           if (param0 >= -31) {
             var4 = (UiWidget) null;
-            this.a(62, 84, 6, -2, (UiWidget) null);
+            this.drawCaret(62, 84, 6, -2, (UiWidget) null);
           }
-          this.a(106, param1);
-          stackIn_3_0 = param1.field_t.b((byte) 63) + (this.field_g + this.field_o);
+          this.getTextLayout(106, param1);
+          stackIn_3_0 = param1.field_t.width((byte) 63) + (this.field_g + this.field_o);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -661,7 +661,7 @@ class vf implements io, ak {
         }
     }
 
-    private final void c(int param0, UiWidget param1) {
+    private final void layoutSingleLine(int param0, UiWidget param1) {
         int discarded$0 = 0;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
@@ -680,8 +680,8 @@ class vf implements io, ak {
           if (null == param1.field_t) {
             param1.field_t = (vg) ((Object) new ad());
           }
-          var3_int = this.a((byte) 112, param1);
-          var4 = this.a(param1, -23803);
+          var3_int = this.getAvailableTextWidth((byte) 112, param1);
+          var4 = this.getAvailableTextHeight(param1, -23803);
           var6 = this.field_i;
           if (var6 != 0) {
             if (var6 != 2) {
@@ -700,20 +700,20 @@ class vf implements io, ak {
             var6Lifetime1 != 3) {
             if (var6Lifetime1 == 1) {
               if (param1.field_t instanceof ad) {
-                ((ad) (param1.field_t)).a(var3_int >> 1, 91, var5, this.b(param0 ^ 22178, param1), this.field_m);
+                ((ad) (param1.field_t)).layoutCentered(var3_int >> 1, 91, var5, this.getDisplayText(param0 ^ 22178, param1), this.field_m);
               }
             } else if (var6Lifetime1 == 2 &&
               param1.field_t instanceof ad) {
-              ((ad) (param1.field_t)).a(this.b(param0 - 13982, param1), var5, this.field_m, (byte) 83, var3_int);
+              ((ad) (param1.field_t)).layoutRightAligned(this.getDisplayText(param0 - 13982, param1), var5, this.field_m, (byte) 83, var3_int);
             }
           } else {
             if (param1.field_t instanceof ad) {
-              ((ad) (param1.field_t)).a(95, this.field_m, this.b(param0 - 13982, param1), 0, var5);
+              ((ad) (param1.field_t)).layoutLeftAligned(95, this.field_m, this.getDisplayText(param0 - 13982, param1), 0, var5);
             }
           }
           if (param0 != 26289) {
             var8 = (UiWidget) null;
-            discarded$0 = this.a((UiWidget) null, 125);
+            discarded$0 = this.getAvailableTextHeight((UiWidget) null, 125);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -730,7 +730,7 @@ class vf implements io, ak {
         }
     }
 
-    public final void a(int param0, int param1, int param2, int param3, UiWidget param4) {
+    public final void drawCaret(int param0, int param1, int param2, int param3, UiWidget param4) {
         vg var13 = null;
         vg var14 = null;
         int var7 = 0;
@@ -740,18 +740,18 @@ class vf implements io, ak {
         int var11 = 0;
         int var12 = 0;
         try {
-          if (param4.e(-17741)) {
-            var13 = this.a(-66, param4);
+          if (param4.isFocused(-17741)) {
+            var13 = this.getTextLayout(-66, param4);
             var14 = var13;
-            var7 = var14.a(124, param0);
+            var7 = var14.lineIndexForCharacter(124, param0);
             var8 = var13.field_b[var7];
-            var9 = var14.a((byte) -72, param0);
-            var10 = this.a(true, param4, var9, param1);
-            var11 = this.a(param4, 1, param2) + Math.max(0, var8.field_b);
-            var12 = this.a(param4, 1, param2) + Math.min(this.a(param4, -23803), Math.min(var8.field_g, var7 + 1 >= var14.field_b.length ? var8.field_g : var13.field_b[1 + var7].field_b));
-            Mover.$cfr$intArgs$a$3aedf8649552(param4.field_j + param2, 99, param4.field_i + (param4.field_k + param1), param4.field_n + (param2 + param4.field_j), param4.field_k + param1);
-            se.field_j.a(var12, this.field_a, (byte) -14, var10, var11, var10);
-            pa.a(-21189);
+            var9 = var14.characterX((byte) -72, param0);
+            var10 = this.computeTextX(true, param4, var9, param1);
+            var11 = this.getTextOriginY(param4, 1, param2) + Math.max(0, var8.field_b);
+            var12 = this.getTextOriginY(param4, 1, param2) + Math.min(this.getAvailableTextHeight(param4, -23803), Math.min(var8.field_g, var7 + 1 >= var14.field_b.length ? var8.field_g : var13.field_b[1 + var7].field_b));
+            Mover.intersectClipIntArgs(param4.field_j + param2, 99, param4.field_i + (param4.field_k + param1), param4.field_n + (param2 + param4.field_j), param4.field_k + param1);
+            ProxySocketConnector.field_j.drawLine(var12, this.field_a, (byte) -14, var10, var11, var10);
+            pa.popRasterState(-21189);
           }
           int var6_int = -62 % ((param3 - 37) / 55);
         } catch (RuntimeException runtimeException) {
@@ -759,14 +759,14 @@ class vf implements io, ak {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         if (param0 != 4056) {
           field_k = 76;
         }
     }
 
-    private final int a(boolean param0, UiWidget param1, int param2, int param3) {
+    private final int computeTextX(boolean param0, UiWidget param1, int param2, int param3) {
         RuntimeException var5 = null;
         UiWidget var6 = null;
         int stackIn_3_0 = 0;
@@ -777,7 +777,7 @@ class vf implements io, ak {
         try {
           if (!param0) {
             var6 = (UiWidget) null;
-            this.a(-121, false, -32, (UiWidget) null, -20);
+            this.drawWidget(-121, false, -32, (UiWidget) null, -20);
           }
           stackIn_3_0 = param1.field_u + (param3 + param1.field_k + this.field_g + param2);
           return stackIn_3_0;
@@ -818,7 +818,7 @@ class vf implements io, ak {
         }
     }
 
-    public final int a(UiWidget param0, int param1, int param2, int param3, int param4, int param5) {
+    public final int hitTestCaretIndex(UiWidget param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -829,8 +829,8 @@ class vf implements io, ak {
           if (param1 != -1) {
             this.field_q = -68;
           }
-          this.a(-52, param0);
-          stackIn_3_0 = param0.field_t.a(param3 - this.b(param0, 128, param5), -this.a(param0, param1 ^ -2, param2) + param4, true);
+          this.getTextLayout(-52, param0);
+          stackIn_3_0 = param0.field_t.hitTestCharacter(param3 - this.getTextOriginX(param0, 128, param5), -this.getTextOriginY(param0, param1 ^ -2, param2) + param4, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

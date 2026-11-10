@@ -19,7 +19,7 @@ final class lb extends pn implements hh {
     private boolean field_Z;
     private an field_X;
 
-    private final an o(int param0) {
+    private final an getCurrentModeButton(int param0) {
         if (cn.field_b != null) {
           return this.field_V;
         }
@@ -33,7 +33,7 @@ final class lb extends pn implements hh {
         return this.field_bb;
     }
 
-    private final an a(byte param0, String param1, sk param2) {
+    private final an addButton(byte param0, String param1, sk param2) {
         an var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -53,8 +53,8 @@ final class lb extends pn implements hh {
             stackIn_2_0 = (an) null;
             return stackIn_2_0;
           }
-          var4.a(-71, var5, 15, this.field_i - 30, 30);
-          this.a((UiWidget) (var4), 10);
+          var4.setBounds(-71, var5, 15, this.field_i - 30, 30);
+          this.addChild((UiWidget) (var4), 10);
           stackIn_4_0 = var4;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -100,10 +100,10 @@ final class lb extends pn implements hh {
             this.field_fb = (re[]) null;
           }
           if (this.field_X == param2) {
-            this.i((byte) -92);
+            this.closeSettings((byte) -92);
           } else {
             if (param2 == this.field_gb) {
-              this.g((byte) -67);
+              this.applySelectedOption((byte) -67);
             } else {
               if (param2 != this.field_bb) {
                 if (param2 != this.field_W) {
@@ -116,21 +116,21 @@ final class lb extends pn implements hh {
                   if (var6_int == 0 &&
                     param2 == this.field_V) {
                     if (!this.field_cb) {
-                      this.field_F.a(new i(this.field_F, kb.field_f), true);
+                      this.field_F.addDialog(new i(this.field_F, kb.field_f), true);
                       return;
                     }
                     if (be.field_j > 0) {
-                      this.a(param2, -115);
+                      this.selectButton(param2, -115);
                       return;
                     }
-                    this.field_F.a(new kf(this.field_F), true);
+                    this.field_F.addDialog(new kf(this.field_F), true);
                     return;
                   }
                 } else {
-                  this.a(param2, -104);
+                  this.selectButton(param2, -104);
                 }
               } else {
-                this.a(param2, param1 ^ -91);
+                this.selectButton(param2, param1 ^ -91);
               }
             }
           }
@@ -149,25 +149,25 @@ final class lb extends pn implements hh {
         }
     }
 
-    private final void g(byte param0) {
+    private final void applySelectedOption(byte param0) {
         int var2;
         int var3;
         an var4;
         var3 = ZombieDawn.field_J;
         if (this.field_bb == this.field_ib) {
           re.a((byte) -71);
-          we.w(-55);
+          we.leaveResizableMode(-55);
         } else {
           if (this.field_ib != this.field_W) {
             if (this.field_ib == this.field_V) {
               if (this.field_hb != null) {
-                var2 = this.field_hb.h(0);
+                var2 = this.field_hb.getSelectedIndex(0);
                 if (0 <= var2) {
-                  rn.field_b.a(this.field_fb[var2].field_d, this.field_fb[var2].field_a, 124);
+                  rn.field_b.setFullscreenSize(this.field_fb[var2].field_d, this.field_fb[var2].field_a, 124);
                 }
               }
               cn.a(true, false);
-              this.field_F.a(new nj(this.field_F), true);
+              this.field_F.addDialog(new nj(this.field_F), true);
             }
           } else {
             re.a((byte) -71);
@@ -177,11 +177,11 @@ final class lb extends pn implements hh {
         this.field_gb.field_C = false;
         if (param0 > -46) {
           var4 = (an) null;
-          this.a((an) null, -96);
+          this.selectButton((an) null, -96);
         }
     }
 
-    private final void a(an param0, int param1) {
+    private final void selectButton(an param0, int param1) {
         an var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -197,30 +197,30 @@ final class lb extends pn implements hh {
           this.field_ib = param0;
           var4 = -49 / ((param1 + 40) / 47);
           param0.focusNext((byte) 68, (UiWidget) (this));
-          var3 = this.o(16);
+          var3 = this.getCurrentModeButton(16);
           stackIn_2_0 = this.field_gb;
           stackIn_3_1 = (var3 != param0);
           stackIn_2_0.field_C = stackIn_3_1;
           if (this.field_V == param0) {
             if (var3 == param0) {
               if (null != this.field_hb) {
-                var5 = this.field_hb.h(0);
+                var5 = this.field_hb.getSelectedIndex(0);
                 var6 = this.field_fb[var5];
                 if (var6.field_a == rn.field_b.field_t &&
                   rn.field_b.field_i == var6.field_d) {
-                  this.n(-18681);
+                  this.refreshButtonHighlights(-18681);
                   return;
                 }
                 this.field_gb.field_C = true;
-                this.n(-18681);
+                this.refreshButtonHighlights(-18681);
               } else {
-                this.n(-18681);
+                this.refreshButtonHighlights(-18681);
               }
             } else {
-              this.n(-18681);
+              this.refreshButtonHighlights(-18681);
             }
           } else {
-            this.n(-18681);
+            this.refreshButtonHighlights(-18681);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -237,7 +237,7 @@ final class lb extends pn implements hh {
         }
     }
 
-    final void a(UiWidget param0, byte param1, int param2, int param3) {
+    final void updatePointer(UiWidget param0, byte param1, int param2, int param3) {
         int var6 = 0;
         int stackIn_15_0 = 0;
         RuntimeException stackIn_22_0 = null;
@@ -252,7 +252,7 @@ final class lb extends pn implements hh {
         an[] var9 = null;
         var8 = ZombieDawn.field_J;
         try {
-          super.a(param0, (byte) 88, param2, param3);
+          super.updatePointer(param0, (byte) 88, param2, param3);
           if (ll.field_a) {
             param0.blur((byte) 57);
             var9 = this.field_U;
@@ -265,15 +265,15 @@ final class lb extends pn implements hh {
             }
           }
           if (!this.field_ab &&
-            !po.w(13296)) {
-            this.i((byte) -117);
-            this.field_F.a(new lb(this.field_F), true);
+            !po.isGuestSession(13296)) {
+            this.closeSettings((byte) -117);
+            this.field_F.addDialog(new lb(this.field_F), true);
           }
           if (null != this.field_hb) {
-            stackIn_15_0 = (this.field_hb.e((byte) -43)) ? 0 : 1;
+            stackIn_15_0 = (this.field_hb.isListOpen((byte) -43)) ? 0 : 1;
             if (stackIn_15_0 == (this.field_Z ? 1 : 0)) {
-              this.a(this.field_V, 115);
-              this.field_Z = this.field_hb.e((byte) -24);
+              this.selectButton(this.field_V, 115);
+              this.field_Z = this.field_hb.isListOpen((byte) -24);
             }
           }
           var5_int = -47 % ((param1 - 46) / 42);
@@ -304,20 +304,20 @@ final class lb extends pn implements hh {
         var7 = ZombieDawn.field_J;
         try {
           var5 = null;
-          if (this.field_bb.e(-17741)) {
+          if (this.field_bb.isFocused(-17741)) {
             var5 = this.field_bb;
           } else {
             if (this.field_W != null &&
-              this.field_W.e(-17741)) {
+              this.field_W.isFocused(-17741)) {
               var5 = this.field_W;
             } else {
-              if (this.field_V.e(-17741)) {
+              if (this.field_V.isFocused(-17741)) {
                 var5 = this.field_V;
               } else {
-                if (this.field_X.e(-17741)) {
+                if (this.field_X.isFocused(-17741)) {
                   var5 = this.field_X;
                 } else {
-                  if (this.field_gb.e(-17741)) {
+                  if (this.field_gb.isFocused(-17741)) {
                     var5 = this.field_gb;
                   } else {
                     if (!this.field_bb.field_x) {
@@ -421,7 +421,7 @@ final class lb extends pn implements hh {
         }
     }
 
-    private final void n(int param0) {
+    private final void refreshButtonHighlights(int param0) {
         int var3 = 0;
         an var4 = null;
         int var5 = ZombieDawn.field_J;
@@ -445,7 +445,7 @@ final class lb extends pn implements hh {
         return stackIn_6_0;
     }
 
-    private final an a(String param0, v[] param1, byte param2, sk param3) {
+    private final an addIconButton(String param0, v[] param1, byte param2, sk param3) {
         an var5 = null;
         RuntimeException var5_ref = null;
         r var6 = null;
@@ -469,8 +469,8 @@ final class lb extends pn implements hh {
           }
           var6 = this.field_T;
           var7 = var5;
-          var6.a(0, var7, var6.field_M);
-          this.field_T.a(true);
+          var6.addCell(0, var7, var6.field_M);
+          this.field_T.reapplyBounds(true);
           stackIn_4_0 = var5;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -557,7 +557,7 @@ final class lb extends pn implements hh {
                 }
                 if (null != rn.field_b &&
                   this.field_fb[var2_int] != null &&
-                  !rn.field_b.c(this.field_fb[var2_int].field_d, this.field_fb[var2_int].field_a, 79)) {
+                  !rn.field_b.acceptsDimensions(this.field_fb[var2_int].field_d, this.field_fb[var2_int].field_a, 79)) {
                   this.field_fb[var2_int] = null;
                 }
               }
@@ -578,19 +578,19 @@ final class lb extends pn implements hh {
                 this.field_fb[incrementValue$0] = var3_ref_re__[var5];
               }
             }
-            wc.a(this.field_fb, 0);
+            wc.sortDisplayModes(this.field_fb, 0);
           }
           stackIn_31_1 = !(0 >= this.field_fb.length);
           this.field_cb = stackIn_31_1;
-          stackIn_34_0 = (!lm.f((byte) 126)) ? 0 : 1;
+          stackIn_34_0 = (!lm.hasPendingResize((byte) 126)) ? 0 : 1;
           var2_intLifetime1 = stackIn_34_0;
-          stackIn_37_1 = !(po.w(13296));
+          stackIn_37_1 = !(po.isGuestSession(13296));
           this.field_ab = stackIn_37_1;
           stackIn_40_0 = (var2_intLifetime1 == 0) ? 2 : 3;
           var3Lifetime1 = stackIn_40_0;
           if (var2_intLifetime1 == 0) {
             if (null != rn.field_b) {
-              stackIn_48_0 = (rn.field_b.b(0)) ? 1 : 0;
+              stackIn_48_0 = (rn.field_b.isMemoryInsufficient(0)) ? 1 : 0;
             } else {
               stackIn_48_0 = 0;
             }
@@ -620,13 +620,13 @@ final class lb extends pn implements hh {
           }
           this.field_T = new r(stackIn_50_3, stackIn_52_4, 410, 105, (io) null, var3Lifetime1, 1);
           this.field_T.field_M = 83;
-          this.field_T.a((byte) 106, 5, 5);
-          this.a(this.field_T, 10);
-          this.field_bb = this.a(vd.field_a, ti.field_e, (byte) 32, (sk) (this));
+          this.field_T.setCellInsets((byte) 106, 5, 5);
+          this.addChild(this.field_T, 10);
+          this.field_bb = this.addIconButton(vd.field_a, ti.field_e, (byte) 32, (sk) (this));
           if (var2_intLifetime1 != 0) {
-            this.field_W = this.a(ma.field_n, li.field_h, (byte) 32, (sk) (this));
+            this.field_W = this.addIconButton(ma.field_n, JaggrabDownloader.field_h, (byte) 32, (sk) (this));
           }
-          this.field_V = this.a(j.field_j, af.field_c, (byte) 32, (sk) (this));
+          this.field_V = this.addIconButton(j.field_j, af.field_c, (byte) 32, (sk) (this));
           if (var2_intLifetime1 != 0) {
             stackIn_57_1 = 3;
           } else {
@@ -652,14 +652,14 @@ final class lb extends pn implements hh {
               var5_ref_String__[var7_int] = var8.field_a + "<times>" + var8.field_d;
             }
             this.field_hb = new nh(var5_ref_String__, var6_int, 150);
-            this.field_hb.a(-87, -19 + (this.field_V.field_j + (this.field_T.field_j + this.field_V.field_n)), this.field_V.field_k + this.field_T.field_k, 126, 18);
+            this.field_hb.setBounds(-87, -19 + (this.field_V.field_j + (this.field_T.field_j + this.field_V.field_n)), this.field_V.field_k + this.field_T.field_k, 126, 18);
             this.field_x.addLast(this.field_hb, -123);
           }
-          this.field_X = this.a((byte) -101, lk.field_j, (sk) (this));
+          this.field_X = this.addButton((byte) -101, lk.field_j, (sk) (this));
           var5Lifetime1 = this.field_X.field_i / 2 + this.field_X.field_k;
           this.field_X.field_i = 150;
           this.field_X.field_k = -20 + (var5Lifetime1 - this.field_X.field_i);
-          this.field_gb = this.a((byte) -80, bd.field_h, (sk) (this));
+          this.field_gb = this.addButton((byte) -80, WhirlpoolHasher.field_h, (sk) (this));
           this.field_gb.field_k = var5Lifetime1 + 20;
           this.field_gb.field_i = this.field_X.field_i;
           this.field_gb.field_C = false;
@@ -678,10 +678,10 @@ final class lb extends pn implements hh {
             var7.field_k = 0;
             var7.field_n = 80;
             var7.field_h = (io) ((Object) new vf(ia.field_e, 20, 20, 0, 10, 16777215, -1, 0, 0, 16, 0, 0, true));
-            this.a(var7, 10);
+            this.addChild(var7, 10);
           }
           this.field_Z = false;
-          var6_ref = this.o(16);
+          var6_ref = this.getCurrentModeButton(16);
           if (var6_ref != null) {
             var6_ref.field_x = true;
           }
@@ -700,7 +700,7 @@ final class lb extends pn implements hh {
         }
     }
 
-    private final void i(byte param0) {
+    private final void closeSettings(byte param0) {
         if (!this.field_H) {
           return;
         }

@@ -11,7 +11,7 @@ final class k extends vf {
         int var1 = -126 % ((48 - param0) / 63);
     }
 
-    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
+    public final void drawWidget(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_15_0 = 0;
@@ -37,7 +37,7 @@ final class k extends vf {
           }
           var6_int = stackIn_6_0;
           if (param1) {
-            stackIn_12_0 = (param3.e(-17741)) ? 1 : 0;
+            stackIn_12_0 = (param3.isFocused(-17741)) ? 1 : 0;
           } else {
             stackIn_12_0 = 0;
           }
@@ -59,7 +59,7 @@ final class k extends vf {
             k.a(-100, -115);
           }
           var10.draw(var11, var12);
-          this.field_m.drawStringCentered(this.b(12307, param3), var13, param2, var9, -1);
+          this.field_m.drawStringCentered(this.getDisplayText(12307, param3), var13, param2, var9, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -84,8 +84,8 @@ final class k extends vf {
           field_r = (String) null;
           sb.field_a = null;
           jd.field_a = 0;
-          var2 = bd.field_j;
-          bd.field_j = qj.field_e;
+          var2 = WhirlpoolHasher.field_j;
+          WhirlpoolHasher.field_j = qj.field_e;
           qj.field_e = var2;
           if (param0 != 51) {
             if (param0 != 50) {
@@ -183,8 +183,8 @@ final class k extends vf {
         }
         sb.field_a = null;
         jd.field_a = 0;
-        var2Lifetime1 = bd.field_j;
-        bd.field_j = qj.field_e;
+        var2Lifetime1 = WhirlpoolHasher.field_j;
+        WhirlpoolHasher.field_j = qj.field_e;
         qj.field_e = var2Lifetime1;
         if (param0 != 51) {
           if (param0 != 50) {

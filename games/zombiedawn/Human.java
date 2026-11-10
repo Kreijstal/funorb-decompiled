@@ -26,13 +26,13 @@ abstract class Human extends Mover {
     private int field_qb;
     static Sprite field_tb;
 
-    final boolean p(int param0) {
+    final boolean startFleeing(int param0) {
         int var2 = -44 / ((-76 - param0) / 44);
         if (this.field_t == 28) {
           return false;
         }
-        this.i((byte) -71);
-        int var3 = this.j((byte) -123);
+        this.resetFleePoints((byte) -71);
+        int var3 = this.chooseFleePoint((byte) -123);
         if (-1 == var3) {
           return false;
         }
@@ -41,13 +41,13 @@ abstract class Human extends Mover {
         this.targetX = this.field_jb[var3];
         this.targetY = this.field_gb[var3];
         ho.a(this.getY(237239984), (byte) 54, this.getX(true));
-        pi.a(this.targetY, this.targetX, (byte) 101);
+        ImageProducerRasterBuffer.incrementTileOccupancy(this.targetY, this.targetX, (byte) 101);
         this.moveToward(0, this.field_D);
         this.setState(1, -6904);
         return true;
     }
 
-    void c(int param0, int param1, int param2) {
+    void knockBackFrom(int param0, int param1, int param2) {
         int stackIn_8_1 = 0;
         int var4;
         int var5;
@@ -88,7 +88,7 @@ abstract class Human extends Mover {
           var9 = this.field_db;
         } else {
           if (var10 > 50) {
-            if (this.t(10)) {
+            if (this.isMaleVoice(10)) {
               var9 = pb.a(so.random, 4, 1) + 40;
             } else {
               var9 = pb.a(so.random, 3, 1) + 37;
@@ -101,7 +101,7 @@ abstract class Human extends Mover {
         return;
     }
 
-    final boolean a(int param0, int param1, boolean param2) {
+    final boolean findNearestTarget(int param0, int param1, boolean param2) {
         WorldObject var4;
         Zombie var5;
         int var6;
@@ -113,7 +113,7 @@ abstract class Human extends Mover {
         if (param0 > -28) {
           this.field_fb = true;
         }
-        var4 = this.a((byte) -74, param1, 10);
+        var4 = this.firstNearbyObject((byte) -74, param1, 10);
         while (var4 != null) {
           if (var4 instanceof Zombie) {
             stackIn_7_0 = var4;
@@ -122,12 +122,12 @@ abstract class Human extends Mover {
           }
           var5 = (Zombie) (stackIn_7_0);
           if (var5 == null ||
-            var5.x(79) ||
+            var5.isVisibleToHumans(79) ||
             this instanceof we &&
             var5.state != 9) {
             if (!param2 &&
-              !this.a(72, var4)) {
-              var4 = this.e((byte) 32);
+              !this.hasLineOfSight(72, var4)) {
+              var4 = this.nextNearbyObject((byte) 32);
               continue;
             }
             this.field_sb = var4;
@@ -138,13 +138,13 @@ abstract class Human extends Mover {
               return true;
             }
           }
-          var4 = this.e((byte) 32);
+          var4 = this.nextNearbyObject((byte) 32);
         }
         stackIn_22_0 = (null != this.field_sb);
         return stackIn_22_0;
     }
 
-    final int s(int param0) {
+    final int getInfectionScore(int param0) {
         int var2;
         int var3;
         var3 = ZombieDawn.field_J;
@@ -156,13 +156,13 @@ abstract class Human extends Mover {
           return lc.field_j;
         }
         if (var2 == 2) {
-          return uo.field_j;
+          return IsaacCipher.field_j;
         }
         if (3 == var2) {
           return lc.field_j;
         }
         if (4 == var2) {
-          return uo.field_j;
+          return IsaacCipher.field_j;
         }
         if (var2 == 5) {
           return lc.field_j;
@@ -272,17 +272,17 @@ abstract class Human extends Mover {
         return "KNOCKBACK";
     }
 
-    final void a(int param0, byte param1, int param2) {
+    final void runToward(int param0, byte param1, int param2) {
         Point var7 = null;
         Point var6 = null;
         int var4 = -5 % ((43 - param1) / 57);
         Path var5 = Js5Archive.field_e.navigation.findPath(true, this.getX(true), param2, param0, this.getY(237239984));
         if (var5 != null) {
-          var7 = (Point) (var5.b((byte) 26));
+          var7 = (Point) (var5.last((byte) 26));
           var6 = var7;
           if (this.getX(true) == var7.x &&
             this.getY(237239984) == var7.y) {
-            var6 = (Point) (var5.a(false));
+            var6 = (Point) (var5.previous(false));
           }
           if (var6 == null) {
             return;
@@ -294,7 +294,7 @@ abstract class Human extends Mover {
         }
     }
 
-    final void n(int param0) {
+    final void scoreFleePoints(int param0) {
         int stackIn_8_0 = 0;
         int var2;
         int var3;
@@ -322,15 +322,15 @@ abstract class Human extends Mover {
           regionExit1: {
             var5 = stackIn_8_0;
             if (-1 + this.field_ub != var4 && (var5 == 0 ||
-              -1 == Js5Archive.field_e.navigation.a(this.field_gb[var4], this.getY(237239984), this.field_jb[var4], this.getX(true), 124))) {
+              -1 == Js5Archive.field_e.navigation.traceLineFromTo(this.field_gb[var4], this.getY(237239984), this.field_jb[var4], this.getX(true), 124))) {
               MouseInputHandler.field_e[var4] = -1;
               break regionExit1;
             }
-            var6 = this.b(250, 16);
+            var6 = this.firstNearbyAnyObject(250, 16);
             while (var6 != null) {
               regionExit2: {
                 if ((!(var6 instanceof Zombie) ||
-                  !((Zombie) (var6)).x(53)) &&
+                  !((Zombie) (var6)).isVisibleToHumans(53)) &&
                   !(var6 instanceof vb)) {
                   if (0 == this.field_z) {
                     break regionExit2;
@@ -339,19 +339,19 @@ abstract class Human extends Mover {
                     break regionExit2;
                   }
                   if (this.field_z != var6.field_z) {
-                    var6 = this.e((byte) 32);
+                    var6 = this.nextNearbyObject((byte) 32);
                     continue;
                   }
                   var7 = this.field_jb[var4] - var6.getX(true);
                   var8 = this.field_gb[var4] - var6.getY(237239984);
                   var9 = var8 * var8 + var7 * var7;
                   if (var9 >= 625) {
-                    var6 = this.e((byte) 32);
+                    var6 = this.nextNearbyObject((byte) 32);
                     continue;
                   }
                   var2 = 1;
                   MouseInputHandler.field_e[var4] = -1 - var9;
-                  var6 = this.e((byte) 32);
+                  var6 = this.nextNearbyObject((byte) 32);
                   continue;
                 }
                 var7Lifetime1 = this.field_jb[var4] - var6.getX(true);
@@ -359,12 +359,12 @@ abstract class Human extends Mover {
                 var9Lifetime1 = var7Lifetime1 * var7Lifetime1 + var8Lifetime1 * var8Lifetime1;
                 if (0 != MouseInputHandler.field_e[var4] &&
                   MouseInputHandler.field_e[var4] <= var9Lifetime1) {
-                  var6 = this.e((byte) 32);
+                  var6 = this.nextNearbyObject((byte) 32);
                   continue;
                 }
                 MouseInputHandler.field_e[var4] = var9Lifetime1;
               }
-              var6 = this.e((byte) 32);
+              var6 = this.nextNearbyObject((byte) 32);
             }
           }
         }
@@ -380,7 +380,7 @@ abstract class Human extends Mover {
         }
     }
 
-    void a(byte param0, Camera param1) {
+    void draw(byte param0, Camera param1) {
         Sprite stackIn_20_0 = null;
         int stackIn_20_1 = 0;
         int stackIn_21_2 = 0;
@@ -417,12 +417,12 @@ abstract class Human extends Mover {
               if (this.field_U.isSamplePositionOutOfRange()) {
                 this.field_U = null;
               } else {
-                this.field_U.h(pj.a(var4, 84, var3_int));
+                this.field_U.setVolume(pj.a(var4, 84, var3_int));
               }
             }
             if (b.field_h) {
               bj.field_q.drawString(this.stateName((byte) -34), var3_int, var4, 16777215, 0);
-              this.a(param1, 5060);
+              this.drawDebugOverlay(param1, 5060);
             }
             if (var3_int >= -48 &&
               var4 >= -48 &&
@@ -439,8 +439,8 @@ abstract class Human extends Mover {
                 so.drawTransparent(stackIn_20_0, stackIn_20_1 + stackIn_21_2, 43 + var4);
               }
               if (this.field_z > 0) {
-                Math.abs(ip.field_p[0].field_w * WorldObject.a(1311979239, (int)tp.field_p << 6) >> 16);
-                var5 = 6 * WorldObject.a(1311979239, (int)tp.field_p << 6) >> 16;
+                Math.abs(ip.field_p[0].field_w * WorldObject.cosFixed(1311979239, (int)tp.field_p << 6) >> 16);
+                var5 = 6 * WorldObject.cosFixed(1311979239, (int)tp.field_p << 6) >> 16;
                 var6 = rd.a(true, (int)tp.field_p << 7) * 3 >> 16;
                 ip.field_p[0].drawTintedGrayscale(var5 + 24 + (var3_int - 7), 2 + (var4 + var6), bb.field_e[-1 + this.field_z]);
               }
@@ -458,7 +458,7 @@ abstract class Human extends Mover {
                 var3_int = 0;
               }
               if (param0 > -76) {
-                this.n(-60);
+                this.scoreFleePoints(-60);
               }
               if (this.state != 10 &&
                 this.state != 11) {
@@ -515,24 +515,24 @@ abstract class Human extends Mover {
                     stackIn_68_4 = 255;
                   }
                   so.a(stackIn_67_0, stackIn_67_1, stackIn_67_2, stackIn_67_3, stackIn_68_4);
-                  pa.a(-21189);
+                  pa.popRasterState(-21189);
                   var4 = var7;
                   var3_int = var6Lifetime1;
                   dn.field_E.drawTransparent(var3_int, var4);
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  pa.a(-21189);
+                  pa.popRasterState(-21189);
                   var4 = var7;
                   var3_int = var6Lifetime1;
                   dn.field_E.drawTransparentWithOpacity(var3_int, var4, 142);
                 }
               }
               if (kc.field_Q) {
-                pc.field_k.drawStringCentered(s.a(1938762664, "<%0>,<%1>", new String[]{Integer.toString(this.field_B), Integer.toString(this.field_u)}), 24 + var3_int, -5 + var4, 16777215, 0);
+                Js5Transport.field_k.drawStringCentered(s.a(1938762664, "<%0>,<%1>", new String[]{Integer.toString(this.field_B), Integer.toString(this.field_u)}), 24 + var3_int, -5 + var4, 16777215, 0);
               }
               if (this.field_ob) {
-                DualLinkNode.field_k[0].b(var3_int, var4, 128, 16711680);
+                DualLinkNode.field_k[0].drawTransparentWithOpacity(var3_int, var4, 128, 16711680);
               }
               return;
             }
@@ -553,20 +553,20 @@ abstract class Human extends Mover {
         }
     }
 
-    final void j(int param0) {
-        super.j(124);
+    final void freeze(int param0) {
+        super.freeze(124);
         this.setState(3, -6904);
         if (param0 < 66) {
-          this.n(53);
+          this.scoreFleePoints(53);
         }
     }
 
-    int j(byte param0) {
+    int chooseFleePoint(byte param0) {
         int var2;
         int var3;
         int var4;
         var4 = ZombieDawn.field_J;
-        this.n(87);
+        this.scoreFleePoints(87);
         var2 = -1;
         var3 = 0;
         if (param0 >= -42) {
@@ -585,7 +585,7 @@ abstract class Human extends Mover {
         return var2;
     }
 
-    final boolean a(int param0, WorldObject param1) {
+    final boolean hasLineOfSight(int param0, WorldObject param1) {
         LevelNavigation var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -602,13 +602,13 @@ abstract class Human extends Mover {
           var3 = Js5Archive.field_e.navigation;
           if (param0 <= 52) {
             var8 = (Camera) null;
-            this.a((byte) -36, (Camera) null);
+            this.draw((byte) -36, (Camera) null);
           }
           var4 = this.field_y >> 16;
           var5 = this.field_x >> 16;
           var6 = param1.field_y >> 16;
           var7 = param1.field_x >> 16;
-          stackIn_7_0 = (var3.a(var7, var4, var5, (byte) -111, false, var6) != -1) || (var3.a(-48 + var7 + 10, var4, 10 + (-48 + var5), (byte) -123, false, var6) != -1);
+          stackIn_7_0 = (var3.traceLine(var7, var4, var5, (byte) -111, false, var6) != -1) || (var3.traceLine(-48 + var7 + 10, var4, 10 + (-48 + var5), (byte) -123, false, var6) != -1);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -624,7 +624,7 @@ abstract class Human extends Mover {
         }
     }
 
-    void g(int param0) {
+    void tick(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -644,13 +644,13 @@ abstract class Human extends Mover {
         if (400 + this.field_t > Js5Archive.field_e.field_r &&
           Js5Archive.field_e.field_r > 200 &&
           pb.a(so.random, 25, 1) == 0) {
-          this.c(this.getX(true) + pb.a(so.random, 1000, 1) - 500, 78, this.getY(237239984) - (-pb.a(so.random, 1000, 1) + 500));
+          this.knockBackFrom(this.getX(true) + pb.a(so.random, 1000, 1) - 500, 78, this.getY(237239984) - (-pb.a(so.random, 1000, 1) + 500));
         }
         if (param0 < 95) {
           this.field_gb = (int[]) null;
         }
-        this.m(-67);
-        this.d(this.state, -26109);
+        this.applyTileDrift(-67);
+        this.advanceAnimation(this.state, -26109);
         if (this.field_V) {
           if (this.state != 2) {
             return;
@@ -689,12 +689,12 @@ abstract class Human extends Mover {
               break regionExit1;
             }
             this.field_qb = 0;
-            this.l((byte) 52);
+            this.updateBehaviour((byte) 52);
           } else {
             if (2 == this.state) {
               if (0 != this.velocityX ||
                 this.velocityY != 0) {
-                this.g((byte) -113);
+                this.applyVelocity((byte) -113);
                 if (!Js5Archive.field_e.navigation.isWalkable(false, this.velocityY + this.field_x >> 16, this.field_y + this.velocityX >> 16, true)) {
                   this.field_x = this.field_x - this.velocityY;
                   this.field_y = this.field_y - this.velocityX;
@@ -722,7 +722,7 @@ abstract class Human extends Mover {
                 if (this.field_G != 4) {
                   if ((6 == this.field_G)) {
                     this.setState(0, -6904);
-                    pi.a(this.getY(237239984), this.getX(true), (byte) 101);
+                    ImageProducerRasterBuffer.incrementTileOccupancy(this.getY(237239984), this.getX(true), (byte) 101);
                   }
                 } else {
                   this.field_N = 0;
@@ -743,7 +743,7 @@ abstract class Human extends Mover {
               if (fieldTemp$6 >= 5) {
                 this.field_qb = 0;
                 var2 = 0;
-                var3 = Js5Archive.field_e.field_lb.b((byte) 26);
+                var3 = Js5Archive.field_e.field_lb.last((byte) 26);
                 while (var3 instanceof mm) {
                   var2 = var2 != 0 | ((mm) (var3)).a(this, (byte) 108) ? 1 : 0;
                   var3 = var3.previous;
@@ -760,10 +760,10 @@ abstract class Human extends Mover {
                 stackIn_30_1 = (var2 != 0);
                 this.field_nb = stackIn_30_1;
               }
-              this.g((byte) 113);
-              if (!(!this.h((byte) 126))) {
+              this.applyVelocity((byte) 113);
+              if (!(!this.stepTowardTarget((byte) 126))) {
                 this.setState(0, -6904);
-                this.l((byte) 52);
+                this.updateBehaviour((byte) 52);
               }
               break regionExit1;
             }
@@ -773,7 +773,7 @@ abstract class Human extends Mover {
               if (5 <= fieldTemp$5) {
                 this.field_qb = 0;
                 var2Lifetime1 = 0;
-                var3 = Js5Archive.field_e.field_lb.b((byte) 26);
+                var3 = Js5Archive.field_e.field_lb.last((byte) 26);
                 while (var3 instanceof mm) {
                   var2Lifetime1 = var2Lifetime1 != 0 | ((mm) (var3)).a(this, (byte) 79) ? 1 : 0;
                   var3 = var3.previous;
@@ -789,12 +789,12 @@ abstract class Human extends Mover {
                 }
                 stackIn_51_1 = (var2Lifetime1 != 0);
                 this.field_nb = stackIn_51_1;
-                this.l((byte) 52);
+                this.updateBehaviour((byte) 52);
               }
-              this.g((byte) -104);
-              if (!(!this.h((byte) -127))) {
+              this.applyVelocity((byte) -104);
+              if (!(!this.stepTowardTarget((byte) -127))) {
                 this.setState(0, -6904);
-                this.l((byte) 52);
+                this.updateBehaviour((byte) 52);
               }
               break regionExit1;
             }
@@ -811,7 +811,7 @@ abstract class Human extends Mover {
                 if (decompiledFrameRemainder0) {
                   this.field_cb = null;
                   this.setState(0, -6904);
-                  this.l((byte) 52);
+                  this.updateBehaviour((byte) 52);
                   break regionExit1;
                 }
               }
@@ -823,18 +823,18 @@ abstract class Human extends Mover {
               this.field_qb = this.field_qb + 1;
               if (fieldTemp$4 >= 5) {
                 this.field_qb = 0;
-                this.l((byte) 52);
+                this.updateBehaviour((byte) 52);
               }
             }
           }
         }
     }
 
-    final void k(int param0) {
+    final void kill(int param0) {
         if (param0 != 0) {
           return;
         }
-        this.o(-6253);
+        this.removeFromWorld(-6253);
     }
 
     Human(int param0, int param1, int param2, int param3) {
@@ -853,25 +853,25 @@ abstract class Human extends Mover {
         this.field_lb = pb.a(so.random, 200, 1);
         this.field_jb = new int[61];
         this.field_gb = new int[61];
-        this.i((byte) 79);
+        this.resetFleePoints((byte) 79);
         this.field_qb = pb.a(so.random, 5, 1);
-        if (this.t(10)) {
+        if (this.isMaleVoice(10)) {
           this.field_db = 49 + pb.a(so.random, 4, 1);
         } else {
           this.field_db = pb.a(so.random, 3, 1) + 26;
         }
     }
 
-    final void f(byte param0) {
+    final void onGrabbed(byte param0) {
         if (param0 != -85) {
-          this.k(76);
+          this.kill(76);
         }
         this.field_J = true;
         this.setState(2, param0 - 6819);
         this.field_G = 2;
     }
 
-    final boolean a(boolean param0, boolean param1, int param2, int param3) {
+    final boolean isZombieThreatNear(boolean param0, boolean param1, int param2, int param3) {
         WorldObject var5;
         Zombie var6;
         int var7;
@@ -879,30 +879,30 @@ abstract class Human extends Mover {
         if (param2 >= -83) {
           this.field_hb = true;
         }
-        var5 = this.a((byte) -74, param3, 10);
+        var5 = this.firstNearbyObject((byte) -74, param3, 10);
         while (var5 != null) {
           if (var5 instanceof Zombie) {
             var6 = (Zombie) (var5);
             if (var6 != null && (param0 ||
-              var6.state != 8) && (var6.x(87) ||
+              var6.state != 8) && (var6.isVisibleToHumans(87) ||
               this instanceof we)) {
               if (var6.field_hb) {
-                var5 = this.e((byte) 32);
+                var5 = this.nextNearbyObject((byte) 32);
                 continue;
               }
               if (param1 ||
-                Js5Archive.field_e.navigation.a(var6.getY(237239984), this.getX(true), this.getY(237239984), (byte) -91, false, var6.getX(true)) != -1 ||
-                Js5Archive.field_e.navigation.a(var6.getY(237239984) - 48, this.getX(true), -48 + this.getY(237239984), (byte) -109, false, var6.getX(true)) != -1) {
+                Js5Archive.field_e.navigation.traceLine(var6.getY(237239984), this.getX(true), this.getY(237239984), (byte) -91, false, var6.getX(true)) != -1 ||
+                Js5Archive.field_e.navigation.traceLine(var6.getY(237239984) - 48, this.getX(true), -48 + this.getY(237239984), (byte) -109, false, var6.getX(true)) != -1) {
                 return true;
               }
             }
           }
-          var5 = this.e((byte) 32);
+          var5 = this.nextNearbyObject((byte) 32);
         }
         return false;
     }
 
-    final void a(nc param0, int param1) {
+    final void updateScreechReaction(nc param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -924,12 +924,12 @@ abstract class Human extends Mover {
             if (var5 == 0) {
               this.field_cb = null;
               this.setState(0, param1 ^ 31858);
-              this.l((byte) 52);
+              this.updateBehaviour((byte) 52);
             }
           } else {
             if (this.field_cb == null &&
               var5 != 0) {
-              this.a(param0, (byte) -124);
+              this.startScreechCower(param0, (byte) -124);
             }
           }
           return;
@@ -947,22 +947,22 @@ abstract class Human extends Mover {
         }
     }
 
-    final void q(int param0) {
+    final void becomeIdle(int param0) {
         if (param0 <= 5) {
-          this.c(22, 55, 42);
+          this.knockBackFrom(22, 55, 42);
         }
         this.setState(0, -6904);
     }
 
-    abstract void l(byte param0);
+    abstract void updateBehaviour(byte param0);
 
-    void o(int param0) {
+    void removeFromWorld(int param0) {
         if (param0 != -6253) {
           return;
         }
         this.setState(18, -6904);
         this.unlink(-27598);
-        this.d(0);
+        this.unlinkFromBucket(0);
         if (!(0 >= this.field_z)) {
           Js5Archive.field_e.field_J[-1 + this.field_z] = Js5Archive.field_e.field_J[-1 + this.field_z] - 1;
         }
@@ -976,7 +976,7 @@ abstract class Human extends Mover {
         }
     }
 
-    private final void i(byte param0) {
+    private final void resetFleePoints(byte param0) {
         int var5 = 0;
         int var6 = ZombieDawn.field_J;
         int var2 = 99 % ((param0 - 0) / 50);
@@ -990,13 +990,13 @@ abstract class Human extends Mover {
         this.field_gb[-1 + this.field_ub] = var4;
     }
 
-    final boolean t(int param0) {
+    final boolean isMaleVoice(int param0) {
         boolean stackIn_35_0 = false;
         int var2;
         int var3;
         var3 = ZombieDawn.field_J;
         if (param0 != 10) {
-          this.r(4);
+          this.startBeingDevoured(4);
         }
         var2 = this.field_t;
         if (var2 == 0) {
@@ -1066,9 +1066,9 @@ abstract class Human extends Mover {
         return stackIn_35_0;
     }
 
-    abstract void a(Camera param0, int param1);
+    abstract void drawDebugOverlay(Camera param0, int param1);
 
-    void a(nc param0, byte param1) {
+    void startScreechCower(nc param0, byte param1) {
         if (this.state == 18 ||
           20 == this.state ||
           this.state == 16 ||
@@ -1084,7 +1084,7 @@ abstract class Human extends Mover {
         }
     }
 
-    final void r(int param0) {
+    final void startBeingDevoured(int param0) {
         this.setState(param0, param0 ^ -6884);
     }
 

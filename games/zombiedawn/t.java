@@ -16,7 +16,7 @@ final class t implements io {
     static int field_h;
     static int field_c;
 
-    final static df a(boolean param0, int param1) {
+    final static df sendTrackedRequest(boolean param0, int param1) {
         df var2 = null;
         df var2Lifetime1;
         if (!param0) {
@@ -25,14 +25,14 @@ final class t implements io {
           p.a(0, param1);
           return var2;
         }
-        t.a(false, 81);
+        t.sendTrackedRequest(false, 81);
         var2Lifetime1 = new df();
         jj.field_D.addFirst(0, var2Lifetime1);
         p.a(0, param1);
         return var2Lifetime1;
     }
 
-    final static boolean a(String param0, byte param1, String param2) {
+    final static boolean containsForwardOrReversed(String param0, byte param1, String param2) {
         String var3 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -46,8 +46,8 @@ final class t implements io {
           if (param1 <= 65) {
             return true;
           }
-          param2 = ic.a("", 0, param2, '_');
-          var3 = am.a(param2, 1);
+          param2 = ic.replaceCharacter("", 0, param2, '_');
+          var3 = am.reverseString(param2, 1);
           stackIn_8_0 = (param0.indexOf(param2) != -1) || (param0.indexOf(var3) != -1);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -70,7 +70,7 @@ final class t implements io {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 27803) {
           field_b = -70;
           field_i = null;
@@ -81,7 +81,7 @@ final class t implements io {
         field_m = null;
     }
 
-    final static String a(int param0) {
+    final static String getLocalPlayerName(int param0) {
         if (null == ce.field_r) {
           return "";
         }
@@ -91,7 +91,7 @@ final class t implements io {
         return ce.field_r;
     }
 
-    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
+    public final void drawWidget(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         fp var14 = null;
         int var7 = 0;
         int var8 = 0;

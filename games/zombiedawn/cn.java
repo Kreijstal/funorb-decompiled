@@ -7,11 +7,11 @@ final class cn {
     static int field_h;
     static int field_j;
     static Sprite[] field_c;
-    static dh field_f;
+    static RasterBuffer field_f;
     static int field_g;
     static Sprite[] field_a;
     static String[] field_e;
-    static la field_b;
+    static FullscreenFocusCanvas field_b;
 
     final static sn[] b(int param0) {
         if (param0 == 31114) {
@@ -28,7 +28,7 @@ final class cn {
         int var2Lifetime3;
         var3 = ZombieDawn.field_J;
         if (be.field_j <= 0) {
-          if (po.w(13296)) {
+          if (po.isGuestSession(13296)) {
             var2 = 0;
             if (param1) {
               field_g = 58;
@@ -58,7 +58,7 @@ final class cn {
           if (null == field_b) {
             var2Lifetime1 = 3;
           } else {
-            se.a(20922, field_b);
+            ProxySocketConnector.attachCanvasInput(20922, field_b);
             var2Lifetime1 = 2;
           }
           if (param1) {
@@ -72,12 +72,12 @@ final class cn {
           }
           return;
         }
-        field_b = rn.field_b.a(true);
+        field_b = rn.field_b.enterFullscreen(true);
         p.b(2, 27102);
         if (null == field_b) {
           var2Lifetime2 = 3;
         } else {
-          se.a(20922, field_b);
+          ProxySocketConnector.attachCanvasInput(20922, field_b);
           var2Lifetime2 = 2;
         }
         if (param1) {
@@ -112,7 +112,7 @@ final class cn {
         }
         pn.field_R = null;
         NodeHashTableIterator.field_b = null;
-        bp.field_a = null;
+        Js5ArchiveManager.field_a = null;
         dl.field_h = null;
     }
 

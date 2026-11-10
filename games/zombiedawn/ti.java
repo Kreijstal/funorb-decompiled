@@ -187,16 +187,16 @@ final class ti {
             }
             dl.field_h = new String[var4];
             gp.copy(jc.field_p, 0, dl.field_h, 0, var4);
-            bp.field_a = new String[-1 - var4 + var3_int];
-            gp.copy(jc.field_p, var4 + 1, bp.field_a, 0, var3_int - (var4 + 1));
+            Js5ArchiveManager.field_a = new String[-1 - var4 + var3_int];
+            gp.copy(jc.field_p, var4 + 1, Js5ArchiveManager.field_a, 0, var3_int - (var4 + 1));
             if (dl.field_h.length <= pn.field_R.length) {
               stackIn_57_0 = pn.field_R.length;
             } else {
               stackIn_57_0 = dl.field_h.length;
             }
             var5 = stackIn_57_0;
-            if (NodeHashTableIterator.field_b.length < bp.field_a.length) {
-              stackIn_60_0 = bp.field_a.length;
+            if (NodeHashTableIterator.field_b.length < Js5ArchiveManager.field_a.length) {
+              stackIn_60_0 = Js5ArchiveManager.field_a.length;
             } else {
               stackIn_60_0 = NodeHashTableIterator.field_b.length;
             }
@@ -234,9 +234,9 @@ final class ti {
               stackIn_72_0 = cj.field_h;
               stackIn_72_1 = var8Lifetime3 + (var5 + 7);
               stackIn_72_2 = var8Lifetime3;
-              stackIn_72_3 = bp.field_a.length;
+              stackIn_72_3 = Js5ArchiveManager.field_a.length;
               if (stackIn_72_2 < stackIn_72_3) {
-                stackIn_75_2 = bp.field_a[var8Lifetime3];
+                stackIn_75_2 = Js5ArchiveManager.field_a[var8Lifetime3];
               } else {
                 stackIn_75_2 = "";
               }
@@ -313,9 +313,9 @@ final class ti {
             var4Lifetime3++;
           }
           if (2 != pg.field_p) {
-            i.field_W.a(param2, (byte) -70, r.b(6199969, ha.field_b, ei.field_K), 0);
+            i.field_W.initializeSelection(param2, (byte) -70, r.b(6199969, ha.field_b, ei.field_K), 0);
           } else {
-            i.field_W.a(param2, (byte) -75, -1, -1);
+            i.field_W.initializeSelection(param2, (byte) -75, -1, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -345,7 +345,7 @@ final class ti {
             String var4 = (String) null;
             ti.a((String) null, false, true);
           }
-          e.field_S.a(Point.field_i, !param2 ? true : false);
+          e.field_S.addDialog(Point.field_i, !param2 ? true : false);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ti.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

@@ -10,7 +10,7 @@ final class nm {
     static int field_f;
 
     final static void a(int param0) {
-        nn var1 = (nn) (ro.field_a.b((byte) 26));
+        nn var1 = (nn) (ro.field_a.last((byte) 26));
         if (var1 == null) {
           p.a(1);
           return;

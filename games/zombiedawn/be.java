@@ -10,11 +10,11 @@ final class be extends im {
     static cg field_i;
     static int field_j;
 
-    final void a(boolean param0) {
+    final void beginMap(boolean param0) {
         this.field_m = 0;
         this.field_k = 0;
         if (param0) {
-          this.a((byte) -3);
+          this.emitPixel((byte) -3);
         }
     }
 
@@ -27,14 +27,14 @@ final class be extends im {
 
     final byte[] c(int param0, int param1, int param2) {
         this.field_n = new byte[param0 * param1];
-        this.b(param0, param1, -9394);
+        this.generateSamples(param0, param1, -9394);
         if (param2 >= -18) {
           return (byte[]) null;
         }
         return this.field_n;
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void accumulateOctave(int param0, int param1, int param2) {
         if (param2 != -25466) {
           return;
         }
@@ -149,7 +149,7 @@ final class be extends im {
         }
     }
 
-    final void a(byte param0) {
+    final void emitPixel(byte param0) {
         String var3;
         byte[] stackIn_8_0 = null;
         int stackIn_8_1 = 0;

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class cc {
+final class PowerupCard {
     static long field_a;
     private int field_j;
     static aa[] field_m;
@@ -21,7 +21,7 @@ final class cc {
     private int field_n;
     private boolean field_g;
 
-    final void c(int param0) {
+    final void startRiseAnimation(int param0) {
         if (param0 != 28497) {
           return;
         }
@@ -31,7 +31,7 @@ final class cc {
         this.field_e = 0;
     }
 
-    final static void d(int param0) {
+    final static void openLoginPanelAtStage(int param0) {
         if (!i.field_Y) {
           throw new IllegalStateException();
         }
@@ -40,7 +40,7 @@ final class cc {
         fl.field_a = param0;
     }
 
-    final static void a(PacketBuffer param0, int param1) {
+    final static void writeMachineId(PacketBuffer param0, int param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;
@@ -62,8 +62,8 @@ final class cc {
             var2 = var6;
             if (null != ce.field_t) {
               try {
-                ce.field_t.a(param1 ^ 10, 0L);
-                ce.field_t.a(85, var6);
+                ce.field_t.seek(param1 ^ 10, 0L);
+                ce.field_t.readFully(85, var6);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (var2[var3_int] == 0) {
                     continue;
@@ -104,7 +104,7 @@ final class cc {
         }
     }
 
-    final int a(int param0, byte param1) {
+    final int getHoveredPowerupId(int param0, byte param1) {
         int stackIn_8_0 = 0;
         if (param1 > -127) {
           return -94;
@@ -119,7 +119,7 @@ final class cc {
         return stackIn_8_0;
     }
 
-    private final int a(int param0, boolean param1, int param2) {
+    private final int computeHoverHeight(int param0, boolean param1, int param2) {
         int var4 = Math.abs(this.field_l - (-20 + param0));
         if (param1) {
           return -34;
@@ -136,10 +136,10 @@ final class cc {
         return var6;
     }
 
-    final void b(int param0) {
+    final void deselect(int param0) {
         this.field_d = false;
         if (param0 != 2) {
-          this.c(80);
+          this.startRiseAnimation(80);
         }
     }
 
@@ -154,14 +154,14 @@ final class cc {
         field_m = null;
     }
 
-    final boolean a(boolean param0) {
+    final boolean isSelected(boolean param0) {
         if (param0) {
           this.field_n = -81;
         }
         return this.field_d;
     }
 
-    final boolean a(boolean param0, int param1, int param2) {
+    final boolean containsPoint(boolean param0, int param1, int param2) {
         boolean stackIn_7_0 = false;
         if (param0) {
           this.field_e = 127;
@@ -170,14 +170,14 @@ final class cc {
         return stackIn_7_0;
     }
 
-    final int b(byte param0) {
+    final int getPowerupId(byte param0) {
         if (param0 >= -94) {
           field_a = -84L;
         }
         return this.field_f;
     }
 
-    final void a(byte param0, int param1, int param2) {
+    final void updateAnimation(byte param0, int param1, int param2) {
         int stackIn_37_0 = 0;
         int var4;
         int var5;
@@ -203,7 +203,7 @@ final class cc {
             if (param1 < 390) {
               stackIn_37_0 = 0;
             } else {
-              stackIn_37_0 = this.a(param2, false, param1);
+              stackIn_37_0 = this.computeHoverHeight(param2, false, param1);
             }
             var4 = stackIn_37_0;
             if (this.field_g) {
@@ -238,7 +238,7 @@ final class cc {
               if (this.field_n >= 6) {
                 if (this.field_n >= 8) {
                   if (8 == this.field_n) {
-                    var4 = this.a(param2, false, param1);
+                    var4 = this.computeHoverHeight(param2, false, param1);
                     if (this.field_g) {
                       var4 = 80;
                     }
@@ -278,13 +278,13 @@ final class cc {
         }
     }
 
-    final void b(boolean param0) {
+    final void select(boolean param0) {
         this.field_e = 2;
         this.field_d = true;
         this.field_p = param0 ? true : false;
     }
 
-    final void a(byte param0) {
+    final void drawCard(byte param0) {
         Sprite stackIn_8_0 = null;
         int var2;
         Sprite var3;
@@ -320,7 +320,7 @@ final class cc {
           ni.field_b[3].drawTransparent(var2, nh.field_P - this.field_o);
         } else {
           if (!this.field_g) {
-            var3.e(var2 + 8, nh.field_P - 56, this.field_o * 3);
+            var3.drawWithOpacity(var2 + 8, nh.field_P - 56, this.field_o * 3);
           } else {
             var3.drawHalfSize(7 + var2, this.field_o);
           }
@@ -331,12 +331,12 @@ final class cc {
         return;
     }
 
-    cc(int param0, int param1, boolean param2) {
+    PowerupCard(int param0, int param1, boolean param2) {
         this(param0, param1);
         this.field_g = param2 ? true : false;
     }
 
-    private cc(int param0, int param1) {
+    private PowerupCard(int param0, int param1) {
         this.field_d = false;
         this.field_p = false;
         this.field_l = param0;

@@ -5,9 +5,9 @@ final class SpatialBucket {
     private SpatialObject field_a;
     static Sprite[] field_b;
     private SpatialObject field_d;
-    static pc field_c;
+    static Js5Transport field_c;
 
-    final static int a(boolean param0, int param1, CharSequence param2, int param3) {
+    final static int parseIntRadix(boolean param0, int param1, CharSequence param2, int param3) {
         int var8 = 0;
         int stackIn_43_0 = 0;
         RuntimeException stackIn_46_0 = null;
@@ -90,7 +90,7 @@ final class SpatialBucket {
         }
     }
 
-    final SpatialObject b(int param0) {
+    final SpatialObject firstObject(int param0) {
         SpatialObject var2 = this.field_a.field_q;
         if (var2 != this.field_a) {
           int var3 = 59 % ((-16 - param0) / 44);
@@ -109,7 +109,7 @@ final class SpatialBucket {
         }
     }
 
-    final static void a(byte param0) {
+    final static void initializeTeamColorPalettes(byte param0) {
         int[] var6 = null;
         int[] var5 = null;
         int[] var4 = null;
@@ -164,7 +164,7 @@ final class SpatialBucket {
         this.field_a.field_r = this.field_a;
     }
 
-    final SpatialObject a(int param0) {
+    final SpatialObject nextObject(int param0) {
         SpatialObject var2 = this.field_d;
         if (this.field_a == var2) {
           this.field_d = null;
@@ -187,7 +187,7 @@ final class SpatialBucket {
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != param1.field_r) {
-            param1.d(0);
+            param1.unlinkFromBucket(0);
           }
           param1.field_r = this.field_a.field_r;
           param1.field_q = this.field_a;

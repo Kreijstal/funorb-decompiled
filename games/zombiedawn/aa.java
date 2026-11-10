@@ -29,10 +29,10 @@ final class aa {
         if (this.field_d == oc.field_b) {
           return 1;
         }
-        if (w.field_b != 2) {
+        if (ArchiveProvider.field_b != 2) {
           return 0;
         }
-        if (mc.a(this.field_c, true)) {
+        if (mc.isKnownPlayerName(this.field_c, true)) {
           return 1;
         }
         return 0;
@@ -53,14 +53,14 @@ final class aa {
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
-          sn.field_e = param0.f(2) << 5;
+          sn.field_e = param0.readUnsignedShort(2) << 5;
           var2_int = param0.readUnsignedByte((byte) -119);
           rj.field_E = (7 & var2_int) << 18;
           sn.field_e = sn.field_e + (var2_int >> 3);
           if (param1 > -93) {
             field_g = (String) null;
           }
-          rj.field_E = rj.field_E + (param0.f(2) << 2);
+          rj.field_E = rj.field_E + (param0.readUnsignedShort(2) << 2);
           var2_intLifetime1 = param0.readUnsignedByte((byte) -117);
           SecondaryNodeDeque.field_d = (var2_intLifetime1 & 63) << 15;
           rj.field_E = rj.field_E + (var2_intLifetime1 >> 6);
@@ -68,7 +68,7 @@ final class aa {
           var2_intLifetime2 = param0.readUnsignedByte((byte) -120);
           e.field_H = (1 & var2_intLifetime2) << 16;
           SecondaryNodeDeque.field_d = SecondaryNodeDeque.field_d + (var2_intLifetime2 >> 1);
-          e.field_H = e.field_H + param0.f(2);
+          e.field_H = e.field_H + param0.readUnsignedShort(2);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "aa.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

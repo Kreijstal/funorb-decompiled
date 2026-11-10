@@ -6,7 +6,7 @@ final class ph {
     static ka field_a;
 
     final static void b(int param0) {
-        HumanFactory.field_f = null;
+        AccountServerResult.field_f = null;
         if (param0 != 26311) {
           ph.b(64);
         }
@@ -24,7 +24,7 @@ final class ph {
 
     final static void a(byte param0, wj param1) {
         try {
-          tp.a(75, true, param1);
+          tp.playMusicTrack(75, true, param1);
           if (param0 < 40) {
             jc var3 = (jc) null;
             ph.a((rc) null, (byte) -23, 122, (jc) null);
@@ -44,7 +44,7 @@ final class ph {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = param3.a((byte) 51, param0, param2);
+          var6 = param3.getFile((byte) 51, param0, param2);
           var4 = var6;
           if (var6 == null) {
             return false;

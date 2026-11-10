@@ -44,23 +44,23 @@ final class rd extends pa {
         return stackIn_5_0;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
+    final void handlePointerRelease(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         ij var7 = null;
         try {
           if (param1 < 1) {
             field_D = 107;
           }
-          super.a(param0, 5, param2, param3, param4, param5);
+          super.handlePointerRelease(param0, 5, param2, param3, param4, param5);
           var7 = np.field_H;
           if (var7 != null &&
-            this.b(param3, 21224, param4, param0, param2)) {
+            this.containsPoint(param3, 21224, param4, param0, param2)) {
             if (this.field_v instanceof in) {
-              ((in) (this.field_v)).a(-12156, this, var7);
+              ((in) (this.field_v)).onWidgetDropped(-12156, this, var7);
               np.field_H = null;
               return;
             }
             if (var7.field_v instanceof in) {
-              ((in) (var7.field_v)).a(-12156, this, var7);
+              ((in) (var7.field_v)).onWidgetDropped(-12156, this, var7);
               np.field_H = null;
               return;
             }

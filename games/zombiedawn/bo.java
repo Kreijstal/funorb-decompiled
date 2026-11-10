@@ -16,10 +16,10 @@ final class bo extends IntrusiveNode {
     final static String a(int param0) {
         String var1 = "";
         if (null != he.field_a) {
-          var1 = he.field_a.b(false);
+          var1 = he.field_a.getAccountIdentifier(false);
         }
         if (var1.length() == 0) {
-          var1 = t.a(1);
+          var1 = t.getLocalPlayerName(1);
         }
         if (param0 >= 19) {
           if (var1.length() == 0) {
@@ -130,7 +130,7 @@ final class bo extends IntrusiveNode {
           if (var3Lifetime6 != -3) {
             throw new IllegalArgumentException("Illegal tutorial frame: " + param1);
           }
-          rc.field_w = so.a(qg.field_g);
+          rc.field_w = so.a(SocketConnector.field_g);
           var3Lifetime7 = bj.field_q.wrappedLineCount(rc.field_w, 400);
           te.field_bb = 20 + (20 + (var3Lifetime7 * (bj.field_q.field_I + bj.field_q.field_x) + 4));
           return;
@@ -153,7 +153,7 @@ final class bo extends IntrusiveNode {
           if (var3Lifetime1Lifetime1 != -3) {
             throw new IllegalArgumentException("Illegal tutorial frame: " + param1);
           }
-          rc.field_w = so.a(qg.field_g);
+          rc.field_w = so.a(SocketConnector.field_g);
           var3Lifetime1Lifetime2 = bj.field_q.wrappedLineCount(rc.field_w, 400);
           te.field_bb = 20 + (20 + (var3Lifetime1Lifetime2 * (bj.field_q.field_I + bj.field_q.field_x) + 4));
           return;
@@ -176,7 +176,7 @@ final class bo extends IntrusiveNode {
           if (var3Lifetime2Lifetime1 != -3) {
             throw new IllegalArgumentException("Illegal tutorial frame: " + param1);
           }
-          rc.field_w = so.a(qg.field_g);
+          rc.field_w = so.a(SocketConnector.field_g);
           var3Lifetime2Lifetime2 = bj.field_q.wrappedLineCount(rc.field_w, 400);
           te.field_bb = 20 + (20 + (var3Lifetime2Lifetime2 * (bj.field_q.field_I + bj.field_q.field_x) + 4));
           return;
@@ -198,7 +198,7 @@ final class bo extends IntrusiveNode {
         if (var3Lifetime4 != -3) {
           throw new IllegalArgumentException("Illegal tutorial frame: " + param1);
         }
-        rc.field_w = so.a(qg.field_g);
+        rc.field_w = so.a(SocketConnector.field_g);
         var3Lifetime5 = bj.field_q.wrappedLineCount(rc.field_w, 400);
         te.field_bb = 20 + (20 + (var3Lifetime5 * (bj.field_q.field_I + bj.field_q.field_x) + 4));
     }

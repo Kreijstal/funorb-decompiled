@@ -115,7 +115,7 @@ final class BufferedSocket implements Runnable {
 
     final int available(byte param0) throws IOException {
         if (param0 >= -2) {
-          BufferedSocket.b(6);
+          BufferedSocket.clearFeatureFlags(6);
           if (!this.field_b) {
             return this.field_a.available();
           }
@@ -134,7 +134,7 @@ final class BufferedSocket implements Runnable {
           return;
         }
         rc var2 = (rc) null;
-        BufferedSocket.a((rc) null, (byte) -84, 22);
+        BufferedSocket.queueHighscoreSubmission((rc) null, (byte) -84, 22);
         field_f = null;
         field_h = null;
     }
@@ -147,7 +147,7 @@ final class BufferedSocket implements Runnable {
           return this.field_a.read();
         }
         rc var3 = (rc) null;
-        BufferedSocket.a((rc) null, (byte) 8, -92);
+        BufferedSocket.queueHighscoreSubmission((rc) null, (byte) 8, -92);
         return this.field_a.read();
     }
 
@@ -250,7 +250,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final static void b(int param0) {
+    final static void clearFeatureFlags(int param0) {
         hf.field_I = 0;
         if (param0 == -23148) {
           return;
@@ -258,7 +258,7 @@ final class BufferedSocket implements Runnable {
         field_k = -44;
     }
 
-    final static void a(rc param0, byte param1, int param2) {
+    final static void queueHighscoreSubmission(rc param0, byte param1, int param2) {
         if (param1 < 109) {
           return;
         }
@@ -312,7 +312,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void c(byte param0) throws IOException {
+    final void checkWriteError(byte param0) throws IOException {
         if (param0 != 85) {
           this.finalize();
           if (this.field_b) {
@@ -356,7 +356,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final static TileMap a(byte[] param0, int param1) {
+    final static TileMap upgradeAndDecodeTileMap(byte[] param0, int param1) {
         int incrementValue$2 = 0;
         int incrementValue$3 = 0;
         int var2_int = 0;
@@ -386,7 +386,7 @@ final class BufferedSocket implements Runnable {
           var7 = var8;
           var3 = var7;
           for (var2_intLifetime1 = 0; var2_intLifetime1 < 4; var2_intLifetime1++) {
-            WorldObject.a(var2_intLifetime1, var3, (byte) -81, md.a(var2_intLifetime1, param0, 70));
+            WorldObject.putIntAt(var2_intLifetime1, var3, (byte) -81, md.a(var2_intLifetime1, param0, 70));
           }
           incrementValue$2 = var2_intLifetime1;
           var2_intLifetime1++;
@@ -394,16 +394,16 @@ final class BufferedSocket implements Runnable {
           incrementValue$3 = var2_intLifetime1;
           var2_intLifetime1++;
           var5 = md.a(incrementValue$3, param0, 65);
-          WorldObject.a(4, var8, (byte) 69, var4);
-          WorldObject.a(5, var8, (byte) 61, var5);
-          WorldObject.a(6, var8, (byte) 79, var4);
-          WorldObject.a(7, var8, (byte) 80, var5);
-          WorldObject.a(8, var8, (byte) 56, var4);
-          WorldObject.a(9, var8, (byte) -64, var5);
-          WorldObject.a(10, var8, (byte) 66, var4);
-          WorldObject.a(11, var8, (byte) 74, var5);
+          WorldObject.putIntAt(4, var8, (byte) 69, var4);
+          WorldObject.putIntAt(5, var8, (byte) 61, var5);
+          WorldObject.putIntAt(6, var8, (byte) 79, var4);
+          WorldObject.putIntAt(7, var8, (byte) 80, var5);
+          WorldObject.putIntAt(8, var8, (byte) 56, var4);
+          WorldObject.putIntAt(9, var8, (byte) -64, var5);
+          WorldObject.putIntAt(10, var8, (byte) 66, var4);
+          WorldObject.putIntAt(11, var8, (byte) 74, var5);
           for (var2_intLifetime2 = 6; param0.length / 4 > var2_intLifetime2; var2_intLifetime2++) {
-            WorldObject.a(6 + var2_intLifetime2, var3, (byte) 42, md.a(var2_intLifetime2, param0, 93));
+            WorldObject.putIntAt(6 + var2_intLifetime2, var3, (byte) 42, md.a(var2_intLifetime2, param0, 93));
           }
           stackIn_11_0 = vk.a((byte) -83, var8);
           return stackIn_11_0;

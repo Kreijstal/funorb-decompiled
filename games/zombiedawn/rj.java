@@ -39,14 +39,14 @@ final class rj extends PcmStream {
         return (PcmStream) ((Object) this.field_J);
     }
 
-    final synchronized void a(int param0, byte param1) {
+    final synchronized void setMasterVolume(int param0, byte param1) {
         this.field_o = param0;
         if (param1 >= -21) {
           this.field_N = 53;
         }
     }
 
-    private final int a(lf param0, byte param1) {
+    private final int computeVoiceGain(lf param0, byte param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -67,7 +67,7 @@ final class rj extends PcmStream {
         int var8Lifetime1;
         try {
           if (param1 != -111) {
-            this.b(10, (byte) 5, 56);
+            this.setChannelPitchBend(10, (byte) 5, 56);
           }
           if (this.field_z[param0.field_z] == 0) {
             stackIn_5_0 = 0;
@@ -120,7 +120,7 @@ final class rj extends PcmStream {
         }
     }
 
-    private final void a(int param0, int param1, byte param2) {
+    private final void setRetriggerRate(int param0, int param1, byte param2) {
         if (param2 <= 24) {
           this.field_x = (lf[][]) null;
         }
@@ -128,7 +128,7 @@ final class rj extends PcmStream {
         this.field_r[param0] = (int)(0.5 + 2097152.0 * Math.pow(2.0, (double)param1 * 0.00054931640625));
     }
 
-    private final void a(int param0, int param1, int param2, int param3) {
+    private final void noteOn(int param0, int param1, int param2, int param3) {
         lf stackIn_18_1 = null;
         int stackIn_18_2 = 0;
         Object stackIn_19_0;
@@ -142,9 +142,9 @@ final class rj extends PcmStream {
         ma var10;
         ma var11;
         var9 = ZombieDawn.field_J;
-        this.b(param3, 116, param2, 64);
+        this.noteOff(param3, 116, param2, 64);
         if ((this.field_l[param3] & 2) != 0) {
-          var5 = (lf) (this.field_J.field_s.e(0));
+          var5 = (lf) (this.field_J.field_s.first(0));
           while (var5 != null) {
             if (param3 == var5.field_z &&
               var5.field_k < 0) {
@@ -157,7 +157,7 @@ final class rj extends PcmStream {
               var5.field_i = param2;
               return;
             }
-            var5 = (lf) (this.field_J.field_s.c(26853));
+            var5 = (lf) (this.field_J.field_s.next(26853));
           }
         }
         var10 = (ma) (this.field_A.a((long)this.field_D[param3], param1 + 50));
@@ -185,7 +185,7 @@ final class rj extends PcmStream {
         var7.field_l = 0;
         var7.field_p = 0;
         if (0 != this.field_O[param3]) {
-          var7.field_E = PcmSampleStream.createAtStepQ8(var6, this.a(-20165, var7), 0, this.a(var7, true));
+          var7.field_E = PcmSampleStream.createAtStepQ8(var6, this.computeVoiceSpeed(-20165, var7), 0, this.computeVoicePan(var7, true));
           stackIn_18_1 = var7;
           stackIn_18_2 = -124;
           if (var11.field_j[param2] >= 0) {
@@ -195,12 +195,12 @@ final class rj extends PcmStream {
             stackIn_19_0 = this;
             stackIn_19_3 = true;
           }
-          this.a(stackIn_18_1, stackIn_18_2, stackIn_19_3);
+          this.applyNoteSampleOffset(stackIn_18_1, stackIn_18_2, stackIn_19_3);
         } else {
-          var7.field_E = PcmSampleStream.createAtStepQ8(var6, this.a(-20165, var7), this.a(var7, (byte) -111), this.a(var7, true));
+          var7.field_E = PcmSampleStream.createAtStepQ8(var6, this.computeVoiceSpeed(-20165, var7), this.computeVoiceGain(var7, (byte) -111), this.computeVoicePan(var7, true));
         }
         if (var11.field_j[param2] < 0) {
-          var7.field_E.e(-1);
+          var7.field_E.setLoopCount(-1);
         }
         if (0 <= var7.field_B) {
           var8 = this.field_x[param3][var7.field_B];
@@ -216,27 +216,27 @@ final class rj extends PcmStream {
         return;
     }
 
-    final synchronized void a(int param0, byte param1, int param2) {
-        this.b(param2, false, param0);
+    final synchronized void selectChannelBank(int param0, byte param1, int param2) {
+        this.setChannelBank(param2, false, param0);
         if (param1 >= -115) {
           this.isReady((byte) 118);
         }
     }
 
-    private final void b(byte param0, int param1) {
+    private final void allSoundOff(byte param0, int param1) {
         lf var3;
         int var4;
         var4 = ZombieDawn.field_J;
         if (param0 != -128) {
           return;
         }
-        var3 = (lf) (this.field_J.field_s.b((byte) 26));
+        var3 = (lf) (this.field_J.field_s.last((byte) 26));
         while (var3 != null) {
           if (0 > param1 ||
             param1 == var3.field_z) {
             if (null != var3.field_E) {
               var3.field_E.fadeOutAndUnlink(qf.field_p / 100);
-              if (var3.field_E.f()) {
+              if (var3.field_E.hasRemainingRampFrames()) {
                 this.field_J.field_m.addSubstream(var3.field_E);
               }
               var3.c((byte) 125);
@@ -246,20 +246,20 @@ final class rj extends PcmStream {
             }
             var3.unlink(-27598);
           }
-          var3 = (lf) (this.field_J.field_s.a(false));
+          var3 = (lf) (this.field_J.field_s.previous(false));
         }
     }
 
-    private final void c(int param0, int param1) {
+    private final void resetRetriggerPhase(int param0, int param1) {
         lf var3 = null;
         int var4 = ZombieDawn.field_J;
         if (0 != (this.field_l[param1] & 4)) {
-          var3 = (lf) (this.field_J.field_s.b((byte) 26));
+          var3 = (lf) (this.field_J.field_s.last((byte) 26));
           while (var3 != null) {
             if (~var3.field_z == ~param1) {
               var3.field_D = 0;
             }
-            var3 = (lf) (this.field_J.field_s.a(false));
+            var3 = (lf) (this.field_J.field_s.previous(false));
           }
         }
         if (param0 < 45) {
@@ -267,26 +267,26 @@ final class rj extends PcmStream {
         }
     }
 
-    private final void b(int param0, byte param1, int param2) {
+    private final void setChannelPitchBend(int param0, byte param1, int param2) {
         if (param1 > -126) {
           this.field_P = 31;
         }
         this.field_L[param0] = param2;
     }
 
-    private final void a(boolean param0, int param1) {
+    private final void resetState(boolean param0, int param1) {
         int var3 = 0;
         int var4 = ZombieDawn.field_J;
         int var3Lifetime1;
         if (!param0) {
-          this.d(0, -1);
+          this.allNotesOff(0, -1);
         } else {
-          this.b((byte) -128, -1);
+          this.allSoundOff((byte) -128, -1);
         }
-        this.b(-1, 8192);
+        this.resetChannelControllers(-1, 8192);
         if (param1 != 256) {
           wj var5 = (wj) null;
-          this.a((wj) null, (byte) 109, true, false);
+          this.startTrack((wj) null, (byte) 109, true, false);
         }
         for (var3 = 0; 16 > var3; var3++) {
           this.field_D[var3] = this.field_F[var3];
@@ -303,7 +303,7 @@ final class rj extends PcmStream {
         return 0;
     }
 
-    final void a(lf param0, int param1, boolean param2) {
+    final void applyNoteSampleOffset(lf param0, int param1, boolean param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -344,7 +344,7 @@ final class rj extends PcmStream {
         }
     }
 
-    final boolean b(int param0, lf param1) {
+    final boolean discardInactiveVoice(int param0, lf param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -380,15 +380,15 @@ final class rj extends PcmStream {
         }
     }
 
-    private final void c(int param0, int param1, int param2, int param3) {
+    private final void handleKeyPressure(int param0, int param1, int param2, int param3) {
         if (param0 != 11664) {
           lf var6 = (lf) null;
-          this.a((lf) null, -31, true);
+          this.applyNoteSampleOffset((lf) null, -31, true);
         }
     }
 
-    final synchronized void c(int param0) {
-        this.a(true, (byte) -71);
+    final synchronized void stop(int param0) {
+        this.stopTrack(true, (byte) -71);
         if (param0 != 28013) {
           int[] var3 = (int[]) null;
           this.fill((int[]) null, 52, -103);
@@ -406,7 +406,7 @@ final class rj extends PcmStream {
         return null;
     }
 
-    private final synchronized void a(wj param0, byte param1, boolean param2, boolean param3) {
+    private final synchronized void startTrack(wj param0, byte param1, boolean param2, boolean param3) {
         int var6 = 0;
         int var5_int = 0;
         int var7 = 0;
@@ -419,7 +419,7 @@ final class rj extends PcmStream {
         RuntimeException var5 = null;
         var7 = ZombieDawn.field_J;
         try {
-          this.a(param2, (byte) -71);
+          this.stopTrack(param2, (byte) -71);
           this.field_w.parse(param0.field_i);
           stackIn_4_1 = (param3);
           this.field_s = stackIn_4_1;
@@ -427,7 +427,7 @@ final class rj extends PcmStream {
           var5_int = this.field_w.trackCount();
           for (var6 = 0; var5_int > var6; var6++) {
             this.field_w.seekTrack(var6);
-            this.field_w.c(var6);
+            this.field_w.readTrackDelta(var6);
             this.field_w.saveTrackPosition(var6);
           }
           this.field_N = this.field_w.nextTrack();
@@ -435,7 +435,7 @@ final class rj extends PcmStream {
           this.field_t = this.field_w.tickTime(this.field_v);
           if (param1 >= -122) {
             var8 = (ka) null;
-            this.a((wj) null, (byte) -81, (Js5Archive) null, -58, (ka) null);
+            this.prepareTrack((wj) null, (byte) -81, (Js5Archive) null, -58, (ka) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -452,7 +452,7 @@ final class rj extends PcmStream {
         }
     }
 
-    final synchronized boolean a(wj param0, byte param1, Js5Archive param2, int param3, ka param4) {
+    final synchronized boolean prepareTrack(wj param0, byte param1, Js5Archive param2, int param3, ka param4) {
         int stackIn_19_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -528,7 +528,7 @@ final class rj extends PcmStream {
         }
     }
 
-    private final void a(boolean param0) {
+    private final void dispatchDueMidiMessages(boolean param0) {
         int stackIn_24_0 = 0;
         int stackIn_24_1 = 0;
         int var2;
@@ -545,8 +545,8 @@ final class rj extends PcmStream {
         var4 = this.field_t;
         if (this.field_y != null &&
           var3 == this.field_P) {
-          this.a(this.field_y, (byte) -125, this.field_C, this.field_s);
-          this.a(false);
+          this.startTrack(this.field_y, (byte) -125, this.field_C, this.field_s);
+          this.dispatchDueMidiMessages(false);
           return;
         }
         while (true) {
@@ -570,9 +570,9 @@ final class rj extends PcmStream {
             var6 = this.field_w.readMessage(var2);
             if (var6 != 1) {
               if (0 != (var6 & 128)) {
-                this.a((byte) -80, var6);
+                this.handleMidiMessage((byte) -80, var6);
               }
-              this.field_w.c(var2);
+              this.field_w.readTrackDelta(var2);
               this.field_w.saveTrackPosition(var2);
               continue;
             }
@@ -580,15 +580,15 @@ final class rj extends PcmStream {
             this.field_w.saveTrackPosition(var2);
             if (this.field_w.isDone()) {
               if (this.field_y != null) {
-                this.a((byte) -22, this.field_y, this.field_s);
-                this.a(false);
+                this.playTrack((byte) -22, this.field_y, this.field_s);
+                this.dispatchDueMidiMessages(false);
                 return;
               }
               if (this.field_s &&
                 0 != var3) {
                 this.field_w.reset(var4);
               } else {
-                this.a(true, 256);
+                this.resetState(true, 256);
                 this.field_w.release();
                 return;
               }
@@ -601,7 +601,7 @@ final class rj extends PcmStream {
         }
     }
 
-    final static void d(int param0) {
+    final static void reopenAccountScreenIfActive(int param0) {
         if (!dl.a(false)) {
           return;
         }
@@ -611,23 +611,23 @@ final class rj extends PcmStream {
         ti.a(4, 90, false);
     }
 
-    private final void d(int param0, int param1) {
+    private final void allNotesOff(int param0, int param1) {
         int var4 = ZombieDawn.field_J;
-        lf var3 = (lf) (this.field_J.field_s.b((byte) 26));
+        lf var3 = (lf) (this.field_J.field_s.last((byte) 26));
         while (var3 != null) {
           if ((param1 < 0 || param1 == var3.field_z) &&
             !(var3.field_k >= 0)) {
             this.field_G[var3.field_z][var3.field_i] = null;
             var3.field_k = 0;
           }
-          var3 = (lf) (this.field_J.field_s.a(false));
+          var3 = (lf) (this.field_J.field_s.previous(false));
         }
         if (param0 != 0) {
-          this.a(7, true);
+          this.setTempoScale(7, true);
         }
     }
 
-    private final void b(int param0, int param1, int param2, int param3) {
+    private final void noteOff(int param0, int param1, int param2, int param3) {
         lf var6 = null;
         int var7 = ZombieDawn.field_J;
         if (param1 < 108) {
@@ -641,7 +641,7 @@ final class rj extends PcmStream {
         if ((2 & this.field_l[param0]) == 0) {
           var8.field_k = 0;
         } else {
-          var6 = (lf) (this.field_J.field_s.b((byte) 26));
+          var6 = (lf) (this.field_J.field_s.last((byte) 26));
           while (var6 != null) {
             if (var8.field_z == var6.field_z &&
               0 > var6.field_k &&
@@ -649,7 +649,7 @@ final class rj extends PcmStream {
               var8.field_k = 0;
               break;
             }
-            var6 = (lf) (this.field_J.field_s.a(false));
+            var6 = (lf) (this.field_J.field_s.previous(false));
           }
         }
     }
@@ -678,7 +678,7 @@ final class rj extends PcmStream {
               this.field_K = this.field_K + (long)var4_int * (long)var7;
               this.field_J.fill(param0, param1, var7);
               param1 = param1 + var7;
-              this.a(false);
+              this.dispatchDueMidiMessages(false);
               param2 = param2 - var7;
               if (this.field_w.isReady()) {
                 continue;
@@ -703,22 +703,22 @@ final class rj extends PcmStream {
         }
     }
 
-    private final void b(int param0, int param1, int param2) {
+    private final void handleChannelPressure(int param0, int param1, int param2) {
         if (param2 >= -51) {
-          this.a(38, (byte) 112, 58);
+          this.selectChannelBank(38, (byte) 112, 58);
         }
     }
 
-    private final void b(int param0, boolean param1, int param2) {
+    private final void setChannelBank(int param0, boolean param1, int param2) {
         this.field_F[param0] = param2;
         this.field_M[param0] = eg.a(-128, param2);
-        this.a(0, param0, param2);
+        this.setChannelProgramOffset(0, param0, param2);
         if (param1) {
           this.field_F = (int[]) null;
         }
     }
 
-    private final int a(lf param0, boolean param1) {
+    private final int computeVoicePan(lf param0, boolean param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
@@ -754,7 +754,7 @@ final class rj extends PcmStream {
         }
     }
 
-    final synchronized void a(int param0, boolean param1, int param2) {
+    final synchronized void setChannelVolume(int param0, boolean param1, int param2) {
         int var4 = 0;
         int var5;
         var5 = ZombieDawn.field_J;
@@ -770,42 +770,42 @@ final class rj extends PcmStream {
         }
     }
 
-    private final void a(int param0, int param1) {
+    private final void releasePortamentoNotes(int param0, int param1) {
         lf var3;
         int var4;
         var4 = ZombieDawn.field_J;
         if (param0 != 0) {
-          this.b(122, 44, 94, 110);
+          this.noteOff(122, 44, 94, 110);
         }
         if ((2 & this.field_l[param1]) != 0) {
-          var3 = (lf) (this.field_J.field_s.b((byte) 26));
+          var3 = (lf) (this.field_J.field_s.last((byte) 26));
           while (var3 != null) {
             if (var3.field_z == param1) {
               if (null != this.field_G[param1][var3.field_i]) {
-                var3 = (lf) (this.field_J.field_s.a(false));
+                var3 = (lf) (this.field_J.field_s.previous(false));
                 continue;
               }
               if (var3.field_k < 0) {
                 var3.field_k = 0;
               }
             }
-            var3 = (lf) (this.field_J.field_s.a(false));
+            var3 = (lf) (this.field_J.field_s.previous(false));
           }
         }
     }
 
-    final synchronized void a(byte param0, wj param1, boolean param2) {
+    final synchronized void playTrack(byte param0, wj param1, boolean param2) {
         try {
-          this.a(param1, (byte) -126, true, param2);
+          this.startTrack(param1, (byte) -126, true, param2);
           if (param0 != -22) {
-            this.a((byte) -8, 95);
+            this.handleMidiMessage((byte) -8, 95);
           }
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "rj.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    private final void a(byte param0, int param1) {
+    private final void handleMidiMessage(byte param0, int param1) {
         int var3;
         int var4;
         int var5;
@@ -825,7 +825,7 @@ final class rj extends PcmStream {
           var4 = 15 & param1;
           var5 = (32713 & param1) >> 8;
           var6 = (8352632 & param1) >> 16;
-          this.b(var4, 125, var5, var6);
+          this.noteOff(var4, 125, var5, var6);
           return;
         }
         if (var3 == 144) {
@@ -833,9 +833,9 @@ final class rj extends PcmStream {
           var5Lifetime1 = (param1 & 32553) >> 8;
           var6Lifetime1 = param1 >> 16 & 127;
           if (var6Lifetime1 > 0) {
-            this.a(var6Lifetime1, 0, var5Lifetime1, var4Lifetime1);
+            this.noteOn(var6Lifetime1, 0, var5Lifetime1, var4Lifetime1);
           } else {
-            this.b(var4Lifetime1, 110, var5Lifetime1, 64);
+            this.noteOff(var4Lifetime1, 110, var5Lifetime1, 64);
           }
           return;
         }
@@ -843,29 +843,29 @@ final class rj extends PcmStream {
           var4Lifetime2 = 15 & param1;
           var5Lifetime2 = (32580 & param1) >> 8;
           var6Lifetime2 = (param1 & 8354293) >> 16;
-          this.c(11664, var4Lifetime2, var5Lifetime2, var6Lifetime2);
+          this.handleKeyPressure(11664, var4Lifetime2, var5Lifetime2, var6Lifetime2);
         } else {
           if (var3 != 176) {
             if (192 == var3) {
               var4Lifetime2 = param1 & 15;
               var5Lifetime2 = (32557 & param1) >> 8;
-              this.a(0, var4Lifetime2, var5Lifetime2 + this.field_M[var4Lifetime2]);
+              this.setChannelProgramOffset(0, var4Lifetime2, var5Lifetime2 + this.field_M[var4Lifetime2]);
             } else {
               if (208 == var3) {
                 var4Lifetime2 = param1 & 15;
                 var5Lifetime2 = 127 & param1 >> 8;
-                this.b(var4Lifetime2, var5Lifetime2, -124);
+                this.handleChannelPressure(var4Lifetime2, var5Lifetime2, -124);
               } else {
                 if (224 == var3) {
                   var4Lifetime2 = param1 & 15;
                   var5Lifetime2 = ((8323514 & param1) >> 9) + (127 & param1 >> 8);
-                  this.b(var4Lifetime2, (byte) -128, var5Lifetime2);
+                  this.setChannelPitchBend(var4Lifetime2, (byte) -128, var5Lifetime2);
                 } else {
                   var3 = param1 & 255;
                   if (var3 != 255) {
                     var4Lifetime2 = 28 / ((58 - param0) / 50);
                   } else {
-                    this.a(true, 256);
+                    this.resetState(true, 256);
                   }
                 }
               }
@@ -919,7 +919,7 @@ final class rj extends PcmStream {
             }
             if (var5Lifetime2 == 65) {
               if (var6Lifetime2 < 64) {
-                this.a(0, var4Lifetime2);
+                this.releasePortamentoNotes(0, var4Lifetime2);
                 this.field_l[var4Lifetime2] = eg.a(this.field_l[var4Lifetime2], -3);
               } else {
                 this.field_l[var4Lifetime2] = GameWorld.intOr(this.field_l[var4Lifetime2], 2);
@@ -938,13 +938,13 @@ final class rj extends PcmStream {
               this.field_u[var4Lifetime2] = var6Lifetime2 + eg.a(this.field_u[var4Lifetime2], 16256) + 16384;
             }
             if (var5Lifetime2 == 120) {
-              this.b((byte) -128, var4Lifetime2);
+              this.allSoundOff((byte) -128, var4Lifetime2);
             }
             if (121 == var5Lifetime2) {
-              this.b(var4Lifetime2, 8192);
+              this.resetChannelControllers(var4Lifetime2, 8192);
             }
             if (var5Lifetime2 == 123) {
-              this.d(0, var4Lifetime2);
+              this.allNotesOff(0, var4Lifetime2);
             }
             if (var5Lifetime2 == 6) {
               var7 = this.field_u[var4Lifetime2];
@@ -966,23 +966,23 @@ final class rj extends PcmStream {
             }
             if (var5Lifetime2 == 81) {
               if (var6Lifetime2 < 64) {
-                this.c(95, var4Lifetime2);
+                this.resetRetriggerPhase(95, var4Lifetime2);
                 this.field_l[var4Lifetime2] = eg.a(this.field_l[var4Lifetime2], -5);
               } else {
                 this.field_l[var4Lifetime2] = GameWorld.intOr(this.field_l[var4Lifetime2], 4);
               }
             }
             if (var5Lifetime2 == 17) {
-              this.a(var4Lifetime2, (this.field_p[var4Lifetime2] & -16257) + (var6Lifetime2 << 7), (byte) 119);
+              this.setRetriggerRate(var4Lifetime2, (this.field_p[var4Lifetime2] & -16257) + (var6Lifetime2 << 7), (byte) 119);
             }
             if (var5Lifetime2 == 49) {
-              this.a(var4Lifetime2, var6Lifetime2 + (-128 & this.field_p[var4Lifetime2]), (byte) 88);
+              this.setRetriggerRate(var4Lifetime2, var6Lifetime2 + (-128 & this.field_p[var4Lifetime2]), (byte) 88);
             }
           }
         }
     }
 
-    final boolean a(int param0, int param1, lf param2, int[] param3, int param4) {
+    final boolean updateNote(int param0, int param1, lf param2, int[] param3, int param4) {
         RuntimeException stackIn_69_0 = null;
         StringBuilder stackIn_69_1 = null;
         String stackIn_70_2 = null;
@@ -1021,7 +1021,7 @@ final class rj extends PcmStream {
             }
             param2.field_j = var6_int;
           }
-          param2.field_E.setSampleStepMagnitude(this.a(param0 + 12299, param2));
+          param2.field_E.setSampleStepMagnitude(this.computeVoiceSpeed(param0 + 12299, param2));
           var7 = param2.field_t;
           param2.field_o = param2.field_o + 1;
           var8 = 0;
@@ -1076,7 +1076,7 @@ final class rj extends PcmStream {
             }
           }
           if (var8 == 0) {
-            param2.field_E.rampVolumeAndPan(param2.field_r, this.a(param2, (byte) -111), this.a(param2, true));
+            param2.field_E.rampVolumeAndPan(param2.field_r, this.computeVoiceGain(param2, (byte) -111), this.computeVoicePan(param2, true));
             return false;
           }
           param2.field_E.fadeOutAndUnlink(param2.field_r);
@@ -1085,7 +1085,7 @@ final class rj extends PcmStream {
           } else {
             param2.field_E.skip(param4);
           }
-          if (param2.field_E.f()) {
+          if (param2.field_E.hasRemainingRampFrames()) {
             this.field_J.field_m.addSubstream(param2.field_E);
           }
           param2.c((byte) 123);
@@ -1117,7 +1117,7 @@ final class rj extends PcmStream {
         }
     }
 
-    private final int a(int param0, lf param1) {
+    private final int computeVoiceSpeed(int param0, lf param1) {
         int stackIn_2_0 = 0;
         int stackIn_14_0 = 0;
         RuntimeException stackIn_17_0 = null;
@@ -1167,20 +1167,20 @@ final class rj extends PcmStream {
         }
     }
 
-    final synchronized void a(int param0, boolean param1) {
+    final synchronized void setTempoScale(int param0, boolean param1) {
         this.field_m = param0;
         if (param1) {
-          this.a(27, -63, 10);
+          this.setChannelProgramOffset(27, -63, 10);
         }
     }
 
-    private final synchronized void a(boolean param0, byte param1) {
+    private final synchronized void stopTrack(boolean param0, byte param1) {
         this.field_w.release();
         this.field_y = null;
         if (param1 != -71) {
-          this.c(64);
+          this.stop(64);
         }
-        this.a(param0, 256);
+        this.resetState(param0, 256);
     }
 
     final synchronized void skip(int param0) {
@@ -1201,7 +1201,7 @@ final class rj extends PcmStream {
             this.field_K = this.field_K + (long)var2 * (long)var5;
             this.field_J.skip(var5);
             param0 = param0 - var5;
-            this.a(false);
+            this.dispatchDueMidiMessages(false);
             if (!this.field_w.isReady()) {
               break;
             }
@@ -1210,12 +1210,12 @@ final class rj extends PcmStream {
         this.field_J.skip(param0);
     }
 
-    private final void b(int param0, int param1) {
+    private final void resetChannelControllers(int param0, int param1) {
         int var4;
         var4 = ZombieDawn.field_J;
         if (param0 < 0) {
           for (param0 = 0; param0 < 16; param0++) {
-            this.b(param0, param1 ^ 0);
+            this.resetChannelControllers(param0, param1 ^ 0);
           }
         } else {
           this.field_I[param0] = 12800;
@@ -1224,21 +1224,21 @@ final class rj extends PcmStream {
           this.field_L[param0] = 8192;
           this.field_n[param0] = 0;
           this.field_H[param0] = param1;
-          this.a(0, param0);
-          this.c(param1 - 8116, param0);
+          this.releasePortamentoNotes(0, param0);
+          this.resetRetriggerPhase(param1 - 8116, param0);
           this.field_l[param0] = 0;
           this.field_u[param0] = 32767;
           this.field_Q[param0] = 256;
           this.field_O[param0] = 0;
-          this.a(param0, 8192, (byte) 117);
+          this.setRetriggerRate(param0, 8192, (byte) 117);
         }
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void setChannelProgramOffset(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = ZombieDawn.field_J;
         if (param0 != 0) {
-          this.d(59, 36);
+          this.allNotesOff(59, 36);
         }
         if (this.field_D[param1] != param2) {
           this.field_D[param1] = param2;
@@ -1272,8 +1272,8 @@ final class rj extends PcmStream {
         this.field_w = new jg();
         this.field_J = new ip(this);
         this.field_A = new dl(128);
-        this.a(256, true, -1);
-        this.a(true, 256);
+        this.setChannelVolume(256, true, -1);
+        this.resetState(true, 256);
     }
 
     static {

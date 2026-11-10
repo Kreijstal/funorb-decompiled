@@ -3,10 +3,10 @@
  */
 import java.io.*;
 
-final class lh extends pc {
+final class SocketJs5Transport extends Js5Transport {
     private BufferedSocket field_n;
 
-    private final void f(int param0) {
+    private final void sendInitControlPacket(int param0) {
         try {
           IOException iOException = null;
           Throwable decompiledCaughtException = null;
@@ -43,7 +43,7 @@ final class lh extends pc {
         }
     }
 
-    final boolean c(int param0) {
+    final boolean poll(int param0) {
         try {
           int var2_int = 0;
           int stackIn_65_0 = 0;
@@ -92,33 +92,33 @@ final class lh extends pc {
             return true;
           }
           if (null == this.field_n) {
-            if (this.e(-1216122784) != 0) {
+            if (this.getInFlightRequestCount(-1216122784) != 0) {
               return false;
             }
-            if (this.a(true) == 0) {
+            if (this.prefetchCount(true) == 0) {
               return true;
             }
             return false;
           }
           try {
-            this.field_n.c((byte) 85);
-            var2 = (og) (this.field_a.c((byte) 34));
+            this.field_n.checkWriteError((byte) 85);
+            var2 = (og) (this.field_a.first((byte) 34));
             while (var2 != null) {
               this.field_b.position = 0;
               this.field_b.writeByte(1, 114);
               this.field_b.writeLong40(var2.secondaryKey, param0 ^ -21);
               this.field_n.write(this.field_b.payload.length, true, 0, this.field_b.payload);
               this.field_l.addLast(var2, (byte) -117);
-              var2 = (og) (this.field_a.a((byte) 117));
+              var2 = (og) (this.field_a.next((byte) 117));
             }
-            var2Lifetime1 = (og) (this.field_f.c((byte) 34));
+            var2Lifetime1 = (og) (this.field_f.first((byte) 34));
             while (var2Lifetime1 != null) {
               this.field_b.position = 0;
               this.field_b.writeByte(0, -123);
               this.field_b.writeLong40(var2Lifetime1.secondaryKey, 0);
               this.field_n.write(this.field_b.payload.length, true, 0, this.field_b.payload);
               this.field_m.addLast(var2Lifetime1, (byte) -95);
-              var2Lifetime1 = (og) (this.field_f.a((byte) 112));
+              var2Lifetime1 = (og) (this.field_f.next((byte) 112));
             }
             for (var2_int = 0; var2_int < 100; var2_int++) {
               var3_int = this.field_n.available((byte) -59);
@@ -172,24 +172,24 @@ final class lh extends pc {
                       var12 = (long)var7 + ((long)var6 << 32);
                       var14 = null;
                       if (var11 != 0) {
-                        var14_ref = (og) (this.field_m.c((byte) 34));
+                        var14_ref = (og) (this.field_m.first((byte) 34));
                         while (var14_ref != null) {
                           if (var12 == var14_ref.secondaryKey) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
-                          var14_ref = (og) (this.field_m.a((byte) 122));
+                          var14_ref = (og) (this.field_m.next((byte) 122));
                         }
                         decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                       }
                       if ((decompiledFrameRemainder0) &&
                         (decompiledFrameCompleted0)) {
-                        var14_ref = (og) (this.field_l.c((byte) 34));
+                        var14_ref = (og) (this.field_l.first((byte) 34));
                         while (var14_ref != null) {
                           if (~var12 == ~var14_ref.secondaryKey) {
                             break;
                           }
-                          var14_ref = (og) (this.field_l.a((byte) 125));
+                          var14_ref = (og) (this.field_l.next((byte) 125));
                         }
                       }
                       if (var14_ref == null) {
@@ -249,8 +249,8 @@ final class lh extends pc {
             this.field_n = null;
             this.field_e = -2;
             this.field_h = this.field_h + 1;
-            if (this.e(param0 - 1216122763) == 0 &&
-              this.a(true) == 0) {
+            if (this.getInFlightRequestCount(param0 - 1216122763) == 0 &&
+              this.prefetchCount(true) == 0) {
               return true;
             }
             return false;
@@ -262,7 +262,7 @@ final class lh extends pc {
         }
     }
 
-    private final void a(int param0, boolean param1) {
+    private final void sendStateControlPacket(int param0, boolean param1) {
         try {
           IOException iOException = null;
           PacketBuffer stackIn_4_0 = null;
@@ -306,7 +306,7 @@ final class lh extends pc {
         }
     }
 
-    final void a(boolean param0, Object param1, int param2) {
+    final void setConnection(boolean param0, Object param1, int param2) {
         try {
           RuntimeException stackIn_25_0 = null;
           StringBuilder stackIn_25_1 = null;
@@ -332,8 +332,8 @@ final class lh extends pc {
               this.field_n = null;
             }
             this.field_n = (BufferedSocket) (param1);
-            this.f(-87);
-            this.a(67, param0);
+            this.sendInitControlPacket(-87);
+            this.sendStateControlPacket(67, param0);
             this.field_j.position = 0;
             this.field_d = null;
             while (true) {
@@ -396,7 +396,7 @@ final class lh extends pc {
         }
     }
 
-    final void a(int param0) {
+    final void resetAfterValidationFailure(int param0) {
         try {
           this.field_n.close(123);
         } catch (Exception exception) {
@@ -410,16 +410,16 @@ final class lh extends pc {
         }
     }
 
-    final void d(int param0) {
+    final void closeConnection(int param0) {
         if (null != this.field_n) {
           this.field_n.close(108);
         }
         if (param0 != 31239) {
-          this.a(-79, true);
+          this.sendStateControlPacket(-79, true);
         }
     }
 
-    public lh() {
+    public SocketJs5Transport() {
     }
 
     static {

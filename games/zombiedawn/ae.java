@@ -25,20 +25,20 @@ final class ae {
         int var4Lifetime1;
         var7 = ZombieDawn.field_J;
         try {
-          var8 = new am(param0.a("", -119, "logo.fo3d"));
+          var8 = new am(param0.getFileByName("", -119, "logo.fo3d"));
           var10 = var8;
           var3 = var10.readUnsignedByte((byte) -119);
-          var10.h((byte) 75);
+          var10.beginBitAccess((byte) 75);
           if (param1 >= -109) {
             return;
           }
-          SecondaryNodeDequeIterator.field_a = pi.a(12, var10);
+          SecondaryNodeDequeIterator.field_a = ImageProducerRasterBuffer.readMeshMaterials(12, var10);
           ic.field_W = new gd[var3];
           eg.field_o = new int[var3][];
           for (var4 = 0; var4 < var3; var4++) {
             ic.field_W[var4] = bj.a(var8, (byte) -128);
           }
-          var10.i(8);
+          var10.endBitAccess(8);
           var9 = 0;
           var4Lifetime1 = var9;
           while (var9 < var3) {
@@ -147,7 +147,7 @@ final class ae {
           try {
             var3 = "";
             if (param0 != null) {
-              var3 = vj.a(param0, (byte) -93);
+              var3 = vj.describeThrowable(param0, (byte) -93);
             }
             if (param2 != null) {
               if (param0 != null) {
@@ -156,10 +156,10 @@ final class ae {
               var3 = var3 + param2;
             }
             ed.a(83, var3);
-            var7 = fg.a(":", -127, "%3a", var3);
-            var8 = fg.a("@", -127, "%40", var7);
-            var9 = fg.a("&", -128, "%26", var8);
-            var10 = fg.a("#", -127, "%23", var9);
+            var7 = fg.replaceAll(":", -127, "%3a", var3);
+            var8 = fg.replaceAll("@", -127, "%40", var7);
+            var9 = fg.replaceAll("&", -128, "%26", var8);
+            var10 = fg.replaceAll("#", -127, "%23", var9);
             if (b.field_m == null) {
               return;
             }

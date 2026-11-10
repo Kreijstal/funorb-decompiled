@@ -33,12 +33,12 @@ final class s extends IntrusiveNode {
             ih.field_S = param2;
             ba.field_b = param3;
             IntrusiveNode.field_g = param6;
-            lg.field_u = param0;
+            ViewportController.field_u = param0;
             if (null == jm.field_B.field_b) {
               return;
             }
             try {
-              ce.field_t = new sf(jm.field_B.field_b, 64, 0);
+              ce.field_t = new BufferedFile(jm.field_B.field_b, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -92,7 +92,7 @@ final class s extends IntrusiveNode {
             return;
           }
           if (0 == ac.field_m % 35) {
-            lg.a(2, (byte) 100);
+            ViewportController.spawnCutsceneZombies(2, (byte) 100);
           }
           if (-1.0f == oc.field_c) {
             oc.field_c = (float)param1.y;
@@ -104,10 +104,10 @@ final class s extends IntrusiveNode {
           if (ac.field_m == 1428) {
             if (qj.field_f != null &&
               !qj.field_f.isSamplePositionOutOfRange()) {
-              pc.a((byte) 13, qj.field_f);
+              Js5Transport.stopSoundEffect((byte) 13, qj.field_f);
             }
             ch.b(73);
-            ZombieDawn.b(114, wi.field_a);
+            ZombieDawn.setMusicVolume(114, wi.field_a);
             qb.a(false, wc.field_Rb);
             wo.field_wb = true;
             return;
@@ -115,7 +115,7 @@ final class s extends IntrusiveNode {
           if (ac.field_m <= 1172) {
             if (1172 == ac.field_m) {
               wc.field_Rb = ge.field_c;
-              ha.field_d.w(0);
+              ha.field_d.placeAtTopEdge(0);
               wi.field_e = ha.field_d.field_Pb;
             } else {
               if (850 >= ac.field_m) {
@@ -127,16 +127,16 @@ final class s extends IntrusiveNode {
                 if (var4 < 0) {
                   var4 = 0;
                 }
-                ZombieDawn.b(126, var4 * wi.field_a >> 8);
+                ZombieDawn.setMusicVolume(126, var4 * wi.field_a >> 8);
                 if (ac.field_m % 2 == 0) {
-                  param2.i(16777215);
+                  param2.growLetterbox(16777215);
                   if ((ac.field_m - 850) / 2 == 100) {
                     ha.field_d.field_x = -50 + ha.field_d.getY(237239984) << 16;
                     for (var5 = 0; var5 < 5; var5++) {
                       var6 = Js5Archive.field_e.spawnZombie(10, (byte) 124, 90, 340, 380);
                       var7 = new Path();
                       var7.addFirst(0, new Point(var6.getX(true), var6.getY(237239984) - 100));
-                      var6.a(var7, true);
+                      var6.setPath(var7, true);
                     }
                   }
                 }
@@ -255,7 +255,7 @@ final class s extends IntrusiveNode {
                 continue;
               }
               var5++;
-              var8 = DualLinkDeque.a((CharSequence) ((Object) var7_ref_String), 122);
+              var8 = DualLinkDeque.parseDecimalInt((CharSequence) ((Object) var7_ref_String), 122);
               var4 = var4 + (param2[var8].length() + (-var5 + var6_int));
               continue;
             }
@@ -292,7 +292,7 @@ final class s extends IntrusiveNode {
               continue;
             }
             var5Lifetime1++;
-            var10 = DualLinkDeque.a((CharSequence) ((Object) var9), param0 ^ 1938762718);
+            var10 = DualLinkDeque.parseDecimalInt((CharSequence) ((Object) var9), param0 ^ 1938762718);
             discarded$1 = var6.append(param1.substring(var7, var8Lifetime1));
             discarded$2 = var6.append(param2[var10]);
             var7 = var5Lifetime1;

@@ -3,7 +3,7 @@
  */
 final class r extends eh {
     private int[] field_E;
-    static HumanFactory field_G;
+    static AccountServerResult field_G;
     private int field_K;
     private int field_D;
     private int[] field_C;
@@ -14,7 +14,7 @@ final class r extends eh {
     static boolean field_F;
     private int field_H;
 
-    private final void c(int param0, int param1, int param2) {
+    private final void resizeCellColumns(int param0, int param1, int param2) {
         int var6 = 0;
         int var7 = ZombieDawn.field_J;
         int var4 = null != this.field_E ? this.field_E.length : 0;
@@ -29,7 +29,7 @@ final class r extends eh {
         }
         this.field_B = var5;
         if (param0 != 0) {
-          this.e(-38, -87, 127);
+          this.resizeCellRows(-38, -87, 127);
         }
     }
 
@@ -76,13 +76,13 @@ final class r extends eh {
         }
     }
 
-    private final void d(int param0, int param1, int param2) {
+    private final void resizeAlignmentColumns(int param0, int param1, int param2) {
         int var6 = 0;
         int var7 = ZombieDawn.field_J;
         int var4 = null == this.field_E ? 0 : this.field_E.length;
         if (param0 != -1) {
           int[] var8 = (int[]) null;
-          this.a(115, (int[]) null);
+          this.setRowHeights(115, (int[]) null);
         }
         int[] var10 = new int[var4 * param1];
         int[] var9 = var10;
@@ -96,7 +96,7 @@ final class r extends eh {
         this.field_L = var5;
     }
 
-    final void e(byte param0) {
+    final void layoutChildren(byte param0) {
         int incrementValue$0 = 0;
         int var2;
         int var3;
@@ -115,7 +115,7 @@ final class r extends eh {
                 var2++;
                 var5 = this.field_B[incrementValue$0];
                 if (var5 != null) {
-                  this.a(127, var5, var3, var4);
+                  this.layoutCell(127, var5, var3, var4);
                 }
                 var4++;
                 continue;
@@ -132,7 +132,7 @@ final class r extends eh {
         }
     }
 
-    final void a(int param0, UiWidget param1, int param2) {
+    final void addCell(int param0, UiWidget param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         try {
@@ -144,7 +144,7 @@ final class r extends eh {
             r.b(-106, 119, -26);
           }
           if (param1 != null) {
-            this.a(126, param1, var5, var4_int);
+            this.layoutCell(126, param1, var5, var4_int);
           }
           this.field_K = this.field_K + 1;
         } catch (RuntimeException runtimeException) {
@@ -173,21 +173,21 @@ final class r extends eh {
           var5_int = 96 / ((-83 - param0) / 32);
           var6 = param1;
           if (var6 == 98) {
-            stackIn_11_0 = this.a((byte) -102, this.field_C.length, param2);
+            stackIn_11_0 = this.focusBackwardBy((byte) -102, this.field_C.length, param2);
             return stackIn_11_0;
           }
           if (99 == var6) {
-            stackIn_13_0 = this.a(true, param2, this.field_C.length);
+            stackIn_13_0 = this.focusForwardBy(true, param2, this.field_C.length);
             return stackIn_13_0;
           }
           if (var6 == 96) {
-            stackIn_15_0 = this.a(param2, false);
+            stackIn_15_0 = this.focusPrecedingChild(param2, false);
             return stackIn_15_0;
           }
           if (97 != var6) {
             return false;
           }
-          stackIn_17_0 = this.a(12139, param2);
+          stackIn_17_0 = this.focusFollowingChild(12139, param2);
           return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -215,14 +215,14 @@ final class r extends eh {
           gp.fillInts(var10, 0, param5, 1);
           var9 = new int[param6];
           gp.fillInts(var9, 0, param6, 1);
-          this.a(var10, 0);
-          this.a(84, var9);
+          this.setColumnWidths(var10, 0);
+          this.setRowHeights(84, var9);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "r.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 
-    private final void e(int param0, int param1, int param2) {
+    private final void resizeCellRows(int param0, int param1, int param2) {
         if (param0 != 0) {
           this.field_C = (int[]) null;
         }
@@ -246,7 +246,7 @@ final class r extends eh {
         }
     }
 
-    private final void a(int[] param0, int param1) {
+    private final void setColumnWidths(int[] param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         int[] var5 = null;
@@ -267,14 +267,14 @@ final class r extends eh {
             var5[var6] = dupTemp$0;
             var6++;
           }
-          this.c(0, var3_int, var4);
-          this.d(-1, var4, var3_int);
+          this.resizeCellColumns(0, var3_int, var4);
+          this.resizeAlignmentColumns(-1, var4, var3_int);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "r.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
+    final boolean handlePointerPress(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         RuntimeException var8 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -285,7 +285,7 @@ final class r extends eh {
           if (param1 != 1) {
             this.field_H = -86;
           }
-          stackIn_3_0 = super.a(param0, 1, param2, param3, param4, param5, param6);
+          stackIn_3_0 = super.handlePointerPress(param0, 1, param2, param3, param4, param5, param6);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -301,12 +301,12 @@ final class r extends eh {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(109, param1, param2, param3, param4);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(109, param1, param2, param3, param4);
         int var6 = -60 % ((-23 - param0) / 48);
     }
 
-    private final void a(int param0, UiWidget param1, int param2, int param3) {
+    private final void layoutCell(int param0, UiWidget param1, int param2, int param3) {
         int stackIn_3_0 = 0;
         int stackIn_4_1 = 0;
         int stackIn_6_0 = 0;
@@ -404,7 +404,7 @@ final class r extends eh {
           }
           var18 = this.field_H;
           var19 = this.field_D;
-          param1.a(125, var15Lifetime1 + var19, var14Lifetime1 + var18, var16 - var18 * 2, -(2 * var19) + var17);
+          param1.setBounds(125, var15Lifetime1 + var19, var14Lifetime1 + var18, var16 - var18 * 2, -(2 * var19) + var17);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -420,7 +420,7 @@ final class r extends eh {
         }
     }
 
-    private final void a(int param0, int[] param1) {
+    private final void setRowHeights(int param0, int[] param1) {
         int var3_int = 0;
         int var4 = 0;
         int[] var5 = null;
@@ -442,16 +442,16 @@ final class r extends eh {
             var6++;
           }
           if (param0 < 74) {
-            this.c(-22, -86, 61);
+            this.resizeCellColumns(-22, -86, 61);
           }
-          this.e(0, var4, var3_int);
-          this.b((byte) 9, var4, var3_int);
+          this.resizeCellRows(0, var4, var3_int);
+          this.resizeAlignmentRows((byte) 9, var4, var3_int);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "r.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(byte param0, int param1, int param2) {
+    final void setCellInsets(byte param0, int param1, int param2) {
         this.field_H = param1;
         int var4 = -47 % ((param0 + 45) / 32);
         this.field_D = param2;
@@ -466,7 +466,7 @@ final class r extends eh {
         field_G = null;
     }
 
-    private final void b(byte param0, int param1, int param2) {
+    private final void resizeAlignmentRows(byte param0, int param1, int param2) {
         if (param0 < 1) {
           r.b(-49, -85, 107);
         }

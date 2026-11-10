@@ -66,7 +66,7 @@ final class md extends sg implements hh {
         field_vb = null;
     }
 
-    private final void a(boolean param0, HumanFactory param1, boolean param2) {
+    private final void showCreationResult(boolean param0, AccountServerResult param1, boolean param2) {
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
@@ -82,7 +82,7 @@ final class md extends sg implements hh {
           }
           this.field_rb = true;
           if (param1.field_b) {
-            var4 = lg.field_j;
+            var4 = ViewportController.field_j;
           } else {
             if (param1.field_g == null) {
               var4 = param1.field_e;
@@ -91,7 +91,7 @@ final class md extends sg implements hh {
                   var4 = fm.field_E;
                   this.field_ub = true;
                 } else {
-                  HumanFactory.a(true);
+                  AccountServerResult.a(true);
                   var4 = fm.field_E;
                   this.field_ub = true;
                 }
@@ -99,39 +99,39 @@ final class md extends sg implements hh {
             } else {
               var4 = ma.field_i;
               if (null != this.field_sb) {
-                this.field_sb.a(-41);
+                this.field_sb.onMoreSuggestionsRequested(-41);
               }
             }
           }
           var5 = new e((sg) (this), rk.field_b, var4);
           if (param1.field_b) {
             if (param1.field_d) {
-              this.b(20, new fe(this));
+              this.transitionToContent(20, new fe(this));
               return;
             }
-            var5.a(jb.field_c, 125, (sk) (this));
+            var5.addButton(jb.field_c, 125, (sk) (this));
           } else {
             if (!this.field_ub) {
               if (param1.field_a != 5) {
-                var5.a((byte) 123, jk.field_g, -1);
+                var5.addActionButton((byte) 123, jk.field_g, -1);
               } else {
-                var5.a((byte) 106, te.field_R, 11);
-                var5.a((byte) 110, qd.field_d, 17);
+                var5.addActionButton((byte) 106, te.field_R, 11);
+                var5.addActionButton((byte) 110, qd.field_d, 17);
               }
             } else {
-              var5.a(jb.field_c, 125, (sk) (this));
+              var5.addButton(jb.field_c, 125, (sk) (this));
             }
             if (param1.field_a == 3) {
-              var5.a((byte) 95, rf.field_b, 7);
+              var5.addActionButton((byte) 95, rf.field_b, 7);
             } else {
               if (param1.field_a != 6) {
-                this.b(20, var5);
+                this.transitionToContent(20, var5);
                 return;
               }
-              var5.a((byte) 122, di.field_I, 9);
+              var5.addActionButton((byte) 122, di.field_I, 9);
             }
           }
-          this.b(20, var5);
+          this.transitionToContent(20, var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -196,9 +196,9 @@ final class md extends sg implements hh {
           ed.a(419);
           if (param1 != -6) {
             field_vb = (Sprite) null;
-            this.h((byte) -126);
+            this.closeDialog((byte) -126);
           } else {
-            this.h((byte) -126);
+            this.closeDialog((byte) -126);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -215,37 +215,37 @@ final class md extends sg implements hh {
         }
     }
 
-    final boolean j(int param0) {
-        HumanFactory var2;
+    final boolean tickLayerAndCheckHidden(int param0) {
+        AccountServerResult var2;
         byte[] var3;
-        HumanFactory var2Lifetime1;
+        AccountServerResult var2Lifetime1;
         if (param0 == 2634) {
           if (!this.field_H) {
-            return super.j(param0 + 0);
+            return super.tickLayerAndCheckHidden(param0 + 0);
           }
           if (this.field_rb) {
-            return super.j(param0 + 0);
+            return super.tickLayerAndCheckHidden(param0 + 0);
           }
           var2 = ij.h(-107);
           if (var2 == null) {
-            return super.j(param0 + 0);
+            return super.tickLayerAndCheckHidden(param0 + 0);
           }
-          this.a(false, var2, false);
-          return super.j(param0 + 0);
+          this.showCreationResult(false, var2, false);
+          return super.tickLayerAndCheckHidden(param0 + 0);
         }
         var3 = (byte[]) null;
         md.a(-115, (byte[]) null, 111);
         if (!this.field_H) {
-          return super.j(param0 + 0);
+          return super.tickLayerAndCheckHidden(param0 + 0);
         }
         if (this.field_rb) {
-          return super.j(param0 + 0);
+          return super.tickLayerAndCheckHidden(param0 + 0);
         }
         var2Lifetime1 = ij.h(-107);
         if (var2Lifetime1 != null) {
-          this.a(false, var2Lifetime1, false);
+          this.showCreationResult(false, var2Lifetime1, false);
         }
-        return super.j(param0 + 0);
+        return super.tickLayerAndCheckHidden(param0 + 0);
     }
 
     md(dn param0, fk param1) {
@@ -257,8 +257,8 @@ final class md extends sg implements hh {
         }
     }
 
-    final void c(boolean param0) {
-        this.a(param0, te.a(fm.field_E, -13466, 248), true);
+    final void showTimeoutResult(boolean param0) {
+        this.showCreationResult(param0, te.createResponseWithMessage(fm.field_E, -13466, 248), true);
     }
 
     static {

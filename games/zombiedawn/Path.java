@@ -6,12 +6,12 @@ final class Path extends IntrusiveDeque {
     int field_g;
     static int field_f;
 
-    final static void a(int param0, int param1, String param2) {
+    final static void showLoginResponse(int param0, int param1, String param2) {
         int var3_int = 0;
         try {
           if (param0 != 10) {
             String var4 = (String) null;
-            Path.a(24, 51, (String) null);
+            Path.showLoginResponse(24, 51, (String) null);
           }
           ce.field_q = false;
           mp.field_e = false;
@@ -26,12 +26,12 @@ final class Path extends IntrusiveDeque {
               } else {
                 param2 = fl.field_b;
               }
-              he.field_a.a(GameLoopApplet.field_B, 20);
+              he.field_a.setAccountAndClearPassword(GameLoopApplet.field_B, 20);
             }
             var3_int = 1;
             if (param1 == 10) {
               var3_int = 0;
-              jp.a((byte) -70);
+              jp.showChooseNameDialog((byte) -70);
             }
             if (var3_int != 0) {
               if (mp.field_e) {
@@ -40,14 +40,14 @@ final class Path extends IntrusiveDeque {
               if (pk.field_J) {
                 param2 = fe.field_L;
               }
-              Point.field_i.a(param2, param1, param0 ^ 27);
+              Point.field_i.showResultMessage(param2, param1, param0 ^ 27);
             }
             if (param1 != 256) {
               if (param1 == 10) {
                 return;
               }
               if (!nm.field_c) {
-                he.field_a.h(-123);
+                he.field_a.clearInputs(-123);
                 return;
               }
             }
@@ -60,12 +60,12 @@ final class Path extends IntrusiveDeque {
     Path() {
     }
 
-    final static void a(float param0, String param1, byte param2, boolean param3) {
+    final static void showLoadingProgress(float param0, String param1, byte param2, boolean param3) {
         if (null == vi.field_c) {
           vi.field_c = new sa(e.field_S, ed.field_c);
-          e.field_S.a(vi.field_c, true);
+          e.field_S.addDialog(vi.field_c, true);
         }
-        vi.field_c.a(param3, param0, (byte) -97, param1);
+        vi.field_c.setProgress(param3, param0, (byte) -97, param1);
         if (param2 >= -18) {
           return;
         }

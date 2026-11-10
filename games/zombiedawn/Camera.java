@@ -37,7 +37,7 @@ final class Camera {
         field_z = null;
     }
 
-    final void a(byte param0) {
+    final void startFlyover(byte param0) {
         this.y = this.field_k;
         this.field_f = this.field_k;
         this.field_d = true;
@@ -51,7 +51,7 @@ final class Camera {
         this.field_r = 0.004999999888241291f;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final void setFlyoverCurve(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         this.field_n = (-(27 * param0) + (6 * param1 + param4 * -15 + param7 * 54)) / 18;
         if (param8 != 106) {
           this.field_m = -116;
@@ -69,7 +69,7 @@ final class Camera {
         if (param1) {
           this.screenToWorldY(64, false);
         }
-        return -bd.field_d + (param0 + this.x);
+        return -WhirlpoolHasher.field_d + (param0 + this.x);
     }
 
     final void resetPosition(int param0) {
@@ -87,7 +87,7 @@ final class Camera {
         return this.y + param0 - nh.field_G;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
+    final static void sortRankingRange(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
         int var11 = 0;
         int incrementValue$0 = 0;
         int stackIn_23_0 = 0;
@@ -140,15 +140,15 @@ final class Camera {
                 }
               }
             }
-            Camera.a(param0, var8, param2, param3, param4, var9, param6);
-            Camera.a(var8, param1, param2, 0, param4, param5, var10);
+            Camera.sortRankingRange(param0, var8, param2, param3, param4, var9, param6);
+            Camera.sortRankingRange(var8, param1, param2, 0, param4, param5, var10);
             return;
           }
           for (var7_intLifetime1 = -1 + param1; param0 < var7_intLifetime1; var7_intLifetime1--) {
             for (var8Lifetime1 = param0; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
               var9Lifetime1 = qd.field_c[var8Lifetime1];
               var10Lifetime1 = qd.field_c[var8Lifetime1 + 1];
-              if (fp.a(var9Lifetime1, param4, 0, var10Lifetime1)) {
+              if (fp.comesBeforeRankingRow(var9Lifetime1, param4, 0, var10Lifetime1)) {
                 qd.field_c[var8Lifetime1] = var10Lifetime1;
                 qd.field_c[1 + var8Lifetime1] = var9Lifetime1;
               }
@@ -166,7 +166,7 @@ final class Camera {
         if (param1 >= -58) {
           return -34;
         }
-        return bd.field_d + (param0 - this.x);
+        return WhirlpoolHasher.field_d + (param0 - this.x);
     }
 
     final int worldToScreenY(int param0, int param1) {
@@ -176,14 +176,14 @@ final class Camera {
         return -this.y + param0 + nh.field_G;
     }
 
-    final void a(boolean param0, boolean param1, boolean param2, byte param3, boolean param4, boolean param5) {
+    final void updateScrolling(boolean param0, boolean param1, boolean param2, byte param3, boolean param4, boolean param5) {
         int stackIn_33_0 = 0;
         int var7;
         float var7_float;
         float var8;
         int var9;
         var9 = ZombieDawn.field_J;
-        this.field_p = this.field_t - bd.field_d;
+        this.field_p = this.field_t - WhirlpoolHasher.field_d;
         if (param3 > -41) {
           field_z = (String) null;
         }
@@ -199,11 +199,11 @@ final class Camera {
             this.field_a = (this.field_a + nh.field_G) / 2;
           }
         }
-        if (this.field_p >= bd.field_d) {
-          this.field_s = bd.field_d;
+        if (this.field_p >= WhirlpoolHasher.field_d) {
+          this.field_s = WhirlpoolHasher.field_d;
         } else {
-          this.field_s = (bd.field_d + this.field_p) / 2;
-          this.field_p = (bd.field_d + this.field_p) / 2;
+          this.field_s = (WhirlpoolHasher.field_d + this.field_p) / 2;
+          this.field_p = (WhirlpoolHasher.field_d + this.field_p) / 2;
         }
         if (!this.field_d) {
           if (0.0f < this.field_g) {
@@ -257,7 +257,7 @@ final class Camera {
         this.clampToBounds(-28216);
     }
 
-    final void a(byte param0, int param1, int param2) {
+    final void scrollBy(byte param0, int param1, int param2) {
         this.y = this.y - param2;
         this.x = this.x - param1;
         int var4 = 15 % ((-55 - param0) / 43);
@@ -287,10 +287,10 @@ final class Camera {
         this.field_i = 0;
         this.field_d = false;
         this.field_g = 0.0f;
-        this.field_s = bd.field_d;
+        this.field_s = WhirlpoolHasher.field_d;
         this.field_t = param0;
         this.field_q = param1;
-        this.field_p = -bd.field_d + this.field_t;
+        this.field_p = -WhirlpoolHasher.field_d + this.field_t;
         int var3 = bo.field_i ? 240 : nh.field_G;
         this.field_w = -var3 + 240;
         this.field_a = this.field_q - var3;

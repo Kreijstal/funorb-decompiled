@@ -10,7 +10,7 @@ class IntrusiveNode {
     static volatile int field_c;
     long key;
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         if (param0 != 61) {
           field_c = -123;
@@ -33,7 +33,7 @@ class IntrusiveNode {
         }
     }
 
-    final boolean a(byte param0) {
+    final boolean isLinked(byte param0) {
         if (param0 == 73) {
           return this.next != null ? true : false;
         }

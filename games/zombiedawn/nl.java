@@ -11,7 +11,7 @@ final class nl extends al {
     private int field_q;
     static cg field_m;
 
-    final static void a(lg param0, byte param1) {
+    final static void setDisplayModeController(ViewportController param0, byte param1) {
         int stackIn_5_0 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -45,7 +45,7 @@ final class nl extends al {
         }
     }
 
-    final void a(byte param0) {
+    final void drawScreen(byte param0) {
         int var20 = 0;
         String[] var2;
         String[] var3;
@@ -74,34 +74,34 @@ final class nl extends al {
         int var9Lifetime2;
         int var10Lifetime1;
         var21 = ZombieDawn.field_J;
-        super.a((byte) -71);
-        li.a(false);
+        super.drawScreen((byte) -71);
+        JaggrabDownloader.drawPipeboxBackdrop(false);
         var22 = hk.field_J;
         var2 = var22;
         var3 = gd.field_C;
         var4 = kj.field_d;
-        var5 = HumanFactory.field_j;
+        var5 = AccountServerResult.field_j;
         var6 = sg.field_jb;
         var7 = bj.field_q;
         if (this.field_d == 6) {
-          var7.drawStringCentered(me.field_Hb, bd.field_d, id.field_M + 288 - 14, 16777215, 0);
+          var7.drawStringCentered(me.field_Hb, WhirlpoolHasher.field_d, id.field_M + 288 - 14, 16777215, 0);
         }
-        var8 = na.field_f;
+        var8 = SectorCacheStore.field_f;
         var9 = 288;
         for (var10 = 0; var22.length > var10; var10++) {
-          if (this.e(var10, -30858)) {
+          if (this.isAchievementListed(var10, -30858)) {
             var9Lifetime1 = id.field_M + cg.field_g[var10];
             var8Lifetime1 = ld.field_k[var10] + vh.field_b;
             if (this.field_d == 6) {
               Rasterizer.fillRoundedRectangleBlended(-3 + var8Lifetime1, -3 + var9Lifetime1, 38, 38, 6, 3355443, 128);
-              if (this.g(var10, -7)) {
+              if (this.isAchievementEarned(var10, -7)) {
                 if (this.field_q == var10) {
                   Rasterizer.fillRoundedRectangleBlended(-3 + var8Lifetime1, var9Lifetime1 - 3, 38, 38, 6, 0, 128);
                 }
                 if (this.field_n == var10) {
                   Rasterizer.drawRoundedRectangle(-3 + var8Lifetime1, -3 + var9Lifetime1, 38, 38, 6, 16777215);
                 }
-                var11 = this.c(var10, true);
+                var11 = this.getAchievementIcon(var10, true);
                 if (var11 == null) {
                   var11 = e.field_G;
                 }
@@ -114,7 +114,7 @@ final class nl extends al {
               if (this.field_n == var10) {
                 Rasterizer.drawRoundedRectangle(-3 + var8Lifetime1, -3 + var9Lifetime1, 38, 38, 6, 16777215);
               }
-              var11 = this.c(var10, true);
+              var11 = this.getAchievementIcon(var10, true);
               if (var11 == null) {
                 var11 = e.field_G;
               }
@@ -123,7 +123,7 @@ final class nl extends al {
           }
         }
         var9Lifetime2 = 384;
-        var7.drawStringCentered(GameLoopApplet.field_C, bd.field_d, id.field_M + var9Lifetime2 + 32, 16777215, 0);
+        var7.drawStringCentered(GameLoopApplet.field_C, WhirlpoolHasher.field_d, id.field_M + var9Lifetime2 + 32, 16777215, 0);
         var10Lifetime1 = -1;
         if (param0 >= -35) {
           return;
@@ -136,8 +136,8 @@ final class nl extends al {
           var10Lifetime1 = this.field_q;
         }
         if (var10Lifetime1 != -1 &&
-          this.e(var10Lifetime1, -30858)) {
-          var23 = this.c(var10Lifetime1, true);
+          this.isAchievementListed(var10Lifetime1, -30858)) {
+          var23 = this.getAchievementIcon(var10Lifetime1, true);
           var23.drawTransparent(110 + vh.field_b, 140 + id.field_M - 32);
           var6.drawParagraph(var22[var10Lifetime1], vh.field_b + 260, id.field_M + 80, 300, 85, 0, 0, 1, 2, 35);
           var12 = 280 + vh.field_b;
@@ -145,8 +145,8 @@ final class nl extends al {
           var14 = 280;
           var15 = 100;
           var16 = var7.field_I + var7.field_x;
-          if (this.f(var10Lifetime1, -21) &&
-            !this.g(var10Lifetime1, -7)) {
+          if (this.isHiddenUntilEarned(var10Lifetime1, -21) &&
+            !this.isAchievementEarned(var10Lifetime1, -7)) {
             var25 = ExceptionWrapper.field_f;
             var7.drawParagraph(var25, var12, var13, var14, var15, 16777215, 0, 0, 0, var16);
           } else {
@@ -165,10 +165,10 @@ final class nl extends al {
         }
     }
 
-    final static void a(int param0, PcmMixer param1, byte param2, Js5Archive param3) {
+    final static void initializeLogoSequence(int param0, PcmMixer param1, byte param2, Js5Archive param3) {
         try {
           SpatialGrid.field_b = nk.a((byte) 122) * param0 / 1000;
-          tp.a((byte) 124, param3);
+          tp.loadLogoSound((byte) 124, param3);
           ae.a(param3, (byte) -128);
           mn.a(param3, true);
           ta.a(255);
@@ -191,8 +191,8 @@ final class nl extends al {
         }
     }
 
-    private final Sprite c(int param0, boolean param1) {
-        if (this.g(param0, -7)) {
+    private final Sprite getAchievementIcon(int param0, boolean param1) {
+        if (this.isAchievementEarned(param0, -7)) {
           return ed.field_a[param0];
         }
         if (be.field_j <= 0 &&
@@ -205,24 +205,24 @@ final class nl extends al {
         return e.field_G;
     }
 
-    final int c(int param0, int param1) {
+    final int getItemLeft(int param0, int param1) {
         if (this.field_d == param1) {
           return (param0 == 0 ? 100 : 350) + vh.field_b;
         }
-        if (!po.w(13296)) {
-          return bd.field_d - (this.field_i >> 1);
+        if (!po.isGuestSession(13296)) {
+          return WhirlpoolHasher.field_d - (this.field_i >> 1);
         }
         return (param0 != 0 ? 470 : 50) + vh.field_b;
     }
 
-    final void a(byte param0, boolean param1) {
+    final void handleInput(byte param0, boolean param1) {
         int var3;
         int var4;
         int var5;
         int var6;
         int var5Lifetime1;
         var6 = ZombieDawn.field_J;
-        super.a((byte) 85, param1);
+        super.handleInput((byte) 85, param1);
         this.field_n = -1;
         var3 = -vh.field_b + ha.field_b;
         var4 = -id.field_M + ei.field_K;
@@ -240,7 +240,7 @@ final class nl extends al {
               if (0 > this.field_n) {
                 break scanLoop1;
               }
-              if (this.g(this.field_n, -7)) {
+              if (this.isAchievementEarned(this.field_n, -7)) {
                 break scanLoop1;
               }
               this.field_n = -1;
@@ -266,7 +266,7 @@ final class nl extends al {
         return;
     }
 
-    final void a(byte param0, int param1, boolean param2) {
+    final void resetSelection(byte param0, int param1, boolean param2) {
         int var12 = 0;
         int var4;
         int var5;
@@ -278,7 +278,7 @@ final class nl extends al {
         int var11;
         int var13;
         var13 = ZombieDawn.field_J;
-        super.a((byte) 73, param1, param2);
+        super.resetSelection((byte) 73, param1, param2);
         this.field_q = -1;
         this.field_n = -1;
         if (param0 < 65) {
@@ -286,25 +286,25 @@ final class nl extends al {
         }
         var4 = 32;
         for (var5 = 0; wf.field_P.length > var5; var5++) {
-          if (!this.e(var5, -30858)) {
+          if (!this.isAchievementListed(var5, -30858)) {
             var4--;
           }
         }
-        na.field_f = 120;
+        SectorCacheStore.field_f = 120;
         var5 = 0;
         do {
           var5++;
           var6 = (int)Math.ceil((double)((float)var4 / (float)var5));
         } while (var6 > 14);
-        na.field_f = 320 - (-40 + 40 * var6) / 2;
-        var7 = na.field_f;
+        SectorCacheStore.field_f = 320 - (-40 + 40 * var6) / 2;
+        var7 = SectorCacheStore.field_f;
         var8 = 288;
         var8 = var8 + (120 - 40 * var5) / 2;
         var9 = new int[]{var6, var6, var6, 0};
         if (var4 % var5 != 1) {
           if (var4 % var5 != 2) {
-            na.field_f = na.field_f - 20;
-            var7 = na.field_f;
+            SectorCacheStore.field_f = SectorCacheStore.field_f - 20;
+            var7 = SectorCacheStore.field_f;
           } else {
             var9[1] = var9[1] - 1;
             var7 -= 20;
@@ -316,14 +316,14 @@ final class nl extends al {
         var10 = 0;
         var11 = 0;
         for (var12 = 0; var12 < 32; var12++) {
-          if (this.e(var12, -30858)) {
+          if (this.isAchievementListed(var12, -30858)) {
             ld.field_k[var12] = var7;
             cg.field_g[var12] = var8;
             var7 += 40;
             var10++;
             if (var10 == var9[var11]) {
               var8 += 40;
-              var7 = na.field_f;
+              var7 = SectorCacheStore.field_f;
               var10 = 0;
               var11++;
               if (var9[-1 + var11] < var9[var11]) {
@@ -335,7 +335,7 @@ final class nl extends al {
         return;
     }
 
-    private final boolean g(int param0, int param1) {
+    private final boolean isAchievementEarned(int param0, int param1) {
         int[] var4 = param1 != ~this.field_d ? Js5Archive.field_i : kg.field_g;
         int[] var3 = var4;
         return vi.a(param0, var4, -112);
@@ -347,13 +347,13 @@ final class nl extends al {
         this.field_q = -1;
     }
 
-    private final boolean e(int param0, int param1) {
+    private final boolean isAchievementListed(int param0, int param1) {
         boolean stackIn_10_0 = false;
         if (param1 != -30858) {
           return false;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (!this.g(param0, -7) && (!wf.field_P[param0] ||
+        if (!this.isAchievementEarned(param0, -7) && (!wf.field_P[param0] ||
           MouseWheelInput.field_a[param0] &&
           !(be.field_j > 0) &&
           !(lo.field_j >= 2))) {
@@ -366,22 +366,22 @@ final class nl extends al {
         return stackIn_10_0;
     }
 
-    final int a(boolean param0, int param1) {
+    final int getItemRight(boolean param0, int param1) {
         if (!param0) {
           byte[] var4 = (byte[]) null;
-          nl.a(-87, -56, -85, (byte[]) null);
+          nl.computeWhirlpoolDigest(-87, -56, -85, (byte[]) null);
         }
-        if (!po.w(13296) ||
+        if (!po.isGuestSession(13296) ||
           this.field_d == 6) {
-          return this.c(param1, 6) + this.field_i;
+          return this.getItemLeft(param1, 6) + this.field_i;
         }
         if (0 == param1) {
-          return this.c(param1, 6) + 350;
+          return this.getItemLeft(param1, 6) + 350;
         }
-        return 100 + this.c(param1, 6);
+        return 100 + this.getItemLeft(param1, 6);
     }
 
-    private final boolean f(int param0, int param1) {
+    private final boolean isHiddenUntilEarned(int param0, int param1) {
         boolean stackIn_9_0 = false;
         if (param1 != -21) {
           return true;
@@ -390,7 +390,7 @@ final class nl extends al {
         return stackIn_9_0;
     }
 
-    final static void c(int param0) {
+    final static void clearBucketCounts(int param0) {
         int[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -425,7 +425,7 @@ final class nl extends al {
         }
     }
 
-    final static byte[] a(int param0, int param1, int param2, byte[] param3) {
+    final static byte[] computeWhirlpoolDigest(int param0, int param1, int param2, byte[] param3) {
         int var5_int = 0;
         byte[] var4 = null;
         int var7 = 0;
@@ -436,12 +436,12 @@ final class nl extends al {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
-        bd var5 = null;
+        WhirlpoolHasher var5 = null;
         byte[] var6 = null;
         var7 = ZombieDawn.field_J;
         try {
           if (param2 > -115) {
-            nl.c(91);
+            nl.clearBucketCounts(91);
           }
           if (param0 > 0) {
             var8 = new byte[param1];
@@ -452,9 +452,9 @@ final class nl extends al {
           } else {
             var4 = param3;
           }
-          var5 = new bd();
-          var5.a(71);
-          var5.a(true, var4, (long)(8 * param1));
+          var5 = new WhirlpoolHasher();
+          var5.reset(71);
+          var5.updateBits(true, var4, (long)(8 * param1));
           var6 = new byte[64];
           var5.finishDigest(var6, 0, -128);
           stackIn_9_0 = var6;

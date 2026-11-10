@@ -8,7 +8,7 @@ class SpatialObject extends DualLinkNode {
     SpatialObject field_r;
     static int field_p;
 
-    final void d(int param0) {
+    final void unlinkFromBucket(int param0) {
         if (null == this.field_r) {
           return;
         }
@@ -24,7 +24,7 @@ class SpatialObject extends DualLinkNode {
         this.field_r = null;
     }
 
-    final static void a(byte param0, java.awt.Canvas param1) {
+    final static void detachCanvasInput(byte param0, java.awt.Canvas param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -32,7 +32,7 @@ class SpatialObject extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         try {
           rf.a((java.awt.Component) ((Object) param1), -116);
-          SpatialGrid.a(3490, (java.awt.Component) ((Object) param1));
+          SpatialGrid.detachMouseInput(3490, (java.awt.Component) ((Object) param1));
           if (null != jl.field_u) {
             jl.field_u.detach((java.awt.Component) ((Object) param1), (byte) -36);
           }
@@ -55,7 +55,7 @@ class SpatialObject extends DualLinkNode {
         }
     }
 
-    final static String a(byte[] param0, int param1, int param2, int param3) {
+    final static String decodeSingleByteText(byte[] param0, int param1, int param2, int param3) {
         int incrementValue$1 = 0;
         char[] var4 = null;
         int var5 = 0;
@@ -121,7 +121,7 @@ class SpatialObject extends DualLinkNode {
     protected SpatialObject() {
     }
 
-    final static int e(int param0) {
+    final static int randomSquadOffset(int param0) {
         int var1 = -98 / ((-62 - param0) / 56);
         return 4 + pb.a(so.random, 16, 1);
     }

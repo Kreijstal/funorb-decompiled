@@ -2,40 +2,40 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class am extends PacketBuffer {
-    private uo field_l;
+    private IsaacCipher field_l;
     private int field_n;
     static String field_m;
 
-    final void a(int param0, int[] param1) {
+    final void setCipherSeed(int param0, int[] param1) {
         try {
-          this.field_l = new uo(param1);
+          this.field_l = new IsaacCipher(param1);
           int var3_int = 35 % ((-7 - param0) / 53);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "am.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final int i(byte param0) {
+    final int readCipheredByte(byte param0) {
         if (param0 <= 122) {
           return 95;
         }
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        return this.payload[fieldTemp$0] - this.field_l.a(92) & 255;
+        return this.payload[fieldTemp$0] - this.field_l.nextInt(92) & 255;
     }
 
-    final void h(byte param0) {
+    final void beginBitAccess(byte param0) {
         if (param0 != 75) {
-          this.i(13);
+          this.endBitAccess(13);
         }
         this.field_n = this.position * 8;
     }
 
-    final void i(int param0) {
+    final void endBitAccess(int param0) {
         this.position = (7 + this.field_n) / param0;
     }
 
-    final static void k(int param0) {
+    final static void advanceLogoAnimation(int param0) {
         if (LevelNavigation.field_x != 0 - SpatialGrid.field_b &&
           LevelNavigation.field_x == -SpatialGrid.field_b + 250) {
         }
@@ -45,7 +45,7 @@ final class am extends PacketBuffer {
         LevelNavigation.field_x = LevelNavigation.field_x + 1;
     }
 
-    final static String a(String param0, int param1) {
+    final static String reverseString(String param0, int param1) {
         int var4 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -84,7 +84,7 @@ final class am extends PacketBuffer {
         }
     }
 
-    final void a(int param0, byte[] param1, int param2, int param3) {
+    final void readCipheredBytes(int param0, byte[] param1, int param2, int param3) {
         int var5_int = 0;
         int fieldTemp$0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -98,7 +98,7 @@ final class am extends PacketBuffer {
           for (var5_int = param3; param0 > var5_int; var5_int++) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            param1[var5_int + param2] = (byte)(this.payload[fieldTemp$0] - this.field_l.a(96));
+            param1[var5_int + param2] = (byte)(this.payload[fieldTemp$0] - this.field_l.nextInt(96));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -119,7 +119,7 @@ final class am extends PacketBuffer {
         super(param0);
     }
 
-    final int k(int param0, int param1) {
+    final int readBits(int param0, int param1) {
         int incrementValue$0 = 0;
         int var6 = ZombieDawn.field_J;
         int var3 = this.field_n >> 3;
@@ -153,16 +153,16 @@ final class am extends PacketBuffer {
         field_m = null;
     }
 
-    final void j(int param0, int param1) {
+    final void writeCipheredByte(int param0, int param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$0] = (byte)(param1 + this.field_l.a(124));
+        this.payload[fieldTemp$0] = (byte)(param1 + this.field_l.nextInt(124));
         if (param0 != 11) {
           this.field_n = -62;
         }
     }
 
-    final static void a(java.awt.Canvas param0, byte param1) {
+    final static void presentFrame(java.awt.Canvas param0, byte param1) {
         String var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -173,11 +173,11 @@ final class am extends PacketBuffer {
           if (11 == fl.field_a) {
             qo.c(29756);
           }
-          Path.a(mm.field_k, ka.field_a, (byte) -92, ma.field_p);
+          Path.showLoadingProgress(mm.field_k, ka.field_a, (byte) -92, ma.field_p);
           uh.a(-113, 0, 0, param0);
           if (param1 > -79) {
             var3 = (String) null;
-            am.a((String) null, 84);
+            am.reverseString((String) null, 84);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

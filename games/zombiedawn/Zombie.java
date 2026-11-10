@@ -37,7 +37,7 @@ final class Zombie extends Mover {
     private int field_kb;
     static int[] field_nb;
 
-    private final void q(int param0) {
+    private final void wobbleVelocity(int param0) {
         int var2;
         var2 = pb.a(so.random, 50, param0 ^ 0);
         if (var2 == param0 &&
@@ -55,28 +55,28 @@ final class Zombie extends Mover {
         }
     }
 
-    final boolean p(byte param0) {
+    final boolean startScreech(byte param0) {
         boolean discarded$0 = false;
-        if (this.n((byte) 25)) {
+        if (this.isBusy((byte) 25)) {
           return false;
         }
         this.setState(15, -6904);
         if (param0 != 6) {
-          discarded$0 = this.o((byte) -114);
+          discarded$0 = this.isFemale((byte) -114);
           return true;
         }
         return true;
     }
 
-    private final String n(int param0) {
+    private final String getDebugLabel(int param0) {
         if (param0 >= -26) {
-          this.b(true);
+          this.applyFear(true);
         }
         return "";
     }
 
-    final boolean t(int param0) {
-        if (this.n((byte) 25)) {
+    final boolean startPhantom(int param0) {
+        if (this.isBusy((byte) 25)) {
           return false;
         }
         if (param0 <= 14) {
@@ -86,7 +86,7 @@ final class Zombie extends Mover {
         return true;
     }
 
-    final void a(int param0, Camera param1) {
+    final void drawSelectionMarker(int param0, Camera param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -103,13 +103,13 @@ final class Zombie extends Mover {
           var3_int = param1.worldToScreenX(this.getX(true), (byte) -75) - 24;
           var4 = param1.worldToScreenY(this.getY(237239984), param0) - 48;
           if (this.field_cb) {
-            DualLinkNode.field_k[0].b(var3_int, var4, 128, 16711680);
+            DualLinkNode.field_k[0].drawTransparentWithOpacity(var3_int, var4, 128, 16711680);
           } else {
             if (this.field_tb) {
               DualLinkNode.field_k[0].drawTransparent(var3_int, var4);
             } else {
               if (this.field_qb) {
-                DualLinkNode.field_k[0].e(var3_int, var4, 96);
+                DualLinkNode.field_k[0].drawWithOpacity(var3_int, var4, 96);
               }
             }
           }
@@ -128,18 +128,18 @@ final class Zombie extends Mover {
         }
     }
 
-    final void u(int param0) {
+    final void playGroanSound(int param0) {
         if (param0 >= -99) {
           this.field_eb = true;
         }
-        if (this.o((byte) -22)) {
-          this.field_U = tp.$cfr$intArgs$b$3010b50b2764(59, 70 + pb.a(so.random, 2, 1));
+        if (this.isFemale((byte) -22)) {
+          this.field_U = tp.playSoundEffect(59, 70 + pb.a(so.random, 2, 1));
         } else {
-          this.field_U = tp.$cfr$intArgs$b$3010b50b2764(37, pb.a(so.random, 2, 1) + 72);
+          this.field_U = tp.playSoundEffect(37, pb.a(so.random, 2, 1) + 72);
         }
     }
 
-    private final void A(int param0) {
+    private final void seekNearbyHumans(int param0) {
         boolean stackIn_15_0 = false;
         int stackIn_21_0 = 0;
         int stackIn_24_0 = 0;
@@ -184,10 +184,10 @@ final class Zombie extends Mover {
         var2 = null;
         var6 = Js5Archive.field_e.navigation;
         var7 = 1;
-        if (!this.i((byte) -126)) {
+        if (!this.isPlayerOwned((byte) -126)) {
           var7 = var7 | 2;
         }
-        var8 = this.a((byte) -74, 80, var7);
+        var8 = this.firstNearbyObject((byte) -74, 80, var7);
         while (var8 != null) {
           stackOut_14_0 = var8 instanceof Human;
           stackIn_65_0 = stackOut_14_0 ? 1 : 0;
@@ -198,21 +198,21 @@ final class Zombie extends Mover {
             if (var16_ref.state != 18 &&
               var16_ref.state != 20 &&
               !var16_ref.field_V &&
-              var6.a(var16_ref.getY(237239984), this.getY(237239984), var16_ref.getX(true), this.getX(true), 125) != -1) {
+              var6.traceLineFromTo(var16_ref.getY(237239984), this.getY(237239984), var16_ref.getX(true), this.getX(true), 125) != -1) {
               if (400 > var5) {
                 this.field_wb = var16_ref;
-                var16_ref.r(20);
+                var16_ref.startBeingDevoured(20);
                 this.setState(8, -6904);
                 this.field_zb = 70;
                 this.field_kb = (var16_ref.getX(true) - this.getX(true)) / 2;
                 this.field_mb = (var16_ref.getY(237239984) - this.getY(237239984)) / 2;
-                if (var16_ref.t(10) &&
-                  this.o((byte) -128)) {
+                if (var16_ref.isMaleVoice(10) &&
+                  this.isFemale((byte) -128)) {
                   this.field_Cb = 0;
                   return;
                 }
-                if (!var16_ref.t(10) &&
-                  !this.o((byte) 112)) {
+                if (!var16_ref.isMaleVoice(10) &&
+                  !this.isFemale((byte) 112)) {
                   this.field_Cb = 4;
                   return;
                 }
@@ -238,7 +238,7 @@ final class Zombie extends Mover {
               var11 = stackIn_24_0;
               if (~var10 != ~var11) {
                 if (var15.field_ob) {
-                  var8 = this.e((byte) 32);
+                  var8 = this.nextNearbyObject((byte) 32);
                   continue;
                 }
                 if ((5 == var15.state ||
@@ -249,7 +249,7 @@ final class Zombie extends Mover {
                   var4 = var15.getY(237239984) - this.getY(237239984);
                   var5 = var4 * var4 + var3 * var3;
                   if (529 > var5 &&
-                    var6.a(var15.getY(237239984), this.getY(237239984), var15.getX(true), this.getX(true), 106) != -1) {
+                    var6.traceLineFromTo(var15.getY(237239984), this.getY(237239984), var15.getX(true), this.getX(true), 106) != -1) {
                     this.setState(21, -6904);
                     this.field_zb = 50;
                     if (!var15.field_ob) {
@@ -265,7 +265,7 @@ final class Zombie extends Mover {
                     }
                     var12 = var15.field_y + (var3 << 15);
                     var13 = var15.field_x + (var4 << 15);
-                    if (var6.a(var13 >> 16, var15.getY(237239984), var12 >> 16, var15.getX(true), 120) == -1) {
+                    if (var6.traceLineFromTo(var13 >> 16, var15.getY(237239984), var12 >> 16, var15.getX(true), 120) == -1) {
                       var15.targetX = var15.getX(true);
                       var15.targetY = var15.getY(237239984);
                     } else {
@@ -274,7 +274,7 @@ final class Zombie extends Mover {
                     }
                     var13Lifetime1 = this.field_x - (var4 << 15);
                     var12Lifetime1 = this.field_y - (var3 << 15);
-                    if (var6.a(var13Lifetime1 >> 16, this.getY(237239984), var12Lifetime1 >> 16, this.getX(true), 108) == -1) {
+                    if (var6.traceLineFromTo(var13Lifetime1 >> 16, this.getY(237239984), var12Lifetime1 >> 16, this.getX(true), 108) == -1) {
                       this.targetY = this.field_x >> 16;
                       this.targetX = this.field_y >> 16;
                     } else {
@@ -287,11 +287,11 @@ final class Zombie extends Mover {
               }
             }
           }
-          var8 = this.e((byte) 32);
+          var8 = this.nextNearbyObject((byte) 32);
         }
         stackIn_65_0Lifetime1 = param0;
         if (stackIn_65_0Lifetime1 >= -81) {
-          this.C(-127);
+          this.startDisguise(-127);
         }
         if (var2 != null &&
           this.state != 7 &&
@@ -307,7 +307,7 @@ final class Zombie extends Mover {
         return;
     }
 
-    final void a(byte param0, Camera param1) {
+    final void draw(byte param0, Camera param1) {
         Sprite stackIn_36_0 = null;
         int stackIn_36_1 = 0;
         int stackIn_37_2 = 0;
@@ -334,8 +334,8 @@ final class Zombie extends Mover {
             ki.a((byte) -99, md.field_vb);
             Rasterizer.clear();
             DualLinkNode.field_k[cg.field_d[8] + this.field_G + this.field_Cb].drawTransparent(0, 0);
-            pa.a(-21189);
-            ho.a(md.field_vb, this.o((byte) -83), this.field_fb, -128);
+            pa.popRasterState(-21189);
+            ho.a(md.field_vb, this.isFemale((byte) -83), this.field_fb, -128);
             md.field_vb.drawTransparent(this.field_kb + var3_int, var4 + this.field_mb);
             return;
           }
@@ -345,20 +345,20 @@ final class Zombie extends Mover {
           if (this.field_tb &&
             5 == this.state ||
             this.state == 7) {
-            lb.field_eb[7].e(param1.worldToScreenX(this.field_jb, (byte) -72), param1.worldToScreenY(this.field_ib, 0), this.field_ub);
+            lb.field_eb[7].drawWithOpacity(param1.worldToScreenX(this.field_jb, (byte) -72), param1.worldToScreenY(this.field_ib, 0), this.field_ub);
           }
           if (Mover.field_Q) {
-            bj.field_q.drawString(this.n(-30), var3_int, var4, 16777215, 0);
+            bj.field_q.drawString(this.getDebugLabel(-30), var3_int, var4, 16777215, 0);
             if (5 == this.state ||
               12 == this.state) {
-              this.a(param1, -1);
+              this.drawDebugPath(param1, -1);
             }
           }
           if (null != this.field_U) {
             if (this.field_U.isSamplePositionOutOfRange()) {
               this.field_U = null;
             } else {
-              this.field_U.h(pj.a(var4, 68, var3_int));
+              this.field_U.setVolume(pj.a(var4, 68, var3_int));
             }
           }
           if (var3_int >= -48 &&
@@ -390,7 +390,7 @@ final class Zombie extends Mover {
             } else {
               ad.field_g[this.field_t][var5].drawMirrored(3, 3);
             }
-            ho.a(md.field_vb, this.o((byte) -101), this.field_fb, -111);
+            ho.a(md.field_vb, this.isFemale((byte) -101), this.field_fb, -111);
             if (0 < this.field_Ab) {
               if (this.field_Ab == 2) {
                 so.a(0, 0, 54, 54, 16755200);
@@ -399,7 +399,7 @@ final class Zombie extends Mover {
                 so.a(0, 0, 54, 54, 16742144);
               }
             }
-            pa.a(-21189);
+            pa.popRasterState(-21189);
             if (this.field_bb > 0) {
               var6 = 72;
               if (this.field_bb / 2 < 24) {
@@ -422,7 +422,7 @@ final class Zombie extends Mover {
               md.field_vb.drawTransparentWithOpacity(var3_int - 3, -3 + var4, 142);
             }
             if (kc.field_Q) {
-              pc.field_k.drawStringCentered(s.a(1938762664, "<%0>,<%1>", new String[]{Integer.toString(this.field_B), Integer.toString(this.field_u)}), 24 + var3_int, var4 - 5, 16777215, 0);
+              Js5Transport.field_k.drawStringCentered(s.a(1938762664, "<%0>,<%1>", new String[]{Integer.toString(this.field_B), Integer.toString(this.field_u)}), 24 + var3_int, var4 - 5, 16777215, 0);
             }
             if (nk.field_d) {
               var6Lifetime1 = param1.worldToScreenX(this.getX(true), (byte) -96);
@@ -430,7 +430,7 @@ final class Zombie extends Mover {
               Rasterizer.drawCircleOutline(var6Lifetime1, var7, 3, 16711935);
             }
             if (b.field_h) {
-              pc.field_k.drawStringCentered(s.a(1938762664, "<%0>", new String[]{Integer.toString(this.field_gb)}), var3_int + 24, var4 - 5, 16777215, 0);
+              Js5Transport.field_k.drawStringCentered(s.a(1938762664, "<%0>", new String[]{Integer.toString(this.field_gb)}), var3_int + 24, var4 - 5, 16777215, 0);
             }
             return;
           }
@@ -449,7 +449,7 @@ final class Zombie extends Mover {
         }
     }
 
-    final void z(int param0) {
+    final void takeLethalHit(int param0) {
         int fieldTemp$0 = this.field_Ab;
         this.field_Ab = this.field_Ab - 1;
         if (fieldTemp$0 > 0 ||
@@ -461,28 +461,28 @@ final class Zombie extends Mover {
         }
         if (this.state == 8 &&
           null != this.field_wb) {
-          this.field_wb.q(118);
+          this.field_wb.becomeIdle(118);
         }
         this.setState(9, param0 - 6904);
-        this.l((byte) -124);
+        this.clearFear((byte) -124);
     }
 
-    private final boolean o(byte param0) {
+    private final boolean isFemale(byte param0) {
         int var2 = -105 / ((69 - param0) / 41);
         return this.field_t == 0 ? true : false;
     }
 
-    private final void l(byte param0) {
+    private final void clearFear(byte param0) {
         if (0 < this.field_bb) {
           this.field_bb = 0;
         }
         if (param0 >= -118) {
-          this.s(-3);
+          this.seekNearestHuman(-3);
         }
     }
 
-    final boolean C(int param0) {
-        if (this.n((byte) 25)) {
+    final boolean startDisguise(int param0) {
+        if (this.isBusy((byte) 25)) {
           return false;
         }
         if (this.field_ob) {
@@ -508,15 +508,15 @@ final class Zombie extends Mover {
             this.field_U = kh.a(66, false);
           }
         } else {
-          if (this.o((byte) 112)) {
-            this.field_U = tp.$cfr$intArgs$b$3010b50b2764(37, 15);
+          if (this.isFemale((byte) 112)) {
+            this.field_U = tp.playSoundEffect(37, 15);
           } else {
-            this.field_U = tp.$cfr$intArgs$b$3010b50b2764(89, 25);
+            this.field_U = tp.playSoundEffect(89, 25);
           }
         }
     }
 
-    final void a(Path param0, boolean param1) {
+    final void setPath(Path param0, boolean param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -526,7 +526,7 @@ final class Zombie extends Mover {
           if (param0 != null &&
             !param0.isEmpty((byte) -118)) {
             this.field_db = 0;
-            this.field_lb = (Point) (param0.e(0));
+            this.field_lb = (Point) (param0.first(0));
             this.field_yb = param0;
             this.field_ub = 0;
             if (null != this.field_lb) {
@@ -536,8 +536,8 @@ final class Zombie extends Mover {
             if (!param1) {
               return;
             }
-            if (!this.n((byte) 25)) {
-              this.B(-122);
+            if (!this.isBusy((byte) 25)) {
+              this.followNextWaypoint(-122);
             }
             return;
           }
@@ -556,18 +556,18 @@ final class Zombie extends Mover {
         }
     }
 
-    final void f(byte param0) {
+    final void onGrabbed(byte param0) {
         this.field_J = true;
         if (param0 != -85) {
           this.field_yb = (Path) null;
         }
         this.setState(22, -6904);
         if (null != this.field_wb) {
-          this.field_wb.q(119);
+          this.field_wb.becomeIdle(119);
         }
     }
 
-    private final void s(int param0) {
+    private final void seekNearestHuman(int param0) {
         boolean stackIn_13_0 = false;
         int stackIn_30_0 = 0;
         boolean stackOut_12_0;
@@ -620,16 +620,16 @@ final class Zombie extends Mover {
             var5 = var5.previous;
           }
           if (var3 != null) {
-            this.a((Path) (var4), true);
+            this.setPath((Path) (var4), true);
           }
         }
         stackIn_30_0Lifetime1 = param0;
         if (stackIn_30_0Lifetime1 != 17304) {
-          this.q((byte) -65);
+          this.deselect((byte) -65);
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, boolean param4) {
+    final boolean isInsideRect(int param0, int param1, int param2, int param3, boolean param4) {
         int var6;
         int var7;
         boolean stackIn_13_0 = false;
@@ -654,7 +654,7 @@ final class Zombie extends Mover {
         return stackIn_13_0;
     }
 
-    private final void a(Camera param0, int param1) {
+    private final void drawDebugPath(Camera param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -677,17 +677,17 @@ final class Zombie extends Mover {
           if (param1 != -1) {
             this.field_qb = true;
           }
-          this.a(var4, 0, var3_int, var6, var5);
+          this.drawDebugSegment(var4, 0, var3_int, var6, var5);
           if (null == this.field_yb) {
             return;
           }
-          var7 = this.field_yb.b((byte) 26);
+          var7 = this.field_yb.last((byte) 26);
           while (var7 instanceof Point) {
             var3_intLifetime1 = var5;
             var4Lifetime1 = var6;
             var5 = param0.worldToScreenX(((Point) (var7)).x, (byte) -90);
             var6 = param0.worldToScreenY(((Point) (var7)).y, 0);
-            this.a(var4Lifetime1, 0, var3_intLifetime1, var6, var5);
+            this.drawDebugSegment(var4Lifetime1, 0, var3_intLifetime1, var6, var5);
             var7 = var7.previous;
           }
           return;
@@ -713,11 +713,11 @@ final class Zombie extends Mover {
         field_nb = null;
     }
 
-    final boolean y(int param0) {
+    final boolean applySpeedBoost(int param0) {
         Camera var3;
         if (param0 < 97) {
           var3 = (Camera) null;
-          this.a((byte) 118, (Camera) null);
+          this.draw((byte) 118, (Camera) null);
         }
         this.speedScale = 8;
         if (5 == this.state) {
@@ -730,21 +730,21 @@ final class Zombie extends Mover {
         return true;
     }
 
-    final boolean i(byte param0) {
+    final boolean isPlayerOwned(byte param0) {
         if (param0 != -126) {
           this.field_vb = 16;
         }
         return 0 == this.field_fb ? true : false;
     }
 
-    final void k(byte param0) {
+    final void markVictimSlowed(byte param0) {
         if (null != this.field_wb) {
           this.field_wb.field_kb = true;
         }
         int var2 = -123 % ((param0 + 31) / 37);
     }
 
-    final boolean n(byte param0) {
+    final boolean isBusy(byte param0) {
         boolean stackIn_16_0 = false;
         if (param0 != 25) {
           this.field_Cb = 21;
@@ -753,14 +753,14 @@ final class Zombie extends Mover {
         return stackIn_16_0;
     }
 
-    final void v(int param0) {
+    final void setDisguised(int param0) {
         if (param0 != -23221) {
           this.field_Ab = -49;
         }
         this.field_ob = true;
     }
 
-    final void q(byte param0) {
+    final void deselect(byte param0) {
         if (param0 > -91) {
           return;
         }
@@ -768,7 +768,7 @@ final class Zombie extends Mover {
         this.unlinkSecondary((byte) -67);
     }
 
-    final boolean m(byte param0) {
+    final boolean applyTough(byte param0) {
         if (0 < this.field_Ab) {
           return false;
         }
@@ -777,8 +777,8 @@ final class Zombie extends Mover {
         return true;
     }
 
-    final void k(int param0) {
-        this.z(param0);
+    final void kill(int param0) {
+        this.takeLethalHit(param0);
     }
 
     Zombie(int param0, int param1, int param2, int param3) {
@@ -810,7 +810,7 @@ final class Zombie extends Mover {
         }
     }
 
-    final boolean x(int param0) {
+    final boolean isVisibleToHumans(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 < 24) {
           return true;
@@ -819,8 +819,8 @@ final class Zombie extends Mover {
         return stackIn_6_0;
     }
 
-    final void c(int param0, int param1, int param2) {
-        if (this.n((byte) 25) &&
+    final void knockBackFrom(int param0, int param1, int param2) {
+        if (this.isBusy((byte) 25) &&
           this.state != 7) {
           return;
         }
@@ -850,9 +850,9 @@ final class Zombie extends Mover {
         }
     }
 
-    private final void a(int param0, int param1, boolean param2) {
+    private final void walkTo(int param0, int param1, boolean param2) {
         if (param2) {
-          this.C(-72);
+          this.startDisguise(-72);
         }
         if (this.field_V) {
           return;
@@ -863,7 +863,7 @@ final class Zombie extends Mover {
         this.setState(6, -6904);
     }
 
-    final void b(boolean param0) {
+    final void applyFear(boolean param0) {
         if (this.field_bb <= 0) {
         }
         if (!param0) {
@@ -873,7 +873,7 @@ final class Zombie extends Mover {
         this.field_ob = false;
     }
 
-    final void j(byte param0) {
+    final void repathToGoal(byte param0) {
         if (param0 != 82) {
           this.field_ib = -106;
         }
@@ -883,35 +883,35 @@ final class Zombie extends Mover {
         this.field_yb = Js5Archive.field_e.navigation.findPath(true, this.getX(true), this.field_lb.y, this.field_lb.x, this.getY(237239984));
     }
 
-    final boolean o(int param0) {
-        if (this.n((byte) 25)) {
+    final boolean startMeltdown(int param0) {
+        if (this.isBusy((byte) 25)) {
           return false;
         }
         if (param0 <= 33) {
-          this.f((byte) -56);
+          this.onGrabbed((byte) -56);
         }
         this.setState(17, -6904);
         return true;
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4) {
+    private final void drawDebugSegment(int param0, int param1, int param2, int param3, int param4) {
         if (param1 != 0) {
-          this.a(-104, -36, -28, 47, -27);
+          this.drawDebugSegment(-104, -36, -28, 47, -27);
         }
         int var6 = 16711935;
         Rasterizer.drawLine(param2, param0, param4, param3, var6);
         Rasterizer.fillCircle(param4, param3, 1, var6);
     }
 
-    final void r(int param0) {
+    final void select(int param0) {
         this.field_tb = true;
         this.field_ub = 0;
         if (param0 != -31340) {
-          this.A(56);
+          this.seekNearbyHumans(56);
         }
     }
 
-    final void B(int param0) {
+    final void followNextWaypoint(int param0) {
         Point var2;
         int var3;
         if (null != this.field_yb &&
@@ -929,16 +929,16 @@ final class Zombie extends Mover {
         this.setState(4, -6904);
     }
 
-    final void j(int param0) {
-        super.j(87);
+    final void freeze(int param0) {
+        super.freeze(87);
         if (param0 < 66) {
           this.field_Bb = 8;
         }
         this.setState(4, -6904);
-        this.q((byte) -125);
+        this.deselect((byte) -125);
     }
 
-    final void g(int param0) {
+    final void tick(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -964,8 +964,8 @@ final class Zombie extends Mover {
         va var9;
         int stackIn_21_0Lifetime1;
         var7 = ZombieDawn.field_J;
-        var9 = this.m(91);
-        this.d(this.state, -26109);
+        var9 = this.applyTileDrift(91);
+        this.advanceAnimation(this.state, -26109);
         if (this.field_bb > 0) {
           fieldTemp$0 = this.field_bb - 1;
           this.field_bb = this.field_bb - 1;
@@ -977,13 +977,13 @@ final class Zombie extends Mover {
           this.field_gb = this.field_gb - 1;
           if (fieldTemp$1 < 0) {
             this.field_gb = this.field_sb;
-            this.s(17304);
+            this.seekNearestHuman(17304);
           }
         }
         if (!this.field_eb) {
-          var8 = (kc) (rg.field_J.c((byte) 34));
+          var8 = (kc) (rg.field_J.first((byte) 34));
           while (var8 != null) {
-            stackOut_10_0 = var8.a(113, this);
+            stackOut_10_0 = var8.isZombieInBeam(113, this);
             stackIn_21_0 = stackOut_10_0 ? 1 : 0;
             stackIn_11_0 = stackOut_10_0;
             if (stackIn_11_0) {
@@ -999,16 +999,16 @@ final class Zombie extends Mover {
                 this.field_Gb = 0;
                 this.field_eb = true;
                 kh.a(95, false);
-                this.z(0);
+                this.takeLethalHit(0);
                 ck.a(-13, 6836);
               }
             }
-            var8 = (kc) (rg.field_J.a((byte) 116));
+            var8 = (kc) (rg.field_J.next((byte) 116));
           }
         }
         stackIn_21_0Lifetime1 = param0;
         if (stackIn_21_0Lifetime1 <= 95) {
-          this.s(16);
+          this.seekNearestHuman(16);
         }
         if (this.state != 4) {
           if (this.state == 5) {
@@ -1016,15 +1016,15 @@ final class Zombie extends Mover {
               this.field_Eb = this.field_Eb - 1;
             }
             boolean decompiledFrameRemainder1 = true;
-            this.q(1);
-            this.g((byte) -127);
+            this.wobbleVelocity(1);
+            this.applyVelocity((byte) -127);
             if (var9 != null) {
               if (var9.field_h * this.velocityX >= 0 &&
                 0 <= var9.field_i * this.velocityY && (0 != var9.field_h ||
                 var9.field_i != 0)) {
                 this.field_xb = this.field_xb + 1;
                 if (!(2250 >= this.field_xb)) {
-                  Js5Archive.field_e.a(240, 15, (byte) -23);
+                  Js5Archive.field_e.awardAchievement(240, 15, (byte) -23);
                 }
                 decompiledFrameRemainder1 = false;
               }
@@ -1032,28 +1032,28 @@ final class Zombie extends Mover {
                 this.field_xb = 0;
               }
             }
-            if (this.h((byte) -126) ||
+            if (this.stepTowardTarget((byte) -126) ||
               this.velocityX == 0 &&
               this.velocityY == 0) {
-              this.B(123);
+              this.followNextWaypoint(123);
             }
             if (this.field_tb &&
               this.field_ub < 128) {
               this.field_ub = this.field_ub + 8;
             }
-            this.A(-128);
+            this.seekNearbyHumans(-128);
           } else {
             if (6 == this.state) {
               if (this.field_Eb > 0) {
                 this.field_Eb = this.field_Eb - 1;
               }
-              this.g((byte) 64);
-              if (this.h((byte) -100) ||
+              this.applyVelocity((byte) 64);
+              if (this.stepTowardTarget((byte) -100) ||
                 0 == this.velocityX &&
                 this.velocityY == 0) {
                 this.setState(4, -6904);
               }
-              this.A(-96);
+              this.seekNearbyHumans(-96);
             } else {
               if (this.state == 21) {
                 fieldTemp$3 = this.field_zb - 1;
@@ -1061,8 +1061,8 @@ final class Zombie extends Mover {
                 if (fieldTemp$3 <= 0) {
                   this.field_zb = 35;
                   this.setState(4, -6904);
-                  this.j((byte) 82);
-                  this.B(41);
+                  this.repathToGoal((byte) 82);
+                  this.followNextWaypoint(41);
                 }
                 var3 = 16384;
                 if (this.targetY > (this.field_x >> 16)) {
@@ -1095,24 +1095,24 @@ final class Zombie extends Mover {
                           var5 = -var3 + this.getX(true);
                           var6 = this.getY(237239984) - var4;
                           if (var6 * var6 + var5 * var5 <= 6410 &&
-                            Js5Archive.field_e.navigation.a(var4, this.getY(237239984), var3, this.getX(true), 114) != -1) {
+                            Js5Archive.field_e.navigation.traceLineFromTo(var4, this.getY(237239984), var3, this.getX(true), 114) != -1) {
                             this.targetY = var4;
                             this.targetX = var3;
                             this.moveToward(0, 114688);
                           } else {
-                            this.j((byte) 82);
-                            this.B(-128);
+                            this.repathToGoal((byte) 82);
+                            this.followNextWaypoint(-128);
                           }
                         }
                         break regionExit1;
                       }
                     }
                     this.field_wb = null;
-                    this.j((byte) 82);
-                    this.B(-118);
+                    this.repathToGoal((byte) 82);
+                    this.followNextWaypoint(-118);
                   }
-                  this.g((byte) 44);
-                  this.A(-88);
+                  this.applyVelocity((byte) 44);
+                  this.seekNearbyHumans(-88);
                 } else {
                   if (this.state == 8) {
                     this.field_ob = false;
@@ -1120,7 +1120,7 @@ final class Zombie extends Mover {
                       2 == this.field_G) && 0 == this.field_N) {
                       var3 = 0;
                       if (0 == pb.a(so.random, 3, 1)) {
-                        if (this.field_wb.t(10)) {
+                        if (this.field_wb.isMaleVoice(10)) {
                           var3 = 40 + pb.a(so.random, 4, 1);
                         } else {
                           var3 = 37 + pb.a(so.random, 3, 1);
@@ -1128,12 +1128,12 @@ final class Zombie extends Mover {
                       } else {
                         var3 = pb.a(so.random, 5, 1) + 30;
                       }
-                      this.field_U = tp.$cfr$intArgs$b$3010b50b2764(71, var3);
+                      this.field_U = tp.playSoundEffect(71, var3);
                     }
                     fieldTemp$5 = this.field_zb - 1;
                     this.field_zb = this.field_zb - 1;
                     if (0 >= fieldTemp$5) {
-                      this.field_wb.o(-6253);
+                      this.field_wb.removeFromWorld(-6253);
                       stackIn_119_0 = Js5Archive.field_e;
                       stackIn_119_1 = this.field_fb;
                       stackIn_119_2 = this.field_wb;
@@ -1144,22 +1144,22 @@ final class Zombie extends Mover {
                       } else {
                         stackIn_120_5 = this.field_lb;
                       }
-                      ((GameWorld) (Object) stackIn_119_0).a(stackIn_119_1, stackIn_119_2, (byte) stackIn_119_3, stackIn_119_4, stackIn_120_5);
+                      ((GameWorld) (Object) stackIn_119_0).infectHuman(stackIn_119_1, stackIn_119_2, (byte) stackIn_119_3, stackIn_119_4, stackIn_120_5);
                       this.field_wb = null;
                       this.setState(4, -6904);
                       if (null != this.field_lb) {
-                        this.a(Js5Archive.field_e.navigation.findPath(true, this.getX(true), this.field_lb.y, this.field_lb.x, this.getY(237239984)), true);
+                        this.setPath(Js5Archive.field_e.navigation.findPath(true, this.getX(true), this.field_lb.y, this.field_lb.x, this.getY(237239984)), true);
                       }
                     } else {
                       if (this.field_zb == 30) {
-                        Js5Archive.field_e.a(this.field_wb.getY(237239984), false, 118, this.field_wb.getX(true));
+                        Js5Archive.field_e.addBloodSplatter(this.field_wb.getY(237239984), false, 118, this.field_wb.getX(true));
                       }
                     }
                   } else {
                     if (this.state != 9) {
                       if (this.state == 12) {
                         this.field_ob = false;
-                        this.g((byte) 23);
+                        this.applyVelocity((byte) 23);
                         stackIn_89_0 = (Js5Archive.field_e.navigation.isWalkable(false, this.getY(237239984), this.getX(true), true)) ? 0 : 1;
                         var3 = stackIn_89_0;
                         if (var3 != 0) {
@@ -1183,9 +1183,9 @@ final class Zombie extends Mover {
                           }
                         }
                         if (var3 != 0 ||
-                          this.h((byte) -11)) {
-                          this.j((byte) 82);
-                          this.B(27);
+                          this.stepTowardTarget((byte) -11)) {
+                          this.repathToGoal((byte) 82);
+                          this.followNextWaypoint(27);
                         }
                       } else {
                         if (this.state == 13) {
@@ -1195,7 +1195,7 @@ final class Zombie extends Mover {
                           if (2 == this.field_G) {
                             this.field_G = 0;
                             this.field_ob = false;
-                            Js5Archive.field_e.b(0, this.getY(237239984), true, this.getX(true));
+                            Js5Archive.field_e.addBlast(0, this.getY(237239984), true, this.getX(true));
                             this.setState(4, -6904);
                           }
                         } else {
@@ -1231,16 +1231,16 @@ final class Zombie extends Mover {
                               if (17 == this.state) {
                                 if (this.field_G == 3 &&
                                   this.field_N == 0) {
-                                  Js5Archive.field_e.c(this.getX(true), 54, this.getY(237239984));
+                                  Js5Archive.field_e.addGooPuddle(this.getX(true), 54, this.getY(237239984));
                                 }
                                 if (this.field_G == 7) {
-                                  Js5Archive.field_e.a(this, true);
+                                  Js5Archive.field_e.removeZombie(this, true);
                                 }
                               } else {
                                 if (this.state == 19 &&
                                   5 == this.field_G) {
                                   this.field_ob = true;
-                                  this.l((byte) -121);
+                                  this.clearFear((byte) -121);
                                   this.setState(4, -6904);
                                 }
                               }
@@ -1253,8 +1253,8 @@ final class Zombie extends Mover {
                         this.field_y = this.field_y + (this.field_Gb << 16);
                       }
                       if (this.field_G == 5) {
-                        Js5Archive.field_e.a(this.getY(237239984), this.field_eb, 111, this.getX(true));
-                        Js5Archive.field_e.a(this, true);
+                        Js5Archive.field_e.addBloodSplatter(this.getY(237239984), this.field_eb, 111, this.getX(true));
+                        Js5Archive.field_e.removeZombie(this, true);
                         if (this.field_rb != null) {
                           this.field_rb.c((byte) -64);
                           this.field_rb.unlink(-27598);
@@ -1290,17 +1290,17 @@ final class Zombie extends Mover {
             var3 = this.getX(true) - (-pb.a(so.random, 48, 1) + 24);
             var4 = this.getY(237239984) + (pb.a(so.random, 48, 1) - 24);
             if (Js5Archive.field_e.navigation.isWalkable(false, var4, var3, true)) {
-              this.a(var4, var3, false);
+              this.walkTo(var4, var3, false);
             } else {
               this.field_db = this.field_db + 1;
             }
           }
-          this.A(-108);
+          this.seekNearbyHumans(-108);
         }
     }
 
-    final boolean p(int param0) {
-        if (this.n((byte) 25)) {
+    final boolean startDetonate(int param0) {
+        if (this.isBusy((byte) 25)) {
           return false;
         }
         this.setState(13, -6904);

@@ -16,11 +16,11 @@ final class di extends hp implements hh {
         field_I = null;
         field_L = null;
         if (!param0) {
-          di.a(45, -46, -29, (byte) 68, 34);
+          di.setDialogFrameMetrics(45, -46, -29, (byte) 68, 34);
         }
     }
 
-    final static void a(PacketBuffer param0, int param1, int param2, PlatformTaskDispatcher param3) {
+    final static void readReflectionCheckRequest(PacketBuffer param0, int param1, int param2, PlatformTaskDispatcher param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -76,12 +76,12 @@ final class di extends hp implements hh {
                   var6_int != 2) {
                   if (var6_int == 3 ||
                     var6_int == 4) {
-                    var20 = param0.a(true);
-                    var21 = param0.a(true);
+                    var20 = param0.readNullTerminatedString(true);
+                    var21 = param0.readNullTerminatedString(true);
                     var9 = param0.readUnsignedByte((byte) -122);
                     var10 = new String[var9];
                     for (var11_int = 0; var9 > var11_int; var11_int++) {
-                      var10[var11_int] = param0.a(true);
+                      var10[var11_int] = param0.readNullTerminatedString(true);
                     }
                     var22 = new byte[var9][];
                     var19 = var22;
@@ -102,19 +102,19 @@ final class di extends hp implements hh {
                       var12[var17] = tm.b((byte) 72, var10[var17]);
                       var17++;
                     }
-                    var18.field_m[var5] = param3.a(var12, tm.b((byte) 89, var20), rd.b(param1, 225), var21);
+                    var18.field_m[var5] = param3.requestDeclaredMethod(var12, tm.b((byte) 89, var20), rd.b(param1, 225), var21);
                     var18.field_i[var5] = var22;
                   }
                 } else {
-                  var16 = param0.a(true);
-                  var15 = param0.a(true);
+                  var16 = param0.readNullTerminatedString(true);
+                  var15 = param0.readNullTerminatedString(true);
                   var9 = 0;
                   if (var6_int == 1) {
                     var9 = param0.readInt(101);
                   }
                   var18.field_h[var5] = var6_int;
                   var18.field_j[var5] = var9;
-                  var18.field_n[var5] = param3.a((byte) -113, var15, tm.b((byte) 70, var16));
+                  var18.field_n[var5] = param3.requestDeclaredField((byte) -113, var15, tm.b((byte) 70, var16));
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -165,7 +165,7 @@ final class di extends hp implements hh {
         }
     }
 
-    final static void a(int param0, int param1, int param2, byte param3, int param4) {
+    final static void setDialogFrameMetrics(int param0, int param1, int param2, byte param3, int param4) {
         SpatialObject.field_p = param0;
         ma.field_k = param4;
         pf.field_g = param1;
@@ -175,11 +175,11 @@ final class di extends hp implements hh {
         mh.field_G = param2;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         int var5 = this.field_k + param2;
         int var6 = this.field_j + param0;
         ia.field_e.drawParagraph(GameKeyHandler.field_b, 20 + var5, 20 + var6, this.field_i - 40, this.field_n - 50, 16777215, -1, 1, 0, ia.field_e.field_I);
-        super.a(param0, param1, param2, param3 + param3);
+        super.drawLayer(param0, param1, param2, param3 + param3);
     }
 
     public final void onButtonActivated(int param0, int param1, an param2, int param3, int param4) {
@@ -195,13 +195,13 @@ final class di extends hp implements hh {
             return;
           }
           if (this.field_H == param2) {
-            Js5Archive.a(109);
+            Js5Archive.showLoginDialog(109);
           } else {
             if (this.field_F == param2) {
-              vj.d(69);
+              vj.showAccountCreationDialog(69);
             } else {
               if (this.field_N == param2) {
-                jp.b((byte) -50);
+                jp.showUnreadMessagesDialog((byte) -50);
               }
             }
           }
@@ -234,14 +234,14 @@ final class di extends hp implements hh {
             return true;
           }
           if (param1 == 98) {
-            stackIn_6_0 = this.b((byte) 123, param2);
+            stackIn_6_0 = this.focusPreviousChild((byte) 123, param2);
             return stackIn_6_0;
           }
           var5_int = -79 % ((-83 - param0) / 32);
           if (99 != param1) {
             return false;
           }
-          stackIn_10_0 = this.a(1, param2);
+          stackIn_10_0 = this.focusNextChild(1, param2);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -269,20 +269,20 @@ final class di extends hp implements hh {
         int var2 = 4;
         int var3 = 326;
         int var4 = -var2 + var3 >> 1;
-        this.field_H.a(-90, -var2 + this.field_n - 48, -var3 + this.field_i >> 1, var4, 30);
-        this.field_N.a(33, this.field_n - 48 - var2, var2 + (var4 + (this.field_i - var3 >> 1)), var4, 30);
-        this.field_F.a(-85, -78 + this.field_n - var2 * 2, -var3 + this.field_i >> 1, var3, 30);
+        this.field_H.setBounds(-90, -var2 + this.field_n - 48, -var3 + this.field_i >> 1, var4, 30);
+        this.field_N.setBounds(33, this.field_n - 48 - var2, var2 + (var4 + (this.field_i - var3 >> 1)), var4, 30);
+        this.field_F.setBounds(-85, -78 + this.field_n - var2 * 2, -var3 + this.field_i >> 1, var3, 30);
         this.field_H.field_v = (sk) (this);
         this.field_F.field_v = (sk) (this);
         this.field_F.field_s = nk.field_f;
         this.field_N.field_v = (sk) (this);
         this.field_N.field_s = fo.field_c;
-        this.a(this.field_H, 10);
-        this.a(this.field_F, 10);
-        this.a(this.field_N, 10);
+        this.addChild(this.field_H, 10);
+        this.addChild(this.field_F, 10);
+        this.addChild(this.field_N, 10);
     }
 
-    final static v[] a(int param0) {
+    final static v[] buildIndexedSprites(int param0) {
         int var3 = 0;
         int var4 = ZombieDawn.field_J;
         v[] var1 = new v[t.field_h];
@@ -290,7 +290,7 @@ final class di extends hp implements hh {
         for (var3 = 0; t.field_h > var3; var3++) {
           var1[var3] = new v(gl.field_F, Zombie.field_pb, sl.field_d[var3], bo.field_o[var3], bn.field_c[var3], uf.field_n[var3], vj.field_m[var3], j.field_a);
         }
-        no.f((byte) -79);
+        no.clearSpriteDecodeBuffers((byte) -79);
         return var1;
     }
 

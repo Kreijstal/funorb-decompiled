@@ -15,7 +15,7 @@ final class ic extends tb implements mi {
         super(param0, param1, param2);
     }
 
-    final String d(int param0) {
+    final String getTooltip(int param0) {
         if (!this.field_l) {
           return null;
         }
@@ -27,22 +27,22 @@ final class ic extends tb implements mi {
         return null;
     }
 
-    public final vc a(int param0) {
+    public final vc getValidationSource(int param0) {
         if (param0 != 0) {
           String var3 = (String) null;
-          ic.a((String) null, -61, (String) null, 'ￌ');
+          ic.replaceCharacter((String) null, -61, (String) null, 'ￌ');
           return this.field_V;
         }
         return this.field_V;
     }
 
-    final void d(byte param0) {
+    final void notifyTextChanged(byte param0) {
         int var2 = 101 / ((-50 - param0) / 49);
-        super.d((byte) -124);
+        super.notifyTextChanged((byte) -124);
         if (this.field_V == null) {
           return;
         }
-        this.field_V.a(-7674);
+        this.field_V.restartDebounce(-7674);
     }
 
     public static void releaseStatics(int param0) {
@@ -55,7 +55,7 @@ final class ic extends tb implements mi {
         field_W = null;
     }
 
-    final static String a(String param0, byte param1, String param2, Js5Archive param3) {
+    final static String formatArchiveProgressText(String param0, byte param1, String param2, Js5Archive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         String stackIn_3_0 = null;
@@ -102,7 +102,7 @@ final class ic extends tb implements mi {
         }
     }
 
-    final static String a(String param0, int param1, String param2, char param3) {
+    final static String replaceCharacter(String param0, int param1, String param2, char param3) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -173,7 +173,7 @@ final class ic extends tb implements mi {
         }
     }
 
-    final void a(int param0, vc param1) {
+    final void setValidationSource(int param0, vc param1) {
         try {
           this.field_V = param1;
           int var3_int = -18 / ((param0 + 34) / 34);
@@ -182,7 +182,7 @@ final class ic extends tb implements mi {
         }
     }
 
-    final static boolean a(String param0, String param1, int param2) {
+    final static boolean containsForwardOrReversed(String param0, String param1, int param2) {
         String var3 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -193,8 +193,8 @@ final class ic extends tb implements mi {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param1 = ic.a("", param2 ^ param2, param1, '_');
-          var3 = am.a(param0, 1);
+          param1 = ic.replaceCharacter("", param2 ^ param2, param1, '_');
+          var3 = am.reverseString(param0, 1);
           stackIn_5_0 = (-1 != param1.indexOf(param0)) || (param1.indexOf(var3) != -1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -217,9 +217,9 @@ final class ic extends tb implements mi {
         }
     }
 
-    final void a(UiWidget param0, byte param1, int param2, int param3) {
+    final void updatePointer(UiWidget param0, byte param1, int param2, int param3) {
         try {
-          super.a(param0, (byte) 121, param2, param3);
+          super.updatePointer(param0, (byte) 121, param2, param3);
           int var5_int = -112 % ((46 - param1) / 42);
           this.field_R = -param3 + ha.field_b - this.field_k;
         } catch (RuntimeException runtimeException) {

@@ -11,7 +11,7 @@ final class dm extends DualLinkNode {
     private int[][] field_w;
     static int[] field_p;
 
-    final void a(PacketBuffer param0, int param1) {
+    final void decode(PacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -29,7 +29,7 @@ final class dm extends DualLinkNode {
             if (0 == var3_int) {
               return;
             }
-            this.a(param0, var3_int, -9604);
+            this.decodeOpcode(param0, var3_int, -9604);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -45,7 +45,7 @@ final class dm extends DualLinkNode {
         }
     }
 
-    final void d(byte param0) {
+    final void markGlobalPhraseIds(byte param0) {
         int var2 = 0;
         int var3 = ZombieDawn.field_J;
         if (this.field_u != null) {
@@ -58,14 +58,14 @@ final class dm extends DualLinkNode {
         }
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void drawDimmedOverlay(byte param0, boolean param1) {
         if (param0 != 80) {
           field_q = (String) null;
         }
-        uo.a(true, param0 - 28598, param1);
+        IsaacCipher.drawOverlayBackdrop(true, param0 - 28598, param1);
     }
 
-    final String e(int param0) {
+    final String getPreview(int param0) {
         int var3 = 0;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -86,17 +86,17 @@ final class dm extends DualLinkNode {
     dm() {
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_q = null;
         field_s = null;
         field_r = null;
         if (param0 != 3) {
-          dm.$cfr$intArgs$a$7ffe4b125357(-123, false);
+          dm.drawDimmedOverlayAt(-123, false);
         }
         field_p = null;
     }
 
-    private final void a(PacketBuffer param0, int param1, int param2) {
+    private final void decodeOpcode(PacketBuffer param0, int param1, int param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_23_0 = null;
@@ -112,16 +112,16 @@ final class dm extends DualLinkNode {
         var9 = ZombieDawn.field_J;
         try {
           if (param2 != -9604) {
-            this.e(58);
+            this.getPreview(58);
           }
           if (param1 == 1) {
-            this.field_t = PacketBuffer.split('<', param0.a(true), -123);
+            this.field_t = PacketBuffer.split('<', param0.readNullTerminatedString(true), -123);
           } else {
             if (param1 == 2) {
               var4_int = param0.readUnsignedByte((byte) -122);
               this.field_u = new int[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
-                this.field_u[var5] = param0.f(2);
+                this.field_u[var5] = param0.readUnsignedShort(2);
               }
             } else {
               if (param1 == 3) {
@@ -129,14 +129,14 @@ final class dm extends DualLinkNode {
                 this.field_v = new int[var4_int];
                 this.field_w = new int[var4_int][];
                 for (var5 = 0; var5 < var4_int; var5++) {
-                  var6 = param0.f(param2 ^ -9602);
+                  var6 = param0.readUnsignedShort(param2 ^ -9602);
                   var7 = cj.a(var6, 0);
                   if (var7 != null) {
                     this.field_v[var5] = var6;
                     array$0 = new int[var7.field_a];
                     this.field_w[var5] = array$0;
                     for (var8 = 0; var7.field_a > var8; var8++) {
-                      this.field_w[var5][var8] = param0.f(rd.b(param2, -9602));
+                      this.field_w[var5][var8] = param0.readUnsignedShort(rd.b(param2, -9602));
                     }
                   }
                 }
@@ -184,10 +184,10 @@ final class dm extends DualLinkNode {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$7ffe4b125357(int param0, boolean param1) {
+    final static void drawDimmedOverlayAt(int param0, boolean param1) {
         if (param0 != 80) {
           field_q = (String) null;
         }
-        uo.a(true, param0 - 28598, param1);
+        IsaacCipher.drawOverlayBackdrop(true, param0 - 28598, param1);
     }
 }

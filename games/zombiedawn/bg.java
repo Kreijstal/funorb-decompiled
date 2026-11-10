@@ -105,10 +105,10 @@ final class bg extends IntrusiveNode {
             dp.field_e.position = 0;
             ba.field_g = null;
             if (param3 == null) {
-              dh.field_e.position = 0;
-              dh.field_e.writeInt(-127, p.field_b.nextInt());
-              dh.field_e.writeInt(-119, p.field_b.nextInt());
-              stackIn_20_0 = dh.field_e;
+              RasterBuffer.field_e.position = 0;
+              RasterBuffer.field_e.writeInt(-127, p.field_b.nextInt());
+              RasterBuffer.field_e.writeInt(-119, p.field_b.nextInt());
+              stackIn_20_0 = RasterBuffer.field_e;
               stackIn_20_1 = -88;
               if (!param2.b(32)) {
                 stackIn_21_2 = "";
@@ -116,7 +116,7 @@ final class bg extends IntrusiveNode {
                 stackIn_21_2 = var14;
               }
               ((PacketBuffer) (Object) stackIn_20_0).writeTerminatedStringWithHeader((byte) stackIn_20_1, stackIn_21_2);
-              stackIn_23_0 = dh.field_e;
+              stackIn_23_0 = RasterBuffer.field_e;
               stackIn_23_1 = -88;
               if (!param4.b(param0 ^ 73)) {
                 stackIn_24_2 = "";
@@ -127,23 +127,23 @@ final class bg extends IntrusiveNode {
               dp.field_e.writeByte(16, 64);
               dp.field_e.position = dp.field_e.position + 1;
               var9 = dp.field_e.position;
-              ab.a(dh.field_e, pm.field_c, (byte) 108, dp.field_e, pj.field_p);
+              ab.writeRsaEncryptedBlock(RasterBuffer.field_e, pm.field_c, (byte) 108, dp.field_e, pj.field_p);
               dp.field_e.writeLengthPrefixByte(param0 - 211, -var9 + dp.field_e.position);
             } else {
               var9 = 0;
-              dh.field_e.position = 0;
+              RasterBuffer.field_e.position = 0;
               if (param6) {
                 var9 = var9 | 1;
               }
-              dh.field_e.writeInt(23, p.field_b.nextInt());
-              dh.field_e.writeInt(-117, p.field_b.nextInt());
-              dh.field_e.writeTerminatedStringWithHeader((byte) -88, var14);
-              dh.field_e.writeTerminatedStringWithHeader((byte) -88, var8);
+              RasterBuffer.field_e.writeInt(23, p.field_b.nextInt());
+              RasterBuffer.field_e.writeInt(-117, p.field_b.nextInt());
+              RasterBuffer.field_e.writeTerminatedStringWithHeader((byte) -88, var14);
+              RasterBuffer.field_e.writeTerminatedStringWithHeader((byte) -88, var8);
               var15 = (CharSequence) ((Object) param3);
-              dh.field_e.writeTerminatedStringWithHeader((byte) -88, qb.a(-122, var15));
-              dh.field_e.writeShort(param5, (byte) 105);
-              dh.field_e.writeByte(param1, 53);
-              dh.field_e.writeByte(var9, 66);
+              RasterBuffer.field_e.writeTerminatedStringWithHeader((byte) -88, qb.a(-122, var15));
+              RasterBuffer.field_e.writeShort(param5, (byte) 105);
+              RasterBuffer.field_e.writeByte(param1, 53);
+              RasterBuffer.field_e.writeByte(var9, 66);
               dp.field_e.writeByte(18, 125);
               dp.field_e.position = dp.field_e.position + 2;
               var10 = dp.field_e.position;
@@ -152,7 +152,7 @@ final class bg extends IntrusiveNode {
                 var11_ref_StringLifetime4 = "";
               }
               dp.field_e.writeTerminatedString(param0 + 23, var11_ref_StringLifetime4);
-              ab.a(dh.field_e, pm.field_c, (byte) -109, dp.field_e, pj.field_p);
+              ab.writeRsaEncryptedBlock(RasterBuffer.field_e, pm.field_c, (byte) -109, dp.field_e, pj.field_p);
               dp.field_e.writeLengthPrefixShort(57, -var10 + dp.field_e.position);
             }
             vl.a((byte) -46, -1);
@@ -189,7 +189,7 @@ final class bg extends IntrusiveNode {
           if (og.field_B == ic.field_T) {
             var9Lifetime2 = 2;
             if (ck.a((byte) -128, var9Lifetime2)) {
-              var10Lifetime1 = fj.field_g.f(param0 ^ 107);
+              var10Lifetime1 = fj.field_g.readUnsignedShort(param0 ^ 107);
               fj.field_g.position = 0;
               if (ck.a((byte) -100, var10Lifetime1)) {
                 var11 = ho.field_a.length;
@@ -206,11 +206,11 @@ final class bg extends IntrusiveNode {
           if (qo.field_w == ic.field_T &&
             nn.a(-2887)) {
             if (l.field_d != 255) {
-              sc.field_d = fj.field_g.a(true);
+              sc.field_d = fj.field_g.readNullTerminatedString(true);
             } else {
-              var9_ref_String = fj.field_g.h(-1);
+              var9_ref_String = fj.field_g.readOptionalString(-1);
               if (var9_ref_String != null) {
-                qg.a(165, hc.a(0), var9_ref_String);
+                SocketConnector.writeSettingsCookie(165, hc.a(0), var9_ref_String);
               }
             }
             p.a(1);

@@ -13,10 +13,10 @@ final class gb extends WorldObject {
         this.field_E = 0;
         this.field_D = pb.a(so.random, 5, 1);
         this.field_F = true;
-        this.d((byte) 121);
+        this.updateGridCell((byte) 121);
     }
 
-    final void a(byte param0, Camera param1) {
+    final void draw(byte param0, Camera param1) {
         int var11 = 0;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
@@ -39,7 +39,7 @@ final class gb extends WorldObject {
         try {
           if (param0 > -76) {
             var15 = (Js5Archive) null;
-            gb.a((String) null, -100, (Js5Archive) null, (String) null, (Js5Archive) null);
+            gb.loadGlyphFontByName((String) null, -100, (Js5Archive) null, (String) null, (Js5Archive) null);
           }
           var3_int = 0;
           if (this.field_F) {
@@ -101,7 +101,7 @@ final class gb extends WorldObject {
         }
     }
 
-    final static oi a(String param0, int param1, Js5Archive param2, String param3, Js5Archive param4) {
+    final static oi loadGlyphFontByName(String param0, int param1, Js5Archive param2, String param3, Js5Archive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -118,10 +118,10 @@ final class gb extends WorldObject {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param4.a(param3, (byte) 8);
-          var6 = param4.a(var5_int, param0, true);
+          var5_int = param4.getGroupIdByName(param3, (byte) 8);
+          var6 = param4.getFileIdByName(var5_int, param0, true);
           if (param1 == -1) {
-            stackIn_4_0 = la.a(param2, var6, param4, (byte) -126, var5_int);
+            stackIn_4_0 = FullscreenFocusCanvas.loadBinaryFont(param2, var6, param4, (byte) -126, var5_int);
             return stackIn_4_0;
           }
           stackIn_2_0 = (oi) null;
@@ -158,7 +158,7 @@ final class gb extends WorldObject {
         }
     }
 
-    final void g(int param0) {
+    final void tick(int param0) {
         int fieldTemp$0 = 0;
         int var2;
         int var3;
@@ -177,7 +177,7 @@ final class gb extends WorldObject {
             var3 >= 0 &&
             Js5Archive.field_e.navigation.field_A.tiles[0].length > var2 &&
             Js5Archive.field_e.navigation.field_A.tiles.length > var3) {
-            var4 = ub.a(127, Js5Archive.field_e.navigation.field_A.tiles[var3][var2]);
+            var4 = ub.findAnimatedTile(127, Js5Archive.field_e.navigation.field_A.tiles[var3][var2]);
             if ((var4 != null)) {
               if (0 <= var4.field_h) {
                 if (var4.field_h <= 0) {
@@ -218,7 +218,7 @@ final class gb extends WorldObject {
                   this.field_x = this.field_x + (-var5Lifetime1 - 1);
                 }
               }
-              this.d((byte) 120);
+              this.updateGridCell((byte) 120);
             }
             decompiledFrameRemainder0 = false;
           }
@@ -229,7 +229,7 @@ final class gb extends WorldObject {
         this.field_E = this.field_E + 1;
         if (param0 < 95) {
           var7 = (Js5Archive) null;
-          gb.a((String) null, 58, (Js5Archive) null, (String) null, (Js5Archive) null);
+          gb.loadGlyphFontByName((String) null, 58, (Js5Archive) null, (String) null, (Js5Archive) null);
         }
         if (this.field_E >= 120) {
           this.field_E = 0;
@@ -238,9 +238,9 @@ final class gb extends WorldObject {
         this.field_D = this.field_D + 1;
         if (fieldTemp$0 > 5) {
           this.field_D = 0;
-          var8 = (Zombie) (this.a((byte) -74, 36, 2));
+          var8 = (Zombie) (this.firstNearbyObject((byte) -74, 36, 2));
           while (var8 != null) {
-            if (var8.i((byte) -126) &&
+            if (var8.isPlayerOwned((byte) -126) &&
               Js5Archive.field_e.field_Q.b(-4149, this.field_t)) {
               kh.a(9, false);
               ck.a(this.field_t, 6836);
@@ -252,15 +252,15 @@ final class gb extends WorldObject {
                 } else {
                   if (cm.field_c == var8 &&
                     this.field_t == 0 &&
-                    !var8.x(124)) {
-                    Js5Archive.field_e.a(241, 14, (byte) -23);
+                    !var8.isVisibleToHumans(124)) {
+                    Js5Archive.field_e.awardAchievement(241, 14, (byte) -23);
                   }
                 }
               }
               this.unlink(-27598);
               return;
             }
-            var8 = (Zombie) (this.e((byte) 32));
+            var8 = (Zombie) (this.nextNearbyObject((byte) 32));
           }
         }
     }

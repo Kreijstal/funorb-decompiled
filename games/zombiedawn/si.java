@@ -12,12 +12,12 @@ final class si extends qk {
     private int field_Vb;
     private Zombie field_Ob;
 
-    final static void x(int param0) {
+    final static void resetConnectionState(int param0) {
         SpatialBucket.field_c.field_h = 0;
         SpatialBucket.field_c.field_e = param0;
     }
 
-    final void g(int param0) {
+    final void tick(int param0) {
         int fieldTemp$7 = 0;
         int fieldTemp$8 = 0;
         int fieldTemp$13 = 0;
@@ -34,14 +34,14 @@ final class si extends qk {
         int fieldTemp$3 = 0;
         int var3;
         var3 = ZombieDawn.field_J;
-        super.g(109);
+        super.tick(109);
         if (this.field_Ab <= 0) {
           return;
         }
         if (param0 >= 95) {
           if (this.state == 0) {
             if (this.field_Ob != null) {
-              this.o((byte) 71);
+              this.chaseTarget((byte) 71);
               return;
             }
             fieldTemp$7 = this.field_Pb;
@@ -49,7 +49,7 @@ final class si extends qk {
             if (5 > fieldTemp$7) {
               return;
             }
-            this.z(124);
+            this.chooseChaseTarget(124);
             this.field_Pb = 0;
             return;
           }
@@ -68,11 +68,11 @@ final class si extends qk {
             if (fieldTemp$13 < 4) {
               return;
             }
-            this.l((byte) 52);
+            this.updateBehaviour((byte) 52);
             this.field_Tb = 0;
             return;
           }
-          this.o((byte) 71);
+          this.chaseTarget((byte) 71);
           this.field_Pb = 0;
           if (this.field_U == null) {
             if (0L != tp.field_p % 3L) {
@@ -81,7 +81,7 @@ final class si extends qk {
               if (fieldTemp$10 < 4) {
                 return;
               }
-              this.l((byte) 52);
+              this.updateBehaviour((byte) 52);
               this.field_Tb = 0;
               return;
             }
@@ -91,7 +91,7 @@ final class si extends qk {
             if (fieldTemp$9 < 4) {
               return;
             }
-            this.l((byte) 52);
+            this.updateBehaviour((byte) 52);
             this.field_Tb = 0;
             return;
           }
@@ -101,7 +101,7 @@ final class si extends qk {
             if (fieldTemp$12 < 4) {
               return;
             }
-            this.l((byte) 52);
+            this.updateBehaviour((byte) 52);
             this.field_Tb = 0;
             return;
           }
@@ -113,14 +113,14 @@ final class si extends qk {
           if (fieldTemp$11 < 4) {
             return;
           }
-          this.l((byte) 52);
+          this.updateBehaviour((byte) 52);
           this.field_Tb = 0;
           return;
         }
         field_Rb = 94;
         if (this.state == 0) {
           if (this.field_Ob != null) {
-            this.o((byte) 71);
+            this.chaseTarget((byte) 71);
             return;
           }
           fieldTemp$0 = this.field_Pb;
@@ -128,7 +128,7 @@ final class si extends qk {
           if (5 > fieldTemp$0) {
             return;
           }
-          this.z(124);
+          this.chooseChaseTarget(124);
           this.field_Pb = 0;
           return;
         }
@@ -147,11 +147,11 @@ final class si extends qk {
           if (fieldTemp$6 < 4) {
             return;
           }
-          this.l((byte) 52);
+          this.updateBehaviour((byte) 52);
           this.field_Tb = 0;
           return;
         }
-        this.o((byte) 71);
+        this.chaseTarget((byte) 71);
         this.field_Pb = 0;
         if (this.field_U == null) {
           if (0L != tp.field_p % 3L) {
@@ -160,7 +160,7 @@ final class si extends qk {
             if (fieldTemp$4 < 4) {
               return;
             }
-            this.l((byte) 52);
+            this.updateBehaviour((byte) 52);
             this.field_Tb = 0;
             return;
           }
@@ -170,7 +170,7 @@ final class si extends qk {
           if (fieldTemp$5 < 4) {
             return;
           }
-          this.l((byte) 52);
+          this.updateBehaviour((byte) 52);
           this.field_Tb = 0;
           return;
         }
@@ -182,7 +182,7 @@ final class si extends qk {
           if (fieldTemp$2 < 4) {
             return;
           }
-          this.l((byte) 52);
+          this.updateBehaviour((byte) 52);
           this.field_Tb = 0;
           return;
         }
@@ -191,12 +191,12 @@ final class si extends qk {
         if (fieldTemp$3 < 4) {
           return;
         }
-        this.l((byte) 52);
+        this.updateBehaviour((byte) 52);
         this.field_Tb = 0;
         return;
     }
 
-    private final void z(int param0) {
+    private final void chooseChaseTarget(int param0) {
         Object var2;
         Object var3;
         int var4;
@@ -218,18 +218,18 @@ final class si extends qk {
           this.field_yb = null;
         }
         if (this.field_Ob != null) {
-          this.y(126);
+          this.releaseChaseTarget(126);
           var2 = null;
           if (param0 < 113) {
             var9 = (Js5Archive) null;
-            si.a(50, 105, (Js5Archive) null, -55);
+            si.loadArchiveSprite(50, 105, (Js5Archive) null, -55);
           }
           var3 = null;
           var4 = -1;
           var5 = -1;
-          var6_ref = (Zombie) (this.a((byte) -74, this.field_Sb, 2));
+          var6_ref = (Zombie) (this.firstNearbyObject((byte) -74, this.field_Sb, 2));
           while (var6_ref != null) {
-            if (var6_ref.x(33)) {
+            if (var6_ref.isVisibleToHumans(33)) {
               var10 = Js5Archive.field_e.navigation.findPath(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
               if (var10 != null) {
                 if (!(var10.field_g <= var4) ||
@@ -238,7 +238,7 @@ final class si extends qk {
                   var2 = var6_ref;
                 }
                 if (0 != var6_ref.field_Bb) {
-                  var6_ref = (Zombie) (this.e((byte) 32));
+                  var6_ref = (Zombie) (this.nextNearbyObject((byte) 32));
                   continue;
                 }
                 if (!(var10.field_g <= var5) ||
@@ -248,15 +248,15 @@ final class si extends qk {
                 }
               }
             }
-            var6_ref = (Zombie) (this.e((byte) 32));
+            var6_ref = (Zombie) (this.nextNearbyObject((byte) 32));
           }
           if (var3 != null) {
-            this.a(-123, (Zombie) (var3));
+            this.setChaseTarget(-123, (Zombie) (var3));
           } else {
             if (var2 != null) {
-              this.a(-48, (Zombie) (var2));
+              this.setChaseTarget(-48, (Zombie) (var2));
             } else {
-              this.y(124);
+              this.releaseChaseTarget(124);
             }
           }
         } else {
@@ -265,9 +265,9 @@ final class si extends qk {
             var3 = null;
             var4 = -1;
             var5 = -1;
-            var6_ref = (Zombie) (this.a((byte) -74, this.field_Sb, 2));
+            var6_ref = (Zombie) (this.firstNearbyObject((byte) -74, this.field_Sb, 2));
             while (var6_ref != null) {
-              if (var6_ref.x(33)) {
+              if (var6_ref.isVisibleToHumans(33)) {
                 var11 = Js5Archive.field_e.navigation.findPath(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
                 if (var11 != null) {
                   if (!(var11.field_g <= var4) ||
@@ -276,7 +276,7 @@ final class si extends qk {
                     var2 = var6_ref;
                   }
                   if (0 != var6_ref.field_Bb) {
-                    var6_ref = (Zombie) (this.e((byte) 32));
+                    var6_ref = (Zombie) (this.nextNearbyObject((byte) 32));
                     continue;
                   }
                   if (!(var11.field_g <= var5) ||
@@ -286,26 +286,26 @@ final class si extends qk {
                   }
                 }
               }
-              var6_ref = (Zombie) (this.e((byte) 32));
+              var6_ref = (Zombie) (this.nextNearbyObject((byte) 32));
             }
             if (var3 != null) {
-              this.a(-123, (Zombie) (var3));
+              this.setChaseTarget(-123, (Zombie) (var3));
             } else {
               if (var2 == null) {
-                this.y(124);
+                this.releaseChaseTarget(124);
               } else {
-                this.a(-48, (Zombie) (var2));
+                this.setChaseTarget(-48, (Zombie) (var2));
               }
             }
           } else {
             var9 = (Js5Archive) null;
-            si.a(50, 105, (Js5Archive) null, -55);
+            si.loadArchiveSprite(50, 105, (Js5Archive) null, -55);
             var3 = null;
             var4 = -1;
             var5 = -1;
-            var6_ref = (Zombie) (this.a((byte) -74, this.field_Sb, 2));
+            var6_ref = (Zombie) (this.firstNearbyObject((byte) -74, this.field_Sb, 2));
             while (var6_ref != null) {
-              if (var6_ref.x(33)) {
+              if (var6_ref.isVisibleToHumans(33)) {
                 var18 = Js5Archive.field_e.navigation.findPath(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
                 if (var18 != null) {
                   if (!(var18.field_g <= var4) ||
@@ -314,7 +314,7 @@ final class si extends qk {
                     var2 = var6_ref;
                   }
                   if (0 != var6_ref.field_Bb) {
-                    var6_ref = (Zombie) (this.e((byte) 32));
+                    var6_ref = (Zombie) (this.nextNearbyObject((byte) 32));
                     continue;
                   }
                   if (!(var18.field_g <= var5) ||
@@ -324,25 +324,25 @@ final class si extends qk {
                   }
                 }
               }
-              var6_ref = (Zombie) (this.e((byte) 32));
+              var6_ref = (Zombie) (this.nextNearbyObject((byte) 32));
             }
             if (var3 != null) {
-              this.a(-123, (Zombie) (var3));
+              this.setChaseTarget(-123, (Zombie) (var3));
             } else {
               if (var2 != null) {
-                this.a(-48, (Zombie) (var2));
+                this.setChaseTarget(-48, (Zombie) (var2));
               } else {
-                this.y(124);
+                this.releaseChaseTarget(124);
               }
             }
           }
         }
         if (null != this.field_Ob) {
-          this.o((byte) 71);
+          this.chaseTarget((byte) 71);
         }
     }
 
-    private final void a(int param0, Zombie param1) {
+    private final void setChaseTarget(int param0, Zombie param1) {
         int var3_int = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -373,7 +373,7 @@ final class si extends qk {
         }
     }
 
-    final void a(Camera param0, int param1) {
+    final void drawDebugOverlay(Camera param0, int param1) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -413,7 +413,7 @@ final class si extends qk {
         }
     }
 
-    final static Sprite a(int param0, int param1, Js5Archive param2, int param3) {
+    final static Sprite loadArchiveSprite(int param0, int param1, Js5Archive param2, int param3) {
         RuntimeException var4 = null;
         Js5Archive var5 = null;
         RuntimeException stackIn_8_0 = null;
@@ -423,10 +423,10 @@ final class si extends qk {
         try {
           if (param3 != 48) {
             var5 = (Js5Archive) null;
-            si.a(-109, -74, (Js5Archive) null, 70);
+            si.loadArchiveSprite(-109, -74, (Js5Archive) null, 70);
           }
           if (ph.a(param1, param3 + 30995, param0, param2)) {
-            return fg.d(-127);
+            return fg.buildFirstDecodedSprite(-127);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -443,15 +443,15 @@ final class si extends qk {
         }
     }
 
-    final void o(int param0) {
-        this.y(param0 ^ -6269);
-        super.o(param0 ^ 0);
+    final void removeFromWorld(int param0) {
+        this.releaseChaseTarget(param0 ^ -6269);
+        super.removeFromWorld(param0 ^ 0);
         if (param0 != -6253) {
-          this.o(114);
+          this.removeFromWorld(114);
         }
     }
 
-    private final void y(int param0) {
+    private final void releaseChaseTarget(int param0) {
         if (this.field_Ob != null) {
           this.field_Ob.field_Bb = this.field_Ob.field_Bb - 1;
         }
@@ -463,12 +463,12 @@ final class si extends qk {
         this.field_Ob = null;
     }
 
-    private final void o(byte param0) {
+    private final void chaseTarget(byte param0) {
         if (this.field_Ob != null) {
-          this.a(this.field_Ob.getX(true), (byte) 121, this.field_Ob.getY(237239984));
+          this.runToward(this.field_Ob.getX(true), (byte) 121, this.field_Ob.getY(237239984));
           this.moveToward(0, this.field_D / 2);
           if (param0 != 71) {
-            this.o(28);
+            this.removeFromWorld(28);
           }
           return;
         }
@@ -483,19 +483,19 @@ final class si extends qk {
         this.field_Nb = this.field_Vb / 4;
     }
 
-    final void l(byte param0) {
+    final void updateBehaviour(byte param0) {
         int var3;
         var3 = ZombieDawn.field_J;
         if (this.field_Ab < 0) {
-          super.l((byte) 52);
+          super.updateBehaviour((byte) 52);
           return;
         }
-        if (!this.a(param0 ^ -9, this.field_Vb, false)) {
+        if (!this.findNearestTarget(param0 ^ -9, this.field_Vb, false)) {
           if (null == this.field_Ob) {
-            this.z(param0 ^ 76);
+            this.chooseChaseTarget(param0 ^ 76);
           } else {
             if (this.field_Ob.state == 9) {
-              this.z(param0 ^ 76);
+              this.chooseChaseTarget(param0 ^ 76);
             }
           }
           if (null == this.field_Ob &&
@@ -505,9 +505,9 @@ final class si extends qk {
         } else {
           if (!this.field_fb) {
             if (this.field_mb < this.field_Nb * this.field_Nb) {
-              if (!this.p(5)) {
-                this.m((byte) -94);
-                this.y(100);
+              if (!this.startFleeing(5)) {
+                this.aimAtNearestZombie((byte) -94);
+                this.releaseChaseTarget(100);
               } else {
                 if (this.state == 3) {
                   this.setState(0, -6904);
@@ -518,8 +518,8 @@ final class si extends qk {
                 }
               }
             } else {
-              this.m((byte) -98);
-              this.y(59);
+              this.aimAtNearestZombie((byte) -98);
+              this.releaseChaseTarget(59);
             }
           } else {
             if (this.state != 3) {
@@ -531,7 +531,7 @@ final class si extends qk {
                 }
               }
             }
-            if (!this.p(-125)) {
+            if (!this.startFleeing(-125)) {
               this.setState(3, -6904);
             }
           }

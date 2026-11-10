@@ -36,7 +36,7 @@ final class qd {
         bo.field_i = true;
         oc.field_c = -1.0f;
         i.field_V = 0.0f;
-        lg.a(4, (byte) -78);
+        ViewportController.spawnCutsceneZombies(4, (byte) -78);
         wo.field_wb = false;
     }
 

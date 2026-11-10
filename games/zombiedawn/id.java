@@ -17,12 +17,12 @@ class id extends WorldObject {
     static String field_L;
     static int field_M;
 
-    final boolean a(boolean param0, boolean param1) {
+    final boolean shatterIfFragile(boolean param0, boolean param1) {
         int var3 = 0;
         int var4 = ZombieDawn.field_J;
         if (!param0) {
           Camera var5 = (Camera) null;
-          this.a((byte) -30, (Camera) null);
+          this.draw((byte) -30, (Camera) null);
         }
         for (var3 = 0; var3 < tl.field_g.length; var3++) {
           if (this.field_F == tl.field_g[var3]) {
@@ -41,7 +41,7 @@ class id extends WorldObject {
         return false;
     }
 
-    void a(byte param0, Camera param1) {
+    void draw(byte param0, Camera param1) {
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
         String stackIn_46_2 = null;
@@ -53,7 +53,7 @@ class id extends WorldObject {
         var5 = ZombieDawn.field_J;
         try {
           if (param0 > -76) {
-            this.b(true);
+            this.openDoor(true);
           }
           var3_int = param1.worldToScreenX(this.getX(true), (byte) -118);
           var4 = param1.worldToScreenY(this.getY(237239984), 0) - 24;
@@ -111,7 +111,7 @@ class id extends WorldObject {
             }
           }
           if (kc.field_Q) {
-            pc.field_k.drawStringCentered(s.a(1938762664, "<%0>,<%1>", new String[]{Integer.toString(this.field_B), Integer.toString(this.field_u)}), 12 + var3_int, -5 + var4, 16777215, 0);
+            Js5Transport.field_k.drawStringCentered(s.a(1938762664, "<%0>,<%1>", new String[]{Integer.toString(this.field_B), Integer.toString(this.field_u)}), 12 + var3_int, -5 + var4, 16777215, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -135,7 +135,7 @@ class id extends WorldObject {
         field_L = null;
     }
 
-    private final void b(boolean param0) {
+    private final void openDoor(boolean param0) {
         IntrusiveNode var2;
         int var3;
         int var4;
@@ -167,18 +167,18 @@ class id extends WorldObject {
           var4--;
         }
         var6.field_A.tiles[var4][var3] = eg.a(var6.field_A.tiles[var4][var3], -33554433);
-        var7.field_A.a(param0, 14365, var4, false, var3);
+        var7.field_A.setCellOpen(param0, 14365, var4, false, var3);
         var6.field_A.field_t[var4 - 1][var3] = eg.a(var6.field_A.field_t[var4 - 1][var3], -33554433);
         if (this.field_O) {
           var6.field_A.tiles[-1 + var4][var3] = eg.a(var6.field_A.tiles[-1 + var4][var3], -33554433);
-          var7.field_A.a(true, 14365, -1 + var4, false, var3);
+          var7.field_A.setCellOpen(true, 14365, -1 + var4, false, var3);
           var6.field_A.field_t[var4 - 1][var3] = eg.a(var6.field_A.field_t[var4 - 1][var3], -33554433);
         }
         this.field_F = this.field_F + 1;
         return;
     }
 
-    static long a(long param0, long param1) {
+    static long bitOr(long param0, long param1) {
         return param0 | param1;
     }
 
@@ -223,7 +223,7 @@ class id extends WorldObject {
         }
     }
 
-    void g(int param0) {
+    void tick(int param0) {
         int stackIn_36_0 = 0;
         int stackIn_36_1 = 0;
         int var2;
@@ -255,7 +255,7 @@ class id extends WorldObject {
               0 != pb.a(so.random, 25, 1)) {
               break;
             }
-            if (!this.a(true, true)) {
+            if (!this.shatterIfFragile(true, true)) {
               break;
             }
             var3 = this.getX(true) / 24;
@@ -265,13 +265,13 @@ class id extends WorldObject {
             }
             Js5Archive.field_e.navigation.field_A.tiles[var4_int][var3] = eg.a(Js5Archive.field_e.navigation.field_A.tiles[var4_int][var3], -33554433);
             Js5Archive.field_e.navigation.field_A.tiles[-1 + var4_int][var3] = eg.a(Js5Archive.field_e.navigation.field_A.tiles[-1 + var4_int][var3], -33554433);
-            Js5Archive.field_e.navigation.field_A.a(true, 14365, var4_int, false, var3);
-            Js5Archive.field_e.navigation.field_A.a(true, 14365, var4_int - 1, false, var3);
+            Js5Archive.field_e.navigation.field_A.setCellOpen(true, 14365, var4_int, false, var3);
+            Js5Archive.field_e.navigation.field_A.setCellOpen(true, 14365, var4_int - 1, false, var3);
             if (pb.a(so.random, 2, 1) != 0) {
               break;
             }
             if (null != this.field_K) {
-              pc.a((byte) 13, this.field_K);
+              Js5Transport.stopSoundEffect((byte) 13, this.field_K);
             }
             this.field_K = kh.a(pb.a(so.random, 2, 1) + 64, false);
             break;
@@ -279,26 +279,26 @@ class id extends WorldObject {
         }
         if (this.field_z > 0) {
           this.field_E = this.field_z;
-          var2_ref_fb = this.a((byte) -74, 50, 1);
+          var2_ref_fb = this.firstNearbyObject((byte) -74, 50, 1);
           while (var2_ref_fb != null) {
             if (~var2_ref_fb.field_z == ~this.field_z &&
-              this.a(var2_ref_fb, 1654152400) < 2500) {
+              this.distanceSquaredTo(var2_ref_fb, 1654152400) < 2500) {
               var3Lifetime1 = this.field_z;
               ck.a(-9, 6836);
               kh.a(93, false);
               kh.a(94, false);
-              var4 = this.a((byte) -74, 48, 4);
+              var4 = this.firstNearbyObject((byte) -74, 48, 4);
               while (var4 != null) {
                 if (var3Lifetime1 == var4.field_z) {
-                  ((id) (var4)).b(true);
+                  ((id) (var4)).openDoor(true);
                 }
-                var4 = this.e((byte) 32);
+                var4 = this.nextNearbyObject((byte) 32);
               }
-              Js5Archive.field_e.b(true);
+              Js5Archive.field_e.onWallsChanged(true);
               wh.a((byte) -81);
               break;
             }
-            var2_ref_fb = this.e((byte) 32);
+            var2_ref_fb = this.nextNearbyObject((byte) 32);
           }
         }
         boolean decompiledFrameRemainder0 = true;
@@ -311,7 +311,7 @@ class id extends WorldObject {
             0 <= var3Lifetime2 &&
             var2Lifetime1 < Js5Archive.field_e.navigation.field_A.tiles[0].length &&
             var3Lifetime2 < Js5Archive.field_e.navigation.field_A.tiles.length) {
-            var7 = ub.a(127, Js5Archive.field_e.navigation.field_A.tiles[var3Lifetime2][var2Lifetime1]);
+            var7 = ub.findAnimatedTile(127, Js5Archive.field_e.navigation.field_A.tiles[var3Lifetime2][var2Lifetime1]);
             if ((var7 != null)) {
               if (var7.field_h >= 0) {
                 if (var7.field_h <= 0) {

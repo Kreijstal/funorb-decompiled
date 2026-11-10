@@ -11,11 +11,11 @@ final class q extends pa {
     static Font field_H;
     private int field_I;
 
-    final String d(int param0) {
+    final String getTooltip(int param0) {
         int var3 = 50 % ((10 - param0) / 58);
         int var2 = this.field_z.field_l ? 1 : 0;
         this.field_z.field_l = this.field_l;
-        String var4 = this.field_z.d(-71);
+        String var4 = this.field_z.getTooltip(-71);
         this.field_z.field_l = var2 != 0 ? true : false;
         return var4;
     }
@@ -60,7 +60,7 @@ final class q extends pa {
           if (param3 >= var13) {
             var13 = param3;
           } else {
-            this.a(-109, param1, param0, param2, var13);
+            this.setBounds(-109, param1, param0, param2, var13);
           }
           if (!this.field_K) {
             stackIn_10_0 = this.field_D + 2 * this.field_I;
@@ -68,7 +68,7 @@ final class q extends pa {
             stackIn_10_0 = 0;
           }
           var14 = stackIn_10_0;
-          this.field_z.a(118, this.field_I + (var13 - param3 >> 1), var14, param2 - this.field_D - this.field_I * 3, param3 - 2 * this.field_I);
+          this.field_z.setBounds(118, this.field_I + (var13 - param3 >> 1), var14, param2 - this.field_D - this.field_I * 3, param3 - 2 * this.field_I);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -96,10 +96,10 @@ final class q extends pa {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         int var5 = param2 + this.field_k;
         int var6 = param0 + this.field_j;
-        super.a(param0, param1, param2, param3);
+        super.drawLayer(param0, param1, param2, param3);
         if (0 != param1) {
           return;
         }

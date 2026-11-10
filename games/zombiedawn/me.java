@@ -15,7 +15,7 @@ final class me extends wo {
         this.field_Eb = -72 + (so.randomInt(144) + param0);
     }
 
-    public static void x(int param0) {
+    public static void clearStatics(int param0) {
         field_Fb = (String[][][]) null;
         field_Cb = null;
         field_Hb = null;
@@ -24,21 +24,21 @@ final class me extends wo {
         }
     }
 
-    final int j(byte param0) {
+    final int chooseFleePoint(byte param0) {
         int var4 = 0;
         int var2;
         int var3;
         int var5;
         int var6;
         var6 = ZombieDawn.field_J;
-        this.n(103);
+        this.scoreFleePoints(103);
         var2 = -1 + this.field_ub;
-        var3 = this.f(var2, 0);
+        var3 = this.getWeightedFleeScore(var2, 0);
         if (param0 > -42) {
           return 122;
         }
         for (var4 = 1; this.field_ub - 1 > var4; var4++) {
-          var5 = this.f(var4, 0);
+          var5 = this.getWeightedFleeScore(var4, 0);
           if (var3 < var5) {
             var2 = var4;
             var3 = var5;
@@ -50,20 +50,20 @@ final class me extends wo {
         return var2;
     }
 
-    final void d(byte param0) {
+    final void updateGridCell(byte param0) {
         if (this.getY(237239984) < 0 ||
           this.getY(237239984) > Js5Archive.field_e.navigation.height) {
           return;
         }
         int var2 = -66 % ((param0 - 66) / 50);
-        super.d((byte) 118);
+        super.updateGridCell((byte) 118);
     }
 
-    final void g(int param0) {
-        super.g(99);
+    final void tick(int param0) {
+        super.tick(99);
         if (this.getY(237239984) - 48 > Js5Archive.field_e.navigation.height) {
           this.unlink(-27598);
-          this.d(0);
+          this.unlinkFromBucket(0);
           if (param0 > 95) {
             return;
           }
@@ -76,11 +76,11 @@ final class me extends wo {
         }
     }
 
-    final void l(byte param0) {
+    final void updateBehaviour(byte param0) {
         int var2;
         int var3;
         this.state = 0;
-        super.l(param0);
+        super.updateBehaviour(param0);
         var2 = this.field_Eb;
         var3 = 672;
         if (var3 - 24 > this.getY(237239984) &&
@@ -88,17 +88,17 @@ final class me extends wo {
           if (this.state != 0) {
             return;
           }
-          this.a(var2, (byte) 115, var3);
+          this.runToward(var2, (byte) 115, var3);
           return;
         }
         this.targetX = this.getX(true);
         this.targetY = 48 + this.getY(param0 + 237239932);
         this.moveToward(0, this.field_D);
         this.setState(1, param0 - 6956);
-        this.g(param0 + 45);
+        this.tick(param0 + 45);
     }
 
-    final static java.awt.Frame a(byte param0, int param1, int param2, PlatformTaskDispatcher param3, int param4, int param5) {
+    final static java.awt.Frame openFullscreenFrame(byte param0, int param1, int param2, PlatformTaskDispatcher param3, int param4, int param5) {
         int var8_int = 0;
         Object stackIn_3_0 = null;
         Object stackIn_8_0 = null;
@@ -117,7 +117,7 @@ final class me extends wo {
         int var7Lifetime1;
         var9 = ZombieDawn.field_J;
         try {
-          if (!param3.c(10)) {
+          if (!param3.supportsFullscreen(10)) {
             stackIn_3_0 = null;
             return (java.awt.Frame) (stackIn_3_0);
           }
@@ -143,7 +143,7 @@ final class me extends wo {
               return null;
             }
           }
-          var11 = param3.a(param4, 1525233840, param5, param2, param1);
+          var11 = param3.requestEnterFullscreen(param4, 1525233840, param5, param2, param1);
           var7Lifetime1 = 116 % ((47 - param0) / 60);
           while (0 == var11.status) {
             ld.a(10L, (byte) 118);
@@ -155,7 +155,7 @@ final class me extends wo {
           if (2 != var11.status) {
             return var8;
           }
-          jb.a(-41, var8, param3);
+          jb.closeFullscreenFrame(-41, var8, param3);
           stackIn_34_0 = null;
           return (java.awt.Frame) (stackIn_34_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -172,10 +172,10 @@ final class me extends wo {
         }
     }
 
-    private final int f(int param0, int param1) {
+    private final int getWeightedFleeScore(int param0, int param1) {
         if (param1 != 0) {
           PlatformTaskDispatcher var4 = (PlatformTaskDispatcher) null;
-          me.a((byte) 107, -40, 33, (PlatformTaskDispatcher) null, -118, -80);
+          me.openFullscreenFrame((byte) 107, -40, 33, (PlatformTaskDispatcher) null, -118, -80);
           if (qd.field_f[param0] < 0) {
             return 0;
           }
@@ -193,7 +193,7 @@ final class me extends wo {
         return qd.field_f[param0] * MouseInputHandler.field_e[param0];
     }
 
-    final void a(Camera param0, int param1) {
+    final void drawDebugOverlay(Camera param0, int param1) {
         int var5 = 0;
         int var3_int = 0;
         int var4 = 0;

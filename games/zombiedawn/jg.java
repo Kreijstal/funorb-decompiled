@@ -75,7 +75,7 @@ final class jg {
         this.field_d = null;
     }
 
-    final void c(int param0) {
+    final void readTrackDelta(int param0) {
         int var2 = this.field_g.readVarInt(true);
         this.field_f[param0] = this.field_f[param0] + var2;
     }
@@ -88,7 +88,7 @@ final class jg {
           this.field_f[var4] = 0;
           this.field_d[var4] = 0;
           this.field_g.position = this.field_a[var4];
-          this.c(var4);
+          this.readTrackDelta(var4);
           this.field_i[var4] = this.field_g.position;
         }
     }
@@ -161,8 +161,8 @@ final class jg {
         int var3Lifetime1;
         this.field_g.payload = param0;
         this.field_g.position = 10;
-        int var2 = this.field_g.f(2);
-        this.field_b = this.field_g.f(2);
+        int var2 = this.field_g.readUnsignedShort(2);
+        this.field_b = this.field_g.readUnsignedShort(2);
         this.field_e = 500000;
         this.field_a = new int[var2];
         int var3 = 0;

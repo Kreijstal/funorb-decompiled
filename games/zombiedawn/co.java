@@ -114,7 +114,7 @@ final class co {
         IntrusiveNode var2Lifetime2;
         var3 = ZombieDawn.field_J;
         try {
-          var1 = kn.field_L.b((byte) 26);
+          var1 = kn.field_L.last((byte) 26);
           while (var1 instanceof tm) {
             var2 = var1.previous;
             if (((tm) (var1)).field_j.isSamplePositionOutOfRange()) {
@@ -125,7 +125,7 @@ final class co {
           if (param0 != 0) {
             field_a = (String) null;
           }
-          var1 = se.field_m.b((byte) 26);
+          var1 = ProxySocketConnector.field_m.last((byte) 26);
           while (var1 instanceof tm) {
             var2Lifetime1 = var1.previous;
             if (((tm) (var1)).field_j.isSamplePositionOutOfRange()) {
@@ -133,7 +133,7 @@ final class co {
             }
             var1 = var2Lifetime1;
           }
-          var1 = DelegatingCanvas.field_e.b((byte) 26);
+          var1 = DelegatingCanvas.field_e.last((byte) 26);
           while (var1 instanceof tm) {
             var2Lifetime2 = var1.previous;
             if (((tm) (var1)).field_j.isSamplePositionOutOfRange()) {

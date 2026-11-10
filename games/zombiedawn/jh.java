@@ -33,7 +33,7 @@ final class jh {
         RuntimeException decompiledCaughtException = null;
         var4 = ZombieDawn.field_J;
         try {
-          var5 = (n) (Js5Archive.field_l.b((byte) 26));
+          var5 = (n) (Js5Archive.field_l.last((byte) 26));
           var1 = var5;
           if (var1 == null) {
             return false;
@@ -126,16 +126,16 @@ final class jh {
             stackIn_14_0 = ((2 & var5) == 0) ? 0 : 1;
             var7 = stackIn_14_0;
             if (7 > var4) {
-              this.field_q = var17.f(2);
+              this.field_q = var17.readUnsignedShort(2);
             } else {
-              this.field_q = var17.a(-129);
+              this.field_q = var17.readLargeSmart(-129);
             }
             var8 = 0;
             this.field_n = new int[this.field_q];
             var9 = -1;
             if (var4 < 7) {
               for (var10 = 0; var10 < this.field_q; var10++) {
-                dupTemp$0 = var8 + var17.f(2);
+                dupTemp$0 = var8 + var17.readUnsignedShort(2);
                 var8 = dupTemp$0;
                 this.field_n[var10] = dupTemp$0;
                 if (this.field_n[var10] > var9) {
@@ -144,7 +144,7 @@ final class jh {
               }
             } else {
               for (var10 = 0; this.field_q > var10; var10++) {
-                dupTemp$1 = var8 + var17.a(-129);
+                dupTemp$1 = var8 + var17.readLargeSmart(-129);
                 var8 = dupTemp$1;
                 this.field_n[var10] = dupTemp$1;
                 if (this.field_n[var10] > var9) {
@@ -189,7 +189,7 @@ final class jh {
             }
             if (var4 < 7) {
               for (var10Lifetime5 = 0; this.field_q > var10Lifetime5; var10Lifetime5++) {
-                this.field_t[this.field_n[var10Lifetime5]] = var17.f(2);
+                this.field_t[this.field_n[var10Lifetime5]] = var17.readUnsignedShort(2);
               }
               for (var10Lifetime5 = 0; var10Lifetime5 < this.field_q; var10Lifetime5++) {
                 var11 = this.field_n[var10Lifetime5];
@@ -199,7 +199,7 @@ final class jh {
                 array$2 = new int[var12];
                 this.field_p[var11] = array$2;
                 for (var14 = 0; var12 > var14; var14++) {
-                  dupTemp$3 = var8Lifetime1 + var17.f(rd.b((int) param1, -78));
+                  dupTemp$3 = var8Lifetime1 + var17.readUnsignedShort(rd.b((int) param1, -78));
                   var8Lifetime1 = dupTemp$3;
                   dupTemp$4 = this.field_p[var11];
                   dupTemp$4[var14] = dupTemp$3;
@@ -215,7 +215,7 @@ final class jh {
               }
             } else {
               for (var10Lifetime5 = 0; this.field_q > var10Lifetime5; var10Lifetime5++) {
-                this.field_t[this.field_n[var10Lifetime5]] = var17.a(-129);
+                this.field_t[this.field_n[var10Lifetime5]] = var17.readLargeSmart(-129);
               }
               for (var10Lifetime5 = 0; this.field_q > var10Lifetime5; var10Lifetime5++) {
                 var11 = this.field_n[var10Lifetime5];
@@ -225,7 +225,7 @@ final class jh {
                 array$5 = new int[var12];
                 this.field_p[var11] = array$5;
                 for (var14 = 0; var12 > var14; var14++) {
-                  dupTemp$6 = var8Lifetime1 + var17.a(-129);
+                  dupTemp$6 = var8Lifetime1 + var17.readLargeSmart(-129);
                   var8Lifetime1 = dupTemp$6;
                   dupTemp$7 = this.field_p[var11];
                   dupTemp$7[var14] = dupTemp$6;
@@ -283,7 +283,7 @@ final class jh {
     jh(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
-          this.field_m = SecondaryNodeDeque.a(8099, param0.length, param0);
+          this.field_m = SecondaryNodeDeque.computeCrc32(8099, param0.length, param0);
           if (this.field_m != param1) {
             throw new RuntimeException();
           }
@@ -291,7 +291,7 @@ final class jh {
             if (param2.length != 64) {
               throw new RuntimeException();
             }
-            this.field_r = nl.a(0, param0.length, -128, param0);
+            this.field_r = nl.computeWhirlpoolDigest(0, param0.length, -128, param0);
             for (var4_int = 0; var4_int < 64; var4_int++) {
               if (this.field_r[var4_int] != param2[var4_int]) {
                 throw new RuntimeException();

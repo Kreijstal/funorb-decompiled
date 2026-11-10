@@ -5,7 +5,7 @@ abstract class um implements vc {
     private long field_b;
     static int field_a;
 
-    final static tk a(byte param0, String param1) {
+    final static tk getOrCreateNameCheck(byte param0, String param1) {
         RuntimeException var2 = null;
         String var3 = null;
         tk stackIn_6_0 = null;
@@ -20,7 +20,7 @@ abstract class um implements vc {
           }
           if (param0 != 110) {
             var3 = (String) null;
-            um.a((byte) -101, (String) null);
+            um.getOrCreateNameCheck((byte) -101, (String) null);
           }
           stackIn_6_0 = gl.field_E;
           return stackIn_6_0;
@@ -38,46 +38,46 @@ abstract class um implements vc {
         }
     }
 
-    public final void a(int param0) {
+    public final void restartDebounce(int param0) {
         this.field_b = pd.monotonicTimeMillis(-22826);
         if (param0 != -7674) {
           this.field_b = -52L;
         }
     }
 
-    public final String b(byte param0) {
-        if (this.b(110)) {
+    public final String getValidationMessage(byte param0) {
+        if (this.isEmpty(110)) {
           return null;
         }
         if (pd.monotonicTimeMillis(-22826) >= 350L + this.field_b) {
           int var2 = -9 / ((-33 - param0) / 57);
-          return this.c(-111);
+          return this.computeMessage(-111);
         }
         return null;
     }
 
-    abstract rh c(byte param0);
+    abstract rh computeState(byte param0);
 
-    abstract String c(int param0);
+    abstract String computeMessage(int param0);
 
-    public final rh a(byte param0) {
+    public final rh getValidationState(byte param0) {
         if (param0 > -71) {
           this.field_b = 85L;
-          if (this.b(121)) {
+          if (this.isEmpty(121)) {
             return di.field_L;
           }
           if (!(pd.monotonicTimeMillis(-22826) >= this.field_b + 350L)) {
-            return se.field_l;
+            return ProxySocketConnector.field_l;
           }
-          return this.c((byte) -7);
+          return this.computeState((byte) -7);
         }
-        if (this.b(121)) {
+        if (this.isEmpty(121)) {
           return di.field_L;
         }
         if (!(pd.monotonicTimeMillis(-22826) >= this.field_b + 350L)) {
-          return se.field_l;
+          return ProxySocketConnector.field_l;
         }
-        return this.c((byte) -7);
+        return this.computeState((byte) -7);
     }
 
     static {

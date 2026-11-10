@@ -5,7 +5,7 @@ final class wd extends pj {
     byte[] field_A;
     static Sprite field_y;
     static String field_w;
-    na field_x;
+    SectorCacheStore field_x;
     static int[] field_z;
     int field_v;
 

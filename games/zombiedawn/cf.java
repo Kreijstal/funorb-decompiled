@@ -7,9 +7,9 @@ final class cf extends ki {
     static qf field_fb;
     static Vector field_eb;
 
-    final void b(int param0, UiWidget param1) {
+    final void transitionToContent(int param0, UiWidget param1) {
         try {
-          super.b(param0, param1);
+          super.transitionToContent(param0, param1);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "cf.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

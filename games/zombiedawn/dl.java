@@ -118,10 +118,10 @@ final class dl {
         int var9 = 0;
         int var10 = 0;
         int var3 = rd.a(true, param2);
-        int var4 = WorldObject.a(1311979239, param2);
+        int var4 = WorldObject.cosFixed(1311979239, param2);
         if (param0 == 0) {
           var5 = rd.a(true, param1);
-          var6 = WorldObject.a(1311979239, param1);
+          var6 = WorldObject.cosFixed(1311979239, param1);
           var7 = (int)((long)var5 * (long)var3 >> 16);
           var8 = (int)((long)var3 * (long)var6 >> 16);
           var9 = (int)((long)var4 * (long)var5 >> 16);

@@ -201,7 +201,7 @@ final class rc extends IntrusiveNode {
               var38 = var38 + var32 * 65793;
               var39 = var30 * var36 >>> 8 & 2013331200 | (-16711925 & var35 * var30) >>> 8;
               var39 = var39 + 65793 * var33;
-              se.a(false, var22, 255 & var37, var38 & 255, var25, var38 >> 16, var37 >> 16, (var39 & 65350) >> 8, var39 & 255, var37 >> 8 & 255, var24, var39 >> 16, 255 & var38 >> 8, var23, var27, var26);
+              ProxySocketConnector.drawSortedTriangle(false, var22, 255 & var37, var38 & 255, var25, var38 >> 16, var37 >> 16, (var39 & 65350) >> 8, var39 & 255, var37 >> 8 & 255, var24, var39 >> 16, 255 & var38 >> 8, var23, var27, var26);
             }
           }
           return;
@@ -245,7 +245,7 @@ final class rc extends IntrusiveNode {
             !Mover.field_H.equals(param1.getParameter("session"))) {
             var4 = Mover.field_H;
           }
-          stackIn_10_0 = jp.a((byte) 97, param2, (String) (var4), (String) (var3), -1);
+          stackIn_10_0 = jp.rewriteAppletUrl((byte) 97, param2, (String) (var4), (String) (var3), -1);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -268,7 +268,7 @@ final class rc extends IntrusiveNode {
     }
 
     final static void a(boolean param0, byte param1) {
-        e.field_S.a(0, 0, 0);
+        e.field_S.drawAllLayers(0, 0, 0);
         if (param1 > -35) {
           rc.a(false, (byte) -121);
         }

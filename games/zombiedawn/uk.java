@@ -49,7 +49,7 @@ final class uk {
 
     final static void a(boolean param0) {
         CharSequence var3 = null;
-        ce.field_r = fj.field_g.a(true);
+        ce.field_r = fj.field_g.readNullTerminatedString(true);
         if (!param0) {
           var3 = (CharSequence) ((Object) ce.field_r);
           kf.field_T = fm.a(var3, -122);

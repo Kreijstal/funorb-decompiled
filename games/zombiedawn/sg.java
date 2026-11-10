@@ -25,7 +25,7 @@ class sg extends ki implements hh {
         try {
           if (this.field_mb) {
             og.b(-118, 3);
-            this.h((byte) 52);
+            this.closeDialog((byte) 52);
           } else {
             qi.a("tochangedisplayname.ws", hc.a(0), param1 ^ 80);
           }
@@ -49,21 +49,21 @@ class sg extends ki implements hh {
         }
     }
 
-    final void m(int param0) {
+    final void showConnectionRestored(int param0) {
         e var2 = null;
         e var2Lifetime1;
         if (param0 > 88) {
-          this.field_ob.c(-102, 4210752, 2121792);
+          this.field_ob.setColors(-102, 4210752, 2121792);
           var2 = new e(this, this.field_nb, kj.field_a);
-          var2.a((byte) 95, fe.field_F, 15);
-          this.b(20, var2);
+          var2.addActionButton((byte) 95, fe.field_F, 15);
+          this.transitionToContent(20, var2);
           return;
         }
         field_jb = (tj) null;
-        this.field_ob.c(-102, 4210752, 2121792);
+        this.field_ob.setColors(-102, 4210752, 2121792);
         var2Lifetime1 = new e(this, this.field_nb, kj.field_a);
-        var2Lifetime1.a((byte) 95, fe.field_F, 15);
-        this.b(20, var2Lifetime1);
+        var2Lifetime1.addActionButton((byte) 95, fe.field_F, 15);
+        this.transitionToContent(20, var2Lifetime1);
     }
 
     final boolean requestKeyboardFocus(int param0, int param1, UiWidget param2, char param3) {
@@ -80,7 +80,7 @@ class sg extends ki implements hh {
             stackIn_4_0 = super.requestKeyboardFocus(-115, param1, param2, param3);
             return stackIn_4_0;
           }
-          this.h((byte) -8);
+          this.closeDialog((byte) -8);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -96,7 +96,7 @@ class sg extends ki implements hh {
         }
     }
 
-    final void a(String param0, int param1, int param2) {
+    final void showResultMessage(String param0, int param1, int param2) {
         boolean stackIn_6_1 = false;
         e stackIn_12_0 = null;
         int stackIn_12_1 = 0;
@@ -117,7 +117,7 @@ class sg extends ki implements hh {
           stackIn_6_1 = (param1 == 256);
           this.field_mb = stackIn_6_1;
           this.field_gb = true;
-          this.field_ob.c(param2 - 115, 4210752, 8405024);
+          this.field_ob.setColors(param2 - 115, 4210752, 8405024);
           var6 = new e(this, this.field_nb, param0);
           var4 = var6;
           if (param1 != 5) {
@@ -129,30 +129,30 @@ class sg extends ki implements hh {
               } else {
                 stackIn_13_2 = el.field_i;
               }
-              ((e) (Object) stackIn_12_0).a((byte) stackIn_12_1, stackIn_13_2, -1);
+              ((e) (Object) stackIn_12_0).addActionButton((byte) stackIn_12_1, stackIn_13_2, -1);
             } else {
-              var6.a(el.field_i, 115, (sk) (this));
+              var6.addButton(el.field_i, 115, (sk) (this));
             }
           } else {
-            var6.a((byte) 119, te.field_R, 11);
-            var6.a((byte) 104, qd.field_d, 17);
+            var6.addActionButton((byte) 119, te.field_R, 11);
+            var6.addActionButton((byte) 104, qd.field_d, 17);
           }
           if (param1 == 3) {
-            var6.a((byte) 92, rf.field_b, 7);
+            var6.addActionButton((byte) 92, rf.field_b, 7);
           } else {
             if (param1 == 4) {
-              var6.a((byte) 99, ti.field_f, 8);
+              var6.addActionButton((byte) 99, ti.field_f, 8);
             } else {
               if (6 == param1) {
-                var6.a((byte) 116, di.field_I, 9);
+                var6.addActionButton((byte) 116, di.field_I, 9);
               } else {
                 if (9 == param1) {
-                  var6.a(r.field_J, 113, (sk) (this));
+                  var6.addButton(r.field_J, 113, (sk) (this));
                 }
               }
             }
           }
-          this.b(param2 + 3, var6);
+          this.transitionToContent(param2 + 3, var6);
           if (param2 == 17) {
             return;
           }
@@ -182,7 +182,7 @@ class sg extends ki implements hh {
           this.field_lb = param3 ? true : false;
           this.field_ob = new hb(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_ob.field_F = true;
-          this.a(this.field_ob, 10);
+          this.addChild(this.field_ob, 10);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "sg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -200,7 +200,7 @@ class sg extends ki implements hh {
         field_fb = null;
     }
 
-    final void h(byte param0) {
+    final void closeDialog(byte param0) {
         int var2 = -89 / ((param0 + 92) / 34);
         if (!this.field_H) {
           return;
@@ -211,7 +211,7 @@ class sg extends ki implements hh {
           return;
         }
         if (this.field_hb) {
-          ub.b((byte) 50);
+          ub.showLoginDialog((byte) 50);
           return;
         }
     }

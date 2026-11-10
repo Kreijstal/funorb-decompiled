@@ -94,7 +94,7 @@ final class og extends pj {
           }
           ja.field_d = -1;
           if (qo.field_x &&
-            pl.field_m == se.field_o) {
+            pl.field_m == ProxySocketConnector.field_o) {
             pl.field_m = 0;
             qo.field_x = false;
           }

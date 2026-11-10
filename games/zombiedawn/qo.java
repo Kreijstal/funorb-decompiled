@@ -16,7 +16,7 @@ final class qo extends vf {
         }
     }
 
-    final void a(int param0, Sprite[] param1, int param2) {
+    final void setStateFrameSprites(int param0, Sprite[] param1, int param2) {
         int var4_int = param2;
         if (param0 != 1) {
           return;
@@ -44,14 +44,14 @@ final class qo extends vf {
         RuntimeException decompiledCaughtException = null;
         var2 = ZombieDawn.field_J;
         try {
-          e.field_S.a(nm.field_f, DelegatingCanvas.field_b, true, true);
-          e.field_S.g(-123);
+          e.field_S.processPointerFrame(nm.field_f, DelegatingCanvas.field_b, true, true);
+          e.field_S.advanceDialogAnimations(-123);
           if (param0 >= -120) {
             stackIn_3_0 = -36;
             return stackIn_3_0;
           }
-          while (TileMap.b(-54)) {
-            e.field_S.a(kg.field_i, (byte) 96, lc.field_c);
+          while (TileMap.pollKeyEvent(-54)) {
+            e.field_S.processKeyInput(kg.field_i, (byte) 96, lc.field_c);
           }
           if (ba.field_s != -1) {
             var1_int = ba.field_s;
@@ -86,13 +86,13 @@ final class qo extends vf {
     qo(qo param0, boolean param1) {
         this();
         try {
-          param0.a((byte) 125, param1, this);
+          param0.copyStatesTo((byte) 125, param1, this);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "qo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(int param0, Sprite[] param1) {
+    final void setFrameSpritesForAllStates(int param0, Sprite[] param1) {
         int var4 = 0;
         gj[] var3 = null;
         gj var5 = null;
@@ -149,7 +149,7 @@ final class qo extends vf {
           if (param9 != -75) {
             field_x = true;
           }
-          ig.a(param18, param14, param11, 495, param12, param5, param3, param8, param0, new mf(param19), param15, new mf(param4), param1, new mf(param2), param17, param7, param6, param10, param16, param13);
+          ig.initializeSharedUiResources(param18, param14, param11, 495, param12, param5, param3, param8, param0, new mf(param19), param15, new mf(param4), param1, new mf(param2), param17, param7, param6, param10, param16, param13);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -189,7 +189,7 @@ final class qo extends vf {
         }
     }
 
-    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
+    public final void drawWidget(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
@@ -210,50 +210,50 @@ final class qo extends vf {
             stackIn_3_0 = (UiWidget) (param3);
           }
           var10 = (an) (stackIn_3_0);
-          Mover.$cfr$intArgs$a$3aedf8649552(param2 + param3.field_j, 99, param3.field_i + (param4 + param3.field_k), param2 - (-param3.field_j - param3.field_n), param3.field_k + param4);
+          Mover.intersectClipIntArgs(param2 + param3.field_j, 99, param3.field_i + (param4 + param3.field_k), param2 - (-param3.field_j - param3.field_n), param3.field_k + param4);
           if (var10 != null) {
             param1 = param1 & var10.field_C;
           }
           var7 = this.field_u[0];
-          this.field_v.a(false);
-          var7.a(this, param4, param2, (byte) 116, param3, this.field_v);
+          this.field_v.reset(false);
+          var7.applyTo(this, param4, param2, (byte) 116, param3, this.field_v);
           if (var10 != null) {
             if (var10.field_x) {
               var11 = this.field_u[1];
               if (var11 != null) {
-                var11.a(this, param4, param2, (byte) 116, param3, this.field_v);
+                var11.applyTo(this, param4, param2, (byte) 116, param3, this.field_v);
               }
             }
             if (var10.field_l) {
               var12 = this.field_u[3];
               if (0 != var10.field_m &&
                 var12 != null) {
-                var12.a(this, param4, param2, (byte) 116, param3, this.field_v);
+                var12.applyTo(this, param4, param2, (byte) 116, param3, this.field_v);
               } else {
                 var9 = this.field_u[2];
                 if (var9 != null) {
-                  var9.a(this, param4, param2, (byte) 116, param3, this.field_v);
+                  var9.applyTo(this, param4, param2, (byte) 116, param3, this.field_v);
                 }
               }
             }
           }
-          if (param3.e(param0 - 16794956)) {
+          if (param3.isFocused(param0 - 16794956)) {
             var13 = this.field_u[5];
             if (var13 != null) {
-              var13.a(this, param4, param2, (byte) 116, param3, this.field_v);
+              var13.applyTo(this, param4, param2, (byte) 116, param3, this.field_v);
             }
           }
           if (param0 != 16777215) {
-            this.a((byte) 52, 14);
+            this.createStateStyle((byte) 52, 14);
           }
           if (!param1) {
             var14 = this.field_u[4];
             if (var14 != null) {
-              var14.a(this, param4, param2, (byte) 116, param3, this.field_v);
+              var14.applyTo(this, param4, param2, (byte) 116, param3, this.field_v);
             }
           }
-          this.field_v.a(0, param3, param2, this, param4);
-          pa.a(-21189);
+          this.field_v.paint(0, param3, param2, this, param4);
+          pa.popRasterState(-21189);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -269,7 +269,7 @@ final class qo extends vf {
         }
     }
 
-    final gj a(byte param0, int param1) {
+    final gj createStateStyle(byte param0, int param1) {
         if (param0 != 73) {
           return (gj) null;
         }
@@ -284,10 +284,10 @@ final class qo extends vf {
         gj dupTemp$0 = new gj();
         this.field_u[0] = dupTemp$0;
         gj var1 = dupTemp$0;
-        var1.a(false);
+        var1.reset(false);
     }
 
-    private final void a(byte param0, boolean param1, qo param2) {
+    private final void copyStatesTo(byte param0, boolean param1, qo param2) {
         int var5 = 0;
         gj dupTemp$0 = null;
         gj stackIn_8_0 = null;
@@ -304,7 +304,7 @@ final class qo extends vf {
         int var8 = 0;
         var8 = ZombieDawn.field_J;
         try {
-          super.a(param2, (byte) -95);
+          super.copyStyleTo(param2, (byte) -95);
           var4_int = 118 / ((param0 - 32) / 58);
           if (param1) {
             for (var5 = 0; 6 > var5; var5++) {
@@ -343,7 +343,7 @@ final class qo extends vf {
         }
     }
 
-    final void a(Sprite param0, int param1) {
+    final void setIconForAllStates(Sprite param0, int param1) {
         int var4 = 0;
         gj[] var3 = null;
         gj var5 = null;

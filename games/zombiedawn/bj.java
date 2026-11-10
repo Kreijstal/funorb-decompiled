@@ -6,7 +6,7 @@ abstract class bj extends DualLinkNode {
     static String field_p;
     int field_r;
 
-    abstract Object d(byte param0);
+    abstract Object getValue(byte param0);
 
     public static void releaseStatics(int param0) {
         field_q = null;
@@ -32,7 +32,7 @@ abstract class bj extends DualLinkNode {
         int var8 = 0;
         var8 = ZombieDawn.field_J;
         try {
-          var2_int = param0.k(99, 8);
+          var2_int = param0.readBits(99, 8);
           if (0 < var2_int) {
             throw new IllegalStateException("" + var2_int);
           }
@@ -42,33 +42,33 @@ abstract class bj extends DualLinkNode {
           var3 = dg.a(param0, false) ? 1 : 0;
           var4 = dg.a(param0, false) ? 1 : 0;
           var5 = new gd();
-          var5.field_k = (short)param0.k(61, 16);
-          var5.field_G = ad.a(var5.field_G, true, 16, param0);
-          var5.field_B = ad.a(var5.field_B, true, 16, param0);
-          var5.field_m = ad.a(var5.field_m, true, 16, param0);
-          var5.field_c = (short)param0.k(82, 16);
-          var5.field_g = ad.a(var5.field_g, true, 16, param0);
-          var5.field_H = ad.a(var5.field_H, true, 16, param0);
-          var5.field_r = ad.a(var5.field_r, true, 16, param0);
+          var5.field_k = (short)param0.readBits(61, 16);
+          var5.field_G = ad.readPackedShorts(var5.field_G, true, 16, param0);
+          var5.field_B = ad.readPackedShorts(var5.field_B, true, 16, param0);
+          var5.field_m = ad.readPackedShorts(var5.field_m, true, 16, param0);
+          var5.field_c = (short)param0.readBits(82, 16);
+          var5.field_g = ad.readPackedShorts(var5.field_g, true, 16, param0);
+          var5.field_H = ad.readPackedShorts(var5.field_H, true, 16, param0);
+          var5.field_r = ad.readPackedShorts(var5.field_r, true, 16, param0);
           if (var3 != 0) {
-            var5.field_f = (short)param0.k(56, 16);
-            var5.field_M = ad.a(var5.field_M, true, 16, param0);
-            var5.field_q = ad.a(var5.field_q, true, 16, param0);
-            var5.field_y = ad.a(var5.field_y, true, 16, param0);
-            var5.field_O = ad.a(var5.field_O, true, 16, param0);
-            var5.field_n = ad.a(var5.field_n, true, 16, param0);
-            var5.field_v = ad.a(var5.field_v, true, 16, param0);
+            var5.field_f = (short)param0.readBits(56, 16);
+            var5.field_M = ad.readPackedShorts(var5.field_M, true, 16, param0);
+            var5.field_q = ad.readPackedShorts(var5.field_q, true, 16, param0);
+            var5.field_y = ad.readPackedShorts(var5.field_y, true, 16, param0);
+            var5.field_O = ad.readPackedShorts(var5.field_O, true, 16, param0);
+            var5.field_n = ad.readPackedShorts(var5.field_n, true, 16, param0);
+            var5.field_v = ad.readPackedShorts(var5.field_v, true, 16, param0);
           }
           if (var4 != 0) {
-            param0.k(13, 16);
-            var5.field_K = ad.a(var5.field_K, true, 16, param0);
-            var5.field_d = ad.a(var5.field_d, true, 16, param0);
-            var5.field_h = ad.a(var5.field_h, true, 16, param0);
-            var5.field_l = ad.a(var5.field_l, true, 16, param0);
-            var5.field_w = ad.a(var5.field_w, true, 16, param0);
+            param0.readBits(13, 16);
+            var5.field_K = ad.readPackedShorts(var5.field_K, true, 16, param0);
+            var5.field_d = ad.readPackedShorts(var5.field_d, true, 16, param0);
+            var5.field_h = ad.readPackedShorts(var5.field_h, true, 16, param0);
+            var5.field_l = ad.readPackedShorts(var5.field_l, true, 16, param0);
+            var5.field_w = ad.readPackedShorts(var5.field_w, true, 16, param0);
           }
           if (dg.a(param0, false)) {
-            var5.field_x = ad.a(var5.field_x, true, 16, param0);
+            var5.field_x = ad.readPackedShorts(var5.field_x, true, 16, param0);
           }
           if (dg.a(param0, false)) {
             var5.field_F = hc.a(16, param0, (byte) -44, var5.field_F);
@@ -182,7 +182,7 @@ abstract class bj extends DualLinkNode {
         }
     }
 
-    abstract boolean b(boolean param0);
+    abstract boolean isSoftReference(boolean param0);
 
     static {
         field_p = "Click";

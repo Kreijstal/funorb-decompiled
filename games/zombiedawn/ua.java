@@ -30,7 +30,7 @@ final class ua {
             return (tj) (stackIn_2_0);
           }
           var2 = new tj(param1, sl.field_d, bo.field_o, bn.field_c, uf.field_n, j.field_a, vj.field_m);
-          no.f((byte) -54);
+          no.clearSpriteDecodeBuffers((byte) -54);
           if (param0 >= -126) {
             ua.releaseStatics(18);
           }

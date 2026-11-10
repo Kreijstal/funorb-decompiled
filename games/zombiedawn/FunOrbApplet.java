@@ -167,13 +167,13 @@ abstract class FunOrbApplet extends GameApplet {
         }
         int var4 = jd.field_b - 1;
         byte[] var5 = new byte[var4];
-        fj.field_g.a(var4, var5, 0, param0 + 1);
+        fj.field_g.readCipheredBytes(var4, var5, 0, param0 + 1);
         wi.a(gg.a(var5, (byte) 56), hc.a(0), var3 != 0, -20517);
     }
 
     private final void f(byte param0) {
-        String var2 = jj.i(126);
-        pl.a(var2, (byte) -80, hc.a(0));
+        String var2 = jj.readPacketString(126);
+        pl.setSessionCookie(var2, (byte) -80, hc.a(0));
         int var3 = 110 % ((5 - param0) / 53);
     }
 
@@ -187,7 +187,7 @@ abstract class FunOrbApplet extends GameApplet {
         if (ja.field_b) {
           return -1;
         }
-        int var2 = PacketBuffer.a(true, we.p((byte) 106), ja.a(23917), this.affiliateId, true, this.field_s);
+        int var2 = PacketBuffer.advanceLoginHandshake(true, we.getActiveLoginIdentifier((byte) 106), ja.a(23917), this.affiliateId, true, this.field_s);
         if (var2 == -1) {
           return -1;
         }
@@ -197,7 +197,7 @@ abstract class FunOrbApplet extends GameApplet {
             this.a("reconnect", 50);
           }
           nc.d((byte) 101);
-          Path.a(10, var2, sc.field_d);
+          Path.showLoginResponse(10, var2, sc.field_d);
           ja.field_b = true;
           if (param0) {
             String var3 = (String) null;
@@ -229,16 +229,16 @@ abstract class FunOrbApplet extends GameApplet {
             td.a(2, (byte) -95);
           }
           if (i.field_X[2]) {
-            dp.a(3, -4);
+            dp.resendQueuedRequests(3, -4);
           }
           if (i.field_X[3]) {
-            SpatialGrid.a(4, -1);
+            SpatialGrid.resendQueuedRequests(4, -1);
           }
           if (i.field_X[4]) {
             ca.a(5, (byte) -118);
           }
           if (i.field_X[5]) {
-            wc.f(67600, 6);
+            wc.resendQueuedQueries(67600, 6);
           }
           if (i.field_X[6]) {
             wi.a(0, 7);
@@ -267,13 +267,13 @@ abstract class FunOrbApplet extends GameApplet {
           }
           if (1 != var2) {
             if (var2 == 2) {
-              LevelNavigation.a((byte) -83);
+              LevelNavigation.handleHighscoreResponse((byte) -83);
             } else {
               if (3 != var2) {
                 if (4 != var2) {
                   if (var2 != 5) {
                     if (var2 == 6) {
-                      wc.w(param0 + 135);
+                      wc.handleRankingsResponse(param0 + 135);
                     } else {
                       if (var2 != 7) {
                         if (var2 != 8) {
@@ -289,7 +289,7 @@ abstract class FunOrbApplet extends GameApplet {
                                 return;
                               }
                               if (var2 == 18) {
-                                GameKeyHandler.a(param0 ^ -114);
+                                GameKeyHandler.handleClearFlagPacket(param0 ^ -114);
                                 return;
                               }
                               ae.a((Throwable) null, param0 ^ -10321, "MGS1: " + cb.f(3));
@@ -297,20 +297,20 @@ abstract class FunOrbApplet extends GameApplet {
                               return;
                             }
                             stackIn_29_0 = (var2 == 12);
-                            var3 = ln.a(stackIn_29_0, 62);
-                            oe.a(0, var3);
+                            var3 = ln.readChatMessage(stackIn_29_0, 62);
+                            oe.acceptChatMessage(0, var3);
                           } else {
                             uk.a(false);
                           }
                         } else {
-                          di.a(fj.field_g, 30, jd.field_b, vh.field_a);
+                          di.readReflectionCheckRequest(fj.field_g, 30, jd.field_b, vh.field_a);
                         }
                       } else {
                         this.f((byte) 66);
                       }
                     }
                   } else {
-                    DualLinkDeque.b((byte) -120);
+                    DualLinkDeque.handleSubmissionAcknowledgement((byte) -120);
                   }
                 } else {
                   pb.c((byte) 68);
@@ -348,9 +348,9 @@ abstract class FunOrbApplet extends GameApplet {
           if (null == cn.field_b) {
             var6 = va.b((byte) -121);
             var4 = var6.getSize();
-            rn.field_b.b(var4.height, var4.width, -1);
+            rn.field_b.setRequestedSize(var4.height, var4.width, -1);
           }
-          rn.field_b.d(26);
+          rn.field_b.tick(26);
         }
         ha.b(27914);
         pb.d((byte) -74);
@@ -369,7 +369,7 @@ abstract class FunOrbApplet extends GameApplet {
             this.field_r = false;
             p.a(1);
             nc.d((byte) -3);
-            Path.a(10, 2, qb.field_f);
+            Path.showLoginResponse(10, 2, qb.field_f);
             rh.a(-110);
             ja.field_b = true;
             Path.field_e = 15000L + pd.monotonicTimeMillis(-22826);
@@ -397,18 +397,18 @@ abstract class FunOrbApplet extends GameApplet {
             if (fl.field_a >= 10) {
               nc.d((byte) 118);
               if (co.field_b == 3) {
-                Path.a(10, 256, rf.field_a);
+                Path.showLoginResponse(10, 256, rf.field_a);
               } else {
                 if (co.field_b == 4) {
-                  Path.a(10, 256, ac.field_o);
+                  Path.showLoginResponse(10, 256, ac.field_o);
                 } else {
                   if (co.field_b == 2) {
-                    Path.a(10, 256, oe.field_d);
+                    Path.showLoginResponse(10, 256, oe.field_d);
                   } else {
                     if (5 == co.field_b) {
-                      Path.a(10, 5, ia.field_f);
+                      Path.showLoginResponse(10, 5, ia.field_f);
                     } else {
-                      Path.a(10, 256, ih.field_T);
+                      Path.showLoginResponse(10, 256, ih.field_T);
                     }
                   }
                 }
@@ -443,7 +443,7 @@ abstract class FunOrbApplet extends GameApplet {
           if (-1 != co.field_b &&
             0 != co.field_b) {
             co.field_b = -1;
-            si.x(0);
+            si.resetConnectionState(0);
           }
         }
         if (co.field_b == 0 &&
@@ -468,11 +468,11 @@ abstract class FunOrbApplet extends GameApplet {
         if (ld.field_j == 2) {
           if (f.field_i != null &&
             f.field_i.isIndexLoaded((byte) 73)) {
-            if (!f.field_i.a("", 0)) {
+            if (!f.field_i.hasGroupName("", 0)) {
               f.field_i = null;
             } else {
-              if (f.field_i.a(-1, "")) {
-                bn.a(32693, f.field_i);
+              if (f.field_i.loadGroupByName(-1, "")) {
+                bn.loadTextTable(32693, f.field_i);
                 f.field_i = null;
                 ep.c((byte) -50);
               }
@@ -483,8 +483,8 @@ abstract class FunOrbApplet extends GameApplet {
           }
         }
         if (ld.field_j == 3 &&
-          al.a(al.field_a, -31526, IntrusiveDeque.field_d, da.field_l) &&
-          eh.a(false, al.field_a)) {
+          al.areCommonUiArchivesReady(al.field_a, -31526, IntrusiveDeque.field_d, da.field_l) &&
+          eh.isArchiveFullyLoaded(false, al.field_a)) {
           ph.b(26311);
           ng.a(121);
           ka.field_a = ql.field_f;
@@ -499,13 +499,13 @@ abstract class FunOrbApplet extends GameApplet {
             gl.a(stackIn_99_0, stackIn_99_1, stackIn_100_2, stackIn_103_3);
           }
           if (di.field_J) {
-            jp.b((byte) -50);
+            jp.showUnreadMessagesDialog((byte) -50);
           }
           if (null == t.field_m) {
             t.field_m = ui.a(0);
             nk.field_g = pb.c(-1);
           }
-          nl.a(nk.field_g, t.field_m, (byte) -98, al.field_a);
+          nl.initializeLogoSequence(nk.field_g, t.field_m, (byte) -98, al.field_a);
           al.field_a = null;
           IntrusiveDeque.field_d = null;
           da.field_l = null;
@@ -522,8 +522,8 @@ abstract class FunOrbApplet extends GameApplet {
         boolean decompiledFrameRemainder0 = true;
         if (ld.field_j == 11) {
           if (null != aa.field_f && (!aa.field_f.isIndexLoaded((byte) 73) ||
-            !aa.field_f.c(9001))) {
-            eh.a(ic.a(l.field_g, (byte) 114, cj.field_e, aa.field_f), 0.0f, -1);
+            !aa.field_f.areAllGroupsLoaded(9001))) {
+            eh.setLoadingProgress(ic.formatArchiveProgressText(l.field_g, (byte) 114, cj.field_e, aa.field_f), 0.0f, -1);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -537,10 +537,10 @@ abstract class FunOrbApplet extends GameApplet {
         }
         if (ld.field_j == 13) {
           var3Lifetime2 = 1;
-          if (null != bp.field_h) {
-            stackIn_133_0 = (!bp.field_h.a(-1)) ? 0 : 1;
+          if (null != Js5ArchiveManager.field_h) {
+            stackIn_133_0 = (!Js5ArchiveManager.field_h.a(-1)) ? 0 : 1;
             var3Lifetime2 = stackIn_133_0;
-            eh.a(bp.field_h.field_b, bp.field_h.field_a, -1);
+            eh.setLoadingProgress(Js5ArchiveManager.field_h.field_b, Js5ArchiveManager.field_h.field_a, -1);
           }
           if (var3Lifetime2 != 0) {
             ld.field_j = 20;
@@ -548,9 +548,9 @@ abstract class FunOrbApplet extends GameApplet {
         }
         if (!param0 &&
           rl.field_f) {
-          SpatialObject.a((byte) -46, cj.field_d);
+          SpatialObject.detachCanvasInput((byte) -46, cj.field_d);
           this.a(true);
-          se.a(20922, cj.field_d);
+          ProxySocketConnector.attachCanvasInput(20922, cj.field_d);
         }
         if (i.field_X[8]) {
           da.d((byte) -48);
@@ -609,7 +609,7 @@ abstract class FunOrbApplet extends GameApplet {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5_int = pa.a(tp.c((byte) 0), cm.a((byte) -8), (byte) -90);
+            var5_int = pa.beginLogin(tp.createActiveEmailLookupValue((byte) 0), cm.a((byte) -8), (byte) -90);
             if (var5_int != -1) {
               mp.a(1000, ho.field_a, var5_int, sc.field_d);
               ho.field_a = null;
@@ -621,9 +621,9 @@ abstract class FunOrbApplet extends GameApplet {
             }
           }
           if (2 == var4) {
-            var5_intLifetime1 = md.a(co.c(17821), DualLinkDeque.e((byte) -57), ja.a(23917), la.b(0), (byte) -15, this.affiliateId, we.p((byte) -117));
+            var5_intLifetime1 = md.a(co.c(17821), DualLinkDeque.getCurrentAccountName((byte) -57), ja.a(23917), FullscreenFocusCanvas.getEnteredAge(0), (byte) -15, this.affiliateId, we.getActiveLoginIdentifier((byte) -117));
             if (var5_intLifetime1 != -1) {
-              ln.a(var5_intLifetime1, -14, sc.field_d, ho.field_a);
+              ln.setAccountCreationResultMessage(var5_intLifetime1, -14, sc.field_d, ho.field_a);
               ho.field_a = null;
               sc.field_d = null;
             }
@@ -632,10 +632,10 @@ abstract class FunOrbApplet extends GameApplet {
             if (co.field_b != -1 &&
               co.field_b != 0) {
               co.field_b = -1;
-              si.x(0);
+              si.resetConnectionState(0);
             }
             if (!param0) {
-              var5_intLifetime2 = PacketBuffer.a(true, we.p((byte) 126), ja.a(23917), this.affiliateId, false, this.field_s);
+              var5_intLifetime2 = PacketBuffer.advanceLoginHandshake(true, we.getActiveLoginIdentifier((byte) 126), ja.a(23917), this.affiliateId, false, this.field_s);
               if (var5_intLifetime2 != -1) {
                 if (0 == var5_intLifetime2) {
                   nk.field_e = p.field_a;
@@ -643,7 +643,7 @@ abstract class FunOrbApplet extends GameApplet {
                   i.field_Y = false;
                   fl.field_a = 10;
                 } else {
-                  Path.a(10, var5_intLifetime2, sc.field_d);
+                  Path.showLoginResponse(10, var5_intLifetime2, sc.field_d);
                   sc.field_d = null;
                 }
               }
@@ -653,7 +653,7 @@ abstract class FunOrbApplet extends GameApplet {
           }
           if (var4 == 4) {
             if (ih.field_S) {
-              qg.a(hc.a(0), (byte) 80);
+              SocketConnector.clearSessionAndReload(hc.a(0), (byte) 80);
             } else {
               fl.field_a = 10;
               i.field_Y = true;
@@ -670,13 +670,13 @@ abstract class FunOrbApplet extends GameApplet {
             lc.a(hc.a(0), -2895);
           }
           if (var4 == 8) {
-            qg.a(hc.a(0), (byte) 77);
+            SocketConnector.clearSessionAndReload(hc.a(0), (byte) 77);
           }
           if (9 == var4) {
-            vb.a((byte) 50, hc.a(0));
+            vb.openSupportPage((byte) 50, hc.a(0));
           }
           if (var4 == 10) {
-            dp.field_e.j(11, 17);
+            dp.field_e.writeCipheredByte(11, 17);
           }
           if (var4 == 11) {
             fo.a(38205, hc.a(0));
@@ -690,16 +690,16 @@ abstract class FunOrbApplet extends GameApplet {
           if (var4 == 13) {
             try {
               if (hp.field_E == null) {
-                hp.field_E = new li(vh.field_a, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+                hp.field_E = new JaggrabDownloader(vh.field_a, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
-              if (hp.field_E.a(105)) {
-                var12 = hp.field_E.a((byte) -118);
+              if (hp.field_E.poll(105)) {
+                var12 = hp.field_E.getCompletedResponse((byte) -118);
                 if (var12 != null) {
-                  var7 = SpatialObject.a(var12.payload, var12.position, 0, -124);
-                  vf.a(74, var7);
+                  var7 = SpatialObject.decodeSingleByteText(var12.payload, var12.position, 0, -124);
+                  vf.onCountryListLoaded(74, var7);
                 } else {
                   var9 = (String) null;
-                  vf.a(48, (String) null);
+                  vf.onCountryListLoaded(48, (String) null);
                 }
                 hp.field_E = null;
               }
@@ -708,7 +708,7 @@ abstract class FunOrbApplet extends GameApplet {
               var5 = (Exception) (Object) decompiledCaughtException;
               ae.a((Throwable) ((Object) var5), 10331, "S1");
               var10 = (String) null;
-              vf.a(87, (String) null);
+              vf.onCountryListLoaded(87, (String) null);
               hp.field_E = null;
             }
           }
@@ -735,12 +735,12 @@ abstract class FunOrbApplet extends GameApplet {
         var10.dispose();
         this.setBackground(java.awt.Color.black);
         jp.field_a = this.language;
-        pc.a(jp.field_a, (byte) -66);
+        Js5Transport.selectLoadingMessages(jp.field_a, (byte) -66);
         s.a(this.instanceId, 5000, this.isMember, jp.field_a, param3, this.gameCrc, this.serverNumber, 5000, this.gamePort1, param0, vh.field_a, this.host, param1 + 120, this.gamePort2);
         mh.a(this.serverNumber, this.gamePort2, this.gameCrc, this.host, this.gamePort1, param0, vh.field_a, 0, jp.field_a);
-        bd.a((byte) -114);
+        WhirlpoolHasher.configurePunctuationKeyCodes((byte) -114);
         jl.field_u = n.c((byte) 94);
-        se.a(param1 ^ 20925, cj.field_d);
+        ProxySocketConnector.attachCanvasInput(param1 ^ 20925, cj.field_d);
         f.field_f = param4;
         if (param1 != 7) {
           field_t = 6;
@@ -750,7 +750,7 @@ abstract class FunOrbApplet extends GameApplet {
         jh.field_k = param7;
         mp.field_d = param5;
         this.initializePacketLengths(17);
-        BufferedSocket.b(-23148);
+        BufferedSocket.clearFeatureFlags(-23148);
     }
 
     final void i(byte param0) {
@@ -769,14 +769,14 @@ abstract class FunOrbApplet extends GameApplet {
           discarded$4 = this.a(stackIn_11_1, stackIn_12_2, 115);
         } else {
           if (ld.field_j >= 10) {
-            if (Point.a(param0 ^ -239)) {
+            if (Point.isIntroFinished(param0 ^ -239)) {
               if (fl.field_a != 0) {
                 wd.b(112, id.field_I);
               } else {
                 discarded$5 = this.a(false, false, param0 ^ 72);
               }
             } else {
-              am.k(-21215);
+              am.advanceLogoAnimation(-21215);
             }
           }
         }

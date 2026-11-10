@@ -6,19 +6,19 @@ final class fc extends qk {
     private boolean field_Nb;
     int field_Pb;
 
-    final void w(int param0) {
+    final void placeAtTopEdge(int param0) {
         this.field_x = 9;
         this.field_y = param0;
         this.setState(0, -6904);
     }
 
-    final void g(int param0) {
+    final void tick(int param0) {
         int var3;
         Camera var4;
         var3 = ZombieDawn.field_J;
         if (param0 <= 95) {
           var4 = (Camera) null;
-          this.a((byte) -121, (Camera) null);
+          this.draw((byte) -121, (Camera) null);
         }
         if (this.field_Gb > 0) {
           this.field_Gb = this.field_Gb - 1;
@@ -26,20 +26,20 @@ final class fc extends qk {
         if (this.state != 0) {
           if (this.state == 10 &&
             2 == this.field_G) {
-            this.field_yb.z(0);
+            this.field_yb.takeLethalHit(0);
             this.setState(0, -6904);
           }
         } else {
           if (this.field_Pb <= 0) {
-            this.p((byte) -119);
+            this.aimAtZombieBelow((byte) -119);
           } else {
             this.field_Pb = this.field_Pb - 1;
           }
         }
-        this.d(this.state, -26109);
+        this.advanceAnimation(this.state, -26109);
     }
 
-    final static void o(byte param0) {
+    final static void releaseKeyHandler(byte param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
         if (null != ea.field_c) {
@@ -49,11 +49,11 @@ final class fc extends qk {
           }
         }
         if (param0 >= -72) {
-          fc.o((byte) -40);
+          fc.releaseKeyHandler((byte) -40);
         }
     }
 
-    final void a(byte param0, Camera param1) {
+    final void draw(byte param0, Camera param1) {
         int stackIn_6_0 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -79,7 +79,7 @@ final class fc extends qk {
             if (!this.field_Nb) {
               var6 += 8;
             }
-            this.b(var6, (byte) -104, var4);
+            this.drawMuzzleFlash(var6, (byte) -104, var4);
           }
           if (param0 >= -76) {
             field_Ob = -119;
@@ -107,7 +107,7 @@ final class fc extends qk {
         }
     }
 
-    final static TileMap a(byte[] param0, byte param1) {
+    final static TileMap decodeTileMapWithDefaultSize(byte[] param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -127,15 +127,15 @@ final class fc extends qk {
           var3 = 100;
           var4 = new byte[8 + param0.length];
           for (var5 = 0; var5 < 6; var5++) {
-            WorldObject.a(var5, var4, (byte) 71, md.a(var5, param0, 72));
+            WorldObject.putIntAt(var5, var4, (byte) 71, md.a(var5, param0, 72));
           }
-          WorldObject.a(6, var4, (byte) -108, var2_int);
-          WorldObject.a(7, var4, (byte) 57, var3);
+          WorldObject.putIntAt(6, var4, (byte) -108, var2_int);
+          WorldObject.putIntAt(7, var4, (byte) 57, var3);
           for (var5Lifetime1 = 6; var5Lifetime1 < param0.length / 4; var5Lifetime1++) {
-            WorldObject.a(var5Lifetime1 + 2, var4, (byte) 98, md.a(var5Lifetime1, param0, 105));
+            WorldObject.putIntAt(var5Lifetime1 + 2, var4, (byte) 98, md.a(var5Lifetime1, param0, 105));
           }
           if (param1 >= 45) {
-            stackIn_11_0 = BufferedSocket.a(var4, -27);
+            stackIn_11_0 = BufferedSocket.upgradeAndDecodeTileMap(var4, -27);
             return stackIn_11_0;
           }
           stackIn_9_0 = (TileMap) null;
@@ -162,7 +162,7 @@ final class fc extends qk {
         ha.field_d = this;
     }
 
-    private final void p(byte param0) {
+    private final void aimAtZombieBelow(byte param0) {
         int var5;
         IntrusiveNode var6;
         int var7;
@@ -175,10 +175,10 @@ final class fc extends qk {
           this.field_yb = null;
         }
         var5 = -1;
-        var6 = Js5Archive.field_e.zombies.b((byte) 26);
+        var6 = Js5Archive.field_e.zombies.last((byte) 26);
         while (var6 instanceof WorldObject) {
           if (var6 instanceof Zombie) {
-            if (!((Zombie) (var6)).x(91)) {
+            if (!((Zombie) (var6)).isVisibleToHumans(91)) {
               var6 = var6.previous;
               continue;
             }
@@ -209,7 +209,7 @@ final class fc extends qk {
           this.field_Pb = 20;
         }
         if (param0 > -27) {
-          fc.o((byte) 99);
+          fc.releaseKeyHandler((byte) 99);
         }
     }
 

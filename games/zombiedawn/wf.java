@@ -42,27 +42,27 @@ final class wf extends hm {
     }
 
     wf(vc param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, tp.c(113));
+        super(param1, tp.getDefaultTextPainter(113));
         try {
           this.field_Q = param1;
           this.field_R = param0;
-          this.a(-119, param3, param2, param4, param5);
+          this.setBounds(-119, param3, param2, param4, param5);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "wf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    final void a(UiWidget param0, byte param1, int param2, int param3) {
+    final void updatePointer(UiWidget param0, byte param1, int param2, int param3) {
         try {
           int var5_int = 101 / ((46 - param1) / 42);
           this.field_T = this.field_T + 1;
-          super.a(param0, (byte) -91, param2, param3);
+          super.updatePointer(param0, (byte) -91, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "wf.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         String var5;
         rh var6;
         int var9;
@@ -118,19 +118,19 @@ final class wf extends hm {
         var28 = null;
         var35 = null;
         var13 = ZombieDawn.field_J;
-        var6 = this.field_R.a((byte) -73);
-        if (var6 == se.field_l) {
+        var6 = this.field_R.getValidationState((byte) -73);
+        if (var6 == ProxySocketConnector.field_l) {
           var17 = no.field_E;
           if (!var17.equals(this.field_o)) {
             this.field_o = var17;
-            this.d((byte) -36);
+            this.rebuildHotspots((byte) -36);
           }
-          super.a(param0, param1, param2, param3);
-          var6 = this.field_R.a((byte) -120);
+          super.drawLayer(param0, param1, param2, param3);
+          var6 = this.field_R.getValidationState((byte) -120);
           var39 = (ak) ((Object) this.field_h);
           var9 = this.field_k + param2;
-          var10 = var39.a((UiWidget) (this), param3 + 1, param0) + (var39.a(112, (UiWidget) (this)).a((byte) 102) >> 1);
-          if (var6 != se.field_l &&
+          var10 = var39.getTextOriginY((UiWidget) (this), param3 + 1, param0) + (var39.getTextLayout(112, (UiWidget) (this)).height((byte) 102) >> 1);
+          if (var6 != ProxySocketConnector.field_l &&
             gj.field_v != var6) {
             if (var6 == MouseWheelInput.field_b) {
               var20 = Js5Archive.field_k[2];
@@ -165,7 +165,7 @@ final class wf extends hm {
             }
           }
           var21.drawRotatedAboutPivot(112, 144, var21.field_r << 4, var21.field_q << 4, -this.field_T << 10, 4096);
-          pa.a(-21189);
+          pa.popRasterState(-21189);
           this.field_O.drawAdditive(-(var21.field_r >> 1) + var9, var10 - var21.field_q, 256);
           return;
         }
@@ -173,14 +173,14 @@ final class wf extends hm {
           var22 = no.field_E;
           if (!var22.equals(this.field_o)) {
             this.field_o = var22;
-            this.d((byte) -36);
+            this.rebuildHotspots((byte) -36);
           }
-          super.a(param0, param1, param2, param3);
-          var6 = this.field_R.a((byte) -120);
+          super.drawLayer(param0, param1, param2, param3);
+          var6 = this.field_R.getValidationState((byte) -120);
           var40 = (ak) ((Object) this.field_h);
           var9Lifetime1 = this.field_k + param2;
-          var10Lifetime1 = var40.a((UiWidget) (this), param3 + 1, param0) + (var40.a(112, (UiWidget) (this)).a((byte) 102) >> 1);
-          if (var6 != se.field_l &&
+          var10Lifetime1 = var40.getTextOriginY((UiWidget) (this), param3 + 1, param0) + (var40.getTextLayout(112, (UiWidget) (this)).height((byte) 102) >> 1);
+          if (var6 != ProxySocketConnector.field_l &&
             gj.field_v != var6) {
             if (var6 == MouseWheelInput.field_b) {
               var25 = Js5Archive.field_k[2];
@@ -215,22 +215,22 @@ final class wf extends hm {
             }
           }
           var26.drawRotatedAboutPivot(112, 144, var26.field_r << 4, var26.field_q << 4, -this.field_T << 10, 4096);
-          pa.a(-21189);
+          pa.popRasterState(-21189);
           this.field_O.drawAdditive(-(var26.field_r >> 1) + var9Lifetime1, var10Lifetime1 - var26.field_q, 256);
           return;
         }
-        var5 = this.field_R.b((byte) 78);
+        var5 = this.field_R.getValidationMessage((byte) 78);
         if (var5 != null) {
           if (!var5.equals(this.field_o)) {
             this.field_o = var5;
-            this.d((byte) -36);
+            this.rebuildHotspots((byte) -36);
           }
-          super.a(param0, param1, param2, param3);
-          var6Lifetime1 = this.field_R.a((byte) -120);
+          super.drawLayer(param0, param1, param2, param3);
+          var6Lifetime1 = this.field_R.getValidationState((byte) -120);
           var42 = (ak) ((Object) this.field_h);
           var9Lifetime2 = this.field_k + param2;
-          var10Lifetime2 = var42.a((UiWidget) (this), param3 + 1, param0) + (var42.a(112, (UiWidget) (this)).a((byte) 102) >> 1);
-          if (var6Lifetime1 != se.field_l &&
+          var10Lifetime2 = var42.getTextOriginY((UiWidget) (this), param3 + 1, param0) + (var42.getTextLayout(112, (UiWidget) (this)).height((byte) 102) >> 1);
+          if (var6Lifetime1 != ProxySocketConnector.field_l &&
             gj.field_v != var6Lifetime1) {
             if (var6Lifetime1 == MouseWheelInput.field_b) {
               var37 = Js5Archive.field_k[2];
@@ -261,7 +261,7 @@ final class wf extends hm {
             ki.a((byte) -118, this.field_O);
           }
           var38.drawRotatedAboutPivot(112, 144, var38.field_r << 4, var38.field_q << 4, -this.field_T << 10, 4096);
-          pa.a(-21189);
+          pa.popRasterState(-21189);
           this.field_O.drawAdditive(-(var38.field_r >> 1) + var9Lifetime2, var10Lifetime2 - var38.field_q, 256);
           return;
         }
@@ -269,14 +269,14 @@ final class wf extends hm {
         var5Lifetime1 = var27;
         if (!var27.equals(this.field_o)) {
           this.field_o = var27;
-          this.d((byte) -36);
+          this.rebuildHotspots((byte) -36);
         }
-        super.a(param0, param1, param2, param3);
-        var6Lifetime2 = this.field_R.a((byte) -120);
+        super.drawLayer(param0, param1, param2, param3);
+        var6Lifetime2 = this.field_R.getValidationState((byte) -120);
         var41 = (ak) ((Object) this.field_h);
         var9Lifetime3 = this.field_k + param2;
-        var10Lifetime3 = var41.a((UiWidget) (this), param3 + 1, param0) + (var41.a(112, (UiWidget) (this)).a((byte) 102) >> 1);
-        if (var6Lifetime2 == se.field_l) {
+        var10Lifetime3 = var41.getTextOriginY((UiWidget) (this), param3 + 1, param0) + (var41.getTextLayout(112, (UiWidget) (this)).height((byte) 102) >> 1);
+        if (var6Lifetime2 == ProxySocketConnector.field_l) {
           var29 = Js5Archive.field_k[0];
           var16 = var29;
           var11Lifetime3 = var29.field_r << 1;
@@ -299,7 +299,7 @@ final class wf extends hm {
             }
           }
           var29.drawRotatedAboutPivot(112, 144, var29.field_r << 4, var29.field_q << 4, -this.field_T << 10, 4096);
-          pa.a(-21189);
+          pa.popRasterState(-21189);
           this.field_O.drawAdditive(-(var29.field_r >> 1) + var9Lifetime3, var10Lifetime3 - var29.field_q, 256);
           return;
         }
@@ -338,11 +338,11 @@ final class wf extends hm {
           }
         }
         var30.drawRotatedAboutPivot(112, 144, var30.field_r << 4, var30.field_q << 4, -this.field_T << 10, 4096);
-        pa.a(-21189);
+        pa.popRasterState(-21189);
         this.field_O.drawAdditive(-(var30.field_r >> 1) + var9Lifetime3, var10Lifetime3 - var30.field_q, 256);
     }
 
-    final String d(int param0) {
+    final String getTooltip(int param0) {
         int var2 = 44 / ((10 - param0) / 58);
         return null;
     }

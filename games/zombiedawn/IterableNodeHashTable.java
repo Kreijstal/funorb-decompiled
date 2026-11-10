@@ -28,12 +28,12 @@ final class IterableNodeHashTable implements Iterable {
           this.field_a = null;
           return null;
         }
-        IterableNodeHashTable.a(17, (byte) 50);
+        IterableNodeHashTable.bitLength(17, (byte) 50);
         this.field_a = null;
         return null;
     }
 
-    final static int a(int param0, byte param1) {
+    final static int bitLength(int param0, byte param1) {
         int var2;
         int var3;
         var2 = 41 / ((-39 - param1) / 56);
@@ -66,7 +66,7 @@ final class IterableNodeHashTable implements Iterable {
         return var3 + param0;
     }
 
-    final static hn a(int param0, PcmSample param1) {
+    final static hn playSample(int param0, PcmSample param1) {
         RuntimeException var2 = null;
         hn stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

@@ -67,7 +67,7 @@ final class qj {
             } else {
               stackIn_7_1 = 6;
             }
-            ((Sprite) (Object) stackIn_6_0[stackIn_7_1]).e(param1.worldToScreenX(this.field_h, (byte) -72) - 12, param1.worldToScreenY(this.field_c, 0) - 12, this.field_a);
+            ((Sprite) (Object) stackIn_6_0[stackIn_7_1]).drawWithOpacity(param1.worldToScreenX(this.field_h, (byte) -72) - 12, param1.worldToScreenY(this.field_c, 0) - 12, this.field_a);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

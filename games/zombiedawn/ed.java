@@ -26,12 +26,12 @@ final class ed {
           pj.field_u = new int[]{135, 135, 140, 140};
           ki.field_X = new int[]{-1, 110, 290, 415};
           cj.field_c = new int[]{220, 307, 490, -1};
-          sf.field_d = new int[]{26, 117, 304, 419};
+          BufferedFile.field_d = new int[]{26, 117, 304, 419};
           no.field_G = new int[]{230, 80, 160, 100};
         } else {
           if (var2 == 0) {
             no.field_G = new int[]{230, 150, 180, 100};
-            sf.field_d = new int[]{26, 182, 370, 463};
+            BufferedFile.field_d = new int[]{26, 182, 370, 463};
             ki.field_X = new int[]{-1, 160, 342, 435};
             gj.field_n = new int[]{178, 50, 134, 33};
             cj.field_c = new int[]{220, 347, 515, -1};
@@ -54,7 +54,7 @@ final class ed {
 
     final static void a(int param0, String param1) {
         if (param0 >= 81) {
-          System.out.println("Error: " + fg.a("%0a", -127, "\n", param1));
+          System.out.println("Error: " + fg.replaceAll("%0a", -127, "\n", param1));
           return;
         }
     }

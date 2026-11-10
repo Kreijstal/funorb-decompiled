@@ -4,7 +4,7 @@
 final class kh implements io {
     static Sprite field_a;
 
-    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
+    public final void drawWidget(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         try {
           if (param0 != 16777215) {
             field_a = (Sprite) null;

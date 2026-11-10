@@ -21,7 +21,7 @@ final class rg extends pa {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         if (param3 != 0) {
           field_E = -66;
           if (param1 != 0) {
@@ -29,15 +29,15 @@ final class rg extends pa {
               return;
             }
             if (this.field_n != 0) {
-              se.field_j.a(this.field_k + param2, this.field_k + (param2 + this.field_i), (byte) -75, param0 + this.field_j, this.field_n + (this.field_j + param0));
-              this.field_z.a(param0 + this.field_j, param1, param2 + this.field_k, 0);
-              se.field_j.b(3);
+              ProxySocketConnector.field_j.pushClipRect(this.field_k + param2, this.field_k + (param2 + this.field_i), (byte) -75, param0 + this.field_j, this.field_n + (this.field_j + param0));
+              this.field_z.drawLayer(param0 + this.field_j, param1, param2 + this.field_k, 0);
+              ProxySocketConnector.field_j.popClipRect(3);
               return;
             }
             return;
           }
           if (null != this.field_h) {
-            this.field_h.a(16777215, true, param0, (UiWidget) (this), param2);
+            this.field_h.drawWidget(16777215, true, param0, (UiWidget) (this), param2);
           }
           if (this.field_i == 0) {
             return;
@@ -45,9 +45,9 @@ final class rg extends pa {
           if (this.field_n == 0) {
             return;
           }
-          se.field_j.a(this.field_k + param2, this.field_k + (param2 + this.field_i), (byte) -75, param0 + this.field_j, this.field_n + (this.field_j + param0));
-          this.field_z.a(param0 + this.field_j, param1, param2 + this.field_k, 0);
-          se.field_j.b(3);
+          ProxySocketConnector.field_j.pushClipRect(this.field_k + param2, this.field_k + (param2 + this.field_i), (byte) -75, param0 + this.field_j, this.field_n + (this.field_j + param0));
+          this.field_z.drawLayer(param0 + this.field_j, param1, param2 + this.field_k, 0);
+          ProxySocketConnector.field_j.popClipRect(3);
           return;
         }
         if (param1 == 0) {
@@ -56,22 +56,22 @@ final class rg extends pa {
               return;
             }
             if (this.field_n != 0) {
-              se.field_j.a(this.field_k + param2, this.field_k + (param2 + this.field_i), (byte) -75, param0 + this.field_j, this.field_n + (this.field_j + param0));
-              this.field_z.a(param0 + this.field_j, param1, param2 + this.field_k, 0);
-              se.field_j.b(3);
+              ProxySocketConnector.field_j.pushClipRect(this.field_k + param2, this.field_k + (param2 + this.field_i), (byte) -75, param0 + this.field_j, this.field_n + (this.field_j + param0));
+              this.field_z.drawLayer(param0 + this.field_j, param1, param2 + this.field_k, 0);
+              ProxySocketConnector.field_j.popClipRect(3);
               return;
             }
             return;
           }
-          this.field_h.a(16777215, true, param0, (UiWidget) (this), param2);
+          this.field_h.drawWidget(16777215, true, param0, (UiWidget) (this), param2);
         }
         if (this.field_i == 0) {
           return;
         }
         if (this.field_n != 0) {
-          se.field_j.a(this.field_k + param2, this.field_k + (param2 + this.field_i), (byte) -75, param0 + this.field_j, this.field_n + (this.field_j + param0));
-          this.field_z.a(param0 + this.field_j, param1, param2 + this.field_k, 0);
-          se.field_j.b(3);
+          ProxySocketConnector.field_j.pushClipRect(this.field_k + param2, this.field_k + (param2 + this.field_i), (byte) -75, param0 + this.field_j, this.field_n + (this.field_j + param0));
+          this.field_z.drawLayer(param0 + this.field_j, param1, param2 + this.field_k, 0);
+          ProxySocketConnector.field_j.popClipRect(3);
           return;
         }
     }
@@ -98,7 +98,7 @@ final class rg extends pa {
         field_L = null;
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
+    final boolean handlePointerPress(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         RuntimeException var8 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -109,7 +109,7 @@ final class rg extends pa {
           if (param1 != 1) {
             field_H = 43;
           }
-          stackIn_6_0 = (this.b(param3, 21224, param2, param4, param0)) && (super.a(param0, 1, param2, param3, param4, param5, param6));
+          stackIn_6_0 = (this.containsPoint(param3, 21224, param2, param4, param0)) && (super.handlePointerPress(param0, 1, param2, param3, param4, param5, param6));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -126,7 +126,7 @@ final class rg extends pa {
     }
 
     final void refreshChildLayout(boolean param0) {
-        this.field_z.a(param0);
+        this.field_z.reapplyBounds(param0);
     }
 
     final static void a(oi param0, boolean param1) {

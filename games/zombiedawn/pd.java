@@ -151,10 +151,10 @@ final class pd {
         }
         long var1 = System.currentTimeMillis();
         if (!(td.field_e <= var1)) {
-          cc.field_a = cc.field_a + (-var1 + td.field_e);
+          PowerupCard.field_a = PowerupCard.field_a + (-var1 + td.field_e);
         }
         td.field_e = var1;
-        return var1 + cc.field_a;
+        return var1 + PowerupCard.field_a;
     }
 
     static {

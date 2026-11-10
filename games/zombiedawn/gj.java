@@ -27,7 +27,7 @@ final class gj {
     static String field_c;
     static String field_m;
 
-    final void a(int param0, UiWidget param1, int param2, qo param3, int param4) {
+    final void paint(int param0, UiWidget param1, int param2, qo param3, int param4) {
         Font stackIn_21_0 = null;
         String stackIn_21_1 = null;
         int stackIn_22_2 = 0;
@@ -50,7 +50,7 @@ final class gj {
         RuntimeException var6_ref = null;
         int var7 = 0;
         try {
-          vf.a(param2 + param1.field_j, this.field_t, param4 + param1.field_k, 3, param1.field_i, param1.field_n);
+          vf.drawNineSliceFrame(param2 + param1.field_j, this.field_t, param4 + param1.field_k, 3, param1.field_i, param1.field_n);
           if (this.field_x != null) {
             var6_int = param4 - (-param1.field_k - this.field_q);
             if (param3.field_h == 1) {
@@ -68,7 +68,7 @@ final class gj {
             }
             this.field_x.drawTransparent(var6_int, var7);
           }
-          var6 = param3.b(12307, param1);
+          var6 = param3.getDisplayText(12307, param1);
           if (param0 != 0) {
             field_m = (String) null;
           }
@@ -121,13 +121,13 @@ final class gj {
         }
     }
 
-    final gj a(boolean param0, byte param1) {
+    final gj setFlushBeforeOverlay(boolean param0, byte param1) {
         int var3 = 5 / ((param1 + 20) / 45);
         this.field_r = param0 ? true : false;
         return this;
     }
 
-    final void a(boolean param0) {
+    final void reset(boolean param0) {
         this.field_d = -1;
         this.field_l = 0;
         if (param0) {
@@ -140,7 +140,7 @@ final class gj {
         this.field_t = null;
     }
 
-    final gj a(Sprite[] param0, int param1) {
+    final gj setFrameSprites(Sprite[] param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -166,13 +166,13 @@ final class gj {
         }
     }
 
-    final gj a(int param0, byte param1) {
+    final gj setOffsetY(int param0, byte param1) {
         this.field_h = param0;
         int var3 = -107 / ((12 - param1) / 44);
         return this;
     }
 
-    final gj a(int param0, int param1) {
+    final gj setTextShadowColor(int param0, int param1) {
         this.field_d = param0;
         if (param1 >= -107) {
           this.field_x = (Sprite) null;
@@ -180,11 +180,11 @@ final class gj {
         return this;
     }
 
-    static long a(long param0, long param1) {
+    static long bitAnd(long param0, long param1) {
         return param0 & param1;
     }
 
-    final void a(qo param0, int param1, int param2, byte param3, UiWidget param4, gj param5) {
+    final void applyTo(qo param0, int param1, int param2, byte param3, UiWidget param4, gj param5) {
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
@@ -196,8 +196,8 @@ final class gj {
         RuntimeException var7 = null;
         try {
           if (this.field_r) {
-            param5.a(0, param4, param2, param0, param1);
-            param5.a(false);
+            param5.paint(0, param4, param2, param0, param1);
+            param5.reset(false);
           }
           if (this.field_s != -2147483648) {
             param5.field_s = this.field_s;
@@ -271,7 +271,7 @@ final class gj {
         field_c = null;
     }
 
-    final gj a(byte param0, int param1) {
+    final gj setOffsetX(byte param0, int param1) {
         this.field_q = param1;
         if (param0 < 122) {
           field_k = (String[][]) null;
@@ -279,7 +279,7 @@ final class gj {
         return this;
     }
 
-    final gj b(byte param0, int param1) {
+    final gj setTextColor(byte param0, int param1) {
         this.field_l = param1;
         if (param0 != -21) {
           field_u = (int[]) null;

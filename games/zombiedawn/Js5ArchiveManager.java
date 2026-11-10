@@ -1,30 +1,30 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bp {
+final class Js5ArchiveManager {
     private og field_e;
     private java.math.BigInteger field_b;
     static String[] field_a;
     static jk field_h;
     private java.math.BigInteger field_c;
     private ExceptionWrapper field_i;
-    private om[] field_g;
+    private CachedArchiveSource[] field_g;
     static String field_j;
     private PacketBuffer field_d;
-    private pc field_f;
+    private Js5Transport field_f;
 
     public static void releaseStatics(int param0) {
         field_j = null;
         field_h = null;
         if (param0 != -16785) {
-          bp.releaseStatics(23);
+          Js5ArchiveManager.releaseStatics(23);
         }
         field_a = null;
     }
 
-    final om a(na param0, byte param1, boolean param2, int param3, na param4) {
-        om stackIn_10_0 = null;
-        om stackIn_14_0 = null;
+    final CachedArchiveSource openProvider(SectorCacheStore param0, byte param1, boolean param2, int param3, SectorCacheStore param4) {
+        CachedArchiveSource stackIn_10_0 = null;
+        CachedArchiveSource stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -34,7 +34,7 @@ final class bp {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        om var9 = null;
+        CachedArchiveSource var9 = null;
         byte[] var13 = null;
         try {
           if (this.field_d == null) {
@@ -54,7 +54,7 @@ final class bp {
             var7 = this.field_d.readInt(-95);
             var13 = new byte[64];
             this.field_d.readBytes(64, 0, var13, 11240);
-            var9 = new om(param3, param0, param4, this.field_f, this.field_i, var6_int, var13, var7, param2);
+            var9 = new CachedArchiveSource(param3, param0, param4, this.field_f, this.field_i, var6_int, var13, var7, param2);
             this.field_g[param3] = var9;
             stackIn_14_0 = var9;
             return stackIn_14_0;
@@ -80,11 +80,11 @@ final class bp {
         }
     }
 
-    bp(pc param0, ExceptionWrapper param1) {
+    Js5ArchiveManager(Js5Transport param0, ExceptionWrapper param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    final boolean a(byte param0) {
+    final boolean loadMasterIndex(byte param0) {
         int var7 = 0;
         int var3;
         byte[] var4;
@@ -101,10 +101,10 @@ final class bp {
           return true;
         }
         if (null == this.field_e) {
-          if (this.field_f.b(107)) {
+          if (this.field_f.isPriorityQueueFull(107)) {
             return false;
           }
-          this.field_e = this.field_f.a((byte) 0, true, 255, (byte) -102, 255);
+          this.field_e = this.field_f.createRequest((byte) 0, true, 255, (byte) -102, 255);
         }
         if (this.field_e.field_q) {
           return false;
@@ -128,7 +128,7 @@ final class bp {
         if (65 != var5.length) {
           throw new RuntimeException();
         }
-        var15 = nl.a(5, -5 + (var10.position - var13.length), -117, var10.payload);
+        var15 = nl.computeWhirlpoolDigest(5, -5 + (var10.position - var13.length), -117, var10.payload);
         for (var7 = 0; var7 < 64; var7++) {
           if (var15[var7] != var5[var7 + 1]) {
             throw new RuntimeException();
@@ -137,12 +137,12 @@ final class bp {
         if (param0 != 0) {
           field_j = (String) null;
         }
-        this.field_g = new om[var3];
+        this.field_g = new CachedArchiveSource[var3];
         this.field_d = var10;
         return true;
     }
 
-    final void a(boolean param0) {
+    final void serviceProviders(boolean param0) {
         int var2;
         int var3;
         int var4;
@@ -153,24 +153,24 @@ final class bp {
         }
         for (var2 = 0; this.field_g.length > var2; var2++) {
           if (null != this.field_g[var2]) {
-            this.field_g[var2].b(0);
+            this.field_g[var2].processQueuedGroups(0);
           }
         }
         var4 = 0;
         var2Lifetime1 = var4;
         while (this.field_g.length > var4) {
           if (this.field_g[var4] != null) {
-            this.field_g[var4].a(84);
+            this.field_g[var4].advanceBackgroundLoading(84);
           }
           var4++;
         }
         if (!param0) {
-          bp.releaseStatics(79);
+          Js5ArchiveManager.releaseStatics(79);
         }
         return;
     }
 
-    private bp(pc param0, ExceptionWrapper param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private Js5ArchiveManager(Js5Transport param0, ExceptionWrapper param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -187,8 +187,8 @@ final class bp {
           this.field_c = param3;
           this.field_i = param1;
           this.field_b = param2;
-          if (!this.field_f.b(105)) {
-            this.field_e = this.field_f.a((byte) 0, true, 255, (byte) 50, 255);
+          if (!this.field_f.isPriorityQueueFull(105)) {
+            this.field_e = this.field_f.createRequest((byte) 0, true, 255, (byte) 50, 255);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

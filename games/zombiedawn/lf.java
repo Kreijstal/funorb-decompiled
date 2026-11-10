@@ -41,7 +41,7 @@ final class lf extends IntrusiveNode {
           if (param2 != -7235) {
             lf.a(-15);
           }
-          var3 = am.a(param0, 1);
+          var3 = am.reverseString(param0, 1);
           if (param1.indexOf(param0) == -1 &&
             param1.indexOf(var3) == -1) {
             stackIn_14_0 = (param1.startsWith(param0)) || (param1.startsWith(var3)) || (param1.endsWith(param0)) || (param1.endsWith(var3));
@@ -89,7 +89,7 @@ final class lf extends IntrusiveNode {
         cn.field_f = l.a(-1, param0, (java.awt.Component) ((Object) cj.field_d), param1);
         cn.field_f.makeRasterTarget(param2 - 129);
         ba.a(18002, param0 / 2, param1 / 2);
-        pl.a(param1, param0, (byte) 50);
+        pl.resizeDialogLayer(param1, param0, (byte) 50);
         ep.a(param0, param1, -21141);
         hn.a(param1 / 2, (byte) -91, param0 / param2);
     }

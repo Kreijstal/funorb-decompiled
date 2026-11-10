@@ -40,14 +40,14 @@ class gl extends an {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          ig.m((byte) -72);
-          e.field_S.j(-636330975);
+          ig.resetLoginState((byte) -72);
+          e.field_S.hideAllDialogs(-636330975);
           if (param0 != -753) {
             gl.a(-39, (String) null, false, false);
           }
           he.field_a = new ih(GameLoopApplet.field_B, (String) null, nm.field_c, param3, param2);
           bm.field_d = new cf(e.field_S, he.field_a);
-          e.field_S.a(bm.field_d, true);
+          e.field_S.addDialog(bm.field_d, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -88,1408 +88,1408 @@ class gl extends an {
             }
             void runChunk0() throws java.lang.RuntimeException {
                 kp.field_f = param0;
-                var2 = ClientException.a(-31, "game_name");
+                var2 = ClientException.getLoadingTextFile(-31, "game_name");
                 if (var2 != null) {
                   gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 611, "waitingfor_patches");
+                var2 = ClientException.getLoadingTextFile(param1 - 611, "waitingfor_patches");
                 if (null != var2) {
                   gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-41, "loading_patches");
+                var2 = ClientException.getLoadingTextFile(-41, "loading_patches");
                 if (var2 != null) {
                   gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ -684, "mouseoverathing");
+                var2 = ClientException.getLoadingTextFile(param1 ^ -684, "mouseoverathing");
                 if (var2 != null) {
                   GameLoopApplet.field_C = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-44, "achievementsthisgame");
+                var2 = ClientException.getLoadingTextFile(-44, "achievementsthisgame");
                 if (var2 != null) {
                   me.field_Hb = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ 674, "ukexpansion");
+                var2 = ClientException.getLoadingTextFile(param1 ^ 674, "ukexpansion");
                 if (null != var2) {
                   qc.field_b = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(105, "ukexpansioninstalled");
+                var2 = ClientException.getLoadingTextFile(105, "ukexpansioninstalled");
                 if (null != var2) {
                   mc.field_j = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(100, "benefits,0");
+                var2 = ClientException.getLoadingTextFile(100, "benefits,0");
                 if (var2 != null) {
                   kl.field_o[0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-85, "benefits,1");
+                var2 = ClientException.getLoadingTextFile(-85, "benefits,1");
                 if (var2 != null) {
                   kl.field_o[1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 779, "benefits,2");
+                var2 = ClientException.getLoadingTextFile(param1 - 779, "benefits,2");
                 if (var2 != null) {
                   kl.field_o[2] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(102, "benefits,3");
+                var2 = ClientException.getLoadingTextFile(102, "benefits,3");
                 if (null != var2) {
                   kl.field_o[3] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-70, "nextlevel");
+                var2 = ClientException.getLoadingTextFile(-70, "nextlevel");
                 if (var2 != null) {
                   hb.field_G = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 618, "retry");
+                var2 = ClientException.getLoadingTextFile(param1 - 618, "retry");
                 if (var2 != null) {
                   vj.field_s = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-57, "restart");
+                var2 = ClientException.getLoadingTextFile(-57, "restart");
                 if (null != var2) {
                   pg.field_n = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-105, "endofgame");
+                var2 = ClientException.getLoadingTextFile(-105, "endofgame");
                 if (var2 != null) {
                   sd.field_a = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-43, "endoffreegame");
+                var2 = ClientException.getLoadingTextFile(-43, "endoffreegame");
                 if (null != var2) {
                   wg.field_o = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-76, "gameover");
+                var2 = ClientException.getLoadingTextFile(-76, "gameover");
                 if (var2 != null) {
                   oh.field_jb = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-17, "selectarea");
+                var2 = ClientException.getLoadingTextFile(-17, "selectarea");
                 if (var2 != null) {
                   vd.field_c = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ 683, "selectlevel");
+                var2 = ClientException.getLoadingTextFile(param1 ^ 683, "selectlevel");
                 if (var2 != null) {
                   fm.field_H = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ -679, "paused");
+                var2 = ClientException.getLoadingTextFile(param1 ^ -679, "paused");
                 if (var2 != null) {
                   uj.field_b = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(121, "keycode_left");
+                var2 = ClientException.getLoadingTextFile(121, "keycode_left");
                 if (null != var2) {
                   ic.field_P = var2[0] & 255;
                 }
-                var2 = ClientException.a(param1 - 837, "keycode_right");
+                var2 = ClientException.getLoadingTextFile(param1 - 837, "keycode_right");
                 if (null != var2) {
                   me.field_Gb = 255 & var2[0];
                 }
-                var2 = ClientException.a(-101, "keycode_up");
+                var2 = ClientException.getLoadingTextFile(-101, "keycode_up");
                 if (var2 != null) {
                   vf.field_d = var2[0] & 255;
                 }
-                var2 = ClientException.a(param1 ^ -761, "keycode_down");
+                var2 = ClientException.getLoadingTextFile(param1 ^ -761, "keycode_down");
                 if (var2 != null) {
                   ge.field_e = var2[0] & 255;
                 }
-                var2 = ClientException.a(-41, "keycode_powerup1");
+                var2 = ClientException.getLoadingTextFile(-41, "keycode_powerup1");
                 if (null != var2) {
                   mg.field_j = 255 & var2[0];
                 }
-                var2 = ClientException.a(param1 ^ 676, "keycode_powerup2");
+                var2 = ClientException.getLoadingTextFile(param1 ^ 676, "keycode_powerup2");
                 if (null != var2) {
                   BufferedSocket.field_k = 255 & var2[0];
                 }
-                var2 = ClientException.a(106, "keycode_powerup3");
+                var2 = ClientException.getLoadingTextFile(106, "keycode_powerup3");
                 if (null != var2) {
                   dl.field_c = var2[0] & 255;
                 }
-                var2 = ClientException.a(120, "keycode_powerup4");
+                var2 = ClientException.getLoadingTextFile(120, "keycode_powerup4");
                 if (var2 != null) {
                   e.field_K = var2[0] & 255;
                 }
-                var2 = ClientException.a(param1 ^ 680, "keycode_powerup5");
+                var2 = ClientException.getLoadingTextFile(param1 ^ 680, "keycode_powerup5");
                 if (null != var2) {
                   rd.field_D = 255 & var2[0];
                 }
-                var2 = ClientException.a(param1 - 862, "keycode_powerup6");
+                var2 = ClientException.getLoadingTextFile(param1 - 862, "keycode_powerup6");
                 if (null != var2) {
                   si.field_Rb = 255 & var2[0];
                 }
-                var2 = ClientException.a(127, "keycode_powerup7");
+                var2 = ClientException.getLoadingTextFile(127, "keycode_powerup7");
                 if (null != var2) {
                   ExceptionWrapper.field_g = var2[0] & 255;
                 }
-                var2 = ClientException.a(param1 ^ -732, "keycode_powerup8");
+                var2 = ClientException.getLoadingTextFile(param1 ^ -732, "keycode_powerup8");
                 if (var2 != null) {
                   hn.field_m = var2[0] & 255;
                 }
-                var2 = ClientException.a(param1 ^ -688, "achievement_names,0");
+                var2 = ClientException.getLoadingTextFile(param1 ^ -688, "achievement_names,0");
                 if (var2 != null) {
                   hk.field_J[0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-114, "achievement_names,1");
+                var2 = ClientException.getLoadingTextFile(-114, "achievement_names,1");
                 if (var2 != null) {
                   hk.field_J[1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(119, "achievement_names,2");
+                var2 = ClientException.getLoadingTextFile(119, "achievement_names,2");
                 if (null != var2) {
                   hk.field_J[2] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(102, "achievement_names,3");
+                var2 = ClientException.getLoadingTextFile(102, "achievement_names,3");
                 if (var2 != null) {
                   hk.field_J[3] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(110, "achievement_names,4");
+                var2 = ClientException.getLoadingTextFile(110, "achievement_names,4");
                 if (null != var2) {
                   hk.field_J[4] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(106, "achievement_names,5");
+                var2 = ClientException.getLoadingTextFile(106, "achievement_names,5");
                 if (var2 != null) {
                   hk.field_J[5] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(117, "achievement_names,6");
+                var2 = ClientException.getLoadingTextFile(117, "achievement_names,6");
                 if (null != var2) {
                   hk.field_J[6] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(117, "achievement_names,7");
+                var2 = ClientException.getLoadingTextFile(117, "achievement_names,7");
                 if (null != var2) {
                   hk.field_J[7] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 818, "achievement_names,8");
+                var2 = ClientException.getLoadingTextFile(param1 - 818, "achievement_names,8");
                 if (null != var2) {
                   hk.field_J[8] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-96, "achievement_names,9");
+                var2 = ClientException.getLoadingTextFile(-96, "achievement_names,9");
                 if (var2 != null) {
                   hk.field_J[9] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(105, "achievement_names,10");
+                var2 = ClientException.getLoadingTextFile(105, "achievement_names,10");
                 if (var2 != null) {
                   hk.field_J[10] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(123, "achievement_names,11");
+                var2 = ClientException.getLoadingTextFile(123, "achievement_names,11");
                 if (null != var2) {
                   hk.field_J[11] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-62, "achievement_names,12");
+                var2 = ClientException.getLoadingTextFile(-62, "achievement_names,12");
                 if (null != var2) {
                   hk.field_J[12] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-55, "achievement_names,13");
+                var2 = ClientException.getLoadingTextFile(-55, "achievement_names,13");
                 if (null != var2) {
                   hk.field_J[13] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-17, "achievement_names,14");
+                var2 = ClientException.getLoadingTextFile(-17, "achievement_names,14");
                 if (var2 != null) {
                   hk.field_J[14] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-67, "achievement_names,15");
+                var2 = ClientException.getLoadingTextFile(-67, "achievement_names,15");
                 if (var2 != null) {
                   hk.field_J[15] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-74, "achievement_names,16");
+                var2 = ClientException.getLoadingTextFile(-74, "achievement_names,16");
                 if (var2 != null) {
                   hk.field_J[16] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 774, "achievement_names,17");
+                var2 = ClientException.getLoadingTextFile(param1 - 774, "achievement_names,17");
                 if (var2 != null) {
                   hk.field_J[17] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-122, "achievement_names,18");
+                var2 = ClientException.getLoadingTextFile(-122, "achievement_names,18");
                 if (null != var2) {
                   hk.field_J[18] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 614, "achievement_names,19");
+                var2 = ClientException.getLoadingTextFile(param1 - 614, "achievement_names,19");
                 if (var2 != null) {
                   hk.field_J[19] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-84, "achievement_names,20");
+                var2 = ClientException.getLoadingTextFile(-84, "achievement_names,20");
                 if (null != var2) {
                   hk.field_J[20] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(105, "achievement_names,21");
+                var2 = ClientException.getLoadingTextFile(105, "achievement_names,21");
                 if (null != var2) {
                   hk.field_J[21] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-25, "achievement_names,22");
+                var2 = ClientException.getLoadingTextFile(-25, "achievement_names,22");
                 if (var2 != null) {
                   hk.field_J[22] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 760, "achievement_names,23");
+                var2 = ClientException.getLoadingTextFile(param1 - 760, "achievement_names,23");
                 if (null != var2) {
                   hk.field_J[23] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(124, "achievement_names,24");
+                var2 = ClientException.getLoadingTextFile(124, "achievement_names,24");
                 if (null != var2) {
                   hk.field_J[24] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(114, "achievement_names,25");
+                var2 = ClientException.getLoadingTextFile(114, "achievement_names,25");
                 if (var2 != null) {
                   hk.field_J[25] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-56, "achievement_names,26");
+                var2 = ClientException.getLoadingTextFile(-56, "achievement_names,26");
                 if (var2 != null) {
                   hk.field_J[26] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-91, "achievement_names,27");
+                var2 = ClientException.getLoadingTextFile(-91, "achievement_names,27");
                 if (null != var2) {
                   hk.field_J[27] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(106, "achievement_names,28");
+                var2 = ClientException.getLoadingTextFile(106, "achievement_names,28");
                 if (var2 != null) {
                   hk.field_J[28] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-50, "achievement_names,29");
+                var2 = ClientException.getLoadingTextFile(-50, "achievement_names,29");
                 if (null != var2) {
                   hk.field_J[29] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(114, "achievement_names,30");
+                var2 = ClientException.getLoadingTextFile(114, "achievement_names,30");
                 if (var2 != null) {
                   hk.field_J[30] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-47, "achievement_names,31");
+                var2 = ClientException.getLoadingTextFile(-47, "achievement_names,31");
                 if (var2 != null) {
                   hk.field_J[31] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ 697, "achievement_criteria,0");
+                var2 = ClientException.getLoadingTextFile(param1 ^ 697, "achievement_criteria,0");
                 if (null != var2) {
                   gd.field_C[0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(127, "achievement_criteria,1");
+                var2 = ClientException.getLoadingTextFile(127, "achievement_criteria,1");
                 if (var2 != null) {
                   gd.field_C[1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-10, "achievement_criteria,2");
+                var2 = ClientException.getLoadingTextFile(-10, "achievement_criteria,2");
                 if (null != var2) {
                   gd.field_C[2] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-126, "achievement_criteria,3");
+                var2 = ClientException.getLoadingTextFile(-126, "achievement_criteria,3");
                 if (var2 != null) {
                   gd.field_C[3] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ 693, "achievement_criteria,4");
+                var2 = ClientException.getLoadingTextFile(param1 ^ 693, "achievement_criteria,4");
                 if (var2 != null) {
                   gd.field_C[4] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(105, "achievement_criteria,5");
+                var2 = ClientException.getLoadingTextFile(105, "achievement_criteria,5");
                 if (var2 != null) {
                   gd.field_C[5] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(110, "achievement_criteria,6");
+                var2 = ClientException.getLoadingTextFile(110, "achievement_criteria,6");
                 if (var2 != null) {
                   gd.field_C[6] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-12, "achievement_criteria,7");
+                var2 = ClientException.getLoadingTextFile(-12, "achievement_criteria,7");
                 if (null != var2) {
                   gd.field_C[7] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 621, "achievement_criteria,8");
+                var2 = ClientException.getLoadingTextFile(param1 - 621, "achievement_criteria,8");
                 if (var2 != null) {
                   gd.field_C[8] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(124, "achievement_criteria,9");
+                var2 = ClientException.getLoadingTextFile(124, "achievement_criteria,9");
                 if (null != var2) {
                   gd.field_C[9] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-43, "achievement_criteria,10");
+                var2 = ClientException.getLoadingTextFile(-43, "achievement_criteria,10");
                 if (var2 != null) {
                   gd.field_C[10] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ 684, "achievement_criteria,11");
+                var2 = ClientException.getLoadingTextFile(param1 ^ 684, "achievement_criteria,11");
                 if (null != var2) {
                   gd.field_C[11] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ 680, "achievement_criteria,12");
+                var2 = ClientException.getLoadingTextFile(param1 ^ 680, "achievement_criteria,12");
                 if (null != var2) {
                   gd.field_C[12] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-92, "achievement_criteria,13");
+                var2 = ClientException.getLoadingTextFile(-92, "achievement_criteria,13");
                 if (null != var2) {
                   gd.field_C[13] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 633, "achievement_criteria,14");
+                var2 = ClientException.getLoadingTextFile(param1 - 633, "achievement_criteria,14");
                 if (var2 != null) {
                   gd.field_C[14] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(127, "achievement_criteria,15");
+                var2 = ClientException.getLoadingTextFile(127, "achievement_criteria,15");
                 if (null != var2) {
                   gd.field_C[15] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-70, "achievement_criteria,16");
+                var2 = ClientException.getLoadingTextFile(-70, "achievement_criteria,16");
                 if (null != var2) {
                   gd.field_C[16] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-109, "achievement_criteria,17");
+                var2 = ClientException.getLoadingTextFile(-109, "achievement_criteria,17");
                 if (var2 != null) {
                   gd.field_C[17] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 860, "achievement_criteria,18");
+                var2 = ClientException.getLoadingTextFile(param1 - 860, "achievement_criteria,18");
                 if (var2 != null) {
                   gd.field_C[18] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ -641, "achievement_criteria,19");
+                var2 = ClientException.getLoadingTextFile(param1 ^ -641, "achievement_criteria,19");
                 if (var2 != null) {
                   gd.field_C[19] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-59, "achievement_criteria,20");
+                var2 = ClientException.getLoadingTextFile(-59, "achievement_criteria,20");
                 if (null != var2) {
                   gd.field_C[20] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-60, "achievement_criteria,21");
+                var2 = ClientException.getLoadingTextFile(-60, "achievement_criteria,21");
                 if (null != var2) {
                   gd.field_C[21] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-72, "achievement_criteria,22");
+                var2 = ClientException.getLoadingTextFile(-72, "achievement_criteria,22");
                 if (var2 != null) {
                   gd.field_C[22] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 612, "achievement_criteria,23");
+                var2 = ClientException.getLoadingTextFile(param1 - 612, "achievement_criteria,23");
                 if (var2 != null) {
                   gd.field_C[23] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(116, "achievement_criteria,24");
+                var2 = ClientException.getLoadingTextFile(116, "achievement_criteria,24");
                 if (null != var2) {
                   gd.field_C[24] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 810, "achievement_criteria,25");
+                var2 = ClientException.getLoadingTextFile(param1 - 810, "achievement_criteria,25");
                 if (var2 != null) {
                   gd.field_C[25] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ 693, "achievement_criteria,26");
+                var2 = ClientException.getLoadingTextFile(param1 ^ 693, "achievement_criteria,26");
                 if (null != var2) {
                   gd.field_C[26] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(105, "achievement_criteria,27");
+                var2 = ClientException.getLoadingTextFile(105, "achievement_criteria,27");
                 if (var2 != null) {
                   gd.field_C[27] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ 697, "achievement_criteria,28");
+                var2 = ClientException.getLoadingTextFile(param1 ^ 697, "achievement_criteria,28");
                 if (null != var2) {
                   gd.field_C[28] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-82, "achievement_criteria,29");
+                var2 = ClientException.getLoadingTextFile(-82, "achievement_criteria,29");
                 if (null != var2) {
                   gd.field_C[29] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ -739, "achievement_criteria,30");
+                var2 = ClientException.getLoadingTextFile(param1 ^ -739, "achievement_criteria,30");
                 if (var2 != null) {
                   gd.field_C[30] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(121, "achievement_criteria,31");
+                var2 = ClientException.getLoadingTextFile(121, "achievement_criteria,31");
                 if (null != var2) {
                   gd.field_C[31] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 623, "stage_name,0,0");
+                var2 = ClientException.getLoadingTextFile(param1 - 623, "stage_name,0,0");
                 if (var2 != null) {
                   cj.field_a[0][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(118, "stage_name,0,1");
+                var2 = ClientException.getLoadingTextFile(118, "stage_name,0,1");
                 if (null != var2) {
                   cj.field_a[0][1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 840, "stage_name,0,2");
+                var2 = ClientException.getLoadingTextFile(param1 - 840, "stage_name,0,2");
                 if (null != var2) {
                   cj.field_a[0][2] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-27, "stage_name,0,3");
+                var2 = ClientException.getLoadingTextFile(-27, "stage_name,0,3");
                 if (null != var2) {
                   cj.field_a[0][3] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-30, "stage_name,1,0");
+                var2 = ClientException.getLoadingTextFile(-30, "stage_name,1,0");
                 if (null != var2) {
                   cj.field_a[1][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-106, "stage_name,1,1");
+                var2 = ClientException.getLoadingTextFile(-106, "stage_name,1,1");
                 if (null != var2) {
                   cj.field_a[1][1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ 684, "stage_name,1,2");
+                var2 = ClientException.getLoadingTextFile(param1 ^ 684, "stage_name,1,2");
                 if (null != var2) {
                   cj.field_a[1][2] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 614, "stage_name,1,3");
+                var2 = ClientException.getLoadingTextFile(param1 - 614, "stage_name,1,3");
                 if (var2 != null) {
                   cj.field_a[1][3] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-109, "levelselect_title,0,0");
+                var2 = ClientException.getLoadingTextFile(-109, "levelselect_title,0,0");
                 if (null != var2) {
                   gn.field_c[0][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-100, "levelselect_title,0,1");
+                var2 = ClientException.getLoadingTextFile(-100, "levelselect_title,0,1");
                 if (null != var2) {
                   gn.field_c[0][1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(106, "levelselect_title,0,2");
+                var2 = ClientException.getLoadingTextFile(106, "levelselect_title,0,2");
                 if (var2 != null) {
                   gn.field_c[0][2] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(123, "levelselect_title,0,3");
+                var2 = ClientException.getLoadingTextFile(123, "levelselect_title,0,3");
                 if (null != var2) {
                   gn.field_c[0][3] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(121, "levelselect_title,1,0");
+                var2 = ClientException.getLoadingTextFile(121, "levelselect_title,1,0");
                 if (var2 != null) {
                   gn.field_c[1][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-39, "levelselect_title,1,1");
+                var2 = ClientException.getLoadingTextFile(-39, "levelselect_title,1,1");
                 if (var2 != null) {
                   gn.field_c[1][1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ 682, "levelselect_title,1,2");
+                var2 = ClientException.getLoadingTextFile(param1 ^ 682, "levelselect_title,1,2");
                 if (var2 != null) {
                   gn.field_c[1][2] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(115, "levelselect_title,1,3");
+                var2 = ClientException.getLoadingTextFile(115, "levelselect_title,1,3");
                 if (var2 != null) {
                   gn.field_c[1][3] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(101, "title_locked");
+                var2 = ClientException.getLoadingTextFile(101, "title_locked");
                 if (var2 != null) {
                   kf.field_Y = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-116, "locked_level");
+                var2 = ClientException.getLoadingTextFile(-116, "locked_level");
                 if (var2 != null) {
                   jk.field_h = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ -767, "levelselect_questionmarks");
+                var2 = ClientException.getLoadingTextFile(param1 ^ -767, "levelselect_questionmarks");
                 if (null != var2) {
                   o.field_n = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-48, "achievement_hidden");
+                var2 = ClientException.getLoadingTextFile(-48, "achievement_hidden");
                 if (null != var2) {
                   ExceptionWrapper.field_f = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ -663, "levelselect_levelname");
+                var2 = ClientException.getLoadingTextFile(param1 ^ -663, "levelselect_levelname");
                 if (null != var2) {
                   dk.field_Zb = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-53, "score_colon_space");
+                var2 = ClientException.getLoadingTextFile(-53, "score_colon_space");
                 if (var2 != null) {
                   gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-63, "esc_to_skip");
+                var2 = ClientException.getLoadingTextFile(-63, "esc_to_skip");
                 if (var2 != null) {
                   rg.field_L = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(103, "instructions,0,0");
+                var2 = ClientException.getLoadingTextFile(103, "instructions,0,0");
                 if (null != var2) {
                   gj.field_g[0][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-67, "instructions,0,1");
+                var2 = ClientException.getLoadingTextFile(-67, "instructions,0,1");
                 if (null != var2) {
                   gj.field_g[0][1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 741, "instructions,1,0");
+                var2 = ClientException.getLoadingTextFile(param1 - 741, "instructions,1,0");
                 if (null != var2) {
                   gj.field_g[1][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(113, "instructions,1,1");
+                var2 = ClientException.getLoadingTextFile(113, "instructions,1,1");
                 if (var2 != null) {
                   gj.field_g[1][1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-37, "instructions,1,2");
+                var2 = ClientException.getLoadingTextFile(-37, "instructions,1,2");
                 if (null != var2) {
                   gj.field_g[1][2] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(102, "instructions,1,3");
+                var2 = ClientException.getLoadingTextFile(102, "instructions,1,3");
                 if (var2 != null) {
                   gj.field_g[1][3] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-120, "instructions,1,4");
+                var2 = ClientException.getLoadingTextFile(-120, "instructions,1,4");
                 if (null != var2) {
                   gj.field_g[1][4] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(105, "instructions,2,0");
+                var2 = ClientException.getLoadingTextFile(105, "instructions,2,0");
                 if (var2 != null) {
                   gj.field_g[2][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-105, "instructions,2,1");
+                var2 = ClientException.getLoadingTextFile(-105, "instructions,2,1");
                 if (null != var2) {
                   gj.field_g[2][1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ 677, "instructions,2,2");
+                var2 = ClientException.getLoadingTextFile(param1 ^ 677, "instructions,2,2");
                 if (var2 != null) {
                   gj.field_g[2][2] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(103, "instructions,2,3");
+                var2 = ClientException.getLoadingTextFile(103, "instructions,2,3");
                 if (var2 != null) {
                   gj.field_g[2][3] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-114, "instructions,3,0");
+                var2 = ClientException.getLoadingTextFile(-114, "instructions,3,0");
                 if (var2 != null) {
                   gj.field_g[3][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-17, "instructions,4,0");
+                var2 = ClientException.getLoadingTextFile(-17, "instructions,4,0");
                 if (var2 != null) {
                   gj.field_g[4][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ -695, "instructions,5,0");
+                var2 = ClientException.getLoadingTextFile(param1 ^ -695, "instructions,5,0");
                 if (var2 != null) {
                   gj.field_g[5][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ -714, "instructions,6,0");
+                var2 = ClientException.getLoadingTextFile(param1 ^ -714, "instructions,6,0");
                 if (var2 != null) {
                   gj.field_g[6][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-35, "instructions,7,0");
+                var2 = ClientException.getLoadingTextFile(-35, "instructions,7,0");
                 if (var2 != null) {
                   gj.field_g[7][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-64, "instructions,8,0");
+                var2 = ClientException.getLoadingTextFile(-64, "instructions,8,0");
                 if (var2 != null) {
                   gj.field_g[8][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 850, "instructions,9,0");
+                var2 = ClientException.getLoadingTextFile(param1 - 850, "instructions,9,0");
                 if (var2 != null) {
                   gj.field_g[9][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 616, "instructions,10,0");
+                var2 = ClientException.getLoadingTextFile(param1 - 616, "instructions,10,0");
                 if (var2 != null) {
                   gj.field_g[10][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 619, "instructions,11,0");
+                var2 = ClientException.getLoadingTextFile(param1 - 619, "instructions,11,0");
                 if (null != var2) {
                   gj.field_g[11][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-109, "instructions_titles,0,0");
+                var2 = ClientException.getLoadingTextFile(-109, "instructions_titles,0,0");
                 if (var2 != null) {
                   gj.field_k[0][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ -701, "instructions_titles,0,1");
+                var2 = ClientException.getLoadingTextFile(param1 ^ -701, "instructions_titles,0,1");
                 if (null != var2) {
                   gj.field_k[0][1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-59, "instructions_titles,1,0");
+                var2 = ClientException.getLoadingTextFile(-59, "instructions_titles,1,0");
                 if (var2 != null) {
                   gj.field_k[1][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-46, "instructions_titles,2,0");
+                var2 = ClientException.getLoadingTextFile(-46, "instructions_titles,2,0");
                 if (var2 != null) {
                   gj.field_k[2][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(100, "instructions_titles,3,0");
+                var2 = ClientException.getLoadingTextFile(100, "instructions_titles,3,0");
                 if (var2 != null) {
                   gj.field_k[3][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-58, "instructions_titles,4,0");
+                var2 = ClientException.getLoadingTextFile(-58, "instructions_titles,4,0");
                 if (var2 != null) {
                   gj.field_k[4][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 790, "instructions_titles,5,0");
+                var2 = ClientException.getLoadingTextFile(param1 - 790, "instructions_titles,5,0");
                 if (null != var2) {
                   gj.field_k[5][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-60, "instructions_titles,6,0");
+                var2 = ClientException.getLoadingTextFile(-60, "instructions_titles,6,0");
                 if (var2 != null) {
                   gj.field_k[6][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-66, "instructions_titles,7,0");
+                var2 = ClientException.getLoadingTextFile(-66, "instructions_titles,7,0");
                 if (var2 != null) {
                   gj.field_k[7][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(127, "instructions_titles,8,0");
+                var2 = ClientException.getLoadingTextFile(127, "instructions_titles,8,0");
                 if (var2 != null) {
                   gj.field_k[8][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-104, "instructions_titles,9,0");
+                var2 = ClientException.getLoadingTextFile(-104, "instructions_titles,9,0");
                 if (var2 != null) {
                   gj.field_k[9][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-56, "instructions_titles,10,0");
+                var2 = ClientException.getLoadingTextFile(-56, "instructions_titles,10,0");
                 if (null != var2) {
                   gj.field_k[10][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(115, "instructions_titles,11,0");
+                var2 = ClientException.getLoadingTextFile(115, "instructions_titles,11,0");
                 if (null != var2) {
                   gj.field_k[11][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(127, "instructions_powerups,0");
+                var2 = ClientException.getLoadingTextFile(127, "instructions_powerups,0");
                 if (null != var2) {
                   gj.field_j[0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 760, "instructions_powerups,1");
+                var2 = ClientException.getLoadingTextFile(param1 - 760, "instructions_powerups,1");
                 if (var2 != null) {
                   gj.field_j[1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-39, "instructions_powerups,2");
+                var2 = ClientException.getLoadingTextFile(-39, "instructions_powerups,2");
                 if (null != var2) {
                   gj.field_j[2] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 629, "instructions_powerups,3");
+                var2 = ClientException.getLoadingTextFile(param1 - 629, "instructions_powerups,3");
                 if (var2 != null) {
                   gj.field_j[3] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(126, "instructions_powerups,4");
+                var2 = ClientException.getLoadingTextFile(126, "instructions_powerups,4");
                 if (null != var2) {
                   gj.field_j[4] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-58, "instructions_powerups,5");
+                var2 = ClientException.getLoadingTextFile(-58, "instructions_powerups,5");
                 if (null != var2) {
                   gj.field_j[5] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ 676, "instructions_powerups,6");
+                var2 = ClientException.getLoadingTextFile(param1 ^ 676, "instructions_powerups,6");
                 if (var2 != null) {
                   gj.field_j[6] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(127, "instructions_powerups,7");
+                var2 = ClientException.getLoadingTextFile(127, "instructions_powerups,7");
                 if (var2 != null) {
                   gj.field_j[7] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ -642, "instructions_powerups,9");
+                var2 = ClientException.getLoadingTextFile(param1 ^ -642, "instructions_powerups,9");
                 if (var2 != null) {
                   gj.field_j[9] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-111, "instructions_powerups,10");
+                var2 = ClientException.getLoadingTextFile(-111, "instructions_powerups,10");
                 if (var2 != null) {
                   gj.field_j[10] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-49, "instructions_powerups,12");
+                var2 = ClientException.getLoadingTextFile(-49, "instructions_powerups,12");
                 if (null != var2) {
                   gj.field_j[12] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(105, "instructions_powerups,13");
+                var2 = ClientException.getLoadingTextFile(105, "instructions_powerups,13");
                 if (null != var2) {
                   gj.field_j[13] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-23, "instructions_powerups,14");
+                var2 = ClientException.getLoadingTextFile(-23, "instructions_powerups,14");
                 if (null != var2) {
                   gj.field_j[14] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(110, "instructions_powerups,15");
+                var2 = ClientException.getLoadingTextFile(110, "instructions_powerups,15");
                 if (null != var2) {
                   gj.field_j[15] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(103, "instructions_survivors,0");
+                var2 = ClientException.getLoadingTextFile(103, "instructions_survivors,0");
                 if (var2 != null) {
                   gj.field_p[0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-114, "instructions_survivors,1");
+                var2 = ClientException.getLoadingTextFile(-114, "instructions_survivors,1");
                 if (null != var2) {
                   gj.field_p[1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(102, "instructions_survivors,2");
+                var2 = ClientException.getLoadingTextFile(102, "instructions_survivors,2");
                 if (var2 != null) {
                   gj.field_p[2] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 849, "instructions_survivors,3");
+                var2 = ClientException.getLoadingTextFile(param1 - 849, "instructions_survivors,3");
                 if (null != var2) {
                   gj.field_p[3] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(123, "instructions_survivors,4");
+                var2 = ClientException.getLoadingTextFile(123, "instructions_survivors,4");
                 if (var2 != null) {
                   gj.field_p[4] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-121, "instructions_survivors,5");
+                var2 = ClientException.getLoadingTextFile(-121, "instructions_survivors,5");
                 if (null != var2) {
                   gj.field_p[5] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-30, "instructions_survivors,6");
+                var2 = ClientException.getLoadingTextFile(-30, "instructions_survivors,6");
                 if (null != var2) {
                   gj.field_p[6] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-83, "instructions_survivors,7");
+                var2 = ClientException.getLoadingTextFile(-83, "instructions_survivors,7");
                 if (null != var2) {
                   gj.field_p[7] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(122, "instructions_survivors,8");
+                var2 = ClientException.getLoadingTextFile(122, "instructions_survivors,8");
                 if (var2 != null) {
                   gj.field_p[8] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 609, "instructions_survivors,9");
+                var2 = ClientException.getLoadingTextFile(param1 - 609, "instructions_survivors,9");
                 if (var2 != null) {
                   gj.field_p[9] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ -654, "instructions_survivors,10");
+                var2 = ClientException.getLoadingTextFile(param1 ^ -654, "instructions_survivors,10");
                 if (null != var2) {
                   gj.field_p[10] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(125, "instructions_survivors,11");
+                var2 = ClientException.getLoadingTextFile(125, "instructions_survivors,11");
                 if (null != var2) {
                   gj.field_p[11] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-97, "intro_text,0");
+                var2 = ClientException.getLoadingTextFile(-97, "intro_text,0");
                 if (null != var2) {
                   gj.field_o[0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 793, "intro_text,1");
+                var2 = ClientException.getLoadingTextFile(param1 - 793, "intro_text,1");
                 if (var2 != null) {
                   gj.field_o[1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-26, "intro_text,2");
+                var2 = ClientException.getLoadingTextFile(-26, "intro_text,2");
                 if (null != var2) {
                   gj.field_o[2] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-94, "intro_text,3");
+                var2 = ClientException.getLoadingTextFile(-94, "intro_text,3");
                 if (null != var2) {
                   gj.field_o[3] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(118, "intro_text,4");
+                var2 = ClientException.getLoadingTextFile(118, "intro_text,4");
                 if (var2 != null) {
                   gj.field_o[4] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ 696, "intro_text,5");
+                var2 = ClientException.getLoadingTextFile(param1 ^ 696, "intro_text,5");
                 if (var2 != null) {
                   gj.field_o[5] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(124, "intro_text,6");
+                var2 = ClientException.getLoadingTextFile(124, "intro_text,6");
                 if (var2 != null) {
                   gj.field_o[6] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-71, "intro_text_uk,0");
+                var2 = ClientException.getLoadingTextFile(-71, "intro_text_uk,0");
                 if (var2 != null) {
                   gj.field_a[0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 837, "intro_text_uk,1");
+                var2 = ClientException.getLoadingTextFile(param1 - 837, "intro_text_uk,1");
                 if (null != var2) {
                   gj.field_a[1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-100, "settings");
+                var2 = ClientException.getLoadingTextFile(-100, "settings");
                 if (var2 != null) {
                   pa.field_A = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ -742, "area_names,0");
+                var2 = ClientException.getLoadingTextFile(param1 ^ -742, "area_names,0");
                 if (var2 != null) {
                   q.field_G[0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(123, "area_names,1");
+                var2 = ClientException.getLoadingTextFile(123, "area_names,1");
                 if (null != var2) {
                   q.field_G[1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(102, "scorecolonspace");
+                var2 = ClientException.getLoadingTextFile(102, "scorecolonspace");
                 if (null != var2) {
                   jp.field_i = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(113, "bonuscount");
+                var2 = ClientException.getLoadingTextFile(113, "bonuscount");
                 if (null != var2) {
-                  li.field_f = gg.a(var2, (byte) 56);
+                  JaggrabDownloader.field_f = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(102, "rank");
+                var2 = ClientException.getLoadingTextFile(102, "rank");
                 if (var2 != null) {
                   og.field_z = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-40, "name");
+                var2 = ClientException.getLoadingTextFile(-40, "name");
                 if (null != var2) {
                   lo.field_r = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-28, "score");
+                var2 = ClientException.getLoadingTextFile(-28, "score");
                 if (null != var2) {
                   ZombieDawn.field_D = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-123, "youhavewon");
+                var2 = ClientException.getLoadingTextFile(-123, "youhavewon");
                 if (null != var2) {
                   ud.field_a = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-34, "youhavelost");
+                var2 = ClientException.getLoadingTextFile(-34, "youhavelost");
                 if (null != var2) {
                   fm.field_I = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(126, "bonuslevelcomplete");
+                var2 = ClientException.getLoadingTextFile(126, "bonuslevelcomplete");
                 if (var2 != null) {
                   tc.field_u = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 620, "zombiesremaining");
+                var2 = ClientException.getLoadingTextFile(param1 - 620, "zombiesremaining");
                 if (null != var2) {
                   gj.field_c = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-28, "timeremaining");
+                var2 = ClientException.getLoadingTextFile(-28, "timeremaining");
                 if (null != var2) {
                   hp.field_y = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-68, "zombiesacross");
+                var2 = ClientException.getLoadingTextFile(-68, "zombiesacross");
                 if (var2 != null) {
                   sa.field_bb = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-93, "humanscaptured");
+                var2 = ClientException.getLoadingTextFile(-93, "humanscaptured");
                 if (null != var2) {
                   kn.field_I = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(123, "overallscore");
+                var2 = ClientException.getLoadingTextFile(123, "overallscore");
                 if (var2 != null) {
                   ClientException.field_d = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-35, "gamecomplete,0");
+                var2 = ClientException.getLoadingTextFile(-35, "gamecomplete,0");
                 if (var2 != null) {
                   hb.field_D[0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ -722, "gamecomplete,1");
+                var2 = ClientException.getLoadingTextFile(param1 ^ -722, "gamecomplete,1");
                 if (var2 != null) {
                   hb.field_D[1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(108, "selectazombie");
+                var2 = ClientException.getLoadingTextFile(108, "selectazombie");
                 if (null != var2) {
                   GameKeyHandler.field_c = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(106, "selectahuman");
+                var2 = ClientException.getLoadingTextFile(106, "selectahuman");
                 if (null != var2) {
                   gj.field_m = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-70, "selectapoint");
+                var2 = ClientException.getLoadingTextFile(-70, "selectapoint");
                 if (var2 != null) {
                   km.field_b = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ -741, "selectanywhere");
+                var2 = ClientException.getLoadingTextFile(param1 ^ -741, "selectanywhere");
                 if (var2 != null) {
                   hc.field_a = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(115, "powerup_speed");
+                var2 = ClientException.getLoadingTextFile(115, "powerup_speed");
                 if (var2 != null) {
                   tk.field_b = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(115, "powerup_meltdown");
+                var2 = ClientException.getLoadingTextFile(115, "powerup_meltdown");
                 if (null != var2) {
                   mm.field_l = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(113, "powerup_phantom");
+                var2 = ClientException.getLoadingTextFile(113, "powerup_phantom");
             }
             void runChunk1() throws java.lang.RuntimeException {
                 if (var2 != null) {
                   Human.field_bb = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(115, "powerup_disguise");
+                var2 = ClientException.getLoadingTextFile(115, "powerup_disguise");
                 if (var2 != null) {
                   cl.field_a = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(112, "powerup_detonate");
+                var2 = ClientException.getLoadingTextFile(112, "powerup_detonate");
                 if (null != var2) {
                   rg.field_K = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 612, "powerup_screech");
+                var2 = ClientException.getLoadingTextFile(param1 - 612, "powerup_screech");
                 if (var2 != null) {
                   ti.field_d = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-53, "powerup_tough");
+                var2 = ClientException.getLoadingTextFile(-53, "powerup_tough");
                 if (var2 != null) {
                   ij.field_J = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(122, "powerup_curse");
+                var2 = ClientException.getLoadingTextFile(122, "powerup_curse");
                 if (null != var2) {
                   bh.field_h = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 835, "powerup_barrier");
+                var2 = ClientException.getLoadingTextFile(param1 - 835, "powerup_barrier");
                 if (null != var2) {
                   fe.field_J = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-35, "powerup_breach");
+                var2 = ClientException.getLoadingTextFile(-35, "powerup_breach");
                 if (var2 != null) {
                   ub.field_h = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-38, "powerup_shackles");
+                var2 = ClientException.getLoadingTextFile(-38, "powerup_shackles");
                 if (var2 != null) {
                   tl.field_k = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-90, "powerup_quake");
+                var2 = ClientException.getLoadingTextFile(-90, "powerup_quake");
                 if (null != var2) {
                   pa.field_C = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-99, "powerup_fear");
+                var2 = ClientException.getLoadingTextFile(-99, "powerup_fear");
                 if (var2 != null) {
                   ig.field_Bb = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ -766, "powerup_fireball");
+                var2 = ClientException.getLoadingTextFile(param1 ^ -766, "powerup_fireball");
                 if (null != var2) {
                   dm.field_s = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-96, "levelname,0,0");
+                var2 = ClientException.getLoadingTextFile(-96, "levelname,0,0");
                 if (null != var2) {
                   gj.field_w[0][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 616, "levelname,0,1");
+                var2 = ClientException.getLoadingTextFile(param1 - 616, "levelname,0,1");
                 if (var2 != null) {
                   gj.field_w[0][1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-75, "levelname,0,2");
+                var2 = ClientException.getLoadingTextFile(-75, "levelname,0,2");
                 if (null != var2) {
                   gj.field_w[0][2] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-119, "levelname,0,3");
+                var2 = ClientException.getLoadingTextFile(-119, "levelname,0,3");
                 if (null != var2) {
                   gj.field_w[0][3] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-30, "levelname,0,4");
+                var2 = ClientException.getLoadingTextFile(-30, "levelname,0,4");
                 if (var2 != null) {
                   gj.field_w[0][4] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-31, "levelname,0,5");
+                var2 = ClientException.getLoadingTextFile(-31, "levelname,0,5");
                 if (null != var2) {
                   gj.field_w[0][5] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ 678, "levelname,1,0");
+                var2 = ClientException.getLoadingTextFile(param1 ^ 678, "levelname,1,0");
                 if (var2 != null) {
                   gj.field_w[1][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ -711, "levelname,1,1");
+                var2 = ClientException.getLoadingTextFile(param1 ^ -711, "levelname,1,1");
                 if (null != var2) {
                   gj.field_w[1][1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(102, "levelname,1,2");
+                var2 = ClientException.getLoadingTextFile(102, "levelname,1,2");
                 if (null != var2) {
                   gj.field_w[1][2] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 611, "levelname,1,3");
+                var2 = ClientException.getLoadingTextFile(param1 - 611, "levelname,1,3");
                 if (var2 != null) {
                   gj.field_w[1][3] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ -755, "levelname,1,4");
+                var2 = ClientException.getLoadingTextFile(param1 ^ -755, "levelname,1,4");
                 if (var2 != null) {
                   gj.field_w[1][4] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(121, "levelname,1,5");
+                var2 = ClientException.getLoadingTextFile(121, "levelname,1,5");
                 if (var2 != null) {
                   gj.field_w[1][5] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(108, "levelname,2,0");
+                var2 = ClientException.getLoadingTextFile(108, "levelname,2,0");
                 if (null != var2) {
                   gj.field_w[2][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 810, "levelname,2,1");
+                var2 = ClientException.getLoadingTextFile(param1 - 810, "levelname,2,1");
                 if (null != var2) {
                   gj.field_w[2][1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(122, "levelname,2,2");
+                var2 = ClientException.getLoadingTextFile(122, "levelname,2,2");
                 if (var2 != null) {
                   gj.field_w[2][2] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(110, "levelname,2,3");
+                var2 = ClientException.getLoadingTextFile(110, "levelname,2,3");
                 if (var2 != null) {
                   gj.field_w[2][3] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-11, "levelname,2,4");
+                var2 = ClientException.getLoadingTextFile(-11, "levelname,2,4");
                 if (null != var2) {
                   gj.field_w[2][4] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(108, "levelname,2,5");
+                var2 = ClientException.getLoadingTextFile(108, "levelname,2,5");
                 if (var2 != null) {
                   gj.field_w[2][5] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-103, "levelname,3,0");
+                var2 = ClientException.getLoadingTextFile(-103, "levelname,3,0");
                 if (var2 != null) {
                   gj.field_w[3][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-104, "levelname,3,1");
+                var2 = ClientException.getLoadingTextFile(-104, "levelname,3,1");
                 if (null != var2) {
                   gj.field_w[3][1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ 676, "levelname,3,2");
+                var2 = ClientException.getLoadingTextFile(param1 ^ 676, "levelname,3,2");
                 if (null != var2) {
                   gj.field_w[3][2] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(118, "levelname,3,3");
+                var2 = ClientException.getLoadingTextFile(118, "levelname,3,3");
                 if (var2 != null) {
                   gj.field_w[3][3] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ 691, "levelname,3,4");
+                var2 = ClientException.getLoadingTextFile(param1 ^ 691, "levelname,3,4");
                 if (var2 != null) {
                   gj.field_w[3][4] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-13, "levelname,3,5");
+                var2 = ClientException.getLoadingTextFile(-13, "levelname,3,5");
                 if (null != var2) {
                   gj.field_w[3][5] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(123, "levelname,4,0");
+                var2 = ClientException.getLoadingTextFile(123, "levelname,4,0");
                 if (var2 != null) {
                   gj.field_w[4][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(108, "levelname,4,1");
+                var2 = ClientException.getLoadingTextFile(108, "levelname,4,1");
                 if (null != var2) {
                   gj.field_w[4][1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(113, "levelname,4,2");
+                var2 = ClientException.getLoadingTextFile(113, "levelname,4,2");
                 if (var2 != null) {
                   gj.field_w[4][2] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(104, "levelname,4,3");
+                var2 = ClientException.getLoadingTextFile(104, "levelname,4,3");
                 if (var2 != null) {
                   gj.field_w[4][3] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(120, "levelname,4,4");
+                var2 = ClientException.getLoadingTextFile(120, "levelname,4,4");
                 if (null != var2) {
                   gj.field_w[4][4] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-80, "levelname,4,5");
+                var2 = ClientException.getLoadingTextFile(-80, "levelname,4,5");
                 if (null != var2) {
                   gj.field_w[4][5] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-22, "levelname,5,0");
+                var2 = ClientException.getLoadingTextFile(-22, "levelname,5,0");
                 if (null != var2) {
                   gj.field_w[5][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 628, "levelname,5,1");
+                var2 = ClientException.getLoadingTextFile(param1 - 628, "levelname,5,1");
                 if (var2 != null) {
                   gj.field_w[5][1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-80, "levelname,5,2");
+                var2 = ClientException.getLoadingTextFile(-80, "levelname,5,2");
                 if (var2 != null) {
                   gj.field_w[5][2] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 838, "levelname,5,3");
+                var2 = ClientException.getLoadingTextFile(param1 - 838, "levelname,5,3");
                 if (null != var2) {
                   gj.field_w[5][3] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 609, "levelname,5,4");
+                var2 = ClientException.getLoadingTextFile(param1 - 609, "levelname,5,4");
                 if (null != var2) {
                   gj.field_w[5][4] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 617, "levelname,5,5");
+                var2 = ClientException.getLoadingTextFile(param1 - 617, "levelname,5,5");
                 if (var2 != null) {
                   gj.field_w[5][5] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-111, "levelname,6,0");
+                var2 = ClientException.getLoadingTextFile(-111, "levelname,6,0");
                 if (null != var2) {
                   gj.field_w[6][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-37, "levelname,6,1");
+                var2 = ClientException.getLoadingTextFile(-37, "levelname,6,1");
                 if (var2 != null) {
                   gj.field_w[6][1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-14, "levelname,6,2");
+                var2 = ClientException.getLoadingTextFile(-14, "levelname,6,2");
                 if (var2 != null) {
                   gj.field_w[6][2] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-27, "levelname,6,3");
+                var2 = ClientException.getLoadingTextFile(-27, "levelname,6,3");
                 if (var2 != null) {
                   gj.field_w[6][3] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-49, "levelname,6,4");
+                var2 = ClientException.getLoadingTextFile(-49, "levelname,6,4");
                 if (null != var2) {
                   gj.field_w[6][4] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-79, "levelname,6,5");
+                var2 = ClientException.getLoadingTextFile(-79, "levelname,6,5");
                 if (null != var2) {
                   gj.field_w[6][5] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(110, "levelname,7,0");
+                var2 = ClientException.getLoadingTextFile(110, "levelname,7,0");
                 if (null != var2) {
                   gj.field_w[7][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-116, "levelname,7,1");
+                var2 = ClientException.getLoadingTextFile(-116, "levelname,7,1");
                 if (null != var2) {
                   gj.field_w[7][1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ 680, "levelname,7,2");
+                var2 = ClientException.getLoadingTextFile(param1 ^ 680, "levelname,7,2");
                 if (null != var2) {
                   gj.field_w[7][2] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-34, "levelname,7,3");
+                var2 = ClientException.getLoadingTextFile(-34, "levelname,7,3");
                 if (null != var2) {
                   gj.field_w[7][3] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ 677, "levelname,7,4");
+                var2 = ClientException.getLoadingTextFile(param1 ^ 677, "levelname,7,4");
                 if (var2 != null) {
                   gj.field_w[7][4] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-24, "levelname,7,5");
+                var2 = ClientException.getLoadingTextFile(-24, "levelname,7,5");
                 if (null != var2) {
                   gj.field_w[7][5] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-40, "bonuslevel");
+                var2 = ClientException.getLoadingTextFile(-40, "bonuslevel");
                 if (var2 != null) {
                   te.field_S = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ 687, "theend");
+                var2 = ClientException.getLoadingTextFile(param1 ^ 687, "theend");
                 if (null != var2) {
                   hm.field_M = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(125, "bonusleveltext,0");
+                var2 = ClientException.getLoadingTextFile(125, "bonusleveltext,0");
                 if (null != var2) {
                   kb.field_g[0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-12, "bonusleveltext,1");
+                var2 = ClientException.getLoadingTextFile(-12, "bonusleveltext,1");
                 if (null != var2) {
                   kb.field_g[1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-13, "bonusleveltext,2");
+                var2 = ClientException.getLoadingTextFile(-13, "bonusleveltext,2");
                 if (var2 != null) {
                   kb.field_g[2] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 836, "bonusleveltext,3");
+                var2 = ClientException.getLoadingTextFile(param1 - 836, "bonusleveltext,3");
                 if (var2 != null) {
                   kb.field_g[3] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-47, "bonusleveltext,4");
+                var2 = ClientException.getLoadingTextFile(-47, "bonusleveltext,4");
                 if (null != var2) {
                   kb.field_g[4] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(114, "bonusleveltext,5");
+                var2 = ClientException.getLoadingTextFile(114, "bonusleveltext,5");
                 if (null != var2) {
                   kb.field_g[5] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-33, "bonusleveltext,6");
+                var2 = ClientException.getLoadingTextFile(-33, "bonusleveltext,6");
                 if (null != var2) {
                   kb.field_g[6] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(109, "bonusleveltext,7");
+                var2 = ClientException.getLoadingTextFile(109, "bonusleveltext,7");
                 if (var2 != null) {
                   kb.field_g[7] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-73, "tutorialtoggle,0");
+                var2 = ClientException.getLoadingTextFile(-73, "tutorialtoggle,0");
                 if (null != var2) {
                   md.field_qb[0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(115, "tutorialtoggle,1");
+                var2 = ClientException.getLoadingTextFile(115, "tutorialtoggle,1");
                 if (null != var2) {
                   md.field_qb[1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(124, "difficultytoggle,0");
+                var2 = ClientException.getLoadingTextFile(124, "difficultytoggle,0");
                 if (var2 != null) {
                   wl.field_a[0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(111, "difficultytoggle,1");
+                var2 = ClientException.getLoadingTextFile(111, "difficultytoggle,1");
                 if (null != var2) {
                   wl.field_a[1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(102, "tutorial,0,0,0");
+                var2 = ClientException.getLoadingTextFile(102, "tutorial,0,0,0");
                 if (var2 != null) {
                   me.field_Fb[0][0][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-34, "tutorial,0,0,1");
+                var2 = ClientException.getLoadingTextFile(-34, "tutorial,0,0,1");
                 if (null != var2) {
                   me.field_Fb[0][0][1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-12, "tutorial,0,0,2");
+                var2 = ClientException.getLoadingTextFile(-12, "tutorial,0,0,2");
                 if (var2 != null) {
                   me.field_Fb[0][0][2] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-56, "tutorial,0,0,3");
+                var2 = ClientException.getLoadingTextFile(-56, "tutorial,0,0,3");
                 if (var2 != null) {
                   me.field_Fb[0][0][3] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ 698, "tutorial,0,1,0");
+                var2 = ClientException.getLoadingTextFile(param1 ^ 698, "tutorial,0,1,0");
                 if (var2 != null) {
                   me.field_Fb[0][1][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(126, "tutorial,0,1,1");
+                var2 = ClientException.getLoadingTextFile(126, "tutorial,0,1,1");
                 if (var2 != null) {
                   me.field_Fb[0][1][1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 624, "tutorial,0,1,2");
+                var2 = ClientException.getLoadingTextFile(param1 - 624, "tutorial,0,1,2");
                 if (var2 != null) {
                   me.field_Fb[0][1][2] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-106, "tutorial,0,2,0");
+                var2 = ClientException.getLoadingTextFile(-106, "tutorial,0,2,0");
                 if (var2 != null) {
                   me.field_Fb[0][2][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ 693, "tutorial,0,2,1");
+                var2 = ClientException.getLoadingTextFile(param1 ^ 693, "tutorial,0,2,1");
                 if (var2 != null) {
                   me.field_Fb[0][2][1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(112, "tutorial,0,2,2");
+                var2 = ClientException.getLoadingTextFile(112, "tutorial,0,2,2");
                 if (var2 != null) {
                   me.field_Fb[0][2][2] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-73, "tutorial,0,2,3");
+                var2 = ClientException.getLoadingTextFile(-73, "tutorial,0,2,3");
                 if (var2 != null) {
                   me.field_Fb[0][2][3] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(113, "tutorial,0,3,0");
+                var2 = ClientException.getLoadingTextFile(113, "tutorial,0,3,0");
                 if (null != var2) {
                   me.field_Fb[0][3][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(121, "tutorial,0,4,0");
+                var2 = ClientException.getLoadingTextFile(121, "tutorial,0,4,0");
                 if (var2 != null) {
                   me.field_Fb[0][4][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-14, "tutorial,0,4,1");
+                var2 = ClientException.getLoadingTextFile(-14, "tutorial,0,4,1");
                 if (param1 != 734) {
                   finished = true; return;
                 }
                 if (null != var2) {
                   me.field_Fb[0][4][1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(124, "tutorial,0,4,2");
+                var2 = ClientException.getLoadingTextFile(124, "tutorial,0,4,2");
                 if (var2 != null) {
                   me.field_Fb[0][4][2] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(105, "tutorial,0,5,0");
+                var2 = ClientException.getLoadingTextFile(105, "tutorial,0,5,0");
                 if (var2 != null) {
                   me.field_Fb[0][5][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(104, "tutorial,0,5,1");
+                var2 = ClientException.getLoadingTextFile(104, "tutorial,0,5,1");
                 if (var2 != null) {
                   me.field_Fb[0][5][1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 752, "tutorial,0,5,2");
+                var2 = ClientException.getLoadingTextFile(param1 - 752, "tutorial,0,5,2");
                 if (var2 != null) {
                   me.field_Fb[0][5][2] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 624, "tutorial,1,0,0");
+                var2 = ClientException.getLoadingTextFile(param1 - 624, "tutorial,1,0,0");
                 if (var2 != null) {
                   me.field_Fb[1][0][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-86, "tutorial,1,0,1");
+                var2 = ClientException.getLoadingTextFile(-86, "tutorial,1,0,1");
                 if (var2 != null) {
                   me.field_Fb[1][0][1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 627, "tutorial,1,1,0");
+                var2 = ClientException.getLoadingTextFile(param1 - 627, "tutorial,1,1,0");
                 if (var2 != null) {
                   me.field_Fb[1][1][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-105, "tutorial,1,2,0");
+                var2 = ClientException.getLoadingTextFile(-105, "tutorial,1,2,0");
                 if (var2 != null) {
                   me.field_Fb[1][2][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-34, "tutorial,1,2,1");
+                var2 = ClientException.getLoadingTextFile(-34, "tutorial,1,2,1");
                 if (var2 != null) {
                   me.field_Fb[1][2][1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-110, "tutorial,1,4,0");
+                var2 = ClientException.getLoadingTextFile(-110, "tutorial,1,4,0");
                 if (null != var2) {
                   me.field_Fb[1][4][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(112, "tutorial,1,4,1");
+                var2 = ClientException.getLoadingTextFile(112, "tutorial,1,4,1");
                 if (var2 != null) {
                   me.field_Fb[1][4][1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(120, "tutorial,1,5,0");
+                var2 = ClientException.getLoadingTextFile(120, "tutorial,1,5,0");
                 if (var2 != null) {
                   me.field_Fb[1][5][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ 688, "tutorial,2,5,0");
+                var2 = ClientException.getLoadingTextFile(param1 ^ 688, "tutorial,2,5,0");
                 if (null != var2) {
                   me.field_Fb[2][5][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(110, "tutorial,2,5,1");
+                var2 = ClientException.getLoadingTextFile(110, "tutorial,2,5,1");
                 if (null != var2) {
                   me.field_Fb[2][5][1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-111, "tutorial,2,5,2");
+                var2 = ClientException.getLoadingTextFile(-111, "tutorial,2,5,2");
                 if (var2 != null) {
                   me.field_Fb[2][5][2] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 618, "tutorial,4,0,0");
+                var2 = ClientException.getLoadingTextFile(param1 - 618, "tutorial,4,0,0");
                 if (var2 != null) {
                   me.field_Fb[4][0][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-97, "tutorial,4,0,1");
+                var2 = ClientException.getLoadingTextFile(-97, "tutorial,4,0,1");
                 if (var2 != null) {
                   me.field_Fb[4][0][1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 859, "tutorial,4,1,0");
+                var2 = ClientException.getLoadingTextFile(param1 - 859, "tutorial,4,1,0");
                 if (var2 != null) {
                   me.field_Fb[4][1][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-82, "tutorial,4,2,0");
+                var2 = ClientException.getLoadingTextFile(-82, "tutorial,4,2,0");
                 if (var2 != null) {
                   me.field_Fb[4][2][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-13, "tutorial,4,3,0");
+                var2 = ClientException.getLoadingTextFile(-13, "tutorial,4,3,0");
                 if (null != var2) {
                   me.field_Fb[4][3][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(122, "tutorial,4,3,1");
+                var2 = ClientException.getLoadingTextFile(122, "tutorial,4,3,1");
                 if (var2 != null) {
                   me.field_Fb[4][3][1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ 678, "tutorial,4,4,0");
+                var2 = ClientException.getLoadingTextFile(param1 ^ 678, "tutorial,4,4,0");
                 if (null != var2) {
                   me.field_Fb[4][4][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-122, "tutorial,4,5,0");
+                var2 = ClientException.getLoadingTextFile(-122, "tutorial,4,5,0");
                 if (var2 != null) {
                   me.field_Fb[4][5][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-107, "tutorial,5,0,0");
+                var2 = ClientException.getLoadingTextFile(-107, "tutorial,5,0,0");
                 if (null != var2) {
                   me.field_Fb[5][0][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(121, "tutorial,5,0,1");
+                var2 = ClientException.getLoadingTextFile(121, "tutorial,5,0,1");
                 if (null != var2) {
                   me.field_Fb[5][0][1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ -661, "tutorial,5,0,2");
+                var2 = ClientException.getLoadingTextFile(param1 ^ -661, "tutorial,5,0,2");
                 if (null != var2) {
                   me.field_Fb[5][0][2] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(122, "tutorial,5,1,0");
+                var2 = ClientException.getLoadingTextFile(122, "tutorial,5,1,0");
                 if (null != var2) {
                   me.field_Fb[5][1][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ 681, "tutorial,5,2,0");
+                var2 = ClientException.getLoadingTextFile(param1 ^ 681, "tutorial,5,2,0");
                 if (var2 != null) {
                   me.field_Fb[5][2][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-10, "tutorial,5,2,1");
+                var2 = ClientException.getLoadingTextFile(-10, "tutorial,5,2,1");
                 if (var2 != null) {
                   me.field_Fb[5][2][1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-31, "tutorial,5,4,0");
+                var2 = ClientException.getLoadingTextFile(-31, "tutorial,5,4,0");
                 if (null != var2) {
                   me.field_Fb[5][4][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(114, "tutorial,6,0,0");
+                var2 = ClientException.getLoadingTextFile(114, "tutorial,6,0,0");
                 if (null != var2) {
                   me.field_Fb[6][0][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(108, "tutorial,6,0,1");
+                var2 = ClientException.getLoadingTextFile(108, "tutorial,6,0,1");
                 if (var2 != null) {
                   me.field_Fb[6][0][1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-115, "tutorial,6,2,0");
+                var2 = ClientException.getLoadingTextFile(-115, "tutorial,6,2,0");
                 if (null != var2) {
                   me.field_Fb[6][2][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(106, "tutorial,6,3,0");
+                var2 = ClientException.getLoadingTextFile(106, "tutorial,6,3,0");
                 if (var2 != null) {
                   me.field_Fb[6][3][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(115, "tutorial,6,3,1");
+                var2 = ClientException.getLoadingTextFile(115, "tutorial,6,3,1");
                 if (var2 != null) {
                   me.field_Fb[6][3][1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-37, "tutorial,6,3,2");
+                var2 = ClientException.getLoadingTextFile(-37, "tutorial,6,3,2");
                 if (null != var2) {
                   me.field_Fb[6][3][2] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-46, "tutorial,6,5,0");
+                var2 = ClientException.getLoadingTextFile(-46, "tutorial,6,5,0");
                 if (var2 != null) {
                   me.field_Fb[6][5][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 607, "tutorial,7,0,0");
+                var2 = ClientException.getLoadingTextFile(param1 - 607, "tutorial,7,0,0");
                 if (var2 != null) {
                   me.field_Fb[7][0][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ 676, "tutorial,7,0,1");
+                var2 = ClientException.getLoadingTextFile(param1 ^ 676, "tutorial,7,0,1");
                 if (var2 != null) {
                   me.field_Fb[7][0][1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-65, "tutorial,7,0,2");
+                var2 = ClientException.getLoadingTextFile(-65, "tutorial,7,0,2");
                 if (null != var2) {
                   me.field_Fb[7][0][2] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(112, "tutorial,7,2,0");
+                var2 = ClientException.getLoadingTextFile(112, "tutorial,7,2,0");
                 if (null != var2) {
                   me.field_Fb[7][2][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-80, "tutorial,7,3,0");
+                var2 = ClientException.getLoadingTextFile(-80, "tutorial,7,3,0");
                 if (null != var2) {
                   me.field_Fb[7][3][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(121, "tutorial,7,5,0");
+                var2 = ClientException.getLoadingTextFile(121, "tutorial,7,5,0");
                 if (var2 != null) {
                   me.field_Fb[7][5][0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-107, "tutorial_nokeycardsleft,0");
+                var2 = ClientException.getLoadingTextFile(-107, "tutorial_nokeycardsleft,0");
                 if (var2 != null) {
                   jp.field_g[0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-23, "tutorial_nokeycardsleft,1");
+                var2 = ClientException.getLoadingTextFile(-23, "tutorial_nokeycardsleft,1");
                 if (var2 != null) {
                   jp.field_g[1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-27, "tutorial_nokeycardsleft,2");
+                var2 = ClientException.getLoadingTextFile(-27, "tutorial_nokeycardsleft,2");
                 if (null != var2) {
                   jp.field_g[2] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(-9, "tutorial_notenoughhumansleft,0");
+                var2 = ClientException.getLoadingTextFile(-9, "tutorial_notenoughhumansleft,0");
                 if (null != var2) {
-                  qg.field_g[0] = gg.a(var2, (byte) 56);
+                  SocketConnector.field_g[0] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 613, "tutorial_notenoughhumansleft,1");
+                var2 = ClientException.getLoadingTextFile(param1 - 613, "tutorial_notenoughhumansleft,1");
                 if (var2 != null) {
-                  qg.field_g[1] = gg.a(var2, (byte) 56);
+                  SocketConnector.field_g[1] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 - 825, "tutorial_notenoughhumansleft,2");
+                var2 = ClientException.getLoadingTextFile(param1 - 825, "tutorial_notenoughhumansleft,2");
                 if (var2 != null) {
-                  qg.field_g[2] = gg.a(var2, (byte) 56);
+                  SocketConnector.field_g[2] = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(124, "clicktoclose");
+                var2 = ClientException.getLoadingTextFile(124, "clicktoclose");
                 if (var2 != null) {
                   ip.field_o = gg.a(var2, (byte) 56);
                 }
-                var2 = ClientException.a(param1 ^ -757, "ukexpansiontoosoon");
+                var2 = ClientException.getLoadingTextFile(param1 ^ -757, "ukexpansiontoosoon");
                 if (null != var2) {
                   ch.field_c = gg.a(var2, (byte) 56);
                 }

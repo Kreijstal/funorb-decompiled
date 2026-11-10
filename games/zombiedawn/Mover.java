@@ -29,7 +29,7 @@ abstract class Mover extends WorldObject {
     int field_N;
     private int field_L;
 
-    final va m(int param0) {
+    final va applyTileDrift(int param0) {
         int var4 = 0;
         int var5 = 0;
         int var6 = ZombieDawn.field_J;
@@ -38,7 +38,7 @@ abstract class Mover extends WorldObject {
         if (!Js5Archive.field_e.tileMap.field_e) {
           return null;
         }
-        va var7 = ub.a(127, this.currentTile(-95));
+        va var7 = ub.findAnimatedTile(127, this.currentTile(-95));
         int var3 = 49 % ((param0 - 36) / 50);
         if (var7 == null) {
           return var7;
@@ -46,7 +46,7 @@ abstract class Mover extends WorldObject {
         this.field_y = this.field_y + var7.field_h;
         this.field_x = this.field_x + var7.field_i;
         if (Js5Archive.field_e.navigation.isWalkable(false, this.field_x >> 16, this.field_y >> 16, true)) {
-          this.d((byte) 12);
+          this.updateGridCell((byte) 12);
         } else {
           this.field_x = this.field_x - var7.field_i;
           this.field_y = this.field_y - var7.field_h;
@@ -147,20 +147,20 @@ abstract class Mover extends WorldObject {
         if (param0 <= -71) {
           return this.tileAtPixel(0, this.getX(true), this.getY(237239984));
         }
-        Mover.a(false, -39, true, true);
+        Mover.chooseDiscardPromptText(false, -39, true, true);
         return this.tileAtPixel(0, this.getX(true), this.getY(237239984));
     }
 
-    abstract void k(int param0);
+    abstract void kill(int param0);
 
-    void j(int param0) {
+    void freeze(int param0) {
         if (param0 < 66) {
           return;
         }
         this.field_V = true;
     }
 
-    final void d(int param0, int param1) {
+    final void advanceAnimation(int param0, int param1) {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
         int fieldTemp$0 = 0;
@@ -183,7 +183,7 @@ abstract class Mover extends WorldObject {
           }
           return;
         }
-        this.b((byte) -24, 107);
+        this.applySlowdown((byte) -24, 107);
         fieldTemp$0 = this.field_N + 1;
         this.field_N = this.field_N + 1;
         if (fieldTemp$0 > cg.field_b[param0]) {
@@ -197,7 +197,7 @@ abstract class Mover extends WorldObject {
         return;
     }
 
-    final void b(byte param0, int param1) {
+    final void applySlowdown(byte param0, int param1) {
         int var5 = ZombieDawn.field_J;
         int var3 = -66 / ((param0 - 27) / 46);
         this.field_Z = param1;
@@ -223,7 +223,7 @@ abstract class Mover extends WorldObject {
           if (var4 != 8) {
             return;
           }
-          ((Zombie) (this)).k((byte) 40);
+          ((Zombie) (this)).markVictimSlowed((byte) 40);
           return;
         }
         this.moveToward(0, 57344);
@@ -231,7 +231,7 @@ abstract class Mover extends WorldObject {
 
     void setState(int param0, int param1) {
         if (param1 != -6904) {
-          this.m(-100);
+          this.applyTileDrift(-100);
           if (this.state != param0) {
             this.field_G = 0;
             this.state = param0;
@@ -248,7 +248,7 @@ abstract class Mover extends WorldObject {
         this.field_N = 0;
     }
 
-    final boolean a(int param0, int param1, int param2) {
+    final boolean containsPoint(int param0, int param1, int param2) {
         int var4 = 114 % ((-28 - param0) / 37);
         int var5 = this.field_y >> 16;
         int var6 = this.field_x >> 16;
@@ -299,17 +299,17 @@ abstract class Mover extends WorldObject {
         this.field_D = param3;
     }
 
-    final void g(byte param0) {
+    final void applyVelocity(byte param0) {
         if (this.field_V) {
           return;
         }
         this.field_x = this.field_x + this.velocityY;
         int var2 = 71 / ((param0 + 41) / 52);
         this.field_y = this.field_y + this.velocityX;
-        this.d((byte) -18);
+        this.updateGridCell((byte) -18);
     }
 
-    final boolean h(byte param0) {
+    final boolean stepTowardTarget(byte param0) {
         int stackIn_15_0 = 0;
         int stackIn_54_0 = 0;
         int stackIn_84_0 = 0;
@@ -767,7 +767,7 @@ abstract class Mover extends WorldObject {
         return true;
     }
 
-    final static String a(boolean param0, int param1, boolean param2, boolean param3) {
+    final static String chooseDiscardPromptText(boolean param0, int param1, boolean param2, boolean param3) {
         int var4 = 0;
         if (param0) {
           var4 += 4;
@@ -804,15 +804,15 @@ abstract class Mover extends WorldObject {
         }
     }
 
-    final static void a(int param0, byte param1, int param2, int param3, int param4) {
-        hk.i(1584);
+    final static void intersectDrawClip(int param0, byte param1, int param2, int param3, int param4) {
+        hk.pushRasterState(1584);
         Rasterizer.intersectClip(param4, param0, param2, param3);
         if (param1 != 99) {
           field_P = (int[]) null;
         }
     }
 
-    abstract void f(byte param0);
+    abstract void onGrabbed(byte param0);
 
     static {
         field_P = new int[8192];
@@ -820,8 +820,8 @@ abstract class Mover extends WorldObject {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$3aedf8649552(int param0, int param1, int param2, int param3, int param4) {
-        hk.i(1584);
+    final static void intersectClipIntArgs(int param0, int param1, int param2, int param3, int param4) {
+        hk.pushRasterState(1584);
         Rasterizer.intersectClip(param4, param0, param2, param3);
         if (param1 != 99) {
           field_P = (int[]) null;

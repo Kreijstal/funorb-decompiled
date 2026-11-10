@@ -7,7 +7,7 @@ final class ClientException extends RuntimeException {
     static int field_a;
     static String field_d;
 
-    final static byte[] a(int param0, String param1) {
+    final static byte[] getLoadingTextFile(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] stackIn_1_0 = null;
@@ -17,7 +17,7 @@ final class ClientException extends RuntimeException {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 121 / ((param0 - 47) / 53);
-          stackIn_1_0 = kp.field_f.a(param1, -101, "");
+          stackIn_1_0 = kp.field_f.getFileByName(param1, -101, "");
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

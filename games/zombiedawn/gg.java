@@ -16,7 +16,7 @@ final class gg {
           if (param1 != 56) {
             gg.releaseStatics((byte) -92);
           }
-          stackIn_3_0 = SpatialObject.a(param0, param0.length, 0, -73);
+          stackIn_3_0 = SpatialObject.decodeSingleByteText(param0, param0.length, 0, -73);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

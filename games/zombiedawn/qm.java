@@ -28,7 +28,7 @@ final class qm {
             for (var2_int = 0; var2_int < 100; var2_int++) {
               var3 = so.randomInt(8192);
               var4 = so.randomInt(90);
-              var5 = (var4 * WorldObject.a(1311979239, var3) >> 16) + 480;
+              var5 = (var4 * WorldObject.cosFixed(1311979239, var3) >> 16) + 480;
               var6 = 490 + (var4 * rd.a(true, var3) >> 16);
               pl.field_t[var2_int] = new lm(var5, var6, -15 + so.randomInt(30));
             }

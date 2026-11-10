@@ -18,7 +18,7 @@ final class PcmSampleStream extends PcmStream {
     private int field_m;
     private int field_t;
 
-    final synchronized int g() {
+    final synchronized int panQ14() {
         return this.field_v < 0 ? -1 : this.field_v;
     }
 
@@ -146,7 +146,7 @@ final class PcmSampleStream extends PcmStream {
         this.refreshGains();
     }
 
-    final synchronized int m() {
+    final synchronized int getSampleStepMagnitude() {
         return this.field_m < 0 ? -this.field_m : this.field_m;
     }
 
@@ -417,7 +417,7 @@ final class PcmSampleStream extends PcmStream {
         return param4 >> 1;
     }
 
-    final synchronized boolean f() {
+    final synchronized boolean hasRemainingRampFrames() {
         return this.field_l != 0;
     }
 
@@ -707,7 +707,7 @@ final class PcmSampleStream extends PcmStream {
         return param5;
     }
 
-    final synchronized int k() {
+    final synchronized int getTargetVolumeQ6() {
         return this.field_o == -2147483648 ? 0 : this.field_o;
     }
 
@@ -852,7 +852,7 @@ final class PcmSampleStream extends PcmStream {
         return param4 >> 1;
     }
 
-    final synchronized void e(int param0) {
+    final synchronized void setLoopCount(int param0) {
         this.field_s = param0;
     }
 
@@ -1265,8 +1265,8 @@ final class PcmSampleStream extends PcmStream {
         this.field_n = PcmSampleStream.rightGain(this.field_o, this.field_v);
     }
 
-    final synchronized void b(int param0, int param1) {
-        this.rampVolumeAndPan(param0, param1, this.g());
+    final synchronized void rampVolumeQ6(int param0, int param1) {
+        this.rampVolumeAndPan(param0, param1, this.panQ14());
     }
 
     final static PcmSampleStream createAtRatePercent(PcmSample param0, int param1, int param2) {
@@ -1604,8 +1604,8 @@ final class PcmSampleStream extends PcmStream {
         return param3;
     }
 
-    final synchronized void g(int param0) {
-        this.setVolumeAndPan(param0, this.g());
+    final synchronized void setVolumeQ6(int param0) {
+        this.setVolumeAndPan(param0, this.panQ14());
     }
 
     private final static int mixForwardMonoInterpolatedRamp(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, PcmSampleStream param11, int param12, int param13) {
@@ -1656,7 +1656,7 @@ final class PcmSampleStream extends PcmStream {
         int var2 = 0;
         int var2Lifetime1;
         if (param0 == 0) {
-          this.g(0);
+          this.setVolumeQ6(0);
           this.unlink(-27598);
           return;
         }
@@ -1740,8 +1740,8 @@ final class PcmSampleStream extends PcmStream {
         this.refreshGains();
     }
 
-    final synchronized void h(int param0) {
-        this.setVolumeAndPan(param0 << 6, this.g());
+    final synchronized void setVolume(int param0) {
+        this.setVolumeAndPan(param0 << 6, this.panQ14());
     }
 
     private PcmSampleStream(PcmSample param0, int param1, int param2, int param3) {

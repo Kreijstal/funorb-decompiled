@@ -14,7 +14,7 @@ final class we extends qk {
     private Zombie field_Qb;
     private int field_Pb;
 
-    final static String p(byte param0) {
+    final static String getActiveLoginIdentifier(byte param0) {
         int var1 = 26 % ((31 - param0) / 38);
         if (fk.field_F == vh.field_c) {
           return field_Rb;
@@ -28,7 +28,7 @@ final class we extends qk {
         return GameLoopApplet.field_B;
     }
 
-    final void a(Camera param0, int param1) {
+    final void drawDebugOverlay(Camera param0, int param1) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -56,7 +56,7 @@ final class we extends qk {
           }
           if (param1 != 5060) {
             var7 = (IntrusiveNode) null;
-            we.a((IntrusiveNode) null, 97, (IntrusiveNode) null);
+            we.insertAfter((IntrusiveNode) null, 97, (IntrusiveNode) null);
           }
           Rasterizer.drawLine(var3_int, var4, param0.worldToScreenX(this.targetX, (byte) -94), param0.worldToScreenY(this.targetY, param1 - 5060), 16711935);
           var5 = Integer.toString(this.state);
@@ -86,20 +86,20 @@ final class we extends qk {
         }
     }
 
-    final void l(byte param0) {
+    final void updateBehaviour(byte param0) {
         if (param0 != 52) {
           field_Tb = (Sprite) null;
         }
-        if (this.a(-117, this.field_Nb, false)) {
-          this.m((byte) -123);
-          this.z(param0 + 12399);
+        if (this.findNearestTarget(-117, this.field_Nb, false)) {
+          this.aimAtNearestZombie((byte) -123);
+          this.releaseChaseTarget(param0 + 12399);
           return;
         }
         if (this.field_Qb == null) {
-          this.y(3);
+          this.chooseChaseTarget(3);
         } else {
           if (9 == this.field_Qb.state) {
-            this.y(3);
+            this.chooseChaseTarget(3);
           }
         }
         if (null != this.field_Qb) {
@@ -111,33 +111,33 @@ final class we extends qk {
         this.setState(0, -6904);
     }
 
-    final static boolean o(byte param0) {
+    final static boolean hasActiveDialog(byte param0) {
         if (param0 != -80) {
           return true;
         }
         if (wo.field_xb == null) {
           return false;
         }
-        if (null == wo.field_xb.c(true)) {
+        if (null == wo.field_xb.getTopOpenDialog(true)) {
           return false;
         }
         return true;
     }
 
-    final void g(int param0) {
+    final void tick(int param0) {
         int fieldTemp$3 = 0;
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
         int var3;
         var3 = ZombieDawn.field_J;
-        super.g(103);
+        super.tick(103);
         if (param0 <= 95) {
           return;
         }
         if (0 == this.state) {
           if (null != this.field_Qb) {
-            this.b(false);
+            this.runTowardChaseTarget(false);
             return;
           }
           fieldTemp$3 = this.field_Ob;
@@ -145,7 +145,7 @@ final class we extends qk {
           if (fieldTemp$3 < 50) {
             return;
           }
-          this.y(3);
+          this.chooseChaseTarget(3);
           this.field_Ob = 0;
           return;
         }
@@ -164,18 +164,18 @@ final class we extends qk {
           if (fieldTemp$1 < 4) {
             return;
           }
-          this.l((byte) 52);
+          this.updateBehaviour((byte) 52);
           this.field_Pb = 0;
           return;
         }
-        this.b(false);
+        this.runTowardChaseTarget(false);
         this.field_Ob = 0;
         fieldTemp$2 = this.field_Pb;
         this.field_Pb = this.field_Pb + 1;
         if (fieldTemp$2 < 4) {
           return;
         }
-        this.l((byte) 52);
+        this.updateBehaviour((byte) 52);
         this.field_Pb = 0;
         return;
     }
@@ -189,14 +189,14 @@ final class we extends qk {
         this.field_Pb = pb.a(so.random, 4, 1);
     }
 
-    final static void a(IntrusiveNode param0, int param1, IntrusiveNode param2) {
+    final static void insertAfter(IntrusiveNode param0, int param1, IntrusiveNode param2) {
         try {
           if (null != param2.next) {
             param2.unlink(-27598);
           }
           param2.next = param0.next;
           if (param1 != 0) {
-            we.w(112);
+            we.leaveResizableMode(112);
           }
           param2.previous = param0;
           param2.next.previous = param2;
@@ -206,7 +206,7 @@ final class we extends qk {
         }
     }
 
-    private final void a(Zombie param0, byte param1) {
+    private final void setChaseTarget(Zombie param0, byte param1) {
         try {
           param0.field_Bb = param0.field_Bb + 1;
           int var3_int = 114 / ((param1 + 3) / 58);
@@ -216,34 +216,34 @@ final class we extends qk {
         }
     }
 
-    final void o(int param0) {
-        this.z(12451);
+    final void removeFromWorld(int param0) {
+        this.releaseChaseTarget(12451);
         if (param0 != -6253) {
           return;
         }
-        super.o(param0 + 0);
+        super.removeFromWorld(param0 + 0);
     }
 
-    private final void b(boolean param0) {
+    private final void runTowardChaseTarget(boolean param0) {
         if (this.field_Qb == null) {
           return;
         }
         if (!param0) {
-          this.a(this.field_Qb.getX(true), (byte) -99, this.field_Qb.getY(237239984));
+          this.runToward(this.field_Qb.getX(true), (byte) -99, this.field_Qb.getY(237239984));
           return;
         }
         nc var3 = (nc) null;
-        this.a((nc) null, (byte) -119);
-        this.a(this.field_Qb.getX(true), (byte) -99, this.field_Qb.getY(237239984));
+        this.startScreechCower((nc) null, (byte) -119);
+        this.runToward(this.field_Qb.getX(true), (byte) -99, this.field_Qb.getY(237239984));
     }
 
-    final void c(int param0, int param1, int param2) {
+    final void knockBackFrom(int param0, int param1, int param2) {
         if (param1 < 24) {
           this.field_Ob = -93;
         }
     }
 
-    final void a(nc param0, byte param1) {
+    final void startScreechCower(nc param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_4_0 = null;
@@ -267,7 +267,7 @@ final class we extends qk {
         }
     }
 
-    private final void y(int param0) {
+    private final void chooseChaseTarget(int param0) {
         Object var2;
         Object var3;
         int var4;
@@ -287,7 +287,7 @@ final class we extends qk {
           this.field_yb.getY(237239984);
           this.field_yb = null;
           if (this.field_Qb != null) {
-            this.z(param0 + 12448);
+            this.releaseChaseTarget(param0 + 12448);
           }
           var2 = null;
           var3 = null;
@@ -296,10 +296,10 @@ final class we extends qk {
           if (param0 != 3) {
             this.field_Nb = -9;
           }
-          var6_ref = (Zombie) (this.a((byte) -74, this.field_Vb, 2));
+          var6_ref = (Zombie) (this.firstNearbyObject((byte) -74, this.field_Vb, 2));
           while (var6_ref != null) {
             if (var6_ref.state == 9) {
-              var6_ref = (Zombie) (this.e((byte) 32));
+              var6_ref = (Zombie) (this.nextNearbyObject((byte) 32));
               continue;
             }
             var9 = Js5Archive.field_e.navigation.findPath(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
@@ -315,30 +315,30 @@ final class we extends qk {
                 var2 = var6_ref;
               }
             }
-            var6_ref = (Zombie) (this.e((byte) 32));
+            var6_ref = (Zombie) (this.nextNearbyObject((byte) 32));
           }
           if (var3 == null) {
             if (var2 != null) {
-              this.a((Zombie) (var2), (byte) 110);
+              this.setChaseTarget((Zombie) (var2), (byte) 110);
             } else {
-              this.z(12451);
+              this.releaseChaseTarget(12451);
             }
           } else {
-            this.a((Zombie) (var3), (byte) 108);
+            this.setChaseTarget((Zombie) (var3), (byte) 108);
           }
         } else {
           if (this.field_Qb != null) {
-            this.z(param0 + 12448);
+            this.releaseChaseTarget(param0 + 12448);
           }
           var2 = null;
           var3 = null;
           var4 = -1;
           var5 = -1;
           if (param0 == 3) {
-            var6_ref = (Zombie) (this.a((byte) -74, this.field_Vb, 2));
+            var6_ref = (Zombie) (this.firstNearbyObject((byte) -74, this.field_Vb, 2));
             while (var6_ref != null) {
               if (var6_ref.state == 9) {
-                var6_ref = (Zombie) (this.e((byte) 32));
+                var6_ref = (Zombie) (this.nextNearbyObject((byte) 32));
                 continue;
               }
               var10 = Js5Archive.field_e.navigation.findPath(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
@@ -354,14 +354,14 @@ final class we extends qk {
                   var2 = var6_ref;
                 }
               }
-              var6_ref = (Zombie) (this.e((byte) 32));
+              var6_ref = (Zombie) (this.nextNearbyObject((byte) 32));
             }
           } else {
             this.field_Nb = -9;
-            var6_ref = (Zombie) (this.a((byte) -74, this.field_Vb, 2));
+            var6_ref = (Zombie) (this.firstNearbyObject((byte) -74, this.field_Vb, 2));
             while (var6_ref != null) {
               if (var6_ref.state == 9) {
-                var6_ref = (Zombie) (this.e((byte) 32));
+                var6_ref = (Zombie) (this.nextNearbyObject((byte) 32));
                 continue;
               }
               var17 = Js5Archive.field_e.navigation.findPath(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
@@ -377,25 +377,25 @@ final class we extends qk {
                   var2 = var6_ref;
                 }
               }
-              var6_ref = (Zombie) (this.e((byte) 32));
+              var6_ref = (Zombie) (this.nextNearbyObject((byte) 32));
             }
           }
           if (var3 != null) {
-            this.a((Zombie) (var3), (byte) 108);
+            this.setChaseTarget((Zombie) (var3), (byte) 108);
           } else {
             if (var2 == null) {
-              this.z(12451);
+              this.releaseChaseTarget(12451);
             } else {
-              this.a((Zombie) (var2), (byte) 110);
+              this.setChaseTarget((Zombie) (var2), (byte) 110);
             }
           }
         }
         if (null != this.field_Qb) {
-          this.b(false);
+          this.runTowardChaseTarget(false);
         }
     }
 
-    final static void w(int param0) {
+    final static void leaveResizableMode(int param0) {
         if (rn.field_b != null) {
           rn.field_b.field_c = false;
           p.b(0, 27102);
@@ -412,7 +412,7 @@ final class we extends qk {
         field_Tb = (Sprite) null;
     }
 
-    private final void z(int param0) {
+    private final void releaseChaseTarget(int param0) {
         if (param0 != 12451) {
           return;
         }

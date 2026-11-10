@@ -7,25 +7,25 @@ final class np extends an {
     private int field_F;
     private vc field_G;
 
-    final String d(int param0) {
+    final String getTooltip(int param0) {
         if (this.field_l) {
-          return this.field_G.b((byte) -109);
+          return this.field_G.getValidationMessage((byte) -109);
         }
         int var2 = -31 / ((10 - param0) / 58);
         return null;
     }
 
-    final void a(UiWidget param0, byte param1, int param2, int param3) {
+    final void updatePointer(UiWidget param0, byte param1, int param2, int param3) {
         try {
           this.field_F = this.field_F + 1;
-          super.a(param0, (byte) -110, param2, param3);
+          super.updatePointer(param0, (byte) -110, param2, param3);
           int var5_int = -62 / ((param1 - 46) / 42);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "np.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         Sprite var15 = null;
         Sprite var16 = null;
         Sprite var14 = null;
@@ -35,14 +35,14 @@ final class np extends an {
         int var11 = ZombieDawn.field_J;
         int var9Lifetime1;
         int var10Lifetime1;
-        super.a(param0, param1, param2, param3 + param3);
+        super.drawLayer(param0, param1, param2, param3 + param3);
         if (param1 != 0) {
           return;
         }
         int var5 = param2 + this.field_k + (this.field_i >> 1);
         int var6 = this.field_j + (param0 + (this.field_n >> 1));
-        rh var8 = this.field_G.a((byte) -76);
-        if (var8 == se.field_l) {
+        rh var8 = this.field_G.getValidationState((byte) -76);
+        if (var8 == ProxySocketConnector.field_l) {
           var15 = Js5Archive.field_k[0];
           var9 = var15.field_r << 1;
           var10 = var15.field_q << 1;
@@ -50,7 +50,7 @@ final class np extends an {
             tm.field_m = new Sprite(var9, var10);
             ki.a((byte) -94, tm.field_m);
             var15.drawRotatedAboutPivot(112, 144, var15.field_r << 4, var15.field_q << 4, -this.field_F << 10, 4096);
-            pa.a(-21189);
+            pa.popRasterState(-21189);
             tm.field_m.drawAdditive(-var15.field_r + var5, -var15.field_q + var6, 256);
             return;
           }
@@ -58,7 +58,7 @@ final class np extends an {
             tm.field_m = new Sprite(var9, var10);
             ki.a((byte) -94, tm.field_m);
             var15.drawRotatedAboutPivot(112, 144, var15.field_r << 4, var15.field_q << 4, -this.field_F << 10, 4096);
-            pa.a(-21189);
+            pa.popRasterState(-21189);
             tm.field_m.drawAdditive(-var15.field_r + var5, -var15.field_q + var6, 256);
             return;
           }
@@ -66,14 +66,14 @@ final class np extends an {
             ki.a((byte) -86, tm.field_m);
             Rasterizer.clear();
             var15.drawRotatedAboutPivot(112, 144, var15.field_r << 4, var15.field_q << 4, -this.field_F << 10, 4096);
-            pa.a(-21189);
+            pa.popRasterState(-21189);
             tm.field_m.drawAdditive(-var15.field_r + var5, -var15.field_q + var6, 256);
             return;
           }
           tm.field_m = new Sprite(var9, var10);
           ki.a((byte) -94, tm.field_m);
           var15.drawRotatedAboutPivot(112, 144, var15.field_r << 4, var15.field_q << 4, -this.field_F << 10, 4096);
-          pa.a(-21189);
+          pa.popRasterState(-21189);
           tm.field_m.drawAdditive(-var15.field_r + var5, -var15.field_q + var6, 256);
           return;
         }
@@ -85,7 +85,7 @@ final class np extends an {
             tm.field_m = new Sprite(var9Lifetime1, var10Lifetime1);
             ki.a((byte) -94, tm.field_m);
             var16.drawRotatedAboutPivot(112, 144, var16.field_r << 4, var16.field_q << 4, -this.field_F << 10, 4096);
-            pa.a(-21189);
+            pa.popRasterState(-21189);
             tm.field_m.drawAdditive(-var16.field_r + var5, -var16.field_q + var6, 256);
             return;
           }
@@ -93,7 +93,7 @@ final class np extends an {
             tm.field_m = new Sprite(var9Lifetime1, var10Lifetime1);
             ki.a((byte) -94, tm.field_m);
             var16.drawRotatedAboutPivot(112, 144, var16.field_r << 4, var16.field_q << 4, -this.field_F << 10, 4096);
-            pa.a(-21189);
+            pa.popRasterState(-21189);
             tm.field_m.drawAdditive(-var16.field_r + var5, -var16.field_q + var6, 256);
             return;
           }
@@ -101,14 +101,14 @@ final class np extends an {
             ki.a((byte) -86, tm.field_m);
             Rasterizer.clear();
             var16.drawRotatedAboutPivot(112, 144, var16.field_r << 4, var16.field_q << 4, -this.field_F << 10, 4096);
-            pa.a(-21189);
+            pa.popRasterState(-21189);
             tm.field_m.drawAdditive(-var16.field_r + var5, -var16.field_q + var6, 256);
             return;
           }
           tm.field_m = new Sprite(var9Lifetime1, var10Lifetime1);
           ki.a((byte) -94, tm.field_m);
           var16.drawRotatedAboutPivot(112, 144, var16.field_r << 4, var16.field_q << 4, -this.field_F << 10, 4096);
-          pa.a(-21189);
+          pa.popRasterState(-21189);
           tm.field_m.drawAdditive(-var16.field_r + var5, -var16.field_q + var6, 256);
           return;
         }

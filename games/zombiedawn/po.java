@@ -8,7 +8,7 @@ final class po extends Human {
     static int[] field_zb;
     static int field_xb;
 
-    final void a(Camera param0, int param1) {
+    final void drawDebugOverlay(Camera param0, int param1) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -54,27 +54,27 @@ final class po extends Human {
         }
     }
 
-    final void l(byte param0) {
+    final void updateBehaviour(byte param0) {
         Zombie discarded$1 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
           if (param0 != 52) {
-            discarded$1 = this.m((byte) 55);
+            discarded$1 = this.findNearestVisibleZombie((byte) 55);
           }
-          if (!this.a(false, false, -85, 55)) {
-            if (!this.a(true, false, -102, 250)) {
+          if (!this.isZombieThreatNear(false, false, -85, 55)) {
+            if (!this.isZombieThreatNear(true, false, -102, 250)) {
               return;
             }
             if (1 == this.state) {
               return;
             }
-            this.p(-123);
+            this.startFleeing(-123);
             if (ZombieDawn.field_J == 0) {
               return;
             }
           }
-          this.b(true);
+          this.startSwingAtZombie(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -83,11 +83,11 @@ final class po extends Human {
         }
     }
 
-    final void g(int param0) {
+    final void tick(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          super.g(120);
+          super.tick(120);
           if (this.state == 10) {
             if (this.field_G == 0 &&
               this.field_N == 5) {
@@ -95,7 +95,7 @@ final class po extends Human {
             }
             if (this.field_G == 1) {
               if (this.field_yb != null) {
-                this.field_yb.c(401408, this.getY(237239984), this.getX(true));
+                this.field_yb.knockBackFrom(401408, this.getY(237239984), this.getX(true));
                 this.field_yb = null;
                 if ((ZombieDawn.field_J != 0) &&
                   (this.field_G == 2)) {
@@ -119,14 +119,14 @@ final class po extends Human {
         }
     }
 
-    public static void v(int param0) {
+    public static void clearStatics(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
           field_zb = null;
           field_Ab = null;
           if (param0 != -31113) {
-            po.a(69, -111, false, 104, (gd) null);
+            po.renderMeshFaces(69, -111, false, 104, (gd) null);
           }
           field_wb = null;
           return;
@@ -137,7 +137,7 @@ final class po extends Human {
         }
     }
 
-    private final void b(boolean param0) {
+    private final void startSwingAtZombie(boolean param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         int var3 = 0;
@@ -145,7 +145,7 @@ final class po extends Human {
         int stackIn_17_1 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_yb = this.m((byte) -95);
+          this.field_yb = this.findNearestVisibleZombie((byte) -95);
           if (this.field_yb == null) {
             return;
           }
@@ -188,7 +188,7 @@ final class po extends Human {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, gd param4) {
+    final static void renderMeshFaces(int param0, int param1, boolean param2, int param3, gd param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_11_0 = false;
         int stackIn_29_0 = 0;
@@ -223,9 +223,9 @@ final class po extends Human {
         int var13Lifetime1;
         var19 = ZombieDawn.field_J;
         try {
-          var5_int = IterableNodeHashTable.a((param3 - param1) * 3, (byte) -95);
+          var5_int = IterableNodeHashTable.bitLength((param3 - param1) * 3, (byte) -95);
           var6 = 3 * param1;
-          nl.c(param0 ^ -30006);
+          nl.clearBucketCounts(param0 ^ -30006);
           var7 = var5_int - 10;
           if (param4.field_p > 0 &&
             null != param4.field_F) {
@@ -330,7 +330,7 @@ final class po extends Human {
         }
     }
 
-    final static void f(int param0, int param1) {
+    final static void selectLevelResources(int param0, int param1) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -340,7 +340,7 @@ final class po extends Human {
           }
           tm.field_h = Zombie.field_Fb[param1];
           if (null != qj.field_j[param1]) {
-            la.field_c = qj.field_j[param1];
+            FullscreenFocusCanvas.field_c = qj.field_j[param1];
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -350,13 +350,13 @@ final class po extends Human {
         }
     }
 
-    final static boolean w(int param0) {
+    final static boolean isGuestSession(int param0) {
         RuntimeException var1 = null;
         boolean stackIn_4_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 13296) {
-            po.f(-73, 6);
+            po.selectLevelResources(-73, 6);
           }
           stackIn_4_0 = i.field_Y;
           return stackIn_4_0;
@@ -367,7 +367,7 @@ final class po extends Human {
         }
     }
 
-    private final Zombie m(byte param0) {
+    private final Zombie findNearestVisibleZombie(byte param0) {
         Object var2 = null;
         int var3 = 0;
         IntrusiveNode var4 = null;
@@ -386,11 +386,11 @@ final class po extends Human {
           if (param0 > -60) {
             field_wb = (int[]) null;
           }
-          var4 = Js5Archive.field_e.zombies.b((byte) 26);
+          var4 = Js5Archive.field_e.zombies.last((byte) 26);
           while (var4 instanceof WorldObject) {
             if (var4 instanceof Zombie &&
               ((Zombie) (var4)).state != 8 &&
-              ((Zombie) (var4)).x(37)) {
+              ((Zombie) (var4)).isVisibleToHumans(37)) {
               var5 = ((Zombie) (var4)).getX(true);
               var6 = ((Zombie) (var4)).getY(237239984);
               var7 = -var5 + this.getX(true);

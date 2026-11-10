@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class HumanFactory {
+final class AccountServerResult {
     String field_e;
     String[] field_g;
     boolean field_d;
@@ -33,7 +33,7 @@ final class HumanFactory {
 
     final static Human createHuman(int param0, int param1, int param2, int param3) {
         if (param0 < 49) {
-          HumanFactory.a(false);
+          AccountServerResult.a(false);
           if (param2 < 9) {
             return (Human) ((Object) new wo(param1, param3, param2));
           }
@@ -114,7 +114,7 @@ final class HumanFactory {
         return nm.field_c;
     }
 
-    HumanFactory(boolean param0) {
+    AccountServerResult(boolean param0) {
         this.field_b = param0 ? true : false;
     }
 

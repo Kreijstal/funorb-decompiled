@@ -51,7 +51,7 @@ final class hc {
         RuntimeException var4 = null;
         var8 = ZombieDawn.field_J;
         try {
-          var4_int = param1.k(80, param0);
+          var4_int = param1.readBits(80, param0);
           if (var4_int == 0) {
             stackIn_3_0 = null;
             return (byte[]) (stackIn_3_0);
@@ -60,14 +60,14 @@ final class hc {
             var4_int != param3.length) {
             param3 = new byte[var4_int];
           }
-          var5 = param1.k(95, 3);
+          var5 = param1.readBits(95, 3);
           if (param2 > -24) {
             field_c = (String) null;
           }
-          var6 = (byte)param1.k(85, 8);
+          var6 = (byte)param1.readBits(85, 8);
           if (var5 > 0) {
             for (var7 = 0; var4_int > var7; var7++) {
-              param3[var7] = (byte)(param1.k(56, var5) + var6);
+              param3[var7] = (byte)(param1.readBits(56, var5) + var6);
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {

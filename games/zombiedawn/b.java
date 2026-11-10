@@ -53,7 +53,7 @@ final class b extends IntrusiveNode {
               Js5Archive.field_m.addFirst(0, var6_ref_bg);
               dp.field_e.position = 0;
             }
-            var9 = (bg) (Js5Archive.field_m.b((byte) 26));
+            var9 = (bg) (Js5Archive.field_m.last((byte) 26));
             var13 = var9;
             if (var13 != null &&
               var2_long > var13.field_h) {

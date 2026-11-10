@@ -16,12 +16,12 @@ final class e extends hp implements hh {
     static int field_P;
     static int field_K;
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3 ^ 0);
+    final void drawLayer(int param0, int param1, int param2, int param3) {
+        super.drawLayer(param0, param1, param2, param3 ^ 0);
         this.field_L.drawParagraph(this.field_Q, this.field_k + param2 + 14, this.field_j + (param0 + 10), this.field_i - 28, this.field_n, 16777215, -1, 0, param3, this.field_L.field_I);
     }
 
-    final an a(String param0, int param1, sk param2) {
+    final an addButton(String param0, int param1, sk param2) {
         an var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -41,9 +41,9 @@ final class e extends hp implements hh {
           var4 = new an(param0, param2);
           var4.field_h = (io) ((Object) new vm());
           var5 = -2 + this.field_n;
-          this.a(113, 0, 0, this.field_i, this.field_n + 34);
-          var4.a(51, var5, 7, -14 + this.field_i, 30);
-          this.a(var4, 10);
+          this.setBounds(113, 0, 0, this.field_i, this.field_n + 34);
+          var4.setBounds(51, var5, 7, -14 + this.field_i, 30);
+          this.addChild(var4, 10);
           stackIn_4_0 = var4;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -66,7 +66,7 @@ final class e extends hp implements hh {
         }
     }
 
-    final void a(byte param0, String param1, int param2) {
+    final void addActionButton(byte param0, String param1, int param2) {
         int var4_int = 0;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -75,8 +75,8 @@ final class e extends hp implements hh {
         RuntimeException var4 = null;
         try {
           var4_int = this.field_N;
-          this.a(-128, 1 + var4_int);
-          this.field_F[var4_int] = this.a(param1, 125, (sk) (this));
+          this.ensureActionCapacity(-128, 1 + var4_int);
+          this.field_F[var4_int] = this.addButton(param1, 125, (sk) (this));
           this.field_J[var4_int] = param2;
           if (param0 < 88) {
             this.field_F = (an[]) null;
@@ -96,7 +96,7 @@ final class e extends hp implements hh {
         }
     }
 
-    private final void a(int param0, int param1) {
+    private final void ensureActionCapacity(int param0, int param1) {
         int var6 = 0;
         int var7 = ZombieDawn.field_J;
         if (this.field_N >= param1) {
@@ -124,7 +124,7 @@ final class e extends hp implements hh {
           this.field_Q = param2;
           this.field_R = param0;
           var4_int = this.field_Q != null ? this.field_L.paragraphHeight(this.field_Q, 260, this.field_L.field_I) : 0;
-          this.a(44, 0, 0, 288, var4_int + 22);
+          this.setBounds(44, 0, 0, 288, var4_int + 22);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "e.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -151,7 +151,7 @@ final class e extends hp implements hh {
         var8 = ZombieDawn.field_J;
         try {
           if (param1 != -6) {
-            this.a(-49, -101);
+            this.ensureActionCapacity(-49, -101);
           }
           for (var6_int = 0; var6_int < this.field_N; var6_int++) {
             if (param2 != this.field_F[var6_int]) {
@@ -159,7 +159,7 @@ final class e extends hp implements hh {
             }
             var7 = this.field_J[var6_int];
             if (var7 == -1) {
-              this.field_R.h((byte) -126);
+              this.field_R.closeDialog((byte) -126);
             } else {
               og.b(param1 ^ 120, this.field_J[var6_int]);
             }

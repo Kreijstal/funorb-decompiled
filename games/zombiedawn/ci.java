@@ -14,9 +14,9 @@ final class ci {
         if (param0 != 256) {
           return 54;
         }
-        ep.field_l.a(true);
-        if (!SpatialBucket.field_c.c(param0 - 277)) {
-          return jo.w(79);
+        ep.field_l.serviceProviders(true);
+        if (!SpatialBucket.field_c.poll(param0 - 277)) {
+          return jo.pollServerConnection(79);
         }
         return 0;
     }

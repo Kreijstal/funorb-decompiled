@@ -28,7 +28,7 @@ class tc extends vf {
           var2_int = param0.length();
           var3 = 0;
           for (var4 = 0; var4 < var2_int; var4++) {
-            var3 = (var3 << 5) - var3 + tb.a(param0.charAt(var4), -8225);
+            var3 = (var3 << 5) - var3 + tb.encodeCodePageChar(param0.charAt(var4), -8225);
           }
           if (param1 != 14) {
             tc.releaseStatics(23);
@@ -53,7 +53,7 @@ class tc extends vf {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_I, -1, 2147483647, false);
     }
 
-    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
+    public final void drawWidget(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -63,7 +63,7 @@ class tc extends vf {
           if (param1) {
             pb.a(param3.field_k + param4, param3.field_n, param2 + param3.field_j, 48, param3.field_i);
           }
-          super.a(param0 + 0, param1, param2, param3, param4);
+          super.drawWidget(param0 + 0, param1, param2, param3, param4);
           if (param0 != 16777215) {
             tc.a((byte) 33);
           }
@@ -93,7 +93,7 @@ class tc extends vf {
         ce.field_q = false;
         int var1 = 0 / ((30 - param0) / 51);
         if (nm.field_c) {
-          Point.field_i.m(96);
+          Point.field_i.showConnectionRestored(96);
         } else {
           var2 = sd.field_b;
           if (0 < var2) {
@@ -104,7 +104,7 @@ class tc extends vf {
             }
             ed.field_c = gf.a(0, new CharSequence[]{(CharSequence) ((Object) ed.field_c), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) IntrusiveNode.field_e)});
           }
-          Point.field_i.h((byte) 75);
+          Point.field_i.closeDialog((byte) 75);
           rl.c(9);
         }
     }

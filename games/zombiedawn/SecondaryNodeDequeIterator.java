@@ -13,7 +13,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
     static String field_c;
     static String field_e;
 
-    final static byte[] a(Object param0, byte param1, boolean param2) {
+    final static byte[] unwrapArchiveBytes(Object param0, byte param1, boolean param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         rf var4 = null;
@@ -77,23 +77,23 @@ final class SecondaryNodeDequeIterator implements Iterator {
         field_b = null;
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void installViewController(int param0, boolean param1) {
         Object var2 = null;
         if (param1) {
           var2 = new cl();
         } else {
           var2 = new wh();
         }
-        nl.a(new lg((wa) (var2)), (byte) -121);
+        nl.setDisplayModeController(new ViewportController((wa) (var2)), (byte) -121);
         if (param0 <= -105) {
           return;
         }
         field_e = (String) null;
     }
 
-    final static void a(int param0, boolean param1, bo param2) {
+    final static void writeProgressRecord(int param0, boolean param1, bo param2) {
         am var5 = dp.field_e;
-        var5.j(11, param0);
+        var5.writeCipheredByte(11, param0);
         var5.position = var5.position + 1;
         int var4 = var5.position;
         var5.writeByte(1, -111);

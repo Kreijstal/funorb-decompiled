@@ -43,11 +43,11 @@ final class f {
         try {
           int var2_int = -124 % ((-64 - param0) / 39);
           var3 = (ClientException.field_a * 5 >> 2) + nk.field_c;
-          var4 = uo.field_h + (rh.field_a >> 1);
+          var4 = IsaacCipher.field_h + (rh.field_a >> 1);
           var5 = param1.worldToScreenX(nk.field_c, (byte) -87);
-          var6 = param1.worldToScreenY(uo.field_h, 0);
+          var6 = param1.worldToScreenY(IsaacCipher.field_h, 0);
           var7 = pj.a(var6, 82, var5) * 5 >> 2;
-          oe.field_c.h(var7);
+          oe.field_c.setVolume(var7);
           Rasterizer.setClip(var5, var6, var5 + ClientException.field_a, var6 + rh.field_a);
           Rasterizer.fillRadialPaletteCircle(param1.worldToScreenX(var3, (byte) -89) << 4, param1.worldToScreenY(var4, 0) << 4, pl.field_r, UiWidget.field_q, b.field_p);
           Rasterizer.resetClip();

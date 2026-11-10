@@ -41,15 +41,15 @@ final class ja {
           var3 = 33 / ((param0 - 27) / 55);
           var2_int = md.a(0, param1, 79);
           if (3 == var2_int) {
-            stackIn_13_0 = gk.a((byte) -81, param1);
+            stackIn_13_0 = gk.decodeTileMapWithHeader((byte) -81, param1);
             return stackIn_13_0;
           }
           if (var2_int == 4) {
-            stackIn_11_0 = fc.a(param1, (byte) 49);
+            stackIn_11_0 = fc.decodeTileMapWithDefaultSize(param1, (byte) 49);
             return stackIn_11_0;
           }
           if (var2_int == 5) {
-            stackIn_9_0 = BufferedSocket.a(param1, -4);
+            stackIn_9_0 = BufferedSocket.upgradeAndDecodeTileMap(param1, -4);
             return stackIn_9_0;
           }
           if (var2_int != 6) {
@@ -184,8 +184,8 @@ final class ja {
         try {
           try {
             var9 = cj.field_d.getGraphics();
-            if (HumanFactory.field_f == null) {
-              HumanFactory.field_f = new java.awt.Font("Helvetica", 1, 13);
+            if (AccountServerResult.field_f == null) {
+              AccountServerResult.field_f = new java.awt.Font("Helvetica", 1, 13);
             }
             if (param2) {
               var9.setColor(java.awt.Color.black);
@@ -206,7 +206,7 @@ final class ja {
               var10.setColor(java.awt.Color.black);
               var10.drawRect(1, 1, 301, 31);
               var10.fillRect(param3 * 3 + 2, 2, -(3 * param3) + 300, 30);
-              var10.setFont(HumanFactory.field_f);
+              var10.setFont(AccountServerResult.field_f);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param0, (-(param0.length() * 6) + 304) / 2, 22);
               var9.drawImage(TileMap.field_i, -152 + te.field_eb / 2, kj.field_c / 2 - 18, (java.awt.image.ImageObserver) null);
@@ -221,14 +221,14 @@ final class ja {
               var9.setColor(java.awt.Color.black);
               var9.drawRect(1 + var7, var8 + 1, 301, 31);
               var9.fillRect(2 + var7 + param3 * 3, 2 + var8, -(3 * param3) + 300, 30);
-              var9.setFont(HumanFactory.field_f);
+              var9.setFont(AccountServerResult.field_f);
               var9.setColor(java.awt.Color.white);
               var9.drawString(param0, var7 + (-(param0.length() * 6) + 304) / 2, var8 + 22);
             }
             if (ph.field_b == null) {
               return;
             }
-            var9.setFont(HumanFactory.field_f);
+            var9.setFont(AccountServerResult.field_f);
             var9.setColor(java.awt.Color.white);
             var9.drawString(ph.field_b, te.field_eb / 2 - 6 * ph.field_b.length() / 2, kj.field_c / 2 - 26);
             return;
@@ -281,15 +281,15 @@ final class ja {
           var3 = 33 / ((param0 - 27) / 55);
           var2_int = md.a(0, param1, 79);
           if (3 == var2_int) {
-            stackIn_13_0 = gk.a((byte) -81, param1);
+            stackIn_13_0 = gk.decodeTileMapWithHeader((byte) -81, param1);
             return stackIn_13_0;
           }
           if (var2_int == 4) {
-            stackIn_11_0 = fc.a(param1, (byte) 49);
+            stackIn_11_0 = fc.decodeTileMapWithDefaultSize(param1, (byte) 49);
             return stackIn_11_0;
           }
           if (var2_int == 5) {
-            stackIn_9_0 = BufferedSocket.a(param1, -4);
+            stackIn_9_0 = BufferedSocket.upgradeAndDecodeTileMap(param1, -4);
             return stackIn_9_0;
           }
           if (var2_int != 6) {

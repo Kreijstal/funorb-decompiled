@@ -45,7 +45,7 @@ abstract class Font extends DualLinkNode {
     }
 
     final int charWidth(char param0) {
-        return this.field_r[tb.a(param0, -8225) & 255];
+        return this.field_r[tb.encodeCodePageChar(param0, -8225) & 255];
     }
 
     private final static int computePairKerning(byte[][] param0, byte[][] param1, int[] param2, int[] param3, int[] param4, int param5, int param6) {
@@ -151,7 +151,7 @@ abstract class Font extends DualLinkNode {
                               } else {
                                 try {
                                   var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
-                                  var10 = DualLinkDeque.a(var13, -30);
+                                  var10 = DualLinkDeque.parseDecimalInt(var13, -30);
                                   var11_ref_qb = this.field_B[var10];
                                   if (this.field_s == null) {
                                     stackIn_27_0 = var11_ref_qb.field_e;
@@ -200,7 +200,7 @@ abstract class Font extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
-              var8 = (char)(tb.a((char) var8, -8225) & 255);
+              var8 = (char)(tb.encodeCodePageChar((char) var8, -8225) & 255);
               if (this.field_z != null &&
                 var5 != 0) {
                 param1 = param1 + this.field_z[(var5 << 8) + var8];
@@ -303,7 +303,7 @@ abstract class Font extends DualLinkNode {
                                 if (var15.startsWith("img=")) {
                                   try {
                                     var18 = (CharSequence) ((Object) var15.substring(4));
-                                    var16_int = DualLinkDeque.a(var18, -56);
+                                    var16_int = DualLinkDeque.parseDecimalInt(var18, -56);
                                     var4 = var4 + this.field_B[var16_int].field_a;
                                     var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -388,7 +388,7 @@ abstract class Font extends DualLinkNode {
             if (var9 == -1) {
               if (var14 != 0) {
                 discarded$3 = field_G.append((char) var14);
-                var14 = (char)(tb.a((char) var14, -8225) & 255);
+                var14 = (char)(tb.encodeCodePageChar((char) var14, -8225) & 255);
                 var4 = var4 + this.field_r[var14];
                 if (this.field_z != null &&
                   var10 != 0) {
@@ -686,7 +686,7 @@ abstract class Font extends DualLinkNode {
                 }
               } else {
                 var4 = (CharSequence) ((Object) param0.substring(6));
-                field_v = DualLinkDeque.a(var4, 114);
+                field_v = DualLinkDeque.parseDecimalInt(var4, 114);
               }
             } else {
               field_p = field_M;
@@ -806,7 +806,7 @@ abstract class Font extends DualLinkNode {
                               if (!(!var8.startsWith("img="))) {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
-                                  var9_int = DualLinkDeque.a(var10, 125);
+                                  var9_int = DualLinkDeque.parseDecimalInt(var10, 125);
                                   var4 = var4 + this.field_B[var9_int].field_a;
                                   var3 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -843,7 +843,7 @@ abstract class Font extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var2 == -1)) {
-              var7 = (char)(tb.a((char) var7, -8225) & 255);
+              var7 = (char)(tb.encodeCodePageChar((char) var7, -8225) & 255);
               var4 = var4 + this.field_r[var7];
               if (this.field_z != null &&
                 var3 != 0) {

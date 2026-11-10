@@ -8,7 +8,7 @@ class wo extends Human {
     boolean field_Ab;
     static ln field_yb;
 
-    void a(Camera param0, int param1) {
+    void drawDebugOverlay(Camera param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -45,14 +45,14 @@ class wo extends Human {
         }
     }
 
-    final static em v(int param0) {
+    final static em createDefaultScrollbar(int param0) {
         if (param0 == 6130) {
-          return new em(0, 0, se.field_j.field_p, 0, (io) null, se.field_j.field_s, se.field_j.field_m, se.field_j.field_p, se.field_j.field_p, se.field_j.field_o, se.field_j.field_f, false, true, 32768, 0);
+          return new em(0, 0, ProxySocketConnector.field_j.field_p, 0, (io) null, ProxySocketConnector.field_j.field_s, ProxySocketConnector.field_j.field_m, ProxySocketConnector.field_j.field_p, ProxySocketConnector.field_j.field_p, ProxySocketConnector.field_j.field_o, ProxySocketConnector.field_j.field_f, false, true, 32768, 0);
         }
         return (em) null;
     }
 
-    void l(byte param0) {
+    void updateBehaviour(byte param0) {
         int stackIn_2_0 = 0;
         int stackIn_3_1 = 0;
         int var2;
@@ -69,17 +69,17 @@ class wo extends Human {
         var2 = stackIn_2_0 * stackIn_3_1;
         if (param0 != 52) {
           var5 = (Camera) null;
-          this.a((Camera) null, 77);
+          this.drawDebugOverlay((Camera) null, 77);
           this.field_pb = var2;
           if (0 != this.state) {
             var3 = 0;
-            if (!this.a(-86, var2, this.field_Ab)) {
+            if (!this.findNearestTarget(-86, var2, this.field_Ab)) {
               this.field_Ab = false;
               if (3 == this.state) {
                 this.setState(0, -6904);
               }
             } else {
-              if (!this.p(-125)) {
+              if (!this.startFleeing(-125)) {
                 if (this.field_Ab) {
                   this.field_Ab = false;
                 } else {
@@ -98,13 +98,13 @@ class wo extends Human {
           }
           if (this.field_Ab) {
             var3Lifetime3 = 0;
-            if (!this.a(-86, var2, this.field_Ab)) {
+            if (!this.findNearestTarget(-86, var2, this.field_Ab)) {
               this.field_Ab = false;
               if (3 == this.state) {
                 this.setState(0, -6904);
               }
             } else {
-              if (!this.p(-125)) {
+              if (!this.startFleeing(-125)) {
                 if (this.field_Ab) {
                   this.field_Ab = false;
                 } else {
@@ -122,7 +122,7 @@ class wo extends Human {
             return;
           }
           var3Lifetime4 = 1;
-          if (!this.a(-86, var2, this.field_Ab)) {
+          if (!this.findNearestTarget(-86, var2, this.field_Ab)) {
             this.field_Ab = false;
             if (3 != this.state) {
               return;
@@ -130,7 +130,7 @@ class wo extends Human {
             this.setState(0, -6904);
             return;
           }
-          if (this.p(-125)) {
+          if (this.startFleeing(-125)) {
             if (var3Lifetime4 != 0) {
               this.field_U = dc.a((byte) 18, this.field_db);
             }
@@ -151,7 +151,7 @@ class wo extends Human {
         if (0 == this.state &&
           !this.field_Ab) {
           var3Lifetime1 = 1;
-          if (!this.a(-86, var2, this.field_Ab)) {
+          if (!this.findNearestTarget(-86, var2, this.field_Ab)) {
             this.field_Ab = false;
             if (3 != this.state) {
               return;
@@ -159,7 +159,7 @@ class wo extends Human {
             this.setState(0, -6904);
             return;
           }
-          if (this.p(-125)) {
+          if (this.startFleeing(-125)) {
             if (var3Lifetime1 != 0) {
               this.field_U = dc.a((byte) 18, this.field_db);
             }
@@ -177,7 +177,7 @@ class wo extends Human {
           return;
         }
         var3Lifetime2 = 0;
-        if (!this.a(-86, var2, this.field_Ab)) {
+        if (!this.findNearestTarget(-86, var2, this.field_Ab)) {
           this.field_Ab = false;
           if (3 != this.state) {
             return;
@@ -185,7 +185,7 @@ class wo extends Human {
           this.setState(0, -6904);
           return;
         }
-        if (this.p(-125)) {
+        if (this.startFleeing(-125)) {
           if (var3Lifetime2 != 0) {
             this.field_U = dc.a((byte) 18, this.field_db);
           }

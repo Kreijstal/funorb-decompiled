@@ -180,7 +180,7 @@ final class pb extends IntrusiveNode {
           }
           var3 = var9.readUnsignedByte((byte) -126);
           if (0 == var2) {
-            var4_ref_lo = (lo) (c.field_b.b((byte) 26));
+            var4_ref_lo = (lo) (c.field_b.last((byte) 26));
             if (var4_ref_lo == null) {
               p.a(1);
               return;
@@ -200,12 +200,12 @@ final class pb extends IntrusiveNode {
             return;
           }
           if (var2 == 1) {
-            var4 = var9.f((byte) 108);
-            var5 = (wg) (jb.field_b.b((byte) 26));
+            var4 = var9.readSignedSmart((byte) 108);
+            var5 = (wg) (jb.field_b.last((byte) 26));
             while (var5 != null) {
               if (var5.field_i != var3 ||
                 var5.field_r != var4) {
-                var5 = (wg) (jb.field_b.a(false));
+                var5 = (wg) (jb.field_b.previous(false));
                 continue;
               }
               break;
@@ -242,11 +242,11 @@ final class pb extends IntrusiveNode {
           if (param0 != -28) {
             return;
           }
-          LevelNavigation.field_a.e(param1.worldToScreenX(this.field_i, (byte) -112) - 30, param1.worldToScreenY(this.field_m, param0 + 28) - 30, this.field_p);
+          LevelNavigation.field_a.drawWithOpacity(param1.worldToScreenX(this.field_i, (byte) -112) - 30, param1.worldToScreenY(this.field_m, param0 + 28) - 30, this.field_p);
           if (this.field_o >= 0) {
             var3_int = param1.worldToScreenX(this.field_q, (byte) -77);
             var4 = param1.worldToScreenY(this.field_j, 0);
-            og.field_x[this.field_o].e(var3_int - 11, -11 + (-this.field_o + (-this.field_o + var4)) + (-this.field_o - this.field_o), -this.field_o + 8 << 3);
+            og.field_x[this.field_o].drawWithOpacity(var3_int - 11, -11 + (-this.field_o + (-this.field_o + var4)) + (-this.field_o - this.field_o), -this.field_o + 8 << 3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

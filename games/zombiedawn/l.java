@@ -54,20 +54,20 @@ final class l extends ll {
         }
     }
 
-    final void a(boolean param0, PacketBuffer param1) {
+    final void writePayload(boolean param0, PacketBuffer param1) {
         try {
           if (param0) {
             java.awt.Component var4 = (java.awt.Component) null;
             l.a(-71, 119, (java.awt.Component) null, -102);
           }
           param1.writeTerminatedStringWithHeader((byte) -88, this.field_f);
-          param1.a(this.field_c, (byte) 95);
+          param1.writeBase38Name(this.field_c, (byte) 95);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "l.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final nk a(byte param0) {
+    final nk payloadKind(byte param0) {
         if (param0 != -102) {
           field_b = (Sprite[]) null;
           return dp.field_a;
@@ -75,15 +75,15 @@ final class l extends ll {
         return dp.field_a;
     }
 
-    final static dh a(int param0, int param1, java.awt.Component param2, int param3) {
+    final static RasterBuffer a(int param0, int param1, java.awt.Component param2, int param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
           RuntimeException var4_ref2 = null;
-          dh var5 = null;
-          pi var5_ref = null;
-          dh stackIn_3_0 = null;
-          pi stackIn_5_0 = null;
+          RasterBuffer var5 = null;
+          ImageProducerRasterBuffer var5_ref = null;
+          RasterBuffer stackIn_3_0 = null;
+          ImageProducerRasterBuffer stackIn_5_0 = null;
           RuntimeException stackIn_8_0 = null;
           StringBuilder stackIn_8_1 = null;
           String stackIn_9_2 = null;
@@ -93,18 +93,18 @@ final class l extends ll {
               if (param0 != -1) {
                 field_b = (Sprite[]) null;
               }
-              var4 = Class.forName("ai");
-              var5 = (dh) (var4.newInstance());
-              var5.a(param1, param3, param2, -11055);
+              var4 = Class.forName("BufferedImageRasterBuffer");
+              var5 = (RasterBuffer) (var4.newInstance());
+              var5.initialize(param1, param3, param2, -11055);
               stackIn_3_0 = var5;
               return stackIn_3_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              var5_ref = new pi();
-              ((dh) ((Object) var5_ref)).a(param1, param3, param2, -11055);
+              var5_ref = new ImageProducerRasterBuffer();
+              ((RasterBuffer) ((Object) var5_ref)).initialize(param1, param3, param2, -11055);
               stackIn_5_0 = var5_ref;
-              return (dh) ((Object) stackIn_5_0);
+              return (RasterBuffer) ((Object) stackIn_5_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

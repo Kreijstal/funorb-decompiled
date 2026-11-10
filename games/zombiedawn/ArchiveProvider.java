@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class w {
+abstract class ArchiveProvider {
     static wj[] field_a;
     static int field_b;
 
-    abstract jh b(byte param0);
+    abstract jh getIndex(byte param0);
 
-    abstract int a(int param0, int param1);
+    abstract int getGroupProgress(int param0, int param1);
 
-    abstract byte[] a(int param0, byte param1);
+    abstract byte[] getPackedGroup(int param0, byte param1);
 
-    final static void a(Sprite[] param0, byte param1) {
+    final static void createPopupSprites(Sprite[] param0, byte param1) {
         int var2_int = 0;
         int var3 = ZombieDawn.field_J;
         ni.field_b = param0;
@@ -52,7 +52,7 @@ abstract class w {
         field_a = null;
         if (param0 != -98) {
           Sprite[] var2 = (Sprite[]) null;
-          w.a((Sprite[]) null, (byte) -72);
+          ArchiveProvider.createPopupSprites((Sprite[]) null, (byte) -72);
         }
     }
 

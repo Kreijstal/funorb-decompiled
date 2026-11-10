@@ -15,7 +15,7 @@ final class ExceptionWrapper implements Runnable {
     static String field_f;
     int field_k;
 
-    final wd a(byte param0, int param1, na param2, byte[] param3) {
+    final wd queueWrite(byte param0, int param1, SectorCacheStore param2, byte[] param3) {
         wd var5 = null;
         RuntimeException var5_ref = null;
         wd stackIn_3_0 = null;
@@ -35,7 +35,7 @@ final class ExceptionWrapper implements Runnable {
           var5.secondaryKey = (long)param1;
           var5.field_r = false;
           var5.field_v = 2;
-          this.a(true, var5);
+          this.enqueueRequest(true, var5);
           stackIn_3_0 = var5;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -58,7 +58,7 @@ final class ExceptionWrapper implements Runnable {
         }
     }
 
-    private final void a(boolean param0, wd param1) {
+    private final void enqueueRequest(boolean param0, wd param1) {
         synchronized (this.field_b) {
           this.field_b.addLast(param1, (byte) -112);
           this.field_k = this.field_k + 1;
@@ -106,7 +106,7 @@ final class ExceptionWrapper implements Runnable {
               boolean decompiledFrameRemainder0 = true;
               if (2 != var7.field_v) {
                 if (var7.field_v == 3) {
-                  var7.field_A = var7.field_x.a(-65536, (int)var7.secondaryKey);
+                  var7.field_A = var7.field_x.readFile(-65536, (int)var7.secondaryKey);
                   decompiledRegionSelector1 = 1;
                   decompiledFrameRemainder0 = false;
                 }
@@ -114,7 +114,7 @@ final class ExceptionWrapper implements Runnable {
                   var7.field_q = false;
                 }
               } else {
-                var7.field_x.a((int)var7.secondaryKey, var7.field_A, var7.field_A.length, (byte) -96);
+                var7.field_x.write((int)var7.secondaryKey, var7.field_A, var7.field_A.length, (byte) -96);
                 var7.field_q = false;
               }
               if (decompiledFrameRemainder0) {
@@ -150,7 +150,7 @@ final class ExceptionWrapper implements Runnable {
         return var2;
     }
 
-    final void a(boolean param0) {
+    final void shutdown(boolean param0) {
         try {
           this.field_l = param0 ? true : false;
           synchronized (this.field_b) {
@@ -168,7 +168,7 @@ final class ExceptionWrapper implements Runnable {
         }
     }
 
-    final wd a(int param0, na param1, int param2) {
+    final wd readImmediate(int param0, SectorCacheStore param1, int param2) {
         wd var4 = null;
         RuntimeException var4_ref = null;
         Object var5 = null;
@@ -192,7 +192,7 @@ final class ExceptionWrapper implements Runnable {
               stackIn_4_0 = (wd) null;
               return stackIn_4_0;
             }
-            var6 = (wd) (this.field_b.c((byte) 34));
+            var6 = (wd) (this.field_b.first((byte) 34));
             while (var6 != null) {
               if ((long)param0 == var6.secondaryKey &&
                 var6.field_x == param1 &&
@@ -202,10 +202,10 @@ final class ExceptionWrapper implements Runnable {
                 stackIn_11_0 = var4;
                 return stackIn_11_0;
               }
-              var6 = (wd) (this.field_b.a((byte) 114));
+              var6 = (wd) (this.field_b.next((byte) 114));
             }
           }
-          var4.field_A = param1.a(-65536, param0);
+          var4.field_A = param1.readFile(-65536, param0);
           var4.field_r = true;
           var4.field_q = false;
           stackIn_18_0 = var4;
@@ -234,7 +234,7 @@ final class ExceptionWrapper implements Runnable {
         }
     }
 
-    final wd a(byte param0, na param1, int param2) {
+    final wd queueRead(byte param0, SectorCacheStore param1, int param2) {
         wd var4 = null;
         RuntimeException var4_ref = null;
         wd var5 = null;
@@ -249,10 +249,10 @@ final class ExceptionWrapper implements Runnable {
           var4.secondaryKey = (long)param2;
           var4.field_x = param1;
           var4.field_v = 3;
-          this.a(true, var4);
+          this.enqueueRequest(true, var4);
           if (param0 != -119) {
             var5 = (wd) null;
-            this.a(false, (wd) null);
+            this.enqueueRequest(false, (wd) null);
           }
           stackIn_3_0 = var4;
           return stackIn_3_0;

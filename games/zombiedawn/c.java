@@ -8,10 +8,10 @@ final class c {
 
     final static cg[] b(int param0) {
         if (param0 == 19795) {
-          return new cg[]{kl.field_p, NodeHashTableIterator.field_d, rf.field_c, NodeHashTableIterator.field_g, uj.field_a, mh.field_I, lo.field_s, nl.field_m, bd.field_q, be.field_i, DualLinkNode.field_l, jl.field_v, mp.field_b, se.field_n};
+          return new cg[]{kl.field_p, NodeHashTableIterator.field_d, rf.field_c, NodeHashTableIterator.field_g, uj.field_a, mh.field_I, lo.field_s, nl.field_m, WhirlpoolHasher.field_q, be.field_i, DualLinkNode.field_l, jl.field_v, mp.field_b, ProxySocketConnector.field_n};
         }
         c.a('ￄ', 89);
-        return new cg[]{kl.field_p, NodeHashTableIterator.field_d, rf.field_c, NodeHashTableIterator.field_g, uj.field_a, mh.field_I, lo.field_s, nl.field_m, bd.field_q, be.field_i, DualLinkNode.field_l, jl.field_v, mp.field_b, se.field_n};
+        return new cg[]{kl.field_p, NodeHashTableIterator.field_d, rf.field_c, NodeHashTableIterator.field_g, uj.field_a, mh.field_I, lo.field_s, nl.field_m, WhirlpoolHasher.field_q, be.field_i, DualLinkNode.field_l, jl.field_v, mp.field_b, ProxySocketConnector.field_n};
     }
 
     public static void releaseStatics(boolean param0) {
@@ -116,7 +116,7 @@ final class c {
             stackIn_5_0 = (String) (param2);
             return stackIn_5_0;
           }
-          stackIn_7_0 = param1 + " - " + param0.b(param3, 109) + "%";
+          stackIn_7_0 = param1 + " - " + param0.getGroupProgressByName(param3, 109) + "%";
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -156,14 +156,14 @@ final class c {
           throw new IllegalStateException();
         }
         if (null != Point.field_i) {
-          Point.field_i.h((byte) 20);
+          Point.field_i.closeDialog((byte) 20);
         }
         if (param0 == 65) {
           var1 = bo.a(param0 + 39);
           he.field_a = new ih(var1, (String) null, true, false, false);
-          e.field_S.a(bm.field_d, true);
-          bm.field_d.b(20, he.field_a);
-          bm.field_d.f((byte) -70);
+          e.field_S.addDialog(bm.field_d, true);
+          bm.field_d.transitionToContent(20, he.field_a);
+          bm.field_d.finishTransition((byte) -70);
           return;
         }
     }

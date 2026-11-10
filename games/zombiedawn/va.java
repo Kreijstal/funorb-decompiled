@@ -177,18 +177,18 @@ final class va {
             }
             stackIn_15_0 = (var1.readUnsignedByte((byte) -119) != 1) ? 0 : 1;
             var3_int = stackIn_15_0;
-            var4_ref_String = var1.a(true);
+            var4_ref_String = var1.readNullTerminatedString(true);
             if (var3_int != 0) {
-              var1.a(true);
+              var1.readNullTerminatedString(true);
             }
-            var5_ref = pa.a(var4_ref_String, (byte) -66);
-            var6_ref = var1.a(true);
+            var5_ref = pa.findSocialEntryByName(var4_ref_String, (byte) -66);
+            var6_ref = var1.readNullTerminatedString(true);
             var7_ref = fm.a((CharSequence) ((Object) var4_ref_String), -115);
             if (var7_ref == null) {
               var7_ref = var4_ref_String;
             }
             if (var5_ref == null) {
-              var5_ref = pa.a(var6_ref, (byte) -66);
+              var5_ref = pa.findSocialEntryByName(var6_ref, (byte) -66);
               if (var5_ref != null) {
                 nk.field_a.a(param0 ^ 1544, (long)var7_ref.hashCode(), var5_ref);
               }
@@ -206,14 +206,14 @@ final class va {
           }
           if (var2 != 1) {
             if (var2 == 2) {
-              if (w.field_b == 1) {
-                w.field_b = 2;
+              if (ArchiveProvider.field_b == 1) {
+                ArchiveProvider.field_b = 2;
               }
               return;
             }
             if (var2 == 3) {
-              if (w.field_b == 2) {
-                w.field_b = 1;
+              if (ArchiveProvider.field_b == 2) {
+                ArchiveProvider.field_b = 1;
               }
               return;
             }
@@ -222,33 +222,33 @@ final class va {
               p.a(param0 - 1544);
               return;
             }
-            w.field_b = 1;
-            var3 = var1.a(true);
+            ArchiveProvider.field_b = 1;
+            var3 = var1.readNullTerminatedString(true);
             oo.field_T = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte((byte) -128);
             rd.a(20348, var4);
             return;
           }
-          if (sf.field_j == null) {
-            sf.field_j = new pf(128);
+          if (BufferedFile.field_j == null) {
+            BufferedFile.field_j = new pf(128);
             ne.field_b = 0;
           }
-          var3Lifetime1 = var1.a(true);
+          var3Lifetime1 = var1.readNullTerminatedString(true);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.a(true);
-          var5 = var1.a(true);
+          var4_ref_StringLifetime1 = var1.readNullTerminatedString(true);
+          var5 = var1.readNullTerminatedString(true);
           var6 = hg.a(99, var4_ref_StringLifetime1);
           if (var6 == null) {
             var6 = hg.a(103, var5);
             if (var6 != null) {
-              sf.field_j.a(1, (long)fm.a((CharSequence) ((Object) var4_ref_StringLifetime1), param0 ^ -1662).hashCode(), var6);
+              BufferedFile.field_j.a(1, (long)fm.a((CharSequence) ((Object) var4_ref_StringLifetime1), param0 ^ -1662).hashCode(), var6);
             }
           }
           if (null == var6) {
             var6 = new oh();
-            sf.field_j.a(1, (long)fm.a((CharSequence) ((Object) var4_ref_StringLifetime1), -56).hashCode(), var6);
+            BufferedFile.field_j.a(1, (long)fm.a((CharSequence) ((Object) var4_ref_StringLifetime1), -56).hashCode(), var6);
             fieldTemp$0 = ne.field_b;
             ne.field_b = ne.field_b + 1;
             var6.field_kb = fieldTemp$0;
@@ -260,15 +260,15 @@ final class va {
           var6.field_lb = var4_ref_StringLifetime1;
           var6.field_ib = (String) (var3Lifetime1);
           var6.unlink(param0 - 29143);
-          var7 = (oh) (eb.field_d.b((byte) 26));
+          var7 = (oh) (eb.field_d.last((byte) 26));
           scanLoop1: while (true) {
             if (null != var7) {
               stackIn_68_0 = var6;
               if (var8 != 0) {
                 break scanLoop1;
               }
-              if (eh.a(stackIn_68_0, var7, (byte) 20)) {
-                var7 = (oh) (eb.field_d.a(false));
+              if (eh.isSocialEntryOrderedAfter(stackIn_68_0, var7, (byte) 20)) {
+                var7 = (oh) (eb.field_d.previous(false));
                 continue;
               }
             }
@@ -281,7 +281,7 @@ final class va {
             stackIn_68_0 = var7;
             break;
           }
-          we.a(stackIn_68_0, param0 ^ 1545, var6);
+          we.insertAfter(stackIn_68_0, param0 ^ 1545, var6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -309,9 +309,9 @@ final class va {
             va.b((byte) -42);
           }
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!TileMap.b(-114)))) {
-            i.field_W.a(21657);
-            stackIn_16_0 = i.field_W.d(-127);
+          while (!(decompiledNaturalLoopExit0 = (!TileMap.pollKeyEvent(-114)))) {
+            i.field_W.navigateVertical(21657);
+            stackIn_16_0 = i.field_W.isActivated(-127);
             if (var7 == 0) {
               if (stackIn_16_0) {
                 var1_int = 1;
@@ -325,8 +325,8 @@ final class va {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            i.field_W.a((byte) -55, r.b(6199969, ha.field_b, ei.field_K), r.b(6199969, nc.field_j, hp.field_D));
-            stackIn_16_0 = i.field_W.d(-124);
+            i.field_W.updatePointer((byte) -55, r.b(6199969, ha.field_b, ei.field_K), r.b(6199969, nc.field_j, hp.field_D));
+            stackIn_16_0 = i.field_W.isActivated(-124);
           }
           if (stackIn_16_0) {
             var1_int = 1;

@@ -18,16 +18,16 @@ final class bf {
         RuntimeException var2 = null;
         var3 = ZombieDawn.field_J;
         try {
-          Camera.a(0, qn.field_e, param1, param0 + 35, true, fe.field_O, ub.field_d);
-          for (var2_int = 0; var2_int < qn.field_e; var2_int++) {
+          Camera.sortRankingRange(0, RandomAccessCacheFile.field_e, param1, param0 + 35, true, fe.field_O, ub.field_d);
+          for (var2_int = 0; var2_int < RandomAccessCacheFile.field_e; var2_int++) {
             qd.field_c[param1 + var2_int] = var2_int;
           }
-          Camera.a(param1, qn.field_e + param1, param1 + param1, param0 + 35, false, sg.field_pb, me.field_Db);
+          Camera.sortRankingRange(param1, RandomAccessCacheFile.field_e + param1, param1 + param1, param0 + 35, false, sg.field_pb, me.field_Db);
           if (param0 != -35) {
             bf.a(112, 74, 60, -121, 40, -69, -113);
           }
-          if (qn.field_e > param1) {
-            qn.field_e = param1;
+          if (RandomAccessCacheFile.field_e > param1) {
+            RandomAccessCacheFile.field_e = param1;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

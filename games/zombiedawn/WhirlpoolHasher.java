@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bd {
+final class WhirlpoolHasher {
     private int field_b;
     private int field_g;
     private long[] field_o;
@@ -22,17 +22,17 @@ final class bd {
     static int field_f;
     static int field_a;
 
-    final static void a(int param0, boolean param1) {
+    final static void playMusicById(int param0, boolean param1) {
         if (param0 != -1 &&
-          w.field_a[param0] != null) {
-          ph.a((byte) 68, w.field_a[param0]);
+          ArchiveProvider.field_a[param0] != null) {
+          ph.a((byte) 68, ArchiveProvider.field_a[param0]);
         }
         if (!param1) {
           field_f = -57;
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_i = (Sprite[][]) null;
         field_h = null;
         field_m = null;
@@ -42,7 +42,7 @@ final class bd {
         field_q = null;
     }
 
-    final static void a(Sprite param0, boolean param1) {
+    final static void padToFourPixelAlignment(Sprite param0, boolean param1) {
         int var7 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;
@@ -103,7 +103,7 @@ final class bd {
         }
     }
 
-    final static void a(byte param0) {
+    final static void configurePunctuationKeyCodes(byte param0) {
         ei.field_G[46] = 72;
         ei.field_G[222] = 58;
         ei.field_G[520] = 59;
@@ -119,7 +119,7 @@ final class bd {
         ei.field_G[91] = 42;
     }
 
-    final void a(int param0) {
+    final void reset(int param0) {
         int var2 = 0;
         int var3 = ZombieDawn.field_J;
         int var2Lifetime1;
@@ -154,7 +154,7 @@ final class bd {
           this.field_k[this.field_g] = (byte)GameWorld.intOr((int) this.field_k[this.field_g], 128 >>> eg.a(this.field_b, 7));
           this.field_g = this.field_g + 1;
           if (param2 > -118) {
-            this.b(-71);
+            this.processBlock(-71);
           }
           if (this.field_g > 32) {
             while (this.field_g < 64) {
@@ -162,7 +162,7 @@ final class bd {
               this.field_g = this.field_g + 1;
               this.field_k[fieldTemp$0] = (byte) 0;
             }
-            this.b(-9);
+            this.processBlock(-9);
             this.field_g = 0;
           }
           while (this.field_g < 32) {
@@ -171,7 +171,7 @@ final class bd {
             this.field_k[fieldTemp$1] = (byte) 0;
           }
           gp.copy(this.field_c, 0, this.field_k, 32, 32);
-          this.b(-9);
+          this.processBlock(-9);
           var4_int = 0;
           var5 = param1;
           while (var4_int < 8) {
@@ -202,7 +202,7 @@ final class bd {
         }
     }
 
-    final static char a(byte param0, int param1) {
+    final static char decodeExtendedByteChar(byte param0, int param1) {
         int var3 = 0;
         if (param1 != 9082) {
           field_d = 87;
@@ -222,7 +222,7 @@ final class bd {
         return (char)var2;
     }
 
-    private final void b(int param0) {
+    private final void processBlock(int param0) {
         long dupTemp$0 = 0L;
         long arrayValue$1 = 0L;
         int var2;
@@ -244,7 +244,7 @@ final class bd {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_s[var2] = al.a(gj.a((long)this.field_k[7 + var3], 255L), al.a(al.a(al.a(al.a(gj.a((long)this.field_k[3 + var3], 255L) << 32, al.a(al.a(gj.a((long)this.field_k[1 + var3], 255L) << 48, (long)this.field_k[var3] << 56), gj.a((long)this.field_k[2 + var3], 255L) << 40)), gj.a((long)this.field_k[4 + var3], 255L) << 24), gj.a(16711680L, (long)this.field_k[5 + var3] << 16)), gj.a(65280L, (long)this.field_k[6 + var3] << 8)));
+          this.field_s[var2] = al.bitXor(gj.bitAnd((long)this.field_k[7 + var3], 255L), al.bitXor(al.bitXor(al.bitXor(al.bitXor(gj.bitAnd((long)this.field_k[3 + var3], 255L) << 32, al.bitXor(al.bitXor(gj.bitAnd((long)this.field_k[1 + var3], 255L) << 48, (long)this.field_k[var3] << 56), gj.bitAnd((long)this.field_k[2 + var3], 255L) << 40)), gj.bitAnd((long)this.field_k[4 + var3], 255L) << 24), gj.bitAnd(16711680L, (long)this.field_k[5 + var3] << 16)), gj.bitAnd(65280L, (long)this.field_k[6 + var3] << 8)));
           var3 += 8;
           var2++;
         }
@@ -252,10 +252,10 @@ final class bd {
           dupTemp$0 = this.field_o[var2Lifetime1];
           arrayValue$1 = this.field_s[var2Lifetime1];
           this.field_l[var2Lifetime1] = dupTemp$0;
-          this.field_p[var2Lifetime1] = al.a(arrayValue$1, dupTemp$0);
+          this.field_p[var2Lifetime1] = al.bitXor(arrayValue$1, dupTemp$0);
         }
         if (param0 != -9) {
-          this.a(-68);
+          this.reset(-68);
         }
         for (var2Lifetime2 = 1; 10 >= var2Lifetime2; var2Lifetime2++) {
           for (var3Lifetime1 = 0; 8 > var3Lifetime1; var3Lifetime1++) {
@@ -263,7 +263,7 @@ final class bd {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_n[var3Lifetime1] = al.a(this.field_n[var3Lifetime1], bn.field_h[var4][eg.a(255, (int)(this.field_l[eg.a(-var4 + var3Lifetime1, 7)] >>> var5))]);
+              this.field_n[var3Lifetime1] = al.bitXor(this.field_n[var3Lifetime1], bn.field_h[var4][eg.a(255, (int)(this.field_l[eg.a(-var4 + var3Lifetime1, 7)] >>> var5))]);
               var4++;
               var5 -= 8;
             }
@@ -271,14 +271,14 @@ final class bd {
           for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
             this.field_l[var3Lifetime1Lifetime1] = this.field_n[var3Lifetime1Lifetime1];
           }
-          this.field_l[0] = al.a(this.field_l[0], bn.field_g[var2Lifetime2]);
+          this.field_l[0] = al.bitXor(this.field_l[0], bn.field_g[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; 8 > var3Lifetime1Lifetime2; var3Lifetime1Lifetime2++) {
             this.field_n[var3Lifetime1Lifetime2] = this.field_l[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (8 > var7) {
-              this.field_n[var3Lifetime1Lifetime2] = al.a(this.field_n[var3Lifetime1Lifetime2], bn.field_h[var7][eg.a((int)(this.field_p[eg.a(7, var3Lifetime1Lifetime2 - var7)] >>> var5Lifetime1), 255)]);
+              this.field_n[var3Lifetime1Lifetime2] = al.bitXor(this.field_n[var3Lifetime1Lifetime2], bn.field_h[var7][eg.a((int)(this.field_p[eg.a(7, var3Lifetime1Lifetime2 - var7)] >>> var5Lifetime1), 255)]);
               var7++;
               var5Lifetime1 -= 8;
             }
@@ -288,11 +288,11 @@ final class bd {
           }
         }
         for (var2Lifetime3 = 0; 8 > var2Lifetime3; var2Lifetime3++) {
-          this.field_o[var2Lifetime3] = al.a(this.field_o[var2Lifetime3], al.a(this.field_p[var2Lifetime3], this.field_s[var2Lifetime3]));
+          this.field_o[var2Lifetime3] = al.bitXor(this.field_o[var2Lifetime3], al.bitXor(this.field_p[var2Lifetime3], this.field_s[var2Lifetime3]));
         }
     }
 
-    final void a(boolean param0, byte[] param1, long param2) {
+    final void updateBits(boolean param0, byte[] param1, long param2) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -330,7 +330,7 @@ final class bd {
               this.field_g = this.field_g + 1;
               this.field_b = this.field_b + (-var7 + 8);
               if (this.field_b == 512) {
-                this.b(-9);
+                this.processBlock(-9);
                 this.field_b = 0;
                 this.field_g = 0;
               }
@@ -356,7 +356,7 @@ final class bd {
             this.field_g = this.field_g + 1;
             param2 = param2 - (long)(8 - var7);
             if (this.field_b == 512) {
-              this.b(-9);
+              this.processBlock(-9);
               this.field_g = 0;
               this.field_b = 0;
             }
@@ -380,7 +380,7 @@ final class bd {
         }
     }
 
-    bd() {
+    WhirlpoolHasher() {
         this.field_o = new long[8];
         this.field_p = new long[8];
         this.field_b = 0;

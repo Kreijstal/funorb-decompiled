@@ -103,7 +103,7 @@ final class so {
         IntrusiveNode var1_ref;
         IntrusiveNode var2;
         while (!so.a(param0)) {
-          var1_ref = param0.b((byte) 26);
+          var1_ref = param0.last((byte) 26);
           while (var1_ref instanceof WorldObject) {
             if (!(var1_ref.previous instanceof WorldObject)) {
               break;
@@ -111,7 +111,7 @@ final class so {
             var2 = var1_ref.previous;
             if (((WorldObject) (var1_ref)).field_x > ((WorldObject) (var2)).field_x) {
               var1_ref.unlink(-27598);
-              im.a(var1_ref, -30395, var2);
+              im.insertBefore(var1_ref, -30395, var2);
             }
             var1_ref = var2;
           }
@@ -278,7 +278,7 @@ final class so {
 
     private final static boolean a(IntrusiveDeque param0) {
         IntrusiveNode var1;
-        var1 = param0.b((byte) 26);
+        var1 = param0.last((byte) 26);
         while (var1 instanceof WorldObject) {
           if (var1.previous instanceof WorldObject) {
             if (((WorldObject) (var1)).field_x > ((WorldObject) (var1.previous)).field_x) {

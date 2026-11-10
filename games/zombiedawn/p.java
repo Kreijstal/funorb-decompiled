@@ -31,7 +31,7 @@ final class p {
 
     final static void a(int param0, int param1) {
         am var2 = dp.field_e;
-        var2.j(11, param1);
+        var2.writeCipheredByte(11, param1);
         var2.writeByte(1, 101);
         var2.writeByte(param0, 45);
     }

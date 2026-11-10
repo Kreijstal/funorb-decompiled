@@ -19,20 +19,20 @@ final class mg extends IntrusiveNode {
           d.field_b = d.field_b - 1;
           if (d.field_b == 0) {
             d.field_b = 200;
-            var1 = (hn) (fj.field_i.b((byte) 26));
+            var1 = (hn) (fj.field_i.last((byte) 26));
             while (var1 != null) {
-              if (!var1.field_k.a((byte) 73)) {
+              if (!var1.field_k.isLinked((byte) 73)) {
                 var1.unlink(-27598);
               }
-              var1 = (hn) (fj.field_i.a(false));
+              var1 = (hn) (fj.field_i.previous(false));
             }
-            if (sf.field_n != null) {
-              var1Lifetime1 = (hn) (sf.field_n.b((byte) 26));
+            if (BufferedFile.field_n != null) {
+              var1Lifetime1 = (hn) (BufferedFile.field_n.last((byte) 26));
               while (var1Lifetime1 != null) {
-                if (!var1Lifetime1.field_k.a((byte) 73)) {
+                if (!var1Lifetime1.field_k.isLinked((byte) 73)) {
                   var1Lifetime1.unlink(-27598);
                 }
-                var1Lifetime1 = (hn) (sf.field_n.a(false));
+                var1Lifetime1 = (hn) (BufferedFile.field_n.previous(false));
               }
             }
           }
@@ -47,12 +47,12 @@ final class mg extends IntrusiveNode {
     }
 
     final static void a(boolean param0) {
-        se.field_j = oj.b(0);
+        ProxySocketConnector.field_j = oj.b(0);
         wo.field_xb = new dn();
         if (param0) {
           return;
         }
-        ad.c((byte) 122);
+        ad.openScreenSizeDialog((byte) 122);
     }
 
     private mg() throws Throwable {

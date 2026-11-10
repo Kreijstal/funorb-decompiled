@@ -10,7 +10,7 @@ final class kg extends pm {
     static int field_i;
     static int field_k;
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -2314) {
           field_l = true;
           field_g = null;
@@ -57,11 +57,11 @@ final class kg extends pm {
             stackIn_11_0 = Js5Archive.field_a;
             return stackIn_11_0;
           }
-          if (tb.a(-10723, var5)) {
-            stackIn_14_0 = HumanFactory.field_i;
+          if (tb.isSingleRepeatedChar(-10723, var5)) {
+            stackIn_14_0 = AccountServerResult.field_i;
             return stackIn_14_0;
           }
-          if (this.b(param0, 1)) {
+          if (this.containsEmailComponent(param0, 1)) {
             stackIn_18_0 = dl.field_e;
             return stackIn_18_0;
           }
@@ -73,11 +73,11 @@ final class kg extends pm {
             stackIn_24_0 = kb.field_h;
             return stackIn_24_0;
           }
-          if (ic.a(var5, var6, 0)) {
-            stackIn_27_0 = uo.field_a;
+          if (ic.containsForwardOrReversed(var5, var6, 0)) {
+            stackIn_27_0 = IsaacCipher.field_a;
             return stackIn_27_0;
           }
-          if (!t.a(var5, (byte) 96, var6)) {
+          if (!t.containsForwardOrReversed(var5, (byte) 96, var6)) {
             stackIn_32_0 = ci.field_a;
             return stackIn_32_0;
           }
@@ -97,7 +97,7 @@ final class kg extends pm {
         }
     }
 
-    private final boolean b(String param0, int param1) {
+    private final boolean containsEmailComponent(String param0, int param1) {
         RuntimeException var3 = null;
         String var4 = null;
         int var5 = 0;
@@ -181,11 +181,11 @@ final class kg extends pm {
             stackIn_5_0 = (rh) null;
             return stackIn_5_0;
           }
-          if (!TileMap.a((byte) -23, var4, var3)) {
+          if (!TileMap.isAcceptablePassword((byte) -23, var4, var3)) {
             stackIn_8_0 = MouseWheelInput.field_b;
             return stackIn_8_0;
           }
-          if (!this.b(param0, 1)) {
+          if (!this.containsEmailComponent(param0, 1)) {
             return mc.field_g;
           }
           stackIn_12_0 = MouseWheelInput.field_b;

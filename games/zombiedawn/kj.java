@@ -11,20 +11,20 @@ final class kj {
     final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
         Sprite[] var6 = new Sprite[9];
         Sprite[] var5 = var6;
-        Sprite dupTemp$0 = qk.c(param4, (byte) -71, param0);
+        Sprite dupTemp$0 = qk.createSolidSprite(param4, (byte) -71, param0);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        Sprite dupTemp$1 = qk.c(param3, (byte) -71, param0);
+        Sprite dupTemp$1 = qk.createSolidSprite(param3, (byte) -71, param0);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
         if (param2 != 12692) {
           field_a = (String) null;
           if (param1 != 0) {
-            var6[4] = qk.c(param1, (byte) -71, 64);
+            var6[4] = qk.createSolidSprite(param1, (byte) -71, 64);
             return var5;
           }
           return var5;
@@ -32,7 +32,7 @@ final class kj {
         if (param1 == 0) {
           return var5;
         }
-        var6[4] = qk.c(param1, (byte) -71, 64);
+        var6[4] = qk.createSolidSprite(param1, (byte) -71, 64);
         return var5;
     }
 

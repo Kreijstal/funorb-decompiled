@@ -9,7 +9,7 @@ final class Point extends IntrusiveNode {
     int y;
     static jp field_m;
 
-    final static boolean a(int param0) {
+    final static boolean isIntroFinished(int param0) {
         if (param0 == -251) {
           return LevelNavigation.field_x > 250 ? true : false;
         }
@@ -45,7 +45,7 @@ final class Point extends IntrusiveNode {
         this.x = param0;
     }
 
-    final static oi a(int param0, byte[] param1) {
+    final static oi createGlyphFont(int param0, byte[] param1) {
         oi var2 = null;
         RuntimeException var2_ref = null;
         oi stackIn_6_0 = null;
@@ -58,7 +58,7 @@ final class Point extends IntrusiveNode {
             return null;
           }
           var2 = new oi(param1, sl.field_d, bo.field_o, bn.field_c, uf.field_n, vj.field_m);
-          no.f((byte) -87);
+          no.clearSpriteDecodeBuffers((byte) -87);
           if (param0 != -16491) {
             Point.releaseStatics((byte) -90);
           }

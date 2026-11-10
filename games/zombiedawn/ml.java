@@ -52,7 +52,7 @@ final class ml {
     }
 
     final static ml load(Js5Archive param0, String param1, String param2) {
-        byte[] var3 = param0.a(param2, -115, param1);
+        byte[] var3 = param0.getFileByName(param2, -115, param1);
         if (var3 == null) {
           return null;
         }
@@ -71,12 +71,12 @@ final class ml {
             this.field_c[var2].decode(param0);
           }
         }
-        this.field_a = param0.f(2);
-        this.field_b = param0.f(2);
+        this.field_a = param0.readUnsignedShort(2);
+        this.field_b = param0.readUnsignedShort(2);
     }
 
     final static ml load(Js5Archive param0, int param1, int param2) {
-        byte[] var3 = param0.a((byte) 51, param1, param2);
+        byte[] var3 = param0.getFile((byte) 51, param1, param2);
         if (var3 == null) {
           return null;
         }

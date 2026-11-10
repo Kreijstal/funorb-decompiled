@@ -21,15 +21,15 @@ final class cg {
         var3 = ZombieDawn.field_J;
         try {
           var1_int = 0;
-          while (TileMap.b(-93)) {
-            Point.field_m.a(21657);
-            if (!Point.field_m.d(-122)) {
+          while (TileMap.pollKeyEvent(-93)) {
+            Point.field_m.navigateVertical(21657);
+            if (!Point.field_m.isActivated(-122)) {
               continue;
             }
             var1_int = 1;
           }
-          Point.field_m.a((byte) -33, dn.a(ha.field_b, false, ei.field_K), dn.a(nc.field_j, false, hp.field_D));
-          if (Point.field_m.d(-120)) {
+          Point.field_m.updatePointer((byte) -33, dn.a(ha.field_b, false, ei.field_K), dn.a(nc.field_j, false, hp.field_D));
+          if (Point.field_m.isActivated(-120)) {
             var1_int = 1;
           }
           var2 = param0;

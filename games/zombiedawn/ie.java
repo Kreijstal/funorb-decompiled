@@ -29,13 +29,13 @@ final class ie {
         this.field_c[0] = var3 >> 4;
         this.field_c[1] = var3 & 15;
         if (var3 != 0) {
-          this.field_b[0] = param0.f(2);
-          this.field_b[1] = param0.f(2);
+          this.field_b[0] = param0.readUnsignedShort(2);
+          this.field_b[1] = param0.readUnsignedShort(2);
           var4 = param0.readUnsignedByte((byte) -122);
           for (var5 = 0; var5 < 2; var5++) {
             for (var6 = 0; var6 < this.field_c[var5]; var6++) {
-              this.field_g[var5][0][var6] = param0.f(2);
-              this.field_a[var5][0][var6] = param0.f(2);
+              this.field_g[var5][0][var6] = param0.readUnsignedShort(2);
+              this.field_a[var5][0][var6] = param0.readUnsignedShort(2);
             }
           }
           for (var5Lifetime1 = 0; var5Lifetime1 < 2; var5Lifetime1++) {
@@ -46,8 +46,8 @@ final class ie {
                 this.field_g[var5Lifetime1][1][var7] = this.field_g[var5Lifetime1][0][var7];
                 this.field_a[var5Lifetime1][1][var7] = this.field_a[var5Lifetime1][0][var7];
               } else {
-                this.field_g[var5Lifetime1][1][var7] = param0.f(2);
-                this.field_a[var5Lifetime1][1][var7] = param0.f(2);
+                this.field_g[var5Lifetime1][1][var7] = param0.readUnsignedShort(2);
+                this.field_a[var5Lifetime1][1][var7] = param0.readUnsignedShort(2);
               }
               var7++;
             }

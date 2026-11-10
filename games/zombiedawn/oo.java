@@ -12,7 +12,7 @@ final class oo extends id {
     static String field_T;
     private boolean[][] field_V;
 
-    private final void a(Camera param0, boolean param1) {
+    private final void drawTrunk(Camera param0, boolean param1) {
         int var10 = 0;
         int var12 = 0;
         RuntimeException stackIn_33_0 = null;
@@ -58,7 +58,7 @@ final class oo extends id {
           if (this.field_Q <= var7) {
             var7 = -1 + this.field_Q;
           }
-          var8 = (bd.field_e - var3_int) / 24;
+          var8 = (WhirlpoolHasher.field_e - var3_int) / 24;
           if (var6 > var8) {
             return;
           }
@@ -100,7 +100,7 @@ final class oo extends id {
         }
     }
 
-    final void a(byte param0, Camera param1) {
+    final void draw(byte param0, Camera param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -112,9 +112,9 @@ final class oo extends id {
           if (param0 > -76) {
             return;
           }
-          this.a(param1, true);
+          this.drawTrunk(param1, true);
           if (ld.field_m) {
-            var3_int = bd.field_e + 80;
+            var3_int = WhirlpoolHasher.field_e + 80;
             var4 = nh.field_P + 80;
             if (hn.field_p == null ||
               var3_int != hn.field_p.field_w ||
@@ -123,8 +123,8 @@ final class oo extends id {
               hn.field_p = new Sprite(var3_int, var4);
             }
             ki.a((byte) -114, hn.field_p);
-            this.a(param1, 47);
-            pa.a(-21189);
+            this.drawCanopy(param1, 47);
+            pa.popRasterState(-21189);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -141,7 +141,7 @@ final class oo extends id {
         }
     }
 
-    private final int[][] b(byte param0, int param1) {
+    private final int[][] generateLayout(byte param0, int param1) {
         int var7_int = 0;
         int var8_int = 0;
         int var17 = 0;
@@ -269,13 +269,13 @@ final class oo extends id {
 
     oo(int param0, int param1, int param2) {
         super(param0, param1, param2);
-        oj.field_d.a(0, 6);
+        oj.field_d.ensureResourceGroupLoaded(0, 6);
         so.random.setSeed((long)param2);
         this.field_Q = so.randomInt(2) + 6;
-        int[][] discarded$0 = this.b((byte) 123, this.field_Q);
+        int[][] discarded$0 = this.generateLayout((byte) 123, this.field_Q);
     }
 
-    final void a(Camera param0, byte param1) {
+    final void drawShadow(Camera param0, byte param1) {
         int var7 = 0;
         int var3_int = nh.field_R[0].field_w;
         int var4 = nh.field_R[0].field_t;
@@ -286,7 +286,7 @@ final class oo extends id {
         int var6 = 16 + param0.worldToScreenY(this.getY(param1 ^ 237240049), param1 ^ 65) - var4;
         if (var5 < -var3_int ||
           -var4 > var6 ||
-          var5 > bd.field_e ||
+          var5 > WhirlpoolHasher.field_e ||
           nh.field_P < var6) {
           return;
         }
@@ -307,7 +307,7 @@ final class oo extends id {
         field_U = null;
     }
 
-    private final void a(Camera param0, int param1) {
+    private final void drawCanopy(Camera param0, int param1) {
         int var10 = 0;
         int var12 = 0;
         RuntimeException stackIn_38_0 = null;
@@ -356,7 +356,7 @@ final class oo extends id {
           if (var7 >= -2 + this.field_Q) {
             var7 = -3 + this.field_Q;
           }
-          var8 = (-var3_int + 80 + bd.field_e) / 24;
+          var8 = (-var3_int + 80 + WhirlpoolHasher.field_e) / 24;
           if (0 > var8) {
             return;
           }

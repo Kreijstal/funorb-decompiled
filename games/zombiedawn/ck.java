@@ -56,14 +56,14 @@ final class ck extends IntrusiveNode {
             if (this.field_j.isSamplePositionOutOfRange()) {
               this.field_j = null;
             } else {
-              this.field_j.h(var5);
+              this.field_j.setVolume(var5);
             }
           }
           if (null != this.field_r) {
             if (this.field_r.isSamplePositionOutOfRange()) {
               this.field_r = null;
             } else {
-              this.field_r.h(var5);
+              this.field_r.setVolume(var5);
             }
           }
           if (this.field_o != 1) {
@@ -88,9 +88,9 @@ final class ck extends IntrusiveNode {
           }
           var6Lifetime1 = this.field_m / 2;
           if (var6Lifetime1 > this.field_m - this.field_q) {
-            om.a(-1, var4, var3_int, 1, -this.field_q + this.field_m, this.field_m - this.field_q, this.field_q, this.field_q * 3 / 4);
+            CachedArchiveSource.drawRadialRippleDistortion(-1, var4, var3_int, 1, -this.field_q + this.field_m, this.field_m - this.field_q, this.field_q, this.field_q * 3 / 4);
           } else {
-            om.a(-1, var4, var3_int, 1, 255, var6Lifetime1, this.field_q, this.field_q * 3 / 4);
+            CachedArchiveSource.drawRadialRippleDistortion(-1, var4, var3_int, 1, 255, var6Lifetime1, this.field_q, this.field_q * 3 / 4);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -128,7 +128,7 @@ final class ck extends IntrusiveNode {
               var2_int = -fj.field_g.position + param1;
             }
             sn.field_c.readFully(fj.field_g.position, var2_int, fj.field_g.payload, 0);
-            pi.field_i = pd.monotonicTimeMillis(-22826);
+            ImageProducerRasterBuffer.field_i = pd.monotonicTimeMillis(-22826);
             fj.field_g.position = fj.field_g.position + var2_int;
             if (!(fj.field_g.position >= param1)) {
               return false;
@@ -199,7 +199,7 @@ final class ck extends IntrusiveNode {
         this.field_q = stackIn_9_1 + stackIn_10_2;
         if (this.field_q > this.field_m) {
           if (this.field_h) {
-            Js5Archive.field_e.b(true);
+            Js5Archive.field_e.onWallsChanged(true);
             ck.a(-7, 6836);
           } else {
             ck.a(-5, 6836);
@@ -207,7 +207,7 @@ final class ck extends IntrusiveNode {
           this.unlink(param0 ^ 18347);
         }
         var2 = this.field_q * this.field_q;
-        var3 = this.field_l.b((byte) 26);
+        var3 = this.field_l.last((byte) 26);
         while (var3 instanceof s) {
           var4 = var3.previous;
           if (((s) (var3)).field_i < var2) {
@@ -215,10 +215,10 @@ final class ck extends IntrusiveNode {
             var5 = ((s) (var3)).field_h;
             if (!(var5 instanceof Zombie)) {
               if (var5 instanceof Human) {
-                ((Human) (var5)).c(this.field_k, 45, this.field_p);
+                ((Human) (var5)).knockBackFrom(this.field_k, 45, this.field_p);
               } else {
                 if (var5 instanceof id &&
-                  ((id) (var5)).a(true, false)) {
+                  ((id) (var5)).shatterIfFragile(true, false)) {
                   var6 = var5.getX(true) / 24;
                   var7 = var5.getY(237239984) / 24;
                   if (var5.getY(237239984) % 24 == 0) {
@@ -226,20 +226,20 @@ final class ck extends IntrusiveNode {
                   }
                   Js5Archive.field_e.navigation.field_A.tiles[var7][var6] = eg.a(Js5Archive.field_e.navigation.field_A.tiles[var7][var6], -33554433);
                   Js5Archive.field_e.navigation.field_A.tiles[var7 - 1][var6] = eg.a(Js5Archive.field_e.navigation.field_A.tiles[var7 - 1][var6], -33554433);
-                  Js5Archive.field_e.navigation.field_A.a(true, param0 + 25732, var7, false, var6);
-                  Js5Archive.field_e.navigation.field_A.a(true, 14365, var7 - 1, false, var6);
+                  Js5Archive.field_e.navigation.field_A.setCellOpen(true, param0 + 25732, var7, false, var6);
+                  Js5Archive.field_e.navigation.field_A.setCellOpen(true, 14365, var7 - 1, false, var6);
                   this.field_h = true;
                   if (null != this.field_r) {
-                    pc.a((byte) 13, this.field_r);
+                    Js5Transport.stopSoundEffect((byte) 13, this.field_r);
                   }
                   this.field_r = kh.a(pb.a(so.random, 2, 1) + 64, false);
                 }
               }
             } else {
               if (this.field_o == 1) {
-                ((Zombie) (var5)).c(401408, this.field_p, this.field_k);
+                ((Zombie) (var5)).knockBackFrom(401408, this.field_p, this.field_k);
               } else {
-                ((Zombie) (var5)).z(0);
+                ((Zombie) (var5)).takeLethalHit(0);
               }
             }
           }
@@ -479,9 +479,9 @@ final class ck extends IntrusiveNode {
                                 ha.field_e = true;
                               }
                               if (param0 == -13 &&
-                                !uo.field_d) {
+                                !IsaacCipher.field_d) {
                                 bo.a(-72, 2);
-                                uo.field_d = true;
+                                IsaacCipher.field_d = true;
                               }
                             }
                           }
@@ -628,7 +628,7 @@ final class ck extends IntrusiveNode {
         this.field_r = null;
         this.field_j = null;
         this.field_h = false;
-        if (!Js5Archive.field_e.navigation.a(param0, param1, 106)) {
+        if (!Js5Archive.field_e.navigation.isPixelWalkable(param0, param1, 106)) {
           param1 = param1 - (-4 + param1 % 24);
         }
         this.field_k = param0;
@@ -666,7 +666,7 @@ final class ck extends IntrusiveNode {
         }
         this.field_l = new IntrusiveDeque();
         var4Lifetime2 = this.field_m * this.field_m;
-        var5 = Js5Archive.field_e.zombies.b((byte) 26);
+        var5 = Js5Archive.field_e.zombies.last((byte) 26);
         while (var5 instanceof WorldObject) {
           if (var5 instanceof Zombie &&
             9 != ((Zombie) (var5)).state ||
@@ -683,7 +683,7 @@ final class ck extends IntrusiveNode {
             if (!(var5 instanceof id)) {
               if (this.field_o != 1) {
                 stackIn_39_0 = var11;
-                if (Js5Archive.field_e.navigation.a(var7, this.field_p, var6, this.field_k, 124) == -1) {
+                if (Js5Archive.field_e.navigation.traceLineFromTo(var7, this.field_p, var6, this.field_k, 124) == -1) {
                   stackIn_40_1 = 0;
                 } else {
                   stackIn_40_1 = 1;
@@ -692,10 +692,10 @@ final class ck extends IntrusiveNode {
               }
             } else {
               stackIn_33_0 = var11;
-              if (Js5Archive.field_e.navigation.a(-24 + var7 - 26, this.field_p, var6, this.field_k, 110) == -1 &&
-                Js5Archive.field_e.navigation.a(-24 + var7 - 26, this.field_p, 24 + var6, this.field_k, 125) == -1 &&
-                Js5Archive.field_e.navigation.a(var7 + 2, this.field_p, var6, this.field_k, 109) == -1 &&
-                Js5Archive.field_e.navigation.a(2 + var7, this.field_p, var6 + 24, this.field_k, 111) == -1) {
+              if (Js5Archive.field_e.navigation.traceLineFromTo(-24 + var7 - 26, this.field_p, var6, this.field_k, 110) == -1 &&
+                Js5Archive.field_e.navigation.traceLineFromTo(-24 + var7 - 26, this.field_p, 24 + var6, this.field_k, 125) == -1 &&
+                Js5Archive.field_e.navigation.traceLineFromTo(var7 + 2, this.field_p, var6, this.field_k, 109) == -1 &&
+                Js5Archive.field_e.navigation.traceLineFromTo(2 + var7, this.field_p, var6 + 24, this.field_k, 111) == -1) {
                 stackIn_35_1 = 0;
               } else {
                 stackIn_35_1 = 1;

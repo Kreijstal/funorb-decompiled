@@ -56,16 +56,16 @@ abstract class ll {
           we.field_Tb = gf.a(param1, "jagex_logo_grey", 8, "commonui");
           ia.field_d = vm.a((byte) -83, "button", "commonui", param1);
           Js5Archive.field_k = df.a((byte) 24, "commonui", "validation", param1);
-          SecondaryNodeDeque.field_a = (Font) ((Object) DualLinkDeque.a(param0, "commonui", "arezzo12", param3 + 19041, param1));
-          ia.field_e = (Font) ((Object) DualLinkDeque.a(param0, "commonui", "arezzo14", param3 + 19041, param1));
-          rk.field_b = (Font) ((Object) DualLinkDeque.a(param0, "commonui", "arezzo14bold", 0, param1));
-          var17 = new Sprite(param2.a("", param3 ^ 19000, "button.gif"), (java.awt.Component) ((Object) cj.field_d));
-          vj.a(param1, "dropdown", "commonui", 4424743);
+          SecondaryNodeDeque.field_a = (Font) ((Object) DualLinkDeque.loadCoverageFont(param0, "commonui", "arezzo12", param3 + 19041, param1));
+          ia.field_e = (Font) ((Object) DualLinkDeque.loadCoverageFont(param0, "commonui", "arezzo14", param3 + 19041, param1));
+          rk.field_b = (Font) ((Object) DualLinkDeque.loadCoverageFont(param0, "commonui", "arezzo14bold", 0, param1));
+          var17 = new Sprite(param2.getFileByName("", param3 ^ 19000, "button.gif"), (java.awt.Component) ((Object) cj.field_d));
+          vj.loadIndexedSprite(param1, "dropdown", "commonui", 4424743);
           var5 = dd.a("commonui", "screen_options", -1864, param1);
           af.field_c = new v[4];
           ti.field_e = new v[4];
-          li.field_h = new v[4];
-          var6 = new v[][]{ti.field_e, li.field_h, af.field_c};
+          JaggrabDownloader.field_h = new v[4];
+          var6 = new v[][]{ti.field_e, JaggrabDownloader.field_h, af.field_c};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;
@@ -85,7 +85,7 @@ abstract class ll {
             }
           }
           var9Lifetime1 = var17.field_t;
-          hk.i(1584);
+          hk.pushRasterState(1584);
           var17.setAsRenderTarget();
           Rasterizer.desaturateRectangle(0, 0, Rasterizer.width, Rasterizer.height);
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);
@@ -98,7 +98,7 @@ abstract class ll {
           var12 = new Sprite(var17.field_w - 2 * var9Lifetime1, var9Lifetime1);
           var12.setAsRenderTarget();
           var17.drawWithOffsets(-var9Lifetime1, 0);
-          pa.a(-21189);
+          pa.popRasterState(-21189);
           ia.field_d = new Sprite[]{var15, var12, var11};
           if (param3 != -19041) {
             ll.a(110, -88);
@@ -130,9 +130,9 @@ abstract class ll {
         }
     }
 
-    abstract void a(boolean param0, PacketBuffer param1);
+    abstract void writePayload(boolean param0, PacketBuffer param1);
 
-    abstract nk a(byte param0);
+    abstract nk payloadKind(byte param0);
 
     final static void a(int param0) {
         int var3 = 0;
@@ -161,7 +161,7 @@ abstract class ll {
             return;
           }
           for (var3 = 0; n.field_r.length > var3; var3++) {
-            var4 = la.field_b[var3];
+            var4 = FullscreenFocusCanvas.field_b[var3];
             if (var4 >= 0) {
               if (var4 == Point.field_m.field_d) {
                 var5 = LevelNavigation.field_s;
@@ -169,7 +169,7 @@ abstract class ll {
                 var5 = qi.field_E;
               }
             } else {
-              var5 = qg.field_f;
+              var5 = SocketConnector.field_f;
             }
             var6 = n.field_r[var3];
             stackIn_12_0 = 32564;

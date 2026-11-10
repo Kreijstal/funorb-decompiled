@@ -21,15 +21,15 @@ final class tl implements ug {
     private Js5Archive field_h;
     private int[] field_r;
 
-    final void b(int param0, int param1) {
+    final void requestMemberAssets(int param0, int param1) {
         int var3 = 26 / ((-33 - param0) / 58);
         if (param1 == 1) {
-          a.field_h.a(-1, "menusuk");
-          this.a(false, 12);
+          a.field_h.loadGroupByName(-1, "menusuk");
+          this.queueResourceGroup(false, 12);
         }
     }
 
-    final boolean a(int param0, int param1) {
+    final boolean ensureResourceGroupLoaded(int param0, int param1) {
         if (bb.field_a[param1]) {
           return true;
         }
@@ -37,12 +37,12 @@ final class tl implements ug {
         if (ul.field_b == (long)param0) {
           ul.field_b = pd.monotonicTimeMillis(-22826);
         }
-        if (!this.a(false, param1, param0 ^ 95)) {
+        if (!this.loadOrUnloadResourceGroup(false, param1, param0 ^ 95)) {
           return false;
         }
         pd.monotonicTimeMillis(-22826);
         ul.field_b = 0L;
-        this.field_n = !this.c((byte) 126) ? true : false;
+        this.field_n = !this.isQueueEmpty((byte) 126) ? true : false;
         bb.field_a[param1] = true;
         ep.c((byte) -50);
         return true;
@@ -55,9 +55,9 @@ final class tl implements ug {
         field_g = null;
     }
 
-    public final void b(int param0) {
+    public final void bindArchives(int param0) {
         if (param0 < 72) {
-          this.a(-0.6271905303001404f, 80, -50, -1.1520227193832397f);
+          this.updateTimedProgressKeepCaption(-0.6271905303001404f, 80, -50, -1.1520227193832397f);
         }
         if (aa.field_f != null) {
           gl.a(aa.field_f, 734);
@@ -72,24 +72,24 @@ final class tl implements ug {
         ZombieDawn.field_H = mm.a(3, (byte) -115);
         nm.field_e = pb.a(true, true, 8, true, 1);
         BufferedSocket.field_h = pb.a(true, false, 4, true, 1);
-        qn.field_i = pb.a(true, false, 5, true, 1);
+        RandomAccessCacheFile.field_i = pb.a(true, false, 5, true, 1);
         an.field_B = pb.a(true, false, 6, true, 1);
         this.field_h = pb.a(true, false, 7, true, 1);
-        bp.field_h = new jk(50);
+        Js5ArchiveManager.field_h = new jk(50);
         Js5Archive var4 = nl.field_p;
         Js5Archive var3 = gj.field_i;
-        bp.field_h.a("basic", DualLinkNode.field_o, el.field_m, var4, (byte) -84);
-        bp.field_h.a("arialish12", DualLinkNode.field_o, el.field_m, var4, (byte) -84);
-        bp.field_h.a("arialish12", DualLinkNode.field_o, el.field_m, var3, (byte) -84);
-        bp.field_h.a((byte) -113, nm.field_e, ap.field_w, ea.field_d);
-        bp.field_h.a(ao.field_I, qn.field_i, 1);
-        bp.field_h.a(ao.field_I, BufferedSocket.field_h, 1);
-        bp.field_h.a(u.field_f, an.field_B, 1);
-        bp.field_h.a(u.field_f, this.field_h, 1);
-        bp.field_h.a((byte) -98, ZombieDawn.field_H, ba.field_e, nd.field_d);
+        Js5ArchiveManager.field_h.a("basic", DualLinkNode.field_o, el.field_m, var4, (byte) -84);
+        Js5ArchiveManager.field_h.a("arialish12", DualLinkNode.field_o, el.field_m, var4, (byte) -84);
+        Js5ArchiveManager.field_h.a("arialish12", DualLinkNode.field_o, el.field_m, var3, (byte) -84);
+        Js5ArchiveManager.field_h.a((byte) -113, nm.field_e, ap.field_w, ea.field_d);
+        Js5ArchiveManager.field_h.a(ao.field_I, RandomAccessCacheFile.field_i, 1);
+        Js5ArchiveManager.field_h.a(ao.field_I, BufferedSocket.field_h, 1);
+        Js5ArchiveManager.field_h.a(u.field_f, an.field_B, 1);
+        Js5ArchiveManager.field_h.a(u.field_f, this.field_h, 1);
+        Js5ArchiveManager.field_h.a((byte) -98, ZombieDawn.field_H, ba.field_e, nd.field_d);
     }
 
-    private final void c(int param0) {
+    private final void loadNextAssetStep(int param0) {
         int var9 = 0;
         Js5Archive var3 = null;
         int var4_int = 0;
@@ -119,13 +119,13 @@ final class tl implements ug {
         var15 = nl.field_p;
         var3 = gj.field_i;
         if (param0 != 75) {
-          this.a(60, -55);
+          this.ensureResourceGroupLoaded(60, -55);
         }
         if (!DelegatingCanvas.field_f &&
           null != BufferedSocket.field_h) {
           oh.d((byte) -111);
-          this.a(53.0f, 127, am.field_m);
-          ph.field_a = new ka(BufferedSocket.field_h, qn.field_i);
+          this.setProgress(53.0f, 127, am.field_m);
+          ph.field_a = new ka(BufferedSocket.field_h, RandomAccessCacheFile.field_i);
           for (var4_int = 0; tc.field_t > var4_int; var4_int++) {
             if (0 == tc.field_y[var4_int]) {
               var5_int = tc.field_s[var4_int];
@@ -146,22 +146,22 @@ final class tl implements ug {
           return;
         }
         if (!ti.field_a &&
-          null != qn.field_i) {
+          null != RandomAccessCacheFile.field_i) {
           ti.field_a = true;
           ep.c((byte) -50);
           return;
         }
         if (!sa.field_T &&
           null != this.field_h) {
-          this.a(HumanFactory.field_h[15], e.field_I, 55.0f, false, 20.0f);
-          if (!this.a("zombie dawn titlescreen", 0, 0)) {
+          this.updateTimedProgress(AccountServerResult.field_h[15], e.field_I, 55.0f, false, 20.0f);
+          if (!this.loadMusicTrack("zombie dawn titlescreen", 0, 0)) {
             return;
           }
-          if (!this.a("zombie dawn instructions loop", 0, 9)) {
+          if (!this.loadMusicTrack("zombie dawn instructions loop", 0, 9)) {
             return;
           }
           sa.field_T = true;
-          this.a(0, 75.0f);
+          this.resetProgressTimer(0, 75.0f);
           ep.c((byte) -50);
           return;
         }
@@ -172,47 +172,47 @@ final class tl implements ug {
           return;
         }
         if (null != nm.field_e) {
-          this.a(800, ji.field_a, 75.0f, false, 3.0f);
+          this.updateTimedProgress(800, ji.field_a, 75.0f, false, 3.0f);
           if (!ng.field_e) {
             for (var4_int = 0; var4_int < 8; var4_int++) {
               for (var5_int = 0; var5_int < 6; var5_int++) {
                 try {
-                  cl.field_c[var4_int][var5_int] = nm.field_e.a(var5_int + ".zdl", param0 - 163, "" + var4_int + "/");
-                  this.a(800, ji.field_a, 75.0f, false, 3.0f);
+                  cl.field_c[var4_int][var5_int] = nm.field_e.getFileByName(var5_int + ".zdl", param0 - 163, "" + var4_int + "/");
+                  this.updateTimedProgress(800, ji.field_a, 75.0f, false, 3.0f);
                 } catch (java.lang.IllegalArgumentException decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var6_ref_IllegalArgumentException = (IllegalArgumentException) (Object) decompiledCaughtException;
                 }
               }
               try {
-                cl.field_c[var4_int][6] = nm.field_e.a("BONUS.zdl", -110, "" + var4_int + "/");
+                cl.field_c[var4_int][6] = nm.field_e.getFileByName("BONUS.zdl", -110, "" + var4_int + "/");
               } catch (java.lang.IllegalArgumentException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var5_ref_IllegalArgumentException = (IllegalArgumentException) (Object) decompiledCaughtException;
               }
             }
-            this.a(800, ji.field_a, 75.0f, false, 3.0f);
-            np.field_E = new Sprite(nm.field_e.a("map.jpg", param0 ^ -26, "jpg/"), (java.awt.Component) ((Object) cj.field_d));
+            this.updateTimedProgress(800, ji.field_a, 75.0f, false, 3.0f);
+            np.field_E = new Sprite(nm.field_e.getFileByName("map.jpg", param0 ^ -26, "jpg/"), (java.awt.Component) ((Object) cj.field_d));
           }
           nm.field_e = null;
-          this.a(param0 ^ 75, 78.0f);
+          this.resetProgressTimer(param0 ^ 75, 78.0f);
           ep.c((byte) -50);
           return;
         }
         if (var15 != null) {
-          this.a(78.0f, 127, dh.field_g);
-          pc.field_k = gb.a("", -1, var3, "arialish12", var15);
+          this.setProgress(78.0f, 127, RasterBuffer.field_g);
+          Js5Transport.field_k = gb.loadGlyphFontByName("", -1, var3, "arialish12", var15);
           hf.field_E = vm.a((byte) -94, "locked", "basic", var15)[0];
           wd.field_y = hf.field_E;
           e.field_G = vm.a((byte) 126, "unachieved", "basic", var15)[0];
           hm.field_E = gf.a(var15, "orbcoin", 8, "basic");
-          bd.a(hm.field_E, false);
+          WhirlpoolHasher.padToFourPixelAlignment(hm.field_E, false);
           if (be.field_j <= 0) {
             lc.a(var15, var3, (byte) 80);
           }
           gj.field_i = null;
           nl.field_p = null;
-          this.field_d = dh.field_g;
+          this.field_d = RasterBuffer.field_g;
           ep.c((byte) -50);
           return;
         }
@@ -221,15 +221,15 @@ final class tl implements ug {
           var4 = 80.0f;
           var5 = 19.0f;
           var6 = 29000;
-          this.a(var5, 0, var6, var4);
+          this.updateTimedProgressKeepCaption(var5, 0, var6, var4);
           sg.field_jb = hf.a(ZombieDawn.field_H, "basic", "font", a.field_h, (byte) -70);
           if (sg.field_jb == null) {
             return;
           }
-          b.field_j = DualLinkDeque.a(ZombieDawn.field_H, "basic", "font_title", 0, a.field_h);
-          bj.field_q = gb.a("font_medium", -1, ZombieDawn.field_H, "basic", a.field_h);
+          b.field_j = DualLinkDeque.loadCoverageFont(ZombieDawn.field_H, "basic", "font_title", 0, a.field_h);
+          bj.field_q = gb.loadGlyphFontByName("font_medium", -1, ZombieDawn.field_H, "basic", a.field_h);
           rg.a(bj.field_q, false);
-          SpatialBucket.a((byte) 119);
+          SpatialBucket.initializeTeamColorPalettes((byte) 119);
           if (be.field_j <= 0) {
             var16 = dd.a("membersexpansion", "screenshots", -1864, a.field_h);
             var7 = var16;
@@ -238,13 +238,13 @@ final class tl implements ug {
             }
             jp.field_c = new o(sa.field_Y, qc.field_b, var16, false, kl.field_o);
           }
-          this.a(var5, 0, var6, var4);
+          this.updateTimedProgressKeepCaption(var5, 0, var6, var4);
           qk.field_Hb[0] = gf.a(a.field_h, "background1", 8, "basic");
           qk.field_Hb[1] = gf.a(a.field_h, "background2", 8, "basic");
           qk.field_Hb[2] = gf.a(a.field_h, "background3", 8, "basic");
           qk.field_Hb[3] = gf.a(a.field_h, "background4", 8, "basic");
           qk.field_Hb[4] = gf.a(a.field_h, "background5", 8, "basic");
-          this.a(var5, 0, var6, var4);
+          this.updateTimedProgressKeepCaption(var5, 0, var6, var4);
           lo.field_i = gf.a(a.field_h, "menu_pipe1", 8, "basic");
           mo.field_a = gf.a(a.field_h, "menu_pipe2", 8, "basic");
           hk.field_H = gf.a(a.field_h, "menu_pipebox", 8, "basic");
@@ -256,10 +256,10 @@ final class tl implements ug {
           ch.field_a = gf.a(a.field_h, "frameh", 8, "basic");
           GameWorld.field_x = gf.a(a.field_h, "framev", 8, "basic");
           IntrusiveDeque.field_a = vm.a((byte) -8, "framecorners", "basic", a.field_h);
-          this.a(var5, 0, var6, var4);
+          this.updateTimedProgressKeepCaption(var5, 0, var6, var4);
           ad.field_g[0] = vm.a((byte) -53, "character_zombie0", "basic", a.field_h);
           ad.field_g[1] = vm.a((byte) -15, "character_zombie1", "basic", a.field_h);
-          bd.field_i[0] = vm.a((byte) -50, "levelselect_icons", "basic", a.field_h);
+          WhirlpoolHasher.field_i[0] = vm.a((byte) -50, "levelselect_icons", "basic", a.field_h);
           jo.field_Tb[0] = vm.a((byte) 125, "levelselect_icons_alt", "basic", a.field_h);
           af.field_d = gf.a(a.field_h, "levelselect_arrow", 8, "basic");
           dc.field_a[0] = gf.a(a.field_h, "levelselect", 8, "basic");
@@ -267,44 +267,44 @@ final class tl implements ug {
           Human.field_tb = af.field_d;
           kb.field_i = vm.a((byte) -18, "powerups", "basic", a.field_h);
           DualLinkNode.field_k = vm.a((byte) 127, "character_common", "basic", a.field_h);
-          tp.a(vm.a((byte) -120, "hud", "basic", a.field_h), -10);
-          w.a(vm.a((byte) 125, "popup", "basic", a.field_h), (byte) -97);
-          this.a(var5, 0, var6, var4);
+          tp.createHudPanelSprites(vm.a((byte) -120, "hud", "basic", a.field_h), -10);
+          ArchiveProvider.createPopupSprites(vm.a((byte) 125, "popup", "basic", a.field_h), (byte) -97);
+          this.updateTimedProgressKeepCaption(var5, 0, var6, var4);
           IntrusiveNode.field_a = vm.a((byte) -124, "instructions_controls", "basic", a.field_h);
-          qn.field_k = vm.a((byte) -42, "instructions_survivors", "basic", a.field_h);
+          RandomAccessCacheFile.field_k = vm.a((byte) -42, "instructions_survivors", "basic", a.field_h);
           l.field_b = vm.a((byte) 2, "instructions_zombies", "basic", a.field_h);
-          this.a(var5, 0, var6, var4);
+          this.updateTimedProgressKeepCaption(var5, 0, var6, var4);
           bj.a("basic", -118, a.field_h, "frame");
           ca.field_b = bj.a("basic", -122, a.field_h, "button_frame");
           ti.field_c = bj.a("basic", param0 - 201, a.field_h, "button_raised");
           bj.a("basic", -120, a.field_h, "button_depressed");
           jb.field_a = vm.a((byte) -104, "pin_flags", "basic", a.field_h);
-          this.a(var5, param0 - 75, var6, var4);
+          this.updateTimedProgressKeepCaption(var5, param0 - 75, var6, var4);
           ed.field_a = new Sprite[32];
           var17 = vm.a((byte) 126, "all_achievements", "basic", a.field_h);
           var7_array = var17;
           for (var8 = 0; var8 < 32; var8++) {
             ed.field_a[var8] = var17[var8];
           }
-          this.a(var5, 0, var6, var4);
+          this.updateTimedProgressKeepCaption(var5, 0, var6, var4);
           this.field_n = true;
-          if (!this.a(0, 11)) {
+          if (!this.ensureResourceGroupLoaded(0, 11)) {
             return;
           }
           if (!(be.field_j <= 0) ||
             !(lo.field_j < 2)) {
             this.field_n = true;
-            if (!this.a(0, 12)) {
+            if (!this.ensureResourceGroupLoaded(0, 12)) {
               return;
             }
           }
-          this.a(var5, 0, var6, var4);
+          this.updateTimedProgressKeepCaption(var5, 0, var6, var4);
           var8_ref_vn__ = var17;
           for (var9 = 0; var9 < var8_ref_vn__.length; var9++) {
             var10 = var8_ref_vn__[var9];
-            bd.a(var10, false);
+            WhirlpoolHasher.padToFourPixelAlignment(var10, false);
           }
-          bd.a(e.field_G, false);
+          WhirlpoolHasher.padToFourPixelAlignment(e.field_G, false);
           ed.field_b = new Sprite[f.field_j.length];
           var12 = 0;
           var8Lifetime1 = var12;
@@ -316,24 +316,24 @@ final class tl implements ug {
           }
           ZombieDawn.field_H = null;
           r.field_F = true;
-          this.a(0, var5 + var4);
+          this.resetProgressTimer(0, var5 + var4);
           ep.c((byte) -50);
           return;
         }
         stackIn_102_1 = (r.field_F) && (DelegatingCanvas.field_f) && (sa.field_T) && (eh.field_x) && (ti.field_a);
         this.field_j = stackIn_102_1;
         if (this.field_j) {
-          this.a(99.0f, 126, jh.field_l);
+          this.setProgress(99.0f, 126, jh.field_l);
         }
     }
 
-    final void c(int param0, int param1) {
+    final void unloadResourceGroup(int param0, int param1) {
         int var3 = 6 % ((param0 - 55) / 45);
-        boolean discarded$0 = this.a(true, param1, 70);
+        boolean discarded$0 = this.loadOrUnloadResourceGroup(true, param1, 70);
         bb.field_a[param1] = false;
     }
 
-    public final boolean a(byte param0) {
+    public final boolean pollReady(byte param0) {
         boolean stackIn_47_0 = false;
         boolean decompiledFrameRemainder0 = true;
         if (!this.field_i) {
@@ -348,7 +348,7 @@ final class tl implements ug {
               decompiledFrameRemainder0 = false;
             }
             else {
-              if (!this.b((byte) -110)) {
+              if (!this.pollSavedProgress((byte) -110)) {
                 if ((!(this.field_m)) &&
                   ((this.field_i)) &&
                   (!(!mm.a(true)))) {
@@ -370,7 +370,7 @@ final class tl implements ug {
               decompiledFrameRemainder0 = false;
             }
             else {
-              if (!this.b((byte) -110)) {
+              if (!this.pollSavedProgress((byte) -110)) {
                 if ((!(this.field_m)) &&
                   ((this.field_i)) &&
                   (!(!mm.a(true)))) {
@@ -393,7 +393,7 @@ final class tl implements ug {
             decompiledFrameRemainder0 = false;
           }
           else {
-            if (!this.b((byte) -110)) {
+            if (!this.pollSavedProgress((byte) -110)) {
               if ((!(this.field_m)) &&
                 ((this.field_i)) &&
                 (!(!mm.a(true)))) {
@@ -412,20 +412,20 @@ final class tl implements ug {
           this.field_m = true;
         }
         if (param0 != 19) {
-          this.c(59);
+          this.loadNextAssetStep(59);
         }
         stackIn_47_0 = (this.field_i) && (this.field_c) && (this.field_m);
         return stackIn_47_0;
     }
 
-    final boolean c(byte param0) {
+    final boolean isQueueEmpty(byte param0) {
         if (param0 < 84) {
-          this.b(102);
+          this.bindArchives(102);
         }
         return this.field_f == 0 ? true : false;
     }
 
-    private final boolean a(String param0, int param1, int param2) {
+    private final boolean loadMusicTrack(String param0, int param1, int param2) {
         IllegalArgumentException var4 = null;
         RuntimeException var4_ref = null;
         boolean stackIn_10_0 = false;
@@ -434,19 +434,19 @@ final class tl implements ug {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null == w.field_a[param2]) {
+          if (null == ArchiveProvider.field_a[param2]) {
             this.field_d = e.field_I;
-            w.field_a[param2] = wj.load(this.field_h, param0, "");
+            ArchiveProvider.field_a[param2] = wj.load(this.field_h, param0, "");
             return false;
           }
-          if (!cc.field_c[param2]) {
+          if (!PowerupCard.field_c[param2]) {
             this.field_d = d.field_c;
-            cc.field_c[param2] = uh.field_o.a(w.field_a[param2], (byte) 20, an.field_B, 88200, ph.field_a);
+            PowerupCard.field_c[param2] = uh.field_o.prepareTrack(ArchiveProvider.field_a[param2], (byte) 20, an.field_B, 88200, ph.field_a);
           }
           if (param1 != 0) {
             this.field_p = 29;
           }
-          stackIn_10_0 = cc.field_c[param2];
+          stackIn_10_0 = PowerupCard.field_c[param2];
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -462,14 +462,14 @@ final class tl implements ug {
         }
     }
 
-    private final void a(float param0, int param1, int param2, float param3) {
+    private final void updateTimedProgressKeepCaption(float param0, int param1, int param2, float param3) {
         if (param1 != 0) {
           return;
         }
-        this.a(param2, (String) null, param3, false, param0);
+        this.updateTimedProgress(param2, (String) null, param3, false, param0);
     }
 
-    private final void a(float param0, int param1, String param2) {
+    private final void setProgress(float param0, int param1, String param2) {
         boolean discarded$1 = false;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -485,12 +485,12 @@ final class tl implements ug {
               this.field_d = jh.field_l;
             }
           }
-          eh.a(this.field_d, this.field_b, -1);
+          eh.setLoadingProgress(this.field_d, this.field_b, -1);
           if (param1 <= 122) {
-            discarded$1 = this.b((byte) 10);
-            sa.field_Y.c((byte) 81);
+            discarded$1 = this.pollSavedProgress((byte) 10);
+            sa.field_Y.paintFrame((byte) 81);
           } else {
-            sa.field_Y.c((byte) 81);
+            sa.field_Y.paintFrame((byte) 81);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -507,7 +507,7 @@ final class tl implements ug {
         }
     }
 
-    private final boolean b(byte param0) {
+    private final boolean pollSavedProgress(byte param0) {
         int var3 = 0;
         int var2;
         int var4;
@@ -516,7 +516,7 @@ final class tl implements ug {
         if (null == this.field_q) {
           this.field_q = new lo[2];
           for (var2 = 0; var2 < 2; var2++) {
-            this.field_q[var2] = GameLoopApplet.a((byte) -119, 1, 5, var2);
+            this.field_q[var2] = GameLoopApplet.requestSavedData((byte) -119, 1, 5, var2);
           }
         }
         if (param0 != -110) {
@@ -545,7 +545,7 @@ final class tl implements ug {
         return var2Lifetime1 != 0;
     }
 
-    final boolean a(boolean param0, int param1) {
+    final boolean queueResourceGroup(boolean param0, int param1) {
         int var3 = 0;
         int var4 = ZombieDawn.field_J;
         if (bb.field_a[param1]) {
@@ -562,11 +562,11 @@ final class tl implements ug {
         int fieldTemp$0 = this.field_f;
         this.field_f = this.field_f + 1;
         this.field_r[fieldTemp$0] = param1;
-        this.field_p = this.field_p + HumanFactory.field_h[param1];
+        this.field_p = this.field_p + AccountServerResult.field_h[param1];
         return true;
     }
 
-    private final void a(int param0, String param1, float param2, boolean param3, float param4) {
+    private final void updateTimedProgress(int param0, String param1, float param2, boolean param3, float param4) {
         long dupTemp$0 = 0L;
         long var6_long = 0L;
         long var8 = 0L;
@@ -587,36 +587,36 @@ final class tl implements ug {
           var10 = (float)var8 / (float)param0;
           var10 = Math.min(Math.max(var10, 0.0f), 1.0f);
           var11 = param2 + var10 * param4;
-          this.a(var11, 124, param1);
+          this.setProgress(var11, 124, param1);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "tl.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    public final boolean a(boolean param0) {
+    public final boolean pollArchives(boolean param0) {
         boolean discarded$0 = false;
-        ac.c(-32435);
+        ac.initializeMenuLabels(-32435);
         if (!this.field_j) {
-          this.c(75);
+          this.loadNextAssetStep(75);
           return false;
         }
         if (param0) {
           String var3 = (String) null;
-          discarded$0 = this.a((String) null, 113, -12);
+          discarded$0 = this.loadMusicTrack((String) null, 113, -12);
         }
         ep.c((byte) -50);
         return true;
     }
 
-    public final void a(int param0) {
-        sa.field_Y.g(false);
+    public final void buildAssets(int param0) {
+        sa.field_Y.startMainMenu(false);
         if (param0 != 22833) {
-          this.b(-52);
+          this.bindArchives(-52);
         }
-        pm.a(gj.field_f, bd.field_f, ro.field_b, ui.field_d, sm.field_c, lc.field_h, a.field_m, 0, ca.field_b, hn.field_l, ti.field_c, sg.field_jb, ca.field_b, (byte) -63, 0);
+        pm.a(gj.field_f, WhirlpoolHasher.field_f, ro.field_b, ui.field_d, sm.field_c, lc.field_h, a.field_m, 0, ca.field_b, hn.field_l, ti.field_c, sg.field_jb, ca.field_b, (byte) -63, 0);
     }
 
-    final void e(int param0) {
+    final void processResourceQueue(int param0) {
         int var4 = 0;
         int var2;
         int var3;
@@ -630,19 +630,19 @@ final class tl implements ug {
           if (this.field_a == 0) {
             this.field_a = this.field_p;
             this.field_l = pd.monotonicTimeMillis(-22826);
-            this.a(0.0f, 127, (String) null);
+            this.setProgress(0.0f, 127, (String) null);
           }
           if (this.field_o == 0) {
-            this.field_o = HumanFactory.field_h[var2];
+            this.field_o = AccountServerResult.field_h[var2];
           }
           var3 = this.field_p;
-          if (this.field_o < HumanFactory.field_h[var2]) {
-            var3 = var3 + (this.field_o - HumanFactory.field_h[var2]);
+          if (this.field_o < AccountServerResult.field_h[var2]) {
+            var3 = var3 + (this.field_o - AccountServerResult.field_h[var2]);
           }
-          this.a((-((float)var3 / (float)this.field_a) + 1.0f) * 100.0f, 127, (String) null);
+          this.setProgress((-((float)var3 / (float)this.field_a) + 1.0f) * 100.0f, 127, (String) null);
           pd.monotonicTimeMillis(-22826);
-          if (this.a(0, var2)) {
-            this.field_p = this.field_p - HumanFactory.field_h[var2];
+          if (this.ensureResourceGroupLoaded(0, var2)) {
+            this.field_p = this.field_p - AccountServerResult.field_h[var2];
             for (var4 = 0; var4 < -1 + this.field_f; var4++) {
               this.field_r[var4] = this.field_r[var4 + 1];
             }
@@ -668,13 +668,13 @@ final class tl implements ug {
         }
     }
 
-    private final void a(int param0, float param1) {
+    private final void resetProgressTimer(int param0, float param1) {
         ap.field_m = 0L;
         vj.field_n = (long)param0;
-        this.a(param1, param0 ^ 125, this.field_d);
+        this.setProgress(param1, param0 ^ 125, this.field_d);
     }
 
-    private final boolean a(boolean param0, int param1, int param2) {
+    private final boolean loadOrUnloadResourceGroup(boolean param0, int param1, int param2) {
         String stackIn_12_0 = null;
         int stackIn_56_0 = 0;
         String stackIn_107_0 = null;
@@ -711,15 +711,15 @@ final class tl implements ug {
                 var11 = ml.load(BufferedSocket.field_h, var7_ref_String, tc.field_x[var5]);
                 var8 = var11;
                 if (var8 == null) {
-                  BufferedSocket.field_h.a(-1, var7_ref_String);
+                  BufferedSocket.field_h.loadGroupByName(-1, var7_ref_String);
                   return false;
                 }
                 vb.field_D[tc.field_s[var5]] = var11.toPcmSample();
               } else {
-                var10 = mb.a(qn.field_i, var7_ref_String, tc.field_x[var5]);
+                var10 = mb.load(RandomAccessCacheFile.field_i, var7_ref_String, tc.field_x[var5]);
                 var8_ref = var10;
                 if (var8_ref == null) {
-                  qn.field_i.a(-1, var7_ref_String);
+                  RandomAccessCacheFile.field_i.loadGroupByName(-1, var7_ref_String);
                   return false;
                 }
                 vb.field_D[tc.field_s[var5]] = var10.decodeAllToPcm();
@@ -730,7 +730,7 @@ final class tl implements ug {
         boolean decompiledFrameRemainder0 = true;
         var7 = param1;
         if (13 == var7) {
-          this.field_d = dh.field_g;
+          this.field_d = RasterBuffer.field_g;
           if (param0) {
             for (var7 = 0; ld.field_l.length > var7; var7++) {
               ld.field_l[var7] = null;
@@ -738,8 +738,8 @@ final class tl implements ug {
             for (var7 = 0; ad.field_g.length > var7; var7++) {
               ad.field_g[var7] = null;
             }
-            for (var7 = 0; w.field_a.length > var7; var7++) {
-              w.field_a[var7] = null;
+            for (var7 = 0; ArchiveProvider.field_a.length > var7; var7++) {
+              ArchiveProvider.field_a[var7] = null;
             }
             return true;
           }
@@ -753,13 +753,13 @@ final class tl implements ug {
           ld.field_l[1] = vm.a((byte) -4, "character_human1", var5_ref_String, a.field_h);
           if (null != ld.field_l[0] &&
             null != ld.field_l[1]) {
-            if (!this.a("zombie dawn countup part 1", 0, 5)) {
+            if (!this.loadMusicTrack("zombie dawn countup part 1", 0, 5)) {
               return false;
             }
-            if (!this.a("zombie dawn countup part 2", 0, 6)) {
+            if (!this.loadMusicTrack("zombie dawn countup part 2", 0, 6)) {
               return false;
             }
-            if (!this.a("zombie dawn bonus level", 0, 7)) {
+            if (!this.loadMusicTrack("zombie dawn bonus level", 0, 7)) {
               return false;
             }
             ld.field_l[2] = vm.a((byte) -123, "character_human2", "game", a.field_h);
@@ -792,21 +792,21 @@ final class tl implements ug {
           }
           else {
             if (null == ld.field_l[0]) {
-              a.field_h.a(-1, "game");
+              a.field_h.loadGroupByName(-1, "game");
             }
             if (var6Lifetime1 == 0) {
               return false;
             }
-            a.field_h.a(-1, var5_ref_String);
+            a.field_h.loadGroupByName(-1, var5_ref_String);
             return false;
           }
         }
         if (decompiledFrameRemainder0) {
           if (var7 == 14) {
-            this.field_d = dh.field_g;
+            this.field_d = RasterBuffer.field_g;
             ld.field_l[21] = vm.a((byte) 108, "character_human21", "gameuk", a.field_h);
             if (ld.field_l[21] == null) {
-              a.field_h.a(-1, "gameuk");
+              a.field_h.loadGroupByName(-1, "gameuk");
               return false;
             }
             ld.field_l[22] = vm.a((byte) 17, "character_human22", "gameuk", a.field_h);
@@ -845,24 +845,24 @@ final class tl implements ug {
                   if (var7 != 6 &&
                     var7 != 0 &&
                     12 == var7) {
-                    this.field_d = dh.field_g;
+                    this.field_d = RasterBuffer.field_g;
                     f.field_d = gf.a(a.field_h, "pin_lit", 8, "menusuk");
                     if (f.field_d == null) {
                       this.field_d = c.a(a.field_h, el.field_m, DualLinkNode.field_o, "menusuk", (byte) -32);
-                      this.a(this.field_b, 125, this.field_d);
+                      this.setProgress(this.field_b, 125, this.field_d);
                       return false;
                     }
                     j.field_e = vm.a((byte) 115, "instructions_uk_enemies", "menusuk", a.field_h);
                     cn.field_c = vm.a((byte) -119, "instructions_keycard", "menusuk", a.field_h);
                     dc.field_a[1] = gf.a(a.field_h, "uk_level_select_map", 8, "menusuk");
-                    bd.field_i[1] = vm.a((byte) -12, "uk_level_select_icons", "menusuk", a.field_h);
+                    WhirlpoolHasher.field_i[1] = vm.a((byte) -12, "uk_level_select_icons", "menusuk", a.field_h);
                     jo.field_Tb[1] = vm.a((byte) -106, "uk_level_select_icons_alt", "menusuk", a.field_h);
                   }
                 }
               }
             } else {
               if (!param0) {
-                if (!a.field_h.a(-1, "intro")) {
+                if (!a.field_h.loadGroupByName(-1, "intro")) {
                   return false;
                 }
                 if (null == nn.field_j) {
@@ -900,8 +900,8 @@ final class tl implements ug {
             }
             var12 = stackIn_107_0;
             var5_ref_StringLifetime1 = var12;
-            ab.a(vm.a((byte) -104, we.field_Sb[param1] + "_floor", var12, a.field_h), (byte) 112, param1);
-            gk.a(param1, vm.a((byte) -18, we.field_Sb[param1] + "_tiles", var12, a.field_h), true);
+            ab.setWidgetSpriteSet(vm.a((byte) -104, we.field_Sb[param1] + "_floor", var12, a.field_h), (byte) 112, param1);
+            gk.installZombieSpriteSet(param1, vm.a((byte) -18, we.field_Sb[param1] + "_tiles", var12, a.field_h), true);
             qj.field_j[param1] = vm.a((byte) 107, "dimming" + param1, "basic", a.field_h);
           }
         }
@@ -909,7 +909,7 @@ final class tl implements ug {
           param1 < 29) {
           var5Lifetime1 = param1 - 15;
           if (!param0) {
-            stackIn_116_0 = !(!this.a(tc.field_v[var5Lifetime1], 0, var5Lifetime1));
+            stackIn_116_0 = !(!this.loadMusicTrack(tc.field_v[var5Lifetime1], 0, var5Lifetime1));
             return stackIn_116_0;
           }
         }

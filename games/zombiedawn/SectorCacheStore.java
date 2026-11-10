@@ -3,15 +3,15 @@
  */
 import java.io.*;
 
-final class na {
+final class SectorCacheStore {
     private int field_e;
-    private sf field_a;
+    private BufferedFile field_a;
     private int field_d;
     static int field_f;
-    private sf field_b;
+    private BufferedFile field_b;
     static byte[] field_c;
 
-    private final boolean a(int param0, boolean param1, byte[] param2, int param3, int param4) {
+    private final boolean writeFileSectors(int param0, boolean param1, byte[] param2, int param3, int param4) {
         try {
           RuntimeException stackIn_71_0 = null;
           StringBuilder stackIn_71_1 = null;
@@ -43,8 +43,8 @@ final class na {
                   if (this.field_b.length(param3 - 109242697) < (long)(6 + 6 * param0)) {
                     return false;
                   }
-                  this.field_b.a(param3 ^ 109242696, (long)(param0 * 6));
-                  this.field_b.a(6, false, 0, cg.field_c);
+                  this.field_b.seek(param3 ^ 109242696, (long)(param0 * 6));
+                  this.field_b.readFullyRange(6, false, 0, cg.field_c);
                   var7_int = (255 & cg.field_c[5]) + ((cg.field_c[3] & 255) << 16) + ((cg.field_c[4] & 255) << 8);
                   if (var7_int <= 0 ||
                     !((long)var7_int <= this.field_a.length(-1) / 520L)) {
@@ -62,8 +62,8 @@ final class na {
                 cg.field_c[5] = (byte)var7_int;
                 cg.field_c[1] = (byte)(param4 >> 8);
                 cg.field_c[3] = (byte)(var7_int >> 16);
-                this.field_b.a(0, (long)(param0 * 6));
-                this.field_b.a(param3 ^ 109242722, cg.field_c, 0, 6);
+                this.field_b.seek(0, (long)(param0 * 6));
+                this.field_b.write(param3 ^ 109242722, cg.field_c, 0, 6);
                 var8 = 0;
                 var9 = 0;
                 scanLoop1: while (true) {
@@ -71,10 +71,10 @@ final class na {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
                     if (param1) {
-                      this.field_a.a(0, (long)(var7_int * 520));
+                      this.field_a.seek(0, (long)(var7_int * 520));
                       if (65535 >= param0) {
                         try {
-                          this.field_a.a(8, false, 0, cg.field_c);
+                          this.field_a.readFullyRange(8, false, 0, cg.field_c);
                           decompiledRegionSelector0 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -90,7 +90,7 @@ final class na {
                         var10 = (65280 & cg.field_c[5] << 8) + (16711680 & cg.field_c[4] << 16) + (255 & cg.field_c[6]);
                       } else {
                         try {
-                          this.field_a.a(10, false, 0, cg.field_c);
+                          this.field_a.readFullyRange(10, false, 0, cg.field_c);
                           decompiledRegionSelector1 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -140,13 +140,13 @@ final class na {
                       cg.field_c[0] = (byte)(param0 >> 24);
                       cg.field_c[6] = (byte)(var10 >> 16);
                       cg.field_c[2] = (byte)(param0 >> 8);
-                      this.field_a.a(0, (long)(var7_int * 520));
-                      this.field_a.a(param3 - 109242651, cg.field_c, 0, 10);
+                      this.field_a.seek(0, (long)(var7_int * 520));
+                      this.field_a.write(param3 - 109242651, cg.field_c, 0, 10);
                       var11 = -var8 + param4;
                       if (var11 > 510) {
                         var11 = 510;
                       }
-                      this.field_a.a(106, param2, var8, var11);
+                      this.field_a.write(106, param2, var8, var11);
                       var8 = var8 + var11;
                     } else {
                       cg.field_c[7] = (byte)this.field_d;
@@ -157,13 +157,13 @@ final class na {
                       cg.field_c[6] = (byte)var10;
                       cg.field_c[1] = (byte)param0;
                       cg.field_c[5] = (byte)(var10 >> 8);
-                      this.field_a.a(0, (long)(520 * var7_int));
-                      this.field_a.a(120, cg.field_c, 0, 8);
+                      this.field_a.seek(0, (long)(520 * var7_int));
+                      this.field_a.write(120, cg.field_c, 0, 8);
                       var11 = -var8 + param4;
                       if (var11 > 512) {
                         var11 = 512;
                       }
-                      this.field_a.a(110, param2, var8, var11);
+                      this.field_a.write(110, param2, var8, var11);
                       var8 = var8 + var11;
                     }
                     var9++;
@@ -198,7 +198,7 @@ final class na {
         }
     }
 
-    final byte[] a(int param0, int param1) {
+    final byte[] readFile(int param0, int param1) {
         try {
           int var16 = 0;
           int incrementValue$2 = 0;
@@ -234,11 +234,11 @@ final class na {
               if ((long)(6 * param1 + 6) > this.field_b.length(param0 ^ 65535)) {
                 return null;
               }
-              this.field_b.a(0, (long)(param1 * 6));
+              this.field_b.seek(0, (long)(param1 * 6));
               if (param0 != -65536) {
-                this.a(36, 125);
+                this.readFile(36, 125);
               }
-              this.field_b.a(6, false, 0, cg.field_c);
+              this.field_b.readFullyRange(6, false, 0, cg.field_c);
               var4_int = ((255 & cg.field_c[0]) << 16) + (cg.field_c[1] << 8 & 65280) + (cg.field_c[2] & 255);
               var5 = (cg.field_c[3] << 16 & 16711680) - (-(cg.field_c[4] << 8 & 65280) - (cg.field_c[5] & 255));
               if (var4_int < 0) {
@@ -263,14 +263,14 @@ final class na {
                   stackIn_23_0 = null;
                   return (byte[]) (stackIn_23_0);
                 }
-                this.field_a.a(0, (long)(var5 * 520));
+                this.field_a.seek(0, (long)(var5 * 520));
                 var9 = var4_int - var7;
                 if (param1 > 65535) {
                   var14 = 10;
                   if (var9 > 510) {
                     var9 = 510;
                   }
-                  this.field_a.a(var9 + var14, false, 0, cg.field_c);
+                  this.field_a.readFullyRange(var9 + var14, false, 0, cg.field_c);
                   var10 = ((255 & cg.field_c[1]) << 16) + ((cg.field_c[0] & 255) << 24) + ((65280 & cg.field_c[2] << 8) + (cg.field_c[3] & 255));
                   var11 = ((cg.field_c[4] & 255) << 8) + (cg.field_c[5] & 255);
                   var13 = 255 & cg.field_c[9];
@@ -280,7 +280,7 @@ final class na {
                   if (var9 > 512) {
                     var9 = 512;
                   }
-                  this.field_a.a(var14 + var9, false, 0, cg.field_c);
+                  this.field_a.readFullyRange(var14 + var9, false, 0, cg.field_c);
                   var12 = (cg.field_c[6] & 255) + (((cg.field_c[4] & 255) << 16) + (cg.field_c[5] << 8 & 65280));
                   var11 = ((cg.field_c[2] & 255) << 8) + (cg.field_c[3] & 255);
                   var13 = 255 & cg.field_c[7];
@@ -335,11 +335,11 @@ final class na {
     public static void releaseStatics(byte param0) {
         field_c = null;
         if (param0 != 79) {
-          na.a(113, '}');
+          SectorCacheStore.isRepresentableTextCharacter(113, '}');
         }
     }
 
-    final boolean a(int param0, byte[] param1, int param2, byte param3) {
+    final boolean write(int param0, byte[] param1, int param2, byte param3) {
         Object var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
@@ -354,9 +354,9 @@ final class na {
           synchronized (var5) {
             if (param2 >= 0 &&
               param2 <= this.field_e) {
-              var6 = this.a(param0, true, param1, 109242696, param2) ? 1 : 0;
+              var6 = this.writeFileSectors(param0, true, param1, 109242696, param2) ? 1 : 0;
               if (var6 == 0) {
-                var6 = this.a(param0, false, param1, 109242696, param2) ? 1 : 0;
+                var6 = this.writeFileSectors(param0, false, param1, 109242696, param2) ? 1 : 0;
               }
               if (param3 != -96) {
                 this.field_d = -60;
@@ -381,7 +381,7 @@ final class na {
         }
     }
 
-    final static boolean a(int param0, char param1) {
+    final static boolean isRepresentableTextCharacter(int param0, char param1) {
         int var3 = 0;
         char[] var2 = null;
         RuntimeException var2_ref = null;
@@ -415,7 +415,7 @@ final class na {
         }
     }
 
-    na(int param0, sf param1, sf param2, int param3) {
+    SectorCacheStore(int param0, BufferedFile param1, BufferedFile param2, int param3) {
         this.field_e = 65000;
         this.field_b = null;
         this.field_a = null;

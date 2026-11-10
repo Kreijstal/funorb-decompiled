@@ -18,7 +18,7 @@ final class lk extends pm {
         pn.a(false, (byte) -55, param0);
     }
 
-    final static ln e(int param0) {
+    final static ln createTickClock(int param0) {
         if (param0 != 16516) {
           return (ln) null;
         }
@@ -29,7 +29,7 @@ final class lk extends pm {
         field_k = null;
         field_j = null;
         if (param0 != 1029) {
-          lk.e(-104);
+          lk.createTickClock(-104);
         }
     }
 
@@ -49,7 +49,7 @@ final class lk extends pm {
             return stackIn_2_0;
           }
           if (!param0.equals(this.field_g)) {
-            var3 = um.a((byte) 110, param0);
+            var3 = um.getOrCreateNameCheck((byte) 110, param0);
             if (!var3.a(36)) {
               stackIn_7_0 = gj.field_v;
               return stackIn_7_0;

@@ -34,7 +34,7 @@ final class cp implements Runnable {
                 }
                 ld.a(10L, (byte) 101);
                 var5 = (Object) null;
-                an.a(0, this.field_b, (Object) null);
+                an.pumpEventQueue(0, this.field_b, (Object) null);
               }
               decompiledRegionSelector0 = 0;
             } catch (java.lang.Exception decompiledCaughtParameter0) {

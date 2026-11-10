@@ -11,7 +11,7 @@ final class pk extends gl {
     int field_K;
     static boolean field_J;
 
-    private final void a(int param0, byte param1, Object[] param2) {
+    private final void setItems(int param0, byte param1, Object[] param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -22,7 +22,7 @@ final class pk extends gl {
           this.field_O = -1;
           this.field_L = param2;
           if (param1 != 94) {
-            this.b(((int[]) (this.field_L[37]))[8], 8, ((int[]) (this.field_L[1]))[1], 39, -119);
+            this.containsPoint(((int[]) (this.field_L[37]))[8], 8, ((int[]) (this.field_L[1]))[1], 39, -119);
           }
           if (param2 == null) {
             return;
@@ -46,7 +46,7 @@ final class pk extends gl {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         int var8 = 0;
         Object var9 = null;
         String var10 = null;
@@ -75,9 +75,9 @@ final class pk extends gl {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void activate(int param0, int param1, int param2, int param3) {
         int var5 = -12 / ((param1 + 12) / 56);
-        super.b(param0, -103, param2, param3);
+        super.activate(param0, -103, param2, param3);
         param0 = param0 - this.field_k;
         param2 = param2 - this.field_j;
         if (null == this.field_L) {
@@ -89,14 +89,14 @@ final class pk extends gl {
         }
         if (this.field_L.length > var6) {
           this.field_K = var6;
-          this.field_M.b(true);
+          this.field_M.notifySelectionChanged(true);
           return;
         }
     }
 
-    final Object g(int param0) {
+    final Object getSelectedItem(int param0) {
         if (param0 != 0) {
-          this.b(70, ((int[]) (this.field_L[25]))[1], ((int[]) (((Object[]) (this.field_L[4]))[1]))[5], ((int[]) (((Object[]) (this.field_L[6]))[4]))[0], ((int[]) (this.field_L[0]))[3]);
+          this.containsPoint(70, ((int[]) (this.field_L[25]))[1], ((int[]) (((Object[]) (this.field_L[4]))[1]))[5], ((int[]) (((Object[]) (this.field_L[6]))[4]))[0], ((int[]) (this.field_L[0]))[3]);
           if (null != this.field_L) {
             return this.field_K == -1 ? null : this.field_L[this.field_K];
           }
@@ -111,7 +111,7 @@ final class pk extends gl {
         return null;
     }
 
-    final boolean b(int param0, int param1, int param2, int param3, int param4) {
+    final boolean containsPoint(int param0, int param1, int param2, int param3, int param4) {
         this.field_O = -1;
         if (!this.field_M.field_H) {
           return false;
@@ -123,7 +123,7 @@ final class pk extends gl {
           return false;
         }
         if (this.field_L == null) {
-          return super.b(param0, 21224, param2, param3, param4);
+          return super.containsPoint(param0, 21224, param2, param3, param4);
         }
         param4 = param4 - (param3 + this.field_k);
         param0 = param0 - (param2 + this.field_j);
@@ -146,11 +146,11 @@ final class pk extends gl {
         return true;
     }
 
-    final int h(int param0) {
+    final int getContentHeight(int param0) {
         if (param0 == 1227847265) {
           return null == this.field_L ? 200 : (2 * this.field_L.length + 1) * this.field_I >> 1;
         }
-        this.a(49, (byte) -85, (Object[]) (this.field_L[5]));
+        this.setItems(49, (byte) -85, (Object[]) (this.field_L[5]));
         return null == this.field_L ? 200 : (2 * this.field_L.length + 1) * this.field_I >> 1;
     }
 
@@ -160,7 +160,7 @@ final class pk extends gl {
           this.field_M = param0;
           this.field_H = param1;
           this.field_I = this.field_H.field_I + this.field_H.field_x;
-          this.a(param3, (byte) 94, param2);
+          this.setItems(param3, (byte) 94, param2);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "pk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

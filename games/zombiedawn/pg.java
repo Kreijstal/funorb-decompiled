@@ -11,14 +11,14 @@ final class pg extends al {
     static String field_r;
     private int field_m;
 
-    final int c(int param0, int param1) {
+    final int getItemLeft(int param0, int param1) {
         if (param1 != 6) {
           return -32;
         }
         return vh.field_b + this.field_s;
     }
 
-    final void a(byte param0) {
+    final void drawScreen(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -28,10 +28,10 @@ final class pg extends al {
         if (param0 > -35) {
           this.field_m = -72;
         }
-        Rasterizer.setClip(5, 5, -5 + bd.field_e, -5 + nh.field_P);
-        la.a(30);
-        qk.a(6, -(2 * this.field_q) + 640, -11 + nh.field_P, 3 + (this.field_q + vh.field_b), false);
-        la.field_d.b((byte) -55);
+        Rasterizer.setClip(5, 5, -5 + WhirlpoolHasher.field_e, -5 + nh.field_P);
+        FullscreenFocusCanvas.updateBackdropActors(30);
+        qk.drawDimmedBlurredRect(6, -(2 * this.field_q) + 640, -11 + nh.field_P, 3 + (this.field_q + vh.field_b), false);
+        FullscreenFocusCanvas.field_d.b((byte) -55);
         if (nh.field_P != 480) {
           var2 = -5 + nh.field_P;
           for (var3 = 6; var3 < var2; var3 += 130) {
@@ -48,10 +48,10 @@ final class pg extends al {
         }
         Rasterizer.resetClip();
         ql.field_g.drawTransparent(vh.field_b, id.field_M / 2);
-        super.a((byte) -112);
+        super.drawScreen((byte) -112);
     }
 
-    final void d(byte param0) {
+    final void fitWidthToLabels(byte param0) {
         int var5 = 0;
         int[] stackIn_5_0 = null;
         int var2;
@@ -70,9 +70,9 @@ final class pg extends al {
         var3 = -77 / ((14 - param0) / 54);
         while (var2 < 2) {
           if (var2 == 0) {
-            stackIn_5_0 = jj.c(1, 122).field_h;
+            stackIn_5_0 = jj.getScreen(1, 122).field_h;
           } else {
-            stackIn_5_0 = jj.c(14, 73).field_h;
+            stackIn_5_0 = jj.getScreen(14, 73).field_h;
           }
           var12 = stackIn_5_0;
           var11 = var12;
@@ -99,8 +99,8 @@ final class pg extends al {
         }
         this.field_s = 320 - (this.field_m >> 1);
         this.field_q = this.field_s - 20;
-        if (null == la.field_d) {
-          la.field_d = new uh(true);
+        if (null == FullscreenFocusCanvas.field_d) {
+          FullscreenFocusCanvas.field_d = new uh(true);
         }
     }
 
@@ -108,13 +108,13 @@ final class pg extends al {
         super(param0, param1, param2, param3, param4, param5, param6);
     }
 
-    final void a(byte param0, boolean param1) {
-        super.a((byte) 95, param1);
-        la.field_d.a(ei.field_K, ha.field_b, true);
+    final void handleInput(byte param0, boolean param1) {
+        super.handleInput((byte) 95, param1);
+        FullscreenFocusCanvas.field_d.a(ei.field_K, ha.field_b, true);
         int var3 = 87 % ((-39 - param0) / 61);
     }
 
-    final static void a(boolean param0, java.applet.Applet param1, long param2, String param3, String param4) {
+    final static void setCookie(boolean param0, java.applet.Applet param1, long param2, String param3, String param4) {
         try {
           RuntimeException stackIn_11_0 = null;
           StringBuilder stackIn_11_1 = null;
@@ -147,7 +147,7 @@ final class pg extends al {
               if (0L > param2) {
                 var7Lifetime4 = var9 + "; Discard;";
               } else {
-                var7Lifetime4 = var9 + "; Expires=" + jb.a(2147483647, pd.monotonicTimeMillis(-22826) + param2 * 1000L) + "; Max-Age=" + param2;
+                var7Lifetime4 = var9 + "; Expires=" + jb.formatCookieDate(2147483647, pd.monotonicTimeMillis(-22826) + param2 * 1000L) + "; Max-Age=" + param2;
               }
               qe.a("document.cookie=\"" + var7Lifetime4 + "\"", param1, (byte) 125);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -186,7 +186,7 @@ final class pg extends al {
         }
     }
 
-    final static void a(java.awt.Component param0, byte param1) {
+    final static void attachInputListeners(java.awt.Component param0, byte param1) {
         try {
           param0.addMouseListener(ng.field_b);
           param0.addMouseMotionListener(ng.field_b);
@@ -202,30 +202,30 @@ final class pg extends al {
     public static void releaseStatics(int param0) {
         if (param0 != -5) {
           String var2 = (String) null;
-          pg.a(true, (java.applet.Applet) null, 14L, (String) null, (String) null);
+          pg.setCookie(true, (java.applet.Applet) null, 14L, (String) null, (String) null);
         }
         field_r = null;
         field_t = null;
         field_n = null;
     }
 
-    final int a(boolean param0, int param1) {
+    final int getItemRight(boolean param0, int param1) {
         if (!param0) {
           this.field_m = -123;
         }
         return this.field_m + (this.field_s + vh.field_b);
     }
 
-    final static void c(int param0) {
+    final static void shutdownDisplayAndInput(int param0) {
         re.a((byte) -71);
         if (null != cj.field_d) {
-          SpatialObject.a((byte) -46, cj.field_d);
+          SpatialObject.detachCanvasInput((byte) -46, cj.field_d);
         }
-        fc.o((byte) -101);
-        jo.x(-2);
+        fc.releaseKeyHandler((byte) -101);
+        jo.releaseMouseHandler(-2);
         hg.c(param0 ^ 1);
         if (lb.m(-83)) {
-          dp.field_e.j(11, 1);
+          dp.field_e.writeCipheredByte(11, 1);
           vl.a((byte) -46, 0);
         }
         p.a(param0);

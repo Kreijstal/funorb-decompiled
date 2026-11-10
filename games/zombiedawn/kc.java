@@ -16,7 +16,7 @@ final class kc extends id {
     static boolean field_Q;
     private boolean field_bb;
 
-    final void a(LevelNavigation param0, boolean param1) {
+    final void measureBeamLength(LevelNavigation param0, boolean param1) {
         boolean stackIn_4_2 = false;
         int stackIn_35_0 = 0;
         RuntimeException stackIn_39_0 = null;
@@ -44,7 +44,7 @@ final class kc extends id {
           var4 = this.field_Z;
           if (param1) {
             var12 = (Camera) null;
-            this.a((byte) -112, (Camera) null);
+            this.draw((byte) -112, (Camera) null);
           }
           var5 = this.field_X;
           this.field_T = var3_int;
@@ -113,7 +113,7 @@ final class kc extends id {
         }
     }
 
-    final boolean a(int param0, Zombie param1) {
+    final boolean isZombieInBeam(int param0, Zombie param1) {
         int stackIn_15_0 = 0;
         int stackIn_26_0 = 0;
         int stackIn_32_0 = 0;
@@ -187,8 +187,8 @@ final class kc extends id {
         }
     }
 
-    final static void a(byte param0, int param1, int param2, int param3) {
-        qg.field_f = param2;
+    final static void setMenuTextColours(byte param0, int param1, int param2, int param3) {
+        SocketConnector.field_f = param2;
         LevelNavigation.field_s = param3;
         qi.field_E = param1;
         if (param0 == 50) {
@@ -197,7 +197,7 @@ final class kc extends id {
         field_Q = true;
     }
 
-    public static void c(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_Y = null;
         if (param0) {
           return;
@@ -205,14 +205,14 @@ final class kc extends id {
         field_R = 39;
     }
 
-    final void g(int param0) {
+    final void tick(int param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         boolean stackIn_11_1 = false;
         boolean stackIn_38_1 = false;
         int var2;
         int var2Lifetime1;
-        super.g(126);
+        super.tick(126);
         if (!this.field_S) {
           return;
         }
@@ -224,15 +224,15 @@ final class kc extends id {
             stackIn_11_1 = !(this.field_H);
             this.field_H = stackIn_11_1;
             if (this.field_H) {
-              this.field_W = jp.$cfr$intArgs$a$c44adeabe1a9(127, 96);
+              this.field_W = jp.startTrackedSoundEffect(127, 96);
               var2 = 30;
               this.field_W.setSampleStepMagnitude(-(var2 / 2) + so.randomInt(var2) + 256);
-              this.field_W.h(ge.field_c / 2);
+              this.field_W.setVolume(ge.field_c / 2);
             } else {
               if (this.field_W != null) {
-                this.field_W.e(0);
+                this.field_W.setLoopCount(0);
                 this.field_W.setPosition(-1);
-                this.field_W.h(0);
+                this.field_W.setVolume(0);
                 this.field_W = null;
               }
             }
@@ -257,15 +257,15 @@ final class kc extends id {
           stackIn_38_1 = !(this.field_H);
           this.field_H = stackIn_38_1;
           if (this.field_H) {
-            this.field_W = jp.$cfr$intArgs$a$c44adeabe1a9(127, 96);
+            this.field_W = jp.startTrackedSoundEffect(127, 96);
             var2Lifetime1 = 30;
             this.field_W.setSampleStepMagnitude(-(var2Lifetime1 / 2) + so.randomInt(var2Lifetime1) + 256);
-            this.field_W.h(ge.field_c / 2);
+            this.field_W.setVolume(ge.field_c / 2);
           } else {
             if (this.field_W != null) {
-              this.field_W.e(0);
+              this.field_W.setLoopCount(0);
               this.field_W.setPosition(-1);
-              this.field_W.h(0);
+              this.field_W.setVolume(0);
               this.field_W = null;
             }
           }
@@ -317,7 +317,7 @@ final class kc extends id {
         }
     }
 
-    final void a(byte param0, Camera param1) {
+    final void draw(byte param0, Camera param1) {
         int stackIn_3_0 = 0;
         int stackIn_8_0 = 0;
         int stackIn_11_0 = 0;
@@ -334,7 +334,7 @@ final class kc extends id {
         int var8 = 0;
         int var9 = 0;
         try {
-          super.a((byte) -92, param1);
+          super.draw((byte) -92, param1);
           stackIn_3_0 = (3 <= (397 * this.field_U + 197 * (this.field_y >> 16) + (this.field_x >> 16) * 493) % 63) ? 0 : 1;
           var3_int = stackIn_3_0;
           if (param0 > -76) {
@@ -347,7 +347,7 @@ final class kc extends id {
           var6 = param1.worldToScreenX(this.getX(true), (byte) -71);
           var7 = param1.worldToScreenY(this.getY(237239984), 0);
           if (null != this.field_W) {
-            this.field_W.h(pj.a(var7, 106, var6) >> 1);
+            this.field_W.setVolume(pj.a(var7, 106, var6) >> 1);
           }
           var9 = this.field_V;
           if (var9 == 0) {

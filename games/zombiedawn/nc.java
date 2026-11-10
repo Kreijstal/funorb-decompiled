@@ -31,7 +31,7 @@ final class nc extends IntrusiveNode {
     final static void a(int param0) {
         sl.field_b = new be(so.random.nextInt(), 3, 256, 256, 256, 2.0f, true);
         if (param0 == 11800) {
-          na.field_c = sl.field_b.c(256, 256, param0 - 11827);
+          SectorCacheStore.field_c = sl.field_b.c(256, 256, param0 - 11827);
           return;
         }
     }
@@ -84,13 +84,13 @@ final class nc extends IntrusiveNode {
           return;
         }
         this.field_s = 0;
-        var2 = (WorldObject) (Js5Archive.field_e.zombies.b((byte) 26));
+        var2 = (WorldObject) (Js5Archive.field_e.zombies.last((byte) 26));
         while (var2 != null) {
           if (var2 instanceof Human) {
             var3 = (Human) (var2);
-            var3.a(this, -26246);
+            var3.updateScreechReaction(this, -26246);
           }
-          var2 = (WorldObject) (Js5Archive.field_e.zombies.a(false));
+          var2 = (WorldObject) (Js5Archive.field_e.zombies.previous(false));
         }
         this.field_i = this.field_i + 7;
         if (param0) {
@@ -159,13 +159,13 @@ final class nc extends IntrusiveNode {
         try {
           var3_int = param0.worldToScreenX(this.field_m, (byte) -61);
           var4 = param0.worldToScreenY(this.field_q, 0);
-          this.field_o.h(pj.a(var4, 51, var3_int));
+          this.field_o.setVolume(pj.a(var4, 51, var3_int));
           if (!param1) {
             return;
           }
           if (var3_int >= -256 &&
             -256 <= var4 &&
-            var3_int <= bd.field_e + 256 &&
+            var3_int <= WhirlpoolHasher.field_e + 256 &&
             256 + nh.field_P >= var4) {
             if (this.field_l < 256) {
               stackIn_11_0 = (-this.field_i + 256) * this.field_l >> 10;

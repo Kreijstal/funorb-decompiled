@@ -68,12 +68,12 @@ final class ma extends IntrusiveNode {
                   var6 = var9;
                   var9--;
                   if ((1 & var9) != 0) {
-                    var7 = param2.a(1856253636, param1, var9 >> 2);
+                    var7 = param2.getVorbisSampleById(1856253636, param1, var9 >> 2);
                   } else {
                     stackIn_13_0 = (ka) (param2);
                     stackIn_13_1 = var9 >> 2;
                     stackIn_14_2 = !(param0);
-                    var7 = ((ka) (Object) stackIn_13_0).a(stackIn_13_1, stackIn_14_2, param1);
+                    var7 = ((ka) (Object) stackIn_13_0).getSynthesizedSampleById(stackIn_13_1, stackIn_14_2, param1);
                   }
                   if (var7 == null) {
                     var5_int = 0;

@@ -61,9 +61,9 @@ final class gd {
     final static long a(int param0) {
         if (param0 > -99) {
           gd.releaseStatics((byte) -69);
-          return pd.monotonicTimeMillis(-22826) - pi.field_i;
+          return pd.monotonicTimeMillis(-22826) - ImageProducerRasterBuffer.field_i;
         }
-        return pd.monotonicTimeMillis(-22826) - pi.field_i;
+        return pd.monotonicTimeMillis(-22826) - ImageProducerRasterBuffer.field_i;
     }
 
     private final void a(boolean param0) {

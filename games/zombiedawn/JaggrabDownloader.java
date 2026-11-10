@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class li implements Runnable {
+final class JaggrabDownloader implements Runnable {
     private AsyncRequest field_j;
     private AsyncRequest field_b;
     private PlatformTaskDispatcher field_g;
@@ -23,7 +23,7 @@ final class li implements Runnable {
         field_h = null;
     }
 
-    final synchronized boolean a(int param0) {
+    final synchronized boolean poll(int param0) {
         Throwable decompiledCaughtException = null;
         IOException var2 = null;
         OutputStream var3 = null;
@@ -101,7 +101,7 @@ final class li implements Runnable {
         return false;
     }
 
-    final static void a(int param0, Camera param1) {
+    final static void drawCutsceneShadows(int param0, Camera param1) {
         int var7 = 0;
         int stackIn_7_0 = 0;
         int stackIn_8_1 = 0;
@@ -125,7 +125,7 @@ final class li implements Runnable {
             og.field_A) {
             var2_int = param1.worldToScreenX(ne.field_c.getX(true), (byte) -92);
             var3 = param1.worldToScreenY(ne.field_c.getY(param0 ^ -237220996), 0);
-            var4 = WorldObject.a(1311979239, (int)(3L * tp.field_p << 5)) >> 15;
+            var4 = WorldObject.cosFixed(1311979239, (int)(3L * tp.field_p << 5)) >> 15;
             stackIn_7_0 = -8;
             if (var4 < 0) {
               stackIn_8_1 = var2_int;
@@ -186,7 +186,7 @@ final class li implements Runnable {
               break;
             }
             if (this.field_a.position == this.field_a.payload.length) {
-              throw li.<RuntimeException>rethrowUnchecked(new Exception("HG1: " + this.field_a.payload.length + " " + this.field_d));
+              throw JaggrabDownloader.<RuntimeException>rethrowUnchecked(new Exception("HG1: " + this.field_a.payload.length + " " + this.field_d));
             }
             var1 = this;
             synchronized (var1) {
@@ -211,7 +211,7 @@ final class li implements Runnable {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void drawPipeboxBackdrop(boolean param0) {
         Rasterizer.fillRectangleBlended(vh.field_b, id.field_M + 84, 640, 335, 0, 128);
         hk.field_H.drawTransparent(vh.field_b, id.field_M + 84);
         if (param0) {
@@ -219,7 +219,7 @@ final class li implements Runnable {
         }
     }
 
-    li(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
+    JaggrabDownloader(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_d = param1;
           this.field_g = param0;
@@ -229,7 +229,7 @@ final class li implements Runnable {
         }
     }
 
-    final PacketBuffer a(byte param0) {
+    final PacketBuffer getCompletedResponse(byte param0) {
         if (param0 != -118) {
           return (PacketBuffer) null;
         }

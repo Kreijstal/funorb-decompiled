@@ -20,7 +20,7 @@ final class nn extends IntrusiveNode {
             if (!ck.a((byte) -110, 2)) {
               return false;
             }
-            jd.field_b = fj.field_g.f(2);
+            jd.field_b = fj.field_g.readUnsignedShort(2);
             fj.field_g.position = 0;
           }
           return ck.a((byte) 103, jd.field_b);
@@ -36,7 +36,7 @@ final class nn extends IntrusiveNode {
           if (!ck.a((byte) -110, 2)) {
             return false;
           }
-          jd.field_b = fj.field_g.f(2);
+          jd.field_b = fj.field_g.readUnsignedShort(2);
           fj.field_g.position = 0;
         }
         return ck.a((byte) 103, jd.field_b);

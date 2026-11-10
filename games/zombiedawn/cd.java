@@ -520,7 +520,7 @@ final class cd extends Sprite {
         cd.blendArgbRows(Rasterizer.pixels, this.field_z, 0, var4, var3, var6, var5, var7, var8);
     }
 
-    final void c(int param0, int param1, int param2) {
+    final void drawRecoloredNeutral(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -564,7 +564,7 @@ final class cd extends Sprite {
         cd.blendShadedGrayscaleRows(Rasterizer.pixels, this.field_z, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
-    final void e(int param0, int param1, int param2) {
+    final void drawWithOpacity(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;

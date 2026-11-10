@@ -23,9 +23,9 @@ final class ql extends pm {
     final static void a(int param0, int param1, int param2, int param3) {
         am var4 = null;
         int var5 = 0;
-        if (!po.w(13296)) {
+        if (!po.isGuestSession(13296)) {
           var4 = dp.field_e;
-          var4.j(11, param1);
+          var4.writeCipheredByte(11, param1);
           var4.position = var4.position + 1;
           var5 = var4.position;
           var4.writeByte(0, 97);
@@ -38,7 +38,7 @@ final class ql extends pm {
     }
 
     final rh validateText(String param0, int param1) {
-        HumanFactory var3 = null;
+        AccountServerResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
         rh stackIn_2_0 = null;
@@ -101,7 +101,7 @@ final class ql extends pm {
         this.field_h = false;
     }
 
-    final void e(int param0) {
+    final void invalidateCachedAvailability(int param0) {
         if (param0 != -28769) {
           field_j = 0.772375226020813f;
           this.field_i = null;
@@ -113,7 +113,7 @@ final class ql extends pm {
     final String messageForText(String param0, byte param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
-        HumanFactory var4 = null;
+        AccountServerResult var4 = null;
         CharSequence var5 = null;
         String stackIn_4_0 = null;
         String stackIn_15_0 = null;

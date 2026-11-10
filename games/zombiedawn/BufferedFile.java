@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class sf {
+final class BufferedFile {
     private long field_g;
     private long field_h;
     private byte[] field_b;
@@ -17,7 +17,7 @@ final class sf {
     private long field_l;
     private byte[] field_i;
     private long field_f;
-    private qn field_k;
+    private RandomAccessCacheFile field_k;
 
     public static void releaseStatics(int param0) {
         field_n = null;
@@ -28,7 +28,7 @@ final class sf {
         field_d = null;
     }
 
-    final void a(int param0, long param1) throws IOException {
+    final void seek(int param0, long param1) throws IOException {
         if (param1 >= 0L) {
           this.field_e = param1;
           if (param0 != 0) {
@@ -39,12 +39,12 @@ final class sf {
         throw new IOException();
     }
 
-    final void b(int param0) throws IOException {
+    final void close(int param0) throws IOException {
         if (param0 != 463) {
-          sf.releaseStatics(64);
+          BufferedFile.releaseStatics(64);
         }
-        this.a((byte) -115);
-        this.field_k.c(-88);
+        this.flush((byte) -115);
+        this.field_k.close(-88);
     }
 
     final long length(int param0) {
@@ -54,7 +54,7 @@ final class sf {
         return this.field_g;
     }
 
-    final void a(int param0, boolean param1, int param2, byte[] param3) throws IOException {
+    final void readFullyRange(int param0, boolean param1, int param2, byte[] param3) throws IOException {
         int incrementValue$0 = 0;
         RuntimeException stackIn_60_0 = null;
         StringBuilder stackIn_60_1 = null;
@@ -106,10 +106,10 @@ final class sf {
             boolean decompiledFrameRemainder0 = true;
             boolean decompiledFrameCompleted0 = true;
             if (param0 > this.field_i.length) {
-              this.field_k.a((byte) -113, this.field_e);
+              this.field_k.seek((byte) -113, this.field_e);
               this.field_c = this.field_e;
               while (0 < param0) {
-                var9_intLifetime1 = this.field_k.a(param2, param3, param0, (byte) -118);
+                var9_intLifetime1 = this.field_k.read(param2, param3, param0, (byte) -118);
                 if (var9_intLifetime1 == -1) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -124,7 +124,7 @@ final class sf {
             if ((decompiledFrameRemainder0) &&
               (decompiledFrameCompleted0) &&
               (0 < param0)) {
-              this.a(true);
+              this.fillReadBuffer(true);
               var9_intLifetime1Lifetime1 = param0;
               if (var9_intLifetime1Lifetime1 > this.field_a) {
                 var9_intLifetime1Lifetime1 = this.field_a;
@@ -203,16 +203,16 @@ final class sf {
         }
     }
 
-    final void a(int param0, byte[] param1) throws IOException {
+    final void readFully(int param0, byte[] param1) throws IOException {
         try {
-          this.a(param1.length, false, 0, param1);
+          this.readFullyRange(param1.length, false, 0, param1);
           int var3_int = 105 / ((-64 - param0) / 58);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "sf.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, byte[] param1, int param2, int param3) throws IOException {
+    final void write(int param0, byte[] param1, int param2, int param3) throws IOException {
         RuntimeException stackIn_53_0 = null;
         StringBuilder stackIn_53_1 = null;
         String stackIn_54_2 = null;
@@ -232,7 +232,7 @@ final class sf {
             }
             if (this.field_h != -1L && (this.field_h > this.field_e ||
               this.field_e > this.field_h + (long)this.field_m)) {
-              this.a((byte) -115);
+              this.flush((byte) -115);
             }
             if (this.field_h != -1L &&
               (long)param3 + this.field_e > this.field_h + (long)this.field_b.length) {
@@ -242,12 +242,12 @@ final class sf {
               this.field_e = this.field_e + (long)var5_int;
               param3 = param3 - var5_int;
               this.field_m = this.field_b.length;
-              this.a((byte) -115);
+              this.flush((byte) -115);
             }
             if (param3 <= this.field_b.length) {
               if (0 >= param3) {
                 if (param0 < 40) {
-                  sf.releaseStatics(17);
+                  BufferedFile.releaseStatics(17);
                 }
                 return;
               }
@@ -262,10 +262,10 @@ final class sf {
               return;
             }
             if (~this.field_c != ~this.field_e) {
-              this.field_k.a((byte) -104, this.field_e);
+              this.field_k.seek((byte) -104, this.field_e);
               this.field_c = this.field_e;
             }
-            this.field_k.a(0, param3, param1, param2);
+            this.field_k.write(0, param3, param1, param2);
             this.field_c = this.field_c + (long)param3;
             if (this.field_f < this.field_c) {
               this.field_f = this.field_c;
@@ -317,7 +317,7 @@ final class sf {
         }
     }
 
-    private final void a(byte param0) throws IOException {
+    private final void flush(byte param0) throws IOException {
         long var2;
         long var4;
         int var6;
@@ -328,10 +328,10 @@ final class sf {
         }
         if (this.field_h != -1L) {
           if (~this.field_c != ~this.field_h) {
-            this.field_k.a((byte) -104, this.field_h);
+            this.field_k.seek((byte) -104, this.field_h);
             this.field_c = this.field_h;
           }
-          this.field_k.a(0, this.field_m, this.field_b, 0);
+          this.field_k.write(0, this.field_m, this.field_b, 0);
           this.field_c = this.field_c + (long)this.field_m;
           if (this.field_c > this.field_f) {
             this.field_f = this.field_c;
@@ -366,13 +366,13 @@ final class sf {
         }
     }
 
-    private final void a(boolean param0) throws IOException {
+    private final void fillReadBuffer(boolean param0) throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = ZombieDawn.field_J;
         this.field_a = 0;
         if (this.field_c != this.field_e) {
-          this.field_k.a((byte) -101, this.field_e);
+          this.field_k.seek((byte) -101, this.field_e);
           this.field_c = this.field_e;
         }
         this.field_l = this.field_e;
@@ -381,7 +381,7 @@ final class sf {
           if (var2 > 200000000) {
             var2 = 200000000;
           }
-          var3 = this.field_k.a(this.field_a, this.field_i, var2, (byte) -103);
+          var3 = this.field_k.read(this.field_a, this.field_i, var2, (byte) -103);
           if (var3 == -1) {
             break;
           }
@@ -393,7 +393,7 @@ final class sf {
         }
     }
 
-    sf(qn param0, int param1, int param2) throws IOException {
+    BufferedFile(RandomAccessCacheFile param0, int param1, int param2) throws IOException {
         long dupTemp$0 = 0L;
         this.field_h = -1L;
         this.field_m = 0;

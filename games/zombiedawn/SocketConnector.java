@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-abstract class qg {
+abstract class SocketConnector {
     static int field_c;
     static boolean field_d;
     static int field_f;
@@ -13,17 +13,17 @@ abstract class qg {
     String field_e;
     static String[] field_g;
 
-    final static void a(java.applet.Applet param0, byte param1) {
+    final static void clearSessionAndReload(java.applet.Applet param0, byte param1) {
         try {
           int var2_int = 94 % ((param1 - 9) / 62);
-          pl.a("", (byte) 71, param0);
+          pl.setSessionCookie("", (byte) 71, param0);
           fo.a(38205, param0);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "qg.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    abstract java.net.Socket a(boolean param0) throws IOException;
+    abstract java.net.Socket connect(boolean param0) throws IOException;
 
     public static void releaseStatics(int param0) {
         field_g = null;
@@ -34,7 +34,7 @@ abstract class qg {
         }
     }
 
-    final static void a(int param0, java.applet.Applet param1, String param2) {
+    final static void writeSettingsCookie(int param0, java.applet.Applet param1, String param2) {
         try {
           String var4 = null;
           String var5 = null;
@@ -72,14 +72,14 @@ abstract class qg {
               if (param2.length() == 0) {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               } else {
-                var5Lifetime6 = var7 + "; Expires=" + jb.a(param0 ^ 2147483482, 94608000000L + pd.monotonicTimeMillis(-22826)) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var7 + "; Expires=" + jb.formatCookieDate(param0 ^ 2147483482, 94608000000L + pd.monotonicTimeMillis(-22826)) + "; Max-Age=" + 94608000L;
               }
               qe.a("document.cookie=\"" + var5Lifetime6 + "\"", param1, (byte) 63);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
             }
-            NodeHashTableIterator.a(param1, 1);
+            NodeHashTableIterator.updatePageLinks(param1, 1);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

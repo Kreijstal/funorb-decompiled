@@ -65,7 +65,7 @@ final class kb extends pm {
             return stackIn_4_0;
           }
           var6 = (CharSequence) ((Object) param0);
-          var3_int = DualLinkDeque.a(var6, 121);
+          var3_int = DualLinkDeque.parseDecimalInt(var6, 121);
           if (var3_int > 0 &&
             130 >= var3_int) {
             return mc.field_g;

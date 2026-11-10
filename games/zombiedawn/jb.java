@@ -9,7 +9,7 @@ final class jb implements io {
     static String field_c;
     static Sprite[] field_a;
 
-    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
+    public final void drawWidget(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -30,8 +30,8 @@ final class jb implements io {
             ((an) (param3)).field_x) {
             var8.drawAdditive(var6_int - (-1 - (-var8.field_r + param3.field_i >> 1)), 1 + var7 + (param3.field_n - var8.field_q >> 1), 256);
           }
-          if (param3.e(-17741)) {
-            TileMap.b(param3.field_i - 4, -4 + param3.field_n, var6_int + 2, param0 - 16777157, 2 + var7);
+          if (param3.isFocused(-17741)) {
+            TileMap.drawDottedRectangle(param3.field_i - 4, -4 + param3.field_n, var6_int + 2, param0 - 16777157, 2 + var7);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -48,7 +48,7 @@ final class jb implements io {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void ensureRankingArrayCapacity(int param0, boolean param1, int param2) {
         if (null == j.field_b ||
           !(param0 <= j.field_b.length)) {
           j.field_b = new int[param0 * 2];
@@ -333,7 +333,7 @@ final class jb implements io {
         if (!param1) {
           field_a = (Sprite[]) null;
         }
-        qn.field_e = 0;
+        RandomAccessCacheFile.field_e = 0;
         fe.field_O = 2147483647;
         sg.field_pb = 2147483647;
         me.field_Db = -2147483648;
@@ -347,7 +347,7 @@ final class jb implements io {
         field_c = null;
     }
 
-    final static String a(int param0, long param1) {
+    final static String formatCookieDate(int param0, long param1) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -366,7 +366,7 @@ final class jb implements io {
         return (String) null;
     }
 
-    final static void a(int param0, java.awt.Frame param1, PlatformTaskDispatcher param2) {
+    final static void closeFullscreenFrame(int param0, java.awt.Frame param1, PlatformTaskDispatcher param2) {
         int var3_int = 0;
         AsyncRequest var4 = null;
         int var5 = 0;
@@ -414,7 +414,7 @@ final class jb implements io {
         }
     }
 
-    final static String a(byte param0) {
+    final static String getLoadingStatusText(byte param0) {
         if (2 > ld.field_j) {
           return ki.field_V;
         }
@@ -427,8 +427,8 @@ final class jb implements io {
         if (!IntrusiveDeque.field_d.isIndexLoaded((byte) 73)) {
           return DualLinkNode.field_o;
         }
-        if (!IntrusiveDeque.field_d.a(-1, "commonui")) {
-          return el.field_m + " - " + IntrusiveDeque.field_d.b("commonui", 88) + "%";
+        if (!IntrusiveDeque.field_d.loadGroupByName(-1, "commonui")) {
+          return el.field_m + " - " + IntrusiveDeque.field_d.getGroupProgressByName("commonui", 88) + "%";
         }
         if (param0 >= -49) {
           return (String) null;
@@ -436,19 +436,19 @@ final class jb implements io {
         if (!da.field_l.isIndexLoaded((byte) 73)) {
           return nd.field_d;
         }
-        if (!da.field_l.a(-1, "commonui")) {
-          return ba.field_e + " - " + da.field_l.b("commonui", 86) + "%";
+        if (!da.field_l.loadGroupByName(-1, "commonui")) {
+          return ba.field_e + " - " + da.field_l.getGroupProgressByName("commonui", 86) + "%";
         }
         if (!al.field_a.isIndexLoaded((byte) 73)) {
           return ad.field_o;
         }
-        if (!al.field_a.c(9001)) {
+        if (!al.field_a.areAllGroupsLoaded(9001)) {
           return lo.field_p + " - " + al.field_a.percentLoaded(-94) + "%";
         }
         return jh.field_l;
     }
 
-    final static boolean a(byte param0, char param1) {
+    final static boolean isValidNameCharacter(byte param0, char param1) {
         if (param0 == 27) {
           if (Character.isISOControl(param1)) {
             return false;

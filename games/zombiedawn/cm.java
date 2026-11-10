@@ -16,7 +16,7 @@ final class cm {
     }
 
     final static ji a(byte param0) {
-        String var1 = we.p((byte) 115);
+        String var1 = we.getActiveLoginIdentifier((byte) 115);
         if (param0 != -8) {
           field_a = (String) null;
         }
@@ -24,7 +24,7 @@ final class cm {
           var1.indexOf('@') >= 0) {
           var1 = "";
         }
-        return new ji(we.p((byte) -21), DualLinkNode.c(0));
+        return new ji(we.getActiveLoginIdentifier((byte) -21), DualLinkNode.isEmailLoginSelected(0));
     }
 
     static {

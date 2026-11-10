@@ -9,8 +9,8 @@ abstract class ei extends hp {
     static int field_J;
     static int[] field_G;
 
-    boolean e(byte param0) {
-        this.field_I = this.i(35);
+    boolean isFullyFadedOut(byte param0) {
+        this.field_I = this.getTargetOpacity(35);
         if (param0 != 28) {
           this.field_F = (dn) null;
           if (this.field_I != 0) {
@@ -30,9 +30,9 @@ abstract class ei extends hp {
         return false;
     }
 
-    private final int i(int param0) {
+    private final int getTargetOpacity(int param0) {
         if (param0 == 35) {
-          return !this.field_H ? 0 : this.field_F.c(true) == this ? 256 : 0;
+          return !this.field_H ? 0 : this.field_F.getTopOpenDialog(true) == this ? 256 : 0;
         }
         return -13;
     }
@@ -57,7 +57,7 @@ abstract class ei extends hp {
         return (UiWidget) (this);
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         if (this.field_I == 0) {
           return;
         }
@@ -65,46 +65,46 @@ abstract class ei extends hp {
           if (param1 != 0) {
             return;
           }
-          this.a(param2 + this.field_k, this.field_j + param0, (byte) -123);
-          super.a(param0, param1, param2, param3 + 0);
+          this.drawPanelBackground(param2 + this.field_k, this.field_j + param0, (byte) -123);
+          super.drawLayer(param0, param1, param2, param3 + 0);
           return;
         }
         if (null == f.field_e) {
           f.field_e = new Sprite(this.field_i, this.field_n);
           ki.a((byte) -86, f.field_e);
           Rasterizer.clear();
-          this.a(param3, 0, (byte) -121);
-          super.a(-param0 - this.field_j, param1, -this.field_k - param2, 0);
-          pa.a(param3 ^ -21189);
-          f.field_e.e(this.field_k + param2, this.field_j + param0, this.field_I);
+          this.drawPanelBackground(param3, 0, (byte) -121);
+          super.drawLayer(-param0 - this.field_j, param1, -this.field_k - param2, 0);
+          pa.popRasterState(param3 ^ -21189);
+          f.field_e.drawWithOpacity(this.field_k + param2, this.field_j + param0, this.field_I);
           return;
         }
         if (f.field_e.field_w < this.field_i) {
           f.field_e = new Sprite(this.field_i, this.field_n);
           ki.a((byte) -86, f.field_e);
           Rasterizer.clear();
-          this.a(param3, 0, (byte) -121);
-          super.a(-param0 - this.field_j, param1, -this.field_k - param2, 0);
-          pa.a(param3 ^ -21189);
-          f.field_e.e(this.field_k + param2, this.field_j + param0, this.field_I);
+          this.drawPanelBackground(param3, 0, (byte) -121);
+          super.drawLayer(-param0 - this.field_j, param1, -this.field_k - param2, 0);
+          pa.popRasterState(param3 ^ -21189);
+          f.field_e.drawWithOpacity(this.field_k + param2, this.field_j + param0, this.field_I);
           return;
         }
         if (f.field_e.field_t >= this.field_n) {
           ki.a((byte) -86, f.field_e);
           Rasterizer.clear();
-          this.a(param3, 0, (byte) -121);
-          super.a(-param0 - this.field_j, param1, -this.field_k - param2, 0);
-          pa.a(param3 ^ -21189);
-          f.field_e.e(this.field_k + param2, this.field_j + param0, this.field_I);
+          this.drawPanelBackground(param3, 0, (byte) -121);
+          super.drawLayer(-param0 - this.field_j, param1, -this.field_k - param2, 0);
+          pa.popRasterState(param3 ^ -21189);
+          f.field_e.drawWithOpacity(this.field_k + param2, this.field_j + param0, this.field_I);
           return;
         }
         f.field_e = new Sprite(this.field_i, this.field_n);
         ki.a((byte) -86, f.field_e);
         Rasterizer.clear();
-        this.a(param3, 0, (byte) -121);
-        super.a(-param0 - this.field_j, param1, -this.field_k - param2, 0);
-        pa.a(param3 ^ -21189);
-        f.field_e.e(this.field_k + param2, this.field_j + param0, this.field_I);
+        this.drawPanelBackground(param3, 0, (byte) -121);
+        super.drawLayer(-param0 - this.field_j, param1, -this.field_k - param2, 0);
+        pa.popRasterState(param3 ^ -21189);
+        f.field_e.drawWithOpacity(this.field_k + param2, this.field_j + param0, this.field_I);
     }
 
     ei(dn param0, int param1, int param2) {
@@ -118,11 +118,11 @@ abstract class ei extends hp {
         }
     }
 
-    abstract void a(int param0, int param1, byte param2);
+    abstract void drawPanelBackground(int param0, int param1, byte param2);
 
-    final void a(byte param0, int param1, int param2) {
+    final void centerOnScreen(byte param0, int param1, int param2) {
         if (param0 >= 79) {
-          this.a(-99, -param1 + b.field_l >> 1, pk.field_N - param2 >> 1, param2, param1);
+          this.setBounds(-99, -param1 + b.field_l >> 1, pk.field_N - param2 >> 1, param2, param1);
           return;
         }
     }
@@ -454,7 +454,7 @@ abstract class ei extends hp {
         return true;
     }
 
-    boolean j(int param0) {
+    boolean tickLayerAndCheckHidden(int param0) {
         boolean stackIn_12_0 = false;
         boolean stackIn_25_0 = false;
         int var2;
@@ -462,8 +462,8 @@ abstract class ei extends hp {
         int var2Lifetime1;
         int var3Lifetime1;
         if (param0 != 2634) {
-          this.a((byte) -43, -14, -18);
-          var2 = this.i(35);
+          this.centerOnScreen((byte) -43, -14, -18);
+          var2 = this.getTargetOpacity(35);
           var3 = -this.field_I + var2;
           if (var3 > 0) {
             this.field_I = this.field_I + (-1 + (var3 + 8)) / 8;
@@ -480,7 +480,7 @@ abstract class ei extends hp {
           stackIn_25_0 = !(this.field_H);
           return stackIn_25_0;
         }
-        var2Lifetime1 = this.i(35);
+        var2Lifetime1 = this.getTargetOpacity(35);
         var3Lifetime1 = -this.field_I + var2Lifetime1;
         if (var3Lifetime1 > 0) {
           this.field_I = this.field_I + (-1 + (var3Lifetime1 + 8)) / 8;

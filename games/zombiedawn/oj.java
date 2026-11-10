@@ -22,7 +22,7 @@ final class oj {
     final static of b(int param0) {
         if (hc.field_b == null) {
           hc.field_b = new of();
-          hc.field_b.a(param0 ^ 4, ia.field_e);
+          hc.field_b.installDefaultPainters(param0 ^ 4, ia.field_e);
           hc.field_b.field_t = 14;
           hc.field_b.field_q = 0;
           hc.field_b.field_e = 5;
@@ -48,7 +48,7 @@ final class oj {
           if (param4 > -92) {
             oj.b(-16);
           }
-          param0.e(-16 + param5 + (int)this.field_a, (int)this.field_b + (param2 - 16), param3);
+          param0.drawWithOpacity(-16 + param5 + (int)this.field_a, (int)this.field_b + (param2 - 16), param3);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "oj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -61,7 +61,7 @@ final class oj {
         this.field_a = this.field_a + this.field_c;
         this.field_b = this.field_b + this.field_e;
         if (this.field_c != 0.0f) {
-          if (Js5Archive.field_e.navigation.a((int)(this.field_a + (float)param2), (int)(this.field_b + (float)param0), 82)) {
+          if (Js5Archive.field_e.navigation.isPixelWalkable((int)(this.field_a + (float)param2), (int)(this.field_b + (float)param0), 82)) {
             return;
           }
           this.field_e = 0.0f;
@@ -71,7 +71,7 @@ final class oj {
         if (0.0f == this.field_e) {
           return;
         }
-        if (Js5Archive.field_e.navigation.a((int)(this.field_a + (float)param2), (int)(this.field_b + (float)param0), 82)) {
+        if (Js5Archive.field_e.navigation.isPixelWalkable((int)(this.field_a + (float)param2), (int)(this.field_b + (float)param0), 82)) {
           return;
         }
         this.field_e = 0.0f;
@@ -100,7 +100,7 @@ final class oj {
             return null;
           }
           if (param4 == 0) {
-            stackIn_7_0 = oh.a(param4 + 29506, param1.a((byte) 51, param2, param0));
+            stackIn_7_0 = oh.a(param4 + 29506, param1.getFile((byte) 51, param2, param0));
             return stackIn_7_0;
           }
           stackIn_5_0 = (lp) null;

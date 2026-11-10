@@ -46,7 +46,7 @@ final class NodeHashTableIterator implements Iterator {
         return var1;
     }
 
-    private final void a(int param0) {
+    private final void reset(int param0) {
         this.field_c = null;
         if (param0 == 11936) {
           this.field_e = this.field_a.buckets[0].previous;
@@ -55,7 +55,7 @@ final class NodeHashTableIterator implements Iterator {
         }
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void updatePageLinks(java.applet.Applet param0, int param1) {
         try {
           RuntimeException stackIn_8_0 = null;
           StringBuilder stackIn_8_1 = null;
@@ -103,7 +103,7 @@ final class NodeHashTableIterator implements Iterator {
         }
     }
 
-    final static boolean a(int param0, java.applet.Applet param1) {
+    final static boolean hasTuhstatbutCookie(int param0, java.applet.Applet param1) {
         try {
           int var5 = 0;
           String var2 = null;
@@ -200,7 +200,7 @@ final class NodeHashTableIterator implements Iterator {
         this.field_c = null;
         try {
           this.field_a = param0;
-          this.a(11936);
+          this.reset(11936);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "hl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

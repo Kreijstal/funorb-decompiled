@@ -9,7 +9,7 @@ final class kf extends pn implements hh {
     static String field_Y;
     static String field_T;
 
-    private final void n(int param0) {
+    private final void closeDialog(int param0) {
         if (!this.field_H) {
           return;
         }
@@ -20,7 +20,7 @@ final class kf extends pn implements hh {
         }
     }
 
-    private final an a(int param0, String param1, sk param2) {
+    private final an appendButton(int param0, String param1, sk param2) {
         an var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -35,13 +35,13 @@ final class kf extends pn implements hh {
           var4 = new an(param1, param2);
           var4.field_h = (io) ((Object) new vm());
           if (param0 != -1763) {
-            this.n(-112);
+            this.closeDialog(-112);
           }
           var5 = this.field_n - 6;
           this.field_n = this.field_n + 38;
-          var4.a(-127, var5, 15, -16 + (this.field_i - 14), 30);
-          this.a(var4, 10);
-          this.a(true);
+          var4.setBounds(-127, var5, 15, -16 + (this.field_i - 14), 30);
+          this.addChild(var4, 10);
+          this.reapplyBounds(true);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -74,11 +74,11 @@ final class kf extends pn implements hh {
           var2.field_k = 0;
           var2.field_j = 50;
           var2.field_h = (io) ((Object) new vf(SecondaryNodeDeque.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.a(var2, 10);
-          if (po.w(13296)) {
-            this.field_U = this.a(-1763, wd.field_w, (sk) (this));
+          this.addChild(var2, 10);
+          if (po.isGuestSession(13296)) {
+            this.field_U = this.appendButton(-1763, wd.field_w, (sk) (this));
           }
-          this.field_W = this.a(-1763, re.field_c, (sk) (this));
+          this.field_W = this.appendButton(-1763, re.field_c, (sk) (this));
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "kf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -96,13 +96,13 @@ final class kf extends pn implements hh {
           }
           if (param2 == this.field_U) {
             td.a(param1 + 133);
-            this.n(param1 ^ -16);
+            this.closeDialog(param1 ^ -16);
             return;
           }
           if (this.field_W != param2) {
             return;
           }
-          this.n(param1 + 16);
+          this.closeDialog(param1 + 16);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

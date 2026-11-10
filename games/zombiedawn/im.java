@@ -12,7 +12,7 @@ abstract class im {
     private short[] field_c;
     private short[] field_e;
 
-    private final void a(int param0) {
+    private final void buildPermutation(int param0) {
         Random var2;
         int var3;
         int var4;
@@ -39,11 +39,11 @@ abstract class im {
         return;
     }
 
-    abstract void a(int param0, int param1, int param2);
+    abstract void accumulateOctave(int param0, int param1, int param2);
 
-    abstract void a(boolean param0);
+    abstract void beginMap(boolean param0);
 
-    private final void b(boolean param0) {
+    private final void buildOctaveFrequencies(boolean param0) {
         int var2 = 0;
         int var3 = ZombieDawn.field_J;
         this.field_c = new short[this.field_g];
@@ -55,7 +55,7 @@ abstract class im {
         }
     }
 
-    final static void a(IntrusiveNode param0, int param1, IntrusiveNode param2) {
+    final static void insertBefore(IntrusiveNode param0, int param1, IntrusiveNode param2) {
         if (param1 != -30395) {
           return;
         }
@@ -72,7 +72,7 @@ abstract class im {
         }
     }
 
-    final void b(int param0, int param1, int param2) {
+    final void generateSamples(int param0, int param1, int param2) {
         int var23 = 0;
         int var22 = 0;
         int var24 = 0;
@@ -112,7 +112,7 @@ abstract class im {
         for (var27Lifetime1 = 0; param1 > var27Lifetime1; var27Lifetime1++) {
           var26[var27Lifetime1] = (var27Lifetime1 << 12) / param1;
         }
-        this.a(false);
+        this.beginMap(false);
         if (param2 != -9394) {
           return;
         }
@@ -156,14 +156,14 @@ abstract class im {
               var18Lifetime1 = je.a((int) this.field_e[var17 + var8], var4, false, var15);
               var19Lifetime1 = je.a((int) this.field_e[var9 + var17], var14, false, var15);
               var21 = ((-var18Lifetime1 + var19Lifetime1) * var12 >> 12) + var18Lifetime1;
-              this.a(var24, var20 + ((var21 - var20) * var13 >> 12), -25466);
+              this.accumulateOctave(var24, var20 + ((var21 - var20) * var13 >> 12), -25466);
             }
-            this.a((byte) 44);
+            this.emitPixel((byte) 44);
           }
         }
     }
 
-    abstract void a(byte param0);
+    abstract void emitPixel(byte param0);
 
     im(int param0, int param1, int param2, int param3, int param4) {
         this.field_a = 4;
@@ -175,8 +175,8 @@ abstract class im {
         this.field_b = param0;
         this.field_f = param3;
         this.field_g = param1;
-        this.b(true);
-        this.a(255);
+        this.buildOctaveFrequencies(true);
+        this.buildPermutation(255);
     }
 
     static {

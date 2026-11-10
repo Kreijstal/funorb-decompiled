@@ -61,7 +61,7 @@ final class mf {
         if (param3 > -39) {
           this.a(-21, 11, -116, (byte) 91, 87);
         }
-        vf.a(param1, this.field_b, param2, 3, param0, param4);
+        vf.drawNineSliceFrame(param1, this.field_b, param2, 3, param0, param4);
     }
 
     public static void releaseStatics(int param0) {

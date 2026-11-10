@@ -179,7 +179,7 @@ final class mb extends IntrusiveNode {
     private final static boolean ensureSetup(Js5Archive param0) {
         byte[] var1 = null;
         if (!field_n) {
-          var1 = param0.a((byte) 51, 0, 0);
+          var1 = param0.getFile((byte) 51, 0, 0);
           if (var1 == null) {
             return false;
           }
@@ -211,14 +211,14 @@ final class mb extends IntrusiveNode {
         return var1;
     }
 
-    final static mb a(Js5Archive param0, String param1, String param2) {
+    final static mb load(Js5Archive param0, String param1, String param2) {
         try {
           mb var4_ref = null;
           if (!mb.ensureSetup(param0)) {
-            param0.a(param1, (byte) -84, param2);
+            param0.isFileReadyByName(param1, (byte) -84, param2);
             return null;
           }
-          byte[] var3 = param0.a(param2, -116, param1);
+          byte[] var3 = param0.getFileByName(param2, -116, param1);
           if (var3 == null) {
             return null;
           }
@@ -265,10 +265,10 @@ final class mb extends IntrusiveNode {
         try {
           mb var4_ref = null;
           if (!mb.ensureSetup(param0)) {
-            param0.a(param2, (byte) 96, param1);
+            param0.isFileLoaded(param2, (byte) 96, param1);
             return null;
           }
-          byte[] var3 = param0.a((byte) 51, param1, param2);
+          byte[] var3 = param0.getFile((byte) 51, param1, param2);
           if (var3 == null) {
             return null;
           }
@@ -347,7 +347,7 @@ final class mb extends IntrusiveNode {
             var8[2 * var9_int + 1] = -(float)Math.sin((double)(4 * var9_int + 2) * 3.141592653589793 / (double)var2);
           }
           var9 = new int[var5];
-          var10 = IterableNodeHashTable.a(var5 - 1, (byte) 113);
+          var10 = IterableNodeHashTable.bitLength(var5 - 1, (byte) 113);
           for (var11 = 0; var11 < var5; var11++) {
             var9[var11] = ij.a(var11, true, var10);
           }
@@ -516,7 +516,7 @@ final class mb extends IntrusiveNode {
         int var18_intLifetime2;
         mb.setBitstream(this.field_t[param0], 0);
         mb.readBit();
-        var2 = mb.readBits(IterableNodeHashTable.a(field_N.length - 1, (byte) 26));
+        var2 = mb.readBits(IterableNodeHashTable.bitLength(field_N.length - 1, (byte) 26));
         var3 = field_M[var2] ? 1 : 0;
         if (var3 == 0) {
           stackIn_3_0 = field_l;
@@ -635,7 +635,7 @@ final class mb extends IntrusiveNode {
             var20_ref_float__[4 * var25Lifetime1 + 3] = (var26_floatLifetime1 - var28Lifetime1) * var30 - (var27Lifetime1 - var29Lifetime1) * var31;
             var20_ref_float__[4 * var25Lifetime1 + 1] = (var27Lifetime1 - var29Lifetime1) * var30 + (var26_floatLifetime1 - var28Lifetime1) * var31;
           }
-          var25Lifetime2 = IterableNodeHashTable.a(var4 - 1, (byte) 59);
+          var25Lifetime2 = IterableNodeHashTable.bitLength(var4 - 1, (byte) 59);
           for (var26 = 0; var26 < var25Lifetime2 - 3; var26++) {
             var27_int = var4 >> var26 + 2;
             var28_int = 8 << var26;

@@ -71,17 +71,17 @@ final class ul {
           return var3;
         }
         if (param1 < 32768) {
-          var4 = this.field_g.a((byte) 51, 1, param1);
+          var4 = this.field_g.getFile((byte) 51, 1, param1);
         } else {
-          var4 = this.field_c.a((byte) 51, 1, param1 & 32767);
+          var4 = this.field_c.getFile((byte) 51, 1, param1 & 32767);
         }
         var3 = new dm();
         int var5 = 91 / ((-7 - param0) / 53);
         if (var4 != null) {
-          var3.a(new PacketBuffer(var4), 0);
+          var3.decode(new PacketBuffer(var4), 0);
         }
         if (param1 >= 32768) {
-          var3.d((byte) -76);
+          var3.markGlobalPhraseIds((byte) -76);
         }
         this.field_a.a((long)param1, var3, -16709);
         return var3;

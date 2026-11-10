@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class dh {
+abstract class RasterBuffer {
     static long field_b;
     int[] field_c;
     java.awt.Image field_f;
@@ -10,16 +10,16 @@ abstract class dh {
     static String field_g;
     int field_d;
 
-    abstract void a(java.awt.Graphics param0, int param1, int param2, byte param3);
+    abstract void drawImage(java.awt.Graphics param0, int param1, int param2, byte param3);
 
     final void makeRasterTarget(int param0) {
         int var2 = -12 % ((param0 + 53) / 62);
         Rasterizer.setBuffer(this.field_c, this.field_d, this.field_a);
     }
 
-    abstract void a(int param0, int param1, java.awt.Component param2, int param3);
+    abstract void initialize(int param0, int param1, java.awt.Component param2, int param3);
 
-    final static void c(int param0) {
+    final static void advanceLoginTransition(int param0) {
         int fieldTemp$3 = 0;
         int fieldTemp$2 = 0;
         int fieldTemp$1 = 0;
@@ -36,7 +36,7 @@ abstract class dh {
             if (sc.field_a) {
               td.a(112);
             } else {
-              cc.d(0);
+              PowerupCard.openLoginPanelAtStage(0);
             }
             rc.field_p = bg.field_k;
             return;
@@ -64,7 +64,7 @@ abstract class dh {
             if (sc.field_a) {
               td.a(112);
             } else {
-              cc.d(0);
+              PowerupCard.openLoginPanelAtStage(0);
             }
             rc.field_p = bg.field_k;
             return;
@@ -82,9 +82,9 @@ abstract class dh {
             return;
           }
         }
-        if (!po.w(13296)) {
+        if (!po.isGuestSession(13296)) {
           if (null != sc.field_c) {
-            BufferedSocket.a(sc.field_c, (byte) 110, 3);
+            BufferedSocket.queueHighscoreSubmission(sc.field_c, (byte) 110, 3);
           }
           sl.a((byte) 47);
           if (hp.field_C) {
@@ -98,7 +98,7 @@ abstract class dh {
     public static void releaseStatics(int param0) {
         field_e = null;
         if (param0 != 16) {
-          dh.c(-103);
+          RasterBuffer.advanceLoginTransition(-103);
           field_g = null;
           return;
         }

@@ -28,7 +28,7 @@ final class kn extends hp implements hh {
         }
     }
 
-    final void a(String[] param0, byte param1) {
+    final void setSuggestions(String[] param0, byte param1) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_18_0 = null;
@@ -58,13 +58,13 @@ final class kn extends hp implements hh {
               this.field_G[var5] = new an(this.field_H[var5], (sk) (this));
               this.field_G[var5].field_h = (io) ((Object) var4);
               this.field_G[var5].field_s = sj.field_b;
-              this.field_G[var5].a(-94, 16 * var5 + 20, 0, 80, 15);
-              this.a(this.field_G[var5], 10);
+              this.field_G[var5].setBounds(-94, 16 * var5 + 20, 0, 80, 15);
+              this.addChild(this.field_G[var5], 10);
             }
             this.field_G[var3_int] = new an(mm.field_j, (sk) (this));
             this.field_G[var3_int].field_h = (io) ((Object) var4);
-            this.field_G[var3_int].a(52, 20 + (1 + var3_int) * 16, 0, 100, 15);
-            this.a(this.field_G[var3_int], 10);
+            this.field_G[var3_int].setBounds(52, 20 + (1 + var3_int) * 16, 0, 100, 15);
+            this.addChild(this.field_G[var3_int], 10);
             return;
           }
           this.field_H = null;
@@ -83,8 +83,8 @@ final class kn extends hp implements hh {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, 0);
+    final void drawLayer(int param0, int param1, int param2, int param3) {
+        super.drawLayer(param0, param1, param2, 0);
         if (param3 != param1) {
           return;
         }
@@ -108,14 +108,14 @@ final class kn extends hp implements hh {
             return true;
           }
           if (98 == param1) {
-            stackIn_6_0 = this.b((byte) 119, param2);
+            stackIn_6_0 = this.focusPreviousChild((byte) 119, param2);
             return stackIn_6_0;
           }
           var5_int = -57 / ((param0 + 83) / 32);
           if (param1 != 99) {
             return false;
           }
-          stackIn_10_0 = this.a(1, param2);
+          stackIn_10_0 = this.focusNextChild(1, param2);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -144,15 +144,15 @@ final class kn extends hp implements hh {
         try {
           for (var6_int = 0; this.field_H.length > var6_int; var6_int++) {
             if (this.field_G[var6_int] == param2) {
-              this.field_K.a((byte) 103, this.field_H[var6_int]);
+              this.field_K.onSuggestionChosen((byte) 103, this.field_H[var6_int]);
             }
           }
           if (param1 != -6) {
             var8 = (String[]) null;
-            this.a((String[]) null, (byte) -97);
+            this.setSuggestions((String[]) null, (byte) -97);
           }
           if (this.field_G[this.field_H.length] == param2) {
-            this.field_K.a(param1 + 127);
+            this.field_K.onMoreSuggestionsRequested(param1 + 127);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

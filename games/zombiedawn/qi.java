@@ -13,30 +13,30 @@ final class qi extends eh {
     private boolean field_I;
     rg field_D;
 
-    private final boolean a(int param0, int param1) {
+    private final boolean scrollByWheel(int param0, int param1) {
         if (param0 >= -19) {
           em var4 = (em) null;
-          this.a(true, (byte) 20, (em) null);
+          this.setVerticalScrollbar(true, (byte) 20, (em) null);
         }
         if (null == this.field_L) {
           return false;
         }
-        this.field_L.a(param1 * this.field_L.field_W + this.field_L.field_E, (byte) -63);
+        this.field_L.setVerticalPosition(param1 * this.field_L.field_W + this.field_L.field_E, (byte) -63);
         return true;
     }
 
-    final void a(UiWidget param0, byte param1, int param2, int param3) {
+    final void updatePointer(UiWidget param0, byte param1, int param2, int param3) {
         try {
           int var5_int = 81 / ((param1 - 46) / 42);
-          super.a(param0, (byte) -38, param2, param3);
-          this.f(-98);
-          this.f((byte) 124);
+          super.updatePointer(param0, (byte) -38, param2, param3);
+          this.updateScrollbarRanges(-98);
+          this.applyScrollPositions((byte) 124);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "qi.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final void e(byte param0) {
+    final void layoutChildren(byte param0) {
         int stackIn_6_0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_14_0 = 0;
@@ -81,7 +81,7 @@ final class qi extends eh {
           stackIn_17_0 = this.field_n;
         }
         var5 = stackIn_17_0;
-        this.field_D.a(-89, var3, var2, var4, var5);
+        this.field_D.setBounds(-89, var3, var2, var4, var5);
         if (this.field_L != null) {
           stackIn_21_0 = this.field_L;
           stackIn_21_1 = 79;
@@ -91,7 +91,7 @@ final class qi extends eh {
           } else {
             stackIn_22_3 = -this.field_L.field_i + this.field_i;
           }
-          ((em) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_21_2, stackIn_22_3, this.field_L.field_i, this.field_D.field_n);
+          ((em) (Object) stackIn_21_0).setBounds(stackIn_21_1, stackIn_21_2, stackIn_22_3, this.field_L.field_i, this.field_D.field_n);
         }
         if (null != this.field_H) {
           stackIn_26_0 = this.field_H;
@@ -101,12 +101,12 @@ final class qi extends eh {
           } else {
             stackIn_27_2 = 0;
           }
-          ((em) (Object) stackIn_26_0).a(stackIn_26_1, stackIn_27_2, this.field_D.field_k, this.field_D.field_i, this.field_H.field_n);
+          ((em) (Object) stackIn_26_0).setBounds(stackIn_26_1, stackIn_27_2, this.field_D.field_k, this.field_D.field_i, this.field_H.field_n);
         }
-        this.f(78);
+        this.updateScrollbarRanges(78);
     }
 
-    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
+    final boolean onFocusedKey(UiWidget param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -114,10 +114,10 @@ final class qi extends eh {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3, param4, param5, param6)) {
+          if (super.onFocusedKey(param0, param1, param2, param3, param4, param5, param6)) {
             return true;
           }
-          stackIn_8_0 = (this.e(-17741)) && (this.a(-118, param1));
+          stackIn_8_0 = (this.isFocused(-17741)) && (this.scrollByWheel(-118, param1));
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -133,7 +133,7 @@ final class qi extends eh {
         }
     }
 
-    private final void f(byte param0) {
+    private final void applyScrollPositions(byte param0) {
         if (this.field_H != null) {
           this.field_D.field_z.field_k = -(int)((long)this.field_H.field_D * (long)(-this.field_D.field_i + this.field_D.field_z.field_i) >> 16);
         }
@@ -195,27 +195,27 @@ final class qi extends eh {
         }
     }
 
-    private final void f(int param0) {
+    private final void updateScrollbarRanges(int param0) {
         int var3 = ZombieDawn.field_J;
         if (this.field_L != null) {
           if (this.field_D.field_z.field_n > this.field_D.field_n) {
-            this.field_L.c(-30674, this.field_D.field_z.field_n, this.field_D.field_n);
+            this.field_L.setVerticalVisibleRange(-30674, this.field_D.field_z.field_n, this.field_D.field_n);
           } else {
-            this.field_L.c(-30674, 1, 1);
+            this.field_L.setVerticalVisibleRange(-30674, 1, 1);
           }
         }
         int var2 = 126 / ((param0 - 33) / 43);
         if (this.field_H == null) {
         } else {
           if (this.field_D.field_z.field_i <= this.field_D.field_i) {
-            this.field_H.b(1, 26, 1);
+            this.field_H.setHorizontalVisibleRange(1, 26, 1);
           } else {
-            this.field_H.b(this.field_D.field_z.field_i, -126, this.field_D.field_i);
+            this.field_H.setHorizontalVisibleRange(this.field_D.field_z.field_i, -126, this.field_D.field_i);
           }
         }
     }
 
-    final void a(boolean param0, byte param1, em param2) {
+    final void setVerticalScrollbar(boolean param0, byte param1, em param2) {
         try {
           if (param1 <= 99) {
             this.field_I = false;
@@ -240,7 +240,7 @@ final class qi extends eh {
           if (!super.requestKeyboardFocus(-126, param1, param2, param3)) {
             return false;
           }
-          this.f((byte) 124);
+          this.applyScrollPositions((byte) 124);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -264,7 +264,7 @@ final class qi extends eh {
           dupTemp$0 = new rg(param0, param1, param2, param3, param6, param5);
           this.field_D = dupTemp$0;
           this.field_B[2] = (UiWidget) ((Object) dupTemp$0);
-          this.e((byte) 82);
+          this.layoutChildren((byte) 82);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "qi.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }

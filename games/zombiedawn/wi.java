@@ -75,10 +75,10 @@ final class wi {
         RuntimeException decompiledCaughtException = null;
         var3 = ZombieDawn.field_J;
         try {
-          var4 = (mg) (bg.field_i.b((byte) 26));
+          var4 = (mg) (bg.field_i.last((byte) 26));
           while (var4 != null) {
-            oe.a(param1, -19004, var4);
-            var4 = (mg) (bg.field_i.a(false));
+            oe.sendQueuedByteRecord(param1, -19004, var4);
+            var4 = (mg) (bg.field_i.previous(false));
           }
           if (param0 == 0) {
             return;

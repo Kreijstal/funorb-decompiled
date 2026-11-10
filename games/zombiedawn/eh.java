@@ -10,7 +10,7 @@ abstract class eh extends UiWidget implements jf {
     static int field_A;
     UiWidget[] field_B;
 
-    void a(UiWidget param0, byte param1, int param2, int param3) {
+    void updatePointer(UiWidget param0, byte param1, int param2, int param3) {
         int var6 = 0;
         UiWidget[] var5 = null;
         int var7 = 0;
@@ -24,7 +24,7 @@ abstract class eh extends UiWidget implements jf {
         RuntimeException var5_ref = null;
         var9 = ZombieDawn.field_J;
         try {
-          super.a(param0, (byte) -1, param2, param3);
+          super.updatePointer(param0, (byte) -1, param2, param3);
           if (this.field_B == null) {
             return;
           }
@@ -34,7 +34,7 @@ abstract class eh extends UiWidget implements jf {
           for (var6 = 0; var10.length > var6; var6++) {
             var8 = var10[var6];
             if (var8 != null) {
-              var8.a(param0, (byte) -22, param2 + this.field_j, this.field_k + param3);
+              var8.updatePointer(param0, (byte) -22, param2 + this.field_j, this.field_k + param3);
             }
           }
           return;
@@ -52,7 +52,7 @@ abstract class eh extends UiWidget implements jf {
         }
     }
 
-    boolean a(UiWidget param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
+    boolean onFocusedKey(UiWidget param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
         int var9 = 0;
         UiWidget[] var8 = null;
         RuntimeException var8_ref = null;
@@ -76,8 +76,8 @@ abstract class eh extends UiWidget implements jf {
           for (var9 = 0; var9 < var12.length; var9++) {
             var10 = var12[var9];
             if (var10 != null &&
-              var10.e(-17741) &&
-              var10.a(param0, param1, param2, param3, param4, true, param6)) {
+              var10.isFocused(-17741) &&
+              var10.onFocusedKey(param0, param1, param2, param3, param4, true, param6)) {
               return true;
             }
           }
@@ -96,7 +96,7 @@ abstract class eh extends UiWidget implements jf {
         }
     }
 
-    boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
+    boolean handlePointerPress(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         int var9 = 0;
         UiWidget[] var8 = null;
         RuntimeException var8_ref = null;
@@ -117,7 +117,7 @@ abstract class eh extends UiWidget implements jf {
           for (var9 = 0; var9 < var12.length; var9++) {
             var10 = var12[var9];
             if (var10 != null &&
-              var10.a(param0, 1, param2 + this.field_j, param3, param4 + this.field_k, param5, param6)) {
+              var10.handlePointerPress(param0, 1, param2 + this.field_j, param3, param4 + this.field_k, param5, param6)) {
               return true;
             }
           }
@@ -139,7 +139,7 @@ abstract class eh extends UiWidget implements jf {
         }
     }
 
-    final StringBuilder a(Hashtable param0, StringBuilder param1, boolean param2, int param3) {
+    final StringBuilder appendDebugTree(Hashtable param0, StringBuilder param1, boolean param2, int param3) {
         RuntimeException var5 = null;
         int stackIn_5_1 = 0;
         StringBuilder stackIn_5_2 = null;
@@ -154,10 +154,10 @@ abstract class eh extends UiWidget implements jf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param2) {
-            this.e((byte) -8);
+            this.layoutChildren((byte) -8);
           }
-          if (this.a(param0, param1, 11098, param3)) {
-            this.a(param0, param3, 87, param1);
+          if (this.beginDebugDescription(param0, param1, 11098, param3)) {
+            this.appendDebugProperties(param0, param3, 87, param1);
             stackIn_5_1 = param3;
             stackIn_5_2 = (StringBuilder) (param1);
             if (param2) {
@@ -167,7 +167,7 @@ abstract class eh extends UiWidget implements jf {
               stackIn_6_0 = this;
               stackIn_6_3 = true;
             }
-            this.a(stackIn_5_1, stackIn_5_2, stackIn_6_3, param0);
+            this.appendChildDebugTrees(stackIn_5_1, stackIn_5_2, stackIn_6_3, param0);
           }
           stackIn_8_0 = (StringBuilder) (param1);
           return stackIn_8_0;
@@ -191,7 +191,7 @@ abstract class eh extends UiWidget implements jf {
         }
     }
 
-    final boolean a(UiWidget param0, boolean param1) {
+    final boolean focusPrecedingChild(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -200,9 +200,9 @@ abstract class eh extends UiWidget implements jf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            this.e((byte) 88);
+            this.layoutChildren((byte) 88);
           }
-          stackIn_3_0 = this.a((byte) -102, 1, param0);
+          stackIn_3_0 = this.focusBackwardBy((byte) -102, 1, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -218,9 +218,9 @@ abstract class eh extends UiWidget implements jf {
         }
     }
 
-    abstract void e(byte param0);
+    abstract void layoutChildren(byte param0);
 
-    private final UiWidget d(byte param0) {
+    private final UiWidget getFocusedChild(byte param0) {
         UiWidget[] var2;
         int var3;
         UiWidget var4;
@@ -237,7 +237,7 @@ abstract class eh extends UiWidget implements jf {
         while (var3 < var2.length) {
           var4 = var2[var3];
           if (var4 != null &&
-            var4.e(-17741)) {
+            var4.isFocused(-17741)) {
             return var4;
           }
           var3++;
@@ -245,7 +245,7 @@ abstract class eh extends UiWidget implements jf {
         return null;
     }
 
-    final boolean a(int param0, UiWidget param1) {
+    final boolean focusFollowingChild(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -256,7 +256,7 @@ abstract class eh extends UiWidget implements jf {
           if (param0 != 12139) {
             field_A = -64;
           }
-          stackIn_3_0 = this.a(true, param1, 1);
+          stackIn_3_0 = this.focusForwardBy(true, param1, 1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -272,7 +272,7 @@ abstract class eh extends UiWidget implements jf {
         }
     }
 
-    final String d(int param0) {
+    final String getTooltip(int param0) {
         int var4 = 0;
         int var2;
         UiWidget[] var3;
@@ -288,7 +288,7 @@ abstract class eh extends UiWidget implements jf {
         for (var4 = 0; var4 < var3.length; var4++) {
           var5 = var3[var4];
           if (var5 != null) {
-            var6 = var5.d(-58);
+            var6 = var5.getTooltip(-58);
             if (var6 != null) {
               return var6;
             }
@@ -297,7 +297,7 @@ abstract class eh extends UiWidget implements jf {
         return null;
     }
 
-    final static boolean a(oh param0, oh param1, byte param2) {
+    final static boolean isSocialEntryOrderedAfter(oh param0, oh param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -348,7 +348,7 @@ abstract class eh extends UiWidget implements jf {
         }
     }
 
-    final static boolean a(boolean param0, Js5Archive param1) {
+    final static boolean isArchiveFullyLoaded(boolean param0, Js5Archive param1) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -357,7 +357,7 @@ abstract class eh extends UiWidget implements jf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            stackIn_4_0 = param1.c(9001);
+            stackIn_4_0 = param1.areAllGroupsLoaded(9001);
             return stackIn_4_0;
           }
           return false;
@@ -375,13 +375,13 @@ abstract class eh extends UiWidget implements jf {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3, int param4) {
+    void setBounds(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 19 / ((param0 + 23) / 48);
-        super.a(102, param1, param2, param3, param4);
-        this.e((byte) 99);
+        super.setBounds(102, param1, param2, param3, param4);
+        this.layoutChildren((byte) 99);
     }
 
-    final static void a(String param0, float param1, int param2) {
+    final static void setLoadingProgress(String param0, float param1, int param2) {
         try {
           ka.field_a = param0;
           if (param2 != -1) {
@@ -393,26 +393,26 @@ abstract class eh extends UiWidget implements jf {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         UiWidget var6;
         int var7;
         var7 = ZombieDawn.field_J;
         if (param1 == param3 &&
           this.field_h != null) {
-          this.field_h.a(16777215, true, param0, (UiWidget) (this), param2);
+          this.field_h.drawWidget(16777215, true, param0, (UiWidget) (this), param2);
         }
         if (null != this.field_B) {
           for (var5 = -1 + this.field_B.length; 0 <= var5; var5--) {
             var6 = this.field_B[var5];
             if (var6 != null) {
-              var6.a(this.field_j + param0, param1, param2 + this.field_k, 0);
+              var6.drawLayer(this.field_j + param0, param1, param2 + this.field_k, 0);
             }
           }
         }
     }
 
-    private final void a(int param0, StringBuilder param1, boolean param2, Hashtable param3) {
+    private final void appendChildDebugTrees(int param0, StringBuilder param1, boolean param2, Hashtable param3) {
         int var6 = 0;
         StringBuilder discarded$6 = null;
         int var8 = 0;
@@ -444,7 +444,7 @@ abstract class eh extends UiWidget implements jf {
               discarded$8 = param1.append(' ');
             }
             if (var7 != null) {
-              var7.a(param3, param1, true, 1 + param0);
+              var7.appendDebugTree(param3, param1, true, 1 + param0);
             } else {
               discarded$7 = param1.append("null");
             }
@@ -488,7 +488,7 @@ abstract class eh extends UiWidget implements jf {
         }
         if (param0 != 57) {
           var6 = (UiWidget) null;
-          this.a((byte) 99, -77, (UiWidget) null);
+          this.focusBackwardBy((byte) 99, -77, (UiWidget) null);
         }
     }
 
@@ -532,7 +532,7 @@ abstract class eh extends UiWidget implements jf {
         }
     }
 
-    final boolean a(byte param0, int param1, UiWidget param2) {
+    final boolean focusBackwardBy(byte param0, int param1, UiWidget param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         UiWidget var5 = null;
@@ -554,7 +554,7 @@ abstract class eh extends UiWidget implements jf {
           while (0 <= var4_int) {
             var5 = this.field_B[var4_int];
             if (var5 != null &&
-              var5.e(-17741)) {
+              var5.isFocused(-17741)) {
               for (var4_int = var4_int - param1; var4_int >= 0; var4_int = var4_int - param1) {
                 var6 = this.field_B[var4_int];
                 if (var6 != null &&
@@ -584,7 +584,7 @@ abstract class eh extends UiWidget implements jf {
         super(param0, param1, param2, param3, param4, (sk) null);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
+    final void handlePointerRelease(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         int var8 = 0;
         UiWidget[] var7 = null;
         UiWidget var9 = null;
@@ -608,7 +608,7 @@ abstract class eh extends UiWidget implements jf {
           for (var8 = 0; var8 < var11.length; var8++) {
             var9 = var11[var8];
             if (var9 != null) {
-              var9.a(this.field_k + param0, 107, param2, param3, this.field_j + param4, param5);
+              var9.handlePointerRelease(this.field_k + param0, 107, param2, param3, this.field_j + param4, param5);
             }
           }
           return;
@@ -626,7 +626,7 @@ abstract class eh extends UiWidget implements jf {
         }
     }
 
-    final int c(int param0) {
+    final int getLastRenderPass(int param0) {
         int var4 = 0;
         int var2;
         UiWidget[] var3;
@@ -639,7 +639,7 @@ abstract class eh extends UiWidget implements jf {
         for (var4 = param0; var4 < var3.length; var4++) {
           var5 = var3[var4];
           if (var5 != null) {
-            var6 = var5.c(0);
+            var6 = var5.getLastRenderPass(0);
             if (var2 < var6) {
               var2 = var6;
             }
@@ -648,7 +648,7 @@ abstract class eh extends UiWidget implements jf {
         return var2;
     }
 
-    final boolean a(boolean param0, UiWidget param1, int param2) {
+    final boolean focusForwardBy(boolean param0, UiWidget param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         UiWidget var5 = null;
@@ -672,7 +672,7 @@ abstract class eh extends UiWidget implements jf {
             stackIn_7_0 = null;
             stackIn_7_1 = var5;
             if (stackIn_7_0 != stackIn_7_1 &&
-              var5.e(-17741)) {
+              var5.isFocused(-17741)) {
               for (var4_int = var4_int + param2; this.field_B.length > var4_int; var4_int = var4_int + param2) {
                 var6 = this.field_B[var4_int];
                 if (null != var6 &&
@@ -685,7 +685,7 @@ abstract class eh extends UiWidget implements jf {
           }
           if (!param0) {
             var8 = (oh) null;
-            eh.a((oh) null, (oh) null, (byte) -8);
+            eh.isSocialEntryOrderedAfter((oh) null, (oh) null, (byte) -8);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -702,11 +702,11 @@ abstract class eh extends UiWidget implements jf {
         }
     }
 
-    final boolean e(int param0) {
+    final boolean isFocused(int param0) {
         if (param0 != -17741) {
           field_A = 103;
         }
-        return null != this.d((byte) 100) ? true : false;
+        return null != this.getFocusedChild((byte) 100) ? true : false;
     }
 
     boolean requestKeyboardFocus(int param0, int param1, UiWidget param2, char param3) {
@@ -734,7 +734,7 @@ abstract class eh extends UiWidget implements jf {
           for (var7 = 0; var10.length > var7; var7++) {
             var8 = var10[var7];
             if (var8 != null &&
-              var8.e(-17741) &&
+              var8.isFocused(-17741) &&
               var8.requestKeyboardFocus(-123, param1, param2, param3)) {
               return true;
             }
@@ -744,9 +744,9 @@ abstract class eh extends UiWidget implements jf {
             return false;
           }
           if (bo.field_p[81]) {
-            stackIn_17_0 = this.a(param2, false);
+            stackIn_17_0 = this.focusPrecedingChild(param2, false);
           } else {
-            stackIn_17_0 = this.a(12139, param2);
+            stackIn_17_0 = this.focusFollowingChild(12139, param2);
           }
           return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

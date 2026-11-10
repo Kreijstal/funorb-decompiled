@@ -10,7 +10,7 @@ final class hf extends an {
     int field_K;
     private int field_J;
 
-    final int b(boolean param0) {
+    final int getMaximumValue(boolean param0) {
         if (param0) {
           String var3 = (String) null;
           hf.a(false, (java.applet.Applet) null, (String) null);
@@ -82,7 +82,7 @@ final class hf extends an {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
+    final boolean handlePointerPress(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         int var12 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
@@ -97,7 +97,7 @@ final class hf extends an {
         int var14 = 0;
         var14 = ZombieDawn.field_J;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
+          if (!super.handlePointerPress(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
           var8_int = -this.field_K + (-param4 + param0);
@@ -143,7 +143,7 @@ final class hf extends an {
         }
     }
 
-    final int a(byte param0, int param1) {
+    final int getHandleValue(byte param0, int param1) {
         if (param1 < 0 ||
           this.field_H.a(12) <= param1) {
           return -1;
@@ -169,9 +169,9 @@ final class hf extends an {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param3.a(param1, (byte) 8);
+          var5_int = param3.getGroupIdByName(param1, (byte) 8);
           var6 = 124 / ((param4 - 40) / 57);
-          var7 = param3.a(var5_int, param2, true);
+          var7 = param3.getFileIdByName(var5_int, param2, true);
           stackIn_1_0 = sn.a(var5_int, 90, param3, param0, var7);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -213,7 +213,7 @@ final class hf extends an {
         field_E = null;
     }
 
-    final int a(int param0) {
+    final int getHandleCount(int param0) {
         if (param0 >= -73) {
           field_E = (Sprite) null;
         }

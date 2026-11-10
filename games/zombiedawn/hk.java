@@ -17,7 +17,7 @@ final class hk extends WorldObject {
     static String field_P;
     static String[] field_J;
 
-    final void g(int param0) {
+    final void tick(int param0) {
         IntrusiveNode var2;
         int var3;
         int var4;
@@ -26,7 +26,7 @@ final class hk extends WorldObject {
         var5 = ZombieDawn.field_J;
         if (param0 < 95) {
           var6 = (Camera) null;
-          this.a((byte) -28, (Camera) null);
+          this.draw((byte) -28, (Camera) null);
         }
         int fieldTemp$0 = this.field_N;
         this.field_N = this.field_N - 1;
@@ -42,7 +42,7 @@ final class hk extends WorldObject {
         this.field_O = this.field_O + this.field_I;
         if (fp.field_H >= this.field_O) {
           if (ac.field_t <= this.field_O) {
-            var2 = Js5Archive.field_e.zombies.b((byte) 26);
+            var2 = Js5Archive.field_e.zombies.last((byte) 26);
             while (var2 instanceof WorldObject) {
               if (var2 instanceof Zombie) {
                 var3 = ((Zombie) (var2)).getX(true);
@@ -54,8 +54,8 @@ final class hk extends WorldObject {
                   !this.field_M &&
                   this.field_O > var3 &&
                   -120 + this.field_O < var3)) {
-                  ((Zombie) (var2)).z(0);
-                  ((Zombie) (var2)).q((byte) -108);
+                  ((Zombie) (var2)).takeLethalHit(0);
+                  ((Zombie) (var2)).deselect((byte) -108);
                   ((Zombie) (var2)).field_Gb = this.field_I * 7 >> 2;
                 }
               }
@@ -157,7 +157,7 @@ final class hk extends WorldObject {
         }
     }
 
-    final void a(byte param0, Camera param1) {
+    final void draw(byte param0, Camera param1) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -223,7 +223,7 @@ final class hk extends WorldObject {
         }
     }
 
-    final static void a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void addAnimatedTileDefinition(int param0, byte param1, int param2, int param3, int param4, int param5, int param6) {
         va[] var10 = null;
         va[] var7 = null;
         int var8 = 0;
@@ -254,8 +254,8 @@ final class hk extends WorldObject {
         field_F = null;
     }
 
-    final static void i(int param0) {
-        uf var1 = (uf) (ad.field_h.a(param0 - 1584));
+    final static void pushRasterState(int param0) {
+        uf var1 = (uf) (ad.field_h.removeFirst(param0 - 1584));
         if (var1 == null) {
           var1 = new uf();
         }

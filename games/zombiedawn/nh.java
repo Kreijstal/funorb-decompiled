@@ -18,7 +18,7 @@ final class nh extends hp implements hh {
     private int field_V;
     static GameApplet field_J;
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
+    final boolean handlePointerPress(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         RuntimeException var8 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -29,7 +29,7 @@ final class nh extends hp implements hh {
           if (param1 != 1) {
             this.blur((byte) -2);
           }
-          stackIn_3_0 = super.a(param0, 1, param2, param3, param4, param5, param6);
+          stackIn_3_0 = super.handlePointerPress(param0, 1, param2, param3, param4, param5, param6);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -50,30 +50,30 @@ final class nh extends hp implements hh {
         int var1 = -87 / ((64 - param0) / 49);
     }
 
-    final boolean e(int param0) {
+    final boolean isFocused(int param0) {
         boolean stackIn_7_0 = false;
         if (param0 != -17741) {
           field_J = (GameApplet) null;
         }
-        stackIn_7_0 = (this.field_S) || (super.e(-17741));
+        stackIn_7_0 = (this.field_S) || (super.isFocused(-17741));
         return stackIn_7_0;
     }
 
-    private final void c(int param0, int param1, int param2, int param3, int param4) {
+    private final void setDropdownBounds(int param0, int param1, int param2, int param3, int param4) {
         int discarded$0 = 0;
-        super.a(119, param1, param0, param2, param3);
-        this.field_N.a(44, 0, 0, -20 + param2, this.field_M);
-        this.field_Q.a(-79, 0, param2 - 20, 20, this.field_M);
+        super.setBounds(119, param1, param0, param2, param3);
+        this.field_N.setBounds(44, 0, 0, -20 + param2, this.field_M);
+        this.field_Q.setBounds(-79, 0, param2 - 20, 20, this.field_M);
         if (this.field_H) {
-          this.field_F.a(-107, this.field_M, 0, param2, -this.field_M + param3);
+          this.field_F.setBounds(-107, this.field_M, 0, param2, -this.field_M + param3);
         }
         if (param4 < 11) {
           String var7 = (String) null;
-          discarded$0 = this.a(28, (String) null);
+          discarded$0 = this.findItemStartingWith(28, (String) null);
         }
     }
 
-    private final int a(int param0, String param1) {
+    private final int findItemStartingWith(int param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -130,7 +130,7 @@ final class nh extends hp implements hh {
           if (param0 != 77) {
             field_G = 1;
           }
-          stackIn_3_0 = param1.c(10);
+          stackIn_3_0 = param1.supportsFullscreen(10);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -146,10 +146,10 @@ final class nh extends hp implements hh {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
         this.field_M = param4;
         int var6 = -42 % ((-23 - param0) / 48);
-        this.c(param2, param1, param3, param4, 81);
+        this.setDropdownBounds(param2, param1, param3, param4, 81);
     }
 
     final boolean requestKeyboardFocus(int param0, int param1, UiWidget param2, char param3) {
@@ -168,7 +168,7 @@ final class nh extends hp implements hh {
         var8 = ZombieDawn.field_J;
         try {
           var5_int = 44 % ((-83 - param0) / 32);
-          if (!this.e(-17741)) {
+          if (!this.isFocused(-17741)) {
             return false;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -180,9 +180,9 @@ final class nh extends hp implements hh {
                 param1 != 104) {
                 if (param1 == 84) {
                   if (this.field_H) {
-                    this.g((byte) -44);
+                    this.closeList((byte) -44);
                   } else {
-                    this.h((byte) -117);
+                    this.openList((byte) -117);
                   }
                   return true;
                 }
@@ -198,13 +198,13 @@ final class nh extends hp implements hh {
                 if ((decompiledFrameRemainder0) &&
                   (decompiledFrameRemainder0 = !(param3 >= 128))) {
                   var7 = this.field_U + param3;
-                  this.a(var7, (byte) -89);
+                  this.selectItemByPrefix(var7, (byte) -89);
                   return true;
                 }
               }
               if (decompiledFrameRemainder0) {
-                if (!this.e((byte) -109)) {
-                  this.h((byte) -115);
+                if (!this.isListOpen((byte) -109)) {
+                  this.openList((byte) -115);
                 }
                 var7_intLifetime1 = this.field_F.field_D.field_n / this.field_T.field_I;
                 if (param1 == 105) {
@@ -218,13 +218,13 @@ final class nh extends hp implements hh {
                 if (this.field_T.field_K >= var6) {
                   this.field_T.field_K = var6 - 1;
                 }
-                this.a(24);
+                this.scrollToSelection(24);
                 return true;
               }
             }
             if (decompiledFrameRemainder0) {
-              if (!this.e((byte) -43)) {
-                this.h((byte) -123);
+              if (!this.isListOpen((byte) -43)) {
+                this.openList((byte) -123);
               }
               if (param1 != 99) {
                 this.field_T.field_K = this.field_T.field_K - 1;
@@ -237,7 +237,7 @@ final class nh extends hp implements hh {
               if (var6 <= this.field_T.field_K) {
                 this.field_T.field_K = var6 - 1;
               }
-              this.a(24);
+              this.scrollToSelection(24);
               return true;
             }
           }
@@ -245,7 +245,7 @@ final class nh extends hp implements hh {
             stackIn_56_0 = super.requestKeyboardFocus(-119, param1, param2, param3);
             return stackIn_56_0;
           }
-          this.g((byte) -44);
+          this.closeList((byte) -44);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -266,37 +266,37 @@ final class nh extends hp implements hh {
         super.blur(param0);
     }
 
-    final boolean e(byte param0) {
+    final boolean isListOpen(byte param0) {
         if (param0 >= -10) {
           return true;
         }
         return this.field_H;
     }
 
-    final int h(int param0) {
+    final int getSelectedIndex(int param0) {
         if (param0 != 0) {
-          this.e(-95);
+          this.isFocused(-95);
         }
         return this.field_T.field_K;
     }
 
-    final void a(UiWidget param0, byte param1, int param2, int param3) {
+    final void updatePointer(UiWidget param0, byte param1, int param2, int param3) {
         try {
-          super.a(param0, (byte) -7, param2, param3);
+          super.updatePointer(param0, (byte) -7, param2, param3);
           int var5_int = 60 / ((param1 - 46) / 42);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "nh.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    private final void g(byte param0) {
+    private final void closeList(byte param0) {
         if (param0 != -44) {
           return;
         }
-        if (!this.e((byte) -84)) {
+        if (!this.isListOpen((byte) -84)) {
           return;
         }
-        this.c(this.field_k, this.field_j, this.field_i, this.field_M, 27);
+        this.setDropdownBounds(this.field_k, this.field_j, this.field_i, this.field_M, 27);
         this.field_H = false;
         this.field_F.unlink(-27598);
     }
@@ -314,39 +314,39 @@ final class nh extends hp implements hh {
           this.field_Q = new an();
           this.field_Q.field_h = (io) ((Object) new eb());
           this.field_Q.field_v = (sk) (this);
-          this.a(this.field_N, 10);
-          this.a(this.field_Q, 10);
+          this.addChild(this.field_N, 10);
+          this.addChild(this.field_Q, 10);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "nh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    private final void h(byte param0) {
-        int var2 = this.field_T.h(1227847265);
+    private final void openList(byte param0) {
+        int var2 = this.field_T.getContentHeight(1227847265);
         int var3 = var2;
         int var4 = 0;
         if (this.field_V < var3) {
           var3 = this.field_V;
           var4 = 1;
         }
-        this.c(this.field_k, this.field_j, this.field_i, var3 + this.field_M, 82);
-        this.field_T.a(-117, 0, 0, this.field_i, var2);
+        this.setDropdownBounds(this.field_k, this.field_j, this.field_i, var3 + this.field_M, 82);
+        this.field_T.setBounds(-117, 0, 0, this.field_i, var2);
         this.field_F = new qi(0, 0, 0, 0, new kh(), this.field_T, (io) null);
         if (var4 != 0) {
-          this.field_F.a(true, (byte) 100, wo.v(6130));
+          this.field_F.setVerticalScrollbar(true, (byte) 100, wo.createDefaultScrollbar(6130));
         }
-        this.field_F.a(-78, this.field_M, 0, this.field_i, this.field_n - this.field_M);
+        this.field_F.setBounds(-78, this.field_M, 0, this.field_i, this.field_n - this.field_M);
         this.field_H = true;
         if (param0 > -114) {
           return;
         }
-        this.a(this.field_F, 10);
-        this.a(24);
+        this.addChild(this.field_F, 10);
+        this.scrollToSelection(24);
     }
 
-    final void b(boolean param0) {
+    final void notifySelectionChanged(boolean param0) {
         if (!param0) {
-          this.e((byte) 82);
+          this.isListOpen((byte) 82);
         }
         if (this.field_v instanceof qa) {
           ((qa) ((Object) this.field_v)).a(-16510, this);
@@ -368,7 +368,7 @@ final class nh extends hp implements hh {
           this.field_U = "";
           if (null != this.field_v &&
             this.field_v instanceof ef) {
-            ((ef) (this.field_v)).a(this.field_S, (UiWidget) (this), (byte) 15);
+            ((ef) (this.field_v)).onFocusChanged(this.field_S, (UiWidget) (this), (byte) 15);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -416,7 +416,7 @@ final class nh extends hp implements hh {
         }
     }
 
-    private final void a(int param0) {
+    private final void scrollToSelection(int param0) {
         int var2;
         int var3;
         int var4;
@@ -427,7 +427,7 @@ final class nh extends hp implements hh {
         String var9;
         int var7Lifetime1;
         int var8Lifetime1;
-        if (!this.e((byte) -127)) {
+        if (!this.isListOpen((byte) -127)) {
           return;
         }
         if (this.field_T.field_K != -1 &&
@@ -451,7 +451,7 @@ final class nh extends hp implements hh {
           }
           if (param0 != 24) {
             var9 = (String) null;
-            this.a((String) null, (byte) 100);
+            this.selectItemByPrefix((String) null, (byte) 100);
           }
           var7Lifetime1 = (3 * var2 >> 2) - var3;
           if (var6 > var7Lifetime1) {
@@ -465,39 +465,39 @@ final class nh extends hp implements hh {
         }
     }
 
-    private final void a(String param0, byte param1) {
+    private final void selectItemByPrefix(String param0, byte param1) {
         if (this.field_T.field_L == null) {
           return;
         }
         int var4 = 31 / ((param1 - 47) / 48);
-        int var3_int = this.a(-129, param0.toLowerCase());
+        int var3_int = this.findItemStartingWith(-129, param0.toLowerCase());
         if (var3_int == -1) {
           return;
         }
         try {
           this.field_T.field_K = var3_int;
-          this.a(24);
+          this.scrollToSelection(24);
           this.field_U = param0;
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "nh.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final String d(int param0) {
+    final String getTooltip(int param0) {
         int var2;
         if (!this.field_l) {
           return null;
         }
-        if (this.e((byte) -57) &&
+        if (this.isListOpen((byte) -57) &&
           this.field_F.field_l &&
           this.field_T.field_O != -1) {
           return this.field_T.field_L[this.field_T.field_O].toString();
         }
-        if (null != this.field_T.g(0)) {
-          return this.field_T.g(0).toString();
+        if (null != this.field_T.getSelectedItem(0)) {
+          return this.field_T.getSelectedItem(0).toString();
         }
         var2 = 49 % ((10 - param0) / 58);
-        return super.d(-89);
+        return super.getTooltip(-89);
     }
 
     public final void onButtonActivated(int param0, int param1, an param2, int param3, int param4) {
@@ -507,10 +507,10 @@ final class nh extends hp implements hh {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         try {
-          if (!this.e((byte) -48)) {
-            this.h((byte) -122);
+          if (!this.isListOpen((byte) -48)) {
+            this.openList((byte) -122);
           } else {
-            this.g((byte) -44);
+            this.closeList((byte) -44);
           }
           if (param1 != -6) {
             this.field_U = (String) null;

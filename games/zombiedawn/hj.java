@@ -42,7 +42,7 @@ final class hj {
         var2 = this.field_i.length;
         System.arraycopy(this.field_i, 0, field_c, 0, var2);
         var3 = field_h[this.field_e - 1];
-        var4 = IterableNodeHashTable.a(var3 - 1, (byte) -109);
+        var4 = IterableNodeHashTable.bitLength(var3 - 1, (byte) -109);
         field_l[0] = mb.readBits(var4);
         field_l[1] = mb.readBits(var4);
         var5 = 2;

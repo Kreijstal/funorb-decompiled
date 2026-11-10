@@ -37,7 +37,7 @@ class DualLinkNode extends IntrusiveNode {
         field_l = null;
     }
 
-    final static boolean c(int param0) {
+    final static boolean isEmailLoginSelected(int param0) {
         if (param0 != 0) {
           return false;
         }

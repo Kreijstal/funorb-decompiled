@@ -3,19 +3,19 @@
  */
 import java.util.*;
 
-final class pi extends dh implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
+final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
     static long field_i;
     static bm field_l;
     private java.awt.image.ColorModel field_j;
     private java.awt.image.ImageConsumer field_h;
     static int[] field_k;
 
-    final void a(java.awt.Graphics param0, int param1, int param2, byte param3) {
+    final void drawImage(java.awt.Graphics param0, int param1, int param2, byte param3) {
         try {
-          this.a((byte) 105);
+          this.pushPixels((byte) 105);
           param0.drawImage(this.field_f, param2, param1, (java.awt.image.ImageObserver) (this));
           if (param3 != 58) {
-            pi.a(82, 39, (int[]) null, -71, (byte) 97, 95, -74, -52, -27, -83, -68, 66, 42, -121, 2, -104, -2);
+            ImageProducerRasterBuffer.fillGouraudTriangle(82, 39, (int[]) null, -71, (byte) 97, 95, -74, -52, -27, -83, -68, 66, 42, -121, 2, -104, -2);
           }
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "pi.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -57,7 +57,7 @@ final class pi extends dh implements java.awt.image.ImageProducer, java.awt.imag
     public final void requestTopDownLeftRightResend(java.awt.image.ImageConsumer param0) {
     }
 
-    final static void a(int param0, int param1, int[] param2, int param3, byte param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
+    final static void fillGouraudTriangle(int param0, int param1, int[] param2, int param3, byte param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
         int var17_int = 0;
         int var18 = 0;
         int var19 = 0;
@@ -188,7 +188,7 @@ final class pi extends dh implements java.awt.image.ImageProducer, java.awt.imag
                     if (0 == var38) {
                       if (var37 >= 0 &&
                         en.field_g > var37) {
-                        fg.a(var21, 0, 0, var38, var29, 61653921, var36Lifetime2 + var37, 0, var25, param2);
+                        fg.blendGradientSpanHalf(var21, 0, 0, var38, var29, 61653921, var36Lifetime2 + var37, 0, var25, param2);
                       }
                     } else {
                       var39 = (-var21 + var22) / var38;
@@ -198,9 +198,9 @@ final class pi extends dh implements java.awt.image.ImageProducer, java.awt.imag
                         var38 = -1 - var37 + en.field_g;
                       }
                       if (var37 >= 0) {
-                        fg.a(var21, var41, var39, var38, var29, 61653921, var36Lifetime2 + var37, var40, var25, param2);
+                        fg.blendGradientSpanHalf(var21, var41, var39, var38, var29, 61653921, var36Lifetime2 + var37, var40, var25, param2);
                       } else {
-                        fg.a(-(var39 * var37) + var21, var41, var39, var37 + var38, -(var41 * var37) + var29, param4 ^ -61653959, var36Lifetime2, var40, var25 - var40 * var37, param2);
+                        fg.blendGradientSpanHalf(-(var39 * var37) + var21, var41, var39, var37 + var38, -(var41 * var37) + var29, param4 ^ -61653959, var36Lifetime2, var40, var25 - var40 * var37, param2);
                       }
                     }
                   }
@@ -349,14 +349,14 @@ final class pi extends dh implements java.awt.image.ImageProducer, java.awt.imag
                     var37Lifetime1 = -var36Lifetime1 + en.field_g - 1;
                   }
                   if (0 <= var36Lifetime1) {
-                    fg.a(var21, var40Lifetime1, var38Lifetime1, var37Lifetime1, var29, param4 ^ -61653959, var36Lifetime1 + var35Lifetime1, var39Lifetime1, var25, param2);
+                    fg.blendGradientSpanHalf(var21, var40Lifetime1, var38Lifetime1, var37Lifetime1, var29, param4 ^ -61653959, var36Lifetime1 + var35Lifetime1, var39Lifetime1, var25, param2);
                   } else {
-                    fg.a(var21 - var36Lifetime1 * var38Lifetime1, var40Lifetime1, var38Lifetime1, var37Lifetime1 + var36Lifetime1, -(var36Lifetime1 * var40Lifetime1) + var29, 61653921, var35Lifetime1, var39Lifetime1, -(var39Lifetime1 * var36Lifetime1) + var25, param2);
+                    fg.blendGradientSpanHalf(var21 - var36Lifetime1 * var38Lifetime1, var40Lifetime1, var38Lifetime1, var37Lifetime1 + var36Lifetime1, -(var36Lifetime1 * var40Lifetime1) + var29, 61653921, var35Lifetime1, var39Lifetime1, -(var39Lifetime1 * var36Lifetime1) + var25, param2);
                   }
                 } else {
                   if (var36Lifetime1 >= 0 &&
                     en.field_g > var36Lifetime1) {
-                    fg.a(var21, 0, 0, var37Lifetime1, var29, 61653921, var35Lifetime1 + var36Lifetime1, 0, var25, param2);
+                    fg.blendGradientSpanHalf(var21, 0, 0, var37Lifetime1, var29, 61653921, var35Lifetime1 + var36Lifetime1, 0, var25, param2);
                   }
                 }
               }
@@ -403,11 +403,11 @@ final class pi extends dh implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    final static void a(byte param0, int param1, nn param2) {
+    final static void writeHighscoreRequest(byte param0, int param1, nn param2) {
         am var3 = null;
         try {
           var3 = dp.field_e;
-          var3.j(param0 - 14, param1);
+          var3.writeCipheredByte(param0 - 14, param1);
           var3.writeByte(param2.field_h, 120);
           if (param0 != 25) {
             field_k = (int[]) null;
@@ -418,7 +418,7 @@ final class pi extends dh implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    private final synchronized void a(byte param0) {
+    private final synchronized void pushPixels(byte param0) {
         if (null != this.field_h) {
           this.field_h.setPixels(0, 0, this.field_d, this.field_a, this.field_j, this.field_c, 0, this.field_d);
           this.field_h.imageComplete(2);
@@ -427,7 +427,7 @@ final class pi extends dh implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    pi() {
+    ImageProducerRasterBuffer() {
     }
 
     public static void releaseStatics(int param0) {
@@ -435,11 +435,11 @@ final class pi extends dh implements java.awt.image.ImageProducer, java.awt.imag
         field_l = null;
         if (param0 != -1) {
           nn var2 = (nn) null;
-          pi.a((byte) 111, 106, (nn) null);
+          ImageProducerRasterBuffer.writeHighscoreRequest((byte) 111, 106, (nn) null);
         }
     }
 
-    final static void a(int param0, int param1, byte param2) {
+    final static void incrementTileOccupancy(int param0, int param1, byte param2) {
         int[] dupTemp$1 = null;
         param0 = param0 / 24;
         param1 = param1 / 24;
@@ -456,7 +456,7 @@ final class pi extends dh implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    final static f[] a(int param0, am param1) {
+    final static f[] readMeshMaterials(int param0, am param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -472,25 +472,25 @@ final class pi extends dh implements java.awt.image.ImageProducer, java.awt.imag
         RuntimeException decompiledCaughtException = null;
         var7 = ZombieDawn.field_J;
         try {
-          var2_int = param1.k(127, 8);
+          var2_int = param1.readBits(127, 8);
           if (var2_int > 0) {
             return null;
           }
-          var3 = param1.k(param0 ^ 100, param0);
+          var3 = param1.readBits(param0 ^ 100, param0);
           var4 = new f[var3];
           for (var5 = 0; var3 > var5; var5++) {
             if (!dg.a(param1, false)) {
-              var6 = param1.k(40, gf.a(-1 + var5, 21));
+              var6 = param1.readBits(40, gf.a(-1 + var5, 21));
               var4[var5] = var4[var6];
             } else {
               var6_ref_f = new f();
-              param1.k(param0 ^ 82, 24);
-              param1.k(108, 24);
-              var6_ref_f.field_h = param1.k(91, 24);
-              param1.k(54, 9);
-              param1.k(116, 12);
-              param1.k(118, 12);
-              param1.k(param0 + 58, 12);
+              param1.readBits(param0 ^ 82, 24);
+              param1.readBits(108, 24);
+              var6_ref_f.field_h = param1.readBits(91, 24);
+              param1.readBits(54, 9);
+              param1.readBits(116, 12);
+              param1.readBits(118, 12);
+              param1.readBits(param0 + 58, 12);
               var4[var5] = var6_ref_f;
             }
           }
@@ -510,21 +510,21 @@ final class pi extends dh implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    final void a(int param0, int param1, java.awt.Component param2, int param3) {
+    final void initialize(int param0, int param1, java.awt.Component param2, int param3) {
         try {
           this.field_a = param0;
           this.field_d = param1;
           this.field_c = new int[1 + param1 * param0];
           this.field_j = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
           this.field_f = param2.createImage((java.awt.image.ImageProducer) (this));
-          this.a((byte) 112);
+          this.pushPixels((byte) 112);
           param2.prepareImage(this.field_f, (java.awt.image.ImageObserver) (this));
-          this.a((byte) 7);
+          this.pushPixels((byte) 7);
           if (param3 != -11055) {
             field_i = 5L;
           }
           param2.prepareImage(this.field_f, (java.awt.image.ImageObserver) (this));
-          this.a((byte) -128);
+          this.pushPixels((byte) -128);
           param2.prepareImage(this.field_f, (java.awt.image.ImageObserver) (this));
           this.makeRasterTarget(-127);
         } catch (RuntimeException runtimeException) {

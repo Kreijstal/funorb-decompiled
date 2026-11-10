@@ -6,16 +6,16 @@ abstract class ln {
     static String[] field_a;
     static int field_b;
 
-    final int a(long param0, int param1) {
-        long var4 = this.a((byte) -112);
+    final int waitAndAdvanceTicks(long param0, int param1) {
+        long var4 = this.delayMillis((byte) -112);
         if (var4 <= (long)param1) {
-          return this.a(-99, param0);
+          return this.advanceTicks(-99, param0);
         }
         ld.a(var4, (byte) 122);
-        return this.a(-99, param0);
+        return this.advanceTicks(-99, param0);
     }
 
-    final static aa a(boolean param0, int param1) {
+    final static aa readChatMessage(boolean param0, int param1) {
         boolean stackIn_3_0 = false;
         int stackIn_9_0 = 0;
         int[] stackIn_22_0 = null;
@@ -41,35 +41,35 @@ abstract class ln {
           td.field_a = 0;
           ep.field_i = 0;
         } else {
-          ep.field_i = var3.f(2);
+          ep.field_i = var3.readUnsignedShort(2);
           td.field_a = var3.readUnsignedMedium(-1875);
         }
         stackIn_9_0 = (1 != var3.readUnsignedByte((byte) -115)) ? 0 : 1;
         var5 = stackIn_9_0;
-        ea.field_b = var3.a(true);
+        ea.field_b = var3.readNullTerminatedString(true);
         if (var5 != 0) {
-          af.field_a = var3.a(true);
+          af.field_a = var3.readNullTerminatedString(true);
         } else {
           af.field_a = ea.field_b;
         }
         if (cg.field_e == 1) {
-          var3.f(2);
-          var3.a(true);
+          var3.readUnsignedShort(2);
+          var3.readNullTerminatedString(true);
         } else {
           if (cg.field_e == 4) {
-            var3.f(2);
-            var3.a(true);
+            var3.readUnsignedShort(2);
+            var3.readNullTerminatedString(true);
           }
         }
         if (!param0) {
-          ge.field_a = jj.a(80, -23171, var3);
+          ge.field_a = jj.readCompressedString(80, -23171, var3);
           vk.field_d = null;
           return new aa(param0);
         }
-        var6 = var3.f(2);
+        var6 = var3.readUnsignedShort(2);
         try {
           var9 = pa.field_y.a(75, var6);
-          ge.field_a = var9.e(80);
+          ge.field_a = var9.getPreview(80);
           if (!af.field_a.equals(ce.field_r)) {
             stackIn_22_0 = var9.field_u;
           } else {
@@ -87,9 +87,9 @@ abstract class ln {
         return new aa(param0);
     }
 
-    abstract void a(boolean param0);
+    abstract void resetTiming(boolean param0);
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_a = null;
         if (param0 != -5) {
@@ -97,11 +97,11 @@ abstract class ln {
         }
     }
 
-    abstract long a(byte param0);
+    abstract long delayMillis(byte param0);
 
-    abstract int a(int param0, long param1);
+    abstract int advanceTicks(int param0, long param1);
 
-    final static void a(int param0, int param1, String param2, String[] param3) {
+    final static void setAccountCreationResultMessage(int param0, int param1, String param2, String[] param3) {
         int var5 = 0;
         int stackIn_4_0 = 0;
         boolean stackIn_5_1 = false;
@@ -117,12 +117,12 @@ abstract class ln {
           fk.field_F = hm.field_H;
           if (param0 != 255) {
             if (param0 < 100) {
-              mp.field_f = te.a(param2, -13466, param0);
+              mp.field_f = te.createResponseWithMessage(param2, -13466, param0);
             } else {
               if (param0 <= 105) {
-                mp.field_f = ao.a(param3, -91);
+                mp.field_f = ao.createResponseWithLines(param3, -91);
               } else {
-                mp.field_f = te.a(param2, -13466, param0);
+                mp.field_f = te.createResponseWithMessage(param2, -13466, param0);
               }
             }
           } else {

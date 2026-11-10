@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uo {
+final class IsaacCipher {
     private int field_e;
     private int[] field_i;
     private int field_c;
@@ -15,37 +15,37 @@ final class uo {
 
     public static void releaseStatics(int param0) {
         if (param0 != -1640531527) {
-          uo.releaseStatics(-56);
+          IsaacCipher.releaseStatics(-56);
         }
         field_a = null;
     }
 
-    final static void a(boolean param0, int param1, boolean param2) {
+    final static void drawOverlayBackdrop(boolean param0, int param1, boolean param2) {
         if (param0) {
           Rasterizer.fillRectangleBlended(0, 0, Rasterizer.width, Rasterizer.height, 0, 192);
         } else {
           Rasterizer.clear();
         }
         if (param1 != -28518) {
-          uo.a(true, 65, false);
+          IsaacCipher.drawOverlayBackdrop(true, 65, false);
         }
         rc.a(param0, (byte) -120);
     }
 
-    final int a(int param0) {
+    final int nextInt(int param0) {
         if (this.field_e == 0) {
-          this.a(true);
+          this.generateResults(true);
           this.field_e = 256;
         }
         if (param0 < 13) {
-          this.a(32);
+          this.nextInt(32);
         }
         int fieldTemp$0 = this.field_e - 1;
         this.field_e = this.field_e - 1;
         return this.field_i[fieldTemp$0];
     }
 
-    private final void a(boolean param0) {
+    private final void generateResults(boolean param0) {
         int var2 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -54,7 +54,7 @@ final class uo {
         int var5;
         var5 = ZombieDawn.field_J;
         if (!param0) {
-          this.a(-79);
+          this.nextInt(-79);
         }
         int fieldTemp$0 = this.field_g + 1;
         this.field_g = this.field_g + 1;
@@ -84,7 +84,7 @@ final class uo {
         }
     }
 
-    uo(int[] param0) {
+    IsaacCipher(int[] param0) {
         int var2_int = 0;
         try {
           this.field_i = new int[256];
@@ -92,13 +92,13 @@ final class uo {
           for (var2_int = 0; param0.length > var2_int; var2_int++) {
             this.field_i[var2_int] = param0[var2_int];
           }
-          this.b(20196);
+          this.initialize(20196);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "uo.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void b(int param0) {
+    private final void initialize(int param0) {
         int var2 = 0;
         int var11 = ZombieDawn.field_J;
         int var10 = -1640531527;
@@ -221,9 +221,9 @@ final class uo {
           this.field_f[6 + var2Lifetime2] = var9;
           this.field_f[7 + var2Lifetime2] = var10;
         }
-        this.a(true);
+        this.generateResults(true);
         if (param0 != 20196) {
-          uo.releaseStatics(121);
+          IsaacCipher.releaseStatics(121);
         }
         this.field_e = 256;
     }

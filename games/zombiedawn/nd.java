@@ -194,7 +194,7 @@ final class nd {
         int var4 = 0;
         try {
           var5 = dp.field_e;
-          var5.j(param1 ^ 10, param0);
+          var5.writeCipheredByte(param1 ^ 10, param0);
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte(param1, 35);

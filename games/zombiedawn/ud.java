@@ -6,10 +6,10 @@ final class ud implements io {
     static String field_a;
     private nh field_b;
 
-    final static qg createProxyConnector(String param0, byte param1, int param2) {
-        se var3 = null;
+    final static SocketConnector createProxyConnector(String param0, byte param1, int param2) {
+        ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
-        se stackIn_3_0 = null;
+        ProxySocketConnector stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -18,11 +18,11 @@ final class ud implements io {
           if (param1 != 68) {
             field_c = (java.awt.Color) null;
           }
-          var3 = new se();
-          ((qg) ((Object) var3)).field_e = param0;
-          ((qg) ((Object) var3)).field_b = param2;
+          var3 = new ProxySocketConnector();
+          ((SocketConnector) ((Object) var3)).field_e = param0;
+          ((SocketConnector) ((Object) var3)).field_b = param2;
           stackIn_3_0 = var3;
-          return (qg) ((Object) stackIn_3_0);
+          return (SocketConnector) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -37,7 +37,7 @@ final class ud implements io {
         }
     }
 
-    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
+    public final void drawWidget(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -55,15 +55,15 @@ final class ud implements io {
           if (param0 != 16777215) {
             field_c = (java.awt.Color) null;
           }
-          if (param3.e(-17741)) {
-            TileMap.b(param3.field_i - 4, -4 + param3.field_n, var6_int + 2, param0 ^ 16777172, var7 + 2);
+          if (param3.isFocused(-17741)) {
+            TileMap.drawDottedRectangle(param3.field_i - 4, -4 + param3.field_n, var6_int + 2, param0 ^ 16777172, var7 + 2);
           }
           Rasterizer.setClip(var6_int, var7, -2 + param3.field_i + var6_int, var7 + param3.field_n);
-          var8 = this.field_b.field_T.g(0);
+          var8 = this.field_b.field_T.getSelectedItem(0);
           if (var8 != null) {
             var9 = var8.toString();
             this.field_b.field_L.drawString(var9, 2 + var6_int, (this.field_b.field_L.field_I + param3.field_n >> 1) + (var7 - 1), 10000536, -1);
-            if (this.field_b.e(param0 ^ -16759476) &&
+            if (this.field_b.isFocused(param0 ^ -16759476) &&
               var9.startsWith(this.field_b.field_U)) {
               var10 = this.field_b.field_L.textWidth(this.field_b.field_U);
               Rasterizer.fillRectangleBlended(2 + var6_int, 2 + var7, var10, -4 + param3.field_n, 2188450, 100);
@@ -157,11 +157,11 @@ final class ud implements io {
         int[] var10 = null;
         var7 = ZombieDawn.field_J;
         try {
-          if (!param1.c(10)) {
+          if (!param1.supportsFullscreen(10)) {
             stackIn_4_0 = new re[]{};
             return stackIn_4_0;
           }
-          var8 = param1.a(param0 - 1);
+          var8 = param1.requestDisplayModes(param0 - 1);
           while (var8.status == 0) {
             ld.a(10L, (byte) 84);
           }

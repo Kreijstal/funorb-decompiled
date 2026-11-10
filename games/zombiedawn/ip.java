@@ -13,7 +13,7 @@ final class ip extends PcmStream {
     static boolean[] field_q;
     static Sprite[] field_p;
 
-    final static void c(int param0) {
+    final static void resetBackdropActors(int param0) {
         int var5 = 0;
         int var1_int = 0;
         int var2 = 0;
@@ -61,7 +61,7 @@ final class ip extends PcmStream {
         }
     }
 
-    private final void a(int[] param0, lf param1, int param2, byte param3, int param4, int param5) {
+    private final void mixNoteFrames(int[] param0, lf param1, int param2, byte param3, int param4, int param5) {
         rj stackIn_13_0 = null;
         lf stackIn_13_1 = null;
         int stackIn_13_2 = 0;
@@ -101,22 +101,22 @@ final class ip extends PcmStream {
               }
               var11 = param1.field_E;
               if (0 != this.field_n.field_O[param1.field_z]) {
-                param1.field_E = PcmSampleStream.createAtStepQ8(param1.field_s, var11.m(), 0, var11.g());
+                param1.field_E = PcmSampleStream.createAtStepQ8(param1.field_s, var11.getSampleStepMagnitude(), 0, var11.panQ14());
                 stackIn_13_0 = this.field_n;
                 stackIn_13_1 = (lf) (param1);
                 stackIn_13_2 = 124;
                 stackIn_14_3 = !(param1.field_u.field_j[param1.field_i] >= 0);
-                ((rj) (Object) stackIn_13_0).a(stackIn_13_1, stackIn_13_2, stackIn_14_3);
-                param1.field_E.b(var9, var11.k());
+                ((rj) (Object) stackIn_13_0).applyNoteSampleOffset(stackIn_13_1, stackIn_13_2, stackIn_14_3);
+                param1.field_E.rampVolumeQ6(var9, var11.getTargetVolumeQ6());
               } else {
-                param1.field_E = PcmSampleStream.createAtStepQ8(param1.field_s, var11.m(), var11.k(), var11.g());
+                param1.field_E = PcmSampleStream.createAtStepQ8(param1.field_s, var11.getSampleStepMagnitude(), var11.getTargetVolumeQ6(), var11.panQ14());
               }
               if (param1.field_u.field_j[param1.field_i] < 0) {
-                param1.field_E.e(-1);
+                param1.field_E.setLoopCount(-1);
               }
               var11.fadeOutAndUnlink(var9);
               var11.fill(param0, param2, param5 - param2);
-              if (!var11.f()) {
+              if (!var11.hasRemainingRampFrames()) {
                 continue;
               }
               this.field_m.addSubstream(var11);
@@ -152,7 +152,7 @@ final class ip extends PcmStream {
         int var2;
         var2 = ZombieDawn.field_J;
         while (true) {
-          var1 = (lf) (this.field_s.a(false));
+          var1 = (lf) (this.field_s.previous(false));
           if (var1 == null) {
             return null;
           }
@@ -162,7 +162,7 @@ final class ip extends PcmStream {
         }
     }
 
-    final static ek a(int param0, int param1, int param2, boolean param3) {
+    final static ek acquirePooledEffect(int param0, int param1, int param2, boolean param3) {
         ek var4 = (ek) (td.field_c.removeLast(32));
         if (!param3) {
           return (ek) null;
@@ -170,11 +170,11 @@ final class ip extends PcmStream {
         if (var4 == null) {
           var4 = new ek();
         }
-        var4.a(param1, param0, param2, 2011722288);
+        var4.spawnAt(param1, param0, param2, 2011722288);
         return var4;
     }
 
-    private final void a(lf param0, int param1, int param2) {
+    private final void skipNoteFrames(lf param0, int param1, int param2) {
         rj stackIn_9_0 = null;
         lf stackIn_9_1 = null;
         int stackIn_9_2 = 0;
@@ -197,17 +197,17 @@ final class ip extends PcmStream {
             param0.field_D = 1048575 & param1 * var4_int + param0.field_D;
             if (var5 <= param1) {
               if (this.field_n.field_O[param0.field_z] == 0) {
-                param0.field_E = PcmSampleStream.createAtStepQ8(param0.field_s, param0.field_E.m(), param0.field_E.k(), param0.field_E.g());
+                param0.field_E = PcmSampleStream.createAtStepQ8(param0.field_s, param0.field_E.getSampleStepMagnitude(), param0.field_E.getTargetVolumeQ6(), param0.field_E.panQ14());
               } else {
-                param0.field_E = PcmSampleStream.createAtStepQ8(param0.field_s, param0.field_E.m(), 0, param0.field_E.g());
+                param0.field_E = PcmSampleStream.createAtStepQ8(param0.field_s, param0.field_E.getSampleStepMagnitude(), 0, param0.field_E.panQ14());
                 stackIn_9_0 = this.field_n;
                 stackIn_9_1 = (lf) (param0);
                 stackIn_9_2 = param2 ^ 26145;
                 stackIn_10_3 = !(param0.field_u.field_j[param0.field_i] >= 0);
-                ((rj) (Object) stackIn_9_0).a(stackIn_9_1, stackIn_9_2, stackIn_10_3);
+                ((rj) (Object) stackIn_9_0).applyNoteSampleOffset(stackIn_9_1, stackIn_9_2, stackIn_10_3);
               }
               if (param0.field_u.field_j[param0.field_i] < 0) {
-                param0.field_E.e(-1);
+                param0.field_E.setLoopCount(-1);
               }
               param1 = param0.field_D / var4_int;
             }
@@ -229,7 +229,7 @@ final class ip extends PcmStream {
     }
 
     final PcmStream firstSubstream() {
-        lf var1 = (lf) (this.field_s.b((byte) 26));
+        lf var1 = (lf) (this.field_s.last((byte) 26));
         if (var1 == null) {
           return null;
         }
@@ -239,7 +239,7 @@ final class ip extends PcmStream {
         return this.nextSubstream();
     }
 
-    final static String a(int param0, boolean param1, CharSequence param2) {
+    final static String getDisplayNameValidationMessage(int param0, boolean param1, CharSequence param2) {
         int var6 = 0;
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
@@ -332,28 +332,28 @@ final class ip extends PcmStream {
         var7 = ZombieDawn.field_J;
         try {
           this.field_m.fill(param0, param1, param2);
-          var6 = (lf) (this.field_s.b((byte) 26));
+          var6 = (lf) (this.field_s.last((byte) 26));
           while (var6 != null) {
-            stackIn_4_0 = this.field_n.b(30296, var6);
+            stackIn_4_0 = this.field_n.discardInactiveVoice(30296, var6);
             boolean decompiledFrameCompleted0 = true;
             if (!stackIn_4_0) {
               var5 = param2;
               var4_int = param1;
               while (var6.field_r < var5) {
-                this.a(param0, var6, var4_int, (byte) 0, var6.field_r, var5 + var4_int);
+                this.mixNoteFrames(param0, var6, var4_int, (byte) 0, var6.field_r, var5 + var4_int);
                 var5 = var5 - var6.field_r;
                 var4_int = var4_int + var6.field_r;
-                if (this.field_n.a(-32464, var4_int, var6, param0, var5)) {
+                if (this.field_n.updateNote(-32464, var4_int, var6, param0, var5)) {
                   decompiledFrameCompleted0 = false;
                   break;
                 }
               }
               if (decompiledFrameCompleted0) {
-                this.a(param0, var6, var4_int, (byte) 0, var5, var4_int + var5);
+                this.mixNoteFrames(param0, var6, var4_int, (byte) 0, var5, var4_int + var5);
                 var6.field_r = var6.field_r - var5;
               }
             }
-            var6 = (lf) (this.field_s.a(false));
+            var6 = (lf) (this.field_s.previous(false));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -370,7 +370,7 @@ final class ip extends PcmStream {
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int roundUpToMultipleOfEight(int param0, int param1) {
         int var2 = 0;
         if (param1 != -1) {
           field_l = (PacketBuffer) null;
@@ -399,21 +399,21 @@ final class ip extends PcmStream {
         int var4;
         var4 = ZombieDawn.field_J;
         this.field_m.skip(param0);
-        var3 = (lf) (this.field_s.b((byte) 26));
+        var3 = (lf) (this.field_s.last((byte) 26));
         while (var3 != null) {
-          if (!this.field_n.b(30296, var3)) {
+          if (!this.field_n.discardInactiveVoice(30296, var3)) {
             var2 = param0;
             do {
               if (var3.field_r >= var2) {
-                this.a(var3, var2, -26206);
+                this.skipNoteFrames(var3, var2, -26206);
                 var3.field_r = var3.field_r - var2;
                 break;
               }
-              this.a(var3, var3.field_r, -26206);
+              this.skipNoteFrames(var3, var3.field_r, -26206);
               var2 = var2 - var3.field_r;
-            } while (!this.field_n.a(-32464, 0, var3, (int[]) null, var2));
+            } while (!this.field_n.updateNote(-32464, 0, var3, (int[]) null, var2));
           }
-          var3 = (lf) (this.field_s.a(false));
+          var3 = (lf) (this.field_s.previous(false));
         }
     }
 

@@ -14,16 +14,16 @@ class tb extends an {
     private long field_J;
     static Js5Archive field_K;
 
-    private final void c(boolean param0) {
+    private final void notifyTextSubmitted(boolean param0) {
         if (this.field_v instanceof ok) {
-          ((ok) (this.field_v)).b(this, -19);
+          ((ok) (this.field_v)).onTextSubmitted(this, -19);
         }
         if (param0) {
           this.field_J = -25L;
         }
     }
 
-    private final int b(boolean param0) {
+    private final int previousWordBoundary(boolean param0) {
         int var2;
         int var3;
         var3 = ZombieDawn.field_J;
@@ -42,22 +42,22 @@ class tb extends an {
         return var2;
     }
 
-    private final void g(byte param0) {
+    private final void cutSelection(byte param0) {
         if (param0 >= -1) {
-          this.j(-105);
+          this.clearText(-105);
         }
-        this.k(-127);
-        this.h(121);
+        this.copySelectionToClipboard(-127);
+        this.deleteSelection(121);
     }
 
-    final static Sprite[] c(int param0, int param1, int param2, int param3) {
+    final static Sprite[] createSolidFrameSprites(int param0, int param1, int param2, int param3) {
         if (param2 != -2967) {
           return (Sprite[]) null;
         }
         return kj.a(1, param1, 12692, param3, param0);
     }
 
-    final void a(boolean param0, boolean param1, String param2) {
+    final void setText(boolean param0, boolean param1, String param2) {
         int dupTemp$1 = 0;
         int var4_int = 0;
         RuntimeException stackIn_13_0 = null;
@@ -82,7 +82,7 @@ class tb extends an {
             return;
           }
           if (!param1) {
-            this.d((byte) 77);
+            this.notifyTextChanged((byte) 77);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -99,7 +99,7 @@ class tb extends an {
         }
     }
 
-    private final void h(int param0) {
+    private final void deleteSelection(int param0) {
         int var3 = 0;
         int var2 = 0;
         int var2Lifetime1;
@@ -109,29 +109,29 @@ class tb extends an {
           this.field_H = var2;
           this.field_N = var2;
           this.field_o = this.field_o.substring(0, var2) + this.field_o.substring(var3, this.field_o.length());
-          this.d((byte) -113);
+          this.notifyTextChanged((byte) -113);
         }
         var2Lifetime1 = -113 % ((param0 + 26) / 49);
     }
 
-    final void j(int param0) {
+    final void clearText(int param0) {
         this.field_o = "";
         this.field_H = 0;
         this.field_N = param0;
-        this.d((byte) 119);
+        this.notifyTextChanged((byte) 119);
     }
 
-    void a(UiWidget param0, byte param1, int param2, int param3) {
+    void updatePointer(UiWidget param0, byte param1, int param2, int param3) {
         ak var6 = null;
         int var7 = 0;
         try {
           int var5_int = 108 / ((46 - param1) / 42);
-          super.a(param0, (byte) 119, param2, param3);
-          this.i(-94);
+          super.updatePointer(param0, (byte) 119, param2, param3);
+          this.scrollCaretIntoView(-94);
           if (1 == this.field_m) {
             if (this.field_h instanceof ak) {
               var6 = (ak) ((Object) this.field_h);
-              var7 = var6.a((UiWidget) (this), -1, param2, ha.field_b, ei.field_K, param3);
+              var7 = var6.hitTestCaretIndex((UiWidget) (this), -1, param2, ha.field_b, ei.field_K, param3);
               if (-1 != var7) {
                 if (this.field_F &&
                   var7 < this.field_L &&
@@ -148,9 +148,9 @@ class tb extends an {
         }
     }
 
-    void d(byte param0) {
+    void notifyTextChanged(byte param0) {
         if (this.field_v instanceof ok) {
-          ((ok) (this.field_v)).a(this, 8);
+          ((ok) (this.field_v)).onTextEdited(this, 8);
         }
         int var2 = 4 % ((-50 - param0) / 49);
     }
@@ -161,9 +161,9 @@ class tb extends an {
         this.field_F = false;
         this.field_J = 0L;
         try {
-          this.field_h = se.field_j.field_b;
+          this.field_h = ProxySocketConnector.field_j.field_b;
           this.field_O = param2;
-          this.a(false, true, param0);
+          this.setText(false, true, param0);
           this.field_I = true;
           this.field_M = pd.monotonicTimeMillis(-22826);
         } catch (RuntimeException runtimeException) {
@@ -171,7 +171,7 @@ class tb extends an {
         }
     }
 
-    private final int f(byte param0) {
+    private final int nextWordBoundary(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -194,23 +194,23 @@ class tb extends an {
         return var3;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         long var6;
         ak var8;
         if (param3 != 0) {
-          tb.a('ﾲ', 59);
+          tb.encodeCodePageChar('ﾲ', 59);
         }
         if (this.field_h != null &&
           param1 == 0) {
-          this.field_h.a(16777215, this.field_C, param0, (UiWidget) (this), param2);
+          this.field_h.drawWidget(16777215, this.field_C, param0, (UiWidget) (this), param2);
           if (this.field_h instanceof ak) {
             var8 = (ak) ((Object) this.field_h);
             if (this.field_H != this.field_N) {
-              var8.a(-118, this.field_H, param0, (UiWidget) (this), param2, this.field_N);
+              var8.drawSelection(-118, this.field_H, param0, (UiWidget) (this), param2, this.field_N);
             }
             var6 = pd.monotonicTimeMillis(-22826);
             if ((var6 - this.field_M) % 1000L < 500L) {
-              var8.a(this.field_N, param2, param0, param3 ^ -39, (UiWidget) (this));
+              var8.drawCaret(this.field_N, param2, param0, param3 ^ -39, (UiWidget) (this));
             }
           }
         }
@@ -224,17 +224,17 @@ class tb extends an {
         }
     }
 
-    private final void k(int param0) {
+    private final void copySelectionToClipboard(int param0) {
         if (param0 >= -40) {
           return;
         }
-        String var2 = this.e((byte) 112);
+        String var2 = this.selectedText((byte) 112);
         if (var2.length() > 0) {
-          java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.e((byte) -10))), (java.awt.datatransfer.ClipboardOwner) null);
+          java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.selectedText((byte) -10))), (java.awt.datatransfer.ClipboardOwner) null);
         }
     }
 
-    private final void a(String param0, byte param1) {
+    private final void insertText(String param0, byte param1) {
         int var3_int = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -258,9 +258,9 @@ class tb extends an {
           this.field_H = this.field_N;
           if (param1 != -37) {
             this.field_J = -49L;
-            this.d((byte) -103);
+            this.notifyTextChanged((byte) -103);
           } else {
-            this.d((byte) -103);
+            this.notifyTextChanged((byte) -103);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -277,7 +277,7 @@ class tb extends an {
         }
     }
 
-    final static boolean a(int param0, String param1) {
+    final static boolean isSingleRepeatedChar(int param0, String param1) {
         int var3 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -319,7 +319,7 @@ class tb extends an {
         }
     }
 
-    private final void g(int param0) {
+    private final void pasteClipboard(int param0) {
         try {
           Throwable decompiledCaughtException = null;
           int var2 = 0;
@@ -328,8 +328,8 @@ class tb extends an {
           var2 = -11 % ((-30 - param0) / 58);
           try {
             var3 = (String) (java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor));
-            this.h(127);
-            this.a(var3, (byte) -37);
+            this.deleteSelection(127);
+            this.insertText(var3, (byte) -37);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var3_ref = (Exception) (Object) decompiledCaughtException;
@@ -341,14 +341,14 @@ class tb extends an {
         }
     }
 
-    private final String e(byte param0) {
+    private final String selectedText(byte param0) {
         int var2 = this.field_N <= this.field_H ? this.field_N : this.field_H;
         int var4 = -7 / ((param0 - 66) / 34);
         int var3 = this.field_H < this.field_N ? this.field_N : this.field_H;
         return this.field_o.substring(var2, var3);
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
+    final boolean handlePointerPress(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         int stackIn_6_1 = 0;
         boolean stackIn_9_1 = false;
         RuntimeException stackIn_24_0 = null;
@@ -359,9 +359,9 @@ class tb extends an {
         long var8_long = 0L;
         RuntimeException var8 = null;
         try {
-          if (super.a(param0, param1 ^ 0, param2, param3, param4, param5, param6) &&
+          if (super.handlePointerPress(param0, param1 ^ 0, param2, param3, param4, param5, param6) &&
             this.field_h instanceof ak) {
-            var8_int = ((ak) ((Object) this.field_h)).a((UiWidget) (this), param1 - 2, param2, ha.field_b, ei.field_K, param4);
+            var8_int = ((ak) ((Object) this.field_h)).hitTestCaretIndex((UiWidget) (this), param1 - 2, param2, ha.field_b, ei.field_K, param4);
             if (var8_int != -1) {
               stackIn_6_1 = var8_int;
             } else {
@@ -372,8 +372,8 @@ class tb extends an {
             stackIn_9_1 = !(-this.field_J + var8_long >= 250L);
             this.field_F = stackIn_9_1;
             if (this.field_F) {
-              this.field_H = this.b(true);
-              this.field_N = this.f((byte) 7);
+              this.field_H = this.previousWordBoundary(true);
+              this.field_N = this.nextWordBoundary((byte) 7);
               if (this.field_N > 0 &&
                 this.field_o.charAt(-1 + this.field_N) == 32) {
                 this.field_N = this.field_N - 1;
@@ -401,7 +401,7 @@ class tb extends an {
         }
     }
 
-    private final void i(int param0) {
+    private final void scrollCaretIntoView(int param0) {
         vg var3;
         int var4;
         int var5;
@@ -422,15 +422,15 @@ class tb extends an {
           field_E = -5;
         }
         var9 = (ak) ((Object) this.field_h);
-        var3 = var9.a(98, (UiWidget) (this));
-        var4 = var3.b((byte) 123);
-        var5 = var9.a((byte) 124, (UiWidget) (this));
-        var6 = var9.a(5) >> 1;
+        var3 = var9.getTextLayout(98, (UiWidget) (this));
+        var4 = var3.width((byte) 123);
+        var5 = var9.getAvailableTextWidth((byte) 124, (UiWidget) (this));
+        var6 = var9.getLineInkHeight(5) >> 1;
         if (var5 - var6 > var4) {
           this.field_u = 0;
           this.field_p = 0;
         } else {
-          var7 = this.field_u + var3.a((byte) -72, this.field_N);
+          var7 = this.field_u + var3.characterX((byte) -72, this.field_N);
           if (var7 <= var5 - var6) {
             if (var7 < var6) {
               this.field_u = this.field_u + var6 - var7;
@@ -448,7 +448,7 @@ class tb extends an {
         }
     }
 
-    final static byte a(char param0, int param1) {
+    final static byte encodeCodePageChar(char param0, int param1) {
         int var2;
         int var3;
         {
@@ -545,7 +545,7 @@ class tb extends an {
           if (param3 >= 32 &&
             126 >= param3) {
             if (this.field_N != this.field_H) {
-              this.h(77);
+              this.deleteSelection(77);
             }
             if (-1 == this.field_O ||
               !(this.field_o.length() >= this.field_O)) {
@@ -559,14 +559,14 @@ class tb extends an {
                 this.field_N = dupTemp$0;
                 this.field_H = dupTemp$0;
               }
-              this.d((byte) -101);
+              this.notifyTextChanged((byte) -101);
             }
             return true;
           }
           if (param1 != 85) {
             if (param1 != 101) {
               if (param1 == 13) {
-                this.j(0);
+                this.clearText(0);
                 return true;
               }
               if (param1 == 96) {
@@ -574,7 +574,7 @@ class tb extends an {
                   if (!bo.field_p[82]) {
                     stackIn_62_1 = this.field_N - 1;
                   } else {
-                    stackIn_62_1 = this.b(true);
+                    stackIn_62_1 = this.previousWordBoundary(true);
                   }
                   this.moveCaret(stackIn_62_1, 81);
                   return true;
@@ -590,22 +590,22 @@ class tb extends an {
                     return true;
                   }
                   if (84 == param1) {
-                    this.c(false);
+                    this.notifyTextSubmitted(false);
                     return true;
                   }
                   if (bo.field_p[82] &&
                     65 == param1) {
-                    this.g((byte) -58);
+                    this.cutSelection((byte) -58);
                     return true;
                   }
                   if (bo.field_p[82] &&
                     param1 == 66) {
-                    this.k(-111);
+                    this.copySelectionToClipboard(-111);
                     return true;
                   }
                   if (bo.field_p[82] &&
                     67 == param1) {
-                    this.g(91);
+                    this.pasteClipboard(91);
                     return true;
                   }
                 } else {
@@ -613,7 +613,7 @@ class tb extends an {
                     if (!bo.field_p[82]) {
                       stackIn_33_1 = 1 + this.field_N;
                     } else {
-                      stackIn_33_1 = this.f((byte) 7);
+                      stackIn_33_1 = this.nextWordBoundary((byte) 7);
                     }
                     this.moveCaret(stackIn_33_1, 81);
                     return true;
@@ -622,23 +622,23 @@ class tb extends an {
               }
             } else {
               if (this.field_H != this.field_N) {
-                this.h(-96);
+                this.deleteSelection(-96);
                 return true;
               }
               if (this.field_N < this.field_o.length()) {
                 this.field_H = this.field_N + 1;
-                this.h(-82);
+                this.deleteSelection(-82);
                 return true;
               }
             }
           } else {
             if (this.field_H != this.field_N) {
-              this.h(28);
+              this.deleteSelection(28);
               return true;
             }
             if (this.field_N > 0) {
               this.field_H = -1 + this.field_N;
-              this.h(75);
+              this.deleteSelection(75);
               return true;
             }
           }

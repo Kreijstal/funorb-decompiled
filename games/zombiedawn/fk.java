@@ -18,8 +18,8 @@ final class fk extends hp implements oa, hh, ri {
     private ic field_Q;
     private fm field_O;
 
-    private final boolean f(byte param0) {
-        if (!this.j(40)) {
+    private final boolean submitRegistration(byte param0) {
+        if (!this.areAllInputsValid(40)) {
           return false;
         }
         int var2 = -1;
@@ -30,7 +30,7 @@ final class fk extends hp implements oa, hh, ri {
           var2 = Integer.parseInt(this.field_R.field_o);
         } catch (NumberFormatException numberFormatException) {
         }
-        return kl.a(this.field_P.field_o, 640, this, this.field_N.field_o, var2, this.field_G.field_o, this.field_O.field_x);
+        return kl.startAccountCreation(this.field_P.field_o, 640, this, this.field_N.field_o, var2, this.field_G.field_o, this.field_O.field_x);
     }
 
     final boolean requestKeyboardFocus(int param0, int param1, UiWidget param2, char param3) {
@@ -48,13 +48,13 @@ final class fk extends hp implements oa, hh, ri {
           }
           var5_int = 61 / ((-83 - param0) / 32);
           if (98 == param1) {
-            stackIn_5_0 = this.b((byte) 119, param2);
+            stackIn_5_0 = this.focusPreviousChild((byte) 119, param2);
             return stackIn_5_0;
           }
           if (99 != param1) {
             return false;
           }
-          stackIn_9_0 = this.a(1, param2);
+          stackIn_9_0 = this.focusNextChild(1, param2);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -70,56 +70,56 @@ final class fk extends hp implements oa, hh, ri {
         }
     }
 
-    public final void a(int param0) {
+    public final void onMoreSuggestionsRequested(int param0) {
         int var2 = 107 / ((39 - param0) / 49);
-        ((ql) (this.field_N.a(0))).e(-28769);
+        ((ql) (this.field_N.getValidationSource(0))).invalidateCachedAvailability(-28769);
     }
 
-    private final boolean j(int param0) {
+    private final boolean areAllInputsValid(int param0) {
         if (param0 != 40) {
           this.field_L = (an) null;
-          if (!this.a((byte) 77, (mi) (this.field_N))) {
+          if (!this.isFieldAcceptable((byte) 77, (mi) (this.field_N))) {
             return false;
           }
-          if (!this.a((byte) 77, (mi) (this.field_G))) {
+          if (!this.isFieldAcceptable((byte) 77, (mi) (this.field_G))) {
             return false;
           }
-          if (!this.a((byte) 77, (mi) (this.field_M))) {
+          if (!this.isFieldAcceptable((byte) 77, (mi) (this.field_M))) {
             return false;
           }
-          if (!this.a((byte) 77, (mi) (this.field_P))) {
+          if (!this.isFieldAcceptable((byte) 77, (mi) (this.field_P))) {
             return false;
           }
-          if (!this.a((byte) 77, (mi) (this.field_Q))) {
+          if (!this.isFieldAcceptable((byte) 77, (mi) (this.field_Q))) {
             return false;
           }
-          if (this.a((byte) 77, (mi) (this.field_R))) {
+          if (this.isFieldAcceptable((byte) 77, (mi) (this.field_R))) {
             return true;
           }
           return false;
         }
-        if (!this.a((byte) 77, (mi) (this.field_N))) {
+        if (!this.isFieldAcceptable((byte) 77, (mi) (this.field_N))) {
           return false;
         }
-        if (!this.a((byte) 77, (mi) (this.field_G))) {
+        if (!this.isFieldAcceptable((byte) 77, (mi) (this.field_G))) {
           return false;
         }
-        if (!this.a((byte) 77, (mi) (this.field_M))) {
+        if (!this.isFieldAcceptable((byte) 77, (mi) (this.field_M))) {
           return false;
         }
-        if (!this.a((byte) 77, (mi) (this.field_P))) {
+        if (!this.isFieldAcceptable((byte) 77, (mi) (this.field_P))) {
           return false;
         }
-        if (!this.a((byte) 77, (mi) (this.field_Q))) {
+        if (!this.isFieldAcceptable((byte) 77, (mi) (this.field_Q))) {
           return false;
         }
-        if (this.a((byte) 77, (mi) (this.field_R))) {
+        if (this.isFieldAcceptable((byte) 77, (mi) (this.field_R))) {
           return true;
         }
         return false;
     }
 
-    private final String i(int param0) {
+    private final String getLinkOpenMarkup(int param0) {
         if (param0 != 60) {
           field_F = (sd) null;
           return "<u=2164A2><col=2164A2>";
@@ -127,7 +127,7 @@ final class fk extends hp implements oa, hh, ri {
         return "<u=2164A2><col=2164A2>";
     }
 
-    private final int a(String param0, int param1, UiWidget param2, int param3, int param4) {
+    private final int addLabeledField(String param0, int param1, UiWidget param2, int param3, int param4) {
         q var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_1_0 = 0;
@@ -139,7 +139,7 @@ final class fk extends hp implements oa, hh, ri {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = new q(20, param3, param4 + param1, 25, param2, false, 120, 3, ia.field_e, 16777215, param0);
-          this.a(var6, 10);
+          this.addChild(var6, 10);
           stackIn_1_0 = var6.field_n;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -162,7 +162,7 @@ final class fk extends hp implements oa, hh, ri {
         }
     }
 
-    private final int a(int param0, int param1, int param2, String param3, UiWidget param4) {
+    private final int addValidatedField(int param0, int param1, int param2, String param3, UiWidget param4) {
         boolean discarded$1 = false;
         RuntimeException var6 = null;
         np var7 = null;
@@ -176,13 +176,13 @@ final class fk extends hp implements oa, hh, ri {
         RuntimeException decompiledCaughtException = null;
         try {
           var8 = new q(20, param1, param2 + 120, 25, param4, false, 120, 3, ia.field_e, 16777215, param3);
-          this.a(var8, 10);
-          var7 = new np(((mi) ((Object) param4)).a(0));
-          this.a(var7, 10);
+          this.addChild(var8, 10);
+          var7 = new np(((mi) ((Object) param4)).getValidationSource(0));
+          this.addChild(var7, 10);
           if (param0 > -44) {
-            discarded$1 = this.f((byte) -123);
+            discarded$1 = this.submitRegistration((byte) -123);
           }
-          var7.a(76, (-15 + var8.field_n >> 1) + var8.field_j, 3 + var8.field_k + var8.field_i, 15, 15);
+          var7.setBounds(76, (-15 + var8.field_n >> 1) + var8.field_j, 3 + var8.field_k + var8.field_i, 15, 15);
           stackIn_3_0 = var8.field_n;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -213,17 +213,17 @@ final class fk extends hp implements oa, hh, ri {
         field_F = null;
     }
 
-    final void a(UiWidget param0, byte param1, int param2, int param3) {
+    final void updatePointer(UiWidget param0, byte param1, int param2, int param3) {
         try {
-          super.a(param0, (byte) -92, param2, param3);
+          super.updatePointer(param0, (byte) -92, param2, param3);
           int var5_int = 40 % ((46 - param1) / 42);
-          this.field_L.field_C = this.j(40);
+          this.field_L.field_C = this.areAllInputsValid(40);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "fk.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    public final void a(hm param0, int param1, int param2, int param3) {
+    public final void onHotspotAction(hm param0, int param1, int param2, int param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -274,13 +274,13 @@ final class fk extends hp implements oa, hh, ri {
             return;
           }
           if (param2 == this.field_H) {
-            ZombieDawn.q(-10401);
+            ZombieDawn.showLoginChoiceDialog(-10401);
             return;
           }
           if (param2 != this.field_L) {
             return;
           }
-          discarded$1 = this.f((byte) -125);
+          discarded$1 = this.submitRegistration((byte) -125);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -296,7 +296,7 @@ final class fk extends hp implements oa, hh, ri {
         }
     }
 
-    private final int a(int param0, UiWidget param1, String param2, String param3, int param4, int param5) {
+    private final int addFieldWithValidationHelpDefaultWidth(int param0, UiWidget param1, String param2, String param3, int param4, int param5) {
         RuntimeException var7 = null;
         String var8 = null;
         int stackIn_3_0 = 0;
@@ -311,9 +311,9 @@ final class fk extends hp implements oa, hh, ri {
         try {
           if (param4 != -24519) {
             var8 = (String) null;
-            this.a((byte) 41, (String) null);
+            this.onSuggestionChosen((byte) 41, (String) null);
           }
-          stackIn_3_0 = this.a(param1, 0, param0, param2, 35, param5, param3);
+          stackIn_3_0 = this.addFieldWithValidationHelp(param1, 0, param0, param2, 35, param5, param3);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -341,7 +341,7 @@ final class fk extends hp implements oa, hh, ri {
         }
     }
 
-    private final int a(UiWidget param0, int param1, int param2, String param3, int param4, int param5, String param6) {
+    private final int addFieldWithValidationHelp(UiWidget param0, int param1, int param2, String param3, int param4, int param5, String param6) {
         RuntimeException var8 = null;
         wf var9 = null;
         q var10 = null;
@@ -356,10 +356,10 @@ final class fk extends hp implements oa, hh, ri {
         RuntimeException decompiledCaughtException = null;
         try {
           var10 = new q(20, param2, 120 + param5, 25, param0, false, 120, 3, ia.field_e, 16777215, param6);
-          this.a(var10, 10);
-          var9 = new wf(((mi) ((Object) param0)).a(param1 ^ param1), param3, 126, param2 + var10.field_n, param5 + 50, param4);
+          this.addChild(var10, 10);
+          var9 = new wf(((mi) ((Object) param0)).getValidationSource(param1 ^ param1), param3, 126, param2 + var10.field_n, param5 + 50, param4);
           var9.field_v = (sk) (this);
-          this.a(var9, 10);
+          this.addChild(var9, 10);
           stackIn_1_0 = var9.field_n + var10.field_n;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -388,21 +388,21 @@ final class fk extends hp implements oa, hh, ri {
         }
     }
 
-    private final String h(int param0) {
+    private final String getLinkCloseMarkup(int param0) {
         if (param0 < 84) {
           return (String) null;
         }
         return "</col></u>";
     }
 
-    public final void a(byte param0, String param1) {
+    public final void onSuggestionChosen(byte param0, String param1) {
         ic var3 = null;
         String var4 = null;
         try {
           int var5 = 81 / ((param0 + 40) / 48);
           var3 = this.field_N;
           var4 = param1;
-          ((tb) ((Object) var3)).a(false, false, var4);
+          ((tb) ((Object) var3)).setText(false, false, var4);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "fk.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -427,12 +427,12 @@ final class fk extends hp implements oa, hh, ri {
         this.field_Q.field_s = qo.field_t;
         this.field_R.field_s = lm.field_D;
         this.field_O.field_s = kf.field_V;
-        this.field_N.a(-73, new ql(this.field_N));
-        this.field_G.a(127, new mc(this.field_G));
-        this.field_M.a(-110, new lk(this.field_M, this.field_G));
-        this.field_P.a(79, new kg(this.field_P, this.field_N, this.field_G));
-        this.field_Q.a(24, new fj(this.field_Q, this.field_P));
-        this.field_R.a(-87, new kb(this.field_R));
+        this.field_N.setValidationSource(-73, new ql(this.field_N));
+        this.field_G.setValidationSource(127, new mc(this.field_G));
+        this.field_M.setValidationSource(-110, new lk(this.field_M, this.field_G));
+        this.field_P.setValidationSource(79, new kg(this.field_P, this.field_N, this.field_G));
+        this.field_Q.setValidationSource(24, new fj(this.field_Q, this.field_P));
+        this.field_R.setValidationSource(-87, new kb(this.field_R));
         this.field_L.field_C = false;
         this.field_L.field_h = (io) ((Object) new vm());
         this.field_H.field_h = (io) ((Object) new dp());
@@ -445,38 +445,38 @@ final class fk extends hp implements oa, hh, ri {
         jm dupTemp$1 = new jm(10000536);
         this.field_Q.field_h = (io) ((Object) dupTemp$1);
         this.field_P.field_h = (io) ((Object) dupTemp$1);
-        String var2 = s.a(1938762664, jb.field_d, new String[]{this.i(60), this.h(110)});
+        String var2 = s.a(1938762664, jb.field_d, new String[]{this.getLinkOpenMarkup(60), this.getLinkCloseMarkup(110)});
         int var3 = 20;
-        var3 = var3 + this.a(dk.field_Vb, 120, this.field_G, var3, 170);
-        var3 = var3 + (5 + this.a(this.field_M, 0, var3, "", 20, 170, aa.field_g));
-        var3 = var3 + this.a(ui.field_c, 120, this.field_P, var3, 170);
-        var3 = var3 + (this.a(var3, this.field_Q, jj.field_J, gk.field_I, -24519, 170) + 5);
-        var3 = var3 + (this.a(var3, this.field_N, a.field_l, b.field_i, -24519, 170) + 5);
-        var3 = var3 + this.a(-55, var3, 170, bp.field_j, this.field_R);
+        var3 = var3 + this.addLabeledField(dk.field_Vb, 120, this.field_G, var3, 170);
+        var3 = var3 + (5 + this.addFieldWithValidationHelp(this.field_M, 0, var3, "", 20, 170, aa.field_g));
+        var3 = var3 + this.addLabeledField(ui.field_c, 120, this.field_P, var3, 170);
+        var3 = var3 + (this.addFieldWithValidationHelpDefaultWidth(var3, this.field_Q, jj.field_J, gk.field_I, -24519, 170) + 5);
+        var3 = var3 + (this.addFieldWithValidationHelpDefaultWidth(var3, this.field_N, a.field_l, b.field_i, -24519, 170) + 5);
+        var3 = var3 + this.addValidatedField(-55, var3, 170, Js5ArchiveManager.field_j, this.field_R);
         q var4 = new q(46, var3, this.field_i - 90, 25, this.field_O, true, this.field_i - 120, 5, SecondaryNodeDeque.field_a, 11579568, ji.field_d);
-        this.a(var4, 10);
+        this.addChild(var4, 10);
         var3 = var3 + var4.field_n;
         vf var5 = new vf(ia.field_e, 0, 0, 0, 0, 16777215, -1, 0, 0, ia.field_e.field_I, -1, 2147483647, true);
         this.field_J = new hm(var2, var5);
         this.field_J.field_s = "";
-        this.field_J.a(0, -21423, sm.field_b);
-        this.field_J.a(1, -21423, sm.field_b);
+        this.field_J.setHotspotTooltip(0, -21423, sm.field_b);
+        this.field_J.setHotspotTooltip(1, -21423, sm.field_b);
         this.field_J.field_v = (sk) (this);
-        this.field_J.a(46, var3, true, -90 + this.field_i);
+        this.field_J.setBoundsToTextHeight(46, var3, true, -90 + this.field_i);
         var3 = var3 + (15 + this.field_J.field_n);
-        this.a(this.field_J, 10);
+        this.addChild(this.field_J, 10);
         int var6 = 4;
         int var7 = 200;
-        this.field_L.a(57, var3, 496 - var7 >> 1, var7, 40);
-        this.field_H.a(35, 15 + var3, var6 + 3, 60, 40);
+        this.field_L.setBounds(57, var3, 496 - var7 >> 1, var7, 40);
+        this.field_H.setBounds(35, 15 + var3, var6 + 3, 60, 40);
         this.field_H.field_v = (sk) (this);
         this.field_L.field_v = (sk) (this);
-        this.a(this.field_L, 10);
-        this.a(this.field_H, 10);
+        this.addChild(this.field_L, 10);
+        this.addChild(this.field_H, 10);
         this.field_I = new kn((ri) (this));
-        this.field_I.a(36, 20 + this.field_N.field_j, 60 + this.field_N.field_i + this.field_N.field_k, this.field_i + (-this.field_N.field_k - this.field_N.field_i - 60), 150);
-        this.a(this.field_I, 10);
-        this.a(35, 0, 0, 496, 55 + var3 + var6);
+        this.field_I.setBounds(36, 20 + this.field_N.field_j, 60 + this.field_N.field_i + this.field_N.field_k, this.field_i + (-this.field_N.field_k - this.field_N.field_i - 60), 150);
+        this.addChild(this.field_I, 10);
+        this.setBounds(35, 0, 0, 496, 55 + var3 + var6);
     }
 
     final static void b(boolean param0) {
@@ -497,7 +497,7 @@ final class fk extends hp implements oa, hh, ri {
         fk.b(false);
     }
 
-    private final boolean a(byte param0, mi param1) {
+    private final boolean isFieldAcceptable(byte param0, mi param1) {
         vc var3 = null;
         RuntimeException var3_ref = null;
         rh var4 = null;
@@ -506,18 +506,18 @@ final class fk extends hp implements oa, hh, ri {
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = param1.a(0);
+          var3 = param1.getValidationSource(0);
           if (var3 == null) {
             return true;
           }
-          var4 = var3.a((byte) -89);
+          var4 = var3.getValidationState((byte) -89);
           if (var4 == MouseWheelInput.field_b) {
             return false;
           }
           if (param0 != 77) {
             return true;
           }
-          if (se.field_l == var4) {
+          if (ProxySocketConnector.field_l == var4) {
             return false;
           }
           if (var4 != di.field_L) {

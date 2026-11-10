@@ -10,12 +10,12 @@ final class rl {
     static String field_a;
 
     final static void c(int param0) {
-        e.field_S.j(-636330975);
+        e.field_S.hideAllDialogs(-636330975);
         if (param0 == 9) {
           if (vi.field_c == null) {
             vi.field_c = new sa(e.field_S, ed.field_c);
           }
-          e.field_S.a(vi.field_c, true);
+          e.field_S.addDialog(vi.field_c, true);
           return;
         }
     }

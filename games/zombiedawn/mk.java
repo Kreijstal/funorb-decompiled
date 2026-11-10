@@ -10,21 +10,21 @@ final class mk {
         RuntimeException var1 = null;
         var2 = ZombieDawn.field_J;
         try {
-          if (!we.o((byte) -80)) {
+          if (!we.hasActiveDialog((byte) -80)) {
             if (cn.field_b != null &&
               cn.field_b.field_a) {
               re.a((byte) -71);
-              wo.field_xb.a(new i(wo.field_xb, gf.field_b), true);
+              wo.field_xb.addDialog(new i(wo.field_xb, gf.field_b), true);
             }
             return;
           }
           if (param0 > -100) {
             return;
           }
-          wo.field_xb.a(um.field_a, Human.field_eb, true, true);
-          wo.field_xb.g(-128);
-          while (TileMap.b(102)) {
-            wo.field_xb.a(kg.field_i, (byte) 106, lc.field_c);
+          wo.field_xb.processPointerFrame(um.field_a, Human.field_eb, true, true);
+          wo.field_xb.advanceDialogAnimations(-128);
+          while (TileMap.pollKeyEvent(102)) {
+            wo.field_xb.processKeyInput(kg.field_i, (byte) 106, lc.field_c);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

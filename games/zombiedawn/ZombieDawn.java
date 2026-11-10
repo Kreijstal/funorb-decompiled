@@ -11,18 +11,18 @@ public final class ZombieDawn extends GameLoopApplet {
     static String field_D;
     public static int field_J;
 
-    final void b(byte param0) {
+    final void onStartup(byte param0) {
         this.a(41, 7, 11, false, 9, 0, 1, 10);
         int var2 = 89 / ((35 - param0) / 49);
         oj.field_d = new tl();
-        this.a(oj.field_d, (byte) 14);
+        this.startWithLoader(oj.field_d, (byte) 14);
         rj var3 = new rj();
-        var3.a(128, (byte) -128, 9);
-        ac.a(vh.field_a, true, (java.awt.Component) ((Object) cj.field_d), var3, 22050, -97);
+        var3.selectChannelBank(128, (byte) -128, 9);
+        ac.initializeAudioOutputs(vh.field_a, true, (java.awt.Component) ((Object) cj.field_d), var3, 22050, -97);
         this.a(false, true, true, false, -6046);
     }
 
-    final boolean n(int param0) {
+    final boolean isConnectionBusy(int param0) {
         if (param0 != 10) {
           field_E = (long[]) null;
           return false;
@@ -33,7 +33,7 @@ public final class ZombieDawn extends GameLoopApplet {
     public final boolean onKeyTyped(char param0, int param1, int param2) {
         if (null != GameApplet.field_c &&
           sg.field_eb == GameApplet.field_c) {
-          return GameApplet.field_c.a(param1, 65793, param0);
+          return GameApplet.field_c.handleKeyPress(param1, 65793, param0);
         }
         if (param2 != 20) {
           return true;
@@ -82,17 +82,17 @@ public final class ZombieDawn extends GameLoopApplet {
             po.field_xb = 15;
           }
           if (16 <= po.field_xb) {
-            sg.field_eb.b((byte) 108);
-            sg.field_eb.a((byte) -102);
-            var17.a(512 - (po.field_xb << 4), (byte) -128, true);
+            sg.field_eb.drawBackground((byte) 108);
+            sg.field_eb.drawScreen((byte) -102);
+            var17.drawTransitionFade(512 - (po.field_xb << 4), (byte) -128, true);
           } else {
-            GameApplet.field_c.b((byte) 120);
-            GameApplet.field_c.a((byte) -118);
-            var17.a(po.field_xb << 4, (byte) 46, false);
+            GameApplet.field_c.drawBackground((byte) 120);
+            GameApplet.field_c.drawScreen((byte) -118);
+            var17.drawTransitionFade(po.field_xb << 4, (byte) 46, false);
           }
         } else {
-          GameApplet.field_c.b((byte) 112);
-          GameApplet.field_c.a((byte) -86);
+          GameApplet.field_c.drawBackground((byte) 112);
+          GameApplet.field_c.drawScreen((byte) -86);
         }
         boolean decompiledFrameRemainder0 = true;
         if (oj.field_d.field_n && (0.0f < oj.field_d.field_b ||
@@ -107,21 +107,21 @@ public final class ZombieDawn extends GameLoopApplet {
           }
           var6 = 100;
           var7 = nh.field_G;
-          var8 = bd.field_d;
+          var8 = WhirlpoolHasher.field_d;
           var9 = -(var6 / 2) + var7;
           var10 = -(var5 / 2) + var8 - 10;
           var11 = 10 + (var5 / 2 + var8);
           var12 = var6 / 2 + var7;
-          Mover.$cfr$intArgs$a$3aedf8649552(var9, 99, var11, var12, var10);
-          if (bd.field_e == 640 &&
+          Mover.intersectClipIntArgs(var9, 99, var11, var12, var10);
+          if (WhirlpoolHasher.field_e == 640 &&
             480 == nh.field_P) {
             qk.field_Hb[0].drawWithOffsets(0, 0);
             qk.field_Hb[0].drawAdditive(0, 0, 256);
           } else {
-            var13 = bd.field_e / 128;
+            var13 = WhirlpoolHasher.field_e / 128;
             var14 = nh.field_P / 96;
-            qk.field_Hb[0].drawScaled(-var13, -var14, 2 * var13 + bd.field_e, var14 * 2 + nh.field_P);
-            qk.field_Hb[0].drawScaledAdditive(-var13, -var14, bd.field_e + 2 * var13, var14 * 2 + nh.field_P, 150);
+            qk.field_Hb[0].drawScaled(-var13, -var14, 2 * var13 + WhirlpoolHasher.field_e, var14 * 2 + nh.field_P);
+            qk.field_Hb[0].drawScaledAdditive(-var13, -var14, WhirlpoolHasher.field_e + 2 * var13, var14 * 2 + nh.field_P, 150);
           }
           Rasterizer.setClip(var10, var9, var8, var7);
           pf.field_f.drawTransparent(var10, var9);
@@ -132,22 +132,22 @@ public final class ZombieDawn extends GameLoopApplet {
           Rasterizer.setClip(var8, var7, var11, var12);
           pf.field_f.drawTransparent(var11 - pf.field_f.field_w, -pf.field_f.field_t + var12);
           Rasterizer.setClip(var10, var9, var11, var12);
-          ((Font) ((Object) var2_ref)).drawStringCentered(var4_ref_String, bd.field_d, nh.field_G, 2, -1);
+          ((Font) ((Object) var2_ref)).drawStringCentered(var4_ref_String, WhirlpoolHasher.field_d, nh.field_G, 2, -1);
           var13Lifetime1 = (int)(oj.field_d.field_b * (float)var3 / 100.0f);
           Rasterizer.fillRect(var8 - var3 / 2, 10 + var7, var3, 12, 0);
           Rasterizer.setClip(-(var3 / 2) + var8, var7 + 10, var8 + (-(var3 / 2) + var13Lifetime1), var7 + 22);
-          if (bd.field_e == 640 &&
+          if (WhirlpoolHasher.field_e == 640 &&
             480 == nh.field_P) {
             qk.field_Hb[3].drawWithOffsets(0, 0);
             qk.field_Hb[3].drawAdditive(0, 0, 150);
           } else {
-            var14Lifetime1 = bd.field_e / 128;
+            var14Lifetime1 = WhirlpoolHasher.field_e / 128;
             var15 = nh.field_P / 96;
-            qk.field_Hb[3].drawScaled(-var14Lifetime1, -var15, var14Lifetime1 * 2 + bd.field_e, 2 * var15 + nh.field_P);
-            qk.field_Hb[3].drawScaledAdditive(-var14Lifetime1, -var15, 2 * var14Lifetime1 + bd.field_e, 2 * var15 + nh.field_P, 150);
+            qk.field_Hb[3].drawScaled(-var14Lifetime1, -var15, var14Lifetime1 * 2 + WhirlpoolHasher.field_e, 2 * var15 + nh.field_P);
+            qk.field_Hb[3].drawScaledAdditive(-var14Lifetime1, -var15, 2 * var14Lifetime1 + WhirlpoolHasher.field_e, 2 * var15 + nh.field_P, 150);
           }
           Rasterizer.drawRectOutline(-(var3 / 2) + var8, var7 + 10, var3, 12, 4458504);
-          pa.a(param0 ^ 26807);
+          pa.popRasterState(param0 ^ 26807);
           decompiledFrameRemainder0 = false;
         }
         else {
@@ -172,8 +172,8 @@ public final class ZombieDawn extends GameLoopApplet {
               var4 = var4 / 10;
             }
           }
-          pc.field_k.drawString(this.field_G.toString(), 5, 20, 16777215, 1);
-          pc.field_k.drawString(this.field_I.toString(), 5, 35, 16777215, 1);
+          Js5Transport.field_k.drawString(this.field_G.toString(), 5, 20, 16777215, 1);
+          Js5Transport.field_k.drawString(this.field_I.toString(), 5, 35, 16777215, 1);
         }
         if (param0 != -14964) {
           this.field_G = (StringBuilder) null;
@@ -187,7 +187,7 @@ public final class ZombieDawn extends GameLoopApplet {
     final void onLoadingFinished(int param0) {
         if (GameApplet.field_c.field_d == 6 &&
           !nk.a(8, kg.field_g)) {
-          GameApplet.field_c = jj.c(3, 123);
+          GameApplet.field_c = jj.getScreen(3, 123);
           ca.a(false, true, 3);
         } else {
           if (dp.field_h != 2147483647) {
@@ -199,30 +199,30 @@ public final class ZombieDawn extends GameLoopApplet {
         }
         bh.a(0);
         if (0 < be.field_j) {
-          oj.field_d.b(param0 - 1126, 1);
+          oj.field_d.requestMemberAssets(param0 - 1126, 1);
         }
     }
 
-    final void g(boolean param0) {
-        SecondaryNodeDequeIterator.a(-107, param0);
+    final void startMainMenu(boolean param0) {
+        SecondaryNodeDequeIterator.installViewController(-107, param0);
         fh.i(0);
         mf.a((byte) -67);
-        GameApplet.field_c = jj.c(11, 122);
+        GameApplet.field_c = jj.getScreen(11, 122);
         ca.a(true, true, 1);
         kp.a(50, (byte) 3);
         if (!ng.field_e) {
           qb.a(false, 224);
-          ZombieDawn.b(119, 288);
-          ph.a((byte) 106, w.field_a[0]);
+          ZombieDawn.setMusicVolume(119, 288);
+          ph.a((byte) 106, ArchiveProvider.field_a[0]);
         }
         if (!ng.field_e &&
-          !po.w(13296)) {
+          !po.isGuestSession(13296)) {
           l.b(102, 4);
         }
         ep.c((byte) -50);
     }
 
-    final void a(int param0, int param1) {
+    final void onConnectionResult(int param0, int param1) {
         if (param1 < 27) {
           field_K = (Font) null;
         }
@@ -233,26 +233,26 @@ public final class ZombieDawn extends GameLoopApplet {
         wg var5;
         var4 = field_J;
         tp.field_p = tp.field_p + 1L;
-        if (bd.field_e != te.field_eb ||
+        if (WhirlpoolHasher.field_e != te.field_eb ||
           kj.field_c != nh.field_P) {
           nh.field_P = kj.field_c;
-          bd.field_e = te.field_eb;
-          vh.field_b = (-640 + bd.field_e) / 2;
-          qj.field_d = bd.field_e;
+          WhirlpoolHasher.field_e = te.field_eb;
+          vh.field_b = (-640 + WhirlpoolHasher.field_e) / 2;
+          qj.field_d = WhirlpoolHasher.field_e;
           me.field_Bb = nh.field_P;
           id.field_M = (nh.field_P - 480) / 2;
           nh.field_I = nh.field_P / 24 + 2;
-          bd.field_a = bd.field_e / 24 + 2;
-          bd.field_d = bd.field_e / 2;
+          WhirlpoolHasher.field_a = WhirlpoolHasher.field_e / 24 + 2;
+          WhirlpoolHasher.field_d = WhirlpoolHasher.field_e / 2;
           nh.field_G = nh.field_P / 2;
-          if (lf.field_h != null && (lf.field_h.field_w != bd.field_e ||
+          if (lf.field_h != null && (lf.field_h.field_w != WhirlpoolHasher.field_e ||
             lf.field_h.field_t != nh.field_P)) {
             lf.field_h = null;
-            lf.field_h = new Sprite(bd.field_e, nh.field_P);
+            lf.field_h = new Sprite(WhirlpoolHasher.field_e, nh.field_P);
           }
           TileMap.field_q = -1;
         }
-        if (!po.w(13296)) {
+        if (!po.isGuestSession(13296)) {
           while (true) {
             var5 = (wg) (dn.field_D.removeLast(123));
             if (var5 == null) {
@@ -261,43 +261,43 @@ public final class ZombieDawn extends GameLoopApplet {
             dd.a(5, var5, -62);
           }
         }
-        oj.field_d.e(47);
+        oj.field_d.processResourceQueue(47);
         if (param1) {
-          this.n(20);
+          this.isConnectionBusy(20);
         }
-        if (we.o((byte) -80)) {
+        if (we.hasActiveDialog((byte) -80)) {
           param0 = false;
         }
         if (oj.field_d.field_n) {
           return;
         }
         if (GameApplet.field_c == sg.field_eb) {
-          GameApplet.field_c.a((byte) -102, param0);
+          GameApplet.field_c.handleInput((byte) -102, param0);
         } else {
           if (sg.field_eb.field_d == 0) {
-            sg.field_eb.a((byte) -115, param0);
+            sg.field_eb.handleInput((byte) -115, param0);
           }
           po.field_xb = po.field_xb + 1;
           if (po.field_xb == 32) {
             if (GameApplet.field_c.field_d == 3) {
-              bd.field_m = null;
+              WhirlpoolHasher.field_m = null;
             }
-            GameApplet.field_c.onTextSubmitted(sg.field_eb, 72);
+            GameApplet.field_c.onReplacedByScreen(sg.field_eb, 72);
             GameApplet.field_c = sg.field_eb;
             po.field_xb = 0;
           }
         }
     }
 
-    final void c(int param0) {
-        kl.c(-16861);
+    final void onShutdown(int param0) {
+        kl.shutdownAudioOutputs(-16861);
         if (param0 != 16850) {
           return;
         }
-        pg.c(1);
+        pg.shutdownDisplayAndInput(1);
     }
 
-    final boolean a(am param0, int param1, int param2) {
+    final boolean handlePacket(am param0, int param1, int param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -305,7 +305,7 @@ public final class ZombieDawn extends GameLoopApplet {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 2) {
-            ZombieDawn.b(-101, 34);
+            ZombieDawn.setMusicVolume(-101, 34);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -322,27 +322,27 @@ public final class ZombieDawn extends GameLoopApplet {
         }
     }
 
-    final static void b(int param0, int param1) {
+    final static void setMusicVolume(int param0, int param1) {
         ce.field_u = param1;
         if (uh.field_o != null) {
-          uh.field_o.a(param1, (byte) -64);
+          uh.field_o.setMasterVolume(param1, (byte) -64);
         }
         if (param0 < 112) {
-          ZombieDawn.b(-94, 83);
+          ZombieDawn.setMusicVolume(-94, 83);
         }
         if (null != nc.field_p) {
-          nc.field_p.a((byte) 122, param1);
+          nc.field_p.setVolume((byte) 122, param1);
         }
     }
 
-    final static void q(int param0) {
+    final static void showLoginChoiceDialog(int param0) {
         if (param0 != -10401) {
           ZombieDawn.releaseStatics((byte) 6);
         }
-        bm.field_d.b(20, new di());
+        bm.field_d.transitionToContent(20, new di());
     }
 
-    final void c(boolean param0) {
+    final void releaseStaticResources(boolean param0) {
         ZombieDawn.releaseStatics((byte) 114);
         mk.releaseStatics(4);
         IntrusiveDeque.releaseStatics((byte) -61);
@@ -365,7 +365,7 @@ public final class ZombieDawn extends GameLoopApplet {
         FunOrbApplet.f(false);
         ClientException.releaseStatics((byte) 86);
         GameApplet.b(40);
-        li.releaseStatics(-72);
+        JaggrabDownloader.releaseStatics(-72);
         MouseInputHandler.releaseStatics(-14380);
         MouseWheelInput.releaseStatics(103);
         Js5Archive.releaseStatics(108);
@@ -383,15 +383,15 @@ public final class ZombieDawn extends GameLoopApplet {
         ja.releaseStatics(param0);
         rk.releaseStatics(16);
         ni.releaseStatics(-1);
-        ln.a(-5);
-        dh.releaseStatics(16);
+        ln.releaseStatics(-5);
+        RasterBuffer.releaseStatics(16);
         jk.releaseStatics(50);
-        la.releaseStatics(71);
-        lg.releaseStatics((byte) 49);
+        FullscreenFocusCanvas.releaseStatics(71);
+        ViewportController.releaseStatics((byte) 49);
         ae.releaseStatics(false);
         GameWorld.f(!param0 ? true : false);
         tl.releaseStatics(123);
-        IntrusiveNode.b((byte) 61);
+        IntrusiveNode.releaseStatics((byte) 61);
         jd.releaseStatics((byte) 126);
         ta.releaseStatics(false);
         mb.releaseStatics();
@@ -400,13 +400,13 @@ public final class ZombieDawn extends GameLoopApplet {
         o.releaseStatics(true);
         fl.releaseStatics((byte) -54);
         kl.releaseStatics((byte) -112);
-        ac.d((byte) -104);
+        ac.releaseStatics((byte) -104);
         fg.releaseStatics(-25585);
-        pl.d((byte) -95);
-        pc.releaseStatics(!param0 ? true : false);
+        pl.releaseStatics((byte) -95);
+        Js5Transport.releaseStatics(!param0 ? true : false);
         ExceptionWrapper.releaseStatics((byte) -122);
-        bp.releaseStatics(-16785);
-        sf.releaseStatics(0);
+        Js5ArchiveManager.releaseStatics(-16785);
+        BufferedFile.releaseStatics(0);
         BufferedSocket.releaseStatics((byte) 105);
         dl.releaseStatics(-974314864);
         lf.a(-9742);
@@ -434,7 +434,7 @@ public final class ZombieDawn extends GameLoopApplet {
         qj.releaseStatics(97);
         Zombie.releaseStatics(54);
         Human.releaseStatics(60);
-        TileMap.a((byte) 122);
+        TileMap.releaseStatics((byte) 122);
         Mover.releaseStatics(0);
         Point.releaseStatics((byte) -125);
         WorldObject.releaseStatics(237239984);
@@ -454,8 +454,8 @@ public final class ZombieDawn extends GameLoopApplet {
         ma.releaseStatics((byte) 13);
         nf.releaseStatics(0);
         gg.releaseStatics((byte) -103);
-        uo.releaseStatics(-1640531527);
-        qn.releaseStatics(0);
+        IsaacCipher.releaseStatics(-1640531527);
+        RandomAccessCacheFile.releaseStatics(0);
         nd.releaseStatics(-128);
         td.releaseStatics((byte) 94);
         oc.releaseStatics(96);
@@ -483,12 +483,12 @@ public final class ZombieDawn extends GameLoopApplet {
         ge.releaseStatics(256);
         vl.releaseStatics((byte) -51);
         qo.releaseStatics((byte) -68);
-        t.b(27803);
+        t.releaseStatics(27803);
         el.releaseStatics(-1);
-        vf.b(4056);
+        vf.releaseStatics(4056);
         cj.releaseStatics(25808);
         pa.releaseStatics((byte) 25);
-        vg.a(-1);
+        vg.releaseStatics(-1);
         lb.releaseStatics((byte) -118);
         pn.releaseStatics(-74);
         nh.releaseStatics((byte) -29);
@@ -498,7 +498,7 @@ public final class ZombieDawn extends GameLoopApplet {
         vh.releaseStatics((byte) 31);
         jh.releaseStatics(13192);
         ci.releaseStatics(false);
-        w.releaseStatics((byte) -98);
+        ArchiveProvider.releaseStatics((byte) -98);
         en.releaseStatics();
         f.releaseStatics((byte) 39);
         gd.releaseStatics((byte) -45);
@@ -519,19 +519,19 @@ public final class ZombieDawn extends GameLoopApplet {
         il.releaseStatics(4466);
         hj.releaseStatics();
         qp.releaseStatics((byte) 92);
-        dm.d(3);
+        dm.releaseStatics(3);
         ia.releaseStatics(25268);
         lc.releaseStatics(-1);
         ed.releaseStatics((byte) 54);
         bm.releaseStatics(0);
         sj.releaseStatics(1222359528);
         hg.releaseStatics(140);
-        qg.releaseStatics(26161);
-        pi.releaseStatics(-1);
+        SocketConnector.releaseStatics(26161);
+        ImageProducerRasterBuffer.releaseStatics(-1);
         te.releaseStatics((byte) 105);
         id.releaseStatics(-72);
         SpatialBucket.releaseStatics(-12220);
-        kc.c(!param0 ? true : false);
+        kc.clearStatics(!param0 ? true : false);
         mm.releaseStatics((byte) 47);
         ck.releaseStatics(1);
         be.releaseStatics(true);
@@ -542,7 +542,7 @@ public final class ZombieDawn extends GameLoopApplet {
         we.releaseStatics(16777215);
         ao.releaseStatics(-106);
         gk.releaseStatics(114);
-        me.x(95);
+        me.clearStatics(95);
         wo.releaseStatics(86);
         oo.releaseStatics((byte) 117);
         si.releaseStatics(255);
@@ -554,7 +554,7 @@ public final class ZombieDawn extends GameLoopApplet {
         dk.releaseStatics((byte) 91);
         qm.releaseStatics(0);
         og.releaseStatics(false);
-        na.releaseStatics((byte) 79);
+        SectorCacheStore.releaseStatics((byte) 79);
         wd.releaseStatics(1445852592);
         pj.releaseStatics(32);
         ie.releaseStatics();
@@ -571,13 +571,13 @@ public final class ZombieDawn extends GameLoopApplet {
         pm.releaseStatics(!param0 ? true : false);
         fe.releaseStatics(67);
         ho.releaseStatics((byte) 118);
-        bd.a(!param0 ? true : false);
+        WhirlpoolHasher.releaseStatics(!param0 ? true : false);
         vb.releaseStatics((byte) -104);
-        po.v(-31113);
+        po.clearStatics(-31113);
         cn.releaseStatics(92);
         hf.releaseStatics((byte) -34);
         rl.releaseStatics(-103);
-        ad.b(-1819016370);
+        ad.releaseStatics(-1819016370);
         ij.g(-1);
         qi.releaseStatics(0);
         nj.releaseStatics(false);
@@ -589,7 +589,7 @@ public final class ZombieDawn extends GameLoopApplet {
         SecondaryNodeDeque.releaseStatics((byte) -109);
         bj.releaseStatics(42);
         jl.releaseStatics((byte) -113);
-        se.releaseStatics(32);
+        ProxySocketConnector.releaseStatics(32);
         uj.releaseStatics(256);
         NodeHashTableIterator.releaseStatics((byte) 122);
         SecondaryNodeDequeIterator.releaseStatics((byte) 48);
@@ -618,11 +618,11 @@ public final class ZombieDawn extends GameLoopApplet {
         ep.a(0);
         nn.releaseStatics(2);
         sd.releaseStatics(80);
-        HumanFactory.releaseStatics(-25401);
+        AccountServerResult.releaseStatics(-25401);
         tm.releaseStatics(-5364);
-        cc.releaseStatics(-27940);
+        PowerupCard.releaseStatics(-27940);
         sn.releaseStatics((byte) 93);
-        bn.b(5);
+        bn.releaseStatics(5);
         ld.d(25008);
         l.releaseStatics(-1);
         sm.releaseStatics(true);
@@ -639,7 +639,7 @@ public final class ZombieDawn extends GameLoopApplet {
         jj.releaseStatics(2021978896);
         a.releaseStatics((byte) 105);
         ql.releaseStatics(!param0 ? true : false);
-        kg.d(-2314);
+        kg.releaseStatics(-2314);
         mc.releaseStatics((byte) -13);
         lk.releaseStatics(1029);
         kb.releaseStatics(111);

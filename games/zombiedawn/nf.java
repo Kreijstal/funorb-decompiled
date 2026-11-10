@@ -31,23 +31,23 @@ final class nf {
         field_d = null;
     }
 
-    final static la a(int param0, int param1, PlatformTaskDispatcher param2, int param3, boolean param4, int param5) {
+    final static FullscreenFocusCanvas a(int param0, int param1, PlatformTaskDispatcher param2, int param3, boolean param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
-        la var7 = null;
+        FullscreenFocusCanvas var7 = null;
         java.awt.Frame var8 = null;
-        la stackIn_6_0 = null;
+        FullscreenFocusCanvas stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = me.a((byte) 114, param1, param3, param2, param5, param0);
+          var8 = me.openFullscreenFrame((byte) 114, param1, param3, param2, param5, param0);
           var6 = var8;
           if (var8 == null) {
             return null;
           }
-          var7 = new la();
+          var7 = new FullscreenFocusCanvas();
           if (param4) {
             nf.releaseStatics(-19);
           }

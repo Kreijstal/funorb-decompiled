@@ -16,7 +16,7 @@ final class ek extends WorldObject {
     static int field_I;
     static int field_J;
 
-    final void j(int param0) {
+    final void recycle(int param0) {
         this.unlink(-27598);
         this.unlinkSecondary((byte) -56);
         td.field_c.addLast((IntrusiveNode) (this), 87);
@@ -25,7 +25,7 @@ final class ek extends WorldObject {
         }
     }
 
-    private final void f(byte param0) {
+    private final void respawnNearOrigin(byte param0) {
         this.field_H = pb.a(so.random, 127, 1) + 128;
         if (param0 == -8) {
           this.field_F = 0;
@@ -34,13 +34,13 @@ final class ek extends WorldObject {
           return;
         }
         Camera var3 = (Camera) null;
-        this.a((byte) 119, (Camera) null);
+        this.draw((byte) 119, (Camera) null);
         this.field_F = 0;
         this.field_y = this.field_N - (-pb.a(so.random, 24, param0 ^ -7) + 12) << 16;
         this.field_x = this.field_L - 12 + pb.a(so.random, 24, 1) << 16;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void spawnAt(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         this.field_L = param0;
         this.field_G = false;
@@ -49,7 +49,7 @@ final class ek extends WorldObject {
           this.field_y = param1 << 16;
           this.field_x = param0 << 16;
           this.field_M = 0;
-          this.f((byte) -8);
+          this.respawnNearOrigin((byte) -8);
           var5 = bg.field_o.length;
           this.field_D = pb.a(so.random, 10, 1);
           this.field_K = pb.a(so.random, param2, 1);
@@ -58,7 +58,7 @@ final class ek extends WorldObject {
         }
     }
 
-    final void a(byte param0, Camera param1) {
+    final void draw(byte param0, Camera param1) {
         int fieldTemp$2 = 0;
         RuntimeException runtimeException = null;
         int var3_int = 0;
@@ -73,7 +73,7 @@ final class ek extends WorldObject {
             this.field_K = this.field_K - 1;
             if (fieldTemp$2 <= 0) {
               if (param0 >= -76) {
-                this.j(-76);
+                this.recycle(-76);
               }
               var3_int = param1.worldToScreenX(this.getX(true), (byte) -59);
               var4 = param1.worldToScreenY(this.getY(237239984), 0) - 24;
@@ -84,7 +84,7 @@ final class ek extends WorldObject {
                 Js5Archive.field_e.navigation.field_b[this.getY(237239984) / 24][this.getX(true) / 24]) {
                 return;
               }
-              bg.field_o[this.field_F].e(var3_int, var4, this.field_H);
+              bg.field_o[this.field_F].drawWithOpacity(var3_int, var4, this.field_H);
               return;
             }
           }
@@ -110,12 +110,12 @@ final class ek extends WorldObject {
         field_E = null;
     }
 
-    final void g(int param0) {
+    final void tick(int param0) {
         int fieldTemp$0 = this.field_D + 1;
         this.field_D = this.field_D + 1;
         if (fieldTemp$0 < 4) {
           if (param0 < 95) {
-            this.a(-13, -95, -104, 35);
+            this.spawnAt(-13, -95, -104, 35);
             return;
           }
           return;
@@ -125,9 +125,9 @@ final class ek extends WorldObject {
         this.field_F = this.field_F + 1;
         if (fieldTemp$1 >= bg.field_o.length) {
           if (this.field_M != 1) {
-            this.f((byte) -8);
+            this.respawnNearOrigin((byte) -8);
             if (param0 < 95) {
-              this.a(-13, -95, -104, 35);
+              this.spawnAt(-13, -95, -104, 35);
               return;
             }
             return;
@@ -136,13 +136,13 @@ final class ek extends WorldObject {
           if (param0 >= 95) {
             return;
           }
-          this.a(-13, -95, -104, 35);
+          this.spawnAt(-13, -95, -104, 35);
           return;
         }
         if (param0 >= 95) {
           return;
         }
-        this.a(-13, -95, -104, 35);
+        this.spawnAt(-13, -95, -104, 35);
     }
 
     ek() {

@@ -5,7 +5,7 @@ final class fg extends al {
     private int field_n;
     static vk field_m;
 
-    final void a(byte param0) {
+    final void drawScreen(byte param0) {
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         oi stackIn_26_0;
@@ -38,8 +38,8 @@ final class fg extends al {
         int var21Lifetime1;
         int var21Lifetime2;
         var22 = ZombieDawn.field_J;
-        super.a((byte) -75);
-        li.a(false);
+        super.drawScreen((byte) -75);
+        JaggrabDownloader.drawPipeboxBackdrop(false);
         var2 = 3 + bj.field_q.field_x + bj.field_q.field_I;
         var3 = 600;
         var6 = vh.field_b + 200;
@@ -49,7 +49,7 @@ final class fg extends al {
         var8 = stackIn_6_0;
         if (param0 >= -35) {
           var23 = (String) null;
-          fg.a((String) null, 98, (String) null, (String) null);
+          fg.replaceAll((String) null, 98, (String) null, (String) null);
         }
         boolean decompiledFrameRemainder0 = true;
         var9 = id.field_M + 135;
@@ -82,9 +82,9 @@ final class fg extends al {
             IntrusiveNode.field_a[6].drawTransparent(var6 - 60, var12 - 7);
             var12 = var12 + (var13 + var2 * bj.field_q.drawParagraph(gj.field_g[1][4], var6, var12, var11, 50, 16777215, 0, 0, 0, var2));
             IntrusiveNode.field_a[0].drawTransparent(var14, var15);
-            DualLinkNode.field_k[0].e(var14 - 8, -4 + var15, 128);
-            DualLinkNode.field_k[0].e(13 + var14, var15 + 14, 128);
-            DualLinkNode.field_k[0].e(var14 + 41, var15 + 11, 128);
+            DualLinkNode.field_k[0].drawWithOpacity(var14 - 8, -4 + var15, 128);
+            DualLinkNode.field_k[0].drawWithOpacity(13 + var14, var15 + 14, 128);
+            DualLinkNode.field_k[0].drawWithOpacity(var14 + 41, var15 + 11, 128);
             Rasterizer.drawRectOutline(var14 + 3, 14 + var15, 77, 47, 16777215);
             Rasterizer.drawRectangleOutlineAlpha(var14 + 4, 15 + var15, 75, 45, 10066431, 32);
             Rasterizer.fillRectangleBlended(var14 + 5, var15 + 16, 73, 43, 3355647, 32);
@@ -97,7 +97,7 @@ final class fg extends al {
               IntrusiveNode.field_a[3].drawTransparent(-25 + var6, var12 + 15);
               var12 = var12 + (var13 + var2 * bj.field_q.drawParagraph(gj.field_g[this.field_n][0], var6, var12, 340, 50, 16777215, 0, 0, 0, var2));
               IntrusiveNode.field_a[4].drawTransparent(-110 + var6, var12 - 10);
-              DualLinkNode.field_k[0].e(var6 - 54, var12 - 3, 128);
+              DualLinkNode.field_k[0].drawWithOpacity(var6 - 54, var12 - 3, 128);
               IntrusiveNode.field_a[3].drawTransparent(-25 + var6, var12 + 30);
               var12 = var12 + (var13 + bj.field_q.drawParagraph(gj.field_g[this.field_n][1], var6, var12, 340, 50, 16777215, 0, 0, 0, var2) * var2);
               IntrusiveNode.field_a[7].drawTransparent(-63 + var6, 10 + var12);
@@ -109,16 +109,16 @@ final class fg extends al {
                 if (var20 == 4) {
                   var4 = bj.field_q.drawParagraph(gj.field_g[this.field_n][0], var10, var9 + 20, var3, 440, 16777215, 0, 0, 0, var2);
                   var5 = var9 + (39 + var2 * var4);
-                  for (var20 = 0; var20 < cc.field_h[this.field_n].length; var20++) {
-                    var21 = cc.field_h[this.field_n][var20];
+                  for (var20 = 0; var20 < PowerupCard.field_h[this.field_n].length; var20++) {
+                    var21 = PowerupCard.field_h[this.field_n][var20];
                     kb.field_i[var21].drawTransparent(var10, var5 + 5);
                     var5 = var5 + (bj.field_q.drawParagraph(gj.field_j[var21], vh.field_b + 60, var5, var3 - 40, 400, 16777215, 0, 0, 0, var2) * var2 + 15);
                   }
                 } else {
                   if (var20 == 5) {
                     var5 = 19 + var9;
-                    for (var20 = 0; var20 < cc.field_h[this.field_n].length; var20++) {
-                      var21Lifetime1 = cc.field_h[this.field_n][var20];
+                    for (var20 = 0; var20 < PowerupCard.field_h[this.field_n].length; var20++) {
+                      var21Lifetime1 = PowerupCard.field_h[this.field_n][var20];
                       kb.field_i[var21Lifetime1].drawTransparent(var10, 5 + var5);
                       var5 = var5 + (var2 * bj.field_q.drawParagraph(gj.field_j[var21Lifetime1], var10 + 40, var5, var3 - 40, 400, 16777215, 0, 0, 0, var2) + 15);
                     }
@@ -126,14 +126,14 @@ final class fg extends al {
                     if (var20 == 6) {
                       var5 = 20 + var9;
                       for (var20 = 0; 4 > var20; var20++) {
-                        qn.field_k[var20].drawTransparent(var10 + 8, var5 - 8);
+                        RandomAccessCacheFile.field_k[var20].drawTransparent(var10 + 8, var5 - 8);
                         var5 = var5 + (var2 * bj.field_q.drawParagraph(gj.field_p[var20], 80 + var10, var5, -80 + var3, 400, 16777215, 0, 0, 0, var2) + 20);
                       }
                     } else {
                       if (var20 == 7) {
                         var5 = var9 + 20;
-                        for (var20 = 4; qn.field_k.length > var20; var20++) {
-                          qn.field_k[var20].drawTransparent(var10 + 8, -8 + var5);
+                        for (var20 = 4; RandomAccessCacheFile.field_k.length > var20; var20++) {
+                          RandomAccessCacheFile.field_k[var20].drawTransparent(var10 + 8, -8 + var5);
                           var5 = var5 + (var2 * bj.field_q.drawParagraph(gj.field_p[var20], var10 + 80, var5, var3 - 80, 400, 16777215, 0, 0, 0, var2) + 20);
                         }
                       } else {
@@ -166,8 +166,8 @@ final class fg extends al {
                         } else {
                           var4 = bj.field_q.drawParagraph(gj.field_g[this.field_n][0], var10, var9 + 20, var3, 440, 16777215, 0, 0, 0, var2);
                           var5 = 39 + var2 * var4 + var9;
-                          for (var20 = 0; cc.field_h[this.field_n].length > var20; var20++) {
-                            var21Lifetime2 = cc.field_h[this.field_n][var20];
+                          for (var20 = 0; PowerupCard.field_h[this.field_n].length > var20; var20++) {
+                            var21Lifetime2 = PowerupCard.field_h[this.field_n][var20];
                             kb.field_i[var21Lifetime2].drawTransparent(var10, 5 + var5);
                             var5 = var5 + (15 + bj.field_q.drawParagraph(gj.field_j[var21Lifetime2], var10 + 40, var5, var3 - 40, 400, 16777215, 0, 0, 0, var2) * var2);
                           }
@@ -210,22 +210,22 @@ final class fg extends al {
             l.field_b[1].drawTransparent(vh.field_b + 230, id.field_M + 242);
           }
         }
-        bj.field_q.drawStringRightAligned(uk.a(1 + this.field_n, (byte) 58, 1 + this.a(true)), 634 + vh.field_b, id.field_M + 410, 16777215, 0);
+        bj.field_q.drawStringRightAligned(uk.a(1 + this.field_n, (byte) 58, 1 + this.getLastPageIndex(true)), 634 + vh.field_b, id.field_M + 410, 16777215, 0);
     }
 
-    final int a(boolean param0, int param1) {
+    final int getItemRight(boolean param0, int param1) {
         if (!param0) {
           field_m = (vk) null;
         }
-        return this.c(param1, 6) + 180;
+        return this.getItemLeft(param1, 6) + 180;
     }
 
-    final void d(byte param0) {
+    final void resetToFirstPage(byte param0) {
         int var2 = -82 / ((param0 - 32) / 56);
         this.field_n = 0;
     }
 
-    final static Sprite d(int param0) {
+    final static Sprite buildFirstDecodedSprite(int param0) {
         int var5 = 0;
         int var6 = 0;
         int var1;
@@ -259,11 +259,11 @@ final class fg extends al {
           }
           var3 = new cd(gl.field_F, Zombie.field_pb, sl.field_d[0], bo.field_o[0], bn.field_c[0], uf.field_n[0], var13);
         }
-        no.f((byte) -73);
+        no.clearSpriteDecodeBuffers((byte) -73);
         return (Sprite) (var3);
     }
 
-    final void a(int param0) {
+    final void handleNavigationKeys(int param0) {
         int var2;
         int var3;
         int stackIn_5_0 = 0;
@@ -273,24 +273,24 @@ final class fg extends al {
         }
         stackIn_5_0 = (this.field_n != 0) ? 0 : 1;
         var2 = stackIn_5_0;
-        stackIn_8_0 = (this.field_n != this.a(true)) ? 0 : 1;
+        stackIn_8_0 = (this.field_n != this.getLastPageIndex(true)) ? 0 : 1;
         var3 = stackIn_8_0;
         if ((var2 != 0 ||
           var3 != 0) && (kg.field_i == 96 ||
           kg.field_i == 97)) {
-          this.field_b.a(1, -1);
+          this.field_b.navigateHorizontal(1, -1);
           if (var2 != 0 &&
             this.field_b.field_d == 0) {
-            this.field_b.a(1, -1);
+            this.field_b.navigateHorizontal(1, -1);
             return;
           }
           if (var3 != 0 &&
             this.field_b.field_d == 2) {
-            this.field_b.a(1, -1);
+            this.field_b.navigateHorizontal(1, -1);
           }
           return;
         }
-        this.field_b.a(1, -1);
+        this.field_b.navigateHorizontal(1, -1);
     }
 
     fg(int param0, boolean param1, int param2, int param3, int param4, int param5, int[] param6) {
@@ -298,7 +298,7 @@ final class fg extends al {
         this.field_n = 0;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int[] param9) {
+    final static void blendGradientSpanHalf(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int[] param9) {
         int[] var10 = null;
         int var11 = 0;
         int var12 = 0;
@@ -320,7 +320,7 @@ final class fg extends al {
             if (param3 < 0) {
               if (param5 != 61653921) {
                 var17 = (int[]) null;
-                fg.a(107, -48, -75, 124, 49, 11, -113, -78, 117, (int[]) null);
+                fg.blendGradientSpanHalf(107, -48, -75, 124, 49, 11, -113, -78, 117, (int[]) null);
               }
               return;
             }
@@ -358,7 +358,7 @@ final class fg extends al {
         }
     }
 
-    final boolean b(int param0, int param1) {
+    final boolean isItemEnabled(int param0, int param1) {
         boolean stackIn_10_0 = false;
         if (param1 != -1) {
           return false;
@@ -366,18 +366,18 @@ final class fg extends al {
         stackIn_10_0 = ((param0 != 0 ||
           this.field_n != 0) &&
           (2 != param0 ||
-          this.field_n != this.a(true)));
+          this.field_n != this.getLastPageIndex(true)));
         return stackIn_10_0;
     }
 
-    final static jc a(int param0, int param1, int param2, int param3, int param4) {
+    final static jc getRankingQuery(int param0, int param1, int param2, int param3, int param4) {
         int var6 = ZombieDawn.field_J;
-        jc var5 = (jc) (TileMap.field_g.b((byte) 26));
+        jc var5 = (jc) (TileMap.field_g.last((byte) 26));
         while (var5 != null) {
           if (param3 == var5.field_s) {
             return var5;
           }
-          var5 = (jc) (TileMap.field_g.a(false));
+          var5 = (jc) (TileMap.field_g.previous(false));
         }
         jc var7 = new jc();
         var5 = var7;
@@ -388,11 +388,11 @@ final class fg extends al {
           return (jc) null;
         }
         TileMap.field_g.addFirst(0, var5);
-        pm.a(0, param0, var5);
+        pm.writeHighscoreQuery(0, param0, var5);
         return var5;
     }
 
-    final void c(int param0, boolean param1) {
+    final void showPreviousPage(int param0, boolean param1) {
         int var3 = 0;
         this.field_n = this.field_n - 1;
         if (param0 != 20921) {
@@ -402,35 +402,35 @@ final class fg extends al {
           this.field_n == 0) {
           var3 = kg.field_i;
           kg.field_i = 97;
-          this.field_b.a(1, -1);
+          this.field_b.navigateHorizontal(1, -1);
           kg.field_i = var3;
         }
     }
 
-    private final int a(boolean param0) {
+    private final int getLastPageIndex(boolean param0) {
         if (!param0) {
           this.field_n = 42;
         }
         return be.field_j <= 0 ? 7 : gj.field_g.length - 1;
     }
 
-    final void b(boolean param0, int param1) {
+    final void showNextPage(boolean param0, int param1) {
         int var3 = 0;
         if (param1 <= 119) {
           int[] var4 = (int[]) null;
-          fg.a(6, 53, 47, 73, 20, 34, -122, -33, -19, (int[]) null);
+          fg.blendGradientSpanHalf(6, 53, 47, 73, 20, 34, -122, -33, -19, (int[]) null);
         }
         this.field_n = this.field_n + 1;
         if (!param0 &&
-          this.field_n == this.a(true)) {
+          this.field_n == this.getLastPageIndex(true)) {
           var3 = kg.field_i;
           kg.field_i = 96;
-          this.field_b.a(1, -1);
+          this.field_b.navigateHorizontal(1, -1);
           kg.field_i = var3;
         }
     }
 
-    final static String a(String param0, int param1, String param2, String param3) {
+    final static String replaceAll(String param0, int param1, String param2, String param3) {
         int var5 = ZombieDawn.field_J;
         int var4 = param3.indexOf(param0);
         if (param1 >= -126) {

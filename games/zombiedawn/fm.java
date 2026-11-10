@@ -18,9 +18,9 @@ final class fm extends an {
     }
 
     private fm(String param0, sk param1) {
-        this(param0, se.field_j.field_a, param1);
+        this(param0, ProxySocketConnector.field_j.field_a, param1);
         try {
-          this.field_h = se.field_j.field_g;
+          this.field_h = ProxySocketConnector.field_j.field_g;
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "fm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -29,7 +29,7 @@ final class fm extends an {
     private fm(String param0, io param1, sk param2) {
         super(param0, param1, param2);
         try {
-          this.field_h = se.field_j.field_g;
+          this.field_h = ProxySocketConnector.field_j.field_g;
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "fm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -68,7 +68,7 @@ final class fm extends an {
             for (var7 = 0; var6 > var7; var7++) {
               var9[var7] = ((PacketBuffer) ((Object) var5)).readInt(-90);
             }
-            var12 = (b) (qi.field_J.b((byte) 26));
+            var12 = (b) (qi.field_J.last((byte) 26));
             if (var12 == null) {
               p.a(1);
               return;
@@ -83,7 +83,7 @@ final class fm extends an {
               ae.a((Throwable) null, 10331, "A1: " + cb.f(3));
               p.a(1);
             } else {
-              var14 = (b) (qi.field_J.b((byte) 26));
+              var14 = (b) (qi.field_J.last((byte) 26));
               if (var14 == null) {
                 p.a(1);
                 return;
@@ -93,7 +93,7 @@ final class fm extends an {
               var14.unlink(-27598);
             }
           } else {
-            var11 = (bo) (mp.field_g.b((byte) 26));
+            var11 = (bo) (mp.field_g.last((byte) 26));
             if (var11 == null) {
               p.a(1);
               return;
@@ -108,10 +108,10 @@ final class fm extends an {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void activate(int param0, int param1, int param2, int param3) {
         this.field_x = !this.field_x ? true : false;
         int var5 = -35 / ((-12 - param1) / 56);
-        super.b(param0, -73, param2, param3);
+        super.activate(param0, -73, param2, param3);
     }
 
     public static void releaseStatics(int param0) {

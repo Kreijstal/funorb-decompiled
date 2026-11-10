@@ -9,11 +9,11 @@ class hp extends UiWidget implements jf {
     static dk field_A;
     static mf field_B;
     static String field_y;
-    static li field_E;
+    static JaggrabDownloader field_E;
     static int field_D;
     static boolean field_C;
 
-    private final void a(StringBuilder param0, boolean param1, int param2, Hashtable param3) {
+    private final void appendChildDebugTrees(StringBuilder param0, boolean param1, int param2, Hashtable param3) {
         StringBuilder discarded$3 = null;
         int var7 = 0;
         StringBuilder discarded$4 = null;
@@ -39,7 +39,7 @@ class hp extends UiWidget implements jf {
             for (var7 = 0; param2 >= var7; var7++) {
               discarded$4 = param0.append(' ');
             }
-            var6.a(param3, param0, param1, 1 + param2);
+            var6.appendDebugTree(param3, param0, param1, 1 + param2);
             var6 = (UiWidget) (var5.a((byte) 61));
           }
           return;
@@ -76,7 +76,7 @@ class hp extends UiWidget implements jf {
         }
     }
 
-    final boolean b(byte param0, UiWidget param1) {
+    final boolean focusPreviousChild(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         UiWidget var5 = null;
@@ -97,7 +97,7 @@ class hp extends UiWidget implements jf {
           var9 = new cj(this.field_x);
           var5 = (UiWidget) (var9.b((byte) -21));
           while (var5 != null) {
-            if (var5.e(-17741)) {
+            if (var5.isFocused(-17741)) {
               var6 = new cj(this.field_x);
               var6.a(var5, (byte) -128);
               var7 = (UiWidget) (var6.a(17));
@@ -126,7 +126,7 @@ class hp extends UiWidget implements jf {
         }
     }
 
-    boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
+    boolean handlePointerPress(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         cj var8 = null;
         RuntimeException var8_ref = null;
         UiWidget var9 = null;
@@ -143,8 +143,8 @@ class hp extends UiWidget implements jf {
             return true;
           }
           while (var9 != null) {
-            if (var9.a((byte) 73)) {
-              if (var9.a(param0, 1, this.field_j + param2, param3, this.field_k + param4, param5, param6)) {
+            if (var9.isLinked((byte) 73)) {
+              if (var9.handlePointerPress(param0, 1, this.field_j + param2, param3, this.field_k + param4, param5, param6)) {
                 return true;
               }
               var9 = (UiWidget) (var8.a((byte) 61));
@@ -185,8 +185,8 @@ class hp extends UiWidget implements jf {
           var6 = 65 % ((param0 + 83) / 32);
           var7 = (UiWidget) (var9.c((byte) -118));
           while (var7 != null) {
-            if (var7.a((byte) 73)) {
-              if (var7.e(-17741) &&
+            if (var7.isLinked((byte) 73)) {
+              if (var7.isFocused(-17741) &&
                 var7.requestKeyboardFocus(43, param1, param2, param3)) {
                 return true;
               }
@@ -200,9 +200,9 @@ class hp extends UiWidget implements jf {
             return false;
           }
           if (!bo.field_p[81]) {
-            stackIn_14_0 = this.a(1, param2);
+            stackIn_14_0 = this.focusNextChild(1, param2);
           } else {
-            stackIn_14_0 = this.b((byte) 119, param2);
+            stackIn_14_0 = this.focusPreviousChild((byte) 119, param2);
           }
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -219,31 +219,31 @@ class hp extends UiWidget implements jf {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void drawLayer(int param0, int param1, int param2, int param3) {
         int var7 = ZombieDawn.field_J;
         if (param1 == 0 &&
           this.field_h != null) {
-          this.field_h.a(param3 + 16777215, true, param0, (UiWidget) (this), param2);
+          this.field_h.drawWidget(param3 + 16777215, true, param0, (UiWidget) (this), param2);
         }
         cj var9 = new cj(this.field_x);
         if (param3 != 0) {
           UiWidget var8 = (UiWidget) null;
-          this.a(108, 83, -6, 30, 111, -93, (UiWidget) null);
+          this.handlePointerPress(108, 83, -6, 30, 111, -93, (UiWidget) null);
         }
         UiWidget var6 = (UiWidget) (var9.b((byte) -21));
         while (var6 != null) {
-          var6.a(param0 + this.field_j, param1, param2 + this.field_k, param3 + 0);
+          var6.drawLayer(param0 + this.field_j, param1, param2 + this.field_k, param3 + 0);
           var6 = (UiWidget) (var9.a(17));
         }
     }
 
-    String d(int param0) {
+    String getTooltip(int param0) {
         String var4_ref_String = null;
         int var5 = ZombieDawn.field_J;
         cj var2 = new cj(this.field_x);
         UiWidget var3 = (UiWidget) (var2.c((byte) -123));
         while (var3 != null) {
-          var4_ref_String = var3.d(100);
+          var4_ref_String = var3.getTooltip(100);
           if (var4_ref_String != null) {
             return var4_ref_String;
           }
@@ -253,7 +253,7 @@ class hp extends UiWidget implements jf {
         return null;
     }
 
-    final boolean a(int param0, UiWidget param1) {
+    final boolean focusNextChild(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
         cj var5 = null;
@@ -275,7 +275,7 @@ class hp extends UiWidget implements jf {
             field_y = (String) null;
           }
           while (var4 != null) {
-            if (var4.e(-17741)) {
+            if (var4.isFocused(-17741)) {
               var5 = new cj(this.field_x);
               var5.a(-3549, var4);
               var6 = (UiWidget) (var5.a((byte) 61));
@@ -304,7 +304,7 @@ class hp extends UiWidget implements jf {
         }
     }
 
-    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
+    final boolean onFocusedKey(UiWidget param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
         cj var8 = null;
         RuntimeException var8_ref = null;
         UiWidget var9 = null;
@@ -318,9 +318,9 @@ class hp extends UiWidget implements jf {
           var8 = new cj(this.field_x);
           var9 = (UiWidget) (var8.c((byte) -122));
           while (var9 != null) {
-            if (var9.a((byte) 73)) {
-              if (var9.e(-17741) &&
-                var9.a(param0, param1, param2, param3, param4, param5, param6)) {
+            if (var9.isLinked((byte) 73)) {
+              if (var9.isFocused(-17741) &&
+                var9.onFocusedKey(param0, param1, param2, param3, param4, param5, param6)) {
                 return true;
               }
               var9 = (UiWidget) (var8.a((byte) 61));
@@ -346,7 +346,7 @@ class hp extends UiWidget implements jf {
         }
     }
 
-    final StringBuilder a(Hashtable param0, StringBuilder param1, boolean param2, int param3) {
+    final StringBuilder appendDebugTree(Hashtable param0, StringBuilder param1, boolean param2, int param3) {
         RuntimeException var5 = null;
         StringBuilder stackIn_4_0 = null;
         StringBuilder stackIn_6_0 = null;
@@ -357,9 +357,9 @@ class hp extends UiWidget implements jf {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param0, param1, 11098, param3)) {
-            this.a(param0, param3, 69, param1);
-            this.a(param1, param2, param3, param0);
+          if (this.beginDebugDescription(param0, param1, 11098, param3)) {
+            this.appendDebugProperties(param0, param3, 69, param1);
+            this.appendChildDebugTrees(param1, param2, param3, param0);
           }
           if (param2) {
             stackIn_6_0 = (StringBuilder) (param1);
@@ -387,7 +387,7 @@ class hp extends UiWidget implements jf {
         }
     }
 
-    void a(UiWidget param0, byte param1, int param2, int param3) {
+    void updatePointer(UiWidget param0, byte param1, int param2, int param3) {
         RuntimeException runtimeException = null;
         cj var5 = null;
         int var6 = 0;
@@ -399,13 +399,13 @@ class hp extends UiWidget implements jf {
         RuntimeException decompiledCaughtException = null;
         var8 = ZombieDawn.field_J;
         try {
-          super.a(param0, (byte) -116, param2, param3);
+          super.updatePointer(param0, (byte) -116, param2, param3);
           var5 = new cj(this.field_x);
           var6 = -6 % ((param1 - 46) / 42);
           var7 = (UiWidget) (var5.c((byte) -128));
           while (var7 != null) {
-            if (var7.a((byte) 73)) {
-              var7.a(param0, (byte) -75, param2 + this.field_j, param3 + this.field_k);
+            if (var7.isLinked((byte) 73)) {
+              var7.updatePointer(param0, (byte) -75, param2 + this.field_j, param3 + this.field_k);
               var7 = (UiWidget) (var5.a((byte) 61));
               continue;
             }
@@ -437,7 +437,7 @@ class hp extends UiWidget implements jf {
         }
         var3 = (UiWidget) (var2.c((byte) -126));
         while (var3 != null) {
-          if (var3.e(-17741)) {
+          if (var3.isFocused(-17741)) {
             return var3;
           }
           var3 = (UiWidget) (var2.a((byte) 61));
@@ -445,10 +445,10 @@ class hp extends UiWidget implements jf {
         return null;
     }
 
-    void a(int param0, int param1, int param2, int param3, int param4) {
+    void setBounds(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 38 / ((param0 + 23) / 48);
-        super.a(85, param1, param2, param3, param4);
-        this.g(-115);
+        super.setBounds(85, param1, param2, param3, param4);
+        this.refreshChildLayouts(-115);
     }
 
     public static void releaseStatics(int param0) {
@@ -499,7 +499,7 @@ class hp extends UiWidget implements jf {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
+    final void handlePointerRelease(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         cj var7 = null;
         UiWidget var8 = null;
         int var9 = 0;
@@ -513,8 +513,8 @@ class hp extends UiWidget implements jf {
           var7 = new cj(this.field_x);
           var8 = (UiWidget) (var7.c((byte) -121));
           while (var8 != null) {
-            if (var8.a((byte) 73)) {
-              var8.a(this.field_k + param0, 21, param2, param3, this.field_j + param4, param5);
+            if (var8.isLinked((byte) 73)) {
+              var8.handlePointerRelease(this.field_k + param0, 21, param2, param3, this.field_j + param4, param5);
               var8 = (UiWidget) (var7.a((byte) 61));
               continue;
             }
@@ -538,14 +538,14 @@ class hp extends UiWidget implements jf {
         }
     }
 
-    final int c(int param0) {
+    final int getLastRenderPass(int param0) {
         int var5 = 0;
         int var6 = ZombieDawn.field_J;
         int var2 = param0;
         cj var3 = new cj(this.field_x);
         UiWidget var4 = (UiWidget) (var3.c((byte) -119));
         while (var4 != null) {
-          var5 = var4.c(param0 ^ 0);
+          var5 = var4.getLastRenderPass(param0 ^ 0);
           if (var2 < var5) {
             var2 = var5;
           }
@@ -554,30 +554,30 @@ class hp extends UiWidget implements jf {
         return var2;
     }
 
-    boolean e(int param0) {
+    boolean isFocused(int param0) {
         if (param0 != -17741) {
           return false;
         }
         return null != this.findFocusedChild((byte) 35) ? true : false;
     }
 
-    final void a(UiWidget param0, int param1) {
+    final void addChild(UiWidget param0, int param1) {
         try {
           this.field_x.addFirst(0, param0);
           if (param1 != 10) {
-            this.c(30);
+            this.getLastRenderPass(30);
           }
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "hp.JB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    private final void g(int param0) {
+    private final void refreshChildLayouts(int param0) {
         int var4 = ZombieDawn.field_J;
         cj var2 = new cj(this.field_x);
         UiWidget var3 = (UiWidget) (var2.c((byte) -122));
         while (var3 != null) {
-          var3.a(true);
+          var3.reapplyBounds(true);
           var3 = (UiWidget) (var2.a((byte) 61));
         }
         if (param0 > -78) {

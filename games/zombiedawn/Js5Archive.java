@@ -5,7 +5,7 @@ final class Js5Archive {
     private Object[] field_j;
     static IntrusiveDeque field_l;
     private int field_d;
-    private w field_h;
+    private ArchiveProvider field_h;
     static String field_a;
     private boolean field_f;
     static IntrusiveDeque field_m;
@@ -16,7 +16,7 @@ final class Js5Archive {
     static Sprite[] field_k;
     static int[] field_i;
 
-    private final synchronized boolean a(int[] param0, int param1, int param2, byte param3) {
+    private final synchronized boolean unpackGroup(int[] param0, int param1, int param2, byte param3) {
         Object[] array$0 = null;
         int var9_int = 0;
         int var20 = 0;
@@ -68,7 +68,7 @@ final class Js5Archive {
         int var14_intLifetime1;
         var22 = ZombieDawn.field_J;
         try {
-          if (!this.b(param2, (byte) -82)) {
+          if (!this.isValidGroup(param2, (byte) -82)) {
             return false;
           }
           if (this.field_j[param2] == null) {
@@ -104,19 +104,19 @@ final class Js5Archive {
             param0[1] != 0 ||
             0 != param0[2] ||
             param0[3] != 0)) {
-            var36 = SecondaryNodeDequeIterator.a(this.field_j[param2], (byte) 125, true);
+            var36 = SecondaryNodeDequeIterator.unwrapArchiveBytes(this.field_j[param2], (byte) 125, true);
             var26 = var36;
             var9 = var26;
             var27 = new PacketBuffer(var36);
-            var27.a(153818020, var27.payload.length, param0, 5);
+            var27.decryptXteaRange(153818020, var27.payload.length, param0, 5);
             decompiledFrameRemainder0 = false;
           }
           else {
-            var9 = SecondaryNodeDequeIterator.a(this.field_j[param2], (byte) 88, false);
+            var9 = SecondaryNodeDequeIterator.unwrapArchiveBytes(this.field_j[param2], (byte) 88, false);
           }
           if (param3 > -28) {
             var23 = (String) null;
-            this.a((String) (this.field_j[2]), -6, (String) null);
+            this.getFileByName((String) (this.field_j[2]), -6, (String) null);
           }
           try {
             var37 = va.a((byte) -112, var9);
@@ -129,7 +129,7 @@ final class Js5Archive {
             stackIn_38_0 = var11_ref_RuntimeException;
             stackIn_38_1 = new StringBuilder();
             stackIn_39_2 = (param0 != null);
-            throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(" ").append(param2).append(" ").append(var9.length).append(" ").append(SecondaryNodeDeque.a(8099, var9.length, var9)).append(" ").append(SecondaryNodeDeque.a(8099, var9.length - 2, var9)).append(" ").append(this.field_b.field_j[param2]).append(" ").append(this.field_b.field_m).toString());
+            throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(" ").append(param2).append(" ").append(var9.length).append(" ").append(SecondaryNodeDeque.computeCrc32(8099, var9.length, var9)).append(" ").append(SecondaryNodeDeque.computeCrc32(8099, var9.length - 2, var9)).append(" ").append(this.field_b.field_j[param2]).append(" ").append(this.field_b.field_m).toString());
           }
           if (this.field_f) {
             this.field_j[param2] = null;
@@ -259,7 +259,7 @@ final class Js5Archive {
         }
     }
 
-    final boolean a(String param0, byte param1, String param2) {
+    final boolean isFileReadyByName(String param0, byte param1, String param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -278,17 +278,17 @@ final class Js5Archive {
           }
           param0 = param0.toLowerCase();
           if (param1 >= -9) {
-            this.a(76, (byte) -89, 2);
+            this.isFileLoaded(76, (byte) -89, 2);
           }
           param2 = param2.toLowerCase();
           var6 = (CharSequence) ((Object) param0);
           var4_int = this.field_b.field_g.a(1, tc.a(var6, 14));
-          if (!this.b(var4_int, (byte) -82)) {
+          if (!this.isValidGroup(var4_int, (byte) -82)) {
             return false;
           }
           var7 = (CharSequence) ((Object) param2);
           var5 = this.field_b.field_a[var4_int].a(1, tc.a(var7, 14));
-          stackIn_9_0 = this.a(var5, (byte) -128, var4_int);
+          stackIn_9_0 = this.isFileLoaded(var5, (byte) -128, var4_int);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -320,7 +320,7 @@ final class Js5Archive {
         return this.field_b.field_d.length;
     }
 
-    private final synchronized byte[] a(int[] param0, int param1, int param2, int param3) {
+    private final synchronized byte[] getFileWithKeys(int[] param0, int param1, int param2, int param3) {
         Object stackIn_4_0 = null;
         Object stackIn_11_0 = null;
         Object stackIn_27_0 = null;
@@ -334,15 +334,15 @@ final class Js5Archive {
           if (param3 < 124) {
             this.field_b = (jh) (((Object[]) (this.field_j[16]))[1]);
           }
-          if (!this.a(param1, param2, 105)) {
+          if (!this.isValidFile(param1, param2, 105)) {
             stackIn_4_0 = null;
             return (byte[]) (stackIn_4_0);
           }
           var5 = null;
           if ((this.field_c[param2] == null ||
-            this.field_c[param2][param1] == null) && !this.a(param0, param1, param2, (byte) -57)) {
-            this.c(4, param2);
-            if (!this.a(param0, param1, param2, (byte) -85)) {
+            this.field_c[param2][param1] == null) && !this.unpackGroup(param0, param1, param2, (byte) -57)) {
+            this.loadGroup(4, param2);
+            if (!this.unpackGroup(param0, param1, param2, (byte) -85)) {
               stackIn_11_0 = null;
               return (byte[]) (stackIn_11_0);
             }
@@ -351,7 +351,7 @@ final class Js5Archive {
             throw new RuntimeException("");
           }
           if (null != this.field_c[param2][param1]) {
-            var7 = SecondaryNodeDequeIterator.a(this.field_c[param2][param1], (byte) 98, false);
+            var7 = SecondaryNodeDequeIterator.unwrapArchiveBytes(this.field_c[param2][param1], (byte) 98, false);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");
@@ -392,7 +392,7 @@ final class Js5Archive {
         if (this.field_b != null) {
           return true;
         }
-        this.field_b = this.field_h.b((byte) 106);
+        this.field_b = this.field_h.getIndex((byte) 106);
         if (null == this.field_b) {
           return false;
         }
@@ -401,7 +401,7 @@ final class Js5Archive {
         return true;
     }
 
-    final static void a(int param0) {
+    final static void showLoginDialog(int param0) {
         String var2 = (String) null;
         jm.a((String) null, "", -901373652);
         int var1 = -106 % ((67 - param0) / 40);
@@ -419,12 +419,12 @@ final class Js5Archive {
         }
         var2 = 0;
         if (param0 >= -79) {
-          this.a((byte) -52, 65);
+          this.getFileCount((byte) -52, 65);
         }
         var3 = 0;
         for (var4 = 0; this.field_j.length > var4; var4++) {
           if (0 < this.field_b.field_t[var4]) {
-            var3 = var3 + this.a(var4, -5366);
+            var3 = var3 + this.getGroupProgress(var4, -5366);
             var2 += 100;
           }
         }
@@ -435,7 +435,7 @@ final class Js5Archive {
         return var4Lifetime1;
     }
 
-    final int a(int param0, String param1, boolean param2) {
+    final int getFileIdByName(int param0, String param1, boolean param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         CharSequence var5 = null;
@@ -447,7 +447,7 @@ final class Js5Archive {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!this.b(param0, (byte) -82)) {
+          if (!this.isValidGroup(param0, (byte) -82)) {
             stackIn_3_0 = -1;
             return stackIn_3_0;
           }
@@ -458,7 +458,7 @@ final class Js5Archive {
           }
           var5 = (CharSequence) ((Object) param1);
           var4_int = this.field_b.field_a[param0].a(1, tc.a(var5, 14));
-          if (this.a(var4_int, param0, 126)) {
+          if (this.isValidFile(var4_int, param0, 126)) {
             return var4_int;
           }
           stackIn_10_0 = -1;
@@ -477,7 +477,7 @@ final class Js5Archive {
         }
     }
 
-    final int b(String param0, int param1) {
+    final int getGroupProgressByName(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -498,7 +498,7 @@ final class Js5Archive {
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
           var3_int = this.field_b.field_g.a(1, tc.a(var4, 14));
-          stackIn_7_0 = this.a(var3_int, -5366);
+          stackIn_7_0 = this.getGroupProgress(var3_int, -5366);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -514,8 +514,8 @@ final class Js5Archive {
         }
     }
 
-    final synchronized boolean a(int param0, byte param1, int param2) {
-        if (!this.a(param0, param2, 113)) {
+    final synchronized boolean isFileLoaded(int param0, byte param1, int param2) {
+        if (!this.isValidFile(param0, param2, 113)) {
           return false;
         }
         int var4 = -105 / ((-38 - param1) / 58);
@@ -526,14 +526,14 @@ final class Js5Archive {
         if (null != this.field_j[param2]) {
           return true;
         }
-        this.c(4, param2);
+        this.loadGroup(4, param2);
         if (this.field_j[param2] == null) {
           return false;
         }
         return true;
     }
 
-    final synchronized byte[] a(String param0, int param1, String param2) {
+    final synchronized byte[] getFileByName(String param0, int param1, String param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -554,19 +554,19 @@ final class Js5Archive {
             return (byte[]) (stackIn_2_0);
           }
           if (param1 >= -82) {
-            this.a((String) null, (byte) 28, (String) (this.field_j[1]));
+            this.isFileReadyByName((String) null, (byte) 28, (String) (this.field_j[1]));
           }
           param2 = param2.toLowerCase();
           param0 = param0.toLowerCase();
           var6 = (CharSequence) ((Object) param2);
           var4_int = this.field_b.field_g.a(1, tc.a(var6, 14));
-          if (!this.b(var4_int, (byte) -82)) {
+          if (!this.isValidGroup(var4_int, (byte) -82)) {
             stackIn_7_0 = null;
             return (byte[]) (stackIn_7_0);
           }
           var7 = (CharSequence) ((Object) param0);
           var5 = this.field_b.field_a[var4_int].a(1, tc.a(var7, 14));
-          stackIn_9_0 = this.a((byte) 51, var4_int, var5);
+          stackIn_9_0 = this.getFile((byte) 51, var4_int, var5);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -588,7 +588,7 @@ final class Js5Archive {
         }
     }
 
-    final boolean a(int param0, String param1) {
+    final boolean loadGroupByName(int param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -603,11 +603,11 @@ final class Js5Archive {
           }
           param1 = param1.toLowerCase();
           if (param0 != -1) {
-            this.a(((int[]) (this.field_j[7]))[0], -46);
+            this.getGroupProgress(((int[]) (this.field_j[7]))[0], -46);
           }
           var4 = (CharSequence) ((Object) param1);
           var3_int = this.field_b.field_g.a(1, tc.a(var4, param0 + 15));
-          stackIn_7_0 = this.b(-29092, var3_int);
+          stackIn_7_0 = this.ensureGroupLoaded(-29092, var3_int);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -623,20 +623,20 @@ final class Js5Archive {
         }
     }
 
-    private final synchronized void c(int param0, int param1) {
+    private final synchronized void loadGroup(int param0, int param1) {
         if (param0 != 4) {
           return;
         }
         if (this.field_f) {
-          this.field_j[param1] = this.field_h.a(param1, (byte) 112);
+          this.field_j[param1] = this.field_h.getPackedGroup(param1, (byte) 112);
         } else {
-          this.field_j[param1] = el.a((byte) 94, false, this.field_h.a(param1, (byte) 112));
+          this.field_j[param1] = el.a((byte) 94, false, this.field_h.getPackedGroup(param1, (byte) 112));
         }
     }
 
-    private final synchronized boolean b(int param0, byte param1) {
+    private final synchronized boolean isValidGroup(int param0, byte param1) {
         if (param1 != -82) {
-          this.c(((int[]) (this.field_j[4]))[0], 99);
+          this.loadGroup(((int[]) (this.field_j[4]))[0], 99);
         }
         if (!this.isIndexLoaded((byte) 73)) {
           return false;
@@ -652,11 +652,11 @@ final class Js5Archive {
         return true;
     }
 
-    final byte[] a(byte param0, int param1, int param2) {
+    final byte[] getFile(byte param0, int param1, int param2) {
         if (param0 != 51) {
           this.field_d = -23;
         }
-        return this.a((int[]) null, param2, param1, param0 ^ 77);
+        return this.getFileWithKeys((int[]) null, param2, param1, param0 ^ 77);
     }
 
     public static void releaseStatics(int param0) {
@@ -672,30 +672,30 @@ final class Js5Archive {
         field_g = null;
     }
 
-    final int a(byte param0, int param1) {
+    final int getFileCount(byte param0, int param1) {
         if (param0 < 53) {
           return 18;
         }
-        if (!this.b(param1, (byte) -82)) {
+        if (!this.isValidGroup(param1, (byte) -82)) {
           return 0;
         }
         return this.field_b.field_d[param1];
     }
 
-    final synchronized int a(int param0, int param1) {
-        if (!this.b(param0, (byte) -82)) {
+    final synchronized int getGroupProgress(int param0, int param1) {
+        if (!this.isValidGroup(param0, (byte) -82)) {
           return 0;
         }
         if (this.field_j[param0] != null) {
           return 100;
         }
         if (param1 != -5366) {
-          this.a((String) null, -127, (String) (this.field_j[4]));
+          this.getFileByName((String) null, -127, (String) (this.field_j[4]));
         }
-        return this.field_h.a(-90, param0);
+        return this.field_h.getGroupProgress(-90, param0);
     }
 
-    final boolean a(String param0, int param1) {
+    final boolean hasGroupName(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -728,7 +728,7 @@ final class Js5Archive {
         }
     }
 
-    private final synchronized boolean a(int param0, int param1, int param2) {
+    private final synchronized boolean isValidFile(int param0, int param1, int param2) {
         int var4;
         if (!this.isIndexLoaded((byte) 73)) {
           return false;
@@ -746,24 +746,24 @@ final class Js5Archive {
         throw new IllegalArgumentException(param1 + " " + param0);
     }
 
-    final synchronized byte[] a(int param0, byte param1) {
+    final synchronized byte[] getFlatFile(int param0, byte param1) {
         if (!this.isIndexLoaded((byte) 73)) {
           return null;
         }
         if (1 == this.field_b.field_d.length) {
-          return this.a((byte) 51, 0, param0);
+          return this.getFile((byte) 51, 0, param0);
         }
         int var3 = 84 % ((-21 - param1) / 37);
-        if (!this.b(param0, (byte) -82)) {
+        if (!this.isValidGroup(param0, (byte) -82)) {
           return null;
         }
         if (this.field_b.field_d[param0] == 1) {
-          return this.a((byte) 51, param0, 0);
+          return this.getFile((byte) 51, param0, 0);
         }
         throw new RuntimeException();
     }
 
-    final int a(String param0, byte param1) {
+    final int getGroupIdByName(String param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
@@ -785,7 +785,7 @@ final class Js5Archive {
           }
           var4 = (CharSequence) ((Object) param0);
           var3_int = this.field_b.field_g.a(param1 ^ 9, tc.a(var4, 14));
-          if (this.b(var3_int, (byte) -82)) {
+          if (this.isValidGroup(var3_int, (byte) -82)) {
             stackIn_10_0 = var3_int;
             return stackIn_10_0;
           }
@@ -805,8 +805,8 @@ final class Js5Archive {
         }
     }
 
-    final synchronized boolean b(int param0, int param1) {
-        if (!this.b(param1, (byte) -82)) {
+    final synchronized boolean ensureGroupLoaded(int param0, int param1) {
+        if (!this.isValidGroup(param1, (byte) -82)) {
           return false;
         }
         if (param0 != -29092) {
@@ -815,14 +815,14 @@ final class Js5Archive {
         if (null != this.field_j[param1]) {
           return true;
         }
-        this.c(4, param1);
+        this.loadGroup(4, param1);
         if (this.field_j[param1] == null) {
           return false;
         }
         return true;
     }
 
-    final synchronized boolean c(int param0) {
+    final synchronized boolean areAllGroupsLoaded(int param0) {
         int var3 = 0;
         int var2;
         int var4;
@@ -835,19 +835,19 @@ final class Js5Archive {
         for (var3 = 0; this.field_b.field_n.length > var3; var3++) {
           var4 = this.field_b.field_n[var3];
           if (this.field_j[var4] == null) {
-            this.c(param0 - 8997, var4);
+            this.loadGroup(param0 - 8997, var4);
             if (null == this.field_j[var4]) {
               var2 = 0;
             }
           }
         }
         if (param0 != 9001) {
-          this.a(70, ((byte[]) (this.field_j[19]))[2], 26);
+          this.isFileLoaded(70, ((byte[]) (this.field_j[19]))[2], 26);
         }
         return var2 != 0;
     }
 
-    Js5Archive(w param0, boolean param1, int param2) {
+    Js5Archive(ArchiveProvider param0, boolean param1, int param2) {
         this.field_b = null;
         try {
           if (param2 < 0 ||

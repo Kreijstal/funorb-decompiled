@@ -16,15 +16,15 @@ final class SpatialGrid {
     private int field_c;
     static int field_b;
 
-    private final SpatialBucket a(int param0, int param1, int param2) {
+    private final SpatialBucket getBucket(int param0, int param1, int param2) {
         if (param0 != 1) {
           this.field_j = 32;
-          return this.a(false, param1, param2, 0);
+          return this.getOrCreateBucket(false, param1, param2, 0);
         }
-        return this.a(false, param1, param2, 0);
+        return this.getOrCreateBucket(false, param1, param2, 0);
     }
 
-    final static void a(int param0, int param1) {
+    final static void resendQueuedRequests(int param0, int param1) {
         IntrusiveNode var2 = null;
         int var3 = 0;
         bo var4 = null;
@@ -33,17 +33,17 @@ final class SpatialGrid {
         var3 = ZombieDawn.field_J;
         try {
           if (param1 != -1) {
-            SpatialGrid.a(103, -42);
+            SpatialGrid.resendQueuedRequests(103, -42);
           }
-          var4 = (bo) (mp.field_g.b((byte) 26));
+          var4 = (bo) (mp.field_g.last((byte) 26));
           while (var4 != null) {
-            SecondaryNodeDequeIterator.a(param0, true, var4);
-            var4 = (bo) (mp.field_g.a(false));
+            SecondaryNodeDequeIterator.writeProgressRecord(param0, true, var4);
+            var4 = (bo) (mp.field_g.previous(false));
           }
-          var2 = qi.field_J.b((byte) 26);
+          var2 = qi.field_J.last((byte) 26);
           while (var2 != null) {
             pp.a(2, param0);
-            var2 = qi.field_J.a(false);
+            var2 = qi.field_J.previous(false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -53,15 +53,15 @@ final class SpatialGrid {
         }
     }
 
-    final SpatialObject a(int param0, int param1, int param2, int param3) {
+    final SpatialObject firstObjectNear(int param0, int param1, int param2, int param3) {
         if (param2 != 29845) {
           this.field_j = -108;
-          return this.a(param1 - param0, param3 - param0, param3 + param0, param0 + param1, true);
+          return this.firstObjectInCellRect(param1 - param0, param3 - param0, param3 + param0, param0 + param1, true);
         }
-        return this.a(param1 - param0, param3 - param0, param3 + param0, param0 + param1, true);
+        return this.firstObjectInCellRect(param1 - param0, param3 - param0, param3 + param0, param0 + param1, true);
     }
 
-    private final SpatialBucket a(boolean param0, int param1, int param2, int param3) {
+    private final SpatialBucket getOrCreateBucket(boolean param0, int param1, int param2, int param3) {
         SpatialBucket dupTemp$0 = null;
         if (param1 >= this.field_m) {
           return null;
@@ -84,13 +84,13 @@ final class SpatialGrid {
         }
         if (param3 != 0) {
           java.awt.Component var6 = (java.awt.Component) null;
-          SpatialGrid.a(31, (java.awt.Component) null);
+          SpatialGrid.detachMouseInput(31, (java.awt.Component) null);
           return var5;
         }
         return var5;
     }
 
-    final SpatialObject b(boolean param0) {
+    final SpatialObject nextQueryObject(boolean param0) {
         int var3;
         SpatialObject stackIn_5_1 = null;
         SpatialObject stackIn_14_1 = null;
@@ -101,13 +101,13 @@ final class SpatialGrid {
         if (null != this.field_k) {
           if (null == this.field_a) {
             if (null != this.field_k) {
-              stackIn_38_1 = this.field_k.b(29);
+              stackIn_38_1 = this.field_k.firstObject(29);
             } else {
               stackIn_38_1 = null;
             }
             this.field_a = stackIn_38_1;
           } else {
-            this.field_a = this.field_k.a(-6116);
+            this.field_a = this.field_k.nextObject(-6116);
           }
           while (null == this.field_a) {
             this.field_l = this.field_l + 1;
@@ -122,9 +122,9 @@ final class SpatialGrid {
                 return this.field_a;
               }
             }
-            this.field_k = this.a(1, this.field_c, this.field_l);
+            this.field_k = this.getBucket(1, this.field_c, this.field_l);
             if (this.field_k != null) {
-              stackIn_49_1 = this.field_k.b(45);
+              stackIn_49_1 = this.field_k.firstObject(45);
             } else {
               stackIn_49_1 = null;
             }
@@ -136,9 +136,9 @@ final class SpatialGrid {
           this.field_a = (SpatialObject) null;
           return this.field_a;
         }
-        this.field_k = this.a(1, this.field_c, this.field_l);
+        this.field_k = this.getBucket(1, this.field_c, this.field_l);
         if (null != this.field_a) {
-          this.field_a = this.field_k.a(-6116);
+          this.field_a = this.field_k.nextObject(-6116);
           scanLoop1: while (true) {
             if (null == this.field_a) {
               this.field_l = this.field_l + 1;
@@ -150,9 +150,9 @@ final class SpatialGrid {
                   break scanLoop1;
                 }
               }
-              this.field_k = this.a(1, this.field_c, this.field_l);
+              this.field_k = this.getBucket(1, this.field_c, this.field_l);
               if (this.field_k != null) {
-                stackIn_28_1 = this.field_k.b(45);
+                stackIn_28_1 = this.field_k.firstObject(45);
               } else {
                 stackIn_28_1 = null;
               }
@@ -167,7 +167,7 @@ final class SpatialGrid {
           return this.field_a;
         }
         if (null != this.field_k) {
-          stackIn_5_1 = this.field_k.b(29);
+          stackIn_5_1 = this.field_k.firstObject(29);
         } else {
           stackIn_5_1 = null;
         }
@@ -183,9 +183,9 @@ final class SpatialGrid {
                 break scanLoop2;
               }
             }
-            this.field_k = this.a(1, this.field_c, this.field_l);
+            this.field_k = this.getBucket(1, this.field_c, this.field_l);
             if (this.field_k != null) {
-              stackIn_14_1 = this.field_k.b(45);
+              stackIn_14_1 = this.field_k.firstObject(45);
             } else {
               stackIn_14_1 = null;
             }
@@ -200,7 +200,7 @@ final class SpatialGrid {
         return this.field_a;
     }
 
-    final void a(int param0, int param1, SpatialObject param2, int param3) {
+    final void addObject(int param0, int param1, SpatialObject param2, int param3) {
         SpatialBucket var5 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -211,7 +211,7 @@ final class SpatialGrid {
           if (param1 != -1) {
             this.field_j = -40;
           }
-          var5 = this.a(true, param0, param3, 0);
+          var5 = this.getOrCreateBucket(true, param0, param3, 0);
           if (var5 != null) {
             var5.addLast((byte) 65, param2);
           }
@@ -235,15 +235,15 @@ final class SpatialGrid {
         int var1 = 6 / ((param0 + 48) / 33);
     }
 
-    final SpatialObject a(boolean param0) {
+    final SpatialObject firstObject(boolean param0) {
         if (!param0) {
           this.field_a = (SpatialObject) null;
-          return this.a(0, 0, -1 + this.field_d, -1 + this.field_m, true);
+          return this.firstObjectInCellRect(0, 0, -1 + this.field_d, -1 + this.field_m, true);
         }
-        return this.a(0, 0, -1 + this.field_d, -1 + this.field_m, true);
+        return this.firstObjectInCellRect(0, 0, -1 + this.field_d, -1 + this.field_m, true);
     }
 
-    final SpatialObject a(int param0, int param1, int param2, int param3, boolean param4) {
+    final SpatialObject firstObjectInCellRect(int param0, int param1, int param2, int param3, boolean param4) {
         this.field_i = param0 < 0 ? 0 : param0;
         this.field_h = param3 >= this.field_m ? -1 + this.field_m : param3;
         this.field_f = param1 < 0 ? 0 : param1;
@@ -254,16 +254,16 @@ final class SpatialGrid {
           this.field_k = null;
           this.field_l = this.field_f;
           this.field_c = this.field_i;
-          return this.b(!param4 ? true : false);
+          return this.nextQueryObject(!param4 ? true : false);
         }
         this.field_a = null;
         this.field_k = null;
         this.field_l = this.field_f;
         this.field_c = this.field_i;
-        return this.b(!param4 ? true : false);
+        return this.nextQueryObject(!param4 ? true : false);
     }
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void detachMouseInput(int param0, java.awt.Component param1) {
         try {
           param1.removeMouseListener(ng.field_b);
           param1.removeMouseMotionListener(ng.field_b);

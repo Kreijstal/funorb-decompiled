@@ -36,7 +36,7 @@ final class te extends id {
         field_R = null;
     }
 
-    final void a(byte param0, Camera param1) {
+    final void draw(byte param0, Camera param1) {
         Camera stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         int stackIn_5_2 = 0;
@@ -120,7 +120,7 @@ final class te extends id {
           }
           if (param0 >= -76) {
             var15 = (String) null;
-            te.a((String) null, -53, 120);
+            te.createResponseWithMessage((String) null, -53, 120);
           }
           if (this.field_fb != 0 &&
             dk.field_Tb[this.field_ab].length > this.field_H) {
@@ -139,7 +139,7 @@ final class te extends id {
             } else {
               stackIn_29_4 = -99 - this.field_cb;
             }
-            Mover.$cfr$intArgs$a$3aedf8649552(stackIn_25_0, stackIn_25_1, stackIn_28_2, stackIn_28_3, stackIn_29_4 + var5);
+            Mover.intersectClipIntArgs(stackIn_25_0, stackIn_25_1, stackIn_28_2, stackIn_28_3, stackIn_29_4 + var5);
             for (var9Lifetime1 = 0; 3 > var9Lifetime1; var9Lifetime1 += 2) {
               var10 = this.field_jb[var9Lifetime1];
               if (var10 != 0) {
@@ -160,7 +160,7 @@ final class te extends id {
             if (this.field_hb != null &&
               this.field_hb.field_J) {
               this.field_hb.field_J = false;
-              this.field_hb.a((byte) -124, param1);
+              this.field_hb.draw((byte) -124, param1);
               this.field_hb.field_J = true;
             }
             if (this.field_fb != 4) {
@@ -190,7 +190,7 @@ final class te extends id {
                 }
               }
             }
-            pa.a(-21189);
+            pa.popRasterState(-21189);
             return;
           }
           return;
@@ -208,30 +208,30 @@ final class te extends id {
         }
     }
 
-    private final void c(int param0, int param1) {
+    private final void setAnimation(int param0, int param1) {
         this.field_U = param0;
         this.field_H = 0;
         this.field_ab = param1;
     }
 
-    final static HumanFactory a(String param0, int param1, int param2) {
-        HumanFactory var3 = null;
+    final static AccountServerResult createResponseWithMessage(String param0, int param1, int param2) {
+        AccountServerResult var3 = null;
         RuntimeException var3_ref = null;
-        HumanFactory stackIn_2_0 = null;
-        HumanFactory stackIn_4_0 = null;
+        AccountServerResult stackIn_2_0 = null;
+        AccountServerResult stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new HumanFactory(false);
+          var3 = new AccountServerResult(false);
           var3.field_a = param2;
           var3.field_e = param0;
           if (param1 == -13466) {
             stackIn_4_0 = var3;
             return stackIn_4_0;
           }
-          stackIn_2_0 = (HumanFactory) null;
+          stackIn_2_0 = (AccountServerResult) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -247,7 +247,7 @@ final class te extends id {
         }
     }
 
-    final void g(int param0) {
+    final void tick(int param0) {
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
         int fieldTemp$0 = 0;
@@ -328,7 +328,7 @@ final class te extends id {
         }
         var3Lifetime1 = this.field_fb;
         if (0 == var3Lifetime1) {
-          var3_ref_g = (Mover) (this.a((byte) -74, 96, 3));
+          var3_ref_g = (Mover) (this.firstNearbyObject((byte) -74, 96, 3));
           while (var3_ref_g != null) {
             boolean decompiledFrameRemainder0 = true;
             if (!var3_ref_g.field_V &&
@@ -338,7 +338,7 @@ final class te extends id {
               var5 = this.getX(true) - var3_ref_g.getX(true);
               if (var4Lifetime1 > 0) {
                 if (var4Lifetime1 >= 58) {
-                  var3_ref_g = (Mover) (this.e((byte) 32));
+                  var3_ref_g = (Mover) (this.nextNearbyObject((byte) 32));
                   continue;
                 }
                 if (this.field_P) {
@@ -355,7 +355,7 @@ final class te extends id {
                 if (decompiledFrameRemainder0) {
                   this.field_gb = var3_ref_g.getY(237239984) - 60;
                   this.field_hb = var3_ref_g;
-                  this.field_hb.j(81);
+                  this.field_hb.freeze(81);
                   this.field_fb = 1;
                   this.field_cb = Math.abs(var5);
                   kh.a(126, false);
@@ -365,7 +365,7 @@ final class te extends id {
                   } else {
                     stackIn_60_2 = 0;
                   }
-                  this.c(stackIn_59_1, stackIn_60_2);
+                  this.setAnimation(stackIn_59_1, stackIn_60_2);
                   var8 = 0;
                   var6Lifetime1 = var8;
                   while (var8 < 3) {
@@ -386,7 +386,7 @@ final class te extends id {
                 }
               }
             }
-            var3_ref_g = (Mover) (this.e((byte) 32));
+            var3_ref_g = (Mover) (this.nextNearbyObject((byte) 32));
           }
           return;
         }
@@ -398,8 +398,8 @@ final class te extends id {
             } else {
               stackIn_75_2 = 2;
             }
-            this.c(stackIn_74_1, stackIn_75_2);
-            this.field_hb.f((byte) -85);
+            this.setAnimation(stackIn_74_1, stackIn_75_2);
+            this.field_hb.onGrabbed((byte) -85);
             stackIn_77_0 = this.field_hb;
             if (!(this.field_hb instanceof Human ^ this.field_P)) {
               stackIn_78_1 = 1;
@@ -444,18 +444,18 @@ final class te extends id {
                 }
               }
               this.field_ib = 70;
-              this.field_hb.k(0);
+              this.field_hb.kill(0);
               if (!(this.field_hb instanceof Zombie) ||
-                ((Zombie) (this.field_hb)).i((byte) -126)) {
+                ((Zombie) (this.field_hb)).isPlayerOwned((byte) -126)) {
                 stackIn_113_0 = MouseWheelInput.field_c;
                 stackIn_113_1 = 1;
                 MouseWheelInput.field_c = stackIn_113_0 + stackIn_113_1;
               }
               if (16 == this.field_hb.field_t) {
-                Js5Archive.field_e.a(234, 21, (byte) -23);
+                Js5Archive.field_e.awardAchievement(234, 21, (byte) -23);
               }
               if (MouseWheelInput.field_c == 20) {
-                Js5Archive.field_e.a(235, 20, (byte) -23);
+                Js5Archive.field_e.awardAchievement(235, 20, (byte) -23);
               }
               ck.a(-10, 6836);
               kh.a(151, false);
@@ -478,7 +478,7 @@ final class te extends id {
               } else {
                 stackIn_84_2 = 5;
               }
-              this.c(stackIn_83_1, stackIn_84_2);
+              this.setAnimation(stackIn_83_1, stackIn_84_2);
               this.field_fb = 3;
             }
           }

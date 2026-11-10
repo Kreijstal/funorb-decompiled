@@ -8,7 +8,7 @@ class wc extends qk {
     static int[] field_Nb;
     static int field_Rb;
 
-    private final void x(int param0) {
+    private final void aimAtZombieBelow(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -17,10 +17,10 @@ class wc extends qk {
           this.field_yb = null;
         }
         int var5 = -1;
-        IntrusiveNode var6 = Js5Archive.field_e.zombies.b((byte) 26);
+        IntrusiveNode var6 = Js5Archive.field_e.zombies.last((byte) 26);
         while (var6 instanceof WorldObject) {
           if (var6 instanceof Zombie &&
-            ((Zombie) (var6)).x(94)) {
+            ((Zombie) (var6)).isVisibleToHumans(94)) {
             var2 = ((Zombie) (var6)).getX(true) - this.getX(true);
             var3 = ((Zombie) (var6)).getY(237239984) - this.getY(237239984);
             if (var3 > 0 &&
@@ -45,7 +45,7 @@ class wc extends qk {
           this.setState(10, -6904);
           this.field_Gb = 10;
           this.field_U = kh.a(44, false);
-          this.field_U.h(ge.field_c >> 1);
+          this.field_U.setVolume(ge.field_c >> 1);
         } else {
           this.field_Qb = 20;
         }
@@ -59,7 +59,7 @@ class wc extends qk {
         field_Nb = null;
     }
 
-    void a(byte param0, Camera param1) {
+    void draw(byte param0, Camera param1) {
         int stackIn_8_0 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -85,12 +85,12 @@ class wc extends qk {
           var5 = stackIn_8_0;
           var6 = 0;
           if (param0 > -76) {
-            this.g(30);
+            this.tick(30);
           }
           ld.field_l[this.field_t][var6].drawTransparent(-24 + var3_int, var5 - 48);
           SecondaryNodeDequeIterator.field_h.drawTransparent(-24 + var3_int, -44 + var4);
           if (this.field_Gb > 0) {
-            this.b(var3_int - 3, (byte) -99, var4);
+            this.drawMuzzleFlash(var3_int - 3, (byte) -99, var4);
           }
           if (b.field_h) {
             Rasterizer.drawCircleOutline(12 + var3_int, var4 + 24, 260, 16711680);
@@ -115,7 +115,7 @@ class wc extends qk {
         }
     }
 
-    final static void a(re[] param0, int param1) {
+    final static void sortDisplayModes(re[] param0, int param1) {
         int var3 = 0;
         int var2_int = 0;
         re var4 = null;
@@ -132,7 +132,7 @@ class wc extends qk {
           for (var3 = 1; var3 < var2_int; var3++) {
             var4 = param0[var3];
             for (var5 = -1 + var3; var5 >= 0; var5--) {
-              if (bn.a((byte) 82, param0[var5], var4)) {
+              if (bn.compareDisplayModes((byte) 82, param0[var5], var4)) {
                 param0[1 + var5] = param0[var5];
                 continue;
               }
@@ -158,13 +158,13 @@ class wc extends qk {
         }
     }
 
-    final void c(int param0, int param1, int param2) {
+    final void knockBackFrom(int param0, int param1, int param2) {
         if (param1 < 24) {
           return;
         }
     }
 
-    final static void w(int param0) {
+    final static void handleRankingsResponse(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -189,13 +189,13 @@ class wc extends qk {
         try {
           var14 = fj.field_g;
           var2 = var14.readUnsignedByte((byte) -124);
-          var3 = (mg) (bg.field_i.b((byte) 26));
+          var3 = (mg) (bg.field_i.last((byte) 26));
           if (param0 <= 117) {
             return;
           }
           while (var3 != null) {
             if (var2 != var3.field_h) {
-              var3 = (mg) (bg.field_i.a(false));
+              var3 = (mg) (bg.field_i.previous(false));
               continue;
             }
             break;
@@ -209,9 +209,9 @@ class wc extends qk {
             bb.field_b[0] = ce.field_r;
             var5 = var3.field_i;
             for (var6_int = 1; var6_int < var4; var6_int++) {
-              bb.field_b[var6_int] = var14.a(true);
+              bb.field_b[var6_int] = var14.readNullTerminatedString(true);
             }
-            jb.a(var4, true, var5);
+            jb.ensureRankingArrayCapacity(var4, true, var5);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               aa.a(var14, -121);
               if (var6_intLifetime1 != 0) {
@@ -223,7 +223,7 @@ class wc extends qk {
             bf.a((byte) -35, var5);
             var6 = new String[2][var5];
             var18 = new int[2][var5 * 4];
-            var8 = qn.field_e;
+            var8 = RandomAccessCacheFile.field_e;
             var9 = 0;
             var10 = 0;
             while (var9 < var8) {
@@ -271,7 +271,7 @@ class wc extends qk {
         }
     }
 
-    void g(int param0) {
+    void tick(int param0) {
         int var3;
         var3 = ZombieDawn.field_J;
         if (param0 < 95) {
@@ -284,21 +284,21 @@ class wc extends qk {
           if (this.state == 10) {
             this.field_N = this.field_N + 3;
             if (2 == this.field_G) {
-              this.field_yb.z(0);
+              this.field_yb.takeLethalHit(0);
               this.setState(0, -6904);
             }
           }
         } else {
           if (this.field_Qb <= 0) {
-            this.x(-44);
+            this.aimAtZombieBelow(-44);
           } else {
             this.field_Qb = this.field_Qb - 1;
           }
         }
-        this.d(this.state, -26109);
+        this.advanceAnimation(this.state, -26109);
     }
 
-    final void a(nc param0, byte param1) {
+    final void startScreechCower(nc param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_4_0 = null;
@@ -322,7 +322,7 @@ class wc extends qk {
         }
     }
 
-    final static void f(int param0, int param1) {
+    final static void resendQueuedQueries(int param0, int param1) {
         IntrusiveNode var2 = null;
         int var3 = 0;
         ep var4 = null;
@@ -333,15 +333,15 @@ class wc extends qk {
           if (param0 != 67600) {
             return;
           }
-          var4 = (ep) (uk.field_a.b((byte) 26));
+          var4 = (ep) (uk.field_a.last((byte) 26));
           while (var4 != null) {
             sn.a(param1, var4, 0);
-            var4 = (ep) (uk.field_a.a(false));
+            var4 = (ep) (uk.field_a.previous(false));
           }
-          var2 = jj.field_D.b((byte) 26);
+          var2 = jj.field_D.last((byte) 26);
           while (var2 != null) {
             p.a(0, param1);
-            var2 = jj.field_D.a(false);
+            var2 = jj.field_D.previous(false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

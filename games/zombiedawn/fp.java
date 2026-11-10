@@ -17,21 +17,21 @@ final class fp extends an {
             if (param4 < param1) {
               wd.a(param0, param2, param6, param1, param5, param4, false, param3, Rasterizer.pixels);
               if (param7 <= 51) {
-                fp.a(-83, false, -32, -105);
+                fp.comesBeforeRankingRow(-83, false, -32, -105);
                 return;
               }
               return;
             }
             wd.a(param0, param6, param2, param4, param5, param1, false, param3, Rasterizer.pixels);
             if (param7 <= 51) {
-              fp.a(-83, false, -32, -105);
+              fp.comesBeforeRankingRow(-83, false, -32, -105);
               return;
             }
             return;
           }
           wd.a(param6, param2, param0, param5, param1, param4, false, param3, Rasterizer.pixels);
           if (param7 <= 51) {
-            fp.a(-83, false, -32, -105);
+            fp.comesBeforeRankingRow(-83, false, -32, -105);
             return;
           }
           return;
@@ -39,7 +39,7 @@ final class fp extends an {
         if (param1 > param4) {
           wd.a(param6, param0, param2, param4, param1, param5, false, param3, Rasterizer.pixels);
           if (param7 <= 51) {
-            fp.a(-83, false, -32, -105);
+            fp.comesBeforeRankingRow(-83, false, -32, -105);
             return;
           }
           return;
@@ -47,19 +47,19 @@ final class fp extends an {
         if (param1 > param5) {
           wd.a(param2, param0, param6, param1, param4, param5, false, param3, Rasterizer.pixels);
           if (param7 <= 51) {
-            fp.a(-83, false, -32, -105);
+            fp.comesBeforeRankingRow(-83, false, -32, -105);
             return;
           }
           return;
         }
         wd.a(param2, param6, param0, param5, param4, param1, false, param3, Rasterizer.pixels);
         if (param7 <= 51) {
-          fp.a(-83, false, -32, -105);
+          fp.comesBeforeRankingRow(-83, false, -32, -105);
           return;
         }
     }
 
-    final static boolean a(int param0, boolean param1, int param2, int param3) {
+    final static boolean comesBeforeRankingRow(int param0, boolean param1, int param2, int param3) {
         int var4;
         int var5;
         int var4Lifetime1;
@@ -141,7 +141,7 @@ final class fp extends an {
         return true;
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
+    final boolean handlePointerPress(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -153,7 +153,7 @@ final class fp extends an {
         int var12 = 0;
         var12 = ZombieDawn.field_J;
         try {
-          if (!super.a(param0, param1 ^ 0, param2, param3, param4, param5, param6)) {
+          if (!super.handlePointerPress(param0, param1 ^ 0, param2, param3, param4, param5, param6)) {
             if (param1 != 1) {
               this.field_L = -88;
             }

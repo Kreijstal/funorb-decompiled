@@ -28,12 +28,12 @@ final class lc {
           this.a((byte) -20, param0);
           this.field_b = this.field_b - param1;
           while (0 > this.field_b) {
-            var8 = (bj) (this.field_g.a(78));
+            var8 = (bj) (this.field_g.removeFirst(78));
             this.a(var8, 108);
           }
           var6 = new jl(param3, param1);
           this.field_e.put(param0, true, var6);
-          this.field_g.a(0, var6);
+          this.field_g.addLast(0, var6);
           ((bj) ((Object) var6)).secondaryKey = 0L;
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "lc.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -83,7 +83,7 @@ final class lc {
             for (var2_int = 0; var2_int < b.field_p.length; var2_int++) {
               b.field_p[var2_int] = 256 / b.field_p.length * (var2_int * 65793);
             }
-            oe.field_c = jp.$cfr$intArgs$a$c44adeabe1a9(125, 48);
+            oe.field_c = jp.startTrackedSoundEffect(125, 48);
           }
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "lc.I(" + param0 + ',' + param1 + ')');
@@ -192,22 +192,22 @@ final class lc {
           bj var7 = (bj) null;
           this.a((bj) null, 58);
         }
-        Object var5 = var8.d((byte) 87);
+        Object var5 = var8.getValue((byte) 87);
         if (var5 == null) {
           var8.unlink(param1 ^ -1431649945);
           var8.unlinkSecondary((byte) -21);
           this.field_b = this.field_b + var8.field_r;
           return null;
         }
-        if (var8.b(true)) {
+        if (var8.isSoftReference(true)) {
           var6 = new jl(var5, var8.field_r);
           this.field_e.put(var8.key, true, var6);
-          this.field_g.a(0, var6);
+          this.field_g.addLast(0, var6);
           ((bj) ((Object) var6)).secondaryKey = 0L;
           var8.unlink(-27598);
           var8.unlinkSecondary((byte) -60);
         } else {
-          this.field_g.a(0, var8);
+          this.field_g.addLast(0, var8);
           var8.secondaryKey = 0L;
         }
         return var5;

@@ -6,11 +6,11 @@ abstract class pm extends um implements ok {
     private tb field_d;
     static java.math.BigInteger field_c;
 
-    final static void a(int param0, int param1, jc param2) {
+    final static void writeHighscoreQuery(int param0, int param1, jc param2) {
         am var3 = null;
         try {
           var3 = dp.field_e;
-          var3.j(11, param1);
+          var3.writeCipheredByte(11, param1);
           var3.writeByte(5, -107);
           var3.writeByte(param0, -98);
           var3.writeShort(param2.field_s, (byte) 105);
@@ -31,7 +31,7 @@ abstract class pm extends um implements ok {
         field_e = null;
     }
 
-    final String c(int param0) {
+    final String computeMessage(int param0) {
         if (param0 > -48) {
           return (String) null;
         }
@@ -93,7 +93,7 @@ abstract class pm extends um implements ok {
         }
     }
 
-    public final void b(tb param0, int param1) {
+    public final void onTextSubmitted(tb param0, int param1) {
         try {
           int var3_int = 101 % ((param1 - 35) / 38);
         } catch (RuntimeException runtimeException) {
@@ -101,9 +101,9 @@ abstract class pm extends um implements ok {
         }
     }
 
-    public final void a(tb param0, int param1) {
+    public final void onTextEdited(tb param0, int param1) {
         try {
-          this.a(-7674);
+          this.restartDebounce(-7674);
           if (param1 != 8) {
             field_c = (java.math.BigInteger) null;
           }
@@ -112,7 +112,7 @@ abstract class pm extends um implements ok {
         }
     }
 
-    public final boolean b(int param0) {
+    public final boolean isEmpty(int param0) {
         if (param0 <= 98) {
           field_c = (java.math.BigInteger) null;
           if (null != this.field_d.field_o) {
@@ -164,12 +164,12 @@ abstract class pm extends um implements ok {
         }
     }
 
-    final rh c(byte param0) {
+    final rh computeState(byte param0) {
         if (param0 == -7) {
           return this.validateText(this.field_d.field_o, param0 + 9);
         }
         tb var3 = (tb) null;
-        this.a((tb) null, 59);
+        this.onTextEdited((tb) null, 59);
         return this.validateText(this.field_d.field_o, param0 + 9);
     }
 

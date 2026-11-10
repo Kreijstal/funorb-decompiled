@@ -15,18 +15,18 @@ class al {
     private boolean field_l;
     jp field_b;
 
-    private final void d(int param0, int param1) {
+    private final void playItemSelectSound(int param0, int param1) {
         if (param0 >= 0 &&
           this.field_h.length > param0) {
           param0 = this.field_h[param0];
           if (0 <= param0 &&
             param0 != 12 &&
             13 != param0 &&
-            this.field_b.d(param1 ^ -61)) {
-            IterableNodeHashTable.a(param1 + 28, vb.field_D[68]);
+            this.field_b.isActivated(param1 ^ -61)) {
+            IterableNodeHashTable.playSample(param1 + 28, vb.field_D[68]);
           }
           if (param1 != 68) {
-            this.a(35, 8);
+            this.getItemTop(35, 8);
           }
           return;
         }
@@ -37,17 +37,17 @@ class al {
         field_c = null;
         field_a = null;
         if (param0 != 2) {
-          al.a((Js5Archive) null, 55, (Js5Archive) null, (Js5Archive) null);
+          al.areCommonUiArchivesReady((Js5Archive) null, 55, (Js5Archive) null, (Js5Archive) null);
         }
     }
 
-    void b(byte param0) {
+    void drawBackground(byte param0) {
         int var2;
         int var3;
         int var4;
         int var5;
         var5 = ZombieDawn.field_J;
-        if (bd.field_e == 640 &&
+        if (WhirlpoolHasher.field_e == 640 &&
           nh.field_P == 480) {
           if (param0 <= 105) {
             this.field_l = false;
@@ -114,7 +114,7 @@ class al {
         regionExit3: {
           regionExit4: {
             regionExit5: {
-              var2 = bd.field_e / 128;
+              var2 = WhirlpoolHasher.field_e / 128;
               var3 = nh.field_P / 96;
               var4 = this.field_d;
               if (1 != var4 &&
@@ -155,23 +155,23 @@ class al {
                     break;
                 }
               }
-              qk.field_Hb[0].drawScaled(-var2, -var3, bd.field_e + 2 * var2, nh.field_P + 2 * var3);
+              qk.field_Hb[0].drawScaled(-var2, -var3, WhirlpoolHasher.field_e + 2 * var2, nh.field_P + 2 * var3);
               of.a(11690);
               if (var5 == 0) {
                 break regionExit3;
               }
             }
-            qk.field_Hb[4].drawScaled(-var2, -var3, bd.field_e + var2 * 2, nh.field_P + var3 * 2);
+            qk.field_Hb[4].drawScaled(-var2, -var3, WhirlpoolHasher.field_e + var2 * 2, nh.field_P + var3 * 2);
             of.a(11690);
             if (var5 == 0) {
               break regionExit3;
             }
           }
-          Rasterizer.fillRect(0, 0, bd.field_e, nh.field_P, 65793);
+          Rasterizer.fillRect(0, 0, WhirlpoolHasher.field_e, nh.field_P, 65793);
         }
     }
 
-    final void a(int param0, byte param1, boolean param2) {
+    final void drawTransitionFade(int param0, byte param1, boolean param2) {
         int var6 = 0;
         int var4 = 2 * param0;
         int var5 = param0 >= 128 ? param0 * 2 - 256 : 0;
@@ -189,17 +189,17 @@ class al {
           var6Lifetime1 = 1;
         }
         lf.field_h.setAsRenderTarget();
-        qk.field_Jb[var6Lifetime1].b((byte) 119);
+        qk.field_Jb[var6Lifetime1].drawBackground((byte) 119);
         cn.field_f.makeRasterTarget(64);
         int var7 = -57 / ((param1 + 72) / 47);
         lf.field_h.drawWithVerticalAlphaGradient(0, 0, var4, var5);
     }
 
-    static long a(long param0, long param1) {
+    static long bitXor(long param0, long param1) {
         return param0 ^ param1;
     }
 
-    int c(int param0, int param1) {
+    int getItemLeft(int param0, int param1) {
         if (param1 != 6) {
           this.field_k = -83;
         }
@@ -209,7 +209,7 @@ class al {
         return vh.field_b + this.field_g;
     }
 
-    private final void a(int param0, int param1, boolean param2) {
+    private final void drawMenuItem(int param0, int param1, boolean param2) {
         int stackIn_18_0 = 0;
         int stackIn_26_0 = 0;
         int stackIn_40_0 = 0;
@@ -241,8 +241,8 @@ class al {
         int var21;
         int var22;
         var22 = ZombieDawn.field_J;
-        var4 = this.a(param0, -1);
-        var5 = this.c(param0, 6);
+        var4 = this.getItemTop(param0, -1);
+        var5 = this.getItemLeft(param0, 6);
         var6 = this.field_h[param0];
         if (var6 != 22 &&
           var6 != 23 &&
@@ -258,8 +258,8 @@ class al {
           var6 != 44 &&
           var6 != 26) {
           var7 = vk.field_b[var6];
-          var8 = this.a(true, param0) - var5;
-          var9 = this.b(param0, true);
+          var8 = this.getItemRight(true, param0) - var5;
+          var9 = this.getItemHeight(param0, true);
           stackIn_18_0 = (!param2) ? 0 : 2;
           var10 = stackIn_18_0;
           if (var6 == 4 &&
@@ -278,7 +278,7 @@ class al {
             var10 = stackIn_40_0;
           }
           if (Js5Archive.field_e != null) {
-            stackIn_44_0 = Js5Archive.field_e.j(-5402);
+            stackIn_44_0 = Js5Archive.field_e.getRestartsLeft(-5402);
           } else {
             stackIn_44_0 = 0;
           }
@@ -361,32 +361,32 @@ class al {
         }
     }
 
-    void a(int param0) {
+    void handleNavigationKeys(int param0) {
         int var3;
         var3 = ZombieDawn.field_J;
         if (!this.field_l) {
-          this.field_b.a(0, param0 ^ 31644);
+          this.field_b.navigateHorizontal(0, param0 ^ 31644);
           if (var3 != 0) {
-            this.field_b.a(21657);
+            this.field_b.navigateVertical(21657);
           }
         } else {
-          this.field_b.a(21657);
+          this.field_b.navigateVertical(21657);
         }
         if (0 > this.field_b.field_d) {
           return;
         }
         if (this.field_d == 2 &&
           this.field_h[this.field_b.field_d] == 21 &&
-          Js5Archive.field_e.j(-5402) == 0) {
+          Js5Archive.field_e.getRestartsLeft(-5402) == 0) {
           if (kg.field_i != 98) {
             if (99 == kg.field_i) {
-              this.field_b.b(this.field_b.field_d + 1, param0 + 31542);
+              this.field_b.setSelectedIndex(this.field_b.field_d + 1, param0 + 31542);
               if (var3 != 0) {
-                this.field_b.b(this.field_b.field_d - 1, -69);
+                this.field_b.setSelectedIndex(this.field_b.field_d - 1, -69);
               }
             }
           } else {
-            this.field_b.b(this.field_b.field_d - 1, -69);
+            this.field_b.setSelectedIndex(this.field_b.field_d - 1, -69);
           }
         }
         if (param0 != -31645) {
@@ -394,7 +394,7 @@ class al {
         }
     }
 
-    void a(byte param0, boolean param1) {
+    void handleInput(byte param0, boolean param1) {
         int var3;
         int var4;
         int var5;
@@ -423,23 +423,23 @@ class al {
         }
         boolean decompiledFrameRemainder0 = true;
         if (param1) {
-          this.field_b.a((byte) -13, this.b(true, ha.field_b, ei.field_K), this.b(true, nc.field_j, hp.field_D));
+          this.field_b.updatePointer((byte) -13, this.findItemAt(true, ha.field_b, ei.field_K), this.findItemAt(true, nc.field_j, hp.field_D));
           if (-1 != this.field_b.field_d) {
-            this.d(this.field_b.field_d, 68);
-            this.a(true, this.field_b.field_d, -8512);
+            this.playItemSelectSound(this.field_b.field_d, 68);
+            this.activateItem(true, this.field_b.field_d, -8512);
             decompiledFrameRemainder0 = (var5 != 0);
           }
           if ((decompiledFrameRemainder0) &&
             (ci.field_d == 1)) {
             if (9 == this.field_d) {
-              ((pl) (this)).a((byte) -114, ei.field_K, ha.field_b);
+              ((pl) (this)).handleMapClick((byte) -114, ei.field_K, ha.field_b);
               if ((var5 != 0) &&
                 (this.field_d == 13)) {
-                ((ac) (this)).b(ha.field_b, 32526, ei.field_K);
+                ((ac) (this)).handleMapClick(ha.field_b, 32526, ei.field_K);
               }
             } else {
               if (this.field_d == 13) {
-                ((ac) (this)).b(ha.field_b, 32526, ei.field_K);
+                ((ac) (this)).handleMapClick(ha.field_b, 32526, ei.field_K);
               }
             }
           }
@@ -451,7 +451,7 @@ class al {
         }
     }
 
-    final void b(int param0) {
+    final void rebuildItems(int param0) {
         int stackIn_23_0 = 0;
         int stackIn_23_1 = 0;
         int[] var2;
@@ -493,7 +493,7 @@ class al {
                 if (decompiledFrameCompleted0) {
                   this.field_h = var6;
                   this.field_b = new jp(this.field_h.length);
-                  la.field_d.b(param0 ^ -20093, 1);
+                  FullscreenFocusCanvas.field_d.b(param0 ^ -20093, 1);
                   decompiledFrameRemainder0 = (var5 != 0);
                 }
               }
@@ -546,7 +546,7 @@ class al {
         }
     }
 
-    int b(boolean param0, int param1, int param2) {
+    int findItemAt(boolean param0, int param1, int param2) {
         int var4;
         int var5;
         int var6;
@@ -560,23 +560,23 @@ class al {
           if (var4 >= this.field_h.length) {
             return -1;
           }
-          var5 = this.a(var4, -1);
-          stackIn_7_0 = this.b(var4, -1);
+          var5 = this.getItemTop(var4, -1);
+          stackIn_7_0 = this.isItemEnabled(var4, -1);
           if (var6 != 0) {
             return stackIn_7_0 ? 1 : 0;
           }
           if (stackIn_7_0 &&
-            this.c(var4, 6) <= param1 &&
-            this.a(true, var4) > param1 &&
+            this.getItemLeft(var4, 6) <= param1 &&
+            this.getItemRight(true, var4) > param1 &&
             var5 <= param2 &&
-            param2 < var5 + this.b(var4, param0)) {
+            param2 < var5 + this.getItemHeight(var4, param0)) {
             return var4;
           }
           var4++;
         }
     }
 
-    boolean a(int param0, int param1, char param2) {
+    boolean handleKeyPress(int param0, int param1, char param2) {
         int var4;
         if (this.field_d == 0) {
           return vl.field_b.handleKeyPress(param0, param2, -29638);
@@ -592,10 +592,10 @@ class al {
             }
             return (0 != var4);
           }
-          this.a(-31645);
+          this.handleNavigationKeys(-31645);
           if (-1 != this.field_b.field_d) {
-            this.d(this.field_b.field_d, param1 - 65725);
-            this.a(false, this.field_b.field_d, param1 ^ -73791);
+            this.playItemSelectSound(this.field_b.field_d, param1 - 65725);
+            this.activateItem(false, this.field_b.field_d, param1 ^ -73791);
             return true;
           }
         } else {
@@ -606,11 +606,11 @@ class al {
           }
           if (10 != this.field_d) {
             if (this.field_d == 9) {
-              ((pl) (this)).c(-26931);
+              ((pl) (this)).handleEscape(-26931);
               return true;
             }
             if (this.field_d == 13) {
-              ((ac) (this)).e((byte) 54);
+              ((ac) (this)).returnToPreviousScreen((byte) 54);
               return true;
             }
             if (this.field_d != 7 &&
@@ -626,16 +626,16 @@ class al {
         return false;
     }
 
-    private final void a(int param0, boolean param1) {
+    private final void showScoreScreenOrLoginPrompt(int param0, boolean param1) {
         int var4;
         var4 = ZombieDawn.field_J;
         if (param0 != -10) {
           return;
         }
-        if (!po.w(param0 + 13306)) {
-          vl.field_b.c(true);
-          vl.field_b.d(false);
-          bd.field_m = null;
+        if (!po.isGuestSession(param0 + 13306)) {
+          vl.field_b.saveLevelResult(true);
+          vl.field_b.submitScore(false);
+          WhirlpoolHasher.field_m = null;
           if (!nk.a(8, kg.field_g)) {
             ca.a(param1, true, 3);
             if (var4 != 0) {
@@ -654,7 +654,7 @@ class al {
         df.field_i = 1;
     }
 
-    int a(int param0, int param1) {
+    int getItemTop(int param0, int param1) {
         if (param1 != -1) {
           return 62;
         }
@@ -664,7 +664,7 @@ class al {
         return id.field_M + this.field_k;
     }
 
-    void a(boolean param0, int param1, int param2) {
+    void activateItem(boolean param0, int param1, int param2) {
         boolean stackIn_69_0 = false;
         boolean stackIn_69_1 = false;
         int stackIn_70_2 = 0;
@@ -806,11 +806,11 @@ class al {
                       (decompiledFrameRemainder2) &&
                       (decompiledFrameRemainder1) &&
                       (decompiledFrameRemainder0)) {
-                      if (!this.field_b.d(-127)) {
+                      if (!this.field_b.isActivated(-127)) {
                         break regionExit1;
                       }
                       wi.field_b = null;
-                      bd.field_m = null;
+                      WhirlpoolHasher.field_m = null;
                       stackIn_69_0 = param0;
                       stackIn_69_1 = true;
                       if (0 < be.field_j) {
@@ -846,7 +846,7 @@ class al {
                       (decompiledFrameRemainder3) &&
                       (decompiledFrameRemainder2) &&
                       (decompiledFrameRemainder1)) {
-                      if (!this.field_b.d(-128)) {
+                      if (!this.field_b.isActivated(-128)) {
                         break regionExit1;
                       }
                       ca.a(param0, true, 8);
@@ -876,7 +876,7 @@ class al {
                       (decompiledFrameRemainder4) &&
                       (decompiledFrameRemainder3) &&
                       (decompiledFrameRemainder2)) {
-                      if (!this.field_b.d(param2 + 8386)) {
+                      if (!this.field_b.isActivated(param2 + 8386)) {
                         break regionExit1;
                       }
                       ca.a(param0, true, 0);
@@ -905,7 +905,7 @@ class al {
                       (decompiledFrameRemainder5) &&
                       (decompiledFrameRemainder4) &&
                       (decompiledFrameRemainder3)) {
-                      if (!this.field_b.d(-122)) {
+                      if (!this.field_b.isActivated(-122)) {
                         break regionExit1;
                       }
                       ca.a(param0, true, 13);
@@ -932,7 +932,7 @@ class al {
                       (decompiledFrameRemainder6) &&
                       (decompiledFrameRemainder5) &&
                       (decompiledFrameRemainder4)) {
-                      if (!this.field_b.d(-122)) {
+                      if (!this.field_b.isActivated(-122)) {
                         break regionExit1;
                       }
                       ca.a(param0, true, 9);
@@ -958,7 +958,7 @@ class al {
                       (decompiledFrameRemainder7) &&
                       (decompiledFrameRemainder6) &&
                       (decompiledFrameRemainder5)) {
-                      if (!this.field_b.d(-128)) {
+                      if (!this.field_b.isActivated(-128)) {
                         break regionExit1;
                       }
                       ca.a(param0, true, 1);
@@ -983,7 +983,7 @@ class al {
                       (decompiledFrameRemainder8) &&
                       (decompiledFrameRemainder7) &&
                       (decompiledFrameRemainder6)) {
-                      if (!this.field_b.d(-127)) {
+                      if (!this.field_b.isActivated(-127)) {
                         break regionExit1;
                       }
                       var6 = 1;
@@ -1032,7 +1032,7 @@ class al {
                       (decompiledFrameRemainder9) &&
                       (decompiledFrameRemainder8) &&
                       (decompiledFrameRemainder7)) {
-                      if (!this.field_b.d(-127)) {
+                      if (!this.field_b.isActivated(-127)) {
                         break regionExit1;
                       }
                       ca.a(param0, true, 5);
@@ -1056,10 +1056,10 @@ class al {
                       (decompiledFrameRemainder10) &&
                       (decompiledFrameRemainder9) &&
                       (decompiledFrameRemainder8)) {
-                      if (!this.field_b.d(-126)) {
+                      if (!this.field_b.isActivated(-126)) {
                         break regionExit1;
                       }
-                      ((fg) (qk.field_Jb[4])).d((byte) -37);
+                      ((fg) (qk.field_Jb[4])).resetToFirstPage((byte) -37);
                       ca.a(param0, true, 4);
                       df.field_i = this.field_d;
                       if (var9 == 0) {
@@ -1080,7 +1080,7 @@ class al {
                       (decompiledFrameRemainder11) &&
                       (decompiledFrameRemainder10) &&
                       (decompiledFrameRemainder9)) {
-                      if (!this.field_b.d(-122)) {
+                      if (!this.field_b.isActivated(-122)) {
                         break regionExit1;
                       }
                       ca.a(param0, true, df.field_i);
@@ -1101,7 +1101,7 @@ class al {
                       (decompiledFrameRemainder12) &&
                       (decompiledFrameRemainder11) &&
                       (decompiledFrameRemainder10)) {
-                      if (!this.field_b.d(param2 + 8388)) {
+                      if (!this.field_b.isActivated(param2 + 8388)) {
                         break regionExit1;
                       }
                       ca.a(param0, true, 14);
@@ -1122,7 +1122,7 @@ class al {
                       (decompiledFrameRemainder13) &&
                       (decompiledFrameRemainder12) &&
                       (decompiledFrameRemainder11)) {
-                      if (!this.field_b.d(param2 + 8386)) {
+                      if (!this.field_b.isActivated(param2 + 8386)) {
                         break regionExit1;
                       }
                       ca.a(param0, true, 3);
@@ -1142,15 +1142,15 @@ class al {
                       (decompiledFrameRemainder13) &&
                       (decompiledFrameRemainder12)) {
                       var5 = ge.field_c;
-                      if (this.field_b.b(false)) {
+                      if (this.field_b.isHomeKey(false)) {
                         qb.a(false, 0);
                       }
-                      if (this.field_b.f(param2 ^ 8536)) {
+                      if (this.field_b.isEndKey(param2 ^ 8536)) {
                         qb.a(false, 224);
                       }
-                      if (this.field_b.b(-126)) {
+                      if (this.field_b.isHeld(-126)) {
                         var6 = 137 + ff.field_b;
-                        var7 = (this.c(param1, 6) + (this.a(true, param1) - var6) >> 1) + (ff.field_b + 8);
+                        var7 = (this.getItemLeft(param1, 6) + (this.getItemRight(true, param1) - var6) >> 1) + (ff.field_b + 8);
                         var8 = ha.field_b - var7 << 1;
                         var8 = var8 * 224 >> 8;
                         if (var8 <= 0) {
@@ -1174,7 +1174,7 @@ class al {
                           }
                         }
                       }
-                      if (this.field_b.c(-97)) {
+                      if (this.field_b.isLeftArrow(-97)) {
                         boolean decompiledSharedTail2 = !(ge.field_c <= 28);
                         if (!decompiledSharedTail2) {
                           qb.a(false, 0);
@@ -1188,7 +1188,7 @@ class al {
                           qb.a(false, -var6 + ge.field_c);
                         }
                       }
-                      if (this.field_b.e(-98)) {
+                      if (this.field_b.isRightArrow(-98)) {
                         boolean decompiledSharedTail1 = !(ge.field_c >= 196);
                         if (!decompiledSharedTail1) {
                           qb.a(false, 224);
@@ -1221,39 +1221,39 @@ class al {
                       (decompiledFrameRemainder15) &&
                       (decompiledFrameRemainder14) &&
                       (decompiledFrameRemainder13)) {
-                      if (this.field_b.b(false)) {
-                        ZombieDawn.b(127, 0);
+                      if (this.field_b.isHomeKey(false)) {
+                        ZombieDawn.setMusicVolume(127, 0);
                       }
-                      if (this.field_b.f(-104)) {
-                        ZombieDawn.b(115, 288);
+                      if (this.field_b.isEndKey(-104)) {
+                        ZombieDawn.setMusicVolume(115, 288);
                       }
-                      if (this.field_b.b(param2 ^ 8491)) {
+                      if (this.field_b.isHeld(param2 ^ 8491)) {
                         var6 = ff.field_b + 137;
-                        var7 = 8 + ((this.c(param1, 6) + this.a(true, param1) - var6 >> 1) + ff.field_b);
+                        var7 = 8 + ((this.getItemLeft(param1, 6) + this.getItemRight(true, param1) - var6 >> 1) + ff.field_b);
                         var8 = ha.field_b - var7 << 1;
                         var8 = var8 * 288 >> 8;
                         if (var8 > 0) {
                           if (288 <= var8) {
-                            ZombieDawn.b(param2 ^ -8521, 288);
+                            ZombieDawn.setMusicVolume(param2 ^ -8521, 288);
                             if (var9 != 0) {
-                              ZombieDawn.b(124, var8);
-                              ZombieDawn.b(118, 0);
+                              ZombieDawn.setMusicVolume(124, var8);
+                              ZombieDawn.setMusicVolume(118, 0);
                             }
                           } else {
-                            ZombieDawn.b(124, var8);
+                            ZombieDawn.setMusicVolume(124, var8);
                             if (var9 != 0) {
-                              ZombieDawn.b(118, 0);
+                              ZombieDawn.setMusicVolume(118, 0);
                             }
                           }
                         } else {
-                          ZombieDawn.b(118, 0);
+                          ZombieDawn.setMusicVolume(118, 0);
                         }
                       }
-                      if (this.field_b.c(-97)) {
+                      if (this.field_b.isLeftArrow(-97)) {
                         var6 = ce.field_u;
                         boolean decompiledSharedTail0 = !(36 >= var6);
                         if (!decompiledSharedTail0) {
-                          ZombieDawn.b(124, 0);
+                          ZombieDawn.setMusicVolume(124, 0);
                           decompiledSharedTail0 = (var9 != 0);
                         }
                         if (decompiledSharedTail0) {
@@ -1261,20 +1261,20 @@ class al {
                           if (var7 == 0) {
                             var7 = 36;
                           }
-                          ZombieDawn.b(param2 + 8635, var6 - var7);
+                          ZombieDawn.setMusicVolume(param2 + 8635, var6 - var7);
                         }
                       }
-                      if (!this.field_b.e(param2 ^ 8542)) {
+                      if (!this.field_b.isRightArrow(param2 ^ 8542)) {
                         break regionExit1;
                       }
                       var6 = ce.field_u;
                       if (252 <= var6) {
-                        ZombieDawn.b(119, 288);
+                        ZombieDawn.setMusicVolume(119, 288);
                       }
                       if (252 > var6 ||
                         var9 != 0) {
                         var7 = var6 % 36;
-                        ZombieDawn.b(127, 36 + (var6 - var7));
+                        ZombieDawn.setMusicVolume(127, 36 + (var6 - var7));
                       }
                       if (var9 == 0) {
                         break regionExit1;
@@ -1289,10 +1289,10 @@ class al {
                       (decompiledFrameRemainder16) &&
                       (decompiledFrameRemainder15) &&
                       (decompiledFrameRemainder14)) {
-                      if (!this.field_b.d(-123)) {
+                      if (!this.field_b.isActivated(-123)) {
                         break regionExit1;
                       }
-                      DualLinkDeque.d((byte) 76);
+                      DualLinkDeque.showScreenSizeDialog((byte) 76);
                       if (var9 == 0) {
                         break regionExit1;
                       }
@@ -1305,13 +1305,13 @@ class al {
                       (decompiledFrameRemainder17) &&
                       (decompiledFrameRemainder16) &&
                       (decompiledFrameRemainder15)) {
-                      if (!this.field_b.d(-123)) {
+                      if (!this.field_b.isActivated(-123)) {
                         break regionExit1;
                       }
                       if (2 == this.field_d) {
-                        tp.a(param2 ^ -8478, false, w.field_a[5]);
+                        tp.playMusicTrack(param2 ^ -8478, false, ArchiveProvider.field_a[5]);
                       }
-                      this.a(-10, param0);
+                      this.showScoreScreenOrLoginPrompt(-10, param0);
                       if (var9 == 0) {
                         break regionExit1;
                       }
@@ -1323,10 +1323,10 @@ class al {
                       (decompiledFrameRemainder18) &&
                       (decompiledFrameRemainder17) &&
                       (decompiledFrameRemainder16)) {
-                      if (!this.field_b.d(-122)) {
+                      if (!this.field_b.isActivated(-122)) {
                         break regionExit1;
                       }
-                      ((vj) (jj.c(3, 115))).d((byte) 77);
+                      ((vj) (jj.getScreen(3, 115))).selectScoreTable((byte) 77);
                       if (var9 == 0) {
                         break regionExit1;
                       }
@@ -1337,7 +1337,7 @@ class al {
                       (decompiledFrameRemainder19) &&
                       (decompiledFrameRemainder18) &&
                       (decompiledFrameRemainder17)) {
-                      if (!this.field_b.d(param2 + 8389)) {
+                      if (!this.field_b.isActivated(param2 + 8389)) {
                         break regionExit1;
                       }
                       ad.field_e = 0;
@@ -1350,7 +1350,7 @@ class al {
                       (decompiledFrameRemainder20) &&
                       (decompiledFrameRemainder19) &&
                       (decompiledFrameRemainder18)) {
-                      if (!this.field_b.d(-128)) {
+                      if (!this.field_b.isActivated(-128)) {
                         break regionExit1;
                       }
                       ad.field_e = 1;
@@ -1362,7 +1362,7 @@ class al {
                       (decompiledFrameRemainder21) &&
                       (decompiledFrameRemainder20) &&
                       (decompiledFrameRemainder19)) {
-                      if (!this.field_b.d(-122)) {
+                      if (!this.field_b.isActivated(-122)) {
                         break regionExit1;
                       }
                       ad.field_e = 2;
@@ -1373,7 +1373,7 @@ class al {
                     if ((decompiledFrameRemainder22) &&
                       (decompiledFrameRemainder21) &&
                       (decompiledFrameRemainder20)) {
-                      if (!this.field_b.d(-121)) {
+                      if (!this.field_b.isActivated(-121)) {
                         break regionExit1;
                       }
                       if (this.field_d == 5 ||
@@ -1394,30 +1394,30 @@ class al {
                     }
                     if ((decompiledFrameRemainder22) &&
                       (decompiledFrameRemainder21)) {
-                      if (!this.field_b.d(-128)) {
+                      if (!this.field_b.isActivated(-128)) {
                         break regionExit1;
                       }
-                      if (!this.b(param1, param2 + 8511)) {
+                      if (!this.isItemEnabled(param1, param2 + 8511)) {
                         break regionExit1;
                       }
-                      ((fg) (qk.field_Jb[4])).c(20921, param0);
+                      ((fg) (qk.field_Jb[4])).showPreviousPage(20921, param0);
                       if (var9 == 0) {
                         break regionExit1;
                       }
                     }
                     if (decompiledFrameRemainder22) {
-                      if (!this.field_b.d(-124)) {
+                      if (!this.field_b.isActivated(-124)) {
                         break regionExit1;
                       }
-                      if (!this.b(param1, param2 + 8511)) {
+                      if (!this.isItemEnabled(param1, param2 + 8511)) {
                         break regionExit1;
                       }
-                      ((fg) (qk.field_Jb[4])).b(param0, 126);
+                      ((fg) (qk.field_Jb[4])).showNextPage(param0, 126);
                       if (var9 == 0) {
                         break regionExit1;
                       }
                     }
-                    if (!this.field_b.d(-126)) {
+                    if (!this.field_b.isActivated(-126)) {
                       break regionExit1;
                     }
                     if (null != cn.field_b) {
@@ -1428,11 +1428,11 @@ class al {
                       break regionExit1;
                     }
                   }
-                  if (!this.field_b.d(-125)) {
+                  if (!this.field_b.isActivated(-125)) {
                     break regionExit1;
                   }
-                  if (!vl.field_b.g(true)) {
-                    this.a(param2 ^ 8502, param0);
+                  if (!vl.field_b.advanceToNextLevel(true)) {
+                    this.showScoreScreenOrLoginPrompt(param2 ^ 8502, param0);
                     if (var9 == 0) {
                       break regionExit1;
                     }
@@ -1442,19 +1442,19 @@ class al {
                     break regionExit1;
                   }
                 }
-                if (!this.field_b.d(-125)) {
+                if (!this.field_b.isActivated(-125)) {
                   break regionExit1;
                 }
-                if (!vl.field_b.b(-25983)) {
+                if (!vl.field_b.hasRestartsLeft(-25983)) {
                   break regionExit1;
                 }
-                vl.field_b.a(param2 + 8398);
+                vl.field_b.restartLevel(param2 + 8398);
                 ca.a(true, true, 0);
                 if (var9 == 0) {
                   break regionExit1;
                 }
               }
-              if (!this.field_b.d(param2 + 8388)) {
+              if (!this.field_b.isActivated(param2 + 8388)) {
                 break regionExit1;
               }
               dc.a((byte) 124);
@@ -1463,7 +1463,7 @@ class al {
                 break regionExit1;
               }
             }
-            if (!this.field_b.d(-124)) {
+            if (!this.field_b.isActivated(-124)) {
               break regionExit1;
             }
             if (vi.field_a) {
@@ -1479,23 +1479,23 @@ class al {
               break regionExit1;
             }
           }
-          if (this.field_b.d(param2 ^ 8520)) {
-            this.a(-10, param0);
+          if (this.field_b.isActivated(param2 ^ 8520)) {
+            this.showScoreScreenOrLoginPrompt(-10, param0);
           }
         }
     }
 
-    boolean b(int param0, int param1) {
+    boolean isItemEnabled(int param0, int param1) {
         if (this.field_h[param0] != 39 &&
           this.field_h[param0] != 45 &&
           this.field_h[param0] != 46) {
           if (param1 != -1) {
-            this.a(71, -63);
+            this.getItemTop(71, -63);
           }
           if (this.field_h[param0] != 21) {
             return true;
           }
-          if (Js5Archive.field_e.j(-5402) != 0) {
+          if (Js5Archive.field_e.getRestartsLeft(-5402) != 0) {
             return true;
           }
           return false;
@@ -1503,7 +1503,7 @@ class al {
         return false;
     }
 
-    void a(byte param0) {
+    void drawScreen(byte param0) {
         int stackIn_15_1 = 0;
         int stackIn_15_2 = 0;
         Object stackIn_16_0;
@@ -1530,14 +1530,14 @@ class al {
           return;
         }
         if (this.field_d == 7) {
-          li.a(false);
+          JaggrabDownloader.drawPipeboxBackdrop(false);
           var2 = 100 + sg.field_jb.field_I;
           var3 = 4 + sg.field_jb.field_x + sg.field_jb.field_w;
           var4 = 16777215;
           bj.field_q.drawStringCentered(wi.field_d, 320, var2, var4, -1);
           bj.field_q.drawStringCentered(ma.a(rf.field_d, 98, eh.field_z, false), 320, var3 + var2, var4, -1);
           bj.field_q.drawStringCentered(fh.a(false, rf.field_d, 0, eh.field_z), 320, 42 + (var3 * 3 + var2), var4, -1);
-          bj.field_q.drawStringCentered(Mover.a(rf.field_d, -121, false, eh.field_z), 320, var2 + var3 * 4 + 84, var4, -1);
+          bj.field_q.drawStringCentered(Mover.chooseDiscardPromptText(rf.field_d, -121, false, eh.field_z), 320, var2 + var3 * 4 + 84, var4, -1);
           if (param0 > -35) {
             this.field_j = -46;
           }
@@ -1546,7 +1546,7 @@ class al {
             if (var5 != 0) {
               return;
             }
-            if (this.b(var2Lifetime3, -1) ||
+            if (this.isItemEnabled(var2Lifetime3, -1) ||
               21 == this.field_h[var2Lifetime3]) {
               stackIn_15_1 = var2Lifetime3;
               stackIn_15_2 = -128;
@@ -1557,7 +1557,7 @@ class al {
                 stackIn_16_0 = this;
                 stackIn_16_3 = true;
               }
-              this.a(stackIn_15_1, stackIn_15_2, stackIn_16_3);
+              this.drawMenuItem(stackIn_15_1, stackIn_15_2, stackIn_16_3);
             }
             var2Lifetime3++;
           }
@@ -1572,21 +1572,21 @@ class al {
         }
         boolean decompiledFrameRemainder0 = true;
         if (2 == this.field_d) {
-          li.a(false);
+          JaggrabDownloader.drawPipeboxBackdrop(false);
           decompiledFrameRemainder0 = (var5 != 0);
         }
         if ((decompiledFrameRemainder0) &&
           (10 == this.field_d)) {
-          li.a(false);
+          JaggrabDownloader.drawPipeboxBackdrop(false);
           if (var5 != 0) {
-            li.a(false);
+            JaggrabDownloader.drawPipeboxBackdrop(false);
             var2Lifetime1 = 100 + sg.field_jb.field_I;
             var3Lifetime1 = 4 + sg.field_jb.field_x + sg.field_jb.field_w;
             var4Lifetime1 = 16777215;
             bj.field_q.drawStringCentered(wi.field_d, 320, var2Lifetime1, var4Lifetime1, -1);
             bj.field_q.drawStringCentered(ma.a(rf.field_d, 98, eh.field_z, false), 320, var3Lifetime1 + var2Lifetime1, var4Lifetime1, -1);
             bj.field_q.drawStringCentered(fh.a(false, rf.field_d, 0, eh.field_z), 320, 42 + (var3Lifetime1 * 3 + var2Lifetime1), var4Lifetime1, -1);
-            bj.field_q.drawStringCentered(Mover.a(rf.field_d, -121, false, eh.field_z), 320, var2Lifetime1 + var3Lifetime1 * 4 + 84, var4Lifetime1, -1);
+            bj.field_q.drawStringCentered(Mover.chooseDiscardPromptText(rf.field_d, -121, false, eh.field_z), 320, var2Lifetime1 + var3Lifetime1 * 4 + 84, var4Lifetime1, -1);
           }
         }
         if (param0 > -35) {
@@ -1597,7 +1597,7 @@ class al {
           if (var5 != 0) {
             return;
           }
-          if (this.b(var2Lifetime2, -1) ||
+          if (this.isItemEnabled(var2Lifetime2, -1) ||
             21 == this.field_h[var2Lifetime2]) {
             stackIn_39_1 = var2Lifetime2;
             stackIn_39_2 = -128;
@@ -1608,7 +1608,7 @@ class al {
               stackIn_40_0 = this;
               stackIn_40_3 = true;
             }
-            this.a(stackIn_39_1, stackIn_39_2, stackIn_40_3);
+            this.drawMenuItem(stackIn_39_1, stackIn_39_2, stackIn_40_3);
           }
           var2Lifetime2++;
         }
@@ -1618,7 +1618,7 @@ class al {
         return;
     }
 
-    final static boolean a(Js5Archive param0, int param1, Js5Archive param2, Js5Archive param3) {
+    final static boolean areCommonUiArchivesReady(Js5Archive param0, int param1, Js5Archive param2, Js5Archive param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -1632,13 +1632,13 @@ class al {
           if (!param2.isIndexLoaded((byte) 73)) {
             return false;
           }
-          if (!param2.a(-1, "commonui")) {
+          if (!param2.loadGroupByName(-1, "commonui")) {
             return false;
           }
           if (param3.isIndexLoaded((byte) 73) &&
-            param3.a(-1, "commonui")) {
+            param3.loadGroupByName(-1, "commonui")) {
             if (param0.isIndexLoaded((byte) 73) &&
-              param0.a(param1 + 31525, "button.gif")) {
+              param0.loadGroupByName(param1 + 31525, "button.gif")) {
               if (param1 == -31526) {
                 return true;
               }
@@ -1673,7 +1673,7 @@ class al {
         }
     }
 
-    void onTextSubmitted(al param0, int param1) {
+    void onReplacedByScreen(al param0, int param1) {
         try {
           if (param1 < 70) {
             this.field_b = (jp) null;
@@ -1683,37 +1683,37 @@ class al {
         }
     }
 
-    int b(int param0, boolean param1) {
+    int getItemHeight(int param0, boolean param1) {
         if (!param1) {
           this.field_l = false;
         }
         return 42;
     }
 
-    void a(byte param0, int param1, boolean param2) {
+    void resetSelection(byte param0, int param1, boolean param2) {
         if (this.field_b.field_d != -1) {
           param1 = this.field_b.field_d;
         }
-        this.field_b.a(param2, (byte) -107, this.b(true, ha.field_b, ei.field_K), param1);
+        this.field_b.initializeSelection(param2, (byte) -107, this.findItemAt(true, ha.field_b, ei.field_K), param1);
         if (param0 > 65) {
           if (8 == this.field_d) {
             jp.field_c.a(param2, 1);
           }
           if (this instanceof pl) {
-            ((pl) (this)).b((byte) 122, true);
+            ((pl) (this)).resetChapterHighlights((byte) 122, true);
           }
           return;
         }
     }
 
-    int a(boolean param0, int param1) {
+    int getItemRight(boolean param0, int param1) {
         if (!param0) {
           return -117;
         }
         if (this.field_l) {
           return this.field_j + vh.field_b;
         }
-        return this.c(param1, 6) + this.field_i;
+        return this.getItemLeft(param1, 6) + this.field_i;
     }
 
     al(int param0, boolean param1, int param2, int param3, int param4, int param5, int[] param6) {

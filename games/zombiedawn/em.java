@@ -24,14 +24,14 @@ final class em extends eh implements hh {
     private boolean field_T;
     private an field_I;
 
-    private final void j(byte param0) {
+    private final void readThumbY(byte param0) {
         int var2 = this.field_S != null ? this.field_S.field_n + this.field_S.field_j : this.field_I.field_j;
         int var3 = this.field_C == null ? -this.field_F.field_n + (this.field_I.field_n + this.field_I.field_j) : this.field_C.field_j - this.field_F.field_n;
         int var4 = 10 % ((param0 + 16) / 63);
-        this.a(var2 < var3 ? (-var2 + this.field_F.field_j << 16) / (var3 - var2) : 0, (byte) -98);
+        this.setVerticalPosition(var2 < var3 ? (-var2 + this.field_F.field_j << 16) / (var3 - var2) : 0, (byte) -98);
     }
 
-    final void a(UiWidget param0, byte param1, int param2, int param3) {
+    final void updatePointer(UiWidget param0, byte param1, int param2, int param3) {
         RuntimeException stackIn_39_0 = null;
         StringBuilder stackIn_39_1 = null;
         String stackIn_40_2 = null;
@@ -46,27 +46,27 @@ final class em extends eh implements hh {
         var8 = ZombieDawn.field_J;
         try {
           var5_int = -106 % ((46 - param1) / 42);
-          super.a(param0, (byte) 114, param2, param3);
+          super.updatePointer(param0, (byte) 114, param2, param3);
           if ((!(this.field_F.field_z instanceof an) ||
             ((an) (this.field_F.field_z)).field_C) && 1 == this.field_F.field_m) {
             if (!this.field_X) {
-              this.f((byte) -69);
+              this.positionThumbX((byte) -69);
             } else {
               var6 = this.field_D;
-              this.k((byte) 33);
+              this.readThumbX((byte) 33);
               if (var6 != this.field_D &&
                 this.field_v instanceof un) {
-                ((un) (this.field_v)).a(this.field_D, this, -77, this.field_D);
+                ((un) (this.field_v)).onScrollDragged(this.field_D, this, -77, this.field_D);
               }
             }
             if (!this.field_Q) {
-              this.a(-734046384);
+              this.positionThumbY(-734046384);
             } else {
               var6Lifetime2 = this.field_E;
-              this.j((byte) 117);
+              this.readThumbY((byte) 117);
               if (this.field_E != var6Lifetime2 &&
                 this.field_v instanceof un) {
-                ((un) (this.field_v)).a(this.field_D, this, -63, this.field_E);
+                ((un) (this.field_v)).onScrollDragged(this.field_D, this, -63, this.field_E);
               }
             }
           }
@@ -77,35 +77,35 @@ final class em extends eh implements hh {
                 return;
               }
               if ((this.field_F.field_i >> 1) + param3 + this.field_F.field_k >= ha.field_b) {
-                this.b(-this.field_V + this.field_D, -4218);
+                this.setHorizontalPositionAndNotify(-this.field_V + this.field_D, -4218);
                 return;
               }
-              this.b(this.field_V + this.field_D, -4218);
+              this.setHorizontalPositionAndNotify(this.field_V + this.field_D, -4218);
               return;
             }
             if (!this.field_X) {
               if (ei.field_K > (this.field_F.field_n >> 1) + (param2 + this.field_F.field_j)) {
-                this.b(this.field_M + this.field_E, (byte) -121);
+                this.setVerticalPositionAndNotify(this.field_M + this.field_E, (byte) -121);
                 return;
               }
-              this.b(-this.field_M + this.field_E, (byte) -121);
+              this.setVerticalPositionAndNotify(-this.field_M + this.field_E, (byte) -121);
               return;
             }
             var6Lifetime1 = -(this.field_F.field_i >> 1) - this.field_F.field_k - this.field_k + (-param3 + ha.field_b);
             var7 = -this.field_j + ei.field_K + (-param2 - (this.field_F.field_n >> 1) - this.field_F.field_j);
             if (Math.abs(var7) <= Math.abs(var6Lifetime1)) {
               if (0 >= var6Lifetime1) {
-                this.b(this.field_D - this.field_V, -4218);
+                this.setHorizontalPositionAndNotify(this.field_D - this.field_V, -4218);
                 return;
               }
-              this.b(this.field_D + this.field_V, -4218);
+              this.setHorizontalPositionAndNotify(this.field_D + this.field_V, -4218);
               return;
             }
             if (var7 <= 0) {
-              this.b(this.field_E - this.field_M, (byte) -121);
+              this.setVerticalPositionAndNotify(this.field_E - this.field_M, (byte) -121);
               return;
             }
-            this.b(this.field_M + this.field_E, (byte) -121);
+            this.setVerticalPositionAndNotify(this.field_M + this.field_E, (byte) -121);
             return;
           }
           return;
@@ -136,50 +136,50 @@ final class em extends eh implements hh {
             return true;
           }
           if (this.field_T &&
-            this.field_F.e(-17741)) {
+            this.field_F.isFocused(-17741)) {
             if (param1 == 98) {
-              this.b(this.field_E - this.field_W, (byte) -121);
+              this.setVerticalPositionAndNotify(this.field_E - this.field_W, (byte) -121);
               return true;
             }
             if (99 == param1) {
-              this.b(this.field_E + this.field_W, (byte) -121);
+              this.setVerticalPositionAndNotify(this.field_E + this.field_W, (byte) -121);
               return true;
             }
             if (param1 == 96) {
-              this.b(this.field_D - this.field_G, -4218);
+              this.setHorizontalPositionAndNotify(this.field_D - this.field_G, -4218);
               return true;
             }
             if (97 == param1) {
-              this.b(this.field_G + this.field_D, -4218);
+              this.setHorizontalPositionAndNotify(this.field_G + this.field_D, -4218);
               return true;
             }
             if (param1 == 104) {
-              this.b(this.field_E - this.h((byte) -49), (byte) -121);
+              this.setVerticalPositionAndNotify(this.field_E - this.getVerticalThumbFraction((byte) -49), (byte) -121);
               return true;
             }
             if (105 == param1) {
-              this.b(this.field_E + this.h((byte) -49), (byte) -121);
+              this.setVerticalPositionAndNotify(this.field_E + this.getVerticalThumbFraction((byte) -49), (byte) -121);
               return true;
             }
             if (param1 == 102) {
               if (this.field_Q &&
                 bo.field_p[82]) {
-                this.b(0, (byte) -121);
+                this.setVerticalPositionAndNotify(0, (byte) -121);
                 return true;
               }
               if (this.field_X) {
-                this.b(0, -4218);
+                this.setHorizontalPositionAndNotify(0, -4218);
                 return true;
               }
             } else {
               if (param1 == 103) {
                 if (this.field_Q &&
                   bo.field_p[82]) {
-                  this.b(65536, (byte) -121);
+                  this.setVerticalPositionAndNotify(65536, (byte) -121);
                   return true;
                 }
                 if (this.field_X) {
-                  this.b(65536, -4218);
+                  this.setHorizontalPositionAndNotify(65536, -4218);
                   return true;
                 }
               }
@@ -200,25 +200,25 @@ final class em extends eh implements hh {
         }
     }
 
-    final void b(int param0, int param1, int param2) {
+    final void setHorizontalVisibleRange(int param0, int param1, int param2) {
         int var4 = 0;
         int var4Lifetime1;
         if (param0 <= param2) {
-          this.field_F.a(115, this.field_F.field_j, this.field_F.field_k, this.field_I.field_i, this.field_F.field_n);
-          this.a(1, false);
+          this.field_F.setBounds(115, this.field_F.field_j, this.field_F.field_k, this.field_I.field_i, this.field_F.field_n);
+          this.setHorizontalScrollEnabled(1, false);
         } else {
           var4 = param2 * this.field_I.field_i / param0;
           if (this.field_O > var4) {
             var4 = this.field_O;
           }
-          this.field_F.a(-100, this.field_F.field_j, this.field_F.field_k, var4, this.field_F.field_n);
-          this.a(1, true);
+          this.field_F.setBounds(-100, this.field_F.field_j, this.field_F.field_k, var4, this.field_F.field_n);
+          this.setHorizontalScrollEnabled(1, true);
         }
-        this.f((byte) -118);
+        this.positionThumbX((byte) -118);
         var4Lifetime1 = 7 % ((-29 - param1) / 44);
     }
 
-    private final void a(int param0) {
+    private final void positionThumbY(int param0) {
         int var3 = 0;
         int var2 = null == this.field_S ? this.field_I.field_j : this.field_S.field_n + this.field_S.field_j;
         if (param0 == -734046384) {
@@ -228,7 +228,7 @@ final class em extends eh implements hh {
         }
     }
 
-    private final void f(byte param0) {
+    private final void positionThumbX(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var2Lifetime1;
@@ -245,11 +245,11 @@ final class em extends eh implements hh {
         this.field_F.field_k = ((-var2Lifetime1 + var3Lifetime1) * this.field_D >> 16) + var2Lifetime1;
     }
 
-    private final void b(int param0, int param1) {
-        this.a(param0, -61);
+    private final void setHorizontalPositionAndNotify(int param0, int param1) {
+        this.setHorizontalPosition(param0, -61);
         if (param1 == -4218) {
           if (this.field_v instanceof un) {
-            ((un) (this.field_v)).a(this.field_D, this.field_E, this, 13483);
+            ((un) (this.field_v)).onScrollAdjusted(this.field_D, this.field_E, this, 13483);
           }
           return;
         }
@@ -266,41 +266,41 @@ final class em extends eh implements hh {
           var4[var5_int] = j.field_a[eg.a(255, (int) var3[var5_int])];
         }
         Sprite var5 = new Sprite(gl.field_F, Zombie.field_pb, sl.field_d[0], bo.field_o[0], bn.field_c[0], uf.field_n[0], var4);
-        no.f((byte) -110);
+        no.clearSpriteDecodeBuffers((byte) -110);
         return var5;
     }
 
-    final void a(int param0, byte param1) {
+    final void setVerticalPosition(int param0, byte param1) {
         int var4 = ZombieDawn.field_J;
         if (param1 > -57) {
           return;
         }
         if (param0 < 0) {
           this.field_E = 0;
-          this.a(-734046384);
+          this.positionThumbY(-734046384);
           return;
         }
         if (param0 > 65536) {
           this.field_E = 65536;
-          this.a(-734046384);
+          this.positionThumbY(-734046384);
           return;
         }
         this.field_E = param0;
-        this.a(-734046384);
+        this.positionThumbY(-734046384);
     }
 
-    private final void b(int param0, byte param1) {
-        this.a(param0, (byte) -77);
+    private final void setVerticalPositionAndNotify(int param0, byte param1) {
+        this.setVerticalPosition(param0, (byte) -77);
         if (this.field_v instanceof un) {
-          ((un) (this.field_v)).a(this.field_E, this.field_E, this, 13483);
+          ((un) (this.field_v)).onScrollAdjusted(this.field_E, this.field_E, this, 13483);
         }
         if (param1 == -121) {
           return;
         }
-        this.b(47, -73, 104);
+        this.setHorizontalVisibleRange(47, -73, 104);
     }
 
-    private final void a(boolean param0, int param1) {
+    private final void setVerticalScrollEnabled(boolean param0, int param1) {
         an stackIn_8_0 = null;
         an stackIn_12_0 = null;
         boolean stackIn_13_1 = false;
@@ -457,19 +457,19 @@ final class em extends eh implements hh {
             this.field_T) {
             if (this.field_Q &&
               this.field_S == param2) {
-              this.b(this.field_E - this.field_W, (byte) -121);
+              this.setVerticalPositionAndNotify(this.field_E - this.field_W, (byte) -121);
             } else {
               if (this.field_Q &&
                 this.field_C == param2) {
-                this.b(this.field_W + this.field_E, (byte) -121);
+                this.setVerticalPositionAndNotify(this.field_W + this.field_E, (byte) -121);
               } else {
                 if (this.field_X &&
                   param2 == this.field_L) {
-                  this.b(-this.field_G + this.field_D, param1 ^ 4220);
+                  this.setHorizontalPositionAndNotify(-this.field_G + this.field_D, param1 ^ 4220);
                 } else {
                   if (this.field_X &&
                     param2 == this.field_N) {
-                    this.b(this.field_G + this.field_D, -4218);
+                    this.setHorizontalPositionAndNotify(this.field_G + this.field_D, -4218);
                   }
                 }
               }
@@ -493,27 +493,27 @@ final class em extends eh implements hh {
         }
     }
 
-    final void c(int param0, int param1, int param2) {
+    final void setVerticalVisibleRange(int param0, int param1, int param2) {
         int var4 = 0;
         if (param1 > param2) {
           var4 = this.field_I.field_n * param2 / param1;
           if (this.field_R > var4) {
             var4 = this.field_R;
           }
-          this.field_F.a(param0 ^ 30641, this.field_F.field_j, this.field_F.field_k, this.field_F.field_i, var4);
-          this.a(true, 30789);
-          this.a(-734046384);
+          this.field_F.setBounds(param0 ^ 30641, this.field_F.field_j, this.field_F.field_k, this.field_F.field_i, var4);
+          this.setVerticalScrollEnabled(true, 30789);
+          this.positionThumbY(-734046384);
           if (param0 != -30674) {
-            this.e((byte) 16);
+            this.layoutChildren((byte) 16);
             return;
           }
           return;
         }
-        this.field_F.a(26, this.field_F.field_j, this.field_F.field_k, this.field_F.field_i, this.field_I.field_n);
-        this.a(false, param0 ^ -3989);
-        this.a(-734046384);
+        this.field_F.setBounds(26, this.field_F.field_j, this.field_F.field_k, this.field_F.field_i, this.field_I.field_n);
+        this.setVerticalScrollEnabled(false, param0 ^ -3989);
+        this.positionThumbY(-734046384);
         if (param0 != -30674) {
-          this.e((byte) 16);
+          this.layoutChildren((byte) 16);
           return;
         }
     }
@@ -526,11 +526,11 @@ final class em extends eh implements hh {
         field_J = null;
     }
 
-    private final int h(byte param0) {
+    private final int getVerticalThumbFraction(byte param0) {
         if (param0 == -49) {
           return (this.field_F.field_n << 16) / this.field_I.field_n;
         }
-        this.a(-46);
+        this.positionThumbY(-46);
         return (this.field_F.field_n << 16) / this.field_I.field_n;
     }
 
@@ -572,9 +572,9 @@ final class em extends eh implements hh {
           stackIn_7_1 = (param12);
           this.field_Q = stackIn_7_1;
           this.field_R = param10;
-          this.a(param13, -89);
-          this.a(param14, (byte) -95);
-          this.a(-119, param1, param0, param2, param3);
+          this.setHorizontalPosition(param13, -89);
+          this.setVerticalPosition(param14, (byte) -95);
+          this.setBounds(-119, param1, param0, param2, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -602,7 +602,7 @@ final class em extends eh implements hh {
         }
     }
 
-    private final void k(byte param0) {
+    private final void readThumbX(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int var2Lifetime1;
@@ -610,13 +610,13 @@ final class em extends eh implements hh {
         if (param0 >= 15) {
           var2 = null == this.field_L ? this.field_I.field_k : this.field_L.field_i + this.field_L.field_k;
           var3 = null == this.field_N ? -this.field_F.field_i + (this.field_I.field_i + this.field_I.field_k) : -this.field_F.field_i + this.field_N.field_k;
-          this.a(var2 < var3 ? (this.field_F.field_k - var2 << 16) / (var3 - var2) : 0, 89);
+          this.setHorizontalPosition(var2 < var3 ? (this.field_F.field_k - var2 << 16) / (var3 - var2) : 0, 89);
           return;
         }
         this.field_V = 106;
         var2Lifetime1 = null == this.field_L ? this.field_I.field_k : this.field_L.field_i + this.field_L.field_k;
         var3Lifetime1 = null == this.field_N ? -this.field_F.field_i + (this.field_I.field_i + this.field_I.field_k) : -this.field_F.field_i + this.field_N.field_k;
-        this.a(var2Lifetime1 < var3Lifetime1 ? (this.field_F.field_k - var2Lifetime1 << 16) / (var3Lifetime1 - var2Lifetime1) : 0, 89);
+        this.setHorizontalPosition(var2Lifetime1 < var3Lifetime1 ? (this.field_F.field_k - var2Lifetime1 << 16) / (var3Lifetime1 - var2Lifetime1) : 0, 89);
     }
 
     final boolean focusNext(byte param0, UiWidget param1) {
@@ -652,7 +652,7 @@ final class em extends eh implements hh {
         }
     }
 
-    final void e(byte param0) {
+    final void layoutChildren(byte param0) {
         int var3 = ZombieDawn.field_J;
         if (this.field_L != null) {
           this.field_L.field_k = 0;
@@ -670,7 +670,7 @@ final class em extends eh implements hh {
         }
         if (param0 < 38) {
           em.releaseStatics((byte) 122);
-          this.f((byte) -119);
+          this.positionThumbX((byte) -119);
           if (this.field_S == null) {
             this.field_I.field_j = 0;
           } else {
@@ -685,7 +685,7 @@ final class em extends eh implements hh {
           } else {
             this.field_I.field_n = this.field_n - this.field_I.field_j;
           }
-          this.a(-734046384);
+          this.positionThumbY(-734046384);
           if (!this.field_Q) {
             this.field_F.field_n = this.field_I.field_n;
             this.field_F.field_j = 0;
@@ -693,17 +693,17 @@ final class em extends eh implements hh {
               this.field_F.field_i = this.field_I.field_i;
               this.field_F.field_k = 0;
             }
-            this.field_F.a(true);
+            this.field_F.reapplyBounds(true);
             return;
           }
           if (!this.field_X) {
             this.field_F.field_i = this.field_I.field_i;
             this.field_F.field_k = 0;
           }
-          this.field_F.a(true);
+          this.field_F.reapplyBounds(true);
           return;
         }
-        this.f((byte) -119);
+        this.positionThumbX((byte) -119);
         if (this.field_S == null) {
           this.field_I.field_j = 0;
           if (null != this.field_C) {
@@ -713,7 +713,7 @@ final class em extends eh implements hh {
           } else {
             this.field_I.field_n = this.field_n - this.field_I.field_j;
           }
-          this.a(-734046384);
+          this.positionThumbY(-734046384);
           if (!this.field_Q) {
             this.field_F.field_n = this.field_I.field_n;
             this.field_F.field_j = 0;
@@ -721,14 +721,14 @@ final class em extends eh implements hh {
               this.field_F.field_i = this.field_I.field_i;
               this.field_F.field_k = 0;
             }
-            this.field_F.a(true);
+            this.field_F.reapplyBounds(true);
             return;
           }
           if (!this.field_X) {
             this.field_F.field_i = this.field_I.field_i;
             this.field_F.field_k = 0;
           }
-          this.field_F.a(true);
+          this.field_F.reapplyBounds(true);
           return;
         }
         this.field_S.field_j = 0;
@@ -738,7 +738,7 @@ final class em extends eh implements hh {
           this.field_C.field_k = this.field_i - this.field_C.field_i >> 1;
           this.field_C.field_j = -this.field_C.field_n + this.field_n;
           this.field_I.field_n = -this.field_C.field_n + this.field_n - this.field_I.field_j;
-          this.a(-734046384);
+          this.positionThumbY(-734046384);
           if (!this.field_Q) {
             this.field_F.field_n = this.field_I.field_n;
             this.field_F.field_j = 0;
@@ -747,11 +747,11 @@ final class em extends eh implements hh {
             this.field_F.field_i = this.field_I.field_i;
             this.field_F.field_k = 0;
           }
-          this.field_F.a(true);
+          this.field_F.reapplyBounds(true);
           return;
         }
         this.field_I.field_n = this.field_n - this.field_I.field_j;
-        this.a(-734046384);
+        this.positionThumbY(-734046384);
         if (!this.field_Q) {
           this.field_F.field_n = this.field_I.field_n;
           this.field_F.field_j = 0;
@@ -759,17 +759,17 @@ final class em extends eh implements hh {
             this.field_F.field_i = this.field_I.field_i;
             this.field_F.field_k = 0;
           }
-          this.field_F.a(true);
+          this.field_F.reapplyBounds(true);
           return;
         }
         if (!this.field_X) {
           this.field_F.field_i = this.field_I.field_i;
           this.field_F.field_k = 0;
         }
-        this.field_F.a(true);
+        this.field_F.reapplyBounds(true);
     }
 
-    private final void a(int param0, boolean param1) {
+    private final void setHorizontalScrollEnabled(int param0, boolean param1) {
         an stackIn_10_0 = null;
         boolean stackIn_11_1 = false;
         an stackIn_16_0 = null;
@@ -879,21 +879,21 @@ final class em extends eh implements hh {
         }
     }
 
-    private final void a(int param0, int param1) {
+    private final void setHorizontalPosition(int param0, int param1) {
         int var4 = ZombieDawn.field_J;
         int var3 = 73 % ((param1 - 20) / 61);
         if (param0 < 0) {
           this.field_D = 0;
-          this.f((byte) -76);
+          this.positionThumbX((byte) -76);
           return;
         }
         if (param0 <= 65536) {
           this.field_D = param0;
-          this.f((byte) -76);
+          this.positionThumbX((byte) -76);
           return;
         }
         this.field_D = 65536;
-        this.f((byte) -76);
+        this.positionThumbX((byte) -76);
     }
 
     static {

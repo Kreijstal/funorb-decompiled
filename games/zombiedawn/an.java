@@ -12,15 +12,15 @@ class an extends UiWidget {
     private boolean field_D;
     boolean field_C;
 
-    final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
+    final void handlePointerRelease(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         try {
           if (param1 <= 1) {
             UiWidget var8 = (UiWidget) null;
-            this.a((UiWidget) null, (byte) -127, 26, -100);
+            this.updatePointer((UiWidget) null, (byte) -127, 26, -100);
           }
           if (null != this.field_v &&
             this.field_v instanceof pe) {
-            ((pe) (this.field_v)).a(param0, param2, param4, param3, this, (byte) -121);
+            ((pe) (this.field_v)).onButtonReleased(param0, param2, param4, param3, this, (byte) -121);
           }
           this.field_m = 0;
         } catch (RuntimeException runtimeException) {
@@ -28,20 +28,20 @@ class an extends UiWidget {
         }
     }
 
-    void a(UiWidget param0, byte param1, int param2, int param3) {
+    void updatePointer(UiWidget param0, byte param1, int param2, int param3) {
         try {
-          super.a(param0, (byte) 104, param2, param3);
+          super.updatePointer(param0, (byte) 104, param2, param3);
           this.field_z = 0;
           int var5_int = -49 % ((param1 - 46) / 42);
           if (this.field_m != 0) {
             if (this.field_m == kc.field_R) {
               return;
             }
-            if (this.b(ei.field_K, 21224, param2, param3, ha.field_b) &&
+            if (this.containsPoint(ei.field_K, 21224, param2, param3, ha.field_b) &&
               kc.field_R == 0) {
-              this.b(-param3 + ha.field_b, 103, -param2 + ei.field_K, this.field_m);
+              this.activate(-param3 + ha.field_b, 103, -param2 + ei.field_K, this.field_m);
             }
-            this.a(param3, 25, ha.field_b, ei.field_K, param2, param0);
+            this.handlePointerRelease(param3, 25, ha.field_b, ei.field_K, param2, param0);
           }
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "an.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -57,17 +57,17 @@ class an extends UiWidget {
     }
 
     an(String param0, sk param1) {
-        this(param0, se.field_j.field_a, param1);
+        this(param0, ProxySocketConnector.field_j.field_a, param1);
     }
 
-    final boolean e(int param0) {
+    final boolean isFocused(int param0) {
         if (param0 != -17741) {
           return false;
         }
         return this.field_A;
     }
 
-    boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
+    boolean handlePointerPress(int param0, int param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -75,12 +75,12 @@ class an extends UiWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_C &&
-            this.b(param3, 21224, param2, param4, param0)) {
+            this.containsPoint(param3, 21224, param2, param4, param0)) {
             this.focusNext((byte) 107, param6);
             this.field_m = param5;
             if (null != this.field_v &&
               this.field_v instanceof pe) {
-              ((pe) (this.field_v)).a(false, param2, this, param0, param4, param5, param3);
+              ((pe) (this.field_v)).onButtonPressed(false, param2, this, param0, param4, param5, param3);
             }
             return true;
           }
@@ -102,7 +102,7 @@ class an extends UiWidget {
         }
     }
 
-    final static Sprite[] a(int param0, int param1, int param2, Js5Archive param3) {
+    final static Sprite[] loadSpriteSheet(int param0, int param1, int param2, Js5Archive param3) {
         RuntimeException var4 = null;
         Sprite[] stackIn_2_0 = null;
         Object stackIn_5_0 = null;
@@ -153,9 +153,9 @@ class an extends UiWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           var5_int = -108 % ((-83 - param0) / 32);
-          if (this.e(-17741) && (param1 == 84 ||
+          if (this.isFocused(-17741) && (param1 == 84 ||
             param1 == 83)) {
-            this.b(-1, -113, -1, 1);
+            this.activate(-1, -113, -1, 1);
             return true;
           }
           return false;
@@ -193,7 +193,7 @@ class an extends UiWidget {
           this.field_A = true;
           if (this.field_v != null &&
             this.field_v instanceof ef) {
-            ((ef) (this.field_v)).a(this.field_A, (UiWidget) (this), (byte) 15);
+            ((ef) (this.field_v)).onFocusChanged(this.field_A, (UiWidget) (this), (byte) 15);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -210,7 +210,7 @@ class an extends UiWidget {
         }
     }
 
-    final static void a(int param0, PlatformTaskDispatcher param1, Object param2) {
+    final static void pumpEventQueue(int param0, PlatformTaskDispatcher param1, Object param2) {
         int var3_int = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -273,7 +273,7 @@ class an extends UiWidget {
             return;
           }
           var3 = (Js5Archive) null;
-          an.a(-59, -128, -24, (Js5Archive) null);
+          an.loadSpriteSheet(-59, -128, -24, (Js5Archive) null);
           return;
         }
         this.field_A = false;
@@ -282,23 +282,23 @@ class an extends UiWidget {
             return;
           }
           var3Lifetime1 = (Js5Archive) null;
-          an.a(-59, -128, -24, (Js5Archive) null);
+          an.loadSpriteSheet(-59, -128, -24, (Js5Archive) null);
           return;
         }
         if (this.field_v instanceof ef) {
-          ((ef) (this.field_v)).a(this.field_A, (UiWidget) (this), (byte) 15);
+          ((ef) (this.field_v)).onFocusChanged(this.field_A, (UiWidget) (this), (byte) 15);
           if (param0 == 57) {
             return;
           }
           var3Lifetime2 = (Js5Archive) null;
-          an.a(-59, -128, -24, (Js5Archive) null);
+          an.loadSpriteSheet(-59, -128, -24, (Js5Archive) null);
           return;
         }
         if (param0 == 57) {
           return;
         }
         var3Lifetime3 = (Js5Archive) null;
-        an.a(-59, -128, -24, (Js5Archive) null);
+        an.loadSpriteSheet(-59, -128, -24, (Js5Archive) null);
     }
 
     an(int param0, int param1, int param2, int param3, io param4, sk param5) {
@@ -309,7 +309,7 @@ class an extends UiWidget {
         this.field_C = true;
     }
 
-    final StringBuilder a(Hashtable param0, StringBuilder param1, boolean param2, int param3) {
+    final StringBuilder appendDebugTree(Hashtable param0, StringBuilder param1, boolean param2, int param3) {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         RuntimeException var5 = null;
@@ -326,8 +326,8 @@ class an extends UiWidget {
             stackIn_2_0 = (StringBuilder) null;
             return stackIn_2_0;
           }
-          if (this.a(param0, param1, 11098, param3)) {
-            this.a(param0, param3, 123, param1);
+          if (this.beginDebugDescription(param0, param1, 11098, param3)) {
+            this.appendDebugProperties(param0, param3, 123, param1);
             if (this.field_x) {
               discarded$2 = param1.append(" active");
             }
@@ -357,7 +357,7 @@ class an extends UiWidget {
         }
     }
 
-    void b(int param0, int param1, int param2, int param3) {
+    void activate(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var5Lifetime1;
         int var5Lifetime2;
@@ -379,7 +379,7 @@ class an extends UiWidget {
         this.field_z = 0;
         this.field_D = true;
         this.field_C = true;
-        this.field_h = se.field_j.field_d;
+        this.field_h = ProxySocketConnector.field_j.field_d;
     }
 
     static {

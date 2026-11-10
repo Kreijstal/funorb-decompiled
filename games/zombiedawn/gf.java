@@ -29,7 +29,7 @@ final class gf {
           var3 = pd.monotonicTimeMillis(-22826);
           if (jh.field_h != 0 &&
             l.field_e < 0) {
-            var5_ref_bg = (bg) (ui.field_f.b((byte) 26));
+            var5_ref_bg = (bg) (ui.field_f.last((byte) 26));
             if (var5_ref_bg != null &&
               var5_ref_bg.field_h < var3) {
               var5_ref_bg.unlink(-27598);
@@ -51,7 +51,7 @@ final class gf {
               if (!ck.a((byte) -117, 1)) {
                 return false;
               }
-              l.field_e = fj.field_g.i((byte) 126);
+              l.field_e = fj.field_g.readCipheredByte((byte) 126);
               fj.field_g.position = 0;
               jd.field_b = param0[l.field_e];
             }
@@ -150,8 +150,8 @@ final class gf {
             stackIn_2_0 = (Sprite) null;
             return stackIn_2_0;
           }
-          var4_int = param0.a(param3, (byte) 8);
-          var5 = param0.a(var4_int, param1, true);
+          var4_int = param0.getGroupIdByName(param3, (byte) 8);
+          var5 = param0.getFileIdByName(var4_int, param1, true);
           stackIn_4_0 = hg.a(var5, var4_int, param0, -2);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -181,13 +181,13 @@ final class gf {
     }
 
     final static void a(byte param0) {
-        ig.m((byte) -102);
+        ig.resetLoginState((byte) -102);
         if (param0 != 41) {
           field_a = true;
         }
         mp.field_e = true;
         nm.field_c = true;
-        e.field_S.j(-636330975);
+        e.field_S.hideAllDialogs(-636330975);
         ti.a(GameKeyHandler.field_a, false, false);
     }
 

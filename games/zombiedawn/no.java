@@ -12,7 +12,7 @@ final class no extends WorldObject {
         this.field_F = 0;
     }
 
-    final static void f(byte param0) {
+    final static void clearSpriteDecodeBuffers(byte param0) {
         sl.field_d = null;
         bo.field_o = null;
         j.field_a = null;
@@ -24,7 +24,7 @@ final class no extends WorldObject {
         uf.field_n = null;
     }
 
-    final void a(byte param0, Camera param1) {
+    final void draw(byte param0, Camera param1) {
         int var10 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -46,11 +46,11 @@ final class no extends WorldObject {
           if (0 == this.field_F) {
             return;
           }
-          var5 = WorldObject.a(1311979239, (int)(3L * tp.field_p << 5)) >> 15;
+          var5 = WorldObject.cosFixed(1311979239, (int)(3L * tp.field_p << 5)) >> 15;
           var6 = 7;
           var7 = -var6 + var3_int;
           var8 = -1 + (var3_int + var6);
-          Mover.$cfr$intArgs$a$3aedf8649552(var4, 99, 3 + var8, var4 + this.field_F, -2 + var7);
+          Mover.intersectClipIntArgs(var4, 99, 3 + var8, var4 + this.field_F, -2 + var7);
           var9 = 0;
           Rasterizer.drawLine(var7, var4, -var5 + var7, -2 + (var4 + this.field_F), var9);
           Rasterizer.drawLine(var7 + 1, var4, 1 + (-var5 + var7), this.field_F + var4, var9);
@@ -61,11 +61,11 @@ final class no extends WorldObject {
           for (var10 = -3 + this.field_F + var4; var4 <= var10; var10 -= 7) {
             Rasterizer.drawHorizontalLine(var7 + 2, var10, -3 + 2 * var6, var9);
           }
-          pa.a(-21189);
+          pa.popRasterState(-21189);
           if (param0 <= -76) {
             return;
           }
-          no.f((byte) -110);
+          no.clearSpriteDecodeBuffers((byte) -110);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -91,7 +91,7 @@ final class no extends WorldObject {
         field_E = null;
     }
 
-    final void g(int param0) {
+    final void tick(int param0) {
         int fieldTemp$0 = 0;
         if (param0 < 95) {
           return;

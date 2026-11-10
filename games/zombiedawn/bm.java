@@ -227,11 +227,11 @@ final class bm {
         Sprite[] var3 = new Sprite[9];
         Sprite[] var2 = var3;
         if (param0 < -67) {
-          var3[4] = qk.c(param1, (byte) -71, 64);
+          var3[4] = qk.createSolidSprite(param1, (byte) -71, 64);
           return var2;
         }
         bm.a((byte) 106, 78);
-        var3[4] = qk.c(param1, (byte) -71, 64);
+        var3[4] = qk.createSolidSprite(param1, (byte) -71, 64);
         return var2;
     }
 

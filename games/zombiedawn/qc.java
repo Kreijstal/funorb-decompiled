@@ -35,22 +35,22 @@ final class qc {
         RuntimeException var1_ref = null;
         var2 = ZombieDawn.field_J;
         try {
-          var1 = kn.field_L.b((byte) 26);
+          var1 = kn.field_L.last((byte) 26);
           while (var1 instanceof tm) {
-            pc.a((byte) 13, ((tm) (var1)).field_j);
+            Js5Transport.stopSoundEffect((byte) 13, ((tm) (var1)).field_j);
             var1 = var1.previous;
           }
-          var1 = se.field_m.b((byte) 26);
+          var1 = ProxySocketConnector.field_m.last((byte) 26);
           while (var1 instanceof tm) {
-            pc.a((byte) 13, ((tm) (var1)).field_j);
+            Js5Transport.stopSoundEffect((byte) 13, ((tm) (var1)).field_j);
             var1 = var1.previous;
           }
           if (param0 != 1400888196) {
             return;
           }
-          var1 = DelegatingCanvas.field_e.b((byte) 26);
+          var1 = DelegatingCanvas.field_e.last((byte) 26);
           while (var1 instanceof tm) {
-            pc.a((byte) 13, ((tm) (var1)).field_j);
+            Js5Transport.stopSoundEffect((byte) 13, ((tm) (var1)).field_j);
             var1 = var1.previous;
           }
           return;

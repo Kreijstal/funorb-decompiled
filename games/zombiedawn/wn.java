@@ -25,7 +25,7 @@ final class wn {
             field_b = true;
           }
           uh.field_o = param1;
-          uh.field_o.a(ce.field_u, (byte) -68);
+          uh.field_o.setMasterVolume(ce.field_u, (byte) -68);
           ExceptionWrapper.field_d.setStream(uh.field_o);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "wn.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ')');

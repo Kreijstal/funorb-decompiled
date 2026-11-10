@@ -8,7 +8,7 @@ class ce extends DualLinkNode {
     static boolean field_q;
     static int field_u;
     static long field_s;
-    static sf field_t;
+    static BufferedFile field_t;
     private static String field_z;
 
     ce() {

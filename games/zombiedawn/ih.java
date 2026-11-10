@@ -16,18 +16,18 @@ final class ih extends hp implements ok, hh {
     static boolean field_S;
     private an field_R;
 
-    public final void a(tb param0, int param1) {
+    public final void onTextEdited(tb param0, int param1) {
         try {
           if (param1 != 8) {
             tb var4 = (tb) null;
-            this.a((tb) null, 89);
+            this.onTextEdited((tb) null, 89);
           }
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ih.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final String b(boolean param0) {
+    final String getAccountIdentifier(boolean param0) {
         if (param0) {
           this.field_N = (tb) null;
         }
@@ -134,15 +134,15 @@ final class ih extends hp implements ok, hh {
               var8 = uh.field_h;
             }
           } else {
-            var8 = qn.field_a;
+            var8 = RandomAccessCacheFile.field_a;
           }
           dupTemp$0 = new q(10, this.field_j, -20 + this.field_i, 25, this.field_N, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
-          this.a(dupTemp$0, 10);
+          this.addChild(dupTemp$0, 10);
           this.field_j = this.field_j + (((UiWidget) ((Object) var12)).field_n + 5);
           dupTemp$1 = new q(10, this.field_j, this.field_i - 20, 25, this.field_M, false, 80, 3, var7, 16777215, ui.field_c);
           var13 = dupTemp$1;
-          this.a(dupTemp$1, 10);
+          this.addChild(dupTemp$1, 10);
           this.field_R.field_v = (sk) (this);
           this.field_j = this.field_j + (5 + ((UiWidget) ((Object) var13)).field_n);
           if (null != this.field_K) {
@@ -152,33 +152,33 @@ final class ih extends hp implements ok, hh {
             this.field_Q.field_v = (sk) (this);
           }
           if (this.field_K == null) {
-            this.field_R.a(80, this.field_j, 8, this.field_i - 6 - 10, 30);
+            this.field_R.setBounds(80, this.field_j, 8, this.field_i - 6 - 10, 30);
             this.field_j = this.field_j + 35;
           } else {
-            this.field_R.a(30, this.field_j, 85, this.field_i - 95, 30);
+            this.field_R.setBounds(30, this.field_j, 85, this.field_i - 95, 30);
             this.field_j = this.field_j + 60;
           }
           if (null != this.field_K) {
-            this.field_K.a(94, this.field_j, 8, -6 + (this.field_i - 10), 30);
+            this.field_K.setBounds(94, this.field_j, 8, -6 + (this.field_i - 10), 30);
             this.field_j = this.field_j + 35;
           }
           if (null != this.field_Q) {
             if (!this.field_O &&
               !this.field_H) {
-              this.field_Q.a(81, this.field_j, 8, 40, 20);
+              this.field_Q.setBounds(81, this.field_j, 8, 40, 20);
               this.field_j = this.field_j + 25;
             } else {
-              this.field_Q.a(-126, this.field_j, 8, this.field_i - 6 - 10, 30);
+              this.field_Q.setBounds(-126, this.field_j, 8, this.field_i - 6 - 10, 30);
               this.field_j = this.field_j + 35;
             }
           }
-          this.a(-116, 0, 0, this.field_i, this.field_j + 3);
-          this.a(this.field_R, 10);
+          this.setBounds(-116, 0, 0, this.field_i, this.field_j + 3);
+          this.addChild(this.field_R, 10);
           if (this.field_K != null) {
-            this.a(this.field_K, 10);
+            this.addChild(this.field_K, 10);
           }
           if (null != this.field_Q) {
-            this.a(this.field_Q, 10);
+            this.addChild(this.field_Q, 10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -201,22 +201,22 @@ final class ih extends hp implements ok, hh {
         }
     }
 
-    final void h(int param0) {
+    final void clearInputs(int param0) {
         if (param0 >= -89) {
           field_F = -81;
         }
-        this.field_N.j(0);
-        this.field_M.j(0);
+        this.field_N.clearText(0);
+        this.field_M.clearText(0);
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         if (this.field_P != null) {
           ia.field_e.drawParagraph(this.field_P, 20 + (param2 + this.field_k), param0 - (-this.field_j - 15), this.field_i - 40, this.field_n, 16777215, -1, 1, 0, ia.field_e.field_I);
         }
         if (this.field_K != null) {
           Rasterizer.drawHorizontalLine(10 + param2, param0 + 134, -20 + this.field_i, 4210752);
         }
-        super.a(param0, param1, param2, param3);
+        super.drawLayer(param0, param1, param2, param3);
     }
 
     final static void a(int param0, int param1, boolean param2) {
@@ -228,7 +228,7 @@ final class ih extends hp implements ok, hh {
         if (param2) {
           vf.field_f = param1;
           ma.field_r = -1;
-          uo.field_d = false;
+          IsaacCipher.field_d = false;
           vk.field_c = param0;
           MouseInputHandler.field_d = false;
           sm.field_a = -1;
@@ -236,7 +236,7 @@ final class ih extends hp implements ok, hh {
         }
     }
 
-    final void a(String param0, int param1) {
+    final void setAccountAndClearPassword(String param0, int param1) {
         tb var3 = null;
         String var4 = null;
         try {
@@ -245,14 +245,14 @@ final class ih extends hp implements ok, hh {
             this.field_R = (an) null;
           }
           var4 = param0;
-          var3.a(false, false, var4);
-          this.field_M.j(0);
+          var3.setText(false, false, var4);
+          this.field_M.clearText(0);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ih.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final void b(tb param0, int param1) {
+    public final void onTextSubmitted(tb param0, int param1) {
         int var3_int = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -265,7 +265,7 @@ final class ih extends hp implements ok, hh {
           }
           var3_int = -126 / ((param1 - 35) / 38);
           if (this.field_M == param0) {
-            this.e((byte) -127);
+            this.submitLogin((byte) -127);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -293,12 +293,12 @@ final class ih extends hp implements ok, hh {
         try {
           if (this.field_R != param2) {
             if (this.field_K == param2) {
-              vj.d(51);
+              vj.showAccountCreationDialog(51);
             } else {
               if (param2 == this.field_Q) {
                 if (!this.field_O) {
                   if (this.field_H) {
-                    ZombieDawn.q(-10401);
+                    ZombieDawn.showLoginChoiceDialog(-10401);
                   } else {
                     mk.a((byte) -121);
                   }
@@ -308,7 +308,7 @@ final class ih extends hp implements ok, hh {
               }
             }
           } else {
-            this.e((byte) -66);
+            this.submitLogin((byte) -66);
           }
           if (param1 != -6) {
             this.field_L = true;
@@ -342,11 +342,11 @@ final class ih extends hp implements ok, hh {
             return true;
           }
           if (param1 == 98) {
-            stackIn_5_0 = this.b((byte) 120, param2);
+            stackIn_5_0 = this.focusPreviousChild((byte) 120, param2);
             return stackIn_5_0;
           }
           if (99 == param1) {
-            stackIn_8_0 = this.a(1, param2);
+            stackIn_8_0 = this.focusNextChild(1, param2);
             return stackIn_8_0;
           }
           var5_int = 116 / ((param0 + 83) / 32);
@@ -365,11 +365,11 @@ final class ih extends hp implements ok, hh {
         }
     }
 
-    private final void e(byte param0) {
+    private final void submitLogin(byte param0) {
         if (param0 > -23) {
           return;
         }
-        if (HumanFactory.b(127) ||
+        if (AccountServerResult.b(127) ||
           !(this.field_N.field_o.length() <= 0) &&
           !(this.field_M.field_o.length() <= 0)) {
           rg.a(this.field_N.field_o, -27, this.field_M.field_o);

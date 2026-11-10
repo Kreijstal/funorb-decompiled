@@ -23,7 +23,7 @@ final class TileMap {
     int[][] tiles;
     static int field_q;
 
-    final void a(int param0, boolean param1) {
+    final void updateAnimatedTileFrames(int param0, boolean param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         int var4 = 0;
@@ -38,7 +38,7 @@ final class TileMap {
             return;
           }
           this.field_e = false;
-          qk.n((byte) 96);
+          qk.advanceAnimatedTiles((byte) 96);
           var3_int = param0;
           while (this.field_h.length > var3_int) {
             if (var7 != 0) {
@@ -47,7 +47,7 @@ final class TileMap {
             var4 = 0;
             while (this.field_h[0].length > var4) {
               var5 = (127 & this.tiles[var3_int][var4]) >> 0;
-              var6 = ub.a(127, var5);
+              var6 = ub.findAnimatedTile(127, var5);
               if (var6 != null) {
                 this.field_h[var3_int][var4] = GameWorld.intOr(eg.a(this.field_h[var3_int][var4], -128), var6.field_g);
                 this.field_e = true;
@@ -64,10 +64,10 @@ final class TileMap {
         }
     }
 
-    final void a(int param0) {
+    final void rebuildDerivedLayers(int param0) {
         try {
-          this.a(this.tiles, (byte) -39);
-          this.a(108, this.tiles);
+          this.buildPassabilityMasks(this.tiles, (byte) -39);
+          this.buildRenderTiles(108, this.tiles);
           this.field_k = this.tiles[param0].length;
           this.field_r = this.tiles.length;
         } catch (RuntimeException runtimeException) {
@@ -75,14 +75,14 @@ final class TileMap {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
           field_g = null;
           field_n = null;
           if (param0 != 122) {
-            TileMap.b(-118);
+            TileMap.pollKeyEvent(-118);
           }
           field_i = null;
           return;
@@ -93,7 +93,7 @@ final class TileMap {
         }
     }
 
-    private final int c(int param0, int param1, int param2) {
+    private final int computeWallRenderTile(int param0, int param1, int param2) {
         int stackIn_3_0 = 0;
         int stackIn_24_0 = 0;
         int stackIn_37_0 = 0;
@@ -126,30 +126,30 @@ final class TileMap {
         var13 = ZombieDawn.field_J;
         try {
           if (!this.field_d) {
-            stackIn_3_0 = this.b((byte) -61, param0, param1);
+            stackIn_3_0 = this.computeWallRenderTileAlt((byte) -61, param0, param1);
             return stackIn_3_0;
           }
-          var4_int = this.a(param0, param1, 1);
+          var4_int = this.getTile(param0, param1, 1);
           var4_int = var4_int & -67108865;
           var5 = (var4_int & 65408) >> 7;
           if ((var4_int & 33554432) != 0 &&
             0 == var5) {
             var4_int = var4_int & -65409;
-            if (!this.b(1 + param0, param1, -1777127001) &&
-              !this.d(1 + param0, 1, param1)) {
+            if (!this.isOpenAt(1 + param0, param1, -1777127001) &&
+              !this.areNextTwoBelowClosed(1 + param0, 1, param1)) {
               stackIn_247_0 = 1;
             } else {
               stackIn_247_0 = 0;
             }
             var6 = stackIn_247_0;
-            var7 = (this.a(param0, param1 - 1, 1) & 33488896) >> 16;
-            var8 = this.b(param0, 3 + param1, -1777127001) ? 1 : 0;
+            var7 = (this.getTile(param0, param1 - 1, 1) & 33488896) >> 16;
+            var8 = this.isOpenAt(param0, 3 + param1, -1777127001) ? 1 : 0;
             if (param2 > -34) {
               stackIn_249_0 = -64;
               return stackIn_249_0;
             }
             boolean decompiledFrameRemainder6 = true;
-            if (this.b(param0, param1 - 1, -1777127001) && (var7 == 0 ||
+            if (this.isOpenAt(param0, param1 - 1, -1777127001) && (var7 == 0 ||
               64 < var7)) {
               stackIn_260_0 = 1;
               decompiledFrameRemainder6 = false;
@@ -159,9 +159,9 @@ final class TileMap {
             }
             boolean decompiledFrameRemainder5 = true;
             var9 = stackIn_260_0;
-            if ((this.b(param0 - 1, param1, -1777127001) ||
-              !this.d(-1 + param0, 1, param1)) && (this.b(-1 + param0, param1 + 1, -1777127001) ||
-              this.b(param0 - 1, param1 + 2, -1777127001))) {
+            if ((this.isOpenAt(param0 - 1, param1, -1777127001) ||
+              !this.areNextTwoBelowClosed(-1 + param0, 1, param1)) && (this.isOpenAt(-1 + param0, param1 + 1, -1777127001) ||
+              this.isOpenAt(param0 - 1, param1 + 2, -1777127001))) {
               stackIn_273_0 = 1;
               decompiledFrameRemainder5 = false;
             }
@@ -170,8 +170,8 @@ final class TileMap {
             }
             boolean decompiledFrameRemainder4 = true;
             var10 = stackIn_273_0;
-            if (this.b(1 + param0, param1, -1777127001) && (this.b(1 + param0, 1 + param1, -1777127001) ||
-              this.b(param0 + 1, 2 + param1, -1777127001))) {
+            if (this.isOpenAt(1 + param0, param1, -1777127001) && (this.isOpenAt(1 + param0, 1 + param1, -1777127001) ||
+              this.isOpenAt(param0 + 1, 2 + param1, -1777127001))) {
               stackIn_283_0 = 1;
               decompiledFrameRemainder4 = false;
             }
@@ -180,62 +180,62 @@ final class TileMap {
             }
             boolean decompiledFrameRemainder1 = true;
             var11 = stackIn_283_0;
-            if (!this.d(param0, 1, param1) ||
+            if (!this.areNextTwoBelowClosed(param0, 1, param1) ||
               var6 != 0) {
-              if (!this.d(param0, 1, param1) ||
+              if (!this.areNextTwoBelowClosed(param0, 1, param1) ||
                 var6 == 0) {
-                if (this.b(param0, 1 + param1, -1777127001)) {
-                  if (this.b(1 + param0, param1, -1777127001) &&
-                    this.b(-1 + param0, param1, -1777127001)) {
-                    var4_int = var4_int | this.a(5, -113);
+                if (this.isOpenAt(param0, 1 + param1, -1777127001)) {
+                  if (this.isOpenAt(1 + param0, param1, -1777127001) &&
+                    this.isOpenAt(-1 + param0, param1, -1777127001)) {
+                    var4_int = var4_int | this.encodeWallSprite(5, -113);
                     decompiledFrameRemainder1 = (var13 != 0);
                   }
                   if (decompiledFrameRemainder1) {
-                    if (!this.b(1 + param0, param1, -1777127001)) {
-                      if (this.b(-1 + param0, param1, -1777127001)) {
-                        var4_int = var4_int | this.a(3, 71);
+                    if (!this.isOpenAt(1 + param0, param1, -1777127001)) {
+                      if (this.isOpenAt(-1 + param0, param1, -1777127001)) {
+                        var4_int = var4_int | this.encodeWallSprite(3, 71);
                         decompiledFrameRemainder1 = (var13 != 0);
                       }
                       if (decompiledFrameRemainder1) {
-                        var4_int = var4_int | this.a(1, -124);
+                        var4_int = var4_int | this.encodeWallSprite(1, -124);
                         decompiledFrameRemainder1 = (var13 != 0);
                       }
                     }
                     if (decompiledFrameRemainder1) {
-                      var4_int = var4_int | this.a(7, 125);
+                      var4_int = var4_int | this.encodeWallSprite(7, 125);
                       decompiledFrameRemainder1 = (var13 != 0);
                     }
                   }
                 }
                 if ((decompiledFrameRemainder1) &&
-                  (decompiledFrameRemainder1 = !(!this.b(param0, 2 + param1, -1777127001)))) {
-                  if (this.b(1 + param0, param1, -1777127001) &&
-                    this.b(param0 - 1, param1, -1777127001)) {
-                    var4_int = var4_int | this.a(6, -99);
+                  (decompiledFrameRemainder1 = !(!this.isOpenAt(param0, 2 + param1, -1777127001)))) {
+                  if (this.isOpenAt(1 + param0, param1, -1777127001) &&
+                    this.isOpenAt(param0 - 1, param1, -1777127001)) {
+                    var4_int = var4_int | this.encodeWallSprite(6, -99);
                     decompiledFrameRemainder1 = (var13 != 0);
                   }
                   if (decompiledFrameRemainder1) {
-                    if (!this.b(param0 + 1, param1, -1777127001)) {
-                      if (!this.b(-1 + param0, param1, -1777127001)) {
-                        var4_int = var4_int | this.a(2, -54);
+                    if (!this.isOpenAt(param0 + 1, param1, -1777127001)) {
+                      if (!this.isOpenAt(-1 + param0, param1, -1777127001)) {
+                        var4_int = var4_int | this.encodeWallSprite(2, -54);
                         decompiledFrameRemainder1 = (var13 != 0);
                       }
                       if (decompiledFrameRemainder1) {
-                        var4_int = var4_int | this.a(4, -76);
+                        var4_int = var4_int | this.encodeWallSprite(4, -76);
                         decompiledFrameRemainder1 = (var13 != 0);
                       }
                     }
                     if (decompiledFrameRemainder1) {
-                      var4_int = var4_int | this.a(8, -17);
+                      var4_int = var4_int | this.encodeWallSprite(8, -17);
                       decompiledFrameRemainder1 = (var13 != 0);
                     }
                   }
                 }
               }
               if (decompiledFrameRemainder1) {
-                var11 = var11 != 0 | this.b(param0 + 1, 1 + param1, -1777127001) ? 1 : 0;
-                var10 = var10 != 0 | this.b(param0 - 1, 1 + param1, -1777127001) ? 1 : 0;
-                stackIn_335_0 = (this.b(param0 + 1, param1 + 1, -1777127001)) ? 128 : 0;
+                var11 = var11 != 0 | this.isOpenAt(param0 + 1, 1 + param1, -1777127001) ? 1 : 0;
+                var10 = var10 != 0 | this.isOpenAt(param0 - 1, 1 + param1, -1777127001) ? 1 : 0;
+                stackIn_335_0 = (this.isOpenAt(param0 + 1, param1 + 1, -1777127001)) ? 128 : 0;
                 boolean decompiledFrameRemainder0 = true;
                 var12 = stackIn_335_0;
                 if (var8 != 0 ||
@@ -246,7 +246,7 @@ final class TileMap {
                     var9 == 0 &&
                     var10 == 0 &&
                     var11 != 0) {
-                    var4_int = var4_int | this.a(28, 86) - var12;
+                    var4_int = var4_int | this.encodeWallSprite(28, 86) - var12;
                   }
                   if (var8 != 0 ||
                     var9 != 0 ||
@@ -265,35 +265,35 @@ final class TileMap {
                           var9 != 0 ||
                           var10 == 0) &&
                           (decompiledFrameRemainder0 = (var8 != 0)) &&
-                          (decompiledFrameRemainder0 = !(this.b(1 + param0, param1, -1777127001)))) {
-                          var4_int = var4_int | (786432 | this.a(1, -41));
+                          (decompiledFrameRemainder0 = !(this.isOpenAt(1 + param0, param1, -1777127001)))) {
+                          var4_int = var4_int | (786432 | this.encodeWallSprite(1, -41));
                         }
                         if ((decompiledFrameRemainder0) && (var8 == 0 &&
                           var11 == 0 &&
                           var9 == 0 &&
                           var10 != 0 || var13 != 0)) {
-                          var4_int = var4_int | -var12 + this.a(26, 86);
+                          var4_int = var4_int | -var12 + this.encodeWallSprite(26, 86);
                           if (var13 != 0) {
-                            var4_int = var4_int | this.a(28, 110) - var12;
-                            var4_int = var4_int | -var12 + this.a(26, -62);
-                            var4_int = var4_int | this.a(26, -100) - var12;
+                            var4_int = var4_int | this.encodeWallSprite(28, 110) - var12;
+                            var4_int = var4_int | -var12 + this.encodeWallSprite(26, -62);
+                            var4_int = var4_int | this.encodeWallSprite(26, -100) - var12;
                           }
                         }
                       } else {
-                        var4_int = var4_int | this.a(28, 110) - var12;
+                        var4_int = var4_int | this.encodeWallSprite(28, 110) - var12;
                         if (var13 != 0) {
-                          var4_int = var4_int | -var12 + this.a(26, -62);
-                          var4_int = var4_int | this.a(26, -100) - var12;
+                          var4_int = var4_int | -var12 + this.encodeWallSprite(26, -62);
+                          var4_int = var4_int | this.encodeWallSprite(26, -100) - var12;
                         }
                       }
                     } else {
-                      var4_int = var4_int | -var12 + this.a(26, -62);
+                      var4_int = var4_int | -var12 + this.encodeWallSprite(26, -62);
                       if (var13 != 0) {
-                        var4_int = var4_int | this.a(26, -100) - var12;
+                        var4_int = var4_int | this.encodeWallSprite(26, -100) - var12;
                       }
                     }
                   }} else {
-                  var4_int = var4_int | this.a(26, -100) - var12;
+                  var4_int = var4_int | this.encodeWallSprite(26, -100) - var12;
                 }
                 decompiledFrameRemainder1 = (var13 != 0);
               }
@@ -303,112 +303,112 @@ final class TileMap {
                 var9 != 0 &&
                 var10 != 0 &&
                 var11 != 0) {
-                var4_int = var4_int | this.a(9, -42);
+                var4_int = var4_int | this.encodeWallSprite(9, -42);
               }
               if (var8 != 0 &&
                 var9 != 0 &&
                 var10 != 0 &&
                 var11 == 0) {
-                var4_int = var4_int | this.a(10, 82);
+                var4_int = var4_int | this.encodeWallSprite(10, 82);
               }
               if (var8 != 0 &&
                 var9 != 0 &&
                 var10 == 0 &&
                 var11 != 0) {
-                var4_int = var4_int | this.a(11, -76);
+                var4_int = var4_int | this.encodeWallSprite(11, -76);
               }
               if (var8 != 0 &&
                 var9 != 0 &&
                 var10 == 0 &&
                 var11 == 0) {
-                var4_int = var4_int | this.a(18, 123);
+                var4_int = var4_int | this.encodeWallSprite(18, 123);
               }
               if (var8 != 0 &&
                 var9 == 0 &&
                 var10 != 0 &&
                 var11 != 0) {
-                var4_int = var4_int | this.a(12, 117);
+                var4_int = var4_int | this.encodeWallSprite(12, 117);
               }
               if (var8 != 0 &&
                 var9 == 0 &&
                 var10 != 0 &&
                 var11 == 0) {
-                var4_int = var4_int | this.a(14, 71);
+                var4_int = var4_int | this.encodeWallSprite(14, 71);
               }
               if (var8 != 0 &&
                 var9 == 0 &&
                 var10 == 0 &&
                 var11 != 0) {
-                var4_int = var4_int | this.a(15, -16);
+                var4_int = var4_int | this.encodeWallSprite(15, -16);
               }
               if (var8 != 0 &&
                 var9 == 0 &&
                 var10 == 0 &&
                 var11 == 0) {
-                var4_int = var4_int | this.a(21, -9);
+                var4_int = var4_int | this.encodeWallSprite(21, -9);
               }
               if (var8 == 0 &&
                 var9 != 0 &&
                 var10 != 0 &&
                 var11 != 0) {
-                var4_int = var4_int | this.a(19, -54);
+                var4_int = var4_int | this.encodeWallSprite(19, -54);
               }
               if (var8 == 0 &&
                 var9 != 0 &&
                 var10 != 0 &&
                 var11 == 0) {
-                var4_int = var4_int | this.a(16, 107);
+                var4_int = var4_int | this.encodeWallSprite(16, 107);
               }
               if (var8 == 0 &&
                 var9 != 0 &&
                 var10 == 0 &&
                 var11 != 0) {
-                var4_int = var4_int | this.a(17, -21);
+                var4_int = var4_int | this.encodeWallSprite(17, -21);
               }
               if (var8 == 0 &&
                 var9 != 0 &&
                 var10 == 0 &&
                 var11 == 0) {
-                var4_int = var4_int | this.a(20, 115);
+                var4_int = var4_int | this.encodeWallSprite(20, 115);
               }
               if (var8 == 0 &&
                 var9 == 0 &&
                 var10 != 0 &&
                 var11 != 0) {
-                var4_int = var4_int | this.a(19, -78);
+                var4_int = var4_int | this.encodeWallSprite(19, -78);
               }
               if (var8 == 0 &&
                 var9 == 0 &&
                 var10 != 0 &&
                 var11 == 0) {
-                var4_int = var4_int | this.a(22, 117);
+                var4_int = var4_int | this.encodeWallSprite(22, 117);
               }
               if (var8 == 0 &&
                 var9 == 0 &&
                 var10 == 0 &&
                 var11 != 0) {
-                var4_int = var4_int | this.a(23, 88);
+                var4_int = var4_int | this.encodeWallSprite(23, 88);
               }
               if (var8 == 0 &&
                 var9 == 0 &&
                 var10 == 0 &&
                 var11 == 0) {
-                var4_int = var4_int | this.a(24, -68);
+                var4_int = var4_int | this.encodeWallSprite(24, -68);
               }
             }
             if ((var4_int & 65408) == 0) {
-              var4_int = var4_int | this.a(24, -69);
+              var4_int = var4_int | this.encodeWallSprite(24, -69);
             }
             stackIn_601_0 = var4_int;
             return stackIn_601_0;
           }
           boolean decompiledFrameRemainder3 = true;
-          var6Lifetime1 = this.b(param0, param1 + 3, -1777127001) ? 1 : 0;
-          var7Lifetime1 = this.b(param0, param1 - 1, -1777127001) ? 1 : 0;
-          if ((this.b(-1 + param0, param1, -1777127001) &&
-            (this.b(-1 + param0, param1 + 1, -1777127001) ||
-            this.b(param0 - 1, param1 + 2, -1777127001)) ||
-            !this.d(-1 + param0, 1, param1)) && this.a(param0 - 1, (byte) -121, param1)) {
+          var6Lifetime1 = this.isOpenAt(param0, param1 + 3, -1777127001) ? 1 : 0;
+          var7Lifetime1 = this.isOpenAt(param0, param1 - 1, -1777127001) ? 1 : 0;
+          if ((this.isOpenAt(-1 + param0, param1, -1777127001) &&
+            (this.isOpenAt(-1 + param0, param1 + 1, -1777127001) ||
+            this.isOpenAt(param0 - 1, param1 + 2, -1777127001)) ||
+            !this.areNextTwoBelowClosed(-1 + param0, 1, param1)) && this.isUpperLayerPassable(param0 - 1, (byte) -121, param1)) {
             stackIn_24_0 = 1;
             decompiledFrameRemainder3 = false;
           }
@@ -417,9 +417,9 @@ final class TileMap {
           }
           boolean decompiledFrameRemainder2 = true;
           var8Lifetime1 = stackIn_24_0;
-          if (this.b(1 + param0, param1, -1777127001) &&
-            this.a(1 + param0, (byte) -89, param1) && (this.b(param0 + 1, param1 + 1, -1777127001) ||
-            this.b(1 + param0, 2 + param1, -1777127001))) {
+          if (this.isOpenAt(1 + param0, param1, -1777127001) &&
+            this.isUpperLayerPassable(1 + param0, (byte) -89, param1) && (this.isOpenAt(param0 + 1, param1 + 1, -1777127001) ||
+            this.isOpenAt(1 + param0, 2 + param1, -1777127001))) {
             stackIn_37_0 = 1;
             decompiledFrameRemainder2 = false;
           }
@@ -427,14 +427,14 @@ final class TileMap {
             stackIn_37_0 = 0;
           }
           var9Lifetime1 = stackIn_37_0;
-          if (!this.b(param0 + 1, param1, -1777127001) &&
-            !this.d(param0 + 1, 1, param1)) {
+          if (!this.isOpenAt(param0 + 1, param1, -1777127001) &&
+            !this.areNextTwoBelowClosed(param0 + 1, 1, param1)) {
             stackIn_44_0 = 1;
           } else {
             stackIn_44_0 = 0;
           }
           var10Lifetime1 = stackIn_44_0;
-          if (this.d(param0, 1, param1) &&
+          if (this.areNextTwoBelowClosed(param0, 1, param1) &&
             var10Lifetime1 == 0) {
             if (var6Lifetime1 != 0 &&
               var7Lifetime1 != 0 &&
@@ -542,7 +542,7 @@ final class TileMap {
         }
     }
 
-    private final void a(int[][] param0, byte param1) {
+    private final void buildPassabilityMasks(int[][] param0, byte param1) {
         int[] dupTemp$0 = null;
         int dupTemp$1 = 0;
         int[] arrayValue$2 = null;
@@ -654,7 +654,7 @@ final class TileMap {
         }
     }
 
-    private final WorldObject a(int param0, int param1, int param2, int param3, int param4) {
+    private final WorldObject createLevelObject(int param0, int param1, int param2, int param3, int param4) {
         Zombie stackIn_2_0 = null;
         oo stackIn_22_0 = null;
         gb stackIn_28_0 = null;
@@ -702,7 +702,7 @@ final class TileMap {
             }
           } else {
             var6_int = -67108865 & var6_int & -134217729;
-            var8_ref = HumanFactory.createHuman(60, param0, var6_int, param1);
+            var8_ref = AccountServerResult.createHuman(60, param0, var6_int, param1);
             if ((param2 & 67108864) != 0) {
               var8_ref.field_ib = true;
             }
@@ -717,7 +717,7 @@ final class TileMap {
             return (WorldObject) (stackIn_40_0);
           }
           if (param4 != 1) {
-            this.a(116, (int[][]) null);
+            this.buildRenderTiles(116, (int[][]) null);
           }
           stackIn_45_0 = null;
           return (WorldObject) (stackIn_45_0);
@@ -728,7 +728,7 @@ final class TileMap {
         }
     }
 
-    private final boolean a(int param0, byte param1, int param2) {
+    private final boolean isUpperLayerPassable(int param0, byte param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         boolean stackIn_10_0 = false;
@@ -737,7 +737,7 @@ final class TileMap {
           if (param1 >= -43) {
             return true;
           }
-          var4_int = (33488896 & this.a(param0, param2, 1)) >> 16;
+          var4_int = (33488896 & this.getTile(param0, param2, 1)) >> 16;
           stackIn_10_0 = !(var4_int <= 64) || (var4_int == 0);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -747,7 +747,7 @@ final class TileMap {
         }
     }
 
-    private final boolean a(int param0, boolean param1, int param2) {
+    private final boolean areNextTwoBelowImpassable(int param0, boolean param1, int param2) {
         RuntimeException var4 = null;
         boolean stackIn_10_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -755,7 +755,7 @@ final class TileMap {
           if (!param1) {
             this.field_s = -75;
           }
-          stackIn_10_0 = (!this.a((byte) -113, param0, 1 + param2)) && (!this.a((byte) -115, param0, 2 + param2));
+          stackIn_10_0 = (!this.isPassable((byte) -113, param0, 1 + param2)) && (!this.isPassable((byte) -115, param0, 2 + param2));
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -764,7 +764,7 @@ final class TileMap {
         }
     }
 
-    private final void a(int param0, int[][] param1) {
+    private final void buildRenderTiles(int param0, int[][] param1) {
         int stackIn_3_0 = 0;
         int stackIn_3_1 = 0;
         int stackIn_34_0 = 0;
@@ -791,7 +791,7 @@ final class TileMap {
               if (var9 == 0) {
                 var4 = stackIn_34_0;
                 while (param1[0].length > var4) {
-                  var5 = this.c(var4, var3_int, -35);
+                  var5 = this.computeWallRenderTile(var4, var3_int, -35);
                   var6 = var5 >> 7 & 511;
                   var7 = 511 & var5 >> 16;
                   stackIn_3_0 = ~(-2147483648 & var5);
@@ -800,10 +800,10 @@ final class TileMap {
                     var6 <= 32 ||
                     var7 >= 9 &&
                     var7 <= 32 ||
-                    (this.c(var4, 1 + var3_int, -65) & 65408) >> 7 == 16)) {
+                    (this.computeWallRenderTile(var4, 1 + var3_int, -65) & 65408) >> 7 == 16)) {
                     var5 = var5 | 67108864;
                   }
-                  var8 = this.a(false, var3_int, var4);
+                  var8 = this.computeFloorRenderTile(false, var3_int, var4);
                   var5 = var5 & -128;
                   if ((65408 & var8) != 0) {
                     var5 = var5 & -65409;
@@ -819,7 +819,7 @@ final class TileMap {
               stackIn_34_0 = param0;
             }
             if (stackIn_34_0 < 92) {
-              TileMap.a((byte) 51, (GameLayer) null);
+              TileMap.addGameLayer((byte) 51, (GameLayer) null);
             }
             return;
           }
@@ -837,7 +837,7 @@ final class TileMap {
         }
     }
 
-    private final int c(byte param0, int param1, int param2) {
+    private final int getWallKind(byte param0, int param1, int param2) {
         int stackIn_16_0 = 0;
         int stackIn_21_0 = 0;
         int stackIn_24_0 = 0;
@@ -853,9 +853,9 @@ final class TileMap {
         int var5 = 0;
         try {
           if (param0 != 41) {
-            this.a(-47, false);
+            this.updateAnimatedTileFrames(-47, false);
           }
-          var4_int = 511 & this.a(param2, param1, 1) >> 7;
+          var4_int = 511 & this.getTile(param2, param1, 1) >> 7;
           if (8 == this.field_a ||
             this.field_a == 7 ||
             this.field_a == 5) {
@@ -911,16 +911,16 @@ final class TileMap {
         }
     }
 
-    private final boolean b(int param0, int param1, int param2) {
+    private final boolean isOpenAt(int param0, int param1, int param2) {
         int discarded$1 = 0;
         RuntimeException var4 = null;
         boolean stackIn_10_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != -1777127001) {
-            discarded$1 = this.c((byte) 82, 60, -52);
+            discarded$1 = this.getWallKind((byte) 82, 60, -52);
           }
-          stackIn_10_0 = ((33554432 & this.a(param0, param1, 1)) == 0) || !((this.a(param0, param1, 1) >> 7 & 511) <= 64);
+          stackIn_10_0 = ((33554432 & this.getTile(param0, param1, 1)) == 0) || !((this.getTile(param0, param1, 1) >> 7 & 511) <= 64);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -929,7 +929,7 @@ final class TileMap {
         }
     }
 
-    final static boolean a(byte param0, String param1, String param2) {
+    final static boolean isAcceptablePassword(byte param0, String param1, String param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
@@ -941,7 +941,7 @@ final class TileMap {
           if (cj.a((byte) 15, param1)) {
             return false;
           }
-          if (tb.a(-10723, param1)) {
+          if (tb.isSingleRepeatedChar(-10723, param1)) {
             return false;
           }
           if (tk.hasInvalidPasswordLength((byte) 84, param1)) {
@@ -956,10 +956,10 @@ final class TileMap {
           if (lf.containsForwardOrReversed(param2, param1, -7235)) {
             return false;
           }
-          if (ic.a(param1, param2, 0)) {
+          if (ic.containsForwardOrReversed(param1, param2, 0)) {
             return false;
           }
-          if (t.a(param1, (byte) 125, param2)) {
+          if (t.containsForwardOrReversed(param1, (byte) 125, param2)) {
             return false;
           }
           return true;
@@ -983,19 +983,19 @@ final class TileMap {
         }
     }
 
-    private final boolean a(byte param0, int param1, int param2) {
+    private final boolean isPassable(byte param0, int param1, int param2) {
         int discarded$1 = 0;
         RuntimeException var4 = null;
         boolean stackIn_10_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
-          if ((33554432 & this.a(param1, param2, 1)) == 0) {
+          if ((33554432 & this.getTile(param1, param2, 1)) == 0) {
             return true;
           }
           if (param0 >= -78) {
-            discarded$1 = this.c((byte) 79, -18, -85);
+            discarded$1 = this.getWallKind((byte) 79, -18, -85);
           }
-          stackIn_10_0 = (this.c((byte) 41, param2, param1) == -1);
+          stackIn_10_0 = (this.getWallKind((byte) 41, param2, param1) == -1);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1004,7 +1004,7 @@ final class TileMap {
         }
     }
 
-    final static boolean b(int param0) {
+    final static boolean pollKeyEvent(int param0) {
         Object var1 = null;
         Object var1_ref = null;
         RuntimeException var1_ref2 = null;
@@ -1032,15 +1032,15 @@ final class TileMap {
         }
     }
 
-    private final boolean d(int param0, int param1, int param2) {
+    private final boolean areNextTwoBelowClosed(int param0, int param1, int param2) {
         RuntimeException var4 = null;
         boolean stackIn_10_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 1) {
-            TileMap.a((byte) 71, (String) null, (String) null);
+            TileMap.isAcceptablePassword((byte) 71, (String) null, (String) null);
           }
-          stackIn_10_0 = (!this.b(param0, param2 + 1, -1777127001)) && (!this.b(param0, param2 + 2, -1777127001));
+          stackIn_10_0 = (!this.isOpenAt(param0, param2 + 1, -1777127001)) && (!this.isOpenAt(param0, param2 + 2, -1777127001));
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1049,7 +1049,7 @@ final class TileMap {
         }
     }
 
-    private final int a(boolean param0, int param1, int param2) {
+    private final int computeFloorRenderTile(boolean param0, int param1, int param2) {
         int discarded$0 = 0;
         int discarded$1 = 0;
         int discarded$2 = 0;
@@ -1095,24 +1095,24 @@ final class TileMap {
             return stackIn_3_0;
           }
           boolean decompiledFrameRemainder2 = true;
-          var4_int = this.a(param2, param1, 1) & 127;
-          var5 = this.a(param2, param1, 1) & 65408;
+          var4_int = this.getTile(param2, param1, 1) & 127;
+          var5 = this.getTile(param2, param1, 1) & 65408;
           if (this.field_a == 6) {
-            stackIn_11_0 = ((127 & this.a(param2 - 1, param1 - 1, 1)) != 1) ? 0 : 1;
+            stackIn_11_0 = ((127 & this.getTile(param2 - 1, param1 - 1, 1)) != 1) ? 0 : 1;
             var6 = stackIn_11_0;
-            stackIn_15_0 = ((this.a(param2 + 1, param1 - 1, 1) & 127) != 1) ? 0 : 1;
+            stackIn_15_0 = ((this.getTile(param2 + 1, param1 - 1, 1) & 127) != 1) ? 0 : 1;
             var7_int = stackIn_15_0;
-            stackIn_19_0 = ((127 & this.a(1 + param2, 1 + param1, 1)) != 1) ? 0 : 1;
+            stackIn_19_0 = ((127 & this.getTile(1 + param2, 1 + param1, 1)) != 1) ? 0 : 1;
             var8_int = stackIn_19_0;
-            stackIn_23_0 = ((127 & this.a(-1 + param2, 1 + param1, 1)) != 1) ? 0 : 1;
+            stackIn_23_0 = ((127 & this.getTile(-1 + param2, 1 + param1, 1)) != 1) ? 0 : 1;
             var9 = stackIn_23_0;
-            stackIn_27_0 = ((127 & this.a(param2, -1 + param1, 1)) != 1) ? 0 : 1;
+            stackIn_27_0 = ((127 & this.getTile(param2, -1 + param1, 1)) != 1) ? 0 : 1;
             var10 = stackIn_27_0;
-            stackIn_31_0 = ((this.a(param2 + 1, param1, 1) & 127) != 1) ? 0 : 1;
+            stackIn_31_0 = ((this.getTile(param2 + 1, param1, 1) & 127) != 1) ? 0 : 1;
             var11 = stackIn_31_0;
-            stackIn_35_0 = (1 != (127 & this.a(param2, param1 + 1, 1))) ? 0 : 1;
+            stackIn_35_0 = (1 != (127 & this.getTile(param2, param1 + 1, 1))) ? 0 : 1;
             var12 = stackIn_35_0;
-            stackIn_39_0 = ((127 & this.a(-1 + param2, param1, 1)) != 1) ? 0 : 1;
+            stackIn_39_0 = ((127 & this.getTile(-1 + param2, param1, 1)) != 1) ? 0 : 1;
             boolean decompiledFrameRemainder1 = true;
             var13 = stackIn_39_0;
             if (var4_int == 0) {
@@ -1387,18 +1387,18 @@ final class TileMap {
             var6Lifetime1 = 55;
             var7 = new int[]{52, 43, 57, 59};
             var8 = new int[]{51, 35, 58, 56};
-            stackIn_423_0 = (var6Lifetime1 == (127 & this.a(param2, param1 - 1, 1))) ? 0 : 1;
+            stackIn_423_0 = (var6Lifetime1 == (127 & this.getTile(param2, param1 - 1, 1))) ? 0 : 1;
             var9Lifetime1 = stackIn_423_0;
-            stackIn_427_0 = (~(this.a(1 + param2, param1, 1) & 127) == ~var6Lifetime1) ? 0 : 1;
+            stackIn_427_0 = (~(this.getTile(1 + param2, param1, 1) & 127) == ~var6Lifetime1) ? 0 : 1;
             var10Lifetime1 = stackIn_427_0;
-            stackIn_431_0 = (~var6Lifetime1 == ~(this.a(param2, param1 + 1, 1) & 127)) ? 0 : 1;
+            stackIn_431_0 = (~var6Lifetime1 == ~(this.getTile(param2, param1 + 1, 1) & 127)) ? 0 : 1;
             var11Lifetime1 = stackIn_431_0;
-            stackIn_435_0 = (var6Lifetime1 == (127 & this.a(param2 - 1, param1, 1))) ? 0 : 1;
+            stackIn_435_0 = (var6Lifetime1 == (127 & this.getTile(param2 - 1, param1, 1))) ? 0 : 1;
             var12Lifetime1 = stackIn_435_0;
-            discarded$0 = this.a(param2 - 1, -1 + param1, 1);
-            discarded$1 = this.a(param2 + 1, param1 - 1, 1);
-            discarded$2 = this.a(1 + param2, param1 + 1, 1);
-            discarded$3 = this.a(-1 + param2, 1 + param1, 1);
+            discarded$0 = this.getTile(param2 - 1, -1 + param1, 1);
+            discarded$1 = this.getTile(param2 + 1, param1 - 1, 1);
+            discarded$2 = this.getTile(1 + param2, param1 + 1, 1);
+            discarded$3 = this.getTile(-1 + param2, 1 + param1, 1);
             if (var9Lifetime1 != 0 &&
               var11Lifetime1 == 0 &&
               var12Lifetime1 == 0 &&
@@ -1487,7 +1487,7 @@ final class TileMap {
         }
     }
 
-    final static void a(byte param0, GameLayer param1) {
+    final static void addGameLayer(byte param0, GameLayer param1) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         RuntimeException stackIn_5_0 = null;
@@ -1512,7 +1512,7 @@ final class TileMap {
         }
     }
 
-    final IntrusiveDeque b(byte param0) {
+    final IntrusiveDeque createLevelObjects(byte param0) {
         IntrusiveDeque var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -1538,7 +1538,7 @@ final class TileMap {
             var7 = this.field_l[3 + var3];
             stackIn_11_0 = var2;
             if (var8 == 0) {
-              ((IntrusiveDeque) (Object) stackIn_11_0).addFirst(0, this.a(var6, var7, var5, var4, 1));
+              ((IntrusiveDeque) (Object) stackIn_11_0).addFirst(0, this.createLevelObject(var6, var7, var5, var4, 1));
               var3 += 4;
               continue;
             }
@@ -1555,7 +1555,7 @@ final class TileMap {
         }
     }
 
-    private final int a(int param0, int param1) {
+    private final int encodeWallSprite(int param0, int param1) {
         int stackIn_1_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
@@ -1571,7 +1571,7 @@ final class TileMap {
         }
     }
 
-    final static void b(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawDottedRectangle(int param0, int param1, int param2, int param3, int param4) {
         int stackIn_5_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_13_0 = 0;
@@ -1659,7 +1659,7 @@ final class TileMap {
           }
           if ((decompiledFrameCompleted0) &&
             (param3 <= 21)) {
-            TileMap.a((byte) 52, (GameLayer) null);
+            TileMap.addGameLayer((byte) 52, (GameLayer) null);
           }
           if (var5_int >= Rasterizer.clipLeft &&
             Rasterizer.clipRight > var5_int) {
@@ -1701,7 +1701,7 @@ final class TileMap {
         }
     }
 
-    private final int a(int param0, int param1, int param2) {
+    private final int getTile(int param0, int param1, int param2) {
         RuntimeException var4 = null;
         int stackIn_13_0 = 0;
         int stackIn_16_0 = 0;
@@ -1728,7 +1728,7 @@ final class TileMap {
         }
     }
 
-    final void a(boolean param0, int param1, int param2, boolean param3, int param4) {
+    final void setCellOpen(boolean param0, int param1, int param2, boolean param3, int param4) {
         boolean discarded$0 = false;
         int[] stackIn_3_0 = null;
         int stackIn_3_1 = 0;
@@ -1762,7 +1762,7 @@ final class TileMap {
           }
           stackIn_3_0[stackIn_3_1] = GameWorld.intOr(stackIn_4_2, eg.a(14, this.field_p[param2][param4]));
           if (param1 != 14365) {
-            discarded$0 = this.a((byte) 91, 88, -54);
+            discarded$0 = this.isPassable((byte) 91, 88, -54);
           }
           if (!param3) {
             stackIn_13_0 = this.field_t[param2];
@@ -1851,7 +1851,7 @@ final class TileMap {
           this.field_p = new int[param0.length][param0[0].length];
           this.field_t = new int[param0.length][param0[0].length];
           this.field_d = param9;
-          this.a(0);
+          this.rebuildDerivedLayers(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1885,7 +1885,7 @@ final class TileMap {
         }
     }
 
-    private final int b(byte param0, int param1, int param2) {
+    private final int computeWallRenderTileAlt(byte param0, int param1, int param2) {
         int stackIn_6_0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_19_0 = 0;
@@ -1911,28 +1911,28 @@ final class TileMap {
         int var13 = 0;
         var13 = ZombieDawn.field_J;
         try {
-          var4_int = this.a(param1, param2, 1);
+          var4_int = this.getTile(param1, param2, 1);
           var4_int = var4_int & -67108865;
           var5 = var4_int >> 7 & 511;
           if (0 != (33554432 & var4_int) &&
             var5 == 0) {
             var4_int = var4_int & -65409;
             if (this.field_a == 6) {
-              var4_int = var4_int | this.a(511, -66);
+              var4_int = var4_int | this.encodeWallSprite(511, -66);
               stackIn_11_0 = var4_int;
               return stackIn_11_0;
             }
-            if (!this.a((byte) -92, 1 + param1, param2) &&
-              !this.a(1 + param1, true, param2)) {
+            if (!this.isPassable((byte) -92, 1 + param1, param2) &&
+              !this.areNextTwoBelowImpassable(1 + param1, true, param2)) {
               stackIn_19_0 = 1;
             } else {
               stackIn_19_0 = 0;
             }
             var6 = stackIn_19_0;
-            var7 = this.a((byte) -116, param1, param2 + 3) ? 1 : 0;
-            var8 = this.a((byte) -109, param1, param2 - 1) ? 1 : 0;
-            if (!this.a((byte) -113, param1 - 1, param2) &&
-              this.a(param1 - 1, true, param2)) {
+            var7 = this.isPassable((byte) -116, param1, param2 + 3) ? 1 : 0;
+            var8 = this.isPassable((byte) -109, param1, param2 - 1) ? 1 : 0;
+            if (!this.isPassable((byte) -113, param1 - 1, param2) &&
+              this.areNextTwoBelowImpassable(param1 - 1, true, param2)) {
               stackIn_26_0 = 0;
             } else {
               stackIn_26_0 = 1;
@@ -1942,97 +1942,97 @@ final class TileMap {
               stackIn_28_0 = 82;
               return stackIn_28_0;
             }
-            var10 = this.a((byte) -128, param1 + 1, param2) ? 1 : 0;
+            var10 = this.isPassable((byte) -128, param1 + 1, param2) ? 1 : 0;
             var11 = 0;
             if (var9 == 0) {
-              var11 = this.c((byte) 41, param2, -1 + param1) * 72;
+              var11 = this.getWallKind((byte) 41, param2, -1 + param1) * 72;
             }
             if ((var9 != 0 ||
               var13 != 0) &&
               var8 == 0) {
-              var11 = 72 * this.c((byte) 41, param2 - 1, param1);
+              var11 = 72 * this.getWallKind((byte) 41, param2 - 1, param1);
             }
             boolean decompiledFrameRemainder0 = true;
-            if (!this.a(param1, true, param2) ||
+            if (!this.areNextTwoBelowImpassable(param1, true, param2) ||
               var6 != 0) {
-              if (this.a(param1, true, param2) &&
+              if (this.areNextTwoBelowImpassable(param1, true, param2) &&
                 var6 != 0) {
                 stackIn_51_0 = var10;
-                if (!this.a((byte) -94, 1 + param1, 2 + param2) &&
-                  !this.a((byte) -98, param1 + 1, param2 + 1)) {
+                if (!this.isPassable((byte) -94, 1 + param1, 2 + param2) &&
+                  !this.isPassable((byte) -98, param1 + 1, param2 + 1)) {
                   stackIn_54_1 = 0;
                 } else {
                   stackIn_54_1 = 1;
                 }
                 var10 = stackIn_51_0 | stackIn_54_1;
                 stackIn_58_0 = var9;
-                if (!this.a((byte) -85, param1 - 1, 2 + param2) &&
-                  !this.a((byte) -110, -1 + param1, param2 + 1)) {
+                if (!this.isPassable((byte) -85, param1 - 1, 2 + param2) &&
+                  !this.isPassable((byte) -110, -1 + param1, param2 + 1)) {
                   stackIn_61_1 = 0;
                 } else {
                   stackIn_61_1 = 1;
                 }
                 var9 = stackIn_58_0 | stackIn_61_1;
-                stackIn_65_0 = (this.a((byte) -111, 1 + param1, param2 + 1)) ? 128 : 0;
+                stackIn_65_0 = (this.isPassable((byte) -111, 1 + param1, param2 + 1)) ? 128 : 0;
                 var12 = stackIn_65_0;
                 if (var7 == 0 &&
                   var8 == 0 &&
                   var9 != 0 &&
                   var10 != 0) {
-                  var4_int = var4_int | this.a(var11 + 26, 102) - var12;
+                  var4_int = var4_int | this.encodeWallSprite(var11 + 26, 102) - var12;
                 }
                 if (var7 == 0 &&
                   var8 == 0 &&
                   var9 == 0 &&
                   var10 != 0) {
-                  var4_int = var4_int | -var12 + this.a(28 + var11, 89);
+                  var4_int = var4_int | -var12 + this.encodeWallSprite(28 + var11, 89);
                 }
                 decompiledFrameRemainder0 = (var13 != 0);
               }
               if (decompiledFrameRemainder0) {
-                if ((!this.a((byte) -95, param1, 1 + param2)) &&
-                  (decompiledFrameRemainder0 = !(!this.a((byte) -93, param1, param2 + 2)))) {
-                  if (this.a((byte) -122, param1 + 1, param2) &&
-                    this.a((byte) -119, param1 - 1, param2)) {
-                    var4_int = var4_int | this.a(6 + var11, -99);
+                if ((!this.isPassable((byte) -95, param1, 1 + param2)) &&
+                  (decompiledFrameRemainder0 = !(!this.isPassable((byte) -93, param1, param2 + 2)))) {
+                  if (this.isPassable((byte) -122, param1 + 1, param2) &&
+                    this.isPassable((byte) -119, param1 - 1, param2)) {
+                    var4_int = var4_int | this.encodeWallSprite(6 + var11, -99);
                     decompiledFrameRemainder0 = (var13 != 0);
                   }
                   if (decompiledFrameRemainder0) {
-                    if (this.a((byte) -102, param1 + 1, param2)) {
-                      var4_int = var4_int | this.a(var11 + 8, 91);
+                    if (this.isPassable((byte) -102, param1 + 1, param2)) {
+                      var4_int = var4_int | this.encodeWallSprite(var11 + 8, 91);
                       decompiledFrameRemainder0 = (var13 != 0);
                     }
                     if (decompiledFrameRemainder0) {
-                      if (this.a((byte) -127, -1 + param1, param2)) {
-                        var4_int = var4_int | this.a(4 + var11, -93);
+                      if (this.isPassable((byte) -127, -1 + param1, param2)) {
+                        var4_int = var4_int | this.encodeWallSprite(4 + var11, -93);
                         decompiledFrameRemainder0 = (var13 != 0);
                       }
                       if (decompiledFrameRemainder0) {
-                        var4_int = var4_int | this.a(var11 + 2, param0 - 8);
+                        var4_int = var4_int | this.encodeWallSprite(var11 + 2, param0 - 8);
                         decompiledFrameRemainder0 = (var13 != 0);
                       }
                     }
                   }
                 }
                 if (decompiledFrameRemainder0) {
-                  if (this.a((byte) -128, param1 + 1, param2) &&
-                    this.a((byte) -94, param1 - 1, param2)) {
-                    var4_int = var4_int | this.a(var11 + 5, 74);
+                  if (this.isPassable((byte) -128, param1 + 1, param2) &&
+                    this.isPassable((byte) -94, param1 - 1, param2)) {
+                    var4_int = var4_int | this.encodeWallSprite(var11 + 5, 74);
                     decompiledFrameRemainder0 = (var13 != 0);
                   }
                   if (decompiledFrameRemainder0) {
-                    if (!this.a((byte) -79, 1 + param1, param2)) {
-                      if (this.a((byte) -96, param1 - 1, param2)) {
-                        var4_int = var4_int | this.a(var11 + 3, param0 + 165);
+                    if (!this.isPassable((byte) -79, 1 + param1, param2)) {
+                      if (this.isPassable((byte) -96, param1 - 1, param2)) {
+                        var4_int = var4_int | this.encodeWallSprite(var11 + 3, param0 + 165);
                         decompiledFrameRemainder0 = (var13 != 0);
                       }
                       if (decompiledFrameRemainder0) {
-                        var4_int = var4_int | this.a(1 + var11, param0 ^ -113);
+                        var4_int = var4_int | this.encodeWallSprite(1 + var11, param0 ^ -113);
                         decompiledFrameRemainder0 = (var13 != 0);
                       }
                     }
                     if (decompiledFrameRemainder0) {
-                      var4_int = var4_int | this.a(var11 + 7, -75);
+                      var4_int = var4_int | this.encodeWallSprite(var11 + 7, -75);
                       decompiledFrameRemainder0 = (var13 != 0);
                     }
                   }
@@ -2044,101 +2044,101 @@ final class TileMap {
                 var8 != 0 &&
                 var9 != 0 &&
                 var10 != 0) {
-                var4_int = var4_int | this.a(var11 + 9, 84);
+                var4_int = var4_int | this.encodeWallSprite(var11 + 9, 84);
               }
               if (var7 != 0 &&
                 var8 != 0 &&
                 var9 != 0 &&
                 var10 == 0) {
-                var4_int = var4_int | this.a(10 + var11, -11);
+                var4_int = var4_int | this.encodeWallSprite(10 + var11, -11);
               }
               if (var7 != 0 &&
                 var8 != 0 &&
                 var9 == 0 &&
                 var10 != 0) {
-                var4_int = var4_int | this.a(11 + var11, 98);
+                var4_int = var4_int | this.encodeWallSprite(11 + var11, 98);
               }
               if (var7 != 0 &&
                 var8 != 0 &&
                 var9 == 0 &&
                 var10 == 0) {
-                var4_int = var4_int | this.a(var11 + 18, param0 + 176);
+                var4_int = var4_int | this.encodeWallSprite(var11 + 18, param0 + 176);
               }
               if (var7 != 0 &&
                 var8 == 0 &&
                 var9 != 0 &&
                 var10 != 0) {
-                var4_int = var4_int | this.a(12 + var11, -30);
+                var4_int = var4_int | this.encodeWallSprite(12 + var11, -30);
               }
               if (var7 != 0 &&
                 var8 == 0 &&
                 var9 != 0 &&
                 var10 == 0) {
-                var4_int = var4_int | this.a(14 + var11, -32);
+                var4_int = var4_int | this.encodeWallSprite(14 + var11, -32);
               }
               if (var7 != 0 &&
                 var8 == 0 &&
                 var9 == 0 &&
                 var10 != 0) {
-                var4_int = var4_int | this.a(15 + var11, -12);
+                var4_int = var4_int | this.encodeWallSprite(15 + var11, -12);
               }
               if (var7 != 0 &&
                 var8 == 0 &&
                 var9 == 0 &&
                 var10 == 0) {
-                var4_int = var4_int | this.a(21 + var11, -15);
+                var4_int = var4_int | this.encodeWallSprite(21 + var11, -15);
               }
               if (var7 == 0 &&
                 var8 != 0 &&
                 var9 != 0 &&
                 var10 != 0) {
-                var4_int = var4_int | this.a(var11 + 13, 123);
+                var4_int = var4_int | this.encodeWallSprite(var11 + 13, 123);
               }
               if (var7 == 0 &&
                 var8 != 0 &&
                 var9 != 0 &&
                 var10 == 0) {
-                var4_int = var4_int | this.a(16 + var11, 71);
+                var4_int = var4_int | this.encodeWallSprite(16 + var11, 71);
               }
               if (var7 == 0 &&
                 var8 != 0 &&
                 var9 == 0 &&
                 var10 != 0) {
-                var4_int = var4_int | this.a(var11 + 17, param0 + 5);
+                var4_int = var4_int | this.encodeWallSprite(var11 + 17, param0 + 5);
               }
               if (var7 == 0 &&
                 var8 != 0 &&
                 var9 == 0 &&
                 var10 == 0) {
-                var4_int = var4_int | this.a(var11 + 20, 120);
+                var4_int = var4_int | this.encodeWallSprite(var11 + 20, 120);
               }
               if (var7 == 0 &&
                 var8 == 0 &&
                 var9 != 0 &&
                 var10 != 0) {
-                var4_int = var4_int | this.a(19 + var11, 113);
+                var4_int = var4_int | this.encodeWallSprite(19 + var11, 113);
               }
               if (var7 == 0 &&
                 var8 == 0 &&
                 var9 != 0 &&
                 var10 == 0) {
-                var4_int = var4_int | this.a(var11 + 22, -17);
+                var4_int = var4_int | this.encodeWallSprite(var11 + 22, -17);
               }
               if (var7 == 0 &&
                 var8 == 0 &&
                 var9 == 0 &&
                 var10 != 0) {
-                var4_int = var4_int | this.a(23 + var11, -85);
+                var4_int = var4_int | this.encodeWallSprite(23 + var11, -85);
               }
               if (var7 == 0 &&
                 var8 == 0 &&
                 var9 == 0 &&
                 var10 == 0) {
-                var4_int = var4_int | this.a(24 + var11, param0 + 148);
+                var4_int = var4_int | this.encodeWallSprite(24 + var11, param0 + 148);
               }
             }
             if ((var4_int & 65408) == 0) {
-              var4_int = var4_int | this.a(24 + var11, 80);
+              var4_int = var4_int | this.encodeWallSprite(24 + var11, 80);
             }
             stackIn_325_0 = var4_int;
             return stackIn_325_0;

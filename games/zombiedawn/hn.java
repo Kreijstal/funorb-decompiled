@@ -21,7 +21,7 @@ final class hn extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (ng.field_a != null) {
-            ng.field_a.field_I.a(param1, (byte) 53);
+            ng.field_a.field_I.setSuggestions(param1, (byte) 53);
           }
           if (param0) {
             hn.releaseStatics((byte) -67);
@@ -29,7 +29,7 @@ final class hn extends IntrusiveNode {
           if (ni.field_c == null) {
             return;
           }
-          ni.field_c.field_I.a(param1, (byte) 76);
+          ni.field_c.field_I.setSuggestions(param1, (byte) 76);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -75,9 +75,9 @@ final class hn extends IntrusiveNode {
     hn(PcmSampleStream param0, IntrusiveNode param1) {
         try {
           this.field_n = param0;
-          this.field_i = param0.k();
+          this.field_i = param0.getTargetVolumeQ6();
           this.field_k = param1;
-          this.field_n.g(128 + this.field_i * ge.field_c >> 8);
+          this.field_n.setVolumeQ6(128 + this.field_i * ge.field_c >> 8);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "hn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

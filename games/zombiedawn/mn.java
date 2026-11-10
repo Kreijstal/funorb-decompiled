@@ -26,14 +26,14 @@ final class mn extends IntrusiveNode {
           for (var3 = this.field_q; var3 <= this.field_m; var3++) {
             stackIn_6_0 = this.field_i.field_A;
             stackIn_7_1 = (this.field_k == 0);
-            ((TileMap) (Object) stackIn_6_0).a(stackIn_7_1, 14365, var2, true, var3);
+            ((TileMap) (Object) stackIn_6_0).setCellOpen(stackIn_7_1, 14365, var2, true, var3);
             if (this.field_k == 0) {
               this.field_i.field_b[var2][var3] = true;
             }
           }
         }
         var2Lifetime1 = -48 % ((19 - param0) / 63);
-        Js5Archive.field_e.b(true);
+        Js5Archive.field_e.onWallsChanged(true);
     }
 
     final void a(Camera param0, int param1) {
@@ -63,7 +63,7 @@ final class mn extends IntrusiveNode {
           if (0 == this.field_k) {
             var8 = 47;
             var9 = var8 + (50 - var5) * (-var8 + 255) / 50;
-            this.field_r.e(var6 + var3_int, var4 + var7, var9);
+            this.field_r.drawWithOpacity(var6 + var3_int, var4 + var7, var9);
           }
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "mn.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -85,7 +85,7 @@ final class mn extends IntrusiveNode {
         int var4 = ZombieDawn.field_J;
         for (var2 = this.field_j; this.field_p >= var2; var2++) {
           for (var3 = this.field_q; this.field_m >= var3; var3++) {
-            this.field_i.field_A.a((1 & this.field_i.field_A.field_t[var2][var3]) != 0 ? true : false, 14365, var2, true, var3);
+            this.field_i.field_A.setCellOpen((1 & this.field_i.field_A.field_t[var2][var3]) != 0 ? true : false, 14365, var2, true, var3);
           }
         }
         if (param0 != 0) {
@@ -127,12 +127,12 @@ final class mn extends IntrusiveNode {
               this.field_r.adjustColourChannels(0, -1, 0);
             }
             if (this.field_n != null) {
-              var3 = this.field_n.c((byte) 34);
+              var3 = this.field_n.first((byte) 34);
               while (var3 != null) {
-                var2 = this.field_n.a((byte) 127);
+                var2 = this.field_n.next((byte) 127);
                 ((ek) (var3)).field_M = 1;
                 if (((ek) (var3)).field_G) {
-                  ((ek) (var3)).j(-18475);
+                  ((ek) (var3)).recycle(-18475);
                 }
                 var3 = var2;
               }
@@ -187,7 +187,7 @@ final class mn extends IntrusiveNode {
                 if (0 != (this.field_i.field_A.field_t[var3_int][var4] & 1) ||
                   this.field_i.field_b[var3_int][var4]) {
                   for (var5_int = 0; 2 > var5_int; var5_int++) {
-                    var6_ref_ek = ip.a(var4 * 24, 24 * var3_int, 100, true);
+                    var6_ref_ek = ip.acquirePooledEffect(var4 * 24, 24 * var3_int, 100, true);
                     this.field_n.addLast(var6_ref_ek, (byte) -116);
                     Js5Archive.field_e.zombies.addLast(var6_ref_ek, -122);
                   }
@@ -206,24 +206,24 @@ final class mn extends IntrusiveNode {
             }
             ki.a((byte) -120, this.field_r);
             var5 = new Camera(this.field_i.width, this.field_i.height);
-            var5.x = bd.field_d + this.field_q * 24;
+            var5.x = WhirlpoolHasher.field_d + this.field_q * 24;
             var5.y = this.field_j * 24 + nh.field_G;
-            this.field_i.a(var5, false);
+            this.field_i.drawFloor(var5, false);
             if (0 == this.field_k) {
               Rasterizer.clear();
             }
-            this.field_i.a(var5, 1, true, false);
+            this.field_i.drawWallLayer(var5, 1, true, false);
             var11 = Js5Archive.field_e.zombies;
-            var7 = var11.b((byte) 26);
+            var7 = var11.last((byte) 26);
             while (var7 != null) {
               if (var7 instanceof id &&
                 !(var7 instanceof kc)) {
-                ((WorldObject) (var7)).a((byte) -93, var5);
+                ((WorldObject) (var7)).draw((byte) -93, var5);
               }
-              var7 = var11.a(false);
+              var7 = var11.previous(false);
             }
-            this.field_i.a(var5, 2, true, false);
-            pa.a(-21189);
+            this.field_i.drawWallLayer(var5, 2, true, false);
+            pa.popRasterState(-21189);
             for (var8 = this.field_j; this.field_p >= var8; var8++) {
               for (var9 = this.field_q; this.field_m >= var9; var9++) {
                 this.field_i.field_b[var8][var9] = true;
@@ -264,7 +264,7 @@ final class mn extends IntrusiveNode {
             si.field_Qb[var1_int] = 0;
             SpriteState.field_u[var1_int] = 0;
           }
-          rg.field_J.b(97);
+          rg.field_J.clear(97);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "mn.I(" + param0 + ')');
         }
@@ -275,14 +275,14 @@ final class mn extends IntrusiveNode {
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new Sprite(param0.a("", -116, "final_frame.jpg"), (java.awt.Component) ((Object) cj.field_d));
+          var2 = new Sprite(param0.getFileByName("", -116, "final_frame.jpg"), (java.awt.Component) ((Object) cj.field_d));
           if (!param1) {
             Js5Archive var5 = (Js5Archive) null;
             mn.a((Js5Archive) null, false);
           }
           var3 = var2.field_w;
           var4 = var2.field_t;
-          hk.i(1584);
+          hk.pushRasterState(1584);
           kh.field_a = new Sprite(var3, 3 * var4 / 4);
           kh.field_a.setAsRenderTarget();
           var2.drawWithOffsets(0, 0);
@@ -290,7 +290,7 @@ final class mn extends IntrusiveNode {
           bh.field_j.setAsRenderTarget();
           var2.drawWithOffsets(0, -kh.field_a.field_t);
           bh.field_j.field_x = kh.field_a.field_t;
-          pa.a(-21189);
+          pa.popRasterState(-21189);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "mn.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

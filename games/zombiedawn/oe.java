@@ -12,7 +12,7 @@ final class oe {
     int field_b;
     static PcmSampleStream field_c;
 
-    final int a(int param0) {
+    final int width(int param0) {
         int var2;
         int stackIn_5_0 = 0;
         var2 = -58 / ((10 - param0) / 54);
@@ -25,7 +25,7 @@ final class oe {
         return stackIn_5_0;
     }
 
-    final static void a(byte param0) {
+    final static void drawLegacyMenuWithFrame(byte param0) {
         int var1 = ma.d((byte) 78);
         int var3 = 109 % ((param0 - 9) / 62);
         int var2 = bj.a(true);
@@ -43,13 +43,13 @@ final class oe {
         field_d = null;
     }
 
-    final static void a(int param0, int param1, mg param2) {
+    final static void sendQueuedByteRecord(int param0, int param1, mg param2) {
         am var3 = dp.field_e;
         if (param1 != -19004) {
           return;
         }
         try {
-          var3.j(11, param0);
+          var3.writeCipheredByte(11, param0);
           var3.writeByte(param2.field_h, 70);
           var3.writeByte(param2.field_i, param1 + 19119);
         } catch (RuntimeException runtimeException) {
@@ -57,7 +57,7 @@ final class oe {
         }
     }
 
-    final static void b(int param0) {
+    final static void createMenuBackgroundActors(int param0) {
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
@@ -75,13 +75,13 @@ final class oe {
               var1_int = pb.a(so.random, 10, param0 + 0);
             }
           }
-          ip.c(param0 ^ -63);
+          ip.resetBackdropActors(param0 ^ -63);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "oe.C(" + param0 + ')');
         }
     }
 
-    final static void a(int param0, aa param1) {
+    final static void acceptChatMessage(int param0, aa param1) {
         int var2_int = 0;
         aa var3 = null;
         int var4 = 0;
@@ -98,7 +98,7 @@ final class oe {
           if (param1.field_i != 0 ||
             param1.field_b != 0) {
             for (var2_int = 0; var2_int < tb.field_E; var2_int++) {
-              var3 = cc.field_m[var2_int];
+              var3 = PowerupCard.field_m[var2_int];
               if (var3.field_j == 2 &&
                 var3.field_i == param1.field_i &&
                 param1.field_b == var3.field_b) {
@@ -127,12 +127,12 @@ final class oe {
         }
     }
 
-    final int a(int param0, int param1) {
+    final int nearestCharacterIndex(int param0, int param1) {
         int var3 = 0;
         int var4;
         var4 = ZombieDawn.field_J;
         if (param1 != 0) {
-          oe.a((byte) -32);
+          oe.drawLegacyMenuWithFrame((byte) -32);
         }
         if (this.field_e != null &&
           this.field_e.length != 0) {

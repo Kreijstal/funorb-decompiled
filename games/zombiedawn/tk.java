@@ -129,7 +129,7 @@ final class tk {
         try {
           if (param1 != null &&
             param1.length() >= ek.field_J) {
-            if (param1.length() > lg.field_s) {
+            if (param1.length() > ViewportController.field_s) {
               return true;
             }
             if (param0 != 84) {

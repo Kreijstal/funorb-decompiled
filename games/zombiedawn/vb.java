@@ -9,7 +9,7 @@ final class vb extends WorldObject {
     private int field_E;
     private int field_F;
 
-    final static boolean a(int param0, CharSequence param1, boolean param2) {
+    final static boolean isValidDisplayName(int param0, CharSequence param1, boolean param2) {
         int var6 = 0;
         RuntimeException stackIn_37_0 = null;
         StringBuilder stackIn_37_1 = null;
@@ -73,11 +73,11 @@ final class vb extends WorldObject {
         }
     }
 
-    final void g(int param0) {
+    final void tick(int param0) {
         int fieldTemp$1 = 0;
         if (param0 < 95) {
           java.applet.Applet var3 = (java.applet.Applet) null;
-          vb.a((byte) 55, (java.applet.Applet) null);
+          vb.openSupportPage((byte) 55, (java.applet.Applet) null);
         }
         int fieldTemp$0 = this.field_F;
         this.field_F = this.field_F + 1;
@@ -96,7 +96,7 @@ final class vb extends WorldObject {
         }
     }
 
-    final static void a(byte param0, java.applet.Applet param1) {
+    final static void openSupportPage(byte param0, java.applet.Applet param1) {
         try {
           java.net.URL var2 = null;
           RuntimeException stackIn_7_0 = null;
@@ -143,7 +143,7 @@ final class vb extends WorldObject {
         this.field_F = 0;
         this.field_E = 96;
         this.field_H = 3;
-        this.d((byte) 126);
+        this.updateGridCell((byte) 126);
     }
 
     public static void releaseStatics(byte param0) {
@@ -153,7 +153,7 @@ final class vb extends WorldObject {
         }
     }
 
-    final void a(byte param0, Camera param1) {
+    final void draw(byte param0, Camera param1) {
         int var3_int = param1.worldToScreenX(this.getX(true), (byte) -97) - 24;
         int var4 = -48 + param1.worldToScreenY(this.getY(237239984), 0);
         if (-48 > var3_int ||
@@ -165,9 +165,9 @@ final class vb extends WorldObject {
         try {
           if (param0 >= -76) {
             Camera var5 = (Camera) null;
-            this.a((byte) 89, (Camera) null);
+            this.draw((byte) 89, (Camera) null);
           }
-          fj.a(ad.field_g[this.field_t][this.field_G + 32], 0, 339, this.field_t == 0 ? true : false).e(var3_int - 3, var4 - 3, this.field_E);
+          fj.a(ad.field_g[this.field_t][this.field_G + 32], 0, 339, this.field_t == 0 ? true : false).drawWithOpacity(var3_int - 3, var4 - 3, this.field_E);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "vb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

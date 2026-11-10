@@ -37,35 +37,35 @@ abstract class SpriteState extends DualLinkNode {
         try {
           Object var6 = null;
           Object var7 = null;
-          om var8 = null;
+          CachedArchiveSource var8 = null;
           Js5Archive stackIn_11_0 = null;
           Js5Archive stackIn_15_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             var6 = null;
             if (null != lc.field_a.field_e) {
-              da.field_j = new sf(lc.field_a.field_e, 5200, 0);
+              da.field_j = new BufferedFile(lc.field_a.field_e, 5200, 0);
               lc.field_a.field_e = null;
-              var6 = new na(255, da.field_j, new sf(lc.field_a.field_i, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, da.field_j, new BufferedFile(lc.field_a.field_i, 12000, 0), 2097152);
             }
             var7 = null;
             if (da.field_j != null) {
-              if (lg.field_v == null) {
-                lg.field_v = new sf[lc.field_a.field_q.length];
+              if (ViewportController.field_v == null) {
+                ViewportController.field_v = new BufferedFile[lc.field_a.field_q.length];
               }
-              if (null == lg.field_v[param2]) {
-                lg.field_v[param2] = new sf(lc.field_a.field_q[param2], 12000, 0);
+              if (null == ViewportController.field_v[param2]) {
+                ViewportController.field_v[param2] = new BufferedFile(lc.field_a.field_q[param2], 12000, 0);
                 lc.field_a.field_q[param2] = null;
               }
-              var7 = new na(param2, da.field_j, lg.field_v[param2], 2097152);
+              var7 = new SectorCacheStore(param2, da.field_j, ViewportController.field_v[param2], 2097152);
             }
-            var8 = ep.field_l.a((na) (var7), (byte) -106, param0, param2, (na) (var6));
+            var8 = ep.field_l.openProvider((SectorCacheStore) (var7), (byte) -106, param0, param2, (SectorCacheStore) (var6));
             if (!param1) {
               stackIn_11_0 = (Js5Archive) null;
               return stackIn_11_0;
             }
             if (param5) {
-              var8.a(false);
+              var8.startPrefetch(false);
             }
             stackIn_15_0 = new Js5Archive(var8, param4, param3);
             return stackIn_15_0;

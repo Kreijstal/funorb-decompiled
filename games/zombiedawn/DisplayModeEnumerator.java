@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class go implements com.ms.directX.IEnumModesCallback {
+final class DisplayModeEnumerator implements com.ms.directX.IEnumModesCallback {
     private com.ms.directX.DirectDraw field_a;
     private static int[] field_c;
     private static int field_b;
 
-    final void a(java.awt.Frame param0, int param1) {
+    final void restoreDisplay(java.awt.Frame param0, int param1) {
         this.field_a.restoreDisplayMode();
         if (param1 != 6411) {
           return;
@@ -14,7 +14,7 @@ final class go implements com.ms.directX.IEnumModesCallback {
         this.field_a.setCooperativeLevel((java.awt.Component) ((Object) param0), 8);
     }
 
-    final void a(int param0, int param1, int param2, int param3, byte param4, java.awt.Frame param5) {
+    final void enterFullscreen(int param0, int param1, int param2, int param3, byte param4, java.awt.Frame param5) {
         com.ms.awt.WComponentPeer var7 = null;
         int var8 = 0;
         com.ms.awt.WComponentPeer var7Lifetime1;
@@ -32,7 +32,7 @@ final class go implements com.ms.directX.IEnumModesCallback {
           param5.requestFocus();
           return;
         }
-        this.a(-19);
+        this.enumerateDisplayModes(-19);
         param5.setVisible(true);
         var7Lifetime1 = (com.ms.awt.WComponentPeer) null;
         var8Lifetime1 = var7Lifetime1.getHwnd();
@@ -45,12 +45,12 @@ final class go implements com.ms.directX.IEnumModesCallback {
         param5.requestFocus();
     }
 
-    public go() {
+    public DisplayModeEnumerator() {
         this.field_a = new com.ms.directX.DirectDraw();
         this.field_a.initialize((com.ms.com._Guid) null);
     }
 
-    final int[] a(int param0) {
+    final int[] enumerateDisplayModes(int param0) {
         this.field_a.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
         field_c = new int[field_b];
         field_b = 0;

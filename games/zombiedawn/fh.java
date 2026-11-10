@@ -15,7 +15,7 @@ final class fh extends hp implements ri, hh {
         this.field_H = new an(TileMap.field_n, (sk) null);
         this.field_G = new an(vi.field_b, (sk) null);
         this.field_F.field_s = sn.field_d;
-        this.field_F.a(46, new ql(this.field_F));
+        this.field_F.setValidationSource(46, new ql(this.field_F));
         this.field_H.field_C = false;
         this.field_H.field_h = (io) ((Object) new vm());
         this.field_G.field_h = (io) ((Object) new dp());
@@ -23,39 +23,39 @@ final class fh extends hp implements ri, hh {
         int var3 = 20;
         int var4 = 4;
         int var5 = 200;
-        var2.a(87, var3, 20, 270, 50);
+        var2.setBounds(87, var3, 20, 270, 50);
         var3 += 50;
-        this.a(var2, 10);
-        var3 = var3 + (this.a(170, a.field_l, (byte) -76, b.field_i, this.field_F, var3) + 5);
-        this.field_H.a(34, var3, 496 - var5 >> 1, var5, 40);
-        this.field_G.a(63, 15 + var3, var4 + 3, 60, 40);
+        this.addChild(var2, 10);
+        var3 = var3 + (this.addFieldWithHelpDefaultWidth(170, a.field_l, (byte) -76, b.field_i, this.field_F, var3) + 5);
+        this.field_H.setBounds(34, var3, 496 - var5 >> 1, var5, 40);
+        this.field_G.setBounds(63, 15 + var3, var4 + 3, 60, 40);
         this.field_G.field_v = (sk) (this);
         this.field_H.field_v = (sk) (this);
-        this.a(this.field_H, 10);
-        this.a(this.field_G, 10);
+        this.addChild(this.field_H, 10);
+        this.addChild(this.field_G, 10);
         this.field_I = new kn((ri) (this));
-        this.field_I.a(38, 20, 60 + this.field_F.field_i + this.field_F.field_k, -60 + (this.field_i - this.field_F.field_k - this.field_F.field_i), 150);
-        this.a(this.field_I, 10);
-        this.a(-90, 0, 0, 496, var4 + (var3 + 55));
+        this.field_I.setBounds(38, 20, 60 + this.field_F.field_i + this.field_F.field_k, -60 + (this.field_i - this.field_F.field_k - this.field_F.field_i), 150);
+        this.addChild(this.field_I, 10);
+        this.setBounds(-90, 0, 0, 496, var4 + (var3 + 55));
     }
 
-    private final boolean h(int param0) {
+    private final boolean canSubmit(int param0) {
         int discarded$0 = 0;
         if (param0 != 13) {
           UiWidget var3 = (UiWidget) null;
-          discarded$0 = this.a(106, (String) null, (byte) -4, (String) null, (UiWidget) null, -13);
-          if (this.a(65, (mi) (this.field_F))) {
+          discarded$0 = this.addFieldWithHelpDefaultWidth(106, (String) null, (byte) -4, (String) null, (UiWidget) null, -13);
+          if (this.isInputValid(65, (mi) (this.field_F))) {
             return true;
           }
           return false;
         }
-        if (this.a(65, (mi) (this.field_F))) {
+        if (this.isInputValid(65, (mi) (this.field_F))) {
           return true;
         }
         return false;
     }
 
-    private final int a(int param0, int param1, UiWidget param2, String param3, int param4, int param5, String param6) {
+    private final int addFieldWithHelp(int param0, int param1, UiWidget param2, String param3, int param4, int param5, String param6) {
         RuntimeException var8 = null;
         wf var9 = null;
         q var10 = null;
@@ -70,10 +70,10 @@ final class fh extends hp implements ri, hh {
         RuntimeException decompiledCaughtException = null;
         try {
           var10 = new q(20, param1, param0 + 120, 25, param2, false, 120, 3, ia.field_e, 16777215, param3);
-          this.a(var10, 10);
-          var9 = new wf(((mi) ((Object) param2)).a(0), param6, 126, param1 + var10.field_n, param0 + 25, param5);
+          this.addChild(var10, 10);
+          var9 = new wf(((mi) ((Object) param2)).getValidationSource(0), param6, 126, param1 + var10.field_n, param0 + 25, param5);
           var9.field_v = (sk) (this);
-          this.a(var9, 10);
+          this.addChild(var9, 10);
           if (param4 != -24396) {
             this.field_I = (kn) null;
           }
@@ -105,8 +105,8 @@ final class fh extends hp implements ri, hh {
         }
     }
 
-    private final void e(byte param0) {
-        if (!this.h(13)) {
+    private final void submitName(byte param0) {
+        if (!this.canSubmit(13)) {
           return;
         }
         ca.a((byte) 2, this.field_F.field_o);
@@ -116,13 +116,13 @@ final class fh extends hp implements ri, hh {
         }
     }
 
-    public final void a(byte param0, String param1) {
+    public final void onSuggestionChosen(byte param0, String param1) {
         ic var3 = null;
         String var4 = null;
         try {
           var3 = this.field_F;
           var4 = param1;
-          ((tb) ((Object) var3)).a(false, false, var4);
+          ((tb) ((Object) var3)).setText(false, false, var4);
           int var5 = -116 % ((-40 - param0) / 48);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "fh.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -147,7 +147,7 @@ final class fh extends hp implements ri, hh {
             stackIn_3_0 = (String) null;
             return stackIn_3_0;
           }
-          var3 = ip.a(1048576, param2, param0);
+          var3 = ip.getDisplayNameValidationMessage(1048576, param2, param0);
           if (var3 != null) {
             stackIn_7_0 = var3;
             return stackIn_7_0;
@@ -157,7 +157,7 @@ final class fh extends hp implements ri, hh {
             if (param0.length() <= var4) {
               return null;
             }
-            if (jb.a((byte) 27, param0.charAt(var4))) {
+            if (jb.isValidNameCharacter((byte) 27, param0.charAt(var4))) {
               var4++;
               continue;
             }
@@ -194,13 +194,13 @@ final class fh extends hp implements ri, hh {
             return true;
           }
           if (param1 == 98) {
-            stackIn_5_0 = this.b((byte) 120, param2);
+            stackIn_5_0 = this.focusPreviousChild((byte) 120, param2);
             return stackIn_5_0;
           }
           if (99 != param1) {
             return false;
           }
-          stackIn_8_0 = this.a(1, param2);
+          stackIn_8_0 = this.focusNextChild(1, param2);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -216,7 +216,7 @@ final class fh extends hp implements ri, hh {
         }
     }
 
-    private final boolean a(int param0, mi param1) {
+    private final boolean isInputValid(int param0, mi param1) {
         vc var3 = null;
         RuntimeException var3_ref = null;
         rh var4 = null;
@@ -229,11 +229,11 @@ final class fh extends hp implements ri, hh {
           if (param0 <= 64) {
             this.field_F = (ic) null;
           }
-          var3 = param1.a(0);
+          var3 = param1.getValidationSource(0);
           if (var3 == null) {
             return true;
           }
-          var4 = var3.a((byte) -90);
+          var4 = var3.getValidationState((byte) -90);
           stackIn_9_0 = (mc.field_g == var4);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -269,21 +269,21 @@ final class fh extends hp implements ri, hh {
         ei.a(0, 0, new int[]{}, 11, true, param0 - 14237, 0, 0);
         ei.a(0, 0, new int[]{19}, 12, true, -14237, 0, 0);
         ei.a(240, 400, new int[]{5, 39, 45, 46}, 13, false, -14237, 160, 428);
-        oe.b(param0 ^ 1);
+        oe.createMenuBackgroundActors(param0 ^ 1);
         ff.field_b = sg.field_jb.textWidth(vk.field_b[12]);
         int var3 = sg.field_jb.textWidth(vk.field_b[13]);
         if (!(var3 <= ff.field_b)) {
           ff.field_b = var3;
         }
-        ((pg) (qk.field_Jb[1])).d((byte) -49);
-        ((pg) (qk.field_Jb[14])).d((byte) -41);
+        ((pg) (qk.field_Jb[1])).fitWidthToLabels((byte) -49);
+        ((pg) (qk.field_Jb[14])).fitWidthToLabels((byte) -41);
     }
 
-    final void a(UiWidget param0, byte param1, int param2, int param3) {
+    final void updatePointer(UiWidget param0, byte param1, int param2, int param3) {
         try {
-          super.a(param0, (byte) -48, param2, param3);
+          super.updatePointer(param0, (byte) -48, param2, param3);
           int var5_int = 102 % ((param1 - 46) / 42);
-          this.field_H.field_C = this.h(13);
+          this.field_H.field_C = this.canSubmit(13);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "fh.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -303,7 +303,7 @@ final class fh extends hp implements ri, hh {
         return ae.field_b[var4];
     }
 
-    private final int a(int param0, String param1, byte param2, String param3, UiWidget param4, int param5) {
+    private final int addFieldWithHelpDefaultWidth(int param0, String param1, byte param2, String param3, UiWidget param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -317,7 +317,7 @@ final class fh extends hp implements ri, hh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 == -76) {
-            stackIn_4_0 = this.a(param0, param5, param4, param3, param2 - 24320, 35, param1);
+            stackIn_4_0 = this.addFieldWithHelp(param0, param5, param4, param3, param2 - 24320, 35, param1);
             return stackIn_4_0;
           }
           stackIn_2_0 = 105;
@@ -348,8 +348,8 @@ final class fh extends hp implements ri, hh {
         }
     }
 
-    public final void a(int param0) {
-        ((ql) (this.field_F.a(0))).e(-28769);
+    public final void onMoreSuggestionsRequested(int param0) {
+        ((ql) (this.field_F.getValidationSource(0))).invalidateCachedAvailability(-28769);
         int var2 = -91 % ((39 - param0) / 49);
     }
 
@@ -362,15 +362,15 @@ final class fh extends hp implements ri, hh {
         try {
           if (param2 != this.field_G) {
             if (this.field_H == param2) {
-              this.e((byte) 117);
+              this.submitName((byte) 117);
             }
           } else {
-            Js5Archive.a(113);
+            Js5Archive.showLoginDialog(113);
           }
           if (param1 == -6) {
             return;
           }
-          this.e((byte) 71);
+          this.submitName((byte) 71);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

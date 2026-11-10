@@ -7,7 +7,7 @@ class IntrusiveDeque {
     static Js5Archive field_d;
     private IntrusiveNode field_c;
 
-    final IntrusiveNode b(byte param0) {
+    final IntrusiveNode last(byte param0) {
         IntrusiveNode var2 = this.sentinel.previous;
         if (this.sentinel == var2) {
           this.field_c = null;
@@ -37,7 +37,7 @@ class IntrusiveDeque {
         }
     }
 
-    final IntrusiveNode a(boolean param0) {
+    final IntrusiveNode previous(boolean param0) {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
         if (param0) {
@@ -59,7 +59,7 @@ class IntrusiveDeque {
         return null;
     }
 
-    final IntrusiveNode c(int param0) {
+    final IntrusiveNode next(int param0) {
         IntrusiveNode var2 = this.field_c;
         if (this.sentinel == var2) {
           this.field_c = null;
@@ -69,7 +69,7 @@ class IntrusiveDeque {
           this.field_c = var2.next;
           return var2;
         }
-        this.b((byte) -101);
+        this.last((byte) -101);
         this.field_c = var2.next;
         return var2;
     }
@@ -78,7 +78,7 @@ class IntrusiveDeque {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
         if (param0 <= 9) {
-          this.a(-117);
+          this.removeFirst(-117);
           var2 = this.sentinel.previous;
           if (this.sentinel != var2) {
             var2.unlink(-27598);
@@ -146,7 +146,7 @@ class IntrusiveDeque {
         this.field_c = null;
     }
 
-    final IntrusiveNode a(int param0) {
+    final IntrusiveNode removeFirst(int param0) {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
         if (param0 != 0) {
@@ -180,7 +180,7 @@ class IntrusiveDeque {
         this.sentinel.next = this.sentinel;
     }
 
-    final IntrusiveNode e(int param0) {
+    final IntrusiveNode first(int param0) {
         IntrusiveNode var2 = this.sentinel.next;
         if (var2 == this.sentinel) {
           this.field_c = null;
@@ -190,7 +190,7 @@ class IntrusiveDeque {
         if (param0 == 0) {
           return var2;
         }
-        this.a(false);
+        this.previous(false);
         return var2;
     }
 

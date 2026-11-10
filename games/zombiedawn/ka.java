@@ -11,7 +11,7 @@ final class ka {
     static boolean[] field_h;
     private dl field_d;
 
-    private final PcmSample a(int param0, int param1, int[] param2, boolean param3) {
+    private final PcmSample getSynthesizedSample(int param0, int param1, int[] param2, boolean param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
@@ -67,7 +67,7 @@ final class ka {
         }
     }
 
-    final PcmSample a(int param0, boolean param1, int[] param2) {
+    final PcmSample getSynthesizedSampleById(int param0, boolean param1, int[] param2) {
         RuntimeException var4 = null;
         int[] var5 = null;
         PcmSample stackIn_3_0 = null;
@@ -78,17 +78,17 @@ final class ka {
         RuntimeException decompiledCaughtException = null;
         try {
           if (1 == this.field_g.groupCount(-1)) {
-            stackIn_3_0 = this.a(0, param0, param2, true);
+            stackIn_3_0 = this.getSynthesizedSample(0, param0, param2, true);
             return stackIn_3_0;
           }
           if (param1) {
             var5 = (int[]) null;
-            this.a(-25, (int[]) null, -10);
+            this.getVorbisSampleById(-25, (int[]) null, -10);
           }
-          if (this.field_g.a((byte) 105, param0) != 1) {
+          if (this.field_g.getFileCount((byte) 105, param0) != 1) {
             throw new RuntimeException();
           }
-          stackIn_8_0 = this.a(param0, 0, param2, true);
+          stackIn_8_0 = this.getSynthesizedSample(param0, 0, param2, true);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -114,7 +114,7 @@ final class ka {
         field_e = (byte[][]) null;
     }
 
-    final PcmSample a(int param0, int[] param1, int param2) {
+    final PcmSample getVorbisSampleById(int param0, int[] param1, int param2) {
         RuntimeException var4 = null;
         PcmSample stackIn_3_0 = null;
         PcmSample stackIn_9_0 = null;
@@ -124,16 +124,16 @@ final class ka {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_b.groupCount(param0 ^ -1856253637) == 1) {
-            stackIn_3_0 = this.a(param2, param1, 0, 117);
+            stackIn_3_0 = this.getVorbisSample(param2, param1, 0, 117);
             return stackIn_3_0;
           }
           if (param0 != 1856253636) {
             this.field_d = (dl) null;
           }
-          if (this.field_b.a((byte) 82, param2) != 1) {
+          if (this.field_b.getFileCount((byte) 82, param2) != 1) {
             throw new RuntimeException();
           }
-          stackIn_9_0 = this.a(0, param1, param2, 113);
+          stackIn_9_0 = this.getVorbisSample(0, param1, param2, 113);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -149,7 +149,7 @@ final class ka {
         }
     }
 
-    private final PcmSample a(int param0, int[] param1, int param2, int param3) {
+    private final PcmSample getVorbisSample(int param0, int[] param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;

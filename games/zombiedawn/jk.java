@@ -62,18 +62,18 @@ final class jk {
     }
 
     final static void a(boolean param0, boolean param1) {
-        if (!we.o((byte) -80)) {
+        if (!we.hasActiveDialog((byte) -80)) {
           return;
         }
         if (param0) {
           Rasterizer.fillRectangleBlended(0, 0, Rasterizer.width, Rasterizer.height, 0, 192);
         }
         if (!param1) {
-          wo.field_xb.a(0, 0, 0);
+          wo.field_xb.drawAllLayers(0, 0, 0);
           return;
         }
         field_h = (String) null;
-        wo.field_xb.a(0, 0, 0);
+        wo.field_xb.drawAllLayers(0, 0, 0);
     }
 
     final static void a(byte param0, aa param1) {
@@ -99,8 +99,8 @@ final class jk {
             nl.field_o[var2_int] = 0;
           }
           for (var2_intLifetime1 = 0; tb.field_E > var2_intLifetime1; var2_intLifetime1++) {
-            if (cc.field_m[var2_intLifetime1].field_j == param1.field_j) {
-              dupTemp$3 = cc.field_m[var2_intLifetime1].a((byte) -82);
+            if (PowerupCard.field_m[var2_intLifetime1].field_j == param1.field_j) {
+              dupTemp$3 = PowerupCard.field_m[var2_intLifetime1].a((byte) -82);
               nl.field_o[dupTemp$3] = nl.field_o[dupTemp$3] + 1;
             }
           }
@@ -113,8 +113,8 @@ final class jk {
           var2_intLifetime2 = 0;
           for (var3 = 0; tb.field_E > var3; var3++) {
             boolean decompiledFrameRemainder0 = true;
-            if (cc.field_m[var3].field_j == param1.field_j) {
-              var4 = cc.field_m[var3].a((byte) -78);
+            if (PowerupCard.field_m[var3].field_j == param1.field_j) {
+              var4 = PowerupCard.field_m[var3].a((byte) -78);
               if (LevelNavigation.field_d < nl.field_o[var4]) {
                 nl.field_o[var4] = nl.field_o[var4] - 1;
                 decompiledFrameRemainder0 = false;
@@ -123,13 +123,13 @@ final class jk {
             if (decompiledFrameRemainder0) {
               incrementValue$2 = var2_intLifetime2;
               var2_intLifetime2++;
-              cc.field_m[incrementValue$2] = cc.field_m[var3];
+              PowerupCard.field_m[incrementValue$2] = PowerupCard.field_m[var3];
             }
           }
           tb.field_E = var2_intLifetime2;
           fieldTemp$1 = tb.field_E;
           tb.field_E = tb.field_E + 1;
-          cc.field_m[fieldTemp$1] = param1;
+          PowerupCard.field_m[fieldTemp$1] = param1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -222,19 +222,19 @@ final class jk {
             return false;
           }
           if (var4.field_f >= 0 &&
-            !var4.field_c.b(-29092, var4.field_f)) {
-            this.a(0, var4.field_c.a(var4.field_f, param0 - 5365), var4);
+            !var4.field_c.ensureGroupLoaded(-29092, var4.field_f)) {
+            this.a(0, var4.field_c.getGroupProgress(var4.field_f, param0 - 5365), var4);
             return false;
           }
           if (var4.field_i != null &&
-            !var4.field_c.a(-1, var4.field_i)) {
-            this.a(0, var4.field_c.b(var4.field_i, 103), var4);
+            !var4.field_c.loadGroupByName(-1, var4.field_i)) {
+            this.a(0, var4.field_c.getGroupProgressByName(var4.field_i, 103), var4);
             return false;
           }
           if (var4.field_f < 0 &&
             var4.field_i == null &&
             var4.field_k != null &&
-            !var4.field_c.c(9001)) {
+            !var4.field_c.areAllGroupsLoaded(9001)) {
             this.a(~param0, var4.field_c.percentLoaded(-102), var4);
             return false;
           }

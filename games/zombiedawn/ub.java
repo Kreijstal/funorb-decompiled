@@ -22,7 +22,7 @@ final class ub {
     private boolean field_g;
     private int field_r;
 
-    private final String h(int param0) {
+    private final String formatTimer(int param0) {
         if (param0 != 31214) {
           return (String) null;
         }
@@ -35,19 +35,19 @@ final class ub {
         field_j = null;
         field_h = null;
         if (param0 <= 59) {
-          ub.a(-19, 30);
+          ub.findAnimatedTile(-19, 30);
         }
     }
 
-    final void a(boolean param0) {
+    final void incrementCrossedCount(boolean param0) {
         this.field_b = this.field_b + 1;
         if (!param0) {
           this.field_r = 87;
         }
-        this.d((byte) -106);
+        this.recountUnits((byte) -106);
     }
 
-    final static void a(int param0, byte param1) {
+    final static void renderLevelIconGlow(int param0, byte param1) {
         int var2_int = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -55,14 +55,14 @@ final class ub {
         var3 = ZombieDawn.field_J;
         try {
           b.field_q = param0;
-          qn.field_g.setAsRenderTarget();
+          RandomAccessCacheFile.field_g.setAsRenderTarget();
           Rasterizer.clear();
-          bd.field_i[qd.field_e][b.field_q].drawTransparent(10, 10);
+          WhirlpoolHasher.field_i[qd.field_e][b.field_q].drawTransparent(10, 10);
           for (var2_int = 0; 3 > var2_int; var2_int++) {
             so.a(16777045);
           }
-          bd.field_i[qd.field_e][b.field_q].drawTransparentWithOpacity(10, 10, 0);
-          Rasterizer.blurRectangle(2, 2, 0, 0, qn.field_g.field_w, qn.field_g.field_t);
+          WhirlpoolHasher.field_i[qd.field_e][b.field_q].drawTransparentWithOpacity(10, 10, 0);
+          Rasterizer.blurRectangle(2, 2, 0, 0, RandomAccessCacheFile.field_g.field_w, RandomAccessCacheFile.field_g.field_t);
           cn.field_f.makeRasterTarget(-115);
           rk.field_a = 3 * sn.field_f.length >> 2;
           if (param1 >= -25) {
@@ -76,24 +76,24 @@ final class ub {
         }
     }
 
-    final int j(int param0) {
+    final int getElapsedSeconds(int param0) {
         if (param0 >= -73) {
-          this.k(123);
+          this.isTimeUp(123);
         }
         return this.field_q / 50;
     }
 
-    final void a(boolean param0, byte param1) {
+    final void setCountOnlyMode(boolean param0, byte param1) {
         this.field_l = param0 ? true : false;
         if (param1 != -13) {
           return;
         }
         if (param0) {
-          this.c(-127);
+          this.renderHumanCounter(-127);
         }
     }
 
-    final static va a(int param0, int param1) {
+    final static va findAnimatedTile(int param0, int param1) {
         int var3 = 0;
         va[] var2;
         va var4;
@@ -115,29 +115,29 @@ final class ub {
         return null;
     }
 
-    final void c(int param0, boolean param1) {
+    final void setCrossingCounterMode(int param0, boolean param1) {
         if (param0 != 0) {
           return;
         }
         this.field_e = param1 ? true : false;
         if (param1) {
           this.field_b = 0;
-          this.f(param0 ^ 6);
+          this.renderObjectiveLabel(param0 ^ 6);
         }
     }
 
-    private final void a(int param0) {
+    private final void renderTimerLabel(int param0) {
         int var3 = 0;
         int var4 = 0;
         int var2 = -1;
         if (this.field_p == 1.0f) {
           si.field_Ub[5].setAsRenderTarget();
           Rasterizer.clear();
-          this.field_o.drawStringRightAligned(this.h(31214), -5 + Rasterizer.width, this.field_o.field_I + 5, 0, var2);
+          this.field_o.drawStringRightAligned(this.formatTimer(31214), -5 + Rasterizer.width, this.field_o.field_I + 5, 0, var2);
         } else {
           pl.field_p.setAsRenderTarget();
           Rasterizer.clear();
-          this.field_o.drawStringRightAligned(this.h(31214), -5 + Rasterizer.width, 5 + this.field_o.field_I, 2, var2);
+          this.field_o.drawStringRightAligned(this.formatTimer(31214), -5 + Rasterizer.width, 5 + this.field_o.field_I, 2, var2);
           var3 = (int)(this.field_p * (float)Rasterizer.width);
           var4 = (int)((float)Rasterizer.height * this.field_p);
           si.field_Ub[5].setAsRenderTarget();
@@ -151,7 +151,7 @@ final class ub {
         si.field_Ub[5].drawSilhouette(0, param0, 0);
     }
 
-    private final void c(int param0) {
+    private final void renderHumanCounter(int param0) {
         int stackIn_8_0 = 0;
         int var2;
         int var3;
@@ -195,10 +195,10 @@ final class ub {
         si.field_Ub[2].drawSilhouette(0, 0, 0);
     }
 
-    private final void d(int param0, int param1) {
+    private final void renderScoreLabel(int param0, int param1) {
         si.field_Ub[4].setAsRenderTarget();
         Rasterizer.clear();
-        this.field_o.drawStringRightAligned(this.b(param0 - 73, param1), -5 + Rasterizer.width, 5 + this.field_o.field_I, param0, -1);
+        this.field_o.drawStringRightAligned(this.formatScoreLabel(param0 - 73, param1), -5 + Rasterizer.width, 5 + this.field_o.field_I, param0, -1);
         vh.field_e[4].setAsRenderTarget();
         Rasterizer.clear();
         si.field_Ub[4].drawSilhouette(0, 0, 16777215);
@@ -206,16 +206,16 @@ final class ub {
         si.field_Ub[4].drawSilhouette(0, 0, 0);
     }
 
-    final void d(byte param0) {
+    final void recountUnits(byte param0) {
         IntrusiveNode var2;
         int var3;
         var3 = ZombieDawn.field_J;
         this.field_k = 0;
-        var2 = Js5Archive.field_e.zombies.b((byte) 26);
+        var2 = Js5Archive.field_e.zombies.last((byte) 26);
         k.field_t = 0;
         while (var2 instanceof WorldObject) {
           if (var2 instanceof Zombie &&
-            ((Zombie) (var2)).i((byte) -126)) {
+            ((Zombie) (var2)).isPlayerOwned((byte) -126)) {
             this.field_k = this.field_k + 1;
           } else {
             if (var2 instanceof Human && (!this.field_s ||
@@ -231,13 +231,13 @@ final class ub {
         if (param0 != -106) {
           return;
         }
-        this.c(-58);
-        this.e(param0 + 106);
+        this.renderHumanCounter(-58);
+        this.renderZombieCounter(param0 + 106);
         if (this.field_e) {
-          this.f(6);
+          this.renderObjectiveLabel(6);
         } else {
           if (this.field_g) {
-            this.f(6);
+            this.renderObjectiveLabel(6);
           }
         }
         cn.field_f.makeRasterTarget(-117);
@@ -249,34 +249,34 @@ final class ub {
         }
     }
 
-    final void d(int param0) {
+    final void hideTimer(int param0) {
         this.field_c = false;
         if (param0 != 0) {
-          this.b(false);
+          this.isQuotaReached(false);
         }
     }
 
-    final boolean k(int param0) {
+    final boolean isTimeUp(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != 16284) {
-          this.d(-57, -1);
+          this.renderScoreLabel(-57, -1);
         }
         stackIn_6_0 = (this.field_c) && (this.field_a <= 0);
         return stackIn_6_0;
     }
 
-    final void b(int param0, boolean param1) {
+    final void setEnemyVictimMode(int param0, boolean param1) {
         this.field_g = param1 ? true : false;
         if (param0 != 10) {
           return;
         }
         if (param1) {
-          this.f(6);
+          this.renderObjectiveLabel(6);
           this.field_c = true;
         }
     }
 
-    final void i(int param0) {
+    final void growLetterbox(int param0) {
         if (this.field_r < 320) {
           this.field_r = this.field_r + 1;
         }
@@ -285,14 +285,14 @@ final class ub {
         }
     }
 
-    final boolean g(int param0) {
+    final boolean hasNoZombiesLeft(int param0) {
         if (param0 != 16954) {
-          this.c(-109, 76);
+          this.update(-109, 76);
         }
         return this.field_k <= 0 ? true : false;
     }
 
-    final void b(int param0) {
+    final void draw(int param0) {
         int var2;
         int var3;
         int var2Lifetime1;
@@ -304,21 +304,21 @@ final class ub {
         int var2Lifetime3Lifetime3;
         if (this.field_i) {
           var2 = id.field_M + this.field_n;
-          Rasterizer.fillRect(0, 0, bd.field_e, var2, 0);
+          Rasterizer.fillRect(0, 0, WhirlpoolHasher.field_e, var2, 0);
           var2++;
-          Rasterizer.fillRect(0, -var2 + nh.field_P, bd.field_e, var2, 0);
+          Rasterizer.fillRect(0, -var2 + nh.field_P, WhirlpoolHasher.field_e, var2, 0);
           return;
         }
         if (this.field_c) {
-          var2Lifetime1 = -210 + bd.field_e;
+          var2Lifetime1 = -210 + WhirlpoolHasher.field_e;
           so.drawTransparent(vh.field_e[5], var2Lifetime1, 40);
           si.field_Ub[5].drawTransparent(var2Lifetime1, 40);
         }
-        var2Lifetime2 = -310 + bd.field_e;
+        var2Lifetime2 = -310 + WhirlpoolHasher.field_e;
         so.drawTransparent(vh.field_e[4], var2Lifetime2, 0);
         si.field_Ub[4].drawTransparent(var2Lifetime2, 0);
         if (param0 >= -59) {
-          this.c(54, 36);
+          this.update(54, 36);
         }
         if (!this.field_e &&
           !this.field_g) {
@@ -329,11 +329,11 @@ final class ub {
           so.drawTransparent(vh.field_e[2], 70, var2Lifetime3Lifetime1);
           si.field_Ub[2].drawTransparent(70, var2Lifetime3Lifetime1);
           var2Lifetime3Lifetime2 = nh.field_P - 68;
-          var3 = -48 + bd.field_e;
+          var3 = -48 + WhirlpoolHasher.field_e;
           so.drawTransparent(vh.field_e[1], var3, var2Lifetime3Lifetime2);
           var3 -= 35;
           si.field_Ub[1].drawTransparent(var3, var2Lifetime3Lifetime2 + 5);
-          var3Lifetime1 = -170 + bd.field_e;
+          var3Lifetime1 = -170 + WhirlpoolHasher.field_e;
           var2Lifetime3Lifetime3 = -55 + nh.field_P;
           so.drawTransparent(vh.field_e[3], var3Lifetime1, var2Lifetime3Lifetime3);
           si.field_Ub[3].drawTransparent(var3Lifetime1, var2Lifetime3Lifetime3);
@@ -343,21 +343,21 @@ final class ub {
         }
     }
 
-    final static void b(byte param0) {
+    final static void showLoginDialog(byte param0) {
         if (param0 < 43) {
-          ub.a(124, 35);
+          ub.findAnimatedTile(124, 35);
         }
         jm.a((String) null, to.field_d, -901373652);
     }
 
-    private final String b(int param0, int param1) {
+    private final String formatScoreLabel(int param0, int param1) {
         String var5 = qi.a(true, 0, jp.field_a, (long)param1, (byte) 113);
         String var3 = var5;
         int var4 = 107 % ((-8 - param0) / 33);
         return s.a(1938762664, jp.field_i, new String[]{var5});
     }
 
-    final boolean b(boolean param0) {
+    final boolean isQuotaReached(boolean param0) {
         boolean stackIn_4_0 = false;
         boolean stackIn_12_0 = false;
         if (this.field_s) {
@@ -365,53 +365,53 @@ final class ub {
           return stackIn_4_0;
         }
         if (!param0) {
-          this.f(-118);
+          this.renderObjectiveLabel(-118);
         }
         stackIn_12_0 = (Js5Archive.field_e.field_P >= Js5Archive.field_e.field_f) && (!this.field_l) && (!this.field_g);
         return stackIn_12_0;
     }
 
-    final void a(int param0, boolean param1) {
+    final void setSpecialTargetMode(int param0, boolean param1) {
         if (param0 != 49) {
-          ub.a(110, (byte) 53);
+          ub.renderLevelIconGlow(110, (byte) 53);
         }
         this.field_s = param1 ? true : false;
         if (param1) {
-          this.d((byte) -106);
-          this.c(-53);
+          this.recountUnits((byte) -106);
+          this.renderHumanCounter(-53);
         }
     }
 
-    final void l(int param0) {
+    final void setTimerTicks(int param0) {
         this.field_a = param0;
     }
 
-    final int a(byte param0) {
+    final int getTimerSeconds(byte param0) {
         int var2 = -41 % ((2 - param0) / 45);
         return !this.field_c ? -1 : this.field_a / 50;
     }
 
-    private final void f(int param0) {
+    private final void renderObjectiveLabel(int param0) {
         ki.a((byte) -103, si.field_Ub[param0]);
         Rasterizer.clear();
         String var2 = "";
         if (this.field_e) {
-          var2 = s.a(1938762664, li.field_f, new String[]{Integer.toString(this.field_b), Integer.toString(this.field_k + this.field_b)});
+          var2 = s.a(1938762664, JaggrabDownloader.field_f, new String[]{Integer.toString(this.field_b), Integer.toString(this.field_k + this.field_b)});
           this.field_o.drawStringCentered(var2, Rasterizer.width / 2, 5 + this.field_o.field_I, 2, 65793);
         } else {
           var2 = kn.field_I + " " + Integer.toString(Js5Archive.field_e.field_nb);
           bj.field_q.drawStringCentered(var2, Rasterizer.width / 2, 5 + this.field_o.field_I, 16777088, 65793);
         }
-        pa.a(-21189);
+        pa.popRasterState(-21189);
         ki.a((byte) -93, vh.field_e[6]);
         Rasterizer.clear();
         si.field_Ub[6].drawSilhouette(0, 0, 16777215);
         oc.a((byte) -104);
         si.field_Ub[6].drawSilhouette(0, 0, 0);
-        pa.a(-21189);
+        pa.popRasterState(-21189);
     }
 
-    private final void e(int param0) {
+    private final void renderZombieCounter(int param0) {
         si.field_Ub[3].setAsRenderTarget();
         Rasterizer.clear();
         this.field_o.drawStringRightAligned(Integer.toString(this.field_k), -5 + Rasterizer.width, this.field_o.field_I + 5, 1, 65793);
@@ -422,7 +422,7 @@ final class ub {
         si.field_Ub[3].drawSilhouette(param0, 0, 0);
     }
 
-    final void a(boolean param0, boolean param1) {
+    final void setLetterbox(boolean param0, boolean param1) {
         if (!param0) {
           return;
         }
@@ -434,7 +434,7 @@ final class ub {
         }
     }
 
-    final void c(int param0, int param1) {
+    final void update(int param0, int param1) {
         if (this.field_i) {
           if (this.field_n >= this.field_r) {
             if (this.field_r < this.field_n) {
@@ -445,9 +445,9 @@ final class ub {
           }
         }
         if (this.field_c &&
-          !this.b(true) &&
-          !this.g(16954) &&
-          !this.k(16284)) {
+          !this.isQuotaReached(true) &&
+          !this.hasNoZombiesLeft(16954) &&
+          !this.isTimeUp(16284)) {
           this.field_a = this.field_a - 1;
         }
         this.field_q = this.field_q + 1;
@@ -469,15 +469,15 @@ final class ub {
         }
         if (this.field_c) {
           if (1.0f < this.field_p) {
-            this.a(0);
+            this.renderTimerLabel(0);
           } else {
             if (this.field_a % 50 == 49) {
-              this.a(0);
+              this.renderTimerLabel(0);
             }
           }
         }
         if (param0 != this.field_m) {
-          this.d(3, param0);
+          this.renderScoreLabel(3, param0);
           this.field_m = param0;
         }
         cn.field_f.makeRasterTarget(124);
@@ -501,9 +501,9 @@ final class ub {
         this.field_a = param0;
         this.field_q = 0;
         this.field_o = sg.field_jb;
-        this.a(0);
-        this.d(3, this.field_m);
-        this.d((byte) -106);
+        this.renderTimerLabel(0);
+        this.renderScoreLabel(3, this.field_m);
+        this.recountUnits((byte) -106);
         cn.field_f.makeRasterTarget(-123);
     }
 

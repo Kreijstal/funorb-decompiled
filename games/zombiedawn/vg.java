@@ -6,7 +6,7 @@ abstract class vg {
     static int[][] field_a;
     oe[] field_b;
 
-    final int a(int param0, int param1) {
+    final int lineIndexForCharacter(int param0, int param1) {
         int var4 = 0;
         oe var5 = null;
         int var6 = ZombieDawn.field_J;
@@ -21,7 +21,7 @@ abstract class vg {
         return this.field_b.length;
     }
 
-    final int a(byte param0) {
+    final int height(byte param0) {
         int var2;
         int stackIn_4_0 = 0;
         var2 = 98 % ((param0 - 46) / 56);
@@ -34,7 +34,7 @@ abstract class vg {
         return stackIn_4_0;
     }
 
-    final int a(int param0, String param1, int param2, int param3) {
+    final int justificationSpacing(int param0, String param1, int param2, int param3) {
         int var8 = 0;
         int var5_int = 0;
         int var6 = 0;
@@ -97,13 +97,13 @@ abstract class vg {
         }
     }
 
-    final int a(byte param0, int param1) {
+    final int characterX(byte param0, int param1) {
         oe var5 = null;
         int var6 = ZombieDawn.field_J;
         oe[] var3 = this.field_b;
         int var4 = 0;
         if (param0 != -72) {
-          this.a((byte) -52, 56);
+          this.characterX((byte) -52, 56);
         }
         while (var4 < var3.length) {
           var5 = var3[var4];
@@ -116,7 +116,7 @@ abstract class vg {
         return 0;
     }
 
-    final int a(int param0, int param1, boolean param2) {
+    final int hitTestCharacter(int param0, int param1, boolean param2) {
         int var5 = 0;
         int var4;
         oe var6;
@@ -133,14 +133,14 @@ abstract class vg {
             return -1;
           }
           if (this.field_b.length == 1) {
-            return this.field_b[0].a(param0, 0);
+            return this.field_b[0].nearestCharacterIndex(param0, 0);
           }
           var4 = 0;
           for (var5 = 0; this.field_b.length > var5; var5++) {
             var6 = this.field_b[var5];
             if (var6.field_b <= param1 &&
               var6.field_g >= param1) {
-              var7 = var6.a(param0, 0);
+              var7 = var6.nearestCharacterIndex(param0, 0);
               if (var7 != -1) {
                 return var7 + var4;
               }
@@ -153,7 +153,7 @@ abstract class vg {
         return -1;
     }
 
-    final int b(byte param0) {
+    final int width(byte param0) {
         int var4 = 0;
         int var2;
         oe[] var3;
@@ -170,7 +170,7 @@ abstract class vg {
           for (var4 = 0; var4 < var3.length; var4++) {
             var5 = var3[var4];
             if (var5 != null) {
-              var6 = var5.a(-101);
+              var6 = var5.width(-101);
               if (var2 < var6) {
                 var2 = var6;
               }
@@ -180,7 +180,7 @@ abstract class vg {
         return var2;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -1) {
           field_c = 105;
         }

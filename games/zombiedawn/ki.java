@@ -14,21 +14,21 @@ abstract class ki extends pn {
     static String field_bb;
     static int[] field_X;
 
-    final boolean e(byte param0) {
-        this.f((byte) -48);
+    final boolean isFullyFadedOut(byte param0) {
+        this.finishTransition((byte) -48);
         if (param0 != 28) {
           this.field_U = (wl) null;
         }
-        return super.e((byte) 28);
+        return super.isFullyFadedOut((byte) 28);
     }
 
-    final void l(int param0) {
+    final void onResizeComplete(int param0) {
         if (this.field_U == j.field_h) {
           return;
         }
         this.field_U = dn.field_I;
         this.field_cb = 0;
-        this.a(this.field_W, (byte) -98);
+        this.installContent(this.field_W, (byte) -98);
         this.field_Y.field_H = 0;
         this.field_W = null;
         if (param0 != -7476) {
@@ -36,7 +36,7 @@ abstract class ki extends pn {
         }
     }
 
-    void b(int param0, UiWidget param1) {
+    void transitionToContent(int param0, UiWidget param1) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -53,7 +53,7 @@ abstract class ki extends pn {
               this.field_cb = 0;
             }
           } else {
-            this.a(false, this.field_W.field_n + 12 + this.field_db, 12 + this.field_W.field_i, this.field_ab);
+            this.resizeDialog(false, this.field_W.field_n + 12 + this.field_db, 12 + this.field_W.field_i, this.field_ab);
             this.field_cb = 0;
           }
           return;
@@ -151,7 +151,7 @@ abstract class ki extends pn {
         }
     }
 
-    private final void a(UiWidget param0, byte param1) {
+    private final void installContent(UiWidget param0, byte param1) {
         try {
           if (this.field_Y != null) {
             this.field_Y.unlink(-27598);
@@ -160,10 +160,10 @@ abstract class ki extends pn {
           if (param0 == null) {
             this.field_Y = new mh();
           } else {
-            param0.a(-73, 6 + this.field_db, 6, param0.field_i, param0.field_n);
+            param0.setBounds(-73, 6 + this.field_db, 6, param0.field_i, param0.field_n);
             this.field_Y = new mh(param0);
           }
-          this.a(this.field_Y, 10);
+          this.addChild(this.field_Y, 10);
           this.field_W = null;
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ki.CB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -207,7 +207,7 @@ abstract class ki extends pn {
     }
 
     final static void a(byte param0, Sprite param1) {
-        hk.i(1584);
+        hk.pushRasterState(1584);
         if (param0 >= -76) {
           return;
         }
@@ -218,17 +218,17 @@ abstract class ki extends pn {
         }
     }
 
-    final void f(byte param0) {
+    final void finishTransition(byte param0) {
         if (this.field_U != null) {
           if (this.field_U != dn.field_I) {
-            this.a((byte) 105, this.field_W.field_n + (12 + this.field_db), this.field_W.field_i + 12);
-            this.a(this.field_W, (byte) 94);
+            this.centerOnScreen((byte) 105, this.field_W.field_n + (12 + this.field_db), this.field_W.field_i + 12);
+            this.installContent(this.field_W, (byte) 94);
           }
           this.field_U = null;
           this.field_Y.field_H = 256;
         }
         int var2 = -96 % ((param0 - 22) / 59);
-        super.f((byte) -58);
+        super.finishTransition((byte) -58);
     }
 
     ki(dn param0, UiWidget param1, int param2, int param3, int param4) {
@@ -238,13 +238,13 @@ abstract class ki extends pn {
           this.field_db = param2;
           this.field_T = param3;
           this.field_Z = param3;
-          this.a(param1, (byte) -104);
+          this.installContent(param1, (byte) -104);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ki.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    boolean j(int param0) {
+    boolean tickLayerAndCheckHidden(int param0) {
         int fieldTemp$4 = 0;
         int fieldTemp$5 = 0;
         int var3;
@@ -257,7 +257,7 @@ abstract class ki extends pn {
               this.field_Y.field_H = -((this.field_cb << 8) / this.field_Z) + 256;
             } else {
               this.field_U = sj.field_c;
-              this.a(false, this.field_W.field_n + 12 + this.field_db, 12 + this.field_W.field_i, this.field_ab);
+              this.resizeDialog(false, this.field_W.field_n + 12 + this.field_db, 12 + this.field_W.field_i, this.field_ab);
               this.field_cb = 0;
               this.field_Y.field_H = 0;
             }
@@ -275,7 +275,7 @@ abstract class ki extends pn {
           }
         }
         if (param0 == 2634) {
-          return super.j(2634);
+          return super.tickLayerAndCheckHidden(2634);
         }
         return true;
     }

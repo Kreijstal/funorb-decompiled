@@ -23,20 +23,20 @@ final class jm extends tc {
 
     final static void a(String param0, String param1, int param2) {
         if (Point.field_i != null) {
-          Point.field_i.h((byte) -34);
+          Point.field_i.closeDialog((byte) -34);
         }
         he.field_a = new ih(param1, param0, false, true, true);
         if (param2 != -901373652) {
           return;
         }
         try {
-          bm.field_d.b(20, he.field_a);
+          bm.field_d.transitionToContent(20, he.field_a);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "jm.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final String b(int param0, UiWidget param1) {
+    final String getDisplayText(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

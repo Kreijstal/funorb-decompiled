@@ -37,7 +37,7 @@ final class oh extends cb {
         int var9Lifetime1;
         var10 = ZombieDawn.field_J;
         try {
-          var7_int = ip.a(param4, -1);
+          var7_int = ip.roundUpToMultipleOfEight(param4, -1);
           if (null == oc.field_a) {
             oc.field_a = new java.security.SecureRandom();
           }
@@ -58,7 +58,7 @@ final class oh extends cb {
           bb.field_h.position = 0;
           bb.field_h.writeBytes(param0, param4, param1, param5 - 59700);
           bb.field_h.padToPosition(var7_int, 0);
-          bb.field_h.a(var14, 30044);
+          bb.field_h.encryptXtea(var14, 30044);
           if (null == ip.field_l ||
             !(ip.field_l.payload.length >= 100)) {
             ip.field_l = new PacketBuffer(100);
@@ -137,7 +137,7 @@ final class oh extends cb {
             return stackIn_5_0;
           }
           var2 = new lp(param1, sl.field_d, bo.field_o, bn.field_c, uf.field_n, j.field_a, vj.field_m);
-          no.f((byte) -73);
+          no.clearSpriteDecodeBuffers((byte) -73);
           stackIn_7_0 = var2;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

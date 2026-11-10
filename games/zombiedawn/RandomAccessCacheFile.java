@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class qn {
+final class RandomAccessCacheFile {
     private RandomAccessFile field_c;
     static boolean field_j;
     private long field_d;
@@ -16,7 +16,7 @@ final class qn {
     static String field_a;
     static int field_b;
 
-    final static byte[] a(String param0, int param1) {
+    final static byte[] getLoadingTextFile(String param0, int param1) {
         RuntimeException var2 = null;
         byte[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -27,7 +27,7 @@ final class qn {
           if (param1 != 0) {
             field_b = -108;
           }
-          stackIn_3_0 = tb.field_K.a(param0, param1 - 85, "");
+          stackIn_3_0 = tb.field_K.getFileByName(param0, param1 - 85, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -43,7 +43,7 @@ final class qn {
         }
     }
 
-    final void a(byte param0, long param1) throws IOException {
+    final void seek(byte param0, long param1) throws IOException {
         if (param0 <= -63) {
           this.field_c.seek(param1);
           this.field_f = param1;
@@ -57,11 +57,11 @@ final class qn {
     protected final void finalize() throws Throwable {
         if (this.field_c != null) {
           System.out.println("");
-          this.c(-100);
+          this.close(-100);
         }
     }
 
-    qn(File param0, String param1, long param2) throws IOException {
+    RandomAccessCacheFile(File param0, String param1, long param2) throws IOException {
         int var5_int = 0;
         try {
           if (param2 == -1L) {
@@ -85,7 +85,7 @@ final class qn {
         }
     }
 
-    final void c(int param0) throws IOException {
+    final void close(int param0) throws IOException {
         if (null != this.field_c) {
           this.field_c.close();
           this.field_c = null;
@@ -101,7 +101,7 @@ final class qn {
         field_h = true;
     }
 
-    final int a(int param0, byte[] param1, int param2, byte param3) throws IOException {
+    final int read(int param0, byte[] param1, int param2, byte param3) throws IOException {
         int var5_int = 0;
         RuntimeException var5 = null;
         String var6 = null;
@@ -113,7 +113,7 @@ final class qn {
         try {
           if (param3 > -63) {
             var6 = (String) null;
-            qn.a((String) null, -105);
+            RandomAccessCacheFile.getLoadingTextFile((String) null, -105);
           }
           var5_int = this.field_c.read(param1, param0, param2);
           if (0 < var5_int) {
@@ -142,11 +142,11 @@ final class qn {
         field_k = null;
         if (param0 != 0) {
           String var2 = (String) null;
-          qn.a((String) null, -58);
+          RandomAccessCacheFile.getLoadingTextFile((String) null, -58);
         }
     }
 
-    final void a(int param0, int param1, byte[] param2, int param3) throws IOException {
+    final void write(int param0, int param1, byte[] param2, int param3) throws IOException {
         try {
           if (param0 != 0) {
             field_g = (Sprite) null;

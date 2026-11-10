@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lg {
+final class ViewportController {
     private int field_k;
     private int field_p;
     private int field_l;
@@ -17,7 +17,7 @@ final class lg {
     private int field_e;
     int field_i;
     private int field_m;
-    static sf[] field_v;
+    static BufferedFile[] field_v;
     boolean field_c;
     private int field_a;
     private int field_f;
@@ -25,7 +25,7 @@ final class lg {
     private int field_r;
     private int field_o;
 
-    final void b(boolean param0) {
+    final void restoreWindowedSize(boolean param0) {
         if (param0) {
           this.field_g.a(this.field_q, -8, this.field_e);
           return;
@@ -34,7 +34,7 @@ final class lg {
         this.field_g.a(this.field_q, -8, this.field_e);
     }
 
-    final boolean c(int param0) {
+    final boolean canResize(int param0) {
         int var2 = 23 % ((param0 + 78) / 43);
         if (lo.field_l < this.field_m) {
           return false;
@@ -45,18 +45,18 @@ final class lg {
         return false;
     }
 
-    final void b(int param0, int param1, int param2) {
+    final void setRequestedSize(int param0, int param1, int param2) {
         if (param2 == -1) {
           this.field_p = param1;
           this.field_o = param0;
           return;
         }
-        this.c(-74);
+        this.canResize(-74);
         this.field_p = param1;
         this.field_o = param0;
     }
 
-    final static void a(int param0, byte param1) {
+    final static void spawnCutsceneZombies(int param0, byte param1) {
         int var2_int = 0;
         int var3 = 0;
         Path var5_ref_qh = null;
@@ -75,13 +75,13 @@ final class lg {
               var9 = Js5Archive.field_e.spawnZombie(60, (byte) 125, 930, 140, 960);
               var5 = 20 + hp.field_A.getX(true) - so.randomInt(40);
               var6 = hp.field_A.getY(237239984) - so.randomInt(60);
-              var9.a(Js5Archive.field_e.navigation.findPath(true, var9.getX(true), var6, var5, var9.getY(237239984)), true);
+              var9.setPath(Js5Archive.field_e.navigation.findPath(true, var9.getX(true), var6, var5, var9.getY(237239984)), true);
             } else {
               var8 = Js5Archive.field_e.spawnZombie(20, (byte) 120, 70, 354, 890);
               var5_ref_qh = new Path();
               var5_ref_qh.addFirst(0, new Point(var8.getX(true), 450));
               var5_ref_qh.addFirst(0, new Point(384, 206));
-              var8.a(var5_ref_qh, true);
+              var8.setPath(var5_ref_qh, true);
             }
           }
           return;
@@ -92,7 +92,7 @@ final class lg {
         }
     }
 
-    lg(wa param0) {
+    ViewportController(wa param0) {
         this(640, 480, 1280, 1024, 640, 480, 122, 16, param0);
     }
 
@@ -104,9 +104,9 @@ final class lg {
         field_j = null;
     }
 
-    final boolean b(int param0) {
+    final boolean isMemoryInsufficient(int param0) {
         if (param0 != 0) {
-          this.b(true);
+          this.restoreWindowedSize(true);
           if (be.field_j <= 0) {
             return false;
           }
@@ -124,7 +124,7 @@ final class lg {
         return false;
     }
 
-    private final void a(int param0) {
+    private final void applyClampedSize(int param0) {
         int var2;
         int var3;
         int var4;
@@ -134,7 +134,7 @@ final class lg {
         var5 = ZombieDawn.field_J;
         var2 = this.field_p;
         var3 = this.field_o;
-        if (!this.c(-127)) {
+        if (!this.canResize(-127)) {
           this.field_c = false;
           return;
         }
@@ -212,7 +212,7 @@ final class lg {
         }
     }
 
-    final void d(int param0) {
+    final void tick(int param0) {
         int fieldTemp$0 = 0;
         if (null != cn.field_b) {
           return;
@@ -230,7 +230,7 @@ final class lg {
           if (lo.field_l < this.field_m) {
             this.field_c = false;
           } else {
-            this.a(-1);
+            this.applyClampedSize(-1);
             if (param0 <= 13) {
               this.field_k = -32;
             }
@@ -251,17 +251,17 @@ final class lg {
         this.field_g.a(this.field_f, -125, this.field_r);
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void setFullscreenSize(int param0, int param1, int param2) {
         this.field_t = param1;
         if (param2 < 123) {
-          this.a(-55);
+          this.applyClampedSize(-55);
           this.field_i = param0;
           return;
         }
         this.field_i = param0;
     }
 
-    final boolean c(int param0, int param1, int param2) {
+    final boolean acceptsDimensions(int param0, int param1, int param2) {
         int var4 = -71 / ((-63 - param2) / 60);
         if (this.field_k > param1) {
           return false;
@@ -284,8 +284,8 @@ final class lg {
         return true;
     }
 
-    final la a(boolean param0) {
-        la var2 = null;
+    final FullscreenFocusCanvas enterFullscreen(boolean param0) {
+        FullscreenFocusCanvas var2 = null;
         this.field_e = kj.field_c;
         this.field_q = te.field_eb;
         if (param0) {
@@ -293,14 +293,14 @@ final class lg {
           rl.field_f = false;
           var2 = nf.a(this.field_i, this.field_t, vh.field_a, 0, !param0 ? true : false, 0);
           if (var2 == null) {
-            this.b(true);
+            this.restoreWindowedSize(true);
           }
           return var2;
         }
-        return (la) null;
+        return (FullscreenFocusCanvas) null;
     }
 
-    private lg(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, wa param8) {
+    private ViewportController(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, wa param8) {
         try {
           this.field_g = param8;
           this.field_a = param2;

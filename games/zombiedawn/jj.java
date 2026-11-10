@@ -21,18 +21,18 @@ final class jj extends WorldObject {
         }
     }
 
-    final void g(int param0) {
+    final void tick(int param0) {
         if (param0 >= 95) {
-          this.field_y = (this.field_F << 16) + 4 * WorldObject.a(1311979239, ac.field_m << 5);
+          this.field_y = (this.field_F << 16) + 4 * WorldObject.cosFixed(1311979239, ac.field_m << 5);
           this.field_x = (this.field_E << 16) + rd.a(true, ac.field_m << 6) * 4;
           return;
         }
         this.field_E = -11;
-        this.field_y = (this.field_F << 16) + 4 * WorldObject.a(1311979239, ac.field_m << 5);
+        this.field_y = (this.field_F << 16) + 4 * WorldObject.cosFixed(1311979239, ac.field_m << 5);
         this.field_x = (this.field_E << 16) + rd.a(true, ac.field_m << 6) * 4;
     }
 
-    final void a(byte param0, Camera param1) {
+    final void draw(byte param0, Camera param1) {
         int var3_int = param1.worldToScreenX(this.field_y >> 16, (byte) -88);
         int var4 = param1.worldToScreenY(this.field_x >> 16, 0) - lc.field_k[0].field_t;
         if (param0 > -76) {
@@ -42,13 +42,13 @@ final class jj extends WorldObject {
           if (this.field_K < this.field_I) {
             this.field_K = this.field_K + 6;
           }
-          lc.field_k[0].e(var3_int, var4, this.field_K);
+          lc.field_k[0].drawWithOpacity(var3_int, var4, this.field_K);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "jj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static al c(int param0, int param1) {
+    final static al getScreen(int param0, int param1) {
         if (param1 < 72) {
           field_J = (String) null;
           return qk.field_Jb[param0];
@@ -64,15 +64,15 @@ final class jj extends WorldObject {
         this.field_E = hp.field_A.getY(237239984) + 40;
     }
 
-    final static String i(int param0) {
+    final static String readPacketString(int param0) {
         if (param0 < 93) {
           field_G = (String[]) null;
-          return fj.field_g.a(true);
+          return fj.field_g.readNullTerminatedString(true);
         }
-        return fj.field_g.a(true);
+        return fj.field_g.readNullTerminatedString(true);
     }
 
-    final static void b(boolean param0) {
+    final static void createSoftCircleSprite(boolean param0) {
         int var1_int = 0;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -98,7 +98,7 @@ final class jj extends WorldObject {
         }
     }
 
-    final static String a(int param0, int param1, PacketBuffer param2) {
+    final static String readCompressedString(int param0, int param1, PacketBuffer param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -113,17 +113,17 @@ final class jj extends WorldObject {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            var3_int = param2.c((byte) -107);
+            var3_int = param2.readSmart((byte) -107);
             if (param0 < var3_int) {
               var3_int = param0;
             }
             var4 = new byte[var3_int];
-            param2.position = param2.position + pi.field_l.a(param2.payload, 0, var3_int, param1 ^ -28649, param2.position, var4);
+            param2.position = param2.position + ImageProducerRasterBuffer.field_l.a(param2.payload, 0, var3_int, param1 ^ -28649, param2.position, var4);
             if (param1 != -23171) {
               var6 = (PacketBuffer) null;
-              jj.a(57, -111, (PacketBuffer) null);
+              jj.readCompressedString(57, -111, (PacketBuffer) null);
             }
-            var5 = SpatialObject.a(var4, var3_int, 0, -78);
+            var5 = SpatialObject.decodeSingleByteText(var4, var3_int, 0, -78);
             stackIn_6_0 = var5;
             return stackIn_6_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

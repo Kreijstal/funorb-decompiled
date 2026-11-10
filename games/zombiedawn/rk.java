@@ -18,20 +18,20 @@ final class rk {
         try {
           vj.field_t[0] = p.field_b.nextInt();
           vj.field_t[1] = p.field_b.nextInt();
-          vj.field_t[3] = (int)dh.field_b;
-          dh.field_e.position = 0;
+          vj.field_t[3] = (int)RasterBuffer.field_b;
+          RasterBuffer.field_e.position = 0;
           if (param3 != -27886) {
             var8 = (java.awt.Component) null;
             rk.a((byte) 84, (java.awt.Component) null);
           }
-          vj.field_t[2] = (int)(dh.field_b >> 32);
-          dh.field_e.writeInt(-115, vj.field_t[0]);
-          dh.field_e.writeInt(30, vj.field_t[1]);
-          dh.field_e.writeInt(85, vj.field_t[2]);
-          dh.field_e.writeInt(80, vj.field_t[3]);
-          cc.a(dh.field_e, 10);
-          dh.field_e.writeShort(param4, (byte) 105);
-          param1.a(false, dh.field_e);
+          vj.field_t[2] = (int)(RasterBuffer.field_b >> 32);
+          RasterBuffer.field_e.writeInt(-115, vj.field_t[0]);
+          RasterBuffer.field_e.writeInt(30, vj.field_t[1]);
+          RasterBuffer.field_e.writeInt(85, vj.field_t[2]);
+          RasterBuffer.field_e.writeInt(80, vj.field_t[3]);
+          PowerupCard.writeMachineId(RasterBuffer.field_e, 10);
+          RasterBuffer.field_e.writeShort(param4, (byte) 105);
+          param1.writePayload(false, RasterBuffer.field_e);
           dp.field_e.position = 0;
           if (!param2) {
             dp.field_e.writeByte(16, -122);
@@ -41,7 +41,7 @@ final class rk {
           dp.field_e.position = dp.field_e.position + 2;
           var5_int = dp.field_e.position;
           dp.field_e.writeInt(-108, MouseInputHandler.field_b);
-          dp.field_e.a(lg.field_u, -80);
+          dp.field_e.writeLong(ViewportController.field_u, -80);
           var6 = 0;
           if (ih.field_S) {
             var6 = var6 | 1;
@@ -64,7 +64,7 @@ final class rk {
           if (ia.field_b != null) {
             dp.field_e.writeTerminatedStringWithHeader((byte) -88, ia.field_b);
           }
-          ab.a(dh.field_e, pm.field_c, (byte) -105, dp.field_e, pj.field_p);
+          ab.writeRsaEncryptedBlock(RasterBuffer.field_e, pm.field_c, (byte) -105, dp.field_e, pj.field_p);
           dp.field_e.writeLengthPrefixShort(57, -var5_int + dp.field_e.position);
           vl.a((byte) -46, -1);
           return;

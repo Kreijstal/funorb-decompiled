@@ -17,15 +17,15 @@ final class bh extends IntrusiveNode {
         RuntimeException var1_ref = null;
         var4 = ZombieDawn.field_J;
         try {
-          if (qg.field_d) {
+          if (SocketConnector.field_d) {
             return;
           }
-          qg.field_d = true;
+          SocketConnector.field_d = true;
           var5 = qk.field_Jb;
           var1 = var5;
           for (var2 = param0; var2 < var5.length; var2++) {
             var3 = var5[var2];
-            var3.b(24136);
+            var3.rebuildItems(24136);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

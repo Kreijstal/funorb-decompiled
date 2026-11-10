@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bk {
+final class AwtDisplayController {
     private java.awt.DisplayMode field_b;
     private java.awt.GraphicsDevice field_a;
 
@@ -17,7 +17,7 @@ final class bk {
         }
         param0.setUndecorated(true);
         param0.enableInputMethods(false);
-        this.a(param0, (byte) -120);
+        this.setFullscreenWindow(param0, (byte) -120);
         if (0 == param4) {
           var6 = this.field_b.getRefreshRate();
           var7 = this.field_a.getDisplayModes();
@@ -41,7 +41,7 @@ final class bk {
         this.field_a.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));
     }
 
-    public bk() throws Exception {
+    public AwtDisplayController() throws Exception {
         int var4 = 0;
         java.awt.GraphicsEnvironment var1;
         java.awt.GraphicsDevice[] var2;
@@ -62,7 +62,7 @@ final class bk {
             return;
           }
         }
-        throw bk.<RuntimeException>sneakyThrow(new Exception());
+        throw AwtDisplayController.<RuntimeException>sneakyThrow(new Exception());
     }
 
     public final void exit() {
@@ -73,10 +73,10 @@ final class bk {
           }
           this.field_b = null;
         }
-        this.a((java.awt.Frame) null, (byte) -43);
+        this.setFullscreenWindow((java.awt.Frame) null, (byte) -43);
     }
 
-    private final void a(java.awt.Frame param0, byte param1) {
+    private final void setFullscreenWindow(java.awt.Frame param0, byte param1) {
         if (param1 >= -30) {
           this.exit();
         }

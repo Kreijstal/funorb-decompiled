@@ -27,11 +27,11 @@ final class fe extends hp implements oa, hh {
             return true;
           }
           if (98 == param1) {
-            stackIn_6_0 = this.b((byte) 123, param2);
+            stackIn_6_0 = this.focusPreviousChild((byte) 123, param2);
             return stackIn_6_0;
           }
           if (param1 == 99) {
-            stackIn_9_0 = this.a(1, param2);
+            stackIn_9_0 = this.focusNextChild(1, param2);
             return stackIn_9_0;
           }
           var5_int = -46 % ((-83 - param0) / 32);
@@ -52,7 +52,7 @@ final class fe extends hp implements oa, hh {
 
     final static v b(boolean param0) {
         v var1 = new v(gl.field_F, Zombie.field_pb, sl.field_d[0], bo.field_o[0], bn.field_c[0], uf.field_n[0], vj.field_m[0], j.field_a);
-        no.f((byte) -36);
+        no.clearSpriteDecodeBuffers((byte) -36);
         if (param0) {
           return var1;
         }
@@ -71,30 +71,30 @@ final class fe extends hp implements oa, hh {
           this.field_N = param0;
           this.field_K = new an(jb.field_c, (sk) null);
           this.field_K.field_h = (io) ((Object) new vm());
-          var7 = s.a(1938762664, dn.field_J, new String[]{this.h(-107), this.e((byte) 125)});
+          var7 = s.a(1938762664, dn.field_J, new String[]{this.getLinkOpenMarkup(-107), this.getLinkCloseMarkup((byte) 125)});
           var3 = 20;
           var4 = new vf(ia.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, ia.field_e.field_I, -1, 2147483647, true);
           this.field_I = new hm(var7, var4);
           this.field_I.field_s = "";
-          this.field_I.a(0, -21423, sm.field_b);
-          this.field_I.a(1, -21423, sm.field_b);
+          this.field_I.setHotspotTooltip(0, -21423, sm.field_b);
+          this.field_I.setHotspotTooltip(1, -21423, sm.field_b);
           this.field_I.field_i = this.field_i - 40;
           this.field_I.field_v = (sk) (this);
-          this.field_I.a(26, var3, true, this.field_i - 40);
+          this.field_I.setBoundsToTextHeight(26, var3, true, this.field_i - 40);
           var3 = var3 + (15 + this.field_I.field_n);
-          this.a(this.field_I, 10);
+          this.addChild(this.field_I, 10);
           var5 = 4;
           var6 = 200;
-          this.field_K.a(33, var3, 300 - var6 >> 1, var6, 40);
+          this.field_K.setBounds(33, var3, 300 - var6 >> 1, var6, 40);
           this.field_K.field_v = (sk) (this);
-          this.a(this.field_K, 10);
-          this.a(31, 0, 0, 300, var3 + (55 + var5));
+          this.addChild(this.field_K, 10);
+          this.setBounds(31, 0, 0, 300, var3 + (55 + var5));
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "fe.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final void a(hm param0, int param1, int param2, int param3) {
+    public final void onHotspotAction(hm param0, int param1, int param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -119,7 +119,7 @@ final class fe extends hp implements oa, hh {
             return;
           }
           var7 = (hm) null;
-          this.a((hm) null, -81, 53, -37);
+          this.onHotspotAction((hm) null, -81, 53, -37);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -144,13 +144,13 @@ final class fe extends hp implements oa, hh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -6) {
-            discarded$1 = this.h(-70);
+            discarded$1 = this.getLinkOpenMarkup(-70);
           }
           if (param2 != this.field_K) {
             return;
           }
           ed.a(param1 + 425);
-          this.field_N.h((byte) -126);
+          this.field_N.closeDialog((byte) -126);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -166,7 +166,7 @@ final class fe extends hp implements oa, hh {
         }
     }
 
-    private final String e(byte param0) {
+    private final String getLinkCloseMarkup(byte param0) {
         if (param0 <= 78) {
           field_G = (int[]) null;
           return "</col></u>";
@@ -174,7 +174,7 @@ final class fe extends hp implements oa, hh {
         return "</col></u>";
     }
 
-    private final String h(int param0) {
+    private final String getLinkOpenMarkup(int param0) {
         int var2 = -124 % ((param0 - 81) / 34);
         return "<u=2164A2><col=2164A2>";
     }

@@ -86,25 +86,25 @@ abstract class qb {
           if (param0) {
             return;
           }
-          var2 = (hn) (fj.field_i.b((byte) 26));
+          var2 = (hn) (fj.field_i.last((byte) 26));
           while (var2 != null) {
-            if (var2.field_k.a((byte) 73)) {
-              var2.field_n.g(ge.field_c * var2.field_i + 128 >> 8);
+            if (var2.field_k.isLinked((byte) 73)) {
+              var2.field_n.setVolumeQ6(ge.field_c * var2.field_i + 128 >> 8);
             } else {
               var2.unlink(-27598);
             }
-            var2 = (hn) (fj.field_i.a(false));
+            var2 = (hn) (fj.field_i.previous(false));
           }
-          if (sf.field_n != null) {
-            var2Lifetime1 = (hn) (sf.field_n.b((byte) 26));
+          if (BufferedFile.field_n != null) {
+            var2Lifetime1 = (hn) (BufferedFile.field_n.last((byte) 26));
             while (var2Lifetime1 != null) {
-              stackIn_14_0 = var2Lifetime1.field_k.a((byte) 73);
+              stackIn_14_0 = var2Lifetime1.field_k.isLinked((byte) 73);
               if (!stackIn_14_0) {
                 var2Lifetime1.unlink(-27598);
               } else {
-                var2Lifetime1.field_n.g(128 + ge.field_c * var2Lifetime1.field_i >> 8);
+                var2Lifetime1.field_n.setVolumeQ6(128 + ge.field_c * var2Lifetime1.field_i >> 8);
               }
-              var2Lifetime1 = (hn) (sf.field_n.a(param0));
+              var2Lifetime1 = (hn) (BufferedFile.field_n.previous(param0));
             }
             return;
           }

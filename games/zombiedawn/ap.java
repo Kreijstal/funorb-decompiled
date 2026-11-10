@@ -139,11 +139,11 @@ final class ap extends al {
               this.field_B = 50;
               this.field_z = 50;
               if (param3 >= -19) {
-                this.a((byte) -39);
+                this.drawScreen((byte) -39);
               }
               if (!param6) {
                 if (!param5) {
-                  if (Js5Archive.field_e.b(-25983)) {
+                  if (Js5Archive.field_e.hasRestartsLeft(-25983)) {
                     stackIn_44_1 = kc.field_Y;
                   } else {
                     stackIn_44_1 = po.field_wb;
@@ -172,7 +172,7 @@ final class ap extends al {
                 }
               }
               this.field_F = this.field_t;
-              this.field_b.a(this.b(true, ha.field_b, ei.field_K), true, -20258);
+              this.field_b.setPointerSelection(this.findItemAt(true, ha.field_b, ei.field_K), true, -20258);
               return;
             }
           }
@@ -224,11 +224,11 @@ final class ap extends al {
               this.field_B = 50;
               this.field_z = 50;
               if (param3 >= -19) {
-                this.a((byte) -39);
+                this.drawScreen((byte) -39);
               }
               if (!param6) {
                 if (!param5) {
-                  if (Js5Archive.field_e.b(-25983)) {
+                  if (Js5Archive.field_e.hasRestartsLeft(-25983)) {
                     stackIn_91_1 = kc.field_Y;
                   } else {
                     stackIn_91_1 = po.field_wb;
@@ -257,7 +257,7 @@ final class ap extends al {
                 }
               }
               this.field_F = this.field_t;
-              this.field_b.a(this.b(true, ha.field_b, ei.field_K), true, -20258);
+              this.field_b.setPointerSelection(this.findItemAt(true, ha.field_b, ei.field_K), true, -20258);
               return;
             }
           }
@@ -294,7 +294,7 @@ final class ap extends al {
           if (param3 < -19) {
             if (!param6) {
               if (!param5) {
-                if (Js5Archive.field_e.b(-25983)) {
+                if (Js5Archive.field_e.hasRestartsLeft(-25983)) {
                   stackIn_125_1 = kc.field_Y;
                 } else {
                   stackIn_125_1 = po.field_wb;
@@ -323,10 +323,10 @@ final class ap extends al {
               }
             }
           } else {
-            this.a((byte) -39);
+            this.drawScreen((byte) -39);
             if (!param6) {
               if (!param5) {
-                if (Js5Archive.field_e.b(-25983)) {
+                if (Js5Archive.field_e.hasRestartsLeft(-25983)) {
                   stackIn_142_1 = kc.field_Y;
                 } else {
                   stackIn_142_1 = po.field_wb;
@@ -364,7 +364,7 @@ final class ap extends al {
             this.field_B = 50;
             this.field_z = 50;
             if (param3 >= -19) {
-              this.a((byte) -39);
+              this.drawScreen((byte) -39);
             }
             if (param6) {
               this.field_x = -1;
@@ -380,7 +380,7 @@ final class ap extends al {
               }
             } else {
               if (!param5) {
-                if (Js5Archive.field_e.b(-25983)) {
+                if (Js5Archive.field_e.hasRestartsLeft(-25983)) {
                   stackIn_196_1 = kc.field_Y;
                 } else {
                   stackIn_196_1 = po.field_wb;
@@ -401,10 +401,10 @@ final class ap extends al {
             this.field_B = 50;
             this.field_z = 50;
             if (param3 >= -19) {
-              this.a((byte) -39);
+              this.drawScreen((byte) -39);
               if (!param6) {
                 if (!param5) {
-                  if (Js5Archive.field_e.b(-25983)) {
+                  if (Js5Archive.field_e.hasRestartsLeft(-25983)) {
                     stackIn_162_1 = kc.field_Y;
                   } else {
                     stackIn_162_1 = po.field_wb;
@@ -447,7 +447,7 @@ final class ap extends al {
                 }
               } else {
                 if (!param5) {
-                  if (Js5Archive.field_e.b(-25983)) {
+                  if (Js5Archive.field_e.hasRestartsLeft(-25983)) {
                     stackIn_174_1 = kc.field_Y;
                   } else {
                     stackIn_174_1 = po.field_wb;
@@ -467,7 +467,7 @@ final class ap extends al {
           }
         }
         this.field_F = this.field_t;
-        this.field_b.a(this.b(true, ha.field_b, ei.field_K), true, -20258);
+        this.field_b.setPointerSelection(this.findItemAt(true, ha.field_b, ei.field_K), true, -20258);
     }
 
     private final String d(byte param0) {
@@ -477,7 +477,7 @@ final class ap extends al {
         return var2 + ":" + (var4 >= 10 ? "" : "0") + var4;
     }
 
-    final void a(byte param0, boolean param1) {
+    final void handleInput(byte param0, boolean param1) {
         int fieldTemp$5 = 0;
         int fieldTemp$6 = 0;
         int fieldTemp$3 = 0;
@@ -494,7 +494,7 @@ final class ap extends al {
         int var5Lifetime1;
         int var5Lifetime2;
         var6 = ZombieDawn.field_J;
-        super.a((byte) -104, param1);
+        super.handleInput((byte) -104, param1);
         var3 = 121 / ((-39 - param0) / 61);
         if (this.field_F) {
           if (this.field_b.field_d == 0) {
@@ -534,7 +534,7 @@ final class ap extends al {
                     kh.a(58, false);
                     return;
                   }
-                  tp.a(123, false, w.field_a[6]);
+                  tp.playMusicTrack(123, false, ArchiveProvider.field_a[6]);
                   kh.a(58, false);
                   return;
                 }
@@ -552,9 +552,9 @@ final class ap extends al {
                 this.field_r = this.field_r - 2;
                 if (this.field_r <= 0) {
                   this.field_r = 0;
-                  tp.a(85, false, w.field_a[6]);
+                  tp.playMusicTrack(85, false, ArchiveProvider.field_a[6]);
                 }
-                kh.a(57, false).h(3 * ge.field_c >> 3);
+                kh.a(57, false).setVolume(3 * ge.field_c >> 3);
                 return;
               }
               if (this.field_D < 9999999) {
@@ -569,7 +569,7 @@ final class ap extends al {
               this.field_B = 2;
               return;
             }
-            this.field_b.b(1, -123);
+            this.field_b.setSelectedIndex(1, -123);
           }
           if (2 == this.field_x) {
             return;
@@ -608,7 +608,7 @@ final class ap extends al {
               this.field_G = 8;
               this.field_B = 50;
               if (!this.field_H) {
-                tp.a(123, false, w.field_a[6]);
+                tp.playMusicTrack(123, false, ArchiveProvider.field_a[6]);
               }
             }
             kh.a(58, false);
@@ -626,9 +626,9 @@ final class ap extends al {
               this.field_r = this.field_r - 2;
               if (this.field_r <= 0) {
                 this.field_r = 0;
-                tp.a(85, false, w.field_a[6]);
+                tp.playMusicTrack(85, false, ArchiveProvider.field_a[6]);
               }
-              kh.a(57, false).h(3 * ge.field_c >> 3);
+              kh.a(57, false).setVolume(3 * ge.field_c >> 3);
             }
           }
           return;
@@ -640,7 +640,7 @@ final class ap extends al {
           var7.field_G = var7.field_G + var5;
           var7.field_g = var7.field_g - var5 * var7.field_K;
           var7.field_l = var7.field_l + var5;
-          var7.h(1);
+          var7.checkScoreAchievements(1);
           this.field_F = true;
           if (this.field_b.field_d == 0) {
             if (this.field_h[0] != 39) {
@@ -678,9 +678,9 @@ final class ap extends al {
                     this.field_r = this.field_r - 2;
                     if (this.field_r <= 0) {
                       this.field_r = 0;
-                      tp.a(85, false, w.field_a[6]);
+                      tp.playMusicTrack(85, false, ArchiveProvider.field_a[6]);
                     }
-                    kh.a(57, false).h(3 * ge.field_c >> 3);
+                    kh.a(57, false).setVolume(3 * ge.field_c >> 3);
                   }
                 }
                 return;
@@ -698,9 +698,9 @@ final class ap extends al {
                     this.field_r = this.field_r - 2;
                     if (this.field_r <= 0) {
                       this.field_r = 0;
-                      tp.a(85, false, w.field_a[6]);
+                      tp.playMusicTrack(85, false, ArchiveProvider.field_a[6]);
                     }
-                    kh.a(57, false).h(3 * ge.field_c >> 3);
+                    kh.a(57, false).setVolume(3 * ge.field_c >> 3);
                   }
                 }
                 return;
@@ -719,13 +719,13 @@ final class ap extends al {
                 this.field_G = 8;
                 this.field_B = 50;
                 if (!this.field_H) {
-                  tp.a(123, false, w.field_a[6]);
+                  tp.playMusicTrack(123, false, ArchiveProvider.field_a[6]);
                 }
               }
               kh.a(58, false);
               return;
             }
-            this.field_b.b(1, -123);
+            this.field_b.setSelectedIndex(1, -123);
           }
           if (2 == this.field_x) {
             return;
@@ -764,7 +764,7 @@ final class ap extends al {
               this.field_G = 8;
               this.field_B = 50;
               if (!this.field_H) {
-                tp.a(123, false, w.field_a[6]);
+                tp.playMusicTrack(123, false, ArchiveProvider.field_a[6]);
               }
             }
             kh.a(58, false);
@@ -782,9 +782,9 @@ final class ap extends al {
               this.field_r = this.field_r - 2;
               if (this.field_r <= 0) {
                 this.field_r = 0;
-                tp.a(85, false, w.field_a[6]);
+                tp.playMusicTrack(85, false, ArchiveProvider.field_a[6]);
               }
-              kh.a(57, false).h(3 * ge.field_c >> 3);
+              kh.a(57, false).setVolume(3 * ge.field_c >> 3);
             }
           }
           return;
@@ -796,11 +796,11 @@ final class ap extends al {
           var9.field_g = var9.field_g - var9.field_K * var5Lifetime1;
           var9.field_l = var9.field_l + var5Lifetime1;
           var9.field_G = var9.field_G + var5Lifetime1;
-          var9.h(1);
+          var9.checkScoreAchievements(1);
           this.field_F = true;
           if (this.field_b.field_d == 0 &&
             this.field_h[0] == 39) {
-            this.field_b.b(1, -123);
+            this.field_b.setSelectedIndex(1, -123);
           }
           if (2 == this.field_x) {
             return;
@@ -837,7 +837,7 @@ final class ap extends al {
                 kh.a(58, false);
                 return;
               }
-              tp.a(123, false, w.field_a[6]);
+              tp.playMusicTrack(123, false, ArchiveProvider.field_a[6]);
               kh.a(58, false);
               return;
             }
@@ -855,9 +855,9 @@ final class ap extends al {
             this.field_r = this.field_r - 2;
             if (this.field_r <= 0) {
               this.field_r = 0;
-              tp.a(85, false, w.field_a[6]);
+              tp.playMusicTrack(85, false, ArchiveProvider.field_a[6]);
             }
-            kh.a(57, false).h(3 * ge.field_c >> 3);
+            kh.a(57, false).setVolume(3 * ge.field_c >> 3);
             return;
           }
           if (this.field_D < 9999999) {
@@ -876,7 +876,7 @@ final class ap extends al {
           this.field_F = true;
           if (this.field_b.field_d == 0 &&
             this.field_h[0] == 39) {
-            this.field_b.b(1, -123);
+            this.field_b.setSelectedIndex(1, -123);
           }
           if (2 == this.field_x) {
             return;
@@ -913,7 +913,7 @@ final class ap extends al {
                 kh.a(58, false);
                 return;
               }
-              tp.a(123, false, w.field_a[6]);
+              tp.playMusicTrack(123, false, ArchiveProvider.field_a[6]);
               kh.a(58, false);
               return;
             }
@@ -931,9 +931,9 @@ final class ap extends al {
             this.field_r = this.field_r - 2;
             if (this.field_r <= 0) {
               this.field_r = 0;
-              tp.a(85, false, w.field_a[6]);
+              tp.playMusicTrack(85, false, ArchiveProvider.field_a[6]);
             }
-            kh.a(57, false).h(3 * ge.field_c >> 3);
+            kh.a(57, false).setVolume(3 * ge.field_c >> 3);
             return;
           }
           if (this.field_D < 9999999) {
@@ -954,11 +954,11 @@ final class ap extends al {
         var10.field_g = var10.field_g - var10.field_K * var5Lifetime2;
         var10.field_l = var10.field_l + var5Lifetime2;
         var10.field_G = var10.field_G + var5Lifetime2;
-        var10.h(1);
+        var10.checkScoreAchievements(1);
         this.field_F = true;
         if (this.field_b.field_d == 0 &&
           this.field_h[0] == 39) {
-          this.field_b.b(1, -123);
+          this.field_b.setSelectedIndex(1, -123);
         }
         if (2 == this.field_x) {
           return;
@@ -995,7 +995,7 @@ final class ap extends al {
               kh.a(58, false);
               return;
             }
-            tp.a(123, false, w.field_a[6]);
+            tp.playMusicTrack(123, false, ArchiveProvider.field_a[6]);
             kh.a(58, false);
             return;
           }
@@ -1013,9 +1013,9 @@ final class ap extends al {
           this.field_r = this.field_r - 2;
           if (this.field_r <= 0) {
             this.field_r = 0;
-            tp.a(85, false, w.field_a[6]);
+            tp.playMusicTrack(85, false, ArchiveProvider.field_a[6]);
           }
-          kh.a(57, false).h(3 * ge.field_c >> 3);
+          kh.a(57, false).setVolume(3 * ge.field_c >> 3);
           return;
         }
         if (this.field_D < 9999999) {
@@ -1031,7 +1031,7 @@ final class ap extends al {
         return;
     }
 
-    final void a(byte param0) {
+    final void drawScreen(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -1044,7 +1044,7 @@ final class ap extends al {
         String var11;
         String var14;
         String var15;
-        super.a((byte) -91);
+        super.drawScreen((byte) -91);
         var2 = 8;
         var3 = 0;
         var4 = sg.field_jb.field_x + sg.field_jb.field_I;
@@ -1095,7 +1095,7 @@ final class ap extends al {
             sg.field_jb.drawStringRightAligned(var7, vh.field_b + 350, var5, this.field_G, var3);
           } else {
             if (this.field_x == -1) {
-              if (vl.field_b.f(-107) != 27) {
+              if (vl.field_b.getLevelSlot(-107) != 27) {
                 var10 = tc.field_u;
                 if (var10 == null) {
                   return;
@@ -1203,7 +1203,7 @@ final class ap extends al {
         sg.field_jb.drawString(qi.a(true, 0, jp.field_a, (long)this.field_p, (byte) 113), 370 + vh.field_b, 340 + id.field_M, var2, var3);
     }
 
-    final void b(byte param0) {
+    final void drawBackground(byte param0) {
         Sprite[] stackIn_4_0 = null;
         int stackIn_5_1 = 0;
         Sprite[] stackIn_9_0 = null;
@@ -1215,10 +1215,10 @@ final class ap extends al {
         int var3;
         var3 = ZombieDawn.field_J;
         if (param0 >= 105) {
-          if (640 != bd.field_e) {
+          if (640 != WhirlpoolHasher.field_e) {
             stackIn_18_0 = qk.field_Hb;
             stackIn_19_1 = (2 != this.field_x) ? 2 : 3;
-            ((Sprite) (Object) stackIn_18_0[stackIn_19_1]).drawScaled(0, 0, bd.field_e, nh.field_P);
+            ((Sprite) (Object) stackIn_18_0[stackIn_19_1]).drawScaled(0, 0, WhirlpoolHasher.field_e, nh.field_P);
           } else {
             if (nh.field_P == 480) {
               if (this.field_x == 2) {
@@ -1229,15 +1229,15 @@ final class ap extends al {
             } else {
               stackIn_23_0 = qk.field_Hb;
               stackIn_24_1 = (2 != this.field_x) ? 2 : 3;
-              ((Sprite) (Object) stackIn_23_0[stackIn_24_1]).drawScaled(0, 0, bd.field_e, nh.field_P);
+              ((Sprite) (Object) stackIn_23_0[stackIn_24_1]).drawScaled(0, 0, WhirlpoolHasher.field_e, nh.field_P);
             }
           }
         } else {
-          this.a((byte) 101);
-          if (640 != bd.field_e) {
+          this.drawScreen((byte) 101);
+          if (640 != WhirlpoolHasher.field_e) {
             stackIn_4_0 = qk.field_Hb;
             stackIn_5_1 = (2 != this.field_x) ? 2 : 3;
-            ((Sprite) (Object) stackIn_4_0[stackIn_5_1]).drawScaled(0, 0, bd.field_e, nh.field_P);
+            ((Sprite) (Object) stackIn_4_0[stackIn_5_1]).drawScaled(0, 0, WhirlpoolHasher.field_e, nh.field_P);
           } else {
             if (nh.field_P == 480) {
               if (this.field_x != 2) {
@@ -1248,7 +1248,7 @@ final class ap extends al {
             } else {
               stackIn_9_0 = qk.field_Hb;
               stackIn_10_1 = (2 != this.field_x) ? 2 : 3;
-              ((Sprite) (Object) stackIn_9_0[stackIn_10_1]).drawScaled(0, 0, bd.field_e, nh.field_P);
+              ((Sprite) (Object) stackIn_9_0[stackIn_10_1]).drawScaled(0, 0, WhirlpoolHasher.field_e, nh.field_P);
             }
           }
         }

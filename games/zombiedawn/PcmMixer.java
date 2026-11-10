@@ -8,7 +8,7 @@ final class PcmMixer extends PcmStream {
     private int field_m;
 
     final PcmStream firstSubstream() {
-        return (PcmStream) (this.field_n.b((byte) 26));
+        return (PcmStream) (this.field_n.last((byte) 26));
     }
 
     final synchronized void addSubstream(PcmStream param0) {
@@ -18,7 +18,7 @@ final class PcmMixer extends PcmStream {
     private final void insertListener(IntrusiveNode param0, bc param1) {
         while (true) {
           if (param0 == this.field_l.sentinel) {
-            we.a(param0, 0, param1);
+            we.insertAfter(param0, 0, param1);
             this.field_m = ((bc) (this.field_l.sentinel.previous)).field_h;
             return;
           }
@@ -28,7 +28,7 @@ final class PcmMixer extends PcmStream {
           }
           break;
         }
-        we.a(param0, 0, param1);
+        we.insertAfter(param0, 0, param1);
         this.field_m = ((bc) (this.field_l.sentinel.previous)).field_h;
         return;
     }
@@ -55,7 +55,7 @@ final class PcmMixer extends PcmStream {
           param2 = param2 - var4;
           this.field_o = this.field_o + var4;
           this.normalizeListenerFrames();
-          var5 = (bc) (this.field_l.b((byte) 26));
+          var5 = (bc) (this.field_l.last((byte) 26));
           var6 = var5;
           synchronized (var6) {
             var7 = var5.a(this);
@@ -64,7 +64,7 @@ final class PcmMixer extends PcmStream {
               this.insertListener(var5.previous, var5);
             } else {
               var5.field_h = 0;
-              this.a(var5);
+              this.removeListener(var5);
             }
           }
         } while (param2 != 0);
@@ -75,27 +75,27 @@ final class PcmMixer extends PcmStream {
         param0.unlink(-27598);
     }
 
-    private final void c(int param0) {
-        PcmStream var2 = (PcmStream) (this.field_n.b((byte) 26));
+    private final void skipSubstreams(int param0) {
+        PcmStream var2 = (PcmStream) (this.field_n.last((byte) 26));
         while (var2 != null) {
           var2.skip(param0);
-          var2 = (PcmStream) (this.field_n.a(false));
+          var2 = (PcmStream) (this.field_n.previous(false));
         }
     }
 
     final PcmStream nextSubstream() {
-        return (PcmStream) (this.field_n.a(false));
+        return (PcmStream) (this.field_n.previous(false));
     }
 
     private final void mixSubstreams(int[] param0, int param1, int param2) {
-        PcmStream var4 = (PcmStream) (this.field_n.b((byte) 26));
+        PcmStream var4 = (PcmStream) (this.field_n.last((byte) 26));
         while (var4 != null) {
           var4.fillOrSkip(param0, param1, param2);
-          var4 = (PcmStream) (this.field_n.a(false));
+          var4 = (PcmStream) (this.field_n.previous(false));
         }
     }
 
-    private final void a(bc param0) {
+    private final void removeListener(bc param0) {
         param0.unlink(-27598);
         param0.a();
         IntrusiveNode var2 = this.field_l.sentinel.previous;
@@ -113,10 +113,10 @@ final class PcmMixer extends PcmStream {
     private final void normalizeListenerFrames() {
         bc var1 = null;
         if (this.field_o > 0) {
-          var1 = (bc) (this.field_l.b((byte) 26));
+          var1 = (bc) (this.field_l.last((byte) 26));
           while (var1 != null) {
             var1.field_h = var1.field_h - this.field_o;
-            var1 = (bc) (this.field_l.a(false));
+            var1 = (bc) (this.field_l.previous(false));
           }
           this.field_m = this.field_m - this.field_o;
           this.field_o = 0;
@@ -131,20 +131,20 @@ final class PcmMixer extends PcmStream {
         Object var4 = null;
         do {
           if (this.field_m < 0) {
-            this.c(param0);
+            this.skipSubstreams(param0);
             return;
           }
           if (this.field_o + param0 < this.field_m) {
             this.field_o = this.field_o + param0;
-            this.c(param0);
+            this.skipSubstreams(param0);
             return;
           }
           var2 = this.field_m - this.field_o;
-          this.c(var2);
+          this.skipSubstreams(var2);
           param0 = param0 - var2;
           this.field_o = this.field_o + var2;
           this.normalizeListenerFrames();
-          var3 = (bc) (this.field_l.b((byte) 26));
+          var3 = (bc) (this.field_l.last((byte) 26));
           var4 = var3;
           synchronized (var4) {
             var5 = var3.a(this);
@@ -153,7 +153,7 @@ final class PcmMixer extends PcmStream {
               this.insertListener(var3.previous, var3);
             } else {
               var3.field_h = 0;
-              this.a(var3);
+              this.removeListener(var3);
             }
           }
         } while (param0 != 0);

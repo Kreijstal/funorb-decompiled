@@ -6,7 +6,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
     static String field_c;
     static String field_b;
 
-    final static vk a(int param0, String param1) {
+    final static vk validateDomainLabel(int param0, String param1) {
         int var3 = 0;
         int var2_int = 0;
         int var4 = 0;
@@ -184,12 +184,12 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         }
     }
 
-    final static void a(int param0) {
+    final static void handleClearFlagPacket(int param0) {
         jh.field_i = false;
         fj.field_g.readUnsignedByte((byte) -122);
         if (param0 < 110) {
           String var2 = (String) null;
-          GameKeyHandler.a(-42, (String) null);
+          GameKeyHandler.validateDomainLabel(-42, (String) null);
         }
     }
 
@@ -200,7 +200,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           if (null != ea.field_c) {
             var2_int = param0.getKeyChar();
             if (var2_int != 0 && var2_int != 65535 &&
-              na.a(0, (char) var2_int)) {
+              SectorCacheStore.isRepresentableTextCharacter(0, (char) var2_int)) {
               var3 = 1 + je.field_c & 127;
               if (var3 != he.field_e) {
                 vd.field_b[je.field_c] = -1;

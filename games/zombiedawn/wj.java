@@ -10,7 +10,7 @@ final class wj extends IntrusiveNode {
     }
 
     final static wj load(Js5Archive param0, String param1, String param2) {
-        byte[] var3 = param0.a(param2, -105, param1);
+        byte[] var3 = param0.getFileByName(param2, -105, param1);
         if (var3 == null) {
           return null;
         }
@@ -122,7 +122,7 @@ final class wj extends IntrusiveNode {
         int var29Lifetime1;
         param0.position = param0.payload.length - 3;
         var2 = param0.readUnsignedByte((byte) -123);
-        var3 = param0.f(2);
+        var3 = param0.readUnsignedShort(2);
         var4 = 14 + var2 * 10;
         param0.position = 0;
         var5 = 0;
@@ -582,7 +582,7 @@ final class wj extends IntrusiveNode {
         var5 = var4.trackCount();
         for (var6 = 0; var6 < var5; var6++) {
           var4.seekTrack(var6);
-          var4.c(var6);
+          var4.readTrackDelta(var6);
           var4.saveTrackPosition(var6);
         }
         while (true) {
@@ -634,7 +634,7 @@ final class wj extends IntrusiveNode {
                 var14.field_k[var11Lifetime2] = (byte) 1;
               }
             }
-            var4.c(var6Lifetime1);
+            var4.readTrackDelta(var6Lifetime1);
             var4.saveTrackPosition(var6Lifetime1);
           }
         }

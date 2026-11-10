@@ -32,7 +32,7 @@ final class ld extends bn {
         }
     }
 
-    final nk a(byte param0) {
+    final nk payloadKind(byte param0) {
         if (param0 != -102) {
           field_n = (int[]) null;
         }

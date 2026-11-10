@@ -9,10 +9,10 @@ final class hg {
 
     final static void b(int param0) {
         if (null != e.field_S) {
-          e.field_S.e((byte) -36);
+          e.field_S.removeHiddenDialogs((byte) -36);
         }
         if (vi.field_c != null) {
-          vi.field_c.m(-31361);
+          vi.field_c.stopProgressAnimation(-31361);
         }
         if (param0 != 31431) {
           return;
@@ -31,7 +31,7 @@ final class hg {
           en.useRasterClip();
           Rasterizer.clear();
           LevelNavigation.field_x = 0;
-          gk.j(30549);
+          gk.buildLogoModelFrame(30549);
           var2 = var1.copySprite();
           int var3 = 1 / ((4 - param0) / 43);
           for (var4 = 0; var4 < 15; var4++) {
@@ -40,7 +40,7 @@ final class hg {
           }
           wc.field_Pb.setAsRenderTarget();
           var1.drawHalfSize(0, 0);
-          pa.a(-21189);
+          pa.popRasterState(-21189);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "hg.F(" + param0 + ')');
         }
@@ -73,7 +73,7 @@ final class hg {
         RuntimeException decompiledCaughtException = null;
         var5 = ZombieDawn.field_J;
         try {
-          if (null == sf.field_j) {
+          if (null == BufferedFile.field_j) {
             return null;
           }
           if (param1 == null) {
@@ -89,7 +89,7 @@ final class hg {
             stackIn_10_0 = null;
             return (oh) (stackIn_10_0);
           }
-          var3 = (oh) (sf.field_j.a(93, (long)var2.hashCode()));
+          var3 = (oh) (BufferedFile.field_j.a(93, (long)var2.hashCode()));
           while (true) {
             if (var3 == null) {
               var4 = -121 % ((60 - param0) / 32);
@@ -99,7 +99,7 @@ final class hg {
             var7 = (CharSequence) ((Object) var3.field_lb);
             var4_ref_String = fm.a(var7, -124);
             if (!var4_ref_String.equals(var2)) {
-              var3 = (oh) (sf.field_j.b((byte) -113));
+              var3 = (oh) (BufferedFile.field_j.b((byte) -113));
               continue;
             }
             break;
@@ -165,27 +165,27 @@ final class hg {
           var3 = ZombieDawn.field_J;
           try {
             if (null != SpatialBucket.field_c) {
-              SpatialBucket.field_c.d(31239);
+              SpatialBucket.field_c.closeConnection(31239);
             }
             if (he.field_d != null) {
-              he.field_d.a(true);
+              he.field_d.shutdown(true);
             }
             if (param0 != 0) {
               hg.c(-94);
             }
             if (null != da.field_j) {
               try {
-                da.field_j.b(463);
+                da.field_j.close(463);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
               }
             }
-            if (lg.field_v != null) {
-              for (var1_int = 0; var1_int < lg.field_v.length; var1_int++) {
-                if (lg.field_v[var1_int] != null) {
+            if (ViewportController.field_v != null) {
+              for (var1_int = 0; var1_int < ViewportController.field_v.length; var1_int++) {
+                if (ViewportController.field_v[var1_int] != null) {
                   try {
-                    lg.field_v[var1_int].b(463);
+                    ViewportController.field_v[var1_int].close(463);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var2 = (IOException) (Object) decompiledCaughtException;

@@ -8,7 +8,7 @@ final class lm extends WorldObject {
     private int field_E;
     int field_H;
 
-    final void g(int param0) {
+    final void tick(int param0) {
         if (param0 <= 95) {
           return;
         }
@@ -32,20 +32,20 @@ final class lm extends WorldObject {
 
     public static void releaseStatics(int param0) {
         if (param0 != 3) {
-          lm.f((byte) -9);
+          lm.hasPendingResize((byte) -9);
           field_D = null;
           return;
         }
         field_D = null;
     }
 
-    final static boolean f(byte param0) {
+    final static boolean hasPendingResize(byte param0) {
         if (param0 <= 124) {
-          lm.f((byte) 23);
+          lm.hasPendingResize((byte) 23);
           if (rn.field_b == null) {
             return false;
           }
-          if (rn.field_b.c(119)) {
+          if (rn.field_b.canResize(119)) {
             return true;
           }
           return false;
@@ -53,19 +53,19 @@ final class lm extends WorldObject {
         if (rn.field_b == null) {
           return false;
         }
-        if (rn.field_b.c(119)) {
+        if (rn.field_b.canResize(119)) {
           return true;
         }
         return false;
     }
 
-    final void a(byte param0, Camera param1) {
+    final void draw(byte param0, Camera param1) {
         int var3_int = 0;
         int var4 = 0;
         try {
           var3_int = param1.worldToScreenX(this.field_y >> 16, (byte) -96);
           if (param0 >= -76) {
-            lm.f((byte) -99);
+            lm.hasPendingResize((byte) -99);
           }
           var4 = param1.worldToScreenY(this.field_x >> 16, 0) - this.field_H;
           ob.field_c[this.field_E].drawTransparent(var3_int, var4);
@@ -81,7 +81,7 @@ final class lm extends WorldObject {
         this.field_G = so.randomInt(3) + 3;
         this.field_F = so.randomInt(this.field_G);
         this.field_E = so.randomInt(5);
-        so.a(pi.field_k);
+        so.a(ImageProducerRasterBuffer.field_k);
     }
 
     static {

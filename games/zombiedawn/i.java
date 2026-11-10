@@ -12,7 +12,7 @@ final class i extends pn implements hh {
     private an field_Z;
     static boolean field_Y;
 
-    private final void b(boolean param0) {
+    private final void hideFullscreenError(boolean param0) {
         if (!this.field_H) {
           return;
         }
@@ -27,7 +27,7 @@ final class i extends pn implements hh {
     final static void a(bo param0, byte param1, int param2) {
         try {
           mp.field_g.addFirst(0, param0);
-          SecondaryNodeDequeIterator.a(param2, true, param0);
+          SecondaryNodeDequeIterator.writeProgressRecord(param2, true, param0);
           if (param1 != 7) {
             field_V = -1.3851797580718994f;
           }
@@ -36,7 +36,7 @@ final class i extends pn implements hh {
         }
     }
 
-    private final an a(byte param0, sk param1, String param2) {
+    private final an appendButton(byte param0, sk param1, String param2) {
         an var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -57,9 +57,9 @@ final class i extends pn implements hh {
           }
           var5 = -6 + this.field_n;
           this.field_n = this.field_n + 38;
-          var4.a(param0 ^ -109, var5, 15, this.field_i - 14 - 16, 30);
-          this.a(var4, 10);
-          this.a(true);
+          var4.setBounds(param0 ^ -109, var5, 15, this.field_i - 14 - 16, 30);
+          this.addChild(var4, 10);
+          this.reapplyBounds(true);
           stackIn_4_0 = var4;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -90,7 +90,7 @@ final class i extends pn implements hh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_Z == param2) {
-            this.b(true);
+            this.hideFullscreenError(true);
           }
           if (param1 == -6) {
             return;
@@ -132,7 +132,7 @@ final class i extends pn implements hh {
             } else {
               var3 = d.field_a;
               this.field_n = this.field_n + 10;
-              if (lm.f((byte) 126)) {
+              if (lm.hasPendingResize((byte) 126)) {
                 this.field_n = this.field_n + 20;
                 var3 = il.field_a;
               }
@@ -146,8 +146,8 @@ final class i extends pn implements hh {
           var4.field_n = 80;
           var4.field_j = 50;
           var4.field_h = (io) ((Object) new vf(SecondaryNodeDeque.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.a(var4, 10);
-          this.field_Z = this.a((byte) 53, (sk) (this), re.field_c);
+          this.addChild(var4, 10);
+          this.field_Z = this.appendButton((byte) 53, (sk) (this), re.field_c);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -185,7 +185,7 @@ final class i extends pn implements hh {
           }
           dupTemp$1 = pd.monotonicTimeMillis(-22826);
           hm.field_N = dupTemp$1;
-          pi.field_i = dupTemp$1;
+          ImageProducerRasterBuffer.field_i = dupTemp$1;
           if (!param1) {
             field_X = (boolean[]) null;
           }
@@ -256,15 +256,15 @@ final class i extends pn implements hh {
           }
           var4 = ExceptionWrapper.field_d;
           synchronized (var4) {
-            uh.field_o.a(param0, true, -1);
+            uh.field_o.setChannelVolume(param0, true, -1);
             if (te.field_kb == param3) {
               return;
             }
-            uh.field_o.c(28013);
+            uh.field_o.stop(28013);
             ExceptionWrapper.field_d.flushDeviceSafely();
             te.field_kb = param3;
             if (te.field_kb != null) {
-              uh.field_o.a((byte) -22, te.field_kb, param1);
+              uh.field_o.playTrack((byte) -22, te.field_kb, param1);
             }
           }
           return;

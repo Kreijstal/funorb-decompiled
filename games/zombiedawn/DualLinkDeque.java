@@ -5,7 +5,7 @@ final class DualLinkDeque {
     private DualLinkNode field_a;
     private DualLinkNode field_b;
 
-    final DualLinkNode a(byte param0) {
+    final DualLinkNode next(byte param0) {
         DualLinkNode var2 = this.field_b;
         if (var2 == this.field_a) {
           this.field_b = null;
@@ -15,7 +15,7 @@ final class DualLinkDeque {
           this.field_b = var2.secondaryNext;
           return var2;
         }
-        this.a((byte) 86);
+        this.next((byte) 86);
         this.field_b = var2.secondaryNext;
         return var2;
     }
@@ -47,7 +47,7 @@ final class DualLinkDeque {
         }
     }
 
-    final static int a(CharSequence param0, int param1) {
+    final static int parseDecimalInt(CharSequence param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int stackIn_1_0 = 0;
@@ -57,7 +57,7 @@ final class DualLinkDeque {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 43 % ((param1 - 48) / 58);
-          stackIn_1_0 = SpatialBucket.a(true, 5, param0, 10);
+          stackIn_1_0 = SpatialBucket.parseIntRadix(true, 5, param0, 10);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -73,7 +73,7 @@ final class DualLinkDeque {
         }
     }
 
-    final static void b(byte param0) {
+    final static void handleSubmissionAcknowledgement(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -92,7 +92,7 @@ final class DualLinkDeque {
           var9 = fj.field_g;
           var3 = var9.readUnsignedByte((byte) -118);
           if (0 == var3) {
-            var4_ref_df = (df) (jj.field_D.b((byte) 26));
+            var4_ref_df = (df) (jj.field_D.last((byte) 26));
             if (var4_ref_df == null) {
               p.a(1);
               return;
@@ -119,10 +119,10 @@ final class DualLinkDeque {
             return;
           }
           var4 = var9.readInt(-105);
-          var5 = (ep) (uk.field_a.b((byte) 26));
+          var5 = (ep) (uk.field_a.last((byte) 26));
           while (var5 != null) {
             if (var4 != var5.field_k) {
-              var5 = (ep) (uk.field_a.a(false));
+              var5 = (ep) (uk.field_a.previous(false));
               continue;
             }
             break;
@@ -140,12 +140,12 @@ final class DualLinkDeque {
         }
     }
 
-    final int a(boolean param0) {
+    final int size(boolean param0) {
         int var4 = ZombieDawn.field_J;
         int var2 = 0;
         DualLinkNode var3 = this.field_a.secondaryNext;
         if (param0) {
-          DualLinkDeque.e((byte) 21);
+          DualLinkDeque.getCurrentAccountName((byte) 21);
           while (this.field_a != var3) {
             var2++;
             var3 = var3.secondaryNext;
@@ -159,12 +159,12 @@ final class DualLinkDeque {
         return var2;
     }
 
-    final static void d(byte param0) {
+    final static void showScreenSizeDialog(byte param0) {
         int var1 = 118 / ((-2 - param0) / 33);
         mg.a(false);
     }
 
-    final static lp a(Js5Archive param0, String param1, String param2, int param3, Js5Archive param4) {
+    final static lp loadCoverageFont(Js5Archive param0, String param1, String param2, int param3, Js5Archive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -181,12 +181,12 @@ final class DualLinkDeque {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param4.a(param1, (byte) 8);
+          var5_int = param4.getGroupIdByName(param1, (byte) 8);
           if (param3 != 0) {
             stackIn_2_0 = (lp) null;
             return stackIn_2_0;
           }
-          var6 = param4.a(var5_int, param2, true);
+          var6 = param4.getFileIdByName(var5_int, param2, true);
           stackIn_4_0 = oj.a(var6, param0, var5_int, param4, param3 + 0);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -227,7 +227,7 @@ final class DualLinkDeque {
         this.field_a.secondaryPrevious = this.field_a;
     }
 
-    final void b(int param0) {
+    final void clear(int param0) {
         DualLinkNode var5 = null;
         DualLinkNode var4 = null;
         int var3 = ZombieDawn.field_J;
@@ -253,7 +253,7 @@ final class DualLinkDeque {
         this.field_b = null;
     }
 
-    final DualLinkNode c(byte param0) {
+    final DualLinkNode first(byte param0) {
         DualLinkNode var2 = this.field_a.secondaryNext;
         if (param0 != 34) {
           this.field_a = (DualLinkNode) null;
@@ -272,7 +272,7 @@ final class DualLinkDeque {
         return var2;
     }
 
-    final static String e(byte param0) {
+    final static String getCurrentAccountName(byte param0) {
         if (fk.field_F == vh.field_c) {
           return to.field_d;
         }
@@ -285,7 +285,7 @@ final class DualLinkDeque {
         if (param0 < -12) {
           return GameLoopApplet.field_B;
         }
-        DualLinkDeque.e((byte) 66);
+        DualLinkDeque.getCurrentAccountName((byte) 66);
         return GameLoopApplet.field_B;
     }
 

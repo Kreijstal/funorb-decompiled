@@ -12,7 +12,7 @@ final class gk extends WorldObject {
     private boolean field_J;
     static String field_I;
 
-    final void a(byte param0, Camera param1) {
+    final void draw(byte param0, Camera param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -87,7 +87,7 @@ final class gk extends WorldObject {
         field_H = null;
     }
 
-    final static void a(int param0, Sprite[] param1, boolean param2) {
+    final static void installZombieSpriteSet(int param0, Sprite[] param1, boolean param2) {
         byte[] var4 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -102,7 +102,7 @@ final class gk extends WorldObject {
           }
           if (!param2) {
             var4 = (byte[]) null;
-            gk.a((byte) 57, (byte[]) null);
+            gk.decodeTileMapWithHeader((byte) 57, (byte[]) null);
             cn.field_f.makeRasterTarget(57);
           } else {
             cn.field_f.makeRasterTarget(57);
@@ -122,7 +122,7 @@ final class gk extends WorldObject {
         }
     }
 
-    final static void j(int param0) {
+    final static void buildLogoModelFrame(int param0) {
         int var15 = 0;
         int var17_int = 0;
         int var18 = 0;
@@ -189,7 +189,7 @@ final class gk extends WorldObject {
           var6Lifetime1 = LevelNavigation.field_x << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = rd.a(true, var6Lifetime1) >> 8;
-          var9Lifetime1 = WorldObject.a(1311979239, var6Lifetime1) >> 8;
+          var9Lifetime1 = WorldObject.cosFixed(1311979239, var6Lifetime1) >> 8;
           if (ha.field_b != -1 &&
             -1 != ei.field_K) {
             var7Lifetime1 = ha.field_b - 320;
@@ -220,7 +220,7 @@ final class gk extends WorldObject {
             for (var18 = 0; 3 > var18; var18++) {
               jc.field_n[var18] = jc.field_n[var18] + eg.field_o[var15][var18];
             }
-            ad.a(true, jc.field_n, var17, (byte) 50, false, false, bn.field_b);
+            ad.projectMeshAndQueueFaces(true, jc.field_n, var17, (byte) 50, false, false, bn.field_b);
             rc.a((byte) -111, var14, var13Lifetime1, var17, var7Lifetime1, var8Lifetime1, var9Lifetime1, var12Lifetime1);
           }
           return;
@@ -231,7 +231,7 @@ final class gk extends WorldObject {
         }
     }
 
-    final static int[] a(int param0, int param1, int param2) {
+    final static int[] createColorRamp(int param0, int param1, int param2) {
         int var10 = 0;
         int var11 = 0;
         int var12 = ZombieDawn.field_J;
@@ -253,14 +253,14 @@ final class gk extends WorldObject {
         return var3;
     }
 
-    final void g(int param0) {
+    final void tick(int param0) {
         if (param0 < 95) {
           Camera var3 = (Camera) null;
-          this.a((byte) -5, (Camera) null);
+          this.draw((byte) -5, (Camera) null);
         }
     }
 
-    final static TileMap a(byte param0, byte[] param1) {
+    final static TileMap decodeTileMapWithHeader(byte param0, byte[] param1) {
         int var6 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -284,14 +284,14 @@ final class gk extends WorldObject {
           var3 = 10;
           var4 = 0;
           var5 = new byte[12 + param1.length];
-          WorldObject.a(0, var5, (byte) 67, md.a(0, param1, 74));
-          WorldObject.a(1, var5, (byte) -87, var4);
-          WorldObject.a(2, var5, (byte) 70, var2_int);
-          WorldObject.a(3, var5, (byte) -109, var3);
+          WorldObject.putIntAt(0, var5, (byte) 67, md.a(0, param1, 74));
+          WorldObject.putIntAt(1, var5, (byte) -87, var4);
+          WorldObject.putIntAt(2, var5, (byte) 70, var2_int);
+          WorldObject.putIntAt(3, var5, (byte) -109, var3);
           for (var6 = 1; param1.length / 4 > var6; var6++) {
-            WorldObject.a(var6 + 3, var5, (byte) -125, md.a(var6, param1, 85));
+            WorldObject.putIntAt(var6 + 3, var5, (byte) -125, md.a(var6, param1, 85));
           }
-          stackIn_8_0 = fc.a(var5, (byte) 126);
+          stackIn_8_0 = fc.decodeTileMapWithDefaultSize(var5, (byte) 126);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -110,8 +110,8 @@ final class d {
                 }
                 var6 = stackIn_23_0;
               }
-              if (bp.field_a.length > NodeHashTableIterator.field_b.length) {
-                stackIn_27_0 = bp.field_a.length;
+              if (Js5ArchiveManager.field_a.length > NodeHashTableIterator.field_b.length) {
+                stackIn_27_0 = Js5ArchiveManager.field_a.length;
               } else {
                 stackIn_27_0 = NodeHashTableIterator.field_b.length;
               }

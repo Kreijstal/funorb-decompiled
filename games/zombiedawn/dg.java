@@ -218,7 +218,7 @@ final class dg extends IOException {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            stackIn_6_0 = (param0.k(111, 1) == 1);
+            stackIn_6_0 = (param0.readBits(111, 1) == 1);
             return stackIn_6_0;
           }
           return true;
@@ -252,18 +252,18 @@ final class dg extends IOException {
               nd.field_b = false;
               var3_int = 1;
             }
-            ja.a(jb.a((byte) -58), ud.field_c, var3_int != 0, dp.a(param1 - 103), (byte) -90);
+            ja.a(jb.getLoadingStatusText((byte) -58), ud.field_c, var3_int != 0, dp.getCommonUiLoadProgress(param1 - 103), (byte) -90);
           } else {
-            if (!Point.a(param1 ^ -251)) {
+            if (!Point.isIntroFinished(param1 ^ -251)) {
               Rasterizer.clear();
-              dp.a(320, -12138, 240);
+              dp.drawIntroLogo(320, -12138, 240);
               uh.a(40, 0, 0, param0);
             } else {
               if (fl.field_a == 0) {
-                uo.a(false, -28518, param2);
+                IsaacCipher.drawOverlayBackdrop(false, -28518, param2);
                 uh.a(param1 ^ -120, 0, 0, param0);
               } else {
-                am.a(param0, (byte) -94);
+                am.presentFrame(param0, (byte) -94);
               }
             }
           }

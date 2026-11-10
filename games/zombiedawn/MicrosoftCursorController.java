@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class th extends com.ms.dll.Callback {
+final class MicrosoftCursorController extends com.ms.dll.Callback {
     private volatile int field_a;
     private int field_d;
     private volatile boolean field_b;
@@ -62,7 +62,7 @@ final class th extends com.ms.dll.Callback {
         return 0;
     }
 
-    final void a(java.awt.Component param0, boolean param1, boolean param2) {
+    final void setCursorVisible(java.awt.Component param0, boolean param1, boolean param2) {
         int var5 = 0;
         Object var6 = null;
         Throwable var8 = null;
@@ -110,14 +110,14 @@ final class th extends com.ms.dll.Callback {
         com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);
     }
 
-    final void a(int param0, int param1, byte param2) {
+    final void setCursorPosition(int param0, int param1, byte param2) {
         if (param2 != -70) {
           return;
         }
         com.ms.win32.User32.SetCursorPos(param1, param0);
     }
 
-    th() {
+    MicrosoftCursorController() {
         this.field_b = true;
     }
 }

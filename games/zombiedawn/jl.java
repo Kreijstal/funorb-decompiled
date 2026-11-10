@@ -7,7 +7,7 @@ final class jl extends bj {
     static cg field_v;
     static MouseWheelInput field_u;
 
-    final Object d(byte param0) {
+    final Object getValue(byte param0) {
         if (param0 < 49) {
           field_s = (int[]) null;
           return this.field_t;
@@ -22,7 +22,7 @@ final class jl extends bj {
         field_s = null;
     }
 
-    final boolean b(boolean param0) {
+    final boolean isSoftReference(boolean param0) {
         if (!param0) {
           byte[] var3 = (byte[]) null;
           jl.a((byte[]) null, (byte) 35);

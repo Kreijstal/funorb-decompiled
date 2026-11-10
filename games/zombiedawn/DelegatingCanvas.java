@@ -31,7 +31,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         int var6 = ZombieDawn.field_J;
         am var7 = dp.field_e;
         am var8 = var7;
-        var8.j(11, param1);
+        var8.writeCipheredByte(11, param1);
         var8.position = var8.position + 1;
         int var4 = var8.position;
         var8.writeByte(1, 100);
@@ -82,14 +82,14 @@ final class DelegatingCanvas extends java.awt.Canvas {
         int var2;
         var3 = ZombieDawn.field_J;
         var1 = param0 ? 1 : 0;
-        if (we.o((byte) -80)) {
-          GameWorld.a((byte) 120);
+        if (we.hasActiveDialog((byte) -80)) {
+          GameWorld.drawDialogOverlay((byte) 120);
           var1 = 1;
         } else {
           if (!dl.a(false)) {
-            if (ac.d(50)) {
+            if (ac.isDimOverlayShown(50)) {
               Rasterizer.halveBrightnessRectangle(0, 0, Rasterizer.width, Rasterizer.height);
-              oe.a((byte) -116);
+              oe.drawLegacyMenuWithFrame((byte) -116);
               var1 = 1;
             }
           } else {
@@ -105,7 +105,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           } else {
             stackIn_12_1 = mp.field_c;
           }
-          dm.$cfr$intArgs$a$7ffe4b125357(stackIn_11_0, stackIn_12_1);
+          dm.drawDimmedOverlayAt(stackIn_11_0, stackIn_12_1);
           var1 = 1;
         }
         if (bg.a(2)) {

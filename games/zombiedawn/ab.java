@@ -9,7 +9,7 @@ final class ab extends ln {
     private int field_i;
     private long field_f;
 
-    private final long b(boolean param0) {
+    private final long averageFrameNanos(boolean param0) {
         int var8 = 0;
         int var9 = ZombieDawn.field_J;
         long var2 = System.nanoTime();
@@ -33,18 +33,18 @@ final class ab extends ln {
         return var6 / (long)this.field_i;
     }
 
-    final long a(byte param0) {
+    final long delayMillis(byte param0) {
         if (param0 > -110) {
           this.field_e = (long[]) null;
         }
-        this.field_h = this.field_h + this.b(true);
+        this.field_h = this.field_h + this.averageFrameNanos(true);
         if (this.field_h < this.field_f) {
           return (-this.field_h + this.field_f) / 1000000L;
         }
         return 0L;
     }
 
-    final static void a(Sprite[] param0, byte param1, int param2) {
+    final static void setWidgetSpriteSet(Sprite[] param0, byte param1, int param2) {
         int var4 = 0;
         Sprite[] var5 = null;
         RuntimeException stackIn_17_0 = null;
@@ -57,126 +57,126 @@ final class ab extends ln {
           ob.field_b[param2] = param0;
           if (param1 <= 31) {
             var5 = (Sprite[]) null;
-            ab.a((Sprite[]) null, (byte) 32, 21);
+            ab.setWidgetSpriteSet((Sprite[]) null, (byte) 32, 21);
           }
           if (param2 != 0) {
             if (param2 == 4) {
-              MouseInputHandler.a(param0, 3, 79, (byte) -17, 0);
-              MouseInputHandler.a(param0, 4, 78, (byte) -17, 0);
-              MouseInputHandler.a(param0, 1, 77, (byte) -17, 0);
-              MouseInputHandler.a(param0, 2, 76, (byte) -17, 0);
-              MouseInputHandler.a(param0, 5, 75, (byte) -17, 0);
-              MouseInputHandler.a(param0, 6, 74, (byte) -17, 0);
-              MouseInputHandler.a(param0, 7, 73, (byte) -17, 0);
-              MouseInputHandler.a(param0, 8, 72, (byte) -17, 0);
-              MouseInputHandler.a(param0, 0, 71, (byte) -17, 0);
+              MouseInputHandler.createShadedTileVariant(param0, 3, 79, (byte) -17, 0);
+              MouseInputHandler.createShadedTileVariant(param0, 4, 78, (byte) -17, 0);
+              MouseInputHandler.createShadedTileVariant(param0, 1, 77, (byte) -17, 0);
+              MouseInputHandler.createShadedTileVariant(param0, 2, 76, (byte) -17, 0);
+              MouseInputHandler.createShadedTileVariant(param0, 5, 75, (byte) -17, 0);
+              MouseInputHandler.createShadedTileVariant(param0, 6, 74, (byte) -17, 0);
+              MouseInputHandler.createShadedTileVariant(param0, 7, 73, (byte) -17, 0);
+              MouseInputHandler.createShadedTileVariant(param0, 8, 72, (byte) -17, 0);
+              MouseInputHandler.createShadedTileVariant(param0, 0, 71, (byte) -17, 0);
             } else {
               if (1 != param2) {
                 if (param2 == 2) {
-                  MouseInputHandler.a(param0, 3, 63, (byte) -17, 0);
-                  MouseInputHandler.a(param0, 4, 62, (byte) -17, 0);
-                  MouseInputHandler.a(param0, 1, 61, (byte) -17, 0);
-                  MouseInputHandler.a(param0, 2, 60, (byte) -17, 0);
-                  MouseInputHandler.a(param0, 5, 59, (byte) -17, 0);
-                  MouseInputHandler.a(param0, 6, 58, (byte) -17, 0);
-                  MouseInputHandler.a(param0, 7, 57, (byte) -17, 0);
-                  MouseInputHandler.a(param0, 8, 56, (byte) -17, 0);
-                  MouseInputHandler.a(param0, 3, 55, (byte) -17, 3);
-                  MouseInputHandler.a(param0, 4, 54, (byte) -17, 3);
-                  MouseInputHandler.a(param0, 1, 53, (byte) -17, 3);
-                  MouseInputHandler.a(param0, 2, 52, (byte) -17, 3);
-                  MouseInputHandler.a(param0, 5, 51, (byte) -17, 3);
-                  MouseInputHandler.a(param0, 6, 50, (byte) -17, 3);
-                  MouseInputHandler.a(param0, 7, 49, (byte) -17, 3);
-                  MouseInputHandler.a(param0, 8, 48, (byte) -17, 3);
-                  MouseInputHandler.a(param0, 0, 47, (byte) -17, 0);
-                  MouseInputHandler.a(param0, 0, 46, (byte) -17, 3);
-                  MouseInputHandler.a(param0, 2, 45, (byte) -17, 15);
-                  MouseInputHandler.a(param0, 1, 44, (byte) -17, 15);
+                  MouseInputHandler.createShadedTileVariant(param0, 3, 63, (byte) -17, 0);
+                  MouseInputHandler.createShadedTileVariant(param0, 4, 62, (byte) -17, 0);
+                  MouseInputHandler.createShadedTileVariant(param0, 1, 61, (byte) -17, 0);
+                  MouseInputHandler.createShadedTileVariant(param0, 2, 60, (byte) -17, 0);
+                  MouseInputHandler.createShadedTileVariant(param0, 5, 59, (byte) -17, 0);
+                  MouseInputHandler.createShadedTileVariant(param0, 6, 58, (byte) -17, 0);
+                  MouseInputHandler.createShadedTileVariant(param0, 7, 57, (byte) -17, 0);
+                  MouseInputHandler.createShadedTileVariant(param0, 8, 56, (byte) -17, 0);
+                  MouseInputHandler.createShadedTileVariant(param0, 3, 55, (byte) -17, 3);
+                  MouseInputHandler.createShadedTileVariant(param0, 4, 54, (byte) -17, 3);
+                  MouseInputHandler.createShadedTileVariant(param0, 1, 53, (byte) -17, 3);
+                  MouseInputHandler.createShadedTileVariant(param0, 2, 52, (byte) -17, 3);
+                  MouseInputHandler.createShadedTileVariant(param0, 5, 51, (byte) -17, 3);
+                  MouseInputHandler.createShadedTileVariant(param0, 6, 50, (byte) -17, 3);
+                  MouseInputHandler.createShadedTileVariant(param0, 7, 49, (byte) -17, 3);
+                  MouseInputHandler.createShadedTileVariant(param0, 8, 48, (byte) -17, 3);
+                  MouseInputHandler.createShadedTileVariant(param0, 0, 47, (byte) -17, 0);
+                  MouseInputHandler.createShadedTileVariant(param0, 0, 46, (byte) -17, 3);
+                  MouseInputHandler.createShadedTileVariant(param0, 2, 45, (byte) -17, 15);
+                  MouseInputHandler.createShadedTileVariant(param0, 1, 44, (byte) -17, 15);
                 } else {
                   if (param2 == 3) {
-                    MouseInputHandler.a(param0, 3, 63, (byte) -17, 4);
-                    MouseInputHandler.a(param0, 4, 62, (byte) -17, 4);
-                    MouseInputHandler.a(param0, 1, 61, (byte) -17, 4);
-                    MouseInputHandler.a(param0, 2, 60, (byte) -17, 4);
-                    MouseInputHandler.a(param0, 5, 59, (byte) -17, 4);
-                    MouseInputHandler.a(param0, 6, 58, (byte) -17, 4);
-                    MouseInputHandler.a(param0, 7, 57, (byte) -17, 4);
-                    MouseInputHandler.a(param0, 8, 56, (byte) -17, 4);
-                    MouseInputHandler.a(param0, 0, 55, (byte) -17, 4);
-                    MouseInputHandler.a(param0, 0, 52, (byte) -17, 5);
-                    MouseInputHandler.a(param0, 2, 51, (byte) -17, 12);
-                    MouseInputHandler.a(param0, 1, 50, (byte) -17, 12);
-                    MouseInputHandler.a(param0, 2, 49, (byte) -17, 26);
-                    MouseInputHandler.a(param0, 1, 48, (byte) -17, 26);
-                    MouseInputHandler.a(param0, 8, 47, (byte) -17, 26);
-                    MouseInputHandler.a(param0, 5, 46, (byte) -17, 26);
-                    MouseInputHandler.a(param0, 6, 45, (byte) -17, 26);
-                    MouseInputHandler.a(param0, 7, 44, (byte) -17, 26);
-                    MouseInputHandler.a(param0, 2, 43, (byte) -17, 6);
-                    MouseInputHandler.a(param0, 1, 42, (byte) -17, 6);
-                    MouseInputHandler.a(param0, 5, 41, (byte) -17, 12);
-                    MouseInputHandler.a(param0, 8, 40, (byte) -17, 12);
-                    MouseInputHandler.a(param0, 4, 39, (byte) -17, 12);
-                    MouseInputHandler.a(param0, 3, 38, (byte) -17, 12);
-                    MouseInputHandler.a(param0, 2, 37, (byte) -17, 29);
-                    MouseInputHandler.a(param0, 0, 36, (byte) -17, 29);
-                    MouseInputHandler.a(param0, 4, 23, (byte) -17, 26);
-                    MouseInputHandler.a(param0, 6, 22, (byte) -17, 12);
-                    MouseInputHandler.a(param0, 7, 21, (byte) -17, 12);
+                    MouseInputHandler.createShadedTileVariant(param0, 3, 63, (byte) -17, 4);
+                    MouseInputHandler.createShadedTileVariant(param0, 4, 62, (byte) -17, 4);
+                    MouseInputHandler.createShadedTileVariant(param0, 1, 61, (byte) -17, 4);
+                    MouseInputHandler.createShadedTileVariant(param0, 2, 60, (byte) -17, 4);
+                    MouseInputHandler.createShadedTileVariant(param0, 5, 59, (byte) -17, 4);
+                    MouseInputHandler.createShadedTileVariant(param0, 6, 58, (byte) -17, 4);
+                    MouseInputHandler.createShadedTileVariant(param0, 7, 57, (byte) -17, 4);
+                    MouseInputHandler.createShadedTileVariant(param0, 8, 56, (byte) -17, 4);
+                    MouseInputHandler.createShadedTileVariant(param0, 0, 55, (byte) -17, 4);
+                    MouseInputHandler.createShadedTileVariant(param0, 0, 52, (byte) -17, 5);
+                    MouseInputHandler.createShadedTileVariant(param0, 2, 51, (byte) -17, 12);
+                    MouseInputHandler.createShadedTileVariant(param0, 1, 50, (byte) -17, 12);
+                    MouseInputHandler.createShadedTileVariant(param0, 2, 49, (byte) -17, 26);
+                    MouseInputHandler.createShadedTileVariant(param0, 1, 48, (byte) -17, 26);
+                    MouseInputHandler.createShadedTileVariant(param0, 8, 47, (byte) -17, 26);
+                    MouseInputHandler.createShadedTileVariant(param0, 5, 46, (byte) -17, 26);
+                    MouseInputHandler.createShadedTileVariant(param0, 6, 45, (byte) -17, 26);
+                    MouseInputHandler.createShadedTileVariant(param0, 7, 44, (byte) -17, 26);
+                    MouseInputHandler.createShadedTileVariant(param0, 2, 43, (byte) -17, 6);
+                    MouseInputHandler.createShadedTileVariant(param0, 1, 42, (byte) -17, 6);
+                    MouseInputHandler.createShadedTileVariant(param0, 5, 41, (byte) -17, 12);
+                    MouseInputHandler.createShadedTileVariant(param0, 8, 40, (byte) -17, 12);
+                    MouseInputHandler.createShadedTileVariant(param0, 4, 39, (byte) -17, 12);
+                    MouseInputHandler.createShadedTileVariant(param0, 3, 38, (byte) -17, 12);
+                    MouseInputHandler.createShadedTileVariant(param0, 2, 37, (byte) -17, 29);
+                    MouseInputHandler.createShadedTileVariant(param0, 0, 36, (byte) -17, 29);
+                    MouseInputHandler.createShadedTileVariant(param0, 4, 23, (byte) -17, 26);
+                    MouseInputHandler.createShadedTileVariant(param0, 6, 22, (byte) -17, 12);
+                    MouseInputHandler.createShadedTileVariant(param0, 7, 21, (byte) -17, 12);
                   }
                 }
               } else {
-                MouseInputHandler.a(param0, 2, 63, (byte) -17, 2);
-                MouseInputHandler.a(param0, 1, 62, (byte) -17, 2);
-                MouseInputHandler.a(param0, 5, 61, (byte) -17, 2);
-                MouseInputHandler.a(param0, 6, 60, (byte) -17, 2);
-                MouseInputHandler.a(param0, 8, 59, (byte) -17, 2);
-                MouseInputHandler.a(param0, 7, 58, (byte) -17, 2);
-                MouseInputHandler.a(param0, 4, 57, (byte) -17, 2);
-                MouseInputHandler.a(param0, 2, 56, (byte) -17, 3);
-                MouseInputHandler.a(param0, 1, 55, (byte) -17, 3);
-                MouseInputHandler.a(param0, 5, 54, (byte) -17, 3);
-                MouseInputHandler.a(param0, 6, 53, (byte) -17, 3);
-                MouseInputHandler.a(param0, 8, 52, (byte) -17, 3);
-                MouseInputHandler.a(param0, 7, 51, (byte) -17, 3);
-                MouseInputHandler.a(param0, 0, 50, (byte) -17, 3);
-                MouseInputHandler.a(param0, 3, 49, (byte) -17, 2);
-                MouseInputHandler.a(param0, 1, 48, (byte) -17, 0);
-                MouseInputHandler.a(param0, 2, 47, (byte) -17, 0);
-                MouseInputHandler.a(param0, 3, 46, (byte) -17, 9);
+                MouseInputHandler.createShadedTileVariant(param0, 2, 63, (byte) -17, 2);
+                MouseInputHandler.createShadedTileVariant(param0, 1, 62, (byte) -17, 2);
+                MouseInputHandler.createShadedTileVariant(param0, 5, 61, (byte) -17, 2);
+                MouseInputHandler.createShadedTileVariant(param0, 6, 60, (byte) -17, 2);
+                MouseInputHandler.createShadedTileVariant(param0, 8, 59, (byte) -17, 2);
+                MouseInputHandler.createShadedTileVariant(param0, 7, 58, (byte) -17, 2);
+                MouseInputHandler.createShadedTileVariant(param0, 4, 57, (byte) -17, 2);
+                MouseInputHandler.createShadedTileVariant(param0, 2, 56, (byte) -17, 3);
+                MouseInputHandler.createShadedTileVariant(param0, 1, 55, (byte) -17, 3);
+                MouseInputHandler.createShadedTileVariant(param0, 5, 54, (byte) -17, 3);
+                MouseInputHandler.createShadedTileVariant(param0, 6, 53, (byte) -17, 3);
+                MouseInputHandler.createShadedTileVariant(param0, 8, 52, (byte) -17, 3);
+                MouseInputHandler.createShadedTileVariant(param0, 7, 51, (byte) -17, 3);
+                MouseInputHandler.createShadedTileVariant(param0, 0, 50, (byte) -17, 3);
+                MouseInputHandler.createShadedTileVariant(param0, 3, 49, (byte) -17, 2);
+                MouseInputHandler.createShadedTileVariant(param0, 1, 48, (byte) -17, 0);
+                MouseInputHandler.createShadedTileVariant(param0, 2, 47, (byte) -17, 0);
+                MouseInputHandler.createShadedTileVariant(param0, 3, 46, (byte) -17, 9);
               }
             }
           } else {
             param0[6].setAsRenderTarget();
             Rasterizer.fillRect(0, 0, 24, 24, 0);
-            MouseInputHandler.a(param0, 3, 79, (byte) -17, 2);
-            MouseInputHandler.a(param0, 4, 78, (byte) -17, 2);
-            MouseInputHandler.a(param0, 1, 77, (byte) -17, 2);
-            MouseInputHandler.a(param0, 2, 76, (byte) -17, 2);
-            MouseInputHandler.a(param0, 5, 75, (byte) -17, 2);
-            MouseInputHandler.a(param0, 6, 74, (byte) -17, 2);
-            MouseInputHandler.a(param0, 7, 73, (byte) -17, 2);
-            MouseInputHandler.a(param0, 8, 72, (byte) -17, 2);
-            MouseInputHandler.a(param0, 3, 71, (byte) -17, 0);
-            MouseInputHandler.a(param0, 4, 70, (byte) -17, 0);
-            MouseInputHandler.a(param0, 1, 69, (byte) -17, 0);
-            MouseInputHandler.a(param0, 2, 68, (byte) -17, 0);
-            MouseInputHandler.a(param0, 5, 67, (byte) -17, 0);
-            MouseInputHandler.a(param0, 6, 66, (byte) -17, 0);
-            MouseInputHandler.a(param0, 7, 65, (byte) -17, 0);
-            MouseInputHandler.a(param0, 8, 64, (byte) -17, 0);
-            MouseInputHandler.a(param0, 2, 61, (byte) -17, 7);
-            MouseInputHandler.a(param0, 1, 60, (byte) -17, 7);
-            MouseInputHandler.a(param0, 5, 59, (byte) -17, 7);
-            MouseInputHandler.a(param0, 6, 58, (byte) -17, 7);
-            MouseInputHandler.a(param0, 7, 57, (byte) -17, 7);
-            MouseInputHandler.a(param0, 8, 56, (byte) -17, 7);
-            MouseInputHandler.a(param0, 2, 55, (byte) -17, 24);
-            MouseInputHandler.a(param0, 1, 54, (byte) -17, 24);
-            MouseInputHandler.a(param0, 5, 53, (byte) -17, 24);
-            MouseInputHandler.a(param0, 0, 63, (byte) -17, 2);
-            MouseInputHandler.a(param0, 0, 62, (byte) -17, 0);
+            MouseInputHandler.createShadedTileVariant(param0, 3, 79, (byte) -17, 2);
+            MouseInputHandler.createShadedTileVariant(param0, 4, 78, (byte) -17, 2);
+            MouseInputHandler.createShadedTileVariant(param0, 1, 77, (byte) -17, 2);
+            MouseInputHandler.createShadedTileVariant(param0, 2, 76, (byte) -17, 2);
+            MouseInputHandler.createShadedTileVariant(param0, 5, 75, (byte) -17, 2);
+            MouseInputHandler.createShadedTileVariant(param0, 6, 74, (byte) -17, 2);
+            MouseInputHandler.createShadedTileVariant(param0, 7, 73, (byte) -17, 2);
+            MouseInputHandler.createShadedTileVariant(param0, 8, 72, (byte) -17, 2);
+            MouseInputHandler.createShadedTileVariant(param0, 3, 71, (byte) -17, 0);
+            MouseInputHandler.createShadedTileVariant(param0, 4, 70, (byte) -17, 0);
+            MouseInputHandler.createShadedTileVariant(param0, 1, 69, (byte) -17, 0);
+            MouseInputHandler.createShadedTileVariant(param0, 2, 68, (byte) -17, 0);
+            MouseInputHandler.createShadedTileVariant(param0, 5, 67, (byte) -17, 0);
+            MouseInputHandler.createShadedTileVariant(param0, 6, 66, (byte) -17, 0);
+            MouseInputHandler.createShadedTileVariant(param0, 7, 65, (byte) -17, 0);
+            MouseInputHandler.createShadedTileVariant(param0, 8, 64, (byte) -17, 0);
+            MouseInputHandler.createShadedTileVariant(param0, 2, 61, (byte) -17, 7);
+            MouseInputHandler.createShadedTileVariant(param0, 1, 60, (byte) -17, 7);
+            MouseInputHandler.createShadedTileVariant(param0, 5, 59, (byte) -17, 7);
+            MouseInputHandler.createShadedTileVariant(param0, 6, 58, (byte) -17, 7);
+            MouseInputHandler.createShadedTileVariant(param0, 7, 57, (byte) -17, 7);
+            MouseInputHandler.createShadedTileVariant(param0, 8, 56, (byte) -17, 7);
+            MouseInputHandler.createShadedTileVariant(param0, 2, 55, (byte) -17, 24);
+            MouseInputHandler.createShadedTileVariant(param0, 1, 54, (byte) -17, 24);
+            MouseInputHandler.createShadedTileVariant(param0, 5, 53, (byte) -17, 24);
+            MouseInputHandler.createShadedTileVariant(param0, 0, 63, (byte) -17, 2);
+            MouseInputHandler.createShadedTileVariant(param0, 0, 62, (byte) -17, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -193,7 +193,7 @@ final class ab extends ln {
         }
     }
 
-    final void a(boolean param0) {
+    final void resetTiming(boolean param0) {
         if (this.field_f > this.field_h) {
           this.field_h = this.field_h + (-this.field_h + this.field_f);
         }
@@ -203,12 +203,12 @@ final class ab extends ln {
         }
     }
 
-    final int a(int param0, long param1) {
+    final int advanceTicks(int param0, long param1) {
         int var4;
         int var5;
         var5 = ZombieDawn.field_J;
         if (param0 > -76) {
-          this.a(false);
+          this.resetTiming(false);
         }
         if (this.field_h < this.field_f) {
           this.field_g = this.field_g + (-this.field_h + this.field_f);
@@ -228,14 +228,14 @@ final class ab extends ln {
         return var4;
     }
 
-    final static Sprite[] a(int param0, byte param1, int param2, int param3, int param4) {
+    final static Sprite[] createSimpleBevelFrameSprites(int param0, byte param1, int param2, int param3, int param4) {
         if (param1 >= -6) {
-          ab.a(61, (byte) -100, -10, 45, -84);
+          ab.createSimpleBevelFrameSprites(61, (byte) -100, -10, 45, -84);
         }
         return ca.a(param2, param0, 1, 1, param4, 1, 3, param3, -120);
     }
 
-    final static void a(PacketBuffer param0, java.math.BigInteger param1, byte param2, PacketBuffer param3, java.math.BigInteger param4) {
+    final static void writeRsaEncryptedBlock(PacketBuffer param0, java.math.BigInteger param1, byte param2, PacketBuffer param3, java.math.BigInteger param4) {
         try {
           int var5_int = 50 % ((param2 + 43) / 46);
           oh.a(param0.payload, 0, param4, param3, param0.position, 31857, param1);

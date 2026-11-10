@@ -24,7 +24,7 @@ final class fj extends pm {
           Rasterizer.clear();
           param0.drawTransparent(3, 3);
           ho.a(md.field_vb, param3, param1, -109);
-          pa.a(-21189);
+          pa.popRasterState(-21189);
           stackIn_4_0 = md.field_vb;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -81,14 +81,14 @@ final class fj extends pm {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_f instanceof mi) {
-            var3 = ((mi) ((Object) this.field_f)).a(0);
+            var3 = ((mi) ((Object) this.field_f)).getValidationSource(0);
             if (var3 != null) {
-              if (var3.a((byte) -75) == mc.field_g &&
+              if (var3.getValidationState((byte) -75) == mc.field_g &&
                 !param0.equals(this.field_f.field_o)) {
                 stackIn_5_0 = ne.field_a;
                 return stackIn_5_0;
               }
-              stackIn_7_0 = var3.b((byte) -125);
+              stackIn_7_0 = var3.getValidationMessage((byte) -125);
               return stackIn_7_0;
             }
           }
@@ -128,9 +128,9 @@ final class fj extends pm {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_f instanceof mi) {
-            var3 = ((mi) ((Object) this.field_f)).a(0);
+            var3 = ((mi) ((Object) this.field_f)).getValidationSource(0);
             if (var3 != null &&
-              var3.a((byte) -105) != mc.field_g) {
+              var3.getValidationState((byte) -105) != mc.field_g) {
               stackIn_5_0 = MouseWheelInput.field_b;
               return stackIn_5_0;
             }

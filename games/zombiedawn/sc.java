@@ -10,9 +10,9 @@ final class sc {
     final static boolean a(byte param0) {
         if (param0 > -127) {
           sc.a((byte) 91);
-          return ep.field_l.a((byte) 0);
+          return ep.field_l.loadMasterIndex((byte) 0);
         }
-        return ep.field_l.a((byte) 0);
+        return ep.field_l.loadMasterIndex((byte) 0);
     }
 
     public static void releaseStatics(int param0) {

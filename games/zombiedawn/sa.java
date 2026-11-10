@@ -12,10 +12,10 @@ final class sa extends pn {
     private hb field_V;
     static ZombieDawn field_Y;
 
-    final void a(int param0, int param1, byte param2) {
+    final void drawPanelBackground(int param0, int param1, byte param2) {
         if (param2 > -111) {
-          this.m(-92);
-          super.a(param0, param1, (byte) -121);
+          this.stopProgressAnimation(-92);
+          super.drawPanelBackground(param0, param1, (byte) -121);
           rk.field_b.drawStringCentered(this.field_W, param0 + (this.field_i >> 1), 103 + param1, 16777215, -1);
           if (this.field_X != null) {
             Rasterizer.drawHorizontalLine(param0 + 20, -7 + (param1 + 120), 260, 8421504);
@@ -24,7 +24,7 @@ final class sa extends pn {
           }
           return;
         }
-        super.a(param0, param1, (byte) -121);
+        super.drawPanelBackground(param0, param1, (byte) -121);
         rk.field_b.drawStringCentered(this.field_W, param0 + (this.field_i >> 1), 103 + param1, 16777215, -1);
         if (this.field_X == null) {
           return;
@@ -43,7 +43,7 @@ final class sa extends pn {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 61 % ((param1 - 51) / 40);
-          stackIn_1_0 = SpatialBucket.a(true, 5, param0, param2);
+          stackIn_1_0 = SpatialBucket.parseIntRadix(true, 5, param0, param2);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -59,7 +59,7 @@ final class sa extends pn {
         }
     }
 
-    final void a(boolean param0, float param1, byte param2, String param3) {
+    final void setProgress(boolean param0, float param1, byte param2, String param3) {
         RuntimeException var5 = null;
         boolean stackIn_4_0 = false;
         int stackIn_5_1 = 0;
@@ -82,10 +82,10 @@ final class sa extends pn {
             stackIn_9_1 = (param0);
             this.field_ab = stackIn_9_1;
             if (this.field_ab) {
-              this.field_V.c(-16, 4210752, 8405024);
+              this.field_V.setColors(-16, 4210752, 8405024);
               this.field_V.field_F = true;
             } else {
-              this.field_V.c(-51, 4210752, 2113632);
+              this.field_V.setColors(-51, 4210752, 2113632);
               if (!this.field_U) {
                 this.field_V.field_C = (int)(param1 / 100.0f * 65536.0f);
                 this.field_W = param3;
@@ -118,13 +118,13 @@ final class sa extends pn {
           this.field_X = param1;
           if (this.field_X != null) {
             var3_int = rk.field_b.paragraphHeight(this.field_X, 260, rk.field_b.field_I);
-            this.a((byte) 94, var3_int + 150, 300);
+            this.centerOnScreen((byte) 94, var3_int + 150, 300);
           }
           this.field_V = new hb(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_V.field_F = true;
           this.field_U = false;
           this.field_ab = false;
-          this.a(this.field_V, 10);
+          this.addChild(this.field_V, 10);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "sa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -141,7 +141,7 @@ final class sa extends pn {
         field_Z = null;
     }
 
-    final void m(int param0) {
+    final void stopProgressAnimation(int param0) {
         this.field_U = true;
         if (param0 != -31361) {
           field_T = false;

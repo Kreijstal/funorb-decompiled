@@ -16,7 +16,7 @@ final class ad extends vg {
     static int field_e;
     private int field_n;
 
-    private final oe a(Font param0, boolean param1, String param2, int param3) {
+    private final oe createSingleLine(Font param0, boolean param1, String param2, int param3) {
         oe discarded$1 = null;
         oe var5 = null;
         RuntimeException var5_ref = null;
@@ -29,7 +29,7 @@ final class ad extends vg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            discarded$1 = this.a((Font) null, false, (String) null, -57);
+            discarded$1 = this.createSingleLine((Font) null, false, (String) null, -57);
           }
           var5 = new oe(param3 - param0.field_I, param3 + param0.field_x, param2.length());
           this.field_b = new oe[]{var5};
@@ -55,7 +55,7 @@ final class ad extends vg {
         }
     }
 
-    final void a(String param0, int param1, Font param2, byte param3, int param4) {
+    final void layoutRightAligned(String param0, int param1, Font param2, byte param3, int param4) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -80,12 +80,12 @@ final class ad extends vg {
           this.field_p = 2;
           this.field_m = true;
           this.field_l = param0;
-          var6 = this.a(param2, false, param0, param1);
+          var6 = this.createSingleLine(param2, false, param0, param1);
           var6.field_e[0] = param4 - param2.textWidth(param0);
           var6.field_e[param0.length()] = param4;
           ma.a(var6, 0, param0, param2, false);
           if (param3 != 83) {
-            this.a((String) null, (byte) 105, 37, (Font) null, 104, 15, -99, 98);
+            this.layoutParagraph((String) null, (byte) 105, 37, (Font) null, 104, 15, -99, 98);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -108,7 +108,7 @@ final class ad extends vg {
         }
     }
 
-    final static short[] a(short[] param0, boolean param1, int param2, am param3) {
+    final static short[] readPackedShorts(short[] param0, boolean param1, int param2, am param3) {
         Object stackIn_3_0 = null;
         short[] stackIn_29_0 = null;
         RuntimeException stackIn_33_0 = null;
@@ -126,7 +126,7 @@ final class ad extends vg {
         int var7Lifetime1;
         var8 = ZombieDawn.field_J;
         try {
-          var4_int = param3.k(90, param2);
+          var4_int = param3.readBits(90, param2);
           if (var4_int == 0) {
             stackIn_3_0 = null;
             return (short[]) (stackIn_3_0);
@@ -136,16 +136,16 @@ final class ad extends vg {
             param0 = new short[var4_int];
           }
           if (!param1) {
-            ad.b(105);
+            ad.releaseStatics(105);
           }
           boolean decompiledFrameCompleted0 = true;
           boolean decompiledFrameCompleted1 = true;
-          var5 = param3.k(67, 4);
-          var6 = (short)param3.k(13, 16);
+          var5 = param3.readBits(67, 4);
+          var6 = (short)param3.readBits(13, 16);
           if (var5 > 0) {
             var7 = 0;
             while (var7 < var4_int) {
-              param0[var7] = (short)(param3.k(60, var5) + var6);
+              param0[var7] = (short)(param3.readBits(60, var5) + var6);
               var7++;
               if (var8 != 0) {
                 decompiledFrameCompleted1 = false;
@@ -191,7 +191,7 @@ final class ad extends vg {
         }
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = (Sprite[][]) null;
         field_h = null;
         if (param0 != -1819016370) {
@@ -205,7 +205,7 @@ final class ad extends vg {
         }
     }
 
-    final void a(int param0, int param1, int param2, String param3, Font param4) {
+    final void layoutCentered(int param0, int param1, int param2, String param3, Font param4) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -232,7 +232,7 @@ final class ad extends vg {
           this.field_m = true;
           this.field_d = param4;
           this.field_p = 1;
-          var7 = this.a(param4, false, param3, param2);
+          var7 = this.createSingleLine(param4, false, param3, param2);
           var8 = param4.textWidth(param3);
           var7.field_e[0] = param0 - (var8 >> 1);
           var7.field_e[param3.length()] = param0 + (var8 >> 1);
@@ -258,7 +258,7 @@ final class ad extends vg {
         }
     }
 
-    final void a(String param0, byte param1, int param2, Font param3, int param4, int param5, int param6, int param7) {
+    final void layoutParagraph(String param0, byte param1, int param2, Font param3, int param4, int param5, int param6, int param7) {
         oe discarded$0 = null;
         oe stackIn_65_0;
         oe stackIn_65_1;
@@ -309,7 +309,7 @@ final class ad extends vg {
           this.field_d = param3;
           this.field_l = param0;
           if (param1 != -106) {
-            discarded$0 = this.a((Font) null, false, (String) null, 35);
+            discarded$0 = this.createSingleLine((Font) null, false, (String) null, 35);
           }
           this.field_p = param6;
           this.field_k = param7;
@@ -377,7 +377,7 @@ final class ad extends vg {
               var14.field_e[var13.length()] = param3.textWidth(var13);
               stackIn_72_0 = var14;
               if (3 == param6) {
-                stackIn_73_1 = this.a(param3.textWidth(var13), var13, param7, 25);
+                stackIn_73_1 = this.justificationSpacing(param3.textWidth(var13), var13, param7, 25);
               } else {
                 stackIn_73_1 = 0;
               }
@@ -408,7 +408,7 @@ final class ad extends vg {
         }
     }
 
-    final static void a(boolean param0, int[] param1, gd param2, byte param3, boolean param4, boolean param5, int[] param6) {
+    final static void projectMeshAndQueueFaces(boolean param0, int[] param1, gd param2, byte param3, boolean param4, boolean param5, int[] param6) {
         int stackIn_67_0 = 0;
         int stackIn_67_1 = 0;
         RuntimeException stackIn_72_0 = null;
@@ -592,7 +592,7 @@ final class ad extends vg {
             }
             break;
           }
-          po.a(stackIn_67_0, stackIn_67_1, param5, var8, param2);
+          po.renderMeshFaces(stackIn_67_0, stackIn_67_1, param5, var8, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -620,7 +620,7 @@ final class ad extends vg {
         }
     }
 
-    final void a(int param0, Font param1, String param2, int param3, int param4) {
+    final void layoutLeftAligned(int param0, Font param1, String param2, int param3, int param4) {
         RuntimeException runtimeException = null;
         oe var6 = null;
         int var7 = 0;
@@ -646,7 +646,7 @@ final class ad extends vg {
           this.field_d = param1;
           this.field_m = true;
           this.field_p = 0;
-          var6 = this.a(param1, false, param2, param4);
+          var6 = this.createSingleLine(param1, false, param2, param4);
           var6.field_e[0] = param3;
           var6.field_e[param2.length()] = param1.textWidth(param2) + param3;
           var7 = 91 % ((19 - param0) / 59);
@@ -672,12 +672,12 @@ final class ad extends vg {
         }
     }
 
-    final static void c(byte param0) {
+    final static void openScreenSizeDialog(byte param0) {
         try {
-          wo.field_xb.j(param0 ^ -636330917);
-          wo.field_xb.a(new lb(wo.field_xb), true);
+          wo.field_xb.hideAllDialogs(param0 ^ -636330917);
+          wo.field_xb.addDialog(new lb(wo.field_xb), true);
           if (param0 != 122) {
-            ad.b(-91);
+            ad.releaseStatics(-91);
           }
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ad.I(" + param0 + ')');

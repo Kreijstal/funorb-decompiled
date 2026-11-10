@@ -12,7 +12,7 @@ final class jo extends qk {
     private int field_Pb;
     static Sprite[][] field_Tb;
 
-    final void l(byte param0) {
+    final void updateBehaviour(byte param0) {
         int var2;
         Point var3_ref_kk;
         int var3;
@@ -27,7 +27,7 @@ final class jo extends qk {
         if (this.state == 23) {
           this.state = 0;
         }
-        super.l(param0);
+        super.updateBehaviour(param0);
         if (this.field_Ab < 0) {
           return;
         }
@@ -39,7 +39,7 @@ final class jo extends qk {
           if (-1 != this.field_Rb) {
             var10 = Js5Archive.field_e.navigation.findPath(true, this.getX(true), this.field_Pb, this.field_Rb, this.getY(237239984));
             if (var10 != null) {
-              var3_ref_kk = (Point) (var10.b((byte) 26));
+              var3_ref_kk = (Point) (var10.last((byte) 26));
               this.field_Pb = var3_ref_kk.y;
               this.field_Rb = var3_ref_kk.x;
             }
@@ -114,7 +114,7 @@ final class jo extends qk {
         return;
     }
 
-    final static void x(int param0) {
+    final static void releaseMouseHandler(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -149,7 +149,7 @@ final class jo extends qk {
         this.field_pb = this.field_Eb;
     }
 
-    final void g(int param0) {
+    final void tick(int param0) {
         boolean stackIn_3_1 = false;
         stackIn_3_1 = (this.state == 23);
         this.field_Sb = stackIn_3_1;
@@ -158,7 +158,7 @@ final class jo extends qk {
           this.targetX = this.field_Rb;
           this.moveToward(0, this.field_D / 2);
         }
-        super.g(106);
+        super.tick(106);
         if (this.field_Sb) {
           if (1 == this.state) {
             if (this.getX(true) != this.field_Rb) {
@@ -171,7 +171,7 @@ final class jo extends qk {
                 this.field_Rb = -1;
                 this.field_Sb = false;
                 this.setState(0, -6904);
-                this.l((byte) 52);
+                this.updateBehaviour((byte) 52);
               }
             }
           } else {
@@ -186,7 +186,7 @@ final class jo extends qk {
                   this.field_Rb = -1;
                   this.field_Sb = false;
                   this.setState(0, -6904);
-                  this.l((byte) 52);
+                  this.updateBehaviour((byte) 52);
                 }
               }
             }
@@ -198,7 +198,7 @@ final class jo extends qk {
         jo.releaseStatics((byte) -102);
     }
 
-    final static int w(int param0) {
+    final static int pollServerConnection(int param0) {
         try {
           int stackIn_14_0 = 0;
           int stackIn_25_0 = 0;
@@ -222,7 +222,7 @@ final class jo extends qk {
           try {
             var1_int = -73 / ((param0 - 36) / 39);
             if (jd.field_a == 0) {
-              GameWorld.field_O = lc.field_a.connectSocket(2, gd.field_u, bd.field_j);
+              GameWorld.field_O = lc.field_a.connectSocket(2, gd.field_u, WhirlpoolHasher.field_j);
               jd.field_a = jd.field_a + 1;
             }
             if (jd.field_a == 1) {
@@ -263,7 +263,7 @@ final class jo extends qk {
               stackIn_35_0 = -1;
               return stackIn_35_0;
             }
-            SpatialBucket.field_c.a(bo.field_n, sb.field_a, 120);
+            SpatialBucket.field_c.setConnection(bo.field_n, sb.field_a, 120);
             sb.field_a = null;
             jd.field_a = 0;
             GameWorld.field_O = null;
@@ -281,7 +281,7 @@ final class jo extends qk {
         }
     }
 
-    final void a(Camera param0, int param1) {
+    final void drawDebugOverlay(Camera param0, int param1) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;

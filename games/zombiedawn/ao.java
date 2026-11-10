@@ -11,16 +11,16 @@ final class ao extends WorldObject {
     private PcmSampleStream field_H;
     static AsyncRequest field_F;
 
-    final static HumanFactory a(String[] args, int param1) {
-        HumanFactory var2 = null;
+    final static AccountServerResult createResponseWithLines(String[] args, int param1) {
+        AccountServerResult var2 = null;
         RuntimeException var2_ref = null;
-        HumanFactory stackIn_3_0 = null;
+        AccountServerResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new HumanFactory(false);
+          var2 = new AccountServerResult(false);
           var2.field_g = args;
           if (param1 > -76) {
             field_F = (AsyncRequest) null;
@@ -59,7 +59,7 @@ final class ao extends WorldObject {
         }
     }
 
-    final void a(byte param0, Camera param1) {
+    final void draw(byte param0, Camera param1) {
         int var5 = 0;
         int var3_int = param1.worldToScreenX(this.getX(true), (byte) -94);
         int var4 = param1.worldToScreenY(this.getY(237239984), 0);
@@ -75,18 +75,18 @@ final class ao extends WorldObject {
               return;
             }
             var5 = pj.a(var4, 47, var3_int);
-            this.field_K.h(var5);
+            this.field_K.setVolume(var5);
             if (this.field_H == null) {
               return;
             }
-            this.field_H.h(var5);
+            this.field_H.setVolume(var5);
           }
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "ao.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void g(int param0) {
+    final void tick(int param0) {
         if (this.field_E <= 0) {
           this.unlink(-27598);
           if (param0 < 95) {

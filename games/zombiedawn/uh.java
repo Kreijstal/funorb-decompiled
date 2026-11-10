@@ -15,7 +15,7 @@ final class uh {
     private boolean field_c;
     private boolean field_p;
     static rj field_o;
-    private cc[] field_b;
+    private PowerupCard[] field_b;
     private int field_a;
     private int field_k;
 
@@ -71,7 +71,7 @@ final class uh {
             var12 = var3.worldToScreenY(24 * var8, 0);
             var13 = var3.worldToScreenX(var10 * 24, (byte) -95);
             var14 = var3.worldToScreenY(var9 * 24, 0);
-            Mover.$cfr$intArgs$a$3aedf8649552(var12, 99, var13, var14, var11);
+            Mover.intersectClipIntArgs(var12, 99, var13, var14, var11);
             for (var15 = var8; var15 < var9; var15++) {
               for (var16 = var7; var16 < var10; var16++) {
                 var17 = var3.worldToScreenX(24 * var16, (byte) -66);
@@ -79,7 +79,7 @@ final class uh {
                 Rasterizer.fillRectangleBlended(var17, var18, 24, 24, this.field_l, 128);
               }
             }
-            pa.a(-21189);
+            pa.popRasterState(-21189);
           } else {
             var5 = ha.field_b;
             var6 = ei.field_K;
@@ -102,7 +102,7 @@ final class uh {
           this.field_b[this.field_k] == null) {
           return -1;
         }
-        return this.field_b[this.field_k].b((byte) -111);
+        return this.field_b[this.field_k].getPowerupId((byte) -111);
     }
 
     final boolean a(byte param0) {
@@ -154,7 +154,7 @@ final class uh {
         if (8 + param1 > 16) {
           param1 = 8;
         }
-        this.field_b = new cc[8];
+        this.field_b = new PowerupCard[8];
         this.field_n = 0;
         var3 = -121 / ((param0 - 58) / 63);
         for (var4 = 0; 8 > var4; var4++) {
@@ -166,12 +166,12 @@ final class uh {
 
     final void b(byte param0) {
         int var3 = 0;
-        cc[] var2_ref_cc__;
+        PowerupCard[] var2_ref_cc__;
         int var2;
-        cc var4;
+        PowerupCard var4;
         int var5;
         Mover var6;
-        cc[] var7;
+        PowerupCard[] var7;
         int var2Lifetime1;
         var5 = ZombieDawn.field_J;
         if (param0 != -55) {
@@ -183,7 +183,7 @@ final class uh {
         for (var3 = 0; var3 < var7.length; var3++) {
           var4 = var7[var3];
           if (var4 != null) {
-            var4.a((byte) 123);
+            var4.drawCard((byte) 123);
           }
         }
         if (this.field_m != -1) {
@@ -192,7 +192,7 @@ final class uh {
             so.drawTransparent(qp.field_c[this.field_m], -100 + this.field_d, var2);
             mk.field_a[this.field_m].drawTransparent(this.field_d - 100, var2);
           } else {
-            bj.field_q.drawStringCentered(mc.field_j, bd.field_d, -10 + nh.field_P, 15658734, 1);
+            bj.field_q.drawStringCentered(mc.field_j, WhirlpoolHasher.field_d, -10 + nh.field_P, 15658734, 1);
           }
         }
         if (!this.field_f) {
@@ -221,8 +221,8 @@ final class uh {
           if (param0 <= 82) {
             this.f(35);
           }
-          param2.drawTransparent(-(param2.field_w / 2) + bd.field_d, 400);
-          so.drawTransparent(param1, bd.field_d - param1.field_w / 2, 400);
+          param2.drawTransparent(-(param2.field_w / 2) + WhirlpoolHasher.field_d, 400);
+          so.drawTransparent(param1, WhirlpoolHasher.field_d - param1.field_w / 2, 400);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "uh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -252,10 +252,10 @@ final class uh {
                 stackIn_16_1 = param0;
                 stackIn_16_2 = param1;
                 stackIn_17_3 = (param2) ? false : true;
-                ((GameWorld) (Object) stackIn_16_0).a(stackIn_16_1, stackIn_16_2, stackIn_17_3, 120);
+                ((GameWorld) (Object) stackIn_16_0).slowMoversInRadius(stackIn_16_1, stackIn_16_2, stackIn_17_3, 120);
               } else {
                 if (var4 == 12) {
-                  Js5Archive.field_e.f((byte) 9);
+                  Js5Archive.field_e.triggerQuake((byte) 9);
                 }
               }
             } else {
@@ -263,13 +263,13 @@ final class uh {
               stackIn_9_1 = 1;
               stackIn_9_2 = param0;
               stackIn_10_3 = (param2) ? false : true;
-              ((GameWorld) (Object) stackIn_9_0).b(stackIn_9_1, stackIn_9_2, stackIn_10_3, param1);
+              ((GameWorld) (Object) stackIn_9_0).addBlast(stackIn_9_1, stackIn_9_2, stackIn_10_3, param1);
             }
           } else {
-            Js5Archive.field_e.a(false, -6355, param1, param0);
+            Js5Archive.field_e.placeAreaPowerup(false, -6355, param1, param0);
           }
         } else {
-          Js5Archive.field_e.a(true, -6355, param1, param0);
+          Js5Archive.field_e.placeAreaPowerup(true, -6355, param1, param0);
         }
         if (param2) {
           this.field_a = 83;
@@ -306,20 +306,20 @@ final class uh {
     }
 
     final void a(int param0, int param1, boolean param2) {
-        cc[] var4;
+        PowerupCard[] var4;
         int var5;
-        cc var6;
+        PowerupCard var6;
         int var8;
-        cc[] var9;
-        cc var10;
-        cc var11;
+        PowerupCard[] var9;
+        PowerupCard var10;
+        PowerupCard var11;
         int var7;
         int var5Lifetime1;
-        cc[] var4Lifetime1;
-        cc var6Lifetime1;
-        cc var11Lifetime1;
-        cc var6Lifetime2;
-        cc var11Lifetime2;
+        PowerupCard[] var4Lifetime1;
+        PowerupCard var6Lifetime1;
+        PowerupCard var11Lifetime1;
+        PowerupCard var6Lifetime2;
+        PowerupCard var11Lifetime2;
         var8 = ZombieDawn.field_J;
         var9 = this.field_b;
         var4 = var9;
@@ -330,7 +330,7 @@ final class uh {
           var11Lifetime2 = var10;
           var6Lifetime2 = var11Lifetime2;
           if (var10 != null) {
-            var10.a((byte) 117, param0, param1);
+            var10.updateAnimation((byte) 117, param0, param1);
           }
         }
         if (this.field_e) {
@@ -352,7 +352,7 @@ final class uh {
           var11Lifetime1 = var4Lifetime1[var5Lifetime1];
           var6Lifetime1 = var11Lifetime1;
           if (var6Lifetime1 != null) {
-            var7 = var11Lifetime1.a(param1, (byte) -128);
+            var7 = var11Lifetime1.getHoveredPowerupId(param1, (byte) -128);
             if (var7 != -1) {
               this.field_m = var7;
               this.field_d = 20 + var11Lifetime1.field_l;
@@ -388,12 +388,12 @@ final class uh {
           }
           if (var4 != 0) {
             if (var4 == 1) {
-              if (!var6.o(70)) {
+              if (!var6.startMeltdown(70)) {
                 return;
               }
             } else {
               if (var4 == 2) {
-                if (!var6.t(100)) {
+                if (!var6.startPhantom(100)) {
                   return;
                 }
               } else {
@@ -403,36 +403,36 @@ final class uh {
                       if (var4 != 6) {
                         if (var4 != 14) {
                           if (var4 == 7) {
-                            ((Human) (param1)).o(-6253);
-                            Js5Archive.field_e.a(0, (Human) (param1), (byte) 60, true, (Point) null);
+                            ((Human) (param1)).removeFromWorld(-6253);
+                            Js5Archive.field_e.infectHuman(0, (Human) (param1), (byte) 60, true, (Point) null);
                           }
                         } else {
-                          var6.b(true);
+                          var6.applyFear(true);
                         }
                       } else {
-                        if (!var6.m((byte) 124)) {
+                        if (!var6.applyTough((byte) 124)) {
                           return;
                         }
                       }
                     } else {
-                      if (!var6.p((byte) 6)) {
+                      if (!var6.startScreech((byte) 6)) {
                         return;
                       }
                     }
                   } else {
-                    if (!var6.p(param0 ^ 11379)) {
+                    if (!var6.startDetonate(param0 ^ 11379)) {
                       return;
                     }
                   }
                 } else {
-                  if (!var6.C(-73)) {
+                  if (!var6.startDisguise(-73)) {
                     return;
                   }
                 }
               }
             }
           } else {
-            var6.y(98);
+            var6.applySpeedBoost(98);
           }
           if (var4 != 4 &&
             5 != var4 &&
@@ -482,7 +482,7 @@ final class uh {
         if (var4 >= 0 &&
           this.field_n > var4 &&
           null != this.field_b[var4]) {
-          if (!this.field_b[var4].a(false, param1, param2)) {
+          if (!this.field_b[var4].containsPoint(false, param1, param2)) {
             return false;
           }
           this.a(3158064, var4);
@@ -512,8 +512,8 @@ final class uh {
         }
         int fieldTemp$0 = this.field_n;
         this.field_n = this.field_n + 1;
-        this.field_b[fieldTemp$0] = new cc(190 - (40 - 40 * this.field_n), param1, this.field_e);
-        this.field_b[-1 + this.field_n].c(28497);
+        this.field_b[fieldTemp$0] = new PowerupCard(190 - (40 - 40 * this.field_n), param1, this.field_e);
+        this.field_b[-1 + this.field_n].startRiseAnimation(28497);
         if (param0 != -4149) {
           this.c(-64, 61);
         }
@@ -532,7 +532,7 @@ final class uh {
         try {
           try {
             var4 = param3.getGraphics();
-            cn.field_f.a(var4, param1, param2, (byte) 58);
+            cn.field_f.drawImage(var4, param1, param2, (byte) 58);
             var4.dispose();
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -583,11 +583,11 @@ final class uh {
 
     final void a(int param0, int param1) {
         int var4 = 0;
-        cc[] var3_ref_cc__;
+        PowerupCard[] var3_ref_cc__;
         int var3;
-        cc var5;
+        PowerupCard var5;
         int var6;
-        cc[] var7;
+        PowerupCard[] var7;
         var6 = ZombieDawn.field_J;
         if (param1 >= 0 &&
           this.field_b.length >= param1 &&
@@ -595,19 +595,19 @@ final class uh {
           if (param0 != 3158064) {
             this.field_d = -14;
           }
-          if (!this.field_b[param1].a(false)) {
+          if (!this.field_b[param1].isSelected(false)) {
             var7 = this.field_b;
             var3_ref_cc__ = var7;
             for (var4 = 0; var4 < var7.length; var4++) {
               var5 = var7[var4];
               if (var5 != null) {
-                var5.b(2);
+                var5.deselect(2);
               }
             }
             this.f(-1);
             this.field_k = param1;
-            this.field_b[param1].b(false);
-            var3 = this.field_b[param1].b((byte) -126);
+            this.field_b[param1].select(false);
+            var3 = this.field_b[param1].getPowerupId((byte) -126);
             if (7 == var3) {
               this.field_i = true;
               return;
@@ -649,7 +649,7 @@ final class uh {
           return;
         }
         if (this.field_b[this.field_k] != null) {
-          this.field_b[this.field_k].b(2);
+          this.field_b[this.field_k].deselect(2);
         }
         if (param0 != -83) {
           return;
@@ -664,7 +664,7 @@ final class uh {
         this.field_i = false;
         this.field_c = false;
         this.field_f = false;
-        this.field_b = new cc[8];
+        this.field_b = new PowerupCard[8];
         this.field_n = 0;
         this.field_k = -1;
     }
@@ -678,7 +678,7 @@ final class uh {
         this.field_f = false;
         this.field_n = 0;
         this.field_e = param0 ? true : false;
-        this.field_b = new cc[8];
+        this.field_b = new PowerupCard[8];
         this.field_k = -1;
     }
 

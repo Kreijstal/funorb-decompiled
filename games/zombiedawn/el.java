@@ -110,7 +110,7 @@ final class el implements io {
         }
     }
 
-    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
+    public final void drawWidget(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         int var10 = 0;
         UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_15_0 = null;
@@ -141,8 +141,8 @@ final class el implements io {
           var8 = param3.field_k + (param4 + var12.field_K);
           var9 = var12.field_G + (param2 + param3.field_j);
           Rasterizer.drawLine(var8, var9, var8 + var7, var9, this.field_l);
-          for (var10 = var12.a(-85) - 1; var10 >= 0; var10--) {
-            Rasterizer.fillCircle(var8 + var12.a((byte) 58, var10) * var7 / var12.b(false), var9, this.field_e, this.field_f);
+          for (var10 = var12.getHandleCount(-85) - 1; var10 >= 0; var10--) {
+            Rasterizer.fillCircle(var8 + var12.getHandleValue((byte) 58, var10) * var7 / var12.getMaximumValue(false), var9, this.field_e, this.field_f);
           }
           if (null == this.field_j) {
             return;

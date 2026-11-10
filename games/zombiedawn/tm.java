@@ -30,19 +30,19 @@ final class tm extends IntrusiveNode {
             var6_int = param3[0].field_r;
             var7 = param3[2].field_r;
             var8 = param3[1].field_r;
-            param3[0].c(param0, param2, param4);
-            param3[2].c(-var7 + (param5 + param0), param2, param4);
-            Rasterizer.saveClip(HumanFactory.field_c);
+            param3[0].drawRecoloredNeutral(param0, param2, param4);
+            param3[2].drawRecoloredNeutral(-var7 + (param5 + param0), param2, param4);
+            Rasterizer.saveClip(AccountServerResult.field_c);
             Rasterizer.intersectClip(param0 + var6_int, param2, param5 + param0 - var7, param3[1].field_q + param2);
             var9 = param0 + var6_int;
             var10 = param0 + param5 - var7;
             for (param0 = var9; param0 < var10; param0 = param0 + var8) {
-              param3[1].c(param0, param2, param4);
+              param3[1].drawRecoloredNeutral(param0, param2, param4);
             }
             if (param1 != 32421) {
               tm.a(-59, (byte) 126, false, -69);
             }
-            Rasterizer.restoreClip(HumanFactory.field_c);
+            Rasterizer.restoreClip(AccountServerResult.field_c);
             return;
           }
           return;
@@ -142,9 +142,9 @@ final class tm extends IntrusiveNode {
         }
     }
 
-    final static HumanFactory pollAccountNameCheck(byte param0, String param1) {
+    final static AccountServerResult pollAccountNameCheck(byte param0, String param1) {
         RuntimeException var2 = null;
-        HumanFactory stackIn_8_0 = null;
+        AccountServerResult stackIn_8_0 = null;
         Object stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -167,7 +167,7 @@ final class tm extends IntrusiveNode {
           tk.field_a = vh.field_c;
           Point.field_k = param1;
           stackIn_10_0 = null;
-          return (HumanFactory) (stackIn_10_0);
+          return (AccountServerResult) (stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

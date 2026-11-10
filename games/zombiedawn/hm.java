@@ -23,7 +23,7 @@ class hm extends an {
         try {
           if (param0 < 67) {
             var4 = (UiWidget) null;
-            this.a((UiWidget) null, (byte) 86, -110, -12);
+            this.updatePointer((UiWidget) null, (byte) 86, -110, -12);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -44,33 +44,33 @@ class hm extends an {
         IntrusiveNode var1 = null;
         int var2 = ZombieDawn.field_J;
         try {
-          var1 = kn.field_L.b((byte) 26);
+          var1 = kn.field_L.last((byte) 26);
           while (var1 instanceof tm) {
-            pc.a((byte) 13, ((tm) (var1)).field_j);
+            Js5Transport.stopSoundEffect((byte) 13, ((tm) (var1)).field_j);
             var1 = var1.previous;
           }
-          var1 = se.field_m.b((byte) 26);
+          var1 = ProxySocketConnector.field_m.last((byte) 26);
           while (var1 instanceof tm) {
-            pc.a((byte) 13, ((tm) (var1)).field_j);
+            Js5Transport.stopSoundEffect((byte) 13, ((tm) (var1)).field_j);
             var1 = var1.previous;
           }
           if (param0 != 9) {
             hm.a(-124);
           }
-          var1 = DelegatingCanvas.field_e.b((byte) 26);
+          var1 = DelegatingCanvas.field_e.last((byte) 26);
           while (var1 instanceof tm) {
-            pc.a((byte) 13, ((tm) (var1)).field_j);
+            Js5Transport.stopSoundEffect((byte) 13, ((tm) (var1)).field_j);
             var1 = var1.previous;
           }
           kn.field_L.clear(param0 ^ 67);
-          se.field_m.clear(-61);
+          ProxySocketConnector.field_m.clear(-61);
           DelegatingCanvas.field_e.clear(68);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "hm.G(" + param0 + ')');
         }
     }
 
-    private final eg b(int param0, int param1, int param2) {
+    private final eg hotspotAt(int param0, int param1, int param2) {
         eg var4;
         eg var5;
         int var6;
@@ -78,7 +78,7 @@ class hm extends an {
         eg var5Lifetime1;
         var6 = ZombieDawn.field_J;
         if (param0 == 31677) {
-          var4 = (eg) (this.field_I.b((byte) 26));
+          var4 = (eg) (this.field_I.last((byte) 26));
           while (var4 != null) {
             var5 = var4;
             while (var5 != null) {
@@ -90,12 +90,12 @@ class hm extends an {
               }
               var5 = var5.field_h;
             }
-            var4 = (eg) (this.field_I.a(false));
+            var4 = (eg) (this.field_I.previous(false));
           }
           return null;
         }
         this.field_I = (IntrusiveDeque) null;
-        var4Lifetime1 = (eg) (this.field_I.b((byte) 26));
+        var4Lifetime1 = (eg) (this.field_I.last((byte) 26));
         while (var4Lifetime1 != null) {
           var5Lifetime1 = var4Lifetime1;
           while (var5Lifetime1 != null) {
@@ -107,18 +107,18 @@ class hm extends an {
             }
             var5Lifetime1 = var5Lifetime1.field_h;
           }
-          var4Lifetime1 = (eg) (this.field_I.a(false));
+          var4Lifetime1 = (eg) (this.field_I.previous(false));
         }
         return null;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(28, param1, param2, param3, param4);
-        this.d((byte) -36);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(28, param1, param2, param3, param4);
+        this.rebuildHotspots((byte) -36);
         int var6 = 80 % ((param0 + 23) / 48);
     }
 
-    final void d(byte param0) {
+    final void rebuildHotspots(byte param0) {
         int var11 = 0;
         int var2;
         ak var3;
@@ -144,7 +144,7 @@ class hm extends an {
         }
         var2 = 0;
         var3 = (ak) ((Object) this.field_h);
-        var4 = var3.a(-113, (UiWidget) (this));
+        var4 = var3.getTextLayout(-113, (UiWidget) (this));
         while (true) {
           var5 = this.field_o.indexOf("<hotspot=", var2);
           if (var5 == -1) {
@@ -154,13 +154,13 @@ class hm extends an {
           var6 = this.field_o.substring(9 + var5, var7);
           var7Lifetime1 = Integer.parseInt(var6);
           var2 = this.field_o.indexOf("</hotspot>", var5);
-          var8 = var4.a(93, var5);
-          var9 = var4.a(96, var2);
+          var8 = var4.lineIndexForCharacter(93, var5);
+          var9 = var4.lineIndexForCharacter(96, var2);
           var10 = null;
           for (var11 = var8; var9 >= var11; var11++) {
             var12 = var4.field_b[var11];
             if (var8 == var11) {
-              stackIn_9_0 = var4.a((byte) -72, var5);
+              stackIn_9_0 = var4.characterX((byte) -72, var5);
             } else {
               stackIn_9_0 = var12.field_e[0];
             }
@@ -172,10 +172,10 @@ class hm extends an {
                 stackIn_14_0 = var12.field_e[-1 + var12.field_e.length];
               }
             } else {
-              stackIn_14_0 = var4.a((byte) -72, var2);
+              stackIn_14_0 = var4.characterX((byte) -72, var2);
             }
             var14 = stackIn_14_0;
-            var15 = new eg(var7Lifetime1, var13, var12.field_b, -var13 + var14, Math.max(var3.a(param0 ^ -39), var12.field_g - var12.field_b));
+            var15 = new eg(var7Lifetime1, var13, var12.field_b, -var13 + var14, Math.max(var3.getLineInkHeight(param0 ^ -39), var12.field_g - var12.field_b));
             if (var10 != null) {
               ((eg) (var10)).field_h = var15;
             }
@@ -185,7 +185,7 @@ class hm extends an {
         }
     }
 
-    String d(int param0) {
+    String getTooltip(int param0) {
         int var2 = -127 / ((param0 - 10) / 58);
         if (null == this.field_G) {
           return null;
@@ -199,7 +199,7 @@ class hm extends an {
         return null;
     }
 
-    final void a(int param0, int param1, String param2) {
+    final void setHotspotTooltip(int param0, int param1, String param2) {
         int var5 = 0;
         RuntimeException runtimeException = null;
         String[] var4 = null;
@@ -227,7 +227,7 @@ class hm extends an {
           }
           if (param1 != -21423) {
             var7 = (UiWidget) null;
-            this.a((UiWidget) null, (byte) 100, -58, -75);
+            this.updatePointer((UiWidget) null, (byte) 100, -58, -75);
           }
           this.field_K[param0] = param2;
           return;
@@ -245,47 +245,47 @@ class hm extends an {
         }
     }
 
-    final void a(int param0, int param1, boolean param2, int param3) {
+    final void setBoundsToTextHeight(int param0, int param1, boolean param2, int param3) {
         if (param2) {
-          this.a(-121, param1, param0, param3, ((ak) ((Object) this.field_h)).a(false, (UiWidget) (this)));
+          this.setBounds(-121, param1, param0, param3, ((ak) ((Object) this.field_h)).getPreferredTextHeight(false, (UiWidget) (this)));
           return;
         }
         hm.releaseStatics(-53);
-        this.a(-121, param1, param0, param3, ((ak) ((Object) this.field_h)).a(false, (UiWidget) (this)));
+        this.setBounds(-121, param1, param0, param3, ((ak) ((Object) this.field_h)).getPreferredTextHeight(false, (UiWidget) (this)));
     }
 
-    void a(UiWidget param0, byte param1, int param2, int param3) {
+    void updatePointer(UiWidget param0, byte param1, int param2, int param3) {
         int var6 = 0;
         int var7 = 0;
         try {
-          super.a(param0, (byte) 106, param2, param3);
+          super.updatePointer(param0, (byte) 106, param2, param3);
           this.field_G = null;
           int var5_int = -66 / ((46 - param1) / 42);
           if (this.field_l) {
             var6 = -param3 + ha.field_b - this.field_k;
             var7 = -this.field_j + ei.field_K - param2;
-            this.field_G = this.b(31677, var6, var7);
+            this.field_G = this.hotspotAt(31677, var6, var7);
           }
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "hm.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    void a(int param0, int param1, int param2, int param3) {
+    void drawLayer(int param0, int param1, int param2, int param3) {
         ak var5 = null;
         eg var6 = null;
         int var7 = 0;
         int var8 = 0;
-        super.a(param0, param1, param2, param3);
+        super.drawLayer(param0, param1, param2, param3);
         if (param1 == 0) {
           var5 = (ak) ((Object) this.field_h);
           var6 = this.field_G;
           if (var6 == null) {
           } else {
-            var7 = var5.b((UiWidget) (this), 128, param2);
-            var8 = var5.a((UiWidget) (this), 1, param0);
+            var7 = var5.getTextOriginX((UiWidget) (this), 128, param2);
+            var8 = var5.getTextOriginY((UiWidget) (this), 1, param0);
             do {
-              TileMap.b(var6.field_j + 2, var6.field_m + 2, var6.field_i + var7 - 2, param3 + 117, var6.field_k + var8 - 2);
+              TileMap.drawDottedRectangle(var6.field_j + 2, var6.field_m + 2, var6.field_i + var7 - 2, param3 + 117, var6.field_k + var8 - 2);
               var6 = var6.field_h;
             } while (var6 != null);
           }
@@ -336,19 +336,19 @@ class hm extends an {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
-        super.b(param0, 71, param2, param3);
+    final void activate(int param0, int param1, int param2, int param3) {
+        super.activate(param0, 71, param2, param3);
         int var5 = -this.field_k + param0;
         int var6 = -this.field_j + param2;
         int var8 = 63 / ((-12 - param1) / 56);
-        eg var7 = this.b(31677, var5, var6);
+        eg var7 = this.hotspotAt(31677, var5, var6);
         if (var7 == null) {
           return;
         }
         if (null == this.field_v) {
           return;
         }
-        ((oa) ((Object) this.field_v)).a(this, 120, var7.field_l, param3);
+        ((oa) ((Object) this.field_v)).onHotspotAction(this, 120, var7.field_l, param3);
     }
 
     hm(String param0, io param1) {
