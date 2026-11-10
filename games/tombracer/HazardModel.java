@@ -31,7 +31,7 @@ final class HazardModel extends TrapModel {
         this.field_r = null;
     }
 
-    final void a(byte param0, BitPacketBuffer param1) {
+    final void encode(byte param0, BitPacketBuffer param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         RuntimeException stackIn_5_0 = null;
@@ -39,7 +39,7 @@ final class HazardModel extends TrapModel {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          super.a((byte) 90, param1);
+          super.encode((byte) 90, param1);
           var3_int = 39 % ((-8 - param0) / 40);
           param1.writeBits((byte) -128, this.field_u, 4);
           return;
@@ -149,7 +149,7 @@ final class HazardModel extends TrapModel {
         }
     }
 
-    final void a(int param0, Room param1, BitPacketBuffer param2) {
+    final void decode(int param0, Room param1, BitPacketBuffer param2) {
         iq var5 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -161,7 +161,7 @@ final class HazardModel extends TrapModel {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          super.a(120, param1, param2);
+          super.decode(120, param1, param2);
           if (param0 <= 119) {
             var5 = (iq) null;
             this.a((iq) null, -12, 26, 100, (byte) -44);
@@ -253,8 +253,8 @@ final class HazardModel extends TrapModel {
               }
             }
           } else {
-            if (this.field_u == 1 && (null == this.field_k ||
-              this.field_k.a(-93))) {
+            if (this.field_u == 1 && (null == this.part ||
+              this.part.a(-93))) {
               this.field_m = dfa.a(128 + this.field_m, 2048, 122);
             }
           }
@@ -262,7 +262,7 @@ final class HazardModel extends TrapModel {
           if (var10_ref == null) {
             return;
           }
-          var3_ref = (Trap) (this.field_h);
+          var3_ref = (Trap) (this.body);
           if (!var3_ref.d(50, false)) {
             stackIn_28_0 = (this.field_u == 1) ? 1 : 0;
           } else {

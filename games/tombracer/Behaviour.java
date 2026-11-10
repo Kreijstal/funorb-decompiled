@@ -68,7 +68,7 @@ abstract class Behaviour extends IntrusiveNode implements lj, Renderable, noa, T
         return this.field_l;
     }
 
-    boolean a(int param0, int param1, int param2, int param3, int param4, int param5, ffa param6) {
+    boolean a(int param0, int param1, int param2, int param3, int param4, int param5, Collidable param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -105,7 +105,7 @@ abstract class Behaviour extends IntrusiveNode implements lj, Renderable, noa, T
         return this.trap;
     }
 
-    void a(ffa param0, byte param1, WorldBody param2, int param3) {
+    void a(Collidable param0, byte param1, WorldBody param2, int param3) {
         try {
           if (param1 < 18) {
             this.e(-16);
@@ -414,7 +414,7 @@ abstract class Behaviour extends IntrusiveNode implements lj, Renderable, noa, T
     boolean p(byte param0) {
         if (param0 != 120) {
           WorldBody var3 = (WorldBody) null;
-          this.a((ffa) null, (byte) -1, (WorldBody) null, 16);
+          this.a((Collidable) null, (byte) -1, (WorldBody) null, 16);
           return false;
         }
         return false;

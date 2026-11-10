@@ -76,7 +76,7 @@ final class WindZoneBehaviour extends Behaviour {
         int stackIn_22_1 = 0;
         int stackIn_22_2 = 0;
         int stackIn_23_3;
-        ffa stackIn_56_0 = null;
+        Collidable stackIn_56_0 = null;
         int stackIn_56_1 = 0;
         boolean stackIn_56_2 = false;
         int stackIn_57_3;
@@ -93,9 +93,9 @@ final class WindZoneBehaviour extends Behaviour {
         int var12;
         int var13;
         int var14;
-        ffa[] var15;
-        ffa[] var16;
-        ffa var18;
+        Collidable[] var15;
+        Collidable[] var16;
+        Collidable var18;
         int var19;
         int var20;
         int var21;
@@ -163,7 +163,7 @@ final class WindZoneBehaviour extends Behaviour {
           }
           ((Particle) (Object) stackIn_18_0).b(stackIn_18_1, stackIn_19_2, 0);
         }
-        var15 = this.b(true).field_u.b(var3, -1, var2, var4, var5);
+        var15 = this.b(true).collisionGrid.b(var3, -1, var2, var4, var5);
         var16 = var15;
         for (var17 = 0; var17 < var16.length; var17++) {
           var18 = var16[var17];
@@ -212,7 +212,7 @@ final class WindZoneBehaviour extends Behaviour {
                 } else {
                   stackIn_57_3 = 1;
                 }
-                ((ffa) (Object) stackIn_56_0).a(stackIn_56_1, stackIn_56_2, stackIn_57_3, gqa.a(var7, (byte) 24, var8), gqa.a(var6, (byte) 24, var8), 0);
+                ((Collidable) (Object) stackIn_56_0).a(stackIn_56_1, stackIn_56_2, stackIn_57_3, gqa.a(var7, (byte) 24, var8), gqa.a(var6, (byte) 24, var8), 0);
               }}
           }
         }

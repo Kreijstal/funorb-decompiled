@@ -26,7 +26,7 @@ final class Room implements ew, Renderable, noa {
     private ObjectPool projectilePool;
     private ObjectPool field_f;
     private ObjectPool particlePool;
-    npa field_u;
+    CollisionGrid collisionGrid;
     private IsaacCipher field_H;
     private te field_D;
     private tqa field_B;
@@ -37,7 +37,7 @@ final class Room implements ew, Renderable, noa {
     private int field_I;
     private boolean field_T;
     private ui field_q;
-    private ffa field_o;
+    private Collidable field_o;
     private int entranceX;
     private fq field_P;
     private int[] field_b;
@@ -64,7 +64,7 @@ final class Room implements ew, Renderable, noa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param5 < -121) {
-            stackIn_4_0 = this.a(param4, 32238, param2, param3, this.field_u.b(param4, -1, param3, param0, param1), param0, param1);
+            stackIn_4_0 = this.a(param4, 32238, param2, param3, this.collisionGrid.b(param4, -1, param3, param0, param1), param0, param1);
             return stackIn_4_0;
           }
           stackIn_2_0 = -66;
@@ -90,9 +90,9 @@ final class Room implements ew, Renderable, noa {
         return this.field_U;
     }
 
-    private final int a(int param0, int param1, WorldBody param2, int param3, ffa[] param4, int param5, int param6) {
+    private final int a(int param0, int param1, WorldBody param2, int param3, Collidable[] param4, int param5, int param6) {
         int stackIn_13_0 = 0;
-        ffa stackIn_19_0 = null;
+        Collidable stackIn_19_0 = null;
         WorldBody stackIn_19_1 = null;
         int stackIn_28_0 = 0;
         int stackIn_30_0 = 0;
@@ -108,10 +108,10 @@ final class Room implements ew, Renderable, noa {
         Object var10 = null;
         int var11 = 0;
         int var12 = 0;
-        ffa var13 = null;
+        Collidable var13 = null;
         int var14 = 0;
-        ffa var15 = null;
-        ffa var13Lifetime1;
+        Collidable var15 = null;
+        Collidable var13Lifetime1;
         int var8_intLifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
@@ -133,7 +133,7 @@ final class Room implements ew, Renderable, noa {
             }
           }
           if (var11 < (param5 >> 16) * (param6 >> 16)) {
-            this.field_o = (ffa) (var10);
+            this.field_o = (Collidable) (var10);
             stackIn_13_0 = 0;
             return stackIn_13_0;
           }
@@ -158,7 +158,7 @@ final class Room implements ew, Renderable, noa {
             stackIn_30_0 = 1;
             return stackIn_30_0;
           }
-          this.field_o = (ffa) (var10);
+          this.field_o = (Collidable) (var10);
           stackIn_28_0 = 2;
           return stackIn_28_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -214,12 +214,12 @@ final class Room implements ew, Renderable, noa {
           var9 = (mda) (var8.a(param0 ^ -30098));
         }
         if (param2 == 1 &&
-          this.a((ffa) null, param1 * 2, 2, 1, param3, param4, false, (WorldBody) null, 2 * param1)) {
+          this.a((Collidable) null, param1 * 2, 2, 1, param3, param4, false, (WorldBody) null, 2 * param1)) {
           return false;
         }
         var12 = this.b(94, param3, 0, param4);
         var12.a(this, param4, 99, param3, param2, param1);
-        this.field_u.a((ffa) (var12), (byte) 124);
+        this.collisionGrid.remove((Collidable) (var12), (byte) 124);
         return true;
     }
 
@@ -477,7 +477,7 @@ final class Room implements ew, Renderable, noa {
         if (param0) {
           this.field_t = new IsaacCipher(new int[]{this.randomSeed});
           this.field_H = new IsaacCipher(new int[]{this.randomSeed});
-          this.field_u = new npa(false, 16);
+          this.collisionGrid = new CollisionGrid(false, 16);
           this.particlePool = new ObjectPool(this, new Particle(), 100);
           this.projectilePool = new ObjectPool(this, new Projectile(), 25);
           this.field_f = new ObjectPool(this, new mda(), 50);
@@ -553,7 +553,7 @@ final class Room implements ew, Renderable, noa {
         int var6 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
-        ffa[] var5 = null;
+        Collidable[] var5 = null;
         int var7 = 0;
         int stackIn_6_0 = 0;
         int stackIn_11_0 = 0;
@@ -573,7 +573,7 @@ final class Room implements ew, Renderable, noa {
             return stackIn_6_0;
           }
           var4_int = 0;
-          var5 = this.field_u.a(param1, (byte) -103);
+          var5 = this.collisionGrid.a(param1, (byte) -103);
           for (var6 = 0; var6 < var5.length; var6++) {
             var4_int = var4_int + var5[var6].a(param2, 12, param1);
           }
@@ -602,7 +602,7 @@ final class Room implements ew, Renderable, noa {
     final boolean a(int param0, pc param1, WorldBody param2, byte param3) {
         int var8 = 0;
         int var5_int = 0;
-        ffa[] var6 = null;
+        Collidable[] var6 = null;
         int var7 = 0;
         int var9 = 0;
         int stackIn_9_0 = 0;
@@ -618,7 +618,7 @@ final class Room implements ew, Renderable, noa {
           var5_int = 0;
           var7 = 67 % ((param3 + 40) / 60);
           param1.field_l = false;
-          var6 = this.field_u.a(param1, (byte) -68);
+          var6 = this.collisionGrid.a(param1, (byte) -68);
           for (var8 = 0; var6.length > var8; var8++) {
             if (var6[var8].a(-1, param2, param0, param1)) {
               param1.field_l = true;
@@ -737,7 +737,7 @@ final class Room implements ew, Renderable, noa {
           var6 = (WorldBody) null;
           this.a(94, 108, 82, 71, 28, 102, (WorldBody) null);
         }
-        this.field_u.b(this.getPlayer(-107), 7073);
+        this.collisionGrid.insert(this.getPlayer(-107), 7073);
         if (this.field_S != null) {
           this.h(-106);
         }
@@ -859,7 +859,7 @@ final class Room implements ew, Renderable, noa {
         try {
           this.b(-1, param0.getHeight((byte) 55), param0.getWidth(-101), param0.getY(9648), -124, param0.getX(param1 ^ -26754), 0);
           param0.unlink(112);
-          this.field_u.a((ffa) (param0), (byte) 118);
+          this.collisionGrid.remove((Collidable) (param0), (byte) 118);
           if (param1 != -26755) {
             this.components = (IntrusiveDeque) null;
           }
@@ -913,7 +913,7 @@ final class Room implements ew, Renderable, noa {
     private final Trap[] a(int param0, int param1, int param2, int param3, int param4) {
         int var8_int = 0;
         ub var6;
-        ffa[] var7;
+        Collidable[] var7;
         int var10;
         Trap[] var8;
         Trap var9;
@@ -922,7 +922,7 @@ final class Room implements ew, Renderable, noa {
           return (Trap[]) null;
         }
         var6 = new ub();
-        var7 = this.field_u.b(param1, -1, param4, param0, param3);
+        var7 = this.collisionGrid.b(param1, -1, param4, param0, param3);
         for (var8_int = 0; var7.length > var8_int; var8_int++) {
           if (var7[var8_int] instanceof Trap) {
             var9 = (Trap) (var7[var8_int]);
@@ -1000,7 +1000,7 @@ final class Room implements ew, Renderable, noa {
         this.particlePool = null;
         this.field_F = null;
         this.projectilePool = null;
-        this.field_u = null;
+        this.collisionGrid = null;
     }
 
     final int i(int param0) {
@@ -1012,7 +1012,7 @@ final class Room implements ew, Renderable, noa {
 
     final void a(byte param0, int param1) {
         if (param0 <= 14) {
-          this.field_o = (ffa) null;
+          this.field_o = (Collidable) null;
         }
         this.field_I = param1;
     }
@@ -1213,7 +1213,7 @@ final class Room implements ew, Renderable, noa {
         }
     }
 
-    final boolean a(ffa param0, int param1, int param2, int param3, int param4, int param5, boolean param6, WorldBody param7, int param8) {
+    final boolean a(Collidable param0, int param1, int param2, int param3, int param4, int param5, boolean param6, WorldBody param7, int param8) {
         int var11 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -1221,17 +1221,17 @@ final class Room implements ew, Renderable, noa {
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ffa[] var10 = null;
+        Collidable[] var10 = null;
         RuntimeException var10_ref = null;
-        ffa var12 = null;
+        Collidable var12 = null;
         int var13 = 0;
-        ffa[] var14 = null;
+        Collidable[] var14 = null;
         var13 = TombRacer.field_G ? 1 : 0;
         try {
           if (param3 == 0) {
             return false;
           }
-          var14 = this.field_u.b(param4, -1, param5, param8, param1);
+          var14 = this.collisionGrid.b(param4, -1, param5, param8, param1);
           var10 = var14;
           if (param2 != 2) {
             Room.p(-15);
@@ -1280,7 +1280,7 @@ final class Room implements ew, Renderable, noa {
         RuntimeException var3 = null;
         try {
           this.field_d.addLast((byte) -74, param0);
-          this.field_u.b(param0, 7073);
+          this.collisionGrid.insert(param0, 7073);
           if (null != this.field_S) {
             param0.a((byte) 85, this.field_S);
           }
@@ -1367,11 +1367,11 @@ final class Room implements ew, Renderable, noa {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        ffa[] var7 = null;
+        Collidable[] var7 = null;
         int var8 = 0;
-        ffa var9 = null;
-        ffa[] var10 = null;
-        ffa var12 = null;
+        Collidable var9 = null;
+        Collidable[] var10 = null;
+        Collidable var12 = null;
         int var13 = 0;
         int stackIn_11_0 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -1387,7 +1387,7 @@ final class Room implements ew, Renderable, noa {
           var4 = param1.getY(9648);
           var5 = param1.getWidth(param0 ^ -38);
           var6 = param1.getHeight((byte) 55);
-          var7 = this.field_u.b(var4, param0 - 1, var3_int, var5, var6);
+          var7 = this.collisionGrid.b(var4, param0 - 1, var3_int, var5, var6);
           var8 = this.a(var4, 32238, param1, var3_int, var7, var5, var6);
           var9 = this.field_o;
           if (var8 != 0) {
@@ -1449,7 +1449,7 @@ final class Room implements ew, Renderable, noa {
         int var10 = 0;
         int var7_int = 0;
         RuntimeException var7 = null;
-        ffa[] var8 = null;
+        Collidable[] var8 = null;
         int var9 = 0;
         int var11 = 0;
         int stackIn_3_0 = 0;
@@ -1465,7 +1465,7 @@ final class Room implements ew, Renderable, noa {
             return stackIn_3_0;
           }
           var7_int = 0;
-          var8 = this.field_u.b(param1, -1, param5, param4, param3);
+          var8 = this.collisionGrid.b(param1, -1, param5, param4, param3);
           var9 = 96 / ((82 - param0) / 41);
           for (var10 = 0; var10 < var8.length; var10++) {
             var7_int = var7_int + var8[var10].a(param2, param4, param5, 0, param1, param3);
@@ -1649,12 +1649,12 @@ final class Room implements ew, Renderable, noa {
 
     final int a(int param0, int param1, int param2, int param3, int param4, int param5, WorldBody param6) {
         int var10 = 0;
-        ffa[] var8 = null;
+        Collidable[] var8 = null;
         RuntimeException var8_ref = null;
         int var9 = 0;
-        ffa var11 = null;
+        Collidable var11 = null;
         int var12 = 0;
-        ffa[] var13 = null;
+        Collidable[] var13 = null;
         int stackIn_8_0 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -1662,7 +1662,7 @@ final class Room implements ew, Renderable, noa {
         RuntimeException decompiledCaughtException = null;
         var12 = TombRacer.field_G ? 1 : 0;
         try {
-          var13 = this.field_u.b(param0, -1, param5, param1, param4);
+          var13 = this.collisionGrid.b(param0, -1, param5, param1, param4);
           var8 = var13;
           var9 = 0;
           for (var10 = param2; var13.length > var10; var10++) {
@@ -1793,7 +1793,7 @@ final class Room implements ew, Renderable, noa {
         int var6 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
-        ffa[] var5 = null;
+        Collidable[] var5 = null;
         int var7 = 0;
         int stackIn_5_0 = 0;
         int stackIn_10_0 = 0;
@@ -1813,7 +1813,7 @@ final class Room implements ew, Renderable, noa {
             return stackIn_5_0;
           }
           var4_int = 0;
-          var5 = this.field_u.a((byte) -26, param0);
+          var5 = this.collisionGrid.a((byte) -26, param0);
           for (var6 = 0; var6 < var5.length; var6++) {
             var4_int = var4_int + var5[var6].a(param2, param0, -117);
           }
@@ -1839,14 +1839,14 @@ final class Room implements ew, Renderable, noa {
         }
     }
 
-    final int a(ffa param0, WorldBody param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    final int a(Collidable param0, WorldBody param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         int stackIn_6_0 = 0;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_32_0 = 0;
         int stackIn_45_0 = 0;
         int stackIn_53_0 = 0;
-        ffa stackIn_59_0 = null;
+        Collidable stackIn_59_0 = null;
         int stackIn_64_0 = 0;
         int stackIn_66_0 = 0;
         RuntimeException stackIn_69_0 = null;
@@ -1859,7 +1859,7 @@ final class Room implements ew, Renderable, noa {
         RuntimeException var14 = null;
         int var15 = 0;
         int var16 = 0;
-        ffa[] var17 = null;
+        Collidable[] var17 = null;
         int var18 = 0;
         int var19 = 0;
         int var16Lifetime1;
@@ -1877,7 +1877,7 @@ final class Room implements ew, Renderable, noa {
           }
           var14_int = 0;
           var15 = 0;
-          var17 = this.field_u.b(param10, -1, param7, param3, param6);
+          var17 = this.collisionGrid.b(param10, -1, param7, param3, param6);
           if (param5 != 12) {
             stackIn_13_0 = -128;
             return stackIn_13_0;
@@ -2002,7 +2002,7 @@ final class Room implements ew, Renderable, noa {
         int var7;
         var7 = TombRacer.field_G ? 1 : 0;
         if (param2 != 6) {
-          this.field_o = (ffa) null;
+          this.field_o = (Collidable) null;
         }
         var4 = new uja(this.components);
         var5 = (RoomComponent) (var4.a(true));

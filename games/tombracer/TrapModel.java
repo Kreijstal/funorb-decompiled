@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
-    private int field_l;
-    TrapPart field_k;
+    private int category;
+    TrapPart part;
     private int field_i;
     int field_g;
     private boolean field_j;
-    WorldBody field_h;
+    WorldBody body;
     private int field_f;
 
     void a(WorldBody param0, int param1, TrapPart param2) {
@@ -40,16 +40,16 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
         if (param0 < 91) {
           return -69;
         }
-        if (null != this.field_h) {
-          return this.field_h.getY(9648);
+        if (null != this.body) {
+          return this.body.getY(9648);
         }
         return 0;
     }
 
     public final int getRenderX(byte param0) {
         int var2 = 19 % ((param0 + 23) / 53);
-        if (null != this.field_h) {
-          return this.field_h.getX(3);
+        if (null != this.body) {
+          return this.body.getX(3);
         }
         return 0;
     }
@@ -139,10 +139,10 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
         Room var9Lifetime3Lifetime2;
         int var7Lifetime2Lifetime2;
         int var8Lifetime2Lifetime2;
-        if (this.field_h == null) {
+        if (this.body == null) {
           return;
         }
-        if (this.field_h.b(true)) {
+        if (this.body.b(true)) {
           return;
         }
         var2 = this.m((byte) -88);
@@ -156,15 +156,15 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
           }
           var4 = 0;
           if (var4 == 0) {
-            stackIn_16_0 = (this.field_h.isExpired(param0 + 31070)) ? 1 : 0;
+            stackIn_16_0 = (this.body.isExpired(param0 + 31070)) ? 1 : 0;
           } else {
             stackIn_16_0 = 1;
           }
           var5 = stackIn_16_0;
-          if (this.field_k != null) {
+          if (this.part != null) {
             if (var5 == 0) {
-              if (this.field_k.a(param0 ^ 12575)) {
-                stackIn_26_0 = (this.field_k.a((byte) 87)) ? 1 : 0;
+              if (this.part.a(param0 ^ 12575)) {
+                stackIn_26_0 = (this.part.a((byte) 87)) ? 1 : 0;
               } else {
                 stackIn_26_0 = 1;
               }
@@ -183,17 +183,17 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
             var5 == 0) {
             return;
           }
-          var7 = this.field_h.getWidth(-49);
-          var8 = this.field_h.getHeight((byte) 55);
-          var9 = this.field_h.getRoom((byte) 79);
+          var7 = this.body.getWidth(-49);
+          var8 = this.body.getHeight((byte) 55);
+          var9 = this.body.getRoom((byte) 79);
           if (var5 != 0 &&
             this.field_j) {
-            var9.b(var2, var8, var7, this.field_h.getY(9648), -119, this.field_h.getX(3), var3);
+            var9.b(var2, var8, var7, this.body.getY(9648), -119, this.body.getX(3), var3);
             this.field_j = false;
           }
           if (var6 != 0 &&
             !this.field_j) {
-            var9.a(var3, var2, this.field_h.getX(3), this.field_h.getY(9648), var7, var8, 121);
+            var9.a(var3, var2, this.body.getX(3), this.body.getY(9648), var7, var8, 121);
             this.field_j = true;
           }
           return;
@@ -204,13 +204,13 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
           if (var4Lifetime1 != 0) {
             stackIn_64_0 = 1;
           } else {
-            stackIn_64_0 = (this.field_h.isExpired(param0 + 31070)) ? 1 : 0;
+            stackIn_64_0 = (this.body.isExpired(param0 + 31070)) ? 1 : 0;
           }
           var5Lifetime1 = stackIn_64_0;
-          if (this.field_k != null) {
+          if (this.part != null) {
             if (var5Lifetime1 == 0) {
-              if (this.field_k.a(param0 ^ 12575)) {
-                stackIn_78_0 = (this.field_k.a((byte) 87)) ? 1 : 0;
+              if (this.part.a(param0 ^ 12575)) {
+                stackIn_78_0 = (this.part.a((byte) 87)) ? 1 : 0;
                 var5Lifetime1 = stackIn_78_0;
               } else {
                 stackIn_73_0 = 1;
@@ -232,17 +232,17 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
             var5Lifetime1 == 0) {
             return;
           }
-          var7Lifetime1 = this.field_h.getWidth(-49);
-          var8Lifetime1 = this.field_h.getHeight((byte) 55);
-          var9Lifetime1 = this.field_h.getRoom((byte) 79);
+          var7Lifetime1 = this.body.getWidth(-49);
+          var8Lifetime1 = this.body.getHeight((byte) 55);
+          var9Lifetime1 = this.body.getRoom((byte) 79);
           if (var5Lifetime1 != 0 &&
             this.field_j) {
-            var9Lifetime1.b(var2, var8Lifetime1, var7Lifetime1, this.field_h.getY(9648), -119, this.field_h.getX(3), var3);
+            var9Lifetime1.b(var2, var8Lifetime1, var7Lifetime1, this.body.getY(9648), -119, this.body.getX(3), var3);
             this.field_j = false;
           }
           if (var6Lifetime1 != 0 &&
             !this.field_j) {
-            var9Lifetime1.a(var3, var2, this.field_h.getX(3), this.field_h.getY(9648), var7Lifetime1, var8Lifetime1, 121);
+            var9Lifetime1.a(var3, var2, this.body.getX(3), this.body.getY(9648), var7Lifetime1, var8Lifetime1, 121);
             this.field_j = true;
           }
           return;
@@ -251,10 +251,10 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
         if (var4Lifetime2 != 0) {
           stackIn_218_0 = 1;
         } else {
-          if (this.field_h.isExpired(param0 + 31070)) {
+          if (this.body.isExpired(param0 + 31070)) {
             var5Lifetime2 = 1;
             regionExit1: {
-              if (this.field_k != null) {
+              if (this.part != null) {
                 if (var5Lifetime2 != 0) {
                   var5Lifetime2 = 1;
                   if (var5Lifetime2 != 0) {
@@ -266,7 +266,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
                   }
                   break regionExit1;
                 }
-                if (!this.field_k.a(param0 ^ 12575)) {
+                if (!this.part.a(param0 ^ 12575)) {
                   var5Lifetime2 = 1;
                   if (var5Lifetime2 == 0) {
                     stackIn_158_0 = 1;
@@ -275,17 +275,17 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
                   }
                   var6Lifetime2 = stackIn_158_0;
                   if (var6Lifetime2 != 0) {
-                    var7Lifetime2 = this.field_h.getWidth(-49);
-                    var8Lifetime2 = this.field_h.getHeight((byte) 55);
-                    var9Lifetime2 = this.field_h.getRoom((byte) 79);
+                    var7Lifetime2 = this.body.getWidth(-49);
+                    var8Lifetime2 = this.body.getHeight((byte) 55);
+                    var9Lifetime2 = this.body.getRoom((byte) 79);
                     if (var5Lifetime2 != 0 &&
                       this.field_j) {
-                      var9Lifetime2.b(var2, var8Lifetime2, var7Lifetime2, this.field_h.getY(9648), -119, this.field_h.getX(3), var3);
+                      var9Lifetime2.b(var2, var8Lifetime2, var7Lifetime2, this.body.getY(9648), -119, this.body.getX(3), var3);
                       this.field_j = false;
                     }
                     if (var6Lifetime2 != 0 &&
                       !this.field_j) {
-                      var9Lifetime2.a(var3, var2, this.field_h.getX(3), this.field_h.getY(9648), var7Lifetime2, var8Lifetime2, 121);
+                      var9Lifetime2.a(var3, var2, this.body.getX(3), this.body.getY(9648), var7Lifetime2, var8Lifetime2, 121);
                       this.field_j = true;
                     }
                     return;
@@ -293,22 +293,22 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
                   if (var5Lifetime2 == 0) {
                     return;
                   }
-                  var7Lifetime2Lifetime2 = this.field_h.getWidth(-49);
-                  var8Lifetime2Lifetime2 = this.field_h.getHeight((byte) 55);
-                  var9Lifetime2 = this.field_h.getRoom((byte) 79);
+                  var7Lifetime2Lifetime2 = this.body.getWidth(-49);
+                  var8Lifetime2Lifetime2 = this.body.getHeight((byte) 55);
+                  var9Lifetime2 = this.body.getRoom((byte) 79);
                   if (var5Lifetime2 != 0 &&
                     this.field_j) {
-                    var9Lifetime2.b(var2, var8Lifetime2Lifetime2, var7Lifetime2Lifetime2, this.field_h.getY(9648), -119, this.field_h.getX(3), var3);
+                    var9Lifetime2.b(var2, var8Lifetime2Lifetime2, var7Lifetime2Lifetime2, this.body.getY(9648), -119, this.body.getX(3), var3);
                     this.field_j = false;
                   }
                   if (var6Lifetime2 != 0 &&
                     !this.field_j) {
-                    var9Lifetime2.a(var3, var2, this.field_h.getX(3), this.field_h.getY(9648), var7Lifetime2Lifetime2, var8Lifetime2Lifetime2, 121);
+                    var9Lifetime2.a(var3, var2, this.body.getX(3), this.body.getY(9648), var7Lifetime2Lifetime2, var8Lifetime2Lifetime2, 121);
                     this.field_j = true;
                   }
                   return;
                 }
-                stackIn_185_0 = (!this.field_k.a((byte) 87)) ? 0 : 1;
+                stackIn_185_0 = (!this.part.a((byte) 87)) ? 0 : 1;
                 var5Lifetime2 = stackIn_185_0;
               }
               if (var5Lifetime2 != 0) {
@@ -322,17 +322,17 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
               var5Lifetime2 == 0) {
               return;
             }
-            var7Lifetime2Lifetime1 = this.field_h.getWidth(-49);
-            var8Lifetime2Lifetime1 = this.field_h.getHeight((byte) 55);
-            var9Lifetime2Lifetime1 = this.field_h.getRoom((byte) 79);
+            var7Lifetime2Lifetime1 = this.body.getWidth(-49);
+            var8Lifetime2Lifetime1 = this.body.getHeight((byte) 55);
+            var9Lifetime2Lifetime1 = this.body.getRoom((byte) 79);
             if (var5Lifetime2 != 0 &&
               this.field_j) {
-              var9Lifetime2Lifetime1.b(var2, var8Lifetime2Lifetime1, var7Lifetime2Lifetime1, this.field_h.getY(9648), -119, this.field_h.getX(3), var3);
+              var9Lifetime2Lifetime1.b(var2, var8Lifetime2Lifetime1, var7Lifetime2Lifetime1, this.body.getY(9648), -119, this.body.getX(3), var3);
               this.field_j = false;
             }
             if (var6Lifetime2 != 0 &&
               !this.field_j) {
-              var9Lifetime2Lifetime1.a(var3, var2, this.field_h.getX(3), this.field_h.getY(9648), var7Lifetime2Lifetime1, var8Lifetime2Lifetime1, 121);
+              var9Lifetime2Lifetime1.a(var3, var2, this.body.getX(3), this.body.getY(9648), var7Lifetime2Lifetime1, var8Lifetime2Lifetime1, 121);
               this.field_j = true;
             }
             return;
@@ -340,7 +340,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
           stackIn_218_0 = 0;
         }
         var5Lifetime3 = stackIn_218_0;
-        if (this.field_k != null) {
+        if (this.part != null) {
           if (var5Lifetime3 != 0) {
             var5Lifetime3 = 1;
             regionExit2: {
@@ -359,13 +359,13 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
               var5Lifetime3 == 0) {
               return;
             }
-            var7Lifetime3 = this.field_h.getWidth(-49);
-            var8Lifetime3 = this.field_h.getHeight((byte) 55);
-            var9Lifetime3 = this.field_h.getRoom((byte) 79);
+            var7Lifetime3 = this.body.getWidth(-49);
+            var8Lifetime3 = this.body.getHeight((byte) 55);
+            var9Lifetime3 = this.body.getRoom((byte) 79);
             if (var5Lifetime3 == 0) {
               if (var6Lifetime3 != 0 &&
                 !this.field_j) {
-                var9Lifetime3.a(var3, var2, this.field_h.getX(3), this.field_h.getY(9648), var7Lifetime3, var8Lifetime3, 121);
+                var9Lifetime3.a(var3, var2, this.body.getX(3), this.body.getY(9648), var7Lifetime3, var8Lifetime3, 121);
                 this.field_j = true;
               }
               return;
@@ -373,12 +373,12 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
             if (!this.field_j) {
               if (var6Lifetime3 != 0 &&
                 !this.field_j) {
-                var9Lifetime3.a(var3, var2, this.field_h.getX(3), this.field_h.getY(9648), var7Lifetime3, var8Lifetime3, 121);
+                var9Lifetime3.a(var3, var2, this.body.getX(3), this.body.getY(9648), var7Lifetime3, var8Lifetime3, 121);
                 this.field_j = true;
               }
               return;
             }
-            var9Lifetime3.b(var2, var8Lifetime3, var7Lifetime3, this.field_h.getY(9648), -119, this.field_h.getX(3), var3);
+            var9Lifetime3.b(var2, var8Lifetime3, var7Lifetime3, this.body.getY(9648), -119, this.body.getX(3), var3);
             this.field_j = false;
             if (var6Lifetime3 == 0) {
               return;
@@ -386,11 +386,11 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
             if (this.field_j) {
               return;
             }
-            var9Lifetime3.a(var3, var2, this.field_h.getX(3), this.field_h.getY(9648), var7Lifetime3, var8Lifetime3, 121);
+            var9Lifetime3.a(var3, var2, this.body.getX(3), this.body.getY(9648), var7Lifetime3, var8Lifetime3, 121);
             this.field_j = true;
             return;
           }
-          if (!this.field_k.a(param0 ^ 12575)) {
+          if (!this.part.a(param0 ^ 12575)) {
             var5Lifetime3 = 1;
             regionExit3: {
               if (var5Lifetime3 != 0) {
@@ -408,13 +408,13 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
               var5Lifetime3 == 0) {
               return;
             }
-            var7Lifetime3Lifetime1 = this.field_h.getWidth(-49);
-            var8Lifetime3Lifetime1 = this.field_h.getHeight((byte) 55);
-            var9Lifetime3Lifetime1 = this.field_h.getRoom((byte) 79);
+            var7Lifetime3Lifetime1 = this.body.getWidth(-49);
+            var8Lifetime3Lifetime1 = this.body.getHeight((byte) 55);
+            var9Lifetime3Lifetime1 = this.body.getRoom((byte) 79);
             if (var5Lifetime3 == 0) {
               if (var6Lifetime3Lifetime1 != 0 &&
                 !this.field_j) {
-                var9Lifetime3Lifetime1.a(var3, var2, this.field_h.getX(3), this.field_h.getY(9648), var7Lifetime3Lifetime1, var8Lifetime3Lifetime1, 121);
+                var9Lifetime3Lifetime1.a(var3, var2, this.body.getX(3), this.body.getY(9648), var7Lifetime3Lifetime1, var8Lifetime3Lifetime1, 121);
                 this.field_j = true;
               }
               return;
@@ -422,23 +422,23 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
             if (!this.field_j) {
               if (var6Lifetime3Lifetime1 != 0 &&
                 !this.field_j) {
-                var9Lifetime3Lifetime1.a(var3, var2, this.field_h.getX(3), this.field_h.getY(9648), var7Lifetime3Lifetime1, var8Lifetime3Lifetime1, 121);
+                var9Lifetime3Lifetime1.a(var3, var2, this.body.getX(3), this.body.getY(9648), var7Lifetime3Lifetime1, var8Lifetime3Lifetime1, 121);
                 this.field_j = true;
               }
               return;
             }
-            var9Lifetime3Lifetime1.b(var2, var8Lifetime3Lifetime1, var7Lifetime3Lifetime1, this.field_h.getY(9648), -119, this.field_h.getX(3), var3);
+            var9Lifetime3Lifetime1.b(var2, var8Lifetime3Lifetime1, var7Lifetime3Lifetime1, this.body.getY(9648), -119, this.body.getX(3), var3);
             this.field_j = false;
             if (var6Lifetime3Lifetime1 != 0) {
               if (this.field_j) {
                 return;
               }
-              var9Lifetime3Lifetime1.a(var3, var2, this.field_h.getX(3), this.field_h.getY(9648), var7Lifetime3Lifetime1, var8Lifetime3Lifetime1, 121);
+              var9Lifetime3Lifetime1.a(var3, var2, this.body.getX(3), this.body.getY(9648), var7Lifetime3Lifetime1, var8Lifetime3Lifetime1, 121);
               this.field_j = true;
             }
             return;
           }
-          if (this.field_k.a((byte) 87)) {
+          if (this.part.a((byte) 87)) {
             var5Lifetime3 = 1;
             if (var5Lifetime3 != 0) {
               stackIn_322_0 = (var4Lifetime2 != 0) ? 1 : 0;
@@ -451,17 +451,17 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
               var5Lifetime3 == 0) {
               return;
             }
-            var7Lifetime3Lifetime2 = this.field_h.getWidth(-49);
-            var8Lifetime3Lifetime2 = this.field_h.getHeight((byte) 55);
-            var9Lifetime3Lifetime2 = this.field_h.getRoom((byte) 79);
+            var7Lifetime3Lifetime2 = this.body.getWidth(-49);
+            var8Lifetime3Lifetime2 = this.body.getHeight((byte) 55);
+            var9Lifetime3Lifetime2 = this.body.getRoom((byte) 79);
             if (var5Lifetime3 != 0 &&
               this.field_j) {
-              var9Lifetime3Lifetime2.b(var2, var8Lifetime3Lifetime2, var7Lifetime3Lifetime2, this.field_h.getY(9648), -119, this.field_h.getX(3), var3);
+              var9Lifetime3Lifetime2.b(var2, var8Lifetime3Lifetime2, var7Lifetime3Lifetime2, this.body.getY(9648), -119, this.body.getX(3), var3);
               this.field_j = false;
             }
             if (var6Lifetime3Lifetime2 != 0 &&
               !this.field_j) {
-              var9Lifetime3Lifetime2.a(var3, var2, this.field_h.getX(3), this.field_h.getY(9648), var7Lifetime3Lifetime2, var8Lifetime3Lifetime2, 121);
+              var9Lifetime3Lifetime2.a(var3, var2, this.body.getX(3), this.body.getY(9648), var7Lifetime3Lifetime2, var8Lifetime3Lifetime2, 121);
               this.field_j = true;
             }
             return;
@@ -476,18 +476,18 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
                 var5Lifetime3 == 0) {
                 return;
               }
-              var7Lifetime4 = this.field_h.getWidth(-49);
-              var8Lifetime4 = this.field_h.getHeight((byte) 55);
-              var9Lifetime4 = this.field_h.getRoom((byte) 79);
+              var7Lifetime4 = this.body.getWidth(-49);
+              var8Lifetime4 = this.body.getHeight((byte) 55);
+              var9Lifetime4 = this.body.getRoom((byte) 79);
               if (!this.field_j) {
                 if (var6Lifetime4 != 0 &&
                   !this.field_j) {
-                  var9Lifetime4.a(var3, var2, this.field_h.getX(3), this.field_h.getY(9648), var7Lifetime4, var8Lifetime4, 121);
+                  var9Lifetime4.a(var3, var2, this.body.getX(3), this.body.getY(9648), var7Lifetime4, var8Lifetime4, 121);
                   this.field_j = true;
                 }
                 return;
               }
-              var9Lifetime4.b(var2, var8Lifetime4, var7Lifetime4, this.field_h.getY(9648), -119, this.field_h.getX(3), var3);
+              var9Lifetime4.b(var2, var8Lifetime4, var7Lifetime4, this.body.getY(9648), -119, this.body.getX(3), var3);
               this.field_j = false;
               break regionExit4;
             }
@@ -500,12 +500,12 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
             var5Lifetime3 == 0) {
             return;
           }
-          var7Lifetime4 = this.field_h.getWidth(-49);
-          var8Lifetime4 = this.field_h.getHeight((byte) 55);
-          var9Lifetime4 = this.field_h.getRoom((byte) 79);
+          var7Lifetime4 = this.body.getWidth(-49);
+          var8Lifetime4 = this.body.getHeight((byte) 55);
+          var9Lifetime4 = this.body.getRoom((byte) 79);
           if (var5Lifetime3 != 0 &&
             this.field_j) {
-            var9Lifetime4.b(var2, var8Lifetime4, var7Lifetime4, this.field_h.getY(9648), -119, this.field_h.getX(3), var3);
+            var9Lifetime4.b(var2, var8Lifetime4, var7Lifetime4, this.body.getY(9648), -119, this.body.getX(3), var3);
             this.field_j = false;
           }
         }
@@ -513,7 +513,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
           if (this.field_j) {
             return;
           }
-          var9Lifetime4.a(var3, var2, this.field_h.getX(3), this.field_h.getY(9648), var7Lifetime4, var8Lifetime4, 121);
+          var9Lifetime4.a(var3, var2, this.body.getX(3), this.body.getY(9648), var7Lifetime4, var8Lifetime4, 121);
           this.field_j = true;
         }
         return;
@@ -524,7 +524,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
         return -1;
     }
 
-    void a(byte param0, BitPacketBuffer param1) {
+    void encode(byte param0, BitPacketBuffer param1) {
         try {
           if (0 < this.field_f) {
             param1.writeBits((byte) 12, 1, 1);
@@ -540,10 +540,10 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
 
     final TrapPart c(int param0) {
         if (param0 > -73) {
-          this.field_l = -95;
-          return this.field_k;
+          this.category = -95;
+          return this.part;
         }
-        return this.field_k;
+        return this.part;
     }
 
     public void f(int param0) {
@@ -552,12 +552,12 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
         }
     }
 
-    final int h(byte param0) {
+    final int getCategory(byte param0) {
         if (param0 <= 1) {
           this.a((byte) -62, -88);
-          return this.field_l;
+          return this.category;
         }
-        return this.field_l;
+        return this.category;
     }
 
     public final boolean d(byte param0) {
@@ -567,14 +567,14 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
         return this.g((byte) -105);
     }
 
-    void a(TrapPart param0, WorldBody param1, byte param2) {
+    void attach(TrapPart param0, WorldBody param1, byte param2) {
         try {
-          this.field_k = param0;
+          this.part = param0;
           if (param2 != 36) {
             iq var5 = (iq) null;
             this.render(-31, (iq) null);
           }
-          this.field_h = param1;
+          this.body = param1;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "dg.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -583,12 +583,12 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
     final void i(byte param0) {
         if (param0 == -30) {
           this.g(param0 - 12633);
-          this.field_h = null;
+          this.body = null;
           return;
         }
-        this.field_h = (WorldBody) null;
+        this.body = (WorldBody) null;
         this.g(param0 - 12633);
-        this.field_h = null;
+        this.body = null;
     }
 
     abstract void a(iq param0, int param1, int param2, int param3, byte param4);
@@ -597,26 +597,26 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
         int var2;
         var2 = -58 % ((-38 - param0) / 60);
         if (this.a((byte) 74)) {
-          if (null != this.field_k &&
-            this.field_k.a((byte) 87)) {
+          if (null != this.part &&
+            this.part.a((byte) 87)) {
             return true;
           }
-          if (null != this.field_h &&
-            !this.field_h.isExpired(18407)) {
+          if (null != this.body &&
+            !this.body.isExpired(18407)) {
             return false;
           }
           return true;
         }
-        if (this.field_k == null) {
+        if (this.part == null) {
           return true;
         }
-        if (this.field_k.a((byte) 87)) {
+        if (this.part.a((byte) 87)) {
           return true;
         }
-        if (null == this.field_h) {
+        if (null == this.body) {
           return true;
         }
-        if (this.field_h.isExpired(18407)) {
+        if (this.body.isExpired(18407)) {
           return true;
         }
         return false;
@@ -630,16 +630,16 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != this.field_h) {
-            if (this.field_h.l(0)) {
+          if (null != this.body) {
+            if (this.body.l(0)) {
               return;
             }
             var3 = null;
-            if (this.field_h instanceof Trap) {
-              var3 = (Trap) (this.field_h);
+            if (this.body instanceof Trap) {
+              var3 = (Trap) (this.body);
             }
-            var4 = (this.field_f << 16) + this.field_h.g((byte) 115);
-            this.a(param1, this.field_h.getY(9648), this.field_h.getX(3), var4, (byte) 46);
+            var4 = (this.field_f << 16) + this.body.g((byte) 115);
+            this.a(param1, this.body.getY(9648), this.body.getX(3), var4, (byte) 46);
             if (var3 != null) {
               ((Trap) (var3)).a(param1, -10425);
             }
@@ -678,7 +678,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
     TrapModel(int param0, Room param1, BitPacketBuffer param2) {
         this(param0);
         try {
-          this.a(125, param1, param2);
+          this.decode(125, param1, param2);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "dg.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -693,34 +693,34 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
     final Room a(int param0) {
         if (param0 < 12) {
           this.a((byte) -118);
-          if (this.field_h != null) {
-            return this.field_h.getRoom((byte) 116);
+          if (this.body != null) {
+            return this.body.getRoom((byte) 116);
           }
           return null;
         }
-        if (this.field_h != null) {
-          return this.field_h.getRoom((byte) 116);
+        if (this.body != null) {
+          return this.body.getRoom((byte) 116);
         }
         return null;
     }
 
     final WorldBody j(byte param0) {
         if (param0 != 16) {
-          this.field_k = (TrapPart) null;
-          return this.field_h;
+          this.part = (TrapPart) null;
+          return this.body;
         }
-        return this.field_h;
+        return this.body;
     }
 
     int k(byte param0) {
         if (param0 != -99) {
           this.field_j = true;
-          if (!this.field_h.j(param0 + 98)) {
+          if (!this.body.j(param0 + 98)) {
             return 7;
           }
           return 2;
         }
-        if (!this.field_h.j(param0 + 98)) {
+        if (!this.body.j(param0 + 98)) {
           return 7;
         }
         return 2;
@@ -737,7 +737,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
         }
     }
 
-    void a(int param0, Room param1, BitPacketBuffer param2) {
+    void decode(int param0, Room param1, BitPacketBuffer param2) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -780,13 +780,13 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
     public int getRenderZ(byte param0) {
         if (param0 > -86) {
           this.k((byte) -84);
-          if (null != this.field_h) {
-            return this.field_h.g((byte) 115) + (this.field_f << 16);
+          if (null != this.body) {
+            return this.body.g((byte) 115) + (this.field_f << 16);
           }
           return 0;
         }
-        if (null != this.field_h) {
-          return this.field_h.g((byte) 115) + (this.field_f << 16);
+        if (null != this.body) {
+          return this.body.g((byte) 115) + (this.field_f << 16);
         }
         return 0;
     }
@@ -859,7 +859,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
     TrapModel(int param0) {
         this.field_j = false;
         this.field_i = -1;
-        this.field_l = param0;
+        this.category = param0;
     }
 
     static {

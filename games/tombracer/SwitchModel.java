@@ -21,9 +21,9 @@ final class SwitchModel extends TrapModel {
         this.field_q = param0;
     }
 
-    final void a(int param0, Room param1, BitPacketBuffer param2) {
+    final void decode(int param0, Room param1, BitPacketBuffer param2) {
         try {
-          super.a(124, param1, param2);
+          super.decode(124, param1, param2);
           this.field_q = param2.readBits((byte) 44, 4);
           if (param0 < 119) {
             this.d(72);
@@ -33,7 +33,7 @@ final class SwitchModel extends TrapModel {
         }
     }
 
-    final void a(TrapPart param0, WorldBody param1, byte param2) {
+    final void attach(TrapPart param0, WorldBody param1, byte param2) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -42,7 +42,7 @@ final class SwitchModel extends TrapModel {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          super.a(param0, param1, param2);
+          super.attach(param0, param1, param2);
           if (param0 instanceof ut) {
             this.field_o = (ut) ((Object) param0);
           }
@@ -79,9 +79,9 @@ final class SwitchModel extends TrapModel {
         this.field_n = false;
     }
 
-    final void a(byte param0, BitPacketBuffer param1) {
+    final void encode(byte param0, BitPacketBuffer param1) {
         try {
-          super.a((byte) 59, param1);
+          super.encode((byte) 59, param1);
           param1.writeBits((byte) 59, this.field_q, 4);
           int var3_int = 26 % ((-8 - param0) / 40);
         } catch (RuntimeException runtimeException) {
@@ -850,11 +850,11 @@ final class SwitchModel extends TrapModel {
               if (var14 != 1) {
                 if (var14 != 3) {
                   if (4 == var14) {
-                    SimpleHoverMountComponent.a(2097152, 0, (byte) 88, param2, this.field_h.getWidth(-20), 1024, param3, var13, 0, var12, param1);
+                    SimpleHoverMountComponent.a(2097152, 0, (byte) 88, param2, this.body.getWidth(-20), 1024, param3, var13, 0, var12, param1);
                     return;
                   }
                   if (var14 == 5) {
-                    gba.a(2, param2, 2097152, var12, -512, var13, param1, 512, 512, this.field_h.getHeight((byte) 55), param3);
+                    gba.a(2, param2, 2097152, var12, -512, var13, param1, 512, 512, this.body.getHeight((byte) 55), param3);
                     return;
                   }
                 } else {
@@ -904,7 +904,7 @@ final class SwitchModel extends TrapModel {
             }
           }
           if (var11 != null) {
-            var14Lifetime1 = dfa.a(var10 + (2048 - this.field_h.g(-25787)) >> 2, 2048, -38);
+            var14Lifetime1 = dfa.a(var10 + (2048 - this.body.g(-25787)) >> 2, 2048, -38);
             gqa.a(var14Lifetime1, -83584144, param1, param2, (ka) (var11), param3);
           }
           if (this.field_q == 1) {
@@ -913,7 +913,7 @@ final class SwitchModel extends TrapModel {
             }
             var16 = this.field_s.b((byte) 74);
             this.field_s.a(3, false, (byte) 79, 7);
-            var14Lifetime2 = dfa.a(-this.field_h.g(-25787) + var10 + 2048 >> 2, 2048, -69);
+            var14Lifetime2 = dfa.a(-this.body.g(-25787) + var10 + 2048 >> 2, 2048, -69);
             gqa.a(var14Lifetime2, -83584144, param1, param2 + 65536, var16, param3 + 2228224);
           }
           return;
@@ -936,7 +936,7 @@ final class SwitchModel extends TrapModel {
         if (param0 != -99) {
           return 44;
         }
-        if (this.field_h.j(-1)) {
+        if (this.body.j(-1)) {
           return 2;
         }
         int var2 = this.field_q;

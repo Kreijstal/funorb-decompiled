@@ -126,7 +126,7 @@ final class SimpleBlockBehaviour extends Behaviour {
         return param0;
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, ffa param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, Collidable param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -234,16 +234,16 @@ final class SimpleBlockBehaviour extends Behaviour {
     }
 
     final void tick(int param0) {
-        ffa var3 = null;
-        ffa var3Lifetime1;
-        ffa var3Lifetime2;
-        ffa var3Lifetime3;
-        ffa var3Lifetime4;
+        Collidable var3 = null;
+        Collidable var3Lifetime1;
+        Collidable var3Lifetime2;
+        Collidable var3Lifetime3;
+        Collidable var3Lifetime4;
         if (!this.field_q) {
           if (!this.field_u) {
             if (param0 != 5418) {
-              var3 = (ffa) null;
-              this.a(-117, 44, 70, 106, 36, -110, (ffa) null);
+              var3 = (Collidable) null;
+              this.a(-117, 44, 70, 106, 36, -110, (Collidable) null);
               return;
             }
             return;
@@ -252,16 +252,16 @@ final class SimpleBlockBehaviour extends Behaviour {
             if (param0 == 5418) {
               return;
             }
-            var3Lifetime3 = (ffa) null;
-            this.a(-117, 44, 70, 106, 36, -110, (ffa) null);
+            var3Lifetime3 = (Collidable) null;
+            this.a(-117, 44, 70, 106, 36, -110, (Collidable) null);
             return;
           }
           this.b(true).r(-36);
           if (param0 == 5418) {
             return;
           }
-          var3Lifetime4 = (ffa) null;
-          this.a(-117, 44, 70, 106, 36, -110, (ffa) null);
+          var3Lifetime4 = (Collidable) null;
+          this.a(-117, 44, 70, 106, 36, -110, (Collidable) null);
           return;
         }
         if (this.d(8031)) {
@@ -269,15 +269,15 @@ final class SimpleBlockBehaviour extends Behaviour {
           if (param0 == 5418) {
             return;
           }
-          var3Lifetime1 = (ffa) null;
-          this.a(-117, 44, 70, 106, 36, -110, (ffa) null);
+          var3Lifetime1 = (Collidable) null;
+          this.a(-117, 44, 70, 106, 36, -110, (Collidable) null);
           return;
         }
         if (param0 == 5418) {
           return;
         }
-        var3Lifetime2 = (ffa) null;
-        this.a(-117, 44, 70, 106, 36, -110, (ffa) null);
+        var3Lifetime2 = (Collidable) null;
+        this.a(-117, 44, 70, 106, 36, -110, (Collidable) null);
     }
 
     final void encode(boolean param0, BitPacketBuffer param1) {
@@ -295,8 +295,8 @@ final class SimpleBlockBehaviour extends Behaviour {
     final void a(int param0, byte param1) {
         this.field_s = param0;
         if (param1 != -22) {
-          ffa var4 = (ffa) null;
-          this.a(-37, 114, -50, -103, 24, 15, (ffa) null);
+          Collidable var4 = (Collidable) null;
+          this.a(-37, 114, -50, -103, 24, 15, (Collidable) null);
         }
     }
 

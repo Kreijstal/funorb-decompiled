@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class Player implements Renderable, WorldBody, ffa, jfa, t {
+final class Player implements Renderable, WorldBody, Collidable, jfa, t {
     private ac field_u;
     private int field_c;
     private int size;
@@ -338,8 +338,8 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
                   this.lifeState = 0;
                   this.field_c = 40;
                 }
-                this.room.field_u.a((ffa) (this), -46);
-                this.room.field_u.b((ffa) (this), 7073);
+                this.room.collisionGrid.pruneOutsideBounds((Collidable) (this), -46);
+                this.room.collisionGrid.insert((Collidable) (this), 7073);
                 decompiledFrameRemainder0 = false;
               } else {
                 decompiledFrameRemainder0 = (var3_int == 3);
@@ -895,7 +895,7 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
             }
             boolean decompiledFrameRemainder0 = true;
             this.C(-1).a(this, param0, 1, param2);
-            this.room.field_u.a((ffa) (this), (byte) 107);
+            this.room.collisionGrid.remove((Collidable) (this), (byte) 107);
             if (4 == param0) {
               var4 = this.room.j((byte) 52);
               if (null != var4 &&
@@ -1498,10 +1498,10 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
         int[][] var8 = null;
         int[][] var9 = null;
         int var10 = 0;
-        ffa[] var11 = null;
-        ffa[] var12 = null;
+        Collidable[] var11 = null;
+        Collidable[] var12 = null;
         int var13 = 0;
-        ffa var14 = null;
+        Collidable var14 = null;
         Trap var15 = null;
         int var16 = 0;
         int var17 = 0;
@@ -1551,7 +1551,7 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
                   if (stackIn_31_0 >= ~var10) {
                     break scanLoop2;
                   }
-                  var11 = this.room.field_u.b(var8[var10][1], -1, var8[var10][0], 2, 2);
+                  var11 = this.room.collisionGrid.b(var8[var10][1], -1, var8[var10][0], 2, 2);
                   var12 = var11;
                   if (var20 != 0) {
                     break regionExit1;
@@ -1646,7 +1646,7 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
           if (!this.room.a(var11, 131072, var13, var14, var12, true)) {
             return false;
           }
-          if (this.room.a((ffa) (this), var14, param0 ^ -3, 1, var12, var11, false, (WorldBody) (this), var13)) {
+          if (this.room.a((Collidable) (this), var14, param0 ^ -3, 1, var12, var11, false, (WorldBody) (this), var13)) {
             return false;
           }
           this.a(131072 * param2, param0 + 128, 131072 * param1, 0, 0);
@@ -1693,7 +1693,7 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
           if (param0) {
             this.field_T = 52;
           }
-          stackIn_11_0 = this.room.a((ffa) (this), (WorldBody) (this), 1, this.size, param1, 12, this.size, this.x, param3, param4, this.y, param2, true);
+          stackIn_11_0 = this.room.a((Collidable) (this), (WorldBody) (this), 1, this.size, param1, 12, this.size, this.x, param3, param4, this.y, param2, true);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2603,14 +2603,14 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
     }
 
     public final void a(int param0, int param1, int param2) {
-        this.room.field_u.a((ffa) (this), (byte) 121);
+        this.room.collisionGrid.remove((Collidable) (this), (byte) 121);
         if (param2 != 2) {
           return;
         }
         try {
           this.b(param1, param0, 76473160);
           this.savePreviousPosition((byte) -116);
-          this.room.field_u.b((ffa) (this), 7073);
+          this.room.collisionGrid.insert((Collidable) (this), 7073);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hca.DD(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
@@ -2751,7 +2751,7 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
         }
     }
 
-    public final boolean a(int param0, WorldBody param1, int param2, int param3, int param4, ffa param5, int param6, int param7) {
+    public final boolean a(int param0, WorldBody param1, int param2, int param3, int param4, Collidable param5, int param6, int param7) {
         RuntimeException var9 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -3082,7 +3082,7 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
         try {
           this.weapon = param2;
           if (param1 >= -126) {
-            this.a(true);
+            this.getCollisionId(true);
           }
           if (this.weapon != null) {
             this.weapon.a(param0, (byte) 25);
@@ -3584,7 +3584,7 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
         }
     }
 
-    public final int a(boolean param0) {
+    public final int getCollisionId(boolean param0) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -3729,8 +3729,8 @@ final class Player implements Renderable, WorldBody, ffa, jfa, t {
               this.field_Y = 0;
             }
           }
-          this.room.field_u.a((ffa) (this), -86);
-          this.room.field_u.b((ffa) (this), 7073);
+          this.room.collisionGrid.pruneOutsideBounds((Collidable) (this), -86);
+          this.room.collisionGrid.insert((Collidable) (this), 7073);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

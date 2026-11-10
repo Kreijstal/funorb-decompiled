@@ -235,7 +235,7 @@ class tu extends SimulationObserver {
         try {
           if (!this.field_f.k(-25319) &&
             param2 != null &&
-            param2.field_u != null) {
+            param2.collisionGrid != null) {
             var4_int = param2.getPlayer(-2).A(param0 + 2);
             if (param2.j(0) &&
               !this.field_f.j(param0 - 1876)) {

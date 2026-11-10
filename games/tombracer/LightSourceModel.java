@@ -19,24 +19,24 @@ final class LightSourceModel extends TrapModel {
         if (null == this.field_s) {
           return;
         }
-        if (this.field_h == null) {
+        if (this.body == null) {
           this.k(param0 ^ -24643);
           return;
         }
         this.field_s.a(this.getRenderZ((byte) -123), (byte) 127, this.getRenderY((byte) 105), this.getRenderX((byte) -117));
-        if (this.field_h.isExpired(18407)) {
+        if (this.body.isExpired(18407)) {
           this.k(24642);
           return;
         }
-        if (this.field_k == null) {
+        if (this.part == null) {
           return;
         }
-        if (this.field_k.a((byte) 87)) {
+        if (this.part.a((byte) 87)) {
           this.k(24642);
           return;
         }
-        if (this.field_k instanceof mra) {
-          var4 = (mra) ((Object) this.field_k);
+        if (this.part instanceof mra) {
+          var4 = (mra) ((Object) this.part);
           if (!var4.b(-90)) {
             this.i(94);
             return;
@@ -44,7 +44,7 @@ final class LightSourceModel extends TrapModel {
           this.a(false);
           return;
         }
-        if (!this.field_k.a(param0 - 85)) {
+        if (!this.part.a(param0 - 85)) {
           this.i(-34);
           return;
         }
@@ -147,10 +147,10 @@ final class LightSourceModel extends TrapModel {
         if (this.field_s != null) {
           return;
         }
-        if (this.field_h == null) {
+        if (this.body == null) {
           return;
         }
-        var9 = this.field_h.getRoom((byte) -86);
+        var9 = this.body.getRoom((byte) -86);
         var3 = var9.j((byte) -105);
         if (var3 == null) {
           return;
@@ -365,9 +365,9 @@ final class LightSourceModel extends TrapModel {
         }
     }
 
-    final void a(TrapPart param0, WorldBody param1, byte param2) {
+    final void attach(TrapPart param0, WorldBody param1, byte param2) {
         try {
-          super.a(param0, param1, param2);
+          super.attach(param0, param1, param2);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "gaa.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -377,9 +377,9 @@ final class LightSourceModel extends TrapModel {
         super(param0, param1, param2);
     }
 
-    final void a(byte param0, BitPacketBuffer param1) {
+    final void encode(byte param0, BitPacketBuffer param1) {
         try {
-          super.a((byte) -65, param1);
+          super.encode((byte) -65, param1);
           int var3_int = 46 / ((param0 + 8) / 40);
           param1.writeBits((byte) 0, this.field_q, 4);
           param1.writeBits((byte) 19, this.field_o, 2);
@@ -401,8 +401,8 @@ final class LightSourceModel extends TrapModel {
         }
     }
 
-    final void a(int param0, Room param1, BitPacketBuffer param2) {
-        super.a(127, param1, param2);
+    final void decode(int param0, Room param1, BitPacketBuffer param2) {
+        super.decode(127, param1, param2);
         if (!(param1.formatVersion >= 18)) {
           return;
         }

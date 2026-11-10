@@ -10,8 +10,8 @@ final class DoorwayModel extends TrapModel {
     static su field_o;
     static String field_n;
 
-    final void a(int param0, Room param1, BitPacketBuffer param2) {
-        super.a(126, param1, param2);
+    final void decode(int param0, Room param1, BitPacketBuffer param2) {
+        super.decode(126, param1, param2);
         if (param1.formatVersion <= 17) {
           return;
         }
@@ -53,7 +53,7 @@ final class DoorwayModel extends TrapModel {
               return;
             }
             var4 = (BitPacketBuffer) null;
-            this.a(-98, (Room) null, (BitPacketBuffer) null);
+            this.decode(-98, (Room) null, (BitPacketBuffer) null);
             return;
           }
           if (3 == var2) {
@@ -68,7 +68,7 @@ final class DoorwayModel extends TrapModel {
           return;
         }
         var4Lifetime1 = (BitPacketBuffer) null;
-        this.a(-98, (Room) null, (BitPacketBuffer) null);
+        this.decode(-98, (Room) null, (BitPacketBuffer) null);
     }
 
     final void a(iq param0, int param1, int param2, int param3, byte param4) {
@@ -113,7 +113,7 @@ final class DoorwayModel extends TrapModel {
           }
           var8Lifetime1 = -76 / ((-38 - param4) / 47);
           if (var7 != null) {
-            var9 = dfa.a(4096 + var6_int - this.field_h.g(-25787) >> 2, 2048, 102);
+            var9 = dfa.a(4096 + var6_int - this.body.g(-25787) >> 2, 2048, 102);
             gqa.a(var9, -83584144, param1, param2, (ka) (var7), param3);
           }
           return;
@@ -131,9 +131,9 @@ final class DoorwayModel extends TrapModel {
         }
     }
 
-    final void a(TrapPart param0, WorldBody param1, byte param2) {
+    final void attach(TrapPart param0, WorldBody param1, byte param2) {
         try {
-          super.a(param0, param1, param2);
+          super.attach(param0, param1, param2);
           this.field_r = param1.getX(param2 - 33);
           this.field_p = param1.getY(param2 + 9612);
         } catch (RuntimeException runtimeException) {
@@ -180,7 +180,7 @@ final class DoorwayModel extends TrapModel {
         if (var6_ref == null) {
           return;
         }
-        var3 = (Trap) (this.field_h);
+        var3 = (Trap) (this.body);
         if (var3.getSimulation(param0 + 15471).i(param0 - 14885)) {
           return;
         }
@@ -232,10 +232,10 @@ final class DoorwayModel extends TrapModel {
         return;
     }
 
-    final void a(byte param0, BitPacketBuffer param1) {
+    final void encode(byte param0, BitPacketBuffer param1) {
         try {
           int var3_int = 94 / ((-8 - param0) / 40);
-          super.a((byte) -88, param1);
+          super.encode((byte) -88, param1);
           param1.writeBits((byte) -125, this.field_q, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "lfa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

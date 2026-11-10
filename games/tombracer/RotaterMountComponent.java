@@ -238,13 +238,13 @@ final class RotaterMountComponent extends PrefabComponent {
           return (goa) null;
         }
         if (var1 == null) {
-          return new goa(cs.a((byte) 94), npa.a(32));
+          return new goa(cs.a((byte) 94), CollisionGrid.a(32));
         }
         if (var1.indexOf('@') >= 0) {
           var1 = "";
-          return new goa(cs.a((byte) 94), npa.a(32));
+          return new goa(cs.a((byte) 94), CollisionGrid.a(32));
         }
-        return new goa(cs.a((byte) 94), npa.a(32));
+        return new goa(cs.a((byte) 94), CollisionGrid.a(32));
     }
 
     static {

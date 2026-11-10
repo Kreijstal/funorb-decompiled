@@ -120,7 +120,7 @@ final class GasVentModel extends TrapModel {
           this.field_q = 0;
           return;
         }
-        if (!this.field_k.a(-61)) {
+        if (!this.part.a(-61)) {
           this.field_q = 0;
           return;
         }
@@ -212,7 +212,7 @@ final class GasVentModel extends TrapModel {
         }
     }
 
-    final void a(TrapPart param0, WorldBody param1, byte param2) {
+    final void attach(TrapPart param0, WorldBody param1, byte param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -221,7 +221,7 @@ final class GasVentModel extends TrapModel {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          super.a(param0, param1, param2);
+          super.attach(param0, param1, param2);
           if (!(param0 instanceof ut)) {
             return;
           }
@@ -247,18 +247,18 @@ final class GasVentModel extends TrapModel {
         }
     }
 
-    final void a(byte param0, BitPacketBuffer param1) {
+    final void encode(byte param0, BitPacketBuffer param1) {
         try {
           int var3_int = -121 / ((param0 + 8) / 40);
-          super.a((byte) -64, param1);
+          super.encode((byte) -64, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pqa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, Room param1, BitPacketBuffer param2) {
+    final void decode(int param0, Room param1, BitPacketBuffer param2) {
         try {
-          super.a(124, param1, param2);
+          super.decode(124, param1, param2);
           if (param0 < 119) {
             field_r = (String) null;
           }
@@ -271,7 +271,7 @@ final class GasVentModel extends TrapModel {
         int var7 = 0;
         try {
           int var6_int = 92 % ((param4 + 38) / 47);
-          var7 = dfa.a(4096 - this.field_h.g(-25787) >> 2, 2048, -74);
+          var7 = dfa.a(4096 - this.body.g(-25787) >> 2, 2048, -74);
           gqa.a(var7, -83584144, param1, param2, RevolverItemComponent.field_J[6], param3);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pqa.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');

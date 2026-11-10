@@ -25,14 +25,14 @@ final class FurnitureModel extends TrapModel {
           var7 = -80 / ((param4 + 38) / 47);
           var9 = this.field_p.b((byte) 74);
           if (var9 != null) {
-            var8 = dfa.a(4096 - this.field_h.g(-25787) >> 2, 2048, -40);
+            var8 = dfa.a(4096 - this.body.g(-25787) >> 2, 2048, -40);
             gqa.a(var8, -83584144, param1, param2, var9, param3);
           }
           if (this.field_m != 1) {
             return;
           }
           var10 = SpawnerBehaviour.a(49, 12166, 1);
-          var8Lifetime1 = dfa.a(4096 - this.field_h.g(-25787) >> 2, 2048, 86);
+          var8Lifetime1 = dfa.a(4096 - this.body.g(-25787) >> 2, 2048, 86);
           gqa.a(var8Lifetime1, -83584144, param1, param2, var10, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -134,8 +134,8 @@ final class FurnitureModel extends TrapModel {
         }
     }
 
-    final void a(int param0, Room param1, BitPacketBuffer param2) {
-        super.a(124, param1, param2);
+    final void decode(int param0, Room param1, BitPacketBuffer param2) {
+        super.decode(124, param1, param2);
         if (param0 < 119) {
           this.field_m = 77;
         }
@@ -149,10 +149,10 @@ final class FurnitureModel extends TrapModel {
         }
     }
 
-    final void a(byte param0, BitPacketBuffer param1) {
+    final void encode(byte param0, BitPacketBuffer param1) {
         try {
           int var3_int = -114 % ((-8 - param0) / 40);
-          super.a((byte) -105, param1);
+          super.encode((byte) -105, param1);
           param1.writeBits((byte) 30, this.field_m, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "am.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

@@ -73,7 +73,7 @@ final class PitModel extends TrapModel {
         try {
           if (param0 < 90) {
             var5 = (BitPacketBuffer) null;
-            this.a((byte) -47, (BitPacketBuffer) null);
+            this.encode((byte) -47, (BitPacketBuffer) null);
           }
           var3_int = this.field_v;
           if (var3_int != 0 &&
@@ -147,7 +147,7 @@ final class PitModel extends TrapModel {
         try {
           if (param1 != 44) {
             var4 = (BitPacketBuffer) null;
-            this.a((byte) -87, (BitPacketBuffer) null);
+            this.encode((byte) -87, (BitPacketBuffer) null);
           }
           var3_int = param0.field_j;
           if (var3_int != 0) {
@@ -269,18 +269,18 @@ final class PitModel extends TrapModel {
         var30 = this.a(113);
         var3 = var30.getWidth((byte) -86);
         var4 = var30.getHeight(85);
-        var5 = this.field_h.getX(3);
-        var6 = this.field_h.getY(param0 + 9758);
-        this.field_o = this.field_h.getWidth(-128) / 2097152;
-        this.field_t = this.field_h.getHeight((byte) 55) / 2097152;
+        var5 = this.body.getX(3);
+        var6 = this.body.getY(param0 + 9758);
+        this.field_o = this.body.getWidth(-128) / 2097152;
+        this.field_t = this.body.getHeight((byte) 55) / 2097152;
         this.field_m = new dpa[this.field_o][this.field_t];
-        var7 = -(this.field_h.getHeight((byte) 55) / 2) + (var6 + 1048576);
+        var7 = -(this.body.getHeight((byte) 55) / 2) + (var6 + 1048576);
         if (param0 != -110) {
           var27 = (dpa) null;
           this.a(-101, (dpa) null);
         }
         for (var8 = 0; var8 < this.field_t; var8++) {
-          var9 = -(this.field_h.getWidth(-53) / 2) + var5 + 1048576;
+          var9 = -(this.body.getWidth(-53) / 2) + var5 + 1048576;
           for (var10 = 0; var10 < this.field_o; var10++) {
             var28 = new dpa();
             var29 = var28;
@@ -517,10 +517,10 @@ final class PitModel extends TrapModel {
         return 0;
     }
 
-    final void a(byte param0, BitPacketBuffer param1) {
+    final void encode(byte param0, BitPacketBuffer param1) {
         try {
           int var3_int = -114 % ((param0 + 8) / 40);
-          super.a((byte) -68, param1);
+          super.encode((byte) -68, param1);
           param1.writeBits((byte) -127, this.field_v, 2);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "kva.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -679,7 +679,7 @@ final class PitModel extends TrapModel {
         }
     }
 
-    final void a(int param0, Room param1, BitPacketBuffer param2) {
+    final void decode(int param0, Room param1, BitPacketBuffer param2) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -691,7 +691,7 @@ final class PitModel extends TrapModel {
           if (param0 <= 119) {
             this.f((byte) -126);
           }
-          super.a(122, param1, param2);
+          super.decode(122, param1, param2);
           if (param1.formatVersion >= 19) {
             this.field_v = param2.readBits((byte) 44, 2);
           }
@@ -722,15 +722,15 @@ final class PitModel extends TrapModel {
         int var7 = 0;
         oia var8 = null;
         int var9 = TombRacer.field_G ? 1 : 0;
-        int var2 = this.field_h.getX(3);
-        int var3 = this.field_h.getY(param0 - 211);
+        int var2 = this.body.getX(3);
+        int var3 = this.body.getY(param0 - 211);
         if (param0 != 9859) {
           return;
         }
         this.field_q = new oia[this.field_o][this.field_t];
-        int var4 = -(this.field_h.getHeight((byte) 55) / 2) + var3 + 1048576;
+        int var4 = -(this.body.getHeight((byte) 55) / 2) + var3 + 1048576;
         for (var5 = 0; this.field_t > var5; var5++) {
-          var6 = 1048576 + (var2 - this.field_h.getWidth(-100) / 2);
+          var6 = 1048576 + (var2 - this.body.getWidth(-100) / 2);
           for (var7 = 0; var7 < this.field_o; var7++) {
             var8 = new oia();
             this.field_q[var7][var5] = var8;

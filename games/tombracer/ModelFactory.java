@@ -162,7 +162,7 @@ final class ModelFactory implements ModelCodec {
         }
     }
 
-    public final void a(int param0, BitPacketBuffer param1, TrapModel param2) {
+    public final void writeModel(int param0, BitPacketBuffer param1, TrapModel param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -176,8 +176,8 @@ final class ModelFactory implements ModelCodec {
           if (param0 != 15682) {
             field_a = (jta) null;
           }
-          param1.writeBits((byte) -128, param2.h((byte) 81), 6);
-          param2.a((byte) 88, param1);
+          param1.writeBits((byte) -128, param2.getCategory((byte) 81), 6);
+          param2.encode((byte) 88, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

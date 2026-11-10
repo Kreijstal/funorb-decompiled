@@ -14,22 +14,22 @@ final class TrapBaseModel extends cda {
         super(param0, param1, param2);
     }
 
-    final void a(int param0, Room param1, BitPacketBuffer param2) {
+    final void decode(int param0, Room param1, BitPacketBuffer param2) {
         try {
-          super.a(124, param1, param2);
+          super.decode(124, param1, param2);
           this.field_w = param2.readBits((byte) 44, 4);
           if (param0 < 119) {
             BitPacketBuffer var5 = (BitPacketBuffer) null;
-            this.a((byte) -7, (BitPacketBuffer) null);
+            this.encode((byte) -7, (BitPacketBuffer) null);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "nq.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(byte param0, BitPacketBuffer param1) {
+    final void encode(byte param0, BitPacketBuffer param1) {
         try {
-          super.a((byte) 44, param1);
+          super.encode((byte) 44, param1);
           int var3_int = 113 / ((param0 + 8) / 40);
           param1.writeBits((byte) -44, this.field_w, 4);
         } catch (RuntimeException runtimeException) {
@@ -87,9 +87,9 @@ final class TrapBaseModel extends cda {
         }
     }
 
-    final void a(TrapPart param0, WorldBody param1, byte param2) {
+    final void attach(TrapPart param0, WorldBody param1, byte param2) {
         try {
-          super.a(param0, param1, param2);
+          super.attach(param0, param1, param2);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "nq.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -112,7 +112,7 @@ final class TrapBaseModel extends cda {
         var9 = TombRacer.field_G ? 1 : 0;
         try {
           var6 = null;
-          var7 = dfa.a(4096 - this.field_h.g(-25787) >> 2, 2048, 91);
+          var7 = dfa.a(4096 - this.body.g(-25787) >> 2, 2048, 91);
           var8 = this.field_w;
           if (var8 == 0) {
             var6 = RevolverItemComponent.field_J[0];

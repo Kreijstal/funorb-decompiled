@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-interface ffa {
+interface Collidable {
     public abstract boolean a(int param0, boolean param1, int param2, int param3, int param4, int param5);
 
     public abstract boolean a(int param0, WorldBody param1, int param2, pc param3);
 
-    public abstract boolean a(int param0, WorldBody param1, int param2, int param3, int param4, ffa param5, int param6, int param7);
+    public abstract boolean a(int param0, WorldBody param1, int param2, int param3, int param4, Collidable param5, int param6, int param7);
 
     public abstract boolean a(int param0, WorldBody param1);
 
-    public abstract int a(boolean param0);
+    public abstract int getCollisionId(boolean param0);
 
     public abstract int getWidth(int param0);
 

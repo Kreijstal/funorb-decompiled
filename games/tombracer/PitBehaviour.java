@@ -38,7 +38,7 @@ final class PitBehaviour extends Behaviour {
         }
     }
 
-    final void a(ffa param0, byte param1, WorldBody param2, int param3) {
+    final void a(Collidable param0, byte param1, WorldBody param2, int param3) {
         int var15 = 0;
         int var16 = 0;
         RuntimeException stackIn_55_0 = null;

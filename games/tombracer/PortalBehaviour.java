@@ -245,9 +245,9 @@ final class PortalBehaviour extends Behaviour {
         int var10;
         int var11;
         Room var12;
-        ffa[] var13;
-        ffa[] var14;
-        ffa var16;
+        Collidable[] var13;
+        Collidable[] var14;
+        Collidable var16;
         Object var17;
         int var18;
         int var19;
@@ -288,7 +288,7 @@ final class PortalBehaviour extends Behaviour {
         var10 = ((Trap) (var3)).getWidth(param0 - 5510);
         var11 = ((Trap) (var3)).getHeight((byte) 55);
         var12 = this.b(true);
-        var13 = var12.field_u.b(var5, -1, var4, var6, var7);
+        var13 = var12.collisionGrid.b(var5, -1, var4, var6, var7);
         var14 = var13;
         for (var15 = 0; var14.length > var15; var15++) {
           var16 = var14[var15];

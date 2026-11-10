@@ -15,7 +15,7 @@ final class BridgeModel extends TrapModel {
         if (param0 != -99) {
           this.field_q = (faa[][]) null;
         }
-        if (this.field_h.j(param0 + 98)) {
+        if (this.body.j(param0 + 98)) {
           return 2;
         }
         int var2 = this.field_t;
@@ -168,7 +168,7 @@ final class BridgeModel extends TrapModel {
         }
     }
 
-    final void a(TrapPart param0, WorldBody param1, byte param2) {
+    final void attach(TrapPart param0, WorldBody param1, byte param2) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -177,7 +177,7 @@ final class BridgeModel extends TrapModel {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          super.a(param0, param1, param2);
+          super.attach(param0, param1, param2);
           if (param0 instanceof PlatformBehaviour) {
             this.field_o = (PlatformBehaviour) (param0);
           }
@@ -349,9 +349,9 @@ final class BridgeModel extends TrapModel {
         }
     }
 
-    final void a(int param0, Room param1, BitPacketBuffer param2) {
+    final void decode(int param0, Room param1, BitPacketBuffer param2) {
         try {
-          super.a(120, param1, param2);
+          super.decode(120, param1, param2);
           this.field_t = param2.readBits((byte) 44, 4);
           if (param0 < 119) {
             this.field_t = -32;
@@ -374,7 +374,7 @@ final class BridgeModel extends TrapModel {
           this.field_n = uca.field_c.nextBounded(262144, 0) - 131072;
           this.field_s = -131072 + uca.field_c.nextBounded(262144, 0);
         }
-        Trap var2 = (Trap) (this.field_h);
+        Trap var2 = (Trap) (this.body);
         if (var2 == null) {
           return;
         }
@@ -391,9 +391,9 @@ final class BridgeModel extends TrapModel {
         }
     }
 
-    final void a(byte param0, BitPacketBuffer param1) {
+    final void encode(byte param0, BitPacketBuffer param1) {
         try {
-          super.a((byte) -59, param1);
+          super.encode((byte) -59, param1);
           int var3_int = -50 / ((param0 + 8) / 40);
           param1.writeBits((byte) 18, this.field_t, 4);
         } catch (RuntimeException runtimeException) {
@@ -464,10 +464,10 @@ final class BridgeModel extends TrapModel {
         Room var20;
         var19 = TombRacer.field_G ? 1 : 0;
         var20 = this.a(78);
-        var3 = this.field_h.getX(3);
-        var4 = this.field_h.getY(9648);
-        var5 = this.field_h.getWidth(-56);
-        var6 = this.field_h.getHeight((byte) 55);
+        var3 = this.body.getX(3);
+        var4 = this.body.getY(9648);
+        var5 = this.body.getWidth(-56);
+        var6 = this.body.getHeight((byte) 55);
         if (var5 < var6) {
           var5 = 2097152;
         } else {

@@ -28,8 +28,8 @@ final class PressureSwitchBehaviour extends Behaviour implements ut {
 
     final void tick(int param0) {
         int var2;
-        npa var3;
-        ffa[] var4;
+        CollisionGrid var3;
+        Collidable[] var4;
         int var5;
         int var6;
         int var5Lifetime1;
@@ -38,7 +38,7 @@ final class PressureSwitchBehaviour extends Behaviour implements ut {
           this.c(false);
         }
         var2 = 0;
-        var3 = this.b(true).field_u;
+        var3 = this.b(true).collisionGrid;
         var4 = var3.a((byte) -26, this.trap);
         for (var5 = 0; var5 < var4.length; var5++) {
           if (this.a(var4[var5], (byte) -103)) {
@@ -134,7 +134,7 @@ final class PressureSwitchBehaviour extends Behaviour implements ut {
         }
     }
 
-    private final boolean a(ffa param0, byte param1) {
+    private final boolean a(Collidable param0, byte param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;

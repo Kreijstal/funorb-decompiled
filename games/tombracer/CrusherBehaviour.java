@@ -432,7 +432,7 @@ final class CrusherBehaviour extends Behaviour {
         return stackIn_18_0;
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, ffa param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, Collidable param6) {
         RuntimeException var8 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;

@@ -188,7 +188,7 @@ final class PlatformBehaviour extends Behaviour {
         this.field_t = 0;
     }
 
-    final void a(ffa param0, byte param1, WorldBody param2, int param3) {
+    final void a(Collidable param0, byte param1, WorldBody param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_18_0 = null;

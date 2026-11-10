@@ -26,12 +26,12 @@ final class MonsterModel extends cda {
         }
     }
 
-    final void a(int param0, Room param1, BitPacketBuffer param2) {
+    final void decode(int param0, Room param1, BitPacketBuffer param2) {
         if (param0 <= 119) {
           return;
         }
         try {
-          super.a(123, param1, param2);
+          super.decode(123, param1, param2);
           this.field_x = param2.readBits((byte) 44, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "aka.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -63,9 +63,9 @@ final class MonsterModel extends cda {
         if (var3 != 0) {
           var5_intLifetime1 = this.i(-6874);
           var6 = new nta(this.getRenderX((byte) 40), this.getRenderY((byte) 123), this.getRenderZ((byte) -96), this.field_C, var5_intLifetime1, var3);
-          var6.a((byte) -113, this.field_h.getRoom((byte) -109).j((byte) -118), this.k((byte) -99));
+          var6.a((byte) -113, this.body.getRoom((byte) -109).j((byte) -118), this.k((byte) -99));
         }
-        var5 = (w) (this.field_h.getRoom((byte) -99).field_G);
+        var5 = (w) (this.body.getRoom((byte) -99).field_G);
         if (var5 == null) {
           return;
         }
@@ -138,9 +138,9 @@ final class MonsterModel extends cda {
         jo.a(oba.field_f, 0, Corpse.field_i, rfa.field_C, WallModel.field_r);
     }
 
-    final void a(TrapPart param0, WorldBody param1, byte param2) {
+    final void attach(TrapPart param0, WorldBody param1, byte param2) {
         try {
-          super.a(param0, param1, param2);
+          super.attach(param0, param1, param2);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "aka.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -187,15 +187,15 @@ final class MonsterModel extends cda {
           this.field_C.a(1, false, (byte) -114, var4);
         }
         this.field_C.a(param0 ^ param0);
-        var5 = (w) (this.field_h.getRoom((byte) -79).field_G);
+        var5 = (w) (this.body.getRoom((byte) -79).field_G);
         if (var5 == null) {
           return;
         }
         if (var4 != 1) {
           this.field_z = 0;
           if (!this.field_y) {
-            if (!this.field_h.j(-1)) {
-              var12 = (Trap) (this.field_h);
+            if (!this.body.j(-1)) {
+              var12 = (Trap) (this.body);
               if (var12 == null) {
                 return;
               }
@@ -214,7 +214,7 @@ final class MonsterModel extends cda {
             var5.a(new fm(79, this.getRenderX((byte) -112), this.getRenderY((byte) 121), this.getRenderZ((byte) -119)), param0 + 4308);
             this.field_y = true;
           }
-          var13 = (Trap) (this.field_h);
+          var13 = (Trap) (this.body);
           if (var13 == null) {
             return;
           }
@@ -243,11 +243,11 @@ final class MonsterModel extends cda {
           var5.a(new fm(77, this.getRenderX((byte) 49), this.getRenderY((byte) 108), this.getRenderZ((byte) -87)), -58);
           this.field_z = 0;
           if (!this.field_y &&
-            this.field_h.j(-1)) {
+            this.body.j(-1)) {
             var5.a(new fm(79, this.getRenderX((byte) -112), this.getRenderY((byte) 121), this.getRenderZ((byte) -119)), param0 + 4308);
             this.field_y = true;
           }
-          var11 = (Trap) (this.field_h);
+          var11 = (Trap) (this.body);
           if (var11 == null) {
             return;
           }
@@ -270,7 +270,7 @@ final class MonsterModel extends cda {
         }
         this.field_z = this.field_z + 1;
         if (this.field_y) {
-          var9 = (Trap) (this.field_h);
+          var9 = (Trap) (this.body);
           if (var9 == null) {
             return;
           }
@@ -291,11 +291,11 @@ final class MonsterModel extends cda {
           }
           return;
         }
-        if (this.field_h.j(-1)) {
+        if (this.body.j(-1)) {
           var5.a(new fm(79, this.getRenderX((byte) -112), this.getRenderY((byte) 121), this.getRenderZ((byte) -119)), param0 + 4308);
           this.field_y = true;
         }
-        var10 = (Trap) (this.field_h);
+        var10 = (Trap) (this.body);
         if (var10 == null) {
           return;
         }
@@ -319,7 +319,7 @@ final class MonsterModel extends cda {
 
     private final int i(int param0) {
         if (param0 == -6874) {
-          return dfa.a(-this.field_h.g(param0 - 18913) >> 2, 2048, param0 ^ -6797);
+          return dfa.a(-this.body.g(param0 - 18913) >> 2, 2048, param0 ^ -6797);
         }
         return -83;
     }
@@ -338,9 +338,9 @@ final class MonsterModel extends cda {
         this.field_y = false;
     }
 
-    final void a(byte param0, BitPacketBuffer param1) {
+    final void encode(byte param0, BitPacketBuffer param1) {
         try {
-          super.a((byte) 98, param1);
+          super.encode((byte) 98, param1);
           param1.writeBits((byte) -5, this.field_x, 4);
           int var3_int = 102 % ((param0 + 8) / 40);
         } catch (RuntimeException runtimeException) {

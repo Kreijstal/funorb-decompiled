@@ -7,7 +7,7 @@ final class LegacySwitchModel extends TrapModel {
     private ut field_p;
     static String field_o;
 
-    final void a(TrapPart param0, WorldBody param1, byte param2) {
+    final void attach(TrapPart param0, WorldBody param1, byte param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -16,7 +16,7 @@ final class LegacySwitchModel extends TrapModel {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          super.a(param0, param1, param2);
+          super.attach(param0, param1, param2);
           if (!(param0 instanceof ut)) {
             return;
           }
@@ -45,12 +45,12 @@ final class LegacySwitchModel extends TrapModel {
     final int k(byte param0) {
         if (param0 != -99) {
           field_m = (String) null;
-          if (!this.field_h.j(-1)) {
+          if (!this.body.j(-1)) {
             return 5;
           }
           return 2;
         }
-        if (!this.field_h.j(-1)) {
+        if (!this.body.j(-1)) {
           return 5;
         }
         return 2;
@@ -72,8 +72,8 @@ final class LegacySwitchModel extends TrapModel {
               var6_int = this.field_p.g((byte) -108);
             }
           }
-          var8 = this.field_h.getWidth(-29) / 2;
-          var9 = this.field_h.getHeight((byte) 55) / 2;
+          var8 = this.body.getWidth(-29) / 2;
+          var9 = this.body.getHeight((byte) 55) / 2;
           int var10 = 86 % ((param4 + 38) / 47);
           oq.a(-var8 + param2, -var9 + param1, param3, 255, param2 + var8, var6_int, param1 + var9, true);
         } catch (RuntimeException runtimeException) {

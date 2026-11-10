@@ -270,14 +270,14 @@ final class cc extends IntrusiveNode {
           var2_int = -61 / ((param0 - 61) / 57);
           var3 = og.a(param1, "jagex-last-login-method", (byte) 86);
           if (var3 == null) {
-            stackIn_4_0 = npa.field_f;
+            stackIn_4_0 = CollisionGrid.field_f;
             return stackIn_4_0;
           }
           var4 = aga.a(-1025);
           var5 = 0;
           while (true) {
             if (var5 >= var4.length) {
-              stackIn_12_0 = npa.field_f;
+              stackIn_12_0 = CollisionGrid.field_f;
               return stackIn_12_0;
             }
             var6 = var4[var5];

@@ -11,7 +11,7 @@ final class ItemModel extends TrapModel {
     static dn field_o;
     static eua field_n;
 
-    final void a(TrapPart param0, WorldBody param1, byte param2) {
+    final void attach(TrapPart param0, WorldBody param1, byte param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -20,7 +20,7 @@ final class ItemModel extends TrapModel {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          super.a(param0, param1, param2);
+          super.attach(param0, param1, param2);
           if (this.a(127).formatVersion < 20) {
             this.a(param1, -2159, param0);
           }
@@ -133,11 +133,11 @@ final class ItemModel extends TrapModel {
         int var8Lifetime1;
         var10 = TombRacer.field_G ? 1 : 0;
         try {
-          if (null == this.field_h) {
+          if (null == this.body) {
             return;
           }
-          if (this.field_k instanceof ItemBehaviour) {
-            stackIn_9_0 = (((ItemBehaviour) (this.field_k)).c(-72)) ? 1 : 0;
+          if (this.part instanceof ItemBehaviour) {
+            stackIn_9_0 = (((ItemBehaviour) (this.part)).c(-72)) ? 1 : 0;
           } else {
             stackIn_9_0 = 0;
           }
@@ -185,7 +185,7 @@ final class ItemModel extends TrapModel {
             }
           }
           if (var7 != null) {
-            var9 = dfa.a(-this.field_h.g(-25787) + 4096 + this.field_m >> 2, 2048, -117);
+            var9 = dfa.a(-this.body.g(-25787) + 4096 + this.field_m >> 2, 2048, -117);
             gqa.a(var9, -83584144, param1, param2, (ka) (var7), param3);
           }
           return;
@@ -212,7 +212,7 @@ final class ItemModel extends TrapModel {
         field_q = null;
     }
 
-    final void a(int param0, Room param1, BitPacketBuffer param2) {
+    final void decode(int param0, Room param1, BitPacketBuffer param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -221,7 +221,7 @@ final class ItemModel extends TrapModel {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          super.a(124, param1, param2);
+          super.decode(124, param1, param2);
           if (param0 <= 119) {
             this.f(88);
           }
@@ -286,9 +286,9 @@ final class ItemModel extends TrapModel {
         }
     }
 
-    final void a(byte param0, BitPacketBuffer param1) {
+    final void encode(byte param0, BitPacketBuffer param1) {
         try {
-          super.a((byte) -58, param1);
+          super.encode((byte) -58, param1);
           param1.writeBits((byte) 61, this.field_t, 4);
           int var3_int = 15 % ((-8 - param0) / 40);
         } catch (RuntimeException runtimeException) {

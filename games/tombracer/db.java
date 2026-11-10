@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class db extends IntrusiveNode implements Renderable, ffa, WorldBody, noa, qn {
+final class db extends IntrusiveNode implements Renderable, Collidable, WorldBody, noa, qn {
     private int field_n;
     private Room field_m;
     private int field_p;
@@ -194,12 +194,12 @@ final class db extends IntrusiveNode implements Renderable, ffa, WorldBody, noa,
         RuntimeException var3 = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          param1.field_u.a((ffa) (this), (byte) 105);
+          param1.collisionGrid.remove((Collidable) (this), (byte) 105);
           if (param0 > -74) {
             this.field_k = (IntrusiveDeque) null;
           }
           this.field_p = param1.getWidth((byte) -86) / 2 - (this.field_p - param1.getWidth((byte) -86) / 2);
-          param1.field_u.b((ffa) (this), 7073);
+          param1.collisionGrid.insert((Collidable) (this), 7073);
           var5 = (TrapModel) (this.field_k.first(-80));
           while (var5 != null) {
             var5.h(61);
@@ -306,7 +306,7 @@ final class db extends IntrusiveNode implements Renderable, ffa, WorldBody, noa,
         }
     }
 
-    public final boolean a(int param0, WorldBody param1, int param2, int param3, int param4, ffa param5, int param6, int param7) {
+    public final boolean a(int param0, WorldBody param1, int param2, int param3, int param4, Collidable param5, int param6, int param7) {
         RuntimeException var9 = null;
         boolean stackIn_12_0 = false;
         RuntimeException stackIn_15_0 = null;
@@ -400,7 +400,7 @@ final class db extends IntrusiveNode implements Renderable, ffa, WorldBody, noa,
             param1.writeBits((byte) -36, this.field_k.size((byte) -16), 2);
             var5 = (TrapModel) (this.field_k.first(-80));
             while (var5 != null) {
-              rm.field_a.a(15682, param1, var5);
+              rm.field_a.writeModel(15682, param1, var5);
               var5 = (TrapModel) (this.field_k.next(127));
             }
           }
@@ -475,7 +475,7 @@ final class db extends IntrusiveNode implements Renderable, ffa, WorldBody, noa,
         int var6;
         int var7;
         int var8;
-        this.field_m.field_u.a((ffa) (this), (byte) 104);
+        this.field_m.collisionGrid.remove((Collidable) (this), (byte) 104);
         this.field_p = this.field_p + param1;
         this.field_r = this.field_r + param1;
         var3 = -(this.field_g / 2) + this.field_p;
@@ -503,7 +503,7 @@ final class db extends IntrusiveNode implements Renderable, ffa, WorldBody, noa,
         this.field_q = var6 - var4;
         this.field_r = (var6 - var4) / 2 + var4;
         this.field_g = -var3 + var5;
-        this.field_m.field_u.b((ffa) (this), 7073);
+        this.field_m.collisionGrid.insert((Collidable) (this), 7073);
     }
 
     public static void releaseStatics(byte param0) {
@@ -523,7 +523,7 @@ final class db extends IntrusiveNode implements Renderable, ffa, WorldBody, noa,
         return this.field_m.o((byte) -82);
     }
 
-    public final int a(boolean param0) {
+    public final int getCollisionId(boolean param0) {
         if (!param0) {
           this.field_q = -83;
         }
@@ -678,7 +678,7 @@ final class db extends IntrusiveNode implements Renderable, ffa, WorldBody, noa,
           if (!param1) {
             this.field_r = -69;
           }
-          param0.a((TrapPart) null, (WorldBody) (this), (byte) 36);
+          param0.attach((TrapPart) null, (WorldBody) (this), (byte) 36);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "db.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

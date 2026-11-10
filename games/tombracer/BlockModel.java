@@ -16,12 +16,12 @@ final class BlockModel extends TrapModel {
     private int field_p;
     static int field_o;
 
-    final void a(int param0, Room param1, BitPacketBuffer param2) {
+    final void decode(int param0, Room param1, BitPacketBuffer param2) {
         try {
           if (param0 <= 119) {
             BlockModel.releaseStatics(false);
           }
-          super.a(122, param1, param2);
+          super.decode(122, param1, param2);
           this.field_v = param2.readBits((byte) 44, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "boa.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -30,7 +30,7 @@ final class BlockModel extends TrapModel {
 
     final void a(byte param0, int param1) {
         super.a((byte) 97, param1);
-        this.a(28).b(false).a(this.field_h.getY(9648), this.field_h.g((byte) 115), (byte) 46, this.field_h.getX(3));
+        this.a(28).b(false).a(this.body.getY(9648), this.body.g((byte) 115), (byte) 46, this.body.getX(3));
         w var5 = (w) (this.a(30).field_G);
         if (var5 == null) {
           return;
@@ -156,7 +156,7 @@ final class BlockModel extends TrapModel {
         BitPacketBuffer var3;
         if (param0 != 77) {
           var3 = (BitPacketBuffer) null;
-          this.a(42, (Room) null, (BitPacketBuffer) null);
+          this.decode(42, (Room) null, (BitPacketBuffer) null);
         }
         stackIn_14_0 = (this.field_v == 5) || (8 == this.field_v) || (this.field_v == 10) || (this.field_v == 11) || (this.field_v == 12) || (this.field_v == 13) || (this.field_v == 14) || (this.field_v == 15) || (this.field_v == 16);
         return stackIn_14_0;
@@ -197,7 +197,7 @@ final class BlockModel extends TrapModel {
           return;
         }
         {
-          var3 = (Trap) (this.field_h);
+          var3 = (Trap) (this.body);
           var4 = var3.d(50, false) ? 1 : 0;
           if ((this.field_r == null ||
             !this.field_r.isLinked((byte) -116)) && var4 != 0) {
@@ -348,9 +348,9 @@ final class BlockModel extends TrapModel {
         }
     }
 
-    final void a(byte param0, BitPacketBuffer param1) {
+    final void encode(byte param0, BitPacketBuffer param1) {
         try {
-          super.a((byte) -100, param1);
+          super.encode((byte) -100, param1);
           param1.writeBits((byte) 42, this.field_v, 4);
           int var3_int = 108 / ((param0 + 8) / 40);
         } catch (RuntimeException runtimeException) {
@@ -371,9 +371,9 @@ final class BlockModel extends TrapModel {
         this.field_p = 1;
     }
 
-    final void a(TrapPart param0, WorldBody param1, byte param2) {
+    final void attach(TrapPart param0, WorldBody param1, byte param2) {
         try {
-          super.a(param0, param1, param2);
+          super.attach(param0, param1, param2);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "boa.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -464,7 +464,7 @@ final class BlockModel extends TrapModel {
             }
           }
           if (var8 != null) {
-            var9Lifetime1 = dfa.a(4096 + (var7 - this.field_h.g(-25787)) >> 2, 2048, -28);
+            var9Lifetime1 = dfa.a(4096 + (var7 - this.body.g(-25787)) >> 2, 2048, -28);
             gqa.a(var9Lifetime1, -83584144, param1, param2, (ka) (var8), param3);
           }
           return;

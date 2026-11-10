@@ -6,7 +6,7 @@ final class q extends ql {
     private int field_p;
     private int field_q;
     static String field_o;
-    private ffa field_n;
+    private Collidable field_n;
 
     final static void a(byte param0, int param1, int param2) {
         BitPacketBuffer var3 = ql.field_k;
@@ -25,7 +25,7 @@ final class q extends ql {
         return ConstrainToRectangleLocomotor.a(this.field_q, this.field_p, (byte) -93);
     }
 
-    final ffa a(byte param0) {
+    final Collidable a(byte param0) {
         if (param0 >= -67) {
           this.field_q = 19;
           return this.field_n;
@@ -33,14 +33,14 @@ final class q extends ql {
         return this.field_n;
     }
 
-    final void a(int param0, ffa param1, byte param2, int param3) {
+    final void a(int param0, Collidable param1, byte param2, int param3) {
         try {
           this.field_p = param3;
           this.field_n = param1;
           this.field_q = param0;
           if (param2 != 116) {
-            ffa var6 = (ffa) null;
-            this.a(92, (ffa) null, (byte) -51, 63);
+            Collidable var6 = (Collidable) null;
+            this.a(92, (Collidable) null, (byte) -51, 63);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "q.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -138,7 +138,7 @@ final class q extends ql {
         return false;
     }
 
-    final boolean a(int param0, int param1, ffa param2, int param3) {
+    final boolean a(int param0, int param1, Collidable param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -192,7 +192,7 @@ final class q extends ql {
         return false;
     }
 
-    q(ffa param0, int param1, int param2) {
+    q(Collidable param0, int param1, int param2) {
         try {
           this.field_q = param1;
           this.field_n = param0;

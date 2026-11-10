@@ -18,9 +18,9 @@ final class WallModel extends TrapModel {
     private boolean field_t;
     private fh[][] field_x;
 
-    final void a(TrapPart param0, WorldBody param1, byte param2) {
+    final void attach(TrapPart param0, WorldBody param1, byte param2) {
         try {
-          super.a(param0, param1, param2);
+          super.attach(param0, param1, param2);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "lma.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -97,8 +97,8 @@ final class WallModel extends TrapModel {
         if (var6 == null) {
           return;
         }
-        if (this.field_h instanceof Trap) {
-          var3 = (Trap) (this.field_h);
+        if (this.body instanceof Trap) {
+          var3 = (Trap) (this.body);
           var4 = var3.d(param0 + 51, false) ? 1 : 0;
           if (this.field_o == null &&
             var4 != 0) {
@@ -270,7 +270,7 @@ final class WallModel extends TrapModel {
           }
           if (param0 < 50) {
             var7 = (BitPacketBuffer) null;
-            this.a(101, (Room) null, (BitPacketBuffer) null);
+            this.decode(101, (Room) null, (BitPacketBuffer) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -287,7 +287,7 @@ final class WallModel extends TrapModel {
         }
     }
 
-    final void a(int param0, Room param1, BitPacketBuffer param2) {
+    final void decode(int param0, Room param1, BitPacketBuffer param2) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -300,7 +300,7 @@ final class WallModel extends TrapModel {
           if (param0 <= 119) {
             this.field_m = -87;
           }
-          super.a(127, param1, param2);
+          super.decode(127, param1, param2);
           if (17 <= param1.formatVersion) {
             this.field_y = param2.readBits((byte) 44, 4);
             stackIn_7_1 = (param2.readBits((byte) 44, 1) == 1);
@@ -363,10 +363,10 @@ final class WallModel extends TrapModel {
     }
 
     private final boolean k(int param0) {
-        if (this.field_h.b(true)) {
+        if (this.body.b(true)) {
           return true;
         }
-        if (this.field_h instanceof Trap) {
+        if (this.body instanceof Trap) {
           return true;
         }
         if (param0 != 10) {
@@ -448,18 +448,18 @@ final class WallModel extends TrapModel {
         int var37;
         Room var38;
         var37 = TombRacer.field_G ? 1 : 0;
-        var38 = this.field_h.getRoom((byte) 68);
+        var38 = this.body.getRoom((byte) 68);
         var3 = var38.getWidth((byte) -86);
         var4 = var38.getHeight(param0 ^ 2097238);
-        var5 = this.field_h.getWidth(param0 - 2097273);
-        var6 = this.field_h.getHeight((byte) 55);
-        this.field_v = this.field_h.getX(3) - var5 / 2;
+        var5 = this.body.getWidth(param0 - 2097273);
+        var6 = this.body.getHeight((byte) 55);
+        this.field_v = this.body.getX(3) - var5 / 2;
         this.field_A = this.field_v + var5;
-        this.field_u = this.field_h.getY(9648) - var6 / 2;
+        this.field_u = this.body.getY(9648) - var6 / 2;
         this.field_m = var6 + this.field_u;
         var7 = this.k(10) ? 1 : 0;
-        var8 = this.field_h.getX(3);
-        var9 = this.field_h.getY(9648);
+        var8 = this.body.getX(3);
+        var9 = this.body.getY(9648);
         this.field_w = (-this.field_u + this.field_m) / 2097152;
         this.field_q = (-this.field_v + this.field_A) / param0;
         this.field_x = new fh[this.field_q][this.field_w];
@@ -881,9 +881,9 @@ final class WallModel extends TrapModel {
         }
     }
 
-    final void a(byte param0, BitPacketBuffer param1) {
+    final void encode(byte param0, BitPacketBuffer param1) {
         try {
-          super.a((byte) 86, param1);
+          super.encode((byte) 86, param1);
           int var3_int = -57 / ((param0 + 8) / 40);
           param1.writeBits((byte) -19, this.field_y, 4);
           param1.writeBits((byte) 111, !this.field_p ? 0 : 1, 1);
@@ -935,8 +935,8 @@ final class WallModel extends TrapModel {
         var2 = this.k(param0 ^ 32172) ? 1 : 0;
         var3 = this.a(param0 - 32121);
         var4 = 4194304;
-        var5 = this.field_h.getX(3);
-        var6 = this.field_h.getY(9648);
+        var5 = this.body.getX(3);
+        var6 = this.body.getY(9648);
         for (var10 = 0; var10 < this.field_q; var10++) {
           for (var11 = 0; this.field_w > var11; var11++) {
             boolean decompiledFrameRemainder1 = true;
@@ -1096,7 +1096,7 @@ final class WallModel extends TrapModel {
 
     final boolean o(byte param0) {
         int var2 = 66 % ((25 - param0) / 57);
-        if (!(this.field_h instanceof Trap)) {
+        if (!(this.body instanceof Trap)) {
           return false;
         }
         return true;

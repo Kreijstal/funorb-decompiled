@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mda extends PooledObject implements Renderable, ffa, WorldBody {
+final class mda extends PooledObject implements Renderable, Collidable, WorldBody {
     private int field_i;
     private Room field_q;
     private int field_n;
@@ -68,7 +68,7 @@ final class mda extends PooledObject implements Renderable, ffa, WorldBody {
     private final int a(int param0, int param1, int param2, int param3, int param4) {
         if (this.field_s == 1) {
           int var6 = 80 / ((-23 - param1) / 56);
-          return this.field_q.a((ffa) (this), (WorldBody) (this), 1, this.field_k, param3, 12, this.field_k, this.field_p, param4, param0, this.field_j, param2, true);
+          return this.field_q.a((Collidable) (this), (WorldBody) (this), 1, this.field_k, param3, 12, this.field_k, this.field_p, param4, param0, this.field_j, param2, true);
         }
         return 0;
     }
@@ -207,7 +207,7 @@ final class mda extends PooledObject implements Renderable, ffa, WorldBody {
         return stackIn_7_0;
     }
 
-    public final boolean a(int param0, WorldBody param1, int param2, int param3, int param4, ffa param5, int param6, int param7) {
+    public final boolean a(int param0, WorldBody param1, int param2, int param3, int param4, Collidable param5, int param6, int param7) {
         RuntimeException var9 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -364,8 +364,8 @@ final class mda extends PooledObject implements Renderable, ffa, WorldBody {
         if (param0 == 9648) {
           return this.field_j;
         }
-        ffa var3 = (ffa) null;
-        this.a(-103, (WorldBody) null, -104, -49, -55, (ffa) null, -28, -39);
+        Collidable var3 = (Collidable) null;
+        this.a(-103, (WorldBody) null, -104, -49, -55, (Collidable) null, -28, -39);
         return this.field_j;
     }
 
@@ -449,10 +449,10 @@ final class mda extends PooledObject implements Renderable, ffa, WorldBody {
         if (param0 > -120) {
           return;
         }
-        this.field_q.field_u.a((ffa) (this), (byte) 82);
+        this.field_q.collisionGrid.remove((Collidable) (this), (byte) 82);
     }
 
-    public final int a(boolean param0) {
+    public final int getCollisionId(boolean param0) {
         if (!param0) {
           return 18;
         }
@@ -583,8 +583,8 @@ final class mda extends PooledObject implements Renderable, ffa, WorldBody {
           this.field_p == this.field_u) {
           return;
         }
-        this.field_q.field_u.a((ffa) (this), -123);
-        this.field_q.field_u.b((ffa) (this), 7073);
+        this.field_q.collisionGrid.pruneOutsideBounds((Collidable) (this), -123);
+        this.field_q.collisionGrid.insert((Collidable) (this), 7073);
         return;
     }
 
@@ -696,13 +696,13 @@ final class mda extends PooledObject implements Renderable, ffa, WorldBody {
           return;
         }
         if (param1) {
-          this.field_q.field_u.a((ffa) (this), -50);
+          this.field_q.collisionGrid.pruneOutsideBounds((Collidable) (this), -50);
           if (0 < this.field_n) {
             var3 = (float)this.field_m / (float)this.field_n;
             this.field_k = (int)((float)(this.field_i - this.field_l) * var3 + (float)this.field_l);
           }
           this.n(param0 ^ -786433);
-          this.field_q.field_u.b((ffa) (this), 7073);
+          this.field_q.collisionGrid.insert((Collidable) (this), 7073);
           if (~this.field_s != param0) {
             return;
           }
@@ -721,13 +721,13 @@ final class mda extends PooledObject implements Renderable, ffa, WorldBody {
               this.i((byte) -126);
               return;
             }
-            this.field_q.field_u.a((ffa) (this), -50);
+            this.field_q.collisionGrid.pruneOutsideBounds((Collidable) (this), -50);
             if (0 < this.field_n) {
               var3Lifetime1 = (float)this.field_m / (float)this.field_n;
               this.field_k = (int)((float)(this.field_i - this.field_l) * var3Lifetime1 + (float)this.field_l);
             }
             this.n(param0 ^ -786433);
-            this.field_q.field_u.b((ffa) (this), 7073);
+            this.field_q.collisionGrid.insert((Collidable) (this), 7073);
             if (~this.field_s != param0) {
               return;
             }
@@ -738,13 +738,13 @@ final class mda extends PooledObject implements Renderable, ffa, WorldBody {
             return;
           }
         }
-        this.field_q.field_u.a((ffa) (this), -50);
+        this.field_q.collisionGrid.pruneOutsideBounds((Collidable) (this), -50);
         if (0 < this.field_n) {
           var3Lifetime2 = (float)this.field_m / (float)this.field_n;
           this.field_k = (int)((float)(this.field_i - this.field_l) * var3Lifetime2 + (float)this.field_l);
         }
         this.n(param0 ^ -786433);
-        this.field_q.field_u.b((ffa) (this), 7073);
+        this.field_q.collisionGrid.insert((Collidable) (this), 7073);
         if (~this.field_s != param0) {
           return;
         }

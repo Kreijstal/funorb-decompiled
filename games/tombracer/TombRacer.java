@@ -445,7 +445,7 @@ public final class TombRacer extends rfa implements ls {
         sqa.releaseStatics((byte) -128);
         uw.releaseStatics(param0 + 3666);
         ObjectPool.releaseStatics(true);
-        npa.releaseStatics(-2147483648);
+        CollisionGrid.releaseStatics(-2147483648);
         bba.releaseStatics((byte) -28);
         tqa.releaseStatics((byte) 75);
         ui.a(4);

@@ -283,7 +283,7 @@ final class dta {
                 var29Lifetime2 += 24;
               }
               if (!var12.q(119) &&
-                null != var12.getRoom((byte) 94).field_u) {
+                null != var12.getRoom((byte) 94).collisionGrid) {
                 var30Lifetime3 = 0;
                 var31Lifetime2 = 0;
                 var32Lifetime1 = 0;

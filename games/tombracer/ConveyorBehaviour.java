@@ -11,17 +11,17 @@ final class ConveyorBehaviour extends Behaviour {
 
     final void tick(int param0) {
         int var5 = 0;
-        ffa[] var3;
+        Collidable[] var3;
         Trap var4;
-        ffa var6;
+        Collidable var6;
         int var7;
-        npa var8;
+        CollisionGrid var8;
         var7 = TombRacer.field_G ? 1 : 0;
         if (param0 != 5418) {
           this.p((byte) 4);
         }
         this.b(0);
-        var8 = this.b(true).field_u;
+        var8 = this.b(true).collisionGrid;
         var3 = var8.a((byte) -26, this.trap);
         var4 = this.e(6);
         for (var5 = 0; var3.length > var5; var5++) {

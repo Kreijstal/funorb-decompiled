@@ -22,12 +22,12 @@ abstract class vw {
         field_b = null;
         field_a = null;
         if (param0 != 101) {
-          ffa var2 = (ffa) null;
-          vw.a(-92, (ffa) null, -43, true);
+          Collidable var2 = (Collidable) null;
+          vw.a(-92, (Collidable) null, -43, true);
         }
     }
 
-    final static q a(int param0, ffa param1, int param2, boolean param3) {
+    final static q a(int param0, Collidable param1, int param2, boolean param3) {
         q var4 = null;
         RuntimeException var4_ref = null;
         q stackIn_5_0 = null;

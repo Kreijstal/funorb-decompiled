@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class npa {
+final class CollisionGrid {
     private int field_i;
     private boolean field_g;
     static nl field_f;
@@ -10,13 +10,13 @@ final class npa {
     private int field_c;
     private nf field_b;
     private int field_d;
-    private ffa[] field_a;
+    private Collidable[] field_a;
 
-    npa(boolean param0, int param1) {
+    CollisionGrid(boolean param0, int param1) {
         this(5, param0, param1);
     }
 
-    final void a(ffa param0, byte param1) {
+    final void remove(Collidable param0, byte param1) {
         int var4 = 0;
         q var5 = null;
         RuntimeException stackIn_11_0 = null;
@@ -29,7 +29,7 @@ final class npa {
           if (param1 <= 72) {
             this.field_g = false;
           }
-          var5 = (q) (this.field_e.a(-128, (long)param0.a(true)));
+          var5 = (q) (this.field_e.a(-128, (long)param0.getCollisionId(true)));
           while (var5 != null) {
             if (param0 == var5.a((byte) -128)) {
               var5.unlink(100);
@@ -53,17 +53,17 @@ final class npa {
         }
     }
 
-    final ffa[] b(int param0, int param1, int param2, int param3, int param4) {
+    final Collidable[] b(int param0, int param1, int param2, int param3, int param4) {
         if (param1 != -1) {
-          return (ffa[]) null;
+          return (Collidable[]) null;
         }
         return this.a(-1 + (param3 / 2 + param2), -(param3 / 2) + param2, -1 + (param0 + param4 / 2), (byte) -102, -(param4 / 2) + param0);
     }
 
-    final ffa[] a(byte param0, ffa param1) {
+    final Collidable[] a(byte param0, Collidable param1) {
         RuntimeException var3 = null;
-        ffa[] stackIn_2_0 = null;
-        ffa[] stackIn_4_0 = null;
+        Collidable[] stackIn_2_0 = null;
+        Collidable[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -73,7 +73,7 @@ final class npa {
             stackIn_4_0 = this.b(param1.getY(9648), -1, param1.getX(3), param1.getWidth(-48), param1.getHeight((byte) 55));
             return stackIn_4_0;
           }
-          stackIn_2_0 = (ffa[]) null;
+          stackIn_2_0 = (Collidable[]) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -89,14 +89,14 @@ final class npa {
         }
     }
 
-    private final ffa[] a(int param0, int param1, int param2, int param3, int param4) {
+    private final Collidable[] a(int param0, int param1, int param2, int param3, int param4) {
         int var11 = 0;
         int fieldTemp$0 = 0;
         int var6;
         int var7;
         q var8;
         int var9;
-        ffa var10;
+        Collidable var10;
         int var12;
         var12 = TombRacer.field_G ? 1 : 0;
         this.field_b.a(-2147483648, (byte) 7, 32, 2147483647, param1 >> this.field_c, param2 >> this.field_c, param3 >> this.field_c, param0 >> this.field_c, 2147483647, -2147483648);
@@ -121,7 +121,7 @@ final class npa {
                 this.field_d = this.field_d + 1;
                 this.field_a[fieldTemp$0] = var8.a((byte) -96);
                 if (this.field_a.length <= this.field_d) {
-                  return this.b(0);
+                  return this.copyResults(0);
                 }
               }
             }
@@ -129,10 +129,10 @@ final class npa {
           }
           this.field_b.d(113);
         }
-        return this.b(0);
+        return this.copyResults(0);
     }
 
-    private final int a(int param0, int param1) {
+    private final int toCell(int param0, int param1) {
         if (param0 != 2) {
           return 112;
         }
@@ -142,7 +142,7 @@ final class npa {
         return (param1 >> this.field_c) / 32;
     }
 
-    private final ffa[] a(int param0, int param1, int param2, byte param3, int param4) {
+    private final Collidable[] a(int param0, int param1, int param2, byte param3, int param4) {
         int var10 = 0;
         int var11 = 0;
         int var15 = 0;
@@ -153,16 +153,16 @@ final class npa {
         int var9;
         q var12;
         int var13;
-        ffa var14;
+        Collidable var14;
         int var16;
         var16 = TombRacer.field_G ? 1 : 0;
-        var6 = this.a(2, param1);
+        var6 = this.toCell(2, param1);
         if (param3 >= -46) {
           this.field_i = -110;
         }
-        var7 = this.a(2, param4);
-        var8 = this.a(2, param0);
-        var9 = this.a(2, param2);
+        var7 = this.toCell(2, param4);
+        var8 = this.toCell(2, param0);
+        var9 = this.toCell(2, param2);
         this.field_d = 0;
         for (var10 = var6; var8 >= var10; var10++) {
           for (var11 = var7; var11 <= var9; var11++) {
@@ -183,7 +183,7 @@ final class npa {
                   this.field_d = this.field_d + 1;
                   this.field_a[fieldTemp$0] = var12.a((byte) -71);
                   if (this.field_d >= this.field_a.length) {
-                    return this.b(0);
+                    return this.copyResults(0);
                   }
                 }
               }
@@ -191,7 +191,7 @@ final class npa {
             }
           }
         }
-        return this.b(0);
+        return this.copyResults(0);
     }
 
     public static void releaseStatics(int param0) {
@@ -201,13 +201,13 @@ final class npa {
         field_f = null;
     }
 
-    private final ffa[] b(int param0) {
-        ffa[] var2 = new ffa[this.field_d];
+    private final Collidable[] copyResults(int param0) {
+        Collidable[] var2 = new Collidable[this.field_d];
         lua.a(this.field_a, param0, var2, 0, this.field_d);
         return var2;
     }
 
-    final void b(ffa param0, int param1) {
+    final void insert(Collidable param0, int param1) {
         int var7 = 0;
         int var8 = 0;
         RuntimeException stackIn_23_0 = null;
@@ -224,19 +224,19 @@ final class npa {
         int var11 = 0;
         var11 = TombRacer.field_G ? 1 : 0;
         try {
-          var3_int = this.a(2, param0.getX(param1 - 7070) - param0.getWidth(-55) / 2);
-          var4 = this.a(2, param0.getY(9648) - param0.getHeight((byte) 55) / 2);
+          var3_int = this.toCell(2, param0.getX(param1 - 7070) - param0.getWidth(-55) / 2);
+          var4 = this.toCell(2, param0.getY(9648) - param0.getHeight((byte) 55) / 2);
           if (param1 != 7073) {
             return;
           }
-          var5 = this.a(param1 - 7071, -1 + param0.getX(3) + param0.getWidth(-58) / 2);
-          var6 = this.a(2, param0.getY(param1 + 2575) - (-(param0.getHeight((byte) 55) / 2) + 1));
+          var5 = this.toCell(param1 - 7071, -1 + param0.getX(3) + param0.getWidth(-58) / 2);
+          var6 = this.toCell(2, param0.getY(param1 + 2575) - (-(param0.getHeight((byte) 55) / 2) + 1));
           for (var7 = var3_int; var5 >= var7; var7++) {
             for (var8 = var4; var6 >= var8; var8++) {
               boolean decompiledFrameCompleted0 = true;
               if (!this.field_g ||
-                param0.a(32 << this.field_c, (WorldBody) null, 113, 32 << this.field_c, var8 * 32 + 16 << this.field_c, (ffa) null, 32 * var7 + 16 << this.field_c, 0)) {
-                var9 = (q) (this.field_e.a(-121, (long)param0.a(true)));
+                param0.a(32 << this.field_c, (WorldBody) null, 113, 32 << this.field_c, var8 * 32 + 16 << this.field_c, (Collidable) null, 32 * var7 + 16 << this.field_c, 0)) {
+                var9 = (q) (this.field_e.a(-121, (long)param0.getCollisionId(true)));
                 while (var9 != null) {
                   if (var9.a(var8, var7, param0, 123)) {
                     decompiledFrameCompleted0 = false;
@@ -246,7 +246,7 @@ final class npa {
                 }
                 if (decompiledFrameCompleted0) {
                   var10 = vw.a(var7, param0, var8, true);
-                  this.field_e.a(param1 ^ -7074, var10, (long)param0.a(true));
+                  this.field_e.a(param1 ^ -7074, var10, (long)param0.getCollisionId(true));
                   this.field_h.a((long)var10.hashCode(), 115, var10);
                 }
               }
@@ -267,9 +267,9 @@ final class npa {
         }
     }
 
-    final ffa[] a(pc param0, byte param1) {
+    final Collidable[] a(pc param0, byte param1) {
         RuntimeException var3 = null;
-        ffa[] stackIn_3_0 = null;
+        Collidable[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -294,7 +294,7 @@ final class npa {
         }
     }
 
-    final void a(ffa param0, int param1) {
+    final void pruneOutsideBounds(Collidable param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -309,12 +309,12 @@ final class npa {
         RuntimeException var3 = null;
         var9 = TombRacer.field_G ? 1 : 0;
         try {
-          var3_int = this.a(2, param0.getX(3) - param0.getWidth(-14) / 2);
+          var3_int = this.toCell(2, param0.getX(3) - param0.getWidth(-14) / 2);
           var5 = -25 / ((param1 - 13) / 51);
-          var4 = this.a(2, param0.getY(9648) - param0.getHeight((byte) 55) / 2);
-          var6 = this.a(2, -1 + param0.getX(3) + param0.getWidth(-51) / 2);
-          var7 = this.a(2, -1 + (param0.getY(9648) + param0.getHeight((byte) 55) / 2));
-          var8 = (q) (this.field_e.a(-120, (long)param0.a(true)));
+          var4 = this.toCell(2, param0.getY(9648) - param0.getHeight((byte) 55) / 2);
+          var6 = this.toCell(2, -1 + param0.getX(3) + param0.getWidth(-51) / 2);
+          var7 = this.toCell(2, -1 + (param0.getY(9648) + param0.getHeight((byte) 55) / 2));
+          var8 = (q) (this.field_e.a(-120, (long)param0.getCollisionId(true)));
           while (var8 != null) {
             if (var8.a((byte) -76) == param0 &&
               !var8.a(var7, var6, var4, var3_int, -98)) {
@@ -341,14 +341,14 @@ final class npa {
 
     final static boolean a(int param0) {
         if (param0 != 32) {
-          npa.releaseStatics(-128);
+          CollisionGrid.releaseStatics(-128);
         }
         return wt.field_d == gsa.field_y ? true : false;
     }
 
-    private npa(int param0, boolean param1, int param2) {
+    private CollisionGrid(int param0, boolean param1, int param2) {
         this.field_b = new nf();
-        this.field_a = new ffa[128];
+        this.field_a = new Collidable[128];
         this.field_i = 1 << param0;
         this.field_h = new ji(this.field_i);
         this.field_e = new af(this.field_i);

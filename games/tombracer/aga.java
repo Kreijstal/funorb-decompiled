@@ -198,7 +198,7 @@ final class aga {
         if (param0 != -1025) {
           field_a = (String) null;
         }
-        return new nl[]{vw.field_a, ub.field_d, npa.field_f};
+        return new nl[]{vw.field_a, ub.field_d, CollisionGrid.field_f};
     }
 
     final static g a(boolean param0, int param1) {

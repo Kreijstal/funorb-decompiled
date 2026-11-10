@@ -145,14 +145,14 @@ final class SnakePitModel extends TrapModel {
           this.field_r = (lca[][]) null;
         }
         var17 = this.a(param0 + 3494);
-        var3 = this.field_h.getX(3);
-        var4 = this.field_h.getY(9648);
-        this.field_o = this.field_h.getWidth(param0 ^ 3403) / C2SSubmitSettingsPacket.field_a;
-        this.field_q = this.field_h.getHeight((byte) 55) / C2SSubmitSettingsPacket.field_a;
+        var3 = this.body.getX(3);
+        var4 = this.body.getY(9648);
+        this.field_o = this.body.getWidth(param0 ^ 3403) / C2SSubmitSettingsPacket.field_a;
+        this.field_q = this.body.getHeight((byte) 55) / C2SSubmitSettingsPacket.field_a;
         this.field_r = new lca[this.field_o][this.field_q];
-        var5 = -(this.field_h.getHeight((byte) 55) / 2) + (var4 + C2SSubmitSettingsPacket.field_a / 2);
+        var5 = -(this.body.getHeight((byte) 55) / 2) + (var4 + C2SSubmitSettingsPacket.field_a / 2);
         for (var6 = 0; var6 < this.field_q; var6++) {
-          var7 = var3 - this.field_h.getWidth(-60) / 2 + C2SSubmitSettingsPacket.field_a / 2;
+          var7 = var3 - this.body.getWidth(-60) / 2 + C2SSubmitSettingsPacket.field_a / 2;
           for (var8 = 0; this.field_o > var8; var8++) {
             var9 = new lca();
             this.field_r[var8][var6] = var9;
@@ -469,7 +469,7 @@ final class SnakePitModel extends TrapModel {
             var7.a(new fm(23, this.field_s[var3_int].getRenderX((byte) -83), this.field_s[var3_int].getRenderY((byte) 122), this.field_s[var3_int].getRenderZ((byte) -107)), param0 - 57);
           }
         }
-        var3 = (Trap) (this.field_h);
+        var3 = (Trap) (this.body);
         if (var3 == null) {
           return;
         }
@@ -555,9 +555,9 @@ final class SnakePitModel extends TrapModel {
         }
     }
 
-    final void a(TrapPart param0, WorldBody param1, byte param2) {
+    final void attach(TrapPart param0, WorldBody param1, byte param2) {
         try {
-          super.a(param0, param1, param2);
+          super.attach(param0, param1, param2);
           if (param0 instanceof SnakePitBehaviour) {
             this.field_p = (SnakePitBehaviour) (param0);
           }

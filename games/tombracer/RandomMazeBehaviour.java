@@ -17,7 +17,7 @@ final class RandomMazeBehaviour extends Behaviour {
     private MazeGrid field_z;
     private int field_w;
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, ffa param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, Collidable param6) {
         int var14 = 0;
         int var15 = 0;
         RuntimeException stackIn_33_0 = null;
@@ -486,7 +486,7 @@ final class RandomMazeBehaviour extends Behaviour {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        ffa var11 = null;
+        Collidable var11 = null;
         int var5_intLifetime1;
         try {
           if (!this.field_u) {
@@ -516,8 +516,8 @@ final class RandomMazeBehaviour extends Behaviour {
             var5_int = stackIn_20_0;
           }
           if (param1 != 1) {
-            var11 = (ffa) null;
-            this.a(-49, 56, -14, 110, -69, 19, (ffa) null);
+            var11 = (Collidable) null;
+            this.a(-49, 56, -14, 110, -69, 19, (Collidable) null);
           }
           if (this.a(param2, param1 ^ -2)) {
             stackIn_29_0 = 1;

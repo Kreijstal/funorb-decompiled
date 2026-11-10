@@ -13,9 +13,9 @@ final class CrusherModel extends TrapModel {
     private boolean field_u;
     private fla field_s;
 
-    final void a(int param0, Room param1, BitPacketBuffer param2) {
+    final void decode(int param0, Room param1, BitPacketBuffer param2) {
         try {
-          super.a(120, param1, param2);
+          super.decode(120, param1, param2);
           this.field_q = param2.readBits((byte) 44, 4);
           if (param0 <= 119) {
             iq var5 = (iq) null;
@@ -34,9 +34,9 @@ final class CrusherModel extends TrapModel {
         return super.getRenderZ((byte) -108) + (this.field_r << 16);
     }
 
-    final void a(byte param0, BitPacketBuffer param1) {
+    final void encode(byte param0, BitPacketBuffer param1) {
         try {
-          super.a((byte) 85, param1);
+          super.encode((byte) 85, param1);
           int var3_int = -96 / ((param0 + 8) / 40);
           param1.writeBits((byte) -125, this.field_q, 4);
         } catch (RuntimeException runtimeException) {
@@ -386,7 +386,7 @@ final class CrusherModel extends TrapModel {
             if (var13 == null) {
               return;
             }
-            var12 = (Trap) (this.field_h);
+            var12 = (Trap) (this.body);
             if (var12.d(param0 + 51, false)) {
               stackIn_85_0 = (var3 != 0) ? 1 : 0;
             } else {
@@ -434,7 +434,7 @@ final class CrusherModel extends TrapModel {
             if (var9 == null) {
               return;
             }
-            var8 = (Trap) (this.field_h);
+            var8 = (Trap) (this.body);
             if (var8.d(param0 + 51, false)) {
               stackIn_16_0 = (var3 != 0) ? 1 : 0;
             } else {
@@ -482,7 +482,7 @@ final class CrusherModel extends TrapModel {
             if (var11 == null) {
               return;
             }
-            var10 = (Trap) (this.field_h);
+            var10 = (Trap) (this.body);
             if (var10.d(param0 + 51, false)) {
               stackIn_51_0 = (var3 != 0) ? 1 : 0;
             } else {
@@ -526,7 +526,7 @@ final class CrusherModel extends TrapModel {
             if (var15 == null) {
               return;
             }
-            var14 = (Trap) (this.field_h);
+            var14 = (Trap) (this.body);
             if (var14.d(param0 + 51, false)) {
               stackIn_118_0 = (var3 != 0) ? 1 : 0;
             } else {
@@ -569,7 +569,7 @@ final class CrusherModel extends TrapModel {
         if (var17_ref == null) {
           return;
         }
-        var18 = (Trap) (this.field_h);
+        var18 = (Trap) (this.body);
         if (var18.d(param0 + 51, false)) {
           stackIn_149_0 = (var3 == 0) ? 0 : 1;
         } else {
@@ -725,7 +725,7 @@ final class CrusherModel extends TrapModel {
           var6_int = param2 + (this.field_t << 16);
           param3 = param3 + (this.field_r << 16);
           var7 = param1 + (this.field_m << 16);
-          var8 = dfa.a(4096 - this.field_h.g(-25787) >> 2, 2048, -120);
+          var8 = dfa.a(4096 - this.body.g(-25787) >> 2, 2048, -120);
           var10 = 14 % ((param4 + 38) / 47);
           var11 = this.field_q;
           if (var11 != 0 &&
@@ -750,7 +750,7 @@ final class CrusherModel extends TrapModel {
         }
     }
 
-    final void a(TrapPart param0, WorldBody param1, byte param2) {
+    final void attach(TrapPart param0, WorldBody param1, byte param2) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -759,7 +759,7 @@ final class CrusherModel extends TrapModel {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          super.a(param0, param1, param2);
+          super.attach(param0, param1, param2);
           if (param0 instanceof CrusherBehaviour) {
             this.field_v = (CrusherBehaviour) (param0);
           }

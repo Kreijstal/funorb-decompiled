@@ -15,9 +15,9 @@ final class TestModel extends TrapModel {
         }
     }
 
-    final void a(TrapPart param0, WorldBody param1, byte param2) {
+    final void attach(TrapPart param0, WorldBody param1, byte param2) {
         try {
-          super.a(param0, param1, param2);
+          super.attach(param0, param1, param2);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ria.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -83,11 +83,11 @@ final class TestModel extends TrapModel {
         field_r = null;
     }
 
-    final void a(int param0, Room param1, BitPacketBuffer param2) {
+    final void decode(int param0, Room param1, BitPacketBuffer param2) {
         if (param0 <= 119) {
           this.field_q = -123;
         }
-        super.a(126, param1, param2);
+        super.decode(126, param1, param2);
         if (param1.formatVersion <= 17) {
           return;
         }
@@ -98,10 +98,10 @@ final class TestModel extends TrapModel {
         }
     }
 
-    final void a(byte param0, BitPacketBuffer param1) {
+    final void encode(byte param0, BitPacketBuffer param1) {
         try {
           int var3_int = 33 % ((param0 + 8) / 40);
-          super.a((byte) 117, param1);
+          super.encode((byte) 117, param1);
           param1.writeBits((byte) -126, this.field_q, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ria.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

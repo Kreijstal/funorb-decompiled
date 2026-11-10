@@ -7,9 +7,9 @@ final class PlantModel extends TrapModel {
     static String field_p;
     private int field_m;
 
-    final void a(int param0, Room param1, BitPacketBuffer param2) {
+    final void decode(int param0, Room param1, BitPacketBuffer param2) {
         try {
-          super.a(127, param1, param2);
+          super.decode(127, param1, param2);
           if (param0 <= 119) {
             this.field_m = 120;
           }
@@ -19,9 +19,9 @@ final class PlantModel extends TrapModel {
         }
     }
 
-    final void a(byte param0, BitPacketBuffer param1) {
+    final void encode(byte param0, BitPacketBuffer param1) {
         try {
-          super.a((byte) 115, param1);
+          super.encode((byte) 115, param1);
           int var3_int = 44 / ((param0 + 8) / 40);
           param1.writeBits((byte) -125, this.field_m, 4);
         } catch (RuntimeException runtimeException) {
@@ -174,9 +174,9 @@ final class PlantModel extends TrapModel {
         }
     }
 
-    final void a(TrapPart param0, WorldBody param1, byte param2) {
+    final void attach(TrapPart param0, WorldBody param1, byte param2) {
         try {
-          super.a(param0, param1, param2);
+          super.attach(param0, param1, param2);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ki.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -269,7 +269,7 @@ final class PlantModel extends TrapModel {
           if (var6 == null) {
             return;
           }
-          var8Lifetime1 = dfa.a(-this.field_h.g(-25787) + 4096 >> 2, 2048, -111);
+          var8Lifetime1 = dfa.a(-this.body.g(-25787) + 4096 >> 2, 2048, -111);
           gqa.a(var8Lifetime1, -83584144, param1, param2, (ka) (var6), param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

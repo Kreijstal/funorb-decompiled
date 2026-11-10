@@ -213,7 +213,7 @@ final class ts {
               } else {
                 stackIn_35_6 = -(32 * var11) + (var9 - 16);
               }
-              if (((Room) (Object) stackIn_34_0).a((ffa) (stackIn_34_1), stackIn_34_2, stackIn_34_3, stackIn_34_4, stackIn_34_5, stackIn_35_6 << 16, false, (WorldBody) null, 2097152)) {
+              if (((Room) (Object) stackIn_34_0).a((Collidable) (stackIn_34_1), stackIn_34_2, stackIn_34_3, stackIn_34_4, stackIn_34_5, stackIn_35_6 << 16, false, (WorldBody) null, 2097152)) {
                 continue;
               }
               var12 = 1;
@@ -258,7 +258,7 @@ final class ts {
               } else {
                 stackIn_15_5 = var11 * 32 + 16;
               }
-              if (((Room) (Object) stackIn_14_0).a((ffa) (stackIn_14_1), stackIn_14_2, stackIn_14_3, stackIn_14_4, stackIn_15_5 << 16, 16 + 32 * var13 << 16, false, (WorldBody) null, 2097152)) {
+              if (((Room) (Object) stackIn_14_0).a((Collidable) (stackIn_14_1), stackIn_14_2, stackIn_14_3, stackIn_14_4, stackIn_15_5 << 16, 16 + 32 * var13 << 16, false, (WorldBody) null, 2097152)) {
                 continue;
               }
               var12 = 1;
@@ -381,7 +381,7 @@ final class ts {
               if (4096 > var15 * var15 + var14 * var14) {
                 continue;
               }
-              stackIn_17_0 = (!this.field_c.a((ffa) null, var7, 2, 1, var13, var12, false, (WorldBody) null, var6)) ? 0 : 1;
+              stackIn_17_0 = (!this.field_c.a((Collidable) null, var7, 2, 1, var13, var12, false, (WorldBody) null, var6)) ? 0 : 1;
               var11 = stackIn_17_0;
               if (var11 != 0) {
                 continue;

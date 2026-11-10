@@ -13,11 +13,11 @@ final class VortexBehaviour extends Behaviour {
 
     final void tick(int param0) {
         int var19 = 0;
-        ffa stackIn_29_0 = null;
+        Collidable stackIn_29_0 = null;
         int stackIn_29_1 = 0;
         boolean stackIn_29_2 = false;
         int stackIn_30_3;
-        ffa stackIn_34_0 = null;
+        Collidable stackIn_34_0 = null;
         int stackIn_34_1 = 0;
         boolean stackIn_34_2 = false;
         int stackIn_35_3;
@@ -36,9 +36,9 @@ final class VortexBehaviour extends Behaviour {
         int var14;
         int var16;
         int var17_int;
-        ffa[] var17;
-        ffa[] var18;
-        ffa var20;
+        Collidable[] var17;
+        Collidable[] var18;
+        Collidable var20;
         int var21;
         int var22;
         int var23;
@@ -75,7 +75,7 @@ final class VortexBehaviour extends Behaviour {
           var27.a(false, 2, 3, 4, 25);
           var27.b(param0 - 5361, var14 * this.field_r / var17_int, this.field_r * var13 / var17_int);
         }
-        var17 = this.b(true).field_u.b(var3, -1, var2, var4, var5);
+        var17 = this.b(true).collisionGrid.b(var3, -1, var2, var4, var5);
         var18 = var17;
         for (var19 = 0; var19 < var18.length; var19++) {
           var20 = var18[var19];
@@ -105,7 +105,7 @@ final class VortexBehaviour extends Behaviour {
                   } else {
                     stackIn_35_3 = 1;
                   }
-                  ((ffa) (Object) stackIn_34_0).a(stackIn_34_1, stackIn_34_2, stackIn_35_3, -var24 << 16, -var23 << 16, 0);
+                  ((Collidable) (Object) stackIn_34_0).a(stackIn_34_1, stackIn_34_2, stackIn_35_3, -var24 << 16, -var23 << 16, 0);
                 } else {
                   stackIn_29_0 = var20;
                   stackIn_29_1 = 114;
@@ -115,7 +115,7 @@ final class VortexBehaviour extends Behaviour {
                   } else {
                     stackIn_30_3 = 2;
                   }
-                  ((ffa) (Object) stackIn_29_0).a(stackIn_29_1, stackIn_29_2, stackIn_30_3, var24 * var6 / var25, var6 * var23 / var25, 0);
+                  ((Collidable) (Object) stackIn_29_0).a(stackIn_29_1, stackIn_29_2, stackIn_30_3, var24 * var6 / var25, var6 * var23 / var25, 0);
                 }
               }
             }

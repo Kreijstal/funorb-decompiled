@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class Projectile extends PooledObject implements Renderable, ffa, t {
+final class Projectile extends PooledObject implements Renderable, Collidable, t {
     private int field_j;
     private boolean field_p;
     private int x;
@@ -780,7 +780,7 @@ final class Projectile extends PooledObject implements Renderable, ffa, t {
           }
         }
         this.expired = true;
-        this.field_z.field_u.a((ffa) (this), (byte) 123);
+        this.field_z.collisionGrid.remove((Collidable) (this), (byte) 123);
         if (param1 == 0) {
           return;
         }
@@ -822,16 +822,16 @@ final class Projectile extends PooledObject implements Renderable, ffa, t {
     }
 
     public final void a(int param0, int param1, int param2) {
-        this.field_z.field_u.a((ffa) (this), (byte) 98);
+        this.field_z.collisionGrid.remove((Collidable) (this), (byte) 98);
         this.setXY(param1, param0, (byte) 114);
         this.g((byte) -99);
         this.effect.field_g = null;
         if (param2 == 2) {
-          this.field_z.field_u.b((ffa) (this), param2 + 7071);
+          this.field_z.collisionGrid.insert((Collidable) (this), param2 + 7071);
           return;
         }
         this.getX(107);
-        this.field_z.field_u.b((ffa) (this), param2 + 7071);
+        this.field_z.collisionGrid.insert((Collidable) (this), param2 + 7071);
     }
 
     final void a(int param0, Room param1, int param2, int param3, int param4, int param5) {
@@ -913,9 +913,9 @@ final class Projectile extends PooledObject implements Renderable, ffa, t {
           var4 = 1;
         }
         if (!this.field_p) {
-          return this.field_z.a((ffa) (this), this.field_J, 2, var4, this.y, this.x, false, this.effect.field_g, this.field_J);
+          return this.field_z.a((Collidable) (this), this.field_J, 2, var4, this.y, this.x, false, this.effect.field_g, this.field_J);
         }
-        return this.field_z.a((ffa) (this), this.effect.field_g, var4, this.field_J, param0 / 4, 12, this.field_J, this.x, 1, param1 / 4, this.y, 0, false) != 0 ? true : false;
+        return this.field_z.a((Collidable) (this), this.effect.field_g, var4, this.field_J, param0 / 4, 12, this.field_J, this.x, 1, param1 / 4, this.y, 0, false) != 0 ? true : false;
     }
 
     final int i(int param0) {
@@ -1040,8 +1040,8 @@ final class Projectile extends PooledObject implements Renderable, ffa, t {
             }
             if (this.expired) {
               if (!this.expired) {
-                this.field_z.field_u.a((ffa) (this), -66);
-                this.field_z.field_u.b((ffa) (this), 7073);
+                this.field_z.collisionGrid.pruneOutsideBounds((Collidable) (this), -66);
+                this.field_z.collisionGrid.insert((Collidable) (this), 7073);
               }
               if (!this.field_B ||
                 this.velocityX != 0 ||
@@ -1081,8 +1081,8 @@ final class Projectile extends PooledObject implements Renderable, ffa, t {
                   var10.a(uca.field_c.nextBounded(8192, 0), -128 + uca.field_c.nextBounded(256, 0), param0 - 84);
                 }
               } else {
-                this.field_z.field_u.a((ffa) (this), -66);
-                this.field_z.field_u.b((ffa) (this), 7073);
+                this.field_z.collisionGrid.pruneOutsideBounds((Collidable) (this), -66);
+                this.field_z.collisionGrid.insert((Collidable) (this), 7073);
                 if (!this.field_B ||
                   this.velocityX != 0 ||
                   this.velocityY != 0) {
@@ -1143,8 +1143,8 @@ final class Projectile extends PooledObject implements Renderable, ffa, t {
           }
         }
         if (!this.expired) {
-          this.field_z.field_u.a((ffa) (this), -66);
-          this.field_z.field_u.b((ffa) (this), 7073);
+          this.field_z.collisionGrid.pruneOutsideBounds((Collidable) (this), -66);
+          this.field_z.collisionGrid.insert((Collidable) (this), 7073);
         }
         if (!this.field_B ||
           this.velocityX != 0 ||
@@ -1312,8 +1312,8 @@ final class Projectile extends PooledObject implements Renderable, ffa, t {
         try {
           dea.field_a.a(param1, false, this);
           if (param0 < 103) {
-            ffa var4 = (ffa) null;
-            this.a(40, (WorldBody) null, -76, 70, -19, (ffa) null, -19, 65);
+            Collidable var4 = (Collidable) null;
+            this.a(40, (WorldBody) null, -76, 70, -19, (Collidable) null, -19, 65);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ep.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -1380,7 +1380,7 @@ final class Projectile extends PooledObject implements Renderable, ffa, t {
         return param0;
     }
 
-    public final int a(boolean param0) {
+    public final int getCollisionId(boolean param0) {
         if (param0) {
           return 7 + 7 * this.field_D;
         }
@@ -1397,7 +1397,7 @@ final class Projectile extends PooledObject implements Renderable, ffa, t {
         return this.field_j;
     }
 
-    public final boolean a(int param0, WorldBody param1, int param2, int param3, int param4, ffa param5, int param6, int param7) {
+    public final boolean a(int param0, WorldBody param1, int param2, int param3, int param4, Collidable param5, int param6, int param7) {
         RuntimeException var9 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

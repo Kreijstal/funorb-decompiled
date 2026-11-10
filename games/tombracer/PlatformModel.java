@@ -93,7 +93,7 @@ final class PlatformModel extends TrapModel {
         }
     }
 
-    final void a(TrapPart param0, WorldBody param1, byte param2) {
+    final void attach(TrapPart param0, WorldBody param1, byte param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -104,9 +104,9 @@ final class PlatformModel extends TrapModel {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          super.a(param0, param1, param2);
-          if (this.field_k instanceof PlatformBehaviour) {
-            this.field_m = (PlatformBehaviour) (this.field_k);
+          super.attach(param0, param1, param2);
+          if (this.part instanceof PlatformBehaviour) {
+            this.field_m = (PlatformBehaviour) (this.part);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -220,10 +220,10 @@ final class PlatformModel extends TrapModel {
         var16 = TombRacer.field_G ? 1 : 0;
         try {
           var17 = this.a(18);
-          var3 = this.field_h.getX(3);
-          var4 = this.field_h.getY(9648);
-          this.field_z = this.field_h.getWidth(-84) / 2097152;
-          this.field_s = this.field_h.getHeight((byte) 55) / 2097152;
+          var3 = this.body.getX(3);
+          var4 = this.body.getY(9648);
+          this.field_z = this.body.getWidth(-84) / 2097152;
+          this.field_s = this.body.getHeight((byte) 55) / 2097152;
           if ((1 >= this.field_z ||
             this.field_s <= 1) && this.field_q == 2) {
             this.field_q = 0;
@@ -233,12 +233,12 @@ final class PlatformModel extends TrapModel {
             return;
           }
           this.field_r = new eh[this.field_z][this.field_s];
-          var5 = 1048576 + (-(this.field_h.getHeight((byte) 55) / 2) + var4);
+          var5 = 1048576 + (-(this.body.getHeight((byte) 55) / 2) + var4);
           if (!param0) {
             this.field_o = (fla) null;
           }
           for (var6 = 0; this.field_s > var6; var6++) {
-            var7 = -(this.field_h.getWidth(-117) / 2) + (var3 + 1048576);
+            var7 = -(this.body.getWidth(-117) / 2) + (var3 + 1048576);
             for (var8 = 0; this.field_z > var8; var8++) {
               boolean decompiledFrameRemainder0 = true;
               var9 = new eh();
@@ -445,7 +445,7 @@ final class PlatformModel extends TrapModel {
           if (param0 != -1) {
             this.field_t = (fla) null;
           }
-          var5_ref = (Trap) (this.field_h);
+          var5_ref = (Trap) (this.body);
           var6 = 1;
           var7 = this.getRenderX((byte) 84) - var4_ref.field_h >> 16;
           var8 = this.getRenderY((byte) 126) - var4_ref.field_c >> 16;
@@ -527,7 +527,7 @@ final class PlatformModel extends TrapModel {
         }
     }
 
-    final void a(byte param0, BitPacketBuffer param1) {
+    final void encode(byte param0, BitPacketBuffer param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         RuntimeException stackIn_5_0 = null;
@@ -535,7 +535,7 @@ final class PlatformModel extends TrapModel {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          super.a((byte) -58, param1);
+          super.encode((byte) -58, param1);
           var3_int = -7 % ((param0 + 8) / 40);
           param1.writeBits((byte) -16, this.field_q, 4);
           return;
@@ -695,7 +695,7 @@ final class PlatformModel extends TrapModel {
         int var2_int = 0;
         RuntimeException var2 = null;
         try {
-          if (this.field_h.j(-1)) {
+          if (this.body.j(-1)) {
             stackIn_4_0 = 2;
             return stackIn_4_0;
           }
@@ -765,7 +765,7 @@ final class PlatformModel extends TrapModel {
         }
     }
 
-    final void a(int param0, Room param1, BitPacketBuffer param2) {
+    final void decode(int param0, Room param1, BitPacketBuffer param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -776,7 +776,7 @@ final class PlatformModel extends TrapModel {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          super.a(127, param1, param2);
+          super.decode(127, param1, param2);
           this.field_q = param2.readBits((byte) 44, 4);
           if (param0 <= 119) {
             this.field_s = -69;

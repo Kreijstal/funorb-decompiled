@@ -80,12 +80,12 @@ abstract class cda extends TrapModel {
         var4 = 0;
         var5 = 0;
         var6 = 0;
-        if (!(this.field_h instanceof Trap)) {
-          var4Lifetime1 = this.field_h.getX(3);
-          var5Lifetime1 = this.field_h.getY(9648);
-          var6Lifetime1 = this.field_h.g(-25787);
+        if (!(this.body instanceof Trap)) {
+          var4Lifetime1 = this.body.getX(3);
+          var5Lifetime1 = this.body.getY(9648);
+          var6Lifetime1 = this.body.g(-25787);
         } else {
-          var7 = (Trap) (this.field_h);
+          var7 = (Trap) (this.body);
           var4Lifetime1 = var7.s(25745);
           var5Lifetime1 = var7.getLocalY(false);
           var6Lifetime1 = var7.q((byte) -80);
