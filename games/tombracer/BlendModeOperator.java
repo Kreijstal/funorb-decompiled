@@ -111,11 +111,11 @@ final class BlendModeOperator extends TextureOperator {
         int[] var56Lifetime1;
         int[] var57Lifetime1;
         var22 = TombRacer.field_G ? 1 : 0;
-        var33 = this.field_h.a(param0, (byte) 102);
+        var33 = this.colourCache.getRow(param0, (byte) 102);
         var24 = var33;
         var23 = var24;
         var3 = var23;
-        if (this.field_h.field_f) {
+        if (this.colourCache.field_f) {
           var50 = this.getInputColourRow(param0, 0, -1);
           var51 = this.getInputColourRow(param0, 1, -1);
           var12 = var33[0];
@@ -641,9 +641,9 @@ final class BlendModeOperator extends TextureOperator {
         int[] var18;
         int[] var10Lifetime1;
         var9 = TombRacer.field_G ? 1 : 0;
-        var10 = this.field_i.a((byte) 23, param1);
+        var10 = this.monochromeCache.getRow((byte) 23, param1);
         var3 = var10;
-        if (this.field_i.field_d) {
+        if (this.monochromeCache.rowMissed) {
           var18 = this.getInputMonochromeRow(0, -89, param1);
           var17 = this.getInputMonochromeRow(1, -116, param1);
           var8 = this.blendMode;

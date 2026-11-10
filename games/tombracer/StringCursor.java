@@ -28,7 +28,7 @@ final class StringCursor {
                 var2 = 2;
               }
               if (wba.field_o == null &&
-                foa.field_b) {
+                S2CRoundDeadlinePacket.field_b) {
                 qna.a(1, param1, var2);
               }
               return;
@@ -48,7 +48,7 @@ final class StringCursor {
             if (TextWidgetPainter.a(9)) {
               var2 = 0;
               if (wba.field_o == null &&
-                foa.field_b) {
+                S2CRoundDeadlinePacket.field_b) {
                 qna.a(1, param1, var2);
                 return;
               }
@@ -56,7 +56,7 @@ final class StringCursor {
             }
             var2 = 1;
             if (wba.field_o == null &&
-              foa.field_b) {
+              S2CRoundDeadlinePacket.field_b) {
               qna.a(1, param1, var2);
               return;
             }
@@ -67,7 +67,7 @@ final class StringCursor {
             if (dq.field_f == null) {
               var2 = 3;
               if (wba.field_o == null &&
-                foa.field_b) {
+                S2CRoundDeadlinePacket.field_b) {
                 qna.a(1, param1, var2);
                 return;
               }
@@ -89,7 +89,7 @@ final class StringCursor {
         if (wba.field_o != null) {
           return;
         }
-        if (!foa.field_b) {
+        if (!S2CRoundDeadlinePacket.field_b) {
           return;
         }
         qna.a(1, param1, var2);

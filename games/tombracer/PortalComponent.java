@@ -7,8 +7,8 @@ final class PortalComponent extends PrefabComponent {
     static long[] field_H;
     private PortalBehaviour field_F;
 
-    final void q(byte param0) {
-        super.q(param0);
+    final void applyDefaults(byte param0) {
+        super.applyDefaults(param0);
         this.setSize(param0 ^ -14, 4194304, 4194304);
     }
 
@@ -75,7 +75,7 @@ final class PortalComponent extends PrefabComponent {
         super.w(-124);
         this.field_G.a(this.getRoot((byte) -20), false);
         if (param0 >= -122) {
-          this.q((byte) -60);
+          this.applyDefaults((byte) -60);
         }
     }
 

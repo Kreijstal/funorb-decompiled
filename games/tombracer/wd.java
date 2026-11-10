@@ -144,7 +144,7 @@ final class wd implements dv {
           if (!param2) {
             return;
           }
-          param4.c(437453352, true);
+          param4.rebuildBehaviourModels(437453352, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -115,7 +115,7 @@ final class dta {
             !param4.n(-95)) {
             var10 = -94 / ((51 - param3) / 40);
             var9 = param4.matchState;
-            var11 = param4.l(107);
+            var11 = param4.getViewedPlayerIndex(107);
             var12 = var9.players[param2];
             var13 = var9.simulations[param2];
             var14 = var13.tick;
@@ -236,7 +236,7 @@ final class dta {
               var41 = Integer.toString(var12.F(-7991));
               var27Lifetime1 = var41;
               var27Lifetime2 = var41;
-              ua.a(4, var28, var41.toUpperCase(), 34 + (var17Lifetime3 + (10 - var24)), 0, -16 + param6, 11903361);
+              S2CNextRoundPacket.a(4, var28, var41.toUpperCase(), 34 + (var17Lifetime3 + (10 - var24)), 0, -16 + param6, 11903361);
               var18Lifetime4 = 0;
               var17Lifetime4 = param1 - var8_int - 140;
               bd.field_i.a(var17Lifetime4, var18Lifetime4);
@@ -252,7 +252,7 @@ final class dta {
                 var29Lifetime1 = var29Lifetime1 + var12.getTreasure(196608, 2) * gp.field_i[2];
                 var27Lifetime4 = Integer.toString(var29Lifetime1);
               }
-              ua.a(4, var28Lifetime1, var27Lifetime4.toUpperCase(), var17Lifetime4 + 130, 0, 26 + var18Lifetime4, 11903361);
+              S2CNextRoundPacket.a(4, var28Lifetime1, var27Lifetime4.toUpperCase(), var17Lifetime4 + 130, 0, 26 + var18Lifetime4, 11903361);
               var18Lifetime5 = param5 + 25;
               var17Lifetime5 = param1 - 36;
               var29Lifetime2 = var18Lifetime5;
@@ -352,13 +352,13 @@ final class dta {
                   param6 = param6 - var37Lifetime1 * var39Lifetime2;
                 }
               }
-              if (0 >= param4.field_r) {
+              if (0 >= param4.roundDeadlineTick) {
                 return;
               }
               var42 = dw.field_j;
               var31Lifetime3 = (int)(128.0 - Math.sin((double)bva.currentTimeMillis((byte) -107) / 512.0) * 128.0);
               NotLoggedInMenu.a(var31Lifetime3, (byte) -73, var31Lifetime3, 1, SingleChildWidget.field_v, var42.toUpperCase(), 40 + (SwitchLinkList.b(0) >> 1) + (SwitchLinkList.b(0) >> 2), 11903361, param1 + param0 >> 1);
-              var32Lifetime2 = param4.field_r - param4.matchState.getSimulationTick((byte) 115, param2);
+              var32Lifetime2 = param4.roundDeadlineTick - param4.matchState.getSimulationTick((byte) 115, param2);
               if (var32Lifetime2 >= 250) {
                 return;
               }

@@ -38,8 +38,8 @@ final class BoxBlurOperator extends TextureOperator {
         if (param0 != 1) {
           this.getMonochromeRow(-10, -66);
         }
-        var3 = this.field_i.a((byte) -123, param1);
-        if (this.field_i.field_d) {
+        var3 = this.monochromeCache.getRow((byte) -123, param1);
+        if (this.monochromeCache.rowMissed) {
           var4 = this.field_m + (this.field_m + 1);
           var5 = 65536 / var4;
           var6 = this.field_n + (this.field_n + 1);
@@ -108,7 +108,7 @@ final class BoxBlurOperator extends TextureOperator {
         int var13 = 0;
         int var14 = 0;
         int var23 = TombRacer.field_G ? 1 : 0;
-        int[][] var37 = this.field_h.a(param0, (byte) 117);
+        int[][] var37 = this.colourCache.getRow(param0, (byte) 117);
         int[][] var29 = var37;
         int[][] var3 = var29;
         int var22Lifetime1;
@@ -118,7 +118,7 @@ final class BoxBlurOperator extends TextureOperator {
         if (param1 != -1) {
           this.field_m = -39;
         }
-        if (this.field_h.field_f) {
+        if (this.colourCache.field_f) {
           var4 = 1 + (this.field_m + this.field_m);
           var5 = 65536 / var4;
           var6 = this.field_n - (-this.field_n - 1);

@@ -8,9 +8,9 @@ final class vn {
 
     final static void a(int param0, String param1, boolean param2) {
         try {
-          bga.field_d = param2;
+          S2CProfileUpdatePacket.field_d = param2;
           TileOperator.field_p = true;
-          TextureOperator.field_l = new MessageDialog(ej.field_a, ft.field_c, param1, LoadProfileCommand.field_r, bga.field_d);
+          TextureOperator.field_l = new MessageDialog(ej.field_a, ft.field_c, param1, LoadProfileCommand.field_r, S2CProfileUpdatePacket.field_d);
           int var3_int = -94 / ((43 - param0) / 34);
           ej.field_a.c(TextureOperator.field_l, 104);
         } catch (RuntimeException runtimeException) {

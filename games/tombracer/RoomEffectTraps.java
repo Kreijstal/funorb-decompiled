@@ -141,7 +141,7 @@ final class RoomEffectTraps {
           this.update(false);
         }
         this.darknessTraps[0].addBehaviour((byte) 83, (Behaviour) (var5));
-        this.darknessTraps[0].c(437453352, false);
+        this.darknessTraps[0].rebuildBehaviourModels(437453352, false);
         this.room.addTrap(this.darknessTraps[0], (byte) 32);
         if (param0) {
           var5.e(false);

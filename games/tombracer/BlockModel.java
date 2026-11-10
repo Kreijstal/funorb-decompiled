@@ -30,8 +30,8 @@ final class BlockModel extends TrapModel {
 
     final void a(byte param0, int param1) {
         super.a((byte) 97, param1);
-        this.a(28).getParticleEffects(false).a(this.body.getY(9648), this.body.getElevation((byte) 115), (byte) 46, this.body.getX(3));
-        w var5 = (w) (this.a(30).field_G);
+        this.getRoom(28).getParticleEffects(false).a(this.body.getY(9648), this.body.getElevation((byte) 115), (byte) 46, this.body.getX(3));
+        w var5 = (w) (this.getRoom(30).field_G);
         if (var5 == null) {
           return;
         }
@@ -55,7 +55,7 @@ final class BlockModel extends TrapModel {
         }
     }
 
-    final void a(int param0, uw param1) {
+    final void updateSceneLayer(int param0, RenderScene param1) {
         w var3 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -63,8 +63,8 @@ final class BlockModel extends TrapModel {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          super.a(-61, param1);
-          var3 = (w) (this.a(21).field_G);
+          super.updateSceneLayer(-61, param1);
+          var3 = (w) (this.getRoom(21).field_G);
           if (var3 == null) {
             return;
           }
@@ -171,7 +171,7 @@ final class BlockModel extends TrapModel {
         field_n = null;
     }
 
-    final void d(int param0) {
+    final void tick(int param0) {
         int stackIn_75_0 = 0;
         int stackIn_75_1 = 0;
         Trap var3;
@@ -192,7 +192,7 @@ final class BlockModel extends TrapModel {
         int var8Lifetime1;
         BeamSegment var9Lifetime1;
         var10 = TombRacer.field_G ? 1 : 0;
-        var11 = (w) (this.a(111).field_G);
+        var11 = (w) (this.getRoom(111).field_G);
         if (var11 == null) {
           return;
         }

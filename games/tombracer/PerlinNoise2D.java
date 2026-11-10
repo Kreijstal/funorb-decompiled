@@ -280,12 +280,12 @@ final class PerlinNoise2D extends TextureOperator {
     }
 
     final int[] getMonochromeRow(int param0, int param1) {
-        int[] var4 = this.field_i.a((byte) -119, param1);
+        int[] var4 = this.monochromeCache.getRow((byte) -119, param1);
         int[] var3 = var4;
         if (param0 != 1) {
           this.field_q = (short[]) null;
         }
-        if (this.field_i.field_d) {
+        if (this.monochromeCache.rowMissed) {
           this.fillRow(var4, param0 - 2, param1);
         }
         return var4;

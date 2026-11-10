@@ -112,11 +112,11 @@ final class PressureSwitchComponent extends SwitchComponent {
         }
     }
 
-    final void q(byte param0) {
+    final void applyDefaults(byte param0) {
         int var2;
         int var3;
         var3 = TombRacer.field_G ? 1 : 0;
-        super.q(param0);
+        super.applyDefaults(param0);
         var2 = this.typeId;
         if (3 != var2) {
           if (var2 != 4) {
@@ -133,7 +133,7 @@ final class PressureSwitchComponent extends SwitchComponent {
         this.setSize(106, this.field_J * 2097152, 2097152 * this.field_K);
     }
 
-    final boolean z(int param0) {
+    final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
           this.field_J = 97;
           return false;

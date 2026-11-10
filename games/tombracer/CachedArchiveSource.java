@@ -420,9 +420,9 @@ final class CachedArchiveSource extends ArchiveSource {
           try {
             if (var5 != null &&
               2 < var19.length) {
-              vf.field_g.reset();
-              vf.field_g.update(var5, 0, var19.length - 2);
-              var7_int = (int)vf.field_g.getValue();
+              RenderLayer.field_g.reset();
+              RenderLayer.field_g.update(var5, 0, var19.length - 2);
+              var7_int = (int)RenderLayer.field_g.getValue();
               if (var7_int != this.field_k.field_j[param2]) {
                 throw new RuntimeException();
               }
@@ -471,9 +471,9 @@ final class CachedArchiveSource extends ArchiveSource {
         try {
           if (var5 != null &&
             var19.length > 2) {
-            vf.field_g.reset();
-            vf.field_g.update(var5, 0, var19.length - 2);
-            var7_int = (int)vf.field_g.getValue();
+            RenderLayer.field_g.reset();
+            RenderLayer.field_g.update(var5, 0, var19.length - 2);
+            var7_int = (int)RenderLayer.field_g.getValue();
             if (var7_int != this.field_k.field_j[param2]) {
               throw new RuntimeException();
             }

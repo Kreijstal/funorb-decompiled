@@ -176,7 +176,7 @@ final class fp {
         param1++;
         var16_ref.a(incrementValue$7, (byte) 47, param0);
         ht.field_Db = SpriteData.loadSprite(param2, "", "options_bar_empty");
-        oea.field_j = SpriteData.loadSprite(param2, "", "options_bar_full");
+        RenderableNode.field_j = SpriteData.loadSprite(param2, "", "options_bar_full");
         ResourceArchive.field_h = SpriteData.loadSprite(param2, "", "button_music");
         re.field_a = SpriteData.loadSprite(param2, "", "button_sound");
         ina.field_c = SpriteData.loadSheet(param2, "", "multipliers");

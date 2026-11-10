@@ -33,7 +33,7 @@ final class cj implements isa {
         int var7 = 0;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
-          if (uga.field_n != km.field_p) {
+          if (uga.field_n != ProceduralTexture.field_p) {
             return false;
           }
           if (param1 != 0) {

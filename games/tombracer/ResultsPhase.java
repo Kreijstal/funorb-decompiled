@@ -827,7 +827,7 @@ final class ResultsPhase extends MatchPhase {
             this.matchState.players[var3].getAnimator((byte) -98).a(26, 4, true);
           }
           this.matchState.players[var3].getAnimator((byte) -127).a(param0 + 21383);
-          this.matchState.players[var3].getAnimator((byte) -54).f(-4366);
+          this.matchState.players[var3].getAnimator((byte) -54).updateAnimation(-4366);
         }
         this.field_q = true;
         if (param1) {

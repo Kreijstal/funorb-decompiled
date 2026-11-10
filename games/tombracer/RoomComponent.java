@@ -319,7 +319,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         field_y = null;
     }
 
-    public final void f(int param0) {
+    public final void updateAnimation(int param0) {
         if (param0 != -4366) {
           this.intersectsRect((byte) -31, 116, -25, -38, 120);
         }
@@ -545,7 +545,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         }
     }
 
-    final void a(int param0, uw param1) {
+    final void a(int param0, RenderScene param1) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -553,7 +553,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         RuntimeException var3 = null;
         try {
           if (this.p((byte) -94)) {
-            param1.a((byte) -116, this.getRenderLayer(8), (Renderable) (this));
+            param1.addToLayer((byte) -116, this.getRenderLayer(8), (Renderable) (this));
           }
           if (param0 != -1704) {
             field_n = 90;
@@ -850,7 +850,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
 
     abstract int getRenderLayer(int param0);
 
-    void q(byte param0) {
+    void applyDefaults(byte param0) {
         if (param0 != -128) {
           this.updateRotation(false);
         }
@@ -866,7 +866,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
           this.room = param0;
           this.typeId = param1;
           this.field_w = param0.d(-31957).a(-54, false);
-          this.q((byte) -128);
+          this.applyDefaults((byte) -128);
           this.updateRotation(true);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "csa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

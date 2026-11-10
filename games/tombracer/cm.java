@@ -353,7 +353,7 @@ final class cm implements GamePacket {
           if (param2 != -21290) {
             field_a = (qg[]) null;
           }
-          for (var7 = 0; var7 < fk.field_b; var7++) {
+          for (var7 = 0; var7 < ColourRowCache.field_b; var7++) {
             var30 = bf.field_b[var7 + 4];
             var8_array = var30;
             stackIn_155_0 = (!param3) ? 0 : -1;
@@ -447,8 +447,8 @@ final class cm implements GamePacket {
                 !PlayerViewport.field_o)) {
                 mm.field_g = false;
                 if (null == tba.field_m) {
-                  tba.field_m = new byte[fk.field_b];
-                  sda.field_f = new boolean[fk.field_b];
+                  tba.field_m = new byte[ColourRowCache.field_b];
+                  sda.field_f = new boolean[ColourRowCache.field_b];
                 }
                 TouchSwitchBehaviour.field_s = false;
                 for (var17_int = 0; var17_int < var7; var17_int++) {

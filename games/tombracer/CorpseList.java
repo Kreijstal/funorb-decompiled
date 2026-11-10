@@ -12,7 +12,7 @@ final class CorpseList {
         this.corpses.clear(8);
     }
 
-    final void a(uw param0, int param1) {
+    final void a(RenderScene param0, int param1) {
         Corpse var3 = null;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -27,7 +27,7 @@ final class CorpseList {
           }
           var3 = (Corpse) (this.corpses.first(-80));
           while (var3 != null) {
-            param0.a((byte) 25, var3.f((byte) 103), var3);
+            param0.addToLayer((byte) 25, var3.f((byte) 103), var3);
             var3 = (Corpse) (this.corpses.next(111));
           }
           return;

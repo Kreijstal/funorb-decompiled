@@ -144,7 +144,7 @@ final class RoomLighting implements ev {
         }
     }
 
-    public final void a(vf param0, int param1, iq param2, boolean param3) {
+    public final void a(RenderLayer param0, int param1, iq param2, boolean param3) {
         try {
           if (!param3) {
             RoomLighting.a(112, -118, 127);
@@ -154,7 +154,7 @@ final class RoomLighting implements ev {
         }
     }
 
-    public final void a(int param0, vf param1, iq param2, int param3) {
+    public final void a(int param0, RenderLayer param1, iq param2, int param3) {
         try {
           if (param3 != 11180543) {
             field_d = -52;

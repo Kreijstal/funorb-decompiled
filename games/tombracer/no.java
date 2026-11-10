@@ -93,7 +93,7 @@ final class no extends MatchOverlay {
           return;
         }
         if (null != SecondaryNodeDequeIterator.field_a.field_g) {
-          SecondaryNodeDequeIterator.field_a.field_g[SecondaryNodeDequeIterator.field_a.l(92)].a(new fm(93, 0, 0, 0), -58);
+          SecondaryNodeDequeIterator.field_a.field_g[SecondaryNodeDequeIterator.field_a.getViewedPlayerIndex(92)].a(new fm(93, 0, 0, 0), -58);
           this.field_t = this.field_t + 1;
           if (param0 >= -107) {
             return;
@@ -227,7 +227,7 @@ final class no extends MatchOverlay {
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        if (!lf.a(param0, param1, 128)) {
+        if (!S2CMatchResultPacket.a(param0, param1, 128)) {
           return false;
         }
         if (S2CNewRoomPacket.a(540800, param1, param0) | ((param1 & param2) != 0 ? true : false) | EdgeDetectOperator.d(param0, param1, 26205)) {

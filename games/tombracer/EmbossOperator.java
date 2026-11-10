@@ -27,9 +27,9 @@ final class EmbossOperator extends TextureOperator {
         if (param0 != 1) {
           this.field_m = 111;
         }
-        int[] var18 = this.field_i.a((byte) 113, param1);
+        int[] var18 = this.monochromeCache.getRow((byte) 113, param1);
         int[] var3 = var18;
-        if (this.field_i.field_d) {
+        if (this.monochromeCache.rowMissed) {
           var7 = this.field_o * ooa.field_g >> 12;
           var26 = this.getInputMonochromeRow(0, -126, hba.textureHeightMask & -1 + param1);
           var9 = this.getInputMonochromeRow(0, param0 ^ -36, param1);

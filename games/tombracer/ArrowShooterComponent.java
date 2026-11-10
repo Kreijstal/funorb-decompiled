@@ -19,7 +19,7 @@ final class ArrowShooterComponent extends ShooterComponent {
         }
     }
 
-    final boolean z(int param0) {
+    final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
           this.A(101);
           return false;
@@ -202,8 +202,8 @@ final class ArrowShooterComponent extends ShooterComponent {
         super(param0, param1, param2, param3);
     }
 
-    final void q(byte param0) {
-        super.q(param0);
+    final void applyDefaults(byte param0) {
+        super.applyDefaults(param0);
         this.setSize(-79, 2097152, 2097152);
     }
 

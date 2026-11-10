@@ -19,7 +19,7 @@ final class Room implements SwitchableScope, Renderable, noa {
     private IntrusiveDeque traps;
     private IntrusiveDeque components;
     private IsaacCipher random;
-    private uw scene;
+    private RenderScene scene;
     private int randomSeed;
     int field_a;
     private IntrusiveDeque recentDeaths;
@@ -232,7 +232,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         return var5;
     }
 
-    final uw getScene(byte param0) {
+    final RenderScene getScene(byte param0) {
         int var2 = -2 % ((param0 + 2) / 36);
         return this.scene;
     }
@@ -496,7 +496,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           var4.onRoomReset(this, -9774);
         }
         if (this.scene != null) {
-          this.scene.a(10);
+          this.scene.clear(10);
         }
         this.effectTraps.forgetTraps((byte) 100);
     }
@@ -684,8 +684,8 @@ final class Room implements SwitchableScope, Renderable, noa {
 
     final void createScene(iq param0, int param1) {
         try {
-          this.scene = new uw(10);
-          this.scene.a(-24343, param0);
+          this.scene = new RenderScene(10);
+          this.scene.setRenderTarget(-24343, param0);
           if (param1 <= 2) {
             field_R = (AsyncRequest) null;
           }
@@ -695,13 +695,13 @@ final class Room implements SwitchableScope, Renderable, noa {
     }
 
     private final void enterAtEntrance(byte param0, boolean param1) {
-        uw var3;
+        RenderScene var3;
         SimulationObserver var3_ref;
         RoomComponent var4;
         int var5;
         WorldBody var6;
         Player var7;
-        uw var8;
+        RenderScene var8;
         RoomComponent var4Lifetime1;
         var5 = TombRacer.field_G ? 1 : 0;
         if (param1) {
@@ -754,8 +754,8 @@ final class Room implements SwitchableScope, Renderable, noa {
         if (this.scene == null) {
           return;
         }
-        this.scene.a(10);
-        var2 = this.scene.c(0);
+        this.scene.clear(10);
+        var2 = this.scene.getRenderTarget(0);
         if (param0 >= -86) {
           this.field_C = 71;
         }
@@ -881,7 +881,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         }
     }
 
-    public final void f(int param0) {
+    public final void updateAnimation(int param0) {
         Trap[] discarded$0 = null;
         if (param0 != -4366) {
           discarded$0 = this.a(54, 60, 37, -15, -117);
@@ -1034,7 +1034,7 @@ final class Room implements SwitchableScope, Renderable, noa {
 
     private final void t(int param0) {
         int var7 = 0;
-        uw var2;
+        RenderScene var2;
         BitPacketBuffer var3;
         int var4;
         int var5;
@@ -1422,9 +1422,9 @@ final class Room implements SwitchableScope, Renderable, noa {
         if (param0) {
           this.entranceX = 15;
         }
-        this.scene.c(0);
+        this.scene.getRenderTarget(0);
         this.scene.b(1909106792);
-        this.scene.e(30057);
+        this.scene.render(30057);
     }
 
     final boolean hasEffect(int param0, byte param1) {
@@ -1541,9 +1541,9 @@ final class Room implements SwitchableScope, Renderable, noa {
         this.particlePool.update(var5 != 0, (byte) -103);
         this.field_a = this.projectilePool.hashState(this.field_a, -119);
         if (this.scene != null) {
-          this.scene.d(0);
+          this.scene.updateAnimations(0);
           if (this.simulation.isEffectActive(8, param1 + 10915)) {
-            this.scene.c(0).a(uca.cosmeticRandom.nextBounded(9, 0) - 4, 0, -4 + uca.cosmeticRandom.nextBounded(9, 0), 26768);
+            this.scene.getRenderTarget(0).a(uca.cosmeticRandom.nextBounded(9, 0) - 4, 0, -4 + uca.cosmeticRandom.nextBounded(9, 0), 26768);
           }
         }
         if (null != this.field_G) {

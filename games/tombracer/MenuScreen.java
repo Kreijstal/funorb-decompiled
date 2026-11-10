@@ -324,8 +324,8 @@ abstract class MenuScreen extends GameScreen {
             }
             if (SecondaryNodeDequeIterator.field_a != null &&
               null != SecondaryNodeDequeIterator.field_a.matchState &&
-              SecondaryNodeDequeIterator.field_a.matchState.getPlayerRoom(param2 ^ 15283, SecondaryNodeDequeIterator.field_a.l(param2 ^ 15336)) != null) {
-              var4 = (w) (SecondaryNodeDequeIterator.field_a.matchState.getPlayerRoom(0, SecondaryNodeDequeIterator.field_a.l(param2 ^ 15326)).field_G);
+              SecondaryNodeDequeIterator.field_a.matchState.getPlayerRoom(param2 ^ 15283, SecondaryNodeDequeIterator.field_a.getViewedPlayerIndex(param2 ^ 15336)) != null) {
+              var4 = (w) (SecondaryNodeDequeIterator.field_a.matchState.getPlayerRoom(0, SecondaryNodeDequeIterator.field_a.getViewedPlayerIndex(param2 ^ 15326)).field_G);
               if (var4 != null) {
                 var4.a(108, true);
               }
@@ -539,7 +539,7 @@ abstract class MenuScreen extends GameScreen {
                 SecondaryNodeDequeIterator.field_a.j((byte) -49);
                 SecondaryNodeDequeIterator.field_a.startRound(125);
                 if (3 == var6) {
-                  SecondaryNodeDequeIterator.field_a.e((byte) 110);
+                  SecondaryNodeDequeIterator.field_a.startTutorial((byte) 110);
                 }
                 return true;
               }
@@ -559,26 +559,26 @@ abstract class MenuScreen extends GameScreen {
               }
               if (var7 == 23 &&
                 var8 == 0) {
-                ((pk) (uw.field_g[3])).b((byte) 94, 0);
+                ((pk) (RenderScene.field_g[3])).b((byte) 94, 0);
                 return true;
               }
               if (var7 == 24) {
-                ((pk) (uw.field_g[3])).b((byte) 84, 1);
+                ((pk) (RenderScene.field_g[3])).b((byte) 84, 1);
                 return true;
               }
               if (var7 == 25 &&
                 var8 == 0) {
-                ((pk) (uw.field_g[3])).b((byte) 126, 2);
+                ((pk) (RenderScene.field_g[3])).b((byte) 126, 2);
                 return true;
               }
               if (var7 == 26 &&
                 var8 == 0) {
-                ((qp) (uw.field_g[5])).h(18608, 0);
+                ((qp) (RenderScene.field_g[5])).h(18608, 0);
                 return true;
               }
               if (27 == var7 &&
                 var8 == 0) {
-                ((qp) (uw.field_g[5])).h(18608, 1);
+                ((qp) (RenderScene.field_g[5])).h(18608, 1);
                 return true;
               }
               if (var7 == 28 &&

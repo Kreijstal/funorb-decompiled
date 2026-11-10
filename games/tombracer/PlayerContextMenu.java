@@ -391,11 +391,11 @@ final class PlayerContextMenu {
             var5 = this.getDisplayName(-13);
             if (var4 != null) {
               if (!C2SChooseRewardPacket.field_a.field_ec) {
-                this.field_f.addItem((byte) -74, 1, gl.$cfr$intArgs$a$53ce4ab4c593(108, lf.field_a, new String[]{var5}));
+                this.field_f.addItem((byte) -74, 1, gl.$cfr$intArgs$a$53ce4ab4c593(108, S2CMatchResultPacket.field_a, new String[]{var5}));
                 return;
               }
               if (C2SChooseRewardPacket.field_a.field_Kb >= 0) {
-                this.field_f.addItem((byte) -74, 1, gl.$cfr$intArgs$a$53ce4ab4c593(108, lf.field_a, new String[]{var5}));
+                this.field_f.addItem((byte) -74, 1, gl.$cfr$intArgs$a$53ce4ab4c593(108, S2CMatchResultPacket.field_a, new String[]{var5}));
                 return;
               }
             } else {
@@ -403,7 +403,7 @@ final class PlayerContextMenu {
                 C2SChooseRewardPacket.field_a.field_Yb &&
                 C2SChooseRewardPacket.field_a.field_Jb > C2SChooseRewardPacket.field_a.field_Mb) {
                 if (var14.field_Hb) {
-                  this.field_f.addItem((byte) -79, 1, gl.$cfr$intArgs$a$53ce4ab4c593(126, oea.field_g, new String[]{var5}));
+                  this.field_f.addItem((byte) -79, 1, gl.$cfr$intArgs$a$53ce4ab4c593(126, RenderableNode.field_g, new String[]{var5}));
                   return;
                 }
                 if (param1 &&
@@ -439,7 +439,7 @@ final class PlayerContextMenu {
             C2SChooseRewardPacket.field_a.field_Kb < 0) {
             return;
           }
-          this.field_f.addItem((byte) -74, 1, gl.$cfr$intArgs$a$53ce4ab4c593(108, lf.field_a, new String[]{var5}));
+          this.field_f.addItem((byte) -74, 1, gl.$cfr$intArgs$a$53ce4ab4c593(108, S2CMatchResultPacket.field_a, new String[]{var5}));
           return;
         }
         if (var13 == null) {
@@ -448,7 +448,7 @@ final class PlayerContextMenu {
         if (C2SChooseRewardPacket.field_a.field_Yb &&
           C2SChooseRewardPacket.field_a.field_Jb > C2SChooseRewardPacket.field_a.field_Mb) {
           if (var13.field_Hb) {
-            this.field_f.addItem((byte) -79, 1, gl.$cfr$intArgs$a$53ce4ab4c593(126, oea.field_g, new String[]{var5}));
+            this.field_f.addItem((byte) -79, 1, gl.$cfr$intArgs$a$53ce4ab4c593(126, RenderableNode.field_g, new String[]{var5}));
             return;
           }
           if (param1 &&

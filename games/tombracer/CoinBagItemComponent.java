@@ -163,12 +163,12 @@ final class CoinBagItemComponent extends ItemComponent {
               var10 = 2;
               if (null != PlatformModel.field_A) {
                 if (tba.field_m == null) {
-                  tba.field_m = new byte[fk.field_b];
-                  sda.field_f = new boolean[fk.field_b];
+                  tba.field_m = new byte[ColourRowCache.field_b];
+                  sda.field_f = new boolean[ColourRowCache.field_b];
                 }
                 var11 = 0;
                 do {
-                  if (!(var11 < fk.field_b)) {
+                  if (!(var11 < ColourRowCache.field_b)) {
                     var10 = 0;
                     break;
                   }
@@ -266,7 +266,7 @@ final class CoinBagItemComponent extends ItemComponent {
                   var12 = 0;
                   var13 = 0;
                   while (true) {
-                    if (var13 < fk.field_b) {
+                    if (var13 < ColourRowCache.field_b) {
                       stackOut_73_0 = sda.field_f[var13];
                       stackIn_80_0 = stackOut_73_0 ? 1 : 0;
                       stackIn_74_0 = stackOut_73_0;
@@ -323,7 +323,7 @@ final class CoinBagItemComponent extends ItemComponent {
                 var15 = 0;
                 var16 = 0;
                 boolean decompiledNaturalLoopExit0 = false;
-                while (!(decompiledNaturalLoopExit0 = (!(var16 < fk.field_b)))) {
+                while (!(decompiledNaturalLoopExit0 = (!(var16 < ColourRowCache.field_b)))) {
                   var17_int = C2SChooseRewardPacket.field_a.field_ac[var16] & 255;
                   if (var19 == 0) {
                     if (PowerUpItemBehaviour.field_u != null &&

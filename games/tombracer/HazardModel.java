@@ -204,7 +204,7 @@ final class HazardModel extends TrapModel {
         }
     }
 
-    final void d(int param0) {
+    final void tick(int param0) {
         int stackIn_28_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
@@ -229,7 +229,7 @@ final class HazardModel extends TrapModel {
         var3 = null;
         var9 = TombRacer.field_G ? 1 : 0;
         try {
-          super.d(param0);
+          super.tick(param0);
           if (this.field_u == 0) {
             var4 = this.getBody((byte) 16).getX(3);
             var5 = this.getBody((byte) 16).getY(param0 + 9649);
@@ -246,10 +246,10 @@ final class HazardModel extends TrapModel {
             if (var2_int != 0 ||
               var3_int != 0) {
               this.field_m = GameScreen.positiveModulo(qva.a((byte) -103, -var3_int, var2_int) >> 2, 2048, 125);
-              this.field_q = GameScreen.positiveModulo(this.field_q - (ua.abs(var2_int >> 13, -113) + ua.abs(var3_int >> 13, 67)), 2048, -100);
-              if (!(65536 >= ua.abs(var2_int, param0 + 93)) ||
-                !(ua.abs(var3_int, param0 ^ -85) <= 65536)) {
-                this.a(103).a(false, this.getRenderX((byte) -119), 0, -var2_int, this.getRenderY((byte) 127), -var3_int);
+              this.field_q = GameScreen.positiveModulo(this.field_q - (S2CNextRoundPacket.abs(var2_int >> 13, -113) + S2CNextRoundPacket.abs(var3_int >> 13, 67)), 2048, -100);
+              if (!(65536 >= S2CNextRoundPacket.abs(var2_int, param0 + 93)) ||
+                !(S2CNextRoundPacket.abs(var3_int, param0 ^ -85) <= 65536)) {
+                this.getRoom(103).a(false, this.getRenderX((byte) -119), 0, -var2_int, this.getRenderY((byte) 127), -var3_int);
               }
             }
           } else {
@@ -258,7 +258,7 @@ final class HazardModel extends TrapModel {
               this.field_m = GameScreen.positiveModulo(128 + this.field_m, 2048, 122);
             }
           }
-          var10_ref = (w) (this.a(param0 + 64).field_G);
+          var10_ref = (w) (this.getRoom(param0 + 64).field_G);
           if (var10_ref == null) {
             return;
           }

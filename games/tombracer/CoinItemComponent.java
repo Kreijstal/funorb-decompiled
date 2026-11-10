@@ -14,7 +14,7 @@ final class CoinItemComponent extends ItemComponent {
         int[] var4 = null;
         try {
           var4 = new int[]{22, 1, 3, 4, 12, 14, 13, 8, 9};
-          uw.field_g = new MenuScreen[13];
+          RenderScene.field_g = new MenuScreen[13];
           qpa.a(245, var4, 0, 40, 440, 126, 200);
           qpa.a(440, MirrorComponent.field_H, 1, 40, 440, 125, 290);
           qpa.a(275, S2CPlayerSyncPacket.field_d, 3, 40, 440, 126, 200);

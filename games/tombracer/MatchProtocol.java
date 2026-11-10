@@ -29,15 +29,15 @@ final class MatchProtocol {
     }
 
     private final void b(MatchScreen param0, BitPacketBuffer param1, int param2) {
-        lf var4 = null;
+        S2CMatchResultPacket var4 = null;
         try {
           if (param2 != 93) {
             java.applet.Applet var5 = (java.applet.Applet) null;
             MatchProtocol.a((byte) -52, (java.applet.Applet) null);
           }
-          var4 = new lf();
+          var4 = new S2CMatchResultPacket();
           this.decodePacket(var4, 124, param1);
-          var4.a(param0, 0, this);
+          var4.apply(param0, 0, this);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "v.M(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -282,7 +282,7 @@ final class MatchProtocol {
     }
 
     private final void a(byte param0, MatchScreen param1, BitPacketBuffer param2) {
-        foa var4 = null;
+        S2CRoundDeadlinePacket var4 = null;
         MatchScreen var5 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -292,9 +292,9 @@ final class MatchProtocol {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
         try {
-          var4 = new foa();
+          var4 = new S2CRoundDeadlinePacket();
           this.decodePacket(var4, 112, param2);
-          var4.a(param1, -1, this);
+          var4.apply(param1, -1, this);
           if (param0 >= -7) {
             var5 = (MatchScreen) null;
             this.a(-98, (BitPacketBuffer) null, (MatchScreen) null);
@@ -452,14 +452,14 @@ final class MatchProtocol {
     }
 
     private final void b(byte param0, MatchScreen param1, BitPacketBuffer param2) {
-        ua var4 = null;
+        S2CNextRoundPacket var4 = null;
         try {
-          var4 = new ua();
+          var4 = new S2CNextRoundPacket();
           if (param0 != 30) {
             this.a((byte) -120);
           }
           this.decodePacket(var4, param0 - 129, param2);
-          var4.a(2, this, param1);
+          var4.apply(2, this, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "v.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

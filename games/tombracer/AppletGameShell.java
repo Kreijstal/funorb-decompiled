@@ -30,7 +30,7 @@ abstract class AppletGameShell extends GameApplet {
             PlantModel.b(false, 3);
           }
           if (hd.field_a[3]) {
-            ua.b(4, 2);
+            S2CNextRoundPacket.b(4, 2);
           }
           if (hd.field_a[4]) {
             ArchiveNetworkClient.resendQueuedListRequests(5, -21);
@@ -707,7 +707,7 @@ abstract class AppletGameShell extends GameApplet {
             ag.a(stackIn_101_0, stackIn_104_1, false, BrickOperator.field_s);
           }
           if (NotLoggedInMenu.field_r) {
-            aoa.b(true);
+            S2CPlayerProfilePacket.b(true);
           }
           if (null == sma.field_c) {
             sma.field_c = epa.d((byte) -91);

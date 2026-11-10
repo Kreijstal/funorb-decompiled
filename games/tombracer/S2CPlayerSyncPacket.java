@@ -67,7 +67,7 @@ final class S2CPlayerSyncPacket implements GamePacket {
                 param0.matchState.simulations[var4_intLifetime1].setFinished(84, true);
                 param0.matchState.simulations[var4_intLifetime1].tick = this.field_a[var4_intLifetime1];
                 if (var5 != 0) {
-                  param0.a(98, var4_intLifetime1);
+                  param0.announceCourseResult(98, var4_intLifetime1);
                 }
               }
             }

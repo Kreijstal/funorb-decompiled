@@ -13,8 +13,8 @@ final class MaskBlendOperator extends TextureOperator {
         int[] var20;
         int[] var21;
         var9 = TombRacer.field_G ? 1 : 0;
-        var3 = this.field_i.a((byte) 23, param1);
-        if (this.field_i.field_d) {
+        var3 = this.monochromeCache.getRow((byte) 23, param1);
+        if (this.monochromeCache.rowMissed) {
           var21 = this.getInputMonochromeRow(0, -39, param1);
           var20 = this.getInputMonochromeRow(1, -74, param1);
           var19 = this.getInputMonochromeRow(2, -7, param1);
@@ -63,11 +63,11 @@ final class MaskBlendOperator extends TextureOperator {
         if (param1 != -1) {
           MaskBlendOperator.d(86);
         }
-        var31 = this.field_h.a(param0, (byte) 113);
+        var31 = this.colourCache.getRow(param0, (byte) 113);
         var21 = var31;
         var20 = var21;
         var3 = var20;
-        if (this.field_h.field_f) {
+        if (this.colourCache.field_f) {
           var52 = this.getInputMonochromeRow(2, -104, param0);
           var50 = this.getInputColourRow(param0, 0, -1);
           var51 = this.getInputColourRow(param0, 1, param1 + 0);

@@ -167,7 +167,7 @@ final class dh {
               var32 = 65280 & var30;
               var33 = (var32 * var28 & 16711789) >>> 8 | (var28 * var31 & -16711744) >>> 8;
               var33 = var33 + var29 * 65793;
-              oea.a(var25, -8543, var26, var23, var27, var22, (var33 & 16711422) >> 1, var24);
+              RenderableNode.a(var25, -8543, var26, var23, var27, var22, (var33 & 16711422) >> 1, var24);
             } else {
               var28 = var54[var18];
               var29 = var54[var19];

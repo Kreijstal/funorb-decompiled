@@ -19,15 +19,15 @@ abstract class MazeComponent extends PrefabComponent {
 
     abstract boolean C(int param0);
 
-    final boolean z(int param0) {
+    final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
           return true;
         }
         return false;
     }
 
-    final void q(byte param0) {
-        super.q(param0);
+    final void applyDefaults(byte param0) {
+        super.applyDefaults(param0);
     }
 
     final boolean hasAngle(byte param0) {
@@ -306,7 +306,7 @@ abstract class MazeComponent extends PrefabComponent {
           bc.field_b.a(nra.field_c.field_G, 40, -23776, -40 + nra.field_c.field_t, 0);
           StatusEffect.field_g.a(dka.field_b.field_G, 30, -23776, 0, 0);
           C2SSubmitSettingsPacket.field_g.a(dka.field_b.field_G, dka.field_b.field_t - 72, -23776, 30, 0);
-          var2_int = 3 + fk.field_b;
+          var2_int = 3 + ColourRowCache.field_b;
           if (SafeZoneBehaviour.field_u.length < 2) {
             var2_int--;
           }
@@ -323,7 +323,7 @@ abstract class MazeComponent extends PrefabComponent {
           }
           qna.field_b.a(-5 + (C2SSubmitSettingsPacket.field_g.field_G - 5), var4, -23776, 5, 5);
           var5 = 7 + var4;
-          for (var6 = 0; fk.field_b + 4 > var6; var6++) {
+          for (var6 = 0; ColourRowCache.field_b + 4 > var6; var6++) {
             if ((var6 != 1 ||
               !(SafeZoneBehaviour.field_u.length < 2)) && (var6 != 3 ||
               !(MirrorMoverLocomotor.field_r <= 1))) {

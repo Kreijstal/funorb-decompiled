@@ -104,7 +104,7 @@ final class TrackMountComponent extends PrefabComponent {
         return true;
     }
 
-    final boolean z(int param0) {
+    final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
           this.hasSize(-48);
           return false;
@@ -119,8 +119,8 @@ final class TrackMountComponent extends PrefabComponent {
         return 7;
     }
 
-    final void q(byte param0) {
-        super.q(param0);
+    final void applyDefaults(byte param0) {
+        super.applyDefaults(param0);
         this.setSize(param0 + 250, 2097152, 2097152);
         this.setMounts((byte) 112, new ComponentMount[]{new ComponentMount(0, 0, 2097152, 0, 40)});
     }

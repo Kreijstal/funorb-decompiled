@@ -190,7 +190,7 @@ final class WindZoneBehaviour extends Behaviour {
                     break;
                 }
               }
-              var22 = ua.abs(-var11 + var21, 2);
+              var22 = S2CNextRoundPacket.abs(-var11 + var21, 2);
               if (var22 > 262144) {
                 if (this.field_q != 0 &&
                   this.field_q != 2) {

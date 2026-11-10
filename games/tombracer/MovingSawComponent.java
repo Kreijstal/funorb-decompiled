@@ -36,7 +36,7 @@ final class MovingSawComponent extends PathMoverComponent {
         super(param0, param1, param2, param3);
     }
 
-    final boolean z(int param0) {
+    final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
           return true;
         }
@@ -146,8 +146,8 @@ final class MovingSawComponent extends PathMoverComponent {
         return true;
     }
 
-    final void q(byte param0) {
-        super.q(param0);
+    final void applyDefaults(byte param0) {
+        super.applyDefaults(param0);
         this.setSize(66, 4194304, 4194304);
     }
 

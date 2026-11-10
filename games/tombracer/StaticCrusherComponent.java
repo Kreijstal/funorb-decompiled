@@ -25,7 +25,7 @@ final class StaticCrusherComponent extends PrefabComponent {
         super(param0, param1);
     }
 
-    final boolean z(int param0) {
+    final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
           return false;
         }
@@ -59,8 +59,8 @@ final class StaticCrusherComponent extends PrefabComponent {
         }
     }
 
-    final void q(byte param0) {
-        super.q(param0);
+    final void applyDefaults(byte param0) {
+        super.applyDefaults(param0);
         this.setSize(117, 4194304, 4194304);
     }
 

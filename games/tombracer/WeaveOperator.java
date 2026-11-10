@@ -83,12 +83,12 @@ final class WeaveOperator extends TextureOperator {
         int var9Lifetime1;
         int var10Lifetime1;
         var11 = TombRacer.field_G ? 1 : 0;
-        var13 = this.field_i.a((byte) 28, param1);
+        var13 = this.monochromeCache.getRow((byte) 28, param1);
         var12 = var13;
         var3 = var12;
         if (param0 != 1) {
           this.field_m = 74;
-          if (!this.field_i.field_d) {
+          if (!this.monochromeCache.rowMissed) {
             return var3;
           }
           for (var4 = 0; ns.textureWidth > var4; var4++) {
@@ -133,7 +133,7 @@ final class WeaveOperator extends TextureOperator {
           }
           return var3;
         }
-        if (!this.field_i.field_d) {
+        if (!this.monochromeCache.rowMissed) {
           return var3;
         }
         for (var4Lifetime1 = 0; ns.textureWidth > var4Lifetime1; var4Lifetime1++) {

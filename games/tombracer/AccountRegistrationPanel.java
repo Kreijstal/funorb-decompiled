@@ -176,7 +176,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         this.field_E.field_q = MatchOverlay.field_f;
         this.field_C.field_q = RevolverItemComponent.field_G;
         this.field_I.field_q = dta.field_e;
-        this.field_D.field_q = vf.field_e;
+        this.field_D.field_q = RenderLayer.field_e;
         this.field_G.a(-13861, new tf(this.field_G));
         this.field_z.a(-13861, new EmailSyntaxValidator(this.field_z));
         this.field_J.a(-13861, new mn(this.field_J, this.field_z));
@@ -381,7 +381,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
           if (BevelOperator.field_p == var4) {
             return false;
           }
-          if (fk.field_d != var4) {
+          if (ColourRowCache.field_d != var4) {
             return true;
           }
           return false;

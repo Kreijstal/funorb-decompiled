@@ -42,7 +42,7 @@ final class LegacySwitchModel extends TrapModel {
         }
     }
 
-    final int k(byte param0) {
+    final int getSceneLayer(byte param0) {
         if (param0 != -99) {
           field_m = (String) null;
           if (!this.body.isFallingIntoPit(-1)) {

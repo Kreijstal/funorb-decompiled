@@ -69,7 +69,7 @@ abstract class kma implements nua {
         if (param0 != -4666) {
           this.a(82);
           if (this.isEmpty(true)) {
-            return fk.field_d;
+            return ColourRowCache.field_d;
           }
           if (!(bva.currentTimeMillis((byte) -107) >= this.field_b + 350L)) {
             return BevelOperator.field_p;
@@ -77,7 +77,7 @@ abstract class kma implements nua {
           return this.d(-1891);
         }
         if (this.isEmpty(true)) {
-          return fk.field_d;
+          return ColourRowCache.field_d;
         }
         if (!(bva.currentTimeMillis((byte) -107) >= this.field_b + 350L)) {
           return BevelOperator.field_p;

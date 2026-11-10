@@ -73,9 +73,9 @@ final class FlipOperator extends TextureOperator {
         if (param0 != 1) {
           this.getColourRow(52, -14);
         }
-        var7 = this.field_i.a((byte) -114, param1);
+        var7 = this.monochromeCache.getRow((byte) -114, param1);
         var3 = var7;
-        if (this.field_i.field_d) {
+        if (this.monochromeCache.rowMissed) {
           stackIn_5_1 = 0;
           stackIn_5_2 = param0 ^ -17;
           if (this.field_n) {
@@ -121,11 +121,11 @@ final class FlipOperator extends TextureOperator {
         if (param1 != -1) {
           shortMonthNames = (String[]) null;
         }
-        var21 = this.field_h.a(param0, (byte) 120);
+        var21 = this.colourCache.getRow(param0, (byte) 120);
         var16 = var21;
         var13 = var16;
         var3 = var13;
-        if (this.field_h.field_f) {
+        if (this.colourCache.field_f) {
           if (!this.field_n) {
             stackIn_6_1 = param0;
           } else {

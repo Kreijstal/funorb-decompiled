@@ -2,26 +2,26 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class TextureOperator extends IntrusiveNode {
-    fk field_h;
+    ColourRowCache colourCache;
     boolean monochrome;
     static int field_k;
-    mv field_i;
+    MonochromeRowCache monochromeCache;
     static MessageDialog field_l;
-    int field_f;
+    int cacheRowCount;
     TextureOperator[] inputs;
 
-    void b(int param0, int param1, int param2) {
-        int var4 = ~this.field_f == param2 ? param1 : this.field_f;
+    void createRowCache(int param0, int param1, int param2) {
+        int var4 = ~this.cacheRowCount == param2 ? param1 : this.cacheRowCount;
         if (!this.monochrome) {
-          this.field_h = new fk(var4, param1, param0);
+          this.colourCache = new ColourRowCache(var4, param1, param0);
           return;
         }
-        this.field_i = new mv(var4, param1, param0);
+        this.monochromeCache = new MonochromeRowCache(var4, param1, param0);
     }
 
     final int[] getInputMonochromeRow(int param0, int param1, int param2) {
         if (param1 > -3) {
-          this.field_f = 54;
+          this.cacheRowCount = 54;
           if (!this.inputs[param0].monochrome) {
             return this.inputs[param0].getColourRow(param2, -1)[0];
           }
@@ -68,7 +68,7 @@ abstract class TextureOperator extends IntrusiveNode {
 
     void b(byte param0) {
         if (param0 != 116) {
-          this.c((byte) 122);
+          this.getTextureId((byte) 122);
         }
     }
 
@@ -79,9 +79,9 @@ abstract class TextureOperator extends IntrusiveNode {
         throw new IllegalStateException("This operation does not have a colour output");
     }
 
-    int a(int param0) {
+    int getSpriteId(int param0) {
         if (param0 <= 96) {
-          this.field_h = (fk) null;
+          this.colourCache = (ColourRowCache) null;
           return -1;
         }
         return -1;
@@ -95,18 +95,18 @@ abstract class TextureOperator extends IntrusiveNode {
         }
     }
 
-    void b(int param0) {
+    void releaseRowCache(int param0) {
         if (this.monochrome) {
-          this.field_i.a(false);
-          this.field_i = null;
+          this.monochromeCache.release(false);
+          this.monochromeCache = null;
           if (param0 >= -32) {
             this.b((byte) 31);
             return;
           }
           return;
         }
-        this.field_h.a(2);
-        this.field_h = null;
+        this.colourCache.release(2);
+        this.colourCache = null;
         if (param0 >= -32) {
           this.b((byte) 31);
           return;
@@ -160,7 +160,7 @@ abstract class TextureOperator extends IntrusiveNode {
         }
     }
 
-    int c(byte param0) {
+    int getTextureId(byte param0) {
         if (param0 != -117) {
           this.b((byte) -6);
           return -1;

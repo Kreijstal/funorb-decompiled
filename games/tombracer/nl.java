@@ -132,7 +132,7 @@ final class nl {
         if (param1 != 50) {
           field_f = (IntrusiveDeque) null;
         }
-        return uw.field_g[param0];
+        return RenderScene.field_g[param0];
     }
 
     nl(String param0) {

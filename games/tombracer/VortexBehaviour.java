@@ -96,7 +96,7 @@ final class VortexBehaviour extends Behaviour {
                   var6 = -var6;
                 }
                 if (this.field_q &&
-                  ua.abs(var6, param0 ^ -5442) > var25 << 16) {
+                  S2CNextRoundPacket.abs(var6, param0 ^ -5442) > var25 << 16) {
                   stackIn_34_0 = var20;
                   stackIn_34_1 = param0 - 5313;
                   stackIn_34_2 = false;

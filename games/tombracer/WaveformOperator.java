@@ -163,7 +163,7 @@ final class WaveformOperator extends TextureOperator {
         int[] var15Lifetime1;
         int[] var15Lifetime1Lifetime1;
         var11 = TombRacer.field_G ? 1 : 0;
-        var15 = this.field_i.a((byte) -114, param1);
+        var15 = this.monochromeCache.getRow((byte) -114, param1);
         var14 = var15;
         var13 = var14;
         var3 = var13;
@@ -171,7 +171,7 @@ final class WaveformOperator extends TextureOperator {
           var12 = (float[]) null;
           WaveformOperator.a(30, 114, 96, 47, (float[]) null, 0.4474947452545166f, -17, -103, (float[]) null, (byte) 32, -65);
         }
-        if (this.field_i.field_d) {
+        if (this.monochromeCache.rowMissed) {
           var4 = sj.textureRowCoords[param1];
           var5 = var4 - 2048 >> 1;
           for (var6 = 0; var6 < ns.textureWidth; var6++) {

@@ -177,7 +177,7 @@ final class rg extends SingleChildWidget {
           Effect.field_h[6] = new String[]{apa.field_b, pna.field_k, bq.field_e};
           IntrusiveDeque.field_d[7] = new String[]{TouchSwitchBehaviour.field_q, MatchScoringObserver.field_d};
           IntrusiveDeque.field_d[8] = new String[]{uv.field_u, jd.field_m, hoa.field_n};
-          Effect.field_h[7] = new String[]{km.field_n, ld.field_d};
+          Effect.field_h[7] = new String[]{ProceduralTexture.field_n, ld.field_d};
           IntrusiveDeque.field_d[9] = new String[]{td.field_n, nea.field_b, gga.field_L};
           Effect.field_h[8] = new String[]{ThresholdOperator.field_o, StaticCrusherComponent.field_G, ClientException.field_e};
           Effect.field_h[9] = new String[]{qna.field_a, MenuScreen.field_h, PrefabComponent.field_D};
@@ -229,7 +229,7 @@ final class rg extends SingleChildWidget {
         Effect.field_h[6] = new String[]{apa.field_b, pna.field_k, bq.field_e};
         IntrusiveDeque.field_d[7] = new String[]{TouchSwitchBehaviour.field_q, MatchScoringObserver.field_d};
         IntrusiveDeque.field_d[8] = new String[]{uv.field_u, jd.field_m, hoa.field_n};
-        Effect.field_h[7] = new String[]{km.field_n, ld.field_d};
+        Effect.field_h[7] = new String[]{ProceduralTexture.field_n, ld.field_d};
         IntrusiveDeque.field_d[9] = new String[]{td.field_n, nea.field_b, gga.field_L};
         Effect.field_h[8] = new String[]{ThresholdOperator.field_o, StaticCrusherComponent.field_G, ClientException.field_e};
         Effect.field_h[9] = new String[]{qna.field_a, MenuScreen.field_h, PrefabComponent.field_D};

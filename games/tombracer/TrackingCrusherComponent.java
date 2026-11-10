@@ -6,7 +6,7 @@ final class TrackingCrusherComponent extends PrefabComponent {
     static int field_F;
     static boolean field_G;
 
-    final boolean z(int param0) {
+    final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
           field_F = 126;
           return false;
@@ -33,8 +33,8 @@ final class TrackingCrusherComponent extends PrefabComponent {
         }
     }
 
-    final void q(byte param0) {
-        super.q(param0);
+    final void applyDefaults(byte param0) {
+        super.applyDefaults(param0);
         this.setSize(param0 ^ 1, 4194304, 4194304);
     }
 

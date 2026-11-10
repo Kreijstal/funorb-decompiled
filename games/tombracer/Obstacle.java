@@ -70,7 +70,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
         }
     }
 
-    final void a(uw param0, byte param1) {
+    final void a(RenderScene param0, byte param1) {
         int var3_int = 0;
         TrapModel var4 = null;
         int var5 = 0;
@@ -83,11 +83,11 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
         try {
           var3_int = -41 % ((param1 - 62) / 37);
           if (this.r(24269)) {
-            param0.a(9, (Renderable) (this), (byte) -33);
+            param0.removeFromLayer(9, (Renderable) (this), (byte) -33);
           }
           var4 = (TrapModel) (this.field_k.first(-80));
           while (var4 != null) {
-            var4.a(param0, 111);
+            var4.removeFromScene(param0, 111);
             var4 = (TrapModel) (this.field_k.next(124));
           }
           return;
@@ -135,7 +135,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
         }
     }
 
-    public final void f(int param0) {
+    public final void updateAnimation(int param0) {
         if (param0 != -4366) {
           Projectile var3 = (Projectile) null;
           this.applyProjectileEffect((Effect) null, (Projectile) null, 117);
@@ -568,7 +568,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
           this.field_p = 88;
         }
         while (var2 != null) {
-          var2.d(-1);
+          var2.tick(-1);
           var2 = (TrapModel) (this.field_k.next(124));
         }
     }
@@ -581,7 +581,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
         return false;
     }
 
-    final void a(byte param0, uw param1) {
+    final void a(byte param0, RenderScene param1) {
         int var4 = 0;
         TrapModel var5 = null;
         RuntimeException stackIn_12_0 = null;
@@ -592,14 +592,14 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           if (this.r(24269)) {
-            param1.a((byte) -106, 9, (Renderable) (this));
+            param1.addToLayer((byte) -106, 9, (Renderable) (this));
           }
           if (param0 <= 6) {
             return;
           }
           var5 = (TrapModel) (this.field_k.first(-80));
           while (var5 != null) {
-            var5.b(0, param1);
+            var5.addToScene(0, param1);
             var5 = (TrapModel) (this.field_k.next(112));
           }
           return;

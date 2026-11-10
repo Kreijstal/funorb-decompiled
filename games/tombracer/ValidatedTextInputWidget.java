@@ -53,9 +53,9 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
             ValidatedTextInputWidget.pumpAudio(117);
           }
           gg.field_b.serviceOutput();
-          bga.field_b = bga.field_b - 1;
-          if (0 == bga.field_b) {
-            bga.field_b = 200;
+          S2CProfileUpdatePacket.field_b = S2CProfileUpdatePacket.field_b - 1;
+          if (0 == S2CProfileUpdatePacket.field_b) {
+            S2CProfileUpdatePacket.field_b = 200;
             var1 = (vb) (DivisionMazeGenerator.field_e.first(-80));
             while (var1 != null) {
               if (!var1.field_h.isLinked((byte) -101)) {

@@ -209,7 +209,7 @@ final class ila {
               stackIn_7_0 = -82;
               return stackIn_7_0;
             }
-            if (RotaterMountComponent.field_G == km.field_p) {
+            if (RotaterMountComponent.field_G == ProceduralTexture.field_p) {
               if (!param5) {
                 fd.field_d = via.a(param1, 64, false, param4);
               } else {
@@ -220,29 +220,29 @@ final class ila {
               ql.field_k.writeByte(14, 0);
               ql.field_k.writeByte(fd.field_d.a((byte) 113).field_d, 0);
               bl.a(-1, -1);
-              km.field_p = bva.field_b;
+              ProceduralTexture.field_p = bva.field_b;
             }
-            if (km.field_p == bva.field_b &&
+            if (ProceduralTexture.field_p == bva.field_b &&
               LegacyRidgedWaterNoise.a(1, -1)) {
               var6_int = WeaveOperator.field_q.readUnsignedByte(255);
               if (var6_int == 0) {
-                km.field_p = ContextMenu.field_yb;
+                ProceduralTexture.field_p = ContextMenu.field_yb;
               } else {
-                km.field_p = bi.field_a;
+                ProceduralTexture.field_p = bi.field_a;
                 MembersUpsellMenu.field_z = var6_int;
                 uca.field_d = -1;
               }
               WeaveOperator.field_q.position = 0;
             }
-            if (ContextMenu.field_yb == km.field_p &&
+            if (ContextMenu.field_yb == ProceduralTexture.field_p &&
               LegacyRidgedWaterNoise.a(8, -1)) {
               PathMoverComponent.field_L = WeaveOperator.field_q.readLong(290646880);
               WeaveOperator.field_q.position = 0;
               RoomCompletedScreen.a((byte) 121, param5, param3, fd.field_d, param0);
-              km.field_p = TestModel.field_o;
+              ProceduralTexture.field_p = TestModel.field_o;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (km.field_p == TestModel.field_o &&
+            if (ProceduralTexture.field_p == TestModel.field_o &&
               LegacyRidgedWaterNoise.a(1, param2 - 51)) {
               var6_intLifetime1 = WeaveOperator.field_q.readUnsignedByte(param2 + 205);
               WeaveOperator.field_q.position = 0;
@@ -251,7 +251,7 @@ final class ila {
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (8 != var6_intLifetime1) {
-                  km.field_p = bi.field_a;
+                  ProceduralTexture.field_p = bi.field_a;
                   uca.field_d = -1;
                   decompiledFrameRemainder0 = false;
                 }
@@ -263,11 +263,11 @@ final class ila {
                 }
               }
               if (decompiledFrameRemainder0) {
-                km.field_p = HardwareGraphicsToolkit.field_w;
+                ProceduralTexture.field_p = HardwareGraphicsToolkit.field_w;
                 uca.field_d = -1;
               }
             }
-            if (HardwareGraphicsToolkit.field_w == km.field_p &&
+            if (HardwareGraphicsToolkit.field_w == ProceduralTexture.field_p &&
               cla.g(0)) {
               tr.field_g = WeaveOperator.field_q.readLong(param2 + 290646830);
               gj.field_q = param1;
@@ -306,7 +306,7 @@ final class ila {
               var11 = (CharSequence) ((Object) MenuEntry.field_k);
               tia.field_b = jd.normalizeDisplayName(1, var11);
               lsa.field_a = WeaveOperator.field_q.readUnsignedByte(255);
-              km.field_p = uga.field_n;
+              ProceduralTexture.field_p = uga.field_n;
               if (fd.field_d.a((byte) 113) == BlockModel.field_s) {
                 vw.field_a.a(di.a(120), param2 ^ 55);
               } else {
@@ -345,7 +345,7 @@ final class ila {
               stackIn_81_0 = MembersUpsellMenu.field_z;
               return stackIn_81_0;
             }
-            if (bi.field_a == km.field_p &&
+            if (bi.field_a == ProceduralTexture.field_p &&
               cla.g(0)) {
               dea.a(60);
               if (MembersUpsellMenu.field_z == 7 &&

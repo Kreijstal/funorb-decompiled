@@ -67,34 +67,34 @@ final class qpa implements GamePacket {
           boolean decompiledFrameRemainder0 = true;
           if (param2 != 0) {
             if (1 == param2) {
-              uw.field_g[param2] = (MenuScreen) ((Object) new RemovedFromGameMenu(param2, param6, param4, param0, param3, param1));
+              RenderScene.field_g[param2] = (MenuScreen) ((Object) new RemovedFromGameMenu(param2, param6, param4, param0, param3, param1));
             } else {
               if (param2 != 2) {
                 if (param2 == 3) {
-                  uw.field_g[param2] = (MenuScreen) ((Object) new pk(param2, param6, param4, param0, param3, param1));
+                  RenderScene.field_g[param2] = (MenuScreen) ((Object) new pk(param2, param6, param4, param0, param3, param1));
                 } else {
                   if (4 != param2 &&
                     param2 != 12) {
                     if (param2 == 5) {
-                      uw.field_g[param2] = (MenuScreen) ((Object) new qp(param2, param6, param4, param0, param3, param1));
+                      RenderScene.field_g[param2] = (MenuScreen) ((Object) new qp(param2, param6, param4, param0, param3, param1));
                     } else {
                       if (param2 == 6) {
-                        uw.field_g[param2] = (MenuScreen) ((Object) new vba(param2, param6, param4, param0, param3, param1));
+                        RenderScene.field_g[param2] = (MenuScreen) ((Object) new vba(param2, param6, param4, param0, param3, param1));
                       } else {
                         if (param2 == 7) {
-                          uw.field_g[param2] = (MenuScreen) ((Object) new DrawOfferMenu(param2, param6, param4, param0, param3, param1));
+                          RenderScene.field_g[param2] = (MenuScreen) ((Object) new DrawOfferMenu(param2, param6, param4, param0, param3, param1));
                         } else {
                           if (param2 == 8) {
-                            uw.field_g[param2] = (MenuScreen) ((Object) new jn(param2, param6, param4, param0, param3, param1));
+                            RenderScene.field_g[param2] = (MenuScreen) ((Object) new jn(param2, param6, param4, param0, param3, param1));
                           } else {
                             if (param2 == 9) {
-                              uw.field_g[param2] = (MenuScreen) ((Object) new MembersUpsellMenu(param2, param6, param4, param0, param3, param1));
+                              RenderScene.field_g[param2] = (MenuScreen) ((Object) new MembersUpsellMenu(param2, param6, param4, param0, param3, param1));
                             } else {
                               if (param2 == 10) {
-                                uw.field_g[param2] = (MenuScreen) ((Object) new NotLoggedInMenu(param2, param6, param4, param0, param3, param1));
+                                RenderScene.field_g[param2] = (MenuScreen) ((Object) new NotLoggedInMenu(param2, param6, param4, param0, param3, param1));
                               } else {
                                 if ((param2 == 11)) {
-                                  uw.field_g[param2] = (MenuScreen) ((Object) new MultiplayerLoginMenu(param2, param6, param4, param0, param3, param1));
+                                  RenderScene.field_g[param2] = (MenuScreen) ((Object) new MultiplayerLoginMenu(param2, param6, param4, param0, param3, param1));
                                 }
                               }
                             }
@@ -105,17 +105,17 @@ final class qpa implements GamePacket {
                     decompiledFrameRemainder0 = false;
                   }
                   else {
-                    uw.field_g[param2] = (MenuScreen) ((Object) new epa(param2, param6, param4, param0, param3, param1));
+                    RenderScene.field_g[param2] = (MenuScreen) ((Object) new epa(param2, param6, param4, param0, param3, param1));
                   }
                 }
               } else {
-                uw.field_g[param2] = (MenuScreen) ((Object) new jn(param2, param6, param4, param0, param3, param1));
+                RenderScene.field_g[param2] = (MenuScreen) ((Object) new jn(param2, param6, param4, param0, param3, param1));
               }
             }
           } else {
-            uw.field_g[param2] = (MenuScreen) ((Object) new sv(param2, param6, param4, param0, param3, param1));
+            RenderScene.field_g[param2] = (MenuScreen) ((Object) new sv(param2, param6, param4, param0, param3, param1));
           }
-          uw.field_g[param2].field_p = pm.field_h[param2];
+          RenderScene.field_g[param2].field_p = pm.field_h[param2];
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

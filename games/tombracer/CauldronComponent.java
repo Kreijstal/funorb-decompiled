@@ -55,7 +55,7 @@ final class CauldronComponent extends SwitchComponent {
         }
     }
 
-    final boolean z(int param0) {
+    final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
           field_J = (u[]) null;
           return false;
@@ -154,8 +154,8 @@ final class CauldronComponent extends SwitchComponent {
         return true;
     }
 
-    final void q(byte param0) {
-        super.q(param0);
+    final void applyDefaults(byte param0) {
+        super.applyDefaults(param0);
         this.setSize(-117, 4194304, 4194304);
     }
 

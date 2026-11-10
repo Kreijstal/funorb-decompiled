@@ -73,7 +73,7 @@ final class Corpse extends IntrusiveNode implements Renderable {
         }
     }
 
-    public final void f(int param0) {
+    public final void updateAnimation(int param0) {
         if (param0 != -4366) {
           this.field_g = -95;
         }

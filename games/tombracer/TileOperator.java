@@ -363,11 +363,11 @@ final class TileOperator extends TextureOperator {
         int[][] var18;
         int[][] var19;
         var16 = TombRacer.field_G ? 1 : 0;
-        var19 = this.field_h.a(param0, (byte) 125);
+        var19 = this.colourCache.getRow(param0, (byte) 125);
         var18 = var19;
         var17 = var18;
         var3 = var17;
-        if (this.field_h.field_f) {
+        if (this.colourCache.field_f) {
           var5 = ns.textureWidth / this.field_m;
           var6 = ArchiveNetworkClient.textureHeight / this.field_o;
           if (var6 <= 0) {
@@ -414,8 +414,8 @@ final class TileOperator extends TextureOperator {
         if (param0 != 1) {
           TileOperator.releaseStatics((byte) -85);
         }
-        var3 = this.field_i.a((byte) 78, param1);
-        if (this.field_i.field_d) {
+        var3 = this.monochromeCache.getRow((byte) 78, param1);
+        if (this.monochromeCache.rowMissed) {
           var5 = ns.textureWidth / this.field_m;
           var6 = ArchiveNetworkClient.textureHeight / this.field_o;
           if (var6 <= 0) {

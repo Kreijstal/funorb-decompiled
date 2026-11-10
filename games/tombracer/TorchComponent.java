@@ -28,7 +28,7 @@ final class TorchComponent extends PrefabComponent {
           var6.b(1, (byte) 77);
           var4.a((TrapPart) null, (byte) 124, var6);
           var7 = (LightSourceModel) (var5.createModel(5, 88));
-          var7.a(64, 119);
+          var7.setElevationOffset(64, 119);
           var7.a(true, 16633231);
           var7.b(1, 96);
           var7.a(0, param1, 1, true);
@@ -75,12 +75,12 @@ final class TorchComponent extends PrefabComponent {
         return false;
     }
 
-    final void q(byte param0) {
-        super.q(param0);
+    final void applyDefaults(byte param0) {
+        super.applyDefaults(param0);
         this.setSize(param0 + 29, 2097152, 2097152);
     }
 
-    final boolean z(int param0) {
+    final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
           BitPacketBuffer var3 = (BitPacketBuffer) null;
           this.encode(true, (BitPacketBuffer) null);

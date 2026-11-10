@@ -143,23 +143,23 @@ final class vu extends vw {
                 stackIn_38_2 = TombRacer.field_F;
               }
               stackIn_37_0.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(stackIn_37_1, stackIn_38_2, new String[]{hw.field_a.field_r});
-              MessageOverlay.field_t.field_r = vf.field_h;
+              MessageOverlay.field_t.field_r = RenderLayer.field_h;
               bc.field_b.field_X = true;
               TouchSwitchBehaviour.field_s = true;
               if (null != PlatformModel.field_A) {
                 TouchSwitchBehaviour.field_s = false;
                 if (null == tba.field_m) {
-                  tba.field_m = new byte[fk.field_b];
-                  sda.field_f = new boolean[fk.field_b];
+                  tba.field_m = new byte[ColourRowCache.field_b];
+                  sda.field_f = new boolean[ColourRowCache.field_b];
                 }
                 mm.field_g = false;
                 var13 = 0;
                 var9_intLifetime1 = var13;
-                while (fk.field_b > var13) {
+                while (ColourRowCache.field_b > var13) {
                   sda.field_f[var13] = false;
                   var13++;
                 }
-                cja.a(param0 + 108, fk.field_b, WaveformOperator.field_n, 0, -1, -1, -1, true);
+                cja.a(param0 + 108, ColourRowCache.field_b, WaveformOperator.field_n, 0, -1, -1, -1, true);
                 if (!(ld.field_e < 2) &&
                   VerticalScrollbar.field_tb[12]) {
                   TouchSwitchBehaviour.field_s = true;
@@ -176,7 +176,7 @@ final class vu extends vw {
                     var11Lifetime1 = var9;
                     var9 = var11Lifetime1;
                   }
-                  for (var10Lifetime1 = 0; var10Lifetime1 < fk.field_b; var10Lifetime1++) {
+                  for (var10Lifetime1 = 0; var10Lifetime1 < ColourRowCache.field_b; var10Lifetime1++) {
                     if (sda.field_f[var10Lifetime1]) {
                       var11_ref = "<col=A00000>" + kma.field_e[var10Lifetime1] + "</col>";
                       var9 = var11_ref;

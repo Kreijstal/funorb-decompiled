@@ -53,9 +53,9 @@ final class WhiteLightShooterComponent extends ShooterComponent {
         return true;
     }
 
-    final boolean z(int param0) {
+    final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
-          this.q((byte) -23);
+          this.applyDefaults((byte) -23);
         }
         return false;
     }
@@ -110,8 +110,8 @@ final class WhiteLightShooterComponent extends ShooterComponent {
         return 7;
     }
 
-    final void q(byte param0) {
-        super.q(param0);
+    final void applyDefaults(byte param0) {
+        super.applyDefaults(param0);
         this.setSize(-88, 2097152, 2097152);
     }
 

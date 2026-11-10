@@ -332,7 +332,7 @@ final class CrusherModel extends TrapModel {
         ContextMenu.field_Eb = 0;
     }
 
-    final void d(int param0) {
+    final void tick(int param0) {
         int var2;
         int var3;
         int var6;
@@ -361,7 +361,7 @@ final class CrusherModel extends TrapModel {
         var17 = null;
         var16 = null;
         var7 = TombRacer.field_G ? 1 : 0;
-        super.d(param0);
+        super.tick(param0);
         if (null == this.field_v) {
           return;
         }
@@ -380,9 +380,9 @@ final class CrusherModel extends TrapModel {
             this.field_r = this.field_n - this.field_n * this.field_v.getPhaseTicks((byte) -107) / this.field_v.getWindUpTicks((byte) 90);
             if (this.field_r == 0 &&
               var2 != 0) {
-              this.a(42).getParticleEffects(false).a(0, this.getRenderY((byte) 92), 0, 0, 0, this.getRenderX((byte) 52));
+              this.getRoom(42).getParticleEffects(false).a(0, this.getRenderY((byte) 92), 0, 0, 0, this.getRenderX((byte) 52));
             }
-            var13 = (w) (this.a(param0 + 44).field_G);
+            var13 = (w) (this.getRoom(param0 + 44).field_G);
             if (var13 == null) {
               return;
             }
@@ -428,9 +428,9 @@ final class CrusherModel extends TrapModel {
             this.field_r = 0;
             if (this.field_r == 0 &&
               var2 != 0) {
-              this.a(42).getParticleEffects(false).a(0, this.getRenderY((byte) 92), 0, 0, 0, this.getRenderX((byte) 52));
+              this.getRoom(42).getParticleEffects(false).a(0, this.getRenderY((byte) 92), 0, 0, 0, this.getRenderX((byte) 52));
             }
-            var9 = (w) (this.a(param0 + 44).field_G);
+            var9 = (w) (this.getRoom(param0 + 44).field_G);
             if (var9 == null) {
               return;
             }
@@ -476,9 +476,9 @@ final class CrusherModel extends TrapModel {
             this.field_r = this.field_n * this.field_v.getPhaseTicks((byte) -120) / this.field_v.getRetractTicks(false);
             if (this.field_r == 0 &&
               var2 != 0) {
-              this.a(42).getParticleEffects(false).a(0, this.getRenderY((byte) 92), 0, 0, 0, this.getRenderX((byte) 52));
+              this.getRoom(42).getParticleEffects(false).a(0, this.getRenderY((byte) 92), 0, 0, 0, this.getRenderX((byte) 52));
             }
-            var11 = (w) (this.a(param0 + 44).field_G);
+            var11 = (w) (this.getRoom(param0 + 44).field_G);
             if (var11 == null) {
               return;
             }
@@ -522,7 +522,7 @@ final class CrusherModel extends TrapModel {
         }
         if (this.field_r == 0) {
           if (var2 == 0) {
-            var15 = (w) (this.a(param0 + 44).field_G);
+            var15 = (w) (this.getRoom(param0 + 44).field_G);
             if (var15 == null) {
               return;
             }
@@ -563,9 +563,9 @@ final class CrusherModel extends TrapModel {
             }
             return;
           }
-          this.a(42).getParticleEffects(false).a(0, this.getRenderY((byte) 92), 0, 0, 0, this.getRenderX((byte) 52));
+          this.getRoom(42).getParticleEffects(false).a(0, this.getRenderY((byte) 92), 0, 0, 0, this.getRenderX((byte) 52));
         }
-        var17_ref = (w) (this.a(param0 + 44).field_G);
+        var17_ref = (w) (this.getRoom(param0 + 44).field_G);
         if (var17_ref == null) {
           return;
         }

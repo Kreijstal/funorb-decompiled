@@ -143,12 +143,12 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
         return this.field_p;
     }
 
-    final void a(uw param0, int param1) {
+    final void a(RenderScene param0, int param1) {
         try {
           if (param1 != 5465) {
             this.field_m = -24;
           }
-          param0.a((byte) 111, 6, (Renderable) (this));
+          param0.addToLayer((byte) 111, 6, (Renderable) (this));
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "mda.AA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -521,7 +521,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
         if (param0 == 110) {
           return io.centredBoxesOverlap(param4, this.field_j, (byte) -70, param3, this.field_p, param1, this.field_k, this.field_k, param2);
         }
-        this.f(-11);
+        this.updateAnimation(-11);
         return io.centredBoxesOverlap(param4, this.field_j, (byte) -70, param3, this.field_p, param1, this.field_k, this.field_k, param2);
     }
 
@@ -811,7 +811,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
         }
     }
 
-    public final void f(int param0) {
+    public final void updateAnimation(int param0) {
         if (param0 != -4366) {
           this.kind = 113;
         }

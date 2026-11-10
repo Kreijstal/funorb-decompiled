@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ua implements GamePacket {
+final class S2CNextRoundPacket implements GamePacket {
     static ResourceArchive field_a;
 
     public final void decode(BitPacketBuffer param0, byte param1) {
         try {
           if (param1 != -19) {
             MatchScreen var4 = (MatchScreen) null;
-            this.a(113, (MatchProtocol) null, (MatchScreen) null);
+            this.apply(113, (MatchProtocol) null, (MatchScreen) null);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ua.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -26,12 +26,12 @@ final class ua implements GamePacket {
         }
     }
 
-    final void a(int param0, MatchProtocol param1, MatchScreen param2) {
+    final void apply(int param0, MatchProtocol param1, MatchScreen param2) {
         try {
-          param2.m((byte) -116);
+          param2.startNextRound((byte) -116);
           if (param0 != 2) {
             String var5 = (String) null;
-            ua.describeGameJoinStatus(-112, (String) null, -64);
+            S2CNextRoundPacket.describeGameJoinStatus(-112, (String) null, -64);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ua.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -80,7 +80,7 @@ final class ua implements GamePacket {
             return stackIn_9_0;
           }
           if (param3) {
-            ua.releaseStatics(-63);
+            S2CNextRoundPacket.releaseStatics(-63);
           }
           throw new IllegalArgumentException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

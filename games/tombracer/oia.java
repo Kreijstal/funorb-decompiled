@@ -117,7 +117,7 @@ final class oia implements gs {
         }
     }
 
-    public final void f(int param0) {
+    public final void updateAnimation(int param0) {
         if (param0 != -4366) {
           this.getRenderX((byte) -5);
         }

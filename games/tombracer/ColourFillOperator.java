@@ -67,9 +67,9 @@ final class ColourFillOperator extends TextureOperator {
         int[] var6 = null;
         int var7 = 0;
         int var8 = TombRacer.field_G ? 1 : 0;
-        int[][] var9 = this.field_h.a(param0, (byte) 100);
+        int[][] var9 = this.colourCache.getRow(param0, (byte) 100);
         int[][] var3 = var9;
-        if (this.field_h.field_f) {
+        if (this.colourCache.field_f) {
           var4 = var9[0];
           var5 = var9[1];
           var6 = var9[2];

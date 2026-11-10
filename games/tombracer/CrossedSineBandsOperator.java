@@ -44,12 +44,12 @@ final class CrossedSineBandsOperator extends TextureOperator {
         int var10Lifetime1;
         int var10Lifetime2;
         var11 = TombRacer.field_G ? 1 : 0;
-        var12 = this.field_i.a((byte) -109, param1);
+        var12 = this.monochromeCache.getRow((byte) -109, param1);
         var3 = var12;
         if (param0 != 1) {
           this.field_p = 94;
         }
-        if (this.field_i.field_d) {
+        if (this.monochromeCache.rowMissed) {
           var4 = sj.textureRowCoords[param1] - 2048;
           for (var5 = 0; var5 < ns.textureWidth; var5++) {
             var6 = -2048 + ht.textureColumnCoords[var5];

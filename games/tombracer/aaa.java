@@ -52,12 +52,12 @@ final class aaa {
           if (!this.field_g) {
             this.field_f = new rt[16];
             for (var2_int = 0; 16 > var2_int; var2_int++) {
-              var23 = ua.a(hna.field_e, 32768, 32768 * var2_int, false);
+              var23 = S2CNextRoundPacket.a(hna.field_e, 32768, 32768 * var2_int, false);
               this.field_f[var2_int] = new rt(param0, 3553, 6410, 128, 128, true, var23, 6410, false);
             }
             this.field_i = new rt[16];
             for (var2_intLifetime1 = 0; var2_intLifetime1 < 16; var2_intLifetime1++) {
-              var24 = ua.a(TreasureValuesOverlay.field_l, 32768, var2_intLifetime1 * 32768, false);
+              var24 = S2CNextRoundPacket.a(TreasureValuesOverlay.field_l, 32768, var2_intLifetime1 * 32768, false);
               this.field_i[var2_intLifetime1] = new rt(param0, 3553, 6410, 128, 128, true, var24, 6410, false);
             }
             return;

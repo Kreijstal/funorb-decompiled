@@ -140,7 +140,7 @@ final class tha extends WidgetContainer implements ButtonListener {
 
     public tha() {
         super(0, 0, 476, 225, (isa) null);
-        this.field_z = new FocusableWidget(foa.field_a, (WidgetListener) null);
+        this.field_z = new FocusableWidget(S2CRoundDeadlinePacket.field_a, (WidgetListener) null);
         this.field_w = new FocusableWidget(HardwareOpenGlToolkit.field_gd, (WidgetListener) null);
         this.field_x = new FocusableWidget(fca.field_d, (WidgetListener) null);
         td var1 = new td();
@@ -193,7 +193,7 @@ final class tha extends WidgetContainer implements ButtonListener {
           if (this.field_x != param2) {
             return;
           }
-          aoa.b(true);
+          S2CPlayerProfilePacket.b(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -109,7 +109,7 @@ final class ParticleEffects {
           var8 = var7 * MouseInputHandler.sin2048((byte) 112, var6 >> 2);
           var9 = bua.cos2048(0, var6 >> 2) * var7;
           var10 = 0;
-          if (ua.abs(var4_int, -124) > ua.abs(var5, -127)) {
+          if (S2CNextRoundPacket.abs(var4_int, -124) > S2CNextRoundPacket.abs(var5, -127)) {
             if (var8 != 0) {
               var10 = var4_int / var8;
             }

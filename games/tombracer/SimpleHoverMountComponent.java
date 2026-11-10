@@ -118,8 +118,8 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
         return false;
     }
 
-    final void q(byte param0) {
-        super.q(param0);
+    final void applyDefaults(byte param0) {
+        super.applyDefaults(param0);
         this.setSize(72, 2097152, 2097152);
         this.setMounts((byte) 113, new ComponentMount[]{new ComponentMount(0, 0, 2097152, 0, 40)});
     }
@@ -329,7 +329,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
         }
     }
 
-    final boolean z(int param0) {
+    final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
           field_M = true;
           return false;

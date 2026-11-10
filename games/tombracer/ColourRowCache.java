@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fk {
+final class ColourRowCache {
     private dq[] field_k;
     static it field_d;
     private int field_g;
@@ -14,7 +14,7 @@ final class fk {
     private int field_i;
     boolean field_f;
 
-    final int[][][] a(byte param0) {
+    final int[][][] getAllRows(byte param0) {
         int var3 = 0;
         int var4 = TombRacer.field_G ? 1 : 0;
         int var2 = -59 % ((param0 - 3) / 52);
@@ -27,7 +27,7 @@ final class fk {
         return this.field_a;
     }
 
-    final int[][] a(int param0, byte param1) {
+    final int[][] getRow(int param0, byte param1) {
         boolean stackIn_4_1 = false;
         boolean stackIn_9_1 = false;
         int var3;
@@ -96,11 +96,11 @@ final class fk {
               var6 = apa.$cfr$intArgs$a$62abead39cee(-50, true, cna.field_b[var3_int]);
               var7 = Transform3D.field_a - (var6 >> 1);
               var4 = var4 + aqa.field_a;
-              if (CrusherBehaviour.a(param2, var6 + (S2CCharacterChoicePacket.field_a << 1), var7 - S2CCharacterChoicePacket.field_a, param0, FurnitureModel.field_n + (vf.field_d << 1), false, var4)) {
+              if (CrusherBehaviour.a(param2, var6 + (S2CCharacterChoicePacket.field_a << 1), var7 - S2CCharacterChoicePacket.field_a, param0, FurnitureModel.field_n + (RenderLayer.field_d << 1), false, var4)) {
                 stackIn_9_0 = var5;
                 return stackIn_9_0;
               }
-              var4 = var4 + ((vf.field_d << 1) + (aqa.field_a + FurnitureModel.field_n));
+              var4 = var4 + ((RenderLayer.field_d << 1) + (aqa.field_a + FurnitureModel.field_n));
             } else {
               var4 = var4 + CharacterSelectPhase.field_x;
             }
@@ -115,11 +115,11 @@ final class fk {
         }
     }
 
-    final void a(int param0) {
+    final void release(int param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
         int var2 = 0;
         if (param0 != 2) {
-          this.a((byte) 23);
+          this.getAllRows((byte) 23);
         }
         while (var2 < this.field_e) {
           this.field_a[var2][0] = null;
@@ -142,7 +142,7 @@ final class fk {
         field_d = null;
     }
 
-    fk(int param0, int param1, int param2) {
+    ColourRowCache(int param0, int param1, int param2) {
         this.field_g = 0;
         this.field_i = -1;
         this.field_h = new IntrusiveDeque();

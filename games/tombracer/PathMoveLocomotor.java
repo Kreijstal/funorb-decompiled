@@ -180,7 +180,7 @@ final class PathMoveLocomotor extends Locomotor {
             return;
           }
           var11Lifetime6 = S2CRoundResultPacket.a(8192, -16390, var10, this.trap.getFacingAngle(-25787));
-          var12Lifetime6 = ua.abs(var11Lifetime6, 39);
+          var12Lifetime6 = S2CNextRoundPacket.abs(var11Lifetime6, 39);
           if (this.field_v == 0) {
             this.trap.rotateBy(false, -var11Lifetime6);
             this.field_s = false;
@@ -248,7 +248,7 @@ final class PathMoveLocomotor extends Locomotor {
           return;
         }
         var11Lifetime3 = S2CRoundResultPacket.a(8192, -16390, var10Lifetime1, this.trap.getFacingAngle(-25787));
-        var12Lifetime3 = ua.abs(var11Lifetime3, 39);
+        var12Lifetime3 = S2CNextRoundPacket.abs(var11Lifetime3, 39);
         if (this.field_v == 0) {
           this.trap.rotateBy(false, -var11Lifetime3);
           this.field_s = false;

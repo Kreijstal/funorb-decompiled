@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class foa implements GamePacket {
+final class S2CRoundDeadlinePacket implements GamePacket {
     static String field_a;
-    private int field_c;
+    private int deadlineTick;
     static boolean field_b;
 
-    final void a(MatchScreen param0, int param1, MatchProtocol param2) {
+    final void apply(MatchScreen param0, int param1, MatchProtocol param2) {
         if (!param0.isInPlayPhase(0)) {
           return;
         }
@@ -14,7 +14,7 @@ final class foa implements GamePacket {
           if (param1 != -1) {
             field_b = true;
           }
-          param0.field_r = this.field_c;
+          param0.roundDeadlineTick = this.deadlineTick;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "foa.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -44,7 +44,7 @@ final class foa implements GamePacket {
 
     public final void encode(int param0, BitPacketBuffer param1) {
         param1.beginBitWrite(8);
-        param1.writeBits((byte) -128, 1 + this.field_c, 32);
+        param1.writeBits((byte) -128, 1 + this.deadlineTick, 32);
         if (param0 != 200) {
           return;
         }
@@ -58,18 +58,18 @@ final class foa implements GamePacket {
     public final void decode(BitPacketBuffer param0, byte param1) {
         try {
           param0.beginBitAccess((byte) -62);
-          this.field_c = param0.readBits((byte) 44, 32) - 1;
+          this.deadlineTick = param0.readBits((byte) 44, 32) - 1;
           param0.endBitAccess((byte) 98);
           if (param1 != -19) {
-            foa.releaseStatics(false);
+            S2CRoundDeadlinePacket.releaseStatics(false);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "foa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    foa() {
-        this.field_c = -1;
+    S2CRoundDeadlinePacket() {
+        this.deadlineTick = -1;
     }
 
     final static int a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6, int param7, int param8, int param9) {

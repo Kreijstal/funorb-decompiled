@@ -397,9 +397,9 @@ final class RandomBrickOperator extends TextureOperator {
         if (param0 != 1) {
           return (int[]) null;
         }
-        var3 = this.field_i.a((byte) 120, param1);
-        if (this.field_i.field_d) {
-          var46 = this.field_i.a(param0 ^ 1);
+        var3 = this.monochromeCache.getRow((byte) 120, param1);
+        if (this.monochromeCache.rowMissed) {
+          var46 = this.monochromeCache.getAllRows(param0 ^ 1);
           var39 = var46;
           var4 = var39;
           var5 = 0;

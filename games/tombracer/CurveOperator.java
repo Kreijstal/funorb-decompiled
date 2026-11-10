@@ -166,9 +166,9 @@ final class CurveOperator extends TextureOperator {
         if (param0 != 1) {
           return (int[]) null;
         }
-        int[] var8 = this.field_i.a((byte) 50, param1);
+        int[] var8 = this.monochromeCache.getRow((byte) 50, param1);
         int[] var3 = var8;
-        if (this.field_i.field_d) {
+        if (this.monochromeCache.rowMissed) {
           var5 = this.getInputMonochromeRow(0, param0 ^ -33, param1);
           for (var6 = 0; var6 < ns.textureWidth; var6++) {
             var4 = var5[var6] >> 4;

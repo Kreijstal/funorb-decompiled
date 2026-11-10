@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aoa implements GamePacket {
-    private PlayerProfile field_a;
+final class S2CPlayerProfilePacket implements GamePacket {
+    private PlayerProfile profile;
     static apa field_b;
 
     public final void encode(int param0, BitPacketBuffer param1) {
@@ -10,7 +10,7 @@ final class aoa implements GamePacket {
           return;
         }
         try {
-          this.field_a.a(-2016804080, param1);
+          this.profile.a(-2016804080, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "aoa.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -34,7 +34,7 @@ final class aoa implements GamePacket {
         wt.a((byte) 126);
         jsa.a(false, 4);
         if (!param0) {
-          aoa.b(false);
+          S2CPlayerProfilePacket.b(false);
         }
     }
 
@@ -43,18 +43,18 @@ final class aoa implements GamePacket {
         int var1 = 20 % ((-9 - param0) / 59);
     }
 
-    final PlayerProfile a(boolean param0) {
+    final PlayerProfile getProfile(boolean param0) {
         if (param0) {
-          this.field_a = (PlayerProfile) null;
-          return this.field_a;
+          this.profile = (PlayerProfile) null;
+          return this.profile;
         }
-        return this.field_a;
+        return this.profile;
     }
 
     public final void decode(BitPacketBuffer param0, byte param1) {
         try {
-          this.field_a = new PlayerProfile();
-          this.field_a.a(param0, (byte) 122);
+          this.profile = new PlayerProfile();
+          this.profile.a(param0, (byte) 122);
           if (param1 != -19) {
             field_b = (apa) null;
           }

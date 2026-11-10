@@ -12,9 +12,9 @@ final class KaleidoscopeOperator extends TextureOperator {
           CharSequence var7 = (CharSequence) null;
           KaleidoscopeOperator.a((byte) -31, (CharSequence) null);
         }
-        int[] var8 = this.field_i.a((byte) -111, param1);
+        int[] var8 = this.monochromeCache.getRow((byte) -111, param1);
         int[] var3 = var8;
-        if (this.field_i.field_d) {
+        if (this.monochromeCache.rowMissed) {
           for (var4 = 0; ns.textureWidth > var4; var4++) {
             this.d(var4, param1, -5455);
             var5 = this.getInputMonochromeRow(0, -70, RewardChoiceSlot.field_e);
@@ -167,11 +167,11 @@ final class KaleidoscopeOperator extends TextureOperator {
         int var7 = 0;
         int[][] var14 = null;
         int var9 = TombRacer.field_G ? 1 : 0;
-        int[][] var13 = this.field_h.a(param0, (byte) -43);
+        int[][] var13 = this.colourCache.getRow(param0, (byte) -43);
         int[][] var11 = var13;
         int[][] var10 = var11;
         int[][] var3 = var10;
-        if (this.field_h.field_f) {
+        if (this.colourCache.field_f) {
           var4 = var13[0];
           var5 = var13[1];
           var6 = var13[2];

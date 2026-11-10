@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class km extends DualLinkNode {
-    private TextureOperator[] field_l;
+final class ProceduralTexture extends DualLinkNode {
+    private TextureOperator[] operators;
     private TextureOperator field_r;
     private TextureOperator field_k;
     private TextureOperator field_m;
     static fta field_p;
     static String field_n;
-    private int[] field_o;
-    private int[] field_q;
+    private int[] textureIds;
+    private int[] spriteIds;
 
     final boolean a(ResourceArchive param0, d param1, int param2) {
         int var4_int = 0;
@@ -25,23 +25,23 @@ final class km extends DualLinkNode {
         var5 = TombRacer.field_G ? 1 : 0;
         try {
           if (param2 <= BevelOperator.field_m) {
-            for (var4_int = 0; var4_int < this.field_q.length; var4_int++) {
-              if (!param0.a(BevelOperator.field_m, (byte) -106, this.field_q[var4_int])) {
+            for (var4_int = 0; var4_int < this.spriteIds.length; var4_int++) {
+              if (!param0.a(BevelOperator.field_m, (byte) -106, this.spriteIds[var4_int])) {
                 return false;
               }
             }
           } else {
             var4_int = 0;
-            while (var4_int < this.field_q.length) {
-              if (param0.a(-15121, this.field_q[var4_int])) {
+            while (var4_int < this.spriteIds.length) {
+              if (param0.a(-15121, this.spriteIds[var4_int])) {
                 var4_int++;
                 continue;
               }
               return false;
             }
           }
-          for (var4_intLifetime1 = 0; var4_intLifetime1 < this.field_o.length; var4_intLifetime1++) {
-            if (!param1.a(this.field_o[var4_intLifetime1], (byte) 105)) {
+          for (var4_intLifetime1 = 0; var4_intLifetime1 < this.textureIds.length; var4_intLifetime1++) {
+            if (!param1.a(this.textureIds[var4_intLifetime1], (byte) 105)) {
               return false;
             }
           }
@@ -113,8 +113,8 @@ final class km extends DualLinkNode {
         try {
           PenaltyNotice.field_j = param0;
           np.field_m = param5;
-          for (var7_int = 0; this.field_l.length > var7_int; var7_int++) {
-            this.field_l[var7_int].b(param3, param2, -256);
+          for (var7_int = 0; this.operators.length > var7_int; var7_int++) {
+            this.operators[var7_int].createRowCache(param3, param2, -256);
           }
           ConsoleWindow.a(0, param2, param3);
           var20 = new float[4 * param2 * param3];
@@ -178,8 +178,8 @@ final class km extends DualLinkNode {
           var10 = -41 / ((-67 - param1) / 38);
           var21 = 0;
           var9Lifetime1 = var21;
-          while (var21 < this.field_l.length) {
-            this.field_l[var21].b(-54);
+          while (var21 < this.operators.length) {
+            this.operators[var21].releaseRowCache(-54);
             var21++;
           }
           stackIn_34_0 = var7;
@@ -242,8 +242,8 @@ final class km extends DualLinkNode {
         try {
           PenaltyNotice.field_j = param4;
           np.field_m = param1;
-          for (var10_int = 0; this.field_l.length > var10_int; var10_int++) {
-            this.field_l[var10_int].b(param6, param0, -256);
+          for (var10_int = 0; this.operators.length > var10_int; var10_int++) {
+            this.operators[var10_int].createRowCache(param6, param0, -256);
           }
           if (param5 < 17) {
             stackIn_6_0 = (int[]) null;
@@ -318,8 +318,8 @@ final class km extends DualLinkNode {
           }
           var27 = 0;
           var15Lifetime1 = var27;
-          while (var27 < this.field_l.length) {
-            this.field_l[var27].b(-50);
+          while (var27 < this.operators.length) {
+            this.operators[var27].releaseRowCache(-50);
             var27++;
           }
           stackIn_46_0 = var10;
@@ -344,7 +344,7 @@ final class km extends DualLinkNode {
         }
     }
 
-    km(PacketBuffer param0) {
+    ProceduralTexture(PacketBuffer param0) {
         int[] array$2 = null;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
@@ -375,15 +375,15 @@ final class km extends DualLinkNode {
           var2_int = param0.readUnsignedByte(255);
           var3 = 0;
           var4 = 0;
-          this.field_l = new TextureOperator[var2_int];
+          this.operators = new TextureOperator[var2_int];
           var12 = new int[var2_int][];
           for (var6 = 0; var6 < var2_int; var6++) {
             var13 = MirrorComponent.a(param0, 0);
             var14 = var13;
-            if (var14.a(125) >= 0) {
+            if (var14.getSpriteId(125) >= 0) {
               var3++;
             }
-            if (var14.c((byte) -117) >= 0) {
+            if (var14.getTextureId((byte) -117) >= 0) {
               var4++;
             }
             var8 = var14.inputs.length;
@@ -392,36 +392,36 @@ final class km extends DualLinkNode {
             for (var9 = 0; var8 > var9; var9++) {
               var12[var6][var9] = param0.readUnsignedByte(255);
             }
-            this.field_l[var6] = var13;
+            this.operators[var6] = var13;
           }
-          this.field_q = new int[var3];
-          this.field_o = new int[var4];
+          this.spriteIds = new int[var3];
+          this.textureIds = new int[var4];
           var3Lifetime1 = 0;
           var4Lifetime1 = 0;
           for (var6Lifetime1 = 0; var2_int > var6Lifetime1; var6Lifetime1++) {
-            var15 = this.field_l[var6Lifetime1];
+            var15 = this.operators[var6Lifetime1];
             var8Lifetime1 = var15.inputs.length;
             for (var9Lifetime1 = 0; var8Lifetime1 > var9Lifetime1; var9Lifetime1++) {
-              var15.inputs[var9Lifetime1] = this.field_l[var12[var6Lifetime1][var9Lifetime1]];
+              var15.inputs[var9Lifetime1] = this.operators[var12[var6Lifetime1][var9Lifetime1]];
             }
-            var9Lifetime1Lifetime1 = var15.a(100);
-            var10 = var15.c((byte) -117);
+            var9Lifetime1Lifetime1 = var15.getSpriteId(100);
+            var10 = var15.getTextureId((byte) -117);
             if (var9Lifetime1Lifetime1 > 0) {
               incrementValue$0 = var3Lifetime1;
               var3Lifetime1++;
-              this.field_q[incrementValue$0] = var9Lifetime1Lifetime1;
+              this.spriteIds[incrementValue$0] = var9Lifetime1Lifetime1;
             }
             if (0 < var10) {
               incrementValue$1 = var4Lifetime1;
               var4Lifetime1++;
-              this.field_o[incrementValue$1] = var10;
+              this.textureIds[incrementValue$1] = var10;
             }
             var12[var6Lifetime1] = null;
           }
-          this.field_k = this.field_l[param0.readUnsignedByte(255)];
-          this.field_r = this.field_l[param0.readUnsignedByte(255)];
+          this.field_k = this.operators[param0.readUnsignedByte(255)];
+          this.field_r = this.operators[param0.readUnsignedByte(255)];
           var5 = (int[][]) null;
-          this.field_m = this.field_l[param0.readUnsignedByte(255)];
+          this.field_m = this.operators[param0.readUnsignedByte(255)];
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -473,8 +473,8 @@ final class km extends DualLinkNode {
         try {
           PenaltyNotice.field_j = param5;
           np.field_m = param4;
-          for (var9_int = 0; this.field_l.length > var9_int; var9_int++) {
-            this.field_l[var9_int].b(param0, param2, -256);
+          for (var9_int = 0; this.operators.length > var9_int; var9_int++) {
+            this.operators[var9_int].createRowCache(param0, param2, -256);
           }
           CachedArchiveSource.a(param3, -256);
           ConsoleWindow.a(0, param2, param0);
@@ -555,8 +555,8 @@ final class km extends DualLinkNode {
           }
           var24 = 0;
           var11Lifetime1 = var24;
-          while (var24 < this.field_l.length) {
-            this.field_l[var24].b(-126);
+          while (var24 < this.operators.length) {
+            this.operators[var24].releaseRowCache(-126);
             var24++;
           }
           stackIn_52_0 = var9;

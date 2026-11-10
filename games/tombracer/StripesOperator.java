@@ -35,14 +35,14 @@ final class StripesOperator extends TextureOperator {
         int[] var13Lifetime1;
         int[] var13Lifetime1Lifetime1;
         var10 = TombRacer.field_G ? 1 : 0;
-        var13 = this.field_i.a((byte) -113, param1);
+        var13 = this.monochromeCache.getRow((byte) -113, param1);
         var12 = var13;
         var3 = var12;
         if (param0 != 1) {
           this.c(-75);
         }
         boolean decompiledFrameRemainder0 = true;
-        if (this.field_i.field_d) {
+        if (this.monochromeCache.rowMissed) {
           var4 = sj.textureRowCoords[param1];
           if (this.field_q == 0) {
             var13Lifetime1 = var12;

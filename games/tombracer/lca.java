@@ -18,7 +18,7 @@ final class lca implements Renderable {
         return this.field_a.isRenderExpired((byte) 48);
     }
 
-    public final void f(int param0) {
+    public final void updateAnimation(int param0) {
         if (param0 != -4366) {
           this.field_a = (SnakePitModel) null;
         }

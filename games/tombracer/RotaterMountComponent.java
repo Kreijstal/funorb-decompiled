@@ -32,8 +32,8 @@ final class RotaterMountComponent extends PrefabComponent {
         }
     }
 
-    final void q(byte param0) {
-        super.q(param0);
+    final void applyDefaults(byte param0) {
+        super.applyDefaults(param0);
         this.setSize(-113, 2097152, 2097152);
         this.setMounts((byte) 89, new ComponentMount[]{new ComponentMount(0, 0, 2097152, 0, 8)});
     }
@@ -126,7 +126,7 @@ final class RotaterMountComponent extends PrefabComponent {
         }
     }
 
-    final boolean z(int param0) {
+    final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
           field_H = (IntrusiveDeque) null;
           return false;

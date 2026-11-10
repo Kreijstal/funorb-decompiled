@@ -826,7 +826,7 @@ final class RoomComponentFactory implements RoomComponentCodec {
         if (param0 != 27) {
           field_b = 58;
         }
-        return oea.field_i != null ? true : false;
+        return RenderableNode.field_i != null ? true : false;
     }
 
     public final RoomComponent createSkeletonComponent(Room param0, byte param1) {

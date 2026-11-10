@@ -48,7 +48,7 @@ final class StandingsPhase extends MatchPhase {
             if (this.matchState.hasResigned((byte) -117, var3_int)) {
               var4 = this.matchState.playerCount - 1;
             }
-            if (this.matchState.field_z == -2) {
+            if (this.matchState.declaredWinner == -2) {
               var4 = 0;
             }
             this.field_r[var3_int] = var4;
@@ -57,7 +57,7 @@ final class StandingsPhase extends MatchPhase {
             TripBeamComponent.b(1, 0);
           } else {
             if (0 == this.field_r[this.screen.localPlayerIndex] &&
-              this.matchState.field_z >= 0) {
+              this.matchState.declaredWinner >= 0) {
               TripBeamComponent.b(1, 2);
             } else {
               TripBeamComponent.b(1, 3);
@@ -199,7 +199,7 @@ final class StandingsPhase extends MatchPhase {
             }
             if (!this.matchState.hasResigned((byte) -102, var22)) {
               var13 = 7829367;
-              if (-2 != this.matchState.field_z) {
+              if (-2 != this.matchState.declaredWinner) {
                 SocketConnector.a(gl.$cfr$intArgs$a$53ce4ab4c593(93, WallCrusherComponent.field_K.toUpperCase(), new String[]{Integer.toString(this.matchState.roundWins[var22])}).toUpperCase(), 1, kn.field_p, var13, 16, 60, 1, var10 - 243, -50 + var11, 0, (byte) 60, 100);
               } else {
                 SocketConnector.a(DateInputWidget.field_y.toUpperCase(), 1, kn.field_p, var13, 16, 70, 1, var10 - 243, -50 + var11, 0, (byte) 60, 100);
@@ -231,7 +231,7 @@ final class StandingsPhase extends MatchPhase {
           }
           SocketConnector.a(var10_ref_String, 1, eda.field_f, 2431750, 8 + o.field_d.field_m, var6, 1, -(var6 >> 1) + var8, var7 - (var5 >> 1), -1, (byte) 60, var5);
           MembersUpsellMenu.a(this.screen.getPlayerName(this.screen.localPlayerIndex, false).toUpperCase(), wga.field_a[this.screen.localPlayerIndex], eda.field_f, -1, -15 + var4, var3, -1);
-          if (this.matchState.field_z < 0) {
+          if (this.matchState.declaredWinner < 0) {
             MembersUpsellMenu.a(ArrowShooterComponent.field_K.toUpperCase(), 2431750, eda.field_f, -1, var4 - 40, var3, -1);
             MembersUpsellMenu.a(SafeZoneBehaviour.field_n.toUpperCase(), 2431750, kn.field_p, -1, 45 + var4, var3, -1);
           } else {
@@ -357,7 +357,7 @@ final class StandingsPhase extends MatchPhase {
           if (!this.field_q) {
             stackIn_5_0 = var4_ref_hf;
             stackIn_5_1 = 26;
-            if (var3 != this.matchState.field_z) {
+            if (var3 != this.matchState.declaredWinner) {
               stackIn_6_2 = 0;
             } else {
               stackIn_6_2 = 23;
@@ -365,7 +365,7 @@ final class StandingsPhase extends MatchPhase {
             ((PlayerModel) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_6_2, false);
           }
           var4_ref_hf.a(21463);
-          var4_ref_hf.f(-4366);
+          var4_ref_hf.updateAnimation(-4366);
         }
         this.field_n = -1;
         this.field_q = true;

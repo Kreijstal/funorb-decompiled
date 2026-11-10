@@ -95,11 +95,11 @@ final class SpriteTileOperator extends SpriteSampleOperator {
         int var8 = 0;
         int var9 = 0;
         int var10 = TombRacer.field_G ? 1 : 0;
-        int[][] var13 = this.field_h.a(param0, (byte) -2);
+        int[][] var13 = this.colourCache.getRow(param0, (byte) -2);
         int[][] var12 = var13;
         int[][] var11 = var12;
         int[][] var3 = var11;
-        if (!this.field_h.field_f) {
+        if (!this.colourCache.field_f) {
           if (param1 != -1) {
             SpriteTileOperator.d(113);
             return var3;

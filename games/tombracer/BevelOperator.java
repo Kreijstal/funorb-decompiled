@@ -49,11 +49,11 @@ final class BevelOperator extends TextureOperator {
         int[] var11Lifetime2;
         var8 = TombRacer.field_G ? 1 : 0;
         if (param0 == 1) {
-          var11 = this.field_i.a((byte) 17, param1);
+          var11 = this.monochromeCache.getRow((byte) 17, param1);
           var10 = var11;
           var9 = var10;
           var3 = var9;
-          if (!this.field_i.field_d) {
+          if (!this.monochromeCache.rowMissed) {
             return var9;
           }
           var4 = sj.textureRowCoords[param1];
@@ -118,11 +118,11 @@ final class BevelOperator extends TextureOperator {
           return var9;
         }
         field_p = (it) null;
-        var11Lifetime1 = this.field_i.a((byte) 17, param1);
+        var11Lifetime1 = this.monochromeCache.getRow((byte) 17, param1);
         var10Lifetime1 = var11Lifetime1;
         var9Lifetime1 = var10Lifetime1;
         var3Lifetime1 = var9Lifetime1;
-        if (!this.field_i.field_d) {
+        if (!this.monochromeCache.rowMissed) {
           return var9Lifetime1;
         }
         var9Lifetime2 = var3Lifetime1;

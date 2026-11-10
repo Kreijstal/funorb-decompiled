@@ -86,12 +86,12 @@ final class jr implements isa {
         fr.field_c = 0;
         ConsoleToken.field_f = -1;
         if (param0 <= -91) {
-          vf.field_f = -1;
+          RenderLayer.field_f = -1;
           MazeComponent.field_F = null;
           return;
         }
         jr.b((byte) 79);
-        vf.field_f = -1;
+        RenderLayer.field_f = -1;
         MazeComponent.field_F = null;
     }
 

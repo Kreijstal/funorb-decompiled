@@ -24,7 +24,7 @@ abstract class PrefabComponent extends RoomComponent {
 
     Switchable u(int param0) {
         if (param0 >= -60) {
-          this.z(-82);
+          this.usesBehaviourModels(-82);
           return (Switchable) ((Object) this.field_A);
         }
         return (Switchable) ((Object) this.field_A);
@@ -67,7 +67,7 @@ abstract class PrefabComponent extends RoomComponent {
           }
           var13.setLocalY(this.y, -19879);
           var13.setAngle(this.angle + param4, (byte) 110);
-          var13.f(10, param3);
+          var13.addHeight(10, param3);
           var13.z(1);
           for (var9 = 0; this.mounts.length > var9; var9++) {
             var10 = this.mounts[var9];
@@ -85,8 +85,8 @@ abstract class PrefabComponent extends RoomComponent {
             }
           }
           if (param6 == null) {
-            if (this.z(0)) {
-              var13.c(437453352, true);
+            if (this.usesBehaviourModels(0)) {
+              var13.rebuildBehaviourModels(437453352, true);
             }
             param2.addTrap(var13, (byte) 32);
           } else {
@@ -122,7 +122,7 @@ abstract class PrefabComponent extends RoomComponent {
         super(param0, param1);
     }
 
-    boolean z(int param0) {
+    boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
           field_C = (String) null;
           return true;

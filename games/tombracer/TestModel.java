@@ -9,7 +9,7 @@ final class TestModel extends TrapModel {
     private int field_q;
     static String field_p;
 
-    final void d(int param0) {
+    final void tick(int param0) {
         if (param0 != -1) {
           this.field_q = -76;
         }
@@ -36,7 +36,7 @@ final class TestModel extends TrapModel {
         super(param0, param1, param2);
     }
 
-    final int k(byte param0) {
+    final int getSceneLayer(byte param0) {
         if (param0 != -99) {
           return -101;
         }

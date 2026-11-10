@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bga implements GamePacket {
+final class S2CProfileUpdatePacket implements GamePacket {
     private taa field_a;
     static AsyncRequest field_c;
     static int field_b;
@@ -9,14 +9,14 @@ final class bga implements GamePacket {
 
     public static void releaseStatics(int param0) {
         if (param0 != 200) {
-          bga.releaseStatics(33);
+          S2CProfileUpdatePacket.releaseStatics(33);
           field_c = null;
           return;
         }
         field_c = null;
     }
 
-    final void a(PlayerProfile param0, byte param1) {
+    final void applyTo(PlayerProfile param0, byte param1) {
         if (param1 > -10) {
           return;
         }

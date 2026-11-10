@@ -4,7 +4,7 @@
 final class TrapBaseModel extends MotionTrackingModel {
     private int field_w;
 
-    final void d(int param0) {
+    final void tick(int param0) {
         if (param0 != -1) {
           this.field_w = 86;
         }
@@ -37,7 +37,7 @@ final class TrapBaseModel extends MotionTrackingModel {
         }
     }
 
-    final int k(byte param0) {
+    final int getSceneLayer(byte param0) {
         int var2 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
         int var2Lifetime1;

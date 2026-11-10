@@ -17,17 +17,17 @@ final class VerticalGradientOperator extends TextureOperator {
         int[] var3Lifetime1;
         if (param0 != 1) {
           this.getMonochromeRow(-83, -24);
-          var4 = this.field_i.a((byte) -108, param1);
+          var4 = this.monochromeCache.getRow((byte) -108, param1);
           var3 = var4;
-          if (this.field_i.field_d) {
+          if (this.monochromeCache.rowMissed) {
             ArrayUtils.fill(var4, 0, ns.textureWidth, sj.textureRowCoords[param1]);
             return var4;
           }
           return var4;
         }
-        var4Lifetime1 = this.field_i.a((byte) -108, param1);
+        var4Lifetime1 = this.monochromeCache.getRow((byte) -108, param1);
         var3Lifetime1 = var4Lifetime1;
-        if (!this.field_i.field_d) {
+        if (!this.monochromeCache.rowMissed) {
           return var4Lifetime1;
         }
         ArrayUtils.fill(var4Lifetime1, 0, ns.textureWidth, sj.textureRowCoords[param1]);

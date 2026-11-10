@@ -6,21 +6,21 @@ final class BladeShooterComponent extends ShooterComponent {
         super(param0, param1, param2, param3);
     }
 
-    final boolean z(int param0) {
+    final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
           return true;
         }
         return false;
     }
 
-    final void q(byte param0) {
-        super.q(param0);
+    final void applyDefaults(byte param0) {
+        super.applyDefaults(param0);
         this.setSize(81, 2097152, 2097152);
     }
 
     final boolean hasAngle(byte param0) {
         if (param0 != -122) {
-          this.z(10);
+          this.usesBehaviourModels(10);
           return true;
         }
         return true;
@@ -39,7 +39,7 @@ final class BladeShooterComponent extends ShooterComponent {
 
     final boolean B(int param0) {
         if (param0 != -23309) {
-          this.z(-114);
+          this.usesBehaviourModels(-114);
           return true;
         }
         return true;
@@ -90,7 +90,7 @@ final class BladeShooterComponent extends ShooterComponent {
 
     final boolean C(int param0) {
         if (param0 != 128) {
-          this.z(-65);
+          this.usesBehaviourModels(-65);
           return true;
         }
         return true;

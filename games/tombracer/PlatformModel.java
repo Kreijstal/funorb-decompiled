@@ -36,7 +36,7 @@ final class PlatformModel extends TrapModel {
         }
     }
 
-    final void b(int param0, uw param1) {
+    final void addToScene(int param0, RenderScene param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -50,7 +50,7 @@ final class PlatformModel extends TrapModel {
           if (this.field_r == null) {
             this.a(true);
           }
-          super.b(param0, param1);
+          super.addToScene(param0, param1);
           if (this.field_r != null) {
             for (var3_int = 0; this.field_z > var3_int; var3_int++) {
               for (var4 = 0; var4 < this.field_s; var4++) {
@@ -219,7 +219,7 @@ final class PlatformModel extends TrapModel {
         Room var17 = null;
         var16 = TombRacer.field_G ? 1 : 0;
         try {
-          var17 = this.a(18);
+          var17 = this.getRoom(18);
           var3 = this.body.getX(3);
           var4 = this.body.getY(9648);
           this.field_z = this.body.getWidth(-84) / 2097152;
@@ -369,7 +369,7 @@ final class PlatformModel extends TrapModel {
         RuntimeException var3_ref = null;
         try {
           super.a((byte) 92, param1);
-          var3 = (w) (this.a(29).field_G);
+          var3 = (w) (this.getRoom(29).field_G);
           var4 = -57 % ((7 - param0) / 36);
           if (var3 == null) {
             return;
@@ -391,7 +391,7 @@ final class PlatformModel extends TrapModel {
         }
     }
 
-    final void d(int param0) {
+    final void tick(int param0) {
         int var4_int = 0;
         int var5_int = 0;
         boolean stackIn_51_1 = false;
@@ -420,7 +420,7 @@ final class PlatformModel extends TrapModel {
         var18 = null;
         var19 = TombRacer.field_G ? 1 : 0;
         try {
-          super.d(-1);
+          super.tick(-1);
           var2_int = 0;
           var3 = 0;
           if (this.field_m != null &&
@@ -438,7 +438,7 @@ final class PlatformModel extends TrapModel {
               var3 = 1;
             }
           }
-          var4_ref = (w) (this.a(94).field_G);
+          var4_ref = (w) (this.getRoom(94).field_G);
           if (var4_ref == null) {
             return;
           }
@@ -449,8 +449,8 @@ final class PlatformModel extends TrapModel {
           var6 = 1;
           var7 = this.getRenderX((byte) 84) - var4_ref.field_h >> 16;
           var8 = this.getRenderY((byte) 126) - var4_ref.field_c >> 16;
-          var9 = (double)ua.abs(var7, -118);
-          var11 = (double)ua.abs(var8, -125);
+          var9 = (double)S2CNextRoundPacket.abs(var7, -118);
+          var11 = (double)S2CNextRoundPacket.abs(var8, -125);
           var13 = Math.sqrt(var11 * var11 + var9 * var9);
           if (768.0 <= var13) {
             var6 = 0;
@@ -597,7 +597,7 @@ final class PlatformModel extends TrapModel {
         }
     }
 
-    final void a(uw param0, int param1) {
+    final void removeFromScene(RenderScene param0, int param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -605,9 +605,9 @@ final class PlatformModel extends TrapModel {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 < 82) {
-            this.b(-71, (uw) null);
+            this.addToScene(-71, (RenderScene) null);
           }
-          super.a(param0, 105);
+          super.removeFromScene(param0, 105);
           this.field_r = (eh[][]) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -624,7 +624,7 @@ final class PlatformModel extends TrapModel {
         }
     }
 
-    final void a(int param0, uw param1, byte param2) {
+    final void removeFromLayer(int param0, RenderScene param1, byte param2) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -641,7 +641,7 @@ final class PlatformModel extends TrapModel {
           if (null != this.field_r) {
             for (var4_int = 0; this.field_z > var4_int; var4_int++) {
               for (var5 = 0; this.field_s > var5; var5++) {
-                param1.a(param0, this.field_r[var4_int][var5], (byte) -33);
+                param1.removeFromLayer(param0, this.field_r[var4_int][var5], (byte) -33);
               }
             }
             return;
@@ -678,7 +678,7 @@ final class PlatformModel extends TrapModel {
           var2.field_d = 0;
           var2.field_h = 0;
           var2.field_e = this;
-          var2.field_b = this.a(53).e(true).nextBounded(100, 0);
+          var2.field_b = this.getRoom(53).e(true).nextBounded(100, 0);
           var2.field_f = this.a(var3, 2);
           this.field_r[0][0] = var3;
         } catch (RuntimeException runtimeException) {
@@ -686,7 +686,7 @@ final class PlatformModel extends TrapModel {
         }
     }
 
-    final int k(byte param0) {
+    final int getSceneLayer(byte param0) {
         int stackIn_4_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_16_0 = 0;
@@ -728,7 +728,7 @@ final class PlatformModel extends TrapModel {
         this.field_v = null;
     }
 
-    final void a(byte param0, int param1, uw param2) {
+    final void addToLayer(byte param0, int param1, RenderScene param2) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -745,7 +745,7 @@ final class PlatformModel extends TrapModel {
           if (null != this.field_r) {
             for (var4_int = 0; this.field_z > var4_int; var4_int++) {
               for (var5 = 0; var5 < this.field_s; var5++) {
-                param2.a((byte) -111, param1, this.field_r[var4_int][var5]);
+                param2.addToLayer((byte) -111, param1, this.field_r[var4_int][var5]);
               }
             }
             return;
@@ -962,7 +962,7 @@ final class PlatformModel extends TrapModel {
         RuntimeException var2 = null;
         try {
           if (param0 < 7) {
-            this.b(-54, (uw) null);
+            this.addToScene(-54, (RenderScene) null);
           }
           stackIn_6_0 = (this.field_q != 1);
           return stackIn_6_0;

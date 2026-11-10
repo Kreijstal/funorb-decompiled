@@ -357,8 +357,8 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = -6 / ((param1 + 5) / 38);
-          stackIn_2_0 = ua.abs(param0.field_e - param0.field_d, -106);
-          stackIn_2_1 = -ua.abs(-param0.field_k + param0.field_a, 21);
+          stackIn_2_0 = S2CNextRoundPacket.abs(param0.field_e - param0.field_d, -106);
+          stackIn_2_1 = -S2CNextRoundPacket.abs(-param0.field_k + param0.field_a, 21);
           if (param0.nextSegment == null) {
             stackIn_3_2 = 0;
           } else {

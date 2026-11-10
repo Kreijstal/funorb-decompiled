@@ -21,8 +21,8 @@ final class WallCrusherComponent extends PrefabComponent {
         return (Switchable) ((Object) this.field_G);
     }
 
-    final void q(byte param0) {
-        super.q(param0);
+    final void applyDefaults(byte param0) {
+        super.applyDefaults(param0);
     }
 
     WallCrusherComponent(Room param0, int param1) {
@@ -232,7 +232,7 @@ final class WallCrusherComponent extends PrefabComponent {
 
     final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
-          this.z(41);
+          this.usesBehaviourModels(41);
           return true;
         }
         return true;
@@ -245,7 +245,7 @@ final class WallCrusherComponent extends PrefabComponent {
         return true;
     }
 
-    final boolean z(int param0) {
+    final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
           this.getRenderLayer(108);
           return false;

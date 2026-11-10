@@ -97,7 +97,7 @@ final class FlameShooterComponent extends ShooterComponent {
         }
     }
 
-    final boolean z(int param0) {
+    final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
           field_K = (String) null;
           return false;
@@ -107,7 +107,7 @@ final class FlameShooterComponent extends ShooterComponent {
 
     final int getRenderLayer(int param0) {
         if (param0 != 8) {
-          this.q((byte) 50);
+          this.applyDefaults((byte) 50);
         }
         return 7;
     }
@@ -121,7 +121,7 @@ final class FlameShooterComponent extends ShooterComponent {
 
     final boolean B(int param0) {
         if (param0 != -23309) {
-          this.q((byte) -44);
+          this.applyDefaults((byte) -44);
         }
         return true;
     }
@@ -194,8 +194,8 @@ final class FlameShooterComponent extends ShooterComponent {
         }
     }
 
-    final void q(byte param0) {
-        super.q(param0);
+    final void applyDefaults(byte param0) {
+        super.applyDefaults(param0);
         this.setSize(-76, 2097152, 2097152);
     }
 

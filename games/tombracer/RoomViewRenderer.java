@@ -35,7 +35,7 @@ final class RoomViewRenderer {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        uw var15 = null;
+        RenderScene var15 = null;
         Object var16 = null;
         ag var16_ref = null;
         int var17 = 0;
@@ -86,7 +86,7 @@ final class RoomViewRenderer {
           if (var15 == null) {
             return;
           }
-          var16_ref = (ag) (var15.c(0));
+          var16_ref = (ag) (var15.getRenderTarget(0));
           var17 = (var12 + var11) / 2;
           var18 = var17 * 2048 / 512;
           var16_ref.a(var18, (byte) -88);
@@ -173,7 +173,7 @@ final class RoomViewRenderer {
           var19.a(var22, -var24, -var23, -var25, -var30, 0);
           tga.field_a.a(var19);
           MovingPlatformComponent.field_N = param3;
-          uw.field_e = param1;
+          RenderScene.field_e = param1;
           iga.field_o.a(param2, param3, (byte) -12, param4, param1);
           var10.c(false);
           if (param5.f((byte) 33)) {

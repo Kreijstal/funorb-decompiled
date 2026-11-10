@@ -414,12 +414,12 @@ final class ColourGradientOperator extends TextureOperator {
         int[] var8Lifetime1;
         int[] var17Lifetime1;
         var10 = TombRacer.field_G ? 1 : 0;
-        var14 = this.field_h.a(param0, (byte) 108);
+        var14 = this.colourCache.getRow(param0, (byte) 108);
         var12 = var14;
         var11 = var12;
         var3 = var11;
         if (param1 == -1) {
-          if (!this.field_h.field_f) {
+          if (!this.colourCache.field_f) {
             return var11;
           }
           var17 = this.getInputMonochromeRow(0, -15, param0);
@@ -442,7 +442,7 @@ final class ColourGradientOperator extends TextureOperator {
           return var11;
         }
         this.field_o = (int[][]) null;
-        if (!this.field_h.field_f) {
+        if (!this.colourCache.field_f) {
           return var11;
         }
         var17Lifetime1 = this.getInputMonochromeRow(0, -15, param0);

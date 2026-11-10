@@ -30,11 +30,11 @@ final class DisplacementOperator extends TextureOperator {
         if (param1 != -1) {
           this.b((byte) -123);
         }
-        int[][] var23 = this.field_h.a(param0, (byte) 115);
+        int[][] var23 = this.colourCache.getRow(param0, (byte) 115);
         int[][] var19 = var23;
         int[][] var18 = var19;
         int[][] var3 = var18;
-        if (this.field_h.field_f) {
+        if (this.colourCache.field_f) {
           var30 = this.getInputMonochromeRow(1, param1 - 21, param0);
           var31 = this.getInputMonochromeRow(2, -45, param0);
           var6 = var23[0];
@@ -77,9 +77,9 @@ final class DisplacementOperator extends TextureOperator {
           PacketBuffer var15 = (PacketBuffer) null;
           this.decodeParameter((byte) 85, (PacketBuffer) null, -36);
         }
-        int[] var16 = this.field_i.a((byte) -128, param1);
+        int[] var16 = this.monochromeCache.getRow((byte) -128, param1);
         int[] var3 = var16;
-        if (this.field_i.field_d) {
+        if (this.monochromeCache.rowMissed) {
           var26 = this.getInputMonochromeRow(1, param0 - 85, param1);
           var27 = this.getInputMonochromeRow(2, -119, param1);
           for (var6 = 0; var6 < ns.textureWidth; var6++) {

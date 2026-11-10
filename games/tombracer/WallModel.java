@@ -38,7 +38,7 @@ final class WallModel extends TrapModel {
 
     private final int b(WallTile param0, byte param1) {
         RuntimeException var3 = null;
-        uw var4 = null;
+        RenderScene var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_11_0 = 0;
@@ -58,10 +58,10 @@ final class WallModel extends TrapModel {
             return stackIn_7_0;
           }
           if (param1 != -94) {
-            var4 = (uw) null;
-            this.a((byte) -105, 15, (uw) null);
+            var4 = (RenderScene) null;
+            this.addToLayer((byte) -105, 15, (RenderScene) null);
           }
-          stackIn_11_0 = this.a(40).e(true).nextBounded(100, 0);
+          stackIn_11_0 = this.getRoom(40).e(true).nextBounded(100, 0);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -82,18 +82,18 @@ final class WallModel extends TrapModel {
         this.field_p = true;
     }
 
-    final void d(int param0) {
+    final void tick(int param0) {
         int discarded$1 = 0;
         Trap var3;
         int var4;
         WallTile var5;
         w var6;
-        super.d(param0 ^ 0);
+        super.tick(param0 ^ 0);
         if (param0 != -1) {
           var5 = (WallTile) null;
           discarded$1 = this.b((WallTile) null, (byte) 19);
         }
-        var6 = (w) (this.a(param0 + 58).field_G);
+        var6 = (w) (this.getRoom(param0 + 58).field_G);
         if (var6 == null) {
           return;
         }
@@ -206,9 +206,9 @@ final class WallModel extends TrapModel {
         }
     }
 
-    final void a(uw param0, int param1) {
+    final void removeFromScene(RenderScene param0, int param1) {
         try {
-          super.a(param0, 115);
+          super.removeFromScene(param0, 115);
           if (param1 <= 82) {
             this.o((byte) 33);
           }
@@ -249,7 +249,7 @@ final class WallModel extends TrapModel {
         }
     }
 
-    final void a(byte param0, int param1, uw param2) {
+    final void addToLayer(byte param0, int param1, RenderScene param2) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -264,7 +264,7 @@ final class WallModel extends TrapModel {
           if (this.tiles != null) {
             for (var4_int = 0; this.field_q > var4_int; var4_int++) {
               for (var5 = 0; var5 < this.field_w; var5++) {
-                param2.a((byte) 88, param1, this.tiles[var4_int][var5]);
+                param2.addToLayer((byte) 88, param1, this.tiles[var4_int][var5]);
               }
             }
           }
@@ -861,7 +861,7 @@ final class WallModel extends TrapModel {
         }
     }
 
-    final void a(int param0, uw param1, byte param2) {
+    final void removeFromLayer(int param0, RenderScene param1, byte param2) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = TombRacer.field_G ? 1 : 0;
@@ -872,7 +872,7 @@ final class WallModel extends TrapModel {
           if (null != this.tiles) {
             for (var4_int = 0; var4_int < this.field_q; var4_int++) {
               for (var5 = 0; var5 < this.field_w; var5++) {
-                param1.a(param0, this.tiles[var4_int][var5], (byte) -33);
+                param1.removeFromLayer(param0, this.tiles[var4_int][var5], (byte) -33);
               }
             }
           }
@@ -892,7 +892,7 @@ final class WallModel extends TrapModel {
         }
     }
 
-    final void b(int param0, uw param1) {
+    final void addToScene(int param0, RenderScene param1) {
         try {
           if (null == this.tiles) {
             this.j(2097152);
@@ -900,7 +900,7 @@ final class WallModel extends TrapModel {
               this.l(32166);
             }
           }
-          super.b(param0, param1);
+          super.addToScene(param0, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "lma.WA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -933,7 +933,7 @@ final class WallModel extends TrapModel {
           this.l(-80);
         }
         var2 = this.k(param0 ^ 32172) ? 1 : 0;
-        var3 = this.a(param0 - 32121);
+        var3 = this.getRoom(param0 - 32121);
         var4 = 4194304;
         var5 = this.body.getX(3);
         var6 = this.body.getY(9648);

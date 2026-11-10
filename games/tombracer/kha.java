@@ -115,7 +115,7 @@ final class kha {
             stackIn_41_0 = var7;
             return stackIn_41_0;
           }
-          vf.a(31637, param0, var7);
+          RenderLayer.a(31637, param0, var7);
           stackIn_39_0 = null;
           return (java.awt.Frame) (stackIn_39_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

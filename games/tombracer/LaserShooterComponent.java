@@ -98,7 +98,7 @@ final class LaserShooterComponent extends ShooterComponent {
         }
     }
 
-    final boolean z(int param0) {
+    final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
           return true;
         }
@@ -218,8 +218,8 @@ final class LaserShooterComponent extends ShooterComponent {
         MaskBlendOperator.d(-25405);
     }
 
-    final void q(byte param0) {
-        super.q(param0);
+    final void applyDefaults(byte param0) {
+        super.applyDefaults(param0);
         this.setSize(112, 2097152, 2097152);
     }
 

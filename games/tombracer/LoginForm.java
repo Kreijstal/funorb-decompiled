@@ -71,7 +71,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             }
             this.field_y = new FocusableWidget(stackIn_18_3, (WidgetListener) null);
             if (this.field_D) {
-              this.field_E = new FocusableWidget(foa.field_a, (WidgetListener) (this));
+              this.field_E = new FocusableWidget(S2CRoundDeadlinePacket.field_a, (WidgetListener) (this));
             }
           }
           this.field_A.field_r = (isa) ((Object) new hga(10000536));
@@ -260,7 +260,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         if (param0 < 27) {
           return;
         }
-        if (foa.a((byte) 91) ||
+        if (S2CRoundDeadlinePacket.a((byte) 91) ||
           !(this.field_A.field_o.length() <= 0) &&
           !(this.field_C.field_o.length() <= 0)) {
           rt.a(true, this.field_A.field_o, this.field_C.field_o);

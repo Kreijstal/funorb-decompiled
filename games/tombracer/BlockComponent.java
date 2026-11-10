@@ -97,7 +97,7 @@ final class BlockComponent extends PrefabComponent {
 
     final boolean hasAngle(byte param0) {
         if (param0 != -122) {
-          this.q((byte) 98);
+          this.applyDefaults((byte) 98);
           return false;
         }
         return false;
@@ -111,7 +111,7 @@ final class BlockComponent extends PrefabComponent {
         }
     }
 
-    final boolean z(int param0) {
+    final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
           Room var3 = (Room) null;
           this.createTrap(false, -29, (Room) null);
@@ -150,7 +150,7 @@ final class BlockComponent extends PrefabComponent {
 
     final int getRenderLayer(int param0) {
         if (param0 != 8) {
-          this.q((byte) 57);
+          this.applyDefaults((byte) 57);
           return 7;
         }
         return 7;
@@ -168,8 +168,8 @@ final class BlockComponent extends PrefabComponent {
         return PowerUpItemBehaviour.r(-95);
     }
 
-    final void q(byte param0) {
-        super.q(param0);
+    final void applyDefaults(byte param0) {
+        super.applyDefaults(param0);
         if (this.typeId != 49) {
           this.setSize(-78, 2097152, 2097152);
           return;

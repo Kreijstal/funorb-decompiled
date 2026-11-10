@@ -166,7 +166,7 @@ final class DoorwayModel extends TrapModel {
         return 2;
     }
 
-    final void d(int param0) {
+    final void tick(int param0) {
         IntrusiveDequeCursor discarded$0 = null;
         IntrusiveDequeCursor discarded$1 = null;
         Trap var3;
@@ -176,7 +176,7 @@ final class DoorwayModel extends TrapModel {
         IntrusiveDeque var7;
         IntrusiveDeque var8;
         var6 = null;
-        var6_ref = (w) (this.a(110).field_G);
+        var6_ref = (w) (this.getRoom(110).field_G);
         if (var6_ref == null) {
           return;
         }

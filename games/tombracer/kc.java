@@ -27,7 +27,7 @@ final class kc {
             stackIn_8_0 = -17;
             return stackIn_8_0;
           }
-          lp.field_h.a(fk.a(PasswordValidator.field_m, (byte) -113, RidgedNoise3D.field_p), 35, fk.a(AgeValidator.field_j, (byte) -113, GridWidgetContainer.field_B));
+          lp.field_h.a(ColourRowCache.a(PasswordValidator.field_m, (byte) -113, RidgedNoise3D.field_p), 35, ColourRowCache.a(AgeValidator.field_j, (byte) -113, GridWidgetContainer.field_B));
           if (lp.field_h.a(false)) {
             var1_int = 1;
           }

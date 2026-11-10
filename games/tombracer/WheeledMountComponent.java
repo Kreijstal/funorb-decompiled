@@ -23,8 +23,8 @@ final class WheeledMountComponent extends PathMoverComponent {
         return true;
     }
 
-    final void q(byte param0) {
-        super.q(param0);
+    final void applyDefaults(byte param0) {
+        super.applyDefaults(param0);
         this.setSize(104, 2097152, 2097152);
         this.setMounts((byte) 125, new ComponentMount[]{new ComponentMount(0, 0, 2097152, 0, 40)});
     }
@@ -141,7 +141,7 @@ final class WheeledMountComponent extends PathMoverComponent {
         }
     }
 
-    final boolean z(int param0) {
+    final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
           this.C(8);
           return false;

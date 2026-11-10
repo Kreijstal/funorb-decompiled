@@ -2316,7 +2316,7 @@ final class np extends ka {
           }
           var1_int = NormalMapOperator.d(-77);
           var2 = za.a(18998);
-          aoa.field_b.a((byte) 57, var1_int + (LoadProfileCommand.field_q << 1), -VerticalGradientOperator.field_m + wp.field_b, wt.field_a - LoadProfileCommand.field_q, (VerticalGradientOperator.field_m << 1) + var2);
+          S2CPlayerProfilePacket.field_b.a((byte) 57, var1_int + (LoadProfileCommand.field_q << 1), -VerticalGradientOperator.field_m + wp.field_b, wt.field_a - LoadProfileCommand.field_q, (VerticalGradientOperator.field_m << 1) + var2);
           ConsoleToken.a(125);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4095,7 +4095,7 @@ final class np extends ka {
           }
           boolean decompiledFrameRemainder0 = true;
           if (this.field_O != null &&
-            !oea.a(this.field_bb, this.field_u, (byte) 115)) {
+            !RenderableNode.a(this.field_bb, this.field_u, (byte) 115)) {
             if (null != this.field_F) {
               if (this.field_F.field_d != null) {
                 this.field_cb = null;

@@ -77,7 +77,7 @@ final class eh implements Renderable {
         try {
           gqa.a(this.field_a, -83584144, this.getRenderY((byte) 123), this.getRenderX((byte) 122), this.field_g.b((byte) 74), this.getRenderZ((byte) -88));
           if (param0 < 103) {
-            this.f(-75);
+            this.updateAnimation(-75);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "eh.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -92,7 +92,7 @@ final class eh implements Renderable {
         return this.field_e.getRenderY((byte) 112) + this.field_c + this.field_e.i(1024);
     }
 
-    public final void f(int param0) {
+    public final void updateAnimation(int param0) {
         if (param0 != -4366) {
           iq var3 = (iq) null;
           this.render(-33, (iq) null);

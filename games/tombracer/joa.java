@@ -139,13 +139,13 @@ final class joa {
           mha.field_D = dupTemp$1;
           MiscItemBehaviour.field_s = dupTemp$1;
           if (Room.field_R.field_b != 1) {
-            km.field_p = SecondaryNodeHashTable.field_g;
+            ProceduralTexture.field_p = SecondaryNodeHashTable.field_g;
           } else {
             try {
               OpenGlTransform3D.field_e = new BufferedSocket((java.net.Socket) (Room.field_R.field_f), kqa.field_a);
               ql.field_k.position = 0;
               var4 = WeaveOperator.field_q;
-              km.field_p = RotaterMountComponent.field_G;
+              ProceduralTexture.field_p = RotaterMountComponent.field_G;
               var4.position = 0;
               stackIn_10_0 = (!param0) ? -1 : -2;
               vua.field_B = stackIn_10_0;
@@ -156,7 +156,7 @@ final class joa {
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = (IOException) (Object) decompiledCaughtException;
-              km.field_p = SecondaryNodeHashTable.field_g;
+              ProceduralTexture.field_p = SecondaryNodeHashTable.field_g;
               Room.field_R = null;
               return true;
             }
@@ -212,7 +212,7 @@ final class joa {
           if (param0) {
             MatchProtocol.b(var3_int, 0);
           } else {
-            aoa.a(120, var3_int);
+            S2CPlayerProfilePacket.a(120, var3_int);
           }
           stackIn_10_0 = new StringBuilder().append(param2).append(" set ");
           if (!param0) {

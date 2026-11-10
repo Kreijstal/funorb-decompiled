@@ -7,7 +7,7 @@ final class MovingPlatformComponent extends PathMoverComponent {
     static SpriteData[] field_O;
     static int field_N;
 
-    final boolean z(int param0) {
+    final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
           return false;
         }
@@ -66,7 +66,7 @@ final class MovingPlatformComponent extends PathMoverComponent {
 
     final int getRenderLayer(int param0) {
         if (param0 != 8) {
-          this.q((byte) -40);
+          this.applyDefaults((byte) -40);
           return 3;
         }
         return 3;
@@ -133,8 +133,8 @@ final class MovingPlatformComponent extends PathMoverComponent {
         field_P = null;
     }
 
-    final void q(byte param0) {
-        super.q(param0);
+    final void applyDefaults(byte param0) {
+        super.applyDefaults(param0);
     }
 
     static {

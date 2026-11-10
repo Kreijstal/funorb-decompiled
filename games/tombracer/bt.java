@@ -43,7 +43,7 @@ final class bt implements Renderable {
         }
     }
 
-    public final void f(int param0) {
+    public final void updateAnimation(int param0) {
         if (this.field_e.b(180)) {
           if (!this.field_g) {
             this.field_d.a(1, false, (byte) -85, 9);

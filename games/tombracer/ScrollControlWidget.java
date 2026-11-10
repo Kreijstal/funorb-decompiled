@@ -207,7 +207,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
         String var7 = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
-          if (null != oea.field_i) {
+          if (null != RenderableNode.field_i) {
             return;
           }
           ni.field_c = false;
@@ -226,7 +226,7 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
           pq.field_g.field_ab = (8355711 & VortexBehaviour.field_t.field_ab >> 1) + (-((RoomLighting.field_d & 16711423) >> 1) + RoomLighting.field_d);
           pq.field_g.field_gb = ((16711423 & VortexBehaviour.field_t.field_gb) >> 1) + (RoomLighting.field_d - (RoomLighting.field_d >> 1 & 8355711));
           rma.field_b = ComponentMount.field_b;
-          oea.field_i = pq.field_g;
+          RenderableNode.field_i = pq.field_g;
           SimpleMoveLocomotor.field_s = new jea((long)param1, param4);
           lra.field_e = new jea(0L, param0);
           Projectile.field_r = new jea(0L, (jea) null);

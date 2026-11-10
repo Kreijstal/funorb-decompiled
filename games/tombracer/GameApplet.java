@@ -164,7 +164,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (var4 != 0L &&
             var2_long > var4) {
             var6_int = (int)(-var4 + var2_long);
-            oea.field_f = (32000 + (var6_int >> 1)) / var6_int;
+            RenderableNode.field_f = (32000 + (var6_int >> 1)) / var6_int;
           }
           sla.field_d = 31 & 1 + sla.field_d;
           fieldTemp$1 = nsa.field_d;
@@ -217,7 +217,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           }
           var6 = this;
           synchronized (var6) {
-            VortexBehaviour.field_n = oea.field_k;
+            VortexBehaviour.field_n = RenderableNode.field_k;
           }
           this.tick(true);
           return;
@@ -260,7 +260,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          oea.field_k = false;
+          RenderableNode.field_k = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -712,7 +712,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          oea.field_k = true;
+          RenderableNode.field_k = true;
           bsa.field_k = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -882,7 +882,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           }
           nma.field_l.addFocusListener((java.awt.event.FocusListener) (this));
           nma.field_l.requestFocus();
-          oea.field_k = true;
+          RenderableNode.field_k = true;
           VortexBehaviour.field_n = true;
           bsa.field_k = true;
           ReportAbuseDialog.field_Cb = false;

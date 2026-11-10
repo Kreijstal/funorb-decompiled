@@ -14,11 +14,11 @@ final class li {
         if (MenuEntry.field_j == null) {
           return;
         }
-        aoa.a(77, 1);
+        S2CPlayerProfilePacket.a(77, 1);
         if (param1 <= 105) {
           return;
         }
-        aoa.a(91, 2);
+        S2CPlayerProfilePacket.a(91, 2);
         if (DoorwayComponent.field_I == 0) {
           MatchProtocol.b(2, 0);
           DoorwayComponent.field_I = -DoorwayComponent.field_I + 1;

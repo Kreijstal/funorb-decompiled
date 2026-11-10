@@ -28,12 +28,12 @@ final class sla {
 
     final static void b(int param0) {
         qpa.field_b = null;
-        if (oea.field_i != null) {
+        if (RenderableNode.field_i != null) {
           ComponentMount.field_b = rma.field_b;
-          pq.field_g = oea.field_i;
+          pq.field_g = RenderableNode.field_i;
           rma.field_b = null;
           pq.field_g.field_N = -1;
-          oea.field_i = null;
+          RenderableNode.field_i = null;
           pq.field_g.field_ab = -1;
           lra.field_d = null;
           dh.field_e = null;

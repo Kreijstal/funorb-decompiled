@@ -99,20 +99,20 @@ abstract class ArchiveNetworkClient {
           }
           try {
             if (ColourKeyOperator.field_m == 0) {
-              bga.field_c = oi.field_a.a(-24818, TileGridCell.field_a, du.field_d);
+              S2CProfileUpdatePacket.field_c = oi.field_a.a(-24818, TileGridCell.field_a, du.field_d);
               ColourKeyOperator.field_m = ColourKeyOperator.field_m + 1;
             }
             if (ColourKeyOperator.field_m == 1) {
-              if (2 == bga.field_c.field_b) {
+              if (2 == S2CProfileUpdatePacket.field_c.field_b) {
                 stackIn_16_0 = du.a(-1, (byte) 122);
                 return stackIn_16_0;
               }
-              if (bga.field_c.field_b == 1) {
+              if (S2CProfileUpdatePacket.field_c.field_b == 1) {
                 ColourKeyOperator.field_m = ColourKeyOperator.field_m + 1;
               }
             }
             if (ColourKeyOperator.field_m == 2) {
-              jia.field_a = new BufferedSocket((java.net.Socket) (bga.field_c.field_f), oi.field_a);
+              jia.field_a = new BufferedSocket((java.net.Socket) (S2CProfileUpdatePacket.field_c.field_f), oi.field_a);
               var2 = new PacketBuffer(13);
               C2SActionPacket.a((byte) 107, pu.field_b, var2, wk.field_n, joa.field_a);
               var2.writeByte(15, 0);
@@ -143,7 +143,7 @@ abstract class ArchiveNetworkClient {
             wg.field_l.attachConnection(jia.field_a, (byte) 54, StatefulWidgetPainter.field_q);
             ColourKeyOperator.field_m = 0;
             jia.field_a = null;
-            bga.field_c = null;
+            S2CProfileUpdatePacket.field_c = null;
             stackIn_34_0 = 0;
             return stackIn_34_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {

@@ -21,8 +21,8 @@ final class ol {
         }
         int var7 = param0 - param3 >> 16;
         int var8 = param4 - param5 >> 16;
-        double var9 = (double)ua.abs(var7, param2 - 29);
-        double var11 = (double)ua.abs(var8, -102);
+        double var9 = (double)S2CNextRoundPacket.abs(var7, param2 - 29);
+        double var11 = (double)S2CNextRoundPacket.abs(var8, -102);
         double var13 = Math.sqrt(var11 * var11 + var9 * var9);
         int var15 = (int)((double)var6 - (double)var6 * (-64.0 + var13) / 704.0);
         if (768.0 <= var13) {

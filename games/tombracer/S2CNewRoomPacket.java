@@ -36,7 +36,7 @@ final class S2CNewRoomPacket implements GamePacket {
               param0.a(this.disregard, (byte) 125, this.playerId);
             }
           }
-          param2.field_r = this.field_i;
+          param2.roundDeadlineTick = this.field_i;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "bqa.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

@@ -194,7 +194,7 @@ final class TileGridCell {
         return this.grid.getRoom(0);
     }
 
-    final void a(uw param0, byte param1) {
+    final void a(RenderScene param0, byte param1) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -202,7 +202,7 @@ final class TileGridCell {
         RuntimeException var3 = null;
         try {
           if (null != this.field_e) {
-            param0.a((byte) -88, 4, this.field_e);
+            param0.addToLayer((byte) -88, 4, this.field_e);
           }
           if (param1 != 84) {
             this.field_h = -37;

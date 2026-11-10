@@ -105,14 +105,14 @@ final class ColourKeyOperator extends TextureOperator {
         int[] var32Lifetime1;
         int[] var40Lifetime1;
         var16 = TombRacer.field_G ? 1 : 0;
-        var27 = this.field_h.a(param0, (byte) 122);
+        var27 = this.colourCache.getRow(param0, (byte) 122);
         var19 = var27;
         var17 = var19;
         var3 = var17;
         if (param1 != -1) {
           return (int[][]) null;
         }
-        if (!this.field_h.field_f) {
+        if (!this.colourCache.field_f) {
           return var3;
         }
         var38 = this.getInputColourRow(param0, 0, -1);

@@ -116,11 +116,11 @@ final class ClampOperator extends TextureOperator {
         if (param1 != -1) {
           return (int[][]) null;
         }
-        var26 = this.field_h.a(param0, (byte) 18);
+        var26 = this.colourCache.getRow(param0, (byte) 18);
         var18 = var26;
         var16 = var18;
         var3 = var16;
-        if (this.field_h.field_f) {
+        if (this.colourCache.field_f) {
           var37 = this.getInputColourRow(param0, 0, param1 ^ 0);
           var38 = var37[0];
           var39 = var37[1];
@@ -177,11 +177,11 @@ final class ClampOperator extends TextureOperator {
         int var6;
         int var7;
         var7 = TombRacer.field_G ? 1 : 0;
-        var3 = this.field_i.a((byte) 84, param1);
+        var3 = this.monochromeCache.getRow((byte) 84, param1);
         if (param0 != 1) {
           ClampOperator.releaseStatics(18);
         }
-        if (this.field_i.field_d) {
+        if (this.monochromeCache.rowMissed) {
           var4 = this.getInputMonochromeRow(0, -101, param1);
           for (var5 = 0; var5 < ns.textureWidth; var5++) {
             var6 = var4[var5];

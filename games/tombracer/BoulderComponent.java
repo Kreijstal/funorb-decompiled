@@ -192,7 +192,7 @@ final class BoulderComponent extends PathMoverComponent {
         }
     }
 
-    final boolean z(int param0) {
+    final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
           field_M = (jea) null;
           return false;
@@ -240,8 +240,8 @@ final class BoulderComponent extends PathMoverComponent {
         return 7;
     }
 
-    final void q(byte param0) {
-        super.q(param0);
+    final void applyDefaults(byte param0) {
+        super.applyDefaults(param0);
         this.setSize(-110, 4194304, 4194304);
     }
 

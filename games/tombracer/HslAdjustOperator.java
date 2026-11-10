@@ -31,11 +31,11 @@ final class HslAdjustOperator extends TextureOperator {
         if (param1 != -1) {
           return (int[][]) null;
         }
-        var20 = this.field_h.a(param0, (byte) 109);
+        var20 = this.colourCache.getRow(param0, (byte) 109);
         var15 = var20;
         var13 = var15;
         var3 = var13;
-        if (this.field_h.field_f) {
+        if (this.colourCache.field_f) {
           var28 = this.getInputColourRow(param0, 0, -1);
           var30 = var28[0];
           var31 = var28[1];

@@ -179,7 +179,7 @@ final class qt {
               var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(125);
               var4 = (ht) (WhiteLightSensorComponent.field_K.get(-126, (long)var3));
               if (var4 == null) {
-                var4 = new ht(fk.field_b);
+                var4 = new ht(ColourRowCache.field_b);
                 WhiteLightSensorComponent.field_K.put(-1, var4, (long)var3);
               }
               ed.a(32, var4, true, var1);
@@ -376,7 +376,7 @@ final class qt {
             C2SChooseRewardPacket.field_a = null;
           } else {
             var3Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(125);
-            C2SChooseRewardPacket.field_a = new ht(fk.field_b);
+            C2SChooseRewardPacket.field_a = new ht(ColourRowCache.field_b);
             C2SChooseRewardPacket.field_a.setSecondaryKey(false, (long)var3Lifetime1);
             ed.a(32, C2SChooseRewardPacket.field_a, false, var1);
             uq.field_d = 0L;
@@ -386,7 +386,7 @@ final class qt {
             WaveformOperator.field_n = null;
           } else {
             if (WaveformOperator.field_n == null) {
-              WaveformOperator.field_n = new ht(fk.field_b);
+              WaveformOperator.field_n = new ht(ColourRowCache.field_b);
             }
           }
           if (var2 != 3) {

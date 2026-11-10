@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class PlantComponent extends PrefabComponent {
-    final boolean z(int param0) {
+    final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
           return false;
         }
@@ -196,13 +196,13 @@ final class PlantComponent extends PrefabComponent {
         }
     }
 
-    final void q(byte param0) {
+    final void applyDefaults(byte param0) {
         int var2;
         int var3;
         int var4;
         int var5;
         var5 = TombRacer.field_G ? 1 : 0;
-        super.q(param0);
+        super.applyDefaults(param0);
         var4 = this.getTypeId(12);
         if (38 != var4 &&
           var4 != 39) {

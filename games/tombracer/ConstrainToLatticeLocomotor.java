@@ -139,7 +139,7 @@ final class ConstrainToLatticeLocomotor extends ConstraintLocomotor {
               decompiledFrameRemainder0 = false;
             }
             else {
-              if (ua.abs(var11, param0 + 104) <= ua.abs(var12, -104)) {
+              if (S2CNextRoundPacket.abs(var11, param0 + 104) <= S2CNextRoundPacket.abs(var12, -104)) {
                 var4 = var11;
               } else {
                 var5 = var12;

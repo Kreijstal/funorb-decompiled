@@ -40,7 +40,7 @@ final class FinishOrderOverlay extends MatchOverlay {
           return;
         }
         var3 = (SwitchLinkList.b(0) + 130) / 2;
-        var4 = this.field_i.l(93);
+        var4 = this.field_i.getViewedPlayerIndex(93);
         var5 = 10309393;
         var6 = 11184810;
         var7 = 20;

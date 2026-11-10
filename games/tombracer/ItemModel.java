@@ -21,7 +21,7 @@ final class ItemModel extends TrapModel {
         RuntimeException decompiledCaughtException = null;
         try {
           super.attach(param0, param1, param2);
-          if (this.a(127).formatVersion < 20) {
+          if (this.getRoom(127).formatVersion < 20) {
             this.a(param1, -2159, param0);
           }
           if (0 != this.field_t) {
@@ -223,7 +223,7 @@ final class ItemModel extends TrapModel {
         try {
           super.decode(124, param1, param2);
           if (param0 <= 119) {
-            this.f(88);
+            this.updateAnimation(88);
           }
           if (param1.formatVersion < 20) {
             return;
@@ -267,8 +267,8 @@ final class ItemModel extends TrapModel {
         this.field_p = 0;
     }
 
-    public final void f(int param0) {
-        super.f(param0 ^ 0);
+    public final void updateAnimation(int param0) {
+        super.updateAnimation(param0 ^ 0);
         if (param0 != -4366) {
           return;
         }

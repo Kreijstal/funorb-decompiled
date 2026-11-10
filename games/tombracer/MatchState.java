@@ -25,7 +25,7 @@ final class MatchState implements dv {
     boolean[] field_I;
     int[] roundWins;
     kqa field_c;
-    boolean field_h;
+    boolean matchOver;
     ds field_D;
     private String[] colouredPlayerNames;
     static SpriteData[] field_j;
@@ -39,7 +39,7 @@ final class MatchState implements dv {
     private boolean[] finishedRound;
     static int field_w;
     private int resignedMask;
-    int field_z;
+    int declaredWinner;
     private wea[] field_u;
     private boolean field_M;
     private int leftMask;
@@ -74,7 +74,7 @@ final class MatchState implements dv {
 
     final int i(int param0) {
         if (param0 != 0) {
-          this.a(68, (byte) -44);
+          this.declareWinner(68, (byte) -44);
         }
         return this.field_r;
     }
@@ -285,8 +285,8 @@ final class MatchState implements dv {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          this.field_h = CircleMovementLocomotor.readBitFlag(5907, param0);
-          this.field_z = uma.readSignedBits(32, param0, -26803);
+          this.matchOver = CircleMovementLocomotor.readBitFlag(5907, param0);
+          this.declaredWinner = uma.readSignedBits(32, param0, -26803);
           this.roundIndex = param0.readBits((byte) 44, 32);
           this.roundSeed = param0.readBits((byte) 44, 32);
           this.field_y = (wd[]) (gha.a(this.field_y, 1, 8, -16499, TileOperator.field_q, param0));
@@ -333,9 +333,9 @@ final class MatchState implements dv {
           if (param0 != 0) {
             return;
           }
-          aoa.a(108, 13);
-          aoa.a(84, 14);
-          aoa.a(43, 15);
+          S2CPlayerProfilePacket.a(108, 13);
+          S2CPlayerProfilePacket.a(84, 14);
+          S2CPlayerProfilePacket.a(43, 15);
           return;
         }
     }
@@ -386,8 +386,8 @@ final class MatchState implements dv {
         return du.field_e;
     }
 
-    final void a(byte param0) {
-        if (this.field_z < 0) {
+    final void beginNextRound(byte param0) {
+        if (this.declaredWinner < 0) {
           this.roundIndex = this.roundIndex + 1;
           this.roundSeed = this.roundIndex + (this.matchSeed + 1);
           this.field_D.a((byte) 108);
@@ -447,9 +447,9 @@ final class MatchState implements dv {
         return true;
     }
 
-    final void a(int param0, byte param1) {
-        this.field_z = param0;
-        this.field_h = true;
+    final void declareWinner(int param0, byte param1) {
+        this.declaredWinner = param0;
+        this.matchOver = true;
         if (param1 <= 100) {
           this.roundSeed = 80;
         }
@@ -457,7 +457,7 @@ final class MatchState implements dv {
 
     final int getPlayerCourseIndex(int param0, int param1) {
         if (param0 != 1) {
-          this.a(21, (byte) 42);
+          this.declareWinner(21, (byte) 42);
         }
         return this.players[param1].getRoom((byte) 87).getCourseIndex(-79);
     }
@@ -558,7 +558,7 @@ final class MatchState implements dv {
 
     final boolean d(int param0) {
         if (param0 > -61) {
-          this.field_z = -104;
+          this.declaredWinner = -104;
         }
         return this.field_M;
     }
@@ -632,7 +632,7 @@ final class MatchState implements dv {
         int var12_intLifetime2;
         int var12_intLifetime3;
         this.field_s = true;
-        this.field_z = -1;
+        this.declaredWinner = -1;
         this.field_E = -1;
         try {
           this.roundsToWin = param4;

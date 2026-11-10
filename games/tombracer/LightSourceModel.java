@@ -10,7 +10,7 @@ final class LightSourceModel extends TrapModel {
     private LightSource field_s;
     private boolean field_r;
 
-    final void d(int param0) {
+    final void tick(int param0) {
         mra var4 = null;
         int var3 = TombRacer.field_G ? 1 : 0;
         if (param0 != -1) {
@@ -91,14 +91,14 @@ final class LightSourceModel extends TrapModel {
           }
           return;
         }
-        uw var3 = (uw) null;
-        this.a(81, (uw) null, (byte) -45);
+        RenderScene var3 = (RenderScene) null;
+        this.removeFromLayer(81, (RenderScene) null, (byte) -45);
         if (null != this.field_s) {
           this.field_s.a(false, 1011094480);
         }
     }
 
-    final int k(byte param0) {
+    final int getSceneLayer(byte param0) {
         if (param0 != -99) {
           this.field_m = -101;
           return 8;
@@ -106,7 +106,7 @@ final class LightSourceModel extends TrapModel {
         return 8;
     }
 
-    final void a(byte param0, int param1, uw param2) {
+    final void addToLayer(byte param0, int param1, RenderScene param2) {
         try {
           this.j(0);
           if (param0 <= 50) {
@@ -118,7 +118,7 @@ final class LightSourceModel extends TrapModel {
     }
 
     private final void j(int param0) {
-        uw var3;
+        RenderScene var3;
         ev var4;
         RoomLighting var5;
         int var6;
@@ -155,7 +155,7 @@ final class LightSourceModel extends TrapModel {
         if (var3 == null) {
           return;
         }
-        var4 = var3.a((byte) 59);
+        var4 = var3.getListener((byte) 59);
         if (!(var4 instanceof RoomLighting)) {
           return;
         }
@@ -337,7 +337,7 @@ final class LightSourceModel extends TrapModel {
         return;
     }
 
-    final void a(int param0, uw param1, byte param2) {
+    final void removeFromLayer(int param0, RenderScene param1, byte param2) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;

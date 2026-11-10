@@ -24,7 +24,7 @@ final class TreasureValuesOverlay extends MatchOverlay {
         int var13;
         int var14;
         var15 = TombRacer.field_G ? 1 : 0;
-        var2 = this.field_i.l(106);
+        var2 = this.field_i.getViewedPlayerIndex(106);
         if (param0 >= -13) {
           return;
         }

@@ -770,12 +770,12 @@ final class fea {
               HardwareOpenGlToolkit.field_pd = false;
             }
             ConsoleToken.field_f = TileGrid.field_g;
-            vf.field_f = SimpleBlockBehaviour.field_r;
+            RenderLayer.field_f = SimpleBlockBehaviour.field_r;
           }
           if (!HardwareOpenGlToolkit.field_pd &&
             WhiteNoiseOperator.field_m > fr.field_c &&
             qma.field_c) {
-            vf.field_f = SimpleBlockBehaviour.field_r;
+            RenderLayer.field_f = SimpleBlockBehaviour.field_r;
             ConsoleToken.field_f = TileGrid.field_g;
             fr.field_c = 0;
           }

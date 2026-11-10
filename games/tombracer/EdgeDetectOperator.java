@@ -50,9 +50,9 @@ final class EdgeDetectOperator extends TextureOperator {
         int[] var24;
         int[] var25;
         var16 = TombRacer.field_G ? 1 : 0;
-        var17 = this.field_i.a((byte) 80, param1);
+        var17 = this.monochromeCache.getRow((byte) 80, param1);
         var3 = var17;
-        if (this.field_i.field_d) {
+        if (this.monochromeCache.rowMissed) {
           var24 = this.getInputMonochromeRow(0, -73, -1 + param1 & hba.textureHeightMask);
           var5 = this.getInputMonochromeRow(0, -112, param1);
           var25 = this.getInputMonochromeRow(0, -47, param1 + 1 & hba.textureHeightMask);

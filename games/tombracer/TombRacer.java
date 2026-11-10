@@ -250,8 +250,8 @@ public final class TombRacer extends rfa implements ls {
         kla.releaseStatics(param0 ^ 11134);
         id.releaseStatics(param0 ^ -3666);
         MatchProtocol.releaseStatics(param0 ^ -3666);
-        bga.releaseStatics(200);
-        aoa.releaseStatics((byte) 63);
+        S2CProfileUpdatePacket.releaseStatics(200);
+        S2CPlayerProfilePacket.releaseStatics((byte) 63);
         eca.a(30152);
         IsaacCipher.releaseStatics(-3);
         rc.releaseStatics(true);
@@ -443,7 +443,7 @@ public final class TombRacer extends rfa implements ls {
         EffectEvent.releaseStatics(104);
         fm.d(-124);
         sqa.releaseStatics((byte) -128);
-        uw.releaseStatics(param0 + 3666);
+        RenderScene.releaseStatics(param0 + 3666);
         ObjectPool.releaseStatics(true);
         CollisionGrid.releaseStatics(-2147483648);
         bba.releaseStatics((byte) -28);
@@ -465,15 +465,15 @@ public final class TombRacer extends rfa implements ls {
         al.a((byte) 66);
         C2SActionPacket.b(0);
         S2CEventPacket.releaseStatics(param0 ^ -3922);
-        foa.releaseStatics(false);
+        S2CRoundDeadlinePacket.releaseStatics(false);
         S2CNewRoomPacket.releaseStatics((byte) -116);
         S2CPlayerSyncPacket.releaseStatics((byte) 48);
         S2CRoundResultPacket.releaseStatics(10);
         S2CRewardChoicePacket.releaseStatics(false);
         S2CCharacterChoicePacket.releaseStatics(param0 ^ -3670);
-        ua.releaseStatics(-105);
+        S2CNextRoundPacket.releaseStatics(-105);
         S2CStartRoundPacket.releaseStatics(-87);
-        lf.releaseStatics((byte) 117);
+        S2CMatchResultPacket.releaseStatics((byte) 117);
         wga.releaseStatics(true);
         C2SChooseRewardPacket.releaseStatics(0);
         C2SChooseCharacterPacket.releaseStatics((byte) 40);
@@ -529,7 +529,7 @@ public final class TombRacer extends rfa implements ls {
         TileGridCell.releaseStatics(param0 + 3674);
         baa.a(param0 + 3786);
         LightSource.releaseStatics(0);
-        vf.releaseStatics(-55);
+        RenderLayer.releaseStatics(-55);
         CharacterSelectPhase.releaseStatics(115);
         daa.releaseStatics(-12224);
         RoomCompletedScreen.releaseStatics((byte) -77);
@@ -666,7 +666,7 @@ public final class TombRacer extends rfa implements ls {
         ava.releaseStatics(-1);
         rga.releaseStatics((byte) 99);
         pea.a((byte) -100);
-        km.releaseStatics(-98);
+        ProceduralTexture.releaseStatics(-98);
         nka.releaseStatics((byte) -75);
         jla.releaseStatics(-23884);
         rr.releaseStatics(param0 + 3666);
@@ -738,7 +738,7 @@ public final class TombRacer extends rfa implements ls {
         tja.releaseStatics(false);
         ProxySocketConnector.releaseStatics((byte) 90);
         DateInputWidget.k((byte) 77);
-        fk.releaseStatics(-116);
+        ColourRowCache.releaseStatics(-116);
         RoomViewRenderer.releaseStatics(-2);
         dta.releaseStatics(0);
         AudioFilter.releaseStatics();
@@ -943,7 +943,7 @@ public final class TombRacer extends rfa implements ls {
         cia.releaseStatics(-1);
         lw.releaseStatics(70);
         waa.releaseStatics(param0 ^ -7488);
-        oea.a((byte) -49);
+        RenderableNode.a((byte) -49);
         rp.a(true);
         ad.releaseStatics(-10);
         wm.releaseStatics((byte) 115);
@@ -1108,7 +1108,7 @@ public final class TombRacer extends rfa implements ls {
         if (param0 > -15) {
           this.beginFrame(125);
         }
-        foa.field_b = false;
+        S2CRoundDeadlinePacket.field_b = false;
         PlatformModel.j(32454);
         S2CEventPacket.field_c[81] = -1;
         S2CEventPacket.field_c[75] = -1;
@@ -1180,8 +1180,8 @@ public final class TombRacer extends rfa implements ls {
         String var23 = null;
         FloatingMessage var24 = null;
         boolean[] var25 = null;
-        aoa var26 = null;
-        bga var27 = null;
+        S2CPlayerProfilePacket var26 = null;
+        S2CProfileUpdatePacket var27 = null;
         BitPacketBuffer var28 = null;
         int[] var29 = null;
         boolean[] var32 = null;
@@ -1286,9 +1286,9 @@ public final class TombRacer extends rfa implements ls {
               if (toa.field_j) {
                 return true;
               }
-              var26 = new aoa();
+              var26 = new S2CPlayerProfilePacket();
               var26.decode(param1, (byte) -19);
-              mq.field_e = var26.a(false);
+              mq.field_e = var26.getProfile(false);
               mq.field_e.field_a = mq.field_e.roomsComplete.get(78);
               mp.setMusicVolume(2, mq.field_e.field_h);
               S2CRoundResultPacket.a(mq.field_e.field_k, -114);
@@ -1307,9 +1307,9 @@ public final class TombRacer extends rfa implements ls {
               if (null == mq.field_e) {
                 return true;
               }
-              var27 = new bga();
+              var27 = new S2CProfileUpdatePacket();
               var27.decode(param1, (byte) -19);
-              var27.a(mq.field_e, (byte) -128);
+              var27.applyTo(mq.field_e, (byte) -128);
               return true;
             }
             if (87 == param0) {
@@ -1490,7 +1490,7 @@ public final class TombRacer extends rfa implements ls {
           }
           if (param1 == 69) {
             var4_intLifetime2 = param0.readUnsignedByte(255);
-            SecondaryNodeDequeIterator.field_a.d(5, var4_intLifetime2);
+            SecondaryNodeDequeIterator.field_a.announceResignedPlayers(5, var4_intLifetime2);
             return true;
           }
           if (param1 == 70) {
@@ -1499,7 +1499,7 @@ public final class TombRacer extends rfa implements ls {
           }
           if (param1 == 71) {
             var4_intLifetime3 = param0.readUnsignedByte(255);
-            SecondaryNodeDequeIterator.field_a.a(var4_intLifetime3, (byte) -23);
+            SecondaryNodeDequeIterator.field_a.announceLeftPlayers(var4_intLifetime3, (byte) -23);
             return true;
           }
           if (param2 <= 108) {
@@ -1531,7 +1531,7 @@ public final class TombRacer extends rfa implements ls {
           this.field_D = (UnlockOverlay) null;
         }
         PlantModel.b(false, 3);
-        ua.b(4, 2);
+        S2CNextRoundPacket.b(4, 2);
         PlantComponent.b(-104, 6);
         Puddle.b(7, (byte) -120);
         if (param0 != 1) {

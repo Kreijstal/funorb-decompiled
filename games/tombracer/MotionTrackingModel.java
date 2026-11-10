@@ -35,7 +35,7 @@ abstract class MotionTrackingModel extends TrapModel {
         return this.moving;
     }
 
-    void d(int param0) {
+    void tick(int param0) {
         int stackIn_8_0 = 0;
         int stackIn_16_0 = 0;
         boolean stackIn_21_1 = false;
@@ -74,7 +74,7 @@ abstract class MotionTrackingModel extends TrapModel {
         int var5Lifetime1;
         int var6Lifetime1;
         var8 = TombRacer.field_G ? 1 : 0;
-        super.d(param0);
+        super.tick(param0);
         var2 = 0;
         var3 = 0;
         var4 = 0;

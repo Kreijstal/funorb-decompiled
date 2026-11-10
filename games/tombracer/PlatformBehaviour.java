@@ -35,10 +35,10 @@ final class PlatformBehaviour extends Behaviour {
         }
         int var7 = 0;
         if (param4 >= 79) {
-          return foa.a(param1, param5, this.trap.getY(9648), param2, -var7 + this.trap.getWidth(-62), (byte) 75, param0, this.trap.getHeight((byte) 55) - var7, 16, this.trap.getX(3));
+          return S2CRoundDeadlinePacket.a(param1, param5, this.trap.getY(9648), param2, -var7 + this.trap.getWidth(-62), (byte) 75, param0, this.trap.getHeight((byte) 55) - var7, 16, this.trap.getX(3));
         }
         this.field_q = -65;
-        return foa.a(param1, param5, this.trap.getY(9648), param2, -var7 + this.trap.getWidth(-62), (byte) 75, param0, this.trap.getHeight((byte) 55) - var7, 16, this.trap.getX(3));
+        return S2CRoundDeadlinePacket.a(param1, param5, this.trap.getY(9648), param2, -var7 + this.trap.getWidth(-62), (byte) 75, param0, this.trap.getHeight((byte) 55) - var7, 16, this.trap.getX(3));
     }
 
     final boolean g(byte param0) {

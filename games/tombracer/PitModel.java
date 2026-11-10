@@ -17,7 +17,7 @@ final class PitModel extends TrapModel {
         super(param0);
     }
 
-    final void a(uw param0, int param1) {
+    final void removeFromScene(RenderScene param0, int param1) {
         ev var3 = null;
         RoomLighting var4 = null;
         RuntimeException stackIn_11_0 = null;
@@ -29,11 +29,11 @@ final class PitModel extends TrapModel {
           if (param1 < 82) {
             this.field_t = 34;
           }
-          super.a(param0, 87);
+          super.removeFromScene(param0, 87);
           this.field_q = (oia[][]) null;
           this.field_m = (dpa[][]) null;
           if (null != this.field_u) {
-            var3 = param0.a((byte) 59);
+            var3 = param0.getListener((byte) 59);
             if (var3 instanceof RoomLighting) {
               var4 = (RoomLighting) (var3);
               var4.b((byte) -105, this.field_u);
@@ -266,7 +266,7 @@ final class PitModel extends TrapModel {
         Room var30;
         dpa var31;
         var26 = TombRacer.field_G ? 1 : 0;
-        var30 = this.a(113);
+        var30 = this.getRoom(113);
         var3 = var30.getWidth((byte) -86);
         var4 = var30.getHeight(85);
         var5 = this.body.getX(3);
@@ -550,14 +550,14 @@ final class PitModel extends TrapModel {
         }
     }
 
-    final int k(byte param0) {
+    final int getSceneLayer(byte param0) {
         if (param0 != -99) {
           field_r = (String) null;
         }
         return 2;
     }
 
-    final void a(int param0, uw param1, byte param2) {
+    final void removeFromLayer(int param0, RenderScene param1, byte param2) {
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
@@ -581,7 +581,7 @@ final class PitModel extends TrapModel {
                 if (var9 != null &&
                   var9.field_j != 3) {
                   while (var6 != null) {
-                    param1.a(param0, var6, (byte) -33);
+                    param1.removeFromLayer(param0, var6, (byte) -33);
                     var6 = var6.field_b;
                   }
                 }
@@ -594,7 +594,7 @@ final class PitModel extends TrapModel {
               var5Lifetime1 = var8;
               while (var8 < this.field_t) {
                 if (this.field_q[var4_intLifetime1][var8] != null) {
-                  param1.a(0, this.field_q[var4_intLifetime1][var8], (byte) -33);
+                  param1.removeFromLayer(0, this.field_q[var4_intLifetime1][var8], (byte) -33);
                 }
                 var8++;
               }
@@ -743,7 +743,7 @@ final class PitModel extends TrapModel {
         }
     }
 
-    final void a(byte param0, int param1, uw param2) {
+    final void addToLayer(byte param0, int param1, RenderScene param2) {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -767,7 +767,7 @@ final class PitModel extends TrapModel {
                 if (var9 != null &&
                   var9.field_j != 3) {
                   while (var6 != null) {
-                    param2.a((byte) -5, param1, var6);
+                    param2.addToLayer((byte) -5, param1, var6);
                     var6 = var6.field_b;
                   }
                 }
@@ -780,14 +780,14 @@ final class PitModel extends TrapModel {
               var5Lifetime1 = var8;
               while (this.field_t > var8) {
                 if (null != this.field_q[var4_intLifetime1][var8]) {
-                  param2.a((byte) 17, 0, this.field_q[var4_intLifetime1][var8]);
+                  param2.addToLayer((byte) 17, 0, this.field_q[var4_intLifetime1][var8]);
                 }
                 var8++;
               }
             }
           }
           if (param0 < 50) {
-            this.k((byte) 96);
+            this.getSceneLayer((byte) 96);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -804,7 +804,7 @@ final class PitModel extends TrapModel {
         }
     }
 
-    final void b(int param0, uw param1) {
+    final void addToScene(int param0, RenderScene param1) {
         AnimatedLight var6 = null;
         ev var4 = null;
         RoomLighting var5 = null;
@@ -819,13 +819,13 @@ final class PitModel extends TrapModel {
             var6 = new AnimatedLight(tga.field_a, 0, 0, 0, 0, 16720418, 200, 8);
             this.field_u = new LightSource(var6);
             this.field_u.a(-17825792 + this.getRenderZ((byte) -118) + 4194304, (byte) 95, this.getRenderY((byte) 108), this.getRenderX((byte) 84));
-            var4 = param1.a((byte) 59);
+            var4 = param1.getListener((byte) 59);
             if (var4 instanceof RoomLighting) {
               var5 = (RoomLighting) (var4);
               var5.a((byte) 45, this.field_u);
             }
           }
-          super.b(param0 + param0, param1);
+          super.addToScene(param0 + param0, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "kva.WA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

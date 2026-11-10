@@ -396,7 +396,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         }
         if (!param1 &&
           var7Lifetime1 != 0 &&
-          8192 <= ua.abs(param4, -124) + ua.abs(param3, -127) &&
+          8192 <= S2CNextRoundPacket.abs(param4, -124) + S2CNextRoundPacket.abs(param3, -127) &&
           param5 <= 2) {
           this.room.a(false, this.getX(3), 0, 0, this.getY(9648), 0);
         }
@@ -431,11 +431,11 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         this.obstructionLevel = 0;
         this.fallSpeed = 0;
         this.floating = param0 ? true : false;
-        uw var5 = this.room.getScene((byte) 104);
+        RenderScene var5 = this.room.getScene((byte) 104);
         if (var5 != null) {
           var3 = (TrapModel) (this.models.first(-80));
           while (var3 != null) {
-            var3.a(-65, var5);
+            var3.updateSceneLayer(-65, var5);
             var3 = (TrapModel) (this.models.next(123));
           }
         }
@@ -601,7 +601,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         }
         var7 = (TrapModel) (this.models.first(-80));
         while (var7 != null) {
-          var7.d(-1);
+          var7.tick(-1);
           var7 = (TrapModel) (this.models.next(126));
         }
         if (this.removeWhenLocomotorsDone &&
@@ -1019,7 +1019,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
               this.a(this.b(3, var10), (byte) 124, var11);
             }
           } else {
-            this.c(437453352, false);
+            this.rebuildBehaviourModels(437453352, false);
           }
           this.field_o = new bca(param0.formatVersion, param2);
           this.saveInitialPlacement(0);
@@ -1201,7 +1201,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         return this.field_W[param0];
     }
 
-    final void a(int param0, uw param1) {
+    final void a(int param0, RenderScene param1) {
         int var4 = 0;
         CharSequence var5 = null;
         Trap var6 = null;
@@ -1405,7 +1405,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         return var2;
     }
 
-    private final void a(uw param0, int param1) {
+    private final void a(RenderScene param0, int param1) {
         int var4 = 0;
         TrapModel var5 = null;
         RuntimeException stackIn_13_0 = null;
@@ -1417,14 +1417,14 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         try {
           if (this.A((byte) 26) ||
             this.B((byte) -81)) {
-            param0.a(9, (Renderable) (this), (byte) -33);
+            param0.removeFromLayer(9, (Renderable) (this), (byte) -33);
           }
           if (param1 != 9411) {
             this.field_cb = true;
           }
           var5 = (TrapModel) (this.models.first(-80));
           while (var5 != null) {
-            var5.a(param0, 120);
+            var5.removeFromScene(param0, 120);
             var5 = (TrapModel) (this.models.next(125));
           }
           return;
@@ -1442,7 +1442,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         }
     }
 
-    final void c(int param0, boolean param1) {
+    final void rebuildBehaviourModels(int param0, boolean param1) {
         Trap var3_ref = null;
         int var4 = TombRacer.field_G ? 1 : 0;
         this.clearModels(-1332);
@@ -1454,7 +1454,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         if (param1) {
           var3_ref = (Trap) (this.children.first(param0 ^ -437453416));
           while (var3_ref != null) {
-            var3_ref.c(437453352, true);
+            var3_ref.rebuildBehaviourModels(437453352, true);
             var3_ref = (Trap) (this.children.next(117));
           }
         }
@@ -1476,8 +1476,8 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           this.parent.a(26492, param1, param2);
         }
         if (param0 != 26492) {
-          uw var5 = (uw) null;
-          this.a(-7, (uw) null);
+          RenderScene var5 = (RenderScene) null;
+          this.a(-7, (RenderScene) null);
         }
     }
 
@@ -1508,7 +1508,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
 
     final int getInitialLocalX(int param0) {
         if (param0 < 7) {
-          this.f(54, -8);
+          this.addHeight(54, -8);
         }
         return this.initialLocalX;
     }
@@ -1760,7 +1760,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         int var4 = 0;
         int var2 = this.localY;
         if (param0 != 9648) {
-          this.c(-71, false);
+          this.rebuildBehaviourModels(-71, false);
         }
         if (this.parent != null) {
           var3 = this.localX >> 8;
@@ -2053,7 +2053,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         }
     }
 
-    private final void a(uw param0, boolean param1) {
+    private final void a(RenderScene param0, boolean param1) {
         int var4 = 0;
         TrapModel var5 = null;
         RuntimeException stackIn_13_0 = null;
@@ -2065,14 +2065,14 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         try {
           if (this.A((byte) 105) ||
             this.B((byte) -81)) {
-            param0.a((byte) 4, 9, (Renderable) (this));
+            param0.addToLayer((byte) 4, 9, (Renderable) (this));
           }
           if (!param1) {
             return;
           }
           var5 = (TrapModel) (this.models.first(-80));
           while (var5 != null) {
-            var5.b(0, param0);
+            var5.addToScene(0, param0);
             var5 = (TrapModel) (this.models.next(111));
           }
           return;
@@ -2292,11 +2292,11 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         }
     }
 
-    final void f(int param0, int param1) {
+    final void addHeight(int param0, int param1) {
         int var4 = TombRacer.field_G ? 1 : 0;
         TrapModel var5 = (TrapModel) (this.models.first(-80));
         while (var5 != null) {
-          var5.a(param1, (byte) 122);
+          var5.addElevationOffset(param1, (byte) 122);
           var5 = (TrapModel) (this.models.next(param0 ^ 102));
         }
         if (param0 != 10) {
@@ -2898,7 +2898,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         return this.field_h[param0];
     }
 
-    public final void f(int param0) {
+    public final void updateAnimation(int param0) {
         if (param0 != -4366) {
           this.initialLocalX = 18;
         }

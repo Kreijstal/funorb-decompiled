@@ -12,5 +12,5 @@ interface Renderable {
 
     public abstract boolean isRenderExpired(byte param0);
 
-    public abstract void f(int param0);
+    public abstract void updateAnimation(int param0);
 }

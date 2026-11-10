@@ -122,7 +122,7 @@ final class IsaacCipher {
             break;
           }
         }
-        return oea.floorModulo(var4, param0, -66);
+        return RenderableNode.floorModulo(var4, param0, -66);
     }
 
     private final void initializeState(boolean param0) {

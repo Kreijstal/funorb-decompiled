@@ -123,10 +123,10 @@ final class LineNoiseOperator extends TextureOperator {
         int var17Lifetime1;
         int var17Lifetime2;
         var27 = TombRacer.field_G ? 1 : 0;
-        var3 = this.field_i.a((byte) -104, param1);
-        if (this.field_i.field_d) {
+        var3 = this.monochromeCache.getRow((byte) -104, param1);
+        if (this.monochromeCache.rowMissed) {
           var4 = this.field_q >> 1;
-          var31 = this.field_i.a(0);
+          var31 = this.monochromeCache.getAllRows(0);
           var6 = new Random((long)this.field_n);
           for (var7 = 0; this.field_p > var7; var7++) {
             if (this.field_q <= 0) {

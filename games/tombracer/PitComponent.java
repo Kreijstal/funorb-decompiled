@@ -58,8 +58,8 @@ final class PitComponent extends PrefabComponent {
         }
     }
 
-    final void q(byte param0) {
-        super.q(param0);
+    final void applyDefaults(byte param0) {
+        super.applyDefaults(param0);
     }
 
     final void encode(boolean param0, BitPacketBuffer param1) {
@@ -79,7 +79,7 @@ final class PitComponent extends PrefabComponent {
         return 4;
     }
 
-    final boolean z(int param0) {
+    final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
           field_H = 119;
           return false;

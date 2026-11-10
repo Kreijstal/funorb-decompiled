@@ -99,7 +99,7 @@ final class GasVentModel extends TrapModel {
         this.field_o = 0;
     }
 
-    final void d(int param0) {
+    final void tick(int param0) {
         Room var11 = null;
         Particle var12 = null;
         Particle var16 = null;
@@ -128,7 +128,7 @@ final class GasVentModel extends TrapModel {
         int var3 = this.field_n.getLevel((byte) -108);
         if (this.field_n.getSwitchState((byte) -74).b((byte) 120)) {
           this.field_q = var2;
-          var11 = this.a(param0 + 44);
+          var11 = this.getRoom(param0 + 44);
           Room var4 = var11;
           var5 = var11.spawnParticle(this.getRenderX((byte) 42), this.getRenderY((byte) 118) + 2097152, (byte) 100, this.getRenderZ((byte) -92) + 8 << 16);
           var5.a(false, 32, 12, 4, 10 + uca.cosmeticRandom.nextBounded(10, param0 + 1));
@@ -171,7 +171,7 @@ final class GasVentModel extends TrapModel {
           return;
         }
         this.field_q = var3;
-        Room var18 = this.a(param0 + 44);
+        Room var18 = this.getRoom(param0 + 44);
         var5Lifetime1 = var18.spawnParticle(this.getRenderX((byte) 42), this.getRenderY((byte) 118) + 2097152, (byte) 100, this.getRenderZ((byte) -92) + 8 << 16);
         var5Lifetime1.a(false, 32, 12, 4, 10 + uca.cosmeticRandom.nextBounded(10, param0 + 1));
         var6Lifetime1 = 262144 + uca.cosmeticRandom.nextBounded(262144, 0);

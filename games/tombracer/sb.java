@@ -66,7 +66,7 @@ final class sb {
         try {
           TextLayout.field_a = param4;
           qoa.field_b = param1;
-          ua.field_a = param2;
+          S2CNextRoundPacket.field_a = param2;
           ControllerLocomotor.field_v = param3;
           ns.field_j = new SoundCache(qoa.field_b, ControllerLocomotor.field_v);
           CauldronComponent.field_J = new u[237];

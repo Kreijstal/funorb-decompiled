@@ -70,7 +70,7 @@ final class cja {
               scanLoop1: while (true) {
                 if (var12 >= var19.length) {
                   if (var11 == 0 &&
-                    param5 != fk.field_b) {
+                    param5 != ColourRowCache.field_b) {
                     break scanLoop1;
                   }
                   var8_int = 0;

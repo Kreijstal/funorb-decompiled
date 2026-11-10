@@ -43,15 +43,15 @@ class SpriteSampleOperator extends TextureOperator {
         this.field_o = -1;
     }
 
-    final int a(int param0) {
+    final int getSpriteId(int param0) {
         if (param0 < 96) {
-          this.b(-44);
+          this.releaseRowCache(-44);
         }
         return this.field_o;
     }
 
-    final void b(int param0) {
-        super.b(-77);
+    final void releaseRowCache(int param0) {
+        super.releaseRowCache(-77);
         if (param0 >= -32) {
           return;
         }
@@ -75,14 +75,14 @@ class SpriteSampleOperator extends TextureOperator {
         int[][] var13;
         int[][] var14;
         var11 = TombRacer.field_G ? 1 : 0;
-        var14 = this.field_h.a(param0, (byte) -66);
+        var14 = this.colourCache.getRow(param0, (byte) -66);
         var13 = var14;
         var12 = var13;
         var3 = var12;
         if (param1 != -1) {
           return (int[][]) null;
         }
-        if (this.field_h.field_f &&
+        if (this.colourCache.field_f &&
           this.a(false)) {
           var4 = var14[0];
           var5 = var14[1];

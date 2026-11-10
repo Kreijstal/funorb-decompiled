@@ -88,7 +88,7 @@ final class gga extends ofa implements ButtonListener {
         nm.a(vha.field_a, (byte) 108);
         TriangleRasterizer.useRasterClip();
         SoftwareRasterizer.clear();
-        uw.a(false);
+        RenderScene.a(false);
         if (var5 < 256) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_a, 0, 256 - var5);
         }

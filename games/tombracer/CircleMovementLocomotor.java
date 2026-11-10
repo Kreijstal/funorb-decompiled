@@ -213,7 +213,7 @@ final class CircleMovementLocomotor extends Locomotor {
           um.field_m = param6;
           hpa.field_g = param5;
           SimpleConditionBehaviour.field_r = -1L;
-          fk.field_b = param6.length;
+          ColourRowCache.field_b = param6.length;
           C2SChooseRewardPacket.field_a = null;
           WaveformOperator.field_n = null;
           PlayerViewport.field_o = false;

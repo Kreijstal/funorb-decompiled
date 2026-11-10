@@ -46,7 +46,7 @@ final class PlayerModel implements PlayerAnimator, gs {
         pa.a(3, param0, wga.field_a[this.field_i], param2, false);
     }
 
-    public final void f(int param0) {
+    public final void updateAnimation(int param0) {
         if (this.field_p.l(false)) {
           return;
         }
@@ -905,11 +905,11 @@ final class PlayerModel implements PlayerAnimator, gs {
         if (param0 != 30355) {
           return;
         }
-        uw var3 = param1.getScene((byte) -128);
+        RenderScene var3 = param1.getScene((byte) -128);
         if (var3 == null) {
           return;
         }
-        ev var4 = var3.a((byte) 59);
+        ev var4 = var3.getListener((byte) 59);
         if (!(var4 instanceof RoomLighting)) {
           return;
         }

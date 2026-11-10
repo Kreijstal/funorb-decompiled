@@ -94,7 +94,7 @@ final class ava {
             hp.field_a != null ||
             nra.field_g != null ||
             HotspotTextWidget.field_z != null)) {
-            for (var9 = 0; fk.field_b > var9; var9++) {
+            for (var9 = 0; ColourRowCache.field_b > var9; var9++) {
               var10_int = 255 & C2SChooseRewardPacket.field_a.field_ac[var9];
               if (PowerUpItemBehaviour.field_u != null &&
                 null != PowerUpItemBehaviour.field_u[var9] &&
@@ -288,7 +288,7 @@ final class ava {
               }
               var19 = var19 + di.field_a;
             }
-            var23 = ua.describeGameJoinStatus(var12.field_Lb, var20, -65);
+            var23 = S2CNextRoundPacket.describeGameJoinStatus(var12.field_Lb, var20, -65);
             var24 = var23;
             var30 = var24;
             var25 = var30;
@@ -392,7 +392,7 @@ final class ava {
                 var25 = var30_refLifetime1;
                 var25 = null;
                 var26Lifetime1 = 0;
-                for (var27_int = 0; var27_int < fk.field_b; var27_int++) {
+                for (var27_int = 0; var27_int < ColourRowCache.field_b; var27_int++) {
                   var28 = 255 & C2SChooseRewardPacket.field_a.field_ac[var27_int];
                   var29 = 0;
                   if (null != PowerUpItemBehaviour.field_u &&

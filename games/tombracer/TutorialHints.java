@@ -37,7 +37,7 @@ final class TutorialHints {
         if (var4 != this.field_g) {
           this.field_g = var4;
           if (0 == this.field_g) {
-            this.queueHint(fk.field_j, new wq(), 50, param0 ^ -9907);
+            this.queueHint(ColourRowCache.field_j, new wq(), 50, param0 ^ -9907);
           }
           var5_ref_fsa__ = var3.getAllTraps(16);
           var6_ref_fsa__ = var5_ref_fsa__;
@@ -80,7 +80,7 @@ final class TutorialHints {
         if (!this.field_d &&
           this.field_k) {
           this.field_d = true;
-          this.queueHint(uw.field_b, (ms) null, 5, -88);
+          this.queueHint(RenderScene.field_b, (ms) null, 5, -88);
         }
         if (!this.field_f &&
           var10.getRoomTreasure(393216, 2) > 0) {

@@ -27,7 +27,7 @@ final class ObjectPool implements Renderable {
         return 0;
     }
 
-    public final void f(int param0) {
+    public final void updateAnimation(int param0) {
         if (param0 == -4366) {
           return;
         }
@@ -54,11 +54,11 @@ final class ObjectPool implements Renderable {
         return param0;
     }
 
-    final void a(uw param0, byte param1, boolean param2, int param3) {
+    final void a(RenderScene param0, byte param1, boolean param2, int param3) {
         try {
           this.field_a = param2 ? true : false;
           if (!param2) {
-            param0.a((byte) 83, param3, (Renderable) (this));
+            param0.addToLayer((byte) 83, param3, (Renderable) (this));
           }
           int var5_int = -45 / ((59 - param1) / 63);
         } catch (RuntimeException runtimeException) {
@@ -114,8 +114,8 @@ final class ObjectPool implements Renderable {
         if (param0 > 111) {
           return;
         }
-        uw var4 = (uw) null;
-        this.a((uw) null, (byte) -42, false, 21);
+        RenderScene var4 = (RenderScene) null;
+        this.a((RenderScene) null, (byte) -42, false, 21);
     }
 
     public final boolean isRenderExpired(byte param0) {
@@ -126,7 +126,7 @@ final class ObjectPool implements Renderable {
         return false;
     }
 
-    final PooledObject spawn(int param0, int param1, int param2, uw param3, int param4) {
+    final PooledObject spawn(int param0, int param1, int param2, RenderScene param3, int param4) {
         PooledObject var6 = null;
         RuntimeException var6_ref = null;
         PooledObject stackIn_9_0 = null;

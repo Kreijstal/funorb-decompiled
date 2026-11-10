@@ -8,10 +8,10 @@ final class pr {
 
     final static boolean a(int param0, int param1, int param2) {
         if (param1 == -23611) {
-          return MovingSawComponent.a(param2, (byte) -128, param0) & foa.a(param0, param2, 0);
+          return MovingSawComponent.a(param2, (byte) -128, param0) & S2CRoundDeadlinePacket.a(param0, param2, 0);
         }
         field_b = (String[]) null;
-        return MovingSawComponent.a(param2, (byte) -128, param0) & foa.a(param0, param2, 0);
+        return MovingSawComponent.a(param2, (byte) -128, param0) & S2CRoundDeadlinePacket.a(param0, param2, 0);
     }
 
     protected final void finalize() throws Throwable {

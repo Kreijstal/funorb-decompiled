@@ -473,7 +473,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           field_w = (ft) null;
         }
         rma.a(true, faa.field_g, ConstraintLocomotor.field_p, (byte) 119);
-        bga.field_d = true;
+        S2CProfileUpdatePacket.field_d = true;
     }
 
     final static boolean a(int param0) {

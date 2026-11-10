@@ -67,7 +67,7 @@ final class SnakePitModel extends TrapModel {
         }
     }
 
-    final void a(int param0, uw param1, byte param2) {
+    final void removeFromLayer(int param0, RenderScene param1, byte param2) {
         int var5 = 0;
         int var4_int = 0;
         int var6 = 0;
@@ -83,7 +83,7 @@ final class SnakePitModel extends TrapModel {
           if (this.field_r != null) {
             for (var4_int = 0; var4_int < this.field_o; var4_int++) {
               for (var5 = 0; this.field_q > var5; var5++) {
-                param1.a(param0, this.field_r[var4_int][var5], (byte) -33);
+                param1.removeFromLayer(param0, this.field_r[var4_int][var5], (byte) -33);
               }
             }
           }
@@ -91,7 +91,7 @@ final class SnakePitModel extends TrapModel {
             var7 = 0;
             var4_intLifetime1 = var7;
             while (var7 < this.field_s.length) {
-              param1.a(2, this.field_s[var7], (byte) -33);
+              param1.removeFromLayer(2, this.field_s[var7], (byte) -33);
               var7++;
             }
           }
@@ -144,7 +144,7 @@ final class SnakePitModel extends TrapModel {
         if (param0 != -3440) {
           this.field_r = (lca[][]) null;
         }
-        var17 = this.a(param0 + 3494);
+        var17 = this.getRoom(param0 + 3494);
         var3 = this.body.getX(3);
         var4 = this.body.getY(9648);
         this.field_o = this.body.getWidth(param0 ^ 3403) / C2SSubmitSettingsPacket.field_a;
@@ -250,14 +250,14 @@ final class SnakePitModel extends TrapModel {
         this.field_u = 20;
     }
 
-    final int k(byte param0) {
+    final int getSceneLayer(byte param0) {
         if (param0 != -99) {
           return -7;
         }
         return 2;
     }
 
-    final void b(int param0, uw param1) {
+    final void addToScene(int param0, RenderScene param1) {
         try {
           if (this.field_r == null) {
             this.k(-3440);
@@ -265,13 +265,13 @@ final class SnakePitModel extends TrapModel {
           if (null == this.field_s) {
             this.i(-20687);
           }
-          super.b(param0, param1);
+          super.addToScene(param0, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "oo.WA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(byte param0, int param1, uw param2) {
+    final void addToLayer(byte param0, int param1, RenderScene param2) {
         int var5 = 0;
         int var4_int = 0;
         int var6 = 0;
@@ -285,12 +285,12 @@ final class SnakePitModel extends TrapModel {
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           if (param0 <= 50) {
-            this.k((byte) -70);
+            this.getSceneLayer((byte) -70);
           }
           if (this.field_r != null) {
             for (var4_int = 0; this.field_o > var4_int; var4_int++) {
               for (var5 = 0; this.field_q > var5; var5++) {
-                param2.a((byte) -100, param1, this.field_r[var4_int][var5]);
+                param2.addToLayer((byte) -100, param1, this.field_r[var4_int][var5]);
               }
             }
           }
@@ -298,7 +298,7 @@ final class SnakePitModel extends TrapModel {
             var7 = 0;
             var4_intLifetime1 = var7;
             while (var7 < this.field_s.length) {
-              param2.a((byte) -88, 2, this.field_s[var7]);
+              param2.addToLayer((byte) -88, 2, this.field_s[var7]);
               var7++;
             }
             return;
@@ -440,7 +440,7 @@ final class SnakePitModel extends TrapModel {
         }
     }
 
-    final void d(int param0) {
+    final void tick(int param0) {
         w var2;
         int var3_int;
         Trap var3;
@@ -449,11 +449,11 @@ final class SnakePitModel extends TrapModel {
         int var6;
         w var7;
         var6 = TombRacer.field_G ? 1 : 0;
-        super.d(param0 ^ 0);
+        super.tick(param0 ^ 0);
         if (this.field_s == null) {
           return;
         }
-        var7 = (w) (this.a(47).field_G);
+        var7 = (w) (this.getRoom(47).field_G);
         var2 = var7;
         if (var2 == null) {
           return;
@@ -493,7 +493,7 @@ final class SnakePitModel extends TrapModel {
     final ka a(boolean param0, lca param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        uw var4 = null;
+        RenderScene var4 = null;
         ka stackIn_9_0 = null;
         ka stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
@@ -502,8 +502,8 @@ final class SnakePitModel extends TrapModel {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            var4 = (uw) null;
-            this.a((byte) -92, -110, (uw) null);
+            var4 = (RenderScene) null;
+            this.addToLayer((byte) -92, -110, (RenderScene) null);
           }
           var3_int = param1.field_f;
           if (var3_int != 0) {
@@ -542,8 +542,8 @@ final class SnakePitModel extends TrapModel {
         return -1;
     }
 
-    final void a(uw param0, int param1) {
-        super.a(param0, 118);
+    final void removeFromScene(RenderScene param0, int param1) {
+        super.removeFromScene(param0, 118);
         if (param1 <= 82) {
           return;
         }

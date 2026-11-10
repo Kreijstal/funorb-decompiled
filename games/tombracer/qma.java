@@ -19,7 +19,7 @@ class qma implements d {
     }
 
     public boolean a(int param0, byte param1) {
-        km var3;
+        ProceduralTexture var3;
         boolean stackIn_6_0 = false;
         if (param1 < 10) {
           return true;
@@ -61,16 +61,16 @@ class qma implements d {
         return this.a(param1, 0).a(param5, this.field_d, param2, (double)param4, (d) (this), (byte) 104, param3, this.field_b[param1].field_e);
     }
 
-    private final km a(int param0, int param1) {
+    private final ProceduralTexture a(int param0, int param1) {
         DualLinkNode var3 = this.field_e.a(param1 + param1, (long)param0);
         if (var3 != null) {
-          return (km) (var3);
+          return (ProceduralTexture) (var3);
         }
         byte[] var4 = this.field_g.f(param0, -109);
         if (var4 == null) {
           return null;
         }
-        km var5 = new km(new PacketBuffer(var4));
+        ProceduralTexture var5 = new ProceduralTexture(new PacketBuffer(var4));
         this.field_e.a(var5, (byte) 96, (long)param0);
         return var5;
     }

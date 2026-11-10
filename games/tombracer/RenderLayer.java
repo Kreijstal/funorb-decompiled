@@ -3,20 +3,20 @@
  */
 import java.util.*;
 
-final class vf {
+final class RenderLayer {
     static String field_a;
     static String field_e;
-    private uw field_i;
+    private RenderScene field_i;
     static int field_f;
     static java.util.zip.CRC32 field_g;
     static String field_c;
-    private IntrusiveDeque field_j;
+    private IntrusiveDeque nodes;
     static int field_d;
     static int[] field_b;
     static String field_h;
 
-    final void b(int param0) {
-        this.field_j.clear(param0 ^ 323);
+    final void clear(int param0) {
+        this.nodes.clear(param0 ^ 323);
         if (param0 == 331) {
           return;
         }
@@ -73,30 +73,30 @@ final class vf {
         }
     }
 
-    final void a(int param0) {
+    final void updateAnimations(int param0) {
         Object var2;
-        oea var2_ref;
+        RenderableNode var2_ref;
         int var3;
         var2 = null;
         var3 = TombRacer.field_G ? 1 : 0;
         if (param0 == 1) {
-          var2_ref = (oea) (this.field_j.first(-80));
+          var2_ref = (RenderableNode) (this.nodes.first(-80));
           while (var2_ref != null) {
-            var2_ref.field_h.f(param0 ^ -4365);
-            var2_ref = (oea) (this.field_j.next(param0 + 111));
+            var2_ref.renderable.updateAnimation(param0 ^ -4365);
+            var2_ref = (RenderableNode) (this.nodes.next(param0 + 111));
           }
         } else {
           field_e = (String) null;
-          var2_ref = (oea) (this.field_j.first(-80));
+          var2_ref = (RenderableNode) (this.nodes.first(-80));
           while (var2_ref != null) {
-            var2_ref.field_h.f(param0 ^ -4365);
-            var2_ref = (oea) (this.field_j.next(param0 + 111));
+            var2_ref.renderable.updateAnimation(param0 ^ -4365);
+            var2_ref = (RenderableNode) (this.nodes.next(param0 + 111));
           }
         }
     }
 
-    final void a(iq param0, int param1) {
-        oea var3 = null;
+    final void removeExpired(iq param0, int param1) {
+        RenderableNode var3 = null;
         int var4 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -108,12 +108,12 @@ final class vf {
           if (param1 != 1) {
             return;
           }
-          var3 = (oea) (this.field_j.first(-80));
+          var3 = (RenderableNode) (this.nodes.first(-80));
           while (var3 != null) {
-            if (var3.field_h.isRenderExpired((byte) 48)) {
+            if (var3.renderable.isRenderExpired((byte) 48)) {
               var3.unlink(92);
             }
-            var3 = (oea) (this.field_j.next(param1 ^ 124));
+            var3 = (RenderableNode) (this.nodes.next(param1 ^ 124));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -130,18 +130,18 @@ final class vf {
         }
     }
 
-    final void a(Renderable param0, byte param1) {
+    final void add(Renderable param0, byte param1) {
         try {
-          this.a((byte) 64, param0);
+          this.remove((byte) 64, param0);
           int var3_int = -113 % ((36 - param1) / 59);
-          this.field_j.addLast((byte) -128, new oea(param0));
+          this.nodes.addLast((byte) -128, new RenderableNode(param0));
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vf.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(byte param0, Renderable param1) {
-        oea var3 = null;
+    final void remove(byte param0, Renderable param1) {
+        RenderableNode var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -150,12 +150,12 @@ final class vf {
         RuntimeException decompiledCaughtException = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          var3 = (oea) (this.field_j.first(-80));
+          var3 = (RenderableNode) (this.nodes.first(-80));
           while (var3 != null) {
-            if (var3.field_h == param1) {
+            if (var3.renderable == param1) {
               var3.unlink(28);
             }
-            var3 = (oea) (this.field_j.next(param0 + 43));
+            var3 = (RenderableNode) (this.nodes.next(param0 + 43));
           }
           if (param0 == 64) {
             return;
@@ -176,9 +176,9 @@ final class vf {
         }
     }
 
-    final void a(boolean param0, iq param1) {
+    final void render(boolean param0, iq param1) {
         ev var3 = null;
-        oea var4 = null;
+        RenderableNode var4 = null;
         Renderable var5 = null;
         int var6 = 0;
         iq var7 = null;
@@ -189,14 +189,14 @@ final class vf {
         RuntimeException var3_ref = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
-          var3 = this.field_i.a((byte) 59);
-          var4 = (oea) (this.field_j.first(-80));
+          var3 = this.field_i.getListener((byte) 59);
+          var4 = (RenderableNode) (this.nodes.first(-80));
           if (param0) {
             var7 = (iq) null;
-            this.a(false, (iq) null);
+            this.render(false, (iq) null);
           }
           while (var4 != null) {
-            var5 = var4.field_h;
+            var5 = var4.renderable;
             if (var3 != null) {
               var3.a(0, var5, param1);
             }
@@ -204,7 +204,7 @@ final class vf {
             if (var3 != null) {
               var3.a(false, var5, param1);
             }
-            var4 = (oea) (this.field_j.next(124));
+            var4 = (RenderableNode) (this.nodes.next(124));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -233,8 +233,8 @@ final class vf {
         field_b = null;
     }
 
-    vf(uw param0) {
-        this.field_j = new IntrusiveDeque();
+    RenderLayer(RenderScene param0) {
+        this.nodes = new IntrusiveDeque();
         try {
           this.field_i = param0;
         } catch (RuntimeException runtimeException) {

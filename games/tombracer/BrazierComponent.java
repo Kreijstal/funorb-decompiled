@@ -19,14 +19,14 @@ final class BrazierComponent extends PrefabComponent {
 
     final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
-          this.z(71);
+          this.usesBehaviourModels(71);
           return false;
         }
         return false;
     }
 
-    final void q(byte param0) {
-        super.q(param0);
+    final void applyDefaults(byte param0) {
+        super.applyDefaults(param0);
         this.setSize(param0 + 174, 2097152, 2097152);
     }
 
@@ -115,7 +115,7 @@ final class BrazierComponent extends PrefabComponent {
         return false;
     }
 
-    final boolean z(int param0) {
+    final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
           return false;
         }
@@ -124,7 +124,7 @@ final class BrazierComponent extends PrefabComponent {
 
     final boolean hasAngle(byte param0) {
         if (param0 != -122) {
-          this.q((byte) 37);
+          this.applyDefaults((byte) 37);
           return true;
         }
         return true;
@@ -156,7 +156,7 @@ final class BrazierComponent extends PrefabComponent {
           var7.b(0, (byte) 77);
           var9.a((TrapPart) null, (byte) 124, var7);
           var8 = (LightSourceModel) (var6.createModel(5, 74));
-          var8.a(64, 122);
+          var8.setElevationOffset(64, 122);
           var8.a(true, 16633231);
           var8.b(1, 128);
           var8.a(0, param1, 1, true);

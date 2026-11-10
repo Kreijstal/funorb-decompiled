@@ -49,7 +49,7 @@ final class FurnitureModel extends TrapModel {
         }
     }
 
-    final void a(byte param0, int param1, uw param2) {
+    final void addToLayer(byte param0, int param1, RenderScene param2) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -67,11 +67,11 @@ final class FurnitureModel extends TrapModel {
         int var6Lifetime2;
         var8 = TombRacer.field_G ? 1 : 0;
         try {
-          super.a((byte) 52, param1, param2);
+          super.addToLayer((byte) 52, param1, param2);
           if (param0 <= 50) {
             field_n = -110;
           }
-          var9 = this.a(46).e(true);
+          var9 = this.getRoom(46).e(true);
           this.field_g = var9.nextBounded(100, 0);
           var5 = 0;
           var7 = this.field_m;
@@ -120,8 +120,8 @@ final class FurnitureModel extends TrapModel {
         }
     }
 
-    public final void f(int param0) {
-        super.f(param0);
+    public final void updateAnimation(int param0) {
+        super.updateAnimation(param0);
         if (this.field_p != null) {
           this.field_p.a(0);
         }

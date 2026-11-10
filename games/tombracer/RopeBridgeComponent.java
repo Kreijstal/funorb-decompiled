@@ -147,7 +147,7 @@ final class RopeBridgeComponent extends PrefabComponent {
         field_I = null;
     }
 
-    final boolean z(int param0) {
+    final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
           this.isSwitchable(26);
           return false;
@@ -155,8 +155,8 @@ final class RopeBridgeComponent extends PrefabComponent {
         return false;
     }
 
-    final void q(byte param0) {
-        super.q(param0);
+    final void applyDefaults(byte param0) {
+        super.applyDefaults(param0);
     }
 
     static {

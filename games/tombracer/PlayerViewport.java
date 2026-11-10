@@ -76,7 +76,7 @@ final class PlayerViewport {
           return param0;
         }
         int var4 = -param2 + param0;
-        int var5 = ua.abs(var4, 14);
+        int var5 = S2CNextRoundPacket.abs(var4, 14);
         if (var4 > param1) {
           var6 = 1;
         } else {

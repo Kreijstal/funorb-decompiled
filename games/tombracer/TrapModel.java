@@ -4,11 +4,11 @@
 abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
     private int category;
     TrapPart part;
-    private int field_i;
+    private int sceneLayer;
     int field_g;
     private boolean field_j;
     WorldBody body;
-    private int field_f;
+    private int elevationOffset;
 
     void a(WorldBody param0, int param1, TrapPart param2) {
         try {
@@ -20,13 +20,13 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
         }
     }
 
-    final void a(int param0, int param1) {
+    final void setElevationOffset(int param0, int param1) {
         if (param1 <= 96) {
           this.e(72);
-          this.field_f = param0;
+          this.elevationOffset = param0;
           return;
         }
-        this.field_f = param0;
+        this.elevationOffset = param0;
     }
 
     final static boolean b(int param0) {
@@ -56,21 +56,21 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
 
     int m(byte param0) {
         if (param0 > -63) {
-          this.a(-26, -105);
+          this.setElevationOffset(-26, -105);
           return -1;
         }
         return -1;
     }
 
-    void b(int param0, uw param1) {
+    void addToScene(int param0, RenderScene param1) {
         int var3_int = 0;
-        if (~this.field_i != param0) {
+        if (~this.sceneLayer != param0) {
           return;
         }
         try {
-          var3_int = this.k((byte) -99);
-          this.a((byte) 66, var3_int, param1);
-          this.field_i = var3_int;
+          var3_int = this.getSceneLayer((byte) -99);
+          this.addToLayer((byte) 66, var3_int, param1);
+          this.sceneLayer = var3_int;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "dg.WA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -152,7 +152,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
             return;
           }
           if (param0 != -12663) {
-            this.field_f = -42;
+            this.elevationOffset = -42;
           }
           var4 = 0;
           if (var4 == 0) {
@@ -199,7 +199,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
           return;
         }
         if (param0 != -12663) {
-          this.field_f = -42;
+          this.elevationOffset = -42;
           var4Lifetime1 = 0;
           if (var4Lifetime1 != 0) {
             stackIn_64_0 = 1;
@@ -526,9 +526,9 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
 
     void encode(byte param0, BitPacketBuffer param1) {
         try {
-          if (0 < this.field_f) {
+          if (0 < this.elevationOffset) {
             param1.writeBits((byte) 12, 1, 1);
-            param1.writeBits((byte) -128, this.field_f, 8);
+            param1.writeBits((byte) -128, this.elevationOffset, 8);
           } else {
             param1.writeBits((byte) -125, 0, 1);
           }
@@ -546,9 +546,9 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
         return this.part;
     }
 
-    public void f(int param0) {
+    public void updateAnimation(int param0) {
         if (param0 != -4366) {
-          this.field_f = -35;
+          this.elevationOffset = -35;
         }
     }
 
@@ -638,14 +638,14 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
             if (this.body instanceof Trap) {
               var3 = (Trap) (this.body);
             }
-            var4 = (this.field_f << 16) + this.body.getElevation((byte) 115);
+            var4 = (this.elevationOffset << 16) + this.body.getElevation((byte) 115);
             this.a(param1, this.body.getY(9648), this.body.getX(3), var4, (byte) 46);
             if (var3 != null) {
               ((Trap) (var3)).a(param1, -10425);
             }
           }
           if (param0 <= 103) {
-            this.field_f = 112;
+            this.elevationOffset = 112;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -664,7 +664,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
 
     final void e(int param0) {
         if (param0 >= -16) {
-          this.a(-26);
+          this.getRoom(-26);
           this.g(-12663);
           return;
         }
@@ -686,11 +686,11 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
 
     void h(int param0) {
         if (param0 < 0) {
-          this.field_f = 78;
+          this.elevationOffset = 78;
         }
     }
 
-    final Room a(int param0) {
+    final Room getRoom(int param0) {
         if (param0 < 12) {
           this.a((byte) -118);
           if (this.body != null) {
@@ -712,7 +712,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
         return this.body;
     }
 
-    int k(byte param0) {
+    int getSceneLayer(byte param0) {
         if (param0 != -99) {
           this.field_j = true;
           if (!this.body.isFallingIntoPit(param0 + 98)) {
@@ -726,12 +726,12 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
         return 2;
     }
 
-    void a(int param0, uw param1, byte param2) {
+    void removeFromLayer(int param0, RenderScene param1, byte param2) {
         try {
           if (param2 < 40) {
             this.a((byte) -28, 26);
           }
-          param1.a(param0, (Renderable) (this), (byte) -33);
+          param1.removeFromLayer(param0, (Renderable) (this), (byte) -33);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "dg.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -748,13 +748,13 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
         try {
           if (param1.formatVersion >= 15) {
             if (param2.readBits((byte) 44, 1) != 1) {
-              this.field_f = 0;
+              this.elevationOffset = 0;
             } else {
-              this.field_f = param2.readBits((byte) 44, 8);
+              this.elevationOffset = param2.readBits((byte) 44, 8);
             }
           }
           if (param0 < 119) {
-            this.d(14);
+            this.tick(14);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -779,22 +779,22 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
 
     public int getRenderZ(byte param0) {
         if (param0 > -86) {
-          this.k((byte) -84);
+          this.getSceneLayer((byte) -84);
           if (null != this.body) {
-            return this.body.getElevation((byte) 115) + (this.field_f << 16);
+            return this.body.getElevation((byte) 115) + (this.elevationOffset << 16);
           }
           return 0;
         }
         if (null != this.body) {
-          return this.body.getElevation((byte) 115) + (this.field_f << 16);
+          return this.body.getElevation((byte) 115) + (this.elevationOffset << 16);
         }
         return 0;
     }
 
-    final void a(int param0, byte param1) {
-        this.field_f = this.field_f + param0;
+    final void addElevationOffset(int param0, byte param1) {
+        this.elevationOffset = this.elevationOffset + param0;
         if (param1 <= 112) {
-          this.field_f = -110;
+          this.elevationOffset = -110;
         }
     }
 
@@ -803,54 +803,54 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
         return true;
     }
 
-    void a(byte param0, int param1, uw param2) {
+    void addToLayer(byte param0, int param1, RenderScene param2) {
         try {
           if (param0 <= 50) {
             this.m((byte) 49);
           }
-          param2.a((byte) -99, param1, (Renderable) (this));
+          param2.addToLayer((byte) -99, param1, (Renderable) (this));
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "dg.V(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    void d(int param0) {
+    void tick(int param0) {
         if (param0 != -1) {
           return;
         }
         this.g(-12663);
     }
 
-    void a(uw param0, int param1) {
-        if (this.field_i == -1) {
+    void removeFromScene(RenderScene param0, int param1) {
+        if (this.sceneLayer == -1) {
           return;
         }
         try {
-          param0.a(this.field_i, (Renderable) (this), (byte) -33);
-          this.field_i = -1;
+          param0.removeFromLayer(this.sceneLayer, (Renderable) (this), (byte) -33);
+          this.sceneLayer = -1;
           if (param1 < 82) {
-            this.d(-6);
+            this.tick(-6);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "dg.RA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    void a(int param0, uw param1) {
-        if (this.field_i == -1) {
+    void updateSceneLayer(int param0, RenderScene param1) {
+        if (this.sceneLayer == -1) {
           return;
         }
         if (param0 > -39) {
           this.field_g = 41;
         }
-        int var3_int = this.k((byte) -99);
-        if (this.field_i == var3_int) {
+        int var3_int = this.getSceneLayer((byte) -99);
+        if (this.sceneLayer == var3_int) {
           return;
         }
         try {
-          this.a(this.field_i, param1, (byte) 53);
-          this.a((byte) 86, var3_int, param1);
-          this.field_i = var3_int;
+          this.removeFromLayer(this.sceneLayer, param1, (byte) 53);
+          this.addToLayer((byte) 86, var3_int, param1);
+          this.sceneLayer = var3_int;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "dg.IA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -858,7 +858,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
 
     TrapModel(int param0) {
         this.field_j = false;
-        this.field_i = -1;
+        this.sceneLayer = -1;
         this.category = param0;
     }
 

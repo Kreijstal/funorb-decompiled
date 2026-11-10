@@ -80,7 +80,7 @@ final class dpa implements Renderable {
         }
     }
 
-    public final void f(int param0) {
+    public final void updateAnimation(int param0) {
         if (param0 != -4366) {
           dpa.releaseStatics(103);
         }

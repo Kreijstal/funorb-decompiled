@@ -183,7 +183,7 @@ final class Particle extends PooledObject implements Renderable {
         return (PooledObject) ((Object) new Particle());
     }
 
-    final void a(uw param0, int param1) {
+    final void a(RenderScene param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -194,10 +194,10 @@ final class Particle extends PooledObject implements Renderable {
             this.field_r = 51;
           }
           if (this.field_l < 0) {
-            param0.a((byte) 34, 2, (Renderable) (this));
+            param0.addToLayer((byte) 34, 2, (Renderable) (this));
             return;
           }
-          param0.a((byte) -124, 7, (Renderable) (this));
+          param0.addToLayer((byte) -124, 7, (Renderable) (this));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -234,8 +234,8 @@ final class Particle extends PooledObject implements Renderable {
 
     final int a(int param0) {
         if (param0 != 0) {
-          uw var3 = (uw) null;
-          this.a((uw) null, 121);
+          RenderScene var3 = (RenderScene) null;
+          this.a((RenderScene) null, 121);
           return this.field_p;
         }
         return this.field_p;
@@ -267,7 +267,7 @@ final class Particle extends PooledObject implements Renderable {
         return this.field_x;
     }
 
-    public final void f(int param0) {
+    public final void updateAnimation(int param0) {
         if (param0 != -4366) {
           this.field_n = 74;
         }

@@ -295,7 +295,7 @@ final class BufferedSocket implements Runnable {
           do {
             var5 = param1.nextInt();
           } while (var4 <= var5);
-          stackIn_11_0 = oea.floorModulo(var5, param0, -127);
+          stackIn_11_0 = RenderableNode.floorModulo(var5, param0, -127);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

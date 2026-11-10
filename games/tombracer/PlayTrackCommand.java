@@ -169,7 +169,7 @@ final class PlayTrackCommand extends ConsoleMethod {
               }
               stackIn_12_0.field_Eb = new jea(stackIn_12_3, stackIn_13_4);
               var12.b(-125, var12.field_Eb);
-              var12.field_Ub = new jea[fk.field_b];
+              var12.field_Ub = new jea[ColourRowCache.field_b];
               var12.field_xb = new jea(0L, (jea) null);
               if ((1 << PowerUpItemBehaviour.field_w & var14) != 0) {
                 var12.field_Eb.b(-128, var12.field_xb);
@@ -193,7 +193,7 @@ final class PlayTrackCommand extends ConsoleMethod {
               var43.field_bb = 1;
               var44.field_bb = 1;
               var45.field_bb = 1;
-              for (var18_int = 0; fk.field_b > var18_int; var18_int++) {
+              for (var18_int = 0; ColourRowCache.field_b > var18_int; var18_int++) {
                 var12.field_Ub[var18_int] = new jea(0L, (jea) null);
                 if ((1 << var18_int + fm.field_m & var14) != 0) {
                   var12.field_Eb.b(-126, var12.field_Ub[var18_int]);
@@ -259,7 +259,7 @@ final class PlayTrackCommand extends ConsoleMethod {
             var21 = var12.field_Eb;
             var12.field_Eb.field_t = 0;
             var21.field_G = 0;
-            for (var22_int = 0; fk.field_b > var22_int; var22_int++) {
+            for (var22_int = 0; ColourRowCache.field_b > var22_int; var22_int++) {
               var12.field_Ub[var22_int].field_R = null;
               var23 = var12.field_Ub[var22_int];
               var12.field_Ub[var22_int].field_t = 0;
@@ -408,7 +408,7 @@ final class PlayTrackCommand extends ConsoleMethod {
                 var34_int = var34_int + (pda.field_c + var53_ref.field_n);
               }
               if (pda.field_d != null) {
-                for (var36Lifetime1 = 0; fk.field_b > var36Lifetime1; var36Lifetime1++) {
+                for (var36Lifetime1 = 0; ColourRowCache.field_b > var36Lifetime1; var36Lifetime1++) {
                   if (null != pda.field_d[var36Lifetime1] &&
                     0 != (1 << var36Lifetime1 + fm.field_m & var14Lifetime1)) {
                     var42 = pda.field_d[var36Lifetime1][var12.field_ac[var36Lifetime1] & 255];
@@ -425,7 +425,7 @@ final class PlayTrackCommand extends ConsoleMethod {
                 var12.field_vb.field_qb = var12.field_vb.field_qb + var36Lifetime2;
                 var12.field_Zb.field_qb = var12.field_Zb.field_qb + var36Lifetime2;
                 var12.field_fc.field_qb = var12.field_fc.field_qb + var36Lifetime2;
-                for (var37_int = 0; var37_int < fk.field_b; var37_int++) {
+                for (var37_int = 0; var37_int < ColourRowCache.field_b; var37_int++) {
                   dupTemp$0 = var12.field_Ub[var37_int];
                   dupTemp$0.field_qb = dupTemp$0.field_qb + var36Lifetime2;
                 }
@@ -488,7 +488,7 @@ final class PlayTrackCommand extends ConsoleMethod {
             if (var13 != 0) {
               nsa.field_i.field_tb.a(2, (jea) (var11), var12, (byte) -122);
             }
-            for (var34_intLifetime2 = 0; fk.field_b > var34_intLifetime2; var34_intLifetime2++) {
+            for (var34_intLifetime2 = 0; ColourRowCache.field_b > var34_intLifetime2; var34_intLifetime2++) {
               if (var12.field_Ub[var34_intLifetime2].field_o) {
                 if (null != eca.field_b) {
                   if (eca.field_b[var34_intLifetime2] != null) {

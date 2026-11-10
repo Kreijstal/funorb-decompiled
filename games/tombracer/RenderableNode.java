@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oea extends IntrusiveNode {
+final class RenderableNode extends IntrusiveNode {
     static volatile boolean field_k;
-    Renderable field_h;
+    Renderable renderable;
     static SpriteData field_j;
     static int field_f;
     static String field_g;
@@ -61,7 +61,7 @@ final class oea extends IntrusiveNode {
         field_g = null;
         field_j = null;
         if (param0 != -49) {
-          oea.a(80, -20, -71, 70, -11, -46, 20, 64);
+          RenderableNode.a(80, -20, -71, 70, -11, -46, 20, 64);
         }
     }
 
@@ -70,13 +70,13 @@ final class oea extends IntrusiveNode {
         if (param2 <= -54) {
           return (param0 + (param0 >>> 31)) % param1 + var3;
         }
-        oea.floorModulo(28, -97, -108);
+        RenderableNode.floorModulo(28, -97, -108);
         return (param0 + (param0 >>> 31)) % param1 + var3;
     }
 
-    oea(Renderable param0) {
+    RenderableNode(Renderable param0) {
         try {
-          this.field_h = param0;
+          this.renderable = param0;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "oea.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

@@ -200,7 +200,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonListener {
                 }
                 var7.a(epa.field_q, (byte) -102, (WidgetListener) (this));
               } else {
-                var7.a(vf.field_a, 9, -65);
+                var7.a(RenderLayer.field_a, 9, -65);
               }
             } else {
               var7.a(ApproachPlayerLocomotor.field_p, 8, -83);

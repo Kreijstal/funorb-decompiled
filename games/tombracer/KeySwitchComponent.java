@@ -41,7 +41,7 @@ final class KeySwitchComponent extends SwitchComponent {
         return false;
     }
 
-    final boolean z(int param0) {
+    final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
           return false;
         }
@@ -133,8 +133,8 @@ final class KeySwitchComponent extends SwitchComponent {
         super(param0, param1);
     }
 
-    final void q(byte param0) {
-        super.q(param0);
+    final void applyDefaults(byte param0) {
+        super.applyDefaults(param0);
         this.setSize(param0 + 223, 2097152, 2097152);
     }
 

@@ -13,12 +13,12 @@ final class nta implements Renderable {
     private int field_j;
     static int field_h;
 
-    final void a(byte param0, uw param1, int param2) {
+    final void a(byte param0, RenderScene param1, int param2) {
         if (param1 == null) {
           return;
         }
         try {
-          param1.a((byte) -100, 2, (Renderable) (this));
+          param1.addToLayer((byte) -100, 2, (Renderable) (this));
           int var4_int = 5 / ((-52 - param0) / 57);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "nta.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -41,7 +41,7 @@ final class nta implements Renderable {
         crushDeathMessages = null;
     }
 
-    public final void f(int param0) {
+    public final void updateAnimation(int param0) {
         if (this.field_a > 0) {
           this.field_a = this.field_a - 1;
         }
@@ -83,7 +83,7 @@ final class nta implements Renderable {
 
     public final int getRenderY(byte param0) {
         if (param0 <= 91) {
-          this.f(-64);
+          this.updateAnimation(-64);
           return this.field_i;
         }
         return this.field_i;

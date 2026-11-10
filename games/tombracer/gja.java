@@ -1672,7 +1672,7 @@ final class gja extends ka {
             }
           }
           if (this.field_gb != null &&
-            !uw.a(this.field_h, this.field_Y, -102)) {
+            !RenderScene.a(this.field_h, this.field_Y, -102)) {
             if (null != this.field_E &&
               !this.field_E.b(16440)) {
               this.field_N = true;
@@ -2538,7 +2538,7 @@ final class gja extends ka {
             param0.field_E.field_b = true;
             param0.field_E.field_e = this.field_E.field_e;
             if (var13 != 0) {
-              if (lf.a(this.field_h, param4, 128)) {
+              if (S2CMatchResultPacket.a(this.field_h, param4, 128)) {
                 param0.field_E = this.field_E;
                 param0.field_E = null;
               } else {
@@ -2546,7 +2546,7 @@ final class gja extends ka {
               }
             }
           } else {
-            if (lf.a(this.field_h, param4, 128)) {
+            if (S2CMatchResultPacket.a(this.field_h, param4, 128)) {
               param0.field_E = this.field_E;
               if (var13 != 0) {
                 param0.field_E = null;
@@ -2717,7 +2717,7 @@ final class gja extends ka {
             param0.field_d.field_h = this.field_d.field_h;
             param0.field_d.field_b = true;
             if (var13 != 0) {
-              if (!foa.a(param4, this.field_h, 0)) {
+              if (!S2CRoundDeadlinePacket.a(param4, this.field_h, 0)) {
                 param0.field_d = null;
                 param0.field_d = this.field_d;
               } else {
@@ -2725,7 +2725,7 @@ final class gja extends ka {
               }
             }
           } else {
-            if (!foa.a(param4, this.field_h, 0)) {
+            if (!S2CRoundDeadlinePacket.a(param4, this.field_h, 0)) {
               param0.field_d = null;
               if (var13 != 0) {
                 param0.field_d = this.field_d;
@@ -4878,11 +4878,11 @@ final class gja extends ka {
             this.field_ib = new hg(C2SChooseRewardPacket.a(true, this.field_Y, this.field_h));
           }
           if (param3 ||
-            foa.a(this.field_Y, this.field_h, 0)) {
+            S2CRoundDeadlinePacket.a(this.field_Y, this.field_h, 0)) {
             this.field_d = new hg(pr.a(this.field_Y, -23611, this.field_h));
           }
           if (param3 ||
-            lf.a(this.field_h, this.field_Y, 128)) {
+            S2CMatchResultPacket.a(this.field_h, this.field_Y, 128)) {
             this.field_E = new hg(no.a(this.field_h, this.field_Y, 36864));
           }
           if (param3 ||

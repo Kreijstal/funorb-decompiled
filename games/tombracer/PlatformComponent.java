@@ -107,7 +107,7 @@ final class PlatformComponent extends PrefabComponent {
         return false;
     }
 
-    final boolean z(int param0) {
+    final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
           field_F = (ica) null;
           return false;
@@ -157,8 +157,8 @@ final class PlatformComponent extends PrefabComponent {
         }
     }
 
-    final void q(byte param0) {
-        super.q(param0);
+    final void applyDefaults(byte param0) {
+        super.applyDefaults(param0);
     }
 
     final boolean hasSize(int param0) {
@@ -170,7 +170,7 @@ final class PlatformComponent extends PrefabComponent {
 
     final int getRenderLayer(int param0) {
         if (param0 != 8) {
-          this.z(45);
+          this.usesBehaviourModels(45);
           return 3;
         }
         return 3;

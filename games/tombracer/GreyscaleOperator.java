@@ -35,12 +35,12 @@ final class GreyscaleOperator extends TextureOperator {
         int[] var7 = null;
         int var8 = 0;
         int var9 = TombRacer.field_G ? 1 : 0;
-        int[] var10 = this.field_i.a((byte) -103, param1);
+        int[] var10 = this.monochromeCache.getRow((byte) -103, param1);
         int[] var3 = var10;
         if (param0 != 1) {
           return (int[]) null;
         }
-        if (this.field_i.field_d) {
+        if (this.monochromeCache.rowMissed) {
           var4 = this.getInputColourRow(param1, 0, -1);
           var5 = var4[0];
           var6 = var4[1];

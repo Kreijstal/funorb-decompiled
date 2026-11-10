@@ -377,11 +377,11 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 117, "mu_gameopt_kick_x_from_this_game");
                 if (null != var2) {
-                  lf.field_a = jaa.decodeText((byte) 38, var2);
+                  S2CMatchResultPacket.field_a = jaa.decodeText((byte) 38, var2);
                 }
                 var2 = dn.a((byte) 126, "mu_gameopt_withdraw_invite_to_x");
                 if (null != var2) {
-                  oea.field_g = jaa.decodeText((byte) 25, var2);
+                  RenderableNode.field_g = jaa.decodeText((byte) 25, var2);
                 }
                 var2 = dn.a((byte) -106, "mu_gameopt_accept_x_into_game");
                 if (var2 != null) {
@@ -505,7 +505,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 105, "waiting_to_start_hint");
                 if (var2 != null) {
-                  vf.field_h = jaa.decodeText((byte) 88, var2);
+                  RenderLayer.field_h = jaa.decodeText((byte) 88, var2);
                 }
                 var2 = dn.a((byte) 110, "your_game");
                 if (null != var2) {
@@ -733,7 +733,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 122, "privatechat_blankarea_explanation");
                 if (var2 != null) {
-                  vf.field_c = jaa.decodeText((byte) 60, var2);
+                  RenderLayer.field_c = jaa.decodeText((byte) 60, var2);
                 }
                 var2 = dn.a((byte) 111, "publicchat_unavailable_ratedgame");
                 if (var2 != null) {
@@ -1039,7 +1039,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -70, "tocustomersupport");
                 if (null != var2) {
-                  vf.field_a = jaa.decodeText((byte) 74, var2);
+                  RenderLayer.field_a = jaa.decodeText((byte) 74, var2);
                 }
                 var2 = dn.a((byte) 106, "changedisplayname");
                 if (var2 != null) {
@@ -1383,7 +1383,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -52, "create_createanaccount");
                 if (var2 != null) {
-                  foa.field_a = jaa.decodeText((byte) 122, var2);
+                  S2CRoundDeadlinePacket.field_a = jaa.decodeText((byte) 122, var2);
                 }
                 var2 = dn.a((byte) -63, "create_username");
                 if (null != var2) {
@@ -1543,7 +1543,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -44, "create_optin_news_tooltip");
                 if (var2 != null) {
-                  vf.field_e = jaa.decodeText((byte) 53, var2);
+                  RenderLayer.field_e = jaa.decodeText((byte) 53, var2);
                 }
                 var2 = dn.a((byte) -27, "create_u13_email_tooltip");
                 if (var2 != null) {
@@ -2831,7 +2831,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -48, "DEFAULT_PLAYER_NAME");
                 if (var2 != null) {
-                  uw.field_a = jaa.decodeText((byte) 82, var2);
+                  RenderScene.field_a = jaa.decodeText((byte) 82, var2);
                 }
                 var2 = dn.a((byte) -52, "mustlogin1");
                 if (var2 != null) {

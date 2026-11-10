@@ -85,7 +85,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         }
     }
 
-    public final void f(int param0) {
+    public final void updateAnimation(int param0) {
         try {
           if (param0 != -4366) {
             this.b(103, (WorldBody) null);
@@ -822,7 +822,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 77) {
-            this.a(89, (uw) null);
+            this.a(89, (RenderScene) null);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -872,7 +872,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
 
     final void kill(int param0, byte param1, int param2) {
         RuntimeException decompiledCaughtException = null;
-        uw var4 = null;
+        RenderScene var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -900,8 +900,8 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
               var4 = this.room.getScene((byte) 52);
               if (null != var4 &&
                 this.animator != null) {
-                var4.a(7, this.animator, (byte) -33);
-                var4.a((byte) -82, 2, this.animator);
+                var4.removeFromLayer(7, this.animator, (byte) -33);
+                var4.addToLayer((byte) -82, 2, this.animator);
               }
               this.setAnimationState(-5636, 12, true);
             }
@@ -1257,7 +1257,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
           }
           var3.a(true, (byte) 2);
           var2.addBehaviour((byte) 83, (Behaviour) (var3));
-          var2.c(437453352, true);
+          var2.rebuildBehaviourModels(437453352, true);
           var2.setPushable(true, param0 ^ 30447);
           this.room.addTrap(var2, (byte) 32);
           this.clearHeldItem(0);
@@ -1641,8 +1641,8 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
           var10 = 786432 * param4;
           var11 = var9 / 2 + (var7_int + this.x);
           var12 = var10 / 2 + (var8 + this.y);
-          var13 = this.size + ua.abs(var9, -113);
-          var14 = this.size + ua.abs(var10, 67);
+          var13 = this.size + S2CNextRoundPacket.abs(var9, -113);
+          var14 = this.size + S2CNextRoundPacket.abs(var10, 67);
           if (!this.room.a(var11, 131072, var13, var14, var12, true)) {
             return false;
           }
@@ -3876,7 +3876,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         }
     }
 
-    final void a(int param0, uw param1) {
+    final void a(int param0, RenderScene param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         RuntimeException stackIn_8_0 = null;
@@ -3886,7 +3886,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         try {
           var3_int = -37 / ((-23 - param0) / 38);
           if (this.animator != null) {
-            param1.a((byte) -82, 7, this.animator);
+            param1.addToLayer((byte) -82, 7, this.animator);
             this.animator.a(30355, this.room);
           }
           return;

@@ -71,7 +71,7 @@ final class MirrorBehaviour extends Behaviour {
           if (!param0) {
             this.field_s = 47;
           }
-          stackIn_3_0 = ua.abs(-param1.field_d + param1.field_e, -104) + ua.abs(param1.field_a - param1.field_k, -109);
+          stackIn_3_0 = S2CNextRoundPacket.abs(-param1.field_d + param1.field_e, -104) + S2CNextRoundPacket.abs(param1.field_a - param1.field_k, -109);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

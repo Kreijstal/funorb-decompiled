@@ -45,17 +45,17 @@ final class TripBeamComponent extends SwitchComponent {
           if (param1 != 1) {
             return;
           }
-          aoa.a(112, 1);
-          aoa.a(45, 2);
-          aoa.a(param0 ^ 61, 3);
-          aoa.a(61, 4);
-          aoa.a(59, 5);
-          aoa.a(125, 6);
-          aoa.a(param0 ^ 57, 7);
-          aoa.a(122, 8);
-          aoa.a(param0 ^ 125, 13);
-          aoa.a(84, 14);
-          aoa.a(105, 15);
+          S2CPlayerProfilePacket.a(112, 1);
+          S2CPlayerProfilePacket.a(45, 2);
+          S2CPlayerProfilePacket.a(param0 ^ 61, 3);
+          S2CPlayerProfilePacket.a(61, 4);
+          S2CPlayerProfilePacket.a(59, 5);
+          S2CPlayerProfilePacket.a(125, 6);
+          S2CPlayerProfilePacket.a(param0 ^ 57, 7);
+          S2CPlayerProfilePacket.a(122, 8);
+          S2CPlayerProfilePacket.a(param0 ^ 125, 13);
+          S2CPlayerProfilePacket.a(84, 14);
+          S2CPlayerProfilePacket.a(105, 15);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -64,7 +64,7 @@ final class TripBeamComponent extends SwitchComponent {
         }
     }
 
-    final boolean z(int param0) {
+    final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
           field_J = (String) null;
           return false;
@@ -124,8 +124,8 @@ final class TripBeamComponent extends SwitchComponent {
         return true;
     }
 
-    final void q(byte param0) {
-        super.q(param0);
+    final void applyDefaults(byte param0) {
+        super.applyDefaults(param0);
         this.setSize(-77, 2097152, 2097152);
     }
 

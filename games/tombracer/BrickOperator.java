@@ -264,10 +264,10 @@ final class BrickOperator extends TextureOperator {
         if (param0 != 1) {
           return (int[]) null;
         }
-        var19 = this.field_i.a((byte) 46, param1);
+        var19 = this.monochromeCache.getRow((byte) 46, param1);
         var18 = var19;
         var3 = var18;
-        if (this.field_i.field_d) {
+        if (this.monochromeCache.rowMissed) {
           var7 = 0;
           for (var9 = sj.textureRowCoords[param1] + this.field_A; var9 < 0; var9 += 4096) {
           }

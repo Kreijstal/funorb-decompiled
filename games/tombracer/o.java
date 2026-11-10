@@ -47,7 +47,7 @@ final class o extends ora implements sca {
         if (OpenGlTransform3D.field_e == null) {
           return false;
         }
-        if (km.field_p != uga.field_n) {
+        if (ProceduralTexture.field_p != uga.field_n) {
           return false;
         }
         return true;

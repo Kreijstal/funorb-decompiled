@@ -79,7 +79,7 @@ final class dua extends MatchOverlay {
         int var16Lifetime3;
         String var17Lifetime1;
         var18 = TombRacer.field_G ? 1 : 0;
-        var2 = this.field_i.l(92);
+        var2 = this.field_i.getViewedPlayerIndex(92);
         if (param0 < -13) {
           if (var2 == -1) {
             return;

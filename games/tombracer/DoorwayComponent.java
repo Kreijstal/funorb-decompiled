@@ -120,11 +120,11 @@ final class DoorwayComponent extends PrefabComponent {
             var17_ref = (DoorwayModel) (var6.createModel(6, 87));
             var17_ref.a(var15, true);
             var7_ref_fsa.a((TrapPart) null, (byte) 124, var17_ref);
-            var7_ref_fsa.f(param1 + 7, 1048576);
+            var7_ref_fsa.addHeight(param1 + 7, 1048576);
             var18_ref = (DoorwayModel) (var6.createModel(6, 101));
             var18_ref.a(var16, true);
             var11.a((TrapPart) null, (byte) 124, var18_ref);
-            var11.f(param1 + 7, 1048576);
+            var11.addHeight(param1 + 7, 1048576);
           }
           if (this.field_H != param1) {
             var7 = 5;
@@ -150,15 +150,15 @@ final class DoorwayComponent extends PrefabComponent {
         }
     }
 
-    final boolean z(int param0) {
+    final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
           return false;
         }
         return false;
     }
 
-    final void q(byte param0) {
-        super.q(param0);
+    final void applyDefaults(byte param0) {
+        super.applyDefaults(param0);
         int var2 = this.typeId;
         if (20 == var2) {
           this.field_J = 1;

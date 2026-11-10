@@ -155,8 +155,8 @@ final class C2SActionPacket extends IntrusiveNode implements GamePacket {
           var4_int = jaggl.OpenGL.glGenProgramARB();
           jaggl.OpenGL.glBindProgramARB(param1, var4_int);
           jaggl.OpenGL.glProgramStringARB(param1, 34933, param2);
-          jaggl.OpenGL.glGetIntegerv(34379, vf.field_b, 0);
-          if (-1 != vf.field_b[0]) {
+          jaggl.OpenGL.glGetIntegerv(34379, RenderLayer.field_b, 0);
+          if (-1 != RenderLayer.field_b[0]) {
             jaggl.OpenGL.glBindProgramARB(param1, 0);
             stackIn_6_0 = null;
             return (pva) (stackIn_6_0);

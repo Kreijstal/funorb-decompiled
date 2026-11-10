@@ -560,7 +560,7 @@ final class WallTile implements Renderable {
         return param0 | param1;
     }
 
-    public final void f(int param0) {
+    public final void updateAnimation(int param0) {
         if (param0 != -4366) {
           this.a(-19);
         }

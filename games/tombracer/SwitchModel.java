@@ -14,7 +14,7 @@ final class SwitchModel extends TrapModel {
 
     final void b(int param0, byte param1) {
         if (param1 != -112) {
-          this.d(-35);
+          this.tick(-35);
           this.field_q = param0;
           return;
         }
@@ -26,7 +26,7 @@ final class SwitchModel extends TrapModel {
           super.decode(124, param1, param2);
           this.field_q = param2.readBits((byte) 44, 4);
           if (param0 < 119) {
-            this.d(72);
+            this.tick(72);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "cv.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -157,7 +157,7 @@ final class SwitchModel extends TrapModel {
         return -1;
     }
 
-    final void d(int param0) {
+    final void tick(int param0) {
         boolean stackIn_32_1 = false;
         boolean stackIn_54_1 = false;
         boolean stackIn_62_1 = false;
@@ -215,7 +215,7 @@ final class SwitchModel extends TrapModel {
         int var3Lifetime2;
         var4 = TombRacer.field_G ? 1 : 0;
         if (null == this.field_s) {
-          var6 = (w) (this.a(58).field_G);
+          var6 = (w) (this.getRoom(58).field_G);
           if (param0 != -1) {
             this.field_o = (SwitchSource) null;
           }
@@ -340,7 +340,7 @@ final class SwitchModel extends TrapModel {
           return;
         }
         this.field_s.a(param0 + 1);
-        var7 = (w) (this.a(58).field_G);
+        var7 = (w) (this.getRoom(58).field_G);
         if (param0 == -1) {
           if (var7 == null) {
             return;
@@ -931,7 +931,7 @@ final class SwitchModel extends TrapModel {
         }
     }
 
-    final int k(byte param0) {
+    final int getSceneLayer(byte param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
         if (param0 != -99) {
           return 44;

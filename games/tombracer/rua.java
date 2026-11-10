@@ -145,7 +145,7 @@ final class rua extends MessageDialog implements ButtonListener {
             }
             if (param2.field_f != 3) {
               if (param2.field_f == 6) {
-                var5.a(vf.field_a, 9, -126);
+                var5.a(RenderLayer.field_a, 9, -126);
               }
             } else {
               var5.a(MovingWallComponent.field_M, 7, 58);

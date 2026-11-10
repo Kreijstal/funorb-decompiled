@@ -1,40 +1,40 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uw {
+final class RenderScene {
     static String field_a;
     static int field_e;
-    private ev field_d;
-    private iq field_f;
+    private ev listener;
+    private iq renderTarget;
     static String field_b;
     static MenuScreen[] field_g;
-    private vf[] field_c;
+    private RenderLayer[] layers;
 
-    final iq c(int param0) {
+    final iq getRenderTarget(int param0) {
         if (param0 != 0) {
-          this.a(101);
+          this.clear(101);
         }
-        return this.field_f;
+        return this.renderTarget;
     }
 
-    final void d(int param0) {
+    final void updateAnimations(int param0) {
         int var3 = 0;
-        vf var4 = null;
+        RenderLayer var4 = null;
         int var5 = TombRacer.field_G ? 1 : 0;
-        this.field_f.a((byte) 119);
-        vf[] var6 = this.field_c;
-        vf[] var2 = var6;
+        this.renderTarget.a((byte) 119);
+        RenderLayer[] var6 = this.layers;
+        RenderLayer[] var2 = var6;
         for (var3 = param0; var6.length > var3; var3++) {
           var4 = var6[var3];
-          var4.a(1);
+          var4.updateAnimations(1);
         }
     }
 
-    final void a(int param0, iq param1) {
+    final void setRenderTarget(int param0, iq param1) {
         try {
-          this.field_f = param1;
+          this.renderTarget = param1;
           if (param0 != -24343) {
-            this.field_f = (iq) null;
+            this.renderTarget = (iq) null;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "uw.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -51,29 +51,29 @@ final class uw {
         return stackIn_8_0;
     }
 
-    final ev a(byte param0) {
+    final ev getListener(byte param0) {
         if (param0 != 59) {
           return (ev) null;
         }
-        return this.field_d;
+        return this.listener;
     }
 
-    final void a(int param0, Renderable param1, byte param2) {
+    final void removeFromLayer(int param0, Renderable param1, byte param2) {
         if (param2 != -33) {
           return;
         }
         try {
-          this.field_c[param0].a((byte) 64, param1);
+          this.layers[param0].remove((byte) 64, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "uw.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final void a(int param0, ev param1) {
+    final void setListener(int param0, ev param1) {
         try {
-          this.field_d = param1;
+          this.listener = param1;
           if (param0 != -28265) {
-            this.field_c = (vf[]) null;
+            this.layers = (RenderLayer[]) null;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "uw.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -90,68 +90,68 @@ final class uw {
     }
 
     final void b(int param0) {
-        this.field_f.a(false);
+        this.renderTarget.a(false);
         if (param0 != 1909106792) {
           field_b = (String) null;
         }
     }
 
-    final void a(byte param0, int param1, Renderable param2) {
+    final void addToLayer(byte param0, int param1, Renderable param2) {
         try {
-          this.field_c[param1].a(param2, (byte) -61);
+          this.layers[param1].add(param2, (byte) -61);
           int var4_int = -46 % ((param0 + 45) / 37);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "uw.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0) {
+    final void clear(int param0) {
         int var3 = 0;
-        vf var4 = null;
+        RenderLayer var4 = null;
         int var5 = TombRacer.field_G ? 1 : 0;
-        if (this.field_d != null) {
-          this.field_d.a(13113);
+        if (this.listener != null) {
+          this.listener.a(13113);
         }
-        vf[] var6 = this.field_c;
-        vf[] var2 = var6;
+        RenderLayer[] var6 = this.layers;
+        RenderLayer[] var2 = var6;
         if (param0 != 10) {
           field_e = 75;
         }
         for (var3 = 0; var3 < var6.length; var3++) {
           var4 = var6[var3];
-          var4.b(331);
+          var4.clear(331);
         }
     }
 
-    final void e(int param0) {
+    final void render(int param0) {
         int var4 = 0;
         int var2;
-        vf[] var3;
-        vf var5;
+        RenderLayer[] var3;
+        RenderLayer var5;
         int var6;
         var6 = TombRacer.field_G ? 1 : 0;
-        if (null != this.field_d) {
-          this.field_d.a(this.field_f, -15530);
+        if (null != this.listener) {
+          this.listener.a(this.renderTarget, -15530);
         }
         var2 = 0;
         if (param0 != 30057) {
-          this.field_f = (iq) null;
+          this.renderTarget = (iq) null;
         }
-        var3 = this.field_c;
+        var3 = this.layers;
         for (var4 = 0; var3.length > var4; var4++) {
           var5 = var3[var4];
-          if (null != this.field_d) {
-            this.field_d.a(var2, var5, this.field_f, 11180543);
+          if (null != this.listener) {
+            this.listener.a(var2, var5, this.renderTarget, 11180543);
           }
-          var5.a(this.field_f, 1);
-          var5.a(false, this.field_f);
-          if (null != this.field_d) {
-            this.field_d.a(var5, var2, this.field_f, true);
+          var5.removeExpired(this.renderTarget, 1);
+          var5.render(false, this.renderTarget);
+          if (null != this.listener) {
+            this.listener.a(var5, var2, this.renderTarget, true);
           }
           var2++;
         }
-        if (null != this.field_d) {
-          this.field_d.a(-16188, this.field_f);
+        if (null != this.listener) {
+          this.listener.a(-16188, this.renderTarget);
         }
     }
 
@@ -264,11 +264,11 @@ final class uw {
         }
     }
 
-    uw(int param0) {
+    RenderScene(int param0) {
         int var2 = 0;
-        this.field_c = new vf[param0];
+        this.layers = new RenderLayer[param0];
         for (var2 = 0; param0 > var2; var2++) {
-          this.field_c[var2] = new vf(this);
+          this.layers[var2] = new RenderLayer(this);
         }
     }
 

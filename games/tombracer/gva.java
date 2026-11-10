@@ -68,7 +68,7 @@ final class gva implements mb {
             var9 == -1) {
             return;
           }
-          var8 = var8 + uw.field_e;
+          var8 = var8 + RenderScene.field_e;
           var9 = var9 + MovingPlatformComponent.field_N;
           var11 = (ag) (param0);
           var12 = var11.a(-862393232);
@@ -344,7 +344,7 @@ final class gva implements mb {
             var9 == -1) {
             return;
           }
-          var8 = var8 + uw.field_e;
+          var8 = var8 + RenderScene.field_e;
           var9 = var9 + MovingPlatformComponent.field_N;
           var14 = param2.l(5);
           switch ((var15 == 0

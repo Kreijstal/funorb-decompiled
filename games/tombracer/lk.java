@@ -108,7 +108,7 @@ final class lk extends IntrusiveNode implements qn, Renderable, noa {
         return this.field_n;
     }
 
-    public final void f(int param0) {
+    public final void updateAnimation(int param0) {
         if (param0 != -4366) {
           this.field_i = (Room) null;
         }

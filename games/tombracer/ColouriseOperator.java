@@ -30,11 +30,11 @@ final class ColouriseOperator extends TextureOperator {
         if (param1 != -1) {
           this.field_r = 10;
         }
-        var23 = this.field_h.a(param0, (byte) 123);
+        var23 = this.colourCache.getRow(param0, (byte) 123);
         var18 = var23;
         var16 = var18;
         var3 = var16;
-        if (this.field_h.field_f) {
+        if (this.colourCache.field_f) {
           var31 = this.getInputColourRow(param0, 0, -1);
           var32 = var31[0];
           var34 = var31[1];

@@ -37,9 +37,9 @@ final class RangeOperator extends TextureOperator {
         if (param0 != 1) {
           this.getColourRow(79, -115);
         }
-        int[] var7 = this.field_i.a((byte) 64, param1);
+        int[] var7 = this.monochromeCache.getRow((byte) 64, param1);
         int[] var3 = var7;
-        if (this.field_i.field_d) {
+        if (this.monochromeCache.rowMissed) {
           var4 = this.getInputMonochromeRow(0, -10, param1);
           for (var5 = 0; var5 < ns.textureWidth; var5++) {
             var7[var5] = (this.field_q * var4[var5] >> 12) + this.field_m;
@@ -107,11 +107,11 @@ final class RangeOperator extends TextureOperator {
         int[] var10 = null;
         int var11 = 0;
         int var12 = TombRacer.field_G ? 1 : 0;
-        int[][] var21 = this.field_h.a(param0, (byte) -46);
+        int[][] var21 = this.colourCache.getRow(param0, (byte) -46);
         int[][] var16 = var21;
         int[][] var14 = var16;
         int[][] var3 = var14;
-        if (this.field_h.field_f) {
+        if (this.colourCache.field_f) {
           var29 = this.getInputColourRow(param0, 0, -1);
           var30 = var29[0];
           var31 = var29[1];

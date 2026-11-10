@@ -41,11 +41,11 @@ final class NormalMapOperator extends TextureOperator {
         int[] var43;
         int[] var44;
         var21 = TombRacer.field_G ? 1 : 0;
-        var29 = this.field_h.a(param0, (byte) -125);
+        var29 = this.colourCache.getRow(param0, (byte) -125);
         var23 = var29;
         var22 = var23;
         var3 = var22;
-        if (this.field_h.field_f) {
+        if (this.colourCache.field_f) {
           var41 = this.getInputMonochromeRow(0, param1 - 118, hba.textureHeightMask & -1 + param0);
           var5 = this.getInputMonochromeRow(0, -32, param0);
           var40 = this.getInputMonochromeRow(0, -111, param0 + 1 & hba.textureHeightMask);

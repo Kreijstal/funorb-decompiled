@@ -17,7 +17,7 @@ final class ooa extends wka {
             var1 = PathMoverComponent.r((byte) 69);
           }
           if (var1.length() == 0) {
-            var1 = uw.field_a;
+            var1 = RenderScene.field_a;
           }
           return var1;
         }
@@ -29,7 +29,7 @@ final class ooa extends wka {
           var1 = PathMoverComponent.r((byte) 69);
         }
         if (var1.length() == 0) {
-          var1 = uw.field_a;
+          var1 = RenderScene.field_a;
         }
         return var1;
     }

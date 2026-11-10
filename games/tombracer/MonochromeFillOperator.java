@@ -46,9 +46,9 @@ final class MonochromeFillOperator extends TextureOperator {
     }
 
     final int[] getMonochromeRow(int param0, int param1) {
-        int[] var4 = this.field_i.a((byte) 61, param1);
+        int[] var4 = this.monochromeCache.getRow((byte) 61, param1);
         int[] var3 = var4;
-        if (this.field_i.field_d) {
+        if (this.monochromeCache.rowMissed) {
           ArrayUtils.fill(var4, 0, ns.textureWidth, this.field_m);
           if (param0 != 1) {
             field_o = (String) null;

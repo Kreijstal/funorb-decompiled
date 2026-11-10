@@ -80,7 +80,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
           if (3 == param1) {
             MenuEntry.field_j[3] = MusicTrack.load(TextLayout.field_a, "", "TR_lose_jingle_long");
           }
-          while (!RewardChoicePhase.field_n.field_y.a(176400, MenuEntry.field_j[param1], ua.field_a, ns.field_j, 0)) {
+          while (!RewardChoicePhase.field_n.field_y.a(176400, MenuEntry.field_j[param1], S2CNextRoundPacket.field_a, ns.field_j, 0)) {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

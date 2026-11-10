@@ -199,8 +199,8 @@ final class VoronoiNoiseOperator extends TextureOperator {
         if (param0 != 1) {
           return (int[]) null;
         }
-        var3 = this.field_i.a((byte) -109, param1);
-        if (this.field_i.field_d) {
+        var3 = this.monochromeCache.getRow((byte) -109, param1);
+        if (this.monochromeCache.rowMissed) {
           var4 = sj.textureRowCoords[param1] * this.field_m + 2048;
           var5 = var4 >> 12;
           var6 = var5 + 1;

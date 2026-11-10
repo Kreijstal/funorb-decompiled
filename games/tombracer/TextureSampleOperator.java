@@ -9,9 +9,9 @@ final class TextureSampleOperator extends TextureOperator {
     static String field_q;
     private int[] field_m;
 
-    final void b(int param0, int param1, int param2) {
+    final void createRowCache(int param0, int param1, int param2) {
         int var4 = 0;
-        super.b(param0, param1, param2);
+        super.createRowCache(param0, param1, param2);
         if (this.field_n >= 0 &&
           null != PenaltyNotice.field_j) {
           var4 = !PenaltyNotice.field_j.a((byte) -122, this.field_n).field_g ? 128 : 64;
@@ -29,18 +29,18 @@ final class TextureSampleOperator extends TextureOperator {
         }
     }
 
-    final int c(byte param0) {
+    final int getTextureId(byte param0) {
         if (param0 != -117) {
           this.field_m = (int[]) null;
         }
         return this.field_n;
     }
 
-    final void b(int param0) {
+    final void releaseRowCache(int param0) {
         if (param0 > -32) {
           return;
         }
-        super.b(-116);
+        super.releaseRowCache(-116);
         this.field_m = null;
     }
 
@@ -96,11 +96,11 @@ final class TextureSampleOperator extends TextureOperator {
         if (param1 != -1) {
           return (int[][]) null;
         }
-        var14 = this.field_h.a(param0, (byte) 124);
+        var14 = this.colourCache.getRow(param0, (byte) 124);
         var13 = var14;
         var12 = var13;
         var3 = var12;
-        if (this.field_h.field_f) {
+        if (this.colourCache.field_f) {
           if (ArchiveNetworkClient.textureHeight == this.field_p) {
             stackIn_6_0 = param0;
           } else {

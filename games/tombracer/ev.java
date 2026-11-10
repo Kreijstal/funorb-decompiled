@@ -6,9 +6,9 @@ interface ev {
 
     public abstract void a(int param0, iq param1);
 
-    public abstract void a(int param0, vf param1, iq param2, int param3);
+    public abstract void a(int param0, RenderLayer param1, iq param2, int param3);
 
-    public abstract void a(vf param0, int param1, iq param2, boolean param3);
+    public abstract void a(RenderLayer param0, int param1, iq param2, boolean param3);
 
     public abstract void a(iq param0, int param1);
 

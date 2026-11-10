@@ -18,7 +18,7 @@ final class PlayPhase extends MatchPhase {
         if (param0 != 80) {
           PlayPhase.a(59, 38, (byte) -62, 36, 61, 1);
         }
-        var3 = this.screen.l(115);
+        var3 = this.screen.getViewedPlayerIndex(115);
         if (this.field_o &&
           this.matchState.g(0)) {
           this.g(param0 - 208);
@@ -43,10 +43,10 @@ final class PlayPhase extends MatchPhase {
         if (this.screen.d((byte) 95)) {
           if (!this.screen.g(0, 0)) {
             if (this.screen.g(param0 - 80, 1)) {
-              this.screen.e(1, 17219);
+              this.screen.cycleViewedPlayer(1, 17219);
             }
           } else {
-            this.screen.e(-1, 17219);
+            this.screen.cycleViewedPlayer(-1, 17219);
           }
         } else {
           if (this.matchState.hasFinishedCourse((byte) 90, var3) &&
@@ -112,7 +112,7 @@ final class PlayPhase extends MatchPhase {
         int var5_intLifetime1;
         int var5_intLifetime1Lifetime1;
         var14 = TombRacer.field_G ? 1 : 0;
-        var3 = this.screen.l(81);
+        var3 = this.screen.getViewedPlayerIndex(81);
         this.viewports[var3].b(23479);
         if (!this.screen.f((byte) 33)) {
           var4_int = 0;
@@ -204,8 +204,8 @@ final class PlayPhase extends MatchPhase {
             }
           }
           if (this.field_p) {
-            ua.a(4, kn.field_p, "Debug", 565, 0, 48, 16777215);
-            ua.a(4, kn.field_p, "FPS: " + oea.field_f, 565, 0, 64, 16777215);
+            S2CNextRoundPacket.a(4, kn.field_p, "Debug", 565, 0, 48, 16777215);
+            S2CNextRoundPacket.a(4, kn.field_p, "FPS: " + RenderableNode.field_f, 565, 0, 64, 16777215);
             if (this.screen.field_D) {
               this.protocol.c(16);
             }
@@ -362,14 +362,14 @@ final class PlayPhase extends MatchPhase {
     }
 
     private final void a(int param0, int param1) {
-        this.screen.i(param1, param0 ^ 62);
+        this.screen.showMatchResult(param1, param0 ^ 62);
         if (param0 != 0) {
           this.field_o = true;
         }
     }
 
     private final void b(byte param0) {
-        int var2 = this.screen.l(89);
+        int var2 = this.screen.getViewedPlayerIndex(89);
         if (this.matchState.playersRemaining <= 1) {
           this.viewports[var2].a(0, mf.field_d, -20186);
         } else {
@@ -425,7 +425,7 @@ final class PlayPhase extends MatchPhase {
           this.screen.field_A = true;
         }
         for (var3 = 0; var3 < this.viewports.length; var3++) {
-          if (~this.screen.l(112) == ~var3 ||
+          if (~this.screen.getViewedPlayerIndex(112) == ~var3 ||
             this.screen.d((byte) 102)) {
             this.viewports[var3].a((byte) -115, param0);
           }
@@ -507,7 +507,7 @@ final class PlayPhase extends MatchPhase {
             stackIn_8_0 = -1;
             return stackIn_8_0;
           }
-          if (km.field_p == RotaterMountComponent.field_G) {
+          if (ProceduralTexture.field_p == RotaterMountComponent.field_G) {
             ql.field_k.position = 0;
             kia.field_b = null;
             if (param1 != null) {
@@ -560,15 +560,15 @@ final class PlayPhase extends MatchPhase {
               ql.field_k.backpatchByteLength(ql.field_k.position - var9, (byte) -115);
             }
             bl.a(-1, -1);
-            km.field_p = Player.field_p;
+            ProceduralTexture.field_p = Player.field_p;
           }
-          if (Player.field_p == km.field_p &&
+          if (Player.field_p == ProceduralTexture.field_p &&
             LegacyRidgedWaterNoise.a(1, -1)) {
             var9Lifetime1 = WeaveOperator.field_q.readUnsignedByte(255);
             WeaveOperator.field_q.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
-              km.field_p = ne.field_c;
+              ProceduralTexture.field_p = ne.field_c;
               PressureSwitchBehaviour.field_s = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
@@ -585,12 +585,12 @@ final class PlayPhase extends MatchPhase {
                 WeaveOperator.field_q.position = 0;
               } else {
                 MembersUpsellMenu.field_z = var9Lifetime1;
-                km.field_p = pe.field_m;
+                ProceduralTexture.field_p = pe.field_m;
                 uca.field_d = -1;
               }
             }
           }
-          if (km.field_p == ne.field_c) {
+          if (ProceduralTexture.field_p == ne.field_c) {
             var9Lifetime2 = 2;
             if (LegacyRidgedWaterNoise.a(var9Lifetime2, -1)) {
               var10Lifetime1 = WeaveOperator.field_q.readUnsignedShort(124);
@@ -607,7 +607,7 @@ final class PlayPhase extends MatchPhase {
               }
             }
           }
-          if (pe.field_m == km.field_p &&
+          if (pe.field_m == ProceduralTexture.field_p &&
             cla.g(0)) {
             if (MembersUpsellMenu.field_z == 255) {
               var9_ref_String = WeaveOperator.field_q.readNullableString(-28690);
@@ -733,7 +733,7 @@ final class PlayPhase extends MatchPhase {
             }
             TripBeamComponent.b(1, 1);
           }
-          this.screen.field_r = -1;
+          this.screen.roundDeadlineTick = -1;
           this.b((byte) 122);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "fja.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');

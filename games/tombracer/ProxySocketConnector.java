@@ -124,12 +124,12 @@ final class ProxySocketConnector extends SocketConnector {
           if (MenuEntry.field_j == null) {
             return;
           }
-          aoa.a(83, 3);
-          aoa.a(param1 ^ 125, 4);
-          aoa.a(76, param1);
-          aoa.a(param1 ^ 80, 6);
-          aoa.a(82, 7);
-          aoa.a(param1 ^ 68, 8);
+          S2CPlayerProfilePacket.a(83, 3);
+          S2CPlayerProfilePacket.a(param1 ^ 125, 4);
+          S2CPlayerProfilePacket.a(76, param1);
+          S2CPlayerProfilePacket.a(param1 ^ 80, 6);
+          S2CPlayerProfilePacket.a(82, 7);
+          S2CPlayerProfilePacket.a(param1 ^ 68, 8);
           return;
         }
     }

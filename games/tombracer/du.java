@@ -16,7 +16,7 @@ final class du {
         int var3;
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
-        bga.field_c = null;
+        S2CProfileUpdatePacket.field_c = null;
         var2 = -112 / ((param1 - 76) / 38);
         jia.field_a = null;
         ColourKeyOperator.field_m = 0;

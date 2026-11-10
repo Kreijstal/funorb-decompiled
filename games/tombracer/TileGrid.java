@@ -83,7 +83,7 @@ final class TileGrid implements Renderable {
         return this.room.getWidth((byte) -86) / 2;
     }
 
-    public final void f(int param0) {
+    public final void updateAnimation(int param0) {
         if (param0 != -4366) {
           this.getRenderY((byte) -59);
         }
@@ -346,7 +346,7 @@ final class TileGrid implements Renderable {
         return var3;
     }
 
-    final void a(uw param0, int param1) {
+    final void a(RenderScene param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_7_0 = null;

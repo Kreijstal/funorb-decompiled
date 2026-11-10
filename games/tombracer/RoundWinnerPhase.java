@@ -32,7 +32,7 @@ final class RoundWinnerPhase extends MatchPhase {
         if (param0 > -50) {
           this.field_n = 30;
         }
-        var3 = this.screen.l(100);
+        var3 = this.screen.getViewedPlayerIndex(100);
         var4 = 160;
         var5 = 80 + this.matchState.players.length * 20;
         var6 = 16776960;
@@ -123,9 +123,9 @@ final class RoundWinnerPhase extends MatchPhase {
           if (this.field_n == 0) {
             var3 = this.matchState.getMatchWinner((byte) 98);
             if (-1 != var3) {
-              this.screen.i(var3, 85);
+              this.screen.showMatchResult(var3, 85);
             } else {
-              this.screen.m((byte) -115);
+              this.screen.startNextRound((byte) -115);
             }
           }
         }

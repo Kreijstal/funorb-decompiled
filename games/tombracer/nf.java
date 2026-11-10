@@ -172,8 +172,8 @@ final class nf {
         }
         this.field_q = stackIn_10_1;
         this.field_c = param9;
-        var11 = ua.abs(param7 - param4, 47);
-        var12 = ua.abs(param6 - param5, 28);
+        var11 = S2CNextRoundPacket.abs(param7 - param4, 47);
+        var12 = S2CNextRoundPacket.abs(param6 - param5, 28);
         var13 = param2 * this.field_n;
         var14 = param2 + var13;
         var15 = this.field_i * param2;

@@ -25,14 +25,14 @@ final class InvertOperator extends TextureOperator {
         int[] var10 = null;
         int var11 = 0;
         int var12 = TombRacer.field_G ? 1 : 0;
-        int[][] var20 = this.field_h.a(param0, (byte) -104);
+        int[][] var20 = this.colourCache.getRow(param0, (byte) -104);
         int[][] var15 = var20;
         int[][] var13 = var15;
         int[][] var3 = var13;
         if (param1 != -1) {
           return (int[][]) null;
         }
-        if (this.field_h.field_f) {
+        if (this.colourCache.field_f) {
           var19 = this.getInputColourRow(param0, 0, -1);
           var21 = var19[0];
           var22 = var19[1];
@@ -99,9 +99,9 @@ final class InvertOperator extends TextureOperator {
         if (param0 != 1) {
           field_m = (String) null;
         }
-        int[] var7 = this.field_i.a((byte) 63, param1);
+        int[] var7 = this.monochromeCache.getRow((byte) 63, param1);
         int[] var3 = var7;
-        if (this.field_i.field_d) {
+        if (this.monochromeCache.rowMissed) {
           var4 = this.getInputMonochromeRow(0, -106, param1);
           for (var5 = 0; ns.textureWidth > var5; var5++) {
             var7[var5] = 4096 - var4[var5];

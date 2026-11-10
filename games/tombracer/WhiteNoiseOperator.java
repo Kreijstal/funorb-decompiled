@@ -8,9 +8,9 @@ final class WhiteNoiseOperator extends TextureOperator {
         int var4 = 0;
         int var5 = 0;
         int var6 = TombRacer.field_G ? 1 : 0;
-        int[] var8 = this.field_i.a((byte) 66, param1);
+        int[] var8 = this.monochromeCache.getRow((byte) 66, param1);
         int[] var3 = var8;
-        if (this.field_i.field_d) {
+        if (this.monochromeCache.rowMissed) {
           var4 = sj.textureRowCoords[param1];
           for (var5 = 0; var5 < ns.textureWidth; var5++) {
             var8[var5] = this.d(param0 + 1876, ht.textureColumnCoords[var5], var4) % 4096;

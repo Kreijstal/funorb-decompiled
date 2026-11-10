@@ -59,8 +59,8 @@ final class SnakePitComponent extends PrefabComponent {
         return false;
     }
 
-    final void q(byte param0) {
-        super.q(param0);
+    final void applyDefaults(byte param0) {
+        super.applyDefaults(param0);
     }
 
     SnakePitComponent(Room param0, int param1, BitPacketBuffer param2, RoomComponent param3) {

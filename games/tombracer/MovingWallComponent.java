@@ -88,7 +88,7 @@ final class MovingWallComponent extends PathMoverComponent {
 
     final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
-          this.z(95);
+          this.usesBehaviourModels(95);
           return true;
         }
         return true;
@@ -110,7 +110,7 @@ final class MovingWallComponent extends PathMoverComponent {
         return true;
     }
 
-    final boolean z(int param0) {
+    final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
           this.hasSize(-96);
           return false;
@@ -126,8 +126,8 @@ final class MovingWallComponent extends PathMoverComponent {
         return false;
     }
 
-    final void q(byte param0) {
-        super.q(param0);
+    final void applyDefaults(byte param0) {
+        super.applyDefaults(param0);
     }
 
     static {

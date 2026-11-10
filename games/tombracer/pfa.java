@@ -479,7 +479,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("keycode_player1reset", (byte) 105);
                 if (null != var2) {
-                  mv.field_i = var2[0] & 255;
+                  MonochromeRowCache.field_i = var2[0] & 255;
                 }
                 var2 = mt.readTextEntry("keycode_player1pull", (byte) 122);
                 if (var2 != null) {
@@ -547,7 +547,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("tutorial_room0", (byte) 116);
                 if (var2 != null) {
-                  fk.field_j = jaa.decodeText((byte) 90, var2);
+                  ColourRowCache.field_j = jaa.decodeText((byte) 90, var2);
                 }
                 var2 = mt.readTextEntry("tutorial_death", (byte) 106);
                 if (var2 != null) {
@@ -555,7 +555,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("tutorial_treasure", (byte) 123);
                 if (var2 != null) {
-                  uw.field_b = jaa.decodeText((byte) 90, var2);
+                  RenderScene.field_b = jaa.decodeText((byte) 90, var2);
                 }
                 var2 = mt.readTextEntry("tutorial_treasureslow", (byte) 117);
                 if (null != var2) {
@@ -731,7 +731,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("instructionTextLasers", (byte) 122);
                 if (var2 != null) {
-                  km.field_n = jaa.decodeText((byte) 91, var2);
+                  ProceduralTexture.field_n = jaa.decodeText((byte) 91, var2);
                 }
                 var2 = mt.readTextEntry("instructionTitleMovingPlatforms", (byte) 106);
                 if (var2 != null) {

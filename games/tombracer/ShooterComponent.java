@@ -84,7 +84,7 @@ abstract class ShooterComponent extends PrefabComponent {
           var6 = (LightSourceModel) (var5.createModel(5, 87));
           var6.a(true, param3);
           var6.b(1, 96);
-          var6.a(16, 120);
+          var6.setElevationOffset(16, 120);
           var6.a(param1, 0, 1, false);
           param0.a(param2, (byte) 124, var6);
         } catch (RuntimeException runtimeException) {

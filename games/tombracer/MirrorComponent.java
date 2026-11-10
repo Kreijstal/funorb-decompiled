@@ -29,8 +29,8 @@ final class MirrorComponent extends PrefabComponent {
         return false;
     }
 
-    final void q(byte param0) {
-        super.q(param0);
+    final void applyDefaults(byte param0) {
+        super.applyDefaults(param0);
         this.setSize(param0 ^ -66, 2097152, 2097152);
     }
 
@@ -51,7 +51,7 @@ final class MirrorComponent extends PrefabComponent {
         field_I = null;
     }
 
-    final boolean z(int param0) {
+    final boolean usesBehaviourModels(int param0) {
         if (param0 != 0) {
           PacketBuffer var3 = (PacketBuffer) null;
           MirrorComponent.a((PacketBuffer) null, -27);
@@ -89,7 +89,7 @@ final class MirrorComponent extends PrefabComponent {
           param0.readUnsignedByte(255);
           var2_int = param0.readUnsignedByte(param1 + 255);
           var3 = TreasureValuesOverlay.createTextureOperator((byte) -62, var2_int);
-          var3.field_f = param0.readUnsignedByte(param1 + 255);
+          var3.cacheRowCount = param0.readUnsignedByte(param1 + 255);
           var4 = param0.readUnsignedByte(param1 ^ 255);
           for (var5 = param1; var5 < var4; var5++) {
             var6 = param0.readUnsignedByte(param1 + 255);

@@ -11,7 +11,7 @@ final class BridgeModel extends TrapModel {
     private int field_t;
     private PlatformBehaviour field_o;
 
-    final int k(byte param0) {
+    final int getSceneLayer(byte param0) {
         if (param0 != -99) {
           this.field_q = (faa[][]) null;
         }
@@ -148,9 +148,9 @@ final class BridgeModel extends TrapModel {
         }
     }
 
-    final void a(uw param0, int param1) {
+    final void removeFromScene(RenderScene param0, int param1) {
         try {
-          super.a(param0, 85);
+          super.removeFromScene(param0, 85);
           if (param1 <= 82) {
             field_m = (IntrusiveDeque) null;
           }
@@ -163,8 +163,8 @@ final class BridgeModel extends TrapModel {
     final void b(byte param0, int param1) {
         this.field_t = param1;
         if (param0 != 80) {
-          uw var4 = (uw) null;
-          this.a((uw) null, 105);
+          RenderScene var4 = (RenderScene) null;
+          this.removeFromScene((RenderScene) null, 105);
         }
     }
 
@@ -366,9 +366,9 @@ final class BridgeModel extends TrapModel {
         return this.field_n;
     }
 
-    final void d(int param0) {
+    final void tick(int param0) {
         PlayerAnimator var4 = null;
-        super.d(param0);
+        super.tick(param0);
         if (this.field_o != null &&
           this.field_o.d(false)) {
           this.field_n = uca.cosmeticRandom.nextBounded(262144, 0) - 131072;
@@ -401,12 +401,12 @@ final class BridgeModel extends TrapModel {
         }
     }
 
-    final void b(int param0, uw param1) {
+    final void addToScene(int param0, RenderScene param1) {
         try {
           if (this.field_q == null) {
             this.n((byte) -128);
           }
-          super.b(param0 ^ param0, param1);
+          super.addToScene(param0 ^ param0, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vsa.WA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -419,7 +419,7 @@ final class BridgeModel extends TrapModel {
         return this.field_s;
     }
 
-    final void a(byte param0, int param1, uw param2) {
+    final void addToLayer(byte param0, int param1, RenderScene param2) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = TombRacer.field_G ? 1 : 0;
@@ -430,7 +430,7 @@ final class BridgeModel extends TrapModel {
           if (null != this.field_q) {
             for (var4_int = 0; this.field_p > var4_int; var4_int++) {
               for (var5 = 0; this.field_r > var5; var5++) {
-                param2.a((byte) -125, param1, this.field_q[var4_int][var5]);
+                param2.addToLayer((byte) -125, param1, this.field_q[var4_int][var5]);
               }
             }
           }
@@ -463,7 +463,7 @@ final class BridgeModel extends TrapModel {
         int var19;
         Room var20;
         var19 = TombRacer.field_G ? 1 : 0;
-        var20 = this.a(78);
+        var20 = this.getRoom(78);
         var3 = this.body.getX(3);
         var4 = this.body.getY(9648);
         var5 = this.body.getWidth(-56);
@@ -548,7 +548,7 @@ final class BridgeModel extends TrapModel {
         }
     }
 
-    final void a(int param0, uw param1, byte param2) {
+    final void removeFromLayer(int param0, RenderScene param1, byte param2) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -562,7 +562,7 @@ final class BridgeModel extends TrapModel {
           if (null != this.field_q) {
             for (var4_int = 0; this.field_p > var4_int; var4_int++) {
               for (var5 = 0; var5 < this.field_r; var5++) {
-                param1.a(param0, this.field_q[var4_int][var5], (byte) -33);
+                param1.removeFromLayer(param0, this.field_q[var4_int][var5], (byte) -33);
               }
             }
           }

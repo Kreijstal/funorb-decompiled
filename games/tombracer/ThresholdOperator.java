@@ -27,9 +27,9 @@ final class ThresholdOperator extends TextureOperator {
         if (param0 != 1) {
           ThresholdOperator.releaseStatics(true);
         }
-        var8 = this.field_i.a((byte) -112, param1);
+        var8 = this.monochromeCache.getRow((byte) -112, param1);
         var3 = var8;
-        if (this.field_i.field_d) {
+        if (this.monochromeCache.rowMissed) {
           var4 = this.getInputMonochromeRow(0, -125, param1);
           for (var5 = 0; var5 < ns.textureWidth; var5++) {
             var6 = var4[var5];

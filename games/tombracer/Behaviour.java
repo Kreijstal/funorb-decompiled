@@ -404,7 +404,7 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
 
     abstract int hashState(int param0, int param1);
 
-    public final void f(int param0) {
+    public final void updateAnimation(int param0) {
         if (param0 != -4366) {
           Effect var3 = (Effect) null;
           this.a(18, -54, (Effect) null, 115, (byte) 119, -22);

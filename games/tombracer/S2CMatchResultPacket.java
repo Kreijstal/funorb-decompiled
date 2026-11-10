@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lf implements GamePacket {
-    private int field_b;
+final class S2CMatchResultPacket implements GamePacket {
+    private int winnerIndex;
     static String field_a;
 
     final static boolean a(int param0, int param1, int param2) {
@@ -13,13 +13,13 @@ final class lf implements GamePacket {
         return (2048 & param1) != 0 ? true : false;
     }
 
-    final void a(MatchScreen param0, int param1, MatchProtocol param2) {
+    final void apply(MatchScreen param0, int param1, MatchProtocol param2) {
         try {
           if (param1 != 0) {
             BitPacketBuffer var5 = (BitPacketBuffer) null;
             this.encode(61, (BitPacketBuffer) null);
           }
-          param0.i(this.field_b, 110);
+          param0.showMatchResult(this.winnerIndex, 110);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "lf.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -31,7 +31,7 @@ final class lf implements GamePacket {
           return;
         }
         try {
-          this.field_b = param0.readBits((byte) 44, 4) - 2;
+          this.winnerIndex = param0.readBits((byte) 44, 4) - 2;
           param0.endBitAccess((byte) 98);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "lf.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -41,10 +41,10 @@ final class lf implements GamePacket {
     public final void encode(int param0, BitPacketBuffer param1) {
         try {
           if (param0 != 200) {
-            lf.a(-117, 42);
+            S2CMatchResultPacket.a(-117, 42);
           }
           param1.beginBitWrite(8);
-          param1.writeBits((byte) 105, 2 + this.field_b, 4);
+          param1.writeBits((byte) 105, 2 + this.winnerIndex, 4);
           param1.endBitWrite(-1826190686);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "lf.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
