@@ -159,12 +159,12 @@ final class StringCursor {
     final static boolean a(int param0, int param1, byte param2) {
         if (param2 > -5) {
           field_a = (String[]) null;
-          if (!(aca.a(param0, 32768, param1) | ((param0 & 2048) != 0 ? true : false))) {
+          if (!(aca.hasFlag32768(param0, 32768, param1) | ((param0 & 2048) != 0 ? true : false))) {
             return vua.e(param0, param1, 13650) ? true : false;
           }
           return true;
         }
-        if (aca.a(param0, 32768, param1) | ((param0 & 2048) != 0 ? true : false)) {
+        if (aca.hasFlag32768(param0, 32768, param1) | ((param0 & 2048) != 0 ? true : false)) {
           return true;
         }
         if (!vua.e(param0, param1, 13650)) {

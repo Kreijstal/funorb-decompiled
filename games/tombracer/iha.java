@@ -92,17 +92,17 @@ final class iha {
         var12 = var12 - param4;
         var13 = var13 + param4;
         var14 = var14 + param4;
-        if (var11 < SoftwareRasterizer.field_b) {
-          var11 = SoftwareRasterizer.field_b;
+        if (var11 < SoftwareRasterizer.clipLeft) {
+          var11 = SoftwareRasterizer.clipLeft;
         }
-        if (var12 < SoftwareRasterizer.field_h) {
-          var12 = SoftwareRasterizer.field_h;
+        if (var12 < SoftwareRasterizer.clipTop) {
+          var12 = SoftwareRasterizer.clipTop;
         }
-        if (var13 > SoftwareRasterizer.field_d) {
-          var13 = SoftwareRasterizer.field_d;
+        if (var13 > SoftwareRasterizer.clipRight) {
+          var13 = SoftwareRasterizer.clipRight;
         }
-        if (var14 > SoftwareRasterizer.field_k) {
-          var14 = SoftwareRasterizer.field_k;
+        if (var14 > SoftwareRasterizer.clipBottom) {
+          var14 = SoftwareRasterizer.clipBottom;
         }
         field_e = 256 / param4;
         field_d = param5 * 128 / param4;
@@ -111,7 +111,7 @@ final class iha {
         field_g = (var11 - param0) * var7;
         field_c = (var11 - param0) * var8;
         field_b = param6;
-        iha.a(param0, param1, param4, 0, 0, var9, SoftwareRasterizer.field_l, var12 * SoftwareRasterizer.field_g + var11, param5, var7, var8, var12 - var14, var11 - var13, SoftwareRasterizer.field_g - (var13 - var11));
+        iha.a(param0, param1, param4, 0, 0, var9, SoftwareRasterizer.pixels, var12 * SoftwareRasterizer.width + var11, param5, var7, var8, var12 - var14, var11 - var13, SoftwareRasterizer.width - (var13 - var11));
     }
 
     public static void releaseStatics() {

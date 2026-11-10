@@ -7,8 +7,8 @@ abstract class SwitchComponent extends PrefabComponent {
     private boolean initiallyOn;
     static String[] fireDeathMessages;
 
-    final void w(int param0) {
-        super.w(-126);
+    final void resolveTargetIds(int param0) {
+        super.resolveTargetIds(-126);
         this.targets.resolveTargets(this.getRoot((byte) -57), false);
         if (param0 >= -122) {
           this.targets = (ComponentTargetList) null;
@@ -29,8 +29,8 @@ abstract class SwitchComponent extends PrefabComponent {
         }
     }
 
-    final void x(int param0) {
-        super.x(param0);
+    final void connectTargets(int param0) {
+        super.connectTargets(param0);
         if (null != this.switchState) {
           this.switchState.getLinks(1).setTargets(9, this.targets.getSwitchables((byte) -103));
           return;

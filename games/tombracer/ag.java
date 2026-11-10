@@ -113,7 +113,7 @@ final class ag implements iq {
         this.field_f = param4;
     }
 
-    final static boolean b(int param0, int param1, int param2) {
+    final static boolean hasFlag2048(int param0, int param1, int param2) {
         if (param0 != -1) {
           return true;
         }
@@ -165,8 +165,8 @@ final class ag implements iq {
             var7 = param1[1].field_n;
             param1[0].b(param3, param0);
             param1[2].b(-var6 + param4 + param3, param0);
-            SoftwareRasterizer.b(ic.field_d);
-            SoftwareRasterizer.g(param3 + var5_int, param0, -var6 + (param3 + param4), param0 + param1[1].field_k);
+            SoftwareRasterizer.saveClip(ic.field_d);
+            SoftwareRasterizer.intersectClip(param3 + var5_int, param0, -var6 + (param3 + param4), param0 + param1[1].field_k);
             var8 = param3 + var5_int;
             var9 = -var6 + (param3 + param4);
             param3 = var8;
@@ -177,7 +177,7 @@ final class ag implements iq {
               param1[1].b(param3, param0);
               param3 = param3 + var7;
             }
-            SoftwareRasterizer.a(ic.field_d);
+            SoftwareRasterizer.restoreClip(ic.field_d);
             return;
           }
           return;

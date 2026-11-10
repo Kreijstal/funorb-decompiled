@@ -28,11 +28,11 @@ final class aqa {
         field_c = null;
     }
 
-    final static int a(int param0) {
+    final static int getFrameRate(int param0) {
         if (param0 != 1188664449) {
           return 92;
         }
-        return (int)(1000000000L / mga.field_i);
+        return (int)(1000000000L / mga.nanosPerFrame);
     }
 
     static {

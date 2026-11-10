@@ -1542,7 +1542,7 @@ final class gja extends ka {
           if (null == this.field_X &&
             this.field_s == null &&
             this.field_u == null &&
-            !ei.a(this.field_h, this.field_Y, (byte) 27)) {
+            !ei.hasAnyMask55(this.field_h, this.field_Y, (byte) 27)) {
             var2_int = 0;
             var3 = 0;
             var4 = 0;
@@ -2337,9 +2337,9 @@ final class gja extends ka {
           boolean decompiledFrameCompleted9 = true;
           param0.field_T = this.field_T;
           param0.field_v = this.field_v;
-          var7_int = IntPoint.a(param4, this.field_h, (byte) -100) ? 1 : 0;
-          var8 = cga.a(param4, -62, this.field_h) ? 1 : 0;
-          var9 = TripBeamComponent.c(param4, this.field_h, 52) ? 1 : 0;
+          var7_int = IntPoint.hasAnyMask33(param4, this.field_h, (byte) -100) ? 1 : 0;
+          var8 = cga.hasAnyMask34(param4, -62, this.field_h) ? 1 : 0;
+          var9 = TripBeamComponent.hasAnyMask52(param4, this.field_h, 52) ? 1 : 0;
           var10 = var8 | var7_int | var9;
           if (var10 == 0) {
             param0.field_Z = this.field_Z;
@@ -2474,7 +2474,7 @@ final class gja extends ka {
           boolean decompiledFrameCompleted7 = true;
           boolean decompiledFrameCompleted8 = true;
           boolean decompiledFrameRemainder1 = true;
-          if (!S2CNewRoomPacket.a(540800, param4, this.field_h)) {
+          if (!S2CNewRoomPacket.hasAnyMask540800(540800, param4, this.field_h)) {
             param0.field_P = this.field_P;
             decompiledFrameRemainder1 = (var13 != 0);
           }
@@ -2503,7 +2503,7 @@ final class gja extends ka {
             }
           }
           if ((decompiledFrameCompleted8) &&
-            (EdgeDetectOperator.d(this.field_h, param4, 26205))) {
+            (EdgeDetectOperator.hasFlag256(this.field_h, param4, 26205))) {
             if (null == param2.field_C ||
               !(param2.field_C.length >= this.field_I)) {
               array$4 = new byte[this.field_I];
@@ -2538,7 +2538,7 @@ final class gja extends ka {
             param0.field_E.field_b = true;
             param0.field_E.field_e = this.field_E.field_e;
             if (var13 != 0) {
-              if (S2CMatchResultPacket.a(this.field_h, param4, 128)) {
+              if (S2CMatchResultPacket.hasFlag2048(this.field_h, param4, 128)) {
                 param0.field_E = this.field_E;
                 param0.field_E = null;
               } else {
@@ -2546,7 +2546,7 @@ final class gja extends ka {
               }
             }
           } else {
-            if (S2CMatchResultPacket.a(this.field_h, param4, 128)) {
+            if (S2CMatchResultPacket.hasFlag2048(this.field_h, param4, 128)) {
               param0.field_E = this.field_E;
               if (var13 != 0) {
                 param0.field_E = null;
@@ -2555,7 +2555,7 @@ final class gja extends ka {
               param0.field_E = null;
             }
           }
-          if (kaa.a(this.field_h, param4, param1)) {
+          if (kaa.hasMask24OrAll544(this.field_h, param4, param1)) {
             if (null == param2.field_lb ||
               !(this.field_fb <= param2.field_lb.length)) {
               var11Lifetime2 = this.field_fb;
@@ -2717,7 +2717,7 @@ final class gja extends ka {
             param0.field_d.field_h = this.field_d.field_h;
             param0.field_d.field_b = true;
             if (var13 != 0) {
-              if (!S2CRoundDeadlinePacket.a(param4, this.field_h, 0)) {
+              if (!S2CRoundDeadlinePacket.hasFlag2048(param4, this.field_h, 0)) {
                 param0.field_d = null;
                 param0.field_d = this.field_d;
               } else {
@@ -2725,7 +2725,7 @@ final class gja extends ka {
               }
             }
           } else {
-            if (!S2CRoundDeadlinePacket.a(param4, this.field_h, 0)) {
+            if (!S2CRoundDeadlinePacket.hasFlag2048(param4, this.field_h, 0)) {
               param0.field_d = null;
               if (var13 != 0) {
                 param0.field_d = this.field_d;
@@ -2735,7 +2735,7 @@ final class gja extends ka {
             }
           }
           boolean decompiledFrameCompleted3 = true;
-          if (TileGridCell.b(this.field_h, 71, param4)) {
+          if (TileGridCell.hasFlag16(this.field_h, 71, param4)) {
             regionExit1: {
               if (null != param2.field_M &&
                 param2.field_M.length >= this.field_I) {
@@ -2780,7 +2780,7 @@ final class gja extends ka {
             param0.field_M = this.field_M;
           }
           if (!C2SChooseRewardPacket.a(param4, this.field_h, (byte) -116)) {
-            if (!ag.b(-1, param4, this.field_h)) {
+            if (!ag.hasFlag2048(-1, param4, this.field_h)) {
               param0.field_g = null;
               if (var13 != 0) {
                 param0.field_g = this.field_g;
@@ -2805,7 +2805,7 @@ final class gja extends ka {
             param0.field_g.field_c = this.field_g.field_c;
           }
           boolean decompiledFrameCompleted2 = true;
-          if (fua.a(98, param4, this.field_h)) {
+          if (fua.hasFlag32768(98, param4, this.field_h)) {
             if (param2.field_gb != null &&
               param2.field_gb.length >= this.field_I) {
               param0.field_gb = param2.field_gb;
@@ -2840,7 +2840,7 @@ final class gja extends ka {
           boolean decompiledFrameCompleted0 = true;
           regionExit2: {
             boolean decompiledFrameCompleted1 = true;
-            if (!hk.a(param4, this.field_h, -93)) {
+            if (!hk.hasAnyMask50560(param4, this.field_h, -93)) {
               param0.field_nb = this.field_nb;
               if (var13 == 0) {
                 break regionExit2;
@@ -4878,11 +4878,11 @@ final class gja extends ka {
             this.field_ib = new hg(C2SChooseRewardPacket.a(true, this.field_Y, this.field_h));
           }
           if (param3 ||
-            S2CRoundDeadlinePacket.a(this.field_Y, this.field_h, 0)) {
+            S2CRoundDeadlinePacket.hasFlag2048(this.field_Y, this.field_h, 0)) {
             this.field_d = new hg(pr.a(this.field_Y, -23611, this.field_h));
           }
           if (param3 ||
-            S2CMatchResultPacket.a(this.field_h, this.field_Y, 128)) {
+            S2CMatchResultPacket.hasFlag2048(this.field_h, this.field_Y, 128)) {
             this.field_E = new hg(no.a(this.field_h, this.field_Y, 36864));
           }
           if (param3 ||
@@ -4890,7 +4890,7 @@ final class gja extends ka {
             this.field_O = new hg(OpenGlTransform3D.c(this.field_Y, this.field_h, -19531));
           }
           if (!param3 &&
-            !ag.b(-1, this.field_Y, this.field_h)) {
+            !ag.hasFlag2048(-1, this.field_Y, this.field_h)) {
             return;
           }
           this.field_g = new gg(C2SChooseRewardPacket.a(this.field_Y, this.field_h, (byte) -111));

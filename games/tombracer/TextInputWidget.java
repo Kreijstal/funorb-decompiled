@@ -135,7 +135,7 @@ class TextInputWidget extends FocusableWidget {
                       return true;
                     }
                     if (param2 == 84) {
-                      this.c(93);
+                      this.notifyEnterPressed(93);
                       return true;
                     }
                     if (VerticalScrollbar.field_tb[82] &&
@@ -676,14 +676,14 @@ class TextInputWidget extends FocusableWidget {
         }
     }
 
-    private final void c(int param0) {
+    private final void notifyEnterPressed(int param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 54 / ((param0 - 31) / 62);
           if (this.field_h instanceof TextInputListener) {
-            ((TextInputListener) (this.field_h)).a(-6038, this);
+            ((TextInputListener) (this.field_h)).onEnterPressed(-6038, this);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -779,7 +779,7 @@ class TextInputWidget extends FocusableWidget {
             this.k(-51);
           }
           if (this.field_h instanceof TextInputListener) {
-            ((TextInputListener) (this.field_h)).a(this, -10);
+            ((TextInputListener) (this.field_h)).onTextChanged(this, -10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

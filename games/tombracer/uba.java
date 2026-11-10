@@ -54,12 +54,12 @@ final class uba extends kma implements TextInputListener, eaa {
         }
     }
 
-    public final void a(TextInputWidget param0, int param1) {
+    public final void onTextChanged(TextInputWidget param0, int param1) {
         try {
           this.c(-65);
           if (param1 != -10) {
             TextInputWidget var4 = (TextInputWidget) null;
-            this.a((TextInputWidget) null, -90);
+            this.onTextChanged((TextInputWidget) null, -90);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "uba.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -115,7 +115,7 @@ final class uba extends kma implements TextInputListener, eaa {
     public uba() {
     }
 
-    public final void a(int param0, TextInputWidget param1) {
+    public final void onEnterPressed(int param0, TextInputWidget param1) {
         try {
           if (param0 != -6038) {
             field_f = -61;

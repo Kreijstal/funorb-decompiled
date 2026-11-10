@@ -40,7 +40,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         if (!this.b(param0, param1)) {
           return;
         }
-        this.x(8);
+        this.connectTargets(8);
         var3 = 0;
         if (!param0) {
           this.isSwitchable(-56);
@@ -54,16 +54,16 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         }
     }
 
-    final void c(boolean param0) {
+    final void resolveAllTargetIds(boolean param0) {
         int var2 = 0;
         RoomComponent var3;
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
-        this.w(-124);
+        this.resolveTargetIds(-124);
         for (var2 = 0; var2 < this.mounts.length; var2++) {
           var3 = this.mounts[var2].getChild(94);
           if (var3 != null) {
-            var3.c(true);
+            var3.resolveAllTargetIds(true);
           }
         }
         if (!param0) {
@@ -136,7 +136,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         return this.getX(3);
     }
 
-    void x(int param0) {
+    void connectTargets(int param0) {
         if (param0 != 8) {
           this.angle = -107;
         }
@@ -608,9 +608,9 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         return 0;
     }
 
-    void w(int param0) {
+    void resolveTargetIds(int param0) {
         if (param0 >= -122) {
-          this.x(71);
+          this.connectTargets(71);
         }
     }
 
@@ -656,7 +656,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
 
     public final Switchable findSwitchable(int param0, int param1, boolean param2) {
         if (param0 != 28672) {
-          this.c(false);
+          this.resolveAllTargetIds(false);
         }
         return (Switchable) ((Object) this.a(param1, param2, 20));
     }

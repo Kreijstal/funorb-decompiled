@@ -78,7 +78,7 @@ final class cra {
         return false;
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean hasMask24OrAll544(int param0, int param1, int param2) {
         if (param1 >= -9) {
           return false;
         }

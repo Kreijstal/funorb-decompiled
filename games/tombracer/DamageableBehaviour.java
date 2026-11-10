@@ -313,12 +313,12 @@ final class DamageableBehaviour extends Behaviour {
         if (param0 >= -67) {
           ResourceArchive var4 = (ResourceArchive) null;
           DamageableBehaviour.loadIndexedSprite(true, -98, (ResourceArchive) null, 106);
-          if (!(TripBeamComponent.c(param1, param2, 52) | ((param1 & 458752) != 0 ? true : false))) {
+          if (!(TripBeamComponent.hasAnyMask52(param1, param2, 52) | ((param1 & 458752) != 0 ? true : false))) {
             return C2SChooseRewardPacket.a(true, param1, param2) ? true : false;
           }
           return true;
         }
-        if (TripBeamComponent.c(param1, param2, 52) | ((param1 & 458752) != 0 ? true : false)) {
+        if (TripBeamComponent.hasAnyMask52(param1, param2, 52) | ((param1 & 458752) != 0 ? true : false)) {
           return true;
         }
         if (!C2SChooseRewardPacket.a(true, param1, param2)) {

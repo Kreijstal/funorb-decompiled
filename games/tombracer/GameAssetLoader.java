@@ -336,7 +336,7 @@ final class GameAssetLoader implements LoadingStage {
 
     public final void b(byte param0) {
         CoinItemComponent.a(cq.field_d, (byte) 52);
-        hd.a(50, param0 ^ -78);
+        hd.setFrameRate(50, param0 ^ -78);
         wm.field_a = null;
         SpriteTileOperator.field_t = (GameScreen) ((Object) nl.a(0, (byte) 50));
         ima.a(100.0f, uba.loadingQuipsShort[10], param0 ^ 115);

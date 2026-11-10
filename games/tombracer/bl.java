@@ -42,18 +42,18 @@ final class bl {
           SoftwareRasterizer.drawHorizontalLine(param3, param1, param4 + param0, 10000536);
           SoftwareRasterizer.drawHorizontalLine(param3, param2 + param1, param0 + 1, 12105912);
           var5_int = 1;
-          if (var5_int + param1 < SoftwareRasterizer.field_h) {
-            var5_int = -param1 + SoftwareRasterizer.field_h;
+          if (var5_int + param1 < SoftwareRasterizer.clipTop) {
+            var5_int = -param1 + SoftwareRasterizer.clipTop;
           }
           var6 = param2;
-          if (SoftwareRasterizer.field_k < var6 + param1) {
-            var6 = SoftwareRasterizer.field_k - param1;
+          if (SoftwareRasterizer.clipBottom < var6 + param1) {
+            var6 = SoftwareRasterizer.clipBottom - param1;
           }
           for (var7 = var5_int; var6 > var7; var7++) {
             var8 = var7 * 48 / param2 + 152;
             var9 = var8 << 16 | var8 << 8 | var8;
-            SoftwareRasterizer.field_l[param3 + (var7 + param1) * SoftwareRasterizer.field_g] = var9;
-            SoftwareRasterizer.field_l[param0 + ((var7 + param1) * SoftwareRasterizer.field_g + param3)] = var9;
+            SoftwareRasterizer.pixels[param3 + (var7 + param1) * SoftwareRasterizer.width] = var9;
+            SoftwareRasterizer.pixels[param0 + ((var7 + param1) * SoftwareRasterizer.width + param3)] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

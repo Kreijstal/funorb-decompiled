@@ -10,7 +10,7 @@ final class qp extends we {
     private int field_w;
     static FontMetrics field_r;
 
-    final static boolean a(int param0, byte param1, int param2) {
+    final static boolean hasFlag16(int param0, byte param1, int param2) {
         int var3 = -13 / ((24 - param1) / 57);
         return (param0 & 16) != 0 ? true : false;
     }

@@ -10,8 +10,8 @@ final class tm {
     tm() {
         int var1 = 0;
         VorbisSample.readBits(16);
-        this.field_b = VorbisSample.c() != 0 ? VorbisSample.readBits(4) + 1 : 1;
-        if (VorbisSample.c() != 0) {
+        this.field_b = VorbisSample.readBit() != 0 ? VorbisSample.readBits(4) + 1 : 1;
+        if (VorbisSample.readBit() != 0) {
           VorbisSample.readBits(8);
         }
         VorbisSample.readBits(2);

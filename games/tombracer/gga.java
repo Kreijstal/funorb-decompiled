@@ -90,7 +90,7 @@ final class gga extends ofa implements ButtonListener {
         SoftwareRasterizer.clear();
         RenderScene.a(false);
         if (var5 < 256) {
-          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_a, 0, 256 - var5);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 256 - var5);
         }
         pfa.a(1);
         if (TimeSwitchBehaviour.field_r >= 150) {

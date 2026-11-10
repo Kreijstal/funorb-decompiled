@@ -227,13 +227,13 @@ final class no extends MatchOverlay {
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        if (!S2CMatchResultPacket.a(param0, param1, 128)) {
+        if (!S2CMatchResultPacket.hasFlag2048(param0, param1, 128)) {
           return false;
         }
-        if (S2CNewRoomPacket.a(540800, param1, param0) | ((param1 & param2) != 0 ? true : false) | EdgeDetectOperator.d(param0, param1, 26205)) {
+        if (S2CNewRoomPacket.hasAnyMask540800(540800, param1, param0) | ((param1 & param2) != 0 ? true : false) | EdgeDetectOperator.hasFlag256(param0, param1, 26205)) {
           return true;
         }
-        return (((8192 & param1) != 0 ? true : false) | kaa.a(param0, param1, false) | rg.e(param0, param2 ^ -36949, param1)) & (0 == (55 & param0) ? true : false);
+        return (((8192 & param1) != 0 ? true : false) | kaa.hasMask24OrAll544(param0, param1, false) | rg.e(param0, param2 ^ -36949, param1)) & (0 == (55 & param0) ? true : false);
     }
 
     final static void a(String param0, long param1, byte param2) {

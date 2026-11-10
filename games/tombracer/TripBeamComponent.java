@@ -149,7 +149,7 @@ final class TripBeamComponent extends SwitchComponent {
         return 7;
     }
 
-    final static boolean c(int param0, int param1, int param2) {
+    final static boolean hasAnyMask52(int param0, int param1, int param2) {
         if (param2 == 52) {
           return (param0 & 52) != 0 ? true : false;
         }

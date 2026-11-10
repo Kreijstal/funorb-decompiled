@@ -1889,7 +1889,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.field_Bc = 0;
     }
 
-    final static boolean a(int param0, byte param1, int param2) {
+    final static boolean hasFlag1024(int param0, byte param1, int param2) {
         int var3 = -104 / ((-46 - param1) / 50);
         return (param2 & 1024) != 0 ? true : false;
     }

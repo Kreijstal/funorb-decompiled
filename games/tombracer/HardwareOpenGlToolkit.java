@@ -1255,7 +1255,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final static boolean b(int param0, int param1, int param2) {
+    final static boolean hasFlag32(int param0, int param1, int param2) {
         int var3 = -91 / ((-67 - param1) / 47);
         return 0 != (32 & param0) ? true : false;
     }

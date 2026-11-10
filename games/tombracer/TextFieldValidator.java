@@ -36,18 +36,18 @@ abstract class TextFieldValidator extends kma implements TextInputListener {
         return true;
     }
 
-    public final void a(int param0, TextInputWidget param1) {
+    public final void onEnterPressed(int param0, TextInputWidget param1) {
         try {
           if (param0 != -6038) {
             TextInputWidget var4 = (TextInputWidget) null;
-            this.a(46, (TextInputWidget) null);
+            this.onEnterPressed(46, (TextInputWidget) null);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "kca.KA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final void a(TextInputWidget param0, int param1) {
+    public final void onTextChanged(TextInputWidget param0, int param1) {
         if (param1 != -10) {
           return;
         }

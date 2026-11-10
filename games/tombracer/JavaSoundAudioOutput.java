@@ -8,7 +8,7 @@ final class JavaSoundAudioOutput extends AudioOutput {
     private javax.sound.sampled.AudioFormat field_y;
     private static String field_z;
 
-    final void f() {
+    final void writeMixBlock() {
         int var2 = 0;
         int var3 = 0;
         int var1 = 256;
@@ -26,14 +26,14 @@ final class JavaSoundAudioOutput extends AudioOutput {
         this.field_x.write(this.field_v, 0, var1 << 1);
     }
 
-    final void d() {
+    final void closeDevice() {
         if (this.field_x != null) {
           this.field_x.close();
           this.field_x = null;
         }
     }
 
-    final int e() {
+    final int getQueuedFrames() {
         return this.field_w - (this.field_x.available() >> (field_h ? 2 : 1));
     }
 

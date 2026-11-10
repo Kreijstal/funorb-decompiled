@@ -51,7 +51,7 @@ final class wk extends IntrusiveNode {
 
     final static void a(PcmStreamMixer param0, int param1, int param2, ResourceArchive param3) {
         try {
-          SwitchableId.field_b = param1 * aqa.a(1188664449) / 1000;
+          SwitchableId.field_b = param1 * aqa.getFrameRate(1188664449) / 1000;
           ne.a(param3, -101);
           gja.a(param3, 0);
           jp.a(param3, (byte) 20);

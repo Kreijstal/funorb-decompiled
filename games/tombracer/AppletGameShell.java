@@ -572,7 +572,7 @@ abstract class AppletGameShell extends GameApplet {
           pg.field_y = tja.field_q.b(65);
         }
         if (o.e(540800)) {
-          var3 = aqa.a(1188664449) * 1200;
+          var3 = aqa.getFrameRate(1188664449) * 1200;
           if (this.field_y ||
             !(rg.g((byte) 118) <= var3) &&
             !(var3 >= ada.b(false))) {

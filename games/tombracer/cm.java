@@ -43,21 +43,21 @@ final class cm implements GamePacket {
         if (param0 <= param12) {
           if (param14 <= param12) {
             if (param0 >= param14) {
-              ica.a(param0, param10, param3, param5, 0, param8, SoftwareRasterizer.field_l, param1, param4, param11, param2, param15, param13, param9, param6, param12, param14);
+              ica.a(param0, param10, param3, param5, 0, param8, SoftwareRasterizer.pixels, param1, param4, param11, param2, param15, param13, param9, param6, param12, param14);
             } else {
-              ica.a(param14, param3, param10, param1, 0, param8, SoftwareRasterizer.field_l, param5, param6, param11, param2, param15, param9, param13, param4, param12, param0);
+              ica.a(param14, param3, param10, param1, 0, param8, SoftwareRasterizer.pixels, param5, param6, param11, param2, param15, param9, param13, param4, param12, param0);
             }
           } else {
-            ica.a(param12, param3, param2, param11, 0, param6, SoftwareRasterizer.field_l, param5, param8, param1, param10, param9, param15, param13, param4, param14, param0);
+            ica.a(param12, param3, param2, param11, 0, param6, SoftwareRasterizer.pixels, param5, param8, param1, param10, param9, param15, param13, param4, param14, param0);
           }
         } else {
           if (param14 > param0) {
-            ica.a(param0, param2, param3, param5, 0, param6, SoftwareRasterizer.field_l, param11, param4, param1, param10, param9, param13, param15, param8, param14, param12);
+            ica.a(param0, param2, param3, param5, 0, param6, SoftwareRasterizer.pixels, param11, param4, param1, param10, param9, param13, param15, param8, param14, param12);
           } else {
             if (param12 < param14) {
-              ica.a(param14, param2, param10, param1, 0, param4, SoftwareRasterizer.field_l, param11, param6, param5, param3, param13, param9, param15, param8, param0, param12);
+              ica.a(param14, param2, param10, param1, 0, param4, SoftwareRasterizer.pixels, param11, param6, param5, param3, param13, param9, param15, param8, param0, param12);
             } else {
-              ica.a(param12, param10, param2, param11, 0, param4, SoftwareRasterizer.field_l, param1, param8, param5, param3, param13, param15, param9, param6, param0, param14);
+              ica.a(param12, param10, param2, param11, 0, param4, SoftwareRasterizer.pixels, param1, param8, param5, param3, param13, param15, param9, param6, param0, param14);
             }
           }
         }

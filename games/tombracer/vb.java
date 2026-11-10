@@ -106,7 +106,7 @@ final class vb extends IntrusiveNode {
                   }
                   var9_int = var9_int + var11;
                   var10 = var10 + var12;
-                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_g;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.width;
                 }
               }
               var16Lifetime3 = -param6 + param7;
@@ -184,7 +184,7 @@ final class vb extends IntrusiveNode {
               }
               var10 = var10 + var12;
               var9_int = var9_int + var11;
-              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_g;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.width;
             }
             return;
           }

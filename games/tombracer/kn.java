@@ -61,7 +61,7 @@ final class kn {
           if (var7 == -1) {
             var7 = this.field_q.field_k + this.field_q.field_w;
           }
-          var8 = SoftwareRasterizer.field_g >> 2;
+          var8 = SoftwareRasterizer.width >> 2;
           var9 = this.field_q.stringWidth(param1);
           var10 = this.field_q.field_w + this.field_q.field_k;
           var11 = 1;
@@ -87,11 +87,11 @@ final class kn {
             }
           }
           var12 = param3;
-          if (var12 - (-var9 - var5_int) > SoftwareRasterizer.field_g) {
-            var12 = -var5_int + (SoftwareRasterizer.field_g - var9);
+          if (var12 - (-var9 - var5_int) > SoftwareRasterizer.width) {
+            var12 = -var5_int + (SoftwareRasterizer.width - var9);
           }
           var13Lifetime1 = param2 - (this.field_q.field_G - 32);
-          if (var13Lifetime1 + var10 + var6 > SoftwareRasterizer.field_a) {
+          if (var13Lifetime1 + var10 + var6 > SoftwareRasterizer.height) {
             var13Lifetime1 = -var6 + param2 - var10;
           }
           SoftwareRasterizer.drawRectangle(var12, var13Lifetime1, var5_int + var9, var6 + var10, this.field_a);
@@ -183,12 +183,12 @@ final class kn {
           }
           var6 = this.field_q.field_k + this.field_q.field_G;
           var7 = param1;
-          if (var5_int + (var7 + 6) > SoftwareRasterizer.field_g) {
-            var7 = -6 + SoftwareRasterizer.field_g - var5_int;
+          if (var5_int + (var7 + 6) > SoftwareRasterizer.width) {
+            var7 = -6 + SoftwareRasterizer.width - var5_int;
           }
           var8 = param0 + (-this.field_q.field_G + 32);
-          if (SoftwareRasterizer.field_a < 6 + var6 + var8) {
-            var8 = -var6 + (SoftwareRasterizer.field_a - 6);
+          if (SoftwareRasterizer.height < 6 + var6 + var8) {
+            var8 = -var6 + (SoftwareRasterizer.height - 6);
           }
           SoftwareRasterizer.drawRectangle(var7, var8, 6 + var5_int, 6 + var6, this.field_s);
           SoftwareRasterizer.fillRectangle(var7 + 1, 1 + var8, 4 + var5_int, 4 + var6, this.field_c);

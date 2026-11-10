@@ -21,7 +21,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           SingleChildWidget.a(95);
         }
         stackIn_5_0 = ((458752 & param2) != 0);
-        stackIn_10_0 = !(!stackIn_5_0 | cga.a(param2, -83, param1)) || (C2SChooseRewardPacket.a(true, param2, param1));
+        stackIn_10_0 = !(!stackIn_5_0 | cga.hasAnyMask34(param2, -83, param1)) || (C2SChooseRewardPacket.a(true, param2, param1));
         return stackIn_10_0;
     }
 

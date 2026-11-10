@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nna {
+final class Bzip2State {
     int field_c;
     byte[] field_y;
     int field_F;
@@ -100,7 +100,7 @@ final class nna {
         }
     }
 
-    nna() {
+    Bzip2State() {
         this.field_C = new boolean[16];
         this.field_e = new byte[6][258];
         this.field_s = new int[6][258];

@@ -540,7 +540,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    mt.field_a = cq.field_a.waitAndAdvance((byte) 12, mga.field_i);
+                    mt.field_a = cq.field_a.waitAndAdvance((byte) 12, mga.nanosPerFrame);
                     stackIn_99_0 = 0;
                   }
                   var3 = stackIn_99_0;

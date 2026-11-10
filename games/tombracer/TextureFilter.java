@@ -40,7 +40,7 @@ final class TextureFilter {
     final static void a(boolean param0, byte param1) {
         int var2 = 109 / ((-1 - param1) / 54);
         if (era.field_d != null) {
-          SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.field_b, SoftwareRasterizer.field_h, -SoftwareRasterizer.field_b + SoftwareRasterizer.field_d, -SoftwareRasterizer.field_h + SoftwareRasterizer.field_k);
+          SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, -SoftwareRasterizer.clipLeft + SoftwareRasterizer.clipRight, -SoftwareRasterizer.clipTop + SoftwareRasterizer.clipBottom);
           era.field_d.b(64, param0);
         }
     }

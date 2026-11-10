@@ -65,7 +65,7 @@ final class TileGridCell {
         return this.field_c;
     }
 
-    final static boolean b(int param0, int param1, int param2) {
+    final static boolean hasFlag16(int param0, int param1, int param2) {
         if (param1 < 5) {
           field_k = (Sprite[]) null;
         }

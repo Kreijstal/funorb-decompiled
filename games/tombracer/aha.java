@@ -112,7 +112,7 @@ final class aha {
         for (var2 = 0; var2 < this.field_g; var2++) {
           var3 = 0;
           var4 = VorbisSample.readBits(3);
-          var5 = VorbisSample.c() != 0 ? 1 : 0;
+          var5 = VorbisSample.readBit() != 0 ? 1 : 0;
           if (var5 != 0) {
             var3 = VorbisSample.readBits(5);
           }

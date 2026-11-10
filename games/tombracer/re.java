@@ -14,8 +14,8 @@ final class re {
     final static void a(int param0) {
         int var2 = 0;
         int var3 = 0;
-        BufferedSocket.field_g = SoftwareRasterizer.field_a;
-        SceneLight.field_i = SoftwareRasterizer.field_g;
+        BufferedSocket.field_g = SoftwareRasterizer.height;
+        SceneLight.field_i = SoftwareRasterizer.width;
         NodeHashTable.a(16);
         oca.field_b.a(0, 0, 20, nra.field_a.field_G, -2 + (-40 + nra.field_a.field_t));
         PerlinNoise2D.field_t.a(hk.field_e.field_G, di.field_a, param0 + 5264, 0, 0);

@@ -283,8 +283,8 @@ abstract class MazeComponent extends PrefabComponent {
         int var13 = 0;
         var13 = TombRacer.field_G ? 1 : 0;
         try {
-          SceneLight.field_i = SoftwareRasterizer.field_g;
-          BufferedSocket.field_g = SoftwareRasterizer.field_a;
+          SceneLight.field_i = SoftwareRasterizer.width;
+          BufferedSocket.field_g = SoftwareRasterizer.height;
           if (param0) {
             stackIn_4_0 = GameKeyHandler.field_a;
           } else {
@@ -403,7 +403,7 @@ abstract class MazeComponent extends PrefabComponent {
               }
             }
           }
-          PlayerModel.field_a.a(360, -134 + (SoftwareRasterizer.field_a - 10), -23776, 10, SoftwareRasterizer.field_g - 360 >> 1);
+          PlayerModel.field_a.a(360, -134 + (SoftwareRasterizer.height - 10), -23776, 10, SoftwareRasterizer.width - 360 >> 1);
           S2CEventPacket.field_e.a(PlayerModel.field_a.field_G, 24, -23776, 0, 0);
           vs.field_R.a(PlayerModel.field_a.field_G, -24 + PlayerModel.field_a.field_t, -23776, 24, 0);
           vs.field_R.field_w = Player.c(vs.field_R.field_t, 1, 3, 11579568, param1 ^ -116, 8421504);

@@ -2318,8 +2318,8 @@ final class pfa {
           if (null == var1) {
             throw new IllegalStateException();
           }
-          SoftwareRasterizer.a(var1.field_g, var1.field_m, var1.field_l);
-          SoftwareRasterizer.b(var1.field_n, var1.field_k, var1.field_h, var1.field_f);
+          SoftwareRasterizer.setTarget(var1.field_g, var1.field_m, var1.field_l);
+          SoftwareRasterizer.setClip(var1.field_n, var1.field_k, var1.field_h, var1.field_f);
           var1.field_g = null;
           vt.field_a.addLast((byte) -67, var1);
           return;

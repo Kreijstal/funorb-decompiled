@@ -97,7 +97,7 @@ final class tia {
         if (param1 != -23403) {
           return false;
         }
-        return qp.a(param2, (byte) 121, param0) & mm.a(-112, param2, param0);
+        return qp.hasFlag16(param2, (byte) 121, param0) & mm.hasFlag2048(-112, param2, param0);
     }
 
     static {

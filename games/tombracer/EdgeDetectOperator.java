@@ -18,7 +18,7 @@ final class EdgeDetectOperator extends TextureOperator {
         this.field_n = 4096;
     }
 
-    final static boolean d(int param0, int param1, int param2) {
+    final static boolean hasFlag256(int param0, int param1, int param2) {
         if (param2 != 26205) {
           EdgeDetectOperator.floorDivide(-33, 75, 49);
         }

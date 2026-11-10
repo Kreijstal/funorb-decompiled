@@ -51,8 +51,8 @@ abstract class SpriteState extends DualLinkNode {
             var8 = param1[1].field_n;
             param1[0].d(param4, param2, param0);
             param1[2].d(param4 - (-param5 + var7), param2, param0);
-            SoftwareRasterizer.b(ic.field_d);
-            SoftwareRasterizer.g(var6_int + param4, param2, -var7 + param4 + param5, param2 + param1[1].field_k);
+            SoftwareRasterizer.saveClip(ic.field_d);
+            SoftwareRasterizer.intersectClip(var6_int + param4, param2, -var7 + param4 + param5, param2 + param1[1].field_k);
             var9 = param4 + var6_int;
             var10 = -var7 + param4 + param5;
             for (param4 = var9; param4 < var10; param4 = param4 + var8) {
@@ -61,7 +61,7 @@ abstract class SpriteState extends DualLinkNode {
             if (param3 != 20278) {
               field_l = (int[]) null;
             }
-            SoftwareRasterizer.a(ic.field_d);
+            SoftwareRasterizer.restoreClip(ic.field_d);
             return;
           }
           return;

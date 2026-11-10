@@ -1131,7 +1131,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         }
         var11 = (RoomComponent) (this.components.first(-80));
         while (var11 != null) {
-          var11.c(true);
+          var11.resolveAllTargetIds(true);
           var11 = (RoomComponent) (this.components.next(124));
         }
         var3.position = 0;

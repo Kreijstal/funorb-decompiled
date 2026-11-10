@@ -77,8 +77,8 @@ abstract class ofa extends gn {
         var7 = 0;
         var8 = param0;
         while (var4 > var7) {
-          if (var8 >= SoftwareRasterizer.field_h &&
-            var8 < SoftwareRasterizer.field_k) {
+          if (var8 >= SoftwareRasterizer.clipTop &&
+            var8 < SoftwareRasterizer.clipBottom) {
             var9 = (var6 - var5) * var7 / var4 + var5;
             var10 = 0;
             var11 = this.field_m;
@@ -91,7 +91,7 @@ abstract class ofa extends gn {
                   }
                   var13 = var9 * (-var12 + 462) / 42;
                   var13 = var13 | (var13 << 8 | var13 << 16);
-                  SoftwareRasterizer.field_l[var10 + param2 + SoftwareRasterizer.field_g * var8] = var13;
+                  SoftwareRasterizer.pixels[var10 + param2 + SoftwareRasterizer.width * var8] = var13;
                 }
                 var10++;
               }
@@ -108,7 +108,7 @@ abstract class ofa extends gn {
                   } else {
                     var15 = var9 * (-var14 + 462) / 42;
                     var15 = var15 | (var15 << 16 | var15 << 8);
-                    SoftwareRasterizer.field_l[param2 + (var8 * SoftwareRasterizer.field_g + var11)] = var15;
+                    SoftwareRasterizer.pixels[param2 + (var8 * SoftwareRasterizer.width + var11)] = var15;
                   }
                   var13Lifetime1++;
                   var11++;

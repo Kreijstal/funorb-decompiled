@@ -11,7 +11,7 @@ final class fua implements WidgetPainter {
     static boolean field_g;
     static Sprite[] field_f;
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean hasFlag32768(int param0, int param1, int param2) {
         if (param0 <= 88) {
           return true;
         }
@@ -56,7 +56,7 @@ final class fua implements WidgetPainter {
           if (param0.hasKeyboardFocus((byte) -34)) {
             nn.a(var6_int + 2, 2 + var7, -4 + param0.field_p, param0.field_m - 4, false);
           }
-          SoftwareRasterizer.b(var6_int, var7, var6_int + (param0.field_m - 2), var7 + param0.field_p);
+          SoftwareRasterizer.setClip(var6_int, var7, var6_int + (param0.field_m - 2), var7 + param0.field_p);
           var8 = this.field_d.field_z.d(124);
           if (var8 != null) {
             var9 = var8.toString();
@@ -67,7 +67,7 @@ final class fua implements WidgetPainter {
               SoftwareRasterizer.fillRectangleAlpha(2 + var6_int, var7 + 2, var10, -4 + param0.field_p, 2188450, 100);
             }
           }
-          SoftwareRasterizer.b();
+          SoftwareRasterizer.resetClip();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

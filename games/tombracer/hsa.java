@@ -369,11 +369,11 @@ final class hsa {
 
     final static int a(int param0, int param1, int param2, byte param3) {
         int var4 = 77 % ((param3 + 18) / 63);
-        if (!(param1 + (param0 + param2) > SoftwareRasterizer.field_a)) {
+        if (!(param1 + (param0 + param2) > SoftwareRasterizer.height)) {
           return param0 + param2;
         }
         if (-param1 + param2 < 0) {
-          return SoftwareRasterizer.field_a - param1;
+          return SoftwareRasterizer.height - param1;
         }
         return -param1 + param2;
     }

@@ -175,11 +175,11 @@ final class NodeHashTable {
         int var1 = (-640 + SceneLight.field_i) / 2;
         int var2 = SoftwareTransform3D.field_q * SoftwareTransform3D.field_q;
         int var3 = -(mla.field_a * mla.field_a) + var2;
-        nra.field_a.a(199, -214 + SoftwareRasterizer.field_a, -23776, 90, -(199 * var3 / var2) + var1);
+        nra.field_a.a(199, -214 + SoftwareRasterizer.height, -23776, 90, -(199 * var3 / var2) + var1);
         if (param0 != 16) {
           return;
         }
-        OpenGlToolkit.field_fd.a(438, -4 + (-120 + SoftwareRasterizer.field_a), -23776, 0, 202 + var1 + 438 * var3 / var2);
+        OpenGlToolkit.field_fd.a(438, -4 + (-120 + SoftwareRasterizer.height), -23776, 0, 202 + var1 + 438 * var3 / var2);
     }
 
     static {

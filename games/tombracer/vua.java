@@ -113,22 +113,22 @@ final class vua extends SingleChildWidget {
           return false;
         }
         if (param2 == 13650) {
-          stackIn_15_0 = o.a(-1, param1, param0);
+          stackIn_15_0 = o.hasAnyMask540800(-1, param1, param0);
           stackIn_16_1 = ((45056 & param0) == 0) ? false : true;
-          if (stackIn_15_0 | stackIn_16_1 | mpa.a(false, param1, param0)) {
+          if (stackIn_15_0 | stackIn_16_1 | mpa.hasAnyMask1048832(false, param1, param0)) {
             return true;
           }
           stackIn_20_0 = ((param1 & 55) == 0);
-          return stackIn_20_0 & (cra.a(param1, param2 ^ -13642, param0) | wq.b(param1, param0, 8000));
+          return stackIn_20_0 & (cra.hasMask24OrAll544(param1, param2 ^ -13642, param0) | wq.b(param1, param0, 8000));
         }
         field_A = (ToolkitSprite) null;
-        stackIn_5_0 = o.a(-1, param1, param0);
+        stackIn_5_0 = o.hasAnyMask540800(-1, param1, param0);
         stackIn_6_1 = ((45056 & param0) == 0) ? false : true;
-        if (stackIn_5_0 | stackIn_6_1 | mpa.a(false, param1, param0)) {
+        if (stackIn_5_0 | stackIn_6_1 | mpa.hasAnyMask1048832(false, param1, param0)) {
           return true;
         }
         stackIn_10_0 = ((param1 & 55) == 0);
-        return stackIn_10_0 & (cra.a(param1, param2 ^ -13642, param0) | wq.b(param1, param0, 8000));
+        return stackIn_10_0 & (cra.hasMask24OrAll544(param1, param2 ^ -13642, param0) | wq.b(param1, param0, 8000));
     }
 
     vua(int param0, int param1, int param2, int param3, WidgetPainter param4, UiWidget param5) {

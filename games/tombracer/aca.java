@@ -30,7 +30,7 @@ final class aca extends IntrusiveNode {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean hasFlag32768(int param0, int param1, int param2) {
         if (param1 != 32768) {
           return false;
         }

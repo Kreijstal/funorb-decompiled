@@ -13,7 +13,7 @@ final class nm extends vo implements sca {
           return;
         }
         try {
-          SoftwareRasterizer.a(param0.pixels, param0.field_n, param0.field_k);
+          SoftwareRasterizer.setTarget(param0.pixels, param0.field_n, param0.field_k);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "nm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

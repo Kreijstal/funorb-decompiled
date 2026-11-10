@@ -299,7 +299,7 @@ final class hk {
         field_e = null;
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean hasAnyMask50560(int param0, int param1, int param2) {
         if (param2 > -81) {
           hk.releaseStatics(-35);
         }

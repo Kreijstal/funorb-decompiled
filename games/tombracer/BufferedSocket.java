@@ -95,7 +95,7 @@ final class BufferedSocket implements Runnable {
     }
 
     final static int a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        if (!pda.a(param9, param4, param6, 256, param7, param3, param0, param8, param2)) {
+        if (!pda.rectanglesOverlap(param9, param4, param6, 256, param7, param3, param0, param8, param2)) {
           return 0;
         }
         if (param1 != 1) {

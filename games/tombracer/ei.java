@@ -62,7 +62,7 @@ class ei {
         }
     }
 
-    final static boolean a(int param0, int param1, byte param2) {
+    final static boolean hasAnyMask55(int param0, int param1, byte param2) {
         if (param2 != 27) {
           return true;
         }

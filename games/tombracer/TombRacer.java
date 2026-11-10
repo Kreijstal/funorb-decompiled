@@ -134,7 +134,7 @@ public final class TombRacer extends rfa implements ls {
                 var4_int = stackIn_19_0;
                 if (var4_int != 0) {
                   wm.field_a.draw((byte) -28, false);
-                  tga.field_a.SA(0, 0, aaa.a(false), SwitchLinkList.b(param2 ^ 17), SoftwareRasterizer.field_l, 0, aaa.a(false));
+                  tga.field_a.SA(0, 0, aaa.a(false), SwitchLinkList.b(param2 ^ 17), SoftwareRasterizer.pixels, 0, aaa.a(false));
                 }
               }
             }
@@ -180,12 +180,12 @@ public final class TombRacer extends rfa implements ls {
               stackIn_47_0 = true;
             }
             S2CNewRoomPacket.a(stackIn_47_0, 106);
-            tga.field_a.SA(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_a, SoftwareRasterizer.field_l, 0, SoftwareRasterizer.field_g);
+            tga.field_a.SA(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
             var5_ref_ssa.a(param2 + 84);
           }
           if (var4_intLifetime1 != 0) {
             if (!lca.a(false)) {
-              tga.field_a.SA(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_a, SoftwareRasterizer.field_l, 0, SoftwareRasterizer.field_g);
+              tga.field_a.SA(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
             } else {
               tga.field_a.c(-1073741824, 0, aaa.a(false), 0, -22971, SwitchLinkList.b(0));
               var5 = ComponentTargetList.a(false);
@@ -194,7 +194,7 @@ public final class TombRacer extends rfa implements ls {
               var8 = rs.a((byte) 124);
               var9 = IntrusiveDequeCursor.a((byte) 65, tga.field_a);
               var9.a(var5 + var7, var6, (byte) -12, var6 + var8, var5);
-              tga.field_a.SA(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_a, SoftwareRasterizer.field_l, 0, SoftwareRasterizer.field_g);
+              tga.field_a.SA(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
               var9.a(99);
             }
             this.finishFrame(-28581);
@@ -1425,7 +1425,7 @@ public final class TombRacer extends rfa implements ls {
           tga.field_a.setLights(0, (SceneLight[]) null);
           if (HelloCommand.field_o != null &&
             HelloCommand.field_o.a(param0 + 28579)) {
-            tga.field_a.SA(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_a, SoftwareRasterizer.field_l, 0, SoftwareRasterizer.field_g);
+            tga.field_a.SA(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.pixels, 0, SoftwareRasterizer.width);
           }
           if (param0 != -28581) {
             return;

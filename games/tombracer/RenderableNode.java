@@ -10,7 +10,7 @@ final class RenderableNode extends IntrusiveNode {
     static jea field_i;
 
     final static boolean a(int param0, int param1, byte param2) {
-        if ((0 != (65536 & param0) ? true : false) | cra.a(param1, -31, param0)) {
+        if ((0 != (65536 & param0) ? true : false) | cra.hasMask24OrAll544(param1, -31, param0)) {
           return true;
         }
         if (ooa.a(param1, param0, -68)) {
@@ -31,22 +31,22 @@ final class RenderableNode extends IntrusiveNode {
         var9 = TombRacer.field_G ? 1 : 0;
         if (param0 > param3) {
           if (param4 > param0) {
-            vb.a(-922437200, param7, param6, param3, param2, param5, param0, param4, SoftwareRasterizer.field_l);
+            vb.a(-922437200, param7, param6, param3, param2, param5, param0, param4, SoftwareRasterizer.pixels);
           } else {
             if (param3 >= param4) {
-              vb.a(-922437200, param5, param6, param4, param7, param2, param3, param0, SoftwareRasterizer.field_l);
+              vb.a(-922437200, param5, param6, param4, param7, param2, param3, param0, SoftwareRasterizer.pixels);
             } else {
-              vb.a(-922437200, param2, param6, param3, param7, param5, param4, param0, SoftwareRasterizer.field_l);
+              vb.a(-922437200, param2, param6, param3, param7, param5, param4, param0, SoftwareRasterizer.pixels);
             }
           }
         } else {
           if (param3 < param4) {
-            vb.a(-922437200, param5, param6, param0, param2, param7, param3, param4, SoftwareRasterizer.field_l);
+            vb.a(-922437200, param5, param6, param0, param2, param7, param3, param4, SoftwareRasterizer.pixels);
           } else {
             if (param4 > param0) {
-              vb.a(-922437200, param2, param6, param0, param5, param7, param4, param3, SoftwareRasterizer.field_l);
+              vb.a(-922437200, param2, param6, param0, param5, param7, param4, param3, SoftwareRasterizer.pixels);
             } else {
-              vb.a(-922437200, param7, param6, param4, param5, param2, param0, param3, SoftwareRasterizer.field_l);
+              vb.a(-922437200, param7, param6, param4, param5, param2, param0, param3, SoftwareRasterizer.pixels);
             }
           }
         }

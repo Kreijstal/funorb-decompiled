@@ -5,14 +5,14 @@ final class mm extends IntrusiveNode {
     static boolean field_g;
     static String field_f;
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean hasFlag2048(int param0, int param1, int param2) {
         int var3 = 125 / ((param0 + 64) / 32);
         return (2048 & param1) != 0 ? true : false;
     }
 
     public static void a(byte param0) {
         if (param0 != -44) {
-          mm.a(-1, -14, 26);
+          mm.hasFlag2048(-1, -14, 26);
           field_f = null;
           return;
         }

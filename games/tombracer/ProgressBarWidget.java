@@ -201,7 +201,7 @@ final class ProgressBarWidget extends UiWidget {
             param1.b(var6, param0);
           }
           pfa.a(1);
-          if (SoftwareRasterizer.field_b <= this.field_A.field_m + param2) {
+          if (SoftwareRasterizer.clipLeft <= this.field_A.field_m + param2) {
             nm.a(this.field_E, (byte) 116);
             param1.b(-this.field_y, 0);
             param1.b(2 * this.field_u - this.field_y, 0);
@@ -209,7 +209,7 @@ final class ProgressBarWidget extends UiWidget {
             pfa.a(1);
             this.field_E.b(param2, param0);
           }
-          if (SoftwareRasterizer.field_d >= -this.field_A.field_m + var5_int) {
+          if (SoftwareRasterizer.clipRight >= -this.field_A.field_m + var5_int) {
             nm.a(this.field_E, (byte) 91);
             for (var7 = this.field_y + this.field_m - this.field_A.field_m; 2 * this.field_u < var7; var7 = var7 - 2 * this.field_u) {
             }

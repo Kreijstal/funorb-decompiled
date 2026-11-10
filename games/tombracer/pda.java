@@ -7,7 +7,7 @@ final class pda {
     static int field_c;
     static String field_a;
 
-    final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static boolean rectanglesOverlap(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         if (param3 != 256) {
           return true;
         }

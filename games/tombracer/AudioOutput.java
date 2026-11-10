@@ -55,8 +55,8 @@ class AudioOutput {
         if (this.field_i != null &&
           this.field_r <= 0) {
           this.field_r = this.field_r + (field_d >> 4);
-          AudioOutput.a(this.field_i);
-          this.a(this.field_i, this.field_i.getLevel());
+          AudioOutput.deactivateTree(this.field_i);
+          this.enqueueByPriority(this.field_i, this.field_i.getLevel());
           var4 = 0;
           var5 = 255;
           var6 = 7;
@@ -99,7 +99,7 @@ class AudioOutput {
                     if (var14Lifetime2 != null) {
                       var15_int = var11.field_h;
                       while (var14Lifetime2 != null) {
-                        this.a(var14Lifetime2, var15_int * var14Lifetime2.getLevel() >> 8);
+                        this.enqueueByPriority(var14Lifetime2, var15_int * var14Lifetime2.getLevel() >> 8);
                         var14Lifetime2 = var11.nextSubStream();
                       }
                     }
@@ -147,7 +147,7 @@ class AudioOutput {
         this.field_n = bva.currentTimeMillis((byte) -107);
     }
 
-    int e() throws Exception {
+    int getQueuedFrames() throws Exception {
         return this.field_s;
     }
 
@@ -231,7 +231,7 @@ class AudioOutput {
               this.field_n = var1 - 6000L;
             }
             while (var1 > this.field_n + 5000L) {
-              this.b(256);
+              this.skipFrames(256);
               this.field_n = this.field_n + (long)(256000 / field_d);
               var1 = bva.currentTimeMillis((byte) -107);
             }
@@ -252,7 +252,7 @@ class AudioOutput {
               this.field_e = 0L;
               this.field_o = true;
             }
-            var3_int = this.e();
+            var3_int = this.getQueuedFrames();
             if (this.field_f - var3_int > this.field_a) {
               this.field_a = this.field_f - var3_int;
             }
@@ -265,7 +265,7 @@ class AudioOutput {
               if (this.field_s > 16384) {
                 this.field_s = 16384;
               }
-              this.d();
+              this.closeDevice();
               this.openDevice(this.field_s);
               var3_int = 0;
               this.field_o = true;
@@ -276,7 +276,7 @@ class AudioOutput {
             }
             while (var3_int < var4) {
               this.mixBlock(this.field_j, 256);
-              this.f();
+              this.writeMixBlock();
               var3_int += 256;
             }
             if (var1 > this.field_m) {
@@ -285,7 +285,7 @@ class AudioOutput {
               } else {
                 if (this.field_a == 0 &&
                   this.field_b == 0) {
-                  this.d();
+                  this.closeDevice();
                   this.field_e = var1 + 2000L;
                   return;
                 }
@@ -299,7 +299,7 @@ class AudioOutput {
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var3 = (Exception) (Object) decompiledCaughtException;
-            this.d();
+            this.closeDevice();
             this.field_e = var1 + 2000L;
           }
           return;
@@ -310,7 +310,7 @@ class AudioOutput {
         }
     }
 
-    private final void a(PcmStream param0, int param1) {
+    private final void enqueueByPriority(PcmStream param0, int param1) {
         int var3 = param1 >> 5;
         PcmStream var4 = this.field_u[var3];
         if (var4 == null) {
@@ -322,19 +322,19 @@ class AudioOutput {
         param0.field_h = param1;
     }
 
-    private final static void a(PcmStream param0) {
+    private final static void deactivateTree(PcmStream param0) {
         param0.active = false;
         if (param0.field_i != null) {
           param0.field_i.field_f = 0;
         }
         PcmStream var1 = param0.firstSubStream();
         while (var1 != null) {
-          AudioOutput.a(var1);
+          AudioOutput.deactivateTree(var1);
           var1 = param0.nextSubStream();
         }
     }
 
-    final synchronized void b(PcmStream param0) {
+    final synchronized void setStream(PcmStream param0) {
         this.field_i = param0;
     }
 
@@ -359,7 +359,7 @@ class AudioOutput {
             field_p = null;
           }
         }
-        this.d();
+        this.closeDevice();
         this.field_j = null;
         this.field_g = true;
     }
@@ -367,7 +367,7 @@ class AudioOutput {
     void openDevice(int param0) throws Exception {
     }
 
-    private final void b(int param0) {
+    private final void skipFrames(int param0) {
         this.field_r = this.field_r - param0;
         if (this.field_r < 0) {
           this.field_r = 0;
@@ -378,7 +378,7 @@ class AudioOutput {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void configure(int param0, boolean param1, int param2) {
         if (param0 < 8000 ||
           param0 > 48000) {
           throw new IllegalArgumentException();
@@ -395,10 +395,10 @@ class AudioOutput {
     void initDevice(java.awt.Component param0) throws Exception {
     }
 
-    void d() {
+    void closeDevice() {
     }
 
-    void f() throws Exception {
+    void writeMixBlock() throws Exception {
     }
 
     AudioOutput() {

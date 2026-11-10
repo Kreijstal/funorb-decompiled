@@ -35,7 +35,7 @@ final class mpa extends ContentTransitionDialog {
             return stackIn_3_0;
           }
           if (param0 >= -66) {
-            mpa.a(true, -28, -59);
+            mpa.hasAnyMask1048832(true, -28, -59);
           }
           var3_int = param2.length();
           if (var3_int >= 1 &&
@@ -87,7 +87,7 @@ final class mpa extends ContentTransitionDialog {
         }
     }
 
-    final static boolean a(boolean param0, int param1, int param2) {
+    final static boolean hasAnyMask1048832(boolean param0, int param1, int param2) {
         if (!param0) {
           return (param2 & 1048832) != 0 ? true : false;
         }

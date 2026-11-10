@@ -49,16 +49,16 @@ final class nba {
 
     final static void a(PlatformTaskDispatcher param0, sq param1, int param2, int param3, int param4, java.awt.Component param5, int param6, boolean param7) {
         try {
-          AudioOutput.a(param3, param7, 10);
+          AudioOutput.configure(param3, param7, 10);
           WheeledMountComponent.field_P = AudioOutput.createOutput(param0, param5, 0, param4);
           int var8_int = 22 % ((50 - param6) / 54);
           gg.field_b = AudioOutput.createOutput(param0, param5, 1, param2);
           PitModel.field_n = new PcmStreamMixer();
           BeamShooterBehaviour.field_p = param2;
-          gg.field_b.b(PitModel.field_n);
+          gg.field_b.setStream(PitModel.field_n);
           LegacyOpenGlUnlitEffect.field_d = param1;
           LegacyOpenGlUnlitEffect.field_d.a((byte) 100, MatchState.field_w);
-          WheeledMountComponent.field_P.b(LegacyOpenGlUnlitEffect.field_d);
+          WheeledMountComponent.field_P.setStream(LegacyOpenGlUnlitEffect.field_d);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "nba.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
         }

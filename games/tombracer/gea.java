@@ -75,15 +75,15 @@ final class gea {
           MembersUpsellMenu.field_w = DrawOfferMenu.a(1127256, 1513239, 1513239, 0, (BitmapFont) null, 2245737, 4020342, 65793, 65793, 5138823, 8947848, 65793, (byte) -78);
           BoulderComponent.field_M = DrawOfferMenu.a(0, 0, 0, 16764006, param2, 0, param0, 0, 0, 0, 0, 0, (byte) -81);
           tg.field_c = DrawOfferMenu.a(0, 0, 0, 16777215, param2, 0, 0, 0, 0, 0, 0, 0, (byte) -123);
-          var5 = SoftwareRasterizer.field_g;
-          var6 = SoftwareRasterizer.field_a;
-          var16 = SoftwareRasterizer.field_l;
+          var5 = SoftwareRasterizer.width;
+          var6 = SoftwareRasterizer.height;
+          var16 = SoftwareRasterizer.pixels;
           EffectEvent.field_j = new Sprite(10, 14);
           EffectEvent.field_j.c();
           for (var8 = 2; var8 < 7; var8++) {
             SoftwareRasterizer.drawVerticalLine(var8, var8 + 1, -(var8 << 1) + 14, 16777215);
           }
-          SoftwareRasterizer.a(var16, var5, var6);
+          SoftwareRasterizer.setTarget(var16, var5, var6);
           cia.field_g = FontMetrics.a(true, BoulderComponent.field_M, MembersUpsellMenu.field_w, var4, tg.field_c);
           rua.field_gb.field_J = new IntrusiveDeque();
           return;

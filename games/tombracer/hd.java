@@ -53,8 +53,8 @@ final class hd {
         }
     }
 
-    final static void a(int param0, int param1) {
-        mga.field_i = 1000000000L / (long)param0;
+    final static void setFrameRate(int param0, int param1) {
+        mga.nanosPerFrame = 1000000000L / (long)param0;
         if (param1 <= 97) {
           field_a = (boolean[]) null;
         }

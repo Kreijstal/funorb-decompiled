@@ -6,14 +6,14 @@ final class mga extends IntrusiveNode {
     int field_k;
     static String[] field_f;
     MessageOverlay field_h;
-    static long field_i;
+    static long nanosPerFrame;
     static int[] field_g;
 
     public static void a(int param0) {
         field_g = null;
         field_j = null;
         if (param0 != 34037) {
-          field_i = -35L;
+          nanosPerFrame = -35L;
           field_f = null;
           return;
         }
@@ -80,6 +80,6 @@ final class mga extends IntrusiveNode {
     static {
         field_j = new char[]{(char)13, (char)10};
         field_f = new String[]{"Course Length", "Rounds to Win"};
-        field_i = 20000000L;
+        nanosPerFrame = 20000000L;
     }
 }

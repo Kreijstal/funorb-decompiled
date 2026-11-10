@@ -7,7 +7,7 @@ final class qba {
     static int field_c;
     static String field_b;
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean hasAnyMask50560(int param0, int param1, int param2) {
         if (param1 != 480) {
           return false;
         }

@@ -307,7 +307,7 @@ class jea extends um {
         FuseBehaviour.field_w = !param1 ? true : false;
         int var3 = -103 / ((-16 - param0) / 34);
         DrawOfferMenu.field_s = !param1 ? true : false;
-        this.a(-1, true, SoftwareRasterizer.field_a, SoftwareRasterizer.field_g, 0, 0);
+        this.a(-1, true, SoftwareRasterizer.height, SoftwareRasterizer.width, 0, 0);
     }
 
     final void a(int param0) {
@@ -408,19 +408,19 @@ class jea extends um {
         this.field_t = this.field_t + var7Lifetime3;
         this.field_q = this.field_qb + param4;
         this.field_A = param5 + this.field_T;
-        var8 = SoftwareRasterizer.field_b;
-        var9 = SoftwareRasterizer.field_h;
-        var10 = SoftwareRasterizer.field_d;
-        var11 = SoftwareRasterizer.field_k;
-        SoftwareRasterizer.g(this.field_q, this.field_A, this.field_G + this.field_q, this.field_t + this.field_A);
+        var8 = SoftwareRasterizer.clipLeft;
+        var9 = SoftwareRasterizer.clipTop;
+        var10 = SoftwareRasterizer.clipRight;
+        var11 = SoftwareRasterizer.clipBottom;
+        SoftwareRasterizer.intersectClip(this.field_q, this.field_A, this.field_G + this.field_q, this.field_t + this.field_A);
         var12 = 0;
         if (!DrawOfferMenu.field_s &&
           param1 &&
           0 != PlayerModel.field_b &&
-          PasswordValidator.field_m >= SoftwareRasterizer.field_b &&
-          PasswordValidator.field_m < SoftwareRasterizer.field_d &&
-          SoftwareRasterizer.field_h <= RidgedNoise3D.field_p &&
-          SoftwareRasterizer.field_k > RidgedNoise3D.field_p) {
+          PasswordValidator.field_m >= SoftwareRasterizer.clipLeft &&
+          PasswordValidator.field_m < SoftwareRasterizer.clipRight &&
+          SoftwareRasterizer.clipTop <= RidgedNoise3D.field_p &&
+          SoftwareRasterizer.clipBottom > RidgedNoise3D.field_p) {
           this.field_E = PlayerModel.field_b;
           this.field_kb = -this.field_A + RidgedNoise3D.field_p;
           var12 = 1;
@@ -432,7 +432,7 @@ class jea extends um {
           }
           this.field_y = 0;
         }
-        stackIn_31_1 = (!FuseBehaviour.field_w) && (AgeValidator.field_j >= SoftwareRasterizer.field_b) && (AgeValidator.field_j < SoftwareRasterizer.field_d) && (GridWidgetContainer.field_B >= SoftwareRasterizer.field_h) && (SoftwareRasterizer.field_k > GridWidgetContainer.field_B);
+        stackIn_31_1 = (!FuseBehaviour.field_w) && (AgeValidator.field_j >= SoftwareRasterizer.clipLeft) && (AgeValidator.field_j < SoftwareRasterizer.clipRight) && (GridWidgetContainer.field_B >= SoftwareRasterizer.clipTop) && (SoftwareRasterizer.clipBottom > GridWidgetContainer.field_B);
         this.field_pb = stackIn_31_1;
         if (RangeOperator.field_p == 0) {
           this.field_E = 0;
@@ -452,7 +452,7 @@ class jea extends um {
         if (var12 != 0) {
           DrawOfferMenu.field_s = true;
         }
-        SoftwareRasterizer.b(var8, var9, var10, var11);
+        SoftwareRasterizer.setClip(var8, var9, var10, var11);
         if (0 != this.field_E &&
           this.field_F) {
           this.field_qb = -param4 + AgeValidator.field_j - this.field_p;
@@ -521,11 +521,11 @@ class jea extends um {
         var25 = TombRacer.field_G ? 1 : 0;
         this.field_q = param7 + this.field_qb;
         this.field_A = param8 + this.field_T;
-        var12 = SoftwareRasterizer.field_b;
-        var13 = SoftwareRasterizer.field_h;
-        var14 = SoftwareRasterizer.field_d;
-        var15 = SoftwareRasterizer.field_k;
-        SoftwareRasterizer.g(this.field_q, this.field_A, this.field_G + this.field_q, this.field_A + this.field_t);
+        var12 = SoftwareRasterizer.clipLeft;
+        var13 = SoftwareRasterizer.clipTop;
+        var14 = SoftwareRasterizer.clipRight;
+        var15 = SoftwareRasterizer.clipBottom;
+        SoftwareRasterizer.intersectClip(this.field_q, this.field_A, this.field_G + this.field_q, this.field_A + this.field_t);
         if (!this.field_Q) {
           param0 = this.field_o;
           stackIn_5_0 = (0 != this.field_E);
@@ -674,7 +674,7 @@ class jea extends um {
             var23_ref = (jea) (this.field_J.next(108));
           }
         }
-        SoftwareRasterizer.b(var12, var13, var14, var15);
+        SoftwareRasterizer.setClip(var12, var13, var14, var15);
     }
 
     jea(long param0, jea param1, String param2) {
@@ -682,7 +682,7 @@ class jea extends um {
     }
 
     final void b(int param0, boolean param1) {
-        this.a(false, 0, SoftwareRasterizer.field_a, param1, false, true, false, 0, 0, false, SoftwareRasterizer.field_g);
+        this.a(false, 0, SoftwareRasterizer.height, param1, false, true, false, 0, 0, false, SoftwareRasterizer.width);
         if (param0 <= 34) {
           this.field_v = -101;
         }

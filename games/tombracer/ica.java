@@ -233,7 +233,7 @@ final class ica {
                   var26 = var26 + var28;
                   var29 = var29 + var31;
                   var22 = var22 + var24;
-                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_g;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.width;
                   var21 = var21 + var23;
                 }
               }
@@ -320,7 +320,7 @@ final class ica {
               var17_int = var17_int + var19;
               var30 = var30 + var32;
               var29 = var29 + var31;
-              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_g;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.width;
               var25 = var25 + var27;
             }
             return;

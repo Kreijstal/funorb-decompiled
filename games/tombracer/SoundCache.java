@@ -207,7 +207,7 @@ final class SoundCache {
           if (param2 <= 56) {
             this.field_e = (NodeHashTable) null;
           }
-          var8Lifetime1 = var9.a(param1);
+          var8Lifetime1 = var9.decodeToPcm(param1);
           if (var8Lifetime1 == null) {
             return null;
           }

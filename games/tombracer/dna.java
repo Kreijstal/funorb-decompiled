@@ -49,7 +49,7 @@ abstract class dna extends PrefabComponent {
         super(param0, param1);
     }
 
-    final static int b(int param0, int param1) {
+    final static int lowByte(int param0, int param1) {
         if (param1 != 255) {
           field_H = (String) null;
           return 255 & param0;

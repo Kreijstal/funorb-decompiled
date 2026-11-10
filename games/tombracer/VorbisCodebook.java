@@ -23,7 +23,7 @@ final class VorbisCodebook {
     final int decodeScalar() {
         int var1 = 0;
         while (this.field_f[var1] >= 0) {
-          var1 = VorbisSample.c() != 0 ? this.field_f[var1] : var1 + 1;
+          var1 = VorbisSample.readBit() != 0 ? this.field_f[var1] : var1 + 1;
         }
         return ~this.field_f[var1];
     }
@@ -157,7 +157,7 @@ final class VorbisCodebook {
         this.field_d = VorbisSample.readBits(16);
         this.field_e = VorbisSample.readBits(24);
         this.field_a = new int[this.field_e];
-        stackIn_3_0 = (VorbisSample.c() == 0) ? 0 : 1;
+        stackIn_3_0 = (VorbisSample.readBit() == 0) ? 0 : 1;
         var1 = stackIn_3_0;
         if (var1 != 0) {
           var2 = 0;
@@ -172,13 +172,13 @@ final class VorbisCodebook {
             var3_int++;
           }
         } else {
-          stackIn_13_0 = (VorbisSample.c() == 0) ? 0 : 1;
+          stackIn_13_0 = (VorbisSample.readBit() == 0) ? 0 : 1;
           var2 = stackIn_13_0;
           var14 = 0;
           var3_int = var14;
           while (var14 < this.field_e) {
             if (var2 != 0 &&
-              VorbisSample.c() == 0) {
+              VorbisSample.readBit() == 0) {
               this.field_a[var14] = 0;
             } else {
               this.field_a[var14] = VorbisSample.readBits(5) + 1;
@@ -192,7 +192,7 @@ final class VorbisCodebook {
           var3 = VorbisSample.unpackFloat(VorbisSample.readBits(32));
           var4 = VorbisSample.unpackFloat(VorbisSample.readBits(32));
           var5Lifetime1 = VorbisSample.readBits(4) + 1;
-          stackIn_25_0 = (VorbisSample.c() == 0) ? 0 : 1;
+          stackIn_25_0 = (VorbisSample.readBit() == 0) ? 0 : 1;
           var6 = stackIn_25_0;
           if (var2Lifetime1 != 1) {
             var7 = this.field_e * this.field_d;

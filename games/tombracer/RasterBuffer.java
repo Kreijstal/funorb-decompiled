@@ -26,11 +26,11 @@ abstract class RasterBuffer {
 
     final void a(int param0) {
         if (param0 == -19216) {
-          SoftwareRasterizer.a(this.field_g, this.field_f, this.field_e);
+          SoftwareRasterizer.setTarget(this.field_g, this.field_f, this.field_e);
           return;
         }
         field_h = (String) null;
-        SoftwareRasterizer.a(this.field_g, this.field_f, this.field_e);
+        SoftwareRasterizer.setTarget(this.field_g, this.field_f, this.field_e);
     }
 
     final static int a(goa param0, goa param1, int param2) {

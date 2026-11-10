@@ -526,7 +526,7 @@ final class MatchState implements dv {
         if (param0 != 0) {
           this.field_a = 20;
         }
-        return dna.b(this.simulations[param1].a(true), 255);
+        return dna.lowByte(this.simulations[param1].a(true), 255);
     }
 
     final PlayerSimulation getSimulation(int param0, int param1) {

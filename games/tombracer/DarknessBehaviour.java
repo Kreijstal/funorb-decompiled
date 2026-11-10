@@ -129,8 +129,8 @@ final class DarknessBehaviour extends Behaviour {
           var18 = this.field_r.field_m * var17 + var12;
           for (var19 = var12; var14 >= var19; var19++) {
             if (var18 >= 0 &&
-              var18 < SoftwareRasterizer.field_l.length &&
-              this.field_q <= SoftwareRasterizer.field_l[var18]) {
+              var18 < SoftwareRasterizer.pixels.length &&
+              this.field_q <= SoftwareRasterizer.pixels[var18]) {
               if (var13 != var17 &&
                 var17 != var15 &&
                 var19 != var12 &&

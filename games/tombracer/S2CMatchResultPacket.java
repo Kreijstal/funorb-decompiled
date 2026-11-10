@@ -5,7 +5,7 @@ final class S2CMatchResultPacket implements GamePacket {
     private int winnerIndex;
     static String field_a;
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean hasFlag2048(int param0, int param1, int param2) {
         if (param2 == 128) {
           return (2048 & param1) != 0 ? true : false;
         }

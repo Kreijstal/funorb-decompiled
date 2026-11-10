@@ -33,7 +33,7 @@ final class o extends ora implements sca {
         return 0;
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean hasAnyMask540800(int param0, int param1, int param2) {
         if (param0 != -1) {
           return true;
         }

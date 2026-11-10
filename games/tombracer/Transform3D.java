@@ -80,7 +80,7 @@ abstract class Transform3D {
         boolean stackIn_3_1 = false;
         boolean stackIn_8_0 = false;
         var3 = -120 % ((param0 - 65) / 42);
-        stackIn_2_0 = mpa.a(false, param1, param2);
+        stackIn_2_0 = mpa.hasAnyMask1048832(false, param1, param2);
         stackIn_3_1 = ((param2 & 262144) == 0) ? false : true;
         stackIn_8_0 = !(stackIn_2_0 | !stackIn_3_1) || (vua.e(param2, param1, 13650));
         return stackIn_8_0;

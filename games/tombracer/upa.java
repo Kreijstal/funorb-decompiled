@@ -51,7 +51,7 @@ final class upa extends IntrusiveNode {
         jea stackIn_64_0 = null;
         int stackIn_64_1 = 0;
         boolean stackIn_65_2 = false;
-        tga.a(-21953, -640 + SoftwareRasterizer.field_g >> 1, 640 + SoftwareRasterizer.field_g >> 1, 0, SoftwareRasterizer.field_a);
+        tga.a(-21953, -640 + SoftwareRasterizer.width >> 1, 640 + SoftwareRasterizer.width >> 1, 0, SoftwareRasterizer.height);
         if (mla.field_a <= 0) {
           if (GameKeyHandler.field_a > param1) {
             if (null != fta.field_b) {

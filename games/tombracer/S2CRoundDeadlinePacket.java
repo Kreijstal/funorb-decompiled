@@ -34,7 +34,7 @@ final class S2CRoundDeadlinePacket implements GamePacket {
         return LoadProfileCommand.field_r;
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean hasFlag2048(int param0, int param1, int param2) {
         if (param2 == 0) {
           return 0 != (2048 & param0) ? true : false;
         }

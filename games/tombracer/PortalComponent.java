@@ -71,8 +71,8 @@ final class PortalComponent extends PrefabComponent {
         }
     }
 
-    final void w(int param0) {
-        super.w(-124);
+    final void resolveTargetIds(int param0) {
+        super.resolveTargetIds(-124);
         this.field_G.resolveTargets(this.getRoot((byte) -20), false);
         if (param0 >= -122) {
           this.applyDefaults((byte) -60);
@@ -86,9 +86,9 @@ final class PortalComponent extends PrefabComponent {
         return false;
     }
 
-    final void x(int param0) {
+    final void connectTargets(int param0) {
         Switchable var3 = null;
-        super.x(param0);
+        super.connectTargets(param0);
         if (this.field_F == null) {
           return;
         }

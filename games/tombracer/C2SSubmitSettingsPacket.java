@@ -75,7 +75,7 @@ final class C2SSubmitSettingsPacket implements GamePacket {
           }
           var3 = stackIn_4_0 ? 1 : 0;
           stackIn_7_0 = (0 != (65536 & param2));
-          return stackIn_7_0 | kaa.a(param0, param2, false) | var3 != 0;
+          return stackIn_7_0 | kaa.hasMask24OrAll544(param0, param2, false) | var3 != 0;
         }
         C2SSubmitSettingsPacket.releaseStatics((byte) -61);
         if ((55 & param0) != 0) {
@@ -85,7 +85,7 @@ final class C2SSubmitSettingsPacket implements GamePacket {
         }
         var3Lifetime1 = stackIn_11_0 ? 1 : 0;
         stackIn_14_0 = (0 != (65536 & param2));
-        return stackIn_14_0 | kaa.a(param0, param2, false) | var3Lifetime1 != 0;
+        return stackIn_14_0 | kaa.hasMask24OrAll544(param0, param2, false) | var3Lifetime1 != 0;
     }
 
     public final void encode(int param0, BitPacketBuffer param1) {

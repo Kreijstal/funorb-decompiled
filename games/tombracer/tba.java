@@ -21,15 +21,15 @@ final class tba extends IntrusiveNode {
         int var8 = 0;
         Object var10 = null;
         Object var11 = null;
-        int[] var16 = SoftwareRasterizer.field_l;
+        int[] var16 = SoftwareRasterizer.pixels;
         int[] var15 = var16;
         int[] var12 = var15;
         int[] var6 = var12;
         int var7Lifetime1;
         int var8Lifetime1;
         if (param0 < -62) {
-          var7 = SoftwareRasterizer.field_g;
-          var8 = SoftwareRasterizer.field_a;
+          var7 = SoftwareRasterizer.width;
+          var8 = SoftwareRasterizer.height;
           var20 = new Sprite(16, param2);
           var20.c();
           SoftwareRasterizer.fillVerticalGradient(0, 0, 16, param2, param3, param4);
@@ -55,12 +55,12 @@ final class tba extends IntrusiveNode {
             SoftwareRasterizer.drawHorizontalLine(15, 3, 1, 0);
             SoftwareRasterizer.drawHorizontalLine(15, 4, 1, 0);
           }
-          SoftwareRasterizer.a(var16, var7, var8);
+          SoftwareRasterizer.setTarget(var16, var7, var8);
           return new Sprite[]{null, null, null, (Sprite) (var10), var20, (Sprite) (var11), null, null, null};
         }
         tba.a((byte) -71);
-        var7Lifetime1 = SoftwareRasterizer.field_g;
-        var8Lifetime1 = SoftwareRasterizer.field_a;
+        var7Lifetime1 = SoftwareRasterizer.width;
+        var8Lifetime1 = SoftwareRasterizer.height;
         Sprite var17 = new Sprite(16, param2);
         var17.c();
         SoftwareRasterizer.fillVerticalGradient(0, 0, 16, param2, param3, param4);
@@ -86,7 +86,7 @@ final class tba extends IntrusiveNode {
           SoftwareRasterizer.drawHorizontalLine(15, 3, 1, 0);
           SoftwareRasterizer.drawHorizontalLine(15, 4, 1, 0);
         }
-        SoftwareRasterizer.a(var16, var7Lifetime1, var8Lifetime1);
+        SoftwareRasterizer.setTarget(var16, var7Lifetime1, var8Lifetime1);
         return new Sprite[]{null, null, null, (Sprite) (var10), var17, (Sprite) (var11), null, null, null};
     }
 

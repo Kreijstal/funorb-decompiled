@@ -94,7 +94,7 @@ final class S2CNewRoomPacket implements GamePacket {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean hasAnyMask540800(int param0, int param1, int param2) {
         if (param0 != 540800) {
           return false;
         }

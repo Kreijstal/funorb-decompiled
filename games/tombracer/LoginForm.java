@@ -230,7 +230,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         }
     }
 
-    public final void a(TextInputWidget param0, int param1) {
+    public final void onTextChanged(TextInputWidget param0, int param1) {
         try {
           if (param1 != -10) {
             field_z = (int[]) null;
@@ -320,7 +320,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         super.renderLayer(param0, param1, param2 + param2, param3);
     }
 
-    public final void a(int param0, TextInputWidget param1) {
+    public final void onEnterPressed(int param0, TextInputWidget param1) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;

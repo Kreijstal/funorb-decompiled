@@ -21,7 +21,7 @@ final class TriangleRasterizer {
     }
 
     final static void useRasterClip() {
-        TriangleRasterizer.setViewport(SoftwareRasterizer.field_b, SoftwareRasterizer.field_h, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k);
+        TriangleRasterizer.setViewport(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipBottom);
     }
 
     private final static void setViewport(int param0, int param1, int param2, int param3) {
@@ -32,10 +32,10 @@ final class TriangleRasterizer {
         if (rowOffsets.length < viewportHeight) {
           rowOffsets = new int[lla.a(false, viewportHeight)];
         }
-        int var4 = param1 * SoftwareRasterizer.field_g + param0;
+        int var4 = param1 * SoftwareRasterizer.width + param0;
         for (var5 = 0; var5 < viewportHeight; var5++) {
           rowOffsets[var5] = var4;
-          var4 = var4 + SoftwareRasterizer.field_g;
+          var4 = var4 + SoftwareRasterizer.width;
         }
     }
 

@@ -7,7 +7,7 @@ final class MirrorComponent extends PrefabComponent {
     static int[] field_H;
     static TextureFilter field_G;
 
-    final static boolean c(int param0, int param1, int param2) {
+    final static boolean hasAnyMask55(int param0, int param1, int param2) {
         if (param0 != -17275) {
           field_F = (SpriteData) null;
         }
@@ -34,7 +34,7 @@ final class MirrorComponent extends PrefabComponent {
         this.setSize(param0 ^ -66, 2097152, 2097152);
     }
 
-    final static boolean d(int param0, int param1, int param2) {
+    final static boolean hasAnyMask384(int param0, int param1, int param2) {
         if (param0 != -26571) {
           field_G = (TextureFilter) null;
         }

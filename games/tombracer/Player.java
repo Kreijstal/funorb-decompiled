@@ -1119,9 +1119,9 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
             stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
-          var6 = SoftwareRasterizer.field_l;
-          var7 = SoftwareRasterizer.field_g;
-          var8 = SoftwareRasterizer.field_a;
+          var6 = SoftwareRasterizer.pixels;
+          var7 = SoftwareRasterizer.width;
+          var8 = SoftwareRasterizer.height;
           var9 = new Sprite(param2, -(param2 * 2) + param0);
           var9.c();
           SoftwareRasterizer.fillVerticalGradient(0, 0, param2, -(param2 * 2) + param0, param3, param5);
@@ -1143,7 +1143,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
             ((Sprite) (var14)).c();
             SoftwareRasterizer.fillRectangle(0, 0, 16, 16, param1);
           }
-          SoftwareRasterizer.a(var6, var7, var8);
+          SoftwareRasterizer.setTarget(var6, var7, var8);
           stackIn_8_0 = new Sprite[]{var10, var11, var10, var9, (Sprite) (var14), var9, var12, var13, var12};
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

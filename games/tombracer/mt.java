@@ -4,7 +4,7 @@
 abstract class mt {
     static int field_a;
 
-    final static int a(int param0, int param1) {
+    final static int alignTo8(int param0, int param1) {
         int var2 = 0;
         if ((param0 & 7) != param1) {
           var2 = 8 - (7 & param0);

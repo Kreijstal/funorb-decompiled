@@ -67,7 +67,7 @@ final class fha {
           var9Lifetime1 = var17.field_q;
           gb.a(-29711);
           var17.c();
-          SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_a);
+          SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.c();

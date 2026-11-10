@@ -47,7 +47,7 @@ final class RenderScene {
         boolean stackIn_8_0 = false;
         var3 = -60 / ((param2 - 36) / 54);
         stackIn_3_0 = ((param1 & 2048) != 0);
-        stackIn_8_0 = !(!stackIn_3_0 | fua.a(110, param1, param0)) || (no.a(param0, param1, 36864));
+        stackIn_8_0 = !(!stackIn_3_0 | fua.hasFlag32768(110, param1, param0)) || (no.a(param0, param1, 36864));
         return stackIn_8_0;
     }
 

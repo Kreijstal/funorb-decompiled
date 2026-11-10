@@ -33,7 +33,7 @@ final class pka {
                 var2 = (-1 + PlatformBehaviour.field_o << 8) / 16;
                 if (0 < var2) {
                   var1 = 1;
-                  SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_a, 0, var2);
+                  SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, var2);
                 }
                 return var1 != 0;
               }
@@ -46,7 +46,7 @@ final class pka {
             var2Lifetime4 = (-1 + PlatformBehaviour.field_o << 8) / 16;
             if (0 < var2Lifetime4) {
               var1 = 1;
-              SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_a, 0, var2Lifetime4);
+              SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, var2Lifetime4);
             }
             return var1 != 0;
           }
@@ -62,7 +62,7 @@ final class pka {
                 var2Lifetime1 = (-1 + PlatformBehaviour.field_o << 8) / 16;
                 if (0 < var2Lifetime1) {
                   var1 = 1;
-                  SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_a, 0, var2Lifetime1);
+                  SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, var2Lifetime1);
                 }
                 return var1 != 0;
               }
@@ -75,11 +75,11 @@ final class pka {
             var2Lifetime1 = (-1 + PlatformBehaviour.field_o << 8) / 16;
             if (0 < var2Lifetime1) {
               var1 = 1;
-              SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_a, 0, var2Lifetime1);
+              SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, var2Lifetime1);
             }
             return var1 != 0;
           }
-          SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_a);
+          SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
           var1 = 1;
           np.b(-69);
           if (PlayPhase.beginReconnectGracePeriod(89)) {
@@ -90,7 +90,7 @@ final class pka {
               var2Lifetime1Lifetime1 = (-1 + PlatformBehaviour.field_o << 8) / 16;
               if (0 < var2Lifetime1Lifetime1) {
                 var1 = 1;
-                SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_a, 0, var2Lifetime1Lifetime1);
+                SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, var2Lifetime1Lifetime1);
               }
               return var1 != 0;
             }
@@ -103,7 +103,7 @@ final class pka {
           var2Lifetime1Lifetime2 = (-1 + PlatformBehaviour.field_o << 8) / 16;
           if (0 < var2Lifetime1Lifetime2) {
             var1 = 1;
-            SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_a, 0, var2Lifetime1Lifetime2);
+            SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, var2Lifetime1Lifetime2);
           }
           return var1 != 0;
         }
@@ -117,7 +117,7 @@ final class pka {
             var2Lifetime2 = (-1 + PlatformBehaviour.field_o << 8) / 16;
             if (0 < var2Lifetime2) {
               var1 = 1;
-              SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_a, 0, var2Lifetime2);
+              SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, var2Lifetime2);
             }
             return var1 != 0;
           }
@@ -130,7 +130,7 @@ final class pka {
         var2Lifetime3 = (-1 + PlatformBehaviour.field_o << 8) / 16;
         if (0 < var2Lifetime3) {
           var1 = 1;
-          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_a, 0, var2Lifetime3);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, var2Lifetime3);
         }
         return var1 != 0;
     }

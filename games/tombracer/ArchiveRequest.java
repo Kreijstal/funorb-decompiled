@@ -8,7 +8,7 @@ abstract class ArchiveRequest extends DualLinkNode {
 
     final static String a(boolean param0) {
         if (param0) {
-          ArchiveRequest.a(-49, 62, -28);
+          ArchiveRequest.hasFlag2048(-49, 62, -28);
           if (LegacyOpenGlTexture.field_a == gsa.field_y) {
             return faa.field_g;
           }
@@ -76,7 +76,7 @@ abstract class ArchiveRequest extends DualLinkNode {
 
     abstract byte[] getBytes(byte param0);
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean hasFlag2048(int param0, int param1, int param2) {
         if (param1 != 0) {
           return true;
         }

@@ -160,7 +160,7 @@ final class mg {
         return 0;
     }
 
-    final static boolean a(byte param0, int param1, int param2) {
+    final static boolean hasAnyMask34(byte param0, int param1, int param2) {
         if (param0 != -53) {
           field_k = (String) null;
         }

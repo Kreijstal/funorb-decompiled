@@ -124,7 +124,7 @@ final class VorbisFloor1 {
         int var10;
         int var11;
         int var13;
-        stackIn_3_0 = (VorbisSample.c() == 0) ? 0 : 1;
+        stackIn_3_0 = (VorbisSample.readBit() == 0) ? 0 : 1;
         var1 = stackIn_3_0;
         if (var1 == 0) {
           return false;

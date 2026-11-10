@@ -74,18 +74,18 @@ final class bt implements Renderable {
     }
 
     final static int a(byte param0, int param1, int param2, int param3) {
-        if (SoftwareRasterizer.field_g >= param3 + param1) {
+        if (SoftwareRasterizer.width >= param3 + param1) {
           return param3;
         }
         if (param0 != -8) {
           bt.a((byte) 51, -70, 71, 100);
           if (-param1 + param3 + param2 < 0) {
-            return -param1 + SoftwareRasterizer.field_g;
+            return -param1 + SoftwareRasterizer.width;
           }
           return -param1 + param2 + param3;
         }
         if (-param1 + param3 + param2 < 0) {
-          return -param1 + SoftwareRasterizer.field_g;
+          return -param1 + SoftwareRasterizer.width;
         }
         return -param1 + param2 + param3;
     }

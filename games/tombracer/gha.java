@@ -5,7 +5,7 @@ final class gha implements pp {
     private static String[] effectPresetNames;
     static char[] cp1252HighChars;
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean hasAnyMask52(int param0, int param1, int param2) {
         if (param2 <= 27) {
           return true;
         }

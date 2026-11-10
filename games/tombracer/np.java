@@ -447,9 +447,9 @@ final class np extends ka {
           param5.field_ib = this.field_ib;
           param5.field_L = this.field_L;
           param5.field_lb = this.field_lb;
-          var7_int = jj.a(this.field_u, param1, -32842) ? 1 : 0;
-          var8 = mg.a((byte) -53, this.field_u, param1) ? 1 : 0;
-          var9 = gha.a(this.field_u, param1, param3 ^ -22830) ? 1 : 0;
+          var7_int = jj.hasAnyMask33(this.field_u, param1, -32842) ? 1 : 0;
+          var8 = mg.hasAnyMask34((byte) -53, this.field_u, param1) ? 1 : 0;
+          var9 = gha.hasAnyMask52(this.field_u, param1, param3 ^ -22830) ? 1 : 0;
           var10 = var8 | var7_int | var9;
           if (param3 != -22857) {
             this.field_q = (short[]) null;
@@ -564,7 +564,7 @@ final class np extends ka {
             stackIn_79_0 = ValidatedTextInputWidget.a(param1, (byte) -106, this.field_u) ? 1 : 0;
           }
           if (stackIn_79_0 == 0) {
-            if (!ArchiveRequest.a(this.field_u, 0, param1)) {
+            if (!ArchiveRequest.hasFlag2048(this.field_u, 0, param1)) {
               param5.field_g = null;
               if (var13 != 0) {
                 param5.field_g = this.field_g;
@@ -595,7 +595,7 @@ final class np extends ka {
             param5.field_g.field_g = this.field_g.field_g;
           }
           boolean decompiledFrameCompleted8 = true;
-          if (o.a(-1, this.field_u, param1)) {
+          if (o.hasAnyMask540800(-1, this.field_u, param1)) {
             if (null == param4.field_X ||
               !(this.field_W <= param4.field_X.length)) {
               array$3 = new short[this.field_W];
@@ -626,7 +626,7 @@ final class np extends ka {
           boolean decompiledFrameRemainder3 = true;
           boolean decompiledFrameCompleted7 = true;
           boolean decompiledFrameRemainder2 = true;
-          if (!mpa.a(false, this.field_u, param1)) {
+          if (!mpa.hasAnyMask1048832(false, this.field_u, param1)) {
             param5.field_o = this.field_o;
             decompiledFrameRemainder2 = (var13 != 0);
           }
@@ -674,7 +674,7 @@ final class np extends ka {
           }
           regionExit1: {
             boolean decompiledFrameCompleted5 = true;
-            if (!cra.a(this.field_u, -17, param1)) {
+            if (!cra.hasMask24OrAll544(this.field_u, -17, param1)) {
               param5.field_O = this.field_O;
               param5.field_i = this.field_i;
               param5.field_Y = this.field_Y;
@@ -851,7 +851,7 @@ final class np extends ka {
             param5.field_ab.field_d = this.field_ab.field_d;
           }
           boolean decompiledFrameCompleted3 = true;
-          if (qp.a(param1, (byte) -71, this.field_u)) {
+          if (qp.hasFlag16(param1, (byte) -71, this.field_u)) {
             regionExit4: {
               if (param4.field_H != null &&
                 param4.field_H.length >= this.field_W) {
@@ -896,7 +896,7 @@ final class np extends ka {
             param5.field_H = this.field_H;
           }
           if (!tia.b(this.field_u, -23403, param1)) {
-            if (!mm.a(-123, param1, this.field_u)) {
+            if (!mm.hasFlag2048(-123, param1, this.field_u)) {
               param5.field_w = null;
               if (var13 != 0) {
                 param5.field_w = this.field_w;
@@ -928,7 +928,7 @@ final class np extends ka {
           regionExit5: {
             boolean decompiledFrameCompleted2 = true;
             regionExit6: {
-              if (!aca.a(param1, 32768, this.field_u)) {
+              if (!aca.hasFlag32768(param1, 32768, this.field_u)) {
                 param5.field_I = this.field_I;
                 if (var13 == 0) {
                   break regionExit6;
@@ -957,7 +957,7 @@ final class np extends ka {
               }
             }
             if ((decompiledFrameCompleted2) &&
-              (!qba.a(this.field_u, 480, param1))) {
+              (!qba.hasAnyMask50560(this.field_u, 480, param1))) {
               param5.field_f = this.field_f;
               if (var13 == 0) {
                 break regionExit5;
@@ -4024,7 +4024,7 @@ final class np extends ka {
           if (null == this.field_D &&
             this.field_t == null &&
             this.field_r == null &&
-            !MirrorComponent.c(-17275, this.field_u, this.field_bb)) {
+            !MirrorComponent.hasAnyMask55(-17275, this.field_u, this.field_bb)) {
             var2_int = 0;
             var3 = 0;
             if (null != this.field_P &&
@@ -4201,17 +4201,17 @@ final class np extends ka {
             }
           }
           if (this.field_j != null &&
-            !MirrorComponent.d(-26571, this.field_bb, this.field_u)) {
+            !MirrorComponent.hasAnyMask384(-26571, this.field_bb, this.field_u)) {
             this.field_j = (int[][]) null;
             this.field_fb = null;
           }
           if (null != this.field_d &&
-            !HardwareOpenGlToolkit.b(this.field_bb, 124, this.field_u)) {
+            !HardwareOpenGlToolkit.hasFlag32(this.field_bb, 124, this.field_u)) {
             this.field_db = null;
             this.field_d = (int[][]) null;
           }
           if (null != this.field_C &&
-            !HardwareGraphicsToolkit.a(this.field_u, (byte) -125, this.field_bb)) {
+            !HardwareGraphicsToolkit.hasFlag1024(this.field_u, (byte) -125, this.field_bb)) {
             this.field_C = (int[][]) null;
           }
           if (this.field_p != null &&
@@ -4407,7 +4407,7 @@ final class np extends ka {
           this.field_bb = param2;
           this.field_R = param0;
           this.field_u = param5;
-          if (ArchiveRequest.a(param5, 0, param2)) {
+          if (ArchiveRequest.hasFlag2048(param5, 0, param2)) {
             this.field_g = new tj((va) null, 5126, 3, 0);
           }
           if (ModelFactory.a(-17, param5, param2)) {
@@ -4419,7 +4419,7 @@ final class np extends ka {
           if (we.b(param2, param5, 2048)) {
             this.field_kb = new tj((va) null, 5121, 4, 0);
           }
-          if (mm.a(-122, param2, param5)) {
+          if (mm.hasFlag2048(-122, param2, param5)) {
             this.field_w = new afa();
           }
           var7 = param0.field_c;
@@ -5065,11 +5065,11 @@ final class np extends ka {
                 this.field_n = PlatformBehaviour.a(this.field_L, 50, this.field_n);
                 this.field_y = PlatformBehaviour.a(this.field_L, 50, this.field_y);
                 if (null != param1.field_l &&
-                  HardwareOpenGlToolkit.b(param2, 104, this.field_u)) {
+                  HardwareOpenGlToolkit.hasFlag32(param2, 104, this.field_u)) {
                   this.field_d = param1.a(false, (byte) 64);
                 }
                 if (null != param1.field_m &&
-                  HardwareGraphicsToolkit.a(this.field_u, (byte) 83, param2)) {
+                  HardwareGraphicsToolkit.hasFlag1024(this.field_u, (byte) 83, param2)) {
                   this.field_C = param1.b((byte) -91);
                 }
                 stackIn_353_0 = (oc) (param1);
@@ -5081,7 +5081,7 @@ final class np extends ka {
               stackIn_356_1 = param2;
               break;
             }
-            if (MirrorComponent.d(stackIn_356_0, stackIn_356_1, this.field_u)) {
+            if (MirrorComponent.hasAnyMask384(stackIn_356_0, stackIn_356_1, this.field_u)) {
               var18 = 0;
               var19 = new int[256];
               var20 = 0;

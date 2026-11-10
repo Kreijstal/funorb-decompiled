@@ -466,7 +466,7 @@ class UiWidget extends IntrusiveNode {
         if (param2 != 6100) {
           return true;
         }
-        if (qp.a(param0, (byte) 101, param1) | (0 != (393216 & param0) ? true : false)) {
+        if (qp.hasFlag16(param0, (byte) 101, param1) | (0 != (393216 & param0) ? true : false)) {
           return true;
         }
         if (vua.e(param0, param1, 13650)) {

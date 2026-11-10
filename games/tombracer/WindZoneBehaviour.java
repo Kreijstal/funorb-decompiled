@@ -230,7 +230,7 @@ final class WindZoneBehaviour extends Behaviour {
         if (param1 != 8) {
           return true;
         }
-        stackIn_7_0 = (S2CNewRoomPacket.a(540800, param0, param2)) || (no.a(param2, param0, param1 ^ 36872));
+        stackIn_7_0 = (S2CNewRoomPacket.hasAnyMask540800(540800, param0, param2)) || (no.a(param2, param0, param1 ^ 36872));
         return stackIn_7_0;
     }
 

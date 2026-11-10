@@ -8,10 +8,10 @@ final class C2SChooseRewardPacket implements GamePacket {
 
     final static boolean a(boolean param0, int param1, int param2) {
         if (param0) {
-          return (IntPoint.a(param1, param2, (byte) -80) | cga.a(param1, -54, param2) | TripBeamComponent.c(param1, param2, 52)) & DiskCacheWorker.a((byte) 61, param2, param1);
+          return (IntPoint.hasAnyMask33(param1, param2, (byte) -80) | cga.hasAnyMask34(param1, -54, param2) | TripBeamComponent.hasAnyMask52(param1, param2, 52)) & DiskCacheWorker.a((byte) 61, param2, param1);
         }
         field_c = 33;
-        return (IntPoint.a(param1, param2, (byte) -80) | cga.a(param1, -54, param2) | TripBeamComponent.c(param1, param2, 52)) & DiskCacheWorker.a((byte) 61, param2, param1);
+        return (IntPoint.hasAnyMask33(param1, param2, (byte) -80) | cga.hasAnyMask34(param1, -54, param2) | TripBeamComponent.hasAnyMask52(param1, param2, 52)) & DiskCacheWorker.a((byte) 61, param2, param1);
     }
 
     final static void a(int param0, byte param1, byte[] param2, java.math.BigInteger param3, PacketBuffer param4, java.math.BigInteger param5, int param6) {
@@ -36,7 +36,7 @@ final class C2SChooseRewardPacket implements GamePacket {
         int var9Lifetime1;
         var10 = TombRacer.field_G ? 1 : 0;
         try {
-          var7_int = mt.a(param0, 0);
+          var7_int = mt.alignTo8(param0, 0);
           if (pb.field_n == null) {
             pb.field_n = new java.security.SecureRandom();
           }
@@ -130,7 +130,7 @@ final class C2SChooseRewardPacket implements GamePacket {
         if (param2 >= -56) {
           return false;
         }
-        return TileGridCell.b(param1, 113, param0) & ag.b(-1, param0, param1);
+        return TileGridCell.hasFlag16(param1, 113, param0) & ag.hasFlag2048(-1, param0, param1);
     }
 
     final static void b(int param0, int param1) {

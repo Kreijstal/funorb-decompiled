@@ -151,7 +151,7 @@ final class PlayerContextMenu {
           var4_refLifetime1 = uca.a(this.field_i, (byte) 102, param2);
         } else {
           if (param0 == 6) {
-            var4_refLifetime1 = nna.a(-3, this.field_i, param2);
+            var4_refLifetime1 = Bzip2State.a(-3, this.field_i, param2);
           } else {
             if (7 != param0) {
               return false;

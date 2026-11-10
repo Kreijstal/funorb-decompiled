@@ -85,7 +85,7 @@ final class ds {
         int var2 = 105 % ((param0 + 9) / 56);
         if (lca.a(false)) {
           if (param1) {
-            SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_a, 0, 192);
+            SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 192);
           }
           ModelFactory.field_a.renderWithTooltip(-108, 0, 0);
           return;

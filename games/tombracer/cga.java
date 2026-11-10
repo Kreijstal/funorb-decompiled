@@ -13,7 +13,7 @@ final class cga extends IntrusiveNode {
     int field_k;
     static String field_l;
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean hasAnyMask34(int param0, int param1, int param2) {
         int var3 = -82 / ((-4 - param1) / 47);
         return 0 != (param0 & 34) ? true : false;
     }
@@ -22,7 +22,7 @@ final class cga extends IntrusiveNode {
         field_i = null;
         field_l = null;
         if (!param0) {
-          cga.a(67, -110, -111);
+          cga.hasAnyMask34(67, -110, -111);
           field_g = null;
           return;
         }
