@@ -1,34 +1,34 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class kma implements nua {
+abstract class DebouncedValidationSource implements ValidationSource {
     static String[] field_e;
     static String field_d;
     static String[] defaultPlayerNames;
-    private long field_b;
+    private long lastEditTime;
     static String field_a;
 
-    public final void c(int param0) {
-        this.field_b = bva.currentTimeMillis((byte) -107);
+    public final void markEdited(int param0) {
+        this.lastEditTime = bva.currentTimeMillis((byte) -107);
         if (param0 > -63) {
-          this.a(109);
+          this.getMessage(109);
         }
     }
 
-    abstract String e(int param0);
+    abstract String computeMessage(int param0);
 
-    public final String a(int param0) {
+    public final String getMessage(int param0) {
         if (this.isEmpty(true)) {
           return null;
         }
-        if (bva.currentTimeMillis((byte) -107) < this.field_b + 350L) {
+        if (bva.currentTimeMillis((byte) -107) < this.lastEditTime + 350L) {
           return null;
         }
         if (param0 >= 34) {
-          return this.e(1890);
+          return this.computeMessage(1890);
         }
-        kma.releaseStatics((byte) -83);
-        return this.e(1890);
+        DebouncedValidationSource.releaseStatics((byte) -83);
+        return this.computeMessage(1890);
     }
 
     public static void releaseStatics(byte param0) {
@@ -45,7 +45,7 @@ abstract class kma implements nua {
         field_d = null;
     }
 
-    abstract it d(int param0);
+    abstract it computeState(int param0);
 
     final static void a(boolean param0, int param1, int param2) {
         int var5 = 0;
@@ -65,24 +65,24 @@ abstract class kma implements nua {
         }
     }
 
-    public final it b(int param0) {
+    public final it getState(int param0) {
         if (param0 != -4666) {
-          this.a(82);
+          this.getMessage(82);
           if (this.isEmpty(true)) {
             return ColourRowCache.field_d;
           }
-          if (!(bva.currentTimeMillis((byte) -107) >= this.field_b + 350L)) {
+          if (!(bva.currentTimeMillis((byte) -107) >= this.lastEditTime + 350L)) {
             return BevelOperator.field_p;
           }
-          return this.d(-1891);
+          return this.computeState(-1891);
         }
         if (this.isEmpty(true)) {
           return ColourRowCache.field_d;
         }
-        if (!(bva.currentTimeMillis((byte) -107) >= this.field_b + 350L)) {
+        if (!(bva.currentTimeMillis((byte) -107) >= this.lastEditTime + 350L)) {
           return BevelOperator.field_p;
         }
-        return this.d(-1891);
+        return this.computeState(-1891);
     }
 
     static {

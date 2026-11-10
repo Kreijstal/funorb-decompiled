@@ -49,7 +49,7 @@ abstract class Transform3D {
         byte[] var14 = null;
         int var9 = TombRacer.field_G ? 1 : 0;
         try {
-          hga.a(true, param0.a("", (byte) 124, "roomdata.csv"));
+          hga.a(true, param0.getFileByName("", (byte) 124, "roomdata.csv"));
           var10 = cm.field_a;
           for (var3 = 0; var3 < var10.length; var3++) {
             var4 = var10[var3];
@@ -57,7 +57,7 @@ abstract class Transform3D {
             for (var6 = 0; var6 < var5.length; var6++) {
               var7 = var5[var6];
               bt.field_b = bt.field_b + 1;
-              var14 = param0.a(var7.field_g, (byte) 127, var7.field_b);
+              var14 = param0.getFileByName(var7.field_g, (byte) 127, var7.field_b);
               var7.field_c = new BitPacketBuffer(var14);
               var7.field_c.beginBitAccess((byte) -38);
               var7.field_e = PillarComponent.a(-1, var7.field_c);

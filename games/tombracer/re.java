@@ -35,7 +35,7 @@ final class re {
           cq.field_e.a(-365 + (-5 + (OpenGlToolkit.field_fd.field_G - 5)), 30, -23776, 5, 370);
           nsa.field_i.a(-5 + (Obstacle.field_s.field_G - 5), 2, (byte) 127, 5, io.field_a, -42 + Obstacle.field_s.field_t, 37);
           var3 = (2 + OpenGlToolkit.field_fd.field_G) / 2;
-          uq.field_c.a(var3 - 2, 40, param0 + 5264, -40 + OpenGlToolkit.field_fd.field_t, 0);
+          TileRenderable.field_c.a(var3 - 2, 40, param0 + 5264, -40 + OpenGlToolkit.field_fd.field_t, 0);
           if (!UnlockOverlay.field_p) {
             var3 = 0;
           }

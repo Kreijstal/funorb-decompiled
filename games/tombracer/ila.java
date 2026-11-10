@@ -374,8 +374,8 @@ final class ila {
                 return stackIn_102_0;
               }
               var6_intLifetime2 = nn.field_b;
-              nn.field_b = uq.field_a;
-              uq.field_a = var6_intLifetime2;
+              nn.field_b = TileRenderable.field_a;
+              TileRenderable.field_a = var6_intLifetime2;
               PushableBlockMazeComponent.field_L = true;
             }
             stackIn_104_0 = -1;

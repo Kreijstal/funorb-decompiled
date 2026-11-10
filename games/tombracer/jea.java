@@ -652,12 +652,12 @@ class jea extends um {
               this.field_H.b(var23Lifetime2, var21 + this.field_x + this.field_q, var22 + (this.field_A + this.field_H.field_w), var18, -1, this.field_s);
             } else {
               if (this.field_z == 1) {
-                this.field_H.c(var23Lifetime2, (-(this.field_x * 2) + this.field_G) / 2 + this.field_q + this.field_x + var21, this.field_A + var22 + this.field_H.field_w, var18, -1, this.field_s);
+                this.field_H.drawCenteredTextAlpha(var23Lifetime2, (-(this.field_x * 2) + this.field_G) / 2 + this.field_q + this.field_x + var21, this.field_A + var22 + this.field_H.field_w, var18, -1, this.field_s);
               } else {
                 if (2 != this.field_z) {
                   this.field_H.drawParagraphAlpha(var23Lifetime2, var21 + this.field_q + this.field_x, var22 + this.field_A, -(2 * this.field_x) + this.field_G, this.field_t, var18, -1, this.field_s, this.field_z, this.field_bb, this.field_P);
                 } else {
-                  this.field_H.a(var23Lifetime2, var21 + (this.field_q + this.field_x + this.field_G - this.field_x * 2), this.field_A + (var22 + this.field_H.field_w), var18, -1, this.field_s);
+                  this.field_H.drawRightAlignedTextAlpha(var23Lifetime2, var21 + (this.field_q + this.field_x + this.field_G - this.field_x * 2), this.field_A + (var22 + this.field_H.field_w), var18, -1, this.field_s);
                 }
               }
             }

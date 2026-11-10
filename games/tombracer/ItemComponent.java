@@ -31,7 +31,7 @@ abstract class ItemComponent extends PrefabComponent {
           if (param1 != 3) {
             field_F = (String) null;
           }
-          var4.a(98, true);
+          var4.markRemoveWhenBehavioursDone(98, true);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

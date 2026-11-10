@@ -85,7 +85,7 @@ final class je extends haa {
     final static Sprite buildFirstDecodedSprite(byte param0) {
         int var4_int = 0;
         int var5 = TombRacer.field_G ? 1 : 0;
-        int var1 = mq.field_b[0] * iga.field_m[0];
+        int var1 = mq.field_b[0] * ImageProducerCanvasImageBuffer.field_m[0];
         byte[] var2 = ck.field_c[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var4_int < var1; var4_int++) {
@@ -94,7 +94,7 @@ final class je extends haa {
         if (param0 != 69) {
           return (Sprite) null;
         }
-        Sprite var4 = new Sprite(ika.field_a, OpenGlRenderbuffer.field_s, LoadLevelCommand.field_p[0], pg.field_C[0], mq.field_b[0], iga.field_m[0], var3);
+        Sprite var4 = new Sprite(ika.field_a, OpenGlRenderbuffer.field_s, LoadLevelCommand.field_p[0], pg.field_C[0], mq.field_b[0], ImageProducerCanvasImageBuffer.field_m[0], var3);
         MazeGenerator.a((byte) 113);
         return var4;
     }

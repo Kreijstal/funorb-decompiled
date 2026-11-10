@@ -225,7 +225,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -125, "mu_lobby_name");
                 if (var2 != null) {
-                  ija.field_i = jaa.decodeText((byte) 71, var2);
+                  CanvasImageBuffer.field_i = jaa.decodeText((byte) 71, var2);
                 }
                 var2 = dn.a((byte) -127, "mu_lobby_rating");
                 if (var2 != null) {
@@ -409,7 +409,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -88, "mu_chat_lobby_show_all");
                 if (var2 != null) {
-                  uq.field_f = jaa.decodeText((byte) 31, var2);
+                  TileRenderable.field_f = jaa.decodeText((byte) 31, var2);
                 }
                 var2 = dn.a((byte) 107, "mu_chat_lobby_friends_only");
                 if (var2 != null) {
@@ -417,7 +417,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -35, "mu_chat_lobby_friends");
                 if (var2 != null) {
-                  iga.field_k = jaa.decodeText((byte) 111, var2);
+                  ImageProducerCanvasImageBuffer.field_k = jaa.decodeText((byte) 111, var2);
                 }
                 var2 = dn.a((byte) 104, "mu_chat_lobby_hide");
                 if (var2 != null) {
@@ -1475,7 +1475,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -76, "login_username_tooltip");
                 if (var2 != null) {
-                  kma.field_a = jaa.decodeText((byte) 96, var2);
+                  DebouncedValidationSource.field_a = jaa.decodeText((byte) 96, var2);
                 }
                 var2 = dn.a((byte) 124, "login_password_tooltip");
                 if (var2 != null) {

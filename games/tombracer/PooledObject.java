@@ -69,7 +69,7 @@ abstract class PooledObject extends IntrusiveNode implements Renderable {
         }
     }
 
-    abstract void a(RenderScene param0, int param1);
+    abstract void addToScene(RenderScene param0, int param1);
 
     public static void releaseStatics(int param0) {
         field_g = null;

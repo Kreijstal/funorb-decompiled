@@ -21,7 +21,7 @@ final class TouchSwitchBehaviour extends Behaviour implements SwitchSource {
     final void encode(boolean param0, BitPacketBuffer param1) {
         try {
           super.encode(param0, param1);
-          this.field_p.a(this.getScope((byte) 113), (byte) 82, param1);
+          this.field_p.encode(this.getScope((byte) 113), (byte) 82, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "rh.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -70,7 +70,7 @@ final class TouchSwitchBehaviour extends Behaviour implements SwitchSource {
 
     final void resolveSwitchLinks(int param0) {
         super.resolveSwitchLinks(param0);
-        this.field_p.a((byte) 48, this.getScope((byte) 106));
+        this.field_p.resolveLinks((byte) 48, this.getScope((byte) 106));
     }
 
     public final int getMaxLevel(int param0) {
@@ -98,14 +98,14 @@ final class TouchSwitchBehaviour extends Behaviour implements SwitchSource {
     final void tick(int param0) {
         if (this.field_p.f((byte) -56)) {
           this.stop(false);
-          this.field_p.a((byte) -14, this.isTouchingPlayer(8031));
+          this.field_p.setInput((byte) -14, this.isTouchingPlayer(8031));
           if (param0 != 5418) {
             this.getSwitchState((byte) 120);
             return;
           }
           return;
         }
-        this.field_p.a((byte) -14, this.isTouchingPlayer(8031));
+        this.field_p.setInput((byte) -14, this.isTouchingPlayer(8031));
         if (param0 == 5418) {
           return;
         }

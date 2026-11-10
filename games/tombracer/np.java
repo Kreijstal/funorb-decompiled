@@ -14,7 +14,7 @@ final class np extends ka {
     private short[] field_X;
     private tj field_ab;
     private aba field_i;
-    private va field_Q;
+    private LegacyVertexArray field_Q;
     private short[] field_z;
     private short[] field_cb;
     private sca field_jb;
@@ -2639,7 +2639,7 @@ final class np extends ka {
         qf var12 = null;
         int var13_int = 0;
         short[] var13 = null;
-        va var13_ref = null;
+        LegacyVertexArray var13_ref = null;
         int var14_int = 0;
         short[] var14 = null;
         int var15_int = 0;
@@ -3200,7 +3200,7 @@ final class np extends ka {
           if (param1) {
             boolean decompiledSharedTail0 = (this.field_Q == null);
             if (!decompiledSharedTail0) {
-              this.field_Q.a(var7, var12.position, (byte) -112, var12.payload);
+              this.field_Q.upload(var7, var12.position, (byte) -112, var12.payload);
               decompiledSharedTail0 = (var35 != 0);
             }
             if (decompiledSharedTail0) {
@@ -4243,10 +4243,10 @@ final class np extends ka {
         this.field_lb = 0;
         try {
           this.field_R = param0;
-          this.field_g = new tj((va) null, 5126, 3, 0);
-          this.field_ab = new tj((va) null, 5126, 2, 0);
-          this.field_F = new tj((va) null, 5126, 3, 0);
-          this.field_kb = new tj((va) null, 5121, 4, 0);
+          this.field_g = new tj((LegacyVertexArray) null, 5126, 3, 0);
+          this.field_ab = new tj((LegacyVertexArray) null, 5126, 2, 0);
+          this.field_F = new tj((LegacyVertexArray) null, 5126, 3, 0);
+          this.field_kb = new tj((LegacyVertexArray) null, 5121, 4, 0);
           this.field_w = new afa();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4408,16 +4408,16 @@ final class np extends ka {
           this.field_R = param0;
           this.field_u = param5;
           if (ArchiveRequest.hasFlag2048(param5, 0, param2)) {
-            this.field_g = new tj((va) null, 5126, 3, 0);
+            this.field_g = new tj((LegacyVertexArray) null, 5126, 3, 0);
           }
           if (ModelFactory.a(-17, param5, param2)) {
-            this.field_ab = new tj((va) null, 5126, 2, 0);
+            this.field_ab = new tj((LegacyVertexArray) null, 5126, 2, 0);
           }
           if (kb.a(param5, param2, (byte) 17)) {
-            this.field_F = new tj((va) null, 5126, 3, 0);
+            this.field_F = new tj((LegacyVertexArray) null, 5126, 3, 0);
           }
           if (we.b(param2, param5, 2048)) {
-            this.field_kb = new tj((va) null, 5121, 4, 0);
+            this.field_kb = new tj((LegacyVertexArray) null, 5121, 4, 0);
           }
           if (mm.hasFlag2048(-122, param2, param5)) {
             this.field_w = new afa();

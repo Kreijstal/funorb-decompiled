@@ -321,7 +321,7 @@ final class FullscreenConfirmationDialog extends ofa implements ButtonListener {
           if (0 >= var7) {
             og.b(0);
             this.i((byte) 109);
-            this.field_z.c(new gga(this.field_z, uq.field_b), 120);
+            this.field_z.c(new gga(this.field_z, TileRenderable.field_b), 120);
           } else {
             this.field_L.field_o = "" + var7;
           }

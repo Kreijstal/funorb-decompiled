@@ -85,7 +85,7 @@ final class OpenGlTransparentWaterEffect extends ShaderEffect {
           if (param1 != null &&
             this.field_f.c(-30634) &&
             this.field_e.field_qd) {
-            this.field_d = CharacterChoice.a((byte) -70, this.field_e, param1.a("gl", (byte) 123, "transparent_water"), 34336);
+            this.field_d = CharacterChoice.a((byte) -70, this.field_e, param1.getFileByName("gl", (byte) 123, "transparent_water"), 34336);
             return;
           }
           this.field_d = null;

@@ -117,7 +117,7 @@ abstract class SwitchComponent extends PrefabComponent {
             this.switchState.b(1, 52);
             return;
           }
-          this.switchState.a(-2, true);
+          this.switchState.setOn(-2, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

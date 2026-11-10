@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class LightSource extends IntrusiveNode {
-    private int field_q;
+    private int z;
     static jea field_h;
-    private int field_j;
+    private int x;
     private int field_l;
     static it field_k;
     private int field_p;
     private AnimatedLight animatedLight;
-    private int field_f;
+    private int y;
     private int field_n;
     private boolean field_r;
-    private boolean field_g;
+    private boolean disabled;
     static String field_i;
     private int[] field_m;
 
@@ -30,11 +30,11 @@ final class LightSource extends IntrusiveNode {
         this.field_l = param0;
     }
 
-    final int a(int param0, int param1, int param2, int param3) {
+    final int getInfluence(int param0, int param1, int param2, int param3) {
         int var5;
         int var6;
         int var7;
-        if (this.f(1)) {
+        if (this.isDisabled(1)) {
           return -1;
         }
         if (this.field_p == 0) {
@@ -52,9 +52,9 @@ final class LightSource extends IntrusiveNode {
         if (this.animatedLight.light.getColour(-122) == 0) {
           return -1;
         }
-        var5 = -this.field_j + param1 >> 16;
-        var6 = -this.field_f + param2 >> 16;
-        var7 = -this.field_q + param0 >> 16;
+        var5 = -this.x + param1 >> 16;
+        var6 = -this.y + param2 >> 16;
+        var7 = -this.z + param0 >> 16;
         if (param3 <= -33) {
           return -(var7 * var7 + var5 * var5 + var6 * var6 >> 2) + this.field_p;
         }
@@ -64,7 +64,7 @@ final class LightSource extends IntrusiveNode {
 
     final AnimatedLight getAnimatedLight(int param0) {
         if (param0 <= 4) {
-          this.a(-31, -23, 62, -98);
+          this.getInfluence(-31, -23, 62, -98);
           return this.animatedLight;
         }
         return this.animatedLight;
@@ -177,9 +177,9 @@ final class LightSource extends IntrusiveNode {
           this.animatedLight.light == null) {
           return;
         }
-        this.field_m[0] = this.field_j >> 14;
-        this.field_m[1] = -this.field_q >> 14;
-        this.field_m[2] = -this.field_f >> 14;
+        this.field_m[0] = this.x >> 14;
+        this.field_m[1] = -this.z >> 14;
+        this.field_m[2] = -this.y >> 14;
         this.animatedLight.light.setPosition(this.field_m[1], this.field_m[0], (byte) -127, this.field_m[2]);
         if (param0 >= 21) {
           var3 = this.animatedLight.light.getRadius((byte) 107);
@@ -193,7 +193,7 @@ final class LightSource extends IntrusiveNode {
         this.animatedLight.a(false, param1 + this.field_n, -1814184927);
     }
 
-    final void d(int param0, int param1) {
+    final void setRadius(int param0, int param1) {
         int var3 = 12 / ((40 - param1) / 59);
         if (this.animatedLight == null) {
           return;
@@ -206,27 +206,27 @@ final class LightSource extends IntrusiveNode {
 
     final int b(int param0) {
         if (param0 < 104) {
-          this.field_j = -79;
+          this.x = -79;
           return this.field_l;
         }
         return this.field_l;
     }
 
-    final void a(boolean param0, int param1) {
+    final void setDisabled(boolean param0, int param1) {
         if (param1 == 1011094480) {
-          this.field_g = param0 ? true : false;
+          this.disabled = param0 ? true : false;
           return;
         }
         field_k = (it) null;
-        this.field_g = param0 ? true : false;
+        this.disabled = param0 ? true : false;
     }
 
-    final boolean f(int param0) {
+    final boolean isDisabled(int param0) {
         if (param0 != 1) {
           this.field_n = 64;
-          return this.field_g;
+          return this.disabled;
         }
-        return this.field_g;
+        return this.disabled;
     }
 
     final void e(int param0) {
@@ -236,17 +236,17 @@ final class LightSource extends IntrusiveNode {
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void setPosition(int param0, byte param1, int param2, int param3) {
         if (param1 > 82) {
-          this.field_q = param0;
-          this.field_j = param3;
-          this.field_f = param2;
+          this.z = param0;
+          this.x = param3;
+          this.y = param2;
           return;
         }
         this.animatedLight = (AnimatedLight) null;
-        this.field_q = param0;
-        this.field_j = param3;
-        this.field_f = param2;
+        this.z = param0;
+        this.x = param3;
+        this.y = param2;
     }
 
     final void b(int param0, int param1) {
@@ -261,7 +261,7 @@ final class LightSource extends IntrusiveNode {
     LightSource(AnimatedLight param0) {
         this.field_r = false;
         this.field_m = new int[3];
-        this.field_g = false;
+        this.disabled = false;
         try {
           this.animatedLight = param0;
         } catch (RuntimeException runtimeException) {

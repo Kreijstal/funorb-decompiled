@@ -20,7 +20,7 @@ class um extends DualLinkNode {
           if (param3 != -6455) {
             field_k = (String) null;
           }
-          var5 = PcmSampleStream.b(param2, 100, param4, param0);
+          var5 = PcmSampleStream.createAtRateAndPan(param2, 100, param4, param0);
           var6 = hda.delayStreamByMillis(param1, 1303, var5);
           var7 = new vb(var5, var6);
           DivisionMazeGenerator.field_e.addLast((byte) -57, var7);

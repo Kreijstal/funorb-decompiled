@@ -63,105 +63,105 @@ final class qna {
           qoa.field_a = true;
           mq.field_a = param2;
           if (mq.field_a == 0) {
-            var3_int = LegacyRidgedWaterNoise.a(ConsoleValue.field_c, AgeValidator.field_l, rg.field_z, 1, lra.field_c);
+            var3_int = LegacyRidgedWaterNoise.a(ConsoleValue.field_c, AgeValidator.field_l, rg.field_z, 1, ClientMemoryVertexArray.field_c);
             var4 = 3 + var3_int;
             CoinItemComponent.field_H = new int[var4];
-            mba.field_g = new String[var4];
+            DefaultTileRenderable.field_g = new String[var4];
             for (var5 = 0; var5 < var4; var5++) {
               CoinItemComponent.field_H[var5] = -1;
             }
             SpriteTileOperator.field_w = new int[2];
             for (var5 = 0; var3_int > var5; var5++) {
-              mba.field_g[var5] = lra.field_c[var5];
+              DefaultTileRenderable.field_g[var5] = ClientMemoryVertexArray.field_c[var5];
             }
-            mba.field_g[-3 + var4] = "";
-            mba.field_g[-2 + var4] = UiWidget.field_k;
+            DefaultTileRenderable.field_g[-3 + var4] = "";
+            DefaultTileRenderable.field_g[-2 + var4] = UiWidget.field_k;
             CoinItemComponent.field_H[-2 + var4] = 0;
             SpriteTileOperator.field_w[0] = 4;
-            mba.field_g[var4 - 1] = BitPacketBuffer.field_j;
+            DefaultTileRenderable.field_g[var4 - 1] = BitPacketBuffer.field_j;
             CoinItemComponent.field_H[-1 + var4] = 1;
             SpriteTileOperator.field_w[1] = 5;
           } else if (mq.field_a == 1) {
-            var3_int = LegacyRidgedWaterNoise.a(ConsoleValue.field_c, AgeValidator.field_l, rg.field_z, 1, lra.field_c);
+            var3_int = LegacyRidgedWaterNoise.a(ConsoleValue.field_c, AgeValidator.field_l, rg.field_z, 1, ClientMemoryVertexArray.field_c);
             var4 = var3_int + 2;
             CoinItemComponent.field_H = new int[var4];
-            mba.field_g = new String[var4];
+            DefaultTileRenderable.field_g = new String[var4];
             for (var5 = 0; var4 > var5; var5++) {
               CoinItemComponent.field_H[var5] = -1;
             }
             SpriteTileOperator.field_w = new int[1];
             for (var5 = 0; var3_int > var5; var5++) {
-              mba.field_g[var5] = lra.field_c[var5];
+              DefaultTileRenderable.field_g[var5] = ClientMemoryVertexArray.field_c[var5];
             }
-            mba.field_g[var4 - 2] = "";
-            mba.field_g[-1 + var4] = BitPacketBuffer.field_j;
+            DefaultTileRenderable.field_g[var4 - 2] = "";
+            DefaultTileRenderable.field_g[-1 + var4] = BitPacketBuffer.field_j;
             CoinItemComponent.field_H[-1 + var4] = 0;
             SpriteTileOperator.field_w[0] = 5;
           } else if (mq.field_a != 2) {
             if (mq.field_a == 3) {
               if (dsa.field_c.field_c) {
-                var3_int = LegacyRidgedWaterNoise.a(ConsoleValue.field_c, IdolItemComponent.field_G, rg.field_z, 1, lra.field_c);
+                var3_int = LegacyRidgedWaterNoise.a(ConsoleValue.field_c, IdolItemComponent.field_G, rg.field_z, 1, ClientMemoryVertexArray.field_c);
               } else {
-                var3_int = LegacyRidgedWaterNoise.a(ConsoleValue.field_c, SwitchState.field_o, rg.field_z, 1, lra.field_c);
+                var3_int = LegacyRidgedWaterNoise.a(ConsoleValue.field_c, SwitchState.field_o, rg.field_z, 1, ClientMemoryVertexArray.field_c);
               }
               var4 = 2 + var3_int;
               CoinItemComponent.field_H = new int[var4];
-              mba.field_g = new String[var4];
+              DefaultTileRenderable.field_g = new String[var4];
               for (var5 = 0; var4 > var5; var5++) {
                 CoinItemComponent.field_H[var5] = -1;
               }
               SpriteTileOperator.field_w = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
-                mba.field_g[var5] = lra.field_c[var5];
+                DefaultTileRenderable.field_g[var5] = ClientMemoryVertexArray.field_c[var5];
               }
-              mba.field_g[var4 - 2] = "";
-              mba.field_g[var4 - 1] = BitPacketBuffer.field_j;
+              DefaultTileRenderable.field_g[var4 - 2] = "";
+              DefaultTileRenderable.field_g[var4 - 1] = BitPacketBuffer.field_j;
               CoinItemComponent.field_H[-1 + var4] = 0;
               SpriteTileOperator.field_w[0] = 5;
             } else if (4 == mq.field_a) {
-              var3_int = LegacyRidgedWaterNoise.a(ConsoleValue.field_c, S2CEventPacket.field_b, rg.field_z, 1, lra.field_c);
+              var3_int = LegacyRidgedWaterNoise.a(ConsoleValue.field_c, S2CEventPacket.field_b, rg.field_z, 1, ClientMemoryVertexArray.field_c);
               var4 = var3_int + 2;
-              mba.field_g = new String[var4];
+              DefaultTileRenderable.field_g = new String[var4];
               CoinItemComponent.field_H = new int[var4];
               for (var5 = 0; var5 < var4; var5++) {
                 CoinItemComponent.field_H[var5] = -1;
               }
               SpriteTileOperator.field_w = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
-                mba.field_g[var5] = lra.field_c[var5];
+                DefaultTileRenderable.field_g[var5] = ClientMemoryVertexArray.field_c[var5];
               }
-              mba.field_g[-2 + var4] = "";
-              mba.field_g[-1 + var4] = BitPacketBuffer.field_j;
+              DefaultTileRenderable.field_g[-2 + var4] = "";
+              DefaultTileRenderable.field_g[-1 + var4] = BitPacketBuffer.field_j;
               CoinItemComponent.field_H[-1 + var4] = 0;
               SpriteTileOperator.field_w[0] = 5;
             } else {
               if (mq.field_a != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = LegacyRidgedWaterNoise.a(ConsoleValue.field_c, WindZoneBehaviour.field_s, rg.field_z, 1, lra.field_c);
+              var3_int = LegacyRidgedWaterNoise.a(ConsoleValue.field_c, WindZoneBehaviour.field_s, rg.field_z, 1, ClientMemoryVertexArray.field_c);
               var4 = var3_int + 3;
               CoinItemComponent.field_H = new int[var4];
-              mba.field_g = new String[var4];
+              DefaultTileRenderable.field_g = new String[var4];
               for (var5 = 0; var4 > var5; var5++) {
                 CoinItemComponent.field_H[var5] = -1;
               }
               SpriteTileOperator.field_w = new int[2];
               for (var5 = 0; var3_int > var5; var5++) {
-                mba.field_g[var5] = lra.field_c[var5];
+                DefaultTileRenderable.field_g[var5] = ClientMemoryVertexArray.field_c[var5];
               }
-              mba.field_g[var4 - 3] = "";
-              mba.field_g[-2 + var4] = sqa.field_a;
+              DefaultTileRenderable.field_g[var4 - 3] = "";
+              DefaultTileRenderable.field_g[-2 + var4] = sqa.field_a;
               CoinItemComponent.field_H[var4 - 2] = 0;
               SpriteTileOperator.field_w[0] = 3;
-              mba.field_g[var4 - 1] = BitPacketBuffer.field_j;
+              DefaultTileRenderable.field_g[var4 - 1] = BitPacketBuffer.field_j;
               CoinItemComponent.field_H[var4 - 1] = 1;
               SpriteTileOperator.field_w[1] = 5;
             }
           } else {
-            var3_int = LegacyRidgedWaterNoise.a(ConsoleValue.field_c, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(96, rr.field_G, new String[]{"<br><%0><br>"}), rg.field_z, 1, lra.field_c);
+            var3_int = LegacyRidgedWaterNoise.a(ConsoleValue.field_c, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(96, rr.field_G, new String[]{"<br><%0><br>"}), rg.field_z, 1, ClientMemoryVertexArray.field_c);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
-              if (!"<%0>".equals(lra.field_c[var5])) {
+              if (!"<%0>".equals(ClientMemoryVertexArray.field_c[var5])) {
                 continue;
               }
               var4 = var5;
@@ -171,13 +171,13 @@ final class qna {
               throw new IllegalStateException();
             }
             cia.field_a = new String[var4];
-            ArrayUtils.copy(lra.field_c, 0, cia.field_a, 0, var4);
+            ArrayUtils.copy(ClientMemoryVertexArray.field_c, 0, cia.field_a, 0, var4);
             ToggleMusicChannelCommand.field_o = new String[-var4 + var3_int - 1];
-            ArrayUtils.copy(lra.field_c, var4 + 1, ToggleMusicChannelCommand.field_o, 0, -1 + (-var4 + var3_int));
+            ArrayUtils.copy(ClientMemoryVertexArray.field_c, var4 + 1, ToggleMusicChannelCommand.field_o, 0, -1 + (-var4 + var3_int));
             var4 = -1;
-            var3_int = LegacyRidgedWaterNoise.a(ConsoleValue.field_c, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(89, lqa.field_g, new String[]{"<br><%0><br>"}), rg.field_z, 1, lra.field_c);
+            var3_int = LegacyRidgedWaterNoise.a(ConsoleValue.field_c, LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(89, lqa.field_g, new String[]{"<br><%0><br>"}), rg.field_z, 1, ClientMemoryVertexArray.field_c);
             for (var5 = 0; var5 < var3_int; var5++) {
-              if (!"<%0>".equals(lra.field_c[var5])) {
+              if (!"<%0>".equals(ClientMemoryVertexArray.field_c[var5])) {
                 continue;
               }
               var4 = var5;
@@ -187,9 +187,9 @@ final class qna {
               throw new IllegalStateException();
             }
             pm.field_d = new String[var4];
-            ArrayUtils.copy(lra.field_c, 0, pm.field_d, 0, var4);
+            ArrayUtils.copy(ClientMemoryVertexArray.field_c, 0, pm.field_d, 0, var4);
             C2SActionPacket.field_k = new String[-1 + var3_int - var4];
-            ArrayUtils.copy(lra.field_c, 1 + var4, C2SActionPacket.field_k, 0, var3_int - var4 - 1);
+            ArrayUtils.copy(ClientMemoryVertexArray.field_c, 1 + var4, C2SActionPacket.field_k, 0, var3_int - var4 - 1);
             if (pm.field_d.length <= cia.field_a.length) {
               stackIn_58_0 = cia.field_a.length;
             } else {
@@ -204,23 +204,23 @@ final class qna {
             var6 = stackIn_61_0;
             var7 = 7 + var5 + var6;
             CoinItemComponent.field_H = new int[var7];
-            mba.field_g = new String[var7];
+            DefaultTileRenderable.field_g = new String[var7];
             for (var8 = 0; var7 > var8; var8++) {
               CoinItemComponent.field_H[var8] = -1;
             }
             CoinItemComponent.field_H[1] = 0;
-            mba.field_g[1] = WeaveOperator.field_s;
-            mba.field_g[0] = FleeLocomotor.field_B;
+            DefaultTileRenderable.field_g[1] = WeaveOperator.field_s;
+            DefaultTileRenderable.field_g[0] = FleeLocomotor.field_B;
             SpriteTileOperator.field_w = new int[2];
-            mba.field_g[3] = mha.field_F;
-            mba.field_g[4] = NativeSceneLight.field_p;
+            DefaultTileRenderable.field_g[3] = mha.field_F;
+            DefaultTileRenderable.field_g[4] = NativeSceneLight.field_p;
             CoinItemComponent.field_H[3] = 1;
             SpriteTileOperator.field_w[1] = 2;
-            mba.field_g[5] = "";
-            mba.field_g[2] = cq.field_c;
+            DefaultTileRenderable.field_g[5] = "";
+            DefaultTileRenderable.field_g[2] = cq.field_c;
             SpriteTileOperator.field_w[0] = 5;
             for (var8Lifetime2 = 0; var8Lifetime2 < var5; var8Lifetime2++) {
-              stackIn_68_0 = mba.field_g;
+              stackIn_68_0 = DefaultTileRenderable.field_g;
               stackIn_68_1 = var8Lifetime2 + 6;
               if (-var5 + (var8Lifetime2 + pm.field_d.length) >= 0) {
                 stackIn_69_2 = pm.field_d[pm.field_d.length + var8Lifetime2 - var5];
@@ -229,10 +229,10 @@ final class qna {
               }
               stackIn_68_0[stackIn_68_1] = stackIn_69_2;
             }
-            mba.field_g[6 + var5] = null;
+            DefaultTileRenderable.field_g[6 + var5] = null;
             CoinItemComponent.field_H[6 + var5] = -2;
             for (var8Lifetime3 = 0; var8Lifetime3 < var6; var8Lifetime3++) {
-              stackIn_74_0 = mba.field_g;
+              stackIn_74_0 = DefaultTileRenderable.field_g;
               stackIn_74_1 = var8Lifetime3 + 7 + var5;
               if (C2SActionPacket.field_k.length <= var8Lifetime3) {
                 stackIn_75_2 = "";
@@ -245,9 +245,9 @@ final class qna {
           }
           FacePointLocomotor.field_r.field_i = SpriteTileOperator.field_w.length;
           var3_intLifetime1 = 0;
-          for (var4Lifetime1 = 0; var4Lifetime1 < mba.field_g.length; var4Lifetime1++) {
+          for (var4Lifetime1 = 0; var4Lifetime1 < DefaultTileRenderable.field_g.length; var4Lifetime1++) {
             stackIn_88_0 = -116;
-            stackIn_88_1 = mba.field_g[var4Lifetime1];
+            stackIn_88_1 = DefaultTileRenderable.field_g[var4Lifetime1];
             stackIn_89_2 = !(CoinItemComponent.field_H[var4Lifetime1] < 0);
             var5Lifetime1 = PathMoveLocomotor.$cfr$intArgs$a$590e95718a07(stackIn_88_0, stackIn_88_1, stackIn_89_2);
             if (var3_intLifetime1 < var5Lifetime1) {
@@ -276,7 +276,7 @@ final class qna {
           hg.field_f = FacePointLocomotor.field_r.field_i * (mha.field_C + GasVentModel.field_p << 1);
           FurnitureModel.field_o = ega.field_c - (var3_intLifetime1 >> 1);
           tia.field_a = var3_intLifetime1 + (ega.field_c - (var3_intLifetime1 >> 1));
-          for (var4Lifetime2 = 0; var4Lifetime2 < mba.field_g.length; var4Lifetime2++) {
+          for (var4Lifetime2 = 0; var4Lifetime2 < DefaultTileRenderable.field_g.length; var4Lifetime2++) {
             stackIn_110_0 = hg.field_f;
             if (CoinItemComponent.field_H[var4Lifetime2] >= 0) {
               stackIn_111_1 = nt.field_d;
@@ -286,16 +286,16 @@ final class qna {
             hg.field_f = stackIn_110_0 + stackIn_111_1;
           }
           jua.field_d = -(hg.field_f >> 1) + IdolItemComponent.field_L;
-          TripBeamComponent.field_K = new int[mba.field_g.length][];
+          TripBeamComponent.field_K = new int[DefaultTileRenderable.field_g.length][];
           var4Lifetime3 = 0;
           if (param0 != 1) {
             qna.a(-17, true, 122);
           }
           var5Lifetime3 = jua.field_d;
-          while (var4Lifetime3 < mba.field_g.length) {
+          while (var4Lifetime3 < DefaultTileRenderable.field_g.length) {
             var6Lifetime1 = CoinItemComponent.field_H[var4Lifetime3];
             if (0 <= var6Lifetime1) {
-              var7Lifetime2 = PathMoveLocomotor.$cfr$intArgs$a$590e95718a07(-116, mba.field_g[var4Lifetime3], true);
+              var7Lifetime2 = PathMoveLocomotor.$cfr$intArgs$a$590e95718a07(-116, DefaultTileRenderable.field_g[var4Lifetime3], true);
               var5Lifetime3 = var5Lifetime3 + mha.field_C;
               var8Lifetime1 = ega.field_c - (var7Lifetime2 >> 1);
               TripBeamComponent.field_K[var4Lifetime3] = new int[4];

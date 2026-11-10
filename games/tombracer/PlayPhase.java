@@ -325,7 +325,7 @@ final class PlayPhase extends MatchPhase {
           }
           if (param2 == 24) {
             if (!this.screen.d(0)) {
-              var5 = new MessageOverlay(this.screen, (ms) null);
+              var5 = new MessageOverlay(this.screen, (MessagePanel) null);
               var5.a("TITLE!", "Lalala here is some text to test with", "Press fire to continue. Or not.", (byte) 125);
               this.screen.addOverlay(var5, param1 + 655);
               return true;
@@ -634,8 +634,8 @@ final class PlayPhase extends MatchPhase {
               return stackIn_65_0;
             }
             var9Lifetime3 = nn.field_b;
-            nn.field_b = uq.field_a;
-            uq.field_a = var9Lifetime3;
+            nn.field_b = TileRenderable.field_a;
+            TileRenderable.field_a = var9Lifetime3;
             PushableBlockMazeComponent.field_L = true;
           }
           stackIn_68_0 = -1;

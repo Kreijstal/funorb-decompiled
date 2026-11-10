@@ -612,7 +612,7 @@ final class MatchState implements dv {
         return stackIn_7_0;
     }
 
-    MatchState(String[] param0, int param1, int param2, int param3, int param4, int param5, int param6, BitSet[] param7, boolean[] param8, ScoringObserverFactory param9, ou param10) {
+    MatchState(String[] param0, int param1, int param2, int param3, int param4, int param5, int param6, BitSet[] param7, boolean[] param8, ScoringObserverFactory param9, CourseGenerator param10) {
         int var13 = 0;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
@@ -647,7 +647,7 @@ final class MatchState implements dv {
             }
             this.courseLayouts = new CourseLayout[var12_int];
             for (var13 = 0; var13 < var12_int; var13++) {
-              this.courseLayouts[var13] = param10.a((byte) 58);
+              this.courseLayouts[var13] = param10.generateLayout((byte) 58);
             }
           }
           this.colouredPlayerNames = new String[this.playerNames.length];

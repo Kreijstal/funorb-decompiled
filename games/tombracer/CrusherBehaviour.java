@@ -283,7 +283,7 @@ final class CrusherBehaviour extends Behaviour {
               this.phaseTicks = this.phaseTicks + 1;
               if (this.phaseTicks > this.windUpTicks) {
                 var6 = this.getRoom(true);
-                var6.a(123, var5, this.crushEffect, this.trap.getHeight((byte) 55), this.trap.getWidth(-79), var4);
+                var6.applyAreaEffect(123, var5, this.crushEffect, this.trap.getHeight((byte) 55), this.trap.getWidth(-79), var4);
                 this.setPhase(0, 3);
                 this.trap.setWeight((byte) -3, this.field_q);
                 this.trap.setFloating((byte) 17, false);

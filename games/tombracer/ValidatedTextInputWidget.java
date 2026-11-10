@@ -3,7 +3,7 @@
  */
 final class ValidatedTextInputWidget extends TextInputWidget implements ValidationProvider {
     static String field_J;
-    private nua field_N;
+    private ValidationSource field_N;
     private int field_M;
     static int field_K;
     static String field_L;
@@ -28,7 +28,7 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
         }
     }
 
-    final void a(int param0, nua param1) {
+    final void a(int param0, ValidationSource param1) {
         try {
           this.field_N = param1;
           if (param0 != -13861) {
@@ -84,9 +84,9 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
         }
     }
 
-    public final nua getValidationSource(byte param0) {
+    public final ValidationSource getValidationSource(byte param0) {
         if (param0 < 44) {
-          return (nua) null;
+          return (ValidationSource) null;
         }
         return this.field_N;
     }
@@ -94,7 +94,7 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
     final void notifySubmitted(int param0) {
         super.notifySubmitted(param0);
         if (null != this.field_N) {
-          this.field_N.c(-74);
+          this.field_N.markEdited(-74);
         }
     }
 

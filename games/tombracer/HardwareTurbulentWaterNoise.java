@@ -68,7 +68,7 @@ final class HardwareTurbulentWaterNoise extends TurbulenceNoise3D {
         }
         var1 = new Sprite[fa.field_b];
         for (var2 = 0; var2 < fa.field_b; var2++) {
-          var3 = mq.field_b[var2] * iga.field_m[var2];
+          var3 = mq.field_b[var2] * ImageProducerCanvasImageBuffer.field_m[var2];
           var21 = ck.field_c[var2];
           if (!NetworkArchiveRequest.field_n[var2]) {
             var10 = new int[var3];
@@ -76,7 +76,7 @@ final class HardwareTurbulentWaterNoise extends TurbulenceNoise3D {
             for (var6 = 0; var3 > var6; var6++) {
               var10[var6] = mga.field_g[SnakePitBehaviour.bitwiseAnd(255, (int) var21[var6])];
             }
-            var1[var2] = new Sprite(ika.field_a, OpenGlRenderbuffer.field_s, LoadLevelCommand.field_p[var2], pg.field_C[var2], mq.field_b[var2], iga.field_m[var2], var22);
+            var1[var2] = new Sprite(ika.field_a, OpenGlRenderbuffer.field_s, LoadLevelCommand.field_p[var2], pg.field_C[var2], mq.field_b[var2], ImageProducerCanvasImageBuffer.field_m[var2], var22);
           } else {
             var15 = pb.field_l[var2];
             var11 = var15;
@@ -88,7 +88,7 @@ final class HardwareTurbulentWaterNoise extends TurbulenceNoise3D {
             for (var7 = 0; var3 > var7; var7++) {
               var6_ref_int__[var7] = WallTile.bitwiseOr(SnakePitBehaviour.bitwiseAnd(-16777216, var15[var7] << 24), mga.field_g[SnakePitBehaviour.bitwiseAnd(255, (int) var21[var7])]);
             }
-            var1[var2] = (Sprite) ((Object) new ArgbSprite(ika.field_a, OpenGlRenderbuffer.field_s, LoadLevelCommand.field_p[var2], pg.field_C[var2], mq.field_b[var2], iga.field_m[var2], var17));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(ika.field_a, OpenGlRenderbuffer.field_s, LoadLevelCommand.field_p[var2], pg.field_C[var2], mq.field_b[var2], ImageProducerCanvasImageBuffer.field_m[var2], var17));
           }
         }
         MazeGenerator.a((byte) 2);

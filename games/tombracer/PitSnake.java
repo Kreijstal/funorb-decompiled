@@ -205,7 +205,7 @@ final class PitSnake extends IntrusiveNode {
         return this.field_q;
     }
 
-    final void c(int param0) {
+    final void mirror(int param0) {
         int var2 = -1 / ((param0 - 75) / 51);
         this.field_s = -this.field_s;
         this.field_n = -this.field_n;

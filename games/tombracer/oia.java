@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oia implements gs {
+final class oia implements SelectivelyLitRenderable {
     PitModel field_c;
     int field_a;
     static String field_e;
@@ -16,7 +16,7 @@ final class oia implements gs {
         return this.field_c.isRenderExpired((byte) 48);
     }
 
-    public final boolean a(boolean param0, LightSource param1) {
+    public final boolean ignoresLight(boolean param0, LightSource param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -84,7 +84,7 @@ final class oia implements gs {
         }
     }
 
-    public final boolean a(boolean param0) {
+    public final boolean isUnlit(boolean param0) {
         if (!param0) {
           return true;
         }

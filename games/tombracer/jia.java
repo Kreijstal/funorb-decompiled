@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jia implements ms {
+final class jia implements MessagePanel {
     private lw field_b;
     private waa[] field_c;
     static BufferedSocket field_a;
@@ -13,7 +13,7 @@ final class jia implements ms {
         field_a = null;
     }
 
-    public final void a(int param0, int param1, int param2) {
+    public final void draw(int param0, int param1, int param2) {
         int var5 = 0;
         int stackIn_8_0 = 0;
         waa[] var4;
@@ -32,15 +32,15 @@ final class jia implements ms {
         } else {
           stackIn_8_0 = (!VerticalScrollbar.field_tb[hra.field_b]) ? 1627324416 : 805371648;
         }
-        LegacyOpenGlSpriteTexture.a(stackIn_8_0, tga.field_a, param0, param1 ^ 20688, this.a(-8660), 20 + this.a(false), 16, -10 + param2);
+        LegacyOpenGlSpriteTexture.a(stackIn_8_0, tga.field_a, param0, param1 ^ 20688, this.getWidth(-8660), 20 + this.getHeight(false), 16, -10 + param2);
         if (!VerticalScrollbar.field_tb[hra.field_b] &&
           this.field_b.field_b) {
-          SingleChildWidget.field_v.a((aa) null, this.a(false), 0, 0, param0, -1, (int[]) null, 1, -16711423, pg.field_A, (byte) -122, this.a(false), 0, (ToolkitSprite[]) null, param2, 1);
+          SingleChildWidget.field_v.a((aa) null, this.getHeight(false), 0, 0, param0, -1, (int[]) null, 1, -16711423, pg.field_A, (byte) -122, this.getHeight(false), 0, (ToolkitSprite[]) null, param2, 1);
         } else if (VerticalScrollbar.field_tb[hra.field_b] &&
           this.field_b.field_b) {
-          SingleChildWidget.field_v.a((aa) null, this.a(false), 0, 0, param0, -1, (int[]) null, 1, -16711423, gka.field_f, (byte) 93, this.a(false), 0, (ToolkitSprite[]) null, param2, 1);
+          SingleChildWidget.field_v.a((aa) null, this.getHeight(false), 0, 0, param0, -1, (int[]) null, 1, -16711423, gka.field_f, (byte) 93, this.getHeight(false), 0, (ToolkitSprite[]) null, param2, 1);
         } else {
-          SingleChildWidget.field_v.a((aa) null, this.a(false), 0, 0, param0, 553648127, (int[]) null, 1, -2147417855, NetworkArchiveRequest.field_p, (byte) -38, this.a(false), 0, (ToolkitSprite[]) null, param2, 1);
+          SingleChildWidget.field_v.a((aa) null, this.getHeight(false), 0, 0, param0, 553648127, (int[]) null, 1, -2147417855, NetworkArchiveRequest.field_p, (byte) -38, this.getHeight(false), 0, (ToolkitSprite[]) null, param2, 1);
         }
         if (param1 != 20726) {
           this.field_c = (waa[]) null;
@@ -48,21 +48,21 @@ final class jia implements ms {
         this.field_b.a((byte) 74, param0, param2);
     }
 
-    public final boolean a(int param0, int param1, char param2) {
+    public final boolean handleKey(int param0, int param1, char param2) {
         if (param0 != -18602) {
-          this.b(114);
+          this.update(114);
         }
         return false;
     }
 
-    public final int a(boolean param0) {
+    public final int getHeight(boolean param0) {
         if (param0) {
           field_a = (BufferedSocket) null;
         }
         return 140;
     }
 
-    public final void b(int param0) {
+    public final void update(int param0) {
         waa[] var2_ref_waa__;
         int var2;
         int var3;
@@ -89,14 +89,14 @@ final class jia implements ms {
           var2 = 0;
           var4 = 1;
         } else {
-          if (var2 > this.a(false)) {
-            var2 = this.a(false);
+          if (var2 > this.getHeight(false)) {
+            var2 = this.getHeight(false);
             var4 = 1;
           }
         }
         if (var3Lifetime1 >= 0) {
-          if (var3Lifetime1 > this.a(-8660)) {
-            var3Lifetime1 = this.a(param0 - 1551);
+          if (var3Lifetime1 > this.getWidth(-8660)) {
+            var3Lifetime1 = this.getWidth(param0 - 1551);
             var4 = 1;
           }
         } else {
@@ -119,7 +119,7 @@ final class jia implements ms {
         }
     }
 
-    public final int a(int param0) {
+    public final int getWidth(int param0) {
         if (param0 != -8660) {
           this.field_b = (lw) null;
         }
@@ -130,9 +130,9 @@ final class jia implements ms {
         int var1 = 0;
         this.field_c = new waa[10];
         this.field_b = new lw();
-        this.field_b.a(-112, this.a(-8660) / 2, this.a(false) / 2);
+        this.field_b.a(-112, this.getWidth(-8660) / 2, this.getHeight(false) / 2);
         for (var1 = 0; this.field_c.length > var1; var1++) {
-          this.field_c[var1] = new waa(this.a(false), this.a(-8660));
+          this.field_c[var1] = new waa(this.getHeight(false), this.getWidth(-8660));
         }
     }
 

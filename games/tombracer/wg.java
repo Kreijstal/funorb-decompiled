@@ -114,10 +114,10 @@ final class wg extends MatchScoringObserver {
           }
           var3_int = 0;
           var4 = jua.field_d;
-          while (mba.field_g.length > var3_int) {
+          while (DefaultTileRenderable.field_g.length > var3_int) {
             var5 = CoinItemComponent.field_H[var3_int];
             if (var5 >= 0) {
-              var6 = PathMoveLocomotor.$cfr$intArgs$a$590e95718a07(-116, mba.field_g[var3_int], true);
+              var6 = PathMoveLocomotor.$cfr$intArgs$a$590e95718a07(-116, DefaultTileRenderable.field_g[var3_int], true);
               var4 = var4 + mha.field_C;
               var7 = -(var6 >> 1) + ega.field_c;
               if (CrusherBehaviour.a(param2, var6 + (InvisibleTouchSwitchComponent.field_L << 1), -InvisibleTouchSwitchComponent.field_L + var7, param1, (GasVentModel.field_p << 1) + nt.field_d, false, var4)) {

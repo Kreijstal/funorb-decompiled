@@ -15,7 +15,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
 
     final void encode(boolean param0, BitPacketBuffer param1) {
         super.encode(param0, param1);
-        this.field_q.a(this.getScope((byte) 116), (byte) 111, param1);
+        this.field_q.encode(this.getScope((byte) 116), (byte) 111, param1);
         param1.writeBits((byte) 42, this.field_w, 8);
         param1.writeBits((byte) -128, this.field_v, 8);
         param1.writeBits((byte) 70, this.field_n, 4);
@@ -64,7 +64,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
 
     final void resolveSwitchLinks(int param0) {
         super.resolveSwitchLinks(param0 ^ 0);
-        this.field_q.a((byte) 48, this.getScope((byte) 110));
+        this.field_q.resolveLinks((byte) 48, this.getScope((byte) 110));
         if (param0 != -2) {
           BitPacketBuffer var3 = (BitPacketBuffer) null;
           this.encode(false, (BitPacketBuffer) null);
@@ -367,7 +367,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
           }
         }
         int var2 = this.field_s >= this.field_w ? 1 : 0;
-        this.field_q.a((byte) -14, var2 != 0);
+        this.field_q.setInput((byte) -14, var2 != 0);
         if (0 < this.field_p) {
           this.field_p = this.field_p - 1;
         }

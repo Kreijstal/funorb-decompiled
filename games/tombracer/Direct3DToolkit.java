@@ -167,7 +167,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
           if (param0 == SingleChildWidget.field_w) {
             return 50;
           }
-          if (param0 == wo.field_i) {
+          if (param0 == VboVertexArray.field_i) {
             return 51;
           }
           if (CachedArchiveSource.field_g == param0) {

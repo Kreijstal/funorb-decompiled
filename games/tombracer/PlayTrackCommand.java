@@ -500,9 +500,9 @@ final class PlayTrackCommand extends ConsoleMethod {
                   var35 = null;
                 }
                 if (var35 != null) {
-                  ArchiveNetworkClient.field_b = kma.field_e[var34_intLifetime2] + " - " + (String) (var35);
+                  ArchiveNetworkClient.field_b = DebouncedValidationSource.field_e[var34_intLifetime2] + " - " + (String) (var35);
                 } else {
-                  ArchiveNetworkClient.field_b = kma.field_e[var34_intLifetime2];
+                  ArchiveNetworkClient.field_b = DebouncedValidationSource.field_e[var34_intLifetime2];
                 }
               }
             }

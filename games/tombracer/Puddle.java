@@ -143,7 +143,7 @@ final class Puddle extends PooledObject implements Renderable, Collidable, World
         return this.x;
     }
 
-    final void a(RenderScene param0, int param1) {
+    final void addToScene(RenderScene param0, int param1) {
         try {
           if (param1 != 5465) {
             this.field_m = -24;

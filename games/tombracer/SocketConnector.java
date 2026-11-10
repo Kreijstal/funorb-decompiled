@@ -10,7 +10,7 @@ abstract class SocketConnector {
 
     abstract java.net.Socket connect(int param0) throws IOException;
 
-    final java.net.Socket a(byte param0) throws IOException {
+    final java.net.Socket connectDirect(byte param0) throws IOException {
         int var2 = -71 % ((param0 - 64) / 36);
         return new java.net.Socket(this.host, this.port);
     }

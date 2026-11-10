@@ -306,7 +306,7 @@ final class HazardModel extends TrapModel {
               this.field_r = var10_ref.a(new fm(12, this.getRenderX((byte) -105), this.getRenderY((byte) 104), this.getRenderZ((byte) -119)), -58);
             }
             if (this.field_r != null &&
-              this.field_r.field_i.field_f.e()) {
+              this.field_r.field_i.field_f.isOutOfRange()) {
               this.field_r.a(-88, var10_ref);
               this.field_r = null;
             }

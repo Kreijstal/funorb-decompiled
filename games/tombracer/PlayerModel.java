@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class PlayerModel implements PlayerAnimator, gs {
+final class PlayerModel implements PlayerAnimator, SelectivelyLitRenderable {
     private LightSource field_l;
     static String field_e;
     private boolean field_o;
@@ -56,7 +56,7 @@ final class PlayerModel implements PlayerAnimator, gs {
         this.field_c.a(0);
         this.field_n.a(0);
         this.field_h = GameScreen.positiveModulo(8 + this.field_h, 2048, 106);
-        this.field_l.a(this.field_p.getElevation((byte) 115) + 2097152, (byte) 101, this.field_p.getY(9648), this.field_p.getX(3));
+        this.field_l.setPosition(this.field_p.getElevation((byte) 115) + 2097152, (byte) 101, this.field_p.getY(9648), this.field_p.getX(3));
         if (param0 != -4366) {
           return;
         }
@@ -64,13 +64,13 @@ final class PlayerModel implements PlayerAnimator, gs {
           !(this.field_p.getAnimationStateTicks(false) <= 3));
         if (!decompiledSharedTail0) {
           this.field_l.c(-10874, 16777130);
-          this.field_l.d(160, param0 ^ 4376);
+          this.field_l.setRadius(160, param0 ^ 4376);
           this.field_l.getAnimatedLight(8).mode = 0;
           decompiledSharedTail0 = (TombRacer.field_G);
         }
         if (decompiledSharedTail0) {
           this.field_l.c(param0 ^ 15220, 16633231);
-          this.field_l.d(128, -71);
+          this.field_l.setRadius(128, -71);
           this.field_l.getAnimatedLight(85).mode = 11;
         }
     }
@@ -837,14 +837,14 @@ final class PlayerModel implements PlayerAnimator, gs {
         return this.field_p.getY(9648);
     }
 
-    public final boolean a(boolean param0) {
+    public final boolean isUnlit(boolean param0) {
         if (!param0) {
           return true;
         }
         return false;
     }
 
-    public final boolean a(boolean param0, LightSource param1) {
+    public final boolean ignoresLight(boolean param0, LightSource param1) {
         RuntimeException var3 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -909,13 +909,13 @@ final class PlayerModel implements PlayerAnimator, gs {
         if (var3 == null) {
           return;
         }
-        ev var4 = var3.getListener((byte) 59);
+        RenderListener var4 = var3.getListener((byte) 59);
         if (!(var4 instanceof RoomLighting)) {
           return;
         }
         try {
           var5 = (RoomLighting) (var4);
-          var5.a((byte) 45, this.field_l);
+          var5.addLightSource((byte) 45, this.field_l);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hf.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

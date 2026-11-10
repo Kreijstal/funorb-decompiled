@@ -17,7 +17,7 @@ final class dn {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -81 / ((48 - param0) / 56);
-          stackIn_1_0 = RevolverItemComponent.field_H.a("", (byte) 123, param1);
+          stackIn_1_0 = RevolverItemComponent.field_H.getFileByName("", (byte) 123, param1);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

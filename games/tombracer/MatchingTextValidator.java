@@ -16,7 +16,7 @@ final class MatchingTextValidator extends TextFieldValidator {
     }
 
     final String validationMessageForText(int param0, String param1) {
-        nua var3 = null;
+        ValidationSource var3 = null;
         RuntimeException var3_ref = null;
         String stackIn_7_0 = null;
         String stackIn_9_0 = null;
@@ -29,12 +29,12 @@ final class MatchingTextValidator extends TextFieldValidator {
           if (this.field_k instanceof ValidationProvider) {
             var3 = ((ValidationProvider) ((Object) this.field_k)).getValidationSource((byte) 92);
             if (var3 != null) {
-              if (var3.b(-4666) == LightSource.field_k &&
+              if (var3.getState(-4666) == LightSource.field_k &&
                 !param1.equals(this.field_k.field_o)) {
                 stackIn_7_0 = FleeLocomotor.field_q;
                 return stackIn_7_0;
               }
-              stackIn_9_0 = var3.a(103);
+              stackIn_9_0 = var3.getMessage(103);
               return stackIn_9_0;
             }
           }
@@ -71,7 +71,7 @@ final class MatchingTextValidator extends TextFieldValidator {
     }
 
     final it validateText(byte param0, String param1) {
-        nua var3 = null;
+        ValidationSource var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
         it stackIn_5_0 = null;
@@ -84,7 +84,7 @@ final class MatchingTextValidator extends TextFieldValidator {
           if (this.field_k instanceof ValidationProvider) {
             var3 = ((ValidationProvider) ((Object) this.field_k)).getValidationSource((byte) 89);
             if (var3 != null &&
-              var3.b(param0 ^ -4664) != LightSource.field_k) {
+              var3.getState(param0 ^ -4664) != LightSource.field_k) {
               stackIn_5_0 = fp.field_c;
               return stackIn_5_0;
             }

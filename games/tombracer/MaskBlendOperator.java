@@ -158,7 +158,7 @@ final class MaskBlendOperator extends TextureOperator {
     final static void d(int param0) {
         tga.field_a = baa.field_d.field_i.field_d;
         tga.field_a.b(8192);
-        iga.field_o = IntrusiveDequeCursor.a((byte) 65, tga.field_a);
+        ImageProducerCanvasImageBuffer.field_o = IntrusiveDequeCursor.a((byte) 65, tga.field_a);
         sw.k((byte) 94);
         OpenGlTexture2D.h((byte) 45);
         if (param0 != -25405) {

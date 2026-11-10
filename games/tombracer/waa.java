@@ -40,7 +40,7 @@ final class waa {
             stackIn_18_0 = 6409;
             return stackIn_18_0;
           }
-          if (wo.field_i == param0) {
+          if (VboVertexArray.field_i == param0) {
             stackIn_12_0 = 6410;
             return stackIn_12_0;
           }

@@ -11,7 +11,7 @@ final class MessageOverlay extends MatchOverlay {
     private String field_r;
     private String field_k;
     private int field_l;
-    private ms field_q;
+    private MessagePanel panel;
     private int field_u;
     static int[] field_o;
     private int field_s;
@@ -24,8 +24,8 @@ final class MessageOverlay extends MatchOverlay {
         var3.a(-(var4 / 2) + this.field_s, var2 + (this.field_u - var5 / 2));
         int var6 = 20;
         int var7 = 20;
-        if (null != this.field_q) {
-          var6 = 60 + this.field_q.a(false);
+        if (null != this.panel) {
+          var6 = 60 + this.panel.getHeight(false);
         }
         int var8 = 15;
         int var9 = -(2 * this.field_l) + var4;
@@ -34,8 +34,8 @@ final class MessageOverlay extends MatchOverlay {
           SocketConnector.a(this.field_r.toUpperCase(), 0, eda.field_f, 65793, 20, var10, 1, var2 + (-(var5 / 2) + this.field_u - (-this.field_l - var8)), this.field_l + (this.field_s - var4 / 2), -1, (byte) 60, var9);
           if (this.field_j == null) {
             if (param0 < -13) {
-              if (this.field_q != null) {
-                this.field_q.a(var2 + this.field_u - this.field_q.a(-8660) / 2, 20726, this.field_s + (-(var4 / 2) + this.field_q.a(false) / 2 - 10));
+              if (this.panel != null) {
+                this.panel.draw(var2 + this.field_u - this.panel.getWidth(-8660) / 2, 20726, this.field_s + (-(var4 / 2) + this.panel.getHeight(false) / 2 - 10));
               }
               if (this.field_k != null &&
                 this.field_n.b(20)) {
@@ -49,14 +49,14 @@ final class MessageOverlay extends MatchOverlay {
           if (param0 >= -13) {
             return;
           }
-          if (this.field_q == null) {
+          if (this.panel == null) {
             if (this.field_k != null &&
               this.field_n.b(20)) {
               kn.field_p.a((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), fm.a(false, -1), SpriteState.field_l, 1, fm.a(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
             }
             return;
           }
-          this.field_q.a(var2 + this.field_u - this.field_q.a(-8660) / 2, 20726, this.field_s + (-(var4 / 2) + this.field_q.a(false) / 2 - 10));
+          this.panel.draw(var2 + this.field_u - this.panel.getWidth(-8660) / 2, 20726, this.field_s + (-(var4 / 2) + this.panel.getHeight(false) / 2 - 10));
           if (this.field_k == null) {
             return;
           }
@@ -71,8 +71,8 @@ final class MessageOverlay extends MatchOverlay {
           if (param0 >= -13) {
             return;
           }
-          if (this.field_q != null) {
-            this.field_q.a(var2 + this.field_u - this.field_q.a(-8660) / 2, 20726, this.field_s + (-(var4 / 2) + this.field_q.a(false) / 2 - 10));
+          if (this.panel != null) {
+            this.panel.draw(var2 + this.field_u - this.panel.getWidth(-8660) / 2, 20726, this.field_s + (-(var4 / 2) + this.panel.getHeight(false) / 2 - 10));
             if (this.field_k != null &&
               this.field_n.b(20)) {
               kn.field_p.a((aa) null, var9, 20, 0, this.field_u - (var5 / 2 - this.field_l + (-var8 - var2)), fm.a(false, -1), SpriteState.field_l, 1, fm.a(false, 65793), this.field_k, (byte) -85, var10, 0, id.field_h, this.field_l - var4 / 2 + (this.field_s - 30), 2);
@@ -91,8 +91,8 @@ final class MessageOverlay extends MatchOverlay {
         if (param0 >= -13) {
           return;
         }
-        if (this.field_q != null) {
-          this.field_q.a(var2 + this.field_u - this.field_q.a(-8660) / 2, 20726, this.field_s + (-(var4 / 2) + this.field_q.a(false) / 2 - 10));
+        if (this.panel != null) {
+          this.panel.draw(var2 + this.field_u - this.panel.getWidth(-8660) / 2, 20726, this.field_s + (-(var4 / 2) + this.panel.getHeight(false) / 2 - 10));
           if (this.field_k == null) {
             return;
           }
@@ -122,22 +122,22 @@ final class MessageOverlay extends MatchOverlay {
         }
     }
 
-    MessageOverlay(MatchScreen param0, ms param1) {
+    MessageOverlay(MatchScreen param0, MessagePanel param1) {
         super(param0);
         this.field_n = new dea();
         this.field_l = 20;
         try {
           this.field_s = aaa.a(false) / 2;
           this.field_u = SwitchLinkList.b(0) / 2;
-          this.field_q = param1;
+          this.panel = param1;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "dl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final boolean handleKey(int param0, char param1, byte param2) {
-        if (null != this.field_q) {
-          return this.field_q.a(-18602, param0, param1);
+        if (null != this.panel) {
+          return this.panel.handleKey(-18602, param0, param1);
         }
         int var4 = -101 % ((param2 - 29) / 57);
         return false;
@@ -168,11 +168,11 @@ final class MessageOverlay extends MatchOverlay {
           if (this.field_u < -gg.field_f.height()) {
             super.finish(-10968);
             this.field_n.a((byte) -113, true, false);
-            if (null != this.field_q) {
-              this.field_q.b(-7109);
+            if (null != this.panel) {
+              this.panel.update(-7109);
             }
             if (param0 >= -107) {
-              this.field_q = (ms) null;
+              this.panel = (MessagePanel) null;
             }
             if (!this.field_i.g(0, 4) &&
               PlayerModel.field_b != 1) {
@@ -184,10 +184,10 @@ final class MessageOverlay extends MatchOverlay {
           }
         }
         this.field_n.a((byte) -113, true, false);
-        if (null != this.field_q) {
-          this.field_q.b(-7109);
+        if (null != this.panel) {
+          this.panel.update(-7109);
           if (param0 >= -107) {
-            this.field_q = (ms) null;
+            this.panel = (MessagePanel) null;
           }
         } else {
           if (param0 < -107) {
@@ -199,7 +199,7 @@ final class MessageOverlay extends MatchOverlay {
             this.field_i.a(true, 25, 4);
             return;
           }
-          this.field_q = (ms) null;
+          this.panel = (MessagePanel) null;
         }
         if (this.field_i.g(0, 4)) {
           this.finish(-10968);

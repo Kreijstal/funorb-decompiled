@@ -88,7 +88,7 @@ final class FleeLocomotor extends Locomotor {
               var10 = bua.cos2048(0, var8 >> 2);
               var11 = doa.a(2, this.field_A, var9);
               var12 = doa.a(2, this.field_A, var10);
-              this.trap.a((byte) -110, var11, var12);
+              this.trap.move((byte) -110, var11, var12);
               if (this.field_w) {
                 this.trap.rotateBy(false, -this.trap.getAngle((byte) -80) + var8);
               }
@@ -105,7 +105,7 @@ final class FleeLocomotor extends Locomotor {
           var10Lifetime4 = bua.cos2048(0, var8Lifetime4 >> 2);
           var11Lifetime4 = doa.a(2, this.field_A, var9Lifetime4);
           var12Lifetime4 = doa.a(2, this.field_A, var10Lifetime4);
-          this.trap.a((byte) -110, var11Lifetime4, var12Lifetime4);
+          this.trap.move((byte) -110, var11Lifetime4, var12Lifetime4);
           if (!this.field_w) {
             return;
           }
@@ -141,7 +141,7 @@ final class FleeLocomotor extends Locomotor {
                 var10Lifetime1 = bua.cos2048(0, var8Lifetime1 >> 2);
                 var11Lifetime1 = doa.a(2, this.field_A, var9Lifetime1);
                 var12Lifetime1 = doa.a(2, this.field_A, var10Lifetime1);
-                this.trap.a((byte) -110, var11Lifetime1, var12Lifetime1);
+                this.trap.move((byte) -110, var11Lifetime1, var12Lifetime1);
                 if (this.field_w) {
                   this.trap.rotateBy(false, -this.trap.getAngle((byte) -80) + var8Lifetime1);
                 }
@@ -174,7 +174,7 @@ final class FleeLocomotor extends Locomotor {
             var10Lifetime2 = bua.cos2048(0, var8Lifetime2 >> 2);
             var11Lifetime2 = doa.a(2, this.field_A, var9Lifetime2);
             var12Lifetime2 = doa.a(2, this.field_A, var10Lifetime2);
-            this.trap.a((byte) -110, var11Lifetime2, var12Lifetime2);
+            this.trap.move((byte) -110, var11Lifetime2, var12Lifetime2);
             if (this.field_w) {
               this.trap.rotateBy(false, -this.trap.getAngle((byte) -80) + var8Lifetime2);
             }
@@ -191,7 +191,7 @@ final class FleeLocomotor extends Locomotor {
         var10Lifetime3 = bua.cos2048(0, var8Lifetime3 >> 2);
         var11Lifetime3 = doa.a(2, this.field_A, var9Lifetime3);
         var12Lifetime3 = doa.a(2, this.field_A, var10Lifetime3);
-        this.trap.a((byte) -110, var11Lifetime3, var12Lifetime3);
+        this.trap.move((byte) -110, var11Lifetime3, var12Lifetime3);
         if (!this.field_w) {
           return;
         }

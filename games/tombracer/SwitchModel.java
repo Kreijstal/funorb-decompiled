@@ -756,7 +756,7 @@ final class SwitchModel extends TrapModel {
           var8 = 0;
           var9 = 0;
           if (null != this.field_o) {
-            stackIn_6_0 = (!this.field_o.getSwitchState((byte) -125).a(true)) ? 0 : 1;
+            stackIn_6_0 = (!this.field_o.getSwitchState((byte) -125).isOn(true)) ? 0 : 1;
             var9 = stackIn_6_0;
             if (this.field_o.getSwitchState((byte) -109).b((byte) 96)) {
               var7 = 1;

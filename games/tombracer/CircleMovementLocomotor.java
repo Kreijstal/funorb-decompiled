@@ -43,7 +43,7 @@ final class CircleMovementLocomotor extends Locomotor {
         var7 = 49 % ((param0 + 69) / 42);
         var6 = var2 + (cr.a(true, this.field_q >> 2) >> 8) * (this.field_o >> 8);
         var8 = var3 + (pla.b(102, this.field_q >> 2) >> 8) * (this.field_o >> 8);
-        this.trap.a((byte) -94, -var4 + var6, var8 - var5);
+        this.trap.move((byte) -94, -var4 + var6, var8 - var5);
     }
 
     final static boolean readBitFlag(int param0, BitPacketBuffer param1) {
@@ -250,7 +250,7 @@ final class CircleMovementLocomotor extends Locomotor {
           qha.field_g.clear(8);
           tc.field_d = new SecondaryNodeHashTable(param1);
           qsa.field_a = param9;
-          uq.field_d = 0L;
+          TileRenderable.field_d = 0L;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

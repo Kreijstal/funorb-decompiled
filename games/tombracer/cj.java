@@ -142,7 +142,7 @@ final class cj implements WidgetPainter {
             SoftwareRasterizer.fillCircle(var12.a(var10, (byte) -14) * var7 / var12.b(24857) + var8, var9, this.field_d, this.field_c);
           }
           if (this.field_b != null) {
-            this.field_b.a(var12.field_o, var7 / 2 + var8, var12.field_C + var9 + this.field_b.field_m, this.field_g, this.field_h);
+            this.field_b.drawCenteredText(var12.field_o, var7 / 2 + var8, var12.field_C + var9 + this.field_b.field_m, this.field_g, this.field_h);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -189,7 +189,7 @@ abstract class OpenGlTexture implements GpuTexture {
           if (SingleChildWidget.field_w == this.field_f) {
             return 6409;
           }
-          if (wo.field_i == this.field_f) {
+          if (VboVertexArray.field_i == this.field_f) {
             return 6410;
           }
           if (CachedArchiveSource.field_g == this.field_f) {
@@ -210,7 +210,7 @@ abstract class OpenGlTexture implements GpuTexture {
               if (SingleChildWidget.field_w == this.field_f) {
                 return 34840;
               }
-              if (wo.field_i == this.field_f) {
+              if (VboVertexArray.field_i == this.field_f) {
                 return 34841;
               }
               if (this.field_f == CachedArchiveSource.field_g) {
@@ -230,7 +230,7 @@ abstract class OpenGlTexture implements GpuTexture {
             if (this.field_f == SingleChildWidget.field_w) {
               return 34846;
             }
-            if (wo.field_i == this.field_f) {
+            if (VboVertexArray.field_i == this.field_f) {
               return 34847;
             }
             if (CachedArchiveSource.field_g == this.field_f) {
@@ -244,15 +244,15 @@ abstract class OpenGlTexture implements GpuTexture {
         return -92;
     }
 
-    final static ija a(int param0, int param1, java.awt.Canvas param2, int param3) {
+    final static CanvasImageBuffer a(int param0, int param1, java.awt.Canvas param2, int param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
           RuntimeException var4_ref2 = null;
-          ija var5 = null;
-          iga var5_ref = null;
-          ija stackIn_3_0 = null;
-          iga stackIn_5_0 = null;
+          CanvasImageBuffer var5 = null;
+          ImageProducerCanvasImageBuffer var5_ref = null;
+          CanvasImageBuffer stackIn_3_0 = null;
+          ImageProducerCanvasImageBuffer stackIn_5_0 = null;
           RuntimeException stackIn_8_0 = null;
           StringBuilder stackIn_8_1 = null;
           String stackIn_9_2 = null;
@@ -262,18 +262,18 @@ abstract class OpenGlTexture implements GpuTexture {
               if (param3 != 0) {
                 field_d = (int[]) null;
               }
-              var4 = Class.forName("ec");
-              var5 = (ija) (var4.newInstance());
-              var5.a(param2, param1, 11329, param0);
+              var4 = Class.forName("BufferedImageCanvasImageBuffer");
+              var5 = (CanvasImageBuffer) (var4.newInstance());
+              var5.initialize(param2, param1, 11329, param0);
               stackIn_3_0 = var5;
               return stackIn_3_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              var5_ref = new iga();
-              ((ija) ((Object) var5_ref)).a(param2, param1, 11329, param0);
+              var5_ref = new ImageProducerCanvasImageBuffer();
+              ((CanvasImageBuffer) ((Object) var5_ref)).initialize(param2, param1, 11329, param0);
               stackIn_5_0 = var5_ref;
-              return (ija) ((Object) stackIn_5_0);
+              return (CanvasImageBuffer) ((Object) stackIn_5_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

@@ -326,11 +326,11 @@ final class hk {
           this.field_b = param0;
           this.field_g = this.field_b.field_x;
           if (this.field_g &&
-            !this.field_b.a(una.field_g, -1, wo.field_i)) {
+            !this.field_b.a(una.field_g, -1, VboVertexArray.field_i)) {
             this.field_g = false;
           }
           if (!this.field_g &&
-            !this.field_b.a(false, una.field_g, wo.field_i)) {
+            !this.field_b.a(false, una.field_g, VboVertexArray.field_i)) {
             return;
           }
           TextInputWidget.ensureHardwareWaterNoise(12890);
@@ -338,19 +338,19 @@ final class hk {
             this.field_d = new GpuTexture2D[16];
             for (var2_int = 0; var2_int < 16; var2_int++) {
               var17 = S2CNextRoundPacket.a(LoadLevelCommand.field_o, 32768, 32768 * var2_int, false);
-              this.field_d[var2_int] = this.field_b.a(128, var17, true, wo.field_i, -117, 128);
+              this.field_d[var2_int] = this.field_b.a(128, var17, true, VboVertexArray.field_i, -117, 128);
             }
             this.field_a = new GpuTexture2D[16];
             for (var2_intLifetime1 = 0; 16 > var2_intLifetime1; var2_intLifetime1++) {
               var18 = S2CNextRoundPacket.a(lt.field_f, 32768, var2_intLifetime1 * 32768, false);
-              this.field_a[var2_intLifetime1] = this.field_b.a(128, var18, true, wo.field_i, -77, 128);
+              this.field_a[var2_intLifetime1] = this.field_b.a(128, var18, true, VboVertexArray.field_i, -77, 128);
             }
             return;
           }
           var15 = IntPoint.unwrapByteStorage(LoadLevelCommand.field_o, 13588, false);
-          this.field_c = this.field_b.a(var15, wo.field_i, (byte) -97, 128, 128, 16);
+          this.field_c = this.field_b.a(var15, VboVertexArray.field_i, (byte) -97, 128, 128, 16);
           var16 = IntPoint.unwrapByteStorage(lt.field_f, 13588, false);
-          this.field_b.a(var16, wo.field_i, (byte) -84, 128, 128, 16);
+          this.field_b.a(var16, VboVertexArray.field_i, (byte) -84, 128, 128, 16);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

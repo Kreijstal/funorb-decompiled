@@ -71,11 +71,11 @@ final class ApproachPlayerLocomotor extends Locomotor {
                 var11 = -this.field_v;
               }
               if (var9 >= S2CNextRoundPacket.abs(var11, 60)) {
-                this.trap.a((byte) -120, var10, var11);
+                this.trap.move((byte) -120, var10, var11);
                 return;
               }
               var11 = var5;
-              this.trap.a((byte) -120, var10, var11);
+              this.trap.move((byte) -120, var10, var11);
               return;
             }
             this.field_r = true;
@@ -85,11 +85,11 @@ final class ApproachPlayerLocomotor extends Locomotor {
               var10Lifetime3 = -this.field_v;
             }
             if (var8 >= S2CNextRoundPacket.abs(var10Lifetime3, -103)) {
-              this.trap.a((byte) -120, var10Lifetime3, var11);
+              this.trap.move((byte) -120, var10Lifetime3, var11);
               return;
             }
             var10Lifetime4 = var4;
-            this.trap.a((byte) -120, var10Lifetime4, var11);
+            this.trap.move((byte) -120, var10Lifetime4, var11);
             return;
           }
           if (var5 == 0) {
@@ -100,7 +100,7 @@ final class ApproachPlayerLocomotor extends Locomotor {
           var10Lifetime2 = bua.cos2048(0, var8Lifetime2 >> 2);
           var11Lifetime2 = doa.a(2, this.field_v, var9Lifetime2);
           var12 = doa.a(2, this.field_v, var10Lifetime2);
-          this.trap.a((byte) -113, var11Lifetime2, var12);
+          this.trap.move((byte) -113, var11Lifetime2, var12);
           return;
         }
         if (this.field_u) {
@@ -143,7 +143,7 @@ final class ApproachPlayerLocomotor extends Locomotor {
                 }
               }
             }
-            this.trap.a((byte) -120, var10Lifetime1, var11Lifetime1);
+            this.trap.move((byte) -120, var10Lifetime1, var11Lifetime1);
             return;
           }
           if (!this.field_r &&
@@ -157,7 +157,7 @@ final class ApproachPlayerLocomotor extends Locomotor {
             if (var8Lifetime1 < S2CNextRoundPacket.abs(var10Lifetime1, -103)) {
               var10Lifetime1 = var4;
             }
-            this.trap.a((byte) -120, var10Lifetime1, var11Lifetime1);
+            this.trap.move((byte) -120, var10Lifetime1, var11Lifetime1);
             return;
           }
           this.field_r = false;
@@ -167,18 +167,18 @@ final class ApproachPlayerLocomotor extends Locomotor {
             var11Lifetime1 = -this.field_v;
           }
           if (var9Lifetime1 >= S2CNextRoundPacket.abs(var11Lifetime1, 60)) {
-            this.trap.a((byte) -120, var10Lifetime1, var11Lifetime1);
+            this.trap.move((byte) -120, var10Lifetime1, var11Lifetime1);
             return;
           }
           var11Lifetime1 = var5;
-          this.trap.a((byte) -120, var10Lifetime1, var11Lifetime1);
+          this.trap.move((byte) -120, var10Lifetime1, var11Lifetime1);
         } else {
           var8Lifetime1 = qva.a((byte) -73, var5, var4);
           var9Lifetime1 = MouseInputHandler.sin2048((byte) 107, var8Lifetime1 >> 2);
           var10Lifetime1 = bua.cos2048(0, var8Lifetime1 >> 2);
           var11Lifetime1 = doa.a(2, this.field_v, var9Lifetime1);
           var12Lifetime1 = doa.a(2, this.field_v, var10Lifetime1);
-          this.trap.a((byte) -113, var11Lifetime1, var12Lifetime1);
+          this.trap.move((byte) -113, var11Lifetime1, var12Lifetime1);
         }
         return;
     }

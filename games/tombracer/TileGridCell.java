@@ -9,7 +9,7 @@ final class TileGridCell {
     static String field_a;
     private int column;
     private int centerX;
-    private uq renderable;
+    private TileRenderable renderable;
     private int field_g;
     private TileGrid grid;
     int tileType;
@@ -72,10 +72,10 @@ final class TileGridCell {
         return 0 != (param2 & 16) ? true : false;
     }
 
-    final void setRenderable(int param0, uq param1) {
+    final void setRenderable(int param0, TileRenderable param1) {
         try {
           this.renderable = param1;
-          param1.a(30711, this);
+          param1.setCell(30711, this);
           if (param0 != 3) {
             this.getGrid(-124);
           }
@@ -332,7 +332,7 @@ final class TileGridCell {
         }
     }
 
-    final uq getRenderable(byte param0) {
+    final TileRenderable getRenderable(byte param0) {
         if (param0 >= -79) {
           this.a(true);
         }

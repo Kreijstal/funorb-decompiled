@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qha extends ou {
+final class qha extends CourseGenerator {
     static int field_f;
     static IntrusiveDeque field_g;
 
@@ -18,7 +18,7 @@ final class qha extends ou {
         field_g = null;
     }
 
-    final CourseLayout a(byte param0) {
+    final CourseLayout generateLayout(byte param0) {
         int stackIn_15_0 = 0;
         int stackIn_31_0 = 0;
         CourseLayout var2;
@@ -37,14 +37,14 @@ final class qha extends ou {
         int var9Lifetime1;
         int var10Lifetime1;
         var12 = TombRacer.field_G ? 1 : 0;
-        var2 = new CourseLayout(this.field_a);
+        var2 = new CourseLayout(this.roomCount);
         var3 = aq.a(-5640);
         var4 = RandomAccessFileHandle.a(57);
         var5 = 0;
         var6 = 0;
         var7 = 1;
         if (param0 == 58) {
-          for (var8 = 0; this.field_a > var8; var8++) {
+          for (var8 = 0; this.roomCount > var8; var8++) {
             if (var7 == 0) {
               var9 = MazeComponent.b(param0 - 58, var6).field_f;
             } else {
@@ -52,7 +52,7 @@ final class qha extends ou {
               var14 = ta.d(var10, false);
               var9 = var14.field_f;
             }
-            var2.setRoom(var8, var9, this.b((byte) -56), (byte) -63);
+            var2.setRoom(var8, var9, this.randomFlag((byte) -56), (byte) -63);
             if (var7 != 0) {
               var5++;
               if (var5 >= var3) {
@@ -70,7 +70,7 @@ final class qha extends ou {
           return var2;
         }
         field_f = -112;
-        for (var8Lifetime1 = 0; this.field_a > var8Lifetime1; var8Lifetime1++) {
+        for (var8Lifetime1 = 0; this.roomCount > var8Lifetime1; var8Lifetime1++) {
           if (var7 == 0) {
             var9Lifetime1 = MazeComponent.b(param0 - 58, var6).field_f;
           } else {
@@ -78,7 +78,7 @@ final class qha extends ou {
             var13 = ta.d(var10Lifetime1, false);
             var9Lifetime1 = var13.field_f;
           }
-          var2.setRoom(var8Lifetime1, var9Lifetime1, this.b((byte) -56), (byte) -63);
+          var2.setRoom(var8Lifetime1, var9Lifetime1, this.randomFlag((byte) -56), (byte) -63);
           if (var7 != 0) {
             var5++;
             if (var5 >= var3) {

@@ -151,7 +151,7 @@ final class SnakePitBehaviour extends Behaviour {
         PitSnake[] var2 = var6;
         for (var3 = 0; var6.length > var3; var3++) {
           var4 = var6[var3];
-          var4.c(126);
+          var4.mirror(126);
         }
     }
 

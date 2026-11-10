@@ -192,7 +192,7 @@ final class ResourceArchive {
         for (var3 = param0; this.field_i.field_k.length > var3; var3++) {
           var4 = this.field_i.field_k[var3];
           if (this.field_a[var4] == null) {
-            this.c(param0 + 22214, var4);
+            this.loadPackedGroup(param0 + 22214, var4);
             if (null == this.field_a[var4]) {
               var2 = 0;
             }
@@ -228,7 +228,7 @@ final class ResourceArchive {
           param1 = param1.toLowerCase();
           var5 = (CharSequence) ((Object) param1);
           var4_int = this.field_i.field_e[param2].a(HardwareUnlitEffect.a(var5, -12754), 1);
-          if (this.a(param2, var4_int, (byte) -75)) {
+          if (this.isValidFileSlot(param2, var4_int, (byte) -75)) {
             stackIn_9_0 = var4_int;
             return stackIn_9_0;
           }
@@ -258,7 +258,7 @@ final class ResourceArchive {
         if (param1 != -2) {
           this.a(((boolean[]) (this.field_a[20]))[1]);
         }
-        this.c(22214, param0);
+        this.loadPackedGroup(22214, param0);
         if (this.field_a[param0] != null) {
           return true;
         }
@@ -284,7 +284,7 @@ final class ResourceArchive {
         throw new RuntimeException();
     }
 
-    private final synchronized void c(int param0, int param1) {
+    private final synchronized void loadPackedGroup(int param0, int param1) {
         if (param0 != 22214) {
           return;
         }
@@ -559,7 +559,7 @@ final class ResourceArchive {
         return this.field_i.field_p.length;
     }
 
-    private final synchronized boolean a(int param0, int param1, byte param2) {
+    private final synchronized boolean isValidFileSlot(int param0, int param1, byte param2) {
         int var4;
         if (!this.b(-74)) {
           return false;
@@ -577,7 +577,7 @@ final class ResourceArchive {
         return false;
     }
 
-    final synchronized int[] d(int param0, int param1) {
+    final synchronized int[] fileIds(int param0, int param1) {
         int[] var7 = null;
         int var5 = 0;
         int var6 = TombRacer.field_G ? 1 : 0;
@@ -746,7 +746,7 @@ final class ResourceArchive {
         }
     }
 
-    final synchronized byte[] a(String param0, byte param1, String param2) {
+    final synchronized byte[] getFileByName(String param0, byte param1, String param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -800,7 +800,7 @@ final class ResourceArchive {
     }
 
     final synchronized boolean a(int param0, byte param1, int param2) {
-        if (!this.a(param0, param2, (byte) -97)) {
+        if (!this.isValidFileSlot(param0, param2, (byte) -97)) {
           return false;
         }
         if (null != this.field_l[param0] &&
@@ -810,7 +810,7 @@ final class ResourceArchive {
         if (this.field_a[param0] != null) {
           return true;
         }
-        this.c(22214, param0);
+        this.loadPackedGroup(22214, param0);
         if (this.field_a[param0] != null) {
           return true;
         }
@@ -836,13 +836,13 @@ final class ResourceArchive {
             stackIn_2_0 = (byte[]) null;
             return stackIn_2_0;
           }
-          if (!this.a(param3, param0, (byte) 92)) {
+          if (!this.isValidFileSlot(param3, param0, (byte) 92)) {
             return null;
           }
           var5 = null;
           if ((null == this.field_l[param3] ||
             this.field_l[param3][param0] == null) && !this.unpackGroup(param3, param2, param0, -122)) {
-            this.c(22214, param3);
+            this.loadPackedGroup(22214, param3);
             if (!this.unpackGroup(param3, param2, param0, 43)) {
               stackIn_13_0 = null;
               return (byte[]) (stackIn_13_0);

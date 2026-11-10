@@ -34,7 +34,7 @@ final class ReportAbuseDialog extends jea {
             stackIn_2_0 = -113;
             return stackIn_2_0;
           }
-          var6_int = param4.field_H.a(param4.field_r, -(2 * param4.field_x) + param3, param4.field_P);
+          var6_int = param4.field_H.measureWrappedHeight(param4.field_r, -(2 * param4.field_x) + param3, param4.field_P);
           param4.a(param3, var6_int, -23776, param0, 0);
           param0 = param0 + (var6_int - 0);
           param2.b(-125, param4);

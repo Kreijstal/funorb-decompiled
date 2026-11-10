@@ -84,7 +84,7 @@ final class sr extends WidgetContainer implements ButtonListener {
           this.field_y = param0;
           this.field_C = param2;
           this.field_B = param1;
-          var4_int = null == this.field_C ? 0 : this.field_B.a(this.field_C, 260, this.field_B.field_w);
+          var4_int = null == this.field_C ? 0 : this.field_B.measureWrappedHeight(this.field_C, 260, this.field_B.field_w);
           this.setBounds((byte) -31, 288, 22 + var4_int, 0, 0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

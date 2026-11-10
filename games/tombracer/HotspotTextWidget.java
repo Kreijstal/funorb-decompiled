@@ -372,7 +372,7 @@ class HotspotTextWidget extends FocusableWidget {
             stackIn_2_0 = (oc) null;
             return stackIn_2_0;
           }
-          var5 = param0.a(param2, (byte) 115, param1);
+          var5 = param0.getFileByName(param2, (byte) 115, param1);
           var4 = var5;
           if (var5 != null) {
             stackIn_7_0 = new oc(var5);

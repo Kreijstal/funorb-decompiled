@@ -3,7 +3,7 @@
  */
 final class mha extends FocusableWidget {
     static long field_D;
-    private nua field_z;
+    private ValidationSource field_z;
     private int field_A;
     private static String[] field_B;
     static int field_C;
@@ -15,7 +15,7 @@ final class mha extends FocusableWidget {
         if (!this.field_f) {
           return null;
         }
-        return this.field_z.a(127);
+        return this.field_z.getMessage(127);
     }
 
     public static void releaseStatics(int param0) {
@@ -35,7 +35,7 @@ final class mha extends FocusableWidget {
         }
     }
 
-    mha(nua param0) {
+    mha(ValidationSource param0) {
         try {
           this.field_z = param0;
         } catch (RuntimeException runtimeException) {
@@ -58,7 +58,7 @@ final class mha extends FocusableWidget {
         }
         int var5 = (this.field_m >> 1) + this.field_i + param0;
         int var6 = (this.field_p >> 1) + param1 + this.field_n;
-        it var8 = this.field_z.b(-4666);
+        it var8 = this.field_z.getState(-4666);
         if (BevelOperator.field_p == var8) {
           var15 = CharacterChoiceFactory.field_b[0];
           var9 = var15.field_n << 1;

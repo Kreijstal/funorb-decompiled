@@ -19,7 +19,7 @@ final class ne {
     final static void a(ResourceArchive param0, int param1) {
         VorbisSample var2 = null;
         try {
-          VorbisSample.decodeSetup(param0.a("headers.packvorbis", (byte) 124, ""));
+          VorbisSample.decodeSetup(param0.getFileByName("headers.packvorbis", (byte) 124, ""));
           var2 = VorbisSample.load(param0, "jagex logo2.packvorbis", "");
           var2.decodeAll();
           int var3 = -87 % ((param1 - 12) / 50);

@@ -70,13 +70,13 @@ final class VoronoiNoiseOperator extends TextureOperator {
             var11 = ColouriseOperator.field_m[0];
             var29 = var11;
             var29Lifetime3 = var11;
-            var12 = uq.field_f;
+            var12 = TileRenderable.field_f;
             var10.field_f.addIconItem(var11, 11, var12, false);
             var13 = hka.field_b;
             var14 = ColouriseOperator.field_m[1];
             var29Lifetime4 = var14;
             var29Lifetime5 = var14;
-            var15 = iga.field_k;
+            var15 = ImageProducerCanvasImageBuffer.field_k;
             var13.field_f.addIconItem(var14, 12, var15, false);
             var16 = hka.field_b;
             var17 = ColouriseOperator.field_m[2];

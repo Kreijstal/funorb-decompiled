@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wq implements ms {
+final class wq implements MessagePanel {
     static String field_d;
     static String field_a;
     private cia field_b;
     private boolean field_c;
 
-    public final int a(boolean param0) {
+    public final int getHeight(boolean param0) {
         if (param0) {
           return 32;
         }
@@ -24,7 +24,7 @@ final class wq implements ms {
         field_d = null;
     }
 
-    public final int a(int param0) {
+    public final int getWidth(int param0) {
         if (param0 != -8660) {
           field_a = (String) null;
           return 140;
@@ -32,7 +32,7 @@ final class wq implements ms {
         return 140;
     }
 
-    public final void b(int param0) {
+    public final void update(int param0) {
         int var2;
         int var3;
         int var4;
@@ -53,18 +53,18 @@ final class wq implements ms {
           var2 = 0;
           var4 = 1;
         } else {
-          if (this.a(false) < var2) {
+          if (this.getHeight(false) < var2) {
             var4 = 1;
-            var2 = this.a(false);
+            var2 = this.getHeight(false);
           }
         }
         if (var3 < 0) {
           var4 = 1;
           var3 = 0;
         } else {
-          if (this.a(-8660) < var3) {
+          if (this.getWidth(-8660) < var3) {
             var4 = 1;
-            var3 = this.a(param0 - 1551);
+            var3 = this.getWidth(param0 - 1551);
           }
         }
         if (var4 == 0) {
@@ -73,93 +73,93 @@ final class wq implements ms {
         this.field_b.a(var2, var3, 1823844912);
     }
 
-    public final void a(int param0, int param1, int param2) {
-        LegacyOpenGlSpriteTexture.a(1073807617, tga.field_a, param0, 55, 40, 40, 4, param2 + this.a(false) / 2 - 20);
-        LegacyOpenGlSpriteTexture.a(1073807617, tga.field_a, -40 + (param0 + this.a(-8660)), 101, 40, 40, 4, this.a(false) / 2 + (param2 - 20));
-        LegacyOpenGlSpriteTexture.a(1073807617, tga.field_a, param0 - (-(this.a(-8660) / 2) + 20), 127, 40, 40, 4, param2);
-        LegacyOpenGlSpriteTexture.a(1073807617, tga.field_a, param0 + this.a(-8660) / 2 - 20, 97, 40, 40, 4, -40 + (param2 + this.a(false)));
+    public final void draw(int param0, int param1, int param2) {
+        LegacyOpenGlSpriteTexture.a(1073807617, tga.field_a, param0, 55, 40, 40, 4, param2 + this.getHeight(false) / 2 - 20);
+        LegacyOpenGlSpriteTexture.a(1073807617, tga.field_a, -40 + (param0 + this.getWidth(-8660)), 101, 40, 40, 4, this.getHeight(false) / 2 + (param2 - 20));
+        LegacyOpenGlSpriteTexture.a(1073807617, tga.field_a, param0 - (-(this.getWidth(-8660) / 2) + 20), 127, 40, 40, 4, param2);
+        LegacyOpenGlSpriteTexture.a(1073807617, tga.field_a, param0 + this.getWidth(-8660) / 2 - 20, 97, 40, 40, 4, -40 + (param2 + this.getHeight(false)));
         if (param1 != 20726) {
           return;
         }
         if (this.field_c) {
           if (!this.field_c) {
-            SingleChildWidget.field_v.a(-6710887, param1 ^ -20727, this.a(false) / 2 + param2, -16711423, param0 + 30, TextInputWidget.field_z[ConsoleToken.field_k]);
-            SingleChildWidget.field_v.a(-6710887, -1, this.a(false) / 2 + param2, -16711423, this.a(-8660) + param0 - 10, TextInputWidget.field_z[fp.field_a]);
-            SingleChildWidget.field_v.a(-6710887, -1, param2 + 20, -16711423, 10 + this.a(-8660) / 2 + param0, TextInputWidget.field_z[HardwareOpenGlToolkit.field_hd]);
-            SingleChildWidget.field_v.a(-6710887, param1 - 20727, -20 + (param2 + this.a(false)), -16711423, 10 + (param0 + this.a(param1 ^ -28966) / 2), TextInputWidget.field_z[mf.field_a]);
+            SingleChildWidget.field_v.a(-6710887, param1 ^ -20727, this.getHeight(false) / 2 + param2, -16711423, param0 + 30, TextInputWidget.field_z[ConsoleToken.field_k]);
+            SingleChildWidget.field_v.a(-6710887, -1, this.getHeight(false) / 2 + param2, -16711423, this.getWidth(-8660) + param0 - 10, TextInputWidget.field_z[fp.field_a]);
+            SingleChildWidget.field_v.a(-6710887, -1, param2 + 20, -16711423, 10 + this.getWidth(-8660) / 2 + param0, TextInputWidget.field_z[HardwareOpenGlToolkit.field_hd]);
+            SingleChildWidget.field_v.a(-6710887, param1 - 20727, -20 + (param2 + this.getHeight(false)), -16711423, 10 + (param0 + this.getWidth(param1 ^ -28966) / 2), TextInputWidget.field_z[mf.field_a]);
             this.field_b.b(param2, param0, -82);
           }
           return;
         }
         if (VerticalScrollbar.field_tb[HardwareOpenGlToolkit.field_hd]) {
-          RasterBuffer.a(param2, param1 - 20724, tga.field_a, 4, -20 + (param0 + this.a(-8660) / 2), 40, 1080057857, 2, 40);
-          RasterBuffer.a(param2, 2, tga.field_a, 4, this.a(-8660) / 2 + param0 - 20, 40, 1080057857, 2, 40);
+          RasterBuffer.a(param2, param1 - 20724, tga.field_a, 4, -20 + (param0 + this.getWidth(-8660) / 2), 40, 1080057857, 2, 40);
+          RasterBuffer.a(param2, 2, tga.field_a, 4, this.getWidth(-8660) / 2 + param0 - 20, 40, 1080057857, 2, 40);
           if (VerticalScrollbar.field_tb[ConsoleToken.field_k]) {
-            RasterBuffer.a(this.a(false) / 2 + (param2 - 20), param1 - 20724, tga.field_a, 4, param0, 40, 1080057857, 2, 40);
-            RasterBuffer.a(param2 + this.a(false) / 2 - 20, param1 - 20724, tga.field_a, 4, param0, 40, 1080057857, 2, 40);
+            RasterBuffer.a(this.getHeight(false) / 2 + (param2 - 20), param1 - 20724, tga.field_a, 4, param0, 40, 1080057857, 2, 40);
+            RasterBuffer.a(param2 + this.getHeight(false) / 2 - 20, param1 - 20724, tga.field_a, 4, param0, 40, 1080057857, 2, 40);
           }
           if (VerticalScrollbar.field_tb[mf.field_a]) {
-            RasterBuffer.a(-40 + (param2 + this.a(false)), 2, tga.field_a, 4, this.a(-8660) / 2 + param0 - 20, 40, 1080057857, 2, 40);
-            RasterBuffer.a(-40 + this.a(false) + param2, param1 ^ 20724, tga.field_a, 4, -20 + param0 + this.a(param1 ^ -28966) / 2, 40, 1080057857, 2, 40);
+            RasterBuffer.a(-40 + (param2 + this.getHeight(false)), 2, tga.field_a, 4, this.getWidth(-8660) / 2 + param0 - 20, 40, 1080057857, 2, 40);
+            RasterBuffer.a(-40 + this.getHeight(false) + param2, param1 ^ 20724, tga.field_a, 4, -20 + param0 + this.getWidth(param1 ^ -28966) / 2, 40, 1080057857, 2, 40);
           }
           if (VerticalScrollbar.field_tb[fp.field_a]) {
-            RasterBuffer.a(-20 + (param2 + this.a(false) / 2), 2, tga.field_a, 4, -40 + (param0 + this.a(-8660)), 40, 1080057857, 2, 40);
-            RasterBuffer.a(-20 + this.a(false) / 2 + param2, 2, tga.field_a, 4, this.a(param1 ^ -28966) + param0 - 40, 40, 1080057857, 2, 40);
+            RasterBuffer.a(-20 + (param2 + this.getHeight(false) / 2), 2, tga.field_a, 4, -40 + (param0 + this.getWidth(-8660)), 40, 1080057857, 2, 40);
+            RasterBuffer.a(-20 + this.getHeight(false) / 2 + param2, 2, tga.field_a, 4, this.getWidth(param1 ^ -28966) + param0 - 40, 40, 1080057857, 2, 40);
           }
           if (!this.field_c) {
-            SingleChildWidget.field_v.a(-6710887, param1 ^ -20727, this.a(false) / 2 + param2, -16711423, param0 + 30, TextInputWidget.field_z[ConsoleToken.field_k]);
-            SingleChildWidget.field_v.a(-6710887, -1, this.a(false) / 2 + param2, -16711423, this.a(-8660) + param0 - 10, TextInputWidget.field_z[fp.field_a]);
-            SingleChildWidget.field_v.a(-6710887, -1, param2 + 20, -16711423, 10 + this.a(-8660) / 2 + param0, TextInputWidget.field_z[HardwareOpenGlToolkit.field_hd]);
-            SingleChildWidget.field_v.a(-6710887, param1 - 20727, -20 + (param2 + this.a(false)), -16711423, 10 + (param0 + this.a(param1 ^ -28966) / 2), TextInputWidget.field_z[mf.field_a]);
+            SingleChildWidget.field_v.a(-6710887, param1 ^ -20727, this.getHeight(false) / 2 + param2, -16711423, param0 + 30, TextInputWidget.field_z[ConsoleToken.field_k]);
+            SingleChildWidget.field_v.a(-6710887, -1, this.getHeight(false) / 2 + param2, -16711423, this.getWidth(-8660) + param0 - 10, TextInputWidget.field_z[fp.field_a]);
+            SingleChildWidget.field_v.a(-6710887, -1, param2 + 20, -16711423, 10 + this.getWidth(-8660) / 2 + param0, TextInputWidget.field_z[HardwareOpenGlToolkit.field_hd]);
+            SingleChildWidget.field_v.a(-6710887, param1 - 20727, -20 + (param2 + this.getHeight(false)), -16711423, 10 + (param0 + this.getWidth(param1 ^ -28966) / 2), TextInputWidget.field_z[mf.field_a]);
             this.field_b.b(param2, param0, -82);
           }
           return;
         }
         if (VerticalScrollbar.field_tb[ConsoleToken.field_k]) {
-          RasterBuffer.a(this.a(false) / 2 + (param2 - 20), param1 - 20724, tga.field_a, 4, param0, 40, 1080057857, 2, 40);
-          RasterBuffer.a(param2 + this.a(false) / 2 - 20, param1 - 20724, tga.field_a, 4, param0, 40, 1080057857, 2, 40);
+          RasterBuffer.a(this.getHeight(false) / 2 + (param2 - 20), param1 - 20724, tga.field_a, 4, param0, 40, 1080057857, 2, 40);
+          RasterBuffer.a(param2 + this.getHeight(false) / 2 - 20, param1 - 20724, tga.field_a, 4, param0, 40, 1080057857, 2, 40);
         }
         if (VerticalScrollbar.field_tb[mf.field_a]) {
-          RasterBuffer.a(-40 + (param2 + this.a(false)), 2, tga.field_a, 4, this.a(-8660) / 2 + param0 - 20, 40, 1080057857, 2, 40);
-          RasterBuffer.a(-40 + this.a(false) + param2, param1 ^ 20724, tga.field_a, 4, -20 + param0 + this.a(param1 ^ -28966) / 2, 40, 1080057857, 2, 40);
+          RasterBuffer.a(-40 + (param2 + this.getHeight(false)), 2, tga.field_a, 4, this.getWidth(-8660) / 2 + param0 - 20, 40, 1080057857, 2, 40);
+          RasterBuffer.a(-40 + this.getHeight(false) + param2, param1 ^ 20724, tga.field_a, 4, -20 + param0 + this.getWidth(param1 ^ -28966) / 2, 40, 1080057857, 2, 40);
           if (VerticalScrollbar.field_tb[fp.field_a]) {
-            RasterBuffer.a(-20 + (param2 + this.a(false) / 2), 2, tga.field_a, 4, -40 + (param0 + this.a(-8660)), 40, 1080057857, 2, 40);
-            RasterBuffer.a(-20 + this.a(false) / 2 + param2, 2, tga.field_a, 4, this.a(param1 ^ -28966) + param0 - 40, 40, 1080057857, 2, 40);
+            RasterBuffer.a(-20 + (param2 + this.getHeight(false) / 2), 2, tga.field_a, 4, -40 + (param0 + this.getWidth(-8660)), 40, 1080057857, 2, 40);
+            RasterBuffer.a(-20 + this.getHeight(false) / 2 + param2, 2, tga.field_a, 4, this.getWidth(param1 ^ -28966) + param0 - 40, 40, 1080057857, 2, 40);
             if (!this.field_c) {
-              SingleChildWidget.field_v.a(-6710887, param1 ^ -20727, this.a(false) / 2 + param2, -16711423, param0 + 30, TextInputWidget.field_z[ConsoleToken.field_k]);
-              SingleChildWidget.field_v.a(-6710887, -1, this.a(false) / 2 + param2, -16711423, this.a(-8660) + param0 - 10, TextInputWidget.field_z[fp.field_a]);
-              SingleChildWidget.field_v.a(-6710887, -1, param2 + 20, -16711423, 10 + this.a(-8660) / 2 + param0, TextInputWidget.field_z[HardwareOpenGlToolkit.field_hd]);
-              SingleChildWidget.field_v.a(-6710887, param1 - 20727, -20 + (param2 + this.a(false)), -16711423, 10 + (param0 + this.a(param1 ^ -28966) / 2), TextInputWidget.field_z[mf.field_a]);
+              SingleChildWidget.field_v.a(-6710887, param1 ^ -20727, this.getHeight(false) / 2 + param2, -16711423, param0 + 30, TextInputWidget.field_z[ConsoleToken.field_k]);
+              SingleChildWidget.field_v.a(-6710887, -1, this.getHeight(false) / 2 + param2, -16711423, this.getWidth(-8660) + param0 - 10, TextInputWidget.field_z[fp.field_a]);
+              SingleChildWidget.field_v.a(-6710887, -1, param2 + 20, -16711423, 10 + this.getWidth(-8660) / 2 + param0, TextInputWidget.field_z[HardwareOpenGlToolkit.field_hd]);
+              SingleChildWidget.field_v.a(-6710887, param1 - 20727, -20 + (param2 + this.getHeight(false)), -16711423, 10 + (param0 + this.getWidth(param1 ^ -28966) / 2), TextInputWidget.field_z[mf.field_a]);
               this.field_b.b(param2, param0, -82);
             }
             return;
           }
           if (!this.field_c) {
-            SingleChildWidget.field_v.a(-6710887, param1 ^ -20727, this.a(false) / 2 + param2, -16711423, param0 + 30, TextInputWidget.field_z[ConsoleToken.field_k]);
-            SingleChildWidget.field_v.a(-6710887, -1, this.a(false) / 2 + param2, -16711423, this.a(-8660) + param0 - 10, TextInputWidget.field_z[fp.field_a]);
-            SingleChildWidget.field_v.a(-6710887, -1, param2 + 20, -16711423, 10 + this.a(-8660) / 2 + param0, TextInputWidget.field_z[HardwareOpenGlToolkit.field_hd]);
-            SingleChildWidget.field_v.a(-6710887, param1 - 20727, -20 + (param2 + this.a(false)), -16711423, 10 + (param0 + this.a(param1 ^ -28966) / 2), TextInputWidget.field_z[mf.field_a]);
+            SingleChildWidget.field_v.a(-6710887, param1 ^ -20727, this.getHeight(false) / 2 + param2, -16711423, param0 + 30, TextInputWidget.field_z[ConsoleToken.field_k]);
+            SingleChildWidget.field_v.a(-6710887, -1, this.getHeight(false) / 2 + param2, -16711423, this.getWidth(-8660) + param0 - 10, TextInputWidget.field_z[fp.field_a]);
+            SingleChildWidget.field_v.a(-6710887, -1, param2 + 20, -16711423, 10 + this.getWidth(-8660) / 2 + param0, TextInputWidget.field_z[HardwareOpenGlToolkit.field_hd]);
+            SingleChildWidget.field_v.a(-6710887, param1 - 20727, -20 + (param2 + this.getHeight(false)), -16711423, 10 + (param0 + this.getWidth(param1 ^ -28966) / 2), TextInputWidget.field_z[mf.field_a]);
             this.field_b.b(param2, param0, -82);
           }
           return;
         }
         if (!VerticalScrollbar.field_tb[fp.field_a]) {
           if (!this.field_c) {
-            SingleChildWidget.field_v.a(-6710887, param1 ^ -20727, this.a(false) / 2 + param2, -16711423, param0 + 30, TextInputWidget.field_z[ConsoleToken.field_k]);
-            SingleChildWidget.field_v.a(-6710887, -1, this.a(false) / 2 + param2, -16711423, this.a(-8660) + param0 - 10, TextInputWidget.field_z[fp.field_a]);
-            SingleChildWidget.field_v.a(-6710887, -1, param2 + 20, -16711423, 10 + this.a(-8660) / 2 + param0, TextInputWidget.field_z[HardwareOpenGlToolkit.field_hd]);
-            SingleChildWidget.field_v.a(-6710887, param1 - 20727, -20 + (param2 + this.a(false)), -16711423, 10 + (param0 + this.a(param1 ^ -28966) / 2), TextInputWidget.field_z[mf.field_a]);
+            SingleChildWidget.field_v.a(-6710887, param1 ^ -20727, this.getHeight(false) / 2 + param2, -16711423, param0 + 30, TextInputWidget.field_z[ConsoleToken.field_k]);
+            SingleChildWidget.field_v.a(-6710887, -1, this.getHeight(false) / 2 + param2, -16711423, this.getWidth(-8660) + param0 - 10, TextInputWidget.field_z[fp.field_a]);
+            SingleChildWidget.field_v.a(-6710887, -1, param2 + 20, -16711423, 10 + this.getWidth(-8660) / 2 + param0, TextInputWidget.field_z[HardwareOpenGlToolkit.field_hd]);
+            SingleChildWidget.field_v.a(-6710887, param1 - 20727, -20 + (param2 + this.getHeight(false)), -16711423, 10 + (param0 + this.getWidth(param1 ^ -28966) / 2), TextInputWidget.field_z[mf.field_a]);
             this.field_b.b(param2, param0, -82);
           }
           return;
         }
-        RasterBuffer.a(-20 + (param2 + this.a(false) / 2), 2, tga.field_a, 4, -40 + (param0 + this.a(-8660)), 40, 1080057857, 2, 40);
-        RasterBuffer.a(-20 + this.a(false) / 2 + param2, 2, tga.field_a, 4, this.a(param1 ^ -28966) + param0 - 40, 40, 1080057857, 2, 40);
+        RasterBuffer.a(-20 + (param2 + this.getHeight(false) / 2), 2, tga.field_a, 4, -40 + (param0 + this.getWidth(-8660)), 40, 1080057857, 2, 40);
+        RasterBuffer.a(-20 + this.getHeight(false) / 2 + param2, 2, tga.field_a, 4, this.getWidth(param1 ^ -28966) + param0 - 40, 40, 1080057857, 2, 40);
         if (!this.field_c) {
-          SingleChildWidget.field_v.a(-6710887, param1 ^ -20727, this.a(false) / 2 + param2, -16711423, param0 + 30, TextInputWidget.field_z[ConsoleToken.field_k]);
-          SingleChildWidget.field_v.a(-6710887, -1, this.a(false) / 2 + param2, -16711423, this.a(-8660) + param0 - 10, TextInputWidget.field_z[fp.field_a]);
-          SingleChildWidget.field_v.a(-6710887, -1, param2 + 20, -16711423, 10 + this.a(-8660) / 2 + param0, TextInputWidget.field_z[HardwareOpenGlToolkit.field_hd]);
-          SingleChildWidget.field_v.a(-6710887, param1 - 20727, -20 + (param2 + this.a(false)), -16711423, 10 + (param0 + this.a(param1 ^ -28966) / 2), TextInputWidget.field_z[mf.field_a]);
+          SingleChildWidget.field_v.a(-6710887, param1 ^ -20727, this.getHeight(false) / 2 + param2, -16711423, param0 + 30, TextInputWidget.field_z[ConsoleToken.field_k]);
+          SingleChildWidget.field_v.a(-6710887, -1, this.getHeight(false) / 2 + param2, -16711423, this.getWidth(-8660) + param0 - 10, TextInputWidget.field_z[fp.field_a]);
+          SingleChildWidget.field_v.a(-6710887, -1, param2 + 20, -16711423, 10 + this.getWidth(-8660) / 2 + param0, TextInputWidget.field_z[HardwareOpenGlToolkit.field_hd]);
+          SingleChildWidget.field_v.a(-6710887, param1 - 20727, -20 + (param2 + this.getHeight(false)), -16711423, 10 + (param0 + this.getWidth(param1 ^ -28966) / 2), TextInputWidget.field_z[mf.field_a]);
           this.field_b.b(param2, param0, -82);
         }
     }
@@ -206,7 +206,7 @@ final class wq implements ms {
 
     public wq() {
         this.field_b = new cia();
-        this.field_b.a(this.a(false) / 2, 15 + this.a(-8660) / 2, 1823844912);
+        this.field_b.a(this.getHeight(false) / 2, 15 + this.getWidth(-8660) / 2, 1823844912);
     }
 
     final static boolean b(int param0, int param1, int param2) {
@@ -217,7 +217,7 @@ final class wq implements ms {
         return (param1 & 65536) != 0 ? true : false;
     }
 
-    public final boolean a(int param0, int param1, char param2) {
+    public final boolean handleKey(int param0, int param1, char param2) {
         if (param0 != -18602) {
           return true;
         }

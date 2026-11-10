@@ -147,7 +147,7 @@ final class ObjectPool implements Renderable {
           var6.setPosition(param4, (byte) -78, param1, param2);
           if (this.field_a &&
             param3 != null) {
-            var6.a(param3, param0 + 8163);
+            var6.addToScene(param3, param0 + 8163);
           }
           this.active.addLast((byte) -109, var6);
           stackIn_9_0 = var6;

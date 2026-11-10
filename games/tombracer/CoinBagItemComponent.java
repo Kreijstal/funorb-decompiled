@@ -158,7 +158,7 @@ final class CoinBagItemComponent extends ItemComponent {
               hw.field_a.field_r = PlantModel.field_p.toUpperCase();
               var8 = hw.field_a;
               stackIn_20_0 = hw.field_a;
-              stackIn_21_1 = (param3) && (uq.field_d == 0L);
+              stackIn_21_1 = (param3) && (TileRenderable.field_d == 0L);
               stackIn_20_0.field_X = stackIn_21_1;
               var10 = 2;
               if (null != PlatformModel.field_A) {
@@ -272,7 +272,7 @@ final class CoinBagItemComponent extends ItemComponent {
                       stackIn_74_0 = stackOut_73_0;
                       if (var19 == 0) {
                         if (stackIn_74_0) {
-                          var24 = "<col=A00000>" + kma.field_e[var13] + "</col>";
+                          var24 = "<col=A00000>" + DebouncedValidationSource.field_e[var13] + "</col>";
                           if (var11_ref == null) {
                             var11_ref = var24;
                           } else {
@@ -448,8 +448,8 @@ final class CoinBagItemComponent extends ItemComponent {
               MessageOverlay.field_t.field_r = LegacyOpenGlFlowingWaterEffect.$cfr$intArgs$a$53ce4ab4c593(107, TextLayout.field_d, new String[]{var9_ref_String});
               var8 = MessageOverlay.field_t;
             }
-            if (uq.field_d != 0L) {
-              var9 = (int)(-bva.currentTimeMillis((byte) -107) + uq.field_d);
+            if (TileRenderable.field_d != 0L) {
+              var9 = (int)(-bva.currentTimeMillis((byte) -107) + TileRenderable.field_d);
               var9 = (999 + var9) / 1000;
               if (var9 < 1) {
                 var9 = 1;

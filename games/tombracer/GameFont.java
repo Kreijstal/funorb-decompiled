@@ -31,7 +31,7 @@ abstract class GameFont {
           this.field_a = (FontMetrics) null;
         }
         OpenGlToolkit.field_ab = 0;
-        lra.field_g = param0;
+        ClientMemoryVertexArray.field_g = param0;
         MatchProtocol.field_k = param0;
         moa.field_a = 0;
         if (param1 == -1) {
@@ -69,7 +69,7 @@ abstract class GameFont {
           try {
             if (!param0.startsWith("col=")) {
               if (param0.equals("/col")) {
-                MatchProtocol.field_k = 16777215 & lra.field_g | MatchProtocol.field_k & -16777216;
+                MatchProtocol.field_k = 16777215 & ClientMemoryVertexArray.field_g | MatchProtocol.field_k & -16777216;
               }
             } else {
               var5 = (CharSequence) ((Object) param0.substring(4));
@@ -77,7 +77,7 @@ abstract class GameFont {
             }
             if (!param0.startsWith("argb=")) {
               if (param0.equals("/argb")) {
-                MatchProtocol.field_k = lra.field_g;
+                MatchProtocol.field_k = ClientMemoryVertexArray.field_g;
               } else {
                 if (!param0.startsWith("str=")) {
                   if (param0.equals("str")) {
@@ -104,7 +104,7 @@ abstract class GameFont {
                                 } else {
                                   if (!param0.equals("/shad")) {
                                     if (param0.equals("br")) {
-                                      this.a(lra.field_g, KeyItemComponent.field_G, 122);
+                                      this.a(ClientMemoryVertexArray.field_g, KeyItemComponent.field_G, 122);
                                     }
                                   } else {
                                     GasTrapComponent.field_G = KeyItemComponent.field_G;

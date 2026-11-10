@@ -17,12 +17,12 @@ final class ClampOperator extends TextureOperator {
           return;
         }
         try {
-          var4 = rv.field_c.field_H.a(param0, 272, rv.field_c.field_P);
+          var4 = rv.field_c.field_H.measureWrappedHeight(param0, 272, rv.field_c.field_P);
           var5 = -(var4 / 2) + (-103 + var3 / 2);
-          wo.field_k.a(320, -(2 * var5) + (var3 - 120), -23776, var5, (-320 + var2_int) / 2);
-          wo.field_k.field_w = Player.c(wo.field_k.field_t, 2105376, 3, 11579568, -118, 8421504);
-          rv.field_c.a(-24 + (wo.field_k.field_G - 24), -20 + wo.field_k.field_t - 24, -23776, 16, 24);
-          BrickOperator.field_v.a(80, 24, param1 ^ -26595, -24 + wo.field_k.field_t - 20, 120);
+          VboVertexArray.field_k.a(320, -(2 * var5) + (var3 - 120), -23776, var5, (-320 + var2_int) / 2);
+          VboVertexArray.field_k.field_w = Player.c(VboVertexArray.field_k.field_t, 2105376, 3, 11579568, -118, 8421504);
+          rv.field_c.a(-24 + (VboVertexArray.field_k.field_G - 24), -20 + VboVertexArray.field_k.field_t - 24, -23776, 16, 24);
+          BrickOperator.field_v.a(80, 24, param1 ^ -26595, -24 + VboVertexArray.field_k.field_t - 20, 120);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wja.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

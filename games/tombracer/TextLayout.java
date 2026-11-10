@@ -13,7 +13,7 @@ abstract class TextLayout {
         MandelbrotOperator.field_o = null;
         String var3 = MenuEntry.field_k;
         if (var3 == null) {
-          var3 = kma.defaultPlayerNames[0];
+          var3 = DebouncedValidationSource.defaultPlayerNames[0];
         }
         String[] var4 = new String[1];
         var4[0] = var3;
@@ -145,10 +145,10 @@ abstract class TextLayout {
           var4 = (GameAssetLoader) (dma.field_l);
           var4.a(param2, (byte) 47, param3);
           haa.field_A = new SpriteData();
-          haa.field_A.field_f = param1.a("", (byte) 127, "map.png");
+          haa.field_A.field_f = param1.getFileByName("", (byte) 127, "map.png");
           var4.a(param2 + 5, (byte) 47, param3);
           du.field_c = new SpriteData();
-          du.field_c.field_f = param1.a("", (byte) 117, "wall_bg.jpg");
+          du.field_c.field_f = param1.getFileByName("", (byte) 117, "wall_bg.jpg");
           if (param0 > -100) {
             var5 = (String) null;
             TextLayout.a((byte) -1, (ResourceArchive) null, 32, (String) null);

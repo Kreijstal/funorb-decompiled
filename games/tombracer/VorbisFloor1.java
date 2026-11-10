@@ -15,7 +15,7 @@ final class VorbisFloor1 {
     private int[] field_a;
     private int[] field_h;
 
-    private final void a(int param0, int param1) {
+    private final void sortPoints(int param0, int param1) {
         int var7 = 0;
         int var3;
         int var4;
@@ -44,8 +44,8 @@ final class VorbisFloor1 {
         field_j[var3] = var4;
         field_c[var3] = var5;
         field_b[var3] = var6 != 0;
-        this.a(param0, var3 - 1);
-        this.a(var3 + 1, param1);
+        this.sortPoints(param0, var3 - 1);
+        this.sortPoints(var3 + 1, param1);
     }
 
     public static void releaseStatics() {
@@ -346,7 +346,7 @@ final class VorbisFloor1 {
             }
           }
         }
-        this.a(0, var3 - 1);
+        this.sortPoints(0, var3 - 1);
         var6Lifetime1 = 0;
         var7Lifetime1 = field_c[0] * this.field_i;
         var16 = 1;

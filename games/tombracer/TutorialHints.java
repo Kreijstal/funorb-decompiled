@@ -46,7 +46,7 @@ final class TutorialHints {
             if (!this.field_h &&
               var8.s((byte) -119)) {
               this.field_h = true;
-              this.queueHint(WhirlpoolDigest.field_c, (ms) null, 25, -89);
+              this.queueHint(WhirlpoolDigest.field_c, (MessagePanel) null, 25, -89);
             }
             if (!this.field_i) {
               if (var8.E((byte) 3) == 1) {
@@ -56,13 +56,13 @@ final class TutorialHints {
               if (!this.field_m &&
                 3 == var8.E((byte) 3)) {
                 this.field_m = true;
-                this.queueHint(gca.field_l, (ms) null, 25, -61);
+                this.queueHint(gca.field_l, (MessagePanel) null, 25, -61);
               }
             } else {
               if (!this.field_m &&
                 3 == var8.E((byte) 3)) {
                 this.field_m = true;
-                this.queueHint(gca.field_l, (ms) null, 25, -61);
+                this.queueHint(gca.field_l, (MessagePanel) null, 25, -61);
               }
             }
           }
@@ -73,19 +73,19 @@ final class TutorialHints {
           this.field_e = var5;
           var6 = DateFieldsWidget.field_C[4] - 10;
           if (1 == this.field_e) {
-            this.queueHint(tha.field_A, (ms) null, var6, param0 ^ -9888);
+            this.queueHint(tha.field_A, (MessagePanel) null, var6, param0 ^ -9888);
           }
         }
         this.field_k = var10.hasCollectedTreasure(-107);
         if (!this.field_d &&
           this.field_k) {
           this.field_d = true;
-          this.queueHint(RenderScene.field_b, (ms) null, 5, -88);
+          this.queueHint(RenderScene.field_b, (MessagePanel) null, 5, -88);
         }
         if (!this.field_f &&
           var10.getRoomTreasure(393216, 2) > 0) {
           this.field_f = true;
-          this.queueHint(PlayerContextMenu.field_a, (ms) null, 5, -74);
+          this.queueHint(PlayerContextMenu.field_a, (MessagePanel) null, 5, -74);
         }
         boolean decompiledFrameRemainder0 = true;
         if (this.field_f) {
@@ -97,14 +97,14 @@ final class TutorialHints {
               if ((!(this.field_b)) &&
                 ((var10.getHeldItemKind((byte) 127) == 1))) {
                 this.field_b = true;
-                this.queueHint(S2CPlayerSyncPacket.field_f, (ms) null, 5, -108);
+                this.queueHint(S2CPlayerSyncPacket.field_f, (MessagePanel) null, 5, -108);
               }
               decompiledFrameRemainder0 = false;
             }
             else {
               if (500 < this.field_a) {
                 this.field_j = true;
-                this.queueHint(CharacterChoice.field_a, (ms) null, 25, param0 ^ -9867);
+                this.queueHint(CharacterChoice.field_a, (MessagePanel) null, 25, param0 ^ -9867);
               }
             }
           }
@@ -112,12 +112,12 @@ final class TutorialHints {
         if ((decompiledFrameRemainder0) && (!this.field_b &&
           var10.getHeldItemKind((byte) 127) == 1)) {
           this.field_b = true;
-          this.queueHint(S2CPlayerSyncPacket.field_f, (ms) null, 5, -108);
+          this.queueHint(S2CPlayerSyncPacket.field_f, (MessagePanel) null, 5, -108);
         }
 
     }
 
-    private final void queueHint(String param0, ms param1, int param2, int param3) {
+    private final void queueHint(String param0, MessagePanel param1, int param2, int param3) {
         MessageOverlay var5 = null;
         try {
           if (param3 > -56) {

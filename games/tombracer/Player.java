@@ -220,7 +220,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
                 return;
               }
             }
-            if (this.room.g((byte) 104)) {
+            if (this.room.isPlayerNearTop((byte) 104)) {
               this.a(60, (byte) 2);
             }
             return;
@@ -822,7 +822,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 77) {
-            this.a(89, (RenderScene) null);
+            this.addToScene(89, (RenderScene) null);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1028,7 +1028,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
           if (param1) {
             this.statusEffects.clear(8);
             this.clearWeapon((byte) 89, 10);
-            this.m(15876);
+            this.clearRoomTreasure(15876);
             this.mirrored = false;
           }
           return;
@@ -1241,7 +1241,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
           var2.setSize((byte) -11, 2097152, 2097152);
           var2.setFloating((byte) 17, false);
           var2.setWeight((byte) -3, this.heldItemWeight);
-          var2.a(92, true);
+          var2.markRemoveWhenBehavioursDone(92, true);
           var3 = new MiscItemBehaviour(this.room, true);
           var4 = this.heldItemKind;
           if (0 == var4 &&
@@ -1475,7 +1475,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
 
     private final void k(boolean param0) {
         try {
-          this.m(15876);
+          this.clearRoomTreasure(15876);
           if (param0) {
             this.chosenReward = 21;
           }
@@ -2396,9 +2396,9 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
           }
           if (this.statusFlags[0]) {
             var28Lifetime1 = this.room.getRandom(-96).nextBounded(32, 0) + 256 << 16;
-            this.room.a(-116, this.y, new Effect(4, 32), var28Lifetime1, var28Lifetime1, this.x);
+            this.room.applyAreaEffect(-116, this.y, new Effect(4, 32), var28Lifetime1, var28Lifetime1, this.x);
           }
-          if (this.room.g((byte) -67)) {
+          if (this.room.isPlayerNearTop((byte) -67)) {
             this.a(1, (byte) -25);
           }
           return;
@@ -3189,7 +3189,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         }
     }
 
-    private final void m(int param0) {
+    private final void clearRoomTreasure(int param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         int var3 = 0;
@@ -3876,7 +3876,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         }
     }
 
-    final void a(int param0, RenderScene param1) {
+    final void addToScene(int param0, RenderScene param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         RuntimeException stackIn_8_0 = null;

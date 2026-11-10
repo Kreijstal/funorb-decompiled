@@ -148,7 +148,7 @@ final class S2CPlayerSyncPacket implements GamePacket {
         int var3 = TombRacer.field_G ? 1 : 0;
         IndexedSprite[] var1 = new IndexedSprite[fa.field_b];
         for (var2 = param0; fa.field_b > var2; var2++) {
-          var1[var2] = new IndexedSprite(ika.field_a, OpenGlRenderbuffer.field_s, LoadLevelCommand.field_p[var2], pg.field_C[var2], mq.field_b[var2], iga.field_m[var2], ck.field_c[var2], mga.field_g);
+          var1[var2] = new IndexedSprite(ika.field_a, OpenGlRenderbuffer.field_s, LoadLevelCommand.field_p[var2], pg.field_C[var2], mq.field_b[var2], ImageProducerCanvasImageBuffer.field_m[var2], ck.field_c[var2], mga.field_g);
         }
         MazeGenerator.a((byte) 106);
         return var1;

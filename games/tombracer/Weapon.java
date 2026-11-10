@@ -187,10 +187,10 @@ final class Weapon {
               var24 = var15.nextBounded(8192, 0);
               if (3 == this.field_b) {
                 var25 = -512 + var15.nextBounded(1024, 0);
-                var23.b(7, var25, var24);
+                var23.setSpinAndAngle(7, var25, var24);
               } else {
                 if (this.field_b == 2) {
-                  var23.b(7, 128, var24);
+                  var23.setSpinAndAngle(7, 128, var24);
                 }
               }
               var23.setEffect(-126, new Effect(param2, this.effect));

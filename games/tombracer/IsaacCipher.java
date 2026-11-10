@@ -279,7 +279,7 @@ final class IsaacCipher {
             if (param8 != -1367135824) {
               return;
             }
-            uq.field_a = param5;
+            TileRenderable.field_a = param5;
             ft.field_a = param10;
             if (RaceStandings.field_a.field_x != null) {
               try {

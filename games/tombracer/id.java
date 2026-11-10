@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class id extends ou {
+final class id extends CourseGenerator {
     private int field_f;
     private boolean field_j;
     static String field_k;
@@ -15,7 +15,7 @@ final class id extends ou {
         this.field_j = this.field_f == pl.a((byte) 64) ? true : false;
     }
 
-    final CourseLayout a(byte param0) {
+    final CourseLayout generateLayout(byte param0) {
         int var4 = 0;
         CourseLayout var2;
         int[] var3;
@@ -26,17 +26,17 @@ final class id extends ou {
         int stackIn_7_2 = 0;
         boolean stackIn_8_3;
         var5 = TombRacer.field_G ? 1 : 0;
-        var6 = new CourseLayout(this.field_a);
+        var6 = new CourseLayout(this.roomCount);
         var2 = var6;
         var3 = ht.d(this.field_f, true);
         if (param0 != 58) {
           this.field_j = true;
         }
-        for (var4 = 0; var4 < this.field_a; var4++) {
+        for (var4 = 0; var4 < this.roomCount; var4++) {
           stackIn_7_0 = var6;
           stackIn_7_1 = var4;
           stackIn_7_2 = var3[var4];
-          stackIn_8_3 = (!this.field_j) && (this.b((byte) -67));
+          stackIn_8_3 = (!this.field_j) && (this.randomFlag((byte) -67));
           ((CourseLayout) (Object) stackIn_7_0).setRoom(stackIn_7_1, stackIn_7_2, stackIn_8_3, (byte) -36);
         }
         return var2;

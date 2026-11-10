@@ -196,7 +196,7 @@ final class WaveformOperator extends TextureOperator {
                 var7 = 2048 - var7 << 1;
               }
             } else {
-              var7 = 4096 + ou.field_e[(var7 & 4088) >> 4] >> 1;
+              var7 = 4096 + CourseGenerator.field_e[(var7 & 4088) >> 4] >> 1;
             }
             var15Lifetime1Lifetime1 = var14;
             var15Lifetime1Lifetime1[var6] = var7;

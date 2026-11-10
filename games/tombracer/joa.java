@@ -26,7 +26,7 @@ final class joa {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = 52 % ((param3 - 12) / 56);
-          var5 = param1.a(param2, (byte) 126, param0);
+          var5 = param1.getFileByName(param2, (byte) 126, param0);
           if (var5 != null) {
             stackIn_4_0 = new FontMetrics(var5);
             return stackIn_4_0;

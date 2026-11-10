@@ -18,7 +18,7 @@ final class PitModel extends TrapModel {
     }
 
     final void removeFromScene(RenderScene param0, int param1) {
-        ev var3 = null;
+        RenderListener var3 = null;
         RoomLighting var4 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -36,7 +36,7 @@ final class PitModel extends TrapModel {
             var3 = param0.getListener((byte) 59);
             if (var3 instanceof RoomLighting) {
               var4 = (RoomLighting) (var3);
-              var4.b((byte) -105, this.field_u);
+              var4.removeLightSource((byte) -105, this.field_u);
             }
             this.field_u = null;
           }
@@ -806,7 +806,7 @@ final class PitModel extends TrapModel {
 
     final void addToScene(int param0, RenderScene param1) {
         AnimatedLight var6 = null;
-        ev var4 = null;
+        RenderListener var4 = null;
         RoomLighting var5 = null;
         try {
           if (null == this.field_m) {
@@ -818,11 +818,11 @@ final class PitModel extends TrapModel {
           if (this.field_v == 1) {
             var6 = new AnimatedLight(tga.field_a, 0, 0, 0, 0, 16720418, 200, 8);
             this.field_u = new LightSource(var6);
-            this.field_u.a(-17825792 + this.getRenderZ((byte) -118) + 4194304, (byte) 95, this.getRenderY((byte) 108), this.getRenderX((byte) 84));
+            this.field_u.setPosition(-17825792 + this.getRenderZ((byte) -118) + 4194304, (byte) 95, this.getRenderY((byte) 108), this.getRenderX((byte) 84));
             var4 = param1.getListener((byte) 59);
             if (var4 instanceof RoomLighting) {
               var5 = (RoomLighting) (var4);
-              var5.a((byte) 45, this.field_u);
+              var5.addLightSource((byte) 45, this.field_u);
             }
           }
           super.addToScene(param0 + param0, param1);

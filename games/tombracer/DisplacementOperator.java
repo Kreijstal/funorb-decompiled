@@ -44,7 +44,7 @@ final class DisplacementOperator extends TextureOperator {
             var10 = 255 & 255 * var30[var9] >> 12;
             var11 = this.field_n * var31[var9] >> 12;
             var12 = ColourFillOperator.field_r[var10] * var11 >> 12;
-            var13 = ou.field_e[var10] * var11 >> 12;
+            var13 = CourseGenerator.field_e[var10] * var11 >> 12;
             var14 = (var12 >> 12) + var9 & una.textureWidthMask;
             var15 = hba.textureHeightMask & (var13 >> 12) + param0;
             var32 = this.getInputColourRow(var15, 0, -1);
@@ -86,7 +86,7 @@ final class DisplacementOperator extends TextureOperator {
             var7 = (4094 & var26[var6]) >> 4;
             var8 = this.field_n * var27[var6] >> 12;
             var9 = ColourFillOperator.field_r[var7] * var8 >> 12;
-            var10 = ou.field_e[var7] * var8 >> 12;
+            var10 = CourseGenerator.field_e[var7] * var8 >> 12;
             var11 = var6 + (var9 >> 12) & una.textureWidthMask;
             var12 = hba.textureHeightMask & (var10 >> 12) + param1;
             var28 = this.getInputMonochromeRow(0, -27, var12);

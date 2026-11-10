@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uba extends kma implements TextInputListener, eaa {
+final class uba extends DebouncedValidationSource implements TextInputListener, eaa {
     static int field_f;
     DateInputWidget field_i;
     static String[] loadingQuipsShort;
     static String field_h;
 
-    final String e(int param0) {
+    final String computeMessage(int param0) {
         int var2_int = 0;
         NumberFormatException var2 = null;
         int var3 = 0;
@@ -56,7 +56,7 @@ final class uba extends kma implements TextInputListener, eaa {
 
     public final void onTextChanged(TextInputWidget param0, int param1) {
         try {
-          this.c(-65);
+          this.markEdited(-65);
           if (param1 != -10) {
             TextInputWidget var4 = (TextInputWidget) null;
             this.onTextChanged((TextInputWidget) null, -90);
@@ -66,7 +66,7 @@ final class uba extends kma implements TextInputListener, eaa {
         }
     }
 
-    final it d(int param0) {
+    final it computeState(int param0) {
         int var2_int = 0;
         NumberFormatException var2 = null;
         int var3 = 0;
@@ -106,7 +106,7 @@ final class uba extends kma implements TextInputListener, eaa {
           return;
         }
         try {
-          this.c(-81);
+          this.markEdited(-81);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "uba.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

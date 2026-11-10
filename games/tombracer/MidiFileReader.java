@@ -12,7 +12,7 @@ final class MidiFileReader {
     private int field_g;
     int[] field_a;
 
-    final boolean d() {
+    final boolean isDone() {
         int var2 = 0;
         int var1 = this.field_c.length;
         for (var2 = 0; var2 < var1; var2++) {
@@ -68,7 +68,7 @@ final class MidiFileReader {
         return this.field_c.length;
     }
 
-    final void c(int param0) {
+    final void readDelta(int param0) {
         int var2 = this.field_d.readVarInt((byte) 13);
         this.field_a[param0] = this.field_a[param0] + var2;
     }
@@ -201,7 +201,7 @@ final class MidiFileReader {
           this.field_a[var4] = 0;
           this.field_f[var4] = 0;
           this.field_d.position = this.field_h[var4];
-          this.c(var4);
+          this.readDelta(var4);
           this.field_c[var4] = this.field_d.position;
         }
     }

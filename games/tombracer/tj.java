@@ -9,7 +9,7 @@ final class tj {
     static int field_b;
     byte field_g;
     static int field_a;
-    va field_d;
+    LegacyVertexArray field_d;
 
     final static java.awt.Container b(int param0) {
         if (null != DropdownList.field_x) {
@@ -31,7 +31,7 @@ final class tj {
         field_h = null;
     }
 
-    tj(va param0, int param1, int param2, int param3) {
+    tj(LegacyVertexArray param0, int param1, int param2, int param3) {
         try {
           this.field_g = (byte)param3;
           this.field_e = (short)param1;

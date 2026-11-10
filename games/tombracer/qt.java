@@ -279,10 +279,10 @@ final class qt {
                   if (21 == var2) {
                     var3Lifetime5 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(124);
                     if (var3Lifetime5 == 0) {
-                      uq.field_d = 0L;
+                      TileRenderable.field_d = 0L;
                       return;
                     }
-                    uq.field_d = bva.currentTimeMillis((byte) -107) + (long)var3Lifetime5;
+                    TileRenderable.field_d = bva.currentTimeMillis((byte) -107) + (long)var3Lifetime5;
                     return;
                   }
                   if (var2 == 22) {
@@ -379,7 +379,7 @@ final class qt {
             C2SChooseRewardPacket.field_a = new ht(ColourRowCache.field_b);
             C2SChooseRewardPacket.field_a.setSecondaryKey(false, (long)var3Lifetime1);
             ed.a(32, C2SChooseRewardPacket.field_a, false, var1);
-            uq.field_d = 0L;
+            TileRenderable.field_d = 0L;
           }
           if (var2 != 2 &&
             var2 != 3) {

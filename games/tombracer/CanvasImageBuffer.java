@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ija extends IntrusiveNode {
-    int[] field_g;
+abstract class CanvasImageBuffer extends IntrusiveNode {
+    int[] pixels;
     static String field_i;
-    int field_h;
-    int field_f;
+    int width;
+    int height;
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, java.awt.Graphics param6, int param7);
+    abstract void drawRegion(int param0, int param1, int param2, int param3, int param4, int param5, java.awt.Graphics param6, int param7);
 
     final static void a(boolean param0, byte param1, boolean param2) {
         if (param1 > 79) {
@@ -21,7 +21,7 @@ abstract class ija extends IntrusiveNode {
           }
           return;
         }
-        ija.a(false, (byte) 60, false);
+        CanvasImageBuffer.a(false, (byte) 60, false);
         if (param2) {
           wk.field_m = wk.field_m + 1;
           ComponentTargetList.b((byte) 58);
@@ -39,9 +39,9 @@ abstract class ija extends IntrusiveNode {
         field_i = null;
     }
 
-    abstract void a(java.awt.Canvas param0, int param1, int param2, int param3);
+    abstract void initialize(java.awt.Canvas param0, int param1, int param2, int param3);
 
-    ija() {
+    CanvasImageBuffer() {
     }
 
     static {

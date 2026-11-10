@@ -124,7 +124,7 @@ final class PlayerSimulation {
         if (!param0) {
           return -119;
         }
-        return this.player.getRoom((byte) -88).field_a;
+        return this.player.getRoom((byte) -88).stateHash;
     }
 
     final int getRoomCount(int param0) {
@@ -244,7 +244,7 @@ final class PlayerSimulation {
           }
           this.timeFrozen = this.player.hasStatusFlag((byte) -95, 3);
           this.field_h = false;
-          this.player.getRoom((byte) -64).d(param1, 0);
+          this.player.getRoom((byte) -64).tick(param1, 0);
           if (this.finished) {
             return;
           }
@@ -256,7 +256,7 @@ final class PlayerSimulation {
         }
         this.timeFrozen = this.player.hasStatusFlag((byte) -95, 3);
         this.field_h = false;
-        this.player.getRoom((byte) -64).d(param1, 0);
+        this.player.getRoom((byte) -64).tick(param1, 0);
         if (this.finished) {
           return;
         }

@@ -251,7 +251,7 @@ final class fp {
               var2 = 0;
             }
           }
-          for (var3 = 0; mba.field_g.length > var3; var3++) {
+          for (var3 = 0; DefaultTileRenderable.field_g.length > var3; var3++) {
             var4 = CoinItemComponent.field_H[var3];
             if (var4 >= 0) {
               if (FacePointLocomotor.field_r.field_h == var4) {
@@ -262,7 +262,7 @@ final class fp {
             } else {
               var5 = mn.field_k;
             }
-            var6 = mba.field_g[var3];
+            var6 = DefaultTileRenderable.field_g[var3];
             if (2 == mq.field_a &&
               var2 == 1) {
               if (cia.field_a.length < pm.field_d.length) {

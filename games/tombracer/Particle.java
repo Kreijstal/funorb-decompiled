@@ -183,7 +183,7 @@ final class Particle extends PooledObject implements Renderable {
         return (PooledObject) ((Object) new Particle());
     }
 
-    final void a(RenderScene param0, int param1) {
+    final void addToScene(RenderScene param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -220,7 +220,7 @@ final class Particle extends PooledObject implements Renderable {
         return this.field_t;
     }
 
-    final void a(int param0, int param1, String param2) {
+    final void setText(int param0, int param1, String param2) {
         try {
           this.field_t = param1;
           this.text = param2;
@@ -235,7 +235,7 @@ final class Particle extends PooledObject implements Renderable {
     final int a(int param0) {
         if (param0 != 0) {
           RenderScene var3 = (RenderScene) null;
-          this.a((RenderScene) null, 121);
+          this.addToScene((RenderScene) null, 121);
           return this.field_p;
         }
         return this.field_p;
@@ -360,7 +360,7 @@ final class Particle extends PooledObject implements Renderable {
           return;
         }
         String var6 = (String) null;
-        this.a(-115, -2, (String) null);
+        this.setText(-115, -2, (String) null);
         this.a(param3, 0, param1, 0, param0, 0, (byte) -20);
     }
 
@@ -385,7 +385,7 @@ final class Particle extends PooledObject implements Renderable {
         return this.x;
     }
 
-    final boolean g(int param0) {
+    final boolean hasText(int param0) {
         if (param0 != -847) {
           return true;
         }

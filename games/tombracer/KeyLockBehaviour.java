@@ -16,12 +16,12 @@ final class KeyLockBehaviour extends Behaviour implements SwitchSource {
         }
         if (param0 == 5418) {
           this.field_t = this.r(param0 - 5416);
-          this.field_q.a((byte) -14, this.field_t);
+          this.field_q.setInput((byte) -14, this.field_t);
           return;
         }
         this.b(-64, 64);
         this.field_t = this.r(param0 - 5416);
-        this.field_q.a((byte) -14, this.field_t);
+        this.field_q.setInput((byte) -14, this.field_t);
     }
 
     private final boolean r(int param0) {
@@ -184,7 +184,7 @@ final class KeyLockBehaviour extends Behaviour implements SwitchSource {
 
     final void resolveSwitchLinks(int param0) {
         super.resolveSwitchLinks(param0);
-        this.field_q.a((byte) 48, this.getScope((byte) 109));
+        this.field_q.resolveLinks((byte) 48, this.getScope((byte) 109));
     }
 
     KeyLockBehaviour(Room param0, BitPacketBuffer param1, boolean param2) {
@@ -215,7 +215,7 @@ final class KeyLockBehaviour extends Behaviour implements SwitchSource {
     final void encode(boolean param0, BitPacketBuffer param1) {
         try {
           super.encode(param0, param1);
-          this.field_q.a(this.getScope((byte) 111), (byte) 108, param1);
+          this.field_q.encode(this.getScope((byte) 111), (byte) 108, param1);
           param1.writeBits((byte) -127, this.field_s ? 1 : 0, 1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sm.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

@@ -1263,7 +1263,7 @@ final class gja extends ka {
         int var7 = 0;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
-          var2 = new BitPacketBuffer(param0.a("logo.fo3d", (byte) 126, ""));
+          var2 = new BitPacketBuffer(param0.getFileByName("logo.fo3d", (byte) 126, ""));
           var3 = var2.readUnsignedByte(255);
           var2.beginBitAccess((byte) 119);
           ej.field_d = BrazierComponent.a(var2, (byte) 8);

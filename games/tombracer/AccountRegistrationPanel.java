@@ -359,7 +359,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
     }
 
     private final boolean validateField(byte param0, ValidationProvider param1) {
-        nua var3 = null;
+        ValidationSource var3 = null;
         RuntimeException var3_ref = null;
         it var4 = null;
         RuntimeException stackIn_20_0 = null;
@@ -374,7 +374,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
           if (var3 == null) {
             return true;
           }
-          var4 = var3.b(param0 ^ 4656);
+          var4 = var3.getState(param0 ^ 4656);
           if (var4 == fp.field_c) {
             return false;
           }

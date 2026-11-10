@@ -206,7 +206,7 @@ class RidgedNoise3D extends FixedPointPerlinNoise3D {
           if (!param0) {
             return;
           }
-          if (lra.field_d.field_y != 0) {
+          if (ClientMemoryVertexArray.field_d.field_y != 0) {
             ni.field_c = false;
           }
           if (0 == qpa.field_b.field_y) {

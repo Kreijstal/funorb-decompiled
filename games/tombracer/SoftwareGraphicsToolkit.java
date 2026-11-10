@@ -3,7 +3,7 @@
  */
 final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     private int field_j;
-    private ija field_T;
+    private CanvasImageBuffer field_T;
     private int field_m;
     private int field_O;
     private boolean field_E;
@@ -253,10 +253,10 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     }
 
     private final void b(java.awt.Canvas param0, int param1, int param2) {
-        ija var7 = null;
+        CanvasImageBuffer var7 = null;
         java.awt.Dimension var5 = null;
         float[] array$0 = null;
-        ija var6 = (ija) (this.field_G.get((byte) -112, (long)param0.hashCode()));
+        CanvasImageBuffer var6 = (CanvasImageBuffer) (this.field_G.get((byte) -112, (long)param0.hashCode()));
         if (var6 != null) {
           var6.unlink(30);
           var7 = OpenGlTexture.a(param2, param1, param0, 0);
@@ -267,9 +267,9 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
             this.field_m = var5.width;
             this.field_O = var5.height;
             this.field_T = var7;
-            this.field_r = var7.field_g;
-            this.field_K = var7.field_h;
-            this.field_h = var7.field_f;
+            this.field_r = var7.pixels;
+            this.field_K = var7.width;
+            this.field_h = var7.height;
             if (this.field_K != this.field_y ||
               this.field_h != this.field_s) {
               this.field_y = this.field_K;
@@ -402,7 +402,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         }
         try {
           var3 = this.field_t.getGraphics();
-          this.field_T.a(this.field_O, 0, param0, 108, param1, 0, var3, this.field_m);
+          this.field_T.drawRegion(this.field_O, 0, param0, 108, param1, 0, var3, this.field_m);
         } catch (Exception exception) {
           this.field_t.repaint();
         }
@@ -519,9 +519,9 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
 
     final void d() {
         if (this.field_t != null) {
-          this.field_r = this.field_T.field_g;
-          this.field_K = this.field_T.field_h;
-          this.field_h = this.field_T.field_f;
+          this.field_r = this.field_T.pixels;
+          this.field_K = this.field_T.width;
+          this.field_h = this.field_T.height;
           this.field_n = this.field_H;
           this.field_y = this.field_i;
           this.field_s = this.field_B;
@@ -1267,11 +1267,11 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     }
 
     private final void a(java.awt.Canvas param0, int param1, int param2) {
-        ija var4;
-        var4 = (ija) (this.field_G.get((byte) -104, (long)param0.hashCode()));
+        CanvasImageBuffer var4;
+        var4 = (CanvasImageBuffer) (this.field_G.get((byte) -104, (long)param0.hashCode()));
         if (var4 != null) {
-          if (var4.field_h == param1 &&
-            var4.field_f == param2) {
+          if (var4.width == param1 &&
+            var4.height == param2) {
             return;
           }
           this.b(param0, param1, param2);
@@ -1394,7 +1394,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
           this.field_A = new SoftwareTransform3D();
           this.createContexts(1);
           this.g(0);
-          ija.a(true, (byte) 100, true);
+          CanvasImageBuffer.a(true, (byte) 100, true);
           this.field_E = true;
           this.field_j = (int)bva.currentTimeMillis((byte) -107);
         } catch (Throwable throwable) {
@@ -1586,7 +1586,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
 
     private final void a(java.awt.Canvas param0) {
         float[] array$1 = null;
-        ija var2;
+        CanvasImageBuffer var2;
         java.awt.Dimension var3;
         if (param0 == null) {
           this.field_t = null;
@@ -1600,7 +1600,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
             this.m();
           }
         } else {
-          var2 = (ija) (this.field_G.get((byte) -116, (long)param0.hashCode()));
+          var2 = (CanvasImageBuffer) (this.field_G.get((byte) -116, (long)param0.hashCode()));
           if (var2 != null) {
             this.field_t = param0;
             var3 = param0.getSize();
@@ -1608,9 +1608,9 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
             this.field_O = var3.height;
             this.field_T = var2;
             if (this.field_D == null) {
-              this.field_r = var2.field_g;
-              this.field_K = var2.field_h;
-              this.field_h = var2.field_f;
+              this.field_r = var2.pixels;
+              this.field_K = var2.width;
+              this.field_h = var2.height;
               if (this.field_K != this.field_y ||
                 this.field_h != this.field_s) {
                 this.field_y = this.field_K;

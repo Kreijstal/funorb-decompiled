@@ -30,7 +30,7 @@ final class av {
     final static void a(int param0, int param1, int param2, int param3, String param4, int param5, int param6, int param7, int param8) {
         int var11 = 0;
         int var12 = 0;
-        lra.field_e.field_r = param4;
+        ClientMemoryVertexArray.field_e.field_r = param4;
         if (2 != OpenGlUnderwaterEffect.field_q) {
           qpa.field_b.field_r = ValidationMessageWidget.field_J;
         } else {
@@ -46,11 +46,11 @@ final class av {
         try {
           var10 = var10 + (param7 + param5);
           ComponentMount.field_b.a(ComponentMount.field_b.field_G, param7, -23776, 0, CharacterChoiceFactory.field_g.field_G);
-          lra.field_d.a(lra.field_d.b((byte) 69), param6, param3 - 18449, var10, 5);
+          ClientMemoryVertexArray.field_d.a(ClientMemoryVertexArray.field_d.b((byte) 69), param6, param3 - 18449, var10, 5);
           var11 = qpa.field_b.b((byte) 69);
           qpa.field_b.a(var11, param6, -23776, var10, var9_int - 5 - var11);
           var12 = 5 + (param6 + var10);
-          lra.field_e.a(var9_int, param1, -23776, 0, 0);
+          ClientMemoryVertexArray.field_e.a(var9_int, param1, -23776, 0, 0);
           Projectile.field_r.a(var9_int, var12, -23776, param1, 0);
           Projectile.field_r.field_w = Player.c(Projectile.field_r.field_t, 2105376, 3, 11579568, -112, 8421504);
           var12 = var12 + param1;

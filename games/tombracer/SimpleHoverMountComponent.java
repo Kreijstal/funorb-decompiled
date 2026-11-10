@@ -41,7 +41,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
           stackIn_62_1 = -67;
           stackIn_63_2 = (param0) && (!param2) && (!uv.field_o) && (null == C2SChooseRewardPacket.field_a) && (null == WaveformOperator.field_n);
           ((jea) (Object) stackIn_62_0).c(stackIn_62_1, stackIn_63_2);
-          stackIn_67_0 = wo.field_k;
+          stackIn_67_0 = VboVertexArray.field_k;
           stackIn_67_1 = -127;
           stackIn_68_2 = (param0) && (!param2) && (uv.field_o);
           ((jea) (Object) stackIn_67_0).c(stackIn_67_1, stackIn_68_2);
@@ -55,7 +55,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
           stackIn_14_1 = -67;
           stackIn_15_2 = (param0) && (!param2) && (!uv.field_o) && (null == C2SChooseRewardPacket.field_a) && (null == WaveformOperator.field_n);
           ((jea) (Object) stackIn_14_0).c(stackIn_14_1, stackIn_15_2);
-          stackIn_19_0 = wo.field_k;
+          stackIn_19_0 = VboVertexArray.field_k;
           stackIn_19_1 = -127;
           stackIn_20_2 = (param0) && (!param2) && (uv.field_o);
           ((jea) (Object) stackIn_19_0).c(stackIn_19_1, stackIn_20_2);
@@ -67,7 +67,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
         if (0 != ImageProducerRasterBuffer.field_j.field_y) {
           du.field_g = true;
         }
-        if (0 != uq.field_c.field_y) {
+        if (0 != TileRenderable.field_c.field_y) {
           if (dea.field_c) {
             WallTile.b(param3, -22243);
           } else {

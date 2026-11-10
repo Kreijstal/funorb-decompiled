@@ -139,7 +139,7 @@ final class LineNoiseOperator extends TextureOperator {
             var9 = BufferedSocket.a(LegacyOpenGlTurbulentTextureEffect.textureWidth, var6, 44);
             var10 = BufferedSocket.a(ArchiveNetworkClient.textureHeight, var6, -127);
             var11 = (this.field_o * ColourFillOperator.field_r[var8] >> 12) + var9;
-            var12 = var10 + (ou.field_e[var8] * this.field_o >> 12);
+            var12 = var10 + (CourseGenerator.field_e[var8] * this.field_o >> 12);
             var13 = var12 - var10;
             var14 = -var9 + var11;
             if (var14 != 0 ||

@@ -91,7 +91,7 @@ final class ck {
           SnakePitModel.field_n = param12;
           aca.field_i = param6;
           MirrorMoverLocomotor.field_r = param2;
-          kma.field_e = param4;
+          DebouncedValidationSource.field_e = param4;
           no.field_o = param8;
           eca.field_b = param1;
           efa.field_w = param13;
@@ -108,7 +108,7 @@ final class ck {
           SocketArchiveNetworkClient.field_w[4] = PacketBuffer.field_f;
           SocketArchiveNetworkClient.field_w[1] = RasterBuffer.field_b;
           RasterShape.field_e = new jea(0L, (jea) null);
-          LightSource.field_h = new jea(0L, ooa.field_f, ija.field_i);
+          LightSource.field_h = new jea(0L, ooa.field_f, CanvasImageBuffer.field_i);
           ShaderEffect.field_b = new jea(0L, SecondaryNodeDeque.field_b, MessageOverlay.field_m);
           bsa.field_j = new ScrollPane(0L, new jea(0L, (jea) null), rfa.field_C, DateFieldsWidget.field_F);
           RasterShape.field_e.b(-126, LightSource.field_h);
@@ -132,8 +132,8 @@ final class ck {
           MirrorComponent.field_I = new jea(0L, cs.field_a, MatchState.field_N);
           cq.field_e = new jea(0L, SecondaryNodeDeque.field_b, PathMoverComponent.field_G);
           nsa.field_i = new ScrollPane(0L, new jea(0L, (jea) null), rfa.field_C, DateFieldsWidget.field_F);
-          uq.field_c = new jea(0L, hg.field_g, iw.field_b.toUpperCase());
-          uq.field_c.field_X = UnlockOverlay.field_p;
+          TileRenderable.field_c = new jea(0L, hg.field_g, iw.field_b.toUpperCase());
+          TileRenderable.field_c.field_X = UnlockOverlay.field_p;
           stackIn_8_0 = null;
           stackIn_8_1 = null;
           stackIn_8_2 = 0L;
@@ -161,16 +161,16 @@ final class ck {
           Obstacle.field_s.b(-128, cq.field_e);
           Obstacle.field_s.b(-122, nsa.field_i);
           if (UnlockOverlay.field_p) {
-            OpenGlToolkit.field_fd.b(-124, uq.field_c);
+            OpenGlToolkit.field_fd.b(-124, TileRenderable.field_c);
           }
           OpenGlToolkit.field_fd.b(-124, CharacterChoiceFactory.field_c);
           rv.field_c = new jea(0L, Corpse.field_i);
           rv.field_c.field_bb = 0;
           rv.field_c.field_z = 1;
           BrickOperator.field_v = new jea(0L, OpenGlEnvironmentWaterEffect.field_i, nf.field_j.toUpperCase());
-          wo.field_k = new jea(0L, WallModel.field_r);
-          wo.field_k.b(param11 - 25572, rv.field_c);
-          wo.field_k.b(-122, BrickOperator.field_v);
+          VboVertexArray.field_k = new jea(0L, WallModel.field_r);
+          VboVertexArray.field_k.b(param11 - 25572, rv.field_c);
+          VboVertexArray.field_k.b(-122, BrickOperator.field_v);
           HazardModel.field_t = new jea(0L, rfa.field_C);
           HazardModel.field_t.applyStyle(false, Corpse.field_i);
           HazardModel.field_t.field_bb = 1;
@@ -179,7 +179,7 @@ final class ck {
           lk.field_l = new jea(0L, (jea) null);
           cea.field_a = new jea(0L, Corpse.field_i);
           cea.field_a.field_z = 1;
-          uaa.field_b = new jea(0L, ooa.field_f, ija.field_i);
+          uaa.field_b = new jea(0L, ooa.field_f, CanvasImageBuffer.field_i);
           RopeBridgeComponent.field_F = new jea(0L, SecondaryNodeDeque.field_b, MessageOverlay.field_m);
           tn.field_n = new ScrollPane(0L, new jea(0L, (jea) null), rfa.field_C, DateFieldsWidget.field_F);
           lk.field_l.b(param11 ^ -25371, cea.field_a);
@@ -249,7 +249,7 @@ final class ck {
           }
           scanLoop2: while (true) {
             if (var17_int < param0) {
-              SimpleConditionBehaviour.field_p[var17_int + 4] = new jea(0L, una.field_j, kma.field_e[var17_int]);
+              SimpleConditionBehaviour.field_p[var17_int + 4] = new jea(0L, una.field_j, DebouncedValidationSource.field_e[var17_int]);
               array$2 = new tv[1 + SnakePitBehaviour.bitwiseAnd((int) SnakePitModel.field_n[var17_int], 255)];
               bf.field_b[4 + var17_int] = array$2;
               bf.field_b[var17_int + 4][0] = new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, (Sprite) null, aa.field_b);

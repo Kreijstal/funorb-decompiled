@@ -28,7 +28,7 @@ final class MatchProtocol {
         }
     }
 
-    private final void b(MatchScreen param0, BitPacketBuffer param1, int param2) {
+    private final void handleMatchResultPacket(MatchScreen param0, BitPacketBuffer param1, int param2) {
         S2CMatchResultPacket var4 = null;
         try {
           if (param2 != 93) {
@@ -281,7 +281,7 @@ final class MatchProtocol {
         }
     }
 
-    private final void a(byte param0, MatchScreen param1, BitPacketBuffer param2) {
+    private final void handleRoundDeadlinePacket(byte param0, MatchScreen param1, BitPacketBuffer param2) {
         S2CRoundDeadlinePacket var4 = null;
         MatchScreen var5 = null;
         RuntimeException stackIn_5_0 = null;
@@ -380,7 +380,7 @@ final class MatchProtocol {
             return true;
           }
           if (90 == param3) {
-            this.b((byte) 30, param1, param2);
+            this.handleNextRoundPacket((byte) 30, param1, param2);
             return true;
           }
           if (param3 == 92) {
@@ -388,7 +388,7 @@ final class MatchProtocol {
             return true;
           }
           if (param3 == 91) {
-            this.b(param1, param2, 93);
+            this.handleMatchResultPacket(param1, param2, 93);
             return true;
           }
           if (param3 == 84) {
@@ -396,7 +396,7 @@ final class MatchProtocol {
             return true;
           }
           if (param3 == 93) {
-            this.a((byte) -77, param1, param2);
+            this.handleRoundDeadlinePacket((byte) -77, param1, param2);
             return true;
           }
           if (param0 > 40) {
@@ -451,7 +451,7 @@ final class MatchProtocol {
         }
     }
 
-    private final void b(byte param0, MatchScreen param1, BitPacketBuffer param2) {
+    private final void handleNextRoundPacket(byte param0, MatchScreen param1, BitPacketBuffer param2) {
         S2CNextRoundPacket var4 = null;
         try {
           var4 = new S2CNextRoundPacket();

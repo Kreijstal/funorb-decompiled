@@ -174,7 +174,7 @@ final class gga extends ofa implements ButtonListener {
                 this.field_p = this.field_p + 20;
               }
             } else {
-              if (param1 == uq.field_b) {
+              if (param1 == TileRenderable.field_b) {
                 var3 = WindZoneBehaviour.field_s;
                 this.field_p = this.field_p + 30;
               }

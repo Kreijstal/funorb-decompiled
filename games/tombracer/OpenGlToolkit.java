@@ -129,7 +129,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     float field_tc;
     private float field_ec;
     float field_od;
-    private va field_X;
+    private LegacyVertexArray field_X;
     int field_xc;
     private String field_h;
     private float field_Cb;
@@ -170,7 +170,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     private int field_gc;
     int field_Ic;
     private float field_Qc;
-    private va field_tb;
+    private LegacyVertexArray field_tb;
     private boolean field_Yc;
     private float[] field_Pb;
 
@@ -324,10 +324,10 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final va createVertexBuffer(int param0, byte[] param1, int param2, boolean param3, byte param4) {
+    final LegacyVertexArray createVertexBuffer(int param0, byte[] param1, int param2, boolean param3, byte param4) {
         RuntimeException var6 = null;
-        wo stackIn_5_0 = null;
-        lra stackIn_9_0 = null;
+        VboVertexArray stackIn_5_0 = null;
+        ClientMemoryVertexArray stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -335,14 +335,14 @@ final class OpenGlToolkit extends GraphicsToolkit {
         try {
           if (this.field_Q && (!param3 ||
             this.field_bd)) {
-            stackIn_5_0 = new wo(this, param2, param1, param0, param3);
-            return (va) ((Object) stackIn_5_0);
+            stackIn_5_0 = new VboVertexArray(this, param2, param1, param0, param3);
+            return (LegacyVertexArray) ((Object) stackIn_5_0);
           }
           if (param4 < 40) {
             this.a(89);
           }
-          stackIn_9_0 = new lra(this, param2, param1, param0);
-          return (va) ((Object) stackIn_9_0);
+          stackIn_9_0 = new ClientMemoryVertexArray(this, param2, param1, param0);
+          return (LegacyVertexArray) ((Object) stackIn_9_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
@@ -521,7 +521,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final void a(int param0, va param1) {
+    final void a(int param0, LegacyVertexArray param1) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -530,7 +530,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         try {
           if (this.field_tb != param1) {
             if (this.field_Q) {
-              jaggl.OpenGL.glBindBufferARB(34962, param1.a(true));
+              jaggl.OpenGL.glBindBufferARB(34962, param1.getBufferId(true));
             }
             this.field_tb = param1;
           }
@@ -1330,8 +1330,8 @@ final class OpenGlToolkit extends GraphicsToolkit {
           this.applyLighting((byte) -52);
         }
         if (param0 >= -48) {
-          va var4 = (va) null;
-          this.a(29, (va) null);
+          LegacyVertexArray var4 = (LegacyVertexArray) null;
+          this.a(29, (LegacyVertexArray) null);
         }
     }
 
@@ -1897,7 +1897,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
                 throw new RuntimeException("");
               }
             }
-            ija.a(true, (byte) 99, false);
+            CanvasImageBuffer.a(true, (byte) 99, false);
             this.field_Ob = true;
             this.field_hd = new hsa(this, this.field_c);
             this.initializeDeviceResources((byte) 124);
@@ -2655,12 +2655,12 @@ final class OpenGlToolkit extends GraphicsToolkit {
             jaggl.OpenGL.glDisableClientState(32884);
           } else {
             this.a(91, param4.field_d);
-            jaggl.OpenGL.glVertexPointer((int) param4.field_f, (int) param4.field_e, this.field_tb.a(26653), this.field_tb.b(121) + (long)param4.field_g);
+            jaggl.OpenGL.glVertexPointer((int) param4.field_f, (int) param4.field_e, this.field_tb.getStride(26653), this.field_tb.getPointer(121) + (long)param4.field_g);
             jaggl.OpenGL.glEnableClientState(32884);
           }
           if (param2 != null) {
             this.a(126, param2.field_d);
-            jaggl.OpenGL.glNormalPointer((int) param2.field_e, this.field_tb.a(26653), this.field_tb.b(-82) + (long)param2.field_g);
+            jaggl.OpenGL.glNormalPointer((int) param2.field_e, this.field_tb.getStride(26653), this.field_tb.getPointer(-82) + (long)param2.field_g);
             jaggl.OpenGL.glEnableClientState(32885);
           } else {
             jaggl.OpenGL.glDisableClientState(32885);
@@ -2672,14 +2672,14 @@ final class OpenGlToolkit extends GraphicsToolkit {
             jaggl.OpenGL.glDisableClientState(32886);
           } else {
             this.a(105, param0.field_d);
-            jaggl.OpenGL.glColorPointer((int) param0.field_f, (int) param0.field_e, this.field_tb.a(26653), this.field_tb.b(-115) + (long)param0.field_g);
+            jaggl.OpenGL.glColorPointer((int) param0.field_f, (int) param0.field_e, this.field_tb.getStride(26653), this.field_tb.getPointer(-115) + (long)param0.field_g);
             jaggl.OpenGL.glEnableClientState(32886);
           }
           if (param1 == null) {
             jaggl.OpenGL.glDisableClientState(32888);
           } else {
             this.a(87, param1.field_d);
-            jaggl.OpenGL.glTexCoordPointer((int) param1.field_f, (int) param1.field_e, this.field_tb.a(26653), this.field_tb.b(89) + (long)param1.field_g);
+            jaggl.OpenGL.glTexCoordPointer((int) param1.field_f, (int) param1.field_e, this.field_tb.getStride(26653), this.field_tb.getPointer(89) + (long)param1.field_g);
             jaggl.OpenGL.glEnableClientState(32888);
           }
           return;

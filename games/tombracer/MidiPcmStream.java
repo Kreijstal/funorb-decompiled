@@ -42,7 +42,7 @@ class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final int b(int param0, rta param1) {
+    private final int voicePan(int param0, rta param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
@@ -83,7 +83,7 @@ class MidiPcmStream extends PcmStream {
         return this.field_w.g();
     }
 
-    private final int a(rta param0, int param1) {
+    private final int voiceVolume(rta param0, int param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -207,7 +207,7 @@ class MidiPcmStream extends PcmStream {
         field_K = null;
     }
 
-    private final void d(int param0, int param1) {
+    private final void releasePortamentoVoices(int param0, int param1) {
         rta var3;
         int var4;
         int stackIn_11_0 = 0;
@@ -332,7 +332,7 @@ class MidiPcmStream extends PcmStream {
             if (var3 == 192) {
               var4Lifetime1Lifetime2 = 15 & param0;
               var5Lifetime1Lifetime2 = (32618 & param0) >> 8;
-              this.a(var4Lifetime1Lifetime2, true, this.field_l[var4Lifetime1Lifetime2] + var5Lifetime1Lifetime2);
+              this.changeProgram(var4Lifetime1Lifetime2, true, this.field_l[var4Lifetime1Lifetime2] + var5Lifetime1Lifetime2);
               return;
             }
             if (208 == var3) {
@@ -406,7 +406,7 @@ class MidiPcmStream extends PcmStream {
               break;
             case 65:
               if (var6Lifetime1Lifetime2 < 64) {
-                this.d(-108, var4Lifetime1Lifetime3);
+                this.releasePortamentoVoices(-108, var4Lifetime1Lifetime3);
                 this.field_M[var4Lifetime1Lifetime3] = SnakePitBehaviour.bitwiseAnd(this.field_M[var4Lifetime1Lifetime3], -3);
                 if (var8 != 0) {
                   this.field_M[var4Lifetime1Lifetime3] = WallTile.bitwiseOr(this.field_M[var4Lifetime1Lifetime3], 2);
@@ -500,7 +500,7 @@ class MidiPcmStream extends PcmStream {
         this.field_D[param1] = 8192;
         this.field_m[param1] = 0;
         this.field_z[param1] = 8192;
-        this.d(-50, param1);
+        this.releasePortamentoVoices(-50, param1);
         this.e(28583, param1);
         this.field_M[param1] = 0;
         this.field_J[param1] = 32767;
@@ -585,7 +585,7 @@ class MidiPcmStream extends PcmStream {
         return ((var4 * (param1 & 65280) & 16711680 | -16711936 & var4 * (16711935 & param1)) >>> 8) + param0;
     }
 
-    private final void a(int param0, boolean param1, int param2) {
+    private final void changeProgram(int param0, boolean param1, int param2) {
         int var4 = 0;
         int var5 = 0;
         var5 = TombRacer.field_G ? 1 : 0;
@@ -917,7 +917,7 @@ class MidiPcmStream extends PcmStream {
         try {
           param0.field_B = AudioOutput.field_d / 100;
           if (param0.field_t >= 0 && (null == param0.field_x ||
-            param0.field_x.e())) {
+            param0.field_x.isOutOfRange())) {
             param0.a(5806);
             param0.unlink(39);
             if (param0.field_z > 0 &&
@@ -935,7 +935,7 @@ class MidiPcmStream extends PcmStream {
             }
             param0.field_u = var6_int;
           }
-          param0.field_x.f(this.computeNoteSampleStep(-74, param0));
+          param0.field_x.setStepMagnitude(this.computeNoteSampleStep(-74, param0));
           var7 = param0.field_v;
           param0.field_p = param0.field_p + var7.field_d;
           if (param3 != 6) {
@@ -1028,7 +1028,7 @@ class MidiPcmStream extends PcmStream {
             }
           }
           if (var8 == 0) {
-            param0.field_x.rampVolume(param0.field_B, this.a(param0, 83), this.b(-2421, param0));
+            param0.field_x.rampVolume(param0.field_B, this.voiceVolume(param0, 83), this.voicePan(-2421, param0));
             return false;
           }
           param0.field_x.fadeOut(param0.field_B);
@@ -1203,7 +1203,7 @@ class MidiPcmStream extends PcmStream {
         int discarded$0 = 0;
         this.field_D[param0] = param2;
         if (param1 <= 75) {
-          discarded$0 = this.b(-126, (rta) null);
+          discarded$0 = this.voicePan(-126, (rta) null);
         }
     }
 
@@ -1249,7 +1249,7 @@ class MidiPcmStream extends PcmStream {
                   if (stackIn_7_0 == stackIn_7_1) {
                     this.field_w.e();
                     this.field_w.f(var2);
-                    if (!this.field_w.d() &&
+                    if (!this.field_w.isDone() &&
                       var7 == 0) {
                       break scanLoop2;
                     }
@@ -1270,7 +1270,7 @@ class MidiPcmStream extends PcmStream {
                   if (0 != (var6 & 128)) {
                     this.c(var6, 128);
                   }
-                  this.field_w.c(var2);
+                  this.field_w.readDelta(var2);
                   this.field_w.f(var2);
                   continue;
                 }
@@ -1335,7 +1335,7 @@ class MidiPcmStream extends PcmStream {
               break;
             }
             this.field_w.e(var6);
-            this.field_w.c(var6);
+            this.field_w.readDelta(var6);
             this.field_w.f(var6);
             var6++;
           } while (var7 == 0);
@@ -1364,7 +1364,7 @@ class MidiPcmStream extends PcmStream {
         }
         this.field_O[param0] = param2;
         this.field_l[param0] = SnakePitBehaviour.bitwiseAnd(-128, param2);
-        this.a(param0, true, param2);
+        this.changeProgram(param0, true, param2);
     }
 
     private final void b(int param0, int param1, int param2, int param3) {
@@ -1427,16 +1427,16 @@ class MidiPcmStream extends PcmStream {
         var7.field_A = 0;
         var7.field_f = 0;
         if (0 != this.field_q[param2]) {
-          var7.field_x = PcmSampleStream.a(var6, this.computeNoteSampleStep(-101, var7), 0, this.b(-2421, var7));
+          var7.field_x = PcmSampleStream.create(var6, this.computeNoteSampleStep(-101, var7), 0, this.voicePan(-2421, var7));
           stackIn_16_1 = 95;
           stackIn_16_2 = var7;
           stackIn_17_3 = !(0 <= var10.field_g[param0]);
           this.a((byte) stackIn_16_1, stackIn_16_2, stackIn_17_3);
           if (var9 != 0) {
-            var7.field_x = PcmSampleStream.a(var6, this.computeNoteSampleStep(param1 - 71, var7), this.a(var7, 113), this.b(-2421, var7));
+            var7.field_x = PcmSampleStream.create(var6, this.computeNoteSampleStep(param1 - 71, var7), this.voiceVolume(var7, 113), this.voicePan(-2421, var7));
           }
         } else {
-          var7.field_x = PcmSampleStream.a(var6, this.computeNoteSampleStep(param1 - 71, var7), this.a(var7, 113), this.b(-2421, var7));
+          var7.field_x = PcmSampleStream.create(var6, this.computeNoteSampleStep(param1 - 71, var7), this.voiceVolume(var7, 113), this.voicePan(-2421, var7));
         }
         if (0 > var10.field_g[param0]) {
           var7.field_x.b(-1);
@@ -1485,14 +1485,14 @@ class MidiPcmStream extends PcmStream {
             var4_int = var4_int << 8;
             if (var5 >= var4_int) {
               var5 = -var5 + (var4_int + (var4_int - 1));
-              param1.field_x.a(true);
+              param1.field_x.setReversed(true);
             }
             decompiledSharedTail0 = (TombRacer.field_G);
           }
           if (decompiledSharedTail0) {
             var5 = (int)((long)this.field_q[param1.field_k] * (long)var4_int >> 6);
           }
-          param1.field_x.c(var5);
+          param1.field_x.setPosition(var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

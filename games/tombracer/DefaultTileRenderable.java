@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mba extends uq {
+final class DefaultTileRenderable extends TileRenderable {
     private int field_j;
     static String[] field_g;
     private int field_m;
@@ -14,9 +14,9 @@ final class mba extends uq {
     public final int getRenderY(byte param0) {
         if (param0 < 91) {
           this.getRenderZ((byte) -93);
-          return this.field_e.a(true);
+          return this.cell.a(true);
         }
-        return this.field_e.a(true);
+        return this.cell.a(true);
     }
 
     private final void h(byte param0) {
@@ -59,13 +59,13 @@ final class mba extends uq {
     final void g(byte param0) {
         int var2;
         int var3;
-        uq var4;
+        TileRenderable var4;
         int var5;
         int var2Lifetime1;
         int var2Lifetime2;
         var5 = TombRacer.field_G ? 1 : 0;
         if (0 == this.h(16094)) {
-          this.field_k = this.a(10685).e(true).nextBounded(100, 0);
+          this.field_k = this.getRoom(10685).e(true).nextBounded(100, 0);
           this.field_m = -1;
           this.field_n = 0;
           this.field_i = -1;
@@ -83,11 +83,11 @@ final class mba extends uq {
           this.g(97);
           return;
         }
-        var2Lifetime1 = this.field_e.c((byte) 106) / 2 * 2;
-        var3 = this.field_e.f(116) / 2 * 2;
-        var4 = this.field_e.getGrid(18641).getCell(25, var2Lifetime1, var3).getRenderable((byte) -95);
-        if (var4 instanceof mba) {
-          this.field_k = ((mba) (var4)).field_k;
+        var2Lifetime1 = this.cell.c((byte) 106) / 2 * 2;
+        var3 = this.cell.f(116) / 2 * 2;
+        var4 = this.cell.getGrid(18641).getCell(25, var2Lifetime1, var3).getRenderable((byte) -95);
+        if (var4 instanceof DefaultTileRenderable) {
+          this.field_k = ((DefaultTileRenderable) (var4)).field_k;
         }
         this.field_m = -1;
         this.field_n = 0;
@@ -123,7 +123,7 @@ final class mba extends uq {
         int var2Lifetime1;
         if (param0 != -84) {
           this.field_h = 93;
-          var2 = this.field_e.tileType;
+          var2 = this.cell.tileType;
           if (0 == var2) {
             this.h((byte) 127);
             return;
@@ -134,7 +134,7 @@ final class mba extends uq {
           }
           return;
         }
-        var2Lifetime1 = this.field_e.tileType;
+        var2Lifetime1 = this.cell.tileType;
         if (0 == var2Lifetime1) {
           this.h((byte) 127);
           return;
@@ -154,10 +154,10 @@ final class mba extends uq {
 
     private final int h(int param0) {
         if (param0 == 16094) {
-          return this.field_e.c((byte) 102) % 2 + 2 * (this.field_e.f(-77) % 2);
+          return this.cell.c((byte) 102) % 2 + 2 * (this.cell.f(-77) % 2);
         }
         field_g = (String[]) null;
-        return this.field_e.c((byte) 102) % 2 + 2 * (this.field_e.f(-77) % 2);
+        return this.cell.c((byte) 102) % 2 + 2 * (this.cell.f(-77) % 2);
     }
 
     public final void render(int param0, iq param1) {
@@ -178,9 +178,9 @@ final class mba extends uq {
         TileGridCell var13 = null;
         int var11Lifetime1;
         try {
-          var3_int = this.field_e.c((byte) 83);
-          var4 = this.field_e.f(111);
-          var5 = this.field_e.getGrid(18641).getRowCount(31);
+          var3_int = this.cell.c((byte) 83);
+          var4 = this.cell.f(111);
+          var5 = this.cell.getGrid(18641).getRowCount(31);
           if (param0 < 103) {
             this.getRenderY((byte) 39);
           }
@@ -192,9 +192,9 @@ final class mba extends uq {
           if (var4 >= var7) {
             return;
           }
-          var8 = this.field_e.a((byte) -104);
-          var9 = this.field_e.a(true);
-          if (!this.field_e.b(false)) {
+          var8 = this.cell.a((byte) -104);
+          var9 = this.cell.a(true);
+          if (!this.cell.b(false)) {
             if (-1 != this.field_m) {
               gqa.a(0, -83584144, var9, var8, gca.field_g[this.field_m], 0);
             }
@@ -209,23 +209,23 @@ final class mba extends uq {
           if (var4 == var6 + 1 &&
             0 < var3_int &&
             var3_int % 2 == 1) {
-            var12 = this.field_e.getGrid(18641).getCell(-104, var3_int - 1, var4);
-            if (var12 != null && (!this.field_e.b(false) ||
+            var12 = this.cell.getGrid(18641).getCell(-104, var3_int - 1, var4);
+            if (var12 != null && (!this.cell.b(false) ||
               !var12.b(false))) {
-              var11 = this.field_e.getGrid(18641).getTileSize(-30551) / 2;
+              var11 = this.cell.getGrid(18641).getTileSize(-30551) / 2;
               gqa.a(1024, -83584144, -var11 + var9, var8 - var11, gca.field_g[25], 65536);
             }
           }
           if (-1 + var7 == var4 &&
             var3_int > 0 &&
             1 == var3_int % 2) {
-            var13 = this.field_e.getGrid(18641).getCell(-100, var3_int - 1, var4);
+            var13 = this.cell.getGrid(18641).getCell(-100, var3_int - 1, var4);
             if (var13 != null) {
-              if (this.field_e.b(false) &&
+              if (this.cell.b(false) &&
                 var13.b(false)) {
                 return;
               }
-              var11Lifetime1 = this.field_e.getGrid(18641).getTileSize(-30551) / 2;
+              var11Lifetime1 = this.cell.getGrid(18641).getTileSize(-30551) / 2;
               gqa.a(0, -83584144, var9 - var11Lifetime1, -var11Lifetime1 + var8, gca.field_g[25], 65536);
             }
           }
@@ -267,7 +267,7 @@ final class mba extends uq {
 
     public final int getRenderX(byte param0) {
         int var2 = -111 % ((-23 - param0) / 53);
-        return this.field_e.a((byte) -104);
+        return this.cell.a((byte) -104);
     }
 
     private final void a(byte param0) {
@@ -346,7 +346,7 @@ final class mba extends uq {
         lqa var1 = null;
         lqa var1Lifetime1;
         if (param0 != -22766) {
-          mba.e(85);
+          DefaultTileRenderable.e(85);
           var1 = uv.b(false);
           if (var1 == null) {
             return false;
@@ -410,13 +410,13 @@ final class mba extends uq {
 
     final boolean c(int param0) {
         if (param0 == -2) {
-          return this.field_e.tileType == 1 ? true : false;
+          return this.cell.tileType == 1 ? true : false;
         }
         this.a((byte) -97);
-        return this.field_e.tileType == 1 ? true : false;
+        return this.cell.tileType == 1 ? true : false;
     }
 
-    mba() {
+    DefaultTileRenderable() {
     }
 
     static {

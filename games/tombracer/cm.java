@@ -580,7 +580,7 @@ final class cm implements GamePacket {
                   }
                   for (var24 = 0; var7 > var24; var24++) {
                     if (sda.field_f[var24]) {
-                      var25_refLifetime1 = "</col>" + kma.field_e[var24] + "<col=A00000>";
+                      var25_refLifetime1 = "</col>" + DebouncedValidationSource.field_e[var24] + "<col=A00000>";
                       var22 = var25_refLifetime1;
                       var21 = var22;
                       var22 = var25_refLifetime1;

@@ -157,7 +157,7 @@ final class MatchScreen extends GameScreen implements rqa {
           nta.field_h = nta.field_h + var4;
           var4Lifetime1 = uca.cosmeticRandom.nextBounded(7, 0);
           CommonChooseReward.field_b = CommonChooseReward.field_b + (long)var4Lifetime1;
-          lra.field_f = lra.field_f + (long)var4Lifetime1;
+          ClientMemoryVertexArray.field_f = ClientMemoryVertexArray.field_f + (long)var4Lifetime1;
         }
         if (this.protocol == null) {
           if (3 != this.matchState.field_K) {
@@ -311,7 +311,7 @@ final class MatchScreen extends GameScreen implements rqa {
         }
     }
 
-    MatchScreen(boolean param0, int param1, String[] param2, int param3, boolean param4, int param5, int param6, int param7, int param8, int param9, BitSet[] param10, boolean[] param11, ou param12) {
+    MatchScreen(boolean param0, int param1, String[] param2, int param3, boolean param4, int param5, int param6, int param7, int param8, int param9, BitSet[] param10, boolean[] param11, CourseGenerator param12) {
         super(-1);
         int var15_int = 0;
         int var16 = 0;
@@ -398,7 +398,7 @@ final class MatchScreen extends GameScreen implements rqa {
           PlayerViewport.field_b = 1727002282;
           nta.field_h = -2073743619;
           PlayTrackCommand.field_o = 17825;
-          lra.field_f = 2023746978L;
+          ClientMemoryVertexArray.field_f = 2023746978L;
           nb.field_c = 22238L;
           OpenGlToolkit.field_Z = 22238;
           if (!this.field_D &&
@@ -817,7 +817,7 @@ final class MatchScreen extends GameScreen implements rqa {
         var10 = var6;
         if (~var8Lifetime1 != ~var10) {
           if (0 != uca.cosmeticRandom.nextBounded(2, param1 ^ 5)) {
-            lra.field_f = lra.field_f + nb.field_c * (var8Lifetime1 - var10);
+            ClientMemoryVertexArray.field_f = ClientMemoryVertexArray.field_f + nb.field_c * (var8Lifetime1 - var10);
           } else {
             CommonChooseReward.field_b = CommonChooseReward.field_b - nb.field_c * (-var10 + var8Lifetime1);
           }

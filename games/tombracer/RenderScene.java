@@ -4,7 +4,7 @@
 final class RenderScene {
     static String field_a;
     static int field_e;
-    private ev listener;
+    private RenderListener listener;
     private iq renderTarget;
     static String field_b;
     static MenuScreen[] field_g;
@@ -51,9 +51,9 @@ final class RenderScene {
         return stackIn_8_0;
     }
 
-    final ev getListener(byte param0) {
+    final RenderListener getListener(byte param0) {
         if (param0 != 59) {
-          return (ev) null;
+          return (RenderListener) null;
         }
         return this.listener;
     }
@@ -69,7 +69,7 @@ final class RenderScene {
         }
     }
 
-    final void setListener(int param0, ev param1) {
+    final void setListener(int param0, RenderListener param1) {
         try {
           this.listener = param1;
           if (param0 != -28265) {
@@ -110,7 +110,7 @@ final class RenderScene {
         RenderLayer var4 = null;
         int var5 = TombRacer.field_G ? 1 : 0;
         if (this.listener != null) {
-          this.listener.a(13113);
+          this.listener.onClear(13113);
         }
         RenderLayer[] var6 = this.layers;
         RenderLayer[] var2 = var6;
@@ -131,7 +131,7 @@ final class RenderScene {
         int var6;
         var6 = TombRacer.field_G ? 1 : 0;
         if (null != this.listener) {
-          this.listener.a(this.renderTarget, -15530);
+          this.listener.beforeScene(this.renderTarget, -15530);
         }
         var2 = 0;
         if (param0 != 30057) {
@@ -141,17 +141,17 @@ final class RenderScene {
         for (var4 = 0; var3.length > var4; var4++) {
           var5 = var3[var4];
           if (null != this.listener) {
-            this.listener.a(var2, var5, this.renderTarget, 11180543);
+            this.listener.beforeLayer(var2, var5, this.renderTarget, 11180543);
           }
           var5.removeExpired(this.renderTarget, 1);
           var5.render(false, this.renderTarget);
           if (null != this.listener) {
-            this.listener.a(var5, var2, this.renderTarget, true);
+            this.listener.afterLayer(var5, var2, this.renderTarget, true);
           }
           var2++;
         }
         if (null != this.listener) {
-          this.listener.a(-16188, this.renderTarget);
+          this.listener.afterScene(-16188, this.renderTarget);
         }
     }
 

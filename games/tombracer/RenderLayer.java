@@ -177,7 +177,7 @@ final class RenderLayer {
     }
 
     final void render(boolean param0, iq param1) {
-        ev var3 = null;
+        RenderListener var3 = null;
         RenderableNode var4 = null;
         Renderable var5 = null;
         int var6 = 0;
@@ -198,11 +198,11 @@ final class RenderLayer {
           while (var4 != null) {
             var5 = var4.renderable;
             if (var3 != null) {
-              var3.a(0, var5, param1);
+              var3.beforeRenderable(0, var5, param1);
             }
             var5.render(125, param1);
             if (var3 != null) {
-              var3.a(false, var5, param1);
+              var3.afterRenderable(false, var5, param1);
             }
             var4 = (RenderableNode) (this.nodes.next(124));
           }

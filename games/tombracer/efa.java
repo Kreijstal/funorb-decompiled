@@ -10,7 +10,7 @@ final class efa extends WidgetContainer implements mia, ButtonListener {
     private FocusableWidget field_A;
 
     private final boolean a(int param0, ValidationProvider param1) {
-        nua var3 = null;
+        ValidationSource var3 = null;
         RuntimeException var3_ref = null;
         it var4 = null;
         boolean stackIn_10_0 = false;
@@ -26,7 +26,7 @@ final class efa extends WidgetContainer implements mia, ButtonListener {
           if (var3 == null) {
             return true;
           }
-          var4 = var3.b(-4666);
+          var4 = var3.getState(-4666);
           stackIn_10_0 = (var4 == LightSource.field_k);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

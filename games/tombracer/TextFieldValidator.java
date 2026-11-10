@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class TextFieldValidator extends kma implements TextInputListener {
+abstract class TextFieldValidator extends DebouncedValidationSource implements TextInputListener {
     static int field_h;
     static int field_g;
     private TextInputWidget field_i;
@@ -11,7 +11,7 @@ abstract class TextFieldValidator extends kma implements TextInputListener {
 
     abstract String validationMessageForText(int param0, String param1);
 
-    final String e(int param0) {
+    final String computeMessage(int param0) {
         if (param0 == 1890) {
           return this.validationMessageForText(-1, this.field_i.field_o);
         }
@@ -52,7 +52,7 @@ abstract class TextFieldValidator extends kma implements TextInputListener {
           return;
         }
         try {
-          this.c(-99);
+          this.markEdited(-99);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "kca.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -66,11 +66,11 @@ abstract class TextFieldValidator extends kma implements TextInputListener {
         }
     }
 
-    final it d(int param0) {
+    final it computeState(int param0) {
         if (param0 == -1891) {
           return this.validateText((byte) 14, this.field_i.field_o);
         }
-        this.d(102);
+        this.computeState(102);
         return this.validateText((byte) 14, this.field_i.field_o);
     }
 

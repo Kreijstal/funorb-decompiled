@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class uq implements Renderable {
+abstract class TileRenderable implements Renderable {
     static long field_d;
     static String field_f;
     static int field_a;
-    TileGridCell field_e;
+    TileGridCell cell;
     static nt field_b;
     static jea field_c;
 
-    final void a(int param0, TileGridCell param1) {
+    final void setCell(int param0, TileGridCell param1) {
         try {
-          this.field_e = param1;
+          this.cell = param1;
           if (param0 != 30711) {
-            uq.releaseStatics(-92);
+            TileRenderable.releaseStatics(-92);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "uq.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -27,17 +27,17 @@ abstract class uq implements Renderable {
         field_f = null;
         field_b = null;
         if (param0 <= 53) {
-          uq.releaseStatics(22);
+          TileRenderable.releaseStatics(22);
         }
     }
 
     public abstract void render(int param0, iq param1);
 
-    final Room a(int param0) {
+    final Room getRoom(int param0) {
         if (param0 != 10685) {
           return (Room) null;
         }
-        return this.field_e.getRoom(0);
+        return this.cell.getRoom(0);
     }
 
     abstract void a(boolean param0);

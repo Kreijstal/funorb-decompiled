@@ -55,7 +55,7 @@ final class TimeSwitchBehaviour extends Behaviour implements SwitchSource {
     final void encode(boolean param0, BitPacketBuffer param1) {
         try {
           super.encode(param0, param1);
-          this.field_s.a(this.getScope((byte) 123), (byte) 76, param1);
+          this.field_s.encode(this.getScope((byte) 123), (byte) 76, param1);
           this.field_o.a(15637, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "tl.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -80,7 +80,7 @@ final class TimeSwitchBehaviour extends Behaviour implements SwitchSource {
 
     final void resolveSwitchLinks(int param0) {
         super.resolveSwitchLinks(param0);
-        this.field_s.a((byte) 48, this.getScope((byte) 119));
+        this.field_s.resolveLinks((byte) 48, this.getScope((byte) 119));
     }
 
     final void a(mg param0, byte param1) {
@@ -205,21 +205,21 @@ final class TimeSwitchBehaviour extends Behaviour implements SwitchSource {
           if (this.field_s.f((byte) -56)) {
             this.stop(false);
             this.field_o.d(0);
-            this.field_s.a((byte) -14, this.field_o.c(0));
+            this.field_s.setInput((byte) -14, this.field_o.c(0));
             return;
           }
           this.field_o.d(0);
-          this.field_s.a((byte) -14, this.field_o.c(0));
+          this.field_s.setInput((byte) -14, this.field_o.c(0));
           return;
         }
         if (!this.field_s.f((byte) -56)) {
           this.field_o.d(0);
-          this.field_s.a((byte) -14, this.field_o.c(0));
+          this.field_s.setInput((byte) -14, this.field_o.c(0));
           return;
         }
         this.stop(false);
         this.field_o.d(0);
-        this.field_s.a((byte) -14, this.field_o.c(0));
+        this.field_s.setInput((byte) -14, this.field_o.c(0));
     }
 
     static {

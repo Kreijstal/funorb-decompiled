@@ -30,11 +30,11 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
         return var5.field_c[param2];
     }
 
-    public final nua getValidationSource(byte param0) {
+    public final ValidationSource getValidationSource(byte param0) {
         if (param0 <= 44) {
-          return (nua) null;
+          return (ValidationSource) null;
         }
-        return (nua) ((Object) this.field_w);
+        return (ValidationSource) ((Object) this.field_w);
     }
 
     public static void k(byte param0) {

@@ -136,7 +136,7 @@ final class ProgressBarWidget extends UiWidget {
             param1 = false;
           }
           HazardModel.a(-83, param3, param1);
-          kma.a(param1, 104, param4);
+          DebouncedValidationSource.a(param1, 104, param4);
           param1 = false;
         }
         if (param2 != 107) {

@@ -9,30 +9,30 @@ final class SwitchState implements noa {
     private int field_c;
     private int field_e;
     static String field_o;
-    private boolean field_p;
+    private boolean on;
     static ResourceArchive field_j;
     private int field_f;
     private int field_n;
     private boolean field_g;
-    private SwitchLinkList field_d;
+    private SwitchLinkList links;
     private int field_k;
     static String field_h;
     private int field_b;
 
-    final void a(SwitchableScope param0, byte param1, BitPacketBuffer param2) {
+    final void encode(SwitchableScope param0, byte param1, BitPacketBuffer param2) {
         try {
-          this.field_d.encode(30489, param0, param2);
+          this.links.encode(30489, param0, param2);
           param2.writeBits((byte) -127, this.field_e, 8);
           param2.writeBits((byte) -45, this.field_k, 8);
           param2.writeBits((byte) -125, this.field_i, 8);
           if (param1 <= 65) {
             BitPacketBuffer var5 = (BitPacketBuffer) null;
-            this.a((SwitchableScope) null, (byte) 97, (BitPacketBuffer) null);
+            this.encode((SwitchableScope) null, (byte) 97, (BitPacketBuffer) null);
           }
           param2.writeBits((byte) -126, this.field_l, 8);
           param2.writeBits((byte) -45, this.field_f, 8);
           param2.writeBits((byte) 77, this.field_m ? 1 : 0, 1);
-          param2.writeBits((byte) -127, this.field_p ? 1 : 0, 1);
+          param2.writeBits((byte) -127, this.on ? 1 : 0, 1);
           param2.writeBits((byte) -126, this.field_c, 4);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "jma.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -143,17 +143,17 @@ final class SwitchState implements noa {
         this.field_n = 0;
         this.field_b = this.field_f;
         int var2 = 101 % ((param0 + 2) / 52);
-        if (this.field_p) {
+        if (this.on) {
           this.d((byte) -70);
         }
     }
 
-    final void a(byte param0, SwitchableScope param1) {
+    final void resolveLinks(byte param0, SwitchableScope param1) {
         try {
           if (param0 != 48) {
             field_j = (ResourceArchive) null;
           }
-          this.field_d.resolveTargets(param1, 8);
+          this.links.resolveTargets(param1, 8);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "jma.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -162,9 +162,9 @@ final class SwitchState implements noa {
     final SwitchLinkList getLinks(int param0) {
         if (param0 != 1) {
           this.e((byte) -23);
-          return this.field_d;
+          return this.links;
         }
-        return this.field_d;
+        return this.links;
     }
 
     private final boolean b(boolean param0) {
@@ -202,7 +202,7 @@ final class SwitchState implements noa {
         return true;
     }
 
-    final void a(byte param0, boolean param1) {
+    final void setInput(byte param0, boolean param1) {
         int var3;
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
@@ -269,12 +269,12 @@ final class SwitchState implements noa {
         return;
     }
 
-    final boolean a(boolean param0) {
+    final boolean isOn(boolean param0) {
         if (!param0) {
           this.field_g = true;
-          return this.field_p;
+          return this.on;
         }
-        return this.field_p;
+        return this.on;
     }
 
     final boolean f(byte param0) {
@@ -322,10 +322,10 @@ final class SwitchState implements noa {
           this.field_c = this.field_c - 1;
           if (this.field_c != 0) {
             if (param0 == -70) {
-              if (null == this.field_d) {
+              if (null == this.links) {
                 return;
               }
-              var7 = this.field_d.getTargets(1);
+              var7 = this.links.getTargets(1);
               var10 = var7;
               var3 = var7;
               for (var4 = 0; var10.length > var4; var4++) {
@@ -337,10 +337,10 @@ final class SwitchState implements noa {
               return;
             }
             field_o = (String) null;
-            if (null == this.field_d) {
+            if (null == this.links) {
               return;
             }
-            var7Lifetime3 = this.field_d.getTargets(1);
+            var7Lifetime3 = this.links.getTargets(1);
             var12 = var7Lifetime3;
             var3Lifetime1 = var7Lifetime3;
             for (var4Lifetime3 = 0; var12.length > var4Lifetime3; var4Lifetime3++) {
@@ -354,10 +354,10 @@ final class SwitchState implements noa {
           this.field_g = true;
         }
         if (param0 == -70) {
-          if (null == this.field_d) {
+          if (null == this.links) {
             return;
           }
-          var7Lifetime1 = this.field_d.getTargets(1);
+          var7Lifetime1 = this.links.getTargets(1);
           var16 = var7Lifetime1;
           for (var4Lifetime1 = 0; var16.length > var4Lifetime1; var4Lifetime1++) {
             var17 = var16[var4Lifetime1];
@@ -368,10 +368,10 @@ final class SwitchState implements noa {
           return;
         }
         field_o = (String) null;
-        if (null == this.field_d) {
+        if (null == this.links) {
           return;
         }
-        var7Lifetime2 = this.field_d.getTargets(1);
+        var7Lifetime2 = this.links.getTargets(1);
         var14 = var7Lifetime2;
         for (var4Lifetime2 = 0; var14.length > var4Lifetime2; var4Lifetime2++) {
           var15 = var14[var4Lifetime2];
@@ -425,11 +425,11 @@ final class SwitchState implements noa {
     }
 
     private SwitchState(int param0, Switchable[] param1) {
-        this.field_p = false;
+        this.on = false;
         this.field_m = true;
         try {
-          this.field_d = new SwitchLinkList(param0, 0);
-          this.field_d.setTargets(9, param1);
+          this.links = new SwitchLinkList(param0, 0);
+          this.links.setTargets(9, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "jma.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -456,10 +456,10 @@ final class SwitchState implements noa {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        this.field_p = false;
+        this.on = false;
         this.field_m = true;
         try {
-          this.field_d = new SwitchLinkList(param0, 0, param1.formatVersion, param2);
+          this.links = new SwitchLinkList(param0, 0, param1.formatVersion, param2);
           if (param1.formatVersion > 9) {
             this.field_e = param2.readBits((byte) 44, 8);
             this.field_k = param2.readBits((byte) 44, 8);
@@ -473,7 +473,7 @@ final class SwitchState implements noa {
           stackIn_7_1 = (1 == param2.readBits((byte) 44, 1));
           this.field_m = stackIn_7_1;
           stackIn_10_1 = (param2.readBits((byte) 44, 1) == 1);
-          this.field_p = stackIn_10_1;
+          this.on = stackIn_10_1;
           this.field_c = param2.readBits((byte) 44, 4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -496,13 +496,13 @@ final class SwitchState implements noa {
         }
     }
 
-    final void a(int param0, boolean param1) {
+    final void setOn(int param0, boolean param1) {
         if (param0 == -2) {
-          this.field_p = param1 ? true : false;
+          this.on = param1 ? true : false;
           return;
         }
         boolean discarded$3 = this.b(true);
-        this.field_p = param1 ? true : false;
+        this.on = param1 ? true : false;
     }
 
     static {

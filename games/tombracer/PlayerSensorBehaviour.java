@@ -164,7 +164,7 @@ final class PlayerSensorBehaviour extends Behaviour implements SwitchSource {
 
     final void resolveSwitchLinks(int param0) {
         super.resolveSwitchLinks(param0);
-        this.field_n.a((byte) 48, this.getScope((byte) 127));
+        this.field_n.resolveLinks((byte) 48, this.getScope((byte) 127));
     }
 
     final void tick(int param0) {
@@ -241,7 +241,7 @@ final class PlayerSensorBehaviour extends Behaviour implements SwitchSource {
                 stackIn_26_0 = (!this.e(false)) ? 0 : 1;
                 var2 = stackIn_26_0;
               }
-              this.field_n.a((byte) -14, var2 != 0);
+              this.field_n.setInput((byte) -14, var2 != 0);
               return;
             }
             stackIn_34_0 = (!this.d(false)) ? 0 : 1;
@@ -273,7 +273,7 @@ final class PlayerSensorBehaviour extends Behaviour implements SwitchSource {
                   stackIn_55_0 = (!this.e(false)) ? 0 : 1;
                   var2 = stackIn_55_0;
                 }
-                this.field_n.a((byte) -14, var2 != 0);
+                this.field_n.setInput((byte) -14, var2 != 0);
                 return;
               }
             }
@@ -334,7 +334,7 @@ final class PlayerSensorBehaviour extends Behaviour implements SwitchSource {
                 stackIn_117_0 = (!this.e(false)) ? 0 : 1;
                 var2 = stackIn_117_0;
               }
-              this.field_n.a((byte) -14, var2 != 0);
+              this.field_n.setInput((byte) -14, var2 != 0);
               return;
             }
             stackIn_126_0 = (!this.d(false)) ? 0 : 1;
@@ -395,7 +395,7 @@ final class PlayerSensorBehaviour extends Behaviour implements SwitchSource {
                 stackIn_240_0 = (!this.e(false)) ? 0 : 1;
                 var2 = stackIn_240_0;
               }
-              this.field_n.a((byte) -14, var2 != 0);
+              this.field_n.setInput((byte) -14, var2 != 0);
               return;
             }
             if (this.field_r) {
@@ -418,7 +418,7 @@ final class PlayerSensorBehaviour extends Behaviour implements SwitchSource {
                 stackIn_210_0 = (!this.e(false)) ? 0 : 1;
                 var2 = stackIn_210_0;
               }
-              this.field_n.a((byte) -14, var2 != 0);
+              this.field_n.setInput((byte) -14, var2 != 0);
               return;
             }
             if (var2 != 0 &&
@@ -432,7 +432,7 @@ final class PlayerSensorBehaviour extends Behaviour implements SwitchSource {
                   stackIn_173_0 = (!this.e(false)) ? 0 : 1;
                   var2 = stackIn_173_0;
                 }
-                this.field_n.a((byte) -14, var2 != 0);
+                this.field_n.setInput((byte) -14, var2 != 0);
                 return;
               }
               stackIn_179_0 = (!this.l(8192)) ? 0 : 1;
@@ -445,7 +445,7 @@ final class PlayerSensorBehaviour extends Behaviour implements SwitchSource {
             }
           }
         }
-        this.field_n.a((byte) -14, var2 != 0);
+        this.field_n.setInput((byte) -14, var2 != 0);
     }
 
     public final int getMaxLevel(int param0) {
@@ -469,7 +469,7 @@ final class PlayerSensorBehaviour extends Behaviour implements SwitchSource {
             param1.writeBits((byte) -125, this.field_p >> 16, 10);
           }
           param1.writeBits((byte) -127, this.field_t ? 1 : 0, 1);
-          this.field_n.a(this.getScope((byte) 111), (byte) 85, param1);
+          this.field_n.encode(this.getScope((byte) 111), (byte) 85, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "kj.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

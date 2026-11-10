@@ -245,7 +245,7 @@ public final class TombRacer extends rfa implements ls {
         taa.releaseStatics((byte) 9);
         fw.releaseStatics(0);
         qha.releaseStatics((byte) -122);
-        ou.releaseStatics(113);
+        CourseGenerator.releaseStatics(113);
         rm.releaseStatics(param0 + 12213);
         kla.releaseStatics(param0 ^ 11134);
         id.releaseStatics(param0 ^ -3666);
@@ -551,14 +551,14 @@ public final class TombRacer extends rfa implements ls {
         PushableBlockMazeComponent.releaseStatics(7);
         jl.releaseStatics(param0 ^ -1088533378);
         lk.releaseStatics(false);
-        mba.releaseStatics(-1);
+        DefaultTileRenderable.releaseStatics(-1);
         PooledObject.releaseStatics(72);
         WhirlpoolDigest.releaseStatics(param0 + 3560);
         jk.releaseStatics((byte) 76);
         SoundTone.releaseStatics();
         aa.releaseStatics(true);
         PerlinNoise2D.releaseStatics((byte) -123);
-        uq.releaseStatics(param0 + 3747);
+        TileRenderable.releaseStatics(param0 + 3747);
         wg.releaseStatics(true);
         Behaviour.releaseStatics(18416);
         Locomotor.releaseStatics(param0 + 15738);
@@ -685,7 +685,7 @@ public final class TombRacer extends rfa implements ls {
         bc.a(118);
         esa.releaseStatics((byte) 102);
         TextureOperator.a((byte) -79);
-        ija.releaseStatics((byte) 97);
+        CanvasImageBuffer.releaseStatics((byte) 97);
         bf.releaseStatics(true);
         SoftwareTransform3D.releaseStatics(110);
         tw.releaseStatics(122);
@@ -810,7 +810,7 @@ public final class TombRacer extends rfa implements ls {
         lp.a((byte) 34);
         hna.releaseStatics(121);
         nsa.releaseStatics(false);
-        iga.releaseStatics(param0 ^ -3634);
+        ImageProducerCanvasImageBuffer.releaseStatics(param0 ^ -3634);
         r.releaseStatics(11);
         NativeSceneLight.releaseStatics((byte) -87);
         qfa.releaseStatics(true);
@@ -830,8 +830,8 @@ public final class TombRacer extends rfa implements ls {
         ota.releaseStatics(0);
         nm.releaseStatics((byte) 70);
         o.releaseStatics(param0 ^ -3666);
-        wo.releaseStatics(34962);
-        lra.releaseStatics(18168);
+        VboVertexArray.releaseStatics(34962);
+        ClientMemoryVertexArray.releaseStatics(18168);
         LegacyOpenGlTurbulentTextureEffect.releaseStatics(2);
         LegacyOpenGlRidgedWaterEffect.releaseStatics(125);
         LegacyOpenGlTexture1D.releaseStatics(-12242);
@@ -950,7 +950,7 @@ public final class TombRacer extends rfa implements ls {
         RewardChoiceSlot.releaseStatics((byte) -101);
         gsa.releaseStatics(1);
         it.releaseStatics(-99);
-        kma.releaseStatics((byte) -91);
+        DebouncedValidationSource.releaseStatics((byte) -91);
         dpa.releaseStatics(param0 + 3665);
         oia.releaseStatics(false);
         lca.releaseStatics(-22593);
@@ -994,7 +994,7 @@ public final class TombRacer extends rfa implements ls {
     private final void beginFrame(int param0) {
         int var2 = aaa.a(false);
         int var3 = SwitchLinkList.b(0);
-        if (mba.e(-22766)) {
+        if (DefaultTileRenderable.e(-22766)) {
           tga.field_a.h();
           tga.field_a.a(0.8999999761581421f, 1.0f, 1.0f);
           if (tga.field_a.f()) {
@@ -1377,7 +1377,7 @@ public final class TombRacer extends rfa implements ls {
           }
           param1.endBitAccess((byte) 98);
           MandelbrotOperator.field_o = null;
-          SecondaryNodeDequeIterator.field_a = new MatchScreen(true, var4_intLifetime2, var9, var10, var5_intLifetime1 != 0, var6, -1 + var6, var7Lifetime1, var8Lifetime1, 0, var11, var32, (ou) null);
+          SecondaryNodeDequeIterator.field_a = new MatchScreen(true, var4_intLifetime2, var9, var10, var5_intLifetime1 != 0, var6, -1 + var6, var7Lifetime1, var8Lifetime1, 0, var11, var32, (CourseGenerator) null);
           SecondaryNodeDequeIterator.field_a.a(120, param1);
           SecondaryNodeDequeIterator.field_a.j((byte) -121);
           iqa.field_c.a(-68);
@@ -1418,7 +1418,7 @@ public final class TombRacer extends rfa implements ls {
         try {
           qva qva = null;
           Throwable decompiledCaughtException = null;
-          if (mba.e(-22766) &&
+          if (DefaultTileRenderable.e(-22766) &&
             tga.field_a.f()) {
             tga.field_a.c();
           }

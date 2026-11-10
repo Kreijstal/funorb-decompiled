@@ -79,7 +79,7 @@ final class TrackPlayerLocomotor extends Locomotor {
             }
           }
         }
-        this.trap.a((byte) -42, var6, var7);
+        this.trap.move((byte) -42, var6, var7);
         return;
     }
 

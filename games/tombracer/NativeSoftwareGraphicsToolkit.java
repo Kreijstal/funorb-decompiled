@@ -40,7 +40,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
           }
           ho.b(false);
           this.MA(this.field_c, 0, 0);
-          ija.a(true, (byte) 98, false);
+          CanvasImageBuffer.a(true, (byte) 98, false);
           this.field_h = true;
           this.field_i = (Transform3D) ((Object) new NativeTransform3D());
           this.a(new NativeTransform3D());

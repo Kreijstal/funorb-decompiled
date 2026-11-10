@@ -51,11 +51,11 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
     final void resolveSwitchLinks(int param0) {
         super.resolveSwitchLinks(param0 + 0);
         if (param0 == -2) {
-          this.field_C.a((byte) 48, this.getScope((byte) 111));
+          this.field_C.resolveLinks((byte) 48, this.getScope((byte) 111));
           return;
         }
         this.field_C = (SwitchState) null;
-        this.field_C.a((byte) 48, this.getScope((byte) 111));
+        this.field_C.resolveLinks((byte) 48, this.getScope((byte) 111));
     }
 
     public final SwitchState getSwitchState(byte param0) {
@@ -219,7 +219,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
             stackIn_58_1 = -978;
             stackIn_59_2 = (!this.field_r) ? 65280 : 16720384;
             ((mma) (Object) stackIn_58_0).a(stackIn_58_1, stackIn_59_2);
-            this.field_C.a((byte) -14, this.field_r);
+            this.field_C.setInput((byte) -14, this.field_r);
             return;
           }
           stackIn_61_0 = 0;
@@ -234,7 +234,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
             stackIn_89_1 = -978;
             stackIn_90_2 = (!this.field_r) ? 65280 : 16720384;
             ((mma) (Object) stackIn_89_0).a(stackIn_89_1, stackIn_90_2);
-            this.field_C.a((byte) -14, this.field_r);
+            this.field_C.setInput((byte) -14, this.field_r);
             return;
           }
           var8Lifetime1 = this.field_u;
@@ -249,7 +249,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
                 stackIn_97_2 = 16720384;
               }
               ((mma) (Object) stackIn_96_0).a(stackIn_96_1, stackIn_97_2);
-              this.field_C.a((byte) -14, this.field_r);
+              this.field_C.setInput((byte) -14, this.field_r);
               return;
             }
             if (var8Lifetime1.blocked) {
@@ -273,7 +273,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
             stackIn_103_2 = 16720384;
           }
           ((mma) (Object) stackIn_102_0).a(stackIn_102_1, stackIn_103_2);
-          this.field_C.a((byte) -14, this.field_r);
+          this.field_C.setInput((byte) -14, this.field_r);
           return;
         }
         this.field_u.field_j = 8;
@@ -282,7 +282,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
           stackIn_84_1 = -978;
           stackIn_85_2 = (!this.field_r) ? 65280 : 16720384;
           ((mma) (Object) stackIn_84_0).a(stackIn_84_1, stackIn_85_2);
-          this.field_C.a((byte) -14, this.field_r);
+          this.field_C.setInput((byte) -14, this.field_r);
           return;
         }
         var8Lifetime2 = this.field_u;
@@ -297,7 +297,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
               stackIn_69_2 = 16720384;
             }
             ((mma) (Object) stackIn_68_0).a(stackIn_68_1, stackIn_69_2);
-            this.field_C.a((byte) -14, this.field_r);
+            this.field_C.setInput((byte) -14, this.field_r);
             return;
           }
           if (var8Lifetime2.blocked) {
@@ -321,7 +321,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
           stackIn_75_2 = 16720384;
         }
         ((mma) (Object) stackIn_74_0).a(stackIn_74_1, stackIn_75_2);
-        this.field_C.a((byte) -14, this.field_r);
+        this.field_C.setInput((byte) -14, this.field_r);
         return;
     }
 
@@ -418,7 +418,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
     final void encode(boolean param0, BitPacketBuffer param1) {
         try {
           super.encode(param0, param1);
-          this.field_C.a(this.getScope((byte) 118), (byte) 113, param1);
+          this.field_C.encode(this.getScope((byte) 118), (byte) 113, param1);
           this.field_t.a(15637, param1);
           param1.writeBits((byte) -125, this.field_q >> 16, 10);
           param1.writeBits((byte) -127, !this.field_v ? 0 : 1, 1);

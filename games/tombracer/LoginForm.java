@@ -81,7 +81,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           if (this.field_y != null) {
             this.field_y.field_r = (WidgetPainter) ((Object) var6);
           }
-          this.field_A.field_q = kma.field_a;
+          this.field_A.field_q = DebouncedValidationSource.field_a;
           if (this.field_E != null) {
             this.field_E.field_r = (WidgetPainter) ((Object) var6);
           }
@@ -101,7 +101,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           this.field_n = 15;
           var7 = KeySwitchComponent.field_J;
           if (null != this.field_F) {
-            this.field_n = this.field_n + (var7.a(this.field_F, this.field_m - 40, var7.field_w) + 5);
+            this.field_n = this.field_n + (var7.measureWrappedHeight(this.field_F, this.field_m - 40, var7.field_w) + 5);
           }
           var8 = PooledObject.field_h;
           var9 = cc.a((byte) 122, di.a(28));

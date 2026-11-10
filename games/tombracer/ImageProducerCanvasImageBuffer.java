@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class iga extends ija implements java.awt.image.ImageProducer {
+final class ImageProducerCanvasImageBuffer extends CanvasImageBuffer implements java.awt.image.ImageProducer {
     private java.awt.image.ColorModel field_j;
     static int[] field_m;
     private java.awt.Canvas field_p;
@@ -17,7 +17,7 @@ final class iga extends ija implements java.awt.image.ImageProducer {
 
     private final synchronized void b(int param0) {
         if (this.field_n != null) {
-          this.field_n.setPixels(0, param0, this.field_h, this.field_f, this.field_j, this.field_g, 0, this.field_h);
+          this.field_n.setPixels(0, param0, this.width, this.height, this.field_j, this.pixels, 0, this.width);
           this.field_n.imageComplete(2);
           return;
         }
@@ -33,7 +33,7 @@ final class iga extends ija implements java.awt.image.ImageProducer {
     public final synchronized void addConsumer(java.awt.image.ImageConsumer param0) {
         try {
           this.field_n = param0;
-          param0.setDimensions(this.field_h, this.field_f);
+          param0.setDimensions(this.width, this.height);
           param0.setProperties((Hashtable) null);
           param0.setColorModel(this.field_j);
           param0.setHints(14);
@@ -57,21 +57,21 @@ final class iga extends ija implements java.awt.image.ImageProducer {
           return;
         }
         if (this.field_n != null) {
-          this.field_n.setPixels(param3, param0, param2, param1, this.field_j, this.field_g, param0 * this.field_h + param3, this.field_h);
+          this.field_n.setPixels(param3, param0, param2, param1, this.field_j, this.pixels, param0 * this.width + param3, this.width);
           this.field_n.imageComplete(2);
           return;
         }
     }
 
-    iga() {
+    ImageProducerCanvasImageBuffer() {
     }
 
-    final void a(java.awt.Canvas param0, int param1, int param2, int param3) {
+    final void initialize(java.awt.Canvas param0, int param1, int param2, int param3) {
         try {
           this.field_p = param0;
-          this.field_h = param1;
-          this.field_f = param3;
-          this.field_g = new int[this.field_h * this.field_f];
+          this.width = param1;
+          this.height = param3;
+          this.pixels = new int[this.width * this.height];
           this.field_j = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
           this.field_l = this.field_p.createImage((java.awt.image.ImageProducer) (this));
           this.b(0);
@@ -85,11 +85,11 @@ final class iga extends ija implements java.awt.image.ImageProducer {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, java.awt.Graphics param6, int param7) {
+    final void drawRegion(int param0, int param1, int param2, int param3, int param4, int param5, java.awt.Graphics param6, int param7) {
         java.awt.Shape var9 = null;
         try {
           if (param3 < 61) {
-            iga.releaseStatics(90);
+            ImageProducerCanvasImageBuffer.releaseStatics(90);
           }
           this.a(param4, param0, param7, param2, true);
           var9 = param6.getClip();

@@ -115,7 +115,7 @@ final class DateFieldsWidget extends DateInputWidget {
           if (param0 > -25) {
             this.field_B = (TextInputWidget) null;
           }
-          BlendModeOperator.field_o.a(param4, (param2.field_m >> 1) + (param2.field_i + param1), param3 + param2.field_n - 5, 16777215, -1);
+          BlendModeOperator.field_o.drawCenteredText(param4, (param2.field_m >> 1) + (param2.field_i + param1), param3 + param2.field_n - 5, 16777215, -1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "fe.LA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

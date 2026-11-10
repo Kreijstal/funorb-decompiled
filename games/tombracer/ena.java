@@ -41,7 +41,7 @@ final class ena extends DualLinkNode {
             if (!dk.field_c.ensureGroupLoaded(this.field_k, param0 ^ -107)) {
               return false;
             }
-            var28 = dk.field_c.d(param0 - 216, this.field_k);
+            var28 = dk.field_c.fileIds(param0 - 216, this.field_k);
             this.field_m = new byte[var28.length][];
             for (var4 = 0; var28.length > var4; var4++) {
               this.field_m[var4] = dk.field_c.a(false, this.field_k, var28[var4]);
@@ -72,7 +72,7 @@ final class ena extends DualLinkNode {
         synchronized (var5_ref_Object) {
           var6 = dk.field_c.a((byte) -117, this.field_k);
           this.field_o = new rq[var6];
-          var30 = dk.field_c.d(-79, this.field_k);
+          var30 = dk.field_c.fileIds(-79, this.field_k);
           var5 = 0;
         }
         while (var30.length > var5) {

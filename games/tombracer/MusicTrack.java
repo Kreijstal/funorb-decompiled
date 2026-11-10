@@ -48,7 +48,7 @@ final class MusicTrack extends IntrusiveNode {
         var5 = var4.c();
         for (var6 = 0; var6 < var5; var6++) {
           var4.e(var6);
-          var4.c(var6);
+          var4.readDelta(var6);
           var4.f(var6);
         }
         while (true) {
@@ -63,7 +63,7 @@ final class MusicTrack extends IntrusiveNode {
             if (var8 == 1) {
               var4.e();
               var4.f(var6Lifetime1);
-              if (var4.d()) {
+              if (var4.isDone()) {
                 return;
               }
               break;
@@ -100,7 +100,7 @@ final class MusicTrack extends IntrusiveNode {
                 var14.field_f[var11Lifetime2] = (byte) 1;
               }
             }
-            var4.c(var6Lifetime1);
+            var4.readDelta(var6Lifetime1);
             var4.f(var6Lifetime1);
           }
         }
@@ -111,7 +111,7 @@ final class MusicTrack extends IntrusiveNode {
     }
 
     final static MusicTrack load(ResourceArchive param0, String param1, String param2) {
-        byte[] var3 = param0.a(param1, (byte) 114, param2);
+        byte[] var3 = param0.getFileByName(param1, (byte) 114, param2);
         if (var3 == null) {
           return null;
         }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class doa {
-    private va field_a;
+    private LegacyVertexArray field_a;
 
     final static jua a(String param0, int param1, byte param2) {
         jua var3 = null;

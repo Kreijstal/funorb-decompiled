@@ -187,10 +187,10 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             if (var12Lifetime1 != 0 &&
               var12Lifetime1 != 3) {
               if (1 == var12Lifetime1) {
-                this.field_e.a(this.getDisplayText(-4, param2), this.a(param2, param3, param4, -3) + (var9_int >> 1), var11 + this.a(param6, param1, param2, (byte) -128), param7, param0);
+                this.field_e.drawCenteredText(this.getDisplayText(-4, param2), this.a(param2, param3, param4, -3) + (var9_int >> 1), var11 + this.a(param6, param1, param2, (byte) -128), param7, param0);
               } else {
                 if ((var12Lifetime1 == 2)) {
-                  this.field_e.b(this.getDisplayText(-4, param2), var9_int + this.a(param2, param3, param4, -3), this.a(param6, param1, param2, (byte) -128) + var11, param7, param0);
+                  this.field_e.drawRightAlignedText(this.getDisplayText(-4, param2), var9_int + this.a(param2, param3, param4, -3), this.a(param6, param1, param2, (byte) -128) + var11, param7, param0);
                 }
               }
               decompiledFrameRemainder0 = false;

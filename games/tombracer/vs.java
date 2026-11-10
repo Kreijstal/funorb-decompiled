@@ -60,7 +60,7 @@ final class vs extends ofa {
 
     final void a(int param0, byte param1, int param2) {
         super.a(param0, param1, param2);
-        ft.field_c.a(this.field_S, param2 + (this.field_m >> 1), param0 + 103, 16777215, -1);
+        ft.field_c.drawCenteredText(this.field_S, param2 + (this.field_m >> 1), param0 + 103, 16777215, -1);
         if (null != this.field_M) {
           SoftwareRasterizer.drawHorizontalLine(20 + param2, param0 + 120 - 7, 260, 8421504);
           ft.field_c.a(this.field_M, param2 + 20, 120 + param0 + 8, 260, 100, 16777215, -1, 1, 0, ft.field_c.field_w);
@@ -73,7 +73,7 @@ final class vs extends ofa {
         try {
           this.field_M = param1;
           if (null != this.field_M) {
-            var3_int = ft.field_c.a(this.field_M, 260, ft.field_c.field_w);
+            var3_int = ft.field_c.measureWrappedHeight(this.field_M, 260, ft.field_c.field_w);
             this.c(-11560, var3_int + 150, 300);
           }
           this.field_L = new ProgressBarWidget(13, 50, 274, 30, 15, 2113632, 4210752);

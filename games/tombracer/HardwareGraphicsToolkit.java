@@ -2018,7 +2018,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
             this.field_Hb = var11.width;
             this.field_jc = var11.height;
             this.field_F = param5;
-            ija.a(true, (byte) 107, false);
+            CanvasImageBuffer.a(true, (byte) 107, false);
             if (this.field_c != null) {
               this.field_Ec = new kp(this, this.field_c);
               this.field_P = new jagex3.graphics2.hw.NativeInterface(this.field_c.textureCount(-15061), this.field_F);

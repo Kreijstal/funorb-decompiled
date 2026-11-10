@@ -117,7 +117,7 @@ abstract class BitmapFont extends DualLinkNode {
         return var4;
     }
 
-    final void c(String param0, int param1, int param2, int param3, int param4, int param5) {
+    final void drawCenteredTextAlpha(String param0, int param1, int param2, int param3, int param4, int param5) {
         if (param0 == null) {
           return;
         }
@@ -387,7 +387,7 @@ abstract class BitmapFont extends DualLinkNode {
         return var4;
     }
 
-    final void b(String param0, int param1, int param2, int param3, int param4) {
+    final void drawRightAlignedText(String param0, int param1, int param2, int param3, int param4) {
         if (param0 == null) {
           return;
         }
@@ -395,7 +395,7 @@ abstract class BitmapFont extends DualLinkNode {
         this.drawStyledText(param0, param1 - this.stringWidth(param0), param2);
     }
 
-    final void a(String param0, int param1, int param2, int param3, int param4, int param5) {
+    final void drawRightAlignedTextAlpha(String param0, int param1, int param2, int param3, int param4, int param5) {
         if (param0 == null) {
           return;
         }
@@ -921,7 +921,7 @@ abstract class BitmapFont extends DualLinkNode {
         return var13;
     }
 
-    final void a(String param0, int param1, int param2, int param3, int param4) {
+    final void drawCenteredText(String param0, int param1, int param2, int param3, int param4) {
         if (param0 == null) {
           return;
         }
@@ -951,7 +951,7 @@ abstract class BitmapFont extends DualLinkNode {
         return null;
     }
 
-    final int a(String param0, int param1, int param2) {
+    final int measureWrappedHeight(String param0, int param1, int param2) {
         if (param2 == 0) {
           param2 = this.field_m;
         }

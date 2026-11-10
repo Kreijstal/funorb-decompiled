@@ -401,7 +401,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
           this.instantiate(true, false, (Room) null, 109, -103, 35, (Trap) null);
         }
         if (!param1) {
-          return this.room.a(param1, param0, param2 ^ 18);
+          return this.room.findComponent(param1, param0, param2 ^ 18);
         }
         return this.a(param0, param1, false);
     }

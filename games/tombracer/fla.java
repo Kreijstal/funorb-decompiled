@@ -53,7 +53,7 @@ final class fla extends IntrusiveNode {
             this.a(-91, param1);
             return;
           }
-          if (this.field_i.field_f.e()) {
+          if (this.field_i.field_f.isOutOfRange()) {
             this.a(-91, param1);
             return;
           }

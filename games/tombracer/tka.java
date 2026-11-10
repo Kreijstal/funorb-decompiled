@@ -38,15 +38,15 @@ final class tka extends TextWidgetPainter {
           if (param0 <= 46) {
             field_p = (ToolkitSprite) null;
           }
-          if (ou.field_e != null &&
+          if (CourseGenerator.field_e != null &&
             ColourFillOperator.field_r != null) {
             return;
           }
           ColourFillOperator.field_r = new int[256];
-          ou.field_e = new int[256];
+          CourseGenerator.field_e = new int[256];
           for (var1_int = 0; 256 > var1_int; var1_int++) {
             var2 = (double)var1_int / 255.0 * 6.283185307179586;
-            ou.field_e[var1_int] = (int)(Math.sin(var2) * 4096.0);
+            CourseGenerator.field_e[var1_int] = (int)(Math.sin(var2) * 4096.0);
             ColourFillOperator.field_r[var1_int] = (int)(4096.0 * Math.cos(var2));
           }
           return;
@@ -102,7 +102,7 @@ final class tka extends TextWidgetPainter {
           var12 = (param0.field_p - var10.field_b) / 2 + (param0.field_n + param3);
           var13 = param1 + (param0.field_i + param0.field_m / 2);
           var10.b(var11, var12);
-          this.field_e.a(this.getDisplayText(-4, param0), var13, param3, var9, -1);
+          this.field_e.drawCenteredText(this.getDisplayText(-4, param0), var13, param3, var9, -1);
           if (param2 == 16777215) {
             return;
           }

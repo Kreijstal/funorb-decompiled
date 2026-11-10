@@ -1037,7 +1037,7 @@ final class PcmSampleStream extends PcmStream {
         return param4 >> 1;
     }
 
-    final synchronized void c(int param0) {
+    final synchronized void setPosition(int param0) {
         int var2 = ((u) (this.field_i)).field_i.length << 8;
         if (param0 < -1) {
           param0 = -1;
@@ -1048,7 +1048,7 @@ final class PcmSampleStream extends PcmStream {
         this.field_u = param0;
     }
 
-    final static PcmSampleStream b(u param0, int param1, int param2, int param3) {
+    final static PcmSampleStream createAtRateAndPan(u param0, int param1, int param2, int param3) {
         if (param0.field_i == null) {
           return null;
         }
@@ -1258,7 +1258,7 @@ final class PcmSampleStream extends PcmStream {
         return param5 >> 1;
     }
 
-    final synchronized void f(int param0) {
+    final synchronized void setStepMagnitude(int param0) {
         if (this.field_p < 0) {
           this.field_p = -param0;
         } else {
@@ -1272,7 +1272,7 @@ final class PcmSampleStream extends PcmStream {
         this.field_m = PcmSampleStream.rightChannelVolume(this.field_q, this.field_o);
     }
 
-    final synchronized boolean e() {
+    final synchronized boolean isOutOfRange() {
         return this.field_u < 0 || this.field_u >= ((u) (this.field_i)).field_i.length << 8;
     }
 
@@ -1284,7 +1284,7 @@ final class PcmSampleStream extends PcmStream {
         return this.field_q == -2147483648 ? 0 : this.field_q + 32 >> 6;
     }
 
-    final synchronized void a(boolean param0) {
+    final synchronized void setReversed(boolean param0) {
         this.field_p = (this.field_p ^ this.field_p >> 31) + (this.field_p >>> 31);
         if (!param0) {
           return;
@@ -1654,7 +1654,7 @@ final class PcmSampleStream extends PcmStream {
         this.rampVolume(param0, param1, this.f());
     }
 
-    final static PcmSampleStream a(u param0, int param1, int param2, int param3) {
+    final static PcmSampleStream create(u param0, int param1, int param2, int param3) {
         if (param0.field_i == null) {
           return null;
         }

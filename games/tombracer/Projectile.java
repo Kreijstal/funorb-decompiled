@@ -54,7 +54,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
     public final int getHeight(byte param0) {
         if (param0 != 55) {
           RenderScene var3 = (RenderScene) null;
-          this.a((RenderScene) null, -69);
+          this.addToScene((RenderScene) null, -69);
           return this.size;
         }
         return this.size;
@@ -257,9 +257,9 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
                   return;
                 }
                 if (this.effect.type == 3) {
-                  this.room.a(-40, this.y, WindZoneBehaviour.field_o, 2 * this.size, 2 * this.size, this.x);
+                  this.room.applyAreaEffect(-40, this.y, WindZoneBehaviour.field_o, 2 * this.size, 2 * this.size, this.x);
                 }
-                var6Lifetime2 = this.room.a(this, -16164, this.effect);
+                var6Lifetime2 = this.room.applyProjectileEffect(this, -16164, this.effect);
                 if (var6Lifetime2 <= 0) {
                   return;
                 }
@@ -281,9 +281,9 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
                   return;
                 }
                 if (this.effect.type == 3) {
-                  this.room.a(-40, this.y, WindZoneBehaviour.field_o, 2 * this.size, 2 * this.size, this.x);
+                  this.room.applyAreaEffect(-40, this.y, WindZoneBehaviour.field_o, 2 * this.size, 2 * this.size, this.x);
                 }
-                var6Lifetime2 = this.room.a(this, -16164, this.effect);
+                var6Lifetime2 = this.room.applyProjectileEffect(this, -16164, this.effect);
                 if (var6Lifetime2 <= 0) {
                   return;
                 }
@@ -300,9 +300,9 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
                 return;
               }
               if (this.effect.type == 3) {
-                this.room.a(-40, this.y, WindZoneBehaviour.field_o, 2 * this.size, 2 * this.size, this.x);
+                this.room.applyAreaEffect(-40, this.y, WindZoneBehaviour.field_o, 2 * this.size, 2 * this.size, this.x);
               }
-              var6Lifetime2 = this.room.a(this, -16164, this.effect);
+              var6Lifetime2 = this.room.applyProjectileEffect(this, -16164, this.effect);
               if (var6Lifetime2 <= 0) {
                 return;
               }
@@ -324,9 +324,9 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
                 return;
               }
               if (this.effect.type == 3) {
-                this.room.a(-40, this.y, WindZoneBehaviour.field_o, 2 * this.size, 2 * this.size, this.x);
+                this.room.applyAreaEffect(-40, this.y, WindZoneBehaviour.field_o, 2 * this.size, 2 * this.size, this.x);
               }
-              var6Lifetime2 = this.room.a(this, -16164, this.effect);
+              var6Lifetime2 = this.room.applyProjectileEffect(this, -16164, this.effect);
               if (var6Lifetime2 <= 0) {
                 return;
               }
@@ -351,9 +351,9 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
           return;
         }
         if (this.effect.type == 3) {
-          this.room.a(-40, this.y, WindZoneBehaviour.field_o, 2 * this.size, 2 * this.size, this.x);
+          this.room.applyAreaEffect(-40, this.y, WindZoneBehaviour.field_o, 2 * this.size, 2 * this.size, this.x);
         }
-        var6Lifetime1 = this.room.a(this, -16164, this.effect);
+        var6Lifetime1 = this.room.applyProjectileEffect(this, -16164, this.effect);
         if (var6Lifetime1 <= 0) {
           return;
         }
@@ -577,9 +577,9 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
               if (param1 ||
                 this.effect.type != 0) {
                 if (this.effect.type == 3) {
-                  this.room.a(param3 - 31, this.y, WindZoneBehaviour.field_o, 2 * this.size, this.size * 2, this.x);
+                  this.room.applyAreaEffect(param3 - 31, this.y, WindZoneBehaviour.field_o, 2 * this.size, this.size * 2, this.x);
                 }
-                var7 = this.room.a(this, -16164, this.effect);
+                var7 = this.room.applyProjectileEffect(this, -16164, this.effect);
                 if (var7 > 0) {
                   var6 = 1;
                   this.b(true, true);
@@ -608,9 +608,9 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
             return;
           }
           if (this.effect.type == 3) {
-            this.room.a(param3 - 31, this.y, WindZoneBehaviour.field_o, 2 * this.size, this.size * 2, this.x);
+            this.room.applyAreaEffect(param3 - 31, this.y, WindZoneBehaviour.field_o, 2 * this.size, this.size * 2, this.x);
           }
-          var7 = this.room.a(this, -16164, this.effect);
+          var7 = this.room.applyProjectileEffect(this, -16164, this.effect);
           if (var7 <= 0) {
             if (var5 != 0 &&
               this.c(param2, param0, 122) &&
@@ -639,9 +639,9 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
               var6 = 0;
               if (param1) {
                 if (this.effect.type == 3) {
-                  this.room.a(param3 - 31, this.y, WindZoneBehaviour.field_o, 2 * this.size, this.size * 2, this.x);
+                  this.room.applyAreaEffect(param3 - 31, this.y, WindZoneBehaviour.field_o, 2 * this.size, this.size * 2, this.x);
                 }
-                var7 = this.room.a(this, -16164, this.effect);
+                var7 = this.room.applyProjectileEffect(this, -16164, this.effect);
                 if (var7 > 0) {
                   var6 = 1;
                   this.b(true, true);
@@ -655,9 +655,9 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
               }
               if (this.effect.type != 0) {
                 if (this.effect.type == 3) {
-                  this.room.a(param3 - 31, this.y, WindZoneBehaviour.field_o, 2 * this.size, this.size * 2, this.x);
+                  this.room.applyAreaEffect(param3 - 31, this.y, WindZoneBehaviour.field_o, 2 * this.size, this.size * 2, this.x);
                 }
-                var7 = this.room.a(this, -16164, this.effect);
+                var7 = this.room.applyProjectileEffect(this, -16164, this.effect);
                 if (var7 > 0) {
                   var6 = 1;
                   this.b(true, true);
@@ -678,9 +678,9 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
           var6 = 0;
           if (param1) {
             if (this.effect.type == 3) {
-              this.room.a(param3 - 31, this.y, WindZoneBehaviour.field_o, 2 * this.size, this.size * 2, this.x);
+              this.room.applyAreaEffect(param3 - 31, this.y, WindZoneBehaviour.field_o, 2 * this.size, this.size * 2, this.x);
             }
-            var7 = this.room.a(this, -16164, this.effect);
+            var7 = this.room.applyProjectileEffect(this, -16164, this.effect);
             if (var7 > 0) {
               var6 = 1;
               this.b(true, true);
@@ -688,9 +688,9 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
           } else {
             if (this.effect.type != 0) {
               if (this.effect.type == 3) {
-                this.room.a(param3 - 31, this.y, WindZoneBehaviour.field_o, 2 * this.size, this.size * 2, this.x);
+                this.room.applyAreaEffect(param3 - 31, this.y, WindZoneBehaviour.field_o, 2 * this.size, this.size * 2, this.x);
               }
-              var7 = this.room.a(this, -16164, this.effect);
+              var7 = this.room.applyProjectileEffect(this, -16164, this.effect);
               if (var7 > 0) {
                 var6 = 1;
                 this.b(true, true);
@@ -926,7 +926,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
         return this.size;
     }
 
-    final void a(RenderScene param0, int param1) {
+    final void addToScene(RenderScene param0, int param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -975,7 +975,7 @@ final class Projectile extends PooledObject implements Renderable, Collidable, T
         return false;
     }
 
-    final void b(int param0, int param1, int param2) {
+    final void setSpinAndAngle(int param0, int param1, int param2) {
         this.spin = param1;
         if (param0 != 7) {
           return;

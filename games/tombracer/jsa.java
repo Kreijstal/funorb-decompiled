@@ -58,7 +58,7 @@ final class jsa extends SingleChildWidget {
           this.field_E = stackIn_4_1;
           this.field_G = param7;
           var12_int = -this.field_G + this.field_D;
-          var13 = this.field_B.a(param10, var12_int, this.field_B.field_w) + this.field_G * 2;
+          var13 = this.field_B.measureWrappedHeight(param10, var12_int, this.field_B.field_w) + this.field_G * 2;
           if (param3 >= var13) {
             var13 = param3;
           } else {

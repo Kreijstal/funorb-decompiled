@@ -54,7 +54,7 @@ final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
           this.requiredWeight <= var2) {
           var5Lifetime1 = 1;
         }
-        this.field_n.a((byte) -14, var5Lifetime1 != 0);
+        this.field_n.setInput((byte) -14, var5Lifetime1 != 0);
     }
 
     public final int getDimColour(int param0) {
@@ -69,7 +69,7 @@ final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
           super.encode(param0, param1);
           param1.writeBits((byte) -127, this.requiredWeight, 8);
           param1.writeBits((byte) -128, !this.field_q ? 0 : 1, 1);
-          this.field_n.a(this.getScope((byte) 117), (byte) 117, param1);
+          this.field_n.encode(this.getScope((byte) 117), (byte) 117, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "dja.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -176,7 +176,7 @@ final class PressureSwitchBehaviour extends Behaviour implements SwitchSource {
 
     final void resolveSwitchLinks(int param0) {
         super.resolveSwitchLinks(param0);
-        this.field_n.a((byte) 48, this.getScope((byte) 125));
+        this.field_n.resolveLinks((byte) 48, this.getScope((byte) 125));
     }
 
     public final int getLevel(byte param0) {

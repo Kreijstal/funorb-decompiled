@@ -48,7 +48,7 @@ final class SimpleConditionBehaviour extends Behaviour {
 
     final void tick(int param0) {
         this.j((byte) 79);
-        this.field_n.a((byte) -14, this.field_s);
+        this.field_n.setInput((byte) -14, this.field_s);
         if (param0 != 5418) {
           this.stop(false);
         }
@@ -84,7 +84,7 @@ final class SimpleConditionBehaviour extends Behaviour {
         try {
           super.encode(param0, param1);
           param1.writeBits((byte) -127, this.field_t, 4);
-          this.field_n.a(this.getScope((byte) 119), (byte) 88, param1);
+          this.field_n.encode(this.getScope((byte) 119), (byte) 88, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "rb.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -136,7 +136,7 @@ final class SimpleConditionBehaviour extends Behaviour {
     final void stop(boolean param0) {
         super.stop(param0);
         if (this.field_t == 0) {
-          this.field_n.a((byte) -14, true);
+          this.field_n.setInput((byte) -14, true);
         }
     }
 
@@ -153,7 +153,7 @@ final class SimpleConditionBehaviour extends Behaviour {
 
     final void resolveSwitchLinks(int param0) {
         super.resolveSwitchLinks(param0);
-        this.field_n.a((byte) 48, this.getScope((byte) 116));
+        this.field_n.resolveLinks((byte) 48, this.getScope((byte) 116));
     }
 
     final int getTypeId(boolean param0) {

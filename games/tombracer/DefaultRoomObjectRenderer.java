@@ -52,7 +52,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
         int var26Lifetime2;
         var29 = TombRacer.field_G ? 1 : 0;
         try {
-          if (param2.g(param1 - 820)) {
+          if (param2.hasText(param1 - 820)) {
             this.a(-14066, param0, param2);
             return;
           }
@@ -422,7 +422,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
         }
     }
 
-    private final void a(int param0, TileGridCell param1, mba param2, int param3, TileGrid param4, int param5) {
+    private final void a(int param0, TileGridCell param1, DefaultTileRenderable param2, int param3, TileGrid param4, int param5) {
         RuntimeException stackIn_120_0 = null;
         StringBuilder stackIn_120_1 = null;
         String stackIn_121_2 = null;
@@ -640,7 +640,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
             while (var3.getRowCount(40) > var5) {
               var6 = var3.getCell(110, var4, var5);
               if (null == var6.getRenderable((byte) -100)) {
-                var6.setRenderable(3, new mba());
+                var6.setRenderable(3, new DefaultTileRenderable());
               }
               var5++;
             }
@@ -751,7 +751,7 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
             var10 = param2.getText(false);
             var11 = var4_int >> 16;
             var12 = 8 + era.field_g.getWrappedWidth(var10, var11);
-            var13 = 8 + era.field_g.a(var10, var11, 0);
+            var13 = 8 + era.field_g.measureWrappedHeight(var10, var11, 0);
             SecondaryNodeDequeIterator.a(var9 / 2, var13, 0, var12, (byte) 114, var7 - var13 / 2, var6 - var12 / 2);
             dh.a(kn.field_p, var9, 1, 0, var6 - var11 / 2, var11, param2.d(115), -(var11 / 2) + var7, 0, 29870, 1, var11, var10);
           }
@@ -860,11 +860,11 @@ final class DefaultRoomObjectRenderer implements RoomObjectRenderer {
               var9 = param2;
               while (param5 >= var9) {
                 var10 = var7.getCell(104, var8, var9);
-                stackOut_9_0 = var10.getRenderable((byte) -100) instanceof mba;
+                stackOut_9_0 = var10.getRenderable((byte) -100) instanceof DefaultTileRenderable;
                 stackIn_5_0 = stackOut_9_0 ? 1 : 0;
                 stackIn_10_0 = stackOut_9_0;
                 if (stackIn_10_0) {
-                  this.a(17767, var10, (mba) (var10.getRenderable((byte) -128)), var9, var7, var8);
+                  this.a(17767, var10, (DefaultTileRenderable) (var10.getRenderable((byte) -128)), var9, var7, var8);
                 }
                 var9++;
               }

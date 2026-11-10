@@ -180,7 +180,7 @@ abstract class MazeGenerator {
         mga.field_g = null;
         mq.field_b = null;
         LoadLevelCommand.field_p = null;
-        iga.field_m = null;
+        ImageProducerCanvasImageBuffer.field_m = null;
         int var1 = 85 % ((57 - param0) / 49);
         ck.field_c = (byte[][]) null;
         pg.field_C = null;

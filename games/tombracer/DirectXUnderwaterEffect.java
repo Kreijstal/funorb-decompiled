@@ -140,10 +140,10 @@ final class DirectXUnderwaterEffect extends ShaderEffect {
         this.field_i = param0;
         if (param1 != null &&
           (this.field_i.field_ld.VertexShaderVersion & 65535) >= 257) {
-          this.field_m = this.field_i.field_jd.createVertexShader(param1.a("dx", (byte) 125, "uw_ground_unlit"));
-          this.field_o = this.field_i.field_jd.createVertexShader(param1.a("dx", (byte) 127, "uw_ground_lit"));
-          this.field_l = this.field_i.field_jd.createVertexShader(param1.a("dx", (byte) 115, "uw_model_unlit"));
-          this.field_k = this.field_i.field_jd.createVertexShader(param1.a("dx", (byte) 124, "uw_model_lit"));
+          this.field_m = this.field_i.field_jd.createVertexShader(param1.getFileByName("dx", (byte) 125, "uw_ground_unlit"));
+          this.field_o = this.field_i.field_jd.createVertexShader(param1.getFileByName("dx", (byte) 127, "uw_ground_lit"));
+          this.field_l = this.field_i.field_jd.createVertexShader(param1.getFileByName("dx", (byte) 115, "uw_model_unlit"));
+          this.field_k = this.field_i.field_jd.createVertexShader(param1.getFileByName("dx", (byte) 124, "uw_model_lit"));
           stackIn_6_0 = (this.field_o == null) ? 0 : 1;
           stackIn_9_1 = (null == this.field_m) ? 0 : 1;
           stackIn_11_0 = stackIn_6_0 & stackIn_9_1;

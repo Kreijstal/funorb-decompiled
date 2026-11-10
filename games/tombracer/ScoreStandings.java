@@ -89,7 +89,7 @@ final class ScoreStandings {
             stackIn_18_0 = SecondaryNodeHashTable.field_b.a(var3, true);
             return stackIn_18_0;
           }
-          var15 = SecondaryNodeHashTable.field_b.a(var3, (byte) 117, "");
+          var15 = SecondaryNodeHashTable.field_b.getFileByName(var3, (byte) 117, "");
           var13 = var15;
           var4 = var13;
           var5 = null;

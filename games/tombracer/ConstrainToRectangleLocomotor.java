@@ -281,7 +281,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
           pg.field_C = new int[fa.field_b];
           ck.field_c = new byte[fa.field_b][];
           LoadLevelCommand.field_p = new int[fa.field_b];
-          iga.field_m = new int[fa.field_b];
+          ImageProducerCanvasImageBuffer.field_m = new int[fa.field_b];
           mq.field_b = new int[fa.field_b];
           pb.field_l = new byte[fa.field_b][];
           NetworkArchiveRequest.field_n = new boolean[fa.field_b];
@@ -299,7 +299,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
             mq.field_b[var4Lifetime2] = var17.readUnsignedShort(kha.bitwiseXor(param0, 122));
           }
           for (var4Lifetime3 = 0; fa.field_b > var4Lifetime3; var4Lifetime3++) {
-            iga.field_m[var4Lifetime3] = var17.readUnsignedShort(122);
+            ImageProducerCanvasImageBuffer.field_m[var4Lifetime3] = var17.readUnsignedShort(122);
           }
           var17.position = -(var3 * 3) + 3 + (-(8 * fa.field_b) + (-7 + param1.length));
           mga.field_g = new int[var3];
@@ -312,7 +312,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
           var17.position = 0;
           for (var4Lifetime5 = 0; fa.field_b > var4Lifetime5; var4Lifetime5++) {
             var5 = mq.field_b[var4Lifetime5];
-            var6 = iga.field_m[var4Lifetime5];
+            var6 = ImageProducerCanvasImageBuffer.field_m[var4Lifetime5];
             var7 = var6 * var5;
             var20 = new byte[var7];
             var18 = var20;
@@ -402,7 +402,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
         if (param0 != 1) {
           return;
         }
-        this.trap.a((byte) -35, var4, var5);
+        this.trap.move((byte) -35, var4, var5);
     }
 
     ConstrainToRectangleLocomotor(Room param0, BitPacketBuffer param1, boolean param2) {

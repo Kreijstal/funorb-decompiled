@@ -170,14 +170,14 @@ final class MidiVoiceMixer extends PcmStream {
             param2.field_r = 1048575 & var4_int * param1 + param2.field_r;
             if (var5 <= param1) {
               if (this.field_k.field_q[param2.field_k] != 0) {
-                param2.field_x = PcmSampleStream.a(param2.field_n, param2.field_x.j(), 0, param2.field_x.f());
+                param2.field_x = PcmSampleStream.create(param2.field_n, param2.field_x.j(), 0, param2.field_x.f());
                 stackIn_8_0 = this.field_k;
                 stackIn_8_1 = -111;
                 stackIn_8_2 = (rta) (param2);
                 stackIn_9_3 = !(0 <= param2.field_y.field_g[param2.field_m]);
                 ((MidiPcmStream) (Object) stackIn_8_0).a((byte) stackIn_8_1, stackIn_8_2, stackIn_9_3);
               } else {
-                param2.field_x = PcmSampleStream.a(param2.field_n, param2.field_x.j(), param2.field_x.l(), param2.field_x.f());
+                param2.field_x = PcmSampleStream.create(param2.field_n, param2.field_x.j(), param2.field_x.l(), param2.field_x.f());
               }
               if (param2.field_y.field_g[param2.field_m] < 0) {
                 param2.field_x.b(-1);
@@ -244,7 +244,7 @@ final class MidiVoiceMixer extends PcmStream {
               }
               var11 = param3.field_x;
               if (this.field_k.field_q[param3.field_k] != 0) {
-                param3.field_x = PcmSampleStream.a(param3.field_n, var11.j(), 0, var11.f());
+                param3.field_x = PcmSampleStream.create(param3.field_n, var11.j(), 0, var11.f());
                 stackIn_12_0 = this.field_k;
                 stackIn_12_1 = -35;
                 stackIn_12_2 = (rta) (param3);
@@ -252,7 +252,7 @@ final class MidiVoiceMixer extends PcmStream {
                 ((MidiPcmStream) (Object) stackIn_12_0).a((byte) stackIn_12_1, stackIn_12_2, stackIn_13_3);
                 param3.field_x.b(var9, var11.l());
               } else {
-                param3.field_x = PcmSampleStream.a(param3.field_n, var11.j(), var11.l(), var11.f());
+                param3.field_x = PcmSampleStream.create(param3.field_n, var11.j(), var11.l(), var11.f());
               }
               if (param3.field_y.field_g[param3.field_m] < 0) {
                 param3.field_x.b(-1);

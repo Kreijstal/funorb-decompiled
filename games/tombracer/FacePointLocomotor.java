@@ -123,7 +123,7 @@ final class FacePointLocomotor extends Locomotor {
         if (mla.field_a > 0 &&
           uv.field_o) {
           SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, era.field_e.field_A);
-          wo.field_k.b(108, param0);
+          VboVertexArray.field_k.b(108, param0);
         }
         if (param1 <= 6) {
           int[] var3 = (int[]) null;

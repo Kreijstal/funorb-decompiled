@@ -135,7 +135,7 @@ final class ConstrainToLatticeLocomotor extends ConstraintLocomotor {
           var12 = -var3 + this.field_y * var10;
           if (0 != var11) {
             if (var12 == 0) {
-              this.trap.a((byte) -31, var4, var5);
+              this.trap.move((byte) -31, var4, var5);
               decompiledFrameRemainder0 = false;
             }
             else {
@@ -148,7 +148,7 @@ final class ConstrainToLatticeLocomotor extends ConstraintLocomotor {
           }
         }
         if (decompiledFrameRemainder0) {
-          this.trap.a((byte) -31, var4, var5);
+          this.trap.move((byte) -31, var4, var5);
         }
 
     }

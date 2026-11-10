@@ -5,7 +5,7 @@ abstract class jp extends ota {
     final static void a(ResourceArchive param0, byte param1) {
         int var3 = 0;
         int var4 = 0;
-        Sprite var2 = new Sprite(param0.a("final_frame.jpg", (byte) 114, ""), (java.awt.Component) ((Object) nma.field_l));
+        Sprite var2 = new Sprite(param0.getFileByName("final_frame.jpg", (byte) 114, ""), (java.awt.Component) ((Object) nma.field_l));
         if (param1 != 20) {
           return;
         }

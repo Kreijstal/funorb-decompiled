@@ -3,7 +3,7 @@
  */
 final class ValidationMessageWidget extends HotspotTextWidget {
     static int field_K;
-    private nua field_I;
+    private ValidationSource field_I;
     static String field_J;
     private int field_F;
     private Sprite field_H;
@@ -180,14 +180,14 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         var44 = null;
         var50 = null;
         var13 = TombRacer.field_G ? 1 : 0;
-        var6 = this.field_I.b(-4666);
+        var6 = this.field_I.getState(-4666);
         if (var6 == BevelOperator.field_p) {
           var17 = ko.field_g;
           if (!var17.equals(this.field_o)) {
             this.field_o = var17;
             this.b(18758);
             super.renderLayer(param0, param1, param2, param3);
-            var6 = this.field_I.b(-4666);
+            var6 = this.field_I.getState(-4666);
             var54 = (WidgetTextLayout) ((Object) this.field_r);
             var9 = this.field_i + param0;
             var10 = var54.textTop(param1, (UiWidget) (this), (byte) -89) + (var54.ensureTextLayout((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
@@ -223,7 +223,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             return;
           }
           super.renderLayer(param0, param1, param2, param3);
-          var6 = this.field_I.b(-4666);
+          var6 = this.field_I.getState(-4666);
           var55 = (WidgetTextLayout) ((Object) this.field_r);
           var9Lifetime5 = this.field_i + param0;
           var10Lifetime5 = var55.textTop(param1, (UiWidget) (this), (byte) -89) + (var55.ensureTextLayout((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
@@ -272,7 +272,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             this.field_o = var26;
             this.b(18758);
             super.renderLayer(param0, param1, param2, param3);
-            var6 = this.field_I.b(-4666);
+            var6 = this.field_I.getState(-4666);
             var56 = (WidgetTextLayout) ((Object) this.field_r);
             var9Lifetime1 = this.field_i + param0;
             var10Lifetime1 = var56.textTop(param1, (UiWidget) (this), (byte) -89) + (var56.ensureTextLayout((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
@@ -308,7 +308,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             return;
           }
           super.renderLayer(param0, param1, param2, param3);
-          var6 = this.field_I.b(-4666);
+          var6 = this.field_I.getState(-4666);
           var57 = (WidgetTextLayout) ((Object) this.field_r);
           var9Lifetime1Lifetime1 = this.field_i + param0;
           var10Lifetime1Lifetime1 = var57.textTop(param1, (UiWidget) (this), (byte) -89) + (var57.ensureTextLayout((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
@@ -351,11 +351,11 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           this.field_H.drawAdditive(var9Lifetime1Lifetime1 - (var34.field_n >> 1), var10Lifetime1Lifetime1 - var34.field_k, 256);
           return;
         }
-        var5 = this.field_I.a(101);
+        var5 = this.field_I.getMessage(101);
         if (var5 != null) {
           if (var5.equals(this.field_o)) {
             super.renderLayer(param0, param1, param2, param3);
-            var6Lifetime1 = this.field_I.b(-4666);
+            var6Lifetime1 = this.field_I.getState(-4666);
             var61 = (WidgetTextLayout) ((Object) this.field_r);
             var9Lifetime2 = this.field_i + param0;
             var10Lifetime2 = var61.textTop(param1, (UiWidget) (this), (byte) -89) + (var61.ensureTextLayout((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
@@ -393,7 +393,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           this.field_o = var5;
           this.b(18758);
           super.renderLayer(param0, param1, param2, param3);
-          var6Lifetime1Lifetime1 = this.field_I.b(-4666);
+          var6Lifetime1Lifetime1 = this.field_I.getState(-4666);
           var60 = (WidgetTextLayout) ((Object) this.field_r);
           var9Lifetime2Lifetime1 = this.field_i + param0;
           var10Lifetime2Lifetime1 = var60.textTop(param1, (UiWidget) (this), (byte) -89) + (var60.ensureTextLayout((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
@@ -443,7 +443,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           this.field_o = var35;
           this.b(18758);
           super.renderLayer(param0, param1, param2, param3);
-          var6Lifetime2 = this.field_I.b(-4666);
+          var6Lifetime2 = this.field_I.getState(-4666);
           var58 = (WidgetTextLayout) ((Object) this.field_r);
           var9Lifetime3 = this.field_i + param0;
           var10Lifetime3 = var58.textTop(param1, (UiWidget) (this), (byte) -89) + (var58.ensureTextLayout((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
@@ -479,7 +479,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           return;
         }
         super.renderLayer(param0, param1, param2, param3);
-        var6Lifetime3 = this.field_I.b(-4666);
+        var6Lifetime3 = this.field_I.getState(-4666);
         var59 = (WidgetTextLayout) ((Object) this.field_r);
         var9Lifetime4 = this.field_i + param0;
         var10Lifetime4 = var59.textTop(param1, (UiWidget) (this), (byte) -89) + (var59.ensureTextLayout((UiWidget) (this), 14157).getLayoutHeight(param2 - 117) >> 1);
@@ -523,7 +523,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         return;
     }
 
-    ValidationMessageWidget(nua param0, String param1, int param2, int param3, int param4, int param5) {
+    ValidationMessageWidget(ValidationSource param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, nk.a(-21819));
         try {
           this.field_I = param0;

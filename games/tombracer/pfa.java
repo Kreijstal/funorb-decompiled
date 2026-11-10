@@ -403,19 +403,19 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("player,0", (byte) 110);
                 if (null != var2) {
-                  kma.defaultPlayerNames[0] = jaa.decodeText((byte) 37, var2);
+                  DebouncedValidationSource.defaultPlayerNames[0] = jaa.decodeText((byte) 37, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("player,1", (byte) 105);
                 if (null != var2) {
-                  kma.defaultPlayerNames[1] = jaa.decodeText((byte) 92, var2);
+                  DebouncedValidationSource.defaultPlayerNames[1] = jaa.decodeText((byte) 92, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("player,2", (byte) 102);
                 if (null != var2) {
-                  kma.defaultPlayerNames[2] = jaa.decodeText((byte) 64, var2);
+                  DebouncedValidationSource.defaultPlayerNames[2] = jaa.decodeText((byte) 64, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("player,3", (byte) 124);
                 if (null != var2) {
-                  kma.defaultPlayerNames[3] = jaa.decodeText((byte) 124, var2);
+                  DebouncedValidationSource.defaultPlayerNames[3] = jaa.decodeText((byte) 124, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("positions,0", (byte) 119);
                 if (var2 != null) {
@@ -1441,7 +1441,7 @@ final class pfa {
                 }
                 var2 = ScoringObserverFactory.readTextEntry("name_borees", (byte) 125);
                 if (var2 != null) {
-                  kma.field_d = jaa.decodeText((byte) 45, var2);
+                  DebouncedValidationSource.field_d = jaa.decodeText((byte) 45, var2);
                 }
                 var2 = ScoringObserverFactory.readTextEntry("name_bruce", (byte) 109);
                 if (var2 != null) {

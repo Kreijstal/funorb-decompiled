@@ -32,7 +32,7 @@ final class MirrorMoverLocomotor extends Locomotor {
           if (this.field_p) {
             var4 = var4 * -1;
           }
-          this.trap.a((byte) -105, var4, var5);
+          this.trap.move((byte) -105, var4, var5);
         }
     }
 
