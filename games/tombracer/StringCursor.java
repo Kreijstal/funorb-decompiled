@@ -19,7 +19,7 @@ final class StringCursor {
               var2 = 1;
             }
           } else {
-            if (wba.field_o == null) {
+            if (OpenGlSceneLight.field_o == null) {
               dq.field_f = r.createFullscreenCanvas(480, 0, param0 ^ -15579, dsa.field_c, 640, 0);
               if (dq.field_f == null) {
                 var2 = 3;
@@ -27,13 +27,13 @@ final class StringCursor {
                 fpa.a(dq.field_f, (byte) 75);
                 var2 = 2;
               }
-              if (wba.field_o == null &&
+              if (OpenGlSceneLight.field_o == null &&
                 S2CRoundDeadlinePacket.field_b) {
                 qna.a(1, param1, var2);
               }
               return;
             }
-            dq.field_f = wba.field_o.b(27013);
+            dq.field_f = OpenGlSceneLight.field_o.b(27013);
             C2SChooseRewardPacket.b(param0 ^ -18237, 2);
             if (dq.field_f == null) {
               var2 = 3;
@@ -47,7 +47,7 @@ final class StringCursor {
           if (ReportAbuseDialog.field_ub <= 0) {
             if (TextWidgetPainter.a(9)) {
               var2 = 0;
-              if (wba.field_o == null &&
+              if (OpenGlSceneLight.field_o == null &&
                 S2CRoundDeadlinePacket.field_b) {
                 qna.a(1, param1, var2);
                 return;
@@ -55,18 +55,18 @@ final class StringCursor {
               return;
             }
             var2 = 1;
-            if (wba.field_o == null &&
+            if (OpenGlSceneLight.field_o == null &&
               S2CRoundDeadlinePacket.field_b) {
               qna.a(1, param1, var2);
               return;
             }
             return;
           }
-          if (wba.field_o == null) {
+          if (OpenGlSceneLight.field_o == null) {
             dq.field_f = r.createFullscreenCanvas(480, 0, param0 ^ -15579, dsa.field_c, 640, 0);
             if (dq.field_f == null) {
               var2 = 3;
-              if (wba.field_o == null &&
+              if (OpenGlSceneLight.field_o == null &&
                 S2CRoundDeadlinePacket.field_b) {
                 qna.a(1, param1, var2);
                 return;
@@ -76,7 +76,7 @@ final class StringCursor {
             fpa.a(dq.field_f, (byte) 75);
             var2 = 2;
           } else {
-            dq.field_f = wba.field_o.b(27013);
+            dq.field_f = OpenGlSceneLight.field_o.b(27013);
             C2SChooseRewardPacket.b(param0 ^ -18237, 2);
             if (dq.field_f == null) {
               var2 = 3;
@@ -86,7 +86,7 @@ final class StringCursor {
             }
           }
         }
-        if (wba.field_o != null) {
+        if (OpenGlSceneLight.field_o != null) {
           return;
         }
         if (!S2CRoundDeadlinePacket.field_b) {

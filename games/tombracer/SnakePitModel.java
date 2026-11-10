@@ -395,14 +395,14 @@ final class SnakePitModel extends TrapModel {
           var11 = 0;
           for (var12 = 0; var12 < 6; var12++) {
             if (var12 >= 5 ||
-              null != wba.field_p[var12]) {
+              null != OpenGlSceneLight.field_p[var12]) {
               var13 = 3 + var11 * (era.field_e.field_t - 6 + 2) / (gka.field_g + 1);
               var11++;
               var7Lifetime1 = -2 + (3 + var11 * (era.field_e.field_t - 6 + 2) / (1 + gka.field_g)) - var13;
               if (var12 >= 5) {
                 ara.field_ub.a(var8, var7Lifetime1, -23776, var13, var6_int);
               } else {
-                wba.field_p[var12].a(var8, var7Lifetime1, -23776, var13, var6_int);
+                OpenGlSceneLight.field_p[var12].a(var8, var7Lifetime1, -23776, var13, var6_int);
                 bt.field_c[var12].a(var9 - param2, var7Lifetime1, -23776, 0, param2);
                 MembersUpsellMenu.field_y[var12].a(param0, -param4 + (var7Lifetime1 - param4), -23776, param4, var9);
                 PitModel.field_p[var12].a(-var10 + (var8 - param2), -param4 + (var7Lifetime1 - param4), -23776, param4, var10);

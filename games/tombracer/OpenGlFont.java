@@ -232,7 +232,7 @@ final class OpenGlFont extends GameFont {
               }
             }
           }
-          this.field_d = jq.a(var30, 6406, (byte) 67, 6406, param0, var6Lifetime1, false, var6Lifetime1);
+          this.field_d = HardwareSceneLight.a(var30, 6406, (byte) 67, 6406, param0, var6Lifetime1, false, var6Lifetime1);
           this.field_g = true;
         }
         this.field_d.setLinearFiltering(false, 3);

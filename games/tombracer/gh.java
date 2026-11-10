@@ -58,8 +58,8 @@ final class gh extends ToolkitSprite {
         this.field_c.a(1, false, pea.field_c);
         this.field_c.g(3625, param7);
         if (this.field_b) {
-          var13 = (float)this.d();
-          var14 = (float)this.b();
+          var13 = (float)this.paddedHeight();
+          var14 = (float)this.paddedWidth();
           var15 = (-param0 + param2) / var13;
           var16 = (param3 - param1) / var13;
           var17 = (-param0 + param4) / var14;
@@ -90,7 +90,7 @@ final class gh extends ToolkitSprite {
         this.field_c.a(1, false, PlayerContextMenu.field_j);
     }
 
-    final int a() {
+    final int height() {
         return this.field_l;
     }
 
@@ -161,11 +161,11 @@ final class gh extends ToolkitSprite {
         }
     }
 
-    final int d() {
+    final int paddedHeight() {
         return this.field_m + this.field_g + this.field_l;
     }
 
-    final int b() {
+    final int paddedWidth() {
         return this.field_i + this.field_j + this.field_k;
     }
 
@@ -175,11 +175,11 @@ final class gh extends ToolkitSprite {
         int var1 = -2 % ((param0 - 70) / 50);
     }
 
-    final int c() {
+    final int width() {
         return this.field_k;
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void setInsets(int param0, int param1, int param2, int param3) {
         boolean stackIn_7_1 = false;
         this.field_i = param3;
         this.field_g = param0;
@@ -216,8 +216,8 @@ final class gh extends ToolkitSprite {
         this.field_c.g(3625, param5);
         var10.a(1.0f, this.field_d.textureV((float)this.field_l, (byte) -33), false, this.field_d.textureU(81, (float)this.field_k));
         if (this.field_b) {
-          param2 = this.field_l * param2 / this.d();
-          param3 = param3 * this.field_k / this.b();
+          param2 = this.field_l * param2 / this.paddedHeight();
+          param3 = param3 * this.field_k / this.paddedWidth();
           param0 = param0 + param2 * this.field_g / this.field_l;
           param1 = param1 + param3 * this.field_j / this.field_k;
         }

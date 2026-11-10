@@ -88,8 +88,8 @@ final class MembersUpsellMenu extends MenuScreen {
           for (var5 = 0; LoginForm.field_z.length > var5; var5++) {
             if (mca.a((byte) 6, var5) &&
               BrickOperator.d(100, var5)) {
-              var6 = LoginForm.field_z[var5] + (this.field_t + (ConsoleWindow.field_d.a() >> 1));
-              var7 = this.field_r - (-hq.field_b[var5] - (ConsoleWindow.field_d.c() >> 1));
+              var6 = LoginForm.field_z[var5] + (this.field_t + (ConsoleWindow.field_d.height() >> 1));
+              var7 = this.field_r - (-hq.field_b[var5] - (ConsoleWindow.field_d.width() >> 1));
               var8 = 20;
               if (AgeValidator.field_j > var6 - var8 &&
                 var8 + var6 > AgeValidator.field_j &&
@@ -183,7 +183,7 @@ final class MembersUpsellMenu extends MenuScreen {
         var5 = 40;
         var4Lifetime1 = 260;
         var7 = this.field_r - (100 - SwitchLinkList.b(param0 + 28));
-        kq.field_a.a(var6 - (kq.field_a.a() >> 1), -(kq.field_a.c() >> 1) + var7);
+        kq.field_a.a(var6 - (kq.field_a.height() >> 1), -(kq.field_a.width() >> 1) + var7);
         SocketConnector.a(vj.worldNames[this.field_v].toUpperCase(), 1, eda.field_f, 2431750, 8 + o.field_d.field_m, var5, 1, var7 - (var5 >> 1), var6 - (var4Lifetime1 >> 1), -1, (byte) 60, var4Lifetime1);
         if (MultiplayerLoginMenu.b(false) && (TextWidgetPainter.a(62) ||
           mq.field_e.field_a ||

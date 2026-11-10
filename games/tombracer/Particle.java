@@ -3,22 +3,22 @@
  */
 final class Particle extends PooledObject implements Renderable {
     private int field_t;
-    private int field_l;
-    private int field_B;
+    private int z;
+    private int x;
     private int field_j;
     private int field_n;
     private int lifetime;
     private int field_p;
     private int field_u;
-    private int field_x;
+    private int y;
     private int field_r;
-    private int field_v;
-    private int field_q;
-    private int field_y;
+    private int velocityZ;
+    private int velocityX;
+    private int velocityY;
     private int field_z;
     private boolean expired;
     private int field_o;
-    private String field_w;
+    private String text;
     private int field_m;
     private int age;
     private int field_A;
@@ -34,9 +34,9 @@ final class Particle extends PooledObject implements Renderable {
     public final int getRenderY(byte param0) {
         if (param0 <= 91) {
           this.a((byte) -91);
-          return this.field_x;
+          return this.y;
         }
-        return this.field_x;
+        return this.y;
     }
 
     final int a(byte param0) {
@@ -67,52 +67,52 @@ final class Particle extends PooledObject implements Renderable {
           return;
         }
         this.age = this.age + 1;
-        this.field_q = this.field_q + this.field_n;
-        this.field_y = this.field_y + this.field_j;
-        this.field_v = this.field_v + this.field_o;
+        this.velocityX = this.velocityX + this.field_n;
+        this.velocityY = this.velocityY + this.field_j;
+        this.velocityZ = this.velocityZ + this.field_o;
         if (this.lifetime <= this.age) {
           this.expired = true;
-          this.field_B = this.field_B + this.field_q;
+          this.x = this.x + this.velocityX;
           if (param0 != -1) {
             var4 = (String) null;
             Particle.a((String) null, (ResourceArchive) null, (String) null, -74);
-            this.field_l = this.field_l + this.field_v;
+            this.z = this.z + this.velocityZ;
             this.field_m = this.field_m + this.field_r;
-            this.field_x = this.field_x + this.field_y;
+            this.y = this.y + this.velocityY;
             return;
           }
-          this.field_l = this.field_l + this.field_v;
+          this.z = this.z + this.velocityZ;
           this.field_m = this.field_m + this.field_r;
-          this.field_x = this.field_x + this.field_y;
+          this.y = this.y + this.velocityY;
           return;
         }
-        this.field_B = this.field_B + this.field_q;
+        this.x = this.x + this.velocityX;
         if (param0 == -1) {
-          this.field_l = this.field_l + this.field_v;
+          this.z = this.z + this.velocityZ;
           this.field_m = this.field_m + this.field_r;
-          this.field_x = this.field_x + this.field_y;
+          this.y = this.y + this.velocityY;
           return;
         }
         var4Lifetime1 = (String) null;
         Particle.a((String) null, (ResourceArchive) null, (String) null, -74);
-        this.field_l = this.field_l + this.field_v;
+        this.z = this.z + this.velocityZ;
         this.field_m = this.field_m + this.field_r;
-        this.field_x = this.field_x + this.field_y;
+        this.y = this.y + this.velocityY;
     }
 
     public final int getRenderZ(byte param0) {
         if (param0 >= -86) {
           this.field_r = -74;
-          return this.field_l;
+          return this.z;
         }
-        return this.field_l;
+        return this.z;
     }
 
-    final int c(boolean param0) {
+    final int getX(boolean param0) {
         if (!param0) {
           return -121;
         }
-        return this.field_B;
+        return this.x;
     }
 
     final static Sprite[] a(String param0, ResourceArchive param1, String param2, int param3) {
@@ -193,7 +193,7 @@ final class Particle extends PooledObject implements Renderable {
           if (param1 != 5465) {
             this.field_r = 51;
           }
-          if (this.field_l < 0) {
+          if (this.z < 0) {
             param0.addToLayer((byte) 34, 2, (Renderable) (this));
             return;
           }
@@ -223,7 +223,7 @@ final class Particle extends PooledObject implements Renderable {
     final void a(int param0, int param1, String param2) {
         try {
           this.field_t = param1;
-          this.field_w = param2;
+          this.text = param2;
           if (param0 != 0) {
             this.a(33, 91, 93);
           }
@@ -241,12 +241,12 @@ final class Particle extends PooledObject implements Renderable {
         return this.field_p;
     }
 
-    final int e(boolean param0) {
+    final int getZ(boolean param0) {
         if (!param0) {
           this.a(true, -89);
-          return this.field_l;
+          return this.z;
         }
-        return this.field_l;
+        return this.z;
     }
 
     final void a(int param0, int param1, int param2) {
@@ -255,16 +255,16 @@ final class Particle extends PooledObject implements Renderable {
           this.field_m = param0;
           return;
         }
-        this.field_l = -104;
+        this.z = -104;
         this.field_r = param1;
         this.field_m = param0;
     }
 
-    final int i(int param0) {
+    final int getY(int param0) {
         if (param0 != 0) {
           return -115;
         }
-        return this.field_x;
+        return this.y;
     }
 
     public final void updateAnimation(int param0) {
@@ -318,16 +318,16 @@ final class Particle extends PooledObject implements Renderable {
         }
     }
 
-    final String a(boolean param0) {
+    final String getText(boolean param0) {
         if (param0) {
           return (String) null;
         }
-        return this.field_w;
+        return this.text;
     }
 
     final void a(boolean param0, int param1) {
         if (!param0) {
-          this.c(true);
+          this.getX(true);
           this.field_p = param1;
           return;
         }
@@ -335,12 +335,12 @@ final class Particle extends PooledObject implements Renderable {
     }
 
     final void mirrorInRoom(Room param0, int param1) {
-        this.field_B = param0.mirrorX(this.field_B, (byte) 71);
+        this.x = param0.mirrorX(this.x, (byte) 71);
         if (param1 >= -16) {
           return;
         }
         try {
-          this.field_q = -this.field_q;
+          this.velocityX = -this.velocityX;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hr.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -365,12 +365,12 @@ final class Particle extends PooledObject implements Renderable {
     }
 
     final void setPosition(int param0, byte param1, int param2, int param3) {
-        this.field_B = param0;
+        this.x = param0;
         if (param1 != -78) {
           return;
         }
-        this.field_x = param2;
-        this.field_l = param3;
+        this.y = param2;
+        this.z = param3;
     }
 
     final void b(int param0, int param1, int param2) {
@@ -382,41 +382,41 @@ final class Particle extends PooledObject implements Renderable {
 
     public final int getRenderX(byte param0) {
         int var2 = 76 % ((-23 - param0) / 53);
-        return this.field_B;
+        return this.x;
     }
 
     final boolean g(int param0) {
         if (param0 != -847) {
           return true;
         }
-        return this.field_w != null ? true : false;
+        return this.text != null ? true : false;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
-        this.field_q = param2;
+        this.velocityX = param2;
         if (param6 == -20) {
           this.field_j = param1;
           this.field_o = param5;
           this.field_n = param3;
-          this.field_y = param0;
-          this.field_v = param4;
+          this.velocityY = param0;
+          this.velocityZ = param4;
           return;
         }
     }
 
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
-        this.field_q = 0;
+        this.velocityX = 0;
         this.field_z = param1;
         this.field_A = param3;
         this.expired = param0 ? true : false;
         this.field_j = 0;
-        this.field_w = null;
+        this.text = null;
         this.field_u = param2;
         this.field_o = 0;
         this.age = 0;
         this.field_m = 0;
-        this.field_v = 0;
-        this.field_y = 0;
+        this.velocityZ = 0;
+        this.velocityY = 0;
         this.lifetime = param4;
         this.field_n = 0;
         this.field_r = 0;

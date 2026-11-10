@@ -213,7 +213,7 @@ final class qna {
             mba.field_g[0] = FleeLocomotor.field_B;
             SpriteTileOperator.field_w = new int[2];
             mba.field_g[3] = mha.field_F;
-            mba.field_g[4] = kka.field_p;
+            mba.field_g[4] = NativeSceneLight.field_p;
             CoinItemComponent.field_H[3] = 1;
             SpriteTileOperator.field_w[1] = 2;
             mba.field_g[5] = "";

@@ -71,7 +71,7 @@ abstract class PrefabComponent extends RoomComponent {
           var13.z(1);
           for (var9 = 0; this.mounts.length > var9; var9++) {
             var10 = this.mounts[var9];
-            var11 = var10.a(-89);
+            var11 = var10.getChild(-89);
             if (var11 != null) {
               stackIn_14_0 = var11;
               stackIn_14_1 = param0;

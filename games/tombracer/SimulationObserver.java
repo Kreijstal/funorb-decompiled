@@ -91,7 +91,7 @@ abstract class SimulationObserver {
     }
 
     final static void composeAgreementText(byte param0) {
-        rfa.field_B = FleeLocomotor.field_B + " <b>" + WeaveOperator.field_s + "</b> " + cq.field_c + " <b>" + mha.field_F + "</b> " + kka.field_p + "<br>" + "<br>" + wg.field_k;
+        rfa.field_B = FleeLocomotor.field_B + " <b>" + WeaveOperator.field_s + "</b> " + cq.field_c + " <b>" + mha.field_F + "</b> " + NativeSceneLight.field_p + "<br>" + "<br>" + wg.field_k;
         if (param0 != -27) {
           BeamSegment var2 = (BeamSegment) null;
           SimulationObserver.a(-114, -20, 86, 69, (BeamSegment) null, -36, 11);

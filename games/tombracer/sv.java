@@ -81,7 +81,7 @@ final class sv extends MenuScreen {
     final void draw(byte param0, boolean param1) {
         super.draw(param0, param1);
         int var3 = this.items[1].field_i - 70 + this.field_r.e(47) - 150;
-        WhiteLightShooterComponent.field_K.a((aaa.a(false) >> 1) - (WhiteLightShooterComponent.field_K.a() >> 1), var3);
+        WhiteLightShooterComponent.field_K.a((aaa.a(false) >> 1) - (WhiteLightShooterComponent.field_K.height() >> 1), var3);
     }
 
     public static void releaseStatics(int param0) {

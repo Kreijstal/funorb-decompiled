@@ -351,12 +351,12 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         this.i((byte) 123);
         for (var2 = 0; this.field_Bc > var2; var2++) {
           var3 = this.field_ib[var2];
-          var4 = var3.c(param0 ^ -43);
+          var4 = var3.getColour(param0 ^ -43);
           var5 = 16386 + var2;
-          var6 = var3.b(0) / 255.0f;
-          HelloCommand.field_r[0] = (float)var3.d(13437);
-          HelloCommand.field_r[1] = (float)var3.a(19848);
-          HelloCommand.field_r[2] = (float)var3.b((byte) 11);
+          var6 = var3.getIntensity(0) / 255.0f;
+          HelloCommand.field_r[0] = (float)var3.getX(13437);
+          HelloCommand.field_r[1] = (float)var3.getY(19848);
+          HelloCommand.field_r[2] = (float)var3.getZ((byte) 11);
           HelloCommand.field_r[3] = 1.0f;
           jaggl.OpenGL.glLightfv(var5, 4611, HelloCommand.field_r, 0);
           HelloCommand.field_r[3] = 1.0f;
@@ -364,7 +364,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           HelloCommand.field_r[2] = var6 * (float)SnakePitBehaviour.bitwiseAnd(var4, 255);
           HelloCommand.field_r[0] = (float)SnakePitBehaviour.bitwiseAnd(255, var4 >> 16) * var6;
           jaggl.OpenGL.glLightfv(var5, 4609, HelloCommand.field_r, 0);
-          jaggl.OpenGL.glLightf(var5, 4617, 1.0f / (float)(var3.a((byte) -23) * var3.a((byte) -84)));
+          jaggl.OpenGL.glLightf(var5, 4617, 1.0f / (float)(var3.getRadius((byte) -23) * var3.getRadius((byte) -84)));
           jaggl.OpenGL.glEnable(var5);
         }
         while (var2 < this.field_S) {

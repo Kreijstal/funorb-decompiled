@@ -1365,7 +1365,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
             var7 = new SoftwareRgbSprite(this, var23, var5, var6);
           }
         }
-        ((ToolkitSprite) (var7)).b(param0.field_d, param0.field_c, param0.field_b, param0.field_e);
+        ((ToolkitSprite) (var7)).setInsets(param0.field_d, param0.field_c, param0.field_b, param0.field_e);
         return (ToolkitSprite) (var7);
     }
 

@@ -92,17 +92,17 @@ final class RasterizerOperator extends TextureOperator {
           if (null != this.field_p) {
             for (var5 = 0; var5 < this.field_p.length; var5++) {
               var6 = this.field_p[var5];
-              var7 = var6.field_c;
-              var8 = var6.field_b;
+              var7 = var6.fillColour;
+              var8 = var6.outlineColour;
               if (var7 < 0) {
                 if (var8 >= 0) {
-                  var6.a(var3_int, var4, true);
+                  var6.drawOutline(var3_int, var4, true);
                 }
               } else {
                 if (0 > var8) {
-                  var6.a(var4, 119, var3_int);
+                  var6.drawFilled(var4, 119, var3_int);
                 } else {
-                  var6.a((byte) -122, var3_int, var4);
+                  var6.drawFilledWithOutline((byte) -122, var3_int, var4);
                 }
               }
             }

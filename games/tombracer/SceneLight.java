@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class SceneLight extends IntrusiveNode {
-    float field_j;
+    float intensity;
     static int field_i;
-    int field_h;
+    int radius;
     static SpriteData field_n;
-    int field_l;
-    int field_m;
+    int z;
+    int y;
     static String field_f;
-    int field_k;
-    int field_g;
+    int x;
+    int colour;
 
-    abstract void a(byte param0, int param1);
+    abstract void setRadius(byte param0, int param1);
 
     public static void releaseStatics(boolean param0) {
         field_f = null;
@@ -22,14 +22,14 @@ abstract class SceneLight extends IntrusiveNode {
         }
     }
 
-    final int b(byte param0) {
+    final int getZ(byte param0) {
         if (param0 != 11) {
-          this.field_j = -0.5366194248199463f;
+          this.intensity = -0.5366194248199463f;
         }
-        return this.field_l;
+        return this.z;
     }
 
-    abstract void a(byte param0, float param1);
+    abstract void setIntensity(byte param0, float param1);
 
     final static void a(GraphicsToolkit param0, int param1) {
         int[] var13 = null;
@@ -103,7 +103,7 @@ abstract class SceneLight extends IntrusiveNode {
               var10 = var9 + ((var9 << 16) + (var9 << 8));
               var3[var4] = WallTile.bitwiseOr(var5 << 24, var10);
             }
-            qf.field_k[var2_intLifetime2] = param0.createSpriteCopy(var3, OpenGlFramebuffer.field_i[var2_intLifetime2].c(), 89, OpenGlFramebuffer.field_i[var2_intLifetime2].a(), OpenGlFramebuffer.field_i[var2_intLifetime2].a(), 0);
+            qf.field_k[var2_intLifetime2] = param0.createSpriteCopy(var3, OpenGlFramebuffer.field_i[var2_intLifetime2].width(), 89, OpenGlFramebuffer.field_i[var2_intLifetime2].height(), OpenGlFramebuffer.field_i[var2_intLifetime2].height(), 0);
           }
           bsa.field_i = su.createToolkitSprite(LegacyOpenGlCubeTexture.field_l, param0, (byte) -107);
           fa.field_a = LoadLevelCommand.a(param0, nk.field_k, -99);
@@ -134,50 +134,50 @@ abstract class SceneLight extends IntrusiveNode {
         }
     }
 
-    final int c(int param0) {
+    final int getColour(int param0) {
         if (param0 > -111) {
           field_i = -124;
         }
-        return this.field_g;
+        return this.colour;
     }
 
-    abstract void a(int param0, int param1);
+    abstract void setColour(int param0, int param1);
 
-    final int a(byte param0) {
+    final int getRadius(byte param0) {
         int var2 = 76 / ((param0 - 31) / 54);
-        return this.field_h;
+        return this.radius;
     }
 
-    final int d(int param0) {
+    final int getX(int param0) {
         if (param0 != 13437) {
           return 104;
         }
-        return this.field_k;
+        return this.x;
     }
 
-    abstract void a(int param0, int param1, byte param2, int param3);
+    abstract void setPosition(int param0, int param1, byte param2, int param3);
 
     SceneLight(int param0, int param1, int param2, int param3, int param4, float param5) {
-        this.field_m = param1;
-        this.field_k = param0;
-        this.field_l = param2;
-        this.field_j = param5;
-        this.field_g = param4;
-        this.field_h = param3;
+        this.y = param1;
+        this.x = param0;
+        this.z = param2;
+        this.intensity = param5;
+        this.colour = param4;
+        this.radius = param3;
     }
 
-    final float b(int param0) {
+    final float getIntensity(int param0) {
         if (param0 != 0) {
           return -0.41912034153938293f;
         }
-        return this.field_j;
+        return this.intensity;
     }
 
-    final int a(int param0) {
+    final int getY(int param0) {
         if (param0 != 19848) {
           return -116;
         }
-        return this.field_m;
+        return this.y;
     }
 
     static {

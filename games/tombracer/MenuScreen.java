@@ -837,7 +837,7 @@ abstract class MenuScreen extends GameScreen {
             stackIn_3_0 = (String) null;
             return stackIn_3_0;
           }
-          var3 = wba.field_q[param0];
+          var3 = OpenGlSceneLight.field_q[param0];
           if (param0 != 29) {
             if (param0 != 30) {
               if (param0 == 31) {

@@ -88,7 +88,7 @@ final class SnakePitBehaviour extends Behaviour {
             stackIn_2_0 = 123;
             return stackIn_2_0;
           }
-          var4_int = param1.i(-1);
+          var4_int = param1.getSize(-1);
           stackIn_4_0 = this.onAreaEffect(var4_int, var4_int, param2, param1.getX(param0 ^ 25943), (byte) 125, param1.getY(param0 ^ 16612));
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -2035,7 +2035,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     }
 
     final SceneLight createLight(int param0, int param1, int param2, int param3, int param4, float param5) {
-        return (SceneLight) ((Object) new wba(param0, param1, param2, param3, param4, param5));
+        return (SceneLight) ((Object) new OpenGlSceneLight(param0, param1, param2, param3, param4, param5));
     }
 
     final boolean i(int param0) {
@@ -2073,19 +2073,19 @@ final class OpenGlToolkit extends GraphicsToolkit {
         int var7 = TombRacer.field_G ? 1 : 0;
         for (var2 = 0; this.field_sb > var2; var2++) {
           var3 = this.field_Dc[var2];
-          WhirlpoolDigest.field_h[0] = (float)var3.d(13437);
+          WhirlpoolDigest.field_h[0] = (float)var3.getX(13437);
           var4 = 16386 + var2;
-          WhirlpoolDigest.field_h[1] = (float)var3.a(19848);
-          WhirlpoolDigest.field_h[2] = (float)var3.b((byte) 11);
+          WhirlpoolDigest.field_h[1] = (float)var3.getY(19848);
+          WhirlpoolDigest.field_h[2] = (float)var3.getZ((byte) 11);
           WhirlpoolDigest.field_h[3] = 1.0f;
           jaggl.OpenGL.glLightfv(var4, 4611, WhirlpoolDigest.field_h, 0);
-          var5 = var3.c(param0 ^ 123);
-          var6 = var3.b(0) / 255.0f;
+          var5 = var3.getColour(param0 ^ 123);
+          var6 = var3.getIntensity(0) / 255.0f;
           WhirlpoolDigest.field_h[1] = (float)(SnakePitBehaviour.bitwiseAnd(65532, var5) >> 8) * var6;
           WhirlpoolDigest.field_h[0] = var6 * (float)SnakePitBehaviour.bitwiseAnd(var5 >> 16, 255);
           WhirlpoolDigest.field_h[2] = (float)SnakePitBehaviour.bitwiseAnd(255, var5) * var6;
           jaggl.OpenGL.glLightfv(var4, 4609, WhirlpoolDigest.field_h, 0);
-          jaggl.OpenGL.glLightf(var4, 4617, 1.0f / (float)(var3.a((byte) -126) * var3.a((byte) -126)));
+          jaggl.OpenGL.glLightf(var4, 4617, 1.0f / (float)(var3.getRadius((byte) -126) * var3.getRadius((byte) -126)));
           jaggl.OpenGL.glEnable(var4);
         }
         if (param0 != -1) {
@@ -2792,9 +2792,9 @@ final class OpenGlToolkit extends GraphicsToolkit {
             }
             this.b((Framebuffer) (this.field_bb), (byte) 81);
             if (param1) {
-              var3 = (OpenGlRenderbuffer) (this.field_Wc.get((byte) -106, (long)(this.field_Mb.a() << 16 | this.field_Mb.c())));
+              var3 = (OpenGlRenderbuffer) (this.field_Wc.get((byte) -106, (long)(this.field_Mb.height() << 16 | this.field_Mb.width())));
               if (var3 == null) {
-                var9 = new OpenGlRenderbuffer(this, 6402, this.field_Mb.a(), this.field_Mb.c());
+                var9 = new OpenGlRenderbuffer(this, 6402, this.field_Mb.height(), this.field_Mb.width());
                 var3 = var9;
                 this.field_rc = this.field_rc + var9.field_o;
                 while (this.field_rc > 2097152) {
@@ -2809,7 +2809,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
                   }
                   break;
                 }
-                this.field_Wc.put((long)(this.field_Mb.a() << 16 | this.field_Mb.c()), 124, var9);
+                this.field_Wc.put((long)(this.field_Mb.height() << 16 | this.field_Mb.width()), 124, var9);
               }
               this.field_F.a(97, var3);
               this.field_bb.a(8, var3, true);
@@ -2819,9 +2819,9 @@ final class OpenGlToolkit extends GraphicsToolkit {
             if (!this.field_Yc) {
               throw new RuntimeException("");
             }
-            var3_ref = (cla) (this.field_Wc.get((byte) -109, (long)(this.field_Mb.a() << 16 | this.field_Mb.c())));
+            var3_ref = (cla) (this.field_Wc.get((byte) -109, (long)(this.field_Mb.height() << 16 | this.field_Mb.width())));
             if (var3_ref == null) {
-              var7 = new cla(this, this.field_Mb.a(), this.field_Mb.c());
+              var7 = new cla(this, this.field_Mb.height(), this.field_Mb.width());
               var3_ref = var7;
               this.field_rc = this.field_rc + 4 * var7.field_p;
               while (2097152 < this.field_rc) {
@@ -2836,13 +2836,13 @@ final class OpenGlToolkit extends GraphicsToolkit {
                 }
                 break;
               }
-              this.field_Wc.put((long)(this.field_Mb.a() << 16 | this.field_Mb.c()), 112, var7);
+              this.field_Wc.put((long)(this.field_Mb.height() << 16 | this.field_Mb.width()), 112, var7);
             }
             this.field_F.a(75, var3_ref);
             this.field_l.setPbuffer(var3_ref.a((byte) 101));
           }
-          this.field_Y = param0.a();
-          this.field_I = param0.c();
+          this.field_Y = param0.height();
+          this.field_I = param0.width();
           this.s(3682);
           this.h((byte) 115);
           this.la();
@@ -3348,7 +3348,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
             }
           }
           var6 = this.createSpriteCopy(var12, param0.field_a, 96, param0.field_i, param0.field_i, 0);
-          var6.b(param0.field_d, param0.field_c, param0.field_b, param0.field_e);
+          var6.setInsets(param0.field_d, param0.field_c, param0.field_b, param0.field_e);
           stackIn_18_0 = var6;
           return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

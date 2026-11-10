@@ -228,7 +228,7 @@ final class QuickChatMenu extends jea {
               ResultsPhase.a(OpenGlUnderwaterEffect.field_q, (String) null, param1, 32371, wp.field_a, var5);
               oi.a(ica.field_b, var5, 4, wp.field_a, OpenGlUnderwaterEffect.field_q);
               ComponentTargetList.b(param3 - 48);
-              jq.c((byte) -25);
+              HardwareSceneLight.c((byte) -25);
             } else {
               kra.a(false);
               ComponentTargetList.b(param3 + 7);

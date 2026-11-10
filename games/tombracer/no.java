@@ -35,7 +35,7 @@ final class no extends MatchOverlay {
           if (param0 >= -107) {
             return;
           }
-          var2 = aq.field_a[0].c();
+          var2 = aq.field_a[0].width();
           var3 = 60;
           var3 = var2 * (var3 / var2);
           if (this.field_t < 20) {
@@ -66,7 +66,7 @@ final class no extends MatchOverlay {
           if (param0 >= -107) {
             return;
           }
-          var2Lifetime1 = aq.field_a[0].c();
+          var2Lifetime1 = aq.field_a[0].width();
           var3Lifetime1 = 60;
           var3Lifetime1 = var2Lifetime1 * (var3Lifetime1 / var2Lifetime1);
           if (this.field_t < 20) {
@@ -98,7 +98,7 @@ final class no extends MatchOverlay {
           if (param0 >= -107) {
             return;
           }
-          var2Lifetime2 = aq.field_a[0].c();
+          var2Lifetime2 = aq.field_a[0].width();
           var3Lifetime2 = 60;
           var3Lifetime2 = var2Lifetime2 * (var3Lifetime2 / var2Lifetime2);
           if (this.field_t < 20) {
@@ -130,7 +130,7 @@ final class no extends MatchOverlay {
         if (param0 >= -107) {
           return;
         }
-        var2Lifetime3 = aq.field_a[0].c();
+        var2Lifetime3 = aq.field_a[0].width();
         var3Lifetime3 = 60;
         var3Lifetime3 = var2Lifetime3 * (var3Lifetime3 / var2Lifetime3);
         if (this.field_t >= 20) {
@@ -177,7 +177,7 @@ final class no extends MatchOverlay {
         int var16 = TombRacer.field_G ? 1 : 0;
         int var2 = 300;
         int var3 = 60;
-        int var4 = aq.field_a[0].a();
+        int var4 = aq.field_a[0].height();
         int var9Lifetime1;
         int var10Lifetime1;
         int var11Lifetime1;
@@ -185,7 +185,7 @@ final class no extends MatchOverlay {
         int var13Lifetime1;
         int var15Lifetime1;
         var2 = var4 * (var2 / var4);
-        int var5 = aq.field_a[0].c();
+        int var5 = aq.field_a[0].width();
         var3 = var3 / var5 * var5;
         int var6 = this.field_j;
         int var7 = -(var3 / 2) + this.field_l;

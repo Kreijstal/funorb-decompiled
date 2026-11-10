@@ -93,8 +93,8 @@ final class kla {
     }
 
     final static void b(int param0) {
-        if (wba.field_o != null) {
-          wba.field_o.field_h = false;
+        if (OpenGlSceneLight.field_o != null) {
+          OpenGlSceneLight.field_o.field_h = false;
           C2SChooseRewardPacket.b(12475, param0);
           return;
         }

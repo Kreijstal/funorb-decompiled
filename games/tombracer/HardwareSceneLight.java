@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jq extends SceneLight {
+final class HardwareSceneLight extends SceneLight {
     static jea field_o;
 
     final static void c(byte param0) {
@@ -10,15 +10,15 @@ final class jq extends SceneLight {
         gp.field_h = 0;
     }
 
-    final void a(byte param0, float param1) {
-        this.field_j = param1;
+    final void setIntensity(byte param0, float param1) {
+        this.intensity = param1;
         if (param0 <= 77) {
           field_o = (jea) null;
         }
     }
 
-    final void a(byte param0, int param1) {
-        this.field_h = param1;
+    final void setRadius(byte param0, int param1) {
+        this.radius = param1;
         if (param0 != 62) {
           field_o = (jea) null;
         }
@@ -53,7 +53,7 @@ final class jq extends SceneLight {
         try {
           if (param2 <= 52) {
             var9 = (OpenGlToolkit) null;
-            jq.a((byte[]) null, 99, (byte) 8, -3, (OpenGlToolkit) null, -12, false, 23);
+            HardwareSceneLight.a((byte[]) null, 99, (byte) 8, -3, (OpenGlToolkit) null, -12, false, 23);
           }
           if (!param4.field_Gb && (!cla.isPowerOfTwoOrZero(9181, param5) ||
             !cla.isPowerOfTwoOrZero(9181, param7))) {
@@ -86,14 +86,14 @@ final class jq extends SceneLight {
         }
     }
 
-    final void a(int param0, int param1) {
-        this.field_g = param1;
+    final void setColour(int param0, int param1) {
+        this.colour = param1;
         if (param0 != 255) {
           field_o = (jea) null;
         }
     }
 
-    jq(int param0, int param1, int param2, int param3, int param4, float param5) {
+    HardwareSceneLight(int param0, int param1, int param2, int param3, int param4, float param5) {
         super(param0, param1, param2, param3, param4, param5);
     }
 
@@ -104,11 +104,11 @@ final class jq extends SceneLight {
         field_o = null;
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
-        this.field_k = param1;
+    final void setPosition(int param0, int param1, byte param2, int param3) {
+        this.x = param1;
         int var5 = 97 % ((param2 + 55) / 58);
-        this.field_m = param0;
-        this.field_l = param3;
+        this.y = param0;
+        this.z = param3;
     }
 
     static {

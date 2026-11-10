@@ -3,19 +3,19 @@
  */
 final class Obstacle extends IntrusiveNode implements Renderable, Collidable, WorldBody, noa, qn {
     private int field_n;
-    private Room field_m;
-    private int field_p;
+    private Room room;
+    private int x;
     static IntrusiveDeque field_f;
     static mp field_h;
     static String field_j;
     static int field_l;
-    private int field_r;
-    private IntrusiveDeque field_k;
-    private int field_g;
-    private int field_q;
+    private int y;
+    private IntrusiveDeque models;
+    private int width;
+    private int height;
     static jea field_s;
     private bca field_o;
-    private boolean field_i;
+    private boolean modelsBuilt;
 
     public final int a(boolean param0, int param1, int param2, int param3, int param4, int param5) {
         if (!param0) {
@@ -27,22 +27,22 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
 
     private final void t(int param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
-        TrapModel var4 = (TrapModel) (this.field_k.first(-80));
+        TrapModel var4 = (TrapModel) (this.models.first(-80));
         while (var4 != null) {
           var4.i((byte) -30);
-          var4 = (TrapModel) (this.field_k.next(param0 ^ 112));
+          var4 = (TrapModel) (this.models.next(param0 ^ 112));
         }
         if (param0 != 0) {
           this.field_o = (bca) null;
         }
-        this.field_k.clear(param0 + 8);
+        this.models.clear(param0 + 8);
     }
 
     public final int getWidth(int param0) {
         if (param0 >= -11) {
           this.isFallingIntoPit(-31);
         }
-        return this.field_g;
+        return this.width;
     }
 
     public final boolean crush(int param0, WorldBody param1) {
@@ -70,7 +70,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
         }
     }
 
-    final void a(RenderScene param0, byte param1) {
+    final void removeFromScene(RenderScene param0, byte param1) {
         int var3_int = 0;
         TrapModel var4 = null;
         int var5 = 0;
@@ -85,10 +85,10 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
           if (this.r(24269)) {
             param0.removeFromLayer(9, (Renderable) (this), (byte) -33);
           }
-          var4 = (TrapModel) (this.field_k.first(-80));
+          var4 = (TrapModel) (this.models.first(-80));
           while (var4 != null) {
             var4.removeFromScene(param0, 111);
-            var4 = (TrapModel) (this.field_k.next(124));
+            var4 = (TrapModel) (this.models.next(124));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -122,7 +122,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
         if (param0 <= 90) {
           field_s = (jea) null;
         }
-        return this.field_p;
+        return this.x;
     }
 
     public final void render(int param0, iq param1) {
@@ -144,7 +144,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
 
     public final boolean b(boolean param0) {
         if (!param0) {
-          this.field_m = (Room) null;
+          this.room = (Room) null;
           return false;
         }
         return false;
@@ -155,14 +155,14 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
           WorldBody var3 = (WorldBody) null;
           this.crush(69, (WorldBody) null);
         }
-        return this.field_r;
+        return this.y;
     }
 
     public final int getHeight(byte param0) {
         if (param0 != 55) {
           this.getPreviousX(29);
         }
-        return this.field_q;
+        return this.height;
     }
 
     public final boolean tryPush(int param0, boolean param1, int param2, int param3, int param4, int param5) {
@@ -180,7 +180,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
           var3 = (TrapModel) null;
           this.addModel((TrapModel) null, false);
         }
-        stackIn_6_0 = (this.field_m.o((byte) -82)) && (!this.b(this.field_m.i(param0 ^ 6029), 1569));
+        stackIn_6_0 = (this.room.o((byte) -82)) && (!this.b(this.room.i(param0 ^ 6029), 1569));
         return stackIn_6_0;
     }
 
@@ -196,14 +196,14 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
         try {
           param1.collisionGrid.remove((Collidable) (this), (byte) 105);
           if (param0 > -74) {
-            this.field_k = (IntrusiveDeque) null;
+            this.models = (IntrusiveDeque) null;
           }
-          this.field_p = param1.getWidth((byte) -86) / 2 - (this.field_p - param1.getWidth((byte) -86) / 2);
+          this.x = param1.getWidth((byte) -86) / 2 - (this.x - param1.getWidth((byte) -86) / 2);
           param1.collisionGrid.insert((Collidable) (this), 7073);
-          var5 = (TrapModel) (this.field_k.first(-80));
+          var5 = (TrapModel) (this.models.first(-80));
           while (var5 != null) {
             var5.mirror(61);
-            var5 = (TrapModel) (this.field_k.next(108));
+            var5 = (TrapModel) (this.models.next(108));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -279,7 +279,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
           if (param0 != -1) {
             field_s = (jea) null;
           }
-          var5_int = SimulationObserver.a(this.field_g, 12, this.field_r, this.field_q, param3, this.field_p, 2);
+          var5_int = SimulationObserver.a(this.width, 12, this.y, this.height, param3, this.x, 2);
           if (var5_int == -1) {
             return false;
           }
@@ -375,33 +375,33 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
 
     final void c(boolean param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
-        TrapModel var4 = (TrapModel) (this.field_k.first(-80));
+        TrapModel var4 = (TrapModel) (this.models.first(-80));
         while (var4 != null) {
           var4.e(-41);
-          var4 = (TrapModel) (this.field_k.next(118));
+          var4 = (TrapModel) (this.models.next(118));
         }
         if (!param0) {
-          this.field_i = false;
+          this.modelsBuilt = false;
         }
     }
 
-    final void a(boolean param0, BitPacketBuffer param1) {
+    final void encode(boolean param0, BitPacketBuffer param1) {
         TrapModel var5 = null;
         int var4 = TombRacer.field_G ? 1 : 0;
         try {
-          param1.writeBits((byte) -1, this.field_p / 1048576, 7);
-          param1.writeBits((byte) -8, this.field_r / 1048576, 7);
-          param1.writeBits((byte) 74, this.field_g / 2097152, 6);
-          param1.writeBits((byte) -7, this.field_q / 2097152, 6);
+          param1.writeBits((byte) -1, this.x / 1048576, 7);
+          param1.writeBits((byte) -8, this.y / 1048576, 7);
+          param1.writeBits((byte) 74, this.width / 2097152, 6);
+          param1.writeBits((byte) -7, this.height / 2097152, 6);
           if (!param0) {
-            this.field_i = false;
+            this.modelsBuilt = false;
           }
-          if (this.field_m.formatVersion >= 9) {
-            param1.writeBits((byte) -36, this.field_k.size((byte) -16), 2);
-            var5 = (TrapModel) (this.field_k.first(-80));
+          if (this.room.formatVersion >= 9) {
+            param1.writeBits((byte) -36, this.models.size((byte) -16), 2);
+            var5 = (TrapModel) (this.models.first(-80));
             while (var5 != null) {
               rm.field_a.writeModel(15682, param1, var5);
-              var5 = (TrapModel) (this.field_k.next(127));
+              var5 = (TrapModel) (this.models.next(127));
             }
           }
           this.field_o.a((byte) -79, param1);
@@ -475,35 +475,35 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
         int var6;
         int var7;
         int var8;
-        this.field_m.collisionGrid.remove((Collidable) (this), (byte) 104);
-        this.field_p = this.field_p + param1;
-        this.field_r = this.field_r + param1;
-        var3 = -(this.field_g / 2) + this.field_p;
-        var4 = -(this.field_q / 2) + this.field_r;
+        this.room.collisionGrid.remove((Collidable) (this), (byte) 104);
+        this.x = this.x + param1;
+        this.y = this.y + param1;
+        var3 = -(this.width / 2) + this.x;
+        var4 = -(this.height / 2) + this.y;
         if (param0 >= -122) {
           this.getRenderY((byte) 50);
         }
-        var5 = this.field_g / 2 + this.field_p;
-        var6 = this.field_q / 2 + this.field_r;
+        var5 = this.width / 2 + this.x;
+        var6 = this.height / 2 + this.y;
         if (param1 >= var4) {
           var4 = 0;
         }
         if (var3 <= param1) {
           var3 = 0;
         }
-        var7 = this.field_m.getWidth((byte) -86);
-        var8 = this.field_m.getHeight(34);
+        var7 = this.room.getWidth((byte) -86);
+        var8 = this.room.getHeight(34);
         if (-param1 + var7 <= var5) {
           var5 = var7;
         }
-        this.field_p = (var5 - var3) / 2 + var3;
+        this.x = (var5 - var3) / 2 + var3;
         if (var6 >= var8 - param1) {
           var6 = var8;
         }
-        this.field_q = var6 - var4;
-        this.field_r = (var6 - var4) / 2 + var4;
-        this.field_g = -var3 + var5;
-        this.field_m.collisionGrid.insert((Collidable) (this), 7073);
+        this.height = var6 - var4;
+        this.y = (var6 - var4) / 2 + var4;
+        this.width = -var3 + var5;
+        this.room.collisionGrid.insert((Collidable) (this), 7073);
     }
 
     public static void releaseStatics(byte param0) {
@@ -520,12 +520,12 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
         if (param0 != 24269) {
           this.tryPush(58, true, 114, 87, -117, -85);
         }
-        return this.field_m.o((byte) -82);
+        return this.room.o((byte) -82);
     }
 
     public final int getCollisionId(boolean param0) {
         if (!param0) {
-          this.field_q = -83;
+          this.height = -83;
         }
         return 5 + 5 * this.field_n;
     }
@@ -534,7 +534,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
         if (param0 != 9648) {
           return -56;
         }
-        return this.field_r;
+        return this.y;
     }
 
     public final int getFacingAngle(int param0) {
@@ -546,30 +546,30 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
 
     public final int getRenderX(byte param0) {
         int var2 = -80 % ((param0 + 23) / 53);
-        return this.field_p;
+        return this.x;
     }
 
     public final Room getRoom(byte param0) {
         int var2 = 110 / ((param0 - 0) / 61);
-        return this.field_m;
+        return this.room;
     }
 
     public final boolean intersectsRect(byte param0, int param1, int param2, int param3, int param4) {
         if (param0 != 110) {
           return false;
         }
-        return io.centredBoxesOverlap(param4, this.getY(9648), (byte) -80, param3, this.getX(3), param1, this.field_q, this.field_g, param2);
+        return io.centredBoxesOverlap(param4, this.getY(9648), (byte) -80, param3, this.getX(3), param1, this.height, this.width, param2);
     }
 
-    final void s(int param0) {
+    final void tickModels(int param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
-        TrapModel var2 = (TrapModel) (this.field_k.first(-80));
+        TrapModel var2 = (TrapModel) (this.models.first(-80));
         if (param0 != 0) {
-          this.field_p = 88;
+          this.x = 88;
         }
         while (var2 != null) {
           var2.tick(-1);
-          var2 = (TrapModel) (this.field_k.next(124));
+          var2 = (TrapModel) (this.models.next(124));
         }
     }
 
@@ -581,7 +581,7 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
         return false;
     }
 
-    final void a(byte param0, RenderScene param1) {
+    final void addToScene(byte param0, RenderScene param1) {
         int var4 = 0;
         TrapModel var5 = null;
         RuntimeException stackIn_12_0 = null;
@@ -597,10 +597,10 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
           if (param0 <= 6) {
             return;
           }
-          var5 = (TrapModel) (this.field_k.first(-80));
+          var5 = (TrapModel) (this.models.first(-80));
           while (var5 != null) {
             var5.addToScene(0, param1);
-            var5 = (TrapModel) (this.field_k.next(112));
+            var5 = (TrapModel) (this.models.next(112));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -661,11 +661,11 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
         return this.field_o.a(param0, 14530);
     }
 
-    final void m(int param0) {
-        if (this.field_i) {
+    final void ensureModels(int param0) {
+        if (this.modelsBuilt) {
           return;
         }
-        this.field_i = true;
+        this.modelsBuilt = true;
         this.t(param0);
     }
 
@@ -674,9 +674,9 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
           return;
         }
         try {
-          this.field_k.addLast((byte) -73, param0);
+          this.models.addLast((byte) -73, param0);
           if (!param1) {
-            this.field_r = -69;
+            this.y = -69;
           }
           param0.attach((TrapPart) null, (WorldBody) (this), (byte) 36);
         } catch (RuntimeException runtimeException) {
@@ -693,16 +693,16 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
 
     public final int getRenderY(byte param0) {
         if (param0 < 91) {
-          this.field_g = -15;
+          this.width = -15;
         }
-        return this.field_r;
+        return this.y;
     }
 
     public final int getX(int param0) {
         if (param0 != 3) {
           return -6;
         }
-        return this.field_p;
+        return this.x;
     }
 
     Obstacle(Room param0, BitPacketBuffer param1) {
@@ -717,21 +717,21 @@ final class Obstacle extends IntrusiveNode implements Renderable, Collidable, Wo
         int var3_int = 0;
         RuntimeException var3 = null;
         TrapModel var5 = null;
-        this.field_k = new IntrusiveDeque();
+        this.models = new IntrusiveDeque();
         this.field_o = new bca();
-        this.field_i = false;
+        this.modelsBuilt = false;
         try {
-          this.field_m = param0;
+          this.room = param0;
           if (param0.formatVersion > 20) {
-            this.field_p = 1048576 * param1.readBits((byte) 44, 7);
-            this.field_r = param1.readBits((byte) 44, 7) * 1048576;
-            this.field_g = param1.readBits((byte) 44, 6) * 2097152;
-            this.field_q = param1.readBits((byte) 44, 6) * 2097152;
+            this.x = 1048576 * param1.readBits((byte) 44, 7);
+            this.y = param1.readBits((byte) 44, 7) * 1048576;
+            this.width = param1.readBits((byte) 44, 6) * 2097152;
+            this.height = param1.readBits((byte) 44, 6) * 2097152;
           } else {
-            this.field_p = param1.readBits((byte) 44, 12) << 16;
-            this.field_r = param1.readBits((byte) 44, 12) << 16;
-            this.field_q = param1.readBits((byte) 44, 10) << 16;
-            this.field_g = param1.readBits((byte) 44, 10) << 16;
+            this.x = param1.readBits((byte) 44, 12) << 16;
+            this.y = param1.readBits((byte) 44, 12) << 16;
+            this.height = param1.readBits((byte) 44, 10) << 16;
+            this.width = param1.readBits((byte) 44, 10) << 16;
           }
           if (8 < param0.formatVersion) {
             var3_int = param1.readBits((byte) 44, 2);

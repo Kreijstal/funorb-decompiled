@@ -65,13 +65,13 @@ final class PlayerModel implements PlayerAnimator, gs {
         if (!decompiledSharedTail0) {
           this.field_l.c(-10874, 16777130);
           this.field_l.d(160, param0 ^ 4376);
-          this.field_l.a(8).mode = 0;
+          this.field_l.getAnimatedLight(8).mode = 0;
           decompiledSharedTail0 = (TombRacer.field_G);
         }
         if (decompiledSharedTail0) {
           this.field_l.c(param0 ^ 15220, 16633231);
           this.field_l.d(128, -71);
-          this.field_l.a(85).mode = 11;
+          this.field_l.getAnimatedLight(85).mode = 11;
         }
     }
 

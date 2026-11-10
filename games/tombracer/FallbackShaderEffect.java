@@ -243,7 +243,7 @@ final class FallbackShaderEffect extends ShaderEffect {
               if (PlayerViewport.field_o) {
                 ItemBehaviour.a((byte) 34, param3);
               } else {
-                jq.a(param3, (byte) -128);
+                HardwareSceneLight.a(param3, (byte) -128);
               }
             }
             cm.a(param3, WaveformOperator.field_n, -21290, true);

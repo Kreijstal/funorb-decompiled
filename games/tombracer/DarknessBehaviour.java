@@ -52,7 +52,7 @@ final class DarknessBehaviour extends Behaviour {
           if (param0 != 25940) {
             this.field_q = 56;
           }
-          var4_int = param1.i(-1);
+          var4_int = param1.getSize(-1);
           stackIn_3_0 = this.onAreaEffect(var4_int, var4_int, param2, param1.getX(3), (byte) -36, param1.getY(9648));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

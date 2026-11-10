@@ -42,16 +42,16 @@ final class MenuEntry {
         ToolkitSprite var2;
         int var3;
         if (this.field_g == 5) {
-          return WidgetStyleLayer.field_k[5].c() / 2 + this.field_d;
+          return WidgetStyleLayer.field_k[5].width() / 2 + this.field_d;
         }
         if (this.field_g == 6) {
-          return WidgetStyleLayer.field_k[5].c() / 2 + this.field_d;
+          return WidgetStyleLayer.field_k[5].width() / 2 + this.field_d;
         }
         if (param0 != 11919) {
           field_k = (String) null;
         }
         var2 = this.b(-28425);
-        var3 = var2.c();
+        var3 = var2.width();
         if (1 == this.field_g ||
           this.field_g == 3) {
           var3 = -5 + var3 * 2 / 3;
@@ -347,12 +347,12 @@ final class MenuEntry {
         var30 = stackIn_89_0;
         var21_ref2 = var30;
         if (param3) {
-          var30.a(-12 + ((var20 >> 1) - 35) + this.field_b, var9 - (var30.c() >> 1) - 6);
+          var30.a(-12 + ((var20 >> 1) - 35) + this.field_b, var9 - (var30.width() >> 1) - 6);
           if (var24 == 0) {
             return;
           }
         }
-        var30.draw((var20 >> 1) + (-35 + this.field_b) - 12, -6 - (var30.c() >> 1) + var9, 0, -4144960, 1);
+        var30.draw((var20 >> 1) + (-35 + this.field_b) - 12, -6 - (var30.width() >> 1) + var9, 0, -4144960, 1);
         return;
     }
 
@@ -361,7 +361,7 @@ final class MenuEntry {
           return -37;
         }
         ToolkitSprite var2 = this.b(param0 ^ 28586);
-        return var2.a() + this.field_d;
+        return var2.height() + this.field_d;
     }
 
     final void a(boolean param0) {
@@ -447,8 +447,8 @@ final class MenuEntry {
         if (this.field_g != 1 &&
           3 != this.field_g) {
           var10 = this.b(-28425);
-          var5 = var10.a();
-          var6 = var10.c();
+          var5 = var10.height();
+          var6 = var10.width();
           if (param0 != -30323) {
             MenuEntry.a(39, 63, false, true, true, 14, -127, -48, false, 75, -103, false, -22, 2);
           }

@@ -463,12 +463,12 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         for (var2 = 0; var2 < this.field_Bc; var2++) {
           var3 = this.field_ib[var2];
           var4 = var2 + 2;
-          var5 = var3.c(-120);
-          var6 = var3.b(0) / 255.0f;
-          this.field_Wc.SetPosition((float)var3.d(13437), (float)var3.a(19848), (float)var3.b((byte) 11));
+          var5 = var3.getColour(-120);
+          var6 = var3.getIntensity(0) / 255.0f;
+          this.field_Wc.SetPosition((float)var3.getX(13437), (float)var3.getY(19848), (float)var3.getZ((byte) 11));
           this.field_Wc.SetDiffuse(var6 * (float)(255 & var5 >> 16), (float)(var5 >> 8 & 255) * var6, var6 * (float)(255 & var5), 0.0f);
-          this.field_Wc.SetAttenuation(0.0f, 0.0f, 1.0f / (float)(var3.a((byte) 109) * var3.a((byte) 102)));
-          this.field_Wc.SetRange((float)var3.a((byte) -113));
+          this.field_Wc.SetAttenuation(0.0f, 0.0f, 1.0f / (float)(var3.getRadius((byte) 109) * var3.getRadius((byte) 102)));
+          this.field_Wc.SetRange((float)var3.getRadius((byte) -113));
           this.field_jd.SetLight(var4, this.field_Wc);
           this.field_jd.LightEnable(var4, true);
         }

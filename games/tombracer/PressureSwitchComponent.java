@@ -37,7 +37,7 @@ final class PressureSwitchComponent extends SwitchComponent {
             }
           }
           for (var4_int = 0; var4_int < 5; var4_int++) {
-            var5 = wba.field_p[var4_int];
+            var5 = OpenGlSceneLight.field_p[var4_int];
             if (var5 != null) {
               if (var5.field_y != 0) {
                 VoronoiNoiseOperator.a(false, var4_int, var5);

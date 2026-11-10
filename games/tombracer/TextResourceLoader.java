@@ -57,7 +57,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 108, "error_js5connect_full");
                 if (var2 != null) {
-                  kka.field_r = jaa.decodeText((byte) 67, var2);
+                  NativeSceneLight.field_r = jaa.decodeText((byte) 67, var2);
                 }
                 var2 = dn.a((byte) -66, "error_js5connect");
                 if (var2 != null) {
@@ -2655,7 +2655,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -72, "fs_accept_aftercancel");
                 if (null != var2) {
-                  kka.field_p = jaa.decodeText((byte) 68, var2);
+                  NativeSceneLight.field_p = jaa.decodeText((byte) 68, var2);
                 }
                 var2 = dn.a((byte) 118, "fs_accept_countdown_sing");
                 if (var2 != null) {
@@ -2783,7 +2783,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -40, "graphics_config_resizable");
                 if (null != var2) {
-                  kka.field_o = jaa.decodeText((byte) 25, var2);
+                  NativeSceneLight.field_o = jaa.decodeText((byte) 25, var2);
                 }
                 var2 = dn.a((byte) 124, "graphics_config_fullscreen");
                 if (null != var2) {

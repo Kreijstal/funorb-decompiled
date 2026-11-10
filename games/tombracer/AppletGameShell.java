@@ -554,13 +554,13 @@ abstract class AppletGameShell extends GameApplet {
         int var3Lifetime1;
         int var3Lifetime2;
         var5 = TombRacer.field_G ? 1 : 0;
-        if (null != wba.field_o) {
+        if (null != OpenGlSceneLight.field_o) {
           if (null == dq.field_f) {
             var6 = tj.b(25128);
             var4_ref_java_awt_Dimension = var6.getSize();
-            wba.field_o.a(var4_ref_java_awt_Dimension.width, false, var4_ref_java_awt_Dimension.height);
+            OpenGlSceneLight.field_o.a(var4_ref_java_awt_Dimension.width, false, var4_ref_java_awt_Dimension.height);
           }
-          wba.field_o.a(false);
+          OpenGlSceneLight.field_o.a(false);
         }
         DisplaySettingsDialog.j(3321);
         BoulderComponent.snapshotMouseInput((byte) -44);
@@ -633,7 +633,7 @@ abstract class AppletGameShell extends GameApplet {
                       epa.a(5, (byte) -84, wq.field_a);
                     }
                   } else {
-                    epa.a(256, (byte) -84, kka.field_r);
+                    epa.a(256, (byte) -84, NativeSceneLight.field_r);
                   }
                 } else {
                   epa.a(256, (byte) -84, ConsoleWindow.field_e);

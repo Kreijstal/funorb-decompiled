@@ -44,7 +44,7 @@ final class RoomLighting implements ev {
             var4 = 0.15000000596046448f;
             var5 = 0.6499999761581421f;
           } else {
-            var10 = this.room.l((byte) 119);
+            var10 = this.room.getLightingPreset((byte) 119);
             if (var10 != 0 &&
               1 == var10) {
               var8 = -8;
@@ -236,7 +236,7 @@ final class RoomLighting implements ev {
                   break;
                 }
                 ((LightSource) (var10Lifetime1)).a(-1, 81);
-                this.activeLights[var5] = ((LightSource) (var10Lifetime1)).a(47).light;
+                this.activeLights[var5] = ((LightSource) (var10Lifetime1)).getAnimatedLight(47).light;
                 var5++;
               }
             }

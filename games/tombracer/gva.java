@@ -57,9 +57,9 @@ final class gva implements mb {
             return;
           }
           var4 = this.field_a;
-          var5 = param2.c(true);
-          var6 = param2.i(0);
-          var7 = param2.e(true);
+          var5 = param2.getX(true);
+          var6 = param2.getY(0);
+          var7 = param2.getZ(true);
           cr.a(var4, var7, var5, var6, (byte) 35);
           var8 = var4[0];
           var9 = var4[1];
@@ -125,7 +125,7 @@ final class gva implements mb {
                           break regionExit1;
                         }
                         var19 = PlayerProfile.field_r[1];
-                        var20 = var16 * 512 * var12 / (var19.d() * var10);
+                        var20 = var16 * 512 * var12 / (var19.paddedHeight() * var10);
                         var19.drawRotated((float)var8, (float)var9, var20, GameScreen.positiveModulo(param2.f((byte) -127) << var21, 2048 << var21, -61), 0, var18, 1);
                         if (var29 == 0) {
                           break regionExit1;
@@ -176,7 +176,7 @@ final class gva implements mb {
                 break regionExit1;
               }
               var19 = Room.field_p[1][0];
-              var20 = var16 * 8192 * var12 / (var19.d() * var10);
+              var20 = var16 * 8192 * var12 / (var19.paddedHeight() * var10);
               var19.drawRotated((float)var8, (float)var9, var20, GameScreen.positiveModulo(param2.f((byte) -127) << var21, 2048 << var21, 76), 0, var18, 1);
               if (var29 == 0) {
                 break regionExit1;
@@ -190,7 +190,7 @@ final class gva implements mb {
                 break regionExit1;
               }
               var19 = Room.field_p[2][0];
-              var20 = var16 * (8192 * var12) / (var19.d() * var10);
+              var20 = var16 * (8192 * var12) / (var19.paddedHeight() * var10);
               var19.drawRotated((float)var8, (float)var9, var20, GameScreen.positiveModulo(param2.f((byte) -127) << var21, 2048 << var21, 83), 0, var18, 1);
               if (var29 == 0) {
                 break regionExit1;
@@ -203,7 +203,7 @@ final class gva implements mb {
                 break regionExit1;
               }
               var19 = Room.field_p[3][0];
-              var20 = var12 * 8192 * var16 / (var10 * var19.d());
+              var20 = var12 * 8192 * var16 / (var10 * var19.paddedHeight());
               var19.drawRotated((float)var8, (float)var9, var20, GameScreen.positiveModulo(param2.f((byte) -127) << var21, 2048 << var21, -97), 0, var18, 1);
               if (var29 == 0) {
                 break regionExit1;
@@ -215,7 +215,7 @@ final class gva implements mb {
                 break regionExit1;
               }
               var19Lifetime2 = Room.field_p[4][0];
-              var20Lifetime2 = var12 * 8192 * var16 / (var19Lifetime2.d() * var10);
+              var20Lifetime2 = var12 * 8192 * var16 / (var19Lifetime2.paddedHeight() * var10);
               var19Lifetime2.drawRotated((float)var8, (float)var9, var20Lifetime2, GameScreen.positiveModulo(param2.f((byte) -127) << var21, 2048 << var21, 126), 2, var17, 2);
               if (var29 == 0) {
                 break regionExit1;
@@ -226,7 +226,7 @@ final class gva implements mb {
                 break regionExit1;
               }
               var19Lifetime1 = Room.field_p[5][0];
-              var20Lifetime1 = var16 * (8192 * var12) / (var10 * var19Lifetime1.d());
+              var20Lifetime1 = var16 * (8192 * var12) / (var10 * var19Lifetime1.paddedHeight());
               var19Lifetime1.drawRotated((float)var8, (float)var9, var20Lifetime1, GameScreen.positiveModulo(param2.f((byte) -127) << var21, 2048 << var21, 95), 0, var18, 1);
               if (var29 == 0) {
                 break regionExit1;
@@ -742,13 +742,13 @@ final class gva implements mb {
           }
           var4_int = param2.c(-71);
           var5 = this.field_a;
-          cr.a(var5, param2.e(true), param2.c(true), param2.i(0), (byte) 35);
+          cr.a(var5, param2.getZ(true), param2.getX(true), param2.getY(0), (byte) 35);
           var6 = var5[0];
           var7 = var5[1];
           var8 = (float)param2.getAge(param0 + 14066) / (float)param2.getLifetime(true);
           var9 = (int)(255.0f - 255.0f * var8);
           if (era.field_g != null) {
-            var10 = param2.a(false);
+            var10 = param2.getText(false);
             var11 = var4_int >> 16;
             var12 = 8 + era.field_g.getWrappedWidth(var10, var11);
             var13 = 8 + era.field_g.a(var10, var11, 0);
@@ -796,7 +796,7 @@ final class gva implements mb {
           if (param1 != 95) {
             gva.a(-15);
           }
-          var4_int = param0.t(1);
+          var4_int = param0.getSize(1);
           var5 = param0.getKind(-77);
           var6 = param0.getX(3);
           var7 = param0.getY(param1 + 9553);

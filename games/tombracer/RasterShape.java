@@ -3,10 +3,10 @@
  */
 abstract class RasterShape {
     static IndexedSprite[] field_a;
-    int field_b;
+    int outlineColour;
     static jea field_e;
-    int field_d;
-    int field_c;
+    int outlineWidth;
+    int fillColour;
 
     final static int atanFixed16(boolean param0, int param1) {
         if (param0) {
@@ -24,7 +24,7 @@ abstract class RasterShape {
         return wl.field_i[134217728 / -param1] - 2048;
     }
 
-    abstract void a(int param0, int param1, int param2);
+    abstract void drawFilled(int param0, int param1, int param2);
 
     final static void a(int param0) {
         try {
@@ -49,9 +49,9 @@ abstract class RasterShape {
         }
     }
 
-    abstract void a(byte param0, int param1, int param2);
+    abstract void drawFilledWithOutline(byte param0, int param1, int param2);
 
-    abstract void a(int param0, int param1, boolean param2);
+    abstract void drawOutline(int param0, int param1, boolean param2);
 
     final static boolean isPrintableCharacter(byte param0, char param1) {
         if (param0 <= -77) {
@@ -172,9 +172,9 @@ abstract class RasterShape {
     }
 
     RasterShape(int param0, int param1, int param2) {
-        this.field_c = param0;
-        this.field_b = param1;
-        this.field_d = param2;
+        this.fillColour = param0;
+        this.outlineColour = param1;
+        this.outlineWidth = param2;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {

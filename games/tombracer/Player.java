@@ -3940,12 +3940,12 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
             stackIn_10_0 = 1;
             return stackIn_10_0;
           }
-          var4_int = param1.i(-1);
+          var4_int = param1.getSize(-1);
           if (!this.intersectsRect((byte) 110, param1.getY(9648), param1.getX(3), var4_int, var4_int)) {
             stackIn_15_0 = 0;
             return stackIn_15_0;
           }
-          if (!this.room.k((byte) 53) &&
+          if (!this.room.isTimeFrozen((byte) 53) &&
             param0.type == 4) {
             this.velocityX = this.velocityX + param1.getVelocityX(-71) / 8;
             this.velocityY = this.velocityY + param1.getVelocityY(false) / 8;

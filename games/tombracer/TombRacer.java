@@ -812,7 +812,7 @@ public final class TombRacer extends rfa implements ls {
         nsa.releaseStatics(false);
         iga.releaseStatics(param0 ^ -3634);
         r.releaseStatics(11);
-        kka.releaseStatics((byte) -87);
+        NativeSceneLight.releaseStatics((byte) -87);
         qfa.releaseStatics(true);
         cua.releaseStatics(3);
         LegacyOpenGlTexture3D.releaseStatics((byte) 91);
@@ -826,7 +826,7 @@ public final class TombRacer extends rfa implements ls {
         LegacyOpenGlSpriteTexture.j(param0 + 3771);
         cla.releaseStatics(param0 ^ -3666);
         tla.releaseStatics((byte) 124);
-        wba.releaseStatics(-25657);
+        OpenGlSceneLight.releaseStatics(-25657);
         ota.releaseStatics(0);
         nm.releaseStatics((byte) 70);
         o.releaseStatics(param0 ^ -3666);
@@ -847,7 +847,7 @@ public final class TombRacer extends rfa implements ls {
         hka.releaseStatics(false);
         tda.releaseStatics((byte) 103);
         gh.releaseStatics(param0 + 3657);
-        jq.releaseStatics((byte) -112);
+        HardwareSceneLight.releaseStatics((byte) -112);
         HardwareUnlitEffect.releaseStatics(36070);
         HardwareSpecularEffect.releaseStatics(0);
         HardwareAnimatedWaterEffect.releaseStatics(-16973);

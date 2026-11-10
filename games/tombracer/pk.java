@@ -290,8 +290,8 @@ final class pk extends we {
           this.field_A = new int[var7_int];
           this.field_t = new int[var7_int];
           for (var8 = 0; var7_int > var8; var8++) {
-            var9 = OpenGlFramebuffer.field_i[var8].a();
-            var10 = OpenGlFramebuffer.field_i[var8].c();
+            var9 = OpenGlFramebuffer.field_i[var8].height();
+            var10 = OpenGlFramebuffer.field_i[var8].width();
             this.field_A[var8] = (aaa.a(false) >> 1) - 32 * (-1 + OpenGlFramebuffer.field_i.length) + var8 * 65;
             this.field_B[var8] = 110;
             this.field_D[var8] = 3 * var9 / 4;

@@ -314,7 +314,7 @@ final class FontMetrics {
                                     (decompiledFrameRemainder0 = (param1 != null))) {
                                     try {
                                       var11_int = WhiteLightSensorComponent.parseDecimalInt((CharSequence) ((Object) var10.substring(4)), (byte) 70);
-                                      var6 = var6 + param1[var11_int].d();
+                                      var6 = var6 + param1[var11_int].paddedHeight();
                                       var5 = -1;
                                       decompiledRegionSelector0 = 0;
                                     } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -524,7 +524,7 @@ final class FontMetrics {
                                         }
                                         try {
                                           var20_int = WhiteLightSensorComponent.parseDecimalInt((CharSequence) ((Object) var19.substring(4)), (byte) 70);
-                                          var17 = var17 + param3[var20_int].d();
+                                          var17 = var17 + param3[var20_int].paddedHeight();
                                           var12 = -1;
                                           decompiledRegionSelector0 = 0;
                                         } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -812,7 +812,7 @@ final class FontMetrics {
                                     try {
                                       var13_int = WhiteLightSensorComponent.parseDecimalInt((CharSequence) ((Object) var12_ref_String.substring(4)), (byte) 70);
                                       var6 = -1;
-                                      var7 = var7 + param1[var13_int].d();
+                                      var7 = var7 + param1[var13_int].paddedHeight();
                                       if (param3 < var7) {
                                         stackIn_60_0 = var9 + "...";
                                         return stackIn_60_0;

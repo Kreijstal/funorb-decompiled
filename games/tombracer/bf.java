@@ -35,15 +35,15 @@ final class bf implements RenderTarget {
           if (param1 instanceof SoftwareRgbSprite) {
             var6 = (SoftwareRgbSprite) (param1);
             this.field_g = var6.field_E;
-            this.field_d = var6.field_f;
-            this.field_c = var6.field_a;
+            this.field_d = var6.width;
+            this.field_c = var6.height;
           } else {
             if (!(param1 instanceof SoftwareArgbSprite)) {
               throw new RuntimeException();
             }
             var5 = (SoftwareArgbSprite) (param1);
-            this.field_c = var5.field_a;
-            this.field_d = var5.field_f;
+            this.field_c = var5.height;
+            this.field_d = var5.width;
             this.field_g = var5.field_E;
           }
           if (param2 != null) {

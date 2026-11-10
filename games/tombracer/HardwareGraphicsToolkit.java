@@ -2297,7 +2297,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
     }
 
     final SceneLight createLight(int param0, int param1, int param2, int param3, int param4, float param5) {
-        return (SceneLight) ((Object) new jq(param0, param1, param2, param3, param4, param5));
+        return (SceneLight) ((Object) new HardwareSceneLight(param0, param1, param2, param3, param4, param5));
     }
 
     final int o(byte param0) {
@@ -2629,7 +2629,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           } else {
             var3 = this.createSpriteCopy(new int[]{0}, 1, 81, 1, 1, 0);
           }
-          var3.b(param0.field_d, param0.field_c, param0.field_b, param0.field_e);
+          var3.setInsets(param0.field_d, param0.field_c, param0.field_b, param0.field_e);
           stackIn_23_0 = var3;
           return stackIn_23_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

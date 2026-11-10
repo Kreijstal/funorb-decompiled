@@ -46,7 +46,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
           this.isSwitchable(-56);
         }
         while (var3 < this.mounts.length) {
-          var4 = this.mounts[var3].a(108);
+          var4 = this.mounts[var3].getChild(108);
           if (var4 != null) {
             var4.a(param0, param1);
           }
@@ -61,7 +61,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         var4 = TombRacer.field_G ? 1 : 0;
         this.w(-124);
         for (var2 = 0; var2 < this.mounts.length; var2++) {
-          var3 = this.mounts[var2].a(94);
+          var3 = this.mounts[var2].getChild(94);
           if (var3 != null) {
             var3.c(true);
           }
@@ -185,7 +185,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
             this.field_s = param3.a(104, false);
           }
           for (var5_int = 0; this.mounts.length > var5_int; var5_int++) {
-            var6 = this.mounts[var5_int].a(120);
+            var6 = this.mounts[var5_int].getChild(120);
             if (var6 != null) {
               var6.a(param0, 6, param2, param3);
             }
@@ -235,7 +235,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           for (var4_int = param1; this.mounts.length > var4_int; var4_int++) {
-            var5 = this.mounts[var4_int].a(param1 ^ -103);
+            var5 = this.mounts[var4_int].getChild(param1 ^ -103);
             if (var5 != null) {
               if (param2 == var5) {
                 return true;
@@ -384,7 +384,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
           this.angle = 111;
         }
         for (var4 = 0; this.mounts.length > var4; var4++) {
-          var5 = this.mounts[var4].a(-92);
+          var5 = this.mounts[var4].getChild(-92);
           if (var5 != null) {
             var6 = var5.a(param0, param1, false);
             if (var6 != null) {
@@ -688,7 +688,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         this.field_h = bua.cos2048(0, -this.getFacingAngle(-25787) >> 2);
         for (var2 = 0; this.mounts.length > var2; var2++) {
           this.mounts[var2].rotateBy(this.field_f, this.field_h, (byte) 98);
-          var3 = this.mounts[var2].a(-122);
+          var3 = this.mounts[var2].getChild(-122);
           if (var3 != null) {
             var3.updateRotation(true);
           }
@@ -824,7 +824,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
             return;
           }
           while (var3_int < this.mounts.length) {
-            var4 = this.mounts[var3_int].a(86);
+            var4 = this.mounts[var3_int].getChild(86);
             if (var4 != null) {
               param1.writeBits((byte) -42, 1, 1);
               vha.field_c.writeComponent(var4, -16097, param1);

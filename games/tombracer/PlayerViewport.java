@@ -287,9 +287,9 @@ final class PlayerViewport {
         int var8Lifetime2;
         var10 = TombRacer.field_G ? 1 : 0;
         try {
-          var6_int = aq.field_a[0].a();
+          var6_int = aq.field_a[0].height();
           param1 = (var6_int / 2 + param1) / var6_int * var6_int;
-          var7 = aq.field_a[0].c();
+          var7 = aq.field_a[0].width();
           param4[0].a(param3, param5);
           param0 = (param0 + var7 / 2) / var7 * var7;
           param4[2].a(-var6_int + param1 + param3, param5);

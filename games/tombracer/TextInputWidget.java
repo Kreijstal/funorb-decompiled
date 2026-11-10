@@ -230,23 +230,23 @@ class TextInputWidget extends FocusableWidget {
             if (param1[3] == null) {
               stackIn_14_0 = 0;
             } else {
-              stackIn_14_0 = param1[3].d();
+              stackIn_14_0 = param1[3].paddedHeight();
             }
             var11 = stackIn_14_0;
             if (null == param1[5]) {
               stackIn_18_0 = 0;
             } else {
-              stackIn_18_0 = param1[5].d();
+              stackIn_18_0 = param1[5].paddedHeight();
             }
             var12 = stackIn_18_0;
             if (param1[1] == null) {
               stackIn_22_0 = 0;
             } else {
-              stackIn_22_0 = param1[1].b();
+              stackIn_22_0 = param1[1].paddedWidth();
             }
             var13 = stackIn_22_0;
             if (null != param1[7]) {
-              stackIn_26_0 = param1[7].b();
+              stackIn_26_0 = param1[7].paddedWidth();
             } else {
               stackIn_26_0 = 0;
             }
@@ -291,12 +291,12 @@ class TextInputWidget extends FocusableWidget {
             }
             boolean decompiledFrameCompleted4 = true;
             if (null != param1[1] &&
-              param1[1].d() != 0) {
+              param1[1].paddedHeight() != 0) {
               var10.a(var22, param8, (byte) -12, var23, var21);
               var25 = var17;
               while (var25 < var18) {
                 param1[1].draw(var25, param8, param0, param9, param6);
-                var25 = var25 + param1[1].d();
+                var25 = var25 + param1[1].paddedHeight();
                 if (var27 != 0) {
                   decompiledFrameCompleted4 = false;
                   break;
@@ -308,12 +308,12 @@ class TextInputWidget extends FocusableWidget {
             }
             boolean decompiledFrameCompleted3 = true;
             if (null != param1[7] &&
-              0 != param1[7].d()) {
+              0 != param1[7].paddedHeight()) {
               var10.a(var22, var24, (byte) -12, var16, var21);
               var25Lifetime1 = var17;
               while (var25Lifetime1 < var18) {
                 param1[7].draw(var25Lifetime1, var20, param0, param9, param6);
-                var25Lifetime1 = var25Lifetime1 + param1[7].d();
+                var25Lifetime1 = var25Lifetime1 + param1[7].paddedHeight();
                 if (var27 != 0) {
                   decompiledFrameCompleted3 = false;
                   break;
@@ -325,12 +325,12 @@ class TextInputWidget extends FocusableWidget {
             }
             boolean decompiledFrameCompleted2 = true;
             if (param1[3] != null &&
-              param1[3].b() != 0) {
+              param1[3].paddedWidth() != 0) {
               var10.a(var21, var23, (byte) -12, var24, param3);
               var25Lifetime2 = var19;
               while (var25Lifetime2 < var20) {
                 param1[3].draw(param3, var25Lifetime2, param0, param9, param6);
-                var25Lifetime2 = var25Lifetime2 + param1[3].b();
+                var25Lifetime2 = var25Lifetime2 + param1[3].paddedWidth();
                 if (var27 != 0) {
                   decompiledFrameCompleted2 = false;
                   break;
@@ -342,12 +342,12 @@ class TextInputWidget extends FocusableWidget {
             }
             boolean decompiledFrameCompleted1 = true;
             if (param1[5] != null &&
-              param1[5].b() != 0) {
+              param1[5].paddedWidth() != 0) {
               var10.a(var15, var23, (byte) -12, var24, var22);
               var25Lifetime3 = var19;
               while (var20 > var25Lifetime3) {
                 param1[5].draw(var18, var25Lifetime3, param0, param9, param6);
-                var25Lifetime3 = var25Lifetime3 + param1[5].b();
+                var25Lifetime3 = var25Lifetime3 + param1[5].paddedWidth();
                 if (var27 != 0) {
                   decompiledFrameCompleted1 = false;
                   break;
@@ -359,8 +359,8 @@ class TextInputWidget extends FocusableWidget {
             }
             boolean decompiledFrameCompleted0 = true;
             if (param1[4] != null &&
-              0 != param1[4].d() &&
-              param1[4].b() != 0) {
+              0 != param1[4].paddedHeight() &&
+              param1[4].paddedWidth() != 0) {
               var10.a(var22, var23, (byte) -12, var24, var21);
               var25Lifetime4 = var19;
               while (var25Lifetime4 < var20) {
@@ -372,9 +372,9 @@ class TextInputWidget extends FocusableWidget {
                 var26 = stackIn_111_0;
                 while (var26 < var18) {
                   param1[4].draw(var26, var25Lifetime4, param0, param9, param6);
-                  var26 = var26 + param1[4].d();
+                  var26 = var26 + param1[4].paddedHeight();
                 }
-                var25Lifetime4 = var25Lifetime4 + param1[4].b();
+                var25Lifetime4 = var25Lifetime4 + param1[4].paddedWidth();
               }
               if (decompiledFrameCompleted0) {
                 var10.a(123);

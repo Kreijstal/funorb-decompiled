@@ -16,11 +16,11 @@ final class j extends ToolkitSprite implements e {
 
     private final native void b(long param0, float param1, float param2, float param3, float param4, float param5, float param6, int param7, int param8, int param9, int param10);
 
-    final int d() {
+    final int paddedHeight() {
         return this.wa(this.field_nativeid);
     }
 
-    final int c() {
+    final int width() {
         return this.I(this.field_nativeid);
     }
 
@@ -34,17 +34,17 @@ final class j extends ToolkitSprite implements e {
         this.W(this.field_nativeid, param0, param1, param2, param3, param4);
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void setInsets(int param0, int param1, int param2, int param3) {
         this.A(this.field_nativeid, param0, param1, param2, param3);
     }
 
     private final native int M(long param0);
 
-    final int a() {
+    final int height() {
         return this.M(this.field_nativeid);
     }
 
-    final int b() {
+    final int paddedWidth() {
         return this.JA(this.field_nativeid);
     }
 

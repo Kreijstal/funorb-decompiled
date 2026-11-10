@@ -87,20 +87,20 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
         for (var4 = 0; var4 < param0; var4++) {
           incrementValue$0 = var3;
           var3++;
-          field_g[incrementValue$0] = param1[var4].d(13437);
+          field_g[incrementValue$0] = param1[var4].getX(13437);
           incrementValue$1 = var3;
           var3++;
-          field_g[incrementValue$1] = param1[var4].a(19848);
+          field_g[incrementValue$1] = param1[var4].getY(19848);
           incrementValue$2 = var3;
           var3++;
-          field_g[incrementValue$2] = param1[var4].b((byte) 11);
+          field_g[incrementValue$2] = param1[var4].getZ((byte) 11);
           incrementValue$3 = var3;
           var3++;
-          field_g[incrementValue$3] = param1[var4].a((byte) -56);
-          field_d[var4] = param1[var4].b(0);
+          field_g[incrementValue$3] = param1[var4].getRadius((byte) -56);
+          field_d[var4] = param1[var4].getIntensity(0);
           incrementValue$4 = var3;
           var3++;
-          field_g[incrementValue$4] = param1[var4].c(-113);
+          field_g[incrementValue$4] = param1[var4].getColour(-113);
         }
         this.N(param0, field_g, field_d);
     }
@@ -345,7 +345,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
 
     final ToolkitSprite createSprite(SpriteData param0, boolean param1) {
         j var3 = new j(this, param0.field_g, param0.field_f, param0.field_h, 0, param0.field_i, param0.field_i, param0.field_a);
-        ((ToolkitSprite) ((Object) var3)).b(param0.field_d, param0.field_c, param0.field_b, param0.field_e);
+        ((ToolkitSprite) ((Object) var3)).setInsets(param0.field_d, param0.field_c, param0.field_b, param0.field_e);
         return (ToolkitSprite) ((Object) var3);
     }
 
@@ -419,7 +419,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
     }
 
     final SceneLight createLight(int param0, int param1, int param2, int param3, int param4, float param5) {
-        return (SceneLight) ((Object) new kka(param0, param1, param2, param3, param4, param5));
+        return (SceneLight) ((Object) new NativeSceneLight(param0, param1, param2, param3, param4, param5));
     }
 
     final native int i();

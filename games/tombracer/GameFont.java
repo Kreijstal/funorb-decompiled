@@ -397,7 +397,7 @@ abstract class GameFont {
                                     var16_int = WhiteLightSensorComponent.parseDecimalInt(var21, (byte) 70);
                                     var17 = param5[var16_int];
                                     if (param3 == null) {
-                                      stackIn_29_0 = var17.b();
+                                      stackIn_29_0 = var17.paddedWidth();
                                     } else {
                                       stackIn_29_0 = param3[var16_int];
                                     }
@@ -407,7 +407,7 @@ abstract class GameFont {
                                     } else {
                                       var17.draw(param1, this.field_a.field_a + param8 - var18, 1, 0, 1);
                                     }
-                                    param1 = param1 + param5[var16_int].d();
+                                    param1 = param1 + param5[var16_int].paddedHeight();
                                     var11 = -1;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
                                     decompiledCaughtException = decompiledCaughtParameter0;

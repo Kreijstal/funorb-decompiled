@@ -9,31 +9,31 @@ final class qo extends RasterShape {
     static int[] field_k;
     private int field_j;
 
-    final void a(int param0, int param1, boolean param2) {
+    final void drawOutline(int param0, int param1, boolean param2) {
         if (!param2) {
-          this.a((byte) -38, 20, 78);
+          this.drawFilledWithOutline((byte) -38, 20, 78);
         }
     }
 
-    final void a(byte param0, int param1, int param2) {
+    final void drawFilledWithOutline(byte param0, int param1, int param2) {
         int var7 = 0;
         int var4 = this.field_h * param1 >> 12;
         int var5 = param1 * this.field_g >> 12;
         int var6 = param2 * this.field_j >> 12;
         if (param0 <= -117) {
           var7 = param2 * this.field_f >> 12;
-          RasterShape.a(var4, this.field_c, var6, var7, 0, var5, this.field_b, this.field_d);
+          RasterShape.a(var4, this.fillColour, var6, var7, 0, var5, this.outlineColour, this.outlineWidth);
           return;
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void drawFilled(int param0, int param1, int param2) {
         int var4 = this.field_h * param2 >> 12;
         int var7 = 30 % ((55 - param1) / 37);
         int var5 = param2 * this.field_g >> 12;
         int var6 = this.field_j * param0 >> 12;
         int var8 = this.field_f * param0 >> 12;
-        SocketConnector.a(var4, this.field_c, (byte) 71, var8, var5, var6);
+        SocketConnector.a(var4, this.fillColour, (byte) 71, var8, var5, var6);
     }
 
     qo(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {

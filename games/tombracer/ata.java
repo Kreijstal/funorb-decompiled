@@ -7,16 +7,16 @@ final class ata extends RasterShape {
     private int field_f;
     private int field_g;
 
-    final void a(int param0, int param1, int param2) {
+    final void drawFilled(int param0, int param1, int param2) {
         int var4 = param2 * this.field_i >> 12;
         int var5 = this.field_f * param2 >> 12;
         int var6 = param0 * this.field_h >> 12;
         int var7 = param0 * this.field_g >> 12;
-        ScrollContainer.a(var7, var5, this.field_c, var6, 936441872, var4);
+        ScrollContainer.a(var7, var5, this.fillColour, var6, 936441872, var4);
         int var8 = 127 % ((55 - param1) / 37);
     }
 
-    final void a(int param0, int param1, boolean param2) {
+    final void drawOutline(int param0, int param1, boolean param2) {
         int var4 = this.field_i * param0 >> 12;
         int var5 = this.field_f * param0 >> 12;
         if (!param2) {
@@ -24,7 +24,7 @@ final class ata extends RasterShape {
         }
         int var6 = param1 * this.field_h >> 12;
         int var7 = this.field_g * param1 >> 12;
-        TeleportLocomotor.a(var5, this.field_d, var7, var4, var6, param2, this.field_b);
+        TeleportLocomotor.a(var5, this.outlineWidth, var7, var4, var6, param2, this.outlineColour);
     }
 
     ata(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -51,15 +51,15 @@ final class ata extends RasterShape {
         return var1;
     }
 
-    final void a(byte param0, int param1, int param2) {
+    final void drawFilledWithOutline(byte param0, int param1, int param2) {
         int var4 = param1 * this.field_i >> 12;
         int var5 = param1 * this.field_f >> 12;
         if (param0 > -117) {
-          this.a((byte) -12, 75, -53);
+          this.drawFilledWithOutline((byte) -12, 75, -53);
         }
         int var6 = this.field_h * param2 >> 12;
         int var7 = this.field_g * param2 >> 12;
-        TimeSwitchBehaviour.a((byte) -71, var4, var6, var5, var7, this.field_d, this.field_c, this.field_b);
+        TimeSwitchBehaviour.a((byte) -71, var4, var6, var5, var7, this.outlineWidth, this.fillColour, this.outlineColour);
     }
 
     static {

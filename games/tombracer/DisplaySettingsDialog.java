@@ -121,9 +121,9 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
                     this.field_P[var3] = null;
                   }
                 }
-                if (wba.field_o != null &&
+                if (OpenGlSceneLight.field_o != null &&
                   null != this.field_P[var2_int] &&
-                  !wba.field_o.a(this.field_P[var2_int].field_c, (byte) 43, this.field_P[var2_int].field_a)) {
+                  !OpenGlSceneLight.field_o.a(this.field_P[var2_int].field_c, (byte) 43, this.field_P[var2_int].field_a)) {
                   this.field_P[var2_int] = null;
                 }
               }
@@ -155,8 +155,8 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
           stackIn_40_0 = (var2_intLifetime1 != 0) ? 3 : 2;
           var3Lifetime1 = stackIn_40_0;
           if (var2_intLifetime1 == 0) {
-            if (wba.field_o != null) {
-              stackIn_48_0 = (wba.field_o.d(-1)) ? 1 : 0;
+            if (OpenGlSceneLight.field_o != null) {
+              stackIn_48_0 = (OpenGlSceneLight.field_o.d(-1)) ? 1 : 0;
             } else {
               stackIn_48_0 = 0;
             }
@@ -191,7 +191,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
           this.addChild(this.field_T, -1);
           this.field_W = this.a(-82, DirectByteStorage.field_f, ke.field_a, (WidgetListener) (this));
           if (var2_intLifetime1 != 0) {
-            this.field_N = this.a(-87, RasterShape.field_a, kka.field_o, (WidgetListener) (this));
+            this.field_N = this.a(-87, RasterShape.field_a, NativeSceneLight.field_o, (WidgetListener) (this));
           }
           this.field_V = this.a(-94, ita.field_e, pa.field_c, (WidgetListener) (this));
           if (var2_intLifetime1 != 0) {
@@ -212,8 +212,8 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
             for (var7_int = 0; this.field_P.length > var7_int; var7_int++) {
               var8 = this.field_P[var7_int];
               if (dq.field_f != null &&
-                wba.field_o.field_s == var8.field_a &&
-                wba.field_o.field_p == var8.field_c) {
+                OpenGlSceneLight.field_o.field_s == var8.field_a &&
+                OpenGlSceneLight.field_o.field_p == var8.field_c) {
                 var6_int = var7_int;
               }
               var5_ref_String__[var7_int] = var8.field_a + "<times>" + var8.field_c;
@@ -526,8 +526,8 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
               if (this.field_ab != null) {
                 var4 = this.field_ab.i((byte) 126);
                 var5 = this.field_P[var4];
-                if (wba.field_o.field_s == var5.field_a &&
-                  wba.field_o.field_p == var5.field_c) {
+                if (OpenGlSceneLight.field_o.field_s == var5.field_a &&
+                  OpenGlSceneLight.field_o.field_p == var5.field_c) {
                   this.j((byte) -30);
                   return;
                 }
@@ -613,7 +613,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
         if (param0 != -46) {
           return (FocusableWidget) null;
         }
-        if (null != wba.field_o && wba.field_o.field_h &&
+        if (null != OpenGlSceneLight.field_o && OpenGlSceneLight.field_o.field_h &&
           this.field_N != null) {
           return this.field_N;
         }
@@ -650,7 +650,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
                   StringCursor.a(-30600, true);
                   this.field_z.c(new FullscreenConfirmationDialog(this.field_z), 89);
                 } else {
-                  wba.field_o.a(this.field_P[var2].field_a, this.field_P[var2].field_c, -1);
+                  OpenGlSceneLight.field_o.a(this.field_P[var2].field_a, this.field_P[var2].field_c, -1);
                   StringCursor.a(-30600, true);
                   this.field_z.c(new FullscreenConfirmationDialog(this.field_z), 89);
                 }

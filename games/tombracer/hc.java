@@ -8,11 +8,11 @@ final class hc extends RasterShape {
     private int field_g;
     private int field_f;
 
-    final void a(int param0, int param1, int param2) {
+    final void drawFilled(int param0, int param1, int param2) {
         int var4 = 86 / ((param1 - 55) / 37);
     }
 
-    final void a(byte param0, int param1, int param2) {
+    final void drawFilledWithOutline(byte param0, int param1, int param2) {
         if (param0 >= -117) {
           field_h = -1;
         }
@@ -26,12 +26,12 @@ final class hc extends RasterShape {
         this.field_g = param1;
     }
 
-    final void a(int param0, int param1, boolean param2) {
+    final void drawOutline(int param0, int param1, boolean param2) {
         int var4 = this.field_i * param0 >> 12;
         int var5 = this.field_f * param0 >> 12;
         int var6 = param1 * this.field_g >> 12;
         int var7 = param1 * this.field_j >> 12;
-        ik.a(var5, var4, -49, this.field_b, var7, var6);
+        ik.a(var5, var4, -49, this.outlineColour, var7, var6);
         if (param2) {
           return;
         }

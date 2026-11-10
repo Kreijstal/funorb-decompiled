@@ -140,7 +140,7 @@ final class DrawOfferMenu extends MenuScreen {
     final void draw(byte param0, boolean param1) {
         super.draw(param0, param1);
         int var3 = this.items[1].field_i - 70 + this.field_r.e(93) - 150;
-        WhiteLightShooterComponent.field_K.a((aaa.a(false) >> 1) - (WhiteLightShooterComponent.field_K.a() >> 1), var3);
+        WhiteLightShooterComponent.field_K.a((aaa.a(false) >> 1) - (WhiteLightShooterComponent.field_K.height() >> 1), var3);
     }
 
     final static jea a(int param0, int param1, int param2, int param3, BitmapFont param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, byte param12) {

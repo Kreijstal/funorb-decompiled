@@ -111,7 +111,7 @@ final class ComponentMount {
         return this.field_c;
     }
 
-    final RoomComponent a(int param0) {
+    final RoomComponent getChild(int param0) {
         int var2 = 89 % ((28 - param0) / 54);
         return this.child;
     }

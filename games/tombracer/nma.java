@@ -13,7 +13,7 @@ final class nma extends RasterShape {
     private int field_i;
     private int field_o;
 
-    final void a(int param0, int param1, boolean param2) {
+    final void drawOutline(int param0, int param1, boolean param2) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -35,7 +35,7 @@ final class nma extends RasterShape {
           var9 = this.field_f * param1 >> 12;
           var10 = param0 * this.field_n >> 12;
           var11 = param1 * this.field_o >> 12;
-          fm.a(var10, var6, var4, var9, this.field_b, var5, var11, var8, (byte) -110, var7);
+          fm.a(var10, var6, var4, var9, this.outlineColour, var5, var11, var8, (byte) -110, var7);
           return;
         }
         this.field_n = 80;
@@ -45,10 +45,10 @@ final class nma extends RasterShape {
         var9Lifetime1 = this.field_f * param1 >> 12;
         var10Lifetime1 = param0 * this.field_n >> 12;
         var11Lifetime1 = param1 * this.field_o >> 12;
-        fm.a(var10Lifetime1, var6Lifetime1, var4, var9Lifetime1, this.field_b, var5, var11Lifetime1, var8Lifetime1, (byte) -110, var7Lifetime1);
+        fm.a(var10Lifetime1, var6Lifetime1, var4, var9Lifetime1, this.outlineColour, var5, var11Lifetime1, var8Lifetime1, (byte) -110, var7Lifetime1);
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void drawFilled(int param0, int param1, int param2) {
         int var4 = -95 / ((55 - param1) / 37);
     }
 
@@ -155,7 +155,7 @@ final class nma extends RasterShape {
         return var2Lifetime2;
     }
 
-    final void a(byte param0, int param1, int param2) {
+    final void drawFilledWithOutline(byte param0, int param1, int param2) {
         if (param0 > -117) {
           this.field_k = 96;
         }

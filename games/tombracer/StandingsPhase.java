@@ -66,11 +66,11 @@ final class StandingsPhase extends MatchPhase {
           if (this.screen.field_D &&
             !this.screen.d((byte) 82)) {
             this.field_p = new MenuEntry[2];
-            this.field_p[0] = new MenuEntry(33, wba.field_q[33], 1, false);
+            this.field_p[0] = new MenuEntry(33, OpenGlSceneLight.field_q[33], 1, false);
             this.field_p[0].field_b = aaa.a(false) - 110;
             this.field_p[0].field_i = SwitchLinkList.b(0) - 25;
             this.field_p[0].a(false);
-            this.field_p[1] = new MenuEntry(34, wba.field_q[34], 1, false);
+            this.field_p[1] = new MenuEntry(34, OpenGlSceneLight.field_q[34], 1, false);
             this.field_p[1].field_b = 100;
             this.field_p[1].field_i = SwitchLinkList.b(0) - 25;
             this.field_p[1].a(false);
@@ -79,7 +79,7 @@ final class StandingsPhase extends MatchPhase {
           this.field_p = new MenuEntry[1];
           stackIn_26_0 = (this.screen.field_D) ? 33 : 16;
           var3_intLifetime1 = stackIn_26_0;
-          this.field_p[0] = new MenuEntry(var3_intLifetime1, wba.field_q[var3_intLifetime1], 0, false);
+          this.field_p[0] = new MenuEntry(var3_intLifetime1, OpenGlSceneLight.field_q[var3_intLifetime1], 0, false);
           this.field_p[0].field_b = -100 + aaa.a(false);
           this.field_p[0].field_i = SwitchLinkList.b(0) - 25;
           this.field_p[0].a(false);
@@ -184,9 +184,9 @@ final class StandingsPhase extends MatchPhase {
             var10 = -(var5 * var9) + SwitchLinkList.b(0);
             var11 = var4 * var22 + (var3 - (var4 >> 1) * (-1 + var6));
             this.matchState.players[var22].getAnimator((byte) -120).a(-1, var11, 800, 0, var10);
-            IntrusiveDeque.field_c.a(var11 - (IntrusiveDeque.field_c.a() >> 1) + 1, var10 - 8);
+            IntrusiveDeque.field_c.a(var11 - (IntrusiveDeque.field_c.height() >> 1) + 1, var10 - 8);
             if (var8 == 0) {
-              GridWidgetContainer.field_y[-1 + GridWidgetContainer.field_y.length].a(-(GridWidgetContainer.field_y[GridWidgetContainer.field_y.length - 1].a() >> 1) + var11 - 1, var10 - 12);
+              GridWidgetContainer.field_y[-1 + GridWidgetContainer.field_y.length].a(-(GridWidgetContainer.field_y[GridWidgetContainer.field_y.length - 1].height() >> 1) + var11 - 1, var10 - 12);
             }
             var12 = 150;
             RasterBuffer.a(-60 + var11, 2, tga.field_a, 4, var10 - 250, 120, 65793 | var12 << 24, 1, 100);
@@ -215,12 +215,12 @@ final class StandingsPhase extends MatchPhase {
         } else {
           var3 = aaa.a(false) >> 1;
           var4 = SwitchLinkList.b(0) >> 1;
-          gg.field_f.a(-(gg.field_f.a() >> 1) + var3, -(gg.field_f.c() >> 1) + var4);
+          gg.field_f.a(-(gg.field_f.height() >> 1) + var3, -(gg.field_f.width() >> 1) + var4);
           var5 = 260;
           var6 = 40;
           var7 = var3;
           var8 = var4 - 80;
-          kq.field_a.a(var7 - (kq.field_a.a() >> 1), var8 - (kq.field_a.c() >> 1));
+          kq.field_a.a(var7 - (kq.field_a.height() >> 1), var8 - (kq.field_a.width() >> 1));
           var9 = this.screen.m(-1);
           stackIn_4_0 = (pl.a((byte) 64) != var9) ? 0 : 1;
           var11 = stackIn_4_0;
@@ -252,7 +252,7 @@ final class StandingsPhase extends MatchPhase {
                 var12_ref = rm.field_c;
               }
               if (var12_ref != null) {
-                ((ToolkitSprite) (var12_ref)).a(var3 - (120 + ((ToolkitSprite) (var12_ref)).d() / 2), var4 - 10);
+                ((ToolkitSprite) (var12_ref)).a(var3 - (120 + ((ToolkitSprite) (var12_ref)).paddedHeight() / 2), var4 - 10);
               }
               MembersUpsellMenu.a(var13_ref_String, 65793, kn.field_p, -1, 35 + var4, var3 - 120, -1);
             }
@@ -268,9 +268,9 @@ final class StandingsPhase extends MatchPhase {
             MembersUpsellMenu.a(cc.field_l.toUpperCase() + " " + var23.toUpperCase(), 2431750, kn.field_p, -1, 48 + var4, var3 - 120, -1);
             za.field_g.a(-200 + var3, var4 + 60);
             var13 = LegacyOpenGlShoreWaveWaterEffect.a(var9, 0);
-            RoomEffectTraps.a(-1, -36, var4 + 79, dea.a(var13, (byte) -8), -200 + (var3 + za.field_g.d()) + 5, kn.field_p, 2431750);
+            RoomEffectTraps.a(-1, -36, var4 + 79, dea.a(var13, (byte) -8), -200 + (var3 + za.field_g.paddedHeight()) + 5, kn.field_p, 2431750);
             bca.field_d.a(var3 - 110, 60 + var4);
-            RoomEffectTraps.a(-1, -92, 79 + var4, dea.a(var13 + var13 / 2, (byte) -8), bca.field_d.d() + (var3 - 110) + 5, kn.field_p, 2431750);
+            RoomEffectTraps.a(-1, -92, 79 + var4, dea.a(var13 + var13 / 2, (byte) -8), bca.field_d.paddedHeight() + (var3 - 110) + 5, kn.field_p, 2431750);
             MembersUpsellMenu.a(ContentTransitionDialog.field_L.toUpperCase(), 2431750, eda.field_f, -1, 5 + var4, 120 + var3, -1);
             var14 = this.screen.matchState.simulations[this.screen.localPlayerIndex].player.getScore(110);
             MembersUpsellMenu.a(Integer.toString(var14), 2431750, eda.field_f, -1, var4 + 22, var3 + 120, -1);

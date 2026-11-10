@@ -9,8 +9,8 @@ final class cva {
     static dk[] field_c;
 
     final static void a(int param0) {
-        if (wba.field_o != null) {
-          wba.field_o.field_h = true;
+        if (OpenGlSceneLight.field_o != null) {
+          OpenGlSceneLight.field_o.field_h = true;
           int var1 = 105 % ((param0 + 32) / 62);
           C2SChooseRewardPacket.b(12475, 1);
           return;

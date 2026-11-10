@@ -23,8 +23,8 @@ final class og extends OpenGlBuffer implements qm {
         pq.a(dq.field_f, false);
         dq.field_f.a((byte) -34, dsa.field_c);
         dq.field_f = null;
-        if (null != wba.field_o) {
-          wba.field_o.a(118);
+        if (null != OpenGlSceneLight.field_o) {
+          OpenGlSceneLight.field_o.a(118);
         }
         nma.field_l.requestFocus();
         if (param0 != 0) {

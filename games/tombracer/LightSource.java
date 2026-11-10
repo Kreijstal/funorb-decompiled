@@ -46,10 +46,10 @@ final class LightSource extends IntrusiveNode {
         if (null == this.animatedLight.light) {
           return -1;
         }
-        if (0.05000000074505806f >= this.animatedLight.light.b(0)) {
+        if (0.05000000074505806f >= this.animatedLight.light.getIntensity(0)) {
           return -1;
         }
-        if (this.animatedLight.light.c(-122) == 0) {
+        if (this.animatedLight.light.getColour(-122) == 0) {
           return -1;
         }
         var5 = -this.field_j + param1 >> 16;
@@ -62,7 +62,7 @@ final class LightSource extends IntrusiveNode {
         return -(var7 * var7 + var5 * var5 + var6 * var6 >> 2) + this.field_p;
     }
 
-    final AnimatedLight a(int param0) {
+    final AnimatedLight getAnimatedLight(int param0) {
         if (param0 <= 4) {
           this.a(-31, -23, 62, -98);
           return this.animatedLight;
@@ -131,11 +131,11 @@ final class LightSource extends IntrusiveNode {
           return;
         }
         if (param0 == -10874) {
-          this.animatedLight.light.a(255, param1);
+          this.animatedLight.light.setColour(255, param1);
           return;
         }
         field_k = (it) null;
-        this.animatedLight.light.a(255, param1);
+        this.animatedLight.light.setColour(255, param1);
     }
 
     final static boolean a(byte param0) {
@@ -164,7 +164,7 @@ final class LightSource extends IntrusiveNode {
 
     final boolean c(int param0) {
         if (param0 != -1459852242) {
-          this.a(-60);
+          this.getAnimatedLight(-60);
           return this.field_r;
         }
         return this.field_r;
@@ -180,15 +180,15 @@ final class LightSource extends IntrusiveNode {
         this.field_m[0] = this.field_j >> 14;
         this.field_m[1] = -this.field_q >> 14;
         this.field_m[2] = -this.field_f >> 14;
-        this.animatedLight.light.a(this.field_m[1], this.field_m[0], (byte) -127, this.field_m[2]);
+        this.animatedLight.light.setPosition(this.field_m[1], this.field_m[0], (byte) -127, this.field_m[2]);
         if (param0 >= 21) {
-          var3 = this.animatedLight.light.a((byte) 107);
+          var3 = this.animatedLight.light.getRadius((byte) 107);
           this.field_p = var3 * (var3 * 2);
           this.animatedLight.a(false, param1 + this.field_n, -1814184927);
           return;
         }
         LightSource.a((byte) 98);
-        var3Lifetime1 = this.animatedLight.light.a((byte) 107);
+        var3Lifetime1 = this.animatedLight.light.getRadius((byte) 107);
         this.field_p = var3Lifetime1 * (var3Lifetime1 * 2);
         this.animatedLight.a(false, param1 + this.field_n, -1814184927);
     }
@@ -199,7 +199,7 @@ final class LightSource extends IntrusiveNode {
           return;
         }
         if (null != this.animatedLight.light) {
-          this.animatedLight.light.a((byte) 62, param0);
+          this.animatedLight.light.setRadius((byte) 62, param0);
           return;
         }
     }

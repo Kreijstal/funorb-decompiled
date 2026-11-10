@@ -316,7 +316,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           bua.field_g = new jea(0L, jk.field_g);
           kv.field_b = new jea(0L, jk.field_g);
           ssa.field_g = new jea(0L, hg.field_g);
-          jq.field_o = new jea(0L, jk.field_g);
+          HardwareSceneLight.field_o = new jea(0L, jk.field_g);
           dn.field_a = new jea(0L, jk.field_g);
           qja.field_j = new jea(0L, jk.field_g);
           jk.field_g.field_w = rfa.a(BoulderComponent.a(param4, "lobby", 5, "smallbutton"), 124);
@@ -348,11 +348,11 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           qja.field_j.field_n = dupTemp$1;
           qja.field_j.field_db = dupTemp$1;
           qja.field_j.field_M = rfa.a(BoulderComponent.a(param4, "lobby", 5, "gameoptionbutton_disabled"), 125);
-          jq.field_o.field_w = rfa.a(BoulderComponent.a(param4, "lobby", 5, "chatbutton"), 116);
-          jq.field_o.field_C = rfa.a(BoulderComponent.a(param4, "lobby", 5, "chatbutton_mouseover"), 119);
+          HardwareSceneLight.field_o.field_w = rfa.a(BoulderComponent.a(param4, "lobby", 5, "chatbutton"), 116);
+          HardwareSceneLight.field_o.field_C = rfa.a(BoulderComponent.a(param4, "lobby", 5, "chatbutton_mouseover"), 119);
           dupTemp$2 = rfa.a(BoulderComponent.a(param4, "lobby", 5, "chatbutton_active"), 119);
-          jq.field_o.field_n = dupTemp$2;
-          jq.field_o.field_db = dupTemp$2;
+          HardwareSceneLight.field_o.field_n = dupTemp$2;
+          HardwareSceneLight.field_o.field_db = dupTemp$2;
           dn.field_a.field_w = rfa.a(BoulderComponent.a(param4, "lobby", 5, "chatfilterbutton"), 112);
           dn.field_a.field_C = rfa.a(BoulderComponent.a(param4, "lobby", 5, "chatfilterbutton_mouseover"), 112);
           dupTemp$3 = rfa.a(BoulderComponent.a(param4, "lobby", 5, "chatfilterbutton_active"), 118);

@@ -1721,7 +1721,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           if (param2 >= -97) {
             this.blockedY = false;
           }
-          var4_int = param1.i(-1);
+          var4_int = param1.getSize(-1);
           if (!this.intersectsRect((byte) 110, param1.getY(9648), param1.getX(3), var4_int, var4_int)) {
             stackIn_14_0 = 0;
             return stackIn_14_0;
