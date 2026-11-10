@@ -69,7 +69,7 @@ final class FacePlayerLocomotor extends Locomotor {
         var4 = var3.getX(3) - this.trap.getX(3);
         var5 = var3.getY(9648) - this.trap.getY(9648);
         var6 = qva.a((byte) -118, var5, var4);
-        var7 = -this.trap.g(-25787) + var6;
+        var7 = -this.trap.getFacingAngle(-25787) + var6;
         if (0 < this.field_o) {
           while (var7 < -4096) {
             var7 += 8192;
@@ -85,7 +85,7 @@ final class FacePlayerLocomotor extends Locomotor {
             }
           }
         }
-        this.trap.c(false, var7);
+        this.trap.rotateBy(false, var7);
     }
 
     final static byte[] a(byte[] param0, int param1, int param2) {

@@ -19,7 +19,7 @@ final class db extends IntrusiveNode implements Renderable, Collidable, WorldBod
 
     public final int a(boolean param0, int param1, int param2, int param3, int param4, int param5) {
         if (!param0) {
-          this.g(25);
+          this.getFacingAngle(25);
           return 0;
         }
         return 0;
@@ -40,7 +40,7 @@ final class db extends IntrusiveNode implements Renderable, Collidable, WorldBod
 
     public final int getWidth(int param0) {
         if (param0 >= -11) {
-          this.j(-31);
+          this.isFallingIntoPit(-31);
         }
         return this.field_g;
     }
@@ -105,9 +105,9 @@ final class db extends IntrusiveNode implements Renderable, Collidable, WorldBod
         }
     }
 
-    public final int g(byte param0) {
+    public final int getElevation(byte param0) {
         if (param0 != 115) {
-          this.g(-111);
+          this.getFacingAngle(-111);
           return 0;
         }
         return 0;
@@ -357,7 +357,7 @@ final class db extends IntrusiveNode implements Renderable, Collidable, WorldBod
           if (param1 == 0) {
             return false;
           }
-          this.j(-123);
+          this.isFallingIntoPit(-123);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -537,7 +537,7 @@ final class db extends IntrusiveNode implements Renderable, Collidable, WorldBod
         return this.field_r;
     }
 
-    public final int g(int param0) {
+    public final int getFacingAngle(int param0) {
         if (param0 != -25787) {
           this.a(82, -58);
         }
@@ -684,7 +684,7 @@ final class db extends IntrusiveNode implements Renderable, Collidable, WorldBod
         }
     }
 
-    public final boolean j(int param0) {
+    public final boolean isFallingIntoPit(int param0) {
         if (param0 != -1) {
           return false;
         }

@@ -113,7 +113,7 @@ final class DoorwayModel extends TrapModel {
           }
           var8Lifetime1 = -76 / ((-38 - param4) / 47);
           if (var7 != null) {
-            var9 = dfa.a(4096 + var6_int - this.body.g(-25787) >> 2, 2048, 102);
+            var9 = dfa.a(4096 + var6_int - this.body.getFacingAngle(-25787) >> 2, 2048, 102);
             gqa.a(var9, -83584144, param1, param2, (ka) (var7), param3);
           }
           return;

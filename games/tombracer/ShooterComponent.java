@@ -114,7 +114,7 @@ abstract class ShooterComponent extends PrefabComponent {
           var8 = PlatformComponent.b(this.field_F, 23688);
           if (this.B(-23309)) {
             if (this.field_I) {
-              var5 = param2.q(-85);
+              var5 = param2.getRandom(-85);
               this.field_H = var5.nextBounded(16, param0 - 43);
               if (!(param1 instanceof WeaponShooterBehaviour)) {
                 var8.a(false, this.field_H * var8.a((byte) -94) / 16);

@@ -108,9 +108,9 @@ final class PitBehaviour extends Behaviour {
               var19.a(10, (byte) -19);
             } else {
               if (this.field_p) {
-                var19.a(4, (byte) -18, 6);
+                var19.kill(4, (byte) -18, 6);
               } else {
-                var19.a(4, (byte) 102, 5);
+                var19.kill(4, (byte) 102, 5);
               }
             }
             return;
@@ -123,7 +123,7 @@ final class PitBehaviour extends Behaviour {
           var7 = param2.getWidth(-93);
           var8 = param2.getHeight((byte) 55);
           var9Lifetime1 = var5_intLifetime1 - var7 / 2 - this.trap.r((byte) -95) - this.field_o;
-          var10Lifetime1 = var6Lifetime1 - var8 / 2 + (-this.trap.Q(2) - this.field_q);
+          var10Lifetime1 = var6Lifetime1 - var8 / 2 + (-this.trap.getTop(2) - this.field_q);
           var11Lifetime1 = var9Lifetime1 + (var7 - 1);
           var12Lifetime1 = var10Lifetime1 + var8 - 1;
           var9Lifetime1 = var9Lifetime1 / this.field_u;
@@ -234,7 +234,7 @@ final class PitBehaviour extends Behaviour {
         if (param4 < 79) {
           this.getTypeId(false);
         }
-        var9 = this.trap.Q(2) + this.field_q;
+        var9 = this.trap.getTop(2) + this.field_q;
         var10 = -(param0 / 2) - (var8 - param5);
         var11 = param2 - param1 / 2 - var9;
         var12 = -1 + (param0 + var10);

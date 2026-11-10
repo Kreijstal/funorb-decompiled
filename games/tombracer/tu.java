@@ -116,7 +116,7 @@ class tu extends SimulationObserver {
           }
           var5_int = param0;
           if (var5_int == 0) {
-            var6 = param2.getRoom((byte) 121).spawnParticle(param2.getX(3), param2.getY(9648), (byte) 100, 3145728 + param2.g((byte) 115));
+            var6 = param2.getRoom((byte) 121).spawnParticle(param2.getX(3), param2.getY(9648), (byte) 100, 3145728 + param2.getElevation((byte) 115));
             var6.a(false, 128, 15, 128, 50);
             var6.a(131072, 0, -107, 0);
           } else {
@@ -124,7 +124,7 @@ class tu extends SimulationObserver {
               if (2 == var5_int) {
               }
             } else {
-              var7 = param2.getRoom((byte) -109).spawnParticle(param2.getX(3), param2.getY(9648), (byte) 100, param2.g((byte) 115) + 3145728);
+              var7 = param2.getRoom((byte) -109).spawnParticle(param2.getX(3), param2.getY(9648), (byte) 100, param2.getElevation((byte) 115) + 3145728);
               var7.a(false, 128, 16, 128, 50);
               var7.a(131072, 0, -89, 0);
             }

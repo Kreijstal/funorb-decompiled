@@ -53,7 +53,7 @@ final class PushableMountComponent extends PrefabComponent {
           var4.b((byte) -11, this.field_k, this.field_l);
           var4.a((byte) -3, 4);
           var4.h(param1, param1 ^ 3);
-          var4.e(true, 122);
+          var4.setPushable(true, 122);
           var4.g(112, 1);
           var4.b((byte) 17, false);
           var4.a(1, (byte) -12, true);

@@ -29,13 +29,13 @@ final class dha {
               if (fna.field_h != 80) {
                 return false;
               }
-              if (!AppletGameShell.q(-1)) {
+              if (!AppletGameShell.isFreeChatAllowed(-1)) {
                 return false;
               }
               ni.field_c = true;
               return true;
             }
-            if (!AppletGameShell.q(-1)) {
+            if (!AppletGameShell.isFreeChatAllowed(-1)) {
               return false;
             }
             stackIn_129_0 = (!eqa.a(param1, true, param0)) ? 0 : 1;
@@ -61,13 +61,13 @@ final class dha {
               if (fna.field_h != 80) {
                 return false;
               }
-              if (!AppletGameShell.q(-1)) {
+              if (!AppletGameShell.isFreeChatAllowed(-1)) {
                 return false;
               }
               ni.field_c = true;
               return true;
             }
-            if (!AppletGameShell.q(-1)) {
+            if (!AppletGameShell.isFreeChatAllowed(-1)) {
               return false;
             }
             stackIn_97_0 = (!eqa.a(param1, true, param0)) ? 0 : 1;
@@ -96,13 +96,13 @@ final class dha {
               if (fna.field_h != 80) {
                 return false;
               }
-              if (!AppletGameShell.q(-1)) {
+              if (!AppletGameShell.isFreeChatAllowed(-1)) {
                 return false;
               }
               ni.field_c = true;
               return true;
             }
-            if (!AppletGameShell.q(-1)) {
+            if (!AppletGameShell.isFreeChatAllowed(-1)) {
               return false;
             }
             stackIn_61_0 = (!eqa.a(param1, true, param0)) ? 0 : 1;
@@ -124,13 +124,13 @@ final class dha {
               if (fna.field_h != 80) {
                 return false;
               }
-              if (!AppletGameShell.q(-1)) {
+              if (!AppletGameShell.isFreeChatAllowed(-1)) {
                 return false;
               }
               ni.field_c = true;
               return true;
             }
-            if (!AppletGameShell.q(-1)) {
+            if (!AppletGameShell.isFreeChatAllowed(-1)) {
               return false;
             }
             stackIn_23_0 = (!eqa.a(param1, true, param0)) ? 0 : 1;

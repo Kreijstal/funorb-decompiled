@@ -93,7 +93,7 @@ final class GasTrapComponent extends PrefabComponent {
           var13.b((byte) -11, this.field_k, this.field_l);
           var13.a((byte) -3, 0);
           var13.h(3, param1 ^ param1);
-          var13.e(false, param1 + 116);
+          var13.setPushable(false, param1 + 116);
           var13.b((byte) 17, true);
           var13.a(1, (byte) -12, true);
           var5 = new SimpleBlockBehaviour(param2, param0);

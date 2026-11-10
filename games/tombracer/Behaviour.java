@@ -397,9 +397,9 @@ abstract class Behaviour extends IntrusiveNode implements Switchable, Renderable
     public final int getRenderZ(byte param0) {
         if (param0 > -86) {
           this.a((byte) -24, false);
-          return this.trap.g((byte) 115);
+          return this.trap.getElevation((byte) 115);
         }
-        return this.trap.g((byte) 115);
+        return this.trap.getElevation((byte) 115);
     }
 
     abstract int hashState(int param0, int param1);

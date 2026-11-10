@@ -261,7 +261,7 @@ final class DarknessBehaviour extends Behaviour {
         RuntimeException decompiledCaughtException = null;
         int var7_intLifetime1;
         try {
-          if (param2.field_j == 1) {
+          if (param2.type == 1) {
             var7_int = MidiVoiceMixer.b(param0, param1, -48) / 2;
             this.a(param3, (byte) 90, param2.size, var7_int, param5);
           }

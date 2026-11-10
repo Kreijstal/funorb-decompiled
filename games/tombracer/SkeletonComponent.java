@@ -82,7 +82,7 @@ final class SkeletonComponent extends dna {
           var12.a(2, (byte) -12, true);
           var12.a((byte) -3, 1);
           var12.b((byte) 17, false);
-          var12.e(true, 124);
+          var12.setPushable(true, 124);
           var12.d(1, -1);
           var5 = new ApproachPlayerLocomotor(param2, param0);
           var5.a(false, 98304);

@@ -75,7 +75,7 @@ final class wd implements dv {
                 param4.a((byte) -3, 10);
                 param4.h(3, 0);
                 param4.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param3, param5)));
-                param4.e(true, 117);
+                param4.setPushable(true, 117);
                 param4.g(119, 1);
                 param4.a(1, (byte) -12, true);
                 param4.b(false, 11468);

@@ -6,7 +6,7 @@ interface mb {
 
     public abstract void a(iq param0, int param1, lk param2);
 
-    public abstract void a(mda param0, int param1, iq param2);
+    public abstract void a(Puddle param0, int param1, iq param2);
 
     public abstract void a(int param0, Room param1);
 

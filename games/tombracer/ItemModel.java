@@ -185,7 +185,7 @@ final class ItemModel extends TrapModel {
             }
           }
           if (var7 != null) {
-            var9 = dfa.a(-this.body.g(-25787) + 4096 + this.field_m >> 2, 2048, -117);
+            var9 = dfa.a(-this.body.getFacingAngle(-25787) + 4096 + this.field_m >> 2, 2048, -117);
             gqa.a(var9, -83584144, param1, param2, (ka) (var7), param3);
           }
           return;

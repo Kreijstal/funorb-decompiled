@@ -25,7 +25,7 @@ final class msa {
             return true;
           }
           if (param0 != 0) {
-            var6 = gha.field_a;
+            var6 = gha.cp1252HighChars;
             var2 = var6;
             var3 = 0;
             while (var6.length > var3) {

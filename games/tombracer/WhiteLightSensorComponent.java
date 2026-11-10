@@ -75,7 +75,7 @@ final class WhiteLightSensorComponent extends SwitchComponent {
           var10.b((byte) -11, this.field_k, this.field_l);
           var10.h(param1, param1 ^ 3);
           var10.a(1, (byte) -12, false);
-          var10.e(false, 124);
+          var10.setPushable(false, 124);
           var10.b((byte) 17, false);
           var10.a((byte) -3, 6);
           var10.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));

@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mda extends PooledObject implements Renderable, Collidable, WorldBody {
+final class Puddle extends PooledObject implements Renderable, Collidable, WorldBody {
     private int field_i;
-    private Room field_q;
+    private Room room;
     private int field_n;
     static jea field_v;
     private int field_k;
@@ -13,7 +13,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
     private boolean field_o;
     private int field_u;
     private int field_p;
-    private int field_s;
+    private int kind;
     private int field_j;
     private int field_m;
     private int field_w;
@@ -26,7 +26,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
         var3 = TombRacer.field_G ? 1 : 0;
         try {
           if (param1 > -101) {
-            mda.b(-10, (byte) -8);
+            Puddle.b(-10, (byte) -8);
           }
           var4 = (upa) (ina.field_d.first(-80));
           while (var4 != null) {
@@ -51,11 +51,11 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
     private final void a(int param0, int param1, int param2, Room param3, int param4, int param5) {
         try {
           this.field_o = false;
-          this.field_q = param3;
+          this.room = param3;
           this.field_l = param4 * 2;
           this.field_m = 0;
           this.field_n = param2;
-          this.field_s = param0;
+          this.kind = param0;
           this.field_i = iia.d(param1 * param5, 786432, 2);
           this.field_t = 0;
           this.field_k = this.field_l;
@@ -66,9 +66,9 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
     }
 
     private final int a(int param0, int param1, int param2, int param3, int param4) {
-        if (this.field_s == 1) {
+        if (this.kind == 1) {
           int var6 = 80 / ((-23 - param1) / 56);
-          return this.field_q.a((Collidable) (this), (WorldBody) (this), 1, this.field_k, param3, 12, this.field_k, this.field_p, param4, param0, this.field_j, param2, true);
+          return this.room.a((Collidable) (this), (WorldBody) (this), 1, this.field_k, param3, 12, this.field_k, this.field_p, param4, param0, this.field_j, param2, true);
         }
         return 0;
     }
@@ -84,7 +84,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_s != 1) {
+          if (this.kind != 1) {
             return false;
           }
           if (param0 != -1) {
@@ -121,7 +121,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
         try {
           this.field_p = param0.a(this.field_p, (byte) 71);
           if (param1 >= -16) {
-            mda.b(-115, (byte) 124, 61, -21);
+            Puddle.b(-115, (byte) 124, 61, -21);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "mda.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -130,7 +130,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
 
     public final int b(int param0) {
         int var2 = -50 % ((param0 - 1) / 45);
-        if (this.field_s != 1) {
+        if (this.kind != 1) {
           return 0;
         }
         return this.field_k >> 17;
@@ -196,7 +196,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
         if (param0 != -55) {
           return true;
         }
-        if (this.field_s == 1) {
+        if (this.kind == 1) {
           stackIn_7_0 = true;
         } else {
           if (param1) {
@@ -216,7 +216,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (1 == this.field_s &&
+          if (1 == this.kind &&
             this.intersectsRect((byte) 110, param4, param6, param0, param3)) {
             return true;
           }
@@ -255,7 +255,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
           if (param1 != 61) {
             this.field_l = -102;
           }
-          stackIn_5_0 = (this.field_s == 1);
+          stackIn_5_0 = (this.kind == 1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -284,7 +284,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
         try {
           var4_int = param1.i(-1);
           if (param2 >= -97) {
-            this.field_q = (Room) null;
+            this.room = (Room) null;
           }
           stackIn_3_0 = this.applyAreaEffect(param0, var4_int, param1.getX(3), 0, param1.getY(9648), var4_int);
           return stackIn_3_0;
@@ -320,7 +320,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
         return 0;
     }
 
-    public final int g(byte param0) {
+    public final int getElevation(byte param0) {
         if (param0 != 115) {
           this.getRoom((byte) -93);
           return 0;
@@ -356,7 +356,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
         if (param1 == -44) {
           return eqa.a(param2, true, param0);
         }
-        mda.j((byte) -121);
+        Puddle.j((byte) -121);
         return eqa.a(param2, true, param0);
     }
 
@@ -377,7 +377,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
         return this.field_j;
     }
 
-    public final int g(int param0) {
+    public final int getFacingAngle(int param0) {
         if (param0 != -25787) {
           this.field_j = 118;
           return 0;
@@ -402,25 +402,25 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
             stackIn_3_0 = 114;
             return stackIn_3_0;
           }
-          if (0 == this.field_s) {
-            if (param0.field_j == 3) {
+          if (0 == this.kind) {
+            if (param0.type == 3) {
               this.field_m = this.field_m + 25;
             } else {
-              if (param0.field_j == 5) {
+              if (param0.type == 5) {
                 this.i((byte) -127);
-                this.field_q.b(param1 + 30103, this.field_k / 2, 1, this.field_j, this.field_p);
+                this.room.spawnPuddle(param1 + 30103, this.field_k / 2, 1, this.field_j, this.field_p);
                 var3_int = param0.size;
               }
             }
           } else {
-            if (this.field_s == 1) {
-              if (param0.field_j == 3) {
+            if (this.kind == 1) {
+              if (param0.type == 3) {
                 this.i((byte) -126);
-                this.field_q.b(30097, this.field_k / 2, 0, this.field_j, this.field_p);
+                this.room.spawnPuddle(30097, this.field_k / 2, 0, this.field_j, this.field_p);
                 var3_int = param0.size;
               } else {
-                if (param0.field_j != 5 &&
-                  param0.field_j == 0) {
+                if (param0.type != 5 &&
+                  param0.type == 0) {
                   this.field_k = this.field_k - 262144;
                   this.n(786432);
                   var3_int = param0.size;
@@ -449,7 +449,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
         if (param0 > -120) {
           return;
         }
-        this.field_q.collisionGrid.remove((Collidable) (this), (byte) 82);
+        this.room.collisionGrid.remove((Collidable) (this), (byte) 82);
     }
 
     public final int getCollisionId(boolean param0) {
@@ -461,7 +461,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
 
     public static void j(byte param0) {
         if (param0 != 87) {
-          mda.b(-56, (byte) 104, -90, 106);
+          Puddle.b(-56, (byte) 104, -90, 106);
           field_v = null;
           return;
         }
@@ -527,7 +527,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
 
     public final int getPreviousX(int param0) {
         if (param0 <= 90) {
-          mda.b(122, (byte) -32, 39, 92);
+          Puddle.b(122, (byte) -32, 39, 92);
           return this.field_u;
         }
         return this.field_u;
@@ -554,7 +554,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
     private final void a(int param0, byte param1, int param2, int param3, int param4) {
         int var6;
         int var6Lifetime1;
-        if (1 != this.field_s) {
+        if (1 != this.kind) {
           return;
         }
         this.s(0);
@@ -583,14 +583,14 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
           this.field_p == this.field_u) {
           return;
         }
-        this.field_q.collisionGrid.pruneOutsideBounds((Collidable) (this), -123);
-        this.field_q.collisionGrid.insert((Collidable) (this), 7073);
+        this.room.collisionGrid.pruneOutsideBounds((Collidable) (this), -123);
+        this.room.collisionGrid.insert((Collidable) (this), 7073);
         return;
     }
 
     final int r(int param0) {
         int var2 = -27 % ((param0 - 55) / 55);
-        return this.field_s;
+        return this.kind;
     }
 
     public final int getHeight(byte param0) {
@@ -612,14 +612,14 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
 
     public final Room getRoom(byte param0) {
         int var2 = 38 / ((param0 - 0) / 61);
-        return this.field_q;
+        return this.room;
     }
 
     final void a(Room param0, int param1, int param2, int param3, int param4, int param5) {
         IsaacCipher var7 = null;
         int var8 = 0;
         try {
-          var7 = param0.q(-79);
+          var7 = param0.getRandom(-79);
           if (param4 == 0) {
             var8 = 200 + var7.nextBounded(100, 0);
           } else {
@@ -654,15 +654,15 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
 
     public final boolean a(int param0) {
         int var2 = 7 % ((param0 - 6) / 46);
-        return 1 == this.field_s ? true : false;
+        return 1 == this.kind ? true : false;
     }
 
     final PooledObject createInstance(boolean param0) {
         if (!param0) {
           this.getPreviousY(117);
-          return (PooledObject) ((Object) new mda());
+          return (PooledObject) ((Object) new Puddle());
         }
-        return (PooledObject) ((Object) new mda());
+        return (PooledObject) ((Object) new Puddle());
     }
 
     private final void n(int param0) {
@@ -696,17 +696,17 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
           return;
         }
         if (param1) {
-          this.field_q.collisionGrid.pruneOutsideBounds((Collidable) (this), -50);
+          this.room.collisionGrid.pruneOutsideBounds((Collidable) (this), -50);
           if (0 < this.field_n) {
             var3 = (float)this.field_m / (float)this.field_n;
             this.field_k = (int)((float)(this.field_i - this.field_l) * var3 + (float)this.field_l);
           }
           this.n(param0 ^ -786433);
-          this.field_q.collisionGrid.insert((Collidable) (this), 7073);
-          if (~this.field_s != param0) {
+          this.room.collisionGrid.insert((Collidable) (this), 7073);
+          if (~this.kind != param0) {
             return;
           }
-          var5 = this.field_q.getPlayer(-37);
+          var5 = this.room.getPlayer(-37);
           if (this.intersectsRect((byte) 110, var5.getY(9648), var5.getX(3), var5.getHeight((byte) 55), var5.getWidth(param0 ^ 104))) {
             var5.G(31027);
           }
@@ -721,34 +721,34 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
               this.i((byte) -126);
               return;
             }
-            this.field_q.collisionGrid.pruneOutsideBounds((Collidable) (this), -50);
+            this.room.collisionGrid.pruneOutsideBounds((Collidable) (this), -50);
             if (0 < this.field_n) {
               var3Lifetime1 = (float)this.field_m / (float)this.field_n;
               this.field_k = (int)((float)(this.field_i - this.field_l) * var3Lifetime1 + (float)this.field_l);
             }
             this.n(param0 ^ -786433);
-            this.field_q.collisionGrid.insert((Collidable) (this), 7073);
-            if (~this.field_s != param0) {
+            this.room.collisionGrid.insert((Collidable) (this), 7073);
+            if (~this.kind != param0) {
               return;
             }
-            var6 = this.field_q.getPlayer(-37);
+            var6 = this.room.getPlayer(-37);
             if (this.intersectsRect((byte) 110, var6.getY(9648), var6.getX(3), var6.getHeight((byte) 55), var6.getWidth(param0 ^ 104))) {
               var6.G(31027);
             }
             return;
           }
         }
-        this.field_q.collisionGrid.pruneOutsideBounds((Collidable) (this), -50);
+        this.room.collisionGrid.pruneOutsideBounds((Collidable) (this), -50);
         if (0 < this.field_n) {
           var3Lifetime2 = (float)this.field_m / (float)this.field_n;
           this.field_k = (int)((float)(this.field_i - this.field_l) * var3Lifetime2 + (float)this.field_l);
         }
         this.n(param0 ^ -786433);
-        this.field_q.collisionGrid.insert((Collidable) (this), 7073);
-        if (~this.field_s != param0) {
+        this.room.collisionGrid.insert((Collidable) (this), 7073);
+        if (~this.kind != param0) {
           return;
         }
-        var7 = this.field_q.getPlayer(-37);
+        var7 = this.room.getPlayer(-37);
         if (this.intersectsRect((byte) 110, var7.getY(9648), var7.getX(3), var7.getHeight((byte) 55), var7.getWidth(param0 ^ 104))) {
           var7.G(31027);
         }
@@ -764,7 +764,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            this.field_q = (Room) null;
+            this.room = (Room) null;
           }
           stackIn_3_0 = this.a(param0, (byte) 61);
           return stackIn_3_0;
@@ -813,7 +813,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
 
     public final void f(int param0) {
         if (param0 != -4366) {
-          this.field_s = 113;
+          this.kind = 113;
         }
     }
 
@@ -839,7 +839,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
             return stackIn_2_0;
           }
           if (param3 != 0) {
-            this.field_q = (Room) null;
+            this.room = (Room) null;
           }
           stackIn_6_0 = this.a(param0, -6);
           return stackIn_6_0;
@@ -857,7 +857,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
         }
     }
 
-    mda() {
+    Puddle() {
         int fieldTemp$0 = ui.field_a;
         ui.field_a = ui.field_a + 1;
         this.field_w = fieldTemp$0;
@@ -871,7 +871,7 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
         return this.field_k;
     }
 
-    public final boolean j(int param0) {
+    public final boolean isFallingIntoPit(int param0) {
         if (param0 != -1) {
           this.isPushable((byte) -105, false);
           return false;
@@ -881,10 +881,10 @@ final class mda extends PooledObject implements Renderable, Collidable, WorldBod
 
     public final boolean b(boolean param0) {
         if (param0) {
-          return this.field_s == 1 ? true : false;
+          return this.kind == 1 ? true : false;
         }
         this.field_w = -99;
-        return this.field_s == 1 ? true : false;
+        return this.kind == 1 ? true : false;
     }
 
     static {

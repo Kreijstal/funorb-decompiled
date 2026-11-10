@@ -9,10 +9,10 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
     private int velocityX;
     private int y;
     private int field_S;
-    private int field_b;
+    private int facingX;
     private boolean field_gb;
     static fta field_p;
-    private int field_r;
+    private int deathCause;
     private int lifeStateTimer;
     private Room room;
     private int velocityY;
@@ -21,7 +21,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
     static IntrusiveDeque field_I;
     private int x;
     private int field_A;
-    private int field_K;
+    private int facingY;
     private Weapon weapon;
     private int field_h;
     private int field_t;
@@ -53,16 +53,16 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
     private WorldBody field_eb;
     private int field_F;
     private int field_n;
-    private int field_e;
+    private int respawnX;
     private int field_j;
-    private int[] field_D;
+    private int[] deathCountsByCause;
     private int moveSpeed;
-    private int field_ib;
+    private int respawnY;
     private boolean field_hb;
     private int field_cb;
     private boolean field_db;
     private int field_bb;
-    private int field_w;
+    private int elevation;
     private int field_B;
     private int field_O;
     private int field_ab;
@@ -297,21 +297,21 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
             if (var3_int == 1 &&
               var4 == 0) {
               this.room.a(0, (WorldBody) (this));
-              if (4 != this.field_r) {
+              if (4 != this.deathCause) {
                 this.velocityY = 0;
                 this.velocityX = 0;
               } else {
-                if (this.field_w > -17825792) {
-                  this.field_w = this.field_w + this.field_O;
+                if (this.elevation > -17825792) {
+                  this.elevation = this.elevation + this.field_O;
                   this.field_O = this.field_O - 16384;
-                  if (this.field_w <= -17825792) {
+                  if (this.elevation <= -17825792) {
                     if (this.field_T == 6) {
                       var3_ref = this.room.spawnParticle(this.x, this.y, (byte) 100, -17825792);
                       var3_ref.a(false, 32, 4, 16, 5 + uca.field_c.nextBounded(5, 0));
                       var3_ref.b(param0 + 99, 0, 0);
                       var3_ref.a(uca.field_c.nextBounded(8192, param0 ^ 5), -32 + uca.field_c.nextBounded(64, param0 - 5), -125);
                     }
-                    this.field_w = -17825793;
+                    this.elevation = -17825793;
                   }
                 }
               }
@@ -329,8 +329,8 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
             else {
               if (var3_int == 2 &&
                 var4 == 0) {
-                this.field_K = -1;
-                this.field_b = 0;
+                this.facingY = -1;
+                this.facingX = 0;
                 this.lifeStateTimer = this.lifeStateTimer - 1;
                 this.y = this.y - 393216;
                 if (0 >= this.lifeStateTimer) {
@@ -365,7 +365,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    final int E(int param0) {
+    final int getFacingX(int param0) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -373,7 +373,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
           if (param0 != -25763) {
             this.a(113, -115);
           }
-          stackIn_4_0 = this.field_b;
+          stackIn_4_0 = this.facingX;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -504,8 +504,8 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
             0 == this.field_ab ||
             this.field_ab == 6)) {
             if (2 == param2) {
-              this.field_b = lw.a(-param4, (byte) -109);
-              this.field_K = lw.a(-param3, (byte) -119);
+              this.facingX = lw.signum(-param4, (byte) -109);
+              this.facingY = lw.signum(-param3, (byte) -119);
               this.a(-5636, 2, false);
             }
             if (this.field_A == 0) {
@@ -870,7 +870,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    final void a(int param0, byte param1, int param2) {
+    final void kill(int param0, byte param1, int param2) {
         RuntimeException decompiledCaughtException = null;
         uw var4 = null;
         int var4_int = 0;
@@ -934,7 +934,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
                           this.a(-5636, 17, true);
                           this.a(-5636, 16, true);
                           this.a(-5636, 13, true);
-                          this.room.b(false).a((byte) 61, 2097152 + this.g((byte) 115), this.x, this.y);
+                          this.room.b(false).a((byte) 61, 2097152 + this.getElevation((byte) 115), this.x, this.y);
                         }
                       }
                     }} else {
@@ -942,27 +942,27 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
                     if (var5 != 0) {
                       this.a(-5636, 16, true);
                       this.a(-5636, 13, true);
-                      this.room.b(false).a((byte) 61, 2097152 + this.g((byte) 115), this.x, this.y);
+                      this.room.b(false).a((byte) 61, 2097152 + this.getElevation((byte) 115), this.x, this.y);
                     }
                   }
                 } else {
                   this.a(-5636, 16, true);
                   if (var5 != 0) {
                     this.a(-5636, 13, true);
-                    this.room.b(false).a((byte) 61, 2097152 + this.g((byte) 115), this.x, this.y);
+                    this.room.b(false).a((byte) 61, 2097152 + this.getElevation((byte) 115), this.x, this.y);
                   }
                 }
               } else {
                 this.a(-5636, 13, true);
-                this.room.b(false).a((byte) 61, 2097152 + this.g((byte) 115), this.x, this.y);
+                this.room.b(false).a((byte) 61, 2097152 + this.getElevation((byte) 115), this.x, this.y);
               }
             }
             this.p(30358);
-            this.field_r = param0;
+            this.deathCause = param0;
             this.lifeState = 1;
             this.lifeStateTimer = DateFieldsWidget.field_C[param0];
             this.k(false);
-            this.field_D[param0] = this.field_D[param0] + 1;
+            this.deathCountsByCause[param0] = this.deathCountsByCause[param0] + 1;
             var4_int = -81 % ((param1 + 64) / 41);
             this.field_j = 18202625 ^ (18202625 ^ this.field_j) + 1;
             this.field_T = param2;
@@ -976,7 +976,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    final void a(int param0, boolean param1) {
+    final void respawn(int param0, boolean param1) {
         int var3_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
@@ -985,19 +985,19 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
             !(this.room.o((byte) -82)));
           if (!decompiledSharedTail0) {
             this.lifeState = 0;
-            this.x = this.field_e;
-            this.y = this.field_ib;
+            this.x = this.respawnX;
+            this.y = this.respawnY;
             this.lifeStateTimer = 0;
-            this.field_r = 0;
+            this.deathCause = 0;
             this.a(-5636, 0, true);
             decompiledSharedTail0 = (TombRacer.field_G);
           }
           if (decompiledSharedTail0) {
             this.lifeStateTimer = 17;
             this.lifeState = 2;
-            this.x = this.field_e;
-            this.field_r = 0;
-            this.y = 2097152 + (this.lifeStateTimer * 393216 + this.field_ib);
+            this.x = this.respawnX;
+            this.deathCause = 0;
+            this.y = 2097152 + (this.lifeStateTimer * 393216 + this.respawnY);
             this.a(-5636, 4, true);
           }
           this.field_q = false;
@@ -1010,9 +1010,9 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
           this.velocityX = 0;
           this.field_S = 0;
           this.field_V = false;
-          this.field_b = 0;
+          this.facingX = 0;
           this.field_l = false;
-          this.field_K = -1;
+          this.facingY = -1;
           this.field_O = 0;
           this.field_Z = false;
           this.field_L = false;
@@ -1023,7 +1023,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
           this.field_B = 0;
           this.field_eb = null;
           this.field_kb = 0;
-          this.field_w = 0;
+          this.elevation = 0;
           this.carried = null;
           if (param1) {
             this.field_fb.clear(8);
@@ -1209,7 +1209,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -21185) {
-            this.field_D = (int[]) null;
+            this.deathCountsByCause = (int[]) null;
           }
           stackIn_4_0 = this.previousY;
           return stackIn_4_0;
@@ -1258,7 +1258,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
           var3.a(true, (byte) 2);
           var2.addBehaviour((byte) 83, (Behaviour) (var3));
           var2.c(437453352, true);
-          var2.e(true, param0 ^ 30447);
+          var2.setPushable(true, param0 ^ 30447);
           this.room.addTrap(var2, (byte) 32);
           this.J(0);
           return;
@@ -1360,7 +1360,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         RuntimeException var2 = null;
         try {
           this.x = this.room.a(this.x, (byte) 71);
-          this.field_b = -this.field_b;
+          this.facingX = -this.facingX;
           if (param0 != -57) {
             this.a((wf) null, (byte) -39);
           }
@@ -1381,7 +1381,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 393216) {
-            this.a(126, false);
+            this.respawn(126, false);
           }
           stackIn_4_0 = this.field_P[param1];
           return stackIn_4_0;
@@ -1424,43 +1424,43 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         int stackIn_53_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 > this.field_b &&
-            this.field_K == 0) {
+          if (param0 > this.facingX &&
+            this.facingY == 0) {
             stackIn_7_0 = 6;
             return stackIn_7_0;
           }
-          if (this.field_b > 0 &&
-            this.field_K == 0) {
+          if (this.facingX > 0 &&
+            this.facingY == 0) {
             stackIn_13_0 = 2;
             return stackIn_13_0;
           }
-          if (this.field_b == 0 &&
-            this.field_K < 0) {
+          if (this.facingX == 0 &&
+            this.facingY < 0) {
             stackIn_21_0 = 0;
             return stackIn_21_0;
           }
-          if (this.field_b == 0 &&
-            this.field_K > 0) {
+          if (this.facingX == 0 &&
+            this.facingY > 0) {
             stackIn_27_0 = 4;
             return stackIn_27_0;
           }
-          if (0 > this.field_b &&
-            0 > this.field_K) {
+          if (0 > this.facingX &&
+            0 > this.facingY) {
             stackIn_33_0 = 7;
             return stackIn_33_0;
           }
-          if (0 > this.field_b &&
-            this.field_K > 0) {
+          if (0 > this.facingX &&
+            this.facingY > 0) {
             stackIn_39_0 = 5;
             return stackIn_39_0;
           }
-          if (this.field_b > 0 &&
-            this.field_K < 0) {
+          if (this.facingX > 0 &&
+            this.facingY < 0) {
             stackIn_45_0 = 1;
             return stackIn_45_0;
           }
-          if (0 < this.field_b &&
-            0 < this.field_K) {
+          if (0 < this.facingX &&
+            0 < this.facingY) {
             stackIn_51_0 = 3;
             return stackIn_51_0;
           }
@@ -1518,9 +1518,9 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
             if (!param1) {
               this.field_cb = 60;
             }
-            var4 = lw.a(this.field_b, (byte) -96);
+            var4 = lw.signum(this.facingX, (byte) -96);
             var5 = var3_int * var4 + this.x;
-            var6 = lw.a(this.field_K, (byte) -109);
+            var6 = lw.signum(this.facingY, (byte) -109);
             var7 = var6 * var3_int + this.y;
             if (null != this.carried) {
               if (!(this.carried instanceof Trap) ||
@@ -1544,7 +1544,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
             regionExit1: {
               if (null == this.field_eb) {
                 var8 = new int[][]{new int[]{var5, var7}, new int[]{this.x - var3_int * var4, this.y + var3_int * var6}, new int[]{this.x + var4 * var3_int, this.y - var6 * var3_int}, new int[]{-(var4 * var3_int) + this.x, -(var6 * var3_int) + this.y}};
-                var9 = new int[][]{new int[]{this.field_b, this.field_K}, new int[]{-this.field_b, this.field_K}, new int[]{this.field_b, -this.field_K}, new int[]{-this.field_b, -this.field_K}};
+                var9 = new int[][]{new int[]{this.facingX, this.facingY}, new int[]{-this.facingX, this.facingY}, new int[]{this.facingX, -this.facingY}, new int[]{-this.facingX, -this.facingY}};
                 var10 = 0;
                 scanLoop2: while (true) {
                   stackIn_31_0 = -5;
@@ -1590,8 +1590,8 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
                           }
                           this.x = this.x + var18;
                         }
-                        this.field_b = var9[var10][0];
-                        this.field_K = var9[var10][1];
+                        this.facingX = var9[var10][0];
+                        this.facingY = var9[var10][1];
                         break scanLoop2;
                       }
                     }
@@ -1710,48 +1710,48 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         int var6 = 0;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
-          var4_int = this.field_b;
+          var4_int = this.facingX;
           if (param2 >= 0) {
             if (param2 > 0) {
-              this.field_b = 1;
+              this.facingX = 1;
               if (var6 != 0 &&
                 param0 != 0) {
-                this.field_b = 0;
-                this.field_b = -1;
+                this.facingX = 0;
+                this.facingX = -1;
               }
             } else {
               if (param0 != 0) {
-                this.field_b = 0;
+                this.facingX = 0;
                 if (var6 != 0) {
-                  this.field_b = -1;
+                  this.facingX = -1;
                 }
               }
             }
           } else {
-            this.field_b = -1;
+            this.facingX = -1;
           }
-          var5 = this.field_K;
+          var5 = this.facingY;
           if (param0 < 0) {
-            this.field_K = -1;
+            this.facingY = -1;
           }
           if (!(param0 < 0) ||
             var6 != 0) {
             if (param0 <= 0) {
               if (param2 != 0) {
-                this.field_K = 0;
+                this.facingY = 0;
                 if (var6 != 0) {
-                  this.field_K = 1;
+                  this.facingY = 1;
                 }
               }
             } else {
-              this.field_K = 1;
+              this.facingY = 1;
             }
           }
           if (param1 > -26) {
             this.t((byte) -73);
           }
-          if (this.field_b == var4_int &&
-            ~this.field_K == ~var5) {
+          if (this.facingX == var4_int &&
+            ~this.facingY == ~var5) {
             return;
           }
           this.field_kb = 0;
@@ -2202,8 +2202,8 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
               this.getSimulation(-1).f(8, 10915)) {
               this.field_gb = true;
               var22 = 1;
-              this.velocityX = this.velocityX + (131072 - this.room.q(-81).nextBounded(262144, 0));
-              this.velocityY = this.velocityY + (131072 - this.room.q(-83).nextBounded(262144, 0));
+              this.velocityX = this.velocityX + (131072 - this.room.getRandom(-81).nextBounded(262144, 0));
+              this.velocityY = this.velocityY + (131072 - this.room.getRandom(-83).nextBounded(262144, 0));
             }
             var16--;
             boolean decompiledSharedTail0 = (null == this.carried);
@@ -2305,7 +2305,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
             }
             if (this.field_ab == 0 &&
               150 < this.field_bb) {
-              if (this.room.q(-91).nextBounded(2, 0) == 0) {
+              if (this.room.getRandom(-91).nextBounded(2, 0) == 0) {
                 var26Lifetime1 = 6;
                 if (var29 != 0) {
                   var26Lifetime1 = 18;
@@ -2337,10 +2337,10 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
             if (var24 != 0 && (var18 != 0 ||
               var28 != 0)) {
               if (var25Lifetime1 != 0) {
-                if (var18 != 0 && ((this.field_b == 0 ||
-                  ~var12Lifetime1 != ~this.field_b) &&
-                  (this.field_K == 0 ||
-                  this.field_K != var13))) {
+                if (var18 != 0 && ((this.facingX == 0 ||
+                  ~var12Lifetime1 != ~this.facingX) &&
+                  (this.facingY == 0 ||
+                  this.facingY != var13))) {
                   var26Lifetime1 = 3;
                   if (var29 != 0) {
                     var26Lifetime1 = 1;
@@ -2392,10 +2392,10 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
           }
           if (var8 != 0 &&
             !this.q(72)) {
-            this.a(2, (byte) -126, 1);
+            this.kill(2, (byte) -126, 1);
           }
           if (this.field_C[0]) {
-            var28Lifetime1 = this.room.q(-96).nextBounded(32, 0) + 256 << 16;
+            var28Lifetime1 = this.room.getRandom(-96).nextBounded(32, 0) + 256 << 16;
             this.room.a(-116, this.y, new Effect(4, 32), var28Lifetime1, var28Lifetime1, this.x);
           }
           if (this.room.g((byte) -67)) {
@@ -2536,8 +2536,8 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (this.field_b == 0 &&
-            this.field_K == 0) {
+          if (this.facingX == 0 &&
+            this.facingY == 0) {
             return;
           }
           if (this.getSimulation(param0 - 3).f(2, 10915)) {
@@ -2546,13 +2546,13 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
           if (this.weapon == null) {
             return;
           }
-          var2_int = PortalBehaviour.a(this.field_K, this.field_b, param0 - 1);
+          var2_int = PortalBehaviour.directionToAngle(this.facingY, this.facingX, param0 - 1);
           this.field_l = this.weapon.a(var2_int, 1572864, (WorldBody) (this), this.x, this.y, this.getRoom((byte) 80), this.velocityX, this.velocityY, this.size / param0, false);
           if (!this.field_l) {
             return;
           }
           this.a(-5636, 11, true);
-          if (this.weapon.b((byte) -16).field_j == 3 &&
+          if (this.weapon.b((byte) -16).type == 3 &&
             this.field_A > 0) {
             this.field_A = 0;
           }
@@ -2575,7 +2575,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
           param0 = fs.mixHash((byte) 114, param0, this.x);
           param0 = fs.mixHash((byte) 105, param0, this.y);
           if (param1 > -22) {
-            this.field_w = -19;
+            this.elevation = -19;
           }
           param0 = fs.mixHash((byte) 44, param0, this.velocityX);
           param0 = fs.mixHash((byte) 38, param0, this.velocityY);
@@ -2624,11 +2624,11 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          this.field_e = param1;
-          this.field_ib = param2;
+          this.respawnX = param1;
+          this.respawnY = param2;
           this.room = param0;
           if (this.field_db) {
-            this.field_ib = this.field_ib + 157286400;
+            this.respawnY = this.respawnY + 157286400;
           }
           this.v((byte) 74);
           if (!param3) {
@@ -2726,7 +2726,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
           if (param0 > -86) {
             Player.D(-76);
           }
-          stackIn_4_0 = this.g((byte) 115);
+          stackIn_4_0 = this.getElevation((byte) 115);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2800,7 +2800,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
           if (param0 >= -77) {
             this.q((byte) -68);
           }
-          this.a(3, (byte) 25, 3);
+          this.kill(3, (byte) 25, 3);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2978,7 +2978,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > -102) {
-            this.a(81, false);
+            this.respawn(81, false);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3022,7 +3022,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
             stackIn_2_0 = 0;
             return stackIn_2_0;
           }
-          if (param0.field_j == 4) {
+          if (param0.type == 4) {
             this.field_S = 25;
             this.field_A = 25;
           }
@@ -3037,7 +3037,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
               if (var5 == 14) {
                 this.b(~param1, param0.field_c);
               }
-              this.a(var4, (byte) 89, var5);
+              this.kill(var4, (byte) 89, var5);
             }
           }
           var3_intLifetime1 = param0.size;
@@ -3127,14 +3127,14 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    public final int g(byte param0) {
+    public final int getElevation(byte param0) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 115) {
-            stackIn_4_0 = this.field_w;
+            stackIn_4_0 = this.elevation;
             return stackIn_4_0;
           }
           stackIn_2_0 = 66;
@@ -3176,11 +3176,11 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
             loadingQuips = (String[]) null;
           }
           if (this.lifeState == 1 &&
-            this.field_r == 4) {
-            stackIn_12_0 = new Corpse(this, var2_int, this.y, -17825792, this.field_r);
+            this.deathCause == 4) {
+            stackIn_12_0 = new Corpse(this, var2_int, this.y, -17825792, this.deathCause);
             return stackIn_12_0;
           }
-          stackIn_14_0 = new Corpse(this, var2_int, this.y, 0, this.field_r);
+          stackIn_14_0 = new Corpse(this, var2_int, this.y, 0, this.deathCause);
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3229,7 +3229,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    public final boolean j(int param0) {
+    public final boolean isFallingIntoPit(int param0) {
         RuntimeException var2 = null;
         boolean stackIn_10_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -3237,7 +3237,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
           if (param0 != -1) {
             this.applyAreaEffect((Effect) null, 58, -120, 50, 126, -106);
           }
-          stackIn_10_0 = (1 == this.lifeState) && (this.field_r == 4);
+          stackIn_10_0 = (1 == this.lifeState) && (this.deathCause == 4);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3246,14 +3246,14 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    public final int g(int param0) {
+    public final int getFacingAngle(int param0) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -25787) {
-            stackIn_4_0 = PortalBehaviour.a(this.field_K, this.field_b, 1);
+            stackIn_4_0 = PortalBehaviour.directionToAngle(this.facingY, this.facingX, 1);
             return stackIn_4_0;
           }
           stackIn_2_0 = 58;
@@ -3357,7 +3357,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -25561) {
-            this.a(91, false);
+            this.respawn(91, false);
           }
           stackIn_4_0 = this.d((byte) -98, 5);
           return stackIn_4_0;
@@ -3434,7 +3434,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 69) {
-            this.field_D = (int[]) null;
+            this.deathCountsByCause = (int[]) null;
           }
           stackIn_7_0 = (this.lifeState == 1);
           return stackIn_7_0;
@@ -3522,13 +3522,13 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
             this.placeInRoom((Room) null, -116, 25, false);
           }
           var4_int = 0;
-          if (this.field_b > 0 &&
+          if (this.facingX > 0 &&
             param2 > 0 ||
-            this.field_b < 0 &&
+            this.facingX < 0 &&
             0 > param2 ||
-            this.field_K > 0 &&
+            this.facingY > 0 &&
             param1 > 0 ||
-            this.field_K < 0 &&
+            this.facingY < 0 &&
             param1 < 0) {
             var4_int = 1;
           }
@@ -3710,7 +3710,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
             this.x = this.room.getWidth((byte) -86) - this.size / 2;
           }
           if (param1 <= 126) {
-            this.field_e = -23;
+            this.respawnX = -23;
           }
           if (this.y > (this.room.getHeight(-125) - this.size / 2)) {
             this.y = this.room.getHeight(-121) - this.size / 2;
@@ -3838,14 +3838,14 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    final int h(byte param0) {
+    final int getFacingY(byte param0) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 123) {
-            stackIn_4_0 = this.field_K;
+            stackIn_4_0 = this.facingY;
             return stackIn_4_0;
           }
           stackIn_2_0 = -120;
@@ -3946,7 +3946,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
             return stackIn_15_0;
           }
           if (!this.room.k((byte) 53) &&
-            param0.field_j == 4) {
+            param0.type == 4) {
             this.velocityX = this.velocityX + param1.getVelocityX(-71) / 8;
             this.velocityY = this.velocityY + param1.getVelocityY(false) / 8;
           }
@@ -4004,14 +4004,14 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         this.field_F = -1;
         this.field_hb = false;
         this.field_cb = 0;
-        this.field_w = 0;
+        this.elevation = 0;
         this.field_y = -1;
         this.field_B = 0;
-        this.field_D = new int[5];
+        this.deathCountsByCause = new int[5];
         this.field_j = 18202625;
         try {
           this.field_Q = param0;
-          this.a(-101, true);
+          this.respawn(-101, true);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hca.<init>(" + param0 + ')');
         }

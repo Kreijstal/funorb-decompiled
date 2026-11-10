@@ -179,10 +179,10 @@ final class PathMoveLocomotor extends Locomotor {
             this.trap.a((byte) -77, var13Lifetime6, var14Lifetime6);
             return;
           }
-          var11Lifetime6 = S2CRoundResultPacket.a(8192, -16390, var10, this.trap.g(-25787));
+          var11Lifetime6 = S2CRoundResultPacket.a(8192, -16390, var10, this.trap.getFacingAngle(-25787));
           var12Lifetime6 = ua.a(var11Lifetime6, 39);
           if (this.field_v == 0) {
-            this.trap.c(false, -var11Lifetime6);
+            this.trap.rotateBy(false, -var11Lifetime6);
             this.field_s = false;
             var11Lifetime6 = MouseInputHandler.a((byte) 126, var10 >> 2);
             var12Lifetime6 = bua.a(0, var10 >> 2);
@@ -192,7 +192,7 @@ final class PathMoveLocomotor extends Locomotor {
             return;
           }
           if (var12Lifetime6 <= this.field_v) {
-            this.trap.c(false, -var11Lifetime6);
+            this.trap.rotateBy(false, -var11Lifetime6);
             this.field_s = false;
             var11Lifetime6 = MouseInputHandler.a((byte) 126, var10 >> 2);
             var12Lifetime6 = bua.a(0, var10 >> 2);
@@ -201,7 +201,7 @@ final class PathMoveLocomotor extends Locomotor {
             this.trap.a((byte) -77, var13Lifetime8, var14Lifetime8);
             return;
           }
-          this.trap.c(false, -lw.a(var11Lifetime6, (byte) -76) * this.field_v);
+          this.trap.rotateBy(false, -lw.signum(var11Lifetime6, (byte) -76) * this.field_v);
           if (this.field_u) {
             return;
           }
@@ -247,10 +247,10 @@ final class PathMoveLocomotor extends Locomotor {
           this.trap.a((byte) -77, var13Lifetime2, var14Lifetime2);
           return;
         }
-        var11Lifetime3 = S2CRoundResultPacket.a(8192, -16390, var10Lifetime1, this.trap.g(-25787));
+        var11Lifetime3 = S2CRoundResultPacket.a(8192, -16390, var10Lifetime1, this.trap.getFacingAngle(-25787));
         var12Lifetime3 = ua.a(var11Lifetime3, 39);
         if (this.field_v == 0) {
-          this.trap.c(false, -var11Lifetime3);
+          this.trap.rotateBy(false, -var11Lifetime3);
           this.field_s = false;
           var11Lifetime3 = MouseInputHandler.a((byte) 126, var10Lifetime1 >> 2);
           var12Lifetime3 = bua.a(0, var10Lifetime1 >> 2);
@@ -260,7 +260,7 @@ final class PathMoveLocomotor extends Locomotor {
           return;
         }
         if (var12Lifetime3 <= this.field_v) {
-          this.trap.c(false, -var11Lifetime3);
+          this.trap.rotateBy(false, -var11Lifetime3);
           this.field_s = false;
           var11Lifetime3 = MouseInputHandler.a((byte) 126, var10Lifetime1 >> 2);
           var12Lifetime3 = bua.a(0, var10Lifetime1 >> 2);
@@ -269,7 +269,7 @@ final class PathMoveLocomotor extends Locomotor {
           this.trap.a((byte) -77, var13Lifetime4, var14Lifetime4);
           return;
         }
-        this.trap.c(false, -lw.a(var11Lifetime3, (byte) -76) * this.field_v);
+        this.trap.rotateBy(false, -lw.signum(var11Lifetime3, (byte) -76) * this.field_v);
         if (this.field_u) {
           return;
         }

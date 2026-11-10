@@ -49,7 +49,7 @@ final class gj {
           is.field_yb = new jea(0L, Corpse.field_i);
           is.field_yb.field_z = 1;
           qh.field_F = new jea(0L, ooa.field_f, ija.field_i);
-          mda.field_v = new jea(0L, SecondaryNodeDeque.field_b, ap.field_c);
+          Puddle.field_v = new jea(0L, SecondaryNodeDeque.field_b, ap.field_c);
           ita.field_c = new jea(0L, PressureSwitchBehaviour.field_p);
           dqa.field_e.b(-122, is.field_yb);
           dqa.field_e.b(-126, qh.field_F);
@@ -57,7 +57,7 @@ final class gj {
             var4 = (ResourceArchive) null;
             gj.a((ResourceArchive) null, true);
           }
-          dqa.field_e.b(-123, mda.field_v);
+          dqa.field_e.b(-123, Puddle.field_v);
           dqa.field_e.b(-123, dn.field_b);
           dqa.field_e.b(-125, ita.field_c);
           stackIn_4_0 = dn.field_b.field_vb.field_vb;

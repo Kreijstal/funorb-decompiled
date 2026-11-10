@@ -39,7 +39,7 @@ abstract class AppletGameShell extends GameApplet {
             PlantComponent.b(param0 ^ -109, 6);
           }
           if (hd.field_a[6]) {
-            mda.b(7, (byte) -105);
+            Puddle.b(7, (byte) -105);
           }
           if (hd.field_a[8]) {
             nf.a((byte) 5);
@@ -68,9 +68,9 @@ abstract class AppletGameShell extends GameApplet {
         SimpleBlockBehaviour.a(param0 ^ -16, di.a(param0 + 82), jaa.a((byte) 64, var5), var3 != 0);
     }
 
-    final static boolean q(int param0) {
+    final static boolean isFreeChatAllowed(int param0) {
         if (param0 != -1) {
-          AppletGameShell.q(12);
+          AppletGameShell.isFreeChatAllowed(12);
         }
         return !PowerDownItemBehaviour.field_s ? true : false;
     }
@@ -226,7 +226,7 @@ abstract class AppletGameShell extends GameApplet {
         }
     }
 
-    final void m(int param0) {
+    final void dispatchServerPacket(int param0) {
         int stackIn_24_0 = 0;
         boolean stackIn_25_1 = false;
         int var2;
@@ -380,7 +380,7 @@ abstract class AppletGameShell extends GameApplet {
         }
     }
 
-    private final void i(int param0) {
+    private final void initializePacketLengths(int param0) {
         S2CEventPacket.field_c[11] = -1;
         S2CEventPacket.field_c[9] = -1;
         S2CEventPacket.field_c[5] = -1;
@@ -425,7 +425,7 @@ abstract class AppletGameShell extends GameApplet {
         tj.field_c = param6;
         fq.field_g = param1;
         fm.field_j = param0;
-        this.i(16);
+        this.initializePacketLengths(16);
         MirrorMoverLocomotor.f(29320);
     }
 
@@ -436,7 +436,7 @@ abstract class AppletGameShell extends GameApplet {
         }
     }
 
-    final void a(int param0, int param1, int param2, String param3, int param4) {
+    final void readAppletParameters(int param0, int param1, int param2, String param3, int param4) {
         boolean stackIn_10_1 = false;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;

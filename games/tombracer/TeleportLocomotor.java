@@ -47,7 +47,7 @@ final class TeleportLocomotor extends Locomotor {
             this.field_r = this.field_r + 1;
           } else {
             if (var13.length > 0) {
-              this.field_r = this.c(true).q(73).nextBounded(var13.length, 0);
+              this.field_r = this.c(true).getRandom(73).nextBounded(var13.length, 0);
             }
           }
           this.trap.a((byte) 54, this.field_t);
@@ -79,7 +79,7 @@ final class TeleportLocomotor extends Locomotor {
             this.field_r = this.field_r + 1;
           } else {
             if (var13.length > 0) {
-              this.field_r = this.c(true).q(73).nextBounded(var13.length, 0);
+              this.field_r = this.c(true).getRandom(73).nextBounded(var13.length, 0);
             }
           }
           this.trap.a((byte) 54, this.field_t);
@@ -139,7 +139,7 @@ final class TeleportLocomotor extends Locomotor {
           this.trap.n(this.field_u, -112);
           return;
         }
-        this.field_r = this.c(true).q(73).nextBounded(var13.length, 0);
+        this.field_r = this.c(true).getRandom(73).nextBounded(var13.length, 0);
         this.trap.a((byte) 54, this.field_t);
         var5Lifetime4 = this.trap.getRoot(0);
         if (this.trap.getRoom((byte) -70).a(this.trap, this.trap.getHeight((byte) 55), 2, this.trap.g(true), this.field_t.field_d, this.field_t.field_f, false, var5Lifetime4, this.trap.getWidth(-110))) {

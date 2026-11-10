@@ -232,10 +232,10 @@ final class SnakePitBehaviour extends Behaviour {
           if (param3 > -34) {
             SnakePitBehaviour.a(0.6912761926651001f, -0.5952900052070618f, -96, -20, 0.25126492977142334f, -40, 39, 3);
           }
-          if (param4.field_j == 3) {
+          if (param4.type == 3) {
             param2.a(param1, param4.size, param0, true);
           } else {
-            if (param4.field_j == 4) {
+            if (param4.type == 4) {
               param2.a(param1, param0, param4.size, (byte) 99);
             }
           }

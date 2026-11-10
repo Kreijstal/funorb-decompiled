@@ -57,7 +57,7 @@ final class SimpleMoveLocomotor extends Locomotor {
           var5 = doa.a(2, this.field_t, var3);
           var7 = doa.a(2, this.field_t, var4);
           if (var7 == 0) {
-            var5 = lw.a(var5, (byte) -52) * this.field_t;
+            var5 = lw.signum(var5, (byte) -52) * this.field_t;
             var8 = this.trap.s(25745);
             var9 = this.trap.getLocalY(false);
             this.trap.a((byte) -17, var5, var7);
@@ -124,7 +124,7 @@ final class SimpleMoveLocomotor extends Locomotor {
               this.field_o = this.field_o + this.field_t;
             }
           } else {
-            var7 = lw.a(var7, (byte) -71) * this.field_t;
+            var7 = lw.signum(var7, (byte) -71) * this.field_t;
             var8Lifetime4 = this.trap.s(25745);
             var9Lifetime4 = this.trap.getLocalY(false);
             this.trap.a((byte) -17, var5, var7);
@@ -156,7 +156,7 @@ final class SimpleMoveLocomotor extends Locomotor {
           var5Lifetime1 = doa.a(2, this.field_t, var3Lifetime1);
           var7Lifetime1 = doa.a(2, this.field_t, var4Lifetime1);
           if (var7Lifetime1 == 0) {
-            var5Lifetime1 = lw.a(var5Lifetime1, (byte) -52) * this.field_t;
+            var5Lifetime1 = lw.signum(var5Lifetime1, (byte) -52) * this.field_t;
             var8Lifetime1 = this.trap.s(25745);
             var9Lifetime1 = this.trap.getLocalY(false);
             this.trap.a((byte) -17, var5Lifetime1, var7Lifetime1);
@@ -223,7 +223,7 @@ final class SimpleMoveLocomotor extends Locomotor {
               this.field_o = this.field_o + this.field_t;
             }
           } else {
-            var7Lifetime1 = lw.a(var7Lifetime1, (byte) -71) * this.field_t;
+            var7Lifetime1 = lw.signum(var7Lifetime1, (byte) -71) * this.field_t;
             var8Lifetime1Lifetime1 = this.trap.s(25745);
             var9Lifetime1Lifetime1 = this.trap.getLocalY(false);
             this.trap.a((byte) -17, var5Lifetime1, var7Lifetime1);
@@ -279,7 +279,7 @@ final class SimpleMoveLocomotor extends Locomotor {
             }
             return;
           }
-          var7Lifetime2 = lw.a(var7Lifetime2, (byte) -71) * this.field_t;
+          var7Lifetime2 = lw.signum(var7Lifetime2, (byte) -71) * this.field_t;
           var8Lifetime2Lifetime1 = this.trap.s(25745);
           var9Lifetime2Lifetime1 = this.trap.getLocalY(false);
           this.trap.a((byte) -17, var5Lifetime2, var7Lifetime2);
@@ -306,7 +306,7 @@ final class SimpleMoveLocomotor extends Locomotor {
           this.field_j = true;
           return;
         }
-        var5Lifetime2 = lw.a(var5Lifetime2, (byte) -52) * this.field_t;
+        var5Lifetime2 = lw.signum(var5Lifetime2, (byte) -52) * this.field_t;
         var8Lifetime3 = this.trap.s(25745);
         var9Lifetime3 = this.trap.getLocalY(false);
         this.trap.a((byte) -17, var5Lifetime2, var7Lifetime2);

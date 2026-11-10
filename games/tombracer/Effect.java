@@ -3,7 +3,7 @@
  */
 final class Effect implements noa {
     static jea field_a;
-    int field_j;
+    int type;
     private int preset;
     WorldBody field_g;
     static SpriteData[] field_e;
@@ -51,7 +51,7 @@ final class Effect implements noa {
 
     final int e(int param0) {
         if (param0 > -78) {
-          this.field_j = 23;
+          this.type = 23;
           return this.field_k;
         }
         return this.field_k;
@@ -59,7 +59,7 @@ final class Effect implements noa {
 
     final int getPreset(int param0) {
         if (param0 != -344) {
-          this.a(9);
+          this.updateType(9);
           return this.preset;
         }
         return this.preset;
@@ -88,16 +88,16 @@ final class Effect implements noa {
         }
     }
 
-    private final void a(int param0) {
-        this.field_j = this.a(true);
+    private final void updateType(int param0) {
+        this.type = this.typeForPreset(true);
         if (param0 > -37) {
           this.b(-40, 82);
         }
     }
 
-    final void a(int param0, int param1) {
+    final void setPreset(int param0, int param1) {
         this.preset = param1;
-        this.a(-80);
+        this.updateType(-80);
         if (param0 != 29525) {
           field_i = (String[]) null;
         }
@@ -121,7 +121,7 @@ final class Effect implements noa {
         return 0;
     }
 
-    private final int a(boolean param0) {
+    private final int typeForPreset(boolean param0) {
         int var2;
         int var2Lifetime1;
         if (param0) {
@@ -178,15 +178,15 @@ final class Effect implements noa {
     final boolean d(int param0) {
         if (param0 != 6734) {
           this.b(94, -61);
-          if (this.field_j != 1) {
-            return this.field_j == 2 ? true : false;
+          if (this.type != 1) {
+            return this.type == 2 ? true : false;
           }
           return true;
         }
-        if (this.field_j == 1) {
+        if (this.type == 1) {
           return true;
         }
-        if (this.field_j != 2) {
+        if (this.type != 2) {
           return false;
         }
         return true;
@@ -217,7 +217,7 @@ final class Effect implements noa {
           this.preset = param1;
           this.size = param2;
           this.a(param0, 2348);
-          this.a(-70);
+          this.updateType(-70);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "up.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

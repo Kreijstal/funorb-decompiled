@@ -60,7 +60,7 @@ final class aia extends IntrusiveNode {
             this.field_k = this.field_k - 1;
             return;
           }
-          var17 = param6.q(57);
+          var17 = param6.getRandom(57);
           if (param6.getSimulation(-1553494544).f(8, 10915)) {
             this.field_o = 100 + var17.nextBounded(50, 0);
           }
@@ -114,12 +114,12 @@ final class aia extends IntrusiveNode {
             this.field_p = ne.field_f[this.field_f][1] * var12Lifetime1;
             if (0 < this.field_i) {
               if (this.field_s != 0 &&
-                lw.a(this.field_s, (byte) -87) == lw.a(-this.field_n + this.field_u, (byte) -87)) {
+                lw.signum(this.field_s, (byte) -87) == lw.signum(-this.field_n + this.field_u, (byte) -87)) {
                 this.field_s = -this.field_s;
                 this.field_f = sw.a(this.field_f, 6);
               }
               if (this.field_p != 0 &&
-                lw.a(this.field_p, (byte) -95) == lw.a(this.field_m - this.field_r, (byte) -93)) {
+                lw.signum(this.field_p, (byte) -95) == lw.signum(this.field_m - this.field_r, (byte) -93)) {
                 this.field_p = -this.field_p;
                 this.field_f = SweeperMountComponent.b(0, this.field_f);
               }
@@ -248,7 +248,7 @@ final class aia extends IntrusiveNode {
             if (this.a(-196609, param4, param2, param3) &&
               var6_int != 0 &&
               var7 != 0) {
-              param4.a(2, (byte) 97, 7);
+              param4.kill(2, (byte) 97, 7);
             }
           }
           this.field_l = false;
@@ -422,7 +422,7 @@ final class aia extends IntrusiveNode {
           if (param1 > -72) {
             this.g(-8);
           }
-          this.field_k = 50 + param0.q(-120).nextBounded(50, 0);
+          this.field_k = 50 + param0.getRandom(-120).nextBounded(50, 0);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "aia.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

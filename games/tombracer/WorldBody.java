@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 interface WorldBody {
-    public abstract boolean j(int param0);
+    public abstract boolean isFallingIntoPit(int param0);
 
     public abstract boolean tryPush(int param0, boolean param1, int param2, int param3, int param4, int param5);
 
@@ -24,7 +24,7 @@ interface WorldBody {
 
     public abstract int getY(int param0);
 
-    public abstract int g(byte param0);
+    public abstract int getElevation(byte param0);
 
     public abstract boolean b(boolean param0);
 
@@ -32,5 +32,5 @@ interface WorldBody {
 
     public abstract int getWidth(int param0);
 
-    public abstract int g(int param0);
+    public abstract int getFacingAngle(int param0);
 }

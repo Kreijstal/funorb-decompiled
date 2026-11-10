@@ -45,12 +45,12 @@ final class LegacySwitchModel extends TrapModel {
     final int k(byte param0) {
         if (param0 != -99) {
           field_m = (String) null;
-          if (!this.body.j(-1)) {
+          if (!this.body.isFallingIntoPit(-1)) {
             return 5;
           }
           return 2;
         }
-        if (!this.body.j(-1)) {
+        if (!this.body.isFallingIntoPit(-1)) {
           return 5;
         }
         return 2;

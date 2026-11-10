@@ -64,7 +64,7 @@ final class ConstrainToFacingArcLocomotor extends ConstraintLocomotor {
           }
         }
         if (var3 != 0) {
-          this.trap.c(false, var3);
+          this.trap.rotateBy(false, var3);
         }
         return;
     }

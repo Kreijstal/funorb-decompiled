@@ -181,7 +181,7 @@ final class FacePointLocomotor extends Locomotor {
         for (var7 = var7 * -1; var7 < 0; var7 += 8192) {
         }
         regionExit1: {
-          var8 = var7 - this.trap.g(-25787);
+          var8 = var7 - this.trap.getFacingAngle(-25787);
           if (0 < this.field_s) {
             while (var8 < -4096) {
               var8 += 8192;
@@ -193,15 +193,15 @@ final class FacePointLocomotor extends Locomotor {
               var8 = this.field_s;
             } else {
               if (var8 >= -this.field_s) {
-                this.trap.c(false, var8);
+                this.trap.rotateBy(false, var8);
               } else {
                 var8 = -this.field_s;
-                this.trap.c(false, var8);
+                this.trap.rotateBy(false, var8);
               }
               break regionExit1;
             }
           }
-          this.trap.c(false, var8);
+          this.trap.rotateBy(false, var8);
         }
     }
 

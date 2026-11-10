@@ -74,7 +74,7 @@ final class PushableBlockMazeComponent extends MazeComponent {
           var10.b((byte) -11, 2097152, 2097152);
           var10.a((byte) -3, 4);
           var10.h(3, 0);
-          var10.e(true, param0 + 116);
+          var10.setPushable(true, param0 + 116);
           var10.g(124, 1);
           var10.b((byte) 17, false);
           var10.b(false, 11468);

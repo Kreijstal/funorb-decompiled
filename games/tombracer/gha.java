@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gha implements pp {
-    private static String[] field_b;
-    static char[] field_a;
+    private static String[] effectPresetNames;
+    static char[] cp1252HighChars;
 
     final static boolean a(int param0, int param1, int param2) {
         if (param2 <= 27) {
@@ -110,9 +110,9 @@ final class gha implements pp {
     }
 
     public static void releaseStatics(int param0) {
-        field_b = null;
+        effectPresetNames = null;
         int var1 = 24 / ((param0 + 30) / 62);
-        field_a = null;
+        cp1252HighChars = null;
     }
 
     final static oc a(String param0, String param1, int param2, ResourceArchive param3) {
@@ -167,14 +167,14 @@ final class gha implements pp {
     }
 
     static {
-        field_b = new String[7];
-        field_b[4] = "Light";
-        field_b[3] = "Water";
-        field_b[2] = "Blue Fire";
-        field_b[6] = "White Light";
-        field_b[5] = "Ice";
-        field_b[0] = "Damage";
-        field_b[1] = "Yellow Fire";
-        field_a = new char[]{(char)8364, (char)0, (char)8218, (char)402, (char)8222, (char)8230, (char)8224, (char)8225, (char)710, (char)8240, (char)352, (char)8249, (char)338, (char)0, (char)381, (char)0, (char)0, (char)8216, (char)8217, (char)8220, (char)8221, (char)8226, (char)8211, (char)8212, (char)732, (char)8482, (char)353, (char)8250, (char)339, (char)0, (char)382, (char)376};
+        effectPresetNames = new String[7];
+        effectPresetNames[4] = "Light";
+        effectPresetNames[3] = "Water";
+        effectPresetNames[2] = "Blue Fire";
+        effectPresetNames[6] = "White Light";
+        effectPresetNames[5] = "Ice";
+        effectPresetNames[0] = "Damage";
+        effectPresetNames[1] = "Yellow Fire";
+        cp1252HighChars = new char[]{(char)8364, (char)0, (char)8218, (char)402, (char)8222, (char)8230, (char)8224, (char)8225, (char)710, (char)8240, (char)352, (char)8249, (char)338, (char)0, (char)381, (char)0, (char)0, (char)8216, (char)8217, (char)8220, (char)8221, (char)8226, (char)8211, (char)8212, (char)732, (char)8482, (char)353, (char)8250, (char)339, (char)0, (char)382, (char)376};
     }
 }

@@ -29,7 +29,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
           RoomComponent var3 = (RoomComponent) null;
           this.a((RoomComponent) null, -115, (byte) -23);
         }
-        return this.g((byte) 115);
+        return this.getElevation((byte) 115);
     }
 
     final void a(boolean param0, int param1) {
@@ -408,7 +408,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
 
     final void a(int param0, int param1, int param2) {
         if (param0 != 1434528720) {
-          this.g(113);
+          this.getFacingAngle(113);
         }
         this.field_j = param2;
         this.field_p = param1;
@@ -573,7 +573,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         }
     }
 
-    public final boolean j(int param0) {
+    public final boolean isFallingIntoPit(int param0) {
         if (param0 != -1) {
           this.getRenderZ((byte) 109);
           return false;
@@ -601,7 +601,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         }
     }
 
-    public final int g(byte param0) {
+    public final int getElevation(byte param0) {
         if (param0 != 115) {
           return -84;
         }
@@ -625,7 +625,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
 
     public final boolean d(byte param0) {
         if (param0 != 48) {
-          this.g(-122);
+          this.getFacingAngle(-122);
           return false;
         }
         return false;
@@ -684,8 +684,8 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         RoomComponent var3;
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
-        this.field_f = MouseInputHandler.a((byte) 106, -this.g(-25787) >> 2);
-        this.field_h = bua.a(0, -this.g(-25787) >> 2);
+        this.field_f = MouseInputHandler.a((byte) 106, -this.getFacingAngle(-25787) >> 2);
+        this.field_h = bua.a(0, -this.getFacingAngle(-25787) >> 2);
         for (var2 = 0; this.field_t.length > var2; var2++) {
           this.field_t[var2].a(this.field_f, this.field_h, (byte) 98);
           var3 = this.field_t[var2].a(-122);
@@ -745,13 +745,13 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         return var2;
     }
 
-    public final int g(int param0) {
+    public final int getFacingAngle(int param0) {
         if (param0 != -25787) {
           this.field_f = -1;
         }
         int var2 = this.field_r;
         if (null != this.field_u) {
-          var2 = var2 + (this.field_u.g(-25787) + this.field_u.a(this.field_q, param0 ^ -17595).a(false));
+          var2 = var2 + (this.field_u.getFacingAngle(-25787) + this.field_u.a(this.field_q, param0 ^ -17595).a(false));
         }
         return var2;
     }

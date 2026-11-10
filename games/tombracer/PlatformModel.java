@@ -695,7 +695,7 @@ final class PlatformModel extends TrapModel {
         int var2_int = 0;
         RuntimeException var2 = null;
         try {
-          if (this.body.j(-1)) {
+          if (this.body.isFallingIntoPit(-1)) {
             stackIn_4_0 = 2;
             return stackIn_4_0;
           }

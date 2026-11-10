@@ -904,7 +904,7 @@ final class SwitchModel extends TrapModel {
             }
           }
           if (var11 != null) {
-            var14Lifetime1 = dfa.a(var10 + (2048 - this.body.g(-25787)) >> 2, 2048, -38);
+            var14Lifetime1 = dfa.a(var10 + (2048 - this.body.getFacingAngle(-25787)) >> 2, 2048, -38);
             gqa.a(var14Lifetime1, -83584144, param1, param2, (ka) (var11), param3);
           }
           if (this.field_q == 1) {
@@ -913,7 +913,7 @@ final class SwitchModel extends TrapModel {
             }
             var16 = this.field_s.b((byte) 74);
             this.field_s.a(3, false, (byte) 79, 7);
-            var14Lifetime2 = dfa.a(-this.body.g(-25787) + var10 + 2048 >> 2, 2048, -69);
+            var14Lifetime2 = dfa.a(-this.body.getFacingAngle(-25787) + var10 + 2048 >> 2, 2048, -69);
             gqa.a(var14Lifetime2, -83584144, param1, param2 + 65536, var16, param3 + 2228224);
           }
           return;
@@ -936,7 +936,7 @@ final class SwitchModel extends TrapModel {
         if (param0 != -99) {
           return 44;
         }
-        if (this.body.j(-1)) {
+        if (this.body.isFallingIntoPit(-1)) {
           return 2;
         }
         int var2 = this.field_q;

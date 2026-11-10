@@ -74,7 +74,7 @@ final class WallCrusherComponent extends PrefabComponent {
           if (!this.field_N) {
             var10 = this.field_L;
           } else {
-            var10 = param2.q(-86).nextBounded(16, 0);
+            var10 = param2.getRandom(-86).nextBounded(16, 0);
           }
           var10 = var10 * var9.a((byte) -94) / 16;
           var9.a(false, var10);

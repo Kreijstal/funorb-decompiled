@@ -105,8 +105,8 @@ final class TrapSpawner extends Spawner {
           var5.endBitWrite(-1826190686);
           var6 = this.template.cloneInto(param3 - 14406, this.field_a, true);
           var6.m(1, param1);
-          var6.c(param2, -19879);
-          var6.c(false, param0);
+          var6.setLocalY(param2, -19879);
+          var6.rotateBy(false, param0);
           this.field_a.addTrap(var6, (byte) 32);
           return;
         }
@@ -114,8 +114,8 @@ final class TrapSpawner extends Spawner {
         var5.endBitWrite(-1826190686);
         var6Lifetime1 = this.template.cloneInto(param3 - 14406, this.field_a, true);
         var6Lifetime1.m(1, param1);
-        var6Lifetime1.c(param2, -19879);
-        var6Lifetime1.c(false, param0);
+        var6Lifetime1.setLocalY(param2, -19879);
+        var6Lifetime1.rotateBy(false, param0);
         this.field_a.addTrap(var6Lifetime1, (byte) 32);
     }
 

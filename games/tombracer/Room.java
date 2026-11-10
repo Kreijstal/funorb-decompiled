@@ -18,7 +18,7 @@ final class Room implements SwitchableScope, Renderable, noa {
     static ToolkitSprite[][] field_p;
     private IntrusiveDeque traps;
     private IntrusiveDeque components;
-    private IsaacCipher field_t;
+    private IsaacCipher random;
     private uw field_S;
     private int randomSeed;
     int field_a;
@@ -49,9 +49,9 @@ final class Room implements SwitchableScope, Renderable, noa {
     private int field_A;
     sqa field_G;
 
-    private final mda b(int param0, int param1, int param2, int param3) {
+    private final Puddle allocatePuddle(int param0, int param1, int param2, int param3) {
         int var5 = 112 / ((param0 + 6) / 43);
-        return (mda) (this.field_f.spawn(-2698, param1, param2, this.field_S, param3));
+        return (Puddle) (this.field_f.spawn(-2698, param1, param2, this.field_S, param3));
     }
 
     final int a(int param0, int param1, WorldBody param2, int param3, int param4, byte param5) {
@@ -181,14 +181,14 @@ final class Room implements SwitchableScope, Renderable, noa {
         }
     }
 
-    final boolean b(int param0, int param1, int param2, int param3, int param4) {
+    final boolean spawnPuddle(int param0, int param1, int param2, int param3, int param4) {
         int var6;
         int var7;
         IntrusiveDequeCursor var8;
-        mda var9;
+        Puddle var9;
         int var10;
         int var11;
-        mda var12;
+        Puddle var12;
         var11 = TombRacer.field_G ? 1 : 0;
         var6 = 262144;
         if (param1 < var6) {
@@ -202,7 +202,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         if (param0 != 30097) {
           this.b(-85, -33);
         }
-        var9 = (mda) (var8.first(true));
+        var9 = (Puddle) (var8.first(true));
         while (var9 != null) {
           if (~var9.r(-70) == ~param2) {
             var10 = var9.t(param0 ^ 30096);
@@ -211,13 +211,13 @@ final class Room implements SwitchableScope, Renderable, noa {
               return true;
             }
           }
-          var9 = (mda) (var8.next(param0 ^ -30098));
+          var9 = (Puddle) (var8.next(param0 ^ -30098));
         }
         if (param2 == 1 &&
           this.a((Collidable) null, param1 * 2, 2, 1, param3, param4, false, (WorldBody) null, 2 * param1)) {
           return false;
         }
-        var12 = this.b(94, param3, 0, param4);
+        var12 = this.allocatePuddle(94, param3, 0, param4);
         var12.a(this, param4, 99, param3, param2, param1);
         this.collisionGrid.remove((Collidable) (var12), (byte) 124);
         return true;
@@ -373,7 +373,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         this.enterAtEntrance((byte) -108, true);
     }
 
-    final SimulationObserver b(int param0) {
+    final SimulationObserver getObserver(int param0) {
         if (param0 != -1) {
           sqa var3 = (sqa) null;
           this.a(15, (sqa) null);
@@ -432,7 +432,7 @@ final class Room implements SwitchableScope, Renderable, noa {
 
     final boolean k(byte param0) {
         if (param0 != 53) {
-          this.b(31, 62, -43, -109, -2);
+          this.spawnPuddle(31, 62, -43, -109, -2);
         }
         return this.getSimulation(-1553494544).g(110);
     }
@@ -444,9 +444,9 @@ final class Room implements SwitchableScope, Renderable, noa {
         this.field_B.a(param3, param6, true, param0, param1, param2, param5);
     }
 
-    final IsaacCipher q(int param0) {
+    final IsaacCipher getRandom(int param0) {
         int var2 = 60 % ((-19 - param0) / 42);
-        return this.field_t;
+        return this.random;
     }
 
     final Projectile spawnProjectile(int param0, int param1, int param2, int param3) {
@@ -464,7 +464,7 @@ final class Room implements SwitchableScope, Renderable, noa {
     private final void reset(boolean param0, byte param1) {
         PlayerSimulation var4;
         this.field_H = null;
-        this.field_t = null;
+        this.random = null;
         this.field_d.clear(8);
         if (param1 <= 95) {
           Room.l(-107);
@@ -475,12 +475,12 @@ final class Room implements SwitchableScope, Renderable, noa {
           this.field_G.a((byte) -127);
         }
         if (param0) {
-          this.field_t = new IsaacCipher(new int[]{this.randomSeed});
+          this.random = new IsaacCipher(new int[]{this.randomSeed});
           this.field_H = new IsaacCipher(new int[]{this.randomSeed});
           this.collisionGrid = new CollisionGrid(false, 16);
           this.particlePool = new ObjectPool(this, new Particle(), 100);
           this.projectilePool = new ObjectPool(this, new Projectile(), 25);
-          this.field_f = new ObjectPool(this, new mda(), 50);
+          this.field_f = new ObjectPool(this, new Puddle(), 50);
           this.field_B = new tqa(this, 2097152);
           this.particlePool.releaseAll((byte) 114);
           this.projectilePool.releaseAll((byte) 122);
@@ -677,7 +677,7 @@ final class Room implements SwitchableScope, Renderable, noa {
 
     final int getEffectSlot(int param0, int param1) {
         if (param0 > -95) {
-          this.b(10, -88, -18, 76, -15);
+          this.spawnPuddle(10, -88, -18, 76, -15);
         }
         return this.effectSlots[param1];
     }
@@ -732,7 +732,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         }
         var7 = this.getPlayer(-22);
         var7.placeInRoom(this, this.entranceX, this.entranceY, true);
-        var7.a(-127, param1);
+        var7.respawn(-127, param1);
         if (param0 >= -80) {
           var6 = (WorldBody) null;
           this.a(94, 108, 82, 71, 28, 102, (WorldBody) null);
@@ -825,7 +825,7 @@ final class Room implements SwitchableScope, Renderable, noa {
             param0.B(-165);
           }
           if (param1 != 2) {
-            this.b(85);
+            this.getObserver(85);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

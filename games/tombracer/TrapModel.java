@@ -638,7 +638,7 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
             if (this.body instanceof Trap) {
               var3 = (Trap) (this.body);
             }
-            var4 = (this.field_f << 16) + this.body.g((byte) 115);
+            var4 = (this.field_f << 16) + this.body.getElevation((byte) 115);
             this.a(param1, this.body.getY(9648), this.body.getX(3), var4, (byte) 46);
             if (var3 != null) {
               ((Trap) (var3)).a(param1, -10425);
@@ -715,12 +715,12 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
     int k(byte param0) {
         if (param0 != -99) {
           this.field_j = true;
-          if (!this.body.j(param0 + 98)) {
+          if (!this.body.isFallingIntoPit(param0 + 98)) {
             return 7;
           }
           return 2;
         }
-        if (!this.body.j(param0 + 98)) {
+        if (!this.body.isFallingIntoPit(param0 + 98)) {
           return 7;
         }
         return 2;
@@ -781,12 +781,12 @@ abstract class TrapModel extends IntrusiveNode implements Renderable, noa {
         if (param0 > -86) {
           this.k((byte) -84);
           if (null != this.body) {
-            return this.body.g((byte) 115) + (this.field_f << 16);
+            return this.body.getElevation((byte) 115) + (this.field_f << 16);
           }
           return 0;
         }
         if (null != this.body) {
-          return this.body.g((byte) 115) + (this.field_f << 16);
+          return this.body.getElevation((byte) 115) + (this.field_f << 16);
         }
         return 0;
     }

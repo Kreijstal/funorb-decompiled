@@ -374,8 +374,8 @@ final class ts {
           while (var11 != 0) {
             if (var9 > var8) {
               var8++;
-              var12 = var6 / 2 + this.field_c.q(param0 - 41).nextBounded(var3 - var6, 0);
-              var13 = this.field_c.q(param0 - 195).nextBounded(var4 - var7, 0) + var7 / 2;
+              var12 = var6 / 2 + this.field_c.getRandom(param0 - 41).nextBounded(var3 - var6, 0);
+              var13 = this.field_c.getRandom(param0 - 195).nextBounded(var4 - var7, 0) + var7 / 2;
               var14 = -var12 + this.field_c.getPlayer(-53).getX(3) >> 16;
               var15 = -var13 + this.field_c.getPlayer(-79).getY(param0 ^ 9698) >> 16;
               if (4096 > var15 * var15 + var14 * var14) {

@@ -178,7 +178,7 @@ final class PortalBehaviour extends Behaviour {
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int directionToAngle(int param0, int param1, int param2) {
         if (param2 == 1) {
           if (param1 < 0) {
             if (param0 < 0) {

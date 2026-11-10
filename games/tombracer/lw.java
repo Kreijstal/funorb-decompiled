@@ -153,9 +153,9 @@ final class lw {
         this.field_b = false;
     }
 
-    final static int a(int param0, byte param1) {
+    final static int signum(int param0, byte param1) {
         if (param1 > -49) {
-          lw.a(-18, (byte) 73);
+          lw.signum(-18, (byte) 73);
           if (0 > param0) {
             return -1;
           }

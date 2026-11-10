@@ -780,7 +780,7 @@ final class gva implements mb {
         this.field_a = new int[3];
     }
 
-    public final void a(mda param0, int param1, iq param2) {
+    public final void a(Puddle param0, int param1, iq param2) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;

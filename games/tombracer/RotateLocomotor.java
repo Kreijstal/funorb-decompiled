@@ -53,7 +53,7 @@ final class RotateLocomotor extends Locomotor {
     }
 
     final void tick(byte param0) {
-        this.trap.c(false, this.field_p);
+        this.trap.rotateBy(false, this.field_p);
         int var2 = 24 % ((param0 + 69) / 42);
     }
 

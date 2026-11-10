@@ -167,7 +167,7 @@ final class Weapon {
               param7 = 0;
               param6 = 0;
             }
-            var15 = param5.q(-121);
+            var15 = param5.getRandom(-121);
             for (var16 = 0; this.field_g > var16; var16++) {
               var17 = param0;
               if (0 < this.field_s) {

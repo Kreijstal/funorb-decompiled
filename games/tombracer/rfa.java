@@ -329,7 +329,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
           if (var2 == 2) {
             var3 = 1;
           }
-          if (this.h((byte) 84)) {
+          if (this.isConnectionBusy((byte) 84)) {
             var3 = 1;
           }
           if (!uma.b(-1)) {
@@ -352,13 +352,13 @@ abstract class rfa extends AppletGameShell implements ShellListener {
           if (this.handleGamePacket(oka.field_z, vc.field_q, (byte) 105)) {
             continue;
           }
-          this.m(-5);
+          this.dispatchServerPacket(-5);
         }
     }
 
     public abstract boolean handleKey(byte param0, char param1, int param2);
 
-    abstract boolean h(byte param0);
+    abstract boolean isConnectionBusy(byte param0);
 
     static {
     }

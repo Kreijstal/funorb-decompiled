@@ -7,12 +7,12 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
     static int field_m;
     private SwitchableId switchableId;
     private Trap parent;
-    private SwitchableId field_Y;
+    private SwitchableId localSwitchableId;
     private int field_ab;
     private Room room;
     IntrusiveDeque locomotors;
     IntrusiveDeque behaviours;
-    private boolean field_v;
+    private boolean pushable;
     private int field_g;
     private int field_j;
     private int localX;
@@ -21,7 +21,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
     private int field_J;
     private boolean field_M;
     private int field_s;
-    private int field_F;
+    private int angle;
     private int field_f;
     private boolean field_D;
     private int field_n;
@@ -41,7 +41,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
     private boolean[] field_W;
     private IntrusiveDeque models;
     private int width;
-    private int field_N;
+    private int lifetime;
     private boolean field_r;
     private int field_V;
     private int field_S;
@@ -141,7 +141,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
             this.switchableId = param2.a(-114, param1);
           }
           if (param3 != null) {
-            this.field_Y = param3.a(-102, false);
+            this.localSwitchableId = param3.a(-102, false);
           }
           var7 = (Locomotor) (this.locomotors.first(-80));
           while (var7 != null) {
@@ -206,7 +206,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           this.g(74, 122);
         }
         if (!param1) {
-          return this.field_v;
+          return this.pushable;
         }
         return !this.field_r ? true : false;
     }
@@ -214,7 +214,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
     private final void t(int param0) {
         int var2 = this.getX(3);
         int var3 = this.getY(param0 - 2087504);
-        int var4 = this.g((byte) 115);
+        int var4 = this.getElevation((byte) 115);
         this.room.b(false).a((byte) 101, param0 + var4, var2, var3);
     }
 
@@ -260,21 +260,21 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         }
     }
 
-    final void c(boolean param0, int param1) {
+    final void rotateBy(boolean param0, int param1) {
         int var3;
         if (this.field_V != 0 &&
           this.d(true)) {
-          var3 = this.field_F;
-          this.field_F = this.field_F + param1;
-          this.field_F = dfa.a(this.field_F, 8192, -126);
+          var3 = this.angle;
+          this.angle = this.angle + param1;
+          this.angle = dfa.a(this.angle, 8192, -126);
           this.x((byte) -60);
           if (this.d(true, -3)) {
-            this.field_F = var3;
+            this.angle = var3;
             this.x((byte) -60);
           }
         } else {
-          this.field_F = this.field_F + param1;
-          this.field_F = dfa.a(this.field_F, 8192, -67);
+          this.angle = this.angle + param1;
+          this.angle = dfa.a(this.angle, 8192, -67);
           this.x((byte) -60);
         }
         if (param0) {
@@ -291,7 +291,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         return false;
     }
 
-    public final boolean j(int param0) {
+    public final boolean isFallingIntoPit(int param0) {
         boolean stackIn_9_0 = false;
         if (param0 != -1) {
           this.field_l = false;
@@ -299,7 +299,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         boolean decompiledFrameRemainder0 = true;
         if (this.field_hb == 0 && (!this.field_A ||
           this.parent == null ||
-          !this.parent.j(-1))) {
+          !this.parent.isFallingIntoPit(-1))) {
           stackIn_9_0 = false;
           decompiledFrameRemainder0 = false;
         }
@@ -347,7 +347,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           this.field_db = -42;
         }
         param0 = fs.mixHash((byte) 64, param0, this.localY);
-        param0 = fs.mixHash((byte) 84, param0, this.field_F);
+        param0 = fs.mixHash((byte) 84, param0, this.angle);
         Locomotor var5 = (Locomotor) (this.locomotors.first(-80));
         while (var5 != null) {
           param0 = var5.hashState(0, param0);
@@ -414,7 +414,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
     final void i(boolean param0) {
         TrapModel var3 = null;
         int var4 = TombRacer.field_G ? 1 : 0;
-        if (this.j(-1)) {
+        if (this.isFallingIntoPit(-1)) {
           return;
         }
         if (this.parent != null &&
@@ -486,7 +486,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           this.z(1);
         }
         if (param2 <= 109) {
-          this.j(109);
+          this.isFallingIntoPit(109);
         }
     }
 
@@ -513,7 +513,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         this.field_fb.a(86);
         if (this.field_l) {
           if (0 == this.field_R) {
-            this.field_R = this.room.q(-88).nextBounded(3, 0);
+            this.field_R = this.room.getRandom(-88).nextBounded(3, 0);
           } else {
             this.field_R = this.field_R + 1;
           }
@@ -521,9 +521,9 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           this.field_R = 0;
         }
         this.field_l = false;
-        if (this.field_N > 0) {
-          this.field_N = this.field_N - 1;
-          if (this.field_N == 0) {
+        if (this.lifetime > 0) {
+          this.lifetime = this.lifetime - 1;
+          if (this.lifetime == 0) {
             this.v((byte) 109);
           }
         }
@@ -542,11 +542,11 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           param1 = true;
         }
         if (!param1 &&
-          this.field_v &&
+          this.pushable &&
           this.getSimulation(15470).f(8, 10915)) {
-          this.tryPush(86, true, 1, 131072 - this.room.q(90).nextBounded(262144, 0), -this.room.q(85).nextBounded(262144, 0) + 131072, 0);
+          this.tryPush(86, true, 1, 131072 - this.room.getRandom(90).nextBounded(262144, 0), -this.room.getRandom(85).nextBounded(262144, 0) + 131072, 0);
         }
-        if (!this.j(-1)) {
+        if (!this.isFallingIntoPit(-1)) {
           this.field_Q = false;
           this.field_P = false;
           var8 = new IntrusiveDequeCursor(this.locomotors);
@@ -623,7 +623,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           return;
         }
         if (this.field_hb != 0 && (this.parent == null ||
-          !this.parent.j(-1))) {
+          !this.parent.isFallingIntoPit(-1))) {
           this.field_hb = this.field_hb + this.field_kb;
           this.field_kb = this.field_kb + 16384;
           if (17825792 <= this.field_hb) {
@@ -638,8 +638,8 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
     final void x(byte param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
         if (this.parent != null) {
-          this.field_g = MouseInputHandler.a((byte) 124, -this.parent.g(-25787) >> 2);
-          this.field_w = bua.a(0, -this.parent.g(param0 - 25727) >> 2);
+          this.field_g = MouseInputHandler.a((byte) 124, -this.parent.getFacingAngle(-25787) >> 2);
+          this.field_w = bua.a(0, -this.parent.getFacingAngle(param0 - 25727) >> 2);
         }
         if (param0 != -60) {
           this.field_g = -7;
@@ -866,7 +866,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         return 3 * (1 + this.field_ab);
     }
 
-    final int Q(int param0) {
+    final int getTop(int param0) {
         if (param0 != 2) {
           return 72;
         }
@@ -960,11 +960,11 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           this.field_eb = stackIn_6_1;
           stackIn_9_1 = (param2.readBits((byte) 44, 1) == 1);
           this.field_p = stackIn_9_1;
-          this.field_N = param2.readBits((byte) 44, 6) * 50;
+          this.lifetime = param2.readBits((byte) 44, 6) * 50;
           if (param0.formatVersion >= 10) {
-            this.field_F = SnakePitModel.a(4, 8192, 0, param2.readBits((byte) 44, 4));
+            this.angle = SnakePitModel.a(4, 8192, 0, param2.readBits((byte) 44, 4));
           } else {
-            this.field_F = SnakePitModel.a(3, 8192, 0, param2.readBits((byte) 44, 3));
+            this.angle = SnakePitModel.a(3, 8192, 0, param2.readBits((byte) 44, 3));
           }
           if (10 >= param0.formatVersion) {
             this.field_S = param2.readBits((byte) 44, 8) / 5;
@@ -977,7 +977,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
             stackIn_19_1 = (param2.readBits((byte) 44, 1) == 1);
             this.field_r = stackIn_19_1;
             stackIn_22_1 = (param2.readBits((byte) 44, 1) == 1);
-            this.field_v = stackIn_22_1;
+            this.pushable = stackIn_22_1;
             this.field_f = param2.readBits((byte) 44, 3);
             this.field_V = param2.readBits((byte) 44, 3);
             this.field_L = param2.readBits((byte) 44, 3);
@@ -1068,11 +1068,11 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         return this.field_r;
     }
 
-    final void e(boolean param0, int param1) {
+    final void setPushable(boolean param0, int param1) {
         if (param1 < 114) {
           return;
         }
-        this.field_v = param0 ? true : false;
+        this.pushable = param0 ? true : false;
     }
 
     final void h(boolean param0) {
@@ -1091,10 +1091,10 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         }
     }
 
-    public final int g(int param0) {
-        int var2 = this.field_F;
+    public final int getFacingAngle(int param0) {
+        int var2 = this.angle;
         if (this.parent != null) {
-          var2 = var2 + this.parent.g(param0 + 0);
+          var2 = var2 + this.parent.getFacingAngle(param0 + 0);
         }
         if (param0 != -25787) {
           this.getCollisionId(false);
@@ -1114,10 +1114,10 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         return this.width;
     }
 
-    final void c(int param0, int param1) {
+    final void setLocalY(int param0, int param1) {
         this.localY = param0;
         if (param1 != -19879) {
-          this.c(-99, -65);
+          this.setLocalY(-99, -65);
         }
     }
 
@@ -1151,7 +1151,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         if (!this.f(false)) {
           return false;
         }
-        if (!this.j(-1) &&
+        if (!this.isFallingIntoPit(-1) &&
           !this.isExpired(18407)) {
           if (this.field_f < 1) {
             return false;
@@ -1162,13 +1162,13 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         return false;
     }
 
-    public final int g(byte param0) {
+    public final int getElevation(byte param0) {
         int var2 = -this.field_hb;
         if (param0 != 115) {
           return -57;
         }
         if (this.parent != null) {
-          var2 = var2 + this.parent.g((byte) 115);
+          var2 = var2 + this.parent.getElevation((byte) 115);
         }
         return var2;
     }
@@ -1184,7 +1184,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         if (param0 != -80) {
           this.field_s = 121;
         }
-        return this.field_F;
+        return this.angle;
     }
 
     final int g(boolean param0) {
@@ -1286,9 +1286,9 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
             stackIn_7_2 = 1;
           }
           ((BitPacketBuffer) (Object) stackIn_6_0).writeBits((byte) stackIn_6_1, stackIn_7_2, 1);
-          param0.writeBits((byte) -125, this.field_N / 50, 6);
+          param0.writeBits((byte) -125, this.lifetime / 50, 6);
           var3_int = -112 / ((param1 + 58) / 39);
-          param0.writeBits((byte) -125, ResourceArchive.a((byte) 59, this.field_F, 8192, 4), 4);
+          param0.writeBits((byte) -125, ResourceArchive.a((byte) 59, this.angle, 8192, 4), 4);
           param0.writeBits((byte) -127, this.field_S, 8);
           param0.writeBits((byte) -128, this.field_I, 8);
           stackIn_9_0 = (BitPacketBuffer) (param0);
@@ -1301,7 +1301,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           ((BitPacketBuffer) (Object) stackIn_9_0).writeBits((byte) stackIn_9_1, stackIn_10_2, 1);
           stackIn_12_0 = (BitPacketBuffer) (param0);
           stackIn_12_1 = -25;
-          if (!this.field_v) {
+          if (!this.pushable) {
             stackIn_13_2 = 0;
           } else {
             stackIn_13_2 = 1;
@@ -1459,7 +1459,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           }
         }
         if (param0 != 437453352) {
-          this.Q(108);
+          this.getTop(108);
         }
     }
 
@@ -1714,7 +1714,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
             stackIn_4_0 = 0;
             return stackIn_4_0;
           }
-          if (!this.b(param0.field_j, (byte) 120)) {
+          if (!this.b(param0.type, (byte) 120)) {
             stackIn_8_0 = 0;
             return stackIn_8_0;
           }
@@ -1791,7 +1791,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
             stackIn_4_0 = 0;
             return stackIn_4_0;
           }
-          if (!this.b(param0.field_j, (byte) 125)) {
+          if (!this.b(param0.type, (byte) 125)) {
             stackIn_8_0 = 0;
             return stackIn_8_0;
           }
@@ -1934,7 +1934,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         if (param0 != 1751085328) {
           return (IsaacCipher) null;
         }
-        return this.room.q(param0 - 1751085231);
+        return this.room.getRandom(param0 - 1751085231);
     }
 
     final boolean d(int param0, boolean param1) {
@@ -1957,7 +1957,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         if (param0 != 0) {
           Trap.K(-55);
         }
-        return this.field_db + this.g((byte) 115);
+        return this.field_db + this.getElevation((byte) 115);
     }
 
     private final String describe(int param0) {
@@ -2279,7 +2279,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         if (param0 != 84) {
           return (SwitchableId) null;
         }
-        return this.field_Y;
+        return this.localSwitchableId;
     }
 
     public final void moveTo(int param0, int param1, int param2) {
@@ -2410,7 +2410,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         try {
           param0.collisionGrid.remove((Collidable) (this), (byte) 116);
           if (param1) {
-            this.field_Y = (SwitchableId) null;
+            this.localSwitchableId = (SwitchableId) null;
           }
           if (!this.n((byte) 122)) {
             this.field_s = -this.field_s;
@@ -2427,7 +2427,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
             this.field_J = -this.field_J;
           }
           this.field_ib = dfa.a(-this.field_ib, 8192, -35);
-          this.field_F = dfa.a(-this.field_F, 8192, -97);
+          this.angle = dfa.a(-this.angle, 8192, -97);
           param0.collisionGrid.insert((Collidable) (this), 7073);
           var5 = (Locomotor) (this.locomotors.first(-80));
           while (var5 != null) {
@@ -2484,7 +2484,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         this.u(0);
         this.u((byte) 116);
         if (param0 < 96) {
-          this.c(-88, 5);
+          this.setLocalY(-88, 5);
         }
         this.z(1);
     }
@@ -2583,7 +2583,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         if (param0 >= -86) {
           this.moveTo(65, 113, 36);
         }
-        return this.g((byte) 115);
+        return this.getElevation((byte) 115);
     }
 
     public final boolean intersectsRect(byte param0, int param1, int param2, int param3, int param4) {
@@ -2657,7 +2657,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         if (param1 < 69) {
           this.d(-37, 91);
         }
-        this.field_F = param0;
+        this.angle = param0;
     }
 
     final PlayerSimulation getSimulation(int param0) {
@@ -2678,7 +2678,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         if (param0) {
           this.toggle(-111);
         }
-        return this.field_v;
+        return this.pushable;
     }
 
     final void a(boolean param0, byte param1, int param2) {
@@ -2743,7 +2743,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
             stackIn_4_0 = 0;
             return stackIn_4_0;
           }
-          if (!this.b(param0.field_j, (byte) 125) &&
+          if (!this.b(param0.type, (byte) 125) &&
             !this.field_T) {
             stackIn_9_0 = 0;
             return stackIn_9_0;
@@ -2941,7 +2941,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
     private final int a(int param0, int param1, int param2, int param3, int param4) {
         int stackIn_15_0 = 0;
         if (param2 != -4648) {
-          this.field_F = 108;
+          this.angle = 108;
         }
         if (this.room == null) {
           return 0;
@@ -3184,7 +3184,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           RoomComponentFactory.field_b = RoomComponentFactory.field_b + 1;
           this.room = param0;
           this.localY = param2 << 16;
-          this.field_F = param5;
+          this.angle = param5;
           this.width = param3 << 16;
           this.localX = param1 << 16;
           this.a(true, param6, param0.e(-51), (ui) null);

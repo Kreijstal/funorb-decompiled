@@ -156,9 +156,9 @@ final class MirrorComponent extends PrefabComponent {
           var11.a((byte) -3, 4);
           var11.h(param1, param1 - 3);
           if (this.typeId != 19) {
-            var11.e(false, 120);
+            var11.setPushable(false, 120);
           } else {
-            var11.e(true, 117);
+            var11.setPushable(true, 117);
           }
           var11.g(104, 1);
           var11.b((byte) 17, false);

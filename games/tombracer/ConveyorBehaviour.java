@@ -35,8 +35,8 @@ final class ConveyorBehaviour extends Behaviour {
     }
 
     private final void b(int param0) {
-        int var2 = MouseInputHandler.a((byte) 111, this.trap.g(-25787) >> 2);
-        int var3 = bua.a(param0, this.trap.g(-25787) >> 2);
+        int var2 = MouseInputHandler.a((byte) 111, this.trap.getFacingAngle(-25787) >> 2);
+        int var3 = bua.a(param0, this.trap.getFacingAngle(-25787) >> 2);
         this.field_n = -gqa.a(this.field_r, (byte) 24, var2) + gqa.a(this.field_s, (byte) 24, var3);
         this.field_o = -gqa.a(this.field_s, (byte) 24, var2) + gqa.a(this.field_r, (byte) 24, var3);
     }

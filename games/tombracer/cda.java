@@ -83,7 +83,7 @@ abstract class cda extends TrapModel {
         if (!(this.body instanceof Trap)) {
           var4Lifetime1 = this.body.getX(3);
           var5Lifetime1 = this.body.getY(9648);
-          var6Lifetime1 = this.body.g(-25787);
+          var6Lifetime1 = this.body.getFacingAngle(-25787);
         } else {
           var7 = (Trap) (this.body);
           var4Lifetime1 = var7.s(25745);

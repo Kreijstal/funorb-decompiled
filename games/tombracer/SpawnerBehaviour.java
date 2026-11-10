@@ -101,7 +101,7 @@ final class SpawnerBehaviour extends Behaviour {
           if (!this.field_o.c(0)) {
             return;
           }
-          var2 = this.trap.g(-25787);
+          var2 = this.trap.getFacingAngle(-25787);
           this.field_q.spawn(var2, this.trap.getX(3), this.trap.getY(9648), 4);
           if (this.field_r <= 0) {
             return;
@@ -124,7 +124,7 @@ final class SpawnerBehaviour extends Behaviour {
         if (!this.field_o.c(0)) {
           return;
         }
-        var2Lifetime1 = this.trap.g(-25787);
+        var2Lifetime1 = this.trap.getFacingAngle(-25787);
         this.field_q.spawn(var2Lifetime1, this.trap.getX(3), this.trap.getY(9648), 4);
         if (this.field_r <= 0) {
           return;

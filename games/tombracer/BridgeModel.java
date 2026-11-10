@@ -15,7 +15,7 @@ final class BridgeModel extends TrapModel {
         if (param0 != -99) {
           this.field_q = (faa[][]) null;
         }
-        if (this.body.j(param0 + 98)) {
+        if (this.body.isFallingIntoPit(param0 + 98)) {
           return 2;
         }
         int var2 = this.field_t;

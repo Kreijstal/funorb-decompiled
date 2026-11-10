@@ -252,7 +252,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
             stackIn_2_0 = -1;
             return stackIn_2_0;
           }
-          var3_int = param1.field_j;
+          var3_int = param1.type;
           if (this.a(true, var3_int)) {
             this.field_p = 3;
             this.field_s = this.field_s + param1.size;

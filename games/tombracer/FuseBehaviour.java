@@ -225,7 +225,7 @@ final class FuseBehaviour extends Behaviour {
           if (param1 != -115) {
             this.field_x = (kpa) null;
           }
-          var3_int = param0.field_j;
+          var3_int = param0.type;
           var4 = param0.size;
           if (!this.b(8) &&
             this.a(113, var3_int, var4)) {

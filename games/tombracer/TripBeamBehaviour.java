@@ -148,7 +148,7 @@ final class TripBeamBehaviour extends Behaviour implements SwitchSource {
             this.field_s = var3;
           }
         }
-        this.field_x = this.trap.g(-25787) >> 2;
+        this.field_x = this.trap.getFacingAngle(-25787) >> 2;
         this.field_E = MouseInputHandler.a((byte) 102, this.field_x);
         this.field_o = bua.a(0, this.field_x);
         var6 = this.trap.P(0) << 16;

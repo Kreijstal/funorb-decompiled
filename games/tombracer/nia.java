@@ -203,7 +203,7 @@ final class nia extends ci {
             if (var7 != 0) {
               if (var7 >= 128 &&
                 var7 < 160) {
-                var8 = gha.field_a[var7 - 128];
+                var8 = gha.cp1252HighChars[var7 - 128];
                 if (0 == var8) {
                   var8 = 63;
                 }

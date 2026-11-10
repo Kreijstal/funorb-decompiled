@@ -45,7 +45,7 @@ final class BlockComponent extends PrefabComponent {
           }
           var15.a((byte) -3, var5);
           var15.h(param1, 0);
-          var15.e(true, param1 + 119);
+          var15.setPushable(true, param1 + 119);
           var15.g(param1 + 97, 1);
           var15.b((byte) 17, false);
           var15.a(1, (byte) -12, true);

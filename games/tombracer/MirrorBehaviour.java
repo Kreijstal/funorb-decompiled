@@ -30,7 +30,7 @@ final class MirrorBehaviour extends Behaviour {
     }
 
     private final void b(int param0) {
-        int var2 = this.trap.g(-25787);
+        int var2 = this.trap.getFacingAngle(-25787);
         if (param0 != 1659280738) {
           BeamSegment var3 = (BeamSegment) null;
           this.a(65, 57, (BeamSegment) null, 85);

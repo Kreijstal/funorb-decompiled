@@ -194,7 +194,7 @@ final class MonsterModel extends cda {
         if (var4 != 1) {
           this.field_z = 0;
           if (!this.field_y) {
-            if (!this.body.j(-1)) {
+            if (!this.body.isFallingIntoPit(-1)) {
               var12 = (Trap) (this.body);
               if (var12 == null) {
                 return;
@@ -243,7 +243,7 @@ final class MonsterModel extends cda {
           var5.a(new fm(77, this.getRenderX((byte) 49), this.getRenderY((byte) 108), this.getRenderZ((byte) -87)), -58);
           this.field_z = 0;
           if (!this.field_y &&
-            this.body.j(-1)) {
+            this.body.isFallingIntoPit(-1)) {
             var5.a(new fm(79, this.getRenderX((byte) -112), this.getRenderY((byte) 121), this.getRenderZ((byte) -119)), param0 + 4308);
             this.field_y = true;
           }
@@ -291,7 +291,7 @@ final class MonsterModel extends cda {
           }
           return;
         }
-        if (this.body.j(-1)) {
+        if (this.body.isFallingIntoPit(-1)) {
           var5.a(new fm(79, this.getRenderX((byte) -112), this.getRenderY((byte) 121), this.getRenderZ((byte) -119)), param0 + 4308);
           this.field_y = true;
         }
@@ -319,7 +319,7 @@ final class MonsterModel extends cda {
 
     private final int i(int param0) {
         if (param0 == -6874) {
-          return dfa.a(-this.body.g(param0 - 18913) >> 2, 2048, param0 ^ -6797);
+          return dfa.a(-this.body.getFacingAngle(param0 - 18913) >> 2, 2048, param0 ^ -6797);
         }
         return -83;
     }

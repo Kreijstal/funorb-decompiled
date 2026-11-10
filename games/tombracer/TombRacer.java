@@ -458,7 +458,7 @@ public final class TombRacer extends rfa implements ls {
         BeamSegment.releaseStatics(true);
         Effect.releaseStatics((byte) 2);
         Projectile.releaseStatics(114);
-        mda.j((byte) 87);
+        Puddle.j((byte) 87);
         cra.releaseStatics(-63);
         dk.releaseStatics((byte) 104);
         ena.releaseStatics(true);
@@ -1011,7 +1011,7 @@ public final class TombRacer extends rfa implements ls {
         tga.field_a.a(var5);
     }
 
-    final boolean h(byte param0) {
+    final boolean isConnectionBusy(byte param0) {
         boolean stackIn_8_0 = false;
         if (param0 != 84) {
           this.field_E = -98;
@@ -1399,7 +1399,7 @@ public final class TombRacer extends rfa implements ls {
     }
 
     public final void init() {
-        this.a(31, 640, 480, "tombracer", 20575);
+        this.readAppletParameters(31, 640, 480, "tombracer", 20575);
     }
 
     final void shutdownGame(int param0) {
@@ -1533,7 +1533,7 @@ public final class TombRacer extends rfa implements ls {
         PlantModel.b(false, 3);
         ua.b(4, 2);
         PlantComponent.b(-104, 6);
-        mda.b(7, (byte) -120);
+        Puddle.b(7, (byte) -120);
         if (param0 != 1) {
           if (RandomMazeBehaviour.field_n) {
             era.field_c = true;

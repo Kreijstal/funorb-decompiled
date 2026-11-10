@@ -140,7 +140,7 @@ final class WindZoneBehaviour extends Behaviour {
         var14 = this.trap.P(param0 - 5418);
         if (this.field_q != 0 &&
           this.field_q != 2) {
-          var25 = this.b(true).spawnParticle(var11, this.trap.Q(2) + this.o((byte) 46).nextBounded(var5, 0), (byte) 100, var14);
+          var25 = this.b(true).spawnParticle(var11, this.trap.getTop(2) + this.o((byte) 46).nextBounded(var5, 0), (byte) 100, var14);
           var25.a(false, 2, 3, 8, 10);
           stackIn_22_0 = var25;
           stackIn_22_1 = 72;

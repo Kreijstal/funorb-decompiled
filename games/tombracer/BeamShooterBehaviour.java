@@ -74,7 +74,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
             this.field_o = var2;
           }
         }
-        var3 = this.trap.g(-25787) >> 2;
+        var3 = this.trap.getFacingAngle(-25787) >> 2;
         var4 = MouseInputHandler.a((byte) 111, var3);
         var5 = bua.a(0, var3);
         var6 = 131072 + iia.d(this.trap.getWidth(param0 - 5467), this.trap.getHeight((byte) 55), param0 ^ 5416) / 2;
@@ -83,7 +83,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         this.field_s.a(var7, gqa.a(var4, (byte) 24, this.field_o) + var7, var8, gqa.a(var5, (byte) 24, this.field_o) + var8, 44);
         this.field_s.field_b = this.field_o;
         this.field_s.field_i = this.trap.P(param0 ^ param0) << 16;
-        var9_int = this.field_r.field_j;
+        var9_int = this.field_r.type;
         if (3 == var9_int) {
           this.field_s.field_j = 6;
         } else {

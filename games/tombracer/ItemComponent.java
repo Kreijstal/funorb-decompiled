@@ -27,7 +27,7 @@ abstract class ItemComponent extends PrefabComponent {
           var4.a(0, (byte) -12, true);
           var4.a((byte) -3, 0);
           var4.b((byte) 17, false);
-          var4.e(true, 125);
+          var4.setPushable(true, 125);
           if (param1 != 3) {
             field_F = (String) null;
           }

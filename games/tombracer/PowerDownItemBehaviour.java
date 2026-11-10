@@ -67,7 +67,7 @@ final class PowerDownItemBehaviour extends ItemBehaviour {
             var4 = (BitPacketBuffer) null;
             this.encode(true, (BitPacketBuffer) null);
           }
-          this.b(true).b(-1).a(this.field_t, param1, true);
+          this.b(true).getObserver(-1).a(this.field_t, param1, true);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

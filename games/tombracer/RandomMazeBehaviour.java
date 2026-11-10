@@ -557,7 +557,7 @@ final class RandomMazeBehaviour extends Behaviour {
           param4.endBitAccess((byte) 98);
           var8.d((byte) -97, true);
           var8.m(1, param5 + this.field_t * param0);
-          var8.c(param1 + this.field_t * param2, -19879);
+          var8.setLocalY(param1 + this.field_t * param2, -19879);
           this.trap.addChild(-97, var8);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "vd.AA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');

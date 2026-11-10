@@ -55,7 +55,7 @@ final class DamageableBehaviour extends Behaviour {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          var3_int = param1.field_j;
+          var3_int = param1.type;
           if (param0 <= 71) {
             stackIn_2_0 = 13;
             return stackIn_2_0;

@@ -238,7 +238,7 @@ final class SweepRotateLocomotor extends Locomotor {
             var3Lifetime1 = this.field_r;
           }
           this.field_o = this.field_o + var3Lifetime1;
-          this.trap.c(false, var3Lifetime1);
+          this.trap.rotateBy(false, var3Lifetime1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
