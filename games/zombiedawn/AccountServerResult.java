@@ -24,94 +24,94 @@ final class AccountServerResult {
         field_f = null;
     }
 
-    final static void a(boolean param0) {
+    final static void storeTuhstatbutCookie(boolean param0) {
         if (!param0) {
           return;
         }
-        jc.a((byte) 59, hc.a(0));
+        HighscoreRequest.setTuhstatbutCookie((byte) 59, AppletHostHelpers.getHostApplet(0));
     }
 
     final static Human createHuman(int param0, int param1, int param2, int param3) {
         if (param0 < 49) {
-          AccountServerResult.a(false);
+          AccountServerResult.storeTuhstatbutCookie(false);
           if (param2 < 9) {
-            return (Human) ((Object) new wo(param1, param3, param2));
+            return (Human) ((Object) new CivilianHuman(param1, param3, param2));
           }
           if (param2 < 11) {
-            return (Human) ((Object) new po(param1, param3, param2));
+            return (Human) ((Object) new MeleeHuman(param1, param3, param2));
           }
           if (param2 < 17) {
-            if (ng.field_e) {
-              return (Human) ((Object) new qk(param1, param3, param2));
+            if (LoginConnectionHelpers.field_e) {
+              return (Human) ((Object) new ArmedHuman(param1, param3, param2));
             }
             if (Js5Archive.field_e.field_q == 7) {
-              return (Human) ((Object) new jo(param1, param3, param2));
+              return (Human) ((Object) new PatrollingGuard(param1, param3, param2));
             }
-            return (Human) ((Object) new qk(param1, param3, param2));
+            return (Human) ((Object) new ArmedHuman(param1, param3, param2));
           }
           if (28 == param2) {
-            if (ng.field_e) {
-              return (Human) ((Object) new qk(param1, param3, param2));
+            if (LoginConnectionHelpers.field_e) {
+              return (Human) ((Object) new ArmedHuman(param1, param3, param2));
             }
             if (Js5Archive.field_e.field_q != 7) {
-              return (Human) ((Object) new qk(param1, param3, param2));
+              return (Human) ((Object) new ArmedHuman(param1, param3, param2));
             }
-            return (Human) ((Object) new jo(param1, param3, param2));
+            return (Human) ((Object) new PatrollingGuard(param1, param3, param2));
           }
           if (param2 == 23) {
-            return (Human) ((Object) new si(param1, param3, param2));
+            return (Human) ((Object) new HunterHuman(param1, param3, param2));
           }
           if (param2 == 18) {
-            return (Human) ((Object) new wc(param1, param3, param2));
+            return (Human) ((Object) new MinigunGunner(param1, param3, param2));
           }
           if (param2 == 19) {
-            return (Human) ((Object) new we(param1, param3, param2));
+            return (Human) ((Object) new ArmySoldier(param1, param3, param2));
           }
           if (param2 == 20) {
-            return (Human) ((Object) new fc(param1, param3, param2));
+            return (Human) ((Object) new StationaryRifleman(param1, param3, param2));
           }
           if (27 == param2) {
-            return (Human) ((Object) new dk(param1, param3));
+            return (Human) ((Object) new ScriptedMinigunner(param1, param3));
           }
-          return (Human) ((Object) new wo(param1, param3, param2));
+          return (Human) ((Object) new CivilianHuman(param1, param3, param2));
         }
         if (param2 >= 9) {
           if (param2 < 11) {
-            return (Human) ((Object) new po(param1, param3, param2));
+            return (Human) ((Object) new MeleeHuman(param1, param3, param2));
           }
           if (param2 >= 17 &&
             28 != param2) {
             if (param2 == 23) {
-              return (Human) ((Object) new si(param1, param3, param2));
+              return (Human) ((Object) new HunterHuman(param1, param3, param2));
             }
             if (param2 == 18) {
-              return (Human) ((Object) new wc(param1, param3, param2));
+              return (Human) ((Object) new MinigunGunner(param1, param3, param2));
             }
             if (param2 == 19) {
-              return (Human) ((Object) new we(param1, param3, param2));
+              return (Human) ((Object) new ArmySoldier(param1, param3, param2));
             }
             if (param2 == 20) {
-              return (Human) ((Object) new fc(param1, param3, param2));
+              return (Human) ((Object) new StationaryRifleman(param1, param3, param2));
             }
             if (27 == param2) {
-              return (Human) ((Object) new dk(param1, param3));
+              return (Human) ((Object) new ScriptedMinigunner(param1, param3));
             }
-            return (Human) ((Object) new wo(param1, param3, param2));
+            return (Human) ((Object) new CivilianHuman(param1, param3, param2));
           }
-          if (!ng.field_e &&
+          if (!LoginConnectionHelpers.field_e &&
             Js5Archive.field_e.field_q == 7) {
-            return (Human) ((Object) new jo(param1, param3, param2));
+            return (Human) ((Object) new PatrollingGuard(param1, param3, param2));
           }
-          return (Human) ((Object) new qk(param1, param3, param2));
+          return (Human) ((Object) new ArmedHuman(param1, param3, param2));
         }
-        return (Human) ((Object) new wo(param1, param3, param2));
+        return (Human) ((Object) new CivilianHuman(param1, param3, param2));
     }
 
-    final static boolean b(int param0) {
+    final static boolean isReconnectLogin(int param0) {
         if (param0 < 65) {
           return false;
         }
-        return nm.field_c;
+        return IntRecordReplyHelpers.field_c;
     }
 
     AccountServerResult(boolean param0) {

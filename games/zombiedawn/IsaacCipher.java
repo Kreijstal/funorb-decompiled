@@ -29,7 +29,7 @@ final class IsaacCipher {
         if (param1 != -28518) {
           IsaacCipher.drawOverlayBackdrop(true, 65, false);
         }
-        rc.a(param0, (byte) -120);
+        PendingRecordRequest.drawDialogLayer(param0, (byte) -120);
     }
 
     final int nextInt(int param0) {
@@ -75,10 +75,10 @@ final class IsaacCipher {
             }
           }
           this.field_c = this.field_c + this.field_f[var2 + 128 & 255];
-          dupTemp$1 = this.field_f[eg.a(var3 >> 2, 255)] + this.field_c + this.field_b;
+          dupTemp$1 = this.field_f[TextHotspotRegion.bitAnd(var3 >> 2, 255)] + this.field_c + this.field_b;
           var4 = dupTemp$1;
           this.field_f[var2] = dupTemp$1;
-          dupTemp$2 = this.field_f[eg.a(1020, var4 >> 8) >> 2] + var3;
+          dupTemp$2 = this.field_f[TextHotspotRegion.bitAnd(1020, var4 >> 8) >> 2] + var3;
           this.field_b = dupTemp$2;
           this.field_i[var2] = dupTemp$2;
         }

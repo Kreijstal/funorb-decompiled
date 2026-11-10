@@ -6,7 +6,7 @@ import java.io.*;
 final class PowerupCard {
     static long field_a;
     private int field_j;
-    static aa[] field_m;
+    static ChatMessage[] field_m;
     static boolean[] field_c;
     private int field_e;
     static int[][] field_h;
@@ -32,12 +32,12 @@ final class PowerupCard {
     }
 
     final static void openLoginPanelAtStage(int param0) {
-        if (!i.field_Y) {
+        if (!FullscreenErrorDialog.field_Y) {
           throw new IllegalStateException();
         }
         PacketBuffer.field_i = true;
-        lk.a(false, param0 ^ 116);
-        fl.field_a = param0;
+        EmailAvailabilityValidator.showLoginPanelDefault(false, param0 ^ 116);
+        AccountResultHelpers.field_a = param0;
     }
 
     final static void writeMachineId(PacketBuffer param0, int param1) {
@@ -60,10 +60,10 @@ final class PowerupCard {
             }
             var6 = new byte[24];
             var2 = var6;
-            if (null != ce.field_t) {
+            if (null != VisualPropertyNode.field_t) {
               try {
-                ce.field_t.seek(param1 ^ 10, 0L);
-                ce.field_t.readFully(85, var6);
+                VisualPropertyNode.field_t.seek(param1 ^ 10, 0L);
+                VisualPropertyNode.field_t.readFully(85, var6);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (var2[var3_int] == 0) {
                     continue;
@@ -124,7 +124,7 @@ final class PowerupCard {
         if (param1) {
           return -34;
         }
-        int var5 = -param2 + nh.field_P;
+        int var5 = -param2 + DropdownList.field_P;
         int var6 = 60;
         float var7 = (float)(-(var4 * var4) - var5 * var5) + 8100.0f;
         if (0.0f < var7) {
@@ -166,7 +166,7 @@ final class PowerupCard {
         if (param0) {
           this.field_e = 127;
         }
-        stackIn_7_0 = (-param1 + nh.field_P < 80) && (0 < param2 - this.field_l) && (-this.field_l + param2 < 40);
+        stackIn_7_0 = (-param1 + DropdownList.field_P < 80) && (0 < param2 - this.field_l) && (-this.field_l + param2 < 40);
         return stackIn_7_0;
     }
 
@@ -295,32 +295,32 @@ final class PowerupCard {
         }
         var2 = this.field_l;
         if (this.field_g) {
-          var2 = var2 + vh.field_b;
+          var2 = var2 + SpriteFadeHelpers.field_b;
         }
         if (!this.field_g) {
-          stackIn_8_0 = kb.field_i[this.field_f];
+          stackIn_8_0 = AgeValidator.field_i[this.field_f];
         } else {
-          stackIn_8_0 = jb.field_a[1 + this.field_f];
+          stackIn_8_0 = SpriteCheckboxPainter.field_a[1 + this.field_f];
         }
         var3 = stackIn_8_0;
-        so.drawTransparent(nf.field_d, var2 - 5, -this.field_o + nh.field_P + 5);
-        ni.field_b[this.field_e].drawTransparent(var2, nh.field_P - this.field_o);
+        SpriteEffectHelpers.drawTransparent(FullscreenCanvasHelpers.field_d, var2 - 5, -this.field_o + DropdownList.field_P + 5);
+        ReflectionQueueHelpers.field_b[this.field_e].drawTransparent(var2, DropdownList.field_P - this.field_o);
         if (2 == this.field_e) {
           if (this.field_d) {
-            ni.field_b[this.field_e].drawAdditive(var2, -this.field_o + nh.field_P, 96 + ae.field_c[this.field_j]);
+            ReflectionQueueHelpers.field_b[this.field_e].drawAdditive(var2, -this.field_o + DropdownList.field_P, 96 + ErrorReportHelpers.field_c[this.field_j]);
           }
           if (!this.field_g) {
-            var3.drawTransparent(8 + var2, 24 - this.field_o + nh.field_P);
+            var3.drawTransparent(8 + var2, 24 - this.field_o + DropdownList.field_P);
           } else {
-            var3.drawHalfSize(var2 + 7, nh.field_P - (this.field_o - 24));
+            var3.drawHalfSize(var2 + 7, DropdownList.field_P - (this.field_o - 24));
           }
           if (this.field_d) {
-            var3.drawAdditive(var2 + 8, nh.field_P - this.field_o + 24, 96 + ae.field_c[this.field_j]);
+            var3.drawAdditive(var2 + 8, DropdownList.field_P - this.field_o + 24, 96 + ErrorReportHelpers.field_c[this.field_j]);
           }
-          ni.field_b[3].drawTransparent(var2, nh.field_P - this.field_o);
+          ReflectionQueueHelpers.field_b[3].drawTransparent(var2, DropdownList.field_P - this.field_o);
         } else {
           if (!this.field_g) {
-            var3.drawWithOpacity(var2 + 8, nh.field_P - 56, this.field_o * 3);
+            var3.drawWithOpacity(var2 + 8, DropdownList.field_P - 56, this.field_o * 3);
           } else {
             var3.drawHalfSize(7 + var2, this.field_o);
           }

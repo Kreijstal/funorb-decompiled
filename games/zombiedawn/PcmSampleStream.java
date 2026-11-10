@@ -920,12 +920,12 @@ final class PcmSampleStream extends PcmStream {
           if (this.field_l <= 0) {
             if (this.field_m == -256 &&
               (this.field_t & 255) == 0) {
-              if (qf.field_l) {
+              if (AudioOutput.field_l) {
                 return PcmSampleStream.mixReverseStereoAligned(0, ((PcmSample) (this.field_h)).field_l, param0, this.field_t, param1, this.field_u, this.field_n, 0, param3, param2, this);
               }
               return PcmSampleStream.mixReverseMonoAligned(((PcmSample) (this.field_h)).field_l, param0, this.field_t, param1, this.field_y, 0, param3, param2, this);
             }
-            if (qf.field_l) {
+            if (AudioOutput.field_l) {
               return PcmSampleStream.mixReverseStereoInterpolated(0, 0, ((PcmSample) (this.field_h)).field_l, param0, this.field_t, param1, this.field_u, this.field_n, 0, param3, param2, this, this.field_m, param4);
             }
             return PcmSampleStream.mixReverseMonoInterpolated(0, 0, ((PcmSample) (this.field_h)).field_l, param0, this.field_t, param1, this.field_y, 0, param3, param2, this, this.field_m, param4);
@@ -937,13 +937,13 @@ final class PcmSampleStream extends PcmStream {
           this.field_l = this.field_l + param1;
           if (this.field_m == -256 &&
             (this.field_t & 255) == 0) {
-            if (!qf.field_l) {
+            if (!AudioOutput.field_l) {
               param1 = PcmSampleStream.mixReverseMonoAlignedRamp(((PcmSample) (this.field_h)).field_l, param0, this.field_t, param1, this.field_y, this.field_w, 0, var6, param2, this);
             } else {
               param1 = PcmSampleStream.mixReverseStereoAlignedRamp(0, ((PcmSample) (this.field_h)).field_l, param0, this.field_t, param1, this.field_u, this.field_n, this.field_z, this.field_q, 0, var6, param2, this);
             }
           } else {
-            if (!qf.field_l) {
+            if (!AudioOutput.field_l) {
               param1 = PcmSampleStream.mixReverseMonoInterpolatedRamp(0, 0, ((PcmSample) (this.field_h)).field_l, param0, this.field_t, param1, this.field_y, this.field_w, 0, var6, param2, this, this.field_m, param4);
             } else {
               param1 = PcmSampleStream.mixReverseStereoInterpolatedRamp(0, 0, ((PcmSample) (this.field_h)).field_l, param0, this.field_t, param1, this.field_u, this.field_n, this.field_z, this.field_q, 0, var6, param2, this, this.field_m, param4);
@@ -1274,7 +1274,7 @@ final class PcmSampleStream extends PcmStream {
           return null;
         }
         if (param0.field_l.length != 0) {
-          return new PcmSampleStream(param0, (int)((long)param0.field_m * 256L * (long)param1 / (long)(100 * qf.field_p)), param2 << 6);
+          return new PcmSampleStream(param0, (int)((long)param0.field_m * 256L * (long)param1 / (long)(100 * AudioOutput.field_p)), param2 << 6);
         }
         return null;
     }
@@ -1567,12 +1567,12 @@ final class PcmSampleStream extends PcmStream {
           if (this.field_l <= 0) {
             if (this.field_m == 256 &&
               (this.field_t & 255) == 0) {
-              if (qf.field_l) {
+              if (AudioOutput.field_l) {
                 return PcmSampleStream.mixForwardStereoAligned(0, ((PcmSample) (this.field_h)).field_l, param0, this.field_t, param1, this.field_u, this.field_n, 0, param3, param2, this);
               }
               return PcmSampleStream.mixForwardMonoAligned(((PcmSample) (this.field_h)).field_l, param0, this.field_t, param1, this.field_y, 0, param3, param2, this);
             }
-            if (qf.field_l) {
+            if (AudioOutput.field_l) {
               return PcmSampleStream.mixForwardStereoInterpolated(0, 0, ((PcmSample) (this.field_h)).field_l, param0, this.field_t, param1, this.field_u, this.field_n, 0, param3, param2, this, this.field_m, param4);
             }
             return PcmSampleStream.mixForwardMonoInterpolated(0, 0, ((PcmSample) (this.field_h)).field_l, param0, this.field_t, param1, this.field_y, 0, param3, param2, this, this.field_m, param4);
@@ -1584,13 +1584,13 @@ final class PcmSampleStream extends PcmStream {
           this.field_l = this.field_l + param1;
           if (this.field_m == 256 &&
             (this.field_t & 255) == 0) {
-            if (!qf.field_l) {
+            if (!AudioOutput.field_l) {
               param1 = PcmSampleStream.mixForwardMonoAlignedRamp(((PcmSample) (this.field_h)).field_l, param0, this.field_t, param1, this.field_y, this.field_w, 0, var6, param2, this);
             } else {
               param1 = PcmSampleStream.mixForwardStereoAlignedRamp(0, ((PcmSample) (this.field_h)).field_l, param0, this.field_t, param1, this.field_u, this.field_n, this.field_z, this.field_q, 0, var6, param2, this);
             }
           } else {
-            if (!qf.field_l) {
+            if (!AudioOutput.field_l) {
               param1 = PcmSampleStream.mixForwardMonoInterpolatedRamp(0, 0, ((PcmSample) (this.field_h)).field_l, param0, this.field_t, param1, this.field_y, this.field_w, 0, var6, param2, this, this.field_m, param4);
             } else {
               param1 = PcmSampleStream.mixForwardStereoInterpolatedRamp(0, 0, ((PcmSample) (this.field_h)).field_l, param0, this.field_t, param1, this.field_u, this.field_n, this.field_z, this.field_q, 0, var6, param2, this, this.field_m, param4);

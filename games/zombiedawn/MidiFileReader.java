@@ -1,0 +1,217 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class MidiFileReader {
+    private static byte[] field_c;
+    private PacketBuffer field_g;
+    private int[] field_a;
+    private int field_e;
+    private long field_h;
+    private int[] field_i;
+    int[] field_f;
+    private int[] field_d;
+    int field_b;
+
+    private final int readNextMessage(int param0) {
+        int var2;
+        int var3;
+        int var4;
+        var2 = this.field_g.payload[this.field_g.position];
+        if (var2 >= 0) {
+          var2 = this.field_d[param0];
+        } else {
+          var2 = var2 & 255;
+          this.field_d[param0] = var2;
+          this.field_g.position = this.field_g.position + 1;
+        }
+        if (var2 != 240 &&
+          var2 != 247) {
+          return this.decodeMessagePayload(param0, var2);
+        }
+        var3 = this.field_g.readVarInt(true);
+        if (var2 == 247 &&
+          var3 > 0) {
+          var4 = this.field_g.payload[this.field_g.position] & 255;
+          if (!(var4 < 241) &&
+            !(var4 > 243) || (var4 == 246 ||
+            var4 == 248) || !(var4 < 250) &&
+            !(var4 > 252) || var4 == 254) {
+            this.field_g.position = this.field_g.position + 1;
+            this.field_d[param0] = var4;
+            return this.decodeMessagePayload(param0, var4);
+          }
+        }
+        this.field_g.position = this.field_g.position + var3;
+        return 0;
+    }
+
+    final int nextTrack() {
+        int var4 = 0;
+        int var1;
+        int var2;
+        int var3;
+        var1 = this.field_i.length;
+        var2 = -1;
+        var3 = 2147483647;
+        for (var4 = 0; var4 < var1; var4++) {
+          if (this.field_i[var4] >= 0 &&
+            this.field_f[var4] < var3) {
+            var2 = var4;
+            var3 = this.field_f[var4];
+          }
+        }
+        return var2;
+    }
+
+    final void markTrackDone() {
+        this.field_g.position = -1;
+    }
+
+    final void release() {
+        this.field_g.payload = null;
+        this.field_a = null;
+        this.field_i = null;
+        this.field_f = null;
+        this.field_d = null;
+    }
+
+    final void readTrackDelta(int param0) {
+        int var2 = this.field_g.readVarInt(true);
+        this.field_f[param0] = this.field_f[param0] + var2;
+    }
+
+    final void reset(long param0) {
+        int var4 = 0;
+        this.field_h = param0;
+        int var3 = this.field_i.length;
+        for (var4 = 0; var4 < var3; var4++) {
+          this.field_f[var4] = 0;
+          this.field_d[var4] = 0;
+          this.field_g.position = this.field_a[var4];
+          this.readTrackDelta(var4);
+          this.field_i[var4] = this.field_g.position;
+        }
+    }
+
+    final int trackCount() {
+        return this.field_i.length;
+    }
+
+    final void saveTrackPosition(int param0) {
+        this.field_i[param0] = this.field_g.position;
+    }
+
+    final void seekTrack(int param0) {
+        this.field_g.position = this.field_i[param0];
+    }
+
+    final boolean isReady() {
+        return this.field_g.payload != null;
+    }
+
+    private final int decodeMessagePayload(int param0, int param1) {
+        int var5 = 0;
+        int var6 = 0;
+        int var3 = 0;
+        int var4 = 0;
+        int var3Lifetime1;
+        int var4Lifetime1;
+        if (param1 == 255) {
+          var3 = this.field_g.readUnsignedByte((byte) -116);
+          var4 = this.field_g.readVarInt(true);
+          if (var3 == 47) {
+            this.field_g.position = this.field_g.position + var4;
+            return 1;
+          }
+          if (var3 == 81) {
+            var5 = this.field_g.readUnsignedMedium(-1875);
+            var4 -= 3;
+            var6 = this.field_f[param0];
+            this.field_h = this.field_h + (long)var6 * (long)(this.field_e - var5);
+            this.field_e = var5;
+            this.field_g.position = this.field_g.position + var4;
+            return 2;
+          }
+          this.field_g.position = this.field_g.position + var4;
+          return 3;
+        }
+        var3Lifetime1 = field_c[param1 - 128];
+        var4Lifetime1 = param1;
+        if (var3Lifetime1 >= 1) {
+          var4Lifetime1 = var4Lifetime1 | this.field_g.readUnsignedByte((byte) -128) << 8;
+        }
+        if (var3Lifetime1 >= 2) {
+          var4Lifetime1 = var4Lifetime1 | this.field_g.readUnsignedByte((byte) -125) << 16;
+        }
+        return var4Lifetime1;
+    }
+
+    final long tickTime(int param0) {
+        return this.field_h + (long)param0 * (long)this.field_e;
+    }
+
+    final int readMessage(int param0) {
+        int var2 = this.readNextMessage(param0);
+        return var2;
+    }
+
+    final void parse(byte[] param0) {
+        int var4 = 0;
+        int var5 = 0;
+        int var3Lifetime1;
+        this.field_g.payload = param0;
+        this.field_g.position = 10;
+        int var2 = this.field_g.readUnsignedShort(2);
+        this.field_b = this.field_g.readUnsignedShort(2);
+        this.field_e = 500000;
+        this.field_a = new int[var2];
+        int var3 = 0;
+        while (var3 < var2) {
+          var4 = this.field_g.readInt(123);
+          var5 = this.field_g.readInt(121);
+          if (var4 == 1297379947) {
+            this.field_a[var3] = this.field_g.position;
+            var3++;
+          }
+          this.field_g.position = this.field_g.position + var5;
+        }
+        this.field_h = 0L;
+        this.field_i = new int[var2];
+        int var6 = 0;
+        var3Lifetime1 = var6;
+        while (var6 < var2) {
+          this.field_i[var6] = this.field_a[var6];
+          var6++;
+        }
+        this.field_f = new int[var2];
+        this.field_d = new int[var2];
+    }
+
+    final boolean isDone() {
+        int var2 = 0;
+        int var1 = this.field_i.length;
+        for (var2 = 0; var2 < var1; var2++) {
+          if (this.field_i[var2] >= 0) {
+            return false;
+          }
+        }
+        return true;
+    }
+
+    public static void releaseStatics() {
+        field_c = null;
+    }
+
+    MidiFileReader() {
+        this.field_g = new PacketBuffer((byte[]) null);
+    }
+
+    MidiFileReader(byte[] param0) {
+        this.field_g = new PacketBuffer((byte[]) null);
+        this.parse(param0);
+    }
+
+    static {
+        field_c = new byte[]{(byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 0, (byte) 1, (byte) 2, (byte) 1, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+    }
+}

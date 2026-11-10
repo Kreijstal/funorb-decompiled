@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ArchiveProvider {
-    static wj[] field_a;
+    static MusicTrack[] field_a;
     static int field_b;
 
-    abstract jh getIndex(byte param0);
+    abstract ArchiveIndex getIndex(byte param0);
 
     abstract int getGroupProgress(int param0, int param1);
 
@@ -14,35 +14,35 @@ abstract class ArchiveProvider {
     final static void createPopupSprites(Sprite[] param0, byte param1) {
         int var2_int = 0;
         int var3 = ZombieDawn.field_J;
-        ni.field_b = param0;
-        nf.field_d = new Sprite(55, 130);
+        ReflectionQueueHelpers.field_b = param0;
+        FullscreenCanvasHelpers.field_d = new Sprite(55, 130);
         if (param1 >= -58) {
           return;
         }
         try {
-          nf.field_d.setAsRenderTarget();
-          ni.field_b[2].drawSilhouette(5, -5, 16777215);
-          ni.field_b[3].drawSilhouette(5, -5, 16777215);
+          FullscreenCanvasHelpers.field_d.setAsRenderTarget();
+          ReflectionQueueHelpers.field_b[2].drawSilhouette(5, -5, 16777215);
+          ReflectionQueueHelpers.field_b[3].drawSilhouette(5, -5, 16777215);
           Rasterizer.blurRectangle(4, 4, 0, 0, Rasterizer.width, Rasterizer.height);
-          ni.field_b[2].drawSilhouette(5, -5, 0);
-          ni.field_b[3].drawSilhouette(5, -5, 0);
-          mk.field_a = new Sprite[16];
-          qp.field_c = new Sprite[mk.field_a.length];
-          for (var2_int = 0; var2_int < mk.field_a.length; var2_int++) {
-            mk.field_a[var2_int] = new Sprite(200, 25);
-            mk.field_a[var2_int].setAsRenderTarget();
-            bj.field_q.drawStringCentered(qp.a(var2_int, 90), 100, 17, 16777215, -1);
-            qp.field_c[var2_int] = so.a(mk.field_a[var2_int]);
+          ReflectionQueueHelpers.field_b[2].drawSilhouette(5, -5, 0);
+          ReflectionQueueHelpers.field_b[3].drawSilhouette(5, -5, 0);
+          DialogLayerFrameHelpers.field_a = new Sprite[16];
+          PowerupNames.field_c = new Sprite[DialogLayerFrameHelpers.field_a.length];
+          for (var2_int = 0; var2_int < DialogLayerFrameHelpers.field_a.length; var2_int++) {
+            DialogLayerFrameHelpers.field_a[var2_int] = new Sprite(200, 25);
+            DialogLayerFrameHelpers.field_a[var2_int].setAsRenderTarget();
+            CacheEntry.field_q.drawStringCentered(PowerupNames.getPowerupName(var2_int, 90), 100, 17, 16777215, -1);
+            PowerupNames.field_c[var2_int] = SpriteEffectHelpers.createGlowOutlineSprite(DialogLayerFrameHelpers.field_a[var2_int]);
           }
-          al.field_f = ul.a(false, GameKeyHandler.field_c);
-          fk.field_K = ul.a(false, gj.field_m);
-          tb.field_G = ul.a(false, km.field_b);
-          rc.field_v = ul.a(false, hc.field_a);
-          hn.field_h = so.a(al.field_f);
-          cn.field_i = so.a(fk.field_K);
-          md.field_tb = so.a(tb.field_G);
-          eb.field_b = so.a(rc.field_v);
-          cn.field_f.makeRasterTarget(115);
+          MenuScreen.field_f = QuickChatPhraseCache.createTextSprite(false, GameKeyHandler.field_c);
+          AccountCreationForm.field_K = QuickChatPhraseCache.createTextSprite(false, WidgetStyleLayer.field_m);
+          EditableTextWidget.field_G = QuickChatPhraseCache.createTextSprite(false, NameListEntry.field_b);
+          PendingRecordRequest.field_v = QuickChatPhraseCache.createTextSprite(false, AppletHostHelpers.field_a);
+          TrackedSoundStream.field_h = SpriteEffectHelpers.createGlowOutlineSprite(MenuScreen.field_f);
+          DisplayState.field_i = SpriteEffectHelpers.createGlowOutlineSprite(AccountCreationForm.field_K);
+          AccountCreationDialog.field_tb = SpriteEffectHelpers.createGlowOutlineSprite(EditableTextWidget.field_G);
+          DropdownArrowPainter.field_b = SpriteEffectHelpers.createGlowOutlineSprite(PendingRecordRequest.field_v);
+          DisplayState.field_f.makeRasterTarget(115);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "w.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -57,6 +57,6 @@ abstract class ArchiveProvider {
     }
 
     static {
-        field_a = new wj[14];
+        field_a = new MusicTrack[14];
     }
 }

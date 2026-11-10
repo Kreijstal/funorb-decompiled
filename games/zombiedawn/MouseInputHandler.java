@@ -10,11 +10,11 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     public final synchronized void mouseDragged(java.awt.event.MouseEvent param0) {
         try {
-          if (null != ng.field_b) {
-            wc.field_Ob = 0;
-            lf.field_m = param0.getX();
-            vg.field_c = param0.getY();
-            kg.field_l = true;
+          if (null != LoginConnectionHelpers.field_b) {
+            MinigunGunner.field_Ob = 0;
+            MusicPatchNode.field_m = param0.getX();
+            TextLayout.field_c = param0.getY();
+            PasswordValidator.field_l = true;
           }
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "h.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
@@ -23,11 +23,11 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     public final synchronized void mouseMoved(java.awt.event.MouseEvent param0) {
         try {
-          if (null != ng.field_b) {
-            wc.field_Ob = 0;
-            lf.field_m = param0.getX();
-            vg.field_c = param0.getY();
-            kg.field_l = true;
+          if (null != LoginConnectionHelpers.field_b) {
+            MinigunGunner.field_Ob = 0;
+            MusicPatchNode.field_m = param0.getX();
+            TextLayout.field_c = param0.getY();
+            PasswordValidator.field_l = true;
           }
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "h.mouseMoved(" + (param0 != null ? "{...}" : "null") + ')');
@@ -61,7 +61,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             param0[param2].setAsRenderTarget();
             param0[param4].drawWithOffsets(0, 0);
             Rasterizer.fillRectangleBlended(0, 0, 24, 24, 0, 128);
-            cn.field_f.makeRasterTarget(-124);
+            DisplayState.field_f.makeRasterTarget(-124);
           } else {
             if (param1 == 1) {
               param0[param2].setAsRenderTarget();
@@ -69,7 +69,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               for (var5_int = 0; var5_int < 24; var5_int++) {
                 Rasterizer.drawVerticalLineAlpha(var5_int, 0, 24, 0, 5 * var5_int);
               }
-              cn.field_f.makeRasterTarget(-124);
+              DisplayState.field_f.makeRasterTarget(-124);
               return;
             }
             if (param1 == 2) {
@@ -78,7 +78,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               for (var5_intLifetime1 = 0; 24 > var5_intLifetime1; var5_intLifetime1++) {
                 Rasterizer.drawVerticalLineAlpha(var5_intLifetime1, 0, 24, 0, -(var5_intLifetime1 * 5) + 120);
               }
-              cn.field_f.makeRasterTarget(-124);
+              DisplayState.field_f.makeRasterTarget(-124);
               return;
             }
             if (param1 == 3) {
@@ -87,7 +87,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               for (var5_intLifetime2 = 0; var5_intLifetime2 < 24; var5_intLifetime2++) {
                 Rasterizer.drawHorizontalLineAlpha(0, var5_intLifetime2, 24, 0, 5 * var5_intLifetime2);
               }
-              cn.field_f.makeRasterTarget(-124);
+              DisplayState.field_f.makeRasterTarget(-124);
               return;
             }
             if (param1 == 4) {
@@ -96,7 +96,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               for (var5_intLifetime3 = 0; var5_intLifetime3 < 24; var5_intLifetime3++) {
                 Rasterizer.drawHorizontalLineAlpha(0, var5_intLifetime3, 24, 0, -(var5_intLifetime3 * 5) + 120);
               }
-              cn.field_f.makeRasterTarget(-124);
+              DisplayState.field_f.makeRasterTarget(-124);
               return;
             }
             if (6 == param1) {
@@ -106,7 +106,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
                 Rasterizer.drawHorizontalLineAlpha(var5_intLifetime4 + 1, var5_intLifetime4, -var5_intLifetime4 + 24, 0, var5_intLifetime4 * 5);
                 Rasterizer.drawVerticalLineAlpha(var5_intLifetime4, var5_intLifetime4, 24 - var5_intLifetime4, 0, 5 * var5_intLifetime4);
               }
-              cn.field_f.makeRasterTarget(-124);
+              DisplayState.field_f.makeRasterTarget(-124);
               return;
             }
             if (param1 == 8) {
@@ -116,7 +116,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
                 Rasterizer.drawHorizontalLineAlpha(0, var5_intLifetime5, var5_intLifetime5 + 1, 0, -(5 * var5_intLifetime5) + 120);
                 Rasterizer.drawVerticalLineAlpha(var5_intLifetime5, 0, var5_intLifetime5, 0, -(5 * var5_intLifetime5) + 120);
               }
-              cn.field_f.makeRasterTarget(-124);
+              DisplayState.field_f.makeRasterTarget(-124);
               return;
             }
             if (param1 == 7) {
@@ -126,7 +126,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
                 Rasterizer.drawHorizontalLineAlpha(0, var5_intLifetime6, 24 - var5_intLifetime6, 0, var5_intLifetime6 * 5);
                 Rasterizer.drawVerticalLineAlpha(var5_intLifetime6, -var5_intLifetime6 + 24, var5_intLifetime6, 0, 120 - var5_intLifetime6 * 5);
               }
-              cn.field_f.makeRasterTarget(-124);
+              DisplayState.field_f.makeRasterTarget(-124);
               return;
             }
             if (param1 == 5) {
@@ -136,10 +136,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
                 Rasterizer.drawHorizontalLineAlpha(24 - var5_intLifetime7, var5_intLifetime7, var5_intLifetime7, 0, -(var5_intLifetime7 * 5) + 120);
                 Rasterizer.drawVerticalLineAlpha(var5_intLifetime7, 0, 24 - var5_intLifetime7, 0, 5 * var5_intLifetime7);
               }
-              cn.field_f.makeRasterTarget(-124);
+              DisplayState.field_f.makeRasterTarget(-124);
               return;
             }
-            cn.field_f.makeRasterTarget(-124);
+            DisplayState.field_f.makeRasterTarget(-124);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -166,7 +166,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         }
     }
 
-    final static v[] loadIndexedSprites(Js5Archive param0, int param1, int param2, int param3) {
+    final static IndexedSprite[] loadIndexedSprites(Js5Archive param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
         Sprite[] var5 = null;
         RuntimeException stackIn_8_0 = null;
@@ -178,8 +178,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             var5 = (Sprite[]) null;
             MouseInputHandler.createShadedTileVariant((Sprite[]) null, -98, 92, (byte) 28, 20);
           }
-          if (ph.a(param1, 31043, param3, param0)) {
-            return di.buildIndexedSprites(-79);
+          if (SpriteSheetArchiveHelpers.decodeSpriteSheetFromArchive(param1, 31043, param3, param0)) {
+            return AccountWelcomePanel.buildIndexedSprites(-79);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -198,11 +198,11 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
         try {
-          if (ng.field_b != null) {
-            wc.field_Ob = 0;
-            lf.field_m = -1;
-            vg.field_c = -1;
-            kg.field_l = true;
+          if (LoginConnectionHelpers.field_b != null) {
+            MinigunGunner.field_Ob = 0;
+            MusicPatchNode.field_m = -1;
+            TextLayout.field_c = -1;
+            PasswordValidator.field_l = true;
           }
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "h.mouseExited(" + (param0 != null ? "{...}" : "null") + ')');
@@ -217,11 +217,11 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != ng.field_b) {
-            wc.field_Ob = 0;
-            ep.field_m = param0.getX();
-            pf.field_c = param0.getY();
-            pd.monotonicTimeMillis(-22826);
+          if (null != LoginConnectionHelpers.field_b) {
+            MinigunGunner.field_Ob = 0;
+            PendingBytePayloadRequest.field_m = param0.getX();
+            DualLinkNodeHashTable.field_c = param0.getY();
+            MonotonicClock.monotonicTimeMillis(-22826);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               DualLinkNode.field_j = 1;
               IntrusiveNode.field_c = 1;
@@ -230,7 +230,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               IntrusiveNode.field_c = 2;
             }
             var2_int = param0.getModifiers();
-            kg.field_l = true;
+            PasswordValidator.field_l = true;
             if ((var2_int & 8) != 0) {
             }
             if ((var2_int & 16) == 0) {
@@ -264,10 +264,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (ng.field_b != null) {
-            wc.field_Ob = 0;
+          if (LoginConnectionHelpers.field_b != null) {
+            MinigunGunner.field_Ob = 0;
             IntrusiveNode.field_c = 0;
-            kg.field_l = true;
+            PasswordValidator.field_l = true;
             var2_int = param0.getModifiers();
             if ((var2_int & 4) != 0) {
             }
@@ -301,7 +301,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != ng.field_b) {
+          if (null != LoginConnectionHelpers.field_b) {
             IntrusiveNode.field_c = 0;
           }
           return;
@@ -333,11 +333,11 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != ng.field_b) {
-            wc.field_Ob = 0;
-            lf.field_m = param0.getX();
-            vg.field_c = param0.getY();
-            kg.field_l = true;
+          if (null != LoginConnectionHelpers.field_b) {
+            MinigunGunner.field_Ob = 0;
+            MusicPatchNode.field_m = param0.getX();
+            TextLayout.field_c = param0.getY();
+            PasswordValidator.field_l = true;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

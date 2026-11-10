@@ -31,10 +31,10 @@ class SpatialObject extends DualLinkNode {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          rf.a((java.awt.Component) ((Object) param1), -116);
+          ByteStorage.detachKeyboardInput((java.awt.Component) ((Object) param1), -116);
           SpatialGrid.detachMouseInput(3490, (java.awt.Component) ((Object) param1));
-          if (null != jl.field_u) {
-            jl.field_u.detach((java.awt.Component) ((Object) param1), (byte) -36);
+          if (null != StrongCacheEntry.field_u) {
+            StrongCacheEntry.field_u.detach((java.awt.Component) ((Object) param1), (byte) -36);
           }
           if (param0 == -46) {
             return;
@@ -90,7 +90,7 @@ class SpatialObject extends DualLinkNode {
             if (var7 != 0) {
               if (var7 >= 128 &&
                 var7 < 160) {
-                var8 = fj.field_h[-128 + var7];
+                var8 = MatchingTextValidator.field_h[-128 + var7];
                 if (var8 == 0) {
                   var8 = 63;
                 }
@@ -123,7 +123,7 @@ class SpatialObject extends DualLinkNode {
 
     final static int randomSquadOffset(int param0) {
         int var1 = -98 / ((-62 - param0) / 56);
-        return 4 + pb.a(so.random, 16, 1);
+        return 4 + GooPuddleCell.nextBoundedInt(SpriteEffectHelpers.random, 16, 1);
     }
 
     static {

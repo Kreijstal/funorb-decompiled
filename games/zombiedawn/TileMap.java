@@ -28,7 +28,7 @@ final class TileMap {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
-        va var6 = null;
+        FrameSequence var6 = null;
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
         var7 = ZombieDawn.field_J;
@@ -38,7 +38,7 @@ final class TileMap {
             return;
           }
           this.field_e = false;
-          qk.advanceAnimatedTiles((byte) 96);
+          ArmedHuman.advanceAnimatedTiles((byte) 96);
           var3_int = param0;
           while (this.field_h.length > var3_int) {
             if (var7 != 0) {
@@ -47,9 +47,9 @@ final class TileMap {
             var4 = 0;
             while (this.field_h[0].length > var4) {
               var5 = (127 & this.tiles[var3_int][var4]) >> 0;
-              var6 = ub.findAnimatedTile(127, var5);
+              var6 = LevelHud.findAnimatedTile(127, var5);
               if (var6 != null) {
-                this.field_h[var3_int][var4] = GameWorld.intOr(eg.a(this.field_h[var3_int][var4], -128), var6.field_g);
+                this.field_h[var3_int][var4] = GameWorld.intOr(TextHotspotRegion.bitAnd(this.field_h[var3_int][var4], -128), var6.field_g);
                 this.field_e = true;
               }
               var4++;
@@ -656,8 +656,8 @@ final class TileMap {
 
     private final WorldObject createLevelObject(int param0, int param1, int param2, int param3, int param4) {
         Zombie stackIn_2_0 = null;
-        oo stackIn_22_0 = null;
-        gb stackIn_28_0 = null;
+        Tree stackIn_22_0 = null;
+        PowerupPickup stackIn_28_0 = null;
         boolean stackIn_33_0 = false;
         int stackIn_36_1 = 0;
         int stackIn_36_2 = 0;
@@ -668,7 +668,7 @@ final class TileMap {
         int var6_int = 0;
         RuntimeException var6 = null;
         Object var7 = null;
-        gb var8 = null;
+        PowerupPickup var8 = null;
         Human var8_ref = null;
         try {
           var6_int = param2 & -25165825;
@@ -683,12 +683,12 @@ final class TileMap {
               stackIn_36_1 = param1;
               stackIn_36_2 = param0;
               stackIn_37_3 = !((536870912 & param2) <= 0);
-              var7 = co.a(stackIn_33_0, stackIn_36_1, stackIn_36_2, stackIn_37_3, var6_int & -1610612737, -19653);
-              ((id) (var7)).field_E = param2 >> 23 & 3;
+              var7 = ObstacleFactory.createObstacle(stackIn_33_0, stackIn_36_1, stackIn_36_2, stackIn_37_3, var6_int & -1610612737, -19653);
+              ((LevelObstacle) (var7)).field_E = param2 >> 23 & 3;
             } else {
               if (param3 == 3) {
                 var6_int = var6_int & -134217729;
-                var8 = new gb(param0, param1, var6_int);
+                var8 = new PowerupPickup(param0, param1, var6_int);
                 if (0 != (134217728 & param2)) {
                   var8.field_C = true;
                 }
@@ -696,7 +696,7 @@ final class TileMap {
                 return (WorldObject) ((Object) stackIn_28_0);
               }
               if (param3 == 4) {
-                stackIn_22_0 = new oo(param0, param1, param2);
+                stackIn_22_0 = new Tree(param0, param1, param2);
                 return (WorldObject) ((Object) stackIn_22_0);
               }
             }
@@ -938,13 +938,13 @@ final class TileMap {
         String stackIn_40_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (cj.a((byte) 15, param1)) {
+          if (IntrusiveDequeCursor.hasNonAlphanumeric((byte) 15, param1)) {
             return false;
           }
-          if (tb.isSingleRepeatedChar(-10723, param1)) {
+          if (EditableTextWidget.isSingleRepeatedChar(-10723, param1)) {
             return false;
           }
-          if (tk.hasInvalidPasswordLength((byte) 84, param1)) {
+          if (NameCheckRequest.hasInvalidPasswordLength((byte) 84, param1)) {
             return false;
           }
           if (param2.length() == 0) {
@@ -953,13 +953,13 @@ final class TileMap {
           if (param0 > -7) {
             return true;
           }
-          if (lf.containsForwardOrReversed(param2, param1, -7235)) {
+          if (MusicPatchNode.containsForwardOrReversed(param2, param1, -7235)) {
             return false;
           }
-          if (ic.containsForwardOrReversed(param1, param2, 0)) {
+          if (ValidatedTextWidget.containsForwardOrReversed(param1, param2, 0)) {
             return false;
           }
-          if (t.containsForwardOrReversed(param1, (byte) 125, param2)) {
+          if (DialWidgetPainter.containsForwardOrReversed(param1, (byte) 125, param2)) {
             return false;
           }
           return true;
@@ -1013,15 +1013,15 @@ final class TileMap {
         boolean stackIn_5_0 = false;
         Throwable decompiledCaughtException = null;
         try {
-          var1_ref = ea.field_c;
+          var1_ref = KeyHandlerHolder.field_c;
           synchronized (var1_ref) {
             var2 = -66 / ((param0 - 42) / 59);
-            if (~FunOrbApplet.field_y == ~he.field_e) {
+            if (~FunOrbApplet.field_y == ~LoginDialogGlobals.field_e) {
               return false;
             }
-            kg.field_i = vd.field_b[he.field_e];
-            lc.field_c = gg.field_a[he.field_e];
-            he.field_e = he.field_e + 1 & 127;
+            PasswordValidator.field_i = LoginPromptTexts.field_b[LoginDialogGlobals.field_e];
+            WeightedLruCache.field_c = TextDecodeHelpers.field_a[LoginDialogGlobals.field_e];
+            LoginDialogGlobals.field_e = LoginDialogGlobals.field_e + 1 & 127;
             stackIn_5_0 = true;
           }
           return stackIn_5_0;
@@ -1495,7 +1495,7 @@ final class TileMap {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          cf.field_eb.insertElementAt(param1, 0);
+          LoginDialog.field_eb.insertElementAt(param1, 0);
           var2_int = -29 / ((param0 + 47) / 44);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1760,7 +1760,7 @@ final class TileMap {
           } else {
             stackIn_4_2 = 0;
           }
-          stackIn_3_0[stackIn_3_1] = GameWorld.intOr(stackIn_4_2, eg.a(14, this.field_p[param2][param4]));
+          stackIn_3_0[stackIn_3_1] = GameWorld.intOr(stackIn_4_2, TextHotspotRegion.bitAnd(14, this.field_p[param2][param4]));
           if (param1 != 14365) {
             discarded$0 = this.isPassable((byte) 91, 88, -54);
           }
@@ -1772,12 +1772,12 @@ final class TileMap {
             } else {
               stackIn_14_2 = 1;
             }
-            stackIn_13_0[stackIn_13_1] = GameWorld.intOr(stackIn_14_2, eg.a(14, this.field_t[param2][param4]));
+            stackIn_13_0[stackIn_13_1] = GameWorld.intOr(stackIn_14_2, TextHotspotRegion.bitAnd(14, this.field_t[param2][param4]));
           }
           if (this.field_p[param2].length > (1 + param4)) {
             stackIn_21_0 = this.field_p[param2];
             stackIn_21_1 = 1 + param4;
-            stackIn_21_2 = eg.a(-3, this.field_p[param2][param4 + 1]);
+            stackIn_21_2 = TextHotspotRegion.bitAnd(-3, this.field_p[param2][param4 + 1]);
             if (!param0) {
               stackIn_22_3 = 0;
             } else {
@@ -1787,7 +1787,7 @@ final class TileMap {
             if (!param3) {
               stackIn_28_0 = this.field_t[param2];
               stackIn_28_1 = param4 + 1;
-              stackIn_28_2 = eg.a(this.field_t[param2][1 + param4], -3);
+              stackIn_28_2 = TextHotspotRegion.bitAnd(this.field_t[param2][1 + param4], -3);
               if (!param0) {
                 stackIn_29_3 = 0;
               } else {
@@ -1804,7 +1804,7 @@ final class TileMap {
             } else {
               stackIn_37_2 = 0;
             }
-            stackIn_36_0[stackIn_36_1] = GameWorld.intOr(stackIn_37_2, eg.a(-5, this.field_p[param2][-1 + param4]));
+            stackIn_36_0[stackIn_36_1] = GameWorld.intOr(stackIn_37_2, TextHotspotRegion.bitAnd(-5, this.field_p[param2][-1 + param4]));
             if (!param3) {
               stackIn_43_0 = this.field_t[param2];
               stackIn_43_1 = param4 - 1;
@@ -1813,7 +1813,7 @@ final class TileMap {
               } else {
                 stackIn_44_2 = 0;
               }
-              stackIn_43_0[stackIn_43_1] = GameWorld.intOr(stackIn_44_2, eg.a(-5, this.field_t[param2][-1 + param4]));
+              stackIn_43_0[stackIn_43_1] = GameWorld.intOr(stackIn_44_2, TextHotspotRegion.bitAnd(-5, this.field_t[param2][-1 + param4]));
             }
           }
           return;

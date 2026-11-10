@@ -133,8 +133,8 @@ final class BufferedSocket implements Runnable {
           field_h = null;
           return;
         }
-        rc var2 = (rc) null;
-        BufferedSocket.queueHighscoreSubmission((rc) null, (byte) -84, 22);
+        PendingRecordRequest var2 = (PendingRecordRequest) null;
+        BufferedSocket.queueHighscoreSubmission((PendingRecordRequest) null, (byte) -84, 22);
         field_f = null;
         field_h = null;
     }
@@ -146,8 +146,8 @@ final class BufferedSocket implements Runnable {
         if (!param0) {
           return this.field_a.read();
         }
-        rc var3 = (rc) null;
-        BufferedSocket.queueHighscoreSubmission((rc) null, (byte) 8, -92);
+        PendingRecordRequest var3 = (PendingRecordRequest) null;
+        BufferedSocket.queueHighscoreSubmission((PendingRecordRequest) null, (byte) 8, -92);
         return this.field_a.read();
     }
 
@@ -241,7 +241,7 @@ final class BufferedSocket implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter4;
             var1_ref = (Exception) (Object) decompiledCaughtException;
             var7 = (String) null;
-            ae.a((Throwable) ((Object) var1_ref), 10331, (String) null);
+            ErrorReportHelpers.reportClientError((Throwable) ((Object) var1_ref), 10331, (String) null);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -251,20 +251,20 @@ final class BufferedSocket implements Runnable {
     }
 
     final static void clearFeatureFlags(int param0) {
-        hf.field_I = 0;
+        MultiHandleSliderWidget.field_I = 0;
         if (param0 == -23148) {
           return;
         }
         field_k = -44;
     }
 
-    final static void queueHighscoreSubmission(rc param0, byte param1, int param2) {
+    final static void queueHighscoreSubmission(PendingRecordRequest param0, byte param1, int param2) {
         if (param1 < 109) {
           return;
         }
         try {
-          hk.field_F.addFirst(0, param0);
-          DelegatingCanvas.a((byte) -92, param2, param0);
+          TrafficVehicle.field_F.addFirst(0, param0);
+          DelegatingCanvas.writeHighscoreSubmission((byte) -92, param2, param0);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "gm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -288,7 +288,7 @@ final class BufferedSocket implements Runnable {
           }
           if (this.field_c != null) {
             while (this.field_c.status == 0) {
-              ld.a(1L, (byte) 89);
+              AlternateLongAndNameCredentials.sleepMillis(1L, (byte) 89);
             }
             if (this.field_c.status == 1) {
               try {
@@ -386,14 +386,14 @@ final class BufferedSocket implements Runnable {
           var7 = var8;
           var3 = var7;
           for (var2_intLifetime1 = 0; var2_intLifetime1 < 4; var2_intLifetime1++) {
-            WorldObject.putIntAt(var2_intLifetime1, var3, (byte) -81, md.a(var2_intLifetime1, param0, 70));
+            WorldObject.putIntAt(var2_intLifetime1, var3, (byte) -81, AccountCreationDialog.readIntFromBytes(var2_intLifetime1, param0, 70));
           }
           incrementValue$2 = var2_intLifetime1;
           var2_intLifetime1++;
-          var4 = md.a(incrementValue$2, param0, 82);
+          var4 = AccountCreationDialog.readIntFromBytes(incrementValue$2, param0, 82);
           incrementValue$3 = var2_intLifetime1;
           var2_intLifetime1++;
-          var5 = md.a(incrementValue$3, param0, 65);
+          var5 = AccountCreationDialog.readIntFromBytes(incrementValue$3, param0, 65);
           WorldObject.putIntAt(4, var8, (byte) 69, var4);
           WorldObject.putIntAt(5, var8, (byte) 61, var5);
           WorldObject.putIntAt(6, var8, (byte) 79, var4);
@@ -403,9 +403,9 @@ final class BufferedSocket implements Runnable {
           WorldObject.putIntAt(10, var8, (byte) 66, var4);
           WorldObject.putIntAt(11, var8, (byte) 74, var5);
           for (var2_intLifetime2 = 6; param0.length / 4 > var2_intLifetime2; var2_intLifetime2++) {
-            WorldObject.putIntAt(6 + var2_intLifetime2, var3, (byte) 42, md.a(var2_intLifetime2, param0, 93));
+            WorldObject.putIntAt(6 + var2_intLifetime2, var3, (byte) 42, AccountCreationDialog.readIntFromBytes(var2_intLifetime2, param0, 93));
           }
-          stackIn_11_0 = vk.a((byte) -83, var8);
+          stackIn_11_0 = InputValidationResult.decodeTileMap((byte) -83, var8);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -1,0 +1,31 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class OffsetHelpers {
+    static int field_a;
+    static int[] field_b;
+    static int field_c;
+
+    final static int mirroredOffsetSum(int param0, int param1, boolean param2, int param3) {
+        if (!param2) {
+          return (0 != (param0 & 1) ? -param1 : param1) + ((param0 & 2) == 0 ? param3 : -param3);
+        }
+        field_b = (int[]) null;
+        return (0 != (param0 & 1) ? -param1 : param1) + ((param0 & 2) == 0 ? param3 : -param3);
+    }
+
+    public static void releaseStatics(int param0) {
+        if (param0 != 2) {
+          OffsetHelpers.releaseStatics(-82);
+          field_b = null;
+          return;
+        }
+        field_b = null;
+    }
+
+    static {
+        field_b = new int[1024];
+        field_a = 3;
+        field_c = 0;
+    }
+}

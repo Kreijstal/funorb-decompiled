@@ -12,7 +12,7 @@ final class Js5Archive {
     static int[] field_g;
     private Object[][] field_c;
     static GameWorld field_e;
-    private jh field_b;
+    private ArchiveIndex field_b;
     static Sprite[] field_k;
     static int[] field_i;
 
@@ -119,7 +119,7 @@ final class Js5Archive {
             this.getFileByName((String) (this.field_j[2]), -6, (String) null);
           }
           try {
-            var37 = va.a((byte) -112, var9);
+            var37 = FrameSequence.decompressContainer((byte) -112, var9);
             var28 = var37;
             var24 = var28;
             var44 = var24;
@@ -176,7 +176,7 @@ final class Js5Archive {
                     var21 = var35[var20];
                   }
                   if (var21 == param1) {
-                    gp.copy(var44, var17, var45, var14_intLifetime1, var19);
+                    ArraySupport.copy(var44, var17, var45, var14_intLifetime1, var19);
                     var14_intLifetime1 = var14_intLifetime1 + var19;
                   }
                   var17 = var17 + var19;
@@ -214,7 +214,7 @@ final class Js5Archive {
                 var18 = 0;
                 for (var19 = 0; var5_int > var19; var19++) {
                   var18 = var18 + var32.readInt(-48);
-                  gp.copy(var44, var16, var41[var19], var40[var19], var18);
+                  ArraySupport.copy(var44, var16, var41[var19], var40[var19], var18);
                   var14[var19] = var14[var19] + var18;
                   var16 = var16 + var18;
                 }
@@ -228,7 +228,7 @@ final class Js5Archive {
                 if (this.field_d != 0) {
                   var7[var18] = var41[var17];
                 } else {
-                  var7[var18] = el.a((byte) 94, false, var41[var17]);
+                  var7[var18] = MarkerSliderPainter.wrapByteStorage((byte) 94, false, var41[var17]);
                 }
               }
             }
@@ -242,7 +242,7 @@ final class Js5Archive {
               var7[var11] = var37;
               return true;
             }
-            var7[var11] = el.a((byte) 94, false, var44);
+            var7[var11] = MarkerSliderPainter.wrapByteStorage((byte) 94, false, var44);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -282,12 +282,12 @@ final class Js5Archive {
           }
           param2 = param2.toLowerCase();
           var6 = (CharSequence) ((Object) param0);
-          var4_int = this.field_b.field_g.a(1, tc.a(var6, 14));
+          var4_int = this.field_b.field_g.get(1, InsetTextPainter.hashString(var6, 14));
           if (!this.isValidGroup(var4_int, (byte) -82)) {
             return false;
           }
           var7 = (CharSequence) ((Object) param2);
-          var5 = this.field_b.field_a[var4_int].a(1, tc.a(var7, 14));
+          var5 = this.field_b.field_a[var4_int].get(1, InsetTextPainter.hashString(var7, 14));
           stackIn_9_0 = this.isFileLoaded(var5, (byte) -128, var4_int);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -332,7 +332,7 @@ final class Js5Archive {
         byte[] var7 = null;
         try {
           if (param3 < 124) {
-            this.field_b = (jh) (((Object[]) (this.field_j[16]))[1]);
+            this.field_b = (ArchiveIndex) (((Object[]) (this.field_j[16]))[1]);
           }
           if (!this.isValidFile(param1, param2, 105)) {
             stackIn_4_0 = null;
@@ -387,7 +387,7 @@ final class Js5Archive {
 
     final synchronized boolean isIndexLoaded(byte param0) {
         if (param0 != 73) {
-          this.field_b = (jh) (this.field_j[19]);
+          this.field_b = (ArchiveIndex) (this.field_j[19]);
         }
         if (this.field_b != null) {
           return true;
@@ -403,7 +403,7 @@ final class Js5Archive {
 
     final static void showLoginDialog(int param0) {
         String var2 = (String) null;
-        jm.a((String) null, "", -901373652);
+        PasswordFieldPainter.showLoginForm((String) null, "", -901373652);
         int var1 = -106 % ((67 - param0) / 40);
     }
 
@@ -457,7 +457,7 @@ final class Js5Archive {
             return stackIn_6_0;
           }
           var5 = (CharSequence) ((Object) param1);
-          var4_int = this.field_b.field_a[param0].a(1, tc.a(var5, 14));
+          var4_int = this.field_b.field_a[param0].get(1, InsetTextPainter.hashString(var5, 14));
           if (this.isValidFile(var4_int, param0, 126)) {
             return var4_int;
           }
@@ -497,7 +497,7 @@ final class Js5Archive {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_b.field_g.a(1, tc.a(var4, 14));
+          var3_int = this.field_b.field_g.get(1, InsetTextPainter.hashString(var4, 14));
           stackIn_7_0 = this.getGroupProgress(var3_int, -5366);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -559,13 +559,13 @@ final class Js5Archive {
           param2 = param2.toLowerCase();
           param0 = param0.toLowerCase();
           var6 = (CharSequence) ((Object) param2);
-          var4_int = this.field_b.field_g.a(1, tc.a(var6, 14));
+          var4_int = this.field_b.field_g.get(1, InsetTextPainter.hashString(var6, 14));
           if (!this.isValidGroup(var4_int, (byte) -82)) {
             stackIn_7_0 = null;
             return (byte[]) (stackIn_7_0);
           }
           var7 = (CharSequence) ((Object) param0);
-          var5 = this.field_b.field_a[var4_int].a(1, tc.a(var7, 14));
+          var5 = this.field_b.field_a[var4_int].get(1, InsetTextPainter.hashString(var7, 14));
           stackIn_9_0 = this.getFile((byte) 51, var4_int, var5);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -606,7 +606,7 @@ final class Js5Archive {
             this.getGroupProgress(((int[]) (this.field_j[7]))[0], -46);
           }
           var4 = (CharSequence) ((Object) param1);
-          var3_int = this.field_b.field_g.a(1, tc.a(var4, param0 + 15));
+          var3_int = this.field_b.field_g.get(1, InsetTextPainter.hashString(var4, param0 + 15));
           stackIn_7_0 = this.ensureGroupLoaded(-29092, var3_int);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -630,7 +630,7 @@ final class Js5Archive {
         if (this.field_f) {
           this.field_j[param1] = this.field_h.getPackedGroup(param1, (byte) 112);
         } else {
-          this.field_j[param1] = el.a((byte) 94, false, this.field_h.getPackedGroup(param1, (byte) 112));
+          this.field_j[param1] = MarkerSliderPainter.wrapByteStorage((byte) 94, false, this.field_h.getPackedGroup(param1, (byte) 112));
         }
     }
 
@@ -644,7 +644,7 @@ final class Js5Archive {
         if (param0 < 0 ||
           param0 >= this.field_b.field_d.length ||
           this.field_b.field_d[param0] == 0) {
-          if (sg.field_ib) {
+          if (ProgressMessageDialog.field_ib) {
             throw new IllegalArgumentException(Integer.toString(param0));
           }
           return false;
@@ -709,7 +709,7 @@ final class Js5Archive {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_b.field_g.a(1, tc.a(var4, 14));
+          var3_int = this.field_b.field_g.get(1, InsetTextPainter.hashString(var4, 14));
           if (param1 <= var3_int) {
             return true;
           }
@@ -740,7 +740,7 @@ final class Js5Archive {
           var4 = -60 % ((63 - param2) / 41);
           return true;
         }
-        if (!sg.field_ib) {
+        if (!ProgressMessageDialog.field_ib) {
           return false;
         }
         throw new IllegalArgumentException(param1 + " " + param0);
@@ -784,7 +784,7 @@ final class Js5Archive {
             field_a = (String) null;
           }
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_b.field_g.a(param1 ^ 9, tc.a(var4, 14));
+          var3_int = this.field_b.field_g.get(param1 ^ 9, InsetTextPainter.hashString(var4, 14));
           if (this.isValidGroup(var3_int, (byte) -82)) {
             stackIn_10_0 = var3_int;
             return stackIn_10_0;
@@ -865,6 +865,6 @@ final class Js5Archive {
     static {
         field_a = "Passwords can only contain letters and numbers";
         field_l = new IntrusiveDeque();
-        field_i = ae.a(14821);
+        field_i = ErrorReportHelpers.newEightInts(14821);
     }
 }

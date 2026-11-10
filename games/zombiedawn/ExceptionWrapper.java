@@ -6,7 +6,7 @@ final class ExceptionWrapper implements Runnable {
     static int field_g;
     static int field_a;
     static int field_i;
-    static qf field_d;
+    static AudioOutput field_d;
     static byte[][] field_j;
     static int field_e;
     private DualLinkDeque field_b;
@@ -15,10 +15,10 @@ final class ExceptionWrapper implements Runnable {
     static String field_f;
     int field_k;
 
-    final wd queueWrite(byte param0, int param1, SectorCacheStore param2, byte[] param3) {
-        wd var5 = null;
+    final DiskArchiveRequest queueWrite(byte param0, int param1, SectorCacheStore param2, byte[] param3) {
+        DiskArchiveRequest var5 = null;
         RuntimeException var5_ref = null;
-        wd stackIn_3_0 = null;
+        DiskArchiveRequest stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -29,7 +29,7 @@ final class ExceptionWrapper implements Runnable {
           if (param0 <= 37) {
             ExceptionWrapper.releaseStatics((byte) -26);
           }
-          var5 = new wd();
+          var5 = new DiskArchiveRequest();
           var5.field_x = param2;
           var5.field_A = param3;
           var5.secondaryKey = (long)param1;
@@ -58,7 +58,7 @@ final class ExceptionWrapper implements Runnable {
         }
     }
 
-    private final void enqueueRequest(boolean param0, wd param1) {
+    private final void enqueueRequest(boolean param0, DiskArchiveRequest param1) {
         synchronized (this.field_b) {
           this.field_b.addLast(param1, (byte) -112);
           this.field_k = this.field_k + 1;
@@ -75,7 +75,7 @@ final class ExceptionWrapper implements Runnable {
           InterruptedException interruptedException = null;
           Object var2 = null;
           int var5 = 0;
-          wd var7 = null;
+          DiskArchiveRequest var7 = null;
           int decompiledRegionSelector0 = 0;
           int decompiledRegionSelector1 = 0;
           Throwable decompiledCaughtException = null;
@@ -85,7 +85,7 @@ final class ExceptionWrapper implements Runnable {
           while (!this.field_l) {
             var2 = this.field_b;
             synchronized (var2) {
-              var7 = (wd) (this.field_b.removeFirst(-90));
+              var7 = (DiskArchiveRequest) (this.field_b.removeFirst(-90));
               if (var7 == null) {
                 try {
                   this.field_b.wait();
@@ -124,7 +124,7 @@ final class ExceptionWrapper implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
-              ae.a((Throwable) ((Object) var2_ref), 10331, (String) null);
+              ErrorReportHelpers.reportClientError((Throwable) ((Object) var2_ref), 10331, (String) null);
               decompiledRegionSelector1 = 1;
             }
             if (decompiledRegionSelector1 == 0) {
@@ -168,31 +168,31 @@ final class ExceptionWrapper implements Runnable {
         }
     }
 
-    final wd readImmediate(int param0, SectorCacheStore param1, int param2) {
-        wd var4 = null;
+    final DiskArchiveRequest readImmediate(int param0, SectorCacheStore param1, int param2) {
+        DiskArchiveRequest var4 = null;
         RuntimeException var4_ref = null;
         Object var5 = null;
         Object var5_ref = null;
-        wd var6 = null;
+        DiskArchiveRequest var6 = null;
         int var8 = 0;
-        wd stackIn_4_0 = null;
-        wd stackIn_11_0 = null;
-        wd stackIn_18_0 = null;
+        DiskArchiveRequest stackIn_4_0 = null;
+        DiskArchiveRequest stackIn_11_0 = null;
+        DiskArchiveRequest stackIn_18_0 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
         Throwable decompiledCaughtException = null;
         var8 = ZombieDawn.field_J;
         try {
-          var4 = new wd();
+          var4 = new DiskArchiveRequest();
           var4.field_v = 1;
           var5_ref = this.field_b;
           synchronized (var5_ref) {
             if (param2 >= -101) {
-              stackIn_4_0 = (wd) null;
+              stackIn_4_0 = (DiskArchiveRequest) null;
               return stackIn_4_0;
             }
-            var6 = (wd) (this.field_b.first((byte) 34));
+            var6 = (DiskArchiveRequest) (this.field_b.first((byte) 34));
             while (var6 != null) {
               if ((long)param0 == var6.secondaryKey &&
                 var6.field_x == param1 &&
@@ -202,7 +202,7 @@ final class ExceptionWrapper implements Runnable {
                 stackIn_11_0 = var4;
                 return stackIn_11_0;
               }
-              var6 = (wd) (this.field_b.next((byte) 114));
+              var6 = (DiskArchiveRequest) (this.field_b.next((byte) 114));
             }
           }
           var4.field_A = param1.readFile(-65536, param0);
@@ -234,25 +234,25 @@ final class ExceptionWrapper implements Runnable {
         }
     }
 
-    final wd queueRead(byte param0, SectorCacheStore param1, int param2) {
-        wd var4 = null;
+    final DiskArchiveRequest queueRead(byte param0, SectorCacheStore param1, int param2) {
+        DiskArchiveRequest var4 = null;
         RuntimeException var4_ref = null;
-        wd var5 = null;
-        wd stackIn_3_0 = null;
+        DiskArchiveRequest var5 = null;
+        DiskArchiveRequest stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new wd();
+          var4 = new DiskArchiveRequest();
           var4.field_r = false;
           var4.secondaryKey = (long)param2;
           var4.field_x = param1;
           var4.field_v = 3;
           this.enqueueRequest(true, var4);
           if (param0 != -119) {
-            var5 = (wd) null;
-            this.enqueueRequest(false, (wd) null);
+            var5 = (DiskArchiveRequest) null;
+            this.enqueueRequest(false, (DiskArchiveRequest) null);
           }
           stackIn_3_0 = var4;
           return stackIn_3_0;
@@ -278,7 +278,7 @@ final class ExceptionWrapper implements Runnable {
         try {
           var2 = param0.startThread(5, (Runnable) (this), true);
           while (0 == var2.status) {
-            ld.a(10L, (byte) 105);
+            AlternateLongAndNameCredentials.sleepMillis(10L, (byte) 105);
           }
           if (2 == var2.status) {
             throw new RuntimeException();

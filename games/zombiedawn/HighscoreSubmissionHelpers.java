@@ -1,0 +1,89 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class HighscoreSubmissionHelpers {
+    static int[] field_c;
+    static int[] field_a;
+    static NineSliceFrame field_b;
+
+    final static void queueHighscoreSubmission(int param0, QueuedStatSubmission param1, int param2) {
+        try {
+          SpriteCheckboxPainter.field_b.addFirst(0, param1);
+          PacketRequestHelpers.sendStatSubmission(param0, 1, param1);
+          if (param2 > -6) {
+            Js5Archive var4 = (Js5Archive) null;
+            HighscoreSubmissionHelpers.loadIndexedSpritesByName((String) null, (String) null, 118, (Js5Archive) null);
+          }
+        } catch (RuntimeException runtimeException) {
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "dd.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+        }
+    }
+
+    final static IndexedSprite[] loadIndexedSpritesByName(String param0, String param1, int param2, Js5Archive param3) {
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        QueuedStatSubmission var6 = null;
+        IndexedSprite[] stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param2 != -1864) {
+            var6 = (QueuedStatSubmission) null;
+            HighscoreSubmissionHelpers.queueHighscoreSubmission(34, (QueuedStatSubmission) null, 116);
+          }
+          var4_int = param3.getGroupIdByName(param0, (byte) 8);
+          var5 = param3.getFileIdByName(var4_int, param1, true);
+          stackIn_3_0 = MouseInputHandler.loadIndexedSprites(param3, var4_int, -87, var5);
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_6_0 = var4;
+          stackIn_6_1 = new StringBuilder().append("dd.A(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
+          if (param1 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
+          }
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+        }
+    }
+
+    public static void releaseStatics(byte param0) {
+        if (param0 == 68) {
+          field_a = null;
+          field_c = null;
+          field_b = null;
+          return;
+        }
+        Js5Archive var2 = (Js5Archive) null;
+        HighscoreSubmissionHelpers.loadIndexedSpritesByName((String) null, (String) null, 95, (Js5Archive) null);
+        field_a = null;
+        field_c = null;
+        field_b = null;
+    }
+
+    static {
+        field_c = new int[4];
+        field_a = new int[]{135, 135, 90, 120};
+    }
+}

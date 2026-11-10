@@ -66,9 +66,9 @@ final class IterableNodeHashTable implements Iterable {
         return var3 + param0;
     }
 
-    final static hn playSample(int param0, PcmSample param1) {
+    final static TrackedSoundStream playSample(int param0, PcmSample param1) {
         RuntimeException var2 = null;
-        hn stackIn_3_0 = null;
+        TrackedSoundStream stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -77,7 +77,7 @@ final class IterableNodeHashTable implements Iterable {
           if (param0 != 96) {
             field_b = 21;
           }
-          stackIn_3_0 = aa.a(106, PcmSampleStream.createAtRatePercent(param1, 100, 96));
+          stackIn_3_0 = ChatMessage.playSampleStream(106, PcmSampleStream.createAtRatePercent(param1, 100, 96));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

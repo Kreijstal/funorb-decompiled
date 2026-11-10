@@ -1,0 +1,390 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class FrameSequence {
+    private int field_b;
+    private int field_d;
+    int field_i;
+    private int field_a;
+    int field_h;
+    int field_e;
+    int field_g;
+    private boolean field_c;
+    private int field_f;
+
+    final void advanceFrame(byte param0) {
+        int fieldTemp$3 = 0;
+        int fieldTemp$4 = 0;
+        int fieldTemp$5 = 0;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
+        try {
+          fieldTemp$3 = this.field_b + 1;
+          this.field_b = this.field_b + 1;
+          if (fieldTemp$3 > this.field_f) {
+            boolean decompiledFrameRemainder1 = true;
+            boolean decompiledFrameRemainder0 = true;
+            if (this.field_c) {
+              fieldTemp$4 = this.field_g + 1;
+              this.field_g = this.field_g + 1;
+              decompiledFrameRemainder0 = !(fieldTemp$4 > this.field_a);
+            }
+            if ((decompiledFrameRemainder0) &&
+              (decompiledFrameRemainder1 = !(this.field_c))) {
+              fieldTemp$5 = this.field_g - 1;
+              this.field_g = this.field_g - 1;
+              decompiledFrameRemainder1 = !(fieldTemp$5 >= this.field_a);
+            }
+            if (decompiledFrameRemainder1) {
+              this.field_g = this.field_d;
+            }
+            this.field_b = 0;
+          }
+          if (param0 < 122) {
+            FrameSequence.getTopContainer((byte) -48);
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2), "va.D(" + param0 + ')');
+        }
+    }
+
+    final static java.awt.Container getTopContainer(byte param0) {
+        RuntimeException var1 = null;
+        java.awt.Frame stackIn_2_0 = null;
+        java.awt.Container stackIn_5_0 = null;
+        java.applet.Applet stackIn_7_0 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (null != ResizableModeHelpers.field_a) {
+            stackIn_2_0 = ResizableModeHelpers.field_a;
+            return (java.awt.Container) ((Object) stackIn_2_0);
+          }
+          if (param0 < -107) {
+            stackIn_7_0 = AppletHostHelpers.getHostApplet(0);
+            return (java.awt.Container) ((Object) stackIn_7_0);
+          }
+          stackIn_5_0 = (java.awt.Container) null;
+          return stackIn_5_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1), "va.A(" + param0 + ')');
+        }
+    }
+
+    final static byte[] decompressContainer(byte param0, byte[] param1) {
+        byte[] stackIn_2_0 = null;
+        byte[] stackIn_14_0 = null;
+        byte[] stackIn_34_0 = null;
+        RuntimeException stackIn_38_0 = null;
+        StringBuilder stackIn_38_1 = null;
+        String stackIn_39_2 = null;
+        Throwable decompiledCaughtException = null;
+        PacketBuffer var2 = null;
+        RuntimeException var2_ref = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        byte[] var5_ref_byte__ = null;
+        byte[] var6 = null;
+        Object var7 = null;
+        try {
+          if (param0 >= -106) {
+            stackIn_2_0 = (byte[]) null;
+            return stackIn_2_0;
+          }
+          var2 = new PacketBuffer(param1);
+          var3 = var2.readUnsignedByte((byte) -118);
+          var4 = var2.readInt(-38);
+          if (var4 >= 0 && (GameLoopApplet.field_z == 0 ||
+            !(var4 > GameLoopApplet.field_z))) {
+            if (var3 == 0) {
+              var5_ref_byte__ = new byte[var4];
+              var2.readBytes(var4, 0, var5_ref_byte__, 11240);
+              stackIn_14_0 = var5_ref_byte__;
+              return stackIn_14_0;
+            }
+            var5 = var2.readInt(-69);
+            if (var5 >= 0 && (0 == GameLoopApplet.field_z ||
+              !(var5 > GameLoopApplet.field_z))) {
+              var6 = new byte[var5];
+              if (1 != var3) {
+                var7 = DisplayState.field_d;
+                synchronized (var7) {
+                  DisplayState.field_d.decompress(var6, var2, -8);
+                }
+              }
+              if (1 == var3 ||
+                ZombieDawn.field_J != 0) {
+                Bzip2Decoder.decompressInto(var6, var5, param1, var4, 9);
+              }
+              stackIn_34_0 = var6;
+              return stackIn_34_0;
+            }
+            throw new RuntimeException();
+          }
+          throw new RuntimeException();
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_38_0 = var2_ref;
+          stackIn_38_1 = new StringBuilder().append("va.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_39_2 = "null";
+          } else {
+            stackIn_39_2 = "{...}";
+          }
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+        }
+    }
+
+    final static void handleSocialListPacket(int param0) {
+        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
+        int stackIn_15_0 = 0;
+        SocialListEntry stackIn_68_0 = null;
+        RuntimeException decompiledCaughtException = null;
+        BitPacketBuffer var1 = null;
+        RuntimeException var1_ref = null;
+        int var2 = 0;
+        Object var3 = null;
+        int var3_int = 0;
+        String var4_ref_String = null;
+        int var4 = 0;
+        String var5 = null;
+        SocialListEntry var5_ref = null;
+        SocialListEntry var6 = null;
+        String var6_ref = null;
+        SocialListEntry var7 = null;
+        String var7_ref = null;
+        int var8 = 0;
+        Object var3Lifetime1;
+        String var4_ref_StringLifetime1;
+        var8 = ZombieDawn.field_J;
+        try {
+          if (param0 != 1545) {
+            FrameSequence.decompressContainer((byte) -53, (byte[]) null);
+          }
+          var1 = MatchingTextValidator.field_g;
+          var2 = var1.readUnsignedByte((byte) -126);
+          if (var2 == 0) {
+            if (LoginPayloadKind.field_a == null) {
+              LoginPayloadKind.field_a = new DualLinkNodeHashTable(128);
+              LoginPanel.field_J = 0;
+            }
+            stackIn_15_0 = (var1.readUnsignedByte((byte) -119) != 1) ? 0 : 1;
+            var3_int = stackIn_15_0;
+            var4_ref_String = var1.readNullTerminatedString(true);
+            if (var3_int != 0) {
+              var1.readNullTerminatedString(true);
+            }
+            var5_ref = SingleChildWidget.findSocialEntryByName(var4_ref_String, (byte) -66);
+            var6_ref = var1.readNullTerminatedString(true);
+            var7_ref = CheckboxWidget.normalizeDisplayName((CharSequence) ((Object) var4_ref_String), -115);
+            if (var7_ref == null) {
+              var7_ref = var4_ref_String;
+            }
+            if (var5_ref == null) {
+              var5_ref = SingleChildWidget.findSocialEntryByName(var6_ref, (byte) -66);
+              if (var5_ref != null) {
+                LoginPayloadKind.field_a.put(param0 ^ 1544, (long)var7_ref.hashCode(), var5_ref);
+              }
+            }
+            if (var5_ref == null) {
+              var5_ref = new SocialListEntry();
+              LoginPayloadKind.field_a.put(param0 ^ 1544, (long)var7_ref.hashCode(), var5_ref);
+              fieldTemp$1 = LoginPanel.field_J;
+              LoginPanel.field_J = LoginPanel.field_J + 1;
+              var5_ref.field_kb = fieldTemp$1;
+              MusicCrossfadeStream.field_m.addFirst(param0 ^ 1545, var5_ref);
+            }
+            var5_ref.field_lb = var4_ref_String;
+            return;
+          }
+          if (var2 != 1) {
+            if (var2 == 2) {
+              if (ArchiveProvider.field_b == 1) {
+                ArchiveProvider.field_b = 2;
+              }
+              return;
+            }
+            if (var2 == 3) {
+              if (ArchiveProvider.field_b == 2) {
+                ArchiveProvider.field_b = 1;
+              }
+              return;
+            }
+            if (var2 != 4) {
+              ErrorReportHelpers.reportClientError((Throwable) null, 10331, "F1: " + VisualPropertyOverrides.describePacketHistory(3));
+              SessionSocketHelpers.closeSessionSocket(param0 - 1544);
+              return;
+            }
+            ArchiveProvider.field_b = 1;
+            var3 = var1.readNullTerminatedString(true);
+            Tree.field_T = ((String) (var3)).intern();
+            var4 = var1.readUnsignedByte((byte) -128);
+            DropTargetWidget.decodeChatFilters(20348, var4);
+            return;
+          }
+          if (BufferedFile.field_j == null) {
+            BufferedFile.field_j = new DualLinkNodeHashTable(128);
+            LoginMethodCookieHelpers.field_b = 0;
+          }
+          var3Lifetime1 = var1.readNullTerminatedString(true);
+          if (((String) (var3Lifetime1)).equals("")) {
+            var3Lifetime1 = null;
+          }
+          var4_ref_StringLifetime1 = var1.readNullTerminatedString(true);
+          var5 = var1.readNullTerminatedString(true);
+          var6 = ConnectionCleanupHelpers.findEntryByName(99, var4_ref_StringLifetime1);
+          if (var6 == null) {
+            var6 = ConnectionCleanupHelpers.findEntryByName(103, var5);
+            if (var6 != null) {
+              BufferedFile.field_j.put(1, (long)CheckboxWidget.normalizeDisplayName((CharSequence) ((Object) var4_ref_StringLifetime1), param0 ^ -1662).hashCode(), var6);
+            }
+          }
+          if (null == var6) {
+            var6 = new SocialListEntry();
+            BufferedFile.field_j.put(1, (long)CheckboxWidget.normalizeDisplayName((CharSequence) ((Object) var4_ref_StringLifetime1), -56).hashCode(), var6);
+            fieldTemp$0 = LoginMethodCookieHelpers.field_b;
+            LoginMethodCookieHelpers.field_b = LoginMethodCookieHelpers.field_b + 1;
+            var6.field_kb = fieldTemp$0;
+            DropdownArrowPainter.field_d.addFirst(0, var6);
+          }
+          if (null != var3Lifetime1) {
+            var3Lifetime1 = ((String) (var3Lifetime1)).intern();
+          }
+          var6.field_lb = var4_ref_StringLifetime1;
+          var6.field_ib = (String) (var3Lifetime1);
+          var6.unlink(param0 - 29143);
+          var7 = (SocialListEntry) (DropdownArrowPainter.field_d.last((byte) 26));
+          scanLoop1: while (true) {
+            if (null != var7) {
+              stackIn_68_0 = var6;
+              if (var8 != 0) {
+                break scanLoop1;
+              }
+              if (ArrayWidgetContainer.isSocialEntryOrderedAfter(stackIn_68_0, var7, (byte) 20)) {
+                var7 = (SocialListEntry) (DropdownArrowPainter.field_d.previous(false));
+                continue;
+              }
+            }
+            if (null == var7) {
+              DropdownArrowPainter.field_d.addFirst(0, var6);
+              if (var8 == 0) {
+                return;
+              }
+            }
+            stackIn_68_0 = var7;
+            break;
+          }
+          ArmySoldier.insertAfter(stackIn_68_0, param0 ^ 1545, var6);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1_ref), "va.E(" + param0 + ')');
+        }
+    }
+
+    final static int pollPopupMenuAction(boolean param0) {
+        boolean stackIn_16_0 = false;
+        int stackIn_46_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int var1_int = 0;
+        RuntimeException var1 = null;
+        int var2 = 0;
+        int var3 = 0;
+        long var4 = 0L;
+        int var6 = 0;
+        int var7 = 0;
+        var7 = ZombieDawn.field_J;
+        try {
+          var1_int = 0;
+          var2 = 0;
+          if (!param0) {
+            FrameSequence.getTopContainer((byte) -42);
+          }
+          boolean decompiledNaturalLoopExit0 = false;
+          while (!(decompiledNaturalLoopExit0 = (!TileMap.pollKeyEvent(-114)))) {
+            FullscreenErrorDialog.field_W.navigateVertical(21657);
+            stackIn_16_0 = FullscreenErrorDialog.field_W.isActivated(-127);
+            if (var7 == 0) {
+              if (stackIn_16_0) {
+                var1_int = 1;
+              }
+              if (PasswordValidator.field_i != 13) {
+                continue;
+              }
+              var2 = 1;
+              continue;
+            }
+            break;
+          }
+          if (decompiledNaturalLoopExit0) {
+            FullscreenErrorDialog.field_W.updatePointer((byte) -55, GridContainer.hitTestMenuRows(6199969, KeyStateHelpers.field_b, FadingModalPanel.field_K), GridContainer.hitTestMenuRows(6199969, ScreechEffect.field_j, UiContainer.field_D));
+            stackIn_16_0 = FullscreenErrorDialog.field_W.isActivated(-124);
+          }
+          if (stackIn_16_0) {
+            var1_int = 1;
+          }
+          var3 = 0;
+          if (var1_int == 0 ||
+            !(FullscreenErrorDialog.field_W.field_d >= 0)) {
+            if ((var2 != 0) &&
+              (MainMenuScreen.field_p != 2)) {
+              DisplayState.clearMenuMessageText((byte) 126);
+              if (var7 != 0) {
+                var3 = ArmedHuman.field_Kb[FullscreenErrorDialog.field_W.field_d];
+                if (var3 == 2 ||
+                  var3 == 5) {
+                  DisplayState.clearMenuMessageText((byte) 80);
+                }
+              }
+            }
+          } else {
+            var3 = ArmedHuman.field_Kb[FullscreenErrorDialog.field_W.field_d];
+            if (var3 == 2 ||
+              var3 == 5) {
+              DisplayState.clearMenuMessageText((byte) 80);
+            }
+          }
+          if (var3 == 0 &&
+            2 == MainMenuScreen.field_p) {
+            var4 = -AddressHintGlobals.field_f + MonotonicClock.monotonicTimeMillis(-22826);
+            var6 = (int)((10999L - var4) / 1000L);
+            if (var6 <= 0) {
+              PopupMenuBuilder.buildPopupMenu(5, 87, true);
+              var3 = 2;
+            }
+          }
+          stackIn_46_0 = var3;
+          return stackIn_46_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1), "va.C(" + param0 + ')');
+        }
+    }
+
+    FrameSequence(int param0, int param1, int param2, int param3, int param4, int param5) {
+        try {
+          this.field_a = param2;
+          this.field_d = param1;
+          this.field_e = param0;
+          this.field_i = param5;
+          this.field_c = this.field_a > this.field_d ? true : false;
+          this.field_g = this.field_d;
+          this.field_f = param3;
+          this.field_h = param4;
+        } catch (RuntimeException runtimeException) {
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "va.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+    }
+
+    static {
+    }
+}

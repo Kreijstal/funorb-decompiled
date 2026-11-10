@@ -6,7 +6,7 @@ final class WhirlpoolHasher {
     private int field_g;
     private long[] field_o;
     private byte[] field_c;
-    static cg field_q;
+    static QuickChatCommandType field_q;
     private long[] field_p;
     private byte[] field_k;
     static Sprite[][] field_i;
@@ -16,7 +16,7 @@ final class WhirlpoolHasher {
     private long[] field_l;
     private long[] field_n;
     static int field_d;
-    static jc field_m;
+    static HighscoreRequest field_m;
     static int field_e;
     static int field_j;
     static int field_f;
@@ -25,7 +25,7 @@ final class WhirlpoolHasher {
     final static void playMusicById(int param0, boolean param1) {
         if (param0 != -1 &&
           ArchiveProvider.field_a[param0] != null) {
-          ph.a((byte) 68, ArchiveProvider.field_a[param0]);
+          SpriteSheetArchiveHelpers.playMusicTrackDefault((byte) 68, ArchiveProvider.field_a[param0]);
         }
         if (!param1) {
           field_f = -57;
@@ -104,19 +104,19 @@ final class WhirlpoolHasher {
     }
 
     final static void configurePunctuationKeyCodes(byte param0) {
-        ei.field_G[46] = 72;
-        ei.field_G[222] = 58;
-        ei.field_G[520] = 59;
-        ei.field_G[192] = 28;
-        ei.field_G[47] = 73;
-        ei.field_G[61] = 27;
+        FadingModalPanel.field_G[46] = 72;
+        FadingModalPanel.field_G[222] = 58;
+        FadingModalPanel.field_G[520] = 59;
+        FadingModalPanel.field_G[192] = 28;
+        FadingModalPanel.field_G[47] = 73;
+        FadingModalPanel.field_G[61] = 27;
         int var1 = 117 % ((-3 - param0) / 59);
-        ei.field_G[44] = 71;
-        ei.field_G[93] = 43;
-        ei.field_G[92] = 74;
-        ei.field_G[59] = 57;
-        ei.field_G[45] = 26;
-        ei.field_G[91] = 42;
+        FadingModalPanel.field_G[44] = 71;
+        FadingModalPanel.field_G[93] = 43;
+        FadingModalPanel.field_G[92] = 74;
+        FadingModalPanel.field_G[59] = 57;
+        FadingModalPanel.field_G[45] = 26;
+        FadingModalPanel.field_G[91] = 42;
     }
 
     final void reset(int param0) {
@@ -151,7 +151,7 @@ final class WhirlpoolHasher {
         int var8 = 0;
         var8 = ZombieDawn.field_J;
         try {
-          this.field_k[this.field_g] = (byte)GameWorld.intOr((int) this.field_k[this.field_g], 128 >>> eg.a(this.field_b, 7));
+          this.field_k[this.field_g] = (byte)GameWorld.intOr((int) this.field_k[this.field_g], 128 >>> TextHotspotRegion.bitAnd(this.field_b, 7));
           this.field_g = this.field_g + 1;
           if (param2 > -118) {
             this.processBlock(-71);
@@ -170,7 +170,7 @@ final class WhirlpoolHasher {
             this.field_g = this.field_g + 1;
             this.field_k[fieldTemp$1] = (byte) 0;
           }
-          gp.copy(this.field_c, 0, this.field_k, 32, 32);
+          ArraySupport.copy(this.field_c, 0, this.field_k, 32, 32);
           this.processBlock(-9);
           var4_int = 0;
           var5 = param1;
@@ -213,7 +213,7 @@ final class WhirlpoolHasher {
         }
         if (var2 >= 128 &&
           160 > var2) {
-          var3 = fj.field_h[-128 + var2];
+          var3 = MatchingTextValidator.field_h[-128 + var2];
           if (0 == var3) {
             var3 = 63;
           }
@@ -244,7 +244,7 @@ final class WhirlpoolHasher {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_s[var2] = al.bitXor(gj.bitAnd((long)this.field_k[7 + var3], 255L), al.bitXor(al.bitXor(al.bitXor(al.bitXor(gj.bitAnd((long)this.field_k[3 + var3], 255L) << 32, al.bitXor(al.bitXor(gj.bitAnd((long)this.field_k[1 + var3], 255L) << 48, (long)this.field_k[var3] << 56), gj.bitAnd((long)this.field_k[2 + var3], 255L) << 40)), gj.bitAnd((long)this.field_k[4 + var3], 255L) << 24), gj.bitAnd(16711680L, (long)this.field_k[5 + var3] << 16)), gj.bitAnd(65280L, (long)this.field_k[6 + var3] << 8)));
+          this.field_s[var2] = MenuScreen.bitXor(WidgetStyleLayer.bitAnd((long)this.field_k[7 + var3], 255L), MenuScreen.bitXor(MenuScreen.bitXor(MenuScreen.bitXor(MenuScreen.bitXor(WidgetStyleLayer.bitAnd((long)this.field_k[3 + var3], 255L) << 32, MenuScreen.bitXor(MenuScreen.bitXor(WidgetStyleLayer.bitAnd((long)this.field_k[1 + var3], 255L) << 48, (long)this.field_k[var3] << 56), WidgetStyleLayer.bitAnd((long)this.field_k[2 + var3], 255L) << 40)), WidgetStyleLayer.bitAnd((long)this.field_k[4 + var3], 255L) << 24), WidgetStyleLayer.bitAnd(16711680L, (long)this.field_k[5 + var3] << 16)), WidgetStyleLayer.bitAnd(65280L, (long)this.field_k[6 + var3] << 8)));
           var3 += 8;
           var2++;
         }
@@ -252,7 +252,7 @@ final class WhirlpoolHasher {
           dupTemp$0 = this.field_o[var2Lifetime1];
           arrayValue$1 = this.field_s[var2Lifetime1];
           this.field_l[var2Lifetime1] = dupTemp$0;
-          this.field_p[var2Lifetime1] = al.bitXor(arrayValue$1, dupTemp$0);
+          this.field_p[var2Lifetime1] = MenuScreen.bitXor(arrayValue$1, dupTemp$0);
         }
         if (param0 != -9) {
           this.reset(-68);
@@ -263,7 +263,7 @@ final class WhirlpoolHasher {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_n[var3Lifetime1] = al.bitXor(this.field_n[var3Lifetime1], bn.field_h[var4][eg.a(255, (int)(this.field_l[eg.a(-var4 + var3Lifetime1, 7)] >>> var5))]);
+              this.field_n[var3Lifetime1] = MenuScreen.bitXor(this.field_n[var3Lifetime1], LongAndTextLoginPayload.field_h[var4][TextHotspotRegion.bitAnd(255, (int)(this.field_l[TextHotspotRegion.bitAnd(-var4 + var3Lifetime1, 7)] >>> var5))]);
               var4++;
               var5 -= 8;
             }
@@ -271,14 +271,14 @@ final class WhirlpoolHasher {
           for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
             this.field_l[var3Lifetime1Lifetime1] = this.field_n[var3Lifetime1Lifetime1];
           }
-          this.field_l[0] = al.bitXor(this.field_l[0], bn.field_g[var2Lifetime2]);
+          this.field_l[0] = MenuScreen.bitXor(this.field_l[0], LongAndTextLoginPayload.field_g[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; 8 > var3Lifetime1Lifetime2; var3Lifetime1Lifetime2++) {
             this.field_n[var3Lifetime1Lifetime2] = this.field_l[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (8 > var7) {
-              this.field_n[var3Lifetime1Lifetime2] = al.bitXor(this.field_n[var3Lifetime1Lifetime2], bn.field_h[var7][eg.a((int)(this.field_p[eg.a(7, var3Lifetime1Lifetime2 - var7)] >>> var5Lifetime1), 255)]);
+              this.field_n[var3Lifetime1Lifetime2] = MenuScreen.bitXor(this.field_n[var3Lifetime1Lifetime2], LongAndTextLoginPayload.field_h[var7][TextHotspotRegion.bitAnd((int)(this.field_p[TextHotspotRegion.bitAnd(7, var3Lifetime1Lifetime2 - var7)] >>> var5Lifetime1), 255)]);
               var7++;
               var5Lifetime1 -= 8;
             }
@@ -288,7 +288,7 @@ final class WhirlpoolHasher {
           }
         }
         for (var2Lifetime3 = 0; 8 > var2Lifetime3; var2Lifetime3++) {
-          this.field_o[var2Lifetime3] = al.bitXor(this.field_o[var2Lifetime3], al.bitXor(this.field_p[var2Lifetime3], this.field_s[var2Lifetime3]));
+          this.field_o[var2Lifetime3] = MenuScreen.bitXor(this.field_o[var2Lifetime3], MenuScreen.bitXor(this.field_p[var2Lifetime3], this.field_s[var2Lifetime3]));
         }
     }
 
@@ -334,7 +334,7 @@ final class WhirlpoolHasher {
                 this.field_b = 0;
                 this.field_g = 0;
               }
-              this.field_k[this.field_g] = (byte)eg.a(var8 << -var7 + 8, 255);
+              this.field_k[this.field_g] = (byte)TextHotspotRegion.bitAnd(var8 << -var7 + 8, 255);
               this.field_b = this.field_b + var7;
               var5_int++;
               param2 = param2 - 8L;
@@ -360,7 +360,7 @@ final class WhirlpoolHasher {
               this.field_g = 0;
               this.field_b = 0;
             }
-            this.field_k[this.field_g] = (byte)eg.a(255, var8Lifetime1 << 8 - var7);
+            this.field_k[this.field_g] = (byte)TextHotspotRegion.bitAnd(255, var8Lifetime1 << 8 - var7);
             this.field_b = this.field_b + (int)param2;
           } else {
             this.field_b = (int)((long)this.field_b + param2);
@@ -396,7 +396,7 @@ final class WhirlpoolHasher {
         field_i = new Sprite[2][];
         field_h = "Apply";
         field_r = true;
-        field_q = new cg(10, 2, 2, 0);
+        field_q = new QuickChatCommandType(10, 2, 2, 0);
         field_m = null;
         field_e = 640;
         field_d = field_e / 2;

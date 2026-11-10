@@ -17,7 +17,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           field_f = false;
         }
@@ -26,11 +26,11 @@ final class DelegatingCanvas extends java.awt.Canvas {
         field_d = null;
     }
 
-    final static void a(byte param0, int param1, rc param2) {
+    final static void writeHighscoreSubmission(byte param0, int param1, PendingRecordRequest param2) {
         int var5 = 0;
         int var6 = ZombieDawn.field_J;
-        am var7 = dp.field_e;
-        am var8 = var7;
+        BitPacketBuffer var7 = LinkTextPainter.field_e;
+        BitPacketBuffer var8 = var7;
         var8.writeCipheredByte(11, param1);
         var8.position = var8.position + 1;
         int var4 = var8.position;
@@ -57,10 +57,10 @@ final class DelegatingCanvas extends java.awt.Canvas {
         }
     }
 
-    final static int a(int param0, int param1, boolean param2) {
+    final static int floorDivide(int param0, int param1, boolean param2) {
         if (param2) {
-          rc var4 = (rc) null;
-          DelegatingCanvas.a((byte) -68, 88, (rc) null);
+          PendingRecordRequest var4 = (PendingRecordRequest) null;
+          DelegatingCanvas.writeHighscoreSubmission((byte) -68, 88, (PendingRecordRequest) null);
         }
         int var3 = param1 >>> 31;
         return (var3 + param1) / param0 - var3;
@@ -74,7 +74,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         }
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean drawModalOverlays(boolean param0) {
         int var1;
         int var3;
         int stackIn_11_0 = 0;
@@ -82,34 +82,34 @@ final class DelegatingCanvas extends java.awt.Canvas {
         int var2;
         var3 = ZombieDawn.field_J;
         var1 = param0 ? 1 : 0;
-        if (we.hasActiveDialog((byte) -80)) {
+        if (ArmySoldier.hasActiveDialog((byte) -80)) {
           GameWorld.drawDialogOverlay((byte) 120);
           var1 = 1;
         } else {
-          if (!dl.a(false)) {
-            if (ac.isDimOverlayShown(50)) {
+          if (!NodeHashTable.isLegacyMenuOpen(false)) {
+            if (AreaSelectionScreen.isDimOverlayShown(50)) {
               Rasterizer.halveBrightnessRectangle(0, 0, Rasterizer.width, Rasterizer.height);
-              oe.drawLegacyMenuWithFrame((byte) -116);
+              TextLayoutLine.drawLegacyMenuWithFrame((byte) -116);
               var1 = 1;
             }
           } else {
-            ql.d(-160793343);
+            NameAvailabilityValidator.drawLegacyMenuWithFrame(-160793343);
             var1 = 1;
           }
         }
-        if (nk.b(15000) &&
-          !dl.a(false)) {
+        if (LoginPayloadKind.startRequestTimeout(15000) &&
+          !NodeHashTable.isLegacyMenuOpen(false)) {
           stackIn_11_0 = 80;
-          if (cn.field_b != null) {
+          if (DisplayState.field_b != null) {
             stackIn_12_1 = true;
           } else {
-            stackIn_12_1 = mp.field_c;
+            stackIn_12_1 = RankingRowHelpers.field_c;
           }
-          dm.drawDimmedOverlayAt(stackIn_11_0, stackIn_12_1);
+          QuickChatPhraseDefinition.drawDimmedOverlayAt(stackIn_11_0, stackIn_12_1);
           var1 = 1;
         }
-        if (bg.a(2)) {
-          var2 = (ln.field_b - 1 << 8) / 16;
+        if (DelayedPacket.isDisplayModeChangePending(2)) {
+          var2 = (TickClock.field_b - 1 << 8) / 16;
           if (var2 > 0) {
             Rasterizer.fillRectangleBlended(0, 0, Rasterizer.width, Rasterizer.height, 0, var2);
             var1 = 1;

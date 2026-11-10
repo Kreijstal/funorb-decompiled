@@ -1,0 +1,79 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class StrongCacheEntry extends CacheEntry {
+    static int[] field_s;
+    private Object field_t;
+    static QuickChatCommandType field_v;
+    static MouseWheelInput field_u;
+
+    final Object getValue(byte param0) {
+        if (param0 < 49) {
+          field_s = (int[]) null;
+          return this.field_t;
+        }
+        return this.field_t;
+    }
+
+    public static void releaseStatics(byte param0) {
+        int var1 = -65 / ((-62 - param0) / 44);
+        field_u = null;
+        field_v = null;
+        field_s = null;
+    }
+
+    final boolean isSoftReference(boolean param0) {
+        if (!param0) {
+          byte[] var3 = (byte[]) null;
+          StrongCacheEntry.copyBytes((byte[]) null, (byte) 35);
+          return false;
+        }
+        return false;
+    }
+
+    StrongCacheEntry(Object param0, int param1) {
+        super(param1);
+        try {
+          this.field_t = param0;
+        } catch (RuntimeException runtimeException) {
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "jl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    final static byte[] copyBytes(byte[] param0, byte param1) {
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        byte[] var3 = null;
+        byte[] stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var2_int = param0.length;
+          var3 = new byte[var2_int];
+          if (param1 != 45) {
+            field_u = (MouseWheelInput) null;
+          }
+          ArraySupport.copy(param0, 0, var3, 0, var2_int);
+          stackIn_3_0 = var3;
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("jl.J(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    static {
+        field_s = new int[8192];
+        field_v = new QuickChatCommandType(13, 0, 1, 0);
+    }
+}

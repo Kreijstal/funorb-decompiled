@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class Js5Transport {
-    static oi field_k;
+    static BinaryBitmapFont field_k;
     DualLinkDeque field_a;
     DualLinkDeque field_l;
     DualLinkDeque field_f;
@@ -14,7 +14,7 @@ abstract class Js5Transport {
     volatile int field_h;
     byte field_c;
     PacketBuffer field_j;
-    og field_d;
+    NetworkArchiveRequest field_d;
 
     final int prefetchCount(boolean param0) {
         if (param0) {
@@ -28,10 +28,10 @@ abstract class Js5Transport {
 
     abstract void closeConnection(int param0);
 
-    final og createRequest(byte param0, boolean param1, int param2, byte param3, int param4) {
+    final NetworkArchiveRequest createRequest(byte param0, boolean param1, int param2, byte param3, int param4) {
         int var6 = 31 % ((-29 - param3) / 53);
         long var7 = (long)param4 + ((long)param2 << 32);
-        og var9 = new og();
+        NetworkArchiveRequest var9 = new NetworkArchiveRequest();
         var9.field_C = param0;
         var9.field_r = param1 ? true : false;
         var9.secondaryKey = var7;
@@ -50,15 +50,15 @@ abstract class Js5Transport {
     }
 
     final static void selectLoadingMessages(int param0, byte param1) {
-        ki.field_V = em.field_K[param0];
+        ContentTransitionDialog.field_V = Scrollbar.field_K[param0];
         if (param1 == -66) {
-          cj.field_e = te.field_Q[param0];
-          l.field_g = vj.field_p[param0];
+          IntrusiveDequeCursor.field_e = Alien.field_Q[param0];
+          TextAndNameCredentials.field_g = HighscoresScreen.field_p[param0];
           return;
         }
         Js5Transport.releaseStatics(true);
-        cj.field_e = te.field_Q[param0];
-        l.field_g = vj.field_p[param0];
+        IntrusiveDequeCursor.field_e = Alien.field_Q[param0];
+        TextAndNameCredentials.field_g = HighscoresScreen.field_p[param0];
     }
 
     abstract void setConnection(boolean param0, Object param1, int param2);
@@ -73,7 +73,7 @@ abstract class Js5Transport {
 
     final static void stopSoundEffect(byte param0, PcmSampleStream param1) {
         try {
-          t.field_i.removeSubstream(param1);
+          DialWidgetPainter.field_i.removeSubstream(param1);
           if (param0 != 13) {
             Js5Transport.releaseStatics(false);
           }
@@ -93,7 +93,7 @@ abstract class Js5Transport {
     public static void releaseStatics(boolean param0) {
         field_k = null;
         if (!param0) {
-          field_k = (oi) null;
+          field_k = (BinaryBitmapFont) null;
         }
     }
 

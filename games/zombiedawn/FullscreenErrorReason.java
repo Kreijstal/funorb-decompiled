@@ -1,0 +1,59 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class FullscreenErrorReason {
+    static int field_c;
+    static int field_a;
+    static String field_b;
+
+    final static int measureMenuText(int param0, boolean param1, String param2) {
+        RuntimeException var3 = null;
+        int stackIn_4_0 = 0;
+        int stackIn_6_0 = 0;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 != 32564) {
+            FullscreenErrorReason.releaseStatics(true);
+          }
+          if (!param1) {
+            stackIn_6_0 = FullscreenExitHelpers.field_g.textWidth(param2);
+            return stackIn_6_0;
+          }
+          stackIn_4_0 = FunOrbApplet.field_m.textWidth(param2);
+          return stackIn_4_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_9_0 = var3;
+          stackIn_9_1 = new StringBuilder().append("sm.A(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+        }
+    }
+
+    public final String toString() {
+        throw new IllegalStateException();
+    }
+
+    public static void releaseStatics(boolean param0) {
+        if (!param0) {
+          String var2 = (String) null;
+          FullscreenErrorReason.measureMenuText(22, false, (String) null);
+          field_b = null;
+          return;
+        }
+        field_b = null;
+    }
+
+    static {
+        field_b = "Open in popup window";
+        field_c = 240;
+    }
+}

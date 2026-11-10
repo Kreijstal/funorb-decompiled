@@ -15,27 +15,27 @@ final class PcmMixer extends PcmStream {
         this.field_n.addLast(param0, 97);
     }
 
-    private final void insertListener(IntrusiveNode param0, bc param1) {
+    private final void insertListener(IntrusiveNode param0, PcmMixerListener param1) {
         while (true) {
           if (param0 == this.field_l.sentinel) {
-            we.insertAfter(param0, 0, param1);
-            this.field_m = ((bc) (this.field_l.sentinel.previous)).field_h;
+            ArmySoldier.insertAfter(param0, 0, param1);
+            this.field_m = ((PcmMixerListener) (this.field_l.sentinel.previous)).field_h;
             return;
           }
-          if (((bc) (param0)).field_h <= param1.field_h) {
+          if (((PcmMixerListener) (param0)).field_h <= param1.field_h) {
             param0 = param0.previous;
             continue;
           }
           break;
         }
-        we.insertAfter(param0, 0, param1);
-        this.field_m = ((bc) (this.field_l.sentinel.previous)).field_h;
+        ArmySoldier.insertAfter(param0, 0, param1);
+        this.field_m = ((PcmMixerListener) (this.field_l.sentinel.previous)).field_h;
         return;
     }
 
     final synchronized void fill(int[] param0, int param1, int param2) {
         int var4 = 0;
-        bc var5 = null;
+        PcmMixerListener var5 = null;
         int var7 = 0;
         Throwable decompiledCaughtException = null;
         Object var6 = null;
@@ -55,10 +55,10 @@ final class PcmMixer extends PcmStream {
           param2 = param2 - var4;
           this.field_o = this.field_o + var4;
           this.normalizeListenerFrames();
-          var5 = (bc) (this.field_l.last((byte) 26));
+          var5 = (PcmMixerListener) (this.field_l.last((byte) 26));
           var6 = var5;
           synchronized (var6) {
-            var7 = var5.a(this);
+            var7 = var5.onMixerTick(this);
             if (var7 >= 0) {
               var5.field_h = var7;
               this.insertListener(var5.previous, var5);
@@ -95,14 +95,14 @@ final class PcmMixer extends PcmStream {
         }
     }
 
-    private final void removeListener(bc param0) {
+    private final void removeListener(PcmMixerListener param0) {
         param0.unlink(-27598);
-        param0.a();
+        param0.cancel();
         IntrusiveNode var2 = this.field_l.sentinel.previous;
         if (var2 == this.field_l.sentinel) {
           this.field_m = -1;
         } else {
-          this.field_m = ((bc) (var2)).field_h;
+          this.field_m = ((PcmMixerListener) (var2)).field_h;
         }
     }
 
@@ -111,12 +111,12 @@ final class PcmMixer extends PcmStream {
     }
 
     private final void normalizeListenerFrames() {
-        bc var1 = null;
+        PcmMixerListener var1 = null;
         if (this.field_o > 0) {
-          var1 = (bc) (this.field_l.last((byte) 26));
+          var1 = (PcmMixerListener) (this.field_l.last((byte) 26));
           while (var1 != null) {
             var1.field_h = var1.field_h - this.field_o;
-            var1 = (bc) (this.field_l.previous(false));
+            var1 = (PcmMixerListener) (this.field_l.previous(false));
           }
           this.field_m = this.field_m - this.field_o;
           this.field_o = 0;
@@ -125,7 +125,7 @@ final class PcmMixer extends PcmStream {
 
     final synchronized void skip(int param0) {
         int var2 = 0;
-        bc var3 = null;
+        PcmMixerListener var3 = null;
         int var5 = 0;
         Throwable decompiledCaughtException = null;
         Object var4 = null;
@@ -144,10 +144,10 @@ final class PcmMixer extends PcmStream {
           param0 = param0 - var2;
           this.field_o = this.field_o + var2;
           this.normalizeListenerFrames();
-          var3 = (bc) (this.field_l.last((byte) 26));
+          var3 = (PcmMixerListener) (this.field_l.last((byte) 26));
           var4 = var3;
           synchronized (var4) {
-            var5 = var3.a(this);
+            var5 = var3.onMixerTick(this);
             if (var5 >= 0) {
               var3.field_h = var5;
               this.insertListener(var3.previous, var3);

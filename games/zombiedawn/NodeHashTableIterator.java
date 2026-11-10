@@ -6,11 +6,11 @@ import java.util.*;
 final class NodeHashTableIterator implements Iterator {
     private IntrusiveNode field_e;
     static String field_f;
-    static cg field_d;
+    static QuickChatCommandType field_d;
     private IterableNodeHashTable field_a;
     private IntrusiveNode field_c;
     static String field_h;
-    static cg field_g;
+    static QuickChatCommandType field_g;
     private int field_i;
     static String[] field_b;
 
@@ -68,16 +68,16 @@ final class NodeHashTableIterator implements Iterator {
           try {
             try {
               var4 = param0.getCodeBase();
-              var3 = rc.a(-1, param0, var4).getFile();
-              qe.a(new Object[]{"home", var3 + "home.ws"}, "updatelinks", 29674, param0);
-              qe.a(new Object[]{"gamelist", var3 + "togamelist.ws"}, "updatelinks", param1 ^ 29675, param0);
-              qe.a(new Object[]{"serverlist", var3 + "toserverlist.ws"}, "updatelinks", 29674, param0);
-              qe.a(new Object[]{"options", var3 + "options.ws"}, "updatelinks", 29674, param0);
+              var3 = PendingRecordRequest.appendSessionParameters(-1, param0, var4).getFile();
+              JavaScriptBridge.callWindowFunctionWithArguments(new Object[]{"home", var3 + "home.ws"}, "updatelinks", 29674, param0);
+              JavaScriptBridge.callWindowFunctionWithArguments(new Object[]{"gamelist", var3 + "togamelist.ws"}, "updatelinks", param1 ^ 29675, param0);
+              JavaScriptBridge.callWindowFunctionWithArguments(new Object[]{"serverlist", var3 + "toserverlist.ws"}, "updatelinks", 29674, param0);
+              JavaScriptBridge.callWindowFunctionWithArguments(new Object[]{"options", var3 + "options.ws"}, "updatelinks", 29674, param0);
               if (param1 != 1) {
                 field_h = (String) null;
               }
-              qe.a(new Object[]{"terms", var3 + "terms.ws"}, "updatelinks", 29674, param0);
-              qe.a(new Object[]{"privacy", var3 + "privacy.ws"}, "updatelinks", 29674, param0);
+              JavaScriptBridge.callWindowFunctionWithArguments(new Object[]{"terms", var3 + "terms.ws"}, "updatelinks", 29674, param0);
+              JavaScriptBridge.callWindowFunctionWithArguments(new Object[]{"privacy", var3 + "privacy.ws"}, "updatelinks", 29674, param0);
               return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -120,14 +120,14 @@ final class NodeHashTableIterator implements Iterator {
           RuntimeException var2_ref2 = null;
           var7 = ZombieDawn.field_J;
           try {
-            if (nm.field_a) {
+            if (IntRecordReplyHelpers.field_a) {
               return true;
             }
             try {
               var2 = "tuhstatbut";
-              var3 = (String) (qe.callWindowFunction(param1, "getcookies", -109));
+              var3 = (String) (JavaScriptBridge.callWindowFunction(param1, "getcookies", -109));
               if (param0 >= -111) {
-                field_g = (cg) null;
+                field_g = (QuickChatCommandType) null;
               }
               var4 = PacketBuffer.split(';', var3, -125);
               for (var5 = 0; var4.length > var5; var5++) {
@@ -209,7 +209,7 @@ final class NodeHashTableIterator implements Iterator {
     static {
         field_f = "Names cannot contain consecutive spaces";
         field_h = "Just play";
-        field_d = new cg(1, 2, 2, 0);
-        field_g = new cg(4, 1, 1, 1);
+        field_d = new QuickChatCommandType(1, 2, 2, 0);
+        field_g = new QuickChatCommandType(4, 1, 1, 1);
     }
 }

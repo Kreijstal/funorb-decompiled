@@ -3,7 +3,7 @@
  */
 class PacketBuffer extends IntrusiveNode {
     static boolean field_i;
-    static mf field_k;
+    static NineSliceFrame field_k;
     byte[] payload;
     int position;
 
@@ -76,7 +76,7 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     final int writeCrc32(int param0, int param1) {
-        int var3 = ij.a(this.position, this.payload, (byte) -87, param1);
+        int var3 = DraggableWidget.crc32(this.position, this.payload, (byte) -87, param1);
         int var4 = -56 / ((param0 - 1) / 60);
         this.writeInt(-126, var3);
         return var3;
@@ -99,7 +99,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
           var4 = (CharSequence) ((Object) param1);
-          this.position = this.position + nd.a(false, var4, this.payload, param1.length(), 0, this.position);
+          this.position = this.position + PacketRequestHelpers.encodeTextSlice(false, var4, this.payload, param1.length(), 0, this.position);
           fieldTemp$1 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte) 0;
@@ -154,7 +154,7 @@ class PacketBuffer extends IntrusiveNode {
             throw new IllegalArgumentException("");
           }
           var4 = (CharSequence) ((Object) param1);
-          this.position = this.position + nd.a(false, var4, this.payload, param1.length(), 0, this.position);
+          this.position = this.position + PacketRequestHelpers.encodeTextSlice(false, var4, this.payload, param1.length(), 0, this.position);
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
@@ -165,7 +165,7 @@ class PacketBuffer extends IntrusiveNode {
 
     final boolean verifyCrc32(byte param0) {
         this.position = this.position - 4;
-        int var2 = ij.a(this.position, this.payload, (byte) 119, 0);
+        int var2 = DraggableWidget.crc32(this.position, this.payload, (byte) 119, 0);
         if (param0 >= -65) {
           PacketBuffer.releaseStatics(-85);
         }
@@ -179,7 +179,7 @@ class PacketBuffer extends IntrusiveNode {
     public static void releaseStatics(int param0) {
         field_k = null;
         if (param0 != 27291) {
-          field_k = (mf) null;
+          field_k = (NineSliceFrame) null;
         }
     }
 
@@ -215,7 +215,7 @@ class PacketBuffer extends IntrusiveNode {
         var9 = ZombieDawn.field_J;
         try {
           var11 = (CharSequence) ((Object) param1);
-          var3_int = ae.a((byte) -49, param0, var11);
+          var3_int = ErrorReportHelpers.countChar((byte) -49, param0, var11);
           var4 = new String[var3_int + 1];
           var5 = 0;
           var6 = 0;
@@ -359,77 +359,77 @@ class PacketBuffer extends IntrusiveNode {
           int var8Lifetime1;
           var9 = ZombieDawn.field_J;
           try {
-            if (sn.field_c == null &&
-              !i.a(param4, true)) {
+            if (LoginMethod.field_c == null &&
+              !FullscreenErrorDialog.pollGameSocketConnection(param4, true)) {
               stackIn_6_0 = -1;
               return stackIn_6_0;
             }
-            if (ic.field_T == ui.field_g) {
+            if (ValidatedTextWidget.field_T == AudioMixerHelpers.field_g) {
               if (param4) {
                 var10 = (String) null;
-                ac.field_q = sn.a((byte) -112, p.field_a, false, param2, (String) null);
+                AreaSelectionScreen.field_q = LoginMethod.createCredentials((byte) -112, SessionSocketHelpers.field_a, false, param2, (String) null);
               } else {
-                ac.field_q = cj.a(false, (byte) 30, param1, param2);
+                AreaSelectionScreen.field_q = IntrusiveDequeCursor.createLoginCredentials(false, (byte) 30, param1, param2);
               }
-              dp.field_e.position = 0;
-              dp.field_e.writeByte(14, -99);
-              dp.field_e.writeByte(ac.field_q.payloadKind((byte) -102).field_b, -122);
-              vl.a((byte) -46, -1);
-              ic.field_T = fe.field_M;
+              LinkTextPainter.field_e.position = 0;
+              LinkTextPainter.field_e.writeByte(14, -99);
+              LinkTextPainter.field_e.writeByte(AreaSelectionScreen.field_q.payloadKind((byte) -102).field_b, -122);
+              CheckboxPainter.flushOutgoingPackets((byte) -46, -1);
+              ValidatedTextWidget.field_T = AccountTermsPanel.field_M;
             }
-            if (ic.field_T == fe.field_M &&
-              ck.a((byte) 81, 1)) {
-              var6_int = fj.field_g.readUnsignedByte((byte) -120);
-              fj.field_g.position = 0;
+            if (ValidatedTextWidget.field_T == AccountTermsPanel.field_M &&
+              Blast.fillIncomingBuffer((byte) 81, 1)) {
+              var6_int = MatchingTextValidator.field_g.readUnsignedByte((byte) -120);
+              MatchingTextValidator.field_g.position = 0;
               if (var6_int == 0) {
-                ic.field_T = b.field_n;
+                ValidatedTextWidget.field_T = PendingIntArrayRequest.field_n;
               } else {
-                l.field_d = var6_int;
-                ic.field_T = cj.field_g;
-                jd.field_b = -1;
+                TextAndNameCredentials.field_d = var6_int;
+                ValidatedTextWidget.field_T = IntrusiveDequeCursor.field_g;
+                MeshDepthBuckets.field_b = -1;
               }
             }
-            if (ic.field_T == b.field_n &&
-              ck.a((byte) -104, 8)) {
-              RasterBuffer.field_b = fj.field_g.readLong(true);
-              fj.field_g.position = 0;
-              rk.a(param5, ac.field_q, param4, -27886, param3);
-              ic.field_T = hp.field_z;
+            if (ValidatedTextWidget.field_T == PendingIntArrayRequest.field_n &&
+              Blast.fillIncomingBuffer((byte) -104, 8)) {
+              RasterBuffer.field_b = MatchingTextValidator.field_g.readLong(true);
+              MatchingTextValidator.field_g.position = 0;
+              LoginPacketHelpers.writeLoginPacket(param5, AreaSelectionScreen.field_q, param4, -27886, param3);
+              ValidatedTextWidget.field_T = UiContainer.field_z;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (ic.field_T == hp.field_z &&
-              ck.a((byte) 4, 1)) {
-              var6_intLifetime1 = fj.field_g.readUnsignedByte((byte) -123);
-              ia.field_b = null;
-              l.field_d = var6_intLifetime1;
-              fj.field_g.position = 0;
+            if (ValidatedTextWidget.field_T == UiContainer.field_z &&
+              Blast.fillIncomingBuffer((byte) 4, 1)) {
+              var6_intLifetime1 = MatchingTextValidator.field_g.readUnsignedByte((byte) -123);
+              MenuFontGlobals.field_b = null;
+              TextAndNameCredentials.field_d = var6_intLifetime1;
+              MatchingTextValidator.field_g.position = 0;
               if (var6_intLifetime1 != 0 &&
                 1 != var6_intLifetime1) {
                 if (var6_intLifetime1 != 8) {
-                  jd.field_b = -1;
-                  ic.field_T = cj.field_g;
+                  MeshDepthBuckets.field_b = -1;
+                  ValidatedTextWidget.field_T = IntrusiveDequeCursor.field_g;
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  p.a(1);
-                  nm.field_d = false;
+                  SessionSocketHelpers.closeSessionSocket(1);
+                  IntRecordReplyHelpers.field_d = false;
                   stackIn_32_0 = var6_intLifetime1;
                   return stackIn_32_0;
                 }
               }
               if (decompiledFrameRemainder0) {
-                ic.field_T = td.field_b;
-                jd.field_b = -1;
+                ValidatedTextWidget.field_T = OfflineLoginHelpers.field_b;
+                MeshDepthBuckets.field_b = -1;
               }
             }
-            if (td.field_b == ic.field_T &&
-              nn.a(-2887)) {
-              p.field_a = fj.field_g.readLong(param0);
-              lo.field_j = fj.field_g.readUnsignedByte((byte) -115);
-              fj.field_g.readUnsignedByte((byte) -119);
-              be.field_j = fj.field_g.readUnsignedShort(2);
-              var11 = fj.field_g.readOptionalString(-1);
-              var7 = fj.field_g.readUnsignedByte((byte) -118);
+            if (OfflineLoginHelpers.field_b == ValidatedTextWidget.field_T &&
+              PendingHighscoreRequest.isPacketPayloadReady(-2887)) {
+              SessionSocketHelpers.field_a = MatchingTextValidator.field_g.readLong(param0);
+              SavedDataRequest.field_j = MatchingTextValidator.field_g.readUnsignedByte((byte) -115);
+              MatchingTextValidator.field_g.readUnsignedByte((byte) -119);
+              OctaveNoiseMap.field_j = MatchingTextValidator.field_g.readUnsignedShort(2);
+              var11 = MatchingTextValidator.field_g.readOptionalString(-1);
+              var7 = MatchingTextValidator.field_g.readUnsignedByte((byte) -118);
               if ((1 & var7) != 0) {
                 FullscreenFocusCanvas.persistSessionSeedBytes((byte) 61);
               }
@@ -437,95 +437,95 @@ class PacketBuffer extends IntrusiveNode {
                 stackIn_44_0 = ((4 & var7) != 0);
                 MouseInputHandler.field_c = stackIn_44_0;
                 stackIn_47_0 = ((8 & var7) != 0);
-                jh.field_i = stackIn_47_0;
-                if (jh.field_i) {
+                ArchiveIndex.field_i = stackIn_47_0;
+                if (ArchiveIndex.field_i) {
                 }
               }
-              if (ni.field_a) {
-                fj.field_g.readUnsignedByte((byte) -120);
-                fj.field_g.readUnsignedByte((byte) -121);
-                fj.field_g.readInt(-105);
-                ExceptionWrapper.field_i = fj.field_g.readUnsignedShort(2);
-                o.field_l = new byte[ExceptionWrapper.field_i];
+              if (ReflectionQueueHelpers.field_a) {
+                MatchingTextValidator.field_g.readUnsignedByte((byte) -120);
+                MatchingTextValidator.field_g.readUnsignedByte((byte) -121);
+                MatchingTextValidator.field_g.readInt(-105);
+                ExceptionWrapper.field_i = MatchingTextValidator.field_g.readUnsignedShort(2);
+                MembershipPromotionScreen.field_l = new byte[ExceptionWrapper.field_i];
                 for (var8 = 0; var8 < ExceptionWrapper.field_i; var8++) {
-                  o.field_l[var8] = fj.field_g.readByte((byte) 116);
+                  MembershipPromotionScreen.field_l[var8] = MatchingTextValidator.field_g.readByte((byte) 116);
                 }
               }
-              ce.field_r = fj.field_g.readNullTerminatedString(true);
-              var12 = (CharSequence) ((Object) ce.field_r);
-              kf.field_T = fm.a(var12, -101);
-              sd.field_b = fj.field_g.readUnsignedByte((byte) -120);
-              ic.field_T = df.field_j;
-              if (ac.field_q.payloadKind((byte) -102) == dp.field_a) {
-                em.field_J.a(640, hc.a(0));
+              VisualPropertyNode.field_r = MatchingTextValidator.field_g.readNullTerminatedString(true);
+              var12 = (CharSequence) ((Object) VisualPropertyNode.field_r);
+              FullscreenMembershipDialog.field_T = CheckboxWidget.normalizeDisplayName(var12, -101);
+              AccountRequestState.field_b = MatchingTextValidator.field_g.readUnsignedByte((byte) -120);
+              ValidatedTextWidget.field_T = PendingFlagRequest.field_j;
+              if (AreaSelectionScreen.field_q.payloadKind((byte) -102) == LinkTextPainter.field_a) {
+                Scrollbar.field_J.saveAsLastLoginMethod(640, AppletHostHelpers.getHostApplet(0));
               } else {
-                if (ac.field_q.payloadKind((byte) -102) == vh.field_d) {
-                  wn.field_a.a(640, hc.a(0));
+                if (AreaSelectionScreen.field_q.payloadKind((byte) -102) == SpriteFadeHelpers.field_d) {
+                  AudioSetupHelpers.field_a.saveAsLastLoginMethod(640, AppletHostHelpers.getHostApplet(0));
                 }
               }
-              nm.field_d = false;
+              IntRecordReplyHelpers.field_d = false;
               if (var11 != null) {
-                SocketConnector.writeSettingsCookie(165, hc.a(0), var11);
+                SocketConnector.writeSettingsCookie(165, AppletHostHelpers.getHostApplet(0), var11);
               }
-              if (be.field_j <= 0 &&
+              if (OctaveNoiseMap.field_j <= 0 &&
                 !MouseInputHandler.field_c) {
                 try {
-                  qe.callWindowFunction(hc.a(0), "unzap", -108);
+                  JavaScriptBridge.callWindowFunction(AppletHostHelpers.getHostApplet(0), "unzap", -108);
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  qe.a(new Object[]{aa.a(p.field_a, -27513)}, "zap", 29674, hc.a(0));
+                  JavaScriptBridge.callWindowFunctionWithArguments(new Object[]{ChatMessage.decodeBase37Name(SessionSocketHelpers.field_a, -27513)}, "zap", 29674, AppletHostHelpers.getHostApplet(0));
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               }
-              if (be.field_j > 0) {
-                ih.field_S = true;
+              if (OctaveNoiseMap.field_j > 0) {
+                LoginPanel.field_S = true;
               }
-              dp.field_e.setCipherSeed(110, vj.field_t);
+              LinkTextPainter.field_e.setCipherSeed(110, HighscoresScreen.field_t);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
-                vj.field_t[var8Lifetime1] = vj.field_t[var8Lifetime1] + 50;
+                HighscoresScreen.field_t[var8Lifetime1] = HighscoresScreen.field_t[var8Lifetime1] + 50;
               }
-              fj.field_g.setCipherSeed(-108, vj.field_t);
-              stackIn_75_0 = l.field_d;
+              MatchingTextValidator.field_g.setCipherSeed(-108, HighscoresScreen.field_t);
+              stackIn_75_0 = TextAndNameCredentials.field_d;
               return stackIn_75_0;
             }
-            if (ic.field_T == cj.field_g &&
-              nn.a(-2887)) {
-              p.a(1);
-              if (l.field_d == 7 &&
-                !nm.field_d) {
-                nm.field_d = true;
+            if (ValidatedTextWidget.field_T == IntrusiveDequeCursor.field_g &&
+              PendingHighscoreRequest.isPacketPayloadReady(-2887)) {
+              SessionSocketHelpers.closeSessionSocket(1);
+              if (TextAndNameCredentials.field_d == 7 &&
+                !IntRecordReplyHelpers.field_d) {
+                IntRecordReplyHelpers.field_d = true;
                 stackIn_82_0 = -1;
                 return stackIn_82_0;
               }
-              if (l.field_d == 7) {
-                l.field_d = 3;
+              if (TextAndNameCredentials.field_d == 7) {
+                TextAndNameCredentials.field_d = 3;
               }
-              sc.field_d = fj.field_g.readNullTerminatedString(true);
-              nm.field_d = false;
-              stackIn_86_0 = l.field_d;
+              MasterIndexHelpers.field_d = MatchingTextValidator.field_g.readNullTerminatedString(true);
+              IntRecordReplyHelpers.field_d = false;
+              stackIn_86_0 = TextAndNameCredentials.field_d;
               return stackIn_86_0;
             }
-            if (null == sn.field_c) {
-              if (nm.field_d) {
-                if (gd.a(-125) <= 30000L) {
-                  sc.field_d = rl.field_a;
+            if (null == LoginMethod.field_c) {
+              if (IntRecordReplyHelpers.field_d) {
+                if (TriangleMesh.getMillisSinceLastReceive(-125) <= 30000L) {
+                  MasterIndexHelpers.field_d = GrowableIntList.field_a;
                 } else {
-                  sc.field_d = dl.field_b;
+                  MasterIndexHelpers.field_d = NodeHashTable.field_b;
                 }
-                nm.field_d = false;
+                IntRecordReplyHelpers.field_d = false;
                 stackIn_95_0 = 3;
                 return stackIn_95_0;
               }
-              var6_intLifetime2 = ci.field_c;
-              ci.field_c = cn.field_j;
-              nm.field_d = true;
-              cn.field_j = var6_intLifetime2;
+              var6_intLifetime2 = GzipDecompressor.field_c;
+              GzipDecompressor.field_c = DisplayState.field_j;
+              IntRecordReplyHelpers.field_d = true;
+              DisplayState.field_j = var6_intLifetime2;
             }
             if (param0) {
               stackIn_100_0 = -1;
@@ -929,7 +929,7 @@ class PacketBuffer extends IntrusiveNode {
         }
         this.writeByte(127 & param1, -125);
         if (param0 <= 17) {
-          field_k = (mf) null;
+          field_k = (NineSliceFrame) null;
         }
     }
 
@@ -1000,7 +1000,7 @@ class PacketBuffer extends IntrusiveNode {
 
     PacketBuffer(int param0) {
         this.position = 0;
-        this.payload = ch.a(-5827, param0);
+        this.payload = ByteArrayPool.acquireByteArray(-5827, param0);
     }
 
     PacketBuffer(byte[] param0) {

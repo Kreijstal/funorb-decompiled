@@ -6,15 +6,15 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
     static String field_c;
     static String field_b;
 
-    final static vk validateDomainLabel(int param0, String param1) {
+    final static InputValidationResult validateDomainLabel(int param0, String param1) {
         int var3 = 0;
         int var2_int = 0;
         int var4 = 0;
         int var5 = 0;
-        vk stackIn_5_0 = null;
-        vk stackIn_8_0 = null;
-        vk stackIn_18_0 = null;
-        vk stackIn_22_0 = null;
+        InputValidationResult stackIn_5_0 = null;
+        InputValidationResult stackIn_8_0 = null;
+        InputValidationResult stackIn_18_0 = null;
+        InputValidationResult stackIn_22_0 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
@@ -27,11 +27,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           }
           var2_int = param1.length();
           if (0 == var2_int) {
-            stackIn_5_0 = bg.field_l;
+            stackIn_5_0 = DelayedPacket.field_l;
             return stackIn_5_0;
           }
           if (var2_int > 63) {
-            stackIn_8_0 = fg.field_m;
+            stackIn_8_0 = InstructionsScreen.field_m;
             return stackIn_8_0;
           }
           for (var3 = 0; var3 < var2_int; var3++) {
@@ -39,12 +39,12 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             if (45 == var4) {
               if (0 == var3 ||
                 var3 == var2_int - 1) {
-                stackIn_18_0 = vl.field_m;
+                stackIn_18_0 = CheckboxPainter.field_m;
                 return stackIn_18_0;
               }
             } else {
-              if (qm.field_a.indexOf(var4) == -1) {
-                stackIn_22_0 = vl.field_m;
+              if (CutsceneStartHelpers.field_a.indexOf(var4) == -1) {
+                stackIn_22_0 = CheckboxPainter.field_m;
                 return stackIn_22_0;
               }
             }
@@ -81,32 +81,32 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         int var3 = 0;
         int var3Lifetime1;
         try {
-          if (null != ea.field_c) {
-            nl.field_s = 0;
+          if (null != KeyHandlerHolder.field_c) {
+            AchievementsScreen.field_s = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
-              ei.field_G.length > var2_int) {
-              var2_int = ei.field_G[var2_int];
+              FadingModalPanel.field_G.length > var2_int) {
+              var2_int = FadingModalPanel.field_G[var2_int];
               if ((128 & var2_int) != 0) {
                 var2_int = -1;
               }
             } else {
               var2_int = -1;
             }
-            if (ih.field_F >= 0 &&
+            if (LoginPanel.field_F >= 0 &&
               var2_int >= 0) {
-              nd.field_c[ih.field_F] = var2_int;
-              ih.field_F = 1 + ih.field_F & 127;
-              if (ih.field_F == MouseWheelInput.field_d) {
-                ih.field_F = -1;
+              PacketRequestHelpers.field_c[LoginPanel.field_F] = var2_int;
+              LoginPanel.field_F = 1 + LoginPanel.field_F & 127;
+              if (LoginPanel.field_F == MouseWheelInput.field_d) {
+                LoginPanel.field_F = -1;
               }
             }
             if (var2_int >= 0) {
-              var3 = je.field_c + 1 & 127;
-              if (var3 != he.field_e) {
-                vd.field_b[je.field_c] = var2_int;
-                gg.field_a[je.field_c] = (char)0;
-                je.field_c = var3;
+              var3 = OffsetHelpers.field_c + 1 & 127;
+              if (var3 != LoginDialogGlobals.field_e) {
+                LoginPromptTexts.field_b[OffsetHelpers.field_c] = var2_int;
+                TextDecodeHelpers.field_a[OffsetHelpers.field_c] = (char)0;
+                OffsetHelpers.field_c = var3;
               }
             }
             var3Lifetime1 = param0.getModifiers();
@@ -140,21 +140,21 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (ea.field_c != null) {
-            nl.field_s = 0;
+          if (KeyHandlerHolder.field_c != null) {
+            AchievementsScreen.field_s = 0;
             var2_int = param0.getKeyCode();
             if (0 <= var2_int &&
-              var2_int < ei.field_G.length) {
-              var2_int = ei.field_G[var2_int] & -129;
+              var2_int < FadingModalPanel.field_G.length) {
+              var2_int = FadingModalPanel.field_G[var2_int] & -129;
             } else {
               var2_int = -1;
             }
-            if (0 <= ih.field_F &&
+            if (0 <= LoginPanel.field_F &&
               0 <= var2_int) {
-              nd.field_c[ih.field_F] = ~var2_int;
-              ih.field_F = 1 + ih.field_F & 127;
-              if (ih.field_F == MouseWheelInput.field_d) {
-                ih.field_F = -1;
+              PacketRequestHelpers.field_c[LoginPanel.field_F] = ~var2_int;
+              LoginPanel.field_F = 1 + LoginPanel.field_F & 127;
+              if (LoginPanel.field_F == MouseWheelInput.field_d) {
+                LoginPanel.field_F = -1;
               }
             }
           }
@@ -176,8 +176,8 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
-          if (ea.field_c != null) {
-            ih.field_F = -1;
+          if (KeyHandlerHolder.field_c != null) {
+            LoginPanel.field_F = -1;
           }
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "tg.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
@@ -185,8 +185,8 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
     }
 
     final static void handleClearFlagPacket(int param0) {
-        jh.field_i = false;
-        fj.field_g.readUnsignedByte((byte) -122);
+        ArchiveIndex.field_i = false;
+        MatchingTextValidator.field_g.readUnsignedByte((byte) -122);
         if (param0 < 110) {
           String var2 = (String) null;
           GameKeyHandler.validateDomainLabel(-42, (String) null);
@@ -197,15 +197,15 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         int var2_int = 0;
         int var3 = 0;
         try {
-          if (null != ea.field_c) {
+          if (null != KeyHandlerHolder.field_c) {
             var2_int = param0.getKeyChar();
             if (var2_int != 0 && var2_int != 65535 &&
               SectorCacheStore.isRepresentableTextCharacter(0, (char) var2_int)) {
-              var3 = 1 + je.field_c & 127;
-              if (var3 != he.field_e) {
-                vd.field_b[je.field_c] = -1;
-                gg.field_a[je.field_c] = (char)var2_int;
-                je.field_c = var3;
+              var3 = 1 + OffsetHelpers.field_c & 127;
+              if (var3 != LoginDialogGlobals.field_e) {
+                LoginPromptTexts.field_b[OffsetHelpers.field_c] = -1;
+                TextDecodeHelpers.field_a[OffsetHelpers.field_c] = (char)var2_int;
+                OffsetHelpers.field_c = var3;
               }
             }
           }

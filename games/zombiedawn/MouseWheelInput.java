@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class MouseWheelInput {
-    static rh field_b;
+    static ValidationState field_b;
     static int field_c;
     static int field_d;
     static boolean[] field_a;
@@ -22,7 +22,7 @@ abstract class MouseWheelInput {
 
     static {
         field_z = "uc.D(";
-        field_b = new rh();
+        field_b = new ValidationState();
         field_c = 0;
         field_d = 0;
         field_a = new boolean[32];

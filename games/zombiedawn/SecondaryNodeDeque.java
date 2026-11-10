@@ -32,7 +32,7 @@ final class SecondaryNodeDeque implements Iterable {
           if (param0 != 8099) {
             field_b = (String[]) null;
           }
-          stackIn_3_0 = ij.a(param1, param2, (byte) 108, 0);
+          stackIn_3_0 = DraggableWidget.crc32(param1, param2, (byte) 108, 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

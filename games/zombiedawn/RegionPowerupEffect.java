@@ -1,0 +1,359 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class RegionPowerupEffect extends IntrusiveNode {
+    private int field_l;
+    private int field_k;
+    private LevelNavigation field_i;
+    private Sprite field_r;
+    private int field_p;
+    private int field_q;
+    private DualLinkDeque field_n;
+    private int field_o;
+    private int field_j;
+    private int field_h;
+    private int field_m;
+
+    private final void applyCellChanges(byte param0) {
+        int var3 = 0;
+        int var2;
+        int var4;
+        TileMap stackIn_6_0 = null;
+        boolean stackIn_7_1 = false;
+        int var2Lifetime1;
+        var4 = ZombieDawn.field_J;
+        for (var2 = this.field_j; this.field_p >= var2; var2++) {
+          for (var3 = this.field_q; var3 <= this.field_m; var3++) {
+            stackIn_6_0 = this.field_i.field_A;
+            stackIn_7_1 = (this.field_k == 0);
+            ((TileMap) (Object) stackIn_6_0).setCellOpen(stackIn_7_1, 14365, var2, true, var3);
+            if (this.field_k == 0) {
+              this.field_i.field_b[var2][var3] = true;
+            }
+          }
+        }
+        var2Lifetime1 = -48 % ((19 - param0) / 63);
+        Js5Archive.field_e.onWallsChanged(true);
+    }
+
+    final void drawEffect(Camera param0, int param1) {
+        int var3_int = 0;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        try {
+          if (param1 != -516) {
+            this.field_q = 34;
+          }
+          var3_int = param0.worldToScreenX(24 * this.field_q, (byte) -118);
+          var4 = param0.worldToScreenY(24 * this.field_j, 0);
+          var5 = 50;
+          if (this.field_l == 0) {
+            var5 = this.field_h - this.field_o;
+          } else {
+            if (2 == this.field_l) {
+              var5 = this.field_o;
+            }
+          }
+          var6 = 0;
+          var7 = 0;
+          if (0 == this.field_k) {
+            var8 = 47;
+            var9 = var8 + (50 - var5) * (-var8 + 255) / 50;
+            this.field_r.drawWithOpacity(var6 + var3_int, var4 + var7, var9);
+          }
+        } catch (RuntimeException runtimeException) {
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "mn.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    final void finishImmediately(byte param0) {
+        if (this.field_l != 0) {
+          this.applyCellChanges((byte) -123);
+        }
+        if (param0 != 76) {
+          this.field_i = (LevelNavigation) null;
+        }
+    }
+
+    private final void restoreCells(int param0) {
+        int var2 = 0;
+        int var3 = 0;
+        int var4 = ZombieDawn.field_J;
+        for (var2 = this.field_j; this.field_p >= var2; var2++) {
+          for (var3 = this.field_q; this.field_m >= var3; var3++) {
+            this.field_i.field_A.setCellOpen((1 & this.field_i.field_A.field_t[var2][var3]) != 0 ? true : false, 14365, var2, true, var3);
+          }
+        }
+        if (param0 != 0) {
+          this.finishImmediately((byte) 18);
+        }
+    }
+
+    final boolean update(boolean param0) {
+        int var2_int;
+        DualLinkNode var2;
+        DualLinkNode var3;
+        int var4;
+        String var5;
+        var4 = ZombieDawn.field_J;
+        this.field_o = this.field_o - 1;
+        if (!param0) {
+          var5 = (String) null;
+          RegionPowerupEffect.startLoginTransition(80, (String) null, true);
+        }
+        var2_int = this.field_l;
+        if (var2_int == 0) {
+          if (null != this.field_r &&
+            0 == this.field_k) {
+            this.field_r.adjustColourChannels(0, 1, 0);
+          }
+          if (this.field_h - 50 < this.field_o) {
+            return false;
+          }
+          if (this.field_k == 0) {
+            this.applyCellChanges((byte) -116);
+          }
+          this.field_l = 1;
+          return true;
+        }
+        if (var2_int != 1) {
+          if (var2_int == 2) {
+            if (null != this.field_r &&
+              this.field_k == 0) {
+              this.field_r.adjustColourChannels(0, -1, 0);
+            }
+            if (this.field_n != null) {
+              var3 = this.field_n.first((byte) 34);
+              while (var3 != null) {
+                var2 = this.field_n.next((byte) 127);
+                ((MiasmaPuff) (var3)).field_M = 1;
+                if (((MiasmaPuff) (var3)).field_G) {
+                  ((MiasmaPuff) (var3)).recycle(-18475);
+                }
+                var3 = var2;
+              }
+            }
+            if (this.field_o <= 0) {
+              this.restoreCells(0);
+              this.unlink(-27598);
+              return true;
+            }
+          }
+        } else {
+          if (this.field_o <= 50) {
+            this.field_l = 2;
+          }
+        }
+        return false;
+    }
+
+    private final void initializeRegion(boolean param0, LevelNavigation param1) {
+        int var6 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        RuntimeException stackIn_47_0 = null;
+        StringBuilder stackIn_47_1 = null;
+        String stackIn_48_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        int var5_int = 0;
+        Camera var5 = null;
+        MiasmaPuff var6_ref_ek = null;
+        IntrusiveNode var7 = null;
+        int var10 = 0;
+        IntrusiveDeque var11 = null;
+        var10 = ZombieDawn.field_J;
+        try {
+          this.field_i = param1;
+          this.field_p = -1 + (this.field_j + 2 * OffsetHelpers.field_a);
+          if (this.field_i.field_A.field_r <= this.field_p) {
+            this.field_p = -1 + this.field_i.field_A.field_r;
+          }
+          this.field_m = 2 * OffsetHelpers.field_a + (this.field_q - 1);
+          if (this.field_m >= this.field_i.field_A.field_k) {
+            this.field_m = -1 + this.field_i.field_A.field_k;
+          }
+          this.field_l = 0;
+          this.field_n = new DualLinkDeque();
+          if (this.field_k == 1) {
+            for (var3_int = this.field_j; this.field_p >= var3_int; var3_int++) {
+              for (var4 = this.field_q; this.field_m >= var4; var4++) {
+                if (0 != (this.field_i.field_A.field_t[var3_int][var4] & 1) ||
+                  this.field_i.field_b[var3_int][var4]) {
+                  for (var5_int = 0; 2 > var5_int; var5_int++) {
+                    var6_ref_ek = MusicPatchPcmStream.acquirePooledEffect(var4 * 24, 24 * var3_int, 100, true);
+                    this.field_n.addLast(var6_ref_ek, (byte) -116);
+                    Js5Archive.field_e.zombies.addLast(var6_ref_ek, -122);
+                  }
+                }
+              }
+            }
+            this.applyCellChanges((byte) 108);
+          } else {
+            var3_int = 48 * OffsetHelpers.field_a;
+            var4 = 48 * OffsetHelpers.field_a;
+            this.field_r = new Sprite(var3_int, var4);
+            for (var5_int = this.field_j; this.field_p >= var5_int; var5_int++) {
+              for (var6 = this.field_q; this.field_m >= var6; var6++) {
+                this.field_i.field_b[var5_int][var6] = false;
+              }
+            }
+            ContentTransitionDialog.setRasterTarget((byte) -120, this.field_r);
+            var5 = new Camera(this.field_i.width, this.field_i.height);
+            var5.x = WhirlpoolHasher.field_d + this.field_q * 24;
+            var5.y = this.field_j * 24 + DropdownList.field_G;
+            this.field_i.drawFloor(var5, false);
+            if (0 == this.field_k) {
+              Rasterizer.clear();
+            }
+            this.field_i.drawWallLayer(var5, 1, true, false);
+            var11 = Js5Archive.field_e.zombies;
+            var7 = var11.last((byte) 26);
+            while (var7 != null) {
+              if (var7 instanceof LevelObstacle &&
+                !(var7 instanceof LaserBarrier)) {
+                ((WorldObject) (var7)).draw((byte) -93, var5);
+              }
+              var7 = var11.previous(false);
+            }
+            this.field_i.drawWallLayer(var5, 2, true, false);
+            SingleChildWidget.popRasterState(-21189);
+            for (var8 = this.field_j; this.field_p >= var8; var8++) {
+              for (var9 = this.field_q; this.field_m >= var9; var9++) {
+                this.field_i.field_b[var8][var9] = true;
+              }
+            }
+          }
+          if (param0) {
+            this.field_p = -128;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_47_0 = var3;
+          stackIn_47_1 = new StringBuilder().append("mn.E(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_48_2 = "null";
+          } else {
+            stackIn_48_2 = "{...}";
+          }
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(')').toString());
+        }
+    }
+
+    final static void resetLevelState(boolean param0) {
+        int var1_int = 0;
+        int var2 = ZombieDawn.field_J;
+        PendingRecordRequest.field_u = new int[]{};
+        Tree.field_U = new int[]{};
+        if (param0) {
+          return;
+        }
+        try {
+          GameResourceLoader.field_g = new int[]{};
+          for (var1_int = 0; HuffmanCodec.field_a.length > var1_int; var1_int++) {
+            HuffmanCodec.field_a[var1_int] = 0;
+            ConnectionCleanupHelpers.field_a[var1_int] = 0;
+            HunterHuman.field_Qb[var1_int] = 0;
+            SpriteState.field_u[var1_int] = 0;
+          }
+          ScrollViewport.field_J.clear(97);
+        } catch (RuntimeException runtimeException) {
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "mn.I(" + param0 + ')');
+        }
+    }
+
+    final static void loadFinalFrameImage(Js5Archive param0, boolean param1) {
+        Sprite var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        try {
+          var2 = new Sprite(param0.getFileByName("", -116, "final_frame.jpg"), (java.awt.Component) ((Object) IntrusiveDequeCursor.field_d));
+          if (!param1) {
+            Js5Archive var5 = (Js5Archive) null;
+            RegionPowerupEffect.loadFinalFrameImage((Js5Archive) null, false);
+          }
+          var3 = var2.field_w;
+          var4 = var2.field_t;
+          TrafficVehicle.pushRasterState(1584);
+          EmptyWidgetPainter.field_a = new Sprite(var3, 3 * var4 / 4);
+          EmptyWidgetPainter.field_a.setAsRenderTarget();
+          var2.drawWithOffsets(0, 0);
+          MidiNoteMask.field_j = new Sprite(var3, -EmptyWidgetPainter.field_a.field_t + var4);
+          MidiNoteMask.field_j.setAsRenderTarget();
+          var2.drawWithOffsets(0, -EmptyWidgetPainter.field_a.field_t);
+          MidiNoteMask.field_j.field_x = EmptyWidgetPainter.field_a.field_t;
+          SingleChildWidget.popRasterState(-21189);
+        } catch (RuntimeException runtimeException) {
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "mn.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    final static void startLoginTransition(int param0, String param1, boolean param2) {
+        try {
+          MasterIndexHelpers.field_a = param2;
+          if (param0 != -1) {
+            Js5Archive var4 = (Js5Archive) null;
+            RegionPowerupEffect.loadFinalFrameImage((Js5Archive) null, true);
+          }
+          PendingRecordRequest.field_p = GlowAreaSupport.field_k;
+        } catch (RuntimeException runtimeException) {
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "mn.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+        }
+    }
+
+    RegionPowerupEffect(LevelNavigation param0, int param1, int param2, int param3) {
+        RuntimeException runtimeException = null;
+        int stackIn_4_2 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          param1 = param1 / 24;
+          this.field_i = param0;
+          param2 = param2 / 24;
+          this.field_k = param3;
+          if (this.field_k == 0) {
+            stackIn_4_2 = 2147483647;
+          } else {
+            stackIn_4_2 = 1000;
+          }
+          this.field_o = stackIn_4_2;
+          this.field_h = stackIn_4_2;
+          this.field_j = param2 - OffsetHelpers.field_a;
+          if (this.field_j < 0) {
+            this.field_j = 0;
+          }
+          this.field_q = -OffsetHelpers.field_a + param1;
+          if (0 > this.field_q) {
+            this.field_q = 0;
+          }
+          if (this.field_i != null) {
+            this.initializeRegion(false, this.field_i);
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          runtimeException = decompiledCaughtException;
+          stackIn_13_0 = runtimeException;
+          stackIn_13_1 = new StringBuilder().append("mn.<init>(");
+          if (param0 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
+          }
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    static {
+    }
+}

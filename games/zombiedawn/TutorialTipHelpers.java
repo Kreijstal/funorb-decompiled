@@ -1,0 +1,175 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class TutorialTipHelpers {
+    static String field_c;
+    static int[] field_d;
+    static String field_a;
+    static int field_b;
+
+    final static boolean handleTipClick(int param0, boolean param1, int param2) {
+        int var3;
+        int var4;
+        int var5;
+        if (PendingFlagRequest.field_h &&
+          IntRecordReplyHelpers.field_b) {
+          if (HighscoresScreen.field_o <= 0) {
+            return false;
+          }
+          var3 = DropdownList.field_P * 7 / 8 - Alien.field_bb;
+          if (param1) {
+            field_b = 33;
+          }
+          var4 = 100 + (SpriteFadeHelpers.field_b + (-HighscoresScreen.field_o + 400 >> 1));
+          var5 = HighscoresScreen.field_o + 40;
+          if (var4 < param2 &&
+            param0 > var3 &&
+            var5 + var4 > param2 &&
+            Alien.field_bb + var3 > param0) {
+            if (-3 == MusicPatch.field_r) {
+              HighscoresScreen.field_q = 500;
+            }
+            Blast.handleTutorialEvent(-2, 6836);
+            return true;
+          }
+          return false;
+        }
+        return false;
+    }
+
+    public static void releaseStatics(int param0) {
+        field_d = null;
+        field_c = null;
+        field_a = null;
+        if (param0 != 6) {
+          field_a = (String) null;
+        }
+    }
+
+    final static void drawMenuTextRows(boolean param0) {
+        int var3 = 0;
+        int stackIn_18_0 = 0;
+        String stackIn_23_0 = null;
+        int stackIn_27_0 = 0;
+        String stackIn_33_0 = null;
+        String stackIn_39_0 = null;
+        boolean stackIn_39_1 = false;
+        boolean stackIn_40_2 = false;
+        NineSliceFrame stackIn_44_0 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var1_int = 0;
+        RuntimeException var1 = null;
+        int var2 = 0;
+        long var3_long = 0L;
+        int var4 = 0;
+        int var5 = 0;
+        String var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        NineSliceFrame var9 = null;
+        int var10 = 0;
+        int var7Lifetime1;
+        int var8Lifetime1;
+        var10 = ZombieDawn.field_J;
+        try {
+          var1_int = IterableNodeHashTable.field_d;
+          var2 = 0;
+          if (MainMenuScreen.field_p == 2) {
+            var3_long = MonotonicClock.monotonicTimeMillis(-22826) - AddressHintGlobals.field_f;
+            var2 = (int)((10999L - var3_long) / 1000L);
+            if (var2 < 0) {
+              var2 = 0;
+            }
+          }
+          for (var3 = 0; var3 < IntrusiveDequeCursor.field_h.length; var3++) {
+            var4 = SpriteState.field_s[var3];
+            if (var4 >= 0) {
+              if (var4 != FullscreenErrorDialog.field_W.field_d) {
+                var5 = NodeHashTable.field_f;
+              } else {
+                var5 = Bzip2State.field_j;
+              }
+            } else {
+              var5 = DecodedSpriteHelpers.field_c;
+            }
+            var6 = IntrusiveDequeCursor.field_h[var3];
+            if (2 == MainMenuScreen.field_p &&
+              var2 == 1) {
+              if (NodeHashTable.field_h.length <= ResizableDialog.field_R.length) {
+                stackIn_18_0 = ResizableDialog.field_R.length;
+              } else {
+                stackIn_18_0 = NodeHashTable.field_h.length;
+              }
+              var7 = stackIn_18_0;
+              if (6 <= var3 &&
+                var3 < var7 + 6) {
+                if (-var7 + ResizableDialog.field_R.length - 6 + var3 < 0) {
+                  stackIn_23_0 = "";
+                } else {
+                  stackIn_23_0 = ResizableDialog.field_R[var3 - 6 + (ResizableDialog.field_R.length - var7)];
+                }
+                var6 = stackIn_23_0;
+              }
+              if (Js5ArchiveManager.field_a.length > NodeHashTableIterator.field_b.length) {
+                stackIn_27_0 = Js5ArchiveManager.field_a.length;
+              } else {
+                stackIn_27_0 = NodeHashTableIterator.field_b.length;
+              }
+              var8 = stackIn_27_0;
+              if (var3 >= var7 + 7 &&
+                var7 + (7 + var8) > var3) {
+                if (NodeHashTableIterator.field_b.length > -var7 - 7 + var3) {
+                  stackIn_33_0 = NodeHashTableIterator.field_b[var3 - 7 - var7];
+                } else {
+                  stackIn_33_0 = "";
+                }
+                var6 = stackIn_33_0;
+              }
+            }
+            if (var4 == -2) {
+              var6 = Integer.toString(var2);
+            }
+            stackIn_39_0 = var6;
+            stackIn_39_1 = true;
+            stackIn_40_2 = !(0 > var4);
+            var7Lifetime1 = NameCheckRequest.measureText(stackIn_39_0, stackIn_39_1, stackIn_40_2);
+            var8Lifetime1 = IntKeyLookup.field_b - (var7Lifetime1 >> 1);
+            if (var4 >= 0) {
+              var1_int = var1_int + AccountTermsPanel.field_H;
+              if (var4 != FullscreenErrorDialog.field_W.field_d) {
+                stackIn_44_0 = PacketBuffer.field_k;
+              } else {
+                stackIn_44_0 = UiContainer.field_B;
+              }
+              var9 = stackIn_44_0;
+              if (var9 != null) {
+                var9.drawFrame(var7Lifetime1 + (EmailAvailabilityValidator.field_f << 1), var1_int, -EmailAvailabilityValidator.field_f + var8Lifetime1, (byte) -127, (DisplayState.field_h << 1) + Path.field_f);
+              }
+              var1_int = var1_int + DisplayState.field_h;
+            }
+            if (0 <= var4) {
+              CaptionedContainer.field_H.drawString(var6, var8Lifetime1, var1_int + MarkerSliderPainter.field_n, var5, -1);
+              var1_int = var1_int + (Path.field_f + (AccountTermsPanel.field_H + DisplayState.field_h));
+            } else {
+              ZombieDawn.field_K.drawString(var6, var8Lifetime1, var1_int + WidgetContainer.field_F, var5, -1);
+              var1_int = var1_int + CheckboxPainter.field_r;
+            }
+          }
+          if (param0) {
+            field_d = (int[]) null;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1), "d.B(" + param0 + ')');
+        }
+    }
+
+    static {
+        field_b = 200;
+        field_d = new int[8192];
+        field_c = "Loading instruments";
+        field_a = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled.";
+    }
+}

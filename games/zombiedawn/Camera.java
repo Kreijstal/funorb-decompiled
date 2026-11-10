@@ -84,7 +84,7 @@ final class Camera {
         if (!param1) {
           return -101;
         }
-        return this.y + param0 - nh.field_G;
+        return this.y + param0 - DropdownList.field_G;
     }
 
     final static void sortRankingRange(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
@@ -119,21 +119,21 @@ final class Camera {
             var9 = param6;
             var10 = param5;
             for (var11 = param0; var11 < param1; var11++) {
-              var12 = qd.field_c[var11];
+              var12 = CutsceneStateHelpers.field_c[var11];
               if (param4) {
                 stackIn_23_0 = Js5Archive.field_g[var12];
               } else {
-                stackIn_23_0 = qp.field_b[var12];
+                stackIn_23_0 = PowerupNames.field_b[var12];
               }
               var13 = stackIn_23_0;
               if (var7_int < var13) {
-                qd.field_c[var11] = qd.field_c[var8];
+                CutsceneStateHelpers.field_c[var11] = CutsceneStateHelpers.field_c[var8];
                 if (var9 > var13) {
                   var9 = var13;
                 }
                 incrementValue$0 = var8;
                 var8++;
-                qd.field_c[incrementValue$0] = var12;
+                CutsceneStateHelpers.field_c[incrementValue$0] = var12;
               } else {
                 if (var13 > var10) {
                   var10 = var13;
@@ -146,11 +146,11 @@ final class Camera {
           }
           for (var7_intLifetime1 = -1 + param1; param0 < var7_intLifetime1; var7_intLifetime1--) {
             for (var8Lifetime1 = param0; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
-              var9Lifetime1 = qd.field_c[var8Lifetime1];
-              var10Lifetime1 = qd.field_c[var8Lifetime1 + 1];
-              if (fp.comesBeforeRankingRow(var9Lifetime1, param4, 0, var10Lifetime1)) {
-                qd.field_c[var8Lifetime1] = var10Lifetime1;
-                qd.field_c[1 + var8Lifetime1] = var9Lifetime1;
+              var9Lifetime1 = CutsceneStateHelpers.field_c[var8Lifetime1];
+              var10Lifetime1 = CutsceneStateHelpers.field_c[var8Lifetime1 + 1];
+              if (DialWidget.comesBeforeRankingRow(var9Lifetime1, param4, 0, var10Lifetime1)) {
+                CutsceneStateHelpers.field_c[var8Lifetime1] = var10Lifetime1;
+                CutsceneStateHelpers.field_c[1 + var8Lifetime1] = var9Lifetime1;
               }
             }
           }
@@ -173,7 +173,7 @@ final class Camera {
         if (param1 != 0) {
           this.field_x = 23;
         }
-        return -this.y + param0 + nh.field_G;
+        return -this.y + param0 + DropdownList.field_G;
     }
 
     final void updateScrolling(boolean param0, boolean param1, boolean param2, byte param3, boolean param4, boolean param5) {
@@ -187,16 +187,16 @@ final class Camera {
         if (param3 > -41) {
           field_z = (String) null;
         }
-        if (bo.field_i) {
+        if (AchievementSubmission.field_i) {
           this.field_a = this.field_q - 240;
           this.field_w = 240;
         } else {
-          this.field_a = -nh.field_G + this.field_q;
-          if (nh.field_G <= this.field_a) {
-            this.field_w = nh.field_G;
+          this.field_a = -DropdownList.field_G + this.field_q;
+          if (DropdownList.field_G <= this.field_a) {
+            this.field_w = DropdownList.field_G;
           } else {
-            this.field_w = (this.field_a + nh.field_G) / 2;
-            this.field_a = (this.field_a + nh.field_G) / 2;
+            this.field_w = (this.field_a + DropdownList.field_G) / 2;
+            this.field_a = (this.field_a + DropdownList.field_G) / 2;
           }
         }
         if (this.field_p >= WhirlpoolHasher.field_d) {
@@ -291,7 +291,7 @@ final class Camera {
         this.field_t = param0;
         this.field_q = param1;
         this.field_p = -WhirlpoolHasher.field_d + this.field_t;
-        int var3 = bo.field_i ? 240 : nh.field_G;
+        int var3 = AchievementSubmission.field_i ? 240 : DropdownList.field_G;
         this.field_w = -var3 + 240;
         this.field_a = this.field_q - var3;
     }

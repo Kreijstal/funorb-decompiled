@@ -29,7 +29,7 @@ abstract class Mover extends WorldObject {
     int field_N;
     private int field_L;
 
-    final va applyTileDrift(int param0) {
+    final FrameSequence applyTileDrift(int param0) {
         int var4 = 0;
         int var5 = 0;
         int var6 = ZombieDawn.field_J;
@@ -38,7 +38,7 @@ abstract class Mover extends WorldObject {
         if (!Js5Archive.field_e.tileMap.field_e) {
           return null;
         }
-        va var7 = ub.findAnimatedTile(127, this.currentTile(-95));
+        FrameSequence var7 = LevelHud.findAnimatedTile(127, this.currentTile(-95));
         int var3 = 49 % ((param0 - 36) / 50);
         if (var7 == null) {
           return var7;
@@ -107,7 +107,7 @@ abstract class Mover extends WorldObject {
         int var3 = this.targetX - this.getX(true);
         if (param0 == 0) {
           var4 = this.targetY - this.getY(237239984);
-          var5 = so.b(var3 * var3 + var4 * var4);
+          var5 = SpriteEffectHelpers.approximateSquareRoot(var3 * var3 + var4 * var4);
           if (var5 == 0) {
             this.setState(this instanceof Human ? 0 : 4, -6904);
           } else {
@@ -126,7 +126,7 @@ abstract class Mover extends WorldObject {
         }
         this.field_D = -90;
         var4Lifetime1 = this.targetY - this.getY(237239984);
-        var5Lifetime1 = so.b(var3 * var3 + var4Lifetime1 * var4Lifetime1);
+        var5Lifetime1 = SpriteEffectHelpers.approximateSquareRoot(var3 * var3 + var4Lifetime1 * var4Lifetime1);
         if (var5Lifetime1 == 0) {
           this.setState(this instanceof Human ? 0 : 4, -6904);
         } else {
@@ -165,7 +165,7 @@ abstract class Mover extends WorldObject {
         int fieldTemp$3 = 0;
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
-        if (this.field_G >= cg.field_h[param0]) {
+        if (this.field_G >= QuickChatCommandType.field_h[param0]) {
           this.field_G = 0;
         }
         if (this.speedScale == 4) {
@@ -173,10 +173,10 @@ abstract class Mover extends WorldObject {
         if (param1 == -26109) {
           fieldTemp$2 = this.field_N + 1;
           this.field_N = this.field_N + 1;
-          if (fieldTemp$2 > cg.field_b[param0]) {
+          if (fieldTemp$2 > QuickChatCommandType.field_b[param0]) {
             fieldTemp$3 = this.field_G + 1;
             this.field_G = this.field_G + 1;
-            if (fieldTemp$3 == cg.field_h[param0]) {
+            if (fieldTemp$3 == QuickChatCommandType.field_h[param0]) {
               this.field_G = 0;
             }
             this.field_N = 0;
@@ -186,10 +186,10 @@ abstract class Mover extends WorldObject {
         this.applySlowdown((byte) -24, 107);
         fieldTemp$0 = this.field_N + 1;
         this.field_N = this.field_N + 1;
-        if (fieldTemp$0 > cg.field_b[param0]) {
+        if (fieldTemp$0 > QuickChatCommandType.field_b[param0]) {
           fieldTemp$1 = this.field_G + 1;
           this.field_G = this.field_G + 1;
-          if (fieldTemp$1 == cg.field_h[param0]) {
+          if (fieldTemp$1 == QuickChatCommandType.field_h[param0]) {
             this.field_G = 0;
           }
           this.field_N = 0;
@@ -293,7 +293,7 @@ abstract class Mover extends WorldObject {
         this.field_J = false;
         this.field_Z = 0;
         this.state = this instanceof Human ? 0 : 4;
-        this.field_S = pb.a(so.random, 2, 1) != 1 ? 1 : 3;
+        this.field_S = GooPuddleCell.nextBoundedInt(SpriteEffectHelpers.random, 2, 1) != 1 ? 1 : 3;
         this.field_G = 0;
         this.field_N = 0;
         this.field_D = param3;
@@ -779,9 +779,9 @@ abstract class Mover extends WorldObject {
           }
           if (param2) {
             var4++;
-            return tk.field_e[var4];
+            return NameCheckRequest.field_e[var4];
           }
-          return tk.field_e[var4];
+          return NameCheckRequest.field_e[var4];
         }
         if (param3) {
           var4 += 2;
@@ -790,10 +790,10 @@ abstract class Mover extends WorldObject {
           return (String) null;
         }
         if (!param2) {
-          return tk.field_e[var4];
+          return NameCheckRequest.field_e[var4];
         }
         var4++;
-        return tk.field_e[var4];
+        return NameCheckRequest.field_e[var4];
     }
 
     public static void releaseStatics(int param0) {
@@ -805,7 +805,7 @@ abstract class Mover extends WorldObject {
     }
 
     final static void intersectDrawClip(int param0, byte param1, int param2, int param3, int param4) {
-        hk.pushRasterState(1584);
+        TrafficVehicle.pushRasterState(1584);
         Rasterizer.intersectClip(param4, param0, param2, param3);
         if (param1 != 99) {
           field_P = (int[]) null;
@@ -821,7 +821,7 @@ abstract class Mover extends WorldObject {
 
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static void intersectClipIntArgs(int param0, int param1, int param2, int param3, int param4) {
-        hk.pushRasterState(1584);
+        TrafficVehicle.pushRasterState(1584);
         Rasterizer.intersectClip(param4, param0, param2, param3);
         if (param1 != 99) {
           field_P = (int[]) null;

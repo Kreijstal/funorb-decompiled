@@ -5,7 +5,7 @@ import java.util.*;
 
 final class SecondaryNodeDequeIterator implements Iterator {
     private SecondaryNodeDeque field_f;
-    static f[] field_a;
+    static GlowAreaSupport[] field_a;
     static int[] field_b;
     static Sprite field_h;
     private DualLinkNode field_d;
@@ -16,7 +16,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
     final static byte[] unwrapArchiveBytes(Object param0, byte param1, boolean param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
-        rf var4 = null;
+        ByteStorage var4 = null;
         byte[] stackIn_7_0 = null;
         byte[] stackIn_9_0 = null;
         byte[] stackIn_12_0 = null;
@@ -35,18 +35,18 @@ final class SecondaryNodeDequeIterator implements Iterator {
               stackIn_9_0 = var3;
               return stackIn_9_0;
             }
-            stackIn_7_0 = jl.a(var3, (byte) 45);
+            stackIn_7_0 = StrongCacheEntry.copyBytes(var3, (byte) 45);
             return stackIn_7_0;
           }
           if (param1 < 80) {
             stackIn_12_0 = (byte[]) null;
             return stackIn_12_0;
           }
-          if (!(param0 instanceof rf)) {
+          if (!(param0 instanceof ByteStorage)) {
             throw new IllegalArgumentException();
           }
-          var4 = (rf) (param0);
-          stackIn_15_0 = var4.a((byte) -116);
+          var4 = (ByteStorage) (param0);
+          stackIn_15_0 = var4.getBytes((byte) -116);
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -80,19 +80,19 @@ final class SecondaryNodeDequeIterator implements Iterator {
     final static void installViewController(int param0, boolean param1) {
         Object var2 = null;
         if (param1) {
-          var2 = new cl();
+          var2 = new DimensionOnlyResizer();
         } else {
-          var2 = new wh();
+          var2 = new RasterCanvasSizeTarget();
         }
-        nl.setDisplayModeController(new ViewportController((wa) (var2)), (byte) -121);
+        AchievementsScreen.setDisplayModeController(new ViewportController((CanvasSizeTarget) (var2)), (byte) -121);
         if (param0 <= -105) {
           return;
         }
         field_e = (String) null;
     }
 
-    final static void writeProgressRecord(int param0, boolean param1, bo param2) {
-        am var5 = dp.field_e;
+    final static void writeProgressRecord(int param0, boolean param1, AchievementSubmission param2) {
+        BitPacketBuffer var5 = LinkTextPainter.field_e;
         var5.writeCipheredByte(11, param0);
         var5.position = var5.position + 1;
         int var4 = var5.position;

@@ -117,42 +117,42 @@ final class SpatialBucket {
         int var2 = 0;
         int var3 = ZombieDawn.field_J;
         try {
-          Zombie.field_nb[0] = sg.field_jb.findNearestBasePaletteIndex(16711680);
-          Zombie.field_nb[1] = sg.field_jb.findNearestBasePaletteIndex(7829248);
-          Zombie.field_nb[2] = sg.field_jb.findNearestBasePaletteIndex(16776960);
-          Zombie.field_nb[3] = sg.field_jb.findNearestBasePaletteIndex(30464);
-          Zombie.field_nb[4] = sg.field_jb.findNearestBasePaletteIndex(65280);
-          Zombie.field_nb[5] = sg.field_jb.findNearestBasePaletteIndex(30583);
-          Zombie.field_nb[6] = sg.field_jb.findNearestBasePaletteIndex(65535);
-          Zombie.field_nb[7] = sg.field_jb.findNearestBasePaletteIndex(119);
-          Zombie.field_nb[8] = sg.field_jb.findNearestBasePaletteIndex(255);
-          Zombie.field_nb[9] = sg.field_jb.findNearestBasePaletteIndex(16745473);
-          hm.field_L = sg.field_jb.findNearestBasePaletteIndex(16777215);
-          t.field_c = sg.field_jb.findNearestBasePaletteIndex(6710886);
-          var6 = sg.field_jb.field_O[0];
+          Zombie.field_nb[0] = ProgressMessageDialog.field_jb.findNearestBasePaletteIndex(16711680);
+          Zombie.field_nb[1] = ProgressMessageDialog.field_jb.findNearestBasePaletteIndex(7829248);
+          Zombie.field_nb[2] = ProgressMessageDialog.field_jb.findNearestBasePaletteIndex(16776960);
+          Zombie.field_nb[3] = ProgressMessageDialog.field_jb.findNearestBasePaletteIndex(30464);
+          Zombie.field_nb[4] = ProgressMessageDialog.field_jb.findNearestBasePaletteIndex(65280);
+          Zombie.field_nb[5] = ProgressMessageDialog.field_jb.findNearestBasePaletteIndex(30583);
+          Zombie.field_nb[6] = ProgressMessageDialog.field_jb.findNearestBasePaletteIndex(65535);
+          Zombie.field_nb[7] = ProgressMessageDialog.field_jb.findNearestBasePaletteIndex(119);
+          Zombie.field_nb[8] = ProgressMessageDialog.field_jb.findNearestBasePaletteIndex(255);
+          Zombie.field_nb[9] = ProgressMessageDialog.field_jb.findNearestBasePaletteIndex(16745473);
+          HotspotTextWidget.field_L = ProgressMessageDialog.field_jb.findNearestBasePaletteIndex(16777215);
+          DialWidgetPainter.field_c = ProgressMessageDialog.field_jb.findNearestBasePaletteIndex(6710886);
+          var6 = ProgressMessageDialog.field_jb.field_O[0];
           var5 = var6;
           var4 = var5;
           int[] var1 = var4;
           if (param0 != 119) {
             field_b = (Sprite[]) null;
           }
-          sg.field_jb.field_O = new int[11][];
-          sg.field_jb.field_O[0] = var6;
-          array$0 = new int[sg.field_jb.field_O[0].length];
-          sg.field_jb.field_O[4] = array$0;
-          for (var2 = 0; sg.field_jb.field_O[4].length > var2; var2++) {
-            sg.field_jb.field_O[4][var2] = 16777215;
+          ProgressMessageDialog.field_jb.field_O = new int[11][];
+          ProgressMessageDialog.field_jb.field_O[0] = var6;
+          array$0 = new int[ProgressMessageDialog.field_jb.field_O[0].length];
+          ProgressMessageDialog.field_jb.field_O[4] = array$0;
+          for (var2 = 0; ProgressMessageDialog.field_jb.field_O[4].length > var2; var2++) {
+            ProgressMessageDialog.field_jb.field_O[4][var2] = 16777215;
           }
-          rf.a(16777215, 2, 65793, 13369344, 119);
-          rf.a(4194304, 0, 8388608, 16711680, 83);
-          rf.a(16777215, 1, 65793, 5481009, 86);
-          rf.a(4210688, 3, 8421376, 16776960, 76);
-          rf.a(0, 5, 0, 0, 121);
-          rf.a(0, 6, 4473924, 10066329, param0 - 40);
-          rf.a(16777215, 7, 4473924, 10066329, 108);
-          rf.a(0, 8, 4996418, 14540253, param0 - 50);
-          rf.a(0, 9, 16777215, 14540253, 76);
-          rf.a(4096, 10, 16384, 5481009, param0 ^ 29);
+          ByteStorage.definePaletteColours(16777215, 2, 65793, 13369344, 119);
+          ByteStorage.definePaletteColours(4194304, 0, 8388608, 16711680, 83);
+          ByteStorage.definePaletteColours(16777215, 1, 65793, 5481009, 86);
+          ByteStorage.definePaletteColours(4210688, 3, 8421376, 16776960, 76);
+          ByteStorage.definePaletteColours(0, 5, 0, 0, 121);
+          ByteStorage.definePaletteColours(0, 6, 4473924, 10066329, param0 - 40);
+          ByteStorage.definePaletteColours(16777215, 7, 4473924, 10066329, 108);
+          ByteStorage.definePaletteColours(0, 8, 4996418, 14540253, param0 - 50);
+          ByteStorage.definePaletteColours(0, 9, 16777215, 14540253, 76);
+          ByteStorage.definePaletteColours(4096, 10, 16384, 5481009, param0 ^ 29);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "tf.E(" + param0 + ')');
         }

@@ -1,0 +1,94 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class TrackedSoundStream extends IntrusiveNode {
+    IntrusiveNode field_k;
+    PcmSampleStream field_n;
+    int field_i;
+    static char[] field_o;
+    static int field_m;
+    static double field_j;
+    static Sprite field_h;
+    static Sprite field_p;
+    static int[] field_q;
+    static int field_l;
+
+    final static void setNameSuggestions(boolean param0, String[] param1) {
+        RuntimeException var2 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (LoginConnectionHelpers.field_a != null) {
+            LoginConnectionHelpers.field_a.field_I.setSuggestions(param1, (byte) 53);
+          }
+          if (param0) {
+            TrackedSoundStream.releaseStatics((byte) -67);
+          }
+          if (ReflectionQueueHelpers.field_c == null) {
+            return;
+          }
+          ReflectionQueueHelpers.field_c.field_I.setSuggestions(param1, (byte) 76);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_10_0 = var2;
+          stackIn_10_1 = new StringBuilder().append("hn.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+        }
+    }
+
+    public static void releaseStatics(byte param0) {
+        field_q = null;
+        int var1 = 94 / ((param0 + 33) / 38);
+        field_p = null;
+        field_h = null;
+        field_o = null;
+    }
+
+    final static void setChoiceButtonStyle(int param0, int param1, NineSliceFrame param2, int param3) {
+        if (param0 != 1780) {
+          return;
+        }
+        try {
+          DimensionOnlyResizer.field_b = param2;
+          MainMenuScreen.field_o = param3;
+          MarkerSliderPainter.field_d = param1;
+        } catch (RuntimeException runtimeException) {
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "hn.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+        }
+    }
+
+    final static void setDialogCentre(int param0, byte param1, int param2) {
+        int var3 = -43 % ((param1 + 28) / 38);
+        IntKeyLookup.field_b = param0;
+        SettingsCookieHelpers.field_a = param2;
+    }
+
+    TrackedSoundStream(PcmSampleStream param0, IntrusiveNode param1) {
+        try {
+          this.field_n = param0;
+          this.field_i = param0.getTargetVolumeQ6();
+          this.field_k = param1;
+          this.field_n.setVolumeQ6(128 + this.field_i * AddressHintGlobals.field_c >> 8);
+        } catch (RuntimeException runtimeException) {
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "hn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        field_m = 71;
+        field_o = new char[]{(char)32, (char)160, (char)95, (char)45, (char)224, (char)225, (char)226, (char)228, (char)227, (char)192, (char)193, (char)194, (char)196, (char)195, (char)232, (char)233, (char)234, (char)235, (char)200, (char)201, (char)202, (char)203, (char)237, (char)238, (char)239, (char)205, (char)206, (char)207, (char)242, (char)243, (char)244, (char)246, (char)245, (char)210, (char)211, (char)212, (char)214, (char)213, (char)249, (char)250, (char)251, (char)252, (char)217, (char)218, (char)219, (char)220, (char)231, (char)199, (char)255, (char)376, (char)241, (char)209, (char)223};
+        field_j = Math.atan2(1.0, 0.0);
+        field_q = new int[]{-1, 160, 342, 435};
+        field_l = 8;
+        field_p = new Sprite(720, 560);
+    }
+}

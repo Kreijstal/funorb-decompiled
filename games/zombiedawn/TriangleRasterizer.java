@@ -1,0 +1,67 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class TriangleRasterizer {
+    static int field_g;
+    static int[] field_e;
+    static int field_a;
+    static int field_i;
+    private static int[] field_f;
+    private static int[] field_h;
+    static int[] field_b;
+    private static int[] field_c;
+    static int field_d;
+
+    private final static void centerProjection() {
+        field_a = field_g / 2;
+        field_i = field_d / 2;
+    }
+
+    public static void releaseStatics() {
+        field_b = null;
+        field_h = null;
+        field_f = null;
+        field_e = null;
+        field_c = null;
+    }
+
+    private final static void setClip(int param0, int param1, int param2, int param3) {
+        int var5 = 0;
+        field_g = param2 - param0;
+        field_d = param3 - param1;
+        TriangleRasterizer.centerProjection();
+        if (field_b.length < field_d) {
+          field_b = new int[QuickChatCommandType.nextPowerOfTwo(-922314526, field_d)];
+        }
+        int var4 = param1 * Rasterizer.width + param0;
+        for (var5 = 0; var5 < field_d; var5++) {
+          field_b[var5] = var4;
+          var4 = var4 + Rasterizer.width;
+        }
+    }
+
+    final static void useRasterClip() {
+        TriangleRasterizer.setClip(Rasterizer.clipLeft, Rasterizer.clipTop, Rasterizer.clipRight, Rasterizer.clipBottom);
+    }
+
+    static {
+        int var0 = 0;
+        int var0Lifetime1;
+        int var0Lifetime2;
+        field_h = new int[512];
+        field_f = new int[2048];
+        field_c = new int[2048];
+        field_b = new int[1024];
+        field_e = new int[2048];
+        for (var0 = 1; var0 < 512; var0++) {
+          field_h[var0] = 32768 / var0;
+        }
+        for (var0Lifetime1 = 1; var0Lifetime1 < 2048; var0Lifetime1++) {
+          field_f[var0Lifetime1] = 65536 / var0Lifetime1;
+        }
+        for (var0Lifetime2 = 0; var0Lifetime2 < 2048; var0Lifetime2++) {
+          field_e[var0Lifetime2] = (int)(65536.0 * Math.sin((double)var0Lifetime2 * 0.0030679615));
+          field_c[var0Lifetime2] = (int)(65536.0 * Math.cos((double)var0Lifetime2 * 0.0030679615));
+        }
+    }
+}

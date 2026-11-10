@@ -13,7 +13,7 @@ abstract class Human extends Mover {
     WorldObject field_sb;
     static String field_bb;
     private int field_rb;
-    private nc field_cb;
+    private ScreechEffect field_cb;
     private int field_vb;
     int field_pb;
     int[] field_jb;
@@ -40,7 +40,7 @@ abstract class Human extends Mover {
         this.field_qb = 5;
         this.targetX = this.field_jb[var3];
         this.targetY = this.field_gb[var3];
-        ho.a(this.getY(237239984), (byte) 54, this.getX(true));
+        TileOccupancyHelpers.decrementTileOccupancy(this.getY(237239984), (byte) 54, this.getX(true));
         ImageProducerRasterBuffer.incrementTileOccupancy(this.targetY, this.targetX, (byte) 101);
         this.moveToward(0, this.field_D);
         this.setState(1, -6904);
@@ -69,7 +69,7 @@ abstract class Human extends Mover {
           this.field_hb = false;
         }
         var6 = -this.getY(237239984) + param2;
-        var7 = (double)var4 / (double)so.b(var6 * var6 + var5 * var5);
+        var7 = (double)var4 / (double)SpriteEffectHelpers.approximateSquareRoot(var6 * var6 + var5 * var5);
         this.targetX = this.getX(true) - (int)((double)var5 * var7);
         this.targetY = -(int)((double)var6 * var7) + this.getY(237239984);
         this.moveToward(0, 401408);
@@ -81,22 +81,22 @@ abstract class Human extends Mover {
           stackIn_8_1 = 1;
         }
         this.field_S = stackIn_8_1;
-        ho.a(this.getY(237239984), (byte) 54, this.getX(true));
+        TileOccupancyHelpers.decrementTileOccupancy(this.getY(237239984), (byte) 54, this.getX(true));
         var9 = -1;
-        var10 = pb.a(so.random, 128, 1);
+        var10 = GooPuddleCell.nextBoundedInt(SpriteEffectHelpers.random, 128, 1);
         if (var10 > 110) {
           var9 = this.field_db;
         } else {
           if (var10 > 50) {
             if (this.isMaleVoice(10)) {
-              var9 = pb.a(so.random, 4, 1) + 40;
+              var9 = GooPuddleCell.nextBoundedInt(SpriteEffectHelpers.random, 4, 1) + 40;
             } else {
-              var9 = pb.a(so.random, 3, 1) + 37;
+              var9 = GooPuddleCell.nextBoundedInt(SpriteEffectHelpers.random, 3, 1) + 37;
             }
           }
         }
         if (var9 != -1) {
-          dc.a((byte) 18, var9);
+          SoundEffectPlayer.playSoundEffect((byte) 18, var9);
         }
         return;
     }
@@ -123,7 +123,7 @@ abstract class Human extends Mover {
           var5 = (Zombie) (stackIn_7_0);
           if (var5 == null ||
             var5.isVisibleToHumans(79) ||
-            this instanceof we &&
+            this instanceof ArmySoldier &&
             var5.state != 9) {
             if (!param2 &&
               !this.hasLineOfSight(72, var4)) {
@@ -150,25 +150,25 @@ abstract class Human extends Mover {
         var3 = ZombieDawn.field_J;
         var2 = this.field_t;
         if (0 == var2) {
-          return lc.field_j;
+          return WeightedLruCache.field_j;
         }
         if (var2 == 1) {
-          return lc.field_j;
+          return WeightedLruCache.field_j;
         }
         if (var2 == 2) {
           return IsaacCipher.field_j;
         }
         if (3 == var2) {
-          return lc.field_j;
+          return WeightedLruCache.field_j;
         }
         if (4 == var2) {
           return IsaacCipher.field_j;
         }
         if (var2 == 5) {
-          return lc.field_j;
+          return WeightedLruCache.field_j;
         }
         if (var2 == 6) {
-          return da.field_n;
+          return AchievementBanner.field_n;
         }
         if (7 == var2) {
           return MouseInputHandler.field_a;
@@ -177,31 +177,31 @@ abstract class Human extends Mover {
           return MouseInputHandler.field_a;
         }
         if (var2 == 9) {
-          return gg.field_b;
+          return TextDecodeHelpers.field_b;
         }
         if (10 == var2) {
-          return gg.field_b;
+          return TextDecodeHelpers.field_b;
         }
         if (var2 == 11) {
-          return da.field_h;
+          return AchievementBanner.field_h;
         }
         if (var2 == 12) {
-          return da.field_h;
+          return AchievementBanner.field_h;
         }
         if (var2 == 13) {
-          return pa.field_B;
+          return SingleChildWidget.field_B;
         }
         if (var2 == 14) {
-          return pa.field_B;
+          return SingleChildWidget.field_B;
         }
         if (var2 == 15) {
-          return gn.field_b;
+          return WorldNames.field_b;
         }
         if (var2 == 23) {
-          return qc.field_a;
+          return SoundEffectCleanupHelpers.field_a;
         }
         if (var2 == 16) {
-          return qc.field_a;
+          return SoundEffectCleanupHelpers.field_a;
         }
         if (var2 == 28) {
           return GameApplet.field_h;
@@ -210,7 +210,7 @@ abstract class Human extends Mover {
           return GameApplet.field_h;
         }
         if (var2 == 19) {
-          return jc.field_h;
+          return HighscoreRequest.field_h;
         }
         if (var2 == 29) {
           return MouseInputHandler.field_a;
@@ -231,7 +231,7 @@ abstract class Human extends Mover {
           return MouseInputHandler.field_a;
         }
         if (var2 == 30) {
-          return da.field_n;
+          return AchievementBanner.field_n;
         }
         if (param0 == 24478) {
           return 0;
@@ -315,7 +315,7 @@ abstract class Human extends Mover {
         for (var4 = 0; var4 < this.field_ub; var4++) {
           MouseInputHandler.field_e[var4] = 0;
           if (0 >= this.field_z) {
-            stackIn_8_0 = (mf.a(this.field_gb[var4], this.field_jb[var4], 0)) ? 1 : 0;
+            stackIn_8_0 = (NineSliceFrame.isTileFree(this.field_gb[var4], this.field_jb[var4], 0)) ? 1 : 0;
           } else {
             stackIn_8_0 = 1;
           }
@@ -331,11 +331,11 @@ abstract class Human extends Mover {
               regionExit2: {
                 if ((!(var6 instanceof Zombie) ||
                   !((Zombie) (var6)).isVisibleToHumans(53)) &&
-                  !(var6 instanceof vb)) {
+                  !(var6 instanceof PhantomZombie)) {
                   if (0 == this.field_z) {
                     break regionExit2;
                   }
-                  if (!(var6 instanceof id)) {
+                  if (!(var6 instanceof LevelObstacle)) {
                     break regionExit2;
                   }
                   if (this.field_z != var6.field_z) {
@@ -417,17 +417,17 @@ abstract class Human extends Mover {
               if (this.field_U.isSamplePositionOutOfRange()) {
                 this.field_U = null;
               } else {
-                this.field_U.setVolume(pj.a(var4, 84, var3_int));
+                this.field_U.setVolume(ArchiveRequest.getPositionalVolume(var4, 84, var3_int));
               }
             }
-            if (b.field_h) {
-              bj.field_q.drawString(this.stateName((byte) -34), var3_int, var4, 16777215, 0);
+            if (PendingIntArrayRequest.field_h) {
+              CacheEntry.field_q.drawString(this.stateName((byte) -34), var3_int, var4, 16777215, 0);
               this.drawDebugOverlay(param1, 5060);
             }
             if (var3_int >= -48 &&
               var4 >= -48 &&
-              qj.field_d >= var3_int &&
-              var4 <= me.field_Bb) {
+              MoveTargetMarker.field_d >= var3_int &&
+              var4 <= ArrivingPassenger.field_Bb) {
               if (this.state != 17) {
                 stackIn_20_0 = DualLinkNode.field_k[1];
                 stackIn_20_1 = 12;
@@ -436,23 +436,23 @@ abstract class Human extends Mover {
                 } else {
                   stackIn_21_2 = -3 + var3_int;
                 }
-                so.drawTransparent(stackIn_20_0, stackIn_20_1 + stackIn_21_2, 43 + var4);
+                SpriteEffectHelpers.drawTransparent(stackIn_20_0, stackIn_20_1 + stackIn_21_2, 43 + var4);
               }
               if (this.field_z > 0) {
-                Math.abs(ip.field_p[0].field_w * WorldObject.cosFixed(1311979239, (int)tp.field_p << 6) >> 16);
-                var5 = 6 * WorldObject.cosFixed(1311979239, (int)tp.field_p << 6) >> 16;
-                var6 = rd.a(true, (int)tp.field_p << 7) * 3 >> 16;
-                ip.field_p[0].drawTintedGrayscale(var5 + 24 + (var3_int - 7), 2 + (var4 + var6), bb.field_e[-1 + this.field_z]);
+                Math.abs(MusicPatchPcmStream.field_p[0].field_w * WorldObject.cosFixed(1311979239, (int)MusicCrossfadeStream.field_p << 6) >> 16);
+                var5 = 6 * WorldObject.cosFixed(1311979239, (int)MusicCrossfadeStream.field_p << 6) >> 16;
+                var6 = DropTargetWidget.cosine(true, (int)MusicCrossfadeStream.field_p << 7) * 3 >> 16;
+                MusicPatchPcmStream.field_p[0].drawTintedGrayscale(var5 + 24 + (var3_int - 7), 2 + (var4 + var6), AccountPromptTexts.field_e[-1 + this.field_z]);
               }
-              var5Lifetime1 = cg.field_d[this.state] + this.field_G;
+              var5Lifetime1 = QuickChatCommandType.field_d[this.state] + this.field_G;
               var6Lifetime1 = var3_int;
               var7 = var4;
               if (!(this.field_Z <= 0) ||
-                ng.field_e &&
+                LoginConnectionHelpers.field_e &&
                 (this.field_ib ||
                 this.field_C) &&
-                !bo.field_p[86]) {
-                ki.a((byte) -114, dn.field_E);
+                !AchievementSubmission.field_p[86]) {
+                ContentTransitionDialog.setRasterTarget((byte) -114, DialogLayer.field_E);
                 var4 = 0;
                 Rasterizer.clear();
                 var3_int = 0;
@@ -464,22 +464,22 @@ abstract class Human extends Mover {
                 this.state != 11) {
                 if (3 != this.field_S &&
                   this.field_S != 2) {
-                  ld.field_l[this.field_t][var5Lifetime1].drawMirrored(var3_int, var4);
+                  AlternateLongAndNameCredentials.field_l[this.field_t][var5Lifetime1].drawMirrored(var3_int, var4);
                 } else {
-                  ld.field_l[this.field_t][var5Lifetime1].drawTransparent(var3_int, var4);
+                  AlternateLongAndNameCredentials.field_l[this.field_t][var5Lifetime1].drawTransparent(var3_int, var4);
                 }
               } else {
                 if (this.field_S == 2) {
-                  ld.field_l[this.field_t][var5Lifetime1 + 2].drawTransparent(var3_int, var4);
+                  AlternateLongAndNameCredentials.field_l[this.field_t][var5Lifetime1 + 2].drawTransparent(var3_int, var4);
                 } else {
                   if (this.field_S == 0) {
-                    ld.field_l[this.field_t][var5Lifetime1 + 4].drawTransparent(var3_int, var4);
+                    AlternateLongAndNameCredentials.field_l[this.field_t][var5Lifetime1 + 4].drawTransparent(var3_int, var4);
                   } else {
                     if (this.field_S == 3) {
-                      ld.field_l[this.field_t][var5Lifetime1].drawTransparent(var3_int, var4);
+                      AlternateLongAndNameCredentials.field_l[this.field_t][var5Lifetime1].drawTransparent(var3_int, var4);
                     } else {
                       if (this.field_S == 1) {
-                        ld.field_l[this.field_t][var5Lifetime1].drawMirrored(var3_int, var4);
+                        AlternateLongAndNameCredentials.field_l[this.field_t][var5Lifetime1].drawMirrored(var3_int, var4);
                       }
                     }
                   }
@@ -487,49 +487,49 @@ abstract class Human extends Mover {
               }
               boolean decompiledFrameRemainder0 = true;
               if ((0 >= this.field_Z) &&
-                (decompiledFrameRemainder0 = !(!ng.field_e)) &&
+                (decompiledFrameRemainder0 = !(!LoginConnectionHelpers.field_e)) &&
                 (decompiledFrameRemainder0 = (this.field_ib ||
                 this.field_C))) {
-                decompiledFrameRemainder0 = !(bo.field_p[86]);
+                decompiledFrameRemainder0 = !(AchievementSubmission.field_p[86]);
               }
               if (decompiledFrameRemainder0) {
-                if (ng.field_e && (this.field_ib ||
+                if (LoginConnectionHelpers.field_e && (this.field_ib ||
                   this.field_C)) {
                   stackIn_64_0 = 0;
                   stackIn_64_1 = 0;
-                  stackIn_64_2 = dn.field_E.field_w;
-                  stackIn_64_3 = dn.field_E.field_t;
+                  stackIn_64_2 = DialogLayer.field_E.field_w;
+                  stackIn_64_3 = DialogLayer.field_E.field_t;
                   if (this.field_C) {
                     stackIn_65_4 = 8921617;
                   } else {
                     stackIn_65_4 = 43775;
                   }
-                  so.a(stackIn_64_0, stackIn_64_1, stackIn_64_2, stackIn_64_3, stackIn_65_4);
+                  SpriteEffectHelpers.outlineRasterRegion(stackIn_64_0, stackIn_64_1, stackIn_64_2, stackIn_64_3, stackIn_65_4);
                   stackIn_67_0 = 0;
                   stackIn_67_1 = 0;
-                  stackIn_67_2 = dn.field_E.field_w;
-                  stackIn_67_3 = dn.field_E.field_t;
+                  stackIn_67_2 = DialogLayer.field_E.field_w;
+                  stackIn_67_3 = DialogLayer.field_E.field_t;
                   if (this.field_C) {
                     stackIn_68_4 = 16711680;
                   } else {
                     stackIn_68_4 = 255;
                   }
-                  so.a(stackIn_67_0, stackIn_67_1, stackIn_67_2, stackIn_67_3, stackIn_68_4);
-                  pa.popRasterState(-21189);
+                  SpriteEffectHelpers.outlineRasterRegion(stackIn_67_0, stackIn_67_1, stackIn_67_2, stackIn_67_3, stackIn_68_4);
+                  SingleChildWidget.popRasterState(-21189);
                   var4 = var7;
                   var3_int = var6Lifetime1;
-                  dn.field_E.drawTransparent(var3_int, var4);
+                  DialogLayer.field_E.drawTransparent(var3_int, var4);
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  pa.popRasterState(-21189);
+                  SingleChildWidget.popRasterState(-21189);
                   var4 = var7;
                   var3_int = var6Lifetime1;
-                  dn.field_E.drawTransparentWithOpacity(var3_int, var4, 142);
+                  DialogLayer.field_E.drawTransparentWithOpacity(var3_int, var4, 142);
                 }
               }
-              if (kc.field_Q) {
-                Js5Transport.field_k.drawStringCentered(s.a(1938762664, "<%0>,<%1>", new String[]{Integer.toString(this.field_B), Integer.toString(this.field_u)}), 24 + var3_int, -5 + var4, 16777215, 0);
+              if (LaserBarrier.field_Q) {
+                Js5Transport.field_k.drawStringCentered(BlastAffectedObject.substituteTemplateArguments(1938762664, "<%0>,<%1>", new String[]{Integer.toString(this.field_B), Integer.toString(this.field_u)}), 24 + var3_int, -5 + var4, 16777215, 0);
               }
               if (this.field_ob) {
                 DualLinkNode.field_k[0].drawTransparentWithOpacity(var3_int, var4, 128, 16711680);
@@ -643,8 +643,8 @@ abstract class Human extends Mover {
         var4 = ZombieDawn.field_J;
         if (400 + this.field_t > Js5Archive.field_e.field_r &&
           Js5Archive.field_e.field_r > 200 &&
-          pb.a(so.random, 25, 1) == 0) {
-          this.knockBackFrom(this.getX(true) + pb.a(so.random, 1000, 1) - 500, 78, this.getY(237239984) - (-pb.a(so.random, 1000, 1) + 500));
+          GooPuddleCell.nextBoundedInt(SpriteEffectHelpers.random, 25, 1) == 0) {
+          this.knockBackFrom(this.getX(true) + GooPuddleCell.nextBoundedInt(SpriteEffectHelpers.random, 1000, 1) - 500, 78, this.getY(237239984) - (-GooPuddleCell.nextBoundedInt(SpriteEffectHelpers.random, 1000, 1) + 500));
         }
         if (param0 < 95) {
           this.field_gb = (int[]) null;
@@ -655,7 +655,7 @@ abstract class Human extends Mover {
           if (this.state != 2) {
             return;
           }
-          if (-3 + cg.field_h[2] == this.field_G) {
+          if (-3 + QuickChatCommandType.field_h[2] == this.field_G) {
             this.field_N = 0;
           }
           return;
@@ -673,7 +673,7 @@ abstract class Human extends Mover {
                 this.field_lb = 53;
               } else {
                 if (!this.field_hb) {
-                  stackIn_96_1 = pb.a(so.random, 200, 1) + 20;
+                  stackIn_96_1 = GooPuddleCell.nextBoundedInt(SpriteEffectHelpers.random, 200, 1) + 20;
                 } else {
                   stackIn_96_1 = 65;
                 }
@@ -744,8 +744,8 @@ abstract class Human extends Mover {
                 this.field_qb = 0;
                 var2 = 0;
                 var3 = Js5Archive.field_e.field_lb.last((byte) 26);
-                while (var3 instanceof mm) {
-                  var2 = var2 != 0 | ((mm) (var3)).a(this, (byte) 108) ? 1 : 0;
+                while (var3 instanceof GooPuddle) {
+                  var2 = var2 != 0 | ((GooPuddle) (var3)).containsHuman(this, (byte) 108) ? 1 : 0;
                   var3 = var3.previous;
                 }
                 if (!this.field_nb &&
@@ -774,8 +774,8 @@ abstract class Human extends Mover {
                 this.field_qb = 0;
                 var2Lifetime1 = 0;
                 var3 = Js5Archive.field_e.field_lb.last((byte) 26);
-                while (var3 instanceof mm) {
-                  var2Lifetime1 = var2Lifetime1 != 0 | ((mm) (var3)).a(this, (byte) 79) ? 1 : 0;
+                while (var3 instanceof GooPuddle) {
+                  var2Lifetime1 = var2Lifetime1 != 0 | ((GooPuddle) (var3)).containsHuman(this, (byte) 79) ? 1 : 0;
                   var3 = var3.previous;
                 }
                 if (!this.field_nb &&
@@ -807,7 +807,7 @@ abstract class Human extends Mover {
                 }
                 this.field_qb = 0;
                 decompiledFrameRemainder0 = (this.field_cb == null ||
-                  this.field_cb.c(111));
+                  this.field_cb.isFinished(111));
                 if (decompiledFrameRemainder0) {
                   this.field_cb = null;
                   this.setState(0, -6904);
@@ -850,15 +850,15 @@ abstract class Human extends Mover {
         this.field_ob = false;
         this.field_vb = 0;
         Sprite discarded$0 = new Sprite(48, 48);
-        this.field_lb = pb.a(so.random, 200, 1);
+        this.field_lb = GooPuddleCell.nextBoundedInt(SpriteEffectHelpers.random, 200, 1);
         this.field_jb = new int[61];
         this.field_gb = new int[61];
         this.resetFleePoints((byte) 79);
-        this.field_qb = pb.a(so.random, 5, 1);
+        this.field_qb = GooPuddleCell.nextBoundedInt(SpriteEffectHelpers.random, 5, 1);
         if (this.isMaleVoice(10)) {
-          this.field_db = 49 + pb.a(so.random, 4, 1);
+          this.field_db = 49 + GooPuddleCell.nextBoundedInt(SpriteEffectHelpers.random, 4, 1);
         } else {
-          this.field_db = pb.a(so.random, 3, 1) + 26;
+          this.field_db = GooPuddleCell.nextBoundedInt(SpriteEffectHelpers.random, 3, 1) + 26;
         }
     }
 
@@ -885,7 +885,7 @@ abstract class Human extends Mover {
             var6 = (Zombie) (var5);
             if (var6 != null && (param0 ||
               var6.state != 8) && (var6.isVisibleToHumans(87) ||
-              this instanceof we)) {
+              this instanceof ArmySoldier)) {
               if (var6.field_hb) {
                 var5 = this.nextNearbyObject((byte) 32);
                 continue;
@@ -902,7 +902,7 @@ abstract class Human extends Mover {
         return false;
     }
 
-    final void updateScreechReaction(nc param0, int param1) {
+    final void updateScreechReaction(ScreechEffect param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -983,8 +983,8 @@ abstract class Human extends Mover {
         int var3 = this.getX(true);
         int var4 = this.getY(237239984);
         for (var5 = 0; var5 < this.field_ub - 1; var5++) {
-          this.field_jb[var5] = qd.field_a[var5] + var3;
-          this.field_gb[var5] = var4 + qd.field_f[var5];
+          this.field_jb[var5] = CutsceneStateHelpers.field_a[var5] + var3;
+          this.field_gb[var5] = var4 + CutsceneStateHelpers.field_f[var5];
         }
         this.field_jb[this.field_ub - 1] = var3;
         this.field_gb[-1 + this.field_ub] = var4;
@@ -1068,7 +1068,7 @@ abstract class Human extends Mover {
 
     abstract void drawDebugOverlay(Camera param0, int param1);
 
-    void startScreechCower(nc param0, byte param1) {
+    void startScreechCower(ScreechEffect param0, byte param1) {
         if (this.state == 18 ||
           20 == this.state ||
           this.state == 16 ||

@@ -123,22 +123,22 @@ final class LevelNavigation {
         var14 = ZombieDawn.field_J;
         try {
           var5_int = WhirlpoolHasher.field_d - param0.x;
-          var6 = nh.field_G - param0.y;
+          var6 = DropdownList.field_G - param0.y;
           if (-24 > var5_int) {
             var5_int = var5_int % 24;
           }
           if (var6 < -24) {
             var6 = var6 % 24;
           }
-          if (!(this.field_v.length >= nh.field_I) ||
+          if (!(this.field_v.length >= DropdownList.field_I) ||
             !(WhirlpoolHasher.field_a <= this.field_v[0].length)) {
-            this.field_v = new int[nh.field_I][WhirlpoolHasher.field_a];
+            this.field_v = new int[DropdownList.field_I][WhirlpoolHasher.field_a];
           }
           var7 = var5_int;
           if (!param2) {
             return;
           }
-          for (var8 = 0; var8 < nh.field_I; var8++) {
+          for (var8 = 0; var8 < DropdownList.field_I; var8++) {
             for (var9 = 0; var9 < WhirlpoolHasher.field_a; var9++) {
               boolean decompiledFrameRemainder0 = true;
               if (this.field_b[0].length > (var9 + this.field_f) &&
@@ -151,14 +151,14 @@ final class LevelNavigation {
                   }
                   else {
                     var11 = -1 + (var10 >> 7 & 511);
-                    var12 = -2 + tm.field_h.length;
-                    if (ng.field_e &&
-                      !bo.field_p[86]) {
+                    var12 = -2 + SoundEffectNode.field_h.length;
+                    if (LoginConnectionHelpers.field_e &&
+                      !AchievementSubmission.field_p[86]) {
                       var12 += 3;
                     }
                     if (var11 >= 0 &&
                       var12 > var11) {
-                      var13 = tm.field_h[var11];
+                      var13 = SoundEffectNode.field_h[var11];
                       if ((1073741824 & var10) > 0) {
                         var13.drawMirrored(var5_int, var6);
                       } else {
@@ -208,7 +208,7 @@ final class LevelNavigation {
                           }
                         }
                       }
-                      if (kc.field_Q) {
+                      if (LaserBarrier.field_Q) {
                         Rasterizer.drawRectOutline(var5_int, var6, 25, 25, 7864183);
                       }
                     }
@@ -220,8 +220,8 @@ final class LevelNavigation {
                     else {
                       var11 = ((var10 & 33488896) >> 16) - 1;
                       if (var11 >= 0 &&
-                        var11 < tm.field_h.length) {
-                        var12_ref_vn = tm.field_h[var11];
+                        var11 < SoundEffectNode.field_h.length) {
+                        var12_ref_vn = SoundEffectNode.field_h[var11];
                         var13 = var12_ref_vn;
                         var13 = var12_ref_vn;
                         if ((var10 & 268435456) <= 0) {
@@ -234,12 +234,12 @@ final class LevelNavigation {
                           var12_ref_vn.drawMirrored(var5_int, var6);
                         }
                       }
-                      if (dg.field_a) {
+                      if (ProxyAuthException.field_a) {
                         if (0 != (33554432 & var10)) {
                           Rasterizer.fillRectangleBlended(var5_int, var6, 24, 24, 16744448, 128);
                         }
                         if (var11 >= 0 &&
-                          var11 < tm.field_h.length) {
+                          var11 < SoundEffectNode.field_h.length) {
                           var12 = this.field_f + var9;
                           var13_int = var8 + this.field_j;
                           if (this.isCellOpen(0, var12, 1 + var13_int) ||
@@ -287,11 +287,11 @@ final class LevelNavigation {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        jc var4 = null;
+        HighscoreRequest var4 = null;
         long var4_long = 0L;
         int var5 = 0;
         int var6 = 0;
-        rc var6_ref_rc = null;
+        PendingRecordRequest var6_ref_rc = null;
         int var7 = 0;
         String[][] var8 = null;
         String[][] var9 = null;
@@ -310,45 +310,45 @@ final class LevelNavigation {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        am var27 = null;
+        BitPacketBuffer var27 = null;
         int var3Lifetime1;
         int var25Lifetime1;
         int var25Lifetime2;
         var26 = ZombieDawn.field_J;
         try {
-          var27 = fj.field_g;
+          var27 = MatchingTextValidator.field_g;
           if (param0 >= -71) {
             return;
           }
           var2 = var27.readUnsignedByte((byte) -128);
           if (var2 == 0) {
             var3 = var27.readUnsignedShort(2);
-            var4 = (jc) (TileMap.field_g.last((byte) 26));
+            var4 = (HighscoreRequest) (TileMap.field_g.last((byte) 26));
             while (var4 != null) {
               if (var4.field_s != var3) {
-                var4 = (jc) (TileMap.field_g.previous(false));
+                var4 = (HighscoreRequest) (TileMap.field_g.previous(false));
                 continue;
               }
               break;
             }
             if (var4 == null) {
-              p.a(1);
+              SessionSocketHelpers.closeSessionSocket(1);
               return;
             }
             var5 = var27.readUnsignedByte((byte) -122);
             if (var5 != 0) {
               var6 = var4.field_u;
-              cm.field_b[0].field_d = null;
-              cm.field_b[0].field_a = false;
-              cm.field_b[0].field_c = ce.field_r;
+              LoginNameSupport.field_b[0].field_d = null;
+              LoginNameSupport.field_b[0].field_a = false;
+              LoginNameSupport.field_b[0].field_c = VisualPropertyNode.field_r;
               var7 = var4.field_o;
               for (var8_int = 1; var5 > var8_int; var8_int++) {
-                cm.field_b[var8_int].field_c = var27.readNullTerminatedString(true);
-                cm.field_b[var8_int].field_a = false;
+                LoginNameSupport.field_b[var8_int].field_c = var27.readNullTerminatedString(true);
+                LoginNameSupport.field_b[var8_int].field_a = false;
                 if (1 != var27.readUnsignedByte((byte) -128)) {
-                  cm.field_b[var8_int].field_d = null;
+                  LoginNameSupport.field_b[var8_int].field_d = null;
                 } else {
-                  cm.field_b[var8_int].field_d = var27.readNullTerminatedString(true);
+                  LoginNameSupport.field_b[var8_int].field_d = var27.readNullTerminatedString(true);
                 }
               }
               dupTemp$0 = new String[3][var6];
@@ -371,12 +371,12 @@ final class LevelNavigation {
               if (0 < var18) {
                 for (var19 = 0; var18 > var19; var19++) {
                   var20 = var27.readUnsignedByte((byte) -127);
-                  var21 = cm.field_b[var20].field_c;
+                  var21 = LoginNameSupport.field_b[var20].field_c;
                   var22 = var27.readLong(true);
                   var24 = var27.position;
                   if (var19 < var6) {
                     var8[0][var12] = var21;
-                    var9[0][var12] = cm.field_b[var20].field_d;
+                    var9[0][var12] = LoginNameSupport.field_b[var20].field_d;
                     var10[0][var12] = var22;
                     var12++;
                     for (var25 = 0; var25 < var7; var25++) {
@@ -386,8 +386,8 @@ final class LevelNavigation {
                     }
                   }
                   if (var21 != null &&
-                    l.a(89, var21)) {
-                    var8[1][var13] = ce.field_r;
+                    TextAndNameCredentials.isCurrentUser(89, var21)) {
+                    var8[1][var13] = VisualPropertyNode.field_r;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
                     var27.position = var24;
@@ -399,10 +399,10 @@ final class LevelNavigation {
                     }
                   }
                   if (var6 > var14 &&
-                    !cm.field_b[var20].field_a) {
-                    cm.field_b[var20].field_a = true;
+                    !LoginNameSupport.field_b[var20].field_a) {
+                    LoginNameSupport.field_b[var20].field_a = true;
                     var8[2][var14] = var21;
-                    var9[2][var14] = cm.field_b[var20].field_d;
+                    var9[2][var14] = LoginNameSupport.field_b[var20].field_d;
                     var10[2][var14] = var22;
                     var14++;
                     var27.position = var24;
@@ -422,24 +422,24 @@ final class LevelNavigation {
           if (1 == var2) {
             var3Lifetime1 = var27.readUnsignedShort(2);
             var4_long = var27.readLong(true);
-            var6_ref_rc = (rc) (hk.field_F.last((byte) 26));
+            var6_ref_rc = (PendingRecordRequest) (TrafficVehicle.field_F.last((byte) 26));
             while (var6_ref_rc != null) {
               if (var3Lifetime1 != var6_ref_rc.field_i) {
-                var6_ref_rc = (rc) (hk.field_F.previous(false));
+                var6_ref_rc = (PendingRecordRequest) (TrafficVehicle.field_F.previous(false));
                 continue;
               }
               break;
             }
             if (var6_ref_rc == null) {
-              p.a(1);
+              SessionSocketHelpers.closeSessionSocket(1);
               return;
             }
             var6_ref_rc.field_s = var4_long;
             var6_ref_rc.unlink(-27598);
             return;
           }
-          ae.a((Throwable) null, 10331, "HS1: " + cb.f(3));
-          p.a(1);
+          ErrorReportHelpers.reportClientError((Throwable) null, 10331, "HS1: " + VisualPropertyOverrides.describePacketHistory(3));
+          SessionSocketHelpers.closeSessionSocket(1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -576,7 +576,7 @@ final class LevelNavigation {
         float var7 = 12.0f;
         int var8 = -param1 + param5;
         int var9 = param0 - param2;
-        int var10 = so.b(var9 * var9 + var8 * var8);
+        int var10 = SpriteEffectHelpers.approximateSquareRoot(var9 * var9 + var8 * var8);
         if (var10 == 0) {
           return 0;
         }
@@ -720,7 +720,7 @@ final class LevelNavigation {
         int var17 = 0;
         Point var18 = null;
         Object var19 = null;
-        oo var20 = null;
+        Tree var20 = null;
         int var13Lifetime1;
         int var14Lifetime1;
         var19 = null;
@@ -731,7 +731,7 @@ final class LevelNavigation {
           this.field_g = 0;
           this.field_z = 0;
           var3_int = WhirlpoolHasher.field_d - param1.x;
-          var4 = -param1.y + nh.field_G;
+          var4 = -param1.y + DropdownList.field_G;
           var5 = 0;
           var6 = 0;
           if (var4 < -24) {
@@ -743,15 +743,15 @@ final class LevelNavigation {
             var3_int = var3_int % 24;
           }
           var7 = 0;
-          if (!(this.field_v.length >= nh.field_I) ||
+          if (!(this.field_v.length >= DropdownList.field_I) ||
             !(WhirlpoolHasher.field_a <= this.field_v[0].length)) {
-            this.field_v = new int[nh.field_I][WhirlpoolHasher.field_a];
+            this.field_v = new int[DropdownList.field_I][WhirlpoolHasher.field_a];
           }
           var8 = var5 + WhirlpoolHasher.field_a;
           if (this.field_A.field_k < var8) {
             var8 = this.field_A.field_k;
           }
-          var9 = nh.field_I + var6;
+          var9 = DropdownList.field_I + var6;
           if (this.field_A.field_r < var9) {
             var9 = this.field_A.field_r;
           }
@@ -765,13 +765,13 @@ final class LevelNavigation {
           var12 = 0;
           this.field_j = var6;
           if (24 + WhirlpoolHasher.field_e == GameLoopApplet.field_A.field_r &&
-            GameLoopApplet.field_A.field_q == nh.field_P + 24) {
+            GameLoopApplet.field_A.field_q == DropdownList.field_P + 24) {
             if (0 > this.field_y) {
-              gp.fillInts(GameLoopApplet.field_A.field_z, 0, GameLoopApplet.field_A.field_z.length, 0);
+              ArraySupport.fillInts(GameLoopApplet.field_A.field_z, 0, GameLoopApplet.field_A.field_z.length, 0);
             }
           } else {
             GameLoopApplet.field_A = null;
-            GameLoopApplet.field_A = new Sprite(24 + WhirlpoolHasher.field_e, nh.field_P + 24);
+            GameLoopApplet.field_A = new Sprite(24 + WhirlpoolHasher.field_e, DropdownList.field_P + 24);
             this.field_y = -1;
           }
           if (this.field_y >= 0) {
@@ -795,13 +795,13 @@ final class LevelNavigation {
           this.field_y = var5;
           this.field_c = var6;
           if (var7 != 0) {
-            ki.a((byte) -121, GameLoopApplet.field_A);
+            ContentTransitionDialog.setRasterTarget((byte) -121, GameLoopApplet.field_A);
             var13Lifetime1 = 0;
             var14Lifetime1 = 0;
             while (var9 > var6) {
               while (var5 < var8) {
                 var15_int = this.getRenderTile(var6, -39, var5);
-                if (ub.findAnimatedTile(127, this.field_A.tiles[var6][var5]) != null ||
+                if (LevelHud.findAnimatedTile(127, this.field_A.tiles[var6][var5]) != null ||
                   this.field_r <= var5 &&
                   this.field_z >= var5 ||
                   this.field_n <= var6 &&
@@ -832,8 +832,8 @@ final class LevelNavigation {
               this.field_z >= this.field_r)) {
               var15 = Js5Archive.field_e.zombies.last((byte) 26);
               while (var15 != null) {
-                if (var15 instanceof oo) {
-                  var20 = (oo) (var15);
+                if (var15 instanceof Tree) {
+                  var20 = (Tree) (var15);
                   var20.drawShadow(param1, (byte) 65);
                 }
                 var15 = Js5Archive.field_e.zombies.previous(false);
@@ -841,7 +841,7 @@ final class LevelNavigation {
             }
             param1.y = param1.y - var4;
             param1.x = param1.x - var3_int;
-            pa.popRasterState(-21189);
+            SingleChildWidget.popRasterState(-21189);
             GameLoopApplet.field_A.drawWithOffsets(var3_int, var4);
             return;
           }
@@ -1158,12 +1158,12 @@ final class LevelNavigation {
         int var10Lifetime1Lifetime1;
         var15 = ZombieDawn.field_J;
         try {
-          if (!ng.field_e &&
+          if (!LoginConnectionHelpers.field_e &&
             !this.field_A.field_e) {
             this.drawFloorCached(-19795, param0);
           } else {
             var3_int = -param0.x + WhirlpoolHasher.field_d;
-            var4 = -param0.y + nh.field_G;
+            var4 = -param0.y + DropdownList.field_G;
             var5 = 0;
             var6 = 0;
             if (var3_int < -24) {
@@ -1175,12 +1175,12 @@ final class LevelNavigation {
               var4 = var4 % 24;
             }
             var7 = var5 + WhirlpoolHasher.field_a;
-            var8 = var6 + nh.field_I;
+            var8 = var6 + DropdownList.field_I;
             var9 = var3_int;
             var10 = var5;
             var11 = 0;
             var12 = 0;
-            for (var13 = 0; var13 < nh.field_I; var13++) {
+            for (var13 = 0; var13 < DropdownList.field_I; var13++) {
               for (var14 = 0; var14 < WhirlpoolHasher.field_a; var14++) {
                 this.field_v[var13][var14] = 0;
               }
@@ -1221,8 +1221,8 @@ final class LevelNavigation {
             return;
           }
           if (UiWidget.field_w) {
-            var3_intLifetime1 = param0.screenToWorldX(ha.field_b, false);
-            var4Lifetime1 = param0.screenToWorldY(ei.field_K, true);
+            var3_intLifetime1 = param0.screenToWorldX(KeyStateHelpers.field_b, false);
+            var4Lifetime1 = param0.screenToWorldY(FadingModalPanel.field_K, true);
             for (var5Lifetime1 = 0; this.field_i.length > var5Lifetime1; var5Lifetime1++) {
               var6Lifetime1 = param0.worldToScreenX(this.field_i[var5Lifetime1].x, (byte) -104);
               var7Lifetime1 = param0.worldToScreenY(this.field_i[var5Lifetime1].y, 0);
@@ -1241,7 +1241,7 @@ final class LevelNavigation {
             }
             for (var5Lifetime1Lifetime1 = 0; var5Lifetime1Lifetime1 < this.field_i.length; var5Lifetime1Lifetime1++) {
               var6Lifetime1Lifetime1 = WhirlpoolHasher.field_d - param0.x + this.field_i[var5Lifetime1Lifetime1].x;
-              var7Lifetime1Lifetime1 = -param0.y + this.field_i[var5Lifetime1Lifetime1].y + nh.field_G;
+              var7Lifetime1Lifetime1 = -param0.y + this.field_i[var5Lifetime1Lifetime1].y + DropdownList.field_G;
               Rasterizer.fillCircleBlended(var6Lifetime1Lifetime1, var7Lifetime1Lifetime1, 2, 16711680, 256);
               Js5Transport.field_k.drawLeftAlpha(Integer.toString(var5Lifetime1Lifetime1), var6Lifetime1Lifetime1, var7Lifetime1Lifetime1, 16777215, 0, 64);
             }
@@ -1264,7 +1264,7 @@ final class LevelNavigation {
             }
             for (var5Lifetime1Lifetime3 = 0; var5Lifetime1Lifetime3 < this.field_C.length; var5Lifetime1Lifetime3++) {
               var6Lifetime1Lifetime3 = WhirlpoolHasher.field_d + (-param0.x + this.field_C[var5Lifetime1Lifetime3].x);
-              var7Lifetime1Lifetime3 = this.field_C[var5Lifetime1Lifetime3].y + (-param0.y + nh.field_G);
+              var7Lifetime1Lifetime3 = this.field_C[var5Lifetime1Lifetime3].y + (-param0.y + DropdownList.field_G);
               Rasterizer.fillCircleBlended(var6Lifetime1Lifetime3, var7Lifetime1Lifetime3, 2, 34952, 256);
               Js5Transport.field_k.drawLeftAlpha(Integer.toString(var5Lifetime1Lifetime3), var6Lifetime1Lifetime3, var7Lifetime1Lifetime3, 2285021, 0, 64);
             }
@@ -1293,7 +1293,7 @@ final class LevelNavigation {
     }
 
     LevelNavigation(TileMap param0) {
-        this.field_v = new int[nh.field_I][WhirlpoolHasher.field_a];
+        this.field_v = new int[DropdownList.field_I][WhirlpoolHasher.field_a];
         this.field_c = -1;
         this.field_y = -1;
         try {

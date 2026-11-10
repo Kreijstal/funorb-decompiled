@@ -16,8 +16,8 @@ abstract class SocketConnector {
     final static void clearSessionAndReload(java.applet.Applet param0, byte param1) {
         try {
           int var2_int = 94 % ((param1 - 9) / 62);
-          pl.setSessionCookie("", (byte) 71, param0);
-          fo.a(38205, param0);
+          LevelSelectScreen.setSessionCookie("", (byte) 71, param0);
+          PageReloadHelpers.reloadPage(38205, param0);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "qg.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -55,7 +55,7 @@ abstract class SocketConnector {
           String var5Lifetime5;
           String var5Lifetime6;
           try {
-            nj.field_X = param2;
+            FullscreenConfirmationDialog.field_X = param2;
             try {
               if (param0 != 165) {
                 return;
@@ -72,9 +72,9 @@ abstract class SocketConnector {
               if (param2.length() == 0) {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               } else {
-                var5Lifetime6 = var7 + "; Expires=" + jb.formatCookieDate(param0 ^ 2147483482, 94608000000L + pd.monotonicTimeMillis(-22826)) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var7 + "; Expires=" + SpriteCheckboxPainter.formatCookieDate(param0 ^ 2147483482, 94608000000L + MonotonicClock.monotonicTimeMillis(-22826)) + "; Max-Age=" + 94608000L;
               }
-              qe.a("document.cookie=\"" + var5Lifetime6 + "\"", param1, (byte) 63);
+              JavaScriptBridge.evalJavaScript("document.cookie=\"" + var5Lifetime6 + "\"", param1, (byte) 63);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;

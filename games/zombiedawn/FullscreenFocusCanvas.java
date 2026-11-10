@@ -6,7 +6,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     volatile boolean field_a;
     static int[] field_b;
     static Sprite[] field_c;
-    static uh field_d;
+    static PowerupBar field_d;
 
     public static void releaseStatics(int param0) {
         if (param0 < 39) {
@@ -24,22 +24,22 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
 
     final static void updateBackdropActors(int param0) {
         int var2 = 0;
-        u[] var1 = null;
-        u var3 = null;
+        MenuBackgroundActor[] var1 = null;
+        MenuBackgroundActor var3 = null;
         int var4 = 0;
-        u[] var5 = null;
+        MenuBackgroundActor[] var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
         var4 = ZombieDawn.field_J;
         try {
-          var5 = ij.field_L;
+          var5 = DraggableWidget.field_L;
           var1 = var5;
           if (param0 < 17) {
             FullscreenFocusCanvas.persistSessionSeedBytes((byte) 114);
           }
           for (var2 = 0; var2 < var5.length; var2++) {
             var3 = var5[var2];
-            var3.c(-23);
+            var3.draw(-23);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -51,7 +51,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
 
     final void exitFullscreen(PlatformTaskDispatcher param0, byte param1) {
         try {
-          jb.closeFullscreenFrame(113, this.field_e, param0);
+          SpriteCheckboxPainter.closeFullscreenFrame(113, this.field_e, param0);
           if (param1 <= 112) {
             java.awt.Graphics var4 = (java.awt.Graphics) null;
             this.paint((java.awt.Graphics) null);
@@ -63,10 +63,10 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
 
     final static int getEnteredAge(int param0) {
         if (param0 != 0) {
-          field_d = (uh) null;
-          return ae.field_a;
+          field_d = (PowerupBar) null;
+          return ErrorReportHelpers.field_a;
         }
-        return ae.field_a;
+        return ErrorReportHelpers.field_a;
     }
 
     public final void update(java.awt.Graphics param0) {
@@ -82,18 +82,18 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           if (param0 < 57) {
             field_b = (int[]) null;
           }
-          if (null != ce.field_t) {
+          if (null != VisualPropertyNode.field_t) {
             try {
-              ce.field_t.seek(0, 0L);
-              ce.field_t.write(122, fj.field_g.payload, fj.field_g.position, 24);
+              VisualPropertyNode.field_t.seek(0, 0L);
+              VisualPropertyNode.field_t.write(122, MatchingTextValidator.field_g.payload, MatchingTextValidator.field_g.position, 24);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
-              fj.field_g.position = fj.field_g.position + 24;
+              MatchingTextValidator.field_g.position = MatchingTextValidator.field_g.position + 24;
               return;
             }
           }
-          fj.field_g.position = fj.field_g.position + 24;
+          MatchingTextValidator.field_g.position = MatchingTextValidator.field_g.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -112,11 +112,11 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    final static oi loadBinaryFont(Js5Archive param0, int param1, Js5Archive param2, byte param3, int param4) {
+    final static BinaryBitmapFont loadBinaryFont(Js5Archive param0, int param1, Js5Archive param2, byte param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
-        oi stackIn_5_0 = null;
-        oi stackIn_7_0 = null;
+        BinaryBitmapFont stackIn_5_0 = null;
+        BinaryBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -124,15 +124,15 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!ph.a(param4, 31043, param1, param2)) {
+          if (!SpriteSheetArchiveHelpers.decodeSpriteSheetFromArchive(param4, 31043, param1, param2)) {
             stackIn_2_0 = null;
-            return (oi) (stackIn_2_0);
+            return (BinaryBitmapFont) (stackIn_2_0);
           }
           if (param3 <= -96) {
             stackIn_7_0 = Point.createGlyphFont(-16491, param0.getFile((byte) 51, param4, param1));
             return stackIn_7_0;
           }
-          stackIn_5_0 = (oi) null;
+          stackIn_5_0 = (BinaryBitmapFont) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -154,16 +154,16 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         }
     }
 
-    final static vk validateEmailAddress(String param0, byte param1) {
+    final static InputValidationResult validateEmailAddress(String param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;
         String var4 = null;
-        vk var5 = null;
-        vk stackIn_4_0 = null;
-        vk stackIn_8_0 = null;
-        vk stackIn_11_0 = null;
-        vk stackIn_15_0 = null;
+        InputValidationResult var5 = null;
+        InputValidationResult stackIn_4_0 = null;
+        InputValidationResult stackIn_8_0 = null;
+        InputValidationResult stackIn_11_0 = null;
+        InputValidationResult stackIn_15_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -173,23 +173,23 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             param0.length() != 0) {
             var2_int = param0.indexOf('@');
             if (var2_int == -1) {
-              stackIn_8_0 = bg.field_l;
+              stackIn_8_0 = DelayedPacket.field_l;
               return stackIn_8_0;
             }
             var3 = param0.substring(0, var2_int);
             var4 = param0.substring(var2_int + 1);
-            var5 = be.a(var3, (byte) -65);
+            var5 = OctaveNoiseMap.validateEmailLocalPart(var3, (byte) -65);
             if (var5 != null) {
               stackIn_11_0 = var5;
               return stackIn_11_0;
             }
             if (param1 > -57) {
-              field_d = (uh) null;
+              field_d = (PowerupBar) null;
             }
-            stackIn_15_0 = of.a(var4, 8947848);
+            stackIn_15_0 = WidgetTheme.validateEmailDomain(var4, 8947848);
             return stackIn_15_0;
           }
-          stackIn_4_0 = qd.field_b;
+          stackIn_4_0 = CutsceneStateHelpers.field_b;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

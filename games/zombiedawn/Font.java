@@ -10,7 +10,7 @@ abstract class Font extends DualLinkNode {
     private byte[] field_z;
     private int[] field_J;
     private int[] field_H;
-    private qb[] field_B;
+    private AbstractSprite[] field_B;
     int field_C;
     private int[] field_E;
     int field_x;
@@ -45,7 +45,7 @@ abstract class Font extends DualLinkNode {
     }
 
     final int charWidth(char param0) {
-        return this.field_r[tb.encodeCodePageChar(param0, -8225) & 255];
+        return this.field_r[EditableTextWidget.encodeCodePageChar(param0, -8225) & 255];
     }
 
     private final static int computePairKerning(byte[][] param0, byte[][] param1, int[] param2, int[] param3, int[] param4, int param5, int param6) {
@@ -122,7 +122,7 @@ abstract class Font extends DualLinkNode {
         int var9 = 0;
         int var10 = 0;
         Exception var10_ref_Exception = null;
-        qb var11_ref_qb = null;
+        AbstractSprite var11_ref_qb = null;
         int var11 = 0;
         int var12 = 0;
         CharSequence var13 = null;
@@ -200,7 +200,7 @@ abstract class Font extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
-              var8 = (char)(tb.encodeCodePageChar((char) var8, -8225) & 255);
+              var8 = (char)(EditableTextWidget.encodeCodePageChar((char) var8, -8225) & 255);
               if (this.field_z != null &&
                 var5 != 0) {
                 param1 = param1 + this.field_z[(var5 << 8) + var8];
@@ -271,7 +271,7 @@ abstract class Font extends DualLinkNode {
         if (param0 == null) {
           return 0;
         }
-        mo.a(0, 0, ' ', field_G);
+        IntKeyLookup.resizeAndPad(0, 0, ' ', field_G);
         var4 = 0;
         var5 = 0;
         var6 = -1;
@@ -388,7 +388,7 @@ abstract class Font extends DualLinkNode {
             if (var9 == -1) {
               if (var14 != 0) {
                 discarded$3 = field_G.append((char) var14);
-                var14 = (char)(tb.encodeCodePageChar((char) var14, -8225) & 255);
+                var14 = (char)(EditableTextWidget.encodeCodePageChar((char) var14, -8225) & 255);
                 var4 = var4 + this.field_r[var14];
                 if (this.field_z != null &&
                   var10 != 0) {
@@ -659,7 +659,7 @@ abstract class Font extends DualLinkNode {
                                 }
                               } else {
                                 var7 = (CharSequence) ((Object) param0.substring(5));
-                                field_F = sa.a(var7, (byte) 124, 16);
+                                field_F = LoadingProgressDialog.parseIntRadix(var7, (byte) 124, 16);
                               }
                             } else {
                               field_u = -1;
@@ -669,7 +669,7 @@ abstract class Font extends DualLinkNode {
                           }
                         } else {
                           var6 = (CharSequence) ((Object) param0.substring(2));
-                          field_u = sa.a(var6, (byte) -73, 16);
+                          field_u = LoadingProgressDialog.parseIntRadix(var6, (byte) -73, 16);
                         }
                       } else {
                         field_q = -1;
@@ -679,7 +679,7 @@ abstract class Font extends DualLinkNode {
                     }
                   } else {
                     var5 = (CharSequence) ((Object) param0.substring(4));
-                    field_q = sa.a(var5, (byte) 122, 16);
+                    field_q = LoadingProgressDialog.parseIntRadix(var5, (byte) 122, 16);
                   }
                 } else {
                   field_v = field_A;
@@ -693,7 +693,7 @@ abstract class Font extends DualLinkNode {
             }
           } else {
             var3 = (CharSequence) ((Object) param0.substring(4));
-            field_p = sa.a(var3, (byte) 127, 16);
+            field_p = LoadingProgressDialog.parseIntRadix(var3, (byte) 127, 16);
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -843,7 +843,7 @@ abstract class Font extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var2 == -1)) {
-              var7 = (char)(tb.encodeCodePageChar((char) var7, -8225) & 255);
+              var7 = (char)(EditableTextWidget.encodeCodePageChar((char) var7, -8225) & 255);
               var4 = var4 + this.field_r[var7];
               if (this.field_z != null &&
                 var3 != 0) {

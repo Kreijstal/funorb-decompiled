@@ -79,22 +79,22 @@ final class DualLinkDeque {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        df var4_ref_df = null;
-        ep var5 = null;
+        PendingFlagRequest var4_ref_df = null;
+        PendingBytePayloadRequest var5 = null;
         int var5_int = 0;
         Object var6 = null;
         int var7 = 0;
-        am var9 = null;
+        BitPacketBuffer var9 = null;
         byte[] var13 = null;
         var7 = ZombieDawn.field_J;
         try {
           var2 = 42 / ((-82 - param0) / 32);
-          var9 = fj.field_g;
+          var9 = MatchingTextValidator.field_g;
           var3 = var9.readUnsignedByte((byte) -118);
           if (0 == var3) {
-            var4_ref_df = (df) (jj.field_D.last((byte) 26));
+            var4_ref_df = (PendingFlagRequest) (SweepingSpotlight.field_D.last((byte) 26));
             if (var4_ref_df == null) {
-              p.a(1);
+              SessionSocketHelpers.closeSessionSocket(1);
               return;
             }
             var5_int = var9.readUnsignedByte((byte) -122);
@@ -106,7 +106,7 @@ final class DualLinkDeque {
             }
             var9.position = var9.position + 4;
             if (!var9.verifyCrc32((byte) -98)) {
-              p.a(1);
+              SessionSocketHelpers.closeSessionSocket(1);
               return;
             }
             var4_ref_df.field_k = true;
@@ -114,15 +114,15 @@ final class DualLinkDeque {
             return;
           }
           if (1 != var3) {
-            ae.a((Throwable) null, 10331, "A1: " + cb.f(3));
-            p.a(1);
+            ErrorReportHelpers.reportClientError((Throwable) null, 10331, "A1: " + VisualPropertyOverrides.describePacketHistory(3));
+            SessionSocketHelpers.closeSessionSocket(1);
             return;
           }
           var4 = var9.readInt(-105);
-          var5 = (ep) (uk.field_a.last((byte) 26));
+          var5 = (PendingBytePayloadRequest) (BootstrapLoadingHelpers.field_a.last((byte) 26));
           while (var5 != null) {
             if (var4 != var5.field_k) {
-              var5 = (ep) (uk.field_a.previous(false));
+              var5 = (PendingBytePayloadRequest) (BootstrapLoadingHelpers.field_a.previous(false));
               continue;
             }
             break;
@@ -131,7 +131,7 @@ final class DualLinkDeque {
             var5.unlink(-27598);
             return;
           }
-          p.a(1);
+          SessionSocketHelpers.closeSessionSocket(1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -161,15 +161,15 @@ final class DualLinkDeque {
 
     final static void showScreenSizeDialog(byte param0) {
         int var1 = 118 / ((-2 - param0) / 33);
-        mg.a(false);
+        QueuedByteRecord.initializeDialogLayer(false);
     }
 
-    final static lp loadCoverageFont(Js5Archive param0, String param1, String param2, int param3, Js5Archive param4) {
+    final static CoverageBitmapFont loadCoverageFont(Js5Archive param0, String param1, String param2, int param3, Js5Archive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        lp stackIn_2_0 = null;
-        lp stackIn_4_0 = null;
+        CoverageBitmapFont stackIn_2_0 = null;
+        CoverageBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -183,11 +183,11 @@ final class DualLinkDeque {
         try {
           var5_int = param4.getGroupIdByName(param1, (byte) 8);
           if (param3 != 0) {
-            stackIn_2_0 = (lp) null;
+            stackIn_2_0 = (CoverageBitmapFont) null;
             return stackIn_2_0;
           }
           var6 = param4.getFileIdByName(var5_int, param2, true);
-          stackIn_4_0 = oj.a(var6, param0, var5_int, param4, param3 + 0);
+          stackIn_4_0 = BlastParticle.loadCoverageFont(var6, param0, var5_int, param4, param3 + 0);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -273,14 +273,14 @@ final class DualLinkDeque {
     }
 
     final static String getCurrentAccountName(byte param0) {
-        if (fk.field_F == vh.field_c) {
-          return to.field_d;
+        if (AccountCreationForm.field_F == SpriteFadeHelpers.field_c) {
+          return IntroSpeedHelpers.field_d;
         }
-        if (!gl.field_E.a(112)) {
-          return gl.field_E.c(0);
+        if (!FocusDelegatingButton.field_E.isComplete(112)) {
+          return FocusDelegatingButton.field_E.getName(0);
         }
-        if (tk.field_a == vh.field_c) {
-          return gl.field_E.c(0);
+        if (NameCheckRequest.field_a == SpriteFadeHelpers.field_c) {
+          return FocusDelegatingButton.field_E.getName(0);
         }
         if (param0 < -12) {
           return GameLoopApplet.field_B;

@@ -1,0 +1,75 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class SoundEffectCleanupHelpers {
+    static String field_b;
+    static int field_a;
+
+    final static void compactDepthBucketFaceOrder(int param0) {
+        int var2 = 0;
+        int var1_int = 0;
+        int var3 = 0;
+        int var4 = 0;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
+        var4 = ZombieDawn.field_J;
+        try {
+          var1_int = OffsetHelpers.field_b[0];
+          for (var2 = param0; OffsetHelpers.field_b.length > var2; var2++) {
+            var3 = OffsetHelpers.field_b[var2];
+            ArraySupport.copy(RasterState.field_o, var2 << 4, RasterState.field_o, var1_int, var3);
+            var1_int = var1_int + var3;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1), "qc.B(" + param0 + ')');
+        }
+    }
+
+    final static void stopAllSoundEffects(int param0) {
+        IntrusiveNode var1 = null;
+        int var2 = 0;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var1_ref = null;
+        var2 = ZombieDawn.field_J;
+        try {
+          var1 = NameSuggestionsPanel.field_L.last((byte) 26);
+          while (var1 instanceof SoundEffectNode) {
+            Js5Transport.stopSoundEffect((byte) 13, ((SoundEffectNode) (var1)).field_j);
+            var1 = var1.previous;
+          }
+          var1 = ProxySocketConnector.field_m.last((byte) 26);
+          while (var1 instanceof SoundEffectNode) {
+            Js5Transport.stopSoundEffect((byte) 13, ((SoundEffectNode) (var1)).field_j);
+            var1 = var1.previous;
+          }
+          if (param0 != 1400888196) {
+            return;
+          }
+          var1 = DelegatingCanvas.field_e.last((byte) 26);
+          while (var1 instanceof SoundEffectNode) {
+            Js5Transport.stopSoundEffect((byte) 13, ((SoundEffectNode) (var1)).field_j);
+            var1 = var1.previous;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1_ref), "qc.A(" + param0 + ')');
+        }
+    }
+
+    public static void releaseStatics(byte param0) {
+        if (param0 <= 42) {
+          return;
+        }
+        field_b = null;
+    }
+
+    static {
+        field_b = "UK Expansion";
+        field_a = 70;
+    }
+}

@@ -5,7 +5,7 @@ import java.util.*;
 
 final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
     static long field_i;
-    static bm field_l;
+    static HuffmanCodec field_l;
     private java.awt.image.ColorModel field_j;
     private java.awt.image.ImageConsumer field_h;
     static int[] field_k;
@@ -104,18 +104,18 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         var42 = ZombieDawn.field_J;
         try {
           if (0 <= param11 &&
-            en.field_d > param15) {
+            TriangleRasterizer.field_d > param15) {
             if (0 > param9 &&
               param1 < 0 &&
               param10 < 0) {
               return;
             }
             if (param4 != -104) {
-              field_l = (bm) null;
+              field_l = (HuffmanCodec) null;
             }
-            if (param9 >= en.field_g &&
-              en.field_g <= param1 &&
-              en.field_g <= param10) {
+            if (param9 >= TriangleRasterizer.field_g &&
+              TriangleRasterizer.field_g <= param1 &&
+              TriangleRasterizer.field_g <= param10) {
               return;
             }
             var34 = param11 - param15;
@@ -180,32 +180,32 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
                 }
               }
               if (decompiledFrameRemainder0) {
-                var36Lifetime2 = en.field_b[param15];
+                var36Lifetime2 = TriangleRasterizer.field_b[param15];
                 while (param16 > param15) {
                   var37 = var17_int >> 16;
-                  if (en.field_g > var37) {
+                  if (TriangleRasterizer.field_g > var37) {
                     var38 = -(var17_int >> 16) + (var18 >> 16);
                     if (0 == var38) {
                       if (var37 >= 0 &&
-                        en.field_g > var37) {
-                        fg.blendGradientSpanHalf(var21, 0, 0, var38, var29, 61653921, var36Lifetime2 + var37, 0, var25, param2);
+                        TriangleRasterizer.field_g > var37) {
+                        InstructionsScreen.blendGradientSpanHalf(var21, 0, 0, var38, var29, 61653921, var36Lifetime2 + var37, 0, var25, param2);
                       }
                     } else {
                       var39 = (-var21 + var22) / var38;
                       var40 = (var26 - var25) / var38;
                       var41 = (var30 - var29) / var38;
-                      if (var38 + var37 >= en.field_g) {
-                        var38 = -1 - var37 + en.field_g;
+                      if (var38 + var37 >= TriangleRasterizer.field_g) {
+                        var38 = -1 - var37 + TriangleRasterizer.field_g;
                       }
                       if (var37 >= 0) {
-                        fg.blendGradientSpanHalf(var21, var41, var39, var38, var29, 61653921, var36Lifetime2 + var37, var40, var25, param2);
+                        InstructionsScreen.blendGradientSpanHalf(var21, var41, var39, var38, var29, 61653921, var36Lifetime2 + var37, var40, var25, param2);
                       } else {
-                        fg.blendGradientSpanHalf(-(var39 * var37) + var21, var41, var39, var37 + var38, -(var41 * var37) + var29, param4 ^ -61653959, var36Lifetime2, var40, var25 - var40 * var37, param2);
+                        InstructionsScreen.blendGradientSpanHalf(-(var39 * var37) + var21, var41, var39, var37 + var38, -(var41 * var37) + var29, param4 ^ -61653959, var36Lifetime2, var40, var25 - var40 * var37, param2);
                       }
                     }
                   }
                   param15++;
-                  if (param15 >= en.field_d) {
+                  if (param15 >= TriangleRasterizer.field_d) {
                     return;
                   }
                   var18 = var18 + var20;
@@ -336,32 +336,32 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
               var25 = var25 + var27 * param15;
               param15 = 0;
             }
-            var35Lifetime1 = en.field_b[param15];
+            var35Lifetime1 = TriangleRasterizer.field_b[param15];
             while (param15 < param11) {
               var36Lifetime1 = var17_int >> 16;
-              if (var36Lifetime1 < en.field_g) {
+              if (var36Lifetime1 < TriangleRasterizer.field_g) {
                 var37Lifetime1 = -(var17_int >> 16) + (var18 >> 16);
                 if (0 != var37Lifetime1) {
                   var38Lifetime1 = (-var21 + var22) / var37Lifetime1;
                   var39Lifetime1 = (-var25 + var26) / var37Lifetime1;
                   var40Lifetime1 = (var30 - var29) / var37Lifetime1;
-                  if (en.field_g <= var36Lifetime1 + var37Lifetime1) {
-                    var37Lifetime1 = -var36Lifetime1 + en.field_g - 1;
+                  if (TriangleRasterizer.field_g <= var36Lifetime1 + var37Lifetime1) {
+                    var37Lifetime1 = -var36Lifetime1 + TriangleRasterizer.field_g - 1;
                   }
                   if (0 <= var36Lifetime1) {
-                    fg.blendGradientSpanHalf(var21, var40Lifetime1, var38Lifetime1, var37Lifetime1, var29, param4 ^ -61653959, var36Lifetime1 + var35Lifetime1, var39Lifetime1, var25, param2);
+                    InstructionsScreen.blendGradientSpanHalf(var21, var40Lifetime1, var38Lifetime1, var37Lifetime1, var29, param4 ^ -61653959, var36Lifetime1 + var35Lifetime1, var39Lifetime1, var25, param2);
                   } else {
-                    fg.blendGradientSpanHalf(var21 - var36Lifetime1 * var38Lifetime1, var40Lifetime1, var38Lifetime1, var37Lifetime1 + var36Lifetime1, -(var36Lifetime1 * var40Lifetime1) + var29, 61653921, var35Lifetime1, var39Lifetime1, -(var39Lifetime1 * var36Lifetime1) + var25, param2);
+                    InstructionsScreen.blendGradientSpanHalf(var21 - var36Lifetime1 * var38Lifetime1, var40Lifetime1, var38Lifetime1, var37Lifetime1 + var36Lifetime1, -(var36Lifetime1 * var40Lifetime1) + var29, 61653921, var35Lifetime1, var39Lifetime1, -(var39Lifetime1 * var36Lifetime1) + var25, param2);
                   }
                 } else {
                   if (var36Lifetime1 >= 0 &&
-                    en.field_g > var36Lifetime1) {
-                    fg.blendGradientSpanHalf(var21, 0, 0, var37Lifetime1, var29, 61653921, var35Lifetime1 + var36Lifetime1, 0, var25, param2);
+                    TriangleRasterizer.field_g > var36Lifetime1) {
+                    InstructionsScreen.blendGradientSpanHalf(var21, 0, 0, var37Lifetime1, var29, 61653921, var35Lifetime1 + var36Lifetime1, 0, var25, param2);
                   }
                 }
               }
               param15++;
-              if (param15 >= en.field_d) {
+              if (param15 >= TriangleRasterizer.field_d) {
                 return;
               }
               var29 = var29 + var31;
@@ -403,10 +403,10 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    final static void writeHighscoreRequest(byte param0, int param1, nn param2) {
-        am var3 = null;
+    final static void writeHighscoreRequest(byte param0, int param1, PendingHighscoreRequest param2) {
+        BitPacketBuffer var3 = null;
         try {
-          var3 = dp.field_e;
+          var3 = LinkTextPainter.field_e;
           var3.writeCipheredByte(param0 - 14, param1);
           var3.writeByte(param2.field_h, 120);
           if (param0 != 25) {
@@ -434,8 +434,8 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         field_k = null;
         field_l = null;
         if (param0 != -1) {
-          nn var2 = (nn) null;
-          ImageProducerRasterBuffer.writeHighscoreRequest((byte) 111, 106, (nn) null);
+          PendingHighscoreRequest var2 = (PendingHighscoreRequest) null;
+          ImageProducerRasterBuffer.writeHighscoreRequest((byte) 111, 106, (PendingHighscoreRequest) null);
         }
     }
 
@@ -447,25 +447,25 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           return;
         }
         if (param1 >= 0 &&
-          vm.field_u[0].length > param1 &&
+          ThreeSliceButtonPainter.field_u[0].length > param1 &&
           param0 >= 0 &&
-          vm.field_u.length > param0) {
-          dupTemp$1 = vm.field_u[param0];
+          ThreeSliceButtonPainter.field_u.length > param0) {
+          dupTemp$1 = ThreeSliceButtonPainter.field_u[param0];
           dupTemp$1[param1] = dupTemp$1[param1] + 1;
           return;
         }
     }
 
-    final static f[] readMeshMaterials(int param0, am param1) {
+    final static GlowAreaSupport[] readMeshMaterials(int param0, BitPacketBuffer param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        f[] var4 = null;
-        f var6_ref_f = null;
+        GlowAreaSupport[] var4 = null;
+        GlowAreaSupport var6_ref_f = null;
         int var6 = 0;
         int var7 = 0;
-        f[] stackIn_11_0 = null;
+        GlowAreaSupport[] stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -477,13 +477,13 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             return null;
           }
           var3 = param1.readBits(param0 ^ 100, param0);
-          var4 = new f[var3];
+          var4 = new GlowAreaSupport[var3];
           for (var5 = 0; var3 > var5; var5++) {
-            if (!dg.a(param1, false)) {
-              var6 = param1.readBits(40, gf.a(-1 + var5, 21));
+            if (!ProxyAuthException.readBitBoolean(param1, false)) {
+              var6 = param1.readBits(40, LoginAndPacketHelpers.bitLength(-1 + var5, 21));
               var4[var5] = var4[var6];
             } else {
-              var6_ref_f = new f();
+              var6_ref_f = new GlowAreaSupport();
               param1.readBits(param0 ^ 82, 24);
               param1.readBits(108, 24);
               var6_ref_f.field_h = param1.readBits(91, 24);

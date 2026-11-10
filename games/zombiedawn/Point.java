@@ -5,15 +5,15 @@ final class Point extends IntrusiveNode {
     int x;
     static IntrusiveDeque field_j;
     static String field_k;
-    static sg field_i;
+    static ProgressMessageDialog field_i;
     int y;
-    static jp field_m;
+    static MenuSelection field_m;
 
     final static boolean isIntroFinished(int param0) {
         if (param0 == -251) {
           return LevelNavigation.field_x > 250 ? true : false;
         }
-        field_m = (jp) null;
+        field_m = (MenuSelection) null;
         return LevelNavigation.field_x > 250 ? true : false;
     }
 
@@ -36,7 +36,7 @@ final class Point extends IntrusiveNode {
         if (param0 >= 36) {
           return new Point(this.x, this.y);
         }
-        field_m = (jp) null;
+        field_m = (MenuSelection) null;
         return new Point(this.x, this.y);
     }
 
@@ -45,10 +45,10 @@ final class Point extends IntrusiveNode {
         this.x = param0;
     }
 
-    final static oi createGlyphFont(int param0, byte[] param1) {
-        oi var2 = null;
+    final static BinaryBitmapFont createGlyphFont(int param0, byte[] param1) {
+        BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
-        oi stackIn_6_0 = null;
+        BinaryBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -57,8 +57,8 @@ final class Point extends IntrusiveNode {
           if (param1 == null) {
             return null;
           }
-          var2 = new oi(param1, sl.field_d, bo.field_o, bn.field_c, uf.field_n, vj.field_m);
-          no.clearSpriteDecodeBuffers((byte) -87);
+          var2 = new BinaryBitmapFont(param1, LogoPoseHelpers.field_d, AchievementSubmission.field_o, LongAndTextLoginPayload.field_c, RasterState.field_n, HighscoresScreen.field_m);
+          RopeLadder.clearSpriteDecodeBuffers((byte) -87);
           if (param0 != -16491) {
             Point.releaseStatics((byte) -90);
           }
@@ -80,6 +80,6 @@ final class Point extends IntrusiveNode {
 
     static {
         field_j = new IntrusiveDeque();
-        field_m = new jp(1);
+        field_m = new MenuSelection(1);
     }
 }

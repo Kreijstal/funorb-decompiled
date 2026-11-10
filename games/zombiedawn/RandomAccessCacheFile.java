@@ -27,7 +27,7 @@ final class RandomAccessCacheFile {
           if (param1 != 0) {
             field_b = -108;
           }
-          stackIn_3_0 = tb.field_K.getFileByName(param0, param1 - 85, "");
+          stackIn_3_0 = EditableTextWidget.field_K.getFileByName(param0, param1 - 85, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

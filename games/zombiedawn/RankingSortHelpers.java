@@ -1,0 +1,42 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class RankingSortHelpers {
+    final static boolean rectContains(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+        boolean stackIn_8_0 = false;
+        if (param1 != 0) {
+          RankingSortHelpers.sortRankingViews((byte) -65, -113);
+        }
+        stackIn_8_0 = (param6 >= param0) && (param6 < param0 + param4) && (param2 >= param3) && (param3 + param5 > param2);
+        return stackIn_8_0;
+    }
+
+    final static void sortRankingViews(byte param0, int param1) {
+        int var2_int = 0;
+        int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
+        var3 = ZombieDawn.field_J;
+        try {
+          Camera.sortRankingRange(0, RandomAccessCacheFile.field_e, param1, param0 + 35, true, AccountTermsPanel.field_O, LevelHud.field_d);
+          for (var2_int = 0; var2_int < RandomAccessCacheFile.field_e; var2_int++) {
+            CutsceneStateHelpers.field_c[param1 + var2_int] = var2_int;
+          }
+          Camera.sortRankingRange(param1, RandomAccessCacheFile.field_e + param1, param1 + param1, param0 + 35, false, ProgressMessageDialog.field_pb, ArrivingPassenger.field_Db);
+          if (param0 != -35) {
+            RankingSortHelpers.rectContains(112, 74, 60, -121, 40, -69, -113);
+          }
+          if (RandomAccessCacheFile.field_e > param1) {
+            RandomAccessCacheFile.field_e = param1;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2), "bf.A(" + param0 + ',' + param1 + ')');
+        }
+    }
+
+    static {
+    }
+}

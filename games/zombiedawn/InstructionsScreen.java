@@ -1,0 +1,449 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class InstructionsScreen extends MenuScreen {
+    private int field_n;
+    static InputValidationResult field_m;
+
+    final void drawScreen(byte param0) {
+        int stackIn_3_0 = 0;
+        int stackIn_6_0 = 0;
+        BinaryBitmapFont stackIn_26_0;
+        String stackIn_26_1;
+        int stackIn_26_2;
+        int stackIn_26_3;
+        int stackIn_27_4 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        int var18;
+        int var19;
+        int var20;
+        int var21;
+        int var22;
+        String var23;
+        int var21Lifetime1;
+        int var21Lifetime2;
+        var22 = ZombieDawn.field_J;
+        super.drawScreen((byte) -75);
+        JaggrabDownloader.drawPipeboxBackdrop(false);
+        var2 = 3 + CacheEntry.field_q.field_x + CacheEntry.field_q.field_I;
+        var3 = 600;
+        var6 = SpriteFadeHelpers.field_b + 200;
+        stackIn_3_0 = (MenuSelection.field_a != 1) ? 0 : 1;
+        var7 = stackIn_3_0;
+        stackIn_6_0 = (MenuSelection.field_a != 3) ? 0 : 1;
+        var8 = stackIn_6_0;
+        if (param0 >= -35) {
+          var23 = (String) null;
+          InstructionsScreen.replaceAll((String) null, 98, (String) null, (String) null);
+        }
+        boolean decompiledFrameRemainder0 = true;
+        var9 = LevelObstacle.field_M + 135;
+        var10 = SpriteFadeHelpers.field_b + 20;
+        ProgressMessageDialog.field_jb.drawString(WidgetStyleLayer.field_k[this.field_n][0], var10, var9, 0, 0);
+        var20 = this.field_n;
+        if (var20 != 0) {
+          if (var20 == 1) {
+            var11 = 340;
+            var2 -= 4;
+            if (var7 != 0 ||
+              var8 != 0) {
+              var11 = 400;
+            }
+            var13 = 24;
+            var12 = var9 + 20;
+            IntrusiveNode.field_a[1].drawTransparent(-50 + var6, -8 + var12);
+            if (var8 != 0) {
+              var13 = 20;
+            }
+            var12 = var12 + (CacheEntry.field_q.drawParagraph(WidgetStyleLayer.field_g[1][0], var6, var12, var11, 50, 16777215, 0, 0, 0, var2) * var2 + var13);
+            var14 = var6 - 95;
+            var15 = var12 - 20;
+            var12 = var12 + (CacheEntry.field_q.drawParagraph(WidgetStyleLayer.field_g[1][1], var6, var12, var11, 50, 16777215, 0, 0, 0, var2) * var2 + var13);
+            DisplaySettingsDialog.field_eb[3].drawTransparent(var6 - 31, var12 + 3);
+            IntrusiveNode.field_a[3].drawTransparent(-20 + var6, var12 + 15);
+            var12 = var12 + (var13 + CacheEntry.field_q.drawParagraph(WidgetStyleLayer.field_g[1][2], var6, var12, var11, 50, 16777215, 0, 0, 0, var2) * var2);
+            IntrusiveNode.field_a[5].drawTransparent(-46 + var6, var12 + 2);
+            var12 = var12 + (CacheEntry.field_q.drawParagraph(WidgetStyleLayer.field_g[1][3], var6, var12, var11, 50, 16777215, 0, 0, 0, var2) * var2 + var13);
+            IntrusiveNode.field_a[6].drawTransparent(var6 - 60, var12 - 7);
+            var12 = var12 + (var13 + var2 * CacheEntry.field_q.drawParagraph(WidgetStyleLayer.field_g[1][4], var6, var12, var11, 50, 16777215, 0, 0, 0, var2));
+            IntrusiveNode.field_a[0].drawTransparent(var14, var15);
+            DualLinkNode.field_k[0].drawWithOpacity(var14 - 8, -4 + var15, 128);
+            DualLinkNode.field_k[0].drawWithOpacity(13 + var14, var15 + 14, 128);
+            DualLinkNode.field_k[0].drawWithOpacity(var14 + 41, var15 + 11, 128);
+            Rasterizer.drawRectOutline(var14 + 3, 14 + var15, 77, 47, 16777215);
+            Rasterizer.drawRectangleOutlineAlpha(var14 + 4, 15 + var15, 75, 45, 10066431, 32);
+            Rasterizer.fillRectangleBlended(var14 + 5, var15 + 16, 73, 43, 3355647, 32);
+          } else {
+            if (var20 == 2) {
+              var13 = 32;
+              var12 = var9 + 40;
+              var2 -= 4;
+              DisplaySettingsDialog.field_eb[8].drawTransparent(var6 - 36, 4 + var12);
+              IntrusiveNode.field_a[3].drawTransparent(-25 + var6, var12 + 15);
+              var12 = var12 + (var13 + var2 * CacheEntry.field_q.drawParagraph(WidgetStyleLayer.field_g[this.field_n][0], var6, var12, 340, 50, 16777215, 0, 0, 0, var2));
+              IntrusiveNode.field_a[4].drawTransparent(-110 + var6, var12 - 10);
+              DualLinkNode.field_k[0].drawWithOpacity(var6 - 54, var12 - 3, 128);
+              IntrusiveNode.field_a[3].drawTransparent(-25 + var6, var12 + 30);
+              var12 = var12 + (var13 + CacheEntry.field_q.drawParagraph(WidgetStyleLayer.field_g[this.field_n][1], var6, var12, 340, 50, 16777215, 0, 0, 0, var2) * var2);
+              IntrusiveNode.field_a[7].drawTransparent(-63 + var6, 10 + var12);
+              var12 = var12 + (var13 + var2 * CacheEntry.field_q.drawParagraph(WidgetStyleLayer.field_g[this.field_n][2], var6, var12, 340, 50, 16777215, 0, 0, 0, var2));
+              IntrusiveNode.field_a[9].drawTransparent(var6 - 93, var12 + 10);
+              var12 = var12 + (var13 + var2 * CacheEntry.field_q.drawParagraph(WidgetStyleLayer.field_g[this.field_n][3], var6, var12, 340, 50, 16777215, 0, 0, 0, var2));
+            } else {
+              if (var20 != 3) {
+                if (var20 == 4) {
+                  var4 = CacheEntry.field_q.drawParagraph(WidgetStyleLayer.field_g[this.field_n][0], var10, var9 + 20, var3, 440, 16777215, 0, 0, 0, var2);
+                  var5 = var9 + (39 + var2 * var4);
+                  for (var20 = 0; var20 < PowerupCard.field_h[this.field_n].length; var20++) {
+                    var21 = PowerupCard.field_h[this.field_n][var20];
+                    AgeValidator.field_i[var21].drawTransparent(var10, var5 + 5);
+                    var5 = var5 + (CacheEntry.field_q.drawParagraph(WidgetStyleLayer.field_j[var21], SpriteFadeHelpers.field_b + 60, var5, var3 - 40, 400, 16777215, 0, 0, 0, var2) * var2 + 15);
+                  }
+                } else {
+                  if (var20 == 5) {
+                    var5 = 19 + var9;
+                    for (var20 = 0; var20 < PowerupCard.field_h[this.field_n].length; var20++) {
+                      var21Lifetime1 = PowerupCard.field_h[this.field_n][var20];
+                      AgeValidator.field_i[var21Lifetime1].drawTransparent(var10, 5 + var5);
+                      var5 = var5 + (var2 * CacheEntry.field_q.drawParagraph(WidgetStyleLayer.field_j[var21Lifetime1], var10 + 40, var5, var3 - 40, 400, 16777215, 0, 0, 0, var2) + 15);
+                    }
+                  } else {
+                    if (var20 == 6) {
+                      var5 = 20 + var9;
+                      for (var20 = 0; 4 > var20; var20++) {
+                        RandomAccessCacheFile.field_k[var20].drawTransparent(var10 + 8, var5 - 8);
+                        var5 = var5 + (var2 * CacheEntry.field_q.drawParagraph(WidgetStyleLayer.field_p[var20], 80 + var10, var5, -80 + var3, 400, 16777215, 0, 0, 0, var2) + 20);
+                      }
+                    } else {
+                      if (var20 == 7) {
+                        var5 = var9 + 20;
+                        for (var20 = 4; RandomAccessCacheFile.field_k.length > var20; var20++) {
+                          RandomAccessCacheFile.field_k[var20].drawTransparent(var10 + 8, -8 + var5);
+                          var5 = var5 + (var2 * CacheEntry.field_q.drawParagraph(WidgetStyleLayer.field_p[var20], var10 + 80, var5, var3 - 80, 400, 16777215, 0, 0, 0, var2) + 20);
+                        }
+                      } else {
+                        if (var20 != 8 &&
+                          var20 != 9) {
+                          if (var20 == 10) {
+                            var5 = var9 + 20;
+                            for (var20 = 0; var20 < 4; var20++) {
+                              ArchiveLoadStep.field_e[var20].drawTransparent(var10 + 8, -8 + var5);
+                              var5 = var5 + (CacheEntry.field_q.drawParagraph(WidgetStyleLayer.field_p[var20 + 8], 80 + var10, var5, -80 + var3, 400, 16777215, 0, 0, 0, var2) * var2 + 20);
+                            }
+                          } else {
+                            if ((11 == var20)) {
+                              var16 = 30 + var10;
+                              var5 = 20 + var9;
+                              var18 = 3;
+                              var17 = var5;
+                              var19 = 3;
+                              Rasterizer.drawRectOutline(-var18 + var16, var17 - var19, DisplayState.field_c[0].field_w + 2 * var18, var19 * 2 + DisplayState.field_c[0].field_t, 0);
+                              var18--;
+                              var19--;
+                              Rasterizer.drawRectOutline(-var18 + var16, -var19 + var17, 2 * var18 + DisplayState.field_c[0].field_w, 2 * var19 + DisplayState.field_c[0].field_t, 16777215);
+                              var19--;
+                              var18--;
+                              Rasterizer.drawRectOutline(var16 - var18, -var19 + var17, var18 * 2 + DisplayState.field_c[0].field_w, 2 * var19 + DisplayState.field_c[0].field_t, 0);
+                              DisplayState.field_c[0].drawTransparent(var16, var17);
+                              var4 = CacheEntry.field_q.drawParagraph(WidgetStyleLayer.field_g[this.field_n][0], 195 + SpriteFadeHelpers.field_b, 5 + var5, -170 + var3, 440, 16777215, 0, 0, 0, var2);
+                            }
+                          }
+                        } else {
+                          var4 = CacheEntry.field_q.drawParagraph(WidgetStyleLayer.field_g[this.field_n][0], var10, var9 + 20, var3, 440, 16777215, 0, 0, 0, var2);
+                          var5 = 39 + var2 * var4 + var9;
+                          for (var20 = 0; PowerupCard.field_h[this.field_n].length > var20; var20++) {
+                            var21Lifetime2 = PowerupCard.field_h[this.field_n][var20];
+                            AgeValidator.field_i[var21Lifetime2].drawTransparent(var10, 5 + var5);
+                            var5 = var5 + (15 + CacheEntry.field_q.drawParagraph(WidgetStyleLayer.field_j[var21Lifetime2], var10 + 40, var5, var3 - 40, 400, 16777215, 0, 0, 0, var2) * var2);
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                decompiledFrameRemainder0 = false;
+              }
+              else {
+                HunterHuman.field_Ub[0].drawTransparent(SpriteFadeHelpers.field_b + 8, LevelObstacle.field_M + 148);
+                HunterHuman.field_Ub[1].drawTransparent(70 + SpriteFadeHelpers.field_b, LevelObstacle.field_M + 230);
+                ProgressMessageDialog.field_jb.drawString("1/5", 90 + SpriteFadeHelpers.field_b, 202 + LevelObstacle.field_M, 2, -1);
+                ProgressMessageDialog.field_jb.drawString("3", 80 + SpriteFadeHelpers.field_b, 285 + LevelObstacle.field_M, 1, -1);
+                ProgressMessageDialog.field_jb.drawString("2:15", SpriteFadeHelpers.field_b + 75, LevelObstacle.field_M + 365, 0, -1);
+                var4 = CacheEntry.field_q.drawParagraph(WidgetStyleLayer.field_g[3][0], 155 + SpriteFadeHelpers.field_b, 170 + LevelObstacle.field_M, var3 - 140, 440, 16777215, 0, 0, 0, var2);
+              }
+            }
+          }
+        } else {
+          stackIn_26_0 = CacheEntry.field_q;
+          stackIn_26_1 = WidgetStyleLayer.field_g[0][0];
+          stackIn_26_2 = var10;
+          stackIn_26_3 = var9 + 20;
+          if (var7 == 0) {
+            stackIn_27_4 = -70 + var3;
+          } else {
+            stackIn_27_4 = var3;
+          }
+          var4 = ((BinaryBitmapFont) (Object) stackIn_26_0).drawParagraph(stackIn_26_1, stackIn_26_2, stackIn_26_3, stackIn_27_4, 440, 16777215, 0, 0, 0, var2);
+          var5 = var4 * var2;
+          if (var7 != 0) {
+            var5 -= 20;
+          }
+          ProgressMessageDialog.field_jb.drawString(WidgetStyleLayer.field_k[0][1], var10, var5 + (var9 + 75), 0, 0);
+          CacheEntry.field_q.drawParagraph(WidgetStyleLayer.field_g[0][1], var10, var5 + var9 + 95, var3, 440, 16777215, 0, 0, 0, var2);
+          if (var7 == 0) {
+            TextAndNameCredentials.field_b[0].drawTransparent(530 + SpriteFadeHelpers.field_b, 150 + LevelObstacle.field_M);
+            TextAndNameCredentials.field_b[1].drawTransparent(SpriteFadeHelpers.field_b + 230, LevelObstacle.field_M + 242);
+          }
+        }
+        CacheEntry.field_q.drawStringRightAligned(BootstrapLoadingHelpers.formatFraction(1 + this.field_n, (byte) 58, 1 + this.getLastPageIndex(true)), 634 + SpriteFadeHelpers.field_b, LevelObstacle.field_M + 410, 16777215, 0);
+    }
+
+    final int getItemRight(boolean param0, int param1) {
+        if (!param0) {
+          field_m = (InputValidationResult) null;
+        }
+        return this.getItemLeft(param1, 6) + 180;
+    }
+
+    final void resetToFirstPage(byte param0) {
+        int var2 = -82 / ((param0 - 32) / 56);
+        this.field_n = 0;
+    }
+
+    final static Sprite buildFirstDecodedSprite(int param0) {
+        int var5 = 0;
+        int var6 = 0;
+        int var1;
+        Object var3;
+        int[] var5_ref_int__;
+        int var7;
+        int[] var9;
+        int[] var11;
+        int[] var13;
+        byte[] var16;
+        byte[] var17;
+        var7 = ZombieDawn.field_J;
+        if (param0 > -98) {
+          return (Sprite) null;
+        }
+        var1 = RasterState.field_n[0] * LongAndTextLoginPayload.field_c[0];
+        var17 = HighscoresScreen.field_m[0];
+        if (!HighscoreRequest.field_r[0]) {
+          var9 = new int[var1];
+          for (var5 = 0; var1 > var5; var5++) {
+            var9[var5] = ArchiveLoadStep.field_a[TextHotspotRegion.bitAnd((int) var17[var5], 255)];
+          }
+          var3 = new Sprite(FocusDelegatingButton.field_F, Zombie.field_pb, LogoPoseHelpers.field_d[0], AchievementSubmission.field_o[0], LongAndTextLoginPayload.field_c[0], RasterState.field_n[0], var9);
+        } else {
+          var16 = SoundEffectLibrary.field_f[0];
+          var13 = new int[var1];
+          var11 = var13;
+          var5_ref_int__ = var11;
+          for (var6 = 0; var1 > var6; var6++) {
+            var5_ref_int__[var6] = GameWorld.intOr(TextHotspotRegion.bitAnd((int) var16[var6], 255) << 24, ArchiveLoadStep.field_a[TextHotspotRegion.bitAnd(255, (int) var17[var6])]);
+          }
+          var3 = new ArgbSprite(FocusDelegatingButton.field_F, Zombie.field_pb, LogoPoseHelpers.field_d[0], AchievementSubmission.field_o[0], LongAndTextLoginPayload.field_c[0], RasterState.field_n[0], var13);
+        }
+        RopeLadder.clearSpriteDecodeBuffers((byte) -73);
+        return (Sprite) (var3);
+    }
+
+    final void handleNavigationKeys(int param0) {
+        int var2;
+        int var3;
+        int stackIn_5_0 = 0;
+        int stackIn_8_0 = 0;
+        if (param0 != -31645) {
+          return;
+        }
+        stackIn_5_0 = (this.field_n != 0) ? 0 : 1;
+        var2 = stackIn_5_0;
+        stackIn_8_0 = (this.field_n != this.getLastPageIndex(true)) ? 0 : 1;
+        var3 = stackIn_8_0;
+        if ((var2 != 0 ||
+          var3 != 0) && (PasswordValidator.field_i == 96 ||
+          PasswordValidator.field_i == 97)) {
+          this.field_b.navigateHorizontal(1, -1);
+          if (var2 != 0 &&
+            this.field_b.field_d == 0) {
+            this.field_b.navigateHorizontal(1, -1);
+            return;
+          }
+          if (var3 != 0 &&
+            this.field_b.field_d == 2) {
+            this.field_b.navigateHorizontal(1, -1);
+          }
+          return;
+        }
+        this.field_b.navigateHorizontal(1, -1);
+    }
+
+    InstructionsScreen(int param0, boolean param1, int param2, int param3, int param4, int param5, int[] param6) {
+        super(param0, param1, param2, param3, param4, param5, param6);
+        this.field_n = 0;
+    }
+
+    final static void blendGradientSpanHalf(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int[] param9) {
+        int[] var10 = null;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var14 = 0;
+        int var15 = 0;
+        int var16 = 0;
+        int[] var17 = null;
+        int[] var18 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var10_ref = null;
+        var16 = ZombieDawn.field_J;
+        try {
+          while (true) {
+            param3--;
+            if (param3 < 0) {
+              if (param5 != 61653921) {
+                var17 = (int[]) null;
+                InstructionsScreen.blendGradientSpanHalf(107, -48, -75, 124, 49, 11, -113, -78, 117, (int[]) null);
+              }
+              return;
+            }
+            var18 = param9;
+            var10 = var18;
+            var11 = param6;
+            var12 = param0;
+            var13 = param8;
+            var14 = param4;
+            var15 = (16711422 & var18[var11]) >> 1;
+            var10[var11] = var15 + (TextHotspotRegion.bitAnd(33518850, var14) >> 17) + (TextHotspotRegion.bitAnd(var13 >> 9, 65280) + TextHotspotRegion.bitAnd(16711680, var12 >> 1));
+            param6++;
+            param8 = param8 + param7;
+            param4 = param4 + param1;
+            param0 = param0 + param2;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var10_ref = decompiledCaughtException;
+          stackIn_8_0 = var10_ref;
+          stackIn_8_1 = new StringBuilder().append("fg.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',');
+          if (param9 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
+          }
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+        }
+    }
+
+    public static void releaseStatics(int param0) {
+        field_m = null;
+        if (param0 != -25585) {
+          field_m = (InputValidationResult) null;
+        }
+    }
+
+    final boolean isItemEnabled(int param0, int param1) {
+        boolean stackIn_10_0 = false;
+        if (param1 != -1) {
+          return false;
+        }
+        stackIn_10_0 = ((param0 != 0 ||
+          this.field_n != 0) &&
+          (2 != param0 ||
+          this.field_n != this.getLastPageIndex(true)));
+        return stackIn_10_0;
+    }
+
+    final static HighscoreRequest getRankingQuery(int param0, int param1, int param2, int param3, int param4) {
+        int var6 = ZombieDawn.field_J;
+        HighscoreRequest var5 = (HighscoreRequest) (TileMap.field_g.last((byte) 26));
+        while (var5 != null) {
+          if (param3 == var5.field_s) {
+            return var5;
+          }
+          var5 = (HighscoreRequest) (TileMap.field_g.previous(false));
+        }
+        HighscoreRequest var7 = new HighscoreRequest();
+        var5 = var7;
+        var7.field_s = param3;
+        var7.field_o = param4;
+        var7.field_u = param1;
+        if (param2 != 1) {
+          return (HighscoreRequest) null;
+        }
+        TileMap.field_g.addFirst(0, var5);
+        TextFieldValidator.writeHighscoreQuery(0, param0, var5);
+        return var5;
+    }
+
+    final void showPreviousPage(int param0, boolean param1) {
+        int var3 = 0;
+        this.field_n = this.field_n - 1;
+        if (param0 != 20921) {
+          return;
+        }
+        if (!param1 &&
+          this.field_n == 0) {
+          var3 = PasswordValidator.field_i;
+          PasswordValidator.field_i = 97;
+          this.field_b.navigateHorizontal(1, -1);
+          PasswordValidator.field_i = var3;
+        }
+    }
+
+    private final int getLastPageIndex(boolean param0) {
+        if (!param0) {
+          this.field_n = 42;
+        }
+        return OctaveNoiseMap.field_j <= 0 ? 7 : WidgetStyleLayer.field_g.length - 1;
+    }
+
+    final void showNextPage(boolean param0, int param1) {
+        int var3 = 0;
+        if (param1 <= 119) {
+          int[] var4 = (int[]) null;
+          InstructionsScreen.blendGradientSpanHalf(6, 53, 47, 73, 20, 34, -122, -33, -19, (int[]) null);
+        }
+        this.field_n = this.field_n + 1;
+        if (!param0 &&
+          this.field_n == this.getLastPageIndex(true)) {
+          var3 = PasswordValidator.field_i;
+          PasswordValidator.field_i = 96;
+          this.field_b.navigateHorizontal(1, -1);
+          PasswordValidator.field_i = var3;
+        }
+    }
+
+    final static String replaceAll(String param0, int param1, String param2, String param3) {
+        int var5 = ZombieDawn.field_J;
+        int var4 = param3.indexOf(param0);
+        if (param1 >= -126) {
+          field_m = (InputValidationResult) null;
+        }
+        while (var4 != -1) {
+          param3 = param3.substring(0, var4) + param2 + param3.substring(var4 + param0.length());
+          var4 = param3.indexOf(param0, param2.length() + var4);
+        }
+        return param3;
+    }
+
+    static {
+        field_m = new InputValidationResult();
+    }
+}

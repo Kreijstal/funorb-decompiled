@@ -1,0 +1,365 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+class MinigunGunner extends ArmedHuman {
+    static Sprite field_Pb;
+    private int field_Qb;
+    static volatile int field_Ob;
+    static int[] field_Nb;
+    static int field_Rb;
+
+    private final void aimAtZombieBelow(int param0) {
+        int var2 = 0;
+        int var3 = 0;
+        int var4 = 0;
+        int var7 = ZombieDawn.field_J;
+        if (this.field_yb != null) {
+          this.field_yb = null;
+        }
+        int var5 = -1;
+        IntrusiveNode var6 = Js5Archive.field_e.zombies.last((byte) 26);
+        while (var6 instanceof WorldObject) {
+          if (var6 instanceof Zombie &&
+            ((Zombie) (var6)).isVisibleToHumans(94)) {
+            var2 = ((Zombie) (var6)).getX(true) - this.getX(true);
+            var3 = ((Zombie) (var6)).getY(237239984) - this.getY(237239984);
+            if (var3 > 0 &&
+              var3 > Math.abs(var2)) {
+              var4 = var3 * var3 + var2 * var2;
+              if (var4 < var5 ||
+                -1 == var5) {
+                this.field_yb = (Zombie) (var6);
+                var5 = var4;
+              }
+            }
+          }
+          var6 = var6.previous;
+        }
+        if (param0 != -44) {
+          return;
+        }
+        if (67600 < var5) {
+          this.field_yb = null;
+        }
+        if (null != this.field_yb) {
+          this.setState(10, -6904);
+          this.field_Gb = 10;
+          this.field_U = EmptyWidgetPainter.queueSoundEffect(44, false);
+          this.field_U.setVolume(AddressHintGlobals.field_c >> 1);
+        } else {
+          this.field_Qb = 20;
+        }
+    }
+
+    public static void releaseStatics(byte param0) {
+        if (param0 != -73) {
+          MinigunGunner.releaseStatics((byte) -35);
+        }
+        field_Pb = null;
+        field_Nb = null;
+    }
+
+    void draw(byte param0, Camera param1) {
+        int stackIn_8_0 = 0;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_20_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        try {
+          if (this.state == 20) {
+            return;
+          }
+          var3_int = param1.worldToScreenX(this.getX(true), (byte) -88);
+          var4 = param1.worldToScreenY(this.getY(237239984), 0);
+          if (10 == this.state &&
+            this.field_G == 1) {
+            stackIn_8_0 = -1 + var4;
+          } else {
+            stackIn_8_0 = var4;
+          }
+          var5 = stackIn_8_0;
+          var6 = 0;
+          if (param0 > -76) {
+            this.tick(30);
+          }
+          AlternateLongAndNameCredentials.field_l[this.field_t][var6].drawTransparent(-24 + var3_int, var5 - 48);
+          SecondaryNodeDequeIterator.field_h.drawTransparent(-24 + var3_int, -44 + var4);
+          if (this.field_Gb > 0) {
+            this.drawMuzzleFlash(var3_int - 3, (byte) -99, var4);
+          }
+          if (PendingIntArrayRequest.field_h) {
+            Rasterizer.drawCircleOutline(12 + var3_int, var4 + 24, 260, 16711680);
+            Rasterizer.drawLine(var3_int, var4, var3_int + 260, var4 + 260, 16711680);
+            Rasterizer.drawLine(var3_int, var4, var3_int - 260, 260 + var4, 16711680);
+            CacheEntry.field_q.drawString(Integer.toString(this.field_G), var3_int, var4, 16777215, 0);
+            CacheEntry.field_q.drawString(Integer.toString(this.field_N), 20 + var3_int, var4, 16777215, 0);
+            CacheEntry.field_q.drawString(Integer.toString(this.state), var3_int, var4 - 20, 16777215, 0);
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_19_0 = var3;
+          stackIn_19_1 = new StringBuilder().append("wc.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_20_2 = "null";
+          } else {
+            stackIn_20_2 = "{...}";
+          }
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+        }
+    }
+
+    final static void sortDisplayModes(FullscreenExitHelpers[] param0, int param1) {
+        int var3 = 0;
+        int var2_int = 0;
+        FullscreenExitHelpers var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
+        var6 = ZombieDawn.field_J;
+        try {
+          var2_int = param0.length;
+          for (var3 = 1; var3 < var2_int; var3++) {
+            var4 = param0[var3];
+            for (var5 = -1 + var3; var5 >= 0; var5--) {
+              if (LongAndTextLoginPayload.compareDisplayModes((byte) 82, param0[var5], var4)) {
+                param0[1 + var5] = param0[var5];
+                continue;
+              }
+              break;
+            }
+            param0[var5 + 1] = var4;
+          }
+          if (param1 != 0) {
+            MinigunGunner.releaseStatics((byte) 86);
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_13_0 = var2;
+          stackIn_13_1 = new StringBuilder().append("wc.OA(");
+          if (param0 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
+          }
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final void knockBackFrom(int param0, int param1, int param2) {
+        if (param1 < 24) {
+          return;
+        }
+    }
+
+    final static void handleRankingsResponse(int param0) {
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
+        int var2 = 0;
+        QueuedByteRecord var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6_int = 0;
+        String[][] var6 = null;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        BitPacketBuffer var14 = null;
+        int[][] var18 = null;
+        int var6_intLifetime1;
+        int var9Lifetime1;
+        int var10Lifetime1;
+        int var11Lifetime1;
+        var12 = ZombieDawn.field_J;
+        try {
+          var14 = MatchingTextValidator.field_g;
+          var2 = var14.readUnsignedByte((byte) -124);
+          var3 = (QueuedByteRecord) (DelayedPacket.field_i.last((byte) 26));
+          if (param0 <= 117) {
+            return;
+          }
+          while (var3 != null) {
+            if (var2 != var3.field_h) {
+              var3 = (QueuedByteRecord) (DelayedPacket.field_i.previous(false));
+              continue;
+            }
+            break;
+          }
+          if (var3 == null) {
+            SessionSocketHelpers.closeSessionSocket(1);
+            return;
+          }
+          var4 = var14.readUnsignedByte((byte) -124);
+          if (var4 != 0) {
+            AccountPromptTexts.field_b[0] = VisualPropertyNode.field_r;
+            var5 = var3.field_i;
+            for (var6_int = 1; var6_int < var4; var6_int++) {
+              AccountPromptTexts.field_b[var6_int] = var14.readNullTerminatedString(true);
+            }
+            SpriteCheckboxPainter.ensureRankingArrayCapacity(var4, true, var5);
+            for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
+              ChatMessage.readPackedRankingValues(var14, -121);
+              if (var6_intLifetime1 != 0) {
+                RankingRowHelpers.appendRankingRow(var6_intLifetime1, MessageDialogContent.field_H, SecondaryNodeDeque.field_d, 1000, LoginMethod.field_e, MidiPcmStream.field_E);
+              } else {
+                RankingRowHelpers.appendRankingRow(var6_intLifetime1, MessageDialogContent.field_H, SecondaryNodeDeque.field_d, 1000, LoginMethod.field_e, MidiPcmStream.field_E);
+              }
+            }
+            RankingSortHelpers.sortRankingViews((byte) -35, var5);
+            var6 = new String[2][var5];
+            var18 = new int[2][var5 * 4];
+            var8 = RandomAccessCacheFile.field_e;
+            var9 = 0;
+            var10 = 0;
+            while (var9 < var8) {
+              var11 = CutsceneStateHelpers.field_c[var9];
+              var6[0][var10] = AccountPromptTexts.field_b[var11];
+              var18[0][var10 * 4] = Js5Archive.field_g[var11];
+              var18[0][1 + 4 * var10] = StatefulWidgetRenderer.field_r[var11];
+              var18[0][2 + var10 * 4] = ProgressMessageDialog.field_kb[var11];
+              var18[0][var10 * 4 + 3] = MeshDepthBuckets.field_d[var11];
+              if (TextAndNameCredentials.isCurrentUser(126, AccountPromptTexts.field_b[var11]) &&
+                MeshDepthBuckets.field_d[var11] + (StatefulWidgetRenderer.field_r[var11] + ProgressMessageDialog.field_kb[var11]) == 0) {
+                var6[0][var10] = null;
+                var10--;
+              }
+              var9++;
+              var10++;
+            }
+            var9Lifetime1 = 0;
+            var13 = 0;
+            var10Lifetime1 = var13;
+            while (var8 > var9Lifetime1) {
+              var11Lifetime1 = CutsceneStateHelpers.field_c[var9Lifetime1 + var5];
+              var6[1][var13] = AccountPromptTexts.field_b[var11Lifetime1];
+              var18[1][4 * var13] = Js5Archive.field_g[var11Lifetime1];
+              var18[1][1 + 4 * var13] = StatefulWidgetRenderer.field_r[var11Lifetime1];
+              var18[1][var13 * 4 + 2] = ProgressMessageDialog.field_kb[var11Lifetime1];
+              var18[1][4 * var13 + 3] = MeshDepthBuckets.field_d[var11Lifetime1];
+              if (TextAndNameCredentials.isCurrentUser(89, AccountPromptTexts.field_b[var11Lifetime1]) &&
+                ProgressMessageDialog.field_kb[var11Lifetime1] + (StatefulWidgetRenderer.field_r[var11Lifetime1] + MeshDepthBuckets.field_d[var11Lifetime1]) == 0) {
+                var6[1][var13] = null;
+                var13--;
+              }
+              var13++;
+              var9Lifetime1++;
+            }
+            var3.unlink(-27598);
+            return;
+          }
+          var3.unlink(-27598);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var1), "wc.PA(" + param0 + ')');
+        }
+    }
+
+    void tick(int param0) {
+        int var3;
+        var3 = ZombieDawn.field_J;
+        if (param0 < 95) {
+          field_Ob = 118;
+        }
+        if (this.field_Gb > 0) {
+          this.field_Gb = this.field_Gb - 1;
+        }
+        if (this.state != 0) {
+          if (this.state == 10) {
+            this.field_N = this.field_N + 3;
+            if (2 == this.field_G) {
+              this.field_yb.takeLethalHit(0);
+              this.setState(0, -6904);
+            }
+          }
+        } else {
+          if (this.field_Qb <= 0) {
+            this.aimAtZombieBelow(-44);
+          } else {
+            this.field_Qb = this.field_Qb - 1;
+          }
+        }
+        this.advanceAnimation(this.state, -26109);
+    }
+
+    final void startScreechCower(ScreechEffect param0, byte param1) {
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var3_int = -63 / ((-53 - param1) / 54);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_4_0 = var3;
+          stackIn_4_1 = new StringBuilder().append("wc.O(");
+          if (param0 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
+          }
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final static void resendQueuedQueries(int param0, int param1) {
+        IntrusiveNode var2 = null;
+        int var3 = 0;
+        PendingBytePayloadRequest var4 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var2_ref = null;
+        var3 = ZombieDawn.field_J;
+        try {
+          if (param0 != 67600) {
+            return;
+          }
+          var4 = (PendingBytePayloadRequest) (BootstrapLoadingHelpers.field_a.last((byte) 26));
+          while (var4 != null) {
+            LoginMethod.writeRecordPacket(param1, var4, 0);
+            var4 = (PendingBytePayloadRequest) (BootstrapLoadingHelpers.field_a.previous(false));
+          }
+          var2 = SweepingSpotlight.field_D.last((byte) 26);
+          while (var2 != null) {
+            SessionSocketHelpers.sendByteRequest(0, param1);
+            var2 = SweepingSpotlight.field_D.previous(false);
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) var2_ref), "wc.UB(" + param0 + ',' + param1 + ')');
+        }
+    }
+
+    MinigunGunner(int param0, int param1, int param2) {
+        super(param0, param1, param2);
+        this.field_Qb = 0;
+        this.field_S = 2;
+    }
+
+    static {
+        field_Pb = new Sprite(270, 70);
+        field_Ob = 0;
+        field_Nb = new int[8192];
+    }
+}

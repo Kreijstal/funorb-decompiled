@@ -1,0 +1,185 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class InputValidationResult {
+    static int field_c;
+    static int[] field_d;
+    static String[] field_b;
+    static int field_a;
+
+    final static MusicPatch loadMusicPatch(Js5Archive param0, int param1, int param2) {
+        byte[] var3 = null;
+        RuntimeException var3_ref = null;
+        byte[] var4 = null;
+        Object stackIn_2_0 = null;
+        MusicPatch stackIn_6_0 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var4 = param0.getFlatFile(param1, (byte) 41);
+          var3 = var4;
+          if (var4 == null) {
+            stackIn_2_0 = null;
+            return (MusicPatch) (stackIn_2_0);
+          }
+          if (param2 != 0) {
+            field_a = -35;
+          }
+          stackIn_6_0 = new MusicPatch(var4);
+          return stackIn_6_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3_ref = decompiledCaughtException;
+          stackIn_9_0 = var3_ref;
+          stackIn_9_1 = new StringBuilder().append("vk.A(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+        }
+    }
+
+    public static void releaseStatics(byte param0) {
+        int var1 = 22 / ((-31 - param0) / 57);
+        field_d = null;
+        field_b = null;
+    }
+
+    public final String toString() {
+        throw new IllegalStateException();
+    }
+
+    final static TileMap decodeTileMap(byte param0, byte[] param1) {
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$10 = 0;
+        int incrementValue$11 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$6 = 0;
+        int var15_int = 0;
+        int incrementValue$9 = 0;
+        int incrementValue$7 = 0;
+        int var16 = 0;
+        int incrementValue$8 = 0;
+        TileMap stackIn_6_0 = null;
+        TileMap stackIn_20_0 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        String stackIn_24_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int[] var7 = null;
+        int[] var8 = null;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var14 = 0;
+        int[] var15 = null;
+        int var17 = 0;
+        int[] var19 = null;
+        int[] var20 = null;
+        int[] var21 = null;
+        int[] var23 = null;
+        int[] var24 = null;
+        int[] var25 = null;
+        int[][] var27 = null;
+        int var9Lifetime1;
+        int var14Lifetime1;
+        var17 = ZombieDawn.field_J;
+        try {
+          var2_int = 1;
+          incrementValue$0 = var2_int;
+          var2_int++;
+          var3 = AccountCreationDialog.readIntFromBytes(incrementValue$0, param1, 49);
+          var4 = 0;
+          if (0 != (4096 & var3)) {
+            var4 = 1;
+            var3 = var3 & -4097;
+          }
+          incrementValue$1 = var2_int;
+          var2_int++;
+          var5 = AccountCreationDialog.readIntFromBytes(incrementValue$1, param1, 91);
+          incrementValue$2 = var2_int;
+          var2_int++;
+          var6 = AccountCreationDialog.readIntFromBytes(incrementValue$2, param1, 75);
+          var24 = new int[4];
+          var20 = var24;
+          var7 = var20;
+          var25 = new int[4];
+          var21 = var25;
+          var8 = var21;
+          if (param0 > -22) {
+            stackIn_6_0 = (TileMap) null;
+            return stackIn_6_0;
+          }
+          for (var9 = 0; 4 > var9; var9++) {
+            incrementValue$10 = var2_int;
+            var2_int++;
+            var7[var9] = AccountCreationDialog.readIntFromBytes(incrementValue$10, param1, 59);
+            incrementValue$11 = var2_int;
+            var2_int++;
+            var8[var9] = AccountCreationDialog.readIntFromBytes(incrementValue$11, param1, 119);
+          }
+          incrementValue$3 = var2_int;
+          var2_int++;
+          var9Lifetime1 = AccountCreationDialog.readIntFromBytes(incrementValue$3, param1, 86);
+          incrementValue$4 = var2_int;
+          var2_int++;
+          var10 = AccountCreationDialog.readIntFromBytes(incrementValue$4, param1, 55);
+          incrementValue$5 = var2_int;
+          var2_int++;
+          var11 = AccountCreationDialog.readIntFromBytes(incrementValue$5, param1, 107);
+          incrementValue$6 = var2_int;
+          var2_int++;
+          var12 = AccountCreationDialog.readIntFromBytes(incrementValue$6, param1, 76);
+          var27 = new int[var12][var11];
+          for (var14 = 0; var14 < var12; var14++) {
+            for (var15_int = 0; var11 > var15_int; var15_int++) {
+              incrementValue$9 = var2_int;
+              var2_int++;
+              var27[var14][var15_int] = AccountCreationDialog.readIntFromBytes(incrementValue$9, param1, 94);
+            }
+          }
+          incrementValue$7 = var2_int;
+          var2_int++;
+          var14Lifetime1 = AccountCreationDialog.readIntFromBytes(incrementValue$7, param1, 79);
+          var23 = new int[4 * var14Lifetime1];
+          var19 = var23;
+          var15 = var19;
+          for (var16 = 0; 4 * var14Lifetime1 > var16; var16++) {
+            incrementValue$8 = var2_int;
+            var2_int++;
+            var15[var16] = AccountCreationDialog.readIntFromBytes(incrementValue$8, param1, 76);
+          }
+          stackIn_20_0 = new TileMap(var27, var23, var3, var5, var6, var24, var25, var9Lifetime1, var10, var4 != 0);
+          return stackIn_20_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_23_0 = var2;
+          stackIn_23_1 = new StringBuilder().append("vk.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_24_2 = "null";
+          } else {
+            stackIn_24_2 = "{...}";
+          }
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+        }
+    }
+
+    static {
+    }
+}

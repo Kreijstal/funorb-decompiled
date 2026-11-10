@@ -1,6 +1,0 @@
-/*
- * Decompiled by CFR-JS 0.4.0.
- */
-interface io {
-    public abstract void drawWidget(int param0, boolean param1, int param2, UiWidget param3, int param4);
-}

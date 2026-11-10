@@ -9,7 +9,7 @@ final class ViewportController {
     private int field_h;
     int field_t;
     private int field_n;
-    private wa field_g;
+    private CanvasSizeTarget field_g;
     private int field_b;
     private int field_q;
     static long field_u;
@@ -27,19 +27,19 @@ final class ViewportController {
 
     final void restoreWindowedSize(boolean param0) {
         if (param0) {
-          this.field_g.a(this.field_q, -8, this.field_e);
+          this.field_g.applyCanvasSize(this.field_q, -8, this.field_e);
           return;
         }
         this.field_p = -74;
-        this.field_g.a(this.field_q, -8, this.field_e);
+        this.field_g.applyCanvasSize(this.field_q, -8, this.field_e);
     }
 
     final boolean canResize(int param0) {
         int var2 = 23 % ((param0 + 78) / 43);
-        if (lo.field_l < this.field_m) {
+        if (SavedDataRequest.field_l < this.field_m) {
           return false;
         }
-        if (be.field_j > 0) {
+        if (OctaveNoiseMap.field_j > 0) {
           return true;
         }
         return false;
@@ -73,8 +73,8 @@ final class ViewportController {
           for (var2_int = 0; param0 > var2_int; var2_int++) {
             if (ExceptionWrapper.field_e != 0) {
               var9 = Js5Archive.field_e.spawnZombie(60, (byte) 125, 930, 140, 960);
-              var5 = 20 + hp.field_A.getX(true) - so.randomInt(40);
-              var6 = hp.field_A.getY(237239984) - so.randomInt(60);
+              var5 = 20 + UiContainer.field_A.getX(true) - SpriteEffectHelpers.randomInt(40);
+              var6 = UiContainer.field_A.getY(237239984) - SpriteEffectHelpers.randomInt(60);
               var9.setPath(Js5Archive.field_e.navigation.findPath(true, var9.getX(true), var6, var5, var9.getY(237239984)), true);
             } else {
               var8 = Js5Archive.field_e.spawnZombie(20, (byte) 120, 70, 354, 890);
@@ -92,7 +92,7 @@ final class ViewportController {
         }
     }
 
-    ViewportController(wa param0) {
+    ViewportController(CanvasSizeTarget param0) {
         this(640, 480, 1280, 1024, 640, 480, 122, 16, param0);
     }
 
@@ -107,18 +107,18 @@ final class ViewportController {
     final boolean isMemoryInsufficient(int param0) {
         if (param0 != 0) {
           this.restoreWindowedSize(true);
-          if (be.field_j <= 0) {
+          if (OctaveNoiseMap.field_j <= 0) {
             return false;
           }
-          if (lo.field_l < this.field_m) {
+          if (SavedDataRequest.field_l < this.field_m) {
             return true;
           }
           return false;
         }
-        if (be.field_j <= 0) {
+        if (OctaveNoiseMap.field_j <= 0) {
           return false;
         }
-        if (lo.field_l < this.field_m) {
+        if (SavedDataRequest.field_l < this.field_m) {
           return true;
         }
         return false;
@@ -200,24 +200,24 @@ final class ViewportController {
             }
           }
         }
-        if (te.field_eb != var2) {
-          this.field_g.a(var2, 14, var3);
+        if (Alien.field_eb != var2) {
+          this.field_g.applyCanvasSize(var2, 14, var3);
         } else {
-          if (kj.field_c != var3) {
-            this.field_g.a(var2, 14, var3);
+          if (FrameSpriteHelpers.field_c != var3) {
+            this.field_g.applyCanvasSize(var2, 14, var3);
           }
         }
         if (~this.field_p < param0) {
-          rg.field_I = (-te.field_eb + this.field_p) / 2;
+          ScrollViewport.field_I = (-Alien.field_eb + this.field_p) / 2;
         }
     }
 
     final void tick(int param0) {
         int fieldTemp$0 = 0;
-        if (null != cn.field_b) {
+        if (null != DisplayState.field_b) {
           return;
         }
-        if (be.field_j <= 0) {
+        if (OctaveNoiseMap.field_j <= 0) {
           this.field_c = false;
         }
         if (this.field_c) {
@@ -227,7 +227,7 @@ final class ViewportController {
             return;
           }
           this.field_n = this.field_l;
-          if (lo.field_l < this.field_m) {
+          if (SavedDataRequest.field_l < this.field_m) {
             this.field_c = false;
           } else {
             this.applyClampedSize(-1);
@@ -237,18 +237,18 @@ final class ViewportController {
           }
           return;
         }
-        if (te.field_eb < this.field_p) {
-          rg.field_I = (-te.field_eb + this.field_p) / 2;
+        if (Alien.field_eb < this.field_p) {
+          ScrollViewport.field_I = (-Alien.field_eb + this.field_p) / 2;
         } else {
           if (this.field_p > 0) {
-            rg.field_I = 0;
+            ScrollViewport.field_I = 0;
           }
         }
-        if (this.field_f == te.field_eb &&
-          kj.field_c == this.field_r) {
+        if (this.field_f == Alien.field_eb &&
+          FrameSpriteHelpers.field_c == this.field_r) {
           return;
         }
-        this.field_g.a(this.field_f, -125, this.field_r);
+        this.field_g.applyCanvasSize(this.field_f, -125, this.field_r);
     }
 
     final void setFullscreenSize(int param0, int param1, int param2) {
@@ -286,12 +286,12 @@ final class ViewportController {
 
     final FullscreenFocusCanvas enterFullscreen(boolean param0) {
         FullscreenFocusCanvas var2 = null;
-        this.field_e = kj.field_c;
-        this.field_q = te.field_eb;
+        this.field_e = FrameSpriteHelpers.field_c;
+        this.field_q = Alien.field_eb;
         if (param0) {
-          this.field_g.a(this.field_t, 64, this.field_i);
-          rl.field_f = false;
-          var2 = nf.a(this.field_i, this.field_t, vh.field_a, 0, !param0 ? true : false, 0);
+          this.field_g.applyCanvasSize(this.field_t, 64, this.field_i);
+          GrowableIntList.field_f = false;
+          var2 = FullscreenCanvasHelpers.createFullscreenCanvas(this.field_i, this.field_t, SpriteFadeHelpers.field_a, 0, !param0 ? true : false, 0);
           if (var2 == null) {
             this.restoreWindowedSize(true);
           }
@@ -300,7 +300,7 @@ final class ViewportController {
         return (FullscreenFocusCanvas) null;
     }
 
-    private ViewportController(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, wa param8) {
+    private ViewportController(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, CanvasSizeTarget param8) {
         try {
           this.field_g = param8;
           this.field_a = param2;

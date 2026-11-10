@@ -1,0 +1,392 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+abstract class ResizableDialog extends FadingModalPanel {
+    private int field_Q;
+    private int field_S;
+    private int field_P;
+    private int field_O;
+    static String[] field_R;
+    private int field_L;
+    private int field_N;
+    static String field_M;
+
+    void onResizeComplete(int param0) {
+        if (param0 != -7476) {
+          ResizableDialog.releaseStatics(10);
+        }
+    }
+
+    boolean isFullyFadedOut(byte param0) {
+        this.finishTransition((byte) -45);
+        if (param0 != 28) {
+          field_R = (String[]) null;
+          return super.isFullyFadedOut((byte) 28);
+        }
+        return super.isFullyFadedOut((byte) 28);
+    }
+
+    void drawPanelBackground(int param0, int param1, byte param2) {
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var16;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var4Lifetime1;
+        int var4Lifetime2;
+        int var5Lifetime1;
+        int var5Lifetime2;
+        int var6Lifetime1;
+        int var6Lifetime2;
+        int var7Lifetime1;
+        int var7Lifetime2;
+        int var8Lifetime1;
+        int var8Lifetime2;
+        int var9Lifetime1;
+        int var9Lifetime2;
+        int var12Lifetime1;
+        int var13Lifetime1;
+        var16 = ZombieDawn.field_J;
+        Rasterizer.fillVerticalGradient(6 + param0, param1 + 35, -12 + this.field_i, this.field_n - 40, 2105376, 0);
+        var4 = 35;
+        var5 = 211;
+        var6 = 194;
+        var7 = 0;
+        var8 = param1;
+        while (var4 > var7) {
+          if (var8 >= Rasterizer.clipTop &&
+            var8 < Rasterizer.clipBottom) {
+            var9 = var7 * (var6 - var5) / var4 + var5;
+            var10 = 0;
+            var11 = this.field_i;
+            if (20 >= var7) {
+              while (var10 <= 20) {
+                var12 = (-var7 + 20) * (-var7 + 20) + (-var10 + 20) * (20 - var10);
+                if (var12 <= 462) {
+                  if (var12 < 420) {
+                    break;
+                  }
+                  var13 = var9 * (462 - var12) / 42;
+                  var13 = var13 | (var13 << 16 | var13 << 8);
+                  Rasterizer.pixels[param0 + var8 * Rasterizer.width + var10] = var13;
+                }
+                var10++;
+              }
+            }
+            if (20 >= var7) {
+              var12Lifetime1 = var11;
+              var11 -= 21;
+              var13Lifetime1 = 0;
+              while (var13Lifetime1 <= 20) {
+                var14 = (20 - var7) * (-var7 + 20) + var13Lifetime1 * var13Lifetime1;
+                if (var14 <= 462) {
+                  if (var14 >= 420) {
+                    var15 = var9 * (-var14 + 462) / 42;
+                    var15 = var15 | (var15 << 16 | var15 << 8);
+                    Rasterizer.pixels[var8 * Rasterizer.width + param0 + var11] = var15;
+                  } else {
+                    var12Lifetime1 = var11 + 1;
+                  }
+                  var13Lifetime1++;
+                  var11++;
+                  continue;
+                }
+                break;
+              }
+              var11 = var12Lifetime1;
+            }
+            var9 = var9 | (var9 << 16 | var9 << 8);
+            Rasterizer.drawHorizontalLine(param0 + var10, var8, var11 - var10, var9);
+          }
+          var8++;
+          var7++;
+        }
+        if (param2 > -111) {
+          this.drawPanelBackground(-128, -39, (byte) -12);
+        }
+        var6Lifetime1 = 169;
+        var4Lifetime1 = 22;
+        var5Lifetime1 = 194;
+        var7Lifetime1 = 0;
+        var8Lifetime1 = param1 + 35;
+        while (var4Lifetime1 > var7Lifetime1) {
+          var9Lifetime1 = var5Lifetime1 + (-var5Lifetime1 + var6Lifetime1) * var7Lifetime1 / var4Lifetime1;
+          var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 16 | var9Lifetime1 << 8);
+          Rasterizer.drawHorizontalLine(param0, var8Lifetime1, 6, var9Lifetime1);
+          Rasterizer.drawHorizontalLine(param0 + this.field_i - 6, var8Lifetime1, 6, var9Lifetime1);
+          var7Lifetime1++;
+          var8Lifetime1++;
+        }
+        ArmySoldier.field_Tb.drawTransparent(this.field_i + param0 - 90, 10 + param1);
+        GameApplet.drawThreeSliceBar(65, param0 + 5, BitmapTextLayout.field_f, -10 + this.field_i, param1 + 35);
+        GameApplet.drawThreeSliceBar(79, param0, LinkTextPainter.field_b, this.field_i, param1 + this.field_n - 22);
+        var6Lifetime2 = 127;
+        var5Lifetime2 = 169;
+        var4Lifetime2 = -79 + this.field_n;
+        var7Lifetime2 = 0;
+        var8Lifetime2 = 57 + param1;
+        while (var7Lifetime2 < var4Lifetime2) {
+          var9Lifetime2 = var5Lifetime2 + var7Lifetime2 * (var6Lifetime2 - var5Lifetime2) / var4Lifetime2;
+          var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 8 | var9Lifetime2 << 16);
+          Rasterizer.drawHorizontalLine(param0, var8Lifetime2, 6, var9Lifetime2);
+          Rasterizer.drawHorizontalLine(this.field_i + (param0 - 6), var8Lifetime2, 6, var9Lifetime2);
+          var7Lifetime2++;
+          var8Lifetime2++;
+        }
+    }
+
+    final static void showLoginPanel(boolean param0, byte param1, boolean param2) {
+        String var4 = null;
+        String var4Lifetime1;
+        if (param1 < -32) {
+          var4 = (String) null;
+          FocusDelegatingButton.openLoginDialog(-753, (String) null, param0, param2);
+          return;
+        }
+        ResizableDialog.releaseStatics(-15);
+        var4Lifetime1 = (String) null;
+        FocusDelegatingButton.openLoginDialog(-753, (String) null, param0, param2);
+    }
+
+    boolean tickLayerAndCheckHidden(int param0) {
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        int var2Lifetime1;
+        int var3Lifetime1;
+        int var4Lifetime1;
+        int var5Lifetime1;
+        if (param0 == 2634) {
+          if (this.field_Q <= 0) {
+            return super.tickLayerAndCheckHidden(param0 + 0);
+          }
+          var2 = this.field_N;
+          var3 = this.field_O;
+          fieldTemp$2 = this.field_L + 1;
+          this.field_L = this.field_L + 1;
+          if (fieldTemp$2 >= this.field_Q) {
+            this.field_Q = 0;
+            this.onResizeComplete(param0 - 10110);
+          } else {
+            var4 = (this.field_Q * 2 - this.field_L) * this.field_L;
+            var5 = this.field_Q * this.field_Q;
+            var3 = this.field_S + var4 * (this.field_O - this.field_S) / var5;
+            var2 = (-this.field_P + this.field_N) * var4 / var5 + this.field_P;
+          }
+          this.centerOnScreen((byte) 123, var3, var2);
+          return super.tickLayerAndCheckHidden(param0 + 0);
+        }
+        this.finishTransition((byte) -55);
+        if (this.field_Q <= 0) {
+          return super.tickLayerAndCheckHidden(param0 + 0);
+        }
+        var2Lifetime1 = this.field_N;
+        var3Lifetime1 = this.field_O;
+        fieldTemp$3 = this.field_L + 1;
+        this.field_L = this.field_L + 1;
+        if (fieldTemp$3 >= this.field_Q) {
+          this.field_Q = 0;
+          this.onResizeComplete(param0 - 10110);
+        } else {
+          var4Lifetime1 = (this.field_Q * 2 - this.field_L) * this.field_L;
+          var5Lifetime1 = this.field_Q * this.field_Q;
+          var3Lifetime1 = this.field_S + var4Lifetime1 * (this.field_O - this.field_S) / var5Lifetime1;
+          var2Lifetime1 = (-this.field_P + this.field_N) * var4Lifetime1 / var5Lifetime1 + this.field_P;
+        }
+        this.centerOnScreen((byte) 123, var3Lifetime1, var2Lifetime1);
+        return super.tickLayerAndCheckHidden(param0 + 0);
+    }
+
+    void finishTransition(byte param0) {
+        if (this.field_Q <= 0) {
+          return;
+        }
+        this.centerOnScreen((byte) 90, this.field_O, this.field_N);
+        int var2 = 97 % ((22 - param0) / 59);
+        this.field_Q = 0;
+        this.onResizeComplete(-7476);
+    }
+
+    final void resizeDialog(boolean param0, int param1, int param2, int param3) {
+        if (0 >= param3) {
+          this.centerOnScreen((byte) 98, param1, param2);
+          return;
+        }
+        this.field_S = this.field_n;
+        this.field_L = 0;
+        if (!param0) {
+          this.field_O = param1;
+          this.field_N = param2;
+          this.field_Q = param3;
+          this.field_P = this.field_i;
+          return;
+        }
+        this.field_L = 20;
+        this.field_O = param1;
+        this.field_N = param2;
+        this.field_Q = param3;
+        this.field_P = this.field_i;
+    }
+
+    final static void updateSecondCutscene(Camera param0, int param1, LevelHud param2) {
+        RuntimeException stackIn_62_0 = null;
+        StringBuilder stackIn_62_1 = null;
+        String stackIn_63_2 = null;
+        StringBuilder stackIn_65_1 = null;
+        String stackIn_66_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var5Lifetime1;
+        var6 = ZombieDawn.field_J;
+        try {
+          if (AreaSelectionScreen.field_m > 1562) {
+            return;
+          }
+          var3_int = 11;
+          if (param1 != 152) {
+            field_R = (String[]) null;
+          }
+          var4 = AreaSelectionScreen.field_m % var3_int;
+          if (AreaSelectionScreen.field_m % var3_int == 0) {
+            ViewportController.spawnCutsceneZombies(2 + var4 % (2 * var3_int) / var3_int * 2, (byte) -90);
+          }
+          if (-1.0f == ScreenBlurHelpers.field_c) {
+            ScreenBlurHelpers.field_c = (float)param0.y;
+          }
+          if (240.0f < ScreenBlurHelpers.field_c) {
+            ScreenBlurHelpers.field_c = ScreenBlurHelpers.field_c - FullscreenErrorDialog.field_V;
+            param0.y = (int)ScreenBlurHelpers.field_c;
+          }
+          if (AreaSelectionScreen.field_m == 1562) {
+            if (null != MoveTargetMarker.field_f &&
+              !MoveTargetMarker.field_f.isSamplePositionOutOfRange()) {
+              Js5Transport.stopSoundEffect((byte) 13, MoveTargetMarker.field_f);
+            }
+            ByteArrayPool.stopMusic(124);
+            HotspotTextWidget.stopAllSoundEffects(9);
+            ZombieDawn.setMusicVolume(116, BrowserUrlHelpers.field_a);
+            AbstractSprite.setSoundEffectVolume(false, MinigunGunner.field_Rb);
+            CivilianHuman.field_wb = true;
+            return;
+          }
+          if (AreaSelectionScreen.field_m <= 990) {
+            if (990 == AreaSelectionScreen.field_m) {
+              BrowserUrlHelpers.field_a = VisualPropertyNode.field_u;
+            }
+          } else {
+            var5 = 256 + (-AreaSelectionScreen.field_m + 990);
+            if (var5 < 0) {
+              var5 = 0;
+            }
+            ZombieDawn.setMusicVolume(param1 - 30, BrowserUrlHelpers.field_a * var5 >> 8);
+            AbstractSprite.setSoundEffectVolume(false, var5 * MinigunGunner.field_Rb >> 8);
+            TextWidgetPainter.field_c.setVolume(MinigunGunner.field_Rb);
+            if (AreaSelectionScreen.field_m % 2 == 0) {
+              param2.growLetterbox(16777215);
+              if (100 == (AreaSelectionScreen.field_m - 990) / 2) {
+                UiContainer.field_A.raiseWithDrawOffset((byte) -84);
+              }
+            }
+          }
+          if (AreaSelectionScreen.field_m == 800) {
+            NetworkArchiveRequest.field_A = true;
+            EmptyWidgetPainter.queueSoundEffect(64, false);
+            TextWidgetPainter.field_c = EmptyWidgetPainter.queueSoundEffect(150, false);
+            Js5Archive.field_e.zombies.addFirst(0, LoginMethodCookieHelpers.field_c);
+            for (var5Lifetime1 = 0; LevelSelectScreen.field_t.length > var5Lifetime1; var5Lifetime1++) {
+              Js5Archive.field_e.zombies.addFirst(0, LevelSelectScreen.field_t[var5Lifetime1]);
+            }
+            Js5Archive.field_e.zombies.addFirst(0, new SweepingSpotlight(370, 550));
+          } else {
+            if (AreaSelectionScreen.field_m != 950) {
+              if (AreaSelectionScreen.field_m != 700) {
+                if (AreaSelectionScreen.field_m >= 700 &&
+                  AreaSelectionScreen.field_m < 990) {
+                  var5Lifetime1 = 256 * (-700 + AreaSelectionScreen.field_m) / 50;
+                  if (var5Lifetime1 > 256) {
+                    var5Lifetime1 = 256;
+                  }
+                  ScreechEffect.field_r.setVolume(MinigunGunner.field_Rb * var5Lifetime1 >> 8);
+                }
+              } else {
+                ScreechEffect.field_r = MenuSelection.startTrackedSoundEffect(125, 152);
+                ScreechEffect.field_r.setVolume(0);
+                MinigunGunner.field_Rb = AddressHintGlobals.field_c;
+              }
+            } else {
+              UiContainer.field_A.skipToFinalPhase((byte) 111);
+            }
+          }
+          if (AreaSelectionScreen.field_m > 140) {
+            if (0.0f < FullscreenErrorDialog.field_V &&
+              0 == AreaSelectionScreen.field_m % 20) {
+              FullscreenErrorDialog.field_V = FullscreenErrorDialog.field_V - 0.4000000059604645f;
+            }
+            if (!(FullscreenErrorDialog.field_V < 0.0f)) {
+              return;
+            }
+            FullscreenErrorDialog.field_V = 0.0f;
+          } else {
+            if (AreaSelectionScreen.field_m <= 30) {
+              return;
+            }
+            if (AreaSelectionScreen.field_m % 20 == 0) {
+              if (!(1.7 > (double)FullscreenErrorDialog.field_V)) {
+                return;
+              }
+              FullscreenErrorDialog.field_V = FullscreenErrorDialog.field_V + 0.30000001192092896f;
+              return;
+            }
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_62_0 = var3;
+          stackIn_62_1 = new StringBuilder().append("pn.T(");
+          if (param0 == null) {
+            stackIn_63_2 = "null";
+          } else {
+            stackIn_63_2 = "{...}";
+          }
+          stackIn_65_1 = ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_66_2 = "null";
+          } else {
+            stackIn_66_2 = "{...}";
+          }
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_62_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(')').toString());
+        }
+    }
+
+    public static void releaseStatics(int param0) {
+        field_R = null;
+        int var1 = 47 % ((param0 - 29) / 37);
+        field_M = null;
+    }
+
+    ResizableDialog(DialogLayer param0, int param1, int param2) {
+        super(param0, param1, param2);
+        this.field_Q = 0;
+        this.field_L = 0;
+    }
+
+    static {
+        field_M = "You have 1 unread message!";
+    }
+}

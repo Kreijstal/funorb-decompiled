@@ -4,7 +4,7 @@
 class DualLinkNode extends IntrusiveNode {
     long secondaryKey;
     DualLinkNode secondaryNext;
-    static cg field_l;
+    static QuickChatCommandType field_l;
     static volatile int field_j;
     DualLinkNode secondaryPrevious;
     static String field_o;
@@ -41,7 +41,7 @@ class DualLinkNode extends IntrusiveNode {
         if (param0 != 0) {
           return false;
         }
-        return vh.field_c == tk.field_a ? true : false;
+        return SpriteFadeHelpers.field_c == NameCheckRequest.field_a ? true : false;
     }
 
     protected DualLinkNode() {
@@ -50,6 +50,6 @@ class DualLinkNode extends IntrusiveNode {
     static {
         field_j = 0;
         field_o = "Waiting for graphics";
-        field_l = new cg(12, 0, 1, 0);
+        field_l = new QuickChatCommandType(12, 0, 1, 0);
     }
 }

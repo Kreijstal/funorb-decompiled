@@ -1,0 +1,118 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class MusicPatchNode extends IntrusiveNode {
+    int field_y;
+    int field_w;
+    static boolean field_n;
+    static Sprite field_h;
+    int field_C;
+    MusicPatch field_u;
+    int field_A;
+    int field_D;
+    int field_l;
+    PcmSampleStream field_E;
+    int field_q;
+    int field_p;
+    int field_r;
+    FullscreenCanvasHelpers field_t;
+    int field_k;
+    PcmSample field_s;
+    static volatile int field_m;
+    int field_v;
+    int field_z;
+    int field_B;
+    int field_o;
+    int field_j;
+    int field_x;
+    int field_i;
+
+    final static boolean containsForwardOrReversed(String param0, String param1, int param2) {
+        String var3 = null;
+        boolean stackIn_14_0 = false;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_18_2 = null;
+        StringBuilder stackIn_20_1 = null;
+        String stackIn_21_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3_ref = null;
+        try {
+          if (param2 != -7235) {
+            MusicPatchNode.clearStatics(-15);
+          }
+          var3 = BitPacketBuffer.reverseString(param0, 1);
+          if (param1.indexOf(param0) == -1 &&
+            param1.indexOf(var3) == -1) {
+            stackIn_14_0 = (param1.startsWith(param0)) || (param1.startsWith(var3)) || (param1.endsWith(param0)) || (param1.endsWith(var3));
+            return stackIn_14_0;
+          }
+          return true;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3_ref = decompiledCaughtException;
+          stackIn_17_0 = var3_ref;
+          stackIn_17_1 = new StringBuilder().append("lf.C(");
+          if (param0 == null) {
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_2 = "{...}";
+          }
+          stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',');
+          if (param1 == null) {
+            stackIn_21_2 = "null";
+          } else {
+            stackIn_21_2 = "{...}";
+          }
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
+        }
+    }
+
+    public static void clearStatics(int param0) {
+        if (param0 != -9742) {
+          field_m = 16;
+          field_h = null;
+          return;
+        }
+        field_h = null;
+    }
+
+    final static void initializeRaster(int param0, int param1, int param2) {
+        DisplayState.field_f = null;
+        FrameSpriteHelpers.field_c = param0;
+        LevelObstacle.field_D = param0;
+        GrowableIntList.field_f = true;
+        Alien.field_eb = param1;
+        QuickChatPhraseCache.field_d = param1;
+        int[] var4 = (int[]) null;
+        Rasterizer.setBuffer((int[]) null, 0, 0);
+        DisplayState.field_f = TextAndNameCredentials.createRasterBuffer(-1, param0, (java.awt.Component) ((Object) IntrusiveDequeCursor.field_d), param1);
+        DisplayState.field_f.makeRasterTarget(param2 - 129);
+        Bzip2State.setMenuCentre(18002, param0 / 2, param1 / 2);
+        LevelSelectScreen.resizeDialogLayer(param1, param0, (byte) 50);
+        PendingBytePayloadRequest.setViewportSize(param0, param1, -21141);
+        TrackedSoundStream.setDialogCentre(param1 / 2, (byte) -91, param0 / param2);
+    }
+
+    final void release(byte param0) {
+        this.field_s = null;
+        this.field_u = null;
+        if (param0 > 122) {
+          this.field_t = null;
+          this.field_E = null;
+          return;
+        }
+        String var3 = (String) null;
+        MusicPatchNode.containsForwardOrReversed((String) null, (String) null, -37);
+        this.field_t = null;
+        this.field_E = null;
+    }
+
+    MusicPatchNode() {
+    }
+
+    static {
+        field_m = -1;
+        field_h = new Sprite(640, 480);
+    }
+}

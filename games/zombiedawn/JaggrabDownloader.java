@@ -7,13 +7,13 @@ final class JaggrabDownloader implements Runnable {
     private AsyncRequest field_j;
     private AsyncRequest field_b;
     private PlatformTaskDispatcher field_g;
-    static v field_i;
+    static IndexedSprite field_i;
     private DataInputStream field_e;
     static String field_f;
     private PacketBuffer field_a;
     private java.net.URL field_d;
     private AsyncRequest field_k;
-    static v[] field_h;
+    static IndexedSprite[] field_h;
     private int field_c;
 
     public static void releaseStatics(int param0) {
@@ -71,7 +71,7 @@ final class JaggrabDownloader implements Runnable {
                   var3 = var4.getOutputStream();
                   var3.write(17);
                   var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_d.getFile() + "\n\n"));
-                  var3.write(pd.a((byte) 67, var5));
+                  var3.write(MonotonicClock.encodeSingleByteText((byte) 67, var5));
                   this.field_e = new DataInputStream(var4.getInputStream());
                 }
                 this.field_a.position = 0;
@@ -122,10 +122,10 @@ final class JaggrabDownloader implements Runnable {
         var10 = ZombieDawn.field_J;
         try {
           if (ExceptionWrapper.field_e == 1 &&
-            og.field_A) {
-            var2_int = param1.worldToScreenX(ne.field_c.getX(true), (byte) -92);
-            var3 = param1.worldToScreenY(ne.field_c.getY(param0 ^ -237220996), 0);
-            var4 = WorldObject.cosFixed(1311979239, (int)(3L * tp.field_p << 5)) >> 15;
+            NetworkArchiveRequest.field_A) {
+            var2_int = param1.worldToScreenX(LoginMethodCookieHelpers.field_c.getX(true), (byte) -92);
+            var3 = param1.worldToScreenY(LoginMethodCookieHelpers.field_c.getY(param0 ^ -237220996), 0);
+            var4 = WorldObject.cosFixed(1311979239, (int)(3L * MusicCrossfadeStream.field_p << 5)) >> 15;
             stackIn_7_0 = -8;
             if (var4 < 0) {
               stackIn_8_1 = var2_int;
@@ -141,9 +141,9 @@ final class JaggrabDownloader implements Runnable {
             var6 = stackIn_11_0 + 8;
             Rasterizer.fillRectangleBlended(var5, -1 + var3, -var5 + var6, 3, 0, 128);
             for (var7 = 0; var7 < 100; var7++) {
-              if (0 < pl.field_t[var7].field_H) {
-                var8 = param1.worldToScreenX(pl.field_t[var7].getX(true), (byte) -108) + 4;
-                var9 = 4 + param1.worldToScreenY(pl.field_t[var7].getY(237239984), 0);
+              if (0 < LevelSelectScreen.field_t[var7].field_H) {
+                var8 = param1.worldToScreenX(LevelSelectScreen.field_t[var7].getX(true), (byte) -108) + 4;
+                var9 = 4 + param1.worldToScreenY(LevelSelectScreen.field_t[var7].getY(237239984), 0);
                 Rasterizer.setPixel(var8, var9, 0);
               }
             }
@@ -151,7 +151,7 @@ final class JaggrabDownloader implements Runnable {
           if (param0 == -18996) {
             return;
           }
-          field_h = (v[]) null;
+          field_h = (IndexedSprite[]) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -212,10 +212,10 @@ final class JaggrabDownloader implements Runnable {
     }
 
     final static void drawPipeboxBackdrop(boolean param0) {
-        Rasterizer.fillRectangleBlended(vh.field_b, id.field_M + 84, 640, 335, 0, 128);
-        hk.field_H.drawTransparent(vh.field_b, id.field_M + 84);
+        Rasterizer.fillRectangleBlended(SpriteFadeHelpers.field_b, LevelObstacle.field_M + 84, 640, 335, 0, 128);
+        TrafficVehicle.field_H.drawTransparent(SpriteFadeHelpers.field_b, LevelObstacle.field_M + 84);
         if (param0) {
-          field_h = (v[]) null;
+          field_h = (IndexedSprite[]) null;
         }
     }
 

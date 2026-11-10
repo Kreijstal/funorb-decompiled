@@ -8,12 +8,12 @@ class UiWidget extends IntrusiveNode {
     int field_k;
     int field_p;
     int field_j;
-    sk field_v;
+    WidgetListener field_v;
     int field_m;
     int field_n;
     static int field_r;
-    vg field_t;
-    io field_h;
+    TextLayout field_t;
+    WidgetPainter field_h;
     String field_o;
     boolean field_l;
     String field_s;
@@ -185,17 +185,17 @@ class UiWidget extends IntrusiveNode {
 
     final boolean processPointerFrame(int param0, int param1, boolean param2, boolean param3) {
         int var5;
-        ij var6;
+        DraggableWidget var6;
         int var7;
-        ij var8;
-        ij var9;
-        ij var10;
-        ij var11;
-        ij var12;
-        ij var13;
-        ij var14;
-        ij var15;
-        ij var16;
+        DraggableWidget var8;
+        DraggableWidget var9;
+        DraggableWidget var10;
+        DraggableWidget var11;
+        DraggableWidget var12;
+        DraggableWidget var13;
+        DraggableWidget var14;
+        DraggableWidget var15;
+        DraggableWidget var16;
         int var5Lifetime1;
         var7 = ZombieDawn.field_J;
         this.updatePointer(this, (byte) 108, param0, param1);
@@ -203,26 +203,26 @@ class UiWidget extends IntrusiveNode {
           var5 = this.isFocused(-17741) ? 1 : 0;
           if (!param2) {
             if (var5 == 0) {
-              he.field_b = kc.field_R;
-              og.a(this.getTooltip(-58), 0);
+              LoginDialogGlobals.field_b = LaserBarrier.field_R;
+              NetworkArchiveRequest.updateTooltip(this.getTooltip(-58), 0);
               return param2;
             }
-            if (0 == ci.field_d) {
-              he.field_b = kc.field_R;
-              og.a(this.getTooltip(-58), 0);
+            if (0 == GzipDecompressor.field_d) {
+              LoginDialogGlobals.field_b = LaserBarrier.field_R;
+              NetworkArchiveRequest.updateTooltip(this.getTooltip(-58), 0);
               return param2;
             }
             this.blur((byte) 57);
             if (var7 == 0) {
-              he.field_b = kc.field_R;
-              og.a(this.getTooltip(-58), 0);
+              LoginDialogGlobals.field_b = LaserBarrier.field_R;
+              NetworkArchiveRequest.updateTooltip(this.getTooltip(-58), 0);
               return param2;
             }
           }
-          if (id.field_I != 0) {
+          if (LevelObstacle.field_I != 0) {
             if (var5 == 0) {
-              if (ci.field_d != 0) {
-                if (!this.handlePointerPress(nc.field_j, 1, param0, hp.field_D, param1, ci.field_d, this)) {
+              if (GzipDecompressor.field_d != 0) {
+                if (!this.handlePointerPress(ScreechEffect.field_j, 1, param0, UiContainer.field_D, param1, GzipDecompressor.field_d, this)) {
                   if (var5 != 0) {
                     this.blur((byte) 57);
                     if (var7 != 0) {
@@ -233,258 +233,258 @@ class UiWidget extends IntrusiveNode {
                   param2 = false;
                 }
               }
-              if (kc.field_R != 0) {
-                he.field_b = kc.field_R;
-                og.a(this.getTooltip(-58), 0);
+              if (LaserBarrier.field_R != 0) {
+                LoginDialogGlobals.field_b = LaserBarrier.field_R;
+                NetworkArchiveRequest.updateTooltip(this.getTooltip(-58), 0);
                 return param2;
               }
-              if (0 == he.field_b) {
-                he.field_b = kc.field_R;
-                og.a(this.getTooltip(-58), 0);
+              if (0 == LoginDialogGlobals.field_b) {
+                LoginDialogGlobals.field_b = LaserBarrier.field_R;
+                NetworkArchiveRequest.updateTooltip(this.getTooltip(-58), 0);
                 return param2;
               }
-              this.handlePointerRelease(param1, 112, ha.field_b, ei.field_K, param0, this);
-              var8 = np.field_H;
+              this.handlePointerRelease(param1, 112, KeyStateHelpers.field_b, FadingModalPanel.field_K, param0, this);
+              var8 = ValidationStatusIcon.field_H;
               if (var8 != null) {
-                if (var8.field_v instanceof in) {
-                  ((in) (var8.field_v)).onWidgetDropped(-12156, (rd) null, var8);
+                if (var8.field_v instanceof DropTargetListener) {
+                  ((DropTargetListener) (var8.field_v)).onWidgetDropped(-12156, (DropTargetWidget) null, var8);
                 }
-                np.field_H = null;
+                ValidationStatusIcon.field_H = null;
               }
-              he.field_b = kc.field_R;
-              og.a(this.getTooltip(-58), 0);
+              LoginDialogGlobals.field_b = LaserBarrier.field_R;
+              NetworkArchiveRequest.updateTooltip(this.getTooltip(-58), 0);
               return param2;
             }
-            this.onFocusedKey(this, id.field_I, param1, ha.field_b, param0, true, ei.field_K);
+            this.onFocusedKey(this, LevelObstacle.field_I, param1, KeyStateHelpers.field_b, param0, true, FadingModalPanel.field_K);
           }
-          if (ci.field_d != 0) {
-            if (this.handlePointerPress(nc.field_j, 1, param0, hp.field_D, param1, ci.field_d, this)) {
+          if (GzipDecompressor.field_d != 0) {
+            if (this.handlePointerPress(ScreechEffect.field_j, 1, param0, UiContainer.field_D, param1, GzipDecompressor.field_d, this)) {
               param2 = false;
             } else {
               if (var5 != 0) {
                 this.blur((byte) 57);
                 if (var7 != 0) {
                   param2 = false;
-                  if (kc.field_R != 0) {
-                    he.field_b = kc.field_R;
-                    og.a(this.getTooltip(-58), 0);
+                  if (LaserBarrier.field_R != 0) {
+                    LoginDialogGlobals.field_b = LaserBarrier.field_R;
+                    NetworkArchiveRequest.updateTooltip(this.getTooltip(-58), 0);
                     return param2;
                   }
-                  if (0 == he.field_b) {
-                    he.field_b = kc.field_R;
-                    og.a(this.getTooltip(-58), 0);
+                  if (0 == LoginDialogGlobals.field_b) {
+                    LoginDialogGlobals.field_b = LaserBarrier.field_R;
+                    NetworkArchiveRequest.updateTooltip(this.getTooltip(-58), 0);
                     return param2;
                   }
-                  this.handlePointerRelease(param1, 112, ha.field_b, ei.field_K, param0, this);
-                  var9 = np.field_H;
+                  this.handlePointerRelease(param1, 112, KeyStateHelpers.field_b, FadingModalPanel.field_K, param0, this);
+                  var9 = ValidationStatusIcon.field_H;
                   if (var9 != null) {
-                    if (var9.field_v instanceof in) {
-                      ((in) (var9.field_v)).onWidgetDropped(-12156, (rd) null, var9);
+                    if (var9.field_v instanceof DropTargetListener) {
+                      ((DropTargetListener) (var9.field_v)).onWidgetDropped(-12156, (DropTargetWidget) null, var9);
                     }
-                    np.field_H = null;
+                    ValidationStatusIcon.field_H = null;
                   }
-                  he.field_b = kc.field_R;
-                  og.a(this.getTooltip(-58), 0);
+                  LoginDialogGlobals.field_b = LaserBarrier.field_R;
+                  NetworkArchiveRequest.updateTooltip(this.getTooltip(-58), 0);
                   return param2;
                 }
               }
             }
           }
-          if (kc.field_R != 0) {
-            he.field_b = kc.field_R;
-            og.a(this.getTooltip(-58), 0);
+          if (LaserBarrier.field_R != 0) {
+            LoginDialogGlobals.field_b = LaserBarrier.field_R;
+            NetworkArchiveRequest.updateTooltip(this.getTooltip(-58), 0);
             return param2;
           }
-          if (0 == he.field_b) {
-            he.field_b = kc.field_R;
-            og.a(this.getTooltip(-58), 0);
+          if (0 == LoginDialogGlobals.field_b) {
+            LoginDialogGlobals.field_b = LaserBarrier.field_R;
+            NetworkArchiveRequest.updateTooltip(this.getTooltip(-58), 0);
             return param2;
           }
-          this.handlePointerRelease(param1, 112, ha.field_b, ei.field_K, param0, this);
-          var10 = np.field_H;
+          this.handlePointerRelease(param1, 112, KeyStateHelpers.field_b, FadingModalPanel.field_K, param0, this);
+          var10 = ValidationStatusIcon.field_H;
           if (var10 != null) {
-            if (var10.field_v instanceof in) {
-              ((in) (var10.field_v)).onWidgetDropped(-12156, (rd) null, var10);
+            if (var10.field_v instanceof DropTargetListener) {
+              ((DropTargetListener) (var10.field_v)).onWidgetDropped(-12156, (DropTargetWidget) null, var10);
             }
-            np.field_H = null;
+            ValidationStatusIcon.field_H = null;
           }
-          he.field_b = kc.field_R;
-          og.a(this.getTooltip(-58), 0);
+          LoginDialogGlobals.field_b = LaserBarrier.field_R;
+          NetworkArchiveRequest.updateTooltip(this.getTooltip(-58), 0);
           return param2;
         }
         this.handlePointerPress(76, 88, -58, 36, -103, -17, (UiWidget) null);
         var5Lifetime1 = this.isFocused(-17741) ? 1 : 0;
         if (!param2) {
           if (var5Lifetime1 == 0) {
-            he.field_b = kc.field_R;
-            og.a(this.getTooltip(-58), 0);
+            LoginDialogGlobals.field_b = LaserBarrier.field_R;
+            NetworkArchiveRequest.updateTooltip(this.getTooltip(-58), 0);
             return param2;
           }
-          if (0 == ci.field_d) {
-            he.field_b = kc.field_R;
-            og.a(this.getTooltip(-58), 0);
+          if (0 == GzipDecompressor.field_d) {
+            LoginDialogGlobals.field_b = LaserBarrier.field_R;
+            NetworkArchiveRequest.updateTooltip(this.getTooltip(-58), 0);
             return param2;
           }
           this.blur((byte) 57);
           if (var7 == 0) {
-            he.field_b = kc.field_R;
-            og.a(this.getTooltip(-58), 0);
+            LoginDialogGlobals.field_b = LaserBarrier.field_R;
+            NetworkArchiveRequest.updateTooltip(this.getTooltip(-58), 0);
             return param2;
           }
         }
-        if (id.field_I != 0) {
+        if (LevelObstacle.field_I != 0) {
           if (var5Lifetime1 == 0) {
-            if (ci.field_d != 0 &&
-              this.handlePointerPress(nc.field_j, 1, param0, hp.field_D, param1, ci.field_d, this)) {
+            if (GzipDecompressor.field_d != 0 &&
+              this.handlePointerPress(ScreechEffect.field_j, 1, param0, UiContainer.field_D, param1, GzipDecompressor.field_d, this)) {
               param2 = false;
             }
-            if (kc.field_R != 0) {
-              he.field_b = kc.field_R;
-              og.a(this.getTooltip(-58), 0);
+            if (LaserBarrier.field_R != 0) {
+              LoginDialogGlobals.field_b = LaserBarrier.field_R;
+              NetworkArchiveRequest.updateTooltip(this.getTooltip(-58), 0);
               return param2;
             }
-            if (0 == he.field_b) {
-              he.field_b = kc.field_R;
-              og.a(this.getTooltip(-58), 0);
+            if (0 == LoginDialogGlobals.field_b) {
+              LoginDialogGlobals.field_b = LaserBarrier.field_R;
+              NetworkArchiveRequest.updateTooltip(this.getTooltip(-58), 0);
               return param2;
             }
-            this.handlePointerRelease(param1, 112, ha.field_b, ei.field_K, param0, this);
-            var11 = np.field_H;
+            this.handlePointerRelease(param1, 112, KeyStateHelpers.field_b, FadingModalPanel.field_K, param0, this);
+            var11 = ValidationStatusIcon.field_H;
             var6 = var11;
             if (var11 != null) {
-              if (var11.field_v instanceof in) {
-                ((in) (var11.field_v)).onWidgetDropped(-12156, (rd) null, var11);
+              if (var11.field_v instanceof DropTargetListener) {
+                ((DropTargetListener) (var11.field_v)).onWidgetDropped(-12156, (DropTargetWidget) null, var11);
               }
-              np.field_H = null;
+              ValidationStatusIcon.field_H = null;
             }
-            he.field_b = kc.field_R;
-            og.a(this.getTooltip(-58), 0);
+            LoginDialogGlobals.field_b = LaserBarrier.field_R;
+            NetworkArchiveRequest.updateTooltip(this.getTooltip(-58), 0);
             return param2;
           }
-          this.onFocusedKey(this, id.field_I, param1, ha.field_b, param0, true, ei.field_K);
+          this.onFocusedKey(this, LevelObstacle.field_I, param1, KeyStateHelpers.field_b, param0, true, FadingModalPanel.field_K);
         }
-        if (ci.field_d == 0) {
-          if (kc.field_R != 0) {
-            he.field_b = kc.field_R;
-            og.a(this.getTooltip(-58), 0);
+        if (GzipDecompressor.field_d == 0) {
+          if (LaserBarrier.field_R != 0) {
+            LoginDialogGlobals.field_b = LaserBarrier.field_R;
+            NetworkArchiveRequest.updateTooltip(this.getTooltip(-58), 0);
             return param2;
           }
-          if (0 == he.field_b) {
-            he.field_b = kc.field_R;
-            og.a(this.getTooltip(-58), 0);
+          if (0 == LoginDialogGlobals.field_b) {
+            LoginDialogGlobals.field_b = LaserBarrier.field_R;
+            NetworkArchiveRequest.updateTooltip(this.getTooltip(-58), 0);
             return param2;
           }
-          this.handlePointerRelease(param1, 112, ha.field_b, ei.field_K, param0, this);
-          var12 = np.field_H;
+          this.handlePointerRelease(param1, 112, KeyStateHelpers.field_b, FadingModalPanel.field_K, param0, this);
+          var12 = ValidationStatusIcon.field_H;
           if (var12 != null) {
-            if (var12.field_v instanceof in) {
-              ((in) (var12.field_v)).onWidgetDropped(-12156, (rd) null, var12);
+            if (var12.field_v instanceof DropTargetListener) {
+              ((DropTargetListener) (var12.field_v)).onWidgetDropped(-12156, (DropTargetWidget) null, var12);
             }
-            np.field_H = null;
+            ValidationStatusIcon.field_H = null;
           }
-          he.field_b = kc.field_R;
-          og.a(this.getTooltip(-58), 0);
+          LoginDialogGlobals.field_b = LaserBarrier.field_R;
+          NetworkArchiveRequest.updateTooltip(this.getTooltip(-58), 0);
           return param2;
         }
-        if (this.handlePointerPress(nc.field_j, 1, param0, hp.field_D, param1, ci.field_d, this)) {
+        if (this.handlePointerPress(ScreechEffect.field_j, 1, param0, UiContainer.field_D, param1, GzipDecompressor.field_d, this)) {
           param2 = false;
-          if (kc.field_R != 0) {
-            he.field_b = kc.field_R;
-            og.a(this.getTooltip(-58), 0);
+          if (LaserBarrier.field_R != 0) {
+            LoginDialogGlobals.field_b = LaserBarrier.field_R;
+            NetworkArchiveRequest.updateTooltip(this.getTooltip(-58), 0);
             return param2;
           }
-          if (0 == he.field_b) {
-            he.field_b = kc.field_R;
-            og.a(this.getTooltip(-58), 0);
+          if (0 == LoginDialogGlobals.field_b) {
+            LoginDialogGlobals.field_b = LaserBarrier.field_R;
+            NetworkArchiveRequest.updateTooltip(this.getTooltip(-58), 0);
             return param2;
           }
-          this.handlePointerRelease(param1, 112, ha.field_b, ei.field_K, param0, this);
-          var16 = np.field_H;
+          this.handlePointerRelease(param1, 112, KeyStateHelpers.field_b, FadingModalPanel.field_K, param0, this);
+          var16 = ValidationStatusIcon.field_H;
           if (var16 != null) {
-            if (var16.field_v instanceof in) {
-              ((in) (var16.field_v)).onWidgetDropped(-12156, (rd) null, var16);
+            if (var16.field_v instanceof DropTargetListener) {
+              ((DropTargetListener) (var16.field_v)).onWidgetDropped(-12156, (DropTargetWidget) null, var16);
             }
-            np.field_H = null;
+            ValidationStatusIcon.field_H = null;
           }
-          he.field_b = kc.field_R;
-          og.a(this.getTooltip(-58), 0);
+          LoginDialogGlobals.field_b = LaserBarrier.field_R;
+          NetworkArchiveRequest.updateTooltip(this.getTooltip(-58), 0);
           return param2;
         }
         if (var5Lifetime1 == 0) {
-          if (kc.field_R != 0) {
-            he.field_b = kc.field_R;
-            og.a(this.getTooltip(-58), 0);
+          if (LaserBarrier.field_R != 0) {
+            LoginDialogGlobals.field_b = LaserBarrier.field_R;
+            NetworkArchiveRequest.updateTooltip(this.getTooltip(-58), 0);
             return param2;
           }
-          if (0 == he.field_b) {
-            he.field_b = kc.field_R;
-            og.a(this.getTooltip(-58), 0);
+          if (0 == LoginDialogGlobals.field_b) {
+            LoginDialogGlobals.field_b = LaserBarrier.field_R;
+            NetworkArchiveRequest.updateTooltip(this.getTooltip(-58), 0);
             return param2;
           }
-          this.handlePointerRelease(param1, 112, ha.field_b, ei.field_K, param0, this);
-          var13 = np.field_H;
+          this.handlePointerRelease(param1, 112, KeyStateHelpers.field_b, FadingModalPanel.field_K, param0, this);
+          var13 = ValidationStatusIcon.field_H;
           if (var13 != null) {
-            if (var13.field_v instanceof in) {
-              ((in) (var13.field_v)).onWidgetDropped(-12156, (rd) null, var13);
+            if (var13.field_v instanceof DropTargetListener) {
+              ((DropTargetListener) (var13.field_v)).onWidgetDropped(-12156, (DropTargetWidget) null, var13);
             }
-            np.field_H = null;
+            ValidationStatusIcon.field_H = null;
           }
-          he.field_b = kc.field_R;
-          og.a(this.getTooltip(-58), 0);
+          LoginDialogGlobals.field_b = LaserBarrier.field_R;
+          NetworkArchiveRequest.updateTooltip(this.getTooltip(-58), 0);
           return param2;
         }
         this.blur((byte) 57);
         if (var7 == 0) {
-          if (kc.field_R != 0) {
-            he.field_b = kc.field_R;
-            og.a(this.getTooltip(-58), 0);
+          if (LaserBarrier.field_R != 0) {
+            LoginDialogGlobals.field_b = LaserBarrier.field_R;
+            NetworkArchiveRequest.updateTooltip(this.getTooltip(-58), 0);
             return param2;
           }
-          if (0 == he.field_b) {
-            he.field_b = kc.field_R;
-            og.a(this.getTooltip(-58), 0);
+          if (0 == LoginDialogGlobals.field_b) {
+            LoginDialogGlobals.field_b = LaserBarrier.field_R;
+            NetworkArchiveRequest.updateTooltip(this.getTooltip(-58), 0);
             return param2;
           }
-          this.handlePointerRelease(param1, 112, ha.field_b, ei.field_K, param0, this);
-          var14 = np.field_H;
+          this.handlePointerRelease(param1, 112, KeyStateHelpers.field_b, FadingModalPanel.field_K, param0, this);
+          var14 = ValidationStatusIcon.field_H;
           if (var14 != null) {
-            if (var14.field_v instanceof in) {
-              ((in) (var14.field_v)).onWidgetDropped(-12156, (rd) null, var14);
+            if (var14.field_v instanceof DropTargetListener) {
+              ((DropTargetListener) (var14.field_v)).onWidgetDropped(-12156, (DropTargetWidget) null, var14);
             }
-            np.field_H = null;
+            ValidationStatusIcon.field_H = null;
           }
-          he.field_b = kc.field_R;
-          og.a(this.getTooltip(-58), 0);
+          LoginDialogGlobals.field_b = LaserBarrier.field_R;
+          NetworkArchiveRequest.updateTooltip(this.getTooltip(-58), 0);
           return param2;
         }
         param2 = false;
-        if (kc.field_R != 0) {
-          he.field_b = kc.field_R;
-          og.a(this.getTooltip(-58), 0);
+        if (LaserBarrier.field_R != 0) {
+          LoginDialogGlobals.field_b = LaserBarrier.field_R;
+          NetworkArchiveRequest.updateTooltip(this.getTooltip(-58), 0);
           return param2;
         }
-        if (0 == he.field_b) {
-          he.field_b = kc.field_R;
-          og.a(this.getTooltip(-58), 0);
+        if (0 == LoginDialogGlobals.field_b) {
+          LoginDialogGlobals.field_b = LaserBarrier.field_R;
+          NetworkArchiveRequest.updateTooltip(this.getTooltip(-58), 0);
           return param2;
         }
-        this.handlePointerRelease(param1, 112, ha.field_b, ei.field_K, param0, this);
-        var15 = np.field_H;
+        this.handlePointerRelease(param1, 112, KeyStateHelpers.field_b, FadingModalPanel.field_K, param0, this);
+        var15 = ValidationStatusIcon.field_H;
         if (var15 != null) {
-          if (var15.field_v instanceof in) {
-            ((in) (var15.field_v)).onWidgetDropped(-12156, (rd) null, var15);
+          if (var15.field_v instanceof DropTargetListener) {
+            ((DropTargetListener) (var15.field_v)).onWidgetDropped(-12156, (DropTargetWidget) null, var15);
           }
-          np.field_H = null;
+          ValidationStatusIcon.field_H = null;
         }
-        he.field_b = kc.field_R;
-        og.a(this.getTooltip(-58), 0);
+        LoginDialogGlobals.field_b = LaserBarrier.field_R;
+        NetworkArchiveRequest.updateTooltip(this.getTooltip(-58), 0);
         return param2;
     }
 
     void handlePointerRelease(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         try {
           if (param1 < 1) {
-            this.field_v = (sk) null;
+            this.field_v = (WidgetListener) null;
           }
           this.field_m = 0;
         } catch (RuntimeException runtimeException) {
@@ -532,10 +532,10 @@ class UiWidget extends IntrusiveNode {
         return 0;
     }
 
-    final static void sendIntArrayRequest(int param0, int param1, lo param2) {
-        am var3 = null;
+    final static void sendIntArrayRequest(int param0, int param1, SavedDataRequest param2) {
+        BitPacketBuffer var3 = null;
         try {
-          var3 = dp.field_e;
+          var3 = LinkTextPainter.field_e;
           var3.writeCipheredByte(11, param0);
           var3.writeByte(2, 93);
           var3.writeByte(param1, param1 ^ 35);
@@ -561,11 +561,11 @@ class UiWidget extends IntrusiveNode {
           }
           break;
         }
-        var5 = eg.a(109);
+        var5 = TextHotspotRegion.getVisibleTooltipText(109);
         if (var5 == null) {
           return;
         }
-        ProxySocketConnector.field_j.drawTooltip(mm.field_i, lc.field_i, var5, -104);
+        ProxySocketConnector.field_j.drawTooltip(GooPuddle.field_i, WeightedLruCache.field_i, var5, -104);
     }
 
     void updatePointer(UiWidget param0, byte param1, int param2, int param3) {
@@ -579,17 +579,17 @@ class UiWidget extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          var5_int = this.containsPoint(ei.field_K, 21224, param2, param3, ha.field_b) ? 1 : 0;
+          var5_int = this.containsPoint(FadingModalPanel.field_K, 21224, param2, param3, KeyStateHelpers.field_b) ? 1 : 0;
           var6 = 7 / ((46 - param1) / 42);
           stackIn_3_0 = (var5_int != 0) ? 0 : 1;
           if (stackIn_3_0 == (this.field_l ? 1 : 0)) {
             stackIn_8_1 = (var5_int != 0);
             this.field_l = stackIn_8_1;
             if (null != this.field_v) {
-              if (!(this.field_v instanceof ue)) {
+              if (!(this.field_v instanceof HoverListener)) {
                 return;
               }
-              ((ue) (this.field_v)).onHoverChanged(this, 10766, var5_int != 0);
+              ((HoverListener) (this.field_v)).onHoverChanged(this, 10766, var5_int != 0);
             }
           }
           return;
@@ -626,11 +626,11 @@ class UiWidget extends IntrusiveNode {
     final void reapplyBounds(boolean param0) {
         this.setBounds(38, this.field_j, this.field_k, this.field_i, this.field_n);
         if (!param0) {
-          UiWidget.sendIntArrayRequest(122, 7, (lo) null);
+          UiWidget.sendIntArrayRequest(122, 7, (SavedDataRequest) null);
         }
     }
 
-    UiWidget(String param0, sk param1) {
+    UiWidget(String param0, WidgetListener param1) {
         this(param0, ProxySocketConnector.field_j.field_n, param1);
     }
 
@@ -782,16 +782,16 @@ class UiWidget extends IntrusiveNode {
         this.field_u = 0;
     }
 
-    UiWidget(String param0, io param1, sk param2) {
-        ak var4 = null;
+    UiWidget(String param0, WidgetPainter param1, WidgetListener param2) {
+        WidgetTextLayout var4 = null;
         this.field_p = 0;
         this.field_u = 0;
         try {
           this.field_v = param2;
           this.field_o = param0;
           this.field_h = param1;
-          if (this.field_h instanceof ak) {
-            var4 = (ak) ((Object) this.field_h);
+          if (this.field_h instanceof WidgetTextLayout) {
+            var4 = (WidgetTextLayout) ((Object) this.field_h);
             this.field_i = var4.getPreferredTextWidth((byte) -58, this);
             this.field_n = var4.getPreferredTextHeight(false, this);
           }
@@ -800,7 +800,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    UiWidget(int param0, int param1, int param2, int param3, io param4, sk param5) {
+    UiWidget(int param0, int param1, int param2, int param3, WidgetPainter param4, WidgetListener param5) {
         this.field_p = 0;
         this.field_u = 0;
         try {

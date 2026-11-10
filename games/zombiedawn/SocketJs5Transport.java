@@ -50,7 +50,7 @@ final class SocketJs5Transport extends Js5Transport {
           int stackIn_81_0 = 0;
           Throwable decompiledCaughtException = null;
           long var2_long = 0L;
-          og var2 = null;
+          NetworkArchiveRequest var2 = null;
           IOException var2_ref = null;
           int var3_int = 0;
           Exception var3 = null;
@@ -65,13 +65,13 @@ final class SocketJs5Transport extends Js5Transport {
           int var11 = 0;
           long var12 = 0L;
           Object var14 = null;
-          og var14_ref = null;
+          NetworkArchiveRequest var14_ref = null;
           int var15 = 0;
           int var16 = 0;
-          og var2Lifetime1;
+          NetworkArchiveRequest var2Lifetime1;
           var16 = ZombieDawn.field_J;
           if (null != this.field_n) {
-            var2_long = pd.monotonicTimeMillis(param0 - 22805);
+            var2_long = MonotonicClock.monotonicTimeMillis(param0 - 22805);
             var4 = (int)(var2_long - this.field_g);
             if (var4 > 200) {
               var4 = 200;
@@ -102,23 +102,23 @@ final class SocketJs5Transport extends Js5Transport {
           }
           try {
             this.field_n.checkWriteError((byte) 85);
-            var2 = (og) (this.field_a.first((byte) 34));
+            var2 = (NetworkArchiveRequest) (this.field_a.first((byte) 34));
             while (var2 != null) {
               this.field_b.position = 0;
               this.field_b.writeByte(1, 114);
               this.field_b.writeLong40(var2.secondaryKey, param0 ^ -21);
               this.field_n.write(this.field_b.payload.length, true, 0, this.field_b.payload);
               this.field_l.addLast(var2, (byte) -117);
-              var2 = (og) (this.field_a.next((byte) 117));
+              var2 = (NetworkArchiveRequest) (this.field_a.next((byte) 117));
             }
-            var2Lifetime1 = (og) (this.field_f.first((byte) 34));
+            var2Lifetime1 = (NetworkArchiveRequest) (this.field_f.first((byte) 34));
             while (var2Lifetime1 != null) {
               this.field_b.position = 0;
               this.field_b.writeByte(0, -123);
               this.field_b.writeLong40(var2Lifetime1.secondaryKey, 0);
               this.field_n.write(this.field_b.payload.length, true, 0, this.field_b.payload);
               this.field_m.addLast(var2Lifetime1, (byte) -95);
-              var2Lifetime1 = (og) (this.field_f.next((byte) 112));
+              var2Lifetime1 = (NetworkArchiveRequest) (this.field_f.next((byte) 112));
             }
             for (var2_int = 0; var2_int < 100; var2_int++) {
               var3_int = this.field_n.available((byte) -59);
@@ -143,7 +143,7 @@ final class SocketJs5Transport extends Js5Transport {
                   this.field_n.readFully(this.field_j.position, var5, this.field_j.payload, 0);
                   if (this.field_c != 0) {
                     for (var6 = 0; var6 < var5; var6++) {
-                      this.field_j.payload[var6 + this.field_j.position] = (byte)rd.b((int) this.field_j.payload[var6 + this.field_j.position], (int) this.field_c);
+                      this.field_j.payload[var6 + this.field_j.position] = (byte)DropTargetWidget.bitXor((int) this.field_j.payload[var6 + this.field_j.position], (int) this.field_c);
                     }
                   }
                   this.field_j.position = this.field_j.position + var5;
@@ -172,24 +172,24 @@ final class SocketJs5Transport extends Js5Transport {
                       var12 = (long)var7 + ((long)var6 << 32);
                       var14 = null;
                       if (var11 != 0) {
-                        var14_ref = (og) (this.field_m.first((byte) 34));
+                        var14_ref = (NetworkArchiveRequest) (this.field_m.first((byte) 34));
                         while (var14_ref != null) {
                           if (var12 == var14_ref.secondaryKey) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
-                          var14_ref = (og) (this.field_m.next((byte) 122));
+                          var14_ref = (NetworkArchiveRequest) (this.field_m.next((byte) 122));
                         }
                         decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                       }
                       if ((decompiledFrameRemainder0) &&
                         (decompiledFrameCompleted0)) {
-                        var14_ref = (og) (this.field_l.first((byte) 34));
+                        var14_ref = (NetworkArchiveRequest) (this.field_l.first((byte) 34));
                         while (var14_ref != null) {
                           if (~var12 == ~var14_ref.secondaryKey) {
                             break;
                           }
-                          var14_ref = (og) (this.field_l.next((byte) 125));
+                          var14_ref = (NetworkArchiveRequest) (this.field_l.next((byte) 125));
                         }
                       }
                       if (var14_ref == null) {
@@ -217,7 +217,7 @@ final class SocketJs5Transport extends Js5Transport {
                   this.field_n.readFully(this.field_d.field_w.position, var6, this.field_d.field_w.payload, 0);
                   if (this.field_c != 0) {
                     for (var7 = 0; var6 > var7; var7++) {
-                      this.field_d.field_w.payload[var7 + this.field_d.field_w.position] = (byte)rd.b((int) this.field_d.field_w.payload[var7 + this.field_d.field_w.position], (int) this.field_c);
+                      this.field_d.field_w.payload[var7 + this.field_d.field_w.position] = (byte)DropTargetWidget.bitXor((int) this.field_d.field_w.payload[var7 + this.field_d.field_w.position], (int) this.field_c);
                     }
                   }
                   this.field_d.field_w.position = this.field_d.field_w.position + var6;
@@ -313,13 +313,13 @@ final class SocketJs5Transport extends Js5Transport {
           String stackIn_26_2 = null;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
-          og var4_ref = null;
+          NetworkArchiveRequest var4_ref = null;
           IOException var4_ref2 = null;
           int var4_int = 0;
           RuntimeException var4_ref3 = null;
           Exception var5 = null;
           int var6 = 0;
-          og var4_refLifetime1;
+          NetworkArchiveRequest var4_refLifetime1;
           var6 = ZombieDawn.field_J;
           try {
             if (this.field_n != null) {
@@ -337,7 +337,7 @@ final class SocketJs5Transport extends Js5Transport {
             this.field_j.position = 0;
             this.field_d = null;
             while (true) {
-              var4_ref = (og) (this.field_l.removeFirst(116));
+              var4_ref = (NetworkArchiveRequest) (this.field_l.removeFirst(116));
               if (var4_ref != null) {
                 this.field_a.addLast(var4_ref, (byte) -120);
                 continue;
@@ -345,7 +345,7 @@ final class SocketJs5Transport extends Js5Transport {
               break;
             }
             while (true) {
-              var4_refLifetime1 = (og) (this.field_m.removeFirst(-61));
+              var4_refLifetime1 = (NetworkArchiveRequest) (this.field_m.removeFirst(-61));
               if (var4_refLifetime1 != null) {
                 this.field_f.addLast(var4_refLifetime1, (byte) -97);
                 continue;
@@ -375,7 +375,7 @@ final class SocketJs5Transport extends Js5Transport {
             }
             var4_int = -50 % ((-1 - param2) / 63);
             this.field_i = 0;
-            this.field_g = pd.monotonicTimeMillis(-22826);
+            this.field_g = MonotonicClock.monotonicTimeMillis(-22826);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;

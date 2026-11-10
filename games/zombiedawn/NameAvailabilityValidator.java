@@ -1,0 +1,170 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class NameAvailabilityValidator extends TextFieldValidator {
+    private boolean field_h;
+    static String field_f;
+    private String field_i;
+    static float field_j;
+    static Sprite field_g;
+
+    final static void drawLegacyMenuWithFrame(int param0) {
+        int var1 = 0;
+        int var2 = 0;
+        if (param0 == -160793343) {
+          var1 = ByteStorage.getFullscreenPromptWidth(false);
+          var2 = ObstacleFactory.getMessageListHeight(param0 + 160780300);
+          IntrusiveDequeCursor.field_i.drawFrame(var1 + (ClientProtocolStage.field_b << 1), IterableNodeHashTable.field_d - MenuFontGlobals.field_c, RasterCanvasSizeTarget.field_c - ClientProtocolStage.field_b, (byte) -80, var2 + (MenuFontGlobals.field_c << 1));
+          TutorialTipHelpers.drawMenuTextRows(false);
+          return;
+        }
+    }
+
+    final static void sendLevelResult(int param0, int param1, int param2, int param3) {
+        BitPacketBuffer var4 = null;
+        int var5 = 0;
+        if (!MeleeHuman.isGuestSession(13296)) {
+          var4 = LinkTextPainter.field_e;
+          var4.writeCipheredByte(11, param1);
+          var4.position = var4.position + 1;
+          var5 = var4.position;
+          var4.writeByte(0, 97);
+          var4.writeShort(param3, (byte) 105);
+          var4.writeByte(param2, 82);
+          var4.writeShort(param0, (byte) 105);
+          var4.writeLengthPrefixByte(60, var4.position - var5);
+          return;
+        }
+    }
+
+    final ValidationState validateText(String param0, int param1) {
+        AccountServerResult var3 = null;
+        RuntimeException var3_ref = null;
+        CharSequence var4 = null;
+        ValidationState stackIn_2_0 = null;
+        ValidationState stackIn_9_0 = null;
+        ValidationState stackIn_16_0 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_20_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var4 = (CharSequence) ((Object) param0);
+          if (!KeyHandlerHolder.isValidName(20000000, var4)) {
+            stackIn_2_0 = MouseWheelInput.field_b;
+            return stackIn_2_0;
+          }
+          if (!param0.equals(this.field_i)) {
+            var3 = SoundEffectNode.pollAccountNameCheck((byte) 51, param0);
+            if (var3 != null &&
+              null == var3.field_e) {
+              this.field_i = param0;
+              this.field_h = var3.field_b;
+            } else {
+              stackIn_9_0 = WidgetStyleLayer.field_v;
+              return stackIn_9_0;
+            }
+          }
+          if (param1 != 2) {
+            field_g = (Sprite) null;
+          }
+          if (this.field_h) {
+            stackIn_16_0 = EmailSyntaxValidator.field_g;
+          } else {
+            stackIn_16_0 = MouseWheelInput.field_b;
+          }
+          return stackIn_16_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3_ref = decompiledCaughtException;
+          stackIn_19_0 = var3_ref;
+          stackIn_19_1 = new StringBuilder().append("ql.I(");
+          if (param0 == null) {
+            stackIn_20_2 = "null";
+          } else {
+            stackIn_20_2 = "{...}";
+          }
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    public static void releaseStatics(boolean param0) {
+        field_g = null;
+        field_f = null;
+        if (!param0) {
+          field_f = (String) null;
+        }
+    }
+
+    NameAvailabilityValidator(EditableTextWidget param0) {
+        super(param0);
+        this.field_h = false;
+    }
+
+    final void invalidateCachedAvailability(int param0) {
+        if (param0 != -28769) {
+          field_j = 0.772375226020813f;
+          this.field_i = null;
+          return;
+        }
+        this.field_i = null;
+    }
+
+    final String messageForText(String param0, byte param1) {
+        String var3 = null;
+        RuntimeException var3_ref = null;
+        AccountServerResult var4 = null;
+        CharSequence var5 = null;
+        String stackIn_4_0 = null;
+        String stackIn_15_0 = null;
+        String stackIn_17_0 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        String stackIn_21_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 >= -94) {
+            field_g = (Sprite) null;
+          }
+          var5 = (CharSequence) ((Object) param0);
+          var3 = MenuLayoutHelpers.formatName(var5, (byte) -105);
+          if (var3 != null) {
+            stackIn_4_0 = var3;
+            return stackIn_4_0;
+          }
+          if (!param0.equals(this.field_i)) {
+            var4 = SoundEffectNode.pollAccountNameCheck((byte) 51, param0);
+            if (var4 == null) {
+              return null;
+            }
+            if (null != var4.field_e) {
+              return null;
+            }
+            this.field_h = var4.field_b;
+            this.field_i = param0;
+          }
+          if (this.field_h) {
+            stackIn_17_0 = FullscreenMembershipDialog.field_X;
+            return stackIn_17_0;
+          }
+          stackIn_15_0 = MusicPatch.field_i;
+          return stackIn_15_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3_ref = decompiledCaughtException;
+          stackIn_20_0 = var3_ref;
+          stackIn_20_1 = new StringBuilder().append("ql.B(");
+          if (param0 == null) {
+            stackIn_21_2 = "null";
+          } else {
+            stackIn_21_2 = "{...}";
+          }
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    static {
+        field_f = "Loading...";
+        field_j = -1.0f;
+    }
+}

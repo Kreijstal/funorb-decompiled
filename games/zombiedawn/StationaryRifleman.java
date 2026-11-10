@@ -1,0 +1,218 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class StationaryRifleman extends ArmedHuman {
+    static int field_Ob;
+    private boolean field_Nb;
+    int field_Pb;
+
+    final void placeAtTopEdge(int param0) {
+        this.field_x = 9;
+        this.field_y = param0;
+        this.setState(0, -6904);
+    }
+
+    final void tick(int param0) {
+        int var3;
+        Camera var4;
+        var3 = ZombieDawn.field_J;
+        if (param0 <= 95) {
+          var4 = (Camera) null;
+          this.draw((byte) -121, (Camera) null);
+        }
+        if (this.field_Gb > 0) {
+          this.field_Gb = this.field_Gb - 1;
+        }
+        if (this.state != 0) {
+          if (this.state == 10 &&
+            2 == this.field_G) {
+            this.field_yb.takeLethalHit(0);
+            this.setState(0, -6904);
+          }
+        } else {
+          if (this.field_Pb <= 0) {
+            this.aimAtZombieBelow((byte) -119);
+          } else {
+            this.field_Pb = this.field_Pb - 1;
+          }
+        }
+        this.advanceAnimation(this.state, -26109);
+    }
+
+    final static void releaseKeyHandler(byte param0) {
+        Throwable decompiledCaughtException = null;
+        Object var1 = null;
+        if (null != KeyHandlerHolder.field_c) {
+          var1 = KeyHandlerHolder.field_c;
+          synchronized (var1) {
+            KeyHandlerHolder.field_c = null;
+          }
+        }
+        if (param0 >= -72) {
+          StationaryRifleman.releaseKeyHandler((byte) -40);
+        }
+    }
+
+    final void draw(byte param0, Camera param1) {
+        int stackIn_6_0 = 0;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_20_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        try {
+          var3_int = param1.worldToScreenX(this.getX(true), (byte) -70);
+          var4 = param1.worldToScreenY(this.getY(237239984), 0);
+          var5 = 0;
+          if (this.state == 10 &&
+            var5 == 0) {
+            stackIn_6_0 = (this.field_Nb) ? 2 : 1;
+            var5 = stackIn_6_0;
+          }
+          AlternateLongAndNameCredentials.field_l[this.field_t][var5].drawTransparent(var3_int - 24, var4 - 48);
+          if (0 < this.field_Gb) {
+            var6 = var3_int - 3;
+            if (!this.field_Nb) {
+              var6 += 8;
+            }
+            this.drawMuzzleFlash(var6, (byte) -104, var4);
+          }
+          if (param0 >= -76) {
+            field_Ob = -119;
+          }
+          if (PendingIntArrayRequest.field_h) {
+            Rasterizer.drawCircleOutline(var3_int + 12, 24 + var4, 260, 16711680);
+            Rasterizer.drawLine(var3_int, var4, 260 + var3_int, 260 + var4, 16711680);
+            Rasterizer.drawLine(var3_int, var4, -260 + var3_int, 260 + var4, 16711680);
+            CacheEntry.field_q.drawString(Integer.toString(var5), var3_int, var4, 16777215, 0);
+            CacheEntry.field_q.drawString(Integer.toString(this.field_N), 20 + var3_int, var4, 16777215, 0);
+            CacheEntry.field_q.drawString(Integer.toString(this.state), var3_int, -20 + var4, 16777215, 0);
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_19_0 = var3;
+          stackIn_19_1 = new StringBuilder().append("fc.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_20_2 = "null";
+          } else {
+            stackIn_20_2 = "{...}";
+          }
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+        }
+    }
+
+    final static TileMap decodeTileMapWithDefaultSize(byte[] param0, byte param1) {
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        byte[] var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        TileMap stackIn_9_0 = null;
+        TileMap stackIn_11_0 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var5Lifetime1;
+        var6 = ZombieDawn.field_J;
+        try {
+          var2_int = 100;
+          var3 = 100;
+          var4 = new byte[8 + param0.length];
+          for (var5 = 0; var5 < 6; var5++) {
+            WorldObject.putIntAt(var5, var4, (byte) 71, AccountCreationDialog.readIntFromBytes(var5, param0, 72));
+          }
+          WorldObject.putIntAt(6, var4, (byte) -108, var2_int);
+          WorldObject.putIntAt(7, var4, (byte) 57, var3);
+          for (var5Lifetime1 = 6; var5Lifetime1 < param0.length / 4; var5Lifetime1++) {
+            WorldObject.putIntAt(var5Lifetime1 + 2, var4, (byte) 98, AccountCreationDialog.readIntFromBytes(var5Lifetime1, param0, 105));
+          }
+          if (param1 >= 45) {
+            stackIn_11_0 = BufferedSocket.upgradeAndDecodeTileMap(var4, -27);
+            return stackIn_11_0;
+          }
+          stackIn_9_0 = (TileMap) null;
+          return stackIn_9_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_14_0 = var2;
+          stackIn_14_1 = new StringBuilder().append("fc.OA(");
+          if (param0 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
+          }
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    StationaryRifleman(int param0, int param1, int param2) {
+        super(param0, param1, param2);
+        this.field_Nb = false;
+        this.field_Pb = 0;
+        this.field_S = 2;
+        KeyStateHelpers.field_d = this;
+    }
+
+    private final void aimAtZombieBelow(byte param0) {
+        int var5;
+        IntrusiveNode var6;
+        int var7;
+        boolean stackIn_23_1 = false;
+        int var2;
+        int var3;
+        int var4;
+        var7 = ZombieDawn.field_J;
+        if (this.field_yb != null) {
+          this.field_yb = null;
+        }
+        var5 = -1;
+        var6 = Js5Archive.field_e.zombies.last((byte) 26);
+        while (var6 instanceof WorldObject) {
+          if (var6 instanceof Zombie) {
+            if (!((Zombie) (var6)).isVisibleToHumans(91)) {
+              var6 = var6.previous;
+              continue;
+            }
+            var2 = ((Zombie) (var6)).getX(true) - this.getX(true);
+            var3 = ((Zombie) (var6)).getY(237239984) - this.getY(237239984);
+            if (0 < var3 &&
+              Math.abs(var2) < var3) {
+              var4 = var2 * var2 + var3 * var3;
+              if (var4 < var5 ||
+                -1 == var5) {
+                this.field_yb = (Zombie) (var6);
+                var5 = var4;
+              }
+            }
+          }
+          var6 = var6.previous;
+        }
+        if (var5 > 67600) {
+          this.field_yb = null;
+        }
+        if (this.field_yb != null) {
+          this.setState(10, -6904);
+          this.field_Gb = 10;
+          this.field_U = SoundEffectPlayer.playSoundEffect((byte) 18, 44);
+          stackIn_23_1 = !(this.field_Nb);
+          this.field_Nb = stackIn_23_1;
+        } else {
+          this.field_Pb = 20;
+        }
+        if (param0 > -27) {
+          StationaryRifleman.releaseKeyHandler((byte) 99);
+        }
+    }
+
+    static {
+    }
+}

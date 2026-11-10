@@ -10,7 +10,7 @@ final class BufferedFile {
     private long field_c;
     private int field_a;
     static IntrusiveDeque field_n;
-    static pf field_j;
+    static DualLinkNodeHashTable field_j;
     private int field_m;
     private long field_e;
     static int[] field_d;
@@ -23,7 +23,7 @@ final class BufferedFile {
         field_n = null;
         field_j = null;
         if (param0 != 0) {
-          field_j = (pf) null;
+          field_j = (DualLinkNodeHashTable) null;
         }
         field_d = null;
     }
@@ -82,7 +82,7 @@ final class BufferedFile {
             if (this.field_h != -1L &&
               this.field_e >= this.field_h &&
               (this.field_h + (long)this.field_m) >= ((long)param0 + this.field_e)) {
-              gp.copy(this.field_b, (int)(-this.field_h + this.field_e), param3, param2, param0);
+              ArraySupport.copy(this.field_b, (int)(-this.field_h + this.field_e), param3, param2, param0);
               this.field_e = this.field_e + (long)param0;
               return;
             }
@@ -98,7 +98,7 @@ final class BufferedFile {
               if (var9_int > param0) {
                 var9_int = param0;
               }
-              gp.copy(this.field_i, (int)(-this.field_l + this.field_e), param3, param2, var9_int);
+              ArraySupport.copy(this.field_i, (int)(-this.field_l + this.field_e), param3, param2, var9_int);
               param2 = param2 + var9_int;
               this.field_e = this.field_e + (long)var9_int;
               param0 = param0 - var9_int;
@@ -129,7 +129,7 @@ final class BufferedFile {
               if (var9_intLifetime1Lifetime1 > this.field_a) {
                 var9_intLifetime1Lifetime1 = this.field_a;
               }
-              gp.copy(this.field_i, 0, param3, param2, var9_intLifetime1Lifetime1);
+              ArraySupport.copy(this.field_i, 0, param3, param2, var9_intLifetime1Lifetime1);
               param0 = param0 - var9_intLifetime1Lifetime1;
               this.field_e = this.field_e + (long)var9_intLifetime1Lifetime1;
               param2 = param2 + var9_intLifetime1Lifetime1;
@@ -172,7 +172,7 @@ final class BufferedFile {
               if (-1L < var9 &&
                 var9 < var11) {
                 var13 = (int)(var11 - var9);
-                gp.copy(this.field_b, (int)(var9 - this.field_h), param3, var7 + (int)(-var5_long + var9), var13);
+                ArraySupport.copy(this.field_b, (int)(var9 - this.field_h), param3, var7 + (int)(-var5_long + var9), var13);
                 if (var11 > this.field_e) {
                   param0 = (int)((long)param0 - (var11 - this.field_e));
                   this.field_e = var11;
@@ -237,7 +237,7 @@ final class BufferedFile {
             if (this.field_h != -1L &&
               (long)param3 + this.field_e > this.field_h + (long)this.field_b.length) {
               var5_int = (int)(this.field_h - (this.field_e - (long)this.field_b.length));
-              gp.copy(param1, param2, this.field_b, (int)(-this.field_h + this.field_e), var5_int);
+              ArraySupport.copy(param1, param2, this.field_b, (int)(-this.field_h + this.field_e), var5_int);
               param2 = param2 + var5_int;
               this.field_e = this.field_e + (long)var5_int;
               param3 = param3 - var5_int;
@@ -254,7 +254,7 @@ final class BufferedFile {
               if (this.field_h == -1L) {
                 this.field_h = this.field_e;
               }
-              gp.copy(param1, param2, this.field_b, (int)(this.field_e - this.field_h), param3);
+              ArraySupport.copy(param1, param2, this.field_b, (int)(this.field_e - this.field_h), param3);
               this.field_e = this.field_e + (long)param3;
               if ((-this.field_h + this.field_e) > (long)this.field_m) {
                 this.field_m = (int)(this.field_e - this.field_h);
@@ -293,7 +293,7 @@ final class BufferedFile {
             if (-1L < var5_long &&
               var7 > var5_long) {
               var9 = (int)(var7 - var5_long);
-              gp.copy(param1, (int)(-this.field_e + (long)param2 + var5_long), this.field_i, (int)(-this.field_l + var5_long), var9);
+              ArraySupport.copy(param1, (int)(-this.field_e + (long)param2 + var5_long), this.field_i, (int)(-this.field_l + var5_long), var9);
             }
             this.field_e = this.field_e + (long)param3;
             return;
@@ -359,7 +359,7 @@ final class BufferedFile {
           if (var2 > -1L &&
             var4 > var2) {
             var6 = (int)(var4 - var2);
-            gp.copy(this.field_b, (int)(var2 - this.field_h), this.field_i, (int)(-this.field_l + var2), var6);
+            ArraySupport.copy(this.field_b, (int)(var2 - this.field_h), this.field_i, (int)(-this.field_l + var2), var6);
           }
           this.field_m = 0;
           this.field_h = -1L;

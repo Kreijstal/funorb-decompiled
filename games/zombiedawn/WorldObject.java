@@ -15,7 +15,7 @@ abstract class WorldObject extends SpatialObject {
     int field_B;
 
     void updateGridCell(byte param0) {
-        if (ng.field_e) {
+        if (LoginConnectionHelpers.field_e) {
           return;
         }
         int var2 = -113 / ((param0 - 66) / 50);
@@ -116,16 +116,16 @@ abstract class WorldObject extends SpatialObject {
         if (this instanceof Zombie) {
           return 0 != (param1 & 2) ? true : false;
         }
-        if (this instanceof id) {
+        if (this instanceof LevelObstacle) {
           return 0 != (4 & param1) ? true : false;
         }
-        if (this instanceof vb) {
+        if (this instanceof PhantomZombie) {
           return 0 != (param1 & 8) ? true : false;
         }
         if (param0 <= 29) {
           return false;
         }
-        if (!(this instanceof gb)) {
+        if (!(this instanceof PowerupPickup)) {
           return false;
         }
         if ((param1 & 16) != 0) {
@@ -272,16 +272,16 @@ abstract class WorldObject extends SpatialObject {
           param1 = param1 & 8191;
           if (4096 > param1) {
             if (2048 <= param1) {
-              stackIn_19_0 = -lo.field_q[-2048 + param1];
+              stackIn_19_0 = -SavedDataRequest.field_q[-2048 + param1];
             } else {
-              stackIn_19_0 = lo.field_q[-param1 + 2048];
+              stackIn_19_0 = SavedDataRequest.field_q[-param1 + 2048];
             }
             return stackIn_19_0;
           }
           if (param1 < 6144) {
-            stackIn_15_0 = -lo.field_q[-param1 + 6144];
+            stackIn_15_0 = -SavedDataRequest.field_q[-param1 + 6144];
           } else {
-            stackIn_15_0 = lo.field_q[param1 - 6144];
+            stackIn_15_0 = SavedDataRequest.field_q[param1 - 6144];
           }
           return stackIn_15_0;
         }
@@ -290,16 +290,16 @@ abstract class WorldObject extends SpatialObject {
         param1 = param1 & 8191;
         if (4096 > param1) {
           if (2048 <= param1) {
-            stackIn_9_0 = -lo.field_q[-2048 + param1];
+            stackIn_9_0 = -SavedDataRequest.field_q[-2048 + param1];
           } else {
-            stackIn_9_0 = lo.field_q[-param1 + 2048];
+            stackIn_9_0 = SavedDataRequest.field_q[-param1 + 2048];
           }
           return stackIn_9_0;
         }
         if (param1 < 6144) {
-          stackIn_5_0 = -lo.field_q[-param1 + 6144];
+          stackIn_5_0 = -SavedDataRequest.field_q[-param1 + 6144];
         } else {
-          stackIn_5_0 = lo.field_q[param1 - 6144];
+          stackIn_5_0 = SavedDataRequest.field_q[param1 - 6144];
         }
         return stackIn_5_0;
     }

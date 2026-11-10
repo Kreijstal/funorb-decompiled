@@ -1,0 +1,92 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class RasterCanvasSizeTarget implements CanvasSizeTarget {
+    static int field_b;
+    static int field_c;
+    static Sprite[][] field_a;
+    static PcmSampleStream field_e;
+    static int[] field_d;
+
+    public final void applyCanvasSize(int param0, int param1, int param2) {
+        int var4 = -126 / ((param1 + 83) / 35);
+        MusicPatchNode.initializeRaster(param2, param0, 2);
+    }
+
+    final static void buildPathDistanceGrid(byte param0) {
+        int var1_int = 0;
+        int var2 = 0;
+        int var3 = ZombieDawn.field_J;
+        int var2Lifetime1;
+        try {
+          ThreeSliceButtonPainter.field_u = Js5Archive.field_e.navigation.createDistanceGrid(8728);
+          for (var1_int = 0; var1_int < ThreeSliceButtonPainter.field_u.length; var1_int++) {
+            for (var2 = 0; var2 < ThreeSliceButtonPainter.field_u[0].length; var2++) {
+              if (ThreeSliceButtonPainter.field_u[var1_int][var2] != 0) {
+                ThreeSliceButtonPainter.field_u[var1_int][var2] = -1;
+              }
+            }
+          }
+          var2Lifetime1 = 3 / ((27 - param0) / 47);
+        } catch (RuntimeException runtimeException) {
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "wh.B(" + param0 + ')');
+        }
+    }
+
+    final static InputValidationResult validateDigitsOnly(String param0, boolean param1) {
+        int var3 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var4 = 0;
+        int var5 = 0;
+        InputValidationResult stackIn_12_0 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        var5 = ZombieDawn.field_J;
+        try {
+          var2_int = param0.length();
+          for (var3 = 0; var2_int > var3; var3++) {
+            var4 = param0.charAt(var3);
+            if (var4 < 48) {
+              return null;
+            }
+            if (var4 > 57) {
+              return null;
+            }
+          }
+          if (param1) {
+            RasterCanvasSizeTarget.releaseStatics(-70);
+          }
+          stackIn_12_0 = CheckboxPainter.field_m;
+          return stackIn_12_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_15_0 = var2;
+          stackIn_15_1 = new StringBuilder().append("wh.C(");
+          if (param0 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
+          }
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    public static void releaseStatics(int param0) {
+        if (param0 != 0) {
+          field_a = (Sprite[][]) null;
+        }
+        field_a = (Sprite[][]) null;
+        field_d = null;
+        field_e = null;
+    }
+
+    static {
+        field_a = new Sprite[4][];
+        field_e = null;
+        field_d = new int[256];
+    }
+}

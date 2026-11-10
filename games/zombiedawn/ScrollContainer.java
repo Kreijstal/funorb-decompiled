@@ -1,0 +1,350 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ScrollContainer extends ArrayWidgetContainer {
+    static IntrusiveDeque field_J;
+    static int field_E;
+    private Scrollbar field_H;
+    static NineSliceFrame field_G;
+    Scrollbar field_L;
+    private boolean field_K;
+    static String field_C;
+    static boolean field_F;
+    private boolean field_I;
+    ScrollViewport field_D;
+
+    private final boolean scrollByWheel(int param0, int param1) {
+        if (param0 >= -19) {
+          Scrollbar var4 = (Scrollbar) null;
+          this.setVerticalScrollbar(true, (byte) 20, (Scrollbar) null);
+        }
+        if (null == this.field_L) {
+          return false;
+        }
+        this.field_L.setVerticalPosition(param1 * this.field_L.field_W + this.field_L.field_E, (byte) -63);
+        return true;
+    }
+
+    final void updatePointer(UiWidget param0, byte param1, int param2, int param3) {
+        try {
+          int var5_int = 81 / ((param1 - 46) / 42);
+          super.updatePointer(param0, (byte) -38, param2, param3);
+          this.updateScrollbarRanges(-98);
+          this.applyScrollPositions((byte) 124);
+        } catch (RuntimeException runtimeException) {
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "qi.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        }
+    }
+
+    final void layoutChildren(byte param0) {
+        int stackIn_6_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_14_0 = 0;
+        int stackIn_17_0 = 0;
+        Scrollbar stackIn_21_0 = null;
+        int stackIn_21_1 = 0;
+        int stackIn_21_2 = 0;
+        int stackIn_22_3;
+        Scrollbar stackIn_26_0 = null;
+        int stackIn_26_1 = 0;
+        int stackIn_27_2 = 0;
+        int var2;
+        int var3;
+        int var4;
+        int var5;
+        if (param0 < 38) {
+          field_E = -6;
+        }
+        if (!this.field_I &&
+          null != this.field_L) {
+          stackIn_6_0 = this.field_L.field_i;
+        } else {
+          stackIn_6_0 = 0;
+        }
+        var2 = stackIn_6_0;
+        if (!this.field_K &&
+          this.field_H != null) {
+          stackIn_11_0 = this.field_H.field_n;
+        } else {
+          stackIn_11_0 = 0;
+        }
+        var3 = stackIn_11_0;
+        if (null == this.field_L) {
+          stackIn_14_0 = this.field_i;
+        } else {
+          stackIn_14_0 = this.field_i - this.field_L.field_i;
+        }
+        var4 = stackIn_14_0;
+        if (this.field_H != null) {
+          stackIn_17_0 = this.field_n - this.field_H.field_n;
+        } else {
+          stackIn_17_0 = this.field_n;
+        }
+        var5 = stackIn_17_0;
+        this.field_D.setBounds(-89, var3, var2, var4, var5);
+        if (this.field_L != null) {
+          stackIn_21_0 = this.field_L;
+          stackIn_21_1 = 79;
+          stackIn_21_2 = this.field_D.field_j;
+          if (!this.field_I) {
+            stackIn_22_3 = 0;
+          } else {
+            stackIn_22_3 = -this.field_L.field_i + this.field_i;
+          }
+          ((Scrollbar) (Object) stackIn_21_0).setBounds(stackIn_21_1, stackIn_21_2, stackIn_22_3, this.field_L.field_i, this.field_D.field_n);
+        }
+        if (null != this.field_H) {
+          stackIn_26_0 = this.field_H;
+          stackIn_26_1 = 70;
+          if (this.field_K) {
+            stackIn_27_2 = this.field_n - this.field_H.field_n;
+          } else {
+            stackIn_27_2 = 0;
+          }
+          ((Scrollbar) (Object) stackIn_26_0).setBounds(stackIn_26_1, stackIn_27_2, this.field_D.field_k, this.field_D.field_i, this.field_H.field_n);
+        }
+        this.updateScrollbarRanges(78);
+    }
+
+    final boolean onFocusedKey(UiWidget param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
+        RuntimeException var8 = null;
+        boolean stackIn_8_0 = false;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (super.onFocusedKey(param0, param1, param2, param3, param4, param5, param6)) {
+            return true;
+          }
+          stackIn_8_0 = (this.isFocused(-17741)) && (this.scrollByWheel(-118, param1));
+          return stackIn_8_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var8 = decompiledCaughtException;
+          stackIn_11_0 = var8;
+          stackIn_11_1 = new StringBuilder().append("qi.OA(");
+          if (param0 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
+          }
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+        }
+    }
+
+    private final void applyScrollPositions(byte param0) {
+        if (this.field_H != null) {
+          this.field_D.field_z.field_k = -(int)((long)this.field_H.field_D * (long)(-this.field_D.field_i + this.field_D.field_z.field_i) >> 16);
+        }
+        if (param0 < 123) {
+          return;
+        }
+        if (this.field_L != null) {
+          this.field_D.field_z.field_j = -(int)((long)(-this.field_D.field_n + this.field_D.field_z.field_n) * (long)this.field_L.field_E >> 16);
+        }
+    }
+
+    final static void openRelativeUrl(String param0, java.applet.Applet param1, int param2) {
+        try {
+          java.net.URL var3 = null;
+          RuntimeException stackIn_8_0 = null;
+          StringBuilder stackIn_8_1 = null;
+          String stackIn_9_2 = null;
+          StringBuilder stackIn_11_1 = null;
+          String stackIn_12_2 = null;
+          Throwable decompiledCaughtException = null;
+          Exception var3_ref = null;
+          RuntimeException var3_ref2 = null;
+          try {
+            try {
+              var3 = new java.net.URL(param1.getCodeBase(), param0);
+              var3 = PendingRecordRequest.appendSessionParameters(-1, param1, var3);
+              if (param2 >= -41) {
+                ScrollContainer.formatScaledDecimal(false, 5, 83, 100L, (byte) 62);
+              }
+              BrowserUrlHelpers.openUrlInNewWindow(var3.toString(), param1, true, -20517);
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var3_ref = (Exception) (Object) decompiledCaughtException;
+              var3_ref.printStackTrace();
+            }
+            return;
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_8_0 = var3_ref2;
+            stackIn_8_1 = new StringBuilder().append("qi.K(");
+            if (param0 == null) {
+              stackIn_9_2 = "null";
+            } else {
+              stackIn_9_2 = "{...}";
+            }
+            stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',');
+            if (param1 == null) {
+              stackIn_12_2 = "null";
+            } else {
+              stackIn_12_2 = "{...}";
+            }
+            throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    private final void updateScrollbarRanges(int param0) {
+        int var3 = ZombieDawn.field_J;
+        if (this.field_L != null) {
+          if (this.field_D.field_z.field_n > this.field_D.field_n) {
+            this.field_L.setVerticalVisibleRange(-30674, this.field_D.field_z.field_n, this.field_D.field_n);
+          } else {
+            this.field_L.setVerticalVisibleRange(-30674, 1, 1);
+          }
+        }
+        int var2 = 126 / ((param0 - 33) / 43);
+        if (this.field_H == null) {
+        } else {
+          if (this.field_D.field_z.field_i <= this.field_D.field_i) {
+            this.field_H.setHorizontalVisibleRange(1, 26, 1);
+          } else {
+            this.field_H.setHorizontalVisibleRange(this.field_D.field_z.field_i, -126, this.field_D.field_i);
+          }
+        }
+    }
+
+    final void setVerticalScrollbar(boolean param0, byte param1, Scrollbar param2) {
+        try {
+          if (param1 <= 99) {
+            this.field_I = false;
+          }
+          this.field_I = param0 ? true : false;
+          this.field_L = param2;
+          this.field_B[1] = (UiWidget) ((Object) param2);
+        } catch (RuntimeException runtimeException) {
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "qi.L(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final boolean requestKeyboardFocus(int param0, int param1, UiWidget param2, char param3) {
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var5_int = -78 % ((param0 + 83) / 32);
+          if (!super.requestKeyboardFocus(-126, param1, param2, param3)) {
+            return false;
+          }
+          this.applyScrollPositions((byte) 124);
+          return true;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_6_0 = var5;
+          stackIn_6_1 = new StringBuilder().append("qi.I(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    ScrollContainer(int param0, int param1, int param2, int param3, WidgetPainter param4, UiWidget param5, WidgetPainter param6) {
+        super(param0, param1, param2, param3, param4);
+        ScrollViewport dupTemp$0 = null;
+        try {
+          this.field_B = new UiWidget[3];
+          dupTemp$0 = new ScrollViewport(param0, param1, param2, param3, param6, param5);
+          this.field_D = dupTemp$0;
+          this.field_B[2] = (UiWidget) ((Object) dupTemp$0);
+          this.layoutChildren((byte) 82);
+        } catch (RuntimeException runtimeException) {
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "qi.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    public static void releaseStatics(int param0) {
+        field_C = null;
+        if (param0 != 0) {
+          ScrollContainer.releaseStatics(-32);
+        }
+        field_J = null;
+        field_G = null;
+    }
+
+    final static String formatScaledDecimal(boolean param0, int param1, int param2, long param3, byte param4) {
+        StringBuilder discarded$1 = null;
+        StringBuilder discarded$0 = null;
+        StringBuilder discarded$2 = null;
+        StringBuilder discarded$4 = null;
+        StringBuilder discarded$3 = null;
+        int var6;
+        int var7;
+        int var8;
+        StringBuilder var9;
+        int var10;
+        int var11;
+        int var12;
+        int var10Lifetime1;
+        int var11Lifetime1;
+        var12 = ZombieDawn.field_J;
+        var6 = 44;
+        var7 = 46;
+        if (param4 != 113) {
+          return (String) null;
+        }
+        if (param2 == 0) {
+          var6 = 46;
+          var7 = 44;
+        }
+        if (2 == param2) {
+          var7 = 160;
+        }
+        var8 = 0;
+        if (param3 < 0L) {
+          param3 = -param3;
+          var8 = 1;
+        }
+        var9 = new StringBuilder(26);
+        if (param1 > 0) {
+          for (var10 = 0; var10 < param1; var10++) {
+            var11 = (int)param3;
+            param3 = param3 / 10L;
+            discarded$1 = var9.append((char)(48 + (var11 - 10 * (int)param3)));
+          }
+          discarded$0 = var9.append((char) var6);
+        }
+        var10Lifetime1 = 0;
+        while (true) {
+          var11Lifetime1 = (int)param3;
+          param3 = param3 / 10L;
+          discarded$2 = var9.append((char)(48 + var11Lifetime1 - 10 * (int)param3));
+          if (param3 == 0L) {
+            if (var8 != 0) {
+              discarded$4 = var9.append('-');
+            }
+            return var9.reverse().toString();
+          }
+          if (!param0) {
+            continue;
+          }
+          var10Lifetime1++;
+          if (var10Lifetime1 % 3 != 0) {
+            continue;
+          }
+          discarded$3 = var9.append((char) var7);
+        }
+    }
+
+    static {
+        field_J = new IntrusiveDeque();
+        field_C = "Login: ";
+    }
+}

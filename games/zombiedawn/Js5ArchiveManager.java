@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class Js5ArchiveManager {
-    private og field_e;
+    private NetworkArchiveRequest field_e;
     private java.math.BigInteger field_b;
     static String[] field_a;
-    static jk field_h;
+    static ArchivePreloader field_h;
     private java.math.BigInteger field_c;
     private ExceptionWrapper field_i;
     private CachedArchiveSource[] field_g;
@@ -109,7 +109,7 @@ final class Js5ArchiveManager {
         if (this.field_e.field_q) {
           return false;
         }
-        var10 = new PacketBuffer(this.field_e.d(0));
+        var10 = new PacketBuffer(this.field_e.getBytes(0));
         var10.position = 5;
         var3 = var10.readUnsignedByte((byte) -118);
         var10.position = var10.position + 72 * var3;
@@ -128,7 +128,7 @@ final class Js5ArchiveManager {
         if (65 != var5.length) {
           throw new RuntimeException();
         }
-        var15 = nl.computeWhirlpoolDigest(5, -5 + (var10.position - var13.length), -117, var10.payload);
+        var15 = AchievementsScreen.computeWhirlpoolDigest(5, -5 + (var10.position - var13.length), -117, var10.payload);
         for (var7 = 0; var7 < 64; var7++) {
           if (var15[var7] != var5[var7 + 1]) {
             throw new RuntimeException();

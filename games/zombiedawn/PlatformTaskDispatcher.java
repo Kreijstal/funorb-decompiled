@@ -111,7 +111,7 @@ final class PlatformTaskDispatcher implements Runnable {
           RandomAccessCacheFile var3_ref = null;
           int var3_int = 0;
           Exception var3_ref2 = null;
-          dg var3_ref3 = null;
+          ProxyAuthException var3_ref3 = null;
           int var4_int = 0;
           String var4 = null;
           java.awt.datatransfer.Transferable var7 = null;
@@ -213,7 +213,7 @@ final class PlatformTaskDispatcher implements Runnable {
                           if (this.field_u) {
                             this.field_v.setCursorPosition(var4_int, var3_int, (byte) -70);
                           } else {
-                            Class.forName("jn").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_l, new Object[]{new Integer(var3_int), new Integer(var4_int)});
+                            Class.forName("CursorController").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_l, new Object[]{new Integer(var3_int), new Integer(var4_int)});
                           }
                           break;
                         }
@@ -225,14 +225,14 @@ final class PlatformTaskDispatcher implements Runnable {
                           if (this.field_u) {
                             this.field_v.setCursorVisible(var11, true, var3_int != 0);
                           } else {
-                            Class.forName("jn").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_l, new Object[]{var11, new Boolean(var3_int != 0)});
+                            Class.forName("CursorController").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_l, new Object[]{var11, new Boolean(var3_int != 0)});
                           }
                           break;
                         }
                         if (!this.field_u &&
                           17 == var2_int) {
                           var13 = (Object[]) (var8.field_e);
-                          Class.forName("jn").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_l, new Object[]{var13[0], var13[1], new Integer(var8.field_g), new Integer(var8.field_c), var13[2]});
+                          Class.forName("CursorController").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_l, new Object[]{var13[0], var13[1], new Integer(var8.field_g), new Integer(var8.field_c), var13[2]});
                         } else {
                           if (var2_int != 16) {
                             throw PlatformTaskDispatcher.<RuntimeException>sneakyThrow(new Exception(""));
@@ -284,13 +284,13 @@ final class PlatformTaskDispatcher implements Runnable {
                         }
                         break;
                       case 21:
-                        if (pd.monotonicTimeMillis(-22826) < field_j) {
+                        if (MonotonicClock.monotonicTimeMillis(-22826) < field_j) {
                           throw new IOException();
                         }
                         var8.result = java.net.InetAddress.getByName((String) (var8.field_e)).getAddress();
                         break;
                       case 3:
-                        if (pd.monotonicTimeMillis(-22826) < field_j) {
+                        if (MonotonicClock.monotonicTimeMillis(-22826) < field_j) {
                           throw new IOException();
                         }
                         var9 = (255 & var8.field_g >> 24) + "." + (255 & var8.field_g >> 16) + "." + ((65496 & var8.field_g) >> 8) + "." + (255 & var8.field_g);
@@ -299,27 +299,27 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     break;
                   case 4:
-                    if (pd.monotonicTimeMillis(-22826) < field_j) {
+                    if (MonotonicClock.monotonicTimeMillis(-22826) < field_j) {
                       throw new IOException();
                     }
                     var8.result = new DataInputStream(((java.net.URL) (var8.field_e)).openStream());
                     break;
                   case 22:
-                    if (field_j > pd.monotonicTimeMillis(-22826)) {
+                    if (field_j > MonotonicClock.monotonicTimeMillis(-22826)) {
                       throw new IOException();
                     }
                     try {
-                      if (false) throw (dg) null;
-                      var8.result = ud.createProxyConnector((String) (var8.field_e), (byte) 68, var8.field_g).connect(false);
-                    } catch (dg decompiledCaughtParameter2) {
+                      if (false) throw (ProxyAuthException) null;
+                      var8.result = DropdownSelectorPainter.createProxyConnector((String) (var8.field_e), (byte) 68, var8.field_g).connect(false);
+                    } catch (ProxyAuthException decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
-                      var3_ref3 = (dg) (Object) decompiledCaughtException;
+                      var3_ref3 = (ProxyAuthException) (Object) decompiledCaughtException;
                       var8.result = var3_ref3.getMessage();
                       throw var3_ref3;
                     }
                     break;
                   case 1:
-                    if (field_j > pd.monotonicTimeMillis(-22826)) {
+                    if (field_j > MonotonicClock.monotonicTimeMillis(-22826)) {
                       throw new IOException();
                     }
                     var8.result = new java.net.Socket(java.net.InetAddress.getByName((String) (var8.field_e)), var8.field_g);
@@ -572,18 +572,18 @@ final class PlatformTaskDispatcher implements Runnable {
             exception = (Exception) (Object) decompiledCaughtException;
           }
         }
-        gh.a(field_c, (byte) 127, field_s);
+        CacheFileLocator.initializeCacheEnvironment(field_c, (byte) 127, field_s);
         if (this.field_t) {
-          this.field_b = new RandomAccessCacheFile(gh.a((String) null, field_c, (byte) 21, "random.dat"), "rw", 25L);
-          this.field_e = new RandomAccessCacheFile(gh.a(-71, "main_file_cache.dat2"), "rw", 314572800L);
-          this.field_i = new RandomAccessCacheFile(gh.a(-115, "main_file_cache.idx255"), "rw", 1048576L);
+          this.field_b = new RandomAccessCacheFile(CacheFileLocator.resolveRedirectedCacheFile((String) null, field_c, (byte) 21, "random.dat"), "rw", 25L);
+          this.field_e = new RandomAccessCacheFile(CacheFileLocator.resolveCacheFile(-71, "main_file_cache.dat2"), "rw", 314572800L);
+          this.field_i = new RandomAccessCacheFile(CacheFileLocator.resolveCacheFile(-115, "main_file_cache.idx255"), "rw", 1048576L);
           this.field_q = new RandomAccessCacheFile[param2];
           for (var5_int = 0; var5_int < param2; var5_int++) {
-            this.field_q[var5_int] = new RandomAccessCacheFile(gh.a(-97, "main_file_cache.idx" + var5_int), "rw", 1048576L);
+            this.field_q[var5_int] = new RandomAccessCacheFile(CacheFileLocator.resolveCacheFile(-97, "main_file_cache.idx" + var5_int), "rw", 1048576L);
           }
           if (this.field_u) {
             try {
-              Class.forName("db").newInstance();
+              Class.forName("MicrosoftDirectSoundOutput").newInstance();
             } catch (java.lang.Throwable decompiledCaughtParameter8) {
               decompiledCaughtException = decompiledCaughtParameter8;
               throwable = decompiledCaughtException;
@@ -602,7 +602,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           try {
             if (!this.field_u) {
-              this.field_l = Class.forName("jn").newInstance();
+              this.field_l = Class.forName("CursorController").newInstance();
             } else {
               this.field_v = new MicrosoftCursorController();
             }

@@ -44,8 +44,8 @@ final class SectorCacheStore {
                     return false;
                   }
                   this.field_b.seek(param3 ^ 109242696, (long)(param0 * 6));
-                  this.field_b.readFullyRange(6, false, 0, cg.field_c);
-                  var7_int = (255 & cg.field_c[5]) + ((cg.field_c[3] & 255) << 16) + ((cg.field_c[4] & 255) << 8);
+                  this.field_b.readFullyRange(6, false, 0, QuickChatCommandType.field_c);
+                  var7_int = (255 & QuickChatCommandType.field_c[5]) + ((QuickChatCommandType.field_c[3] & 255) << 16) + ((QuickChatCommandType.field_c[4] & 255) << 8);
                   if (var7_int <= 0 ||
                     !((long)var7_int <= this.field_a.length(-1) / 520L)) {
                     return false;
@@ -56,14 +56,14 @@ final class SectorCacheStore {
                     var7_int = 1;
                   }
                 }
-                cg.field_c[0] = (byte)(param4 >> 16);
-                cg.field_c[4] = (byte)(var7_int >> 8);
-                cg.field_c[2] = (byte)param4;
-                cg.field_c[5] = (byte)var7_int;
-                cg.field_c[1] = (byte)(param4 >> 8);
-                cg.field_c[3] = (byte)(var7_int >> 16);
+                QuickChatCommandType.field_c[0] = (byte)(param4 >> 16);
+                QuickChatCommandType.field_c[4] = (byte)(var7_int >> 8);
+                QuickChatCommandType.field_c[2] = (byte)param4;
+                QuickChatCommandType.field_c[5] = (byte)var7_int;
+                QuickChatCommandType.field_c[1] = (byte)(param4 >> 8);
+                QuickChatCommandType.field_c[3] = (byte)(var7_int >> 16);
                 this.field_b.seek(0, (long)(param0 * 6));
-                this.field_b.write(param3 ^ 109242722, cg.field_c, 0, 6);
+                this.field_b.write(param3 ^ 109242722, QuickChatCommandType.field_c, 0, 6);
                 var8 = 0;
                 var9 = 0;
                 scanLoop1: while (true) {
@@ -74,7 +74,7 @@ final class SectorCacheStore {
                       this.field_a.seek(0, (long)(var7_int * 520));
                       if (65535 >= param0) {
                         try {
-                          this.field_a.readFullyRange(8, false, 0, cg.field_c);
+                          this.field_a.readFullyRange(8, false, 0, QuickChatCommandType.field_c);
                           decompiledRegionSelector0 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -84,13 +84,13 @@ final class SectorCacheStore {
                         if (decompiledRegionSelector0 != 0) {
                           break scanLoop1;
                         }
-                        var12 = (65280 & cg.field_c[2] << 8) + (255 & cg.field_c[3]);
-                        var13 = 255 & cg.field_c[7];
-                        var11 = ((cg.field_c[0] & 255) << 8) + (255 & cg.field_c[1]);
-                        var10 = (65280 & cg.field_c[5] << 8) + (16711680 & cg.field_c[4] << 16) + (255 & cg.field_c[6]);
+                        var12 = (65280 & QuickChatCommandType.field_c[2] << 8) + (255 & QuickChatCommandType.field_c[3]);
+                        var13 = 255 & QuickChatCommandType.field_c[7];
+                        var11 = ((QuickChatCommandType.field_c[0] & 255) << 8) + (255 & QuickChatCommandType.field_c[1]);
+                        var10 = (65280 & QuickChatCommandType.field_c[5] << 8) + (16711680 & QuickChatCommandType.field_c[4] << 16) + (255 & QuickChatCommandType.field_c[6]);
                       } else {
                         try {
-                          this.field_a.readFullyRange(10, false, 0, cg.field_c);
+                          this.field_a.readFullyRange(10, false, 0, QuickChatCommandType.field_c);
                           decompiledRegionSelector1 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -100,10 +100,10 @@ final class SectorCacheStore {
                         if (decompiledRegionSelector1 != 0) {
                           break scanLoop1;
                         }
-                        var13 = 255 & cg.field_c[9];
-                        var12 = (cg.field_c[5] & 255) + (cg.field_c[4] << 8 & 65280);
-                        var11 = (65280 & cg.field_c[2] << 8) + ((cg.field_c[1] & 255) << 16) + (((cg.field_c[0] & 255) << 24) + (cg.field_c[3] & 255));
-                        var10 = (16711680 & cg.field_c[6] << 16) + (((cg.field_c[7] & 255) << 8) + (cg.field_c[8] & 255));
+                        var13 = 255 & QuickChatCommandType.field_c[9];
+                        var12 = (QuickChatCommandType.field_c[5] & 255) + (QuickChatCommandType.field_c[4] << 8 & 65280);
+                        var11 = (65280 & QuickChatCommandType.field_c[2] << 8) + ((QuickChatCommandType.field_c[1] & 255) << 16) + (((QuickChatCommandType.field_c[0] & 255) << 24) + (QuickChatCommandType.field_c[3] & 255));
+                        var10 = (16711680 & QuickChatCommandType.field_c[6] << 16) + (((QuickChatCommandType.field_c[7] & 255) << 8) + (QuickChatCommandType.field_c[8] & 255));
                       }
                       if ((param0 == var11 &&
                         var9 == var12 &&
@@ -130,18 +130,18 @@ final class SectorCacheStore {
                       var10 = 0;
                     }
                     if (param0 > 65535) {
-                      cg.field_c[1] = (byte)(param0 >> 16);
-                      cg.field_c[4] = (byte)(var9 >> 8);
-                      cg.field_c[3] = (byte)param0;
-                      cg.field_c[5] = (byte)var9;
-                      cg.field_c[9] = (byte)this.field_d;
-                      cg.field_c[7] = (byte)(var10 >> 8);
-                      cg.field_c[8] = (byte)var10;
-                      cg.field_c[0] = (byte)(param0 >> 24);
-                      cg.field_c[6] = (byte)(var10 >> 16);
-                      cg.field_c[2] = (byte)(param0 >> 8);
+                      QuickChatCommandType.field_c[1] = (byte)(param0 >> 16);
+                      QuickChatCommandType.field_c[4] = (byte)(var9 >> 8);
+                      QuickChatCommandType.field_c[3] = (byte)param0;
+                      QuickChatCommandType.field_c[5] = (byte)var9;
+                      QuickChatCommandType.field_c[9] = (byte)this.field_d;
+                      QuickChatCommandType.field_c[7] = (byte)(var10 >> 8);
+                      QuickChatCommandType.field_c[8] = (byte)var10;
+                      QuickChatCommandType.field_c[0] = (byte)(param0 >> 24);
+                      QuickChatCommandType.field_c[6] = (byte)(var10 >> 16);
+                      QuickChatCommandType.field_c[2] = (byte)(param0 >> 8);
                       this.field_a.seek(0, (long)(var7_int * 520));
-                      this.field_a.write(param3 - 109242651, cg.field_c, 0, 10);
+                      this.field_a.write(param3 - 109242651, QuickChatCommandType.field_c, 0, 10);
                       var11 = -var8 + param4;
                       if (var11 > 510) {
                         var11 = 510;
@@ -149,16 +149,16 @@ final class SectorCacheStore {
                       this.field_a.write(106, param2, var8, var11);
                       var8 = var8 + var11;
                     } else {
-                      cg.field_c[7] = (byte)this.field_d;
-                      cg.field_c[2] = (byte)(var9 >> 8);
-                      cg.field_c[0] = (byte)(param0 >> 8);
-                      cg.field_c[4] = (byte)(var10 >> 16);
-                      cg.field_c[3] = (byte)var9;
-                      cg.field_c[6] = (byte)var10;
-                      cg.field_c[1] = (byte)param0;
-                      cg.field_c[5] = (byte)(var10 >> 8);
+                      QuickChatCommandType.field_c[7] = (byte)this.field_d;
+                      QuickChatCommandType.field_c[2] = (byte)(var9 >> 8);
+                      QuickChatCommandType.field_c[0] = (byte)(param0 >> 8);
+                      QuickChatCommandType.field_c[4] = (byte)(var10 >> 16);
+                      QuickChatCommandType.field_c[3] = (byte)var9;
+                      QuickChatCommandType.field_c[6] = (byte)var10;
+                      QuickChatCommandType.field_c[1] = (byte)param0;
+                      QuickChatCommandType.field_c[5] = (byte)(var10 >> 8);
                       this.field_a.seek(0, (long)(520 * var7_int));
-                      this.field_a.write(120, cg.field_c, 0, 8);
+                      this.field_a.write(120, QuickChatCommandType.field_c, 0, 8);
                       var11 = -var8 + param4;
                       if (var11 > 512) {
                         var11 = 512;
@@ -238,9 +238,9 @@ final class SectorCacheStore {
               if (param0 != -65536) {
                 this.readFile(36, 125);
               }
-              this.field_b.readFullyRange(6, false, 0, cg.field_c);
-              var4_int = ((255 & cg.field_c[0]) << 16) + (cg.field_c[1] << 8 & 65280) + (cg.field_c[2] & 255);
-              var5 = (cg.field_c[3] << 16 & 16711680) - (-(cg.field_c[4] << 8 & 65280) - (cg.field_c[5] & 255));
+              this.field_b.readFullyRange(6, false, 0, QuickChatCommandType.field_c);
+              var4_int = ((255 & QuickChatCommandType.field_c[0]) << 16) + (QuickChatCommandType.field_c[1] << 8 & 65280) + (QuickChatCommandType.field_c[2] & 255);
+              var5 = (QuickChatCommandType.field_c[3] << 16 & 16711680) - (-(QuickChatCommandType.field_c[4] << 8 & 65280) - (QuickChatCommandType.field_c[5] & 255));
               if (var4_int < 0) {
                 return null;
               }
@@ -270,21 +270,21 @@ final class SectorCacheStore {
                   if (var9 > 510) {
                     var9 = 510;
                   }
-                  this.field_a.readFullyRange(var9 + var14, false, 0, cg.field_c);
-                  var10 = ((255 & cg.field_c[1]) << 16) + ((cg.field_c[0] & 255) << 24) + ((65280 & cg.field_c[2] << 8) + (cg.field_c[3] & 255));
-                  var11 = ((cg.field_c[4] & 255) << 8) + (cg.field_c[5] & 255);
-                  var13 = 255 & cg.field_c[9];
-                  var12 = (255 & cg.field_c[8]) + ((cg.field_c[6] & 255) << 16) + ((cg.field_c[7] & 255) << 8);
+                  this.field_a.readFullyRange(var9 + var14, false, 0, QuickChatCommandType.field_c);
+                  var10 = ((255 & QuickChatCommandType.field_c[1]) << 16) + ((QuickChatCommandType.field_c[0] & 255) << 24) + ((65280 & QuickChatCommandType.field_c[2] << 8) + (QuickChatCommandType.field_c[3] & 255));
+                  var11 = ((QuickChatCommandType.field_c[4] & 255) << 8) + (QuickChatCommandType.field_c[5] & 255);
+                  var13 = 255 & QuickChatCommandType.field_c[9];
+                  var12 = (255 & QuickChatCommandType.field_c[8]) + ((QuickChatCommandType.field_c[6] & 255) << 16) + ((QuickChatCommandType.field_c[7] & 255) << 8);
                 } else {
                   var14 = 8;
                   if (var9 > 512) {
                     var9 = 512;
                   }
-                  this.field_a.readFullyRange(var14 + var9, false, 0, cg.field_c);
-                  var12 = (cg.field_c[6] & 255) + (((cg.field_c[4] & 255) << 16) + (cg.field_c[5] << 8 & 65280));
-                  var11 = ((cg.field_c[2] & 255) << 8) + (cg.field_c[3] & 255);
-                  var13 = 255 & cg.field_c[7];
-                  var10 = (cg.field_c[0] << 8 & 65280) + (255 & cg.field_c[1]);
+                  this.field_a.readFullyRange(var14 + var9, false, 0, QuickChatCommandType.field_c);
+                  var12 = (QuickChatCommandType.field_c[6] & 255) + (((QuickChatCommandType.field_c[4] & 255) << 16) + (QuickChatCommandType.field_c[5] << 8 & 65280));
+                  var11 = ((QuickChatCommandType.field_c[2] & 255) << 8) + (QuickChatCommandType.field_c[3] & 255);
+                  var13 = 255 & QuickChatCommandType.field_c[7];
+                  var10 = (QuickChatCommandType.field_c[0] << 8 & 65280) + (255 & QuickChatCommandType.field_c[1]);
                 }
                 if (param1 != var10) {
                   return null;
@@ -308,7 +308,7 @@ final class SectorCacheStore {
                 for (var16 = var14; var16 < var15; var16++) {
                   incrementValue$2 = var7;
                   var7++;
-                  var6[incrementValue$2] = cg.field_c[var16];
+                  var6[incrementValue$2] = QuickChatCommandType.field_c[var16];
                 }
                 var5 = var12;
               }
@@ -396,7 +396,7 @@ final class SectorCacheStore {
             (param1 < 160 ||
             param1 > 255)) {
             if (param1 != 0) {
-              var6 = fj.field_h;
+              var6 = MatchingTextValidator.field_h;
               var2 = var6;
               for (var3 = 0; var6.length > var3; var3++) {
                 var4 = var6[var3];

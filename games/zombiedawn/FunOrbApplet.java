@@ -17,45 +17,45 @@ abstract class FunOrbApplet extends GameApplet {
     private int gamePort1;
     private int gamePort2;
 
-    final void d(boolean param0) {
+    final void enableRecordStatusResponses(boolean param0) {
         if (param0) {
           return;
         }
-        i.field_X[4] = true;
+        FullscreenErrorDialog.field_X[4] = true;
     }
 
-    final void h(byte param0) {
-        i.field_X[5] = true;
+    final void enableSubmissionAcknowledgements(byte param0) {
+        FullscreenErrorDialog.field_X[5] = true;
         if (param0 < 43) {
-          this.g((byte) 106);
+          this.enableRankingsResponses((byte) 106);
         }
     }
 
-    final void k(int param0) {
-        i.field_X[12] = true;
-        i.field_X[13] = true;
+    final void enableChatResponses(int param0) {
+        FullscreenErrorDialog.field_X[12] = true;
+        FullscreenErrorDialog.field_X[13] = true;
         if (param0 > -110) {
           this.gamePort1 = -51;
         }
-        i.field_X[11] = true;
+        FullscreenErrorDialog.field_X[11] = true;
     }
 
-    final void a(boolean param0, boolean param1, boolean param2, boolean param3, int param4) {
-        this.b((byte) 96, false);
+    final void enableOptionalResponses(boolean param0, boolean param1, boolean param2, boolean param3, int param4) {
+        this.enableDefaultResponses((byte) 96, false);
         if (param4 != -6046) {
           field_t = -76;
         }
         if (param0) {
-          this.i(12);
+          this.enableIntRecordResponses(12);
         }
         if (param2) {
-          this.f(-1);
+          this.enableHighscoreResponses(-1);
         }
         if (param1) {
-          this.d(false);
+          this.enableRecordStatusResponses(false);
         }
         if (param3) {
-          this.h((byte) 78);
+          this.enableSubmissionAcknowledgements((byte) 78);
         }
     }
 
@@ -73,7 +73,7 @@ abstract class FunOrbApplet extends GameApplet {
         String var11 = null;
         try {
           try {
-            if (!this.b(false)) {
+            if (!this.isHostAllowed(false)) {
               return;
             }
             this.host = this.getCodeBase().getHost();
@@ -82,7 +82,7 @@ abstract class FunOrbApplet extends GameApplet {
             this.field_s = stackIn_7_1;
             this.gamePort1 = Integer.parseInt(this.getParameter("gameport1"));
             if (param2 != -17761) {
-              this.j(-81);
+              this.handleOpenUrlPacket(-81);
             }
             this.gamePort2 = Integer.parseInt(this.getParameter("gameport2"));
             var7 = this.getParameter("servernum");
@@ -103,13 +103,13 @@ abstract class FunOrbApplet extends GameApplet {
             if (var9 != null) {
               this.affiliateId = Integer.parseInt(var9);
             }
-            di.field_J = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
-            this.a(param3, param4, param0, param1, -14384, this.gameCrc, 32);
+            AccountWelcomePanel.field_J = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
+            this.startAppletServices(param3, param4, param0, param1, -14384, this.gameCrc, 32);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
-            ae.a((Throwable) ((Object) var6), param2 ^ -27964, (String) null);
-            this.a("crash", 50);
+            ErrorReportHelpers.reportClientError((Throwable) ((Object) var6), param2 ^ -27964, (String) null);
+            this.redirectToErrorPage("crash", 50);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -127,141 +127,141 @@ abstract class FunOrbApplet extends GameApplet {
     }
 
     private final void initializePacketLengths(int param0) {
-        wh.field_d[10] = -1;
-        wh.field_d[6] = -2;
-        wh.field_d[12] = -1;
-        wh.field_d[16] = -1;
-        wh.field_d[2] = -2;
-        wh.field_d[7] = -1;
-        wh.field_d[13] = -1;
-        wh.field_d[param0] = -1;
-        wh.field_d[11] = -1;
-        wh.field_d[8] = -2;
-        wh.field_d[4] = -1;
-        wh.field_d[9] = -1;
-        wh.field_d[3] = -1;
-        wh.field_d[18] = 1;
-        wh.field_d[1] = 16;
-        wh.field_d[5] = -1;
+        RasterCanvasSizeTarget.field_d[10] = -1;
+        RasterCanvasSizeTarget.field_d[6] = -2;
+        RasterCanvasSizeTarget.field_d[12] = -1;
+        RasterCanvasSizeTarget.field_d[16] = -1;
+        RasterCanvasSizeTarget.field_d[2] = -2;
+        RasterCanvasSizeTarget.field_d[7] = -1;
+        RasterCanvasSizeTarget.field_d[13] = -1;
+        RasterCanvasSizeTarget.field_d[param0] = -1;
+        RasterCanvasSizeTarget.field_d[11] = -1;
+        RasterCanvasSizeTarget.field_d[8] = -2;
+        RasterCanvasSizeTarget.field_d[4] = -1;
+        RasterCanvasSizeTarget.field_d[9] = -1;
+        RasterCanvasSizeTarget.field_d[3] = -1;
+        RasterCanvasSizeTarget.field_d[18] = 1;
+        RasterCanvasSizeTarget.field_d[1] = 16;
+        RasterCanvasSizeTarget.field_d[5] = -1;
     }
 
-    final void f(int param0) {
+    final void enableHighscoreResponses(int param0) {
         if (param0 != -1) {
-          this.a(81, true);
+          this.pollLogin(81, true);
         }
-        i.field_X[2] = true;
+        FullscreenErrorDialog.field_X[2] = true;
     }
 
-    public static void f(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (param0) {
           field_y = 57;
         }
         field_m = null;
     }
 
-    private final void j(int param0) {
-        int var2 = fj.field_g.readUnsignedByte((byte) -121);
+    private final void handleOpenUrlPacket(int param0) {
+        int var2 = MatchingTextValidator.field_g.readUnsignedByte((byte) -121);
         int var3 = 0 != (var2 & 1) ? 1 : 0;
         if (param0 != -1) {
           this.gameCrc = -26;
         }
-        int var4 = jd.field_b - 1;
+        int var4 = MeshDepthBuckets.field_b - 1;
         byte[] var5 = new byte[var4];
-        fj.field_g.readCipheredBytes(var4, var5, 0, param0 + 1);
-        wi.a(gg.a(var5, (byte) 56), hc.a(0), var3 != 0, -20517);
+        MatchingTextValidator.field_g.readCipheredBytes(var4, var5, 0, param0 + 1);
+        BrowserUrlHelpers.openUrlInNewWindow(TextDecodeHelpers.decodeText(var5, (byte) 56), AppletHostHelpers.getHostApplet(0), var3 != 0, -20517);
     }
 
-    private final void f(byte param0) {
-        String var2 = jj.readPacketString(126);
-        pl.setSessionCookie(var2, (byte) -80, hc.a(0));
+    private final void storeSessionCookie(byte param0) {
+        String var2 = SweepingSpotlight.readPacketString(126);
+        LevelSelectScreen.setSessionCookie(var2, (byte) -80, AppletHostHelpers.getHostApplet(0));
         int var3 = 110 % ((5 - param0) / 53);
     }
 
-    private final int e(boolean param0) {
+    private final int attemptReconnect(boolean param0) {
         if (this.field_j) {
           return -1;
         }
-        if (!dn.i(-19301)) {
+        if (!DialogLayer.isLoggedInOnline(-19301)) {
           return -1;
         }
-        if (ja.field_b) {
+        if (LoadingAndMapHelpers.field_b) {
           return -1;
         }
-        int var2 = PacketBuffer.advanceLoginHandshake(true, we.getActiveLoginIdentifier((byte) 106), ja.a(23917), this.affiliateId, true, this.field_s);
+        int var2 = PacketBuffer.advanceLoginHandshake(true, ArmySoldier.getActiveLoginIdentifier((byte) 106), LoadingAndMapHelpers.getActiveLoginPassword(23917), this.affiliateId, true, this.field_s);
         if (var2 == -1) {
           return -1;
         }
         if (0 != var2 &&
           var2 != 1) {
-          if (!lf.field_n) {
-            this.a("reconnect", 50);
+          if (!MusicPatchNode.field_n) {
+            this.redirectToErrorPage("reconnect", 50);
           }
-          nc.d((byte) 101);
-          Path.showLoginResponse(10, var2, sc.field_d);
-          ja.field_b = true;
+          ScreechEffect.beginReconnect((byte) 101);
+          Path.showLoginResponse(10, var2, MasterIndexHelpers.field_d);
+          LoadingAndMapHelpers.field_b = true;
           if (param0) {
             String var3 = (String) null;
-            this.a(-31, 70, (String) null);
+            this.initializeApplet(-31, 70, (String) null);
           }
-          Path.field_e = pd.monotonicTimeMillis(-22826) + 15000L;
+          Path.field_e = MonotonicClock.monotonicTimeMillis(-22826) + 15000L;
           return var2;
         }
-        if (fl.field_a == 11 &&
-          co.field_b == 0) {
-          tc.a((byte) 98);
+        if (AccountResultHelpers.field_a == 11 &&
+          ObstacleFactory.field_b == 0) {
+          InsetTextPainter.onLoginSucceeded((byte) 98);
         }
         return var2;
     }
 
-    final int a(int param0, boolean param1) {
+    final int pollLogin(int param0, boolean param1) {
         if (param0 != -27698) {
           return 106;
         }
-        return this.a(true, param1, 101);
+        return this.pollLoginResponse(true, param1, 101);
     }
 
-    final int h(int param0) {
+    final int reconnectAndResendRequests(int param0) {
         int var3 = 80 / ((param0 + 51) / 51);
-        int var2 = this.e(false);
+        int var2 = this.attemptReconnect(false);
         if (0 == var2 ||
           var2 == 1) {
-          if (i.field_X[1]) {
-            td.a(2, (byte) -95);
+          if (FullscreenErrorDialog.field_X[1]) {
+            OfflineLoginHelpers.resendHighscoreRequests(2, (byte) -95);
           }
-          if (i.field_X[2]) {
-            dp.resendQueuedRequests(3, -4);
+          if (FullscreenErrorDialog.field_X[2]) {
+            LinkTextPainter.resendQueuedRequests(3, -4);
           }
-          if (i.field_X[3]) {
+          if (FullscreenErrorDialog.field_X[3]) {
             SpatialGrid.resendQueuedRequests(4, -1);
           }
-          if (i.field_X[4]) {
-            ca.a(5, (byte) -118);
+          if (FullscreenErrorDialog.field_X[4]) {
+            UiResourceHelpers.resendQueuedRequests(5, (byte) -118);
           }
-          if (i.field_X[5]) {
-            wc.resendQueuedQueries(67600, 6);
+          if (FullscreenErrorDialog.field_X[5]) {
+            MinigunGunner.resendQueuedQueries(67600, 6);
           }
-          if (i.field_X[6]) {
-            wi.a(0, 7);
+          if (FullscreenErrorDialog.field_X[6]) {
+            BrowserUrlHelpers.resendQueuedByteRecords(0, 7);
           }
-          if (i.field_X[8]) {
-            ni.a((byte) -78);
+          if (FullscreenErrorDialog.field_X[8]) {
+            ReflectionQueueHelpers.resetReflectionCheckQueue((byte) -78);
           }
         }
         return var2;
     }
 
-    final void e(int param0) {
+    final void dispatchServerPacket(int param0) {
         boolean stackIn_29_0 = false;
         int var2;
-        aa var3;
+        ChatMessage var3;
         int var4;
         var4 = ZombieDawn.field_J;
         if (param0 != -12) {
           return;
         }
-        var2 = l.field_d;
+        var2 = TextAndNameCredentials.field_d;
         if (var2 < 64 &&
-          i.field_X[var2]) {
+          FullscreenErrorDialog.field_X[var2]) {
           if (var2 == 0) {
             return;
           }
@@ -273,7 +273,7 @@ abstract class FunOrbApplet extends GameApplet {
                 if (4 != var2) {
                   if (var2 != 5) {
                     if (var2 == 6) {
-                      wc.handleRankingsResponse(param0 + 135);
+                      MinigunGunner.handleRankingsResponse(param0 + 135);
                     } else {
                       if (var2 != 7) {
                         if (var2 != 8) {
@@ -281,55 +281,55 @@ abstract class FunOrbApplet extends GameApplet {
                             if (11 != var2 &&
                               var2 != 12) {
                               if (var2 == 13) {
-                                va.a(1545);
+                                FrameSequence.handleSocialListPacket(1545);
                                 return;
                               }
                               if (17 == var2) {
-                                this.j(-1);
+                                this.handleOpenUrlPacket(-1);
                                 return;
                               }
                               if (var2 == 18) {
                                 GameKeyHandler.handleClearFlagPacket(param0 ^ -114);
                                 return;
                               }
-                              ae.a((Throwable) null, param0 ^ -10321, "MGS1: " + cb.f(3));
-                              p.a(1);
+                              ErrorReportHelpers.reportClientError((Throwable) null, param0 ^ -10321, "MGS1: " + VisualPropertyOverrides.describePacketHistory(3));
+                              SessionSocketHelpers.closeSessionSocket(1);
                               return;
                             }
                             stackIn_29_0 = (var2 == 12);
-                            var3 = ln.readChatMessage(stackIn_29_0, 62);
-                            oe.acceptChatMessage(0, var3);
+                            var3 = TickClock.readChatMessage(stackIn_29_0, 62);
+                            TextLayoutLine.acceptChatMessage(0, var3);
                           } else {
-                            uk.a(false);
+                            BootstrapLoadingHelpers.readLocalPlayerName(false);
                           }
                         } else {
-                          di.readReflectionCheckRequest(fj.field_g, 30, jd.field_b, vh.field_a);
+                          AccountWelcomePanel.readReflectionCheckRequest(MatchingTextValidator.field_g, 30, MeshDepthBuckets.field_b, SpriteFadeHelpers.field_a);
                         }
                       } else {
-                        this.f((byte) 66);
+                        this.storeSessionCookie((byte) 66);
                       }
                     }
                   } else {
                     DualLinkDeque.handleSubmissionAcknowledgement((byte) -120);
                   }
                 } else {
-                  pb.c((byte) 68);
+                  GooPuddleCell.readSavedDataResponse((byte) 68);
                 }
               } else {
-                fm.b(true);
+                CheckboxWidget.handlePendingRequestReply(true);
               }
             }
           } else {
-            nm.a(14740);
+            IntRecordReplyHelpers.skipIntRecordReply(14740);
           }
           return;
         }
-        ae.a((Throwable) null, param0 ^ -10321, "MGS2: " + cb.f(3));
-        p.a(param0 ^ -11);
+        ErrorReportHelpers.reportClientError((Throwable) null, param0 ^ -10321, "MGS2: " + VisualPropertyOverrides.describePacketHistory(3));
+        SessionSocketHelpers.closeSessionSocket(param0 ^ -11);
         return;
     }
 
-    final void b(boolean param0, boolean param1) {
+    final void updateConnection(boolean param0, boolean param1) {
         int discarded$0 = 0;
         int stackIn_22_0 = 0;
         int stackIn_99_0 = 0;
@@ -344,223 +344,223 @@ abstract class FunOrbApplet extends GameApplet {
         int var3Lifetime1;
         int var3Lifetime2;
         var5 = ZombieDawn.field_J;
-        if (null != rn.field_b) {
-          if (null == cn.field_b) {
-            var6 = va.b((byte) -121);
+        if (null != SpriteSheetDecoder.field_b) {
+          if (null == DisplayState.field_b) {
+            var6 = FrameSequence.getTopContainer((byte) -121);
             var4 = var6.getSize();
-            rn.field_b.setRequestedSize(var4.height, var4.width, -1);
+            SpriteSheetDecoder.field_b.setRequestedSize(var4.height, var4.width, -1);
           }
-          rn.field_b.tick(26);
+          SpriteSheetDecoder.field_b.tick(26);
         }
-        ha.b(27914);
-        pb.d((byte) -74);
-        if (!uk.a((byte) -44) &&
-          fl.field_a != 11) {
-          mk.a(-128);
+        KeyStateHelpers.snapshotKeyState(27914);
+        GooPuddleCell.pollMouseInput((byte) -74);
+        if (!BootstrapLoadingHelpers.shouldShowBootstrapLoadingScreen((byte) -44) &&
+          AccountResultHelpers.field_a != 11) {
+          DialogLayerFrameHelpers.processDialogLayerFrame(-128);
         }
-        if (jl.field_u != null) {
-          id.field_I = jl.field_u.takeRotation(-96);
+        if (StrongCacheEntry.field_u != null) {
+          LevelObstacle.field_I = StrongCacheEntry.field_u.takeRotation(-96);
         }
-        if (ng.a((byte) -64)) {
-          var3 = 1200 * nk.a((byte) 121);
+        if (LoginConnectionHelpers.isLoggedInConnection((byte) -64)) {
+          var3 = 1200 * LoginPayloadKind.getFramesPerSecond((byte) 121);
           if (this.field_r ||
-            !(dg.a((byte) -120) <= var3) &&
-            !(ia.a((byte) 119) <= var3)) {
+            !(ProxyAuthException.getKeyIdleTicks((byte) -120) <= var3) &&
+            !(MenuFontGlobals.getMouseIdleTicks((byte) 119) <= var3)) {
             this.field_r = false;
-            p.a(1);
-            nc.d((byte) -3);
-            Path.showLoginResponse(10, 2, qb.field_f);
-            rh.a(-110);
-            ja.field_b = true;
-            Path.field_e = 15000L + pd.monotonicTimeMillis(-22826);
+            SessionSocketHelpers.closeSessionSocket(1);
+            ScreechEffect.beginReconnect((byte) -3);
+            Path.showLoginResponse(10, 2, AbstractSprite.field_f);
+            ValidationState.onConnectionLost(-110);
+            LoadingAndMapHelpers.field_b = true;
+            Path.field_e = 15000L + MonotonicClock.monotonicTimeMillis(-22826);
           }
         }
-        if (co.field_b == -1 ||
-          co.field_b == 0) {
-          stackIn_22_0 = (co.field_b != -1) ? 0 : 1;
+        if (ObstacleFactory.field_b == -1 ||
+          ObstacleFactory.field_b == 0) {
+          stackIn_22_0 = (ObstacleFactory.field_b != -1) ? 0 : 1;
           var3Lifetime1 = stackIn_22_0;
-          co.field_b = ci.a(256);
+          ObstacleFactory.field_b = GzipDecompressor.tickServerConnection(256);
           if (var3Lifetime1 != 0 &&
-            0 == co.field_b &&
-            fl.field_a == 11 &&
-            !dn.i(-19301)) {
-            tc.a((byte) -52);
+            0 == ObstacleFactory.field_b &&
+            AccountResultHelpers.field_a == 11 &&
+            !DialogLayer.isLoggedInOnline(-19301)) {
+            InsetTextPainter.onLoginSucceeded((byte) -52);
           }
-          if (co.field_b != -1 &&
-            co.field_b != 0) {
-            Path.field_e = 15000L + pd.monotonicTimeMillis(-22826);
+          if (ObstacleFactory.field_b != -1 &&
+            ObstacleFactory.field_b != 0) {
+            Path.field_e = 15000L + MonotonicClock.monotonicTimeMillis(-22826);
           }
         }
-        if (co.field_b != -1 &&
-          co.field_b != 0) {
-          if (10 <= ld.field_j) {
-            if (fl.field_a >= 10) {
-              nc.d((byte) 118);
-              if (co.field_b == 3) {
-                Path.showLoginResponse(10, 256, rf.field_a);
+        if (ObstacleFactory.field_b != -1 &&
+          ObstacleFactory.field_b != 0) {
+          if (10 <= AlternateLongAndNameCredentials.field_j) {
+            if (AccountResultHelpers.field_a >= 10) {
+              ScreechEffect.beginReconnect((byte) 118);
+              if (ObstacleFactory.field_b == 3) {
+                Path.showLoginResponse(10, 256, ByteStorage.field_a);
               } else {
-                if (co.field_b == 4) {
-                  Path.showLoginResponse(10, 256, ac.field_o);
+                if (ObstacleFactory.field_b == 4) {
+                  Path.showLoginResponse(10, 256, AreaSelectionScreen.field_o);
                 } else {
-                  if (co.field_b == 2) {
-                    Path.showLoginResponse(10, 256, oe.field_d);
+                  if (ObstacleFactory.field_b == 2) {
+                    Path.showLoginResponse(10, 256, TextLayoutLine.field_d);
                   } else {
-                    if (5 == co.field_b) {
-                      Path.showLoginResponse(10, 5, ia.field_f);
+                    if (5 == ObstacleFactory.field_b) {
+                      Path.showLoginResponse(10, 5, MenuFontGlobals.field_f);
                     } else {
-                      Path.showLoginResponse(10, 256, ih.field_T);
+                      Path.showLoginResponse(10, 256, LoginPanel.field_T);
                     }
                   }
                 }
               }
-              ja.field_b = true;
+              LoadingAndMapHelpers.field_b = true;
             }
           } else {
-            if (co.field_b == 3) {
-              this.a("js5crc", 50);
+            if (ObstacleFactory.field_b == 3) {
+              this.redirectToErrorPage("js5crc", 50);
             } else {
-              if (co.field_b != 4) {
-                if (co.field_b != 2) {
-                  if (co.field_b != 5) {
-                    this.a("js5connect", 50);
+              if (ObstacleFactory.field_b != 4) {
+                if (ObstacleFactory.field_b != 2) {
+                  if (ObstacleFactory.field_b != 5) {
+                    this.redirectToErrorPage("js5connect", 50);
                   } else {
-                    this.a("outofdate", 50);
+                    this.redirectToErrorPage("outofdate", 50);
                   }
                 } else {
-                  this.a("js5connect_full", 50);
+                  this.redirectToErrorPage("js5connect_full", 50);
                 }
               } else {
-                this.a("js5io", 50);
+                this.redirectToErrorPage("js5io", 50);
               }
             }
           }
         }
-        if ((co.field_b != -1 &&
-          co.field_b != 0 ||
-          dn.i(-19301)) &&
-          pd.monotonicTimeMillis(-22826) >= Path.field_e) {
-          ja.field_b = false;
-          if (-1 != co.field_b &&
-            0 != co.field_b) {
-            co.field_b = -1;
-            si.resetConnectionState(0);
+        if ((ObstacleFactory.field_b != -1 &&
+          ObstacleFactory.field_b != 0 ||
+          DialogLayer.isLoggedInOnline(-19301)) &&
+          MonotonicClock.monotonicTimeMillis(-22826) >= Path.field_e) {
+          LoadingAndMapHelpers.field_b = false;
+          if (-1 != ObstacleFactory.field_b &&
+            0 != ObstacleFactory.field_b) {
+            ObstacleFactory.field_b = -1;
+            HunterHuman.resetConnectionState(0);
           }
         }
-        if (co.field_b == 0 &&
-          !dn.i(-19301)) {
-          ma.field_p = false;
+        if (ObstacleFactory.field_b == 0 &&
+          !DialogLayer.isLoggedInOnline(-19301)) {
+          MusicPatch.field_p = false;
         }
-        if (ld.field_j == 0 &&
-          sc.a((byte) -128)) {
-          ld.field_j = 1;
+        if (AlternateLongAndNameCredentials.field_j == 0 &&
+          MasterIndexHelpers.loadMasterIndex((byte) -128)) {
+          AlternateLongAndNameCredentials.field_j = 1;
         }
-        if (ld.field_j == 1) {
-          if (jp.field_a != 0) {
-            f.field_i = mm.a(f.field_f, (byte) -63);
+        if (AlternateLongAndNameCredentials.field_j == 1) {
+          if (MenuSelection.field_a != 0) {
+            GlowAreaSupport.field_i = GooPuddle.openCachedArchive(GlowAreaSupport.field_f, (byte) -63);
           }
-          IntrusiveDeque.field_d = wn.a(true, mp.field_d, (byte) -85, 1, false);
-          da.field_l = wn.a(true, hf.field_F, (byte) -85, 1, false);
-          al.field_a = wn.a(true, ho.field_b, (byte) -85, 1, false);
-          gj.field_i = da.field_l;
-          nl.field_p = IntrusiveDeque.field_d;
-          ld.field_j = 2;
+          IntrusiveDeque.field_d = AudioSetupHelpers.createArchive(true, RankingRowHelpers.field_d, (byte) -85, 1, false);
+          AchievementBanner.field_l = AudioSetupHelpers.createArchive(true, MultiHandleSliderWidget.field_F, (byte) -85, 1, false);
+          MenuScreen.field_a = AudioSetupHelpers.createArchive(true, TileOccupancyHelpers.field_b, (byte) -85, 1, false);
+          WidgetStyleLayer.field_i = AchievementBanner.field_l;
+          AchievementsScreen.field_p = IntrusiveDeque.field_d;
+          AlternateLongAndNameCredentials.field_j = 2;
         }
-        if (ld.field_j == 2) {
-          if (f.field_i != null &&
-            f.field_i.isIndexLoaded((byte) 73)) {
-            if (!f.field_i.hasGroupName("", 0)) {
-              f.field_i = null;
+        if (AlternateLongAndNameCredentials.field_j == 2) {
+          if (GlowAreaSupport.field_i != null &&
+            GlowAreaSupport.field_i.isIndexLoaded((byte) 73)) {
+            if (!GlowAreaSupport.field_i.hasGroupName("", 0)) {
+              GlowAreaSupport.field_i = null;
             } else {
-              if (f.field_i.loadGroupByName(-1, "")) {
-                bn.loadTextTable(32693, f.field_i);
-                f.field_i = null;
-                ep.c((byte) -50);
+              if (GlowAreaSupport.field_i.loadGroupByName(-1, "")) {
+                LongAndTextLoginPayload.loadTextTable(32693, GlowAreaSupport.field_i);
+                GlowAreaSupport.field_i = null;
+                PendingBytePayloadRequest.resetFrameTimingHistory((byte) -50);
               }
             }
           }
-          if (null == f.field_i) {
-            ld.field_j = 3;
+          if (null == GlowAreaSupport.field_i) {
+            AlternateLongAndNameCredentials.field_j = 3;
           }
         }
-        if (ld.field_j == 3 &&
-          al.areCommonUiArchivesReady(al.field_a, -31526, IntrusiveDeque.field_d, da.field_l) &&
-          eh.isArchiveFullyLoaded(false, al.field_a)) {
-          ph.b(26311);
-          ng.a(121);
-          ka.field_a = ql.field_f;
+        if (AlternateLongAndNameCredentials.field_j == 3 &&
+          MenuScreen.areCommonUiArchivesReady(MenuScreen.field_a, -31526, IntrusiveDeque.field_d, AchievementBanner.field_l) &&
+          ArrayWidgetContainer.isArchiveFullyLoaded(false, MenuScreen.field_a)) {
+          SpriteSheetArchiveHelpers.releaseLoadedResources(26311);
+          LoginConnectionHelpers.composeAgreementText(121);
+          SoundEffectLibrary.field_a = NameAvailabilityValidator.field_f;
           PacketBuffer.field_i = false;
-          nk.a(al.field_a, -1, da.field_l, IntrusiveDeque.field_d, ih.field_S);
-          if (sn.field_b ||
-            fo.field_b != null) {
+          LoginPayloadKind.initializeCommonUi(MenuScreen.field_a, -1, AchievementBanner.field_l, IntrusiveDeque.field_d, LoginPanel.field_S);
+          if (LoginMethod.field_b ||
+            PageReloadHelpers.field_b != null) {
             stackIn_99_0 = -753;
-            stackIn_99_1 = fo.field_b;
-            stackIn_100_2 = !(sn.field_b);
-            stackIn_103_3 = !(sn.field_b);
-            gl.a(stackIn_99_0, stackIn_99_1, stackIn_100_2, stackIn_103_3);
+            stackIn_99_1 = PageReloadHelpers.field_b;
+            stackIn_100_2 = !(LoginMethod.field_b);
+            stackIn_103_3 = !(LoginMethod.field_b);
+            FocusDelegatingButton.openLoginDialog(stackIn_99_0, stackIn_99_1, stackIn_100_2, stackIn_103_3);
           }
-          if (di.field_J) {
-            jp.showUnreadMessagesDialog((byte) -50);
+          if (AccountWelcomePanel.field_J) {
+            MenuSelection.showUnreadMessagesDialog((byte) -50);
           }
-          if (null == t.field_m) {
-            t.field_m = ui.a(0);
-            nk.field_g = pb.c(-1);
+          if (null == DialWidgetPainter.field_m) {
+            DialWidgetPainter.field_m = AudioMixerHelpers.getPcmMixer(0);
+            LoginPayloadKind.field_g = GooPuddleCell.getAudioBufferMillis(-1);
           }
-          nl.initializeLogoSequence(nk.field_g, t.field_m, (byte) -98, al.field_a);
-          al.field_a = null;
+          AchievementsScreen.initializeLogoSequence(LoginPayloadKind.field_g, DialWidgetPainter.field_m, (byte) -98, MenuScreen.field_a);
+          MenuScreen.field_a = null;
           IntrusiveDeque.field_d = null;
-          da.field_l = null;
-          ca.a((byte) 104, (java.applet.Applet) (this));
-          ep.c((byte) -50);
-          ld.field_j = 10;
+          AchievementBanner.field_l = null;
+          UiResourceHelpers.readUsernameParameter((byte) 104, (java.applet.Applet) (this));
+          PendingBytePayloadRequest.resetFrameTimingHistory((byte) -50);
+          AlternateLongAndNameCredentials.field_j = 10;
         }
-        if (ld.field_j == 10) {
-          if (0 != jp.field_a) {
-            aa.field_f = mm.a(jh.field_k, (byte) -56);
+        if (AlternateLongAndNameCredentials.field_j == 10) {
+          if (0 != MenuSelection.field_a) {
+            ChatMessage.field_f = GooPuddle.openCachedArchive(ArchiveIndex.field_k, (byte) -56);
           }
-          ld.field_j = 11;
+          AlternateLongAndNameCredentials.field_j = 11;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (ld.field_j == 11) {
-          if (null != aa.field_f && (!aa.field_f.isIndexLoaded((byte) 73) ||
-            !aa.field_f.areAllGroupsLoaded(9001))) {
-            eh.setLoadingProgress(ic.formatArchiveProgressText(l.field_g, (byte) 114, cj.field_e, aa.field_f), 0.0f, -1);
+        if (AlternateLongAndNameCredentials.field_j == 11) {
+          if (null != ChatMessage.field_f && (!ChatMessage.field_f.isIndexLoaded((byte) 73) ||
+            !ChatMessage.field_f.areAllGroupsLoaded(9001))) {
+            ArrayWidgetContainer.setLoadingProgress(ValidatedTextWidget.formatArchiveProgressText(TextAndNameCredentials.field_g, (byte) 114, IntrusiveDequeCursor.field_e, ChatMessage.field_f), 0.0f, -1);
             decompiledFrameRemainder0 = false;
           }
           else {
-            di.field_K = true;
-            ld.field_j = 12;
+            AccountWelcomePanel.field_K = true;
+            AlternateLongAndNameCredentials.field_j = 12;
           }
         }
-        if (ld.field_j == 12 &&
-          !di.field_K) {
-          ld.field_j = 13;
+        if (AlternateLongAndNameCredentials.field_j == 12 &&
+          !AccountWelcomePanel.field_K) {
+          AlternateLongAndNameCredentials.field_j = 13;
         }
-        if (ld.field_j == 13) {
+        if (AlternateLongAndNameCredentials.field_j == 13) {
           var3Lifetime2 = 1;
           if (null != Js5ArchiveManager.field_h) {
-            stackIn_133_0 = (!Js5ArchiveManager.field_h.a(-1)) ? 0 : 1;
+            stackIn_133_0 = (!Js5ArchiveManager.field_h.pollCompletion(-1)) ? 0 : 1;
             var3Lifetime2 = stackIn_133_0;
-            eh.setLoadingProgress(Js5ArchiveManager.field_h.field_b, Js5ArchiveManager.field_h.field_a, -1);
+            ArrayWidgetContainer.setLoadingProgress(Js5ArchiveManager.field_h.field_b, Js5ArchiveManager.field_h.field_a, -1);
           }
           if (var3Lifetime2 != 0) {
-            ld.field_j = 20;
+            AlternateLongAndNameCredentials.field_j = 20;
           }
         }
         if (!param0 &&
-          rl.field_f) {
-          SpatialObject.detachCanvasInput((byte) -46, cj.field_d);
-          this.a(true);
-          ProxySocketConnector.attachCanvasInput(20922, cj.field_d);
+          GrowableIntList.field_f) {
+          SpatialObject.detachCanvasInput((byte) -46, IntrusiveDequeCursor.field_d);
+          this.replaceCanvas(true);
+          ProxySocketConnector.attachCanvasInput(20922, IntrusiveDequeCursor.field_d);
         }
-        if (i.field_X[8]) {
-          da.d((byte) -48);
+        if (FullscreenErrorDialog.field_X[8]) {
+          AchievementBanner.sendReflectionCheckReplies((byte) -48);
         }
         if (param1) {
-          discarded$0 = this.a(true, true, -49);
+          discarded$0 = this.pollLoginResponse(true, true, -49);
         }
     }
 
-    final void a(int param0, int param1, String param2) {
+    final void initializeApplet(int param0, int param1, String param2) {
         if (param1 < 107) {
           return;
         }
@@ -571,25 +571,25 @@ abstract class FunOrbApplet extends GameApplet {
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int multiplyFixed16(int param0, int param1, int param2) {
         int var3 = param2 >> 16;
         int var4 = param2 & 65535;
         if (param0 <= 1) {
-          FunOrbApplet.f(true);
+          FunOrbApplet.releaseStatics(true);
         }
         int var5 = param1 >> 16;
         int var6 = param1 & 65535;
         return param1 * var3 + (var4 * var5 + (var4 * var6 >> 16));
     }
 
-    final void i(int param0) {
+    final void enableIntRecordResponses(int param0) {
         if (param0 != 12) {
           field_m = (Font) null;
         }
-        i.field_X[1] = true;
+        FullscreenErrorDialog.field_X[1] = true;
     }
 
-    private final int a(boolean param0, boolean param1, int param2) {
+    private final int pollLoginResponse(boolean param0, boolean param1, int param2) {
         try {
           Throwable decompiledCaughtException = null;
           int var4 = 0;
@@ -604,116 +604,116 @@ abstract class FunOrbApplet extends GameApplet {
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = ZombieDawn.field_J;
-          var4 = bg.a(121, id.field_I, param1, jp.field_a);
+          var4 = DelayedPacket.pollLoginDialogs(121, LevelObstacle.field_I, param1, MenuSelection.field_a);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5_int = pa.beginLogin(tp.createActiveEmailLookupValue((byte) 0), cm.a((byte) -8), (byte) -90);
+            var5_int = SingleChildWidget.beginLogin(MusicCrossfadeStream.createActiveEmailLookupValue((byte) 0), LoginNameSupport.createLoginNameValue((byte) -8), (byte) -90);
             if (var5_int != -1) {
-              mp.a(1000, ho.field_a, var5_int, sc.field_d);
-              ho.field_a = null;
-              sc.field_d = null;
+              RankingRowHelpers.handleUsernameResponse(1000, TileOccupancyHelpers.field_a, var5_int, MasterIndexHelpers.field_d);
+              TileOccupancyHelpers.field_a = null;
+              MasterIndexHelpers.field_d = null;
             }
-            var11 = wf.e((byte) 86);
+            var11 = ValidationMessageWidget.takeLoginReplyFlag((byte) 86);
             if (var11 != null) {
-              fo.a(-128, var11.booleanValue());
+              PageReloadHelpers.completeNameCheck(-128, var11.booleanValue());
             }
           }
           if (2 == var4) {
-            var5_intLifetime1 = md.a(co.c(17821), DualLinkDeque.getCurrentAccountName((byte) -57), ja.a(23917), FullscreenFocusCanvas.getEnteredAge(0), (byte) -15, this.affiliateId, we.getActiveLoginIdentifier((byte) -117));
+            var5_intLifetime1 = AccountCreationDialog.submitAccountServerRequest(ObstacleFactory.getAccountOptInFlag(17821), DualLinkDeque.getCurrentAccountName((byte) -57), LoadingAndMapHelpers.getActiveLoginPassword(23917), FullscreenFocusCanvas.getEnteredAge(0), (byte) -15, this.affiliateId, ArmySoldier.getActiveLoginIdentifier((byte) -117));
             if (var5_intLifetime1 != -1) {
-              ln.setAccountCreationResultMessage(var5_intLifetime1, -14, sc.field_d, ho.field_a);
-              ho.field_a = null;
-              sc.field_d = null;
+              TickClock.setAccountCreationResultMessage(var5_intLifetime1, -14, MasterIndexHelpers.field_d, TileOccupancyHelpers.field_a);
+              TileOccupancyHelpers.field_a = null;
+              MasterIndexHelpers.field_d = null;
             }
           }
           if (var4 == 3) {
-            if (co.field_b != -1 &&
-              co.field_b != 0) {
-              co.field_b = -1;
-              si.resetConnectionState(0);
+            if (ObstacleFactory.field_b != -1 &&
+              ObstacleFactory.field_b != 0) {
+              ObstacleFactory.field_b = -1;
+              HunterHuman.resetConnectionState(0);
             }
             if (!param0) {
-              var5_intLifetime2 = PacketBuffer.advanceLoginHandshake(true, we.getActiveLoginIdentifier((byte) 126), ja.a(23917), this.affiliateId, false, this.field_s);
+              var5_intLifetime2 = PacketBuffer.advanceLoginHandshake(true, ArmySoldier.getActiveLoginIdentifier((byte) 126), LoadingAndMapHelpers.getActiveLoginPassword(23917), this.affiliateId, false, this.field_s);
               if (var5_intLifetime2 != -1) {
                 if (0 == var5_intLifetime2) {
-                  nk.field_e = p.field_a;
-                  tc.a((byte) 124);
-                  i.field_Y = false;
-                  fl.field_a = 10;
+                  LoginPayloadKind.field_e = SessionSocketHelpers.field_a;
+                  InsetTextPainter.onLoginSucceeded((byte) 124);
+                  FullscreenErrorDialog.field_Y = false;
+                  AccountResultHelpers.field_a = 10;
                 } else {
-                  Path.showLoginResponse(10, var5_intLifetime2, sc.field_d);
-                  sc.field_d = null;
+                  Path.showLoginResponse(10, var5_intLifetime2, MasterIndexHelpers.field_d);
+                  MasterIndexHelpers.field_d = null;
                 }
               }
             } else {
-              ja.field_b = false;
+              LoadingAndMapHelpers.field_b = false;
             }
           }
           if (var4 == 4) {
-            if (ih.field_S) {
-              SocketConnector.clearSessionAndReload(hc.a(0), (byte) 80);
+            if (LoginPanel.field_S) {
+              SocketConnector.clearSessionAndReload(AppletHostHelpers.getHostApplet(0), (byte) 80);
             } else {
-              fl.field_a = 10;
-              i.field_Y = true;
+              AccountResultHelpers.field_a = 10;
+              FullscreenErrorDialog.field_Y = true;
             }
           }
           if (var4 == 5) {
-            bo.a(-88, hc.a(0));
+            AchievementSubmission.openQuitPage(-88, AppletHostHelpers.getHostApplet(0));
           }
           if (var4 == 6 &&
             PacketBuffer.field_i) {
-            fl.field_a = 10;
+            AccountResultHelpers.field_a = 10;
           }
           if (var4 == 7) {
-            lc.a(hc.a(0), -2895);
+            WeightedLruCache.openServerListPage(AppletHostHelpers.getHostApplet(0), -2895);
           }
           if (var4 == 8) {
-            SocketConnector.clearSessionAndReload(hc.a(0), (byte) 77);
+            SocketConnector.clearSessionAndReload(AppletHostHelpers.getHostApplet(0), (byte) 77);
           }
           if (9 == var4) {
-            vb.openSupportPage((byte) 50, hc.a(0));
+            PhantomZombie.openSupportPage((byte) 50, AppletHostHelpers.getHostApplet(0));
           }
           if (var4 == 10) {
-            dp.field_e.writeCipheredByte(11, 17);
+            LinkTextPainter.field_e.writeCipheredByte(11, 17);
           }
           if (var4 == 11) {
-            fo.a(38205, hc.a(0));
+            PageReloadHelpers.reloadPage(38205, AppletHostHelpers.getHostApplet(0));
           }
           if (var4 == 12) {
-            qi.a(ff.a((byte) -12), hc.a(0), -66);
+            ScrollContainer.openRelativeUrl(SettingsCookieHelpers.getPendingMessage((byte) -12), AppletHostHelpers.getHostApplet(0), -66);
           }
           if (param2 <= 36) {
             this.gamePort1 = 102;
           }
           if (var4 == 13) {
             try {
-              if (hp.field_E == null) {
-                hp.field_E = new JaggrabDownloader(vh.field_a, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+              if (UiContainer.field_E == null) {
+                UiContainer.field_E = new JaggrabDownloader(SpriteFadeHelpers.field_a, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
-              if (hp.field_E.poll(105)) {
-                var12 = hp.field_E.getCompletedResponse((byte) -118);
+              if (UiContainer.field_E.poll(105)) {
+                var12 = UiContainer.field_E.getCompletedResponse((byte) -118);
                 if (var12 != null) {
                   var7 = SpatialObject.decodeSingleByteText(var12.payload, var12.position, 0, -124);
-                  vf.onCountryListLoaded(74, var7);
+                  TextWidgetPainter.onCountryListLoaded(74, var7);
                 } else {
                   var9 = (String) null;
-                  vf.onCountryListLoaded(48, (String) null);
+                  TextWidgetPainter.onCountryListLoaded(48, (String) null);
                 }
-                hp.field_E = null;
+                UiContainer.field_E = null;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5 = (Exception) (Object) decompiledCaughtException;
-              ae.a((Throwable) ((Object) var5), 10331, "S1");
+              ErrorReportHelpers.reportClientError((Throwable) ((Object) var5), 10331, "S1");
               var10 = (String) null;
-              vf.onCountryListLoaded(87, (String) null);
-              hp.field_E = null;
+              TextWidgetPainter.onCountryListLoaded(87, (String) null);
+              UiContainer.field_E = null;
             }
           }
           if (var4 == 15) {
-            fl.field_a = 10;
+            AccountResultHelpers.field_a = 10;
           }
           if (var4 == 16) {
             return 1;
@@ -729,31 +729,31 @@ abstract class FunOrbApplet extends GameApplet {
         }
     }
 
-    final void a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6, int param7) {
+    final void initializeClient(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6, int param7) {
         java.awt.Frame var10 = new java.awt.Frame("Jagex");
         var10.pack();
         var10.dispose();
         this.setBackground(java.awt.Color.black);
-        jp.field_a = this.language;
-        Js5Transport.selectLoadingMessages(jp.field_a, (byte) -66);
-        s.a(this.instanceId, 5000, this.isMember, jp.field_a, param3, this.gameCrc, this.serverNumber, 5000, this.gamePort1, param0, vh.field_a, this.host, param1 + 120, this.gamePort2);
-        mh.a(this.serverNumber, this.gamePort2, this.gameCrc, this.host, this.gamePort1, param0, vh.field_a, 0, jp.field_a);
+        MenuSelection.field_a = this.language;
+        Js5Transport.selectLoadingMessages(MenuSelection.field_a, (byte) -66);
+        BlastAffectedObject.initializeConnectionState(this.instanceId, 5000, this.isMember, MenuSelection.field_a, param3, this.gameCrc, this.serverNumber, 5000, this.gamePort1, param0, SpriteFadeHelpers.field_a, this.host, param1 + 120, this.gamePort2);
+        WidgetContainer.initializeArchiveServices(this.serverNumber, this.gamePort2, this.gameCrc, this.host, this.gamePort1, param0, SpriteFadeHelpers.field_a, 0, MenuSelection.field_a);
         WhirlpoolHasher.configurePunctuationKeyCodes((byte) -114);
-        jl.field_u = n.c((byte) 94);
-        ProxySocketConnector.attachCanvasInput(param1 ^ 20925, cj.field_d);
-        f.field_f = param4;
+        StrongCacheEntry.field_u = ReflectionCheckRequest.createMouseWheelInput((byte) 94);
+        ProxySocketConnector.attachCanvasInput(param1 ^ 20925, IntrusiveDequeCursor.field_d);
+        GlowAreaSupport.field_f = param4;
         if (param1 != 7) {
           field_t = 6;
         }
-        hf.field_F = param6;
-        ho.field_b = param2;
-        jh.field_k = param7;
-        mp.field_d = param5;
+        MultiHandleSliderWidget.field_F = param6;
+        TileOccupancyHelpers.field_b = param2;
+        ArchiveIndex.field_k = param7;
+        RankingRowHelpers.field_d = param5;
         this.initializePacketLengths(17);
         BufferedSocket.clearFeatureFlags(-23148);
     }
 
-    final void i(byte param0) {
+    final void updateLoginFlow(byte param0) {
         int discarded$4 = 0;
         int discarded$5 = 0;
         int var3;
@@ -763,41 +763,41 @@ abstract class FunOrbApplet extends GameApplet {
         if (param0 != 20) {
           this.affiliateId = 4;
         }
-        if (bj.d(18840)) {
+        if (CacheEntry.isClientReady(18840)) {
           stackIn_11_1 = false;
-          stackIn_12_2 = (cn.field_b != null);
-          discarded$4 = this.a(stackIn_11_1, stackIn_12_2, 115);
+          stackIn_12_2 = (DisplayState.field_b != null);
+          discarded$4 = this.pollLoginResponse(stackIn_11_1, stackIn_12_2, 115);
         } else {
-          if (ld.field_j >= 10) {
+          if (AlternateLongAndNameCredentials.field_j >= 10) {
             if (Point.isIntroFinished(param0 ^ -239)) {
-              if (fl.field_a != 0) {
-                wd.b(112, id.field_I);
+              if (AccountResultHelpers.field_a != 0) {
+                DiskArchiveRequest.runAccountUiFrame(112, LevelObstacle.field_I);
               } else {
-                discarded$5 = this.a(false, false, param0 ^ 72);
+                discarded$5 = this.pollLoginResponse(false, false, param0 ^ 72);
               }
             } else {
-              am.advanceLogoAnimation(-21215);
+              BitPacketBuffer.advanceLogoAnimation(-21215);
             }
           }
         }
     }
 
-    final void b(byte param0, boolean param1) {
-        i.field_X[17] = true;
+    final void enableDefaultResponses(byte param0, boolean param1) {
+        FullscreenErrorDialog.field_X[17] = true;
         int var3 = 66 % ((param0 + 23) / 45);
-        i.field_X[8] = param1;
-        i.field_X[3] = true;
-        i.field_X[16] = true;
-        i.field_X[0] = true;
-        i.field_X[18] = true;
-        i.field_X[7] = true;
+        FullscreenErrorDialog.field_X[8] = param1;
+        FullscreenErrorDialog.field_X[3] = true;
+        FullscreenErrorDialog.field_X[16] = true;
+        FullscreenErrorDialog.field_X[0] = true;
+        FullscreenErrorDialog.field_X[18] = true;
+        FullscreenErrorDialog.field_X[7] = true;
     }
 
     FunOrbApplet() {
     }
 
-    final void g(byte param0) {
-        i.field_X[6] = true;
+    final void enableRankingsResponses(byte param0) {
+        FullscreenErrorDialog.field_X[6] = true;
         int var2 = 123 / ((-47 - param0) / 43);
     }
 

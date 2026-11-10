@@ -7,11 +7,11 @@ import java.util.*;
 final class ProxySocketConnector extends SocketConnector {
     private java.net.ProxySelector field_k;
     static int field_o;
-    static cg field_n;
+    static QuickChatCommandType field_n;
     static IntrusiveDeque field_m;
     static String field_i;
-    static rh field_l;
-    static of field_j;
+    static ValidationState field_l;
+    static WidgetTheme field_j;
 
     private final java.net.Socket connectHttpTunnel(String param0, String param1, byte param2, int param3) throws IOException {
         java.net.Socket stackIn_6_0 = null;
@@ -73,11 +73,11 @@ final class ProxySocketConnector extends SocketConnector {
                   if (var11 != -1) {
                     var8 = var15.substring(0, var11);
                   }
-                  throw new dg(var8);
+                  throw new ProxyAuthException(var8);
                 }
                 break;
               }
-              throw new dg("");
+              throw new ProxyAuthException("");
             }
             if (decompiledFrameRemainder0) {
               stackIn_12_0 = var13;
@@ -116,15 +116,15 @@ final class ProxySocketConnector extends SocketConnector {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          rk.a((byte) -65, (java.awt.Component) ((Object) param1));
-          pg.attachInputListeners((java.awt.Component) ((Object) param1), (byte) 66);
+          LoginPacketHelpers.attachKeyboardInput((byte) -65, (java.awt.Component) ((Object) param1));
+          MainMenuScreen.attachInputListeners((java.awt.Component) ((Object) param1), (byte) 66);
           if (param0 != 20922) {
             ProxySocketConnector.drawSortedTriangle(true, -64, 43, 72, 83, -44, -98, -34, -52, -65, -84, 97, -14, 56, 78, 114);
           }
-          if (jl.field_u == null) {
+          if (StrongCacheEntry.field_u == null) {
             return;
           }
-          jl.field_u.attach(param0 + 3012, (java.awt.Component) ((Object) param1));
+          StrongCacheEntry.field_u.attach(param0 + 3012, (java.awt.Component) ((Object) param1));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -218,7 +218,7 @@ final class ProxySocketConnector extends SocketConnector {
         Object var10 = null;
         java.net.Proxy var11 = null;
         java.net.Socket var12 = null;
-        dg var12_ref = null;
+        ProxyAuthException var12_ref = null;
         IOException var12_ref2 = null;
         int var13 = 0;
         var13 = ZombieDawn.field_J;
@@ -272,15 +272,15 @@ final class ProxySocketConnector extends SocketConnector {
           var10 = var8[var9];
           var11 = (java.net.Proxy) (var10);
           try {
-            if (false) throw (dg) null;
+            if (false) throw (ProxyAuthException) null;
             var12 = this.connectViaProxy(var11, (byte) -27);
             if (var12 != null) {
               stackIn_25_0 = var12;
               return stackIn_25_0;
             }
-          } catch (dg decompiledCaughtParameter1) {
+          } catch (ProxyAuthException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var12_ref = (dg) (Object) decompiledCaughtException;
+            var12_ref = (ProxyAuthException) (Object) decompiledCaughtException;
             var7 = var12_ref;
           } catch (java.io.IOException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
@@ -383,10 +383,10 @@ final class ProxySocketConnector extends SocketConnector {
 
     static {
         field_o = 10;
-        field_n = new cg(15, 0, 1, 0);
+        field_n = new QuickChatCommandType(15, 0, 1, 0);
         field_i = "PER MONTH";
         field_m = new IntrusiveDeque();
-        field_l = new rh();
+        field_l = new ValidationState();
     }
 
     @SuppressWarnings("unchecked")

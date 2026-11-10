@@ -1,0 +1,154 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class DialWidgetPainter implements WidgetPainter {
+    private int field_a;
+    private int field_l;
+    private Font field_g;
+    static PcmMixer field_m;
+    static PcmMixer field_i;
+    private int field_f;
+    private int field_j;
+    private int field_k;
+    private int field_e;
+    static int field_b;
+    private int field_d;
+    static int field_h;
+    static int field_c;
+
+    final static PendingFlagRequest sendTrackedRequest(boolean param0, int param1) {
+        PendingFlagRequest var2 = null;
+        PendingFlagRequest var2Lifetime1;
+        if (!param0) {
+          var2 = new PendingFlagRequest();
+          SweepingSpotlight.field_D.addFirst(0, var2);
+          SessionSocketHelpers.sendByteRequest(0, param1);
+          return var2;
+        }
+        DialWidgetPainter.sendTrackedRequest(false, 81);
+        var2Lifetime1 = new PendingFlagRequest();
+        SweepingSpotlight.field_D.addFirst(0, var2Lifetime1);
+        SessionSocketHelpers.sendByteRequest(0, param1);
+        return var2Lifetime1;
+    }
+
+    final static boolean containsForwardOrReversed(String param0, byte param1, String param2) {
+        String var3 = null;
+        boolean stackIn_8_0 = false;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_12_2 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3_ref = null;
+        try {
+          if (param1 <= 65) {
+            return true;
+          }
+          param2 = ValidatedTextWidget.replaceCharacter("", 0, param2, '_');
+          var3 = BitPacketBuffer.reverseString(param2, 1);
+          stackIn_8_0 = (param0.indexOf(param2) != -1) || (param0.indexOf(var3) != -1);
+          return stackIn_8_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3_ref = decompiledCaughtException;
+          stackIn_11_0 = var3_ref;
+          stackIn_11_1 = new StringBuilder().append("t.D(");
+          if (param0 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
+          }
+          stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
+          }
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+        }
+    }
+
+    public static void releaseStatics(int param0) {
+        if (param0 != 27803) {
+          field_b = -70;
+          field_i = null;
+          field_m = null;
+          return;
+        }
+        field_i = null;
+        field_m = null;
+    }
+
+    final static String getLocalPlayerName(int param0) {
+        if (null == VisualPropertyNode.field_r) {
+          return "";
+        }
+        if (param0 != 1) {
+          return (String) null;
+        }
+        return VisualPropertyNode.field_r;
+    }
+
+    public final void drawWidget(int param0, boolean param1, int param2, UiWidget param3, int param4) {
+        DialWidget var14 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var13 = 0;
+        double var9 = 0.0;
+        int var11 = 0;
+        int var12 = 0;
+        double var9Lifetime1;
+        int var11Lifetime1;
+        int var12Lifetime1;
+        try {
+          var14 = param3 instanceof DialWidget ? (DialWidget) (param3) : null;
+          Rasterizer.fillRect(param3.field_k + param4, param3.field_j + param2, param3.field_i, param3.field_n, this.field_a);
+          if (param0 != 16777215) {
+            this.field_g = (Font) null;
+          }
+          if (var14 != null) {
+          }
+          var7 = var14.field_K + (param4 + param3.field_k);
+          var8 = var14.field_G + param3.field_j + param2;
+          Rasterizer.fillCircle(var7, var8, var14.field_I, this.field_j);
+          if (-1 != var14.field_E) {
+            var9 = 2.0 * (3.141592653589793 * (double)var14.field_E) / (double)var14.field_L;
+            var11 = (int)(-Math.sin(var9) * (double)var14.field_I);
+            var12 = (int)(Math.cos(var9) * (double)var14.field_I);
+            Rasterizer.fillCircle(var11 + var7, var8 + var12, 1, this.field_d);
+          }
+          Rasterizer.fillCircle(var7, var8, 2, 1);
+          var9Lifetime1 = 2.0 * ((double)var14.field_J * 3.141592653589793) / (double)var14.field_L;
+          var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_I);
+          var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_I);
+          Rasterizer.drawLine(var7, var8, var7 + var11Lifetime1, var8 + var12Lifetime1, 1);
+          if (null != this.field_g) {
+            var13 = this.field_e + (var14.field_I + var14.field_K);
+            this.field_g.drawParagraph(param3.field_o, var13 + param4 + param3.field_k, this.field_k + param3.field_j + param2, -this.field_e - (var13 - param3.field_i), param3.field_n - (this.field_e << 1), this.field_l, this.field_f, 1, 1, 0);
+          }
+        } catch (RuntimeException runtimeException) {
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "t.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+        }
+    }
+
+    DialWidgetPainter(Font param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+        try {
+          this.field_g = param0;
+          this.field_j = param5;
+          this.field_k = param2;
+          this.field_l = param3;
+          this.field_d = param6;
+          this.field_e = param1;
+          this.field_f = param4;
+          this.field_a = param7;
+        } catch (RuntimeException runtimeException) {
+          throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "t.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+        }
+    }
+
+    static {
+        field_b = 1 + (int)(9.0 * Math.sqrt(2.0));
+    }
+}

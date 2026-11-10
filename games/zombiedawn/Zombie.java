@@ -9,7 +9,7 @@ final class Zombie extends Mover {
     private int field_ub;
     boolean field_cb;
     private boolean field_ob;
-    private nc field_rb;
+    private ScreechEffect field_rb;
     private Path field_yb;
     int field_fb;
     int field_sb;
@@ -39,7 +39,7 @@ final class Zombie extends Mover {
 
     private final void wobbleVelocity(int param0) {
         int var2;
-        var2 = pb.a(so.random, 50, param0 ^ 0);
+        var2 = GooPuddleCell.nextBoundedInt(SpriteEffectHelpers.random, 50, param0 ^ 0);
         if (var2 == param0 &&
           Math.abs(this.field_K + this.velocityX) < Math.abs(this.field_I) &&
           Math.abs(this.field_R + this.velocityY) < Math.abs(this.field_M)) {
@@ -133,9 +133,9 @@ final class Zombie extends Mover {
           this.field_eb = true;
         }
         if (this.isFemale((byte) -22)) {
-          this.field_U = tp.playSoundEffect(59, 70 + pb.a(so.random, 2, 1));
+          this.field_U = MusicCrossfadeStream.playSoundEffect(59, 70 + GooPuddleCell.nextBoundedInt(SpriteEffectHelpers.random, 2, 1));
         } else {
-          this.field_U = tp.playSoundEffect(37, pb.a(so.random, 2, 1) + 72);
+          this.field_U = MusicCrossfadeStream.playSoundEffect(37, GooPuddleCell.nextBoundedInt(SpriteEffectHelpers.random, 2, 1) + 72);
         }
     }
 
@@ -331,12 +331,12 @@ final class Zombie extends Mover {
           var3_int = param1.worldToScreenX(this.getX(true), (byte) -112) - 24;
           var4 = param1.worldToScreenY(this.getY(237239984), 0) - 48;
           if (this.state == 8) {
-            ki.a((byte) -99, md.field_vb);
+            ContentTransitionDialog.setRasterTarget((byte) -99, AccountCreationDialog.field_vb);
             Rasterizer.clear();
-            DualLinkNode.field_k[cg.field_d[8] + this.field_G + this.field_Cb].drawTransparent(0, 0);
-            pa.popRasterState(-21189);
-            ho.a(md.field_vb, this.isFemale((byte) -83), this.field_fb, -128);
-            md.field_vb.drawTransparent(this.field_kb + var3_int, var4 + this.field_mb);
+            DualLinkNode.field_k[QuickChatCommandType.field_d[8] + this.field_G + this.field_Cb].drawTransparent(0, 0);
+            SingleChildWidget.popRasterState(-21189);
+            TileOccupancyHelpers.tintStateSprite(AccountCreationDialog.field_vb, this.isFemale((byte) -83), this.field_fb, -128);
+            AccountCreationDialog.field_vb.drawTransparent(this.field_kb + var3_int, var4 + this.field_mb);
             return;
           }
           if (param0 > -76) {
@@ -345,10 +345,10 @@ final class Zombie extends Mover {
           if (this.field_tb &&
             5 == this.state ||
             this.state == 7) {
-            lb.field_eb[7].drawWithOpacity(param1.worldToScreenX(this.field_jb, (byte) -72), param1.worldToScreenY(this.field_ib, 0), this.field_ub);
+            DisplaySettingsDialog.field_eb[7].drawWithOpacity(param1.worldToScreenX(this.field_jb, (byte) -72), param1.worldToScreenY(this.field_ib, 0), this.field_ub);
           }
           if (Mover.field_Q) {
-            bj.field_q.drawString(this.getDebugLabel(-30), var3_int, var4, 16777215, 0);
+            CacheEntry.field_q.drawString(this.getDebugLabel(-30), var3_int, var4, 16777215, 0);
             if (5 == this.state ||
               12 == this.state) {
               this.drawDebugPath(param1, -1);
@@ -358,13 +358,13 @@ final class Zombie extends Mover {
             if (this.field_U.isSamplePositionOutOfRange()) {
               this.field_U = null;
             } else {
-              this.field_U.setVolume(pj.a(var4, 68, var3_int));
+              this.field_U.setVolume(ArchiveRequest.getPositionalVolume(var4, 68, var3_int));
             }
           }
           if (var3_int >= -48 &&
             -48 <= var4 &&
-            qj.field_d >= var3_int &&
-            me.field_Bb >= var4) {
+            MoveTargetMarker.field_d >= var3_int &&
+            ArrivingPassenger.field_Bb >= var4) {
             if (this.state != 17) {
               stackIn_36_0 = DualLinkNode.field_k[1];
               stackIn_36_1 = 12;
@@ -373,9 +373,9 @@ final class Zombie extends Mover {
               } else {
                 stackIn_37_2 = var3_int;
               }
-              so.drawTransparent(stackIn_36_0, stackIn_36_1 + stackIn_37_2, var4 + 43);
+              SpriteEffectHelpers.drawTransparent(stackIn_36_0, stackIn_36_1 + stackIn_37_2, var4 + 43);
             }
-            var5 = cg.field_d[this.state] + this.field_G;
+            var5 = QuickChatCommandType.field_d[this.state] + this.field_G;
             if (this.field_ob &&
               var5 < 14) {
               var5 += 49;
@@ -383,23 +383,23 @@ final class Zombie extends Mover {
             if (this.field_eb) {
               var5 = 30;
             }
-            ki.a((byte) -100, md.field_vb);
+            ContentTransitionDialog.setRasterTarget((byte) -100, AccountCreationDialog.field_vb);
             Rasterizer.clear();
             if (this.field_S != 3) {
-              ad.field_g[this.field_t][var5].drawTransparent(3, 3);
+              BitmapTextLayout.field_g[this.field_t][var5].drawTransparent(3, 3);
             } else {
-              ad.field_g[this.field_t][var5].drawMirrored(3, 3);
+              BitmapTextLayout.field_g[this.field_t][var5].drawMirrored(3, 3);
             }
-            ho.a(md.field_vb, this.isFemale((byte) -101), this.field_fb, -111);
+            TileOccupancyHelpers.tintStateSprite(AccountCreationDialog.field_vb, this.isFemale((byte) -101), this.field_fb, -111);
             if (0 < this.field_Ab) {
               if (this.field_Ab == 2) {
-                so.a(0, 0, 54, 54, 16755200);
-                so.a(0, 0, 54, 54, 16711680);
+                SpriteEffectHelpers.outlineRasterRegion(0, 0, 54, 54, 16755200);
+                SpriteEffectHelpers.outlineRasterRegion(0, 0, 54, 54, 16711680);
               } else {
-                so.a(0, 0, 54, 54, 16742144);
+                SpriteEffectHelpers.outlineRasterRegion(0, 0, 54, 54, 16742144);
               }
             }
-            pa.popRasterState(-21189);
+            SingleChildWidget.popRasterState(-21189);
             if (this.field_bb > 0) {
               var6 = 72;
               if (this.field_bb / 2 < 24) {
@@ -409,28 +409,28 @@ final class Zombie extends Mover {
                   var6 = 48 + (-this.field_bb + 1000) / 2;
                 }
               }
-              md.field_vb.drawScaledWithOpacity(-((-48 + var6) / 2) + var3_int, var4 - (-48 + var6), var6, var6, 128);
+              AccountCreationDialog.field_vb.drawScaledWithOpacity(-((-48 + var6) / 2) + var3_int, var4 - (-48 + var6), var6, var6, 128);
             }
             if (0 >= this.field_Z) {
               if (this.field_eb &&
-                0L == (tp.field_p & 1L)) {
-                md.field_vb.drawSilhouette(-3 + var3_int, -3 + var4, 16777215);
+                0L == (MusicCrossfadeStream.field_p & 1L)) {
+                AccountCreationDialog.field_vb.drawSilhouette(-3 + var3_int, -3 + var4, 16777215);
               } else {
-                md.field_vb.drawTransparent(var3_int - 3, var4 - 3);
+                AccountCreationDialog.field_vb.drawTransparent(var3_int - 3, var4 - 3);
               }
             } else {
-              md.field_vb.drawTransparentWithOpacity(var3_int - 3, -3 + var4, 142);
+              AccountCreationDialog.field_vb.drawTransparentWithOpacity(var3_int - 3, -3 + var4, 142);
             }
-            if (kc.field_Q) {
-              Js5Transport.field_k.drawStringCentered(s.a(1938762664, "<%0>,<%1>", new String[]{Integer.toString(this.field_B), Integer.toString(this.field_u)}), 24 + var3_int, var4 - 5, 16777215, 0);
+            if (LaserBarrier.field_Q) {
+              Js5Transport.field_k.drawStringCentered(BlastAffectedObject.substituteTemplateArguments(1938762664, "<%0>,<%1>", new String[]{Integer.toString(this.field_B), Integer.toString(this.field_u)}), 24 + var3_int, var4 - 5, 16777215, 0);
             }
-            if (nk.field_d) {
+            if (LoginPayloadKind.field_d) {
               var6Lifetime1 = param1.worldToScreenX(this.getX(true), (byte) -96);
               var7 = param1.worldToScreenY(this.getY(237239984), 0);
               Rasterizer.drawCircleOutline(var6Lifetime1, var7, 3, 16711935);
             }
-            if (b.field_h) {
-              Js5Transport.field_k.drawStringCentered(s.a(1938762664, "<%0>", new String[]{Integer.toString(this.field_gb)}), var3_int + 24, var4 - 5, 16777215, 0);
+            if (PendingIntArrayRequest.field_h) {
+              Js5Transport.field_k.drawStringCentered(BlastAffectedObject.substituteTemplateArguments(1938762664, "<%0>", new String[]{Integer.toString(this.field_gb)}), var3_int + 24, var4 - 5, 16777215, 0);
             }
             return;
           }
@@ -505,13 +505,13 @@ final class Zombie extends Mover {
         if (7 != this.state) {
           if (9 == this.state &&
             !this.field_J) {
-            this.field_U = kh.a(66, false);
+            this.field_U = EmptyWidgetPainter.queueSoundEffect(66, false);
           }
         } else {
           if (this.isFemale((byte) 112)) {
-            this.field_U = tp.playSoundEffect(37, 15);
+            this.field_U = MusicCrossfadeStream.playSoundEffect(37, 15);
           } else {
-            this.field_U = tp.playSoundEffect(89, 25);
+            this.field_U = MusicCrossfadeStream.playSoundEffect(89, 25);
           }
         }
     }
@@ -587,7 +587,7 @@ final class Zombie extends Mover {
           this.state == 5 ||
           this.state == 6) {
           if (this.field_fb != 2 &&
-            pb.a(so.random, 2, 1) != 0) {
+            GooPuddleCell.nextBoundedInt(SpriteEffectHelpers.random, 2, 1) != 0) {
             return;
           }
           var2 = Js5Archive.field_e.navigation;
@@ -605,7 +605,7 @@ final class Zombie extends Mover {
                 var7 = var2.findPath(true, this.getX(true), var6.getY(237239984), var6.getX(true), this.getY(237239984));
                 if (var7 != null) {
                   if (this.state == 4 &&
-                    pb.a(so.random, 2, param0 - 17303) != 0) {
+                    GooPuddleCell.nextBoundedInt(SpriteEffectHelpers.random, 2, param0 - 17303) != 0) {
                     var5 = var5.previous;
                     continue;
                   }
@@ -803,10 +803,10 @@ final class Zombie extends Mover {
         this.velocityY = 0;
         this.velocityX = 0;
         this.field_fb = param3;
-        this.field_vb = pb.a(so.random, 5, 1);
-        this.field_db = pb.a(so.random, 120, 1);
+        this.field_vb = GooPuddleCell.nextBoundedInt(SpriteEffectHelpers.random, 5, 1);
+        this.field_db = GooPuddleCell.nextBoundedInt(SpriteEffectHelpers.random, 120, 1);
         if (this.field_fb != 0) {
-          this.field_gb = pb.a(so.random, this.field_sb, 1);
+          this.field_gb = GooPuddleCell.nextBoundedInt(SpriteEffectHelpers.random, this.field_sb, 1);
         }
     }
 
@@ -827,7 +827,7 @@ final class Zombie extends Mover {
         int var4 = 120;
         int var5 = -this.getX(true) + param2;
         int var6 = -this.getY(237239984) + param1;
-        double var7 = (double)var4 / (double)so.b(var6 * var6 + var5 * var5);
+        double var7 = (double)var4 / (double)SpriteEffectHelpers.approximateSquareRoot(var6 * var6 + var5 * var5);
         this.targetX = -(int)(var7 * (double)var5) + this.getX(true);
         this.targetY = -(int)(var7 * (double)var6) + this.getY(237239984);
         int var9 = this.field_S;
@@ -960,8 +960,8 @@ final class Zombie extends Mover {
         int var5;
         int var6;
         int var7;
-        kc var8;
-        va var9;
+        LaserBarrier var8;
+        FrameSequence var9;
         int stackIn_21_0Lifetime1;
         var7 = ZombieDawn.field_J;
         var9 = this.applyTileDrift(91);
@@ -981,7 +981,7 @@ final class Zombie extends Mover {
           }
         }
         if (!this.field_eb) {
-          var8 = (kc) (rg.field_J.first((byte) 34));
+          var8 = (LaserBarrier) (ScrollViewport.field_J.first((byte) 34));
           while (var8 != null) {
             stackOut_10_0 = var8.isZombieInBeam(113, this);
             stackIn_21_0 = stackOut_10_0 ? 1 : 0;
@@ -998,12 +998,12 @@ final class Zombie extends Mover {
               if (0 >= this.field_Ab) {
                 this.field_Gb = 0;
                 this.field_eb = true;
-                kh.a(95, false);
+                EmptyWidgetPainter.queueSoundEffect(95, false);
                 this.takeLethalHit(0);
-                ck.a(-13, 6836);
+                Blast.handleTutorialEvent(-13, 6836);
               }
             }
-            var8 = (kc) (rg.field_J.next((byte) 116));
+            var8 = (LaserBarrier) (ScrollViewport.field_J.next((byte) 116));
           }
         }
         stackIn_21_0Lifetime1 = param0;
@@ -1119,16 +1119,16 @@ final class Zombie extends Mover {
                     if ((this.field_G == 0 ||
                       2 == this.field_G) && 0 == this.field_N) {
                       var3 = 0;
-                      if (0 == pb.a(so.random, 3, 1)) {
+                      if (0 == GooPuddleCell.nextBoundedInt(SpriteEffectHelpers.random, 3, 1)) {
                         if (this.field_wb.isMaleVoice(10)) {
-                          var3 = 40 + pb.a(so.random, 4, 1);
+                          var3 = 40 + GooPuddleCell.nextBoundedInt(SpriteEffectHelpers.random, 4, 1);
                         } else {
-                          var3 = 37 + pb.a(so.random, 3, 1);
+                          var3 = 37 + GooPuddleCell.nextBoundedInt(SpriteEffectHelpers.random, 3, 1);
                         }
                       } else {
-                        var3 = pb.a(so.random, 5, 1) + 30;
+                        var3 = GooPuddleCell.nextBoundedInt(SpriteEffectHelpers.random, 5, 1) + 30;
                       }
-                      this.field_U = tp.playSoundEffect(71, var3);
+                      this.field_U = MusicCrossfadeStream.playSoundEffect(71, var3);
                     }
                     fieldTemp$5 = this.field_zb - 1;
                     this.field_zb = this.field_zb - 1;
@@ -1203,7 +1203,7 @@ final class Zombie extends Mover {
                             this.field_ob = false;
                             this.field_S = 1;
                             if (this.field_G == 4) {
-                              Js5Archive.field_e.zombies.addFirst(0, new vb(this.getX(true), this.getY(237239984), this.field_t));
+                              Js5Archive.field_e.zombies.addFirst(0, new PhantomZombie(this.getX(true), this.getY(237239984), this.field_t));
                               this.setState(4, -6904);
                               this.field_db = 2;
                             }
@@ -1218,10 +1218,10 @@ final class Zombie extends Mover {
                                     this.field_rb.field_q = this.getY(237239984);
                                   }
                                 } else {
-                                  this.field_rb = new nc(this.getX(true), -30 + this.getY(237239984));
+                                  this.field_rb = new ScreechEffect(this.getX(true), -30 + this.getY(237239984));
                                   Js5Archive.field_e.field_e.addFirst(0, this.field_rb);
                                 }
-                                if (this.field_rb.c(123)) {
+                                if (this.field_rb.isFinished(123)) {
                                   this.field_rb.unlink(-27598);
                                   this.field_rb = null;
                                   this.setState(4, -6904);
@@ -1256,7 +1256,7 @@ final class Zombie extends Mover {
                         Js5Archive.field_e.addBloodSplatter(this.getY(237239984), this.field_eb, 111, this.getX(true));
                         Js5Archive.field_e.removeZombie(this, true);
                         if (this.field_rb != null) {
-                          this.field_rb.c((byte) -64);
+                          this.field_rb.restart((byte) -64);
                           this.field_rb.unlink(-27598);
                           this.field_rb = null;
                         }
@@ -1282,13 +1282,13 @@ final class Zombie extends Mover {
           if (this.field_db != 1 && (!(this.speedScale > 4) ||
             this.field_ob)) {
             if ((this.field_db == 0)) {
-              this.field_db = 60 + pb.a(so.random, 60, 1);
+              this.field_db = 60 + GooPuddleCell.nextBoundedInt(SpriteEffectHelpers.random, 60, 1);
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            var3 = this.getX(true) - (-pb.a(so.random, 48, 1) + 24);
-            var4 = this.getY(237239984) + (pb.a(so.random, 48, 1) - 24);
+            var3 = this.getX(true) - (-GooPuddleCell.nextBoundedInt(SpriteEffectHelpers.random, 48, 1) + 24);
+            var4 = this.getY(237239984) + (GooPuddleCell.nextBoundedInt(SpriteEffectHelpers.random, 48, 1) - 24);
             if (Js5Archive.field_e.navigation.isWalkable(false, var4, var3, true)) {
               this.walkTo(var4, var3, false);
             } else {

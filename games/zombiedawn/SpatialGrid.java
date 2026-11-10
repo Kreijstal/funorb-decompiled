@@ -27,7 +27,7 @@ final class SpatialGrid {
     final static void resendQueuedRequests(int param0, int param1) {
         IntrusiveNode var2 = null;
         int var3 = 0;
-        bo var4 = null;
+        AchievementSubmission var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         var3 = ZombieDawn.field_J;
@@ -35,15 +35,15 @@ final class SpatialGrid {
           if (param1 != -1) {
             SpatialGrid.resendQueuedRequests(103, -42);
           }
-          var4 = (bo) (mp.field_g.last((byte) 26));
+          var4 = (AchievementSubmission) (RankingRowHelpers.field_g.last((byte) 26));
           while (var4 != null) {
             SecondaryNodeDequeIterator.writeProgressRecord(param0, true, var4);
-            var4 = (bo) (mp.field_g.previous(false));
+            var4 = (AchievementSubmission) (RankingRowHelpers.field_g.previous(false));
           }
-          var2 = qi.field_J.last((byte) 26);
+          var2 = ScrollContainer.field_J.last((byte) 26);
           while (var2 != null) {
-            pp.a(2, param0);
-            var2 = qi.field_J.previous(false);
+            ByteRequestWriter.sendByteRequest(2, param0);
+            var2 = ScrollContainer.field_J.previous(false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -265,9 +265,9 @@ final class SpatialGrid {
 
     final static void detachMouseInput(int param0, java.awt.Component param1) {
         try {
-          param1.removeMouseListener(ng.field_b);
-          param1.removeMouseMotionListener(ng.field_b);
-          param1.removeFocusListener(ng.field_b);
+          param1.removeMouseListener(LoginConnectionHelpers.field_b);
+          param1.removeMouseMotionListener(LoginConnectionHelpers.field_b);
+          param1.removeFocusListener(LoginConnectionHelpers.field_b);
           if (param0 != 3490) {
             field_b = 29;
           }
