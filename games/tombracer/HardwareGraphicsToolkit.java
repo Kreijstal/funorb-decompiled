@@ -905,11 +905,11 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     final static Weapon D(byte param0) {
         Weapon var1 = new Weapon();
-        var1.field_f = new Effect(0, 5);
-        var1.field_f.b(1, 11);
+        var1.effect = new Effect(0, 5);
+        var1.effect.b(1, 11);
         var1.field_c = true;
         var1.field_d = 0;
-        var1.field_p = -1;
+        var1.maxAmmo = -1;
         var1.field_n = 655360;
         var1.field_h = 25;
         var1.field_k = 150;

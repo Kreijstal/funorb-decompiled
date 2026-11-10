@@ -207,7 +207,7 @@ final class nw extends ci {
           for (var14 = 0; var14 < ns.field_g; var14++) {
             CachedArchiveSource.field_l = 2147483647;
             rp.field_h = 2147483647;
-            te.field_b = 2147483647;
+            CorpseList.field_b = 2147483647;
             TextFieldValidator.field_h = 2147483647;
             var15 = 2048 + ht.field_Fb[var14] * this.field_t;
             var16 = var15 >> 12;
@@ -300,14 +300,14 @@ final class nw extends ci {
                 }
                 if (var11 < TextFieldValidator.field_h) {
                   rp.field_h = CachedArchiveSource.field_l;
-                  CachedArchiveSource.field_l = te.field_b;
-                  te.field_b = TextFieldValidator.field_h;
+                  CachedArchiveSource.field_l = CorpseList.field_b;
+                  CorpseList.field_b = TextFieldValidator.field_h;
                   TextFieldValidator.field_h = var11;
                 } else {
-                  if (var11 < te.field_b) {
+                  if (var11 < CorpseList.field_b) {
                     rp.field_h = CachedArchiveSource.field_l;
-                    CachedArchiveSource.field_l = te.field_b;
-                    te.field_b = var11;
+                    CachedArchiveSource.field_l = CorpseList.field_b;
+                    CorpseList.field_b = var11;
                   } else {
                     if (CachedArchiveSource.field_l <= var11) {
                       if (rp.field_h > var11) {
@@ -331,14 +331,14 @@ final class nw extends ci {
                 } else {
                   if (var18Lifetime1 != 4) {
                     if (2 == var18Lifetime1) {
-                      var3[var14] = te.field_b - TextFieldValidator.field_h;
+                      var3[var14] = CorpseList.field_b - TextFieldValidator.field_h;
                     }
                   } else {
                     var3[var14] = rp.field_h;
                   }
                 }
               } else {
-                var3[var14] = te.field_b;
+                var3[var14] = CorpseList.field_b;
               }
             }
           }

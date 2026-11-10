@@ -601,7 +601,7 @@ abstract class wv extends dfa {
                     }
                   }
                 }
-                ts.a((byte) -63, ura.field_a, true);
+                RoomEffectTraps.a((byte) -63, ura.field_a, true);
                 return true;
               }
               if (var7 == 32 &&

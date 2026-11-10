@@ -64,7 +64,7 @@ final class BladeShooterComponent extends ShooterComponent {
           var9.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new WeaponShooterBehaviour(param2, param0);
           var6 = ci.a(1, -1);
-          var6.a(param1 ^ -119, true);
+          var6.refillAmmo(param1 ^ -119, true);
           var5.a(var6, (byte) 61);
           this.a((byte) 43, var5, param2);
           var9.addBehaviour((byte) 83, (Behaviour) (var5));

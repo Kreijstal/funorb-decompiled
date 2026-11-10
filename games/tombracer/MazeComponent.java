@@ -304,7 +304,7 @@ abstract class MazeComponent extends PrefabComponent {
           RopeBridgeComponent.field_F.a(42 + io.field_a, 18, param1 - 23778, 2 + di.field_a, -io.field_a + lk.field_l.field_G - 42);
           tn.field_n.a(lk.field_l.field_G, 2, (byte) 127, 0, io.field_a, lk.field_l.field_t - (di.field_a + 22), 20 + (2 + di.field_a));
           bc.field_b.a(nra.field_c.field_G, 40, -23776, -40 + nra.field_c.field_t, 0);
-          wf.field_g.a(dka.field_b.field_G, 30, -23776, 0, 0);
+          StatusEffect.field_g.a(dka.field_b.field_G, 30, -23776, 0, 0);
           C2SSubmitSettingsPacket.field_g.a(dka.field_b.field_G, dka.field_b.field_t - 72, -23776, 30, 0);
           var2_int = 3 + fk.field_b;
           if (SafeZoneBehaviour.field_u.length < 2) {

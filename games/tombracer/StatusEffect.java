@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wf extends IntrusiveNode {
+final class StatusEffect extends IntrusiveNode {
     static jea field_g;
-    private int field_i;
-    private int field_h;
-    private int field_f;
+    private int remaining;
+    private int duration;
+    private int kind;
 
     private final boolean b(int param0) {
         if (param0 >= 96) {
-          return this.field_f < 6 ? true : false;
+          return this.kind < 6 ? true : false;
         }
-        this.d(-115);
-        return this.field_f < 6 ? true : false;
+        this.restart(-115);
+        return this.kind < 6 ? true : false;
     }
 
     public static void releaseStatics(int param0) {
@@ -22,66 +22,66 @@ final class wf extends IntrusiveNode {
         }
     }
 
-    final void a(int param0, BitPacketBuffer param1) {
+    final void encode(int param0, BitPacketBuffer param1) {
         boolean discarded$0 = false;
         try {
-          param1.writeBits((byte) 2, this.field_f, 4);
+          param1.writeBits((byte) 2, this.kind, 4);
           if (param0 != -29928) {
             discarded$0 = this.b(-112);
           }
-          param1.writeBits((byte) -5, this.field_h / 50, 6);
+          param1.writeBits((byte) -5, this.duration / 50, 6);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wf.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void d(int param0) {
+    private final void restart(int param0) {
         if (param0 != 100) {
           return;
         }
-        this.field_i = this.field_h;
+        this.remaining = this.duration;
     }
 
-    final int a(byte param0) {
+    final int getKind(byte param0) {
         if (param0 != 91) {
-          this.field_f = -58;
-          return this.field_f;
+          this.kind = -58;
+          return this.kind;
         }
-        return this.field_f;
+        return this.kind;
     }
 
-    final boolean b(byte param0) {
+    final boolean isExpired(byte param0) {
         int var2 = -122 % ((7 - param0) / 52);
-        if (this.field_h <= 0) {
+        if (this.duration <= 0) {
           return false;
         }
-        if (this.field_i <= 0) {
+        if (this.remaining <= 0) {
           return true;
         }
         return false;
     }
 
-    final void c(int param0) {
-        this.field_i = this.field_i - 1;
+    final void tick(int param0) {
+        this.remaining = this.remaining - 1;
         if (param0 != -9) {
           field_g = (jea) null;
         }
     }
 
-    final wf e(int param0) {
+    final StatusEffect copy(int param0) {
         if (param0 == -1) {
-          return new wf(this.field_f, this.field_h);
+          return new StatusEffect(this.kind, this.duration);
         }
         Player var3 = (Player) null;
         this.a((byte) -15, (Player) null);
-        return new wf(this.field_f, this.field_h);
+        return new StatusEffect(this.kind, this.duration);
     }
 
-    private wf(int param0, int param1) {
-        this.field_h = 100;
-        this.field_f = param0;
-        this.field_h = param1;
-        this.d(100);
+    private StatusEffect(int param0, int param1) {
+        this.duration = 100;
+        this.kind = param0;
+        this.duration = param1;
+        this.restart(100);
     }
 
     final boolean a(byte param0, Player param1) {
@@ -96,7 +96,7 @@ final class wf extends IntrusiveNode {
           if (this.b(97)) {
             return false;
           }
-          var3_int = this.field_f;
+          var3_int = this.kind;
           if (6 == var3_int) {
           }
           var3_intLifetime1 = -41 % ((param0 - 43) / 44);
@@ -115,16 +115,16 @@ final class wf extends IntrusiveNode {
         }
     }
 
-    wf(Room param0, BitPacketBuffer param1) {
-        this.field_h = 100;
+    StatusEffect(Room param0, BitPacketBuffer param1) {
+        this.duration = 100;
         try {
-          this.field_f = param1.readBits((byte) 44, 4);
+          this.kind = param1.readBits((byte) 44, 4);
           if (param0.formatVersion > 8) {
-            this.field_h = 50 * param1.readBits((byte) 44, 6);
+            this.duration = 50 * param1.readBits((byte) 44, 6);
           } else {
-            this.field_h = 100;
+            this.duration = 100;
           }
-          this.d(100);
+          this.restart(100);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

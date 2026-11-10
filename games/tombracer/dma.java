@@ -3,7 +3,7 @@
  */
 final class dma extends OpenGlTexture implements na {
     static int[][] field_k;
-    static eb field_l;
+    static LoadingStage field_l;
 
     public final void bind(byte param0) {
         if (param0 <= 32) {
@@ -71,7 +71,7 @@ final class dma extends OpenGlTexture implements na {
         field_k = (int[][]) null;
         field_l = null;
         if (param0 != -31784) {
-          field_l = (eb) null;
+          field_l = (LoadingStage) null;
         }
     }
 

@@ -47,9 +47,9 @@ final class sda extends IntrusiveNode {
           }
           var3 = null;
           var4 = null;
-          if (null != ts.field_g &&
-            !ts.field_g.equals(param0.getParameter("settings"))) {
-            var3 = ts.field_g;
+          if (null != RoomEffectTraps.field_g &&
+            !RoomEffectTraps.field_g.equals(param0.getParameter("settings"))) {
+            var3 = RoomEffectTraps.field_g;
             var4 = var3;
             var4 = var3;
           }

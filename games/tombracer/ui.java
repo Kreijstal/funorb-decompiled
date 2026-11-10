@@ -33,7 +33,7 @@ final class ui {
         oc var16 = null;
         int var18 = 0;
         Object var19 = null;
-        sra var19_ref = null;
+        GameAssetLoader var19_ref = null;
         String var20 = null;
         String var21 = null;
         String var22 = null;
@@ -49,7 +49,7 @@ final class ui {
         var19 = null;
         var18 = TombRacer.field_G ? 1 : 0;
         try {
-          var19_ref = (sra) (dma.field_l);
+          var19_ref = (GameAssetLoader) (dma.field_l);
           var19_ref.a(param2, (byte) 47, param1);
           SoftReferenceCache.field_b = new oc[13];
           var5 = gha.a("", "characters/models/deaths/gibs", 33, param0);

@@ -296,7 +296,7 @@ final class opa extends qra {
             var20_ref_StringLifetime2 = var16_ref_String;
             var20_ref_StringLifetime2Lifetime1 = var16_ref_String;
           }
-          ts.a(-1, -73, 20 + var11, var16_ref_String.toUpperCase(), 24 + var9Lifetime1, eda.field_f, 2431750);
+          RoomEffectTraps.a(-1, -73, 20 + var11, var16_ref_String.toUpperCase(), 24 + var9Lifetime1, eda.field_f, 2431750);
           if (var14_ref_gsa.field_d) {
             stackIn_22_0 = var14_ref_gsa.field_r;
           } else {
@@ -312,7 +312,7 @@ final class opa extends qra {
             var20_ref_StringLifetime5 = var18_ref_String;
             var20_ref_StringLifetime5Lifetime1 = var18_ref_String;
           }
-          ts.a(-1, -28, var12 + 17, var18_ref_String.toUpperCase(), var9Lifetime1 + 24, eda.field_f, 2431750);
+          RoomEffectTraps.a(-1, -28, var12 + 17, var18_ref_String.toUpperCase(), var9Lifetime1 + 24, eda.field_f, 2431750);
           if (var14_ref_gsa.field_k) {
             stackIn_28_0 = var14_ref_gsa.field_p;
           } else {
@@ -326,7 +326,7 @@ final class opa extends qra {
           if (var19 < 10) {
             var20_ref_StringLifetime8 = "0" + var30;
           }
-          ts.a(-1, -29, var13 + 14, var20_ref_StringLifetime8.toUpperCase(), var9Lifetime1 + 24, eda.field_f, 2431750);
+          RoomEffectTraps.a(-1, -29, var13 + 14, var20_ref_StringLifetime8.toUpperCase(), var9Lifetime1 + 24, eda.field_f, 2431750);
           var21_int = this.field_c.players[var8Lifetime2].z(-104);
           var22 = 0;
           if (var21_int >= 0 &&
@@ -364,8 +364,8 @@ final class opa extends qra {
           var23Lifetime1 = 80 + var9Lifetime1;
           var24Lifetime1 = 32 + var10;
           var32 = String.valueOf(this.field_r[var8Lifetime2].field_m);
-          ts.a(-1, -59, var24Lifetime1, "$", var23Lifetime1, SingleChildWidget.field_v, 2431750);
-          ts.a(0, -28, -1 + var24Lifetime1, var32.toUpperCase(), 18 + var23Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime2]);
+          RoomEffectTraps.a(-1, -59, var24Lifetime1, "$", var23Lifetime1, SingleChildWidget.field_v, 2431750);
+          RoomEffectTraps.a(0, -28, -1 + var24Lifetime1, var32.toUpperCase(), 18 + var23Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime2]);
           var26 = this.field_c.field_v[var8Lifetime2];
           if (var8Lifetime2 == this.field_c.e(2) &&
             var7Lifetime2 < -100 + fd.field_e) {
@@ -443,10 +443,10 @@ final class opa extends qra {
             var17Lifetime1 = stackIn_167_0 + (stackIn_167_1 - stackIn_168_2);
             var18 = var9Lifetime2 - 70;
             eca.field_c[0].a(var17Lifetime1, -5 + var18, eca.field_c[0].a() >> 1, eca.field_c[0].c() >> 1);
-            ts.a(0, -123, 15 + var18, "x", 25 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
-            ts.a(0, -51, 17 + var18, var39, 45 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
-            ts.a(0, -103, var18 + 55, "+", var17Lifetime1 + 2, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
-            ts.a(0, -65, var18 + 55, var40, 25 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
+            RoomEffectTraps.a(0, -123, 15 + var18, "x", 25 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
+            RoomEffectTraps.a(0, -51, 17 + var18, var39, 45 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
+            RoomEffectTraps.a(0, -103, var18 + 55, "+", var17Lifetime1 + 2, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
+            RoomEffectTraps.a(0, -65, var18 + 55, var40, 25 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
             if (var15Lifetime1 != 0) {
               var19Lifetime1 = 25 + wb.field_a.a("x" + var39, (byte) 31) + var17Lifetime1;
               var20 = -11 + var18;
@@ -494,10 +494,10 @@ final class opa extends qra {
             var17Lifetime1 = stackIn_142_0 - stackIn_143_1;
             var18 = var9Lifetime2 - 70;
             eca.field_c[1].a(var17Lifetime1, -5 + var18, eca.field_c[1].a() >> 2, eca.field_c[1].c() >> 2);
-            ts.a(0, -42, 15 + var18, "x", 25 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
-            ts.a(0, -124, var18 + 17, var36, 45 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
-            ts.a(0, -92, 55 + var18, "+", var17Lifetime1 + 2, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
-            ts.a(0, -119, 55 + var18, var37, var17Lifetime1 + 25, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
+            RoomEffectTraps.a(0, -42, 15 + var18, "x", 25 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
+            RoomEffectTraps.a(0, -124, var18 + 17, var36, 45 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
+            RoomEffectTraps.a(0, -92, 55 + var18, "+", var17Lifetime1 + 2, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
+            RoomEffectTraps.a(0, -119, 55 + var18, var37, var17Lifetime1 + 25, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
             if (var15Lifetime1 != 0) {
               var19Lifetime1 = var17Lifetime1 + (wb.field_a.a("x" + var36, (byte) -122) + 25);
               var20 = var18 - 11;
@@ -542,10 +542,10 @@ final class opa extends qra {
               var17Lifetime1 = stackIn_117_0 + (stackIn_117_1 - stackIn_118_2);
               var18 = -70 + var9Lifetime2;
               eca.field_c[2].a(var17Lifetime1, var18 - 5, eca.field_c[2].a() >> 2, eca.field_c[2].c() >> 2);
-              ts.a(0, -30, 15 + var18, "x", 25 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
-              ts.a(0, -100, var18 + 17, var33, 45 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
-              ts.a(0, -126, 55 + var18, "+", var17Lifetime1 + 2, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
-              ts.a(0, -24, 55 + var18, var34, 25 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
+              RoomEffectTraps.a(0, -30, 15 + var18, "x", 25 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
+              RoomEffectTraps.a(0, -100, var18 + 17, var33, 45 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
+              RoomEffectTraps.a(0, -126, 55 + var18, "+", var17Lifetime1 + 2, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
+              RoomEffectTraps.a(0, -24, 55 + var18, var34, 25 + var17Lifetime1, SingleChildWidget.field_v, wga.field_a[var8Lifetime3]);
               if (var15Lifetime1 != 0) {
                 var19Lifetime1 = var17Lifetime1 + wb.field_a.a("x" + var33, (byte) 36) + 25;
                 var20 = -11 + var18;

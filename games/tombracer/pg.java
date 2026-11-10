@@ -14,7 +14,7 @@ final class pg extends WidgetContainer implements tma, tsa {
         if (!qga.field_m) {
           throw new IllegalStateException();
         }
-        sra.field_t = true;
+        GameAssetLoader.field_t = true;
         jda.a(true, 262144);
         Transform3D.field_c = 0;
         if (!param0) {

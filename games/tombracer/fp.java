@@ -36,7 +36,7 @@ final class fp {
         int var11_int = 0;
         Object var16 = null;
         int var15 = TombRacer.field_G ? 1 : 0;
-        sra var16_ref = (sra) (dma.field_l);
+        GameAssetLoader var16_ref = (GameAssetLoader) (dma.field_l);
         int var10_intLifetime1;
         int var11_intLifetime1;
         var16_ref.a(param1, (byte) 47, param0);

@@ -96,7 +96,7 @@ final class ArrowShooterComponent extends ShooterComponent {
           var9.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new WeaponShooterBehaviour(param2, param0);
           var6 = ci.a(0, -1);
-          var6.a(91, true);
+          var6.refillAmmo(91, true);
           if (this.s((byte) 73)) {
             var7_int = var6.a(true);
             if (var7_int > 0) {

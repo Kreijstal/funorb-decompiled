@@ -543,7 +543,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         }
         if (!param1 &&
           this.pushable &&
-          this.getSimulation(15470).f(8, 10915)) {
+          this.getSimulation(15470).isEffectActive(8, 10915)) {
           this.tryPush(86, true, 1, 131072 - this.room.getRandom(90).nextBounded(262144, 0), -this.room.getRandom(85).nextBounded(262144, 0) + 131072, 0);
         }
         if (!this.isFallingIntoPit(-1)) {

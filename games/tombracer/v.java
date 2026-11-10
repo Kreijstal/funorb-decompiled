@@ -337,9 +337,9 @@ final class v {
     final void c(int param0) {
         int var2 = 32;
         int var2Lifetime1;
-        ts.a(0, -121, var2 + 10, "unack: " + this.field_h.size((byte) -16), 16, kn.field_p, 16777215);
+        RoomEffectTraps.a(0, -121, var2 + 10, "unack: " + this.field_h.size((byte) -16), 16, kn.field_p, 16777215);
         var2Lifetime1 = 48;
-        ts.a(0, -122, 10 + var2Lifetime1, "received: " + this.field_c.a((byte) 107), param0, kn.field_p, 16777215);
+        RoomEffectTraps.a(0, -122, 10 + var2Lifetime1, "received: " + this.field_c.a((byte) 107), param0, kn.field_p, 16777215);
     }
 
     final boolean handleServerPacket(byte param0, qh param1, BitPacketBuffer param2, int param3) {

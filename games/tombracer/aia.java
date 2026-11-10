@@ -61,7 +61,7 @@ final class aia extends IntrusiveNode {
             return;
           }
           var17 = param6.getRandom(57);
-          if (param6.getSimulation(-1553494544).f(8, 10915)) {
+          if (param6.getSimulation(-1553494544).isEffectActive(8, 10915)) {
             this.field_o = 100 + var17.nextBounded(50, 0);
           }
           var9 = this.a(0) ? 1 : 0;

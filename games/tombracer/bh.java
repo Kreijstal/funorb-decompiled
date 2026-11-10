@@ -183,7 +183,7 @@ final class bh extends ela {
                 var12.field_Eb.b(param1 - 123, var12.field_Zb);
               }
               var12.field_fc = new jea(0L, (jea) null);
-              if ((1 << ts.field_b & var14) != 0) {
+              if ((1 << RoomEffectTraps.field_b & var14) != 0) {
                 var12.field_Eb.b(param1 ^ -124, var12.field_fc);
               }
               var45 = var12.field_xb;
@@ -395,7 +395,7 @@ final class bh extends ela {
                 var12.field_Zb.a(var52_ref.field_n, var12.field_Eb.field_t, -23776, 0, var34_int);
                 var34_int = var34_int + (pda.field_c + var52_ref.field_n);
               }
-              if ((var14Lifetime1 & 1 << ts.field_b) != 0) {
+              if ((var14Lifetime1 & 1 << RoomEffectTraps.field_b) != 0) {
                 stackIn_90_0 = wt.field_c;
                 if (var12.field_Ob) {
                   stackIn_91_1 = 1;

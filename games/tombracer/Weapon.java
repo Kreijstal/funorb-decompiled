@@ -6,20 +6,20 @@ final class Weapon {
     private int field_i;
     int field_t;
     boolean field_c;
-    Effect field_f;
+    Effect effect;
     int field_h;
     static float field_u;
-    int field_p;
+    int maxAmmo;
     private boolean field_j;
     int field_s;
     int field_o;
     boolean field_m;
     private int field_w;
     int field_k;
-    private int field_v;
+    private int cooldown;
     int field_d;
     int field_r;
-    int field_q;
+    int ammo;
     int field_b;
     private boolean field_e;
     boolean field_y;
@@ -28,12 +28,12 @@ final class Weapon {
     int field_a;
     boolean field_x;
 
-    final int b(int param0) {
+    final int getCooldown(int param0) {
         if (param0 != 524288) {
           this.field_e = false;
-          return this.field_v;
+          return this.cooldown;
         }
-        return this.field_v;
+        return this.cooldown;
     }
 
     final int d(int param0) {
@@ -49,43 +49,43 @@ final class Weapon {
         try {
           param0.writeBits((byte) -127, this.field_r, 5);
           if (param1 <= 3) {
-            discarded$0 = this.a((byte) 22);
+            discarded$0 = this.hasUnlimitedAmmo((byte) 22);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "roa.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(int param0, byte param1) {
+    final void setCooldown(int param0, byte param1) {
         if (param1 <= 11) {
           return;
         }
-        this.field_v = param0;
+        this.cooldown = param0;
     }
 
-    final Effect b(byte param0) {
+    final Effect getEffect(byte param0) {
         if (param0 != -16) {
-          this.a(6, true);
-          return this.field_f;
+          this.refillAmmo(6, true);
+          return this.effect;
         }
-        return this.field_f;
+        return this.effect;
     }
 
-    final void a(int param0, boolean param1) {
+    final void refillAmmo(int param0, boolean param1) {
         int var3 = 0;
         int var3Lifetime1;
         if (param1) {
-          this.field_q = -1;
+          this.ammo = -1;
           var3 = -22 / ((46 - param0) / 36);
           return;
         }
-        this.field_q = this.field_p;
+        this.ammo = this.maxAmmo;
         var3Lifetime1 = -22 / ((46 - param0) / 36);
     }
 
     final void c(int param0) {
-        if (this.field_v > 0) {
-          this.field_v = this.field_v - 1;
+        if (this.cooldown > 0) {
+          this.cooldown = this.cooldown - 1;
         }
         if (param0 >= -1) {
           this.field_w = -55;
@@ -95,25 +95,25 @@ final class Weapon {
 
     final void b(int param0, boolean param1) {
         if (param1) {
-          this.field_f = (Effect) null;
-          this.field_v = param0;
+          this.effect = (Effect) null;
+          this.cooldown = param0;
           return;
         }
-        this.field_v = param0;
+        this.cooldown = param0;
     }
 
     final boolean a(int param0) {
         if (param0 != 12111) {
-          this.field_f = (Effect) null;
-          if (!this.a((byte) 125)) {
-            return this.field_q > 0 ? true : false;
+          this.effect = (Effect) null;
+          if (!this.hasUnlimitedAmmo((byte) 125)) {
+            return this.ammo > 0 ? true : false;
           }
           return true;
         }
-        if (this.a((byte) 125)) {
+        if (this.hasUnlimitedAmmo((byte) 125)) {
           return true;
         }
-        if (this.field_q <= 0) {
+        if (this.ammo <= 0) {
           return false;
         }
         return true;
@@ -154,7 +154,7 @@ final class Weapon {
         int var26 = 0;
         var26 = TombRacer.field_G ? 1 : 0;
         try {
-          if (0 >= this.field_v &&
+          if (0 >= this.cooldown &&
             this.a(12111)) {
             var11_int = MouseInputHandler.a((byte) 122, param0 >> 2);
             if (param9) {
@@ -193,7 +193,7 @@ final class Weapon {
                   var23.b(7, 128, var24);
                 }
               }
-              var23.setEffect(-126, new Effect(param2, this.field_f));
+              var23.setEffect(-126, new Effect(param2, this.effect));
               if (this.field_i != -1) {
                 var23.a(this.field_i, -38);
               }
@@ -213,9 +213,9 @@ final class Weapon {
               }
               var23.field_m = this.field_t;
             }
-            this.field_v = this.field_h;
-            if (this.field_q > 0) {
-              this.field_q = this.field_q - 1;
+            this.cooldown = this.field_h;
+            if (this.ammo > 0) {
+              this.ammo = this.ammo - 1;
             }
             if (this.field_e) {
               param5.b(false).a((byte) 89, param1, var14, var13, param0);
@@ -244,11 +244,11 @@ final class Weapon {
         }
     }
 
-    private final boolean a(byte param0) {
+    private final boolean hasUnlimitedAmmo(byte param0) {
         if (param0 < 99) {
           return false;
         }
-        return this.field_q == -1 ? true : false;
+        return this.ammo == -1 ? true : false;
     }
 
     Weapon() {
@@ -265,7 +265,7 @@ final class Weapon {
 
     final int a(boolean param0) {
         if (!param0) {
-          this.b((byte) -20);
+          this.getEffect((byte) -20);
           return this.field_h;
         }
         return this.field_h;

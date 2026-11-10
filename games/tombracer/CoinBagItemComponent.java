@@ -124,7 +124,7 @@ final class CoinBagItemComponent extends ItemComponent {
             dl.field_t.field_t = 0;
             var7.field_G = 0;
             if (mka.b(param1 + 8193)) {
-              wf.field_g.field_r = una.field_d.toUpperCase();
+              StatusEffect.field_g.field_r = una.field_d.toUpperCase();
               var9 = (2 + dka.field_b.field_G) / 2;
               pk.field_z.a(-2 + var9, 40, -23776, -40 + dka.field_b.field_t, 0);
               if (uu.field_a.field_Mb >= uu.field_a.field_Jb) {
@@ -436,14 +436,14 @@ final class CoinBagItemComponent extends ItemComponent {
               }
               if (var19 != 0) {
                 var9_ref_String = uu.field_a.field_tb;
-                wf.field_g.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(113, jea.field_nb, new String[]{var9_ref_String}).toUpperCase();
+                StatusEffect.field_g.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(113, jea.field_nb, new String[]{var9_ref_String}).toUpperCase();
                 dl.field_t.a(dka.field_b.field_G, 40, -23776, dka.field_b.field_t - 40, 0);
                 dl.field_t.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(107, TextLayout.field_d, new String[]{var9_ref_String});
                 var8 = dl.field_t;
               }
             } else {
               var9_ref_String = uu.field_a.field_tb;
-              wf.field_g.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(113, jea.field_nb, new String[]{var9_ref_String}).toUpperCase();
+              StatusEffect.field_g.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(113, jea.field_nb, new String[]{var9_ref_String}).toUpperCase();
               dl.field_t.a(dka.field_b.field_G, 40, -23776, dka.field_b.field_t - 40, 0);
               dl.field_t.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(107, TextLayout.field_d, new String[]{var9_ref_String});
               var8 = dl.field_t;

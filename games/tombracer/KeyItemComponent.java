@@ -8,7 +8,7 @@ final class KeyItemComponent extends ItemComponent {
         if (!qga.field_m) {
           throw new IllegalStateException();
         }
-        sra.field_t = param0;
+        GameAssetLoader.field_t = param0;
         jda.a(false, 262144);
         Transform3D.field_c = 0;
     }

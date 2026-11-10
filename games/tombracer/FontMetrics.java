@@ -939,11 +939,11 @@ final class FontMetrics {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref2 = decompiledCaughtException;
             }
-            if (ts.field_g == null) {
+            if (RoomEffectTraps.field_g == null) {
               stackIn_21_0 = param1.getParameter("settings");
               return stackIn_21_0;
             }
-            stackIn_19_0 = ts.field_g;
+            stackIn_19_0 = RoomEffectTraps.field_g;
             return stackIn_19_0;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

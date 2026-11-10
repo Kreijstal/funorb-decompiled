@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class PowerUpItemBehaviour extends ItemBehaviour {
-    private wf field_x;
+    private StatusEffect field_x;
     static String field_s;
     static ka[] field_t;
     static String field_v;
@@ -12,7 +12,7 @@ final class PowerUpItemBehaviour extends ItemBehaviour {
     PowerUpItemBehaviour(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
-          this.field_x = new wf(param0, param1);
+          this.field_x = new StatusEffect(param0, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "rl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -31,13 +31,13 @@ final class PowerUpItemBehaviour extends ItemBehaviour {
         if (param0 != 3) {
           return;
         }
-        this.field_x = this.field_x.e(-1);
+        this.field_x = this.field_x.copy(-1);
     }
 
     final void encode(boolean param0, BitPacketBuffer param1) {
         try {
           super.encode(param0, param1);
-          this.field_x.a(-29928, param1);
+          this.field_x.encode(-29928, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "rl.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -119,7 +119,7 @@ final class PowerUpItemBehaviour extends ItemBehaviour {
           if (param0 > -114) {
             return false;
           }
-          param1.a(this.field_x, (byte) 3);
+          param1.addStatusEffect(this.field_x, (byte) 3);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

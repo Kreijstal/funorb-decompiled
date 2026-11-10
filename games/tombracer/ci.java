@@ -62,7 +62,7 @@ abstract class ci extends IntrusiveNode {
     final static Weapon a(int param0, int param1) {
         Weapon var2 = S2CActionPacket.createWeaponPreset(param1, param0);
         var2.field_r = param0;
-        var2.field_q = var2.field_p;
+        var2.ammo = var2.maxAmmo;
         return var2;
     }
 

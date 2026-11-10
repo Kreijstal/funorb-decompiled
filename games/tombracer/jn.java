@@ -119,7 +119,7 @@ final class jn extends we {
               no.field_m[td.field_r][var8] == -2) {
               var11 -= 60;
             }
-            ts.a(-1, -22, var7, var16[var8].toUpperCase(), var9 + var11, eda.field_f, 11288327);
+            RoomEffectTraps.a(-1, -22, var7, var16[var8].toUpperCase(), var9 + var11, eda.field_f, 11288327);
             var7 += 10;
           }
           if (var5.length > var8) {

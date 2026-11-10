@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class sra implements eb {
+final class GameAssetLoader implements LoadingStage {
     static boolean field_t;
     private boolean field_c;
     private ResourceArchive field_g;
@@ -27,31 +27,31 @@ final class sra implements eb {
     private ResourceArchive field_l;
     private ResourceArchive field_r;
 
-    public final void a(byte param0) {
+    public final void openArchives(byte param0) {
         if (null != ConstrainToFacingArcLocomotor.field_v) {
           pfa.a(ConstrainToFacingArcLocomotor.field_v, param0 + 157);
           ConstrainToFacingArcLocomotor.field_v = null;
           C2SActionPacket.a(-33);
         }
-        this.field_h = SoftReferenceCache.a(16, param0 ^ -37);
-        this.field_q = SoftReferenceCache.a(17, param0 ^ -37);
-        this.field_p = SoftReferenceCache.a(18, param0 + 39);
-        this.field_j = SoftReferenceCache.a(19, 1);
-        this.field_g = SoftReferenceCache.a(20, 1);
-        this.field_f = SoftReferenceCache.a(21, 1);
-        this.field_a = SoftReferenceCache.a(22, param0 + 39);
-        this.field_r = SoftReferenceCache.a(23, 1);
-        this.field_m = SoftReferenceCache.a(24, 1);
-        this.field_k = SoftReferenceCache.a(26, 1);
-        this.field_l = SoftReferenceCache.a(27, 1);
-        this.field_o = SoftReferenceCache.a(28, 1);
-        this.field_b = SoftReferenceCache.a(29, 1);
-        this.field_d = SoftReferenceCache.a(30, 1);
-        this.field_s = SoftReferenceCache.a(C2SActionPacket.field_i.field_c, 1);
+        this.field_h = SoftReferenceCache.openArchive(16, param0 ^ -37);
+        this.field_q = SoftReferenceCache.openArchive(17, param0 ^ -37);
+        this.field_p = SoftReferenceCache.openArchive(18, param0 + 39);
+        this.field_j = SoftReferenceCache.openArchive(19, 1);
+        this.field_g = SoftReferenceCache.openArchive(20, 1);
+        this.field_f = SoftReferenceCache.openArchive(21, 1);
+        this.field_a = SoftReferenceCache.openArchive(22, param0 + 39);
+        this.field_r = SoftReferenceCache.openArchive(23, 1);
+        this.field_m = SoftReferenceCache.openArchive(24, 1);
+        this.field_k = SoftReferenceCache.openArchive(26, 1);
+        this.field_l = SoftReferenceCache.openArchive(27, 1);
+        this.field_o = SoftReferenceCache.openArchive(28, 1);
+        this.field_b = SoftReferenceCache.openArchive(29, 1);
+        this.field_d = SoftReferenceCache.openArchive(30, 1);
+        this.field_s = SoftReferenceCache.openArchive(C2SActionPacket.field_i.field_c, 1);
         if (param0 != -38) {
           return;
         }
-        this.field_e = SoftReferenceCache.a(kn.field_j.field_c, param0 ^ -37);
+        this.field_e = SoftReferenceCache.openArchive(kn.field_j.field_c, param0 ^ -37);
         ResourceArchive var6 = PitComponent.field_G;
         ResourceArchive var7 = var6;
         ResourceArchive var3 = ota.field_b;
@@ -381,7 +381,7 @@ final class sra implements eb {
         }
     }
 
-    sra() {
+    GameAssetLoader() {
         this.field_c = false;
     }
 

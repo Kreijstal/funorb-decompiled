@@ -231,7 +231,7 @@ final class fja extends qra {
               var9 = -64 + SwitchLinkList.b(0);
               var10 = var5.getTick((byte) 69);
               var11 = 16777215;
-              ts.a(0, -34, -16 + var9, "Par Time: " + dea.a(var7.field_h, (byte) -8), var8Lifetime1, kn.field_p, 16777215);
+              RoomEffectTraps.a(0, -34, -16 + var9, "Par Time: " + dea.a(var7.field_h, (byte) -8), var8Lifetime1, kn.field_p, 16777215);
               var17 = "Room total: " + dea.a(var10, (byte) -8);
               var12 = var17;
               var12Lifetime1 = var17;
@@ -245,9 +245,9 @@ final class fja extends qra {
                   var11 = 16776960;
                 }
               }
-              ts.a(0, -73, var9, var12Lifetime2, var8Lifetime1, kn.field_p, var11);
+              RoomEffectTraps.a(0, -73, var9, var12Lifetime2, var8Lifetime1, kn.field_p, var11);
               var12Lifetime3 = "Member Only: " + kq.a(-112, var5.getId((byte) -82)).field_d;
-              ts.a(0, -80, 16 + var9, var12Lifetime3, var8Lifetime1, kn.field_p, 16777215);
+              RoomEffectTraps.a(0, -80, 16 + var9, var12Lifetime3, var8Lifetime1, kn.field_p, 16777215);
               var13 = var16.L(2158);
               if (var13 > 0) {
                 var11Lifetime1 = 16777215;
@@ -264,10 +264,10 @@ final class fja extends qra {
                   var12Lifetime4Lifetime2 = var18 + " !!! :(";
                   var11Lifetime1 = 16711680;
                 }
-                ts.a(0, -62, var9 + 32, var12Lifetime4Lifetime2, var8Lifetime1, kn.field_p, var11Lifetime1);
+                RoomEffectTraps.a(0, -62, var9 + 32, var12Lifetime4Lifetime2, var8Lifetime1, kn.field_p, var11Lifetime1);
               }
-              ts.a(0, -96, var9 + 46, "Room: " + var7.field_b + " (multi " + var7.field_a + ") (single  " + var6Lifetime1Lifetime2 + ")", var8Lifetime1, kn.field_p, 16777215);
-              ts.a(0, -33, var9 + 62, "Group: " + var7.field_g, var8Lifetime1, kn.field_p, 16777215);
+              RoomEffectTraps.a(0, -96, var9 + 46, "Room: " + var7.field_b + " (multi " + var7.field_a + ") (single  " + var6Lifetime1Lifetime2 + ")", var8Lifetime1, kn.field_p, 16777215);
+              RoomEffectTraps.a(0, -33, var9 + 62, "Group: " + var7.field_g, var8Lifetime1, kn.field_p, 16777215);
             }
           }
           return;

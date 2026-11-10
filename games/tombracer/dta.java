@@ -132,10 +132,10 @@ final class dta {
                 return;
               }
               if (var15 < 0) {
-                ts.a(0, -34, param6 - 26, ik.field_j, param0 + var8_int, eda.field_f, 16777215);
+                RoomEffectTraps.a(0, -34, param6 - 26, ik.field_j, param0 + var8_int, eda.field_f, 16777215);
               } else {
-                ts.a(0, -50, param6 - 13, Integer.toString(1 + var15), param0 + var8_int, SingleChildWidget.field_v, wga.field_a[param2]);
-                ts.a(0, -70, param6 - 12, param4.a(param2, false).toUpperCase(), 25 + (param0 + var8_int), eda.field_f, wga.field_a[param2]);
+                RoomEffectTraps.a(0, -50, param6 - 13, Integer.toString(1 + var15), param0 + var8_int, SingleChildWidget.field_v, wga.field_a[param2]);
+                RoomEffectTraps.a(0, -70, param6 - 12, param4.a(param2, false).toUpperCase(), 25 + (param0 + var8_int), eda.field_f, wga.field_a[param2]);
               }
             }
             if (param4.d((byte) 118)) {
@@ -146,8 +146,8 @@ final class dta {
               lm.field_m.a(var17, 0);
               var18 = 0;
               var19 = dea.a(var14, (byte) -8);
-              ts.a(0, -106, var18 + (param5 + 34), var19.substring(0, -3 + var19.length()), 12 + param0 + var17, SingleChildWidget.field_v, 11903361);
-              ts.a(0, -102, var18 + (param5 + 35), var19.substring(var19.length() - 2, var19.length()), 98 + (var17 + param0), eda.field_f, 11903361);
+              RoomEffectTraps.a(0, -106, var18 + (param5 + 34), var19.substring(0, -3 + var19.length()), 12 + param0 + var17, SingleChildWidget.field_v, 11903361);
+              RoomEffectTraps.a(0, -102, var18 + (param5 + 35), var19.substring(var19.length() - 2, var19.length()), 98 + (var17 + param0), eda.field_f, 11903361);
               var20 = 1 + var12.getCourseIndex(-104);
               var21 = var12.getSimulation(-1).f(122);
               if (var12.getSimulation(-1).d(28091)) {

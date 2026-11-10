@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ts {
-    private Room field_c;
+final class RoomEffectTraps {
+    private Room room;
     static int field_b;
     private Trap[] field_d;
     private boolean field_a;
     private Trap[] field_e;
-    private Trap[] field_f;
+    private Trap[] darknessTraps;
     static String field_g;
 
-    final void c(boolean param0) {
+    final void update(boolean param0) {
         boolean stackIn_17_1 = false;
         int stackIn_20_1 = 0;
         PlayerSimulation stackIn_20_2 = null;
@@ -22,54 +22,54 @@ final class ts {
         if (!param0) {
           return;
         }
-        var4 = this.a((byte) -115);
+        var4 = this.getSimulation((byte) -115);
         if (null == this.field_e &&
-          var4.f(4, 10915)) {
+          var4.isEffectActive(4, 10915)) {
           this.a(1, 3, (byte) -127, 2);
         } else {
           if (null != this.field_e &&
-            !var4.f(4, 10915)) {
+            !var4.isEffectActive(4, 10915)) {
             this.a(-83);
           }
         }
-        if (this.field_f == null &&
-          var4.f(5, 10915)) {
+        if (this.darknessTraps == null &&
+          var4.isEffectActive(5, 10915)) {
           stackIn_20_1 = -1;
           stackIn_20_2 = var4;
           stackIn_21_3 = !(param0);
           stackIn_24_1 = (stackIn_20_1 == ~((PlayerSimulation) (Object) stackIn_20_2).b(stackIn_21_3, 5));
-          this.a(stackIn_24_1, (byte) 25);
+          this.spawnDarknessTrap(stackIn_24_1, (byte) 25);
         } else {
-          if (this.field_f != null &&
-            !var4.f(5, 10915)) {
+          if (this.darknessTraps != null &&
+            !var4.isEffectActive(5, 10915)) {
             stackIn_17_1 = !(param0);
             this.b(stackIn_17_1);
           }
         }
         if (null == this.field_d &&
-          var4.f(6, 10915)) {
+          var4.isEffectActive(6, 10915)) {
           this.a((byte) 82, 5);
         } else {
           if (null != this.field_d &&
-            !var4.f(6, 10915)) {
+            !var4.isEffectActive(6, 10915)) {
             this.a(false);
           }
         }
         if (!this.field_a &&
-          var4.f(7, 10915)) {
+          var4.isEffectActive(7, 10915)) {
           this.c((byte) 96);
         } else {
           if (this.field_a &&
-            !var4.f(7, 10915)) {
+            !var4.isEffectActive(7, 10915)) {
             this.c((byte) 54);
           }
         }
     }
 
-    final void b(byte param0) {
+    final void forgetTraps(byte param0) {
         int var2 = 49 / ((46 - param0) / 38);
         this.field_e = null;
-        this.field_f = null;
+        this.darknessTraps = null;
         this.field_a = false;
         this.field_d = null;
     }
@@ -92,7 +92,7 @@ final class ts {
         for (var3 = 0; var3 < var6.length; var3++) {
           var4 = var6[var3];
           if (var4 != null) {
-            this.field_c.removeTrap(var4, 2);
+            this.room.removeTrap(var4, 2);
           }
         }
         this.field_d = null;
@@ -121,28 +121,28 @@ final class ts {
         }
     }
 
-    private final PlayerSimulation a(byte param0) {
+    private final PlayerSimulation getSimulation(byte param0) {
         if (param0 != -115) {
           return (PlayerSimulation) null;
         }
-        return this.field_c.getSimulation(-1553494544);
+        return this.room.getSimulation(-1553494544);
     }
 
-    private final void a(boolean param0, byte param1) {
-        if (this.field_f != null) {
+    private final void spawnDarknessTrap(boolean param0, byte param1) {
+        if (this.darknessTraps != null) {
           this.b(false);
         }
-        int var3 = this.field_c.getWidth((byte) -86) >> 16;
-        int var4 = this.field_c.getHeight(param1 ^ -107) >> 16;
-        this.field_f = new Trap[1];
-        this.field_f[0] = new Trap(this.field_c, var3 / 2, var4 / 2, var3 + 32, var4 + 32, 0, true);
-        DarknessBehaviour var5 = new DarknessBehaviour(this.field_c, true);
+        int var3 = this.room.getWidth((byte) -86) >> 16;
+        int var4 = this.room.getHeight(param1 ^ -107) >> 16;
+        this.darknessTraps = new Trap[1];
+        this.darknessTraps[0] = new Trap(this.room, var3 / 2, var4 / 2, var3 + 32, var4 + 32, 0, true);
+        DarknessBehaviour var5 = new DarknessBehaviour(this.room, true);
         if (param1 != 25) {
-          this.c(false);
+          this.update(false);
         }
-        this.field_f[0].addBehaviour((byte) 83, (Behaviour) (var5));
-        this.field_f[0].c(437453352, false);
-        this.field_c.addTrap(this.field_f[0], (byte) 32);
+        this.darknessTraps[0].addBehaviour((byte) 83, (Behaviour) (var5));
+        this.darknessTraps[0].c(437453352, false);
+        this.room.addTrap(this.darknessTraps[0], (byte) 32);
         if (param0) {
           var5.e(false);
         }
@@ -186,8 +186,8 @@ final class ts {
         if (null != this.field_e) {
           this.a(-93);
         }
-        var5 = this.field_c.getWidth((byte) -86);
-        var6 = this.field_c.getHeight(param2 ^ -29);
+        var5 = this.room.getWidth((byte) -86);
+        var6 = this.room.getHeight(param2 ^ -29);
         if (param2 != -127) {
           this.field_d = (Trap[]) null;
         }
@@ -202,7 +202,7 @@ final class ts {
           var12 = 0;
           while (var12 == 0) {
             for (var13 = 0; var13 < this.field_e.length; var13++) {
-              stackIn_34_0 = this.field_c;
+              stackIn_34_0 = this.room;
               stackIn_34_1 = null;
               stackIn_34_2 = 2097152;
               stackIn_34_3 = 2;
@@ -248,7 +248,7 @@ final class ts {
           var12 = 0;
           while (var12 == 0) {
             for (var13 = 0; var13 < this.field_e.length; var13++) {
-              stackIn_14_0 = this.field_c;
+              stackIn_14_0 = this.room;
               stackIn_14_1 = null;
               stackIn_14_2 = 2097152;
               stackIn_14_3 = param2 + 129;
@@ -295,12 +295,12 @@ final class ts {
             var13Lifetime1 = var8;
             var12Lifetime1 = var11Lifetime1 * 32 + var7;
           }
-          this.field_e[var11Lifetime1] = new Trap(this.field_c, var12Lifetime1, var13Lifetime1, var9, var10, 0, true);
-          var14 = new WindZoneBehaviour(this.field_c, true);
+          this.field_e[var11Lifetime1] = new Trap(this.room, var12Lifetime1, var13Lifetime1, var9, var10, 0, true);
+          var14 = new WindZoneBehaviour(this.room, true);
           var14.b(param2 ^ 5, param3);
           var14.a(param0, param1, 19072);
           this.field_e[var11Lifetime1].addBehaviour((byte) 83, (Behaviour) (var14));
-          this.field_c.addTrap(this.field_e[var11Lifetime1], (byte) 32);
+          this.room.addTrap(this.field_e[var11Lifetime1], (byte) 32);
         }
     }
 
@@ -309,13 +309,13 @@ final class ts {
           this.a(-57, -122, (byte) 28, -22);
         }
         this.field_a = !this.field_a ? true : false;
-        this.field_c.b(7, true);
+        this.room.b(7, true);
     }
 
     public static void releaseStatics(int param0) {
         field_g = null;
         if (param0 != 32) {
-          ts.releaseStatics(67);
+          RoomEffectTraps.releaseStatics(67);
         }
     }
 
@@ -327,13 +327,13 @@ final class ts {
           return;
         }
         if (param0 > -72) {
-          this.c(true);
+          this.update(true);
         }
         Trap[] var6 = this.field_e;
         Trap[] var2 = var6;
         for (var3 = 0; var3 < var6.length; var3++) {
           var4 = var6[var3];
-          this.field_c.removeTrap(var4, 2);
+          this.room.removeTrap(var4, 2);
         }
         this.field_e = null;
     }
@@ -358,10 +358,10 @@ final class ts {
         if (null != this.field_d) {
           this.a(false);
         }
-        var3 = this.field_c.getWidth((byte) -86);
-        var4 = this.field_c.getHeight(125);
+        var3 = this.room.getWidth((byte) -86);
+        var4 = this.room.getHeight(125);
         this.field_d = new Trap[param1];
-        var5 = vha.field_c.createSkeletonComponent(this.field_c, (byte) 118);
+        var5 = vha.field_c.createSkeletonComponent(this.room, (byte) 118);
         var6 = var5.getWidth(-41);
         var7 = var5.getHeight((byte) 55);
         var8 = 0;
@@ -374,20 +374,20 @@ final class ts {
           while (var11 != 0) {
             if (var9 > var8) {
               var8++;
-              var12 = var6 / 2 + this.field_c.getRandom(param0 - 41).nextBounded(var3 - var6, 0);
-              var13 = this.field_c.getRandom(param0 - 195).nextBounded(var4 - var7, 0) + var7 / 2;
-              var14 = -var12 + this.field_c.getPlayer(-53).getX(3) >> 16;
-              var15 = -var13 + this.field_c.getPlayer(-79).getY(param0 ^ 9698) >> 16;
+              var12 = var6 / 2 + this.room.getRandom(param0 - 41).nextBounded(var3 - var6, 0);
+              var13 = this.room.getRandom(param0 - 195).nextBounded(var4 - var7, 0) + var7 / 2;
+              var14 = -var12 + this.room.getPlayer(-53).getX(3) >> 16;
+              var15 = -var13 + this.room.getPlayer(-79).getY(param0 ^ 9698) >> 16;
               if (4096 > var15 * var15 + var14 * var14) {
                 continue;
               }
-              stackIn_17_0 = (!this.field_c.a((Collidable) null, var7, 2, 1, var13, var12, false, (WorldBody) null, var6)) ? 0 : 1;
+              stackIn_17_0 = (!this.room.a((Collidable) null, var7, 2, 1, var13, var12, false, (WorldBody) null, var6)) ? 0 : 1;
               var11 = stackIn_17_0;
               if (var11 != 0) {
                 continue;
               }
               var5.a(1434528720, var13, var12);
-              var5.instantiate(true, true, this.field_c, 0, 0, -1, (Trap) null);
+              var5.instantiate(true, true, this.room, 0, 0, -1, (Trap) null);
               this.field_d[var10] = (Trap) (var5.u(kha.b((int) param0, -24)));
               continue;
             }
@@ -402,19 +402,19 @@ final class ts {
         int var3 = 0;
         Trap var4 = null;
         int var5 = TombRacer.field_G ? 1 : 0;
-        if (null == this.field_f) {
+        if (null == this.darknessTraps) {
           return;
         }
-        Trap[] var6 = this.field_f;
+        Trap[] var6 = this.darknessTraps;
         Trap[] var2 = var6;
         if (param0) {
-          discarded$0 = this.a((byte) 106);
+          discarded$0 = this.getSimulation((byte) 106);
         }
         for (var3 = 0; var3 < var6.length; var3++) {
           var4 = var6[var3];
-          this.field_c.removeTrap(var4, 2);
+          this.room.removeTrap(var4, 2);
         }
-        this.field_f = null;
+        this.darknessTraps = null;
     }
 
     final static void a(byte param0, byte[] param1, int param2, int param3, int param4, int param5, int param6) {
@@ -456,7 +456,7 @@ final class ts {
           var8 = 0;
           if (param0 <= 51) {
             var24 = (String) null;
-            ts.a((byte) -93, (String) null, false);
+            RoomEffectTraps.a((byte) -93, (String) null, false);
           }
           stackIn_12_0 = (param4 > param3) ? param3 : param4;
           var9 = stackIn_12_0;
@@ -515,9 +515,9 @@ final class ts {
         }
     }
 
-    ts(Room param0) {
+    RoomEffectTraps(Room param0) {
         try {
-          this.field_c = param0;
+          this.room = param0;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ts.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

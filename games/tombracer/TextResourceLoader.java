@@ -2057,7 +2057,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -39, "returntogame");
                 if (var2 != null) {
-                  sra.field_i = jaa.a((byte) 57, var2);
+                  GameAssetLoader.field_i = jaa.a((byte) 57, var2);
                 }
                 var2 = dn.a((byte) 118, "endgameresign");
                 if (null != var2) {

@@ -42,7 +42,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
         }
     }
 
-    final void a(eb param0, int param1) {
+    final void a(LoadingStage param0, int param1) {
         try {
           dma.field_l = param0;
           this.b((byte) 106, true);
@@ -134,7 +134,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
                 } else {
                   var3 = kc.a(true);
                   if (var3 == 1) {
-                    ts.a((byte) -63, ura.field_a, true);
+                    RoomEffectTraps.a((byte) -63, ura.field_a, true);
                   }
                   this.updateScreen(true, false);
                 }
@@ -179,7 +179,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
                   this.updateScreen(true, false);
                 } else {
                   if (var3 == 4) {
-                    ts.a((byte) -63, ck.field_b, false);
+                    RoomEffectTraps.a((byte) -63, ck.field_b, false);
                     kpa.field_c = true;
                     this.updateScreen(true, false);
                   } else {
@@ -277,7 +277,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
         stackIn_6_2 = (dq.field_f != null);
         this.c((byte) stackIn_5_1, stackIn_6_2);
         if (PlatformBehaviour.field_w) {
-          dma.field_l.a((byte) -38);
+          dma.field_l.openArchives((byte) -38);
           PlatformBehaviour.field_w = false;
         }
         if (wna.c(-128)) {

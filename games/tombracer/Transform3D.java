@@ -92,14 +92,14 @@ abstract class Transform3D {
 
     final static Weapon a(boolean param0) {
         Weapon var1 = new Weapon();
-        var1.field_f = new Effect(0, 5);
+        var1.effect = new Effect(0, 5);
         if (!param0) {
           return (Weapon) null;
         }
-        var1.field_f.b(1, 9);
+        var1.effect.b(1, 9);
         var1.field_d = 0;
         var1.field_h = 25;
-        var1.field_p = -1;
+        var1.maxAmmo = -1;
         var1.field_k = 150;
         var1.field_o = 25;
         var1.field_n = 655360;

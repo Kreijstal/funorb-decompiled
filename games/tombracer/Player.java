@@ -17,7 +17,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
     private Room room;
     private int velocityY;
     private int field_Q;
-    private IntrusiveDeque field_fb;
+    private IntrusiveDeque statusEffects;
     static IntrusiveDeque field_I;
     private int x;
     private int field_A;
@@ -202,7 +202,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         boolean stackIn_49_0 = false;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
-        wf var3 = null;
+        StatusEffect var3 = null;
         Particle var3_ref = null;
         RuntimeException var3_ref2 = null;
         int var4 = 0;
@@ -249,18 +249,18 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
                 continue;
               }
             } else {
-              var3 = (wf) (this.field_fb.first(-80));
+              var3 = (StatusEffect) (this.statusEffects.first(-80));
               while (true) {
                 if (null != var3) {
-                  var3.c(-9);
-                  stackIn_49_0 = var3.b((byte) 81);
+                  var3.tick(-9);
+                  stackIn_49_0 = var3.isExpired((byte) 81);
                   if (var4 == 0) {
                     if (!stackIn_49_0) {
-                      this.statusFlags[var3.a((byte) 91)] = true;
+                      this.statusFlags[var3.getKind((byte) 91)] = true;
                     } else {
                       var3.unlink(param0 ^ 93);
                     }
-                    var3 = (wf) (this.field_fb.next(117));
+                    var3 = (StatusEffect) (this.statusEffects.next(117));
                     continue;
                   }
                 } else {
@@ -1026,7 +1026,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
           this.elevation = 0;
           this.carried = null;
           if (param1) {
-            this.field_fb.clear(8);
+            this.statusEffects.clear(8);
             this.clearWeapon((byte) 89, 10);
             this.m(15876);
             this.field_o = false;
@@ -1362,7 +1362,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
           this.x = this.room.a(this.x, (byte) 71);
           this.facingX = -this.facingX;
           if (param0 != -57) {
-            this.a((wf) null, (byte) -39);
+            this.addStatusEffect((StatusEffect) null, (byte) -39);
           }
           this.velocityX = -this.velocityX;
           stackIn_7_1 = !(this.field_o);
@@ -1763,7 +1763,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    final void a(wf param0, byte param1) {
+    final void addStatusEffect(StatusEffect param0, byte param1) {
         int var4 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -1773,9 +1773,9 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           if (!param0.a((byte) -60, this)) {
-            this.field_fb.addLast((byte) -123, param0);
-            while (!(3 >= this.field_fb.size((byte) -16))) {
-              this.field_fb.removeFirst(param1 ^ -106);
+            this.statusEffects.addLast((byte) -123, param0);
+            while (!(3 >= this.statusEffects.size((byte) -16))) {
+              this.statusEffects.removeFirst(param1 ^ -106);
               if (var4 != 0) {
                 return;
               }
@@ -2033,7 +2033,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
             return;
           }
           this.a(var9 != 0, true);
-          if (this.getSimulation(-1).f(1, 10915)) {
+          if (this.getSimulation(-1).isEffectActive(1, 10915)) {
             var12 = var3_int;
             var3_int = var4;
             var4 = var12;
@@ -2057,7 +2057,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
           }
           var14 = this.getSimulation(-1).g(113) ? 1 : 0;
           var15 = this.field_N;
-          if (this.getSimulation(-1).f(0, 10915)) {
+          if (this.getSimulation(-1).isEffectActive(0, 10915)) {
             var15 = var15 / 2;
           }
           var16 = 0;
@@ -2199,7 +2199,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
             }
             if (var14 == 0 &&
               0 == var16 &&
-              this.getSimulation(-1).f(8, 10915)) {
+              this.getSimulation(-1).isEffectActive(8, 10915)) {
               this.field_gb = true;
               var22 = 1;
               this.velocityX = this.velocityX + (131072 - this.room.getRandom(-81).nextBounded(262144, 0));
@@ -2521,7 +2521,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            this.field_fb = (IntrusiveDeque) null;
+            this.statusEffects = (IntrusiveDeque) null;
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2540,7 +2540,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
             this.facingY == 0) {
             return;
           }
-          if (this.getSimulation(param0 - 3).f(2, 10915)) {
+          if (this.getSimulation(param0 - 3).isEffectActive(2, 10915)) {
             return;
           }
           if (this.weapon == null) {
@@ -2552,7 +2552,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
             return;
           }
           this.a(-5636, 11, true);
-          if (this.weapon.b((byte) -16).type == 3 &&
+          if (this.weapon.getEffect((byte) -16).type == 3 &&
             this.field_A > 0) {
             this.field_A = 0;
           }
@@ -3085,7 +3085,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
             this.getCollisionId(true);
           }
           if (this.weapon != null) {
-            this.weapon.a(param0, (byte) 25);
+            this.weapon.setCooldown(param0, (byte) 25);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3993,7 +3993,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
 
     Player(int param0) {
         this.size = 1572864;
-        this.field_fb = new IntrusiveDeque();
+        this.statusEffects = new IntrusiveDeque();
         this.statusFlags = new boolean[6];
         this.field_v = new IntrusiveDeque();
         this.field_N = 65536;

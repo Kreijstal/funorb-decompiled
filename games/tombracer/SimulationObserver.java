@@ -10,7 +10,7 @@ abstract class SimulationObserver {
           this.queuedEvents.addLast((byte) -96, new QueuedPlayerEvent(param1, param0));
           if (!param2) {
             Room var5 = (Room) null;
-            this.a(-124, (Room) null);
+            this.onRoomReset(-124, (Room) null);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "eha.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -98,7 +98,7 @@ abstract class SimulationObserver {
         }
     }
 
-    abstract void a(int param0, Room param1);
+    abstract void onRoomReset(int param0, Room param1);
 
     abstract void a(int param0, Player param1, Room param2);
 

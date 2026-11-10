@@ -132,7 +132,7 @@ abstract class TextLayout {
     }
 
     final static void a(byte param0, ResourceArchive param1, int param2, String param3) {
-        sra var4 = null;
+        GameAssetLoader var4 = null;
         String var5 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -142,7 +142,7 @@ abstract class TextLayout {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
         try {
-          var4 = (sra) (dma.field_l);
+          var4 = (GameAssetLoader) (dma.field_l);
           var4.a(param2, (byte) 47, param3);
           haa.field_A = new SpriteData();
           haa.field_A.field_f = param1.a("", (byte) 127, "map.png");

@@ -287,7 +287,7 @@ public final class TombRacer extends rfa implements ls {
         eu.releaseStatics(114);
         vn.releaseStatics((byte) 0);
         no.b(true);
-        sra.releaseStatics((byte) -35);
+        GameAssetLoader.releaseStatics((byte) -35);
         kk.a((byte) 120);
         kra.releaseStatics(param0 ^ 1916);
         ega.releaseStatics(2);
@@ -449,7 +449,7 @@ public final class TombRacer extends rfa implements ls {
         bba.releaseStatics((byte) -28);
         tqa.releaseStatics((byte) 75);
         ui.a(4);
-        ts.releaseStatics(32);
+        RoomEffectTraps.releaseStatics(32);
         fq.releaseStatics(0);
         dj.releaseStatics(-1);
         Trap.K(8424);
@@ -519,7 +519,7 @@ public final class TombRacer extends rfa implements ls {
         MiscItemBehaviour.releaseStatics(param0 ^ -3666);
         cba.releaseStatics((byte) 109);
         on.releaseStatics(32);
-        wf.releaseStatics(2907);
+        StatusEffect.releaseStatics(2907);
         qka.releaseStatics((byte) 62);
         gp.releaseStatics(-117);
         wq.releaseStatics(true);
@@ -1104,7 +1104,7 @@ public final class TombRacer extends rfa implements ls {
 
     final void initializeGame(int param0) {
         this.a(82, 81);
-        this.a(new sra(), 119);
+        this.a(new GameAssetLoader(), 119);
         if (param0 > -15) {
           this.z(125);
         }

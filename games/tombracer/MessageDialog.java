@@ -80,13 +80,13 @@ class MessageDialog extends ContentTransitionDialog implements tsa {
         this.field_cb.setColors(param0, 4210752, 2121792);
         if (param0) {
           var2 = new sr(this, this.field_ab, fua.field_e);
-          var2.a(sra.field_i, 15, -127);
+          var2.a(GameAssetLoader.field_i, 15, -127);
           this.a(101, var2);
           return;
         }
         this.field_Y = false;
         var2Lifetime1 = new sr(this, this.field_ab, fua.field_e);
-        var2Lifetime1.a(sra.field_i, 15, -127);
+        var2Lifetime1.a(GameAssetLoader.field_i, 15, -127);
         this.a(101, var2Lifetime1);
     }
 

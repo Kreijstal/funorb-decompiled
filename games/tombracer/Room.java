@@ -24,11 +24,11 @@ final class Room implements SwitchableScope, Renderable, noa {
     int field_a;
     private IntrusiveDeque recentDeaths;
     private ObjectPool projectilePool;
-    private ObjectPool field_f;
+    private ObjectPool puddlePool;
     private ObjectPool particlePool;
     CollisionGrid collisionGrid;
     private IsaacCipher field_H;
-    private te field_D;
+    private CorpseList corpses;
     private tqa field_B;
     private int field_r;
     private BitPacketBuffer data;
@@ -42,7 +42,7 @@ final class Room implements SwitchableScope, Renderable, noa {
     private fq field_P;
     private int[] effectSlots;
     private int entranceY;
-    private ts field_g;
+    private RoomEffectTraps effectTraps;
     private int deathCount;
     private int field_J;
     private dj field_F;
@@ -51,7 +51,7 @@ final class Room implements SwitchableScope, Renderable, noa {
 
     private final Puddle allocatePuddle(int param0, int param1, int param2, int param3) {
         int var5 = 112 / ((param0 + 6) / 43);
-        return (Puddle) (this.field_f.spawn(-2698, param1, param2, this.field_S, param3));
+        return (Puddle) (this.puddlePool.spawn(-2698, param1, param2, this.field_S, param3));
     }
 
     final int a(int param0, int param1, WorldBody param2, int param3, int param4, byte param5) {
@@ -198,7 +198,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         if (1 == var7) {
           return false;
         }
-        var8 = new IntrusiveDequeCursor(this.field_f.active);
+        var8 = new IntrusiveDequeCursor(this.puddlePool.active);
         if (param0 != 30097) {
           this.b(-85, -33);
         }
@@ -259,7 +259,7 @@ final class Room implements SwitchableScope, Renderable, noa {
     final void a(int param0, sqa param1) {
         try {
           if (param0 != 4855) {
-            this.field_g = (ts) null;
+            this.effectTraps = (RoomEffectTraps) null;
           }
           this.field_G = param1;
         } catch (RuntimeException runtimeException) {
@@ -408,9 +408,9 @@ final class Room implements SwitchableScope, Renderable, noa {
           if (this.simulation.getCurrentRoom((byte) -3) == this) {
             this.getPlayer(-9).q((byte) -57);
           }
-          this.field_D.a(this, -110);
+          this.corpses.attachToRoom(this, -110);
           this.projectilePool.a(121);
-          this.field_f.a(119);
+          this.puddlePool.a(119);
           this.particlePool.a(97);
         }
     }
@@ -439,7 +439,7 @@ final class Room implements SwitchableScope, Renderable, noa {
 
     final void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         if (param4 > -110) {
-          this.field_g = (ts) null;
+          this.effectTraps = (RoomEffectTraps) null;
         }
         this.field_B.a(param3, param6, true, param0, param1, param2, param5);
     }
@@ -480,25 +480,25 @@ final class Room implements SwitchableScope, Renderable, noa {
           this.collisionGrid = new CollisionGrid(false, 16);
           this.particlePool = new ObjectPool(this, new Particle(), 100);
           this.projectilePool = new ObjectPool(this, new Projectile(), 25);
-          this.field_f = new ObjectPool(this, new Puddle(), 50);
+          this.puddlePool = new ObjectPool(this, new Puddle(), 50);
           this.field_B = new tqa(this, 2097152);
           this.particlePool.releaseAll((byte) 114);
           this.projectilePool.releaseAll((byte) 122);
-          this.field_f.releaseAll((byte) 116);
+          this.puddlePool.releaseAll((byte) 116);
           this.field_F = new dj(this);
           if (this.field_U != null) {
           }
           this.field_r = 0;
         }
-        this.field_D.a(-10430);
+        this.corpses.clear(-10430);
         var4 = this.getSimulation(-1553494544);
         if (var4 != null) {
-          var4.a(this, -9774);
+          var4.onRoomReset(this, -9774);
         }
         if (this.field_S != null) {
           this.field_S.a(10);
         }
-        this.field_g.b((byte) 100);
+        this.effectTraps.forgetTraps((byte) 100);
     }
 
     final boolean a(boolean param0, int param1, WorldBody param2, int param3) {
@@ -766,10 +766,10 @@ final class Room implements SwitchableScope, Renderable, noa {
           var2.a(var3, (byte) -3, (this.height >> 16) - var3, var3, -var3 + (this.width >> 16));
         }
         this.getPlayer(-12).a(25, this.field_S);
-        this.field_D.a(this.field_S, -28255);
+        this.corpses.a(this.field_S, -28255);
         this.projectilePool.a(this.field_S, (byte) -89, true, 7);
         this.particlePool.a(this.field_S, (byte) 126, true, 7);
-        this.field_f.a(this.field_S, (byte) -33, false, 6);
+        this.puddlePool.a(this.field_S, (byte) -33, false, 6);
         var5 = (Trap) (this.traps.first(-80));
         while (var5 != null) {
           var5.a(122, this.field_S);
@@ -996,7 +996,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         if (param0 <= 43) {
           this.a(-72, -34, 70, 80, true, 64, (byte) -83);
         }
-        this.field_f = null;
+        this.puddlePool = null;
         this.particlePool = null;
         this.field_F = null;
         this.projectilePool = null;
@@ -1313,7 +1313,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           return;
         }
         try {
-          this.field_D.a(23436, param0.recentDeaths);
+          this.corpses.copyFrom(23436, param0.recentDeaths);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "la.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -1530,19 +1530,19 @@ final class Room implements SwitchableScope, Renderable, noa {
           }
           var5_ref_fsa = (Trap) (var9.next(-1));
         }
-        this.field_g.c(true);
+        this.effectTraps.update(true);
         var5 = this.getSimulation(-1553494544).g(param1 + 112) ? 1 : 0;
         if (param1 != 0) {
           var7 = (Trap) null;
           this.removeTrap((Trap) null, -31);
         }
         this.projectilePool.update(var5 != 0, (byte) -126);
-        this.field_f.update(var5 != 0, (byte) -31);
+        this.puddlePool.update(var5 != 0, (byte) -31);
         this.particlePool.update(var5 != 0, (byte) -103);
         this.field_a = this.projectilePool.hashState(this.field_a, -119);
         if (this.field_S != null) {
           this.field_S.d(0);
-          if (this.simulation.f(8, param1 + 10915)) {
+          if (this.simulation.isEffectActive(8, param1 + 10915)) {
             this.field_S.c(0).a(uca.field_c.nextBounded(9, 0) - 4, 0, -4 + uca.field_c.nextBounded(9, 0), 26768);
           }
         }
@@ -1582,7 +1582,7 @@ final class Room implements SwitchableScope, Renderable, noa {
     final void setEffectSlot(boolean param0, int param1, int param2) {
         this.effectSlots[param2] = param1;
         if (param0) {
-          this.field_g = (ts) null;
+          this.effectTraps = (RoomEffectTraps) null;
         }
     }
 
@@ -2031,7 +2031,7 @@ final class Room implements SwitchableScope, Renderable, noa {
         this.traps = new IntrusiveDeque();
         this.components = new IntrusiveDeque();
         this.recentDeaths = new IntrusiveDeque();
-        this.field_D = new te();
+        this.corpses = new CorpseList();
         this.field_y = new ui();
         this.field_q = new ui();
         this.effectSlots = new int[9];
@@ -2050,7 +2050,7 @@ final class Room implements SwitchableScope, Renderable, noa {
           this.randomSeed = param3;
           stackIn_7_1 = (param4);
           this.field_T = stackIn_7_1;
-          this.field_g = new ts(this);
+          this.effectTraps = new RoomEffectTraps(this);
           this.reset(false, (byte) 113);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

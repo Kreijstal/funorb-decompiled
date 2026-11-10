@@ -47,7 +47,7 @@ final class rg extends SingleChildWidget {
         wba.field_q[8] = vea.field_a;
         wba.field_q[7] = s.field_a;
         wba.field_q[17] = fga.field_a;
-        wba.field_q[15] = sra.field_i;
+        wba.field_q[15] = GameAssetLoader.field_i;
         wba.field_q[13] = WidgetContainer.field_v;
         wba.field_q[18] = pl.field_b;
         wba.field_q[0] = fga.field_a;

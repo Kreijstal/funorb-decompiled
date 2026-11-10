@@ -189,7 +189,7 @@ final class ck {
           }
           lk.field_l.b(-124, tn.field_n);
           bc.field_b = new jea(0L, ssa.field_g, OpenGlSprite.field_k.toUpperCase());
-          wf.field_g = new jea(0L, uda.field_s);
+          StatusEffect.field_g = new jea(0L, uda.field_s);
           C2SSubmitSettingsPacket.field_g = new jea(0L, CommonChooseReward.field_c);
           qna.field_b = new jea(0L, KeyLockBehaviour.field_r, DoorwayComponent.field_G.toUpperCase());
           SimpleConditionBehaviour.field_p = new jea[param0 + 4];
@@ -325,7 +325,7 @@ final class ck {
           var17 = stackIn_98_0Lifetime1;
           ((jea) (var17)).field_z = 1;
           dka.field_b = new jea(0L, (jea) null);
-          dka.field_b.b(param11 ^ -25373, wf.field_g);
+          dka.field_b.b(param11 ^ -25373, StatusEffect.field_g);
           dka.field_b.b(-128, C2SSubmitSettingsPacket.field_g);
           C2SSubmitSettingsPacket.field_g.b(-122, qna.field_b);
           var18Lifetime1 = 0;

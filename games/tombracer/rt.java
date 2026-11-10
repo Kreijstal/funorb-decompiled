@@ -341,7 +341,7 @@ class rt extends kl {
             decompiledSharedTail0 = (var15 != 0);
           }
           if (decompiledSharedTail0) {
-            ts.a((byte) 53, param6, param1, param3, param4, param7, param2);
+            RoomEffectTraps.a((byte) 53, param6, param1, param3, param4, param7, param2);
             this.a(true, 4);
           }
           jaggl.OpenGL.glPixelStorei(3317, 4);

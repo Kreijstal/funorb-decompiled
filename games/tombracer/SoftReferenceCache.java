@@ -202,7 +202,7 @@ final class SoftReferenceCache {
         }
     }
 
-    final static ResourceArchive a(int param0, int param1) {
+    final static ResourceArchive openArchive(int param0, int param1) {
         if (param1 == 1) {
           return nt.a(param0, 1, 5200, false, false, true);
         }

@@ -9,7 +9,7 @@ final class nfa extends ci {
     static boolean field_p;
 
     final static void a(ResourceArchive param0, String param1, boolean param2, int param3, ResourceArchive param4, ResourceArchive param5) {
-        sra var11 = null;
+        GameAssetLoader var11 = null;
         String var12 = null;
         int incrementValue$0 = 0;
         int var8 = 0;
@@ -25,7 +25,7 @@ final class nfa extends ci {
         String var15 = null;
         int var10 = TombRacer.field_G ? 1 : 0;
         try {
-          var11 = (sra) (dma.field_l);
+          var11 = (GameAssetLoader) (dma.field_l);
           var11.a(param3, (byte) 47, param1);
           woa.a(-122, param4, param0, 0);
           bb.field_f = new ena(0);

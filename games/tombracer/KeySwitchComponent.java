@@ -139,7 +139,7 @@ final class KeySwitchComponent extends SwitchComponent {
     }
 
     final static void a(byte param0, String param1, ResourceArchive param2, ResourceArchive param3, int param4) {
-        sra var7 = null;
+        GameAssetLoader var7 = null;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -150,7 +150,7 @@ final class KeySwitchComponent extends SwitchComponent {
         int incrementValue$7 = 0;
         int incrementValue$8 = 0;
         try {
-          var7 = (sra) (dma.field_l);
+          var7 = (GameAssetLoader) (dma.field_l);
           var7.a(param4, (byte) 47, param1);
           o.field_d = jta.a((byte) 120, "b12_old", param3, "", param2);
           incrementValue$0 = param4;

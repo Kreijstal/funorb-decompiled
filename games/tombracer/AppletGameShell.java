@@ -155,7 +155,7 @@ abstract class AppletGameShell extends GameApplet {
             hha.a(di.a(104), (byte) -117);
           }
           if (var4 == 6 &&
-            sra.field_t) {
+            GameAssetLoader.field_t) {
             Transform3D.field_c = 10;
           }
           if (var4 == 7) {
@@ -666,7 +666,7 @@ abstract class AppletGameShell extends GameApplet {
         }
         if (cga.field_f == 1) {
           if (0 != ApproachPlayerLocomotor.field_t) {
-            InvisibleTouchSwitchComponent.field_J = SoftReferenceCache.a(nga.field_p, 1);
+            InvisibleTouchSwitchComponent.field_J = SoftReferenceCache.openArchive(nga.field_p, 1);
           }
           tk.field_b = FacePointLocomotor.a(true, fq.field_g, false, 1, (byte) -95);
           OpenGlTexture2D.field_n = FacePointLocomotor.a(true, bi.field_c, false, 1, (byte) -109);
@@ -698,7 +698,7 @@ abstract class AppletGameShell extends GameApplet {
           ee.a(-1);
           SimulationObserver.a((byte) -27);
           ura.field_b = nl.field_c;
-          sra.field_t = false;
+          GameAssetLoader.field_t = false;
           cra.a(tk.field_b, OpenGlTexture2D.field_n, 1, ft.field_a, vc.field_p);
           if (ofa.field_I ||
             null != bma.field_s) {
@@ -723,7 +723,7 @@ abstract class AppletGameShell extends GameApplet {
         }
         if (10 == cga.field_f) {
           if (ApproachPlayerLocomotor.field_t != 0) {
-            ConstrainToFacingArcLocomotor.field_v = SoftReferenceCache.a(tj.field_c, 1);
+            ConstrainToFacingArcLocomotor.field_v = SoftReferenceCache.openArchive(tj.field_c, 1);
           }
           cga.field_f = 11;
         }

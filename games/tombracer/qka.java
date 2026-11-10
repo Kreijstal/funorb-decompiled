@@ -268,9 +268,9 @@ final class qka extends qra {
             oka.a(cc.field_l.toUpperCase() + " " + var23.toUpperCase(), 2431750, kn.field_p, -1, 48 + var4, var3 - 120, -1);
             za.field_g.a(-200 + var3, var4 + 60);
             var13 = as.a(var9, 0);
-            ts.a(-1, -36, var4 + 79, dea.a(var13, (byte) -8), -200 + (var3 + za.field_g.d()) + 5, kn.field_p, 2431750);
+            RoomEffectTraps.a(-1, -36, var4 + 79, dea.a(var13, (byte) -8), -200 + (var3 + za.field_g.d()) + 5, kn.field_p, 2431750);
             bca.field_d.a(var3 - 110, 60 + var4);
-            ts.a(-1, -92, 79 + var4, dea.a(var13 + var13 / 2, (byte) -8), bca.field_d.d() + (var3 - 110) + 5, kn.field_p, 2431750);
+            RoomEffectTraps.a(-1, -92, 79 + var4, dea.a(var13 + var13 / 2, (byte) -8), bca.field_d.d() + (var3 - 110) + 5, kn.field_p, 2431750);
             oka.a(ContentTransitionDialog.field_L.toUpperCase(), 2431750, eda.field_f, -1, 5 + var4, 120 + var3, -1);
             var14 = this.field_h.field_k.simulations[this.field_h.field_x].player.v(110);
             oka.a(Integer.toString(var14), 2431750, eda.field_f, -1, var4 + 22, var3 + 120, -1);

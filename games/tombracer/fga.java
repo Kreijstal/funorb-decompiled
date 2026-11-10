@@ -287,7 +287,7 @@ final class fga implements ShellListener {
               }
               break;
             }
-            ts.a(stackIn_61_0, param0 - 16, 460, "max corridor: " + var5Lifetime1 + " / " + RandomAccessFileHandle.a(param0 + 86), 10, kn.field_p, 16777215);
+            RoomEffectTraps.a(stackIn_61_0, param0 - 16, 460, "max corridor: " + var5Lifetime1 + " / " + RandomAccessFileHandle.a(param0 + 86), 10, kn.field_p, 16777215);
             try {
               var3.e(param0 - 1);
             } catch (qva decompiledCaughtParameter0) {

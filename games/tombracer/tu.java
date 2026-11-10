@@ -161,7 +161,7 @@ class tu extends SimulationObserver {
         field_d = null;
     }
 
-    final void a(int param0, Room param1) {
+    final void onRoomReset(int param0, Room param1) {
         if (param0 <= 12) {
           Room var4 = (Room) null;
           this.a((Player) null, (Room) null, false);

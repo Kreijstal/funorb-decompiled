@@ -489,10 +489,10 @@ final class AccountRegistrationPanel extends WidgetContainer implements tma, tsa
     final static Weapon a(byte param0) {
         Weapon var1 = new Weapon();
         if (param0 > 123) {
-          var1.field_f = new Effect(1, 3);
-          var1.field_f.b(1, 12);
+          var1.effect = new Effect(1, 3);
+          var1.effect.b(1, 12);
           var1.field_n = 655360;
-          var1.field_p = 250;
+          var1.maxAmmo = 250;
           var1.field_k = 12;
           var1.field_b = 3;
           var1.field_y = false;
@@ -504,10 +504,10 @@ final class AccountRegistrationPanel extends WidgetContainer implements tma, tsa
           return var1;
         }
         AccountRegistrationPanel.a(-0.43077895045280457f, 0.6055110096931458f, true, 1.4660576581954956f);
-        var1.field_f = new Effect(1, 3);
-        var1.field_f.b(1, 12);
+        var1.effect = new Effect(1, 3);
+        var1.effect.b(1, 12);
         var1.field_n = 655360;
-        var1.field_p = 250;
+        var1.maxAmmo = 250;
         var1.field_k = 12;
         var1.field_b = 3;
         var1.field_y = false;

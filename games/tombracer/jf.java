@@ -53,7 +53,7 @@ final class jf extends ela {
           if (param1 != 0) {
             field_p = (dk[]) null;
           }
-          stackIn_3_0 = new ConsoleValue(sra.a((String) (param0[0].field_d), 85));
+          stackIn_3_0 = new ConsoleValue(GameAssetLoader.a((String) (param0[0].field_d), 85));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

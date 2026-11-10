@@ -63,7 +63,7 @@ final class PlayerSimulation {
         int var3 = -110 % ((param0 - 73) / 33);
     }
 
-    final void a(Room param0, int param1) {
+    final void onRoomReset(Room param0, int param1) {
         SimulationObserver var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -78,7 +78,7 @@ final class PlayerSimulation {
           this.field_h = true;
           var3 = this.getObserver(9262);
           if (var3 != null) {
-            var3.a(35, param0);
+            var3.onRoomReset(35, param0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -95,7 +95,7 @@ final class PlayerSimulation {
         }
     }
 
-    final boolean f(int param0, int param1) {
+    final boolean isEffectActive(int param0, int param1) {
         boolean stackIn_6_0 = false;
         boolean stackIn_12_0 = false;
         if (param1 != 10915) {
@@ -297,7 +297,7 @@ final class PlayerSimulation {
           return;
         }
         var5 = (Room) null;
-        this.a((Room) null, -52);
+        this.onRoomReset((Room) null, -52);
         var2.g(58);
         var3Lifetime1 = this.getNextRoom((byte) 104, var2);
         if (this.player.l(false) &&

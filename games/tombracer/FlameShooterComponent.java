@@ -145,7 +145,7 @@ final class FlameShooterComponent extends ShooterComponent {
           var9.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new WeaponShooterBehaviour(param2, param0);
           var6 = ci.a(2, param1 ^ -4);
-          var6.a(-43, true);
+          var6.refillAmmo(-43, true);
           var5.a(var6, (byte) 73);
           this.a((byte) 43, var5, param2);
           var9.addBehaviour((byte) 83, (Behaviour) (var5));

@@ -222,7 +222,7 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
           this.field_n = new mg(param0.formatVersion, param1);
           this.field_u = jl.a(param0, true, param1);
           this.field_o = param1.readBits((byte) 44, 1) == 1 ? true : false;
-          this.field_u.a(90, this.field_o);
+          this.field_u.refillAmmo(90, this.field_o);
           if (param0.formatVersion >= 8) {
             this.field_p = param1.readBits((byte) 44, 1) == 1 ? true : false;
           }
@@ -315,13 +315,13 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
         param0 = upa.a(this.field_s, param0, (byte) -55);
         if (param1 <= -48) {
           param0 = upa.a(this.field_t, param0, (byte) -119);
-          param0 = fs.mixHash((byte) 89, param0, this.field_u.b(524288));
+          param0 = fs.mixHash((byte) 89, param0, this.field_u.getCooldown(524288));
           return param0;
         }
         in var4 = (in) null;
         WeaponShooterBehaviour.a(-27, (in) null);
         param0 = upa.a(this.field_t, param0, (byte) -119);
-        param0 = fs.mixHash((byte) 89, param0, this.field_u.b(524288));
+        param0 = fs.mixHash((byte) 89, param0, this.field_u.getCooldown(524288));
         return param0;
     }
 

@@ -115,7 +115,7 @@ final class SimpleConditionBehaviour extends Behaviour {
         }
         if (var3 != 2) {
           if (var3 == 3) {
-            this.field_s = this.getSimulation(12340).f(8, 10915);
+            this.field_s = this.getSimulation(12340).isEffectActive(8, 10915);
           }
           if (param0 == 79) {
             return;

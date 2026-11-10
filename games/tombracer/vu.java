@@ -93,7 +93,7 @@ final class vu extends vw {
             var6 = dl.field_t;
             dl.field_t.field_t = 0;
             var6.field_G = 0;
-            wf.field_g.field_r = dka.field_a.toUpperCase();
+            StatusEffect.field_g.field_r = dka.field_a.toUpperCase();
             var7 = (dka.field_b.field_G + 2) / 2;
             dl.field_t.a(-2 + var7, 40, -23776, -40 + dka.field_b.field_t, 0);
             hw.field_a.a(dka.field_b.field_G - var7, 40, param0 - 23777, -40 + dka.field_b.field_t, var7);

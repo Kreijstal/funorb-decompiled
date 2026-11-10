@@ -21,7 +21,7 @@ final class mp {
           String stackIn_19_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            ts.field_g = param0;
+            RoomEffectTraps.field_g = param0;
             try {
               var3 = param1.getParameter("cookieprefix");
               var4 = param1.getParameter("cookiehost");
