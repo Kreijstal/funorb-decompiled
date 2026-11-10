@@ -94,18 +94,18 @@ final class PlatformTaskDispatcher implements Runnable {
                 var2_int = var8.field_a;
                 switch (var2_int) {
                   case 1:
-                    if (bva.b((byte) -107) < field_o) {
+                    if (bva.currentTimeMillis((byte) -107) < field_o) {
                       throw new IOException();
                     }
                     var8.field_f = new java.net.Socket(java.net.InetAddress.getByName((String) (var8.field_c)), var8.field_e);
                     break;
                   case 22:
-                    if (field_o > bva.b((byte) -107)) {
+                    if (field_o > bva.currentTimeMillis((byte) -107)) {
                       throw new IOException();
                     }
                     try {
                       if (false) throw (wra) null;
-                      var8.field_f = hg.a((String) (var8.field_c), var8.field_e, false).a(25927);
+                      var8.field_f = hg.createProxyConnector((String) (var8.field_c), var8.field_e, false).connect(25927);
                     } catch (wra decompiledCaughtParameter1) {
                       decompiledCaughtException = decompiledCaughtParameter1;
                       var3_ref = (wra) (Object) decompiledCaughtException;
@@ -143,7 +143,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         if (!this.field_p) {
                           var8.field_f = Class.forName("AwtFullscreenController").getMethod("listmodes", new Class[]{}).invoke(this.field_i, new Object[]{});
                         } else {
-                          var8.field_f = this.field_w.a((byte) 52);
+                          var8.field_f = this.field_w.enumerateDisplayModes((byte) 52);
                         }
                         break;
                       case 12:
@@ -224,19 +224,19 @@ final class PlatformTaskDispatcher implements Runnable {
                         var8.field_f = var12;
                         var12.setResizable(false);
                         if (this.field_p) {
-                          this.field_w.a(var12, var8.field_e >>> 16, var8.field_d >> 16, var8.field_d & 65535, var8.field_e & 65535, true);
+                          this.field_w.enterFullscreen(var12, var8.field_e >>> 16, var8.field_d >> 16, var8.field_d & 65535, var8.field_e & 65535, true);
                         } else {
                           Class.forName("AwtFullscreenController").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_i, new Object[]{var12, new Integer(var8.field_e >>> 16), new Integer(65535 & var8.field_e), new Integer(var8.field_d >> 16), new Integer(var8.field_d & 65535)});
                         }
                         break;
                       case 21:
-                        if (bva.b((byte) -107) < field_o) {
+                        if (bva.currentTimeMillis((byte) -107) < field_o) {
                           throw new IOException();
                         }
                         var8.field_f = java.net.InetAddress.getByName((String) (var8.field_c)).getAddress();
                         break;
                       case 3:
-                        if (bva.b((byte) -107) < field_o) {
+                        if (bva.currentTimeMillis((byte) -107) < field_o) {
                           throw new IOException();
                         }
                         var11 = (255 & var8.field_e >> 24) + "." + ((16739670 & var8.field_e) >> 16) + "." + (var8.field_e >> 8 & 255) + "." + (255 & var8.field_e);
@@ -257,7 +257,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     var8.field_f = ((Class) (var9[0])).getDeclaredMethod((String) (var9[1]), (Class[]) (var9[2]));
                     break;
                   case 4:
-                    if (field_o > bva.b((byte) -107)) {
+                    if (field_o > bva.currentTimeMillis((byte) -107)) {
                       throw new IOException();
                     }
                     var8.field_f = new DataInputStream(((java.net.URL) (var8.field_c)).openStream());

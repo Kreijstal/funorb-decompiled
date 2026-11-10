@@ -58,7 +58,7 @@ final class og extends OpenGlBuffer implements qm {
                 return stackIn_3_0;
               }
               var3 = (String) (JavaScriptBridge.callWindowFunction(param0, 2864, "getcookies"));
-              var4 = rga.a(param2 + 32201, var3, ';');
+              var4 = rga.splitPreservingEmptyParts(param2 + 32201, var3, ';');
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&

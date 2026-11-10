@@ -5,7 +5,7 @@ final class dqa extends mna {
     ne[] field_f;
     static jea field_e;
 
-    final static jua a(int param0) {
+    final static jua takeRegistrationResponse(int param0) {
         if (kl.field_a == fta.field_c) {
           throw new IllegalStateException();
         }

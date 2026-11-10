@@ -32,7 +32,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements WidgetParent {
           return null;
         }
         var6 = (StringBuilder) null;
-        this.a((Hashtable) null, 73, -34, (StringBuilder) null);
+        this.appendChildrenDiagnostics((Hashtable) null, 73, -34, (StringBuilder) null);
         return null;
     }
 
@@ -262,7 +262,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements WidgetParent {
         }
     }
 
-    private final void a(Hashtable param0, int param1, int param2, StringBuilder param3) {
+    private final void appendChildrenDiagnostics(Hashtable param0, int param1, int param2, StringBuilder param3) {
         int var6 = 0;
         StringBuilder discarded$4 = null;
         int var8 = 0;
@@ -417,7 +417,7 @@ abstract class ArrayWidgetGroup extends UiWidget implements WidgetParent {
         try {
           if (this.beginDiagnosticVisit((byte) -122, param0, param1, param2)) {
             this.appendDiagnosticProperties(1, param2, param1, param0);
-            this.a(param1, param0, 123, param2);
+            this.appendChildrenDiagnostics(param1, param0, 123, param2);
           }
           if (param3 != 0) {
             this.children = (UiWidget[]) null;

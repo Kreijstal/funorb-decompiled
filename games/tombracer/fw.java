@@ -12,7 +12,7 @@ final class fw {
         byte[] var3 = GrowableIntList.field_g.a(param1, 0, param0);
         var2 = new lp();
         if (var3 != null) {
-          var2.a(-1, param0, new PacketBuffer(var3));
+          var2.decode(-1, param0, new PacketBuffer(var3));
         }
         TrackMountComponent.field_J.put(29166, var2, (long)param0);
         return var2;

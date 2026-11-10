@@ -114,7 +114,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
           var10 = param0.b(param1 ^ 13611);
           var11 = (OpenGlVertexBuffer) (param0);
           var11.c(-3);
-          jaggl.OpenGL.glDrawElements(var8_int, var9, ClientException.a(var10, 5126), var11.b(true) + (long)(param3 * var10.field_e));
+          jaggl.OpenGL.glDrawElements(var8_int, var9, ClientException.glDataType(var10, 5126), var11.b(true) + (long)(param3 * var10.field_e));
           if (param1 != -19394) {
             this.N(76);
           }
@@ -307,9 +307,9 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         jaggl.OpenGL.glDrawBuffer(1029);
         this.useIdentityProjection(256);
         this.setFogEnabled(false, -70);
-        this.d(0, false);
         this.setLightingEnabled(0, false);
-        this.b(false, (byte) 81);
+        this.setDepthTestEnabled(0, false);
+        this.setDepthWriteEnabled(false, (byte) 81);
         this.bindTexture(true, (GpuTexture) null);
         this.a((byte) -80, false, false, -2);
         this.a((byte) 118, 1);
@@ -480,7 +480,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         jaggl.OpenGL.glClear(16384);
     }
 
-    final void b(byte param0) {
+    final void applyDepthWrite(byte param0) {
         int var2;
         boolean stackIn_4_0 = false;
         var2 = -30 % ((param0 + 67) / 53);
@@ -654,7 +654,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         this.i(false);
     }
 
-    final void f(byte param0) {
+    final void applyDepthTest(byte param0) {
         if (param0 != -69) {
           this.field_ed = -103;
         }
@@ -745,7 +745,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final synchronized void c(int param0) {
+    final synchronized void updateTime(int param0) {
         int incrementValue$5 = 0;
         int incrementValue$1 = 0;
         int incrementValue$0 = 0;
@@ -860,9 +860,9 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
                 jaggl.OpenGL.glDeleteLists((int)var12.key, var12.field_i);
               }
               if ((!(this.Q(10) <= 100663296)) &&
-                (!(bva.b((byte) -107) <= this.field_Xc + 60000L))) {
+                (!(bva.currentTimeMillis((byte) -107) <= this.field_Xc + 60000L))) {
                 System.gc();
-                this.field_Xc = bva.b((byte) -107);
+                this.field_Xc = bva.currentTimeMillis((byte) -107);
               }
               decompiledFrameRemainder2 = false;
             }
@@ -923,12 +923,12 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
             jaggl.OpenGL.glDeleteLists((int)var12Lifetime1.key, var12Lifetime1.field_i);
           }
           if (!(this.Q(10) <= 100663296) &&
-            !(bva.b((byte) -107) <= this.field_Xc + 60000L)) {
+            !(bva.currentTimeMillis((byte) -107) <= this.field_Xc + 60000L)) {
             System.gc();
-            this.field_Xc = bva.b((byte) -107);
+            this.field_Xc = bva.currentTimeMillis((byte) -107);
           }
         }
-        super.c(param0);
+        super.updateTime(param0);
     }
 
     final void uploadDirectionalLights(byte param0) {
@@ -938,7 +938,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
     }
 
     final void ya() {
-        this.b(true, (byte) 81);
+        this.setDepthWriteEnabled(true, (byte) 81);
         jaggl.OpenGL.glClear(256);
     }
 
@@ -955,7 +955,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         field_gd = null;
     }
 
-    final void u(byte param0) {
+    final void applyAlphaCombineOperation(byte param0) {
         if (param0 != -23) {
           this.f(47);
         }
@@ -968,7 +968,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
 
     final void N(int param0) {
         if (param0 >= -10) {
-          this.b(20, (byte) 35);
+          this.queueProgramDeletion(20, (byte) 35);
         }
         dia.field_r[3] = (float)(this.field_bc >>> 24) / 255.0f;
         dia.field_r[2] = (float)SnakePitBehaviour.c(this.field_bc, 255) / 255.0f;
@@ -1267,7 +1267,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
         }
     }
 
-    final synchronized void b(int param0, byte param1) {
+    final synchronized void queueProgramDeletion(int param0, byte param1) {
         IntrusiveNode var3 = new IntrusiveNode();
         var3.key = (long)param0;
         if (param1 != 18) {
@@ -1488,13 +1488,13 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
               -1 == this.field_Nc.indexOf("brian paul") &&
               this.field_Nc.indexOf("mesa") == -1) {
               var20 = jaggl.OpenGL.glGetString(7938);
-              var9 = rga.a(32287, var20.replace('.', ' '), ' ');
+              var9 = rga.splitPreservingEmptyParts(32287, var20.replace('.', ' '), ' ');
               if (2 > var9.length) {
                 throw new RuntimeException("");
               }
               try {
-                var10_int = WhiteLightSensorComponent.a((CharSequence) ((Object) var9[0]), (byte) 70);
-                var11_int = WhiteLightSensorComponent.a((CharSequence) ((Object) var9[1]), (byte) 70);
+                var10_int = WhiteLightSensorComponent.parseDecimalInt((CharSequence) ((Object) var9[0]), (byte) 70);
+                var11_int = WhiteLightSensorComponent.parseDecimalInt((CharSequence) ((Object) var9[1]), (byte) 70);
                 this.field_md = var10_int * 10 + var11_int;
               } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -1538,7 +1538,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
                 var11_int = 0;
                 var12 = 0;
                 var13 = 0;
-                var14 = rga.a(32287, this.field_jd.replace('/', ' '), ' ');
+                var14 = rga.splitPreservingEmptyParts(32287, this.field_jd.replace('/', ' '), ' ');
                 for (var15 = 0; var14.length > var15; var15++) {
                   var21 = var14[var15];
                   var16 = var21;
@@ -1564,7 +1564,7 @@ final class HardwareOpenGlToolkit extends HardwareGraphicsToolkit {
                           var32 = (CharSequence) ((Object) var16.substring(0, 4));
                           if (sqa.a(var32, -3)) {
                             var33 = (CharSequence) ((Object) var16.substring(0, 4));
-                            var11_int = WhiteLightSensorComponent.a(var33, (byte) 70);
+                            var11_int = WhiteLightSensorComponent.parseDecimalInt(var33, (byte) 70);
                             decompiledRegionSelector0 = 1;
                             decompiledFrameRemainder0 = false;
                           }

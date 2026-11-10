@@ -74,7 +74,7 @@ final class CauldronComponent extends SwitchComponent {
         return false;
     }
 
-    final static int a(byte param0, int param1) {
+    final static int bitLength(byte param0, int param1) {
         int var2;
         var2 = 0;
         if (param1 < 0) {
@@ -87,7 +87,7 @@ final class CauldronComponent extends SwitchComponent {
           }
         }
         if (param0 != 93) {
-          CauldronComponent.a((byte) 58, 116);
+          CauldronComponent.bitLength((byte) 58, 116);
         }
         if (256 <= param1) {
           var2 += 8;

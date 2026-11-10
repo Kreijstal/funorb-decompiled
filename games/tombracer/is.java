@@ -229,7 +229,7 @@ final class is extends jea {
             this.field_vb.length() > 0) {
             DarknessBehaviour.a(-1 + this.field_vb.length(), ' ', -11, this.field_vb);
           }
-          if (LaserShooterComponent.a((CharSequence) ((Object) this.field_vb), true, HardwareOpenGlToolkit.field_td)) {
+          if (LaserShooterComponent.canAppendNameChar((CharSequence) ((Object) this.field_vb), true, HardwareOpenGlToolkit.field_td)) {
             discarded$0 = this.field_vb.append(HardwareOpenGlToolkit.field_td);
           } else {
             if (this.field_vb.length() == 0 &&

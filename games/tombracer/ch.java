@@ -29,7 +29,7 @@ final class ch implements Runnable {
                   var2.c();
                 }
               }
-              TrapSpawner.a(0, 10L);
+              TrapSpawner.sleepMillis(0, 10L);
               var5 = (Object) null;
               kla.a(this.field_d, (byte) 50, (Object) null);
             }

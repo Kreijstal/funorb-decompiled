@@ -18,7 +18,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
         return param0 * -1918454973 + -669632447 * param1;
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int approximateVectorLength(int param0, int param1, int param2) {
         int stackIn_42_0 = 0;
         int stackIn_47_0 = 0;
         int stackIn_51_0 = 0;

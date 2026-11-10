@@ -18,7 +18,7 @@ public class MapBuffer extends jaclib.memory.NativeBuffer {
         return var1_int != 0;
     }
 
-    public final boolean a(int param0, int param1, int param2) {
+    public final boolean map(int param0, int param1, int param2) {
         long var4_long;
         RuntimeException var4;
         if (this.c != 0) {

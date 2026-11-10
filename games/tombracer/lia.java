@@ -62,13 +62,13 @@ final class lia implements qm {
           var5 = var5 | 512;
         }
         if (this.field_e == null) {
-          this.field_e = this.field_c.field_jd.a(this.field_a, var5, 0, var4, this.field_e);
+          this.field_e = this.field_c.field_jd.createVertexBuffer(this.field_a, var5, 0, var4, this.field_e);
           this.field_b = this.field_a;
           stackIn_11_0 = (null != this.field_e);
           return stackIn_11_0;
         }
         this.field_e.a(false);
-        this.field_e = this.field_c.field_jd.a(this.field_a, var5, 0, var4, this.field_e);
+        this.field_e = this.field_c.field_jd.createVertexBuffer(this.field_a, var5, 0, var4, this.field_e);
         this.field_b = this.field_a;
         stackIn_15_0 = (null != this.field_e);
         return stackIn_15_0;

@@ -62,14 +62,14 @@ final class gj {
           dqa.field_e.b(-125, ita.field_c);
           stackIn_4_0 = dn.field_b.field_vb.field_vb;
           stackIn_5_1 = !(param1);
-          ((jea) (Object) stackIn_4_0).a(stackIn_5_1, Corpse.field_i);
+          ((jea) (Object) stackIn_4_0).applyStyle(stackIn_5_1, Corpse.field_i);
           dn.field_b.field_vb.field_vb.field_bb = 1;
           var6 = dn.field_b.field_vb.field_vb;
           var7 = var6;
           var7.field_z = 1;
           stackIn_7_0 = OpenGlSprite.field_j.field_vb.field_vb;
           stackIn_8_1 = !(param1);
-          ((jea) (Object) stackIn_7_0).a(stackIn_8_1, Corpse.field_i);
+          ((jea) (Object) stackIn_7_0).applyStyle(stackIn_8_1, Corpse.field_i);
           OpenGlSprite.field_j.field_vb.field_vb.field_bb = 1;
           var3 = OpenGlSprite.field_j.field_vb.field_vb;
           var3.field_z = 1;
@@ -173,7 +173,7 @@ final class gj {
         field_n = new gj(4, 2, una.field_h);
         field_k = new gj(5, 3, una.field_h);
         field_j = new gj(6, 4, una.field_h);
-        field_f = CauldronComponent.a((byte) 93, 16);
+        field_f = CauldronComponent.bitLength((byte) 93, 16);
         field_o = new nt();
         field_d = new Hashtable();
         field_a = "ESC - cancel private message";

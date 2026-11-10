@@ -232,7 +232,7 @@ final class rua extends MessageDialog implements ButtonListener {
         jua var2 = null;
         if (this.field_B &&
           !this.field_eb) {
-          var2 = dqa.a(3239);
+          var2 = dqa.takeRegistrationResponse(3239);
           if (var2 != null) {
             this.a(7, false, var2);
           }

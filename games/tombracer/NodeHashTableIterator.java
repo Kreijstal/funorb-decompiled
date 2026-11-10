@@ -39,7 +39,7 @@ final class NodeHashTableIterator implements Iterator {
         return true;
     }
 
-    private final void a(boolean param0) {
+    private final void reset(boolean param0) {
         this.field_d = null;
         if (param0) {
           this.field_a = this.field_c.buckets[0].next;
@@ -127,7 +127,7 @@ final class NodeHashTableIterator implements Iterator {
         this.field_d = null;
         try {
           this.field_c = param0;
-          this.a(true);
+          this.reset(true);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "nd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

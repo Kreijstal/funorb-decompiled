@@ -13,7 +13,7 @@ abstract class PeerReference extends java.lang.ref.WeakReference {
         param1.a(63, this);
     }
 
-    final long a(byte param0) {
+    final long release(byte param0) {
         long var2 = 0L;
         long var2Lifetime1;
         if (param0 == 34) {
@@ -38,7 +38,7 @@ abstract class PeerReference extends java.lang.ref.WeakReference {
     protected abstract long releasePeer(long param0);
 
     final void setPeer(long param0) {
-        this.a((byte) 34);
+        this.release((byte) 34);
         this.peer = param0;
     }
 }

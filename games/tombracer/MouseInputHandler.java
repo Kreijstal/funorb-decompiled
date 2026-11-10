@@ -48,7 +48,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    final static String a(String param0, int param1) {
+    final static String reverseString(String param0, int param1) {
         int var4 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -160,7 +160,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             tu.field_h = 0;
             cr.field_d = param0.getX();
             TestModel.field_m = param0.getY();
-            bva.b((byte) -107);
+            bva.currentTimeMillis((byte) -107);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               DisplaySettingsDialog.field_X = 1;
               tka.field_n = 1;

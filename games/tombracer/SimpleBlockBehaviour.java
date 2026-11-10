@@ -30,7 +30,7 @@ final class SimpleBlockBehaviour extends Behaviour {
           Throwable decompiledCaughtException = null;
           try {
             if (PlatformTaskDispatcher.field_j.startsWith("win") &&
-              FontMetrics.a(param2, -127)) {
+              FontMetrics.tryOpenUrlWithWindowsShell(param2, -127)) {
               return;
             }
             try {

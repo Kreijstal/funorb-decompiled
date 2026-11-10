@@ -52,7 +52,7 @@ public final class sha {
     private final void b(int param0, jaclib.peer.PeerReference param1) {
         jaclib.peer.PeerReference var4;
         jaclib.peer.PeerReference var4Lifetime1;
-        param1.a((byte) 34);
+        param1.release((byte) 34);
         if (this.c == param1) {
           this.c = param1.b;
         }

@@ -12,7 +12,7 @@ final class wk extends IntrusiveNode {
     int field_k;
     static int field_m;
 
-    final static void a(byte param0) {
+    final static void refreshReportedHeapLimit(byte param0) {
         try {
           Throwable decompiledCaughtException = null;
           java.lang.reflect.Method var1 = null;

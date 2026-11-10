@@ -15,7 +15,7 @@ final class iqa {
           if (null == this.field_e) {
             this.field_e = new soa();
           }
-          this.field_e.a(127, this);
+          this.field_e.capture(127, this);
           return this.field_e;
         }
         return (soa) null;

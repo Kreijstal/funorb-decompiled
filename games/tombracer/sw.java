@@ -19,7 +19,7 @@ final class sw extends jea {
     static int[] field_zb;
     private boolean field_vb;
 
-    private final void a(String param0, boolean param1) {
+    private final void insertText(String param0, boolean param1) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -101,7 +101,7 @@ final class sw extends jea {
             } else {
               this.d(param0 + 18539, var2_int);
               this.field_tb = true;
-              var3_long = bva.b((byte) -107);
+              var3_long = bva.currentTimeMillis((byte) -107);
               stackIn_6_1 = !(-this.field_Hb + var3_long >= 250L);
               this.field_vb = stackIn_6_1;
               if (this.field_vb) {
@@ -140,7 +140,7 @@ final class sw extends jea {
               try {
                 var8 = (String) (var7.getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor));
                 this.i((byte) -126);
-                this.a(var8, true);
+                this.insertText(var8, true);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var4 = (Exception) (Object) decompiledCaughtException;
@@ -270,7 +270,7 @@ final class sw extends jea {
         }
     }
 
-    final void d(byte param0) {
+    final void clear(byte param0) {
         if (param0 > -84) {
           return;
         }
@@ -390,12 +390,12 @@ final class sw extends jea {
           if (this.field_Bb == null) {
             return;
           }
-          String var2 = this.f((byte) -107);
+          String var2 = this.getSelectedText((byte) -107);
           if (var2.length() == 0) {
             return;
           }
           try {
-            var3 = new java.awt.datatransfer.StringSelection(this.f((byte) -89));
+            var3 = new java.awt.datatransfer.StringSelection(this.getSelectedText((byte) -89));
             if (param0 != 82) {
               this.field_wb = (StringBuilder) null;
             }
@@ -410,7 +410,7 @@ final class sw extends jea {
         }
     }
 
-    private final String f(byte param0) {
+    private final String getSelectedText(byte param0) {
         int discarded$1 = 0;
         String var2 = null;
         int stackIn_6_0 = 0;
@@ -652,7 +652,7 @@ final class sw extends jea {
             } else {
               if (101 != param0) {
                 if (param0 == 13) {
-                  this.d((byte) -95);
+                  this.clear((byte) -95);
                   return true;
                 }
                 if (96 != param0) {
@@ -880,7 +880,7 @@ final class sw extends jea {
           var3_int = 0;
           var4 = 0;
           if (param0 != -2) {
-            this.d((byte) -86);
+            this.clear((byte) -86);
           }
           var5 = this.field_wb.length();
           while (var4 < param1) {

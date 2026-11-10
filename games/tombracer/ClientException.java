@@ -8,7 +8,7 @@ final class ClientException extends RuntimeException {
     static String field_e;
     static int field_c;
 
-    final static int a(una param0, int param1) {
+    final static int glDataType(una param0, int param1) {
         RuntimeException var2 = null;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
@@ -93,7 +93,7 @@ final class ClientException extends RuntimeException {
         field_b = null;
         if (param0) {
           una var2 = (una) null;
-          ClientException.a((una) null, 48);
+          ClientException.glDataType((una) null, 48);
         }
     }
 

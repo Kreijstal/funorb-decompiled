@@ -15,12 +15,12 @@ abstract class fi {
 
     abstract void a(int param0, byte param1, int param2);
 
-    private final void a(int param0) {
+    private final void initializePowersOfTwo(int param0) {
         int var2 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
         this.field_g = new short[this.field_a];
         if (param0 != -15063) {
-          this.a(-68);
+          this.initializePowersOfTwo(-68);
         }
         for (var2 = 0; var2 < this.field_a; var2++) {
           this.field_g[var2] = (short)(int)Math.pow(2.0, (double)var2);
@@ -216,7 +216,7 @@ abstract class fi {
         this.field_a = param1;
         this.field_f = param2;
         this.field_d = param3;
-        this.a(-15063);
+        this.initializePowersOfTwo(-15063);
         this.b(-256);
     }
 

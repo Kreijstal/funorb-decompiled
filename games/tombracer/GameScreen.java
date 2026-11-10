@@ -47,7 +47,7 @@ abstract class GameScreen {
                 }
                 return false;
               }
-              if (ota.a(apa.field_a, (byte) 13, cr.field_b)) {
+              if (ota.isPlayerReachable(apa.field_a, (byte) 13, cr.field_b)) {
                 if (2 != VerticalGradientOperator.field_n &&
                   var3 != 0) {
                   return false;
@@ -66,7 +66,7 @@ abstract class GameScreen {
             }
             if (ns.field_f) {
               if (VerticalGradientOperator.field_n == 2 &&
-                !ota.a(apa.field_a, (byte) 13, cr.field_b)) {
+                !ota.isPlayerReachable(apa.field_a, (byte) 13, cr.field_b)) {
                 return false;
               }
               if (2 != VerticalGradientOperator.field_n &&
@@ -101,7 +101,7 @@ abstract class GameScreen {
               return false;
             }
             if (VerticalGradientOperator.field_n == 2 &&
-              !ota.a(apa.field_a, (byte) 13, cr.field_b)) {
+              !ota.isPlayerReachable(apa.field_a, (byte) 13, cr.field_b)) {
               return false;
             }
             if (2 != VerticalGradientOperator.field_n &&
@@ -121,7 +121,7 @@ abstract class GameScreen {
             return false;
           }
           if (VerticalGradientOperator.field_n == 2 &&
-            !ota.a(apa.field_a, (byte) 13, cr.field_b)) {
+            !ota.isPlayerReachable(apa.field_a, (byte) 13, cr.field_b)) {
             return false;
           }
           if (2 != VerticalGradientOperator.field_n &&
@@ -173,7 +173,7 @@ abstract class GameScreen {
             return;
           }
           var7 = (String) null;
-          GameScreen.a('N', (String) null, (String) null, 30);
+          GameScreen.replaceCharacter('N', (String) null, (String) null, 30);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -190,7 +190,7 @@ abstract class GameScreen {
         ContextMenu.f((byte) 101);
         BeamSegment.a(5);
         if (param0 == 62) {
-          rda.e(0);
+          rda.closeNetworkAndCacheResources(0);
           if (bl.b(param0 - 62)) {
             ql.field_k.writeCipheredOpcode(1, -2988);
             bl.a(0, -1);
@@ -199,7 +199,7 @@ abstract class GameScreen {
           return;
         }
         GameScreen.a(-50, false, 79);
-        rda.e(0);
+        rda.closeNetworkAndCacheResources(0);
         if (bl.b(param0 - 62)) {
           ql.field_k.writeCipheredOpcode(1, -2988);
           bl.a(0, -1);
@@ -227,7 +227,7 @@ abstract class GameScreen {
 
     abstract void a(int param0);
 
-    final static String a(char param0, String param1, String param2, int param3) {
+    final static String replaceCharacter(char param0, String param1, String param2, int param3) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;

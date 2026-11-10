@@ -74,7 +74,7 @@ abstract class uta implements ShellListener {
         var11 = TombRacer.field_G ? 1 : 0;
         try {
           var4_int = -10 + this.field_a.field_G - 15;
-          var5 = rga.a(32287, param1, '\n');
+          var5 = rga.splitPreservingEmptyParts(32287, param1, '\n');
           if (param0 != 24219) {
             this.a(-59);
           }
@@ -209,7 +209,7 @@ abstract class uta implements ShellListener {
         return var4;
     }
 
-    private final jea a(int param0, int param1) {
+    private final jea createSelectionStyle(int param0, int param1) {
         int var4 = -128 / ((-18 - param0) / 61);
         jea var3 = new jea(0L, (jea) null);
         var3.field_w = eca.a(4, param1);
@@ -398,7 +398,7 @@ abstract class uta implements ShellListener {
           if (!this.a(var7, (byte) -112)) {
             var5.field_ib = 16733525;
           }
-          this.field_o.d((byte) -113);
+          this.field_o.clear((byte) -113);
           this.a(true, var7);
           this.field_g = null;
         }
@@ -569,7 +569,7 @@ abstract class uta implements ShellListener {
           var8 = this.a(7829367, (byte) 31, 2236962);
           var9 = this.a(65793, (byte) 21, 65793);
           var10 = this.a(3355443, (byte) -126, 65793);
-          var11 = this.a(-91, 2263074);
+          var11 = this.createSelectionStyle(-91, 2263074);
           var12 = this.a(2236962, (byte) -125, 65793);
           this.field_i = new jea(0L, var5);
           this.field_i.a(mma.field_a, 200, -23776, -200, 0);

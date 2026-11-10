@@ -21,7 +21,7 @@ final class qqa extends hha {
         throw new RuntimeException();
     }
 
-    final int a(byte param0) {
+    final int getProgress(byte param0) {
         if (null == this.field_r) {
           return 0;
         }

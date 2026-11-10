@@ -18,7 +18,7 @@ final class fd {
         return (fd) null;
     }
 
-    final void a(int param0, fd param1) {
+    final void copyFrom(int param0, fd param1) {
         try {
           this.field_c = param1.field_c;
           this.field_f = param1.field_f;

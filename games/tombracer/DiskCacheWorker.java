@@ -275,7 +275,7 @@ final class DiskCacheWorker implements Runnable {
         try {
           var2 = param0.a((Runnable) (this), 425, 5);
           while (var2.field_b == 0) {
-            TrapSpawner.a(0, 10L);
+            TrapSpawner.sleepMillis(0, 10L);
           }
           if (var2.field_b == 2) {
             throw new RuntimeException();

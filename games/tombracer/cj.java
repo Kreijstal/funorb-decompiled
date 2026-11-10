@@ -39,7 +39,7 @@ final class cj implements isa {
           if (param1 != 0) {
             field_e = (String) null;
           }
-          var2_long = bva.b((byte) -107);
+          var2_long = bva.currentTimeMillis((byte) -107);
           if (WallCrusherComponent.field_H != 0 &&
             GameKeyHandler.field_b < 0) {
             var4_ref_rha = (rha) (vn.field_a.first(-80));

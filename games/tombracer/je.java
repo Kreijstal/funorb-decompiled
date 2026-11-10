@@ -82,7 +82,7 @@ final class je extends haa {
         return false;
     }
 
-    final static Sprite a(byte param0) {
+    final static Sprite buildFirstDecodedSprite(byte param0) {
         int var4_int = 0;
         int var5 = TombRacer.field_G ? 1 : 0;
         int var1 = mq.field_b[0] * iga.field_m[0];
@@ -102,7 +102,7 @@ final class je extends haa {
     public static void g(byte param0) {
         field_E = null;
         if (param0 > -117) {
-          je.a((byte) 41);
+          je.buildFirstDecodedSprite((byte) 41);
         }
     }
 

@@ -38,7 +38,7 @@ abstract class ela extends DualLinkNode {
           }
           for (var4_int = 0; this.field_n.length > var4_int; var4_int++) {
             if (param2[var4_int].field_a) {
-              var5 = jd.a(param2[var4_int].field_d, 0);
+              var5 = jd.getPrimitiveType(param2[var4_int].field_d, 0);
               if (Boolean.TYPE == var5 &&
                 this.field_n[var4_int] != Boolean.TYPE) {
                 return false;

@@ -20,7 +20,7 @@ final class PasswordValidator extends TextFieldValidator {
         tga.field_a = null;
     }
 
-    final static qca a(pr[] param0, HardwareOpenGlToolkit param1, int param2) {
+    final static qca linkShaderProgram(pr[] param0, HardwareOpenGlToolkit param1, int param2) {
         int var3_int = 0;
         Object stackIn_25_0 = null;
         qca stackIn_27_0 = null;
@@ -244,7 +244,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_8_0 = qqa.field_o;
             return stackIn_8_0;
           }
-          if (eba.a(var5, 6912)) {
+          if (eba.hasUniformCharacters(var5, 6912)) {
             stackIn_11_0 = hf.field_e;
             return stackIn_11_0;
           }
@@ -256,7 +256,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_18_0 = FlipOperator.field_m;
             return stackIn_18_0;
           }
-          if (ne.a(true, var5, var6)) {
+          if (ne.containsTextOrReverse(true, var5, var6)) {
             stackIn_21_0 = kl.field_j;
             return stackIn_21_0;
           }
@@ -264,7 +264,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_25_0 = wl.field_h;
             return stackIn_25_0;
           }
-          if (!jea.a(true, var5, var6)) {
+          if (!jea.containsForwardOrReversed(true, var5, var6)) {
             return dva.field_a;
           }
           stackIn_29_0 = kl.field_j;

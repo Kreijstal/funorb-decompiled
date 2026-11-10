@@ -85,7 +85,7 @@ final class ImageProducerRasterBuffer extends cha implements java.awt.image.Imag
         }
     }
 
-    final void a(int param0, int param1, java.awt.Component param2, byte param3) {
+    final void initialize(int param0, int param1, java.awt.Component param2, byte param3) {
         try {
           this.field_f = param0;
           this.field_g = new int[param0 * param1 + 1];

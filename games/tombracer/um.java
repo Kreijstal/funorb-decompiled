@@ -21,7 +21,7 @@ class um extends DualLinkNode {
             field_k = (String) null;
           }
           var5 = PcmSampleStream.b(param2, 100, param4, param0);
-          var6 = hda.a(param1, 1303, var5);
+          var6 = hda.delayStreamByMillis(param1, 1303, var5);
           var7 = new vb(var5, var6);
           DivisionMazeGenerator.field_e.addLast((byte) -57, var7);
           PitModel.field_n.a(var6);
@@ -44,7 +44,7 @@ class um extends DualLinkNode {
     um() {
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int daysInMonth(int param0, int param1, int param2) {
         if (~param2 != param1) {
           return epa.field_r[param2];
         }

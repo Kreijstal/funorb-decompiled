@@ -8,7 +8,7 @@ final class soa {
     private int[] field_d;
     private int[] field_a;
 
-    final void a(byte param0, iqa param1) {
+    final void restore(byte param0, iqa param1) {
         GraphicsToolkit var5 = null;
         GraphicsToolkit var3 = null;
         try {
@@ -24,7 +24,7 @@ final class soa {
         }
     }
 
-    final void a(int param0, iqa param1) {
+    final void capture(int param0, iqa param1) {
         GraphicsToolkit var3 = null;
         try {
           var3 = param1.field_d;

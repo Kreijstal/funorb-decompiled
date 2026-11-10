@@ -127,7 +127,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void a(int param0, int param1, byte[] param2, int param3) throws IOException {
+    final void readFully(int param0, int param1, byte[] param2, int param3) throws IOException {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -324,7 +324,7 @@ final class BufferedSocket implements Runnable {
           }
           if (this.field_j != null) {
             while (this.field_j.field_b == 0) {
-              TrapSpawner.a(0, 1L);
+              TrapSpawner.sleepMillis(0, 1L);
             }
             if (1 == this.field_j.field_b) {
               try {

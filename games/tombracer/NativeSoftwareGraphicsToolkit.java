@@ -372,7 +372,7 @@ final class NativeSoftwareGraphicsToolkit extends GraphicsToolkit implements e {
 
     final native void drawCircle(int param0, int param1, int param2, int param3, int param4);
 
-    final void c(int param0) {
+    final void updateTime(int param0) {
         ho.a(true);
         this.d(param0);
         ya var2 = (ya) (this.field_o.first(-80));

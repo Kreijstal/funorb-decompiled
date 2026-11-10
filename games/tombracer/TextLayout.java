@@ -118,7 +118,7 @@ abstract class TextLayout {
           for (var4 = 0; var4 < var3.length; var4++) {
             var5 = var3[var4];
             if (var5 != null) {
-              var6 = var5.a(true);
+              var6 = var5.getRightEdge(true);
               if (var6 > var2) {
                 var2 = var6;
               }
@@ -188,14 +188,14 @@ abstract class TextLayout {
           return -1;
         }
         if (this.field_c.length == 1) {
-          return this.field_c[0].a(param1, -1);
+          return this.field_c[0].characterIndexAt(param1, -1);
         }
         int var4 = 0;
         for (var5 = 0; var5 < this.field_c.length; var5++) {
           var6 = this.field_c[var5];
           if (param2 >= var6.field_d &&
             var6.field_b >= param2) {
-            var7 = var6.a(param1, -1);
+            var7 = var6.characterIndexAt(param1, -1);
             if (var7 == -1) {
               return -1;
             }

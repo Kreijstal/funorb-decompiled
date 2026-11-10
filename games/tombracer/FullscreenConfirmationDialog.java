@@ -8,7 +8,7 @@ final class FullscreenConfirmationDialog extends ofa implements ButtonListener {
     private FocusableWidget field_M;
     private long field_P;
 
-    final static void a(ResourceArchive param0, int param1, int[] param2, byte[] param3, ResourceArchive param4, String[][] param5, int param6, Sprite[][] param7, boolean param8, int param9, String[][] param10, ResourceArchive param11, byte[] param12, String[] param13, Sprite[][] param14) {
+    final static void initializeLobbyAssets(ResourceArchive param0, int param1, int[] param2, byte[] param3, ResourceArchive param4, String[][] param5, int param6, Sprite[][] param7, boolean param8, int param9, String[][] param10, ResourceArchive param11, byte[] param12, String[] param13, Sprite[][] param14) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -122,7 +122,7 @@ final class FullscreenConfirmationDialog extends ofa implements ButtonListener {
         super(param0, 200, 200);
         UiWidget var3 = null;
         try {
-          this.field_P = bva.b((byte) -107);
+          this.field_P = bva.currentTimeMillis((byte) -107);
           var3 = new UiWidget(rfa.field_B, (WidgetListener) null);
           var3.field_m = this.field_m;
           var3.field_p = 100;
@@ -137,8 +137,8 @@ final class FullscreenConfirmationDialog extends ofa implements ButtonListener {
           this.field_L.field_p = 80;
           this.field_L.field_r = (isa) ((Object) new TextWidgetPainter(ft.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(this.field_L, -1);
-          this.field_N = this.a((WidgetListener) (this), 77, vc.field_s);
-          this.field_M = this.a((WidgetListener) (this), 71, mha.field_F);
+          this.field_N = this.addButton((WidgetListener) (this), 77, vc.field_s);
+          this.field_M = this.addButton((WidgetListener) (this), 71, mha.field_F);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "op.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -225,7 +225,7 @@ final class FullscreenConfirmationDialog extends ofa implements ButtonListener {
         }
     }
 
-    private final FocusableWidget a(WidgetListener param0, int param1, String param2) {
+    private final FocusableWidget addButton(WidgetListener param0, int param1, String param2) {
         FocusableWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -285,7 +285,7 @@ final class FullscreenConfirmationDialog extends ofa implements ButtonListener {
           var3 = var4;
           ArrayUtils.copy(param0, 0, var4, 0, param2);
           if (param1 <= 104) {
-            FullscreenConfirmationDialog.a((ResourceArchive) null, 63, (int[]) null, (byte[]) null, (ResourceArchive) null, (String[][]) null, 112, (Sprite[][]) null, true, 103, (String[][]) null, (ResourceArchive) null, (byte[]) null, (String[]) null, (Sprite[][]) null);
+            FullscreenConfirmationDialog.initializeLobbyAssets((ResourceArchive) null, 63, (int[]) null, (byte[]) null, (ResourceArchive) null, (String[][]) null, 112, (Sprite[][]) null, true, 103, (String[][]) null, (ResourceArchive) null, (byte[]) null, (String[]) null, (Sprite[][]) null);
           }
           stackIn_3_0 = var4;
           return stackIn_3_0;
@@ -316,7 +316,7 @@ final class FullscreenConfirmationDialog extends ofa implements ButtonListener {
           if (qma.field_c) {
             param2.clearKeyboardFocus((byte) 64);
           }
-          var5_long = -this.field_P + bva.b((byte) -107);
+          var5_long = -this.field_P + bva.currentTimeMillis((byte) -107);
           var7 = (int)((-var5_long + 10999L) / 1000L);
           if (0 >= var7) {
             og.b(0);

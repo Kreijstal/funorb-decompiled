@@ -68,7 +68,7 @@ final class ed {
           stackIn_29_0 = ((2 & var4_int) == 0) ? 0 : 1;
           var6 = stackIn_29_0;
           param1.field_Wb = param3.readUnsignedShort(param0 + 93);
-          param1.field_Gb = bva.b((byte) -107) - (long)param3.readInt(-105);
+          param1.field_Gb = bva.currentTimeMillis((byte) -107) - (long)param3.readInt(-105);
           if (var5 != 0) {
             param1.field_Kb = param3.readInt(param0 ^ 64);
           } else {

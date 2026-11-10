@@ -39,7 +39,7 @@ final class so extends TextInputWidget implements mk {
         }
     }
 
-    final static void n(int param0) {
+    final static void pumpAudio(int param0) {
         vb var1 = null;
         int var2 = 0;
         boolean stackIn_20_0 = false;
@@ -50,7 +50,7 @@ final class so extends TextInputWidget implements mk {
         try {
           WheeledMountComponent.field_P.c();
           if (param0 != -16310) {
-            so.n(117);
+            so.pumpAudio(117);
           }
           gg.field_b.c();
           bga.field_b = bga.field_b - 1;

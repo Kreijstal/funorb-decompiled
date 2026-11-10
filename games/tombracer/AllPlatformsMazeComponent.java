@@ -25,7 +25,7 @@ final class AllPlatformsMazeComponent extends MazeComponent {
           field_K = null;
           return;
         }
-        AllPlatformsMazeComponent.a(95, (String) null, (Class) null);
+        AllPlatformsMazeComponent.loadNativeLibraryForClass(95, (String) null, (Class) null);
         field_K = null;
     }
 
@@ -37,7 +37,7 @@ final class AllPlatformsMazeComponent extends MazeComponent {
         }
     }
 
-    final static boolean a(int param0, String param1, Class param2) {
+    final static boolean loadNativeLibraryForClass(int param0, String param1, Class param2) {
         try {
           RuntimeException stackIn_21_0 = null;
           StringBuilder stackIn_21_1 = null;
@@ -265,7 +265,7 @@ final class AllPlatformsMazeComponent extends MazeComponent {
           }
           return var2Lifetime2;
         }
-        AllPlatformsMazeComponent.a(90, (String) null, (Class) null);
+        AllPlatformsMazeComponent.loadNativeLibraryForClass(90, (String) null, (Class) null);
         var7Lifetime1 = var6.readLine();
         var11Lifetime4 = var7Lifetime1;
         var2Lifetime3 = var11Lifetime4;

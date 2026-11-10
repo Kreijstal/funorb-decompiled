@@ -134,7 +134,7 @@ final class PlantComponent extends PrefabComponent {
             !cla.a(9181, param6)) {
             throw new IllegalArgumentException("");
           }
-          var7_int = jj.a(param0, (byte) -119);
+          var7_int = jj.glFormatComponents(param0, (byte) -119);
           var8 = 0;
           stackIn_11_0 = (param6 > param5) ? param5 : param6;
           var9 = stackIn_11_0;

@@ -184,7 +184,7 @@ final class usa extends vw {
         if (param1 != null &&
           this.field_g.c(-30634) &&
           (65535 & this.field_e.field_ld.VertexShaderVersion) >= 257) {
-          this.field_f = this.field_e.field_jd.b(param1.a("dx", (byte) 114, "transparent_water"));
+          this.field_f = this.field_e.field_jd.createVertexShader(param1.a("dx", (byte) 114, "transparent_water"));
         } else {
           this.field_f = null;
         }

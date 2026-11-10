@@ -260,7 +260,7 @@ final class OpenGlTransform3D extends Transform3D {
           return GameKeyHandler.field_c;
         }
         Transform3D var3 = (Transform3D) null;
-        this.a((Transform3D) null, 114);
+        this.copyStateFrom((Transform3D) null, 114);
         GameKeyHandler.field_c[1] = this.field_i;
         GameKeyHandler.field_c[10] = this.field_q;
         GameKeyHandler.field_c[0] = this.field_l;
@@ -269,7 +269,7 @@ final class OpenGlTransform3D extends Transform3D {
         return GameKeyHandler.field_c;
     }
 
-    final void a(Transform3D param0, int param1) {
+    final void copyStateFrom(Transform3D param0, int param1) {
         OpenGlTransform3D var3 = null;
         try {
           var3 = (OpenGlTransform3D) (param0);

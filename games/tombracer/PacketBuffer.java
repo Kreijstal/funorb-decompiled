@@ -431,7 +431,7 @@ class PacketBuffer extends IntrusiveNode {
 
     PacketBuffer(int param0) {
         this.position = 0;
-        this.payload = fba.a(param0, 0);
+        this.payload = fba.acquireByteArray(param0, 0);
     }
 
     final void padZerosTo(int param0, int param1) {

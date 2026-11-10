@@ -1110,7 +1110,7 @@ class MidiPcmStream extends PcmStream {
         int var11 = 0;
         var11 = TombRacer.field_G ? 1 : 0;
         try {
-          param1.b();
+          param1.buildPatchUsage();
           var6_int = 1;
           var7 = null;
           if (0 < param0) {

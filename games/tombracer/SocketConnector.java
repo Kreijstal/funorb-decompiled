@@ -8,7 +8,7 @@ abstract class SocketConnector {
     String host;
     int port;
 
-    abstract java.net.Socket a(int param0) throws IOException;
+    abstract java.net.Socket connect(int param0) throws IOException;
 
     final java.net.Socket a(byte param0) throws IOException {
         int var2 = -71 % ((param0 - 64) / 36);

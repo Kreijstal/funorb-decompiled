@@ -65,7 +65,7 @@ final class iha {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    final static void drawGlowingLine(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         int var15 = 0;
         int var7 = param2 - param0;
         int var8 = param3 - param1;

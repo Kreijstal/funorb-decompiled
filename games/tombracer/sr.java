@@ -95,7 +95,7 @@ final class sr extends WidgetContainer implements ButtonListener {
         int var4_int = 0;
         try {
           var4_int = this.field_z;
-          this.b(var4_int + 1, (byte) 104);
+          this.ensureActionCapacity(var4_int + 1, (byte) 104);
           int var5 = -11 % ((-15 - param2) / 38);
           this.field_x[var4_int] = this.a(param0, (byte) -102, (WidgetListener) (this));
           this.field_w[var4_int] = param1;
@@ -104,7 +104,7 @@ final class sr extends WidgetContainer implements ButtonListener {
         }
     }
 
-    private final void b(int param0, byte param1) {
+    private final void ensureActionCapacity(int param0, byte param1) {
         int var5 = 0;
         int var6 = TombRacer.field_G ? 1 : 0;
         if (this.field_z >= param0) {

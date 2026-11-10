@@ -18,7 +18,7 @@ final class DivisionMazeGenerator extends MazeGenerator {
         field_c = null;
     }
 
-    final static void a(int param0, gqa param1) {
+    final static void appendChatHistory(int param0, gqa param1) {
         int dupTemp$3 = 0;
         int dupTemp$0 = 0;
         int var3 = 0;

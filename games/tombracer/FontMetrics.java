@@ -150,7 +150,7 @@ final class FontMetrics {
         }
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean tryOpenUrlWithWindowsShell(String param0, int param1) {
         String var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -313,7 +313,7 @@ final class FontMetrics {
                                   if ((decompiledFrameRemainder0) &&
                                     (decompiledFrameRemainder0 = (param1 != null))) {
                                     try {
-                                      var11_int = WhiteLightSensorComponent.a((CharSequence) ((Object) var10.substring(4)), (byte) 70);
+                                      var11_int = WhiteLightSensorComponent.parseDecimalInt((CharSequence) ((Object) var10.substring(4)), (byte) 70);
                                       var6 = var6 + param1[var11_int].d();
                                       var5 = -1;
                                       decompiledRegionSelector0 = 0;
@@ -523,7 +523,7 @@ final class FontMetrics {
                                           break regionExit2;
                                         }
                                         try {
-                                          var20_int = WhiteLightSensorComponent.a((CharSequence) ((Object) var19.substring(4)), (byte) 70);
+                                          var20_int = WhiteLightSensorComponent.parseDecimalInt((CharSequence) ((Object) var19.substring(4)), (byte) 70);
                                           var17 = var17 + param3[var20_int].d();
                                           var12 = -1;
                                           decompiledRegionSelector0 = 0;
@@ -810,7 +810,7 @@ final class FontMetrics {
                                   if ((decompiledFrameRemainder0) &&
                                     (decompiledFrameRemainder0 = (null != param1))) {
                                     try {
-                                      var13_int = WhiteLightSensorComponent.a((CharSequence) ((Object) var12_ref_String.substring(4)), (byte) 70);
+                                      var13_int = WhiteLightSensorComponent.parseDecimalInt((CharSequence) ((Object) var12_ref_String.substring(4)), (byte) 70);
                                       var6 = -1;
                                       var7 = var7 + param1[var13_int].d();
                                       if (param3 < var7) {
@@ -920,7 +920,7 @@ final class FontMetrics {
               var2 = param1.getParameter("cookieprefix");
               var3 = var2 + "settings";
               var4 = (String) (JavaScriptBridge.callWindowFunction(param1, 2864, "getcookies"));
-              var5 = rga.a(param0 + 32287, var4, ';');
+              var5 = rga.splitPreservingEmptyParts(param0 + 32287, var4, ';');
               var6 = param0;
               while (var6 < var5.length) {
                 var7 = var5[var6].indexOf('=');

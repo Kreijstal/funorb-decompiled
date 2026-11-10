@@ -63,13 +63,13 @@ final class fq {
         fna.field_k = vc.field_q.readString((byte) -76);
         if (param0 == -68) {
           var4 = (CharSequence) ((Object) fna.field_k);
-          tia.field_b = jd.a(1, var4);
+          tia.field_b = jd.normalizeDisplayName(1, var4);
           return;
         }
         byte[] var2 = (byte[]) null;
         fq.a((byte[]) null, (byte) 68);
         CharSequence var3 = (CharSequence) ((Object) fna.field_k);
-        tia.field_b = jd.a(1, var3);
+        tia.field_b = jd.normalizeDisplayName(1, var3);
     }
 
     final void a(BitPacketBuffer param0, int param1) {

@@ -169,7 +169,7 @@ public final class TombRacer extends rfa implements ls {
             var4_intLifetime1 = 1;
             bka.a((byte) 126);
           }
-          if (PlayPhase.h(param2 ^ 110) &&
+          if (PlayPhase.beginReconnectGracePeriod(param2 ^ 110) &&
             !lca.a(false)) {
             tga.field_a.c(-1073741824, 0, aaa.a(false), 0, param2 ^ -22956, SwitchLinkList.b(0));
             var5_ref_ssa = IntrusiveDequeCursor.a((byte) 65, tga.field_a);
@@ -1222,7 +1222,7 @@ public final class TombRacer extends rfa implements ls {
           if (15 == param0) {
             if (RandomMazeBehaviour.field_n) {
               SwitchModel.o((byte) -108);
-              ik.a(5);
+              ik.clearChatHistory(5);
               era.field_c = true;
               RandomMazeBehaviour.field_n = false;
               iqa.field_c.c(88);
@@ -1290,7 +1290,7 @@ public final class TombRacer extends rfa implements ls {
               var26.decode(param1, (byte) -19);
               mq.field_e = var26.a(false);
               mq.field_e.field_a = mq.field_e.roomsComplete.get(78);
-              mp.a(2, mq.field_e.field_h);
+              mp.setMusicVolume(2, mq.field_e.field_h);
               S2CRoundResultPacket.a(mq.field_e.field_k, -114);
               if (null != baa.field_d &&
                 baa.field_d.field_i != null) {

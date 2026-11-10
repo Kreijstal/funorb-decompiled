@@ -101,7 +101,7 @@ class TextWidgetPainter implements isa, oaa {
         }
     }
 
-    String d(int param0, UiWidget param1) {
+    String getDisplayText(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
         String stackIn_3_0 = null;
@@ -187,19 +187,19 @@ class TextWidgetPainter implements isa, oaa {
             if (var12Lifetime1 != 0 &&
               var12Lifetime1 != 3) {
               if (1 == var12Lifetime1) {
-                this.field_e.a(this.d(-4, param2), this.a(param2, param3, param4, -3) + (var9_int >> 1), var11 + this.a(param6, param1, param2, (byte) -128), param7, param0);
+                this.field_e.a(this.getDisplayText(-4, param2), this.a(param2, param3, param4, -3) + (var9_int >> 1), var11 + this.a(param6, param1, param2, (byte) -128), param7, param0);
               } else {
                 if ((var12Lifetime1 == 2)) {
-                  this.field_e.b(this.d(-4, param2), var9_int + this.a(param2, param3, param4, -3), this.a(param6, param1, param2, (byte) -128) + var11, param7, param0);
+                  this.field_e.b(this.getDisplayText(-4, param2), var9_int + this.a(param2, param3, param4, -3), this.a(param6, param1, param2, (byte) -128) + var11, param7, param0);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_e.c(this.d(-4, param2), this.a(param2, param3, param4, -3), this.a(param6, param1, param2, (byte) -128) + var11, param7, param0);
+              this.field_e.c(this.getDisplayText(-4, param2), this.a(param2, param3, param4, -3), this.a(param6, param1, param2, (byte) -128) + var11, param7, param0);
             }
           } else {
-            this.field_e.a(this.d(param5 ^ -12591, param2), this.a(param2, param3, param4, -3), this.a(param6, param1, param2, (byte) -128), var9_int, var10, param7, param0, this.field_l, this.field_a, this.field_f);
+            this.field_e.a(this.getDisplayText(param5 ^ -12591, param2), this.a(param2, param3, param4, -3), this.a(param6, param1, param2, (byte) -128), var9_int, var10, param7, param0, this.field_l, this.field_a, this.field_f);
           }
           pfa.a(1);
           return;
@@ -399,7 +399,7 @@ class TextWidgetPainter implements isa, oaa {
               if (!(param1.field_l instanceof CachedTextLayout)) {
                 return;
               }
-              ((CachedTextLayout) (param1.field_l)).a(var5, var3_int >> 1, this.field_e, this.d(-4, param1), (byte) -80);
+              ((CachedTextLayout) (param1.field_l)).a(var5, var3_int >> 1, this.field_e, this.getDisplayText(-4, param1), (byte) -80);
               return;
             }
             if (var6Lifetime1 != 2) {
@@ -408,11 +408,11 @@ class TextWidgetPainter implements isa, oaa {
             if (!(param1.field_l instanceof CachedTextLayout)) {
               return;
             }
-            ((CachedTextLayout) (param1.field_l)).a(0, this.field_e, var5, this.d(-4, param1), var3_int);
+            ((CachedTextLayout) (param1.field_l)).a(0, this.field_e, var5, this.getDisplayText(-4, param1), var3_int);
             return;
           }
           if (param1.field_l instanceof CachedTextLayout) {
-            ((CachedTextLayout) (param1.field_l)).a(16512, var5, this.field_e, this.d(-4, param1), 0);
+            ((CachedTextLayout) (param1.field_l)).a(16512, var5, this.field_e, this.getDisplayText(-4, param1), 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -573,7 +573,7 @@ class TextWidgetPainter implements isa, oaa {
           if (!this.field_b) {
             this.c(param1 ^ 14131, param0);
           } else {
-            ((CachedTextLayout) (param0.field_l)).a(this.field_e, (byte) -49, this.d(param1 ^ -14159, param0), this.a((byte) 91, param0), this.field_a, this.b(param1 ^ 2147469490, param0), this.field_l, this.field_f);
+            ((CachedTextLayout) (param0.field_l)).a(this.field_e, (byte) -49, this.getDisplayText(param1 ^ -14159, param0), this.a((byte) 91, param0), this.field_a, this.b(param1 ^ 2147469490, param0), this.field_l, this.field_f);
           }
           stackIn_9_0 = param0.field_l;
           return stackIn_9_0;

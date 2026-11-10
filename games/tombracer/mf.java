@@ -8,7 +8,7 @@ final class mf {
     static int field_a;
 
     protected final void finalize() throws Throwable {
-        this.field_c.b(this.field_b, (byte) 18);
+        this.field_c.queueProgramDeletion(this.field_b, (byte) 18);
         super.finalize();
     }
 

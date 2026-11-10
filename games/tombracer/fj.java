@@ -18,7 +18,7 @@ final class fj {
 
     final void a(int param0, int param1) {
         if (param0 != 0) {
-          fj.c(17);
+          fj.takeDecodedOpaqueSprites(17);
         }
         this.field_d = param1;
     }
@@ -224,7 +224,7 @@ final class fj {
         }
     }
 
-    final static Sprite[] c(int param0) {
+    final static Sprite[] takeDecodedOpaqueSprites(int param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;

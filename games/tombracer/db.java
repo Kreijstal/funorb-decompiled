@@ -178,7 +178,7 @@ final class db extends IntrusiveNode implements Renderable, Collidable, WorldBod
         boolean stackIn_6_0 = false;
         if (param0 != 0) {
           var3 = (TrapModel) null;
-          this.a((TrapModel) null, false);
+          this.addModel((TrapModel) null, false);
         }
         stackIn_6_0 = (this.field_m.o((byte) -82)) && (!this.b(this.field_m.i(param0 ^ 6029), 1569));
         return stackIn_6_0;
@@ -420,7 +420,7 @@ final class db extends IntrusiveNode implements Renderable, Collidable, WorldBod
         if (param0 != -8195) {
           return;
         }
-        this.a(rm.field_a.a((TrapPart) null, (WorldBody) (this), -116), true);
+        this.addModel(rm.field_a.a((TrapPart) null, (WorldBody) (this), -116), true);
     }
 
     public final int getRenderZ(byte param0) {
@@ -620,7 +620,7 @@ final class db extends IntrusiveNode implements Renderable, Collidable, WorldBod
     public final boolean isPushable(byte param0, boolean param1) {
         if (param0 != -55) {
           TrapModel var4 = (TrapModel) null;
-          this.a((TrapModel) null, true);
+          this.addModel((TrapModel) null, true);
         }
         return false;
     }
@@ -669,7 +669,7 @@ final class db extends IntrusiveNode implements Renderable, Collidable, WorldBod
         this.t(param0);
     }
 
-    private final void a(TrapModel param0, boolean param1) {
+    private final void addModel(TrapModel param0, boolean param1) {
         if (param0 == null) {
           return;
         }
@@ -737,7 +737,7 @@ final class db extends IntrusiveNode implements Renderable, Collidable, WorldBod
             var3_int = param1.readBits((byte) 44, 2);
             for (var4 = 0; var4 < var3_int; var4++) {
               var5 = rm.field_a.readModel(param0, param1, false);
-              this.a(var5, true);
+              this.addModel(var5, true);
             }
           } else {
             this.n(-8195);

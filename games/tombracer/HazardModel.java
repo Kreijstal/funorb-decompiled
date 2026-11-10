@@ -112,7 +112,7 @@ final class HazardModel extends TrapModel {
                 !bl.field_a.field_r.equals("")) {
                 if (bl.field_a.field_r.charAt(0) != 91) {
                   var7 = (CharSequence) ((Object) bl.field_a.field_r);
-                  var4 = jd.a(1, var7);
+                  var4 = jd.normalizeDisplayName(1, var7);
                 } else {
                   var4 = bl.field_a.field_r;
                 }

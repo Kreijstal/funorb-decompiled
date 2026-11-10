@@ -17,7 +17,7 @@ final class bva {
         field_a = null;
     }
 
-    final synchronized static long b(byte param0) {
+    final synchronized static long currentTimeMillis(byte param0) {
         long var1 = 0L;
         long var1Lifetime1;
         if (param0 != -107) {

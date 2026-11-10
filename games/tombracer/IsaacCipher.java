@@ -12,7 +12,7 @@ final class IsaacCipher {
     private int[] field_e;
     private int field_c;
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void openSupportPage(java.applet.Applet param0, int param1) {
         try {
           java.net.URL var2 = null;
           RuntimeException stackIn_8_0 = null;
@@ -24,7 +24,7 @@ final class IsaacCipher {
           try {
             try {
               var2 = new java.net.URL(param0.getCodeBase(), "tosupport.ws");
-              param0.getAppletContext().showDocument(sda.a(param0, -1, var2), "_top");
+              param0.getAppletContext().showDocument(sda.appendSessionParameters(param0, -1, var2), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;
@@ -254,7 +254,7 @@ final class IsaacCipher {
         this.remaining = 256;
     }
 
-    final static void a(int param0, int param1, PlatformTaskDispatcher param2, int param3, String param4, int param5, int param6, int param7, int param8, boolean param9, boolean param10, int param11, int param12, long param13) {
+    final static void configureClientConnection(int param0, int param1, PlatformTaskDispatcher param2, int param3, String param4, int param5, int param6, int param7, int param8, boolean param9, boolean param10, int param11, int param12, long param13) {
         try {
           RuntimeException stackIn_16_0 = null;
           StringBuilder stackIn_16_1 = null;

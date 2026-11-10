@@ -6,7 +6,7 @@ final class SoundEffect {
     private int field_b;
     private SoundTone[] field_a;
 
-    final static SoundEffect a(ResourceArchive param0, int param1, int param2) {
+    final static SoundEffect loadFromArchive(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = param0.a(false, param1, param2);
         if (var3 == null) {
           return null;

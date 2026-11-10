@@ -58,7 +58,7 @@ final class LaserShooterComponent extends ShooterComponent {
         }
     }
 
-    final static boolean a(CharSequence param0, boolean param1, char param2) {
+    final static boolean canAppendNameChar(CharSequence param0, boolean param1, char param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_22_0 = null;
@@ -66,7 +66,7 @@ final class LaserShooterComponent extends ShooterComponent {
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!BeamShooterBehaviour.a(62, param2)) {
+          if (!BeamShooterBehaviour.isAccountNameCharacter(62, param2)) {
             return false;
           }
           if (param0 == null) {
@@ -76,7 +76,7 @@ final class LaserShooterComponent extends ShooterComponent {
           if (var3_int >= 12) {
             return false;
           }
-          if (hf.a(114, param2) &&
+          if (hf.isNameSeparator(114, param2) &&
             0 == var3_int) {
             return false;
           }

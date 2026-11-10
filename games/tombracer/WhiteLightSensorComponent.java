@@ -30,7 +30,7 @@ final class WhiteLightSensorComponent extends SwitchComponent {
         return false;
     }
 
-    final static int a(CharSequence param0, byte param1) {
+    final static int parseDecimalInt(CharSequence param0, byte param1) {
         RuntimeException var2 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;

@@ -90,7 +90,7 @@ abstract class SimulationObserver {
         }
     }
 
-    final static void a(byte param0) {
+    final static void composeAgreementText(byte param0) {
         rfa.field_B = FleeLocomotor.field_B + " <b>" + vc.field_s + "</b> " + cq.field_c + " <b>" + mha.field_F + "</b> " + kka.field_p + "<br>" + "<br>" + wg.field_k;
         if (param0 != -27) {
           BeamSegment var2 = (BeamSegment) null;

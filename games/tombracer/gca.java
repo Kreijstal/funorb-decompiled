@@ -30,7 +30,7 @@ final class gca {
         skeletonDeathMessages = null;
     }
 
-    final gca a(int param0) {
+    final gca copy(int param0) {
         if (param0 == 6) {
           return new gca(this.field_h, this.field_m, this.field_k, this.field_e, this.field_b, this.field_c);
         }

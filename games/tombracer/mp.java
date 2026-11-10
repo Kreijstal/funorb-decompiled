@@ -32,7 +32,7 @@ final class mp {
                 decompiledSharedTail0 = (TombRacer.field_G);
               }
               if (decompiledSharedTail0) {
-                var5 = var5 + "; Expires=" + ida.a(bva.b((byte) -107) + 94608000000L, param2 + 21406) + "; Max-Age=" + 94608000L;
+                var5 = var5 + "; Expires=" + ida.formatCookieDate(bva.currentTimeMillis((byte) -107) + 94608000000L, param2 + 21406) + "; Max-Age=" + 94608000L;
               }
               JavaScriptBridge.evaluateScript(param1, 19467, "document.cookie=\"" + var5 + "\"");
               if (param2 != -21407) {
@@ -69,7 +69,7 @@ final class mp {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void setMusicVolume(int param0, int param1) {
         RuntimeException runtimeException = null;
         vb var2 = null;
         int var3 = 0;

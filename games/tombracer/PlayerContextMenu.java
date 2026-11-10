@@ -286,7 +286,7 @@ final class PlayerContextMenu {
               }
             }
             if (var5 != null) {
-              if (!RewardChoicePhase.a(this.field_i, (byte) -50) &&
+              if (!RewardChoicePhase.isPrivateChatTarget(this.field_i, (byte) -50) &&
                 !fua.field_g) {
                 if (!PowerDownItemBehaviour.field_s) {
                   this.field_f.addItem((byte) -77, 8, gl.$cfr$intArgs$a$53ce4ab4c593(114, fj.field_b, new String[]{var7}));

@@ -24,7 +24,7 @@ final class ProgressBarWidget extends UiWidget {
         if (!param0) {
           return;
         }
-        this.g((byte) 12);
+        this.rebuildSprites((byte) 12);
     }
 
     public static void releaseStatics(int param0) {
@@ -96,10 +96,10 @@ final class ProgressBarWidget extends UiWidget {
 
     final void setBounds(byte param0, int param1, int param2, int param3, int param4) {
         super.setBounds(param0, param1, param2, param3, param4);
-        this.g((byte) 12);
+        this.rebuildSprites((byte) 12);
     }
 
-    private final void g(byte param0) {
+    private final void rebuildSprites(byte param0) {
         this.field_w = new Sprite[]{this.c(-69, this.field_C, this.field_x), this.c(91, this.field_v, this.field_G)};
         if (param0 != 12) {
           this.field_y = 10;

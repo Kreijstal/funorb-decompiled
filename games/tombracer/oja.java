@@ -66,8 +66,8 @@ final class oja extends vw {
           this.field_g = null;
           return;
         }
-        this.field_e = this.field_i.field_jd.b(param1.a("dx", (byte) 114, "environment_mapped_water_v"));
-        this.field_g = this.field_i.field_jd.a(param1.a("dx", (byte) 124, "environment_mapped_water_f"));
+        this.field_e = this.field_i.field_jd.createVertexShader(param1.a("dx", (byte) 114, "environment_mapped_water_v"));
+        this.field_g = this.field_i.field_jd.createPixelShader(param1.a("dx", (byte) 124, "environment_mapped_water_f"));
         stackIn_9_1 = (null != this.field_e) && (null != this.field_g) && (this.field_f.b(91));
         this.field_d = stackIn_9_1;
     }

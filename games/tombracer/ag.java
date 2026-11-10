@@ -264,7 +264,7 @@ final class ag implements iq {
           for (var3 = 1; var3 < var2_int; var3++) {
             var4 = param1[var3];
             for (var5 = var3 - 1; var5 >= 0; var5--) {
-              if (mka.a(var4, 13, param1[var5])) {
+              if (mka.compareDisplayModes(var4, 13, param1[var5])) {
                 param1[1 + var5] = param1[var5];
                 continue;
               }

@@ -66,7 +66,7 @@ final class vk implements os {
           }
           if (var3 == 0 &&
             2 == mq.field_a) {
-            var4 = bva.b((byte) -107) - PlatformComponent.field_H;
+            var4 = bva.currentTimeMillis((byte) -107) - PlatformComponent.field_H;
             var6 = (int)((-var4 + 10999L) / 1000L);
             if (var6 <= 0) {
               var3 = 2;

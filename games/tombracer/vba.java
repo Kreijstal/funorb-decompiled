@@ -184,7 +184,7 @@ final class vba extends we {
           GameFont var4 = (GameFont) null;
           discarded$0 = this.a((String) null, (FontMetrics) null, -5, -61, -30, (GameFont) null, 39, -50, -125);
         }
-        return vaa.a(SimpleConditionBehaviour.field_o, param1, -101);
+        return vaa.isBitSet(SimpleConditionBehaviour.field_o, param1, -101);
     }
 
     final static pha a(byte param0, long param1) {

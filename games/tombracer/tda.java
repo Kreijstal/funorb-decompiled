@@ -149,7 +149,7 @@ final class tda extends jg {
         }
     }
 
-    final static void a(int param0, byte param1) {
+    final static void initializeChatHistory(int param0, byte param1) {
         ara.field_xb = 0;
         if (param1 != -71) {
           return;

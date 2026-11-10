@@ -719,35 +719,35 @@ final class ScrollControlWidget extends ArrayWidgetGroup implements ButtonListen
           var4 = CircleMovementLocomotor.a(5907, param0) ? 1 : 0;
           var5 = new TriangleMesh();
           var5.field_I = (short)param0.readBits((byte) 44, 16);
-          var5.field_l = me.a((byte) 76, 16, param0, var5.field_l);
-          var5.field_h = me.a((byte) 88, 16, param0, var5.field_h);
-          var5.field_t = me.a((byte) 73, 16, param0, var5.field_t);
+          var5.field_l = me.readPackedShorts((byte) 76, 16, param0, var5.field_l);
+          var5.field_h = me.readPackedShorts((byte) 88, 16, param0, var5.field_h);
+          var5.field_t = me.readPackedShorts((byte) 73, 16, param0, var5.field_t);
           var5.field_u = (short)param0.readBits((byte) 44, 16);
-          var5.field_B = me.a((byte) 102, 16, param0, var5.field_B);
-          var5.field_w = me.a((byte) 98, 16, param0, var5.field_w);
-          var5.field_f = me.a((byte) 94, 16, param0, var5.field_f);
+          var5.field_B = me.readPackedShorts((byte) 102, 16, param0, var5.field_B);
+          var5.field_w = me.readPackedShorts((byte) 98, 16, param0, var5.field_w);
+          var5.field_f = me.readPackedShorts((byte) 94, 16, param0, var5.field_f);
           if (var3 != 0) {
             var5.field_A = (short)param0.readBits((byte) 44, 16);
-            var5.field_k = me.a((byte) 96, 16, param0, var5.field_k);
-            var5.field_c = me.a((byte) 89, 16, param0, var5.field_c);
-            var5.field_r = me.a((byte) 91, 16, param0, var5.field_r);
-            var5.field_C = me.a((byte) 73, 16, param0, var5.field_C);
-            var5.field_s = me.a((byte) 111, 16, param0, var5.field_s);
-            var5.field_y = me.a((byte) 101, 16, param0, var5.field_y);
+            var5.field_k = me.readPackedShorts((byte) 96, 16, param0, var5.field_k);
+            var5.field_c = me.readPackedShorts((byte) 89, 16, param0, var5.field_c);
+            var5.field_r = me.readPackedShorts((byte) 91, 16, param0, var5.field_r);
+            var5.field_C = me.readPackedShorts((byte) 73, 16, param0, var5.field_C);
+            var5.field_s = me.readPackedShorts((byte) 111, 16, param0, var5.field_s);
+            var5.field_y = me.readPackedShorts((byte) 101, 16, param0, var5.field_y);
           }
           if (var4 != 0) {
             param0.readBits((byte) 44, 16);
-            var5.field_H = me.a((byte) 76, 16, param0, var5.field_H);
-            var5.field_e = me.a((byte) 73, 16, param0, var5.field_e);
-            var5.field_d = me.a((byte) 105, 16, param0, var5.field_d);
-            var5.field_N = me.a((byte) 101, 16, param0, var5.field_N);
-            var5.field_D = me.a((byte) 100, 16, param0, var5.field_D);
+            var5.field_H = me.readPackedShorts((byte) 76, 16, param0, var5.field_H);
+            var5.field_e = me.readPackedShorts((byte) 73, 16, param0, var5.field_e);
+            var5.field_d = me.readPackedShorts((byte) 105, 16, param0, var5.field_d);
+            var5.field_N = me.readPackedShorts((byte) 101, 16, param0, var5.field_N);
+            var5.field_D = me.readPackedShorts((byte) 100, 16, param0, var5.field_D);
           }
           if (CircleMovementLocomotor.a(5907, param0)) {
-            var5.field_M = me.a((byte) 74, 16, param0, var5.field_M);
+            var5.field_M = me.readPackedShorts((byte) 74, 16, param0, var5.field_M);
           }
           if (CircleMovementLocomotor.a(5907, param0)) {
-            var5.field_q = goa.a(16, -4854, param0, var5.field_q);
+            var5.field_q = goa.readPackedByteArray(16, -4854, param0, var5.field_q);
             var6 = 0;
             for (var7 = 0; var7 < var5.field_q.length; var7++) {
               if ((var5.field_q[var7] & 255) > var6) {

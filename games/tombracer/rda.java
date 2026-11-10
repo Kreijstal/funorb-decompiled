@@ -134,7 +134,7 @@ final class rda extends TextureOperator {
         bl.field_a = null;
     }
 
-    final static void e(int param0) {
+    final static void closeNetworkAndCacheResources(int param0) {
         try {
           int var1_int = 0;
           int var3 = TombRacer.field_G ? 1 : 0;

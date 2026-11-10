@@ -248,7 +248,7 @@ final class cw {
         if (null != this.field_e) {
           var2 = 16384;
           this.field_t.a(this.field_e, -1090);
-          this.field_t.a(0, this.field_i);
+          this.field_t.pushFramebuffer(0, this.field_i);
           this.field_e.b(-1, 0);
           this.field_i.a(0, (byte) -91);
           if (this.field_u) {

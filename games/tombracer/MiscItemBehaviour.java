@@ -28,7 +28,7 @@ final class MiscItemBehaviour extends ItemBehaviour {
             MiscItemBehaviour.a((String) null, -83);
           }
           var4 = (CharSequence) ((Object) param0);
-          stackIn_3_0 = tia.field_b.equals(jd.a(1, var4));
+          stackIn_3_0 = tia.field_b.equals(jd.normalizeDisplayName(1, var4));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

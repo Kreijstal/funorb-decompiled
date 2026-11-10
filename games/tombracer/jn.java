@@ -163,7 +163,7 @@ final class jn extends we {
         }
         if (0 == td.field_r) {
           var8Lifetime1 = 205 + param1;
-          stackIn_45_0 = (0L >= bva.b((byte) -107) / 1000L % 2L) ? 0 : 1;
+          stackIn_45_0 = (0L >= bva.currentTimeMillis((byte) -107) / 1000L % 2L) ? 0 : 1;
           var9Lifetime1 = stackIn_45_0;
           stackIn_48_0 = (var9Lifetime1 != 0) ? 0 : 4;
           var10Lifetime1 = stackIn_48_0;

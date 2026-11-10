@@ -5,7 +5,7 @@ final class pu implements isa {
     static int[] field_a;
     static int field_b;
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void clearStatusCookie(java.applet.Applet param0, int param1) {
         String var2 = null;
         String var3 = null;
         long var4 = 0L;

@@ -28,7 +28,7 @@ final class ne {
         }
     }
 
-    final static boolean a(boolean param0, String param1, String param2) {
+    final static boolean containsTextOrReverse(boolean param0, String param1, String param2) {
         String var3 = null;
         String var4 = null;
         boolean stackIn_14_0 = false;
@@ -40,10 +40,10 @@ final class ne {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          var3 = MouseInputHandler.a(param2, 0);
+          var3 = MouseInputHandler.reverseString(param2, 0);
           if (!param0) {
             var4 = (String) null;
-            ne.a(false, (String) null, (String) null);
+            ne.containsTextOrReverse(false, (String) null, (String) null);
           }
           if (-1 != param1.indexOf(param2)) {
             return true;
@@ -107,7 +107,7 @@ final class ne {
           var2 = 1;
           if (param0 >= -49) {
             var5 = (String) null;
-            ne.a(true, (String) null, (String) null);
+            ne.containsTextOrReverse(true, (String) null, (String) null);
           }
           while (PooledObject.field_g.length > var2) {
             var3 = PooledObject.field_g[var2];

@@ -288,7 +288,7 @@ final class ava {
               }
               var19 = var19 + di.field_a;
             }
-            var23 = ua.a(var12.field_Lb, var20, -65);
+            var23 = ua.describeGameJoinStatus(var12.field_Lb, var20, -65);
             var24 = var23;
             var30 = var24;
             var25 = var30;

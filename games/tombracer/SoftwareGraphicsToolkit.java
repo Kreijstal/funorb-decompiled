@@ -50,7 +50,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     private int field_v;
     private ToolkitSprite field_R;
 
-    final tw a(Runnable param0) {
+    final tw contextForThread(Runnable param0) {
         int var2 = 0;
         for (var2 = 0; var2 < this.field_u; var2++) {
           if (this.field_Y[var2].field_b == param0) {
@@ -164,7 +164,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    private final void i(int param0) {
+    private final void createContexts(int param0) {
         int var2 = 0;
         this.field_u = param0;
         this.field_Y = new tw[this.field_u];
@@ -210,13 +210,13 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     }
 
     final void f(int param0, int param1) {
-        tw var3 = this.a((Runnable) ((Object) Thread.currentThread()));
+        tw var3 = this.contextForThread((Runnable) ((Object) Thread.currentThread()));
         this.field_g = param0;
         this.field_U = param1;
         var3.field_B = this.field_U - 255;
     }
 
-    final void c(int param0) {
+    final void updateTime(int param0) {
         ScrollingTexturePixels var4 = null;
         int var5 = 0;
         dw var6 = null;
@@ -513,7 +513,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
     }
 
     final Transform3D e() {
-        tw var1 = this.a((Runnable) ((Object) Thread.currentThread()));
+        tw var1 = this.contextForThread((Runnable) ((Object) Thread.currentThread()));
         return (Transform3D) ((Object) var1.field_u);
     }
 
@@ -1392,11 +1392,11 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         try {
           this.field_F = new SoftReferenceCache(256);
           this.field_A = new pna();
-          this.i(1);
+          this.createContexts(1);
           this.g(0);
           ija.a(true, (byte) 100, true);
           this.field_E = true;
-          this.field_j = (int)bva.b((byte) -107);
+          this.field_j = (int)bva.currentTimeMillis((byte) -107);
         } catch (Throwable throwable) {
           throwable.printStackTrace();
           this.a(true);
@@ -2952,7 +2952,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         if (this.field_u > 1) {
           throw new IllegalStateException("No MT");
         }
-        this.i(this.field_u);
+        this.createContexts(this.field_u);
         this.g(0);
     }
 
@@ -3083,7 +3083,7 @@ final class SoftwareGraphicsToolkit extends GraphicsToolkit {
         tw var11;
         iua var12;
         int var13;
-        var11 = this.a((Runnable) ((Object) Thread.currentThread()));
+        var11 = this.contextForThread((Runnable) ((Object) Thread.currentThread()));
         var12 = var11.field_v;
         var12.field_j = false;
         param0 = param0 - this.field_p;

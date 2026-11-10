@@ -157,8 +157,8 @@ final class ama extends lba {
             if (var2_int > -vc.field_q.position + param0) {
               var2_int = -vc.field_q.position + param0;
             }
-            OpenGlTransform3D.field_e.a(param1 + 1, vc.field_q.position, vc.field_q.payload, var2_int);
-            MiscItemBehaviour.field_s = bva.b((byte) -107);
+            OpenGlTransform3D.field_e.readFully(param1 + 1, vc.field_q.position, vc.field_q.payload, var2_int);
+            MiscItemBehaviour.field_s = bva.currentTimeMillis((byte) -107);
             vc.field_q.position = vc.field_q.position + var2_int;
             if (param0 > vc.field_q.position) {
               return false;

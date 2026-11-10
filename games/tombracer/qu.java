@@ -29,7 +29,7 @@ abstract class qu {
 
     abstract void a(boolean param0, byte[] param1);
 
-    abstract byte[] a(boolean param0);
+    abstract byte[] toByteArray(boolean param0);
 
     static {
         int var2 = 0;

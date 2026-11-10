@@ -35,7 +35,7 @@ final class qf extends PacketBuffer {
         this.payload[fieldTemp$5] = (byte)(var3 >> 24);
     }
 
-    final static String a(int param0, String param1, String param2, String param3) {
+    final static String replaceAllOccurrences(int param0, String param1, String param2, String param3) {
         int var5 = TombRacer.field_G ? 1 : 0;
         int var4 = param3.indexOf(param2);
         while (var4 != -1) {

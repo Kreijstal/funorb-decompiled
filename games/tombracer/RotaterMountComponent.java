@@ -42,14 +42,14 @@ final class RotaterMountComponent extends PrefabComponent {
         int var1 = 0;
         if (ot.field_v < 224) {
           var1 = ot.field_v % 32;
-          mp.a(2, -var1 + (ot.field_v + 32));
+          mp.setMusicVolume(2, -var1 + (ot.field_v + 32));
           if (param0 != 63) {
             RotaterMountComponent.A(63);
             return;
           }
           return;
         }
-        mp.a(2, 256);
+        mp.setMusicVolume(2, 256);
         if (param0 != 63) {
           RotaterMountComponent.A(63);
           return;
@@ -181,7 +181,7 @@ final class RotaterMountComponent extends PrefabComponent {
               } else {
                 var7 = sma.field_e;
                 synchronized (var7) {
-                  sma.field_e.a((byte) -34, var12, var9);
+                  sma.field_e.inflateInto((byte) -34, var12, var9);
                 }
               }
               stackIn_21_0 = var6;

@@ -31,7 +31,7 @@ final class qfa {
     }
 
     final static void a(int param0, int param1) {
-        mp.a(param1 - 20813, param0);
+        mp.setMusicVolume(param1 - 20813, param0);
         if (param1 != 20815) {
           qfa.a(61, 98);
         }

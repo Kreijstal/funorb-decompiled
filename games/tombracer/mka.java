@@ -130,7 +130,7 @@ final class mka {
         this.field_h.field_d = param0 * this.field_a.field_f + param1 * this.field_a.field_d;
     }
 
-    final static boolean a(dh param0, int param1, dh param2) {
+    final static boolean compareDisplayModes(dh param0, int param1, dh param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;

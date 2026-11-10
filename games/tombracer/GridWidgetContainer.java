@@ -363,14 +363,14 @@ final class GridWidgetContainer extends ArrayWidgetGroup {
           ArrayUtils.fill(var10, 0, param5, 1);
           var9 = new int[param6];
           ArrayUtils.fill(var9, 0, param6, 1);
-          this.a(var10, (byte) -97);
+          this.setColumnWidths(var10, (byte) -97);
           this.setColumnWeights(var9, 48);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sta.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 
-    private final void a(int[] param0, byte param1) {
+    private final void setColumnWidths(int[] param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         int[] var5 = null;

@@ -452,7 +452,7 @@ final class RoomEffectTraps {
             !cla.a(9181, param4)) {
             throw new IllegalArgumentException("");
           }
-          var7_int = jj.a(param5, (byte) -104);
+          var7_int = jj.glFormatComponents(param5, (byte) -104);
           var8 = 0;
           if (param0 <= 51) {
             var24 = (String) null;

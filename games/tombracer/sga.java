@@ -7,7 +7,7 @@ final class sga extends hha {
     static su field_n;
     SectorCacheStore field_o;
 
-    final int a(byte param0) {
+    final int getProgress(byte param0) {
         if (param0 >= -7) {
           return -69;
         }

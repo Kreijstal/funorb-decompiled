@@ -112,7 +112,7 @@ final class BeamSegment {
           var5 = 33 % ((param1 + 53) / 54);
           for (var6 = 0; var6 < param3.length; var6++) {
             if (param3[var6].field_a) {
-              discarded$1 = var8.append(jd.a(param3[var6].field_d, 0).toString());
+              discarded$1 = var8.append(jd.getPrimitiveType(param3[var6].field_d, 0).toString());
             } else {
               discarded$2 = var8.append(ArrayWidgetGroup.a(param3[var6].field_d.getClass(), (byte) -88));
             }

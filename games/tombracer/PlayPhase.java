@@ -435,12 +435,12 @@ final class PlayPhase extends MatchPhase {
         }
     }
 
-    final static boolean h(int param0) {
+    final static boolean beginReconnectGracePeriod(int param0) {
         if (param0 <= 83) {
           PlayPhase.a(-107, -110, (byte) -67, -77, -33, 57);
         }
         fpa.field_c = true;
-        oga.field_f = 15000L + bva.b((byte) -107);
+        oga.field_f = 15000L + bva.currentTimeMillis((byte) -107);
         return Transform3D.field_c == 11 ? true : false;
     }
 
@@ -503,7 +503,7 @@ final class PlayPhase extends MatchPhase {
           var11_ref_StringLifetime2 = var8;
           var11_ref_StringLifetime3 = var8;
           if (OpenGlTransform3D.field_e == null &&
-            !joa.a(false, (byte) -58)) {
+            !joa.pollGameSocketConnection(false, (byte) -58)) {
             stackIn_8_0 = -1;
             return stackIn_8_0;
           }
@@ -572,7 +572,7 @@ final class PlayPhase extends MatchPhase {
               PressureSwitchBehaviour.field_s = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
-                pu.a(di.a(21), 255);
+                pu.clearStatusCookie(di.a(21), 255);
                 io.field_b = ArchiveNetworkClient.field_f;
                 dea.a(60);
                 PushableBlockMazeComponent.field_L = false;

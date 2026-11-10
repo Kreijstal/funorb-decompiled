@@ -7,7 +7,7 @@ final class jd extends OpenGlTexture implements lv {
     static String field_m;
     private int field_n;
 
-    final static String a(int param0, CharSequence param1) {
+    final static String normalizeDisplayName(int param0, CharSequence param1) {
         int var6 = 0;
         StringBuilder discarded$0 = null;
         RuntimeException stackIn_31_0 = null;
@@ -33,14 +33,14 @@ final class jd extends OpenGlTexture implements lv {
             field_m = (String) null;
           }
           while (var2_int < var3) {
-            if (hf.a(param0 ^ 114, param1.charAt(var2_int))) {
+            if (hf.isNameSeparator(param0 ^ 114, param1.charAt(var2_int))) {
               var2_int++;
               continue;
             }
             break;
           }
           while (var2_int < var3) {
-            if (hf.a(param0 ^ 116, param1.charAt(var3 - 1))) {
+            if (hf.isNameSeparator(param0 ^ 116, param1.charAt(var3 - 1))) {
               var3--;
               continue;
             }
@@ -56,7 +56,7 @@ final class jd extends OpenGlTexture implements lv {
           var5 = new StringBuilder(var4);
           for (var6 = var2_int; var3 > var6; var6++) {
             var7 = param1.charAt(var6);
-            if (BeamShooterBehaviour.a(param0 + 16, (char) var7)) {
+            if (BeamShooterBehaviour.isAccountNameCharacter(param0 + 16, (char) var7)) {
               var8 = cp.a((byte) 0, (char) var7);
               if (0 != var8) {
                 discarded$0 = var5.append((char) var8);
@@ -81,7 +81,7 @@ final class jd extends OpenGlTexture implements lv {
         }
     }
 
-    final static Class a(Object param0, int param1) {
+    final static Class getPrimitiveType(Object param0, int param1) {
         RuntimeException var2 = null;
         Class stackIn_5_0 = null;
         Class stackIn_8_0 = null;
@@ -203,7 +203,7 @@ final class jd extends OpenGlTexture implements lv {
     public final void bind(byte param0) {
         if (param0 < 32) {
           CharSequence var3 = (CharSequence) null;
-          jd.a(-106, (CharSequence) null);
+          jd.normalizeDisplayName(-106, (CharSequence) null);
         }
         super.bind((byte) 56);
     }

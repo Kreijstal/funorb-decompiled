@@ -12,7 +12,7 @@ final class lp {
     static ko field_h;
     static int field_g;
 
-    final void a(int param0, int param1, PacketBuffer param2) {
+    final void decode(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -86,7 +86,7 @@ final class lp {
               var2.addLast((byte) -75, WeaponShooterBehaviour.a(param0 - 93, var3));
               continue;
             }
-            var2.addLast((byte) -81, hb.a(var3, false));
+            var2.addLast((byte) -81, hb.readQuotedToken(var3, false));
           }
           stackIn_18_0 = var2;
           return stackIn_18_0;

@@ -5,7 +5,7 @@ final class qua extends IntrusiveNode {
     byte[] field_g;
     NodeHashTable field_f;
 
-    final void b() {
+    final void buildPatchUsage() {
         int[] var1;
         int[] var2;
         MidiFileReader var4;

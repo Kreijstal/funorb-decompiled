@@ -22,7 +22,7 @@ final class su {
         }
     }
 
-    final static ToolkitSprite a(SpriteData param0, GraphicsToolkit param1, byte param2) {
+    final static ToolkitSprite createToolkitSprite(SpriteData param0, GraphicsToolkit param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         ToolkitSprite stackIn_4_0 = null;

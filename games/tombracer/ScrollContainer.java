@@ -25,7 +25,7 @@ final class ScrollContainer extends ArrayWidgetGroup {
           if (param2 > -7) {
             field_z = 29L;
           }
-          stackIn_6_0 = pn.i(94);
+          stackIn_6_0 = pn.createDecodedSprites(94);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -742,7 +742,7 @@ final class ScrollContainer extends ArrayWidgetGroup {
         }
     }
 
-    final void a(int param0, ScrollControlWidget param1, boolean param2) {
+    final void setVerticalScrollControl(int param0, ScrollControlWidget param1, boolean param2) {
         try {
           this.field_x = param1;
           this.children[param0] = (UiWidget) ((Object) param1);

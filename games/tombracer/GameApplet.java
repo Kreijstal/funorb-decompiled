@@ -135,7 +135,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (Corpse.field_j == this &&
             !tla.field_b) {
-            BlockModel.field_t = bva.b((byte) -107) + 4000L;
+            BlockModel.field_t = bva.currentTimeMillis((byte) -107) + 4000L;
             return;
           }
           return;
@@ -155,7 +155,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         java.awt.Insets var6 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_long = bva.b((byte) -107);
+          var2_long = bva.currentTimeMillis((byte) -107);
           if (param0 != 270) {
             return;
           }
@@ -208,7 +208,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (param0 != -6) {
             this.field_b = true;
           }
-          var2_long = bva.b((byte) -107);
+          var2_long = bva.currentTimeMillis((byte) -107);
           var4 = bv.field_xb[aaa.field_b];
           bv.field_xb[aaa.field_b] = var2_long;
           aaa.field_b = 31 & 1 + aaa.field_b;
@@ -239,8 +239,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (this == Corpse.field_j &&
             !tla.field_b) {
-            BlockModel.field_t = bva.b((byte) -107);
-            TrapSpawner.a(0, 5000L);
+            BlockModel.field_t = bva.currentTimeMillis((byte) -107);
+            TrapSpawner.sleepMillis(0, 5000L);
             nea.field_c = null;
             this.shutdown((byte) 109, false);
             return;
@@ -468,7 +468,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
                       if (sqa.a((CharSequence) ((Object) var4), -3) &&
-                        !(WhiteLightSensorComponent.a((CharSequence) ((Object) var4), (byte) 70) >= 10)) {
+                        !(WhiteLightSensorComponent.parseDecimalInt((CharSequence) ((Object) var4), (byte) 70) >= 10)) {
                         this.reportError(-6738, "wrongjava");
                         decompiledFrameRemainder3 = (var5 != 0);
                       }
@@ -524,7 +524,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     var3_ref_Throwable = decompiledCaughtException;
                   }
                 }
-                wk.a((byte) -84);
+                wk.refreshReportedHeapLimit((byte) -84);
                 this.recreateCanvas((byte) 68);
                 gn.field_C = ns.a(117, mma.field_a, (java.awt.Component) ((Object) nma.field_l), qf.field_i);
                 this.initializeGame(-71);
@@ -532,7 +532,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (BlockModel.field_t != 0L) {
-                    stackIn_99_0 = $cfr$lcmp(~BlockModel.field_t, ~bva.b((byte) -107));
+                    stackIn_99_0 = $cfr$lcmp(~BlockModel.field_t, ~bva.currentTimeMillis((byte) -107));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_99_0 >= 0)) {
@@ -587,7 +587,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             !tla.field_b) {
             bsa.field_k = true;
             if (GameFont.field_c &&
-              -lt.field_b + bva.b((byte) -107) > 1000L) {
+              -lt.field_b + bva.currentTimeMillis((byte) -107) > 1000L) {
               var2 = param0.getClipBounds();
               if (var2 != null) {
                 if (var2.width < rv.field_a) {
@@ -770,7 +770,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               var8 = dsa.field_c.a((Runnable) (this), 425, 1);
               while (true) {
                 if (var8.field_b == 0) {
-                  TrapSpawner.a(0, 10L);
+                  TrapSpawner.sleepMillis(0, 10L);
                   if (var9 == 0) {
                     continue;
                   }
@@ -886,7 +886,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           VortexBehaviour.field_n = true;
           bsa.field_k = true;
           ReportAbuseDialog.field_Cb = false;
-          lt.field_b = bva.b((byte) -107);
+          lt.field_b = bva.currentTimeMillis((byte) -107);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -86,7 +86,7 @@ final class VortexBehaviour extends Behaviour {
             if (this.trap.intersectsRect((byte) 110, var22, var21, var20.getHeight((byte) 55), var20.getWidth(-40))) {
               var23 = var21 - var2 >> 16;
               var24 = -var3 + var22 >> 16;
-              var25 = ConstrainToRectangleLocomotor.a(var24, var23, 124);
+              var25 = ConstrainToRectangleLocomotor.approximateVectorLength(var24, var23, 124);
               if (var25 <= var11 &&
                 var25 != 0) {
                 var6 = (var25 << 16) / var11;

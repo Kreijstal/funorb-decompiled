@@ -49,7 +49,7 @@ final class InvertOperator extends TextureOperator {
         return var13;
     }
 
-    final static IndexedSprite d(byte param0) {
+    final static IndexedSprite buildIndexedSprite(byte param0) {
         if (param0 <= 80) {
           field_n = (String) null;
         }

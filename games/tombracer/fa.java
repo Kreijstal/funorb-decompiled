@@ -268,7 +268,7 @@ final class fa {
               return false;
             }
             if (param1 >= 1 &&
-              param1 <= um.a(param3, -2, param0)) {
+              param1 <= um.daysInMonth(param3, -2, param0)) {
               return true;
             }
             return false;

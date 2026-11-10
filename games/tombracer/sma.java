@@ -75,7 +75,7 @@ final class sma {
             stackIn_9_0 = 100;
             return stackIn_9_0;
           }
-          var10 = eba.a((byte) 38, param0);
+          var10 = eba.nativeLibraryFileName((byte) 38, param0);
           if (var10 == null) {
             stackIn_12_0 = -1;
             return stackIn_12_0;

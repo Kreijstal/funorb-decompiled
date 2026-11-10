@@ -6,7 +6,7 @@ final class kea {
     static su field_c;
     static String field_a;
 
-    final static void b(int param0) {
+    final static void openDisplaySettingsDialog(int param0) {
         if (param0 <= -17) {
           ModelFactory.field_a.e(true);
           ModelFactory.field_a.c(new DisplaySettingsDialog(ModelFactory.field_a), 89);

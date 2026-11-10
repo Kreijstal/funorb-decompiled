@@ -45,7 +45,7 @@ final class NanoTickClock extends GameClock {
         return var4;
     }
 
-    final long a(byte param0) {
+    final long getMillisUntilNextTick(byte param0) {
         this.field_d = this.field_d + this.d(-97);
         if (param0 < 27) {
           NanoTickClock.a(false);

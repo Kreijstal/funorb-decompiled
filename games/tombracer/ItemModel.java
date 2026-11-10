@@ -307,12 +307,12 @@ final class ItemModel extends TrapModel {
           if (hna.field_e == null) {
             var7 = new ama();
             var19 = var7.a(16, 128, 0, 128);
-            hna.field_e = bw.a(270, var19, false);
+            hna.field_e = bw.wrapByteStorage(270, var19, false);
           }
           if (null == gu.field_l) {
             var9 = new dca();
             var20 = var9.a(128, 16, 123, 128);
-            gu.field_l = bw.a(270, var20, false);
+            gu.field_l = bw.wrapByteStorage(270, var20, false);
           }
           var11 = param0.field_zc;
           if (param1 < 116) {
@@ -323,7 +323,7 @@ final class ItemModel extends TrapModel {
               return;
             }
             var21 = LightSourceModel.a(4.0f, 16.0f, 128, new tda(419684), 8, 128, 0.5f, 16, 4, 4.0f, 0.6000000238418579f);
-            uga.field_m = bw.a(270, var21, false);
+            uga.field_m = bw.wrapByteStorage(270, var21, false);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "kga.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

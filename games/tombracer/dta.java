@@ -356,7 +356,7 @@ final class dta {
                 return;
               }
               var42 = dw.field_j;
-              var31Lifetime3 = (int)(128.0 - Math.sin((double)bva.b((byte) -107) / 512.0) * 128.0);
+              var31Lifetime3 = (int)(128.0 - Math.sin((double)bva.currentTimeMillis((byte) -107) / 512.0) * 128.0);
               vv.a(var31Lifetime3, (byte) -73, var31Lifetime3, 1, SingleChildWidget.field_v, var42.toUpperCase(), 40 + (SwitchLinkList.b(0) >> 1) + (SwitchLinkList.b(0) >> 2), 11903361, param1 + param0 >> 1);
               var32Lifetime2 = param4.field_r - param4.matchState.c((byte) 115, param2);
               if (var32Lifetime2 >= 250) {

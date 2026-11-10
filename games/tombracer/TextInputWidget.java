@@ -30,7 +30,7 @@ class TextInputWidget extends FocusableWidget {
               if (this.field_B != this.field_I) {
                 var5.a(-1, (UiWidget) (this), param1, param0, this.field_B, this.field_I);
               }
-              var6 = bva.b((byte) -107);
+              var6 = bva.currentTimeMillis((byte) -107);
               if ((-this.field_H + var6) % 1000L < 500L) {
                 var5.a(this.field_I, param1, param2 - 22502, param0, (UiWidget) (this));
               }
@@ -56,7 +56,7 @@ class TextInputWidget extends FocusableWidget {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          this.field_H = bva.b((byte) -107);
+          this.field_H = bva.currentTimeMillis((byte) -107);
           if (param0 != 60 &&
             param0 != 62) {
             if (!param3) {
@@ -446,7 +446,7 @@ class TextInputWidget extends FocusableWidget {
           if (null == ak.field_o) {
             var1_ref = new ot();
             var2 = var1_ref.a(128, true, 16, 128);
-            ak.field_o = bw.a(270, var2, false);
+            ak.field_o = bw.wrapByteStorage(270, var2, false);
           }
           if (param0 != 12890) {
             return;
@@ -454,7 +454,7 @@ class TextInputWidget extends FocusableWidget {
           if (lt.field_f == null) {
             var1 = new pn();
             var2Lifetime1 = var1.a(128, 0, 16, 128);
-            lt.field_f = bw.a(270, var2Lifetime1, false);
+            lt.field_f = bw.wrapByteStorage(270, var2Lifetime1, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -604,7 +604,7 @@ class TextInputWidget extends FocusableWidget {
                 this.field_I = var6;
               }
             }
-            this.field_H = bva.b((byte) -107);
+            this.field_H = bva.currentTimeMillis((byte) -107);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -646,7 +646,7 @@ class TextInputWidget extends FocusableWidget {
               stackIn_11_2 = var8_int;
             }
             this.a(stackIn_10_1, stackIn_11_2);
-            var8_long = bva.b((byte) -107);
+            var8_long = bva.currentTimeMillis((byte) -107);
             stackIn_15_1 = !(250L <= -this.field_G + var8_long);
             this.field_E = stackIn_15_1;
             if (this.field_E) {
@@ -951,7 +951,7 @@ class TextInputWidget extends FocusableWidget {
           this.field_C = param2;
           this.a(true, -16719, param0);
           this.field_D = true;
-          this.field_H = bva.b((byte) -107);
+          this.field_H = bva.currentTimeMillis((byte) -107);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

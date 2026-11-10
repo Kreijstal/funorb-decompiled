@@ -49,7 +49,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
             if (var4 == 0) {
               return;
             }
-            this.a(param0, var4, (byte) 46);
+            this.decodeOpcode(param0, var4, (byte) 46);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -65,7 +65,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         }
     }
 
-    private final void a(PacketBuffer param0, int param1, byte param2) {
+    private final void decodeOpcode(PacketBuffer param0, int param1, byte param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_23_0 = null;
@@ -112,7 +112,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
               }
             }
           } else {
-            this.field_l = rga.a(32287, param0.readString((byte) -76), '<');
+            this.field_l = rga.splitPreservingEmptyParts(32287, param0.readString((byte) -76), '<');
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

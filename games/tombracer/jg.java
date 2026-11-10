@@ -17,7 +17,7 @@ abstract class jg {
           if (ArchiveNetworkClient.a((byte) -72, param2)) {
             return false;
           }
-          if (eba.a(param2, 6912)) {
+          if (eba.hasUniformCharacters(param2, 6912)) {
             return false;
           }
           if (ld.a(false, param2)) {
@@ -26,13 +26,13 @@ abstract class jg {
           if (param1.length() == 0) {
             return true;
           }
-          if (ne.a(true, param2, param1)) {
+          if (ne.containsTextOrReverse(true, param2, param1)) {
             return false;
           }
           if (kv.a((byte) 36, param2, param1)) {
             return false;
           }
-          if (jea.a(true, param2, param1)) {
+          if (jea.containsForwardOrReversed(true, param2, param1)) {
             return false;
           }
           if (param0 < -69) {

@@ -23,7 +23,7 @@ final class ft {
           }
           try {
             var2 = new java.net.URL(param1.getCodeBase(), "toserverlist.ws");
-            param1.getAppletContext().showDocument(sda.a(param1, -1, var2), "_top");
+            param1.getAppletContext().showDocument(sda.appendSessionParameters(param1, -1, var2), "_top");
           } catch (Exception exception) {
             exception.printStackTrace();
           }

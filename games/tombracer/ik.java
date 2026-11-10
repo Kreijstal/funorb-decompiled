@@ -110,7 +110,7 @@ final class ik extends IntrusiveNode {
         return var1;
     }
 
-    final static void a(int param0) {
+    final static void clearChatHistory(int param0) {
         int var1_int = 0;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;

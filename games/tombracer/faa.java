@@ -16,7 +16,7 @@ final class faa implements Renderable {
         }
     }
 
-    final static boolean a(String param0, int param1, String param2) {
+    final static boolean accountNamesMatch(String param0, int param1, String param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -34,9 +34,9 @@ final class faa implements Renderable {
             faa.a(true);
           }
           var5 = (CharSequence) ((Object) param0);
-          var3 = jd.a(1, var5);
+          var3 = jd.normalizeDisplayName(1, var5);
           var6 = (CharSequence) ((Object) param2);
-          var4 = jd.a(1, var6);
+          var4 = jd.normalizeDisplayName(1, var6);
           if (var3 == null &&
             var4 == null) {
             return true;
@@ -83,7 +83,7 @@ final class faa implements Renderable {
     public static void a(boolean param0) {
         if (param0) {
           String var2 = (String) null;
-          faa.a((String) null, -123, (String) null);
+          faa.accountNamesMatch((String) null, -123, (String) null);
           field_g = null;
           return;
         }

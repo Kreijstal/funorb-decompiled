@@ -116,7 +116,7 @@ final class ck {
             rra.field_e.b(param11 - 25575, vw.field_b);
           }
           rra.field_e.b(-127, bsa.field_j);
-          bsa.field_j.field_vb.a(false, Corpse.field_i);
+          bsa.field_j.field_vb.applyStyle(false, Corpse.field_i);
           var15 = bsa.field_j.field_vb;
           bsa.field_j.field_vb.field_bb = 1;
           var15.field_z = 1;
@@ -172,7 +172,7 @@ final class ck {
           wo.field_k.b(param11 - 25572, rv.field_c);
           wo.field_k.b(-122, BrickOperator.field_v);
           HazardModel.field_t = new jea(0L, rfa.field_C);
-          HazardModel.field_t.a(false, Corpse.field_i);
+          HazardModel.field_t.applyStyle(false, Corpse.field_i);
           HazardModel.field_t.field_bb = 1;
           var16 = HazardModel.field_t;
           var16.field_z = 1;
@@ -317,7 +317,7 @@ final class ck {
             pk.field_z = new jea(0L, hg.field_g);
             hw.field_a = new jea(0L, hg.field_g);
             dl.field_t = new jea(0L, tka.field_q);
-            dl.field_t.a(false, Corpse.field_i);
+            dl.field_t.applyStyle(false, Corpse.field_i);
             dl.field_t.field_bb = 1;
             break;
           }
@@ -466,7 +466,7 @@ final class ck {
         int var13Lifetime1;
         var19 = TombRacer.field_G ? 1 : 0;
         try {
-          var5_int = CauldronComponent.a((byte) 93, 3 * (param4 - param0));
+          var5_int = CauldronComponent.bitLength((byte) 93, 3 * (param4 - param0));
           var6 = 3 * param0;
           var7 = -10 + var5_int;
           td.b((byte) -62);

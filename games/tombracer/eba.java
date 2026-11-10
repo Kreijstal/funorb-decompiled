@@ -49,7 +49,7 @@ final class eba extends pb {
         }
     }
 
-    final static String a(byte param0, String param1) {
+    final static String nativeLibraryFileName(byte param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String stackIn_2_0 = null;
@@ -90,7 +90,7 @@ final class eba extends pb {
         }
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean hasUniformCharacters(String param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

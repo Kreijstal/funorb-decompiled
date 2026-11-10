@@ -861,7 +861,7 @@ final class gja extends ka {
               this.field_lb = FullscreenConfirmationDialog.a(this.field_lb, 114, this.field_fb);
               this.field_m = FullscreenConfirmationDialog.a(this.field_m, 114, this.field_fb);
               this.field_p = FullscreenConfirmationDialog.a(this.field_p, 123, this.field_fb);
-              this.field_w = kaa.a(0, this.field_w, this.field_fb);
+              this.field_w = kaa.copyByteRange(0, this.field_w, this.field_fb);
               this.field_eb = fba.a(1, this.field_eb, this.field_fb);
               this.field_t = fba.a(1, this.field_t, this.field_fb);
               if (null != param1.field_l &&
@@ -1281,11 +1281,11 @@ final class gja extends ka {
           var4 = param1;
           while (var4 < var3) {
             var5 = cq.field_b[var4];
-            var5.a(6, 6, 6, true, 1);
+            var5.scaleVertices(6, 6, 6, true, 1);
             var5.computeBounds((byte) -120);
             var6 = new int[]{var5.field_i + var5.field_z >> 1, var5.field_b + var5.field_m >> 1, var5.field_a + var5.field_p >> 1};
             OpenGlTexture.field_e[var4] = var6;
-            var5.a(-var6[2], -var6[0], (byte) -86, -var6[1]);
+            var5.translateVertices(-var6[2], -var6[0], (byte) -86, -var6[1]);
             var4++;
             if (var7 != 0) {
               return;
@@ -1401,7 +1401,7 @@ final class gja extends ka {
         }
     }
 
-    final static byte[] a(int param0, File param1, int param2) {
+    final static byte[] readFileBytes(int param0, File param1, int param2) {
         try {
           byte[] var3 = null;
           IOException var3_ref = null;
@@ -1795,14 +1795,14 @@ final class gja extends ka {
             this.field_S.a(-127, 2, this.field_d.field_e);
             boolean decompiledSharedTail0 = ((55 & this.field_h) == 0);
             if (!decompiledSharedTail0) {
-              this.field_S.d(0, true);
+              this.field_S.setLightingEnabled(0, true);
               var2_int = 1;
               this.field_S.a(-127, 3, this.field_O.field_e);
               this.field_S.bindVertexLayout(this.field_S.field_nc, -32);
               decompiledSharedTail0 = (var7 != 0);
             }
             if (decompiledSharedTail0) {
-              this.field_S.d(0, false);
+              this.field_S.setLightingEnabled(0, false);
               var2_int = 0;
               this.field_S.bindVertexLayout(this.field_S.field_ob, -32);
             }
@@ -2143,7 +2143,7 @@ final class gja extends ka {
             stackIn_7_0 = this.field_S;
             stackIn_8_1 = !(this.field_f);
             ((HardwareGraphicsToolkit) (Object) stackIn_7_0).a(stackIn_8_1, 0);
-            this.field_S.d(0, false);
+            this.field_S.setLightingEnabled(0, false);
             this.field_S.a(pea.field_c, 1, -79);
             this.field_S.a(1, false, pea.field_c);
             var4 = 0;
@@ -2870,7 +2870,7 @@ final class gja extends ka {
               param0.field_nb = array$15;
               var12Lifetime1 = 0;
               while (this.field_L > var12Lifetime1) {
-                param0.field_nb[var12Lifetime1] = this.field_nb[var12Lifetime1].a(6);
+                param0.field_nb[var12Lifetime1] = this.field_nb[var12Lifetime1].copy(6);
                 var12Lifetime1++;
                 if (var13 != 0) {
                   decompiledFrameCompleted0 = false;

@@ -20,7 +20,7 @@ final class us {
         return this.field_d;
     }
 
-    final static java.net.URL a(byte param0, java.net.URL param1, String param2, int param3, String param4) {
+    final static java.net.URL rewriteAppletUrl(byte param0, java.net.URL param1, String param2, int param3, String param4) {
         try {
           StringBuilder discarded$0 = null;
           StringBuilder discarded$1 = null;

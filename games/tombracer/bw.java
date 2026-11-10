@@ -5,7 +5,7 @@ final class bw {
     static int[] field_b;
     static Sprite field_a;
 
-    final static Object a(int param0, byte[] param1, boolean param2) {
+    final static Object wrapByteStorage(int param0, byte[] param1, boolean param2) {
         ie var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_2_0 = null;

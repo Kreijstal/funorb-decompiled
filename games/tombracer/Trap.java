@@ -2918,7 +2918,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
         this.field_cb = param1 ? true : false;
     }
 
-    final static void a(int param0, long param1) {
+    final static void sleep(int param0, long param1) {
         try {
           Throwable decompiledCaughtException = null;
           InterruptedException var3 = null;

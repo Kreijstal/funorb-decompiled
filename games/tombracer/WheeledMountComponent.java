@@ -45,7 +45,7 @@ final class WheeledMountComponent extends PathMoverComponent {
         RuntimeException var1 = null;
         var3 = TombRacer.field_G ? 1 : 0;
         try {
-          so.n(-16310);
+          so.pumpAudio(-16310);
           var1_int = -106 / ((-7 - param0) / 37);
           var2 = (fla) (nl.field_f.first(-80));
           while (var2 != null) {

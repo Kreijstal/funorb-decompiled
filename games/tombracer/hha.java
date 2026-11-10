@@ -32,7 +32,7 @@ abstract class hha extends DualLinkNode {
         return gva.field_b.a((byte) 100);
     }
 
-    final static void a(java.applet.Applet param0, byte param1) {
+    final static void openQuitPage(java.applet.Applet param0, byte param1) {
         try {
           java.net.URL var2 = null;
           Exception var2_ref = null;
@@ -47,7 +47,7 @@ abstract class hha extends DualLinkNode {
             }
             try {
               var2 = new java.net.URL(param0.getCodeBase(), "quit.ws");
-              param0.getAppletContext().showDocument(sda.a(param0, -1, var2), "_top");
+              param0.getAppletContext().showDocument(sda.appendSessionParameters(param0, -1, var2), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -83,7 +83,7 @@ abstract class hha extends DualLinkNode {
         return (param2 & 2048) != 0 ? true : false;
     }
 
-    abstract int a(byte param0);
+    abstract int getProgress(byte param0);
 
     hha() {
         this.field_m = true;

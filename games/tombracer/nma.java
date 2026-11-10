@@ -75,7 +75,7 @@ final class nma extends rra {
         field_m = null;
     }
 
-    final static int b(boolean param0, int param1) {
+    final static int signedBitLength(boolean param0, int param1) {
         int var2;
         int var2Lifetime1;
         int var2Lifetime2;

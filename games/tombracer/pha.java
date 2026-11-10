@@ -94,13 +94,13 @@ final class pha extends jea {
           this.field_vb = param0;
           this.field_wb = param1;
           var6 = (CharSequence) ((Object) this.field_vb);
-          jd.a(1, var6);
+          jd.normalizeDisplayName(1, var6);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final void a(String param0, int param1, String param2) {
+    final void updateNames(String param0, int param1, String param2) {
         CharSequence var5 = null;
         try {
           this.field_vb = param2;
@@ -109,7 +109,7 @@ final class pha extends jea {
           }
           this.field_wb = param0;
           var5 = (CharSequence) ((Object) this.field_vb);
-          jd.a(1, var5);
+          jd.normalizeDisplayName(1, var5);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "pha.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

@@ -25,7 +25,7 @@ final class vj {
         }
     }
 
-    final int a(byte param0) {
+    final int size(byte param0) {
         int var4 = TombRacer.field_G ? 1 : 0;
         int var2 = 0;
         DualLinkNode var3 = this.field_e.secondaryNext;
@@ -116,7 +116,7 @@ final class vj {
           if (param1 >= -85) {
             field_c = (String) null;
           }
-          stackIn_3_0 = gja.a((int)param0.length(), param0, 0);
+          stackIn_3_0 = gja.readFileBytes((int)param0.length(), param0, 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

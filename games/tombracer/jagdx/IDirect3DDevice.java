@@ -58,7 +58,7 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
 
     public final native int SetTextureStageState(int param0, int param1, int param2);
 
-    public final jagdx.IDirect3DVertexShader b(byte[] param0) {
+    public final jagdx.IDirect3DVertexShader createVertexShader(byte[] param0) {
         if (param0 == null) {
           return null;
         }
@@ -84,7 +84,7 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
 
     public final native int SetTexture(int param0, jagdx.IDirect3DBaseTexture param1);
 
-    public final jagdx.IDirect3DVertexBuffer a(int param0, int param1, int param2, int param3, jagdx.IDirect3DVertexBuffer param4) {
+    public final jagdx.IDirect3DVertexBuffer createVertexBuffer(int param0, int param1, int param2, int param3, jagdx.IDirect3DVertexBuffer param4) {
         if (param4 != null) {
           param4.a(false);
         } else {
@@ -117,7 +117,7 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
 
     public final native int SetPixelShaderConstantF(int param0, float[] param1, int param2);
 
-    public final jagdx.IDirect3DPixelShader a(byte[] param0) {
+    public final jagdx.IDirect3DPixelShader createPixelShader(byte[] param0) {
         if (param0 == null) {
           return null;
         }
@@ -195,7 +195,7 @@ public final class IDirect3DDevice extends jaclib.peer.IUnknown {
         this.b = param0;
     }
 
-    public final jagdx.IDirect3DIndexBuffer a(int param0, int param1, int param2, int param3, jagdx.IDirect3DIndexBuffer param4) {
+    public final jagdx.IDirect3DIndexBuffer createIndexBuffer(int param0, int param1, int param2, int param3, jagdx.IDirect3DIndexBuffer param4) {
         if (param4 != null) {
           param4.a(false);
         } else {

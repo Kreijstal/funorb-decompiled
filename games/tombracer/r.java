@@ -41,7 +41,7 @@ abstract class r extends DualLinkNode {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = kha.a(param3, param1, param0, 10, param5, param4);
+          var8 = kha.openFullscreenFrame(param3, param1, param0, 10, param5, param4);
           var6 = var8;
           if (var8 == null) {
             stackIn_2_0 = null;

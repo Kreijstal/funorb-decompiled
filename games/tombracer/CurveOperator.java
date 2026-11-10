@@ -39,7 +39,7 @@ final class CurveOperator extends TextureOperator {
           int var4_int = 93 / ((param0 + 33) / 53);
           bta.field_q = 2;
           var5 = (CharSequence) ((Object) param2);
-          mn.field_n = jd.a(1, var5);
+          mn.field_n = jd.normalizeDisplayName(1, var5);
           ica.field_b = param1;
           bb.a(-21844);
         } catch (RuntimeException runtimeException) {
@@ -262,7 +262,7 @@ final class CurveOperator extends TextureOperator {
             if (var2_int >= param1.length()) {
               return true;
             }
-            if (BeamShooterBehaviour.a(16, param1.charAt(var2_int))) {
+            if (BeamShooterBehaviour.isAccountNameCharacter(16, param1.charAt(var2_int))) {
               var2_int++;
               continue;
             }

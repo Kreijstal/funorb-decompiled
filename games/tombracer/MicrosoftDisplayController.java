@@ -41,7 +41,7 @@ final class MicrosoftDisplayController implements com.ms.directX.IEnumModesCallb
         }
     }
 
-    final void a(java.awt.Frame param0, int param1, int param2, int param3, int param4, boolean param5) {
+    final void enterFullscreen(java.awt.Frame param0, int param1, int param2, int param3, int param4, boolean param5) {
         param0.setVisible(param5);
         com.ms.awt.WComponentPeer var7 = (com.ms.awt.WComponentPeer) null;
         int var8 = var7.getHwnd();
@@ -59,7 +59,7 @@ final class MicrosoftDisplayController implements com.ms.directX.IEnumModesCallb
         this.field_a.initialize((com.ms.com._Guid) null);
     }
 
-    final int[] a(byte param0) {
+    final int[] enumerateDisplayModes(byte param0) {
         this.field_a.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
         field_c = new int[field_b];
         field_b = 0;

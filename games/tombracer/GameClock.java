@@ -6,9 +6,9 @@ abstract class GameClock {
     static boolean field_b;
 
     final int waitAndAdvance(byte param0, long param1) {
-        long var4 = this.a((byte) 47);
+        long var4 = this.getMillisUntilNextTick((byte) 47);
         if (var4 > 0L) {
-          TrapSpawner.a(0, var4);
+          TrapSpawner.sleepMillis(0, var4);
           if (param0 > 3) {
             return this.advanceTicks(param1, 0);
           }
@@ -39,7 +39,7 @@ abstract class GameClock {
 
     abstract int advanceTicks(long param0, int param1);
 
-    abstract long a(byte param0);
+    abstract long getMillisUntilNextTick(byte param0);
 
     public static void releaseStatics(int param0) {
         field_a = null;

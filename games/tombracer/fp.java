@@ -245,7 +245,7 @@ final class fp {
           }
           var2 = 0;
           if (mq.field_a == 2) {
-            var3_long = bva.b((byte) -107) - PlatformComponent.field_H;
+            var3_long = bva.currentTimeMillis((byte) -107) - PlatformComponent.field_H;
             var2 = (int)((10999L - var3_long) / 1000L);
             if (var2 < 0) {
               var2 = 0;

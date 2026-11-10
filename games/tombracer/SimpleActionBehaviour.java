@@ -80,7 +80,7 @@ final class SimpleActionBehaviour extends Behaviour {
         field_n = null;
     }
 
-    final static hra a(int param0, String param1) {
+    final static hra validateEmailDomain(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String[] var3 = null;
@@ -110,7 +110,7 @@ final class SimpleActionBehaviour extends Behaviour {
             stackIn_8_0 = rg.field_A;
             return stackIn_8_0;
           }
-          var3 = rga.a(32287, param1, '.');
+          var3 = rga.splitPreservingEmptyParts(32287, param1, '.');
           if (var3.length < 2) {
             stackIn_12_0 = is.field_wb;
             return stackIn_12_0;
@@ -124,7 +124,7 @@ final class SimpleActionBehaviour extends Behaviour {
               return stackIn_20_0;
             }
             var6_ref_String = var4[var5];
-            var7 = Corpse.a(var6_ref_String, -6962);
+            var7 = Corpse.validateEmailDomainLabel(var6_ref_String, -6962);
             if (var7 == null) {
               var5++;
               continue;
@@ -150,7 +150,7 @@ final class SimpleActionBehaviour extends Behaviour {
     final void tick(int param0) {
         if (param0 != 5418) {
           String var3 = (String) null;
-          SimpleActionBehaviour.a(-40, (String) null);
+          SimpleActionBehaviour.validateEmailDomain(-40, (String) null);
         }
     }
 

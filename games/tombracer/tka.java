@@ -102,7 +102,7 @@ final class tka extends TextWidgetPainter {
           var12 = (param0.field_p - var10.field_b) / 2 + (param0.field_n + param3);
           var13 = param1 + (param0.field_i + param0.field_m / 2);
           var10.b(var11, var12);
-          this.field_e.a(this.d(-4, param0), var13, param3, var9, -1);
+          this.field_e.a(this.getDisplayText(-4, param0), var13, param3, var9, -1);
           if (param2 == 16777215) {
             return;
           }

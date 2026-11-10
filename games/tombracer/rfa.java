@@ -111,7 +111,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
           this.updateScreen(param0, false);
         } else {
           if (!una.a((byte) 127)) {
-            if (PlayPhase.h(105)) {
+            if (PlayPhase.beginReconnectGracePeriod(105)) {
               stackIn_46_1 = -85;
               stackIn_47_2 = (null != dq.field_f);
               var3 = this.a(stackIn_46_1, stackIn_47_2);
@@ -123,7 +123,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
                   og.b(0);
                 }
                 if (2 == var3) {
-                  hha.a(di.a(110), (byte) -95);
+                  hha.openQuitPage(di.a(110), (byte) -95);
                 }
                 this.updateScreen(true, false);
               }

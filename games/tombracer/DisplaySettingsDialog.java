@@ -248,7 +248,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
             this.addChild(var7, -1);
           }
           this.field_O = false;
-          var6_ref = this.g(-46);
+          var6_ref = this.currentModeButton(-46);
           if (var6_ref != null) {
             var6_ref.field_w = true;
           }
@@ -513,7 +513,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
         try {
           this.field_S = param1;
           param1.requestKeyboardFocus((UiWidget) (this), false);
-          var3 = this.g(-46);
+          var3 = this.currentModeButton(-46);
           stackIn_2_0 = this.field_L;
           stackIn_3_1 = (param1 != var3);
           stackIn_2_0.field_y = stackIn_3_1;
@@ -559,7 +559,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
         if (param0 != 24316) {
           field_Q = (String) null;
         }
-        return ota.a(ica.field_b, (byte) 13, mn.field_n);
+        return ota.isPlayerReachable(ica.field_b, (byte) 13, mn.field_n);
     }
 
     private final FocusableWidget a(WidgetListener param0, String param1, int param2) {
@@ -606,7 +606,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
         }
     }
 
-    private final FocusableWidget g(int param0) {
+    private final FocusableWidget currentModeButton(int param0) {
         if (dq.field_f != null) {
           return this.field_V;
         }

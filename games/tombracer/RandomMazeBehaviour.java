@@ -115,7 +115,7 @@ final class RandomMazeBehaviour extends Behaviour {
         }
     }
 
-    final static int b(int param0, int param1) {
+    final static int floorLog2Magnitude(int param0, int param1) {
         if (param1 < 0) {
           param1 = -param1;
         }

@@ -82,7 +82,7 @@ final class SweepRotateLocomotor extends Locomotor {
             }
             var6 = uh.a(var4_ref_String, param0 ^ -14105);
             var7_ref = var1.readString((byte) -76);
-            var8 = jd.a(1, (CharSequence) ((Object) var4_ref_String));
+            var8 = jd.normalizeDisplayName(1, (CharSequence) ((Object) var4_ref_String));
             if (null == var8) {
               var8 = var4_ref_String;
             }
@@ -147,12 +147,12 @@ final class SweepRotateLocomotor extends Locomotor {
           if (null == var6Lifetime1) {
             var6Lifetime1 = wp.a(param0 ^ 14095, var5Lifetime1);
             if (var6Lifetime1 != null) {
-              TrackPlayerLocomotor.field_s.put(-1, var6Lifetime1, (long)jd.a(1, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
+              TrackPlayerLocomotor.field_s.put(-1, var6Lifetime1, (long)jd.normalizeDisplayName(1, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
             }
           }
           if (var6Lifetime1 == null) {
             var6Lifetime1 = new mu();
-            TrackPlayerLocomotor.field_s.put(-1, var6Lifetime1, (long)jd.a(1, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
+            TrackPlayerLocomotor.field_s.put(-1, var6Lifetime1, (long)jd.normalizeDisplayName(1, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
             fieldTemp$0 = ii.field_a;
             ii.field_a = ii.field_a + 1;
             var6Lifetime1.field_Db = fieldTemp$0;

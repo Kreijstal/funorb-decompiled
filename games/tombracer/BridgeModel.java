@@ -617,7 +617,7 @@ final class BridgeModel extends TrapModel {
             return;
           }
           if (TextSpewerBehaviour.field_o != 0) {
-            var2_long = bva.b((byte) -107);
+            var2_long = bva.currentTimeMillis((byte) -107);
             var4 = TextSpewerBehaviour.field_o;
             if (0.0 != RotaterMountComponent.field_J) {
               var4 = (int)((double)var4 + PlatformBehaviour.field_p.nextGaussian() * RotaterMountComponent.field_J);

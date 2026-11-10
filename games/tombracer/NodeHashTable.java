@@ -19,7 +19,7 @@ final class NodeHashTable {
         field_d = null;
     }
 
-    final IntrusiveNode b(int param0) {
+    final IntrusiveNode nextWithSameKey(int param0) {
         IntrusiveNode var3 = null;
         int var4 = TombRacer.field_G ? 1 : 0;
         if (this.field_b == null) {

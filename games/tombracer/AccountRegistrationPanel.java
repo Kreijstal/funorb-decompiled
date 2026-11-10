@@ -195,14 +195,14 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         poa dupTemp$1 = new poa(10000536);
         this.field_C.field_r = (isa) ((Object) dupTemp$1);
         this.field_E.field_r = (isa) ((Object) dupTemp$1);
-        String var2 = gl.$cfr$intArgs$a$53ce4ab4c593(90, ConstrainToCircleLocomotor.field_y, new String[]{this.d(170), this.e(127)});
+        String var2 = gl.$cfr$intArgs$a$53ce4ab4c593(90, ConstrainToCircleLocomotor.field_y, new String[]{this.linkStylePrefix(170), this.e(127)});
         int var3 = 20;
         var3 = var3 + this.addLabeledField(this.field_z, var3, 170, (byte) 74, em.field_f);
         var3 = var3 + (this.a(var3, 77, this.field_J, 170, 20, "", ct.field_d) + 5);
         var3 = var3 + this.addLabeledField(this.field_E, var3, 170, (byte) 59, rta.field_j);
         var3 = var3 + (this.a(gea.field_c, GameKeyHandler.field_d, this.field_C, -3, 170, var3) + 5);
         var3 = var3 + (this.a(CrusherBehaviour.field_r, za.field_f, this.field_G, -3, 170, var3) + 5);
-        var3 = var3 + this.a(this.field_I, var3, (byte) 99, iqa.field_g, 170);
+        var3 = var3 + this.addValidatedField(this.field_I, var3, (byte) 99, iqa.field_g, 170);
         jsa var4 = new jsa(46, var3, this.field_m - 90, 25, this.field_D, true, this.field_m - 120, 5, eka.field_o, 11579568, OpenGlSprite.field_l);
         this.addChild(var4, -1);
         var3 = var3 + var4.field_p;
@@ -323,7 +323,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         }
     }
 
-    private final String d(int param0) {
+    private final String linkStylePrefix(int param0) {
         if (param0 != 170) {
           UiWidget var3 = (UiWidget) null;
           this.updatePointerState(27, -27, (UiWidget) null, -94);
@@ -553,7 +553,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         }
     }
 
-    private final int a(UiWidget param0, int param1, byte param2, String param3, int param4) {
+    private final int addValidatedField(UiWidget param0, int param1, byte param2, String param3, int param4) {
         RuntimeException var6 = null;
         mha var7 = null;
         jsa var8 = null;

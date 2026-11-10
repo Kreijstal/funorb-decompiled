@@ -48,10 +48,10 @@ final class ssa {
               var3 = var3 + param0;
             }
             upa.a(var3, (byte) -24);
-            var7 = qf.a(966747152, "%3a", ":", var3);
-            var8 = qf.a(966747152, "%40", "@", var7);
-            var9 = qf.a(966747152, "%26", "&", var8);
-            var10 = qf.a(966747152, "%23", "#", var9);
+            var7 = qf.replaceAllOccurrences(966747152, "%3a", ":", var3);
+            var8 = qf.replaceAllOccurrences(966747152, "%40", "@", var7);
+            var9 = qf.replaceAllOccurrences(966747152, "%26", "&", var8);
+            var10 = qf.replaceAllOccurrences(966747152, "%23", "#", var9);
             if (GameScreen.field_e == null) {
               return;
             }
@@ -71,7 +71,7 @@ final class ssa {
             }
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_16_0).a(new java.net.URL(stackIn_16_3, ((StringBuilder) (Object) stackIn_16_4).append(stackIn_17_5).append("&v1=").append(PlatformTaskDispatcher.field_e).append("&v2=").append(PlatformTaskDispatcher.field_v).append("&e=").append(var10).toString()), 122);
             while (var4.field_b == 0) {
-              TrapSpawner.a(0, 1L);
+              TrapSpawner.sleepMillis(0, 1L);
             }
             if (1 == var4.field_b) {
               var5 = (DataInputStream) (var4.field_f);

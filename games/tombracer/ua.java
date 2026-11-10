@@ -31,7 +31,7 @@ final class ua implements GamePacket {
           param2.m((byte) -116);
           if (param0 != 2) {
             String var5 = (String) null;
-            ua.a(-112, (String) null, -64);
+            ua.describeGameJoinStatus(-112, (String) null, -64);
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ua.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -105,7 +105,7 @@ final class ua implements GamePacket {
         return param0;
     }
 
-    final static String a(int param0, String param1, int param2) {
+    final static String describeGameJoinStatus(int param0, String param1, int param2) {
         String stackIn_5_0 = null;
         String stackIn_9_0 = null;
         String stackIn_13_0 = null;

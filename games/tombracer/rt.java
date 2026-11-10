@@ -9,7 +9,7 @@ class rt extends kl {
     int field_l;
     private int field_m;
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void attachToFramebuffer(int param0, int param1, int param2, int param3) {
         jaggl.OpenGL.glFramebufferTexture2DEXT(param0, param3, this.field_e, this.field_i, param1);
         this.field_q = param3;
         this.field_m = param0;
@@ -60,7 +60,7 @@ class rt extends kl {
           }
           boolean decompiledFrameCompleted0 = true;
           if (param9) {
-            var11_int = jj.a(param8, (byte) -72);
+            var11_int = jj.glFormatComponents(param8, (byte) -72);
             var12 = param7 * var11_int;
             var13 = var11_int * param0;
             var14 = new byte[param2 * var12];

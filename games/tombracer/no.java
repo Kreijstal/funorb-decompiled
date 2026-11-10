@@ -242,7 +242,7 @@ final class no extends me {
           wp.field_a = param0;
           bta.field_q = 2;
           var5 = (CharSequence) ((Object) param0);
-          mn.field_n = jd.a(1, var5);
+          mn.field_n = jd.normalizeDisplayName(1, var5);
           ica.field_b = param1;
           ni.field_c = true;
           if (param2 <= 108) {

@@ -34,15 +34,15 @@ final class nc {
         br var6 = new br();
         if (var4 == null) {
           if (param1 >= 32768) {
-            var6.a(10211);
+            var6.applyGlobalIds(10211);
           }
           var5 = -55 / ((param0 + 25) / 35);
           this.field_c.put(29166, var6, (long)param1);
           return var6;
         }
-        var6.a(new PacketBuffer(var4), -26706);
+        var6.decode(new PacketBuffer(var4), -26706);
         if (param1 >= 32768) {
-          var6.a(10211);
+          var6.applyGlobalIds(10211);
         }
         var5Lifetime1 = -55 / ((param0 + 25) / 35);
         this.field_c.put(29166, var6, (long)param1);

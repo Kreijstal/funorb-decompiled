@@ -12,20 +12,20 @@ final class TrapSpawner extends Spawner {
         this.template.h(true);
     }
 
-    final static void a(int param0, long param1) {
+    final static void sleepMillis(int param0, long param1) {
         if (param1 <= 0L) {
           return;
         }
         if (param1 % 10L != 0L) {
-          Trap.a(param0 + 9, param1);
+          Trap.sleep(param0 + 9, param1);
           if (param0 != 0) {
             field_b = (String) null;
             return;
           }
           return;
         }
-        Trap.a(9, param1 - 1L);
-        Trap.a(9, 1L);
+        Trap.sleep(9, param1 - 1L);
+        Trap.sleep(9, 1L);
         if (param0 != 0) {
           field_b = (String) null;
           return;
@@ -123,7 +123,7 @@ final class TrapSpawner extends Spawner {
         wg.field_l.field_a = 0;
         wg.field_l.field_n = 0;
         if (!param0) {
-          TrapSpawner.a(-52, -43L);
+          TrapSpawner.sleepMillis(-52, -43L);
         }
     }
 

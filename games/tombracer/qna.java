@@ -241,7 +241,7 @@ final class qna {
               }
               stackIn_74_0[stackIn_74_1] = stackIn_75_2;
             }
-            PlatformComponent.field_H = bva.b((byte) -107);
+            PlatformComponent.field_H = bva.currentTimeMillis((byte) -107);
           }
           FacePointLocomotor.field_r.field_i = hb.field_w.length;
           var3_intLifetime1 = 0;

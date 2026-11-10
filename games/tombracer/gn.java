@@ -86,10 +86,10 @@ abstract class gn extends WidgetContainer {
 
     final static Sprite[] b(int param0, int param1, int param2, int param3) {
         if (param1 == 1) {
-          return ura.a(param2, param0, false, 1, param3);
+          return ura.createBeveledFrameSprites(param2, param0, false, 1, param3);
         }
         gn.releaseStatics(91);
-        return ura.a(param2, param0, false, 1, param3);
+        return ura.createBeveledFrameSprites(param2, param0, false, 1, param3);
     }
 
     gn(jta param0, int param1, int param2) {

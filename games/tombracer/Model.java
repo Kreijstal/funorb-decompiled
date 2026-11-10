@@ -1740,7 +1740,7 @@ final class Model extends ka {
             param1.field_db = array$12;
             param0.field_db = array$12;
             for (var11 = 0; var11 < this.field_m; var11++) {
-              param0.field_db[var11] = this.field_db[var11].a(-2707);
+              param0.field_db[var11] = this.field_db[var11].copy(-2707);
             }
           }
         } else {
@@ -3470,7 +3470,7 @@ final class Model extends ka {
     }
 
     private final void b(Thread param0) {
-        tw var2 = this.field_d.a((Runnable) ((Object) param0));
+        tw var2 = this.field_d.contextForThread((Runnable) ((Object) param0));
         this.field_w = var2.field_v;
         if (var2 == this.field_F) {
           return;
@@ -3752,7 +3752,7 @@ final class Model extends ka {
     }
 
     private final void a(Thread param0) {
-        tw var2 = this.field_d.a((Runnable) ((Object) param0));
+        tw var2 = this.field_d.contextForThread((Runnable) ((Object) param0));
         if (var2 == this.field_z) {
           return;
         }
@@ -4119,7 +4119,7 @@ final class Model extends ka {
         this.field_W = new float[this.field_g][];
         this.field_l = new float[this.field_g][];
         var11 = qqa.a(var74, param1, this.field_g, (byte) -6);
-        var61 = this.field_d.a((Runnable) ((Object) Thread.currentThread()));
+        var61 = this.field_d.contextForThread((Runnable) ((Object) Thread.currentThread()));
         var75 = var61.field_d;
         var14Lifetime2 = 0;
         for (var15Lifetime1 = 0; var15Lifetime1 < this.field_g; var15Lifetime1++) {

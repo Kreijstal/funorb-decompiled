@@ -40,12 +40,12 @@ final class dm implements VertexBuffer {
           var4 = 1;
         }
         if (this.field_d == null) {
-          this.field_d = this.field_a.field_jd.a(this.field_c, var5, this.field_g == una.field_f ? 101 : 102, var4, this.field_d);
+          this.field_d = this.field_a.field_jd.createIndexBuffer(this.field_c, var5, this.field_g == una.field_f ? 101 : 102, var4, this.field_d);
           this.field_f = this.field_c;
           return;
         }
         this.field_d.a(false);
-        this.field_d = this.field_a.field_jd.a(this.field_c, var5, this.field_g == una.field_f ? 101 : 102, var4, this.field_d);
+        this.field_d = this.field_a.field_jd.createIndexBuffer(this.field_c, var5, this.field_g == una.field_f ? 101 : 102, var4, this.field_d);
         this.field_f = this.field_c;
     }
 

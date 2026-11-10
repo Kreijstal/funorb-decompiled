@@ -16,7 +16,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    final static String a(String param0, int param1, int param2) {
+    final static String formatLobbyPlayerStatus(String param0, int param1, int param2) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_7_0 = null;
@@ -134,7 +134,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    final java.net.Socket a(int param0) throws IOException {
+    final java.net.Socket connect(int param0) throws IOException {
         int var9 = 0;
         int stackIn_5_0 = 0;
         java.net.ProxySelector stackIn_8_0;
@@ -434,7 +434,7 @@ final class ProxySocketConnector extends SocketConnector {
           param2 = param2 - param9;
           param6 = param6 - param7;
           param3 = param3 - param9;
-          var10 = -14 + Math.max(Math.max(RandomMazeBehaviour.b(1, param6), RandomMazeBehaviour.b(1, param0)), RandomMazeBehaviour.b(1, param5));
+          var10 = -14 + Math.max(Math.max(RandomMazeBehaviour.floorLog2Magnitude(1, param6), RandomMazeBehaviour.floorLog2Magnitude(1, param0)), RandomMazeBehaviour.floorLog2Magnitude(1, param5));
           if (0 < var10) {
             param5 = param5 >> var10;
             param0 = param0 >> var10;
@@ -443,7 +443,7 @@ final class ProxySocketConnector extends SocketConnector {
           if (param4 >= -63) {
             field_e = (SpriteData[]) null;
           }
-          var10Lifetime1 = Math.max(Math.max(RandomMazeBehaviour.b(1, param3), RandomMazeBehaviour.b(1, param1)), RandomMazeBehaviour.b(1, param2)) - 14;
+          var10Lifetime1 = Math.max(Math.max(RandomMazeBehaviour.floorLog2Magnitude(1, param3), RandomMazeBehaviour.floorLog2Magnitude(1, param1)), RandomMazeBehaviour.floorLog2Magnitude(1, param2)) - 14;
           if (var10Lifetime1 > 0) {
             param1 = param1 >> var10Lifetime1;
             param3 = param3 >> var10Lifetime1;

@@ -188,7 +188,7 @@ final class DamageableBehaviour extends Behaviour {
         RuntimeException decompiledCaughtException = null;
         try {
           if (GameApplet.a(param0, param1, param3, param2)) {
-            return InvertOperator.d((byte) 120);
+            return InvertOperator.buildIndexedSprite((byte) 120);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

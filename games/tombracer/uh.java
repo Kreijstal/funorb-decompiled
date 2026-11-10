@@ -90,7 +90,7 @@ final class uh extends IntrusiveNode {
             return null;
           }
           var7 = (CharSequence) ((Object) param0);
-          var2 = jd.a(1, var7);
+          var2 = jd.normalizeDisplayName(1, var7);
           if (var2 == null) {
             var2 = param0;
           }
@@ -98,7 +98,7 @@ final class uh extends IntrusiveNode {
           var4 = -95 / ((param1 + 46) / 54);
           while (var3 != null) {
             var8 = (CharSequence) ((Object) var3.field_tb);
-            var5 = jd.a(1, var8);
+            var5 = jd.normalizeDisplayName(1, var8);
             if (var5 == null) {
               var5 = var3.field_tb;
             }

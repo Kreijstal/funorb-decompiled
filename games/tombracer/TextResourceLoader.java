@@ -2513,7 +2513,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -112, "keychar_the_character_under_questionmark");
                 if (var2 != null) {
-                  TileGrid.field_o = ArrowShooterComponent.a((byte) 11, var2[0]);
+                  TileGrid.field_o = ArrowShooterComponent.decodeSingleByteCharacter((byte) 11, var2[0]);
                 }
                 var2 = dn.a((byte) -95, "rating_noratings");
                 if (var2 != null) {

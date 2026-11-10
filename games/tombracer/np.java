@@ -968,7 +968,7 @@ final class np extends ka {
               param5.field_f = param4.field_f;
               var11Lifetime6 = 0;
               while (this.field_G > var11Lifetime6) {
-                param5.field_f[var11Lifetime6].a(167, this.field_f[var11Lifetime6]);
+                param5.field_f[var11Lifetime6].copyFrom(167, this.field_f[var11Lifetime6]);
                 var11Lifetime6++;
                 if (var13 != 0) {
                   decompiledFrameCompleted1 = false;
@@ -2356,7 +2356,7 @@ final class np extends ka {
             stackIn_7_0 = this.field_R;
             stackIn_8_1 = !(this.field_s);
             ((OpenGlToolkit) (Object) stackIn_7_0).a(stackIn_8_1, false);
-            this.field_R.a(param0 ^ -35, false);
+            this.field_R.setLightingEnabled(param0 ^ -35, false);
             this.field_R.a((tj) null, this.field_R.field_Rb, (tj) null, -114, this.field_R.field_Bc);
             var3 = 0;
             while (var3 < this.field_G) {
@@ -3277,7 +3277,7 @@ final class np extends ka {
               stackIn_24_0 = this.field_R;
               stackIn_24_1 = 96;
               stackIn_25_2 = (this.field_F != null);
-              ((OpenGlToolkit) (Object) stackIn_24_0).a(stackIn_24_1, stackIn_25_2);
+              ((OpenGlToolkit) (Object) stackIn_24_0).setLightingEnabled(stackIn_24_1, stackIn_25_2);
               this.field_R.a(this.field_kb, this.field_ab, this.field_F, -120, this.field_g);
               var2_int = -1 + this.field_p.length;
               var3 = 0;

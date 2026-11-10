@@ -29,7 +29,7 @@ final class sda extends IntrusiveNode {
         throw new Error();
     }
 
-    final static java.net.URL a(java.applet.Applet param0, int param1, java.net.URL param2) {
+    final static java.net.URL appendSessionParameters(java.applet.Applet param0, int param1, java.net.URL param2) {
         Object var3 = null;
         Object var4 = null;
         java.net.URL stackIn_2_0 = null;
@@ -57,7 +57,7 @@ final class sda extends IntrusiveNode {
             !PitSnake.field_j.equals(param0.getParameter("session"))) {
             var4 = PitSnake.field_j;
           }
-          stackIn_12_0 = us.a((byte) 66, param2, (String) (var4), -1, (String) (var3));
+          stackIn_12_0 = us.rewriteAppletUrl((byte) 66, param2, (String) (var4), -1, (String) (var3));
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

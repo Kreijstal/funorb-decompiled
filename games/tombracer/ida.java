@@ -17,7 +17,7 @@ final class ida {
         field_b = null;
     }
 
-    final static String a(long param0, int param1) {
+    final static String formatCookieDate(long param0, int param1) {
         int var8 = 0;
         int var9 = 0;
         int var8Lifetime1;

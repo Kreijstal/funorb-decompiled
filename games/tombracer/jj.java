@@ -11,7 +11,7 @@ final class jj extends Exception {
         return (param1 & 33) != 0 ? true : false;
     }
 
-    final static int a(int param0, byte param1) {
+    final static int glFormatComponents(int param0, byte param1) {
         if (param1 >= -56) {
           jj.a(-126, -76, -57);
           if (6406 == param0) {

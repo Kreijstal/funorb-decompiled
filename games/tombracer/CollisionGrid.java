@@ -125,7 +125,7 @@ final class CollisionGrid {
                 }
               }
             }
-            var8 = (q) (this.field_h.b(-128));
+            var8 = (q) (this.field_h.nextWithSameKey(-128));
           }
           this.field_b.d(113);
         }
@@ -187,7 +187,7 @@ final class CollisionGrid {
                   }
                 }
               }
-              var12 = (q) (this.field_h.b(-106));
+              var12 = (q) (this.field_h.nextWithSameKey(-106));
             }
           }
         }

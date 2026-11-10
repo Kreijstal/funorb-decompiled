@@ -84,21 +84,21 @@ final class HorizontalGradientOperator extends TextureOperator {
 
     final int[] getMonochromeRow(int param0, int param1) {
         if (param0 != 1) {
-          HorizontalGradientOperator.c(97);
+          HorizontalGradientOperator.decreaseMusicVolume(97);
         }
         return ht.textureColumnCoords;
     }
 
-    final static void c(int param0) {
+    final static void decreaseMusicVolume(int param0) {
         int var1 = 0;
         if (ot.field_v > 32) {
           var1 = ot.field_v % 32;
           if (var1 == 0) {
             var1 = 32;
           }
-          mp.a(2, ot.field_v - var1);
+          mp.setMusicVolume(2, ot.field_v - var1);
         } else {
-          mp.a(2, 0);
+          mp.setMusicVolume(2, 0);
         }
         if (param0 != -10794) {
           field_m = false;

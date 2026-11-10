@@ -54,7 +54,7 @@ final class fba {
         }
     }
 
-    final synchronized static byte[] a(int param0, int param1) {
+    final synchronized static byte[] acquireByteArray(int param0, int param1) {
         int fieldTemp$3 = 0;
         int dupTemp$4 = 0;
         byte[][] arrayValue$5 = null;

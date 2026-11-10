@@ -56,7 +56,7 @@ final class cua {
           param0.unlink(17);
           var2 = (ht) (AffineTransform3D.field_j.first(-80));
           while (var2 != null) {
-            if (var2.a(param0, 71)) {
+            if (var2.sortsBefore(param0, 71)) {
               var2 = (ht) (AffineTransform3D.field_j.next(113));
               continue;
             }

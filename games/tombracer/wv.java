@@ -522,7 +522,7 @@ abstract class wv extends GameScreen {
                 return true;
               }
               if (var7 == 9) {
-                hha.a(di.a(94), (byte) -112);
+                hha.openQuitPage(di.a(94), (byte) -112);
                 return true;
               }
               if (var7 == 16) {

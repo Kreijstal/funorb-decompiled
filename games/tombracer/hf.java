@@ -40,7 +40,7 @@ final class hf implements ac, gs {
 
     public final void a(int param0, int param1, int param2) {
         if (param1 <= 119) {
-          hf.a(2, 'ﾇ');
+          hf.isNameSeparator(2, 'ﾇ');
         }
         rpa.a(3, true, param2, 192, wga.field_a[this.field_i], param0);
         pa.a(3, param0, wga.field_a[this.field_i], param2, false);
@@ -871,7 +871,7 @@ final class hf implements ac, gs {
         }
     }
 
-    final static boolean a(int param0, char param1) {
+    final static boolean isNameSeparator(int param0, char param1) {
         int var2;
         boolean stackIn_7_0 = false;
         var2 = -115 / ((param0 - 70) / 43);

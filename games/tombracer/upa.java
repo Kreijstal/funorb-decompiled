@@ -13,7 +13,7 @@ final class upa extends IntrusiveNode {
     boolean field_i;
 
     final static void a(String param0, byte param1) {
-        System.out.println("Error: " + qf.a(966747152, "\n", "%0a", param0));
+        System.out.println("Error: " + qf.replaceAllOccurrences(966747152, "\n", "%0a", param0));
         if (param1 != -24) {
           String var3 = (String) null;
           upa.a((String) null, (byte) 67);

@@ -82,7 +82,7 @@ class jea extends um {
         }
     }
 
-    final void a(boolean param0, jea param1) {
+    final void applyStyle(boolean param0, jea param1) {
         boolean stackIn_91_1 = false;
         RuntimeException stackIn_104_0 = null;
         StringBuilder stackIn_104_1 = null;
@@ -688,7 +688,7 @@ class jea extends um {
         }
     }
 
-    final static boolean a(boolean param0, String param1, String param2) {
+    final static boolean containsForwardOrReversed(boolean param0, String param1, String param2) {
         String var3 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -702,8 +702,8 @@ class jea extends um {
           if (!param0) {
             return false;
           }
-          param2 = GameScreen.a('_', "", param2, 0);
-          var3 = MouseInputHandler.a(param2, 0);
+          param2 = GameScreen.replaceCharacter('_', "", param2, 0);
+          var3 = MouseInputHandler.reverseString(param2, 0);
           stackIn_8_0 = (param1.indexOf(param2) != -1) || (param1.indexOf(var3) != -1);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -851,7 +851,7 @@ class jea extends um {
           this.key = param0;
           this.field_t = param5;
           this.field_T = param3;
-          this.a(false, param1);
+          this.applyStyle(false, param1);
           if (param6 != null) {
             this.field_r = param6;
           }

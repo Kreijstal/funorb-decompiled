@@ -397,9 +397,9 @@ final class fna {
             var3 = param1.substring(0, var2_int);
             var4 = param1.substring(var2_int + 1);
             var6 = 77 % ((param0 + 25) / 63);
-            var5 = bd.a(-1, var3);
+            var5 = bd.validateEmailLocalPart(-1, var3);
             if (var5 == null) {
-              return SimpleActionBehaviour.a(76, var4);
+              return SimpleActionBehaviour.validateEmailDomain(76, var4);
             }
             stackIn_12_0 = var5;
             return stackIn_12_0;

@@ -19,7 +19,7 @@ final class ie extends qu {
         field_h = null;
     }
 
-    final byte[] a(boolean param0) {
+    final byte[] toByteArray(boolean param0) {
         byte[] var3 = null;
         if (!param0) {
           var3 = new byte[this.field_g.capacity()];

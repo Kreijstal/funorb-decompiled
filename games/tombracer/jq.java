@@ -6,7 +6,7 @@ final class jq extends ob {
 
     final static void c(byte param0) {
         int var1 = -20 % ((64 - param0) / 44);
-        vaa.field_b = bva.b((byte) -107);
+        vaa.field_b = bva.currentTimeMillis((byte) -107);
         gp.field_h = 0;
     }
 

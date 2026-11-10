@@ -5,7 +5,7 @@ final class ArrowShooterComponent extends ShooterComponent {
     static String field_K;
     static String field_J;
 
-    final static void a(GraphicsToolkit param0, int param1) {
+    final static void createFonts(GraphicsToolkit param0, int param1) {
         try {
           kn.field_p = param0.createFont(kv.field_a, rc.field_b, true);
           eda.field_f = param0.createFont(ds.field_n, MatchState.field_j, true);
@@ -27,7 +27,7 @@ final class ArrowShooterComponent extends ShooterComponent {
         return false;
     }
 
-    final static Sprite[] a(byte param0, Sprite param1) {
+    final static Sprite[] createCentreOnlyFrame(byte param0, Sprite param1) {
         Sprite[] var2 = null;
         RuntimeException var2_ref = null;
         Sprite[] var3 = null;
@@ -148,7 +148,7 @@ final class ArrowShooterComponent extends ShooterComponent {
         return true;
     }
 
-    final static char a(byte param0, byte param1) {
+    final static char decodeSingleByteCharacter(byte param0, byte param1) {
         int var3 = 0;
         if (param0 != 11) {
           return '\005';

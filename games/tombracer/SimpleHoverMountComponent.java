@@ -257,7 +257,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
           try {
             try {
               var3 = new java.net.URL(param1.getCodeBase(), param0);
-              var3 = sda.a(param1, -1, var3);
+              var3 = sda.appendSessionParameters(param1, -1, var3);
               SimpleBlockBehaviour.a(1, param1, var3.toString(), true);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

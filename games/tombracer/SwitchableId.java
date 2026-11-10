@@ -96,7 +96,7 @@ final class SwitchableId {
               var3 = 46 / ((param0 - 67) / 33);
               var2 = "tuhstatbut";
               var4 = (String) (JavaScriptBridge.callWindowFunction(param1, 2864, "getcookies"));
-              var5 = rga.a(32287, var4, ';');
+              var5 = rga.splitPreservingEmptyParts(32287, var4, ';');
               for (var6 = 0; var6 < var5.length; var6++) {
                 var7 = var5[var6].indexOf('=');
                 if (var7 >= 0 &&

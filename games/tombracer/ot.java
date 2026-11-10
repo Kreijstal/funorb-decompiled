@@ -56,7 +56,7 @@ final class ot extends lba {
             return null;
           }
           if (param3) {
-            stackIn_7_0 = je.a((byte) 69);
+            stackIn_7_0 = je.buildFirstDecodedSprite((byte) 69);
             return stackIn_7_0;
           }
           stackIn_5_0 = (Sprite) null;

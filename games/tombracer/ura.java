@@ -37,7 +37,7 @@ final class ura {
           if (param2 == -103) {
             return;
           }
-          ura.a(55, -28, true, -42, -47);
+          ura.createBeveledFrameSprites(55, -28, true, -42, -47);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -59,7 +59,7 @@ final class ura {
         }
     }
 
-    final static Sprite[] a(int param0, int param1, boolean param2, int param3, int param4) {
+    final static Sprite[] createBeveledFrameSprites(int param0, int param1, boolean param2, int param3, int param4) {
         Sprite[] var6 = new Sprite[9];
         Sprite[] var5 = var6;
         Sprite dupTemp$0 = jf.a(param0, 48, param3);
@@ -90,7 +90,7 @@ final class ura {
         field_a = null;
         field_b = null;
         if (param0) {
-          ura.a(123, 14, false, 60, -69);
+          ura.createBeveledFrameSprites(123, 14, false, 60, -69);
         }
     }
 

@@ -44,7 +44,7 @@ final class ht extends jea {
     jea field_xb;
     byte[] field_ac;
 
-    final boolean a(ht param0, int param1) {
+    final boolean sortsBefore(ht param0, int param1) {
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_14_0 = 0;

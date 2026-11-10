@@ -186,7 +186,7 @@ final class MatchState implements dv {
             this.d(-118);
           }
           for (var3_int = 0; this.players.length > var3_int; var3_int++) {
-            if (faa.a(param0, 109, this.playerNames[var3_int])) {
+            if (faa.accountNamesMatch(param0, 109, this.playerNames[var3_int])) {
               stackIn_8_0 = var3_int;
               return stackIn_8_0;
             }

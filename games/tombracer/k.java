@@ -72,7 +72,7 @@ final class k extends SingleChildWidget {
           if (param0 < 103) {
             return;
           }
-          DivisionMazeGenerator.a(16599, param1);
+          DivisionMazeGenerator.appendChatHistory(16599, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

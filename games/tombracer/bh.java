@@ -131,7 +131,7 @@ final class bh extends ela {
           stackIn_6_6 = (nsa.field_i == lu.field_b);
           var7_int = ((iv) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_5_4, stackIn_5_5, stackIn_6_6) ? 1 : 0;
           var8 = nsa.field_i.field_tb.field_J;
-          var9 = bva.b((byte) -107);
+          var9 = bva.currentTimeMillis((byte) -107);
           var11 = null;
           var12 = (ht) (var8.first(-80));
           while (var12 != null) {
@@ -474,7 +474,7 @@ final class bh extends ela {
                 var31 = var31 + di.field_a;
               }
             }
-            var33 = ProxySocketConnector.a(var32, param1 + 8793, var12.field_Ib);
+            var33 = ProxySocketConnector.formatLobbyPlayerStatus(var32, param1 + 8793, var12.field_Ib);
             if (var33 != null) {
               var34_intLifetime1 = var12.field_Rb.field_H.a(var33, var12.field_G - mna.field_d - mna.field_d);
               var12.field_Rb.field_r = var33;

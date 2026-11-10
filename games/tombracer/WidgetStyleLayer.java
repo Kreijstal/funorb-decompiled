@@ -126,7 +126,7 @@ final class WidgetStyleLayer {
           if (param0 > -31) {
             field_b = (ToolkitSprite[]) null;
           }
-          var6 = param2.d(-4, param4);
+          var6 = param2.getDisplayText(-4, param4);
           if (var6 != null &&
             null != param2.field_e) {
             if (this.field_h < 0) {

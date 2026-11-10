@@ -355,7 +355,7 @@ final class DarknessBehaviour extends Behaviour {
           }
           var9 = var8 * sl.field_e.length / 10;
           nm.a(this.field_r, (byte) 110);
-          iha.a(var4_int / 8 >> 16, var6 / 8 >> 16, var5 / 8 >> 16, var7 / 8 >> 16, 2, var9, sl.field_e);
+          iha.drawGlowingLine(var4_int / 8 >> 16, var6 / 8 >> 16, var5 / 8 >> 16, var7 / 8 >> 16, 2, var9, sl.field_e);
           pfa.a(1);
           stackIn_6_0 = 0;
           return stackIn_6_0;

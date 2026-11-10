@@ -151,14 +151,14 @@ final class ns extends qe {
               if (param0 < 100) {
                 field_j = (SoundCache) null;
               }
-              var5.a(param1, param3, param2, (byte) -69);
+              var5.initialize(param1, param3, param2, (byte) -69);
               stackIn_3_0 = var5;
               return stackIn_3_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
               var5_ref = new ImageProducerRasterBuffer();
-              ((cha) ((Object) var5_ref)).a(param1, param3, param2, (byte) -98);
+              ((cha) ((Object) var5_ref)).initialize(param1, param3, param2, (byte) -98);
               stackIn_5_0 = var5_ref;
               return (cha) ((Object) stackIn_5_0);
             }

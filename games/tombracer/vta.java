@@ -25,7 +25,7 @@ final class vta extends vw {
     }
 
     final void a(int param0, boolean param1) {
-        this.field_c.a(true, (byte) 100);
+        this.field_c.setLightingSuppressed(true, (byte) 100);
         int var3 = 121 / ((param0 - 41) / 62);
     }
 
@@ -98,7 +98,7 @@ final class vta extends vw {
         if (param0 >= -4) {
           field_e = -1.3910614252090454f;
         }
-        this.field_c.a(false, (byte) 72);
+        this.field_c.setLightingSuppressed(false, (byte) 72);
     }
 
     final boolean c(int param0) {

@@ -328,10 +328,10 @@ final class ko {
         ModelFactory.field_a = new jta();
         if (param0 < 10) {
           ko.c((byte) -39);
-          kea.b(-114);
+          kea.openDisplaySettingsDialog(-114);
           return;
         }
-        kea.b(-114);
+        kea.openDisplaySettingsDialog(-114);
     }
 
     final void c(int param0) {

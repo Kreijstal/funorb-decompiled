@@ -215,7 +215,7 @@ final class GameAssetLoader implements LoadingStage {
 
     public final boolean a(int param0) {
         if (!this.field_n &&
-          HotspotTextWidget.b(false)) {
+          HotspotTextWidget.pollAndMergeAchievementMask(false)) {
           this.field_n = true;
         }
         if (param0 > -124) {
@@ -374,9 +374,9 @@ final class GameAssetLoader implements LoadingStage {
         }
         if (!dna.field_G) {
           dea.field_c = false;
-          FullscreenConfirmationDialog.a(this.field_s, 10, MirrorMoverLocomotor.field_o, fr.field_b, PitComponent.field_G, MouseWheelInput.field_a, 4, var2, true, 2, via.field_c, ota.field_b, jf.field_t, mga.field_f, var2);
+          FullscreenConfirmationDialog.initializeLobbyAssets(this.field_s, 10, MirrorMoverLocomotor.field_o, fr.field_b, PitComponent.field_G, MouseWheelInput.field_a, 4, var2, true, 2, via.field_c, ota.field_b, jf.field_t, mga.field_f, var2);
           cq.field_d = qw.field_f;
-          tda.a(200, (byte) -71);
+          tda.initializeChatHistory(200, (byte) -71);
           fta.field_b = MatchState.field_p;
         }
     }

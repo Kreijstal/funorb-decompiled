@@ -27,7 +27,7 @@ final class pka {
         if (lca.a(false)) {
           bka.a((byte) -125);
           var1 = 1;
-          if (PlayPhase.h(89)) {
+          if (PlayPhase.beginReconnectGracePeriod(89)) {
             if (una.a((byte) -87)) {
               if (sr.a(125)) {
                 var2 = (-1 + PlatformBehaviour.field_o << 8) / 16;
@@ -54,7 +54,7 @@ final class pka {
         }
         if (!una.a((byte) -115)) {
           if (!ofa.d(true)) {
-            if (PlayPhase.h(89)) {
+            if (PlayPhase.beginReconnectGracePeriod(89)) {
               if (una.a((byte) -87)) {
                 if (!sr.a(125)) {
                   return var1 != 0;
@@ -82,7 +82,7 @@ final class pka {
           SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_a);
           var1 = 1;
           np.b(-69);
-          if (PlayPhase.h(89)) {
+          if (PlayPhase.beginReconnectGracePeriod(89)) {
             if (una.a((byte) -87)) {
               if (!sr.a(125)) {
                 return var1 != 0;
@@ -109,7 +109,7 @@ final class pka {
         }
         var1 = 1;
         or.d(-1226152383);
-        if (PlayPhase.h(89)) {
+        if (PlayPhase.beginReconnectGracePeriod(89)) {
           if (una.a((byte) -87)) {
             if (!sr.a(125)) {
               return var1 != 0;

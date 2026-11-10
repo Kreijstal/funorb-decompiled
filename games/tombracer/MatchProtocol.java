@@ -496,7 +496,7 @@ final class MatchProtocol {
           try {
             try {
               var4 = param1.getCodeBase();
-              var3 = sda.a(param1, param0 ^ -65, var4).getFile();
+              var3 = sda.appendSessionParameters(param1, param0 ^ -65, var4).getFile();
               JavaScriptBridge.callWithArguments(-104, "updatelinks", param1, new Object[]{"home", var3 + "home.ws"});
               if (param0 != 64) {
                 field_i = (jea) null;

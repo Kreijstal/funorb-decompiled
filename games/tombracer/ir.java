@@ -53,7 +53,7 @@ final class ir {
               throw new IllegalArgumentException();
             }
             var4 = (qu) (param0);
-            stackIn_14_0 = var4.a(false);
+            stackIn_14_0 = var4.toByteArray(false);
             return stackIn_14_0;
           }
           var3 = (byte[]) (param0);

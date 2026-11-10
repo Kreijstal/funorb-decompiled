@@ -519,7 +519,7 @@ final class AffineTransform3D extends Transform3D {
         this.field_g = param5;
     }
 
-    final void a(int param0, Transform3D param1) {
+    final void copyStateFrom(int param0, Transform3D param1) {
         AffineTransform3D var3 = null;
         try {
           if (param0 != 1217) {
@@ -632,7 +632,7 @@ final class AffineTransform3D extends Transform3D {
           return;
         }
         Transform3D var10 = (Transform3D) null;
-        this.a(-20, (Transform3D) null);
+        this.copyStateFrom(-20, (Transform3D) null);
     }
 
     public static void releaseStatics(int param0) {

@@ -81,7 +81,7 @@ final class sl extends vw {
         this.field_c.a(PlayerContextMenu.field_j, 2, -6219, true, false);
         this.field_c.a(0, false, tla.field_c);
         AffineTransform3D var4_ref_asa = this.field_c.C(0);
-        var4_ref_asa.a(1217, this.field_c.c(true));
+        var4_ref_asa.copyStateFrom(1217, this.field_c.c(true));
         this.field_c.a(cva.field_b, false);
         this.field_c.e(0, false);
         this.field_f = true;

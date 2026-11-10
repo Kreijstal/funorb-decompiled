@@ -16,7 +16,7 @@ final class StatefulWidgetPainter extends TextWidgetPainter {
         var1.a(true);
     }
 
-    final static void a(java.applet.Applet param0, byte param1) {
+    final static void checkAppletUsername(java.applet.Applet param0, byte param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         CharSequence var3 = null;

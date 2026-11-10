@@ -28,7 +28,7 @@ final class hg {
         this.field_a = (qm) null;
     }
 
-    final static SocketConnector a(String param0, int param1, boolean param2) {
+    final static SocketConnector createProxyConnector(String param0, int param1, boolean param2) {
         ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -40,7 +40,7 @@ final class hg {
         try {
           if (param2) {
             var4 = (String) null;
-            hg.a((String) null, -41, false);
+            hg.createProxyConnector((String) null, -41, false);
           }
           var3 = new ProxySocketConnector();
           ((SocketConnector) ((Object) var3)).port = param1;

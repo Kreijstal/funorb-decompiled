@@ -56,7 +56,7 @@ final class gq extends uta {
             }
           }
           var7_ref = this.b(false, var6);
-          if (var7_ref.a((byte) -48) == 0) {
+          if (var7_ref.size((byte) -48) == 0) {
             return;
           }
           var8 = new StringBuilder();
@@ -122,7 +122,7 @@ final class gq extends uta {
           if (stackIn_47_0Lifetime1 == (stackIn_47_1Lifetime1 ^ stackIn_47_2Lifetime1)) {
             discarded$1 = var8.append("()");
             var12Lifetime1++;
-            if (1 == var7_ref.a((byte) -34) &&
+            if (1 == var7_ref.size((byte) -34) &&
               ((ela) (var7_ref.b((byte) 38))).field_n.length == 0) {
               var12Lifetime1++;
             }
@@ -394,7 +394,7 @@ final class gq extends uta {
             }
           }
           var7_ref = this.b(param0, var6);
-          var8 = new String[var7_ref.a((byte) -99)];
+          var8 = new String[var7_ref.size((byte) -99)];
           var9Lifetime1 = 0;
           var10 = (ela) (var7_ref.b((byte) 38));
           boolean decompiledNaturalLoopExit0 = false;
@@ -570,7 +570,7 @@ final class gq extends uta {
               this.field_o.a(var5Lifetime1, (byte) 72, var5Lifetime1);
             }
           }
-          gsa.field_w = ResultsPhase.a(this.field_o.e((byte) -112), (byte) -110);
+          gsa.field_w = ResultsPhase.highlightConsoleSyntax(this.field_o.e((byte) -112), (byte) -110);
           if (param0 != -72) {
             this.field_v = (ela[]) null;
           }

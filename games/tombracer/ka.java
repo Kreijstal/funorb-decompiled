@@ -22,7 +22,7 @@ abstract class ka {
 
     abstract void O(int param0, int param1, int param2);
 
-    final static pr a(byte param0, byte[] param1, int param2, HardwareOpenGlToolkit param3) {
+    final static pr compileShader(byte param0, byte[] param1, int param2, HardwareOpenGlToolkit param3) {
         Object stackIn_14_0 = null;
         pr stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;

@@ -41,7 +41,7 @@ final class to extends za {
         if (param0 != 11) {
           return;
         }
-        HorizontalGradientOperator.c(param0 ^ -10787);
+        HorizontalGradientOperator.decreaseMusicVolume(param0 ^ -10787);
     }
 
     to(int param0) {

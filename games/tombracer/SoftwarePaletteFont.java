@@ -119,7 +119,7 @@ final class SoftwarePaletteFont extends GameFont {
         }
     }
 
-    private final void a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, aa param12, int param13, int param14) {
+    private final void blitMaskedSolidGlyph(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, aa param12, int param13, int param14) {
         int var22 = 0;
         int var27 = 0;
         int stackIn_5_0 = 0;
@@ -251,13 +251,13 @@ final class SoftwarePaletteFont extends GameFont {
           return;
         }
         if (param4) {
-          this.a(this.field_e[param0], this.field_g.field_r, param3, var15, var12, var9, var10, var13, var14, param1, param2, this.field_j[param0], param5, param6, param7);
+          this.blitMaskedSolidGlyph(this.field_e[param0], this.field_g.field_r, param3, var15, var12, var9, var10, var13, var14, param1, param2, this.field_j[param0], param5, param6, param7);
         } else {
-          this.a(this.field_e[param0], this.field_g.field_r, this.field_f, param3, var15, var12, var9, var10, var13, var14, param1, param2, this.field_j[param0], param5, param6, param7);
+          this.blitMaskedPaletteGlyph(this.field_e[param0], this.field_g.field_r, this.field_f, param3, var15, var12, var9, var10, var13, var14, param1, param2, this.field_j[param0], param5, param6, param7);
         }
     }
 
-    private final void a(byte[] param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, aa param13, int param14, int param15) {
+    private final void blitMaskedPaletteGlyph(byte[] param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, aa param13, int param14, int param15) {
         int var24 = 0;
         int var29 = 0;
         int incrementValue$0 = 0;

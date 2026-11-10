@@ -32,7 +32,7 @@ abstract class jp extends ota {
         if (param0) {
           return;
         }
-        pu.a(di.a(111), 255);
+        pu.clearStatusCookie(di.a(111), 255);
     }
 
     private jp() throws Throwable {

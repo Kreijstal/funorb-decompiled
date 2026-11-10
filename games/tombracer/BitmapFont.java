@@ -65,7 +65,7 @@ abstract class BitmapFont extends DualLinkNode {
                               if (!(!var8.startsWith("img="))) {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
-                                  var9_int = WhiteLightSensorComponent.a(var10, (byte) 70);
+                                  var9_int = WhiteLightSensorComponent.parseDecimalInt(var10, (byte) 70);
                                   var4 = var4 + this.field_l[var9_int].field_c;
                                   var3 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -457,7 +457,7 @@ abstract class BitmapFont extends DualLinkNode {
                               } else {
                                 try {
                                   var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
-                                  var10 = WhiteLightSensorComponent.a(var13, (byte) 70);
+                                  var10 = WhiteLightSensorComponent.parseDecimalInt(var13, (byte) 70);
                                   var11_ref_rka = this.field_l[var10];
                                   if (this.field_I == null) {
                                     stackIn_27_0 = var11_ref_rka.field_f;
@@ -622,7 +622,7 @@ abstract class BitmapFont extends DualLinkNode {
                                 if (var15.startsWith("img=")) {
                                   try {
                                     var18 = (CharSequence) ((Object) var15.substring(4));
-                                    var16_int = WhiteLightSensorComponent.a(var18, (byte) 70);
+                                    var16_int = WhiteLightSensorComponent.parseDecimalInt(var18, (byte) 70);
                                     var4 = var4 + this.field_l[var16_int].field_c;
                                     var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -815,7 +815,7 @@ abstract class BitmapFont extends DualLinkNode {
                 }
               } else {
                 var4 = (CharSequence) ((Object) param0.substring(6));
-                field_v = WhiteLightSensorComponent.a(var4, (byte) 70);
+                field_v = WhiteLightSensorComponent.parseDecimalInt(var4, (byte) 70);
               }
             } else {
               field_x = field_z;

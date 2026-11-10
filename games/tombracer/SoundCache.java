@@ -368,7 +368,7 @@ final class SoundCache {
             stackIn_8_0 = null;
             return (u) (stackIn_8_0);
           }
-          var9 = SoundEffect.a(this.field_b, param1, param2);
+          var9 = SoundEffect.loadFromArchive(this.field_b, param1, param2);
           if (var9 == null) {
             stackIn_11_0 = null;
             return (u) (stackIn_11_0);

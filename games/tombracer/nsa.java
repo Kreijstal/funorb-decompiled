@@ -25,7 +25,7 @@ final class nsa {
         }
     }
 
-    final nsa a(int param0) {
+    final nsa copy(int param0) {
         if (param0 == -2707) {
           return new nsa(this.field_k, this.field_m, this.field_g, this.field_b, this.field_a, this.field_j);
         }

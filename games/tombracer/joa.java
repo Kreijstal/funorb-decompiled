@@ -63,7 +63,7 @@ final class joa {
         this(-1, 1000000, 1000000);
     }
 
-    final void a(byte param0, byte[] param1, PacketBuffer param2) {
+    final void inflateInto(byte param0, byte[] param1, PacketBuffer param2) {
         try {
           Exception exception = null;
           RuntimeException runtimeException = null;
@@ -120,7 +120,7 @@ final class joa {
         }
     }
 
-    final static boolean a(boolean param0, byte param1) {
+    final static boolean pollGameSocketConnection(boolean param0, byte param1) {
         try {
           long dupTemp$1 = 0L;
           int var2 = 0;
@@ -135,7 +135,7 @@ final class joa {
           if (0 == Room.field_R.field_b) {
             return false;
           }
-          dupTemp$1 = bva.b((byte) -107);
+          dupTemp$1 = bva.currentTimeMillis((byte) -107);
           mha.field_D = dupTemp$1;
           MiscItemBehaviour.field_s = dupTemp$1;
           if (Room.field_R.field_b != 1) {

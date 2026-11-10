@@ -17,11 +17,11 @@ final class kv {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param2 = GameScreen.a('_', "", param2, 0);
+          param2 = GameScreen.replaceCharacter('_', "", param2, 0);
           if (param0 < 17) {
             achievementDescriptions = (String[]) null;
           }
-          var3 = MouseInputHandler.a(param1, 0);
+          var3 = MouseInputHandler.reverseString(param1, 0);
           stackIn_7_0 = (-1 != param2.indexOf(param1)) || (-1 != param2.indexOf(var3));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

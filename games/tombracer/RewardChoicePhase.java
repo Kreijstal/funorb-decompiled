@@ -220,7 +220,7 @@ final class RewardChoicePhase extends MatchPhase {
         this.d(-27142);
     }
 
-    final static boolean a(String param0, byte param1) {
+    final static boolean isPrivateChatTarget(String param0, byte param1) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         RuntimeException stackIn_14_0 = null;
@@ -237,7 +237,7 @@ final class RewardChoicePhase extends MatchPhase {
           if (bta.field_q == 2 &&
             null != mn.field_n) {
             var3 = (CharSequence) ((Object) param0);
-            if (mn.field_n.equals(jd.a(1, var3))) {
+            if (mn.field_n.equals(jd.normalizeDisplayName(1, var3))) {
               return true;
             }
           }

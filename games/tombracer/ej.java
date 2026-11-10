@@ -46,19 +46,19 @@ final class ej {
             if (param0) {
               ej.a(-107);
             }
-            var4 = jd.a(1, param2);
+            var4 = jd.normalizeDisplayName(1, param2);
             if (var4 == null) {
               return false;
             }
             if (var4.length() < 1) {
               return false;
             }
-            if (!hf.a(-62, var4.charAt(0)) &&
-              !hf.a(114, var4.charAt(-1 + var4.length()))) {
+            if (!hf.isNameSeparator(-62, var4.charAt(0)) &&
+              !hf.isNameSeparator(114, var4.charAt(-1 + var4.length()))) {
               var5 = 0;
               for (var6 = 0; param2.length() > var6; var6++) {
                 var7 = param2.charAt(var6);
-                if (!hf.a(-73, (char) var7)) {
+                if (!hf.isNameSeparator(-73, (char) var7)) {
                   var5 = 0;
                 } else {
                   var5++;

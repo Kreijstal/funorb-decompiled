@@ -30,7 +30,7 @@ final class ila {
         return this.field_e;
     }
 
-    private final gqa f(int param0) {
+    private final gqa getNewestChatMessage(int param0) {
         if (param0 != 1366884705) {
           this.d(-116);
         }
@@ -66,9 +66,9 @@ final class ila {
           return;
         }
         if (null == this.field_a) {
-          this.field_a = this.f(1366884705);
+          this.field_a = this.getNewestChatMessage(1366884705);
         }
-        var11 = this.f(1366884705);
+        var11 = this.getNewestChatMessage(1366884705);
         var4 = var11;
         var5 = -127 % ((param0 + 34) / 44);
         if (var11 != null &&
@@ -201,7 +201,7 @@ final class ila {
           var9 = TombRacer.field_G ? 1 : 0;
           try {
             if (OpenGlTransform3D.field_e == null &&
-              !joa.a(param5, (byte) 121)) {
+              !joa.pollGameSocketConnection(param5, (byte) 121)) {
               stackIn_4_0 = -1;
               return stackIn_4_0;
             }
@@ -304,7 +304,7 @@ final class ila {
               }
               fna.field_k = vc.field_q.readString((byte) -76);
               var11 = (CharSequence) ((Object) fna.field_k);
-              tia.field_b = jd.a(1, var11);
+              tia.field_b = jd.normalizeDisplayName(1, var11);
               lsa.field_a = vc.field_q.readUnsignedByte(255);
               km.field_p = uga.field_n;
               if (fd.field_d.a((byte) 113) == BlockModel.field_s) {
@@ -535,7 +535,7 @@ final class ila {
         gqa discarded$1 = null;
         boolean stackIn_6_0 = false;
         if (param0 != -8832) {
-          discarded$1 = this.f(-98);
+          discarded$1 = this.getNewestChatMessage(-98);
         }
         stackIn_6_0 = (this.field_c) && (ni.field_c);
         return stackIn_6_0;

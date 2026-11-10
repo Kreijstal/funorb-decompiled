@@ -10,7 +10,7 @@ final class br extends DualLinkNode {
     boolean field_m;
     String field_n;
 
-    private final void a(int param0, int param1, PacketBuffer param2) {
+    private final void decodeOpcode(int param0, int param1, PacketBuffer param2) {
         char[] stackIn_8_0 = null;
         int stackIn_8_1 = 0;
         int stackIn_9_2 = 0;
@@ -40,7 +40,7 @@ final class br extends DualLinkNode {
                 stackIn_8_0 = this.field_k;
                 stackIn_8_1 = var5;
                 if (var6 != 0) {
-                  stackIn_9_2 = ArrowShooterComponent.a((byte) 11, (byte) var6);
+                  stackIn_9_2 = ArrowShooterComponent.decodeSingleByteCharacter((byte) 11, (byte) var6);
                 } else {
                   stackIn_9_2 = 0;
                 }
@@ -59,7 +59,7 @@ final class br extends DualLinkNode {
                   if (var6 == 0) {
                     stackIn_18_2 = (char)0;
                   } else {
-                    stackIn_18_2 = ArrowShooterComponent.a((byte) 11, (byte) var6);
+                    stackIn_18_2 = ArrowShooterComponent.decodeSingleByteCharacter((byte) 11, (byte) var6);
                   }
                   stackIn_17_0[stackIn_17_1] = stackIn_18_2;
                 }
@@ -74,7 +74,7 @@ final class br extends DualLinkNode {
           }
           if (param1 > -67) {
             var8 = (PacketBuffer) null;
-            this.a((PacketBuffer) null, -82);
+            this.decode((PacketBuffer) null, -82);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -91,7 +91,7 @@ final class br extends DualLinkNode {
         }
     }
 
-    final void a(int param0) {
+    final void applyGlobalIds(int param0) {
         int var4 = 0;
         int var2 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
@@ -114,7 +114,7 @@ final class br extends DualLinkNode {
         }
     }
 
-    final void a(PacketBuffer param0, int param1) {
+    final void decode(PacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         PacketBuffer var5 = null;
@@ -127,14 +127,14 @@ final class br extends DualLinkNode {
         try {
           if (param1 != -26706) {
             var5 = (PacketBuffer) null;
-            this.a((PacketBuffer) null, -59);
+            this.decode((PacketBuffer) null, -59);
           }
           while (true) {
             var3_int = param0.readUnsignedByte(255);
             if (var3_int == 0) {
               return;
             }
-            this.a(var3_int, -90, param0);
+            this.decodeOpcode(var3_int, -90, param0);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

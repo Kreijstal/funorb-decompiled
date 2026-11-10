@@ -447,7 +447,7 @@ class HotspotTextWidget extends FocusableWidget {
         field_B = null;
     }
 
-    final static boolean b(boolean param0) {
+    final static boolean pollAndMergeAchievementMask(boolean param0) {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var3 = 0;

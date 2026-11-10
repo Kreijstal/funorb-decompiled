@@ -41,7 +41,7 @@ final class ResourceArchive {
           param2 = param2.toLowerCase();
           var6 = (CharSequence) ((Object) param0);
           var4_int = this.field_i.field_b.a(vta.a(var6, -12754), 1);
-          if (!this.b(-1, var4_int)) {
+          if (!this.isGroupValid(-1, var4_int)) {
             return false;
           }
           var7 = (CharSequence) ((Object) param2);
@@ -79,7 +79,7 @@ final class ResourceArchive {
     }
 
     final synchronized int getGroupProgress(int param0, byte param1) {
-        if (!this.b(-1, param0)) {
+        if (!this.isGroupValid(-1, param0)) {
           return 0;
         }
         if (null != this.field_a[param0]) {
@@ -218,7 +218,7 @@ final class ResourceArchive {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!this.b(-1, param2)) {
+          if (!this.isGroupValid(-1, param2)) {
             stackIn_2_0 = -1;
             return stackIn_2_0;
           }
@@ -249,7 +249,7 @@ final class ResourceArchive {
     }
 
     final synchronized boolean ensureGroupLoaded(int param0, int param1) {
-        if (!this.b(-1, param0)) {
+        if (!this.isGroupValid(-1, param0)) {
           return false;
         }
         if (null != this.field_a[param0]) {
@@ -272,7 +272,7 @@ final class ResourceArchive {
         if (this.field_i.field_p.length == 1) {
           return this.a(0, (byte) -127, param1);
         }
-        if (!this.b(-1, param1)) {
+        if (!this.isGroupValid(-1, param1)) {
           return false;
         }
         if (param0 != -15121) {
@@ -291,7 +291,7 @@ final class ResourceArchive {
         if (this.field_g) {
           this.field_a[param1] = this.field_d.getPackedGroup(param1, (byte) -39);
         } else {
-          this.field_a[param1] = bw.a(270, this.field_d.getPackedGroup(param1, (byte) -39), false);
+          this.field_a[param1] = bw.wrapByteStorage(270, this.field_d.getPackedGroup(param1, (byte) -39), false);
         }
     }
 
@@ -361,7 +361,7 @@ final class ResourceArchive {
         int var20Lifetime2;
         var23 = TombRacer.field_G ? 1 : 0;
         try {
-          if (!this.b(-1, param0)) {
+          if (!this.isGroupValid(-1, param0)) {
             return false;
           }
           if (null == this.field_a[param0]) {
@@ -519,7 +519,7 @@ final class ResourceArchive {
               if (this.field_j != 0) {
                 var7[var19Lifetime2] = var40[var18Lifetime3];
               } else {
-                var7[var19Lifetime2] = bw.a(270, var40[var18Lifetime3], false);
+                var7[var19Lifetime2] = bw.wrapByteStorage(270, var40[var18Lifetime3], false);
               }
             }
           } else {
@@ -531,7 +531,7 @@ final class ResourceArchive {
             if (this.field_j != 0) {
               var7[var12] = var44;
             } else {
-              var7[var12] = bw.a(270, var37, false);
+              var7[var12] = bw.wrapByteStorage(270, var37, false);
             }
           }
           return true;
@@ -581,7 +581,7 @@ final class ResourceArchive {
         int[] var7 = null;
         int var5 = 0;
         int var6 = TombRacer.field_G ? 1 : 0;
-        if (!this.b(-1, param1)) {
+        if (!this.isGroupValid(-1, param1)) {
           return null;
         }
         int var3 = 121 % ((param0 + 15) / 58);
@@ -652,7 +652,7 @@ final class ResourceArchive {
         if (this.field_i.field_p.length == 1) {
           return this.a(false, 0, param0);
         }
-        if (!this.b(-1, param0)) {
+        if (!this.isGroupValid(-1, param0)) {
           return null;
         }
         if (this.field_i.field_p[param0] == 1) {
@@ -692,7 +692,7 @@ final class ResourceArchive {
           }
           var4 = (CharSequence) ((Object) param0);
           var3_int = this.field_i.field_b.a(vta.a(var4, -12754), param1 ^ -7767);
-          if (this.b(param1 ^ 7767, var3_int)) {
+          if (this.isGroupValid(param1 ^ 7767, var3_int)) {
             return var3_int;
           }
           stackIn_9_0 = -1;
@@ -769,7 +769,7 @@ final class ResourceArchive {
           param2 = param2.toLowerCase();
           var6 = (CharSequence) ((Object) param0);
           var4_int = this.field_i.field_b.a(vta.a(var6, -12754), 1);
-          if (!this.b(-1, var4_int)) {
+          if (!this.isGroupValid(-1, var4_int)) {
             return null;
           }
           if (param1 <= 112) {
@@ -887,7 +887,7 @@ final class ResourceArchive {
     }
 
     final int a(byte param0, int param1) {
-        if (!this.b(-1, param1)) {
+        if (!this.isGroupValid(-1, param1)) {
           return 0;
         }
         int var3 = -70 % ((param0 - 3) / 53);
@@ -931,7 +931,7 @@ final class ResourceArchive {
         }
     }
 
-    private final synchronized boolean b(int param0, int param1) {
+    private final synchronized boolean isGroupValid(int param0, int param1) {
         if (!this.b(-80)) {
           return false;
         }
@@ -949,7 +949,7 @@ final class ResourceArchive {
     final byte[] a(boolean param0, int param1, int param2) {
         boolean discarded$0 = false;
         if (param0) {
-          discarded$0 = this.b(((int[]) (this.field_a[11]))[23], 94);
+          discarded$0 = this.isGroupValid(((int[]) (this.field_a[11]))[23], 94);
         }
         return this.a(param2, true, (int[]) null, param1);
     }

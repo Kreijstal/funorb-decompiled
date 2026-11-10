@@ -166,7 +166,7 @@ final class efa extends WidgetContainer implements mia, ButtonListener {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 == -2239) {
-            stackIn_4_0 = this.a(param0, param3, param5, param1, param2, 35, 3);
+            stackIn_4_0 = this.addLabeledValidationMessageRow(param0, param3, param5, param1, param2, 35, 3);
             return stackIn_4_0;
           }
           stackIn_2_0 = 76;
@@ -250,7 +250,7 @@ final class efa extends WidgetContainer implements mia, ButtonListener {
         }
     }
 
-    private final int a(int param0, UiWidget param1, int param2, String param3, String param4, int param5, int param6) {
+    private final int addLabeledValidationMessageRow(int param0, UiWidget param1, int param2, String param3, String param4, int param5, int param6) {
         RuntimeException var8 = null;
         ValidationMessageWidget var9 = null;
         jsa var10 = null;

@@ -73,7 +73,7 @@ final class ConsoleValue {
 
     public final String toString() {
         if (this.field_a) {
-          return jd.a(this.field_d, 0) + "{" + this.field_d + "}";
+          return jd.getPrimitiveType(this.field_d, 0) + "{" + this.field_d + "}";
         }
         if (null == this.field_d) {
           return "null";

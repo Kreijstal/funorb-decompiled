@@ -61,7 +61,7 @@ final class BrazierComponent extends PrefabComponent {
           var4 = new uca[var3];
           for (var5 = 0; var3 > var5; var5++) {
             if (!CircleMovementLocomotor.a(5907, param0)) {
-              var6 = param0.readBits((byte) 44, nma.b(false, var5 - 1));
+              var6 = param0.readBits((byte) 44, nma.signedBitLength(false, var5 - 1));
               var4[var5] = var4[var6];
             } else {
               var6_ref_uca = new uca();

@@ -250,7 +250,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    private final void c(int param0, boolean param1) {
+    private final void setDepthTestEnabled(int param0, boolean param1) {
         if ((!param1 ? 1 : 0) != (!this.field_d ? 1 : 0)) {
           if (param1) {
             jaggl.OpenGL.glEnable(2929);
@@ -303,7 +303,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
         jaggl.OpenGL.glEnable(3089);
         this.r((byte) -115);
-        this.q((byte) 123);
+        this.applyScissorRect((byte) 123);
     }
 
     final void b(int param0, int param1, int param2, int param3) {
@@ -318,7 +318,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_Pc = param1;
         this.field_g = param2;
         this.h((byte) -114);
-        this.q((byte) 83);
+        this.applyScissorRect((byte) 83);
         if (param0 != 4) {
           this.field_od = 2.034196376800537f;
         }
@@ -408,7 +408,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    private final void q(byte param0) {
+    private final void applyScissorRect(byte param0) {
         if (param0 <= 1) {
           this.field_nc = false;
         }
@@ -498,10 +498,10 @@ final class OpenGlToolkit extends GraphicsToolkit {
           jaggl.OpenGL.glReadBuffer(1028);
           jaggl.OpenGL.glDrawBuffer(1029);
           this.s(3682);
-          this.b(16363, false);
-          this.a(81, false);
-          this.c(3742, false);
-          this.a(false, 0);
+          this.setFogEnabled(16363, false);
+          this.setLightingEnabled(81, false);
+          this.setDepthTestEnabled(3742, false);
+          this.setDepthWriteEnabled(false, 0);
           this.a(true, (kl) null);
           this.c(-2, 32677);
           this.d(1, 1);
@@ -556,10 +556,10 @@ final class OpenGlToolkit extends GraphicsToolkit {
         int var2 = -116 / ((14 - param0) / 62);
         if (4 != this.field_y) {
           this.r(0);
-          this.b(16363, false);
-          this.a(104, false);
-          this.c(3742, false);
-          this.a(false, 0);
+          this.setFogEnabled(16363, false);
+          this.setLightingEnabled(104, false);
+          this.setDepthTestEnabled(3742, false);
+          this.setDepthWriteEnabled(false, 0);
           this.c(-2, 32677);
           this.a((byte) 110, 1);
           this.field_y = 4;
@@ -568,8 +568,8 @@ final class OpenGlToolkit extends GraphicsToolkit {
 
     final void a(Transform3D param0) {
         try {
-          this.field_jd.a(param0, 124);
-          this.field_j.a(this.field_jd, -66);
+          this.field_jd.copyStateFrom(param0, 124);
+          this.field_j.copyStateFrom(this.field_jd, -66);
           this.field_j.c((byte) 57);
           this.field_Tc.a((Transform3D) (this.field_j), (byte) 112);
           if (this.field_e != 1) {
@@ -599,7 +599,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         return true;
     }
 
-    final synchronized void c(int param0) {
+    final synchronized void updateTime(int param0) {
         int incrementValue$6 = 0;
         int incrementValue$1 = 0;
         int incrementValue$0 = 0;
@@ -772,9 +772,9 @@ final class OpenGlToolkit extends GraphicsToolkit {
           }
           this.field_hd.c(-29413);
           if (!(this.f(-44) <= 100663296) &&
-            !(bva.b((byte) -107) <= (60000L + this.field_Lb))) {
+            !(bva.currentTimeMillis((byte) -107) <= (60000L + this.field_Lb))) {
             System.gc();
-            this.field_Lb = bva.b((byte) -107);
+            this.field_Lb = bva.currentTimeMillis((byte) -107);
           }
         } else {
           jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, qo.field_k, 0);
@@ -797,9 +797,9 @@ final class OpenGlToolkit extends GraphicsToolkit {
           }
           this.field_hd.c(-29413);
           if (!(this.f(-44) <= 100663296) &&
-            !(bva.b((byte) -107) <= (60000L + this.field_Lb))) {
+            !(bva.currentTimeMillis((byte) -107) <= (60000L + this.field_Lb))) {
             System.gc();
-            this.field_Lb = bva.b((byte) -107);
+            this.field_Lb = bva.currentTimeMillis((byte) -107);
           }
         }
         this.field_Oc = param0;
@@ -1163,9 +1163,9 @@ final class OpenGlToolkit extends GraphicsToolkit {
     final void j(byte param0) {
         if (this.field_y != 16) {
           this.d((byte) -71);
-          this.b(16363, true);
-          this.c(3742, true);
-          this.a(true, 0);
+          this.setFogEnabled(16363, true);
+          this.setDepthTestEnabled(3742, true);
+          this.setDepthWriteEnabled(true, 0);
           this.a((byte) 105, 1);
           this.field_y = 16;
         }
@@ -1352,18 +1352,18 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    private final void a(boolean param0, int param1) {
+    private final void setDepthWriteEnabled(boolean param0, int param1) {
         if (param1 != 0) {
           this.field_Zb = 0.5239377021789551f;
         }
         if ((!param0 ? 1 : 0) == (this.field_Nc ? 1 : 0)) {
           this.field_Nc = param0 ? true : false;
-          this.c((byte) 13);
+          this.applyDepthWrite((byte) 13);
           this.field_y = this.field_y & -32;
         }
     }
 
-    private final void c(byte param0) {
+    private final void applyDepthWrite(byte param0) {
         boolean stackIn_4_0 = false;
         stackIn_4_0 = (this.field_Nc) && (this.field_Jc);
         jaggl.OpenGL.glDepthMask(stackIn_4_0);
@@ -1496,10 +1496,10 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_lb = true;
         jaggl.OpenGL.glColorMask(true, true, true, true);
         this.field_q = true;
-        this.b(16363, true);
-        this.a(param0 ^ -3082, true);
-        this.c(3742, true);
-        this.a(true, 0);
+        this.setFogEnabled(16363, true);
+        this.setLightingEnabled(param0 ^ -3082, true);
+        this.setDepthTestEnabled(3742, true);
+        this.setDepthWriteEnabled(true, 0);
         this.s(param0 + 6841);
         this.field_l.setSwapInterval(0);
         jaggl.OpenGL.glShadeModel(7425);
@@ -1559,9 +1559,9 @@ final class OpenGlToolkit extends GraphicsToolkit {
     final void c(boolean param0) {
         if (this.field_y != 8) {
           this.a((byte) -10);
-          this.b(16363, true);
-          this.c(3742, true);
-          this.a(true, 0);
+          this.setFogEnabled(16363, true);
+          this.setDepthTestEnabled(3742, true);
+          this.setDepthWriteEnabled(true, 0);
           this.a((byte) 65, 1);
           this.field_y = 8;
         }
@@ -1570,7 +1570,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final void a(int param0, boolean param1) {
+    final void setLightingEnabled(int param0, boolean param1) {
         if ((!param1 ? 1 : 0) != (!this.field_Ac ? 1 : 0)) {
           this.field_Ac = param1 ? true : false;
           this.applyLighting((byte) -52);
@@ -1802,7 +1802,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
               throw new RuntimeException("");
             }
             this.f((byte) -68);
-            var4_int = this.k((byte) 108);
+            var4_int = this.initializeCapabilities((byte) 108);
             if (var4_int != 0) {
               throw new RuntimeException("");
             }
@@ -1816,7 +1816,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
               var5_int = 0;
               var6 = 0;
               var7 = 0;
-              var8 = rga.a(32287, this.field_h.replace('/', ' '), ' ');
+              var8 = rga.splitPreservingEmptyParts(32287, this.field_h.replace('/', ' '), ' ');
               for (var9 = 0; var9 < var8.length; var9++) {
                 var13 = var8[var9];
                 var10 = var13;
@@ -1844,7 +1844,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
                         var22 = (CharSequence) ((Object) var10.substring(0, 4));
                         if (sqa.a(var22, -3)) {
                           var23 = (CharSequence) ((Object) var10.substring(0, 4));
-                          var5_int = WhiteLightSensorComponent.a(var23, (byte) 70);
+                          var5_int = WhiteLightSensorComponent.parseDecimalInt(var23, (byte) 70);
                           decompiledRegionSelector0 = 1;
                           decompiledFrameRemainder0 = false;
                         }
@@ -1968,7 +1968,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
             this.field_t.b(13109);
           } else {
             this.c(param0, -4);
-            this.a(0, param0);
+            this.pushFramebuffer(0, param0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2110,7 +2110,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     final void setTextureCombineOperands(int param0, int param1, int param2, int param3) {
         jaggl.OpenGL.glTexEnvi(8960, param0 + 34176, param2);
         if (param1 != 0) {
-          this.q((byte) 53);
+          this.applyScissorRect((byte) 53);
         }
         jaggl.OpenGL.glTexEnvi(8960, 34192 + param0, param3);
     }
@@ -2173,7 +2173,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_y = this.field_y & -8;
     }
 
-    private final int k(byte param0) {
+    private final int initializeCapabilities(byte param0) {
         int stackIn_27_0 = 0;
         Throwable decompiledCaughtException = null;
         int var2 = 0;
@@ -2197,13 +2197,13 @@ final class OpenGlToolkit extends GraphicsToolkit {
           var2 = var2 | 1;
         }
         var3 = jaggl.OpenGL.glGetString(7938);
-        var4 = rga.a(32287, var3.replace('.', ' '), ' ');
+        var4 = rga.splitPreservingEmptyParts(32287, var3.replace('.', ' '), ' ');
         if (var4.length < 2) {
           var2 = var2 | 4;
         } else {
           try {
-            var5_int = WhiteLightSensorComponent.a((CharSequence) ((Object) var4[0]), (byte) 70);
-            var6 = WhiteLightSensorComponent.a((CharSequence) ((Object) var4[1]), (byte) 70);
+            var5_int = WhiteLightSensorComponent.parseDecimalInt((CharSequence) ((Object) var4[0]), (byte) 70);
+            var6 = WhiteLightSensorComponent.parseDecimalInt((CharSequence) ((Object) var4[1]), (byte) 70);
             this.field_fb = var6 + 10 * var5_int;
           } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -2374,7 +2374,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_B = param2;
         jaggl.OpenGL.glEnable(3089);
         this.r((byte) -124);
-        this.q((byte) 68);
+        this.applyScissorRect((byte) 68);
     }
 
     final void b(int param0) {
@@ -2532,7 +2532,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    private final void b(int param0, boolean param1) {
+    private final void setFogEnabled(int param0, boolean param1) {
         if (param0 != 16363) {
           this.c(31, -99);
         }
@@ -2632,7 +2632,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           if (5 < incrementValue$0) {
             throw new RuntimeException("");
           }
-          TrapSpawner.a(0, 1000L);
+          TrapSpawner.sleepMillis(0, 1000L);
         }
     }
 
@@ -2718,10 +2718,10 @@ final class OpenGlToolkit extends GraphicsToolkit {
     final void ea(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         this.a((byte) 88, (float)param6);
         this.d((byte) -71);
-        this.b(16363, false);
-        this.a(116, false);
-        this.c(3742, false);
-        this.a(false, 0);
+        this.setFogEnabled(16363, false);
+        this.setLightingEnabled(116, false);
+        this.setDepthTestEnabled(3742, false);
+        this.setDepthWriteEnabled(false, 0);
         this.a(true, (kl) null);
         this.c(-2, 32677);
         this.d(1, 1);
@@ -2744,10 +2744,10 @@ final class OpenGlToolkit extends GraphicsToolkit {
     final void q(int param0) {
         if (param0 != this.field_y) {
           this.r(0);
-          this.b(param0 ^ 16361, false);
-          this.a(109, false);
-          this.c(3742, false);
-          this.a(false, 0);
+          this.setFogEnabled(param0 ^ 16361, false);
+          this.setLightingEnabled(109, false);
+          this.setDepthTestEnabled(3742, false);
+          this.setDepthWriteEnabled(false, 0);
           this.c(-2, 32677);
           this.field_y = 2;
         }
@@ -2880,14 +2880,14 @@ final class OpenGlToolkit extends GraphicsToolkit {
 
     final synchronized void c(int param0, int param1, int param2) {
         if (param0 != 2) {
-          this.a(92, true);
+          this.setLightingEnabled(92, true);
         }
         al var4 = new al(param1);
         var4.key = (long)param2;
         this.field_Vb.addLast((byte) -84, var4);
     }
 
-    final void a(int param0, Framebuffer param1) {
+    final void pushFramebuffer(int param0, Framebuffer param1) {
         int fieldTemp$0 = 0;
         try {
           if (3 <= this.field_A) {
@@ -2937,7 +2937,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     }
 
     final void ya() {
-        this.a(true, 0);
+        this.setDepthWriteEnabled(true, 0);
         jaggl.OpenGL.glClear(256);
     }
 
@@ -3009,7 +3009,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
 
     private final void s(int param0) {
         if (param0 != 3682) {
-          this.c(-29);
+          this.updateTime(-29);
         }
         if (0 != this.field_e) {
           this.field_e = 0;
@@ -3070,10 +3070,10 @@ final class OpenGlToolkit extends GraphicsToolkit {
 
     final void v(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this.a((byte) -10);
-        this.b(16363, false);
-        this.a(52, false);
-        this.c(3742, false);
-        this.a(false, 0);
+        this.setFogEnabled(16363, false);
+        this.setLightingEnabled(52, false);
+        this.setDepthTestEnabled(3742, false);
+        this.setDepthWriteEnabled(false, 0);
         this.a(true, (kl) null);
         this.c(-2, 32677);
         this.d(1, 1);
@@ -3185,7 +3185,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
 
     final void a(boolean param0, boolean param1) {
         this.field_Jc = param0 ? true : false;
-        this.c((byte) 13);
+        this.applyDepthWrite((byte) 13);
         if (param1) {
           this.field_t = (Framebuffer) null;
         }
@@ -3251,10 +3251,10 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
         if (1 != this.field_y) {
           this.r(0);
-          this.b(16363, false);
-          this.a(36, false);
-          this.c(3742, false);
-          this.a(false, 0);
+          this.setFogEnabled(16363, false);
+          this.setLightingEnabled(36, false);
+          this.setDepthTestEnabled(3742, false);
+          this.setDepthWriteEnabled(false, 0);
           this.a(true, (kl) null);
           this.c(-2, 32677);
           this.d(1, 1);

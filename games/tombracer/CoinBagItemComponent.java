@@ -449,7 +449,7 @@ final class CoinBagItemComponent extends ItemComponent {
               var8 = dl.field_t;
             }
             if (uq.field_d != 0L) {
-              var9 = (int)(-bva.b((byte) -107) + uq.field_d);
+              var9 = (int)(-bva.currentTimeMillis((byte) -107) + uq.field_d);
               var9 = (999 + var9) / 1000;
               if (var9 < 1) {
                 var9 = 1;

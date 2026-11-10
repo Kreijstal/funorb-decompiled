@@ -51,7 +51,7 @@ abstract class GameFont {
         }
     }
 
-    private final void a(String param0, int param1) {
+    private final void applyStyleTag(String param0, int param1) {
         RuntimeException stackIn_40_0 = null;
         StringBuilder stackIn_40_1 = null;
         String stackIn_41_2 = null;
@@ -390,11 +390,11 @@ abstract class GameFont {
                             if (!var15_ref_String.equals("copy")) {
                               if (!var15_ref_String.equals("reg")) {
                                 if (!var15_ref_String.startsWith("img=")) {
-                                  this.a(var15_ref_String, 115);
+                                  this.applyStyleTag(var15_ref_String, 115);
                                 } else {
                                   try {
                                     var21 = (CharSequence) ((Object) var15_ref_String.substring(4));
-                                    var16_int = WhiteLightSensorComponent.a(var21, (byte) 70);
+                                    var16_int = WhiteLightSensorComponent.parseDecimalInt(var21, (byte) 70);
                                     var17 = param5[var16_int];
                                     if (param3 == null) {
                                       stackIn_29_0 = var17.b();

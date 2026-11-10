@@ -397,7 +397,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
     }
 
     final void ya() {
-        this.b(true, (byte) 81);
+        this.setDepthWriteEnabled(true, (byte) 81);
         this.field_jd.Clear(2, 0, 1.0f, 0);
     }
 
@@ -824,7 +824,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         return 0;
     }
 
-    final void b(byte param0) {
+    final void applyDepthWrite(byte param0) {
         int var2;
         jagdx.IDirect3DDevice stackIn_3_0 = null;
         int stackIn_3_1 = 0;
@@ -838,7 +838,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
 
     final void a(Object param0, boolean param1, java.awt.Canvas param2) {
         if (param1) {
-          this.u((byte) 126);
+          this.applyAlphaCombineOperation((byte) 126);
         }
     }
 
@@ -928,7 +928,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         this.field_Pc = false;
     }
 
-    final void f(byte param0) {
+    final void applyDepthTest(byte param0) {
         if (param0 != -69) {
           this.field_ad = (jagdx.D3DPRESENT_PARAMETERS) null;
         }
@@ -943,14 +943,14 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         if (this.field_Qc[this.field_Cc]) {
           this.field_Qc[this.field_Cc] = false;
           this.field_jd.SetTexture(this.field_Cc, (jagdx.IDirect3DBaseTexture) null);
-          this.u((byte) -23);
+          this.applyAlphaCombineOperation((byte) -23);
           this.f(param0 ^ -3486);
         }
     }
 
-    final synchronized void c(int param0) {
+    final synchronized void updateTime(int param0) {
         this.field_Mc.c(-24122);
-        super.c(param0);
+        super.updateTime(param0);
     }
 
     final void k() {
@@ -1037,7 +1037,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         }
         if (!this.field_Qc[this.field_Cc]) {
           this.field_Qc[this.field_Cc] = true;
-          this.u((byte) -23);
+          this.applyAlphaCombineOperation((byte) -23);
           this.f(-3485);
         }
     }
@@ -1115,7 +1115,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         this.z(param1 + 1);
     }
 
-    final void u(byte param0) {
+    final void applyAlphaCombineOperation(byte param0) {
         int var2 = this.field_Qc[this.field_Cc] ? Direct3DToolkit.a(this.field_db[this.field_Cc], param0 ^ -23) : 1;
         if (param0 != -23) {
           return;

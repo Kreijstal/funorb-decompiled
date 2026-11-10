@@ -42,10 +42,10 @@ abstract class ArchiveNetworkClient {
         if (param0 != -3) {
           ArchiveNetworkClient.b((byte) 52);
         }
-        return this.field_e.a((byte) -56) + this.field_m.a((byte) -92);
+        return this.field_e.size((byte) -56) + this.field_m.size((byte) -92);
     }
 
-    final static void a(int param0, int param1) {
+    final static void resendQueuedListRequests(int param0, int param1) {
         int var3 = 0;
         toa var4 = null;
         ik var5 = null;
@@ -119,11 +119,11 @@ abstract class ArchiveNetworkClient {
               var2.writeInt(wea.field_a, (byte) 117);
               jia.field_a.a(var2.payload, 0, 13, 106);
               cma.field_m = cma.field_m + 1;
-              pm.field_n = 30000L + bva.b((byte) -107);
+              pm.field_n = 30000L + bva.currentTimeMillis((byte) -107);
             }
             if (cma.field_m == 3) {
               if (jia.field_a.c(0) <= 0) {
-                if (bva.b((byte) -107) > pm.field_n) {
+                if (bva.currentTimeMillis((byte) -107) > pm.field_n) {
                   stackIn_31_0 = du.a(-2, (byte) 17);
                   return stackIn_31_0;
                 }
@@ -214,7 +214,7 @@ abstract class ArchiveNetworkClient {
         if (param0 != 78) {
           this.field_k = (vj) null;
         }
-        return this.field_c.a((byte) -77) + this.field_k.a((byte) -43);
+        return this.field_c.size((byte) -77) + this.field_k.size((byte) -43);
     }
 
     final qqa a(int param0, boolean param1, int param2, int param3, byte param4) {

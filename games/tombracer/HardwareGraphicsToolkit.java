@@ -199,8 +199,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         if (this.field_rb != 16) {
           this.G(22);
           this.setFogEnabled(true, -69);
-          this.setLightingEnabled(0, true);
-          this.b(true, (byte) 81);
+          this.setDepthTestEnabled(0, true);
+          this.setDepthWriteEnabled(true, (byte) 81);
           this.setBlendMode(1, 1);
           this.field_rb = 16;
         }
@@ -354,9 +354,9 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         if (4 != this.field_rb) {
           this.usePixelProjection(19822);
           this.setFogEnabled(false, -52);
-          this.d(0, false);
           this.setLightingEnabled(0, false);
-          this.b(false, (byte) 81);
+          this.setDepthTestEnabled(0, false);
+          this.setDepthWriteEnabled(false, (byte) 81);
           this.a((byte) -80, false, false, -2);
           this.setBlendMode(1, 1);
           this.a((byte) -68, 0);
@@ -402,7 +402,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     abstract Object createSurface(boolean param0, java.awt.Canvas param1);
 
-    final void d(int param0, boolean param1) {
+    final void setLightingEnabled(int param0, boolean param1) {
         if (this.field_l != param1) {
           this.field_l = param1 ? true : false;
           this.applyLighting((byte) -102);
@@ -427,10 +427,10 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    final void b(boolean param0, byte param1) {
+    final void setDepthWriteEnabled(boolean param0, byte param1) {
         if (this.field_qc != param0) {
           this.field_qc = param0 ? true : false;
-          this.b((byte) -128);
+          this.applyDepthWrite((byte) -128);
           this.field_rb = this.field_rb & -32;
         }
         if (param1 != 81) {
@@ -625,7 +625,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            this.c(-115);
+            this.updateTime(-115);
           }
           stackIn_3_0 = this.createIntTexture2D(param4, 0, param2, param3, 0, param1, 75);
           return stackIn_3_0;
@@ -671,8 +671,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         if (this.field_rb != 8) {
           this.A((byte) -74);
           this.setFogEnabled(true, -91);
-          this.setLightingEnabled(0, true);
-          this.b(true, (byte) 81);
+          this.setDepthTestEnabled(0, true);
+          this.setDepthWriteEnabled(true, (byte) 81);
           this.setBlendMode(1, 1);
           this.field_rb = 8;
         }
@@ -850,7 +850,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    void c(int param0) {
+    void updateTime(int param0) {
         if (null != this.field_Ec) {
           this.field_Ec.a(5);
         }
@@ -922,7 +922,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         return var1;
     }
 
-    abstract void f(byte param0);
+    abstract void applyDepthTest(byte param0);
 
     final int[] projectionParameters() {
         return new int[]{this.field_Q, this.field_kc, this.field_Ic, this.field_h};
@@ -984,7 +984,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
     }
 
-    abstract void u(byte param0);
+    abstract void applyAlphaCombineOperation(byte param0);
 
     final void i(byte param0) {
         this.field_q.a();
@@ -1083,7 +1083,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     final void a(boolean param0, int param1) {
         this.field_Nb = param0 ? true : false;
-        this.b((byte) 117);
+        this.applyDepthWrite((byte) 117);
         if (param1 != 0) {
           this.field_S = -102;
         }
@@ -1299,9 +1299,9 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         if (this.field_rb != 1) {
           this.usePixelProjection(19822);
           this.setFogEnabled(false, -63);
-          this.d(0, false);
           this.setLightingEnabled(0, false);
-          this.b(false, (byte) 81);
+          this.setDepthTestEnabled(0, false);
+          this.setDepthWriteEnabled(false, (byte) 81);
           this.a((byte) -80, false, false, -2);
           this.a((byte) 118, 1);
           this.bindTexture(true, this.field_Jb);
@@ -1429,7 +1429,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         return this.field_cb.a(true);
     }
 
-    abstract void b(byte param0);
+    abstract void applyDepthWrite(byte param0);
 
     private final void C(byte param0) {
         this.a(-126, 0, this.field_cb);
@@ -1641,7 +1641,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
 
     abstract void unbindTexture(int param0);
 
-    final void a(boolean param0, byte param1) {
+    final void setLightingSuppressed(boolean param0, byte param1) {
         if (param1 < 53) {
           return;
         }
@@ -1723,9 +1723,9 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         if (this.field_rb != 2) {
           this.usePixelProjection(19822);
           this.setFogEnabled(false, -99);
-          this.d(0, false);
           this.setLightingEnabled(0, false);
-          this.b(false, (byte) 81);
+          this.setDepthTestEnabled(0, false);
+          this.setDepthWriteEnabled(false, (byte) 81);
           this.a((byte) -80, false, false, -2);
           this.field_rb = 2;
         }
@@ -1870,10 +1870,10 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         return;
     }
 
-    final void setLightingEnabled(int param0, boolean param1) {
+    final void setDepthTestEnabled(int param0, boolean param1) {
         if ((!this.field_wc ? 1 : 0) == (param1 ? 1 : 0)) {
           this.field_wc = param1 ? true : false;
-          this.f((byte) -69);
+          this.applyDepthTest((byte) -69);
           this.field_rb = this.field_rb & -32;
         }
         if (param0 != 0) {
@@ -2091,9 +2091,9 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.G(-89);
         this.a((float)param6, -229);
         this.setFogEnabled(false, -103);
-        this.d(0, false);
         this.setLightingEnabled(0, false);
-        this.b(false, (byte) 81);
+        this.setDepthTestEnabled(0, false);
+        this.setDepthWriteEnabled(false, (byte) 81);
         this.setBlendMode(param8, 1);
         this.a((byte) -80, false, false, -2);
         this.g(3625, param7);
@@ -2229,8 +2229,8 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.applyLightPositions(-71);
         this.uploadDirectionalLights((byte) -78);
         this.w((byte) -21);
-        this.f((byte) -69);
-        this.b((byte) -126);
+        this.applyDepthTest((byte) -69);
+        this.applyDepthWrite((byte) -126);
         this.D(2);
         this.applyFogParameters(1);
         if (param0 < 83) {
@@ -2242,7 +2242,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         for (var2 = -1 + this.field_Vb; var2 >= 0; var2--) {
           this.e(var2, false);
           this.f(-3485);
-          this.u((byte) -23);
+          this.applyAlphaCombineOperation((byte) -23);
           this.p((byte) 114);
         }
         this.N(-48);
@@ -2406,9 +2406,9 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         }
         this.A((byte) -74);
         this.setFogEnabled(false, -68);
-        this.d(0, false);
         this.setLightingEnabled(0, false);
-        this.b(false, (byte) 81);
+        this.setDepthTestEnabled(0, false);
+        this.setDepthWriteEnabled(false, (byte) 81);
         this.setBlendMode(param7, 1);
         this.a((byte) -80, false, false, -2);
         this.g(3625, param6);
@@ -2445,7 +2445,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
           }
           if (param0 != this.field_db[this.field_Cc]) {
             this.field_db[this.field_Cc] = param0;
-            this.u((byte) -23);
+            this.applyAlphaCombineOperation((byte) -23);
             var4_int = 1;
           }
           if (var4_int != 0) {
@@ -2516,7 +2516,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         this.field_xb.a(12574);
         this.field_cb.a(12574);
         if (param0 != 6) {
-          this.b(false, (byte) -31);
+          this.setDepthWriteEnabled(false, (byte) -31);
         }
         this.field_hb.a(12574);
         this.field_tb.e((byte) 112);

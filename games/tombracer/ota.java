@@ -172,7 +172,7 @@ abstract class ota {
         throw new Error();
     }
 
-    final static boolean a(long param0, byte param1, String param2) {
+    final static boolean isPlayerReachable(long param0, byte param1, String param2) {
         mu var4 = null;
         RuntimeException var4_ref = null;
         boolean stackIn_11_0 = false;

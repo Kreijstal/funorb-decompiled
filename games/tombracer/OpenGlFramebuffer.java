@@ -33,7 +33,7 @@ final class OpenGlFramebuffer implements Framebuffer {
             this.field_g = param1.field_o;
             this.field_c = param1.field_l;
           }
-          param1.a(this.field_a, param2, 0, vta.field_d[param3]);
+          param1.attachToFramebuffer(this.field_a, param2, 0, vta.field_d[param3]);
           this.field_h[param3] = (FramebufferAttachment) ((Object) param1);
           this.field_e = this.field_e | var5_int;
           return;

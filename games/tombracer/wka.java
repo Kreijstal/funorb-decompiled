@@ -9,7 +9,7 @@ class wka extends eta {
     wka() {
     }
 
-    final static void b(int param0) {
+    final static void patchJavaKeyCodeMap(int param0) {
         bba.field_c[59] = 57;
         bba.field_c[45] = 26;
         bba.field_c[61] = 27;

@@ -200,7 +200,7 @@ final class gu extends me {
             gu.a(-67, true, (String) null, (String) null, (String) null, 15);
           }
           var6 = new gqa(param5, param2, param0, param4, param3);
-          DivisionMazeGenerator.a(16599, var6);
+          DivisionMazeGenerator.appendChatHistory(16599, var6);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "gu.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }

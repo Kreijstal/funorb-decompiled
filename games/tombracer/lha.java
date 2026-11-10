@@ -96,7 +96,7 @@ final class lha extends kl {
                 lha.releaseStatics((byte) -114);
               }
               if (0L <= param3) {
-                var7Lifetime4 = var9 + "; Expires=" + ida.a(param3 * 1000L + bva.b((byte) -107), -1) + "; Max-Age=" + param3;
+                var7Lifetime4 = var9 + "; Expires=" + ida.formatCookieDate(param3 * 1000L + bva.currentTimeMillis((byte) -107), -1) + "; Max-Age=" + param3;
               } else {
                 var7Lifetime4 = var9 + "; Discard;";
               }

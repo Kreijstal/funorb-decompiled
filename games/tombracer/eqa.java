@@ -64,7 +64,7 @@ final class eqa implements os {
             return true;
           }
           var4_ref_String = vc.field_n.toString();
-          if (lt.a(var4_ref_String, -1)) {
+          if (lt.containsFilterText(var4_ref_String, -1)) {
             var13 = (String) null;
             var12 = (String) null;
             gu.a(0, param1, (String) null, InvertOperator.field_m, (String) null, 2);
@@ -97,7 +97,7 @@ final class eqa implements os {
           return true;
         }
         var4 = HardwareOpenGlToolkit.field_td;
-        if (!rra.a((byte) -126, (char) var4)) {
+        if (!rra.isPrintableCharacter((byte) -126, (char) var4)) {
           return false;
         }
         if (var3 == 0) {

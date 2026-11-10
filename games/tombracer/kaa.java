@@ -6,7 +6,7 @@ final class kaa implements isa {
     private int field_a;
     private int field_b;
 
-    final static byte[] a(int param0, byte[] param1, int param2) {
+    final static byte[] copyByteRange(int param0, byte[] param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -40,7 +40,7 @@ final class kaa implements isa {
         ni.field_c = true;
         if (param0 <= 31) {
           byte[] var2 = (byte[]) null;
-          kaa.a(-119, (byte[]) null, -9);
+          kaa.copyByteRange(-119, (byte[]) null, -9);
         }
     }
 
@@ -76,7 +76,7 @@ final class kaa implements isa {
           var6_int = stackIn_6_0;
           if (param2 != 16777215) {
             var12 = (byte[]) null;
-            kaa.a(91, (byte[]) null, 83);
+            kaa.copyByteRange(91, (byte[]) null, 83);
           }
           this.field_c.a("<u=" + Integer.toString(var6_int, 16) + ">" + param0.field_o + "</u>", param0.field_i + param1, param0.field_n + param3, param0.field_m, param0.field_p, var6_int, -1, this.field_a, this.field_b, this.field_c.field_k + this.field_c.field_w);
           if (!param0.hasKeyboardFocus((byte) -34)) {

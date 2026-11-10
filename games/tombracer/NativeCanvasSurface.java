@@ -15,11 +15,11 @@ final class NativeCanvasSurface extends IntrusiveNode implements e {
 
     private final void handlePresentationFailure(Exception param0) {
         if (!field_g) {
-          field_j = bva.b((byte) -107);
+          field_j = bva.currentTimeMillis((byte) -107);
           field_g = true;
           return;
         }
-        if (bva.b((byte) -107) - field_j >= 30000L) {
+        if (bva.currentTimeMillis((byte) -107) - field_j >= 30000L) {
           throw new RuntimeException(param0.getMessage());
         }
         this.field_f.repaint();

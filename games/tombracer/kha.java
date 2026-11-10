@@ -7,7 +7,7 @@ final class kha {
     int[] field_c;
     int field_b;
 
-    final int a(boolean param0) {
+    final int getRightEdge(boolean param0) {
         int stackIn_6_0 = 0;
         if (!param0) {
           this.field_d = -57;
@@ -21,7 +21,7 @@ final class kha {
         return stackIn_6_0;
     }
 
-    final int a(int param0, int param1) {
+    final int characterIndexAt(int param0, int param1) {
         int var3 = 0;
         int var4;
         var4 = TombRacer.field_G ? 1 : 0;
@@ -49,7 +49,7 @@ final class kha {
         }
     }
 
-    final static java.awt.Frame a(PlatformTaskDispatcher param0, int param1, int param2, int param3, int param4, int param5) {
+    final static java.awt.Frame openFullscreenFrame(PlatformTaskDispatcher param0, int param1, int param2, int param3, int param4, int param5) {
         int var8 = 0;
         Object stackIn_3_0 = null;
         Object stackIn_7_0 = null;
@@ -100,7 +100,7 @@ final class kha {
           }
           var11 = param0.a(param4, param1, param2, (byte) 66, param5);
           while (var11.field_b == 0) {
-            TrapSpawner.a(0, 10L);
+            TrapSpawner.sleepMillis(0, 10L);
           }
           var7 = (java.awt.Frame) (var11.field_f);
           if (var7 == null) {

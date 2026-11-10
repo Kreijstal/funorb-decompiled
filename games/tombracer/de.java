@@ -13,7 +13,7 @@ final class de extends cha {
         param2.drawImage(this.field_a, param1, param0, (java.awt.image.ImageObserver) ((Object) this.field_i));
     }
 
-    final void a(int param0, int param1, java.awt.Component param2, byte param3) {
+    final void initialize(int param0, int param1, java.awt.Component param2, byte param3) {
         this.field_g = new int[param0 * param1 + 1];
         this.field_e = param1;
         this.field_f = param0;

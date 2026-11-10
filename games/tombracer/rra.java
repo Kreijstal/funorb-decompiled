@@ -53,7 +53,7 @@ abstract class rra {
 
     abstract void a(int param0, int param1, boolean param2);
 
-    final static boolean a(byte param0, char param1) {
+    final static boolean isPrintableCharacter(byte param0, char param1) {
         if (param0 <= -77) {
           if (32 > param1) {
             if (param1 >= 160 &&

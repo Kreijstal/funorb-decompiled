@@ -13,7 +13,7 @@ final class rga {
         field_b = null;
     }
 
-    final static String[] a(int param0, String param1, char param2) {
+    final static String[] splitPreservingEmptyParts(int param0, String param1, char param2) {
         int var7 = 0;
         int incrementValue$1 = 0;
         int var3_int = 0;
@@ -39,7 +39,7 @@ final class rga {
           var6 = 0;
           if (param0 != 32287) {
             var10 = (String) null;
-            rga.a(65, (String) null, 'ﾭ');
+            rga.splitPreservingEmptyParts(65, (String) null, 'ﾭ');
           }
           for (var7 = 0; var7 < var3_int; var7++) {
             for (var8 = var6; param2 != param1.charAt(var8); var8++) {
@@ -147,7 +147,7 @@ final class rga {
     final static int b(int param0, int param1) {
         if (param0 != 26499) {
           String var3 = (String) null;
-          rga.a(121, (String) null, 'J');
+          rga.splitPreservingEmptyParts(121, (String) null, 'J');
         }
         if (cm.field_a == null) {
           return 0;

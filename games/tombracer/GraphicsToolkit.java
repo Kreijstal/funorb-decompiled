@@ -180,7 +180,7 @@ abstract class GraphicsToolkit {
 
     abstract void drawHorizontalLine(int param0, int param1, int param2, int param3, int param4);
 
-    abstract void c(int param0);
+    abstract void updateTime(int param0);
 
     final void b(int param0, int param1, int param2, int param3, int param4, int param5) {
         this.drawLine(param2, param0, param5, param3, param1, param4);

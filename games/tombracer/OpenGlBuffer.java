@@ -63,7 +63,7 @@ abstract class OpenGlBuffer implements GpuBuffer {
             if (param0.b()) {
               return null;
             }
-            if (param0.a(this.field_k, this.field_g, 35001)) {
+            if (param0.map(this.field_k, this.field_g, 35001)) {
               this.field_e = 2;
               stackIn_18_0 = (jaggl.MapBuffer) (param0);
               return (jaclib.memory.Buffer) ((Object) stackIn_18_0);

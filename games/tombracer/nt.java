@@ -92,7 +92,7 @@ final class nt {
                 var4Lifetime2 = var4Lifetime2 + var2.substring(var3);
               }
               var5 = new java.net.URL(param0.getCodeBase(), var4Lifetime2);
-              param0.getAppletContext().showDocument(sda.a(param0, -1, var5), "_self");
+              param0.getAppletContext().showDocument(sda.appendSessionParameters(param0, -1, var5), "_self");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

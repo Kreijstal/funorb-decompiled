@@ -220,7 +220,7 @@ final class DropdownList extends WidgetContainer implements ButtonListener {
         this.field_z.setBounds((byte) -31, this.field_m, var2, 0, 0);
         this.field_F = new ScrollContainer(0, 0, 0, 0, new pu(), this.field_z, (isa) null);
         if (var4 != 0) {
-          this.field_F.a(1, ImageProducerRasterBuffer.b(-5412), true);
+          this.field_F.setVerticalScrollControl(1, ImageProducerRasterBuffer.b(-5412), true);
         }
         this.field_F.setBounds((byte) -31, this.field_m, this.field_p - this.field_C, 0, this.field_C);
         this.field_G = true;

@@ -8,7 +8,7 @@ final class hb extends coa {
     static String field_u;
     static String field_v;
 
-    final static ConsoleToken a(in param0, boolean param1) {
+    final static ConsoleToken readQuotedToken(in param0, boolean param1) {
         int fieldTemp$5 = 0;
         StringBuilder discarded$6 = null;
         StringBuilder discarded$7 = null;

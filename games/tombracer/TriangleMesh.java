@@ -43,7 +43,7 @@ final class TriangleMesh {
     short field_u;
     int[] field_v;
 
-    final void a(int param0, int param1, int param2, boolean param3, int param4) {
+    final void scaleVertices(int param0, int param1, int param2, boolean param3, int param4) {
         int var6 = 0;
         int var7 = TombRacer.field_G ? 1 : 0;
         for (var6 = 0; this.field_I > var6; var6++) {
@@ -82,7 +82,7 @@ final class TriangleMesh {
         int var12;
         var12 = TombRacer.field_G ? 1 : 0;
         if (param0 >= -112) {
-          this.a(10, -119, 107, false, 71);
+          this.scaleVertices(10, -119, 107, false, 71);
         }
         if (this.field_n) {
           return;
@@ -125,7 +125,7 @@ final class TriangleMesh {
         this.field_i = var5;
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void translateVertices(int param0, int param1, byte param2, int param3) {
         int var5 = 0;
         int var6 = TombRacer.field_G ? 1 : 0;
         if (param2 != -86) {

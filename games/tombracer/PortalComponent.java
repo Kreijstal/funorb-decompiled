@@ -179,6 +179,6 @@ final class PortalComponent extends PrefabComponent {
             var1 = (var0 - 1) * 8;
             field_H[var0] = SnakePitModel.a(SnakePitModel.a(vi.a(65280L, field_I[6][6 + var1]), SnakePitModel.a(vi.a(field_I[5][var1 + 5], 16711680L), SnakePitModel.a(vi.a(4278190080L, field_I[4][4 + var1]), SnakePitModel.a(SnakePitModel.a(SnakePitModel.a(vi.a(field_I[0][var1], -72057594037927936L), vi.a(71776119061217280L, field_I[1][var1 + 1])), vi.a(280375465082880L, field_I[2][2 + var1])), vi.a(field_I[3][var1 + 3], 1095216660480L))))), vi.a(255L, field_I[7][7 + var1]));
         }
-        CauldronComponent.a((byte) 93, 1600);
+        CauldronComponent.bitLength((byte) 93, 1600);
     }
 }

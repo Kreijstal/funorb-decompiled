@@ -560,7 +560,7 @@ final class ResultsPhase extends MatchPhase {
         this.d(-27142);
     }
 
-    final static String a(String param0, byte param1) {
+    final static String highlightConsoleSyntax(String param0, byte param1) {
         int var5 = 0;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;

@@ -91,7 +91,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
         try {
           if (this.beginDiagnosticVisit((byte) -107, param0, param1, param2)) {
             this.appendDiagnosticProperties(1, param2, param1, param0);
-            this.a(param1, param0, param2, 0);
+            this.appendChildDiagnostics(param1, param0, param2, 0);
           }
           if (param3 != 0) {
             sawDeathMessages = (String[]) null;
@@ -275,9 +275,9 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           una.field_j.field_w = tba.a(-73, false, 16, 1513239, 1513239, false);
           una.field_j.field_x = 2;
           iea.field_g = new jea(0L, tka.field_q);
-          iea.field_g.a(false, PressureSwitchBehaviour.field_p);
+          iea.field_g.applyStyle(false, PressureSwitchBehaviour.field_p);
           lta.field_a = new jea(0L, una.field_j);
-          lta.field_a.a(param0, PressureSwitchBehaviour.field_p);
+          lta.field_a.applyStyle(param0, PressureSwitchBehaviour.field_p);
           var16 = BoulderComponent.a(param4, "lobby", 5, "button_mouseover");
           SimpleBlockBehaviour.field_n = new ContextMenu(lw.field_a, var12, Corpse.field_i, PressureSwitchBehaviour.field_p, 3, 2, pda.field_c, 3, di.field_a);
           AllPlatformsMazeComponent.field_M = new jea(0L, PressureSwitchBehaviour.field_p);
@@ -361,10 +361,10 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           var17 = BoulderComponent.a(param4, "lobby", 5, "checkbox");
           FacePlayerMountComponent.field_F = new ta(0L, var17[1], var17[0], 1, PressureSwitchBehaviour.field_p, (String) null);
           ClientException.field_b = new jea(0L, (jea) null);
-          ClientException.field_b.field_w = ArrowShooterComponent.a((byte) -118, MaskBlendOperator.a(param4, "lobby", "slideregion", 115));
-          ClientException.field_b.field_C = ArrowShooterComponent.a((byte) -60, MaskBlendOperator.a(param4, "lobby", "slideregion_mouseover", 75));
-          ClientException.field_b.field_db = ArrowShooterComponent.a((byte) -118, MaskBlendOperator.a(param4, "lobby", "slideregion_mouseheld", 123));
-          ClientException.field_b.field_M = ArrowShooterComponent.a((byte) -87, MaskBlendOperator.a(param4, "lobby", "slideregion_disabled", 106));
+          ClientException.field_b.field_w = ArrowShooterComponent.createCentreOnlyFrame((byte) -118, MaskBlendOperator.a(param4, "lobby", "slideregion", 115));
+          ClientException.field_b.field_C = ArrowShooterComponent.createCentreOnlyFrame((byte) -60, MaskBlendOperator.a(param4, "lobby", "slideregion_mouseover", 75));
+          ClientException.field_b.field_db = ArrowShooterComponent.createCentreOnlyFrame((byte) -118, MaskBlendOperator.a(param4, "lobby", "slideregion_mouseheld", 123));
+          ClientException.field_b.field_M = ArrowShooterComponent.createCentreOnlyFrame((byte) -87, MaskBlendOperator.a(param4, "lobby", "slideregion_disabled", 106));
           ie.field_h = new jea(0L, (jea) null);
           ie.field_h.field_w = rfa.a(BoulderComponent.a(param4, "lobby", 5, "dragbar"), 122);
           ie.field_h.field_C = rfa.a(BoulderComponent.a(param4, "lobby", 5, "dragbar_mouseover"), 121);
@@ -555,7 +555,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
         return 0 != (param0 & 32) ? true : false;
     }
 
-    final void a(Hashtable param0, int param1, StringBuilder param2, int param3) {
+    final void appendChildDiagnostics(Hashtable param0, int param1, StringBuilder param2, int param3) {
         StringBuilder discarded$4 = null;
         int var5_int = 0;
         StringBuilder discarded$6 = null;

@@ -328,9 +328,9 @@ final class di {
                         var9.field_d.a(var9.field_d.a(100663296));
                       }
                       if (var3 == null) {
-                        var9.field_f = bva.b((byte) -107);
+                        var9.field_f = bva.currentTimeMillis((byte) -107);
                       } else {
-                        ((soa) (var3)).a((byte) -77, var9);
+                        ((soa) (var3)).restore((byte) -77, var9);
                       }
                       this.field_e = true;
                       this.field_i = var9;
@@ -380,7 +380,7 @@ final class di {
             this.a(param1, (byte) -70);
           }
           if (null != this.field_i) {
-            this.field_i.field_d.c((int)(bva.b((byte) -107) - this.field_i.field_f));
+            this.field_i.field_d.updateTime((int)(bva.currentTimeMillis((byte) -107) - this.field_i.field_f));
           }
           boolean decompiledFrameRemainder0 = true;
           if (null != this.field_i && (var3 == null ||

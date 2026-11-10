@@ -5,7 +5,7 @@ final class vaa {
     static long field_b;
     static int[][] field_a;
 
-    final static boolean a(int[] param0, int param1, int param2) {
+    final static boolean isBitSet(int[] param0, int param1, int param2) {
         RuntimeException var3 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;

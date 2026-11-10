@@ -59,7 +59,7 @@ abstract class sqa {
           boolean decompiledFrameRemainder0 = true;
           var6_int = -60 % ((0 - param1) / 49);
           if (param2 != null && (param0 != 2 ||
-            ota.a(param4, (byte) 13, param3))) {
+            ota.isPlayerReachable(param4, (byte) 13, param3))) {
             stackIn_6_0 = true;
             decompiledFrameRemainder0 = false;
           }

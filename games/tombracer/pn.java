@@ -7,7 +7,7 @@ final class pn extends or {
 
     final static void f(int param0) {
         if (param0 != -804227775) {
-          pn.i(-62);
+          pn.createDecodedSprites(-62);
         }
         String var2 = (String) null;
         pr.a(0, "", (String) null);
@@ -45,7 +45,7 @@ final class pn extends or {
         field_o = null;
     }
 
-    final static Sprite[] i(int param0) {
+    final static Sprite[] createDecodedSprites(int param0) {
         int var2 = 0;
         int var6 = 0;
         int var7 = 0;
