@@ -111,7 +111,7 @@ final class ne {
           }
           while (PooledObject.field_g.length > var2) {
             var3 = PooledObject.field_g[var2];
-            ArrayUtils.copy(aia.field_t, var2 << 4, aia.field_t, var1_int, var3);
+            ArrayUtils.copy(PitSnake.field_t, var2 << 4, PitSnake.field_t, var1_int, var3);
             var1_int = var1_int + var3;
             var2++;
           }

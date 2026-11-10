@@ -13,7 +13,7 @@ final class GasTrapComponent extends PrefabComponent {
         this.field_I = 262144;
     }
 
-    final boolean s(int param0) {
+    final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
           this.field_I = 69;
           return true;
@@ -21,7 +21,7 @@ final class GasTrapComponent extends PrefabComponent {
         return true;
     }
 
-    final int t(int param0) {
+    final int getRenderLayer(int param0) {
         if (param0 != 8) {
           Room var3 = (Room) null;
           this.createTrap(false, 31, (Room) null);
@@ -30,7 +30,7 @@ final class GasTrapComponent extends PrefabComponent {
         return 7;
     }
 
-    final boolean n(byte param0) {
+    final boolean hasAngle(byte param0) {
         if (param0 != -122) {
           field_J = (String) null;
           return false;
@@ -55,7 +55,7 @@ final class GasTrapComponent extends PrefabComponent {
         return true;
     }
 
-    final boolean v(int param0) {
+    final boolean hasSize(int param0) {
         if (param0 != 555277520) {
           GasTrapComponent.r((byte) 71);
           return false;
@@ -90,7 +90,7 @@ final class GasTrapComponent extends PrefabComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var13 = new Trap(param2, param0);
-          var13.setSize((byte) -11, this.field_k, this.field_l);
+          var13.setSize((byte) -11, this.height, this.width);
           var13.a((byte) -3, 0);
           var13.h(3, param1 ^ param1);
           var13.setPushable(false, param1 + 116);

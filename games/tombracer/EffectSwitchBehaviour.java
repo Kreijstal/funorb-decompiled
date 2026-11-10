@@ -7,9 +7,9 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
     private int field_w;
     static long[] field_r;
     private int field_s;
-    private kpa field_u;
+    private FlagSet field_u;
     private SwitchState field_q;
-    private kpa field_t;
+    private FlagSet field_t;
     static String field_o;
     private int field_p;
 
@@ -19,12 +19,12 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
         param1.writeBits((byte) 42, this.field_w, 8);
         param1.writeBits((byte) -128, this.field_v, 8);
         param1.writeBits((byte) 70, this.field_n, 4);
-        this.field_u.a(param1, (byte) -128);
+        this.field_u.encode(param1, (byte) -128);
         if (param0) {
           return;
         }
         try {
-          this.field_t.a(param1, (byte) -124);
+          this.field_t.encode(param1, (byte) -124);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "eia.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -76,14 +76,14 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
         if (param2 >= -119) {
           discarded$0 = this.a(true, -31);
         }
-        this.field_u.a(param1, -17075, param0);
+        this.field_u.set(param1, -17075, param0);
     }
 
     private final boolean a(boolean param0, int param1) {
         if (!param0) {
           this.tick(85);
         }
-        if (!this.field_u.a(0, param1)) {
+        if (!this.field_u.get(0, param1)) {
           return false;
         }
         return true;
@@ -100,7 +100,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
         if (param0 >= -109) {
           this.field_q = (SwitchState) null;
         }
-        if (!this.field_t.a(0, param1)) {
+        if (!this.field_t.get(0, param1)) {
           return false;
         }
         return true;
@@ -146,14 +146,14 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
             for (var8 = 0; var8 < var6Lifetime1; var8++) {
               var7[var8] = param1.readBits((byte) 44, 4);
             }
-            this.field_u = new kpa(6);
+            this.field_u = new FlagSet(6);
             this.field_u.a(var12, 0);
-            this.field_t = new kpa(6);
+            this.field_t = new FlagSet(6);
             this.field_t.a(var13, 0);
             return;
           }
-          this.field_u = new kpa(6, param0.formatVersion, param1);
-          this.field_t = new kpa(6, param0.formatVersion, param1);
+          this.field_u = new FlagSet(6, param0.formatVersion, param1);
+          this.field_t = new FlagSet(6, param0.formatVersion, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -283,7 +283,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
 
     public final int getDimColour(int param0) {
         if (param0 != 17832) {
-          this.field_u = (kpa) null;
+          this.field_u = (FlagSet) null;
         }
         return 1131537;
     }
@@ -312,7 +312,7 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
 
     final void a(boolean param0, int param1, int param2) {
         int discarded$0 = 0;
-        this.field_t.a(param1, -17075, param0);
+        this.field_t.set(param1, -17075, param0);
         if (param2 > -32) {
           Effect var5 = (Effect) null;
           discarded$0 = this.a((byte) -27, (Effect) null);
@@ -331,8 +331,8 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
         try {
           super.attachToTrap(param0, param1);
           for (var3_int = 0; var3_int < 6; var3_int++) {
-            if (this.field_u.a(0, var3_int) ||
-              this.field_t.a(0, var3_int)) {
+            if (this.field_u.get(0, var3_int) ||
+              this.field_t.get(0, var3_int)) {
               param1.a(26492, true, var3_int);
             }
           }
@@ -386,8 +386,8 @@ final class EffectSwitchBehaviour extends Behaviour implements SwitchSource {
           this.field_q = new SwitchState(15);
           this.field_v = 100;
           this.field_w = 50;
-          this.field_u = new kpa(6);
-          this.field_t = new kpa(6);
+          this.field_u = new FlagSet(6);
+          this.field_t = new FlagSet(6);
           this.field_n = 1;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "eia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

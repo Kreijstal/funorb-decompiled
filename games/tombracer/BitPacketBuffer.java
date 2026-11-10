@@ -315,7 +315,7 @@ final class BitPacketBuffer extends PacketBuffer {
             }
           }
           if (null != mq.field_e) {
-            mq.field_e.field_g = aia.e(5);
+            mq.field_e.field_g = PitSnake.e(5);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -4,7 +4,7 @@
 final class SnakePitBehaviour extends Behaviour {
     static String field_q;
     static String field_o;
-    private aia[] field_n;
+    private PitSnake[] snakes;
     static String field_p;
 
     final int a(int param0, Effect param1, BeamSegment param2) {
@@ -23,7 +23,7 @@ final class SnakePitBehaviour extends Behaviour {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        aia var11 = null;
+        PitSnake var11 = null;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
@@ -40,8 +40,8 @@ final class SnakePitBehaviour extends Behaviour {
           var7 = -var4_int + param2.field_e;
           var8 = -var5 + param2.field_k;
           var9 = -var5 + param2.field_a;
-          for (var10 = 0; var10 < this.field_n.length; var10++) {
-            var11 = this.field_n[var10];
+          for (var10 = 0; var10 < this.snakes.length; var10++) {
+            var11 = this.snakes[var10];
             var12 = var4_int + var11.a((byte) 110);
             var13 = var5 + var11.f(0);
             var14 = SimulationObserver.a(var11.g(0), 12, var13, var11.g(0), param2, var12, 2);
@@ -111,9 +111,9 @@ final class SnakePitBehaviour extends Behaviour {
         }
     }
 
-    final aia b(int param0, int param1) {
+    final PitSnake getSnake(int param0, int param1) {
         int var3 = 15 / ((-50 - param0) / 56);
-        return this.field_n[param1];
+        return this.snakes[param1];
     }
 
     final void attachToTrap(boolean param0, Trap param1) {
@@ -144,11 +144,11 @@ final class SnakePitBehaviour extends Behaviour {
 
     final void h(int param0) {
         int var3 = 0;
-        aia var4 = null;
+        PitSnake var4 = null;
         int var5 = TombRacer.field_G ? 1 : 0;
         super.h(param0);
-        aia[] var6 = this.field_n;
-        aia[] var2 = var6;
+        PitSnake[] var6 = this.snakes;
+        PitSnake[] var2 = var6;
         for (var3 = 0; var6.length > var3; var3++) {
           var4 = var6[var3];
           var4.c(126);
@@ -165,12 +165,12 @@ final class SnakePitBehaviour extends Behaviour {
         }
         int var2 = this.trap.getX(3);
         int var3 = this.trap.getY(9648);
-        for (var4 = 0; this.field_n.length > var4; var4++) {
-          this.field_n[var4].a(var2, this.trap.getWidth(-112), this.trap.getHeight((byte) 55), var3, (byte) -80, this.trap.getRoot(0), this.trap.getRoom((byte) 77));
+        for (var4 = 0; this.snakes.length > var4; var4++) {
+          this.snakes[var4].a(var2, this.trap.getWidth(-112), this.trap.getHeight((byte) 55), var3, (byte) -80, this.trap.getRoot(0), this.trap.getRoom((byte) 77));
         }
         var4Lifetime1 = this.d(8031) ? 1 : 0;
-        for (var5 = 0; var5 < this.field_n.length; var5++) {
-          this.field_n[var5].a(111, var4Lifetime1 != 0, var3, var2, this.getPlayer((byte) 19));
+        for (var5 = 0; var5 < this.snakes.length; var5++) {
+          this.snakes[var5].a(111, var4Lifetime1 != 0, var3, var2, this.getPlayer((byte) 19));
         }
     }
 
@@ -220,7 +220,7 @@ final class SnakePitBehaviour extends Behaviour {
         super(param0, param1);
     }
 
-    private final void a(int param0, int param1, aia param2, byte param3, Effect param4) {
+    private final void a(int param0, int param1, PitSnake param2, byte param3, Effect param4) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -260,12 +260,12 @@ final class SnakePitBehaviour extends Behaviour {
         }
     }
 
-    final int c(int param0) {
+    final int getSnakeCount(int param0) {
         if (param0 != 3) {
           Effect var3 = (Effect) null;
           this.a(-115, (Projectile) null, (Effect) null);
         }
-        return this.field_n.length;
+        return this.snakes.length;
     }
 
     final int a(int param0, int param1, Effect param2, int param3, byte param4, int param5) {
@@ -273,7 +273,7 @@ final class SnakePitBehaviour extends Behaviour {
         int var7_int = 0;
         RuntimeException var7 = null;
         int var8 = 0;
-        aia var10_ref_aia = null;
+        PitSnake var10_ref_aia = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -287,8 +287,8 @@ final class SnakePitBehaviour extends Behaviour {
         try {
           var7_int = this.trap.getX(3);
           var8 = this.trap.getY(9648);
-          for (var9 = 0; this.field_n.length > var9; var9++) {
-            var10_ref_aia = this.field_n[var9];
+          for (var9 = 0; this.snakes.length > var9; var9++) {
+            var10_ref_aia = this.snakes[var9];
             var11 = var10_ref_aia.a((byte) 91) + var7_int;
             var12 = var8 + var10_ref_aia.f(0);
             if (io.centredBoxesOverlap(param1, var12, (byte) -61, param0, var11, param5, var10_ref_aia.g(0), var10_ref_aia.g(0), param3)) {
@@ -437,7 +437,7 @@ final class SnakePitBehaviour extends Behaviour {
         var2 = this.trap.getWidth(-33);
         var3 = this.trap.getHeight((byte) 55);
         if (!param0) {
-          this.field_n = (aia[]) null;
+          this.snakes = (PitSnake[]) null;
         }
         var4 = 1572864;
         var5 = (var2 >> 16) * (var3 >> 16) / ((var4 >> 16) * (var4 >> 16)) >> 2;
@@ -446,14 +446,14 @@ final class SnakePitBehaviour extends Behaviour {
         }
         if (-var4 + var2 > 0 &&
           -var4 + var3 > 0) {
-          this.field_n = new aia[var5];
+          this.snakes = new PitSnake[var5];
           for (var6 = 0; var5 > var6; var6++) {
             var7 = var4 / 2 + this.getRandom((byte) 46).nextBounded(-var4 + var2, 0) - var2 / 2;
             var8 = -(var3 / 2) + (this.getRandom((byte) 46).nextBounded(var3 - var4, 0) + var4 / 2);
-            this.field_n[var6] = new aia(var7, var8, var4);
+            this.snakes[var6] = new PitSnake(var7, var8, var4);
           }
         } else {
-          this.field_n = new aia[]{};
+          this.snakes = new PitSnake[]{};
         }
     }
 

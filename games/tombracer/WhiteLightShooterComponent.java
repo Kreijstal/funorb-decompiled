@@ -37,7 +37,7 @@ final class WhiteLightShooterComponent extends ShooterComponent {
         }
     }
 
-    final boolean v(int param0) {
+    final boolean hasSize(int param0) {
         if (param0 != 555277520) {
           field_K = (ToolkitSprite) null;
           return false;
@@ -75,7 +75,7 @@ final class WhiteLightShooterComponent extends ShooterComponent {
         return stackIn_10_0;
     }
 
-    final boolean n(byte param0) {
+    final boolean hasAngle(byte param0) {
         if (param0 != -122) {
           return true;
         }
@@ -103,7 +103,7 @@ final class WhiteLightShooterComponent extends ShooterComponent {
         }
     }
 
-    final int t(int param0) {
+    final int getRenderLayer(int param0) {
         if (param0 != 8) {
           return -57;
         }
@@ -158,7 +158,7 @@ final class WhiteLightShooterComponent extends ShooterComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new Trap(param2, param0);
-          var4.setSize((byte) -11, this.field_k, this.field_l);
+          var4.setSize((byte) -11, this.height, this.width);
           var4.h(param1, 0);
           var4.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new BeamShooterBehaviour(param2, param0);

@@ -386,7 +386,7 @@ final class RoomEffectTraps {
               if (var11 != 0) {
                 continue;
               }
-              var5.a(1434528720, var13, var12);
+              var5.setPosition(1434528720, var13, var12);
               var5.instantiate(true, true, this.room, 0, 0, -1, (Trap) null);
               this.field_d[var10] = (Trap) (var5.u(kha.b((int) param0, -24)));
               continue;

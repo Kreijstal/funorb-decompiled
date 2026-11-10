@@ -42,7 +42,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
     static String[] loadingQuips;
     static String field_s;
     private int[] treasure;
-    private int field_a;
+    private int heldItemKind;
     private on field_jb;
     private int field_kb;
     private boolean field_o;
@@ -417,9 +417,9 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void setHeldItem(int param0, byte param1, int param2, int param3) {
         try {
-          this.field_a = param3;
+          this.heldItemKind = param3;
           this.field_N = param2;
           int var5_int = 25 % ((-9 - param1) / 55);
           this.field_f = param0;
@@ -455,7 +455,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    final int u(byte param0) {
+    final int getHeldItemKind(byte param0) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -463,7 +463,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
           if (param0 < 124) {
             this.field_V = false;
           }
-          stackIn_4_0 = this.field_a;
+          stackIn_4_0 = this.heldItemKind;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -489,7 +489,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
           }
           var7_int = this.x;
           if (param0 <= 68) {
-            this.J(-3);
+            this.clearHeldItem(-3);
           }
           var8 = this.y;
           this.a(param3, 127, param4, param2, 0);
@@ -770,7 +770,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    final void a(Weapon param0, boolean param1) {
+    final void equipWeapon(Weapon param0, boolean param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -957,7 +957,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
                 this.room.b(false).a((byte) 61, 2097152 + this.getElevation((byte) 115), this.x, this.y);
               }
             }
-            this.p(30358);
+            this.dropHeldItem(30358);
             this.deathCause = param0;
             this.lifeState = 1;
             this.lifeStateTimer = DateFieldsWidget.field_C[param0];
@@ -1187,7 +1187,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
           stackIn_5_1 = param0;
           stackIn_5_2 = 127;
           stackIn_5_3 = param1;
-          if (!this.x(param2 + 223)) {
+          if (!this.isHoldingItem(param2 + 223)) {
             stackIn_6_0 = this;
             stackIn_6_4 = 1;
           } else {
@@ -1220,7 +1220,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    private final void p(int param0) {
+    private final void dropHeldItem(int param0) {
         RuntimeException decompiledCaughtException = null;
         Trap var2 = null;
         RuntimeException var2_ref = null;
@@ -1229,7 +1229,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         int var5 = 0;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          if (!this.x(param0 ^ -30382)) {
+          if (!this.isHoldingItem(param0 ^ -30382)) {
             return;
           }
           var2 = new Trap(this.room, true);
@@ -1243,7 +1243,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
           var2.a((byte) -3, this.field_f);
           var2.a(92, true);
           var3 = new MiscItemBehaviour(this.room, true);
-          var4 = this.field_a;
+          var4 = this.heldItemKind;
           if (0 == var4 &&
             var5 == 0) {
             var3.setItemType(3, false);
@@ -1260,7 +1260,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
           var2.c(437453352, true);
           var2.setPushable(true, param0 ^ 30447);
           this.room.addTrap(var2, (byte) 32);
-          this.J(0);
+          this.clearHeldItem(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1511,7 +1511,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         int stackIn_31_0Lifetime1;
         var20 = TombRacer.field_G ? 1 : 0;
         try {
-          if (!this.x(93) &&
+          if (!this.isHoldingItem(93) &&
             param0) {
             this.field_eb = null;
             var3_int = 1048576 + this.size / 2;
@@ -2234,12 +2234,12 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
             break;
           }
           boolean decompiledFrameRemainder1 = true;
-          if (this.x(117)) {
+          if (this.isHoldingItem(117)) {
             this.c(var21, -67, var20);
             decompiledFrameRemainder1 = (var9 != 0 ||
               var7 != 0);
             if (decompiledFrameRemainder1) {
-              this.p(30358);
+              this.dropHeldItem(30358);
               decompiledFrameRemainder1 = (var29 != 0);
             }
           }
@@ -2251,7 +2251,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
             if (this.weapon != null &&
               var7 != 0 &&
               this.field_kb <= 0) {
-              this.y(2);
+              this.fireWeapon(2);
             }
           }
           if (this.previousX == this.x &&
@@ -2285,7 +2285,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
           }
           boolean decompiledFrameRemainder0 = true;
           var26Lifetime1 = -1;
-          if (!this.x(-77)) {
+          if (!this.isHoldingItem(-77)) {
             if (this.field_ab != 0 &&
               this.field_ab != 6 &&
               this.field_ab == 18) {
@@ -2531,7 +2531,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    private final void y(int param0) {
+    private final void fireWeapon(int param0) {
         int var2_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -3209,7 +3209,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
           if (param0 != 15876) {
             return;
           }
-          this.J(0);
+          this.clearHeldItem(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3419,7 +3419,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
           if (param0 != 0) {
             this.isExpired(45);
           }
-          stackIn_7_0 = (this.field_a == 1);
+          stackIn_7_0 = (this.heldItemKind == 1);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3560,14 +3560,14 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    final boolean x(int param0) {
+    final boolean isHoldingItem(int param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 68 % ((-19 - param0) / 37);
-          stackIn_4_0 = (this.field_a != -1);
+          stackIn_4_0 = (this.heldItemKind != -1);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3576,9 +3576,9 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         }
     }
 
-    final void J(int param0) {
+    final void clearHeldItem(int param0) {
         try {
-          this.a(param0, (byte) -103, 65536, -1);
+          this.setHeldItem(param0, (byte) -103, 65536, -1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hca.GB(" + param0 + ')');
         }
@@ -3999,7 +3999,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, t {
         this.field_N = 65536;
         this.treasure = new int[3];
         this.roomTreasure = new int[3];
-        this.field_a = -1;
+        this.heldItemKind = -1;
         this.field_jb = new on();
         this.field_F = -1;
         this.field_hb = false;

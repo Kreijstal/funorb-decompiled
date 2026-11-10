@@ -5,15 +5,15 @@ final class StaticCrusherComponent extends PrefabComponent {
     static String field_G;
     static byte[] field_F;
 
-    final boolean s(int param0) {
+    final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
-          this.t(13);
+          this.getRenderLayer(13);
           return true;
         }
         return true;
     }
 
-    final int t(int param0) {
+    final int getRenderLayer(int param0) {
         if (param0 != 8) {
           StaticCrusherComponent.releaseStatics((byte) -56);
           return 7;
@@ -40,7 +40,7 @@ final class StaticCrusherComponent extends PrefabComponent {
         }
     }
 
-    final boolean n(byte param0) {
+    final boolean hasAngle(byte param0) {
         if (param0 != -122) {
           return false;
         }
@@ -77,13 +77,13 @@ final class StaticCrusherComponent extends PrefabComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new Trap(param2, param0);
-          var4.setSize((byte) -11, this.field_k, this.field_l);
+          var4.setSize((byte) -11, this.height, this.width);
           var4.a((byte) -3, 20);
           var4.h(param1, param1 ^ 3);
           var4.b((byte) 17, true);
           var4.a(4, (byte) -12, true);
           var5 = new CrusherBehaviour(param2, param0);
-          var5.a(50, 8, param1 ^ 2, 25, 6);
+          var5.setTimings(50, 8, param1 ^ 2, 25, 6);
           var5.b((byte) 72, true);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
@@ -142,7 +142,7 @@ final class StaticCrusherComponent extends PrefabComponent {
         }
     }
 
-    final boolean v(int param0) {
+    final boolean hasSize(int param0) {
         if (param0 != 555277520) {
           return true;
         }

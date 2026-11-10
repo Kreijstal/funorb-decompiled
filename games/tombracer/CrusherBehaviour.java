@@ -2,37 +2,37 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class CrusherBehaviour extends Behaviour {
-    private int field_s;
+    private int crushedTicks;
     private int field_q;
     private boolean field_u;
     private boolean field_p;
-    private int field_o;
-    private int field_v;
-    private int field_n;
-    private int field_w;
+    private int windUpTicks;
+    private int waitTicks;
+    private int phase;
+    private int phaseTicks;
     static String field_r;
-    private int field_x;
-    private Effect field_t;
+    private int retractTicks;
+    private Effect crushEffect;
 
-    final boolean l(int param0) {
+    final boolean isRetracting(int param0) {
         if (param0 == -5) {
-          return this.field_n == 4 ? true : false;
+          return this.phase == 4 ? true : false;
         }
-        this.field_t = (Effect) null;
-        return this.field_n == 4 ? true : false;
+        this.crushEffect = (Effect) null;
+        return this.phase == 4 ? true : false;
     }
 
-    final boolean c(int param0) {
+    final boolean isWaiting(int param0) {
         int var2 = 97 / ((param0 - 2) / 62);
-        return this.field_n == 1 ? true : false;
+        return this.phase == 1 ? true : false;
     }
 
-    final boolean r(int param0) {
+    final boolean isWindingUp(int param0) {
         if (param0 <= -31) {
-          return this.field_n == 2 ? true : false;
+          return this.phase == 2 ? true : false;
         }
-        this.field_o = 10;
-        return this.field_n == 2 ? true : false;
+        this.windUpTicks = 10;
+        return this.phase == 2 ? true : false;
     }
 
     final void attachToTrap(boolean param0, Trap param1) {
@@ -70,13 +70,13 @@ final class CrusherBehaviour extends Behaviour {
     final void encode(boolean param0, BitPacketBuffer param1) {
         try {
           super.encode(param0, param1);
-          param1.writeBits((byte) 116, this.field_v, 8);
-          param1.writeBits((byte) -128, this.field_o, 8);
-          param1.writeBits((byte) 107, this.field_s, 8);
-          param1.writeBits((byte) -20, this.field_x, 8);
+          param1.writeBits((byte) 116, this.waitTicks, 8);
+          param1.writeBits((byte) -128, this.windUpTicks, 8);
+          param1.writeBits((byte) 107, this.crushedTicks, 8);
+          param1.writeBits((byte) -20, this.retractTicks, 8);
           param1.writeBits((byte) -126, this.field_u ? 1 : 0, 1);
           param1.writeBits((byte) -23, this.field_p ? 1 : 0, 1);
-          this.field_t.a(param1, (byte) 125);
+          this.crushEffect.a(param1, (byte) 125);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "rea.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -87,12 +87,12 @@ final class CrusherBehaviour extends Behaviour {
         this.field_u = false;
         this.field_p = false;
         try {
-          this.field_s = 25;
-          this.field_x = 50;
-          this.field_v = 50;
-          this.field_o = 25;
-          this.field_t = new Effect(0, 100);
-          this.field_t.b(1, 4);
+          this.crushedTicks = 25;
+          this.retractTicks = 50;
+          this.waitTicks = 50;
+          this.windUpTicks = 25;
+          this.crushEffect = new Effect(0, 100);
+          this.crushEffect.b(1, 4);
           this.k((byte) -106);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "rea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -103,31 +103,31 @@ final class CrusherBehaviour extends Behaviour {
         int var2;
         int var2Lifetime1;
         int var2Lifetime2;
-        if (0 >= this.field_s) {
-          this.field_s = 1;
-          if (0 >= this.field_v) {
-            this.field_v = 1;
+        if (0 >= this.crushedTicks) {
+          this.crushedTicks = 1;
+          if (0 >= this.waitTicks) {
+            this.waitTicks = 1;
           }
-          if (this.field_o <= 0) {
-            this.field_o = 1;
+          if (this.windUpTicks <= 0) {
+            this.windUpTicks = 1;
           }
-          if (this.field_x <= 0) {
-            this.field_x = 1;
+          if (this.retractTicks <= 0) {
+            this.retractTicks = 1;
           }
           var2 = 7 % ((-26 - param0) / 56);
           return;
         }
-        if (0 >= this.field_v) {
-          this.field_v = 1;
+        if (0 >= this.waitTicks) {
+          this.waitTicks = 1;
         }
-        if (this.field_o <= 0) {
-          this.field_o = 1;
+        if (this.windUpTicks <= 0) {
+          this.windUpTicks = 1;
         }
-        if (this.field_x > 0) {
+        if (this.retractTicks > 0) {
           var2Lifetime1 = 7 % ((-26 - param0) / 56);
           return;
         }
-        this.field_x = 1;
+        this.retractTicks = 1;
         var2Lifetime2 = 7 % ((-26 - param0) / 56);
         return;
     }
@@ -135,9 +135,9 @@ final class CrusherBehaviour extends Behaviour {
     final int j(byte param0) {
         if (param0 != 90) {
           field_r = (String) null;
-          return this.field_o;
+          return this.windUpTicks;
         }
-        return this.field_o;
+        return this.windUpTicks;
     }
 
     final void b(byte param0, boolean param1) {
@@ -149,15 +149,15 @@ final class CrusherBehaviour extends Behaviour {
 
     final int getTypeId(boolean param0) {
         if (param0) {
-          this.a(109, 0, 65, 72, 73);
+          this.setTimings(109, 0, 65, 72, 73);
           return 2;
         }
         return 2;
     }
 
-    final boolean s(int param0) {
+    final boolean isCrushed(int param0) {
         int var2 = -108 % ((param0 + 19) / 49);
-        return this.field_n == 3 ? true : false;
+        return this.phase == 3 ? true : false;
     }
 
     CrusherBehaviour(Room param0, BitPacketBuffer param1, boolean param2) {
@@ -175,12 +175,12 @@ final class CrusherBehaviour extends Behaviour {
         this.field_p = false;
         try {
           if (param0.formatVersion >= 3) {
-            this.field_v = param1.readBits((byte) 44, 8);
-            this.field_o = param1.readBits((byte) 44, 8);
+            this.waitTicks = param1.readBits((byte) 44, 8);
+            this.windUpTicks = param1.readBits((byte) 44, 8);
             if (param0.formatVersion >= 20) {
-              this.field_s = param1.readBits((byte) 44, 8);
+              this.crushedTicks = param1.readBits((byte) 44, 8);
             }
-            this.field_x = param1.readBits((byte) 44, 8);
+            this.retractTicks = param1.readBits((byte) 44, 8);
             stackIn_8_1 = (param1.readBits((byte) 44, 1) == 1);
             this.field_u = stackIn_8_1;
             if (param0.formatVersion >= 20) {
@@ -188,15 +188,15 @@ final class CrusherBehaviour extends Behaviour {
               this.field_p = stackIn_12_1;
             }
           } else {
-            this.field_o = 25;
+            this.windUpTicks = 25;
             this.field_u = false;
-            this.field_v = 50;
-            this.field_x = 50;
+            this.waitTicks = 50;
+            this.retractTicks = 50;
           }
           if (16 <= param0.formatVersion) {
-            this.field_t = ad.a((byte) 87, param1);
+            this.crushEffect = ad.a((byte) 87, param1);
           } else {
-            this.field_t = new Effect(0, 100);
+            this.crushEffect = new Effect(0, 100);
           }
           this.k((byte) -101);
           return;
@@ -241,37 +241,37 @@ final class CrusherBehaviour extends Behaviour {
         var4 = this.trap.getX(3);
         var5 = this.trap.getY(param0 + 4230);
         if (var3 == 0) {
-          if (this.field_n != 0) {
-            if (1 == this.field_n) {
+          if (this.phase != 0) {
+            if (1 == this.phase) {
               var3 = ck.a(var8.getX(3), 1, var4, this.trap.getWidth(param0 - 5496), this.trap.getHeight((byte) 55), var8.getY(9648), (byte) 82, var5, 1) ? 1 : 0;
             }
           } else {
             var3 = ck.a(var8.getX(3), var8.getHeight((byte) 55), var4, this.trap.getWidth(-23), this.trap.getHeight((byte) 55), var8.getY(9648), (byte) 69, var5, var8.getWidth(param0 - 5519)) ? 1 : 0;
           }
         }
-        var6_int = this.field_n;
+        var6_int = this.phase;
         if (var6_int == 0) {
           if (var3 == 0) {
-            this.b(0, 0);
+            this.setPhase(0, 0);
             if (this.field_u) {
               this.trap.L(-31);
               if (param0 != 5418) {
-                this.field_v = -69;
+                this.waitTicks = -69;
               }
               return;
             }
           } else {
-            this.field_n = 1;
+            this.phase = 1;
             if (this.field_u) {
               this.trap.G(121);
             }
-            this.field_w = this.field_w + 1;
-            if (this.field_v < this.field_w) {
-              this.b(param0 ^ 5418, 2);
+            this.phaseTicks = this.phaseTicks + 1;
+            if (this.waitTicks < this.phaseTicks) {
+              this.setPhase(param0 ^ 5418, 2);
               if (!this.field_u) {
                 this.trap.G(121);
                 if (param0 != 5418) {
-                  this.field_v = -69;
+                  this.waitTicks = -69;
                 }
                 return;
               }
@@ -280,32 +280,32 @@ final class CrusherBehaviour extends Behaviour {
         } else {
           if (var6_int != 1) {
             if (2 == var6_int) {
-              this.field_w = this.field_w + 1;
-              if (this.field_w > this.field_o) {
+              this.phaseTicks = this.phaseTicks + 1;
+              if (this.phaseTicks > this.windUpTicks) {
                 var6 = this.getRoom(true);
-                var6.a(123, var5, this.field_t, this.trap.getHeight((byte) 55), this.trap.getWidth(-79), var4);
-                this.b(0, 3);
+                var6.a(123, var5, this.crushEffect, this.trap.getHeight((byte) 55), this.trap.getWidth(-79), var4);
+                this.setPhase(0, 3);
                 this.trap.a((byte) -3, this.field_q);
                 this.trap.b((byte) 17, false);
                 if (param0 == 5418) {
                   return;
                 }
-                this.field_v = -69;
+                this.waitTicks = -69;
                 return;
               }
             } else {
               if (3 != var6_int) {
                 if (var6_int == 4) {
-                  this.field_w = this.field_w + 1;
-                  if (this.field_w > this.field_x) {
-                    this.b(param0 - 5418, 1);
+                  this.phaseTicks = this.phaseTicks + 1;
+                  if (this.phaseTicks > this.retractTicks) {
+                    this.setPhase(param0 - 5418, 1);
                     this.trap.L(127);
                   }
                 }
               } else {
-                this.field_w = this.field_w + 1;
-                if (this.field_s < this.field_w) {
-                  this.b(param0 - 5418, 4);
+                this.phaseTicks = this.phaseTicks + 1;
+                if (this.crushedTicks < this.phaseTicks) {
+                  this.setPhase(param0 - 5418, 4);
                   this.trap.a((byte) -3, 0);
                   this.trap.b((byte) 17, true);
                 }
@@ -313,19 +313,19 @@ final class CrusherBehaviour extends Behaviour {
             }
           } else {
             if (var3 != 0) {
-              this.field_n = 1;
+              this.phase = 1;
               if (this.field_u) {
                 this.trap.G(121);
               }
-              this.field_w = this.field_w + 1;
-              if (this.field_v < this.field_w) {
-                this.b(param0 ^ 5418, 2);
+              this.phaseTicks = this.phaseTicks + 1;
+              if (this.waitTicks < this.phaseTicks) {
+                this.setPhase(param0 ^ 5418, 2);
                 if (!this.field_u) {
                   this.trap.G(121);
                 }
               }
             } else {
-              this.b(0, 0);
+              this.setPhase(0, 0);
               if (this.field_u) {
                 this.trap.L(-31);
               }
@@ -335,7 +335,7 @@ final class CrusherBehaviour extends Behaviour {
         if (param0 == 5418) {
           return;
         }
-        this.field_v = -69;
+        this.waitTicks = -69;
     }
 
     final static IndexedSprite[] a(ResourceArchive param0, int param1, int param2, byte param3) {
@@ -375,13 +375,13 @@ final class CrusherBehaviour extends Behaviour {
         }
     }
 
-    private final void b(int param0, int param1) {
-        this.field_n = param1;
-        this.field_w = param0;
+    private final void setPhase(int param0, int param1) {
+        this.phase = param1;
+        this.phaseTicks = param0;
     }
 
     final int hashState(int param0, int param1) {
-        param0 = fs.mixHash((byte) 49, param0, this.field_n);
+        param0 = fs.mixHash((byte) 49, param0, this.phase);
         if (param1 >= -48) {
           return -52;
         }
@@ -391,17 +391,17 @@ final class CrusherBehaviour extends Behaviour {
     final int d(boolean param0) {
         if (param0) {
           this.g((byte) -41);
-          return this.field_x;
+          return this.retractTicks;
         }
-        return this.field_x;
+        return this.retractTicks;
     }
 
     final int g(byte param0) {
         if (param0 > -36) {
           field_r = (String) null;
-          return this.field_w;
+          return this.phaseTicks;
         }
-        return this.field_w;
+        return this.phaseTicks;
     }
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
@@ -443,7 +443,7 @@ final class CrusherBehaviour extends Behaviour {
           if (param2 != 1) {
             this.g((byte) 48);
           }
-          stackIn_5_0 = (this.field_n == 3);
+          stackIn_5_0 = (this.phase == 3);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -459,18 +459,18 @@ final class CrusherBehaviour extends Behaviour {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        this.field_o = param1;
+    final void setTimings(int param0, int param1, int param2, int param3, int param4) {
+        this.windUpTicks = param1;
         if (param2 == 1) {
-          this.field_v = param4;
-          this.field_x = param3;
-          this.field_s = param0;
+          this.waitTicks = param4;
+          this.retractTicks = param3;
+          this.crushedTicks = param0;
           return;
         }
         this.field_q = -90;
-        this.field_v = param4;
-        this.field_x = param3;
-        this.field_s = param0;
+        this.waitTicks = param4;
+        this.retractTicks = param3;
+        this.crushedTicks = param0;
     }
 
     final boolean a(int param0, int param1, BeamSegment param2, int param3) {
@@ -481,7 +481,7 @@ final class CrusherBehaviour extends Behaviour {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (3 != this.field_n) {
+          if (3 != this.phase) {
             return false;
           }
           if (param1 != 1) {

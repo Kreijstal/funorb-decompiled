@@ -377,7 +377,7 @@ final class ava {
                   } else {
                     var25_int = -var12.field_zb + var7;
                     if (1 == var25_int) {
-                      var24Lifetime2 = gl.$cfr$intArgs$a$53ce4ab4c593(115, kpa.field_d, new String[]{var20});
+                      var24Lifetime2 = gl.$cfr$intArgs$a$53ce4ab4c593(115, FlagSet.field_d, new String[]{var20});
                     }
                     var24Lifetime2 = gl.$cfr$intArgs$a$53ce4ab4c593(97, td.field_q, new String[]{var20, Integer.toString(var25_int)});
                   }

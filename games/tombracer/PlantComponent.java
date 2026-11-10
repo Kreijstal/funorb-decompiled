@@ -49,7 +49,7 @@ final class PlantComponent extends PrefabComponent {
         var8 = TombRacer.field_G ? 1 : 0;
         try {
           var9 = new Trap(param2, param0);
-          var9.setSize((byte) -11, this.field_k, this.field_l);
+          var9.setSize((byte) -11, this.height, this.width);
           var9.a((byte) -3, 0);
           var9.b((byte) 17, true);
           var5 = rm.field_a;
@@ -92,7 +92,7 @@ final class PlantComponent extends PrefabComponent {
         }
     }
 
-    final boolean v(int param0) {
+    final boolean hasSize(int param0) {
         if (param0 != 555277520) {
           PlantComponent.A(-113);
           return false;
@@ -218,7 +218,7 @@ final class PlantComponent extends PrefabComponent {
         this.b(param0 + 243, var2 * 2097152, 2097152 * var3);
     }
 
-    final int t(int param0) {
+    final int getRenderLayer(int param0) {
         if (param0 != 8) {
           return -83;
         }
@@ -236,7 +236,7 @@ final class PlantComponent extends PrefabComponent {
         return -1;
     }
 
-    final boolean s(int param0) {
+    final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
           return true;
         }
@@ -271,7 +271,7 @@ final class PlantComponent extends PrefabComponent {
         }
     }
 
-    final boolean n(byte param0) {
+    final boolean hasAngle(byte param0) {
         if (param0 != -122) {
           return false;
         }

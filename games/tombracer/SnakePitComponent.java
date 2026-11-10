@@ -17,7 +17,7 @@ final class SnakePitComponent extends PrefabComponent {
             this.encode(true, (BitPacketBuffer) null);
           }
           var4 = new Trap(param2, param0);
-          var4.setSize((byte) -11, this.field_k, this.field_l);
+          var4.setSize((byte) -11, this.height, this.width);
           var4.l(1, 146366800);
           var4.addBehaviour((byte) 83, (Behaviour) (new SnakePitBehaviour(param2, false)));
           stackIn_3_0 = var4;
@@ -36,9 +36,9 @@ final class SnakePitComponent extends PrefabComponent {
         }
     }
 
-    final boolean n(byte param0) {
+    final boolean hasAngle(byte param0) {
         if (param0 != -122) {
-          this.n((byte) -40);
+          this.hasAngle((byte) -40);
           return false;
         }
         return false;
@@ -52,7 +52,7 @@ final class SnakePitComponent extends PrefabComponent {
         }
     }
 
-    final boolean s(int param0) {
+    final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
           return false;
         }
@@ -71,15 +71,15 @@ final class SnakePitComponent extends PrefabComponent {
         super(param0, param1);
     }
 
-    final int t(int param0) {
+    final int getRenderLayer(int param0) {
         if (param0 != 8) {
-          this.t(51);
+          this.getRenderLayer(51);
           return 4;
         }
         return 4;
     }
 
-    final boolean v(int param0) {
+    final boolean hasSize(int param0) {
         if (param0 != 555277520) {
           return true;
         }

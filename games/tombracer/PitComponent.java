@@ -7,9 +7,9 @@ final class PitComponent extends PrefabComponent {
     static ResourceArchive field_G;
     static int[] field_I;
 
-    final boolean v(int param0) {
+    final boolean hasSize(int param0) {
         if (param0 != 555277520) {
-          this.v(40);
+          this.hasSize(40);
           return true;
         }
         return true;
@@ -71,7 +71,7 @@ final class PitComponent extends PrefabComponent {
         }
     }
 
-    final int t(int param0) {
+    final int getRenderLayer(int param0) {
         if (param0 != 8) {
           PitComponent.releaseStatics((byte) 9);
           return 4;
@@ -102,7 +102,7 @@ final class PitComponent extends PrefabComponent {
         super(param0, param1);
     }
 
-    final boolean s(int param0) {
+    final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
           return false;
         }
@@ -111,18 +111,18 @@ final class PitComponent extends PrefabComponent {
 
     final void a(int param0, boolean param1) {
         super.a(param0, param1);
-        int var3 = this.field_j;
-        int var4 = this.field_p;
-        int var5 = var3 - this.field_l / 2;
-        int var6 = -(this.field_k / 2) + var4;
-        int var7 = this.field_l / 2 + var3;
+        int var3 = this.x;
+        int var4 = this.y;
+        int var5 = var3 - this.width / 2;
+        int var6 = -(this.height / 2) + var4;
+        int var7 = this.width / 2 + var3;
         if (var5 <= param0) {
           var5 = 0;
         }
         if (param0 >= var6) {
           var6 = 0;
         }
-        int var8 = var4 + this.field_k / 2;
+        int var8 = var4 + this.height / 2;
         int var9 = this.room.getWidth((byte) -86);
         if (var9 - param0 <= var7) {
           var7 = var9;
@@ -133,13 +133,13 @@ final class PitComponent extends PrefabComponent {
           var8 = var10;
         }
         var4 = (var8 - var6) / 2 + var6;
-        this.field_l = -var5 + var7;
-        this.field_k = -var6 + var8;
-        this.field_j = var3;
-        this.field_p = var4;
+        this.width = -var5 + var7;
+        this.height = -var6 + var8;
+        this.x = var3;
+        this.y = var4;
     }
 
-    final boolean n(byte param0) {
+    final boolean hasAngle(byte param0) {
         if (param0 != -122) {
           field_H = -47;
           return false;
@@ -161,10 +161,10 @@ final class PitComponent extends PrefabComponent {
         RuntimeException var4 = null;
         try {
           var9 = new Trap(param2, param0);
-          var9.setSize((byte) -11, this.field_k, this.field_l);
+          var9.setSize((byte) -11, this.height, this.width);
           var5 = new PitBehaviour(param2, param0);
           if (param1 != 3) {
-            this.s(48);
+            this.isSwitchable(48);
           }
           var9.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;

@@ -53,9 +53,9 @@ final class sda extends IntrusiveNode {
             var4 = var3;
             var4 = var3;
           }
-          if (aia.field_j != null &&
-            !aia.field_j.equals(param0.getParameter("session"))) {
-            var4 = aia.field_j;
+          if (PitSnake.field_j != null &&
+            !PitSnake.field_j.equals(param0.getParameter("session"))) {
+            var4 = PitSnake.field_j;
           }
           stackIn_12_0 = us.a((byte) 66, param2, (String) (var4), -1, (String) (var3));
           return stackIn_12_0;

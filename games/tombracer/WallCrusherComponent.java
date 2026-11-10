@@ -52,7 +52,7 @@ final class WallCrusherComponent extends PrefabComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var14 = new Trap(param2, param0);
-          var14.setSize((byte) -11, this.field_k, this.field_l);
+          var14.setSize((byte) -11, this.height, this.width);
           var14.h(3, 0);
           var14.a(1, (byte) -12, true);
           var14.g(param1 + 122, 2);
@@ -221,7 +221,7 @@ final class WallCrusherComponent extends PrefabComponent {
         }
     }
 
-    final boolean n(byte param0) {
+    final boolean hasAngle(byte param0) {
         if (param0 != -122) {
           Room var3 = (Room) null;
           this.createTrap(false, -124, (Room) null);
@@ -230,7 +230,7 @@ final class WallCrusherComponent extends PrefabComponent {
         return true;
     }
 
-    final boolean s(int param0) {
+    final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
           this.z(41);
           return true;
@@ -238,7 +238,7 @@ final class WallCrusherComponent extends PrefabComponent {
         return true;
     }
 
-    final boolean v(int param0) {
+    final boolean hasSize(int param0) {
         if (param0 != 555277520) {
           return true;
         }
@@ -247,15 +247,15 @@ final class WallCrusherComponent extends PrefabComponent {
 
     final boolean z(int param0) {
         if (param0 != 0) {
-          this.t(108);
+          this.getRenderLayer(108);
           return false;
         }
         return false;
     }
 
-    final int t(int param0) {
+    final int getRenderLayer(int param0) {
         if (param0 != 8) {
-          this.v(-115);
+          this.hasSize(-115);
           return 7;
         }
         return 7;

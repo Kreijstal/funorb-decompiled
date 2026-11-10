@@ -14,14 +14,14 @@ final class MirrorComponent extends PrefabComponent {
         return (55 & param2) != 0 ? true : false;
     }
 
-    final boolean v(int param0) {
+    final boolean hasSize(int param0) {
         if (param0 != 555277520) {
           return false;
         }
         return false;
     }
 
-    final boolean s(int param0) {
+    final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
           field_H = (int[]) null;
           return false;
@@ -60,7 +60,7 @@ final class MirrorComponent extends PrefabComponent {
         return false;
     }
 
-    final int t(int param0) {
+    final int getRenderLayer(int param0) {
         if (param0 != 8) {
           field_H = (int[]) null;
         }
@@ -124,7 +124,7 @@ final class MirrorComponent extends PrefabComponent {
         }
     }
 
-    final boolean n(byte param0) {
+    final boolean hasAngle(byte param0) {
         if (param0 != -122) {
           return true;
         }
@@ -152,7 +152,7 @@ final class MirrorComponent extends PrefabComponent {
         try {
           var11 = new Trap(param2, param0);
           var4 = var11;
-          var11.setSize((byte) -11, this.field_k, this.field_l);
+          var11.setSize((byte) -11, this.height, this.width);
           var11.a((byte) -3, 4);
           var11.h(param1, param1 - 3);
           if (this.typeId != 19) {
@@ -167,7 +167,7 @@ final class MirrorComponent extends PrefabComponent {
           var5.a(-28592, true);
           var11.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = new Trap(param2, param0);
-          var6.setSize((byte) -11, this.field_k, this.field_l);
+          var6.setSize((byte) -11, this.height, this.width);
           var6.a((byte) -3, 0);
           var7 = new MirrorBehaviour(param2, param0);
           var6.addBehaviour((byte) 83, (Behaviour) (var7));

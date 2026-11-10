@@ -12,7 +12,7 @@ final class PortalComponent extends PrefabComponent {
         this.b(param0 ^ -14, 4194304, 4194304);
     }
 
-    final boolean n(byte param0) {
+    final boolean hasAngle(byte param0) {
         if (param0 != -122) {
           field_H = (long[]) null;
           return false;
@@ -20,7 +20,7 @@ final class PortalComponent extends PrefabComponent {
         return false;
     }
 
-    final boolean s(int param0) {
+    final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
           return true;
         }
@@ -38,9 +38,9 @@ final class PortalComponent extends PrefabComponent {
         try {
           var4 = new Trap(param2, param0);
           if (param1 != 3) {
-            this.s(88);
+            this.isSwitchable(88);
           }
-          var4.setSize((byte) -11, this.field_k, this.field_l);
+          var4.setSize((byte) -11, this.height, this.width);
           this.field_F = new PortalBehaviour(param2, param0);
           var4.addBehaviour((byte) 83, (Behaviour) (this.field_F));
           stackIn_3_0 = var4;
@@ -79,7 +79,7 @@ final class PortalComponent extends PrefabComponent {
         }
     }
 
-    final boolean v(int param0) {
+    final boolean hasSize(int param0) {
         if (param0 != 555277520) {
           return false;
         }
@@ -114,9 +114,9 @@ final class PortalComponent extends PrefabComponent {
         return dq.field_f != null ? true : VortexBehaviour.field_n;
     }
 
-    final int t(int param0) {
+    final int getRenderLayer(int param0) {
         if (param0 != 8) {
-          this.s(-24);
+          this.isSwitchable(-24);
         }
         return 3;
     }

@@ -314,7 +314,7 @@ final class dta {
                     }
                   }
                 }
-                if (var12.x(100)) {
+                if (var12.isHoldingItem(100)) {
                   var32Lifetime1 = 1;
                 }
                 if (var12.getWeapon(-163585215) != null) {

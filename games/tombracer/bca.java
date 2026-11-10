@@ -3,7 +3,7 @@
  */
 final class bca {
     static ToolkitSprite field_d;
-    private kpa field_b;
+    private FlagSet field_b;
     static String field_c;
     static int[] field_a;
 
@@ -30,11 +30,11 @@ final class bca {
     }
 
     private final void a(byte param0) {
-        this.field_b = new kpa(3);
+        this.field_b = new FlagSet(3);
         if (param0 != -101) {
           return;
         }
-        this.field_b.a(true, 106);
+        this.field_b.setAll(true, 106);
     }
 
     final static void b(byte param0) {
@@ -46,7 +46,7 @@ final class bca {
 
     final void a(byte param0, BitPacketBuffer param1) {
         try {
-          this.field_b.a(param1, (byte) -120);
+          this.field_b.encode(param1, (byte) -120);
           if (param0 >= -13) {
             field_d = (ToolkitSprite) null;
           }
@@ -73,7 +73,7 @@ final class bca {
         if (-1 == param0) {
           return true;
         }
-        return this.field_b.a(0, param0);
+        return this.field_b.get(0, param0);
     }
 
     public bca() {
@@ -91,7 +91,7 @@ final class bca {
             this.a((byte) -101);
             return;
           }
-          this.field_b = new kpa(3, param0, param1);
+          this.field_b = new FlagSet(3, param0, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

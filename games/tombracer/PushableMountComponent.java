@@ -29,7 +29,7 @@ final class PushableMountComponent extends PrefabComponent {
         return false;
     }
 
-    final boolean s(int param0) {
+    final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
           field_F = (efa) null;
           return false;
@@ -50,7 +50,7 @@ final class PushableMountComponent extends PrefabComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new Trap(param2, param0);
-          var4.setSize((byte) -11, this.field_k, this.field_l);
+          var4.setSize((byte) -11, this.height, this.width);
           var4.a((byte) -3, 4);
           var4.h(param1, param1 ^ 3);
           var4.setPushable(true, 122);
@@ -79,15 +79,15 @@ final class PushableMountComponent extends PrefabComponent {
         }
     }
 
-    final int t(int param0) {
+    final int getRenderLayer(int param0) {
         if (param0 != 8) {
-          this.t(100);
+          this.getRenderLayer(100);
           return 7;
         }
         return 7;
     }
 
-    final boolean n(byte param0) {
+    final boolean hasAngle(byte param0) {
         if (param0 != -122) {
           PushableMountComponent.releaseStatics(-92);
           return false;
@@ -112,7 +112,7 @@ final class PushableMountComponent extends PrefabComponent {
         super(param0, param1, param2, param3);
     }
 
-    final boolean v(int param0) {
+    final boolean hasSize(int param0) {
         if (param0 != 555277520) {
           field_F = (efa) null;
           return false;

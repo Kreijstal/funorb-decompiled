@@ -17,7 +17,7 @@ final class FlameShooterComponent extends ShooterComponent {
         return true;
     }
 
-    final boolean v(int param0) {
+    final boolean hasSize(int param0) {
         if (param0 != 555277520) {
           field_J = (String) null;
           return false;
@@ -105,7 +105,7 @@ final class FlameShooterComponent extends ShooterComponent {
         return false;
     }
 
-    final int t(int param0) {
+    final int getRenderLayer(int param0) {
         if (param0 != 8) {
           this.q((byte) 50);
         }
@@ -140,7 +140,7 @@ final class FlameShooterComponent extends ShooterComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var9 = new Trap(param2, param0);
-          var9.setSize((byte) -11, this.field_k, this.field_l);
+          var9.setSize((byte) -11, this.height, this.width);
           var9.h(param1, 0);
           var9.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new WeaponShooterBehaviour(param2, param0);
@@ -178,9 +178,9 @@ final class FlameShooterComponent extends ShooterComponent {
         field_K = null;
     }
 
-    final boolean n(byte param0) {
+    final boolean hasAngle(byte param0) {
         if (param0 != -122) {
-          this.n((byte) 40);
+          this.hasAngle((byte) 40);
           return true;
         }
         return true;

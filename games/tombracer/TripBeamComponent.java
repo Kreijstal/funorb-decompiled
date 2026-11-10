@@ -89,7 +89,7 @@ final class TripBeamComponent extends SwitchComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new Trap(param2, param0);
-          var4.setSize((byte) -11, this.field_k, this.field_l);
+          var4.setSize((byte) -11, this.height, this.width);
           var4.h(param1, 0);
           var4.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new TripBeamBehaviour(param2, param0);
@@ -129,7 +129,7 @@ final class TripBeamComponent extends SwitchComponent {
         this.b(-77, 2097152, 2097152);
     }
 
-    final boolean v(int param0) {
+    final boolean hasSize(int param0) {
         if (param0 != 555277520) {
           field_K = (int[][]) null;
           return false;
@@ -141,7 +141,7 @@ final class TripBeamComponent extends SwitchComponent {
         super(param0, param1);
     }
 
-    final int t(int param0) {
+    final int getRenderLayer(int param0) {
         if (param0 != 8) {
           field_K = (int[][]) null;
           return 7;
@@ -169,7 +169,7 @@ final class TripBeamComponent extends SwitchComponent {
         }
     }
 
-    final boolean n(byte param0) {
+    final boolean hasAngle(byte param0) {
         if (param0 != -122) {
           return false;
         }
@@ -183,7 +183,7 @@ final class TripBeamComponent extends SwitchComponent {
         return 3;
     }
 
-    final boolean s(int param0) {
+    final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
           this.B(-5);
           return false;

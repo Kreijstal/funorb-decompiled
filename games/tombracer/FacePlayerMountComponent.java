@@ -6,7 +6,7 @@ final class FacePlayerMountComponent extends PrefabComponent {
     private int field_G;
     static String field_H;
 
-    final boolean s(int param0) {
+    final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
           return true;
         }
@@ -51,7 +51,7 @@ final class FacePlayerMountComponent extends PrefabComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var8 = new Trap(param2, param0);
-          var8.setSize((byte) -11, this.field_k, this.field_l);
+          var8.setSize((byte) -11, this.height, this.width);
           var8.h(param1, 0);
           var8.a(1, (byte) -12, true);
           var8.a((byte) -3, 6);
@@ -87,7 +87,7 @@ final class FacePlayerMountComponent extends PrefabComponent {
         this.a((byte) 109, new mka[]{new mka(0, 0, 2097152, 0, 8)});
     }
 
-    final int t(int param0) {
+    final int getRenderLayer(int param0) {
         if (param0 != 8) {
           BitPacketBuffer var3 = (BitPacketBuffer) null;
           this.encode(true, (BitPacketBuffer) null);
@@ -114,14 +114,14 @@ final class FacePlayerMountComponent extends PrefabComponent {
         }
     }
 
-    final boolean v(int param0) {
+    final boolean hasSize(int param0) {
         if (param0 != 555277520) {
           return true;
         }
         return false;
     }
 
-    final boolean n(byte param0) {
+    final boolean hasAngle(byte param0) {
         if (param0 != -122) {
           BitPacketBuffer var3 = (BitPacketBuffer) null;
           this.encode(true, (BitPacketBuffer) null);

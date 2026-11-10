@@ -10,7 +10,7 @@ final class DoorwayComponent extends PrefabComponent {
     private int field_H;
     static ka[] field_F;
 
-    final boolean n(byte param0) {
+    final boolean hasAngle(byte param0) {
         if (param0 != -122) {
           return true;
         }
@@ -64,7 +64,7 @@ final class DoorwayComponent extends PrefabComponent {
         var19 = TombRacer.field_G ? 1 : 0;
         try {
           var20 = new Trap(param2, param0);
-          var20.setSize((byte) -11, this.field_k, this.field_l);
+          var20.setSize((byte) -11, this.height, this.width);
           var6_int = this.typeId;
           if (var6_int != 44 &&
             var6_int != 45) {
@@ -80,8 +80,8 @@ final class DoorwayComponent extends PrefabComponent {
           var6 = rm.field_a;
           if (var5 != 0) {
             var7_ref_fsa = new Trap(param2, param0);
-            var7_ref_fsa.setSize((byte) -11, this.field_k / 3, this.field_l / 2);
-            var7_ref_fsa.b(437453352, -327680, -this.field_l / 4);
+            var7_ref_fsa.setSize((byte) -11, this.height / 3, this.width / 2);
+            var7_ref_fsa.b(437453352, -327680, -this.width / 4);
             var7_ref_fsa.h(3, 0);
             var8 = new SimpleBlockBehaviour(param2, param0);
             var7_ref_fsa.addBehaviour((byte) 83, (Behaviour) (var8));
@@ -89,12 +89,12 @@ final class DoorwayComponent extends PrefabComponent {
             var9.a(param1 ^ 40, new gea(new int[][]{new int[]{0, 0}}));
             var7_ref_fsa.addLocomotor(var9, 0);
             var10 = new PathMoveLocomotor(param2, param0);
-            var10.a(param1 ^ 14, new gea(new int[][]{new int[]{262144 + -this.field_l / 2, 0}}));
+            var10.a(param1 ^ 14, new gea(new int[][]{new int[]{262144 + -this.width / 2, 0}}));
             var10.a(true, false);
             var7_ref_fsa.addLocomotor(var10, 0);
             var11 = new Trap(param2, param0);
-            var11.setSize((byte) -11, this.field_k / 3, this.field_l / 2);
-            var11.b(437453352, -327680, this.field_l / 4);
+            var11.setSize((byte) -11, this.height / 3, this.width / 2);
+            var11.b(437453352, -327680, this.width / 4);
             var11.h(3, 0);
             var12 = new SimpleBlockBehaviour(param2, param0);
             var11.addBehaviour((byte) 83, (Behaviour) (var12));
@@ -102,7 +102,7 @@ final class DoorwayComponent extends PrefabComponent {
             var13.a(87, new gea(new int[][]{new int[]{0, 0}}));
             var11.addLocomotor(var13, param1 ^ 3);
             var14 = new PathMoveLocomotor(param2, param0);
-            var14.a(66, new gea(new int[][]{new int[]{-262144 + this.field_l / 2, 0}}));
+            var14.a(66, new gea(new int[][]{new int[]{-262144 + this.width / 2, 0}}));
             var14.a(true, false);
             var11.addLocomotor(var14, 0);
             var20.addChild(-72, var7_ref_fsa);
@@ -193,16 +193,16 @@ final class DoorwayComponent extends PrefabComponent {
         super(param0, param1, param2, param3);
     }
 
-    final boolean s(int param0) {
+    final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
           return false;
         }
         return true;
     }
 
-    final int t(int param0) {
+    final int getRenderLayer(int param0) {
         if (param0 != 8) {
-          this.v(-73);
+          this.hasSize(-73);
           return 7;
         }
         return 7;
@@ -216,7 +216,7 @@ final class DoorwayComponent extends PrefabComponent {
         }
     }
 
-    final boolean v(int param0) {
+    final boolean hasSize(int param0) {
         if (param0 != 555277520) {
           return false;
         }

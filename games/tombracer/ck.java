@@ -524,7 +524,7 @@ final class ck {
                         stackIn_33_0Lifetime1 = var16 << 4;
                         stackIn_33_1Lifetime1 = var17;
                         var18 = stackIn_33_0Lifetime1 + stackIn_33_1Lifetime1;
-                        aia.field_t[var18] = var8;
+                        PitSnake.field_t[var18] = var8;
                         PooledObject.field_g[var16] = 1 + var17;
                         if (param2.field_K > 0 &&
                           null != param2.field_q) {

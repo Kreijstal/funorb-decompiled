@@ -15,7 +15,7 @@ final class PillarComponent extends PrefabComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new Trap(param2, param0);
-          var4.setSize((byte) -11, this.field_k, this.field_l);
+          var4.setSize((byte) -11, this.height, this.width);
           var4.a((byte) -3, 20);
           var5 = new SimpleBlockBehaviour(param2, param0);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
@@ -62,7 +62,7 @@ final class PillarComponent extends PrefabComponent {
         return false;
     }
 
-    final boolean n(byte param0) {
+    final boolean hasAngle(byte param0) {
         if (param0 != -122) {
           return true;
         }
@@ -81,7 +81,7 @@ final class PillarComponent extends PrefabComponent {
         return ModelFactory.field_a.e(param0 ^ 7110);
     }
 
-    final boolean s(int param0) {
+    final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
           return false;
         }
@@ -133,7 +133,7 @@ final class PillarComponent extends PrefabComponent {
         }
     }
 
-    final int t(int param0) {
+    final int getRenderLayer(int param0) {
         if (param0 != 8) {
           return 47;
         }
@@ -185,7 +185,7 @@ final class PillarComponent extends PrefabComponent {
         }
     }
 
-    final boolean v(int param0) {
+    final boolean hasSize(int param0) {
         if (param0 != 555277520) {
           return false;
         }

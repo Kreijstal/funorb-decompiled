@@ -4,9 +4,9 @@
 abstract class ItemComponent extends PrefabComponent {
     static String field_F;
 
-    final boolean s(int param0) {
+    final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
-          this.n((byte) 87);
+          this.hasAngle((byte) 87);
           return false;
         }
         return false;
@@ -22,7 +22,7 @@ abstract class ItemComponent extends PrefabComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new Trap(param2, param0);
-          var4.setSize((byte) -11, this.field_k, this.field_l);
+          var4.setSize((byte) -11, this.height, this.width);
           var4.h(0, 0);
           var4.a(0, (byte) -12, true);
           var4.a((byte) -3, 0);
@@ -48,7 +48,7 @@ abstract class ItemComponent extends PrefabComponent {
         }
     }
 
-    final int t(int param0) {
+    final int getRenderLayer(int param0) {
         if (param0 != 8) {
           return -111;
         }
@@ -68,7 +68,7 @@ abstract class ItemComponent extends PrefabComponent {
         int var1 = 92 / ((-13 - param0) / 58);
     }
 
-    final boolean n(byte param0) {
+    final boolean hasAngle(byte param0) {
         if (param0 != -122) {
           return true;
         }
@@ -79,7 +79,7 @@ abstract class ItemComponent extends PrefabComponent {
         super(param0, param1, param2, param3);
     }
 
-    final boolean v(int param0) {
+    final boolean hasSize(int param0) {
         if (param0 != 555277520) {
           return false;
         }

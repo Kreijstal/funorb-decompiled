@@ -47,7 +47,7 @@ final class mka {
         try {
           this.field_e = param0;
           param0.a(this.field_g, this.field_d, (byte) -52);
-          param0.a(1434528720, this.field_a.field_d, this.field_a.field_f);
+          param0.setPosition(1434528720, this.field_a.field_d, this.field_a.field_f);
           int var3_int = -62 / ((param1 - 30) / 49);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "mka.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

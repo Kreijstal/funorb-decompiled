@@ -6,12 +6,12 @@ final class FuseBehaviour extends Behaviour {
     private int field_s;
     private int field_r;
     private Effect field_p;
-    private kpa field_x;
+    private FlagSet field_x;
     private int field_o;
     static boolean field_w;
     static su field_v;
     private int field_n;
-    private kpa field_q;
+    private FlagSet field_q;
     private int field_u;
 
     final int a(int param0, Effect param1, BeamSegment param2) {
@@ -58,7 +58,7 @@ final class FuseBehaviour extends Behaviour {
         if (param0 < 16) {
           return true;
         }
-        if (this.field_x.a(0, param1)) {
+        if (this.field_x.get(0, param1)) {
           return true;
         }
         return false;
@@ -118,8 +118,8 @@ final class FuseBehaviour extends Behaviour {
     FuseBehaviour(Room param0, BitPacketBuffer param1, boolean param2) {
         super(param0, param1, param2);
         try {
-          this.field_x = new kpa(6, param0.formatVersion, param1);
-          this.field_q = new kpa(6, param0.formatVersion, param1);
+          this.field_x = new FlagSet(6, param0.formatVersion, param1);
+          this.field_q = new FlagSet(6, param0.formatVersion, param1);
           this.field_u = param1.readBits((byte) 44, 8);
           this.field_o = param1.readBits((byte) 44, 8);
           this.field_r = param1.readBits((byte) 44, 8);
@@ -143,11 +143,11 @@ final class FuseBehaviour extends Behaviour {
           super.attachToTrap(param0, param1);
           param1.b((byte) -112, 4);
           if (!param0) {
-            this.field_x = (kpa) null;
+            this.field_x = (FlagSet) null;
           }
           for (var3_int = 0; var3_int < 6; var3_int++) {
-            if (this.field_x.a(0, var3_int) ||
-              this.field_q.a(0, var3_int)) {
+            if (this.field_x.get(0, var3_int) ||
+              this.field_q.get(0, var3_int)) {
               param1.a(26492, true, var3_int);
             }
           }
@@ -177,7 +177,7 @@ final class FuseBehaviour extends Behaviour {
     private final void j(byte param0) {
         Effect var2 = new Effect(this.getRoot(6), this.field_p);
         if (param0 != -67) {
-          this.field_q = (kpa) null;
+          this.field_q = (FlagSet) null;
         }
         this.getRoom(true).a(124, this.trap.getY(param0 ^ -9715), var2, this.trap.getHeight((byte) 55) + this.field_n * 2, this.trap.getWidth(-107) + 2 * this.field_n, this.trap.getX(3));
         this.c(false);
@@ -186,8 +186,8 @@ final class FuseBehaviour extends Behaviour {
     final void encode(boolean param0, BitPacketBuffer param1) {
         try {
           super.encode(param0, param1);
-          this.field_x.a(param1, (byte) -118);
-          this.field_q.a(param1, (byte) -117);
+          this.field_x.encode(param1, (byte) -118);
+          this.field_q.encode(param1, (byte) -117);
           param1.writeBits((byte) -11, this.field_u, 8);
           param1.writeBits((byte) 42, this.field_o, 8);
           param1.writeBits((byte) 125, this.field_r, 8);
@@ -202,7 +202,7 @@ final class FuseBehaviour extends Behaviour {
         if (param1 < this.field_o) {
           return false;
         }
-        if (!this.field_q.a(0, param2)) {
+        if (!this.field_q.get(0, param2)) {
           return false;
         }
         if (!param0) {
@@ -223,7 +223,7 @@ final class FuseBehaviour extends Behaviour {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -115) {
-            this.field_x = (kpa) null;
+            this.field_x = (FlagSet) null;
           }
           var3_int = param0.type;
           var4 = param0.size;

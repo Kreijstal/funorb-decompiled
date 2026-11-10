@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aia extends IntrusiveNode {
+final class PitSnake extends IntrusiveNode {
     private int field_i;
     private int field_w;
     private int field_g;
@@ -304,7 +304,7 @@ final class aia extends IntrusiveNode {
         }
         if (param0 != 5) {
           byte[] var2 = (byte[]) null;
-          aia.a((byte[]) null, 116, 108, 51);
+          PitSnake.a((byte[]) null, 116, 108, 51);
         }
         if (daa.field_d != baa.field_d.field_i.field_b) {
           return -1;
@@ -443,7 +443,7 @@ final class aia extends IntrusiveNode {
         return 0 < this.field_k ? true : false;
     }
 
-    aia(int param0, int param1, int param2) {
+    PitSnake(int param0, int param1, int param2) {
         this.field_n = param0;
         this.field_q = param2;
         this.field_r = param1;

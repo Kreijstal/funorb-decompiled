@@ -7,7 +7,7 @@ abstract class ShooterComponent extends PrefabComponent {
     private int field_F;
     private int field_H;
 
-    final boolean s(int param0) {
+    final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
           this.field_F = -66;
           return true;

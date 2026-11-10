@@ -18,7 +18,7 @@ final class BladeShooterComponent extends ShooterComponent {
         this.b(81, 2097152, 2097152);
     }
 
-    final boolean n(byte param0) {
+    final boolean hasAngle(byte param0) {
         if (param0 != -122) {
           this.z(10);
           return true;
@@ -59,7 +59,7 @@ final class BladeShooterComponent extends ShooterComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var9 = new Trap(param2, param0);
-          var9.setSize((byte) -11, this.field_k, this.field_l);
+          var9.setSize((byte) -11, this.height, this.width);
           var9.h(3, param1 ^ param1);
           var9.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new WeaponShooterBehaviour(param2, param0);
@@ -96,7 +96,7 @@ final class BladeShooterComponent extends ShooterComponent {
         return true;
     }
 
-    final boolean v(int param0) {
+    final boolean hasSize(int param0) {
         if (param0 != 555277520) {
           Room var3 = (Room) null;
           this.createTrap(true, -115, (Room) null);
@@ -113,7 +113,7 @@ final class BladeShooterComponent extends ShooterComponent {
         }
     }
 
-    final int t(int param0) {
+    final int getRenderLayer(int param0) {
         if (param0 != 8) {
           BitPacketBuffer var3 = (BitPacketBuffer) null;
           this.encode(false, (BitPacketBuffer) null);

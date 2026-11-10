@@ -22,7 +22,7 @@ final class WeaponItemBehaviour extends ItemBehaviour {
         RuntimeException decompiledCaughtException = null;
         try {
           param1.g(62, 106);
-          param1.a(this.field_t, true);
+          param1.equipWeapon(this.field_t, true);
           if (param0 < -114) {
             return true;
           }

@@ -16,7 +16,7 @@ final class LaserShooterComponent extends ShooterComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var9 = new Trap(param2, param0);
-          var9.setSize((byte) -11, this.field_k, this.field_l);
+          var9.setSize((byte) -11, this.height, this.width);
           var9.h(param1, 0);
           var9.addBehaviour((byte) 83, (Behaviour) (new SimpleBlockBehaviour(param2, param0)));
           var5 = new BeamShooterBehaviour(param2, param0);
@@ -105,7 +105,7 @@ final class LaserShooterComponent extends ShooterComponent {
         return false;
     }
 
-    final boolean n(byte param0) {
+    final boolean hasAngle(byte param0) {
         if (param0 != -122) {
           return true;
         }
@@ -116,9 +116,9 @@ final class LaserShooterComponent extends ShooterComponent {
         super(param0, param1, param2, param3);
     }
 
-    final boolean v(int param0) {
+    final boolean hasSize(int param0) {
         if (param0 != 555277520) {
-          this.t(60);
+          this.getRenderLayer(60);
           return false;
         }
         return false;
@@ -177,7 +177,7 @@ final class LaserShooterComponent extends ShooterComponent {
         }
     }
 
-    final int t(int param0) {
+    final int getRenderLayer(int param0) {
         if (param0 != 8) {
           return -4;
         }

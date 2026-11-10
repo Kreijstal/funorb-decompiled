@@ -19,7 +19,7 @@ final class CauldronComponent extends SwitchComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var10 = new Trap(param2, param0);
-          var10.setSize((byte) -11, this.field_k, this.field_l);
+          var10.setSize((byte) -11, this.height, this.width);
           var10.h(3, param1 ^ param1);
           var10.a(1, (byte) -12, false);
           var10.setPushable(false, param1 + 112);
@@ -67,7 +67,7 @@ final class CauldronComponent extends SwitchComponent {
         super(param0, param1, param2, param3);
     }
 
-    final boolean s(int param0) {
+    final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
           return false;
         }
@@ -108,7 +108,7 @@ final class CauldronComponent extends SwitchComponent {
         return var2 + param1;
     }
 
-    final boolean n(byte param0) {
+    final boolean hasAngle(byte param0) {
         if (param0 != -122) {
           return true;
         }
@@ -123,7 +123,7 @@ final class CauldronComponent extends SwitchComponent {
         }
     }
 
-    final int t(int param0) {
+    final int getRenderLayer(int param0) {
         if (param0 != 8) {
           Room var3 = (Room) null;
           this.createTrap(false, -105, (Room) null);
@@ -132,7 +132,7 @@ final class CauldronComponent extends SwitchComponent {
         return 7;
     }
 
-    final boolean v(int param0) {
+    final boolean hasSize(int param0) {
         if (param0 != 555277520) {
           return false;
         }

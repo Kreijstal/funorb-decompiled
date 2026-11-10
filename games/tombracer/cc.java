@@ -161,7 +161,7 @@ final class cc extends IntrusiveNode {
           String var8 = null;
           String var5 = null;
           try {
-            aia.field_j = param2;
+            PitSnake.field_j = param2;
             try {
               var7 = param1.getParameter("cookieprefix");
               if (param0 <= 1) {

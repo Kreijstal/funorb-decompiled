@@ -14,7 +14,7 @@ final class MovingPlatformComponent extends PathMoverComponent {
         return false;
     }
 
-    final boolean n(byte param0) {
+    final boolean hasAngle(byte param0) {
         if (param0 != -122) {
           MovingPlatformComponent.releaseStatics((byte) 71);
           return false;
@@ -22,9 +22,9 @@ final class MovingPlatformComponent extends PathMoverComponent {
         return false;
     }
 
-    final boolean s(int param0) {
+    final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
-          this.t(7);
+          this.getRenderLayer(7);
           return true;
         }
         return true;
@@ -52,7 +52,7 @@ final class MovingPlatformComponent extends PathMoverComponent {
         }
     }
 
-    final boolean v(int param0) {
+    final boolean hasSize(int param0) {
         if (param0 != 555277520) {
           this.A(105);
           return true;
@@ -64,7 +64,7 @@ final class MovingPlatformComponent extends PathMoverComponent {
         super(param0, param1);
     }
 
-    final int t(int param0) {
+    final int getRenderLayer(int param0) {
         if (param0 != 8) {
           this.q((byte) -40);
           return 3;
@@ -87,7 +87,7 @@ final class MovingPlatformComponent extends PathMoverComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new Trap(param2, param0);
-          var4.setSize((byte) -11, this.field_k, this.field_l);
+          var4.setSize((byte) -11, this.height, this.width);
           var5 = new PlatformBehaviour(param2, false);
           var5.b(-5, this.field_M);
           var5.a((byte) -24, true);

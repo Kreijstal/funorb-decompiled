@@ -21,7 +21,7 @@ final class TorchComponent extends PrefabComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new Trap(param2, param0);
-          var4.setSize((byte) -11, this.field_k, this.field_l);
+          var4.setSize((byte) -11, this.height, this.width);
           var4.a((byte) -3, 5);
           var5 = rm.field_a;
           var6 = (FurnitureModel) (var5.createModel(4, 80));
@@ -60,14 +60,14 @@ final class TorchComponent extends PrefabComponent {
         }
     }
 
-    final int t(int param0) {
+    final int getRenderLayer(int param0) {
         if (param0 != 8) {
           return -121;
         }
         return 7;
     }
 
-    final boolean s(int param0) {
+    final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
           field_F = false;
           return false;
@@ -89,7 +89,7 @@ final class TorchComponent extends PrefabComponent {
         return false;
     }
 
-    final boolean n(byte param0) {
+    final boolean hasAngle(byte param0) {
         if (param0 != -122) {
           Room var3 = (Room) null;
           this.createTrap(true, 119, (Room) null);
@@ -98,7 +98,7 @@ final class TorchComponent extends PrefabComponent {
         return true;
     }
 
-    final boolean v(int param0) {
+    final boolean hasSize(int param0) {
         if (param0 != 555277520) {
           Room var3 = (Room) null;
           this.createTrap(false, -64, (Room) null);

@@ -111,7 +111,7 @@ final class BoulderComponent extends PathMoverComponent {
         }
     }
 
-    final boolean s(int param0) {
+    final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
           field_M = (jea) null;
           return true;
@@ -156,7 +156,7 @@ final class BoulderComponent extends PathMoverComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var11 = new Trap(param2, param0);
-          var11.setSize((byte) -11, this.field_k, this.field_l);
+          var11.setSize((byte) -11, this.height, this.width);
           var11.h(param1, 0);
           var11.a(3, (byte) -12, true);
           var11.a((byte) -3, 10);
@@ -209,7 +209,7 @@ final class BoulderComponent extends PathMoverComponent {
         field_M = null;
     }
 
-    final boolean v(int param0) {
+    final boolean hasSize(int param0) {
         if (param0 != 555277520) {
           field_M = (jea) null;
           return false;
@@ -225,14 +225,14 @@ final class BoulderComponent extends PathMoverComponent {
         super(param0, param1);
     }
 
-    final boolean n(byte param0) {
+    final boolean hasAngle(byte param0) {
         if (param0 != -122) {
           return true;
         }
         return false;
     }
 
-    final int t(int param0) {
+    final int getRenderLayer(int param0) {
         if (param0 != 8) {
           BoulderComponent.s((byte) -23);
           return 7;

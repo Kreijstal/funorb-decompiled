@@ -19,7 +19,7 @@ final class MovingWallComponent extends PathMoverComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var9 = new Trap(param2, param0);
-          var9.setSize((byte) -11, this.field_k, this.field_l);
+          var9.setSize((byte) -11, this.height, this.width);
           var9.h(param1, 0);
           var9.a(1, (byte) -12, true);
           var9.g(param1 ^ 109, 2);
@@ -66,7 +66,7 @@ final class MovingWallComponent extends PathMoverComponent {
         field_M = null;
     }
 
-    final int t(int param0) {
+    final int getRenderLayer(int param0) {
         if (param0 != 8) {
           return -24;
         }
@@ -86,7 +86,7 @@ final class MovingWallComponent extends PathMoverComponent {
         super(param0, param1, param2, param3);
     }
 
-    final boolean s(int param0) {
+    final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
           this.z(95);
           return true;
@@ -96,15 +96,15 @@ final class MovingWallComponent extends PathMoverComponent {
 
     final boolean C(int param0) {
         if (param0 != 1760) {
-          this.v(46);
+          this.hasSize(46);
           return true;
         }
         return true;
     }
 
-    final boolean v(int param0) {
+    final boolean hasSize(int param0) {
         if (param0 != 555277520) {
-          this.s(-76);
+          this.isSwitchable(-76);
           return true;
         }
         return true;
@@ -112,13 +112,13 @@ final class MovingWallComponent extends PathMoverComponent {
 
     final boolean z(int param0) {
         if (param0 != 0) {
-          this.v(-96);
+          this.hasSize(-96);
           return false;
         }
         return false;
     }
 
-    final boolean n(byte param0) {
+    final boolean hasAngle(byte param0) {
         if (param0 != -122) {
           field_N = (IntrusiveDeque) null;
           return false;

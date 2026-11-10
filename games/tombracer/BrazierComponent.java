@@ -17,7 +17,7 @@ final class BrazierComponent extends PrefabComponent {
         }
     }
 
-    final boolean s(int param0) {
+    final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
           this.z(71);
           return false;
@@ -92,7 +92,7 @@ final class BrazierComponent extends PrefabComponent {
         }
     }
 
-    final int t(int param0) {
+    final int getRenderLayer(int param0) {
         if (param0 != 8) {
           return -20;
         }
@@ -107,9 +107,9 @@ final class BrazierComponent extends PrefabComponent {
         }
     }
 
-    final boolean v(int param0) {
+    final boolean hasSize(int param0) {
         if (param0 != 555277520) {
-          this.t(7);
+          this.getRenderLayer(7);
           return false;
         }
         return false;
@@ -122,7 +122,7 @@ final class BrazierComponent extends PrefabComponent {
         return false;
     }
 
-    final boolean n(byte param0) {
+    final boolean hasAngle(byte param0) {
         if (param0 != -122) {
           this.q((byte) 37);
           return true;
@@ -144,7 +144,7 @@ final class BrazierComponent extends PrefabComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var9 = new Trap(param2, param0);
-          var9.setSize((byte) -11, this.field_k, this.field_l);
+          var9.setSize((byte) -11, this.height, this.width);
           var9.a((byte) -3, 5);
           var5 = new SimpleBlockBehaviour(param2, param0);
           var9.addBehaviour((byte) 83, (Behaviour) (var5));

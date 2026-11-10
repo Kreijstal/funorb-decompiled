@@ -32,7 +32,7 @@ final class SweeperMountComponent extends PrefabComponent {
         TrapBaseModel var8 = null;
         try {
           var9 = new Trap(param2, param0);
-          var9.setSize((byte) -11, this.field_k, this.field_l);
+          var9.setSize((byte) -11, this.height, this.width);
           var9.h(param1, param1 - 3);
           var9.a(1, (byte) -12, true);
           var9.a((byte) -3, 6);
@@ -71,7 +71,7 @@ final class SweeperMountComponent extends PrefabComponent {
         }
     }
 
-    final boolean s(int param0) {
+    final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
           BitPacketBuffer var3 = (BitPacketBuffer) null;
           this.encode(true, (BitPacketBuffer) null);
@@ -127,7 +127,7 @@ final class SweeperMountComponent extends PrefabComponent {
         }
     }
 
-    final boolean v(int param0) {
+    final boolean hasSize(int param0) {
         if (param0 != 555277520) {
           return false;
         }
@@ -144,7 +144,7 @@ final class SweeperMountComponent extends PrefabComponent {
         }
     }
 
-    final boolean n(byte param0) {
+    final boolean hasAngle(byte param0) {
         if (param0 != -122) {
           BitPacketBuffer var3 = (BitPacketBuffer) null;
           this.encode(false, (BitPacketBuffer) null);
@@ -173,7 +173,7 @@ final class SweeperMountComponent extends PrefabComponent {
         this.a((byte) 95, new mka[]{new mka(0, 0, 2097152, 0, 8)});
     }
 
-    final int t(int param0) {
+    final int getRenderLayer(int param0) {
         if (param0 != 8) {
           field_I = (String) null;
           return 7;

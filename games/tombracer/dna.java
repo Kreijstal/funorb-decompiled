@@ -16,7 +16,7 @@ abstract class dna extends PrefabComponent {
         }
     }
 
-    final boolean v(int param0) {
+    final boolean hasSize(int param0) {
         if (param0 != 555277520) {
           field_H = (String) null;
           return false;
@@ -24,7 +24,7 @@ abstract class dna extends PrefabComponent {
         return false;
     }
 
-    final boolean n(byte param0) {
+    final boolean hasAngle(byte param0) {
         if (param0 != -122) {
           field_F = (SpriteData) null;
           return true;
@@ -32,7 +32,7 @@ abstract class dna extends PrefabComponent {
         return true;
     }
 
-    final int t(int param0) {
+    final int getRenderLayer(int param0) {
         if (param0 != 8) {
           field_G = false;
           return 7;
@@ -61,7 +61,7 @@ abstract class dna extends PrefabComponent {
         super(param0, param1, param2, param3);
     }
 
-    final boolean s(int param0) {
+    final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
           field_F = (SpriteData) null;
           return false;

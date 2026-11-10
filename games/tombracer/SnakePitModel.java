@@ -429,14 +429,14 @@ final class SnakePitModel extends TrapModel {
           this.field_s = new bt[]{};
           return;
         }
-        this.field_s = new bt[this.field_p.c(3)];
+        this.field_s = new bt[this.field_p.getSnakeCount(3)];
         if (param0 != -20687) {
           return;
         }
         for (var2 = 0; var2 < this.field_s.length; var2++) {
           this.field_s[var2] = new bt();
           this.field_s[var2].field_a = this;
-          this.field_s[var2].field_e = this.field_p.b(45, var2);
+          this.field_s[var2].field_e = this.field_p.getSnake(45, var2);
         }
     }
 

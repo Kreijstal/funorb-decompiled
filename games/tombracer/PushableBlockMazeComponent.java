@@ -60,7 +60,7 @@ final class PushableBlockMazeComponent extends MazeComponent {
         RuntimeException var4 = null;
         SimpleBlockBehaviour var5 = null;
         DamageableBehaviour var6 = null;
-        kpa var7 = null;
+        FlagSet var7 = null;
         ModelCodec var8 = null;
         BlockModel var9 = null;
         Trap var10 = null;
@@ -86,8 +86,8 @@ final class PushableBlockMazeComponent extends MazeComponent {
           var6.b((byte) 0, true);
           var6.b(1, 50, param0 - 5);
           var7 = var6.j((byte) -112);
-          var7.a(false, 67);
-          var7.a(0, -17075, true);
+          var7.setAll(false, 67);
+          var7.set(0, -17075, true);
           var10.addBehaviour((byte) 83, (Behaviour) (var6));
           if (param0 != 5) {
             field_L = true;

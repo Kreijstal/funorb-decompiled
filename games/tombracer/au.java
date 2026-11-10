@@ -19,8 +19,8 @@ final class au extends aa {
                 su.a(qv.field_o, (byte) -108, 3);
               }
               qfa.a(-116);
-              if (kpa.field_c) {
-                kpa.field_c = false;
+              if (FlagSet.field_c) {
+                FlagSet.field_c = false;
                 in.a(-30600, false);
               }
             }

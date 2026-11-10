@@ -211,7 +211,7 @@ final class hf implements ac, gs {
           var13_ref_ka = this.field_n.b((byte) 74);
           gqa.a(var5, -83584144, var8, var7, var13_ref_ka, param2);
         }
-        var13 = this.field_p.u((byte) 126);
+        var13 = this.field_p.getHeldItemKind((byte) 126);
         if (var13 != -1) {
           var15 = var13;
           if (var15 == 0 &&
@@ -428,7 +428,7 @@ final class hf implements ac, gs {
         var4 = -1;
         var5 = 1.0f;
         var6 = 0;
-        var7 = this.field_p.u((byte) 127);
+        var7 = this.field_p.getHeldItemKind((byte) 127);
         var8 = this.field_p.getRoom((byte) 98);
         if (var8 != null) {
           stackIn_8_0 = var8.field_G;

@@ -14,7 +14,7 @@ final class TrackingCrusherComponent extends PrefabComponent {
         return false;
     }
 
-    final int t(int param0) {
+    final int getRenderLayer(int param0) {
         if (param0 != 8) {
           field_H = (String) null;
           return 7;
@@ -64,7 +64,7 @@ final class TrackingCrusherComponent extends PrefabComponent {
         aca.field_h[13] = wea.field_c;
     }
 
-    final boolean s(int param0) {
+    final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
           return true;
         }
@@ -89,7 +89,7 @@ final class TrackingCrusherComponent extends PrefabComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var9 = new Trap(param2, param0);
-          var9.setSize((byte) -11, this.field_k, this.field_l);
+          var9.setSize((byte) -11, this.height, this.width);
           var9.a((byte) -3, 20);
           var9.h(param1, 0);
           var9.b((byte) 17, true);
@@ -99,7 +99,7 @@ final class TrackingCrusherComponent extends PrefabComponent {
           var5.a(false, 262144);
           var9.addLocomotor(var5, param1 ^ 3);
           var6 = new CrusherBehaviour(param2, param0);
-          var6.a(25, 12, 1, 25, 12);
+          var6.setTimings(25, 12, 1, 25, 12);
           var6.b((byte) 127, true);
           var9.addBehaviour((byte) 83, (Behaviour) (var6));
           var7 = rm.field_a;
@@ -121,7 +121,7 @@ final class TrackingCrusherComponent extends PrefabComponent {
         }
     }
 
-    final boolean n(byte param0) {
+    final boolean hasAngle(byte param0) {
         if (param0 != -122) {
           field_H = (String) null;
           return false;
@@ -129,7 +129,7 @@ final class TrackingCrusherComponent extends PrefabComponent {
         return false;
     }
 
-    final boolean v(int param0) {
+    final boolean hasSize(int param0) {
         if (param0 != 555277520) {
           return false;
         }

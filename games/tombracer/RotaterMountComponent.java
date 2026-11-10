@@ -56,7 +56,7 @@ final class RotaterMountComponent extends PrefabComponent {
         }
     }
 
-    final boolean n(byte param0) {
+    final boolean hasAngle(byte param0) {
         if (param0 != -122) {
           field_K = (jea) null;
           return true;
@@ -86,7 +86,7 @@ final class RotaterMountComponent extends PrefabComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var8 = new Trap(param2, param0);
-          var8.setSize((byte) -11, this.field_k, this.field_l);
+          var8.setSize((byte) -11, this.height, this.width);
           var8.h(param1, 0);
           var8.a(1, (byte) -12, true);
           var8.a((byte) -3, 6);
@@ -204,7 +204,7 @@ final class RotaterMountComponent extends PrefabComponent {
         }
     }
 
-    final int t(int param0) {
+    final int getRenderLayer(int param0) {
         if (param0 != 8) {
           Room var3 = (Room) null;
           this.a((Room) null, -35);
@@ -213,7 +213,7 @@ final class RotaterMountComponent extends PrefabComponent {
         return 7;
     }
 
-    final boolean v(int param0) {
+    final boolean hasSize(int param0) {
         if (param0 != 555277520) {
           return true;
         }
@@ -225,7 +225,7 @@ final class RotaterMountComponent extends PrefabComponent {
         this.field_F = 4;
     }
 
-    final boolean s(int param0) {
+    final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
           return true;
         }

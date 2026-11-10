@@ -76,7 +76,7 @@ final class PressureSwitchComponent extends SwitchComponent {
         return 3;
     }
 
-    final boolean s(int param0) {
+    final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
           this.field_K = -83;
           return false;
@@ -94,7 +94,7 @@ final class PressureSwitchComponent extends SwitchComponent {
         TimeSwitchBehaviour.field_r = TimeSwitchBehaviour.field_r + 1;
     }
 
-    final boolean n(byte param0) {
+    final boolean hasAngle(byte param0) {
         if (param0 != -122) {
           this.field_L = 117;
           return false;
@@ -141,9 +141,9 @@ final class PressureSwitchComponent extends SwitchComponent {
         return false;
     }
 
-    final int t(int param0) {
+    final int getRenderLayer(int param0) {
         if (param0 != 8) {
-          this.v(97);
+          this.hasSize(97);
         }
         return 5;
     }
@@ -172,13 +172,13 @@ final class PressureSwitchComponent extends SwitchComponent {
           var10 = new Trap(param2, param0);
           var5_int = this.typeId;
           if (var5_int == 54) {
-            this.field_k = 2097152;
+            this.height = 2097152;
           } else {
             if (55 == var5_int) {
-              this.field_l = 2097152;
+              this.width = 2097152;
             }
           }
-          var10.setSize((byte) -11, this.field_k, this.field_l);
+          var10.setSize((byte) -11, this.height, this.width);
           var5 = new PressureSwitchBehaviour(param2, param0);
           var5.a(this.field_L, true);
           this.a(var5, (byte) -94);
@@ -260,7 +260,7 @@ final class PressureSwitchComponent extends SwitchComponent {
         }
     }
 
-    final boolean v(int param0) {
+    final boolean hasSize(int param0) {
         int var2;
         if (param0 != 555277520) {
           this.field_K = -36;

@@ -825,7 +825,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 104, "gameopt_playerneeds1ratedgame");
                 if (null != var2) {
-                  kpa.field_d = jaa.decodeText((byte) 39, var2);
+                  FlagSet.field_d = jaa.decodeText((byte) 39, var2);
                 }
                 var2 = dn.a((byte) 104, "gameopt_youneed1ratedgame");
                 if (null != var2) {
@@ -2461,7 +2461,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 123, "quickchat_help_title");
                 if (var2 != null) {
-                  kpa.field_b = jaa.decodeText((byte) 49, var2);
+                  FlagSet.field_b = jaa.decodeText((byte) 49, var2);
                 }
                 var2 = dn.a((byte) 117, "quickchat_shortcut_help,0");
                 if (var2 != null) {
@@ -2835,7 +2835,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -52, "mustlogin1");
                 if (var2 != null) {
-                  aia.field_v = jaa.decodeText((byte) 57, var2);
+                  PitSnake.field_v = jaa.decodeText((byte) 57, var2);
                 }
                 var2 = dn.a((byte) 124, "mustlogin2,1");
                 if (null != var2) {

@@ -8,7 +8,7 @@ abstract class MazeComponent extends PrefabComponent {
     private int field_H;
     private int field_J;
 
-    final boolean v(int param0) {
+    final boolean hasSize(int param0) {
         if (param0 != 555277520) {
           Room var3 = (Room) null;
           this.createTrap(false, -3, (Room) null);
@@ -30,7 +30,7 @@ abstract class MazeComponent extends PrefabComponent {
         super.q(param0);
     }
 
-    final boolean n(byte param0) {
+    final boolean hasAngle(byte param0) {
         if (param0 != -122) {
           this.field_H = -72;
           return false;
@@ -89,7 +89,7 @@ abstract class MazeComponent extends PrefabComponent {
             stackIn_2_0 = (Trap) null;
             return stackIn_2_0;
           }
-          var6.setSize((byte) -11, this.field_k, this.field_l);
+          var6.setSize((byte) -11, this.height, this.width);
           var6.a((byte) -3, 0);
           var6.b((byte) 17, true);
           var5 = new RandomMazeBehaviour(param2, param0);
@@ -166,7 +166,7 @@ abstract class MazeComponent extends PrefabComponent {
         }
     }
 
-    final boolean s(int param0) {
+    final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
           this.field_I = 109;
           return false;
@@ -174,7 +174,7 @@ abstract class MazeComponent extends PrefabComponent {
         return false;
     }
 
-    final int t(int param0) {
+    final int getRenderLayer(int param0) {
         if (param0 != 8) {
           Room var3 = (Room) null;
           this.createTrap(true, 54, (Room) null);

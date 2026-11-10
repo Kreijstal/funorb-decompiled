@@ -22,7 +22,7 @@ final class PlatformComponent extends PrefabComponent {
         }
     }
 
-    final boolean n(byte param0) {
+    final boolean hasAngle(byte param0) {
         if (param0 != -122) {
           return false;
         }
@@ -100,7 +100,7 @@ final class PlatformComponent extends PrefabComponent {
         super(param0, param1);
     }
 
-    final boolean s(int param0) {
+    final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
           return true;
         }
@@ -128,13 +128,13 @@ final class PlatformComponent extends PrefabComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new Trap(param2, param0);
-          var4.setSize((byte) -11, this.field_k, this.field_l);
+          var4.setSize((byte) -11, this.height, this.width);
           var5 = new PlatformBehaviour(param2, false);
           var5.b(-5, this.field_G);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
           var6 = rm.field_a;
           if (param1 != 3) {
-            this.t(49);
+            this.getRenderLayer(49);
           }
           if (60 != this.typeId) {
             var7 = (PlatformModel) (var6.createModel(17, param1 ^ 93));
@@ -161,14 +161,14 @@ final class PlatformComponent extends PrefabComponent {
         super.q(param0);
     }
 
-    final boolean v(int param0) {
+    final boolean hasSize(int param0) {
         if (param0 != 555277520) {
           return false;
         }
         return true;
     }
 
-    final int t(int param0) {
+    final int getRenderLayer(int param0) {
         if (param0 != 8) {
           this.z(45);
           return 3;

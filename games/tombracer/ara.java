@@ -159,7 +159,7 @@ final class ara extends jea {
           var17.field_z = 1;
           this.field_tb = new jea(0L, param2);
           var8 = new jea(0L, param3);
-          var9 = new jea(0L, param3, kpa.field_b);
+          var9 = new jea(0L, param3, FlagSet.field_b);
           var9.field_z = 1;
           var10 = 50;
           var11 = 0;

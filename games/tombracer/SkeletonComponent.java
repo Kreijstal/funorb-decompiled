@@ -66,7 +66,7 @@ final class SkeletonComponent extends dna {
         FacePlayerLocomotor var6 = null;
         SimpleBlockBehaviour var7 = null;
         DamageableBehaviour var8 = null;
-        kpa var9 = null;
+        FlagSet var9 = null;
         ModelCodec var10 = null;
         MonsterModel var11 = null;
         Trap var12 = null;
@@ -77,7 +77,7 @@ final class SkeletonComponent extends dna {
         RuntimeException decompiledCaughtException = null;
         try {
           var12 = new Trap(param2, param0);
-          var12.setSize((byte) -11, this.field_k, this.field_l);
+          var12.setSize((byte) -11, this.height, this.width);
           var12.h(2, 0);
           var12.a(2, (byte) -12, true);
           var12.a((byte) -3, 1);
@@ -98,10 +98,10 @@ final class SkeletonComponent extends dna {
           var8.b(0, 5, param1 - 3);
           var8.a(0, 0, 36, 0);
           var9 = var8.j((byte) -114);
-          var9.a(false, param1 ^ 102);
-          var9.a(0, -17075, true);
-          var9.a(param1, -17075, true);
-          var9.a(2, param1 ^ -17074, true);
+          var9.setAll(false, param1 ^ 102);
+          var9.set(0, -17075, true);
+          var9.set(param1, -17075, true);
+          var9.set(2, param1 ^ -17074, true);
           var12.addBehaviour((byte) 83, (Behaviour) (var8));
           var10 = rm.field_a;
           var11 = (MonsterModel) (var10.createModel(18, 98));

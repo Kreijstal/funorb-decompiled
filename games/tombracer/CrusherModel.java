@@ -370,12 +370,12 @@ final class CrusherModel extends TrapModel {
         this.field_r = this.field_n;
         this.field_m = 0;
         var3 = 1;
-        if (this.field_v.c(76)) {
+        if (this.field_v.isWaiting(76)) {
           this.field_t = -2 + uca.field_c.nextBounded(5, 0);
           var3 = 0;
           this.field_m = uca.field_c.nextBounded(5, ~param0) - 2;
         } else {
-          if (this.field_v.r(-98)) {
+          if (this.field_v.isWindingUp(-98)) {
             var3 = 0;
             this.field_r = this.field_n - this.field_n * this.field_v.g((byte) -107) / this.field_v.j((byte) 90);
             if (this.field_r == 0 &&
@@ -407,23 +407,23 @@ final class CrusherModel extends TrapModel {
             }
             if (var6 == 0 &&
               !this.field_u &&
-              this.field_v.c(110)) {
+              this.field_v.isWaiting(110)) {
               var13.a(new fm(59, this.getRenderX((byte) -121), this.getRenderY((byte) 92), this.getRenderZ((byte) -105)), -58);
             }
-            this.field_u = this.field_v.c(param0 - 77);
+            this.field_u = this.field_v.isWaiting(param0 - 77);
             if (var6 == 0 &&
               !this.field_p &&
-              this.field_v.r(-110)) {
+              this.field_v.isWindingUp(-110)) {
               var13.a(new fm(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
             }
-            this.field_p = this.field_v.r(-59);
+            this.field_p = this.field_v.isWindingUp(-59);
             if (this.field_r == 0 &&
               var2 != 0) {
               var13.a(new fm(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
             }
             return;
           }
-          if (this.field_v.s(param0 ^ -61)) {
+          if (this.field_v.isCrushed(param0 ^ -61)) {
             var3 = 0;
             this.field_r = 0;
             if (this.field_r == 0 &&
@@ -455,23 +455,23 @@ final class CrusherModel extends TrapModel {
             }
             if (var6Lifetime3 == 0 &&
               !this.field_u &&
-              this.field_v.c(110)) {
+              this.field_v.isWaiting(110)) {
               var9.a(new fm(59, this.getRenderX((byte) -121), this.getRenderY((byte) 92), this.getRenderZ((byte) -105)), -58);
             }
-            this.field_u = this.field_v.c(param0 - 77);
+            this.field_u = this.field_v.isWaiting(param0 - 77);
             if (var6Lifetime3 == 0 &&
               !this.field_p &&
-              this.field_v.r(-110)) {
+              this.field_v.isWindingUp(-110)) {
               var9.a(new fm(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
             }
-            this.field_p = this.field_v.r(-59);
+            this.field_p = this.field_v.isWindingUp(-59);
             if (this.field_r == 0 &&
               var2 != 0) {
               var9.a(new fm(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
             }
             return;
           }
-          if (this.field_v.l(param0 - 4)) {
+          if (this.field_v.isRetracting(param0 - 4)) {
             var3 = 0;
             this.field_r = this.field_n * this.field_v.g((byte) -120) / this.field_v.d(false);
             if (this.field_r == 0 &&
@@ -503,16 +503,16 @@ final class CrusherModel extends TrapModel {
             }
             if (var6Lifetime4 == 0 &&
               !this.field_u &&
-              this.field_v.c(110)) {
+              this.field_v.isWaiting(110)) {
               var11.a(new fm(59, this.getRenderX((byte) -121), this.getRenderY((byte) 92), this.getRenderZ((byte) -105)), -58);
             }
-            this.field_u = this.field_v.c(param0 - 77);
+            this.field_u = this.field_v.isWaiting(param0 - 77);
             if (var6Lifetime4 == 0 &&
               !this.field_p &&
-              this.field_v.r(-110)) {
+              this.field_v.isWindingUp(-110)) {
               var11.a(new fm(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
             }
-            this.field_p = this.field_v.r(-59);
+            this.field_p = this.field_v.isWindingUp(-59);
             if (this.field_r == 0 &&
               var2 != 0) {
               var11.a(new fm(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
@@ -547,16 +547,16 @@ final class CrusherModel extends TrapModel {
             }
             if (var6Lifetime1 == 0 &&
               !this.field_u &&
-              this.field_v.c(110)) {
+              this.field_v.isWaiting(110)) {
               var15.a(new fm(59, this.getRenderX((byte) -121), this.getRenderY((byte) 92), this.getRenderZ((byte) -105)), -58);
             }
-            this.field_u = this.field_v.c(param0 - 77);
+            this.field_u = this.field_v.isWaiting(param0 - 77);
             if (var6Lifetime1 == 0 &&
               !this.field_p &&
-              this.field_v.r(-110)) {
+              this.field_v.isWindingUp(-110)) {
               var15.a(new fm(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
             }
-            this.field_p = this.field_v.r(-59);
+            this.field_p = this.field_v.isWindingUp(-59);
             if (this.field_r == 0 &&
               var2 != 0) {
               var15.a(new fm(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
@@ -582,25 +582,25 @@ final class CrusherModel extends TrapModel {
           this.field_s = var17_ref.a(new fm(57, this.getRenderX((byte) 32), this.getRenderY((byte) 118), this.getRenderZ((byte) -95)), -58);
           if (var6Lifetime2 == 0 &&
             !this.field_u &&
-            this.field_v.c(110)) {
+            this.field_v.isWaiting(110)) {
             var17_ref.a(new fm(59, this.getRenderX((byte) -121), this.getRenderY((byte) 92), this.getRenderZ((byte) -105)), -58);
-            this.field_u = this.field_v.c(param0 - 77);
+            this.field_u = this.field_v.isWaiting(param0 - 77);
             if (!this.field_p &&
-              this.field_v.r(-110)) {
+              this.field_v.isWindingUp(-110)) {
               var17_ref.a(new fm(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
             }
-            this.field_p = this.field_v.r(-59);
+            this.field_p = this.field_v.isWindingUp(-59);
             if (this.field_r == 0 &&
               var2 != 0) {
               var17_ref.a(new fm(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
             }
             return;
           }
-          this.field_u = this.field_v.c(param0 - 77);
+          this.field_u = this.field_v.isWaiting(param0 - 77);
           if (var6Lifetime2 == 0 &&
             !this.field_p) {
-            if (!this.field_v.r(-110)) {
-              this.field_p = this.field_v.r(-59);
+            if (!this.field_v.isWindingUp(-110)) {
+              this.field_p = this.field_v.isWindingUp(-59);
               if (this.field_r == 0 &&
                 var2 != 0) {
                 var17_ref.a(new fm(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
@@ -609,7 +609,7 @@ final class CrusherModel extends TrapModel {
             }
             var17_ref.a(new fm(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
           }
-          this.field_p = this.field_v.r(-59);
+          this.field_p = this.field_v.isWindingUp(-59);
           if (this.field_r != 0) {
             return;
           }
@@ -625,28 +625,28 @@ final class CrusherModel extends TrapModel {
             this.field_s = null;
             var17_ref.a(new fm(58, this.getRenderX((byte) -99), this.getRenderY((byte) 95), this.getRenderZ((byte) -122)), param0 ^ 57);
             if (!this.field_u &&
-              this.field_v.c(110)) {
+              this.field_v.isWaiting(110)) {
               var17_ref.a(new fm(59, this.getRenderX((byte) -121), this.getRenderY((byte) 92), this.getRenderZ((byte) -105)), -58);
             }
-            this.field_u = this.field_v.c(param0 - 77);
+            this.field_u = this.field_v.isWaiting(param0 - 77);
             if (!this.field_p &&
-              this.field_v.r(-110)) {
+              this.field_v.isWindingUp(-110)) {
               var17_ref.a(new fm(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
             }
           } else {
             if (var6Lifetime2 == 0 &&
               !this.field_u &&
-              this.field_v.c(110)) {
+              this.field_v.isWaiting(110)) {
               var17_ref.a(new fm(59, this.getRenderX((byte) -121), this.getRenderY((byte) 92), this.getRenderZ((byte) -105)), -58);
             }
-            this.field_u = this.field_v.c(param0 - 77);
+            this.field_u = this.field_v.isWaiting(param0 - 77);
             if (var6Lifetime2 == 0 &&
               !this.field_p &&
-              this.field_v.r(-110)) {
+              this.field_v.isWindingUp(-110)) {
               var17_ref.a(new fm(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
             }
           }
-          this.field_p = this.field_v.r(-59);
+          this.field_p = this.field_v.isWindingUp(-59);
           if (this.field_r == 0 &&
             var2 != 0) {
             var17_ref.a(new fm(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
@@ -655,12 +655,12 @@ final class CrusherModel extends TrapModel {
         }
         if (var6Lifetime2 == 0 &&
           !this.field_u &&
-          this.field_v.c(110)) {
+          this.field_v.isWaiting(110)) {
           var17_ref.a(new fm(59, this.getRenderX((byte) -121), this.getRenderY((byte) 92), this.getRenderZ((byte) -105)), -58);
-          this.field_u = this.field_v.c(param0 - 77);
+          this.field_u = this.field_v.isWaiting(param0 - 77);
           if (!this.field_p) {
-            if (!this.field_v.r(-110)) {
-              this.field_p = this.field_v.r(-59);
+            if (!this.field_v.isWindingUp(-110)) {
+              this.field_p = this.field_v.isWindingUp(-59);
               if (this.field_r == 0 &&
                 var2 != 0) {
                 var17_ref.a(new fm(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
@@ -669,7 +669,7 @@ final class CrusherModel extends TrapModel {
             }
             var17_ref.a(new fm(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
           }
-          this.field_p = this.field_v.r(-59);
+          this.field_p = this.field_v.isWindingUp(-59);
           if (this.field_r != 0) {
             return;
           }
@@ -679,11 +679,11 @@ final class CrusherModel extends TrapModel {
           var17_ref.a(new fm(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);
           return;
         }
-        this.field_u = this.field_v.c(param0 - 77);
+        this.field_u = this.field_v.isWaiting(param0 - 77);
         if (var6Lifetime2 == 0 &&
           !this.field_p) {
-          if (!this.field_v.r(-110)) {
-            this.field_p = this.field_v.r(-59);
+          if (!this.field_v.isWindingUp(-110)) {
+            this.field_p = this.field_v.isWindingUp(-59);
             if (this.field_r != 0) {
               return;
             }
@@ -695,7 +695,7 @@ final class CrusherModel extends TrapModel {
           }
           var17_ref.a(new fm(60, this.getRenderX((byte) -86), this.getRenderY((byte) 112), this.getRenderZ((byte) -97)), -58);
         }
-        this.field_p = this.field_v.r(-59);
+        this.field_p = this.field_v.isWindingUp(-59);
         if (this.field_r == 0 &&
           var2 != 0) {
           var17_ref.a(new fm(2, this.getRenderX((byte) -90), this.getRenderY((byte) 127), this.getRenderZ((byte) -122)), -58);

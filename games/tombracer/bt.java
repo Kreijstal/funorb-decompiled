@@ -7,7 +7,7 @@ final class bt implements Renderable {
     SnakePitModel field_a;
     private boolean field_f;
     private bua field_d;
-    aia field_e;
+    PitSnake field_e;
     static jea[] field_c;
     static int[] field_h;
 
@@ -92,7 +92,7 @@ final class bt implements Renderable {
 
     public final boolean isRenderExpired(byte param0) {
         if (param0 != 48) {
-          this.field_e = (aia) null;
+          this.field_e = (PitSnake) null;
           return this.field_a.isRenderExpired((byte) 48);
         }
         return this.field_a.isRenderExpired((byte) 48);

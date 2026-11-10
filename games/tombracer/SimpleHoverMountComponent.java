@@ -104,13 +104,13 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
 
     final boolean C(int param0) {
         if (param0 != 1760) {
-          this.n((byte) 115);
+          this.hasAngle((byte) 115);
           return true;
         }
         return true;
     }
 
-    final boolean v(int param0) {
+    final boolean hasSize(int param0) {
         if (param0 != 555277520) {
           field_M = true;
           return false;
@@ -128,7 +128,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
         super(param0, param1, param2, param3);
     }
 
-    final boolean s(int param0) {
+    final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
           field_M = false;
           return true;
@@ -184,7 +184,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
         }
     }
 
-    final int t(int param0) {
+    final int getRenderLayer(int param0) {
         if (param0 != 8) {
           field_M = false;
           return 7;
@@ -205,7 +205,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new Trap(param2, param0);
-          var4.setSize((byte) -11, this.field_k, this.field_l);
+          var4.setSize((byte) -11, this.height, this.width);
           var4.h(param1, 0);
           var4.a(1, (byte) -12, true);
           var4.a((byte) -3, 0);
@@ -234,7 +234,7 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
         }
     }
 
-    final boolean n(byte param0) {
+    final boolean hasAngle(byte param0) {
         if (param0 != -122) {
           field_M = true;
           return true;

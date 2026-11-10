@@ -8,16 +8,16 @@ final class WheeledMountComponent extends PathMoverComponent {
     static int[] field_M;
     private int field_Q;
 
-    final boolean v(int param0) {
+    final boolean hasSize(int param0) {
         if (param0 != 555277520) {
           return false;
         }
         return false;
     }
 
-    final boolean n(byte param0) {
+    final boolean hasAngle(byte param0) {
         if (param0 != -122) {
-          this.v(-100);
+          this.hasSize(-100);
           return true;
         }
         return true;
@@ -29,7 +29,7 @@ final class WheeledMountComponent extends PathMoverComponent {
         this.a((byte) 125, new mka[]{new mka(0, 0, 2097152, 0, 40)});
     }
 
-    final boolean s(int param0) {
+    final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
           field_N = (String) null;
           return true;
@@ -172,7 +172,7 @@ final class WheeledMountComponent extends PathMoverComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var8 = new Trap(param2, param0);
-          var8.setSize((byte) -11, this.field_k, this.field_l);
+          var8.setSize((byte) -11, this.height, this.width);
           var8.h(param1, 0);
           var8.a(1, (byte) -12, true);
           var8.a((byte) -3, 6);
@@ -213,7 +213,7 @@ final class WheeledMountComponent extends PathMoverComponent {
         }
     }
 
-    final int t(int param0) {
+    final int getRenderLayer(int param0) {
         if (param0 != 8) {
           this.field_Q = 41;
           return 7;

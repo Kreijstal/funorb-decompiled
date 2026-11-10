@@ -3,10 +3,10 @@
  */
 final class DamageableBehaviour extends Behaviour {
     private int field_r;
-    private kpa field_w;
-    private int field_s;
+    private FlagSet vulnerabilities;
+    private int health;
     private int field_u;
-    private kpa field_A;
+    private FlagSet field_A;
     private boolean field_n;
     static String field_x;
     private int field_t;
@@ -17,12 +17,12 @@ final class DamageableBehaviour extends Behaviour {
     private int field_v;
     static int[] field_o;
 
-    final kpa j(byte param0) {
+    final FlagSet j(byte param0) {
         int var2 = -44 / ((-56 - param0) / 45);
-        return this.field_w;
+        return this.vulnerabilities;
     }
 
-    private final Trap b(int param0) {
+    private final Trap getTargetTrap(int param0) {
         int var2 = -100 / ((48 - param0) / 57);
         if (this.field_n) {
           return this.trap;
@@ -30,16 +30,16 @@ final class DamageableBehaviour extends Behaviour {
         return this.getRoot(6);
     }
 
-    private final void g(byte param0) {
+    private final void destroyTarget(byte param0) {
         Trap var2 = null;
         Trap var2Lifetime1;
         if (param0 > 54) {
-          var2 = this.b(123);
+          var2 = this.getTargetTrap(123);
           var2.c(2, (byte) 9);
           return;
         }
         this.field_q = 119;
-        var2Lifetime1 = this.b(123);
+        var2Lifetime1 = this.getTargetTrap(123);
         var2Lifetime1.c(2, (byte) 9);
     }
 
@@ -60,14 +60,14 @@ final class DamageableBehaviour extends Behaviour {
             stackIn_2_0 = 13;
             return stackIn_2_0;
           }
-          if (0 < this.field_s &&
-            this.a(var3_int, (byte) 10)) {
-            this.field_s = this.field_s - param1.size;
-            if (this.field_s <= 0) {
-              this.g((byte) 121);
+          if (0 < this.health &&
+            this.isVulnerableTo(var3_int, (byte) 10)) {
+            this.health = this.health - param1.size;
+            if (this.health <= 0) {
+              this.destroyTarget((byte) 121);
             } else {
               if (this.field_v > 0 &&
-                !this.b(-106).m((byte) -99)) {
+                !this.getTargetTrap(-106).m((byte) -99)) {
                 this.field_v = this.field_v - param1.size;
                 if (0 >= this.field_v) {
                   this.d(true);
@@ -77,11 +77,11 @@ final class DamageableBehaviour extends Behaviour {
             stackIn_15_0 = param1.size;
             return stackIn_15_0;
           }
-          if (0 < this.field_s &&
+          if (0 < this.health &&
             this.a((byte) -94, var3_int)) {
-            this.field_s = this.field_s + param1.size;
-            if (this.field_s > this.field_z) {
-              this.field_s = this.field_z;
+            this.health = this.health + param1.size;
+            if (this.health > this.field_z) {
+              this.health = this.field_z;
             }
             stackIn_22_0 = param1.size;
             return stackIn_22_0;
@@ -108,15 +108,15 @@ final class DamageableBehaviour extends Behaviour {
         try {
           super.attachToTrap(param0, param1);
           for (var3_int = 0; var3_int < 6; var3_int++) {
-            if (this.field_w.a(0, var3_int) ||
-              this.field_A.a(0, var3_int)) {
+            if (this.vulnerabilities.get(0, var3_int) ||
+              this.field_A.get(0, var3_int)) {
               param1.a(26492, true, var3_int);
             }
           }
           this.field_p = this.field_y;
           this.field_v = this.field_r;
           this.field_q = this.field_u;
-          this.field_s = this.field_z;
+          this.health = this.field_z;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "cu.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -129,12 +129,12 @@ final class DamageableBehaviour extends Behaviour {
         return 24;
     }
 
-    private final boolean a(int param0, byte param1) {
+    private final boolean isVulnerableTo(int param0, byte param1) {
         if (param1 != 10) {
           this.field_v = 0;
-          return this.field_w.a(0, param0);
+          return this.vulnerabilities.get(0, param0);
         }
-        return this.field_w.a(0, param0);
+        return this.vulnerabilities.get(0, param0);
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -151,7 +151,7 @@ final class DamageableBehaviour extends Behaviour {
           return;
         }
         this.field_v = this.field_r;
-        this.b(110).n(this.field_t, -127);
+        this.getTargetTrap(110).n(this.field_t, -127);
     }
 
     final int a(int param0, int param1, Effect param2, int param3, byte param4, int param5) {
@@ -219,10 +219,10 @@ final class DamageableBehaviour extends Behaviour {
         if (this.field_q > 0) {
           this.field_q = this.field_q - 1;
           if (this.field_q == 0) {
-            this.field_s = this.field_s + 1;
+            this.health = this.health + 1;
             this.field_q = this.field_u;
-            if (this.field_s > this.field_z) {
-              this.field_s = this.field_z;
+            if (this.health > this.field_z) {
+              this.health = this.field_z;
             }
           }
         }
@@ -243,7 +243,7 @@ final class DamageableBehaviour extends Behaviour {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 25940) {
-            this.field_w = (kpa) null;
+            this.vulnerabilities = (FlagSet) null;
           }
           stackIn_3_0 = this.a(76, param2);
           return stackIn_3_0;
@@ -276,8 +276,8 @@ final class DamageableBehaviour extends Behaviour {
           param1.writeBits((byte) -128, this.field_u, 4);
           param1.writeBits((byte) -126, this.field_y, 4);
           param1.writeBits((byte) 107, this.field_t, 8);
-          this.field_w.a(param1, (byte) -120);
-          this.field_A.a(param1, (byte) -120);
+          this.vulnerabilities.encode(param1, (byte) -120);
+          this.field_A.encode(param1, (byte) -120);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "cu.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -292,10 +292,10 @@ final class DamageableBehaviour extends Behaviour {
           this.field_z = 50;
           this.field_y = 10;
           this.field_n = false;
-          this.field_w = new kpa(6);
-          this.field_w.a(3, -17075, true);
-          this.field_w.a(0, -17075, true);
-          this.field_A = new kpa(6);
+          this.vulnerabilities = new FlagSet(6);
+          this.vulnerabilities.set(3, -17075, true);
+          this.vulnerabilities.set(0, -17075, true);
+          this.field_A = new FlagSet(6);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "cu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -373,8 +373,8 @@ final class DamageableBehaviour extends Behaviour {
           this.field_u = param1.readBits((byte) 44, 4);
           this.field_y = param1.readBits((byte) 44, 4);
           this.field_t = param1.readBits((byte) 44, 8);
-          this.field_w = new kpa(6, param0.formatVersion, param1);
-          this.field_A = new kpa(6, param0.formatVersion, param1);
+          this.vulnerabilities = new FlagSet(6, param0.formatVersion, param1);
+          this.field_A = new FlagSet(6, param0.formatVersion, param1);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "cu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -382,11 +382,11 @@ final class DamageableBehaviour extends Behaviour {
 
     private final boolean a(byte param0, int param1) {
         int var3 = -126 / ((19 - param0) / 56);
-        return this.field_A.a(0, param1);
+        return this.field_A.get(0, param1);
     }
 
     final int hashState(int param0, int param1) {
-        param0 = fs.mixHash((byte) 27, param0, this.field_s);
+        param0 = fs.mixHash((byte) 27, param0, this.health);
         if (param1 < -48) {
           param0 = fs.mixHash((byte) 59, param0, this.field_v);
           return param0;
@@ -399,7 +399,7 @@ final class DamageableBehaviour extends Behaviour {
           this.field_n = param1 ? true : false;
           return;
         }
-        this.g((byte) -127);
+        this.destroyTarget((byte) -127);
         this.field_n = param1 ? true : false;
     }
 

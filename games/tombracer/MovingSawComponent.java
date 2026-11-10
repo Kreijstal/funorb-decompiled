@@ -43,7 +43,7 @@ final class MovingSawComponent extends PathMoverComponent {
         return false;
     }
 
-    final int t(int param0) {
+    final int getRenderLayer(int param0) {
         if (param0 != 8) {
           field_M = (su) null;
           return 7;
@@ -68,7 +68,7 @@ final class MovingSawComponent extends PathMoverComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var12 = new Trap(param2, param0);
-          var12.setSize((byte) -11, this.field_k, this.field_l);
+          var12.setSize((byte) -11, this.height, this.width);
           var12.h(0, param1 ^ param1);
           var12.a(4, (byte) -12, true);
           var12.a((byte) -3, 0);
@@ -117,7 +117,7 @@ final class MovingSawComponent extends PathMoverComponent {
         return true;
     }
 
-    final boolean s(int param0) {
+    final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
           field_O = (char[]) null;
           return true;
@@ -125,7 +125,7 @@ final class MovingSawComponent extends PathMoverComponent {
         return true;
     }
 
-    final boolean v(int param0) {
+    final boolean hasSize(int param0) {
         if (param0 != 555277520) {
           MovingSawComponent.s((byte) -72);
           return false;
@@ -155,7 +155,7 @@ final class MovingSawComponent extends PathMoverComponent {
         super(param0, param1);
     }
 
-    final boolean n(byte param0) {
+    final boolean hasAngle(byte param0) {
         if (param0 != -122) {
           this.A(-19);
           return false;

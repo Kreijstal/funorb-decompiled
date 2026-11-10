@@ -180,7 +180,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
                 } else {
                   if (var3 == 4) {
                     RoomEffectTraps.a((byte) -63, ck.field_b, false);
-                    kpa.field_c = true;
+                    FlagSet.field_c = true;
                     this.updateScreen(true, false);
                   } else {
                     this.updateScreen(true, false);

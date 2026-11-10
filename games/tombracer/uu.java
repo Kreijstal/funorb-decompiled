@@ -210,11 +210,11 @@ final class uu implements GamePacket {
               }
               incrementValue$1 = var6;
               var6++;
-              param0 = aia.field_t[incrementValue$1];
+              param0 = PitSnake.field_t[incrementValue$1];
               dupTemp$2 = param2[param0];
               dupTemp$3 = param4[dupTemp$2];
               param4[dupTemp$2] = dupTemp$3 + 1;
-              aia.field_t[dupTemp$3] = param0;
+              PitSnake.field_t[dupTemp$3] = param0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -12,7 +12,7 @@ final class BlockComponent extends PrefabComponent {
         int var8 = 0;
         SimpleBlockBehaviour var9 = null;
         DamageableBehaviour var10 = null;
-        kpa var11 = null;
+        FlagSet var11 = null;
         ModelCodec var12 = null;
         BlockModel var13 = null;
         int var14 = 0;
@@ -25,7 +25,7 @@ final class BlockComponent extends PrefabComponent {
         var14 = TombRacer.field_G ? 1 : 0;
         try {
           var15 = new Trap(param2, param0);
-          var15.setSize((byte) -11, this.field_k, this.field_l);
+          var15.setSize((byte) -11, this.height, this.width);
           if (this.typeId == 49) {
             var7 = 10;
             var5 = 8;
@@ -55,8 +55,8 @@ final class BlockComponent extends PrefabComponent {
           var10 = new DamageableBehaviour(param2, param0);
           var10.b(1, var8, param1 - 3);
           var11 = var10.j((byte) -106);
-          var11.a(false, 67);
-          var11.a(0, -17075, true);
+          var11.setAll(false, 67);
+          var11.set(0, -17075, true);
           var15.addBehaviour((byte) 83, (Behaviour) (var10));
           var12 = rm.field_a;
           var13 = (BlockModel) (var12.createModel(7, 92));
@@ -78,9 +78,9 @@ final class BlockComponent extends PrefabComponent {
         }
     }
 
-    final boolean v(int param0) {
+    final boolean hasSize(int param0) {
         if (param0 != 555277520) {
-          this.v(16);
+          this.hasSize(16);
           return false;
         }
         return false;
@@ -95,7 +95,7 @@ final class BlockComponent extends PrefabComponent {
         restartMessages = null;
     }
 
-    final boolean n(byte param0) {
+    final boolean hasAngle(byte param0) {
         if (param0 != -122) {
           this.q((byte) 98);
           return false;
@@ -120,7 +120,7 @@ final class BlockComponent extends PrefabComponent {
         return false;
     }
 
-    final boolean s(int param0) {
+    final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
           restartMessages = (String[]) null;
           return false;
@@ -148,7 +148,7 @@ final class BlockComponent extends PrefabComponent {
         return ArchiveNetworkClient.b((byte) -66);
     }
 
-    final int t(int param0) {
+    final int getRenderLayer(int param0) {
         if (param0 != 8) {
           this.q((byte) 57);
           return 7;

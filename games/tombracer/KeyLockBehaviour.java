@@ -38,7 +38,7 @@ final class KeyLockBehaviour extends Behaviour implements SwitchSource {
         int var5Lifetime1;
         if (!this.field_s) {
           var8 = this.getRoom(true).getPlayer(-98);
-          if (var8.u((byte) 127) != 1) {
+          if (var8.getHeldItemKind((byte) 127) != 1) {
             stackIn_19_1 = 0;
           } else {
             stackIn_19_1 = 1;
@@ -55,7 +55,7 @@ final class KeyLockBehaviour extends Behaviour implements SwitchSource {
             if (!this.field_s) {
               return true;
             }
-            var8.J(0);
+            var8.clearHeldItem(0);
             return true;
           }
           this.field_n = 0;
@@ -66,7 +66,7 @@ final class KeyLockBehaviour extends Behaviour implements SwitchSource {
         }
         var7 = this.getRoom(true).getPlayer(-98);
         var6 = var7;
-        if (var7.u((byte) 127) != 1) {
+        if (var7.getHeldItemKind((byte) 127) != 1) {
           stackIn_6_1 = 0;
         } else {
           stackIn_6_1 = 1;
@@ -89,7 +89,7 @@ final class KeyLockBehaviour extends Behaviour implements SwitchSource {
         if (!this.field_s) {
           return true;
         }
-        var7.J(0);
+        var7.clearHeldItem(0);
         return true;
     }
 

@@ -591,7 +591,7 @@ public final class TombRacer extends rfa implements ls {
         PowerUpItemBehaviour.releaseStatics(true);
         SnakePitModel.releaseStatics(-115);
         SnakePitBehaviour.releaseStatics(param0 ^ -25894);
-        aia.releaseStatics(-87);
+        PitSnake.releaseStatics(-87);
         PlantModel.releaseStatics(false);
         WallModel.releaseStatics((byte) -123);
         MotionTrackingModel.n((byte) 112);
@@ -611,7 +611,7 @@ public final class TombRacer extends rfa implements ls {
         BlockComponent.releaseStatics(118);
         PrefabComponent.releaseStatics(0);
         DamageableBehaviour.releaseStatics(-1);
-        kpa.releaseStatics(70);
+        FlagSet.releaseStatics(70);
         PitComponent.releaseStatics((byte) 112);
         SwitchComponent.A(1);
         SwitchState.releaseStatics(71);

@@ -6,7 +6,7 @@ final class InvisibleTouchSwitchComponent extends SwitchComponent {
     static Sprite[] field_K;
     static ResourceArchive field_J;
 
-    final boolean n(byte param0) {
+    final boolean hasAngle(byte param0) {
         if (param0 != -122) {
           field_K = (Sprite[]) null;
           return false;
@@ -30,7 +30,7 @@ final class InvisibleTouchSwitchComponent extends SwitchComponent {
             stackIn_2_0 = (Trap) null;
             return stackIn_2_0;
           }
-          var4.setSize((byte) -11, this.field_k, this.field_l);
+          var4.setSize((byte) -11, this.height, this.width);
           var5 = new TouchSwitchBehaviour(param2, param0);
           this.a(var5, (byte) -92);
           var4.addBehaviour((byte) 83, (Behaviour) (var5));
@@ -52,7 +52,7 @@ final class InvisibleTouchSwitchComponent extends SwitchComponent {
 
     final int B(int param0) {
         if (param0 != 31609) {
-          this.n((byte) 84);
+          this.hasAngle((byte) 84);
           return 3;
         }
         return 3;
@@ -66,7 +66,7 @@ final class InvisibleTouchSwitchComponent extends SwitchComponent {
         }
     }
 
-    final boolean s(int param0) {
+    final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
           return true;
         }
@@ -84,14 +84,14 @@ final class InvisibleTouchSwitchComponent extends SwitchComponent {
         }
     }
 
-    final int t(int param0) {
+    final int getRenderLayer(int param0) {
         if (param0 != 8) {
           return -122;
         }
         return 5;
     }
 
-    final boolean v(int param0) {
+    final boolean hasSize(int param0) {
         if (param0 != 555277520) {
           return true;
         }

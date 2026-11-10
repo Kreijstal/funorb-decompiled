@@ -23,7 +23,7 @@ final class WhiteLightSensorComponent extends SwitchComponent {
         return param0 | param1;
     }
 
-    final boolean v(int param0) {
+    final boolean hasSize(int param0) {
         if (param0 != 555277520) {
           return true;
         }
@@ -72,7 +72,7 @@ final class WhiteLightSensorComponent extends SwitchComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           var10 = new Trap(param2, param0);
-          var10.setSize((byte) -11, this.field_k, this.field_l);
+          var10.setSize((byte) -11, this.height, this.width);
           var10.h(param1, param1 ^ 3);
           var10.a(1, (byte) -12, false);
           var10.setPushable(false, 124);
@@ -122,7 +122,7 @@ final class WhiteLightSensorComponent extends SwitchComponent {
         }
     }
 
-    final int t(int param0) {
+    final int getRenderLayer(int param0) {
         if (param0 != 8) {
           return 49;
         }
@@ -139,7 +139,7 @@ final class WhiteLightSensorComponent extends SwitchComponent {
         field_J = null;
     }
 
-    final boolean n(byte param0) {
+    final boolean hasAngle(byte param0) {
         if (param0 != -122) {
           field_K = (SecondaryNodeHashTable) null;
           return false;
@@ -155,7 +155,7 @@ final class WhiteLightSensorComponent extends SwitchComponent {
         super(param0, param1, param2, param3);
     }
 
-    final boolean s(int param0) {
+    final boolean isSwitchable(int param0) {
         if (param0 != -15254) {
           field_J = (String) null;
           return false;
