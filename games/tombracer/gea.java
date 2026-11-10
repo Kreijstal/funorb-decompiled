@@ -64,7 +64,7 @@ final class gea {
           param1.field_g = false;
           taa.field_g = new nc(var3_int, param1, param1);
           qu.field_a = new tr(var3_int, param1, param1, new gha());
-          var4 = eka.d((byte) 86);
+          var4 = BlendModeOperator.d((byte) 86);
           if (var4 == null) {
             var11 = (Throwable) null;
             ssa.a("QC2", (byte) 122, (Throwable) null);

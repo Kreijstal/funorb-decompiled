@@ -896,7 +896,7 @@ final class WallModel extends TrapModel {
         try {
           if (null == this.tiles) {
             this.j(2097152);
-            if (hb.d(67)) {
+            if (SpriteTileOperator.d(67)) {
               this.l(32166);
             }
           }

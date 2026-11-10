@@ -37,7 +37,7 @@ final class hpa extends aa {
           if (0 == param1.field_d &&
             !MonochromeFillOperator.c(param0 + 2) &&
             null == uu.field_a &&
-            null == ifa.field_n) {
+            null == WaveformOperator.field_n) {
             if (!PowerDownItemBehaviour.field_s) {
               var5 = hka.field_b;
               var6 = cga.field_i;

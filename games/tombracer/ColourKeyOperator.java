@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cma extends TextureOperator {
+final class ColourKeyOperator extends TextureOperator {
     private int field_p;
     private int field_r;
     private int field_q;
@@ -11,10 +11,10 @@ final class cma extends TextureOperator {
 
     final static su[] c(int param0) {
         int var1 = 23 % ((-4 - param0) / 36);
-        return new su[]{MovingSawComponent.field_M, FuseBehaviour.field_v, RoomComponent.field_y, ll.field_d, sga.field_n, bi.field_d, dp.field_g, wc.field_e, IntrusiveDeque.field_a, wsa.field_v, al.field_f, kea.field_c, DoorwayModel.field_o, oc.field_H};
+        return new su[]{MovingSawComponent.field_M, FuseBehaviour.field_v, RoomComponent.field_y, ll.field_d, sga.field_n, bi.field_d, dp.field_g, wc.field_e, IntrusiveDeque.field_a, HslAdjustOperator.field_v, al.field_f, kea.field_c, DoorwayModel.field_o, oc.field_H};
     }
 
-    public cma() {
+    public ColourKeyOperator() {
         super(1, false);
         this.field_p = 4096;
         this.field_q = 4096;

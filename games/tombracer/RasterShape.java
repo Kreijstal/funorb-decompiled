@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class rra {
+abstract class RasterShape {
     static IndexedSprite[] field_a;
     int field_b;
     static jea field_e;
@@ -35,13 +35,13 @@ abstract class rra {
           if (fua.field_b != null) {
             try {
               fua.field_b.seek((byte) 27, 0L);
-              fua.field_b.a(vc.field_q.payload, vc.field_q.position, (byte) -17, 24);
+              fua.field_b.a(WeaveOperator.field_q.payload, WeaveOperator.field_q.position, (byte) -17, 24);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (Exception) (Object) decompiledCaughtException;
             }
           }
-          vc.field_q.position = vc.field_q.position + 24;
+          WeaveOperator.field_q.position = WeaveOperator.field_q.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -162,7 +162,7 @@ abstract class rra {
 
     public static void releaseStatics(boolean param0) {
         if (param0) {
-          rra.releaseStatics(false);
+          RasterShape.releaseStatics(false);
           field_a = null;
           field_e = null;
           return;
@@ -171,7 +171,7 @@ abstract class rra {
         field_e = null;
     }
 
-    rra(int param0, int param1, int param2) {
+    RasterShape(int param0, int param1, int param2) {
         this.field_c = param0;
         this.field_b = param1;
         this.field_d = param2;
@@ -179,7 +179,7 @@ abstract class rra {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         if (param4 != 0) {
-          rra.releaseStatics(false);
+          RasterShape.releaseStatics(false);
         }
         if (param3 == param5) {
           nf.a(param5, param2, param6, param0, param7, param1, -91);

@@ -141,7 +141,7 @@ abstract class MatchPhase {
           if (var2 == 0) {
             return;
           }
-          if (0 == hf.field_b) {
+          if (0 == PlayerModel.field_b) {
             return;
           }
           stackIn_27_0 = false;
@@ -179,7 +179,7 @@ abstract class MatchPhase {
           if (var2Lifetime1 == 0) {
             return;
           }
-          if (0 == hf.field_b) {
+          if (0 == PlayerModel.field_b) {
             return;
           }
           stackIn_58_0 = false;
@@ -221,7 +221,7 @@ abstract class MatchPhase {
         if (var2Lifetime2 == 0) {
           return;
         }
-        if (0 == hf.field_b) {
+        if (0 == PlayerModel.field_b) {
           return;
         }
         stackIn_92_0 = false;

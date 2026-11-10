@@ -56,7 +56,7 @@ abstract class SimulationObserver {
         }
     }
 
-    abstract void a(int param0, int param1, Player param2, Trap param3);
+    abstract void onTreasureCollected(int param0, int param1, Player param2, Trap param3);
 
     abstract void a(Trap param0, int param1);
 
@@ -91,7 +91,7 @@ abstract class SimulationObserver {
     }
 
     final static void composeAgreementText(byte param0) {
-        rfa.field_B = FleeLocomotor.field_B + " <b>" + vc.field_s + "</b> " + cq.field_c + " <b>" + mha.field_F + "</b> " + kka.field_p + "<br>" + "<br>" + wg.field_k;
+        rfa.field_B = FleeLocomotor.field_B + " <b>" + WeaveOperator.field_s + "</b> " + cq.field_c + " <b>" + mha.field_F + "</b> " + kka.field_p + "<br>" + "<br>" + wg.field_k;
         if (param0 != -27) {
           BeamSegment var2 = (BeamSegment) null;
           SimulationObserver.a(-114, -20, 86, 69, (BeamSegment) null, -36, 11);
@@ -117,7 +117,7 @@ abstract class SimulationObserver {
         try {
           if (param2) {
             var6 = (Trap) null;
-            this.a(-16, -102, (Player) null, (Trap) null);
+            this.onTreasureCollected(-16, -102, (Player) null, (Trap) null);
           }
           if (param1.a(param0.player.getCourseIndex(-108), 3)) {
             return;
@@ -158,7 +158,7 @@ abstract class SimulationObserver {
         this.queuedEvents.clear(8);
     }
 
-    abstract void a(int param0, Player param1, int param2, Room param3, int param4, int param5);
+    abstract void onPenalty(int param0, Player param1, int param2, Room param3, int param4, int param5);
 
     final QueuedPlayerEvent pollQueuedEvent(int param0) {
         if (param0 < 99) {
@@ -167,7 +167,7 @@ abstract class SimulationObserver {
         return (QueuedPlayerEvent) (this.queuedEvents.removeFirst(23));
     }
 
-    abstract void a(Player param0, Room param1, boolean param2);
+    abstract void onRoomCompleted(Player param0, Room param1, boolean param2);
 
     protected SimulationObserver() {
         this.queuedEvents = new IntrusiveDeque();
@@ -191,7 +191,7 @@ abstract class SimulationObserver {
           var4 = param1.player.getCourseIndex(-102);
           if (param0 != -27) {
             var7 = (Trap) null;
-            this.a(84, 86, (Player) null, (Trap) null);
+            this.onTreasureCollected(84, 86, (Player) null, (Trap) null);
           }
           var5 = (PendingEvent) (this.field_a.first(param0 - 53));
           while (var5 != null) {

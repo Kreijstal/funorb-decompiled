@@ -77,7 +77,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         var3 = this.trap.getFacingAngle(-25787) >> 2;
         var4 = MouseInputHandler.a((byte) 111, var3);
         var5 = bua.a(0, var3);
-        var6 = 131072 + iia.d(this.trap.getWidth(param0 - 5467), this.trap.getHeight((byte) 55), param0 ^ 5416) / 2;
+        var6 = 131072 + RandomBrickOperator.d(this.trap.getWidth(param0 - 5467), this.trap.getHeight((byte) 55), param0 ^ 5416) / 2;
         var7 = this.trap.getX(3) + gqa.a(var4, (byte) 24, var6);
         var8 = this.trap.getY(9648) + gqa.a(var5, (byte) 24, var6);
         this.field_s.a(var7, gqa.a(var4, (byte) 24, this.field_o) + var7, var8, gqa.a(var5, (byte) 24, this.field_o) + var8, 44);
@@ -155,7 +155,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
           if (param0 <= 1) {
             field_p = -59;
           }
-          var7 = hb.field_x;
+          var7 = SpriteTileOperator.field_x;
           var2Lifetime1 = var7;
           var8 = 0;
           var3Lifetime1 = var8;
@@ -427,7 +427,7 @@ final class BeamShooterBehaviour extends Behaviour implements mra {
         int var2;
         boolean stackIn_4_0 = false;
         var2 = -1 % ((param0 - 63) / 46);
-        stackIn_4_0 = (hb.field_t != null) && (hb.field_t.field_c == param1);
+        stackIn_4_0 = (SpriteTileOperator.field_t != null) && (SpriteTileOperator.field_t.field_c == param1);
         return stackIn_4_0;
     }
 

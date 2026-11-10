@@ -86,7 +86,7 @@ abstract class mna {
           ne.field_d.field_tb.field_t = var7Lifetime1;
         }
         if (PlatformModel.field_B) {
-          voa.field_v = true;
+          CrossedSineBandsOperator.field_v = true;
           ne.field_d.field_tb.field_T = -ne.field_d.field_tb.field_t + ne.field_d.field_vb.field_t;
           ne.field_d.field_tb.field_K = 0;
           PlatformModel.field_B = false;
@@ -94,15 +94,15 @@ abstract class mna {
         ne.field_d.field_tb.field_O = var7Lifetime1 - ne.field_d.field_tb.field_t;
         if (ni.field_c &&
           null != SimpleMoveLocomotor.field_s) {
-          voa.field_v = true;
+          CrossedSineBandsOperator.field_v = true;
         }
         var9 = -ne.field_d.field_tb.field_O - (ne.field_d.field_tb.field_t - ne.field_d.field_vb.field_t);
-        if (voa.field_v) {
+        if (CrossedSineBandsOperator.field_v) {
           ne.field_d.field_tb.field_K = -ne.field_d.field_tb.field_T + var9;
         }
         ne.field_d.b(true, 0, param1 * param2 * 2, param2);
         stackIn_44_0 = (var9 == ne.field_d.field_tb.field_K + ne.field_d.field_tb.field_T);
-        voa.field_v = stackIn_44_0;
+        CrossedSineBandsOperator.field_v = stackIn_44_0;
         return (gqa) (var4);
     }
 

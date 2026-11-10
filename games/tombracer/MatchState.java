@@ -289,7 +289,7 @@ final class MatchState implements dv {
           this.field_z = uma.a(32, param0, -26803);
           this.field_A = param0.readBits((byte) 44, 32);
           this.field_C = param0.readBits((byte) 44, 32);
-          this.field_y = (wd[]) (gha.a(this.field_y, 1, 8, -16499, nfa.field_q, param0));
+          this.field_y = (wd[]) (gha.a(this.field_y, 1, 8, -16499, TileOperator.field_q, param0));
           this.field_u = (wea[]) (gha.a(this.field_u, 1, 8, -16499, OpenGlRenderbuffer.field_u, param0));
           this.field_v = fa.a(0, param0, 8, this.field_v);
           this.field_o = uma.a(32, param0, -26803);
@@ -473,8 +473,8 @@ final class MatchState implements dv {
         int var5 = 0;
         int var6 = TombRacer.field_G ? 1 : 0;
         int var4 = 16 % ((54 - param0) / 35);
-        tu var7 = this.field_d.a(this, -25077);
-        tu var3 = var7;
+        MatchScoringObserver var7 = this.field_d.a(this, -25077);
+        MatchScoringObserver var3 = var7;
         this.simulations[param1] = new PlayerSimulation(var7, this.players[param1], this.field_O, this.field_a);
         for (var5 = 0; this.simulations[param1].getRoomCount(-106) > var5; var5++) {
           this.simulations[param1].a(-28088, var5, this.field_u[this.field_A].a(1024, var5, this.field_C, this.simulations[param1]));

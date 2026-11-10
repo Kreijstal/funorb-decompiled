@@ -81,7 +81,7 @@ final class PowerUpItemBehaviour extends ItemBehaviour {
             stackIn_7_0 = var1_int;
             return stackIn_7_0;
           }
-          if (nfa.field_p) {
+          if (TileOperator.field_p) {
             stackIn_11_0 = 3;
             return stackIn_11_0;
           }

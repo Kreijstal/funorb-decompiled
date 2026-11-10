@@ -63,7 +63,7 @@ final class SweepRotateLocomotor extends Locomotor {
         mu var6Lifetime1;
         var9 = TombRacer.field_G ? 1 : 0;
         try {
-          var1 = vc.field_q;
+          var1 = WeaveOperator.field_q;
           var2 = var1.readUnsignedByte(255);
           if (var2 == 0) {
             if (null == CoinItemComponent.field_G) {
@@ -130,7 +130,7 @@ final class SweepRotateLocomotor extends Locomotor {
             var3 = var1.readString((byte) -76);
             ol.field_b = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(255);
-            ifa.d(var4, 3);
+            WaveformOperator.d(var4, 3);
             return;
           }
           if (TrackPlayerLocomotor.field_s == null) {
@@ -401,12 +401,12 @@ final class SweepRotateLocomotor extends Locomotor {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          param0.addMouseListener(wna.field_n);
-          param0.addMouseMotionListener(wna.field_n);
+          param0.addMouseListener(ColourGradientOperator.field_n);
+          param0.addMouseMotionListener(ColourGradientOperator.field_n);
           if (!param1) {
             return;
           }
-          param0.addFocusListener(wna.field_n);
+          param0.addFocusListener(ColourGradientOperator.field_n);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

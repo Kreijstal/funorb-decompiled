@@ -47,9 +47,9 @@ final class cj implements isa {
               var2_long > var4_ref_rha.field_f) {
               var4_ref_rha.unlink(115);
               uca.field_d = var4_ref_rha.field_g.length;
-              vc.field_q.position = 0;
+              WeaveOperator.field_q.position = 0;
               for (var5_int = 0; var5_int < uca.field_d; var5_int++) {
-                vc.field_q.payload[var5_int] = var4_ref_rha.field_g[var5_int];
+                WeaveOperator.field_q.payload[var5_int] = var4_ref_rha.field_g[var5_int];
               }
               vua.field_B = hla.field_xb;
               hla.field_xb = PlayerProfile.field_c;
@@ -60,12 +60,12 @@ final class cj implements isa {
           }
           while (true) {
             if (GameKeyHandler.field_b < 0) {
-              vc.field_q.position = 0;
+              WeaveOperator.field_q.position = 0;
               if (!ama.a(1, -1)) {
                 return false;
               }
-              GameKeyHandler.field_b = vc.field_q.readCipheredOpcode(-83);
-              vc.field_q.position = 0;
+              GameKeyHandler.field_b = WeaveOperator.field_q.readCipheredOpcode(-83);
+              WeaveOperator.field_q.position = 0;
               uca.field_d = param0[GameKeyHandler.field_b];
             }
             if (!cla.g(param1 + 0)) {
@@ -88,7 +88,7 @@ final class cj implements isa {
             }
             var5 = new rha(var2_long + (long)var4, GameKeyHandler.field_b, new byte[uca.field_d]);
             for (var6 = 0; var6 < uca.field_d; var6++) {
-              var5.field_g[var6] = vc.field_q.payload[var6];
+              var5.field_g[var6] = WeaveOperator.field_q.payload[var6];
             }
             vn.field_a.addLast((byte) -98, var5);
             GameKeyHandler.field_b = -1;

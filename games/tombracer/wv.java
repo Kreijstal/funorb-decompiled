@@ -306,7 +306,7 @@ abstract class wv extends GameScreen {
               if (rpa.field_d) {
                 break scanLoop1;
               }
-              if (vda.field_q) {
+              if (ColouriseOperator.field_q) {
                 break scanLoop1;
               }
               this.field_k.a(this.b(lba.field_p, true, PasswordValidator.field_m), 71, this.b(GridWidgetContainer.field_B, true, jba.field_j));
@@ -805,7 +805,7 @@ abstract class wv extends GameScreen {
           if (param2 != 1) {
             this.field_n = 76;
           }
-          if (rda.d(20125) &&
+          if (RasterizerOperator.d(20125) &&
             39 == param0) {
             CoinItemComponent.a(cq.field_d, (byte) -128);
           }

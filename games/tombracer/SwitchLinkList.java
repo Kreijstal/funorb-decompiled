@@ -71,7 +71,7 @@ final class SwitchLinkList {
         int var5 = TombRacer.field_G ? 1 : 0;
         try {
           this.a((byte) -12);
-          param2.writeBits((byte) 43, this.targets.length, iia.d(this.field_e, 22972));
+          param2.writeBits((byte) 43, this.targets.length, RandomBrickOperator.d(this.field_e, 22972));
           for (var4_int = 0; this.targets.length > var4_int; var4_int++) {
             if (this.targets[var4_int].getScope((byte) 114) != param1) {
               param2.writeBits((byte) -126, 0, 1);
@@ -159,7 +159,7 @@ final class SwitchLinkList {
         RuntimeException var5 = null;
         try {
           this.field_e = param0;
-          var5_int = param3.readBits((byte) 44, iia.d(param0, 22972));
+          var5_int = param3.readBits((byte) 44, RandomBrickOperator.d(param0, 22972));
           this.targets = new Switchable[var5_int];
           this.field_a = new dha[var5_int];
           for (var6 = 0; var6 < var5_int; var6++) {

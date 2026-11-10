@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bj extends TextureOperator {
+final class StripesOperator extends TextureOperator {
     private int field_q;
     private int[] field_o;
     static sla field_p;
@@ -10,7 +10,7 @@ final class bj extends TextureOperator {
     private int field_n;
     static ti[] field_s;
 
-    public bj() {
+    public StripesOperator() {
         super(0, true);
         this.field_q = 0;
         this.field_r = 2048;
@@ -138,7 +138,7 @@ final class bj extends TextureOperator {
     public static void releaseStatics(boolean param0) {
         field_s = null;
         if (!param0) {
-          bj.releaseStatics(true);
+          StripesOperator.releaseStatics(true);
         }
         field_p = null;
     }

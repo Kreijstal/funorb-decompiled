@@ -38,12 +38,12 @@ class qma implements d {
 
     final static void a(java.awt.Component param0, int param1) {
         param0.setFocusTraversalKeysEnabled(false);
-        param0.addKeyListener(nfa.field_n);
+        param0.addKeyListener(TileOperator.field_n);
         if (param1 > -4) {
           return;
         }
         try {
-          param0.addFocusListener(nfa.field_n);
+          param0.addFocusListener(TileOperator.field_n);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "qma.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

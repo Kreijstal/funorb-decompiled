@@ -155,7 +155,7 @@ final class ft {
                 if (param6) {
                   BrickOperator.field_p[var23Lifetime2] = var27Lifetime1 >> SecondaryNodeDeque.field_a;
                   WheeledMountComponent.field_M[var23Lifetime2] = var28Lifetime1 >> SecondaryNodeDeque.field_a;
-                  iia.field_v[var23Lifetime2] = var29Lifetime1;
+                  RandomBrickOperator.field_v[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
                 continue;
@@ -176,7 +176,7 @@ final class ft {
                   var25Lifetime1 = param0.field_F[var23Lifetime2];
                   var26Lifetime1 = param0.field_o[var23Lifetime2];
                   ArrayWidgetGroup.field_u[var23Lifetime2] = var9 + (var18 * var26Lifetime1 + (var15 * var25Lifetime1 + var24Lifetime1 * var12) >> 16);
-                  un.field_r[var23Lifetime2] = var10 + (var16 * var25Lifetime1 + var24Lifetime1 * var13 + var26Lifetime1 * var19 >> 16);
+                  EmbossOperator.field_r[var23Lifetime2] = var10 + (var16 * var25Lifetime1 + var24Lifetime1 * var13 + var26Lifetime1 * var19 >> 16);
                   lq.field_o[var23Lifetime2] = (var25Lifetime1 * var17 + (var24Lifetime1 * var14 + var26Lifetime1 * var20) >> 16) + var11;
                   var24Lifetime1 = param0.field_x[var23Lifetime2];
                   var25Lifetime1 = param0.field_G[var23Lifetime2];

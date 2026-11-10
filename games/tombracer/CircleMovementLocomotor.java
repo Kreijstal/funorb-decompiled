@@ -215,7 +215,7 @@ final class CircleMovementLocomotor extends Locomotor {
           SimpleConditionBehaviour.field_r = -1L;
           fk.field_b = param6.length;
           uu.field_a = null;
-          ifa.field_n = null;
+          WaveformOperator.field_n = null;
           qa.field_o = false;
           vk.field_b = new byte[(7 + hpa.field_g) / 8];
           if (param2 != -51) {
@@ -233,7 +233,7 @@ final class CircleMovementLocomotor extends Locomotor {
           uma.field_b = param8.field_J;
           uma.field_b.clear(param2 ^ -59);
           fua.field_a = new SecondaryNodeHashTable(param4);
-          rda.field_o = 0;
+          RasterizerOperator.field_o = 0;
           so.field_K = 0;
           FleeLocomotor.field_z = -1;
           ProxySocketConnector.field_f = -1;

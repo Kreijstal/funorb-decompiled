@@ -609,13 +609,13 @@ final class gja extends ka {
                         default:
                           break;
                         case 3:
-                          ifa.a(param1.field_p[var32_int], param1.field_b[var32_int], var36, var37_int, RoomComponentFactory.field_a, var40, var39, var35, var38, (byte) -44, param1.field_I[var32_int]);
+                          WaveformOperator.a(param1.field_p[var32_int], param1.field_b[var32_int], var36, var37_int, RoomComponentFactory.field_a, var40, var39, var35, var38, (byte) -44, param1.field_I[var32_int]);
                           var23 = RoomComponentFactory.field_a[1];
                           var22_float = RoomComponentFactory.field_a[0];
-                          ifa.a(param1.field_p[var33_int], param1.field_b[var33_int], var36, var37_int, RoomComponentFactory.field_a, var40, var39, var35, var38, (byte) -44, param1.field_I[var33_int]);
+                          WaveformOperator.a(param1.field_p[var33_int], param1.field_b[var33_int], var36, var37_int, RoomComponentFactory.field_a, var40, var39, var35, var38, (byte) -44, param1.field_I[var33_int]);
                           var24 = RoomComponentFactory.field_a[0];
                           var25 = RoomComponentFactory.field_a[1];
-                          ifa.a(param1.field_p[var34], param1.field_b[var34], var36, var37_int, RoomComponentFactory.field_a, var40, var39, var35, var38, (byte) -44, param1.field_I[var34]);
+                          WaveformOperator.a(param1.field_p[var34], param1.field_b[var34], var36, var37_int, RoomComponentFactory.field_a, var40, var39, var35, var38, (byte) -44, param1.field_I[var34]);
                           var27 = RoomComponentFactory.field_a[1];
                           var26 = RoomComponentFactory.field_a[0];
                           if ((1 & var39) == 0) {
@@ -1186,10 +1186,10 @@ final class gja extends ka {
           if (var14 / (float)param2 <= this.field_S.field_f) {
             return;
           }
-          tu.field_g = var5.field_k * var6.field_e + var6.field_n * var5.field_q + var6.field_i * var5.field_m + var5.field_n;
+          MatchScoringObserver.field_g = var5.field_k * var6.field_e + var6.field_n * var5.field_q + var6.field_i * var5.field_m + var5.field_n;
           kb.field_p = var6.field_l * var5.field_k + var6.field_q * var5.field_q + var5.field_m * var6.field_o;
-          var15 = tu.field_g + (float)this.field_o * kb.field_p;
-          var16 = tu.field_g + (float)this.field_n * kb.field_p;
+          var15 = MatchScoringObserver.field_g + (float)this.field_o * kb.field_p;
+          var16 = MatchScoringObserver.field_g + (float)this.field_n * kb.field_p;
           if (!(var15 > var16)) {
             var18 = (float)this.field_S.field_h * (var16 + (float)this.field_H);
             var17 = ((float)(-this.field_H) + var15) * (float)this.field_S.field_h;
@@ -2158,7 +2158,7 @@ final class gja extends ka {
                   var8 = 0.3333333134651184f * (float)(this.field_r[var5.field_k] + (this.field_r[var5.field_i] + this.field_r[var5.field_c]));
                   var9 = (float)(this.field_l[var5.field_k] + this.field_l[var5.field_c] + this.field_l[var5.field_i]) * 0.3333333134651184f;
                   var10 = var9 * wka.field_b + (vta.field_e * var8 + baa.field_c * var7) + fba.field_a;
-                  var11 = var9 * ct.field_b + (kb.field_p * var8 + var7 * vs.field_O) + tu.field_g;
+                  var11 = var9 * ct.field_b + (kb.field_p * var8 + var7 * vs.field_O) + MatchScoringObserver.field_g;
                   var12 = gj.field_h + (var9 * hs.field_c + (var7 * pl.field_a + MatchPhase.field_d * var8));
                   var13 = (float)(1.0 / Math.sqrt((double)(var12 * var12 + (var11 * var11 + var10 * var10)))) * (float)var5.field_b;
                   var3 = this.field_S.y((byte) -77);
@@ -2503,7 +2503,7 @@ final class gja extends ka {
             }
           }
           if ((decompiledFrameCompleted8) &&
-            (go.d(this.field_h, param4, 26205))) {
+            (EdgeDetectOperator.d(this.field_h, param4, 26205))) {
             if (null == param2.field_C ||
               !(param2.field_C.length >= this.field_I)) {
               array$4 = new byte[this.field_I];
@@ -4773,10 +4773,10 @@ final class gja extends ka {
           if (this.field_S.field_f >= var13 / var9) {
             return;
           }
-          tu.field_g = var5.field_i * var4.field_m + (var5.field_e * var4.field_k + var4.field_q * var5.field_n) + var4.field_n;
+          MatchScoringObserver.field_g = var5.field_i * var4.field_m + (var5.field_e * var4.field_k + var4.field_q * var5.field_n) + var4.field_n;
           kb.field_p = var4.field_m * var5.field_o + (var4.field_q * var5.field_q + var4.field_k * var5.field_l);
-          var14 = tu.field_g + (float)this.field_o * kb.field_p;
-          var15 = tu.field_g + kb.field_p * (float)this.field_n;
+          var14 = MatchScoringObserver.field_g + (float)this.field_o * kb.field_p;
+          var15 = MatchScoringObserver.field_g + kb.field_p * (float)this.field_n;
           if (var15 < var14) {
             var17 = ((float)this.field_H + var14) * (float)this.field_S.field_h;
             var16 = ((float)(-this.field_H) + var15) * (float)this.field_S.field_h;

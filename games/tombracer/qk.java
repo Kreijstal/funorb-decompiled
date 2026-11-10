@@ -99,7 +99,7 @@ final class qk extends rt {
           joa.field_c.field_o = 14;
           joa.field_c.field_c = 2763306;
           joa.field_c.field_f = 5;
-          joa.field_c.field_q = eka.field_o;
+          joa.field_c.field_q = BlendModeOperator.field_o;
           joa.field_c.field_i = 6;
           joa.field_c.field_a = 7697781;
           joa.field_c.field_t = 0;

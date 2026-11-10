@@ -241,7 +241,7 @@ final class ava {
                 }
               } else {
                 if (!uu.field_a.field_ec) {
-                  var12.field_Cb.field_r = vc.field_o;
+                  var12.field_Cb.field_r = WeaveOperator.field_o;
                 }
               }
               var25_int = 0;
@@ -331,7 +331,7 @@ final class ava {
                     if (var25_int == 1) {
                       var24Lifetime2 = rpa.field_c;
                     }
-                    var24Lifetime2 = gl.$cfr$intArgs$a$53ce4ab4c593(92, ifa.field_r, new String[]{null, Integer.toString(var25_int)});
+                    var24Lifetime2 = gl.$cfr$intArgs$a$53ce4ab4c593(92, WaveformOperator.field_r, new String[]{null, Integer.toString(var25_int)});
                     var30Lifetime1 = var24Lifetime2;
                     var25 = var30Lifetime1;
                     var24Lifetime2 = var25;

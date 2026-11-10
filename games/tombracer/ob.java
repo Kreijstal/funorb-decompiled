@@ -112,7 +112,7 @@ abstract class ob extends IntrusiveNode {
           su.createToolkitSprite(mp.field_d, param0, (byte) 126);
           su.createToolkitSprite(baa.field_g, param0, (byte) -43);
           ConstantEffectBehaviour.field_q = su.createToolkitSprite(FullscreenConfirmationDialog.field_O, param0, (byte) 126);
-          MessageDialog.field_X = su.createToolkitSprite(ifa.field_q, param0, (byte) 125);
+          MessageDialog.field_X = su.createToolkitSprite(WaveformOperator.field_q, param0, (byte) 125);
           su.createToolkitSprite(field_n, param0, (byte) 125);
           gg.field_f = su.createToolkitSprite(vua.field_y, param0, (byte) 127);
           eca.field_c = ak.a(param0, Effect.field_e, -64);

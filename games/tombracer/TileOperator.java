@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nfa extends TextureOperator {
+final class TileOperator extends TextureOperator {
     private int field_o;
     private int field_m;
     static os field_q;
@@ -412,7 +412,7 @@ final class nfa extends TextureOperator {
         int var7Lifetime1;
         var9 = TombRacer.field_G ? 1 : 0;
         if (param0 != 1) {
-          nfa.releaseStatics((byte) -85);
+          TileOperator.releaseStatics((byte) -85);
         }
         var3 = this.field_i.a((byte) 78, param1);
         if (this.field_i.field_d) {
@@ -454,7 +454,7 @@ final class nfa extends TextureOperator {
         }
     }
 
-    public nfa() {
+    public TileOperator() {
         super(1, false);
         this.field_o = 4;
         this.field_m = 4;
@@ -479,7 +479,7 @@ final class nfa extends TextureOperator {
             }
           }
           if (param0 != 107) {
-            nfa.a((int[][]) null, 80);
+            TileOperator.a((int[][]) null, 80);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

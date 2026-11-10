@@ -362,9 +362,9 @@ final class wd implements dv {
           if (null == this.field_d) {
             return;
           }
-          if (this.field_d.n((byte) -84) != null) {
-            this.field_d.n((byte) -115).a(param0, 1);
-            this.field_d.n((byte) -82).a(26, 0, true);
+          if (this.field_d.getAnimator((byte) -84) != null) {
+            this.field_d.getAnimator((byte) -115).a(param0, 1);
+            this.field_d.getAnimator((byte) -82).a(26, 0, true);
             return;
           }
           return;
@@ -372,11 +372,11 @@ final class wd implements dv {
         if (null == this.field_d) {
           return;
         }
-        if (this.field_d.n((byte) -84) == null) {
+        if (this.field_d.getAnimator((byte) -84) == null) {
           return;
         }
-        this.field_d.n((byte) -115).a(param0, 1);
-        this.field_d.n((byte) -82).a(26, 0, true);
+        this.field_d.getAnimator((byte) -115).a(param0, 1);
+        this.field_d.getAnimator((byte) -82).a(26, 0, true);
     }
 
     wd(Player param0) {

@@ -4167,13 +4167,13 @@ final class Model extends ka {
                 if (var22 != 1) {
                   if (var22 != 2) {
                     if (var22 == 3) {
-                      ifa.a(this.field_T[var23], this.field_xb[var23], var27, var28, var75, var31, var30, var26, var76, (byte) -44, this.field_rb[var23]);
+                      WaveformOperator.a(this.field_T[var23], this.field_xb[var23], var27, var28, var75, var31, var30, var26, var76, (byte) -44, this.field_rb[var23]);
                       var19[0] = var75[0];
                       var20[0] = var75[1];
-                      ifa.a(this.field_T[var24], this.field_xb[var24], var27, var28, var75, var31, var30, var26, var76, (byte) -44, this.field_rb[var24]);
+                      WaveformOperator.a(this.field_T[var24], this.field_xb[var24], var27, var28, var75, var31, var30, var26, var76, (byte) -44, this.field_rb[var24]);
                       var19[1] = var75[0];
                       var20[1] = var75[1];
-                      ifa.a(this.field_T[var25], this.field_xb[var25], var27, var28, var75, var31, var30, var26, var76, (byte) -44, this.field_rb[var25]);
+                      WaveformOperator.a(this.field_T[var25], this.field_xb[var25], var27, var28, var75, var31, var30, var26, var76, (byte) -44, this.field_rb[var25]);
                       var19[2] = var75[0];
                       var20[2] = var75[1];
                       if ((var30 & 1) != 0) {

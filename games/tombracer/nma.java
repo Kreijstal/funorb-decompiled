@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nma extends rra {
+final class nma extends RasterShape {
     static kra field_m;
     private int field_g;
     private int field_h;

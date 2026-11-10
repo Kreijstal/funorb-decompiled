@@ -32,7 +32,7 @@ final class pja extends vw {
     }
 
     final void a(boolean param0, int param1) {
-        this.field_c.setTextureCombineOperations(jv.field_m, (byte) -110, PlatformComponent.field_F);
+        this.field_c.setTextureCombineOperations(NormalMapOperator.field_m, (byte) -110, PlatformComponent.field_F);
         if (param1 != 5744) {
           this.a(false, 34);
         }

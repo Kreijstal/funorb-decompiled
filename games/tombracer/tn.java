@@ -114,7 +114,7 @@ final class tn extends IntrusiveNode {
           if (!InvisibleTouchSwitchComponent.field_J.b(-60)) {
             return hra.field_c;
           }
-          return voa.field_s;
+          return CrossedSineBandsOperator.field_s;
         }
         if (!tk.field_b.b(-97)) {
           return SwitchModel.field_r;
@@ -128,11 +128,11 @@ final class tn extends IntrusiveNode {
         if (!OpenGlTexture2D.field_n.c("commonui", -128)) {
           return TrapSpawner.field_b + " - " + OpenGlTexture2D.field_n.a("commonui", true) + "%";
         }
-        if (!vc.field_p.b(param0 + 10827)) {
+        if (!WeaveOperator.field_p.b(param0 + 10827)) {
           return wt.field_b;
         }
-        if (!vc.field_p.a(0)) {
-          return WindZoneBehaviour.field_u + " - " + vc.field_p.a(true) + "%";
+        if (!WeaveOperator.field_p.a(0)) {
+          return WindZoneBehaviour.field_u + " - " + WeaveOperator.field_p.a(true) + "%";
         }
         return PlayerSimulation.field_n;
     }
@@ -537,7 +537,7 @@ final class tn extends IntrusiveNode {
               var31 = var15[var29Lifetime3Lifetime1 + 1];
               var32 = (var30 - var27Lifetime6Lifetime1) / 2 + (var30 - var27Lifetime6Lifetime1) * var28_int;
               for (var33 = var27Lifetime6Lifetime1; var30 > var33; var33++) {
-                var34 = go.e(-1, var32, -var27Lifetime6Lifetime1 + var30);
+                var34 = EdgeDetectOperator.e(-1, var32, -var27Lifetime6Lifetime1 + var30);
                 this.field_j[var33] = (byte)(var34 * this.field_j[var33] + 32 >> 6);
                 var32 = var32 + (-var28_int + var31);
               }
@@ -581,7 +581,7 @@ final class tn extends IntrusiveNode {
               var37 = var27Lifetime7;
               var33Lifetime1 = var37;
               while (var30Lifetime1Lifetime1 > var37) {
-                var34Lifetime1 = go.e(-1, var32Lifetime1, -var27Lifetime7 + var30Lifetime1Lifetime1);
+                var34Lifetime1 = EdgeDetectOperator.e(-1, var32Lifetime1, -var27Lifetime7 + var30Lifetime1Lifetime1);
                 var35 = var34Lifetime1 + (255 & this.field_l[var37]);
                 if (var35 < 0) {
                   var35 = 0;

@@ -43,12 +43,12 @@ final class mpa extends ContentTransitionDialog {
             var4 = jd.normalizeDisplayName(1, param2);
             if (var4 != null &&
               var4.length() >= 1) {
-              if (!hf.isNameSeparator(-85, var4.charAt(0)) &&
-                !hf.isNameSeparator(-99, var4.charAt(-1 + var4.length()))) {
+              if (!PlayerModel.isNameSeparator(-85, var4.charAt(0)) &&
+                !PlayerModel.isNameSeparator(-99, var4.charAt(-1 + var4.length()))) {
                 var5 = 0;
                 for (var6 = 0; param2.length() > var6; var6++) {
                   var7 = param2.charAt(var6);
-                  if (!hf.isNameSeparator(124, (char) var7)) {
+                  if (!PlayerModel.isNameSeparator(124, (char) var7)) {
                     var5 = 0;
                   } else {
                     var5++;

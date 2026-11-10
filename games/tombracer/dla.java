@@ -255,10 +255,10 @@ final class dla {
           if (!OpenGlTexture2D.field_n.c("commonui", -126)) {
             return 60;
           }
-          if (!vc.field_p.b(param0 ^ -123)) {
+          if (!WeaveOperator.field_p.b(param0 ^ -123)) {
             return 70;
           }
-          if (!vc.field_p.a(0)) {
+          if (!WeaveOperator.field_p.a(0)) {
             return 80;
           }
         } else {
@@ -285,10 +285,10 @@ final class dla {
           if (!OpenGlTexture2D.field_n.c("commonui", -124)) {
             return 80;
           }
-          if (!vc.field_p.b(-128)) {
+          if (!WeaveOperator.field_p.b(-128)) {
             return 82;
           }
-          if (!vc.field_p.a(0)) {
+          if (!WeaveOperator.field_p.a(0)) {
             return 86;
           }
         }

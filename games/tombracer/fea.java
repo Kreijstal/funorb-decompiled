@@ -744,8 +744,8 @@ final class fea {
           }
           if (decompiledFrameRemainder0) {
             if (!HardwareOpenGlToolkit.field_pd) {
-              if (fr.field_c >= bda.field_m) {
-                stackIn_17_0 = (fr.field_c < bda.field_m + LightSourceModel.field_p) ? 1 : 0;
+              if (fr.field_c >= WhiteNoiseOperator.field_m) {
+                stackIn_17_0 = (fr.field_c < WhiteNoiseOperator.field_m + LightSourceModel.field_p) ? 1 : 0;
               } else {
                 stackIn_17_0 = 0;
               }
@@ -756,7 +756,7 @@ final class fea {
             var2_int = stackIn_17_0;
             if (param1 != null && (HardwareOpenGlToolkit.field_pd ||
               var2_int != 0)) {
-              fr.field_c = bda.field_m;
+              fr.field_c = WhiteNoiseOperator.field_m;
               decompiledFrameRemainder1 = false;
             }
             else {
@@ -773,7 +773,7 @@ final class fea {
             vf.field_f = SimpleBlockBehaviour.field_r;
           }
           if (!HardwareOpenGlToolkit.field_pd &&
-            bda.field_m > fr.field_c &&
+            WhiteNoiseOperator.field_m > fr.field_c &&
             qma.field_c) {
             vf.field_f = SimpleBlockBehaviour.field_r;
             ConsoleToken.field_f = TileGrid.field_g;

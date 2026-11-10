@@ -203,7 +203,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
         var3 = var3 + (this.a(gea.field_c, GameKeyHandler.field_d, this.field_C, -3, 170, var3) + 5);
         var3 = var3 + (this.a(CrusherBehaviour.field_r, za.field_f, this.field_G, -3, 170, var3) + 5);
         var3 = var3 + this.addValidatedField(this.field_I, var3, (byte) 99, iqa.field_g, 170);
-        jsa var4 = new jsa(46, var3, this.field_m - 90, 25, this.field_D, true, this.field_m - 120, 5, eka.field_o, 11579568, OpenGlSprite.field_l);
+        jsa var4 = new jsa(46, var3, this.field_m - 90, 25, this.field_D, true, this.field_m - 120, 5, BlendModeOperator.field_o, 11579568, OpenGlSprite.field_l);
         this.addChild(var4, -1);
         var3 = var3 + var4.field_p;
         TextWidgetPainter var5 = new TextWidgetPainter(KeySwitchComponent.field_J, 0, 0, 0, 0, 16777215, -1, 0, 0, KeySwitchComponent.field_J.field_w, -1, 2147483647, true);
@@ -378,7 +378,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements HotspotL
           if (var4 == fp.field_c) {
             return false;
           }
-          if (gla.field_p == var4) {
+          if (BevelOperator.field_p == var4) {
             return false;
           }
           if (fk.field_d != var4) {

@@ -144,7 +144,7 @@ final class joa {
             try {
               OpenGlTransform3D.field_e = new BufferedSocket((java.net.Socket) (Room.field_R.field_f), kqa.field_a);
               ql.field_k.position = 0;
-              var4 = vc.field_q;
+              var4 = WeaveOperator.field_q;
               km.field_p = RotaterMountComponent.field_G;
               var4.position = 0;
               stackIn_10_0 = (!param0) ? -1 : -2;

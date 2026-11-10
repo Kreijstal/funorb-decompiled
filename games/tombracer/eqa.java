@@ -39,12 +39,12 @@ final class eqa implements os {
         var72 = null;
         var11 = TombRacer.field_G ? 1 : 0;
         var3 = param1 ? 1 : 0;
-        if (!voa.field_v &&
+        if (!CrossedSineBandsOperator.field_v &&
           SimpleMoveLocomotor.field_s == null) {
           var3 = 0;
         }
         if (bta.field_q == 0 &&
-          ifa.field_n != null) {
+          WaveformOperator.field_n != null) {
           var3 = 0;
         }
         if (bta.field_q == 2 &&
@@ -59,11 +59,11 @@ final class eqa implements os {
             PlayerProfile.a(true);
             return true;
           }
-          if (vc.field_n.length() <= 0) {
+          if (WeaveOperator.field_n.length() <= 0) {
             PlayerProfile.a(true);
             return true;
           }
-          var4_ref_String = vc.field_n.toString();
+          var4_ref_String = WeaveOperator.field_n.toString();
           if (lt.containsFilterText(var4_ref_String, -1)) {
             var13 = (String) null;
             var12 = (String) null;
@@ -90,23 +90,23 @@ final class eqa implements os {
           if (var3 == 0) {
             return true;
           }
-          if (vc.field_n.length() <= 0) {
+          if (WeaveOperator.field_n.length() <= 0) {
             return true;
           }
-          DarknessBehaviour.a(-1 + vc.field_n.length(), ' ', -11, vc.field_n);
+          DarknessBehaviour.a(-1 + WeaveOperator.field_n.length(), ' ', -11, WeaveOperator.field_n);
           return true;
         }
         var4 = HardwareOpenGlToolkit.field_td;
-        if (!rra.isPrintableCharacter((byte) -126, (char) var4)) {
+        if (!RasterShape.isPrintableCharacter((byte) -126, (char) var4)) {
           return false;
         }
         if (var3 == 0) {
           return true;
         }
-        if (vc.field_n.length() >= 80) {
+        if (WeaveOperator.field_n.length() >= 80) {
           return true;
         }
-        discarded$0 = vc.field_n.append((char) var4);
+        discarded$0 = WeaveOperator.field_n.append((char) var4);
         var5Lifetime1 = 485;
         var60 = fna.field_k;
         var16 = ima.a(var60, (byte) 8);
@@ -122,20 +122,20 @@ final class eqa implements os {
                     var63 = "[" + tla.field_f + "] ";
                     var65 = var63 + var64 + ": ";
                     var5Lifetime1 = var5Lifetime1 - PlatformBehaviour.field_s.b(var65);
-                    if (var5Lifetime1 >= PlatformBehaviour.field_s.b(vc.field_n.toString())) {
+                    if (var5Lifetime1 >= PlatformBehaviour.field_s.b(WeaveOperator.field_n.toString())) {
                       return true;
                     }
-                    DarknessBehaviour.a(vc.field_n.length() - 1, ' ', -11, vc.field_n);
+                    DarknessBehaviour.a(WeaveOperator.field_n.length() - 1, ' ', -11, WeaveOperator.field_n);
                     return true;
                   }
                   var7 = "[" + gl.$cfr$intArgs$a$53ce4ab4c593(94, jea.field_nb, new String[]{uu.field_a.field_tb}) + "] ";
                 }
                 var66 = var7 + var64 + ": ";
                 var5Lifetime1 = var5Lifetime1 - PlatformBehaviour.field_s.b(var66);
-                if (var5Lifetime1 >= PlatformBehaviour.field_s.b(vc.field_n.toString())) {
+                if (var5Lifetime1 >= PlatformBehaviour.field_s.b(WeaveOperator.field_n.toString())) {
                   return true;
                 }
-                DarknessBehaviour.a(vc.field_n.length() - 1, ' ', -11, vc.field_n);
+                DarknessBehaviour.a(WeaveOperator.field_n.length() - 1, ' ', -11, WeaveOperator.field_n);
                 return true;
               }
               var7 = "[" + cla.field_o + "] ";
@@ -146,10 +146,10 @@ final class eqa implements os {
                 var67 = "[" + tla.field_f + "] ";
                 var68 = var67 + var64 + ": ";
                 var5Lifetime1 = var5Lifetime1 - PlatformBehaviour.field_s.b(var68);
-                if (var5Lifetime1 >= PlatformBehaviour.field_s.b(vc.field_n.toString())) {
+                if (var5Lifetime1 >= PlatformBehaviour.field_s.b(WeaveOperator.field_n.toString())) {
                   return true;
                 }
-                DarknessBehaviour.a(vc.field_n.length() - 1, ' ', -11, vc.field_n);
+                DarknessBehaviour.a(WeaveOperator.field_n.length() - 1, ' ', -11, WeaveOperator.field_n);
                 return true;
               }
               var7 = "[" + gl.$cfr$intArgs$a$53ce4ab4c593(94, jea.field_nb, new String[]{uu.field_a.field_tb}) + "] ";
@@ -169,10 +169,10 @@ final class eqa implements os {
             var5Lifetime1 = var5Lifetime1 - var10;
           }
         }
-        if (var5Lifetime1 >= PlatformBehaviour.field_s.b(vc.field_n.toString())) {
+        if (var5Lifetime1 >= PlatformBehaviour.field_s.b(WeaveOperator.field_n.toString())) {
           return true;
         }
-        DarknessBehaviour.a(vc.field_n.length() - 1, ' ', -11, vc.field_n);
+        DarknessBehaviour.a(WeaveOperator.field_n.length() - 1, ' ', -11, WeaveOperator.field_n);
         return true;
     }
 

@@ -127,7 +127,7 @@ final class ua implements GamePacket {
             field_a = (ResourceArchive) null;
           }
           if (param0 == 1) {
-            stackIn_5_0 = gl.$cfr$intArgs$a$53ce4ab4c593(103, tu.field_e, new String[]{param1});
+            stackIn_5_0 = gl.$cfr$intArgs$a$53ce4ab4c593(103, MatchScoringObserver.field_e, new String[]{param1});
             return stackIn_5_0;
           }
           if (param0 == 2) {
@@ -143,7 +143,7 @@ final class ua implements GamePacket {
             return stackIn_17_0;
           }
           if (5 == param0) {
-            stackIn_21_0 = gl.$cfr$intArgs$a$53ce4ab4c593(85, gia.field_o, new String[]{param1});
+            stackIn_21_0 = gl.$cfr$intArgs$a$53ce4ab4c593(85, TextureSampleOperator.field_o, new String[]{param1});
             return stackIn_21_0;
           }
           if (param0 == 6) {

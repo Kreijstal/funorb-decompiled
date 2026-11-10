@@ -198,12 +198,12 @@ final class mba extends uq {
             if (-1 != this.field_m) {
               gqa.a(0, -83584144, var9, var8, gca.field_g[this.field_m], 0);
             }
-            if (hb.d(43) &&
+            if (SpriteTileOperator.d(43) &&
               this.field_i != -1) {
               gqa.a(this.field_n, -83584144, var9, var8, gca.field_g[this.field_i], 0);
             }
           }
-          if (!hb.d(-81)) {
+          if (!SpriteTileOperator.d(-81)) {
             return;
           }
           if (var4 == var6 + 1 &&

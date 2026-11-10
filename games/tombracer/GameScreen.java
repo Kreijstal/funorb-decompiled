@@ -10,7 +10,7 @@ abstract class GameScreen {
 
     final static boolean a(int param0, boolean param1, int param2) {
         String var4 = null;
-        int var3 = null != ifa.field_n ? 1 : 0;
+        int var3 = null != WaveformOperator.field_n ? 1 : 0;
         String var4Lifetime1;
         String var4Lifetime2;
         String var4Lifetime3;
@@ -190,7 +190,7 @@ abstract class GameScreen {
         ContextMenu.f((byte) 101);
         BeamSegment.a(5);
         if (param0 == 62) {
-          rda.closeNetworkAndCacheResources(0);
+          RasterizerOperator.closeNetworkAndCacheResources(0);
           if (bl.b(param0 - 62)) {
             ql.field_k.writeCipheredOpcode(1, -2988);
             bl.a(0, -1);
@@ -199,7 +199,7 @@ abstract class GameScreen {
           return;
         }
         GameScreen.a(-50, false, 79);
-        rda.closeNetworkAndCacheResources(0);
+        RasterizerOperator.closeNetworkAndCacheResources(0);
         if (bl.b(param0 - 62)) {
           ql.field_k.writeCipheredOpcode(1, -2988);
           bl.a(0, -1);

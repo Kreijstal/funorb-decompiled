@@ -503,7 +503,7 @@ class UiWidget extends IntrusiveNode {
         var5 = this.hasKeyboardFocus((byte) -34) ? 1 : 0;
         if (!param1) {
           if (var5 != 0 &&
-            hf.field_b != 0) {
+            PlayerModel.field_b != 0) {
             this.clearKeyboardFocus((byte) 119);
           }
           TextFieldValidator.field_f = RangeOperator.field_p;
@@ -515,8 +515,8 @@ class UiWidget extends IntrusiveNode {
           return param1;
         }
         if (0 == pg.field_y) {
-          if (hf.field_b != 0) {
-            if (!this.handlePointerPress(97, param2, param0, lba.field_p, hf.field_b, this, PasswordValidator.field_m)) {
+          if (PlayerModel.field_b != 0) {
+            if (!this.handlePointerPress(97, param2, param0, lba.field_p, PlayerModel.field_b, this, PasswordValidator.field_m)) {
               if (var5 == 0) {
                 if (RangeOperator.field_p == 0 &&
                   TextFieldValidator.field_f != 0) {
@@ -532,7 +532,7 @@ class UiWidget extends IntrusiveNode {
                   }
                   if (var7 != 0 &&
                     var5 != 0 &&
-                    hf.field_b != 0) {
+                    PlayerModel.field_b != 0) {
                     this.clearKeyboardFocus((byte) 119);
                   }
                 }
@@ -563,7 +563,7 @@ class UiWidget extends IntrusiveNode {
             }
             if (var7 != 0 &&
               var5 != 0 &&
-              hf.field_b != 0) {
+              PlayerModel.field_b != 0) {
               this.clearKeyboardFocus((byte) 119);
             }
             TextFieldValidator.field_f = RangeOperator.field_p;
@@ -582,8 +582,8 @@ class UiWidget extends IntrusiveNode {
           return param1;
         }
         if (var5 == 0) {
-          if (hf.field_b != 0) {
-            if (!this.handlePointerPress(97, param2, param0, lba.field_p, hf.field_b, this, PasswordValidator.field_m)) {
+          if (PlayerModel.field_b != 0) {
+            if (!this.handlePointerPress(97, param2, param0, lba.field_p, PlayerModel.field_b, this, PasswordValidator.field_m)) {
               if (RangeOperator.field_p == 0 &&
                 TextFieldValidator.field_f != 0) {
                 this.handlePointerRelease((byte) 59, this, GridWidgetContainer.field_B, param2, param0, jba.field_j);
@@ -598,7 +598,7 @@ class UiWidget extends IntrusiveNode {
                 }
                 if (var7 != 0 &&
                   var5 != 0 &&
-                  hf.field_b != 0) {
+                  PlayerModel.field_b != 0) {
                   this.clearKeyboardFocus((byte) 119);
                 }
               }
@@ -623,7 +623,7 @@ class UiWidget extends IntrusiveNode {
             }
             if (var7 != 0 &&
               var5 != 0 &&
-              hf.field_b != 0) {
+              PlayerModel.field_b != 0) {
               this.clearKeyboardFocus((byte) 119);
             }
             TextFieldValidator.field_f = RangeOperator.field_p;
@@ -642,8 +642,8 @@ class UiWidget extends IntrusiveNode {
           return param1;
         }
         this.a(pg.field_y, param0, param2, GridWidgetContainer.field_B, this, jba.field_j, -1);
-        if (hf.field_b != 0) {
-          if (!this.handlePointerPress(97, param2, param0, lba.field_p, hf.field_b, this, PasswordValidator.field_m)) {
+        if (PlayerModel.field_b != 0) {
+          if (!this.handlePointerPress(97, param2, param0, lba.field_p, PlayerModel.field_b, this, PasswordValidator.field_m)) {
             this.clearKeyboardFocus((byte) -98);
             if (var7 != 0) {
               param1 = false;
@@ -680,7 +680,7 @@ class UiWidget extends IntrusiveNode {
         }
         if (var7 != 0 &&
           var5 != 0 &&
-          hf.field_b != 0) {
+          PlayerModel.field_b != 0) {
           this.clearKeyboardFocus((byte) 119);
         }
         TextFieldValidator.field_f = RangeOperator.field_p;

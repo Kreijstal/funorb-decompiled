@@ -57,14 +57,14 @@ abstract class AppletGameShell extends GameApplet {
     }
 
     private final void f(byte param0) {
-        int var2 = vc.field_q.readUnsignedByte(255);
+        int var2 = WeaveOperator.field_q.readUnsignedByte(255);
         int var3 = (var2 & 1) != 0 ? 1 : 0;
         int var4 = uca.field_d - 1;
         if (param0 != -15) {
           AppletGameShell.n(39);
         }
         byte[] var5 = new byte[var4];
-        vc.field_q.a(0, param0 - 103, var5, var4);
+        WeaveOperator.field_q.a(0, param0 - 103, var5, var4);
         SimpleBlockBehaviour.a(param0 ^ -16, di.a(param0 + 82), jaa.decodeText((byte) 64, var5), var3 != 0);
     }
 
@@ -103,11 +103,11 @@ abstract class AppletGameShell extends GameApplet {
           if (var4 == 1) {
             var5 = cha.a(pla.a(-1), RotaterMountComponent.A(49), 2);
             if (-1 != var5) {
-              ifa.a(PressureSwitchBehaviour.field_s, var5, io.field_b, (byte) 100);
+              WaveformOperator.a(PressureSwitchBehaviour.field_s, var5, io.field_b, (byte) 100);
               io.field_b = null;
               PressureSwitchBehaviour.field_s = null;
             }
-            var12 = nw.e((byte) 78);
+            var12 = VoronoiNoiseOperator.e((byte) 78);
             if (var12 != null) {
               kb.a(2753, var12.booleanValue());
             }
@@ -246,7 +246,7 @@ abstract class AppletGameShell extends GameApplet {
             BrickOperator.d((byte) 82);
           } else {
             if (var2 == 2) {
-              voa.d(-95);
+              CrossedSineBandsOperator.d(-95);
             } else {
               if (var2 == 3) {
                 au.a(3);
@@ -260,7 +260,7 @@ abstract class AppletGameShell extends GameApplet {
                     } else {
                       if (var2 != 7) {
                         if (8 == var2) {
-                          kq.a(uca.field_d, dsa.field_c, (byte) 72, vc.field_q);
+                          kq.a(uca.field_d, dsa.field_c, (byte) 72, WeaveOperator.field_q);
                         } else {
                           if (var2 != 16) {
                             if (var2 != 11 &&
@@ -564,7 +564,7 @@ abstract class AppletGameShell extends GameApplet {
         }
         DisplaySettingsDialog.j(3321);
         BoulderComponent.s((byte) -44);
-        if (!wna.c(-112) &&
+        if (!ColourGradientOperator.c(-112) &&
           Transform3D.field_c != 11) {
           sw.h(100);
         }
@@ -670,7 +670,7 @@ abstract class AppletGameShell extends GameApplet {
           }
           tk.field_b = FacePointLocomotor.a(true, fq.field_g, false, 1, (byte) -95);
           OpenGlTexture2D.field_n = FacePointLocomotor.a(true, bi.field_c, false, 1, (byte) -109);
-          vc.field_p = FacePointLocomotor.a(true, fm.field_j, false, 1, (byte) -79);
+          WeaveOperator.field_p = FacePointLocomotor.a(true, fm.field_j, false, 1, (byte) -79);
           cga.field_f = 2;
           PitComponent.field_G = tk.field_b;
           ota.field_b = OpenGlTexture2D.field_n;
@@ -693,13 +693,13 @@ abstract class AppletGameShell extends GameApplet {
           }
         }
         if (cga.field_f == 3 &&
-          esa.areCommonUiArchivesReady(vc.field_p, tk.field_b, -128, OpenGlTexture2D.field_n) &&
-          S2CActionPacket.a(vc.field_p, (byte) -53)) {
+          esa.areCommonUiArchivesReady(WeaveOperator.field_p, tk.field_b, -128, OpenGlTexture2D.field_n) &&
+          S2CActionPacket.a(WeaveOperator.field_p, (byte) -53)) {
           ee.a(-1);
           SimulationObserver.composeAgreementText((byte) -27);
           ura.field_b = nl.field_c;
           GameAssetLoader.field_t = false;
-          cra.a(tk.field_b, OpenGlTexture2D.field_n, 1, ft.field_a, vc.field_p);
+          cra.a(tk.field_b, OpenGlTexture2D.field_n, 1, ft.field_a, WeaveOperator.field_p);
           if (ofa.field_I ||
             null != BrickOperator.field_s) {
             stackIn_101_0 = !(ofa.field_I);
@@ -713,10 +713,10 @@ abstract class AppletGameShell extends GameApplet {
             sma.field_c = epa.d((byte) -91);
             TextureOperator.field_k = fta.c(-93);
           }
-          wk.a(sma.field_c, TextureOperator.field_k, 11861, vc.field_p);
+          wk.a(sma.field_c, TextureOperator.field_k, 11861, WeaveOperator.field_p);
           OpenGlTexture2D.field_n = null;
           tk.field_b = null;
-          vc.field_p = null;
+          WeaveOperator.field_p = null;
           StatefulWidgetPainter.checkAppletUsername((java.applet.Applet) (this), (byte) -128);
           C2SActionPacket.a(-33);
           cga.field_f = 10;
@@ -732,7 +732,7 @@ abstract class AppletGameShell extends GameApplet {
         if (cga.field_f == 11) {
           if (ConstrainToFacingArcLocomotor.field_v != null && (!ConstrainToFacingArcLocomotor.field_v.b(-100) ||
             !ConstrainToFacingArcLocomotor.field_v.a(0))) {
-            ima.a(0.0f, S2CEventPacket.a(voa.field_s, hra.field_c, ConstrainToFacingArcLocomotor.field_v, (byte) 92), -80);
+            ima.a(0.0f, S2CEventPacket.a(CrossedSineBandsOperator.field_s, hra.field_c, ConstrainToFacingArcLocomotor.field_v, (byte) 92), -80);
             decompiledFrameRemainder0 = false;
           }
           else {

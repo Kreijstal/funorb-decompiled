@@ -43,9 +43,9 @@ abstract class GameFont {
     }
 
     final static void a(boolean param0) {
-        uh.field_h.a(rra.field_e.field_G - (!rca.field_p ? 0 : 40 + (2 + io.field_a + 2)), 18, -23776, 0, 0);
-        vw.field_b.a(io.field_a + 42, 18, -23776, 0, -2 + (rra.field_e.field_G - (io.field_a + 40)));
-        bsa.field_j.a(rra.field_e.field_G, 2, (byte) 127, 0, io.field_a, -20 + rra.field_e.field_t, 20);
+        uh.field_h.a(RasterShape.field_e.field_G - (!rca.field_p ? 0 : 40 + (2 + io.field_a + 2)), 18, -23776, 0, 0);
+        vw.field_b.a(io.field_a + 42, 18, -23776, 0, -2 + (RasterShape.field_e.field_G - (io.field_a + 40)));
+        bsa.field_j.a(RasterShape.field_e.field_G, 2, (byte) 127, 0, io.field_a, -20 + RasterShape.field_e.field_t, 20);
         if (param0) {
           GameFont.a(false);
         }

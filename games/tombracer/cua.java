@@ -19,12 +19,12 @@ final class cua {
         if (param1 != 3) {
           return;
         }
-        if (rda.field_o == param0) {
+        if (RasterizerOperator.field_o == param0) {
           return;
         }
-        ht var6 = (ht) (WhiteLightSensorComponent.field_K.get(-115, (long)rda.field_o));
+        ht var6 = (ht) (WhiteLightSensorComponent.field_K.get(-115, (long)RasterizerOperator.field_o));
         ht var7 = var6;
-        rda.field_o = param0;
+        RasterizerOperator.field_o = param0;
         if (var7 != null) {
           var7.field_Cb = null;
         } else {

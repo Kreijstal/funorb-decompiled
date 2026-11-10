@@ -169,9 +169,9 @@ final class WeaponShooterBehaviour extends Behaviour implements mra {
     final static int a(int param0, int param1, int param2) {
         int var3 = 31 / ((59 - param0) / 41);
         if (param1 > param2) {
-          return 2048 - rra.a(false, (param2 << 16) / param1);
+          return 2048 - RasterShape.a(false, (param2 << 16) / param1);
         }
-        return rra.a(false, (param1 << 16) / param2);
+        return RasterShape.a(false, (param1 << 16) / param2);
     }
 
     final boolean g(byte param0) {

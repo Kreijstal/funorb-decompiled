@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class nw extends TextureOperator {
+final class VoronoiNoiseOperator extends TextureOperator {
     static float field_u;
     private int field_n;
     private byte[] field_q;
@@ -67,19 +67,19 @@ final class nw extends TextureOperator {
           paa.a((iv) null, -1, (String) null, 0L, -11635, (int[]) null, param2, param1, (String) null);
           if (param1 == 0) {
             var10 = hka.field_b;
-            var11 = vda.field_m[0];
+            var11 = ColouriseOperator.field_m[0];
             var29 = var11;
             var29Lifetime3 = var11;
             var12 = uq.field_f;
             var10.field_f.addIconItem(var11, 11, var12, false);
             var13 = hka.field_b;
-            var14 = vda.field_m[1];
+            var14 = ColouriseOperator.field_m[1];
             var29Lifetime4 = var14;
             var29Lifetime5 = var14;
             var15 = iga.field_k;
             var13.field_f.addIconItem(var14, 12, var15, false);
             var16 = hka.field_b;
-            var17 = vda.field_m[2];
+            var17 = ColouriseOperator.field_m[2];
             var29Lifetime6 = var17;
             var29Lifetime7 = var17;
             var18 = pea.field_f;
@@ -87,19 +87,19 @@ final class nw extends TextureOperator {
           }
           if (param1 == 1) {
             var19 = hka.field_b;
-            var20 = vda.field_m[0];
+            var20 = ColouriseOperator.field_m[0];
             var29Lifetime1 = var20;
             var29Lifetime1Lifetime1 = var20;
             var21 = pda.field_a;
             var19.field_f.addIconItem(var20, 11, var21, false);
             var22 = hka.field_b;
-            var23 = vda.field_m[1];
+            var23 = ColouriseOperator.field_m[1];
             var29Lifetime1Lifetime2 = var23;
             var29Lifetime1Lifetime3 = var23;
             var24 = tv.field_xb;
             var22.field_f.addIconItem(var23, 12, var24, param0);
             var25 = hka.field_b;
-            var26 = vda.field_m[2];
+            var26 = ColouriseOperator.field_m[2];
             var29Lifetime1Lifetime4 = var26;
             var29Lifetime1Lifetime5 = var26;
             var27 = ot.field_w;
@@ -107,15 +107,15 @@ final class nw extends TextureOperator {
           }
           if (param1 == 2) {
             var28 = hka.field_b;
-            var29Lifetime2 = vda.field_m[0];
+            var29Lifetime2 = ColouriseOperator.field_m[0];
             var30 = jsa.field_z;
             var28.field_f.addIconItem(var29Lifetime2, 11, var30, param0);
             var31 = hka.field_b;
-            var32 = vda.field_m[1];
+            var32 = ColouriseOperator.field_m[1];
             var33 = ConstrainToFacingArcLocomotor.field_t;
             var31.field_f.addIconItem(var32, 12, var33, false);
             var34 = hka.field_b;
-            var35 = vda.field_m[2];
+            var35 = ColouriseOperator.field_m[2];
             var36 = tva.field_c;
             var34.field_f.addIconItem(var35, 13, var36, false);
           }
@@ -141,12 +141,12 @@ final class nw extends TextureOperator {
 
     public static void releaseStatics(byte param0) {
         if (param0 != 118) {
-          nw.releaseStatics((byte) 93);
+          VoronoiNoiseOperator.releaseStatics((byte) 93);
         }
         field_s = null;
     }
 
-    public nw() {
+    public VoronoiNoiseOperator() {
         super(0, true);
         this.field_o = 2;
         this.field_v = new short[512];
@@ -453,7 +453,7 @@ final class nw extends TextureOperator {
           }
           if (param1 != -29355) {
             var9 = (jea) null;
-            nw.a(false, -120, (jea) null);
+            VoronoiNoiseOperator.a(false, -120, (jea) null);
           }
           stackIn_5_0 = GraphicsToolkit.a(param2, var7, param4, param3, var6_int, param0, param5, -17441);
           return stackIn_5_0;

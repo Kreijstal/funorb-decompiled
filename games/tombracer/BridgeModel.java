@@ -367,7 +367,7 @@ final class BridgeModel extends TrapModel {
     }
 
     final void d(int param0) {
-        ac var4 = null;
+        PlayerAnimator var4 = null;
         super.d(param0);
         if (this.field_o != null &&
           this.field_o.d(false)) {
@@ -383,11 +383,11 @@ final class BridgeModel extends TrapModel {
           return;
         }
         if (var2.intersectsRect((byte) 110, var3.getY(param0 ^ -9649), var3.getX(3), var3.getHeight((byte) 55), var3.getWidth(-40))) {
-          var4 = var3.n((byte) -56);
+          var4 = var3.getAnimator((byte) -56);
           if (var4 == null) {
             return;
           }
-          ((hf) (var4)).field_k = 2;
+          ((PlayerModel) (var4)).field_k = 2;
         }
     }
 

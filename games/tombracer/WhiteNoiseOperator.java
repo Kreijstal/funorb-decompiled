@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bda extends TextureOperator {
+final class WhiteNoiseOperator extends TextureOperator {
     static int field_m;
 
     final int[] getMonochromeRow(int param0, int param1) {
@@ -18,7 +18,7 @@ final class bda extends TextureOperator {
         }
         if (param0 != 1) {
           BitPacketBuffer var7 = (BitPacketBuffer) null;
-          bda.readBehaviour(true, (byte) 12, (Room) null, (BitPacketBuffer) null);
+          WhiteNoiseOperator.readBehaviour(true, (byte) 12, (Room) null, (BitPacketBuffer) null);
         }
         return var3;
     }
@@ -233,7 +233,7 @@ final class bda extends TextureOperator {
         }
     }
 
-    public bda() {
+    public WhiteNoiseOperator() {
         super(0, true);
     }
 

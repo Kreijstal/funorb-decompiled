@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vda extends TextureOperator {
+final class ColouriseOperator extends TextureOperator {
     private int field_r;
     static boolean field_q;
     private int field_p;
@@ -101,7 +101,7 @@ final class vda extends TextureOperator {
         }
     }
 
-    public vda() {
+    public ColouriseOperator() {
         super(1, false);
         this.field_p = 4096;
         this.field_r = 4096;

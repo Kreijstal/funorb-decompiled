@@ -51,7 +51,7 @@ final class rf {
             return stackIn_7_0;
           }
           if (MiscItemBehaviour.a(param1, 0)) {
-            stackIn_10_0 = iia.field_q;
+            stackIn_10_0 = RandomBrickOperator.field_q;
             return stackIn_10_0;
           }
           stackIn_14_0 = !param0;

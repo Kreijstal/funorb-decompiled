@@ -145,7 +145,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
             SecondaryNodeDequeIterator.field_a == null) {
             return;
           }
-          if (param1 == hb.field_t.field_c) {
+          if (param1 == SpriteTileOperator.field_t.field_c) {
             return;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -175,7 +175,7 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
             cs.field_c = null;
             wka.field_d = false;
           }
-          wm.field_a = hb.field_t;
+          wm.field_a = SpriteTileOperator.field_t;
           if (null != wm.field_a) {
             wm.field_a.a(-123);
             if (wm.field_a.field_c == 1) {
@@ -186,11 +186,11 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
               SpawnerBehaviour.a(tk.a(-22636), 12, mq.field_e.field_g, jg.a((byte) -80));
             }
           }
-          hb.field_t = eka.d(param1, 121);
-          if (hb.field_t instanceof wv) {
-            ((wv) (hb.field_t)).a(0, 0, param0);
+          SpriteTileOperator.field_t = BlendModeOperator.d(param1, 121);
+          if (SpriteTileOperator.field_t instanceof wv) {
+            ((wv) (SpriteTileOperator.field_t)).a(0, 0, param0);
           }
-          hb.field_t.a((byte) 114);
+          SpriteTileOperator.field_t.a((byte) 114);
           if (mpa.field_X) {
             MandelbrotOperator.field_o = null;
             RotaterMountComponent.field_H = new IntrusiveDeque();
@@ -222,10 +222,10 @@ final class ConstrainToRectangleLocomotor extends ConstraintLocomotor {
             ub.b(0);
             era.field_c = false;
           }
-          if (hb.field_t instanceof wv &&
+          if (SpriteTileOperator.field_t instanceof wv &&
             wm.field_a instanceof wv &&
-            ((wv) (wm.field_a)).a(true, (wv) (hb.field_t))) {
-            hb.field_t.field_d = wm.field_a.field_c;
+            ((wv) (wm.field_a)).a(true, (wv) (SpriteTileOperator.field_t))) {
+            SpriteTileOperator.field_t.field_d = wm.field_a.field_c;
           }
           var3_int = 69 % ((40 - param2) / 38);
           return;

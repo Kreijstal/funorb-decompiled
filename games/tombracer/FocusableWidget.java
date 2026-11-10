@@ -205,7 +205,7 @@ class FocusableWidget extends UiWidget {
             var7 = (ResourceArchive) null;
             FocusableWidget.a((ResourceArchive) null, 5, -25, (byte) 14);
           }
-          var11 = vc.field_q;
+          var11 = WeaveOperator.field_q;
           var2 = var11.readUnsignedByte(255);
           if (var2 == 0) {
             var10 = (mm) (SpawnerBehaviour.field_n.first(-80));

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class iia extends TextureOperator {
+final class RandomBrickOperator extends TextureOperator {
     static String field_q;
     private int field_u;
     private int field_p;
@@ -317,7 +317,7 @@ final class iia extends TextureOperator {
         }
     }
 
-    public iia() {
+    public RandomBrickOperator() {
         super(0, true);
         this.field_s = 2048;
         this.field_p = 1024;

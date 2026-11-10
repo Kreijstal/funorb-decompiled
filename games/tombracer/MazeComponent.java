@@ -403,11 +403,11 @@ abstract class MazeComponent extends PrefabComponent {
               }
             }
           }
-          hf.field_a.a(360, -134 + (SoftwareRasterizer.field_a - 10), -23776, 10, SoftwareRasterizer.field_g - 360 >> 1);
-          S2CEventPacket.field_e.a(hf.field_a.field_G, 24, -23776, 0, 0);
-          vs.field_R.a(hf.field_a.field_G, -24 + hf.field_a.field_t, -23776, 24, 0);
+          PlayerModel.field_a.a(360, -134 + (SoftwareRasterizer.field_a - 10), -23776, 10, SoftwareRasterizer.field_g - 360 >> 1);
+          S2CEventPacket.field_e.a(PlayerModel.field_a.field_G, 24, -23776, 0, 0);
+          vs.field_R.a(PlayerModel.field_a.field_G, -24 + PlayerModel.field_a.field_t, -23776, 24, 0);
           vs.field_R.field_w = Player.c(vs.field_R.field_t, 1, 3, 11579568, param1 ^ -116, 8421504);
-          rra.field_e.a(-10 + vs.field_R.field_G, -24 + vs.field_R.field_t - 12, -23776, 5, 5);
+          RasterShape.field_e.a(-10 + vs.field_R.field_G, -24 + vs.field_R.field_t - 12, -23776, 5, 5);
           Trap.field_q.a(80, 24, -23776, -5 + (vs.field_R.field_t - 24), (-80 + vs.field_R.field_G) / 2);
           GameFont.a(false);
           return;

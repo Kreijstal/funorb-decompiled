@@ -416,18 +416,18 @@ class jea extends um {
         var12 = 0;
         if (!ow.field_s &&
           param1 &&
-          0 != hf.field_b &&
+          0 != PlayerModel.field_b &&
           PasswordValidator.field_m >= SoftwareRasterizer.field_b &&
           PasswordValidator.field_m < SoftwareRasterizer.field_d &&
           SoftwareRasterizer.field_h <= lba.field_p &&
           SoftwareRasterizer.field_k > lba.field_p) {
-          this.field_E = hf.field_b;
+          this.field_E = PlayerModel.field_b;
           this.field_kb = -this.field_A + lba.field_p;
           var12 = 1;
           this.field_p = PasswordValidator.field_m - this.field_q;
-          this.field_y = hf.field_b;
+          this.field_y = PlayerModel.field_b;
         } else {
-          if (0 != hf.field_b) {
+          if (0 != PlayerModel.field_b) {
             this.field_E = 0;
           }
           this.field_y = 0;

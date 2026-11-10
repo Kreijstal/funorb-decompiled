@@ -28,21 +28,21 @@ final class iw {
         nra.field_c = new jea(0L, (jea) null);
         nra.field_c.b(param0 ^ 65, rm.field_e.field_a);
         nra.field_c.b(param0 ^ 68, bc.field_b);
-        hf.field_a = new jea(0L, WallModel.field_r);
+        PlayerModel.field_a = new jea(0L, WallModel.field_r);
         if (param0 == -64) {
           vs.field_R = new jea(0L, (jea) null);
-          hf.field_a.b(param0 - 64, S2CEventPacket.field_e);
-          hf.field_a.b(-122, vs.field_R);
-          vs.field_R.b(-125, rra.field_e);
+          PlayerModel.field_a.b(param0 - 64, S2CEventPacket.field_e);
+          PlayerModel.field_a.b(-122, vs.field_R);
+          vs.field_R.b(-125, RasterShape.field_e);
           vs.field_R.b(-124, Trap.field_q);
           MazeComponent.c(param1, param0 ^ -62);
           return;
         }
         iw.a((byte) 33, false);
         vs.field_R = new jea(0L, (jea) null);
-        hf.field_a.b(param0 - 64, S2CEventPacket.field_e);
-        hf.field_a.b(-122, vs.field_R);
-        vs.field_R.b(-125, rra.field_e);
+        PlayerModel.field_a.b(param0 - 64, S2CEventPacket.field_e);
+        PlayerModel.field_a.b(-122, vs.field_R);
+        vs.field_R.b(-125, RasterShape.field_e);
         vs.field_R.b(-124, Trap.field_q);
         MazeComponent.c(param1, param0 ^ -62);
     }

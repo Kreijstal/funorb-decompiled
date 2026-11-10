@@ -177,13 +177,13 @@ final class em extends vw {
             this.field_c.setTextureCombineOperations(iw.field_c, (byte) -110, PlatformComponent.field_F);
             this.field_c.a(PlayerContextMenu.field_j, 0, -34);
             this.field_c.e(2, false);
-            this.field_c.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, jv.field_m);
+            this.field_c.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, NormalMapOperator.field_m);
             this.field_c.a(PlayerContextMenu.field_j, 0, -47);
             this.field_c.a(PlayerContextMenu.field_j, 1, -6219, true, false);
             this.field_c.a(0, false, tla.field_c);
             this.field_c.bindTexture(true, this.field_c.field_Jb);
           } else {
-            this.field_c.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, jv.field_m);
+            this.field_c.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, NormalMapOperator.field_m);
             this.field_c.a(ej.field_c, 0, -6219, true, false);
             this.field_c.a(0, false, tla.field_c);
           }

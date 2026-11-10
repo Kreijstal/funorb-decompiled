@@ -278,7 +278,7 @@ final class VerticalScrollbar extends jea {
             stackIn_11_0 = 34165;
             return stackIn_11_0;
           }
-          if (jv.field_m == param1) {
+          if (NormalMapOperator.field_m == param1) {
             stackIn_18_0 = 260;
             return stackIn_18_0;
           }

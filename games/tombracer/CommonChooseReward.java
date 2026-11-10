@@ -19,7 +19,7 @@ final class CommonChooseReward implements dv {
           return;
         }
         if (-1 == param0) {
-          this.field_j.players[this.currentPlayerId].b(18202625, -1);
+          this.field_j.players[this.currentPlayerId].setChosenReward(18202625, -1);
         } else {
           var3 = 63;
           if (3 == this.reward[param0]) {
@@ -39,7 +39,7 @@ final class CommonChooseReward implements dv {
           if (this.field_g != null) {
             this.field_g.a(new fm(var3, 0, 0, 0), -58);
           }
-          this.field_j.players[this.currentPlayerId].b(18202625, this.reward[param0]);
+          this.field_j.players[this.currentPlayerId].setChosenReward(18202625, this.reward[param0]);
           this.reward[param0] = -1;
           this.takenCount = this.takenCount + 1;
         }

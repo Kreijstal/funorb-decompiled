@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vla extends TextureOperator {
+final class DisplacementOperator extends TextureOperator {
     static String field_m;
     private int field_n;
 
@@ -56,7 +56,7 @@ final class vla extends TextureOperator {
         return var18;
     }
 
-    public vla() {
+    public DisplacementOperator() {
         super(3, false);
         this.field_n = 32768;
     }

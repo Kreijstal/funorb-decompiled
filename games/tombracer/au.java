@@ -70,7 +70,7 @@ final class au extends aa {
         bna var15 = null;
         var8 = TombRacer.field_G ? 1 : 0;
         try {
-          var14 = vc.field_q;
+          var14 = WeaveOperator.field_q;
           var2 = var14.readUnsignedByte(param0 + 252);
           if (var2 == 0) {
             var11 = SwitchComponent.e(true);

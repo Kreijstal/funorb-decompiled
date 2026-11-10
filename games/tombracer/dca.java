@@ -39,9 +39,9 @@ final class dca extends or {
     final static String f(int param0) {
         if (param0 != 12) {
           dca.f(68);
-          return vc.field_q.readString((byte) -76);
+          return WeaveOperator.field_q.readString((byte) -76);
         }
-        return vc.field_q.readString((byte) -76);
+        return WeaveOperator.field_q.readString((byte) -76);
     }
 
     public static void releaseStatics(int param0) {

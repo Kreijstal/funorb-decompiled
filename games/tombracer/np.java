@@ -1366,10 +1366,10 @@ final class np extends ka {
           if (this.field_R.field_s >= var14 / (float)param2) {
             return;
           }
-          nw.field_u = var5.field_g * var6.field_h + (var5.field_i * var6.field_k + var6.field_r * var5.field_r);
+          VoronoiNoiseOperator.field_u = var5.field_g * var6.field_h + (var5.field_i * var6.field_k + var6.field_r * var5.field_r);
           WeaponItemBehaviour.field_s = var5.field_p + (var6.field_o * var5.field_g + (var6.field_p * var5.field_r + var5.field_i * var6.field_m));
-          var15 = WeaponItemBehaviour.field_s + nw.field_u * (float)this.field_eb;
-          var16 = (float)this.field_v * nw.field_u + WeaponItemBehaviour.field_s;
+          var15 = WeaponItemBehaviour.field_s + VoronoiNoiseOperator.field_u * (float)this.field_eb;
+          var16 = (float)this.field_v * VoronoiNoiseOperator.field_u + WeaponItemBehaviour.field_s;
           if (var15 > var16) {
             var18 = (float)this.field_R.field_kb * (var15 + (float)this.field_M);
             var17 = (float)this.field_R.field_kb * (var16 - (float)this.field_M);
@@ -2314,7 +2314,7 @@ final class np extends ka {
           if (param0 > -19) {
             field_m = (ResourceArchive) null;
           }
-          var1_int = jv.d(-77);
+          var1_int = NormalMapOperator.d(-77);
           var2 = za.a(18998);
           aoa.field_b.a((byte) 57, var1_int + (jf.field_q << 1), -VerticalGradientOperator.field_m + wp.field_b, wt.field_a - jf.field_q, (VerticalGradientOperator.field_m << 1) + var2);
           ConsoleToken.a(125);
@@ -2375,7 +2375,7 @@ final class np extends ka {
                 var7 = 0.3333333134651184f * (float)(this.field_K[var4.field_b] + this.field_K[var4.field_k] + this.field_K[var4.field_m]);
                 var8 = (float)(this.field_A[var4.field_k] + this.field_A[var4.field_m] + this.field_A[var4.field_b]) * 0.3333333134651184f;
                 var9 = MonsterModel.field_B + (var8 * mu.field_ub + (eqa.field_a * var7 + var6 * is.field_Ab));
-                var10 = WeaponItemBehaviour.field_s + (var6 * AllPlatformsMazeComponent.field_L + nw.field_u * var7 + bva.field_c * var8);
+                var10 = WeaponItemBehaviour.field_s + (var6 * AllPlatformsMazeComponent.field_L + VoronoiNoiseOperator.field_u * var7 + bva.field_c * var8);
                 var11 = TextLayout.field_b + (kka.field_q * var8 + (var7 * it.field_a + var6 * Weapon.field_u));
                 var12 = (float)(1.0 / Math.sqrt((double)(var11 * var11 + (var10 * var10 + var9 * var9)))) * (float)var4.field_j;
                 var2.a(var5.field_g, var12 * var11 + -var11, var9 + (float)var5.field_h - var9 * var12, var4.field_e * var5.field_f >> 7, (byte) -60, var4.field_i * var5.field_b >> 7, var12 * var10 + (-var10 + (float)var5.field_a));
@@ -2484,10 +2484,10 @@ final class np extends ka {
           if (var13 / var9 <= this.field_R.field_s) {
             return;
           }
-          nw.field_u = var4.field_r * var5.field_r + var4.field_i * var5.field_k + var5.field_h * var4.field_g;
+          VoronoiNoiseOperator.field_u = var4.field_r * var5.field_r + var4.field_i * var5.field_k + var5.field_h * var4.field_g;
           WeaponItemBehaviour.field_s = var5.field_o * var4.field_g + (var5.field_m * var4.field_i + var5.field_p * var4.field_r) + var4.field_p;
-          var14 = WeaponItemBehaviour.field_s + (float)this.field_eb * nw.field_u;
-          var15 = WeaponItemBehaviour.field_s + nw.field_u * (float)this.field_v;
+          var14 = WeaponItemBehaviour.field_s + (float)this.field_eb * VoronoiNoiseOperator.field_u;
+          var15 = WeaponItemBehaviour.field_s + VoronoiNoiseOperator.field_u * (float)this.field_v;
           if (var15 < var14) {
             var17 = (float)this.field_R.field_kb * (var14 + (float)this.field_M);
             var16 = (float)this.field_R.field_kb * (var15 - (float)this.field_M);
@@ -4789,13 +4789,13 @@ final class np extends ka {
                         var40 = (float)param1.field_d[var19_int] / 256.0f;
                         switch (var31) {
                           case 3:
-                            ifa.a(param1.field_p[var32_int], param1.field_b[var32_int], var36, var37_int, dia.field_p, var40, var39_int, var35, var38_ref_float__, (byte) -44, param1.field_I[var32_int]);
+                            WaveformOperator.a(param1.field_p[var32_int], param1.field_b[var32_int], var36, var37_int, dia.field_p, var40, var39_int, var35, var38_ref_float__, (byte) -44, param1.field_I[var32_int]);
                             var22 = dia.field_p[0];
                             var23 = dia.field_p[1];
-                            ifa.a(param1.field_p[var33_int], param1.field_b[var33_int], var36, var37_int, dia.field_p, var40, var39_int, var35, var38_ref_float__, (byte) -44, param1.field_I[var33_int]);
+                            WaveformOperator.a(param1.field_p[var33_int], param1.field_b[var33_int], var36, var37_int, dia.field_p, var40, var39_int, var35, var38_ref_float__, (byte) -44, param1.field_I[var33_int]);
                             var25 = dia.field_p[1];
                             var24 = dia.field_p[0];
-                            ifa.a(param1.field_p[var34], param1.field_b[var34], var36, var37_int, dia.field_p, var40, var39_int, var35, var38_ref_float__, (byte) -44, param1.field_I[var34]);
+                            WaveformOperator.a(param1.field_p[var34], param1.field_b[var34], var36, var37_int, dia.field_p, var40, var39_int, var35, var38_ref_float__, (byte) -44, param1.field_I[var34]);
                             var27 = dia.field_p[1];
                             var26 = dia.field_p[0];
                             if ((var39_int & 1) == 0) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hb extends coa {
+final class SpriteTileOperator extends SpriteSampleOperator {
     static GameScreen field_t;
     static int[] field_w;
     static char[] field_x;
@@ -75,7 +75,7 @@ final class hb extends coa {
         }
     }
 
-    public hb() {
+    public SpriteTileOperator() {
     }
 
     public static void releaseStatics(boolean param0) {
@@ -101,14 +101,14 @@ final class hb extends coa {
         int[][] var3 = var11;
         if (!this.field_h.field_f) {
           if (param1 != -1) {
-            hb.d(113);
+            SpriteTileOperator.d(113);
             return var3;
           }
           return var3;
         }
         if (!this.a(false)) {
           if (param1 != -1) {
-            hb.d(113);
+            SpriteTileOperator.d(113);
             return var3;
           }
           return var3;
@@ -127,7 +127,7 @@ final class hb extends coa {
         if (param1 == -1) {
           return var3;
         }
-        hb.d(113);
+        SpriteTileOperator.d(113);
         return var3;
     }
 

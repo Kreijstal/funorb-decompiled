@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wg extends tu {
+final class wg extends MatchScoringObserver {
     static String[] field_j;
     static ArchiveNetworkClient field_l;
     static String[] field_m;
     static String field_k;
     static int field_i;
 
-    final void a(int param0, Player param1, int param2, Room param3, int param4, int param5) {
+    final void onPenalty(int param0, Player param1, int param2, Room param3, int param4, int param5) {
         try {
           nba.a(this.field_f, param3, (byte) 108);
           if (param0 != 15) {
             Room var8 = (Room) null;
-            this.a((Player) null, (Room) null, true);
+            this.onRoomCompleted((Player) null, (Room) null, true);
           }
-          super.a(param0 + 0, param1, param2, param3, param4, param5);
+          super.onPenalty(param0 + 0, param1, param2, param3, param4, param5);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wg.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
@@ -83,14 +83,14 @@ final class wg extends tu {
         super(param0);
     }
 
-    final void a(Player param0, Room param1, boolean param2) {
+    final void onRoomCompleted(Player param0, Room param1, boolean param2) {
         try {
           if (param2) {
             Room var5 = (Room) null;
-            this.a((Player) null, (Room) null, false);
+            this.onRoomCompleted((Player) null, (Room) null, false);
           }
           UrlDownloadRequest.a(this.field_f, param1, 108);
-          super.a(param0, param1, param2);
+          super.onRoomCompleted(param0, param1, param2);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "wg.H(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

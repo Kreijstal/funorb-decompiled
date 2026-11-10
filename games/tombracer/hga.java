@@ -138,7 +138,7 @@ class hga extends TextWidgetPainter {
             }
           }
           cm.field_a = new qg[var12];
-          rda.field_n = new int[var12];
+          RasterizerOperator.field_n = new int[var12];
           if (!param0) {
             return;
           }
@@ -151,7 +151,7 @@ class hga extends TextWidgetPainter {
               }
             }
             var15 = new g[var14Lifetime1];
-            rda.field_n[var13Lifetime1] = var14Lifetime1;
+            RasterizerOperator.field_n[var13Lifetime1] = var14Lifetime1;
             var16Lifetime1 = 0;
             var17 = 0;
             for (var18 = 1; var31.length > var18; var18++) {

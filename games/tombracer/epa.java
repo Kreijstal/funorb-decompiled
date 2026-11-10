@@ -54,7 +54,7 @@ final class epa extends wv {
             field_q = (String) null;
           }
           gj.field_r = false;
-          nfa.field_p = false;
+          TileOperator.field_p = false;
           if (TextureOperator.field_l != null &&
             TextureOperator.field_l.field_B) {
             var3_int = 1;

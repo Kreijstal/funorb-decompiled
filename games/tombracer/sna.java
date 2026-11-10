@@ -76,7 +76,7 @@ final class sna {
             this.a(tha.field_A, (ms) null, var6, param0 ^ -9888);
           }
         }
-        this.field_k = var10.M(-107);
+        this.field_k = var10.hasCollectedTreasure(-107);
         if (!this.field_d &&
           this.field_k) {
           this.field_d = true;
@@ -124,7 +124,7 @@ final class sna {
             this.b((byte) 111);
           }
           var5 = new dl(this.field_l, param1);
-          var5.a(tea.field_a, param0, vda.field_n, (byte) 21);
+          var5.a(tea.field_a, param0, ColouriseOperator.field_n, (byte) 21);
           this.field_c.addLast((byte) -125, new mga(var5, param2));
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "sna.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

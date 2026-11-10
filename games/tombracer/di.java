@@ -86,7 +86,7 @@ final class di {
           }
         } else {
           if (null == uu.field_a) {
-            if (ifa.field_n == null) {
+            if (WaveformOperator.field_n == null) {
               tla.field_e = false;
               if (0 < GameKeyHandler.field_a) {
                 GameKeyHandler.field_a = GameKeyHandler.field_a - 1;
@@ -310,7 +310,7 @@ final class di {
                   }
                 }
                 try {
-                  var12 = nw.a(var7.field_a, -29355, this.field_c, var7.field_b, ck.field_a, param0);
+                  var12 = VoronoiNoiseOperator.a(var7.field_a, -29355, this.field_c, var7.field_b, ck.field_a, param0);
                   if (var12 != null) {
                     var9 = new iqa(var12, var7, param0);
                     if (var7.a(var9, (byte) -126)) {

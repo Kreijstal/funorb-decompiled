@@ -13,7 +13,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
         int var3 = 0;
         int var4 = TombRacer.field_G ? 1 : 0;
         java.awt.Canvas var2 = kw.b((byte) -97);
-        if (wna.c(-127)) {
+        if (ColourGradientOperator.c(-127)) {
           WallTile.a(PortalComponent.A(90), var2, param0 ^ 0);
           return;
         }
@@ -280,9 +280,9 @@ abstract class rfa extends AppletGameShell implements ShellListener {
           dma.field_l.openArchives((byte) -38);
           PlatformBehaviour.field_w = false;
         }
-        if (wna.c(-128)) {
+        if (ColourGradientOperator.c(-128)) {
           this.r(114);
-          if (wna.c(-112)) {
+          if (ColourGradientOperator.c(-112)) {
             return;
           }
         }
@@ -349,7 +349,7 @@ abstract class rfa extends AppletGameShell implements ShellListener {
         var3 = TombRacer.field_G ? 1 : 0;
         var2 = 68 % ((param0 - 52) / 40);
         while (cj.a(S2CEventPacket.field_c, 0)) {
-          if (this.handleGamePacket(oka.field_z, vc.field_q, (byte) 105)) {
+          if (this.handleGamePacket(oka.field_z, WeaveOperator.field_q, (byte) 105)) {
             continue;
           }
           this.dispatchServerPacket(-5);

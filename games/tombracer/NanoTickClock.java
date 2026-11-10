@@ -64,7 +64,7 @@ final class NanoTickClock extends GameClock {
         if (!param0) {
           field_h = (int[]) null;
         }
-        var1 = nfa.field_n;
+        var1 = TileOperator.field_n;
         synchronized (var1) {
           if (vha.field_b == nt.field_a) {
             return false;

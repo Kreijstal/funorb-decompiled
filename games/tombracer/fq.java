@@ -60,7 +60,7 @@ final class fq {
 
     final static void a(byte param0) {
         CharSequence var4 = null;
-        fna.field_k = vc.field_q.readString((byte) -76);
+        fna.field_k = WeaveOperator.field_q.readString((byte) -76);
         if (param0 == -68) {
           var4 = (CharSequence) ((Object) fna.field_k);
           tia.field_b = jd.normalizeDisplayName(1, var4);

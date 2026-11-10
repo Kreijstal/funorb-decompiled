@@ -72,7 +72,7 @@ abstract class kma implements nua {
             return fk.field_d;
           }
           if (!(bva.currentTimeMillis((byte) -107) >= this.field_b + 350L)) {
-            return gla.field_p;
+            return BevelOperator.field_p;
           }
           return this.d(-1891);
         }
@@ -80,7 +80,7 @@ abstract class kma implements nua {
           return fk.field_d;
         }
         if (!(bva.currentTimeMillis((byte) -107) >= this.field_b + 350L)) {
-          return gla.field_p;
+          return BevelOperator.field_p;
         }
         return this.d(-1891);
     }

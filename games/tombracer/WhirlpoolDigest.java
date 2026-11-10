@@ -203,7 +203,7 @@ final class WhirlpoolDigest {
         int var11Lifetime1;
         var12 = TombRacer.field_G ? 1 : 0;
         try {
-          var14 = vc.field_q;
+          var14 = WeaveOperator.field_q;
           var2 = var14.readUnsignedByte(255);
           var3 = (upa) (ina.field_d.first(param0 ^ 100));
           while (var3 != null) {

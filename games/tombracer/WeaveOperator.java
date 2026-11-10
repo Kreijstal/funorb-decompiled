@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vc extends TextureOperator {
+final class WeaveOperator extends TextureOperator {
     static StringBuilder field_n;
     private int field_r;
     static String field_o;
@@ -178,7 +178,7 @@ final class vc extends TextureOperator {
         return var3;
     }
 
-    public vc() {
+    public WeaveOperator() {
         super(0, true);
         this.field_r = 1;
         this.field_m = 204;

@@ -86,7 +86,7 @@ final class rg extends SingleChildWidget {
         wg.field_j[1] = CircleMovementLocomotor.field_s;
         wg.field_j[0] = DoorwayModel.field_m;
         bq.field_k = new String[13];
-        wg.field_j[2] = gla.field_o;
+        wg.field_j[2] = BevelOperator.field_o;
         bq.field_k[5] = gqa.field_a;
         bq.field_k[2] = sl.field_d;
         bq.field_k[7] = TrackingCrusherComponent.field_H;
@@ -175,7 +175,7 @@ final class rg extends SingleChildWidget {
           Effect.field_h[5] = new String[]{gu.field_k, MazeComponent.field_G, du.field_b};
           IntrusiveDeque.field_d[6] = new String[]{ConstrainToCircleLocomotor.field_v, VortexBehaviour.field_o, PowerUpItemBehaviour.field_s};
           Effect.field_h[6] = new String[]{apa.field_b, pna.field_k, bq.field_e};
-          IntrusiveDeque.field_d[7] = new String[]{TouchSwitchBehaviour.field_q, tu.field_d};
+          IntrusiveDeque.field_d[7] = new String[]{TouchSwitchBehaviour.field_q, MatchScoringObserver.field_d};
           IntrusiveDeque.field_d[8] = new String[]{uv.field_u, jd.field_m, hoa.field_n};
           Effect.field_h[7] = new String[]{km.field_n, ld.field_d};
           IntrusiveDeque.field_d[9] = new String[]{td.field_n, nea.field_b, gga.field_L};
@@ -227,7 +227,7 @@ final class rg extends SingleChildWidget {
         Effect.field_h[5] = new String[]{gu.field_k, MazeComponent.field_G, du.field_b};
         IntrusiveDeque.field_d[6] = new String[]{ConstrainToCircleLocomotor.field_v, VortexBehaviour.field_o, PowerUpItemBehaviour.field_s};
         Effect.field_h[6] = new String[]{apa.field_b, pna.field_k, bq.field_e};
-        IntrusiveDeque.field_d[7] = new String[]{TouchSwitchBehaviour.field_q, tu.field_d};
+        IntrusiveDeque.field_d[7] = new String[]{TouchSwitchBehaviour.field_q, MatchScoringObserver.field_d};
         IntrusiveDeque.field_d[8] = new String[]{uv.field_u, jd.field_m, hoa.field_n};
         Effect.field_h[7] = new String[]{km.field_n, ld.field_d};
         IntrusiveDeque.field_d[9] = new String[]{td.field_n, nea.field_b, gga.field_L};

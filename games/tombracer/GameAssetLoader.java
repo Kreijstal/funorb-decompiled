@@ -176,7 +176,7 @@ final class GameAssetLoader implements LoadingStage {
           return;
         }
         if (null != this.field_f) {
-          nfa.a(this.field_f, uba.loadingQuipsShort[8], false, 90, this.field_g, this.field_a);
+          TileOperator.a(this.field_f, uba.loadingQuipsShort[8], false, 90, this.field_g, this.field_a);
           this.field_g = null;
           this.field_a = null;
           this.field_f = null;
@@ -338,7 +338,7 @@ final class GameAssetLoader implements LoadingStage {
         CoinItemComponent.a(cq.field_d, (byte) 52);
         hd.a(50, param0 ^ -78);
         wm.field_a = null;
-        hb.field_t = (GameScreen) ((Object) nl.a(0, (byte) 50));
+        SpriteTileOperator.field_t = (GameScreen) ((Object) nl.a(0, (byte) 50));
         ima.a(100.0f, uba.loadingQuipsShort[10], param0 ^ 115);
         ad.field_j.draw(param0 ^ -49);
         gn.field_C.a(-19216);
@@ -375,7 +375,7 @@ final class GameAssetLoader implements LoadingStage {
         if (!dna.field_G) {
           dea.field_c = false;
           FullscreenConfirmationDialog.initializeLobbyAssets(this.field_s, 10, MirrorMoverLocomotor.field_o, fr.field_b, PitComponent.field_G, MouseWheelInput.field_a, 4, var2, true, 2, via.field_c, ota.field_b, jf.field_t, mga.field_f, var2);
-          cq.field_d = qw.field_f;
+          cq.field_d = PenaltyNotice.field_f;
           tda.initializeChatHistory(200, (byte) -71);
           fta.field_b = MatchState.field_p;
         }

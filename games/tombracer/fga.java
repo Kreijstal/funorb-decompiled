@@ -65,7 +65,7 @@ final class fga implements ShellListener {
           if (ld.field_e < 2) {
             return;
           }
-          if (hf.field_b == 1) {
+          if (PlayerModel.field_b == 1) {
             try {
               var3_int = 0;
               while (this.field_d.length > var3_int) {

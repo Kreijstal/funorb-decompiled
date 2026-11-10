@@ -9,9 +9,9 @@ final class tia {
 
     final static void a(int param0, java.awt.Component param1) {
         try {
-          param1.removeMouseListener(wna.field_n);
-          param1.removeMouseMotionListener(wna.field_n);
-          param1.removeFocusListener(wna.field_n);
+          param1.removeMouseListener(ColourGradientOperator.field_n);
+          param1.removeMouseMotionListener(ColourGradientOperator.field_n);
+          param1.removeFocusListener(ColourGradientOperator.field_n);
           tka.field_n = param0;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "tia.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

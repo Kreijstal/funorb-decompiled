@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class go extends TextureOperator {
+final class EdgeDetectOperator extends TextureOperator {
     static int[] field_m;
     private int field_n;
 
@@ -13,14 +13,14 @@ final class go extends TextureOperator {
         return (var3 + param1) / param2 - var3;
     }
 
-    public go() {
+    public EdgeDetectOperator() {
         super(1, true);
         this.field_n = 4096;
     }
 
     final static boolean d(int param0, int param1, int param2) {
         if (param2 != 26205) {
-          go.e(-33, 75, 49);
+          EdgeDetectOperator.e(-33, 75, 49);
         }
         return (param1 & 256) != 0 ? true : false;
     }

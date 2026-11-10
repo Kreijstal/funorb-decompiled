@@ -28,7 +28,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
         int var5 = 0;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          var1 = nfa.field_n;
+          var1 = TileOperator.field_n;
           synchronized (var1) {
             if (param0 != 3321) {
               return;
@@ -191,7 +191,7 @@ final class DisplaySettingsDialog extends ofa implements ButtonListener {
           this.addChild(this.field_T, -1);
           this.field_W = this.a(-82, ie.field_f, ke.field_a, (WidgetListener) (this));
           if (var2_intLifetime1 != 0) {
-            this.field_N = this.a(-87, rra.field_a, kka.field_o, (WidgetListener) (this));
+            this.field_N = this.a(-87, RasterShape.field_a, kka.field_o, (WidgetListener) (this));
           }
           this.field_V = this.a(-94, ita.field_e, pa.field_c, (WidgetListener) (this));
           if (var2_intLifetime1 != 0) {

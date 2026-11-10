@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wsa extends TextureOperator {
+final class HslAdjustOperator extends TextureOperator {
     private int field_n;
     private int field_u;
     private int field_m;
@@ -75,7 +75,7 @@ final class wsa extends TextureOperator {
         return var3;
     }
 
-    public wsa() {
+    public HslAdjustOperator() {
         super(1, false);
         this.field_u = 0;
         this.field_o = 0;
@@ -96,7 +96,7 @@ final class wsa extends TextureOperator {
         int var14;
         var14 = TombRacer.field_G ? 1 : 0;
         if (param1 != 27261) {
-          wsa.releaseStatics(81);
+          HslAdjustOperator.releaseStatics(81);
         }
         if (param3 <= 2048) {
           stackIn_5_0 = (param0 + 4096) * param3 >> 12;

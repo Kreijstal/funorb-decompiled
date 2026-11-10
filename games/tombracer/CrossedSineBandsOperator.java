@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class voa extends TextureOperator {
+final class CrossedSineBandsOperator extends TextureOperator {
     private int field_p;
     static boolean field_v;
     static String field_s;
@@ -218,7 +218,7 @@ final class voa extends TextureOperator {
         int var25Lifetime2;
         var26 = TombRacer.field_G ? 1 : 0;
         try {
-          var28 = vc.field_q;
+          var28 = WeaveOperator.field_q;
           if (param0 > -48) {
             return;
           }
@@ -240,17 +240,17 @@ final class voa extends TextureOperator {
             var5 = var28.readUnsignedByte(255);
             if (var5 != 0) {
               var6 = var4.field_j;
-              bj.field_s[0].field_a = fna.field_k;
-              bj.field_s[0].field_c = null;
-              bj.field_s[0].field_d = false;
+              StripesOperator.field_s[0].field_a = fna.field_k;
+              StripesOperator.field_s[0].field_c = null;
+              StripesOperator.field_s[0].field_d = false;
               var7 = var4.field_i;
               for (var8_int = 1; var5 > var8_int; var8_int++) {
-                bj.field_s[var8_int].field_a = var28.readString((byte) -76);
-                bj.field_s[var8_int].field_d = false;
+                StripesOperator.field_s[var8_int].field_a = var28.readString((byte) -76);
+                StripesOperator.field_s[var8_int].field_d = false;
                 if (var28.readUnsignedByte(255) == 1) {
-                  bj.field_s[var8_int].field_c = var28.readString((byte) -76);
+                  StripesOperator.field_s[var8_int].field_c = var28.readString((byte) -76);
                 } else {
-                  bj.field_s[var8_int].field_c = null;
+                  StripesOperator.field_s[var8_int].field_c = null;
                 }
               }
               dupTemp$0 = new String[3][var6];
@@ -273,12 +273,12 @@ final class voa extends TextureOperator {
               if (var18 > 0) {
                 for (var19 = 0; var18 > var19; var19++) {
                   var20 = var28.readUnsignedByte(255);
-                  var21 = bj.field_s[var20].field_a;
+                  var21 = StripesOperator.field_s[var20].field_a;
                   var22 = var28.readLong(290646880);
                   var24 = var28.position;
                   if (var19 < var6) {
                     var8[0][var12] = var21;
-                    var9[0][var12] = bj.field_s[var20].field_c;
+                    var9[0][var12] = StripesOperator.field_s[var20].field_c;
                     var10[0][var12] = var22;
                     for (var25 = 0; var25 < var7; var25++) {
                       incrementValue$3 = var15;
@@ -301,10 +301,10 @@ final class voa extends TextureOperator {
                     }
                   }
                   if (var14 < var6 &&
-                    !bj.field_s[var20].field_d) {
-                    bj.field_s[var20].field_d = true;
+                    !StripesOperator.field_s[var20].field_d) {
+                    StripesOperator.field_s[var20].field_d = true;
                     var8[2][var14] = var21;
-                    var9[2][var14] = bj.field_s[var20].field_c;
+                    var9[2][var14] = StripesOperator.field_s[var20].field_c;
                     var10[2][var14] = var22;
                     var14++;
                     var28.position = var24;
@@ -374,7 +374,7 @@ final class voa extends TextureOperator {
           if (null != uu.field_a) {
             MazeComponent.c(false, 2);
           } else {
-            if (null == ifa.field_n) {
+            if (null == WaveformOperator.field_n) {
               re.a(-29040);
             } else {
               MazeComponent.c(true, 2);
@@ -400,11 +400,11 @@ final class voa extends TextureOperator {
         }
         if (tla.field_e &&
           uu.field_a.field_Mb >= uu.field_a.field_Jb) {
-          rra.field_e.field_X = false;
+          RasterShape.field_e.field_X = false;
           bsa.field_j.field_vb.field_r = RandomAccessFileHandle.field_c;
           BridgeModel.a(-116, bsa.field_j.field_tb);
         } else {
-          rra.field_e.field_X = true;
+          RasterShape.field_e.field_X = true;
           bsa.field_j.field_vb.field_r = null;
           ava.a(bsa.field_j, param6, param0, param9, 2);
         }
@@ -448,7 +448,7 @@ final class voa extends TextureOperator {
         return stackIn_6_0;
     }
 
-    public voa() {
+    public CrossedSineBandsOperator() {
         super(0, true);
         this.field_p = 2048;
         this.field_o = 0;

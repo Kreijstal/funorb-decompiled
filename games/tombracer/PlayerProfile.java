@@ -30,7 +30,7 @@ final class PlayerProfile {
         if (!param0) {
           PlayerProfile.releaseStatics(-1);
         }
-        vc.field_n.setLength(0);
+        WeaveOperator.field_n.setLength(0);
         bta.field_q = 0;
     }
 

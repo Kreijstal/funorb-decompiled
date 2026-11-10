@@ -9,7 +9,7 @@ abstract class oga extends IntrusiveNode {
     abstract void a(rt param0, int param1, byte param2, rt param3);
 
     final static void a(boolean param0) {
-        nfa.field_p = param0 ? true : false;
+        TileOperator.field_p = param0 ? true : false;
         jf.field_r = false;
         jsa.a(false, -1);
         kl.field_a = fta.field_c;

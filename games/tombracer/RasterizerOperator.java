@@ -3,10 +3,10 @@
  */
 import java.io.*;
 
-final class rda extends TextureOperator {
+final class RasterizerOperator extends TextureOperator {
     static String[] field_m;
     static int[] field_n;
-    private rra[] field_p;
+    private RasterShape[] field_p;
     static int field_o;
 
     final void decodeParameter(byte param0, PacketBuffer param1, int param2) {
@@ -26,21 +26,21 @@ final class rda extends TextureOperator {
             this.a(80, (int[][]) null);
           }
           if (param2 == 0) {
-            this.field_p = new rra[param1.readUnsignedByte(255)];
+            this.field_p = new RasterShape[param1.readUnsignedByte(255)];
             for (var4_int = 0; this.field_p.length > var4_int; var4_int++) {
               var5 = param1.readUnsignedByte(255);
               var6 = var5;
               if (0 == var6) {
-                this.field_p[var4_int] = (rra) ((Object) DualLinkNode.a(0, param1));
+                this.field_p[var4_int] = (RasterShape) ((Object) DualLinkNode.a(0, param1));
               } else {
                 if (var6 == 1) {
-                  this.field_p[var4_int] = (rra) ((Object) HotspotTextWidget.a(param1, (byte) -88));
+                  this.field_p[var4_int] = (RasterShape) ((Object) HotspotTextWidget.a(param1, (byte) -88));
                 } else {
                   if (var6 == 2) {
-                    this.field_p[var4_int] = (rra) ((Object) SwitchableId.a(4, param1));
+                    this.field_p[var4_int] = (RasterShape) ((Object) SwitchableId.a(4, param1));
                   } else {
                     if (3 == var6) {
-                      this.field_p[var4_int] = (rra) ((Object) cba.a(64, param1));
+                      this.field_p[var4_int] = (RasterShape) ((Object) cba.a(64, param1));
                     }
                   }
                 }
@@ -71,7 +71,7 @@ final class rda extends TextureOperator {
         int var5 = 0;
         int var3_int = 0;
         int var4 = 0;
-        rra var6 = null;
+        RasterShape var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -84,10 +84,10 @@ final class rda extends TextureOperator {
         try {
           var3_int = ns.textureWidth;
           if (param0 != -8883) {
-            rda.d(56);
+            RasterizerOperator.d(56);
           }
           var4 = ArchiveNetworkClient.textureHeight;
-          nfa.a(param1, param0 ^ -8901);
+          TileOperator.a(param1, param0 ^ -8901);
           MazeGenerator.a(una.textureWidthMask, false, 0, 0, hba.textureHeightMask);
           if (null != this.field_p) {
             for (var5 = 0; var5 < this.field_p.length; var5++) {
@@ -123,13 +123,13 @@ final class rda extends TextureOperator {
         }
     }
 
-    public rda() {
+    public RasterizerOperator() {
         super(0, true);
     }
 
     final static void d(byte param0) {
         if (param0 != -128) {
-          rda.d(63);
+          RasterizerOperator.d(63);
         }
         bl.field_a = null;
     }

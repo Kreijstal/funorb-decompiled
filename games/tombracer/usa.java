@@ -129,7 +129,7 @@ final class usa extends vw {
     }
 
     final void a(boolean param0, int param1) {
-        this.field_c.setTextureCombineOperations(jv.field_m, (byte) -110, r.field_m);
+        this.field_c.setTextureCombineOperations(NormalMapOperator.field_m, (byte) -110, r.field_m);
         if (param1 != 5744) {
           GpuTexture var4 = (GpuTexture) null;
           this.a(-56, (GpuTexture) null, 109);

@@ -50,7 +50,7 @@ final class MatchScreen extends GameScreen implements rqa {
         for (var3 = 0; var2 > var3; var3++) {
           var4 = this.matchState.players[var3];
           if (var4 != null) {
-            var4.a(-27496, new hf(var4, var3));
+            var4.setAnimator(-27496, new PlayerModel(var4, var3));
             this.matchState.field_y[var3].a(11008, var4);
             var5 = new ag();
             var5.a(var4, -1);
@@ -150,7 +150,7 @@ final class MatchScreen extends GameScreen implements rqa {
           return;
         }
         if (!this.field_D) {
-          this.b(this.matchState.players[0].v(param2 - 15179), param2 + 7821);
+          this.b(this.matchState.players[0].getScore(param2 - 15179), param2 + 7821);
           this.a(this.matchState.field_g[0], 5, this.matchState.field_F[0]);
           var4 = uca.cosmeticRandom.nextBounded(7, param2 - 15283);
           qa.field_b = qa.field_b + var4;
@@ -1211,7 +1211,7 @@ final class MatchScreen extends GameScreen implements rqa {
             var4 == 0 &&
             SecondaryNodeDequeIterator.field_a != null &&
             !SecondaryNodeDequeIterator.field_a.f((byte) 33) &&
-            SecondaryNodeDequeIterator.field_a == hb.field_t) {
+            SecondaryNodeDequeIterator.field_a == SpriteTileOperator.field_t) {
             var5 = uca.cosmeticRandom.nextBounded(8, 0);
             if (0 != var5) {
               if (1 != var5) {
@@ -1258,7 +1258,7 @@ final class MatchScreen extends GameScreen implements rqa {
           this.phase.a(param1, 25, param0)) {
           return true;
         }
-        if (rda.d(20125) &&
+        if (RasterizerOperator.d(20125) &&
           param0 == 88) {
           stackIn_34_1 = !(this.field_A);
           this.field_A = stackIn_34_1;
@@ -1303,7 +1303,7 @@ final class MatchScreen extends GameScreen implements rqa {
           if (param1 != -9) {
             this.field_h = -6;
           }
-          var5 = param0.A(0);
+          var5 = param0.getPlayerIndex(0);
           var6 = var4[uca.cosmeticRandom.nextBounded(var8.length, param1 + 9)];
           var7 = this.a(var5, false);
           dupTemp$1 = "<col=" + PasswordValidator.field_k[var5] + ">" + var6 + "</col>";
@@ -1329,8 +1329,8 @@ final class MatchScreen extends GameScreen implements rqa {
         int var2;
         kq var3;
         int var4;
-        tu var5;
-        qw var6;
+        MatchScoringObserver var5;
+        PenaltyNotice var6;
         String var7;
         jha var8;
         int var9;
@@ -1366,15 +1366,15 @@ final class MatchScreen extends GameScreen implements rqa {
               }
               break;
             }
-            var5 = (tu) (this.matchState.simulations[var2].getObserver(9262));
-            var6 = var5.b((byte) 121);
+            var5 = (MatchScoringObserver) (this.matchState.simulations[var2].getObserver(9262));
+            var6 = var5.pollPenaltyNotice((byte) 121);
             while (var6 != null) {
               if (iqa.field_c.b(4782)) {
-                var7 = this.a(var6.b(-14065), (byte) -9, var6.c(74));
+                var7 = this.a(var6.getPlayer(-14065), (byte) -9, var6.getKind(74));
                 var8 = RewardChoicePhase.a(-23, var7);
                 iqa.field_c.a(0, var8);
               }
-              var6 = var5.b((byte) -57);
+              var6 = var5.pollPenaltyNotice((byte) -57);
             }
           }
           var2Lifetime1 = this.field_r - this.matchState.c((byte) 115, this.field_h);
@@ -1489,7 +1489,7 @@ final class MatchScreen extends GameScreen implements rqa {
             SecondaryNodeDequeIterator.field_a.field_x >= 0 &&
             !SecondaryNodeDequeIterator.field_a.field_D &&
             !SecondaryNodeDequeIterator.field_a.f((byte) 33) &&
-            hb.field_t == SecondaryNodeDequeIterator.field_a) {
+            SpriteTileOperator.field_t == SecondaryNodeDequeIterator.field_a) {
             var4 = uca.cosmeticRandom.nextBounded(3, 0);
             if (0 != var4) {
               if (var4 == 1) {
@@ -1510,7 +1510,7 @@ final class MatchScreen extends GameScreen implements rqa {
             var3 == 0 &&
             SecondaryNodeDequeIterator.field_a != null &&
             !SecondaryNodeDequeIterator.field_a.f((byte) 33) &&
-            hb.field_t == SecondaryNodeDequeIterator.field_a) {
+            SpriteTileOperator.field_t == SecondaryNodeDequeIterator.field_a) {
             var4 = uca.cosmeticRandom.nextBounded(8, 0);
             if (0 != var4) {
               if (var4 != 1) {

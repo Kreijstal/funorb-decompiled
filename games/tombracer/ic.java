@@ -6,9 +6,9 @@ final class ic extends mt {
     static long field_b;
     static int[] field_c;
 
-    final tu a(MatchState param0, int param1) {
+    final MatchScoringObserver a(MatchState param0, int param1) {
         RuntimeException var3 = null;
-        tu stackIn_2_0 = null;
+        MatchScoringObserver stackIn_2_0 = null;
         wg stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -17,9 +17,9 @@ final class ic extends mt {
         try {
           if (param1 == -25077) {
             stackIn_4_0 = new wg(param0);
-            return (tu) ((Object) stackIn_4_0);
+            return (MatchScoringObserver) ((Object) stackIn_4_0);
           }
-          stackIn_2_0 = (tu) null;
+          stackIn_2_0 = (MatchScoringObserver) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

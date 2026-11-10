@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hc extends rra {
+final class hc extends RasterShape {
     private int field_j;
     static int field_h;
     private int field_i;

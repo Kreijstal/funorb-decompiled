@@ -33,14 +33,14 @@ final class jd extends OpenGlTexture implements lv {
             field_m = (String) null;
           }
           while (var2_int < var3) {
-            if (hf.isNameSeparator(param0 ^ 114, param1.charAt(var2_int))) {
+            if (PlayerModel.isNameSeparator(param0 ^ 114, param1.charAt(var2_int))) {
               var2_int++;
               continue;
             }
             break;
           }
           while (var2_int < var3) {
-            if (hf.isNameSeparator(param0 ^ 116, param1.charAt(var3 - 1))) {
+            if (PlayerModel.isNameSeparator(param0 ^ 116, param1.charAt(var3 - 1))) {
               var3--;
               continue;
             }

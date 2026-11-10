@@ -62,7 +62,7 @@ final class rca extends me {
           MatchProtocol.a(100, (byte) -76, 128, 222, 0, 96);
           this.field_k = true;
         }
-        if (hf.field_b == 1) {
+        if (PlayerModel.field_b == 1) {
           this.field_j = true;
         }
         if (this.field_o != null) {

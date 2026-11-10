@@ -16,7 +16,7 @@ final class ara extends jea {
         }
         boolean decompiledFrameRemainder0 = true;
         this.c(42, true);
-        if ((hf.field_b == 0 ||
+        if ((PlayerModel.field_b == 0 ||
           0 != this.field_y) && this.field_tb.field_y == 0) {
           stackIn_9_0 = false;
           decompiledFrameRemainder0 = false;

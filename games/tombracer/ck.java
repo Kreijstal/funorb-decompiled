@@ -96,26 +96,26 @@ final class ck {
           eca.field_b = param1;
           efa.field_w = param13;
           SafeZoneBehaviour.field_u = param14;
-          rda.field_m = param5;
+          RasterizerOperator.field_m = param5;
           w.field_f = BoulderComponent.a(param10, "lobby", 5, "gameprivacy");
           wt.field_c = BoulderComponent.a(param10, "lobby", 5, "ratedgame");
           InvisibleTouchSwitchComponent.field_K = BoulderComponent.a(param10, "lobby", 5, "opentome");
           TileGridCell.field_k = BoulderComponent.a(param10, "lobby", 5, "allowspectators");
           SocketArchiveNetworkClient.field_w = new String[5];
           SocketArchiveNetworkClient.field_w[0] = HardwareOpenGlToolkit.field_cd;
-          SocketArchiveNetworkClient.field_w[2] = un.field_q;
+          SocketArchiveNetworkClient.field_w[2] = EmbossOperator.field_q;
           SocketArchiveNetworkClient.field_w[3] = ObjectPool.field_d;
           SocketArchiveNetworkClient.field_w[4] = PacketBuffer.field_f;
           SocketArchiveNetworkClient.field_w[1] = cha.field_b;
-          rra.field_e = new jea(0L, (jea) null);
+          RasterShape.field_e = new jea(0L, (jea) null);
           uh.field_h = new jea(0L, ooa.field_f, ija.field_i);
           vw.field_b = new jea(0L, SecondaryNodeDeque.field_b, dl.field_m);
           bsa.field_j = new iv(0L, new jea(0L, (jea) null), rfa.field_C, DateFieldsWidget.field_F);
-          rra.field_e.b(-126, uh.field_h);
+          RasterShape.field_e.b(-126, uh.field_h);
           if (rca.field_p) {
-            rra.field_e.b(param11 - 25575, vw.field_b);
+            RasterShape.field_e.b(param11 - 25575, vw.field_b);
           }
-          rra.field_e.b(-127, bsa.field_j);
+          RasterShape.field_e.b(-127, bsa.field_j);
           bsa.field_j.field_vb.applyStyle(false, Corpse.field_i);
           var15 = bsa.field_j.field_vb;
           bsa.field_j.field_vb.field_bb = 1;
@@ -126,7 +126,7 @@ final class ck {
           ap.field_a = new jea(0L, uda.field_s, tha.field_B.toUpperCase());
           db.field_s = new jea(0L, CommonChooseReward.field_c);
           gta.field_b = new jea(0L, ooa.field_f, SnakePitModel.field_m);
-          iia.field_r = new jea(0L, cs.field_a, TestModel.field_r);
+          RandomBrickOperator.field_r = new jea(0L, cs.field_a, TestModel.field_r);
           RotateLocomotor.field_o = new jea(0L, cs.field_a, du.field_a);
           MidiPcmStream.field_K = new jea(0L, cs.field_a, qo.field_i);
           MirrorComponent.field_I = new jea(0L, cs.field_a, MatchState.field_N);
@@ -152,7 +152,7 @@ final class ck {
           OpenGlToolkit.field_fd.b(-126, ap.field_a);
           OpenGlToolkit.field_fd.b(param11 ^ -25371, db.field_s);
           db.field_s.b(-124, gta.field_b);
-          db.field_s.b(-126, iia.field_r);
+          db.field_s.b(-126, RandomBrickOperator.field_r);
           db.field_s.b(-127, RotateLocomotor.field_o);
           if (rca.field_p) {
             db.field_s.b(-128, MidiPcmStream.field_K);
@@ -225,7 +225,7 @@ final class ck {
               }
             }
             SimpleConditionBehaviour.field_p[2] = new jea(0L, una.field_j, nb.field_a);
-            bf.field_b[2] = new tv[]{new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, (Sprite) null, aa.field_b), new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, TileGridCell.field_k[0], ifa.field_s), new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, TileGridCell.field_k[1], rpa.field_g)};
+            bf.field_b[2] = new tv[]{new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, (Sprite) null, aa.field_b), new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, TileGridCell.field_k[0], WaveformOperator.field_s), new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, TileGridCell.field_k[1], rpa.field_g)};
             break;
           }
           boolean decompiledFrameCompleted0 = true;
@@ -236,7 +236,7 @@ final class ck {
             bf.field_b[3][0] = new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, (Sprite) null, aa.field_b);
             var17_int = 0;
             while (!(MirrorMoverLocomotor.field_r <= var17_int)) {
-              bf.field_b[3][1 + var17_int] = new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, (Sprite) null, rda.field_m[var17_int]);
+              bf.field_b[3][1 + var17_int] = new tv(0L, qja.field_j, (jea) null, PressureSwitchBehaviour.field_p, (Sprite) null, RasterizerOperator.field_m[var17_int]);
               var17_int++;
               if (var21 != 0) {
                 decompiledFrameCompleted0 = false;

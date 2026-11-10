@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class tu extends SimulationObserver {
+class MatchScoringObserver extends SimulationObserver {
     static String field_e;
     static volatile int field_h;
     private IntrusiveDeque field_c;
@@ -38,14 +38,14 @@ class tu extends SimulationObserver {
         }
     }
 
-    void a(int param0, Player param1, int param2, Room param3, int param4, int param5) {
+    void onPenalty(int param0, Player param1, int param2, Room param3, int param4, int param5) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
-        qw var7 = null;
+        PenaltyNotice var7 = null;
         RuntimeException var7_ref = null;
         int var8 = 0;
         Object var9 = null;
@@ -56,7 +56,7 @@ class tu extends SimulationObserver {
           if (RewardChoicePhase.field_n != null) {
             RewardChoicePhase.field_n.field_y.a((byte) -105, 77, -1);
           }
-          var7 = new qw(param1, param3, param2, param5, param4);
+          var7 = new PenaltyNotice(param1, param3, param2, param5, param4);
           this.field_c.addLast((byte) -88, var7);
           var9 = null;
           if (1 != param5) {
@@ -66,8 +66,8 @@ class tu extends SimulationObserver {
             var8 = -5;
             var9_ref = gl.$cfr$intArgs$a$53ce4ab4c593(107, rf.field_a, new String[]{String.valueOf(var8)});
           }
-          param1.h(param0 - 15, var8);
-          this.field_f.field_D.a(param5, param1.A(0), param0 - 19);
+          param1.addScore(param0 - 15, var8);
+          this.field_f.field_D.a(param5, param1.getPlayerIndex(0), param0 - 19);
           if (this.field_f.j(-1878) &&
             !this.field_f.d(-67) &&
             var9_ref != null) {
@@ -76,7 +76,7 @@ class tu extends SimulationObserver {
           }
           if (param0 != 15) {
             var11 = (Room) null;
-            this.a(77, (Player) null, 88, (Room) null, -63, 81);
+            this.onPenalty(77, (Player) null, 88, (Room) null, -63, 81);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -99,7 +99,7 @@ class tu extends SimulationObserver {
         }
     }
 
-    final void a(int param0, int param1, Player param2, Trap param3) {
+    final void onTreasureCollected(int param0, int param1, Player param2, Trap param3) {
         int var5_int = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -164,7 +164,7 @@ class tu extends SimulationObserver {
     final void onRoomReset(int param0, Room param1) {
         if (param0 <= 12) {
           Room var4 = (Room) null;
-          this.a((Player) null, (Room) null, false);
+          this.onRoomCompleted((Player) null, (Room) null, false);
         }
         if (null != RewardChoicePhase.field_n) {
           RewardChoicePhase.field_n.field_y.a((byte) -105, 256, -1);
@@ -199,7 +199,7 @@ class tu extends SimulationObserver {
           }
           var5 = var3_int;
           if (var5 == 0) {
-            this.field_f.field_D.d(1, 72, var4.A(0));
+            this.field_f.field_D.d(1, 72, var4.getPlayerIndex(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -236,7 +236,7 @@ class tu extends SimulationObserver {
           if (!this.field_f.k(-25319) &&
             param2 != null &&
             param2.collisionGrid != null) {
-            var4_int = param2.getPlayer(-2).A(param0 + 2);
+            var4_int = param2.getPlayer(-2).getPlayerIndex(param0 + 2);
             if (param2.j(0) &&
               !this.field_f.j(param0 - 1876)) {
               ProxySocketConnector.a(var4_int, 5);
@@ -249,7 +249,7 @@ class tu extends SimulationObserver {
             for (var7 = 0; var7 < var6.length; var7++) {
               var8 = var6[var7];
               if (var8.E((byte) 3) == 1) {
-                qw.a((byte) -32, var4_int);
+                PenaltyNotice.a((byte) -32, var4_int);
               }
               if (2 == var8.E((byte) 3)) {
                 mka.a(13, var4_int);
@@ -258,7 +258,7 @@ class tu extends SimulationObserver {
           }
           if (param0 != -2) {
             var10 = (Room) null;
-            this.a(84, (Player) null, 71, (Room) null, -32, -21);
+            this.onPenalty(84, (Player) null, 71, (Room) null, -32, -21);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -281,15 +281,15 @@ class tu extends SimulationObserver {
         }
     }
 
-    final qw b(byte param0) {
+    final PenaltyNotice pollPenaltyNotice(byte param0) {
         int var2 = -114 / ((59 - param0) / 50);
         if (this.field_c.isEmpty((byte) 14)) {
           return null;
         }
-        return (qw) (this.field_c.removeFirst(73));
+        return (PenaltyNotice) (this.field_c.removeFirst(73));
     }
 
-    void a(Player param0, Room param1, boolean param2) {
+    void onRoomCompleted(Player param0, Room param1, boolean param2) {
         jha dupTemp$0 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
@@ -324,8 +324,8 @@ class tu extends SimulationObserver {
           if (var4_int > var5) {
             var7 = (-var5 + var4_int) * 5 / 50;
           }
-          param0.h(0, param0.F(-7991) + (var7 + var6));
-          var8 = param0.A(0);
+          param0.addScore(0, param0.F(-7991) + (var7 + var6));
+          var8 = param0.getPlayerIndex(0);
           this.field_f.field_F[var8] = (long)var5;
           this.field_f.field_g[var8] = param1.getId((byte) -82);
           if (!this.field_f.k(-25319) &&
@@ -342,7 +342,7 @@ class tu extends SimulationObserver {
             if (0 != var7) {
               var9_ref_jha = RewardChoicePhase.a(-89, gl.$cfr$intArgs$a$53ce4ab4c593(112, ArrowShooterComponent.field_J, new String[]{String.valueOf(var6), String.valueOf(var7)}));
             } else {
-              var9_ref_jha = RewardChoicePhase.a(-66, gl.$cfr$intArgs$a$53ce4ab4c593(92, gla.field_q, new String[]{String.valueOf(var6)}));
+              var9_ref_jha = RewardChoicePhase.a(-66, gl.$cfr$intArgs$a$53ce4ab4c593(92, BevelOperator.field_q, new String[]{String.valueOf(var6)}));
             }
             iqa.field_c.a(0, var9_ref_jha);
             var10 = param0.F(-7991);
@@ -358,7 +358,7 @@ class tu extends SimulationObserver {
             var13 = 0;
             var9Lifetime1 = var13;
             while (var13 < 3) {
-              this.field_f.field_D.b(param0.A(0), 65408, gp.field_i[var13] * param0.getRoomTreasure(393216, var13));
+              this.field_f.field_D.b(param0.getPlayerIndex(0), 65408, gp.field_i[var13] * param0.getRoomTreasure(393216, var13));
               var13++;
             }
             return;
@@ -384,7 +384,7 @@ class tu extends SimulationObserver {
         }
     }
 
-    tu(MatchState param0) {
+    MatchScoringObserver(MatchState param0) {
         try {
           this.field_f = param0;
           this.field_c = new IntrusiveDeque();

@@ -91,7 +91,7 @@ final class gu extends me {
           return (TextureOperator) ((Object) new ClampOperator());
         }
         if (var2 == 7) {
-          return (TextureOperator) ((Object) new eka());
+          return (TextureOperator) ((Object) new BlendModeOperator());
         }
         if (var2 == 8) {
           return (TextureOperator) ((Object) new CurveOperator());
@@ -100,37 +100,37 @@ final class gu extends me {
           return (TextureOperator) ((Object) new FlipOperator());
         }
         if (var2 == 10) {
-          return (TextureOperator) ((Object) new wna());
+          return (TextureOperator) ((Object) new ColourGradientOperator());
         }
         if (var2 == 11) {
-          return (TextureOperator) ((Object) new vda());
+          return (TextureOperator) ((Object) new ColouriseOperator());
         }
         if (var2 == 12) {
-          return (TextureOperator) ((Object) new ifa());
+          return (TextureOperator) ((Object) new WaveformOperator());
         }
         if (var2 == 13) {
-          return (TextureOperator) ((Object) new bda());
+          return (TextureOperator) ((Object) new WhiteNoiseOperator());
         }
         if (var2 == 14) {
-          return (TextureOperator) ((Object) new gla());
+          return (TextureOperator) ((Object) new BevelOperator());
         }
         if (var2 == 15) {
-          return (TextureOperator) ((Object) new nw());
+          return (TextureOperator) ((Object) new VoronoiNoiseOperator());
         }
         if (var2 == 16) {
-          return (TextureOperator) ((Object) new vc());
+          return (TextureOperator) ((Object) new WeaveOperator());
         }
         if (var2 == 17) {
-          return (TextureOperator) ((Object) new wsa());
+          return (TextureOperator) ((Object) new HslAdjustOperator());
         }
         if (var2 == 18) {
-          return (TextureOperator) ((Object) new hb());
+          return (TextureOperator) ((Object) new SpriteTileOperator());
         }
         if (var2 == 19) {
-          return (TextureOperator) ((Object) new vla());
+          return (TextureOperator) ((Object) new DisplacementOperator());
         }
         if (var2 == 20) {
-          return (TextureOperator) ((Object) new nfa());
+          return (TextureOperator) ((Object) new TileOperator());
         }
         if (var2 == 21) {
           return (TextureOperator) ((Object) new MaskBlendOperator());
@@ -145,19 +145,19 @@ final class gu extends me {
           return (TextureOperator) ((Object) new GreyscaleOperator());
         }
         if (var2 == 25) {
-          return (TextureOperator) ((Object) new cma());
+          return (TextureOperator) ((Object) new ColourKeyOperator());
         }
         if (var2 == 26) {
           return (TextureOperator) ((Object) new ThresholdOperator());
         }
         if (var2 == 27) {
-          return (TextureOperator) ((Object) new bj());
+          return (TextureOperator) ((Object) new StripesOperator());
         }
         if (28 == var2) {
-          return (TextureOperator) ((Object) new iia());
+          return (TextureOperator) ((Object) new RandomBrickOperator());
         }
         if (29 == var2) {
-          return (TextureOperator) ((Object) new rda());
+          return (TextureOperator) ((Object) new RasterizerOperator());
         }
         if (var2 == 30) {
           return (TextureOperator) ((Object) new RangeOperator());
@@ -166,28 +166,28 @@ final class gu extends me {
           return (TextureOperator) ((Object) new MandelbrotOperator());
         }
         if (32 == var2) {
-          return (TextureOperator) ((Object) new un());
+          return (TextureOperator) ((Object) new EmbossOperator());
         }
         if (var2 == 33) {
-          return (TextureOperator) ((Object) new jv());
+          return (TextureOperator) ((Object) new NormalMapOperator());
         }
         if (var2 == 34) {
           return (TextureOperator) ((Object) new PerlinNoise2D());
         }
         if (var2 == 35) {
-          return (TextureOperator) ((Object) new go());
+          return (TextureOperator) ((Object) new EdgeDetectOperator());
         }
         if (var2 == 36) {
-          return (TextureOperator) ((Object) new gia());
+          return (TextureOperator) ((Object) new TextureSampleOperator());
         }
         if (var2 == 37) {
-          return (TextureOperator) ((Object) new voa());
+          return (TextureOperator) ((Object) new CrossedSineBandsOperator());
         }
         if (38 == var2) {
           return (TextureOperator) ((Object) new LineNoiseOperator());
         }
         if (39 == var2) {
-          return (TextureOperator) ((Object) new coa());
+          return (TextureOperator) ((Object) new SpriteSampleOperator());
         }
         return null;
     }

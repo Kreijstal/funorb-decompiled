@@ -17,7 +17,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
-          if (null != wna.field_n) {
+          if (null != ColourGradientOperator.field_n) {
             tka.field_n = 0;
           }
         } catch (RuntimeException runtimeException) {
@@ -34,8 +34,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     public final synchronized void mouseDragged(java.awt.event.MouseEvent param0) {
         try {
-          if (null != wna.field_n) {
-            tu.field_h = 0;
+          if (null != ColourGradientOperator.field_n) {
+            MatchScoringObserver.field_h = 0;
             ena.field_n = param0.getX();
             ee.field_a = param0.getY();
             PlayerContextMenu.field_c = true;
@@ -89,10 +89,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (wna.field_n == null) {
+          if (ColourGradientOperator.field_n == null) {
             return;
           }
-          tu.field_h = 0;
+          MatchScoringObserver.field_h = 0;
           ena.field_n = -1;
           ee.field_a = -1;
           PlayerContextMenu.field_c = true;
@@ -118,10 +118,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (wna.field_n == null) {
+          if (ColourGradientOperator.field_n == null) {
             return;
           }
-          tu.field_h = 0;
+          MatchScoringObserver.field_h = 0;
           ena.field_n = param0.getX();
           ee.field_a = param0.getY();
           PlayerContextMenu.field_c = true;
@@ -156,8 +156,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != wna.field_n) {
-            tu.field_h = 0;
+          if (null != ColourGradientOperator.field_n) {
+            MatchScoringObserver.field_h = 0;
             cr.field_d = param0.getX();
             TestModel.field_m = param0.getY();
             bva.currentTimeMillis((byte) -107);
@@ -204,8 +204,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != wna.field_n) {
-            tu.field_h = 0;
+          if (null != ColourGradientOperator.field_n) {
+            MatchScoringObserver.field_h = 0;
             tka.field_n = 0;
             PlayerContextMenu.field_c = true;
             var2_int = param0.getModifiers();
@@ -237,8 +237,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     public final synchronized void mouseMoved(java.awt.event.MouseEvent param0) {
         try {
-          if (wna.field_n != null) {
-            tu.field_h = 0;
+          if (ColourGradientOperator.field_n != null) {
+            MatchScoringObserver.field_h = 0;
             ena.field_n = param0.getX();
             ee.field_a = param0.getY();
             PlayerContextMenu.field_c = true;

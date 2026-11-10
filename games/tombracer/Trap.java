@@ -998,7 +998,7 @@ final class Trap extends IntrusiveNode implements Switchable, SwitchableScope, R
           }
           var6Lifetime1 = param2.readBits((byte) 44, 3);
           for (var7 = 0; var7 < var6Lifetime1; var7++) {
-            var8_ref_nv = bda.readBehaviour(param3, (byte) 44, param0, param2);
+            var8_ref_nv = WhiteNoiseOperator.readBehaviour(param3, (byte) 44, param0, param2);
             this.behaviours.addLast((byte) -88, var8_ref_nv);
             var8_ref_nv.attachToTrap(true, this);
           }

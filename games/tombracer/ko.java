@@ -57,10 +57,10 @@ final class ko {
         }
         this.field_c = 0;
         this.field_b = 0;
-        if (hf.field_b != 0) {
-          this.field_b = hf.field_b;
+        if (PlayerModel.field_b != 0) {
+          this.field_b = PlayerModel.field_b;
           this.field_h = param0;
-          this.field_f = hf.field_b;
+          this.field_f = PlayerModel.field_b;
           this.field_e = true;
           this.field_a = gp.field_m;
           if (this.field_f != 0 &&
@@ -70,7 +70,7 @@ final class ko {
             }
             this.field_a = this.field_a - 1;
           }
-          if (hf.field_b == 0 &&
+          if (PlayerModel.field_b == 0 &&
             0 == RangeOperator.field_p) {
             this.field_f = 0;
           }
@@ -96,7 +96,7 @@ final class ko {
           return;
         }
         if (this.field_f == 0) {
-          if (hf.field_b == 0 &&
+          if (PlayerModel.field_b == 0 &&
             0 == RangeOperator.field_p) {
             this.field_f = 0;
           }
@@ -122,7 +122,7 @@ final class ko {
           return;
         }
         if (RangeOperator.field_p == 0) {
-          if (hf.field_b == 0) {
+          if (PlayerModel.field_b == 0) {
             if (0 != RangeOperator.field_p) {
               var4Lifetime2 = -69 % ((-29 - param1) / 63);
               if (0 != this.field_f) {
@@ -183,7 +183,7 @@ final class ko {
         }
         if (0 < this.field_a) {
           this.field_a = this.field_a - 1;
-          if (hf.field_b == 0 &&
+          if (PlayerModel.field_b == 0 &&
             0 == RangeOperator.field_p) {
             this.field_f = 0;
           }
@@ -211,7 +211,7 @@ final class ko {
         }
         this.field_a = aua.field_b;
         this.field_a = this.field_a - 1;
-        if (hf.field_b == 0) {
+        if (PlayerModel.field_b == 0) {
           if (0 != RangeOperator.field_p) {
             var4Lifetime4 = -69 % ((-29 - param1) / 63);
             if (0 == this.field_f) {

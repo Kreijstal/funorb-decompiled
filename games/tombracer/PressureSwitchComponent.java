@@ -40,10 +40,10 @@ final class PressureSwitchComponent extends SwitchComponent {
             var5 = wba.field_p[var4_int];
             if (var5 != null) {
               if (var5.field_y != 0) {
-                nw.a(false, var4_int, var5);
+                VoronoiNoiseOperator.a(false, var4_int, var5);
               }
               var6 = Transform3D.a(var4_int, -20011);
-              oka.field_y[var4_int].field_R = vda.field_m[var6];
+              oka.field_y[var4_int].field_R = ColouriseOperator.field_m[var6];
               PitModel.field_p[var4_int].field_r = StripedMazeGenerator.field_c[var6];
             }
           }

@@ -445,7 +445,7 @@ final class SnakePitModel extends TrapModel {
         int var3_int;
         Trap var3;
         Player var4;
-        ac var5;
+        PlayerAnimator var5;
         int var6;
         w var7;
         var6 = TombRacer.field_G ? 1 : 0;
@@ -481,11 +481,11 @@ final class SnakePitModel extends TrapModel {
           return;
         }
         if (var3.intersectsRect((byte) 110, var4.getY(param0 ^ -9649), var4.getX(3), var4.getHeight((byte) 55), var4.getWidth(-30))) {
-          var5 = var4.n((byte) -98);
+          var5 = var4.getAnimator((byte) -98);
           if (var5 == null) {
             return;
           }
-          ((hf) (var5)).field_k = 1;
+          ((PlayerModel) (var5)).field_k = 1;
         }
         return;
     }

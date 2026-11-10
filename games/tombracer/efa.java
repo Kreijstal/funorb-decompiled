@@ -108,7 +108,7 @@ final class efa extends WidgetContainer implements mia, ButtonListener {
     public efa() {
         super(0, 0, 496, 0, (isa) null);
         this.field_z = new so("", (WidgetListener) null, 12);
-        TextWidgetPainter var1 = new TextWidgetPainter(eka.field_o, 0, 0, 0, 0, 16777215, -1, 3, 0, KeySwitchComponent.field_J.field_w, -1, 2147483647, true);
+        TextWidgetPainter var1 = new TextWidgetPainter(BlendModeOperator.field_o, 0, 0, 0, 0, 16777215, -1, 3, 0, KeySwitchComponent.field_J.field_w, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(cj.field_e, var1, (WidgetListener) null);
         this.field_A = new FocusableWidget(nf.field_j, (WidgetListener) null);
         this.field_B = new FocusableWidget(mq.field_d, (WidgetListener) null);

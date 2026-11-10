@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportable {
-    private ac field_u;
+    private PlayerAnimator animator;
     private int field_c;
     private int size;
     private int lifeState;
@@ -16,7 +16,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
     private int lifeStateTimer;
     private Room room;
     private int velocityY;
-    private int field_Q;
+    private int playerIndex;
     private IntrusiveDeque statusEffects;
     static IntrusiveDeque field_I;
     private int x;
@@ -25,7 +25,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
     private Weapon weapon;
     private int field_h;
     private int field_t;
-    private IntrusiveDeque field_v;
+    private IntrusiveDeque collectedTreasures;
     private boolean field_q;
     private int previousX;
     private boolean[] statusFlags;
@@ -49,23 +49,23 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
     private boolean field_V;
     private WorldBody carried;
     private int field_T;
-    private int field_y;
+    private int chosenReward;
     private WorldBody field_eb;
     private int field_F;
-    private int field_n;
+    private int score;
     private int respawnX;
     private int encodedDeathCount;
     private int[] deathCountsByCause;
     private int moveSpeed;
     private int respawnY;
-    private boolean field_hb;
+    private boolean collectedTreasure;
     private int field_cb;
     private boolean field_db;
-    private int field_bb;
+    private int animationStateTicks;
     private int elevation;
-    private int field_B;
+    private int animationStateTimer;
     private int field_O;
-    private int field_ab;
+    private int animationState;
     private int total;
 
     public final TeleportState getTeleportState(boolean param0) {
@@ -74,7 +74,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            this.field_y = -109;
+            this.chosenReward = -109;
           }
           stackIn_4_0 = this.field_jb;
           return stackIn_4_0;
@@ -105,10 +105,10 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
           if (param0 <= 103) {
             this.encodedDeathCount = -41;
           }
-          if (null == this.field_u) {
+          if (null == this.animator) {
             return;
           }
-          this.field_u.render(106, param1);
+          this.animator.render(106, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -124,14 +124,14 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         }
     }
 
-    final int d(boolean param0) {
+    final int getAnimationState(boolean param0) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            stackIn_4_0 = this.field_ab;
+            stackIn_4_0 = this.animationState;
             return stackIn_4_0;
           }
           stackIn_2_0 = 23;
@@ -151,7 +151,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
             !this.s((byte) 91)) {
             return;
           }
-          this.getSimulation(-1).a(this, param0 - 16385);
+          this.getSimulation(-1).reportDeathPenalty(this, param0 - 16385);
           if (param0 != 16384) {
             return;
           }
@@ -230,7 +230,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
           if (param0 != 5) {
             return;
           }
-          this.field_bb = this.field_bb + 1;
+          this.animationStateTicks = this.animationStateTicks + 1;
           if (this.field_kb > 0) {
             this.field_kb = this.field_kb - 1;
           }
@@ -354,8 +354,8 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
             }
           }
           this.field_V = false;
-          if (this.field_u != null) {
-            this.field_u.a(param0 ^ 21458);
+          if (this.animator != null) {
+            this.animator.a(param0 ^ 21458);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -382,14 +382,14 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         }
     }
 
-    final int A(int param0) {
+    final int getPlayerIndex(int param0) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 0) {
-            stackIn_4_0 = this.field_Q;
+            stackIn_4_0 = this.playerIndex;
             return stackIn_4_0;
           }
           stackIn_2_0 = 34;
@@ -501,12 +501,12 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
           }
           var9 = stackIn_23_0;
           if (!param1 && (var9 != 0 ||
-            0 == this.field_ab ||
-            this.field_ab == 6)) {
+            0 == this.animationState ||
+            this.animationState == 6)) {
             if (2 == param2) {
               this.facingX = lw.signum(-param4, (byte) -109);
               this.facingY = lw.signum(-param3, (byte) -119);
-              this.a(-5636, 2, false);
+              this.setAnimationState(-5636, 2, false);
             }
             if (this.field_A == 0) {
               this.field_A = 2;
@@ -627,14 +627,14 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         }
     }
 
-    final int v(int param0) {
+    final int getScore(int param0) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= 72) {
-            stackIn_4_0 = this.field_n;
+            stackIn_4_0 = this.score;
             return stackIn_4_0;
           }
           stackIn_2_0 = 25;
@@ -832,13 +832,13 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         }
     }
 
-    final void h(int param0, int param1) {
+    final void addScore(int param0, int param1) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          this.field_n = this.field_n + param1;
-          if (this.field_n < 0) {
-            this.field_n = 0;
+          this.score = this.score + param1;
+          if (this.score < 0) {
+            this.score = 0;
           }
           if (param0 != 0) {
             Player.D(123);
@@ -894,16 +894,16 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
               return;
             }
             boolean decompiledFrameRemainder0 = true;
-            this.getSimulation(-1).a(this, param0, 1, param2);
+            this.getSimulation(-1).reportPenalty(this, param0, 1, param2);
             this.room.collisionGrid.remove((Collidable) (this), (byte) 107);
             if (4 == param0) {
               var4 = this.room.j((byte) 52);
               if (null != var4 &&
-                this.field_u != null) {
-                var4.a(7, this.field_u, (byte) -33);
-                var4.a((byte) -82, 2, this.field_u);
+                this.animator != null) {
+                var4.a(7, this.animator, (byte) -33);
+                var4.a((byte) -82, 2, this.animator);
               }
-              this.a(-5636, 12, true);
+              this.setAnimationState(-5636, 12, true);
             }
             if (4 != param0 ||
               var5 != 0) {
@@ -913,47 +913,47 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
                   if (param2 != 9 &&
                     11 != param2) {
                     if (param2 == 14) {
-                      this.a(-5636, 20, true);
+                      this.setAnimationState(-5636, 20, true);
                     }
                     if (param2 != 14 ||
                       var5 != 0) {
                       if (param2 != 15 &&
                         param2 != 10) {
                         if (param2 != 8) {
-                          this.a(-5636, 14, true);
+                          this.setAnimationState(-5636, 14, true);
                           decompiledFrameRemainder0 = (var5 != 0);
                         }
                         if (decompiledFrameRemainder0) {
-                          this.a(-5636, 22, true);
+                          this.setAnimationState(-5636, 22, true);
                         }
                       }
                       if ((decompiledFrameRemainder0) && (param2 == 15 ||
                         param2 == 10 || var5 != 0)) {
-                        this.a(-5636, 21, true);
+                        this.setAnimationState(-5636, 21, true);
                         if (var5 != 0) {
-                          this.a(-5636, 17, true);
-                          this.a(-5636, 16, true);
-                          this.a(-5636, 13, true);
+                          this.setAnimationState(-5636, 17, true);
+                          this.setAnimationState(-5636, 16, true);
+                          this.setAnimationState(-5636, 13, true);
                           this.room.getParticleEffects(false).a((byte) 61, 2097152 + this.getElevation((byte) 115), this.x, this.y);
                         }
                       }
                     }} else {
-                    this.a(-5636, 17, true);
+                    this.setAnimationState(-5636, 17, true);
                     if (var5 != 0) {
-                      this.a(-5636, 16, true);
-                      this.a(-5636, 13, true);
+                      this.setAnimationState(-5636, 16, true);
+                      this.setAnimationState(-5636, 13, true);
                       this.room.getParticleEffects(false).a((byte) 61, 2097152 + this.getElevation((byte) 115), this.x, this.y);
                     }
                   }
                 } else {
-                  this.a(-5636, 16, true);
+                  this.setAnimationState(-5636, 16, true);
                   if (var5 != 0) {
-                    this.a(-5636, 13, true);
+                    this.setAnimationState(-5636, 13, true);
                     this.room.getParticleEffects(false).a((byte) 61, 2097152 + this.getElevation((byte) 115), this.x, this.y);
                   }
                 }
               } else {
-                this.a(-5636, 13, true);
+                this.setAnimationState(-5636, 13, true);
                 this.room.getParticleEffects(false).a((byte) 61, 2097152 + this.getElevation((byte) 115), this.x, this.y);
               }
             }
@@ -989,7 +989,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
             this.y = this.respawnY;
             this.lifeStateTimer = 0;
             this.deathCause = 0;
-            this.a(-5636, 0, true);
+            this.setAnimationState(-5636, 0, true);
             decompiledSharedTail0 = (TombRacer.field_G);
           }
           if (decompiledSharedTail0) {
@@ -998,7 +998,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
             this.x = this.respawnX;
             this.deathCause = 0;
             this.y = 2097152 + (this.lifeStateTimer * 393216 + this.respawnY);
-            this.a(-5636, 4, true);
+            this.setAnimationState(-5636, 4, true);
           }
           this.field_q = false;
           this.velocityY = 0;
@@ -1020,7 +1020,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
           this.v((byte) 74);
           this.savePreviousPosition((byte) 116);
           this.field_jb.b((byte) 93);
-          this.field_B = 0;
+          this.animationStateTimer = 0;
           this.field_eb = null;
           this.field_kb = 0;
           this.elevation = 0;
@@ -1091,7 +1091,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
             }
           }
           this.field_cb = 0;
-          this.field_y = -1;
+          this.chosenReward = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1477,7 +1477,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         try {
           this.m(15876);
           if (param0) {
-            this.field_y = 21;
+            this.chosenReward = 21;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hca.NC(" + param0 + ')');
@@ -1906,7 +1906,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
 
     private final void v(byte param0) {
         if (param0 != 74) {
-          this.field_y = -19;
+          this.chosenReward = -19;
         }
         if (this.room == null) {
           return;
@@ -1927,16 +1927,16 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          this.field_hb = true;
+          this.collectedTreasure = true;
           if (param1) {
             this.b(65, 76, -9, -128, -79, -56);
           }
           this.roomTreasure[param2] = this.roomTreasure[param2] + 1;
           if (null != param0 &&
             param2 != 0) {
-            this.field_v.addLast((byte) -118, new vl(param2, param0));
+            this.collectedTreasures.addLast((byte) -118, new vl(param2, param0));
           }
-          this.getSimulation(-1).getObserver(9262).a(param2, 15818, this, param0);
+          this.getSimulation(-1).getObserver(9262).onTreasureCollected(param2, 15818, this, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2160,7 +2160,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
           }
           var24 = stackIn_141_0;
           while (0 <= var16) {
-            if (4 != this.field_ab) {
+            if (4 != this.animationState) {
               this.field_c = 0;
               if (var29 != 0) {
                 this.field_c = this.field_c + 1;
@@ -2168,8 +2168,8 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
             } else {
               this.field_c = this.field_c + 1;
             }
-            if (var24 == 0 && (this.field_ab == 4 ||
-              9 == this.field_ab) && this.field_c > 40) {
+            if (var24 == 0 && (this.animationState == 4 ||
+              9 == this.animationState) && this.field_c > 40) {
               this.field_A = 5;
             }
             boolean decompiledSharedTail1 = !(this.field_A > 0);
@@ -2225,10 +2225,10 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
               continue;
             }
             if (var29 == 0) {
-              if (this.field_u == null) {
+              if (this.animator == null) {
                 continue;
               }
-              this.field_u.a(21463);
+              this.animator.a(21463);
               continue;
             }
             break;
@@ -2266,7 +2266,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
             this.field_V) {
             var23 = 0;
             this.field_A = 0;
-            this.field_B = 0;
+            this.animationStateTimer = 0;
           }
           boolean decompiledFrameRemainder4 = true;
           if (var22 == 0 && (var25Lifetime1 != 0 ||
@@ -2286,25 +2286,25 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
           boolean decompiledFrameRemainder0 = true;
           var26Lifetime1 = -1;
           if (!this.isHoldingItem(-77)) {
-            if (this.field_ab != 0 &&
-              this.field_ab != 6 &&
-              this.field_ab == 18) {
+            if (this.animationState != 0 &&
+              this.animationState != 6 &&
+              this.animationState == 18) {
             }
-            if (0 >= this.field_B) {
-              if (this.field_B != -1) {
+            if (0 >= this.animationStateTimer) {
+              if (this.animationStateTimer != -1) {
                 var26Lifetime1 = 0;
                 if (var18 != 0) {
                   var26Lifetime1 = 2;
                   if (var29 != 0) {
-                    this.field_B = this.field_B - 1;
+                    this.animationStateTimer = this.animationStateTimer - 1;
                   }
                 }
               }
             } else {
-              this.field_B = this.field_B - 1;
+              this.animationStateTimer = this.animationStateTimer - 1;
             }
-            if (this.field_ab == 0 &&
-              150 < this.field_bb) {
+            if (this.animationState == 0 &&
+              150 < this.animationStateTicks) {
               if (this.room.getRandom(-91).nextBounded(2, 0) == 0) {
                 var26Lifetime1 = 6;
                 if (var29 != 0) {
@@ -2387,8 +2387,8 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
           }
           var27 = 0;
           if (var26Lifetime1 != -1) {
-            this.field_B = 0;
-            this.a(-5636, var26Lifetime1, var27 != 0);
+            this.animationStateTimer = 0;
+            this.setAnimationState(-5636, var26Lifetime1, var27 != 0);
           }
           if (var8 != 0 &&
             !this.q(72)) {
@@ -2428,7 +2428,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         }
     }
 
-    final boolean M(int param0) {
+    final boolean hasCollectedTreasure(int param0) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException decompiledCaughtException = null;
@@ -2436,7 +2436,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
           if (param0 >= -75) {
             Player.D(-48);
           }
-          stackIn_4_0 = this.field_hb;
+          stackIn_4_0 = this.collectedTreasure;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2455,7 +2455,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
           var2_int = var2_int + this.getRoomTreasure(param0 ^ -401207, 0) * gp.field_i[0];
           var2_int = var2_int + this.getRoomTreasure(393216, 1) * gp.field_i[1];
           if (param0 != -7991) {
-            this.field_u = (ac) null;
+            this.animator = (PlayerAnimator) null;
           }
           var2_int = var2_int + this.getRoomTreasure(393216, 2) * gp.field_i[2];
           stackIn_4_0 = var2_int;
@@ -2551,7 +2551,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
           if (!this.field_l) {
             return;
           }
-          this.a(-5636, 11, true);
+          this.setAnimationState(-5636, 11, true);
           if (this.weapon.getEffect((byte) -16).type == 3 &&
             this.field_A > 0) {
             this.field_A = 0;
@@ -2665,15 +2665,15 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         }
     }
 
-    final ac n(byte param0) {
+    final PlayerAnimator getAnimator(byte param0) {
         RuntimeException var2 = null;
-        ac stackIn_4_0 = null;
+        PlayerAnimator stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -36) {
             this.q(-3);
           }
-          stackIn_4_0 = this.field_u;
+          stackIn_4_0 = this.animator;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2699,14 +2699,14 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         }
     }
 
-    final int h(boolean param0) {
+    final int getAnimationStateTicks(boolean param0) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            stackIn_4_0 = this.field_bb;
+            stackIn_4_0 = this.animationStateTicks;
             return stackIn_4_0;
           }
           stackIn_2_0 = 124;
@@ -2735,14 +2735,14 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         }
     }
 
-    final int z(int param0) {
+    final int getChosenReward(int param0) {
         int stackIn_1_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         try {
           var2_int = -22 / ((-23 - param0) / 58);
-          stackIn_1_0 = this.field_y;
+          stackIn_1_0 = this.chosenReward;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2764,7 +2764,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
             return false;
           }
           if (param2 <= 55) {
-            this.field_B = 46;
+            this.animationStateTimer = 46;
           }
           if (!this.intersectsRect((byte) 110, param4, param6, param0, param3)) {
             return false;
@@ -2876,27 +2876,27 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         }
     }
 
-    private final void a(int param0, int param1, boolean param2) {
+    private final void setAnimationState(int param0, int param1, boolean param2) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         int var5 = 0;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
           if (!param2 &&
-            ~param1 == ~this.field_ab) {
+            ~param1 == ~this.animationState) {
             return;
           }
-          if (this.field_ab == 11 &&
+          if (this.animationState == 11 &&
             7 == param1 &&
-            null != this.field_u &&
-            !this.field_u.a((byte) -113)) {
+            null != this.animator &&
+            !this.animator.a((byte) -113)) {
             return;
           }
           if (param0 != -5636) {
             return;
           }
           if (param1 == 5) {
-            this.field_B = 50;
+            this.animationStateTimer = 50;
           }
           if (param1 != 5 ||
             var5 != 0) {
@@ -2904,33 +2904,33 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
               11 != param1) {
               if (7 != param1) {
                 if (param1 != 6) {
-                  this.field_B = 0;
+                  this.animationStateTimer = 0;
                   if (var5 != 0) {
-                    this.field_B = 300;
-                    this.field_B = 300;
-                    this.field_B = -1;
+                    this.animationStateTimer = 300;
+                    this.animationStateTimer = 300;
+                    this.animationStateTimer = -1;
                   }
                 } else {
-                  this.field_B = 300;
+                  this.animationStateTimer = 300;
                   if (var5 != 0) {
-                    this.field_B = 300;
-                    this.field_B = -1;
+                    this.animationStateTimer = 300;
+                    this.animationStateTimer = -1;
                   }
                 }
               } else {
-                this.field_B = 300;
+                this.animationStateTimer = 300;
                 if (var5 != 0) {
-                  this.field_B = -1;
+                  this.animationStateTimer = -1;
                 }
               }
             } else {
-              this.field_B = -1;
+              this.animationStateTimer = -1;
             }
           }
-          this.field_ab = param1;
-          this.field_bb = 0;
-          if (null != this.field_u) {
-            this.field_u.a(26, param1, param2);
+          this.animationState = param1;
+          this.animationStateTicks = 0;
+          if (null != this.animator) {
+            this.animator.a(26, param1, param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2940,14 +2940,14 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         }
     }
 
-    final void b(int param0, int param1) {
+    final void setChosenReward(int param0, int param1) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
           if (param0 != 18202625) {
-            this.field_Q = -96;
+            this.playerIndex = -96;
           }
-          this.field_y = param1;
+          this.chosenReward = param1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3151,7 +3151,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -55) {
-            this.a(-42, -25, true);
+            this.setAnimationState(-42, -25, true);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3199,8 +3199,8 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
           var2_int = 0;
           do {
             if (var2_int >= 3) {
-              this.field_v.clear(8);
-              this.field_hb = false;
+              this.collectedTreasures.clear(8);
+              this.collectedTreasure = false;
               break;
             }
             this.roomTreasure[var2_int] = 0;
@@ -3306,7 +3306,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            this.field_bb = 42;
+            this.animationStateTicks = 42;
           }
           stackIn_4_0 = this.velocityY;
           return stackIn_4_0;
@@ -3368,7 +3368,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         }
     }
 
-    final void a(int param0, ac param1) {
+    final void setAnimator(int param0, PlayerAnimator param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -3378,7 +3378,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
           if (param0 != -27496) {
             Player.c(117, 34, -84, 122, 125, -27);
           }
-          this.field_u = param1;
+          this.animator = param1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3591,7 +3591,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            stackIn_4_0 = 2 + 2 * this.field_Q;
+            stackIn_4_0 = 2 + 2 * this.playerIndex;
             return stackIn_4_0;
           }
           stackIn_2_0 = -125;
@@ -3885,9 +3885,9 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = -37 / ((-23 - param0) / 38);
-          if (this.field_u != null) {
-            param1.a((byte) -82, 7, this.field_u);
-            this.field_u.a(30355, this.room);
+          if (this.animator != null) {
+            param1.a((byte) -82, 7, this.animator);
+            this.animator.a(30355, this.room);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3908,7 +3908,7 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         try {
           this.treasure[param1] = param2;
           if (!param0) {
-            this.field_bb = 119;
+            this.animationStateTicks = 119;
           }
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hca.HE(" + param0 + ',' + param1 + ',' + param2 + ')');
@@ -3995,22 +3995,22 @@ final class Player implements Renderable, WorldBody, Collidable, jfa, Teleportab
         this.size = 1572864;
         this.statusEffects = new IntrusiveDeque();
         this.statusFlags = new boolean[6];
-        this.field_v = new IntrusiveDeque();
+        this.collectedTreasures = new IntrusiveDeque();
         this.field_N = 65536;
         this.treasure = new int[3];
         this.roomTreasure = new int[3];
         this.heldItemKind = -1;
         this.field_jb = new TeleportState();
         this.field_F = -1;
-        this.field_hb = false;
+        this.collectedTreasure = false;
         this.field_cb = 0;
         this.elevation = 0;
-        this.field_y = -1;
-        this.field_B = 0;
+        this.chosenReward = -1;
+        this.animationStateTimer = 0;
         this.deathCountsByCause = new int[5];
         this.encodedDeathCount = 18202625;
         try {
-          this.field_Q = param0;
+          this.playerIndex = param0;
           this.respawn(-101, true);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "hca.<init>(" + param0 + ')');

@@ -543,7 +543,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("tutorial_firetocontinue", (byte) 100);
                 if (var2 != null) {
-                  vda.field_n = jaa.decodeText((byte) 127, var2);
+                  ColouriseOperator.field_n = jaa.decodeText((byte) 127, var2);
                 }
                 var2 = mt.readTextEntry("tutorial_room0", (byte) 116);
                 if (var2 != null) {
@@ -775,7 +775,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("instructionTitleWhiteLightBeams", (byte) 123);
                 if (var2 != null) {
-                  tu.field_d = jaa.decodeText((byte) 33, var2);
+                  MatchScoringObserver.field_d = jaa.decodeText((byte) 33, var2);
                 }
                 var2 = mt.readTextEntry("instructionTextWhiteLightBeams", (byte) 111);
                 if (var2 != null) {
@@ -1085,7 +1085,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("item_idols", (byte) 100);
                 if (var2 != null) {
-                  gla.field_o = jaa.decodeText((byte) 96, var2);
+                  BevelOperator.field_o = jaa.decodeText((byte) 96, var2);
                 }
                 var2 = mt.readTextEntry("weapon_dartgun", (byte) 103);
                 if (null != var2) {
@@ -1241,7 +1241,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("msg_chosen_character", (byte) 117);
                 if (var2 != null) {
-                  coa.field_n = jaa.decodeText((byte) 112, var2);
+                  SpriteSampleOperator.field_n = jaa.decodeText((byte) 112, var2);
                 }
                 var2 = mt.readTextEntry("msg_chosen_reward", (byte) 112);
                 if (null != var2) {
@@ -1305,7 +1305,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("watching", (byte) 113);
                 if (null != var2) {
-                  voa.field_q = jaa.decodeText((byte) 71, var2);
+                  CrossedSineBandsOperator.field_q = jaa.decodeText((byte) 71, var2);
                 }
                 var2 = mt.readTextEntry("round", (byte) 125);
                 if (var2 != null) {
@@ -1341,7 +1341,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("room_complete_points", (byte) 121);
                 if (null != var2) {
-                  gla.field_q = jaa.decodeText((byte) 107, var2);
+                  BevelOperator.field_q = jaa.decodeText((byte) 107, var2);
                 }
                 var2 = mt.readTextEntry("room_complete_points_with_bonus", (byte) 121);
                 if (null != var2) {
@@ -2059,7 +2059,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("no_medal", (byte) 116);
                 if (null != var2) {
-                  hb.field_v = jaa.decodeText((byte) 96, var2);
+                  SpriteTileOperator.field_v = jaa.decodeText((byte) 96, var2);
                 }
                 var2 = mt.readTextEntry("gold_medal", (byte) 101);
                 if (null != var2) {
@@ -2127,7 +2127,7 @@ final class pfa {
                 }
                 var2 = mt.readTextEntry("phaseEnd_friendsbest", (byte) 116);
                 if (null != var2) {
-                  qw.field_g = jaa.decodeText((byte) 39, var2);
+                  PenaltyNotice.field_g = jaa.decodeText((byte) 39, var2);
                 }
                 CurveOperator.textArchive = null;
             }

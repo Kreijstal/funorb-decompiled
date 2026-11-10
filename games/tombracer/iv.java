@@ -24,7 +24,7 @@ final class iv extends jea {
         int[] var12 = null;
         var8 = TombRacer.field_G ? 1 : 0;
         try {
-          var10 = vc.field_q;
+          var10 = WeaveOperator.field_q;
           var2 = var10.readUnsignedByte(255);
           var3 = var10.readUnsignedByte(param0 + 255);
           if (var2 == param0) {

@@ -98,7 +98,7 @@ final class ak extends ela {
         int var1;
         int var2;
         var2 = TombRacer.field_G ? 1 : 0;
-        nfa.field_p = false;
+        TileOperator.field_p = false;
         if (param0 == 0) {
           SnakePitBehaviour.field_o = null;
           if (jf.field_r) {
@@ -108,7 +108,7 @@ final class ak extends ela {
           var1 = lsa.field_a;
           if (0 < var1) {
             if (var1 != 1) {
-              SnakePitBehaviour.field_o = gl.$cfr$intArgs$a$53ce4ab4c593(100, nw.field_s, new String[]{Integer.toString(var1)});
+              SnakePitBehaviour.field_o = gl.$cfr$intArgs$a$53ce4ab4c593(100, VoronoiNoiseOperator.field_s, new String[]{Integer.toString(var1)});
             } else {
               SnakePitBehaviour.field_o = aga.field_a;
             }
@@ -126,7 +126,7 @@ final class ak extends ela {
           var1 = lsa.field_a;
           if (0 < var1) {
             if (var1 != 1) {
-              SnakePitBehaviour.field_o = gl.$cfr$intArgs$a$53ce4ab4c593(100, nw.field_s, new String[]{Integer.toString(var1)});
+              SnakePitBehaviour.field_o = gl.$cfr$intArgs$a$53ce4ab4c593(100, VoronoiNoiseOperator.field_s, new String[]{Integer.toString(var1)});
             } else {
               SnakePitBehaviour.field_o = aga.field_a;
             }

@@ -116,7 +116,7 @@ final class gqa {
           this.field_h = MatchPhase.field_e;
         }
         this.field_b = dga.field_a;
-        this.field_j = gia.field_q;
+        this.field_j = TextureSampleOperator.field_q;
     }
 
     gqa(int param0, String param1, int param2, String param3, String param4) {

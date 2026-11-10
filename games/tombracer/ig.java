@@ -7,7 +7,7 @@ final class ig {
         int var2 = TombRacer.field_G ? 1 : 0;
         qa.field_o = false;
         uu.field_a = null;
-        ifa.field_n = null;
+        WaveformOperator.field_n = null;
         if (param0 > -94) {
           return;
         }

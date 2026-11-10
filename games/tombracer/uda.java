@@ -235,7 +235,7 @@ final class uda extends MatchPhase {
         var4.a(param2, false, param1, 5, true);
         int var5 = var4.c((byte) 114);
         var4.a(param1 + 107, var5, param2, 0, 0);
-        jha var6 = RewardChoicePhase.a(param1 ^ -41, gl.$cfr$intArgs$a$53ce4ab4c593(82, coa.field_n, new String[]{this.matchState.getColouredPlayerName(param0, 23807), Room.field_m[param2]}));
+        jha var6 = RewardChoicePhase.a(param1 ^ -41, gl.$cfr$intArgs$a$53ce4ab4c593(82, SpriteSampleOperator.field_n, new String[]{this.matchState.getColouredPlayerName(param0, 23807), Room.field_m[param2]}));
         iqa.field_c.a(0, var6);
     }
 
@@ -258,7 +258,7 @@ final class uda extends MatchPhase {
         }
         if (qma.field_c &&
           this.f(0) &&
-          hf.field_b == 1) {
+          PlayerModel.field_b == 1) {
           this.a(true, this.field_v);
         }
         if (this.screen.g(0, 2)) {

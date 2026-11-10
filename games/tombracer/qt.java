@@ -109,7 +109,7 @@ final class qt {
           if (param0 > -10) {
             return;
           }
-          var1 = vc.field_q;
+          var1 = WeaveOperator.field_q;
           var2 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
           if (var2 != 0 &&
             var2 != 1 &&
@@ -383,10 +383,10 @@ final class qt {
           }
           if (var2 != 2 &&
             var2 != 3) {
-            ifa.field_n = null;
+            WaveformOperator.field_n = null;
           } else {
-            if (ifa.field_n == null) {
-              ifa.field_n = new ht(fk.field_b);
+            if (WaveformOperator.field_n == null) {
+              WaveformOperator.field_n = new ht(fk.field_b);
             }
           }
           if (var2 != 3) {

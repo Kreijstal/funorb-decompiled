@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qw extends IntrusiveNode {
+final class PenaltyNotice extends IntrusiveNode {
     static BinaryBitmapFont field_f;
     static String field_g;
     static d field_j;
-    private Player field_h;
-    private int field_i;
+    private Player player;
+    private int kind;
 
-    final Player b(int param0) {
+    final Player getPlayer(int param0) {
         if (param0 != -14065) {
-          qw.a(-124);
-          return this.field_h;
+          PenaltyNotice.a(-124);
+          return this.player;
         }
-        return this.field_h;
+        return this.player;
     }
 
     final static void a(int param0) {
@@ -28,7 +28,7 @@ final class qw extends IntrusiveNode {
           }
           return;
         }
-        qw.releaseStatics(false);
+        PenaltyNotice.releaseStatics(false);
         if (224 <= MatchState.field_w) {
           S2CRoundResultPacket.a(256, -116);
         } else {
@@ -46,17 +46,17 @@ final class qw extends IntrusiveNode {
         field_j = null;
     }
 
-    final int c(int param0) {
+    final int getKind(int param0) {
         if (param0 <= 4) {
           return -38;
         }
-        return this.field_i;
+        return this.kind;
     }
 
-    qw(Player param0, Room param1, int param2, int param3, int param4) {
+    PenaltyNotice(Player param0, Room param1, int param2, int param3, int param4) {
         try {
-          this.field_i = param3;
-          this.field_h = param0;
+          this.kind = param3;
+          this.player = param0;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "qw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

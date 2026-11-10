@@ -192,7 +192,7 @@ final class RewardChoicePhase extends MatchPhase {
             var11 = cs.field_b;
             var12 = 8947848;
           } else {
-            var13 = this.matchState.players[var17].z(115);
+            var13 = this.matchState.players[var17].getChosenReward(115);
             if (var13 == -1) {
               var14 = this.matchState.field_c.field_b[var17];
               var15 = this.field_o.getCurrentPos((byte) 50);
@@ -319,7 +319,7 @@ final class RewardChoicePhase extends MatchPhase {
         }
         if (qma.field_c &&
           this.a(GridWidgetContainer.field_B, 25006, jba.field_j) &&
-          hf.field_b == 1) {
+          PlayerModel.field_b == 1) {
           this.i(12721);
         }
         if (this.screen.g(param0, 2)) {

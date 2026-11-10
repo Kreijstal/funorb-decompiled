@@ -192,7 +192,7 @@ final class S2CRoundResultPacket implements GamePacket {
               var5.setTreasure(true, var6, this.treasure[var4][var6]);
             }
             var5.setTotal((byte) 126, this.totals[var4]);
-            var5.b(18202625, this.field_a[var4]);
+            var5.setChosenReward(18202625, this.field_a[var4]);
             var5.f(this.field_h[var4], -25915);
           }
           param0.matchState.field_E = this.field_j;

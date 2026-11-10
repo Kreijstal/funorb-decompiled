@@ -45,7 +45,7 @@ final class fa {
           var1 = null;
           var2 = null;
           if (bta.field_q == 0 &&
-            null != ifa.field_n) {
+            null != WaveformOperator.field_n) {
             var2 = sla.field_e;
           }
           if (bta.field_q == 2 &&
@@ -64,7 +64,7 @@ final class fa {
             }
           }
           if (null == var2 &&
-            !voa.field_v &&
+            !CrossedSineBandsOperator.field_v &&
             SimpleMoveLocomotor.field_s == null) {
             var2 = rt.field_p;
           }
@@ -145,7 +145,7 @@ final class fa {
                 }
               }
             }
-            dqa.a(var4 + BitmapFont.escapeMarkup(vc.field_n.toString()), var7, var5, pm.field_a[var6], 125);
+            dqa.a(var4 + BitmapFont.escapeMarkup(WeaveOperator.field_n.toString()), var7, var5, pm.field_a[var6], 125);
             if (!ni.field_c) {
               mka.field_b.field_o = false;
             }

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wna extends TextureOperator {
+final class ColourGradientOperator extends TextureOperator {
     static MouseInputHandler field_n;
     private int[][] field_o;
     private int[] field_m;
 
-    private final void d(int param0) {
+    private final void buildPalette(int param0) {
         int var7 = 0;
         int var10 = 0;
         int var2;
@@ -115,7 +115,7 @@ final class wna extends TextureOperator {
           if (param0 == 107) {
             return;
           }
-          wna.d((byte) 91);
+          ColourGradientOperator.d((byte) 91);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -133,14 +133,14 @@ final class wna extends TextureOperator {
 
     public static void d(byte param0) {
         if (param0 != -109) {
-          wna.c(103);
+          ColourGradientOperator.c(103);
           field_n = null;
           return;
         }
         field_n = null;
     }
 
-    public wna() {
+    public ColourGradientOperator() {
         super(1, false);
         this.field_m = new int[257];
     }
@@ -365,7 +365,7 @@ final class wna extends TextureOperator {
 
     final static boolean c(int param0) {
         if (param0 > -111) {
-          wna.d((byte) -62);
+          ColourGradientOperator.d((byte) -62);
           if (cga.field_f < 20) {
             return true;
           }
@@ -470,11 +470,11 @@ final class wna extends TextureOperator {
           this.d(1, -6333);
         }
         if (param0 == 116) {
-          this.d(112);
+          this.buildPalette(112);
           return;
         }
-        this.d(-31);
-        this.d(112);
+        this.buildPalette(-31);
+        this.buildPalette(112);
     }
 
     static {

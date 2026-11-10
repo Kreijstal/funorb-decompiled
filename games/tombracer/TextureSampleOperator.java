@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gia extends TextureOperator {
+final class TextureSampleOperator extends TextureOperator {
     private int field_r;
     static String field_o;
     private int field_n;
@@ -13,9 +13,9 @@ final class gia extends TextureOperator {
         int var4 = 0;
         super.b(param0, param1, param2);
         if (this.field_n >= 0 &&
-          null != qw.field_j) {
-          var4 = !qw.field_j.a((byte) -122, this.field_n).field_g ? 128 : 64;
-          this.field_m = qw.field_j.a(14907, this.field_n, false, var4, 1.0f, var4);
+          null != PenaltyNotice.field_j) {
+          var4 = !PenaltyNotice.field_j.a((byte) -122, this.field_n).field_g ? 128 : 64;
+          this.field_m = PenaltyNotice.field_j.a(14907, this.field_n, false, var4, 1.0f, var4);
           this.field_p = var4;
           this.field_r = var4;
         }
@@ -25,7 +25,7 @@ final class gia extends TextureOperator {
         field_o = null;
         field_q = null;
         if (param0 != -26382) {
-          gia.releaseStatics(102);
+          TextureSampleOperator.releaseStatics(102);
         }
     }
 
@@ -44,7 +44,7 @@ final class gia extends TextureOperator {
         this.field_m = null;
     }
 
-    public gia() {
+    public TextureSampleOperator() {
         super(0, false);
         this.field_n = -1;
     }

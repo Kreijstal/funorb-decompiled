@@ -58,7 +58,7 @@ final class nna {
             return stackIn_2_0;
           }
           if (MiscItemBehaviour.a(param1, 0)) {
-            stackIn_6_0 = iia.field_q;
+            stackIn_6_0 = RandomBrickOperator.field_q;
             return stackIn_6_0;
           }
           if (~UiWidget.field_g != param0) {

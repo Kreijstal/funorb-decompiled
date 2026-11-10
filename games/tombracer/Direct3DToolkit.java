@@ -264,7 +264,7 @@ public final class Direct3DToolkit extends HardwareGraphicsToolkit {
         if (r.field_m == param0) {
           return 26;
         }
-        if (param0 == jv.field_m) {
+        if (param0 == NormalMapOperator.field_m) {
           return 7;
         }
         if (gq.field_w == param0) {

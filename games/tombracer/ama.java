@@ -135,7 +135,7 @@ final class ama extends lba {
           int var2_int = 0;
           IOException var2 = null;
           Throwable decompiledCaughtException = null;
-          if (vc.field_q.position >= param0) {
+          if (WeaveOperator.field_q.position >= param0) {
             return true;
           }
           if (OpenGlTransform3D.field_e == null) {
@@ -154,16 +154,16 @@ final class ama extends lba {
               dea.a(60);
               return false;
             }
-            if (var2_int > -vc.field_q.position + param0) {
-              var2_int = -vc.field_q.position + param0;
+            if (var2_int > -WeaveOperator.field_q.position + param0) {
+              var2_int = -WeaveOperator.field_q.position + param0;
             }
-            OpenGlTransform3D.field_e.readFully(param1 + 1, vc.field_q.position, vc.field_q.payload, var2_int);
+            OpenGlTransform3D.field_e.readFully(param1 + 1, WeaveOperator.field_q.position, WeaveOperator.field_q.payload, var2_int);
             MiscItemBehaviour.field_s = bva.currentTimeMillis((byte) -107);
-            vc.field_q.position = vc.field_q.position + var2_int;
-            if (param0 > vc.field_q.position) {
+            WeaveOperator.field_q.position = WeaveOperator.field_q.position + var2_int;
+            if (param0 > WeaveOperator.field_q.position) {
               return false;
             }
-            vc.field_q.position = 0;
+            WeaveOperator.field_q.position = 0;
             return true;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

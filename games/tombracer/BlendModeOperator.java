@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eka extends TextureOperator {
+final class BlendModeOperator extends TextureOperator {
     static BitmapFont field_o;
-    private int field_m;
+    private int blendMode;
     static String field_n;
 
     public static void releaseStatics(int param0) {
@@ -127,7 +127,7 @@ final class eka extends TextureOperator {
           var53 = var51[0];
           var55 = var51[1];
           var56 = var51[2];
-          var21 = this.field_m;
+          var21 = this.blendMode;
           if (var21 == 1) {
             var12Lifetime1 = var33[0];
             var13Lifetime1 = var33[1];
@@ -516,7 +516,7 @@ final class eka extends TextureOperator {
           }
         }
         if (param1 != -1) {
-          eka.d((byte) 83);
+          BlendModeOperator.d((byte) 83);
         }
         return var3;
     }
@@ -549,7 +549,7 @@ final class eka extends TextureOperator {
         try {
           var4_int = param2;
           if (0 == var4_int) {
-            this.field_m = param1.readUnsignedByte(param0 + 148);
+            this.blendMode = param1.readUnsignedByte(param0 + 148);
           } else {
             if (1 == var4_int) {
               stackIn_8_1 = (param1.readUnsignedByte(255) == 1);
@@ -557,7 +557,7 @@ final class eka extends TextureOperator {
             }
           }
           if (param0 != 107) {
-            eka.d(111, -90);
+            BlendModeOperator.d(111, -90);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -604,9 +604,9 @@ final class eka extends TextureOperator {
         }
     }
 
-    public eka() {
+    public BlendModeOperator() {
         super(2, false);
-        this.field_m = 6;
+        this.blendMode = 6;
     }
 
     final int[] getMonochromeRow(int param0, int param1) {
@@ -646,7 +646,7 @@ final class eka extends TextureOperator {
         if (this.field_i.field_d) {
           var18 = this.getInputMonochromeRow(0, -89, param1);
           var17 = this.getInputMonochromeRow(1, -116, param1);
-          var8 = this.field_m;
+          var8 = this.blendMode;
           if (var8 == 1) {
             for (var8 = 0; ns.textureWidth > var8; var8++) {
               var3[var8] = var17[var8] + var18[var8];
@@ -782,7 +782,7 @@ final class eka extends TextureOperator {
           }
         }
         if (param0 != 1) {
-          this.field_m = -34;
+          this.blendMode = -34;
         }
         return var3;
     }

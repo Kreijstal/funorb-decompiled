@@ -98,30 +98,30 @@ abstract class ArchiveNetworkClient {
             return -114;
           }
           try {
-            if (cma.field_m == 0) {
+            if (ColourKeyOperator.field_m == 0) {
               bga.field_c = oi.field_a.a(-24818, TileGridCell.field_a, du.field_d);
-              cma.field_m = cma.field_m + 1;
+              ColourKeyOperator.field_m = ColourKeyOperator.field_m + 1;
             }
-            if (cma.field_m == 1) {
+            if (ColourKeyOperator.field_m == 1) {
               if (2 == bga.field_c.field_b) {
                 stackIn_16_0 = du.a(-1, (byte) 122);
                 return stackIn_16_0;
               }
               if (bga.field_c.field_b == 1) {
-                cma.field_m = cma.field_m + 1;
+                ColourKeyOperator.field_m = ColourKeyOperator.field_m + 1;
               }
             }
-            if (cma.field_m == 2) {
+            if (ColourKeyOperator.field_m == 2) {
               jia.field_a = new BufferedSocket((java.net.Socket) (bga.field_c.field_f), oi.field_a);
               var2 = new PacketBuffer(13);
               C2SActionPacket.a((byte) 107, pu.field_b, var2, wk.field_n, joa.field_a);
               var2.writeByte(15, 0);
               var2.writeInt(wea.field_a, (byte) 117);
               jia.field_a.a(var2.payload, 0, 13, 106);
-              cma.field_m = cma.field_m + 1;
+              ColourKeyOperator.field_m = ColourKeyOperator.field_m + 1;
               pm.field_n = 30000L + bva.currentTimeMillis((byte) -107);
             }
-            if (cma.field_m == 3) {
+            if (ColourKeyOperator.field_m == 3) {
               if (jia.field_a.c(0) <= 0) {
                 if (bva.currentTimeMillis((byte) -107) > pm.field_n) {
                   stackIn_31_0 = du.a(-2, (byte) 17);
@@ -133,15 +133,15 @@ abstract class ArchiveNetworkClient {
                   stackIn_26_0 = du.a(var1_int, (byte) -26);
                   return stackIn_26_0;
                 }
-                cma.field_m = cma.field_m + 1;
+                ColourKeyOperator.field_m = ColourKeyOperator.field_m + 1;
               }
             }
-            if (4 != cma.field_m) {
+            if (4 != ColourKeyOperator.field_m) {
               stackIn_36_0 = -1;
               return stackIn_36_0;
             }
             wg.field_l.attachConnection(jia.field_a, (byte) 54, StatefulWidgetPainter.field_q);
-            cma.field_m = 0;
+            ColourKeyOperator.field_m = 0;
             jia.field_a = null;
             bga.field_c = null;
             stackIn_34_0 = 0;

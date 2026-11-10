@@ -68,7 +68,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         int var3 = 0;
         int var3Lifetime1;
         try {
-          if (null == nfa.field_n) {
+          if (null == TileOperator.field_n) {
             return;
           }
           MotionTrackingModel.field_p = 0;
@@ -127,7 +127,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (nfa.field_n == null) {
+          if (TileOperator.field_n == null) {
             return;
           }
           ita.field_f = -1;
@@ -154,7 +154,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (nfa.field_n != null) {
+          if (TileOperator.field_n != null) {
             MotionTrackingModel.field_p = 0;
             var2_int = param0.getKeyCode();
             if (0 <= var2_int &&
@@ -200,7 +200,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         int var2_int = 0;
         int var3 = 0;
         try {
-          if (nfa.field_n != null) {
+          if (TileOperator.field_n != null) {
             var2_int = param0.getKeyChar();
             if (var2_int != 0 &&
               var2_int != 65535 &&

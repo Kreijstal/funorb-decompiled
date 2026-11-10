@@ -425,8 +425,8 @@ final class TileGrid implements Renderable {
           var10 = var10 + this.field_m;
           var11 = var11 + this.field_m;
         }
-        var12 = iia.d(this.field_c, this.a(-var10 + param0 + var9, false), 2);
-        var13 = iia.d(this.field_l, this.a(var9 - var11 + param3, false), 2);
+        var12 = RandomBrickOperator.d(this.field_c, this.a(-var10 + param0 + var9, false), 2);
+        var13 = RandomBrickOperator.d(this.field_l, this.a(var9 - var11 + param3, false), 2);
         var14 = MidiVoiceMixer.b(this.a(-var9 + var10 + param0, false), -1 + this.field_d, 124);
         var15 = MidiVoiceMixer.b(this.a(var11 + (param3 - var9), false), this.field_n - 1, 101);
         if (param2 > -104) {

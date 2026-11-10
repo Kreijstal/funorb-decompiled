@@ -14,7 +14,7 @@ public final class TombRacer extends rfa implements ls {
         boolean stackIn_7_0 = false;
         boolean stackIn_12_0 = false;
         boolean stackIn_17_0 = false;
-        if (rda.d(20125)) {
+        if (RasterizerOperator.d(20125)) {
           if (1 == param2) {
             ProxySocketConnector.c((byte) -118);
             return true;
@@ -83,7 +83,7 @@ public final class TombRacer extends rfa implements ls {
           this.field_D.a(fna.field_h, HardwareOpenGlToolkit.field_td, (byte) 126);
           return true;
         }
-        if (hb.field_t.a(param2, param1, param0 ^ -71)) {
+        if (SpriteTileOperator.field_t.a(param2, param1, param0 ^ -71)) {
           return true;
         }
         if (param0 != -72) {
@@ -122,7 +122,7 @@ public final class TombRacer extends rfa implements ls {
           if (!wka.field_d &&
             param1 != null &&
             wm.field_a != param1 &&
-            hb.field_t != param1) {
+            SpriteTileOperator.field_t != param1) {
             param1.a((byte) -28, false);
           }
           if (null != wm.field_a) {
@@ -140,13 +140,13 @@ public final class TombRacer extends rfa implements ls {
             }
           }
           var4_intLifetime1 = 0;
-          if (hb.field_t != null) {
-            if (hb.field_t.b(31923)) {
+          if (SpriteTileOperator.field_t != null) {
+            if (SpriteTileOperator.field_t.b(31923)) {
               SoftwareRasterizer.clear();
               var4_intLifetime1 = 1;
-              hb.field_t.a((byte) -28, true);
+              SpriteTileOperator.field_t.a((byte) -28, true);
             } else {
-              hb.field_t.a((byte) -28, true);
+              SpriteTileOperator.field_t.a((byte) -28, true);
             }
           }
           if (param0) {
@@ -311,9 +311,9 @@ public final class TombRacer extends rfa implements ls {
         dl.releaseStatics((byte) 96);
         fda.releaseStatics(param0 + 3574);
         du.releaseStatics(-6884);
-        hf.releaseStatics((byte) 126);
-        qw.releaseStatics(true);
-        tu.releaseStatics(-1);
+        PlayerModel.releaseStatics((byte) 126);
+        PenaltyNotice.releaseStatics(true);
+        MatchScoringObserver.releaseStatics(-1);
         kq.releaseStatics(param0 ^ 11052);
         MatchPhase.releaseStatics(param0 + 3762);
         Player.D(-1);
@@ -771,38 +771,38 @@ public final class TombRacer extends rfa implements ls {
         StripedMazeGenerator.releaseStatics(19290);
         PrimMazeGenerator.releaseStatics(-21755);
         DivisionMazeGenerator.releaseStatics(true);
-        coa.releaseStatics(16711680);
-        gia.releaseStatics(-26382);
+        SpriteSampleOperator.releaseStatics(16711680);
+        TextureSampleOperator.releaseStatics(-26382);
         tga.releaseStatics(61);
         MonochromeFillOperator.releaseStatics((byte) -119);
         ColourFillOperator.releaseStatics(7438);
         BrickOperator.d(-21771);
         ClampOperator.releaseStatics(0);
-        eka.releaseStatics(param0 ^ 3612);
+        BlendModeOperator.releaseStatics(param0 ^ 3612);
         CurveOperator.releaseStatics(-92);
         FlipOperator.releaseStatics((byte) -93);
-        wna.d((byte) -109);
-        vda.releaseStatics((byte) 90);
-        ifa.releaseStatics((byte) 117);
-        gla.releaseStatics((byte) -102);
-        nw.releaseStatics((byte) 118);
-        vc.releaseStatics(3);
-        wsa.releaseStatics(-33);
-        hb.releaseStatics(true);
-        vla.releaseStatics(param0 ^ -3668);
-        nfa.releaseStatics((byte) -123);
+        ColourGradientOperator.d((byte) -109);
+        ColouriseOperator.releaseStatics((byte) 90);
+        WaveformOperator.releaseStatics((byte) 117);
+        BevelOperator.releaseStatics((byte) -102);
+        VoronoiNoiseOperator.releaseStatics((byte) 118);
+        WeaveOperator.releaseStatics(3);
+        HslAdjustOperator.releaseStatics(-33);
+        SpriteTileOperator.releaseStatics(true);
+        DisplacementOperator.releaseStatics(param0 ^ -3668);
+        TileOperator.releaseStatics((byte) -123);
         MaskBlendOperator.releaseStatics(-124);
         InvertOperator.releaseStatics(param0 ^ 14527);
         ThresholdOperator.releaseStatics(false);
-        bj.releaseStatics(true);
-        iia.releaseStatics(-1);
-        rda.c(-118);
+        StripesOperator.releaseStatics(true);
+        RandomBrickOperator.releaseStatics(-1);
+        RasterizerOperator.c(-118);
         RangeOperator.releaseStatics(param0 ^ 17000);
         MandelbrotOperator.a(true);
-        un.releaseStatics(true);
-        jv.releaseStatics(param0 ^ 12863);
-        go.releaseStatics((byte) -105);
-        voa.releaseStatics(0);
+        EmbossOperator.releaseStatics(true);
+        NormalMapOperator.releaseStatics(param0 ^ 12863);
+        EdgeDetectOperator.releaseStatics((byte) -105);
+        CrossedSineBandsOperator.releaseStatics(0);
         LineNoiseOperator.releaseStatics((byte) 101);
         cna.releaseStatics(param0 ^ 3646);
         ScrollingTexturePixels.releaseStatics();
@@ -982,7 +982,7 @@ public final class TombRacer extends rfa implements ls {
         qja.a(param0 ^ 3694);
         oda.releaseStatics(true);
         hra.releaseStatics(false);
-        rra.releaseStatics(false);
+        RasterShape.releaseStatics(false);
         nma.releaseStatics(false);
         qo.releaseStatics(true);
         dca.releaseStatics(param0 + 3668);
@@ -1016,7 +1016,7 @@ public final class TombRacer extends rfa implements ls {
         if (param0 != 84) {
           this.field_E = -98;
         }
-        stackIn_8_0 = (RandomMazeBehaviour.field_n) || (rpa.field_d) || (vda.field_q);
+        stackIn_8_0 = (RandomMazeBehaviour.field_n) || (rpa.field_d) || (ColouriseOperator.field_q);
         return stackIn_8_0;
     }
 
@@ -1061,7 +1061,7 @@ public final class TombRacer extends rfa implements ls {
         if (null != mq.field_e &&
           mq.field_e.a(54) > 0 &&
           this.field_D == null &&
-          hb.field_t != SecondaryNodeDequeIterator.field_a) {
+          SpriteTileOperator.field_t != SecondaryNodeDequeIterator.field_a) {
           var4 = mq.field_e.c(43);
           stackIn_10_0 = !param0;
           if (!rd.b(stackIn_10_0) ||
@@ -1071,7 +1071,7 @@ public final class TombRacer extends rfa implements ls {
         }
         stackIn_17_0 = iqa.field_c;
         stackIn_17_1 = -91;
-        stackIn_18_2 = (null != SecondaryNodeDequeIterator.field_a) && (hb.field_t == SecondaryNodeDequeIterator.field_a);
+        stackIn_18_2 = (null != SecondaryNodeDequeIterator.field_a) && (SpriteTileOperator.field_t == SecondaryNodeDequeIterator.field_a);
         ((ila) (Object) stackIn_17_0).a((byte) stackIn_17_1, stackIn_18_2, false);
         if (!param0) {
           this.field_E = 123;
@@ -1081,7 +1081,7 @@ public final class TombRacer extends rfa implements ls {
             !(wm.field_a instanceof ala)) {
             wm.field_a.a(false, false, 15283);
           }
-          hb.field_t.a(true, param1, 15283);
+          SpriteTileOperator.field_t.a(true, param1, 15283);
           if (cs.field_c != null &&
             wka.field_d) {
             cs.field_c.a(false, false, 15283);
@@ -1095,7 +1095,7 @@ public final class TombRacer extends rfa implements ls {
           param1 = stackIn_27_0;
         }
         if (!RandomMazeBehaviour.field_n ||
-          SecondaryNodeDequeIterator.field_a == hb.field_t) {
+          SecondaryNodeDequeIterator.field_a == SpriteTileOperator.field_t) {
           rp.a(8824);
         }
         this.field_H.b((byte) -66);
@@ -1229,7 +1229,7 @@ public final class TombRacer extends rfa implements ls {
               ConstrainToRectangleLocomotor.a(false, 0, (byte) 111);
             }
             rpa.field_d = false;
-            vda.field_q = false;
+            ColouriseOperator.field_q = false;
             return true;
           }
           if (10 == param0 &&
@@ -1279,7 +1279,7 @@ public final class TombRacer extends rfa implements ls {
                 ConstrainToRectangleLocomotor.a(false, -2, (byte) -33);
                 iqa.field_c.d(96);
               }
-              vda.field_q = false;
+              ColouriseOperator.field_q = false;
               return true;
             }
             if (param0 == 86) {
@@ -1382,7 +1382,7 @@ public final class TombRacer extends rfa implements ls {
           SecondaryNodeDequeIterator.field_a.j((byte) -121);
           iqa.field_c.a(-68);
           ConstrainToRectangleLocomotor.a(false, -1, (byte) 83);
-          vda.field_q = false;
+          ColouriseOperator.field_q = false;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1548,14 +1548,14 @@ public final class TombRacer extends rfa implements ls {
               fp.a(-82);
               ConstrainToRectangleLocomotor.a(false, 0, (byte) 124);
             }
-            ((wv) (hb.field_t)).a(0, 0, false);
+            ((wv) (SpriteTileOperator.field_t)).a(0, 0, false);
             RandomMazeBehaviour.field_n = false;
             iqa.field_c.c(-89);
           }
-          vda.field_q = false;
+          ColouriseOperator.field_q = false;
           rpa.field_d = false;
         } else {
-          vda.field_q = true;
+          ColouriseOperator.field_q = true;
           rpa.field_d = true;
         }
     }

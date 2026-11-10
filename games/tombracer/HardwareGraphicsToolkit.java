@@ -335,7 +335,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
                   this.setTextureCombineOperations(gq.field_w, (byte) -110, gq.field_w);
                 }
               } else {
-                this.setTextureCombineOperations(iw.field_c, (byte) -110, jv.field_m);
+                this.setTextureCombineOperations(iw.field_c, (byte) -110, NormalMapOperator.field_m);
               }
             }
           } else {
@@ -880,9 +880,9 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         if (param0 != -74) {
           this.field_T = (float[]) null;
         }
-        if (coa.field_s != this.field_r) {
+        if (SpriteSampleOperator.field_s != this.field_r) {
           var2 = this.field_r;
-          this.field_r = coa.field_s;
+          this.field_r = SpriteSampleOperator.field_s;
           if (!var2.a(-109)) {
             this.v((byte) 94);
           }
@@ -1028,7 +1028,7 @@ abstract class HardwareGraphicsToolkit extends GraphicsToolkit {
         if (param0 != -19320) {
           this.field_Mb = (hk) null;
         }
-        if (this.field_r == coa.field_s) {
+        if (this.field_r == SpriteSampleOperator.field_s) {
           this.l((byte) 26);
         }
     }

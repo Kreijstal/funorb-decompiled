@@ -76,7 +76,7 @@ final class LaserShooterComponent extends ShooterComponent {
           if (var3_int >= 12) {
             return false;
           }
-          if (hf.isNameSeparator(114, param2) &&
+          if (PlayerModel.isNameSeparator(114, param2) &&
             0 == var3_int) {
             return false;
           }

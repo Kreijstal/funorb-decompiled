@@ -35,12 +35,12 @@ final class PlantModel extends TrapModel {
 
     final static void a(int param0, java.awt.Component param1) {
         try {
-          param1.removeKeyListener(nfa.field_n);
+          param1.removeKeyListener(TileOperator.field_n);
           if (param0 != -18520) {
             java.awt.Component var3 = (java.awt.Component) null;
             PlantModel.a(-126, (java.awt.Component) null);
           }
-          param1.removeFocusListener(nfa.field_n);
+          param1.removeFocusListener(TileOperator.field_n);
           ita.field_f = -1;
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "ki.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

@@ -480,7 +480,7 @@ final class ReportAbuseDialog extends jea {
           return -1;
         }
         if (param1 &&
-          hf.field_b != 0 &&
+          PlayerModel.field_b != 0 &&
           this.field_y == 0) {
           return -1;
         }

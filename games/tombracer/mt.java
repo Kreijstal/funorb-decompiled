@@ -42,7 +42,7 @@ abstract class mt {
         }
     }
 
-    abstract tu a(MatchState param0, int param1);
+    abstract MatchScoringObserver a(MatchState param0, int param1);
 
     static {
     }

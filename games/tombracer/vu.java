@@ -82,7 +82,7 @@ final class vu extends vw {
         var12 = TombRacer.field_G ? 1 : 0;
         try {
           dga.a(GameKeyHandler.field_a, 199);
-          if (null != ifa.field_n) {
+          if (null != WaveformOperator.field_n) {
             pk.field_z.field_t = 0;
             var15 = pk.field_z;
             var17 = var15;
@@ -159,7 +159,7 @@ final class vu extends vw {
                   sda.field_f[var13] = false;
                   var13++;
                 }
-                cja.a(param0 + 108, fk.field_b, ifa.field_n, 0, -1, -1, -1, true);
+                cja.a(param0 + 108, fk.field_b, WaveformOperator.field_n, 0, -1, -1, -1, true);
                 if (!(ld.field_e < 2) &&
                   VerticalScrollbar.field_tb[12]) {
                   TouchSwitchBehaviour.field_s = true;
@@ -227,7 +227,7 @@ final class vu extends vw {
           stackIn_72_1 = -111;
           stackIn_73_2 = (param1) && (!param2) && (!tla.field_e);
           ((jea) (Object) stackIn_72_0).c(stackIn_72_1, stackIn_73_2);
-          stackIn_77_0 = hf.field_a;
+          stackIn_77_0 = PlayerModel.field_a;
           stackIn_77_1 = -113;
           stackIn_78_2 = (param1) && (!param2) && (tla.field_e);
           ((jea) (Object) stackIn_77_0).c(stackIn_77_1, stackIn_78_2);
@@ -235,7 +235,7 @@ final class vu extends vw {
           if (param0 != 1) {
             vu.releaseStatics(-121);
           }
-          if (null != ifa.field_n) {
+          if (null != WaveformOperator.field_n) {
             if (bc.field_b.field_y != 0) {
               gk.a(param3, (byte) 28);
             }
@@ -246,7 +246,7 @@ final class vu extends vw {
                 jq.a(param3, (byte) -128);
               }
             }
-            cm.a(param3, ifa.field_n, -21290, true);
+            cm.a(param3, WaveformOperator.field_n, -21290, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qo extends rra {
+final class qo extends RasterShape {
     static String field_i;
     private int field_h;
     private int field_g;
@@ -22,7 +22,7 @@ final class qo extends rra {
         int var6 = param2 * this.field_j >> 12;
         if (param0 <= -117) {
           var7 = param2 * this.field_f >> 12;
-          rra.a(var4, this.field_c, var6, var7, 0, var5, this.field_b, this.field_d);
+          RasterShape.a(var4, this.field_c, var6, var7, 0, var5, this.field_b, this.field_d);
           return;
         }
     }

@@ -122,18 +122,18 @@ final class BoulderComponent extends PathMoverComponent {
     final static void s(byte param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        var1 = wna.field_n;
+        var1 = ColourGradientOperator.field_n;
         synchronized (var1) {
           if (param0 != -44) {
             BoulderComponent.releaseStatics((byte) 73);
           }
-          tu.field_h = tu.field_h + 1;
+          MatchScoringObserver.field_h = MatchScoringObserver.field_h + 1;
           RangeOperator.field_p = tka.field_n;
           jba.field_j = ena.field_n;
           GridWidgetContainer.field_B = ee.field_a;
           qma.field_c = PlayerContextMenu.field_c;
           PlayerContextMenu.field_c = false;
-          hf.field_b = DisplaySettingsDialog.field_X;
+          PlayerModel.field_b = DisplaySettingsDialog.field_X;
           PasswordValidator.field_m = cr.field_d;
           lba.field_p = TestModel.field_m;
           DisplaySettingsDialog.field_X = 0;

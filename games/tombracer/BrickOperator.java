@@ -30,7 +30,7 @@ final class BrickOperator extends TextureOperator {
           dea.a(60);
           return;
         }
-        BitPacketBuffer var2 = vc.field_q;
+        BitPacketBuffer var2 = WeaveOperator.field_q;
         if (param0 < 23) {
           field_t = (int[]) null;
         }

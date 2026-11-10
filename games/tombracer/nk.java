@@ -36,7 +36,7 @@ final class nk extends IntrusiveNode {
           return (TextWidgetPainter) null;
         }
         if (ur.field_a == null) {
-          ur.field_a = new TextWidgetPainter(eka.field_o, 20, 0, 0, 0, 11579568, -1, 0, 0, eka.field_o.field_w, -1, 2147483647, true);
+          ur.field_a = new TextWidgetPainter(BlendModeOperator.field_o, 20, 0, 0, 0, 11579568, -1, 0, 0, BlendModeOperator.field_o.field_w, -1, 2147483647, true);
         }
         return ur.field_a;
     }

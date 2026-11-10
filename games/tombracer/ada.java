@@ -35,7 +35,7 @@ final class ada extends ArrayWidgetGroup implements ButtonListener {
 
     final void renderLayer(int param0, int param1, int param2, int param3) {
         super.renderLayer(param0, param1, param2, param3);
-        eka.field_o.c(mca.field_d, this.field_i + (param0 + 4), 4 + (eka.field_o.field_w + (this.field_n + param1)), 16777215, -1);
+        BlendModeOperator.field_o.c(mca.field_d, this.field_i + (param0 + 4), 4 + (BlendModeOperator.field_o.field_w + (this.field_n + param1)), 16777215, -1);
     }
 
     ada(int param0, int param1, int param2, int param3) {
@@ -60,9 +60,9 @@ final class ada extends ArrayWidgetGroup implements ButtonListener {
     final static int b(boolean param0) {
         if (param0) {
           ada.releaseStatics(-7);
-          return tu.field_h;
+          return MatchScoringObserver.field_h;
         }
-        return tu.field_h;
+        return MatchScoringObserver.field_h;
     }
 
     final void layoutChildren(byte param0) {

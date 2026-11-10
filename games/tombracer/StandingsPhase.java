@@ -183,7 +183,7 @@ final class StandingsPhase extends MatchPhase {
             var9 = -var8 + var6;
             var10 = -(var5 * var9) + SwitchLinkList.b(0);
             var11 = var4 * var22 + (var3 - (var4 >> 1) * (-1 + var6));
-            this.matchState.players[var22].n((byte) -120).a(-1, var11, 800, 0, var10);
+            this.matchState.players[var22].getAnimator((byte) -120).a(-1, var11, 800, 0, var10);
             IntrusiveDeque.field_c.a(var11 - (IntrusiveDeque.field_c.a() >> 1) + 1, var10 - 8);
             if (var8 == 0) {
               GridWidgetContainer.field_y[-1 + GridWidgetContainer.field_y.length].a(-(GridWidgetContainer.field_y[GridWidgetContainer.field_y.length - 1].a() >> 1) + var11 - 1, var10 - 12);
@@ -238,7 +238,7 @@ final class StandingsPhase extends MatchPhase {
             oka.a(iaa.field_a.toUpperCase(), 2431750, eda.field_f, -1, -40 + var4, var3, -1);
             if (var9 == uca.field_a) {
               var12_ref = null;
-              var13_ref_String = hb.field_v;
+              var13_ref_String = SpriteTileOperator.field_v;
               if (C2SActionPacket.field_j == 3) {
                 var12_ref = za.field_g;
                 var13_ref_String = uaa.field_d;
@@ -261,7 +261,7 @@ final class StandingsPhase extends MatchPhase {
             var24 = dea.a(this.matchState.c((byte) 115, this.screen.field_x), (byte) -8);
             oka.a(cc.field_l.toUpperCase() + " " + var24.toUpperCase(), 2431750, kn.field_p, -1, 20 + var4, -120 + var3, -1);
             oka.a(ContentTransitionDialog.field_L.toUpperCase(), 2431750, eda.field_f, -1, var4, 120 + var3, -1);
-            var13 = this.screen.matchState.simulations[this.screen.field_x].player.v(74);
+            var13 = this.screen.matchState.simulations[this.screen.field_x].player.getScore(74);
             oka.a(Integer.toString(var13), 2431750, eda.field_f, -1, 20 + var4, 120 + var3, -1);
           } else {
             var23 = dea.a(this.matchState.c((byte) 115, this.screen.field_x), (byte) -8);
@@ -272,7 +272,7 @@ final class StandingsPhase extends MatchPhase {
             bca.field_d.a(var3 - 110, 60 + var4);
             RoomEffectTraps.a(-1, -92, 79 + var4, dea.a(var13 + var13 / 2, (byte) -8), bca.field_d.d() + (var3 - 110) + 5, kn.field_p, 2431750);
             oka.a(ContentTransitionDialog.field_L.toUpperCase(), 2431750, eda.field_f, -1, 5 + var4, 120 + var3, -1);
-            var14 = this.screen.matchState.simulations[this.screen.field_x].player.v(110);
+            var14 = this.screen.matchState.simulations[this.screen.field_x].player.getScore(110);
             oka.a(Integer.toString(var14), 2431750, eda.field_f, -1, var4 + 22, var3 + 120, -1);
             if (FacePlayerLocomotor.field_p != null &&
               FacePlayerLocomotor.field_p.field_p != null &&
@@ -295,7 +295,7 @@ final class StandingsPhase extends MatchPhase {
               }
               if (var18 != null) {
                 var16 = var14 - var17;
-                SocketConnector.a(gl.$cfr$intArgs$a$53ce4ab4c593(121, qw.field_g, new String[]{Integer.toString(var17).toUpperCase() + " " + qu.a(var16, -1), (String) (var18)}), 0, kn.field_p, 2431750, 13, 50, 1, var4 + 60, var3, -1, (byte) 60, 240);
+                SocketConnector.a(gl.$cfr$intArgs$a$53ce4ab4c593(121, PenaltyNotice.field_g, new String[]{Integer.toString(var17).toUpperCase() + " " + qu.a(var16, -1), (String) (var18)}), 0, kn.field_p, 2431750, 13, 50, 1, var4 + 60, var3, -1, (byte) 60, 240);
               }
             }
           }
@@ -338,7 +338,7 @@ final class StandingsPhase extends MatchPhase {
     }
 
     final void a(int param0, boolean param1) {
-        hf stackIn_5_0 = null;
+        PlayerModel stackIn_5_0 = null;
         int stackIn_5_1 = 0;
         int stackIn_6_2 = 0;
         int stackIn_24_0 = 0;
@@ -347,13 +347,13 @@ final class StandingsPhase extends MatchPhase {
         boolean stackIn_30_2 = false;
         int var3;
         int var4;
-        hf var4_ref_hf;
+        PlayerModel var4_ref_hf;
         int var5;
         int var3Lifetime1;
         int var3Lifetime2;
         var5 = TombRacer.field_G ? 1 : 0;
         for (var3 = 0; var3 < this.matchState.players.length; var3++) {
-          var4_ref_hf = (hf) (this.matchState.players[var3].n((byte) -67));
+          var4_ref_hf = (PlayerModel) (this.matchState.players[var3].getAnimator((byte) -67));
           if (!this.field_q) {
             stackIn_5_0 = var4_ref_hf;
             stackIn_5_1 = 26;
@@ -362,7 +362,7 @@ final class StandingsPhase extends MatchPhase {
             } else {
               stackIn_6_2 = 23;
             }
-            ((hf) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_6_2, false);
+            ((PlayerModel) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_6_2, false);
           }
           var4_ref_hf.a(21463);
           var4_ref_hf.f(-4366);
@@ -400,7 +400,7 @@ final class StandingsPhase extends MatchPhase {
           ((fna) (Object) stackIn_29_0).a(stackIn_29_1, stackIn_30_2, true, 6);
           if (param1 &&
             var4 != 0 &&
-            0 != hf.field_b) {
+            0 != PlayerModel.field_b) {
             this.a(120, var3Lifetime1);
           }
         }

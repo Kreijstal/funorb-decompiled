@@ -16,7 +16,7 @@ abstract class r extends DualLinkNode {
           if (uu.field_a != null) {
             MidiVoiceMixer.a(11, 30, uu.field_a.f(param0 ^ 0));
           }
-          vda.field_q = true;
+          ColouriseOperator.field_q = true;
           return;
         }
         if (param1) {
@@ -26,7 +26,7 @@ abstract class r extends DualLinkNode {
         if (uu.field_a != null) {
           MidiVoiceMixer.a(11, 30, uu.field_a.f(param0 ^ 0));
         }
-        vda.field_q = true;
+        ColouriseOperator.field_q = true;
     }
 
     final static via a(int param0, int param1, int param2, PlatformTaskDispatcher param3, int param4, int param5) {

@@ -165,7 +165,7 @@ final class PlayerSimulation {
         }
     }
 
-    final void a(Player param0, int param1, int param2, int param3) {
+    final void reportPenalty(Player param0, int param1, int param2, int param3) {
         SimulationObserver var5 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -175,7 +175,7 @@ final class PlayerSimulation {
         try {
           var5 = this.getObserver(9262);
           if (var5 != null) {
-            var5.a(15, param0, param1, param0.getRoom((byte) -96), this.tick, param3);
+            var5.onPenalty(15, param0, param1, param0.getRoom((byte) -96), this.tick, param3);
           }
           if (param2 != 1) {
             this.d(18, 84);
@@ -287,7 +287,7 @@ final class PlayerSimulation {
           }
           var7 = this.getObserver(param0 + 9263);
           if (var7 != null) {
-            var7.a(this.player, var2, false);
+            var7.onRoomCompleted(this.player, var2, false);
           }
           if (var3 == null) {
             this.a(89, true);
@@ -306,7 +306,7 @@ final class PlayerSimulation {
         }
         var6 = this.getObserver(param0 + 9263);
         if (var6 != null) {
-          var6.a(this.player, var2, false);
+          var6.onRoomCompleted(this.player, var2, false);
         }
         if (var3Lifetime1 == null) {
           this.a(89, true);
@@ -356,7 +356,7 @@ final class PlayerSimulation {
         }
     }
 
-    final void a(Player param0, int param1) {
+    final void reportDeathPenalty(Player param0, int param1) {
         SimulationObserver var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -369,7 +369,7 @@ final class PlayerSimulation {
             return;
           }
           if (var3 != null) {
-            var3.a(15, param0, 0, param0.getRoom((byte) -118), this.tick, 2);
+            var3.onPenalty(15, param0, 0, param0.getRoom((byte) -118), this.tick, 2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -448,9 +448,9 @@ final class PlayerSimulation {
     final int b(boolean param0, int param1) {
         if (param0) {
           this.clearRoomEffectSlot((byte) 29, -34, 71);
-          return iia.d(this.getEffectSlot(param1, 0), this.rooms[this.player.getCourseIndex(-101)].getEffectSlot(-121, param1), 2);
+          return RandomBrickOperator.d(this.getEffectSlot(param1, 0), this.rooms[this.player.getCourseIndex(-101)].getEffectSlot(-121, param1), 2);
         }
-        return iia.d(this.getEffectSlot(param1, 0), this.rooms[this.player.getCourseIndex(-101)].getEffectSlot(-121, param1), 2);
+        return RandomBrickOperator.d(this.getEffectSlot(param1, 0), this.rooms[this.player.getCourseIndex(-101)].getEffectSlot(-121, param1), 2);
     }
 
     final boolean h(int param0) {

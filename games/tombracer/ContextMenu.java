@@ -111,7 +111,7 @@ final class ContextMenu extends jea {
             return this.field_Fb[var3];
           }
         }
-        if (hf.field_b != param0) {
+        if (PlayerModel.field_b != param0) {
           return -1;
         }
         return this.field_xb;
@@ -122,10 +122,10 @@ final class ContextMenu extends jea {
         Throwable decompiledCaughtException = null;
         Object var2 = null;
         var1 = 1 % ((-53 - param0) / 62);
-        if (nfa.field_n != null) {
-          var2 = nfa.field_n;
+        if (TileOperator.field_n != null) {
+          var2 = TileOperator.field_n;
           synchronized (var2) {
-            nfa.field_n = null;
+            TileOperator.field_n = null;
           }
         }
     }

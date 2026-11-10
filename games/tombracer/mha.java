@@ -59,7 +59,7 @@ final class mha extends FocusableWidget {
         int var5 = (this.field_m >> 1) + this.field_i + param0;
         int var6 = (this.field_p >> 1) + param1 + this.field_n;
         it var8 = this.field_z.b(-4666);
-        if (gla.field_p == var8) {
+        if (BevelOperator.field_p == var8) {
           var15 = pq.field_b[0];
           var9 = var15.field_n << 1;
           var10 = var15.field_k << 1;

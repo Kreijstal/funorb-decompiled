@@ -6,10 +6,10 @@ final class aua extends mt {
     static String field_c;
     static int field_b;
 
-    final tu a(MatchState param0, int param1) {
+    final MatchScoringObserver a(MatchState param0, int param1) {
         RuntimeException var3 = null;
         MatchState var4 = null;
-        tu stackIn_3_0 = null;
+        MatchScoringObserver stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -19,7 +19,7 @@ final class aua extends mt {
             var4 = (MatchState) null;
             this.a((MatchState) null, 53);
           }
-          stackIn_3_0 = new tu(param0);
+          stackIn_3_0 = new MatchScoringObserver(param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -128,7 +128,7 @@ final class FullscreenConfirmationDialog extends ofa implements ButtonListener {
           var3.field_p = 100;
           var3.field_n = 50;
           var3.field_i = 0;
-          var3.field_r = (isa) ((Object) new TextWidgetPainter(eka.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var3.field_r = (isa) ((Object) new TextWidgetPainter(BlendModeOperator.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(var3, -1);
           this.field_L = new UiWidget(rfa.field_B, (WidgetListener) null);
           this.field_L.field_i = 0;
@@ -137,7 +137,7 @@ final class FullscreenConfirmationDialog extends ofa implements ButtonListener {
           this.field_L.field_p = 80;
           this.field_L.field_r = (isa) ((Object) new TextWidgetPainter(ft.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(this.field_L, -1);
-          this.field_N = this.addButton((WidgetListener) (this), 77, vc.field_s);
+          this.field_N = this.addButton((WidgetListener) (this), 77, WeaveOperator.field_s);
           this.field_M = this.addButton((WidgetListener) (this), 71, mha.field_F);
         } catch (RuntimeException runtimeException) {
           throw tba.a((Throwable) ((Object) runtimeException), "op.<init>(" + (param0 != null ? "{...}" : "null") + ')');

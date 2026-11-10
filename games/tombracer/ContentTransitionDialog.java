@@ -80,8 +80,8 @@ abstract class ContentTransitionDialog extends ofa {
         try {
           this.field_T = param1;
           if (this.field_M != us.field_e) {
-            if (bj.field_p != this.field_M) {
-              this.field_M = bj.field_p;
+            if (StripesOperator.field_p != this.field_M) {
+              this.field_M = StripesOperator.field_p;
               this.field_R = 0;
             }
           } else {
@@ -112,7 +112,7 @@ abstract class ContentTransitionDialog extends ofa {
         int fieldTemp$1 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
         if (null != this.field_M) {
-          if (this.field_M == bj.field_p) {
+          if (this.field_M == StripesOperator.field_p) {
             fieldTemp$0 = this.field_R + 1;
             this.field_R = this.field_R + 1;
             if (fieldTemp$0 != this.field_O) {
@@ -176,7 +176,7 @@ abstract class ContentTransitionDialog extends ofa {
     }
 
     final void d(int param0) {
-        if (this.field_M == bj.field_p) {
+        if (this.field_M == StripesOperator.field_p) {
           return;
         }
         this.field_M = nr.field_a;

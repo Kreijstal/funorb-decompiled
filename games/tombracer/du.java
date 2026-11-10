@@ -19,7 +19,7 @@ final class du {
         bga.field_c = null;
         var2 = -112 / ((param1 - 76) / 38);
         jia.field_a = null;
-        cma.field_m = 0;
+        ColourKeyOperator.field_m = 0;
         var3 = field_d;
         field_d = ko.field_d;
         if (param0 == 51) {

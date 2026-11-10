@@ -466,7 +466,7 @@ final class CoinBagItemComponent extends ItemComponent {
           stackIn_173_1 = 67;
           stackIn_174_2 = (param4) && (!param0) && (!tla.field_e);
           ((jea) (Object) stackIn_173_0).c(stackIn_173_1, stackIn_174_2);
-          stackIn_178_0 = hf.field_a;
+          stackIn_178_0 = PlayerModel.field_a;
           stackIn_178_1 = 36;
           stackIn_179_2 = (param4) && (!param0) && (tla.field_e);
           ((jea) (Object) stackIn_178_0).c(stackIn_178_1, stackIn_179_2);

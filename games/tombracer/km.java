@@ -24,9 +24,9 @@ final class km extends DualLinkNode {
         int var4_intLifetime1;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          if (param2 <= gla.field_m) {
+          if (param2 <= BevelOperator.field_m) {
             for (var4_int = 0; var4_int < this.field_q.length; var4_int++) {
-              if (!param0.a(gla.field_m, (byte) -106, this.field_q[var4_int])) {
+              if (!param0.a(BevelOperator.field_m, (byte) -106, this.field_q[var4_int])) {
                 return false;
               }
             }
@@ -111,7 +111,7 @@ final class km extends DualLinkNode {
         int var9Lifetime1;
         var18 = TombRacer.field_G ? 1 : 0;
         try {
-          qw.field_j = param0;
+          PenaltyNotice.field_j = param0;
           np.field_m = param5;
           for (var7_int = 0; this.field_l.length > var7_int; var7_int++) {
             this.field_l[var7_int].b(param3, param2, -256);
@@ -240,7 +240,7 @@ final class km extends DualLinkNode {
         int var15Lifetime1;
         var24 = TombRacer.field_G ? 1 : 0;
         try {
-          qw.field_j = param4;
+          PenaltyNotice.field_j = param4;
           np.field_m = param1;
           for (var10_int = 0; this.field_l.length > var10_int; var10_int++) {
             this.field_l[var10_int].b(param6, param0, -256);
@@ -471,7 +471,7 @@ final class km extends DualLinkNode {
         int var11Lifetime1;
         var21 = TombRacer.field_G ? 1 : 0;
         try {
-          qw.field_j = param5;
+          PenaltyNotice.field_j = param5;
           np.field_m = param4;
           for (var9_int = 0; this.field_l.length > var9_int; var9_int++) {
             this.field_l[var9_int].b(param0, param2, -256);

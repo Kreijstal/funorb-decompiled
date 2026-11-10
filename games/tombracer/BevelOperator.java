@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gla extends TextureOperator {
+final class BevelOperator extends TextureOperator {
     private int field_n;
     static String field_q;
     static it field_p;
@@ -189,7 +189,7 @@ final class gla extends TextureOperator {
         return var9Lifetime2;
     }
 
-    public gla() {
+    public BevelOperator() {
         super(0, true);
         this.field_n = 585;
     }
@@ -207,7 +207,7 @@ final class gla extends TextureOperator {
             this.field_n = param1.readUnsignedShort(124);
           }
           if (param0 != 107) {
-            gla.releaseStatics((byte) 92);
+            BevelOperator.releaseStatics((byte) 92);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

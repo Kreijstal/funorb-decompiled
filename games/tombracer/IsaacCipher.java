@@ -265,7 +265,7 @@ final class IsaacCipher {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            vc.field_q = new BitPacketBuffer(param6);
+            WeaveOperator.field_q = new BitPacketBuffer(param6);
             ql.field_k = new BitPacketBuffer(param7);
             q.field_r = param9;
             SocketConnector.field_c = param0;

@@ -244,7 +244,7 @@ final class dta {
               var28Lifetime1 = eda.field_f;
               if (!param4.field_D &&
                 !param4.c(false)) {
-                var27Lifetime4 = Integer.toString(var12.v(77));
+                var27Lifetime4 = Integer.toString(var12.getScore(77));
               } else {
                 var29Lifetime1 = 0;
                 var29Lifetime1 = var29Lifetime1 + var12.getTreasure(196608, 0) * gp.field_i[0];

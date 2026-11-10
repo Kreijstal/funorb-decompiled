@@ -33,7 +33,7 @@ final class TextResourceLoader extends eta {
                 RevolverItemComponent.field_H = param1;
                 var2 = dn.a((byte) 120, "loginm3");
                 if (var2 != null) {
-                  hb.field_u = jaa.decodeText((byte) 126, var2);
+                  SpriteTileOperator.field_u = jaa.decodeText((byte) 126, var2);
                 }
                 var2 = dn.a((byte) -43, "loginm2");
                 if (null != var2) {
@@ -101,7 +101,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 104, "ticketing_xunread");
                 if (null != var2) {
-                  nw.field_s = jaa.decodeText((byte) 121, var2);
+                  VoronoiNoiseOperator.field_s = jaa.decodeText((byte) 121, var2);
                 }
                 var2 = dn.a((byte) -30, "ticketing_gotowebsite");
                 if (var2 != null) {
@@ -149,7 +149,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 105, "mu_x_entered_game");
                 if (null != var2) {
-                  tu.field_e = jaa.decodeText((byte) 113, var2);
+                  MatchScoringObserver.field_e = jaa.decodeText((byte) 113, var2);
                 }
                 var2 = dn.a((byte) -116, "mu_x_joined_your_game");
                 if (null != var2) {
@@ -165,7 +165,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 105, "mu_x_lost_con");
                 if (var2 != null) {
-                  gia.field_o = jaa.decodeText((byte) 113, var2);
+                  TextureSampleOperator.field_o = jaa.decodeText((byte) 113, var2);
                 }
                 var2 = dn.a((byte) -118, "mu_x_cannot_join_full");
                 if (var2 != null) {
@@ -317,7 +317,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -13, "no");
                 if (var2 != null) {
-                  ifa.field_s = jaa.decodeText((byte) 72, var2);
+                  WaveformOperator.field_s = jaa.decodeText((byte) 72, var2);
                 }
                 var2 = dn.a((byte) 104, "mu_invite_players");
                 if (null != var2) {
@@ -561,7 +561,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -58, "kick");
                 if (null != var2) {
-                  vc.field_o = jaa.decodeText((byte) 118, var2);
+                  WeaveOperator.field_o = jaa.decodeText((byte) 118, var2);
                 }
                 var2 = dn.a((byte) -101, "inviting_x");
                 if (var2 != null) {
@@ -677,7 +677,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 121, "multiconst_friends");
                 if (var2 != null) {
-                  un.field_q = jaa.decodeText((byte) 74, var2);
+                  EmbossOperator.field_q = jaa.decodeText((byte) 74, var2);
                 }
                 var2 = dn.a((byte) 116, "multiconst_similar_rating");
                 if (null != var2) {
@@ -821,7 +821,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -99, "gameopt_youneedratedgames");
                 if (null != var2) {
-                  ifa.field_r = jaa.decodeText((byte) 86, var2);
+                  WaveformOperator.field_r = jaa.decodeText((byte) 86, var2);
                 }
                 var2 = dn.a((byte) 104, "gameopt_playerneeds1ratedgame");
                 if (null != var2) {
@@ -959,7 +959,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -58, "rule_1_0");
                 if (var2 != null) {
-                  eka.field_n = jaa.decodeText((byte) 59, var2);
+                  BlendModeOperator.field_n = jaa.decodeText((byte) 59, var2);
                 }
                 var2 = dn.a((byte) 114, "rule_1_1");
                 if (null != var2) {
@@ -1599,7 +1599,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 123, "create_alert_passrepeated");
                 if (var2 != null) {
-                  hf.field_e = jaa.decodeText((byte) 45, var2);
+                  PlayerModel.field_e = jaa.decodeText((byte) 45, var2);
                 }
                 var2 = dn.a((byte) -12, "create_alert_passlength");
                 if (null != var2) {
@@ -1663,7 +1663,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -37, "cannot_add_yourself");
                 if (null != var2) {
-                  iia.field_q = jaa.decodeText((byte) 104, var2);
+                  RandomBrickOperator.field_q = jaa.decodeText((byte) 104, var2);
                 }
                 var2 = dn.a((byte) -35, "unable_to_add_friend");
                 if (null != var2) {
@@ -2265,7 +2265,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) 114, "orbcoins");
                 if (null != var2) {
-                  vla.field_m = jaa.decodeText((byte) 58, var2);
+                  DisplacementOperator.field_m = jaa.decodeText((byte) 58, var2);
                 }
                 var2 = dn.a((byte) 108, "orbpoints_colon");
                 if (null != var2) {
@@ -2643,7 +2643,7 @@ final class TextResourceLoader extends eta {
                 }
                 var2 = dn.a((byte) -47, "fs_button_accept");
                 if (null != var2) {
-                  vc.field_s = jaa.decodeText((byte) 55, var2);
+                  WeaveOperator.field_s = jaa.decodeText((byte) 55, var2);
                 }
                 var2 = dn.a((byte) 112, "fs_accept_afteraccept");
                 if (var2 != null) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class coa extends TextureOperator {
+class SpriteSampleOperator extends TextureOperator {
     private int field_o;
     int field_m;
     int[] field_p;
@@ -38,7 +38,7 @@ class coa extends TextureOperator {
         }
     }
 
-    public coa() {
+    public SpriteSampleOperator() {
         super(0, false);
         this.field_o = -1;
     }
@@ -126,7 +126,7 @@ class coa extends TextureOperator {
         if (this.field_o < 0) {
           return false;
         }
-        SpriteData var2 = gla.field_m >= 0 ? SpriteData.loadSprite(np.field_m, gla.field_m, this.field_o) : SpriteData.loadSprite(np.field_m, this.field_o);
+        SpriteData var2 = BevelOperator.field_m >= 0 ? SpriteData.loadSprite(np.field_m, BevelOperator.field_m, this.field_o) : SpriteData.loadSprite(np.field_m, this.field_o);
         var2.d();
         this.field_p = var2.e();
         this.field_r = var2.field_a;
@@ -137,7 +137,7 @@ class coa extends TextureOperator {
     public static void releaseStatics(int param0) {
         field_s = null;
         if (param0 != 16711680) {
-          coa.releaseStatics(90);
+          SpriteSampleOperator.releaseStatics(90);
         }
         field_n = null;
         field_q = null;

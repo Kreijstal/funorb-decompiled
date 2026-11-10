@@ -40,10 +40,10 @@ final class RoomCompletedScreen extends me {
 
     final static int a(int param0, int param1, boolean param2, int param3, int param4) {
         if (param2) {
-          return MidiVoiceMixer.b(param1, param0, -81) - iia.d(param3, param4, 2);
+          return MidiVoiceMixer.b(param1, param0, -81) - RandomBrickOperator.d(param3, param4, 2);
         }
         field_j = (String) null;
-        return MidiVoiceMixer.b(param1, param0, -81) - iia.d(param3, param4, 2);
+        return MidiVoiceMixer.b(param1, param0, -81) - RandomBrickOperator.d(param3, param4, 2);
     }
 
     final void a(byte param0) {

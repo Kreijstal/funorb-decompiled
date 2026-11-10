@@ -133,7 +133,7 @@ final class ImageProducerRasterBuffer extends cha implements java.awt.image.Imag
           }
           hka.field_b.a((byte) -84);
           if (param2) {
-            if (hka.field_b.field_k == rda.field_o) {
+            if (hka.field_b.field_k == RasterizerOperator.field_o) {
               var14 = hka.field_b;
               var15 = gl.$cfr$intArgs$a$53ce4ab4c593(103, dka.field_d, new String[]{param3});
               var14.field_f.addItem((byte) -65, 16, var15);

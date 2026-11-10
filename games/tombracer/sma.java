@@ -180,15 +180,15 @@ final class sma {
           var5 = this.field_a.players;
           for (var6 = 0; var5.length > var6; var6++) {
             var7 = var5[var6];
-            if (!this.field_a.f((byte) -83, var7.A(0)) &&
-              -1 == this.field_f[var7.A(0)]) {
+            if (!this.field_a.f((byte) -83, var7.getPlayerIndex(0)) &&
+              -1 == this.field_f[var7.getPlayerIndex(0)]) {
               var8 = var7.getTotal(false) + var7.j(false);
               if (var3 == -1 ||
                 var4 < var8 ||
                 var4 == var8 &&
-                !(this.field_a.field_c.field_b[var7.A(0)] >= this.field_a.field_c.field_b[var3])) {
+                !(this.field_a.field_c.field_b[var7.getPlayerIndex(0)] >= this.field_a.field_c.field_b[var3])) {
                 var4 = var8;
-                var3 = var7.A(0);
+                var3 = var7.getPlayerIndex(0);
               }
             }
           }

@@ -207,10 +207,10 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           wg.field_i = 2;
           mna.field_d = 4;
           var7 = jta.a((byte) 123, "largefont", param4, "lobby", param3);
-          qw.field_f = jta.a((byte) 118, "generalfont", param4, "lobby", param3);
+          PenaltyNotice.field_f = jta.a((byte) 118, "generalfont", param4, "lobby", param3);
           kw.field_e = jta.a((byte) 127, "chatfont", param4, "lobby", param3);
           var7.a(var5, var24);
-          qw.field_f.a(var5, var24);
+          PenaltyNotice.field_f.a(var5, var24);
           kw.field_e.a(var5, var24);
           var8 = new jea(0L, (jea) null);
           var8.field_P = di.field_a;
@@ -222,7 +222,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           var10 = new jea(0L, (jea) null);
           var10.field_P = di.field_a;
           var10.field_ib = 16777215;
-          var10.field_H = (BitmapFont) ((Object) qw.field_f);
+          var10.field_H = (BitmapFont) ((Object) PenaltyNotice.field_f);
           var11 = var10;
           var10.field_bb = 1;
           var11.field_z = 1;
@@ -256,7 +256,7 @@ abstract class SingleChildWidget extends UiWidget implements WidgetParent {
           Corpse.field_i = new jea(0L, (jea) null);
           Corpse.field_i.field_ib = 13421772;
           Corpse.field_i.field_P = di.field_a;
-          Corpse.field_i.field_H = (BitmapFont) ((Object) qw.field_f);
+          Corpse.field_i.field_H = (BitmapFont) ((Object) PenaltyNotice.field_f);
           Corpse.field_i.field_bb = 1;
           PressureSwitchBehaviour.field_p = new jea(0L, Corpse.field_i);
           PressureSwitchBehaviour.field_p.field_ab = 16777215;

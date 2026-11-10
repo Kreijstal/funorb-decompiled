@@ -84,7 +84,7 @@ final class oka extends wv {
         this.field_t = 0;
         this.field_r = this.e(-18796);
         this.field_x.a(true);
-        if (hf.field_b == 1) {
+        if (PlayerModel.field_b == 1) {
           for (var5 = 0; LoginForm.field_z.length > var5; var5++) {
             if (mca.a((byte) 6, var5) &&
               BrickOperator.d(100, var5)) {
@@ -137,7 +137,7 @@ final class oka extends wv {
         int var7Lifetime1;
         var9 = TombRacer.field_G ? 1 : 0;
         super.a(param0, param1);
-        if (hb.field_t == SecondaryNodeDequeIterator.field_a) {
+        if (SpriteTileOperator.field_t == SecondaryNodeDequeIterator.field_a) {
           return;
         }
         ik.field_h.a(this.field_t, this.field_r);
@@ -230,18 +230,18 @@ final class oka extends wv {
         this.field_q.addLast((byte) -118, new cc(0, 1, 2));
         this.field_q.addLast((byte) -54, new cc(0, 2, 6));
         this.field_q.addLast((byte) -115, new cc(1, 3, 4));
-        this.field_q.addLast((byte) -70, new cc(1, 4, ta.field_vb[0], go.field_m[0], 4, 2));
+        this.field_q.addLast((byte) -70, new cc(1, 4, ta.field_vb[0], EdgeDetectOperator.field_m[0], 4, 2));
         this.field_q.addLast((byte) -97, new cc(2, 4, 4));
-        this.field_q.addLast((byte) -80, new cc(4, 3, ta.field_vb[1], go.field_m[1], 2, 3));
-        this.field_q.addLast((byte) -119, new cc(4, 5, ta.field_vb[5], go.field_m[5], 3, 2));
+        this.field_q.addLast((byte) -80, new cc(4, 3, ta.field_vb[1], EdgeDetectOperator.field_m[1], 2, 3));
+        this.field_q.addLast((byte) -119, new cc(4, 5, ta.field_vb[5], EdgeDetectOperator.field_m[5], 3, 2));
         this.field_q.addLast((byte) -88, new cc(3, 6, 4));
-        this.field_q.addLast((byte) -92, new cc(5, 7, ta.field_vb[2], go.field_m[2], 3, 3));
+        this.field_q.addLast((byte) -92, new cc(5, 7, ta.field_vb[2], EdgeDetectOperator.field_m[2], 3, 3));
         this.field_q.addLast((byte) -96, new cc(6, 8, 4));
         if (param0 <= 78) {
           this.b(true, false, 48);
         }
-        this.field_q.addLast((byte) -107, new cc(6, 7, ta.field_vb[3], go.field_m[3], 3, 3));
-        this.field_q.addLast((byte) -51, new cc(7, 8, ta.field_vb[4], go.field_m[4], 1, 2));
+        this.field_q.addLast((byte) -107, new cc(6, 7, ta.field_vb[3], EdgeDetectOperator.field_m[3], 3, 3));
+        this.field_q.addLast((byte) -51, new cc(7, 8, ta.field_vb[4], EdgeDetectOperator.field_m[4], 1, 2));
     }
 
     private final void b(boolean param0) {

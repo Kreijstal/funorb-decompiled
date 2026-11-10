@@ -245,7 +245,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_8_0;
           }
           if (eba.hasUniformCharacters(var5, 6912)) {
-            stackIn_11_0 = hf.field_e;
+            stackIn_11_0 = PlayerModel.field_e;
             return stackIn_11_0;
           }
           if (this.b(-37, param1)) {

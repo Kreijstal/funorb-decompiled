@@ -30,14 +30,14 @@ class of {
           }
           return null;
         }
-        if (bda.field_m > fr.field_c) {
+        if (WhiteNoiseOperator.field_m > fr.field_c) {
           if (param0 != 1) {
             of.a(97);
             return null;
           }
           return null;
         }
-        if (fr.field_c < bda.field_m + LightSourceModel.field_p) {
+        if (fr.field_c < WhiteNoiseOperator.field_m + LightSourceModel.field_p) {
           return MazeComponent.field_F;
         }
         if (param0 != 1) {

@@ -48,7 +48,7 @@ final class pk extends we {
             jba.field_j <= this.field_A[var5_int] + (this.field_D[var5_int] >> 1) &&
             -(this.field_t[var5_int] >> 1) + this.field_B[var5_int] <= GridWidgetContainer.field_B &&
             (this.field_t[var5_int] >> 1) + this.field_B[var5_int] >= GridWidgetContainer.field_B &&
-            1 == hf.field_b) {
+            1 == PlayerModel.field_b) {
             FacePlayerLocomotor.field_p = null;
             this.field_u = var5_int;
           }

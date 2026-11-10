@@ -134,7 +134,7 @@ final class fn extends vw {
 
     final void a(int param0, boolean param1) {
         this.field_c.e(1, false);
-        this.field_c.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, jv.field_m);
+        this.field_c.setTextureCombineOperations(PlatformComponent.field_F, (byte) -110, NormalMapOperator.field_m);
         this.field_c.a(ej.field_c, 0, -6219, true, false);
         this.field_c.a(0, false, PlayerContextMenu.field_j);
         this.field_c.a(0, (byte) 77);

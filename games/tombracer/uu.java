@@ -49,14 +49,14 @@ final class uu implements GamePacket {
           for (var9 = 0; var9 < 4; var9++) {
             var8[var9] = pb.field_n.nextInt();
           }
-          if (null == hf.field_d ||
-            !(hf.field_d.payload.length >= var7_int)) {
-            hf.field_d = new PacketBuffer(var7_int);
+          if (null == PlayerModel.field_d ||
+            !(PlayerModel.field_d.payload.length >= var7_int)) {
+            PlayerModel.field_d = new PacketBuffer(var7_int);
           }
-          hf.field_d.position = 0;
-          hf.field_d.writeBytes(param6, param2, param0, 61);
-          hf.field_d.padZerosTo(716148936, var7_int);
-          hf.field_d.encryptXtea((byte) -48, var13);
+          PlayerModel.field_d.position = 0;
+          PlayerModel.field_d.writeBytes(param6, param2, param0, 61);
+          PlayerModel.field_d.padZerosTo(716148936, var7_int);
+          PlayerModel.field_d.encryptXtea((byte) -48, var13);
           if (ContextMenu.field_Bb == null ||
             !(100 <= ContextMenu.field_Bb.payload.length)) {
             ContextMenu.field_Bb = new PacketBuffer(100);
@@ -72,7 +72,7 @@ final class uu implements GamePacket {
           ContextMenu.field_Bb.writeShort(-1477662136, param0);
           ContextMenu.field_Bb.rsaEncryptContents(102, param3, param5);
           param4.writeBytes(0, ContextMenu.field_Bb.payload, ContextMenu.field_Bb.position, 96);
-          param4.writeBytes(0, hf.field_d.payload, hf.field_d.position, param1 ^ -43);
+          param4.writeBytes(0, PlayerModel.field_d.payload, PlayerModel.field_d.position, param1 ^ -43);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

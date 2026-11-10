@@ -87,7 +87,7 @@ abstract class RoomComponent extends IntrusiveNode implements noa, qn, Renderabl
         if (param0) {
           field_n = -21;
         }
-        hk.field_e.b(-127, rra.field_e);
+        hk.field_e.b(-127, RasterShape.field_e);
         oca.field_b = new lla(cla.field_o, hk.field_e);
         nra.field_a = new jea(0L, (jea) null);
         nra.field_a.b(-122, oca.field_b.field_a);

@@ -157,7 +157,7 @@ final class fp {
         hoa.field_l = SpriteData.loadSprite(param2, "", "silhoutte");
         baa.field_g = SpriteData.loadSprite(param2, "", "slab_small1");
         FullscreenConfirmationDialog.field_O = SpriteData.loadSprite(param2, "", "slab_small2");
-        ifa.field_q = SpriteData.loadSprite(param2, "", "slab_small3");
+        WaveformOperator.field_q = SpriteData.loadSprite(param2, "", "slab_small3");
         ob.field_n = SpriteData.loadSprite(param2, "", "slab_small4");
         vua.field_y = SpriteData.loadSprite(param2, "", "slab_medium");
         int incrementValue$6 = param1;

@@ -20,13 +20,13 @@ final class re {
         oca.field_b.a(0, 0, 20, nra.field_a.field_G, -2 + (-40 + nra.field_a.field_t));
         PerlinNoise2D.field_t.a(hk.field_e.field_G, di.field_a, param0 + 5264, 0, 0);
         int var1 = 2 + di.field_a;
-        rra.field_e.a(hk.field_e.field_G, hk.field_e.field_t - (rca.field_p ? var1 : 0), -23776, !rca.field_p ? 0 : var1, 0);
+        RasterShape.field_e.a(hk.field_e.field_G, hk.field_e.field_t - (rca.field_p ? var1 : 0), -23776, !rca.field_p ? 0 : var1, 0);
         GameFont.a(false);
         ImageProducerRasterBuffer.field_j.a(nra.field_a.field_G, 40, -23776, nra.field_a.field_t - 40, 0);
         ap.field_a.a(OpenGlToolkit.field_fd.field_G, 30, -23776, 0, 0);
         db.field_s.a(OpenGlToolkit.field_fd.field_G, OpenGlToolkit.field_fd.field_t - 40 - 2 - 30, param0 + 5264, 30, 0);
         gta.field_b.a(68, 30, -23776, 5, 5);
-        iia.field_r.a(78, 30, -23776, 5, 75);
+        RandomBrickOperator.field_r.a(78, 30, -23776, 5, 75);
         RotateLocomotor.field_o.a(48, 30, -23776, 5, 155);
         if (param0 == -29040) {
           MidiPcmStream.field_K.a(48, 30, -23776, 5, 205);

@@ -21,10 +21,10 @@ final class BeamSegment {
         if (param0 != 5) {
           BeamSegment.a(-47);
         }
-        if (wna.field_n != null) {
-          var1 = wna.field_n;
+        if (ColourGradientOperator.field_n != null) {
+          var1 = ColourGradientOperator.field_n;
           synchronized (var1) {
-            wna.field_n = null;
+            ColourGradientOperator.field_n = null;
           }
         }
     }

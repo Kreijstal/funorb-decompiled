@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hf implements ac, gs {
+final class PlayerModel implements PlayerAnimator, gs {
     private uh field_l;
     static String field_e;
     private boolean field_o;
@@ -40,7 +40,7 @@ final class hf implements ac, gs {
 
     public final void a(int param0, int param1, int param2) {
         if (param1 <= 119) {
-          hf.isNameSeparator(2, 'ﾇ');
+          PlayerModel.isNameSeparator(2, 'ﾇ');
         }
         rpa.a(3, true, param2, 192, wga.field_a[this.field_i], param0);
         pa.a(3, param0, wga.field_a[this.field_i], param2, false);
@@ -60,8 +60,8 @@ final class hf implements ac, gs {
         if (param0 != -4366) {
           return;
         }
-        boolean decompiledSharedTail0 = (11 != this.field_p.d(false) ||
-          !(this.field_p.h(false) <= 3));
+        boolean decompiledSharedTail0 = (11 != this.field_p.getAnimationState(false) ||
+          !(this.field_p.getAnimationStateTicks(false) <= 3));
         if (!decompiledSharedTail0) {
           this.field_l.c(-10874, 16777130);
           this.field_l.d(160, param0 ^ 4376);
@@ -879,7 +879,7 @@ final class hf implements ac, gs {
         return stackIn_7_0;
     }
 
-    hf(Player param0, int param1) {
+    PlayerModel(Player param0, int param1) {
         aga var3 = null;
         this.field_o = false;
         this.field_h = 0;

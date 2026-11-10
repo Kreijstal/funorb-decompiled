@@ -204,7 +204,7 @@ final class is extends jea {
         if (!param0) {
           this.field_tb.field_r = this.field_vb.toString();
           if (param0 &&
-            hf.field_b != 0 &&
+            PlayerModel.field_b != 0 &&
             0 == this.field_y) {
             this.field_ub = 1;
           }
@@ -216,7 +216,7 @@ final class is extends jea {
             if (!param0) {
               return this.field_ub;
             }
-            if (hf.field_b == 0) {
+            if (PlayerModel.field_b == 0) {
               return this.field_ub;
             }
             if (0 != this.field_y) {

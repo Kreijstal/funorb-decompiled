@@ -224,7 +224,7 @@ final class ila {
             }
             if (km.field_p == bva.field_b &&
               ama.a(1, -1)) {
-              var6_int = vc.field_q.readUnsignedByte(255);
+              var6_int = WeaveOperator.field_q.readUnsignedByte(255);
               if (var6_int == 0) {
                 km.field_p = ContextMenu.field_yb;
               } else {
@@ -232,20 +232,20 @@ final class ila {
                 oka.field_z = var6_int;
                 uca.field_d = -1;
               }
-              vc.field_q.position = 0;
+              WeaveOperator.field_q.position = 0;
             }
             if (ContextMenu.field_yb == km.field_p &&
               ama.a(8, -1)) {
-              PathMoverComponent.field_L = vc.field_q.readLong(290646880);
-              vc.field_q.position = 0;
+              PathMoverComponent.field_L = WeaveOperator.field_q.readLong(290646880);
+              WeaveOperator.field_q.position = 0;
               RoomCompletedScreen.a((byte) 121, param5, param3, fd.field_d, param0);
               km.field_p = TestModel.field_o;
             }
             boolean decompiledFrameRemainder0 = true;
             if (km.field_p == TestModel.field_o &&
               ama.a(1, param2 - 51)) {
-              var6_intLifetime1 = vc.field_q.readUnsignedByte(param2 + 205);
-              vc.field_q.position = 0;
+              var6_intLifetime1 = WeaveOperator.field_q.readUnsignedByte(param2 + 205);
+              WeaveOperator.field_q.position = 0;
               oka.field_z = var6_intLifetime1;
               NodeHashTable.field_d = null;
               if (var6_intLifetime1 != 0 &&
@@ -269,15 +269,15 @@ final class ila {
             }
             if (HardwareGraphicsToolkit.field_w == km.field_p &&
               cla.g(0)) {
-              tr.field_g = vc.field_q.readLong(param2 + 290646830);
+              tr.field_g = WeaveOperator.field_q.readLong(param2 + 290646830);
               gj.field_q = param1;
-              ld.field_e = vc.field_q.readUnsignedByte(param2 ^ 205);
-              PrimMazeGenerator.field_e = vc.field_q.readUnsignedByte(255);
-              ReportAbuseDialog.field_ub = vc.field_q.readUnsignedShort(124);
-              var6 = vc.field_q.readNullableString(param2 - 28740);
-              var7 = vc.field_q.readUnsignedByte(255);
+              ld.field_e = WeaveOperator.field_q.readUnsignedByte(param2 ^ 205);
+              PrimMazeGenerator.field_e = WeaveOperator.field_q.readUnsignedByte(255);
+              ReportAbuseDialog.field_ub = WeaveOperator.field_q.readUnsignedShort(124);
+              var6 = WeaveOperator.field_q.readNullableString(param2 - 28740);
+              var7 = WeaveOperator.field_q.readUnsignedByte(255);
               if ((var7 & 1) != 0) {
-                rra.a(84);
+                RasterShape.a(84);
               }
               if (!param5) {
                 stackIn_43_0 = (0 != (var7 & 4));
@@ -293,19 +293,19 @@ final class ila {
               stackIn_54_0 = (0 != (var7 & 16));
               GraphicsToolkit.field_b = stackIn_54_0;
               if (q.field_r) {
-                vc.field_q.readUnsignedByte(255);
-                vc.field_q.readUnsignedByte(255);
-                vc.field_q.readInt(-104);
-                kl.field_k = vc.field_q.readUnsignedShort(121);
+                WeaveOperator.field_q.readUnsignedByte(255);
+                WeaveOperator.field_q.readUnsignedByte(255);
+                WeaveOperator.field_q.readInt(-104);
+                kl.field_k = WeaveOperator.field_q.readUnsignedShort(121);
                 np.field_J = new byte[kl.field_k];
                 for (var8 = 0; var8 < kl.field_k; var8++) {
-                  np.field_J[var8] = vc.field_q.readByte((byte) 103);
+                  np.field_J[var8] = WeaveOperator.field_q.readByte((byte) 103);
                 }
               }
-              fna.field_k = vc.field_q.readString((byte) -76);
+              fna.field_k = WeaveOperator.field_q.readString((byte) -76);
               var11 = (CharSequence) ((Object) fna.field_k);
               tia.field_b = jd.normalizeDisplayName(1, var11);
-              lsa.field_a = vc.field_q.readUnsignedByte(255);
+              lsa.field_a = WeaveOperator.field_q.readUnsignedByte(255);
               km.field_p = uga.field_n;
               if (fd.field_d.a((byte) 113) == BlockModel.field_s) {
                 vw.field_a.a(di.a(120), param2 ^ 55);
@@ -341,7 +341,7 @@ final class ila {
               for (var8Lifetime1 = 0; 4 > var8Lifetime1; var8Lifetime1++) {
                 AllPlatformsMazeComponent.field_K[var8Lifetime1] = AllPlatformsMazeComponent.field_K[var8Lifetime1] + 50;
               }
-              vc.field_q.initializeCipher(param2 ^ -26235, AllPlatformsMazeComponent.field_K);
+              WeaveOperator.field_q.initializeCipher(param2 ^ -26235, AllPlatformsMazeComponent.field_K);
               stackIn_81_0 = oka.field_z;
               return stackIn_81_0;
             }
@@ -357,7 +357,7 @@ final class ila {
               if (7 == oka.field_z) {
                 oka.field_z = 3;
               }
-              io.field_b = vc.field_q.readString((byte) -76);
+              io.field_b = WeaveOperator.field_q.readString((byte) -76);
               PushableBlockMazeComponent.field_L = false;
               stackIn_93_0 = oka.field_z;
               return stackIn_93_0;
@@ -365,7 +365,7 @@ final class ila {
             if (null == OpenGlTransform3D.field_e) {
               if (PushableBlockMazeComponent.field_L) {
                 if (rf.b((byte) -121) > 30000L) {
-                  io.field_b = hb.field_u;
+                  io.field_b = SpriteTileOperator.field_u;
                 } else {
                   io.field_b = sq.field_x;
                 }
@@ -433,7 +433,7 @@ final class ila {
           String var2 = (String) null;
           ila.a(false, (String) null, 15, -14, (String) null, true);
         }
-        qw.a(256);
+        PenaltyNotice.a(256);
     }
 
     final static gqa a(int param0, boolean param1) {
@@ -449,7 +449,7 @@ final class ila {
         BitPacketBuffer var8 = null;
         QuickChatPhraseDefinition var9 = null;
         var7 = TombRacer.field_G ? 1 : 0;
-        var8 = vc.field_q;
+        var8 = WeaveOperator.field_q;
         var3 = var8.readUnsignedByte(param0 + 19042);
         gja.field_x = 127 & var3;
         stackIn_3_0 = ((128 & var3) != 0);
@@ -467,9 +467,9 @@ final class ila {
         var4 = stackIn_9_0;
         esa.field_c = var8.readString((byte) -76);
         if (var4 != 0) {
-          gia.field_q = var8.readString((byte) -76);
+          TextureSampleOperator.field_q = var8.readString((byte) -76);
         } else {
-          gia.field_q = esa.field_c;
+          TextureSampleOperator.field_q = esa.field_c;
         }
         if (gja.field_x != 1 &&
           gja.field_x != 4) {
@@ -487,7 +487,7 @@ final class ila {
           try {
             var9 = qu.field_a.a(false, var5);
             ConveyorBehaviour.field_p = var9.getPreview((byte) -5);
-            if (!gia.field_q.equals(fna.field_k)) {
+            if (!TextureSampleOperator.field_q.equals(fna.field_k)) {
               stackIn_21_0 = var9.field_m;
             } else {
               stackIn_21_0 = null;

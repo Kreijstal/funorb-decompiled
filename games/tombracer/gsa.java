@@ -203,7 +203,7 @@ final class gsa {
           this.field_n = gp.field_i[1] * this.field_r;
           this.field_a = gp.field_i[2] * this.field_c;
           this.field_v = this.field_p * gp.field_i[0];
-          var3_int = param0.z(-96);
+          var3_int = param0.getChosenReward(-96);
           if (var3_int != -1) {
             if (bta.field_n[var3_int] == 0) {
               this.field_u = this.field_u + param0.j(false);

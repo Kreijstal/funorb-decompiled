@@ -175,7 +175,7 @@ final class dl extends me {
               this.field_q = (ms) null;
             }
             if (!this.field_i.g(0, 4) &&
-              hf.field_b != 1) {
+              PlayerModel.field_b != 1) {
               return;
             }
             this.b(-10968);
@@ -192,7 +192,7 @@ final class dl extends me {
         } else {
           if (param0 < -107) {
             if (!this.field_i.g(0, 4) &&
-              hf.field_b != 1) {
+              PlayerModel.field_b != 1) {
               return;
             }
             this.b(-10968);
@@ -205,7 +205,7 @@ final class dl extends me {
           this.b(-10968);
           this.field_i.a(true, 25, 4);
         } else {
-          if (hf.field_b == 1) {
+          if (PlayerModel.field_b == 1) {
             this.b(-10968);
             this.field_i.a(true, 25, 4);
           }

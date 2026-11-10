@@ -66,7 +66,7 @@ final class vba extends we {
           return;
         }
         this.field_s = this.b(GridWidgetContainer.field_B, jba.field_j, true);
-        if (hf.field_b == 1) {
+        if (PlayerModel.field_b == 1) {
           var4Lifetime1 = this.b(lba.field_p, PasswordValidator.field_m, true);
           if (var4Lifetime1 != this.field_t) {
             if (var4Lifetime1 != -1) {
@@ -258,7 +258,7 @@ final class vba extends we {
           kn.field_p.a(var7Lifetime1, false, dl.field_p, var4, -14671840, -1);
         }
         var7Lifetime1 += 20;
-        discarded$0 = this.a(var12 + "<br><br>" + jn.field_r + sw.field_zb[var6] + "       " + vla.field_m + sw.field_zb[var6] / 100, kv.field_a, -14671840, 180, var4, kn.field_p, param1 ^ -150, var7Lifetime1, 15);
+        discarded$0 = this.a(var12 + "<br><br>" + jn.field_r + sw.field_zb[var6] + "       " + DisplacementOperator.field_m + sw.field_zb[var6] / 100, kv.field_a, -14671840, 180, var4, kn.field_p, param1 ^ -150, var7Lifetime1, 15);
         return;
     }
 

@@ -134,13 +134,13 @@ final class FacePlayerLocomotor extends Locomotor {
         if (param1 == 65) {
           ub.field_b = GameAssetLoader.connectingTranslations[param0];
           hra.field_c = TrackMountComponent.waitingForTextTranslations[param0];
-          voa.field_s = nl.loadingTextTranslations[param0];
+          CrossedSineBandsOperator.field_s = nl.loadingTextTranslations[param0];
           return;
         }
         FacePlayerLocomotor.a(-7, 14, 68);
         ub.field_b = GameAssetLoader.connectingTranslations[param0];
         hra.field_c = TrackMountComponent.waitingForTextTranslations[param0];
-        voa.field_s = nl.loadingTextTranslations[param0];
+        CrossedSineBandsOperator.field_s = nl.loadingTextTranslations[param0];
     }
 
     public static void releaseStatics(int param0) {

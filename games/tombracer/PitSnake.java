@@ -370,7 +370,7 @@ final class PitSnake extends IntrusiveNode {
         try {
           var4_int = -1;
           for (var5 = param3; param1 > var5; var5++) {
-            var4_int = coa.field_q[(var4_int ^ param0[var5]) & 255] ^ var4_int >>> 8;
+            var4_int = SpriteSampleOperator.field_q[(var4_int ^ param0[var5]) & 255] ^ var4_int >>> 8;
           }
           var5Lifetime1 = -75 % ((param2 + 33) / 55);
           var4_int = ~var4_int;

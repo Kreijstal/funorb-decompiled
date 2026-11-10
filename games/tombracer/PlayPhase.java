@@ -170,7 +170,7 @@ final class PlayPhase extends MatchPhase {
             var7_intLifetime1 = 64;
             qa.a(var7_intLifetime1, var6Lifetime1, (byte) 109, var4_intLifetime1, aq.field_a, var5_intLifetime1);
             SocketConnector.a(dpa.field_c, 0, SingleChildWidget.field_v, 11903361, 40, var7_intLifetime1, 1, var5_intLifetime1, var4_intLifetime1, 0, (byte) 60, var6Lifetime1);
-            SocketConnector.a(voa.field_q + ": " + this.screen.j(var3, 9), 2, eda.field_f, 11903361, 40, var7_intLifetime1, 1, var5_intLifetime1, var4_intLifetime1, 1, (byte) 60, var6Lifetime1);
+            SocketConnector.a(CrossedSineBandsOperator.field_q + ": " + this.screen.j(var3, 9), 2, eda.field_f, 11903361, 40, var7_intLifetime1, 1, var5_intLifetime1, var4_intLifetime1, 1, (byte) 60, var6Lifetime1);
             var5_intLifetime1 = var5_intLifetime1 + (var7_intLifetime1 + 16);
             var7_intLifetime1Lifetime2 = 32;
             qa.a(var7_intLifetime1Lifetime2, var6Lifetime1, (byte) 80, var4_intLifetime1, aq.field_a, var5_intLifetime1);
@@ -279,7 +279,7 @@ final class PlayPhase extends MatchPhase {
         boolean stackIn_23_1 = false;
         dl var5;
         PlayerSimulation var6;
-        if (rda.d(20125)) {
+        if (RasterizerOperator.d(20125)) {
           if (param2 == 28) {
             this.a(-1, (byte) -109);
             ica.field_a = true;
@@ -564,8 +564,8 @@ final class PlayPhase extends MatchPhase {
           }
           if (Player.field_p == km.field_p &&
             ama.a(1, -1)) {
-            var9Lifetime1 = vc.field_q.readUnsignedByte(255);
-            vc.field_q.position = 0;
+            var9Lifetime1 = WeaveOperator.field_q.readUnsignedByte(255);
+            WeaveOperator.field_q.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               km.field_p = ne.field_c;
@@ -581,8 +581,8 @@ final class PlayPhase extends MatchPhase {
               }
               if (99 == var9Lifetime1) {
                 ama.a(FleeLocomotor.f(1), -1);
-                kia.field_b = new Boolean(di.a(vc.field_q, (byte) 107));
-                vc.field_q.position = 0;
+                kia.field_b = new Boolean(di.a(WeaveOperator.field_q, (byte) 107));
+                WeaveOperator.field_q.position = 0;
               } else {
                 oka.field_z = var9Lifetime1;
                 km.field_p = pe.field_m;
@@ -593,12 +593,12 @@ final class PlayPhase extends MatchPhase {
           if (km.field_p == ne.field_c) {
             var9Lifetime2 = 2;
             if (ama.a(var9Lifetime2, -1)) {
-              var10Lifetime1 = vc.field_q.readUnsignedShort(124);
-              vc.field_q.position = 0;
+              var10Lifetime1 = WeaveOperator.field_q.readUnsignedShort(124);
+              WeaveOperator.field_q.position = 0;
               if (ama.a(var10Lifetime1, -1)) {
                 var11 = PressureSwitchBehaviour.field_s.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  PressureSwitchBehaviour.field_s[var12] = vc.field_q.readVersionedString(121);
+                  PressureSwitchBehaviour.field_s[var12] = WeaveOperator.field_q.readVersionedString(121);
                 }
                 dea.a(60);
                 PushableBlockMazeComponent.field_L = false;
@@ -610,12 +610,12 @@ final class PlayPhase extends MatchPhase {
           if (pe.field_m == km.field_p &&
             cla.g(0)) {
             if (oka.field_z == 255) {
-              var9_ref_String = vc.field_q.readNullableString(-28690);
+              var9_ref_String = WeaveOperator.field_q.readNullableString(-28690);
               if (var9_ref_String != null) {
                 mp.a(var9_ref_String, di.a(82), -21407);
               }
             } else {
-              io.field_b = vc.field_q.readString((byte) -76);
+              io.field_b = WeaveOperator.field_q.readString((byte) -76);
             }
             dea.a(60);
             PushableBlockMazeComponent.field_L = false;
@@ -625,7 +625,7 @@ final class PlayPhase extends MatchPhase {
           if (null == OpenGlTransform3D.field_e) {
             if (PushableBlockMazeComponent.field_L) {
               if (rf.b((byte) -121) > 30000L) {
-                io.field_b = hb.field_u;
+                io.field_b = SpriteTileOperator.field_u;
               } else {
                 io.field_b = sq.field_x;
               }

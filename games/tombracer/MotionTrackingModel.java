@@ -202,7 +202,7 @@ abstract class MotionTrackingModel extends TrapModel {
     }
 
     final static void a(int param0, boolean param1) {
-        ConstrainToRectangleLocomotor.a(param1, hb.field_t.field_d, (byte) -100);
+        ConstrainToRectangleLocomotor.a(param1, SpriteTileOperator.field_t.field_d, (byte) -100);
         if (param0 != 0) {
           MotionTrackingModel.a(50, false);
         }

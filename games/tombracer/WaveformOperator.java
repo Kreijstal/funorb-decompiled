@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ifa extends TextureOperator {
+final class WaveformOperator extends TextureOperator {
     private int field_o;
     private static long[] field_p;
     private int field_m;
@@ -18,7 +18,7 @@ final class ifa extends TextureOperator {
         tka.b((byte) 122);
     }
 
-    public ifa() {
+    public WaveformOperator() {
         super(0, true);
         this.field_m = 0;
         this.field_o = 0;
@@ -169,7 +169,7 @@ final class ifa extends TextureOperator {
         var3 = var13;
         if (param0 != 1) {
           var12 = (float[]) null;
-          ifa.a(30, 114, 96, 47, (float[]) null, 0.4474947452545166f, -17, -103, (float[]) null, (byte) 32, -65);
+          WaveformOperator.a(30, 114, 96, 47, (float[]) null, 0.4474947452545166f, -17, -103, (float[]) null, (byte) 32, -65);
         }
         if (this.field_i.field_d) {
           var4 = sj.textureRowCoords[param1];

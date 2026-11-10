@@ -132,7 +132,7 @@ final class FacePointLocomotor extends Locomotor {
         if ((GameKeyHandler.field_a > 0 || fp.field_e > 0) &&
           tla.field_e) {
           SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_g, era.field_e.field_A);
-          hf.field_a.b(85, param0);
+          PlayerModel.field_a.b(85, param0);
         }
     }
 

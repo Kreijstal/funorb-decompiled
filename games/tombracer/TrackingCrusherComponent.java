@@ -52,14 +52,14 @@ final class TrackingCrusherComponent extends PrefabComponent {
         aca.field_h[7] = gn.field_A;
         if (param0 == 12) {
           aca.field_h[15] = oda.field_h;
-          aca.field_h[16] = eka.field_n;
+          aca.field_h[16] = BlendModeOperator.field_n;
           aca.field_h[18] = se.field_q;
           aca.field_h[13] = wea.field_c;
           return;
         }
         field_G = true;
         aca.field_h[15] = oda.field_h;
-        aca.field_h[16] = eka.field_n;
+        aca.field_h[16] = BlendModeOperator.field_n;
         aca.field_h[18] = se.field_q;
         aca.field_h[13] = wea.field_c;
     }

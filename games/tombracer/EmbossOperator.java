@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class un extends TextureOperator {
+final class EmbossOperator extends TextureOperator {
     static String field_q;
     private int field_o;
     private int[] field_n;
@@ -64,7 +64,7 @@ final class un extends TextureOperator {
         return var18;
     }
 
-    public un() {
+    public EmbossOperator() {
         super(1, true);
         this.field_p = 3216;
         this.field_m = 3216;

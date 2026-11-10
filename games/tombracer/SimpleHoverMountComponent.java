@@ -35,11 +35,11 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
           PerlinNoise2D.field_t.field_r = null;
           stackIn_55_0 = nra.field_a;
           stackIn_55_1 = 65;
-          stackIn_56_2 = (param0) && (!param2) && (!uv.field_o) && (null == uu.field_a) && (ifa.field_n == null);
+          stackIn_56_2 = (param0) && (!param2) && (!uv.field_o) && (null == uu.field_a) && (WaveformOperator.field_n == null);
           ((jea) (Object) stackIn_55_0).c(stackIn_55_1, stackIn_56_2);
           stackIn_62_0 = OpenGlToolkit.field_fd;
           stackIn_62_1 = -67;
-          stackIn_63_2 = (param0) && (!param2) && (!uv.field_o) && (null == uu.field_a) && (null == ifa.field_n);
+          stackIn_63_2 = (param0) && (!param2) && (!uv.field_o) && (null == uu.field_a) && (null == WaveformOperator.field_n);
           ((jea) (Object) stackIn_62_0).c(stackIn_62_1, stackIn_63_2);
           stackIn_67_0 = wo.field_k;
           stackIn_67_1 = -127;
@@ -49,11 +49,11 @@ final class SimpleHoverMountComponent extends PathMoverComponent {
           PerlinNoise2D.field_t.field_r = gl.$cfr$intArgs$a$53ce4ab4c593(89, tla.field_d, new String[]{Integer.toString(ProxySocketConnector.field_f)});
           stackIn_7_0 = nra.field_a;
           stackIn_7_1 = 65;
-          stackIn_8_2 = (param0) && (!param2) && (!uv.field_o) && (null == uu.field_a) && (ifa.field_n == null);
+          stackIn_8_2 = (param0) && (!param2) && (!uv.field_o) && (null == uu.field_a) && (WaveformOperator.field_n == null);
           ((jea) (Object) stackIn_7_0).c(stackIn_7_1, stackIn_8_2);
           stackIn_14_0 = OpenGlToolkit.field_fd;
           stackIn_14_1 = -67;
-          stackIn_15_2 = (param0) && (!param2) && (!uv.field_o) && (null == uu.field_a) && (null == ifa.field_n);
+          stackIn_15_2 = (param0) && (!param2) && (!uv.field_o) && (null == uu.field_a) && (null == WaveformOperator.field_n);
           ((jea) (Object) stackIn_14_0).c(stackIn_14_1, stackIn_15_2);
           stackIn_19_0 = wo.field_k;
           stackIn_19_1 = -127;

@@ -19,7 +19,7 @@ final class vha {
         rua.field_gb.c(-59, param2);
         var4 = ItemModel.field_n.h(param1 ^ 95) ? 1 : 0;
         boolean decompiledFrameRemainder0 = true;
-        if (0 != hf.field_b) {
+        if (0 != PlayerModel.field_b) {
           if (var4 != 0) {
             if (!param2) {
               rua.field_gb.c(30, param2);

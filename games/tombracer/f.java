@@ -580,7 +580,7 @@ final class f {
         var7 = TombRacer.field_G ? 1 : 0;
         try {
           this.field_a = param0;
-          var5_int = param3.readBits((byte) 44, iia.d(param0, 22972));
+          var5_int = param3.readBits((byte) 44, RandomBrickOperator.d(param0, 22972));
           this.field_f = new RoomComponent[var5_int];
           this.field_d = new cva[var5_int];
           var6 = 0;
@@ -635,7 +635,7 @@ final class f {
             field_c = (int[]) null;
           }
           this.a(0);
-          param0.writeBits((byte) 44, this.field_f.length, iia.d(this.field_a, 22972));
+          param0.writeBits((byte) 44, this.field_f.length, RandomBrickOperator.d(this.field_a, 22972));
           var4_int = 0;
           while (this.field_f.length > var4_int) {
             if (var5 != 0) {

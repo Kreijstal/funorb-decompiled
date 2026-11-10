@@ -52,7 +52,7 @@ final class vk implements os {
           var3 = 0;
           if (var1_int != 0 &&
             FacePointLocomotor.field_r.field_h >= 0) {
-            var3 = hb.field_w[FacePointLocomotor.field_r.field_h];
+            var3 = SpriteTileOperator.field_w[FacePointLocomotor.field_r.field_h];
             if (var3 == 2) {
               AppletGameShell.n(-18);
             } else if (var3 == 5) {

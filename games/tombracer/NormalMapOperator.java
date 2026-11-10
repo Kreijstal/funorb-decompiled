@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jv extends TextureOperator {
+final class NormalMapOperator extends TextureOperator {
     static ica field_m;
     private int field_o;
     private boolean field_n;
@@ -11,7 +11,7 @@ final class jv extends TextureOperator {
         return aqa.field_d - wt.field_a;
     }
 
-    public jv() {
+    public NormalMapOperator() {
         super(1, false);
         this.field_o = 4096;
         this.field_n = true;
